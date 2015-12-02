@@ -1,0 +1,97 @@
+			{{ $title := .Title | html | lower}}
+			{{ $section := .Section | html | lower}}
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									{{ if and (ne $title "cercador") (ne $section "") }}
+										<a href="/{{ .Section | urlize }}">
+											{{ partial "breadcrumbs.html" . }}
+										</a>
+										{{ partial "breadcrumbs_subsection.html" . }}
+									{{ else }}
+										{{ if ne $title "cercador"}}
+											{{ partial "breadcrumbs.html" . }}
+											{{ partial "breadcrumbs_subsection.html" . }}
+										{{ else }}
+											{{ .Title }}
+										{{ end }}
+									{{ end }}
+									</li>
+									{{ if and (ne $title "cercador") (ne .Section "") }}
+									<li>
+										{{ .Title }}
+									</li>
+									{{ end }}
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left">
+									{{ if and (eq $section "") (ne $title "cercador") }}
+										{{ if (eq (in .Url "bloc_tags") false) }}
+											{{ partial "breadcrumbs.html" . }}
+										{{ end }}
+										{{ partial "titles_subsection.html" . }}
+									{{ else }}
+										{{ .Title }}
+									{{ end }}
+								</h1>
+
+								{{ if or (eq .Section "noticies") (eq .Section "destacats") (eq .Section "destacats-related") }}
+									<br />
+									{{ .Date.Format "02-01-2006" }}
+								{{ end }}
+
+								{{ $title := .Title | html | lower}}
+								{{ if eq $title "noticies"}}
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=noticies&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/noticies/'; return false;">
+									<div class="form-group">
+										<label class="hidden" for="cerca">Cerca</label>
+										<input type="search" name="query" id="cerca"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control" placeholder="Cerca a notícies" /> 
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>								
+								</form>
+								{{end}}
+									
+								{{ if or (eq $title "arquitecturas") (in .Url "bloc_tags") }}
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=arquitectura&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/arquitectura/'; return false;">
+									<div class="form-group">
+										<label class="hidden" for="cerca">Cerca</label>
+										<input type="search" name="query" id="cerca"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control" placeholder="Cerca al bloc" /> 
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>								
+								</form>
+								{{end}}
+
+								{{ if eq $title "cercador" }}
+								<!--CERCADOR-->
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="searchResults(true); return false;">
+									<div class="form-group">
+										<input type="search" name="query" id="query"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control"  placeholder="Cerca..." /> 
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>								
+								</form>
+								{{end}}									
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>

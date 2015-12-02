@@ -1,0 +1,66 @@
+{{ $columns := 3 }}
+
+<div class="col-sm-12">
+
+{{ range $index, $page := .Data.Pages }}
+
+	{{ if eq (urlquery (mod $index $columns)) "0" }}
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	{{ end }}
+
+
+					<div class="destacat_text_avancat_cont box">
+						{{ if eq (urlquery (mod $index 9)) "0" }}
+						<h2 class="border_groc">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "1" }}
+						<h2 class="border_celeste">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "2" }}
+						<h2 class="border_vermell">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "3" }}
+						<h2 class="border_verd">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "4" }}
+						<h2 class="border_morat">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "5" }}
+						<h2 class="border_taronja">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "6" }}
+						<h2 class="border_blau">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "7" }}
+						<h2 class="border_fucsia">
+						{{ end }}		
+						{{ if eq (urlquery (mod $index 9)) "8" }}
+						<h2 class="border_verd_dos">
+						{{ end }}	
+
+						<!-- switch per subseccions -->
+						{{ if isset .Params "enllac" }}
+							<a href="{{ index .Params "enllac" }}" title="{{ .Title }}">{{ .Title }}</a>
+        				{{ else }}
+							<a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+        				{{ end }}
+
+						</h2>
+						<p> {{ .Description }}</p>
+					</div>	
+
+
+    {{ if and (eq (mod $index $columns) (sub $columns 1)) (gt $index 0)}}
+				</div>
+    		</div>
+    {{ end}}
+
+{{ end }}
+
+{{ if and (lt (mod (len .Data.Pages) $columns) $columns) (gt (mod (len .Data.Pages) $columns) 0)}}
+			</div>
+		</div>
+{{ end }}
+
+</div>

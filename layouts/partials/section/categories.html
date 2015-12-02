@@ -1,0 +1,32 @@
+
+{{ if gt (len .Site.Taxonomies.bloc_tags) 0 }}
+
+	<div class="col-xs-12 col-sm-4">
+
+		<div class="fpca_llista_fonsDestacat pd-15 pd-30">
+			<div class="shadowBox fons_destacat_cont generalitat">
+				<div class="shadow hidden-xs">
+					
+				</div>
+				<div class="panel panel-default box">
+								
+					<div class="panel-heading fons_gris">
+						<h2 class="panel-title fb_no-separador titol-pd-btm">Categories</h2>
+					</div>
+					
+					<div class="panel-body fons_blanc">
+						<ul class="llistat_enllacos_filet_cont list-group">
+						  {{ range $name, $taxonomy := .Site.Taxonomies.bloc_tags }}
+						    <li><a href="/bloc_tags/{{ $name | urlize }}">{{ lower (replace $name "-" " ") }} ({{len $taxonomy}})</a></li>
+						  {{ end }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+
+
+{{ end }}

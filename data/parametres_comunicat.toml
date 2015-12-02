@@ -1,0 +1,17 @@
+Titol       = "Comunicats Centre de Suport Canigó"
+Subtitol    = "Frameworks i Solucions de Arquitectura"
+Departament = "Centre de Telecomunicacions i Tecnologies de la Informació"
+
+[mesos]
+January     = "Gener"
+February    = "Febrer"
+March       = "Març"
+April       = "Abril"
+May         = "Maig"
+June        = "Juny"
+July        = "Juliol"
+August      = "Agost"
+September   = "Setembre"
+October     = "Octubre"
+November    = "Novembre"
+December    = "Desembre"

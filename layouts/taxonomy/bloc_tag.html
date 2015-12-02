@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya</title>
+	<meta name="robots" content="noindex,follow" />
+	{{ partial "head.html" . }}
+
+</head>
+
+{{ $title := "arquitecturas"}}
+
+<body class="section {{$title}}">
+	<div class="contenidor unfixed">
+
+		{{ partial "menu.html" . }}
+
+	</div>
+
+	<section class="border-start">
+
+			{{ partial "header_block.html" .}}
+
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+				<div class="row">
+
+					{{ $section := .Title | html | lower }}
+					{{ partial "section/posts.html" . }}
+						
+				</div>
+				</div>
+			</article>
+
+	</section>
+
+	{{ partial "footer.html" . }}
+	{{ if or (eq $section "arquitecturas") (in .Url "bloc_tags") }}
+		<script src="/js/bloc.js"></script>
+	{{ end }}
+
+</body>
+</html>

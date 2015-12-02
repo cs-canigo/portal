@@ -1,0 +1,368 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca-ES"><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="Content-Type" /><title>Comunicat Mensual Oficina de Frameworks i Solucions
+d'Arquitectura</title>
+
+<link type="text/css" rel="stylesheet" href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_blocs.css" />
+<!-- <link
+href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_GridB2.css"
+rel="stylesheet" type="text/css" /> -->
+<link type="text/css" rel="stylesheet" href="http://www.gencat.cat/piv/css/comuns/globals/FW_estils.css" />
+<link type="text/css" rel="stylesheet" href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_capPeu.css" />
+<link type="text/css" rel="stylesheet" href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_menuOrganismes.css" />
+<link type="text/css" rel="stylesheet" href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_estilsOrganismes.css" />
+<link type="text/css" rel="stylesheet" href="http://www.gencat.cat/piv/css/portals/PIV/css/FW_estils.css" />
+<style>
+ul li {
+list-style-type: square;
+color: #000000;
+font-size: 1em;
+}
+ul li span{
+color: #000000;
+font-size: 1.3em;
+font-weight: bold;
+}
+a.link {
+text-decoration: none !important;
+color: black;
+padding: 1px 3px 1px 3px;
+font-size: .9em;
+color: #000000;
+padding: 5px;
+font-weight: bold;
+}
+a.sel {
+color: #AC2115;
+}
+td.top {
+vertical-align: top;
+}
+div.textoListados ul li {
+list-style-type: square;
+color: #000000;
+font-size: .9em;
+}
+hr.liniaVermella {
+color: #bf2f14;
+background-color:#bf2f14;
+height: 2px;
+border: none;
+}
+</style>
+</head>
+<body>
+<div class="FW_bWidth">
+<div class="FW_bMinwidth">
+<div class="FW_bContainer"><!-- Inici FW_bMarc: Capa que cont&egrave; tota la plana en uns marges -->
+<div class="FW_bMarc">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" align="left"><!-- Inici FW_escut -->
+<div class="FW_bEscut">
+<h1> <a href="http://www.gencat.cat/" id="FW_gencat"> <img src="http://www.gencat.cat/piv/css/comuns/img/gcc_fs_logogeneralitat.gif" alt="Generalitat de Catalunya www.gencat.cat" title="Duu a la pàgina principal de la Generalitat de Catalunya" height="30" width="186" /> </a> </h1>
+</div>
+<!-- Fi FW_escut --> </td>
+<td> </td>
+<td align="right" valign="bottom"> <img src="http://canigo.ctti.gencat.cat/confluence/download/resources/OTCanigo_logo175x36.png" alt="Centre de Suport Canigó" height="30" width="186" />
+&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td> </td>
+<td class="navegacio" align="right"><!-- Inici FW_bMenuCap -->
+<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CAN/Centre+de+Suport">Frameworks
+i Solucions d'Arquitectura</a>&nbsp;&nbsp;<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CANPUB/Comunicats">Comunicats
+Anteriors</a><!-- Fi FW_bMenuCap --> </td>
+</tr>
+<tr>
+<td colspan="3">
+<hr class="liniaVermella" /> </td>
+</tr>
+</tbody>
+</table>
+<!-- Imatge de tracking del comunicat --><img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/5950/2011-06.png" />
+<!-- Inici Estructura del Contingut -->
+<table cellpadding="5" cellspacing="5" width="100%">
+<tbody>
+<tr>
+<!-- Area de continguts --> <td colspan="2" bgcolor="#ffffff" valign="top" width="75%">
+<div class="FW_bTitol">
+<h2>SIC. Desplegament d'aplicacions des del SIC</h2>
+<div style="text-align: justify;"><span><span></span></span><span><span><br />
+El
+Servei d'Integració Continua (SIC)
+està format principalment per dos productes:<br />
+</span></span>
+<ul>
+<li>SIC-Custodia de codi, mitjançant SVN.</li>
+<li>SIC-Desplegaments automatitzats, mitjançant Jenkins.</li>
+</ul>
+<span><span></span></span><span><span>Aquests
+dos productes son complementaris entre sí, tot i que es poden emprar de
+manera independent si es considera convenient.<br />
+<br />
+La definició i automatització
+d'aquests&nbsp; productes passa per
+una configuració
+prèvia, que estableix l'equip de SIC de manera conjunta amb el
+peticionari. Per a aconseguir-ho, el peticionari proporciona prèviament
+la informació a SIC, mitjançant el formulari d'alta d'aplicació.
+</span></span><br />
+<span><span><br />
+Els processos automatitzats reben el nom
+de 'jobs' dins de Jenkins i es
+poden classificar segons la seva funció:
+<ul>
+<li>Jobs tipus LIB : Instal·lació del projecte com a
+llibreria sota el mateix SIC.</li>
+<li>Jobs tipus BLD : Generació d'artefactes, anàlisi
+d'artefactes (SONAR / Fortify).</li>
+<li>Jobs tipus INT : Generació d'artefactes, execució
+automatitzada d'scripts a
+BBDD, pujada per SFTP dels artefactes als servidors corresponents,
+peticions de redesplegament remot automàtic al servidor indicat per
+l'usuari.</li>
+<li>Jobs tipus PRE : pujada per SFTP dels artefactes
+(generats per el job INT) als servidors corresponents de PRE, enviament
+de
+correu a SAU per tal que realitzin el redesplegament manual dels
+artefactes pujats.</li>
+<li>Jobs tipus PRO : pujada per SFTP dels artefactes
+(generats per el job INT) als servidors corresponents de PRO, enviament
+de correu a SAU per tal que realitzin el redesplegament manual dels
+artefactes pujats.</li>
+</ul>
+Els únics jobs&nbsp;que realitzen de manera directa el
+redesplegament
+en remot son els de tipus INT i requereixen d'un desplegament manual
+inicial. <br />
+<br />
+Properament està previst donar cobertura a:<br />
+</span></span>
+<ul>
+<li>Desplegaments als 4 CPDs Cloud.</li>
+<li>Desplegaments en PHP i .NET</li>
+</ul>
+<span><span><br />
+</span></span><span><span></span></span></div>
+<span><span><br />
+</span></span></div>
+<div class="FW_bTitol">
+<h2>Canigó - Llistats paginables a servidor amb Canigó 3</h2>
+<div style="text-align: justify;">A l'actualitat és
+difícil trobar una aplicació Canigó que no tingui la
+necessitat de presentar un llistat de dades en format taula a alguna de
+les seves vistes. <br />
+Per fer-ho, Canigó 3 compta amb la llibreria de components de Richfaces
+4.0.0 (implementació de JSF 2). En concret dispossa dels components
+&lt;dataTable&gt; i &lt;extendedDataTable&gt;.<br />
+Si les taules arriben a contenir un número de registres que no hi caben
+a la pantalla, el navegador n'afegeix un scroller lateral a la
+finestra. Com a millora estètica per estalviar l'aparició d'aquest
+scroller lateral es pot afegir a la taula el component
+&lt;dataScroller&gt;, que permet dividir els resultats en
+blocs
+de N registres i poder accedir-hi a ells mitjançant paginació. Aquesta
+paginació pot ser de 2 tipus: <br />
+</div>
+<ul style="text-align: justify;">
+<li>Paginació a client: És la que ve implementada per
+defecte amb el component. Les dades&nbsp;es consulten i carreguen
+des del servidor&nbsp;en la seva totalitat,
+la navegació es realitza mitjançant JavaScript i el servidor no intervé
+al fer-ho.</li>
+<li>Paginació a servidor: Només es carrega la primera
+pàgina del llistat i cada navegació provoca un accés nou a
+servidor&nbsp;per obtenir el bloc&nbsp; demanat.</li>
+</ul>
+<div style="text-align: justify;">El desenvolupador
+haurà de emprar un tipus o un altre&nbsp;en
+funció dels seus requeriments. Per a ajudar en la decisió es pot
+prendre com a referència la taula següent:<br />
+</div>
+<br />
+<div align="center">
+<table border="1" width="75%">
+<thead align="center">
+<tr>
+<td bgcolor="#dddddd">Paginació a Client</td>
+<td bgcolor="#dddddd">Paginació a Servidor</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rendiment òptim per a llistats petits</td>
+<td>Rendiment independent del volum dels llistats</td>
+</tr>
+<tr>
+<td>Renderitzat 1ª pàgina menys ràpid</td>
+<td>Renderitzat 1ª pàgina més ràpid</td>
+</tr>
+<tr>
+<td>Renderitzat darreres pàgines molt ràpid</td>
+<td>Renderitzat següents pàgines menys ràpid.</td>
+</tr>
+<tr>
+<td>La gestió de la navegació&nbsp;paginada es fa
+mitjançant
+JavaScript</td>
+<td>La gestió de la navegació paginada es fa
+majoritàriament
+a servidor.</td>
+</tr>
+<tr>
+<td>Complexitat baixa a l'hora de desenvolupar</td>
+<td>Complexitat mitja a l'hora de desenvolupar</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br />
+<div style="text-align: justify;"><span style="font-style: italic;"></span>Un
+punt important a tenir en compte de cara a la implementació de
+paginació en costat servidor és la versió de JPA emprada (com a
+motor de persistència,&nbsp; per sobre d'Hibernate). JPA 2
+proporciona&nbsp;més
+facilitats
+per a la implementació d'aquest tipus de paginació. En data
+d'avui&nbsp;Canigó 3 és compatible amb JPA1. &nbsp;En el futur
+està previst afegir compatibilitat amb JPA2.<br />
+<br />
+Atès que implementar una paginació a Servidor no és tan immediat com
+fer-ho a Client, us proporcionem&nbsp;un
+howtTo d'una de les possibles implementacions. El podreu trobar
+referenciat a la secció de <span style="font-style: italic;">HowTo's
+Frameworks i Solucions d'Arquitectura.</span><br />
+</div>
+<span><span></span></span></div>
+</td>
+<!-- Area de noticies --> <td class="top" rowspan="2" style="border-left: 5px solid rgb(191, 47, 20);" bgcolor="#ffffff" valign="top">
+<div class="FW_bTitol" align="center">
+<h2>Notícies</h2>
+</div>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>JDK 1.7 a Jenkins (SIC)</h4>
+</span><br />
+<div style="text-align: justify;">Recentment
+s'ha inclòs la versió 1.7 de JDK als servidors de SIC. Amb
+aquest canvi s'abasteix a Jenkins amb aquesta versió de JDK, ampliant
+el rang d'aplicacions susceptibles de ser desplegades mitjançant
+aquesta eina. Es recomana emprar Maven 2.2.1.</div>
+</li>
+</ul>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>Custodia del codi al SIC</h4>
+</span><br />
+<div style="text-align: justify;">Durant la
+Transformació de CPD, un dels requisits és que totes les aplicacions
+hauran de repositar el seu codi al SVN del SIC. És el que anomenem
+&#8220;SIC-Custòdia de Codi&#8221;. Per a facilitar aquesta tasca, es realitzarà
+una alta massiva de repositoris basant-nos en els codis de diàleg
+proporcionats per l&#8217;Inventari d&#8217;Aplicacions. Els proveïdors
+d&#8217;aplicacions tindran un temps de creació del repositori més curt doncs
+només els hi caldrà aportar els usuaris amb permisos per a accedir a
+cada aplicació. Per a aquelles aplicacions que ja disposen d&#8217;espai al
+SVN, l&#8217;equip del SIC es posarà en contacte amb els responsables per
+donar instruccions i acordar el mètode de migració a la nova estructura
+de SVN.<i>
+</i> </div>
+</li>
+</ul>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li> <span>
+<h4>SIC Mapa d'aplicacions</h4>
+</span><br />
+Aquest mes s'han donat d'alta 6 aplicacions al SIC:
+<div width="400" align="left">
+<center> <img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6735/acumulatAppSIC.png" alt="[grafica]" width="400" /> </center>
+</div>
+</li>
+</ul>
+</div>
+<!--</td>-->
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<hr color="#ffffff" />
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>HowTo's Frameworks i Solucions d'Arquitectura</h4>
+</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">
+<table cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<td> <img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/4/howto.png" alt="howto" /> </td>
+<td> <a target="_blank" href="http://canigo.ctti.gencat.net/confluence/download/attachments/6735/Canig%C3%B3+-+Howto+-+Llistat+paginable+a+servidor.pdf">
+<b>HOWTO:</b>
+Llistats paginables a servidor amb Canigó 3 </a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+</tbody>
+</table>
+<!-- Peu de pagina noticies -->
+<hr color="#ffffff" />
+<div align="center"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6359/logoCTTI.png" alt="CTTI" /></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Fi Estructura del Contingut --><!-- Inici FW_bPeu -->
+<div class="FW_bPeu">
+<div align="center"> <a href="http://www.gencat.net/web/cat/avis_legal.htm">Avís
+legal</a> | <a href="http://www.gencat.cat/web/cat/accessibilitat.htm">Accessibilitat</a>
+| <a href="http://www.gencat.net/web/cat/sobre_el_web.htm">Sobre
+el web</a> | <a href="http://www.gencat.cat/web/cat/copyright.htm">©
+Generalitat de Catalunya</a></div>
+</div>
+<!-- Fi FW_bPeu --> </div>
+<div style="text-align: center;" align="center"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black; text-decoration: none;">
+<hr style="color: rgb(214, 214, 214);" align="center" noshade="noshade" size="3" width="100%" /></span></div>
+<span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;">AVISO
+DE CONFIDENCIALIDAD.<br />
+Este correo y la información contenida o adjunta al mismo es privada y
+confidencial y va dirigida exclusivamente a su destinatario. TICxCAT
+informa a quien pueda haber recibido este correo por error que contiene
+información confidencial cuyo uso, copia, reproducción o distribución
+está expresamente prohibida. Si no es Vd. el destinatario del mismo y
+recibe este correo por error, le rogamos lo ponga en conocimiento del
+emisor y proceda a su eliminación sin copiarlo, imprimirlo o utilizarlo
+de ningún modo.<br />
+<br />
+</span><span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;" lang="EN-US">CONFIDENTIALITY WARNING.<br />
+This message and the information contained in or attached to it are
+private and confidential and intended exclusively for the addressee.
+TICxCAT informs to whom it may receive it in error that it contains
+privileged information and its use, copy, reproduction or distribution
+is prohibited. If you are not an intended recipient of this E-mail,
+please notify the sender, delete it and do not read, act upon, print,
+disclose, copy, retain or redistribute any portion of this E-mail.</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,31 @@
+{{ $title := .Title | html | lower}}
+{{ $section := .Section | html | lower}}
+
+{{ if or (eq $title "centre-de-suports") (eq $section "centre-de-suport") }}
+	Centre de Suport
+{{ end }}
+
+{{ if or (eq $title "canigos") (eq $section "canigo")}}
+	Framework Canigó
+{{ end }}
+
+{{ if or (eq $title "sics") (eq $section "sic") }}
+	Servei d'Integració Contínua
+{{ end }}
+
+{{ if or (eq $title "sgdes") (eq $section "sgde") }}
+	Servei de Gestió del Document Electrònic
+{{ end }}
+
+{{ if or (eq $title "noticies") (eq $section "noticies") }}
+	Notícies
+{{ end }}
+
+{{ if or (eq $title "arquitecturas") (eq $section "arquitectura") }}
+	Bloc d'Arquitectura
+{{ end }}
+
+
+{{ if in .Url "bloc_tags" }}
+	<a href="/arquitectura">Bloc d'Arquitectura</a> > {{ .Title }} 
+{{end}}

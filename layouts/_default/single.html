@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>{{.Title}}</title>
+	{{ partial "head.html" . }}
+	<script>
+		document.write("<meta name=\"titol\" content=\"{{.Title}}\" />");
+		document.write("<meta name=\"description\" content=\"{{.Description}}\" />");
+	</script>
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+		{{ partial "menu.html" . }}
+
+	</div>
+
+	<section class="border-start">
+
+			{{ partial "header_block.html" .}}
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+                  {{ if and (eq .Section "drafts") (isset .Params "versio") }}
+                  <table>
+
+                                  <tr class="head_row">
+                                                  <td>Abast</td>
+                                                  <td align="left">{{ index .Params "abast" }}</td>
+                                  </tr>
+                                  
+                                  <tr class="head_row">
+                                                  <td>Versió</td>
+                                                  <td align="left">{{ index .Params "versio" }}</td>
+                                  </tr>
+                                  <tr class="head_row">
+                                                  <td>Data última actualització</td>
+                                                  <td align="left">{{ index .Params "data-actualitzacio" }}</td>
+                                  </tr>
+                                  
+                                  <tr class="head_row">
+                                                  <td>Responsable</td>
+                                                  <td align="left">{{ index .Params "responsable" }}</td>
+                                  </tr>
+
+                                  <tr class="head_row">
+                                                  <td>Aplica a</td>
+                                                  <td align="left">{{ index .Params "aplica" }}</td>
+                                  </tr>
+                                  <tr class="head_row">
+                                                  <td>Llegenda</td>
+                                                  <td align="left">
+													{{ if isset .Params "llegenda" }}
+                                                  		{{ (index .Params "llegenda") | safeHtml}}
+                                                  	{{ end }}
+													</td>
+                                  </tr>
+					</table>
+
+                  {{end}}				
+					{{ partial "table-of-contents.html" . }}
+					{{ .Content }}
+					
+					{{ if eq .Section "arquitectura" }}
+						<a name="comments"></a>
+						<hr />		
+						{{ template "_internal/disqus.html" . }}
+					{{ end }}
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+	{{ partial "footer.html" . }}
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+languageCode = "ca-Es"
+title = "Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "../web-canigo-public"
+builddrafts = false
+baseurl = "http://canigo.ctti.gencat.cat"
+canonifyurls = false
+disqusShortname = "arquitectura-ctti"
+
+Paginate = 10
+
+[params]
+	noticieshome = 8
+	destacatshome = 5
+	google_analytics_id = "UA-59408075-1"
+
+[taxonomies]
+	bloc_tag = "bloc_tags"

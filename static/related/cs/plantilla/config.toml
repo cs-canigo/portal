@@ -1,0 +1,8 @@
+LanguageCode  = "ca-es"
+Title         = "Comunicats Centre Suport Canigo"
+ContentDir    = "content"
+LayoutDir     = "layouts"
+PublishDir    = "../maqueta-comunicats-public"
+BuildDrafts   = true
+BaseUrl       = "/"
+CanonifyUrls  = false
