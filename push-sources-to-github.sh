@@ -4,7 +4,6 @@
 # Generem el HTML
 #hugo
 #
-
 find . -name "*Conflicto*"  -exec rm -rf {} \;
 find . -name "*conflict*"  -exec rm -rf {} \;
 git add -A
