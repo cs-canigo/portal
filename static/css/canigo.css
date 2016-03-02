@@ -147,10 +147,10 @@ ul.pagination li:last-child a.desactivat:hover{color:#ddd!important;text-decorat
 .ajax_loader{text-align: center}
 
 /* notícies pagination */
-ul.pagination li:first-child a span{display:none;}
-ul.pagination li:first-child a:after{content:"Primera";}
-ul.pagination li:last-child a span{display:none;}
-ul.pagination li:last-child a:after{content:"Última";}
+body.noticies ul.pagination li:first-child a span{display:none;}
+body.noticies ul.pagination li:first-child a:after{content:"Primera";}
+body.noticies ul.pagination li:last-child a span{display:none;}
+body.noticies ul.pagination li:last-child a:after{content:"Última";}
 
 
 /* Derivada de bootstrap per a centre-de-suport/comunicats.md*/
@@ -215,11 +215,11 @@ article table {
 .inform_relacionada{margin-bottom:1em;}
 .titol-mobil{padding-top: 1em;}
 
-body.arquitecturas .destacat_noticies {margin-bottom: 1em}
-body.arquitecturas .destacat_noticies .destacat_noticies_cont{padding-top:0;font-size:1.1em;}
-body.arquitecturas .destacat_noticies .destacat_noticies_cont span.data_post{margin-right: .3em}
-body.arquitecturas .destacat_noticies .destacat_noticies_cont a.ncomments {padding-left: .5em}
-body.arquitecturas .destacat_noticies img{max-width:700px; width:95%;}
+body.blocs .destacat_noticies {margin-bottom: 1em}
+body.blocs .destacat_noticies .destacat_noticies_cont{padding-top:0;font-size:1.1em;}
+body.blocs .destacat_noticies .destacat_noticies_cont span.data_post{margin-right: .3em}
+body.blocs .destacat_noticies .destacat_noticies_cont a.ncomments {padding-left: .5em}
+body.blocs .destacat_noticies img{max-width:700px; width:95%;}
 
 div.superdestacat img{width:100%; margin-top: .5em;}
 
@@ -240,3 +240,5 @@ tr.head_row td {
 tr.head_row td + td {
     background-color: #fff;
 }
+
+.home .inform_relacionada_cont .llistat_enllacos_filet_cont p{margin-top: .5em}

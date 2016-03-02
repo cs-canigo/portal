@@ -1,10 +1,10 @@
 +++
-date        = "2015-12-15"
+date        = "2016-01-12"
 title       = "APIs RESTful: millors pràctiques"
-description = ""
-toc = true
+description = "Millors pràctiques per a la construcció d'APIs REST"
+toc 		= true
 bloc_tags	= ["bones pràctiques", "api"]
-imatge 		= "/images/bloc/apis/"
+imatge 		= "/images/bloc/json-api.png"
 +++
 
 Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofereixin els diferents sistemes de la Generalitat, ja siguin públics o d'ús intern.

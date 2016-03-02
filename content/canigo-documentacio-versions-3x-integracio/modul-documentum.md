@@ -50,7 +50,7 @@ Aquí indicarem el host i el port del docBroker que conté el magatzem de claus.
 
 Com a resultat de la instalació es generarà un arxiu amb la configuració d'accés a documentum.
 
-En el cas de Documentum 5.3 i 6.5, aquest es generarà per defecte a **C:\WINDOWS\dmcl.ini** i tindrà el format següent:
+En el cas de Documentum 5.3,  aquest es generarà per defecte a **C:\WINDOWS\dmcl.ini** i tindrà el format següent:
 ```
 [DOCBROKER_PRIMARY]
 host =es-hg2r02j
@@ -62,7 +62,7 @@ token_storage_enabled=F
 token_storage_path=D:\Documentum\apptoken
 ```
 
-En el cas de Documentum 7.1, aquest es generarà per defecte a **C:\Documentum\config\dfc.properties** i tindrà el format següent:
+En el cas de Documentum 6.5 i 7.1, aquest es generarà per defecte a **C:\Documentum\config\dfc.properties** i tindrà el format següent:
 ```
 dfc.data.dir=C\:/Documentum
 dfc.registry.mode=windows

@@ -77,6 +77,10 @@ Propietat                                         | Requerit | Descripció
 ------------------------------------------------- | -------- | ----------
 *.notificacions.electroniques.picaServiceBeanName | No       | Nom del bean de Spring per a PICA. Per defecte: picaService
 *.notificacions.electroniques.urlPica             | Sí       | URL del servei de la PICA
+*.notificacions.electroniques.nomEmissor		  | Sí		 | Nom de l'emissor
+*.notificacions.electroniques.nifEmissor		  | Sí	     | Nif de l'emissor
+
+Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
 ## Utilització del Mòdul
 

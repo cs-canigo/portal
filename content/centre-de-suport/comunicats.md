@@ -6,7 +6,21 @@ section     = "Centre de Suport"
 weight		= 4
 +++
 
+## <span class="label label-cabecera">2016</span>
+
+#### [Febrer] (/comunicat/2016/02/)
+- SIC. Suport complet del SIC a la integració contínua amb .NET
+- Canigó. Noves versions dels connectors de Canigó amb la PICA
+
+#### [Gener] (/comunicat/2016/01/)
+- Canigó. Balanç 2015
+- SIC. Nou rol de peticionari SIC a SAU-Remedy
+
 ## <span class="label label-cabecera">2015</span>
+
+#### [Desembre] (/comunicat/2015/12/)
+- SIC. Balanç 2015
+- Canigó. Nou entorn de desenvolupament
 
 #### [Novembre] (/comunicat/2015/11/)
 - Canigó. Aquest mes d’Octubre ha estat publicat el Roadmap del CS Canigó. D’aquesta manera es dona visibilitat a les tasques que es fan des del Centre de Suport a curt i llarg termini amb una previsió de lliurament.
@@ -19,7 +33,7 @@ weight		= 4
 
 #### [Setembre] (/comunicat/2015/09/)
 - Canigó. Plantilla aplicació REST+HTML5/Js
-- SIC. Obertura de peticions al SIC via Remedy 
+- SIC. Obertura de peticions al SIC via Remedy
 
 #### [Agost] (/comunicat/2015/08/)
 

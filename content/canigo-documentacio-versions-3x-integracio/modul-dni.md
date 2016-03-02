@@ -52,7 +52,7 @@ Aquest connector permet realitzar les següents funcionalitats referents a les s
 
 Es pot trobar el codi font referent aquests components a les següents url's:
 
-Codi Font : http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.dni.pica/1.1.0/
+Codi Font : http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.dni.pica/1.2.0/
 
 ### Requeriments
 
@@ -60,42 +60,7 @@ El connector DNI és compatible amb les versions 1.5 o superior de Java. Per ver
 
 Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei connector genèric de la PICA 1.1.0.
 
-## Instal.lació i Configuració
-
-### Instal.lació
-
-La instal.lació del connector requereix de la utilització de la llibreria 'canigo.integration.dni.pica' i les dependències indicades a l'apartat 'Introducció-Versions i Dependències'.
-
-Es pot afegir el mòdul de forma automàtica a través del plugin de Canigó 3 per l'eclipse. Afegint el mòdul d'integració amb DNI.
-
-Per fer-ho de forma manual modificar el pom.xml de l'aplicació per incloure la llibreria del Connector com a dependència.
-
-```
-<dependency>
-      <groupId>cat.gencat.ctti</groupId>
-      <artifactId>canigo.integration.dni.pica</artifactId>
-      <version>1.1.0</version>
-</dependency>
-```
-
-També és necessari afegir una exclusió sobre la dependència de la PICA:
-
-```
-<dependency>
-        <groupId>cat.gencat.ctti</groupId>
-        <artifactId>canigo.integration.pica</artifactId>
-    <version>${canigo.integration.pica.version}</version>
-    <exclusions>
-        <exclusion>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xbean</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
-```
-
-### Configuració
-
+## Configuració
 
 Per configurar el mòdul d'integració PICA-DNI és necessari configurar els següents arxius:
 
@@ -104,24 +69,14 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 En el pom.xml;
 
 ```
-<!--Dependencia de la PICA -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.pica</artifactId>
-    <version>${canigo.integration.pica.version}</version>
-    <exclusions>
-        <exclusion>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xbean</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
+<canigo.integration.dni.pica.version>[1.2.0,1.3.0)</canigo.integration.dni.pica.version>
+...
 
 <!-- Dependencia del mòdul PICA-DNI -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.dni.pica</artifactId>
-    <version>1.1.0</version>
+    <version>${canigo.integration.dni.pica.version}</version>
 </dependency>
 ```
 
@@ -129,7 +84,7 @@ En el pom.xml;
 
 ```
 *.dni.finalitat=[finalitat]
-*.dni.urlPica=http://preproduccio.pica.gencat.intranet/pica_cataleg/AppJava/services/
+*.dni.urlPica=[urlPica]
 *.dni.nifEmisor=[nifEmisor]
 *.dni.nomEmisor=[nomEmisor]
 *.dni.nomFuncionari=[nomFuncionari]
@@ -193,10 +148,11 @@ private DniConnectorImpl dniConnector;
 Fer la crida a la modalitat del servei desitjat, p.e.:
 
 ```java
-DadesConsultaDni resposta = dniConnector.dniConsultaBasica(numero_document, tipus_document);
+DadesConsultaDni resposta = dniConnector.dniConsultaBasica(numero_document, tipus_document, cognom1, anyNaixement);
 ```
 
-on, **numero_document** correspon al valor del número del document utilitzat i **tipus_document** correspon al tipus de document que es vol subministrar (Constants.DNI, Constants.NIE, Constants.NIF)
+on, **numero_document** correspon al valor del número del document utilitzat i **tipus_document** correspon al tipus de document que es vol subministrar (Constants.DNI, Constants.NIE, Constants.NIF).
+És obligatori informar el **cognom1**(primer Cognom) o bé l'**anyNaixement**
 
 En cas que es vulgui sobreescriure les dades del funcionari especificats en el fitxer dni.properties, és possible fer-ho abans de fer la crida al servei:
 
@@ -233,7 +189,7 @@ Les dades associades a la consulta d'un DNI es poden recuperar amb:
 resposta.getTitular();
 ```
 
-Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA Guia d'us del servei de DNI v.1.2.pdf disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA Guia d'us del servei de DNI v.1.9.pdf disponible via petició a requeridors.otpica.ctti@gencat.cat
 
 ### Exemple d'utilització Verificació DNI
 
@@ -271,4 +227,4 @@ Assert.assertEquals("TRAMITADA", estat.getDescripcio());
 Assert.assertEquals("0003", estat.getCodiEstat());
 ```
 
-Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA **Guia d'us del servei de DNI v.1.2.pdf** disponible via petició a requeridors.otpica.ctti@gencat.cat
+Per consultar la totalitat de possibles codis de retorn consultar el document de la PICA **Guia d'us del servei de DNI v.1.9.pdf** disponible via petició a requeridors.otpica.ctti@gencat.cat

@@ -1,5 +1,5 @@
 +++
-date        = "2015-11-16"
+date        = "2015-12-03"
 title       = "Nous llenguatges i entorns d'execució: Node.js i Golang"
 description = "Tecnologies de desenvolupament i altres opcions davant noves necessitats dels projectes"
 bloc_tags	= ["desenvolupament"]

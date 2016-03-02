@@ -1,2 +1,3 @@
 User-agent: * 
-Disallow: /index.xml
+Disallow: *.xml
+Disallow: /drafts

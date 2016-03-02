@@ -12,6 +12,7 @@
 								class="icon-bar"></span>
 						</button>
 					</div>
+
 					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
 						<!--span class="mvlogo" title="Generalitat de Catalunya"></span-->
 						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
@@ -60,11 +61,24 @@
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
+
+							{{ if isset .Params "langs" }}
+
+							<ul class="idioma">
+								<li>
+									{{range .Params.langs}}
+										<a title="{{.}}" data-lang="{{.}}" href="?lang={{.}}" style="display:none">{{.}}</a>
+									{{end}}
+								</li>
+							</ul>
+
+							{{ end }}
+
 						</div>
 						{{ end }}
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
-                    	<span class="titol-cap-nou">Frameworks i Solucions d'Arquitectura</span>
+                    	<span class="titol-cap-nou">{{ .Site.Params.titol }}</span>
                     </div>					
 					<ul class="nav navbar-nav">
 						<!--APARTATS-->
@@ -73,7 +87,17 @@
 						</li>
 
 						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/centre-de-suport/' data-toggle='_dropdown'>Centre de suport
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d'Arquitectura
+							</a>
+						</li>
+
+						<li class='dropdown'>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc
+							</a>
+						</li>
+
+						<li class='dropdown'>
+							<a target='_self' class="dropdown-toggle" href='/centre-de-suport/' data-toggle='_dropdown'>Centre de suport Canigó
 							</a>
 						</li>
 						

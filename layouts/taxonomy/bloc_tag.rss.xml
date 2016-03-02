@@ -6,7 +6,7 @@
     {{ with .Site.Author.name }}<author>{{.}}</author>{{end}}
     {{ with .Site.Copyright }}<copyright>{{.}}</copyright>{{end}}
     <updated>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 MST" }}</updated>
-    {{ range first 10 (where .Data.Pages "Section" "arquitectura") }}
+    {{ range first 10 (where .Data.Pages "Section" .Site.Params.bloc_section) }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>

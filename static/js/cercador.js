@@ -1,5 +1,5 @@
 var 
-	replaces = [["noticies/","noticies"],["arquitectura/","arquitectura"]],
+	replaces = [["noticies/","noticies"],["bloc/","bloc"]],
 	default_collection = "canigo"
 ;
 

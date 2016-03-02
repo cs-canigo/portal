@@ -4,8 +4,21 @@ title       = "Versió 2.x"
 description = "Documentació de la versió 2 del Framework Canigó"
 section     = "Documentació versions Canigó"
 taxonomies  = []
-weight 		= 1
+weight 	    = 1
 +++
 
-En el següent [enllaç](https://github.com/cs-canigo/docs.canigo2.cs-canigo.github.io/archive/master.zip) es pot descarregar la documentació de la versió 2.x de Canigó.
+
+### Changelog
+
+[1.0.2](https://github.com/cs-canigo/docs.canigo2.cs-canigo.github.io/archive/v1.0.2.zip) (28/01/2016)
+
+- [CAN-2071](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2071): Actualitzada documentació connectors de la PICA.
+
+[1.0.1](https://github.com/cs-canigo/docs.canigo2.cs-canigo.github.io/archive/v1.0.1.zip) (17/12/2015)
+
+- [CAN-2057](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2057): Actualitzada documentació connector Documentum per l'upgrade a v7.1.
+
+[1.0.0](https://github.com/cs-canigo/docs.canigo2.cs-canigo.github.io/archive/v1.0.0.zip) (6/2/2015)
+
+- Versió inicial exportada del Confluence
 

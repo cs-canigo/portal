@@ -53,7 +53,7 @@ Serveis Asíncrons
 
 Es pot trobar el codi font referent aquests components a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.padro.pica/1.1.0/
+Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.padro.pica/1.1.1/
 
 ### Requeriments
 
@@ -61,42 +61,7 @@ El connector PADRO és compatible amb les versions 1.5 o superior de Java. Per v
 
 Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei connector genèric de la PICA 1.0.
 
-## Instal.lació i Configuració
-
-### Instal.lació
-
-La instal.lació del connector requereix de la utilització de la llibreria 'canigo.integration.padro.pica' i les dependències indicades a l'apartat 'Introducció-Versions i Dependències'.
-
-Es pot afegir el mòdul de forma automàtica a través del plugin de Canigó 3 per l'eclipse. Afegint el mòdul d'integració amb PADRO.
-
-Per fer-ho de forma manual modificar el pom.xml de l'aplicació per incloure la llibreria del Connector com a dependència.
-
-```
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.padro.pica</artifactId>
-    <version>1.1.0</version>
-</dependency>
-```
-
-També és necessari afegir una exclusió sobre la dependència de la PICA:
-
-```
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.pica</artifactId>
-    <version>${canigo.integration.pica.version}</version>
-    <exclusions>
-        <exclusion>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xbean</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
-```
-
-### Configuració
-
+## Configuració
 
 Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els següents arxius:
 
@@ -105,41 +70,28 @@ Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els s
 En el pom.xml:
 
 ```
-<!--Dependencia de la PICA -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.pica</artifactId>
-    <version>${canigo.integration.pica.version}</version>
-    <exclusions>
-        <exclusion>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xbean</artifactId>
-        </exclusion>
-    </exclusions>
-</dependency>
+<canigo.integration.padro.pica.version>[1.1.0,1.2.0)</canigo.integration.padro.pica.version>
+...
 
 <!-- Dependencia del mòdul PICA-PADRO -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.padro.pica</artifactId>
-    <version>1.0.0</version>
+    <version>${canigo.integration.padro.pica.version}</version>
 </dependency>
 
-<!-- Dependencia del mòdul de suport del connector PICA-PADRO -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.pica.padro.support</artifactId>
-    <version>1.1.0</version>
-</dependency>
 ```
 
 2.- Crear l'arxiu /config/props/padro.properties amb el següent contingut:
 
 ```
 *.padro.pica.finalitat=[finalitat]
-*.padro.pica.urlPica=http://preproduccio.pica.gencat.intranet/pica_cataleg/AppJava/services/
+*.padro.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.padro.pica.nifEmisor=[nifEmisor]
 *.padro.pica.nomEmisor=[nomEmisor]
+*.padro.pica.nomFuncionari=[nomFuncionari]
+*.padro.pica.nifFuncionari=[nifFuncionari]
+*.padro.pica.emailFuncionari=[emailFuncionari]
 ```
 
 Els valors d finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat

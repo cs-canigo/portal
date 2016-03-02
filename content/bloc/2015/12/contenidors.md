@@ -1,5 +1,5 @@
 +++
-date        = "2015-11-09"
+date        = "2015-12-02"
 title       = "Docker: crea, desplega i executa aplicacions en contenidors"
 description = "Docker és una tecnologia que ha revolucionat el desplegament d’aplicacions i de programari degut a la seva senzillesa, facilitat d'ús i velocitat de  desplegament."
 bloc_tags	= ["desplegament", "contenidors", "docker"]

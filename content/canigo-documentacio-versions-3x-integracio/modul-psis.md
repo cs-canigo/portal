@@ -34,8 +34,15 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/psis.properties
 
 Propietat          | Requerit | Descripció
 ------------------ | -------- | -----------
-*.psis.webservice  | Sí       | Url del WebService de PSIS. Valor per defecte: http://preproduccio.pica.gencat.intranet/pica_cataleg/AppJava/services/
+*.psis.urlPica  | Sí       | Url del WebService de PSIS. Valor per defecte: http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.psis.finalitat   | Sí       | Finalitat de l'accés al servei. 
+*.psis.nifEmisor   | Sí       | Nif de l'emisor
+*.psis.nomEmisor   | Sí       | Nom de l'emisor
+*.psis.nomFuncionari| Sí      | Nom del funcionari
+*.psis.nifFuncionari| Sí      | Nif del funcionari
+*.psis.emailFuncionari| Sí    | Email del funcionari
+
+Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
 ## Utilització del Mòdul
 

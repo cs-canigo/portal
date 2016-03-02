@@ -56,10 +56,17 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/sarcat.prope
 
 Propietat           | Requerit | Descripció
 ------------------- | -------- | ----------
-*.sarcat.webservice | Sí       | Url del WebService de Sarcat. Valor per defecte: http://preproduccio.pica.gencat.intranet/pica_cataleg/AppJava/services/
+*.sarcat.urlPica	 | Sí       | Url del WebService de Sarcat. Valor per defecte: http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.sarcat.user       | Sí       | Usuari de Sarcat
 *.sarcat.password   | Sí       | Password de l'usuari de Sarcat
 *.sarcat.finalitat  | Sí       | Finalitat de l'ús del servei (TEST, PRODUCTIU...)
+*.sarcat.nifEmisor | Sí       | Nif de l'emissor
+*.sarcat.nomEmisor       | Sí       | Nom de l'emissor
+*.sarcat.nomFuncionari   | Sí       | Nom del funcionari
+*.sarcat.nifFuncionari  | Sí       | Nif del funcionari
+*.sarcat.emailFuncionari  | Sí       | Email del funcionari
+
+Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
 ## Utilització del Mòdul
 

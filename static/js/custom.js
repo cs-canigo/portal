@@ -1,5 +1,5 @@
 var 
-	fil_cercador = [["noticies","Notícies"],["arquitectura","Bloc d'Arquitectura"]],
+	fil_cercador = [["noticies","Notícies"],["bloc","Bloc d'Arquitectura"]],
 	url = "canigo.ctti.gencat.cat"
 ;
 
@@ -38,4 +38,3 @@ $(function(){
 	}
 
 });
-

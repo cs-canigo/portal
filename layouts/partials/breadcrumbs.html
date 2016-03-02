@@ -21,11 +21,11 @@
 	Notícies
 {{ end }}
 
-{{ if or (eq $title "arquitecturas") (eq $section "arquitectura") }}
+{{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (eq $section .Site.Params.bloc_section) }}
 	Bloc d'Arquitectura
 {{ end }}
 
 
-{{ if in .Url "bloc_tags" }}
-	<a href="/arquitectura">Bloc d'Arquitectura</a> > {{ .Title }} 
+{{ if in .URL "bloc_tags" }}
+	<a href="/bloc">Bloc d'Arquitectura</a> > {{ .Title }} 
 {{end}}

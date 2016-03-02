@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya</title>
+	<title>{{ .Site.Title }}</title>
 	<meta name="robots" content="noindex,follow" />
 	{{ partial "head.html" . }}
 
@@ -24,13 +24,14 @@
 			<article class="padding-xs padding-sm padding-md contingut">				
 				<div class="container">
 				<div class="row">
+
 						{{ $section := .Title | html | lower }}
 
-						{{ if and (ne $section "noticies") (ne $section "arquitecturas") }}
+						{{ if and (ne $section "noticies") (ne $section (.Site.Params.bloc_section | pluralize)) }}
 				            
 							{{ partial "section/colors.html" . }}
 
-			            {{ else if (eq $section "arquitecturas") }}
+			            {{ else if (eq $section (.Site.Params.bloc_section | pluralize)) }}
 
 							{{ partial "section/posts.html" . }}
 
@@ -47,7 +48,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if (eq $section "arquitecturas") }}
+	{{ if (eq $section (.Site.Params.bloc_section | pluralize)) }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

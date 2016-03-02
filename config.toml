@@ -1,5 +1,6 @@
 languageCode = "ca-Es"
-title = "Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya"
+#title = "Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya"
+title = "Arquitectura CTTI. Generalitat de Catalunya"
 
 contentdir = "content"
 layoutdir = "layouts"
@@ -15,6 +16,8 @@ Paginate = 10
 	noticieshome = 8
 	destacatshome = 5
 	google_analytics_id = "UA-59408075-1"
+	titol = "Arquitectura CTTI"
+	bloc_section = "bloc"
 
 [taxonomies]
 	bloc_tag = "bloc_tags"

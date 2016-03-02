@@ -8,7 +8,7 @@
 
 </head>
 
-{{ $title := "arquitecturas"}}
+{{ $title := (.Site.Params.bloc_section | pluralize)}}
 
 <body class="section {{$title}}">
 	<div class="contenidor unfixed">
@@ -35,7 +35,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if or (eq $section "arquitecturas") (in .Url "bloc_tags") }}
+	{{ if or (eq $section (.Site.Params.bloc_section | pluralize)) (in .URL "bloc_tags") }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

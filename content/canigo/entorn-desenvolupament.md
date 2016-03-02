@@ -39,14 +39,14 @@ weight 		= 99
 
 ### Programari instal·lat
 
-* IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb jre7 (Oracle) i els següents plugins:
+* IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 7 (Oracle) i els següents plugins:
 
 	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
 	- CTTI Canigó per creació aplicacions Canigó 3.1 basades en arquitectura REST+HTML5/JS o JSF
 	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 	- Docker Tooling per manegar els contenidors [Docker](https://www.docker.com/)
 	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
-	- SonarQube per integració amb [SonarQube] (http://spring.io/projects) (antic Sonar)
+	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
 
 * Altres
 

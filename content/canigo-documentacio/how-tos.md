@@ -13,6 +13,10 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Streaming de fitxers en clients REST] (/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf)
+- [Canigó - Actualització connectors amb la PICA] (/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf)
+- [Canigó - Execució demo Equipaments al nou Entorn de Treball] (/related/canigo/howto/Canigo - HowTo - Execucio demo Equipaments al nou Entorn de Treball.pdf)
+- [Canigó - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5](/related/canigo/howto/Canigo - HowTo - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5.pdf)
 - [SIC - Custodia i control de vesions del codi de les aplicacions] (/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
 - [Canigó - Generació aplicació Canigó 3.1 amb plugin Eclipse] (/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf)
 - [Canigó - Aplicació Canigó 3.1 sense frontend] (/related/canigo/howto/Canigo - HowTo - Aplicacio Canigo 3.1 sense frontend.pdf)
@@ -81,4 +85,4 @@ How-to disponibles actualment:
 - [Eines de visualització del GC.pdf](/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+de+visualitzaci%C3%B3+del+GC.pdf)
 - [Eines Intercepció de peticions http.pdf](/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+Intercepci%C3%B3+de+peticions.pdf)
 - [Entorn Treball](/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Entorn+Treball.pdf)
-- [Generació de CRUD Canigó 3](/related/canigo/howto/Howto+-+Generaci%C3%B3+Crud+Canig%C3%B33.zip?version=2) [Descarregar ScreenCast](http://dl.dropbox.com/u/6456567/Videos%20Generaci%C3%B3%20CRUD.zip) 
+- [Generació de CRUD Canigó 3](/related/canigo/howto/Howto+-+Generaci%C3%B3+Crud+Canig%C3%B33.zip?version=2) [Descarregar ScreenCast](http://dl.dropbox.com/u/6456567/Videos%20Generaci%C3%B3%20CRUD.zip)

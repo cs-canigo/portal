@@ -1,7 +1,7 @@
 +++
 date        = "2015-11-18"
 title       = "Canigó. Nou entorn de desenvolupament"
-description = "A mitjans d'aquest mes de Novembre ha estat publicat el nou entorn de desenvolupament de Canigó. Amb aquest nou entorn es canvia l'antic instal·lable (.exe) exclusiu a sistemes operatius Windows per un entorn multiplaforma amb moltes més possibilitats."
+description = "A mitjans d'aquest mes de Novembre ha estat publicat el nou entorn de desenvolupament de Canigó. Amb aquest nou entorn es canvia l'antic instal·lable (.exe) exclusiu per a sistemes operatius Windows per un entorn multiplaforma amb moltes més possibilitats."
 section     = "Notícies"
 key         = "DESEMBRE2015"
 categories  = ["canigo"]
@@ -20,14 +20,14 @@ A continuació s'especifiquen les característiques més rellevants d'aquest nou
 
 **IDE**
 
-L'IDE és [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb jre7 (Oracle) i els següents plugins:
+L'IDE és [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 7 (Oracle) i els següents plugins:
 
 * M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
 * CTTI Canigó per creació aplicacions Canigó 3.1 basades en arquitectura REST+HTML5/JS o JSF
 * Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 * Docker Tooling per manegar els contenidors [Docker](https://www.docker.com/)
 * Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
-* SonarQube per integració amb [SonarQube] (http://spring.io/projects) (antic Sonar)
+* SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
 
 **Altres**
 

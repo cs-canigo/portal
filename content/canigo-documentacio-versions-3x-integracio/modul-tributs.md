@@ -110,41 +110,7 @@ El connector TRIBUTS és compatible amb les versions 1.5 o superior de Java. Per
 
 Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, es s'ha de tenir configurat el servei connector genèric de la PICA 1.1.0.
 
-## Instal.lació i Configuració  
-
-### Instal.lació
-
-La instal.lació del connector requereix de la utilització de la llibreria 'canigo.integration.tributs.pica' i les dependències indicades a l'apartat 'Introducció-Versions i Dependències'.
-
-Es pot afegir el mòdul de forma automàtica a través del plugin de Canigó 3 per l'eclipse. Afegint el mòdul d'integració amb TRIBUTS.
-
-Per fer-ho de forma manual modificar el pom.xml de l'aplicació per incloure la llibreria del Connector com a dependència.
-
-```
-<dependency>
-      <groupId>cat.gencat.ctti</groupId>
-      <artifactId>canigo.integration.tributs.pica</artifactId>
-      <version>1.1.0</version>
-</dependency>
-```
-
-També és necessari afegir una exclusió sobre la dependència de la PICA:
-
-```
-<dependency>
-        <groupId>cat.gencat.ctti</groupId>
-        <artifactId>canigo.integration.pica</artifactId>
-	<version>${canigo.integration.pica.version}</version>
-	<exclusions>
-		<exclusion>
-			<groupId>xmlbeans</groupId>
-			<artifactId>xbean</artifactId>
-		</exclusion>
-	</exclusions>
-</dependency>
-```
-
-### Configuració
+## Configuració
 
 
 Per configurar el mòdul d'integració PICA-DNI és necessari configurar els següents arxius:
@@ -154,24 +120,14 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 En el pom.xml:
 
 ```
-<!--Dependencia de la PICA -->
-<dependency>
-	<groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.pica</artifactId>
-	<version>${canigo.integration.pica.version}</version>
-	<exclusions>
-		<exclusion>
-			<groupId>xmlbeans</groupId>
-			<artifactId>xbean</artifactId>
-		</exclusion>
-	</exclusions>
-</dependency>
+<canigo.integration.tributs.pica.version>[1.1.0,1.2.0)</canigo.integration.tributs.pica.version>
+...
 
 <!-- Dependencia del mòdul PICA-TRIBUTS -->
 <dependency>
         <groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.integration.tributs.pica</artifactId>
-	<version>1.0.0</version>
+	<version>${canigo.integration.tributs.pica.version}</version>
 </dependency>
 ```
 
@@ -182,7 +138,10 @@ En el pom.xml:
 *.tributs.pica.nomEmisor=[nomEmisor] #normalment:"CONSORCI AOC"
 *.tributs.pica.nomEmisorCAT365=[nomEmisor] #normalment:"CONSORCI AOC"
 *.tributs.pica.finalitat=[finalitat]
-*.tributs.pica.url=http://preproduccio.pica.gencat.intranet/pica_cataleg/AppJava/services/
+*.tributs.pica.url=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
+*.tributs.pica.nomFuncionari=[nomFuncionari]
+*.tributs.pica.nifFuncionari=[nifFuncionari]
+*.tributs.pica.emailFuncionari=[emailFuncionari]
 ```
 
 Els valors d finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat

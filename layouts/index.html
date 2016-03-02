@@ -2,13 +2,20 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya</title>
+	<title>{{ .Site.Title }}</title>
      <meta name="robots" content="noindex,follow" />
 	{{ partial "head.html" . }}
 	<script>
 		document.write("<meta name=\"titol\" content=\"{{.Title}}\" />");
 	</script>
 
+    <script type="text/javascript" src="https://teletext.io/js/latest/txt-min.js"></script>
+    <script>
+        var options = {
+            id: '787d1bf3-29a7-43d0-ad97-3d128ca46701'
+        };
+        Txt.render(options);
+    </script>
 </head>
 <body class="home">
 	<div class="contenidor unfixed">
@@ -29,7 +36,7 @@
 					</div>
 					<div class="bgTransRed">
 						<div class="container pos_relative">
-							<h1><span>Frameworks i Solucions d'Arquitectura</span></h1>
+							<h1><span>{{ .Site.Params.titol }}</span></h1>
 						</div>
 					</div>
 				</div>
@@ -59,40 +66,33 @@
 
 						<div class="inform_relacionada superdestacat">
 							<div class="inform_relacionada_cont">
-								<span class="enllac"><h4><strong>Roadmap de les solucions</strong></h4><span>
-								<div class="llistat_enllacos_filet llistat_enllacos_filet_cont">
-									<p><a href="/centre-de-suport/roadmap/" title="Accés al Roadmap de les solucions: Canigó, SIC, SGDE"><img src="/images/destacats/roadmap.png" alt="Roadmap" /></a></p>
+								<h4><strong data-txt="home.titol_destacat1"></strong></h4>
+								<div class="llistat_enllacos_filet llistat_enllacos_filet_cont"  data-txt="home.destacat1">
 								</div>
 							</div>
 						</div>
 
-						{{ if gt (len (where .Data.Pages "Section" "destacats")) 0 }}
+						<div class="inform_relacionada">
+							<div class="inform_relacionada_cont">
+								<h4><strong data-txt="home.titol_destacat3"></strong></h4>
+								<div class="llistat_enllacos_filet_cont">
+									<p data-txt="home.destacat3"></p>
+								</div>
+							</div>
+						</div>
+
 						
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
-								<h4><strong>Destacats</strong></h4>	
-								<div class="llistat_enllacos_filet">
-									<ul class="llistat_enllacos_filet_cont icones list-group">
-									{{ range first .Site.Params.destacatshome (where .Data.Pages "Section" "destacats") }}
-										<li class="list-group-item bullet">
-										  {{ if isset .Params "enllac" }}
-										    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
-											 {{ else }}
-											   <span class="enllac">{{ .Title }}</span>
-											 {{ end }}
-											{{ .Description }}
-										</li>
-									{{ end }}											
-									</ul>
+								<h4 data-txt="home.titol_destacat2"><strong data-txt="home.titol_destacat2"></strong></h4>	
+								<div class="llistat_enllacos_filet" data-txt="home.destacat2">
 								</div>
 							</div>
 						</div>						
 
-						{{ end }}
-
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
-								<h4><strong>Contacta amb nosaltres</strong></h4>	
+								<h4><strong>Contacta amb el Centre de Suport</strong></h4>	
 								<div class="llistat_enllacos_filet">
 									<ul class="llistat_enllacos_filet_cont icones list-group">
 										<li class="list-group-item bullet">
