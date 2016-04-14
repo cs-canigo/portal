@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Websockets a Canigó 3.1] (/related/canigo/howto/Canigo - Websockets a Canigo 3.1.pdf)
 - [Canigó - Streaming de fitxers en clients REST] (/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf)
 - [Canigó - Actualització connectors amb la PICA] (/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf)
 - [Canigó - Execució demo Equipaments al nou Entorn de Treball] (/related/canigo/howto/Canigo - HowTo - Execucio demo Equipaments al nou Entorn de Treball.pdf)

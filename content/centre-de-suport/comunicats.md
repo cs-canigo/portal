@@ -8,6 +8,10 @@ weight		= 4
 
 ## <span class="label label-cabecera">2016</span>
 
+#### [Març] (/comunicat/2016/03/)
+- Canigó. Nou connector amb PSGD
+- SIC. Canvi al sistema d'obertura de peticions als jobs de desplegament a PRE/PRO al SIC
+
 #### [Febrer] (/comunicat/2016/02/)
 - SIC. Suport complet del SIC a la integració contínua amb .NET
 - Canigó. Noves versions dels connectors de Canigó amb la PICA
@@ -23,9 +27,9 @@ weight		= 4
 - Canigó. Nou entorn de desenvolupament
 
 #### [Novembre] (/comunicat/2015/11/)
-- Canigó. Aquest mes d’Octubre ha estat publicat el Roadmap del CS Canigó. D’aquesta manera es dona visibilitat a les tasques que es fan des del Centre de Suport a curt i llarg termini amb una previsió de lliurament.
-- SIC. FAQ. Com a novetat, a la secció SIC del Portal de Frameworks i Solucions d’Arquitectura, pròximament es publicaran les FAQ del SIC
-- Canigó. Adaptació al PIV de Gencat. Estratègia a seguir
+- Canigó. Roadmap
+- SIC. FAQ
+- Canigó. Adaptació al PIV de Gencat
 
 #### [Octubre] (/comunicat/2015/10/)
 - SIC. Bones pràctiques per a no interferir en els mecanismes de SIC quan s’accedeix manualment a la consola d’administració del servidor d’aplicacions

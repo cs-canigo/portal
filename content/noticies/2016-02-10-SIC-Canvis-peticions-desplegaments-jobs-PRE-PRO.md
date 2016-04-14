@@ -14,15 +14,15 @@ L'equip de SIC ha treballat en l'adaptació dels jobs de desplegament a PRE/PRO 
 Els jobs de desplegament a PRE/PRO de SIC adaptats a aquest sistema:
 
 * Pujaran els artefactes a desplegar als servidors de CPD (aquest punt no canvia respecte al model anterior).
-* Obriran un **canvi de tipologia “Desplegament” i en estat=”Draft”** a Remedy (no es requerirà passar prèviament per l'Atrium Impact Simulador) i com a Sol·licitant l'usuari que ha executat el job de desplegament. **L'usuari que executarà el job ha d'estar donat d'alta GICAR i, posteriorment, replicat a ITSM Remedy perquè si no és així, ITSM Remedy denegarà l'obertura del canvi** i el job finalitzarà amb error.
-* Els valors dels camps 'Summary' i 'Notes' que figuraran al Draft es correspondran amb els camps 'TITOL' i 'OBSERVACIONS' del job. Aquests s'indicaran amb un valor per defecte que l'usuari podrà editar. La informació sobre la ubicació on s'han pujat prèviament els artefactes a desplegar s'afegirà automàticament al camp ''Notes'.
-* Una vegada creat el Draft, el job retornarà l'identificador de petició creada. En paral·lel, ITSM Remedy enviarà una notificació d'obertura de tasca a la bústia de l'usuari que ha executat el job des del SIC.
+* Obriran un **canvi de tipologia “Desplegament” i en estat=”Draft”** a Remedy (no es requerirà passar prèviament per l'Atrium Impact Simulator) i com a Sol·licitant l'usuari que ha executat el job de desplegament. **L'usuari que executarà el job ha d'estar donat d'alta a GICAR i amb usuari autoritzat a treballar a ITSM Remedy. Si no és així, ITSM Remedy denegarà l'obertura del canvi** i el job finalitzarà amb error.
+* Els valors dels camps 'Summary' i 'Notes' que figuraran al Draft del canvi, es correspondran amb els camps 'TITOL' i 'OBSERVACIONS' del job de Jenkins. Aquests s'indicaran amb un valor per defecte que l'usuari podrà editar. La informació sobre la ubicació on s'han pujat prèviament els artefactes a desplegar s'afegirà automàticament al camp ''Notes'.
+* Una vegada creat el Draft, el job retornarà l'identificador de petició creada a Remedy. En paral·lel, ITSM Remedy enviarà una notificació d'obertura de tasca a la bústia de l'usuari que ha executat el job des del SIC.
 * El Draft es generarà amb uns camps mínims. Posteriorment, qualsevol usuari del grup de gestió d’ITSM REMEDY associat al desplegament haurà d'accedir al Draft per completar la resta de dades (incloent el document amb les instruccions de desplegament) i aplicar la instrucció operativa vigent de Gestió de Canvis.
 
 
 <center>![autoritzacions_peticions_responsables.png](/images/news/SIC-Jobs-peticions-Remedy.png)</center>
 
-El canvi està previst activar-se el dia **22 de Febrer** per als jobs d'aquelles aplicacions que ja es trobin dins Remedy. Els jobs de la resta d'aplicacions que encara no s'hagin integrat a Remedy mantindran l'antic sistema d'obertura de petició via correu a SAU.
+El canvi es va activar el dia **22 de Febrer** per als jobs d'aquelles aplicacions que ja es trobin dins Remedy. Els jobs de la resta d'aplicacions que encara no s'hagin integrat a Remedy mantindran l'antic sistema d'obertura de petició via correu a SAU.
 En el moment que aquestes aplicacions s'afegeixin a Remedy, l'equip de SIC actualitzarà els seus jobs per tal que facin servir el model d'obertura de canvis via ITSM Remedy (els proveïdors no s'hauran de preocupar de demanar l'actualització dels jobs).
 
 Per a qualsevol dubte relatiu a aquest canvi, podeu contactar amb SAU (sau.tic@gencat.cat / Consulta al servei 'FRAMEWORK SIC' de Remedy).

@@ -1,7 +1,7 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Framework Canigó"
-description = "Descripció del Framework de desenvolupament corporatiu J2EE de la Generalitat de Catalunya"
+description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
 section     = "Canigó"
 taxonomies  = []
 toc 		= true
@@ -13,9 +13,9 @@ weight 		= 1
 
 Canigó es defineix com un "Espai de treball tecnològic comú per al desenvolupament i execució d'aplicacions en l'àmbit dels sistemes corporatius i departamentals de la Generalitat de Catalunya", i es els seus objectius són: 
 
-- Oferir una arquitectura comuna de construcció d'aplicacions J2EE.
+- Oferir una arquitectura comuna de construcció d'aplicacions JEE.
 - Proporcionar un entorn de treball, documentacó, suport i manteniment dels seus components.
-- Simplificar la complexitat inherent a J2EE, oferint un marc de referència de treball.
+- Simplificar la complexitat inherent a JEE, oferint un marc de referència de treball.
 - Oferir una solució aliniada amb els estàndars i solucions més utilitzades per la comunitat OpenSource.
 - Oferir una solució oberta que permeti afegir i intercanviar qualsevol peça amb un cost reduït.
 - Oferir una solució d'interconnectivitat amb els serveis corporatius.
@@ -121,6 +121,7 @@ Aquest mòdul facilita l'ús d'un conjunt addicional de funcionalitats mitjança
 
 - **Instrumentació**: permet a l'aplicació generar dades d'instrumentació (nombre de peticions, nombre d'errors, ...) de la seva execució i posteriorment ser explotades amb eines de monitorització.
 - **Monitorització**: permet a l'aplicació mostrar una pantalla on es mostren dades guardades pel mòdul d'instrumentació.
+- **Logging**: permet a l'aplicació mostrar una pantalla on canviar el nivell dels logs, monitoritzar el diferents fitxers de logs i descarregar-los.
 
 La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-documentacio">documentació del portal web</a>.
 

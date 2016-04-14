@@ -12,11 +12,19 @@
       {{ end }}
 	  -->
 	  {{ $key := .Params.key }}
-	  {{ range (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
-		{{ if eq .Params.key $key }}
-			{{ partial "comunicat/destacat.html" . }}
-		{{ end }}	
+	  
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
+		    {{ if eq .Params.key $key }}
+			   {{ partial "comunicat/destacat.html" . }}
+		    {{ end }}	
       {{ end }}
+
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "bloc") }}
+        {{ if eq .Params.key $key }}
+          {{ partial "comunicat/destacat.html" . }}
+        {{ end }} 
+      {{ end }}
+
     </table>
   </td>
 </tr>

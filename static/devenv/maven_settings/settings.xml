@@ -163,8 +163,14 @@ under the License.
       <url>http://repos.canigo.ctti.gencat.cat/repository/maven2</url>
       <mirrorOf>canigo</mirrorOf>
     </mirror>
+    <mirror>
+      <id>central</id>
+      <name>Central Maven Repository</name>
+      <url>https://repo.maven.apache.org/maven2/</url>
+      <mirrorOf>ibiblio</mirrorOf>
+    </mirror>
   </mirrors>
-  
+
 
   <!-- profiles
    | This is a list of profiles which can be activated in a variety of ways, and which can modify

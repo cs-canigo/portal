@@ -13,7 +13,7 @@ weight 		= 2
 
 Per poder utilitzar els serveis del SGDE és necessari donar-se d'alta en alguna de les plataformes següents:
 
-###  Plataforma de Formularis Adobe 
+###  Plataforma de Formularis Adobe
 
 - [Sobre Formularis] (/sgde-related/intro-formularis)
 
@@ -21,9 +21,9 @@ Per poder utilitzar els serveis del SGDE és necessari donar-se d'alta en alguna
 - [Manual d'Usuari - Autoservei] (/related/sgde/Manual-Usuari-Servei-Corporatiu-de-Formularis-Electrònics-v9.pdf)
 
 - [Normatiu servei corporatiu de formularis electrònics] (/related/sgde/SC-NOR15-01-Norma-servei-corporatiu-de-formularis-electrònics.pdf)
-- [Llibre blanc servei corporatiu de formularis - Adobe LiveCycle ES (v8)] (/related/sgde/GE-Llibre blanc servei corporatiu de formularis.pdf)
+- [Llibre blanc servei corporatiu de formularis - Adobe LiveCycle] (/related/sgde/GE-Llibre blanc servei corporatiu de formularis.pdf)
 
-###  Sistema de Transformació de Documents o STD 
+###  Sistema de Transformació de Documents o STD
 
 - [Sobre l'STD] (/sgde-related/intro-std)
 

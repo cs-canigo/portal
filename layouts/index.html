@@ -40,7 +40,7 @@
 						</div>
 					</div>
 				</div>
-			
+
 
 		</article>
 
@@ -48,7 +48,7 @@
 
 			<div class="container">
 				<div class="row">
-					
+
 					<div class="col-sm-8">
 						<!--h1 class="pull-left">Notícies</h1-->
 						<ul class="list-group llistat_enllacos_filet_cont contingut">
@@ -59,10 +59,47 @@
 								</li>
 							{{ end }}
 						</ul>
-						<a title="RSS de notícies" href="/noticies" class="more">Més notícies</a> <a href="/index.xml" class="rss pull-right"><img src="/img/NG_ico_rss.png_196546587.png" alt="RSS"/></a> 
+						<a title="RSS de notícies" href="/noticies" class="more">Més notícies</a> <a href="/index.xml" class="rss pull-right"><img src="/img/NG_ico_rss.png_196546587.png" alt="RSS"/></a>
 					</div>
 
 					<div class="col-sm-4">
+
+						<div class="inform_relacionada superdestacat">
+							<div class="inform_relacionada_cont">
+								<span class="enllac"><h4><strong>Roadmap de les solucions</strong></h4><span>
+								<div class="llistat_enllacos_filet llistat_enllacos_filet_cont">
+									<p><a href="/centre-de-suport/roadmap/" title="Accés al Roadmap de les solucions: Canigó, SIC, SGDE"><img src="/images/destacats/roadmap.png" alt="Roadmap" /></a></p>
+								</div>
+							</div>
+						</div>
+
+					{{ if gt (len (where .Data.Pages "Section" "destacats")) 0 }}
+
+					<div class="inform_relacionada">
+						<div class="inform_relacionada_cont">
+							<h4><strong>Destacats</strong></h4>
+							<div class="llistat_enllacos_filet">
+								<ul class="llistat_enllacos_filet_cont icones list-group">
+								{{ range first .Site.Params.destacatshome (where .Data.Pages "Section" "destacats") }}
+									<li class="list-group-item bullet">
+									  {{ if isset .Params "enllac" }}
+									    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
+										 {{ else }}
+										   <span class="enllac">{{ .Title }}</span>
+										 {{ end }}
+										{{ .Description }}
+									</li>
+								{{ end }}
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					{{ end }}
+
+<!--
+
+						Teletext
 
 						<div class="inform_relacionada superdestacat">
 							<div class="inform_relacionada_cont">
@@ -81,18 +118,18 @@
 							</div>
 						</div>
 
-						
-						<div class="inform_relacionada">
-							<div class="inform_relacionada_cont">
-								<h4 data-txt="home.titol_destacat2"><strong data-txt="home.titol_destacat2"></strong></h4>	
-								<div class="llistat_enllacos_filet" data-txt="home.destacat2">
-								</div>
-							</div>
-						</div>						
 
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
-								<h4><strong>Contacta amb el Centre de Suport</strong></h4>	
+								<h4 data-txt="home.titol_destacat2"><strong data-txt="home.titol_destacat2"></strong></h4>
+								<div class="llistat_enllacos_filet" data-txt="home.destacat2">
+								</div>
+							</div>
+						</div>
+-->
+						<div class="inform_relacionada">
+							<div class="inform_relacionada_cont">
+								<h4><strong>Contacta amb el Centre de Suport</strong></h4>
 								<div class="llistat_enllacos_filet">
 									<ul class="llistat_enllacos_filet_cont icones list-group">
 										<li class="list-group-item bullet">
@@ -100,15 +137,15 @@
 										</li>
 										<li class="list-group-item bullet">
 											<a href="http://cstd.ctti.gencat.cat/">Centre de Suport Tecnològic al Desenvolupament</a>
-										</li>											
+										</li>
 									</ul>
 								</div>
 							</div>
-						</div>						
+						</div>
 
 					</div>
 
-				</div>	
+				</div>
 			</div>
 
 		</article>

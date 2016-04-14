@@ -15,15 +15,17 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/v1.0.0) amb la configuració de l'entorn Canigó 
+* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.1) amb la configuració de l'entorn Canigó
+
+La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/v1.0.0.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.1.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
-		vagrant up	
+		vagrant up
 
 	Amb aquesta instrucció, vagrant aixecarà una màquina virtual a Virtualbox i executarà les comandes que inclogui el Vagrantfile. El temps d'instal·lació serà llarg degut a que instal·la tot el software necessari per a desenvolupar i desplegar en els entorns de proves (es pot veure què instal·la reseguint el shell script).
 
@@ -44,7 +46,6 @@ weight 		= 99
 	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
 	- CTTI Canigó per creació aplicacions Canigó 3.1 basades en arquitectura REST+HTML5/JS o JSF
 	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
-	- Docker Tooling per manegar els contenidors [Docker](https://www.docker.com/)
 	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
 	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
 
@@ -114,9 +115,26 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 * Reiniciar la màquina o tornar logar-se.
 * Afegir les carpetes desitjades a través de Dispositius -> Carpetes compartides -> Preferències de carpetes compartides... Es pot fer en "calent" i apareixen al directori "/media" dins la màquina virtual.
 
-### Actualització a Ubuntu 15.10
+### Versions
 
-* En cas d'actualitzar Ubuntu a la versió 15.10 cal executar les següents comandes per a que aparegui el fons de pantalla corporatiu CTTI:
+#### 1.0.0 - Ubuntu 15.04 (16/11/2015)
+
+RELEASE NOTES
+
+* Versió inicial
+
+#### 1.0.1 - Ubuntu 15.10 (16/3/2016)
+
+RELEASE NOTES
+
+* Actualització a Ubuntu 15.10
+
+UPGRADE
+
+En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvolupament cal...
+
+* Fer l'upgrade a la versió 15.10 d'Ubuntu
+* Executar les següents comandes per a que segueixi apareixent el fons de pantalla corporatiu CTTI:
 
 		$ sudo cp /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper_bck.png
 		$ sudo wget http://canigo.ctti.gencat.cat/devenv/fonspantalla_1280.png -O /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png

@@ -58,7 +58,7 @@ Aquest connector permet realitzar les següents accions:
 
 Es pot trobar el codi font i binaris referent a aquest component a la següent url:
 
-http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.0/
+http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/
 
 ### Requeriments
 
@@ -90,11 +90,37 @@ En el pom.xml;
 *.psgd.usuari=[usuariPSGD]
 *.psgd.password=[passwordPSGD]
 *.psgd.url=[urlPSGD]
+*.psgd.keystore=[path keystore]
+*.psgd.keystore.password=[password keystore]
+*.psgd.truststore=[path truststore]
+*.psgd.truststore.password=[password truststore]
 ```
 
-L’usuari/password per donar d’alta l’aplicació al PSGD s’ha de demanar al gestor del projecte per part de CTTI .
+L’usuari i password per donar d’alta l’aplicació al PSGD s’ha de demanar al gestor del projecte per part de CTTI.
 
 La url d'accés dependrà si es vol treballar amb l'entorn de Preproducció (https://preproduccio.gestordocumental.intranet.gencat.cat) o Producció (https://gestordocumental.intranet.gencat.cat).
+
+Els certificats necessaris per accedir a la url de PSGD s'han de demanar al gestor del projecte per part de CTTI.
+
+Hi ha tres opcions per indicar a l'aplicació on es troba els certificats necessaris:
+
+* Omplir els valors  referents al keystore/truststore on s'ha incorporat el certificat. S'ha d'indicar si el path pertany al classpath o al sistema de fitxer. Per exemple:
+
+```
+*.psgd.keystore=classpath*:data/psgdKeystore
+
+o
+
+*.psgd.keystore=file:/aqd/psgd/psgdKeystore
+```
+
+* Deixar sense valor les variables keystore i truststore. L'aplicació utilitzarà el cacerts que tingui configurat JVM. (Per a que funcioni s'ha d'afegir els certificats al cacerts)
+
+* Deixar sense valor les variables keystore i truststore i indicar el path del keystore a la JVM quan s'inicia l'aplicació amb el següent paràmetre:
+
+```
+javax.net.ssl.trustStore=/aqd/psgd/psgdKeystore
+```
 
 ## Utilització del Connector
 

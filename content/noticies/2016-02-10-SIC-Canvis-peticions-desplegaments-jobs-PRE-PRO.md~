@@ -22,7 +22,7 @@ Els jobs de desplegament a PRE/PRO de SIC adaptats a aquest sistema:
 
 <center>![autoritzacions_peticions_responsables.png](/images/news/SIC-Jobs-peticions-Remedy.png)</center>
 
-El canvi està previst activar-se el dia **16 de Febrer** per als jobs d'aquelles aplicacions que ja es trobin dins Remedy. Els jobs de la resta d'aplicacions que encara no s'hagin integrat a Remedy mantindran l'antic sistema d'obertura de petició via correu a SAU.
+El canvi està previst activar-se el dia **22 de Febrer** per als jobs d'aquelles aplicacions que ja es trobin dins Remedy. Els jobs de la resta d'aplicacions que encara no s'hagin integrat a Remedy mantindran l'antic sistema d'obertura de petició via correu a SAU.
 En el moment que aquestes aplicacions s'afegeixin a Remedy, l'equip de SIC actualitzarà els seus jobs per tal que facin servir el model d'obertura de canvis via ITSM Remedy (els proveïdors no s'hauran de preocupar de demanar l'actualització dels jobs).
 
 Per a qualsevol dubte relatiu a aquest canvi, podeu contactar amb SAU (sau.tic@gencat.cat / Consulta al servei 'FRAMEWORK SIC' de Remedy).

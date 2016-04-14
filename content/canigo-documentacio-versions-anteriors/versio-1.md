@@ -7,4 +7,11 @@ taxonomies  = []
 weight 		= 2
 +++
 
-En el següent [enllaç](https://github.com/cs-canigo/docs.canigo1.cs-canigo.github.io/archive/master.zip) es pot descarregar la documentació de la versió 1.x de Canigó.
+[1.0.1](https://github.com/cs-canigo/docs.canigo1.cs-canigo.github.io/archive/1.0.1.zip) (15/03/2016)
+
+- [CAN-2086](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2086): Actualitzada documentació connector Documentum per l'upgrade a v7.1.
+
+[1.0.0](https://github.com/cs-canigo/docs.canigo1.cs-canigo.github.io/archive/1.0.0.zip) (6/2/2015)
+
+- Versió inicial exportada del Confluence
+

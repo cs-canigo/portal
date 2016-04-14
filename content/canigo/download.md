@@ -13,16 +13,6 @@ weight		= 4
 
 <p>&nbsp;</p>
 
-**Important: Llibreries NO publicades.**
-
-Hi ha un seguit de llibreries que no es poden publicar perquè cauen sota la llicència de Sun (ni tant sols s'ha permès la publicació d'aquestes llibreries a Ibiblio). Un exemple, és la llibreria javax.resource:connector-api:jar:1.5 (veure: http://maven.apache.org/guides/mini/guide-coping-with-sun-jars.html). En aquests casos, cal descarregar la llibreria en qüestió i fer una instal·lació manual (veure: http://maven.apache.org/guides/mini/guide-3rd-party-jars-local.html).
-
-Al repositori d'Ibiblio podreu trobar llibreries que no tenims als nostres repositoris:
-
-+ Ibiblio Repository: http://mirrors.ibiblio.org/maven2/
-
-<p>&nbsp;</p>
-
 ## Canigó 3.1
 
 - [Mòduls de Canigó 3.1](http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/)

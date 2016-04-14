@@ -37,7 +37,7 @@ El Servei d'Integració Continua (SIC) neix amb l'objectiu de donar aquest supor
 
 Quan l'equip de desenvolupament té una nova versió llesta per lliurar es connecta al repositori del SIC (veure detalls al Manual d'Usuari) i efectua el commit de la nova versió. Aquest commit estarà marcat amb un tag de versió que haurà de coincidir amb la versió de l'aplicació.
 
-La persona del l'equip de desenvolupament que efectua aquesta acció és la que té el rol de Release Manager o Gestor de Lliuraments. No és la idea del Servei que tots els membres de l'equip de desenvolupament estiguin utilitzant contínuament el repositori del SIC. Es suposa que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal- lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
+La persona del l'equip de desenvolupament que efectua aquesta acció és la que té el rol de Release Manager o Gestor de Lliuraments. No és la idea del Servei que tots els membres de l'equip de desenvolupament estiguin utilitzant contínuament el repositori del SIC. Se suposa que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal·lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
 
 ### Construcció de l'aplicació
 
@@ -49,7 +49,7 @@ La construcció del codi pot donar errors, i el procés de lliurar codi / constr
 
 El el codi emmagatzemat en el repositori de codi ha d'estar marcat amb un tag de versió. La versió de les aplicacions ha de sempre incremental, és a dir, qualsevol nou actualització de códi en el subversion del SIC ha d'anar acompanyat amb un increment de la versió.
 
-No es permetrà que una aplicació desplegui una versió d'una aplicació igual o inferior a una versió prèviament desplegada. Si no es fes així es podria induir a confusió en els futurs desplegaments de pre-producció i producció. Per exemple, no es sabria quina versió d'integració esta desplegada en l'entorn de pre-producció.
+No es permetrà que una aplicació desplegui una versió d'una aplicació igual o inferior a una versió prèviament desplegada. Si no es fes així, es podria induir a confusió en els futurs desplegaments de pre-producció i producció. Per exemple, no se sabria quina versió d'integració està desplegada en l'entorn de pre-producció.
 
 ### Execució de proves unitàries
 
