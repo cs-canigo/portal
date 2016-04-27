@@ -76,7 +76,7 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml
 
     Exemple:
     pica.properties:
-    
+
         int.pica.axisdefinition.location=file:/export/AppJavaDades/int/.../axis2client/
         pre.pica.axisdefinition.location=file:/export/AppJavaDades/pre/.../axis2client/
         pro.pica.axisdefinition.location=file:/export/AppJavaDades/pro/.../axis2client/
@@ -119,8 +119,8 @@ Aquest arxiu XML conté la configuració de Spring per al servei de PICA. En l'e
 ```
 
 <div class="message warning">
-Propietats específiques
-
+<b>Propietats específiques</b>
+<br><br>
 Les propietats pica.url, pica.codCertificado, pica.codProducto, etc, definides en XML de configuració anterior, son propietats específiques de la modalitat o producte invocat, per lo que s'hauran d'introduir manualment a l'arxiu pica.properties per tal de que el PlaceHolderResolver de Spring pugui resoldre el valor de la propietat durant l'arranc de l'aplicació.
 </div>
 

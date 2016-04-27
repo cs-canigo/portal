@@ -1,10 +1,8 @@
-
 +++
 date        = "2016-04-14"
-title       = "Interfície d'usuari a client vs JSF"
+title       = "Aplicacions webs modernes: JSF vs client HTML"
 description = ""
 section     = ""
-draft 		= true
 categories  = ["desenvolupament", "canigó"]
 +++
 
@@ -18,22 +16,22 @@ Des del CS Canigó s'han anat publicant notícies i enviant comunicats durant aq
 
 ### Notícies
 
-http://canigo.ctti.gencat.cat/noticies/2015-09-01-Canigo-Plantilla-aplicacio-rest/
+* [Plantilla d'aplicació REST](http://canigo.ctti.gencat.cat/noticies/2015-09-01-Canigo-Plantilla-aplicacio-rest/)
 
-http://canigo.ctti.gencat.cat/noticies/2015-07-24-Canigo-Arquitectura-aplicacio-recomanada/
+* [Arquitectura d'aplicacions recomanada](http://canigo.ctti.gencat.cat/noticies/2015-07-24-Canigo-Arquitectura-aplicacio-recomanada/)
 
-http://canigo.ctti.gencat.cat/noticies/2015-02-05-Canigo-integracio-serveis-rest-gicar/
+* [Integració de serveis REST amb GICAR](http://canigo.ctti.gencat.cat/noticies/2015-02-05-Canigo-integracio-serveis-rest-gicar/)
 
-http://canigo.ctti.gencat.cat/noticies/2015-01-08-canig%C3%B3-REST/
+* [Cas d'èxit d'aplicació Canigo 3 amb arquitectura HTML5 + REST](http://canigo.ctti.gencat.cat/noticies/2015-01-08-canig%C3%B3-REST/)
 
-### Comunicats (anteriors a Febrer 2015, no publicats en el nou portal)
+### Comunicats 
 
-Comunicat Gener 2015
+* [Gener 2015](http://canigo.ctti.gencat.cat/related/cs/2015/01/comunicat.html)
 
-Comunicat Novembre 2013
+* [Novembre 2013](http://canigo.ctti.gencat.cat/comunicats_antics/2013/11/)
 
-Comunicat Maig 2013
+* [Maig 2013](http://canigo.ctti.gencat.cat/comunicats_antics/2013/05/)
 
 ### Canigó
 
-Properes publicacions del framework Canigó 3 deixaran de donar suport a JSF. També el plugin d'Eclipse inclòs en el [Entorn de desenvolupament Canigó] (http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) per a generació de noves aplicacions no permetrà la generació d'aplicacions basades en aquesta tecnologia. L'única opció serà la creació d'aplicacions amb arquitectura REST+HTML5/JS.
+Properes publicacions del framework Canigó 3 deixaran de donar suport a JSF. També el plugin d'Eclipse inclòs l'[Entorn de desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) per a generació de noves aplicacions no permetrà la generació d'aplicacions basades en aquesta tecnologia. L'única opció serà la creació d'aplicacions amb arquitectura REST+HTML5/JS.
