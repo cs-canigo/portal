@@ -1,10 +1,6 @@
 {{ $title := .Title | html | lower}}
 {{ $section := .Section | html | lower}}
 
-{{ if or (eq $title "centre-de-suports") (eq $section "centre-de-suport") }}
-	Centre de Suport
-{{ end }}
-
 {{ if or (eq $title "canigos") (eq $section "canigo")}}
 	Framework Canigó
 {{ end }}
@@ -25,6 +21,17 @@
 	Bloc d'Arquitectura
 {{ end }}
 
+{{ if or (eq $title "cs") (eq $section "cs") }}
+	Centres de Suport
+{{ end }}
+
+{{ if or (eq $title "gicars") (eq $section "gicar") }}
+	GICAR
+{{ end }}
+
+{{ if or (eq $title "clouds") (eq $section "cloud") }}
+	Cloud
+{{ end }}
 
 {{ if in .URL "bloc_tags" }}
 	<a href="/bloc">Bloc d'Arquitectura</a> > {{ .Title }} 

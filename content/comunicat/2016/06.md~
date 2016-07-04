@@ -1,0 +1,19 @@
++++
+title             = "Comunicat"
+date	 	  = "2016-06-03"
+nombrenoticies    = 3
+nombredestacats   = 2
+key 		  = "JUNY2016"
+
+[[relacionats]]
+doctitle          = "Canigó - Incorporació mòdul d'Administració de logs a aplicació Canigó 3"
+docdescription    = "Aquest HowTo descriu com afegir el mòdul d'Administració de logs a una aplicació Canigó 3"
+docurl            = "/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicació Canigo 3.pdf"
+doctype           = "PDF"
+
+[grafica]
+titol      = "Total de repositoris SVN del SIC donats d'alta"
+descripcio = "La següent gràfica mostra el total de repositoris SVN del SIC donats d'alta fins al 31/5/2016."
+imatge     = "repositoris_SVN-SIC_Maig2016.PNG"
+alt        = "Total repositoris SVN del SIC donats d'alta"
++++

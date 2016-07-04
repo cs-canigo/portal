@@ -214,7 +214,6 @@
 {{ end }}
 
 <!--Centre de suport - Related -->
-
 {{ if or (eq $title "centre-de-suport-related") (eq $section "centre-de-suport-related") }}
 	<a href="/centre-de-suport/">Centre de Suport</a> </li>
 	<li>
@@ -228,5 +227,36 @@
 {{ end }}
 
 
+<!-- GICAR - guia integració -->
+{{ if or (eq $title "gicar-integracios") (eq $section "gicar-integracio") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-integracio/">
+	{{ end }}
+
+	Integració
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
 
 
+
+<!-- CENTRE DE SUPORT CANIGO -->
+{{ if or (eq $title "centre-de-suports") (eq $section "centre-de-suport") }}
+	<a href="/cs/">Centres de Suport</a> </li>
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/centre-de-suport/"> 
+		{{ end }}
+
+			Canigó
+		{{ if gt (len $section) 0 }}
+			</a> 
+		{{ end }}
+	</li>
+{{ end }}

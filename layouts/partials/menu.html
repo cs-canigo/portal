@@ -81,42 +81,15 @@
                     	<span class="titol-cap-nou">{{ .Site.Params.titol }}</span>
                     </div>					
 					<ul class="nav navbar-nav">
-						<!--APARTATS-->
+
+			        	{{ range .Site.Menus.main }}
+
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+							<a target='_self' class="dropdown-toggle" href='{{.URL}}' data-toggle='_dropdown'>{{ .Name }}</a>
 						</li>
 
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d'Arquitectura
-							</a>
-						</li>
+						{{end}}
 
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc
-							</a>
-						</li>
-
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/centre-de-suport/' data-toggle='_dropdown'>Centre de suport Canigó
-							</a>
-						</li>
-						
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Framework Canigó
-							</a>
-						</li>
-
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC
-							</a>
-
-						</li>
-
-						<li class='dropdown'>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE
-							</a>
-						</li>
-						
 					</ul>
 
 				</nav>

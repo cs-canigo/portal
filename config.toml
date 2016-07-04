@@ -21,3 +21,61 @@ Paginate = 10
 
 [taxonomies]
 	bloc_tag = "bloc_tags"
+
+#----------------
+# MENU PRINCIPAL
+#----------------
+
+[[menu.main]]
+	Name = "Inici"
+    Weight = 1
+    Identifier = "inici"
+    URL = "/"
+
+[[menu.main]]
+	Name = "Principis d'arquitectura"
+    Weight = 3
+    Identifier = "principis"
+    URL = "/principis"   
+
+[[menu.main]]
+	Name = "Bloc"
+    Weight = 5
+    Identifier = "bloc"
+    URL = "/bloc"   
+
+[[menu.main]]
+	Name = "Cloud"
+    Weight = 7
+    Identifier = "cloud"
+    URL = "/cloud"
+
+[[menu.main]]
+	Name = "Framework Canigó"
+    Weight = 9
+    Identifier = "framework"
+    URL = "/canigo"
+
+[[menu.main]]
+	Name = "SIC"
+    Weight = 11
+    Identifier = "sic"
+    URL = "/sic"
+
+[[menu.main]]
+	Name = "SGDE"
+    Weight = 13
+    Identifier = "sgde"
+    URL = "/sgde"
+
+[[menu.main]]
+	Name = "GICAR"
+    Weight = 15
+    Identifier = "gicar"
+    URL = "/gicar"
+
+[[menu.main]]
+	Name = "Centres de Suport"
+    Weight = 17
+    Identifier = "suport"
+    URL = "/cs"                        
