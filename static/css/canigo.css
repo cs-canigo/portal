@@ -98,6 +98,13 @@ h4{font-size: 1.3em; }
     overflow-x: auto;
     display: block;
   }  
+
+  #form-sandbox{
+    margin-left: 0em;
+  } 
+  #form-sandbox img{
+    width:auto;
+  }  
 }
 
 
@@ -242,3 +249,16 @@ tr.head_row td + td {
 }
 
 .home .inform_relacionada_cont .llistat_enllacos_filet_cont p{margin-top: .5em}
+
+#form-sandbox{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-block{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  padding-top: .5em;
+  padding-bottom: 1em;
+}

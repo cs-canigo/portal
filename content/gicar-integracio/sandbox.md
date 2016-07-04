@@ -34,21 +34,21 @@ Per a fer això cal seguir el següent procediment:
 
 1. El proveïdor de desenvolupament s'ha d'instal·lar el docker engine que permet gestionar imatges i contenidors (https://www.docker.com/products/docker-engine), o bé utilitzar l'entorn de desenvolupament de Canigó (http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
 
-1. Guardar el contingut següent en un fitxer que s'anomeni Dockerfile:
+1. Dockerfile GICAR (https://hub.docker.com/r/gencatcloud/gicar/):
 
 		FROM  centos:6.6
 
-		RUN yum install httpd glibc libstdc++ ncurses perl unzip -y
+		RUN yum install httpd glibc libstdc++ ncurses perl unzip tar xz -y
 
 		ENV httpd /etc/httpd
 
 		RUN mkdir -p ${httpd}/CA/webagent
 
-		RUN curl -o ${httpd}/CA/webagent.zip https://dl.dropboxusercontent.com/u/17397489/gicar/webagent.zip
-		RUN unzip  ${httpd}/CA/webagent.zip -d  ${httpd}/CA/webagent/
-		RUN rm ${httpd}/CA/webagent.zip
+		RUN curl -o ${httpd}/CA/webagent.tar.xz http://canigo.ctti.gencat.cat/related/cloud/fitxers-suport/webagent.tar.xz
+		RUN tar xfvJ ${httpd}/CA/webagent.tar.xz -C ${httpd}/CA/
+		RUN rm ${httpd}/CA/webagent.tar.xz
 
-		RUN curl -o ${httpd}/conf/config.zip https://dl.dropboxusercontent.com/u/17397489/gicar/config.zip
+		RUN curl -o ${httpd}/conf/config.zip http://canigo.ctti.gencat.cat/related/cloud/fitxers-suport/config.zip
 		RUN unzip  -o ${httpd}/conf/config.zip -d  ${httpd}/conf/
 		RUN rm ${httpd}/conf/config.zip
 
@@ -63,19 +63,23 @@ Per a fer això cal seguir el següent procediment:
 		RUN chmod 755 -R /var/www/cgi-bin/
 		RUN chmod 755 -R /var/www/html/
 
-		RUN echo "#!/bin/bash" > /run.sh
-		RUN echo "set -m" >> /run.sh
-		RUN echo "/usr/sbin/apachectl -D FOREGROUND &" >> /run.sh
-		#RUN echo "sleep 30" >> /run.sh
-		RUN echo "/etc/httpd/CA/webagent/bin/smreghost -i \$PS_IP -u \$GICARUSER -p \$GICARPWD -hn \$ContainerHostName -hc \$HCOGICAR -f /etc/httpd/conf/Smhost.conf -o" >> /run.sh
-		RUN echo "sed -i -- 's/\\\$AgentConfigDocker/'\"\$AgentConfigDocker\"'/g' /etc/httpd/conf/WebAgent.conf" >>  /run.sh
-		RUN echo "sed -i -- 's/\\\$AGENTNAME/'\"\$AGENTNAME\"'/g' /etc/httpd/conf/LocalConfigGicar.conf" >> /run.sh
-		RUN echo "chown apache:apache /etc/httpd/conf/Smhost.conf" >> /run.sh
-		RUN echo "fg" >> /run.sh
+		RUN echo "#!/bin/bash" > /entrypoint.sh
+		RUN echo "set -m" >> /entrypoint.sh
+		RUN echo "/usr/sbin/apachectl -D FOREGROUND &" >> /entrypoint.sh
+		#RUN echo "sleep 30" >> /entrypoint.sh
+		RUN echo "/etc/httpd/CA/webagent/bin/smreghost -i \$PS_IP -u \$GICARUSER -p \$GICARPWD -hn \$ContainerHostName -hc \$HCOGICAR -f /etc/httpd/conf/Smhost.conf -o" >> /entrypoint.sh
+		RUN echo "sed -i -- 's/\\\$AgentConfigDocker/'\"\$AgentConfigDocker\"'/g' /etc/httpd/conf/WebAgent.conf" >>  /entrypoint.sh
+		RUN echo "sed -i -- 's/\\\$AGENTNAME/'\"\$AGENTNAME\"'/g' /etc/httpd/conf/LocalConfigGicar.conf" >> /entrypoint.sh
+		RUN echo "chown apache:apache /etc/httpd/conf/Smhost.conf" >> /entrypoint.sh
+		RUN echo "fg" >> /entrypoint.sh
 
-		RUN chmod 755 /run.sh
+		RUN chmod 755 /entrypoint.sh
 
-		ENTRYPOINT ["/run.sh"] 
+		#Copiem el fitxer wait-for-it
+		COPY wait-for-it.sh /
+		RUN chmod 755 /wait-for-it.sh
+
+		CMD ["/entrypoint.sh"]
 
 1. Executar la següent comanda per a generar la imatge de l'apache GICAR:
 

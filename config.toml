@@ -51,7 +51,7 @@ Paginate = 10
     URL = "/cloud"
 
 [[menu.main]]
-	Name = "Framework Canigó"
+	Name = "Canigó"
     Weight = 9
     Identifier = "framework"
     URL = "/canigo"
