@@ -17,11 +17,6 @@
   </url>
   
   <url>
-    <loc>http://canigo.ctti.gencat.cat/cloud/cataleg/</loc>
-    <lastmod>2016-06-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://canigo.ctti.gencat.cat/noticies/2016-06-08-GICAR-documentacio/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
   </url>
@@ -537,6 +532,11 @@
   <url>
     <loc>http://canigo.ctti.gencat.cat/gicar-integracio/siteminder/</loc>
     <lastmod>2016-06-08T17:11:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/cloud/cataleg/</loc>
+    <lastmod>2016-05-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
