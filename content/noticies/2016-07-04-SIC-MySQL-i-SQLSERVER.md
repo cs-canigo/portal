@@ -11,15 +11,15 @@ Durant el mes de Juny s'ha dotat al SIC de les eines i procediments necessaris p
 
 - <i>[Formulari d'alta d'aplicació per al Portal d'Integració Contínua (Tasques al Jenkins)](/related/sic/SIC-Formulari-Construccio-Desplegament-Aplicacio.xlsx):</i> a la llengüeta "Scripts BBDD" podreu incloure les dades de connexió a aquests tipus de bases de dades. Recordar-vos que per a cada connexió, caldrà copiar i pegar la taula amb la informació pertinent.
 
-![Formulari scripts BBDD MySQL y SQLSERVER](/images/news/formulari_mysql_sqlserver.PNG "Formulari scripts BBDD MySQL y SQLSERVER")
+![Formulari scripts BBDD MySQL i SQLSERVER](/images/news/SIC-formulari_ Jenkins_SQL.png "Formulari scripts BBDD MySQL i SQLSERVER")
 
 - <i>[Manual d'Usuari:](/related/sic/manual-usuari.pdf)</i> afegida informació per la configuració del fitxer de plans de BBDD per a aquestes bases de dades.
 
 A continuació es mostra un exemple de com podria quedar el fitxer de plans per a una aplicació amb que utilitzés aquestes bases de dades:
 
-![Script plans MongoDB](/images/news/plans_mysql_sqlserver.PNG "Script plans MongoDB")
+![Script plans MySQL i SQLSERVER](/images/news/SIC-fitxer_plans.png "MySQL i SQLSERVER")
 
-L'**idBBDD** fa referència a la base de dades on s'ha d'executar el script, no al tipus (podria haver scripts per dues bases de dades MongoDB, per exemple).
+Al fitxer de plans s'indica l'**idBBDD**. Aquest atribut fa referència al nom de la connexió que s'ha definit al formulari anterior i indica que l'script indicat s'ha d'executar a través de la connexió de base de dades amb aquest nom.
 
 Destacar que l'execució de scripts només es troba disponible per als entorns d'INT. Per PRE i PRO, els procediments de desplegament són semi-automàtics amb lliurament per sFTP d'artefactes a CPD, i enviament de correu de sol·licitud de desplegament a SAU CTTI o sol·licitud de canvi a Remedy.
 
