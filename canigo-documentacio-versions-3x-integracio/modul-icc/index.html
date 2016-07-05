@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>ICC</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"ICC\" />");
+		document.write("<meta name=\"description\" content=\"Serveis de normalització d\x27adreces del Institud Cartografic de Catalunya.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-integracio">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-integracio">Mòduls d'Integració</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										ICC
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										ICC
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest connector, és el de proporcionar un punt d&rsquo;accés als serveis de normalització d&rsquo;adreces del ICC - Institud Cartografic de Catalunya.</p>
+
+<h3 id="propòsit">Propòsit</h3>
+
+<p>El propòsit del connector és proporcionar una interfície funcional al connector de l&rsquo;ICC del servei de normalització d&rsquo;adreces. El servei de geocodificació de l&rsquo;Institut Cartogràfic de Catalunya permet obtenir una localització geogràfica (coordenades) a partir de la descripció d&rsquo;un municipi, carrer, adreça , cruïlla (textos), topònim o punt quilomètric d&rsquo;una carretera.</p>
+
+<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+
+<p>El connector icc es troba dins els connectors de serveis funcionals de la Generalitat.</p>
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest document va dirigit als següents perfils:</p>
+
+<ul>
+<li>Programador. Per conèixer l&rsquo;ús del connector.</li>
+<li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
+</ul>
+
+<h3 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h3>
+
+<table>
+<thead>
+<tr>
+<th>Referència</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="/related/canigo/documentacio/modul-icc/Geocodificador_Manual_Integrador_v1.12.pdf" title="Guia d'us de l'API del Connector ICC">Guia d&rsquo;ús de l&rsquo;API del Connector ICC</a>.</td>
+</tr>
+
+<tr>
+<td><a href="http://www.icc.cat/">Institud Cartogràfic de Catalunya - ICC</a>.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="descripció-detallada">Descripció Detallada</h2>
+
+<p>Aquest connector permet realitzar les següents funcionalitats referents a les següent operacions:</p>
+
+<p>Funcionalitats</p>
+
+<ul>
+<li><strong>Localitza adreça:</strong> Funcionalitat que permet obtenir una localització geogràfica (coordenades) a partir de la adreça. ex: C.Balmes,5 (Barcelona).</li>
+<li><strong>Localitza cruilla:</strong> Funcionalitat que permet obtenir una localització geogràfica a partir d&rsquo;una cruïlla. ex: Av. Diagonal amb Av.Meridiana (Barcelona)</li>
+<li><strong>Localitza toponim:</strong> Funcionalitat que permet obtenir una localització geogràfica a partir d&rsquo;un topònim. ex: platja de la barceloneta.</li>
+<li><strong>Localitza pk:</strong> Funcionalitat que permet obtenir una localització geogràfica a partir del punt quilomètric d&rsquo;una carretera. ex: carretera B-100 KM 3.</li>
+<li><strong>Obtenir informació d&rsquo;un punt:</strong> Funcionalitat que permet obtenir una informació d&rsquo;un punt. ex: x-&gt; 430477.74 y -&gt;4582122.725.</li>
+</ul>
+
+<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+
+<h4 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h4>
+
+<p>Es pot trobar el codi font referent a aquest component a la següent url:</p>
+
+<p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.icc/1.1.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.icc/1.1.0/</a></p>
+
+<h4 id="requeriments">Requeriments</h4>
+
+<p>El connector ICC és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.</p>
+
+<h3 id="instal-lació-i-configuració">Instal.lació i Configuració</h3>
+
+<h4 id="instal-lació">Instal.lació</h4>
+
+<p>Per tal d&rsquo;instal-lar el connector ICC es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
+
+<pre><code>&lt;canigo.integration.icc.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.icc.version&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.integration.icc&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.integration.icc.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h4 id="configuració">Configuració</h4>
+
+<p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.</p>
+
+<p>L&rsquo;eina de desenvolupament genera automàticament el fitxer de propietats necessari per a la configuració del servei.</p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/icc.properties</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Requerit</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.iccService.webServiceServer</td>
+<td>Sí</td>
+<td>Endpoint del servei ICC.</td>
+</tr>
+
+<tr>
+<td>*.iccService.contrasenya</td>
+<td>Sí</td>
+<td>contrasenya d&rsquo;access al servei.</td>
+</tr>
+
+<tr>
+<td>*.iccService.usuari</td>
+<td>Sí</td>
+<td>usuari d&rsquo;acces al servei.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Cada aplicació que vulgui utilitzar les funcionalitats del ICC, haurà de seguir el següent procediment:</p>
+
+<ol>
+<li>Complimentar el Document d&rsquo;Alta que es pot trobar aquí. No s&rsquo;ha de complimentar l&rsquo;apartat d&rsquo;organisme sol?licitant i persona de contacte. Aquest organisme i persona sempre ha de ser de l&rsquo;administració. Si una empresa privada desenvolupa l&rsquo;aplicació, la petició ha de ser feta per algú de l&rsquo;administració.</li>
+<li>Complimentar el document d&rsquo;enquesta que es pot descarrega d&rsquo;aquí.</li>
+<li>Enviar aquests dos documents a la direcció de correu armand.guell@icc.cat demanant l&rsquo;accés al servei ICC.</li>
+</ol>
+
+<p>L&rsquo;usuari i password seran subministrats en aproximadament una setmana després de la petició.</p>
+
+<p>Els arxius de configuració que contenen els beans del mòdul i que serán carregats per Spring, son automàticament registrats pel core de Canigó, per lo que el desenvolupador no ha de definir cap arxiu XML per aixecar el servei.</p>
+
+<h3 id="utilització-del-servei">Utilització del servei</h3>
+
+<p>Per accedir al servei ICC, el desenvolupador pot realitzar una crida de forma externa mitjançant el patró &lsquo;Dependency Injection&rsquo;.</p>
+
+<p>Podem diferenciar dues formes d&rsquo;injectar-ho:</p>
+
+<ul>
+<li>Per XML:</li>
+</ul>
+
+<pre><code>&lt;bean id=&quot;iccWebServiceClient&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.icc.IccWebServiceClientImpl&quot;&gt;
+		&lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
+		&lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;		
+	&lt;/bean&gt;
+
+	&lt;bean id=&quot;webServiceTemplate&quot; class=&quot;org.springframework.ws.client.core.WebServiceTemplate&quot;&gt;
+		&lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
+		&lt;property name=&quot;interceptors&quot;&gt;
+			&lt;bean class=&quot;cat.gencat.ctti.canigo.arch.integration.icc.IccSecurity&quot;&gt;
+				&lt;constructor-arg value=&quot;USUARI&quot; /&gt;
+				&lt;constructor-arg value=&quot;CONTRASENYA&quot; /&gt;
+			&lt;/bean&gt;
+		&lt;/property&gt;
+	    &lt;property name=&quot;messageSender&quot;&gt;
+	        &lt;bean class=&quot;org.springframework.ws.transport.http.CommonsHttpMessageSender&quot; /&gt;
+	    &lt;/property&gt;
+		&lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
+		&lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
+		&lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;
+	&lt;/bean&gt;
+
+	&lt;bean id=&quot;messageFactory&quot; class=&quot;org.springframework.ws.soap.saaj.SaajSoapMessageFactory&quot;&gt;
+		&lt;property name=&quot;soapVersion&quot;&gt;
+			&lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+	
+	&lt;!-- serializador con JAXB --&gt;
+	&lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;&gt;
+		&lt;property name=&quot;classesToBeBound&quot;&gt;
+			&lt;list&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Adreca&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.ArrayOfPuntGeografic&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Cruilla&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.IdNom&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Incidencia&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.InfoAdministrativa&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Localitzacio&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.LocalitzacioCruilla&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Localitzacions&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.LocalitzacionsCruilla&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.ObtenirInfoPuntInput&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.PK2&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Pks&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Punt&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.PuntGeografic&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Toponim&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Toponims&lt;/value&gt;
+					&lt;value&gt;cat.icc.ws.geocodificador.Via&lt;/value&gt;
+			&lt;/list&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+</code></pre>
+
+<ul>
+<li>Per anotacions:</li>
+</ul>
+
+<pre><code>@Autowired
+@Qualifier(&quot;iccWebServiceClient&quot;)
+IccWebServiceClient client;
+</code></pre>
+
+<h4 id="excepcions-del-servei-icc">Excepcions del servei ICC</h4>
+
+<p>El servei ICC pot generar excepcions IccModuleException. Aquest tipus d&rsquo;excepcions les genera el servei ICC en els casos de:</p>
+
+<p>Les excepccions es poden donar degut a:</p>
+
+<ul>
+<li>TimeOut a la petició del servei</li>
+<li>Error en el format de les dades d&rsquo;entrada i/o sortida</li>
+<li>Error en el binding automàtic amb les dades.</li>
+</ul>
+
+<p>En el cas de produir-se un error el servei ICC registra en el fitxer de logs de l&rsquo;aplicació l&rsquo;error produit, i llença una excepció IccModuleException a la aplicació amb l&rsquo;informcació de l&rsquo;excepció.</p>
+
+<h4 id="exemple-d-utilització-del-servei-icc">Exemple d&rsquo;utilització del servei ICC</h4>
+
+<h5 id="localitza-adreça">Localitza Adreça</h5>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccModuleException;
+import cat.icc.ws.geocodificador.*;
+
+public class IccServiceReleaseTest {
+
+	@Autowired
+	@Qualifier(&quot;iccWebServiceClient&quot;)
+	IccWebServiceClient client;
+
+	public void testLocalitzaAdreca() {
+		try {
+			Adreca adreca = getAdreca();
+			Localitzacions response;
+			response = client.localitzaAdreca(adreca);
+			Assert.assertTrue(response.getItem().size() &gt; 0);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	private Via getVia() {
+		Via via = new Via();
+		via.setNom(&quot;Mas Massonet&quot;);
+		return via;
+
+	}
+
+	private Adreca getAdreca() {
+		Adreca adreca = new Adreca();
+		adreca.setPoblacio(&quot;Blanes&quot;);
+		adreca.setVia(getVia());
+		adreca.setPortal(18);
+		adreca.setCodiPostal(&quot;no&quot;);
+		adreca.setLlogaret(new IdNom());
+		return adreca;
+	}
+}
+</code></pre>
+
+<h5 id="localitza-cruïlla">Localitza Cruïlla</h5>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccModuleException;
+import cat.icc.ws.geocodificador.*;
+
+public class IccServiceReleaseTest {
+
+	@Autowired
+	@Qualifier(&quot;iccWebServiceClient&quot;)
+	IccWebServiceClient client;
+
+	public void testLocalitzaCruilla() {
+		try {
+			Cruilla cruilla = getCruilla();
+			LocalitzacionsCruilla response = client.localitzaCruilla(cruilla);
+			Assert.assertTrue(response.getItem().size() &gt; 0);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	private Cruilla getCruilla() {
+		Via via1 = new Via();
+		via1.setTipus(&quot;c.&quot;);
+		via1.setNom(&quot;Balmes&quot;);
+		Via via2 = new Via();
+		via2.setNom(&quot;*&quot;);
+		Cruilla cruilla = new Cruilla();
+		cruilla.setPoblacio(&quot;Barcelona&quot;);
+		cruilla.getVies().add(via1);
+		cruilla.getVies().add(via2);
+		cruilla.setComarca(new IdNom());
+		return cruilla;
+	}
+}
+</code></pre>
+
+<h5 id="localitza-punt-quilomètric">Localitza Punt Quilomètric</h5>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccModuleException;
+import cat.icc.ws.geocodificador.*;
+
+public class IccServiceReleaseTest {
+
+	@Autowired
+	@Qualifier(&quot;iccWebServiceClient&quot;)
+	IccWebServiceClient client;
+
+	public void testLocalitzaPK() {
+		try {
+			PK2 pk = getPk();
+			Pks response = client.localitzaPK(pk);
+			Assert.assertTrue(response.getItem().size() &gt; 0);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	private PK2 getPk() {
+		PK2 pk = new PK2();
+		pk.setNomCarretera(&quot;AP-7&quot;);
+		pk.setKM(&quot;56&quot;);
+		pk.setCoordenadesGeografiques(false);
+		return pk;
+	}
+}
+</code></pre>
+
+<h5 id="localitza-toponim">Localitza Toponim</h5>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccModuleException;
+import cat.icc.ws.geocodificador.*;
+
+public class IccServiceReleaseTest {
+
+	@Autowired
+	@Qualifier(&quot;iccWebServiceClient&quot;)
+	IccWebServiceClient client;
+
+	public void testLocalitzaToponim() {
+		try {
+			Toponim toponim = getToponim();
+			Toponims response = client.localitzaToponim(toponim);
+			Assert.assertTrue(response.getItem().size() &gt; 0);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	private Toponim getToponim() {
+		Toponim topo = new Toponim();
+		topo.setNom(&quot;Can Clota&quot;);
+		topo.setCoordenadesGeografiques(false);
+		return topo;
+	}
+}
+</code></pre>
+
+<h5 id="obtenir-informació-d-un-punt">Obtenir informació d&rsquo;un punt</h5>
+
+<p>El punt pot estar en el datum ED50 o en el datum ETRS89 i les coordenades han d&rsquo;estar en format UTM.</p>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccModuleException;
+import cat.icc.ws.geocodificador.*;
+
+public class IccServiceReleaseTest {
+
+	@Autowired
+	@Qualifier(&quot;iccWebServiceClient&quot;)
+	IccWebServiceClient client;
+
+	public void testObtenirInfoPuntEd50() {
+		try {
+			ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputUTMED50();
+			InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
+			Assert.assertTrue(response != null);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	public void testObtenirInfoPuntEtrs89() {
+		try {
+			ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputETRS89();
+			InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
+			Assert.assertTrue(response != null);
+		} catch (IccModuleException e) {
+			Assert.assertTrue(false);
+		}
+	}
+
+	private PuntGeografic getPuntGeograficUTMED50() {
+		PuntGeografic punt = new PuntGeografic();
+		punt.setX(428263.75);
+		punt.setY(4582861.0);
+		return punt;
+	}
+
+	private PuntGeografic getPuntGeograficETRS89() {
+		PuntGeografic punt = new PuntGeografic();
+		punt.setX(484937.352);
+		punt.setY(4652370.915);
+		return punt;
+	}
+
+	private PuntGeografic getPuntGeograficBuit() {
+		PuntGeografic punt = new PuntGeografic();
+		return punt;
+	}
+
+	private ObtenirInfoPuntInput getObtenirInfoPuntInputUTMED50() {
+		ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
+		obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficUTMED50());
+		obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficBuit());
+		return obtenirInfoPuntInput;
+	}
+
+	private ObtenirInfoPuntInput getObtenirInfoPuntInputETRS89() {
+		ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
+		obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficBuit());
+		obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficETRS89());
+		return obtenirInfoPuntInput;
+	}
+
+}
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

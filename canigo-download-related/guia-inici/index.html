@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Guia d&#39;inici per a Canigó 3.x</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Guia d\x27inici per a Canigó 3.x\" />");
+		document.write("<meta name=\"description\" content=\"\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-download-related">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo/download/">Descàrrega dels binaris de Canigó i de les API’s de suport</a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Guia d&#39;inici per a Canigó 3.x
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Guia d&#39;inici per a Canigó 3.x
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="introducció">Introducció</h3>
+
+<p>Aquest document pretén oferir al desenvolupador d&rsquo;aplicacions Canigó 3.0 un entorn de treball preconfigurat que permeti començar a treballar amb el framework en pocs minuts. Aquest entorn de treball consta d&rsquo;un IDE de desenvolupament (Eclipse), un servidor d&rsquo;aplicacions (Apache Tomcat), una màquina virtual (JDK 1.6), eina de gestió de repositoris i construcció de projectes (Maven) i una eina per la configuració de les variables d&rsquo;entorn.</p>
+
+<h3 id="software-recomenat-pel-centre-de-suport">Software recomenat pel centre de Suport</h3>
+
+<p>Es recomana utilitzar l&rsquo;entorn de desenvolupament basat en Eclipse i Maven que us donem al centre de Suport de Canigó. Per construir aquest entorn cal descarregar el següent arxiu:</p>
+
+<ul>
+<li>[InstallCanigo3.exe]: inclou (apache-maven-2.2.1, apache-tomcat-6.0.28, eclipse helios, jdk1.6.0_18, workspace). Descarregar <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html">aquí</a>.</li>
+<li>[Entorn de treball propi]: en el cas que es tingui un entorn de treball propi prèviament instal.lat amb els components anomenats al punt anterior i vulguem seguir fent-lo servir podem optar només per instal.lar els &ldquo;Plug-ins de Canigó 3.0&rdquo; a través d&rsquo;Eclipse seguint els passos del següent enllaç: <a href="/canigo-download-related/instalar-plugin">Instal.lar només el plug-in</a></li>
+</ul>
+
+<h3 id="passos-a-seguir">Passos a seguir</h3>
+
+<ul>
+<li>Cal descarregar l&rsquo;entorn de treball en el següent <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo3.html">enllaç</a></li>
+<li><b><font color=red>IMPORTANT!</font>Aquest instal·lable reemplaça el settings.xml dintre del repositori maven per defecte</b> (C:\Documents and Settings{usuari}.m2\settings.xml),<b> el procés d&rsquo;instal·lació deixa una còpia del fitxer a $DIRECTORI_INSTALACIO/nsi-backup</b></li>
+<li>Un cop instal·lat amb el directori per defecte es crearà una carpeta anomenada &ldquo;canigo3&rdquo; que conté totes les eines necessàries per començar a treballar amb Canigó 3.0.
+<br>
+<br></li>
+<li>Aquest entorn configura les eines necessàries per a utilitzar-les des de l&rsquo;eclipse, si es volen utilitzar des de línia de comandes caldrà afegir les següents variables d&rsquo;entorn:
+<br>
+<br>
+CANIGO3_HOME -&gt; c:\canigo3 per defecte<br>
+CATALINA_HOME -&gt; %CANIGO3_HOME%\apache-tomcat-6.0.28<br>
+JAVA_HOME -&gt; %CANIGO3_HOME%\jdk160_18<br>
+M2_HOME -&gt; %CANIGO3_HOME%\apache-maven-2.2.1<br>
+CLASSPATH -&gt; %JAVA_HOME%\lib<br>
+PATH -&gt; &hellip;;%M2_HOME\bin;%JAVA_HOME%\bin <br>
+<br>
+<br></li>
+
+<li><p>Ja podem executar l&rsquo;entorn de treball &ldquo;Eclipse&rdquo; seleccionant l&rsquo;arxiu amb el mateix nom que hi ha a la carpeta &ldquo;C:\canigo3\eclipse&rdquo; i seleccionant el &ldquo;workspace&rdquo; que apareix
+per defecte de la ruta &ldquo;\canigo3\workspace&rdquo;.
+<img src="/images/canigo-guia-inici/selectWorkspace.PNG" alt="selectWorkspace" /></p></li>
+
+<li><p>Es recomanable anar al &ldquo;Help -&gt; Check for Updates&rdquo; i comprovar que tenim instal.lada l&rsquo;ultima versió del &ldquo;Plug-in&rdquo; de Canigo 3.0</p></li>
+
+<li><p><b>Cal verificar que la versió de Maven que utilitza l&rsquo;eclipse és la 2.2.1</b> i no la 3.0.1-SNAPSHOT que porta per defecte el plugin de maven de l&rsquo;eclipse. Per fer-ho cal anar a Window &ndash;&gt; Preferences &ndash;&gt; Maven &ndash;&gt; Installations i seleccionar la versió del maven que ve per defecte amb l&rsquo;entorn de treball.</p></li>
+
+<li><p><b>Cal indicar el directori del tomcat que es vol utilitzar a l&rsquo;entorn de treball.</b> Per fer-ho cal anar a Window &ndash;&gt; Preferences &ndash;&gt; Tomcat i seleccionar la versió del tomcat que ve per defecte amb l&rsquo;entorn de treball.</p></li>
+
+<li><p>Un cop obert l&rsquo;entorn de treball seleccionem &ldquo;File -&gt; New -&gt; Other&hellip;&rdquo; per obrir la finestra de &ldquo;Select a wizard&rdquo;. Dins busquem la carpeta &ldquo;Assistent Projectes Canigó&rdquo; i seleccionem &ldquo;Crear un Projecte Canigó&rdquo; i polsem el botó de &ldquo;Next &gt;&rdquo;.
+<img src="/images/canigo-guia-inici/createCanigoProject.PNG" alt="createCanigoProject" /></p></li>
+
+<li><p>Ara tenim obert el wizard &ldquo;Crear un projecte Canigó&rdquo; amb una configuració per defecte on només caldrà que escrivim el nom del projecte, per exemple &ldquo;ProvaJsf&rdquo;. Si volguéssim crear una aplicació de tipus &ldquo;Struts&rdquo; o &ldquo;d&rsquo;Escriptori&rdquo; només caldria seleccionar-la. Actualment només està disponible la versió 3.0 de Canigó, però podem seleccionar el idioma per defecte de l&rsquo;aplicació i la versió asignada amb que es crearà l&rsquo;aplicació. Finalment polsem el botó de &ldquo;Finish&rdquo;.
+<br>
+<b><font color=red>IMPORTANT!</font></b>: la primera vegada &ldquo;maven&rdquo; s&rsquo;ha de descarregar les dependències des d&rsquo;un repositori remot a un de local i pot trigar una estona.</p></li>
+
+<li><p>Un cop creat el projecte hem d&rsquo;activar el gestor de dependències, per fer-ho cal seleccionar el projecte amb el botó secundari, anar a la pestanya de &ldquo;Maven&rdquo; i seleccionar &ldquo;Enable Dependency Management&rdquo;. Al finalitzar aquest procés el projecte ja compilarà.
+<img src="/images/canigo-guia-inici/enableDependencyManagement.PNG" alt="enableDependencyManagement" /></p></li>
+
+<li><p>Per desplegar aquest projecte en un servidor, primer cal configurar-lo per a que el servidor d&rsquo;aplicacions &ldquo;Tomcat&rdquo; proporcionat amb aquest entorn el pugui desplegar. Per realitzar aquesta tascar cal seleccionar el projecte amb el botó secundari, anar a &ldquo;Properties -&gt; Tomcat&rdquo;, seleccionar el checkbox &ldquo;Is a Tomcat Project&rdquo;, posar al &ldquo;ContextName&rdquo; el nom del projecte (en el nostre cas ProvaJsf) i per últim posar al &ldquo;Subdirectory to set as web application root&rdquo; la ruta &ldquo;/target/&rdquo; amb el nom del projecte seguit de la versió de maven, en el nostre cas &ldquo;/target/ProvaJsf-1.0.0&rdquo;.
+<img src="/images/canigo-guia-inici/propertiesProject.PNG" alt="propertiesProject" /></p></li>
+
+<li><p>Ara hem de generar el fitxer que desplegarà &ldquo;Tomcat&rdquo; a la ruta del &ldquo;/target&rdquo;. Per fer això seleccionem el projecte amb el botó secundari, anem a &ldquo;Run As -&gt; Maven package&rdquo;.<br>
+<img src="/images/canigo-guia-inici/runAsPackage.PNG" alt="runAsPackage" /></p></li>
+
+<li><p>Finalment podem aixecar &ldquo;Tomcat&rdquo; polsant la icona de &ldquo;Start Tomcat&rdquo; de la barra que hi ha sobre el &ldquo;Project Explorer&rdquo;.
+<img src="/images/canigo-guia-inici/startTomcat.PNG" alt="startTomcat" /></p></li>
+
+<li><p>Per últim obrim el navegador i escrivim la següent url: <a href="http://localhost:8080/ProvaJsf/">http://localhost:8080/ProvaJsf/</a>. El projecte s&rsquo;obrirà i ja podrem navegar per ell.
+<img src="/images/canigo-guia-inici/projectView.PNG" alt="projectView" /></p></li>
+</ul>
+
+<h3 id="afegir-mòduls-al-plugin">Afegir Mòduls al plugin</h3>
+
+<ul>
+<li><p>Prement el botó secundari del ratolí sobre el projecte i anant a la pestanya de &ldquo;Canigó&rdquo; sens obrirà un submenú amb els següents tres apartats:</p>
+
+<ul>
+<li>Afegir nous Mòduls</li>
+<li>Reinstal·lar Mòduls</li>
+<li>Eliminar Mòduls
+<Br><br>
+Si encara no hem afegit cap mòdul seleccionarem l&rsquo;opció &ldquo;Afegir nous Mòduls&rdquo;.<br>
+<img src="/images/canigo-guia-inici/addNewModule.PNG" alt="addNewModule" /></li>
+</ul></li>
+
+<li><p>Ens apareix un assistent amb tots els mòduls disponibles agrupats per tipus de mòduls. Aquí podem seleccionar els mòduls que vulguem, per exemple el &ldquo;Mòdul d&rsquo;Antivirus&rdquo; del grup d&rsquo;Integració i el &ldquo;Mòdul de Merging&rdquo; del grup de Suport.</p></li>
+
+<li><p>Al prémer &ldquo;Finish&rdquo; l&rsquo;aplicació demana confirmació i si seleccionem el botó d&rsquo;OK instal.larà els mòduls seleccionats. Un cop instal.lats mostrarà un avis de finalització i seguidament obrirà els fitxers de configuració dels mòduls instal-lats on en el mateix arxiu apareix una explicació de com configurar-lo.</p></li>
+
+<li><p>Per eliminar o reinstal.lar mòduls cal seleccionar les altres opcions de la pestanya de Canigó. Apareixerà una finestra únicament amb els mòduls prèviament instal-lats.</p></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

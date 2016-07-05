@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Webservices</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Webservices\" />");
+		document.write("<meta name=\"description\" content=\"Webservices\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-altres">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-altres">Altres</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Webservices
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Webservices
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El propòsit d&rsquo;aquest apartat es introduir al desenvolupador en la configuració i ús d&rsquo;una infraestructura de Webservices en dues modalitats:</p>
+
+<ul>
+<li>Exportació de serveis Java mitjançant Web Services.</li>
+<li>Importació de Web Services externs, generació si cal de classes Java d&rsquo;invocació.</li>
+</ul>
+
+<p>Ja que Canigó 3 no disposa d&rsquo;un servei addicional de Webservices, l&rsquo;enfocament d&rsquo;aquest apartat es el de simplificar tant la definició de Web Services a partir de serveis Java simples (que no tindran dependències amb la implementació particular de Web Services) així com la de facilitar la invocació a Web Services externs.</p>
+
+<p>Per aquesta aproximació s&rsquo;ha fet servir Spring WS, JAXB i OXM.</p>
+
+<h2 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;Ús</h2>
+
+<p>La integració de WebServices no es troba ubicat dins del framework de Canigó com a un servei addicional. Ens recolzarem en les classes de Spring WS per a realitzar els exemples d&rsquo;integració.</p>
+
+<h2 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h2>
+
+<table>
+<thead>
+<tr>
+<th>Referència</th>
+<th>URL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Spring Web Services</td>
+<td><a href="http://static.springsource.org/spring-ws/sites/2.0/reference/html/">http://static.springsource.org/spring-ws/sites/2.0/reference/html/</a></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="glossari">Glossari</h2>
+
+<p><strong>EndPoint</strong></p>
+
+<p>Una interfície endpoint, també coneguda com a interfície de servei endpoint (SEI), és un terme utilitzat en la plataforma J2EE quan s&rsquo;exposa un Enterprise Java Bean com a servei web. Un client accedeix a partir d&rsquo;aquesta interfície, que com a totes les interfícies, defineix el mètodes de negoci del bean.</p>
+
+<p><strong>OXM</strong></p>
+
+<p>La API OXM (spring-oxm.jar) proporciona integració entre les APIs més populars de marshalling de XML (JAXB1, JAXB2, Castor, Jibx).</p>
+
+<p><strong>JAXB</strong></p>
+
+<p>Java Architecture for XML Binding (JAXB) és una API que proporcionar als desenvolupadors una eina de mapping de classes Java a la seva representació XML.</p>
+
+<p><strong>Marshalling</strong></p>
+
+<p>És el procés que s&rsquo;encarrega de transformar la representació d&rsquo;un objecte en memoria (Java Object) en un format que encaixi amb el canal de comunicació amb el que es treballa (XML).</p>
+
+<p><strong>UnMarshalling</strong></p>
+
+<p>És el procés invers al Marshalling, la representació en format XML passa a convertir-se en una Java Object.</p>
+
+<p><strong>XSDL</strong></p>
+
+<p>Un arxiu WSDL és un arxiu XML que descriu la forma de comunicació, es a dir, els requsisits de protocol i els formats dels missatges necessaris per interactuar amb els serveis llistats en el seu catàleg. Així un arxiu WSDL funciona com a interficie pública del web service.</p>
+
+<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+
+<h3 id="instal-lació">Instal.lació</h3>
+
+<p>La instal.lació del servei requereix de la utilització de la llibreria &lsquo;spring-ws-core&rsquo; i les dependències indicades a l&rsquo;apartat &lsquo;Introducció-Versions i Dependències&rsquo;.</p>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>Aquest punt el dividirem en dues parts segons si volem exposar un servei o bé som consumidor(clients) de ell:</p>
+
+<h4 id="configuració-com-a-client">Configuració com a client</h4>
+
+<p>La configuració del web implica els següents passos:</p>
+
+<ul>
+<li>Definir l&rsquo;arxiu de propietats amb les dades del webservice.</li>
+<li>Generar les classes Java i els seus bindings a partir del WSDL del Webservice.</li>
+<li>Definir l&rsquo;arxiu de configuració de Spring: client, marshallers, WebserviceTemplate.</li>
+<li>Definir el client que realitzarà la crida.</li>
+<li>Test d&rsquo;exemple</li>
+</ul>
+
+<h4 id="definició-de-l-arxiu-de-propietats">Definició de l&rsquo;arxiu de propietats</h4>
+
+<p>Fitxer de configuració: webservices.properties
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
+
+<pre><code>*.ws.uri=http://ws.cdyne.com/WeatherWS/Weather.asmx
+</code></pre>
+
+<p>Contindrà les URLs del webservices segons l&rsquo;entorn al que es vulgui atacar.</p>
+
+<h4 id="generar-les-classes-java-i-els-seus-bindings-a-partir-del-wsdl-del-webservice">Generar les classes Java i els seus bindings a partir del WSDL del Webservice</h4>
+
+<p>Per aquest procés s&rsquo;utilitzarà un plugin de maven. Aquest serà l&rsquo;encarregat de generar el codi Java i les anotacions de binding de manera automàtica a partir del WSDL.</p>
+
+<pre><code>És recomanable generar aquestes classes en un projecte extern, i posteriorment afegir aquest projecte com a dependència del projecte
+</code></pre>
+
+<p><strong>pom.xml</strong></p>
+
+<pre><code>....
+&lt;build&gt;
+	&lt;plugins&gt;
+		...........
+                ...........
+
+		&lt;plugin&gt;
+			&lt;groupId&gt;org.apache.cxf&lt;/groupId&gt;
+			&lt;artifactId&gt;cxf-codegen-plugin&lt;/artifactId&gt;
+			&lt;version&gt;2.2.10&lt;/version&gt;
+			&lt;executions&gt;
+				&lt;execution&gt;
+					&lt;id&gt;generate-sources&lt;/id&gt;
+					&lt;phase&gt;generate-sources&lt;/phase&gt;
+				        &lt;configuration&gt;
+					        &lt;sourceRoot&gt;${basedir}/src/main/java&lt;/sourceRoot&gt;
+                                                &lt;wsdlOptions&gt;
+							&lt;wsdlOption&gt;
+								&lt;wsdl&gt;http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl&lt;/wsdl&gt;
+							&lt;/wsdlOption&gt;
+						&lt;/wsdlOptions&gt;
+					&lt;/configuration&gt;
+					&lt;goals&gt;
+						&lt;goal&gt;wsdl2java&lt;/goal&gt;
+					&lt;/goals&gt;
+				&lt;/execution&gt;
+			&lt;/executions&gt;
+
+			&lt;dependencies&gt;
+				&lt;dependency&gt;
+					&lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
+					&lt;artifactId&gt;jaxb2-basics&lt;/artifactId&gt;
+					&lt;version&gt;0.6.0&lt;/version&gt;
+				&lt;/dependency&gt;
+				&lt;dependency&gt;
+					&lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
+					&lt;artifactId&gt;jaxb2-basics-runtime&lt;/artifactId&gt;
+					&lt;version&gt;0.6.0&lt;/version&gt;
+				&lt;/dependency&gt;
+			&lt;/dependencies&gt;
+		&lt;/plugin&gt;
+	&lt;/plugins&gt;
+&lt;/build&gt;
+......
+</code></pre>
+
+<p>Aquest plugin generarà automàticament el codi Java de el WSDL informat, en aquest cas: <a href="http://ws.cdyne.com/WeatherWS/Weather.asmx?wsdl">http://ws.cdyne.com/WeatherWS/Weather.asmx?wsdl</a>. Un servei web gratuït per a consultar el temps a partir del ZIP code.</p>
+
+<h3 id="definir-l-arxiu-de-configuració-de-spring">Definir l&rsquo;arxiu de configuració de Spring</h3>
+
+<p>Fitxer de configuració: canigo-webservices-config.xml</p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring</p>
+
+<pre><code>&lt;bean id=&quot;messageFactory&quot; class=&quot;org.springframework.ws.soap.saaj.SaajSoapMessageFactory&quot;&gt;
+	&lt;property name=&quot;soapVersion&quot;&gt;
+		&lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;webServiceTemplate&quot; class=&quot;org.springframework.ws.client.core.WebServiceTemplate&quot;&gt;
+	&lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
+	&lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
+	&lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
+	&lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;webServiceClient&quot; class=&quot;cat.gencat.ctti.canigo.demo.ws.WebServiceClientImpl&quot;&gt;
+	&lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
+	&lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;		
+&lt;/bean&gt;
+
+&lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;&gt;
+	&lt;property name=&quot;classesToBeBound&quot;&gt;
+		&lt;list&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.ArrayOfForecast&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.ArrayOfWeatherDescription&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.Forecast&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.ForecastReturn&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIP&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIPResponse&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIP&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIPResponse&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformation&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformationResponse&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.POP&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.Temp&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.WeatherDescription&lt;/value&gt;
+			&lt;value&gt;com.cdyne.ws.weatherws.WeatherReturn&lt;/value&gt;
+		&lt;/list&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>En aquesta configuració destacar classesToBeBound: que és el conjunt de classes de les quals OXM farà el marshalling i unmarshalling sense necessitat de manipular XML per part del desenvolupador.</p>
+
+<h3 id="definir-el-client-que-realitzarà-la-crida">Definir el client que realitzarà la crida</h3>
+
+<p>Codi d&rsquo;exemple per a la crida al webservice.</p>
+
+<p><strong>WebServiceClientImpl.java</strong></p>
+
+<pre><code class="language-java">public class WebServiceClientImpl implements WebServiceClient {
+	
+	private WebServiceTemplate webServiceTemplate;
+
+	public void setWebServiceTemplate(WebServiceTemplate webServiceTemplate) {
+		this.webServiceTemplate = webServiceTemplate;
+	}
+
+	public void setDefaultUri(String defaultUri) {
+		webServiceTemplate.setDefaultUri(defaultUri);
+	}
+
+	public GetCityForecastByZIPResponse simpleSendAndReceive(String zip) {
+				
+		GetCityForecastByZIP request = new GetCityForecastByZIP();
+		request.setZIP(zip);
+				
+		return (GetCityForecastByZIPResponse)webServiceTemplate.marshalSendAndReceive(request);
+	}
+
+}
+</code></pre>
+
+<p><strong>WebServiceClient.java</strong></p>
+
+<pre><code class="language-java">public interface WebServiceClient {
+	GetCityForecastByZIPResponse simpleSendAndReceive(String zip);
+}
+</code></pre>
+
+<p>Definir un test per a certificar el seu funcionament</p>
+
+<p><strong>WebServiceClientTest .java</strong></p>
+
+<pre><code class="language-java">@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {&quot;ws-context.xml&quot;})
+public class WebServiceClientTest {
+	
+	private static final Log LOGGER = LogFactory.getLog(WebServiceClientTest.class);
+	
+	@Autowired
+	public WebServiceClient client;
+	
+	@Before
+	public void init(){
+		Assert.assertNotNull(client);
+	}
+	
+	@Test
+	public void testCall(){
+		GetCityForecastByZIPResponse response = client.simpleSendAndReceive(&quot;35004&quot;);
+		
+		Assert.assertNotNull(response);
+		Assert.assertEquals(&quot;Moody&quot;, response.getGetCityForecastByZIPResult().getCity());
+		Assert.assertEquals(&quot;AL&quot;, response.getGetCityForecastByZIPResult().getState());
+		Assert.assertEquals(&quot;Birmingham&quot;, response.getGetCityForecastByZIPResult().getWeatherStationCity());
+		
+		
+		for(Forecast forecast : response.getGetCityForecastByZIPResult().getForecastResult().getForecast()){
+			LOGGER.debug(forecast.getDate() + &quot;: &quot; + forecast.getDesciption());
+		}
+	}
+}
+</code></pre>
+
+<h3 id="configuració-com-a-endpoint">Configuració com a EndPoint</h3>
+
+<p>La configuració del webservice implica els següents passos:</p>
+
+<ul>
+<li>Configuració del web.xml.</li>
+<li>Definir l&rsquo;arxiu de configuració de Spring: marshallers, endpoints.</li>
+<li>Definir el Endpoint</li>
+</ul>
+
+<p>En aquest punt considerem que l&rsquo;usuari coneix o ha generat l&rsquo;arxiu XSD (Schema) que defineix el contracte del webservice.</p>
+
+<h3 id="configuració-del-web-xml">Configuració del web.xml.</h3>
+
+<p>El primer punt a considerar és la càrrega i generació d&rsquo;un nou context d&rsquo;spring amb les dades del WS.</p>
+
+<p>Aquesta context és independent del context de Spring de l&rsquo;aplicació web. Si el desenvolupador vol integrar un servei propi de canigó, l&rsquo;haurà de referenciar directament dins del contextConfigLocation del servlet de Spring WS.</p>
+
+<p>Aquest servlet MessageDispatcherServlet carregarà els arxius de configuració dins del seu context de Spring, i definirá el mapping de les peticions contra aquest servei.</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+         xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot; 
+         xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; 
+         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee 
+                             http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; 
+	     id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+
+	........
+	
+    &lt;servlet&gt;
+        &lt;servlet-name&gt;ws-canigo&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;org.springframework.ws.transport.http.MessageDispatcherServlet&lt;/servlet-class&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+			&lt;param-value&gt;classpath:/spring-ws-context.xml&lt;/param-value&gt;
+		&lt;/init-param&gt;
+    &lt;/servlet&gt;
+
+    &lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;ws-canigo&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+    &lt;/servlet-mapping&gt;
+	
+	.........
+	
+&lt;/web-app&gt;
+</code></pre>
+
+<h3 id="definir-l-arxiu-de-configuració-de-spring-1">Definir l&rsquo;arxiu de configuració de Spring</h3>
+
+<p>Dins de l&rsquo;arxiu de configuració definim:</p>
+
+<ul>
+<li>L&rsquo; estrategia de resolució del Endpoint (en aquest cas per anotacions).</li>
+<li>Configuració de OXM per tal d&rsquo;aplicar marshalling i unmarshalling sobre les dades d&rsquo;entrada i sortida del Endpoint.</li>
+<li>Indicar al marshaller quins son els beans que contenen l&rsquo;informació de binding.</li>
+<li>Exportar el XSD com a WSDL de manera transparent.</li>
+</ul>
+
+<p>Ruta proposada:
+/src/main/resources/spring-ws/spring-ws-context.xml</p>
+
+<div class="message information">
+En el cas de que l'aplicació web de tipus Canigó no sigui exclusivament un webservice, evitar que el context de l'aplicació Web carregui els beans
+de Spring WS introduïnt-los en la carpeta /src/main/resources/spring/. Això carregaria de manera automàtica els beans de Spring WS, consumint memoria innecesariament
+ja que el context de l'aplicació web no és el mateix que el del webservice.
+</div>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+       xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+    &lt;context:component-scan base-package=&quot;cat.gencat.ws.example.service&quot; /&gt;
+
+    &lt;bean id=&quot;echo&quot; class=&quot;org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition&quot;
+          p:portTypeName=&quot;Echo&quot;
+          p:locationUri=&quot;/echoService/&quot;
+		  p:targetNamespace=&quot;http://mycompany.com/hr/definitions&quot;&gt;
+        &lt;property name=&quot;schema&quot;&gt;
+            &lt;bean class=&quot;org.springframework.xml.xsd.SimpleXsdSchema&quot;
+                  p:xsd=&quot;classpath:/config/xsd/echo.xsd&quot; /&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;        
+    &lt;/bean&gt;
+
+    &lt;bean class=&quot;org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping&quot;/&gt;
+
+    &lt;bean class=&quot;org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter&quot;&gt;
+        &lt;constructor-arg ref=&quot;marshaller&quot;/&gt;
+    &lt;/bean&gt;
+
+    &lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;
+          p:contextPath=&quot;cat.gencat.ws.example.schema.beans&quot; /&gt;
+
+&lt;/beans&gt;
+</code></pre>
+
+<h3 id="definir-el-endpoint">Definir el Endpoint</h3>
+
+<p>Interficie que defineix les operacions públiques del WS.</p>
+
+<p><strong>MarshallingEchoService.java</strong></p>
+
+<pre><code>public interface MarshallingEchoService {
+    
+    /**
+     * Return Echo response
+     */
+    public EchoResponse echoEcho(EchoRequest request);
+
+}
+</code></pre>
+
+<p>La anotació @Endpoint indica que es tracta d&rsquo;un EndPoint, Spring gracies a component-scan i la clase PayloadRootAnnotationMethodEndpointMapping mapeja les peticions i respostes contra aquest bean.</p>
+
+<p>De manera transparent el marshaller s&rsquo;encarregarà de la conversió de XML a object i de object a XML.</p>
+
+<p><strong>EchoEndpoint.java</strong></p>
+
+<pre><code class="language-java">@Endpoint
+public class EchoEndpoint implements MarshallingEchoService {
+    
+    /**
+     * Return Echo response
+     */
+    @PayloadRoot(localPart=&quot;echoEcho&quot;, namespace=&quot;http://mycompany.com/hr/definitions&quot;)
+    public EchoResponse echoEcho(EchoRequest request) {
+        return new EchoRequest().setMessage(request.getMessage());        
+    }
+
+}
+</code></pre>
+
+<p>Des d&rsquo;un client d&rsquo;aquest WS (revisar configuració com a client) realitzem la crida i recuperem el valor retornat:</p>
+
+<p><strong>EchoServiceClient.java</strong></p>
+
+<pre><code class="language-java">public class EchoServiceClient implements MarshallingEchoService {
+   
+    @Autowired
+    private WebServiceTemplate wsTemplate;
+
+    private static final Log LOGGER = LogFactory.getLog(EchoServiceClient.class);
+   
+    /**
+     * Gets person list.
+     */
+    public EchoResponse echoEcho(EchoRequest request) {
+        EchoResponse response = 
+            (EchoResponse) wsTemplate.marshalSendAndReceive(request);
+
+        if(LOGGER.isDebugEnabled(()){
+	    LOGGER.debug(response.getMessage());
+        }
+
+        return response;
+        
+    }
+   
+}
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

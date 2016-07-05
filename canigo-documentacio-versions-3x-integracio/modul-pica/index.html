@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>PICA</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"PICA\" />");
+		document.write("<meta name=\"description\" content=\"Interficie d\x27accés a la PICA (Plataforma d\x27Integració i Col.laboració Administrativa).\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-integracio">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-integracio">Mòduls d'Integració</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										PICA
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										PICA
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El propòsit del connector és proporcionar una interfície java per accedir a la PICA (Plataforma d&rsquo;Integració i Col.laboració Administrativa).</p>
+
+<p>El connector amb la PICA disposa de dos tipus de comunicació, un d&rsquo;ells a través de web service síncron, i l&rsquo;altre, mitjançant web service asíncron.</p>
+
+<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+
+<h3 id="instal-lació">Instal.lació</h3>
+
+<p>Per tal d&rsquo;instal-lar el mòdul de PICA es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
+
+<pre><code>&lt;canigo.integration.pica.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.pica.version&gt;
+
+&lt;dependency&gt;
+          &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+          &lt;artifactId&gt;canigo.integration.pica&lt;/artifactId&gt;
+          &lt;version&gt;${canigo.integration.pica.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.</p>
+
+<p>Son necessaris els següents arxius de configuració:</p>
+
+<ul>
+<li>pica.properties</li>
+<li>pica.signature.properties</li>
+<li>client.axis2.xml</li>
+<li>modules.list</li>
+<li>rampart-1.3.mar</li>
+<li>certificats.jks</li>
+</ul>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/pica.properties</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Requerit</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.pica.modes.passwordType</td>
+<td>No</td>
+<td>Tipus de password per a la PICA. Per defecte: PasswordText</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.signatureFile</td>
+<td>Sí</td>
+<td>Arxiu de configuració de la seguretat</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.petitionerId</td>
+<td>Sí</td>
+<td>Identificador del solicitant</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.transmitionId</td>
+<td>Sí</td>
+<td>Identificador de la transmissió</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.petitionerName</td>
+<td>Sí</td>
+<td>Nom del peticionari</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.user</td>
+<td>Sí</td>
+<td>Usuari que vol consumir un producte/modalitat de la PICA</td>
+</tr>
+
+<tr>
+<td>*.pica.requirer.password</td>
+<td>Sí</td>
+<td>Password de l&rsquo;usuari que vol consumir un producte/modalitat de la PICA</td>
+</tr>
+
+<tr>
+<td>*.pica.axisdefinition.location</td>
+<td>Sí</td>
+<td>Localització de l&rsquo;arxiu d&rsquo;axisdefinition</td>
+</tr>
+
+<tr>
+<td>*.pica.trustStore.location</td>
+<td>No</td>
+<td>Localització de l&rsquo;arxiu de certificats per a la configuració SSL</td>
+</tr>
+
+<tr>
+<td>*.pica.trustStore.type</td>
+<td>No</td>
+<td>Tipus de keystore</td>
+</tr>
+
+<tr>
+<td>*.pica.trustStore.password</td>
+<td>No</td>
+<td>Password de la keystore</td>
+</tr>
+</tbody>
+</table>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/axis2client/conf/client.axis2.xml</p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/axis2client/conf/rampart-1.3.mar</p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/axis2client/conf/modules.list</p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/cert/certificats.jks</p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/cert/pica.signature.properties</p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml</p>
+
+<pre><code>Important
+
+Si l'aplicació ha de ser desplegada en format empaquetat (.war, .ear) caldrà indicar la ubicació de la carpeta de configuració d'axis2 com a Path absolut dins el servidor on desplegarà. Aquest Path s'indicarà sobreescrivint el valor de la propietat pica.axisdefinition.location del fitxer pica.properties amb el Path absolut on s'ha deixat la carpeta d'axis2client als servidors. S'haurà de pactar la ubicació amb els responsables del CPD on desplegarà.
+
+Exemple:
+pica.properties:
+
+    int.pica.axisdefinition.location=file:/export/AppJavaDades/int/.../axis2client/
+    pre.pica.axisdefinition.location=file:/export/AppJavaDades/pre/.../axis2client/
+    pro.pica.axisdefinition.location=file:/export/AppJavaDades/pro/.../axis2client/
+</code></pre>
+
+<h2 id="utilització-del-mòdul">Utilització del Mòdul</h2>
+
+<h3 id="jsf">JSF</h3>
+
+<p><strong>app-integration-custom.xml</strong></p>
+
+<p>Aquest arxiu XML conté la configuració de Spring per al servei de PICA. En l&rsquo;exemple configurem el servei de PICA per invocar el producte/modalitat &ldquo;PADRO_MUNICIPI_RESIDENCIA&rdquo;.</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
+
+
+	&lt;bean id=&quot;picaCanigoService&quot; parent=&quot;abstractPicaService&quot;&gt;
+		&lt;property name=&quot;modalitats&quot;&gt;
+			&lt;map&gt;
+				&lt;entry key=&quot;PADRO_MUNICIPI_RESIDENCIA&quot;&gt;
+					&lt;bean parent=&quot;producteModalitatBase&quot;&gt;
+						&lt;property name=&quot;signat&quot; value=&quot;false&quot;/&gt;
+						&lt;property name=&quot;urlPICA&quot; value=&quot;${pica.url}&quot; /&gt;
+						&lt;property name=&quot;codCertificado&quot; value=&quot;${pica.codCertificado}&quot;/&gt;
+						&lt;property name=&quot;codProducto&quot; value=&quot;${pica.codProducto}&quot;/&gt;
+						&lt;property name=&quot;finalidad&quot; value=&quot;${pica.finalidad}&quot;/&gt;
+						&lt;property name=&quot;nifEmisor&quot; value=&quot;${pica.nifEmissor}&quot;/&gt;
+						&lt;property name=&quot;nombreEmisor&quot; value=&quot;${pica.nombreEmisor}&quot;/&gt;
+					&lt;/bean&gt;
+				&lt;/entry&gt;
+			&lt;/map&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;
+</code></pre>
+
+<div class="message warning">
+<b>Propietats específiques</b>
+<br><br>
+Les propietats pica.url, pica.codCertificado, pica.codProducto, etc, definides en XML de configuració anterior, son propietats específiques de la modalitat o producte invocat, per lo que s'hauran d'introduir manualment a l'arxiu pica.properties per tal de que el PlaceHolderResolver de Spring pugui resoldre el valor de la propietat durant l'arranc de l'aplicació.
+</div>
+
+<p><strong>PicaBean.java</strong></p>
+
+<p>Managed Bean de JSF que gestiona la crida al servei de la PICA.</p>
+
+<p>En aquest bean es pot visualiztar:</p>
+
+<ul>
+<li>Inyecció del servei de PSIS via annotacions (@Autowired/@Qualifier) de Spring.</li>
+<li>Inyecció del servei d&rsquo;internacionaliztació via annotacions (@Autowired) de Spring.</li>
+<li>Invocació del producte/modalitat &ldquo;PADRO_MUNICIPI_RESIDENCIA&rdquo; definit en el map de modalitats que es troba al fitxer de configuració xml de Spring.</li>
+</ul>
+
+<pre><code class="language-java">/**
+ * Classe d'exemple d'invocació al servei de PICA
+ *
+ * @author cscanigo
+ *
+ */
+@Component(&quot;picaBean&quot;)
+@Lazy
+public class PicaBean {
+
+	@Qualifier(&quot;picaService&quot;)
+	@Autowired
+	private IPicaServiceWrapper serviceWrapper;
+	@Autowired
+	private I18nResourceBundleMessageSource resource;
+	private static final int TIPO_DOC_TITULAR_NIF = 2;
+	private static final Log log = LogFactory.getLog(PicaBean.class);
+
+        /**
+         * Crea un objecte funcionari
+         *
+         * return funcionari
+         **/
+	private Funcionari creaFuncionari() {
+		Funcionari func = new Funcionari(  );
+		func.setNifFuncionario(&quot;22222222X&quot;);
+		func.setNombreFuncionario(&quot;Nom congnom1 cognom2&quot;);
+		func.setEmailFuncionario(&quot;ncognom1cognom2@gencat.net&quot;);
+		return func;
+	}
+
+        /**
+         * Crea un objecte titular
+         *
+         * return titular
+         **/
+	private Titular creaTitular() {
+		Titular tit = new Titular(  );
+		tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
+		tit.setTitularDocumentacion(&quot;NIF_TITULAR&quot;); // Es posa el NIF real
+		tit.setTitularNombreCompleto(&quot;NOM_COMPLET_TITULAR&quot;); // Es posa el nom real
+		return tit;
+	}
+
+
+        /**
+         * Crea un objecte dades específiques
+         *
+         * return DadesEspecifiques
+         **/
+	private List&lt;DadesEspecifiques&gt; createDadesEspecifiques() {
+		List&lt;DadesEspecifiques&gt; dadesEspecifiquesXML= new ArrayList&lt;DadesEspecifiques&gt;(  );
+		StringBuffer sb = new StringBuffer( &quot;&lt;ns1:request xmlns:ns1=\&quot;http://www.gencat.net/tfn\&quot;&gt;&quot; );
+		sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMTIT\&quot;&gt;83746573&lt;/ns1:simpleparam&gt;&quot; );
+		sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMNIF\&quot;&gt;111111111H&lt;/ns1:simpleparam&gt;&quot; );
+		sb.append( &quot;&lt;/ns1:request&gt;&quot; );
+
+		DadesEspecifiques dades = new DadesEspecifiques(  );
+		dades.setIdSolicitud( &quot;1&quot; );
+		dades.setDadesXML( sb.toString(  ) );
+		dadesEspecifiquesXML.add( dades );
+
+		return datosEspecificosXML;
+	}
+
+        /**
+         * Parsejar la resposta deixant constància en format de traces si la crida ha finalitzat o no correctament
+         *
+         **/
+	private void parseXML(String dadesXML) throws ParserConfigurationException, SAXException, IOException {
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder = factory.newDocumentBuilder();
+		InputSource inStream = new InputSource();
+		boolean error = false;
+
+		inStream.setCharacterStream(new StringReader(dadesXML));
+		Document doc = builder.parse(inStream);
+		NodeList nodes = doc.getElementsByTagName(&quot;error&quot;);
+		if(nodes.getLength() == 0) {
+			nodes = doc.getElementsByTagName(&quot;sol:SolicitudError&quot;);
+			error = true;
+		}
+
+		for(int i=0; i&lt;nodes.getLength(); i++) {
+			Node node = nodes.item(i);
+			if(node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element)node;
+				if(!error) {
+					log.info(dadesXML);
+				} else {
+					log.info(element.getTextContent());
+				}
+			}
+		}
+	}
+
+        /**
+         * Crida al servei sincron de la PICA.
+         *
+         * return titular
+         **/
+	public void execute(){
+
+		try{
+			IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance(&quot;PADRO_MUNICIPI_RESIDENCIA&quot;);
+
+			Funcionari func = creaFuncionari();
+			Titular tit = creaTitular();
+
+			List&lt;DadesEspecifiques&gt; datosEspecificosXML = createDadesEspecifiques();
+
+			service.setFuncionari(func);
+			service.setTitular(tit);
+			service.setDadesEspecifiques(datosEspecificosXML);
+
+                        //Identificador únic de petició
+			service.crearPeticio(&quot;PROVA_OTCANIGO_&quot; + System.currentTimeMillis());
+
+			//fer peticio
+			CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
+			//extreure resultat
+			List&lt;DadesEspecifiques&gt; resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
+
+			Iterator&lt;DadesEspecifiques&gt; it = resposta.iterator();
+			while (it.hasNext()) {
+				DadesEspecifiques object = it.next();
+				String dadesXML = object.getDadesXML();
+
+				// Parsejar resposta
+				parseXML(dadesXML);
+			}
+
+                        //La crida ha finalitzat sense errors. Afegim el missatge de petició finalitzada correctament
+                        //al formulari JSF que ha gestionat la crida.
+			FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
+			        FacesMessage.SEVERITY_INFO, resource.getMessage(&quot;picaSuccess&quot;), null));
+
+		}catch(Exception e){
+			log.error(&quot;Error during PICA invocation. &quot; + e);
+                        //S'ha produït un error durant la invocació de la PICA. Afegim el missatge d'error al formulari
+                        //JSF que ha gestionat la crida.
+			FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
+			        FacesMessage.SEVERITY_ERROR, resource.getMessage(&quot;picaError&quot;) + &quot; - &quot; + e.toString(), null));
+		}
+	}
+
+
+}
+</code></pre>
+
+<p>Cal destacar que l&rsquo;identificador de la petició ha de ser únic, per aquest motiu es concatena un prefix de text qualsevol amb el timestamp del sistema.
+Per a més informació respecte l&rsquo;especificació tècnica i funcional podeu contactar amb l&rsquo;OT PICA.
+En aquest exemple, els mètodes privats crearFuncionari() i crearTitular() (creats simplement per aquest test) s&rsquo;encarreguen de setejar les propietats del funcionari que fa la petició i titular sobre el que es fa la petició respectivament. El mètode també privat createDadesEspecifiques() conté una llista de les sol.licituds, en format XML, que s&rsquo;enviaran dins la petició.
+Dins una petició (llista de dades específiques) es poden incloure diverses sol- licituds, els identificadors de les quals han de ser únics dins una mateixa petició. Si volguéssim afegir una altra sol- licitud en l&rsquo;exemple, només caldria instanciar un nou objecte DadesEspecifiques, amb IdSolicitud=&ldquo;2&rdquo;, un nou StringBuffer amb les dades i afegir-lo a la llista dadesEspecifiquesXML dins del mètode createDadesEspecifiques() de l&rsquo;exemple.</p>
+
+<p><strong>pica.jsf</strong></p>
+
+<p>Invocació del métode &ldquo;execute&rdquo; del managed bean de JSF definit anteriorment com a picaBean. El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage(&ldquo;picaForm&rdquo;&hellip;.).</p>
+
+<pre><code>&lt;h:form id=&quot;picaForm&quot;&gt;
+   &lt;h:panelGrid columns=&quot;1&quot;&gt;
+     &lt;h:commandButton value=&quot;#{msg.canigoSubmit}&quot; action=&quot;#{picaBean.execute}&quot; /&gt;
+     &lt;h:message for=&quot;picaForm&quot; infoStyle=&quot;color: green;&quot; errorStyle=&quot;color: red;&quot; /&gt;
+   &lt;/h:panelGrid&gt;
+&lt;/h:form&gt;
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

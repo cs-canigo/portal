@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Mòdul d&#39;internacionalització</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mòdul d\x27internacionalització\" />");
+		document.write("<meta name=\"description\" content=\"Mòdul d\x27internacionalització.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-core">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-core">Mòduls Generals</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Mòdul d&#39;internacionalització
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Mòdul d&#39;internacionalització
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El mòdul d&rsquo;internacionalització té com a objectiu principal permetre el
+desenvolupament d&rsquo;aplicacions en el que no sigui necessària cap
+reenginyeria cada vegada que s&rsquo;incorpori un nou llenguatge a
+l&rsquo;aplicació.</p>
+
+<p>En general tota aplicació internacionalitzada pot realitzar-se de dues
+formes diferenciades:</p>
+
+<ol>
+<li>Mitjançant la rèplica d&rsquo;un conjunt de pàgines per a cada idioma.</li>
+<li>Mitjançant un únic conjunt de pàgines que obtenen diferents literals
+de forma externa segons l&rsquo;idioma.</li>
+</ol>
+
+<p>La primera solució, fins ara utilitzada en moltes pàgines Web, implica
+un cost gran de rèplica i manteniment, ja que qualsevol nou requeriment
+o canvi comporta realitzar més d&rsquo;un desenvolupament, un per cada idioma.</p>
+
+<p>La segona solució, recomanada per Canigó permet que:</p>
+
+<ol>
+<li>Es puguin afegir llenguatges sense haver de realitzar canvis al
+codi.</li>
+<li>Els texts, imatges i missatges s&rsquo;emmagatzemen de forma externa al
+codi.</li>
+<li>La informació (per exemple dates) es pot formatejar segons l&rsquo;idioma
+de l&rsquo;usuari</li>
+</ol>
+
+<h2 id="glossari">Glossari</h2>
+
+<p><strong>i18N (Internationalization)</strong></p>
+
+<p>i18N o Internationalization (el 18 correspon a les 18 lletres que hi ha
+entre la I inicial i la n final) és el procés d&rsquo;agafar una aplicació
+dissenyada i reestructurar-la per a què pugui ser usada en diferents
+localitats o bé definir el procés de crear-la per a ser totalment
+flexible per executar-se en qualsevol localitat. Java defineix les
+classes bàsiques d&rsquo;ús de la internacionalització.</p>
+
+<h2 id="instal-lació-i-configuració">Instal.lació i configuració</h2>
+
+<h3 id="instal-lació">Instal.lació</h3>
+
+<p>El mòdul de configuració s&rsquo;inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l&rsquo;aplicació (Struts o JSF), l&rsquo;eina de
+suport al desenvolupament inclourà la referència dins del pom.xml. En
+cas d&rsquo;una instal- lació manual afegir les següents línies al pom.xml de
+l&rsquo;aplicació:</p>
+
+<pre><code class="language-code-java">&lt;canigo.core.version&gt;[3.1.0,3.2.0)&lt;/canigo.core.version&gt;
+
+&lt;dependency&gt;
+          &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+          &lt;artifactId&gt;canigo.core&lt;/artifactId&gt;
+          &lt;version&gt;${canigo.core.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>Per a configurar el mòdul d&rsquo;internacionalització s&rsquo;han de manipular els
+següents fitxers:</p>
+
+<ol>
+<li>Definició dels fitxers de traduccions (típicament els fitxers dels
+diferents idiomes: application.properties,
+application_XX_XX.properties)</li>
+<li>Definició de la integració amb el servei de presentació (web.xml)</li>
+<li>Definició dels idiomes i literals suportats (només JSF).</li>
+</ol>
+
+<p>No requereix configuració per a inicialitzar el mòdul per part del
+desenvolupador. Els xmls de configuració del servei es troben
+internalitzats dins del jar del core, i s&rsquo;inicialitzarà de manera
+automàtica un cop arrenqui l&rsquo;aplicació.</p>
+
+<p>Els arxius de configuració d&rsquo;idiomes de l&rsquo;aplicació han d&rsquo;estar en la
+següent ubicació:</p>
+
+<p><PROJECT_ROOT>/src/main/resources/config/i18n/*.properties</p>
+
+<p>Automàticament el mòdul d&rsquo;internacionalització carregarà tots els arxius
+de configuració d&rsquo;idiomes perquè posteriorment puguin ser explotats per
+l&rsquo;aplicació.</p>
+
+<h4 id="definició-dels-fitxers-de-traducció">Definició dels fitxers de traducció</h4>
+
+<p>Ubicació:</p>
+
+<p><PROJECT_ROOT>/src/main/resources/config/i18n/*.properties</p>
+
+<p>Explicació:</p>
+
+<p>Els fitxers de traducció són els fitxers que contenen els missatges en
+els diferents idiomes. Es basen en l&rsquo;ús de la internacionalització de
+Java (i18n o Internationalization).</p>
+
+<p>Aquests fitxers s&rsquo;han de construir tenint en compte que:</p>
+
+<ol>
+<li>La seva extensió ha de ser &lsquo;.properties&rsquo; (es denominen resource
+bundles).</li>
+<li>Per cada idioma que volguem suportar cal crear un nou fitxer. Aquest
+fitxer tindrà la següent nomenclatura:
+&lsquo;nomFitxer__lg_pa._properties&rsquo;, on &lsquo;lg&rsquo; correspon al codi del
+llenguatge i &lsquo;pa&rsquo; correspon al codi del país pel qual volem definir
+els literals.</li>
+<li>El seu contingut es basa en l&rsquo;ús de parells clau-valor tal i com es
+mostra a continuació:</li>
+</ol>
+
+<p>Fitxer de multiidioma application.properties</p>
+
+<pre><code class="language-code-java">clau_1=valor_1
+clau_2=valor_2
+...
+</code></pre>
+
+<p>En cas de que l&rsquo;idioma escollit per l&rsquo;usuari no correspongui amb cap
+fitxer, es pot crear un fitxer per defecte. Aquest fitxer tindrà el
+format &lsquo;nomFitxer.properties&rsquo;.</p>
+
+<p>Exemple:</p>
+
+<ol>
+<li>&lsquo;applicationResources_en.properties&rsquo;, per representar els literals
+en anglès</li>
+<li>&lsquo;applicationResources_es.properties&rsquo;, per representar els literals
+en castellà</li>
+<li>&lsquo;applicationResources_ca.properties&rsquo;, per representar els literals
+català</li>
+<li>&lsquo;applicationResources.properties&rsquo;, per representar els literals de
+qualsevol altre idioma</li>
+</ol>
+
+<p>Més informació dels codis de pais e idioma:</p>
+
+<ul>
+<li><a href="http://ftp.ics.uci.edu/pub/ietf/http/related/iso639.txt">Codis d&rsquo;idioma
+(ISO-639)</a></li>
+<li><a href="http://www.chemie.fu-berlin.de/diverse/doc/ISO_3166.html">Codis de pais
+(ISO-3166)</a></li>
+</ul>
+
+<div class="message warning">
+En cas de que per un llenguatge determinat existeixi un fitxer específic, l'obtenció del literal a partir d'una clau s'obtindrà des d'aquest fitxer. Si no es troba la clau en cap cas s'anirà al fitxer per defecte. Així doncs és important que es mantinguin actualitzats els fitxers de recursos per cada idioma de l'aplicació per evitar problemes. És important que es proporcioni un fitxer de recursos per defecte. Aquest serà el fitxer utilitzat  pel servei en cas de que el llenguatge escollit per l'usuari no correspongui a cap dels fitxers de recursos definits.
+</div>
+
+<h4 id="definició-de-la-integració-amb-el-mòdul-de-presentació">Definició de la integració amb el mòdul de presentació</h4>
+
+<p>Fitxer de configuració: web.xml</p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/webapp/WEB-INF/web.xml</p>
+
+<p>Per integrar el mòdul d&rsquo;internacionalització amb el mòdul de presentació
+s&rsquo;han de definir els següents filtres a nivell d&rsquo;aplicació:</p>
+
+<h5 id="localization-filter">Localization Filter</h5>
+
+<p>Aquest filtre s&rsquo;encarrega d&rsquo;exposar el mòdul d&rsquo;internacionalització per
+tal de que sigui accessible a tota la capa web. Comú tant aplicacions
+JSF com a Struts.</p>
+
+<p>Atributs:</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Atribut</strong></th>
+<th><strong>Requerit</strong></th>
+<th><strong>Valor</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>filter-name</td>
+<td>Sí</td>
+<td>Nom del filtre<br>Exemple: Localization Filter</td>
+</tr>
+
+<tr>
+<td>filter-class</td>
+<td>Sí</td>
+<td>cat.gencat.ctti.canigo.arch.web.core.filters.LocalizationFilter</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-code-java">&lt;filter&gt;
+    &lt;filter-name&gt;Localization Filter&lt;/filter-name&gt;
+    &lt;filter-class&gt;cat.gencat.ctti.canigo.arch.web.core.filters.LocalizationFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+</code></pre>
+
+<h5 id="struts-locale-filter">Struts Locale Filter</h5>
+
+<p>Aquest filtre s&rsquo;encarrega de d&rsquo;integrar el mòdul d&rsquo;internacionalització
+exposat pel filtre comú de Localization Filter per tal que des de Struts
+es pugui fer ús de fitxers d&rsquo;internacionalització.</p>
+
+<p>Atributs:</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Atribut</strong></th>
+<th><strong>Requerit</strong></th>
+<th><strong>Valor</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>filter-name</td>
+<td>Sí</td>
+<td>Nom del filtre<br>Exemple: Struts Locale Filter</td>
+</tr>
+
+<tr>
+<td>filter-class</td>
+<td>Sí</td>
+<td>cat.gencat.ctti.canigo.arch.web.struts.filter.StrutsLocaleFilter</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-code-java">&lt;filter&gt;
+   &lt;filter-name&gt;Struts Locale Filter&lt;/filter-name&gt;
+   &lt;filter-class&gt;cat.gencat.ctti.canigo.arch.web.struts.filter.StrutsLocaleFilter&lt;/filter-class&gt;
+&lt;/filter&gt;
+</code></pre>
+
+<h4 id="definició-dels-idiomes-i-literals-suportats-només-jsf">Definició dels idiomes i literals suportats (només JSF)</h4>
+
+<p>Ubicació proposada:
+<PROJECT_ROOT>/src/main/webapp/WEB-INF/faces-config.xml</p>
+
+<p>La configuració del locale permet definir amb quin nom s&rsquo;exposaran les
+propietats a les pàgines JSF, i els idiomes permesos i per defecte del
+navegador en cas de que no sigui informat.</p>
+
+<p>Per defecte, l&rsquo;eina de suport al desenvolupament de Canigó informa
+aquest valors segons les opcions seleccionades durant la creació de
+l&rsquo;aplicació.</p>
+
+<pre><code class="language-code-java">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;faces-config version=&quot;1.2&quot; xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+ xmlns:xi=&quot;http://www.w3.org/2001/XInclude&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+ xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd&quot;&gt;
+
+    &lt;application&gt;
+
+        .......
+        &lt;locale-config&gt;
+        &lt;default-locale&gt;ca_ES&lt;/default-locale&gt;
+        &lt;supported-locale&gt;es&lt;/supported-locale&gt;
+        &lt;supported-locale&gt;en&lt;/supported-locale&gt;
+        &lt;supported-locale&gt;de&lt;/supported-locale&gt;
+    &lt;/locale-config&gt;
+    &lt;resource-bundle&gt;
+            &lt;base-name&gt;config.i18n.applicationResources&lt;/base-name&gt;
+            &lt;var&gt;msg&lt;/var&gt;
+        &lt;/resource-bundle&gt;
+        .......
+        &lt;/application&gt;
+        ........
+&lt;/faces-config&gt;
+</code></pre>
+
+<p>En l&rsquo;exemple anterior l&rsquo;idioma per defecte és Català, el locales
+suportats: espanyol, anglès i alemany.
+ Els recursos de l&rsquo;aplicació es podran accedir des de la JSF a partir
+del nom de variable <strong>msg</strong> i trobaran situats a:</p>
+
+<p><PROJECT_ROOT>/src/main/resources/config/i18n/applicationResources.properties</p>
+
+<pre><code class="language-code-java">&lt;h:outputText value=&quot;#{msg.formulari_agregarCanvisArxiusIntegrats}&quot;/&gt;
+</code></pre>
+
+<h4 id="definició-dels-literals-suportats-només-struts">Definició dels literals suportats (només Struts)</h4>
+
+<p>Ubicació proposada:
+<PROJECT_ROOT>/src/main/resources/struts/struts-config.xml</p>
+
+<p>Aquest arxiu engloba la configuració de Struts, dins d&rsquo;aquest podem
+definir els recursos que seran accessibles des de les pàgines web. Per
+tal d&rsquo;habilitar aquesta internacionalització s&rsquo;ha d&rsquo;informar el tag
+message-resources.</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Atribut</strong></th>
+<th><strong>Requerit</strong></th>
+<th><strong>Valor</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>parameter</td>
+<td>Sí</td>
+<td>Ruta per punts on estan localitzats els literals</td>
+</tr>
+
+<tr>
+<td>null</td>
+<td>No</td>
+<td>Informant aquesta propietat com a &ldquo;false&rdquo; mostrará els recursos no informats com a ?key? enlloc de mostrar null</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code class="language-code-java">&lt;message-resources parameter=&quot;i18n.applicationResources&quot; null=&quot;false&quot; /&gt;
+</code></pre>
+
+<p>Si es vol exposar més d&rsquo;un arxiu de literals crear tants tags
+message-resources com siguin necessaris.</p>
+
+<pre><code class="language-code-java">&lt;message-resources parameter=&quot;i18n.applicationResources&quot; null=&quot;false&quot; /&gt;
+&lt;message-resources parameter=&quot;i18n.anotherApplicationResources&quot; null=&quot;false&quot; /&gt;
+&lt;message-resources parameter=&quot;i18n.thirdApplicationResources&quot; null=&quot;false&quot; /&gt;
+</code></pre>
+
+<h2 id="utilització-del-mòdul">Utilització del mòdul</h2>
+
+<h3 id="jsf">JSF</h3>
+
+<p>Suposant que els recursos estan exposats a la variable <strong>msg</strong> i com a
+literals tenim:</p>
+
+<p><strong>applicationResources.properties</strong></p>
+
+<pre><code class="language-code-java">nomFormulari=Nom del formulari
+</code></pre>
+
+<p><strong>prova.jsf</strong></p>
+
+<pre><code class="language-code-java">&lt;h:outputText value=&quot;#{msg.nomFormulari}&quot;/&gt;
+</code></pre>
+
+<p>Si la key del literal a mostrar conté un punt s&rsquo;ha de mostrar de la
+següent manera:</p>
+
+<pre><code class="language-code-java">&lt;h:outputText value=&quot;#{msg['nom.formulari']&quot;/&gt;
+</code></pre>
+
+<p>I si el literal és del tipus cadena=Hola {0} {1} es poden passar
+paràmetres de la següent manera:</p>
+
+<pre><code class="language-code-java">&lt;h:outputFormat value=&quot;#{msg['cadena']}&quot;&gt;
+   &lt;f:param value=&quot;Ramon&quot; /&gt;
+   &lt;f:param value=&quot;Sala&quot; /&gt;
+&lt;/h:outputFormat&gt;
+</code></pre>
+
+<h3 id="struts">Struts</h3>
+
+<p>Suposant els següents literals:</p>
+
+<p><strong>applicationResources.properties</strong></p>
+
+<pre><code class="language-code-java">nomFormulari=Nom del formulari
+</code></pre>
+
+<p><strong>prova.jsf</strong></p>
+
+<pre><code class="language-code-java">&lt;font face=&quot;verdana&quot;&gt;
+  &lt;bean:message key=&quot;formulari.errorActivacio&quot; /&gt;
+&lt;/font&gt;
+</code></pre>
+
+<h2 id="preguntes-freqüents">Preguntes freqüents</h2>
+
+<h3 id="accés-manual-al-servei-d-internacionalització">Accés manual al servei d&rsquo;internacionalització</h3>
+
+<p>Encara que no és una pràctica comú es pot accedir al mòdul d&rsquo;idiomes
+desde qualsevol bean de l&rsquo;aplicació gestionat per Spring. Per recuperar
+aquest bean el desenvolupador pot realitzar una crida de forma externa
+mitjançant el patró <a href="http://martinfowler.com/articles/injection.html">&lsquo;Dependency
+Injection&rsquo;</a>
+al mòdul i les seves propietats d&rsquo;entorn.</p>
+
+<ul>
+<li>Injecció de dependències mitjançant xml. Per exemple:</li>
+</ul>
+
+<p>Ruta proposada: <PROJECT_ROOT>/src/main/resources/spring/exemple-beans-config.xml</p>
+
+<pre><code class="language-code-java">&lt;bean id=&quot;myBean&quot;  class=&quot;cat.gencat.app.exemples.Injection&quot;&gt;
+    &lt;property name=&quot;i18nResource&quot; ref=&quot;messageSource&quot; /&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>La clase Injection tindria la següent estructura:</p>
+
+<pre><code class="language-code-java">import cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundleMessageSource;
+
+public class Injection {
+     I18nResourceBundleMessageSource i18n;
+     private static final Log LOGGER= LogFactory.getLog(Injection.class);
+
+     public void setI18nResource(I18nResourceBundleMessageSource i18nResource){
+         this.i18n = i18nResource;
+     }
+     
+     public void executeCommand(){
+        if (LOGGER.isDebugEnabled()){
+            LOGGER.debug(i18n.getMessage(&quot;test.label&quot;));
+        }
+     }
+}
+</code></pre>
+
+<p>Spring s&rsquo;encarregarà d&rsquo;injectar el bean d&rsquo;internacionalització dins del
+bean &ldquo;myBean&rdquo; executant el mètode setI18nResource.</p>
+
+<ul>
+<li>Injecció de dependències mitjançant anotacions:</li>
+</ul>
+
+<pre><code class="language-code-java">import cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundleMessageSource;
+
+public class Injection {
+     
+     private static final Log LOGGER= LogFactory.getLog(Injection.class);
+     
+     @Autowired
+     I18nResourceBundleMessageSource i18n;
+     article table {
+    margin:1em 0;
+}
+     public void executeCommand(){
+        if (LOGGER.isDebugEnabled()){
+            LOGGER.debug(i18n.getMessage(&quot;test.label&quot;));
+        }
+     }
+}
+</code></pre>
+
+<p>L&rsquo;anotació @Autowired injecta en aquest cas, un bean de tipus
+cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundleMessageSource
+que Spring trobarà en el context de l&rsquo;aplicació.</p>
+
+<h3 id="claus-amb-punts-en-jsf">Claus amb punts en JSF</h3>
+
+<p>A diferencia de Struts l&rsquo;accés a propietats amb punts a la seva clau
+canvia:</p>
+
+<p>Exemple de claus amb punts:</p>
+
+<pre><code class="language-code-java">usuaris.name=Nom
+usuaris.dni=DNI
+usuauri.surname=Cognoms
+</code></pre>
+
+<p>Per accedir aquest tipus de clau des d&rsquo;una pàgina JSF es necessari
+accedir de la següent manera:</p>
+
+<p><strong>pageExemple.jsf</strong></p>
+
+<pre><code class="language-code-java">&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; standalone=&quot;yes&quot; ?&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+    xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;
+ xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
+ xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+ xmlns:c=&quot;http://java.sun.com/jstl/core&quot;
+ xmlns:t=&quot;http://myfaces.apache.org/tomahawk&quot;&gt;
+ 
+&lt;ui:composition template=&quot;../layouts/template.jsf&quot;&gt;
+   &lt;h:outputText value=&quot;\#{msg['usuaris.name']}&quot;/&gt;
+&lt;/ui:composition&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h2 id="exemples">Exemples</h2>
+
+<h3 id="exemple-de-test-unitari">Exemple de Test unitari</h3>
+
+<p>Com a exemple d&rsquo;utilització es mostra com podem fer una prova unitària:</p>
+
+<ol>
+<li>Creem la classe de test &lsquo;I18nTest&rsquo; i afegim un mètode &lsquo;testI18N()&rsquo;</li>
+<li>Creem els diferents fitxers de literals</li>
+</ol>
+
+<pre><code class="language-code-java">@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {&quot;../canigo-core.xml&quot;})
+public class I18nTest{
+    
+    @Autowired
+    I18nResourceBundleMessageSource messageResource;
+
+    @Test
+    public void testI18N() {
+       try {
+            Assert.assertEquals(&quot;Hola!&quot;, messageResource.getMessage(&quot;var1&quot;));
+            Assert.assertEquals(&quot;Hi!&quot;, messageResource.getMessage(&quot;var1&quot;, Locale.UK));
+            Assert.assertEquals(&quot;Attaaaaaack!&quot;, messageResource.getMessage(&quot;var1&quot;, Locale.US));
+        }
+        catch(NoSuchMessageException ex){
+            Assert.assertTrue(&quot;var1 not found&quot;, false);
+        }    
+    }
+}
+</code></pre>
+
+<p>Fitxers dels diferents idiomes (application_xx_XX.properties):</p>
+
+<ul>
+<li><p><strong>application.properties (fitxer per defecte)</strong></p>
+
+<pre><code class="language-code-java">var1=Hola!
+</code></pre></li>
+
+<li><p><strong>application_en_US.properties (fitxer pel &lsquo;Locale&rsquo; &lsquo;US&rsquo;)</strong></p>
+
+<pre><code class="language-code-java">var1=Attaaaaaack!
+</code></pre></li>
+
+<li><p><strong>application_en_GB.properties (fitxer pel &lsquo;Locale&rsquo; &lsquo;GB&rsquo;)</strong></p>
+
+<pre><code class="language-code-java">var1=Hi!
+</code></pre></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

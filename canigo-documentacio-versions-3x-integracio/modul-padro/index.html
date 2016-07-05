@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Padró</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Padró\" />");
+		document.write("<meta name=\"description\" content=\"Serveis d\x27empadronament publicats de la plataforma PICA.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-integracio">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-integracio">Mòduls d'Integració</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Padró
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Padró
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest connector, és el de proporcionar un punt d&rsquo;accés utilitzant la plataforma PICA cap serveis d&rsquo;empadronament publicats en aquesta plataforma.</p>
+
+<h3 id="propòsit">Propòsit</h3>
+
+<p>El propòsit del connector és proporcionar una interfície funcional reduïda al connector de la Pica que simplifica l&rsquo;utilització dels diferents serveis d&rsquo;empadronament oferts per la generalitat.</p>
+
+<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+
+<p>El connector PICA-PADRO es troba dins els connectors de serveis funcionals de la Generalitat.</p>
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest document va dirigit als següents perfils:</p>
+
+<ul>
+<li>Programador. Per conèixer l&rsquo;ús del connector.</li>
+<li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
+</ul>
+
+<h2 id="descripció-detallada">Descripció Detallada</h2>
+
+<p>Aquest connector permet utilitzar els diferents serveis del PADRO a través de l&rsquo;accés a través d&rsquo;una API de les següents modalitats de consum:</p>
+
+<p>Serveis Síncrons</p>
+
+<ul>
+<li>PADRO_COMPROVACIO_CONVIVENTS</li>
+<li>PADRO_DADES_CONVIVENTS_PDF</li>
+<li>PADRO_DADES_CONVIVENTS</li>
+<li>PADRO_DADES_TITULAR</li>
+<li>PADRO_DADES_TITULAR_INE</li>
+<li>PADRO_DADES_TITULAR_PDF</li>
+<li>PADRO_MUNICIPI_RESIDENCIA</li>
+<li>PADRO_NUMERO_CONVIVENTS</li>
+<li>PADRO_RESIDENT</li>
+<li>PADRO_RESIDENT_MUNICIPI</li>
+<li>PADRO_VALIDACIO_CONVIVENTS</li>
+</ul>
+
+<p>Serveis Asíncrons</p>
+
+<ul>
+<li>PADRO_TITULAR_CERCA</li>
+</ul>
+
+<h2 id="arquitectura-i-components">Arquitectura i Components</h2>
+
+<h3 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h3>
+
+<p>Es pot trobar el codi font referent aquests components a la següent url:</p>
+
+<p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.padro.pica/1.1.1/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.padro.pica/1.1.1/</a></p>
+
+<h3 id="requeriments">Requeriments</h3>
+
+<p>El connector PADRO és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.</p>
+
+<p>Per tal de que el connector PADRO funcioni correctament sobre l&rsquo;aplicació que l&rsquo;utilitzi, s&rsquo;ha de tenir configurat el servei connector genèric de la PICA 1.0.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Per configurar el mòdul d&rsquo;integració PICA-PADRO és necessari configurar els següents arxius:</p>
+
+<p>1.- Importar el mòdul PICA-PADRO amb el plugin de Canigó 3 de l&rsquo;eclipse o bé incorporar manualment les seves dependències en el pom.xml de l&rsquo;aplicació.</p>
+
+<p>En el pom.xml:</p>
+
+<pre><code>&lt;canigo.integration.padro.pica.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.padro.pica.version&gt;
+...
+
+&lt;!-- Dependencia del mòdul PICA-PADRO --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.integration.padro.pica&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.integration.padro.pica.version}&lt;/version&gt;
+&lt;/dependency&gt;
+
+</code></pre>
+
+<p>2.- Crear l&rsquo;arxiu /config/props/padro.properties amb el següent contingut:</p>
+
+<pre><code>*.padro.pica.finalitat=[finalitat]
+*.padro.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
+*.padro.pica.nifEmisor=[nifEmisor]
+*.padro.pica.nomEmisor=[nomEmisor]
+*.padro.pica.nomFuncionari=[nomFuncionari]
+*.padro.pica.nifFuncionari=[nifFuncionari]
+*.padro.pica.emailFuncionari=[emailFuncionari]
+</code></pre>
+
+<p>Els valors d finalitat, urlPica, nifEmisor i nomEmisor s&rsquo;han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat</p>
+
+<p>NOTA: El valor per defecte de urlPica es la de l&rsquo;entorn de Pre-producció.</p>
+
+<p>3.- Configurar l&rsquo;arxiu /config/props/pica.properties amb el següent contingut:</p>
+
+<pre><code>*.pica.modes.passwordType=PasswordText
+*.pica.requirer.signatureFile=classpath:config/cert/signature.properties
+*.pica.requirer.petitionerId=[petitionerId]
+*.pica.requirer.transmitionId=[transmitionId]
+*.pica.requirer.petitionerName=[petitionerName]
+*.pica.requirer.password=[password]
+*.pica.requirer.user=[password]
+*.pica.axisdefinition.location=classpath:axis2client/
+*.pica.trustStore.location=classpath:config/cert/certificats.jks
+*.pica.trustStore.type=JKS
+*.pica.trustStore.password=[trustStore.password]
+</code></pre>
+
+<p>Els valors entre [] s&rsquo;han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat</p>
+
+<p>4.- Configurar l&rsquo;arxiu /spring/app-integration-padro.xml amb el següent contingut:</p>
+
+<pre><code>&lt;!-- BEAN DE LA PICA --&gt;
+&lt;bean id=&quot;picaService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl&quot; scope=&quot;prototype&quot;&gt;
+    &lt;property name=&quot;axisDefinition&quot; value=&quot;${pica.axisdefinition.location}&quot;/&gt;
+    &lt;property name=&quot;trustStoreSSLKeystore&quot; value=&quot;${pica.trustStore.location}&quot; /&gt;
+    &lt;property name=&quot;trustStoreSSLKeystoreType&quot; value=&quot;${pica.trustStore.type}&quot; /&gt;
+    &lt;property name=&quot;trustStoreSSLKeystorePassword&quot; value=&quot;${pica.trustStore.password}&quot; /&gt;
+    &lt;property name=&quot;requeridor&quot; ref=&quot;requeridor&quot;/&gt;
+    &lt;property name=&quot;modalitats&quot;&gt;
+        &lt;map&gt;
+
+        &lt;/map&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d&rsquo;accedir a la url de la PICA mitjançant HTTPS.</p>
+
+<h2 id="utilització-del-connector">Utilització del Connector</h2>
+
+<h3 id="exemple-d-utilització-d-un-servei-síncron">Exemple d&rsquo;utilització d&rsquo;un Servei Síncron</h3>
+
+<p>1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.</p>
+
+<pre><code class="language-java">@Autowired
+private PadroConnectorImpl padroService;
+</code></pre>
+
+<p>2.- Escollir una modalitat de servei síncrona i cridar-la amb els paràmetres que necessiti. En aquest cas es mostra un exemple amb la modalitat padroComprovacioConvivents:</p>
+
+<pre><code class="language-java">String numExpedient = &quot;CAT-1234567890ABCDEF&quot;;
+int tipusDocumentacio = Constants.NIE;
+String documentacio = &quot;X02649265X&quot;;
+String codMun = &quot;999&quot;;
+int numConv = 99;
+String codProv = &quot;1&quot;;
+int idesCat = 0;
+
+RespuestaComprobacionConvivientes resposta = padroService.padroComprovacioConvivents(
+    numExpedient,
+    tipusDocumentacio,
+    documentacio,
+    codMun,
+    codProv,
+    numConv,
+    idesCat
+);
+</code></pre>
+
+<p>L&rsquo;estat de finalització dependrà del codi retornat:</p>
+
+<pre><code class="language-java">resposta.getCodigoResultado();
+</code></pre>
+
+<p>Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA Guia d&rsquo;us del servei de <strong>PADRO v1.5x.pdf</strong> disponible via petició a requeridors.otpica.ctti@gencat.cat</p>
+
+<h3 id="exemple-d-utilització-d-un-servei-asíncron">Exemple d&rsquo;utilització d&rsquo;un Servei Asíncron</h3>
+
+<p>1.- L&rsquo;únic servei asíncron que ofereix el servei de PADRO és el PADRO_TITULAR_CERCA. Per poder utilitzar aquesta modalitat de consum el connector de Canigó 3 preveu tres mètodes diferents:</p>
+
+<pre><code class="language-java">public RespostaCercaTitular  padroTitularCerca(String numExpedient, int tipusDocumentacio, String documentacio) throws PadroException;
+public EstatAsincron getEstatPadroTitularCerca(CridaAsincronaResponseDocument response) throws PadroException;
+public RespostaCercaTitular getDadesPadroTitularCerca(IPICAServiceAsincron servei) throws PadroException;
+</code></pre>
+
+<p>2.- El primer serveix per carregar les dades de la consulta al servei i fer la primera petició. Donat que és un servei asíncron retorna un objecte amb l&rsquo;estat actual de la petició i el temps estimat de finalització d&rsquo;aquesta.</p>
+
+<p>Igual que en les peticions asíncrones s&rsquo;inicialitza el bean del servei del connector;</p>
+
+<pre><code class="language-java">@Autowired
+private PadroConnectorImpl padroService;
+</code></pre>
+
+<p>Es crida al servei amb les dades pertinents:</p>
+
+<pre><code class="language-java">String numExpedient = &quot;123456&quot;;
+int tipusDocumentacio = Constants.NIF;
+String documentacio = &quot;46583836G&quot;;
+
+RespostaCercaTitular resposta = padroConnector.padroTitularCerca(numExpedient, tipusDocumentacio, documentacio);
+</code></pre>
+
+<p>3.- El segon serveix per anar comprovant l&rsquo;estat de la consulta de forma periòdica. Igual que el primer mètode retorna un objecte amb l&rsquo;estat actual de la petició i el temps estimat per la seva resolució.</p>
+
+<pre><code class="language-java">EstatAsincron estat = padroConnector.getEstatPadroTitularCerca(resposta.getResponse());
+</code></pre>
+
+<p>4.- Finalment el tercer mètode recupera el resultat de la peticó una vegada confirmat que la petició ha finalitzat.</p>
+
+<pre><code class="language-java">RespostaCercaTitular dades = padroConnector.getDadesPadroTitularCerca(resposta.getServei());
+</code></pre>
+
+<p>Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA <strong>Guia d&rsquo;us del servei de PADRO v1.5x.pdf</strong> disponible via petició a requeridors.otpica.ctti@gencat.cat</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

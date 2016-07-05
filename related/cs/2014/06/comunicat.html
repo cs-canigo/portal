@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca-ES"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>Comunicat Mensual Oficina de Frameworks i Solucions d'Arquitectura</title>
+
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_blocs.css" rel="stylesheet" type="text/css" />
+<!-- <link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_GridB2.css" rel="stylesheet" type="text/css" /> -->
+
+<link href="http://www.gencat.cat/piv/css/comuns/globals/FW_estils.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_capPeu.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_menuOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_estilsOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www.gencat.cat/piv/css/portals/PIV/css/FW_estils.css" rel="stylesheet" type="text/css" />
+<style>
+ul li {
+list-style-type: square;
+color: #000000;
+font-size: 1em;
+}
+ul li span{
+color: #000000;
+font-size: 1.3em;
+font-weight: bold;
+}
+a.link {
+text-decoration: none !important;
+color: black;
+padding: 1px 3px 1px 3px;
+font-size: .9em;
+color: #000000;
+padding: 5px;
+font-weight: bold;
+}
+a.sel {
+color: #AC2115;
+}
+td.top {
+vertical-align: top;
+}
+div.textoListados ul li {
+list-style-type: square;
+color: #000000;
+font-size: .9em;
+}
+hr.liniaVermella {
+color: #bf2f14;
+background-color:#bf2f14;
+height: 2px;
+border: none;
+}
+</style></head>
+<body>
+<div class="FW_bWidth">
+<div class="FW_bMinwidth">
+<div class="FW_bContainer"><!-- Inici FW_bMarc: Capa que cont&egrave; tota la plana en uns marges -->
+<div class="FW_bMarc">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" align="left"><!-- Inici FW_escut -->
+<div class="FW_bEscut">
+<h1> <a href="http://www.gencat.cat/" id="FW_gencat"> <img src="http://www.gencat.cat/piv/css/comuns/img/gcc_fs_logogeneralitat.gif" alt="Generalitat de Catalunya www.gencat.cat" title="Duu a la pàgina principal de la Generalitat de Catalunya" height="30" width="186" /> </a> </h1>
+</div>
+<!-- Fi FW_escut --> </td>
+<td> </td>
+<td align="right" valign="bottom"> <img src="http://canigo.ctti.gencat.cat/confluence/download/resources/OTCanigo_logo175x36.png" alt="Centre de Suport Canigó" height="30" width="186" />
+&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td> </td>
+<td class="navegacio" align="right"><!-- Inici FW_bMenuCap -->
+<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CAN/Centre+de+Suport">Frameworks i Solucions d'Arquitectura</a>&nbsp;&nbsp;<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CANPUB/Comunicats">Comunicats Anteriors</a><!-- Fi FW_bMenuCap --> </td>
+</tr>
+<tr>
+<td colspan="3">
+<hr class="liniaVermella" /> </td>
+</tr>
+</tbody>
+</table>
+<!-- Imatge de tracking del comunicat --><img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/5950/2011-06.png" />
+<!-- Inici Estructura del Contingut -->
+<table cellpadding="5" cellspacing="5" width="100%">
+<tbody>
+<tr>
+<!-- Area de continguts --> <td colspan="2" bgcolor="#ffffff" valign="top" width="75%">
+<div class="FW_bTitol">
+<h2>Canigó. Novetats a Canigó 3.0.6</h2>
+<br /><div style="text-align: justify;">
+A la darrera versió de Canigó 3 publicada al mes de Maig s'han resolt alguns bugs de versions anteriors, actualitzat connectors amb la PICA així com introduït noves funcionalitats, d'entre les quals destaquem les següents:<br />
+</div><ul>
+<li style="text-align: justify;"><small><span style="font-style: italic; font-weight: normal;">Variables globals a servidor</span>:</small> gràcies a aquesta nova funcionalitat no caldrà que els proveïdors d'aplicacions&nbsp;coneguin detalls d'infraestructura dels entorns on despleguen podent ser eximits de realitzar certes configuracions. A continuació es presenta l'ordre de prioritat en la càrrega de variables per part del mòdul core de Canigó:</li>
+</ul>
+<div style="text-align: center;"><img style="width: 608px; height: 295px;" alt="variables_globals.PNG" src="http://canigo.ctti.gencat.net/confluence/download/attachments/6778/variables_globals.PNG" /><br /><span style="font-style: italic;">Càrrega de propietats a aplicacions Canigó en entorns JEE corporatius<br /><br /></span><div style="text-align: justify;"><div style="margin-left: 40px;"><span style="font-style: italic;"></span>Podeu consultar, tant proveïdors d'aplicacions com administradors de CPD, la documentació al Portal de Frameworks i Solucions d'Arquitectura sobre <a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-configuracio/">configuració a servidors JEE corporatius</a> per obtenir més detall.<br /><br /></div><span style="font-style: italic;"></span></div>
+</div>
+<ul>
+<li style="text-align: justify;"><small><span style="font-style: italic; font-weight: normal;">Millores a plantilla:</span> &nbsp;</small>arran de diferents sol·licituds realitzades per part de proveïdors d'aplicacions s'han realitzat millores a la <a href="http://canigo.ctti.gencat.net/repository/maven2/canigo/plantilla-canigo-inicial/3.0.6/demo.canigo3.richfaces4.zip">plantilla</a> d'aplicació Canigó 3.<span style="font-style: italic;"> <span style="font-weight: bold;"></span></span></li>
+</ul>
+<div style="margin-left: 40px; text-align: justify;"><span style="font-style: italic;">- Menú lateral amb&nbsp;estat</span>: l'anterior model de menú lateral no mantenia l'estat (llistat d'opcions desplegat) al recarregar la pàgina. La nova implementació de menú&nbsp;és capaç de mantenir la selecció. Per integrar-la cal seguir el HowTo que publiquem en aquest mateix comunicat i que podeu trobar també a la secció de <a href="http://canigo.ctti.gencat.cat/canigo-documentacio/how-tos/">HowTo's</a> del Portal de Frameworks i Solucions d'Arquitectura.<br />
+</div>
+<span style="font-style: italic;"><br />
+</span>
+<div style="margin-left: 40px; text-align: justify;"><span style="font-style: italic;">- Gestió fil d'ariadna</span>: s'ha implementat un mecanisme que permet als proveïdors tenir més control sobre aquest component. Properament es publicarà un HowTo on s'explicarà com&nbsp;fer-ne ús.</div><span style="font-style: italic;"><br /></span><div style="text-align: justify;">Per qualsevol dubte referent a aquesta nova versió de Canigó podeu fer-nos arribar les vostres consultes&nbsp;via JIRA CSTD al servei <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/CAN">CAN</a> o posant-vos en contacte a través de la&nbsp;<a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia del CS Canigó</a>.<br /></div><span style="font-style: italic;"><br /></span></div>
+<div class="FW_bTitol">
+<h2>Java. Execució d'Applets a aplicacions web</h2>
+<br />
+<div style="text-align: justify;">Al comunicat de Maig va aparèixer una notícia relacionada amb la necessitat de signar d'applets per part de les aplicacions. Aquesta necessitat sorgeix degut a una restricció de seguretat afegida a l'update 51 de&nbsp;Java 7 que impedeix executar applets que no estiguin signats per una entitat certificadora de confiança. A continuació es mostra un exemple de missatge de bloqueig per un applet no signat:<br />
+<br />
+<div style="text-align: center;">
+<div style="text-align: center;"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6778/blocked_applet.PNG" style="width: 315px; height: 151px;" alt="blocked_applet.PNG" /><span style="font-style: italic;"><br />
+Bloqueig execució applet no signat amb Java 7u51</span></div>
+</div>
+<br />
+A l'applet signat, concretament en el fitxer <span style="font-style: italic;">&lt;applet_jar&gt;/META-INF/MANIFEST.MF</span>, cal que estiguin informades les propietats <span style="font-style: italic;">Application-Name</span> i <span style="font-style: italic;">Permissions</span>. En cas contrari, l'execució de l'applet generarà missatges d'error. Al següent <a href="https://www.java.com/en/download/help/java_blocked.xml">enllaç</a> podeu trobar informació d'Oracle referent al bloqueig d'aplicacions. Existeixen mecanismes per evitar&nbsp;bloquejos d'applets no signats, com baixar el nivell de seguretat al panell de control de Java, o afegir el lloc web que proporciona l'applet com a excepció de seguretat. No es recomanen però aquestes accions ja que fan més vulnerable a l'usuari. Es recomana als administradors de sistemes i desenvolupadors mantenir la versió de Java actualitzada per disposar així d'un entorn d'execució més segur. <br />
+<br />
+Per últim recordar que aquelles aplicacions que requereixen la signatura d'applets poden enviar un correu a la <a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia del CS Canigó</a> amb l&#8217;applet i se&#8217;ls hi retornarà signat.<o:p></o:p></span></div>
+</div>
+</td>
+<!-- Area de noticies --> <td class="top" rowspan="2" style="border-left: 5px solid rgb(191, 47, 20);" bgcolor="#ffffff" valign="top">
+<div class="FW_bTitol" align="center">
+<h2>Notícies</h2>
+</div>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>Publicació noves versions Canigó</h4>
+</span></li>
+</ul>
+<div style="text-align: justify;">Aquest passat mes de Maig han estat publicades les versions Canigó 2.3.20 i Canigó 3.0.6. A continuació podeu trobar els corresponents enllaços a les release notes de cadascuna d'elles:<br />
+</div>
+<ul>
+<li><a href="http://canigo.ctti.gencat.cat/canigo-download-related/release-notes-canigo-2/">Release notes Canigó 2.3.20</a></li>
+<li><a href="http://canigo.ctti.gencat.cat/confluence/pages/viewpage.action?pageId=6770">Release notes Canigó 3.0.6</a></li>
+</ul>
+<div style="text-align: justify;"><div style="text-align: justify;">Com a tema d'aquest comunicat es presenten algunes de les novetats introduïdes en la darrera versió de Canigó.<br /></div><br /><ul><li><span>
+<h4>Transformació SGDE</h4>
+</span></li></ul>
+<div style="text-align: justify;"><div style="text-align: justify;">Durant els propers mesos es realitzaran les tasques per la transformació del&nbsp;<a href="http://canigo.ctti.gencat.cat/sgde/about/">SGDE</a> (Servei de Gestió del Document Electrònic) que inclou les plataformes de <a href="http://canigo.ctti.gencat.cat/sgde-related/intro-formularis/">Formularis Adobe</a> (eFormularis) i <a href="http://canigo.ctti.gencat.cat/sgde-related/intro-std/">STD</a> (Sistema de Transformació de Documents).<br /></div><br /><div style="text-align: justify;">Des del CS Canigó es realitzaran les comunicacions pertinents per informar de les afectacions que puguin patir les aplicacions així com les dates més rellevants del procés de transformació. Tot aquell que desitgi rebre aquestes comunicacions o tingui algún dubte sobre el procés es pot possar en contacte amb el&nbsp;<a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">CS Canigó</a>.<br />
+</div></div><br />
+</div>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li> <span>
+<h4>Evolució alta d'aplicacions al SIC</h4>
+</span>
+</li>
+</ul>
+</div>
+<div style="text-align: justify;">La següent gràfica mostra l'evolució del número d'aplicacions al SIC durant els darrers mesos:<br />
+</div>
+<br />
+<div style="text-align: center;"><img style="width: 472px; height: 290px;" alt="SIC_total_acumulat_mapa_aplicacions_Maig.PNG" src="http://canigo.ctti.gencat.net/confluence/download/attachments/6778/http://canigo.ctti.gencat.net/confluence/download/attachments/6778/SIC_total_acumulat_mapa_aplicacions_Maig.PNG" /><br />
+</div>
+<br />
+<div style="text-align: justify;">Com a conseqüència dels processos de transformació de CPD moltes aplicacions estan incorporant la custodia del seu codi al SIC, d'aquí aquest increment al mes de Maig.<br />
+</div>
+<br />
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<hr color="#ffffff" />
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>HowTo's Frameworks i Solucions d'Arquitectura</h4>
+</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">
+<table cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<td> <img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/4/howto.png" alt="howto" /> </td>
+<td> <a target="_blank" href="http://canigo.ctti.gencat.cat/confluence/download/attachments/229/Canig%C3%B3+-+Howto+-+Men%C3%BA+Lateral+amb+Recordatori+d%27estat.pdf">
+<b>HOWTO:</b> Menú amb estat a Canigó 3&nbsp; </a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Peu de pagina noticies -->
+<hr color="#ffffff" />
+<div align="center"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6359/logoCTTI.png" alt="CTTI" /></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Fi Estructura del Contingut --><!-- Inici FW_bPeu -->
+<div class="FW_bPeu">
+<div align="center"> <a href="http://www.gencat.net/web/cat/avis_legal.htm">Avís legal</a> | <a href="http://www.gencat.cat/web/cat/accessibilitat.htm">Accessibilitat</a> | <a href="http://www.gencat.net/web/cat/sobre_el_web.htm">Sobre el web</a> | <a href="http://www.gencat.cat/web/cat/copyright.htm">© Generalitat de Catalunya</a></div>
+</div>
+<!-- Fi FW_bPeu --> </div>
+<div style="text-align: center;" align="center"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black; text-decoration: none;">
+<hr style="color: rgb(214, 214, 214);" align="center" noshade="noshade" size="3" width="100%" /></span></div>
+<span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;">AVISO DE CONFIDENCIALIDAD.<br />
+Este correo y la información contenida o adjunta al mismo es privada y confidencial y va dirigida exclusivamente a su destinatario. TICxCAT informa a quien pueda haber recibido este correo por error que contiene información confidencial cuyo uso, copia, reproducción o distribución está expresamente prohibida. Si no es Vd. el destinatario del mismo y recibe este correo por error, le rogamos lo ponga en conocimiento del emisor y proceda a su eliminación sin copiarlo, imprimirlo o utilizarlo de ningún modo.<br />
+<br />
+</span><span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;" lang="EN-US">CONFIDENTIALITY WARNING.<br />
+This message and the information contained in or attached to it are private and confidential and intended exclusively for the addressee. TICxCAT informs to whom it may receive it in error that it contains privileged information and its use, copy, reproduction or distribution is prohibited. If you are not an intended recipient of this E-mail, please notify the sender, delete it and do not read, act upon, print, disclose, copy, retain or redistribute any portion of this E-mail.</span>
+</div>
+</div>
+</div>
+</body></html>

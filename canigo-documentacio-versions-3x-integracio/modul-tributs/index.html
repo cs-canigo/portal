@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Tributs</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Tributs\" />");
+		document.write("<meta name=\"description\" content=\"Servei de consulta de dades fiscals de la PICA.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-integracio">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-integracio">Mòduls d'Integració</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Tributs
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Tributs
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest connector ,es el de proporcionar accés als 3 grans serveis de consulta de dades fiscals que actualment ofereix la PICA. Aquests tres serveis són:</p>
+
+<ul>
+<li>AEAT: Agència Estatal de l&rsquo;Administració Tributària</li>
+<li>ATC: Agència Tributària de Catalunya</li>
+<li>TGSS: Tresoreria General de la Seguretat Social</li>
+</ul>
+
+<p>a més també es troba integrat el servei AEAT_ATC_TGSS que sintetitza una petita suite de les modalitats de servei dels 3 productes anteriors.</p>
+
+<h3 id="propòsit">Propòsit</h3>
+
+<p>El propòsit del connector és proporcionar una interfície funcional reduïda al connector de la Pica que simplifica l&rsquo;utilització del servei de consulta de dades fiscals ofert per la generalitat.</p>
+
+<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+
+<p>El connector PICA-TRIBUTS es troba dins els connectors de serveis funcionals de la Generalitat.</p>
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest document va dirigit als següents perfils:</p>
+
+<ul>
+<li>Programador. Per conèixer l&rsquo;ús del connector.</li>
+<li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
+</ul>
+
+<h2 id="descripció-detallada">Descripció Detallada</h2>
+
+<h3 id="introducció-1">Introducció</h3>
+
+<p>Com ja s&rsquo;ha comentat aquest connector sintetitza peticions als tres grans serveis oferts per la PICA relatius a la consulta de dades fiscals.</p>
+
+<h3 id="serveis">Serveis</h3>
+
+<h4 id="servei-aeat-agència-estatal-de-l-administració-tributària">Servei AEAT (Agència Estatal de l&rsquo;Administració Tributària)</h4>
+
+<p>La seva finalitat és l&rsquo;obtenció de dades tributàries de l&rsquo;AEAT per consultar, per part dels gestors públics, les dades relatives als contribuents que ofereix l&rsquo;Agència Estatal de l&rsquo;Administració Tributària.</p>
+
+<p>Per una descripció detallada del servei i de les seves modalitats es pot consultar el document &ldquo;Guia d&rsquo;us del servei AEAT_PICA v1.7.pdf&rdquo; disponible en l&rsquo;àrea privada de <a href="http://cttiprojectes.gencat.cat/web/otpica">http://cttiprojectes.gencat.cat/web/otpica</a> en la secció &ldquo;productes Oferts -&gt; Interoperabilitat -&gt; AEAT&rdquo;</p>
+
+<p>Modalitats:</p>
+
+<ul>
+<li>AEAT_PICA_C1: Està al corrent de pagament/ No està al corrent de pagament.</li>
+<li>AEAT_PICA_C2: Les dades del certificat individual de renda.</li>
+<li>AEAT_PICA_C3: Les dades identificatives del CIF o DNI/NIE corresponent.</li>
+<li>AEAT_PICA_C4: Les dades del certificat de renda per a prestacions socials.</li>
+<li>AEAT_PICA_C5: Les dades del certificat de renda d&rsquo;agricultors.</li>
+<li>AEAT_PICA_C6: Les dades del certificat de renda per a beques.</li>
+<li>AEAT_PICA_C7: Les dades del certificat de renda per a beques anticipades.</li>
+<li>AEAT_PICA_C8: Les dades del certificat de l&rsquo;impost d&rsquo;activitats econòmiques.</li>
+</ul>
+
+<p>Totes les modalitats anteriors són síncrones.</p>
+
+<h4 id="servei-atc-agència-tributària-de-catalunya">Servei ATC (Agència Tributària de Catalunya)</h4>
+
+<p>El servei d&rsquo;obtenció del certificat de deutes amb la Generalitat de Catalunya té com a objectiu poder consultar per part dels gestors públics les dades que ofereix l&rsquo;Agència Tributària de Catalunya respecte a deutes amb la Generalitat.</p>
+
+<p>Per una descripció detallada del servei i de les seves modalitats es pot consultar el document &ldquo;Guia d&rsquo;us del servei de l&rsquo;ATCv1.4.3.pdf&rdquo; disponible en l&rsquo;àrea privada de <a href="http://cttiprojectes.gencat.cat/web/otpica">http://cttiprojectes.gencat.cat/web/otpica</a> en la secció &ldquo;productes Oferts -&gt; Interoperabilitat -&gt; ATC&rdquo;</p>
+
+<p>Modalitats:</p>
+
+<ul>
+<li>ATC_INF_DEUTES_TMP: Modalitat de servei asíncrona que retorna les dades d&rsquo;un certificat de deutes amb la Generalitat de Catalunya.</li>
+</ul>
+
+<h4 id="servei-tgss-tresoreria-general-de-la-seguretat-social">Servei TGSS (Tresoreria General de la Seguretat Social)</h4>
+
+<p>El servei d&rsquo;obtenció de dades de la seguretat social de la TGSS té com a objectiu poder consultar, per part dels gestors públics, les dades que ofereix la Tresoreria General de la Seguretat Social.</p>
+
+<p>Per una descripció detallada del servei i de les seves modalitats es pot consultar el document &ldquo;Guia d&rsquo;us del servei de TGSS v1.6.pdf&rdquo; disponible en l&rsquo;àrea privada de <a href="http://cttiprojectes.gencat.cat/web/otpica">http://cttiprojectes.gencat.cat/web/otpica</a> en la secció &ldquo;productes Oferts -&gt; Interoperabilitat -&gt; TGSS&rdquo;</p>
+
+<p>Modalitats:</p>
+
+<ul>
+<li>TGSS_AL_CORRENT_PAGAMENT: Especifica si una persona o una organització té algun deute amb la seguretat social en el moment de fer la consulta.</li>
+<li>TGSS_INFORME_SITUACIO: Aquest informe especifica si una persona cotitzava a una data determinada, per tant és un possible sinònim de si la persona treballava o no.</li>
+<li>TGSS_ACREDITACIO_AGRARIA_PROPI: Aquest informe especifica les situacions de les acreditacions de jornades agràries en un període de temps determinat pels valors del filtre.</li>
+</ul>
+
+<h4 id="servei-aeat-atc-tgss">Servei AEAT_ATC_TGSS</h4>
+
+<p>L&rsquo;objectiu del Servei de consulta de la situació de deute d&rsquo;un contribuent respecte de AEAT, ATC i TGSS és l&rsquo;agrupació dels productes AEAT (Agència Estatal de l&rsquo;Administració Tributària), ATC(Agència Tributària de Catalunya) i TGSS (Tresoreria General de la Seguretat Social) en una sola consulta per a la obtenció de la situació de deute d&rsquo;un contribuent a AEAT, ATC i TGSS. En concret, és l&rsquo;agrupació de les modalitats següents:</p>
+
+<p>-AEAT: Certificat d&rsquo;obligacions tributàries (AEAT_PICA_C1)<br>
+-ATC: Informe de situació de deutes amb la Generalitat de Catalunya (ATC_INF_DEUTES_TMP)<br>
+-TGSS: Informe de situació de deutes de la TGSS (TGSS_AL_CORRENT_PAGAMENT)<br></p>
+
+<p>Per una descripció detallada del servei i de les seves modalitats es pot consultar el document &ldquo;Guia d&rsquo;us del servei deutes del contribuent AEAT-ATC-TGSS v1.1.pdf&rdquo; disponible en l&rsquo;àrea privada de <a href="http://cttiprojectes.gencat.cat/web/otpica">http://cttiprojectes.gencat.cat/web/otpica</a> en la secció &ldquo;productes Oferts -&gt; Interoperabilitat -&gt; AEAT_ATC_TGSS&rdquo;</p>
+
+<p>Modalitats:</p>
+
+<ul>
+<li>AEAT_ATC_TGSS_CONSULTA_DEUTES: Modalitats de servei asíncrona que llença una petició de consulta sobre les modalitats anteriorment anomenades dels tres serveis de consulta de dades fiscals AEAT, ATC i TGSS.</li>
+</ul>
+
+<p>Totes les modalitats anteriors són síncrones.</p>
+
+<h2 id="arquitectura-i-components">Arquitectura i Components</h2>
+
+<h3 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h3>
+
+<p>Es pot trobar tota el codi font referent aquests components a les següents url&rsquo;s:</p>
+
+<p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.tributs.pica/1.1.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.tributs.pica/1.1.0/</a></p>
+
+<h3 id="requeriments">Requeriments</h3>
+
+<p>El connector TRIBUTS és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no és garantit el seu correcte funcionament.</p>
+
+<p>Per tal de que el connector DNI funcioni correctament sobre l&rsquo;aplicació que l&rsquo;utilitzi, es s&rsquo;ha de tenir configurat el servei connector genèric de la PICA 1.1.0.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Per configurar el mòdul d&rsquo;integració PICA-DNI és necessari configurar els següents arxius:</p>
+
+<p>1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3 de l&rsquo;eclipse o bé incorporar manualment les seves dependències en el pom.xml de l&rsquo;aplicació.</p>
+
+<p>En el pom.xml:</p>
+
+<pre><code>&lt;canigo.integration.tributs.pica.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.tributs.pica.version&gt;
+...
+
+&lt;!-- Dependencia del mòdul PICA-TRIBUTS --&gt;
+&lt;dependency&gt;
+        &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+	&lt;artifactId&gt;canigo.integration.tributs.pica&lt;/artifactId&gt;
+	&lt;version&gt;${canigo.integration.tributs.pica.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>2.- Crear l&rsquo;arxiu /config/props/tributs.properties amb el següent contingut:</p>
+
+<pre><code>*.tributs.pica.nifEmisor=[nifEmisor]
+*.tributs.pica.nomEmisor=[nomEmisor] #normalment:&quot;CONSORCI AOC&quot;
+*.tributs.pica.nomEmisorCAT365=[nomEmisor] #normalment:&quot;CONSORCI AOC&quot;
+*.tributs.pica.finalitat=[finalitat]
+*.tributs.pica.url=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
+*.tributs.pica.nomFuncionari=[nomFuncionari]
+*.tributs.pica.nifFuncionari=[nifFuncionari]
+*.tributs.pica.emailFuncionari=[emailFuncionari]
+</code></pre>
+
+<p>Els valors d finalitat, urlPica, nifEmisor i nomEmisor s&rsquo;han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat</p>
+
+<p>NOTA: El valor per defecte de urlPica es la de l&rsquo;entorn de Pre-producció.</p>
+
+<p>3.- Configurar l&rsquo;arxiu /config/props/pica.properties amb el següent contingut:</p>
+
+<pre><code>*.pica.modes.passwordType=PasswordText
+*.pica.requirer.signatureFile=classpath:config/cert/signature.properties
+*.pica.requirer.petitionerId=[petitionerId]
+*.pica.requirer.transmitionId=[transmitionId]
+*.pica.requirer.petitionerName=[petitionerName]
+*.pica.requirer.password=[password]
+*.pica.requirer.user=[password]
+*.pica.axisdefinition.location=classpath:axis2client/
+*.pica.trustStore.location=classpath:config/cert/certificats.jks
+*.pica.trustStore.type=JKS
+*.pica.trustStore.password=[trustStore.password]
+</code></pre>
+
+<p>Els valors entre [] s&rsquo;han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat</p>
+
+<p>4.- Configurar l&rsquo;arxiu /spring/app-integration-tributs.xml amb el següent contingut:</p>
+
+<pre><code>&lt;!-- BEAN DE LA PICA --&gt;
+&lt;bean id=&quot;picaService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl&quot; scope=&quot;prototype&quot;&gt;
+    &lt;property name=&quot;axisDefinition&quot; value=&quot;${pica.axisdefinition.location}&quot;/&gt;
+    &lt;property name=&quot;trustStoreSSLKeystore&quot; value=&quot;${pica.trustStore.location}&quot; /&gt;
+    &lt;property name=&quot;trustStoreSSLKeystoreType&quot; value=&quot;${pica.trustStore.type}&quot; /&gt;
+    &lt;property name=&quot;trustStoreSSLKeystorePassword&quot; value=&quot;${pica.trustStore.password}&quot; /&gt;
+    &lt;property name=&quot;requeridor&quot; ref=&quot;requeridor&quot;/&gt;
+    &lt;property name=&quot;modalitats&quot;&gt;
+        &lt;map&gt;
+
+        &lt;/map&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d&rsquo;accedir a la url de la PICA mitjançant HTTPS.</p>
+
+<h3 id="utilització-del-connector">Utilització del Connector</h3>
+
+<h4 id="exemple-d-utilització-d-una-modalitat-de-servei-de-aeat">Exemple d&rsquo;utilització d&rsquo;una modalitat de Servei de AEAT</h4>
+
+<p>Recuperar el bean del servei de AEAT des de la classe on es vol utilitzar:</p>
+
+<pre><code class="language-java">@Autowired
+private AeatConnectorImpl aeatConnector;
+</code></pre>
+
+<p>Fer la crida a la modalitat del servei desitjat, p.e.:</p>
+
+<pre><code class="language-java">DadesPeticioAEAT peticio = new DadesPeticioAEAT();
+peticio.setNom(&quot;Cristian&quot;);
+peticio.setCognom1(&quot;Casals&quot;);
+peticio.setCognom2(&quot;Molina&quot;);
+peticio.setNomComplet(&quot;Cristian Casals Molina&quot;);
+peticio.setTipusDocument(&quot;NIF&quot;);
+peticio.setDocument(&quot;39361642V&quot;);
+	
+C1PICAResponse resposta = aeatConnector.ObligacionsTributaries(peticio);
+</code></pre>
+
+<p>Per més informació sobre les dades d&rsquo;entrada i sortida d&rsquo;aquesta modalitat es pot consultar el document &ldquo;Guia d&rsquo;us del servei AEAT_PICA v1.7.pdf&rdquo;</p>
+
+<h4 id="exemple-d-utilització-del-servei-atc">Exemple d&rsquo;utilització del servei ATC</h4>
+
+<p>Recuperar el bean del servei de ATC des de la classe on es vol utilitzar:</p>
+
+<pre><code class="language-java">@Autowired
+private AtcConnectorImpl atcConnector;
+</code></pre>
+
+<p>En aquest cas d&rsquo;exemple es consumirà la modalitat de servei ATC_INF_DEUTES_TMP que retorna les dades d&rsquo;un certificat de deutes amb la Generalitat de Catalunya.</p>
+
+<p>Donat que el servei ATC es consumeix de forma asíncrona la forma correcta per poder consumir-ho es realitza en 3 fases:</p>
+
+<ol>
+<li>Fer petició al Servei</li>
+<li>Testar l&rsquo;estat de resolució de la petició</li>
+<li>Recuperar les dades de la petició</li>
+</ol>
+
+<p>NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l&rsquo;exemple son inventades.</p>
+
+<pre><code>DadesPeticioATC peticio = new DadesPeticioATC();
+    	
+peticio.setIdioma(&quot;Català&quot;);
+peticio.setNom(&quot;Nom&quot;);
+peticio.setCognom1(&quot;Cognom1&quot;);
+peticio.setCognom2(&quot;Cognom2&quot;);
+peticio.setNomComplet(&quot;Nom Cognom1 Cognom2&quot;);
+peticio.setDocument(&quot;12341234D&quot;);
+peticio.setTipusDocument(&quot;NIF&quot;);
+DataResponse resposta = atcConnector.informeSituacioDeute(peticio); //&lt;-- Petició al servei
+    
+EstatAsincron estatResposta = atcConnector.getEstatInformeSituacioDeute(resposta.getResponse()); //&lt;-- Comprovació estat petició
+int tempsEstimat = estatResposta.getTempsEstimatResposta();
+  
+...
+    	
+Informacio inf = atcConnector.getDadesInformeSituacioDeute(resposta.getServei()); //&lt;-- Recuperació resposta a la petició
+</code></pre>
+
+<p>Per més informació sobre les dades d&rsquo;entrada i sortida d&rsquo;aquesta modalitat es pot consultar el document &ldquo;Guia d&rsquo;us del servei de l&rsquo;ATCv1.4.3.pdf&rdquo;</p>
+
+<h4 id="exemple-d-utilització-d-una-modalitat-de-servei-tgss">Exemple d&rsquo;utilització d&rsquo;una modalitat de Servei TGSS</h4>
+
+<p>Recuperar el bean del servei de TGSS des de la classe on es vol utilitzar:</p>
+
+<pre><code class="language-java">@Autowired
+private TgssConnectorImpl tgssConnector;
+</code></pre>
+
+<p>En aquest cas d&rsquo;exemple es consumirà la modalitat de servei TGSS_AL_CORRENT_PAGAMENT que especifica si una persona o una organització té algun deute amb la seguretat social en el moment de fer la consulta.</p>
+
+<p>NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l&rsquo;exemple son inventades.</p>
+
+<pre><code class="language-java">DadesPeticioTGSS peticio = new DadesPeticioTGSS();
+peticio.setNom(&quot;Nom&quot;);
+peticio.setCognom1(&quot;Cognom1&quot;);
+peticio.setCognom2(&quot;Cognom2&quot;);
+peticio.setNomComplet(null);
+peticio.setTipusDocumentacioInt(Constants.TGSS_NIF);
+peticio.setDocument(&quot;12345678B&quot;);
+
+RespostaAlCorrentDePagament resposta = tgssConnector.alCorrentPagament(peticio);
+</code></pre>
+
+<p>Per més informació sobre les dades d&rsquo;entrada i sortida d&rsquo;aquesta modalitat es pot consultar el document &ldquo;Guia d&rsquo;us del servei de TGSS v1.6.pdf&rdquo;</p>
+
+<h4 id="exemple-d-utilització-del-servei-aeat-atc-tgss">Exemple d&rsquo;utilització del servei AEAT_ATC_TGSS</h4>
+
+<p>Recuperar el bean del servei de AEAT_ATC_TGSS des de la classe on es vol utilitzar:</p>
+
+<pre><code class="language-java">@Autowired
+private TgssConnectorImpl tgssConnector;
+</code></pre>
+
+<p>En aquest cas d&rsquo;exemple es consumirà la modalitat de servei AEAT_ATC_TGSS_CONSULTA_DEUTES que retorna les dades conjuntes de les modalitats següents:</p>
+
+<p>-AEAT: Certificat d&rsquo;obligacions tributàries (AEAT_PICA_C1)<br>
+-ATC: Informe de situació de deutes amb la Generalitat de Catalunya (ATC_INF_DEUTES_TMP)<br>
+-TGSS: Informe de situació de deutes de la TGSS (TGSS_AL_CORRENT_PAGAMENT)</p>
+
+<p>Donat que el servei AEAT_ATC_TGSS es consumeix de forma asíncrona la forma correcta per poder consumir-ho es realitza en 3 fases:</p>
+
+<ol>
+<li>Fer petició al Servei</li>
+<li>Testar l&rsquo;estat de resolució de la petició</li>
+<li>Recuperar les dades de la petició</li>
+</ol>
+
+<p>NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l&rsquo;exemple son inventades.</p>
+
+<pre><code class="language-java">DadesPeticioAEAT_ATC_TGSS peticio = new DadesPeticioAEAT_ATC_TGSS();
+			
+peticio.setIdioma(&quot;Català&quot;);
+peticio.setTipusDocumentacio(Constants.AAT_NIF);
+peticio.setDocument(&quot;12345678B&quot;);
+peticio.setNom(&quot;Nom&quot;);
+peticio.setNomComplet(&quot;Nom Cognom1 Cognom2&quot;);
+peticio.setCognom1(&quot;Cognom1&quot;);
+peticio.setCognom2(&quot;Cognom2&quot;);
+			
+resposta = aeatAtcTgssConnector.consultaDeutes(peticio); //&lt;-- Petició al servei
+		
+EstatAsincron estatResposta = aeatAtcTgssConnector.getEstatConsultaDeutes(resposta.getResponse()); //&lt;-- Consulta de l'estat de la petició
+int tempsEstimat = estatResposta.getTempsEstimatResposta();
+	
+...
+
+RespostaConsultaDeutes dadesResposta = aeatAtcTgssConnector.getDadesConsultaDeutes(resposta.getServei()); //&lt;-- recuperació de les dades de la petició
+</code></pre>
+
+<p>Per més informació sobre les dades d&rsquo;entrada i sortida d&rsquo;aquesta modalitat es pot consultar el document &ldquo;Guia d&rsquo;us del servei deutes del contribuent AEAT-ATC-TGSS v1.1.pdf&rdquo;</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

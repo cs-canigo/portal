@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Arquitectura CTTI. Generalitat de Catalunya </title>
+    <link>http://canigo.ctti.gencat.cat/destacats/</link>
+    <language>ca-Es</language>
+    
+    
+    <updated>Tue, 24 May 2016 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>Nova versió full de ruta CTTI</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2016.1/</link>
+      <pubDate>Tue, 24 May 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2016.1/</guid>
+      <description>Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari</description>
+    </item>
+    
+    <item>
+      <title>Transformació PICA</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</guid>
+      <description>El 19/4 es completarà la transformació de la PICA a l&#39;entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d&#39;haver estat configurades per accedir al nou domini pica.intranet.gencat.cat</description>
+    </item>
+    
+    <item>
+      <title>Publicada versió 1.0.1 entorn Dev Canigó</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</link>
+      <pubDate>Tue, 29 Mar 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</guid>
+      <description>Ha estat publicada una nova versió de l&#39;entorn de desenvolupament de Canigó basada en Ubuntu 15.10 i certificada per a ser proveïda amb Vagrant 1.8</description>
+    </item>
+    
+    <item>
+      <title>Repositori Maven d&#39;Oracle a Nexus de SIC</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</guid>
+      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d&#39;Oracle a través del Nexus</description>
+    </item>
+    
+    <item>
+      <title>Slave Jenkins a CPD2 disponible</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</guid>
+      <description>Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</description>
+    </item>
+    
+    <item>
+      <title>Nova versió connector canigó PICA DNI</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</guid>
+      <description>Ha estat publicada una nova versió del connector PICA DNI on s&#39;incorporen els darrers canvis realitzats a la missatgeria</description>
+    </item>
+    
+    <item>
+      <title>Nova versió full de ruta CTTI</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2015.3/</link>
+      <pubDate>Wed, 20 Jan 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2015.3/</guid>
+      <description>El passat mes de desembre, s&#39;ha publicat la versió 2015.3 del Full de ruta del programari</description>
+    </item>
+    
+    <item>
+      <title>Nova versió del connector amb Documentum 7.1 per a Canigó 2/3</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo-connector-documentum/</link>
+      <pubDate>Thu, 24 Dec 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo-connector-documentum/</guid>
+      <description>S&#39;ha publicat una nova versió del connector amb Documentum 7.1 per a Canigó 2 i Canigó 3.</description>
+    </item>
+    
+    <item>
+      <title>Canvi domini ibiblio a Maven</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canvi-domini-ibiblio-maven/</link>
+      <pubDate>Fri, 18 Dec 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canvi-domini-ibiblio-maven/</guid>
+      <description>Ha canviat el domini del repositori ibiblio de Maven</description>
+    </item>
+    
+    <item>
+      <title>Certificació de desplegaments Websphere 8.5 al SIC</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sic-was85/</link>
+      <pubDate>Fri, 27 Nov 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sic-was85/</guid>
+      <description>L&#39;equip del SIC ha certificat els desplegaments a IBM Websphere 8.5 des de jobs de Jenkins</description>
+    </item>
+    
+  </channel>
+</rss>

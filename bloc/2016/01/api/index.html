@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>APIs RESTful: millors pràctiques</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"APIs RESTful: millors pràctiques\" />");
+		document.write("<meta name=\"description\" content=\"Millors pràctiques per a la construcció d\x27APIs REST\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/bloc">
+											
+
+
+
+
+
+
+
+
+
+
+
+	Bloc d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										APIs RESTful: millors pràctiques
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										APIs RESTful: millors pràctiques
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#acords-generals">Acords generals</a></li>
+<li><a href="#verbs-http">Verbs HTTP</a>
+<ul>
+<li><a href="#exemple">Exemple</a></li>
+</ul></li>
+<li><a href="#esquemes-json">Esquemes JSON</a></li>
+<li><a href="#get-filtrat-de-resultats">GET - Filtrat de resultats</a></li>
+<li><a href="#get-paginació">GET - Paginació</a></li>
+<li><a href="#get-selecció-de-camps">GET - Selecció de camps</a></li>
+<li><a href="#get-ordre-dels-resultats">GET - Ordre dels resultats</a></li>
+<li><a href="#get-cerca-lliure">GET - Cerca lliure</a></li>
+<li><a href="#get-memòria-cau">GET - Memòria cau</a></li>
+<li><a href="#get-jsonp-callback">GET - JSONP Callback</a></li>
+<li><a href="#post-creació-d-un-recurs">POST - Creació d&rsquo;un recurs</a></li>
+<li><a href="#patch-actualització-d-un-recurs">PATCH - Actualització d&rsquo;un recurs</a></li>
+<li><a href="#delete-eliminació-d-un-recurs">DELETE - Eliminació d&rsquo;un recurs</a></li>
+<li><a href="#operacions-múltiples-batch">Operacions múltiples (BATCH)</a></li>
+<li><a href="#multi-idioma">Multi idioma</a></li>
+<li><a href="#versionat">Versionat</a></li>
+<li><a href="#missatges-i-errors">Missatges i errors</a></li>
+<li><a href="#autenticació">Autenticació</a></li>
+<li><a href="#documentació">Documentació</a></li>
+<li><a href="#referències">Referències</a>
+<ul>
+<li><a href="#aspectes-pendents-de-definir">Aspectes pendents de definir</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<p>Aquest document pretèn unificar la manera d&rsquo;interaccionar amb les APIs que ofereixin els diferents sistemes de la Generalitat, ja siguin públics o d&rsquo;ús intern.</p>
+
+<h2 id="acords-generals">Acords generals</h2>
+
+<ul>
+<li>Utilitzarem estàndards HTTP: verbs, http codes, headers, &hellip;</li>
+<li>Els recursos exposats a través de la API seran en plural (&ldquo;aplicacions&rdquo; enlloc d&rsquo; &ldquo;aplicacio&rdquo;)</li>
+<li>El format per defecte serà JSON. No es contemplaran altres formats, en general.</li>
+<li>Si exposem dades d&rsquo;accés públic, inclourem un paràmetre &ldquo;callback&rdquo; per a poder fer peticions JSONP</li>
+
+<li><p>Paràmetres del querystring reservats explicats més endavant:</p>
+
+<ul>
+<li>fields</li>
+<li>sort</li>
+<li>q</li>
+<li>limit</li>
+<li>offset</li>
+<li>v</li>
+</ul></li>
+
+<li><p>La nostra API es publicarà en el path /api del nostre domini:</p>
+
+<pre><code>http://subdomini.gencat.cat/api
+</code></pre></li>
+</ul>
+
+<h2 id="verbs-http">Verbs HTTP</h2>
+
+<ul>
+<li>GET = select</li>
+<li>POST = insert</li>
+<li>PATCH = update</li>
+<li>DELETE</li>
+</ul>
+
+<h3 id="exemple">Exemple</h3>
+
+<p>L&rsquo;esquema general de la nostra uri serà el següent:</p>
+
+<pre><code>    http://subdomini.gencat.cat/api/{recurs}/{id}
+</code></pre>
+
+<p>Imaginem que la nostra API gestiona el recurs &ldquo;Aplicació&rdquo;. La notra API exposarà aquests recursos amb el verbs http de la manera següent:</p>
+
+<ul>
+<li>GET <strong>/aplicacions</strong> - obté el llistat de totes les aplicacions</li>
+<li>GET <strong>/aplicacions/{id}</strong> - obté la informació de l&rsquo;aplicació amb l&rsquo;id corresponent passat a l&rsquo;URI</li>
+<li>POST <strong>/aplicacions</strong> - crea una nova aplicació</li>
+<li>PATCH <strong>/aplicacions/{id}</strong> - actualitza l&rsquo;aplicació amb l&rsquo;id corresponent passat a l&rsquo;URI</li>
+<li>DELETE <strong>/aplicacions/{id}</strong> - elimina l&rsquo;aplicació amb l&rsquo;id corresponent passat a l&rsquo;URI<br /></li>
+</ul>
+
+<h2 id="esquemes-json">Esquemes JSON</h2>
+
+<ul>
+<li><p>GET</p>
+
+<pre><code>    {
+        data : {
+
+            total : 976,  //nombre total dels resultats de la petició
+            limit : 100,  //màxim nombre de resultats a retornar per a cada petició
+            offset : 200, //en quin resultat del total comença aquesta petició 
+
+            included : [  //array de resultats
+                {
+                    id : 1,
+                    attributes : {
+                        camp1 : &quot;A&quot;,
+                        camp2 : &quot;B&quot;
+                    }
+                },
+                {
+                    id : 2,
+                    attributes : {
+                        camp1 : &quot;C&quot;,
+                        camp2 : &quot;D&quot;
+                    }
+                },
+                ...
+            ]
+        } 
+    }
+</code></pre></li>
+
+<li><p>GET/POST/PATCH/DELETE</p>
+
+<pre><code>    {
+        errors : [
+            {
+                code : 401,
+                desc : &quot;l'usuari proporcionat no té permisos d'accés&quot;
+            }
+        ]
+    }
+</code></pre></li>
+
+<li><p>GET/POST/PATCH - Elements individuals</p>
+
+<pre><code>    {
+        id : 1, // en el cas del POST no enviarem el id, normalment
+        attributes : {
+            camp1 : &quot;A&quot;,
+            camp2 : &quot;B&quot;
+        }
+    }
+</code></pre></li>
+</ul>
+
+<h2 id="get-filtrat-de-resultats">GET - Filtrat de resultats</h2>
+
+<ul>
+<li><p>Els recursos es filtraran mitjançant paràmetres al querystring.</p></li>
+
+<li><p>S&rsquo;utilitzarà un sol cop cada paràmetre que permeti filtratge:</p>
+
+<ul>
+<li>si s&rsquo;han de realitzar operacions més complexes, s&rsquo;hauria d&rsquo;establir el mecanisme amb un sol paràmetre</li>
+</ul></li>
+
+<li><p>Exemple</p>
+
+<pre><code>GET /aplicacions?estat=evolutiu&amp;lang=nodejs
+</code></pre>
+
+<p>Retornarà totes les aplicacions que en aquell moment estiguin en evolució i el llenguatge de desenvolupament sigui Node.js.</p></li>
+</ul>
+
+<h2 id="get-paginació">GET - Paginació</h2>
+
+<ul>
+<li><p>En una petició sense cap filtre, mai no es retornaran tots els elements del recurs consultat.</p></li>
+
+<li><p>La nostra API implementarà paginació, indicant els resultats de la següent manera:</p>
+
+<pre><code>    data : {
+        total : 976,
+        limit : 100, 
+        offset : 200,
+        included : [
+            ...
+        ]
+    } 
+</code></pre>
+
+<ul>
+<li>el camp &ldquo;<strong>total</strong>&rdquo; indicarà el número de resultats d&rsquo;una request</li>
+<li>el camp &ldquo;<strong>limit</strong>&rdquo; indicarà el número de resultats per pàgina. S&rsquo;inclourà al querystring. Si no s&rsquo;informa, per defecte serà 10 i el màxim dependrà dels objectius de rendiment, però no hauríem de passar de 500 resultats.</li>
+
+<li><p>el camp &ldquo;<strong>offset</strong>&rdquo; indicarà en quin resultat hauria de començar el subset de resultats demanat en una request. S&rsquo;inclourà al querystring. Si no s&rsquo;informa, per defecte serà 0 i retornarà el primers resultats en funció del paràmetre &ldquo;limit&rdquo;.</p>
+
+<pre><code>GET /aplicacions?limit=100&amp;offset=200 
+</code></pre>
+
+<p>Retornarà a partir del resultat 300 i amb 100 resultats en aquella petició.</p></li>
+
+<li><p>Amb l&rsquo;exemple anterior, el número de pàgines seria:</p>
+
+<ul>
+<li>total / límit = 976 / 100 = 9,76, que arrodonit a l&rsquo;enter superior ens donaria 10 planes</li>
+</ul></li>
+
+<li><p>I la pàgina activa seria:</p>
+
+<ul>
+<li>(offset / limit) + 1 = <sup>200</sup>&frasl;<sub>100</sub>+1 = pàgina 3</li>
+</ul></li>
+
+<li><p><a href="https://goo.gl/WKlXnV">Exemple a jsfiddle</a></p></li>
+</ul></li>
+</ul>
+
+<h2 id="get-selecció-de-camps">GET - Selecció de camps</h2>
+
+<ul>
+<li><p>Es permetrà seleccionar els camps que es volen consultar implementant el paràmetre &ldquo;<strong>fields</strong>&rdquo;, on el seu valor seran els noms dels camps a incloure en els resultats separats per coma:</p>
+
+<pre><code>GET /aplicacions?fields=codi,data_creacio,proveidor,lang 
+</code></pre>
+
+<p>Retornarà totes les aplicacions però els documents només retornaran els camps enumerats al camp fields.</p></li>
+</ul>
+
+<h2 id="get-ordre-dels-resultats">GET - Ordre dels resultats</h2>
+
+<ul>
+<li><p>Si es requereix, es podrà habilitar un paràmetre &ldquo;<strong>sort</strong>&rdquo; que acceptarà valors dels camps separats per comes i on es podrà indicar amb el signe &ldquo;-&rdquo; precedint el nom del camp, l&rsquo;ordre descendent per a aquell camp. Per defecte l&rsquo;ordre serà ascendent</p></li>
+
+<li><p>Exemple:</p>
+
+<pre><code>GET /aplicacions?sort=data_creacio,-loc 
+</code></pre>
+
+<p>Retornarà totes les aplicacions ordenades per data de creació ascendent i línies de codi (loc) descendent.</p></li>
+</ul>
+
+<h2 id="get-cerca-lliure">GET - Cerca lliure</h2>
+
+<ul>
+<li><p>Per a les cerques lliures a qualsevol camp dels elements del recurs, el paràmetre per defecte serà &ldquo;<strong>q</strong>&ldquo;</p></li>
+
+<li><p>Exemple:</p>
+
+<pre><code>GET /aplicacions?q=mysql
+</code></pre>
+
+<p>Retornarà totes les aplicacions que en algun dels camps continguin &ldquo;mysql&rdquo;</p></li>
+</ul>
+
+<h2 id="get-memòria-cau">GET - Memòria cau</h2>
+
+<p>Les peticions de tipus GET són succeptibles de ser guardades en memòria cau si l&rsquo;API està exposada al públic i té un consum elevat. Depèn de què es vulgui guardar, establirem una o altra &ldquo;clau de caché&rdquo;.</p>
+
+<p>Utilitzarem dues aproximacions:</p>
+
+<ul>
+<li><p>Per a consultes sobre tot el recurs establirem una clau de caché que podria ser tota la url + el querystring o bé alguns paràmetres del querystring.</p>
+
+<p>Per a realitzar aquesta funcionalitat es podria incorporar dins la lògica de la pròpia API però la millor pràctica seria utilitzar serveis de caché externs (Varnish, caché a balancejadors, &hellip;)</p></li>
+
+<li><p>En qualsevol cas, siguin consultes múltiples o d&rsquo;un ítem concret, hauríem de proporcionar les capçareleres http relacionades amb la caducitat dels resultats:</p>
+
+<ul>
+<li>Etag</li>
+<li>Date</li>
+<li>Last-modified</li>
+<li>Expires</li>
+</ul></li>
+</ul>
+
+<h2 id="get-jsonp-callback">GET - JSONP Callback</h2>
+
+<p>Per a peticions GET, permetrem incloure un paràmetre &ldquo;callback&rdquo; amb el nom de la funció amb la que envolcallarem la nostra resposta (JSONP)</p>
+
+<pre><code>    Request
+
+        GET /aplicacions?callback=f
+
+    Response
+
+        f({
+            data : {
+
+                total : 976,  
+                limit : 100,  
+                offset : 200, 
+
+                included : [  
+                    {
+                        id : 1,
+                        attributes : {
+                            camp1 : &quot;A&quot;,
+                            camp2 : &quot;B&quot;
+                        }
+                    },
+                    {
+                        id : 2,
+                        attributes : {
+                            camp1 : &quot;C&quot;,
+                            camp2 : &quot;D&quot;
+                        }
+                    },
+                    ...
+                ]
+            } 
+        })
+</code></pre>
+
+<p>Retornarà la resposta JSON amb una funció de nom &ldquo;f&rdquo; que l&rsquo;envolcallarà</p>
+
+<h2 id="post-creació-d-un-recurs">POST - Creació d&rsquo;un recurs</h2>
+
+<p>Amb el verb POST crearem nous elements al nostre recurs:</p>
+
+<pre><code>    POST /aplicacions/
+    Content-type: application/json
+
+    {
+        data : {
+            attributes : {
+                camp1 : &quot;A&quot;,
+                camp2 : &quot;B&quot;
+            }
+        }
+    }
+</code></pre>
+
+<p>Si tot ha anat correctament el HTTP response code serà 201. La resposta pot incloure un header location amb la uri del recurs creat.</p>
+
+<pre><code>    Location: /api/aplicacions/5220-4848-864539594927
+
+    {
+        data : {
+            id : &quot;5220-4848-864539594927&quot;, // en el cas del POST no enviarem el id, normalment
+            attributes : {
+                camp1 : &quot;A&quot;,
+                camp2 : &quot;B&quot;
+            }
+        }
+    }
+</code></pre>
+
+<h2 id="patch-actualització-d-un-recurs">PATCH - Actualització d&rsquo;un recurs</h2>
+
+<p>Amb el verb PATCH actualitzarem un recurs concret.</p>
+
+<pre><code>    PATCH /aplicacions/5220-4848-864539594927
+    Content-type: application/json
+
+    {
+        data : {
+            id : 5220-4848-864539594927
+            attributes : {
+                camp1 : &quot;X&quot;
+            }
+        }
+    }
+</code></pre>
+
+<p>Si tot ha anat correctament el HTTP response code serà 20x, depenent de si s&rsquo;ha realitzat o s&rsquo;ha encuat per a processar</p>
+
+<h2 id="delete-eliminació-d-un-recurs">DELETE - Eliminació d&rsquo;un recurs</h2>
+
+<p>Amb el verb DELETE eliminarem un recurs concret.</p>
+
+<pre><code>    DELETE /aplicacions/5220-4848-864539594927
+    Content-type: application/json
+</code></pre>
+
+<p>Si tot ha anat correctament el HTTP response code serà 20x, depenent de si s&rsquo;ha realitzat o s&rsquo;ha encuat per a processar</p>
+
+<h2 id="operacions-múltiples-batch">Operacions múltiples (BATCH)</h2>
+
+<ul>
+<li><p>La nostra API podrà incorporar un mecanisme per a poder realitzar operacions múltiples (crear, actualitzar o eliminar) a la url:</p>
+
+<pre><code>http://subdomini.gencat.cat/api/_batch
+</code></pre></li>
+
+<li><p>L&rsquo;acció serà de crear, actualitzar o eliminar, no es podran barrejar accions.</p></li>
+
+<li><p>Es realitzarà mitjançant un POST amb el següent format de document:</p>
+
+<pre><code>PATCH /_batch/
+Content-type: application/json
+
+{
+    action : &quot;POST&quot; //o &quot;PATH&quot;, &quot;DELETE&quot;
+    data : [
+        {
+            id : 5220-4848-864539594927
+            attributes : {
+                camp1 : &quot;X&quot;
+            }
+        },
+        {
+            id : 5220-4848-864539594928
+            attributes : {
+                camp1 : &quot;Z&quot;
+            }
+        }
+    ]
+}
+</code></pre></li>
+
+<li><p>En el cas de crear múltiples elements, és obligatori enviar un &ldquo;id&rdquo; que permeti retornar en la resposta si l&rsquo;id enviat s&rsquo;ha processat correctament o no.</p></li>
+
+<li><p>Qualsevol acció múltiple estarà limitada a un màxim de <strong>100 elements</strong>.</p></li>
+
+<li><p>La resposta http consistirà en el mateix atribut data enviat, que retornarà un status per a cada document enviat a crear, actualitzar o eliminar. En el cas d&rsquo;errors, s&rsquo;inclourà un atribut &ldquo;errors&rdquo; que serà un array d&rsquo;errors a processar, amb el codi intern que li correspongui i la descripció.</p>
+
+<pre><code>{
+    data : [
+        {
+            id : 5220-4848-864539594927,
+            status: 200
+        },
+        {
+            id : 5220-4848-864539594928,
+            status: 400,
+            errors : [
+                {
+                    code : 999,
+                    desc : &quot;Falten camps obligatoris per informar&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre></li>
+</ul>
+
+<h2 id="multi-idioma">Multi idioma</h2>
+
+<p>Si l&rsquo;API pot retornar atributs en múltiples idiomes, tindrem dos mecanismes per a poder negociar-lo:</p>
+
+<ul>
+<li><p>Paràmetre &ldquo;lang&rdquo; al querystring per a peticions GET</p>
+
+<pre><code>GET /aplicacions?lang=ca
+</code></pre></li>
+
+<li><p>Header &ldquo;Accept-Language&rdquo; a tots els verbs</p></li>
+</ul>
+
+<p>Utilitzarem els codis de l&rsquo;estàndard ISO-639-1: <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes</a></p>
+
+<p>La API tindrà un idioma per defecte i informarà en quins llenguatges es pot consultar a la seva pàgina d&rsquo;ajuda.</p>
+
+<h2 id="versionat">Versionat</h2>
+
+<ul>
+<li><p>El mètode preferit per a seleccionar la versió que volem consultar de l&rsquo;API, serà incloent el paràmetre &ldquo;<strong>v</strong>&rdquo; a la querystring</p></li>
+
+<li><p>Exemple:</p>
+
+<pre><code>GET /aplicacions?q=mysql&amp;v=2 
+</code></pre>
+
+<p>Retornarà totes les aplicacions que en algun dels camps continguin &ldquo;mysql&rdquo; en la versió 2 de l&rsquo;API</p></li>
+
+<li><p>Només farem versions per a canvis majors, de manera que els canvis menors s&rsquo;incorporaran a la versió major actual en un moment donat, garantint la compatibilitat cap a enrera dels recursos servits mentre es mantingui una versió major.</p></li>
+</ul>
+
+<h2 id="missatges-i-errors">Missatges i errors</h2>
+
+<p>Tota interacció amb els recursos de a nostra API retornarà un codi HTTP en funció del tipus d&rsquo;acció i èxit o error de la mateixa. HTTP codes més comuns:</p>
+
+<ul>
+<li>200 – <em>OK</em> – Tot correcte</li>
+<li>201 – <em>OK</em> – Nou recurs creat (POST)</li>
+
+<li><p>204 – <em>OK</em> – El recurs s&rsquo;ha eliminat correctament (DELETE)</p></li>
+
+<li><p>304 – <em>Not Modified</em>. Es pot utilitzar la caché.</p></li>
+
+<li><p>400 – <em>Bad Request</em> – La petició és incorrecta. L&rsquo;error s&rsquo;haurà de descriure en el <em>payload</em> de la resposta http.</p></li>
+
+<li><p>401 – <em>Unauthorized</em> – La petició requereix d&rsquo;autorització.</p></li>
+
+<li><p>403 – <em>Forbidden</em> – El servidor entèn la petició però la rebutja o l&rsquo;accés no està permès.</p></li>
+
+<li><p>404 – <em>Not found</em> – No s&rsquo;ha trobat el recurs.</p></li>
+</ul>
+
+<p>En cas d&rsquo;errors, inclourem un <em>payload</em> en format JSON que informarà dels problemes trobats, ampliant la informació si cal a la descripció (&ldquo;desc&rdquo;):</p>
+
+<pre><code>        {
+            errors : [
+                {
+                    code : 404,
+                    desc : &quot;El recurs sol·licitat no s'ha trobat&quot;
+                }
+            ]
+
+        }
+</code></pre>
+
+<h2 id="autenticació">Autenticació</h2>
+
+<p>Els mecanismes preferits per a donar accés a la nostra API seran els següents, per ordre de preferència:</p>
+
+<ol>
+<li>Oauth2</li>
+<li>Autenticació Bàsica sobre GICAR</li>
+<li>HMAC</li>
+</ol>
+
+<p>En cas d&rsquo;existir un API Gateway en el moment d&rsquo;implementar l&rsquo;API, la millor opció serà gestionar la seguretat a través d&rsquo;aquesta peça, millor que implementar-la a la nostra API.</p>
+
+<h2 id="documentació">Documentació</h2>
+
+<p>Entre els formats de descripció d&rsquo;APIs tenim Swagger i WADL. La nostra opció preferida serà utilitzar <a href="http://swagger.io/">Swagger</a>. Podeu veure un exemple de funcionament a <a href="http://petstore.swagger.io/">http://petstore.swagger.io/</a></p>
+
+<h2 id="referències">Referències</h2>
+
+<ul>
+<li><a href="http://jsonapi.org/">http://jsonapi.org/</a></li>
+<li><a href="http://www.restapitutorial.com/resources.html">http://www.restapitutorial.com/resources.html</a></li>
+<li><a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api</a></li>
+<li><a href="http://restful-api-design.readthedocs.org/en/latest/methods.html">http://restful-api-design.readthedocs.org/en/latest/methods.html</a></li>
+<li><a href="http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/">http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/</a></li>
+<li><a href="http://blog.octo.com/en/design-a-rest-api">http://blog.octo.com/en/design-a-rest-api</a></li>
+</ul>
+
+<h3 id="aspectes-pendents-de-definir">Aspectes pendents de definir</h3>
+
+<ul>
+<li><p>Filtrat per rangs: establir un QL</p></li>
+
+<li><p>Relacions entre elements</p></li>
+</ul>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'arquitectura-ctti';
+    var disqus_identifier = 'http:\/\/canigo.ctti.gencat.cat\/bloc\/2016\/01\/api\/';
+    var disqus_title = 'APIs RESTful: millors pràctiques';
+    var disqus_url = 'http:\/\/canigo.ctti.gencat.cat\/bloc\/2016\/01\/api\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
+	<meta name="robots" content="noindex,follow" />
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+
+
+
+<body class="section destacats">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="query" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+						
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="query" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+						
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										
+									
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+				<div class="row">
+
+						
+
+						
+				            
+							
+
+<div class="col-sm-12">
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta" title="Nova versió full de ruta CTTI">Nova versió full de ruta CTTI</a>
+        				
+
+						</h2>
+						<p> Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/related/canigo/destacats/comunicat-transformacio-plataforma-PICA.html" title="Transformació PICA">Transformació PICA</a>
+        				
+
+						</h2>
+						<p> El 19/4 es completarà la transformació de la PICA a l'entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d'haver estat configurades per accedir al nou domini pica.intranet.gencat.cat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/" title="Publicada versió 1.0.1 entorn Dev Canigó">Publicada versió 1.0.1 entorn Dev Canigó</a>
+        				
+
+						</h2>
+						<p> Ha estat publicada una nova versió de l'entorn de desenvolupament de Canigó basada en Ubuntu 15.10 i certificada per a ser proveïda amb Vagrant 1.8</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat/nexus" title="Repositori Maven d&#39;Oracle a Nexus de SIC">Repositori Maven d&#39;Oracle a Nexus de SIC</a>
+        				
+
+						</h2>
+						<p> Des d'ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d'Oracle a través del Nexus</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat/hudson" title="Slave Jenkins a CPD2 disponible">Slave Jenkins a CPD2 disponible</a>
+        				
+
+						</h2>
+						<p> Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-integracio/modul-dni/" title="Nova versió connector canigó PICA DNI">Nova versió connector canigó PICA DNI</a>
+        				
+
+						</h2>
+						<p> Ha estat publicada una nova versió del connector PICA DNI on s'incorporen els darrers canvis realitzats a la missatgeria</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta" title="Nova versió full de ruta CTTI">Nova versió full de ruta CTTI</a>
+        				
+
+						</h2>
+						<p> El passat mes de desembre, s'ha publicat la versió 2015.3 del Full de ruta del programari</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-integracio/modul-documentum/" title="Nova versió del connector amb Documentum 7.1 per a Canigó 2/3">Nova versió del connector amb Documentum 7.1 per a Canigó 2/3</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del connector amb Documentum 7.1 per a Canigó 2 i Canigó 3.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats-related/domini-ibiblio-nou/" title="Canvi domini ibiblio a Maven">Canvi domini ibiblio a Maven</a>
+        				
+
+						</h2>
+						<p> Ha canviat el domini del repositori ibiblio de Maven</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat" title="Certificació de desplegaments Websphere 8.5 al SIC">Certificació de desplegaments Websphere 8.5 al SIC</a>
+        				
+
+						</h2>
+						<p> L'equip del SIC ha certificat els desplegaments a IBM Websphere 8.5 des de jobs de Jenkins</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat" title="Suport a Oracle 12c al SIC">Suport a Oracle 12c al SIC</a>
+        				
+
+						</h2>
+						<p> Ha estat certificada l'execució de scripts SQL i PL/SQL a Oracle 12c des de jobs de Jenkins</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl" title="Renovació certificat per a signatura de PDFs a eFormularis">Renovació certificat per a signatura de PDFs a eFormularis</a>
+        				
+
+						</h2>
+						<p> Ha estat renovat el certificat per la signatura de PDFs utilitzat al WS ServeisInvocacioV1 d'eFormularis.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat" title="Upgrade Jenkins v1.609.3 (LTS)">Upgrade Jenkins v1.609.3 (LTS)</a>
+        				
+
+						</h2>
+						<p> Ha estat actualitzat el servei Jenkins del SIC a la versió 1.609.3 (LTS)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/sic/peticions/" title="Guies d&#39;usuari per a obrir peticions SIC al sistema Remedy">Guies d&#39;usuari per a obrir peticions SIC al sistema Remedy</a>
+        				
+
+						</h2>
+						<p> En data 21/09 s'ha habilitat Remedy com a canal d'obertura de peticions de SIC. S'ha preparat una guia per orientar als usuaris sobre com obrir les peticions de SIC en aquest sistema</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta" title="Nova versió full de ruta CTTI">Nova versió full de ruta CTTI</a>
+        				
+
+						</h2>
+						<p> El passat mes d'Agost ha estat publicada una nova versió del Full de ruta del programari</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/noticies/2015-05-29-SIC-Upgrade-SVN/" title="Upgrade de versió al SVN a 1.8.13">Upgrade de versió al SVN a 1.8.13</a>
+        				
+
+						</h2>
+						<p> S'ha efectuat l'upgrade de versió al SVN (1.8.13) que es va anunciar al Maig.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats/pilot-net/" title="Compilacions .NET al SIC">Compilacions .NET al SIC</a>
+        				
+
+						</h2>
+						<p> Gràcies als slaves Windows de Jenkins que s'estan implantant en cada CPD ja és viable realitzar compilacions de .NET al SIC. La primera aplicació .NET integrada al SIC, en concret al slave de CPD3, és EELL del SOC.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats-related/upgrade-nexus/" title="Upgrade Nexus al SIC">Upgrade Nexus al SIC</a>
+        				
+
+						</h2>
+						<p> Aquest mes de Juliol s'ha realitzat un upgrade de versió del Nexus a la v2.11.3-01</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats-related/sic-net/" title=".NET al SIC">.NET al SIC</a>
+        				
+
+						</h2>
+						<p> Des de l'equip del SIC s'està treballant en la integració del llenguatge .NET al SIC: custòdia de codi, compilació i auditories, i desplegament.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats/sic-traspas-sau/" title="Traspàs a SAU CTTI">Traspàs a SAU CTTI</a>
+        				
+
+						</h2>
+						<p> Aquest mes de Juny s'ha començat ha treballar en el traspàs de certes tasques operatives (alta d'usuaris, repositoris al SVN, ...) que realitza l'equip del SIC a SAU CTTI. El traspàs no es farà efectiu fins a l'últim trimestre de l'any.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats-related/nou-format-comunicats" title="Nou format comunicats">Nou format comunicats</a>
+        				
+
+						</h2>
+						<p> A partir del mes de Juny els comunicats del Centre de Suport Canigó estaran adaptats als nous estils corporatius.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat" title="Nou Portal de Frameworks i Solucions d&#39;Arquitectura">Nou Portal de Frameworks i Solucions d&#39;Arquitectura</a>
+        				
+
+						</h2>
+						<p> En data 22/4 ha estat publicat el nou Portal de Frameworks i Solucions d'Arquitectura</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats-related/domini-nou" title="Nou domini per els repositoris Maven">Nou domini per els repositoris Maven</a>
+        				
+
+						</h2>
+						<p> S'ha habilitat el nou domini 'repos.canigo.ctti.gencat.cat' per els repositoris Maven de Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic-documentacio/" title="Publicació documentació PHP al SIC">Publicació documentació PHP al SIC</a>
+        				
+
+						</h2>
+						<p> El mes de Març han estat publicades noves versions dels manuals i formularis amb el detall per la integració d'aplicacions PHP al SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/related/cs/2015/06/comunicat.html" title="Comunicat de Juny">Comunicat de Juny</a>
+        				
+
+						</h2>
+						<p> </p>
+					</div>	
+
+
+    
+
+
+
+
+			</div>
+		</div>
+
+
+</div>
+
+
+			            
+
+				</div>
+				</div>
+			</article>
+
+	</section>
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+	
+
+</body>
+</html>
