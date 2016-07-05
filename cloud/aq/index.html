@@ -357,14 +357,58 @@
 <p>A continuació es descriuen diferents exemples arquitectures d&rsquo;aplicació desplegades amb Docker-compose a Bluemix:</p>
 
 <ul>
-<li><strong>Stack &ldquo;tradicional&rdquo; JEE</strong>: JSF amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic</li>
+<li><strong>Stack &ldquo;tradicional&rdquo; JEE</strong> (<span style='color:red;'>DRAFT</span>): JSF amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic</li>
 </ul>
+
+<div class="message warning">
+<b>Avís</b>
+<br><br>
+Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
+</div>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-AppJava">Github</a>.</p>
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>gicar:
+ build: ./gicarAppJava/
+ links:
+  - demo
+ ports:
+  - 80:80
+ environment:
+  PS_IP: 169.50.103.27
+  AgentConfigDocker: a6
+  ContainerHostName: prova
+  AGENTNAME: a6,provademo.gencat.cat
+  HCOGICAR: a6
+  GICARUSER: siteminder
+  GICARPWD: siteminder
+  APPSERVER_PORT_8080_TCP_ADDR: demo
+  APPSERVER_PORT_8080_TCP_PORT: 8080 
+  context: canigoJSF
+ volumes:
+  - /home/canigo/demo-JEE-AppJava/target/canigoJSF-static:/var/www/html/canigoJSF
+db:
+  build: ./bbdd/
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_USER : user
+    MYSQL_PASSWORD : password
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: demo
+  volumes:
+   - /home/canigo/demo-JEE-AppJava/mysql-datadir:/var/lib/mysql
+demo:
+  build: ./app/
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-JEE-AppJava/target/canigoJSF-dynamic:/opt/tomcat/webapps/canigoJSF
+  ports:
+   - 8080:8080
+   - 8000:8000
 </code></pre>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
@@ -379,61 +423,57 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
-
-Accedir a http://localhost/canigoJSF
-
-Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
-
-* **Stack &quot;arquitectura moderna&quot; JEE**: serveis REST i presentació desacoblada
-
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-REST).
-
-_docker-compose.yml_
 </code></pre>
 
-<p>PENDENT</p>
+<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a></p>
 
-<pre><code>
-Comandes per iniciar l'aplicació:
+<ul>
+<li><strong>Stack &ldquo;arquitectura moderna&rdquo; JEE</strong> (<span style="color:red;">DRAFT</span>): serveis REST i presentació desacoblada</li>
+</ul>
 
+<p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-REST">Github</a>.</p>
+
+<p><em>docker-compose.yml</em></p>
+
+<pre><code>PENDENT
 </code></pre>
 
-<p>PENDENT</p>
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>
-* **Stack MEAN (MongoDB+Express+AngularJS+NodeJS)**
-
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-MEAN).
-
-_docker-compose.yml_
+<pre><code>PENDENT
 </code></pre>
 
-<p>PENDENT</p>
+<ul>
+<li><strong>Stack MEAN (MongoDB+Express+AngularJS+NodeJS)</strong> (<span style="color:red;">DRAFT</span>)</li>
+</ul>
 
-<pre><code>
-Comandes per iniciar l'aplicació:
+<p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-MEAN">Github</a>.</p>
 
+<p><em>docker-compose.yml</em></p>
+
+<pre><code>PENDENT
 </code></pre>
 
-<p>PENDENT</p>
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>
-* **Stack LAMP (Linux+PHP+MySQL)**
-
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
-
-_docker-compose.yml_
+<pre><code>PENDENT
 </code></pre>
 
-<p>PENDENT</p>
+<ul>
+<li><strong>Stack LAMP (Linux+PHP+MySQL)</strong> (<span style="color:red;">DRAFT</span>)</li>
+</ul>
 
-<pre><code>
-Comandes per iniciar l'aplicació:
+<p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-LAMP">Github</a>.</p>
 
+<p><em>docker-compose.yml</em></p>
+
+<pre><code>PENDENT
 </code></pre>
 
-<p>PENDENT
-```</p>
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>PENDENT
+</code></pre>
 
 
 					
