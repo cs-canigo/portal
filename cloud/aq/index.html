@@ -304,9 +304,23 @@
 <ul>
 <li>
 <ul>
+<li><a href="#introducció">Introducció</a>
+<ul>
+<li><a href="#docker-compose">Docker-compose</a>
+<ul>
+<li><a href="#desplegament-en-entorns-de-desenvolupament">Desplegament en entorns de desenvolupament</a></li>
+<li><a href="#desplegament-a-bluemix">Desplegament a Bluemix</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#stack-tradicional-jee-span-style-color-red-draft-span">Stack &ldquo;tradicional&rdquo; JEE (<span style='color:red;'>DRAFT</span>)</a></li>
+<li><a href="#stack-arquitectura-moderna-jee-span-style-color-red-draft-span">Stack &ldquo;arquitectura moderna&rdquo; JEE (<span style="color:red;">DRAFT</span>)</a></li>
+<li><a href="#stack-mean-span-style-color-red-draft-span">Stack MEAN (<span style="color:red;">DRAFT</span>)</a></li>
+<li><a href="#stack-lamp-span-style-color-red-draft-span">Stack LAMP (<span style="color:red;">DRAFT</span>)</a></li>
+<li><a href="#altres">Altres</a>
+<ul>
 <li><a href="#xpaas-dbaas">xPaaS + DBaaS</a></li>
 <li><a href="#docker-aplicació-docker-base-de-dades">Docker aplicació + Docker base de dades</a></li>
-<li><a href="#docker-compose-a-bluemix">Docker-compose a Bluemix</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -320,45 +334,27 @@
 
 						
 
-<h2 id="xpaas-dbaas">xPaaS + DBaaS</h2>
+<h2 id="introducció">Introducció</h2>
+
+<h3 id="docker-compose">Docker-compose</h3>
+
+<p>Els diferents stacks tecnològics descrits en aquesta plana utilitzen <a href="https://docs.docker.com/compose/">docker-compose</a>.</p>
+
+<h4 id="desplegament-en-entorns-de-desenvolupament">Desplegament en entorns de desenvolupament</h4>
+
+<p>Cal haver <a href="https://docs.docker.com/compose/install/">instal·lat</a> prèviament docker-compose.</p>
+
+<h4 id="desplegament-a-bluemix">Desplegament a Bluemix</h4>
 
 <ul>
-<li>Exemple d&rsquo;aplicació: <a href="http://serveisoberts.gencat.cat">http://serveisoberts.gencat.cat</a></li>
-<li>Desplegat a Bluemix</li>
-<li>Composat per:
-
-<ul>
-<li>Buildpack: NodeJS, amb <strong>escalat automàtic</strong></li>
-<li>DBaaS: MongoDB</li>
-</ul></li>
+<li>Bluemix suporta la creació d&rsquo;aplicacions multicontainer mitjançant <a href="https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov">docker-compose</a></li>
+<li>A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d&rsquo;aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.</li>
+<li>En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a>.</li>
 </ul>
 
-<h2 id="docker-aplicació-docker-base-de-dades">Docker aplicació + Docker base de dades</h2>
+<h2 id="stack-tradicional-jee-span-style-color-red-draft-span">Stack &ldquo;tradicional&rdquo; JEE (<span style='color:red;'>DRAFT</span>)</h2>
 
-<ul>
-<li>Exemple d&rsquo;aplicació: <a href="https://jocdelsdrets.gencat.cat">https://jocdelsdrets.gencat.cat</a></li>
-<li>Desplegat a Bluemix</li>
-<li>Composat per:
-
-<ul>
-<li>Grup de contenidors Docker per a la capa d&rsquo;aplicació, amb <strong>escalat automàtic</strong></li>
-<li>Contenidor MySQL per a la capa de base de dades</li>
-</ul></li>
-</ul>
-
-<h2 id="docker-compose-a-bluemix">Docker-compose a Bluemix</h2>
-
-<ul>
-<li>Bluemix suporta la creació d&rsquo;aplicacions multicontainer mitjançant docker-compose</li>
-<li><a href="https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov">https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov</a></li>
-<li>A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d&rsquo;aplicació), cal aprovisionar un balancejador, en aquest cas es proposa NGinx o HAProxy.</li>
-</ul>
-
-<p>A continuació es descriuen diferents exemples arquitectures d&rsquo;aplicació desplegades amb Docker-compose a Bluemix:</p>
-
-<ul>
-<li><strong>Stack &ldquo;tradicional&rdquo; JEE</strong> (<span style='color:red;'>DRAFT</span>): JSF amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic</li>
-</ul>
+<p>Aplicació JSF (Java Server Faces) amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic.</p>
 
 <div class="message warning">
 <b>Avís</b>
@@ -377,13 +373,13 @@ Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
  ports:
   - 80:80
  environment:
-  PS_IP: 169.50.103.27
-  AgentConfigDocker: a6
-  ContainerHostName: prova
-  AGENTNAME: a6,provademo.gencat.cat
-  HCOGICAR: a6
-  GICARUSER: siteminder
-  GICARPWD: siteminder
+  PS_IP: [ip]
+  AgentConfigDocker: [aco]
+  ContainerHostName: [nom del contenidor]
+  AGENTNAME: [agent_name],[nom de domini]
+  HCOGICAR: [hco]
+  GICARUSER: [user]
+  GICARPWD: [pwd]
   APPSERVER_PORT_8080_TCP_ADDR: demo
   APPSERVER_PORT_8080_TCP_PORT: 8080 
   context: canigoJSF
@@ -411,6 +407,16 @@ demo:
    - 8000:8000
 </code></pre>
 
+<p>Els paths &ldquo;/home/canigo/&hellip;&rdquo; han d&rsquo;adaptar-se als locals.</p>
+
+<ul>
+<li><em>canigoJSF-static</em>: directori amb el contingut estàtic de l&rsquo;aplicació</li>
+<li><em>canigoJSF-dynamic</em>: directori amb el contingut dinàmic de l&rsquo;aplicació</li>
+<li><em>mysql-datadir</em>: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació</li>
+</ul>
+
+<p><em>Nota: Els valors de les variables d&rsquo;entorn del contenidor de GICAR per aquesta demo es publicaran pròximament</em></p>
+
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
 <pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
@@ -425,11 +431,13 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a></p>
+<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;[user]&rdquo; i contrasenya &ldquo;[password]&ldquo;.</p>
 
-<ul>
-<li><strong>Stack &ldquo;arquitectura moderna&rdquo; JEE</strong> (<span style="color:red;">DRAFT</span>): serveis REST i presentació desacoblada</li>
-</ul>
+<p><em>Nota: L&rsquo;usuari i contrasenya per l&rsquo;accés a l&rsquo;aplicació es publicaran pròximament</em></p>
+
+<h2 id="stack-arquitectura-moderna-jee-span-style-color-red-draft-span">Stack &ldquo;arquitectura moderna&rdquo; JEE (<span style="color:red;">DRAFT</span>)</h2>
+
+<p>Aplicació basada en serveis REST i presentació desacoblada</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-REST">Github</a>.</p>
 
@@ -443,9 +451,9 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <pre><code>PENDENT
 </code></pre>
 
-<ul>
-<li><strong>Stack MEAN (MongoDB+Express+AngularJS+NodeJS)</strong> (<span style="color:red;">DRAFT</span>)</li>
-</ul>
+<h2 id="stack-mean-span-style-color-red-draft-span">Stack MEAN (<span style="color:red;">DRAFT</span>)</h2>
+
+<p>Aplicació basada en MongoDB+Express+AngularJS+NodeJS</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-MEAN">Github</a>.</p>
 
@@ -459,9 +467,9 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <pre><code>PENDENT
 </code></pre>
 
-<ul>
-<li><strong>Stack LAMP (Linux+PHP+MySQL)</strong> (<span style="color:red;">DRAFT</span>)</li>
-</ul>
+<h2 id="stack-lamp-span-style-color-red-draft-span">Stack LAMP (<span style="color:red;">DRAFT</span>)</h2>
+
+<p>Aplicació basada en Linux+PHP+MySQL</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-LAMP">Github</a>.</p>
 
@@ -474,6 +482,36 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <pre><code>PENDENT
 </code></pre>
+
+<h2 id="altres">Altres</h2>
+
+<p>A més de contenidors Docker, també és possible utilitzar xPaaS i DBaaS. Aquests són alguns casos d&rsquo;èxit:</p>
+
+<h3 id="xpaas-dbaas">xPaaS + DBaaS</h3>
+
+<ul>
+<li>Exemple d&rsquo;aplicació: <a href="http://serveisoberts.gencat.cat">http://serveisoberts.gencat.cat</a></li>
+<li>Desplegat a Bluemix</li>
+<li>Composat per:
+
+<ul>
+<li>Buildpack: NodeJS, amb <strong>escalat automàtic</strong></li>
+<li>DBaaS: MongoDB</li>
+</ul></li>
+</ul>
+
+<h3 id="docker-aplicació-docker-base-de-dades">Docker aplicació + Docker base de dades</h3>
+
+<ul>
+<li>Exemple d&rsquo;aplicació: <a href="https://jocdelsdrets.gencat.cat">https://jocdelsdrets.gencat.cat</a></li>
+<li>Desplegat a Bluemix</li>
+<li>Composat per:
+
+<ul>
+<li>Grup de contenidors Docker per a la capa d&rsquo;aplicació, amb <strong>escalat automàtic</strong></li>
+<li>Contenidor MySQL per a la capa de base de dades</li>
+</ul></li>
+</ul>
 
 
 					

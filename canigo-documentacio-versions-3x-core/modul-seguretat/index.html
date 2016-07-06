@@ -794,7 +794,7 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 	    &lt;security:intercept-url pattern=&quot;/**/views/**&quot; 					access=&quot;ROLE_USER&quot;/&gt;
 
 
-	    &lt;security:logout logout-url=&quot;/AppJava/views/logout.xhtml&quot; /&gt;
+	    &lt;security:logout logout-url=&quot;/views/logout.xhtml&quot; /&gt;
 	    &lt;security:access-denied-handler error-page=&quot;/views/accessDenied.xhtml&quot;/&gt;
 		
 	&lt;!-- GICAR --&gt;
@@ -845,10 +845,12 @@ UNITAT_MENOR=CTTI Qualitat
 <p>On CODIINTERN és el codi intern, el NIF el NIF, EMAIL l&rsquo;adreça de correu electrònic registrada al Director Corporatiu, UNITAT_MAJOR és l&rsquo;organització i UNITAT_MENOR és la unitat.</p>
 
 <div class="message warning">
-En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic és necessari indicar la següent property dintre del bean proxyUsernamePasswordAuthenticationFilter
-</div>
+En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic és necessari indicar la següent propietat dintre del bean proxyUsernamePasswordAuthenticationFilter:
+<br><br>
 
-<p><property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /></p>
+<b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
+
+</div>
 
 <p><strong>Logout</strong></p>
 
