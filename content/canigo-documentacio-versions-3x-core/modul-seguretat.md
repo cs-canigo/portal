@@ -341,7 +341,7 @@ La configuració específica del proveidor és el següent:
 	    <security:intercept-url pattern="/**/views/**" 					access="ROLE_USER"/>
 
 
-	    <security:logout logout-url="/AppJava/views/logout.xhtml" />
+	    <security:logout logout-url="/views/logout.xhtml" />
 	    <security:access-denied-handler error-page="/views/accessDenied.xhtml"/>
 		
 	<!-- GICAR -->
@@ -393,10 +393,12 @@ UNITAT_MENOR=CTTI Qualitat
 On CODIINTERN és el codi intern, el NIF el NIF, EMAIL l'adreça de correu electrònic registrada al Director Corporatiu, UNITAT_MAJOR és l'organització i UNITAT_MENOR és la unitat.
 
 <div class="message warning">
-En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic és necessari indicar la següent property dintre del bean proxyUsernamePasswordAuthenticationFilter
-</div>
+En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic és necessari indicar la següent propietat dintre del bean proxyUsernamePasswordAuthenticationFilter:
+<br><br>
 
-<property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" />
+<b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
+
+</div>
 
 **Logout**
 

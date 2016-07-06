@@ -7,31 +7,25 @@ toc 		= true
 categories  = ["cloud","docker","container","paas"]
 +++
 
-## xPaaS + DBaaS
+## Introducció
 
-- Exemple d'aplicació: http://serveisoberts.gencat.cat
-- Desplegat a Bluemix
-- Composat per:
-	- Buildpack: NodeJS, amb **escalat automàtic**
-	- DBaaS: MongoDB
+### Docker-compose
 
-## Docker aplicació + Docker base de dades
+Els diferents stacks tecnològics descrits en aquesta plana utilitzen [docker-compose](https://docs.docker.com/compose/).
 
-- Exemple d'aplicació: https://jocdelsdrets.gencat.cat
-- Desplegat a Bluemix
-- Composat per:
-	- Grup de contenidors Docker per a la capa d'aplicació, amb **escalat automàtic**
-	- Contenidor MySQL per a la capa de base de dades
+#### Desplegament en entorns de desenvolupament
 
-## Docker-compose a Bluemix
+Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament docker-compose.
 
-- Bluemix suporta la creació d'aplicacions multicontainer mitjançant docker-compose
-- https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov
-- A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa NGinx o HAProxy.
+#### Desplegament a Bluemix
 
-A continuació es descriuen diferents exemples arquitectures d'aplicació desplegades amb Docker-compose a Bluemix:
+- Bluemix suporta la creació d'aplicacions multicontainer mitjançant [docker-compose](https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov)
+- A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
+- En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
 
-* **Stack "tradicional" JEE** (<span style='color:red;'>DRAFT</span>): JSF amb context "/AppJava" per separació contingut estàtic i dinàmic
+## Stack "tradicional" JEE (<span style='color:red;'>DRAFT</span>)
+
+Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació contingut estàtic i dinàmic.
 
 <div class="message warning">
 <b>Avís</b>
@@ -50,13 +44,13 @@ gicar:
  ports:
   - 80:80
  environment:
-  PS_IP: 169.50.103.27
-  AgentConfigDocker: a6
-  ContainerHostName: prova
-  AGENTNAME: a6,provademo.gencat.cat
-  HCOGICAR: a6
-  GICARUSER: siteminder
-  GICARPWD: siteminder
+  PS_IP: [ip]
+  AgentConfigDocker: [aco]
+  ContainerHostName: [nom del contenidor]
+  AGENTNAME: [agent_name],[nom de domini]
+  HCOGICAR: [hco]
+  GICARUSER: [user]
+  GICARPWD: [pwd]
   APPSERVER_PORT_8080_TCP_ADDR: demo
   APPSERVER_PORT_8080_TCP_PORT: 8080 
   context: canigoJSF
@@ -83,6 +77,13 @@ demo:
    - 8080:8080
    - 8000:8000
 ```
+Els paths "/home/canigo/..." han d'adaptar-se als locals.
+
+- _canigoJSF-static_: directori amb el contingut estàtic de l'aplicació
+- _canigoJSF-dynamic_: directori amb el contingut dinàmic de l'aplicació
+- _mysql-datadir_: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació
+
+_Nota: Els valors de les variables d'entorn del contenidor de GICAR per aquesta demo es publicaran pròximament_
 
 Comandes per iniciar l'aplicació:
 
@@ -100,9 +101,13 @@ En cas de voler reconstruir les imatges cal afegir la opció "--build":
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/canigoJSF
+Accedir a http://localhost/canigoJSF i introduïr l'usuari "[user]" i contrasenya "[password]".
 
-* **Stack "arquitectura moderna" JEE** (<span style="color:red;">DRAFT</span>): serveis REST i presentació desacoblada
+_Nota: L'usuari i contrasenya per l'accés a l'aplicació es publicaran pròximament_
+
+## Stack "arquitectura moderna" JEE (<span style="color:red;">DRAFT</span>)
+
+Aplicació basada en serveis REST i presentació desacoblada
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-REST).
 
@@ -117,7 +122,9 @@ Comandes per iniciar l'aplicació:
 PENDENT
 ```
 
-* **Stack MEAN (MongoDB+Express+AngularJS+NodeJS)** (<span style="color:red;">DRAFT</span>)
+## Stack MEAN (<span style="color:red;">DRAFT</span>)
+
+Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-MEAN).
 
@@ -132,7 +139,9 @@ Comandes per iniciar l'aplicació:
 PENDENT
 ```
 
-* **Stack LAMP (Linux+PHP+MySQL)** (<span style="color:red;">DRAFT</span>)
+## Stack LAMP (<span style="color:red;">DRAFT</span>)
+
+Aplicació basada en Linux+PHP+MySQL
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
 
@@ -146,3 +155,23 @@ Comandes per iniciar l'aplicació:
 ```
 PENDENT
 ```
+
+## Altres
+
+A més de contenidors Docker, també és possible utilitzar xPaaS i DBaaS. Aquests són alguns casos d'èxit:
+
+### xPaaS + DBaaS
+
+- Exemple d'aplicació: http://serveisoberts.gencat.cat
+- Desplegat a Bluemix
+- Composat per:
+	- Buildpack: NodeJS, amb **escalat automàtic**
+	- DBaaS: MongoDB
+
+### Docker aplicació + Docker base de dades
+
+- Exemple d'aplicació: https://jocdelsdrets.gencat.cat
+- Desplegat a Bluemix
+- Composat per:
+	- Grup de contenidors Docker per a la capa d'aplicació, amb **escalat automàtic**
+	- Contenidor MySQL per a la capa de base de dades

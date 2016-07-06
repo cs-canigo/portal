@@ -23,4 +23,4 @@ Al fitxer de plans s'indica l'**idBBDD**. Aquest atribut fa referència al nom d
 
 Destacar que l'execució de scripts només es troba disponible per als entorns d'INT. Per PRE i PRO, els procediments de desplegament són semi-automàtics amb lliurament per sFTP d'artefactes a CPD, i enviament de correu de sol·licitud de desplegament a SAU CTTI o sol·licitud de canvi a Remedy.
 
-Per a qualsevol dubte referent a l'execució de scripts de MongoDB ens podeu [obrir una consulta](http://canigo.ctti.gencat.cat/sic/peticions/) al servei "FRAMEWORK SIC" de SAU-Remedy.
+Per a qualsevol dubte referent a l'execució de scripts de base de dades ens podeu [obrir una consulta](http://canigo.ctti.gencat.cat/sic/peticions/) al servei "FRAMEWORK SIC" de SAU-Remedy.
