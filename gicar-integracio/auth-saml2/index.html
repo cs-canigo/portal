@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -316,9 +316,9 @@
 <ul>
 <li>
 <ul>
-<li><a href="#consumidor-de-saml2-fet-a-mida">Consumidor de SAML2 fet a mida</a></li>
-<li><a href="#aplicació-sharepoint-de-microsoft">Aplicació Sharepoint de Microsoft</a></li>
-<li><a href="#aplicació-net-4-x">Aplicació .NET 4.x</a></li>
+<li><a href="#consumidor-de-saml2-fet-a-mida:732ace802d5b60426dfe97cf37aae457">Consumidor de SAML2 fet a mida</a></li>
+<li><a href="#aplicació-sharepoint-de-microsoft:732ace802d5b60426dfe97cf37aae457">Aplicació Sharepoint de Microsoft</a></li>
+<li><a href="#aplicació-net-4-x:732ace802d5b60426dfe97cf37aae457">Aplicació .NET 4.x</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -343,12 +343,11 @@
 <ul>
 <li>El &ldquo;ServiceProvider&rdquo; és l’aplicació integrada que demana l’autenticació.</li>
 <li>El “User Agent” és el navegador de l’usuari.</li>
-<li>L’&rdquo;Identity Provider&rdquo; és el proveïdor d’identitats de GICAR.</li>
-</ul>
 
-<ol>
-<li>Al protocol SAML2, el fluxe el comença l’aplicació integrada que demana l’autenticació (Service Provider). Aquesta, a través d’un HTTP Redirect, sol·licita al Identity Provider un tiquet SAML2.</li>
-</ol>
+<li><p>L’&rdquo;Identity Provider&rdquo; és el proveïdor d’identitats de GICAR.</p></li>
+
+<li><p>Al protocol SAML2, el fluxe el comença l’aplicació integrada que demana l’autenticació (Service Provider). Aquesta, a través d’un HTTP Redirect, sol·licita al Identity Provider un tiquet SAML2.</p></li>
+</ul>
 
 <p>D’aquesta manera, l’aplicació consumidora (service provider) de tiquets SAML2 farà un posts a les URL del Identity Provider per a obtenir un tiquet SAML2 vàlid de la següent manera, utilitzant el servei de Redirect/SSO.</p>
 
@@ -385,7 +384,7 @@
 
 <p>A continuació es detallen els casos d’ús més comuns:</p>
 
-<h2 id="consumidor-de-saml2-fet-a-mida">Consumidor de SAML2 fet a mida</h2>
+<h2 id="consumidor-de-saml2-fet-a-mida:732ace802d5b60426dfe97cf37aae457">Consumidor de SAML2 fet a mida</h2>
 
 <p>Com es deia en la introducció, GICAR disposa d’un “Identity Provider”, construït amb la tecnologia Shibboleth, amb capacitat de facilitar tiquets SAML2 a les aplicacions.</p>
 
@@ -397,6 +396,7 @@
 <pre><code>PRE: 
 https://preproduccio.idp1-gicar.gencat.cat/
 https://preproduccio.idp4-gicar.gencat.cat/
+
 
 PRO: 
 https://idp1-gicar.gencat.cat/
@@ -429,7 +429,7 @@ https://idp4-gicar.gencat.cat/
 
 <p>Caldrà addicionalment que el desenvolupador especifiqui quina informació voldrà rebre referent a l’usauri que s’haurà autenticat.</p>
 
-<h2 id="aplicació-sharepoint-de-microsoft">Aplicació Sharepoint de Microsoft</h2>
+<h2 id="aplicació-sharepoint-de-microsoft:732ace802d5b60426dfe97cf37aae457">Aplicació Sharepoint de Microsoft</h2>
 
 <p>És possible tècnicament la integració d’una aplicació Sharepoint 2010 i superior amb GICAR. Per a fer aquesta integració és necessari disposar d’un servidor Windows Server que faci les funcions de Active Directory Federation Services (ADFS).</p>
 
@@ -471,7 +471,7 @@ https://idp4-gicar.gencat.cat/
 
 <p>Per a més detall tècnic per a veure com integrar el Sharepoint-ADFS-GICAR consultar el document “Integració GICAR amb Sharepoint”.</p>
 
-<h2 id="aplicació-net-4-x">Aplicació .NET 4.x</h2>
+<h2 id="aplicació-net-4-x:732ace802d5b60426dfe97cf37aae457">Aplicació .NET 4.x</h2>
 
 <p>Nativament les aplicacions .NET 4.x suporten delegar l’autenticació a un ADFS, per tant el mecanisme per a integrar una aplicació .NET amb GICAR pot ser de forma nativa via ADFS. Bàsicament el que aquí es farà serà incloure l’aplicació .NET com a nou Relying Party dins del ADFS que té com a únic Identity Provider “GICAR”.</p>
 

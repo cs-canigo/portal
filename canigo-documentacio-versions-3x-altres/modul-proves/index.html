@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,13 +320,13 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:b42db3213f322e317f8c786d4ba08741">Propòsit</h2>
 
 <p>Les proves son una part fonamental en el desenvolupament d&rsquo;aplicacions, en aquest apartat es focalitza en com realitzar proves unitàries dels diferents mòduls de l&rsquo;aplicació mitjançant Spring Test.</p>
 
 <p>A l&rsquo;utilitzar injecció de dependència, això fa que el codi sigui menys dependent del que ho seria en un desenvolupament java tradicional i per tant realitzar proves unitàries de diferents parts de mòduls sense tenir el conjunt complert hauria de ser més senzill.</p>
 
-<h2 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h2>
+<h2 id="documents-i-fonts-de-referència:b42db3213f322e317f8c786d4ba08741">Documents i Fonts de Referència</h2>
 
 <table>
 <thead>
@@ -344,7 +344,7 @@
 </tbody>
 </table>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:b42db3213f322e317f8c786d4ba08741">Glossari</h2>
 
 <p><strong>@RunWith</strong> - Anotació a nivell de classe per indicar amb que s&rsquo;executarà la classe de test.
 <strong>@ContextConfiguration</strong> - Anotació a nivell de classe per a carregar el context d&rsquo;Spring.
@@ -353,7 +353,7 @@
 <strong>@Autowired</strong> - Anotació a nivell de propietat o mètode per a indicar que la propietat de la classe es carregui automàticament amb el bean del context d&rsquo;spring.
 <strong>@Qualifier</strong> - Anotació a nivell de propietat o mètode que s&rsquo;utilitza quan s&rsquo;ha indicat un @Autowired i al context d&rsquo;spring existeixen més d&rsquo;un bean del mateix tipus del que s&rsquo;ha de realitzar l&rsquo;autowired, aleshores d&rsquo;indica el @Qualifier per indicar a Spring el nom del bean que ha de setejar.</p>
 
-<h2 id="instal-lació">Instal.lació</h2>
+<h2 id="instal-lació:b42db3213f322e317f8c786d4ba08741">Instal.lació</h2>
 
 <p>Utilitzant Canigó3 on cal realitzar cap pas addicional per a tenir instal- lat el mòdul de testing d&rsquo;Spring. Ja que el framework ja incorpora la dependència.</p>
 
@@ -369,9 +369,9 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h2 id="utilització">Utilització</h2>
+<h2 id="utilització:b42db3213f322e317f8c786d4ba08741">Utilització</h2>
 
-<h3 id="definició-classe-de-test">Definició classe de test</h3>
+<h3 id="definició-classe-de-test:b42db3213f322e317f8c786d4ba08741">Definició classe de test</h3>
 
 <p>Per a crear una classe de test simplement s&rsquo;ha de crear una classe de Java tradicional i afegir la següent anotació @RunWith (org.junit.runner.RunWith) per a que spring detecti que és una classe de test.</p>
 
@@ -382,7 +382,7 @@
 @RunWith(SpringJUnit4ClassRunner.class)
 </code></pre>
 
-<h3 id="càrrega-del-context-de-l-aplicació">Càrrega del context de l&rsquo;aplicació</h3>
+<h3 id="càrrega-del-context-de-l-aplicació:b42db3213f322e317f8c786d4ba08741">Càrrega del context de l&rsquo;aplicació</h3>
 
 <p>Per a carregar el context de l&rsquo;aplicació s&rsquo;utilitzarà l&rsquo;anotació @ContextConfiguration (org.springframework.test.context.ContextConfiguration) a nivell de classe.</p>
 
@@ -398,7 +398,7 @@
 <pre><code>@ContextConfiguration(locations = {&quot;config/canigo-support-mailing.xml&quot;, &quot;config/app-support-mailing.xml&quot;})
 </code></pre>
 
-<h3 id="mètodes-de-setup">Mètodes de setUp</h3>
+<h3 id="mètodes-de-setup:b42db3213f322e317f8c786d4ba08741">Mètodes de setUp</h3>
 
 <p>Per indicar el mètode de setUp del test cal fer-ho mitjançant l&rsquo;anotació @Before (org.junit.Before) a nivell de mètode.</p>
 
@@ -417,7 +417,7 @@ public void settingUp(){
 }
 </code></pre>
 
-<h3 id="mètodes-de-test">Mètodes de test</h3>
+<h3 id="mètodes-de-test:b42db3213f322e317f8c786d4ba08741">Mètodes de test</h3>
 
 <p>Per indicar que un mètode és de test cal fer-ho mitjançant l&rsquo;anotació @Test (org.junit.Test) a nivell de mètode.</p>
 

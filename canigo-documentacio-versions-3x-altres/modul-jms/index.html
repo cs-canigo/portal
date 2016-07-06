@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:f871b207dd31b88b6605b941d6aa9176">Propòsit</h2>
 
 <p>En aquest apartat s&rsquo;explica de forma senzilla la infraestructura de missatgeria estándard JMS (Java Messaging Service) de J2EE. Aquest estàndar defineix dues modalitats:</p>
 
@@ -333,7 +333,7 @@
 
 <p>Canigó no incorpora cap llibreria addicional a les ja aportades per Spring per lo que aquest apartat estará enfocat com a guia per a simplificar la publicació i consum de missatge.</p>
 
-<h2 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h2>
+<h2 id="documents-i-fonts-de-referència:f871b207dd31b88b6605b941d6aa9176">Documents i Fonts de Referència</h2>
 
 <table>
 <thead>
@@ -351,7 +351,7 @@
 </tbody>
 </table>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:f871b207dd31b88b6605b941d6aa9176">Glossari</h2>
 
 <p><strong>JMS</strong></p>
 
@@ -365,9 +365,9 @@
 
 <p>Punts de destí dels missatges que s&rsquo;envien.</p>
 
-<h2 id="descripció-detallada">Descripció detallada</h2>
+<h2 id="descripció-detallada:f871b207dd31b88b6605b941d6aa9176">Descripció detallada</h2>
 
-<h3 id="missatgeria-publicació-subscripció">Missatgeria Publicació/Subscripció</h3>
+<h3 id="missatgeria-publicació-subscripció:f871b207dd31b88b6605b941d6aa9176">Missatgeria Publicació/Subscripció</h3>
 
 <p>La missatgeria de publicació/subscripció permet a una aplicació enviar missatges a una o múltiples aplicacions. Aquestes aplicacions envien i reben missatges subscrivint-se a un servidor de missatges a una cua o tòpic determinat.</p>
 
@@ -384,7 +384,7 @@
 
 <p>A continuació es destaquen alguns paràmetres de configuració dels missatges JMS que cal tenir en compte en el desenvolupament d&rsquo;aplicacions que publiquin o consumeixin aquests tipus de missatges.</p>
 
-<h3 id="persistència-del-missatge">Persistència del missatge</h3>
+<h3 id="persistència-del-missatge:f871b207dd31b88b6605b941d6aa9176">Persistència del missatge</h3>
 
 <p>Els missatges JMS poden ser especificats com a persistents o no-persistents.</p>
 
@@ -395,7 +395,7 @@
 
 <p>Els missatges persistents tenen pitjor rendiment degut al pas addicional d&rsquo;haver-se d&rsquo;escriure en disc o a base de dades. Només es recomana utilitzar missatges persistents pels casos d&rsquo;ús crítics, on no es pot permetre la pèrdua del missatge (p.ex. una trasacció bancària, &hellip;).</p>
 
-<h3 id="destinacions-distribuïdes">Destinacions distribuïdes</h3>
+<h3 id="destinacions-distribuïdes:f871b207dd31b88b6605b941d6aa9176">Destinacions distribuïdes</h3>
 
 <p>Una destinació distribuïda és un conjunt de destinacions que són accessibles com a una única destinació lògica al client. Disposen d&rsquo;una sola adreça JNDI, i els membres d&rsquo;aquest conjunt normalment són distribuïts pels membres d&rsquo;un cluster, on cada destinació pertany a un servidor JMS separat.</p>
 
@@ -403,9 +403,9 @@
 
 <p>Per tant, es recomana l&rsquo;ús de destinacions distribuïdes sempre que les aplicacions publicadores/consumidores es desplegin en un cluster de Weblogic.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:f871b207dd31b88b6605b941d6aa9176">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:f871b207dd31b88b6605b941d6aa9176">Instal.lació</h3>
 
 <p>Per tal d&rsquo;instal- lar Quartz es necessari afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -441,7 +441,7 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:f871b207dd31b88b6605b941d6aa9176">Configuració</h3>
 
 <p>La configuració del servei de cues el podriem dividir en els següents punts:</p>
 

@@ -10,12 +10,30 @@
     
     
     <item>
-      <title>LT2b SIC</title>
+      <title>LT2b al SIC</title>
       <link>http://canigo.ctti.gencat.cat/destacats/sic-lt2b/</link>
       <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/destacats/sic-lt2b/</guid>
-      <description>Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. En breu es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.</description>
+      <description>Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. Aviat es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.</description>
+    </item>
+    
+    <item>
+      <title>Recordatori: Eliminació de la versió v8 del servei d&#39;Eformularis</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sgde-deprecaciov8/</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sgde-deprecaciov8/</guid>
+      <description>Us recordem que tenim prevista l&#39;eliminació per aquest any 2016 de la versió v8 del WS del servei d&#39;eFormularis.</description>
+    </item>
+    
+    <item>
+      <title>Recordatori: Obligatorietat de camps àmbit i aplicació als serveis de SGDE</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sgde-campsrequerits/</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sgde-campsrequerits/</guid>
+      <description>Us recordem que properament s&#39;hauran d&#39;informar aquests camps per poder invocar els serveis SGDE.</description>
     </item>
     
     <item>
@@ -79,24 +97,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2015.3/</guid>
       <description>El passat mes de desembre, s&#39;ha publicat la versió 2015.3 del Full de ruta del programari</description>
-    </item>
-    
-    <item>
-      <title>Nova versió del connector amb Documentum 7.1 per a Canigó 2/3</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canigo-connector-documentum/</link>
-      <pubDate>Thu, 24 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/canigo-connector-documentum/</guid>
-      <description>S&#39;ha publicat una nova versió del connector amb Documentum 7.1 per a Canigó 2 i Canigó 3.</description>
-    </item>
-    
-    <item>
-      <title>Canvi domini ibiblio a Maven</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canvi-domini-ibiblio-maven/</link>
-      <pubDate>Fri, 18 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/canvi-domini-ibiblio-maven/</guid>
-      <description>Ha canviat el domini del repositori ibiblio de Maven</description>
     </item>
     
   </channel>

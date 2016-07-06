@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:c14ba749a5bc4b7504216a094fcbf19d">Propòsit</h2>
 
 <p>El propósit d&rsquo;aquest document és donar una visió general de quina és l&rsquo;arquitectura base de la capa de presentació JSF i els seus components, així com la configuració necessària. Es tractarà entre d&rsquo;altres:</p>
 
@@ -330,9 +330,9 @@
 <li>Quin és el procediment que segueix l&rsquo;arquitectura interna de canigo en el tractament d&rsquo;una petició</li>
 </ul>
 
-<h2 id="instal-lació">Instal·lació</h2>
+<h2 id="instal-lació:c14ba749a5bc4b7504216a094fcbf19d">Instal·lació</h2>
 
-<h3 id="instal-lació-1">Instal·lació</h3>
+<h3 id="instal-lació-1:c14ba749a5bc4b7504216a094fcbf19d">Instal·lació</h3>
 
 <p>Aquest mòdul s&rsquo;afegeix com a dependència de manera directa durant la creació d&rsquo;una aplicació JSF 1.x amb l&rsquo;eina de suport al desenvolupament, també es pot afegir de manera manual dins el pom.xml de l&rsquo;aplicacio:</p>
 
@@ -345,9 +345,9 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h2 id="tecnologies-utilitzades">Tecnologies utilitzades</h2>
+<h2 id="tecnologies-utilitzades:c14ba749a5bc4b7504216a094fcbf19d">Tecnologies utilitzades</h2>
 
-<h3 id="javaserver-faces-jsf">JavaServer Faces (JSF)</h3>
+<h3 id="javaserver-faces-jsf:c14ba749a5bc4b7504216a094fcbf19d">JavaServer Faces (JSF)</h3>
 
 <p>JavaServer Faces és un framework d&rsquo;interficie de components d&rsquo;usuari del costat del servidor per a aplicacions web basades en la tecnologia Java. Els principals components de la tecnologia son:</p>
 
@@ -390,7 +390,7 @@
 <li>Creació de families de components visuals per a agilitzar el desenvolupament. Juntament amb els tags per defecte de JSF, s&rsquo;inclouen els tags proporcionats per Richfaces</li>
 </ul>
 
-<h3 id="primefaces">PrimeFaces</h3>
+<h3 id="primefaces:c14ba749a5bc4b7504216a094fcbf19d">PrimeFaces</h3>
 
 <p>PrimeFaces és un framework de codi obert que afegeix capacitats Ajax dins de les aplicacions JSF existents sense recorre a JavaScript. PrimeFaces inclou cicle de vida, validacions, conversions i la gestió de recursos estàtics i dinàmics. Els components de PrimeFaces, construits amb suport Ajax i un alt grau de personalització del &ldquo;look-and-feel&rdquo;, poden ser incorporats fàcilment dins de les aplicacions JSF.</p>
 
@@ -407,7 +407,7 @@
 Guia d&rsquo;usuari a <a href="http://www.primefaces.org/docs/guide/primefaces_user_guide_5_0.pdf">http://www.primefaces.org/docs/guide/primefaces_user_guide_5_0.pdf</a><br />
 Exemples i llistat de components suportats a <a href="http://www.primefaces.org/showcase/">http://www.primefaces.org/showcase/</a></p>
 
-<h3 id="facelets">Facelets</h3>
+<h3 id="facelets:c14ba749a5bc4b7504216a094fcbf19d">Facelets</h3>
 
 <p>JavaServer Facelets és un framework per a plantilles (templates) centrat en la tecnologia JSF (JavaServer Faces). Les característiques més remarcables d&rsquo;aquest framework son:</p>
 
@@ -421,7 +421,7 @@ Exemples i llistat de components suportats a <a href="http://www.primefaces.org/
 
 <p>Més informació a <a href="https://facelets.java.net/">https://facelets.java.net/</a></p>
 
-<h2 id="avantatges-de-jsf-sobre-struts">Avantatges de JSF sobre Struts</h2>
+<h2 id="avantatges-de-jsf-sobre-struts:c14ba749a5bc4b7504216a094fcbf19d">Avantatges de JSF sobre Struts</h2>
 
 <p>Els principals avantatges de JSF sobre Struts son:</p>
 
@@ -436,46 +436,46 @@ Exemples i llistat de components suportats a <a href="http://www.primefaces.org/
 <li>Eines més potents: JSF dispossa d&rsquo;eines que faciliten al desenvolupador la construcció d&rsquo;interficies visuals mitjançant eines de &ldquo;drag-and-drop&rdquo;.</li>
 </ul>
 
-<h2 id="descripció-detallada">Descripció Detallada</h2>
+<h2 id="descripció-detallada:c14ba749a5bc4b7504216a094fcbf19d">Descripció Detallada</h2>
 
-<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+<h3 id="arquitectura-i-components:c14ba749a5bc4b7504216a094fcbf19d">Arquitectura i Components</h3>
 
-<h4 id="cicle-de-vida">Cicle de vida</h4>
+<h4 id="cicle-de-vida:c14ba749a5bc4b7504216a094fcbf19d">Cicle de vida</h4>
 
 <p>El cicle de vida d&rsquo;una aplicació JSF descriu totes les accions portades a terme desde que el client inicialitza una sessió. La majoria de les fases d&rsquo;una aplicació JSF son gestionades pel framework JSF, deixant només una petita part com a responsabilitat del desenvolupador. Les fases que compossen el cicle de vida son sis (caixes de color verd) i es poden observar en la següent imatge:</p>
 
 <p><img src="/related/canigo/documentacio/modul-jsf/JsfIntro-lifecycle.gif" alt="Fases de vida framework JSF" title="Fases de vida framework JSF" />
 <br><br></p>
 
-<h4 id="restauració-de-la-vista">Restauració de la vista</h4>
+<h4 id="restauració-de-la-vista:c14ba749a5bc4b7504216a094fcbf19d">Restauració de la vista</h4>
 
 <p>Una vista en JSF representa un arbre de componentes IU. Cadascuna de les peticions al servidor te el seu contexto JSF on s&rsquo;emagatzema un graf de la vista actual de la sesió. La responsabilidad primaria d&rsquo;aquesta fase es identificar la vista actual des del contexte JSF, en cas de no existir, es creara una vista nova. Si el graf de la vista existeix, es restaura i es mostra al usuari. Aquest procés és automàtic i no és responsabilitat del desenvolupador.</p>
 
-<h4 id="assignar-els-valors-de-la-petició">Assignar els valors de la petició</h4>
+<h4 id="assignar-els-valors-de-la-petició:c14ba749a5bc4b7504216a094fcbf19d">Assignar els valors de la petició</h4>
 
 <p>Després de restaurar la vista, els valos ingresats pel client de l&rsquo;aplicació es mapejen als components UI corresponents. Per exemple, en una interficie que conté un formulari, cada cop que es realitza un enviament d&rsquo;informació al servidor, JSF iterarà sobre l&rsquo;arbre de components, agafarà cadascun dels seus valos i els assignarà al component corresponent. Aquest procés és automàtic i no és responsabilitat del desenvolupador.</p>
 
-<h4 id="validació-de-les-dades-d-usuari">Validació de les dades d&rsquo;usuari</h4>
+<h4 id="validació-de-les-dades-d-usuari:c14ba749a5bc4b7504216a094fcbf19d">Validació de les dades d&rsquo;usuari</h4>
 
 <p>JSF iterarà sobre tots els nodes de l&rsquo;arbre de components UI cridant tant al validador per defecte (si existeix) com als validadors personificables segons la configuració pròpia de cada component. Aquest procés és automàtic però és responsabilitat del desenvolupador configurar els validadors en cadascun dels components.</p>
 
-<h4 id="actualitzar-objectes-del-model">Actualitzar objectes del model</h4>
+<h4 id="actualitzar-objectes-del-model:c14ba749a5bc4b7504216a094fcbf19d">Actualitzar objectes del model</h4>
 
 <p>Durant aquesta fase, els valors dels components mapejats i validats es situen en els Java Beans corresponents. Aquest procés és automàtic però es responsabilitat del desenvolupador indicar el mapeig del component amb l&rsquo;atribut del Java Bean.</p>
 
-<h4 id="executar-la-lògica-de-l-aplicació">Executar la lògica de l&rsquo;aplicació</h4>
+<h4 id="executar-la-lògica-de-l-aplicació:c14ba749a5bc4b7504216a094fcbf19d">Executar la lògica de l&rsquo;aplicació</h4>
 
 <p>Mitjançant el mecanisme de mapeig d&rsquo;events s&rsquo;executen les funcions definides en els Java Bean per portar a terme les operacions o lògica de negoci pròpia de l&rsquo;aplicació. És responsabilitat del programador tant el mapeig d&rsquo;events com la lògica pròpia de l&rsquo;aplicació.</p>
 
-<h4 id="renderització-de-la-resposta">Renderització de la resposta</h4>
+<h4 id="renderització-de-la-resposta:c14ba749a5bc4b7504216a094fcbf19d">Renderització de la resposta</h4>
 
 <p>D&rsquo;acord amb el mecanisme de mapeig de navegació, en funció dels resultats obtinguts durant la fase anterior, es selecciona o renderitza la vista apropiada a mostrar a l&rsquo;usuari. És responsabilitat del desenvolupador gestionar la lògica de navegació de l&rsquo;aplicació.</p>
 
-<h3 id="instal-lació-i-configuració">Instal- lació i configuració</h3>
+<h3 id="instal-lació-i-configuració:c14ba749a5bc4b7504216a094fcbf19d">Instal- lació i configuració</h3>
 
-<h4 id="configuració-bàsica">Configuració bàsica</h4>
+<h4 id="configuració-bàsica:c14ba749a5bc4b7504216a094fcbf19d">Configuració bàsica</h4>
 
-<h4 id="paràmetres-de-context">Paràmetres de context</h4>
+<h4 id="paràmetres-de-context:c14ba749a5bc4b7504216a094fcbf19d">Paràmetres de context</h4>
 
 <p>Fitxer de configuració: web.xml</p>
 
@@ -491,7 +491,7 @@ Exemples i llistat de components suportats a <a href="http://www.primefaces.org/
 <li><strong>facelets.DEVELOPMENT:</strong> Indica que estem en un entorn de desenvolupament, i davant error en la aplicació es mostrarà una pàgina detallada amb la informació del mateix, així com l&rsquo;arbre de components jsf que tenim en memòria.</li>
 </ul>
 
-<h4 id="listeners">Listeners</h4>
+<h4 id="listeners:c14ba749a5bc4b7504216a094fcbf19d">Listeners</h4>
 
 <p>Fitxer de configuració: web.xml</p>
 
@@ -504,7 +504,7 @@ org.springframework.web.context.ContextLoaderListener: Listener encarregat de ca
 org.springframework.web.context.request.RequestContextListener: Listener que exposa la request al thread actual. Es pot accedir a la request amb les classes LocaleContextHolder i RequestContextHolder.
 </code></pre>
 
-<h4 id="filtres">Filtres</h4>
+<h4 id="filtres:c14ba749a5bc4b7504216a094fcbf19d">Filtres</h4>
 
 <p>Fitxer de configuració: web.xml</p>
 
@@ -518,7 +518,7 @@ cat.gencat.ctti.canigo.arch.web.core.filters.LocalizationFilter: Filtre que prop
 cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java Web Filter que permet reescriure les URLs per convertirles en amigables. Més informació a http://www.tuckey.org/urlrewrite/.
 </code></pre>
 
-<h4 id="servlets">Servlets</h4>
+<h4 id="servlets:c14ba749a5bc4b7504216a094fcbf19d">Servlets</h4>
 
 <p>Fitxer de configuració: web.xml</p>
 
@@ -530,7 +530,7 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 <li>javax.faces.webapp.FacesServlet: Representa el motor o engine de les aplicacions JSF.</li>
 </ul>
 
-<h4 id="separació-contingut-estàtic-i-dinàmic-richfaces-4-x">Separació contingut estàtic i dinàmic (RichFaces 4.x)</h4>
+<h4 id="separació-contingut-estàtic-i-dinàmic-richfaces-4-x:c14ba749a5bc4b7504216a094fcbf19d">Separació contingut estàtic i dinàmic (RichFaces 4.x)</h4>
 
 <p>Per tal de poder separar el contingut estàtic i dinàmic en aplicacions Canigó 3 amb JSF 2 + Primefaces 5 cal fer les següents configuracions:</p>
 
@@ -553,9 +553,9 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 
 <p>El valor del paràmetre JSF_RESOURCE_PREFIX és el que es concatena abans de les URLs que continguin el valor del paràmetre definit a JSF_RESOURCE_PREFIX_MAPPINGS. En aquest segons paràmetre es poden definir tots els paths que es vulgui separats per ;</p>
 
-<h2 id="estils-canigó-primefaces-5-0">Estils Canigó (Primefaces 5.0)</h2>
+<h2 id="estils-canigó-primefaces-5-0:c14ba749a5bc4b7504216a094fcbf19d">Estils Canigó (Primefaces 5.0)</h2>
 
-<h3 id="introducció">Introducció</h3>
+<h3 id="introducció:c14ba749a5bc4b7504216a094fcbf19d">Introducció</h3>
 
 <p>Per tal de poder adaptar la nova capa de presentació basada en la tecnologia JSF als estils de Canigó s&rsquo;han de tindre en compte els següents aspectes:</p>
 
@@ -564,17 +564,17 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 <li>Cada component de primefaces té definides una sèrie de classes per defecte. Són aquestes classes les que s&rsquo;hauran de modificar per tal d&rsquo;adaptar l&rsquo;estil d&rsquo;una JSF al desitjat.</li>
 </ul>
 
-<h3 id="components">Components</h3>
+<h3 id="components:c14ba749a5bc4b7504216a094fcbf19d">Components</h3>
 
 <p>En aquesta secció es presentarà cada component per separat amb una captura de pantalla, el codi jsf necessari per implementar-lo i l&rsquo;estil aplicat</p>
 
-<h4 id="menús">Menús</h4>
+<h4 id="menús:c14ba749a5bc4b7504216a094fcbf19d">Menús</h4>
 
-<h5 id="exemple-component">Exemple Component</h5>
+<h5 id="exemple-component:c14ba749a5bc4b7504216a094fcbf19d">Exemple Component</h5>
 
 <p><img src="/related/canigo/documentacio/modul-jsf/menu_rf_4x.jpg" alt="Fases de vida framework JSF" /></p>
 
-<h5 id="codi-jsf">Codi Jsf</h5>
+<h5 id="codi-jsf:c14ba749a5bc4b7504216a094fcbf19d">Codi Jsf</h5>
 
 <pre><code>&lt;ui:composition&gt;
       &lt;h:form&gt;
@@ -596,7 +596,7 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 &lt;/ui:composition&gt;
 </code></pre>
 
-<h5 id="codi-xml">Codi xml</h5>
+<h5 id="codi-xml:c14ba749a5bc4b7504216a094fcbf19d">Codi xml</h5>
 
 <p>Definir el menú en /src/main/resources/spring/app-custom-menu.xml</p>
 
@@ -658,11 +658,11 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 &lt;/beans&gt;
 </code></pre>
 
-<h4 id="taules">Taules</h4>
+<h4 id="taules:c14ba749a5bc4b7504216a094fcbf19d">Taules</h4>
 
-<h5 id="exemple-component-1">Exemple Component</h5>
+<h5 id="exemple-component-1:c14ba749a5bc4b7504216a094fcbf19d">Exemple Component</h5>
 
-<h5 id="codi-jsf-1">Codi Jsf</h5>
+<h5 id="codi-jsf-1:c14ba749a5bc4b7504216a094fcbf19d">Codi Jsf</h5>
 
 <pre><code>&lt;ui:define name=&quot;body&quot;&gt;
 	&lt;p:dataTable id=&quot;taulaPropietats&quot; 

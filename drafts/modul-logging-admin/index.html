@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -301,7 +301,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:fd6a582c3ea92aa0a9748a70d20d5d26">Propòsit</h2>
 
 <p>Aquest mòdul permet administrar els logs de l&rsquo;aplicació proporcionant les següents funcionalitats:</p>
 
@@ -311,9 +311,9 @@
 <li>Descarregar els fitxers de logs</li>
 </ul>
 
-<h2 id="instal-lació-i-configuració">Instal·lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:fd6a582c3ea92aa0a9748a70d20d5d26">Instal·lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal·lació</h3>
+<h3 id="instal-lació:fd6a582c3ea92aa0a9748a70d20d5d26">Instal·lació</h3>
 
 <p>La instal·lació del Mòdul d&rsquo;Administració de Logs es pot incloure automàticament a través del <a href="/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf">Plugin de Canigó per a Eclipse</a>, o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -337,9 +337,9 @@
 &lt;/plugin&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:fd6a582c3ea92aa0a9748a70d20d5d26">Configuració</h3>
 
-<h4 id="client">Client</h4>
+<h4 id="client:fd6a582c3ea92aa0a9748a70d20d5d26">Client</h4>
 
 <p>Si s&rsquo;utilitza el Plugin de Canigó per a Eclipse s&rsquo;instal·la automàticament una plana &ldquo;loggingAdministration.html&rdquo; dins l&rsquo;aplicació.  En cas de realitzar la instal·lació de forma manual s&rsquo;ha de descarregar la <a href="/related/canigo/documentacio/modul-logging/canigo.operation.logging_static.zip">part estàtica</a></p>
 
@@ -347,7 +347,7 @@
 
 <p>El contingut estàtic està preparat per a ser ubicat al directori <code>&lt;aplicacio&gt;</code>\src\main\webapp. Si es vol modificar la ubicació s&rsquo;ha de modificar els enllaços existents en aquests fitxers.</p>
 
-<h4 id="servidor">Servidor</h4>
+<h4 id="servidor:fd6a582c3ea92aa0a9748a70d20d5d26">Servidor</h4>
 
 <p>Els enllaços per accedir als serveis REST que ofereix aquest Mòdul d&rsquo;Administració de Logs en el backend han estan especificats tenint en compte que al fitxer de configuració <aplicacio>\src\main\webapp\WEB-INF\web.xml es tingui configurat el DispatcherServlet de Spring per interceptar el següent patró <strong>/api/</strong>*. En cas que no sigui així també caldrà adaptar els enllaços.</p>
 
@@ -360,7 +360,7 @@
 
 <p>Aquesta configuració només serà necessària en cas d&rsquo;haver establert un appender de tipus file per els logs de Spring.</p>
 
-<h3 id="utilització-del-mòdul">Utilització del Mòdul</h3>
+<h3 id="utilització-del-mòdul:fd6a582c3ea92aa0a9748a70d20d5d26">Utilització del Mòdul</h3>
 
 <p>Per a utilitzar el mòdul s&rsquo;ha de desplegar l&rsquo;aplicació i accedir-hi a <code>http://&lt;host&gt;:&lt;port&gt;/&lt;appContext&gt;/loggingAdministration.html</code>. Per exemple: <code>http:\\localhost:8080\aplicacioProva\loggingAdministration.html</code></p>
 
@@ -374,11 +374,11 @@
 
 <p>Amb el cercador es pot resaltar en groc el text que es desitgi trobar.</p>
 
-<h3 id="consideracions-de-seguretat">Consideracions de seguretat</h3>
+<h3 id="consideracions-de-seguretat:fd6a582c3ea92aa0a9748a70d20d5d26">Consideracions de seguretat</h3>
 
 <p>Es recomana que aquest mòdul es securitzi per a que només els usuaris amb rol Administrador puguin accedir-hi, tant a la plana html, com als serveis REST del backend proporcionats al mòdul.</p>
 
-<h3 id="demo">Demo</h3>
+<h3 id="demo:fd6a582c3ea92aa0a9748a70d20d5d26">Demo</h3>
 
 <p>Des del CS Canigó es proporciona una <a href="http://canigo-admin-logs.eu-gb.mybluemix.net/loggingAdministration.html">demo online</a> d&rsquo;aquest nou mòdul. Podeu trobar el codi font d&rsquo;aquesta demo en el següent <a href="https://github.com/cs-canigo/demoAdminLogs">repositori de Github</a>.</p>
 

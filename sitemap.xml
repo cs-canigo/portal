@@ -4,6 +4,12 @@
   <url>
     <loc>http://canigo.ctti.gencat.cat/</loc>
     <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/comunicat/2016/07/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -12,8 +18,13 @@
   </url>
   
   <url>
-    <loc>http://canigo.ctti.gencat.cat/comunicat/2016/07/</loc>
-    <lastmod>2016-07-04T00:00:00+00:00</lastmod>
+    <loc>http://canigo.ctti.gencat.cat/destacats/sgde-deprecaciov8/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats/sgde-campsrequerits/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -358,6 +369,16 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/comunicat/2015/07/</loc>
+    <lastmod>2015-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats-related/sgde-deprecaciov8/</loc>
+    <lastmod>2015-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats-related/sgde-campsrequerits/</loc>
     <lastmod>2015-07-06T00:00:00+00:00</lastmod>
   </url>
   

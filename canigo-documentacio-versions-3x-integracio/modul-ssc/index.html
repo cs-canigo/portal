@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,19 +320,19 @@
 
 						
 
-<h2 id="introducció">Introducció</h2>
+<h2 id="introducció:c8a1f7c133dd27e1e653ef5827e2681b">Introducció</h2>
 
 <p>L&rsquo;objectiu d&rsquo;aquest connector és el de proporcionar accés al Sistema de Signatura Centralitzada de Catcert (SSC).</p>
 
-<h3 id="propòsit">Propòsit</h3>
+<h3 id="propòsit:c8a1f7c133dd27e1e653ef5827e2681b">Propòsit</h3>
 
 <p>El propòsit del connector és proporcionar una interfície que utilitzi l&rsquo;API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix l&rsquo;SSC.</p>
 
-<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+<h3 id="context-i-escenaris-d-ús:c8a1f7c133dd27e1e653ef5827e2681b">Context i Escenaris d&rsquo;ús</h3>
 
 <p>El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat.</p>
 
-<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+<h3 id="a-qui-va-dirigit:c8a1f7c133dd27e1e653ef5827e2681b">A qui va dirigit</h3>
 
 <p>Aquest document va dirigit als següents perfils:</p>
 
@@ -341,7 +341,7 @@
 <li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
 </ul>
 
-<h3 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h3>
+<h3 id="documents-i-fonts-de-referència:c8a1f7c133dd27e1e653ef5827e2681b">Documents i Fonts de Referència</h3>
 
 <table>
 <thead>
@@ -357,7 +357,7 @@
 </tbody>
 </table>
 
-<h2 id="descripció-detallada">Descripció Detallada</h2>
+<h2 id="descripció-detallada:c8a1f7c133dd27e1e653ef5827e2681b">Descripció Detallada</h2>
 
 <p>Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d&rsquo;una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l&rsquo;API SmartWrapper per poder trevallar amb ell. És amb aquesta API amb la cual esta constituit aquest connector.</p>
 
@@ -378,7 +378,7 @@
 </ul></li>
 </ul>
 
-<h3 id="alta-servei">Alta Servei</h3>
+<h3 id="alta-servei:c8a1f7c133dd27e1e653ef5827e2681b">Alta Servei</h3>
 
 <p>Per poder utilitzar l&rsquo;SSC en PRO s&rsquo;ha d&rsquo;estar donat d&rsquo;alta en el servei. Per poder fer-ho s&rsquo;han de seguir els següents passos:</p>
 
@@ -391,23 +391,23 @@
 
 <p>De cara a utilitzar el servei en PRE, els certificats i documentació necessaria es poden demanar obrint una petició a suport@aoc.cat.</p>
 
-<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+<h3 id="arquitectura-i-components:c8a1f7c133dd27e1e653ef5827e2681b">Arquitectura i Components</h3>
 
-<h4 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h4>
+<h4 id="interfícies-i-components-genèrics:c8a1f7c133dd27e1e653ef5827e2681b">Interfícies i Components Genèrics</h4>
 
 <p>Es pot trobar el codi font referent a aquests component a la següent url:</p>
 
 <p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.ssc/1.1.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.ssc/1.1.0/</a></p>
 
-<h4 id="requeriments">Requeriments</h4>
+<h4 id="requeriments:c8a1f7c133dd27e1e653ef5827e2681b">Requeriments</h4>
 
 <p>El connector SSC és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.</p>
 
 <p>Donat que l&rsquo;SSC s&rsquo;ha desenvolupat per substituir altres sistemes de signatura anteriors s&rsquo;ha desenvolupat per que sigui compatible amb components de Canigo 2.3.5 en endevant. Tot i això, s&rsquo;ha de tindre en compte que conté una sèrie de dependències que podrien arribar a donar conflicte en una aplicació ja desenvolupada. Per aquest motiu es recomana consultar les seves dependències.</p>
 
-<h3 id="instal-lació-i-configuració">Instal.lació i Configuració</h3>
+<h3 id="instal-lació-i-configuració:c8a1f7c133dd27e1e653ef5827e2681b">Instal.lació i Configuració</h3>
 
-<h4 id="instal-lació">Instal.lació</h4>
+<h4 id="instal-lació:c8a1f7c133dd27e1e653ef5827e2681b">Instal.lació</h4>
 
 <p>La instal.lació del connector requereix de la utilització de la llibreria &lsquo;canigo.integration.ssc&rsquo; i les dependències indicades a l&rsquo;apartat &lsquo;Introducció-Versions i Dependències&rsquo;.</p>
 
@@ -429,7 +429,7 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h4 id="configuració">Configuració</h4>
+<h4 id="configuració:c8a1f7c133dd27e1e653ef5827e2681b">Configuració</h4>
 
 <p>1.- Per poder configurar el connector SSC és necessari crear un arxiu anomenat app-integration-ssc.xml situat en src/main/resources/spring/ amb el següent contingut:</p>
 
@@ -476,7 +476,7 @@
 
 <p>NOTA: Les dades de proves del connector relacionades amb certificats de proves s&rsquo;han de demanar a CatCert</p>
 
-<h3 id="utilització-del-connector">Utilització del Connector</h3>
+<h3 id="utilització-del-connector:c8a1f7c133dd27e1e653ef5827e2681b">Utilització del Connector</h3>
 
 <p>1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.</p>
 

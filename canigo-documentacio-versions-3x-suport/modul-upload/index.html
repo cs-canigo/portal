@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,13 +320,13 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:90cabd3ef2a23bef2da3366b7dd71989">Propòsit</h2>
 
 <p>Aquest mòdul permet al servidor obtenir fitxers adjunts als formularis HTML de client. A més aquest mòdul permet llegir el fitxer de forma directa, deser-lo al sistema de fitxers, emmagatzemar-lo en una base de dades o enllaçar-ho amb altres mòduls com pot ser el servei d&rsquo;antivirus.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:90cabd3ef2a23bef2da3366b7dd71989">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:90cabd3ef2a23bef2da3366b7dd71989">Instal.lació</h3>
 
 <p>Per tal d&rsquo;instal-lar el mòdul d&rsquo;upload de fitxers es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -339,7 +339,7 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h4 id="jsf">JSF</h4>
+<h4 id="jsf:90cabd3ef2a23bef2da3366b7dd71989">JSF</h4>
 
 <p>Per aplicacions Canigó 3 basades en JSF 2.2 s&rsquo;ha d&rsquo;afegir la següent dependència amb la llibreria MyFaces Tomahawk, automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegint-la manualment en el pom.xml de l&rsquo;aplicació:</p>
 
@@ -373,11 +373,11 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:90cabd3ef2a23bef2da3366b7dd71989">Configuració</h3>
 
 <p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.</p>
 
-<h4 id="jsf-1">JSF</h4>
+<h4 id="jsf-1:90cabd3ef2a23bef2da3366b7dd71989">JSF</h4>
 
 <p>En el cas d&rsquo;utilitzar la opció de JSF, el que fa és afegir al web.xml el següent filtre per a interceptar les peticions multipart/form-data:</p>
 
@@ -406,7 +406,7 @@
 <pre><code>xmlns:t=&quot;http://myfaces.apache.org/tomahawk&quot;
 </code></pre>
 
-<h4 id="struts-taglibs">Struts + Taglibs</h4>
+<h4 id="struts-taglibs:90cabd3ef2a23bef2da3366b7dd71989">Struts + Taglibs</h4>
 
 <p>En el cas d&rsquo;utilitzar la opció d&rsquo;Struts + Taglibs, la configuració del servei es realitza mitjançant un fitxer de propietats.</p>
 
@@ -448,9 +448,9 @@
 </tbody>
 </table>
 
-<h2 id="utilització-del-mòdul">Utilització del Mòdul</h2>
+<h2 id="utilització-del-mòdul:90cabd3ef2a23bef2da3366b7dd71989">Utilització del Mòdul</h2>
 
-<h3 id="jsf-2">JSF</h3>
+<h3 id="jsf-2:90cabd3ef2a23bef2da3366b7dd71989">JSF</h3>
 
 <p>Per a utilitzar aquest mòdul, cal crear un bean i una jsf:</p>
 
@@ -510,7 +510,7 @@ public class FileUploadBean {
 
 </code></pre>
 
-<h3 id="struts-taglibs-1">STRUTS+TAGLIBS</h3>
+<h3 id="struts-taglibs-1:90cabd3ef2a23bef2da3366b7dd71989">STRUTS+TAGLIBS</h3>
 
 <p>Per a utilitzar el mòdul cal crear una Acció i una JSP:</p>
 

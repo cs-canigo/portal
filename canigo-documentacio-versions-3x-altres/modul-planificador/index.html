@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:71fa3e34247ab3034de6e6a1842a5592">Propòsit</h2>
 
 <p>El propòsit d&rsquo;aquest apartat es introduir al desenvolupador a la planificació de tasques mitjançant Quartz.</p>
 
@@ -365,7 +365,7 @@
 </tbody>
 </table>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:71fa3e34247ab3034de6e6a1842a5592">Glossari</h2>
 
 <p><strong>Job</strong></p>
 
@@ -379,9 +379,9 @@
 
 <p>Objecte que s&rsquo;encarrega d&rsquo;instanciar el programador o scheduler que s&rsquo;encarregarà de gestionar l&rsquo;execució de les tasques.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:71fa3e34247ab3034de6e6a1842a5592">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:71fa3e34247ab3034de6e6a1842a5592">Instal.lació</h3>
 
 <p>Per tal d&rsquo;instal-lar Quartz es necessari afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -422,14 +422,13 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:71fa3e34247ab3034de6e6a1842a5592">Configuració</h3>
 
 <p>La configuració del servei de planificació de tasques es pot dividir en dos punts:</p>
 
 <ul>
 <li>Definició dels xmls (o anotacions) de Spring que s&rsquo;encarregen de la inicialització dels beans de Quartz.</li>
-<li>Externalització de les propietats d&rsquo;aquest beans.
-<br /></li>
+<li>Externalització de les propietats d&rsquo;aquest beans.</li>
 </ul>
 
 <div class="message information">
@@ -437,7 +436,7 @@ IMPORTANT: <br>
 Per a entorns clusteritzats revisar l'apartat de Preguntes freqüents.
 </div>
 
-<h4 id="definició-dels-xmls-de-spring">Definició dels xmls de Spring</h4>
+<h4 id="definició-dels-xmls-de-spring:71fa3e34247ab3034de6e6a1842a5592">Definició dels xmls de Spring</h4>
 
 <p>Ubicació: <PROJECT_ROOT>/src/main/resources/spring/quartz-config.xml</p>
 
@@ -449,7 +448,7 @@ Per a entorns clusteritzats revisar l'apartat de Preguntes freqüents.
 <li>Definir la factoria per executar les tasques amb els triggers</li>
 </ul>
 
-<h4 id="configuració-dels-arxius-de-propietats">Configuració dels arxius de propietats</h4>
+<h4 id="configuració-dels-arxius-de-propietats:71fa3e34247ab3034de6e6a1842a5592">Configuració dels arxius de propietats</h4>
 
 <p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/planificador.properties</p>
 
@@ -462,7 +461,7 @@ Per a entorns clusteritzats revisar l'apartat de Preguntes freqüents.
 *.quartz.concurrent=true
 </code></pre>
 
-<h2 id="utilització-del-mòdul">Utilització del Mòdul</h2>
+<h2 id="utilització-del-mòdul:71fa3e34247ab3034de6e6a1842a5592">Utilització del Mòdul</h2>
 
 <p>En aquest exemple es configura una tasca que es repeteix cada dos segons amb el work manager per defecte de Quartz.</p>
 
@@ -509,11 +508,11 @@ En entorns productius s'ha pogut observar com en algunes situacions el motor no 
 Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Recomanacions.
 </div>
 
-<h2 id="recomanacions">Recomanacions</h2>
+<h2 id="recomanacions:71fa3e34247ab3034de6e6a1842a5592">Recomanacions</h2>
 
 <p>Com a alternativa al workmanager per defecte de &ldquo;Quartz&rdquo;, i amb la idea de que sigui el servidor d&rsquo;aplicacions qui gestioni els threads de Quartz, a continuació es descriu un exemple de configuració per a utilitzar la implementació de &ldquo;Commonj&rdquo;.</p>
 
-<h3 id="configuració-per-a-servidors-d-aplicacions-weblogic">Configuració per a servidors d&rsquo;aplicacions Weblogic</h3>
+<h3 id="configuració-per-a-servidors-d-aplicacions-weblogic:71fa3e34247ab3034de6e6a1842a5592">Configuració per a servidors d&rsquo;aplicacions Weblogic</h3>
 
 <p>Per canviar el WorkManager per defecte per el de &ldquo;Commonj&rdquo; a servidors d&rsquo;aplicacions Weblogic, es necessari realitzar les següents accions:</p>
 
@@ -523,7 +522,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 <li>Modificar weblogic.xml per crear un &ldquo;WorkManager&rdquo;.</li>
 </ul>
 
-<h3 id="modificar-el-taskexecutor-del-schedulerfactorybean">Modificar el taskexecutor del SchedulerFactoryBean</h3>
+<h3 id="modificar-el-taskexecutor-del-schedulerfactorybean:71fa3e34247ab3034de6e6a1842a5592">Modificar el taskexecutor del SchedulerFactoryBean</h3>
 
 <p>Per sobrescriure el &ldquo;taskexecutor&rdquo; per defecte de &ldquo;Quartz&rdquo;, s&rsquo;ha de modificar el SchedulerFactoryBean per instanciar el nou &ldquo;TaskExecutor&rdquo;, aquest informarà les següents propietats:</p>
 
@@ -550,7 +549,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 &lt;/bean&gt;
 </code></pre>
 
-<h3 id="modificar-web-xml-per-afegir-una-referència-local-al-workmanager">Modificar web.xml per afegir una referència local al &ldquo;WorkManager&rdquo;</h3>
+<h3 id="modificar-web-xml-per-afegir-una-referència-local-al-workmanager:71fa3e34247ab3034de6e6a1842a5592">Modificar web.xml per afegir una referència local al &ldquo;WorkManager&rdquo;</h3>
 
 <p>Modificar l&rsquo;arxiu &ldquo;web.xml&rdquo; per afegir una referència local al &ldquo;WorkManager&rdquo; que posteriorment es definirà al &ldquo;weblogic.xml&rdquo;:</p>
 
@@ -564,7 +563,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 ...
 </code></pre>
 
-<h3 id="modificar-weblogic-xml-per-crear-un-workmanager">Modificar weblogic.xml per crear un &ldquo;WorkManager&rdquo;</h3>
+<h3 id="modificar-weblogic-xml-per-crear-un-workmanager:71fa3e34247ab3034de6e6a1842a5592">Modificar weblogic.xml per crear un &ldquo;WorkManager&rdquo;</h3>
 
 <p>Finalment cal registrar un &ldquo;WorkManager&rdquo; aplicatiu al servidor d&rsquo;aplicacions mitjançant l&rsquo;arxiu &ldquo;weblogic.xml&rdquo;. En l&rsquo;exemple es registra un &ldquo;WorkManager&rdquo; que com a màxim pot executar 3 &ldquo;threads&rdquo; concurrents.</p>
 
@@ -585,7 +584,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 &lt;/weblogic-web-app&gt;
 </code></pre>
 
-<h3 id="configuració-per-a-servidors-d-aplicacions-tomcat">Configuració per a servidors d&rsquo;aplicacions Tomcat</h3>
+<h3 id="configuració-per-a-servidors-d-aplicacions-tomcat:71fa3e34247ab3034de6e6a1842a5592">Configuració per a servidors d&rsquo;aplicacions Tomcat</h3>
 
 <p>Per canviar el WorkManager per defecte per el de &ldquo;Commonj&rdquo; per a servidors d&rsquo;aplicacions Tomcat es necessari realitzar les següents accions:</p>
 
@@ -596,7 +595,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 <li>Crear el &ldquo;WorkManager&rdquo; al context.xml de Tomcat.</li>
 </ul>
 
-<h3 id="afegir-les-llibreries-de-commonj">Afegir les llibreries de Commonj</h3>
+<h3 id="afegir-les-llibreries-de-commonj:71fa3e34247ab3034de6e6a1842a5592">Afegir les llibreries de Commonj</h3>
 
 <p>Cal verificar que les llibreries de Commonj estiguin incloses dins la carpeta de llibreries compartides de Tomcat o bé dins l&rsquo;aplicació que les farà servir:</p>
 
@@ -617,7 +616,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="modificar-el-taskexecutor-del-schedulerfactorybean-1">Modificar el taskexecutor del SchedulerFactoryBean</h3>
+<h3 id="modificar-el-taskexecutor-del-schedulerfactorybean-1:71fa3e34247ab3034de6e6a1842a5592">Modificar el taskexecutor del SchedulerFactoryBean</h3>
 
 <p>Per sobrescriure el &ldquo;taskexecutor&rdquo; per defecte de &ldquo;Quartz&rdquo;, s&rsquo;ha de modificar el SchedulerFactoryBean per instanciar el nou &ldquo;TaskExecutor&rdquo;, aquest informarà les següents propietats:</p>
 
@@ -644,7 +643,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 &lt;/bean&gt;
 </code></pre>
 
-<h3 id="modificar-web-xml-per-afegir-una-referència-local-al-workmanager-1">Modificar web.xml per afegir una referència local al &ldquo;WorkManager&rdquo;</h3>
+<h3 id="modificar-web-xml-per-afegir-una-referència-local-al-workmanager-1:71fa3e34247ab3034de6e6a1842a5592">Modificar web.xml per afegir una referència local al &ldquo;WorkManager&rdquo;</h3>
 
 <p>Modificar l&rsquo;arxiu &ldquo;web.xml&rdquo; per afegir una referència local al &ldquo;WorkManager&rdquo; que posteriorment es definirà al &ldquo;weblogic.xml&rdquo;:</p>
 
@@ -658,7 +657,7 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 ...
 </code></pre>
 
-<h3 id="crear-el-workmanager-al-context-xml-de-tomcat">Crear el &ldquo;WorkManager&rdquo; al context.xml de Tomcat</h3>
+<h3 id="crear-el-workmanager-al-context-xml-de-tomcat:71fa3e34247ab3034de6e6a1842a5592">Crear el &ldquo;WorkManager&rdquo; al context.xml de Tomcat</h3>
 
 <p>Finalment cal registrar un &ldquo;WorkManager&rdquo; aplicatiu al servidor d&rsquo;aplicacions. En aquest cas caldría afegir-ho al fitxer $TOMCAT_HOME/conf/context.xml. En l&rsquo;exemple es registra un &ldquo;WorkManager&rdquo; que com a màxim pot executar 3 &ldquo;threads&rdquo; concurrents.</p>
 
@@ -674,15 +673,15 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 <p>Alguns dels paràmetres de configuració i tunning del &ldquo;WorkManager&rdquo; es poden trobar a la següent adreça:
 <a href="http://download.oracle.com/docs/cd/E11035_01/wls100/config_wls/self_tuned.html">http://download.oracle.com/docs/cd/E11035_01/wls100/config_wls/self_tuned.html</a></p>
 
-<h2 id="preguntes-freqüents">Preguntes freqüents</h2>
+<h2 id="preguntes-freqüents:71fa3e34247ab3034de6e6a1842a5592">Preguntes freqüents</h2>
 
-<h3 id="utilització-de-quartz-en-un-cluster">Utilització de Quartz en un cluster</h3>
+<h3 id="utilització-de-quartz-en-un-cluster:71fa3e34247ab3034de6e6a1842a5592">Utilització de Quartz en un cluster</h3>
 
 <p>La principal problemàtica del planificador de tasques en un cluster és l&rsquo;execució del planificador en cadascuna de les màquines de forma independent. Si l&rsquo;aplicació es troba en un cluster i no es gestiona aquesta problemàtica, la tasca s&rsquo;executarà tants cops com nodes al cluster tinguessim.</p>
 
 <p>Per solventar aquest problema, Quartz proporciona una solució basada en una base de dades centralitzada que funciona com a semàfor d&rsquo;execució dels diferents Jobs.</p>
 
-<h3 id="configuració-1">Configuració</h3>
+<h3 id="configuració-1:71fa3e34247ab3034de6e6a1842a5592">Configuració</h3>
 
 <p>La configuració consta de dos passos:</p>
 
