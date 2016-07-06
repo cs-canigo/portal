@@ -9,7 +9,7 @@ key         = "JULIOL2016"
 
 Al mes de Juny es publica la documentació de GICAR a la web d'Arquitectura CTTI. 
 
-Aquesta documentació pretèn ajudar als integradors a conèixer el funcionament de GICAR, l'arquitectura i els fluxos d'autenticació. 
+Aquesta documentació pretén ajudar als integradors a conèixer el funcionament de GICAR, l'arquitectura i els fluxos d'autenticació. 
 
 Una fita molt important que volem destacar, és el fet que posem a disposició dels desenvolupadors, un entorn de Sandbox, públic i basat en Docker amb el qual podran fer proves de funcionament real de les aplicacions integrades amb GICAR: http://canigo.ctti.gencat.cat/gicar-integracio/sandbox/
 
