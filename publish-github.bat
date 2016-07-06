@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 
 rem cd ../web-canigo-public 
 
@@ -23,7 +23,7 @@ rem Generem l'HTML
 hugo >nul
 
 rem Gestionem els possibles conflictes de majúscules i minúscules
-rem cd ../web-canigo-public >nul
+cd ../web-canigo-public >nul
 rem find . -name "*Conflicto*"  -exec rm -rf {} \;>
 rem find . -name "*conflict*"  -exec rm -rf {} \;
 
