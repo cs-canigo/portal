@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Mon, 04 Jul 2016 00:00:00 UTC</updated>
+    <updated>Wed, 06 Jul 2016 00:00:00 UTC</updated>
     
     <item>
       <title>SIC. Suport a MySQL i Microsoft SQL SERVER</title>
@@ -145,6 +145,15 @@
     
     
     <item>
+      <title>LT2b SIC</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sic-lt2b/</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sic-lt2b/</guid>
+      <description>Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. En breu es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.</description>
+    </item>
+    
+    <item>
       <title>Nova versió full de ruta CTTI</title>
       <link>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2016.1/</link>
       <pubDate>Tue, 24 May 2016 00:00:00 UTC</pubDate>
@@ -223,15 +232,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/canvi-domini-ibiblio-maven/</guid>
       <description>Ha canviat el domini del repositori ibiblio de Maven</description>
-    </item>
-    
-    <item>
-      <title>Certificació de desplegaments Websphere 8.5 al SIC</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/sic-was85/</link>
-      <pubDate>Fri, 27 Nov 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/sic-was85/</guid>
-      <description>L&#39;equip del SIC ha certificat els desplegaments a IBM Websphere 8.5 des de jobs de Jenkins</description>
     </item>
     
   </channel>
