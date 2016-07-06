@@ -11,11 +11,25 @@ rem del directories.txt
 
 rem cd ../web-canigo
 
+rem Actualitzem els canvis que hagin pogut fer els companys
+git pull >nul
+
+rem Fem el commit i el push dels fonts
+git add -A >nul
+git commit -m "new version" >nul
+git push
+
+rem Generem l'HTML
 hugo >nul
 
-cd ../web-canigo-public >nul
+rem Gestionem els possibles conflictes de majúscules i minúscules
+rem cd ../web-canigo-public >nul
+rem find . -name "*Conflicto*"  -exec rm -rf {} \;>
+rem find . -name "*conflict*"  -exec rm -rf {} \;
+
+rem Actualitzem els canvis del projecte generat
 git add -A >nul
-git commit -m "new version" >nul 
+git commit -m "new version" >nul
 git push origin master --force
 
 pause
