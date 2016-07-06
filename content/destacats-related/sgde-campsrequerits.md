@@ -1,6 +1,6 @@
 +++
 date        = "2015-07-06"
-title       = "Recordatori: Obligatorietat de camps àmbit i aplicació als serveis de SGDE."
+title       = "Recordatori: Obligatorietat de camps àmbit i aplicació als serveis de SGDE"
 description = ""
 section     = "SGDE"
 +++
