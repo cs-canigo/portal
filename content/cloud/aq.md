@@ -101,9 +101,7 @@ En cas de voler reconstruir les imatges cal afegir la opció "--build":
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/canigoJSF i introduïr l'usuari "[user]" i contrasenya "[password]".
-
-_Nota: L'usuari i contrasenya per l'accés a l'aplicació es publicaran pròximament_
+Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678".
 
 ## Stack "arquitectura moderna" JEE (<span style="color:red;">DRAFT</span>)
 
