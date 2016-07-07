@@ -8,6 +8,22 @@ weight		= 4
 
 ## <span class="label label-cabecera">2016</span>
 
+#### [Juliol] (/comunicat/2016/07/)
+- SIC. Suport a MySQL i Microsoft SQL SERVER
+- GICAR. Publicació de la documentació al web d'Arquitectura
+
+#### [Juny] (/comunicat/2016/06/)
+- SIC. Suport a NodeJS
+- SIC. Suport a MongoDB
+
+#### [Maig] (/comunicat/2016/05/)
+- SIC. Polítiques d'integració respecte a noves aplicacions
+- Canigó. Nou Mòdul d'Administració de Logs
+
+#### [Abril] (/comunicat/2016/04/)
+- SIC. Etiquetatge de versions al SVN del SIC
+- SIC. S'habiliten els desplegaments de sites estàtics al núvol
+
 #### [Març] (/comunicat/2016/03/)
 - Canigó. Nou connector amb PSGD
 - SIC. Canvi al sistema d'obertura de peticions als jobs de desplegament a PRE/PRO al SIC

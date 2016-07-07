@@ -44,13 +44,13 @@ gicar:
  ports:
   - 80:80
  environment:
-  PS_IP: [ip]
-  AgentConfigDocker: [aco]
+  PS_IP: 169.50.103.27
+  AgentConfigDocker: a6-demoFORM
   ContainerHostName: [nom del contenidor]
-  AGENTNAME: [agent_name],[nom de domini]
-  HCOGICAR: [hco]
-  GICARUSER: [user]
-  GICARPWD: [pwd]
+  AGENTNAME: a6-demoform,[nom de domini.gencat.cat]
+  HCOGICAR: a6
+  GICARUSER: registre
+  GICARPWD: registre
   APPSERVER_PORT_8080_TCP_ADDR: demo
   APPSERVER_PORT_8080_TCP_PORT: 8080 
   context: canigoJSF
@@ -83,7 +83,7 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 - _canigoJSF-dynamic_: directori amb el contingut dinàmic de l'aplicació
 - _mysql-datadir_: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació
 
-_Nota: Els valors de les variables d'entorn del contenidor de GICAR per aquesta demo es publicaran pròximament_
+_Nota: El valor nom del contenidor i el nom de domini els tria l'usuari
 
 Comandes per iniciar l'aplicació:
 

@@ -13,6 +13,9 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Contenidor GICAR en entorns de desenvolupament] (/related/canigo/howto/Canigo - Howto - Contenidor GICAR en entorns de desenvolupament.pdf)
+- [Canigó - Incorporació mòdul Administració de logs a aplicació Canigó] (/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicacio Canigo 3.pdf)
+- [Canigó - Anàlisi aplicació Canigó amb Sonar] (/related/canigo/howto/Canigo - Analisi aplicacio Canigo amb Sonar.pdf)
 - [Canigó - Websockets a Canigó 3.1] (/related/canigo/howto/Canigo - Websockets a Canigo 3.1.pdf)
 - [Canigó - Streaming de fitxers en clients REST] (/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf)
 - [Canigó - Actualització connectors amb la PICA] (/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf)
