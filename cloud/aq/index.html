@@ -373,13 +373,13 @@ Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
  ports:
   - 80:80
  environment:
-  PS_IP: [ip]
-  AgentConfigDocker: [aco]
+  PS_IP: 169.50.103.27
+  AgentConfigDocker: a6-demoFORM
   ContainerHostName: [nom del contenidor]
-  AGENTNAME: [agent_name],[nom de domini]
-  HCOGICAR: [hco]
-  GICARUSER: [user]
-  GICARPWD: [pwd]
+  AGENTNAME: a6-demoform,[nom de domini.gencat.cat]
+  HCOGICAR: a6
+  GICARUSER: registre
+  GICARPWD: registre
   APPSERVER_PORT_8080_TCP_ADDR: demo
   APPSERVER_PORT_8080_TCP_PORT: 8080 
   context: canigoJSF
@@ -415,7 +415,7 @@ demo:
 <li><em>mysql-datadir</em>: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació</li>
 </ul>
 
-<p><em>Nota: Els valors de les variables d&rsquo;entorn del contenidor de GICAR per aquesta demo es publicaran pròximament</em></p>
+<p>_Nota: El valor nom del contenidor i el nom de domini els tria l&rsquo;usuari</p>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
