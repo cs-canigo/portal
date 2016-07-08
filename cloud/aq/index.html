@@ -415,7 +415,11 @@ demo:
 <li><em>mysql-datadir</em>: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació</li>
 </ul>
 
-<p>_Nota: El valor nom del contenidor i el nom de domini els tria l&rsquo;usuari</p>
+<p><em>Nota: El valor nom del contenidor i el nom de domini els tria l&rsquo;usuari. Per exemple:</em><br>
+<em>ContainerHostName: dev</em><br>
+<em>AGENTNAME: a6-demoform, provademo.gencat.cat</em><br>
+<em>En cas de voler accedir per domini en comptes de localhost, s&rsquo;ha de mappejar aquest domini/ip al fitxer host</em>
+<em>(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)</em></p>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
@@ -431,9 +435,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;[user]&rdquo; i contrasenya &ldquo;[password]&ldquo;.</p>
-
-<p><em>Nota: L&rsquo;usuari i contrasenya per l&rsquo;accés a l&rsquo;aplicació es publicaran pròximament</em></p>
+<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;.</p>
 
 <h2 id="stack-arquitectura-moderna-jee-span-style-color-red-draft-span">Stack &ldquo;arquitectura moderna&rdquo; JEE (<span style="color:red;">DRAFT</span>)</h2>
 
@@ -443,13 +445,51 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>
+lb:
+ image: gencatcloud/haproxy:1.5.1
+ links:
+  - bookstore
+ ports:
+  - 80:80
+db:
+  image: gencatcloud/postgres:9.5.3
+  ports:
+    - 5432:5432
+  environment:
+    POSTGRES_USER: demospringboot
+    POSTGRES_PASSWORD: password
+  volumes:
+    - /home/canigo/demo-JEE-REST/postgres-datadir:/var/lib/postgresql/data
+bookstore:
+  build: ./app/
+  links:
+    - db:postgres
+  volumes:
+   - /home/canigo/demo-JEE-REST/target/:/tmp
+  ports:
+    - 8080:8080
+    - 8000:8000
+  command: bash -c &quot;/wait-for-it.sh postgres:5432 -t 240 &amp;&amp; /entrypoint.sh&quot;
+
 </code></pre>
+
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
+
+<ul>
+<li>/home/canigo/demo-JEE-REST/target/: directori on es troba el war de l&rsquo;aplicació</li>
+<li>/home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
+</ul>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 </code></pre>
+
+<p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
 
 <h2 id="stack-mean-span-style-color-red-draft-span">Stack MEAN (<span style="color:red;">DRAFT</span>)</h2>
 
