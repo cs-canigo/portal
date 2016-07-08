@@ -111,14 +111,50 @@ Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatclo
 
 _docker-compose.yml_
 ```
-PENDENT
+
+lb:
+ image: gencatcloud/haproxy:1.5.1
+ links:
+  - bookstore
+ ports:
+  - 80:80
+db:
+  image: gencatcloud/postgres:9.5.3
+  ports:
+    - 5432:5432
+  environment:
+    POSTGRES_USER: demospringboot
+    POSTGRES_PASSWORD: password
+  volumes:
+    - /home/canigo/demo-JEE-REST/postgres-datadir:/var/lib/postgresql/data
+bookstore:
+  build: ./app/
+  links:
+    - db:postgres
+  volumes:
+   - /home/canigo/demo-JEE-REST/target/:/tmp
+  ports:
+    - 8080:8080
+    - 8000:8000
+  command: bash -c "/wait-for-it.sh postgres:5432 -t 240 && /entrypoint.sh"
+
 ```
+
+El paths “/home/canigo/…” han d’adaptar-se als locals.
+
+- /home/canigo/demo-JEE-REST/target/: directori on es troba el war de l'aplicació
+- /home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
 
 Comandes per iniciar l'aplicació:
 
 ```
-PENDENT
+$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 ```
+
+Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
 ## Stack MEAN (<span style="color:red;">DRAFT</span>)
 
