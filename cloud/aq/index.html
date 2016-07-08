@@ -441,13 +441,51 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>
+lb:
+ image: gencatcloud/haproxy:1.5.1
+ links:
+  - bookstore
+ ports:
+  - 80:80
+db:
+  image: gencatcloud/postgres:9.5.3
+  ports:
+    - 5432:5432
+  environment:
+    POSTGRES_USER: demospringboot
+    POSTGRES_PASSWORD: password
+  volumes:
+    - /home/canigo/demo-JEE-REST/postgres-datadir:/var/lib/postgresql/data
+bookstore:
+  build: ./app/
+  links:
+    - db:postgres
+  volumes:
+   - /home/canigo/demo-JEE-REST/target/:/tmp
+  ports:
+    - 8080:8080
+    - 8000:8000
+  command: bash -c &quot;/wait-for-it.sh postgres:5432 -t 240 &amp;&amp; /entrypoint.sh&quot;
+
 </code></pre>
+
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
+
+<ul>
+<li>/home/canigo/demo-JEE-REST/target/: directori on es troba el war de l&rsquo;aplicació</li>
+<li>/home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
+</ul>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 </code></pre>
+
+<p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
 
 <h2 id="stack-mean-span-style-color-red-draft-span:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN (<span style="color:red;">DRAFT</span>)</h2>
 
