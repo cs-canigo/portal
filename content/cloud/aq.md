@@ -83,7 +83,11 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 - _canigoJSF-dynamic_: directori amb el contingut dinàmic de l'aplicació
 - _mysql-datadir_: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació
 
-_Nota: El valor nom del contenidor i el nom de domini els tria l'usuari
+_Nota: El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:_<br>
+_ContainerHostName: dev_<br>
+_AGENTNAME: a6-demoform, provademo.gencat.cat_<br>
+_En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host_
+_(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)_
 
 Comandes per iniciar l'aplicació:
 
