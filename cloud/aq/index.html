@@ -489,6 +489,11 @@ $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 </code></pre>
 
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+</code></pre>
+
 <p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
 
 <h2 id="stack-mean-span-style-color-red-draft-span:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN (<span style="color:red;">DRAFT</span>)</h2>
@@ -509,19 +514,48 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <h2 id="stack-lamp-span-style-color-red-draft-span:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP (<span style="color:red;">DRAFT</span>)</h2>
 
+<p><img src="/related/cloud/lamp.gif" alt="LAMP" title="LAMP" /></p>
+
 <p>Aplicació basada en Linux+PHP+MySQL</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-LAMP">Github</a>.</p>
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>db:
+  build: ./bbdd/
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_USER : user
+    MYSQL_PASSWORD : password
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: demo
+  volumes:
+   - /home/canigo/demo-LAMP/mysql-datadir:/var/lib/mysql
+demo:
+  build: ./app/
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-LAMP:/var/www/html/demo-LAMP
+  ports:
+   - 80:80
 </code></pre>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
 </code></pre>
+
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+</code></pre>
+
+<p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
 
 <h2 id="altres:86806683e3ea945dc5182e8e6cca12d7">Altres</h2>
 
