@@ -158,6 +158,12 @@ $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 ```
 
+En cas de voler reconstruir les imatges cal afegir la opció "--build":
+
+```
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+```
+
 Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
 ## Stack MEAN (<span style="color:red;">DRAFT</span>)
@@ -179,20 +185,50 @@ PENDENT
 
 ## Stack LAMP (<span style="color:red;">DRAFT</span>)
 
+![LAMP](/related/cloud/lamp.gif "LAMP")
+
 Aplicació basada en Linux+PHP+MySQL
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
 
 _docker-compose.yml_
 ```
-PENDENT
+db:
+  build: ./bbdd/
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_USER : user
+    MYSQL_PASSWORD : password
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: demo
+  volumes:
+   - /home/canigo/demo-LAMP/mysql-datadir:/var/lib/mysql
+demo:
+  build: ./app/
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-LAMP:/var/www/html/demo-LAMP
+  ports:
+   - 80:80
 ```
 
 Comandes per iniciar l'aplicació:
 
 ```
-PENDENT
+$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
 ```
+
+En cas de voler reconstruir les imatges cal afegir la opció "--build":
+
+```
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+```
+
+Accedir a http://localhost/demo-LAMP
 
 ## Altres
 
