@@ -174,13 +174,42 @@ Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatclo
 
 _docker-compose.yml_
 ```
-PENDENT
+db:
+  image: gencatcloud/mongodb:3.2
+  ports:
+    - 27017:27017
+    - 28017:28017
+  environment:
+    MONGODB_USER : user
+    MONGODB_PASS : password
+    MONGODB_DATABASE : contactlist
+  volumes:
+    - /home/canigo/demo-MEAN/datadir:/data/db
+demo:
+  image: gencatcloud/nodejs:4.2.6
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-MEAN:/app
+  ports:
+   - 3000:3000
+  command: bash -c "cd /app && npm install && node server"
 ```
+
+El paths “/home/canigo/…” han d’adaptar-se als locals.
 
 Comandes per iniciar l'aplicació:
 
 ```
-PENDENT
+$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+```
+
+En cas de voler reconstruir les imatges cal afegir la opció "--build":
+
+```
+$ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
 ## Stack LAMP (<span style="color:red;">DRAFT</span>)
@@ -214,6 +243,8 @@ demo:
    - 80:80
 ```
 
+El paths “/home/canigo/…” han d’adaptar-se als locals.
+
 Comandes per iniciar l'aplicació:
 
 ```
@@ -225,7 +256,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 En cas de voler reconstruir les imatges cal afegir la opció "--build":
 
 ```
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+$ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
 Accedir a http://localhost/demo-LAMP
