@@ -504,12 +504,40 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>db:
+  image: gencatcloud/mongodb:3.2
+  ports:
+    - 27017:27017
+    - 28017:28017
+  environment:
+    MONGODB_USER : user
+    MONGODB_PASS : password
+    MONGODB_DATABASE : contactlist
+  volumes:
+    - /home/canigo/demo-MEAN/datadir:/data/db
+demo:
+  image: gencatcloud/nodejs:4.2.6
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-MEAN:/app
+  ports:
+   - 3000:3000
+  command: bash -c &quot;cd /app &amp;&amp; npm install &amp;&amp; node server&quot;
 </code></pre>
+
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+</code></pre>
+
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
 <h2 id="stack-lamp-span-style-color-red-draft-span:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP (<span style="color:red;">DRAFT</span>)</h2>
@@ -543,6 +571,8 @@ demo:
    - 80:80
 </code></pre>
 
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
+
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
 <pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
@@ -552,7 +582,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 
 <p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
-<pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+<pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
 <p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
