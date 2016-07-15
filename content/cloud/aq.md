@@ -23,7 +23,7 @@ Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament do
 - A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
 - En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
 
-## Stack "tradicional" JEE (<span style='color:red;'>DRAFT</span>)
+## Stack "tradicional" JEE 
 
 Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació contingut estàtic i dinàmic.
 
@@ -107,7 +107,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 
 Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678".
 
-## Stack "arquitectura moderna" JEE (<span style="color:red;">DRAFT</span>)
+## Stack "arquitectura moderna" JEE 
 
 Aplicació basada en serveis REST i presentació desacoblada
 
@@ -166,7 +166,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 
 Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
-## Stack MEAN (<span style="color:red;">DRAFT</span>)
+## Stack MEAN 
 
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
@@ -212,7 +212,7 @@ En cas de voler reconstruir les imatges cal afegir la opció "--build":
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
-## Stack LAMP (<span style="color:red;">DRAFT</span>)
+## Stack LAMP 
 
 ![LAMP](/related/cloud/lamp.gif "LAMP")
 
