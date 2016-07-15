@@ -29,7 +29,7 @@ Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació conting
 
 <div class="message warning">
 <b>Avís</b>
-<br><br>
+<br>
 Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 </div>
 
@@ -83,11 +83,15 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 - _canigoJSF-dynamic_: directori amb el contingut dinàmic de l'aplicació
 - _mysql-datadir_: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació
 
-_Nota: El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:_<br>
-_ContainerHostName: dev_<br>
-_AGENTNAME: a6-demoform, provademo.gencat.cat_<br>
-_En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host_
-_(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)_
+<div class="message information">
+<b>Informació</b>
+<br>
+El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br>
+<i>ContainerHostName</i>: dev<br>
+<i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br>
+En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
+(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
+</div>
 
 Comandes per iniciar l'aplicació:
 
@@ -167,6 +171,8 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
 ## Stack MEAN 
+
+![MEAN](/related/cloud/stack_mean.png "MEAN")
 
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
