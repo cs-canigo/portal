@@ -312,10 +312,10 @@
 <li><a href="#desplegament-a-bluemix">Desplegament a Bluemix</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#stack-tradicional-jee-span-style-color-red-draft-span">Stack &ldquo;tradicional&rdquo; JEE (<span style='color:red;'>DRAFT</span>)</a></li>
-<li><a href="#stack-arquitectura-moderna-jee-span-style-color-red-draft-span">Stack &ldquo;arquitectura moderna&rdquo; JEE (<span style="color:red;">DRAFT</span>)</a></li>
-<li><a href="#stack-mean-span-style-color-red-draft-span">Stack MEAN (<span style="color:red;">DRAFT</span>)</a></li>
-<li><a href="#stack-lamp-span-style-color-red-draft-span">Stack LAMP (<span style="color:red;">DRAFT</span>)</a></li>
+<li><a href="#stack-tradicional-jee">Stack &ldquo;tradicional&rdquo; JEE</a></li>
+<li><a href="#stack-arquitectura-moderna-jee">Stack &ldquo;arquitectura moderna&rdquo; JEE</a></li>
+<li><a href="#stack-mean">Stack MEAN</a></li>
+<li><a href="#stack-lamp">Stack LAMP</a></li>
 <li><a href="#altres">Altres</a>
 <ul>
 <li><a href="#xpaas-dbaas">xPaaS + DBaaS</a></li>
@@ -352,7 +352,7 @@
 <li>En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a>.</li>
 </ul>
 
-<h2 id="stack-tradicional-jee-span-style-color-red-draft-span">Stack &ldquo;tradicional&rdquo; JEE (<span style='color:red;'>DRAFT</span>)</h2>
+<h2 id="stack-tradicional-jee">Stack &ldquo;tradicional&rdquo; JEE</h2>
 
 <p>Aplicació JSF (Java Server Faces) amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic.</p>
 
@@ -437,7 +437,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;.</p>
 
-<h2 id="stack-arquitectura-moderna-jee-span-style-color-red-draft-span">Stack &ldquo;arquitectura moderna&rdquo; JEE (<span style="color:red;">DRAFT</span>)</h2>
+<h2 id="stack-arquitectura-moderna-jee">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
 
 <p>Aplicació basada en serveis REST i presentació desacoblada</p>
 
@@ -489,9 +489,14 @@ $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 </code></pre>
 
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
+</code></pre>
+
 <p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
 
-<h2 id="stack-mean-span-style-color-red-draft-span">Stack MEAN (<span style="color:red;">DRAFT</span>)</h2>
+<h2 id="stack-mean">Stack MEAN</h2>
 
 <p>Aplicació basada en MongoDB+Express+AngularJS+NodeJS</p>
 
@@ -499,15 +504,45 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>db:
+  image: gencatcloud/mongodb:3.2
+  ports:
+    - 27017:27017
+    - 28017:28017
+  environment:
+    MONGODB_USER : user
+    MONGODB_PASS : password
+    MONGODB_DATABASE : contactlist
+  volumes:
+    - /home/canigo/demo-MEAN/datadir:/data/db
+demo:
+  image: gencatcloud/nodejs:4.2.6
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-MEAN:/app
+  ports:
+   - 3000:3000
+  command: bash -c &quot;cd /app &amp;&amp; npm install &amp;&amp; node server&quot;
 </code></pre>
+
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
 </code></pre>
 
-<h2 id="stack-lamp-span-style-color-red-draft-span">Stack LAMP (<span style="color:red;">DRAFT</span>)</h2>
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
+</code></pre>
+
+<h2 id="stack-lamp">Stack LAMP</h2>
+
+<p><img src="/related/cloud/lamp.gif" alt="LAMP" title="LAMP" /></p>
 
 <p>Aplicació basada en Linux+PHP+MySQL</p>
 
@@ -515,13 +550,42 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>PENDENT
+<pre><code>db:
+  build: ./bbdd/
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_USER : user
+    MYSQL_PASSWORD : password
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: demo
+  volumes:
+   - /home/canigo/demo-LAMP/mysql-datadir:/var/lib/mysql
+demo:
+  build: ./app/
+  links:
+    - db:mybbdd
+  volumes:
+   - /home/canigo/demo-LAMP:/var/www/html/demo-LAMP
+  ports:
+   - 80:80
 </code></pre>
+
+<p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
-<pre><code>PENDENT
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
 </code></pre>
+
+<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+
+<pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
+</code></pre>
+
+<p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
 
 <h2 id="altres">Altres</h2>
 
