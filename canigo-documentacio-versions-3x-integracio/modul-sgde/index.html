@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="introducció">Introducció</h2>
+<h2 id="introducció:e9894f63ac3d2fe3c0e572950235d775">Introducció</h2>
 
 <p>L&rsquo;SGDE o Servei de Gestió del Document Electrònic ofereix una sèrie de serveis relacionats amb la gestió de documents electrònics. Aquests serveis els ofereixen les plataformes que integren l&rsquo;SGDE. Actualment existeixen dues:</p>
 
@@ -331,15 +331,15 @@
 
 <p>Podeu trobar mes informació sobre els serveis i funcionalitats del SGDE <a href="/sgde/about/">aquí</a>.</p>
 
-<h3 id="propòsit">Propòsit</h3>
+<h3 id="propòsit:e9894f63ac3d2fe3c0e572950235d775">Propòsit</h3>
 
 <p>El propòsit del connector és proporcionar una API que pugui ser utilitzada de forma fàcil pels integradors d&rsquo;aquest connector per consumir els diferents serveis del SGDE.</p>
 
-<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+<h3 id="context-i-escenaris-d-ús:e9894f63ac3d2fe3c0e572950235d775">Context i Escenaris d&rsquo;ús</h3>
 
 <p>El connector SGDE es troba dins els connectors funcionals de la Generalitat.</p>
 
-<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+<h3 id="a-qui-va-dirigit:e9894f63ac3d2fe3c0e572950235d775">A qui va dirigit</h3>
 
 <p>Aquest document va dirigit als següents perfils:</p>
 
@@ -348,7 +348,7 @@
 <li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
 </ul>
 
-<h2 id="descripció-detallada">Descripció Detallada</h2>
+<h2 id="descripció-detallada:e9894f63ac3d2fe3c0e572950235d775">Descripció Detallada</h2>
 
 <p>Aquest connector ofereix els següents serveis:</p>
 
@@ -387,7 +387,7 @@
 <li><strong>ferOCR:</strong> Servei que extrau el text inclòs a una imatge i el retorna.</li>
 </ul>
 
-<h3 id="alta-servei">Alta Servei</h3>
+<h3 id="alta-servei:e9894f63ac3d2fe3c0e572950235d775">Alta Servei</h3>
 
 <p>Per poder utilitzar l&rsquo;SGDE s&rsquo;ha d&rsquo;estar donat d&rsquo;alta en el servei. Per poder fer-ho s&rsquo;han d&rsquo;enviar un mail a oficina-tecnica.canigo.ctti@gencat.cat sol.licitant l&rsquo;alta a qualsevol de les plataformes que integren el SGDE:</p>
 
@@ -401,23 +401,23 @@
 </ol></li>
 </ul>
 
-<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+<h3 id="arquitectura-i-components:e9894f63ac3d2fe3c0e572950235d775">Arquitectura i Components</h3>
 
-<h4 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h4>
+<h4 id="interfícies-i-components-genèrics:e9894f63ac3d2fe3c0e572950235d775">Interfícies i Components Genèrics</h4>
 
 <p>Es pot trobar el codi font referent a aquest components a la següent url:</p>
 
 <p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.sgde/1.2.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.sgde/1.2.0/</a></p>
 
-<h4 id="requeriments">Requeriments</h4>
+<h4 id="requeriments:e9894f63ac3d2fe3c0e572950235d775">Requeriments</h4>
 
 <p>El connector SGDE és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.</p>
 
 <p>El seu ús esta certificat per funcionar correctament en servidors d&rsquo;aplicacions WL11g i Tomcat6.x.</p>
 
-<h3 id="instal-lació-i-configuració">Instal.lació i Configuració</h3>
+<h3 id="instal-lació-i-configuració:e9894f63ac3d2fe3c0e572950235d775">Instal.lació i Configuració</h3>
 
-<h4 id="instal-lació">Instal.lació</h4>
+<h4 id="instal-lació:e9894f63ac3d2fe3c0e572950235d775">Instal.lació</h4>
 
 <p>La instal.lació del connector requereix de la utilització de la llibreria &lsquo;canigo.integration.sgde&rsquo; i les dependències indicades a l&rsquo;apartat &lsquo;Introducció-Versions i Dependències&rsquo;.</p>
 
@@ -458,7 +458,7 @@
 
 <p>El no afegir aquestes exclusions pot provocar que el connector SGDE no funcioni correctament.</p>
 
-<h4 id="configuració">Configuració</h4>
+<h4 id="configuració:e9894f63ac3d2fe3c0e572950235d775">Configuració</h4>
 
 <p>1.- Per poder configurar el connector SGDE és necessari crear un arxiu anomenat app-integration-sgde.xml situat en src/main/resources/spring/ amb el següent contingut:</p>
 
@@ -502,7 +502,7 @@
 <li>PRO: <a href="http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl">http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl</a></li>
 </ul>
 
-<h3 id="utilització-del-connector">Utilització del Connector</h3>
+<h3 id="utilització-del-connector:e9894f63ac3d2fe3c0e572950235d775">Utilització del Connector</h3>
 
 <p>1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.</p>
 

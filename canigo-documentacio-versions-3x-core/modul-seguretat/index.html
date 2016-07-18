@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:3e647ac3e8a7067f346425d8bf9a775a">Propòsit</h2>
 
 <p>El Servei de Seguretat té com a propòsit principal gestionar l&rsquo;autentificació i l&rsquo;autorització dels usuaris de les nostres aplicacions. L&rsquo;objectiu de l&rsquo;autentificació és comprovar que l&rsquo;usuari és qui diu ser, mentre que l&rsquo;autorització s&rsquo;encarrega de comprovar que realment té accés al recurs sol.licitat.</p>
 
@@ -331,9 +331,9 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 
 <p>Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l&rsquo;ús de &lsquo;Spring Security 3.0&rsquo; com framework base i les extensions que Canigó proporciona.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:3e647ac3e8a7067f346425d8bf9a775a">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:3e647ac3e8a7067f346425d8bf9a775a">Instal.lació</h3>
 
 <p>Per tal d&rsquo;instal- lar el mòdul de seguretat es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -352,7 +352,7 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:3e647ac3e8a7067f346425d8bf9a775a">Configuració</h3>
 
 <p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament i es descompon en les parts següents:</p>
 
@@ -364,7 +364,7 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 <li>Configuració tags de seguretat en les pàgines</li>
 </ul>
 
-<h4 id="configuració-dels-filtres-de-l-aplicació-web">Configuració dels filtres de l&rsquo;aplicació Web</h4>
+<h4 id="configuració-dels-filtres-de-l-aplicació-web:3e647ac3e8a7067f346425d8bf9a775a">Configuració dels filtres de l&rsquo;aplicació Web</h4>
 
 <p>Spring Security utilitza un conjunt de filtres per a detectar aspectes de l&rsquo;autorització i autentificació. Per a fer-los servir definirem en el fitxer &lsquo;WEB-INF/web.xml el codi següent:</p>
 
@@ -380,7 +380,7 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 
 <p>Per a més informació consultar la pàgina <a href="http://static.springsource.org/spring-security/site/docs/3.0.x/reference/security-filter-chain.html">http://static.springsource.org/spring-security/site/docs/3.0.x/reference/security-filter-chain.html</a></p>
 
-<h4 id="configuració-de-l-autenticació">Configuració de l&rsquo;Autenticació</h4>
+<h4 id="configuració-de-l-autenticació:3e647ac3e8a7067f346425d8bf9a775a">Configuració de l&rsquo;Autenticació</h4>
 
 <p>En la configuració de l&rsquo;Autentificació tindrem en consideració:</p>
 
@@ -445,7 +445,7 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 &lt;/security:authentication-manager&gt;
 </code></pre>
 
-<h4 id="configuració-de-la-font-d-autorització-per-base-de-dades">Configuració de la Font d&rsquo;Autorització per base de dades</h4>
+<h4 id="configuració-de-la-font-d-autorització-per-base-de-dades:3e647ac3e8a7067f346425d8bf9a775a">Configuració de la Font d&rsquo;Autorització per base de dades</h4>
 
 <p>Per a configurar la font d&rsquo;autorització mitjançant base de dades és necessari:</p>
 
@@ -515,7 +515,7 @@ Accés base de dades
 L'eina de suport al desenvolupament automatitza la instal- lació del mòdul de persistència si aquest no ha estat instal- lat prèviament pel desenvolupador.
 </div>
 
-<h4 id="configuració-de-l-autorització-per-sace">Configuració de l&rsquo;Autorització per SACE</h4>
+<h4 id="configuració-de-l-autorització-per-sace:3e647ac3e8a7067f346425d8bf9a775a">Configuració de l&rsquo;Autorització per SACE</h4>
 
 <p>Per a configurar l&rsquo;acces a SACE és necessari:</p>
 
@@ -608,7 +608,7 @@ Connexió a SACE<br>
 Per a realitzar les proves en desenvolupament podem instal- lar un VPN Client per connectar-se al servidor SACE (consultar el document 'Directori Corporatiu de la Generalitat de Catalunya - Guia d'integració d'aplicacions v3.7').ç
 </div>
 
-<h4 id="configuració-de-l-autorització-per-ldap">Configuració de l&rsquo;Autorització per LDAP</h4>
+<h4 id="configuració-de-l-autorització-per-ldap:3e647ac3e8a7067f346425d8bf9a775a">Configuració de l&rsquo;Autorització per LDAP</h4>
 
 <p>Per a configurar l&rsquo;acces a LDAP és necessari:</p>
 
@@ -700,7 +700,7 @@ Per a realitzar les proves en desenvolupament podem instal- lar un VPN Client pe
 manager-password=&quot;${security.ldap.manager.password}&quot;/&gt;
 </code></pre>
 
-<h4 id="configuració-de-l-autorització-per-arxiu-de-propietats">Configuració de l&rsquo;Autorització per arxiu de propietats</h4>
+<h4 id="configuració-de-l-autorització-per-arxiu-de-propietats:3e647ac3e8a7067f346425d8bf9a775a">Configuració de l&rsquo;Autorització per arxiu de propietats</h4>
 
 <p>Aquest proveidor de seguretat es recolça en un arxiu de propietats per carregar en memòria els usuaris/password/rols de l&rsquo;aplicació.</p>
 
@@ -722,7 +722,7 @@ manager-password=&quot;${security.ldap.manager.password}&quot;/&gt;
 admin=password,ROLE_USER,ROLE_ADMIN,enabled
 </code></pre>
 
-<h4 id="configuració-del-provider-en-app-custom-security-xml">Configuració del provider en <strong>app-custom-security.xml</strong>:</h4>
+<h4 id="configuració-del-provider-en-app-custom-security-xml:3e647ac3e8a7067f346425d8bf9a775a">Configuració del provider en <strong>app-custom-security.xml</strong>:</h4>
 
 <ul>
 <li>Afegim el provider al authentication manager.</li>
@@ -737,7 +737,7 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 &lt;/security:authentication-manager&gt;
 </code></pre>
 
-<h4 id="configuració-de-la-font-d-autorització-per-gicar">Configuració de la Font d&rsquo;Autorització per GICAR</h4>
+<h4 id="configuració-de-la-font-d-autorització-per-gicar:3e647ac3e8a7067f346425d8bf9a775a">Configuració de la Font d&rsquo;Autorització per GICAR</h4>
 
 <p>Per a configurar l&rsquo;acces a GICAR és necessari:</p>
 
@@ -868,7 +868,7 @@ En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic
 <li>Per a una aplicació amb apache &ldquo;pròpi&rdquo;: http://*<strong><em>.gencat.</em></strong>/siteminderagent/forms/logoff.html;</li>
 </ul>
 
-<h4 id="configuració-tags-de-seguretat-en-les-pàgines">Configuració tags de seguretat en les pàgines</h4>
+<h4 id="configuració-tags-de-seguretat-en-les-pàgines:3e647ac3e8a7067f346425d8bf9a775a">Configuració tags de seguretat en les pàgines</h4>
 
 <p>Spring Security permet incorporar tags a les pàgines JSP/JSF per tal de controlar la lògica d&rsquo;aquesta segons els rols de l&rsquo;usuari.</p>
 
@@ -958,9 +958,9 @@ Text només visible per un usuari amb rol &quot;ROLE_ADMIN&quot; i/o &quot;ROLE_
 
 <p>Per a més informació sobre el tag &ldquo;sec&rdquo;, consultar la pàgina <a href="http://static.springsource.org/spring-security/site/docs/3.1.x/reference/taglibs.html">Spring Security 3.x Taglib</a></p>
 
-<h2 id="eines-de-suport">Eines de Suport</h2>
+<h2 id="eines-de-suport:3e647ac3e8a7067f346425d8bf9a775a">Eines de Suport</h2>
 
-<h3 id="servidor-ldap-de-proves-openldap">Servidor LDAP de proves: openLDAP</h3>
+<h3 id="servidor-ldap-de-proves-openldap:3e647ac3e8a7067f346425d8bf9a775a">Servidor LDAP de proves: openLDAP</h3>
 
 <p>Els diferents passos per a instal- lar openLDAP i importar un directori LDAP d&rsquo;exemple són:</p>
 
@@ -1069,7 +1069,7 @@ userPassword: usuariopassword
 
 <p>La contrasenya per defecte és &ldquo;secret&rdquo;.</p>
 
-<h3 id="jxplorer">Jxplorer</h3>
+<h3 id="jxplorer:3e647ac3e8a7067f346425d8bf9a775a">Jxplorer</h3>
 
 <p>Comprovarem que la importació de dades ha funcionat amb Jxplorer, un client LDAP Java i opensource.</p>
 

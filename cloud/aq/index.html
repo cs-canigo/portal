@@ -304,22 +304,22 @@
 <ul>
 <li>
 <ul>
-<li><a href="#introducció">Introducció</a>
+<li><a href="#introducció:86806683e3ea945dc5182e8e6cca12d7">Introducció</a>
 <ul>
-<li><a href="#docker-compose">Docker-compose</a>
+<li><a href="#docker-compose:86806683e3ea945dc5182e8e6cca12d7">Docker-compose</a>
 <ul>
-<li><a href="#desplegament-en-entorns-de-desenvolupament">Desplegament en entorns de desenvolupament</a></li>
-<li><a href="#desplegament-a-bluemix">Desplegament a Bluemix</a></li>
+<li><a href="#desplegament-en-entorns-de-desenvolupament:86806683e3ea945dc5182e8e6cca12d7">Desplegament en entorns de desenvolupament</a></li>
+<li><a href="#desplegament-a-bluemix:86806683e3ea945dc5182e8e6cca12d7">Desplegament a Bluemix</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#stack-tradicional-jee">Stack &ldquo;tradicional&rdquo; JEE</a></li>
-<li><a href="#stack-arquitectura-moderna-jee">Stack &ldquo;arquitectura moderna&rdquo; JEE</a></li>
-<li><a href="#stack-mean">Stack MEAN</a></li>
-<li><a href="#stack-lamp">Stack LAMP</a></li>
-<li><a href="#altres">Altres</a>
+<li><a href="#stack-tradicional-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;tradicional&rdquo; JEE</a></li>
+<li><a href="#stack-arquitectura-moderna-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;arquitectura moderna&rdquo; JEE</a></li>
+<li><a href="#stack-mean:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN</a></li>
+<li><a href="#stack-lamp:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP</a></li>
+<li><a href="#altres:86806683e3ea945dc5182e8e6cca12d7">Altres</a>
 <ul>
-<li><a href="#xpaas-dbaas">xPaaS + DBaaS</a></li>
-<li><a href="#docker-aplicació-docker-base-de-dades">Docker aplicació + Docker base de dades</a></li>
+<li><a href="#xpaas-dbaas:86806683e3ea945dc5182e8e6cca12d7">xPaaS + DBaaS</a></li>
+<li><a href="#docker-aplicació-docker-base-de-dades:86806683e3ea945dc5182e8e6cca12d7">Docker aplicació + Docker base de dades</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -334,17 +334,17 @@
 
 						
 
-<h2 id="introducció">Introducció</h2>
+<h2 id="introducció:86806683e3ea945dc5182e8e6cca12d7">Introducció</h2>
 
-<h3 id="docker-compose">Docker-compose</h3>
+<h3 id="docker-compose:86806683e3ea945dc5182e8e6cca12d7">Docker-compose</h3>
 
 <p>Els diferents stacks tecnològics descrits en aquesta plana utilitzen <a href="https://docs.docker.com/compose/">docker-compose</a>.</p>
 
-<h4 id="desplegament-en-entorns-de-desenvolupament">Desplegament en entorns de desenvolupament</h4>
+<h4 id="desplegament-en-entorns-de-desenvolupament:86806683e3ea945dc5182e8e6cca12d7">Desplegament en entorns de desenvolupament</h4>
 
 <p>Cal haver <a href="https://docs.docker.com/compose/install/">instal·lat</a> prèviament docker-compose.</p>
 
-<h4 id="desplegament-a-bluemix">Desplegament a Bluemix</h4>
+<h4 id="desplegament-a-bluemix:86806683e3ea945dc5182e8e6cca12d7">Desplegament a Bluemix</h4>
 
 <ul>
 <li>Bluemix suporta la creació d&rsquo;aplicacions multicontainer mitjançant <a href="https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov">docker-compose</a></li>
@@ -352,13 +352,13 @@
 <li>En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a>.</li>
 </ul>
 
-<h2 id="stack-tradicional-jee">Stack &ldquo;tradicional&rdquo; JEE</h2>
+<h2 id="stack-tradicional-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;tradicional&rdquo; JEE</h2>
 
 <p>Aplicació JSF (Java Server Faces) amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic.</p>
 
 <div class="message warning">
 <b>Avís</b>
-<br><br>
+<br>
 Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 </div>
 
@@ -415,11 +415,15 @@ demo:
 <li><em>mysql-datadir</em>: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació</li>
 </ul>
 
-<p><em>Nota: El valor nom del contenidor i el nom de domini els tria l&rsquo;usuari. Per exemple:</em><br>
-<em>ContainerHostName: dev</em><br>
-<em>AGENTNAME: a6-demoform, provademo.gencat.cat</em><br>
-<em>En cas de voler accedir per domini en comptes de localhost, s&rsquo;ha de mappejar aquest domini/ip al fitxer host</em>
-<em>(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)</em></p>
+<div class="message information">
+<b>Informació</b>
+<br>
+El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br>
+<i>ContainerHostName</i>: dev<br>
+<i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br>
+En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
+(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
+</div>
 
 <p>Comandes per iniciar l&rsquo;aplicació:</p>
 
@@ -437,7 +441,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;.</p>
 
-<h2 id="stack-arquitectura-moderna-jee">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
+<h2 id="stack-arquitectura-moderna-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
 
 <p>Aplicació basada en serveis REST i presentació desacoblada</p>
 
@@ -496,7 +500,9 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
 
-<h2 id="stack-mean">Stack MEAN</h2>
+<h2 id="stack-mean:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN</h2>
+
+<p><img src="/related/cloud/stack_mean.png" alt="MEAN" title="MEAN" /></p>
 
 <p>Aplicació basada en MongoDB+Express+AngularJS+NodeJS</p>
 
@@ -540,7 +546,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
-<h2 id="stack-lamp">Stack LAMP</h2>
+<h2 id="stack-lamp:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP</h2>
 
 <p><img src="/related/cloud/lamp.gif" alt="LAMP" title="LAMP" /></p>
 
@@ -587,11 +593,11 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 
 <p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
 
-<h2 id="altres">Altres</h2>
+<h2 id="altres:86806683e3ea945dc5182e8e6cca12d7">Altres</h2>
 
 <p>A més de contenidors Docker, també és possible utilitzar xPaaS i DBaaS. Aquests són alguns casos d&rsquo;èxit:</p>
 
-<h3 id="xpaas-dbaas">xPaaS + DBaaS</h3>
+<h3 id="xpaas-dbaas:86806683e3ea945dc5182e8e6cca12d7">xPaaS + DBaaS</h3>
 
 <ul>
 <li>Exemple d&rsquo;aplicació: <a href="http://serveisoberts.gencat.cat">http://serveisoberts.gencat.cat</a></li>
@@ -604,7 +610,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 </ul></li>
 </ul>
 
-<h3 id="docker-aplicació-docker-base-de-dades">Docker aplicació + Docker base de dades</h3>
+<h3 id="docker-aplicació-docker-base-de-dades:86806683e3ea945dc5182e8e6cca12d7">Docker aplicació + Docker base de dades</h3>
 
 <ul>
 <li>Exemple d&rsquo;aplicació: <a href="https://jocdelsdrets.gencat.cat">https://jocdelsdrets.gencat.cat</a></li>

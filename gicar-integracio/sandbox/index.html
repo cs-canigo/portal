@@ -319,7 +319,7 @@
 
 <p>Es presenten dues estratègies per a fer-ho:</p>
 
-<h2 id="apache-amb-capçaleres-estàtiques">Apache amb capçaleres estàtiques</h2>
+<h2 id="apache-amb-capçaleres-estàtiques:e923c8e3b736c508a3c1392e42867622">Apache amb capçaleres estàtiques</h2>
 
 <p>Configurant el frontal web apache de cara a que generi de forma automàtica les capçaleres de GICAR. S’ha d’afegir a l’arxiu httpd.conf, el següent:</p>
 
@@ -336,7 +336,7 @@
 
 <p>Aquesta configuració fa que l’Apache afegeixi la capçalera GICAR i GICAR_ID, amb valor fix, dins de totes les peticions HTTP rebudes.</p>
 
-<h2 id="docker">Docker</h2>
+<h2 id="docker:e923c8e3b736c508a3c1392e42867622">Docker</h2>
 
 <p>Hem creat un contenidor Docker exacte als Apache-GICAR que es poden trobar als CPDs de la Generalitat. Aixecant a l&rsquo;entorn del desenvolupador aquest  contenidor, amb connexió a un Policy Server de desenvolupament que és visible des dels entorns dels proveïdors, es pot simular el funcionament real d&rsquo;una aplicació integrada amb GICAR d&rsquo;una manera molt senzilla (només permet simular proves amb usuari i contrasenya, no amb certificat digital).</p>
 
@@ -349,19 +349,25 @@
 
 <pre><code>FROM  centos:6.6
 
+
 RUN yum install httpd glibc libstdc++ ncurses perl unzip tar xz -y
+
 
 ENV httpd /etc/httpd
 
+
 RUN mkdir -p ${httpd}/CA/webagent
+
 
 RUN curl -o ${httpd}/CA/webagent.tar.xz http://canigo.ctti.gencat.cat/related/cloud/fitxers-suport/webagent.tar.xz
 RUN tar xfvJ ${httpd}/CA/webagent.tar.xz -C ${httpd}/CA/
 RUN rm ${httpd}/CA/webagent.tar.xz
 
+
 RUN curl -o ${httpd}/conf/config.zip http://canigo.ctti.gencat.cat/related/cloud/fitxers-suport/config.zip
 RUN unzip  -o ${httpd}/conf/config.zip -d  ${httpd}/conf/
 RUN rm ${httpd}/conf/config.zip
+
 
 ENV NETE_WA_ROOT ${httpd}/CA/webagent
 ENV NETE_WA_PATH ${NETE_WA_ROOT}/bin
@@ -369,10 +375,12 @@ ENV CAPKIHOME ${httpd}/CA/webagent/CAPKI
 ENV LD_LIBRARY_PATH ${NETE_WA_ROOT}/bin:${NETE_WA_ROOT}/bin/thirdparty:${LD_LIBRARY_PATH}
 ENV PATH ${NETE_WA_PATH}:${PATH}
 
+
 RUN mv ${httpd}/conf/headers.cgi /var/www/cgi-bin/
 RUN mv ${httpd}/conf/index.html /var/www/html/
 RUN chmod 755 -R /var/www/cgi-bin/
 RUN chmod 755 -R /var/www/html/
+
 
 RUN echo &quot;#!/bin/bash&quot; &gt; /entrypoint.sh
 RUN echo &quot;set -m&quot; &gt;&gt; /entrypoint.sh
@@ -384,11 +392,14 @@ RUN echo &quot;sed -i -- 's/\\\$AGENTNAME/'\&quot;\$AGENTNAME\&quot;'/g' /etc/ht
 RUN echo &quot;chown apache:apache /etc/httpd/conf/Smhost.conf&quot; &gt;&gt; /entrypoint.sh
 RUN echo &quot;fg&quot; &gt;&gt; /entrypoint.sh
 
+
 RUN chmod 755 /entrypoint.sh
+
 
 #Copiem el fitxer wait-for-it
 COPY wait-for-it.sh /
 RUN chmod 755 /wait-for-it.sh
+
 
 CMD [&quot;/entrypoint.sh&quot;]
 </code></pre></li>
@@ -402,6 +413,7 @@ CMD [&quot;/entrypoint.sh&quot;]
 
 <div class="form col-xs-12 col-md-12" id="form-sandbox">
 <form action='http://formularis.gencat.cat/gencat_forms/AppJava/submitFormulari.do' method='post'>
+
 
 <div class="col-xs-12 col-md-4 ">
 <label>Peticionari<span class="red">*</span></label><input name='peticionari' type='text' class="form-control" />
@@ -447,9 +459,11 @@ CMD [&quot;/entrypoint.sh&quot;]
     });
 </script>
 
+
 <br />
 <img id="kaptchaImage" src="http://formularis.gencat.cat/gencat_forms/AppJava/generarKaptcha?kaptchaCode=433905973" width="200"/>
 <img id="refreshKaptchaImage" src="http://formularis.gencat.cat/gencat_forms/images/refrescar.png" style="vertical-align: top; cursor:pointer;"/>
+
 
 <br />
 <input type="text" id="captchaAnswer" name="captchaAnswer" class="form-control"/>
@@ -465,6 +479,7 @@ CMD [&quot;/entrypoint.sh&quot;]
         <idioma>ca_ES</idioma>
     </meta-informacio>
 </textarea>
+
 
 </form>
 </div>
@@ -486,11 +501,15 @@ CMD [&quot;/entrypoint.sh&quot;]
 
 <pre><code>FROM  gicar_dev
 
+
 # instal·la els mòduls necessaris, ajp, mod_wl, ... 
+
 
 RUN ... 
 
+
 # copia el fitxer personalitzat httpd.conf a la ruta correcta
+
 
 COPY myhttpd.conf /etc/httpd/conf/httpd.conf
 </code></pre></li>

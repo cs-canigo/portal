@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:fd6a582c3ea92aa0a9748a70d20d5d26">Propòsit</h2>
 
 <p>Aquest mòdul permet administrar els logs de l&rsquo;aplicació proporcionant les següents funcionalitats:</p>
 
@@ -330,9 +330,9 @@
 <li>Descarregar els fitxers de logs</li>
 </ul>
 
-<h2 id="instal-lació-i-configuració">Instal·lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:fd6a582c3ea92aa0a9748a70d20d5d26">Instal·lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal·lació</h3>
+<h3 id="instal-lació:fd6a582c3ea92aa0a9748a70d20d5d26">Instal·lació</h3>
 
 <p>La instal·lació del Mòdul d&rsquo;Administració de Logs es pot incloure automàticament a través del <a href="/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf">Plugin de Canigó per a Eclipse</a>, o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -356,9 +356,9 @@
 &lt;/plugin&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:fd6a582c3ea92aa0a9748a70d20d5d26">Configuració</h3>
 
-<h4 id="client">Client</h4>
+<h4 id="client:fd6a582c3ea92aa0a9748a70d20d5d26">Client</h4>
 
 <p>Si s&rsquo;utilitza el Plugin de Canigó per a Eclipse s&rsquo;instal·la automàticament una plana &ldquo;loggingAdministration.html&rdquo; dins l&rsquo;aplicació.  En cas de realitzar la instal·lació de forma manual s&rsquo;ha de descarregar la <a href="/related/canigo/documentacio/modul-logging/canigo.operation.logging_static.zip">part estàtica</a>.</p>
 
@@ -368,11 +368,11 @@ Des del CS Canigó no es realitzen adaptacions al <a href="http://www.gencat.cat
 
 <p>El contingut estàtic està preparat per a ser ubicat al directori <code>&lt;aplicacio&gt;\src\main\webapp\</code>. Si es vol canviar aquesta ubicació s&rsquo;han de modificar les URLs existents en aquests fitxers.</p>
 
-<h5 id="keep-alive">Keep Alive</h5>
+<h5 id="keep-alive:fd6a582c3ea92aa0a9748a70d20d5d26">Keep Alive</h5>
 
 <p>El client implementa un procés de &ldquo;keep alive&rdquo; que s&rsquo;executa cada 30 minuts. D&rsquo;aquesta manera el servidor el considerarà com a actiu mentre no es tanqui aquesta plana &ldquo;loggingAdministration.html&rdquo;.</p>
 
-<h4 id="servidor">Servidor</h4>
+<h4 id="servidor:fd6a582c3ea92aa0a9748a70d20d5d26">Servidor</h4>
 
 <p>Aquesta és l&rsquo;API REST que publica el Mòdul d&rsquo;Administració de Logs:</p>
 
@@ -397,11 +397,11 @@ Des del CS Canigó no es realitzen adaptacions al <a href="http://www.gencat.cat
 
 <p>Aquesta configuració només serà necessària en cas que els logs de Spring s&rsquo;escriguin en un appender de tipus file.</p>
 
-<h5 id="alliberament-de-recursos">Alliberament de recursos</h5>
+<h5 id="alliberament-de-recursos:fd6a582c3ea92aa0a9748a70d20d5d26">Alliberament de recursos</h5>
 
 <p>El mòdul executa un procés cada 45 minuts que valida si s&rsquo;ha rebut algun missatge de &ldquo;keep alive&rdquo; d&rsquo;algun client per els fitxers de log configurats en l&rsquo;aplicació. En cas que no haver rebut cap missatge per un fitxer de log concret en aquest periode de 45 minuts s&rsquo;alliberaran els recursos associats per a la monitorització d&rsquo;aquell fitxer (watcher thread).</p>
 
-<h3 id="utilització-del-mòdul">Utilització del Mòdul</h3>
+<h3 id="utilització-del-mòdul:fd6a582c3ea92aa0a9748a70d20d5d26">Utilització del Mòdul</h3>
 
 <p>Per a utilitzar el mòdul s&rsquo;ha de desplegar l&rsquo;aplicació i accedir-hi a <code>http://&lt;host&gt;:&lt;port&gt;/&lt;appContext&gt;/loggingAdministration.html</code>. Per exemple: <code>http:\\localhost:8080\aplicacioProva\loggingAdministration.html</code></p>
 
@@ -415,11 +415,11 @@ Des del CS Canigó no es realitzen adaptacions al <a href="http://www.gencat.cat
 
 <p>Amb el cercador es pot resaltar en groc el text que es desitgi trobar.</p>
 
-<h3 id="consideracions-de-seguretat">Consideracions de seguretat</h3>
+<h3 id="consideracions-de-seguretat:fd6a582c3ea92aa0a9748a70d20d5d26">Consideracions de seguretat</h3>
 
 <p>Es recomana que aquest mòdul es securitzi per a que només els usuaris amb rol Administrador puguin accedir-hi, tant a la plana html, com als serveis REST del backend proporcionats al mòdul.</p>
 
-<h3 id="demo">Demo</h3>
+<h3 id="demo:fd6a582c3ea92aa0a9748a70d20d5d26">Demo</h3>
 
 <p>Des del CS Canigó es proporciona una <a href="http://canigo-admin-logs.eu-gb.mybluemix.net/loggingAdministration.html">demo online</a> d&rsquo;aquest nou mòdul. Podeu trobar el codi font d&rsquo;aquesta demo en el següent <a href="https://github.com/cs-canigo/demoAdminLogs">repositori de Github</a>.</p>
 

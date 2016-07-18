@@ -320,19 +320,19 @@
 
 						
 
-<h2 id="introducció">Introducció</h2>
+<h2 id="introducció:cdfd85681e1374796a630a5bb221930d">Introducció</h2>
 
 <p>L&rsquo;objectiu d&rsquo;aquest connector és el de proporcionar accés als serveis d&rsquo;enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA.</p>
 
-<h3 id="propòsit">Propòsit</h3>
+<h3 id="propòsit:cdfd85681e1374796a630a5bb221930d">Propòsit</h3>
 
 <p>El propòsit del connector és proporcionar una interfície funcional reduïda al connector de la Pica que simplifica l&rsquo;utilització dels diferents serveis d&rsquo;enviament de SMS i MAIL oferts per la generalitat.</p>
 
-<h3 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h3>
+<h3 id="context-i-escenaris-d-ús:cdfd85681e1374796a630a5bb221930d">Context i Escenaris d&rsquo;ús</h3>
 
 <p>El connector PICA-AVISALERT es troba dins els connectors de serveis funcionals de la Generalitat.</p>
 
-<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+<h3 id="a-qui-va-dirigit:cdfd85681e1374796a630a5bb221930d">A qui va dirigit</h3>
 
 <p>Aquest document va dirigit als següents perfils:</p>
 
@@ -341,7 +341,7 @@
 <li>Arquitecte. Per conèixer quins són els components i la configuració del connector.</li>
 </ul>
 
-<h2 id="descripció-detallada">Descripció Detallada</h2>
+<h2 id="descripció-detallada:cdfd85681e1374796a630a5bb221930d">Descripció Detallada</h2>
 
 <p>Aquest connector permet utilitzar les diferents modalitats del servei AVISALERT en les seves modalitats asíncrones i síncrones, a través de les modalitats de sevei següents:</p>
 
@@ -358,21 +358,21 @@
 <li>AVISALERT_SMS</li>
 </ul>
 
-<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+<h3 id="arquitectura-i-components:cdfd85681e1374796a630a5bb221930d">Arquitectura i Components</h3>
 
-<h4 id="interfícies-i-components-genèrics">Interfícies i Components Genèrics</h4>
+<h4 id="interfícies-i-components-genèrics:cdfd85681e1374796a630a5bb221930d">Interfícies i Components Genèrics</h4>
 
 <p>Es pot trobar el codi font referent a aquest component a la següent url:</p>
 
 <p>Codi Font:  <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.avisosalertes.pica/1.1.2/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.avisosalertes.pica/1.1.2/</a></p>
 
-<h4 id="requeriments">Requeriments</h4>
+<h4 id="requeriments:cdfd85681e1374796a630a5bb221930d">Requeriments</h4>
 
 <p>El connector AVISALERT és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.</p>
 
 <p>Per tal de que el connector AVISALERT funcioni correctament sobre l&rsquo;aplicació que l&rsquo;utilitzi, s&rsquo;ha de tenir configurat el servei connector genèric de la PICA 1.1.0.</p>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:cdfd85681e1374796a630a5bb221930d">Configuració</h3>
 
 <p>Per configurar el mòdul d&rsquo;integració PICA-AVISALERT és necessari configurar els següents arxius:</p>
 
@@ -443,9 +443,9 @@
 
 <p>Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d&rsquo;accedir a la url de la PICA mitjançant HTTPS.</p>
 
-<h3 id="utilització-del-connector">Utilització del Connector</h3>
+<h3 id="utilització-del-connector:cdfd85681e1374796a630a5bb221930d">Utilització del Connector</h3>
 
-<h4 id="exemple-d-utilització-d-un-servei-síncron">Exemple d&rsquo;utilització d&rsquo;un Servei Síncron</h4>
+<h4 id="exemple-d-utilització-d-un-servei-síncron:cdfd85681e1374796a630a5bb221930d">Exemple d&rsquo;utilització d&rsquo;un Servei Síncron</h4>
 
 <p>1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.</p>
 
@@ -467,7 +467,7 @@ String resposta = avisalertService.avisAlertCorreuESincron(from, to, title, mess
 
 <p>Per consultar la totalitat de possibles codis de retorn i el detall exacte dels objectes retornats consultar el document de la PICA <strong>Guia d&rsquo;us del servei Avisos i Alertes v2.2.pdf</strong> disponible via petició a requeridors.otpica.ctti@gencat.cat</p>
 
-<h4 id="exemple-d-utilització-d-un-servei-asíncron">Exemple d&rsquo;utilització d&rsquo;un Servei Asíncron</h4>
+<h4 id="exemple-d-utilització-d-un-servei-asíncron:cdfd85681e1374796a630a5bb221930d">Exemple d&rsquo;utilització d&rsquo;un Servei Asíncron</h4>
 
 <p>1.- La modalitat d&rsquo;enviament de SMS, AVISALERT_SMS, suporta l&rsquo;enviament síncron i asíncron, l&rsquo;exemple que segueix utilitzarà la seva variant asíncrona. Per poder utilitzar aquesta modalitat de consum el connector de Canigó 3 preveu tres mètodes diferents:</p>
 

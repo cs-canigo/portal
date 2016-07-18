@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:bfebea325044c0ba1a83876e8e67debb">Propòsit</h2>
 
 <p>L&rsquo;objectiu del present document és descriure la metodologia a seguir en la utilització del connector al sistema SAP del Gecat des de qualsevol aplicació Java del Framework J2EE.</p>
 
@@ -328,9 +328,9 @@
 
 <p>El connector permet l&rsquo;accés al SAP mitjançant objectes de consulta. El connector transforma aquests objectes en una cadena de caràcters vàlida per al SAP. La cadena de retorn és transformada novament en un objecte que conté els registres de retorn.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:bfebea325044c0ba1a83876e8e67debb">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:bfebea325044c0ba1a83876e8e67debb">Instal.lació</h3>
 
 <p>Per poder utilitzar el connector haurem de configurar el projecte perque inclogui dues llibreries dll i diferents jars:</p>
 
@@ -363,7 +363,7 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:bfebea325044c0ba1a83876e8e67debb">Configuració</h3>
 
 <p>La configuració es realitza automàticament a partir de l&rsquo;eina de suport al desenvolupament.</p>
 
@@ -441,7 +441,7 @@
 </tbody>
 </table>
 
-<h2 id="utilització-del-mòdul">Utilització del Mòdul</h2>
+<h2 id="utilització-del-mòdul:bfebea325044c0ba1a83876e8e67debb">Utilització del Mòdul</h2>
 
 <p>La utilització del Connector es basa principalment en la configuració. L&rsquo;ús directe des dels clients es permet mitjançant les interfícies definides.</p>
 
@@ -453,7 +453,7 @@
 
 <p>Un cop hem creat l&rsquo;objecte de crida amb totes les dades necessàries, utilitzarem un objecte de la classe GecatConnector per obtenir l&rsquo;objecte de retorn amb les dades retornades pel SAP.</p>
 
-<h3 id="jsf">JSF</h3>
+<h3 id="jsf:bfebea325044c0ba1a83876e8e67debb">JSF</h3>
 
 <p>GecatBean.java</p>
 
@@ -529,7 +529,7 @@
 &lt;/h:form&gt;
 </code></pre>
 
-<h3 id="consideracions">Consideracions</h3>
+<h3 id="consideracions:bfebea325044c0ba1a83876e8e67debb">Consideracions</h3>
 
 <p>Crides a Gecat sense línies repetides</p>
 
@@ -669,7 +669,7 @@ System.out.println(&quot;dadaRetorn.getClasseDocument():&quot; +
 ((DadaRetornType)finalList.get(0)).getClasseDocument());
 </code></pre>
 
-<h3 id="usuaris-de-prova">Usuaris de prova</h3>
+<h3 id="usuaris-de-prova:bfebea325044c0ba1a83876e8e67debb">Usuaris de prova</h3>
 
 <p>S&rsquo;han habilitat dos usuaris per a fer proves amb el connector de Gecat. Aquests usuaris es poden fer servir en les proves de desenvolupament, però mai per a producció.</p>
 

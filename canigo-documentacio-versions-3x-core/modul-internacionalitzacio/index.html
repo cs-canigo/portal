@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:4d04613c7cb497f23828b8a9f3332325">Propòsit</h2>
 
 <p>El mòdul d&rsquo;internacionalització té com a objectiu principal permetre el
 desenvolupament d&rsquo;aplicacions en el que no sigui necessària cap
@@ -351,7 +351,7 @@ codi.</li>
 de l&rsquo;usuari</li>
 </ol>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:4d04613c7cb497f23828b8a9f3332325">Glossari</h2>
 
 <p><strong>i18N (Internationalization)</strong></p>
 
@@ -362,9 +362,9 @@ localitats o bé definir el procés de crear-la per a ser totalment
 flexible per executar-se en qualsevol localitat. Java defineix les
 classes bàsiques d&rsquo;ús de la internacionalització.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i configuració</h2>
+<h2 id="instal-lació-i-configuració:4d04613c7cb497f23828b8a9f3332325">Instal.lació i configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:4d04613c7cb497f23828b8a9f3332325">Instal.lació</h3>
 
 <p>El mòdul de configuració s&rsquo;inclou per defecte dins del core de Canigó 3.
 Durant el procés de creació de l&rsquo;aplicació (Struts o JSF), l&rsquo;eina de
@@ -381,7 +381,7 @@ l&rsquo;aplicació:</p>
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:4d04613c7cb497f23828b8a9f3332325">Configuració</h3>
 
 <p>Per a configurar el mòdul d&rsquo;internacionalització s&rsquo;han de manipular els
 següents fitxers:</p>
@@ -408,7 +408,7 @@ següent ubicació:</p>
 de configuració d&rsquo;idiomes perquè posteriorment puguin ser explotats per
 l&rsquo;aplicació.</p>
 
-<h4 id="definició-dels-fitxers-de-traducció">Definició dels fitxers de traducció</h4>
+<h4 id="definició-dels-fitxers-de-traducció:4d04613c7cb497f23828b8a9f3332325">Definició dels fitxers de traducció</h4>
 
 <p>Ubicació:</p>
 
@@ -471,7 +471,7 @@ qualsevol altre idioma</li>
 En cas de que per un llenguatge determinat existeixi un fitxer específic, l'obtenció del literal a partir d'una clau s'obtindrà des d'aquest fitxer. Si no es troba la clau en cap cas s'anirà al fitxer per defecte. Així doncs és important que es mantinguin actualitzats els fitxers de recursos per cada idioma de l'aplicació per evitar problemes. És important que es proporcioni un fitxer de recursos per defecte. Aquest serà el fitxer utilitzat  pel servei en cas de que el llenguatge escollit per l'usuari no correspongui a cap dels fitxers de recursos definits.
 </div>
 
-<h4 id="definició-de-la-integració-amb-el-mòdul-de-presentació">Definició de la integració amb el mòdul de presentació</h4>
+<h4 id="definició-de-la-integració-amb-el-mòdul-de-presentació:4d04613c7cb497f23828b8a9f3332325">Definició de la integració amb el mòdul de presentació</h4>
 
 <p>Fitxer de configuració: web.xml</p>
 
@@ -480,7 +480,7 @@ En cas de que per un llenguatge determinat existeixi un fitxer específic, l'obt
 <p>Per integrar el mòdul d&rsquo;internacionalització amb el mòdul de presentació
 s&rsquo;han de definir els següents filtres a nivell d&rsquo;aplicació:</p>
 
-<h5 id="localization-filter">Localization Filter</h5>
+<h5 id="localization-filter:4d04613c7cb497f23828b8a9f3332325">Localization Filter</h5>
 
 <p>Aquest filtre s&rsquo;encarrega d&rsquo;exposar el mòdul d&rsquo;internacionalització per
 tal de que sigui accessible a tota la capa web. Comú tant aplicacions
@@ -518,7 +518,7 @@ JSF com a Struts.</p>
 &lt;/filter&gt;
 </code></pre>
 
-<h5 id="struts-locale-filter">Struts Locale Filter</h5>
+<h5 id="struts-locale-filter:4d04613c7cb497f23828b8a9f3332325">Struts Locale Filter</h5>
 
 <p>Aquest filtre s&rsquo;encarrega de d&rsquo;integrar el mòdul d&rsquo;internacionalització
 exposat pel filtre comú de Localization Filter per tal que des de Struts
@@ -556,7 +556,7 @@ es pugui fer ús de fitxers d&rsquo;internacionalització.</p>
 &lt;/filter&gt;
 </code></pre>
 
-<h4 id="definició-dels-idiomes-i-literals-suportats-només-jsf">Definició dels idiomes i literals suportats (només JSF)</h4>
+<h4 id="definició-dels-idiomes-i-literals-suportats-només-jsf:4d04613c7cb497f23828b8a9f3332325">Definició dels idiomes i literals suportats (només JSF)</h4>
 
 <p>Ubicació proposada:
 <PROJECT_ROOT>/src/main/webapp/WEB-INF/faces-config.xml</p>
@@ -603,7 +603,7 @@ del nom de variable <strong>msg</strong> i trobaran situats a:</p>
 <pre><code class="language-code-java">&lt;h:outputText value=&quot;#{msg.formulari_agregarCanvisArxiusIntegrats}&quot;/&gt;
 </code></pre>
 
-<h4 id="definició-dels-literals-suportats-només-struts">Definició dels literals suportats (només Struts)</h4>
+<h4 id="definició-dels-literals-suportats-només-struts:4d04613c7cb497f23828b8a9f3332325">Definició dels literals suportats (només Struts)</h4>
 
 <p>Ubicació proposada:
 <PROJECT_ROOT>/src/main/resources/struts/struts-config.xml</p>
@@ -648,9 +648,9 @@ message-resources com siguin necessaris.</p>
 &lt;message-resources parameter=&quot;i18n.thirdApplicationResources&quot; null=&quot;false&quot; /&gt;
 </code></pre>
 
-<h2 id="utilització-del-mòdul">Utilització del mòdul</h2>
+<h2 id="utilització-del-mòdul:4d04613c7cb497f23828b8a9f3332325">Utilització del mòdul</h2>
 
-<h3 id="jsf">JSF</h3>
+<h3 id="jsf:4d04613c7cb497f23828b8a9f3332325">JSF</h3>
 
 <p>Suposant que els recursos estan exposats a la variable <strong>msg</strong> i com a
 literals tenim:</p>
@@ -680,7 +680,7 @@ paràmetres de la següent manera:</p>
 &lt;/h:outputFormat&gt;
 </code></pre>
 
-<h3 id="struts">Struts</h3>
+<h3 id="struts:4d04613c7cb497f23828b8a9f3332325">Struts</h3>
 
 <p>Suposant els següents literals:</p>
 
@@ -696,9 +696,9 @@ paràmetres de la següent manera:</p>
 &lt;/font&gt;
 </code></pre>
 
-<h2 id="preguntes-freqüents">Preguntes freqüents</h2>
+<h2 id="preguntes-freqüents:4d04613c7cb497f23828b8a9f3332325">Preguntes freqüents</h2>
 
-<h3 id="accés-manual-al-servei-d-internacionalització">Accés manual al servei d&rsquo;internacionalització</h3>
+<h3 id="accés-manual-al-servei-d-internacionalització:4d04613c7cb497f23828b8a9f3332325">Accés manual al servei d&rsquo;internacionalització</h3>
 
 <p>Encara que no és una pràctica comú es pot accedir al mòdul d&rsquo;idiomes
 desde qualsevol bean de l&rsquo;aplicació gestionat per Spring. Per recuperar
@@ -768,7 +768,7 @@ public class Injection {
 cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundleMessageSource
 que Spring trobarà en el context de l&rsquo;aplicació.</p>
 
-<h3 id="claus-amb-punts-en-jsf">Claus amb punts en JSF</h3>
+<h3 id="claus-amb-punts-en-jsf:4d04613c7cb497f23828b8a9f3332325">Claus amb punts en JSF</h3>
 
 <p>A diferencia de Struts l&rsquo;accés a propietats amb punts a la seva clau
 canvia:</p>
@@ -799,9 +799,9 @@ accedir de la següent manera:</p>
 &lt;/html&gt;
 </code></pre>
 
-<h2 id="exemples">Exemples</h2>
+<h2 id="exemples:4d04613c7cb497f23828b8a9f3332325">Exemples</h2>
 
-<h3 id="exemple-de-test-unitari">Exemple de Test unitari</h3>
+<h3 id="exemple-de-test-unitari:4d04613c7cb497f23828b8a9f3332325">Exemple de Test unitari</h3>
 
 <p>Com a exemple d&rsquo;utilització es mostra com podem fer una prova unitària:</p>
 

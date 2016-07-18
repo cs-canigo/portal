@@ -301,15 +301,15 @@
 
 						
 
-<h2 id="canigó-arquitectura-d-aplicacions-web-modernes">Canigó. Arquitectura d&rsquo;aplicacions web modernes</h2>
+<h2 id="canigó-arquitectura-d-aplicacions-web-modernes:0d5879b806136f0fa50ee21553892511">Canigó. Arquitectura d&rsquo;aplicacions web modernes</h2>
 
 <p>En passats comunicats s&rsquo;ha introduït l&rsquo;arquitectura que des del CS Canigó s&rsquo;està proposant com a estratègia a futur. Aquesta arquitectura es basa en el desacoblament de client i servidor mitjançant la publicació de serveis REST, per part de servidor, i el seu consum amb Javascript, per part del client. En aquest comunicat es pretén anar una mica més enllà proporcionant un exemple pràctic d&rsquo;aquesta arquitectura</p>
 
-<h2 id="exemple-d-arquitectura-amb-desacoblament-client-servidor">Exemple d&rsquo;arquitectura amb desacoblament client/servidor</h2>
+<h2 id="exemple-d-arquitectura-amb-desacoblament-client-servidor:0d5879b806136f0fa50ee21553892511">Exemple d&rsquo;arquitectura amb desacoblament client/servidor</h2>
 
 <p>És possible tenir múltiples clients consumint els serveis que publica el servidor. Aquest és un exemple real desenvolupat al CS Canigó consistent en la publicació d&rsquo;un backend Canigó 3 a OpenShift i dos frontends, un CanigóMòbil i un altre Bootstrap+AngularJS, publicats a Dropbox. Podeu descarregar el codi font d&rsquo;aquesta aplicació.</p>
 
-<h3 id="backend">Backend</h3>
+<h3 id="backend:0d5879b806136f0fa50ee21553892511">Backend</h3>
 
 <p>REST permet exposar mètodes dels objectes de negoci (BO - Business Objects) per ser consumits mitjançant diferents mètodes HTTP (GET, POST, PUT, DELETE). La publicació de serveis REST a Canigó 3 es realitza amb Spring MVC donat que Spring forma part del core de Canigó. A continuació especifiquem el contracte de l&rsquo;exemple que tractem en aquest comunicat, consistent en les operacions necessàries per poder realitzar el CRUD (Create-Read-Update-Delete) d&rsquo;una entitat Equipament:</p>
 
@@ -349,7 +349,7 @@
 
 <p>El format de les dades que intercanvien client i servidor és JSON (JavaScript Object Notation). Aquest és un format de dades molt lleuger i ràpid de processar per els navegadors. En cas que el client que consumeix aquestes dades estigui en un domini diferent al de servidor, caldrà utilitzar alguna tècnica que ho permeti degut a que els navegadors tenen restriccions de seguretat per evitar aquests accessos entre dominis.</p>
 
-<h3 id="cross-domain">Cross-domain</h3>
+<h3 id="cross-domain:0d5879b806136f0fa50ee21553892511">Cross-domain</h3>
 
 <p>Els diferents tipus de peticions que es poden realitzar mitjançant HTTP tenen restriccions de seguretat implementades pels navegadors:</p>
 
@@ -361,7 +361,7 @@
 
 <p>És possible salvar les restriccions de seguretat que incorporen els navegadors actuals mitjançant CORS (Cross-origin resource sharing). Aquesta tècnica consisteix en l&rsquo;intercanvi d&rsquo;una sèrie de capçaleres HTTP (Access-Control-*) entre client i servidor negociant aquest accés. En cas necessari, el client també és capaç d&rsquo;enviar credencials per l&rsquo;autenticació si el servidor ho requereix. En l&rsquo;exemple que es tracta en aquest comunicat s&rsquo;ha configurat CORS en el servidor i autenticació bàsica per els mètodes POST, PUT i DELETE. El fet que el backend estigui a OpenShift i els clients a Dropbox demostra que es poden tenir aplicacions en diferents dominis, tot i que el més habitual és que es trobin en el mateix domini sense necessitat de realitzar cross-domain.</p>
 
-<h3 id="frontend">Frontend</h3>
+<h3 id="frontend:0d5879b806136f0fa50ee21553892511">Frontend</h3>
 
 <p>En aquest exemple d&rsquo;arquitectura moderna es proporcionen dues variants d&rsquo;aplicació client basades en HTML i JS, una Canigó Mòbil amb JQuery Mobile i estils corporatius com a principals característiques, i una altre Bootstrap+AngularJS. Es pot accedir a aquestes aplicacions de demo a través dels següents enllaços:</p>
 
@@ -377,7 +377,7 @@ Mitjançant Bootstrap és possible fer un disseny responsiu (Responsive Web Desi
 
 <p>Per aquest comunicat hem redactat un HowTo on expliquem amb més detall com s&rsquo;ha desenvolupat aquest exemple d&rsquo;arquitectura moderna.</p>
 
-<h2 id="notícies">Notícies</h2>
+<h2 id="notícies:0d5879b806136f0fa50ee21553892511">Notícies</h2>
 
 <ul>
 <li>Desplegaments automatitzats a Tomcat 7 i Weblogic 12c</li>

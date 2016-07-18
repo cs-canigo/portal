@@ -320,13 +320,13 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:93edddece293c4a4638337cc44b0bad6">Propòsit</h2>
 
 <p>El servei de SFTP de Canigó permet enviar i rebre arxius entre el servidor on s&rsquo;executa l&rsquo;aplicació a altres servidors de forma segura mitjançant l&rsquo;intercanvi de claus.</p>
 
 <p>El servei està basat en les llibreries JSCH i Commons-VFS, la primera es tracta d&rsquo;un projecte open source que permet la connexió via SSH a qualsevol màquina. La segona llibrería és un projecte també open_source de la Apache Foundation que permet treballar amb més facilitat amb la JSCH, donant eines per crear connexions SFTP (entre d&rsquo;altres) contra un servidor.</p>
 
-<h2 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h2>
+<h2 id="documents-i-fonts-de-referència:93edddece293c4a4638337cc44b0bad6">Documents i Fonts de Referència</h2>
 
 <table>
 <thead>
@@ -349,7 +349,7 @@
 </tbody>
 </table>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:93edddece293c4a4638337cc44b0bad6">Glossari</h2>
 
 <p><strong>SFTP</strong><br />
 Secure File Transfer Protocol (Protocol de Transferència Segura d&rsquo;Arxius), es tracta d&rsquo;un protocol de transferència de fitxers entre computadors de forma segura.</p>
@@ -363,9 +363,9 @@ Enviar arxius a un servidor.</p>
 <p><strong>Socket</strong><br />
 Port del servidor habilitat per realitzar la transferència de fitxers/streams mitjançant el protocol SFTP.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:93edddece293c4a4638337cc44b0bad6">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:93edddece293c4a4638337cc44b0bad6">Instal.lació</h3>
 
 <p>Per tal d&rsquo;instal-lar el mòdul d&rsquo;SFTP es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -378,7 +378,7 @@ Port del servidor habilitat per realitzar la transferència de fitxers/streams m
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:93edddece293c4a4638337cc44b0bad6">Configuració</h3>
 
 <p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.</p>
 
@@ -490,7 +490,7 @@ Port del servidor habilitat per realitzar la transferència de fitxers/streams m
 
 <p>Els arxius de configuració que contenen els beans del mòdul i que serán carregats per Spring, son automàticament registrats pel core de Canigó, per lo que el desenvolupador no ha de definir cap arxiu XML per aixecar el servei.</p>
 
-<h3 id="utilització-del-mòdul">Utilització del Mòdul</h3>
+<h3 id="utilització-del-mòdul:93edddece293c4a4638337cc44b0bad6">Utilització del Mòdul</h3>
 
 <p>Per accedir al mòdul de SFTP, el desenvolupador pot realitzar una crida de forma externa mitjançant el patró &lsquo;Dependency Injection&rsquo;.</p>
 
@@ -540,7 +540,7 @@ public class TractamentClient{
 }
 </code></pre>
 
-<h4 id="realitzar-connexió">Realitzar connexió</h4>
+<h4 id="realitzar-connexió:93edddece293c4a4638337cc44b0bad6">Realitzar connexió</h4>
 
 <p>Tenim diferents maneres de realitzar la connexió:</p>
 
@@ -573,7 +573,7 @@ public class TractamentClient{
 <li>sftp.proxyPort: Port del host.</li>
 </ul>
 
-<h4 id="realitzar-desconnexió-del-servidor-sftp">Realitzar desconnexió del servidor SFTP</h4>
+<h4 id="realitzar-desconnexió-del-servidor-sftp:93edddece293c4a4638337cc44b0bad6">Realitzar desconnexió del servidor SFTP</h4>
 
 <p>Per realitzar la desconnexió del servidor FTP seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -587,7 +587,7 @@ public class TractamentClient{
 }
 </code></pre>
 
-<h4 id="realitzar-download-d-un-fitxer">Realitzar download d&rsquo;un fitxer</h4>
+<h4 id="realitzar-download-d-un-fitxer:93edddece293c4a4638337cc44b0bad6">Realitzar download d&rsquo;un fitxer</h4>
 
 <p>Per realitzar un download d&rsquo;un fitxer seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -664,7 +664,7 @@ if (sftpService.isLogged()) {
 </tbody>
 </table>
 
-<h4 id="realitzar-upload-d-un-fitxer">Realitzar upload d&rsquo;un fitxer</h4>
+<h4 id="realitzar-upload-d-un-fitxer:93edddece293c4a4638337cc44b0bad6">Realitzar upload d&rsquo;un fitxer</h4>
 
 <p>Per realitzar un upload d&rsquo;un fitxer seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -719,7 +719,7 @@ if (sftpService.isLogged()) {
 </tbody>
 </table>
 
-<h4 id="obtenir-la-llista-de-noms-dels-fitxers-del-servidor-remot">Obtenir la llista de noms dels fitxers del servidor remot</h4>
+<h4 id="obtenir-la-llista-de-noms-dels-fitxers-del-servidor-remot:93edddece293c4a4638337cc44b0bad6">Obtenir la llista de noms dels fitxers del servidor remot</h4>
 
 <p>Per obtenir la llista de fitxers en una carpeta d&rsquo;un servidor remot seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -761,7 +761,7 @@ if (sftpService.isLogged()) {
 
 <p>El mètode retorna un array de FileObject, interfícies de la llibrería Commons VFS que ens donen una sèrie de mètodes per a treballar amb els fitxers remots.</p>
 
-<h4 id="crear-un-fitxer-al-servidor-remot">Crear un fitxer al servidor remot</h4>
+<h4 id="crear-un-fitxer-al-servidor-remot:93edddece293c4a4638337cc44b0bad6">Crear un fitxer al servidor remot</h4>
 
 <p>Per crear un fitxer al servidor remot seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -810,7 +810,7 @@ if (sftpService.isLogged()) {
 
 <p>El mètode retorna un boolean TRUE o FALSE segons s&rsquo;ha realitzat correcta o incorrectament el procés.</p>
 
-<h4 id="crear-un-directori-al-servidor-remot">Crear un directori al servidor remot</h4>
+<h4 id="crear-un-directori-al-servidor-remot:93edddece293c4a4638337cc44b0bad6">Crear un directori al servidor remot</h4>
 
 <p>Per crear un directori al servidor remot seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -859,7 +859,7 @@ if (sftpService.isLogged()) {
 
 <p>El mètode retorna un boolean TRUE o FALSE segons s&rsquo;ha realitzat correcta o incorrectament el procés.</p>
 
-<h4 id="esborrar-un-fitxer-al-servidor-remot">Esborrar un fitxer al servidor remot</h4>
+<h4 id="esborrar-un-fitxer-al-servidor-remot:93edddece293c4a4638337cc44b0bad6">Esborrar un fitxer al servidor remot</h4>
 
 <p>Per esborrar un fitxer al servidor remot seguirem un patró com el mostrat en el següent exemple:</p>
 
@@ -908,9 +908,9 @@ if (sftpService.isLogged()) {
 
 <p>El mètode retorna un boolean TRUE o FALSE segons s&rsquo;ha realitzat correcta o incorrectament el procés.</p>
 
-<h2 id="exemples">Exemples</h2>
+<h2 id="exemples:93edddece293c4a4638337cc44b0bad6">Exemples</h2>
 
-<h3 id="tests-unitaris">Tests Unitaris</h3>
+<h3 id="tests-unitaris:93edddece293c4a4638337cc44b0bad6">Tests Unitaris</h3>
 
 <p>Un exemple d&rsquo;utilització del mòdul de SFTP són els tests unitaris.</p>
 

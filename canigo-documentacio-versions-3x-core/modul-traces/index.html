@@ -320,9 +320,9 @@
 
 						
 
-<h2 id="introducció">Introducció</h2>
+<h2 id="introducció:1dfdbd5736d585eec04078044eb357bc">Introducció</h2>
 
-<h3 id="propósit">Propósit</h3>
+<h3 id="propósit:1dfdbd5736d585eec04078044eb357bc">Propósit</h3>
 
 <p>El mòdul de traces té com a missió:</p>
 
@@ -349,7 +349,7 @@ classe, etc.</li>
 etc.</li>
 </ol>
 
-<h3 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h3>
+<h3 id="documents-i-fonts-de-referència:1dfdbd5736d585eec04078044eb357bc">Documents i Fonts de Referència</h3>
 
 <table>
 <thead>
@@ -372,7 +372,7 @@ etc.</li>
 </tbody>
 </table>
 
-<h3 id="glossari">Glossari</h3>
+<h3 id="glossari:1dfdbd5736d585eec04078044eb357bc">Glossari</h3>
 
 <p><strong>Log4J</strong></p>
 
@@ -392,9 +392,9 @@ exposen mètodes per obtenir i assignar valors remotament i en temps
 d&rsquo;execució, ideal per a gestionar modificacions/administració de
 propietats en calent.</p>
 
-<h2 id="descripció-detallada">Descripció detallada</h2>
+<h2 id="descripció-detallada:1dfdbd5736d585eec04078044eb357bc">Descripció detallada</h2>
 
-<h3 id="arquitectura-i-components">Arquitectura i components</h3>
+<h3 id="arquitectura-i-components:1dfdbd5736d585eec04078044eb357bc">Arquitectura i components</h3>
 
 <p>A més de les funcionalitats oferides per la pròpia API de Log4j, Canigó
 disposa d&rsquo;un conjunt de components addicionals:</p>
@@ -407,9 +407,9 @@ disposa d&rsquo;un conjunt de components addicionals:</p>
 <li>Afegir informació contextual als logs.</li>
 </ol>
 
-<h3 id="instal-lació-i-configuració">Instal- lació i configuració</h3>
+<h3 id="instal-lació-i-configuració:1dfdbd5736d585eec04078044eb357bc">Instal- lació i configuració</h3>
 
-<h4 id="instal-lació">Instal- lació</h4>
+<h4 id="instal-lació:1dfdbd5736d585eec04078044eb357bc">Instal- lació</h4>
 
 <p>El mòdul de traces s&rsquo;inclou per defecte dins del core de Canigó 3.
 Durant el procés de creació de l&rsquo;aplicació (Struts o JSF), l&rsquo;eina de
@@ -425,7 +425,7 @@ l&rsquo;aplicació:</p>
           &lt;version&gt;${canigo.core.version}&lt;/version&gt;
 </code></pre>
 
-<h4 id="configuració">Configuració</h4>
+<h4 id="configuració:1dfdbd5736d585eec04078044eb357bc">Configuració</h4>
 
 <p>L&rsquo;eina de desenvolupament de Canigó 3 genera de manera automàtica els
 diferents arxius de configuració de traces per entorn:</p>
@@ -497,9 +497,9 @@ d&rsquo;implementacions disponibles en la comunitat, en d&rsquo;altres desenvolu
 específicament per Canigó. Es recomana una lectura prèvia del manual de
 log4j per conèixer en detall la configuració de log4j.</p>
 
-<h4 id="appenders">Appenders</h4>
+<h4 id="appenders:1dfdbd5736d585eec04078044eb357bc">Appenders</h4>
 
-<h5 id="configuració-de-l-ús-de-appender-per-consola">Configuració de l&rsquo;ús de appender per consola</h5>
+<h5 id="configuració-de-l-ús-de-appender-per-consola:1dfdbd5736d585eec04078044eb357bc">Configuració de l&rsquo;ús de appender per consola</h5>
 
 <p>Classe: org.apache.log4j.ConsoleAppender</p>
 
@@ -516,7 +516,7 @@ manual de Log4J.</p>
 &lt;/appender&gt;
 </code></pre>
 
-<h5 id="configuració-de-l-ús-de-appender-per-fitxer-rotatiu"><strong>Configuració de l&rsquo;ús de appender per fitxer rotatiu</strong></h5>
+<h5 id="configuració-de-l-ús-de-appender-per-fitxer-rotatiu:1dfdbd5736d585eec04078044eb357bc"><strong>Configuració de l&rsquo;ús de appender per fitxer rotatiu</strong></h5>
 
 <p>Classe: org.apache.log4j.DailyRollingFileAppender</p>
 
@@ -529,14 +529,14 @@ propietats de l&rsquo;appender consultar el manual de Log4J.</p>
 <p>El format del fitxer (texte pla o XML) el defineix el <em>layout</em> associat
 a l&rsquo;<em>appender</em> com veurem posteriorment.</p>
 
-<h5 id="configuració-de-l-ús-de-appender-per-correu-electrònic"><strong>Configuració de l&rsquo;ús de Appender per Correu Electrònic</strong></h5>
+<h5 id="configuració-de-l-ús-de-appender-per-correu-electrònic:1dfdbd5736d585eec04078044eb357bc"><strong>Configuració de l&rsquo;ús de Appender per Correu Electrònic</strong></h5>
 
 <p>Classe: org.apache.log4j.SMTPAppender</p>
 
 <p>Envia les traces per correu electrònic. Per a informació detallada sobre
 les propietats de l&rsquo;appender consultar el manual de Log4J.</p>
 
-<h5 id="configuració-de-l-ús-de-appender-per-snmp"><strong>Configuració de l&rsquo;ús de Appender per SNMP</strong></h5>
+<h5 id="configuració-de-l-ús-de-appender-per-snmp:1dfdbd5736d585eec04078044eb357bc"><strong>Configuració de l&rsquo;ús de Appender per SNMP</strong></h5>
 
 <p>Classe: org.apache.log4j.ext.SNMPTrapAppender</p>
 
@@ -644,7 +644,7 @@ apartat de cóm utilitzar-lo.</p>
 &lt;/appender&gt;
 </code></pre>
 
-<h5 id="configuració-de-l-ús-de-appender-per-base-de-dades">Configuració de l&rsquo;ús de Appender per Base de Dades</h5>
+<h5 id="configuració-de-l-ús-de-appender-per-base-de-dades:1dfdbd5736d585eec04078044eb357bc">Configuració de l&rsquo;ús de Appender per Base de Dades</h5>
 
 <p>Classe: org.apache.log4j.jdbcplus.JDBCAppender</p>
 
@@ -886,9 +886,9 @@ d\{HH:mm:ss\}&quot;/&gt;
 &lt;/layout&gt;
 </code></pre>
 
-<h4 id="layouts">Layouts</h4>
+<h4 id="layouts:1dfdbd5736d585eec04078044eb357bc">Layouts</h4>
 
-<h5 id="patternlayout">PatternLayout</h5>
+<h5 id="patternlayout:1dfdbd5736d585eec04078044eb357bc">PatternLayout</h5>
 
 <p>Classe:
 <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html">org.apache.log4j.PatternLayout</a></p>
@@ -951,7 +951,7 @@ d\{HH:mm:ss\}&quot;/&gt;
 <p>El resultat de l&rsquo;aplicació d&rsquo;aquests patrons són missatges de text pla
 uniformement formatejats.</p>
 
-<h5 id="xmllayout">XMLLayout</h5>
+<h5 id="xmllayout:1dfdbd5736d585eec04078044eb357bc">XMLLayout</h5>
 
 <p>Classe:
 <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/XMLLayout.html">org.apache.log4j.XMLLayout</a></p>
@@ -983,7 +983,7 @@ LoggingClient&quot; timestamp=&quot;1127746730256&quot; level=&quot;DEBUG&quot; 
 &lt;/log4j:event&gt;
 </code></pre>
 
-<h5 id="patternxmllayout">PatternXMLLayout</h5>
+<h5 id="patternxmllayout:1dfdbd5736d585eec04078044eb357bc">PatternXMLLayout</h5>
 
 <p>Classe:
 <a href="http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/XMLLayout.html">org.apache.log4j.XMLLayout</a></p>
@@ -993,7 +993,7 @@ XMLLayout.</p>
 
 <p>A l&rsquo;igual que l&rsquo;XMLLayout, aquest &ldquo;layout&rdquo; no deixa un fitxer XML ben
 format, si no que també està pensat per a ser inclòs com a entitat
-externa a un altre fitxer per a formar un fitxer XML correcte.<br />
+externa a un altre fitxer per a formar un fitxer XML correcte.\
  El fitxer xml resultant tindrà una estructura semblant a XMLLayout, amb
 la diferència que el atributs no seran els de l&rsquo;XMLLayout(<em>loggin,
 timestamp, level i thread</em>), sinó que els podrem definir nosaltres
@@ -1189,9 +1189,9 @@ sintaxi &lsquo;<strong>@</strong>&rsquo; seguida del nom del paràmetre.</p>
 
 <p><param name="NodesConversionPattern" value="idTramit=@idTramit;" /></p>
 
-<h2 id="utilització-del-servei">Utilització del Servei</h2>
+<h2 id="utilització-del-servei:1dfdbd5736d585eec04078044eb357bc">Utilització del Servei</h2>
 
-<h3 id="generar-missatges">Generar Missatges</h3>
+<h3 id="generar-missatges:1dfdbd5736d585eec04078044eb357bc">Generar Missatges</h3>
 
 <p>Per generar una traça en nivell debug tindriem el següent codi:</p>
 
@@ -1208,9 +1208,9 @@ sintaxi &lsquo;<strong>@</strong>&rsquo; seguida del nom del paràmetre.</p>
 }
 </code></pre>
 
-<h3 id="recomanacions">Recomanacions</h3>
+<h3 id="recomanacions:1dfdbd5736d585eec04078044eb357bc">Recomanacions</h3>
 
-<h4 id="recomanacions-generals">Recomanacions generals</h4>
+<h4 id="recomanacions-generals:1dfdbd5736d585eec04078044eb357bc">Recomanacions generals</h4>
 
 <ul>
 <li>Mai utilitzar System.out.println.</li>
@@ -1222,7 +1222,7 @@ res.</li>
 <li>Valida el nivell de traces abans d&rsquo;escriure.</li>
 </ul>
 
-<h4 id="recomanacions-davant-excepcions">Recomanacions davant excepcions</h4>
+<h4 id="recomanacions-davant-excepcions:1dfdbd5736d585eec04078044eb357bc">Recomanacions davant excepcions</h4>
 
 <ul>
 <li>No utilitzar e.printStackTrace.</li>
@@ -1285,7 +1285,7 @@ diverses vegades, portant a la confusió.</p>
 }
 </code></pre>
 
-<h4 id="evitar-càlculs-innecessaris">Evitar càlculs innecessaris</h4>
+<h4 id="evitar-càlculs-innecessaris:1dfdbd5736d585eec04078044eb357bc">Evitar càlculs innecessaris</h4>
 
 <p>Una de les qüestions més importants del sistema de traces és el cost de
 computació. Si en un moment donat es desactiven determinats nivells de
@@ -1306,7 +1306,7 @@ el missatge. Així, per exemple, enlloc de:</p>
 LOGGER.debug(&quot;....&quot;);
 </code></pre>
 
-<h4 id="programació-de-traces">Programació de traces</h4>
+<h4 id="programació-de-traces:1dfdbd5736d585eec04078044eb357bc">Programació de traces</h4>
 
 <p>Com a recomanació de traces i nivell d&rsquo;aquestes dins d&rsquo;un mètode podrien
 ser les següents:</p>
@@ -1343,7 +1343,7 @@ try {
 }
 </code></pre>
 
-<h3 id="generar-informació-contextual">Generar Informació Contextual</h3>
+<h3 id="generar-informació-contextual:1dfdbd5736d585eec04078044eb357bc">Generar Informació Contextual</h3>
 
 <p>Moltes vegades no és suficient amb la informació estàndard que es mostra
 a les traces i és necessari complementar-la amb informació contextual
@@ -1405,9 +1405,9 @@ public class ExtendedLoggingFilter extends LoggingFilter {
 &lt;/appender&gt;
 </code></pre>
 
-<h2 id="eines-de-suport">Eines de Suport</h2>
+<h2 id="eines-de-suport:1dfdbd5736d585eec04078044eb357bc">Eines de Suport</h2>
 
-<h3 id="java-templates-per-a-eclipse">Java Templates per a Eclipse</h3>
+<h3 id="java-templates-per-a-eclipse:1dfdbd5736d585eec04078044eb357bc">Java Templates per a Eclipse</h3>
 
 <p>Eclipse ofereix unes eines que faciliten o agilitzen la creació de codi
 repetitiu.</p>
@@ -1437,9 +1437,9 @@ Eclipse ens crearà el següent codi automàticament:</p>
 
 <p>Que generaria el codi recomanat per a traces de nivell DEBUG.</p>
 
-<h2 id="annexos">Annexos</h2>
+<h2 id="annexos:1dfdbd5736d585eec04078044eb357bc">Annexos</h2>
 
-<h3 id="introducció-a-log4j">Introducció a Log4J</h3>
+<h3 id="introducció-a-log4j:1dfdbd5736d585eec04078044eb357bc">Introducció a Log4J</h3>
 
 <p>En aquest annex s&rsquo;ofereix una breu introducció a conceptes de Log4J que
 cal entendre per utilitzar el Servei de Traces.</p>

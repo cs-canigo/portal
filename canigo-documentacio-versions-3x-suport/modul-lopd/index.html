@@ -320,16 +320,16 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:09ccb21e20bcfd532c8e7ccfc27b3cd9">Propòsit</h2>
 
 <p>El servei de LOPD de Canigó permet assignar un determinat nivell de protecció a les dades de l&rsquo;aplicació que l&rsquo;utilitzi.</p>
 
-<h2 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;Ús</h2>
+<h2 id="context-i-escenaris-d-ús:09ccb21e20bcfd532c8e7ccfc27b3cd9">Context i Escenaris d&rsquo;Ús</h2>
 
 <p>El servei de LOPD es troba dins dels serveis generals de Canigó.<br />
 El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;aplicació o d&rsquo;enregistrar el seu accés.</p>
 
-<h2 id="a-qui-va-dirigit">A qui va dirigit</h2>
+<h2 id="a-qui-va-dirigit:09ccb21e20bcfd532c8e7ccfc27b3cd9">A qui va dirigit</h2>
 
 <p>Aquest document va dirigit als següents perfils:</p>
 
@@ -338,19 +338,19 @@ El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;apl
 <li>Arquitecte. Per conèixer quins són els components i la configuració del servei.</li>
 </ul>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:09ccb21e20bcfd532c8e7ccfc27b3cd9">Glossari</h2>
 
 <p><strong>LOPD:</strong> Llei Orgànica de Protecció de Dades</p>
 
-<h2 id="descripció-detallada">Descripció Detallada</h2>
+<h2 id="descripció-detallada:09ccb21e20bcfd532c8e7ccfc27b3cd9">Descripció Detallada</h2>
 
-<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+<h3 id="arquitectura-i-components:09ccb21e20bcfd532c8e7ccfc27b3cd9">Arquitectura i Components</h3>
 
-<h4 id="introducció">Introducció</h4>
+<h4 id="introducció:09ccb21e20bcfd532c8e7ccfc27b3cd9">Introducció</h4>
 
 <p>El servei LOPD ofereix suport a les aplicacions basades en Canigó per facilitar el compliment de la LOPD. Donat que l&rsquo;aplicació dels mecanismes de seguretat afecta únicament a les dades emmagatzemades en la base de dades s&rsquo;ha definit un sistema d&rsquo;anotacions per tal de &ldquo;marcar&rdquo; les dades sensibles en els TO&rsquo;s (Transfer Object).</p>
 
-<h4 id="instal-lació">Instal-lació</h4>
+<h4 id="instal-lació:09ccb21e20bcfd532c8e7ccfc27b3cd9">Instal-lació</h4>
 
 <p>Disposar del mòdul LOPD és pot fer mitjançant dos camins:</p>
 
@@ -373,7 +373,7 @@ El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;apl
 &lt;/dependency&gt;
 </code></pre>
 
-<h4 id="components-del-servei">Components del Servei</h4>
+<h4 id="components-del-servei:09ccb21e20bcfd532c8e7ccfc27b3cd9">Components del Servei</h4>
 
 <p>El servei defineix tres nivells de seguretat diferents i dos tipus d&rsquo;operacions amb les dades. L&rsquo;aplicació dels nivells de seguretat està bassada en l&rsquo;ús d&rsquo;una anotació especial de seguretat anomenada LOPDSecure.</p>
 
@@ -396,9 +396,9 @@ El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;apl
 <li>Xifrat/desxifrat de les dades: Operació que xifra o desxifra una dada accedida per un usuari.</li>
 </ul>
 
-<h3 id="ús-del-servei">Ús del servei</h3>
+<h3 id="ús-del-servei:09ccb21e20bcfd532c8e7ccfc27b3cd9">Ús del servei</h3>
 
-<h4 id="configuració-del-servei">Configuració del servei</h4>
+<h4 id="configuració-del-servei:09ccb21e20bcfd532c8e7ccfc27b3cd9">Configuració del servei</h4>
 
 <p>A spring s&rsquo;ha de configurar el servei per a indiciar la classe que realitza l&rsquo;enregistrament de les dades i el xifrat/desxifrat de les dades.</p>
 
@@ -436,7 +436,7 @@ El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;apl
 &lt;/bean&gt;
 </code></pre>
 
-<h4 id="anotacions">Anotacions</h4>
+<h4 id="anotacions:09ccb21e20bcfd532c8e7ccfc27b3cd9">Anotacions</h4>
 
 <p>Com s&rsquo;ha indicat en punts anteriors l&rsquo;aplicació de la seguretat es fa amb una anotació. Aquesta Anotació està dissenyada per posar-se en els mètodes setter i getter dels TO&rsquo;s (Transfer Objects) responsables de la transferència de les dades entre la base de dades i els objectes de negoci de l&rsquo;aplicació.</p>
 

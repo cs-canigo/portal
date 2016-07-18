@@ -320,13 +320,13 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:b73ae548f1a28dcd99fa098048aef301">Propòsit</h2>
 
 <p>El propósit del connector és proporcionar una interfície Java per accedir a Documentum. Permetent emmagatzemar i recuperar documents a més d&rsquo;altres operacions relacionades com crear carpetes i associar propietats.</p>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i Configuració</h2>
+<h2 id="instal-lació-i-configuració:b73ae548f1a28dcd99fa098048aef301">Instal.lació i Configuració</h2>
 
-<h3 id="instal-lació-del-dfc">Instal.lació del DFC</h3>
+<h3 id="instal-lació-del-dfc:b73ae548f1a28dcd99fa098048aef301">Instal.lació del DFC</h3>
 
 <p>Previ a la utilització del servei cal instal.lar a la màquina de desenvolupament/servidor la DFC&rsquo;s de la versió de Documentum que es farà servir :</p>
 
@@ -392,7 +392,7 @@ dfc.globalregistry.username=usernameRepositoriClaus
 dfc.globalregistry.password=passRepositoriClaus
 </code></pre>
 
-<h3 id="instal-lació-del-connector">Instal·lació del connector</h3>
+<h3 id="instal-lació-del-connector:b73ae548f1a28dcd99fa098048aef301">Instal·lació del connector</h3>
 
 <p>Per tal d&rsquo;instal- lar el mòdul de Documentum es pot incloure automàticament a través de l&rsquo;eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l&rsquo;aplicació la següent dependència:</p>
 
@@ -429,7 +429,7 @@ dfc.globalregistry.password=passRepositoriClaus
 &lt;/dependency&gt;
 </code></pre>
 
-<h4 id="dependències-amb-llibreries-del-dfc-instal-lat">Dependències amb llibreries del DFC instal·lat</h4>
+<h4 id="dependències-amb-llibreries-del-dfc-instal-lat:b73ae548f1a28dcd99fa098048aef301">Dependències amb llibreries del DFC instal·lat</h4>
 
 <p>Els connectors tenen dependències amb llibreries de la versió del DFC instal·lat. Aquestes llibreries s&rsquo;inclouen amb la instal·lació del DFC, a la carpeta *<em>C:\Program Files\Documentum\Shared*</em>. Caldrà afegir-les al repositori .m2 local per tal que Maven les resolgui.</p>
 
@@ -445,11 +445,11 @@ mvn install:install-file -Dfile=&quot;cryptojce.jar&quot; -DgroupId=cryptojce -D
 mvn install:install-file -Dfile=&quot;cryptojcommon.jar&quot; -DgroupId=cryptojcommon -DartifactId=cryptojcommon -Dversion=6.1 -Dpackaging=jar
 </code></pre>
 
-<h3 id="configuració-del-connector">Configuració del connector</h3>
+<h3 id="configuració-del-connector:b73ae548f1a28dcd99fa098048aef301">Configuració del connector</h3>
 
 <p>La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.</p>
 
-<h4 id="propietats-del-connector">Propietats del connector</h4>
+<h4 id="propietats-del-connector:b73ae548f1a28dcd99fa098048aef301">Propietats del connector</h4>
 
 <p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/documentum.properties</p>
 
@@ -585,15 +585,15 @@ mvn install:install-file -Dfile=&quot;cryptojcommon.jar&quot; -DgroupId=cryptojc
 </tbody>
 </table>
 
-<h4 id="propietats-del-dfc">Propietats del dfc</h4>
+<h4 id="propietats-del-dfc:b73ae548f1a28dcd99fa098048aef301">Propietats del dfc</h4>
 
 <p>També caldrà incloure al CLASSPATH del projecte el dfc.properties generat durant la instla·lació del DFC.</p>
 
 <p>Ubicació: <PROJECT_ROOT>/src/main/resources/dfc.properties</p>
 
-<h2 id="utilització-del-mòdul">Utilització del Mòdul</h2>
+<h2 id="utilització-del-mòdul:b73ae548f1a28dcd99fa098048aef301">Utilització del Mòdul</h2>
 
-<h3 id="jsf">JSF</h3>
+<h3 id="jsf:b73ae548f1a28dcd99fa098048aef301">JSF</h3>
 
 <p>Per a utilitzar aquest mòdul, cal crear un bean i una jsf:</p>
 
