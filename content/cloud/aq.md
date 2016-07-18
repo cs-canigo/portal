@@ -44,7 +44,6 @@ $ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
 $ cd demo-JEE-AppJava
 $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
 ```
 Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-JEE-AppJava/src/main/docker":
 
@@ -99,7 +98,7 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 <div class="message information">
 <b>Informació</b>
 <br>
-El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br><br>
+El valor "nom del contenidor" i el "nom de domini" els tria l'usuari. Per exemple:<br><br>
 <i>ContainerHostName</i>: dev<br>
 <i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br><br>
 En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
@@ -112,7 +111,7 @@ La primera vegada que s'executi la comanda "docker-compose up", i posteriorment 
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678".
+Accedir des d'un navegador web a "http://localhost/canigoJSF" i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
 
 ## Stack "arquitectura moderna" JEE
 
@@ -135,7 +134,6 @@ Abans d'executar la última comanda és necessari modificar el fitxer "docker-co
 
 _docker-compose.yml_
 ```
-
 lb:
  image: gencatcloud/haproxy:1.5.1
  links:
@@ -161,7 +159,6 @@ bookstore:
     - 8080:8080
     - 8000:8000
   command: bash -c "/wait-for-it.sh postgres:5432 -t 240 && /entrypoint.sh"
-
 ```
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
@@ -175,7 +172,7 @@ La primera vegada que s'executi la comanda "docker-compose up", i posteriorment 
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
+Accedir des d'un navegador web a "http://localhost/" i introduïr l'usuari "admin" i contrasenya "admin". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
 
 ## Stack MEAN
 
