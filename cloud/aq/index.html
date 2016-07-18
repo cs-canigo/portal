@@ -372,7 +372,6 @@ Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 $ cd demo-JEE-AppJava
 $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
 </code></pre>
 
 <p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-JEE-AppJava/src/main/docker&rdquo;:</p>
@@ -431,7 +430,7 @@ demo:
 <div class="message information">
 <b>Informació</b>
 <br>
-El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br><br>
+El valor "nom del contenidor" i el "nom de domini" els tria l'usuari. Per exemple:<br><br>
 <i>ContainerHostName</i>: dev<br>
 <i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br><br>
 En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
@@ -443,7 +442,7 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/canigoJSF&quot;">http://localhost/canigoJSF&quot;</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
 
 <h2 id="stack-arquitectura-moderna-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
 
@@ -465,8 +464,7 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>
-lb:
+<pre><code>lb:
  image: gencatcloud/haproxy:1.5.1
  links:
   - bookstore
@@ -491,7 +489,6 @@ bookstore:
     - 8080:8080
     - 8000:8000
   command: bash -c &quot;/wait-for-it.sh postgres:5432 -t 240 &amp;&amp; /entrypoint.sh&quot;
-
 </code></pre>
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
@@ -506,7 +503,7 @@ bookstore:
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/&quot;">http://localhost/&quot;</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
 
 <h2 id="stack-mean:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN</h2>
 
