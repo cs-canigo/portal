@@ -442,7 +442,7 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/canigoJSF&quot;">http://localhost/canigoJSF&quot;</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/canigoJSF&quot;">http://localhost/canigoJSF&quot;</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari l&rsquo;aplicació no respondrà.</p>
 
 <h2 id="stack-arquitectura-moderna-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
 
@@ -513,6 +513,15 @@ bookstore:
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-MEAN">Github</a>.</p>
 
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-MEAN/docker&rdquo;:</p>
+
 <p><em>docker-compose.yml</em></p>
 
 <pre><code>db:
@@ -539,17 +548,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
-$ cd demo-MEAN
-$ docker-compose -f ./docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
+
+<p>Accedir a &ldquo;<a href="http://localhost:3000/&quot;">http://localhost:3000/&quot;</a>.</p>
 
 <h2 id="stack-lamp:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP</h2>
 
@@ -558,6 +562,15 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 <p>Aplicació basada en Linux+PHP+MySQL</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-LAMP">Github</a>.</p>
+
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-LAMP/docker&rdquo;:</p>
 
 <p><em>docker-compose.yml</em></p>
 
@@ -584,19 +597,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
-$ cd demo-LAMP
-$ docker-compose -f ./docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
+<p>Accedir a &ldquo;<a href="http://localhost/demo-LAMP&quot;">http://localhost/demo-LAMP&quot;</a>.</p>
 
 <h2 id="altres:86806683e3ea945dc5182e8e6cca12d7">Altres</h2>
 
