@@ -366,6 +366,17 @@ Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-AppJava">Github</a>.</p>
 
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
+$ cd demo-JEE-AppJava
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-JEE-AppJava/src/main/docker&rdquo;:</p>
+
 <p><em>docker-compose.yml</em></p>
 
 <pre><code>gicar:
@@ -427,16 +438,7 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 (En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
 </div>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
-$ cd demo-JEE-AppJava
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
@@ -450,6 +452,16 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
 <p>Aplicació basada en serveis REST i presentació desacoblada</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-REST">Github</a>.</p>
+
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-JEE-REST/src/main/docker&rdquo;:</p>
 
 <p><em>docker-compose.yml</em></p>
 
@@ -489,15 +501,7 @@ bookstore:
 <li>/home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
 </ul>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
-$ cd demo-JEE-REST
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
