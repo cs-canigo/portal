@@ -22,6 +22,7 @@ Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament do
 
 - Bluemix suporta la creació d'aplicacions multicontainer mitjançant [docker-compose](https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov)
 - A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
+- A Bluemix, és necessari configurar un procés d'espera entre els contenidors que tinguin relacions entre ells (per exemple l'aplicació ha d'esperar que la bbdd estigui operativa per a funcionar). Per a realitzar aquesta espera s'utiliza el procés wait-for-it.sh. Un exemple del seu ús es pot veure al [Stack “arquitectura moderna” JEE]({{< relref "#stack-arquitectura-moderna-jee" >}})
 - En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
 
 ## Stack "tradicional" JEE
@@ -45,7 +46,6 @@ $ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
 $ cd demo-JEE-AppJava
 $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
 ```
 Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-JEE-AppJava/src/main/docker":
 
@@ -100,7 +100,7 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 <div class="message information">
 <b>Informació</b>
 <br>
-El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br><br>
+El valor "nom del contenidor" i el "nom de domini" els tria l'usuari. Per exemple:<br><br>
 <i>ContainerHostName</i>: dev<br>
 <i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br><br>
 En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
@@ -113,7 +113,7 @@ La primera vegada que s'executi la comanda "docker-compose up", i posteriorment 
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678".
+Accedir des d'un navegador web a "http://localhost/canigoJSF" i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari l'aplicació no respondrà.
 
 ## Stack "arquitectura moderna" JEE
 
@@ -136,7 +136,6 @@ Abans d'executar la última comanda és necessari modificar el fitxer "docker-co
 
 _docker-compose.yml_
 ```
-
 lb:
  image: gencatcloud/haproxy:1.5.1
  links:
@@ -162,13 +161,12 @@ bookstore:
     - 8080:8080
     - 8000:8000
   command: bash -c "/wait-for-it.sh postgres:5432 -t 240 && /entrypoint.sh"
-
 ```
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
 - /home/canigo/demo-JEE-REST/target/: directori on es troba el war de l'aplicació
-- /home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
+- /home/canigo/demo-JEE-REST/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
 
 La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
@@ -176,7 +174,7 @@ La primera vegada que s'executi la comanda "docker-compose up", i posteriorment 
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
+Accedir des d'un navegador web a "http://localhost/" i introduïr l'usuari "admin" i contrasenya "admin". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
 
 ## Stack MEAN
 
@@ -185,6 +183,16 @@ Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-MEAN).
+
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+```
+
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-MEAN/docker":
 
 _docker-compose.yml_
 ```
@@ -212,19 +220,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
-$ cd demo-MEAN
-$ docker-compose -f ./docker/docker-compose.yml up -d
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
+
+Accedir a "http://localhost:3000/".
 
 ## Stack LAMP 
 
@@ -233,6 +235,16 @@ $ docker-compose -f ./docker/docker-compose.yml up -d --build
 Aplicació basada en Linux+PHP+MySQL
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
+
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
+```
+
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-LAMP/docker":
 
 _docker-compose.yml_
 ```
@@ -259,21 +271,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
-$ cd demo-LAMP
-$ docker-compose -f ./docker/docker-compose.yml up -d
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/demo-LAMP
+Accedir a "http://localhost/demo-LAMP".
 
 ## Altres
 
