@@ -111,7 +111,7 @@ La primera vegada que s'executi la comanda "docker-compose up", i posteriorment 
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir des d'un navegador web a "http://localhost/canigoJSF" i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
+Accedir des d'un navegador web a "http://localhost/canigoJSF" i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari l'aplicació no respondrà.
 
 ## Stack "arquitectura moderna" JEE
 
@@ -182,6 +182,16 @@ Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-MEAN).
 
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+```
+
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-MEAN/docker":
+
 _docker-compose.yml_
 ```
 db:
@@ -208,19 +218,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
-$ cd demo-MEAN
-$ docker-compose -f ./docker/docker-compose.yml up -d
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
+
+Accedir a "http://localhost:3000/".
 
 ## Stack LAMP 
 
@@ -229,6 +233,16 @@ $ docker-compose -f ./docker/docker-compose.yml up -d --build
 Aplicació basada en Linux+PHP+MySQL
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
+
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
+```
+
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-LAMP/docker":
 
 _docker-compose.yml_
 ```
@@ -255,21 +269,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
-$ cd demo-LAMP
-$ docker-compose -f ./docker/docker-compose.yml up -d
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
-Accedir a http://localhost/demo-LAMP
+Accedir a "http://localhost/demo-LAMP".
 
 ## Altres
 
