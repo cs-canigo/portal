@@ -164,7 +164,7 @@ bookstore:
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
 - /home/canigo/demo-JEE-REST/target/: directori on es troba el war de l'aplicació
-- /home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
+- /home/canigo/demo-JEE-REST/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
 
 La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
