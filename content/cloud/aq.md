@@ -21,6 +21,7 @@ Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament do
 
 - Bluemix suporta la creació d'aplicacions multicontainer mitjançant [docker-compose](https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov)
 - A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
+- A Bluemix, és necessari configurar un procés d'espera entre els contenidors que tinguin relacions entre ells (per exemple l'aplicació ha d'esperar que la bbdd estigui operativa per a funcionar). Per a realitzar aquesta espera s'utiliza el procés wait-for-it.sh. Un exemple del seu ús es pot veure al [Stack “arquitectura moderna” JEE]({{< relref "#stack-arquitectura-moderna-jee" >}})
 - En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
 
 ## Stack "tradicional" JEE
