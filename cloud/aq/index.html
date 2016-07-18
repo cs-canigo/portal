@@ -438,12 +438,12 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 (En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
 </div>
 
-<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/canigoJSF&quot;">http://localhost/canigoJSF&quot;</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari l&rsquo;aplicació no respondrà.</p>
+<p>Accedir des d&rsquo;un navegador web a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari l&rsquo;aplicació no respondrà.</p>
 
 <h2 id="stack-arquitectura-moderna-jee:86806683e3ea945dc5182e8e6cca12d7">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
 
@@ -499,12 +499,12 @@ bookstore:
 <li>/home/canigo/demo-JEE-REST/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
 </ul>
 
-<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir des d&rsquo;un navegador web a &ldquo;<a href="http://localhost/&quot;">http://localhost/&quot;</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
 
 <h2 id="stack-mean:86806683e3ea945dc5182e8e6cca12d7">Stack MEAN</h2>
 
@@ -549,12 +549,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a &ldquo;<a href="http://localhost:3000/&quot;">http://localhost:3000/&quot;</a>.</p>
+<p>Accedir a <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
 
 <h2 id="stack-lamp:86806683e3ea945dc5182e8e6cca12d7">Stack LAMP</h2>
 
@@ -598,12 +598,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>La primera vegada que s&rsquo;executi la comanda &ldquo;docker-compose up&rdquo;, i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a &ldquo;<a href="http://localhost/demo-LAMP&quot;">http://localhost/demo-LAMP&quot;</a>.</p>
+<p>Accedir a <a href="http://localhost/demo-LAMP/">http://localhost/demo-LAMP/</a>.</p>
 
 <h2 id="altres:86806683e3ea945dc5182e8e6cca12d7">Altres</h2>
 
