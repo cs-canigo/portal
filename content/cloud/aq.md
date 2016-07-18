@@ -106,13 +106,13 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 (En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
 </div>
 
-La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
+En cas de voler reconstruir les imatges, cal afegir la opció "--build" a la comanda "docker-compose up":
 
 ```
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir des d'un navegador web a "http://localhost/canigoJSF" i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari l'aplicació no respondrà.
+Accedir des d'un navegador web a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari l'aplicació no respondrà.
 
 ## Stack "arquitectura moderna" JEE
 
@@ -167,13 +167,13 @@ El paths “/home/canigo/…” han d’adaptar-se als locals.
 - /home/canigo/demo-JEE-REST/target/: directori on es troba el war de l'aplicació
 - /home/canigo/demo-JEE-REST/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
 
-La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
+En cas de voler reconstruir les imatges, cal afegir la opció "--build" a la comanda "docker-compose up":
 
 ```
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 ```
 
-Accedir des d'un navegador web a "http://localhost/" i introduïr l'usuari "admin" i contrasenya "admin". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
+Accedir des d'un navegador web a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin". Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l'accés aquest temps ja que en cas contrari s'obtindrà un error "503 Service Unavailable".
 
 ## Stack MEAN
 
@@ -219,13 +219,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
+En cas de voler reconstruir les imatges, cal afegir la opció "--build" a la comanda "docker-compose up":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
-Accedir a "http://localhost:3000/".
+Accedir a http://localhost:3000/.
 
 ## Stack LAMP 
 
@@ -270,13 +270,13 @@ demo:
 
 El paths “/home/canigo/…” han d’adaptar-se als locals.
 
-La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
+En cas de voler reconstruir les imatges, cal afegir la opció "--build" a la comanda "docker-compose up":
 
 ```
 $ docker-compose -f ./docker/docker-compose.yml up -d --build
 ```
 
-Accedir a "http://localhost/demo-LAMP".
+Accedir a http://localhost/demo-LAMP/.
 
 ## Altres
 
