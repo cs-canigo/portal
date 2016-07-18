@@ -2,7 +2,7 @@
 date        = "2015-03-20T11:17:51+01:00"
 title       = "SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 15
 +++
 

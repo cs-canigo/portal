@@ -2,6 +2,7 @@
 date        = "2016-05-11"
 title       = "Plataformes cloud de referència"
 description = "Bluemix, OpenShift, Azure, ..."
+section     = "Container Cloud"
 weight      = 2
 categories  = ["cloud","docker","container","paas"]
 +++

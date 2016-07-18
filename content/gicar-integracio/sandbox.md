@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Entorn de desenvolupament GICAR"
 description = "Entorn Sandbox per a simular el funcionament de GICAR"
-section     = ""
+section     = "GICAR"
 taxonomies  = []
 draft = false
 weight 		= 8

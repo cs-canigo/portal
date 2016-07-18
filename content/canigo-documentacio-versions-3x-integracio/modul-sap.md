@@ -2,7 +2,7 @@
 date        = "2015-03-19T11:25:26+01:00"
 title       = "SAP"
 description = "Interficie d'accés als Backends SAP de la Generalitat."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 12
 +++
 

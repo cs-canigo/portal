@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Servei d’autenticació anònima amb GICAR"
 description = ""
-section     = ""
+section     = "GICAR"
 taxonomies  = []
 weight 		= 4
 +++

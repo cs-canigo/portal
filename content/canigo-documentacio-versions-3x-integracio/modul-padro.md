@@ -2,7 +2,7 @@
 date        = "2015-03-20T10:28:07+01:00"
 title       = "Padró"
 description = "Serveis d'empadronament publicats de la plataforma PICA."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 9
 +++
 

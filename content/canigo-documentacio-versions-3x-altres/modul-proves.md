@@ -2,7 +2,7 @@
 date        = "2015-04-02T14:36:52+02:00"
 title       = "Proves"
 description = "Proves unitàries"
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 4
 +++
 

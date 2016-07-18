@@ -2,7 +2,7 @@
 date        = "2015-03-19T12:06:35+01:00"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 1
 +++
 

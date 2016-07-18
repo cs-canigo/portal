@@ -2,7 +2,7 @@
 date        = "2015-04-02T11:48:54+02:00"
 title       = "Seguretat"
 description = "Autentificació i autorització d'usuaris."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 9
 +++
 

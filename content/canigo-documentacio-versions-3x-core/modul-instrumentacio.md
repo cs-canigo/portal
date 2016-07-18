@@ -2,7 +2,7 @@
 date        = "2015-03-27T10:44:27+01:00"
 title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de la seva execució."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 1
 +++
 

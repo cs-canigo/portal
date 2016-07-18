@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Servei d’autenticació mixt"
 description = "Descripció del servei per a usuaris de la Generalitat i per usuaris de l’Administració local (EACAT)"
-section     = ""
+section     = "GICAR"
 taxonomies  = []
 weight 		= 5
 +++

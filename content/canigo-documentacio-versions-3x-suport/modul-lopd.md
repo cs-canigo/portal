@@ -2,7 +2,7 @@
 date        = "2015-04-02T11:29:07+02:00"
 title       = "LOPD"
 description = "Aplicació de protecció de dades."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 3
 +++
 
