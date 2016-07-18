@@ -88,9 +88,9 @@ Els paths "/home/canigo/..." han d'adaptar-se als locals.
 <div class="message information">
 <b>Informació</b>
 <br>
-El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br>
+El valor nom del contenidor i el nom de domini els tria l'usuari. Per exemple:<br><br>
 <i>ContainerHostName</i>: dev<br>
-<i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br>
+<i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br><br>
 En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
 (En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
 </div>
