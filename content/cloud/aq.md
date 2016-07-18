@@ -25,8 +25,7 @@ Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament do
 
 ## Stack "tradicional" JEE
 
-<img src="http://canigo.ctti.gencat.cat/related/cloud/spring.png" width="200">
-<img src="http://canigo.ctti.gencat.cat/related/cloud/jsf.jpg" width="200">
+![Spring](/related/cloud/spring.png "Spring") ![JSF](/related/cloud/jsf.jpg "JSF")
 
 Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació contingut estàtic i dinàmic.
 
@@ -114,11 +113,9 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 
 Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasenya "12345678".
 
-## Stack "arquitectura moderna" JEE 
+## Stack "arquitectura moderna" JEE
 
-<img src="http://canigo.ctti.gencat.cat/related/cloud/springboot.png" width="200">
-<img src="http://canigo.ctti.gencat.cat/related/cloud/resftulapi.jpg" width="200">
-<img src="http://canigo.ctti.gencat.cat/related/cloud/htmljscss.png" width="200">
+![Spring](/related/cloud/springboot.png "Spring Boot") ![Resftul API](/related/cloud/resftulapi.jpg "Resftul API") ![HTML5 JS CSS](/related/cloud/htmljscss.png "HTML5 JS CSS")
 
 Aplicació basada en serveis REST i presentació desacoblada
 
@@ -179,7 +176,7 @@ Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
 ## Stack MEAN
 
-<img src="http://canigo.ctti.gencat.cat/related/cloud/stack_mean.png" width="200">
+![MEAN](/related/cloud/stack_mean.png "MEAN")
 
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
@@ -227,7 +224,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d --build
 
 ## Stack LAMP 
 
-<img src="http://canigo.ctti.gencat.cat/related/cloud/lamp.gif" width="200">
+![LAMP](/related/cloud/lamp.gif "LAMP")
 
 Aplicació basada en Linux+PHP+MySQL
 
