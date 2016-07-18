@@ -23,7 +23,10 @@ Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament do
 - A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
 - En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
 
-## Stack "tradicional" JEE 
+## Stack "tradicional" JEE
+
+<img src="http://canigo.ctti.gencat.cat/related/cloud/spring.png" width="200">
+<img src="http://canigo.ctti.gencat.cat/related/cloud/jsf.jpg" width="200">
 
 Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació contingut estàtic i dinàmic.
 
@@ -113,6 +116,10 @@ Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasen
 
 ## Stack "arquitectura moderna" JEE 
 
+<img src="http://canigo.ctti.gencat.cat/related/cloud/springboot.png" width="200">
+<img src="http://canigo.ctti.gencat.cat/related/cloud/resftulapi.jpg" width="200">
+<img src="http://canigo.ctti.gencat.cat/related/cloud/htmljscss.png" width="200">
+
 Aplicació basada en serveis REST i presentació desacoblada
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-REST).
@@ -170,9 +177,9 @@ $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 
 Accedir a http://localhost/ i introduïr l'usuari "admin" i contrasenya "admin".
 
-## Stack MEAN 
+## Stack MEAN
 
-![MEAN](/related/cloud/stack_mean.png "MEAN")
+<img src="http://canigo.ctti.gencat.cat/related/cloud/stack_mean.png" width="200">
 
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
@@ -220,7 +227,7 @@ $ docker-compose -f ./docker/docker-compose.yml up -d --build
 
 ## Stack LAMP 
 
-![LAMP](/related/cloud/lamp.gif "LAMP")
+<img src="http://canigo.ctti.gencat.cat/related/cloud/lamp.gif" width="200">
 
 Aplicació basada en Linux+PHP+MySQL
 
