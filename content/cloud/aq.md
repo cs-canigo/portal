@@ -37,6 +37,17 @@ Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-AppJava).
 
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
+$ cd demo-JEE-AppJava
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+
+```
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-JEE-AppJava/src/main/docker":
+
 _docker-compose.yml_
 ```
 gicar:
@@ -95,17 +106,7 @@ En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aqu
 (En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
 </div>
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
-$ cd demo-JEE-AppJava
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
@@ -120,6 +121,17 @@ Accedir a http://localhost/canigoJSF i introduïr l'usuari "NIFDEMO" i contrasen
 Aplicació basada en serveis REST i presentació desacoblada
 
 Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-REST).
+
+Comandes per iniciar l'aplicació:
+
+```
+$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+```
+
+Abans d'executar la última comanda és necessari modificar el fitxer "docker-compose.yml" ubicat al directori "demo-JEE-REST/src/main/docker":
 
 _docker-compose.yml_
 ```
@@ -157,16 +169,7 @@ El paths “/home/canigo/…” han d’adaptar-se als locals.
 - /home/canigo/demo-JEE-REST/target/: directori on es troba el war de l'aplicació
 - /home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l'aplicació.
 
-Comandes per iniciar l'aplicació:
-
-```
-$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
-$ cd demo-JEE-REST
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-```
-
-En cas de voler reconstruir les imatges cal afegir la opció "--build":
+La primera vegada que s'executi la comanda "docker-compose up", i posteriorment en cas de voler reconstruir les imatges, cal afegir la opció "--build":
 
 ```
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
