@@ -22,8 +22,8 @@ Expliquem, des d'un inici, quines són les passes que segueix una aplicació fin
 **Alta projecte**
 
 En aquesta fase s'aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l'aplicació, així com els usuaris d'accés pels proveïdors d'aplicacions per la monitorització de l'aplicació (logs, consum recursos, ...) i el seu desplegament.
-
-
+\
+\ 
 **Construcció i desplegament**
 
 Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements utilitzats per la "containerització" de les aplicacions seran els següents:
