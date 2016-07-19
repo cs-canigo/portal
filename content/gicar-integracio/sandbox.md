@@ -34,7 +34,7 @@ Per a fer això cal seguir el següent procediment:
 
 1. El proveïdor de desenvolupament s'ha d'instal·lar el docker engine que permet gestionar imatges i contenidors (https://www.docker.com/products/docker-engine), o bé utilitzar l'entorn de desenvolupament de Canigó (http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
 
-1. Dockerfile GICAR (https://hub.docker.com/r/gencatcloud/gicar/):
+1. Dockerfile GICAR (https://hub.docker.com/r/gencatcloud/gicar/) :
 
 		FROM  centos:6.6
 
