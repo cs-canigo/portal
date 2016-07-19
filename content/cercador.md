@@ -32,7 +32,13 @@ description = ""
 	<div class="destacat_text list-group-item">
         <h2><a href="{{path}}">{{title}}</a></h2>
         <p>
+        	{{#description}}
         	{{description}}
+        	{{/description}}
+
+        	{{^description}}
+        	{{{content}}}
+        	{{/description}}
         </p>
 	</div>
 </script>
@@ -49,6 +55,7 @@ description = ""
 </script>
 <!-- /TEMPLATES -->
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <!--script src="/js/cercador.js"></script-->
 <script src="/js/algolia-search.js"></script>

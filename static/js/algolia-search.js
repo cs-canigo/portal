@@ -1,5 +1,6 @@
-/* global instantsearch */
+var converter = new showdown.Converter();
 
+/* global instantsearch */
 app({
   appId: 'EWLW9DD0B6',
   apiKey: 'fb84eb986e0a351c3f12f948e3ee99b8',
@@ -34,7 +35,11 @@ function app(opts) {
       templates: {
         item: getTemplate('hit'),
         empty: getTemplate('no-results')
-      }
+      },
+      transformData : function(item){
+        item.content = converter.makeHtml(item.content);
+        return item; 
+      }      
     })
   );
 

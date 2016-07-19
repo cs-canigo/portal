@@ -8,22 +8,22 @@ weight      = 1
 
 #### Canvis
 
-- Canvi [CAN-1726] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1726): Notificacions electròniques <br>
+- Canvi [CAN-1726](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1726): Notificacions electròniques <br>
 <b>Context</b>: Actualització del connector de la PICA amb el producte NT <br>
 <b>Connector afectat</b>: canigo-connectors-nt <br>
 <b>Solució</b>: Modificació del connector  <br>
 
-- Canvi [CAN-1735] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1735): Actualització connector AEAT PICA  <br>
+- Canvi [CAN-1735](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1735): Actualització connector AEAT PICA  <br>
 <b>Context</b>: Actualització del connector de la PICA amb el producte AEAT <br>
 <b>Connector afectat</b>: canigo-connectors-pica-tributs <br>
 <b>Solució</b>: Modificació del connector  <br>
 
-- Canvi [CAN-1745] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1745): Actualització connector AEAT-TGSS  <br>
+- Canvi [CAN-1745](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1745): Actualització connector AEAT-TGSS  <br>
 <b>Context</b>: Actualització del connector de la PICA amb el producte TGSS <br>
 <b>Connector afectat</b>: canigo-connectors-pica-tributs <br>
 <b>Solució</b>: Modificació del connector  <br>
 
-- Canvi [CAN-1824] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1824): Consulta error connector pica  <br>
+- Canvi [CAN-1824](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-1824): Consulta error connector pica  <br>
 <b>Context</b>: Arrel d'una consulta sobre el connector de PSIS es detecta que cal actualitzar-ho donat que un dels camp que s'envia a la petició ha passat de ser opcional a obligatori i el connector no deixava informar-ho. <br>
 <b>Servei afectat</b>: canigo-connectors-psis <br>
 <b>Solució</b>: Modificació del connector  <br>

@@ -54,7 +54,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -67,7 +67,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Bloc&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca al bloc" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -80,7 +80,7 @@
 								<!--CERCADOR-->
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="searchResults(true); return false;">
 									<div class="form-group">
-										<input type="search" name="query" id="query"
+										<input type="search" name="q" id="query"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control"  placeholder="Cerca..." /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
