@@ -30,7 +30,7 @@ description = ""
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
 	<div class="destacat_text list-group-item">
-        <h2><a href="{{url}}">{{title}}</a></h2>
+        <h2><a href="{{path}}">{{title}}</a></h2>
         <p>
         	{{description}}
         </p>
