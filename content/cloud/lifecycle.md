@@ -9,17 +9,20 @@ categories  = []
 
 _<span style='color:red;'>DRAFT</span>_
 
-Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper esencial ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
+Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper esencial, ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
 
-Expliquem, des d'un inici, quines són les passes que segueix una aplicació fins arribar a executar-se en el Container Cloud:
+Expliquem, des d'un inici, quines són les passes que segueix una aplicació fins a arribar a executar-se en el Container Cloud:
+
 
 **Definició d'Arquitectura**
 
-És en aquesta fase on el proveïdor d'aplicacions, conjuntament amb Integració de Solucions, analitzaran si l'aplicació és susceptible d'anar al Container Cloud. Amb el suport de l'equip d'Administració Cloud i Arquitectura CTTI es pendrà una decisió i es determinarà quin és el cloud destí més apropiat.
+És en aquesta fase on el proveïdor d'aplicacions, conjuntament amb Integració de Solucions, analitzaran si l'aplicació és susceptible d'anar al Container Cloud. Amb el suport de l'equip d'Administració Cloud i Arquitectura CTTI es prendrà una decisió i es determinarà quin és el cloud destí més apropiat.
+
 
 **Alta projecte**
 
-En aquesta fase s'aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l'aplicació, així com els usuaris d'accés per els proveïdors d'aplicacions per la monitorització de l'aplicació (logs, consum recursos, ...) i el seu desplegament.
+En aquesta fase s'aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l'aplicació, així com els usuaris d'accés pels proveïdors d'aplicacions per la monitorització de l'aplicació (logs, consum recursos, ...) i el seu desplegament.
+
 
 **Construcció i desplegament**
 
@@ -36,5 +39,8 @@ _Contenidors (Docker)_
 Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d'aquest "espai/entorn" temporal s'eliminaran després de cert temps d'inactivitat o després d'un temps d'expiració.
 
 Per els desplegaments a l'entorn de PROducció s'aplicarà l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html). Els contenidors "antics" s'eliminaran.
+
+A continuació mostrem un diagrama on s'il·lustra el flux i els diferents equips que intervenen en el cicle de vida d'una aplicació al Container Cloud:
+
 
 ![Cicle de Vida Container Cloud](/related/cloud/lifecycle.png)
