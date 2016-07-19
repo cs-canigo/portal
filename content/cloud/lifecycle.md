@@ -7,4 +7,34 @@ weight      = 3
 categories  = []
 +++
 
+_<span style='color:red;'>DRAFT</span>_
+
+Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper esencial ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
+
+Expliquem, des d'un inici, quines són les passes que segueix una aplicació fins arribar a executar-se en el Container Cloud:
+
+**Definició d'Arquitectura**
+
+És en aquesta fase on el proveïdor d'aplicacions, conjuntament amb Integració de Solucions, analitzaran si l'aplicació és susceptible d'anar al Container Cloud. Amb el suport de l'equip d'Administració Cloud i Arquitectura CTTI es pendrà una decisió i es determinarà quin és el cloud destí més apropiat.
+
+**Alta projecte**
+
+En aquesta fase s'aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l'aplicació, així com els usuaris d'accés per els proveïdors d'aplicacions per la monitorització de l'aplicació (logs, consum recursos, ...) i el seu desplegament.
+
+**Construcció i desplegament**
+
+Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements utilitzats per la "containerització" de les aplicacions seran els següents:
+
+_xPaaS_
+
+* Els xPaaS utilitzats seran els buildpacks oficials de CloudFoundry per IBM Bluemix i els xPaaS d'OpenShift per CPD3 Containers. Més informació al [catàleg cloud](http://canigo.ctti.gencat.cat/cloud/cataleg/#xpaas). 
+
+_Contenidors (Docker)_
+
+* Les imatges utilitzades per les aplicacions han de ser les [oficials de Gencat](http://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker), o bé extensions d'aquestes. Aquestes imatges han estat certificades per l'equip d'Administració del Cloud. Qualsevol extensió d'aquestes imatges passarà un procés de validació de vulnerabilitats en el procés de construcció al SIC. En cas que l'extensió introdueixi alguna vulnerabilitat l'aplicació no es desplegarà.
+
+Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d'aquest "espai/entorn" temporal s'eliminaran després de cert temps d'inactivitat o després d'un temps d'expiració.
+
+Per els desplegaments a l'entorn de PROducció s'aplicarà l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html). Els contenidors "antics" s'eliminaran.
+
 ![Cicle de Vida Container Cloud](/related/cloud/lifecycle.png)
