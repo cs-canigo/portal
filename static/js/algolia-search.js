@@ -50,12 +50,18 @@ function app(opts) {
   search.addWidget(
     instantsearch.widgets.pagination({
       container: '#pagination',
+      autoHideContainer: true,
       scrollTo: '#query',
       labels: {
         previous : "anterior",
         next : "següent",
         first: "primera",
         last : "última"
+      },
+      cssClasses : {
+        first : "hidden-xs",
+        last : "hidden-xs",
+        page : "hidden-xs"
       },
       autoHideContainer : true
     })
@@ -66,6 +72,7 @@ function app(opts) {
     instantsearch.widgets.refinementList({
       container: '#tags',
       attributeName: 'section',
+      autoHideContainer: true,
       limit: 10,
       operator: 'or',
       templates: {
@@ -83,5 +90,5 @@ function getTemplate(templateName) {
 
 function getHeader(title) {
   return title;
-  return '<h5>' + title + '</h5>';
+  //return '<h5>' + title + '</h5>';
 }
