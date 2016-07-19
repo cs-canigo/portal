@@ -301,7 +301,41 @@
 
 					
 
-						<p><img src="/related/cloud/lifecycle.png" alt="Cicle de Vida Container Cloud" /></p>
+						<p><em><span style='color:red;'>DRAFT</span></em></p>
+
+<p>Gràcies a l&rsquo;ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d&rsquo;Integració Continua) té un paper esencial ja que és l&rsquo;encarregat de proporcionar els processos per assolir aquesta automatització.</p>
+
+<p>Expliquem, des d&rsquo;un inici, quines són les passes que segueix una aplicació fins arribar a executar-se en el Container Cloud:</p>
+
+<p><strong>Definició d&rsquo;Arquitectura</strong></p>
+
+<p>És en aquesta fase on el proveïdor d&rsquo;aplicacions, conjuntament amb Integració de Solucions, analitzaran si l&rsquo;aplicació és susceptible d&rsquo;anar al Container Cloud. Amb el suport de l&rsquo;equip d&rsquo;Administració Cloud i Arquitectura CTTI es pendrà una decisió i es determinarà quin és el cloud destí més apropiat.</p>
+
+<p><strong>Alta projecte</strong></p>
+
+<p>En aquesta fase s&rsquo;aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l&rsquo;aplicació, així com els usuaris d&rsquo;accés per els proveïdors d&rsquo;aplicacions per la monitorització de l&rsquo;aplicació (logs, consum recursos, &hellip;) i el seu desplegament.</p>
+
+<p><strong>Construcció i desplegament</strong></p>
+
+<p>Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements utilitzats per la &ldquo;containerització&rdquo; de les aplicacions seran els següents:</p>
+
+<p><em>xPaaS</em></p>
+
+<ul>
+<li>Els xPaaS utilitzats seran els buildpacks oficials de CloudFoundry per IBM Bluemix i els xPaaS d&rsquo;OpenShift per CPD3 Containers. Més informació al <a href="http://canigo.ctti.gencat.cat/cloud/cataleg/#xpaas">catàleg cloud</a>.</li>
+</ul>
+
+<p><em>Contenidors (Docker)</em></p>
+
+<ul>
+<li>Les imatges utilitzades per les aplicacions han de ser les <a href="http://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker">oficials de Gencat</a>, o bé extensions d&rsquo;aquestes. Aquestes imatges han estat certificades per l&rsquo;equip d&rsquo;Administració del Cloud. Qualsevol extensió d&rsquo;aquestes imatges passarà un procés de validació de vulnerabilitats en el procés de construcció al SIC. En cas que l&rsquo;extensió introdueixi alguna vulnerabilitat l&rsquo;aplicació no es desplegarà.</li>
+</ul>
+
+<p>Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d&rsquo;aquest &ldquo;espai/entorn&rdquo; temporal s&rsquo;eliminaran després de cert temps d&rsquo;inactivitat o després d&rsquo;un temps d&rsquo;expiració.</p>
+
+<p>Per els desplegaments a l&rsquo;entorn de PROducció s&rsquo;aplicarà l&rsquo;estratègia de <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a>. Els contenidors &ldquo;antics&rdquo; s&rsquo;eliminaran.</p>
+
+<p><img src="/related/cloud/lifecycle.png" alt="Cicle de Vida Container Cloud" /></p>
 
 
 					
