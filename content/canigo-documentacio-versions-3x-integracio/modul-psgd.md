@@ -29,7 +29,7 @@ Aquest document va dirigit als següents perfils:
 
 | Nom Document
 | ----------
-| [PSGD Manual Integració](/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.3.pdf).
+| [PSGD Manual Integració](/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.5.pdf).
 
 ## Descripció Detallada
 
@@ -58,7 +58,7 @@ Aquest connector permet realitzar les següents accions:
 
 Es pot trobar el codi font i binaris referent a aquest component a la següent url:
 
-http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/
+http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/
 
 ### Requeriments
 
@@ -73,7 +73,7 @@ Per configurar el mòdul d'integració PSGD és necessari configurar els següen
 En el pom.xml;
 
 ```
-<canigo.integration.psgd.version>[1.0.0,1.1.0)</canigo.integration.psgd.version>
+<canigo.integration.psgd.version>[1.1.0,1.2.0)</canigo.integration.psgd.version>
 ...
 
 <!-- Dependencia del mòdul PSGD -->
@@ -142,11 +142,11 @@ Fer la crida a la modalitat del servei desitjat, p.e.:
  DocumentMetaData documentMetaData = new DocumentMetaData();
  
  documentMetaData.setDocumentName("prova.txt");
- documentMetaData.setDocumentDepartmentUnitID("Departament");
- documentMetaData.setDocumentTypeName("TD01-001");
+ documentMetaData.setDocumentTypeCode("TD01-010");
  documentMetaData.setTitle("Prova");
- documentMetaData.setOrganName("organ");
  documentMetaData.setCreatorID("canigo");
+ documentMetaData.setDocumentDescriptor("descriptor");
+ documentMetaData.setOrigin("0");
 
  InputStream documentData = new FileInputStream("pathfitxer")
  
