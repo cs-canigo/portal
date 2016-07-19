@@ -3,6 +3,7 @@ date        = "2016-01-12"
 title       = "APIs RESTful: millors pràctiques"
 description = "Millors pràctiques per a la construcció d'APIs REST"
 toc 		= true
+section 	= ["Bloc"]
 bloc_tags	= ["bones pràctiques", "api"]
 imatge 		= "/images/bloc/json-api.png"
 +++

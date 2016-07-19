@@ -2,6 +2,7 @@
 date        = "2015-12-02"
 title       = "Docker: crea, desplega i executa aplicacions en contenidors"
 description = "Docker és una tecnologia que ha revolucionat el desplegament d’aplicacions i de programari degut a la seva senzillesa, facilitat d'ús i velocitat de  desplegament."
+section 	= ["Bloc"]
 bloc_tags	= ["desplegament", "contenidors", "docker"]
 imatge 		= "/images/bloc/docker/large_h-dark-trans.png"
 +++

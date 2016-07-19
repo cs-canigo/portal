@@ -51,7 +51,7 @@
 
 								{{ $title := .Title | html | lower}}
 								{{ if eq $title "noticies"}}
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=noticies&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/noticies/'; return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
 										<input type="search" name="query" id="cerca"
@@ -64,7 +64,7 @@
 								{{end}}
 									
 								{{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (in .URL "bloc_tags") }}
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=bloc&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/bloc/'; return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Bloc&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
 										<input type="search" name="query" id="cerca"

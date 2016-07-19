@@ -2,7 +2,7 @@
 date        = "2016-02-15"
 title       = "Desenvolupament web. Discontinuació dels Applets Java"
 description = ""
-section     = "Notícies"
+section 	= ["Bloc", "Notícies"]
 categories  = ["desenvolupament", "canigó"]
 imatge 		= "/images/bloc/applet.png"
 +++

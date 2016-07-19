@@ -29,7 +29,7 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
 								<input type="search" class="form-control" name="query" id="cerca_cap"
 									title="Cerca"
@@ -53,7 +53,7 @@
 						</div>
 						{{ if ne $title "cercador" }}
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 

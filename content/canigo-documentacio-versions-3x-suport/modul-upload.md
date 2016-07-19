@@ -2,7 +2,7 @@
 date        = "2015-03-27T13:52:15+01:00"
 title       = "Pujada d'arxius"
 description = "Pujada d'arxius al servidor."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 5
 +++
 

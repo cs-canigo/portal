@@ -2,7 +2,7 @@
 date        = "2015-03-12T16:50:25+01:00"
 title       = "Mòdul d'excepcions"
 description = "Mòdul per a la gestió d'Errors"
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 4
 +++
 

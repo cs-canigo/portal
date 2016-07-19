@@ -2,7 +2,7 @@
 date        = "2015-03-27T09:26:16+01:00"
 title       = "JPA"
 description = "Mòdul de persistència de Base de Dades."
-section     = "Documentació versió 3.x"
+section     = "Canigó. Documentació versió 3.x"
 weight      = 2
 +++
 

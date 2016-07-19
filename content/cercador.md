@@ -3,42 +3,52 @@ date        = "2015-01-27"
 title       = "Cercador"
 description = ""
 +++
+<link href="/css/cercador.css" rel="stylesheet" type="text/css" />
 
 <section class="rslt" id="cercador_text">
 
 <div class="column hidden-xs ">
-	<p class="txt_result count_resultats"></p>	
+	<p id="stats" class="txt_result count_resultats"></p>	
 </div>
 
 <div class="row">
-	<div class="llistat_destacat_text col-md-12 col-xs-12 column ">
-			<div class="ajax_loader">
-				<img src="/img/ajax_loader.gif" alt="" style="width:32px" />
-			</div>
-			<ul id="resultats" class="llistat_destacat_text_cont list-group">
+		    <div id="left-column" class="col-xs-12 col-md-4">
+		      <div id="tags" class="facet"></div>
+		    </div>
 
-			</ul>
+		    <div id="hits" class="list-group col-xs-12 col-md-8">
+		    	
+		    </div>
 
 			<div class="column paginacio">
-				<ul class="pagination">	
-
-				</ul>	
+		      <div id="pagination"></div>
 			</div>	
-	</div>	
 </div>
 
 </section>
 
-<div id="template_result" class="hidden">
-	<div class="destacat_text_cont">
-		<h2>
-			<a href="#">{{title}}</a>
-		</h2>
-	
-		<p>
-			{{description}}
-		</p>
+<!-- TEMPLATES -->
+<script type="text/html" id="hit-template">
+	<div class="destacat_text list-group-item">
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <p>
+        	{{description}}
+        </p>
 	</div>
-</div>
+</script>
 
-<script src="/js/cercador.js"></script>
+<script type="text/html" id="no-results-template">
+	<div id="no-results-message">
+	  <p>No s'han trobat resultats per a la cerca <em>"{{query}}"</em>.</p>
+	  <!--a href="." class='clear-all'>Neteja la cerca</a-->
+	</div>
+</script>
+
+<script type="text/html" id="stats-template">
+  S'han trobat <b>{{nbHits}}</b> resultats
+</script>
+<!-- /TEMPLATES -->
+
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<!--script src="/js/cercador.js"></script-->
+<script src="/js/algolia-search.js"></script>

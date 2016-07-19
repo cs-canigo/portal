@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Migració de SACE a GICAR"
 description = ""
-section     = ""
+section     = "GICAR"
 taxonomies  = []
 weight 		= 7
 +++

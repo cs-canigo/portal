@@ -2,7 +2,7 @@
 date        = "2015-06-26"
 title       = "Formularis"
 description = "Formularis de SIC"
-section     = "Documentació SIC"
+section     = "SIC"
 +++
 
 
