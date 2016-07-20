@@ -1,8 +1,12 @@
 #stats{margin-bottom:2em;}
-/* HITS */
 
+/* HITS */
 .highlight_hit{
   background-color: #f7ffd9; 
+}
+
+#hits img{
+  max-width:100%;
 }
 
 #hits div .destacat_text_cont h2{
