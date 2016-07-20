@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>PSGD</title>
+	<title>ARESTA (PSGD)</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
 	<script>
-		document.write("<meta name=\"titol\" content=\"PSGD\" />");
+		document.write("<meta name=\"titol\" content=\"ARESTA (PSGD)\" />");
 		document.write("<meta name=\"description\" content=\"Plataforma de Serveis de Gestió Documental\" />");
 	</script>
 
@@ -278,7 +278,7 @@
 									</li>
 									
 									<li>
-										PSGD
+										ARESTA (PSGD)
 									</li>
 									
 
@@ -286,7 +286,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										PSGD
+										ARESTA (PSGD)
 									
 								</h1>
 
@@ -322,11 +322,11 @@
 
 <h2 id="introducció:f6744d163be9db10c17551bf369aa217">Introducció</h2>
 
-<p>L&rsquo;objectiu d&rsquo;aquest connector és proporcionar un punt d&rsquo;accés cap a la Plataforma de Serveis de Gestió Documental.</p>
+<p>L&rsquo;objectiu d&rsquo;aquest connector és proporcionar un punt d&rsquo;accés cap a la Plataforma de Serveis de Gestió Documental (PSGD) també coneguda com a ARESTA.</p>
 
 <h2 id="propòsit:f6744d163be9db10c17551bf369aa217">Propòsit</h2>
 
-<p>El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l&rsquo;ús de la Plataforma de Serveis de Gestió Documental.</p>
+<p>El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l&rsquo;ús de la PSGD.</p>
 
 <h2 id="context-i-escenaris-d-ús:f6744d163be9db10c17551bf369aa217">Context i Escenaris d&rsquo;ús</h2>
 
@@ -466,7 +466,7 @@ private PsgdConnectorImpl psgdConnector;
 
 <pre><code class="language-java">
  Document document = new Document();
-             
+	         
  DocumentMetaData documentMetaData = new DocumentMetaData();
  
  documentMetaData.setDocumentName(&quot;prova.txt&quot;);
@@ -543,7 +543,7 @@ result.getResult().getResultData().getData().writeTo(outputStream);
 <p>Al fitxer Log4j.xml s&rsquo;ha de posar a debug la classe: cat.gencat.ctti.canigo.arch.integration.psgd.utils.LoggingRequestInterceptor</p>
 
 <pre><code class="language-xml">&lt;category name=&quot;cat.gencat.ctti.canigo.arch.integration.psgd.utils&quot;&gt;
-    &lt;level value=&quot;debug&quot;/&gt;
+	&lt;level value=&quot;debug&quot;/&gt;
 &lt;/category&gt;
 </code></pre>
 
