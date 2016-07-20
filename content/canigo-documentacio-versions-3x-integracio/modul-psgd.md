@@ -1,6 +1,6 @@
 +++
 date        = "2015-03-19T17:42:01+01:00"
-title       = "PSGD"
+title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 section     = "Canigó. Documentació versió 3.x"
 weight      = 17
@@ -8,11 +8,11 @@ weight      = 17
 
 ## Introducció
 
-L'objectiu d'aquest connector és proporcionar un punt d'accés cap a la Plataforma de Serveis de Gestió Documental.
+L'objectiu d'aquest connector és proporcionar un punt d'accés cap a la Plataforma de Serveis de Gestió Documental (PSGD) també coneguda com a ARESTA.
 
 ## Propòsit
 
-El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l'ús de la Plataforma de Serveis de Gestió Documental.
+El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l'ús de la PSGD.
 
 ## Context i Escenaris d'ús
 
