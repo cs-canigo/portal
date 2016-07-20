@@ -53,7 +53,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -79,7 +79,7 @@
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -318,7 +318,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,11 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/">Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</a> (06-07-2016)
+			<p>Publicació de la documentació del Container Cloud al web d&#39;arquitectura<br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/">SIC. Suport a MySQL i Microsoft SQL SERVER</a> (04-07-2016)
 			<p>Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d&#39;executar scripts DDL i DML d&#39;aquestes bases de dades.<br /><br /></p>
@@ -393,11 +398,6 @@
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-03-01-Canigo-Connector-PSGD/">Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)</a> (01-03-2016)
 			<p>S&#39;ha publicat un nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (en endavant PSGD). El propòsit del connector és proporcionar una interfície Java per accedir als serveis exposats per la PSGD.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-02-10-SIC-Canvis-peticions-desplegaments-jobs-PRE-PRO/">Canvi al sistema d&#39;obertura de peticions als jobs de desplegament a PRE/PRO de SIC</a> (10-02-2016)
-			<p>Fins el moment, les peticions de desplegament a entorns PRE/PRO que es demanaven mitjançant jobs de Jenkins SIC seguien l&#39;antic model d&#39;obertura de peticions: correu a la bústia de SAU. Amb l&#39;entrada de Remedy, el mecanisme per a demanar desplegaments ha canviat.<br /><br /></p>
 		</li>
 	    
 	</ul>

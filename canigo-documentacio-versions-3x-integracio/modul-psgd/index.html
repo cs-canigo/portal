@@ -55,7 +55,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -81,7 +81,7 @@
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -352,7 +352,7 @@
 
 <tbody>
 <tr>
-<td><a href="/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.3.pdf">PSGD Manual Integració</a>.</td>
+<td><a href="/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.5.pdf">PSGD Manual Integració</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -388,7 +388,7 @@
 
 <p>Es pot trobar el codi font i binaris referent a aquest component a la següent url:</p>
 
-<p><a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/</a></p>
+<p><a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/</a></p>
 
 <h3 id="requeriments:f6744d163be9db10c17551bf369aa217">Requeriments</h3>
 
@@ -402,7 +402,7 @@
 
 <p>En el pom.xml;</p>
 
-<pre><code>&lt;canigo.integration.psgd.version&gt;[1.0.0,1.1.0)&lt;/canigo.integration.psgd.version&gt;
+<pre><code>&lt;canigo.integration.psgd.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.psgd.version&gt;
 ...
 
 &lt;!-- Dependencia del mòdul PSGD --&gt;
@@ -470,11 +470,11 @@ private PsgdConnectorImpl psgdConnector;
  DocumentMetaData documentMetaData = new DocumentMetaData();
  
  documentMetaData.setDocumentName(&quot;prova.txt&quot;);
- documentMetaData.setDocumentDepartmentUnitID(&quot;Departament&quot;);
- documentMetaData.setDocumentTypeName(&quot;TD01-001&quot;);
+ documentMetaData.setDocumentTypeCode(&quot;TD01-010&quot;);
  documentMetaData.setTitle(&quot;Prova&quot;);
- documentMetaData.setOrganName(&quot;organ&quot;);
  documentMetaData.setCreatorID(&quot;canigo&quot;);
+ documentMetaData.setDocumentDescriptor(&quot;descriptor&quot;);
+ documentMetaData.setOrigin(&quot;0&quot;);
 
  InputStream documentData = new FileInputStream(&quot;pathfitxer&quot;)
  

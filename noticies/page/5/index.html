@@ -53,7 +53,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -79,7 +79,7 @@
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -318,7 +318,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,11 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2014-12-09-connectors-canigo/">Canigó. Publicació serveis i connectors Canigó 3.1</a> (09-12-2014)
+			<p>Al mes de Novembre s&#39;han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s&#39;especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d&#39;ells. <br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-02-SIC-transformacio-servei/">SIC. Transformació del servei</a> (02-12-2014)
 			<p>El passat 13/11 es va efectuar la transformació del servei SIC al CPD1-HP. En el següent diagrama es mostren els components més rellevants de la capa d&#39;aplicacions i com es realitza la redirecció dels dominis cap als servidors del SIC<br /><br /></p>

@@ -6,7 +6,16 @@
     <language>ca-Es</language>
     
     
-    <updated>Mon, 04 Jul 2016 00:00:00 UTC</updated>
+    <updated>Wed, 06 Jul 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</guid>
+      <description>Publicació de la documentació del Container Cloud al web d&#39;arquitectura</description>
+    </item>
     
     <item>
       <title>SIC. Suport a MySQL i Microsoft SQL SERVER</title>
@@ -132,15 +141,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/</guid>
       <description>Neix a SIC un nou tipus d&#39;usuari: Gestor de peticions a SAU-Remedy. Aquest tipus d&#39;usuari pretén flexibilitzar el sistema d&#39;autorització de peticions de SIC afegint un nou conjunt d&#39;usuaris autoritzats per a poder demanar certs tipus de peticions de suport de FRAMEWORK SIC a SAU- Remedy.</description>
-    </item>
-    
-    <item>
-      <title>SIC. Sistema d&#39;autoritzacions de peticions FRAMEWORK SIC a SAU-Remedy</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2015-12-18-SIC-Sistema-autoritzacions-peticions/</link>
-      <pubDate>Fri, 18 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-18-SIC-Sistema-autoritzacions-peticions/</guid>
-      <description>L&#39;admissió de peticions al servei FRAMEWORK SIC de SAU-Remedy es troba restringit per un sistema de rols d&#39;usuari que determina quines operacions pot demanar cada rol. Aquest article pretén explicar com es realitza aquesta discriminació.</description>
     </item>
     
     

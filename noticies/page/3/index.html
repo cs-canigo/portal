@@ -53,7 +53,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -79,7 +79,7 @@
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -318,7 +318,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,11 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-10-27-Canigo-Adaptacio-al-PIV/">Canigó. Adaptació al PIV de Gencat</a> (27-10-2015)
+			<p>L&#39;adaptació al PIV de Gencat és un requeriment per moltes aplicacions. L&#39;estratègia a seguir per les aplicacions Canigó depèn de la versió en què estigui implementada.<br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-10-05-SIC-Bones-practiques-desplegaments-INT/">SIC. Bones pràctiques per a no interferir en els mecanismes de SIC quan s’accedeix manualment a la consola d’administració del servidor d’aplicacions</a> (07-10-2015)
 			<p>Una de les funcionalitats més destacades del SIC és el desplegament automàtic d&#39;aplicacions en entorns d&#39;INT. Amb l&#39;experiència adquirida fins ara en els nous CPDs, des de l&#39;equip del SIC recomanem una sèrie de bones pràctiques per tal d&#39;evitar que actuacions alienes al SIC puguin interferir en el correcte funcionament d&#39;aquests desplegaments automatitzats.<br /><br /></p>
@@ -393,11 +398,6 @@
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-05-29-SIC-Upgrade-SVN/">SIC. Upgrade versió Subversion al SIC</a> (29-05-2015)
 			<p>En breu s&#39;actualitzarà la versió de SVN del servidor de SIC, passant d&#39;una 1.6.11 a una 1.8.13. Aquesta actualització comportarà una sèrie de millores en rendiment, robustesa i seguretat al SVN de SIC.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-30-SIC-Master-Slave-CPD4/">SIC. Multi-CPD - Desplegaments a CPD4-TSystems</a> (30-04-2015)
-			<p>El SIC - Multi CPD basat en l&#39;arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.<br /><br /></p>
 		</li>
 	    
 	</ul>

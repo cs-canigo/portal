@@ -53,7 +53,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -79,7 +79,7 @@
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -318,7 +318,7 @@
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,11 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-30-SIC-Master-Slave-CPD4/">SIC. Multi-CPD - Desplegaments a CPD4-TSystems</a> (30-04-2015)
+			<p>El SIC - Multi CPD basat en l&#39;arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.<br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-24-SIC%20-publicacio-antivirus/">Canigó. Nova versió del connector Antivirus</a> (24-04-2015)
 			<p>S&#39;han publicat noves versions del connector d&#39;Antivirus de Canigó 3 i Canigó 2. El funcionament d&#39;aquestes versions, 1.2.0 i 2.3.21-SNAPSHOT respectivament, ha estat certificat amb la versió 7.5 de l&#39;API de Symantec corresponent a la versió instal·lada per el nou Antivirus corporatiu. Cal destacar els canvis de dominis realitzats en la transformació del servei d&#39;Antivirus. Les aplicacions han de fer canvis a la seva configuració per accedir-hi.<br /><br /></p>
@@ -393,11 +398,6 @@
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-01-09-SIC-nou-model/">SIC. Calendari de migració d&#39;aplicacions al nou model</a> (08-01-2015)
 			<p>Tal com es va notificar al comunicat de Novembre 2014 aviat començarà la migració d&#39;aplicacions per adaptar-se al nou model TIC. Per organitzar aquest procés de migració s&#39;ha elaborat un calendari i s&#39;ha publicat a la plana principal del SVN del SIC, secció &#34;Calendari de migració d&#39;aplicacions al SIC&#34;<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2014-12-09-connectors-canigo/">Canigó. Publicació serveis i connectors Canigó 3.1</a> (09-12-2014)
-			<p>Al mes de Novembre s&#39;han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s&#39;especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d&#39;ells. <br /><br /></p>
 		</li>
 	    
 	</ul>

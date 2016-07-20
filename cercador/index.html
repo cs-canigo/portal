@@ -55,7 +55,7 @@
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
  						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -188,9 +188,9 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="searchResults(true); return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
 									<div class="form-group">
-										<input type="search" name="query" id="query"
+										<input type="search" name="q" id="query"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control"  placeholder="Cerca..." /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -248,7 +248,13 @@
     <div class="destacat_text list-group-item">
         <h2><a href="{{path}}">{{title}}</a></h2>
         <p>
+            {{#description}}
             {{description}}
+            {{/description}}
+
+            {{^description}}
+            {{{content}}}
+            {{/description}}
         </p>
     </div>
 </script>
@@ -265,6 +271,7 @@
 </script>
 <!-- /TEMPLATES -->
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <!--script src="/js/cercador.js"></script-->
 <script src="/js/algolia-search.js"></script>
