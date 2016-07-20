@@ -21,4 +21,8 @@ git add -A
 git commit -m "new version"
 git push origin master --force
 
+# Actualitzem index algolia
+cd ../web-canigo-algolia
+node index-algolia.js
+
 echo -e '\n'
