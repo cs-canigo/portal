@@ -1,5 +1,6 @@
 var converter = new showdown.Converter();
 
+
 /* global instantsearch */
 app({
   appId: 'EWLW9DD0B6',
