@@ -1,6 +1,21 @@
 var converter = new showdown.Converter();
 converter.setOption('tables', true);
 
+function replaceHighLight(content){
+  var matches = content.match(/\]\(.*?(<span class="highlight_hit">(.*)<\/span>).*?\)/g);
+  if(!matches){
+      return content;
+  }
+  var highlight = /<span class="highlight_hit">(.*)<\/span>/;
+  var highmatches;
+  for(var i=0,z=matches.length;i<z;i++){
+    highmatches = highlight.exec(matches[i])
+    console.log(matches[i] + " " + highmatches[0])
+    content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
+  }
+  return content;
+}
+
 /* global instantsearch */
 app({
   appId: 'EWLW9DD0B6',
@@ -39,6 +54,7 @@ function app(opts) {
       },
       transformData : function(item){
         item.content = converter.makeHtml(item.content);
+        item._highlightResult.content.value = converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
         return item; 
       }      
     })

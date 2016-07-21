@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "How to"
 description = "Normes aplicables al desenvolupament d'aplicacions"
-section     = "Documentació Canigó"
+section     = "How to"
 taxonomies  = []
 weight 		= 4
 +++
@@ -13,23 +13,23 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
-- [Canigó - Contenidor GICAR en entorns de desenvolupament] (/related/canigo/howto/Canigo - Howto - Contenidor GICAR en entorns de desenvolupament.pdf)
-- [Canigó - Incorporació mòdul Administració de logs a aplicació Canigó] (/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicacio Canigo 3.pdf)
-- [Canigó - Anàlisi aplicació Canigó amb Sonar] (/related/canigo/howto/Canigo - Analisi aplicacio Canigo amb Sonar.pdf)
-- [Canigó - Websockets a Canigó 3.1] (/related/canigo/howto/Canigo - Websockets a Canigo 3.1.pdf)
-- [Canigó - Streaming de fitxers en clients REST] (/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf)
-- [Canigó - Actualització connectors amb la PICA] (/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf)
-- [Canigó - Execució demo Equipaments al nou Entorn de Treball] (/related/canigo/howto/Canigo - HowTo - Execucio demo Equipaments al nou Entorn de Treball.pdf)
+- [Canigó - Contenidor GICAR en entorns de desenvolupament](/related/canigo/howto/Canigo - Howto - Contenidor GICAR en entorns de desenvolupament.pdf)
+- [Canigó - Incorporació mòdul Administració de logs a aplicació Canigó](/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicacio Canigo 3.pdf)
+- [Canigó - Anàlisi aplicació Canigó amb Sonar](/related/canigo/howto/Canigo - Analisi aplicacio Canigo amb Sonar.pdf)
+- [Canigó - Websockets a Canigó 3.1](/related/canigo/howto/Canigo - Websockets a Canigo 3.1.pdf)
+- [Canigó - Streaming de fitxers en clients REST](/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf)
+- [Canigó - Actualització connectors amb la PICA](/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf)
+- [Canigó - Execució demo Equipaments al nou Entorn de Treball](/related/canigo/howto/Canigo - HowTo - Execucio demo Equipaments al nou Entorn de Treball.pdf)
 - [Canigó - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5](/related/canigo/howto/Canigo - HowTo - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5.pdf)
-- [SIC - Custodia i control de vesions del codi de les aplicacions] (/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
-- [Canigó - Generació aplicació Canigó 3.1 amb plugin Eclipse] (/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf)
-- [Canigó - Aplicació Canigó 3.1 sense frontend] (/related/canigo/howto/Canigo - HowTo - Aplicacio Canigo 3.1 sense frontend.pdf)
-- [Canigó - Ús de relacions Lazy en aplicacions REST] (/related/canigo/howto/Canigo - Us de relacions Lazy en aplicacions REST.pdf)
-- [Configuració GICAR i CORS amb proxy invers Apache en aplicacions REST+HTML5/JS] (/related/canigo/howto/Canigó - Configuració GICAR-CORS amb Apache en aplicacions REST_HTML5_JS.pdf)
-- [Configuració autenticació bàsica a Canigó 3.1] (/related/canigo/howto/Canigó - Configuració autenticació bàsica a Canigó 3.1.pdf)
-- [Integració Recaptcha] (/related/canigo/howto/Canigó - Howto - Integració Recaptcha.pdf)
-- [Configuració de Canigo LOPD] (/related/canigo/howto/Canigó - Howto - Configuració de Canigo LOPD.pdf)
-- [Us checkstyle pmd i findbugs en entorns de desenvolupament] (/related/canigo/howto/Canigó - Howto - Us checkstyle pmd i findbugs en entorns de desenvolupament.pdf)
+- [SIC - Custodia i control de vesions del codi de les aplicacions](/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
+- [Canigó - Generació aplicació Canigó 3.1 amb plugin Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf)
+- [Canigó - Aplicació Canigó 3.1 sense frontend](/related/canigo/howto/Canigo - HowTo - Aplicacio Canigo 3.1 sense frontend.pdf)
+- [Canigó - Ús de relacions Lazy en aplicacions REST](/related/canigo/howto/Canigo - Us de relacions Lazy en aplicacions REST.pdf)
+- [Configuració GICAR i CORS amb proxy invers Apache en aplicacions REST+HTML5/JS](/related/canigo/howto/Canigó - Configuració GICAR-CORS amb Apache en aplicacions REST_HTML5_JS.pdf)
+- [Configuració autenticació bàsica a Canigó 3.1](/related/canigo/howto/Canigó - Configuració autenticació bàsica a Canigó 3.1.pdf)
+- [Integració Recaptcha](/related/canigo/howto/Canigó - Howto - Integració Recaptcha.pdf)
+- [Configuració de Canigo LOPD](/related/canigo/howto/Canigó - Howto - Configuració de Canigo LOPD.pdf)
+- [Us checkstyle pmd i findbugs en entorns de desenvolupament](/related/canigo/howto/Canigó - Howto - Us checkstyle pmd i findbugs en entorns de desenvolupament.pdf)
 - [Actualització Canigó 3.0 a Canigó 3.1](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Actualitzacio+Canig%C3%B3+3.0+a+Canigo+3.1.pdf)
 - [Configuració plantilla canigó amb Primefaces](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Plantilla+Canigo+amb+Primefaces.pdf)
 - [Configuració scope view JSF a Spring 3](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Configuraci%C3%B3+scope+view+JSF+a+Spring+3.pdf)

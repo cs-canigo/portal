@@ -36,7 +36,7 @@ description = ""
         	{{/description}}
 
         	{{^description}}
-        	{{{content}}}
+        	{{{_highlightResult.content.value}}}
         	{{/description}}
         </p>
 	</div>
