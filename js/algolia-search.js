@@ -1,4 +1,5 @@
 var converter = new showdown.Converter();
+converter.setOption('tables', true);
 
 /* global instantsearch */
 app({
@@ -57,6 +58,8 @@ function app(opts) {
       container: '#pagination',
       autoHideContainer: true,
       scrollTo: '#query',
+      showFirstLast : false,  
+      maxpages : 10,
       labels: {
         previous : "anterior",
         next : "següent",
@@ -67,8 +70,7 @@ function app(opts) {
         first : "hidden-xs",
         last : "hidden-xs",
         page : "hidden-xs"
-      },
-      autoHideContainer : true
+      }
     })
 
   );
