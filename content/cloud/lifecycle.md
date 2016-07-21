@@ -7,7 +7,7 @@ weight      = 3
 categories  = []
 +++
 
-Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper esencial, ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
+Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper essencial, ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
 
 Expliquem, des d'un inici, quines són les passes que segueix una aplicació fins a arribar a executar-se en el Container Cloud:
 
@@ -33,7 +33,7 @@ Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements ut
 
 Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d'aquest "espai/entorn" temporal s'eliminaran després de cert temps d'inactivitat o després d'un temps d'expiració.
 
-Per els desplegaments a l'entorn de PROducció s'aplicarà l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html). Els contenidors "antics" s'eliminaran.
+Per als desplegaments a l'entorn de PROducció s'aplicarà l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html). Els contenidors "antics" s'eliminaran.
 
   
   
