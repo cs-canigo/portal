@@ -7,8 +7,6 @@ weight      = 3
 categories  = []
 +++
 
-_<span style='color:red;'>DRAFT</span>_
-
 Gràcies a l'ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d'Integració Continua) té un paper esencial, ja que és l'encarregat de proporcionar els processos per assolir aquesta automatització.
 
 Expliquem, des d'un inici, quines són les passes que segueix una aplicació fins a arribar a executar-se en el Container Cloud:
