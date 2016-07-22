@@ -10,7 +10,6 @@ function replaceHighLight(content){
   var highmatches;
   for(var i=0,z=matches.length;i<z;i++){
     highmatches = highlight.exec(matches[i])
-    console.log(matches[i] + " " + highmatches[0])
     content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
   }
   return content;
@@ -54,7 +53,12 @@ function app(opts) {
       },
       transformData : function(item){
         item.content = converter.makeHtml(item.content);
-        item._highlightResult.content.value = converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
+        if(item._highlightResult && item._highlightResult.content){
+          item._highlightResult.content.value = converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
+        }
+        if(item._snippetResult && item._snippetResult.content){
+          item._snippetResult.content.value = converter.makeHtml(replaceHighLight(item._snippetResult.content.value));
+        }
         return item; 
       }      
     })
