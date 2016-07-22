@@ -1,3 +1,11 @@
++++
+date        = "2015-03-31"
+title       = "Nou model TIC al SIC"
+description = ""
+section     = "SIC"
+weight      = 1
++++
+
 ### Nou model TIC al SIC
 
 La implantació del nou model TIC al SIC ha consistit en:
