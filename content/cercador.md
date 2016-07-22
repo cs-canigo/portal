@@ -31,6 +31,7 @@ description = ""
 <script type="text/html" id="hit-template">
 	<div class="destacat_text list-group-item">
         <h2><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h2>
+        <div class="block-with-text">
         	{{#description}}
         	{{{_highlightResult.description.value}}}
         	{{/description}}
@@ -38,7 +39,7 @@ description = ""
         	{{^description}}
         	{{{_highlightResult.content.value}}}
         	{{/description}}
-        </p>
+        </div>
 	</div>
 </script>
 

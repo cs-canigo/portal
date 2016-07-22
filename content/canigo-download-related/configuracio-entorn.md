@@ -5,6 +5,3 @@ description = ""
 section     = "Canigó"
 weight      = 1
 +++
-
-### Configuració Entorn Desenvolupament
-
