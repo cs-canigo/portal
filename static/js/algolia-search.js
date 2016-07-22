@@ -2,18 +2,25 @@ var converter = new showdown.Converter();
 converter.setOption('tables', true);
 
 function replaceHighLight(content){
-  var matches = content.match(/\]\(.*?(<span class="highlight_hit">(.*)<\/span>).*?\)/g);
-  if(!matches){
-      return content;
-  }
-  var highlight = /<span class="highlight_hit">(.*)<\/span>/;
-  var highmatches;
-  for(var i=0,z=matches.length;i<z;i++){
-    highmatches = highlight.exec(matches[i])
-    content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
-  }
+  var matches;
+
+  do{
+    matches = content.match(/\]\(.*?(<span class="highlight_hit">(.*?)<\/span>).*?\)/g);
+    if(!matches){
+        return content;
+    }
+    var highlight = /<span class="highlight_hit">(.*?)<\/span>/g;
+    var highmatches;
+    for(var i=0,z=matches.length;i<z;i++){
+      highmatches = highlight.exec(matches[i]);
+      if(highmatches)
+      content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
+    }
+  }while(matches!=null) 
+
   return content;
 }
+
 
 /* global instantsearch */
 app({
