@@ -1,6 +1,6 @@
 #stats{margin-bottom:2em;}
 
-/*
+/* HIDE LONG TEXT */
 
 /* styles for '...' */ 
 .block-with-text {
@@ -44,7 +44,6 @@
   background: white;
 }
 
-*/
 
 /* HITS */
 .highlight_hit{
