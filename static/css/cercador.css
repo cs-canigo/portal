@@ -17,6 +17,7 @@
   /* place for '...' */
   margin-right: -1em;
   padding-right: 1em;
+  font-size:.8em;
 }
 /* create the ... */
 .block-with-text:before {
