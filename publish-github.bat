@@ -40,4 +40,6 @@ rem Actualitzem index algolia
 cd ../web-canigo-algolia
 node index-algolia-partial.js
 
+
+
 pause
