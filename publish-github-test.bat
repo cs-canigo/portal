@@ -18,6 +18,7 @@ rem Fem el commit i el push dels fonts
 git add -A >nul
 git commit -m "new version" >nul
 rem Actualitzem fitxer de canvis per a indexar
+git status --s 
 git status --s > ../web-canigo-algolia/commit.txt
 git push
 
@@ -36,6 +37,6 @@ rem git push origin master --force
 
 rem Actualitzem index algolia
 cd ../web-canigo-algolia
-node index-algolia-partial.js
+node "index-algolia-partial.js"
 
 pause
