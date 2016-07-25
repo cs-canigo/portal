@@ -15,7 +15,7 @@ rem Actualitzem els canvis que hagin pogut fer els companys
 git pull >nul
 
 rem Actualitzem fitxer de canvis per a indexar
-git status --s 
+rem git status --s 
 git status --s > ../web-canigo-algolia/commit.txt
 
 rem Fem el commit i el push dels fonts
