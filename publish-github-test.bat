@@ -36,6 +36,6 @@ rem git push origin master --force
 
 rem Actualitzem index algolia
 cd ../web-canigo-algolia
-node index-algolia.js
+node index-algolia-partial.js
 
 pause
