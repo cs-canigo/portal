@@ -1,6 +1,27 @@
 var converter = new showdown.Converter();
 converter.setOption('tables', true);
 
+function replaceHighLight(content){
+  var matches;
+
+  do{
+    matches = content.match(/\]\(.*?(<span class="highlight_hit">(.*?)<\/span>).*?\)/g);
+    if(!matches){
+        return content;
+    }
+    var highlight = /<span class="highlight_hit">(.*?)<\/span>/g;
+    var highmatches;
+    for(var i=0,z=matches.length;i<z;i++){
+      highmatches = highlight.exec(matches[i]);
+      if(highmatches)
+      content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
+    }
+  }while(matches!=null) 
+
+  return content;
+}
+
+
 /* global instantsearch */
 app({
   appId: 'EWLW9DD0B6',
@@ -39,6 +60,12 @@ function app(opts) {
       },
       transformData : function(item){
         item.content = converter.makeHtml(item.content);
+        if(item._highlightResult && item._highlightResult.content){
+          item._highlightResult.content.value = converter.makeHtml(replaceHighLight(item._highlightResult.content.value));
+        }
+        if(item._snippetResult && item._snippetResult.content){
+          item._snippetResult.content.value = converter.makeHtml(replaceHighLight(item._snippetResult.content.value));
+        }
         return item; 
       }      
     })
