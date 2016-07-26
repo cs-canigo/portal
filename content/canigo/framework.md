@@ -1,5 +1,5 @@
 +++
-date        = "2016-05-08"
+date        = "2016-05-10"
 title       = "Framework Canigó"
 description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
 section     = "Canigó"
