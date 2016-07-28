@@ -48,10 +48,13 @@ autocomplete('#cerca2', {hint: false}, [
   templates: {
     suggestion: function(suggestion) {
       return suggestion._highlightResult.title.value;
+    },
+    footer: function(){
+    	return "<p>&nbsp;</p>";
     }
   }
 }
 ]).on('autocomplete:selected', function(event, suggestion, dataset) {
-	//console.log(suggestion._highlightResult.title.value);
+    console.log(suggestion, dataset);
 	window.location.replace(suggestion.path);
 });
