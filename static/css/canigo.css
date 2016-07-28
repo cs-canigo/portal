@@ -294,3 +294,6 @@ tr.head_row td + td {
   font-style: normal;
 }
 
+.aa-suggestion .highlight_hit{
+  background-color: #BA9EB0; 
+}

@@ -4,7 +4,7 @@ title       = "Arquitectures tipus"
 description = "Exemples d'arquitectures"
 section     = "Container Cloud"
 weight      = 3
-toc 		= true
+toc 	    = true
 categories  = ["cloud","docker","container","paas"]
 +++
 
