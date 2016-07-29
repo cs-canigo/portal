@@ -12,7 +12,7 @@ Per motius històrics diverses aplicacions de la Generalitat fan encara l’ús 
 
 Aquest apartat pretén donar unes directrius bàsiques sobre com abordar la migració d’una aplicació web integrada amb SACE vers GICAR. Es començarà explicant com s’integren actualment les aplicacions amb el SACE, i a continuació s’exposarà quin és el mecanisme que es proposa per a migrar l’autenticació a GICAR.
 
-- 3.10.1.	Funcionament actual de l’autenticació de les aplicacions amb el SACE
+## Funcionament actual de l’autenticació de les aplicacions amb el SACE
 
 La manera d’integrar-se amb el SACE, consistia en fer una crida HTTPS a una adreça, passant com a informació un fitxer XML, que de sortida contindrà les dades requerides.
 
@@ -41,7 +41,7 @@ Esquemàticament l’aplicació està funcionant ara mateix de la següent maner
 
 ![Integració Aplicacions GICAR](/related/gicar/sacejsp.png)
 
-- 3.10.2.	Proposta de canvi de migració de SACE cap a GICAR
+## Proposta de canvi de migració de SACE cap a GICAR
 
 A continuació es descriu una estratègia orientada a la substitució del SACE per GICAR per a les aplicacions que utilitzen SACE. Comentar que l’estratègia que es descriu a continuació és la recomanada per a fer aquest tipus de migracions de SACE a GICAR, però no és la forma recomanada per a realitzar les intragracions amb GICAR per una aplicació que es construeixi des de 0.
 

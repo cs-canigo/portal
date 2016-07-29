@@ -19,7 +19,7 @@ var _indexDir = "../web-canigo/";
 var indexSetup = {
 	"dir" : "../web-canigo/content/",
 	"index_empty_content" : true,
-	"excludeIfProps" : ["enllac"],
+	"excludeIfProps" : ["enllac","no_index"],
 	"excludes" : [
 		"/documentacio/shibboleth",
 		"/drafts",
