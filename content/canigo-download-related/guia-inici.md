@@ -4,6 +4,7 @@ title       = "Guia d'inici per a Canigó 3.x"
 description = ""
 section     = "Canigó"
 weight      = 1
+no_index    = true
 +++
 
 ### Introducció

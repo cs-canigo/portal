@@ -4,6 +4,7 @@ title       = "Configuració Entorn Desenvolupament"
 description = ""
 section     = "Canigó"
 weight      = 1
+no_index    = true
 +++
 
 ### Software recomanat pel Centre de Suport
