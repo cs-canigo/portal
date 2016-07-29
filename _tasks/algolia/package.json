@@ -1,0 +1,10 @@
+{
+  "name": "index2algolia",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index-algolia.js",
+  "dependencies": {
+    "markdown2json": "*",
+    "algoliasearch": "^3.17.0"
+  }
+}

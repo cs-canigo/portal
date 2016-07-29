@@ -33,7 +33,6 @@ git commit -m "new version" >nul
 git push origin master --force
 
 rem Actualitzem index algolia
-cd ../web-canigo-algolia
-node index-algolia.js
+node _tasks/algolia/index-algolia.js
 
 pause
