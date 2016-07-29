@@ -21,11 +21,8 @@ var indexSetup = {
 	"index_empty_content" : true,
 	"excludeIfProps" : ["enllac","no_index"],
 	"excludes" : [
-		"/documentacio/shibboleth",
 		"/drafts",
-		"/comunicat",
-		"/cercador",
-		"/cercador_old"
+		"/comunicat"
 	]
 }
 

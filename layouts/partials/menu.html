@@ -51,7 +51,7 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						{{ if ne $title "cercador" }}
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
 							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
@@ -75,7 +75,7 @@
 							{{ end }}
 
 						</div>
-						{{ end }}
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">{{ .Site.Params.titol }}</span>

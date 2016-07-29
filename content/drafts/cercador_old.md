@@ -2,6 +2,7 @@
 date        = "2015-01-27"
 title       = "Cercador"
 description = ""
+no_index 	= true
 +++
 
 <section class="rslt" id="cercador_text">

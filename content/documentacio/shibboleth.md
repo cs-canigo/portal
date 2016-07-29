@@ -6,6 +6,7 @@ section     = "Documentació"
 taxonomies  = []
 toc 		= false
 weight 		= 1
+no_index	= true
 +++
 
 <style>
