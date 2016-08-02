@@ -76,7 +76,7 @@
 								</form>
 								{{end}}
 
-								{{ if eq $title "cercador" }}
+								{{ if or (eq $title "cercador") (eq $title "mòduls i versions canigó") }}
 								<!--CERCADOR-->
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
 									<div class="form-group">
