@@ -50,7 +50,7 @@ no_index 	= true
 </script>
 
 <script type="text/html" id="stats-template">
-  S'han trobat <b>{{nbHits}}</b> resultats
+  S'han trobat <b>{{nbHits}} aplicacions</b>
 </script>
 <!-- /TEMPLATES -->
 
