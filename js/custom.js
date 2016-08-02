@@ -38,3 +38,23 @@ $(function(){
 	}
 
 });
+
+var client = algoliasearch('EWLW9DD0B6', 'fb84eb986e0a351c3f12f948e3ee99b8')
+var index = client.initIndex('arquitectura');
+autocomplete('#cerca2', {hint: false}, [
+{
+  source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
+  displayKey: 'title',
+  templates: {
+    suggestion: function(suggestion) {
+      return suggestion._highlightResult.title.value;
+    },
+    footer: function(){
+    	return "<p>&nbsp;</p>";
+    }
+  }
+}
+]).on('autocomplete:selected', function(event, suggestion, dataset) {
+    console.log(suggestion, dataset);
+	window.location.replace(suggestion.path);
+});
