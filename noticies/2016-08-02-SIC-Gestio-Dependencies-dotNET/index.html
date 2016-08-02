@@ -318,11 +318,11 @@
 
 <p>Aquestes llibreries s&rsquo;instal·len als servidors i als entorns de desenvolupament i queden registrades al GAC (Global Assembly Cache) del sistema. Per tant, són llibreries que no cal incloure-les al projecte, ja que tant en l&rsquo;entorn de desenvolupament com en els entorns d&rsquo;Integració, Preproducció i Producció ja estan registrades.</p>
 
-<p>Un cop l&rsquo;aplicació s&rsquo;integra al SIC, aquest tipus de llibreries s&rsquo;han d&rsquo;incloure, ja que si no fos així, els servidors del SIC haurien de tenir totes les versions del client Oracle instal·lades per partida doble (binaris de 32 i 64 bits).</p>
+<p>Un cop l&rsquo;aplicació s&rsquo;integra al SIC, aquest tipus de llibreries s&rsquo;han d&rsquo;incloure en la gestió de dependències, ja que, si no fos així, els servidors del SIC haurien de tenir totes les versions del client Oracle instal·lades per partida doble (binaris de 32 i 64 bits) per donar suport a qualsevol aplicació.</p>
 
 <h3 id="com-funciona">Com funciona?</h3>
 
-<p>Tota dependència que s&rsquo;hagi d&rsquo;incloure a un projecte .NET es declara a l&rsquo;arxiu de projecte (<em>XXXXX.csproj</em> ó <em>XXXXX.vbproj</em>). Les llibreries que no són de sistema, queden amb un format similar al següent:</p>
+<p>Tota dependència que s&rsquo;hagi d&rsquo;incloure a un projecte .NET es declara a l&rsquo;arxiu de projecte (<em>XXXXX.csproj</em> ó <em>XXXXX.vbproj</em>). Les llibreries que no són de sistema queden amb un format similar al següent:</p>
 
 <pre><code>(...)
 &lt;Reference Include=&quot;Oracle.DataAccess, Version=4.121.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86&quot;&gt;
@@ -331,7 +331,7 @@
 (...)
 </code></pre>
 
-<p>Aquestes llibreries, s&rsquo;han de declarar com a paquets NuGet. Per tant, a l&rsquo;arxiu de gestió de dependències NuGet (generalment <em>packages.config</em>) s&rsquo;ha de declarar aquesta dependència:</p>
+<p>Aquestes llibreries s&rsquo;han de declarar com a paquets NuGet. Per tant, a l&rsquo;arxiu de gestió de dependències NuGet (generalment <code>packages.config</code>) s&rsquo;ha de declarar aquesta dependència:</p>
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;packages&gt;
@@ -340,7 +340,7 @@
 &lt;/packages&gt;
 </code></pre>
 
-<p>D&rsquo;aquesta manera es descarregarà la llibreria del repositori Nexus del SIC a la carpeta <em>/packages</em>.</p>
+<p>D&rsquo;aquesta manera es descarregarà la llibreria del repositori Nexus del SIC a la carpeta <code>/packages</code>.</p>
 
 <p>Haurem de tornar a l&rsquo;arxiu de projecte i incloure el path on s&rsquo;ha descarregat la dependència:</p>
 
@@ -352,17 +352,17 @@
 (...)
 </code></pre>
 
-<p>Per tal que l&rsquo;empaquetat de l&rsquo;aplicació continuï funcionant a l&rsquo;entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus de SIC (<a href="http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/">http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/</a>) al vostre <em>Nuget.config</em>.</p>
+<p>Per tal que l&rsquo;empaquetat de l&rsquo;aplicació continuï funcionant a l&rsquo;entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus de SIC (<a href="http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/">http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/</a>) a la configuració local (arxiu<code>Nuget.config</code>).</p>
 
-<p>Tot i així, en molts aspectes no és necessari haver d&rsquo;arribar a tant baix nivell. La comunitat .NET ofereix les següents solucions:</p>
+<p>Tot i així, en molts aspectes no és necessari haver d&rsquo;arribar a tant baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre sí):</p>
 
 <ul>
-<li>NuGet Package Explorer: Per explorar paquets NuGet i construir-los visualment.</li>
-<li>NuSpec Reference Generator: Generar dependències per a nuspec</li>
-<li>NuProj: Creador avançat de paquets NuGet amb intergació amb Visual Studio.</li>
+<li><strong>NuGet Package Explorer</strong>: Per explorar paquets NuGet i construir-los visualment.</li>
+<li><strong>NuSpec Reference Generator</strong>: Generar dependències per a nuspec</li>
+<li><strong>NuProj</strong>: Creador avançat de paquets NuGet amb intergació amb Visual Studio.</li>
 </ul>
 
-<p>Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor, no caldrà fer cap tasca adicional. Per a la resta de llibreries, com per exemple el client Oracle, caldrà facilitar-li al SIC el paquet Nuget o l&rsquo;artefacte .dll corresponent identificant l&rsquo;<em>arquitectura</em> (<strong>x86</strong> o <strong>x64</strong>), la <em>versió</em> i el <em>targetFramework</em>.</p>
+<p>Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins <em>LIB</em> no caldrà fer cap tasca adicional. Per a la resta de llibreries, com per exemple el client d&rsquo;Oracle o llibreries de proveïdors que no tenen jobs de Jenkins <em>LIB</em>, caldrà facilitar-li al SIC el paquet Nuget o l&rsquo;artefacte <code>.dll</code> corresponent identificant l&rsquo;<em>arquitectura</em> (<strong>x86</strong> o <strong>x64</strong>), la <em>versió</em> i el <em>targetFramework</em>.</p>
 
 
 					
