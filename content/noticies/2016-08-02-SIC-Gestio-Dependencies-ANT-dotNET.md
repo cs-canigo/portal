@@ -1,10 +1,9 @@
 +++
-date        = "2016-08-02"
+date        = "2015-08-02"
 title       = "SIC. Gestió de dependències per aplicacions .NET i JAVA al SIC"
 description = "El SIC ha incorporat les tecnologies ANT i .NET. Us expliquem com implementar la gestió de dependències amb aquestes tecnologies."
 section     = "Notícies"
 categories  = ["sic"]
-key         = "AGOST2016"
 +++
 
 ## Gestió de dependències al SIC

@@ -1,9 +1,11 @@
 +++
-date        = "2015-08-02"
+date        = "2016-08-02"
 title       = "SIC. Gestió de dependències per aplicacions ANT"
 description = "Procediment de gestió de dependències amb aplicacions ANT al SIC"
 section     = "Notícies"
 categories  = ["sic"]
+key         = "SETEMBRE2016"
+draft	    = true
 +++
 
 ## Gestió de dependències amb JAVA utilitzant ANT
