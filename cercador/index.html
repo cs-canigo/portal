@@ -53,9 +53,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -75,7 +75,21 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -188,9 +202,9 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="searchResults(true); return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
 									<div class="form-group">
-										<input type="search" name="query" id="query"
+										<input type="search" name="q" id="query"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control"  placeholder="Cerca..." /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -218,44 +232,67 @@
 
 					
 
-						<section class="rslt" id="cercador_text">
+						<p><link href="/css/cercador.css" rel="stylesheet" type="text/css" /></p>
+
+<section class="rslt" id="cercador_text">
 
 <div class="column hidden-xs ">
-    <p class="txt_result count_resultats"></p>  
+    <p id="stats" class="txt_result count_resultats"></p>   
 </div>
 
 <div class="row">
-    <div class="llistat_destacat_text col-md-12 col-xs-12 column ">
-            <div class="ajax_loader">
-                <img src="/img/ajax_loader.gif" alt="" style="width:32px" />
+            <div id="left-column" class="col-xs-12 col-md-4">
+              <div id="tags" class="facet"></div>
             </div>
-            <ul id="resultats" class="llistat_destacat_text_cont list-group">
 
-            </ul>
+            <div id="hits" class="list-group col-xs-12 col-md-8">
+                
+            </div>
 
             <div class="column paginacio">
-                <ul class="pagination"> 
-
-                </ul>   
+              <div id="pagination"></div>
             </div>  
-    </div>  
 </div>
 
 </section>
 
-<div id="template_result" class="hidden">
-    <div class="destacat_text_cont">
-        <h2>
-            <a href="#">{{title}}</a>
-        </h2>
-    
-        <p>
-            {{description}}
-        </p>
+<!-- TEMPLATES -->
+
+<script type="text/html" id="hit-template">
+    <div class="destacat_text list-group-item">
+        <h2><a href="{{path}}">{{{_highlightResult.title.value}}}</a></h2>
+        <div class="block-with-text">
+            {{#description}}
+            {{{_highlightResult.description.value}}}
+            {{/description}}
+
+            {{^description}}
+            {{{_highlightResult.content.value}}}
+            {{/description}}
+        </div>
     </div>
+</script>
+
+<script type="text/html" id="no-results-template">
+    <div id="no-results-message">
+      <p>No s'han trobat resultats per a la cerca <em>"{{query}}"</em>.</p>
+      <!--a href="." class='clear-all'>Neteja la cerca</a-->
+    </div>
+</script>
+
+<script type="text/html" id="stats-template">
+  S'han trobat <b>{{nbHits}}</b> resultats
+</script>
+<!-- /TEMPLATES -->
+
+<div id="logo-algolia">
+    <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" />
 </div>
 
-<script src="/js/cercador.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<!--script src="/js/cercador.js"></script-->
+<script src="/js/algolia-search.js"></script>
 
 
 					
@@ -311,6 +348,8 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

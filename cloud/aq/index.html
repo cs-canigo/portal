@@ -53,9 +53,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -75,13 +75,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -89,7 +89,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -349,20 +349,33 @@
 <ul>
 <li>Bluemix suporta la creació d&rsquo;aplicacions multicontainer mitjançant <a href="https://new-console.ng.bluemix.net/docs/containers/container_creating_ov.html#container_compose_ov">docker-compose</a></li>
 <li>A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d&rsquo;aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.</li>
+<li>A Bluemix, és necessari configurar un procés d&rsquo;espera entre els contenidors que tinguin relacions entre ells (per exemple l&rsquo;aplicació ha d&rsquo;esperar que la bbdd estigui operativa per a funcionar). Per a realitzar aquesta espera s&rsquo;utiliza el procés wait-for-it.sh. Un exemple del seu ús es pot veure al <a href="#stack-arquitectura-moderna-jee">Stack “arquitectura moderna” JEE</a></li>
 <li>En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a>.</li>
 </ul>
 
 <h2 id="stack-tradicional-jee">Stack &ldquo;tradicional&rdquo; JEE</h2>
 
+<p><img src="/related/cloud/spring.png" alt="Spring" title="Spring" /> <img src="/related/cloud/jsf.jpg" alt="JSF" title="JSF" /></p>
+
 <p>Aplicació JSF (Java Server Faces) amb context &ldquo;/AppJava&rdquo; per separació contingut estàtic i dinàmic.</p>
 
 <div class="message warning">
 <b>Avís</b>
-<br><br>
+<br>
 Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 </div>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-AppJava">Github</a>.</p>
+
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
+$ cd demo-JEE-AppJava
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-JEE-AppJava/src/main/docker&rdquo;:</p>
 
 <p><em>docker-compose.yml</em></p>
 
@@ -415,38 +428,44 @@ demo:
 <li><em>mysql-datadir</em>: directori amb les dades del MySQL. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació</li>
 </ul>
 
-<p><em>Nota: El valor nom del contenidor i el nom de domini els tria l&rsquo;usuari. Per exemple:</em><br>
-<em>ContainerHostName: dev</em><br>
-<em>AGENTNAME: a6-demoform, provademo.gencat.cat</em><br>
-<em>En cas de voler accedir per domini en comptes de localhost, s&rsquo;ha de mappejar aquest domini/ip al fitxer host</em>
-<em>(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)</em></p>
+<div class="message information">
+<b>Informació</b>
+<br>
+El valor "nom del contenidor" i el "nom de domini" els tria l'usuari. Per exemple:<br><br>
+<i>ContainerHostName</i>: dev<br>
+<i>AGENTNAME</i>: a6-demoform, provademo.gencat.cat<br><br>
+En cas de voler accedir per domini en comptes de localhost, s'ha de mappejar aquest domini/ip al fitxer host
+(En linux /etc/host, en Windows C:\Windows\System32\drivers\etc\hosts)
+</div>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
-$ cd demo-JEE-AppJava
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a <a href="http://localhost/canigoJSF">http://localhost/canigoJSF</a> i introduïr l&rsquo;usuari &ldquo;NIFDEMO&rdquo; i contrasenya &ldquo;12345678&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari l&rsquo;aplicació no respondrà.</p>
 
 <h2 id="stack-arquitectura-moderna-jee">Stack &ldquo;arquitectura moderna&rdquo; JEE</h2>
+
+<p><img src="/related/cloud/springboot.png" alt="Spring" title="Spring Boot" /> <img src="/related/cloud/resftulapi.jpg" alt="Resftul API" title="Resftul API" /> <img src="/related/cloud/htmljscss.png" alt="HTML5 JS CSS" title="HTML5 JS CSS" /></p>
 
 <p>Aplicació basada en serveis REST i presentació desacoblada</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-JEE-REST">Github</a>.</p>
 
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ cd demo-JEE-REST
+$ mvn package
+$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-JEE-REST/src/main/docker&rdquo;:</p>
+
 <p><em>docker-compose.yml</em></p>
 
-<pre><code>
-lb:
+<pre><code>lb:
  image: gencatcloud/haproxy:1.5.1
  links:
   - bookstore
@@ -471,36 +490,38 @@ bookstore:
     - 8080:8080
     - 8000:8000
   command: bash -c &quot;/wait-for-it.sh postgres:5432 -t 240 &amp;&amp; /entrypoint.sh&quot;
-
 </code></pre>
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
 <ul>
 <li>/home/canigo/demo-JEE-REST/target/: directori on es troba el war de l&rsquo;aplicació</li>
-<li>/home/canigo/demo-JEE-AppJava/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
+<li>/home/canigo/demo-JEE-REST/postgres-datadir: directori amb les dades del Postgres. Es crearà amb tot el contingut en iniciar per primera vegada l&rsquo;aplicació.</li>
 </ul>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
-$ cd demo-JEE-REST
-$ mvn package
-$ docker-compose -f ./src/main/docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./src/main/docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;.</p>
+<p>Accedir des d&rsquo;un navegador web a <a href="http://localhost/">http://localhost/</a> i introduïr l&rsquo;usuari &ldquo;admin&rdquo; i contrasenya &ldquo;admin&rdquo;. Els contenidors triguen a aixecar-se entre 30s i 60s, i per tant, cal esperar a realitzar l&rsquo;accés aquest temps ja que en cas contrari s&rsquo;obtindrà un error &ldquo;503 Service Unavailable&rdquo;.</p>
 
 <h2 id="stack-mean">Stack MEAN</h2>
+
+<p><img src="/related/cloud/stack_mean.png" alt="MEAN" title="MEAN" /></p>
 
 <p>Aplicació basada en MongoDB+Express+AngularJS+NodeJS</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-MEAN">Github</a>.</p>
+
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ cd demo-MEAN
+$ docker-compose -f ./docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-MEAN/docker&rdquo;:</p>
 
 <p><em>docker-compose.yml</em></p>
 
@@ -528,17 +549,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
-$ cd demo-MEAN
-$ docker-compose -f ./docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
+
+<p>Accedir a <a href="http://localhost:3000/">http://localhost:3000/</a>.</p>
 
 <h2 id="stack-lamp">Stack LAMP</h2>
 
@@ -547,6 +563,15 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 <p>Aplicació basada en Linux+PHP+MySQL</p>
 
 <p>Podeu trobar el codi font d&rsquo;aquesta demo a <a href="https://github.com/gencatcloud/demo-LAMP">Github</a>.</p>
+
+<p>Comandes per iniciar l&rsquo;aplicació:</p>
+
+<pre><code>$ git clone https://github.com/gencatcloud/demo-LAMP.git demo-LAMP
+$ cd demo-LAMP
+$ docker-compose -f ./docker/docker-compose.yml up -d
+</code></pre>
+
+<p>Abans d&rsquo;executar la última comanda és necessari modificar el fitxer &ldquo;docker-compose.yml&rdquo; ubicat al directori &ldquo;demo-LAMP/docker&rdquo;:</p>
 
 <p><em>docker-compose.yml</em></p>
 
@@ -573,19 +598,12 @@ demo:
 
 <p>El paths “/home/canigo/…” han d’adaptar-se als locals.</p>
 
-<p>Comandes per iniciar l&rsquo;aplicació:</p>
-
-<pre><code>$ git clone https://github.com/gencatcloud/demo-JEE-LAMP.git demo-LAMP
-$ cd demo-LAMP
-$ docker-compose -f ./docker/docker-compose.yml up -d
-</code></pre>
-
-<p>En cas de voler reconstruir les imatges cal afegir la opció &ldquo;&ndash;build&rdquo;:</p>
+<p>En cas de voler reconstruir les imatges, cal afegir la opció &ldquo;&ndash;build&rdquo; a la comanda &ldquo;docker-compose up&rdquo;:</p>
 
 <pre><code>$ docker-compose -f ./docker/docker-compose.yml up -d --build
 </code></pre>
 
-<p>Accedir a <a href="http://localhost/demo-LAMP">http://localhost/demo-LAMP</a></p>
+<p>Accedir a <a href="http://localhost/demo-LAMP/">http://localhost/demo-LAMP/</a>.</p>
 
 <h2 id="altres">Altres</h2>
 
@@ -671,6 +689,8 @@ $ docker-compose -f ./docker/docker-compose.yml up -d
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

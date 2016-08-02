@@ -51,9 +51,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -73,13 +73,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -87,7 +87,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -315,10 +315,10 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=noticies&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/noticies/'; return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,16 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-03-01-Canigo-Connector-PSGD/">Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)</a> (01-03-2016)
+			<p>S&#39;ha publicat un nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (en endavant PSGD). El propòsit del connector és proporcionar una interfície Java per accedir als serveis exposats per la PSGD.<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-02-10-SIC-Canvis-peticions-desplegaments-jobs-PRE-PRO/">Canvi al sistema d&#39;obertura de peticions als jobs de desplegament a PRE/PRO de SIC</a> (10-02-2016)
+			<p>Fins el moment, les peticions de desplegament a entorns PRE/PRO que es demanaven mitjançant jobs de Jenkins SIC seguien l&#39;antic model d&#39;obertura de peticions: correu a la bústia de SAU. Amb l&#39;entrada de Remedy, el mecanisme per a demanar desplegaments ha canviat.<br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2016-02-04-SIC-Integracio-Continua-dotNet/">Suport complet del SIC a la integració contínua amb .NET</a> (04-02-2016)
 			<p>El SIC s&#39;ha certificat en la construcció, en la gestió de dependències i en els desplegaments d&#39;aplicatius programats amb .NET<br /><br /></p>
@@ -388,16 +398,6 @@
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-11-06-CS%20Canigo-Roadmap/">CS Canigó. Roadmap</a> (06-11-2015)
 			<p>Aquest mes d&#39;Octubre ha estat publicat el Roadmap del CS Canigó. D&#39;aquesta manera es dona visibilitat a les tasques que es fan des del Centre de Suport a curt i llarg termini amb una previsió de lliurament.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-11-05-FAQs%20SIC/">SIC. FAQ</a> (05-11-2015)
-			<p>Com a novetat, a la secció SIC del Portal de Frameworks i Solucions d&#39;Arquitectura, pròximament es publicaran les FAQ del SIC. L&#39;objectiu d&#39;aquestes FAQ és donar resposta a les qüestions que sovint ens plantegen els proveïdors d&#39;aplicacions respecte a la integració amb el SIC.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-10-27-Canigo-Adaptacio-al-PIV/">Canigó. Adaptació al PIV de Gencat</a> (27-10-2015)
-			<p>L&#39;adaptació al PIV de Gencat és un requeriment per moltes aplicacions. L&#39;estratègia a seguir per les aplicacions Canigó depèn de la versió en què estigui implementada.<br /><br /></p>
 		</li>
 	    
 	</ul>
@@ -496,6 +496,8 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

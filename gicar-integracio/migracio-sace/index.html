@@ -53,9 +53,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -75,13 +75,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -89,7 +89,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -313,13 +313,13 @@
 
 					
 
-						<p>Per motius històrics diverses aplicacions de la Generalitat fan encara l’ús del Servei d’Autenticació Centralitzat (més conegut com a SACE). Aquest és un servei obsolescent que està en fase d’extinció, i es recomana a totes les aplicacions que encara facin ús d’aquest servei, la migració de l’autenticació cap a GICAR.</p>
+						
+
+<p>Per motius històrics diverses aplicacions de la Generalitat fan encara l’ús del Servei d’Autenticació Centralitzat (més conegut com a SACE). Aquest és un servei obsolescent que està en fase d’extinció, i es recomana a totes les aplicacions que encara facin ús d’aquest servei, la migració de l’autenticació cap a GICAR.</p>
 
 <p>Aquest apartat pretén donar unes directrius bàsiques sobre com abordar la migració d’una aplicació web integrada amb SACE vers GICAR. Es començarà explicant com s’integren actualment les aplicacions amb el SACE, i a continuació s’exposarà quin és el mecanisme que es proposa per a migrar l’autenticació a GICAR.</p>
 
-<ul>
-<li>3.10.1.   Funcionament actual de l’autenticació de les aplicacions amb el SACE</li>
-</ul>
+<h2 id="funcionament-actual-de-l-autenticació-de-les-aplicacions-amb-el-sace">Funcionament actual de l’autenticació de les aplicacions amb el SACE</h2>
 
 <p>La manera d’integrar-se amb el SACE, consistia en fer una crida HTTPS a una adreça, passant com a informació un fitxer XML, que de sortida contindrà les dades requerides.</p>
 
@@ -350,9 +350,7 @@
 
 <p><img src="/related/gicar/sacejsp.png" alt="Integració Aplicacions GICAR" /></p>
 
-<ul>
-<li>3.10.2.   Proposta de canvi de migració de SACE cap a GICAR</li>
-</ul>
+<h2 id="proposta-de-canvi-de-migració-de-sace-cap-a-gicar">Proposta de canvi de migració de SACE cap a GICAR</h2>
 
 <p>A continuació es descriu una estratègia orientada a la substitució del SACE per GICAR per a les aplicacions que utilitzen SACE. Comentar que l’estratègia que es descriu a continuació és la recomanada per a fer aquest tipus de migracions de SACE a GICAR, però no és la forma recomanada per a realitzar les intragracions amb GICAR per una aplicació que es construeixi des de 0.</p>
 
@@ -452,6 +450,8 @@ Captura addicional, a partir del qual s’obtindrien altres dades de l’usuari 
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

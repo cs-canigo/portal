@@ -3,11 +3,31 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/</loc>
-    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/comunicat/2016/08/</loc>
+    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/</loc>
+    <lastmod>2016-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats/upgrade-connector-psgd/</loc>
+    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/comunicat/2016/07/</loc>
+    <lastmod>2016-07-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</loc>
     <lastmod>2016-07-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -342,6 +362,16 @@
   </url>
   
   <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/</loc>
+    <lastmod>2015-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</loc>
+    <lastmod>2015-08-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://canigo.ctti.gencat.cat/noticies/2015-07-31-Canigo-Plugin-Eclipse-Mars/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url>
@@ -492,6 +522,16 @@
   </url>
   
   <url>
+    <loc>http://canigo.ctti.gencat.cat/drafts/cercador_old/</loc>
+    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/documentacio/moduls/</loc>
+    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://canigo.ctti.gencat.cat/destacats/nou-portal/</loc>
     <lastmod>2015-01-27T00:00:00+00:00</lastmod>
   </url>
@@ -537,14 +577,6 @@
   </url>
   
   <url>
-    <loc>http://canigo.ctti.gencat.cat/sic-related/nou-model-tic/</loc>
-  </url>
-  
-  <url>
-    <loc>http://canigo.ctti.gencat.cat/sic-related/procediment/</loc>
-  </url>
-  
-  <url>
     <loc>http://canigo.ctti.gencat.cat/cs/canigo/</loc>
     <lastmod>2016-06-09T17:11:42+01:00</lastmod>
   </url>
@@ -557,6 +589,11 @@
   <url>
     <loc>http://canigo.ctti.gencat.cat/gicar-integracio/siteminder/</loc>
     <lastmod>2016-06-08T17:11:42+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/canigo/framework/</loc>
+    <lastmod>2016-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -585,11 +622,6 @@
   </url>
   
   <url>
-    <loc>http://canigo.ctti.gencat.cat/canigo-download-related/configuracio-entorn/</loc>
-    <lastmod>2015-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://canigo.ctti.gencat.cat/canigo-download-related/guia-inici-canigo2/</loc>
     <lastmod>2015-03-31T00:00:00+00:00</lastmod>
   </url>
@@ -601,6 +633,16 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/canigo-download-related/matrius-compatibilitats/</loc>
+    <lastmod>2015-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/sic-related/nou-model-tic/</loc>
+    <lastmod>2015-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/sic-related/procediment/</loc>
     <lastmod>2015-03-31T00:00:00+00:00</lastmod>
   </url>
   
@@ -656,11 +698,6 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/centre-de-suport-related/estat-workflow%20espai%20suport/</loc>
-    <lastmod>2015-01-24T17:11:42+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://canigo.ctti.gencat.cat/canigo/framework/</loc>
     <lastmod>2015-01-24T17:11:42+01:00</lastmod>
   </url>
   

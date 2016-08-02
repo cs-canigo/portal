@@ -6,7 +6,25 @@
     <language>ca-Es</language>
     
     
-    <updated>Mon, 04 Jul 2016 00:00:00 UTC</updated>
+    <updated>Tue, 02 Aug 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>SIC. Gestió de dependències per aplicacions .NET i JAVA al SIC</title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/</guid>
+      <description>El SIC ha incorporat les tecnologies ANT i .NET. Us expliquem com implementar la gestió de dependències amb aquestes tecnologies.</description>
+    </item>
+    
+    <item>
+      <title>Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</link>
+      <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</guid>
+      <description>Ha estat publicada la documentació del Container Cloud al web d&#39;arquitectura. En ella podreu trobar els diferents elements del catàleg, les plataformes cloud de referència, arquitectures tipus i la definició del cicle de vida de les aplicacions.</description>
+    </item>
     
     <item>
       <title>SIC. Suport a MySQL i Microsoft SQL SERVER</title>
@@ -123,24 +141,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-24-Canigo-Balanc-2015/</guid>
       <description>Resum de les tasques realitzades per l&#39;equip de Canigó durant l&#39;any 2015</description>
-    </item>
-    
-    <item>
-      <title>SIC. Nou rol de peticionari SIC a SAU-Remedy</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/</link>
-      <pubDate>Wed, 23 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/</guid>
-      <description>Neix a SIC un nou tipus d&#39;usuari: Gestor de peticions a SAU-Remedy. Aquest tipus d&#39;usuari pretén flexibilitzar el sistema d&#39;autorització de peticions de SIC afegint un nou conjunt d&#39;usuaris autoritzats per a poder demanar certs tipus de peticions de suport de FRAMEWORK SIC a SAU- Remedy.</description>
-    </item>
-    
-    <item>
-      <title>SIC. Sistema d&#39;autoritzacions de peticions FRAMEWORK SIC a SAU-Remedy</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2015-12-18-SIC-Sistema-autoritzacions-peticions/</link>
-      <pubDate>Fri, 18 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-18-SIC-Sistema-autoritzacions-peticions/</guid>
-      <description>L&#39;admissió de peticions al servei FRAMEWORK SIC de SAU-Remedy es troba restringit per un sistema de rols d&#39;usuari que determina quines operacions pot demanar cada rol. Aquest article pretén explicar com es realitza aquesta discriminació.</description>
     </item>
     
     

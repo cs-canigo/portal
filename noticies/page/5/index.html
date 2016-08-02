@@ -51,9 +51,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -73,13 +73,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -87,7 +87,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -315,10 +315,10 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=noticies&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/noticies/'; return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -350,6 +350,26 @@
 							<div class="col-sm-12">
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-05-SGDE-ocr-std/">SGDE. OCR al STD</a> (05-02-2015)
+			<p>En el procés de transformació de CPD de l&#39;entorn PROductiu del STD (Sistema de Transformació de Documents), finalitzat el passat 28/1, ha estat publicada una nova versió del WebService de Serveis Invocació STD<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-01-08-canig%C3%B3-REST/">Cas d&#39;èxit d&#39;aplicació Canigo 3 amb arquitectura HTML5 &#43; REST</a> (10-01-2015)
+			<p>L&#39;arquitectura que des del CS Canigó s&#39;està promovent per aplicacions web ja està sent adoptada per noves aplicacions, com és el cas de l&#39;aplicació d&#39;Ajuts i Subvencions (Transversal)<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-01-09-SIC-nou-model/">SIC. Calendari de migració d&#39;aplicacions al nou model</a> (08-01-2015)
+			<p>Tal com es va notificar al comunicat de Novembre 2014 aviat començarà la migració d&#39;aplicacions per adaptar-se al nou model TIC. Per organitzar aquest procés de migració s&#39;ha elaborat un calendari i s&#39;ha publicat a la plana principal del SVN del SIC, secció &#34;Calendari de migració d&#39;aplicacions al SIC&#34;<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2014-12-09-connectors-canigo/">Canigó. Publicació serveis i connectors Canigó 3.1</a> (09-12-2014)
+			<p>Al mes de Novembre s&#39;han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s&#39;especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d&#39;ells. <br /><br /></p>
+		</li>
+	    
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-02-SIC-transformacio-servei/">SIC. Transformació del servei</a> (02-12-2014)
 			<p>El passat 13/11 es va efectuar la transformació del servei SIC al CPD1-HP. En el següent diagrama es mostren els components més rellevants de la capa d&#39;aplicacions i com es realitza la redirecció dels dominis cap als servidors del SIC<br /><br /></p>
@@ -451,6 +471,8 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

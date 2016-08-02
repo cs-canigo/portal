@@ -51,9 +51,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -73,13 +73,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -87,7 +87,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -315,10 +315,10 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?type=noticies&amp;query='+this.cerca.value+'&amp;sitesearch=canigo.ctti.gencat.cat/noticies/'; return false;">
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="query" id="cerca"
+										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
 											class="form-control" placeholder="Cerca a notícies" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
@@ -351,6 +351,26 @@
 	<ul class="list-group llistat_enllacos_filet_cont">
 		
 		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-06-15-SIC-Desplegaments%20Jobs%20Remedy/">SIC. Peticions desplegament via Remedy</a> (15-06-2015)
+			<p>Fins ara totes les peticions de desplegament de les aplicacions a entorns PRE i PRO realitzades des del SIC es demanaven via correu a SAU (sau.ctti@gencat.cat). El SIC està evolucionant per tal que aquestes peticions de desplegament es sol·licitin via Remedy a mida que van migrant les aplicacions a aquest nou sistema.<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-06-02-Canigo-Plugin/">Canigó. Actualització del plugin de Canigó per Eclipse</a> (02-06-2015)
+			<p>Recentment s&#39;ha publicat una nova versió del Plugin de Canigó per Eclipse. Aquesta versió és compatible amb la versió d&#39;Eclipse Luna (4.4) per a dos de les seves 2 distribucions: Eclipse IDE for Java Developers i Eclipse IDE for Java EE Developers. A banda d&#39;aquesta actualització del plugin també s&#39;ha certificat el seu funcionament en S.O. Linux.<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-05-29-SIC-Upgrade-SVN/">SIC. Upgrade versió Subversion al SIC</a> (29-05-2015)
+			<p>En breu s&#39;actualitzarà la versió de SVN del servidor de SIC, passant d&#39;una 1.6.11 a una 1.8.13. Aquesta actualització comportarà una sèrie de millores en rendiment, robustesa i seguretat al SVN de SIC.<br /><br /></p>
+		</li>
+	    
+		<li>
+			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-30-SIC-Master-Slave-CPD4/">SIC. Multi-CPD - Desplegaments a CPD4-TSystems</a> (30-04-2015)
+			<p>El SIC - Multi CPD basat en l&#39;arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.<br /><br /></p>
+		</li>
+	    
+		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-24-SIC%20-publicacio-antivirus/">Canigó. Nova versió del connector Antivirus</a> (24-04-2015)
 			<p>S&#39;han publicat noves versions del connector d&#39;Antivirus de Canigó 3 i Canigó 2. El funcionament d&#39;aquestes versions, 1.2.0 i 2.3.21-SNAPSHOT respectivament, ha estat certificat amb la versió 7.5 de l&#39;API de Symantec corresponent a la versió instal·lada per el nou Antivirus corporatiu. Cal destacar els canvis de dominis realitzats en la transformació del servei d&#39;Antivirus. Les aplicacions han de fer canvis a la seva configuració per accedir-hi.<br /><br /></p>
 		</li>
@@ -378,26 +398,6 @@
 		<li>
 			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-05-Canigo-integracio-serveis-rest-gicar/">Canigó. Integració de serveis REST amb GICAR</a> (05-02-2015)
 			<p>Les aplicacions Canigó 3 basades en l&#39;arquitectura HTML5/JS&#43;REST han de tenir en compte una sèrie de consideracions en cas que estiguin integrades amb GICAR. En concret, és probable que hagin de sol·licitar que s&#39;apliquin les següents excepcions<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-05-SGDE-ocr-std/">SGDE. OCR al STD</a> (05-02-2015)
-			<p>En el procés de transformació de CPD de l&#39;entorn PROductiu del STD (Sistema de Transformació de Documents), finalitzat el passat 28/1, ha estat publicada una nova versió del WebService de Serveis Invocació STD<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-01-08-canig%C3%B3-REST/">Cas d&#39;èxit d&#39;aplicació Canigo 3 amb arquitectura HTML5 &#43; REST</a> (10-01-2015)
-			<p>L&#39;arquitectura que des del CS Canigó s&#39;està promovent per aplicacions web ja està sent adoptada per noves aplicacions, com és el cas de l&#39;aplicació d&#39;Ajuts i Subvencions (Transversal)<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-01-09-SIC-nou-model/">SIC. Calendari de migració d&#39;aplicacions al nou model</a> (08-01-2015)
-			<p>Tal com es va notificar al comunicat de Novembre 2014 aviat començarà la migració d&#39;aplicacions per adaptar-se al nou model TIC. Per organitzar aquest procés de migració s&#39;ha elaborat un calendari i s&#39;ha publicat a la plana principal del SVN del SIC, secció &#34;Calendari de migració d&#39;aplicacions al SIC&#34;<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2014-12-09-connectors-canigo/">Canigó. Publicació serveis i connectors Canigó 3.1</a> (09-12-2014)
-			<p>Al mes de Novembre s&#39;han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s&#39;especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d&#39;ells. <br /><br /></p>
 		</li>
 	    
 	</ul>
@@ -496,6 +496,8 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

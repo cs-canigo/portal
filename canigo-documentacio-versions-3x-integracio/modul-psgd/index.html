@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>PSGD</title>
+	<title>ARESTA (PSGD)</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
 	<script>
-		document.write("<meta name=\"titol\" content=\"PSGD\" />");
+		document.write("<meta name=\"titol\" content=\"ARESTA (PSGD)\" />");
 		document.write("<meta name=\"description\" content=\"Plataforma de Serveis de Gestió Documental\" />");
 	</script>
 
@@ -53,9 +53,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -75,13 +75,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -89,7 +89,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -278,7 +278,7 @@
 									</li>
 									
 									<li>
-										PSGD
+										ARESTA (PSGD)
 									</li>
 									
 
@@ -286,7 +286,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										PSGD
+										ARESTA (PSGD)
 									
 								</h1>
 
@@ -322,11 +322,11 @@
 
 <h2 id="introducció">Introducció</h2>
 
-<p>L&rsquo;objectiu d&rsquo;aquest connector és proporcionar un punt d&rsquo;accés cap a la Plataforma de Serveis de Gestió Documental.</p>
+<p>L&rsquo;objectiu d&rsquo;aquest connector és proporcionar un punt d&rsquo;accés cap a la Plataforma de Serveis de Gestió Documental (PSGD) també coneguda com a ARESTA.</p>
 
 <h2 id="propòsit">Propòsit</h2>
 
-<p>El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l&rsquo;ús de la Plataforma de Serveis de Gestió Documental.</p>
+<p>El propòsit del connector és proporcionar una interfície funcional que faciliti a les aplicacions l&rsquo;ús de la PSGD.</p>
 
 <h2 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;ús</h2>
 
@@ -352,7 +352,7 @@
 
 <tbody>
 <tr>
-<td><a href="/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.3.pdf">PSGD Manual Integració</a>.</td>
+<td><a href="/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.5.pdf">PSGD Manual Integració</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -388,7 +388,7 @@
 
 <p>Es pot trobar el codi font i binaris referent a aquest component a la següent url:</p>
 
-<p><a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.0.1/</a></p>
+<p><a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/</a></p>
 
 <h3 id="requeriments">Requeriments</h3>
 
@@ -402,7 +402,7 @@
 
 <p>En el pom.xml;</p>
 
-<pre><code>&lt;canigo.integration.psgd.version&gt;[1.0.0,1.1.0)&lt;/canigo.integration.psgd.version&gt;
+<pre><code>&lt;canigo.integration.psgd.version&gt;[1.1.0,1.2.0)&lt;/canigo.integration.psgd.version&gt;
 ...
 
 &lt;!-- Dependencia del mòdul PSGD --&gt;
@@ -466,15 +466,15 @@ private PsgdConnectorImpl psgdConnector;
 
 <pre><code class="language-java">
  Document document = new Document();
-             
+	         
  DocumentMetaData documentMetaData = new DocumentMetaData();
  
  documentMetaData.setDocumentName(&quot;prova.txt&quot;);
- documentMetaData.setDocumentDepartmentUnitID(&quot;Departament&quot;);
- documentMetaData.setDocumentTypeName(&quot;TD01-001&quot;);
+ documentMetaData.setDocumentTypeCode(&quot;TD01-010&quot;);
  documentMetaData.setTitle(&quot;Prova&quot;);
- documentMetaData.setOrganName(&quot;organ&quot;);
  documentMetaData.setCreatorID(&quot;canigo&quot;);
+ documentMetaData.setDocumentDescriptor(&quot;descriptor&quot;);
+ documentMetaData.setOrigin(&quot;0&quot;);
 
  InputStream documentData = new FileInputStream(&quot;pathfitxer&quot;)
  
@@ -543,7 +543,7 @@ result.getResult().getResultData().getData().writeTo(outputStream);
 <p>Al fitxer Log4j.xml s&rsquo;ha de posar a debug la classe: cat.gencat.ctti.canigo.arch.integration.psgd.utils.LoggingRequestInterceptor</p>
 
 <pre><code class="language-xml">&lt;category name=&quot;cat.gencat.ctti.canigo.arch.integration.psgd.utils&quot;&gt;
-    &lt;level value=&quot;debug&quot;/&gt;
+	&lt;level value=&quot;debug&quot;/&gt;
 &lt;/category&gt;
 </code></pre>
 
@@ -617,6 +617,8 @@ canigo Message: DEBUG [main] cat.gencat.ctti.canigo.arch.integration.psgd.utils.
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 

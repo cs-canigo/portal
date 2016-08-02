@@ -59,9 +59,9 @@
 				<div class="collapse dos">
 					<div class="shadowBox">
 						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
- 						onsubmit="location.href=this.action+'#?query='+this.cerca_cap.value; return false;">
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
 							<div class="form-group">
-								<input type="search" class="form-control" name="query" id="cerca_cap"
+								<input type="search" class="form-control" name="q" id="cerca_cap"
 									title="Cerca"
 									placeholder="Cerca" />
 								<button type="button" title="Neteja" class="btn btn-default"></button>
@@ -81,13 +81,13 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-						
+
 						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'#?query='+this.cerca2.value; return false;">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
 								<div class="form-group">
 									<label class="hidden" for="cerca2">Cerca</label>
 									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="query" title="Cerca">
+									placeholder="Cerca" name="q" title="Cerca">
 									<input class="btn btn-default" type="submit" title="Cerca" value="">
 								</div>
 							</form>
@@ -95,7 +95,7 @@
 							
 
 						</div>
-						
+
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -198,6 +198,16 @@
 						<ul class="list-group llistat_enllacos_filet_cont contingut">
 				            
 								<li>
+									<a href="http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/" class="a-vermell">SIC. Gestió de dependències per aplicacions .NET i JAVA al SIC</a> (02-08-2016)
+									<p>El SIC ha incorporat les tecnologies ANT i .NET. Us expliquem com implementar la gestió de dependències amb aquestes tecnologies.<br /><br /></p>
+								</li>
+							
+								<li>
+									<a href="http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/" class="a-vermell">Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</a> (06-07-2016)
+									<p>Ha estat publicada la documentació del Container Cloud al web d&#39;arquitectura. En ella podreu trobar els diferents elements del catàleg, les plataformes cloud de referència, arquitectures tipus i la definició del cicle de vida de les aplicacions.<br /><br /></p>
+								</li>
+							
+								<li>
 									<a href="http://canigo.ctti.gencat.cat/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/" class="a-vermell">SIC. Suport a MySQL i Microsoft SQL SERVER</a> (04-07-2016)
 									<p>Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d&#39;executar scripts DDL i DML d&#39;aquestes bases de dades.<br /><br /></p>
 								</li>
@@ -262,6 +272,13 @@
 								
 									<li class="list-group-item bullet">
 									  
+									    <a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-integracio/modul-psgd/">Nova versió del connector amb la PSGD per a Canigó 3</a>
+										 
+										S&#39;ha publicat la versió 1.1.0 del connector amb la Plataforma de Serveis de Gestió Documental (PSGD) per Canigó 3.
+									</li>
+								
+									<li class="list-group-item bullet">
+									  
 										   <span class="enllac">LT2b al SIC</span>
 										 
 										Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. Aviat es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.
@@ -281,20 +298,6 @@
 										Us recordem que properament s&#39;hauran d&#39;informar aquests camps per poder invocar els serveis SGDE.
 									</li>
 								
-									<li class="list-group-item bullet">
-									  
-									    <a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta">Nova versió full de ruta CTTI</a>
-										 
-										Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari
-									</li>
-								
-									<li class="list-group-item bullet">
-									  
-									    <a href="http://canigo.ctti.gencat.cat/related/canigo/destacats/comunicat-transformacio-plataforma-PICA.html">Transformació PICA</a>
-										 
-										El 19/4 es completarà la transformació de la PICA a l&#39;entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d&#39;haver estat configurades per accedir al nou domini pica.intranet.gencat.cat
-									</li>
-								
 								</ul>
 							</div>
 						</div>
@@ -305,17 +308,11 @@
 
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
-								<h4><strong>Contacta amb el Centre de Suport</strong></h4>
+								<h4><strong>Contacta</strong></h4>
 								<div class="llistat_enllacos_filet">
 									<ul class="llistat_enllacos_filet_cont icones list-group">
 										<li class="list-group-item bullet">
-											<a href="mailto://oficina-tecnica.canigo.ctti@gencat.cat">oficina-tecnica.canigo.ctti@gencat.cat</a>
-										</li>
-										<li class="list-group-item bullet">
-											<a href="mailto://suport.cloud@gencat.cat">suport.cloud@gencat.cat</a>
-										</li>
-										<li class="list-group-item bullet">
-											<a href="http://cstd.ctti.gencat.cat/">Centre de Suport Tecnològic al Desenvolupament</a>
+											<a href="/cs">Centres de suport</a>
 										</li>
 									</ul>
 								</div>
@@ -374,6 +371,8 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 
