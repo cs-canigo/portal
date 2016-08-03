@@ -2,8 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
-	<meta name="robots" content="noindex,follow" />
+	<title>Mòduls i versions Canigó</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +11,15 @@
 	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mòduls i versions Canigó\" />");
+		document.write("<meta name=\"description\" content=\"\" />");
+	</script>
+
+	
 
 </head>
-
-
-
-<body class="section noticies">
+<body class="single">
 	<div class="contenidor unfixed">
 
 				
@@ -176,30 +178,7 @@
 									</li>
 									<li class="breadcrumbs2">
 									
-										
-											
-
-
-
-
-
-
-
-
-
-	Notícies
-
-
-
-
-
-
-
-
-
-
-
-
+										<a href="/documentacio">
 											
 
 
@@ -221,41 +200,66 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+										</a>
 										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 									
+									</li>
+									
+									<li>
+										Mòduls i versions Canigó
 									</li>
 									
 
@@ -263,51 +267,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										
-											
-
-
-
-
-
-
-
-
-
-	Notícies
-
-
-
-
-
-
-
-
-
-
-
-
-										
-										
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+										Mòduls i versions Canigó
 									
 								</h1>
 
@@ -315,20 +275,20 @@
 
 								
 								
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[section][0]=Notícies&amp;q='+this.cerca.value; return false;">
+									
+								
+
+								
+								
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
 									<div class="form-group">
-										<label class="hidden" for="cerca">Cerca</label>
-										<input type="search" name="q" id="cerca"
+										<input type="search" name="q" id="query"
 											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca a notícies" /> 
+											class="form-control"  placeholder="Cerca..." /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
 										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
 									</div>								
 								</form>
-								
-									
-								
-
 																	
 
 							</div>
@@ -338,120 +298,88 @@
 				</div>
 			</article>
 
-
+			
 			<article class="padding-xs padding-sm padding-md contingut">				
 				<div class="container">
-				<div class="row">
-
-						
-
-						
-
-							<div class="col-sm-12">
-	<ul class="list-group llistat_enllacos_filet_cont">
-		
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-06-02-Canigo-Plugin/">Canigó. Actualització del plugin de Canigó per Eclipse</a> (02-06-2015)
-			<p>Recentment s&#39;ha publicat una nova versió del Plugin de Canigó per Eclipse. Aquesta versió és compatible amb la versió d&#39;Eclipse Luna (4.4) per a dos de les seves 2 distribucions: Eclipse IDE for Java Developers i Eclipse IDE for Java EE Developers. A banda d&#39;aquesta actualització del plugin també s&#39;ha certificat el seu funcionament en S.O. Linux.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-05-29-SIC-Upgrade-SVN/">SIC. Upgrade versió Subversion al SIC</a> (29-05-2015)
-			<p>En breu s&#39;actualitzarà la versió de SVN del servidor de SIC, passant d&#39;una 1.6.11 a una 1.8.13. Aquesta actualització comportarà una sèrie de millores en rendiment, robustesa i seguretat al SVN de SIC.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-30-SIC-Master-Slave-CPD4/">SIC. Multi-CPD - Desplegaments a CPD4-TSystems</a> (30-04-2015)
-			<p>El SIC - Multi CPD basat en l&#39;arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-24-SIC%20-publicacio-antivirus/">Canigó. Nova versió del connector Antivirus</a> (24-04-2015)
-			<p>S&#39;han publicat noves versions del connector d&#39;Antivirus de Canigó 3 i Canigó 2. El funcionament d&#39;aquestes versions, 1.2.0 i 2.3.21-SNAPSHOT respectivament, ha estat certificat amb la versió 7.5 de l&#39;API de Symantec corresponent a la versió instal·lada per el nou Antivirus corporatiu. Cal destacar els canvis de dominis realitzats en la transformació del servei d&#39;Antivirus. Les aplicacions han de fer canvis a la seva configuració per accedir-hi.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-05-SIC-migraci%C3%B3/">SIC. Migració a nou model TIC finalitzada</a> (05-04-2015)
-			<p>El passat mes de Març ha finalitzat la migració d&#39;aplicacions al SIC de l&#39;antic model, basat en departaments i acrònims d&#39;aplicació, cap al nou, basat en àmbits i codis de diàleg<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-04-05-SIC%20-autoritzacio-repositoris/">SIC. Nova política d&#39;autorització d&#39;accés a repositoris</a> (05-04-2015)
-			<p>Els repositoris de Subversion de l&#39;antic model existents al SIC només comptaven amb un control d&#39;accessibilitat (autenticació). Els usuaris podien accedir a determinats repositoris en funció del grup al qual se&#39;ls hi havia assignat amb control total (Read/Write). En els repositoris del nou model s&#39;ha incorporat un control d&#39;autorització que permet definir els permisos sobre el contingut accedit (Read o Read/Write)<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-03-05-canig%C3%B3-captcha/">Canigó. Captcha en aplicacions Canigó 3</a> (05-03-2015)
-			<p>Els Captcha són tests utilitzats per a diferenciar entre persones i robots que tracten d&#39;evitar un mal ús de les aplicacions per part de robots/programes automàtics. En aplicacions Canigó els Captcha poden resultar molt útils per a validar que s&#39;està fent un ús correcte de les accions destinades a l&#39;usuari final de l&#39;aplicació com per exemple omplir i enviar formularis<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-03-05-SIC-PHP/">SIC. PHP</a> (05-03-2015)
-			<p>Durant el mes de Febrer s&#39;ha dotat al SIC dels processos necessaris per poder fer desplegaments d&#39;aplicacions PHP en entorns corporatius. A  la secció de Documentació del SIC del Portal de Frameworks i Solucions d&#39;Arquitectura podeu trobar noves versions dels documents de referència.<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-05-Canigo-integracio-serveis-rest-gicar/">Canigó. Integració de serveis REST amb GICAR</a> (05-02-2015)
-			<p>Les aplicacions Canigó 3 basades en l&#39;arquitectura HTML5/JS&#43;REST han de tenir en compte una sèrie de consideracions en cas que estiguin integrades amb GICAR. En concret, és probable que hagin de sol·licitar que s&#39;apliquin les següents excepcions<br /><br /></p>
-		</li>
-	    
-		<li>
-			<a class="a-vermell" href="http://canigo.ctti.gencat.cat/noticies/2015-02-05-SGDE-ocr-std/">SGDE. OCR al STD</a> (05-02-2015)
-			<p>En el procés de transformació de CPD de l&#39;entorn PROductiu del STD (Sistema de Transformació de Documents), finalitzat el passat 28/1, ha estat publicada una nova versió del WebService de Serveis Invocació STD<br /><br /></p>
-		</li>
-	    
-	</ul>
+ 		
+					
+				
 
 	
-    
-    <ul class="pagination">
-        
-        <li>
-            <a href="/noticies/" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-        </li>
-        
-        <li
-        >
-        <a href="/noticies/page/3/" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-        </li>
-        
-        <li
-        ><a href="/noticies/">1</a></li>
-        
-        <li
-        ><a href="/noticies/page/2/">2</a></li>
-        
-        <li
-        ><a href="/noticies/page/3/">3</a></li>
-        
-        <li
-        class="active"><a href="/noticies/page/4/">4</a></li>
-        
-        <li
-        ><a href="/noticies/page/5/">5</a></li>
-        
-        <li
-        >
-        <a href="/noticies/page/5/" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-        </li>
-        
-        <li>
-            <a href="/noticies/page/5/" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-        </li>
-        
-    </ul>
-    
+
+
+					
+
+						<p><link href="/css/cercador.css" rel="stylesheet" type="text/css" /></p>
+
+<section class="rslt" id="cercador_text">
+
+<div class="column hidden-xs ">
+    <p id="stats" class="txt_result count_resultats"></p>   
 </div>
 
+<div class="row">
 
-	
-			            
+            <div id="left-column" class="col-xs-12 col-md-6">
+              <div id="major" class="facet"></div>
+              <div id="minor" class="facet"></div>
+              <div id="modules" class="facet"></div>
+              <div id="modules_version" class="facet"></div>
+            </div>
 
-				</div>
-				</div>
-			</article>
+            <div id="hits" class="list-group col-xs-12 col-md-6">
+                
+            </div>
 
-	</section>
+            <div class="column paginacio">
+              <div id="pagination"></div>
+            </div>  
+</div>
+
+</section>
+
+<!-- TEMPLATES -->
+
+<script type="text/html" id="hit-template">
+    <div class="destacat_text list-group-item">
+        <h2>{{codi}} {{nom}} {{rev}}</h2>
+        <div class="block-with-text">
+            {{modules_version}}
+        </div>
+    </div>
+</script>
+
+<script type="text/html" id="no-results-template">
+    <div id="no-results-message">
+      <p>No s'han trobat resultats per a la cerca <em>"{{query}}"</em>.</p>
+      <!--a href="." class='clear-all'>Neteja la cerca</a-->
+    </div>
+</script>
+
+<script type="text/html" id="stats-template">
+  S'han trobat <b>{{nbHits}} aplicacions</b>
+</script>
+<!-- /TEMPLATES -->
+
+<div id="logo-algolia">
+    <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" />
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
+<script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+<!--script src="/js/cercador.js"></script-->
+<script src="/js/algolia-search-moduls.js"></script>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
 
 		<div class="fons_footer ">
 		<footer class="container center-block shadowBox2">
@@ -522,7 +450,6 @@ if(location.hostname!=="localhost"){
 </script>
 
 
-	
 
 </body>
 </html>

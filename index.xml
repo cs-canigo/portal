@@ -6,7 +6,16 @@
     <language>ca-Es</language>
     
     
-    <updated>Wed, 20 Jul 2016 00:00:00 UTC</updated>
+    <updated>Fri, 05 Aug 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>SIC. Gestió de dependències per aplicacions .NET</title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</link>
+      <pubDate>Tue, 02 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</guid>
+      <description>Procediment de gestió de dependències amb aplicacions .NET al SIC</description>
+    </item>
     
     <item>
       <title>Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</title>
@@ -132,15 +141,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-24-Canigo-Balanc-2015/</guid>
       <description>Resum de les tasques realitzades per l&#39;equip de Canigó durant l&#39;any 2015</description>
-    </item>
-    
-    <item>
-      <title>SIC. Nou rol de peticionari SIC a SAU-Remedy</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/</link>
-      <pubDate>Wed, 23 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/</guid>
-      <description>Neix a SIC un nou tipus d&#39;usuari: Gestor de peticions a SAU-Remedy. Aquest tipus d&#39;usuari pretén flexibilitzar el sistema d&#39;autorització de peticions de SIC afegint un nou conjunt d&#39;usuaris autoritzats per a poder demanar certs tipus de peticions de suport de FRAMEWORK SIC a SAU- Remedy.</description>
     </item>
     
     

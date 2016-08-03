@@ -3,8 +3,18 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/</loc>
-    <lastmod>2016-07-20T00:00:00+00:00</lastmod>
+    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/comunicat/2016/08/</loc>
+    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</loc>
+    <lastmod>2016-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -353,6 +363,11 @@
   </url>
   
   <url>
+    <loc>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/</loc>
+    <lastmod>2015-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://canigo.ctti.gencat.cat/noticies/2015-07-31-Canigo-Plugin-Eclipse-Mars/</loc>
     <lastmod>2015-07-31T00:00:00+00:00</lastmod>
   </url>
@@ -508,6 +523,11 @@
   </url>
   
   <url>
+    <loc>http://canigo.ctti.gencat.cat/documentacio/moduls/</loc>
+    <lastmod>2015-01-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://canigo.ctti.gencat.cat/destacats/nou-portal/</loc>
     <lastmod>2015-01-27T00:00:00+00:00</lastmod>
   </url>
@@ -594,11 +614,6 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/sic-related/acces-cpd/</loc>
-    <lastmod>2015-03-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://canigo.ctti.gencat.cat/canigo-download-related/configuracio-entorn/</loc>
     <lastmod>2015-03-31T00:00:00+00:00</lastmod>
   </url>
   
