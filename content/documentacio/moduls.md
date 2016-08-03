@@ -39,7 +39,7 @@ no_index 	= true
 <script type="text/html" id="hit-template">
     <div class="destacat_text list-group-item">
         <h2>{{codi}} {{nom}} {{rev}}</h2>
-        <div>
+        <div class="app_modules">
         	{{modules_version}}
         </div>
     </div>

@@ -75,6 +75,9 @@
 
 .ais-hits--item div{border:none;}
 
+#hits .app_modules{
+  font-size:.8em;
+}
 
 #hits div.destacat_text{
   border-bottom: 1px solid #ddd;
