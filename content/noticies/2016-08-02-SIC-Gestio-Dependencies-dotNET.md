@@ -13,13 +13,13 @@ Durant la tardor de 2015, es va habilitar un nou repositori en el servidor Nexus
 
 ### Llibreries a tenir en compte
 
-Abans de començar, us recordem que s'han de considerar totes les llibreries que no venen incloses en un servidor Windows amb la instal·lació del Framework de .NET.
+Abans de començar, us recordem que s'han d'incloure al projecte totes les llibreries que no venen per defecte en un servidor Windows amb la instal·lació del Framework de .NET.
 
-Un problema que hem trobat de forma recurrent és, per exemple, la no inclusió de les llibreries del client de base de dades Oracle.
+Per exemple, un problema que hem trobat de forma recurrent és la no inclusió de les llibreries del client de base de dades Oracle.
 
 Aquestes llibreries s'instal·len als servidors i als entorns de desenvolupament i queden registrades al GAC (Global Assembly Cache) del sistema. Per tant, són llibreries que no cal incloure-les al projecte, ja que tant en l'entorn de desenvolupament com en els entorns d'Integració, Preproducció i Producció ja estan registrades.
 
-Un cop l'aplicació s'integra al SIC, aquest tipus de llibreries s'han d'incloure en la gestió de dependències, ja que, si no fos així, els servidors del SIC haurien de tenir totes les versions del client Oracle instal·lades per partida doble (binaris de 32 i 64 bits) per donar suport a qualsevol aplicació.
+Un cop l'aplicació s'integra al SIC, aquest tipus de llibreries s'han d'incloure de forma obligada en la gestió de dependències del projecte, ja que, els servidors del SIC no les tenen instal·lades.
 
 ### Com funciona?
 
@@ -31,10 +31,11 @@ Tota dependència que s'hagi d'incloure a un projecte .NET es declara a l'arxiu 
     </Reference>
     (...)
 
-Aquestes llibreries s'han de declarar com a paquets NuGet. Per tant, a l'arxiu de gestió de dependències NuGet (generalment `packages.config`) s'ha de declarar aquesta dependència:
+Aquestes llibreries s'han de declarar al projecte com paquets NuGet. Per tant, a l'arxiu de gestió de dependències NuGet (generalment `packages.config`) s'ha de declarar aquesta dependència:
 
     <?xml version="1.0" encoding="utf-8"?>
     <packages>
+            (...)
         <package id="Oracle.DataAccess.x86" version="4.121.1.0" targetFramework="net40" />
 			(...)
     </packages>
@@ -50,7 +51,7 @@ Haurem de tornar a l'arxiu de projecte i incloure el path on s'ha descarregat la
     </Reference>
     (...)
 
-Per tal que l'empaquetat de l'aplicació continuï funcionant a l'entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus de SIC (http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/) a la configuració local (arxiu`Nuget.config`).
+Per tal que l'empaquetat de l'aplicació continuï funcionant a l'entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/) a la configuració local (arxiu`Nuget.config`).
 
 Tot i així, en molts aspectes no és necessari haver d'arribar a tant baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre sí):
 
