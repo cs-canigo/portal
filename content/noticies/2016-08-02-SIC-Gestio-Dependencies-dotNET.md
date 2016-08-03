@@ -53,7 +53,7 @@ Haurem de tornar a l'arxiu de projecte i incloure el path on s'ha descarregat la
 
 Per tal que l'empaquetat de l'aplicació continuï funcionant a l'entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/) a la configuració local (arxiu`Nuget.config`).
 
-Tot i així, en molts aspectes no és necessari haver d'arribar a tant baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre sí):
+Tot i així, en molts aspectes no és necessari haver d'arribar a tan baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre si):
 
 * **NuGet Package Explorer**: Per explorar paquets NuGet i construir-los visualment.
 * **NuSpec Reference Generator**: Generar dependències per a nuspec

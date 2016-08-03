@@ -17,7 +17,7 @@ Fa referència a tots aquells elements que ens permetran desplegar les nostres a
 
 * [**Plataformes cloud de referència**](http://canigo.ctti.gencat.cat/cloud/caas/)
 
-Enumeració de les diferents plataformes que composen l'entorn Container Cloud.
+Enumeració de les diferents plataformes que componguen l'entorn Container Cloud.
 
 * [**Arquitectures tipus**](http://canigo.ctti.gencat.cat/cloud/aq/)
 
