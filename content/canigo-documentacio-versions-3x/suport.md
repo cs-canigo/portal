@@ -4,5 +4,6 @@ title       = "Mòduls de Suport"
 description = "Mòduls amb funcionalitats de suport per Canigó (OLE, SFTP, Enviament de correus, etc.)"
 sections    = "Documentació versions Canigó"
 enllac		= "/canigo-documentacio-versions-3x-suport"
+no_index 	= true
 weight 		= 3
 +++

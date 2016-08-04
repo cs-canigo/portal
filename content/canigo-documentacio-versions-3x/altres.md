@@ -4,5 +4,6 @@ title       = "Altres"
 description = "Planificació de tasques, Cues JMS, etc."
 sections    = "Documentació versió 3.x"
 enllac		= "/canigo-documentacio-versions-3x-altres"
+no_index 	= true
 weight 		= 4
 +++

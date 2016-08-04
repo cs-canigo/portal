@@ -4,5 +4,6 @@ title       = "Versions Anteriors"
 description = "Documentació de versions anteriors a la versió 3.X de Canigó."
 sections    = "Documentació Canigó"
 enllac      = "/canigo-documentacio-versions-anteriors"
+no_index 	= true
 weight      = 2
 +++

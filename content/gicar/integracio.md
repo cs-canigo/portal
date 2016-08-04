@@ -4,5 +4,6 @@ title       = "Guia d'integració"
 description = "Com integrar l'autenticació de les aplicacions amb GICAR"
 sections    = "GICAR"
 enllac		= "/gicar-integracio/"
+no_index 	= true
 weight 		= 2
 +++

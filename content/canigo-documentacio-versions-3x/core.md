@@ -4,6 +4,7 @@ title       = "Mòduls Generals"
 description = "Mòduls principals de Canigó (Core, seguretat, persistència, etc.)"
 sections    = "Mòduls Generals"
 enllac      = "/canigo-documentacio-versions-3x-core"
+no_index 	= true
 taxonomies  = []
 weight      = 1
 +++
