@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Arquitectura CTTI. Generalitat de Catalunya </title>
+    <link>http://canigo.ctti.gencat.cat/sections/canig%C3%B3/</link>
+    <language>ca-Es</language>
+    
+    
+    <updated>Fri, 15 Apr 2016 00:00:00 UTC</updated>
+    
+    
+    <item>
+      <title>Transformació PICA</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</link>
+      <pubDate>Fri, 15 Apr 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</guid>
+      <description>El 19/4 es completarà la transformació de la PICA a l&#39;entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d&#39;haver estat configurades per accedir al nou domini pica.intranet.gencat.cat</description>
+    </item>
+    
+    <item>
+      <title>Publicada versió 1.0.1 entorn Dev Canigó</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</link>
+      <pubDate>Tue, 29 Mar 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</guid>
+      <description>Ha estat publicada una nova versió de l&#39;entorn de desenvolupament de Canigó basada en Ubuntu 15.10 i certificada per a ser proveïda amb Vagrant 1.8</description>
+    </item>
+    
+    <item>
+      <title>Nova versió connector canigó PICA DNI</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</link>
+      <pubDate>Thu, 28 Jan 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</guid>
+      <description>Ha estat publicada una nova versió del connector PICA DNI on s&#39;incorporen els darrers canvis realitzats a la missatgeria</description>
+    </item>
+    
+  </channel>
+</rss>
