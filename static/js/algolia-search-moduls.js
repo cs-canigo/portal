@@ -4,25 +4,13 @@ google.charts.setOnLoadCallback(init);
 var converter = new showdown.Converter();
 converter.setOption('tables', true);
 
-function replaceHighLight(content){
-  var matches;
-
-  do{
-    matches = content.match(/\]\(.*?(<span class="highlight_hit">(.*?)<\/span>).*?\)/g);
-    if(!matches){
-        return content;
-    }
-    var highlight = /<span class="highlight_hit">(.*?)<\/span>/g;
-    var highmatches;
-    for(var i=0,z=matches.length;i<z;i++){
-      highmatches = highlight.exec(matches[i]);
-      if(highmatches)
-      content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
-    }
-  }while(matches!=null) 
-
-  return content;
-}
+var _majors_arr, 
+    _majors_arr_copy,
+    _minors_arr, 
+    _minors_arr_copy,
+    _modules_arr, 
+    _modules_arr_copy
+; 
 
 var search;
 
@@ -38,17 +26,12 @@ function app(opts) {
     appId: opts.appId,
     apiKey: opts.apiKey,
     indexName: opts.indexName,
-    urlSync: true/*,
-    searchFunction : function(helper) {
-      if (helper.state.query === '') {
-        return;
-      }
-      helper.search();
-    }*/
+    urlSync: true
   });
 
   search.on('render', function(){
     drawCharts();
+    initArrays();
   });
 
   search.addWidget(
@@ -113,6 +96,15 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Versió major")
+      },
+      transformData : {
+        item : function(obj){
+          _majors_arr_copy.push([obj.name, obj.count]);
+          if(obj.isRefined){
+            _majors_arr.push([obj.name, obj.count]);
+          }
+          return obj;
+        }
       }     
     })
   )
@@ -126,6 +118,15 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Versió menor")
+      },
+      transformData : {
+        item : function(obj){
+          _minors_arr_copy.push([obj.name, obj.count]);
+          if(obj.isRefined){
+            _minors_arr.push([obj.name, obj.count]);
+          }
+          return obj;
+        }
       }
     })
   )
@@ -139,6 +140,15 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Mòduls")
+      },
+      transformData : {
+        item : function(obj){
+          _modules_arr_copy.push([obj.name, obj.count]);
+          if(obj.isRefined){
+            _modules_arr.push([obj.name, obj.count]);
+          }
+          return obj;
+        }
       }
     })
   )
@@ -159,8 +169,18 @@ function app(opts) {
   //init();
 }
 
+function initArrays(){
+    _majors_arr = [];
+    _majors_arr_copy = [];
+    _minors_arr = [];
+    _minors_arr_copy = [];
+    _modules_arr = [];
+    _modules_arr_copy = [];
+}
+
 function init(){
-    search.start();
+  initArrays();
+  search.start();
 }
 
 function getTemplate(templateName) {
@@ -172,73 +192,26 @@ function getHeader(title) {
 }
 
 /* draw charts */
+function draw(rows_filtered, rows_full, dom_id, title, width, height, title_col_1){
+  var _chart = new google.visualization.DataTable();
+  _chart.addColumn('string', title_col_1);
+  _chart.addColumn('number', 'Aplicacions');
+
+  if(rows_filtered.length===0){
+    rows_filtered = rows_full; 
+  }
+  _chart.addRows(rows_filtered);
+
+  var pie_chart = new google.visualization.PieChart(document.getElementById(dom_id));
+  pie_chart.draw(_chart, {'title':title, 'width': width, 'height': height});
+
+}
+
+
 function drawCharts(){
 
-  // MAJORS
-  var _majors = new google.visualization.DataTable();
-  _majors.addColumn('string', 'Versió');
-  _majors.addColumn('number', 'Aplicacions');
-
-  var _some_checked = ($("#major .ais-refinement-list--label input:checkbox:checked").length>0);
-  $("#major .ais-refinement-list--label").each(function(item){
-    if((_some_checked && $(this).children()[0].checked) || !_some_checked){
-      _majors.addRow([$(this).children()[0].value, $($(this).children()[1]).text()*1]);
-    }
-  });
-
-  // Set chart options
-  var options = {'title':'Aplicacions per versió major de Canigó',
-                 'width':400,
-                 'height':400
-                };
-
-  // Instantiate and draw our chart, passing in some options.
-  var chart_majors = new google.visualization.PieChart(document.getElementById('chart_majors'));
-  chart_majors.draw(_majors, options);
-
-  // MINORS
-  var _minors = new google.visualization.DataTable();
-  _minors.addColumn('string', 'Versió');
-  _minors.addColumn('number', 'Aplicacions');
-
-  _some_checked = ($("#minor .ais-refinement-list--label input:checkbox:checked").length>0);
-  $("#minor .ais-refinement-list--label").each(function(item){
-    if((_some_checked && $(this).children()[0].checked) || !_some_checked){
-      _minors.addRow([$(this).children()[0].value, $($(this).children()[1]).text()*1]);
-    }
-  });
-
-  // Set chart options
-  var options = {'title':'Aplicacions per versió menor de Canigó',
-                 'width':400,
-                 'height':400
-                };
-
-  // Instantiate and draw our chart, passing in some options.
-  var chart_minors = new google.visualization.PieChart(document.getElementById('chart_minors'));
-  chart_minors.draw(_minors, options);
-
-  // MINORS
-  var _modules = new google.visualization.DataTable();
-  _modules.addColumn('string', 'Versió');
-  _modules.addColumn('number', 'Aplicacions');
-
-  _some_checked = ($("#modules .ais-refinement-list--label input:checkbox:checked").length>0);
-
-  $("#modules .ais-refinement-list--label").each(function(item){
-    if((_some_checked && $(this).children()[0].checked) || !_some_checked){
-      _modules.addRow([$(this).children()[0].value, $($(this).children()[1]).text()*1]);
-    }
-  });
-
-  // Set chart options
-  var options = {'title':'Mòduls',
-                 'width':500,
-                 'height':500
-                };
-
-  // Instantiate and draw our chart, passing in some options.
-  var chart_moduls = new google.visualization.PieChart(document.getElementById('chart_moduls'));
-  chart_moduls.draw(_modules, options);
+  draw(_majors_arr, _majors_arr_copy, "chart_majors", "Aplicacions per versió major de Canigó", 400, 400, "Versió");
+  draw(_minors_arr, _minors_arr_copy, "chart_minors", "Aplicacions per versió menor de Canigó", 400, 400, "Versió");
+  draw(_modules_arr, _modules_arr_copy, "chart_moduls", "Mòduls Canigó per versió", 400, 400, "Mòduls");
 
 }

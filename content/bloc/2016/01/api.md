@@ -4,7 +4,7 @@ title       = "APIs RESTful: millors pràctiques"
 description = "Millors pràctiques per a la construcció d'APIs REST"
 toc 		= true
 sections    = ["Bloc", "home"]
-bloc_tags	= ["bones pràctiques", "api"]
+bloc_tags	= ["bones pràctiques", "api", "desenvolupament"]
 imatge 		= "/images/bloc/json-api.png"
 +++
 
