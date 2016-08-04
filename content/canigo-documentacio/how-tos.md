@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "How to"
 description = "Normes aplicables al desenvolupament d'aplicacions"
-section     = "How to"
+sections    = "How to"
 taxonomies  = []
 weight 		= 4
 +++

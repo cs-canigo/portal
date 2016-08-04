@@ -3,7 +3,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Normatiu de Desenvolupament de la Capa de Presentació Web"
 description = "Normatiu de Desenvolupament de la Capa de Presentació Web"
-section     = "Normes"
+sections    = "Normes"
 weight                 = 4
 toc         = false
 data-actualitzacio =  "2015-01-12"

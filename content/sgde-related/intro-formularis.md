@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Formularis electrònics (eFormularis)"
 description = "Plataforma de formularis electrònics Adobe"
-section     = "SGDE"
+sections    = "SGDE"
 taxonomies  = []
 weight 		= 3
 +++

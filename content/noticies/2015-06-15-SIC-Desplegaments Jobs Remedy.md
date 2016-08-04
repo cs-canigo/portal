@@ -2,7 +2,7 @@
 date        = "2015-06-15"
 title       = "SIC. Peticions desplegament via Remedy"
 description = "Fins ara totes les peticions de desplegament de les aplicacions a entorns PRE i PRO realitzades des del SIC es demanaven via correu a SAU (sau.ctti@gencat.cat). El SIC està evolucionant per tal que aquestes peticions de desplegament es sol·licitin via Remedy a mida que van migrant les aplicacions a aquest nou sistema."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key 		= "JULIOL2015"
 +++

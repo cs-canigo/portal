@@ -2,7 +2,7 @@
 date        = "2015-04-02T14:02:36+02:00"
 title       = "Webservices"
 description = "Webservices"
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 3
 +++
 

@@ -2,7 +2,7 @@
 date        = "2015-09-01"
 title       = "Canigó. Plantilla aplicació REST+HTML5/Js"
 description = "Des de CS Canigó es proporciona una plantilla d'aplicació amb arquitectura REST+HTML5/Js. Aquesta és pot generar amb el plugin de Canigó per Eclipse versió 1.2.1 o superior"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "SEPTEMBRE2015"
 +++

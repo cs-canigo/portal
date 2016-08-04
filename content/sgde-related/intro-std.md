@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Sistema de Transformació de Documents (STD)"
 description = "STD"
-section     = "SGDE"
+sections    = "SGDE"
 taxonomies  = []
 weight 		= 3
 +++

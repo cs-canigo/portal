@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Sistema de Transformació de Documents (STD)"
 description = ""
-section     = "SGDE"
+sections    = "SGDE"
 taxonomies  = []
 weight 		= 4
 +++

@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Comunicats"
 description = "Comunicats mensuals del CS Canigó"
-section     = "Centre de Suport"
+sections    = "Centre de Suport"
 weight		= 4
 +++
 

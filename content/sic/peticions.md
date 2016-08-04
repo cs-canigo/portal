@@ -2,7 +2,7 @@
 date        = "2015-06-26"
 title       = "Peticions SIC a SAU-Remedy"
 description = "Guia per a obrir peticions SIC a SAU-Remedy"
-section     = "SIC"
+sections    = "SIC"
 taxonomies  = []
 weight 		= 3
 +++

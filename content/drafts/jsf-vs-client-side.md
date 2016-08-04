@@ -2,7 +2,7 @@
 date        = "2016-04-14"
 title       = "Aplicacions webs modernes: JSF vs client HTML"
 description = ""
-section     = ""
+sections    = ""
 categories  = ["desenvolupament", "canigó"]
 +++
 

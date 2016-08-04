@@ -2,7 +2,7 @@
 date        = "2015-10-07"
 title       = "SIC. Bones pràctiques per a no interferir en els mecanismes de SIC quan s’accedeix manualment a la consola d’administració del servidor d’aplicacions"
 description = "Una de les funcionalitats més destacades del SIC és el desplegament automàtic d'aplicacions en entorns d'INT. Amb l'experiència adquirida fins ara en els nous CPDs, des de l'equip del SIC recomanem una sèrie de bones pràctiques per tal d'evitar que actuacions alienes al SIC puguin interferir en el correcte funcionament d'aquests desplegaments automatitzats."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key 		= "OCTUBRE2015"
 +++

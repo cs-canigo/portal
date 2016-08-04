@@ -2,7 +2,7 @@
 date        = "2015-11-18"
 title       = "Canigó. Nou entorn de desenvolupament"
 description = "A mitjans d'aquest mes de Novembre ha estat publicat el nou entorn de desenvolupament de Canigó. Amb aquest nou entorn es canvia l'antic instal·lable (.exe) exclusiu per a sistemes operatius Windows per un entorn multiplaforma amb moltes més possibilitats."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key         = "DESEMBRE2015"
 categories  = ["canigo"]
 +++

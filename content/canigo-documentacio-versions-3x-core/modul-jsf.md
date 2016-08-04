@@ -2,7 +2,7 @@
 date        = "2015-03-12T12:11:42+01:00"
 title       = "Mòdul JSF"
 description = "Capa de presentació Java Server Faces"
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 6
 +++
 

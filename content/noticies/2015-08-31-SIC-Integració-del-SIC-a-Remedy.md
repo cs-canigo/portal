@@ -2,7 +2,7 @@
 date        = "2015-08-31"
 title       = "SIC. Obertura de peticions al SIC via Remedy"
 description = "Degut a que els sistemes de suport a l'usuari de la Generalitat de Catalunya s'estan integrant a Remedy, el CS Canigó està treballant en la integració del SIC a aquest sistema."
-section     = "Notícies"
+sections    = ["Notícies","home"]
 categories  = ["sic"]
 key 		= "SEPTEMBRE2015"
 +++

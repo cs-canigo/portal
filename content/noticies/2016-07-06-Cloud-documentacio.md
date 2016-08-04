@@ -2,7 +2,7 @@
 date        = "2016-07-06"
 title       = "Container Cloud. Publicació de la documentació al web d'Arquitectura"
 description = "Ha estat publicada la documentació del Container Cloud al web d'arquitectura. En ella podreu trobar els diferents elements del catàleg, les plataformes cloud de referència, arquitectures tipus i la definició del cicle de vida de les aplicacions."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["cloud"]
 key         = "AGOST2016"
 +++

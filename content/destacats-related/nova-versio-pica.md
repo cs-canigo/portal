@@ -2,7 +2,7 @@
 date        = "2016-01-28"
 title       = "Nova versió connector canigó PICA DNI"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 key         = "FEBRER2016"
 
 +++

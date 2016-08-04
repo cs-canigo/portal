@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Normatius"
 description = "Normes aplicables al desenvolupament d'aplicacions"
-section     = "Documentació Canigó"
+sections    = "Documentació Canigó"
 taxonomies  = []
 weight 		= 3
 +++

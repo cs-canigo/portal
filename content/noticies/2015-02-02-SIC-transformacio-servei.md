@@ -2,7 +2,7 @@
 date        = "2014-12-02"
 title       = "SIC. Transformació del servei"
 description = "El passat 13/11 es va efectuar la transformació del servei SIC al CPD1-HP. En el següent diagrama es mostren els components més rellevants de la capa d'aplicacions i com es realitza la redirecció dels dominis cap als servidors del SIC"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 +++
 

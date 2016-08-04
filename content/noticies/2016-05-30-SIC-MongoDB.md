@@ -2,7 +2,7 @@
 date        = "2016-05-30"
 title       = "SIC. Suport a MongoDB"
 description = "Suport a la primera base de dades NoSQL al SIC. Els jobs de desplegament a INT són capaços d'executar codi Javascript per manipular documents i crear o eliminar col·leccions de documents, indexos, etc."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "JUNY2016"
 +++

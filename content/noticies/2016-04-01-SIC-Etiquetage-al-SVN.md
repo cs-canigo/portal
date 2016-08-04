@@ -2,7 +2,7 @@
 date        = "2016-04-01"
 title       = "SIC. Etiquetatge de versions al SVN del SIC"
 description = "Hi ha diverses maneres de crear versions de codi al repositori SVN del SIC (sota directori /tags). Aquest article pretén recollir-ne algunes i aconsellar l'ús d'una en particular."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "ABRIL2016"
 +++

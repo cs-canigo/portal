@@ -2,7 +2,7 @@
 date        = "2015-01-10"
 title       = "Cas d'èxit d'aplicació Canigo 3 amb arquitectura HTML5 + REST"
 description = "L'arquitectura que des del CS Canigó s'està promovent per aplicacions web ja està sent adoptada per noves aplicacions, com és el cas de l'aplicació d'Ajuts i Subvencions (Transversal)"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "canigó"]
 +++
 

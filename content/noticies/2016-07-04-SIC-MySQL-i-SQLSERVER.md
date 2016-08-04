@@ -2,7 +2,7 @@
 date        = "2016-07-04"
 title       = "SIC. Suport a MySQL i Microsoft SQL SERVER"
 description = "Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d'executar scripts DDL i DML d'aquestes bases de dades."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "JULIOL2016"
 +++

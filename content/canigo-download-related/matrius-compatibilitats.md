@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Matrius de Compatibilitats"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 weight      = 1
 +++
 

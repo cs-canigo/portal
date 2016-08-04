@@ -2,7 +2,7 @@
 date        = "2015-07-31"
 title       = "Canigó. Certificació plugin Canigó a Eclipse Mars"
 description = "Donada la recent publicació d'Eclipse Mars (4.5) des del CS Canigó s'ha certificat el funcionament del plugin per la creació de projectes Canigó 3.1 en aquesta versió d'Eclipse."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key			= "AGOST2015"
 categories  = ["desenvolupament", "canigó"]
 +++

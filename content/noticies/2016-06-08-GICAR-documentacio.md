@@ -2,7 +2,7 @@
 date        = "2016-06-08"
 title       = "GICAR. Publicació de la documentació al web d'Arquitectura"
 description = "Publicació de la documentació de GICAR al web d'arquitectura i les novetats en quant a l'entorn de desenvolupament"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["GICAR"]
 key         = "JULIOL2016"
 +++

@@ -2,7 +2,7 @@
 date = "2015-04-02T12:49:43+02:00"
 title       = "Planificador de tasques"
 description = "Planificador de tasques"
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 1
 +++
 

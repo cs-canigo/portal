@@ -2,7 +2,7 @@
 date        = "2016-02-10"
 title       = "Canvi al sistema d'obertura de peticions als jobs de desplegament a PRE/PRO de SIC"
 description = "Fins el moment, les peticions de desplegament a entorns PRE/PRO que es demanaven mitjançant jobs de Jenkins SIC seguien l'antic model d'obertura de peticions: correu a la bústia de SAU. Amb l'entrada de Remedy, el mecanisme per a demanar desplegaments ha canviat."
-section     = "Notícies"
+sections    = ["Notícies"]
 categories  = ["sic"]
 key         = "MARC2016"
 +++

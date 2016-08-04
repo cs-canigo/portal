@@ -2,7 +2,7 @@
 date        = "2015-04-24"
 title       = "Canigó. Nova versió del connector Antivirus"
 description = "S'han publicat noves versions del connector d'Antivirus de Canigó 3 i Canigó 2. El funcionament d'aquestes versions, 1.2.0 i 2.3.21-SNAPSHOT respectivament, ha estat certificat amb la versió 7.5 de l'API de Symantec corresponent a la versió instal·lada per el nou Antivirus corporatiu. Cal destacar els canvis de dominis realitzats en la transformació del servei d'Antivirus. Les aplicacions han de fer canvis a la seva configuració per accedir-hi."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "canigo"]
 +++
 

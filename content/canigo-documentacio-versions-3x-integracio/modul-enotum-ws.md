@@ -2,7 +2,7 @@
 date        = "2015-03-19T16:19:20+01:00"
 title       = "Enotum_WS"
 description = "Notificacions electròniques Web Service."
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 6
 
 +++

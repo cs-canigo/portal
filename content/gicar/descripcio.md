@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Descripció del servei"
 description = "Informació general del servei GICAR"
-section     = "GICAR"
+sections    = "GICAR"
 taxonomies  = []
 toc 		= true
 weight 		= 1

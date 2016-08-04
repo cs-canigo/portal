@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Accés per a CPD"
 description = ""
-section     = "SIC"
+sections    = "SIC"
 weight      = 1
 +++
 

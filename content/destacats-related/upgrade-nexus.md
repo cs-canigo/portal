@@ -2,7 +2,7 @@
 date        = "2015-07-22"
 title       = "Upgrade Nexus al SIC"
 description = ""
-section     = "SIC"
+sections    = "SIC"
 +++
 
 

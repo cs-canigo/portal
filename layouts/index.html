@@ -52,11 +52,21 @@
 					<div class="col-sm-8">
 						<!--h1 class="pull-left">Notícies</h1-->
 						<ul class="list-group llistat_enllacos_filet_cont contingut">
-				            {{ range first .Site.Params.noticieshome (where .Data.Pages "Section" "noticies") }}
+				            <!-- range first .Site.Params.noticieshome (where .Data.Pages "Section" "noticies") -->
+
+					        {{ range $key, $taxonomy := .Site.Taxonomies.sections }}
+					        {{ if eq $key "home" }} 
+							{{ range first $.Site.Params.noticieshome ($taxonomy.Pages) }} 
 								<li>
-									<a href="{{ .Permalink }}" class="a-vermell">{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
+									<a href="{{ .Permalink }}" class="a-vermell">
+									{{ if eq .Section "bloc" }}
+										BLOC. 
+									{{ end }}
+									{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
 									<p>{{ .Description }}<br /><br /></p>
 								</li>
+							{{ end }}
+							{{ end }}
 							{{ end }}
 						</ul>
 						<a title="RSS de notícies" href="/noticies" class="more">Més notícies</a> <a href="/index.xml" class="rss pull-right"><img src="/img/NG_ico_rss.png_196546587.png" alt="RSS"/></a>

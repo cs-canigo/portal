@@ -2,7 +2,7 @@
 date        = "2016-08-02"
 title       = "SIC. Gestió de dependències per aplicacions ANT"
 description = "Procediment de gestió de dependències amb aplicacions ANT al SIC"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "SETEMBRE2016"
 draft	    = true

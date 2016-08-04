@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Siteminder"
 description = "Característiques i arquitectura"
-section     = "GICAR"
+sections    = "GICAR"
 taxonomies  = []
 weight 		= 1
 +++

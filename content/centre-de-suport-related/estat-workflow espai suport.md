@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Estats i workflow de l'espai de suport (incidències, consultes i peticions de canvi)"
 description = ""
-section     = "Centre de Suport"
+sections    = "Centre de Suport"
 weight 		= 1
 +++
 

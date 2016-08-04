@@ -2,7 +2,7 @@
 date        = "2015-04-30"
 title       = "SIC. Multi-CPD - Desplegaments a CPD4-TSystems"
 description = "El SIC - Multi CPD basat en l'arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 +++
 

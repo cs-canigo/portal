@@ -2,7 +2,7 @@
 date        = "2015-02-05"
 title       = "Canigó. Integració de serveis REST amb GICAR"
 description = "Les aplicacions Canigó 3 basades en l'arquitectura HTML5/JS+REST han de tenir en compte una sèrie de consideracions en cas que estiguin integrades amb GICAR. En concret, és probable que hagin de sol·licitar que s'apliquin les següents excepcions"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "canigó"]
 +++
 

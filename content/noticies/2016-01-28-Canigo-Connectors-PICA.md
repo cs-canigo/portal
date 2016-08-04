@@ -2,7 +2,7 @@
 date        = "2016-01-28"
 title       = "Noves versions dels connectors de Canigó amb la PICA"
 description = "S'han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d'esquema"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "FEBRER2016"
 +++

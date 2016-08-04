@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Nou model TIC al SIC"
 description = ""
-section     = "SIC"
+sections    = "SIC"
 weight      = 1
 +++
 

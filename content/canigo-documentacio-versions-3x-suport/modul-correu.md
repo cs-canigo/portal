@@ -2,7 +2,7 @@
 date        = "2015-03-27T12:45:04+01:00"
 title       = "Correu"
 description = "Enviament de correu electrònic."
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 1
 +++
 

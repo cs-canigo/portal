@@ -2,7 +2,7 @@
 date        = "2015-05-29"
 title       = "Nou format dels comunicats del CS Canigó"
 description = "Des del mes de Juny de 2015 els comunicats que s'emeten des del CS Canigó tenen una nous estils adaptats als corporatius"
-section     = "Canigó"
+sections    = "Canigó"
 +++
 
 Des del mes de Juny de 2015 els comunicats del CS Canigó tenen una nous estils adaptats als corporatius. Aquesta és la maqueta per els nous butlletins:

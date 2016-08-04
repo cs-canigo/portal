@@ -2,7 +2,7 @@
 date        = "2015-12-18"
 title       = "Canvi de domini del repositori ibiblio a Maven"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 +++
 
 Recentment el repositori Maven d'*ibiblio* ha canviat de domini. Per tal que les aplicacions Canigó que accedeixen a aquest repositori puguin continuar resolent les dependències en aquest, caldrà actualitar-ne la referència.

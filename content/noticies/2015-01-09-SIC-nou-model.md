@@ -2,7 +2,7 @@
 date        = "2015-01-08"
 title       = "SIC. Calendari de migració d'aplicacions al nou model"
 description = "Tal com es va notificar al comunicat de Novembre 2014 aviat començarà la migració d'aplicacions per adaptar-se al nou model TIC. Per organitzar aquest procés de migració s'ha elaborat un calendari i s'ha publicat a la plana principal del SVN del SIC, secció \"Calendari de migració d'aplicacions al SIC\""
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "canigó"]
 +++
 

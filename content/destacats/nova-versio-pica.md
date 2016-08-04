@@ -3,7 +3,7 @@ date        = "2016-01-28"
 title       = "Nova versió connector canigó PICA DNI"
 description = "Ha estat publicada una nova versió del connector PICA DNI on s'incorporen els darrers canvis realitzats a la missatgeria"
 enllac      = "http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-integracio/modul-dni/"
-section     = "Canigó"
+sections    = "Canigó"
 key         = "FEBRER2016"
 
 +++

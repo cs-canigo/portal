@@ -2,7 +2,7 @@
 date        = "2016-03-01"
 title       = "Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)"
 description = "S'ha publicat un nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (en endavant PSGD). El propòsit del connector és proporcionar una interfície Java per accedir als serveis exposats per la PSGD."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "MARC2016"
 +++
