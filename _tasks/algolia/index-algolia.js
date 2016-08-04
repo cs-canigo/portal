@@ -32,11 +32,17 @@ indexer.run().then(
 
 	function(_newIdx){
 		var old = readFile(_indexDir+"index.json");
-		
+
 		if(!old){
 			console.log("no index file");
 		}else{
-			var compare = compareIndexs(JSON.parse(old), _newIdx);
+			var _readedIndex = {};
+			try{
+				_readedIndex = JSON.parse(old);
+			}catch(e){
+				//...
+			}
+			var compare = compareIndexs(_readedIndex, _newIdx);
 			console.log("INSERT: " + compare.index.length)
 			console.log("DELETE: " + compare.del.length)
 

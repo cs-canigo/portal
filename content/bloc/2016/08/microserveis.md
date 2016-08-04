@@ -1,10 +1,9 @@
 +++
 date        = "2016-08-04"
 title       = "(micro)serveis"
-description = "Patró de disseny: (micro)serveis"
+description = "Introducció al patró de disseny basat en microserveis i les implicacions que té a l'hora de pensar les aplicacions"
 sections    = ["Bloc", "home"]
 bloc_tags	= ["patrons de disseny", "api"]
-enllac      = "http://canigo.ctti.gencat.cat/bloc/2016/05/rest-vs-jsf/"
 imatge 		= "/images/bloc/microserveis.png"
 key         = "SETEMBRE2016"
 +++
