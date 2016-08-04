@@ -3,7 +3,7 @@ date        = "2016-04-07"
 title       = "Dels Applets a Java Web Start amb JNLP"
 description = "Us expliquem breument les estratègies de migració dels Applets Java i en concret, la migració a tecnologia Java Web Start amb JNLP"
 sections    = ["Bloc", "home"]
-categories  = ["desenvolupament", "applets"]
+bloc_tags	= ["legacy"]
 enllac	    = "http://canigo.ctti.gencat.cat/bloc/2016/04/applets-to-jnlp/"
 key         = "ABRIL2016"
 +++
