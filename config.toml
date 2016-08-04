@@ -21,6 +21,7 @@ Paginate = 10
 
 [taxonomies]
 	bloc_tag = "bloc_tags"
+    section = "sections"
 
 #----------------
 # MENU PRINCIPAL

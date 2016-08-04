@@ -2,7 +2,7 @@
 date        = "2015-03-05T17:11:42+01:00"
 title       = "Mòdul de traces"
 description = "Mòdul de detecció d'errades."
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 7
 +++
 

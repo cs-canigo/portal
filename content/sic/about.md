@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Què és el Servei d'Integració Continua (SIC)"
 description = "Conceptes, motivació i funcionalitat del servei"
-section     = "SIC"
+sections    = "SIC"
 taxonomies  = []
 weight 		= 1
 +++

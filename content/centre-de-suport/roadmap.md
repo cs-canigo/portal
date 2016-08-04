@@ -2,7 +2,7 @@
 date        = "2015-09-25"
 title       = "Roadmap CS Canigó"
 description = "Roadmap del CS Canigó: Canigó, SIC i SGDE"
-section     = "Roadmap"
+sections    = "Roadmap"
 weight      = 5
 categories  = ["canigo","sic","sgde"]
 +++

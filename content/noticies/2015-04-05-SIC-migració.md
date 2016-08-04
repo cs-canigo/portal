@@ -2,7 +2,7 @@
 date        = "2015-04-05"
 title       = "SIC. Migració a nou model TIC finalitzada"
 description = "El passat mes de Març ha finalitzat la migració d'aplicacions al SIC de l'antic model, basat en departaments i acrònims d'aplicació, cap al nou, basat en àmbits i codis de diàleg"
-section     = "Notícies"
+sections    = ["Notícies","home"]
 categories  = ["desenvolupament", "sic"]
 +++
 

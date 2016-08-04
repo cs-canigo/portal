@@ -2,7 +2,7 @@
 date        = "2016-06-08T17:11:42+01:00"
 title       = "Procés d'autenticació amb Siteminder"
 description = "Descripció del procés i finalització de la sessió activa"
-section     = "GICAR"
+sections    = "GICAR"
 taxonomies  = []
 weight 		= 3
 +++

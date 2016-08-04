@@ -2,7 +2,7 @@
 date        = "2015-06-26"
 title       = "SIC. Via alternativa pujada artefactes a SIC"
 description = "S'ha creat una via alternativa per al traspàs d'artefactes entre proveïdors d'aplicacions i CPD quan la via habitual de traspàs d'aquests artefactes, repositori SVN del SIC, no es trobi accessible."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 draft		= true
 categories  = ["sic"]
 key 		= "JULIOL2015"

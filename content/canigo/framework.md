@@ -2,7 +2,7 @@
 date        = "2016-05-12"
 title       = "Framework Canigó"
 description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
-section     = "Canigó"
+sections    = "Canigó"
 taxonomies  = []
 toc 		= true
 weight 		= 1

@@ -2,7 +2,7 @@
 date        = "2016-03-31"
 title       = "SIC. S'habiliten els desplegaments de sites estàtics al núvol"
 description = "A partir d'aquest mes de març, el SIC comença a fer les seves primeres passes amb les tecnologies cloud integrant el desplegament de sites estàtics a Bluemix, el servei al núvol d'IBM."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "ABRIL2016"
 +++

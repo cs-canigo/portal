@@ -2,7 +2,7 @@
 date        = "2015-09-29"
 title       = "Canigó. Ús applet d'e-signatura del CAOC"
 description = "La versió 45 del navegador web Google Chrome deixa de donar suport a la tecnologia NPAPI requerida per els applets Java. En conseqüència, l'applet d'e-signatura del CAOC s'ha d'executar en un altre navegador."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key 		= "OCTUBRE2015"
 categories  = ["canigo"]
 +++

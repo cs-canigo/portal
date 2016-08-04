@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Procediment d'alta d'aplicacions sense codi de diàleg al SIC"
 description = ""
-section     = "SIC"
+sections    = "SIC"
 weight      = 1
 +++
 

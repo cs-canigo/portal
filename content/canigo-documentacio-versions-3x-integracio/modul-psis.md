@@ -2,7 +2,7 @@
 date        = "2015-03-05T17:11:42+01:00"
 title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 11
 +++
 

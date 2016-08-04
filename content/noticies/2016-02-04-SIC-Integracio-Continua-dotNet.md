@@ -2,7 +2,7 @@
 date        = "2016-02-04"
 title       = "Suport complet del SIC a la integració contínua amb .NET"
 description = "El SIC s'ha certificat en la construcció, en la gestió de dependències i en els desplegaments d'aplicatius programats amb .NET"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "FEBRER2016"
 +++

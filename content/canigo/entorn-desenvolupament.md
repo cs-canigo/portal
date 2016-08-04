@@ -2,7 +2,7 @@
 date        = "2015-11-18"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
-section     = "Canigó"
+sections    = "Canigó"
 weight 		= 99
 +++
 

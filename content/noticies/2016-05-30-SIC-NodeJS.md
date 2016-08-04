@@ -2,7 +2,7 @@
 date        = "2016-05-30"
 title       = "SIC. Suport a NodeJS"
 description = "Suport a construcció i desplegament d'aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "JUNY2016"
 +++

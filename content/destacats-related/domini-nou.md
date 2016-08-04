@@ -2,7 +2,7 @@
 date        = "2015-04-27"
 title       = "Nou domini per repositoris Maven"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 +++
 
 Es recomana que les aplicacions Caniǵo accedeixin als repositoris Maven de Canigó utilitzant el nou domini "repos.canigo.ctti.gencat.cat".

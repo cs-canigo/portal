@@ -2,7 +2,7 @@
 date        = "2015-07-24"
 title       = "Canigó. Arquitectura aplicació recomanada"
 description = "Des del CS Canigó es segueix treballant per potenciar el desenvolupament d'aplicacions amb arquitectures client/servidor desacoblades basades en serveis Rest i HTML5/JS. Aquest tipus d'arquitectura facilita el desenvolupament de la part client i servidor de forma independent."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key			= "AGOST2015"
 categories  = ["desenvolupament", "canigó"]
 +++

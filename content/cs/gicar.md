@@ -2,7 +2,7 @@
 date        = "2016-06-09T17:11:42+01:00"
 title       = "Oficina Tècnica de GICAR"
 description = "Contacte amb l'Oficina Tècnica de GICAR"
-section     = ""
+sections    = ""
 weight 		= 3
 +++
 

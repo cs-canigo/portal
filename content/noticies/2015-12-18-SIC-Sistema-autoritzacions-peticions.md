@@ -2,7 +2,7 @@
 date        = "2015-12-18"
 title       = "SIC. Sistema d'autoritzacions de peticions FRAMEWORK SIC a SAU-Remedy"
 description = "L'admissió de peticions al servei FRAMEWORK SIC de SAU-Remedy es troba restringit per un sistema de rols d'usuari que determina quines operacions pot demanar cada rol. Aquest article pretén explicar com es realitza aquesta discriminació."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "GENER2016"
 +++

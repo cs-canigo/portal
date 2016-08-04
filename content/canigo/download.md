@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Descàrrega dels binaris de Canigó i de les API’s de suport"
 description = "Descàrrega de les diferents versions de Canigó, entorn de treball, plugin d'eclipse..."
-section     = "Canigó"
+sections    = "Canigó"
 weight		= 4
 +++
 

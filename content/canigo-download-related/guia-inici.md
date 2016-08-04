@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Guia d'inici per a Canigó 3.x"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 weight      = 1
 no_index    = true
 +++

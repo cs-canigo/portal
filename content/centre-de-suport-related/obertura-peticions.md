@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Obertura de peticions"
 description = ""
-section     = "Centre de Suport"
+sections    = "Centre de Suport"
 weight 		= 1
 +++
 

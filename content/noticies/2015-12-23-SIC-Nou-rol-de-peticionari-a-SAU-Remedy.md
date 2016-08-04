@@ -2,7 +2,7 @@
 date        = "2015-12-23"
 title       = "SIC. Nou rol de peticionari SIC a SAU-Remedy"
 description = "Neix a SIC un nou tipus d'usuari: Gestor de peticions a SAU-Remedy. Aquest tipus d'usuari pretén flexibilitzar el sistema d'autorització de peticions de SIC afegint un nou conjunt d'usuaris autoritzats per a poder demanar certs tipus de peticions de suport de FRAMEWORK SIC a SAU- Remedy."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "GENER2016"
 +++

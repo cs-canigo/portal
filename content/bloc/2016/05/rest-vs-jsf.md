@@ -2,8 +2,8 @@
 date        = "2016-05-13"
 title       = "Aplicacions webs modernes: JSF vs REST"
 description = "Us donem una breu explicació d'aquest canvi de paradigma en la capa de presentació"
-section 	= ["Bloc", "Notícies"]
-categories  = ["arquitectura", "desenvolupament", "canigó"]
+sections    = ["Bloc", "home"]
+bloc_tags	= ["patrons de disseny", "bones pràctiques", "legacy"]
 enllac      = "http://canigo.ctti.gencat.cat/bloc/2016/05/rest-vs-jsf/"
 imatge 		= "/images/bloc/rest.png"
 key         = "JUNY2016"

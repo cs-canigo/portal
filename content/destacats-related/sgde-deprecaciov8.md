@@ -2,7 +2,7 @@
 date        = "2015-07-06"
 title       = "Recordatori: Eliminació de la versió v8 del servei d'Eformularis"
 description = ""
-section     = "SGDE"
+sections    = "SGDE"
 +++
 
 Us recordem que tenim prevista l'eliminació per aquest any 2016 de la versió v8 del WS del servei d'eFormularis. Aquesta és la versió més antiga del WS, la URL de la qual és la següent per als entorns de PRE i PRO respectivament:

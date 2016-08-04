@@ -2,7 +2,7 @@
 date        = "2014-12-09"
 title       = "Canigó. Publicació serveis i connectors Canigó 3.1"
 description = "Al mes de Novembre s'han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s'especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d'ells. "
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "canigó"]
 +++
 

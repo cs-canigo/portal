@@ -2,7 +2,7 @@
 date        = "2016-08-02"
 title       = "SIC. Gestió de dependències per aplicacions .NET"
 description = "Procediment de gestió de dependències amb aplicacions .NET al SIC"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "AGOST2016"
 +++

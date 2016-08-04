@@ -2,7 +2,7 @@
 date        = "2015-04-05"
 title       = "SIC. Nova política d'autorització d'accés a repositoris"
 description = "Els repositoris de Subversion de l'antic model existents al SIC només comptaven amb un control d'accessibilitat (autenticació). Els usuaris podien accedir a determinats repositoris en funció del grup al qual se'ls hi havia assignat amb control total (Read/Write). En els repositoris del nou model s'ha incorporat un control d'autorització que permet definir els permisos sobre el contingut accedit (Read o Read/Write)"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "sic"]
 +++
 

@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Documentació"
 description = "Documentació comú, manuals i formularis específics per cada plataforma"
-section     = "SGDE"
+sections    = "SGDE"
 taxonomies  = []
 weight 		= 2
 +++

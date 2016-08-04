@@ -2,7 +2,7 @@
 date        = "2015-07-16T17:11:42+01:00"
 title       = "Governança del BIs Corporatius"
 description = "Descripció de la Governança dels BIs corporatius de la Generalitat de de Catalunya"
-section     = "CGBI"
+sections    = "CGBI"
 taxonomies  = []
 toc 		= true
 weight 		= 1

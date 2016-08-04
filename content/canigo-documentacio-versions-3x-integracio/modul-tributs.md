@@ -2,7 +2,7 @@
 date        = "2015-03-20T09:09:23+01:00"
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
-section     = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació versió 3.x"
 weight      = 16
 +++
 

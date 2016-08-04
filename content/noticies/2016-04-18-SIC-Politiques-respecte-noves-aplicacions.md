@@ -2,7 +2,7 @@
 date        = "2016-04-18"
 title       = "SIC. Polítiques d'integració respecte a noves aplicacions"
 description = "Des de SIC es pretén recuperar la funcionalitat original dels repositoris SVN (custòdia del codi font) i promocionar l'us de la Plataforma d'Integració Contínua per a construïr i desplegar els binaris de les aplicacions."
-section     = "Notícies"
+sections    = ["Notícies","home"]
 Draft		= true
 categories  = ["sic"]
 key         = "MAIG2016"

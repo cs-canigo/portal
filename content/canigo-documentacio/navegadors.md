@@ -2,7 +2,7 @@
 date        = "2015-02-05T17:11:42+01:00"
 title       = "Navegadors"
 description = "Estadístiques de navegadors webs gencat (%)"
-section     = "Documentació Canigó"
+sections    = "Documentació Canigó"
 taxonomies  = []
 weight 		= 5
 +++

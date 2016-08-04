@@ -2,7 +2,7 @@
 date        = "2016-04-14"
 title       = "Canigó. Nou Mòdul d'Administració de Logs"
 description = "Nou mòdul per al monitoratge i administració de logs d'aplicacions Canigó 3.1."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "MAIG2016"
 +++

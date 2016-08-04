@@ -2,7 +2,7 @@
 date        = "2016-05-11"
 title       = "Elements del catàleg"
 description = "Docker, xPaaS, DBaaS"
-section     = "Container Cloud"
+sections    = "Container Cloud"
 weight      = 1
 toc = true
 categories  = ["cloud","docker","container","paas"]

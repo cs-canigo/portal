@@ -2,7 +2,7 @@
 date        = "2015-06-26"
 title       = "How to"
 description = "Altres documents d'interés per a l'ús del SVN o Jenkins"
-section     = "SIC"
+sections    = "SIC"
 +++
 
 Un how-to és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.

@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Accés a les eines de suport"
 description = "Eines de les que disposem per a comunicar-nos amb el CS Canigó"
-section     = "Centre de Suport"
+sections    = "Centre de Suport"
 weight		= 2
 +++
 

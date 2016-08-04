@@ -2,7 +2,7 @@
 date        = "2015-06-26"
 title       = "Manuals de SIC"
 description = "Manuals de SIC"
-section     = "SIC"
+sections    = "SIC"
 +++
 
 ### Manuals

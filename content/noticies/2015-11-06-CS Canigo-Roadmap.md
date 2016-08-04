@@ -2,7 +2,7 @@
 date        = "2015-11-06"
 title       = "CS Canigó. Roadmap"
 description = "Aquest mes d'Octubre ha estat publicat el Roadmap del CS Canigó. D'aquesta manera es dona visibilitat a les tasques que es fan des del Centre de Suport a curt i llarg termini amb una previsió de lliurament."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key         = "NOVEMBRE2015"
 categories  = ["cscanigo"]
 +++

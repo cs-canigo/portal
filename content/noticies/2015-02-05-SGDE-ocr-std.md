@@ -2,7 +2,7 @@
 date        = "2015-02-05"
 title       = "SGDE. OCR al STD"
 description = "En el procés de transformació de CPD de l'entorn PROductiu del STD (Sistema de Transformació de Documents), finalitzat el passat 28/1, ha estat publicada una nova versió del WebService de Serveis Invocació STD"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["desenvolupament", "sgde"]
 +++
 

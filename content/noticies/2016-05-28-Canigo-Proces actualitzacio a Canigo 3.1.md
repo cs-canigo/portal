@@ -2,7 +2,7 @@
 date        = "2016-05-28"
 title       = "Canigó. Actualització d'aplicacions Canigó 3.0 a Canigó 3.1"
 description = "Recordatori del procediment per a realitzar l'actualització d'aplicacions Canigo 3.0 a Canigó 3.1"
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "JUNY2016"
 +++

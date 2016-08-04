@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Què és el Servei de Gestió del Document Electrònic (SGDE)"
 description = "Plataforma, funcionalitats i ús del servei"
-section     = "SGDE"
+sections    = "SGDE"
 toc 		= false
 taxonomies  = []
 weight 		= 1

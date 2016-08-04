@@ -2,7 +2,7 @@
 date        = "2015-10-27"
 title       = "Canigó. Adaptació al PIV de Gencat"
 description = "L'adaptació al PIV de Gencat és un requeriment per moltes aplicacions. L'estratègia a seguir per les aplicacions Canigó depèn de la versió en què estigui implementada."
-section     = "Notícies"
+sections    = ["Notícies", "home"]
 key         = "NOVEMBRE2015"
 categories  = ["canigo"]
 +++

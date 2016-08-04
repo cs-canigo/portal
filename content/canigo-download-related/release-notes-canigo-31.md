@@ -2,7 +2,7 @@
 date        = "2015-03-31"
 title       = "Release Notes Canigó 3.1"
 description = ""
-section     = "Canigó"
+sections    = "Canigó"
 weight      = 1
 +++
 

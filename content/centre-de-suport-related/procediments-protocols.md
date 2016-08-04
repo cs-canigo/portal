@@ -2,7 +2,7 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Procediments i protocols en la gestió d'activitats (incidències, consultes i peticions de canvis)"
 description = ""
-section     = "Centre de Suport"
+sections    = "Centre de Suport"
 weight 		= 1
 +++
 

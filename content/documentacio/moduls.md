@@ -14,14 +14,17 @@ no_index 	= true
 
 <div class="row">
 
-            <div id="left-column" class="col-xs-12 col-md-6">
-              <div id="major" class="facet"></div>
-              <div id="minor" class="facet"></div>
-              <div id="modules" class="facet"></div>
-              <div id="modules_version" class="facet"></div>
+            <div id="left-column" class="col-xs-12 col-md-9">
+                <div id="major" class="facet col-xs-12 col-md-4"></div>
+                <div id="chart_majors" class="chart col-xs-12 col-md-8"></div>
+                <div id="minor" class="facet col-xs-12 col-md-4"></div>
+                <div id="chart_minors" class="chart col-xs-12 col-md-8"></div>
+                <div id="modules" class="facet col-xs-12 col-md-4"></div>
+                <div id="chart_moduls" class="chart col-xs-12 col-md-5"></div>
+                <div id="modules_version" class="facet col-xs-12 col-md-12"></div>
             </div>
 
-            <div id="hits" class="list-group col-xs-12 col-md-6">
+            <div id="hits" class="list-group col-xs-12 col-md-3">
                 
             </div>
 
@@ -36,7 +39,7 @@ no_index 	= true
 <script type="text/html" id="hit-template">
     <div class="destacat_text list-group-item">
         <h2>{{codi}} {{nom}} {{rev}}</h2>
-        <div class="block-with-text">
+        <div class="app_modules">
         	{{modules_version}}
         </div>
     </div>
@@ -61,4 +64,5 @@ no_index 	= true
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <!--script src="/js/cercador.js"></script-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/js/algolia-search-moduls.js"></script>
