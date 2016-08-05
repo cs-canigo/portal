@@ -1,9 +1,6 @@
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(init);
 
-var converter = new showdown.Converter();
-converter.setOption('tables', true);
-
 var search, results = {}, facet_data={};
 
 /* global instantsearch */

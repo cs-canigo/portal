@@ -61,8 +61,6 @@ no_index 	= true
 	<img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" />
 </div>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<!--script src="/js/cercador.js"></script-->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script src="/js/algolia-search-moduls.js"></script>

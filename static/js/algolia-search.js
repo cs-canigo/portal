@@ -37,7 +37,7 @@ function app(opts) {
     urlSync: true,
     searchFunction : function(helper) {
       if (helper.state.query === '') {
-        return;
+        //return;
       }
       helper.search();
     }
@@ -99,7 +99,6 @@ function app(opts) {
         page : "hidden-xs"
       }
     })
-
   );
 
   search.addWidget(
@@ -114,7 +113,7 @@ function app(opts) {
       },
       transformData : {
         item : function(obj){
-          console.log(obj)
+          //console.log(obj)
           if(obj.name==="home"){
             for(var k in obj.cssClasses){
               //obj.cssClasses.item = obj.cssClasses.item + " hidden";
