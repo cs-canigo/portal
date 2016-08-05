@@ -4,16 +4,7 @@ google.charts.setOnLoadCallback(init);
 var converter = new showdown.Converter();
 converter.setOption('tables', true);
 
-var _majors_arr, 
-    _majors_arr_copy,
-    _minors_arr, 
-    _minors_arr_copy,
-    _modules_arr, 
-    _modules_arr_copy,
-    facet_data = {};
-; 
-
-var search, results = {};
+var search, results = {}, facet_data={};
 
 /* global instantsearch */
 app({
@@ -34,10 +25,8 @@ function app(opts) {
   });
 
   search.on('render', function(content){
-
     fillFacetData();
     drawCharts();
-    initArrays();
   });
  
   search.addWidget(
@@ -104,7 +93,7 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Versió major")
-      },
+      }/*,
       transformData : {
         item : function(obj){
           _majors_arr_copy.push([obj.name, obj.count]);
@@ -113,7 +102,7 @@ function app(opts) {
           }
           return obj;
         }
-      }     
+      }*/    
     })
   )
 
@@ -126,15 +115,6 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Versió menor")
-      },
-      transformData : {
-        item : function(obj){
-          _minors_arr_copy.push([obj.name, obj.count]);
-          if(obj.isRefined){
-            _minors_arr.push([obj.name, obj.count]);
-          }
-          return obj;
-        }
       }
     })
   )
@@ -148,15 +128,6 @@ function app(opts) {
       operator: 'or',
       templates: {
         header: getHeader("Mòduls")
-      },
-      transformData : {
-        item : function(obj){
-          _modules_arr_copy.push([obj.name, obj.count]);
-          if(obj.isRefined){
-            _modules_arr.push([obj.name, obj.count]);
-          }
-          return obj;
-        }
       }
     })
   )
@@ -177,17 +148,7 @@ function app(opts) {
   //init();
 }
 
-function initArrays(){
-    _majors_arr = [];
-    _majors_arr_copy = [];
-    _minors_arr = [];
-    _minors_arr_copy = [];
-    _modules_arr = [];
-    _modules_arr_copy = [];
-}
-
 function init(){
-  initArrays();
   search.start();
 }
 
@@ -211,7 +172,6 @@ function draw(rows, dom_id, title, width, height, title_col_1){
   pie_chart.draw(_chart, {'title':title, 'width': width, 'height': height});
 
 }
-
 
 function drawCharts(){
   draw(facet_data.major, "chart_majors", "Aplicacions per versió major de Canigó", 400, 400, "Versió");
