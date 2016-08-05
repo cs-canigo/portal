@@ -9,10 +9,11 @@ var _majors_arr,
     _minors_arr, 
     _minors_arr_copy,
     _modules_arr, 
-    _modules_arr_copy
+    _modules_arr_copy,
+    facet_data = {};
 ; 
 
-var search;
+var search, results = {};
 
 /* global instantsearch */
 app({
@@ -26,14 +27,19 @@ function app(opts) {
     appId: opts.appId,
     apiKey: opts.apiKey,
     indexName: opts.indexName,
-    urlSync: true
+    urlSync: true,
+    searchFunction : function(helper) {
+      results = helper.search();
+    }    
   });
 
-  search.on('render', function(){
+  search.on('render', function(content){
+
+    fillFacetData();
     drawCharts();
     initArrays();
   });
-
+ 
   search.addWidget(
     instantsearch.widgets.searchBox({
       container: '#query',
@@ -50,7 +56,9 @@ function app(opts) {
         empty: getTemplate('no-results')
       },
       transformData : function(item){
-        item.modules_version = item.modules_version.join(", ");
+        if(item.modules_version){
+          item.modules_version = item.modules_version.join(", ");
+        }
         return item; 
       }
     })
@@ -192,15 +200,12 @@ function getHeader(title) {
 }
 
 /* draw charts */
-function draw(rows_filtered, rows_full, dom_id, title, width, height, title_col_1){
+function draw(rows, dom_id, title, width, height, title_col_1){
   var _chart = new google.visualization.DataTable();
   _chart.addColumn('string', title_col_1);
   _chart.addColumn('number', 'Aplicacions');
 
-  if(rows_filtered.length===0){
-    rows_filtered = rows_full; 
-  }
-  _chart.addRows(rows_filtered);
+  _chart.addRows(rows);
 
   var pie_chart = new google.visualization.PieChart(document.getElementById(dom_id));
   pie_chart.draw(_chart, {'title':title, 'width': width, 'height': height});
@@ -209,9 +214,44 @@ function draw(rows_filtered, rows_full, dom_id, title, width, height, title_col_
 
 
 function drawCharts(){
+  draw(facet_data.major, "chart_majors", "Aplicacions per versió major de Canigó", 400, 400, "Versió");
+  draw(facet_data.minor, "chart_minors", "Aplicacions per versió menor de Canigó", 400, 400, "Versió");
+  draw(facet_data.modules, "chart_moduls", "Mòduls Canigó per versió", 400, 400, "Mòduls");
+}
 
-  draw(_majors_arr, _majors_arr_copy, "chart_majors", "Aplicacions per versió major de Canigó", 400, 400, "Versió");
-  draw(_minors_arr, _minors_arr_copy, "chart_minors", "Aplicacions per versió menor de Canigó", 400, 400, "Versió");
-  draw(_modules_arr, _modules_arr_copy, "chart_moduls", "Mòduls Canigó per versió", 400, 400, "Mòduls");
+function fillFacetData(){
+  var charts_data = {};
+  var deletes = {};
+  var refined = {};
 
+  for(var i=0,z=results.lastResults.disjunctiveFacets.length;i<z;i++){
+    charts_data[results.lastResults.disjunctiveFacets[i].name] = results.lastResults.disjunctiveFacets[i].data;
+    if(results.state.disjunctiveFacetsRefinements[results.lastResults.disjunctiveFacets[i].name]){
+      refined[results.lastResults.disjunctiveFacets[i].name] = results.state.disjunctiveFacetsRefinements[results.lastResults.disjunctiveFacets[i].name];
+    }
+  }
+
+  for(var key in refined){
+    for(var i=0,z=refined[key].length;i<z;i++){
+      deletes[key]=[];
+      for(var clau in charts_data[key]){
+        if(refined[key].indexOf(clau)===-1){
+          deletes[key].push(clau);
+        }
+      }
+    }  
+  }
+
+  for(var k in deletes){
+    for(var i=0,z=deletes[k].length;i<z;i++){
+      delete charts_data[k][deletes[k][i]];
+    }
+  }
+
+  for(var k in charts_data){
+    facet_data[k] = [];
+    for(var x in charts_data[k]){
+      facet_data[k].push([x, charts_data[k][x]])
+    }
+  }
 }
