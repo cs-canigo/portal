@@ -372,9 +372,9 @@ Port del servidor habilitat per realitzar la transferència de fitxers/streams m
 <pre><code>&lt;canigo.support.sftp.version&gt;[1.1.0,1.2.0)&lt;/canigo.support.sftp.version&gt;
 
 &lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.support.sftp&lt;/artifactId&gt;
-	&lt;version&gt;${canigo.support.sftp.version}&lt;/version&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.support.sftp&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.support.sftp.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -924,90 +924,90 @@ if (sftpService.isLogged()) {
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {&quot;../../core/config/canigo-core.xml&quot;})
 public class SftpServiceReleaseTest{
-	// File exchange
-	private String fileName					= null;
-	private String localPath				= null;
-	private String remotePath				= null;
-	private String tempName 				= null;
+    // File exchange
+    private String fileName                 = null;
+    private String localPath                = null;
+    private String remotePath               = null;
+    private String tempName                 = null;
 
-	@Autowired
-	@Qualifier(&quot;sftpService&quot;)
-	SftpService sftpService;
+    @Autowired
+    @Qualifier(&quot;sftpService&quot;)
+    SftpService sftpService;
 
-	@Before
-	public void setUp() throws AddressException{
-		fileName = &quot;sftp.properties&quot;;
-		remotePath = &quot;/home/continuum/tmp&quot;;
-		localPath = this.getClass().getResource(&quot;/temp/arxiu_pujar.pdf&quot;).getPath();
-		localPath = localPath.substring(0, (localPath.lastIndexOf(&quot;/&quot;)+1));
-	}
+    @Before
+    public void setUp() throws AddressException{
+        fileName = &quot;sftp.properties&quot;;
+        remotePath = &quot;/home/continuum/tmp&quot;;
+        localPath = this.getClass().getResource(&quot;/temp/arxiu_pujar.pdf&quot;).getPath();
+        localPath = localPath.substring(0, (localPath.lastIndexOf(&quot;/&quot;)+1));
+    }
 
-	/**
-	* Documentació.
-	*
-	* @throws Exception Documentació
-	*/
-	@Test
-	public void testLogin() throws Exception {
-		try {
-			Assert.assertTrue(sftpService.login());
-			if (sftpService.isLogged()) {
-				sftpService.logout();
-			}
-		} catch (SftpModuleException e) {
-			Assert.fail();
-		}
-	}
+    /**
+    * Documentació.
+    *
+    * @throws Exception Documentació
+    */
+    @Test
+    public void testLogin() throws Exception {
+        try {
+            Assert.assertTrue(sftpService.login());
+            if (sftpService.isLogged()) {
+                sftpService.logout();
+            }
+        } catch (SftpModuleException e) {
+            Assert.fail();
+        }
+    }
 
-	/**
-	* Documentació.
-	*
-	* @throws Exception Documentació
-	*/
-	@Test
-	public void testLogout() throws Exception {
-		try {
-			sftpService.login();
-			Assert.assertTrue(sftpService.logout());
-		} catch (SftpModuleException e) {
-			Assert.fail();
-		}
-	}
+    /**
+    * Documentació.
+    *
+    * @throws Exception Documentació
+    */
+    @Test
+    public void testLogout() throws Exception {
+        try {
+            sftpService.login();
+            Assert.assertTrue(sftpService.logout());
+        } catch (SftpModuleException e) {
+            Assert.fail();
+        }
+    }
 
-	/**
-	* Documentació.
-	*
-	* @throws Exception Documentació
-	*/
-	@Test
-	public void testLogoutFailed() throws Exception {
-		try {
-			Assert.assertFalse(sftpService.logout());
-		} catch (SftpModuleException e) {
-			Assert.fail();
-		}
-	}
+    /**
+    * Documentació.
+    *
+    * @throws Exception Documentació
+    */
+    @Test
+    public void testLogoutFailed() throws Exception {
+        try {
+            Assert.assertFalse(sftpService.logout());
+        } catch (SftpModuleException e) {
+            Assert.fail();
+        }
+    }
 
-	/**
-	* Documentació.
-	*
-	* @throws Exception Documentació
-	*/
-	@Test
-	public void testUploadFile() throws Exception {
-		try {
-			sftpService.login();
-			if(sftpService.isLogged()) {
+    /**
+    * Documentació.
+    *
+    * @throws Exception Documentació
+    */
+    @Test
+    public void testUploadFile() throws Exception {
+        try {
+            sftpService.login();
+            if(sftpService.isLogged()) {
                                 sftpService.uploadFile(fileName, localPath, remotePath);
-			        Assert.assertTrue(sftpService.existsFile(fileName, remotePath));
-				sftpService.logout();
-			}else{
+                    Assert.assertTrue(sftpService.existsFile(fileName, remotePath));
+                sftpService.logout();
+            }else{
                                 Assert.fail();
                         }
-		} catch (SftpModuleException e) {
-			Assert.fail();
-		}
-	}
+        } catch (SftpModuleException e) {
+            Assert.fail();
+        }
+    }
 
 }
 </code></pre>

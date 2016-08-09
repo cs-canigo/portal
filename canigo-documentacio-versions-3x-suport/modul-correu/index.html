@@ -343,9 +343,9 @@
 <pre><code>&lt;canigo.support.mailing.version&gt;[1.1.0,1.2.0)&lt;/canigo.support.mailing.version&gt;
 
 &lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.support.mailing&lt;/artifactId&gt;
-	&lt;version&gt;${canigo.support.mailing.version}&lt;/version&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.support.mailing&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.support.mailing.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -426,14 +426,14 @@
 <p>Per poder utilitzar correctament les propietats isSmtpSSLEnabled, debug i timeout s&rsquo;ha de declarar un bean com aquest:</p>
 
 <pre><code>&lt;bean id=&quot;mailSender&quot; parent=&quot;mailSenderParent&quot; class=&quot;org.springframework.mail.javamail.JavaMailSenderImpl&quot;&gt;
-	&lt;property name=&quot;javaMailProperties&quot;&gt;
-		&lt;map&gt;
-			&lt;entry key=&quot;mail.smtp.auth&quot; value=&quot;${mail.isSmtpSSLEnabled}&quot;/&gt;
-			&lt;entry key=&quot;mail.smtp.starttls.enable&quot; value=&quot;${mail.isSmtpSSLEnabled}&quot;/&gt;
-			&lt;entry key=&quot;mail.smtp.timeout&quot; value=&quot;${mail.timeout}&quot;/&gt;
-			&lt;entry key=&quot;mail.smtps.debug&quot; value=&quot;${mail.debug}&quot;/&gt;
-		&lt;/map&gt;
-	&lt;/property&gt;
+    &lt;property name=&quot;javaMailProperties&quot;&gt;
+        &lt;map&gt;
+            &lt;entry key=&quot;mail.smtp.auth&quot; value=&quot;${mail.isSmtpSSLEnabled}&quot;/&gt;
+            &lt;entry key=&quot;mail.smtp.starttls.enable&quot; value=&quot;${mail.isSmtpSSLEnabled}&quot;/&gt;
+            &lt;entry key=&quot;mail.smtp.timeout&quot; value=&quot;${mail.timeout}&quot;/&gt;
+            &lt;entry key=&quot;mail.smtps.debug&quot; value=&quot;${mail.debug}&quot;/&gt;
+        &lt;/map&gt;
+    &lt;/property&gt;
 &lt;/bean&gt;
 </code></pre>
 
@@ -462,80 +462,80 @@ import cat.gencat.ctti.canigo.arch.support.mailing.MailService;
 @Component(&quot;mailingBean&quot;)@Scope(&quot;request&quot;)
 public class MailingBean {
 
-	private MailService service;
-	private String to;
-	private String subject;
-	private String from;
-	private String cc;
-	private String cco;
-	private String body;@Autowired
-	private I18nResourceBundleMessageSource messageResource;
-	private String result;
+    private MailService service;
+    private String to;
+    private String subject;
+    private String from;
+    private String cc;
+    private String cco;
+    private String body;@Autowired
+    private I18nResourceBundleMessageSource messageResource;
+    private String result;
 
-	public String getResult() {
-		if (result\ != null) {
-			return messageResource.getMessage(result);
-		} else {
-			return &quot;&quot;;
-		}
-	}
+    public String getResult() {
+        if (result\ != null) {
+            return messageResource.getMessage(result);
+        } else {
+            return &quot;&quot;;
+        }
+    }
 
-	public String getTo() {
-		return to;
-	}
-	
-	public void setTo(String to) {
-		this.to = to;
-	}
-	
-	public String getSubject() {
-		return subject;
-	}
-	
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
-	
-	public String getFrom() {
-		return from;
-	}
-	
-	public void setFrom(String from) {
-		this.from = from;
-	}
-	
-	public String getCc() {
-		return cc;
-	}
-	
-	public void setCc(String cc) {
-		this.cc = cc;
-	}
-	
-	public String getCco() {
-		return cco;
-	}
-	
-	public void setCco(String cco) {
-		this.cco = cco;
-	}
-	
-	public String getBody() {
-		return body;
-	}
-	
-	public void setBody(String body) {
-		this.body = body;
-	}
-	
-	public MailService getService() {
-		return service;
-	}
-	
-	@Autowired
-	public void setService(MailService service) {
-		this.service = service;
-	}
+    public String getTo() {
+        return to;
+    }
+    
+    public void setTo(String to) {
+        this.to = to;
+    }
+    
+    public String getSubject() {
+        return subject;
+    }
+    
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+    
+    public String getFrom() {
+        return from;
+    }
+    
+    public void setFrom(String from) {
+        this.from = from;
+    }
+    
+    public String getCc() {
+        return cc;
+    }
+    
+    public void setCc(String cc) {
+        this.cc = cc;
+    }
+    
+    public String getCco() {
+        return cco;
+    }
+    
+    public void setCco(String cco) {
+        this.cco = cco;
+    }
+    
+    public String getBody() {
+        return body;
+    }
+    
+    public void setBody(String body) {
+        this.body = body;
+    }
+    
+    public MailService getService() {
+        return service;
+    }
+    
+    @Autowired
+    public void setService(MailService service) {
+        this.service = service;
+    }
    
     /**
     * Send mail
@@ -723,32 +723,32 @@ client=&quot;true&quot;/&gt;
 
 <pre><code class="language-java">public class MailingAction extends DispatchActionSupport {
 
-	private final String FORWARD_SUCCESS = &quot;success&quot;;
+    private final String FORWARD_SUCCESS = &quot;success&quot;;
 
-	private static final Log log = LogFactory.getLog(MailingAction.class);
+    private static final Log log = LogFactory.getLog(MailingAction.class);
 
-	private MailService mailService;
+    private MailService mailService;
 
-	/**
-	 * Mètode que es crida pel reqCode=inici
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward send(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-		log.info(&quot;MailingAction [inici] - Inici&quot;);...mailService.send(from, subject, body, false, llistaMails, llistaAttachment);...
-		return mapping.findForward(FORWARD_SUCCESS);
-	}
+    /**
+     * Mètode que es crida pel reqCode=inici
+     * @param mapping ActionMapping
+     * @param form ActionForm
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return ActionForward
+     * @throws Exception exception
+     */
+    public ActionForward send(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        log.info(&quot;MailingAction [inici] - Inici&quot;);...mailService.send(from, subject, body, false, llistaMails, llistaAttachment);...
+        return mapping.findForward(FORWARD_SUCCESS);
+    }
 
-	public MailService getMailService() {
-		return mailService;
-	}
-	public void setMailService(MailService mailService) {
-		this.mailService = mailService;
-	}
+    public MailService getMailService() {
+        return mailService;
+    }
+    public void setMailService(MailService mailService) {
+        this.mailService = mailService;
+    }
 }
 </code></pre>
 

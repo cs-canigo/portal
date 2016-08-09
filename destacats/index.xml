@@ -82,21 +82,21 @@
     </item>
     
     <item>
+      <title>Repositori Maven2 de Red Hat al Nexus de SIC</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</link>
+      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</guid>
+      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven2 de Red Hat a través del Nexus</description>
+    </item>
+    
+    <item>
       <title>Slave Jenkins a CPD2 disponible</title>
       <link>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</link>
       <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</guid>
       <description>Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</description>
-    </item>
-    
-    <item>
-      <title>Nova versió connector canigó PICA DNI</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</link>
-      <pubDate>Thu, 28 Jan 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/nova-versio-pica/</guid>
-      <description>Ha estat publicada una nova versió del connector PICA DNI on s&#39;incorporen els darrers canvis realitzats a la missatgeria</description>
     </item>
     
   </channel>

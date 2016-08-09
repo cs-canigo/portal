@@ -424,9 +424,9 @@
 <p>Per afegir aquesta dependència s&rsquo;ha de modificar el pom.xml de l&rsquo;aplicació per incloure les llibreries del Connector.</p>
 
 <pre><code>&lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.integration.sgde&lt;/artifactId&gt;
-	&lt;version&gt;1.2.0&lt;/version&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.integration.sgde&lt;/artifactId&gt;
+    &lt;version&gt;1.2.0&lt;/version&gt;
 &lt;/dependency&gt;
 
 </code></pre>
@@ -436,22 +436,22 @@
 <p>En el cas de que es vulgui integrar aquest connector en una aplicació que disposi del connector de la PICA, és farà necessari afegir les següents exclusions en aquests últim, per exemple el connector PADRÒ.</p>
 
 <pre><code>&lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
     &lt;artifactId&gt;canigo.integration.padro.pica&lt;/artifactId&gt;
     &lt;version&gt;1.2.0&lt;/version&gt;
     &lt;exclusions&gt;
-		&lt;exclusion&gt;
-			&lt;groupId&gt;org.apache.axis2&lt;/groupId&gt;
-			&lt;artifactId&gt;axis2-jaxws&lt;/artifactId&gt;
-		&lt;/exclusion&gt;
-		&lt;exclusion&gt;
-			&lt;groupId&gt;org.apache.woden&lt;/groupId&gt;
-			&lt;artifactId&gt;woden&lt;/artifactId&gt;
-		&lt;/exclusion&gt;
-		&lt;exclusion&gt;
-			&lt;groupId&gt;org.apache.ws.commons.schema&lt;/groupId&gt;
-			&lt;artifactId&gt;XmlSchema&lt;/artifactId&gt;
-		/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.apache.axis2&lt;/groupId&gt;
+            &lt;artifactId&gt;axis2-jaxws&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.apache.woden&lt;/groupId&gt;
+            &lt;artifactId&gt;woden&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.apache.ws.commons.schema&lt;/groupId&gt;
+            &lt;artifactId&gt;XmlSchema&lt;/artifactId&gt;
+        /exclusion&gt;
     &lt;/exclusions&gt;
 &lt;/dependency&gt;
 </code></pre>
@@ -464,18 +464,18 @@
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
-	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
            http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
-	&lt;!-- BEAN SGDE --&gt;
-	&lt;bean id=&quot;sgdeService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.sgde.impl.SGDEServiceImpl&quot; init-method=&quot;setupService&quot; scope=&quot;prototype&quot;&gt;
-    	&lt;description&gt;
-			SGDE implementation:
-				- formsWSDLUrl: Url de l'wsdl del servei de formularis per les operacions de: renderitzar, extracció de dades, aplanat, ...
-				- stdWSDLUrl: Url de l'wsdl del servei de Transformació de Documents(STD)
-		&lt;/description&gt;
-    	&lt;property name=&quot;formsWSDLUrl&quot; value=&quot;${sgde.forms.wsdl.url:http://eformularis.pre.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl}&quot; /&gt;
-		&lt;property name=&quot;stdWSDLUrl&quot; value=&quot;${sgde.std.wsdl.url:http://sgde.pre.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl}&quot; /&gt;
+    &lt;!-- BEAN SGDE --&gt;
+    &lt;bean id=&quot;sgdeService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.sgde.impl.SGDEServiceImpl&quot; init-method=&quot;setupService&quot; scope=&quot;prototype&quot;&gt;
+        &lt;description&gt;
+            SGDE implementation:
+                - formsWSDLUrl: Url de l'wsdl del servei de formularis per les operacions de: renderitzar, extracció de dades, aplanat, ...
+                - stdWSDLUrl: Url de l'wsdl del servei de Transformació de Documents(STD)
+        &lt;/description&gt;
+        &lt;property name=&quot;formsWSDLUrl&quot; value=&quot;${sgde.forms.wsdl.url:http://eformularis.pre.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl}&quot; /&gt;
+        &lt;property name=&quot;stdWSDLUrl&quot; value=&quot;${sgde.std.wsdl.url:http://sgde.pre.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl}&quot; /&gt;
     &lt;/bean&gt;
 &lt;/beans&gt;
 </code></pre>

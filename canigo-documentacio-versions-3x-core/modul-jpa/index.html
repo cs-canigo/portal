@@ -419,65 +419,65 @@
 @Lazy
 public class CRUDBean {
 
-	private String name;
-	private String password;
-	private UsersDAO&lt;User,Integer&gt; dao = null;
-	private User user = null;
-	private DataModel model = null;
-	private static final Log logger = LogFactory.getLog(CRUDBean.class);
+    private String name;
+    private String password;
+    private UsersDAO&lt;User,Integer&gt; dao = null;
+    private User user = null;
+    private DataModel model = null;
+    private static final Log logger = LogFactory.getLog(CRUDBean.class);
 
-	@Autowired
-	public void setDao(UsersDAO&lt;User,Integer&gt; dao) {
-		this.dao = dao;
-	}
+    @Autowired
+    public void setDao(UsersDAO&lt;User,Integer&gt; dao) {
+        this.dao = dao;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name){
-		this.name = name;
-	}
+    public void setName(String name){
+        this.name = name;
+    }
 
-	@Transactional(propagation=Propagation.REQUIRED)
-	public void save(){
-		User user = new User();
-		user.setName(this.getName());
-		user.setPassword(this.getPassword());
-		dao.save(user);
-	}
+    @Transactional(propagation=Propagation.REQUIRED)
+    public void save(){
+        User user = new User();
+        user.setName(this.getName());
+        user.setPassword(this.getPassword());
+        dao.save(user);
+    }
 
-	public String update(){
-		logger.debug(&quot;Init update&quot;);
-		User tmpUser = dao.get(this.user.getId());
-		logger.debug(&quot;Content: &quot; + tmpUser);
-		tmpUser.setName(getName());
-		tmpUser.setPassword(getPassword());
-		dao.update(tmpUser);
-		dao.flush();
-		logger.debug(&quot;End update&quot;);
-		return &quot;item_list&quot;;
-	}
+    public String update(){
+        logger.debug(&quot;Init update&quot;);
+        User tmpUser = dao.get(this.user.getId());
+        logger.debug(&quot;Content: &quot; + tmpUser);
+        tmpUser.setName(getName());
+        tmpUser.setPassword(getPassword());
+        dao.update(tmpUser);
+        dao.flush();
+        logger.debug(&quot;End update&quot;);
+        return &quot;item_list&quot;;
+    }
 
-	public User getUser(){
-		return user;
-	}
+    public User getUser(){
+        return user;
+    }
 
-	public DataModel getUsers(){
-		model = new ListDataModel(dao.findByNamedQuery(&quot;findAllOrderBy&quot;));
-		return model;
-	}
+    public DataModel getUsers(){
+        model = new ListDataModel(dao.findByNamedQuery(&quot;findAllOrderBy&quot;));
+        return model;
+    }
 
-	public String detailSetup() {
-		user = (User)model.getRowData();
+    public String detailSetup() {
+        user = (User)model.getRowData();
         return &quot;item_detail&quot;;
     }
 }
@@ -487,20 +487,20 @@ public class CRUDBean {
 
 <pre><code class="language-java">&lt;h:form id=&quot;beanValidatorForm&quot;&gt;
      &lt;rich:panel style=&quot;width:40%&quot;&gt;
-	&lt;f:facet name=&quot;header&quot;&gt;
-	     &lt;h:outputText value=&quot;#{msg.crudNewUser}&quot; /&gt;
-	&lt;/f:facet&gt;
-	&lt;h:panelGrid columns=&quot;3&quot;&gt;
-	     &lt;h:outputText value=&quot;#{msg.crudName}:&quot; /&gt;
+    &lt;f:facet name=&quot;header&quot;&gt;
+         &lt;h:outputText value=&quot;#{msg.crudNewUser}&quot; /&gt;
+    &lt;/f:facet&gt;
+    &lt;h:panelGrid columns=&quot;3&quot;&gt;
+         &lt;h:outputText value=&quot;#{msg.crudName}:&quot; /&gt;
               &lt;h:inputText value=&quot;#{crudBean.name}&quot; id=&quot;name&quot;/&gt;
-	     &lt;rich:message for=&quot;name&quot; /&gt;
-	     &lt;h:outputText value=&quot;#{msg.crudPassword}:&quot; /&gt;
-	     &lt;h:inputText value=&quot;#{crudBean.password}&quot; id=&quot;password&quot;/&gt;
+         &lt;rich:message for=&quot;name&quot; /&gt;
+         &lt;h:outputText value=&quot;#{msg.crudPassword}:&quot; /&gt;
+         &lt;h:inputText value=&quot;#{crudBean.password}&quot; id=&quot;password&quot;/&gt;
               &lt;rich:message for=&quot;password&quot; /&gt;
-	     &lt;f:facet name=&quot;footer&quot;&gt;
-	          &lt;a4j:commandButton value=&quot;#{msg.crudSave}&quot; action=&quot;#{crudBean.save}&quot; reRender=&quot;userList&quot; /&gt;
-	     &lt;/f:facet&gt;
-	&lt;/h:panelGrid&gt;
+         &lt;f:facet name=&quot;footer&quot;&gt;
+              &lt;a4j:commandButton value=&quot;#{msg.crudSave}&quot; action=&quot;#{crudBean.save}&quot; reRender=&quot;userList&quot; /&gt;
+         &lt;/f:facet&gt;
+    &lt;/h:panelGrid&gt;
      &lt;/rich:panel&gt;
 &lt;/h:form&gt;
 </code></pre>
@@ -512,8 +512,8 @@ public class CRUDBean {
 <p><strong>persistence.xml</strong></p>
 
 <pre><code>&lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-	xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot; version=&quot;1.0&quot;&gt;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd&quot; version=&quot;1.0&quot;&gt;
 
      &lt;persistence-unit name=&quot;canigo&quot; transaction-type=&quot;RESOURCE_LOCAL&quot;&gt;
           &lt;provider&gt;org.hibernate.ejb.HibernatePersistence&lt;/provider&gt;
@@ -531,64 +531,64 @@ public class CRUDBean {
 
 <pre><code class="language-java">public class CrudExempleAction extends DispatchActionSupport {
 
-	private static final Log logger = LogFactory.getLog(CrudExempleAction.class);
-	private final String FORWARD_INICI = &quot;success&quot;;
-	private final String FORWARD_SHOW_ELEMENT = &quot;mostrar&quot;;
-	private final String FORWARD_ERROR = &quot;error&quot;;
-	private ValueListActionHelper valueListActionHelper;
-	private CrudExempleBO crudExempleBO;
+    private static final Log logger = LogFactory.getLog(CrudExempleAction.class);
+    private final String FORWARD_INICI = &quot;success&quot;;
+    private final String FORWARD_SHOW_ELEMENT = &quot;mostrar&quot;;
+    private final String FORWARD_ERROR = &quot;error&quot;;
+    private ValueListActionHelper valueListActionHelper;
+    private CrudExempleBO crudExempleBO;
 
-	/**
-	 * Mètode que es crida pel reqCode=inici
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward inici(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-		HttpServletResponse response) throws Exception {
-		logger.info(&quot;[CrudExempleAction][Inici] - Inici&quot;);
-		valueListActionHelper.search(mapping, form, request, response);
-		logger.info(&quot;[CrudExempleAction][Inici] - Fi&quot;);
-		return mapping.findForward(FORWARD_INICI);
-	}
+    /**
+     * Mètode que es crida pel reqCode=inici
+     * @param mapping ActionMapping
+     * @param form ActionForm
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return ActionForward
+     * @throws Exception exception
+     */
+    public ActionForward inici(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+        HttpServletResponse response) throws Exception {
+        logger.info(&quot;[CrudExempleAction][Inici] - Inici&quot;);
+        valueListActionHelper.search(mapping, form, request, response);
+        logger.info(&quot;[CrudExempleAction][Inici] - Fi&quot;);
+        return mapping.findForward(FORWARD_INICI);
+    }
 
-	/**
-	 * Mètode que es crida pel reqCode=desar
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward desar(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
+    /**
+     * Mètode que es crida pel reqCode=desar
+     * @param mapping ActionMapping
+     * @param form ActionForm
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return ActionForward
+     * @throws Exception exception
+     */
+    public ActionForward desar(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+            HttpServletResponse response) throws Exception {
 
-		TbEntitats entitat = null;
+        TbEntitats entitat = null;
 
-		try {
-			logger.info(&quot;[CrudExempleAction][desar] - Inici&quot;);
+        try {
+            logger.info(&quot;[CrudExempleAction][desar] - Inici&quot;);
 
-			SpringBindingActionForm springBindingActionForm = (SpringBindingActionForm) form;
-			CrudExemplePojo pojoForm = (CrudExemplePojo)springBindingActionForm.getTarget();
+            SpringBindingActionForm springBindingActionForm = (SpringBindingActionForm) form;
+            CrudExemplePojo pojoForm = (CrudExemplePojo)springBindingActionForm.getTarget();
 
-			entitat = new TbEntitats();
-			entitat.setNom(pojoForm.getNom());
-			entitat.setTelefon(new Long(pojoForm.getTelefon()));
-			entitat.setAdreca(pojoForm.getAdreca());
-			crudExempleBO.addEntitat(entitat);
+            entitat = new TbEntitats();
+            entitat.setNom(pojoForm.getNom());
+            entitat.setTelefon(new Long(pojoForm.getTelefon()));
+            entitat.setAdreca(pojoForm.getAdreca());
+            crudExempleBO.addEntitat(entitat);
 
-			valueListActionHelper.search(mapping, form, request, response);
-			logger.info(&quot;[CrudExempleAction][desar] - Fi&quot;);
-			return mapping.findForward(FORWARD_INICI);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return mapping.findForward(FORWARD_ERROR);
-		}
-	}
+            valueListActionHelper.search(mapping, form, request, response);
+            logger.info(&quot;[CrudExempleAction][desar] - Fi&quot;);
+            return mapping.findForward(FORWARD_INICI);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return mapping.findForward(FORWARD_ERROR);
+        }
+    }
 }
 </code></pre>
 
@@ -596,16 +596,16 @@ public class CRUDBean {
 
 <pre><code class="language-java">public class CrudExempleBOImpl implements CrudExempleBO {
 
-	private UniversalHibernateDAO hibernateDAO;
+    private UniversalHibernateDAO hibernateDAO;
 
-	public Long addEntitat(TbEntitats entitat) throws Exception {
+    public Long addEntitat(TbEntitats entitat) throws Exception {
 
-		TbEntitats vo = new TbEntitats();
-		BeanUtils.copyProperties(vo, entitat);
-		Long id = (Long)hibernateDAO.save(vo);
-		hibernateDAO.flush();
-		return id;
-	}
+        TbEntitats vo = new TbEntitats();
+        BeanUtils.copyProperties(vo, entitat);
+        Long id = (Long)hibernateDAO.save(vo);
+        hibernateDAO.flush();
+        return id;
+    }
 }
 </code></pre>
 

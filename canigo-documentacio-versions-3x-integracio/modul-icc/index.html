@@ -462,57 +462,57 @@
 </ul>
 
 <pre><code>&lt;bean id=&quot;iccWebServiceClient&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.icc.IccWebServiceClientImpl&quot;&gt;
-		&lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
-		&lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;		
-	&lt;/bean&gt;
+        &lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
+        &lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;     
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;webServiceTemplate&quot; class=&quot;org.springframework.ws.client.core.WebServiceTemplate&quot;&gt;
-		&lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
-		&lt;property name=&quot;interceptors&quot;&gt;
-			&lt;bean class=&quot;cat.gencat.ctti.canigo.arch.integration.icc.IccSecurity&quot;&gt;
-				&lt;constructor-arg value=&quot;USUARI&quot; /&gt;
-				&lt;constructor-arg value=&quot;CONTRASENYA&quot; /&gt;
-			&lt;/bean&gt;
-		&lt;/property&gt;
-	    &lt;property name=&quot;messageSender&quot;&gt;
-	        &lt;bean class=&quot;org.springframework.ws.transport.http.CommonsHttpMessageSender&quot; /&gt;
-	    &lt;/property&gt;
-		&lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
-		&lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
-		&lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;webServiceTemplate&quot; class=&quot;org.springframework.ws.client.core.WebServiceTemplate&quot;&gt;
+        &lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
+        &lt;property name=&quot;interceptors&quot;&gt;
+            &lt;bean class=&quot;cat.gencat.ctti.canigo.arch.integration.icc.IccSecurity&quot;&gt;
+                &lt;constructor-arg value=&quot;USUARI&quot; /&gt;
+                &lt;constructor-arg value=&quot;CONTRASENYA&quot; /&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;messageSender&quot;&gt;
+            &lt;bean class=&quot;org.springframework.ws.transport.http.CommonsHttpMessageSender&quot; /&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
+        &lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
+        &lt;property name=&quot;defaultUri&quot; value=&quot;http://www.icc.cat/geocodificador/ws/wss_1.0&quot; /&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;messageFactory&quot; class=&quot;org.springframework.ws.soap.saaj.SaajSoapMessageFactory&quot;&gt;
-		&lt;property name=&quot;soapVersion&quot;&gt;
-			&lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
-		&lt;/property&gt;
-	&lt;/bean&gt;
-	
-	&lt;!-- serializador con JAXB --&gt;
-	&lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;&gt;
-		&lt;property name=&quot;classesToBeBound&quot;&gt;
-			&lt;list&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Adreca&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.ArrayOfPuntGeografic&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Cruilla&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.IdNom&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Incidencia&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.InfoAdministrativa&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Localitzacio&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.LocalitzacioCruilla&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Localitzacions&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.LocalitzacionsCruilla&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.ObtenirInfoPuntInput&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.PK2&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Pks&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Punt&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.PuntGeografic&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Toponim&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Toponims&lt;/value&gt;
-					&lt;value&gt;cat.icc.ws.geocodificador.Via&lt;/value&gt;
-			&lt;/list&gt;
-		&lt;/property&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;messageFactory&quot; class=&quot;org.springframework.ws.soap.saaj.SaajSoapMessageFactory&quot;&gt;
+        &lt;property name=&quot;soapVersion&quot;&gt;
+            &lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
+    
+    &lt;!-- serializador con JAXB --&gt;
+    &lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;&gt;
+        &lt;property name=&quot;classesToBeBound&quot;&gt;
+            &lt;list&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Adreca&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.ArrayOfPuntGeografic&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Cruilla&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.IdNom&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Incidencia&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.InfoAdministrativa&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Localitzacio&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.LocalitzacioCruilla&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Localitzacions&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.LocalitzacionsCruilla&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.ObtenirInfoPuntInput&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.PK2&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Pks&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Punt&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.PuntGeografic&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Toponim&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Toponims&lt;/value&gt;
+                    &lt;value&gt;cat.icc.ws.geocodificador.Via&lt;/value&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
 </code></pre>
 
 <ul>
@@ -547,37 +547,37 @@ import cat.icc.ws.geocodificador.*;
 
 public class IccServiceReleaseTest {
 
-	@Autowired
-	@Qualifier(&quot;iccWebServiceClient&quot;)
-	IccWebServiceClient client;
+    @Autowired
+    @Qualifier(&quot;iccWebServiceClient&quot;)
+    IccWebServiceClient client;
 
-	public void testLocalitzaAdreca() {
-		try {
-			Adreca adreca = getAdreca();
-			Localitzacions response;
-			response = client.localitzaAdreca(adreca);
-			Assert.assertTrue(response.getItem().size() &gt; 0);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testLocalitzaAdreca() {
+        try {
+            Adreca adreca = getAdreca();
+            Localitzacions response;
+            response = client.localitzaAdreca(adreca);
+            Assert.assertTrue(response.getItem().size() &gt; 0);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	private Via getVia() {
-		Via via = new Via();
-		via.setNom(&quot;Mas Massonet&quot;);
-		return via;
+    private Via getVia() {
+        Via via = new Via();
+        via.setNom(&quot;Mas Massonet&quot;);
+        return via;
 
-	}
+    }
 
-	private Adreca getAdreca() {
-		Adreca adreca = new Adreca();
-		adreca.setPoblacio(&quot;Blanes&quot;);
-		adreca.setVia(getVia());
-		adreca.setPortal(18);
-		adreca.setCodiPostal(&quot;no&quot;);
-		adreca.setLlogaret(new IdNom());
-		return adreca;
-	}
+    private Adreca getAdreca() {
+        Adreca adreca = new Adreca();
+        adreca.setPoblacio(&quot;Blanes&quot;);
+        adreca.setVia(getVia());
+        adreca.setPortal(18);
+        adreca.setCodiPostal(&quot;no&quot;);
+        adreca.setLlogaret(new IdNom());
+        return adreca;
+    }
 }
 </code></pre>
 
@@ -588,33 +588,33 @@ import cat.icc.ws.geocodificador.*;
 
 public class IccServiceReleaseTest {
 
-	@Autowired
-	@Qualifier(&quot;iccWebServiceClient&quot;)
-	IccWebServiceClient client;
+    @Autowired
+    @Qualifier(&quot;iccWebServiceClient&quot;)
+    IccWebServiceClient client;
 
-	public void testLocalitzaCruilla() {
-		try {
-			Cruilla cruilla = getCruilla();
-			LocalitzacionsCruilla response = client.localitzaCruilla(cruilla);
-			Assert.assertTrue(response.getItem().size() &gt; 0);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testLocalitzaCruilla() {
+        try {
+            Cruilla cruilla = getCruilla();
+            LocalitzacionsCruilla response = client.localitzaCruilla(cruilla);
+            Assert.assertTrue(response.getItem().size() &gt; 0);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	private Cruilla getCruilla() {
-		Via via1 = new Via();
-		via1.setTipus(&quot;c.&quot;);
-		via1.setNom(&quot;Balmes&quot;);
-		Via via2 = new Via();
-		via2.setNom(&quot;*&quot;);
-		Cruilla cruilla = new Cruilla();
-		cruilla.setPoblacio(&quot;Barcelona&quot;);
-		cruilla.getVies().add(via1);
-		cruilla.getVies().add(via2);
-		cruilla.setComarca(new IdNom());
-		return cruilla;
-	}
+    private Cruilla getCruilla() {
+        Via via1 = new Via();
+        via1.setTipus(&quot;c.&quot;);
+        via1.setNom(&quot;Balmes&quot;);
+        Via via2 = new Via();
+        via2.setNom(&quot;*&quot;);
+        Cruilla cruilla = new Cruilla();
+        cruilla.setPoblacio(&quot;Barcelona&quot;);
+        cruilla.getVies().add(via1);
+        cruilla.getVies().add(via2);
+        cruilla.setComarca(new IdNom());
+        return cruilla;
+    }
 }
 </code></pre>
 
@@ -625,27 +625,27 @@ import cat.icc.ws.geocodificador.*;
 
 public class IccServiceReleaseTest {
 
-	@Autowired
-	@Qualifier(&quot;iccWebServiceClient&quot;)
-	IccWebServiceClient client;
+    @Autowired
+    @Qualifier(&quot;iccWebServiceClient&quot;)
+    IccWebServiceClient client;
 
-	public void testLocalitzaPK() {
-		try {
-			PK2 pk = getPk();
-			Pks response = client.localitzaPK(pk);
-			Assert.assertTrue(response.getItem().size() &gt; 0);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testLocalitzaPK() {
+        try {
+            PK2 pk = getPk();
+            Pks response = client.localitzaPK(pk);
+            Assert.assertTrue(response.getItem().size() &gt; 0);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	private PK2 getPk() {
-		PK2 pk = new PK2();
-		pk.setNomCarretera(&quot;AP-7&quot;);
-		pk.setKM(&quot;56&quot;);
-		pk.setCoordenadesGeografiques(false);
-		return pk;
-	}
+    private PK2 getPk() {
+        PK2 pk = new PK2();
+        pk.setNomCarretera(&quot;AP-7&quot;);
+        pk.setKM(&quot;56&quot;);
+        pk.setCoordenadesGeografiques(false);
+        return pk;
+    }
 }
 </code></pre>
 
@@ -656,26 +656,26 @@ import cat.icc.ws.geocodificador.*;
 
 public class IccServiceReleaseTest {
 
-	@Autowired
-	@Qualifier(&quot;iccWebServiceClient&quot;)
-	IccWebServiceClient client;
+    @Autowired
+    @Qualifier(&quot;iccWebServiceClient&quot;)
+    IccWebServiceClient client;
 
-	public void testLocalitzaToponim() {
-		try {
-			Toponim toponim = getToponim();
-			Toponims response = client.localitzaToponim(toponim);
-			Assert.assertTrue(response.getItem().size() &gt; 0);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testLocalitzaToponim() {
+        try {
+            Toponim toponim = getToponim();
+            Toponims response = client.localitzaToponim(toponim);
+            Assert.assertTrue(response.getItem().size() &gt; 0);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	private Toponim getToponim() {
-		Toponim topo = new Toponim();
-		topo.setNom(&quot;Can Clota&quot;);
-		topo.setCoordenadesGeografiques(false);
-		return topo;
-	}
+    private Toponim getToponim() {
+        Toponim topo = new Toponim();
+        topo.setNom(&quot;Can Clota&quot;);
+        topo.setCoordenadesGeografiques(false);
+        return topo;
+    }
 }
 </code></pre>
 
@@ -688,62 +688,62 @@ import cat.icc.ws.geocodificador.*;
 
 public class IccServiceReleaseTest {
 
-	@Autowired
-	@Qualifier(&quot;iccWebServiceClient&quot;)
-	IccWebServiceClient client;
+    @Autowired
+    @Qualifier(&quot;iccWebServiceClient&quot;)
+    IccWebServiceClient client;
 
-	public void testObtenirInfoPuntEd50() {
-		try {
-			ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputUTMED50();
-			InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
-			Assert.assertTrue(response != null);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testObtenirInfoPuntEd50() {
+        try {
+            ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputUTMED50();
+            InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
+            Assert.assertTrue(response != null);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	public void testObtenirInfoPuntEtrs89() {
-		try {
-			ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputETRS89();
-			InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
-			Assert.assertTrue(response != null);
-		} catch (IccModuleException e) {
-			Assert.assertTrue(false);
-		}
-	}
+    public void testObtenirInfoPuntEtrs89() {
+        try {
+            ObtenirInfoPuntInput obtenirInfoPuntInput = getObtenirInfoPuntInputETRS89();
+            InfoAdministrativa response = client.obtenirInfoPunt(obtenirInfoPuntInput);
+            Assert.assertTrue(response != null);
+        } catch (IccModuleException e) {
+            Assert.assertTrue(false);
+        }
+    }
 
-	private PuntGeografic getPuntGeograficUTMED50() {
-		PuntGeografic punt = new PuntGeografic();
-		punt.setX(428263.75);
-		punt.setY(4582861.0);
-		return punt;
-	}
+    private PuntGeografic getPuntGeograficUTMED50() {
+        PuntGeografic punt = new PuntGeografic();
+        punt.setX(428263.75);
+        punt.setY(4582861.0);
+        return punt;
+    }
 
-	private PuntGeografic getPuntGeograficETRS89() {
-		PuntGeografic punt = new PuntGeografic();
-		punt.setX(484937.352);
-		punt.setY(4652370.915);
-		return punt;
-	}
+    private PuntGeografic getPuntGeograficETRS89() {
+        PuntGeografic punt = new PuntGeografic();
+        punt.setX(484937.352);
+        punt.setY(4652370.915);
+        return punt;
+    }
 
-	private PuntGeografic getPuntGeograficBuit() {
-		PuntGeografic punt = new PuntGeografic();
-		return punt;
-	}
+    private PuntGeografic getPuntGeograficBuit() {
+        PuntGeografic punt = new PuntGeografic();
+        return punt;
+    }
 
-	private ObtenirInfoPuntInput getObtenirInfoPuntInputUTMED50() {
-		ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
-		obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficUTMED50());
-		obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficBuit());
-		return obtenirInfoPuntInput;
-	}
+    private ObtenirInfoPuntInput getObtenirInfoPuntInputUTMED50() {
+        ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
+        obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficUTMED50());
+        obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficBuit());
+        return obtenirInfoPuntInput;
+    }
 
-	private ObtenirInfoPuntInput getObtenirInfoPuntInputETRS89() {
-		ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
-		obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficBuit());
-		obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficETRS89());
-		return obtenirInfoPuntInput;
-	}
+    private ObtenirInfoPuntInput getObtenirInfoPuntInputETRS89() {
+        ObtenirInfoPuntInput obtenirInfoPuntInput = new ObtenirInfoPuntInput();
+        obtenirInfoPuntInput.setPuntUTMED50(getPuntGeograficBuit());
+        obtenirInfoPuntInput.setPuntUTMETRS89(getPuntGeograficETRS89());
+        return obtenirInfoPuntInput;
+    }
 
 }
 </code></pre>

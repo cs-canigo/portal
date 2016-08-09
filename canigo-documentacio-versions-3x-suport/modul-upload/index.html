@@ -461,36 +461,36 @@
 @Lazy
 public class FileUploadBean {
 
-	@Autowired
-	private I18nResourceBundleMessageSource messageResource;
-	private UploadedFile uploadedFile;
+    @Autowired
+    private I18nResourceBundleMessageSource messageResource;
+    private UploadedFile uploadedFile;
 
-	public void submit() {
+    public void submit() {
 
-		try {
-			if(getUploadedFile()!=null &amp; getUploadedFile().getBytes()!=null){
-				// Show succes message.
-			    FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
-			        FacesMessage.SEVERITY_INFO, messageResource.getMessage(&quot;fileUploadSuccess&quot;), null));
-			}else{
-				// Show succes message.
-			    FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
-			        FacesMessage.SEVERITY_ERROR, messageResource.getMessage(&quot;fileUploadError&quot;), null));
-			}
-		} catch (IOException e) {
-			FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
-			        FacesMessage.SEVERITY_ERROR, messageResource.getMessage(&quot;fileUploadError&quot;), null));
-		}
+        try {
+            if(getUploadedFile()!=null &amp; getUploadedFile().getBytes()!=null){
+                // Show succes message.
+                FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_INFO, messageResource.getMessage(&quot;fileUploadSuccess&quot;), null));
+            }else{
+                // Show succes message.
+                FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_ERROR, messageResource.getMessage(&quot;fileUploadError&quot;), null));
+            }
+        } catch (IOException e) {
+            FacesContext.getCurrentInstance().addMessage(&quot;uploadForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_ERROR, messageResource.getMessage(&quot;fileUploadError&quot;), null));
+        }
 
-	}
+    }
 
-	public UploadedFile getUploadedFile() {
-		return uploadedFile;
-	}
+    public UploadedFile getUploadedFile() {
+        return uploadedFile;
+    }
 
-	public void setUploadedFile(UploadedFile uploadedFile) {
-		this.uploadedFile = uploadedFile;
-	}
+    public void setUploadedFile(UploadedFile uploadedFile) {
+        this.uploadedFile = uploadedFile;
+    }
 
 }
 </code></pre>
@@ -556,54 +556,54 @@ public class FileUploadBean {
 
 <pre><code class="language-java">public class FileUploadAction extends DispatchActionSupport {
 
-	private final String FORWARD_SUCCESS = &quot;success&quot;;
+    private final String FORWARD_SUCCESS = &quot;success&quot;;
 
-	private static final Log log = LogFactory.getLog(FileUploadAction.class);
+    private static final Log log = LogFactory.getLog(FileUploadAction.class);
 
-	private FileUploadService fileUpload;
+    private FileUploadService fileUpload;
 
 
-	/**
-	 * Mètode que es crida pel reqCode=inici
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward upload(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
-		log.info(&quot;FileUploadAction [inici] - Inici&quot;);
+    /**
+     * Mètode que es crida pel reqCode=inici
+     * @param mapping ActionMapping
+     * @param form ActionForm
+     * @param request HttpServletRequest
+     * @param response HttpServletResponse
+     * @return ActionForward
+     * @throws Exception exception
+     */
+    public ActionForward upload(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+        log.info(&quot;FileUploadAction [inici] - Inici&quot;);
 
-		SpringBindingActionForm actionForm = (SpringBindingActionForm)form;
-		FileUploadPojo pojo = (FileUploadPojo) actionForm.getTarget();
+        SpringBindingActionForm actionForm = (SpringBindingActionForm)form;
+        FileUploadPojo pojo = (FileUploadPojo) actionForm.getTarget();
 
-		String[] UPLOADED_FILES = new String[] { &quot;fitxer&quot; };
-		UploadedFiles uploadedFiles = this.fileUpload.getUploadedFiles(request, UPLOADED_FILES);
-		UploadedFile fitxerCarregat = uploadedFiles.getFile(&quot;fitxer&quot;);
+        String[] UPLOADED_FILES = new String[] { &quot;fitxer&quot; };
+        UploadedFiles uploadedFiles = this.fileUpload.getUploadedFiles(request, UPLOADED_FILES);
+        UploadedFile fitxerCarregat = uploadedFiles.getFile(&quot;fitxer&quot;);
 
-		return mapping.findForward(FORWARD_SUCCESS);
-	}
+        return mapping.findForward(FORWARD_SUCCESS);
+    }
 
-	public FileUploadService getFileUpload() {
-		return fileUpload;
-	}
+    public FileUploadService getFileUpload() {
+        return fileUpload;
+    }
 
-	public void setFileUpload(FileUploadService fileUpload) {
-		this.fileUpload = fileUpload;
-	}
+    public void setFileUpload(FileUploadService fileUpload) {
+        this.fileUpload = fileUpload;
+    }
 }
 </code></pre>
 
 <p><strong>fileUpload.jsp</strong></p>
 
 <pre><code>&lt;fwk:form styleId=&quot;actionForm&quot; action=&quot;sfileUpload.do?reqCode=upload&quot; method=&quot;POST&quot; enctype=&quot;multipart/form-data&quot;&gt;
-	&lt;fwk:row&gt;
-		&lt;fwk:file styleId=&quot;fileText&quot; property=&quot;fitxer&quot; key=&quot;label.fileupload.path&quot;&gt;&lt;/fwk:file&gt;
-	&lt;/fwk:row&gt;
-	&lt;fwk:row&gt;
-		&lt;fwk:submit styleId=&quot;uploadSubmit&quot;&gt;&lt;/fwk:submit&gt;
-	&lt;/fwk:row&gt;
+    &lt;fwk:row&gt;
+        &lt;fwk:file styleId=&quot;fileText&quot; property=&quot;fitxer&quot; key=&quot;label.fileupload.path&quot;&gt;&lt;/fwk:file&gt;
+    &lt;/fwk:row&gt;
+    &lt;fwk:row&gt;
+        &lt;fwk:submit styleId=&quot;uploadSubmit&quot;&gt;&lt;/fwk:submit&gt;
+    &lt;/fwk:row&gt;
 &lt;/fwk:form&gt;
 </code></pre>
 

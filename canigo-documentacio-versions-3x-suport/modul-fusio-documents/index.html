@@ -389,91 +389,91 @@
 @Scope(&quot;singleton&quot;)
 @Lazy
 public class MergingBean {
-	private String name;
-	private String text;
-	@Autowired
-	private MergeTemplateEngine engine;
-	@Autowired
-	private I18nResourceBundleMessageSource messageResource;
+    private String name;
+    private String text;
+    @Autowired
+    private MergeTemplateEngine engine;
+    @Autowired
+    private I18nResourceBundleMessageSource messageResource;
 
 
-	public MergeTemplateEngine getEngine() {
-		return engine;
-	}
+    public MergeTemplateEngine getEngine() {
+        return engine;
+    }
 
-	/**
-	 * Get name
-	 * @return
-	 */
-	public String getName() {
-		return name;
-	}
+    /**
+     * Get name
+     * @return
+     */
+    public String getName() {
+        return name;
+    }
 
-	/**
-	 * Set name
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+    /**
+     * Set name
+     * @param name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	/**
-	 * Get text
-	 * @return
-	 */
-	public String getText() {
-		return text;
-	}
+    /**
+     * Get text
+     * @return
+     */
+    public String getText() {
+        return text;
+    }
 
-	/**
-	 * Set text
-	 * @param text
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
+    /**
+     * Set text
+     * @param text
+     */
+    public void setText(String text) {
+        this.text = text;
+    }
 
-	/**
-	 * Merge document
-	 */
-	public void merge(){
-		Map&lt;String,String&gt; itemsMap = new HashMap&lt;String,String&gt;();
-		itemsMap.put(&quot;name&quot;, getName());
-		itemsMap.put(&quot;text&quot;, getText());
+    /**
+     * Merge document
+     */
+    public void merge(){
+        Map&lt;String,String&gt; itemsMap = new HashMap&lt;String,String&gt;();
+        itemsMap.put(&quot;name&quot;, getName());
+        itemsMap.put(&quot;text&quot;, getText());
 
-		List&lt;Map&lt;String,String&gt;&gt; dades = new ArrayList&lt;Map&lt;String,String&gt;&gt;();
-		dades.add(itemsMap);
+        List&lt;Map&lt;String,String&gt;&gt; dades = new ArrayList&lt;Map&lt;String,String&gt;&gt;();
+        dades.add(itemsMap);
 
-		try{
-			InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(&quot;TestDoc.xml&quot;);
-			ByteArrayOutputStream[] os = getEngine().mergeTemplate(is, dades);
+        try{
+            InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(&quot;TestDoc.xml&quot;);
+            ByteArrayOutputStream[] os = getEngine().mergeTemplate(is, dades);
 
-			HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance()
-			.getExternalContext().getResponse();
-			response.setContentType(&quot;application/xml&quot;);
-			response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=\&quot;&quot; +
-			         &quot;test.xml&quot; + &quot;\&quot;&quot;);
-			response.setContentLength(os[0].size());
-			ServletOutputStream ouputStream = response.getOutputStream();
-			ouputStream.flush();
-			ouputStream.write(os[0].toByteArray(), 0, os[0].size());
-			ouputStream.flush();
-			ouputStream.close();
-			FacesContext.getCurrentInstance().responseComplete();
+            HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance()
+            .getExternalContext().getResponse();
+            response.setContentType(&quot;application/xml&quot;);
+            response.setHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=\&quot;&quot; +
+                     &quot;test.xml&quot; + &quot;\&quot;&quot;);
+            response.setContentLength(os[0].size());
+            ServletOutputStream ouputStream = response.getOutputStream();
+            ouputStream.flush();
+            ouputStream.write(os[0].toByteArray(), 0, os[0].size());
+            ouputStream.flush();
+            ouputStream.close();
+            FacesContext.getCurrentInstance().responseComplete();
 
-			FacesContext.getCurrentInstance().addMessage(&quot;mergingForm&quot;, new FacesMessage(
+            FacesContext.getCurrentInstance().addMessage(&quot;mergingForm&quot;, new FacesMessage(
                     FacesMessage.SEVERITY_INFO, getMessageResource().getMessage(&quot;mergingSuccess&quot;), null));
 
-		}catch(Exception e){
-			FacesContext.getCurrentInstance().addMessage(&quot;mergingForm&quot;, new FacesMessage(
-	                FacesMessage.SEVERITY_ERROR, &quot;mergingError&quot;, null));
-		}
+        }catch(Exception e){
+            FacesContext.getCurrentInstance().addMessage(&quot;mergingForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_ERROR, &quot;mergingError&quot;, null));
+        }
 
-	}
+    }
 
-	public I18nResourceBundleMessageSource getMessageResource() {
-		return messageResource;
-	}
+    public I18nResourceBundleMessageSource getMessageResource() {
+        return messageResource;
+    }
 
 }
 </code></pre>
@@ -482,33 +482,33 @@ public class MergingBean {
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot; standalone=&quot;yes&quot; ?&gt;
 &lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
-	xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;
-	xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
-	xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
-	xmlns:c=&quot;http://java.sun.com/jstl/core&quot;&gt;
+    xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;
+    xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
+    xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+    xmlns:c=&quot;http://java.sun.com/jstl/core&quot;&gt;
 
 
-	&lt;ui:composition template=&quot;layouts/template.jsf&quot;&gt;
-		&lt;ui:define name=&quot;ariadna&quot;&gt;
-			&lt;h:outputLink value=&quot;index.jsf&quot;&gt;
-				&lt;h:outputFormat&gt;#{msg.breadCrumbInit}&lt;/h:outputFormat&gt;
-			&lt;/h:outputLink&gt;
-		&lt;/ui:define&gt;
-		&lt;ui:define name=&quot;body&quot;&gt;
-			&lt;h1&gt;#{msg.menuSupportMerging}&lt;/h1&gt;
-			&lt;h:form id=&quot;mergingForm&quot;&gt;
+    &lt;ui:composition template=&quot;layouts/template.jsf&quot;&gt;
+        &lt;ui:define name=&quot;ariadna&quot;&gt;
+            &lt;h:outputLink value=&quot;index.jsf&quot;&gt;
+                &lt;h:outputFormat&gt;#{msg.breadCrumbInit}&lt;/h:outputFormat&gt;
+            &lt;/h:outputLink&gt;
+        &lt;/ui:define&gt;
+        &lt;ui:define name=&quot;body&quot;&gt;
+            &lt;h1&gt;#{msg.menuSupportMerging}&lt;/h1&gt;
+            &lt;h:form id=&quot;mergingForm&quot;&gt;
                 &lt;h:panelGrid columns=&quot;2&quot;&gt;
-                	&lt;h:outputText value=&quot;Name:&quot; /&gt;
-                	&lt;h:inputText id=&quot;name&quot; value=&quot;#{mergingBean.name}&quot;/&gt;
-                	&lt;h:outputText value=&quot;Text:&quot; /&gt;
-                	&lt;h:inputTextarea id=&quot;text&quot; value=&quot;#{mergingBean.text}&quot;/&gt;
+                    &lt;h:outputText value=&quot;Name:&quot; /&gt;
+                    &lt;h:inputText id=&quot;name&quot; value=&quot;#{mergingBean.name}&quot;/&gt;
+                    &lt;h:outputText value=&quot;Text:&quot; /&gt;
+                    &lt;h:inputTextarea id=&quot;text&quot; value=&quot;#{mergingBean.text}&quot;/&gt;
                     &lt;h:commandButton value=&quot;#{msg.canigoSubmit}&quot; action=&quot;#{mergingBean.merge}&quot; /&gt;
                     &lt;br/&gt;
                     &lt;h:message for=&quot;mergingForm&quot; infoStyle=&quot;color: green;&quot; errorStyle=&quot;color: red;&quot; /&gt;
                 &lt;/h:panelGrid&gt;
             &lt;/h:form&gt;
-		&lt;/ui:define&gt;
-	&lt;/ui:composition&gt;
+        &lt;/ui:define&gt;
+    &lt;/ui:composition&gt;
 
 &lt;/html&gt;
 </code></pre>

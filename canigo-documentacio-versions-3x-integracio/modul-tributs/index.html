@@ -450,8 +450,8 @@
 &lt;!-- Dependencia del mòdul PICA-TRIBUTS --&gt;
 &lt;dependency&gt;
         &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.integration.tributs.pica&lt;/artifactId&gt;
-	&lt;version&gt;${canigo.integration.tributs.pica.version}&lt;/version&gt;
+    &lt;artifactId&gt;canigo.integration.tributs.pica&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.integration.tributs.pica.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -526,7 +526,7 @@ peticio.setCognom2(&quot;Molina&quot;);
 peticio.setNomComplet(&quot;Cristian Casals Molina&quot;);
 peticio.setTipusDocument(&quot;NIF&quot;);
 peticio.setDocument(&quot;39361642V&quot;);
-	
+    
 C1PICAResponse resposta = aeatConnector.ObligacionsTributaries(peticio);
 </code></pre>
 
@@ -553,7 +553,7 @@ private AtcConnectorImpl atcConnector;
 <p>NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l&rsquo;exemple son inventades.</p>
 
 <pre><code>DadesPeticioATC peticio = new DadesPeticioATC();
-    	
+        
 peticio.setIdioma(&quot;Català&quot;);
 peticio.setNom(&quot;Nom&quot;);
 peticio.setCognom1(&quot;Cognom1&quot;);
@@ -567,7 +567,7 @@ EstatAsincron estatResposta = atcConnector.getEstatInformeSituacioDeute(resposta
 int tempsEstimat = estatResposta.getTempsEstimatResposta();
   
 ...
-    	
+        
 Informacio inf = atcConnector.getDadesInformeSituacioDeute(resposta.getServei()); //&lt;-- Recuperació resposta a la petició
 </code></pre>
 
@@ -623,7 +623,7 @@ private TgssConnectorImpl tgssConnector;
 <p>NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l&rsquo;exemple son inventades.</p>
 
 <pre><code class="language-java">DadesPeticioAEAT_ATC_TGSS peticio = new DadesPeticioAEAT_ATC_TGSS();
-			
+            
 peticio.setIdioma(&quot;Català&quot;);
 peticio.setTipusDocumentacio(Constants.AAT_NIF);
 peticio.setDocument(&quot;12345678B&quot;);
@@ -631,12 +631,12 @@ peticio.setNom(&quot;Nom&quot;);
 peticio.setNomComplet(&quot;Nom Cognom1 Cognom2&quot;);
 peticio.setCognom1(&quot;Cognom1&quot;);
 peticio.setCognom2(&quot;Cognom2&quot;);
-			
+            
 resposta = aeatAtcTgssConnector.consultaDeutes(peticio); //&lt;-- Petició al servei
-		
+        
 EstatAsincron estatResposta = aeatAtcTgssConnector.getEstatConsultaDeutes(resposta.getResponse()); //&lt;-- Consulta de l'estat de la petició
 int tempsEstimat = estatResposta.getTempsEstimatResposta();
-	
+    
 ...
 
 RespostaConsultaDeutes dadesResposta = aeatAtcTgssConnector.getDadesConsultaDeutes(resposta.getServei()); //&lt;-- recuperació de les dades de la petició
