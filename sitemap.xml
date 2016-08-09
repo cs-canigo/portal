@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/</loc>
-    <lastmod>2016-08-05T00:00:00+00:00</lastmod>
+    <lastmod>2016-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</loc>
+    <lastmod>2016-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -144,11 +149,6 @@
   
   <url>
     <loc>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</loc>
-    <lastmod>2016-03-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</loc>
     <lastmod>2016-03-02T00:00:00+00:00</lastmod>
   </url>
   

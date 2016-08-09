@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Fri, 05 Aug 2016 00:00:00 UTC</updated>
+    <updated>Tue, 09 Aug 2016 00:00:00 UTC</updated>
     
     <item>
       <title>SIC. Gestió de dependències per a aplicacions .NET</title>
@@ -145,6 +145,15 @@
     
     
     <item>
+      <title>Repositori Maven2 de Red Hat al Nexus de SIC</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</link>
+      <pubDate>Tue, 09 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</guid>
+      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven2 de Red Hat a través del Nexus</description>
+    </item>
+    
+    <item>
       <title>Nova versió del connector amb ARESTA per a Canigó 3</title>
       <link>http://canigo.ctti.gencat.cat/destacats/upgrade-connector-psgd/</link>
       <pubDate>Wed, 20 Jul 2016 00:00:00 UTC</pubDate>
@@ -214,15 +223,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</guid>
       <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d&#39;Oracle a través del Nexus</description>
-    </item>
-    
-    <item>
-      <title>Repositori Maven2 de Red Hat al Nexus de SIC</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</link>
-      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</guid>
-      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven2 de Red Hat a través del Nexus</description>
     </item>
     
     <item>
