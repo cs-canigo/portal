@@ -303,9 +303,9 @@
 
 						
 
-<p><strong>(micro)serveis és un patró de disseny</strong> de sistemes orientat a descomposar una aplicació en les seves <strong>unitats funcionals mínimes</strong>, tractar-les com a aplicacions independents, on <strong>cada servei és responsable d&rsquo;un domini de negoci</strong> i la resta de serveis es comuniquen amb ell mitjançant <strong>interfícies i contractes estàndard</strong> (per exemple, HTTP/REST amb una API coneguda).</p>
+<p><strong>(micro)serveis és un patró de disseny</strong> de sistemes orientat a descompondre una aplicació en les seves <strong>unitats funcionals mínimes</strong>, tractar-les com a aplicacions independents, on <strong>cada servei és responsable d&rsquo;un domini de negoci</strong> i la resta de serveis es comuniquen amb ell mitjançant <strong>interfícies i contractes estàndard</strong> (per exemple, HTTP/REST amb una API coneguda).</p>
 
-<p>Posem (micro) entre parèntesi perquè la granularitat dels serveis dependrà de diversos factors, però el que sí que és important és que les comunicacions entre els diferents serveis/mòduls/funcionalitats es realitzi mitjançant les interfícies que s&rsquo;exposin. El que no es farà en cap cas és anar a buscar les dades al repositori del servei que volem consumir. És a dir, cada servei serà <strong>&ldquo;l&rsquo;única font de la veritat&rdquo;</strong> de les dades que gestiona (<a href="https://en.wikipedia.org/wiki/Single_source_of_truth">https://en.wikipedia.org/wiki/Single_source_of_truth</a>).</p>
+<p>Posem (micro) entre parèntesis perquè la granularitat dels serveis dependrà de diversos factors, però el que sí que és important és que les comunicacions entre els diferents serveis/mòduls/funcionalitats es realitzi mitjançant les interfícies que s&rsquo;exposin. El que no es farà en cap cas és anar a buscar les dades al repositori del servei que volem consumir. És a dir, cada servei serà <a href="https://en.wikipedia.org/wiki/Single_source_of_truth"><strong>&ldquo;l&rsquo;única font de la veritat&rdquo;</strong></a> de les dades que gestiona.</p>
 
 <p>És un pas més a la componentització i modularització dels sistemes en totes les seves capes, on tant el <strong>software</strong> (la meva aplicació) com els <strong>middlewares</strong> (el programari sobre el que corre l&rsquo;aplicació: servidor web, base de dades, &hellip;) i els <strong>entorns de desplegament</strong> (contenidors o runtimes) es poden dedicar en exclusiva a cada (micro)servei.</p>
 
@@ -327,7 +327,7 @@
 
 <li><p>permet fer conviure diverses tecnologies en un sistema, de manera que l&rsquo;únic que ens hem de preocupar d&rsquo;estandarditzar és la interfície de comunicació (API)</p></li>
 
-<li><p>si un servei té problemes, no té perquè veure&rsquo;s afectat tot el sistema, això sí, s&rsquo;ha de gestionar en els diferents serveis la tolerància a errors de serveis tercers.</p></li>
+<li><p>si un servei té problemes, no té per què veure&rsquo;s afectat tot el sistema, això sí, s&rsquo;ha de gestionar en els diferents serveis la tolerància a errors de serveis tercers.</p></li>
 </ul>
 
 <h3 id="aspectes-a-tenir-presents:6daf3763b5f2c14e635687e9163b77c0">Aspectes a tenir presents</h3>
@@ -335,12 +335,12 @@
 <ul>
 <li><p>s&rsquo;ha d&rsquo;automatitzar TOT des del principi del projecte, ja que la coordinació és la clau de l&rsquo;èxit.</p></li>
 
-<li><p>en sistemes grans i amb molts serveis, apareixen patrons relacionats que cal gestionar, per a coregrafiar els fluxes, gestionar la configuració, &hellip;:</p>
+<li><p>en sistemes grans i amb molts serveis, apareixen patrons relacionats que cal gestionar, per a coreografiar els fluxes, gestionar la configuració, &hellip;</p>
 
 <ul>
 <li><p>service registration: els microserveis s&rsquo;han d&rsquo;enregistrar (ells mateixos o via un servei dedicat) al servei de registre</p></li>
 
-<li><p>service discovery: han de poder ser &ldquo;descoberts&rdquo; pels clients abans de ser cridats o a la banda de servidor, que seria la millor pràctica, (en aquest cas, per un API Gateway), de manera que el sistema sabrà les diferents instàncies que corren i a les que dirigir les peticions</p></li>
+<li><p>service discovery: han de poder ser &ldquo;descoberts&rdquo; pels clients abans de ser cridats o a la banda de servidor, que seria la millor pràctica, (en aquest cas, per un API Gateway), de manera que el sistema sabrà les diferents instàncies que corren i a les que ha de dirigir les peticions</p></li>
 
 <li><p>seria recomanable disposar d&rsquo;un API Gateway per a governar els serveis (seguretat, discovery, caché, &hellip;)</p></li>
 </ul></li>
@@ -352,7 +352,7 @@
 
 <p>Com que estem parlant d&rsquo;un patró, la seva implementació es pot realitzar de diverses maneres. I com ja hem comentat, aquest patró permet la coexistència de diverses tecnologies.</p>
 
-<p>En el cas de Canigó, basat en Spring, tot dependrà del disseny que es faci de l&rsquo;aplicació. Això sí, implica respectar els principis d&rsquo;arquitectura i les millors pràctiques en la construcció d&rsquo;apis i serveis. A més, algunes de les característiques d&rsquo;aquest patró ja estan resoltes dins Spring Cloud (routing, load balancing, registry, discovery, &hellip;) i per això recomanem el seu ús als projectes Canigó.</p>
+<p>En el cas de Canigó, basat en Spring, tot dependrà del disseny que es faci de l&rsquo;aplicació. Això sí, implica respectar els <a href="http://canigo.ctti.gencat.cat/bloc/2015/12/principis/">principis d&rsquo;arquitectura</a> i les <a href="http://canigo.ctti.gencat.cat/bloc/2016/01/api/">millors pràctiques en la construcció d&rsquo;apis i serveis</a>. A més, algunes de les característiques d&rsquo;aquest patró ja estan resoltes dins Spring Cloud (routing, load balancing, registry, discovery, &hellip;) i per això recomanem el seu ús als projectes Canigó.</p>
 
 <p><br /></p>
 
