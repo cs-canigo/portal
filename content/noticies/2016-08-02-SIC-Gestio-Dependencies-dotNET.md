@@ -59,6 +59,6 @@ Tot i així, en molts aspectes no és necessari haver d'arribar a tan baix nivel
 * **NuSpec Reference Generator**: Generar dependències per a nuspec
 * **NuProj**: Creador avançat de paquets NuGet amb intergació amb Visual Studio.
 
-Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins *LIB* no caldrà fer cap tasca addicional. Per a la resta de llibreries, com per exemple el client d'Oracle o llibreries de proveïdors que no tenen jobs de Jenkins *LIB*, caldrà facilitar-li al SIC el paquet Nuget o l'artefacte `.dll` corresponent identificant l'*arquitectura* (**x86** o **x64**), la *versió* i el *targetFramework*.
+Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins *LIB* no caldrà fer cap tasca addicional. Per a la resta de llibreries, com per exemple el client d'Oracle o llibreries de proveïdors que no tenen jobs de Jenkins *LIB*, caldrà facilitar-li al SIC el paquet NuGet o l'artefacte `.dll` corresponent identificant l'*arquitectura* (**x86** o **x64**), la *versió* i el *targetFramework*.
 
 Per a qualsevol dubte referent a la gestió de dependències amb NuGet al SIC  podeu [obrir una consulta](http://canigo.ctti.gencat.cat/sic/peticions/) al servei “FRAMEWORK SIC” de SAU-Remedy.
