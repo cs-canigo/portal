@@ -308,7 +308,7 @@
 
 <h2 id="gestió-de-dependències-amb-net-nuget:028a0a340cd283b6d6c7d5dfb053f83b">Gestió de dependències amb .NET: NuGet</h2>
 
-<p>Durant la tardor de 2015, es va habilitar un nou repositori en el servidor Nexus del SIC que permet emmagatzemar llibreries .NET. Es tracta d&rsquo;un repositori Nexus compatible amb <a href="https://www.nuget.org/">NuGet</a>. A més, es va habilitar en els servidors d&rsquo;integració contínua l&rsquo;ús d&rsquo;aquest repositori per fer el muntatge de l&rsquo;aplicació. D&rsquo;aquesta manera, es garanteix que les llibreries utilitzades són fiables tant en termes de compatibilitat i fiabilitat com de seguretat.</p>
+<p>Durant la tardor del 2015, es va habilitar un nou repositori en el servidor Nexus del SIC que permet emmagatzemar llibreries .NET. Es tracta d&rsquo;un repositori Nexus compatible amb <a href="https://www.nuget.org/">NuGet</a>. A més, es va habilitar en els servidors d&rsquo;integració contínua l&rsquo;ús d&rsquo;aquest repositori per fer el muntatge de l&rsquo;aplicació. D&rsquo;aquesta manera, es garanteix que les llibreries utilitzades són fiables tant en termes de compatibilitat i fiabilitat com de seguretat.</p>
 
 <h3 id="llibreries-a-tenir-en-compte:028a0a340cd283b6d6c7d5dfb053f83b">Llibreries a tenir en compte</h3>
 
@@ -353,7 +353,7 @@
 (...)
 </code></pre>
 
-<p>Per tal que l&rsquo;empaquetat de l&rsquo;aplicació continuï funcionant a l&rsquo;entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (<a href="http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/">http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/</a>) a la configuració local (arxiu<code>Nuget.config</code>).</p>
+<p>Per tal que l&rsquo;empaquetatge de l&rsquo;aplicació continuï funcionant a l&rsquo;entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (<a href="http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/">http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/</a>) a la configuració local (arxiu <code>Nuget.config</code>).</p>
 
 <p>Tot i així, en molts aspectes no és necessari haver d&rsquo;arribar a tan baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre si):</p>
 
@@ -363,7 +363,9 @@
 <li><strong>NuProj</strong>: Creador avançat de paquets NuGet amb intergació amb Visual Studio.</li>
 </ul>
 
-<p>Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins <em>LIB</em> no caldrà fer cap tasca adicional. Per a la resta de llibreries, com per exemple el client d&rsquo;Oracle o llibreries de proveïdors que no tenen jobs de Jenkins <em>LIB</em>, caldrà facilitar-li al SIC el paquet Nuget o l&rsquo;artefacte <code>.dll</code> corresponent identificant l&rsquo;<em>arquitectura</em> (<strong>x86</strong> o <strong>x64</strong>), la <em>versió</em> i el <em>targetFramework</em>.</p>
+<p>Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins <em>LIB</em> no caldrà fer cap tasca addicional. Per a la resta de llibreries, com per exemple el client d&rsquo;Oracle o llibreries de proveïdors que no tenen jobs de Jenkins <em>LIB</em>, caldrà facilitar-li al SIC el paquet Nuget o l&rsquo;artefacte <code>.dll</code> corresponent identificant l&rsquo;<em>arquitectura</em> (<strong>x86</strong> o <strong>x64</strong>), la <em>versió</em> i el <em>targetFramework</em>.</p>
+
+<p>Per a qualsevol dubte referent a la gestió de dependències amb NuGet al SIC  podeu <a href="http://canigo.ctti.gencat.cat/sic/peticions/">obrir una consulta</a> al servei “FRAMEWORK SIC” de SAU-Remedy.</p>
 
 
 					

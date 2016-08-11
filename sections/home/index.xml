@@ -6,7 +6,16 @@
     <language>ca-Es</language>
     
     
-    <updated>Thu, 04 Aug 2016 00:00:00 UTC</updated>
+    <updated>Thu, 11 Aug 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>SIC. Gestió de dependències per aplicacions ANT</title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/</link>
+      <pubDate>Thu, 11 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/</guid>
+      <description>Procediment de gestió de dependències amb aplicacions ANT al SIC</description>
+    </item>
     
     <item>
       <title>SIC. Gestió de dependències per a aplicacions .NET</title>
@@ -132,15 +141,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-01-28-Canigo-Connectors-PICA/</guid>
       <description>S&#39;han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d&#39;esquema</description>
-    </item>
-    
-    <item>
-      <title>Canigó. Balanç 2015</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2015-12-24-Canigo-Balanc-2015/</link>
-      <pubDate>Thu, 24 Dec 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2015-12-24-Canigo-Balanc-2015/</guid>
-      <description>Resum de les tasques realitzades per l&#39;equip de Canigó durant l&#39;any 2015</description>
     </item>
     
     
