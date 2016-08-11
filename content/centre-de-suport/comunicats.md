@@ -8,6 +8,11 @@ weight		= 4
 
 ## <span class="label label-cabecera">2016</span>
 
+
+#### [Agost] (/comunicat/2016/08/)
+- SIC. Gestió de dependències per a aplicacions .NET
+- Container Cloud. Publicació de la documentació al web d'Arquitectura
+
 #### [Juliol] (/comunicat/2016/07/)
 - SIC. Suport a MySQL i Microsoft SQL SERVER
 - GICAR. Publicació de la documentació al web d'Arquitectura
