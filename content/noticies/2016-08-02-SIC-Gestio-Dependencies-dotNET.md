@@ -9,7 +9,7 @@ key         = "AGOST2016"
 
 ## Gestió de dependències amb .NET: NuGet
 
-Durant la tardor de 2015, es va habilitar un nou repositori en el servidor Nexus del SIC que permet emmagatzemar llibreries .NET. Es tracta d'un repositori Nexus compatible amb [NuGet](https://www.nuget.org/). A més, es va habilitar en els servidors d'integració contínua l'ús d'aquest repositori per fer el muntatge de l'aplicació. D'aquesta manera, es garanteix que les llibreries utilitzades són fiables tant en termes de compatibilitat i fiabilitat com de seguretat.
+Durant la tardor del 2015, es va habilitar un nou repositori en el servidor Nexus del SIC que permet emmagatzemar llibreries .NET. Es tracta d'un repositori Nexus compatible amb [NuGet](https://www.nuget.org/). A més, es va habilitar en els servidors d'integració contínua l'ús d'aquest repositori per fer el muntatge de l'aplicació. D'aquesta manera, es garanteix que les llibreries utilitzades són fiables tant en termes de compatibilitat i fiabilitat com de seguretat.
 
 ### Llibreries a tenir en compte
 
@@ -51,7 +51,7 @@ Haurem de tornar a l'arxiu de projecte i incloure el path on s'ha descarregat la
     </Reference>
     (...)
 
-Per tal que l'empaquetat de l'aplicació continuï funcionant a l'entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/) a la configuració local (arxiu`Nuget.config`).
+Per tal que l'empaquetatge de l'aplicació continuï funcionant a l'entorn de desenvolupament, caldrà afegir la referència al Repository NuGet del Nexus del SIC (http://hudson.intranet.gencat.cat/nexus/content/groups/nuget-group/) a la configuració local (arxiu `Nuget.config`).
 
 Tot i així, en molts aspectes no és necessari haver d'arribar a tan baix nivell. La comunitat .NET ofereix les següents solucions (no excloents entre si):
 
@@ -59,4 +59,6 @@ Tot i així, en molts aspectes no és necessari haver d'arribar a tan baix nivel
 * **NuSpec Reference Generator**: Generar dependències per a nuspec
 * **NuProj**: Creador avançat de paquets NuGet amb intergació amb Visual Studio.
 
-Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins *LIB* no caldrà fer cap tasca adicional. Per a la resta de llibreries, com per exemple el client d'Oracle o llibreries de proveïdors que no tenen jobs de Jenkins *LIB*, caldrà facilitar-li al SIC el paquet Nuget o l'artefacte `.dll` corresponent identificant l'*arquitectura* (**x86** o **x64**), la *versió* i el *targetFramework*.
+Per a les llibreries de codi obert publicades al NuGet Gallery i per a les llibreries pròpies del proveïdor que es construeixen amb jobs de Jenkins *LIB* no caldrà fer cap tasca addicional. Per a la resta de llibreries, com per exemple el client d'Oracle o llibreries de proveïdors que no tenen jobs de Jenkins *LIB*, caldrà facilitar-li al SIC el paquet Nuget o l'artefacte `.dll` corresponent identificant l'*arquitectura* (**x86** o **x64**), la *versió* i el *targetFramework*.
+
+Per a qualsevol dubte referent a la gestió de dependències amb NuGet al SIC  podeu [obrir una consulta](http://canigo.ctti.gencat.cat/sic/peticions/) al servei “FRAMEWORK SIC” de SAU-Remedy.
