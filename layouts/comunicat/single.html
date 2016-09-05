@@ -51,12 +51,20 @@
 				{{ partial "comunicat/noticia.html" . }}
 			{{ end }}
 		   -->
+
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "bloc") }}
+        {{ if eq .Params.key $key }}
+          {{ partial "comunicat/noticia.html" . }}
+        {{ end }} 
+      {{ end }}
+
       {{ range (where .Site.Pages.ByDate.Reverse "Section" "noticies") }}
   			{{ if eq .Params.key $key }}
   				{{ partial "comunicat/noticia.html" . }}
   			{{ end }}	
       {{ end }}
    
+
       {{ partial "comunicat/destacats.html" . }}
       
       {{ if isset .Params "grafica" }}
