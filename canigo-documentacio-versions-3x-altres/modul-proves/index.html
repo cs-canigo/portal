@@ -362,10 +362,10 @@
 <p>Per defecte canigó3 incorpora la dependència d&rsquo;Spring Test en scope test, aquesta dependència la incorpora canigo-core de la següent manera:</p>
 
 <pre><code>&lt;dependency&gt;
-	&lt;groupId&gt;org.springframework&lt;/groupId&gt;
-	&lt;artifactId&gt;spring-test&lt;/artifactId&gt;
-	&lt;version&gt;${org.springframework.version}&lt;/version&gt;
-	&lt;scope&gt;test&lt;/scope&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-test&lt;/artifactId&gt;
+    &lt;version&gt;${org.springframework.version}&lt;/version&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -412,8 +412,8 @@ AccountDAO&lt;Account, Integer&gt; dao = null;
 
 @Before
 public void settingUp(){
-	Assert.assertNotNull(dao);
-	Assert.assertEquals(Account.class, dao.getPersistentClass());
+    Assert.assertNotNull(dao);
+    Assert.assertEquals(Account.class, dao.getPersistentClass());
 }
 </code></pre>
 
@@ -422,20 +422,20 @@ public void settingUp(){
 <p>Per indicar que un mètode és de test cal fer-ho mitjançant l&rsquo;anotació @Test (org.junit.Test) a nivell de mètode.</p>
 
 <pre><code class="language-java">@Test
-public void testFinder(){		
-	Assert.assertNull(dao.get(1));
-	Account account = new Account();
-	account.setName(&quot;test1&quot;);
-	dao.save(account);
-	
-	Assert.assertNotNull(dao.get(account.getId()));
-	
-	Account account2 = new Account();
-	account2.setName(&quot;test2&quot;);
-	dao.save(account2);
-	
-	List&lt;Account&gt; accounts = dao.findAll();
-	Assert.assertEquals(5, accounts.size());
+public void testFinder(){       
+    Assert.assertNull(dao.get(1));
+    Account account = new Account();
+    account.setName(&quot;test1&quot;);
+    dao.save(account);
+    
+    Assert.assertNotNull(dao.get(account.getId()));
+    
+    Account account2 = new Account();
+    account2.setName(&quot;test2&quot;);
+    dao.save(account2);
+    
+    List&lt;Account&gt; accounts = dao.findAll();
+    Assert.assertEquals(5, accounts.size());
 }
 </code></pre>
 

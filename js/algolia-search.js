@@ -37,7 +37,7 @@ function app(opts) {
     urlSync: true,
     searchFunction : function(helper) {
       if (helper.state.query === '') {
-        return;
+        //return;
       }
       helper.search();
     }
@@ -99,18 +99,29 @@ function app(opts) {
         page : "hidden-xs"
       }
     })
-
   );
 
   search.addWidget(
     instantsearch.widgets.refinementList({
       container: '#tags',
-      attributeName: 'section',
+      attributeName: 'sections',
       autoHideContainer: true,
       limit: 10,
       operator: 'or',
       templates: {
         header: getHeader()
+      },
+      transformData : {
+        item : function(obj){
+          //console.log(obj)
+          if(obj.name==="home"){
+            for(var k in obj.cssClasses){
+              //obj.cssClasses.item = obj.cssClasses.item + " hidden";
+              obj.cssClasses[k] = obj.cssClasses[k] + " hidden";
+            }
+          }
+          return obj;
+        }
       }
     })
   )

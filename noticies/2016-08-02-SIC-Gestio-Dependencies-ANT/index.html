@@ -275,7 +275,7 @@
 
 								
 									<br />
-									02-08-2015
+									11-08-2016
 								
 
 								
@@ -306,16 +306,16 @@
 
 						
 
-<h2 id="gestió-de-dependències-amb-java-utilitzant-ant">Gestió de dependències amb JAVA utilitzant ANT</h2>
+<h2 id="gestió-de-dependències-amb-java-utilitzant-ant">Gestió de dependències amb Java utilitzant ANT</h2>
 
-<p>Per aplicacions Java no mavenitzades, tot i que existeixen solucions com <a href="http://ant.apache.org/ivy/">Apache Ivy</a>, les aplicacions que ens hem trobat utilitzen directament <a href="http://ant.apache.org/">Apache ANT</a> per a gestionar dependències.</p>
+<p>Per aplicacions Java no mavenitzades, tot i que existeixen solucions com <a href="http://ant.apache.org/ivy/">Apache Ivy</a>, és freqüent la utilització directament d&rsquo;<a href="http://ant.apache.org/">Apache ANT</a> per a gestionar dependències.</p>
 
-<p>El procediment és el següent:</p>
+<p>Per a què la gestió de dependències ANT configurada a l&rsquo;aplicació sigui compatible amb el SIC, cal que compleixi els següents punts:</p>
 
 <ol>
-<li>Primerament, si voleu que també us funcioni a l&rsquo;entorn de desenvolupament, haureu de disposar d&rsquo;una versió d&rsquo;<strong>ANT 1.9.2 o superior</strong>.</li>
+<li><p>Utilització d&rsquo;una versió d&rsquo;<strong>ANT 1.9.2 o superior</strong>.</p></li>
 
-<li><p>S&rsquo;haurà d&rsquo;incloure a l&rsquo;inici <em>build.xml</em> del projecte les següents directives:</p>
+<li><p>S&rsquo;han d&rsquo;incloure a l&rsquo;inici del fitxer <em>build.xml</em> del projecte les següents directives:</p>
 
 <pre><code>(...)
 &lt;property name=&quot;nexus-url&quot; value=&quot;http://hudson.intranet.gencat.cat/nexus/service/local/artifact/maven/redirect&quot; /&gt;
@@ -335,35 +335,37 @@
 (...)
 </code></pre></li>
 
-<li><p>Buscar al repositori Nexus del SIC la llibreria que desitgem incloure al projecte:</p>
+<li><p>Cercar al repositori Nexus del SIC la llibreria que desitgem incloure al projecte:</p>
 
 <ol>
 <li>Accedim al <a href="http://hudson.intranet.gencat.cat/nexus">Nexus del SIC</a></li>
-<li>Escribim la llibreria que desitjem buscar:
+<li>Escrivim la llibreria que desitgem cercar:
 <img alt="Cerca de la llibreria" src="/images/news/SIC-ant-nexus-01.png" style="margin: 10px auto;width: 80%;auto;display:block;"/></li>
 <li>Ens apareixeran els resultats de la cerca:
 <img alt="Cerca de la llibreria" src="/images/news/SIC-ant-nexus-02.png" style="margin: 10px auto;width: 80%;auto;display:block;"/></li>
-<li>Sel·leccionem l&rsquo;element desitjat. Ens apareixeran dades que necessitem informar:
+<li>Seleccionem l&rsquo;element desitjat. Ens apareixeran dades que necessitem informar:
 
 <ul>
 <li>El grup</li>
 <li>L&rsquo;artefacte</li>
 <li>La versió</li>
 <li>L&rsquo;extensió</li>
-<li>Indicador del respositori (a l&rsquo;esquerra)
+<li>Indicador del repositori (a l&rsquo;esquerra)
 <img alt="Cerca de la llibreria" src="/images/news/SIC-ant-nexus-03.png" style="margin: 10px auto;width: 80%;height: auto;display:block;"/></li>
 </ul></li>
-<li>Ens falta saber el nom del repositori. Farem clic a <em>Repositoris</em>:
+<li>Ens falta saber el nom del repositori del qual s&rsquo;ha resolt la dependència. Farem clic a <em>Repositoris</em>:
 <img alt="Cerca de la llibreria" src="/images/news/SIC-ant-nexus-04.png" style="margin: 10px auto;display:block;"/></li>
 <li>Busquem el repositori a partir de l&rsquo;indicador obtingut al pas 3.4. En aquest cas, el repositori de <strong>3rd party</strong> és <strong>thirdparty</strong>:
 <img alt="Cerca de la llibreria" src="/images/news/SIC-ant-nexus-05.png" style="margin: 10px auto;width: 80%;auto;display:block;"/></li>
 </ol></li>
 
-<li><p>Per a cada llibreria que tingui el projecte, invocar a la macro que hem definit en el pas 2. Com a destí, especificar la ruta on guardeu les llibreries del projecte. Exemple:</p>
+<li><p>Per a cada llibreria que tingui el projecte, invocar a la macro que hem definit en el pas 2. Com a destí, especificar la ruta (path relatiu) on guardeu les llibreries del projecte. Exemple:</p>
 
 <pre><code>&lt;descarrega-nexus repositori=&quot;thirdparty&quot; grup=&quot;com.liferay.portal&quot; artefacte=&quot;servlet-api&quot; versio=&quot;5.1.2&quot; extensio=&quot;jar&quot; desti=&quot;./lib/&quot;/&gt;
 </code></pre></li>
 </ol>
+
+<p>Per a qualsevol dubte referent a la gestió de dependències amb ANT al SIC  podeu <a href="http://canigo.ctti.gencat.cat/sic/peticions/">obrir una consulta</a> al servei “FRAMEWORK SIC” de SAU-Remedy.</p>
 
 
 					

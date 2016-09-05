@@ -470,52 +470,52 @@ Per defecte, i només si el desenvolupador ha instal- lat el mòdul de seguretat
 @Repository(&quot;statusService&quot;)
 public class StatusService {
 
-	@Autowired
+    @Autowired
         private GenericDAO&lt;User, Integer&gt; dao;
 
 
-	/**
+    /**
         * Check PSIS
         * @throws IOException
         */
         @CheckStatus
         public void checkPSIS() throws IOException{
-	        URL myUrl = new URL(&quot;http://psis.catcert.net/psis/catcert/dss&quot;);
-         	URLConnection myConn = (HttpURLConnection)myUrl.openConnection();
-        	myConn.setRequestProperty(&quot;User-agent&quot;,&quot;Mozilla/4.0&quot;);
-        	InputStreamReader is = null;
-        	BufferedReader br = null;
-        	try{
-	        	is = new InputStreamReader(myConn.getInputStream());
-		        br = new BufferedReader(is);
-            		br.readLine();
-          	}finally{
-	         	if(is!=null){
-		        	is.close();
-          		}
-	          	if(br!=null){
-		        	br.close();
-           		}
-	         }
+            URL myUrl = new URL(&quot;http://psis.catcert.net/psis/catcert/dss&quot;);
+            URLConnection myConn = (HttpURLConnection)myUrl.openConnection();
+            myConn.setRequestProperty(&quot;User-agent&quot;,&quot;Mozilla/4.0&quot;);
+            InputStreamReader is = null;
+            BufferedReader br = null;
+            try{
+                is = new InputStreamReader(myConn.getInputStream());
+                br = new BufferedReader(is);
+                    br.readLine();
+            }finally{
+                if(is!=null){
+                    is.close();
+                }
+                if(br!=null){
+                    br.close();
+                }
+             }
          }
 
-	/**
-	 * Database check
-	 */
-	@CheckStatus
-	public void checkDataBaseConnection(){
-		dao.get(1);
-	}
+    /**
+     * Database check
+     */
+    @CheckStatus
+    public void checkDataBaseConnection(){
+        dao.get(1);
+    }
 
-	/**
-	 * Always IOException
-	 * @throws IOException
-	 */
-	@CheckStatus
-	public void checkLDAP() throws IOException{
-	  .....
+    /**
+     * Always IOException
+     * @throws IOException
+     */
+    @CheckStatus
+    public void checkLDAP() throws IOException{
+      .....
           .....
-	}
+    }
 
 }
 </code></pre>
@@ -534,13 +534,13 @@ Les excepcions dels diferents mètodes de validació han de propagar-se per tal 
 public class CheckStatusBean {
 
         @Autowired
-	private StatusService service;
+    private StatusService service;
 
-	public void check() throws IOException{
-		service.checkPSIS();
-		service.checkDataBaseConnection();
-		service.checkLDAP();
-	}
+    public void check() throws IOException{
+        service.checkPSIS();
+        service.checkDataBaseConnection();
+        service.checkLDAP();
+    }
 }
 </code></pre>
 
@@ -554,11 +554,11 @@ public class CheckStatusBean {
 public class ServiceImpl implements Service {
 
 
-	@Trace
-	public void doSomething(){
-		.....
+    @Trace
+    public void doSomething(){
+        .....
                 .....
-	}
+    }
 
 
 }

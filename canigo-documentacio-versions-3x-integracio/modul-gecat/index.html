@@ -476,44 +476,44 @@
     @Lazy
     public class GecatBean {
 
-    	@Autowired
-    	private GecatConnector service;
-    	@Autowired
-    	private I18nResourceBundleMessageSource resource;
-    	private static final Log log = LogFactory.getLog(GecatBean.class);
+        @Autowired
+        private GecatConnector service;
+        @Autowired
+        private I18nResourceBundleMessageSource resource;
+        private static final Log log = LogFactory.getLog(GecatBean.class);
             
 
             /**
              * Mètode cridat des de la JSF 
              *
              */
-    	public void execute(){
-    		try {
+        public void execute(){
+            try {
 
-    			ObjectFactory objectFactory = new ObjectFactory();
+                ObjectFactory objectFactory = new ObjectFactory();
 
-    			/**
-    			 * creem l'objecte per fer la consulta
-    			 **/
-    			DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
-    			DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
-    			dadesConsulta.setCodiTerritori(&quot;0217188&quot;);
-    			dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
-    			DadesConsultaTerritoriRetornType dadesConsultaRetorn = service.consultaTerritori(dadesConsultaTerritori);
+                /**
+                 * creem l'objecte per fer la consulta
+                 **/
+                DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
+                DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
+                dadesConsulta.setCodiTerritori(&quot;0217188&quot;);
+                dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
+                DadesConsultaTerritoriRetornType dadesConsultaRetorn = service.consultaTerritori(dadesConsultaTerritori);
 
-    			log.info(&quot;getCodiTerritori():&quot; +
-    					dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
-    			log.info(&quot;getNomTerritori():&quot; +
-    					dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
+                log.info(&quot;getCodiTerritori():&quot; +
+                        dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
+                log.info(&quot;getNomTerritori():&quot; +
+                        dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
 
-    			FacesContext.getCurrentInstance().addMessage(&quot;gecatForm&quot;, new FacesMessage(
-    			        FacesMessage.SEVERITY_INFO, resource.getMessage(&quot;gecatSuccess&quot;) + &quot;: &quot;
-    			        + dadesConsultaRetorn.getDadesRetorn().getNomTerritori(), null));
-    	      } catch (Exception e) {
-    	    	  FacesContext.getCurrentInstance().addMessage(&quot;gecatForm&quot;, new FacesMessage(
-    				        FacesMessage.SEVERITY_ERROR, resource.getMessage(&quot;gecatError&quot;) + &quot; - &quot; + e.getMessage(), null));
-    	      }
-    	}
+                FacesContext.getCurrentInstance().addMessage(&quot;gecatForm&quot;, new FacesMessage(
+                        FacesMessage.SEVERITY_INFO, resource.getMessage(&quot;gecatSuccess&quot;) + &quot;: &quot;
+                        + dadesConsultaRetorn.getDadesRetorn().getNomTerritori(), null));
+              } catch (Exception e) {
+                  FacesContext.getCurrentInstance().addMessage(&quot;gecatForm&quot;, new FacesMessage(
+                            FacesMessage.SEVERITY_ERROR, resource.getMessage(&quot;gecatError&quot;) + &quot; - &quot; + e.getMessage(), null));
+              }
+        }
     }
 </code></pre>
 

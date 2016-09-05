@@ -411,9 +411,9 @@
     &lt;version&gt;${org.opensymphony.quartz.version}&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
-	&lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
-	&lt;artifactId&gt;commons-collections4&lt;/artifactId&gt;
-	&lt;version&gt;${commons.collections.version}&lt;/version&gt;
+    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+    &lt;artifactId&gt;commons-collections4&lt;/artifactId&gt;
+    &lt;version&gt;${commons.collections.version}&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
       &lt;groupId&gt;org.springframework&lt;/groupId&gt;
@@ -470,32 +470,32 @@ Per a entorns clusteritzats revisar l'apartat de Preguntes freqüents.
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
 
-	&lt;bean id=&quot;salutacio&quot; class=&quot;springapp.web.vo.Salutacio&quot;/&gt;
+    &lt;bean id=&quot;salutacio&quot; class=&quot;springapp.web.vo.Salutacio&quot;/&gt;
 
         &lt;bean id=&quot;unaTasca&quot;
              class=&quot;org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean&quot;&gt;
-		&lt;property name=&quot;targetObject&quot; 	ref=&quot;salutacio&quot; /&gt;
-		&lt;property name=&quot;targetMethod&quot; 	value=&quot;saludar&quot; /&gt;
-		&lt;property name=&quot;concurrent&quot; 	value=&quot;${quartz.concurrent}&quot; /&gt;
-	&lt;/bean&gt;
+        &lt;property name=&quot;targetObject&quot;   ref=&quot;salutacio&quot; /&gt;
+        &lt;property name=&quot;targetMethod&quot;   value=&quot;saludar&quot; /&gt;
+        &lt;property name=&quot;concurrent&quot;     value=&quot;${quartz.concurrent}&quot; /&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;simpleTrigger&quot; class=&quot;org.springframework.scheduling.quartz.SimpleTriggerBean&quot;&gt;
-		&lt;property name=&quot;jobDetail&quot; ref=&quot;unaTasca&quot; /&gt;
-		&lt;property name=&quot;repeatInterval&quot; value=&quot;${quartz.repeatInterval}&quot; /&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;simpleTrigger&quot; class=&quot;org.springframework.scheduling.quartz.SimpleTriggerBean&quot;&gt;
+        &lt;property name=&quot;jobDetail&quot; ref=&quot;unaTasca&quot; /&gt;
+        &lt;property name=&quot;repeatInterval&quot; value=&quot;${quartz.repeatInterval}&quot; /&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;schedulerFactoryBean&quot;
+    &lt;bean id=&quot;schedulerFactoryBean&quot;
              class=&quot;org.springframework.scheduling.quartz.SchedulerFactoryBean&quot;&gt;
-		&lt;property name=&quot;autoStartup&quot; value=&quot;${quartz.autoStartup}&quot; /&gt;
-		&lt;property name=&quot;triggers&quot;&gt;
-			&lt;list&gt;
-				&lt;ref bean=&quot;simpleTrigger&quot; /&gt;
-			&lt;/list&gt;
-		&lt;/property&gt;
-	&lt;/bean&gt;
+        &lt;property name=&quot;autoStartup&quot; value=&quot;${quartz.autoStartup}&quot; /&gt;
+        &lt;property name=&quot;triggers&quot;&gt;
+            &lt;list&gt;
+                &lt;ref bean=&quot;simpleTrigger&quot; /&gt;
+            &lt;/list&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
 
 &lt;/beans&gt;
 </code></pre>
@@ -556,10 +556,10 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 
 <pre><code>...
 &lt;resource-ref&gt;
-	&lt;res-ref-name&gt;appWorkManager&lt;/res-ref-name&gt;
-	&lt;res-type&gt;commonj.work.WorkManager&lt;/res-type&gt;
-	&lt;res-auth&gt;Container&lt;/res-auth&gt;
-	&lt;res-sharing-scope&gt;Shareable&lt;/res-sharing-scope&gt;
+    &lt;res-ref-name&gt;appWorkManager&lt;/res-ref-name&gt;
+    &lt;res-type&gt;commonj.work.WorkManager&lt;/res-type&gt;
+    &lt;res-auth&gt;Container&lt;/res-auth&gt;
+    &lt;res-sharing-scope&gt;Shareable&lt;/res-sharing-scope&gt;
 &lt;/resource-ref&gt;
 ...
 </code></pre>
@@ -570,18 +570,18 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;weblogic-web-app xmlns=&quot;http://www.bea.com/ns/weblogic/90&quot;
-	xmlns:j2ee=&quot;http://java.sun.com/xml/ns/j2ee&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-	xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/90
+    xmlns:j2ee=&quot;http://java.sun.com/xml/ns/j2ee&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.bea.com/ns/weblogic/90
                            http://www.bea.com/ns/weblogic/90/weblogic-web-app.xsd&quot;&gt;
 
-	&lt;work-manager&gt;
-		&lt;name&gt;appWorkManager&lt;/name&gt;
-		&lt;max-threads-constraint&gt;
-			&lt;name&gt;appWorkManager&lt;/name&gt;
-			&lt;count&gt;3&lt;/count&gt;
-		&lt;/max-threads-constraint&gt;
-	&lt;/work-manager&gt;
+    &lt;work-manager&gt;
+        &lt;name&gt;appWorkManager&lt;/name&gt;
+        &lt;max-threads-constraint&gt;
+            &lt;name&gt;appWorkManager&lt;/name&gt;
+            &lt;count&gt;3&lt;/count&gt;
+        &lt;/max-threads-constraint&gt;
+    &lt;/work-manager&gt;
 &lt;/weblogic-web-app&gt;
 </code></pre>
 
@@ -650,10 +650,10 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 
 <pre><code>...
 &lt;resource-ref&gt;
-	&lt;res-ref-name&gt;wm/appWorkManager&lt;/res-ref-name&gt;
-	&lt;res-type&gt;commonj.work.WorkManager&lt;/res-type&gt;
-	&lt;res-auth&gt;Container&lt;/res-auth&gt;
-	&lt;res-sharing-scope&gt;Shareable&lt;/res-sharing-scope&gt;
+    &lt;res-ref-name&gt;wm/appWorkManager&lt;/res-ref-name&gt;
+    &lt;res-type&gt;commonj.work.WorkManager&lt;/res-type&gt;
+    &lt;res-auth&gt;Container&lt;/res-auth&gt;
+    &lt;res-sharing-scope&gt;Shareable&lt;/res-sharing-scope&gt;
 &lt;/resource-ref&gt;
 ...
 </code></pre>
@@ -664,10 +664,10 @@ Per evitar aquest tipus de situacions es recomenable que llegiu l'apartat de Rec
 
 <pre><code>...
 &lt;Resource name=&quot;wm/appWorkManager&quot;
-	auth=&quot;Container&quot;
-	factory=&quot;de.myfoo.commonj.work.FooWorkManagerFactory&quot; 
-	type=&quot;commonj.work.WorkManager&quot;
-	maxThreads=&quot;3&quot;/&gt;
+    auth=&quot;Container&quot;
+    factory=&quot;de.myfoo.commonj.work.FooWorkManagerFactory&quot; 
+    type=&quot;commonj.work.WorkManager&quot;
+    maxThreads=&quot;3&quot;/&gt;
 ...
 </code></pre>
 

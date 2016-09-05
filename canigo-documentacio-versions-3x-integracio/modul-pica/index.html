@@ -470,27 +470,27 @@ pica.properties:
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
 
 
-	&lt;bean id=&quot;picaCanigoService&quot; parent=&quot;abstractPicaService&quot;&gt;
-		&lt;property name=&quot;modalitats&quot;&gt;
-			&lt;map&gt;
-				&lt;entry key=&quot;PADRO_MUNICIPI_RESIDENCIA&quot;&gt;
-					&lt;bean parent=&quot;producteModalitatBase&quot;&gt;
-						&lt;property name=&quot;signat&quot; value=&quot;false&quot;/&gt;
-						&lt;property name=&quot;urlPICA&quot; value=&quot;${pica.url}&quot; /&gt;
-						&lt;property name=&quot;codCertificado&quot; value=&quot;${pica.codCertificado}&quot;/&gt;
-						&lt;property name=&quot;codProducto&quot; value=&quot;${pica.codProducto}&quot;/&gt;
-						&lt;property name=&quot;finalidad&quot; value=&quot;${pica.finalidad}&quot;/&gt;
-						&lt;property name=&quot;nifEmisor&quot; value=&quot;${pica.nifEmissor}&quot;/&gt;
-						&lt;property name=&quot;nombreEmisor&quot; value=&quot;${pica.nombreEmisor}&quot;/&gt;
-					&lt;/bean&gt;
-				&lt;/entry&gt;
-			&lt;/map&gt;
-		&lt;/property&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;picaCanigoService&quot; parent=&quot;abstractPicaService&quot;&gt;
+        &lt;property name=&quot;modalitats&quot;&gt;
+            &lt;map&gt;
+                &lt;entry key=&quot;PADRO_MUNICIPI_RESIDENCIA&quot;&gt;
+                    &lt;bean parent=&quot;producteModalitatBase&quot;&gt;
+                        &lt;property name=&quot;signat&quot; value=&quot;false&quot;/&gt;
+                        &lt;property name=&quot;urlPICA&quot; value=&quot;${pica.url}&quot; /&gt;
+                        &lt;property name=&quot;codCertificado&quot; value=&quot;${pica.codCertificado}&quot;/&gt;
+                        &lt;property name=&quot;codProducto&quot; value=&quot;${pica.codProducto}&quot;/&gt;
+                        &lt;property name=&quot;finalidad&quot; value=&quot;${pica.finalidad}&quot;/&gt;
+                        &lt;property name=&quot;nifEmisor&quot; value=&quot;${pica.nifEmissor}&quot;/&gt;
+                        &lt;property name=&quot;nombreEmisor&quot; value=&quot;${pica.nombreEmisor}&quot;/&gt;
+                    &lt;/bean&gt;
+                &lt;/entry&gt;
+            &lt;/map&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
 &lt;/beans&gt;
 </code></pre>
 
@@ -522,39 +522,39 @@ Les propietats pica.url, pica.codCertificado, pica.codProducto, etc, definides e
 @Lazy
 public class PicaBean {
 
-	@Qualifier(&quot;picaService&quot;)
-	@Autowired
-	private IPicaServiceWrapper serviceWrapper;
-	@Autowired
-	private I18nResourceBundleMessageSource resource;
-	private static final int TIPO_DOC_TITULAR_NIF = 2;
-	private static final Log log = LogFactory.getLog(PicaBean.class);
+    @Qualifier(&quot;picaService&quot;)
+    @Autowired
+    private IPicaServiceWrapper serviceWrapper;
+    @Autowired
+    private I18nResourceBundleMessageSource resource;
+    private static final int TIPO_DOC_TITULAR_NIF = 2;
+    private static final Log log = LogFactory.getLog(PicaBean.class);
 
         /**
          * Crea un objecte funcionari
          *
          * return funcionari
          **/
-	private Funcionari creaFuncionari() {
-		Funcionari func = new Funcionari(  );
-		func.setNifFuncionario(&quot;22222222X&quot;);
-		func.setNombreFuncionario(&quot;Nom congnom1 cognom2&quot;);
-		func.setEmailFuncionario(&quot;ncognom1cognom2@gencat.net&quot;);
-		return func;
-	}
+    private Funcionari creaFuncionari() {
+        Funcionari func = new Funcionari(  );
+        func.setNifFuncionario(&quot;22222222X&quot;);
+        func.setNombreFuncionario(&quot;Nom congnom1 cognom2&quot;);
+        func.setEmailFuncionario(&quot;ncognom1cognom2@gencat.net&quot;);
+        return func;
+    }
 
         /**
          * Crea un objecte titular
          *
          * return titular
          **/
-	private Titular creaTitular() {
-		Titular tit = new Titular(  );
-		tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
-		tit.setTitularDocumentacion(&quot;NIF_TITULAR&quot;); // Es posa el NIF real
-		tit.setTitularNombreCompleto(&quot;NOM_COMPLET_TITULAR&quot;); // Es posa el nom real
-		return tit;
-	}
+    private Titular creaTitular() {
+        Titular tit = new Titular(  );
+        tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
+        tit.setTitularDocumentacion(&quot;NIF_TITULAR&quot;); // Es posa el NIF real
+        tit.setTitularNombreCompleto(&quot;NOM_COMPLET_TITULAR&quot;); // Es posa el nom real
+        return tit;
+    }
 
 
         /**
@@ -562,101 +562,101 @@ public class PicaBean {
          *
          * return DadesEspecifiques
          **/
-	private List&lt;DadesEspecifiques&gt; createDadesEspecifiques() {
-		List&lt;DadesEspecifiques&gt; dadesEspecifiquesXML= new ArrayList&lt;DadesEspecifiques&gt;(  );
-		StringBuffer sb = new StringBuffer( &quot;&lt;ns1:request xmlns:ns1=\&quot;http://www.gencat.net/tfn\&quot;&gt;&quot; );
-		sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMTIT\&quot;&gt;83746573&lt;/ns1:simpleparam&gt;&quot; );
-		sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMNIF\&quot;&gt;111111111H&lt;/ns1:simpleparam&gt;&quot; );
-		sb.append( &quot;&lt;/ns1:request&gt;&quot; );
+    private List&lt;DadesEspecifiques&gt; createDadesEspecifiques() {
+        List&lt;DadesEspecifiques&gt; dadesEspecifiquesXML= new ArrayList&lt;DadesEspecifiques&gt;(  );
+        StringBuffer sb = new StringBuffer( &quot;&lt;ns1:request xmlns:ns1=\&quot;http://www.gencat.net/tfn\&quot;&gt;&quot; );
+        sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMTIT\&quot;&gt;83746573&lt;/ns1:simpleparam&gt;&quot; );
+        sb.append( &quot;&lt;ns1:simpleparam name=\&quot;NUMNIF\&quot;&gt;111111111H&lt;/ns1:simpleparam&gt;&quot; );
+        sb.append( &quot;&lt;/ns1:request&gt;&quot; );
 
-		DadesEspecifiques dades = new DadesEspecifiques(  );
-		dades.setIdSolicitud( &quot;1&quot; );
-		dades.setDadesXML( sb.toString(  ) );
-		dadesEspecifiquesXML.add( dades );
+        DadesEspecifiques dades = new DadesEspecifiques(  );
+        dades.setIdSolicitud( &quot;1&quot; );
+        dades.setDadesXML( sb.toString(  ) );
+        dadesEspecifiquesXML.add( dades );
 
-		return datosEspecificosXML;
-	}
+        return datosEspecificosXML;
+    }
 
         /**
          * Parsejar la resposta deixant constància en format de traces si la crida ha finalitzat o no correctament
          *
          **/
-	private void parseXML(String dadesXML) throws ParserConfigurationException, SAXException, IOException {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		InputSource inStream = new InputSource();
-		boolean error = false;
+    private void parseXML(String dadesXML) throws ParserConfigurationException, SAXException, IOException {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = factory.newDocumentBuilder();
+        InputSource inStream = new InputSource();
+        boolean error = false;
 
-		inStream.setCharacterStream(new StringReader(dadesXML));
-		Document doc = builder.parse(inStream);
-		NodeList nodes = doc.getElementsByTagName(&quot;error&quot;);
-		if(nodes.getLength() == 0) {
-			nodes = doc.getElementsByTagName(&quot;sol:SolicitudError&quot;);
-			error = true;
-		}
+        inStream.setCharacterStream(new StringReader(dadesXML));
+        Document doc = builder.parse(inStream);
+        NodeList nodes = doc.getElementsByTagName(&quot;error&quot;);
+        if(nodes.getLength() == 0) {
+            nodes = doc.getElementsByTagName(&quot;sol:SolicitudError&quot;);
+            error = true;
+        }
 
-		for(int i=0; i&lt;nodes.getLength(); i++) {
-			Node node = nodes.item(i);
-			if(node.getNodeType() == Node.ELEMENT_NODE) {
-				Element element = (Element)node;
-				if(!error) {
-					log.info(dadesXML);
-				} else {
-					log.info(element.getTextContent());
-				}
-			}
-		}
-	}
+        for(int i=0; i&lt;nodes.getLength(); i++) {
+            Node node = nodes.item(i);
+            if(node.getNodeType() == Node.ELEMENT_NODE) {
+                Element element = (Element)node;
+                if(!error) {
+                    log.info(dadesXML);
+                } else {
+                    log.info(element.getTextContent());
+                }
+            }
+        }
+    }
 
         /**
          * Crida al servei sincron de la PICA.
          *
          * return titular
          **/
-	public void execute(){
+    public void execute(){
 
-		try{
-			IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance(&quot;PADRO_MUNICIPI_RESIDENCIA&quot;);
+        try{
+            IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance(&quot;PADRO_MUNICIPI_RESIDENCIA&quot;);
 
-			Funcionari func = creaFuncionari();
-			Titular tit = creaTitular();
+            Funcionari func = creaFuncionari();
+            Titular tit = creaTitular();
 
-			List&lt;DadesEspecifiques&gt; datosEspecificosXML = createDadesEspecifiques();
+            List&lt;DadesEspecifiques&gt; datosEspecificosXML = createDadesEspecifiques();
 
-			service.setFuncionari(func);
-			service.setTitular(tit);
-			service.setDadesEspecifiques(datosEspecificosXML);
+            service.setFuncionari(func);
+            service.setTitular(tit);
+            service.setDadesEspecifiques(datosEspecificosXML);
 
                         //Identificador únic de petició
-			service.crearPeticio(&quot;PROVA_OTCANIGO_&quot; + System.currentTimeMillis());
+            service.crearPeticio(&quot;PROVA_OTCANIGO_&quot; + System.currentTimeMillis());
 
-			//fer peticio
-			CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
-			//extreure resultat
-			List&lt;DadesEspecifiques&gt; resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
+            //fer peticio
+            CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
+            //extreure resultat
+            List&lt;DadesEspecifiques&gt; resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
 
-			Iterator&lt;DadesEspecifiques&gt; it = resposta.iterator();
-			while (it.hasNext()) {
-				DadesEspecifiques object = it.next();
-				String dadesXML = object.getDadesXML();
+            Iterator&lt;DadesEspecifiques&gt; it = resposta.iterator();
+            while (it.hasNext()) {
+                DadesEspecifiques object = it.next();
+                String dadesXML = object.getDadesXML();
 
-				// Parsejar resposta
-				parseXML(dadesXML);
-			}
+                // Parsejar resposta
+                parseXML(dadesXML);
+            }
 
                         //La crida ha finalitzat sense errors. Afegim el missatge de petició finalitzada correctament
                         //al formulari JSF que ha gestionat la crida.
-			FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
-			        FacesMessage.SEVERITY_INFO, resource.getMessage(&quot;picaSuccess&quot;), null));
+            FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_INFO, resource.getMessage(&quot;picaSuccess&quot;), null));
 
-		}catch(Exception e){
-			log.error(&quot;Error during PICA invocation. &quot; + e);
+        }catch(Exception e){
+            log.error(&quot;Error during PICA invocation. &quot; + e);
                         //S'ha produït un error durant la invocació de la PICA. Afegim el missatge d'error al formulari
                         //JSF que ha gestionat la crida.
-			FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
-			        FacesMessage.SEVERITY_ERROR, resource.getMessage(&quot;picaError&quot;) + &quot; - &quot; + e.toString(), null));
-		}
-	}
+            FacesContext.getCurrentInstance().addMessage(&quot;picaForm&quot;, new FacesMessage(
+                    FacesMessage.SEVERITY_ERROR, resource.getMessage(&quot;picaError&quot;) + &quot; - &quot; + e.toString(), null));
+        }
+    }
 
 
 }

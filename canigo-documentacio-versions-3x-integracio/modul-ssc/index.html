@@ -423,9 +423,9 @@
 <p>El resultat dels processos de signatura moltes vegades són arrays de bytes que es troben codificats en Base64 amb classes d&rsquo;Axis. Això fa que per la recuperació d&rsquo;arxius s&rsquo;hagi d&rsquo;incorporar una llibreria més en el proyecte:</p>
 
 <pre><code>&lt;dependency&gt;
-	&lt;groupId&gt;axis&lt;/groupId&gt;
-	&lt;artifactId&gt;axis&lt;/artifactId&gt;
-	&lt;version&gt;1.2.1&lt;/version&gt;
+    &lt;groupId&gt;axis&lt;/groupId&gt;
+    &lt;artifactId&gt;axis&lt;/artifactId&gt;
+    &lt;version&gt;1.2.1&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -435,19 +435,19 @@
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
-	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
            http://www.springframework.org/schema/beans/spring-beans-4.1.xsd&quot;&gt;
 
-	&lt;!-- BEAN SSC --&gt;
-	&lt;bean id=&quot;sscService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl&quot; scope=&quot;prototype&quot;&gt;
-		&lt;description&gt;
-			SSC Service for Canigo 3.1
-		&lt;/description&gt;
-		&lt;property name=&quot;host&quot; value=&quot;${ssc.host}&quot;/&gt;
-		&lt;property name=&quot;distinguishedname&quot; value=&quot;${ssc.distinguishedname}&quot; /&gt; 
-	&lt;/bean&gt;
-	
+    &lt;!-- BEAN SSC --&gt;
+    &lt;bean id=&quot;sscService&quot; class=&quot;cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl&quot; scope=&quot;prototype&quot;&gt;
+        &lt;description&gt;
+            SSC Service for Canigo 3.1
+        &lt;/description&gt;
+        &lt;property name=&quot;host&quot; value=&quot;${ssc.host}&quot;/&gt;
+        &lt;property name=&quot;distinguishedname&quot; value=&quot;${ssc.distinguishedname}&quot; /&gt; 
+    &lt;/bean&gt;
+    
 &lt;/beans&gt;
 </code></pre>
 
@@ -489,12 +489,12 @@ private SscConnectorImpl sscService;
 <pre><code class="language-java">final String path_in = &quot;path_arxiu_entrada&quot;;
 final String path_out = &quot;path_arxiu_sortida&quot;;
 final String filename = &quot;HelloWorld.txt&quot;;
-		
+        
 log.info(&quot;[INFO][Arxiu a signar: &quot; + path_in + filename);
 String data = Util.readBinaryFileB64(path_in + filename);
-		
+        
 String resposta = sscService.signCadesBes(data, Constants.ATTACHED);
-		
+        
 String destFilename = path_out + filename.substring(0, filename.lastIndexOf(&quot;.&quot;)) + &quot;_Signature_CAdES_BES_Attached.p7b&quot;;
 Util.writeBinaryFileB64(destFilename, resposta);
 </code></pre>

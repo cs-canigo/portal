@@ -346,9 +346,9 @@
 &lt;/dependency&gt;
 
 &lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.web.jsf&lt;/artifactId&gt;
-	&lt;version&gt;${canigo.web.jsf.version}&lt;/version&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.web.jsf&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.web.jsf.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -359,19 +359,19 @@
 <p>Caldrà configurar el filtre que interceptarà les peticions:</p>
 
 <pre><code>&lt;filter&gt;
-	&lt;filter-name&gt;ErrorHandler Filter&lt;/filter-name&gt;
-	&lt;filter-class&gt;cat.gencat.ctti.canigo.arch.web.jsf.filter.ErrorHandlerFilter&lt;/filter-class&gt;
+    &lt;filter-name&gt;ErrorHandler Filter&lt;/filter-name&gt;
+    &lt;filter-class&gt;cat.gencat.ctti.canigo.arch.web.jsf.filter.ErrorHandlerFilter&lt;/filter-class&gt;
 &lt;/filter&gt;
 &lt;filter-mapping&gt;
-	&lt;filter-name&gt;ErrorHandler Filter&lt;/filter-name&gt;
-	&lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
+    &lt;filter-name&gt;ErrorHandler Filter&lt;/filter-name&gt;
+    &lt;url-pattern&gt;*.jsf&lt;/url-pattern&gt;
 &lt;/filter-mapping&gt;
 
 També es definirà la pantalla d'error genèrica:
 
 &lt;context-param&gt;
-	&lt;param-name&gt;errorPage&lt;/param-name&gt;
-	&lt;param-value&gt;/AppJava/views/error.jsf&lt;/param-value&gt;
+    &lt;param-name&gt;errorPage&lt;/param-name&gt;
+    &lt;param-value&gt;/AppJava/views/error.jsf&lt;/param-value&gt;
 &lt;/context-param&gt;
 </code></pre>
 

@@ -363,7 +363,7 @@ El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;apl
 <p>Modificar el pom.xml afegint:</p>
 
 <pre><code>&lt;properties&gt;
-	&lt;canigo.support.lopd&gt;[1.3.0,1.4.0)&lt;/canigo.support.lopd&gt;
+    &lt;canigo.support.lopd&gt;[1.3.0,1.4.0)&lt;/canigo.support.lopd&gt;
 &lt;/properties&gt;
 
 &lt;dependency&gt;
@@ -457,89 +457,89 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table(name = &quot;TB_USUARIS&quot;, schema = &quot;PUBLIC&quot;)
 @NamedQueries({
-	@NamedQuery(
-			name=&quot;findUsuarisNomCognom&quot;, 
-			query=&quot;FROM TbUsuaris u WHERE u.nom like :nomUsuari AND u.cognoms like :cognomsUsuari&quot;),
-	@NamedQuery(
-			name=&quot;findUsuarisNom&quot;, 
-			query=&quot;FROM TbUsuaris u WHERE u.nom like :nomUsuari&quot;),
-	@NamedQuery(
-			name=&quot;findUsuarisCognom&quot;, 
-			query=&quot;FROM TbUsuaris u WHERE u.cognoms like :cognomsUsuari&quot;)
+    @NamedQuery(
+            name=&quot;findUsuarisNomCognom&quot;, 
+            query=&quot;FROM TbUsuaris u WHERE u.nom like :nomUsuari AND u.cognoms like :cognomsUsuari&quot;),
+    @NamedQuery(
+            name=&quot;findUsuarisNom&quot;, 
+            query=&quot;FROM TbUsuaris u WHERE u.nom like :nomUsuari&quot;),
+    @NamedQuery(
+            name=&quot;findUsuarisCognom&quot;, 
+            query=&quot;FROM TbUsuaris u WHERE u.cognoms like :cognomsUsuari&quot;)
 })
 
 public class TbUsuaris implements java.io.Serializable {
 
-	private static final long serialVersionUID = -3588947496944606464L;
-	private Integer idUsuari;
-	private String nom;
-	private String cognoms;
-	private String nif;
+    private static final long serialVersionUID = -3588947496944606464L;
+    private Integer idUsuari;
+    private String nom;
+    private String cognoms;
+    private String nif;
 
-	public TbUsuaris() {
-	}
+    public TbUsuaris() {
+    }
 
-	public TbUsuaris(String nom) {
-		this.nom = nom;
-	}
+    public TbUsuaris(String nom) {
+        this.nom = nom;
+    }
 
-	public TbUsuaris(String nom, String cognoms, String nif) {
-		this.nom = nom;
-		this.cognoms = cognoms;
-		this.nif = nif;
-	}
+    public TbUsuaris(String nom, String cognoms, String nif) {
+        this.nom = nom;
+        this.cognoms = cognoms;
+        this.nif = nif;
+    }
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = &quot;ID_USUARI&quot;, unique = true, nullable = false)
-	public Integer getIdUsuari() {
-		System.out.println(&quot;getIdUsuari&quot;);
-		return this.idUsuari;
-	}
+    @Id
+    @GeneratedValue(strategy = IDENTITY)
+    @Column(name = &quot;ID_USUARI&quot;, unique = true, nullable = false)
+    public Integer getIdUsuari() {
+        System.out.println(&quot;getIdUsuari&quot;);
+        return this.idUsuari;
+    }
 
-	public void setIdUsuari(Integer idUsuari) {
-		System.out.println(&quot;setIdUsuari&quot;);
-		this.idUsuari = idUsuari;
-	}
+    public void setIdUsuari(Integer idUsuari) {
+        System.out.println(&quot;setIdUsuari&quot;);
+        this.idUsuari = idUsuari;
+    }
 
-	@LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
-	@Column(name = &quot;NOM&quot;, nullable = false)
-	public String getNom() {
-		System.out.println(&quot;getNom&quot;);
-		return this.nom;
-	}
+    @LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
+    @Column(name = &quot;NOM&quot;, nullable = false)
+    public String getNom() {
+        System.out.println(&quot;getNom&quot;);
+        return this.nom;
+    }
 
-	@LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
-	public void setNom(String nom) {
-		System.out.println(&quot;setNom&quot;);
-		this.nom = nom;
-	}
+    @LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
+    public void setNom(String nom) {
+        System.out.println(&quot;setNom&quot;);
+        this.nom = nom;
+    }
 
-	@LOPDSecure(level = &quot;MED&quot;)//&lt;--Nova Anotació de seguretat
-	@Column(name = &quot;COGNOMS&quot;)
-	public String getCognoms() {
-		System.out.println(&quot;getCognoms&quot;);
-		return this.cognoms;
-	}
+    @LOPDSecure(level = &quot;MED&quot;)//&lt;--Nova Anotació de seguretat
+    @Column(name = &quot;COGNOMS&quot;)
+    public String getCognoms() {
+        System.out.println(&quot;getCognoms&quot;);
+        return this.cognoms;
+    }
 
-	@LOPDSecure(level = &quot;MED&quot;)//&lt;--Nova Anotació de seguretat
-	public void setCognoms(String cognoms) {
-		System.out.println(&quot;setCognoms&quot;);
-		this.cognoms = cognoms;
-	}
+    @LOPDSecure(level = &quot;MED&quot;)//&lt;--Nova Anotació de seguretat
+    public void setCognoms(String cognoms) {
+        System.out.println(&quot;setCognoms&quot;);
+        this.cognoms = cognoms;
+    }
 
-	@LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
-	@Column(name = &quot;NIF&quot;)
-	public String getNif() {
-		System.out.println(&quot;getNif&quot;);
-		return this.nif;
-	}
+    @LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
+    @Column(name = &quot;NIF&quot;)
+    public String getNif() {
+        System.out.println(&quot;getNif&quot;);
+        return this.nif;
+    }
 
-	@LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
-	public void setNif(String nif) {
-		System.out.println(&quot;setNif&quot;);
-		this.nif = nif;
-	}
+    @LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
+    public void setNif(String nif) {
+        System.out.println(&quot;setNif&quot;);
+        this.nif = nif;
+    }
 }
 </code></pre>
 

@@ -578,20 +578,20 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 
 <pre><code>&lt;ui:composition&gt;
       &lt;h:form&gt;
-	      &lt;p:dataList value=&quot;#{menuBean.menu.defaultOpt}&quot; id=&quot;llistaMenu&quot; var=&quot;menu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot; &gt;
-	            &lt;h:link rendered=&quot;#{menu.link != null}&quot; value=&quot;#{msg[menu.value]}&quot; outcome=&quot;#{menu.link}&quot; /&gt;
+          &lt;p:dataList value=&quot;#{menuBean.menu.defaultOpt}&quot; id=&quot;llistaMenu&quot; var=&quot;menu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot; &gt;
+                &lt;h:link rendered=&quot;#{menu.link != null}&quot; value=&quot;#{msg[menu.value]}&quot; outcome=&quot;#{menu.link}&quot; /&gt;
                     &lt;p:commandLink rendered=&quot;#{menu.link == null}&quot; value=&quot;#{msg[menu.value]}&quot;&gt;&lt;/p:commandLink&gt;
-			  
-	            &lt;p:dataList value=&quot;#{menu.submenu}&quot; id=&quot;llistaSubmenu&quot; var=&quot;submenu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot;&gt;
-	                  &lt;h:link rendered=&quot;#{submenu.link != null}&quot; value=&quot;#{msg[submenu.value]}&quot; outcome=&quot;#{submenu.link}&quot; /&gt;
-	                  &lt;p:commandLink rendered=&quot;#{submenu.link == null}&quot; value=&quot;#{msg[submenu.value]}&quot;&gt;&lt;/p:commandLink&gt;
-			    
-	                   &lt;p:dataList value=&quot;#{submenu.submenu}&quot; id=&quot;llistaSubSubmenu&quot; var=&quot;subsubmenu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot;&gt;
-	                           &lt;h:link rendered=&quot;#{subsubmenu.link != null}&quot; value=&quot;#{msg[subsubmenu.value]}&quot; outcome=&quot;#{subsubmenu.link}&quot; /&gt;
-	                           &lt;p:commandLink rendered=&quot;#{subsubmenu.link == null}&quot; value=&quot;#{msg[subsubmenu.value]}&quot;&gt;&lt;/p:commandLink&gt;
-	                   &lt;/p:dataList&gt;
-	            &lt;/p:dataList&gt;
-	      &lt;/p:dataList&gt;
+              
+                &lt;p:dataList value=&quot;#{menu.submenu}&quot; id=&quot;llistaSubmenu&quot; var=&quot;submenu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot;&gt;
+                      &lt;h:link rendered=&quot;#{submenu.link != null}&quot; value=&quot;#{msg[submenu.value]}&quot; outcome=&quot;#{submenu.link}&quot; /&gt;
+                      &lt;p:commandLink rendered=&quot;#{submenu.link == null}&quot; value=&quot;#{msg[submenu.value]}&quot;&gt;&lt;/p:commandLink&gt;
+                
+                       &lt;p:dataList value=&quot;#{submenu.submenu}&quot; id=&quot;llistaSubSubmenu&quot; var=&quot;subsubmenu&quot; type=&quot;unordered&quot; emptyMessage=&quot;&quot;&gt;
+                               &lt;h:link rendered=&quot;#{subsubmenu.link != null}&quot; value=&quot;#{msg[subsubmenu.value]}&quot; outcome=&quot;#{subsubmenu.link}&quot; /&gt;
+                               &lt;p:commandLink rendered=&quot;#{subsubmenu.link == null}&quot; value=&quot;#{msg[subsubmenu.value]}&quot;&gt;&lt;/p:commandLink&gt;
+                       &lt;/p:dataList&gt;
+                &lt;/p:dataList&gt;
+          &lt;/p:dataList&gt;
       &lt;/h:form&gt;    
 &lt;/ui:composition&gt;
 </code></pre>
@@ -602,59 +602,59 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-	xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
-	xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
-	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
-	xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
-	xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
-	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+    xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+    xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+    xmlns:util=&quot;http://www.springframework.org/schema/util&quot;
+    xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
             http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
             http://www.springframework.org/schema/aop 
-			http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
-			http://www.springframework.org/schema/context 
-			http://www.springframework.org/schema/context/spring-context-3.0.xsd
-			http://www.springframework.org/schema/util 
-			http://www.springframework.org/schema/util/spring-util-3.0.xsd&quot;&gt;
-	
-	&lt;bean lazy-init=&quot;true&quot; id=&quot;menuBean&quot; class=&quot;cat.gencat.ctti.canigo.arch.web.jsf.MenuBean&quot;&gt;
-		&lt;property name=&quot;menu&quot;&gt;
-			&lt;map&gt;
-				&lt;entry key=&quot;defaultOpt&quot;&gt;
-				&lt;list&gt;
-					&lt;map&gt;
-						&lt;entry key=&quot;value&quot; value=&quot;menuApartat1&quot;&gt;&lt;/entry&gt;
-						&lt;entry key=&quot;submenu&quot;&gt;
-							&lt;list&gt;
-								&lt;map&gt;
-									&lt;entry key=&quot;value&quot; value=&quot;menuSubapartat1&quot;&gt;&lt;/entry&gt;
-								&lt;/map&gt;
-								&lt;map&gt;
-									&lt;entry key=&quot;value&quot; value=&quot;menuSubapartat2&quot;&gt;&lt;/entry&gt;
-									&lt;entry key=&quot;submenu&quot;&gt;
-										&lt;list&gt;
-											&lt;map&gt;
-												&lt;entry key=&quot;value&quot; value=&quot;menuSubsubapartat1&quot;&gt;&lt;/entry&gt;
-											&lt;/map&gt;
-											&lt;map&gt;
-												&lt;entry key=&quot;value&quot; value=&quot;menuSubsubapartat2&quot;&gt;&lt;/entry&gt;
-											&lt;/map&gt;
-										&lt;/list&gt;
-									&lt;/entry&gt;
-								&lt;/map&gt;
-								&lt;map&gt;
-									&lt;entry key=&quot;value&quot; value=&quot;menuSubapartat3&quot;&gt;&lt;/entry&gt;
-								&lt;/map&gt;
-								&lt;map&gt;
-									&lt;entry key=&quot;value&quot; value=&quot;menuSubapartat4&quot;&gt;&lt;/entry&gt;
-								&lt;/map&gt;
-							&lt;/list&gt;
-						&lt;/entry&gt;
-					&lt;/map&gt;
-				&lt;/list&gt;
-				&lt;/entry&gt;
-			&lt;/map&gt;
-		&lt;/property&gt;
-	&lt;/bean&gt;
+            http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd
+            http://www.springframework.org/schema/util 
+            http://www.springframework.org/schema/util/spring-util-3.0.xsd&quot;&gt;
+    
+    &lt;bean lazy-init=&quot;true&quot; id=&quot;menuBean&quot; class=&quot;cat.gencat.ctti.canigo.arch.web.jsf.MenuBean&quot;&gt;
+        &lt;property name=&quot;menu&quot;&gt;
+            &lt;map&gt;
+                &lt;entry key=&quot;defaultOpt&quot;&gt;
+                &lt;list&gt;
+                    &lt;map&gt;
+                        &lt;entry key=&quot;value&quot; value=&quot;menuApartat1&quot;&gt;&lt;/entry&gt;
+                        &lt;entry key=&quot;submenu&quot;&gt;
+                            &lt;list&gt;
+                                &lt;map&gt;
+                                    &lt;entry key=&quot;value&quot; value=&quot;menuSubapartat1&quot;&gt;&lt;/entry&gt;
+                                &lt;/map&gt;
+                                &lt;map&gt;
+                                    &lt;entry key=&quot;value&quot; value=&quot;menuSubapartat2&quot;&gt;&lt;/entry&gt;
+                                    &lt;entry key=&quot;submenu&quot;&gt;
+                                        &lt;list&gt;
+                                            &lt;map&gt;
+                                                &lt;entry key=&quot;value&quot; value=&quot;menuSubsubapartat1&quot;&gt;&lt;/entry&gt;
+                                            &lt;/map&gt;
+                                            &lt;map&gt;
+                                                &lt;entry key=&quot;value&quot; value=&quot;menuSubsubapartat2&quot;&gt;&lt;/entry&gt;
+                                            &lt;/map&gt;
+                                        &lt;/list&gt;
+                                    &lt;/entry&gt;
+                                &lt;/map&gt;
+                                &lt;map&gt;
+                                    &lt;entry key=&quot;value&quot; value=&quot;menuSubapartat3&quot;&gt;&lt;/entry&gt;
+                                &lt;/map&gt;
+                                &lt;map&gt;
+                                    &lt;entry key=&quot;value&quot; value=&quot;menuSubapartat4&quot;&gt;&lt;/entry&gt;
+                                &lt;/map&gt;
+                            &lt;/list&gt;
+                        &lt;/entry&gt;
+                    &lt;/map&gt;
+                &lt;/list&gt;
+                &lt;/entry&gt;
+            &lt;/map&gt;
+        &lt;/property&gt;
+    &lt;/bean&gt;
 &lt;/beans&gt;
 </code></pre>
 
@@ -665,21 +665,21 @@ cat.gencat.ctti.canigo.arch.web.core.filters.urlrewrite.UrlRewriteFilter: Java W
 <h5 id="codi-jsf-1">Codi Jsf</h5>
 
 <pre><code>&lt;ui:define name=&quot;body&quot;&gt;
-	&lt;p:dataTable id=&quot;taulaPropietats&quot; 
-		cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;700&quot; border=&quot;0&quot; var=&quot;key&quot;
-		value=&quot;#{propertyService.itemKeys}&quot; styleClass=&quot;taula&quot;&gt;
-	
-		&lt;p:column&gt;
-			&lt;f:facet name=&quot;header&quot;&gt;#{msg.propertyExposeKey}&lt;/f:facet&gt;
-			&lt;h:outputText value=&quot;${key}&quot; /&gt;
-		&lt;/p:column&gt;
-	
-		&lt;p:column&gt;
-			&lt;f:facet name=&quot;header&quot;&gt;#{msg.propertyExposeValue}&lt;/f:facet&gt;
-			&lt;h:outputText value=&quot;#{propertyService.values[key]}&quot; /&gt;
-		&lt;/p:column&gt;
-	
-	&lt;/p:dataTable&gt;
+    &lt;p:dataTable id=&quot;taulaPropietats&quot; 
+        cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;700&quot; border=&quot;0&quot; var=&quot;key&quot;
+        value=&quot;#{propertyService.itemKeys}&quot; styleClass=&quot;taula&quot;&gt;
+    
+        &lt;p:column&gt;
+            &lt;f:facet name=&quot;header&quot;&gt;#{msg.propertyExposeKey}&lt;/f:facet&gt;
+            &lt;h:outputText value=&quot;${key}&quot; /&gt;
+        &lt;/p:column&gt;
+    
+        &lt;p:column&gt;
+            &lt;f:facet name=&quot;header&quot;&gt;#{msg.propertyExposeValue}&lt;/f:facet&gt;
+            &lt;h:outputText value=&quot;#{propertyService.values[key]}&quot; /&gt;
+        &lt;/p:column&gt;
+    
+    &lt;/p:dataTable&gt;
 &lt;/ui:define&gt;
 </code></pre>
 

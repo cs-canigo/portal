@@ -341,14 +341,14 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 &lt;spring.security.facelets.tag.support.version&gt;[1.0.0,1.1.0)&lt;/spring.security.facelets.tag.support.version&gt;
 
 &lt;dependency&gt;
-	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
-	&lt;artifactId&gt;canigo.security&lt;/artifactId&gt;
-	&lt;version&gt;${canigo.security.version}&lt;/version&gt;
+    &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+    &lt;artifactId&gt;canigo.security&lt;/artifactId&gt;
+    &lt;version&gt;${canigo.security.version}&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
-	&lt;groupId&gt;org.springframework.security.taglibs&lt;/groupId&gt;
-	&lt;artifactId&gt;spring.security.facelets.tag.support&lt;/artifactId&gt;
-	&lt;version&gt;${spring.security.facelets.tag.support.version}&lt;/version&gt;
+    &lt;groupId&gt;org.springframework.security.taglibs&lt;/groupId&gt;
+    &lt;artifactId&gt;spring.security.facelets.tag.support&lt;/artifactId&gt;
+    &lt;version&gt;${spring.security.facelets.tag.support.version}&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
 
@@ -421,23 +421,23 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 
 &lt;!--  Secure patterns --&gt;
 &lt;security:http&gt;
-  	&lt;security:intercept-url pattern=&quot;/**/views/login.xhtml&quot; 		access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot; /&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/logout.xhtml&quot; 			access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot;/&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/monitoring.xhtml&quot;		access=&quot;ROLE_ADMIN&quot; /&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/propertyExpose.xhtml&quot;	access=&quot;ROLE_ADMIN&quot; /&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/moduleList.xhtml&quot;		access=&quot;ROLE_ADMIN&quot; /&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/logReader.xhtml&quot; 		access=&quot;ROLE_ADMIN&quot;/&gt;
-	&lt;security:intercept-url pattern=&quot;/**/views/**&quot; 					access=&quot;ROLE_USER&quot;/&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/login.xhtml&quot;         access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot; /&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/logout.xhtml&quot;            access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot;/&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/monitoring.xhtml&quot;        access=&quot;ROLE_ADMIN&quot; /&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/propertyExpose.xhtml&quot;    access=&quot;ROLE_ADMIN&quot; /&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/moduleList.xhtml&quot;        access=&quot;ROLE_ADMIN&quot; /&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/logReader.xhtml&quot;         access=&quot;ROLE_ADMIN&quot;/&gt;
+    &lt;security:intercept-url pattern=&quot;/**/views/**&quot;                  access=&quot;ROLE_USER&quot;/&gt;
 
-	    
-	&lt;security:form-login 	login-processing-url=&quot;/AppJava/j_spring_security_check&quot;
-							login-page=&quot;/AppJava/views/login.xhtml?set-locale=ca_ES&quot; 
-							authentication-failure-url=&quot;/AppJava/views/login.xhtml?set-locale=ca_ES&amp;amp;error=1&quot;/&gt;
-	&lt;security:logout logout-url=&quot;/AppJava/views/logout.xhtml&quot; /&gt;
-	&lt;security:access-denied-handler error-page=&quot;/views/accessDenied.xhtml&quot;/&gt;
-		
+        
+    &lt;security:form-login    login-processing-url=&quot;/AppJava/j_spring_security_check&quot;
+                            login-page=&quot;/AppJava/views/login.xhtml?set-locale=ca_ES&quot; 
+                            authentication-failure-url=&quot;/AppJava/views/login.xhtml?set-locale=ca_ES&amp;amp;error=1&quot;/&gt;
+    &lt;security:logout logout-url=&quot;/AppJava/views/logout.xhtml&quot; /&gt;
+    &lt;security:access-denied-handler error-page=&quot;/views/accessDenied.xhtml&quot;/&gt;
+        
 &lt;/security:http&gt;
-	
+    
 &lt;security:authentication-manager&gt;
 
 &lt;!--Proveidor de seguretat--&gt;
@@ -502,10 +502,10 @@ L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre 
 </ul>
 
 <pre><code>&lt;security:authentication-manager&gt;
-	&lt;security:authentication-provider&gt;
+    &lt;security:authentication-provider&gt;
                 &lt;security:password-encoder hash=&quot;plaintext&quot;/&gt;
-		&lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot;/&gt;
-	&lt;/security:authentication-provider&gt;
+        &lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot;/&gt;
+    &lt;/security:authentication-provider&gt;
 &lt;/security:authentication-manager&gt;
 </code></pre>
 
@@ -578,28 +578,28 @@ Cal tenir el contenidor de certificats desplegat amb l'aplicació per a poder fe
 <p>La configuració del proveidor dins de l&rsquo;ariux de <strong>app-custom-security.xml</strong>:</p>
 
 <pre><code>&lt;security:authentication-manager&gt;
-	&lt;security:authentication-provider ref=&quot;saceProvider&quot;/&gt;
+    &lt;security:authentication-provider ref=&quot;saceProvider&quot;/&gt;
 &lt;/security:authentication-manager&gt;
 
 &lt;bean id=&quot;saceProvider&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.sace.SACEAuthenticationProvider&quot;&gt;
-	&lt;description&gt;SACE Provider&lt;/description&gt;
-	&lt;property name=&quot;authenticationDao&quot; ref=&quot;saceAuthenticationDao&quot;/&gt;
+    &lt;description&gt;SACE Provider&lt;/description&gt;
+    &lt;property name=&quot;authenticationDao&quot; ref=&quot;saceAuthenticationDao&quot;/&gt;
 &lt;/bean&gt;
 
 &lt;bean id=&quot;saceAuthenticationDao&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.SACEPasswordAuthenticationDaoStub&quot;&gt;
-	&lt;description&gt;SACE Authentication DAO&lt;/description&gt;
-	&lt;property name=&quot;i18nResourceBundleMessageSource&quot; ref=&quot;messageSource&quot; /&gt;
-	&lt;property name=&quot;userNameFormat&quot; value=&quot;${security.sace.userNameFormat}&quot; /&gt;
-	&lt;property name=&quot;hostName&quot; value=&quot;${security.sace.url}&quot; /&gt;
-	&lt;property name=&quot;keyStore&quot; value=&quot;${security.sace.keyStore}&quot; /&gt;
-	&lt;property name=&quot;keyStorePassPhrase&quot; value=&quot;${security.sace.keyStorePassPhrase}&quot; /&gt;
-	&lt;property name=&quot;authoritiesDAO&quot; ref=&quot;saceAuthoritiesDAO&quot;/&gt;
+    &lt;description&gt;SACE Authentication DAO&lt;/description&gt;
+    &lt;property name=&quot;i18nResourceBundleMessageSource&quot; ref=&quot;messageSource&quot; /&gt;
+    &lt;property name=&quot;userNameFormat&quot; value=&quot;${security.sace.userNameFormat}&quot; /&gt;
+    &lt;property name=&quot;hostName&quot; value=&quot;${security.sace.url}&quot; /&gt;
+    &lt;property name=&quot;keyStore&quot; value=&quot;${security.sace.keyStore}&quot; /&gt;
+    &lt;property name=&quot;keyStorePassPhrase&quot; value=&quot;${security.sace.keyStorePassPhrase}&quot; /&gt;
+    &lt;property name=&quot;authoritiesDAO&quot; ref=&quot;saceAuthoritiesDAO&quot;/&gt;
 &lt;/bean&gt;
 
 &lt;bean id=&quot;saceAuthoritiesDAO&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.sace.authorities.AuthoritiesDAOImpl&quot;&gt;
-	&lt;description&gt;Authorities DAO implementation for SACE. Gets granted authorities for specified user&lt;/description&gt;
-	&lt;property name=&quot;authoritiesByUsernameQuery&quot; value=&quot;${security.sace.authoritiesbyUserNameQuery:#{null}}&quot;/&gt;
-	&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
+    &lt;description&gt;Authorities DAO implementation for SACE. Gets granted authorities for specified user&lt;/description&gt;
+    &lt;property name=&quot;authoritiesByUsernameQuery&quot; value=&quot;${security.sace.authoritiesbyUserNameQuery:#{null}}&quot;/&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
 &lt;/bean&gt;
 </code></pre>
 
@@ -730,10 +730,10 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 </ul>
 
 <pre><code>&lt;security:authentication-manager&gt;
-	&lt;security:authentication-provider&gt;
-		&lt;security:password-encoder hash=&quot;plaintext&quot;/&gt;
-		&lt;security:user-service properties=&quot;classpath:/config/props/security.users.properties&quot;/&gt;
-	&lt;/security:authentication-provider&gt;
+    &lt;security:authentication-provider&gt;
+        &lt;security:password-encoder hash=&quot;plaintext&quot;/&gt;
+        &lt;security:user-service properties=&quot;classpath:/config/props/security.users.properties&quot;/&gt;
+    &lt;/security:authentication-provider&gt;
 &lt;/security:authentication-manager&gt;
 </code></pre>
 
@@ -773,66 +773,66 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 <p>La configuració específica del proveidor és el següent:</p>
 
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;beans 	xmlns=&quot;http://www.springframework.org/schema/beans&quot;
-		xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-		xmlns:security=&quot;http://www.springframework.org/schema/security&quot;
-		xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-					       http://www.springframework.org/schema/security 	http://www.springframework.org/schema/security/spring-security-3.0.xsd&quot;&gt;
+&lt;beans  xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+        xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+        xmlns:security=&quot;http://www.springframework.org/schema/security&quot;
+        xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/security   http://www.springframework.org/schema/security/spring-security-3.0.xsd&quot;&gt;
 
-	&lt;security:http pattern=&quot;/css/**&quot; security=&quot;none&quot;/&gt;
-	&lt;security:http pattern=&quot;/images/**&quot; security=&quot;none&quot;/&gt;
-	&lt;security:http pattern=&quot;/js/**&quot; security=&quot;none&quot;/&gt;
+    &lt;security:http pattern=&quot;/css/**&quot; security=&quot;none&quot;/&gt;
+    &lt;security:http pattern=&quot;/images/**&quot; security=&quot;none&quot;/&gt;
+    &lt;security:http pattern=&quot;/js/**&quot; security=&quot;none&quot;/&gt;
 
-	&lt;!--  Secure patterns --&gt;
-	&lt;security:http&gt;
-  	    &lt;security:intercept-url pattern=&quot;/**/views/login.xhtml&quot; 			access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot; /&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/logout.xhtml&quot; 			access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot;/&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/monitoring.xhtml&quot;		access=&quot;ROLE_ADMIN&quot; /&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/propertyExpose.xhtml&quot;	access=&quot;ROLE_ADMIN&quot; /&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/moduleList.xhtml&quot;		access=&quot;ROLE_ADMIN&quot; /&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/logReader.xhtml&quot; 		access=&quot;ROLE_ADMIN&quot;/&gt;
-	    &lt;security:intercept-url pattern=&quot;/**/views/**&quot; 					access=&quot;ROLE_USER&quot;/&gt;
+    &lt;!--  Secure patterns --&gt;
+    &lt;security:http&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/login.xhtml&quot;             access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot; /&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/logout.xhtml&quot;            access=&quot;IS_AUTHENTICATED_ANONYMOUSLY&quot;/&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/monitoring.xhtml&quot;        access=&quot;ROLE_ADMIN&quot; /&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/propertyExpose.xhtml&quot;    access=&quot;ROLE_ADMIN&quot; /&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/moduleList.xhtml&quot;        access=&quot;ROLE_ADMIN&quot; /&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/logReader.xhtml&quot;         access=&quot;ROLE_ADMIN&quot;/&gt;
+        &lt;security:intercept-url pattern=&quot;/**/views/**&quot;                  access=&quot;ROLE_USER&quot;/&gt;
 
 
-	    &lt;security:logout logout-url=&quot;/views/logout.xhtml&quot; /&gt;
-	    &lt;security:access-denied-handler error-page=&quot;/views/accessDenied.xhtml&quot;/&gt;
-		
-	&lt;!-- GICAR --&gt;
-	    &lt;security:form-login login-processing-url=&quot;/j_spring_security_check&quot; login-page=&quot;/j_spring_security_check&quot; /&gt;
-	    &lt;security:custom-filter ref=&quot;proxyUsernamePasswordAuthenticationFilter&quot; before=&quot;FORM_LOGIN_FILTER&quot; /&gt;
-	&lt;/security:http&gt;
+        &lt;security:logout logout-url=&quot;/views/logout.xhtml&quot; /&gt;
+        &lt;security:access-denied-handler error-page=&quot;/views/accessDenied.xhtml&quot;/&gt;
+        
+    &lt;!-- GICAR --&gt;
+        &lt;security:form-login login-processing-url=&quot;/j_spring_security_check&quot; login-page=&quot;/j_spring_security_check&quot; /&gt;
+        &lt;security:custom-filter ref=&quot;proxyUsernamePasswordAuthenticationFilter&quot; before=&quot;FORM_LOGIN_FILTER&quot; /&gt;
+    &lt;/security:http&gt;
 
-	&lt;security:authentication-manager alias=&quot;authenticationManager&quot;&gt;
-		&lt;!-- GICAR --&gt;
-		&lt;security:authentication-provider ref=&quot;gicarProvider&quot;/&gt;
-	&lt;/security:authentication-manager&gt;
+    &lt;security:authentication-manager alias=&quot;authenticationManager&quot;&gt;
+        &lt;!-- GICAR --&gt;
+        &lt;security:authentication-provider ref=&quot;gicarProvider&quot;/&gt;
+    &lt;/security:authentication-manager&gt;
 
-	&lt;!-- GICAR --&gt;
-	&lt;bean id=&quot;proxyUsernamePasswordAuthenticationFilter&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.authentication.ProxyUsernamePasswordAuthenticationFilter&quot;&gt;
-		&lt;property name=&quot;siteminderAuthentication&quot; 		value=&quot;true&quot; /&gt;
-		&lt;property name=&quot;authenticationManager&quot; 			ref=&quot;authenticationManager&quot; /&gt;
-		&lt;property name=&quot;authenticationFailureHandler&quot; 	ref=&quot;failureHandler&quot; /&gt;
-	&lt;/bean&gt;
+    &lt;!-- GICAR --&gt;
+    &lt;bean id=&quot;proxyUsernamePasswordAuthenticationFilter&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.authentication.ProxyUsernamePasswordAuthenticationFilter&quot;&gt;
+        &lt;property name=&quot;siteminderAuthentication&quot;       value=&quot;true&quot; /&gt;
+        &lt;property name=&quot;authenticationManager&quot;          ref=&quot;authenticationManager&quot; /&gt;
+        &lt;property name=&quot;authenticationFailureHandler&quot;   ref=&quot;failureHandler&quot; /&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;failureHandler&quot; class=&quot;org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler&quot;&gt;
-		&lt;property name=&quot;defaultFailureUrl&quot; value=&quot;/gicar-error.html&quot; /&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;failureHandler&quot; class=&quot;org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler&quot;&gt;
+        &lt;property name=&quot;defaultFailureUrl&quot; value=&quot;/gicar-error.html&quot; /&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;gicarProvider&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.siteminder.SiteminderAuthenticationProvider&quot;&gt;
-		&lt;description&gt;GICAR Provider&lt;/description&gt;
-		&lt;property name=&quot;userDetailsService&quot; ref=&quot;gicarUserDetailsService&quot;/&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;gicarProvider&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.siteminder.SiteminderAuthenticationProvider&quot;&gt;
+        &lt;description&gt;GICAR Provider&lt;/description&gt;
+        &lt;property name=&quot;userDetailsService&quot; ref=&quot;gicarUserDetailsService&quot;/&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;gicarUserDetailsService&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.gicar.GICARUserDetailsServiceImpl&quot;&gt;
-		&lt;description&gt;User Detail service implementation for GICAR provider&lt;/description&gt;
-		&lt;property name=&quot;httpGicarHeaderUsernameKey&quot; value=&quot;${security.gicar.httpGicarHeaderUsernameKey:NIF}&quot;/&gt;
-		&lt;property name=&quot;authoritiesDAO&quot; ref=&quot;authoritiesDAO&quot;/&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;gicarUserDetailsService&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.gicar.GICARUserDetailsServiceImpl&quot;&gt;
+        &lt;description&gt;User Detail service implementation for GICAR provider&lt;/description&gt;
+        &lt;property name=&quot;httpGicarHeaderUsernameKey&quot; value=&quot;${security.gicar.httpGicarHeaderUsernameKey:NIF}&quot;/&gt;
+        &lt;property name=&quot;authoritiesDAO&quot; ref=&quot;authoritiesDAO&quot;/&gt;
+    &lt;/bean&gt;
 
-	&lt;bean id=&quot;authoritiesDAO&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.sace.authorities.AuthoritiesDAOImpl&quot;&gt;
-		&lt;description&gt;Authorities DAO implementation for SACE. Gets granted authorities for specified user&lt;/description&gt;
-		&lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
-	&lt;/bean&gt;
+    &lt;bean id=&quot;authoritiesDAO&quot; class=&quot;cat.gencat.ctti.canigo.arch.security.provider.sace.authorities.AuthoritiesDAOImpl&quot;&gt;
+        &lt;description&gt;Authorities DAO implementation for SACE. Gets granted authorities for specified user&lt;/description&gt;
+        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;
+    &lt;/bean&gt;
 &lt;/beans&gt;
 </code></pre>
 
@@ -877,11 +877,11 @@ En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic
 <p>Per a incorporar els tags dins de la JSF s&rsquo;ha de referenciar el espai de noms (nameSpace) de seguretat dins del tag HTML de la pàgina:</p>
 
 <pre><code>&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
-	xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;
-	xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
-	xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
-	xmlns:c=&quot;http://java.sun.com/jstl/core&quot;
-	xmlns:sec=&quot;http://www.springframework.org/security/facelets/tags&quot;&gt;
+    xmlns:ui=&quot;http://java.sun.com/jsf/facelets&quot;
+    xmlns:f=&quot;http://java.sun.com/jsf/core&quot;
+    xmlns:h=&quot;http://java.sun.com/jsf/html&quot;
+    xmlns:c=&quot;http://java.sun.com/jstl/core&quot;
+    xmlns:sec=&quot;http://www.springframework.org/security/facelets/tags&quot;&gt;
 ....
 ....
 ....

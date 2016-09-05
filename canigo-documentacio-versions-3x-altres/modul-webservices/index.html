@@ -424,46 +424,46 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
 
 <pre><code>....
 &lt;build&gt;
-	&lt;plugins&gt;
-		...........
+    &lt;plugins&gt;
+        ...........
                 ...........
 
-		&lt;plugin&gt;
-			&lt;groupId&gt;org.apache.cxf&lt;/groupId&gt;
-			&lt;artifactId&gt;cxf-codegen-plugin&lt;/artifactId&gt;
-			&lt;version&gt;2.2.10&lt;/version&gt;
-			&lt;executions&gt;
-				&lt;execution&gt;
-					&lt;id&gt;generate-sources&lt;/id&gt;
-					&lt;phase&gt;generate-sources&lt;/phase&gt;
-				        &lt;configuration&gt;
-					        &lt;sourceRoot&gt;${basedir}/src/main/java&lt;/sourceRoot&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.cxf&lt;/groupId&gt;
+            &lt;artifactId&gt;cxf-codegen-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.2.10&lt;/version&gt;
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;id&gt;generate-sources&lt;/id&gt;
+                    &lt;phase&gt;generate-sources&lt;/phase&gt;
+                        &lt;configuration&gt;
+                            &lt;sourceRoot&gt;${basedir}/src/main/java&lt;/sourceRoot&gt;
                                                 &lt;wsdlOptions&gt;
-							&lt;wsdlOption&gt;
-								&lt;wsdl&gt;http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl&lt;/wsdl&gt;
-							&lt;/wsdlOption&gt;
-						&lt;/wsdlOptions&gt;
-					&lt;/configuration&gt;
-					&lt;goals&gt;
-						&lt;goal&gt;wsdl2java&lt;/goal&gt;
-					&lt;/goals&gt;
-				&lt;/execution&gt;
-			&lt;/executions&gt;
+                            &lt;wsdlOption&gt;
+                                &lt;wsdl&gt;http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl&lt;/wsdl&gt;
+                            &lt;/wsdlOption&gt;
+                        &lt;/wsdlOptions&gt;
+                    &lt;/configuration&gt;
+                    &lt;goals&gt;
+                        &lt;goal&gt;wsdl2java&lt;/goal&gt;
+                    &lt;/goals&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
 
-			&lt;dependencies&gt;
-				&lt;dependency&gt;
-					&lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
-					&lt;artifactId&gt;jaxb2-basics&lt;/artifactId&gt;
-					&lt;version&gt;0.6.0&lt;/version&gt;
-				&lt;/dependency&gt;
-				&lt;dependency&gt;
-					&lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
-					&lt;artifactId&gt;jaxb2-basics-runtime&lt;/artifactId&gt;
-					&lt;version&gt;0.6.0&lt;/version&gt;
-				&lt;/dependency&gt;
-			&lt;/dependencies&gt;
-		&lt;/plugin&gt;
-	&lt;/plugins&gt;
+            &lt;dependencies&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
+                    &lt;artifactId&gt;jaxb2-basics&lt;/artifactId&gt;
+                    &lt;version&gt;0.6.0&lt;/version&gt;
+                &lt;/dependency&gt;
+                &lt;dependency&gt;
+                    &lt;groupId&gt;org.jvnet.jaxb2_commons&lt;/groupId&gt;
+                    &lt;artifactId&gt;jaxb2-basics-runtime&lt;/artifactId&gt;
+                    &lt;version&gt;0.6.0&lt;/version&gt;
+                &lt;/dependency&gt;
+            &lt;/dependencies&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
 &lt;/build&gt;
 ......
 </code></pre>
@@ -477,42 +477,42 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
 <p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring</p>
 
 <pre><code>&lt;bean id=&quot;messageFactory&quot; class=&quot;org.springframework.ws.soap.saaj.SaajSoapMessageFactory&quot;&gt;
-	&lt;property name=&quot;soapVersion&quot;&gt;
-		&lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
-	&lt;/property&gt;
+    &lt;property name=&quot;soapVersion&quot;&gt;
+        &lt;util:constant static-field=&quot;org.springframework.ws.soap.SoapVersion.SOAP_12&quot; /&gt;
+    &lt;/property&gt;
 &lt;/bean&gt;
 
 &lt;bean id=&quot;webServiceTemplate&quot; class=&quot;org.springframework.ws.client.core.WebServiceTemplate&quot;&gt;
-	&lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
-	&lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
-	&lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
-	&lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;
+    &lt;constructor-arg ref=&quot;messageFactory&quot; /&gt;
+    &lt;property name=&quot;marshaller&quot; ref=&quot;marshaller&quot; /&gt;
+    &lt;property name=&quot;unmarshaller&quot; ref=&quot;marshaller&quot; /&gt;
+    &lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;
 &lt;/bean&gt;
 
 &lt;bean id=&quot;webServiceClient&quot; class=&quot;cat.gencat.ctti.canigo.demo.ws.WebServiceClientImpl&quot;&gt;
-	&lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
-	&lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;		
+    &lt;property name=&quot;webServiceTemplate&quot; ref=&quot;webServiceTemplate&quot;/&gt;
+    &lt;property name=&quot;defaultUri&quot; value=&quot;${ws.uri}&quot; /&gt;        
 &lt;/bean&gt;
 
 &lt;bean id=&quot;marshaller&quot; class=&quot;org.springframework.oxm.jaxb.Jaxb2Marshaller&quot;&gt;
-	&lt;property name=&quot;classesToBeBound&quot;&gt;
-		&lt;list&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.ArrayOfForecast&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.ArrayOfWeatherDescription&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.Forecast&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.ForecastReturn&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIP&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIPResponse&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIP&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIPResponse&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformation&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformationResponse&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.POP&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.Temp&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.WeatherDescription&lt;/value&gt;
-			&lt;value&gt;com.cdyne.ws.weatherws.WeatherReturn&lt;/value&gt;
-		&lt;/list&gt;
-	&lt;/property&gt;
+    &lt;property name=&quot;classesToBeBound&quot;&gt;
+        &lt;list&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.ArrayOfForecast&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.ArrayOfWeatherDescription&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.Forecast&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.ForecastReturn&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIP&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetCityForecastByZIPResponse&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIP&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetCityWeatherByZIPResponse&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformation&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.GetWeatherInformationResponse&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.POP&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.Temp&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.WeatherDescription&lt;/value&gt;
+            &lt;value&gt;com.cdyne.ws.weatherws.WeatherReturn&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
 &lt;/bean&gt;
 </code></pre>
 
@@ -525,24 +525,24 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
 <p><strong>WebServiceClientImpl.java</strong></p>
 
 <pre><code class="language-java">public class WebServiceClientImpl implements WebServiceClient {
-	
-	private WebServiceTemplate webServiceTemplate;
+    
+    private WebServiceTemplate webServiceTemplate;
 
-	public void setWebServiceTemplate(WebServiceTemplate webServiceTemplate) {
-		this.webServiceTemplate = webServiceTemplate;
-	}
+    public void setWebServiceTemplate(WebServiceTemplate webServiceTemplate) {
+        this.webServiceTemplate = webServiceTemplate;
+    }
 
-	public void setDefaultUri(String defaultUri) {
-		webServiceTemplate.setDefaultUri(defaultUri);
-	}
+    public void setDefaultUri(String defaultUri) {
+        webServiceTemplate.setDefaultUri(defaultUri);
+    }
 
-	public GetCityForecastByZIPResponse simpleSendAndReceive(String zip) {
-				
-		GetCityForecastByZIP request = new GetCityForecastByZIP();
-		request.setZIP(zip);
-				
-		return (GetCityForecastByZIPResponse)webServiceTemplate.marshalSendAndReceive(request);
-	}
+    public GetCityForecastByZIPResponse simpleSendAndReceive(String zip) {
+                
+        GetCityForecastByZIP request = new GetCityForecastByZIP();
+        request.setZIP(zip);
+                
+        return (GetCityForecastByZIPResponse)webServiceTemplate.marshalSendAndReceive(request);
+    }
 
 }
 </code></pre>
@@ -550,7 +550,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
 <p><strong>WebServiceClient.java</strong></p>
 
 <pre><code class="language-java">public interface WebServiceClient {
-	GetCityForecastByZIPResponse simpleSendAndReceive(String zip);
+    GetCityForecastByZIPResponse simpleSendAndReceive(String zip);
 }
 </code></pre>
 
@@ -561,31 +561,31 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props</p>
 <pre><code class="language-java">@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {&quot;ws-context.xml&quot;})
 public class WebServiceClientTest {
-	
-	private static final Log LOGGER = LogFactory.getLog(WebServiceClientTest.class);
-	
-	@Autowired
-	public WebServiceClient client;
-	
-	@Before
-	public void init(){
-		Assert.assertNotNull(client);
-	}
-	
-	@Test
-	public void testCall(){
-		GetCityForecastByZIPResponse response = client.simpleSendAndReceive(&quot;35004&quot;);
-		
-		Assert.assertNotNull(response);
-		Assert.assertEquals(&quot;Moody&quot;, response.getGetCityForecastByZIPResult().getCity());
-		Assert.assertEquals(&quot;AL&quot;, response.getGetCityForecastByZIPResult().getState());
-		Assert.assertEquals(&quot;Birmingham&quot;, response.getGetCityForecastByZIPResult().getWeatherStationCity());
-		
-		
-		for(Forecast forecast : response.getGetCityForecastByZIPResult().getForecastResult().getForecast()){
-			LOGGER.debug(forecast.getDate() + &quot;: &quot; + forecast.getDesciption());
-		}
-	}
+    
+    private static final Log LOGGER = LogFactory.getLog(WebServiceClientTest.class);
+    
+    @Autowired
+    public WebServiceClient client;
+    
+    @Before
+    public void init(){
+        Assert.assertNotNull(client);
+    }
+    
+    @Test
+    public void testCall(){
+        GetCityForecastByZIPResponse response = client.simpleSendAndReceive(&quot;35004&quot;);
+        
+        Assert.assertNotNull(response);
+        Assert.assertEquals(&quot;Moody&quot;, response.getGetCityForecastByZIPResult().getCity());
+        Assert.assertEquals(&quot;AL&quot;, response.getGetCityForecastByZIPResult().getState());
+        Assert.assertEquals(&quot;Birmingham&quot;, response.getGetCityForecastByZIPResult().getWeatherStationCity());
+        
+        
+        for(Forecast forecast : response.getGetCityForecastByZIPResult().getForecastResult().getForecast()){
+            LOGGER.debug(forecast.getDate() + &quot;: &quot; + forecast.getDesciption());
+        }
+    }
 }
 </code></pre>
 
@@ -615,26 +615,26 @@ public class WebServiceClientTest {
          xmlns:web=&quot;http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; 
          xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee 
                              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot; 
-	     id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+         id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
 
-	........
-	
+    ........
+    
     &lt;servlet&gt;
         &lt;servlet-name&gt;ws-canigo&lt;/servlet-name&gt;
         &lt;servlet-class&gt;org.springframework.ws.transport.http.MessageDispatcherServlet&lt;/servlet-class&gt;
-		&lt;init-param&gt;
-			&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-			&lt;param-value&gt;classpath:/spring-ws-context.xml&lt;/param-value&gt;
-		&lt;/init-param&gt;
+        &lt;init-param&gt;
+            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+            &lt;param-value&gt;classpath:/spring-ws-context.xml&lt;/param-value&gt;
+        &lt;/init-param&gt;
     &lt;/servlet&gt;
 
     &lt;servlet-mapping&gt;
         &lt;servlet-name&gt;ws-canigo&lt;/servlet-name&gt;
         &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
     &lt;/servlet-mapping&gt;
-	
-	.........
-	
+    
+    .........
+    
 &lt;/web-app&gt;
 </code></pre>
 
@@ -673,7 +673,7 @@ ja que el context de l'aplicació web no és el mateix que el del webservice.
     &lt;bean id=&quot;echo&quot; class=&quot;org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition&quot;
           p:portTypeName=&quot;Echo&quot;
           p:locationUri=&quot;/echoService/&quot;
-		  p:targetNamespace=&quot;http://mycompany.com/hr/definitions&quot;&gt;
+          p:targetNamespace=&quot;http://mycompany.com/hr/definitions&quot;&gt;
         &lt;property name=&quot;schema&quot;&gt;
             &lt;bean class=&quot;org.springframework.xml.xsd.SimpleXsdSchema&quot;
                   p:xsd=&quot;classpath:/config/xsd/echo.xsd&quot; /&gt;
@@ -748,7 +748,7 @@ public class EchoEndpoint implements MarshallingEchoService {
             (EchoResponse) wsTemplate.marshalSendAndReceive(request);
 
         if(LOGGER.isDebugEnabled(()){
-	    LOGGER.debug(response.getMessage());
+        LOGGER.debug(response.getMessage());
         }
 
         return response;
