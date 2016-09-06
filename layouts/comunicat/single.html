@@ -10,19 +10,24 @@
 
 <body bgcolor="#fff">
   <a name="amunt" id="amunt"></a>
+  <div id="comunicatContainer">
+  <!-- comunicatContainer
   <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0">
     <tr>
 
       <td>
+      -->
         <!--[if (gte mso 9)|(IE)]>
         	<table width="790" align="center" cellpadding="0" cellspacing="0" border="0">
 	        <tr>
             <td>
         <![endif]-->
-
+    <div id="comunicatContent">
+        <!-- comunicatContent
         <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:40px; background:#fff">
           <tr>
             <td bgcolor="#ffffff" style="background:#fff">
+            -->
               <!--[if (gte mso 9)|(IE)]>
                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
@@ -33,6 +38,12 @@
               {{ $nummes := .Date.Format "01" }}
               {{ $urlcom := print .Site.BaseURL "/comunicat/" $numany "/" $nummes "/" }}
               
+              <div id="veuCorrectament">
+                <p>
+              Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="{{ $urlcom }}">clic aquí</a>
+                </p>
+              </div>
+              <!-- veuCorrectament
               <table bgcolor="#ffffff" style="background:#fff" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
                   <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="{{ $urlcom }}">clic aquí</a>
@@ -40,9 +51,11 @@
 
                 </tr>
               </table>
+              -->
+              <!-- comunicatContent
             </td>
           </tr>
-          
+          -->
 		  {{ $key := .Params.key }}
 		  
           {{ partial "comunicat/header" . }}
@@ -77,18 +90,22 @@
 
       {{ partial "comunicat/social-media.html" . }}
 
+      <!-- comunicatContent
         </table>
-
+        -->
+        
         <!--[if (gte mso 9)|(IE)]>
 		  			</td>
 				</tr>
 				</table>
 			<![endif]-->
+      <!-- comunicatContainer
       </td>
 
     </tr>
 
   </table>
+  -->
 </body>
 
 </html>
