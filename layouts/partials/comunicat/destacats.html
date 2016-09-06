@@ -1,11 +1,24 @@
-<div class="destacatstitle">
-    <h2>Destacats</h2>
-</div>
-
-{{ $key := .Params.key }}
-
-{{ range (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
-    {{ if eq .Params.key $key }}
+<tr>
+  <td>
+    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding: 8px 20px;">
+          <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 25px; font-weight: 600;">Destacats</h2>
+        </td>
+      </tr>
+	   <!--
+      {{ range first .Params.nombredestacats (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
         {{ partial "comunicat/destacat.html" . }}
-    {{ end }}	
-{{ end }}
+      {{ end }}
+	  -->
+	  {{ $key := .Params.key }}
+	  
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
+		    {{ if eq .Params.key $key }}
+			   {{ partial "comunicat/destacat.html" . }}
+		    {{ end }}	
+      {{ end }}
+
+    </table>
+  </td>
+</tr>
