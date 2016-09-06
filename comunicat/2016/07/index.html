@@ -12,14 +12,8 @@
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    min-width: 100% !important;
-  }
-  
-  img {
+
+    img {
     height: auto;
   }
   
@@ -166,7 +160,241 @@
     text-decoration: underline;
   }
   
-  @media only screen and (max-width: 550px),
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 100% !important;
+  }
+  
+  div#comunicatContainer {
+    background-color: #fff;
+    border: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  
+  div#comunicatContent {
+    font-family: OpenSansRegular, sans-serif;
+    display: block;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 0px;
+     
+    max-width: 790px;
+    width: 80%;
+    box-shadow: 0 1px 25px 25px #eeeeee;
+  }
+  
+  div#veuCorrectament {
+    padding: 12px 0px;
+    background-color: #eee;
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;
+
+  }
+  
+  div#veuCorrectament > p {
+    display: block;
+    margin: 0px 10px 0px 0px;
+    font-size: 0.75em;
+  }
+
+  div#header {
+    background-color: #333333;
+    padding: 10px 50px 20px 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  div#header img#logo {
+    width: 101px;
+    height: 26px;
+  }
+  
+  div#header > p {
+    margin: 5px 0px;
+    font-size: 0.9em;
+  }
+  
+  div#header > p#title {
+    margin: 15px 0px 5px 0px;
+    font-size: 2.1em;
+  }
+  
+  div#header > p#subtitle {
+    font-size: 1.1em;
+  }
+  
+  div.noticia {
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.noticia > div.newstitle {
+    font-size: 1.4em;
+    color: #333;
+    padding: 0px 0px 20px 0px;
+    font-weight: bold;
+  }
+  
+  div.noticia > div.newstext {
+    color: #666;
+  }
+  
+  div.noticia > a.newsllegiumes {
+    background-color: #333;
+    color: #ffffff;
+    font-size: 0.9em;
+    display: block;
+    width: 100px;
+    padding: 5px;
+    margin: 25px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  div.destacatstitle {
+    margin: 20px 20px 0px 20px; 
+  }
+
+  div.destacat {
+      margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.destacat > div.destacat_title {
+    color: #333;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+  }
+  
+  div.destacat > div.destacat_title > a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  div.destacat > div.destacat_text {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  div.grafica {
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.grafica > div.grafica_title {
+    color: #333;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+  }
+  
+  div.grafica > div.grafica_desc {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  div.grafica > div.grafica_img {
+    display: block;
+    width: 100%;
+  }
+  
+  div.grafica_img > img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  div.relacionats {
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.relacionats > div.relacionats_title {
+    font-weight: bold;
+  }
+  
+  div.relacionats li.relacionat_content {
+    color: #cc3333;
+  }
+  
+  div.relacionats p.relacionat_title {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  div.relacionats div.relacionat_desc {
+    color: #333;
+    font-size: 0.9em;
+    padding: 0px;
+  }
+  
+  img.sombra {
+    width: 100%;
+    height: auto;
+  }
+  
+  hr.footer_separator {
+    margin: 5px 20px 0px 20px;
+    color: #ddd;
+    height: 2px;
+    border: 0px;
+    background-color: #ddd;
+  }
+  
+  div.footer {
+    overflow: auto;
+    color: #656565;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  div.footer > img {
+    display: inline-block;
+  } 
+  
+  div.footer > div.footer_text {
+    float: right;
+    width: 80%;
+    text-decoration: none;
+    font-size: 0.6em;
+  }
+  
+  div.footer > div.footer_text > p {
+    margin: 0px;
+  }
+  
+  div.footer > div.link_amunt {
+    margin-top: 20px;
+    float: right;
+    clear: right;
+}
+
+@media only screen and (max-width: 550px),
   screen and (max-device-width: 550px) {
     body[yahoo] .hide {
       display: none!important;
@@ -288,81 +516,121 @@
       padding: 0;
     }
     .table-mob {
-      width: 100% !important
+      width: 100% !important;
     }
+    
+    div#comunicatContent {
+        padding: 0px;
+        width: 100%;
+    }
+    
+    div#header {
+        margin: 0px;
+    }
+    
+    div#header > p#title {
+        font-size: 1.5em;
+    }
+    
+    div#header > p#subtitle {
+        font-size: 1em;
+    }
+    
+    
+    div.noticia {
+        margin: 0px;
+    }
+    
+    div.destacat {
+        margin: 0px;
+    }
+    
+    div.grafica {
+        margin: 0px;
+    }
+    
+    div.relacionats {
+        margin: 0px;
+    }
+    
+    div.footer_text {
+        width: 100% !important;
+    }
+    
+    div.footer > img {
+        margin: 20px;
+        display: inline-block;
+    } 
   }
+  
+
 </style>
+
 </head>
 
 <body bgcolor="#fff">
   <a name="amunt" id="amunt"></a>
-  <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-
-      <td>
+  <div id="comunicatContainer">
+  
         
-
-        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:40px; background:#fff">
-          <tr>
-            <td bgcolor="#ffffff" style="background:#fff">
+    <div id="comunicatContent">
+        
               
               
               
               
               
-              <table bgcolor="#ffffff" style="background:#fff" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2016/07/">clic aquí</a>
-                  </td>
-
-                </tr>
-              </table>
-            </td>
-          </tr>
-          
+              <div id="veuCorrectament">
+                <p>
+              Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2016/07/">clic aquí</a>
+                </p>
+              </div>
+              
+              
 		  
 		  
-          <tr>
-  <td>
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="header-gen" style="box-shadow: 0 1px 25px #ddd;">
-      <tr>
-        <td style="padding: 10px 50px 20px 50px; background-color: #333">
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="left">
-                <img src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat.png" width="101" height="26" border="0" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 35px; padding-top: 15px; color: #fff;">
-               Comunicats Centre de Suport Canigó
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 18px; padding-top: 5px; color: #fff;">
-               Frameworks i Solucions de Arquitectura
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 14px; padding-top: 5px; color: #fff;">
-                Centre de Telecomunicacions i Tecnologies de la Informació
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 14px; padding-top: 5px; color: #fff;">
-                
-                
-                Juliol 2016
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+          <div id="header">
+    <img id="logo" src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat.png" alt="Generalitat de Catalunya" />
+    
+    <p id="title">
+        Comunicats Centre de Suport Canigó
+    </p>
+    
+    <p id="subtitle">
+        Frameworks i Solucions de Arquitectura
+    </p>
+    
+    <p id="department">
+        Centre de Telecomunicacions i Tecnologies de la Informació
+    </p>
+    
+    <p id="altres">
+         
+        
+        Juliol 2016
+    </p>
+</div>
 
 		   
+
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+
       
   				
       
@@ -371,78 +639,28 @@
   				
       
   			
-  				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              
-              <td style="padding:10px 25px 5px 25px; font-family:Open Sans, sans-serif; font-size: 25px; color: #333; text-decoration: none;">
-                SIC. Suport a MySQL i Microsoft SQL SERVER
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 16px; padding:20px; color:#666;">
-                Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d&#39;executar scripts DDL i DML d&#39;aquestes bases de dades.
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/">Llegiu més</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+  				<div class="noticia">
+    <div class="newstitle">
+        SIC. Suport a MySQL i Microsoft SQL SERVER
+    </div>
+    <div class="newstext">
+        Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d&#39;executar scripts DDL i DML d&#39;aquestes bases de dades.
+    </div>
+    <a class="newsllegiumes" href="/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/">Llegiu més</a>
+</div>
 
   				
       
   			
-  				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              
-              <td style="padding:10px 25px 5px 25px; font-family:Open Sans, sans-serif; font-size: 25px; color: #333; text-decoration: none;">
-                GICAR. Publicació de la documentació al web d&#39;Arquitectura
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 16px; padding:20px; color:#666;">
-                Publicació de la documentació de GICAR al web d&#39;arquitectura i les novetats en quant a l&#39;entorn de desenvolupament
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2016-06-08-GICAR-documentacio/">Llegiu més</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+  				<div class="noticia">
+    <div class="newstitle">
+        GICAR. Publicació de la documentació al web d&#39;Arquitectura
+    </div>
+    <div class="newstext">
+        Publicació de la documentació de GICAR al web d&#39;arquitectura i les novetats en quant a l&#39;entorn de desenvolupament
+    </div>
+    <a class="newsllegiumes" href="/noticies/2016-06-08-GICAR-documentacio/">Llegiu més</a>
+</div>
 
   				
       
@@ -527,337 +745,169 @@
   				
       
    
-      <tr>
-  <td>
-    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td style="padding: 8px 20px;">
-          <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 25px; font-weight: 600;">Destacats</h2>
-        </td>
-      </tr>
-	   
-	  
-	  
-      
-		    	
-      
-		    	
-      
-		    
-			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-            					
-            						<a style="color: #333" href="http://canigo.ctti.gencat.cat/destacats-related/sgde-campsrequerits/">Recordatori: Obligatorietat de camps àmbit i aplicació als serveis de SGDE </a>
-            					
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
-                      Us recordem que properament s&#39;hauran d&#39;informar aquests camps per poder invocar els serveis SGDE.
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-		  </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-		    	
-      
-		    
-			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-            					
-            						<a style="color: #333" href="http://canigo.ctti.gencat.cat/destacats-related/sgde-deprecaciov8/">Recordatori: Eliminació de la versió v8 del servei d&#39;Eformularis </a>
-            					
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
-                      Us recordem que tenim prevista l&#39;eliminació per aquest any 2016 de la versió v8 del WS del servei d&#39;eFormularis.
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-		  </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-		    	
-      
-		    
-			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-            					
-            						LT2b al SIC
-            					
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
-                      Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. Aviat es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-		  </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
 
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
+      <div class="destacatstitle">
+    <h2>Destacats</h2>
+</div>
 
-    </table>
-  </td>
-</tr>
-      
-      
 
-      
-        <tr>
-  <td>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left" class="content-news-text">
-      <tr>
-        <td style="padding: 0px 20px; background-color: #eeeeee" >
-          <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #ddd;background-color: #fff;">
-            <tr>
-              <td class="content-text">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="padding: 20px 0px 0px 20px;background-color: #fff">
-                      <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 20px; text-decoration: none; font-weight: 600;">
-                       HowTo's Frameworks i Solucions d'Arquitectura
-                      </h2>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="content-text">
-                      <table>
-                        <tr>
-                          <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; line-height:17px">
-                            <ul style="padding-left: 32px;" class="download_pdf">
-                              
-                              <li style="color: #cc3333;">
-                                <p style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:600">
-                                  Canigo - Howto - Contenidor GICAR en entorns de desenvolupament
-                                  
-                                  <a href="/related/canigo/howto/Canigo%20-%20Howto%20-%20Contenidor%20GICAR%20en%20entorns%20de%20desenvolupament.pdf" target="_blank">
-                                    <img src="/img/ico_descarregable_PDF.png" />
-                                  </a>
-                                  <br />
-                                  <span style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:300">
-                                    Aquest HowTo descriu com utilitzar el contenidor Docker de GICAR en entorns de desenvolupaments per aplicacions Canigó 3.1 (REST&#43;HTML5/JS)
-                                  </span>
-                                </p>
-                              </li>
-                              
-                            </ul>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
 
-      
 
-      <tr>
-  <td bgcolor="#eeeeee">
+    	
+
+    	
+
     
-
-    <table width="100%" cellspacing="0" class="shadow" style="border-collapse:collapse;border-spacing:0px;">
-      <tr>
-        <td style="padding: 0px">
-          <img src="http://canigo.ctti.gencat.cat/images/comunicats/shadow_bottom_footer.jpg" border="0" alt="">
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr>
-  <td>
-    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0" style="padding-bottom:20px">
-      <tr>
-        <td class="p-0-20">
-          <table width="100%">
-            <tr>
-              <td colspan="3">
-                <table width="100%">
-                  <tr>
-                    <td style="background: #ddd;height: 0px;"></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <table align="left" class="pl-15">
-                  <tr>
-                    <td><img src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" width="101px" height="26" border="0" alt="">
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td colspan="2">
-                <table align="left" style="margin-left: 20px; width:90%">
-                  <tr>
-                    <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;"><strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" style="text-decoration: none;">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.</td>
-                  </tr>
-                  <tr>
-                  <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;">Pot donar de baixa la seva subscripció a aquest butlletí accedint a <a href="http://butlletins.gencat.cat/pres_push/AppJava/subscribe.do" style="text-decoration: none;">aquest enllaç</a>.</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td width="79%">&nbsp;</td>
-              <td width="11%">
-                <table class="  amunt" style="float:right; margin-top:10px" align="right" width="100%">
-                  <tr>
-                    <td style="padding: 0px 10px;" width="18px">
-                      <a href="#amunt">
-                        <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
-                      </a>
-                    </td>
-                    <td align="left">
-                      <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
-                        <strong>AMUNT</strong>
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-
-        </table>
-
+        <div class="destacat">
+    <div class="destacat_title">
         
-      </td>
+            <a href="http://canigo.ctti.gencat.cat/destacats-related/sgde-campsrequerits/">Recordatori: Obligatorietat de camps àmbit i aplicació als serveis de SGDE</a>
+        
+    </div>
+    <div class="destacat_text">
+        Us recordem que properament s&#39;hauran d&#39;informar aquests camps per poder invocar els serveis SGDE.
+    </div>
+</div>
 
-    </tr>
+    	
 
-  </table>
+    
+        <div class="destacat">
+    <div class="destacat_title">
+        
+            <a href="http://canigo.ctti.gencat.cat/destacats-related/sgde-deprecaciov8/">Recordatori: Eliminació de la versió v8 del servei d&#39;Eformularis</a>
+        
+    </div>
+    <div class="destacat_text">
+        Us recordem que tenim prevista l&#39;eliminació per aquest any 2016 de la versió v8 del WS del servei d&#39;eFormularis.
+    </div>
+</div>
+
+    	
+
+    
+        <div class="destacat">
+    <div class="destacat_title">
+        
+            LT2b al SIC
+        
+    </div>
+    <div class="destacat_text">
+        Aquest mes el SIC està iniciant la integració d&#39;aplicacions client/servidor que LT2b s&#39;encarrega de desplegar. Aviat es realitzarà una formació als proveïdors d&#39;aquest tipus d&#39;aplicacions.
+    </div>
+</div>
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+
+      
+      
+
+      
+        <div class="relacionats">
+    <div class="relacionats_title">
+        HowTo's Frameworks i Solucions d'Arquitectura
+    </div>
+    <ul>
+        
+        <li class="relacionat_content">
+            <p class="relacionat_title">
+                Canigo - Howto - Contenidor GICAR en entorns de desenvolupament
+            
+            <a href="/related/canigo/howto/Canigo%20-%20Howto%20-%20Contenidor%20GICAR%20en%20entorns%20de%20desenvolupament.pdf" target="_blank">
+                <img src="/img/ico_descarregable_PDF.png" />
+            </a>
+            </p>
+            <div class="relacionat_desc">
+                Aquest HowTo descriu com utilitzar el contenidor Docker de GICAR en entorns de desenvolupaments per aplicacions Canigó 3.1 (REST&#43;HTML5/JS)
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+      
+
+       <img src="http://canigo.ctti.gencat.cat/images/comunicats/shadow_bottom_footer.jpg" class="sombra">
+ 
+ <hr class="footer_separator" />
+ 
+ <div class="footer">
+    <div class="footer_text">
+        <p>
+            <strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+        </p>
+        <p>
+            Pot donar de baixa la seva subscripció a aquest butlletí accedint a <a href="http://butlletins.gencat.cat/pres_push/AppJava/subscribe.do">aquest enllaç</a>.
+        </p>
+    </div>
+    <img class="footer_logo" src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" />
+    <div class="link_amunt">
+        <a href="#amunt">
+            <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
+        </a>
+        <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
+            <strong>AMUNT</strong>
+        </a>
+    </div>
+ </div>
+
+
+
+      
+        
+        
+      
 </body>
 
 </html>

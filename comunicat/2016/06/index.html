@@ -12,14 +12,8 @@
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
   }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    min-width: 100% !important;
-  }
-  
-  img {
+
+    img {
     height: auto;
   }
   
@@ -166,7 +160,241 @@
     text-decoration: underline;
   }
   
-  @media only screen and (max-width: 550px),
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-width: 100% !important;
+  }
+  
+  div#comunicatContainer {
+    background-color: #fff;
+    border: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  
+  div#comunicatContent {
+    font-family: OpenSansRegular, sans-serif;
+    display: block;
+    margin: 0 auto;
+    background-color: #eee;
+    border: 0px;
+     
+    max-width: 790px;
+    width: 80%;
+    box-shadow: 0 1px 25px 25px #eeeeee;
+  }
+  
+  div#veuCorrectament {
+    padding: 12px 0px;
+    background-color: #eee;
+    width: 100%;
+    text-align: right;
+    vertical-align: middle;
+
+  }
+  
+  div#veuCorrectament > p {
+    display: block;
+    margin: 0px 10px 0px 0px;
+    font-size: 0.75em;
+  }
+
+  div#header {
+    background-color: #333333;
+    padding: 10px 50px 20px 50px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  div#header img#logo {
+    width: 101px;
+    height: 26px;
+  }
+  
+  div#header > p {
+    margin: 5px 0px;
+    font-size: 0.9em;
+  }
+  
+  div#header > p#title {
+    margin: 15px 0px 5px 0px;
+    font-size: 2.1em;
+  }
+  
+  div#header > p#subtitle {
+    font-size: 1.1em;
+  }
+  
+  div.noticia {
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.noticia > div.newstitle {
+    font-size: 1.4em;
+    color: #333;
+    padding: 0px 0px 20px 0px;
+    font-weight: bold;
+  }
+  
+  div.noticia > div.newstext {
+    color: #666;
+  }
+  
+  div.noticia > a.newsllegiumes {
+    background-color: #333;
+    color: #ffffff;
+    font-size: 0.9em;
+    display: block;
+    width: 100px;
+    padding: 5px;
+    margin: 25px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  div.destacatstitle {
+    margin: 20px 20px 0px 20px; 
+  }
+
+  div.destacat {
+      margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.destacat > div.destacat_title {
+    color: #333;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+  }
+  
+  div.destacat > div.destacat_title > a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  div.destacat > div.destacat_text {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  div.grafica {
+    margin: 20px 20px 20px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.grafica > div.grafica_title {
+    color: #333;
+    padding: 0px 0px 10px 0px;
+    font-weight: bold;
+  }
+  
+  div.grafica > div.grafica_desc {
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  div.grafica > div.grafica_img {
+    display: block;
+    width: 100%;
+  }
+  
+  div.grafica_img > img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  div.relacionats {
+    margin: 20px 20px 0px 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    display: block;
+    text-align: justify;
+  }
+  
+  div.relacionats > div.relacionats_title {
+    font-weight: bold;
+  }
+  
+  div.relacionats li.relacionat_content {
+    color: #cc3333;
+  }
+  
+  div.relacionats p.relacionat_title {
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  div.relacionats div.relacionat_desc {
+    color: #333;
+    font-size: 0.9em;
+    padding: 0px;
+  }
+  
+  img.sombra {
+    width: 100%;
+    height: auto;
+  }
+  
+  hr.footer_separator {
+    margin: 5px 20px 0px 20px;
+    color: #ddd;
+    height: 2px;
+    border: 0px;
+    background-color: #ddd;
+  }
+  
+  div.footer {
+    overflow: auto;
+    color: #656565;
+    padding: 10px 20px 10px 20px;
+  }
+  
+  div.footer > img {
+    display: inline-block;
+  } 
+  
+  div.footer > div.footer_text {
+    float: right;
+    width: 80%;
+    text-decoration: none;
+    font-size: 0.6em;
+  }
+  
+  div.footer > div.footer_text > p {
+    margin: 0px;
+  }
+  
+  div.footer > div.link_amunt {
+    margin-top: 20px;
+    float: right;
+    clear: right;
+}
+
+@media only screen and (max-width: 550px),
   screen and (max-device-width: 550px) {
     body[yahoo] .hide {
       display: none!important;
@@ -288,81 +516,132 @@
       padding: 0;
     }
     .table-mob {
-      width: 100% !important
+      width: 100% !important;
     }
+    
+    div#comunicatContent {
+        padding: 0px;
+        width: 100%;
+    }
+    
+    div#header {
+        margin: 0px;
+    }
+    
+    div#header > p#title {
+        font-size: 1.5em;
+    }
+    
+    div#header > p#subtitle {
+        font-size: 1em;
+    }
+    
+    
+    div.noticia {
+        margin: 0px;
+    }
+    
+    div.destacat {
+        margin: 0px;
+    }
+    
+    div.grafica {
+        margin: 0px;
+    }
+    
+    div.relacionats {
+        margin: 0px;
+    }
+    
+    div.footer_text {
+        width: 100% !important;
+    }
+    
+    div.footer > img {
+        margin: 20px;
+        display: inline-block;
+    } 
   }
+  
+
 </style>
+
 </head>
 
 <body bgcolor="#fff">
   <a name="amunt" id="amunt"></a>
-  <table width="100%" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-
-      <td>
+  <div id="comunicatContainer">
+  
         
-
-        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:40px; background:#fff">
-          <tr>
-            <td bgcolor="#ffffff" style="background:#fff">
+    <div id="comunicatContent">
+        
               
               
               
               
               
-              <table bgcolor="#ffffff" style="background:#fff" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2016/06/">clic aquí</a>
-                  </td>
-
-                </tr>
-              </table>
-            </td>
-          </tr>
-          
+              <div id="veuCorrectament">
+                <p>
+              Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2016/06/">clic aquí</a>
+                </p>
+              </div>
+              
+              
 		  
 		  
-          <tr>
-  <td>
-    <table width="100%" cellpadding="0" cellspacing="0" border="0" class="header-gen" style="box-shadow: 0 1px 25px #ddd;">
-      <tr>
-        <td style="padding: 10px 50px 20px 50px; background-color: #333">
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="left">
-                <img src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat.png" width="101" height="26" border="0" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 35px; padding-top: 15px; color: #fff;">
-               Comunicats Centre de Suport Canigó
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 18px; padding-top: 5px; color: #fff;">
-               Frameworks i Solucions de Arquitectura
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 14px; padding-top: 5px; color: #fff;">
-                Centre de Telecomunicacions i Tecnologies de la Informació
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 14px; padding-top: 5px; color: #fff;">
-                
-                
-                Juny 2016
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+          <div id="header">
+    <img id="logo" src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat.png" alt="Generalitat de Catalunya" />
+    
+    <p id="title">
+        Comunicats Centre de Suport Canigó
+    </p>
+    
+    <p id="subtitle">
+        Frameworks i Solucions de Arquitectura
+    </p>
+    
+    <p id="department">
+        Centre de Telecomunicacions i Tecnologies de la Informació
+    </p>
+    
+    <p id="altres">
+         
+        
+        Juny 2016
+    </p>
+</div>
 
 		   
+
+      
+         
+      
+        
+          <div class="noticia">
+    <div class="newstitle">
+        Aplicacions webs modernes: JSF vs REST
+    </div>
+    <div class="newstext">
+        Us donem una breu explicació d&#39;aquest canvi de paradigma en la capa de presentació
+    </div>
+    <a class="newsllegiumes" href="/bloc/2016/05/rest-vs-jsf/">Llegiu més</a>
+</div>
+
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+         
+      
+
       
   				
       
@@ -375,116 +654,41 @@
   				
       
   			
-  				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              
-              <td style="padding:10px 25px 5px 25px; font-family:Open Sans, sans-serif; font-size: 25px; color: #333; text-decoration: none;">
-                SIC. Suport a NodeJS
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 16px; padding:20px; color:#666;">
-                Suport a construcció i desplegament d&#39;aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2016-05-30-SIC-NodeJS/">Llegiu més</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+  				<div class="noticia">
+    <div class="newstitle">
+        SIC. Suport a NodeJS
+    </div>
+    <div class="newstext">
+        Suport a construcció i desplegament d&#39;aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.
+    </div>
+    <a class="newsllegiumes" href="/noticies/2016-05-30-SIC-NodeJS/">Llegiu més</a>
+</div>
 
   				
       
   			
-  				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              
-              <td style="padding:10px 25px 5px 25px; font-family:Open Sans, sans-serif; font-size: 25px; color: #333; text-decoration: none;">
-                SIC. Suport a MongoDB
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 16px; padding:20px; color:#666;">
-                Suport a la primera base de dades NoSQL al SIC. Els jobs de desplegament a INT són capaços d&#39;executar codi Javascript per manipular documents i crear o eliminar col·leccions de documents, indexos, etc.
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2016-05-30-SIC-MongoDB/">Llegiu més</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+  				<div class="noticia">
+    <div class="newstitle">
+        SIC. Suport a MongoDB
+    </div>
+    <div class="newstext">
+        Suport a la primera base de dades NoSQL al SIC. Els jobs de desplegament a INT són capaços d&#39;executar codi Javascript per manipular documents i crear o eliminar col·leccions de documents, indexos, etc.
+    </div>
+    <a class="newsllegiumes" href="/noticies/2016-05-30-SIC-MongoDB/">Llegiu més</a>
+</div>
 
   				
       
   			
-  				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              
-              <td style="padding:10px 25px 5px 25px; font-family:Open Sans, sans-serif; font-size: 25px; color: #333; text-decoration: none;">
-                Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1
-              </td>
-            </tr>
-            <tr>
-              <td style="font-family:Open Sans, sans-serif; font-size: 16px; padding:20px; color:#666;">
-                Recordatori del procediment per a realitzar l&#39;actualització d&#39;aplicacions Canigo 3.0 a Canigó 3.1
-              </td>
-            </tr>
-            <tr>
-              <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/">Llegiu més</a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
+  				<div class="noticia">
+    <div class="newstitle">
+        Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1
+    </div>
+    <div class="newstext">
+        Recordatori del procediment per a realitzar l&#39;actualització d&#39;aplicacions Canigo 3.0 a Canigó 3.1
+    </div>
+    <a class="newsllegiumes" href="/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/">Llegiu més</a>
+</div>
 
   				
       
@@ -563,344 +767,164 @@
   				
       
    
-      <tr>
-  <td>
-    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td style="padding: 8px 20px;">
-          <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 25px; font-weight: 600;">Destacats</h2>
-        </td>
-      </tr>
-	   
-	  
-	  
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    
-			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-            					
-            						<a style="color: #333" href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta">Nova versió full de ruta CTTI </a>
-            					
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
-                      Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-		  </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
-		    	
-      
 
-      
-         
-      
-        
-          <tr>
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-            					
-            						Aplicacions webs modernes: JSF vs REST
-            					
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 0;line-height:17px">
-                      Us donem una breu explicació d&#39;aquest canvi de paradigma en la capa de presentació
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-		  </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
-         
-      
+      <div class="destacatstitle">
+    <h2>Destacats</h2>
+</div>
 
-    </table>
-  </td>
-</tr>
-      
-      
-        <tr style="background-color: #eeeeee;">
-  <td style="padding: 0px 20px 20px 20px;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;">
-      <tr>
-        <td>
-          <table width="100%" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-              <td style="padding: 20px;">
-                <table border="0" cellspacing="0" cellpadding="0" width="100%">
-                  <tr>
-                    <td style="font-family:Open Sans, sans-serif; color: #333; font-size: 16px; text-decoration: none; font-weight: 600;">
-                      Total d’aplicacions donades d’alta al SIC
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="text-align: justify; font-family:Open Sans, sans-serif; color: #666; font-size: 14px; padding: 8px 25px;line-height:17px">
-                      <p>La següent gràfica mostra el total d’aplicacions donades d’alta al SIC en data 31/5/2016.</p>
-                      <p style="text-align: center">
-                        
-                        
-                        <script>
-                          console.info('\/2016\/06\/');
-                          console.info('\/related\/cs\/2016\/06\/repositoris_SVN-SIC_Maig2016.PNG');
-                        </script>
-                        <img src="/related/cs/2016/06/repositoris_SVN-SIC_Maig2016.PNG" alt="Total d’aplicacions donades d’alta al SIC" />
-                      </p>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-      
 
-      
-        <tr>
-  <td>
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left" class="content-news-text">
-      <tr>
-        <td style="padding: 0px 20px; background-color: #eeeeee" >
-          <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #ddd;background-color: #fff;">
-            <tr>
-              <td class="content-text">
-                <table border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td style="padding: 20px 0px 0px 20px;background-color: #fff">
-                      <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 20px; text-decoration: none; font-weight: 600;">
-                       HowTo's Frameworks i Solucions d'Arquitectura
-                      </h2>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="content-text">
-                      <table>
-                        <tr>
-                          <td style="font-family:Open Sans, sans-serif; color: #666; font-size: 14px; line-height:17px">
-                            <ul style="padding-left: 32px;" class="download_pdf">
-                              
-                              <li style="color: #cc3333;">
-                                <p style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:600">
-                                  Canigó - Incorporació mòdul d&#39;Administració de logs a aplicació Canigó 3
-                                  
-                                  <a href="/related/canigo/howto/Canigo%20-%20Incorporacio%20modul%20Administracio%20de%20logs%20a%20aplicacio%20Canigo%203.pdf" target="_blank">
-                                    <img src="/img/ico_descarregable_PDF.png" />
-                                  </a>
-                                  <br />
-                                  <span style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:300">
-                                    Aquest HowTo descriu com afegir el mòdul d&#39;Administració de logs a una aplicació Canigó 3
-                                  </span>
-                                </p>
-                              </li>
-                              
-                            </ul>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
 
-      
 
-      <tr>
-  <td bgcolor="#eeeeee">
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
     
-
-    <table width="100%" cellspacing="0" class="shadow" style="border-collapse:collapse;border-spacing:0px;">
-      <tr>
-        <td style="padding: 0px">
-          <img src="http://canigo.ctti.gencat.cat/images/comunicats/shadow_bottom_footer.jpg" border="0" alt="">
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-<tr>
-  <td>
-    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0" style="padding-bottom:20px">
-      <tr>
-        <td class="p-0-20">
-          <table width="100%">
-            <tr>
-              <td colspan="3">
-                <table width="100%">
-                  <tr>
-                    <td style="background: #ddd;height: 0px;"></td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <table align="left" class="pl-15">
-                  <tr>
-                    <td><img src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" width="101px" height="26" border="0" alt="">
-                    </td>
-                  </tr>
-                </table>
-              </td>
-              <td colspan="2">
-                <table align="left" style="margin-left: 20px; width:90%">
-                  <tr>
-                    <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;"><strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" style="text-decoration: none;">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.</td>
-                  </tr>
-                  <tr>
-                  <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;">Pot donar de baixa la seva subscripció a aquest butlletí accedint a <a href="http://butlletins.gencat.cat/pres_push/AppJava/subscribe.do" style="text-decoration: none;">aquest enllaç</a>.</td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td width="79%">&nbsp;</td>
-              <td width="11%">
-                <table class="  amunt" style="float:right; margin-top:10px" align="right" width="100%">
-                  <tr>
-                    <td style="padding: 0px 10px;" width="18px">
-                      <a href="#amunt">
-                        <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
-                      </a>
-                    </td>
-                    <td align="left">
-                      <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
-                        <strong>AMUNT</strong>
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>
-  </td>
-</tr>
-
-
-        </table>
-
+        <div class="destacat">
+    <div class="destacat_title">
         
-      </td>
+            <a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta">Nova versió full de ruta CTTI</a>
+        
+    </div>
+    <div class="destacat_text">
+        Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari
+    </div>
+</div>
 
-    </tr>
+    	
 
-  </table>
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+    	
+
+
+      
+      
+        <div class="grafica">
+    <div class="grafica_title">
+        Total d’aplicacions donades d’alta al SIC
+    </div>
+    <div class="grafica_desc">
+        La següent gràfica mostra el total d’aplicacions donades d’alta al SIC en data 31/5/2016.
+    </div>
+    <div class="grafica_img">
+        
+        
+        <script>
+            console.info('\/2016\/06\/');
+            console.info('\/related\/cs\/2016\/06\/repositoris_SVN-SIC_Maig2016.PNG');
+        </script>
+        <img src="/related/cs/2016/06/repositoris_SVN-SIC_Maig2016.PNG" alt="Total d’aplicacions donades d’alta al SIC" />
+    </div>
+</div>
+
+      
+
+      
+        <div class="relacionats">
+    <div class="relacionats_title">
+        HowTo's Frameworks i Solucions d'Arquitectura
+    </div>
+    <ul>
+        
+        <li class="relacionat_content">
+            <p class="relacionat_title">
+                Canigó - Incorporació mòdul d&#39;Administració de logs a aplicació Canigó 3
+            
+            <a href="/related/canigo/howto/Canigo%20-%20Incorporacio%20modul%20Administracio%20de%20logs%20a%20aplicacio%20Canigo%203.pdf" target="_blank">
+                <img src="/img/ico_descarregable_PDF.png" />
+            </a>
+            </p>
+            <div class="relacionat_desc">
+                Aquest HowTo descriu com afegir el mòdul d&#39;Administració de logs a una aplicació Canigó 3
+            </div>
+        </li>
+        
+    </ul>
+</div>
+
+      
+
+       <img src="http://canigo.ctti.gencat.cat/images/comunicats/shadow_bottom_footer.jpg" class="sombra">
+ 
+ <hr class="footer_separator" />
+ 
+ <div class="footer">
+    <div class="footer_text">
+        <p>
+            <strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+        </p>
+        <p>
+            Pot donar de baixa la seva subscripció a aquest butlletí accedint a <a href="http://butlletins.gencat.cat/pres_push/AppJava/subscribe.do">aquest enllaç</a>.
+        </p>
+    </div>
+    <img class="footer_logo" src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" />
+    <div class="link_amunt">
+        <a href="#amunt">
+            <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
+        </a>
+        <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
+            <strong>AMUNT</strong>
+        </a>
+    </div>
+ </div>
+
+
+
+      
+        
+        
+      
 </body>
 
 </html>
