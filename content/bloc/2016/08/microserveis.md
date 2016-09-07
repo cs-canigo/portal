@@ -58,6 +58,7 @@ En el cas de Canigó, basat en Spring, tot dependrà del disseny que es faci de 
 
 **Referències**:
 
+- http://samnewman.io/books/building_microservices/
 - https://www.nginx.com/blog/introduction-to-microservices/
 - http://microservices.io/patterns/microservices.html
 - https://www.nginx.com/blog/microservices-at-netflix-architectural-best-practices/
