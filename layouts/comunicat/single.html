@@ -20,9 +20,9 @@
             <td>
         <![endif]-->
 
-        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:40px; background:#fff">
+        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" >
           <tr>
-            <td bgcolor="#ffffff" style="background:#fff">
+            <td style="background-color: #eee;">
               <!--[if (gte mso 9)|(IE)]>
                 <table width="100%" cellpadding="0" cellspacing="0" border="0">
                     <tr>
@@ -33,9 +33,9 @@
               {{ $nummes := .Date.Format "01" }}
               {{ $urlcom := print .Site.BaseURL "/comunicat/" $numany "/" $nummes "/" }}
               
-              <table bgcolor="#ffffff" style="background:#fff" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <table style="background:#eee" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="{{ $urlcom }}">clic aquí</a>
+                  <td align="right" style="background-color: #eee; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="{{ $urlcom }}">clic aquí</a>
                   </td>
 
                 </tr>

@@ -24,9 +24,10 @@
   }
   
   .content {
-    width: 100%;
+    width: 70%;
     max-width: 790px;
-    box-shadow: 0 1px 25px #ddd;
+    box-shadow: 0px 0px 25px 25px #eee;
+    background-color: #eee;
   }
   
   .content table {
@@ -159,6 +160,61 @@
     text-decoration: underline;
   }
   
+  td.noticia_box {
+    background-color: #eeeeee;
+    padding: 20px;
+  }
+  
+  td.destacat_box {
+    padding: 0px 20px 20px 20px;
+  }
+  
+  td.grafica_box {
+    padding: 0px 20px 20px 20px;
+  }
+  
+  td.relacionat_box {
+    padding: 0px 20px; background-color: #eeeeee
+  }
+  
+  td.llegiu_mes  {
+    text-align: center;
+    font-size: 14px;
+    font-family: OpenSansRegular, Open Sans, sans-serif;
+    padding: 0 10px 0 10px;
+    height: 25px;
+  }
+  
+  td.llegiu_mes > a {
+        font-family: OpenSansRegular, Open Sans, sans-serif;
+        color: #ffffff; 
+        text-decoration: none;
+  }
+  
+  td.avis_legal {
+    font-family:Open Sans, sans-serif;
+    font-size: 10px;
+    padding:0px;
+    color:#656565;
+  }
+  
+    table.amunt {
+       width: 100%;
+       text-align: right;
+       margin-top:10px;
+       text-align: right;
+       width:100%;
+       right: 0px;
+    }
+    
+    table.amunt td {
+       text-align: right;
+       margin-top:10px;
+       text-align: right;
+       padding-right: 20px;
+    }
+    
+  
   @media only screen and (max-width: 550px),
   screen and (max-device-width: 550px) {
     body[yahoo] .hide {
@@ -202,9 +258,57 @@
   }
   
   @media only screen and (max-width: 780px) {
+    
+    
+    table, thead, tbody, th, td, tr { 
+		display: block;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+    td.noticia_box, td.destacat_box, td.grafica_box, td.relacionat_box {
+    padding: 0px !important;
+    }
+  
     .content-news-text .content-text {
       padding: 20px;
     }
+    
+    .content {
+        width: 100%;
+        display: block;
+        padding-bottom: 0px;
+        margin: 0px auto;
+    }
+    
+    img#logo_bottom {
+        display: block;
+        margin: 10px;
+        width: 101px;
+        margin: 25px 0px 0px 15px;
+        float: left;
+    }
+    
+    td.avis_legal {
+        display: block;
+        width: 70%; 
+        float: right;
+        top: -35px;
+        position: relative;
+        
+    }
+    
+    table.amunt {
+        float: right;
+        display: block; 
+        position: relative;
+        right: 25px; 
+    }
+    
+    table.amunt td {
+        display: inline-block;
+    }
+    
     .content-news-text {
       width: 100%;
       height: 100%;
