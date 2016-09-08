@@ -31,9 +31,10 @@
   }
   
   .content {
-    width: 100%;
+    width: 70%;
     max-width: 790px;
-    box-shadow: 0 1px 25px #ddd;
+    box-shadow: 0px 0px 25px 25px #eee;
+    background-color: #eee;
   }
   
   .content table {
@@ -166,6 +167,61 @@
     text-decoration: underline;
   }
   
+  td.noticia_box {
+    background-color: #eeeeee;
+    padding: 20px;
+  }
+  
+  td.destacat_box {
+    padding: 0px 20px 20px 20px;
+  }
+  
+  td.grafica_box {
+    padding: 0px 20px 20px 20px;
+  }
+  
+  td.relacionat_box {
+    padding: 0px 20px; background-color: #eeeeee
+  }
+  
+  td.llegiu_mes  {
+    text-align: center;
+    font-size: 14px;
+    font-family: OpenSansRegular, Open Sans, sans-serif;
+    padding: 0 10px 0 10px;
+    height: 25px;
+  }
+  
+  td.llegiu_mes > a {
+        font-family: OpenSansRegular, Open Sans, sans-serif;
+        color: #ffffff; 
+        text-decoration: none;
+  }
+  
+  td.avis_legal {
+    font-family:Open Sans, sans-serif;
+    font-size: 10px;
+    padding:0px;
+    color:#656565;
+  }
+  
+    table.amunt {
+       width: 100%;
+       text-align: right;
+       margin-top:10px;
+       text-align: right;
+       width:100%;
+       right: 0px;
+    }
+    
+    table.amunt td {
+       text-align: right;
+       margin-top:10px;
+       text-align: right;
+       padding-right: 20px;
+    }
+    
+  
   @media only screen and (max-width: 550px),
   screen and (max-device-width: 550px) {
     body[yahoo] .hide {
@@ -209,9 +265,57 @@
   }
   
   @media only screen and (max-width: 780px) {
+    
+    
+    table, thead, tbody, th, td, tr { 
+		display: block;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+    td.noticia_box, td.destacat_box, td.grafica_box, td.relacionat_box {
+    padding: 0px !important;
+    }
+  
     .content-news-text .content-text {
       padding: 20px;
     }
+    
+    .content {
+        width: 100%;
+        display: block;
+        padding-bottom: 0px;
+        margin: 0px auto;
+    }
+    
+    img#logo_bottom {
+        display: block;
+        margin: 10px;
+        width: 101px;
+        margin: 25px 0px 0px 15px;
+        float: left;
+    }
+    
+    td.avis_legal {
+        display: block;
+        width: 70%; 
+        float: right;
+        top: -35px;
+        position: relative;
+        
+    }
+    
+    table.amunt {
+        float: right;
+        display: block; 
+        position: relative;
+        right: 25px; 
+    }
+    
+    table.amunt td {
+        display: inline-block;
+    }
+    
     .content-news-text {
       width: 100%;
       height: 100%;
@@ -292,6 +396,7 @@
     }
   }
 </style>
+
 </head>
 
 <body bgcolor="#fff">
@@ -302,17 +407,17 @@
       <td>
         
 
-        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" style="padding-bottom:40px; background:#fff">
+        <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" >
           <tr>
-            <td bgcolor="#ffffff" style="background:#fff">
+            <td style="background-color: #eee;">
               
               
               
               
               
-              <table bgcolor="#ffffff" style="background:#fff" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <table style="background:#eee" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2015/12/">clic aquí</a>
+                  <td align="right" style="background-color: #eee; font-size: 12px; padding: 10px 60px;font-family:Open Sans, sans-serif;"> Si no es veu correctament aquest butlletí feu <a style="color: #bf0000;text-decoration: none;font-weight:600" href="http://canigo.ctti.gencat.cat/comunicat/2015/12/">clic aquí</a>
                   </td>
 
                 </tr>
@@ -421,7 +526,7 @@
       
   			
   				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
+  <td class="noticia_box">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
       <tr>
         <td>
@@ -441,8 +546,8 @@
               <td style="padding:5px 20px 15px 25px">
                 <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2015-12-07-SIC-Balanc-2015/">Llegiu més</a>
+                    <td class="llegiu_mes">
+                      <a href="/noticies/2015-12-07-SIC-Balanc-2015/">Llegiu més</a>
                     </td>
                   </tr>
                 </table>
@@ -459,7 +564,7 @@
       
   			
   				<tr>
-  <td style="background-color: #eeeeee; padding: 20px;">
+  <td class="noticia_box">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff">
       <tr>
         <td>
@@ -479,8 +584,8 @@
               <td style="padding:5px 20px 15px 25px">
                 <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
                   <tr>
-                    <td style="text-align: center; font-size: 14px; font-family:Open Sans, sans-serif; padding: 0 10px 0 10px;" height="25">
-                      <a style="font-family:Open Sans, sans-serif; color: #ffffff; text-decoration: none;" href="/noticies/2015-11-18-Canigo-Entorn-Dev/">Llegiu més</a>
+                    <td class="llegiu_mes">
+                      <a href="/noticies/2015-11-18-Canigo-Entorn-Dev/">Llegiu més</a>
                     </td>
                   </tr>
                 </table>
@@ -589,7 +694,7 @@
       
 		    
 			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
+  <td class="destacat_box">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
       <tr>
         <td>
@@ -618,11 +723,12 @@
     </table>
   </td>
 </tr>
+
 		    	
       
 		    
 			   <tr>
-  <td style="padding: 0px 20px 20px 20px;">
+  <td class="destacat_box">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;" class="shadow">
       <tr>
         <td>
@@ -651,6 +757,7 @@
     </table>
   </td>
 </tr>
+
 		    	
       
 		    	
@@ -688,7 +795,7 @@
       
       
         <tr style="background-color: #eeeeee;">
-  <td style="padding: 0px 20px 20px 20px;">
+  <td class="grafica_box">
     <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #ddd;background-color: #fff;">
       <tr>
         <td>
@@ -711,7 +818,7 @@
                           console.info('\/2015\/12\/');
                           console.info('\/related\/cs\/2015\/12\/STD_Novembre_2015.PNG');
                         </script>
-                        <img src="/related/cs/2015/12/STD_Novembre_2015.PNG" alt="Evolució peticions STD Novembre 2015" />
+                        <img src="/related/cs/2015/12/STD_Novembre_2015.PNG" alt="Evolució peticions STD Novembre 2015" style="width: 100%" />
                       </p>
                     </td>
                   </tr>
@@ -724,6 +831,7 @@
     </table>
   </td>
 </tr>
+
       
 
       
@@ -731,7 +839,7 @@
   <td>
     <table width="100%" border="0" cellspacing="0" cellpadding="0" align="left" class="content-news-text">
       <tr>
-        <td style="padding: 0px 20px; background-color: #eeeeee" >
+        <td class="relacionat_box">
           <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border:1px solid #ddd;background-color: #fff;">
             <tr>
               <td class="content-text">
@@ -815,7 +923,7 @@
               <td>
                 <table align="left" class="pl-15">
                   <tr>
-                    <td><img src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" width="101px" height="26" border="0" alt="">
+                    <td><img id="logo_bottom" src="http://canigo.ctti.gencat.cat/images/comunicats/logo-generalitat_gris.png" width="101px" height="26" border="0" alt="">
                     </td>
                   </tr>
                 </table>
@@ -823,7 +931,7 @@
               <td colspan="2">
                 <table align="left" style="margin-left: 20px; width:90%">
                   <tr>
-                    <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;"><strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" style="text-decoration: none;">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.</td>
+                    <td class="avis_legal"><strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" style="text-decoration: none;">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.</td>
                   </tr>
                   <tr>
                   <td class="avis_legal" style="font-family:Open Sans, sans-serif; font-size: 10px; padding:0px; color:#656565;">Pot donar de baixa la seva subscripció a aquest butlletí accedint a <a href="http://butlletins.gencat.cat/pres_push/AppJava/subscribe.do" style="text-decoration: none;">aquest enllaç</a>.</td>
@@ -831,27 +939,25 @@
                 </table>
               </td>
             </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td width="79%">&nbsp;</td>
-              <td width="11%">
-                <table class="  amunt" style="float:right; margin-top:10px" align="right" width="100%">
-                  <tr>
-                    <td style="padding: 0px 10px;" width="18px">
-                      <a href="#amunt">
-                        <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
-                      </a>
-                    </td>
-                    <td align="left">
-                      <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
-                        <strong>AMUNT</strong>
-                      </a>
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
           </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+            <table class="amunt">
+                <tr>
+                <td style="padding: 0px 10px;" width="18px">
+                    <a href="#amunt">
+                    <img src="http://canigo.ctti.gencat.cat/images/comunicats/expanded.png" border="0" alt="">
+                    </a>
+                </td>
+                <td align="left">
+                    <a style="font-family:Open Sans, sans-serif; font-size: 10px;padding: 0px 10px 0px 0px;color:#333;" href="#amunt">
+                    <strong>AMUNT</strong>
+                    </a>
+                </td>
+                </tr>
+            </table>
         </td>
       </tr>
     </table>
