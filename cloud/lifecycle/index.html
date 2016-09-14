@@ -331,9 +331,7 @@
 <li>Les imatges utilitzades per les aplicacions han de ser les <a href="http://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker:60ff5dd56c9d5f883640685f4f912b83">oficials de Gencat</a>, o bé extensions d&rsquo;aquestes. Aquestes imatges han estat certificades per l&rsquo;equip d&rsquo;Administració del Cloud. Qualsevol extensió d&rsquo;aquestes imatges passarà un procés de validació de vulnerabilitats en el procés de construcció al SIC. En cas que l&rsquo;extensió introdueixi alguna vulnerabilitat l&rsquo;aplicació no es desplegarà.</li>
 </ul>
 
-<p>Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d&rsquo;aquest &ldquo;espai/entorn&rdquo; temporal s&rsquo;eliminaran després de cert temps d&rsquo;inactivitat o després d&rsquo;un temps d&rsquo;expiració.</p>
-
-<p>Per als desplegaments a l&rsquo;entorn de PROducció s&rsquo;aplicarà l&rsquo;estratègia de <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a>. Els contenidors &ldquo;antics&rdquo; s&rsquo;eliminaran.</p>
+<p>Pel que fa als entorns, per defecte existirà un de PROductiu i un altre de PREproductiu. Els desplegaments en aquests entorns es realitzaran seguint l&rsquo;estratègia de <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a>.</p>
 
 <p>A continuació mostrem un diagrama on s&rsquo;il·lustra el flux i els diferents equips que intervenen en el cicle de vida d&rsquo;una aplicació al Container Cloud:</p>
 
