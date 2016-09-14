@@ -31,9 +31,7 @@ Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements ut
 
 * Les imatges utilitzades per les aplicacions han de ser les [oficials de Gencat](http://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker:60ff5dd56c9d5f883640685f4f912b83), o bé extensions d'aquestes. Aquestes imatges han estat certificades per l'equip d'Administració del Cloud. Qualsevol extensió d'aquestes imatges passarà un procés de validació de vulnerabilitats en el procés de construcció al SIC. En cas que l'extensió introdueixi alguna vulnerabilitat l'aplicació no es desplegarà.
 
-Pel que fa als entorns, per defecte existiran un de PROductiu, i un altre de PREproductiu. Aquest últim amb caràcter temporal. Els contenidors d'aquest "espai/entorn" temporal s'eliminaran després de cert temps d'inactivitat o després d'un temps d'expiració.
-
-Per als desplegaments a l'entorn de PROducció s'aplicarà l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html). Els contenidors "antics" s'eliminaran.
+Pel que fa als entorns, per defecte existirà un de PROductiu i un altre de PREproductiu. Els desplegaments en aquests entorns es realitzaran seguint l'estratègia de [blue-green deployment](http://martinfowler.com/bliki/BlueGreenDeployment.html).
 
   
   
