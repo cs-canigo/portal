@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Tue, 06 Sep 2016 00:00:00 UTC</updated>
+    <updated>Thu, 15 Sep 2016 00:00:00 UTC</updated>
     
     <item>
       <title>SIC. Gestió de dependències per aplicacions ANT</title>
@@ -145,6 +145,24 @@
     
     
     <item>
+      <title>Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 + Oracle Java 8</description>
+    </item>
+    
+    <item>
+      <title>Certificació Canigó 3.1 amb Weblogic 12c &#43; Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c + Oracle Java 8</description>
+    </item>
+    
+    <item>
       <title>Repositori Maven2 de Red Hat al Nexus de SIC</title>
       <link>http://canigo.ctti.gencat.cat/destacats/sic-repo-maven2-redhat/</link>
       <pubDate>Tue, 09 Aug 2016 00:00:00 UTC</pubDate>
@@ -214,24 +232,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</guid>
       <description>Ha estat publicada una nova versió de l&#39;entorn de desenvolupament de Canigó basada en Ubuntu 15.10 i certificada per a ser proveïda amb Vagrant 1.8</description>
-    </item>
-    
-    <item>
-      <title>Repositori Maven d&#39;Oracle a Nexus de SIC</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</link>
-      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</guid>
-      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d&#39;Oracle a través del Nexus</description>
-    </item>
-    
-    <item>
-      <title>Slave Jenkins a CPD2 disponible</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</link>
-      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</guid>
-      <description>Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</description>
     </item>
     
   </channel>
