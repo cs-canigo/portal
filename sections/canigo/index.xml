@@ -15,7 +15,7 @@
       <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 + Oracle Java 8</description>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 amb rutnime Oracle Java 8</description>
     </item>
     
     <item>
@@ -24,7 +24,7 @@
       <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c + Oracle Java 8</description>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c amb runtime Oracle Java 8</description>
     </item>
     
   </channel>
