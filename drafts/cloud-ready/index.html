@@ -2,8 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
-	<meta name="robots" content="noindex,follow" />
+	<title>Cloud-Ready</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +11,15 @@
 	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
+	<script>
+		document.write("<meta name=\"titol\" content=\"Cloud-Ready\" />");
+		document.write("<meta name=\"description\" content=\"Aspectes a tenir en compte en el disseny de l\x27arquitectura d\x27una aplicació per estar preprarada per anar al Cloud\" />");
+	</script>
+
+	
 
 </head>
-
-
-
-<body class="section drafts">
+<body class="single">
 	<div class="contenidor unfixed">
 
 				
@@ -176,7 +178,7 @@
 									</li>
 									<li class="breadcrumbs2">
 									
-										
+										<a href="/drafts">
 											
 
 
@@ -198,62 +200,66 @@
 
 
 
-											
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+										</a>
 										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 									
+									</li>
+									
+									<li>
+										Cloud-Ready
 									</li>
 									
 
@@ -261,49 +267,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										
-											
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-										
-										
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+										Cloud-Ready
 									
 								</h1>
 
@@ -323,321 +287,90 @@
 				</div>
 			</article>
 
-
+			
 			<article class="padding-xs padding-sm padding-md contingut">				
 				<div class="container">
-				<div class="row">
-
-						
-
-						
-				            
-							
-
-<div class="col-sm-12">
-
-
-
-	
-			<div class="llistat_destacat_text_avancat col-xs-12">
-				<div class="llistat_destacat_text_avancat_cont">
-	
-
-
-					<div class="destacat_text_avancat_cont box">
-						
-						<h2 class="border_groc">
-								
-								
-								
-								
-								
-								
-								
-								
-							
-
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/cloud-ready/" title="Cloud-Ready">Cloud-Ready</a>
-        				
-
-						</h2>
-						<p> Aspectes a tenir en compte en el disseny de l'arquitectura d'una aplicació per estar preprarada per anar al Cloud</p>
-					</div>	
-
-
-    
-
-
+ 		
+					
+				
 
 	
 
 
-					<div class="destacat_text_avancat_cont box">
-								
-						
-						<h2 class="border_celeste">
-								
-								
-								
-								
-								
-								
-								
-							
+					
 
 						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/jsf-vs-client-side/" title="Aplicacions webs modernes: JSF vs client HTML">Aplicacions webs modernes: JSF vs client HTML</a>
-        				
 
-						</h2>
-						<p> </p>
-					</div>	
+<p>Per tal que una aplicació pugui ser desplegada al <strong>Cloud</strong> cal que hagi estat dissenyada amb aquesta finalitat. Aquest disseny, normalment, és més complex que el disseny que es pugui realitzar per una aplicació destinada a ser desplegada en servidors &ldquo;on-premise&rdquo;. Són molts els avantatges de l&rsquo;entorn Cloud (flexibilitat, agilitat en aprovisionament, facilitat per desplegament continu,&hellip;) que fan que l&rsquo;esforç en la <strong>definició de l&rsquo;arquitectura</strong> valgui la pena.</p>
 
+<p>A continuació s&rsquo;enumeren diferents conceptes a tenir en compte en el disseny d&rsquo;una aplicació que vulgui estar preparada per anar al Cloud:</p>
 
-    
+<h3 id="micro-serveis:839a092da2b30e6e71c2cb5743a24c03">Micro-serveis</h3>
 
+<p>L&rsquo;aplicació ha de ser concebuda com una col·lecció de serveis, no com a una única peça (monolít).</p>
 
+<h3 id="escalabilitat:839a092da2b30e6e71c2cb5743a24c03">Escalabilitat</h3>
 
-	
+<p>Una arquitectura oriendata micro-serveis permetrà l&rsquo;<strong>escalabilitat</strong> de cada servei per separat. Els entorns Cloud estan dissenyats per aprovisionar moltes petites màquines, no poques de gran potència. Per tant, les arquitectures orientades a micro-serveis són de forma natural fàcilment integrables en entorns Cloud.</p>
 
+<h3 id="agnòstic-de-la-infraestructura:839a092da2b30e6e71c2cb5743a24c03">Agnòstic de la infraestructura</h3>
 
-					<div class="destacat_text_avancat_cont box">
-								
-								
-						
-						<h2 class="border_vermell">
-								
-								
-								
-								
-								
-								
-							
+<p>L&rsquo;aplicació no ha d&rsquo;accedir a recursos particulars de la infraestructura</p>
 
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/applets/" title="Desenvolupament web. Discontinuació dels Applets Java">Desenvolupament web. Discontinuació dels Applets Java</a>
-        				
+<h3 id="robustesa:839a092da2b30e6e71c2cb5743a24c03">Robustesa</h3>
 
-						</h2>
-						<p> </p>
-					</div>	
+<p>Cada component ha de ser autònom podent funcionar encara que la resta no estiguin disponibles.</p>
 
+<h3 id="desacoblament-de-la-informació:839a092da2b30e6e71c2cb5743a24c03">Desacoblament de la informació</h3>
 
-    
-				</div>
-    		</div>
-    
+<h3 id="stateless:839a092da2b30e6e71c2cb5743a24c03">Stateless</h3>
 
+<h3 id="emmagatzemament:839a092da2b30e6e71c2cb5743a24c03">Emmagatzemament</h3>
 
+<h3 id="seguretat:839a092da2b30e6e71c2cb5743a24c03">Seguretat</h3>
 
-	
-			<div class="llistat_destacat_text_avancat col-xs-12">
-				<div class="llistat_destacat_text_avancat_cont">
-	
+<h3 id="interoperabilitat:839a092da2b30e6e71c2cb5743a24c03">Interoperabilitat</h3>
 
+<h4 id="protocols-moderns-i-estàndards:839a092da2b30e6e71c2cb5743a24c03">Protocols moderns i estàndards</h4>
 
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-						
-						<h2 class="border_verd">
-								
-								
-								
-								
-								
-							
+<h4 id="optimització-de-la-comunicació-entre-components:839a092da2b30e6e71c2cb5743a24c03">Optimització de la comunicació entre components</h4>
 
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/teletext/" title="prova edició remota amb teletext.io">prova edició remota amb teletext.io</a>
-        				
+<h3 id="devops:839a092da2b30e6e71c2cb5743a24c03">DevOps</h3>
 
-						</h2>
-						<p> </p>
-					</div>	
+<h4 id="configuració:839a092da2b30e6e71c2cb5743a24c03">Configuració</h4>
 
+<h4 id="automatització:839a092da2b30e6e71c2cb5743a24c03">Automatització</h4>
 
-    
+<h4 id="monitorització:839a092da2b30e6e71c2cb5743a24c03">Monitorització</h4>
 
+<p>CPU, Mem</p>
 
+<h4 id="traçabilitat:839a092da2b30e6e71c2cb5743a24c03">Traçabilitat</h4>
 
-	
+<p>No escriure logs a fitxer</p>
 
+<p>Una aplicació dissenyada tenint en compte tots aquests aspectes estarà preparada per anar al Cloud.</p>
 
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-								
-						
-						<h2 class="border_morat">
-								
-								
-								
-								
-							
+<p><br /></p>
 
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/cercador_old/" title="Cercador">Cercador</a>
-        				
+<p><strong>Referències</strong>:</p>
 
-						</h2>
-						<p> </p>
-					</div>	
+<ul>
+<li><a href="http://blog.octo.com/en/cloud-ready-applications/">http://blog.octo.com/en/cloud-ready-applications/</a></li>
+<li><a href="http://www.ibm.com/developerworks/websphere/techjournal/1404_brown/1404_brown.html">http://www.ibm.com/developerworks/websphere/techjournal/1404_brown/1404_brown.html</a></li>
+<li><a href="http://techbeacon.com/5-steps-building-cloud-ready-application-architecture">http://techbeacon.com/5-steps-building-cloud-ready-application-architecture</a></li>
+</ul>
 
 
-    
+					
 
+					
+				</div>	
 
+			</article>	
 
-	
 
-
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-								
-								
-						
-						<h2 class="border_taronja">
-								
-								
-								
-							
-
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/bi/" title="Governança del BIs Corporatius">Governança del BIs Corporatius</a>
-        				
-
-						</h2>
-						<p> Descripció de la Governança dels BIs corporatius de la Generalitat de de Catalunya</p>
-					</div>	
-
-
-    
-				</div>
-    		</div>
-    
-
-
-
-	
-			<div class="llistat_destacat_text_avancat col-xs-12">
-				<div class="llistat_destacat_text_avancat_cont">
-	
-
-
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-								
-								
-								
-						
-						<h2 class="border_blau">
-								
-								
-							
-
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/guia-integracio-gicar/" title="Guia d&#39;integració">Guia d&#39;integració</a>
-        				
-
-						</h2>
-						<p> Com integrar l'autenticació de les aplicacions amb GICAR</p>
-					</div>	
-
-
-    
-
-
-
-	
-
-
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-								
-								
-								
-								
-						
-						<h2 class="border_fucsia">
-								
-							
-
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/norma-desenvolupament-web/" title="Normatiu de Desenvolupament de la Capa de Presentació Web">Normatiu de Desenvolupament de la Capa de Presentació Web</a>
-        				
-
-						</h2>
-						<p> Normatiu de Desenvolupament de la Capa de Presentació Web</p>
-					</div>	
-
-
-    
-
-
-
-	
-
-
-					<div class="destacat_text_avancat_cont box">
-								
-								
-								
-								
-								
-								
-								
-								
-						
-						<h2 class="border_verd_dos">
-							
-
-						
-						
-							<a href="http://canigo.ctti.gencat.cat/drafts/modul-logging-admin/" title="Administració de logs">Administració de logs</a>
-        				
-
-						</h2>
-						<p> Mòdul per administrar els logs de l'aplicació</p>
-					</div>	
-
-
-    
-				</div>
-    		</div>
-    
-
-
-
-
-
-</div>
-
-
-			            
-
-				</div>
-				</div>
-			</article>
-
-	</section>
+	</section>	
 
 		<div class="fons_footer ">
 		<footer class="container center-block shadowBox2">
@@ -708,7 +441,6 @@ if(location.hostname!=="localhost"){
 </script>
 
 
-	
 
 </body>
 </html>
