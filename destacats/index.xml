@@ -6,8 +6,35 @@
     <language>ca-Es</language>
     
     
-    <updated>Tue, 09 Aug 2016 00:00:00 UTC</updated>
+    <updated>Mon, 19 Sep 2016 00:00:00 UTC</updated>
     
+    
+    <item>
+      <title>Els comunicats del CS Canigó són responsius web</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/comunicat-responsiu-web/</link>
+      <pubDate>Mon, 19 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/comunicat-responsiu-web/</guid>
+      <description>S&#39;han aplicat canvis al format del comunicat amb l&#39;objectiu de fer-lo responsiu. Tots els comunicats penjats al web i els que s&#39;enviaran per correu d&#39;ara en endavant permeten la visualització des de tablet i dispositius mòvils.</description>
+    </item>
+    
+    <item>
+      <title>Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 amb rutnime Oracle Java 8</description>
+    </item>
+    
+    <item>
+      <title>Certificació Canigó 3.1 amb Weblogic 12c &#43; Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c amb runtime Oracle Java 8</description>
+    </item>
     
     <item>
       <title>Repositori Maven2 de Red Hat al Nexus de SIC</title>
@@ -70,33 +97,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</guid>
       <description>El 19/4 es completarà la transformació de la PICA a l&#39;entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d&#39;haver estat configurades per accedir al nou domini pica.intranet.gencat.cat</description>
-    </item>
-    
-    <item>
-      <title>Publicada versió 1.0.1 entorn Dev Canigó</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</link>
-      <pubDate>Tue, 29 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/entorn-dev-1_0_1/</guid>
-      <description>Ha estat publicada una nova versió de l&#39;entorn de desenvolupament de Canigó basada en Ubuntu 15.10 i certificada per a ser proveïda amb Vagrant 1.8</description>
-    </item>
-    
-    <item>
-      <title>Repositori Maven d&#39;Oracle a Nexus de SIC</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</link>
-      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/maven-oracle/</guid>
-      <description>Des d&#39;ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d&#39;Oracle a través del Nexus</description>
-    </item>
-    
-    <item>
-      <title>Slave Jenkins a CPD2 disponible</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</link>
-      <pubDate>Wed, 02 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/slave-cpd2/</guid>
-      <description>Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</description>
     </item>
     
   </channel>

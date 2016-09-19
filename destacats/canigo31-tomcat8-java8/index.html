@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Cicle de vida</title>
+	<title>Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,8 +12,8 @@
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
 	<script>
-		document.write("<meta name=\"titol\" content=\"Cicle de vida\" />");
-		document.write("<meta name=\"description\" content=\"Cicle de vida de les aplicacions Cloud containeritzades i xPaas\/buildpack\" />");
+		document.write("<meta name=\"titol\" content=\"Certificació Canigó 3.1 amb Tomcat 8 \x2b Oracle Java 8\" />");
+		document.write("<meta name=\"description\" content=\"Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 amb rutnime Oracle Java 8\" />");
 	</script>
 
 	
@@ -178,7 +178,7 @@
 									</li>
 									<li class="breadcrumbs2">
 									
-										<a href="/cloud">
+										<a href="/destacats">
 											
 
 
@@ -196,8 +196,6 @@
 
 
 
-
-	Container Cloud
 
 
 
@@ -261,7 +259,7 @@
 									</li>
 									
 									<li>
-										Cicle de vida
+										Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8
 									</li>
 									
 
@@ -269,10 +267,13 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										Cicle de vida
+										Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8
 									
 								</h1>
 
+								
+									<br />
+									15-09-2016
 								
 
 								
@@ -302,41 +303,6 @@
 					
 
 						
-
-<p>Gràcies a l&rsquo;ús del Container Cloud el cicle de vida de les aplicacions pot automatitzar-se de forma fàcil. És aquí on el SIC (Servei d&rsquo;Integració Continua) té un paper essencial, ja que és l&rsquo;encarregat de proporcionar els processos per assolir aquesta automatització.</p>
-
-<p>Expliquem, des d&rsquo;un inici, quines són les passes que segueix una aplicació fins a arribar a executar-se en el Container Cloud:</p>
-
-<h3 id="definició-d-arquitectura">Definició d&rsquo;Arquitectura</h3>
-
-<p>És en aquesta fase on el proveïdor d&rsquo;aplicacions, conjuntament amb Integració de Solucions, analitzaran si l&rsquo;aplicació és susceptible d&rsquo;anar al Container Cloud. Amb el suport de l&rsquo;equip d&rsquo;Administració Cloud i Arquitectura CTTI es prendrà una decisió i es determinarà quin és el cloud destí més apropiat.</p>
-
-<h3 id="alta-projecte">Alta projecte</h3>
-
-<p>En aquesta fase s&rsquo;aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l&rsquo;aplicació, així com els usuaris d&rsquo;accés pels proveïdors d&rsquo;aplicacions per la monitorització de l&rsquo;aplicació (logs, consum recursos, &hellip;) i el seu desplegament.</p>
-
-<h3 id="construcció-i-desplegament">Construcció i desplegament</h3>
-
-<p>Les aplicacions es construiran i desplegaran sempre des del SIC. Els elements utilitzats per la &ldquo;containerització&rdquo; de les aplicacions seran els següents:</p>
-
-<h4 id="xpaas"><em>xPaaS</em></h4>
-
-<ul>
-<li>Els xPaaS utilitzats seran els buildpacks oficials de CloudFoundry per IBM Bluemix i els xPaaS d&rsquo;OpenShift per CPD3 Containers. Més informació al <a href="http://canigo.ctti.gencat.cat/cloud/cataleg/#xpaas:60ff5dd56c9d5f883640685f4f912b83">catàleg cloud</a>.</li>
-</ul>
-
-<h4 id="contenidors-docker"><em>Contenidors (Docker)</em></h4>
-
-<ul>
-<li>Les imatges utilitzades per les aplicacions han de ser les <a href="http://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker:60ff5dd56c9d5f883640685f4f912b83">oficials de Gencat</a>, o bé extensions d&rsquo;aquestes. Aquestes imatges han estat certificades per l&rsquo;equip d&rsquo;Administració del Cloud. Qualsevol extensió d&rsquo;aquestes imatges passarà un procés de validació de vulnerabilitats en el procés de construcció al SIC. En cas que l&rsquo;extensió introdueixi alguna vulnerabilitat l&rsquo;aplicació no es desplegarà.</li>
-</ul>
-
-<p>Pel que fa als entorns, per defecte existirà un de PROductiu i un altre de PREproductiu. Els desplegaments en aquests entorns es realitzaran seguint l&rsquo;estratègia de <a href="http://martinfowler.com/bliki/BlueGreenDeployment.html">blue-green deployment</a>.</p>
-
-<p>A continuació mostrem un diagrama on s&rsquo;il·lustra el flux i els diferents equips que intervenen en el cicle de vida d&rsquo;una aplicació al Container Cloud:</p>
-
-<p><img src="/related/cloud/lifecycle.png" alt="Cicle de Vida Container Cloud" /></p>
-
 
 					
 
