@@ -1,7 +1,7 @@
 +++
 date        = "2016-09-15"
 title       = "Cloud-Ready"
-description = "Aspectes a tenir en compte en la definició de l'arquitectura d'una aplicació per estar preprarada per anar al Cloud"
+description = "Aspectes a tenir en compte en la definició de l'arquitectura d'una aplicació per estar preparada per anar al Cloud"
 sections    = ["Bloc", "home"]
 bloc_tags	= ["patrons de disseny", "microserveis", "api"]
 imatge 		= "/images/bloc/cloud-ready.png"
@@ -12,7 +12,7 @@ Per tal que una aplicació pugui ser desplegada al **Cloud** i s'aprofiti dels b
 
 A continuació s'enumeren diferents conceptes a tenir en compte en el disseny d'una aplicació que vulgui estar preparada per anar al Cloud:
 
-## Cloud-ready concepts
+## Conceptes
 
 ### Micro-serveis <img src="/images/bloc/cloud-ready-microservices.png" alt="Microserveis" style="width: 80px;"/>
 
@@ -40,7 +40,7 @@ El **processament de les dades, i les mateixes dades, han d'estar en components 
 
 ### Emmagatzemament local <img src="/images/bloc/cloud-ready-storage.jpg" alt="Emmagatzemament" style="width: 80px;"/>
 
-En un entorn Cloud **els fitxers que escriu l'aplicació al sistema de fitxers local són volàtics**. Per exemple, suposant que l'aplicació utilitza el sistema de fitxers local com a caché, en aturar-se un node i aixecar-se posteriorment en una altra ubicació (màquina física, VM, ...), aquesta caché desapareixerà, el que suposarà que el temps de resposta serà diferent dels altres nodes on si existeix aquesta caché. El que es recomana és utilitzar un repositori extern com pugui ser una base de dades SQL o NoSQL.
+En un entorn Cloud **els fitxers que escriu l'aplicació al sistema de fitxers local són volàtils**. Per exemple, suposant que l'aplicació utilitza el sistema de fitxers local com a caché, en aturar-se un node i aixecar-se posteriorment en una altra ubicació (màquina física, VM, ...), aquesta caché desapareixerà, el que suposarà que el temps de resposta serà diferent dels altres nodes on si existeix aquesta caché. El que es recomana és utilitzar un repositori extern com pugui ser una base de dades SQL o NoSQL.
 
 Un altre aspecte a tenir en compte és la lectura de fitxers de configuració de l'aplicació. Aquests han de ser idèntics en tots els nodes, ja que en cas contrari el resultat pot ser inesperat.
 
@@ -48,7 +48,7 @@ Un altre aspecte a tenir en compte és la lectura de fitxers de configuració de
 
 #### Stateless
 
-Per tal que una aplicació no es vegi afectada per un escalat dinàmic (canvi del nombre d'instàncies en calent) cal que sigui "stateless", és a dir, **no mantingui l'estat en la mateixa aplicació**. Una possibilitat és emmagatzemar part de l'estat en el navegador en aplicacions web modernes utilitzant funcionalitats d'HTML5, encara que el més habitual és utilitzar un repositori centralitzat en el servidor (REDIS, per exemple). No ha d'utilitzar-se l'HTTPSession en Java, o session[] hash a Ruby on Rails, donat que llavors estem emmagatzemant l'estat dins la pròpia aplicació, fet que volem evitar. La solució implica utilitzar un repositori amb alta disponibilitat extern a l'aplicació com pugui ser Redis o Memcached. 
+Per tal que una aplicació no es vegi afectada per un escalat dinàmic (canvi del nombre d'instàncies en calent) cal que sigui "stateless", és a dir, **no mantingui l'estat en la mateixa aplicació**. Una possibilitat és emmagatzemar part de l'estat en el navegador en aplicacions web modernes utilitzant funcionalitats d'HTML5, encara que el més habitual és utilitzar un repositori centralitzat en el servidor (Redis, per exemple). No ha d'utilitzar-se l'HTTPSession en Java, o session[] hash a Ruby on Rails, donat que llavors estem emmagatzemant l'estat dins la pròpia aplicació, fet que volem evitar. La solució implica utilitzar un repositori amb alta disponibilitat extern a l'aplicació com pugui ser Redis o Memcached. 
 
 ### Interoperabilitat  <img src="/images/bloc/cloud-ready-interoperability.png" alt="Interoperability" style="width: 60px;"/>
 
