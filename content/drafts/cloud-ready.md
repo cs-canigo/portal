@@ -5,6 +5,7 @@ description = "Aspectes a tenir en compte en el disseny de l'arquitectura d'una 
 sections    = ["Bloc", "home"]
 bloc_tags	= ["patrons de disseny", "microserveis", "api"]
 imatge 		= "/images/bloc/cloud-ready.png"
+draft 		= true
 key         = "OCTUBRE2016"
 +++
 
