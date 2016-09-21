@@ -48,11 +48,7 @@ L'usuari es descarregaria aquest fitxer des de la web i aixecaria l'aplicació J
 
 Nota d'Oracle sobre la migració d'applets a JWS: http://docs.oracle.com/javase/8/docs/technotes/guides/deploy/applet_dev_guide.html#JSDPG1032
 
-### Exemples d'Applets migrats a JWS/JNLP o en procés de migració
+### Codi
 
-- Applet de Signatura de l'AOC: 
-	- http://test-applet-centralitzat.eu-gb.mybluemix.net/demo/
-	- https://github.com/cs-canigo/applet-centralitzat
-
-- JClic: http://clic.xtec.cat/ca/jclic/
+- Applet de Signatura de l'AOC: https://github.com/ConsorciAOC/signador 
 
