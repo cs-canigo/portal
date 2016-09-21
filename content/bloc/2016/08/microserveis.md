@@ -3,7 +3,7 @@ date        = "2016-08-04"
 title       = "(micro)serveis"
 description = "Introducció al patró de disseny basat en microserveis i les implicacions que té a l'hora de pensar les aplicacions"
 sections    = ["Bloc", "home"]
-bloc_tags	= ["patrons de disseny", "api"]
+bloc_tags	= ["patrons de disseny", "api", "microserveis"]
 imatge 		= "/images/bloc/microserveis.png"
 key         = "SETEMBRE2016"
 +++
