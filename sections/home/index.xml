@@ -7,72 +7,155 @@
     
     
     <updated>Thu, 15 Sep 2016 00:00:00 UTC</updated>
+
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
+         
     <item>
-      <title>SIC. Gestió de dependències per aplicacions ANT</title>
+      <title>
+        
+          BLOC. 
+        
+        Cloud-Ready
+      </title>
+      <link>http://canigo.ctti.gencat.cat/bloc/2016/09/cloud-ready/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/bloc/2016/09/cloud-ready/</guid>
+      <description>Aspectes a tenir en compte en la definició de l&#39;arquitectura d&#39;una aplicació per estar preparada per anar al Cloud</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        SIC. Gestió de dependències per aplicacions ANT
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/</link>
       <pubDate>Thu, 11 Aug 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/</guid>
       <description>Procediment de gestió de dependències amb aplicacions ANT al SIC</description>
     </item>
-    
+         
     <item>
-      <title>SIC. Gestió de dependències per a aplicacions .NET</title>
+      <title>
+        
+          BLOC. 
+        
+        (micro)serveis
+      </title>
+      <link>http://canigo.ctti.gencat.cat/bloc/2016/08/microserveis/</link>
+      <pubDate>Thu, 04 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/bloc/2016/08/microserveis/</guid>
+      <description>Introducció al patró de disseny basat en microserveis i les implicacions que té a l&#39;hora de pensar les aplicacions</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        SIC. Gestió de dependències per a aplicacions .NET
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</link>
       <pubDate>Tue, 02 Aug 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/</guid>
       <description>Procediment de gestió de dependències amb aplicacions .NET al SIC</description>
     </item>
-    
+         
     <item>
-      <title>Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</title>
+      <title>
+        
+        Container Cloud. Publicació de la documentació al web d&#39;Arquitectura
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</link>
       <pubDate>Wed, 06 Jul 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/</guid>
       <description>Ha estat publicada la documentació del Container Cloud al web d&#39;arquitectura. En ella podreu trobar els diferents elements del catàleg, les plataformes cloud de referència, arquitectures tipus i la definició del cicle de vida de les aplicacions.</description>
     </item>
-    
+         
     <item>
-      <title>SIC. Suport a MySQL i Microsoft SQL SERVER</title>
+      <title>
+        
+        SIC. Suport a MySQL i Microsoft SQL SERVER
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/</link>
       <pubDate>Mon, 04 Jul 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/</guid>
       <description>Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d&#39;executar scripts DDL i DML d&#39;aquestes bases de dades.</description>
     </item>
-    
+         
     <item>
-      <title>GICAR. Publicació de la documentació al web d&#39;Arquitectura</title>
+      <title>
+        
+        GICAR. Publicació de la documentació al web d&#39;Arquitectura
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-06-08-GICAR-documentacio/</link>
       <pubDate>Wed, 08 Jun 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-06-08-GICAR-documentacio/</guid>
       <description>Publicació de la documentació de GICAR al web d&#39;arquitectura i les novetats en quant a l&#39;entorn de desenvolupament</description>
     </item>
-    
+         
     <item>
-      <title>SIC. Suport a MongoDB</title>
+      <title>
+        
+        SIC. Suport a MongoDB
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-MongoDB/</link>
       <pubDate>Mon, 30 May 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-MongoDB/</guid>
       <description>Suport a la primera base de dades NoSQL al SIC. Els jobs de desplegament a INT són capaços d&#39;executar codi Javascript per manipular documents i crear o eliminar col·leccions de documents, indexos, etc.</description>
     </item>
-    
+         
     <item>
-      <title>SIC. Suport a NodeJS</title>
+      <title>
+        
+        SIC. Suport a NodeJS
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-NodeJS/</link>
       <pubDate>Mon, 30 May 2016 00:00:00 UTC</pubDate>
       
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-NodeJS/</guid>
       <description>Suport a construcció i desplegament d&#39;aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.</description>
     </item>
-    
+         
     <item>
-      <title>Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1</title>
+      <title>
+        
+        Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1
+      </title>
       <link>http://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/</link>
       <pubDate>Sat, 28 May 2016 00:00:00 UTC</pubDate>
       
@@ -80,69 +163,25 @@
       <description>Recordatori del procediment per a realitzar l&#39;actualització d&#39;aplicacions Canigo 3.0 a Canigó 3.1</description>
     </item>
     
-    <item>
-      <title>Canigó. Nou Mòdul d&#39;Administració de Logs</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-04-14-Canigo-Administracio-Logs/</link>
-      <pubDate>Thu, 14 Apr 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-04-14-Canigo-Administracio-Logs/</guid>
-      <description>Nou mòdul per al monitoratge i administració de logs d&#39;aplicacions Canigó 3.1.</description>
-    </item>
     
-    <item>
-      <title>SIC. Etiquetatge de versions al SVN del SIC</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-04-01-SIC-Etiquetage-al-SVN/</link>
-      <pubDate>Fri, 01 Apr 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-04-01-SIC-Etiquetage-al-SVN/</guid>
-      <description>Hi ha diverses maneres de crear versions de codi al repositori SVN del SIC (sota directori /tags). Aquest article pretén recollir-ne algunes i aconsellar l&#39;ús d&#39;una en particular.</description>
-    </item>
     
-    <item>
-      <title>SIC. S&#39;habiliten els desplegaments de sites estàtics al núvol</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-03-31-SIC-Desplegament-de-sites-statics-al-cloud/</link>
-      <pubDate>Thu, 31 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-03-31-SIC-Desplegament-de-sites-statics-al-cloud/</guid>
-      <description>A partir d&#39;aquest mes de març, el SIC comença a fer les seves primeres passes amb les tecnologies cloud integrant el desplegament de sites estàtics a Bluemix, el servei al núvol d&#39;IBM.</description>
-    </item>
     
-    <item>
-      <title>Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-03-01-Canigo-Connector-PSGD/</link>
-      <pubDate>Tue, 01 Mar 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-03-01-Canigo-Connector-PSGD/</guid>
-      <description>S&#39;ha publicat un nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (en endavant PSGD). El propòsit del connector és proporcionar una interfície Java per accedir als serveis exposats per la PSGD.</description>
-    </item>
     
-    <item>
-      <title>Canvi al sistema d&#39;obertura de peticions als jobs de desplegament a PRE/PRO de SIC</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-02-10-SIC-Canvis-peticions-desplegaments-jobs-PRE-PRO/</link>
-      <pubDate>Wed, 10 Feb 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-02-10-SIC-Canvis-peticions-desplegaments-jobs-PRE-PRO/</guid>
-      <description>Fins el moment, les peticions de desplegament a entorns PRE/PRO que es demanaven mitjançant jobs de Jenkins SIC seguien l&#39;antic model d&#39;obertura de peticions: correu a la bústia de SAU. Amb l&#39;entrada de Remedy, el mecanisme per a demanar desplegaments ha canviat.</description>
-    </item>
     
-    <item>
-      <title>Suport complet del SIC a la integració contínua amb .NET</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-02-04-SIC-Integracio-Continua-dotNet/</link>
-      <pubDate>Thu, 04 Feb 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-02-04-SIC-Integracio-Continua-dotNet/</guid>
-      <description>El SIC s&#39;ha certificat en la construcció, en la gestió de dependències i en els desplegaments d&#39;aplicatius programats amb .NET</description>
-    </item>
     
-    <item>
-      <title>Noves versions dels connectors de Canigó amb la PICA</title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-01-28-Canigo-Connectors-PICA/</link>
-      <pubDate>Thu, 28 Jan 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-01-28-Canigo-Connectors-PICA/</guid>
-      <description>S&#39;han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d&#39;esquema</description>
-    </item>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
     
   </channel>
 </rss>
