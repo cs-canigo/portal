@@ -7,6 +7,10 @@ taxonomies  = []
 weight 		= 2
 +++
 
+Des del següent [enllaç](http://canigo.ctti.gencat.cat/docs-canigo-v1/) es pot descarregar la darrera versió de la documentació.
+
+### Changelog
+
 [1.0.1](https://github.com/cs-canigo/docs.canigo1.cs-canigo.github.io/archive/1.0.1.zip) (15/03/2016)
 
 - [CAN-2086](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2086): Actualitzada documentació connector Documentum per l'upgrade a v7.1.
