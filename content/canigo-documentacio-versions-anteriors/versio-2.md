@@ -7,7 +7,7 @@ taxonomies  = []
 weight 	    = 1
 +++
 
-Des del següent [enllaç](http://canigo.ctti.gencat.cat/docs-canigo-v2/) es pot descarregar la darrera versió de la documentació.
+Des del següent [enllaç](http://canigo.ctti.gencat.cat/docs-canigo-v2/) es pot accedir a la darrera versió de la documentació.
 
 ### Changelog
 
