@@ -304,7 +304,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#xpaas:60ff5dd56c9d5f883640685f4f912b83"><strong>xPaaS</strong></a></li>
+<li><a href="#xpaas:60ff5dd56c9d5f883640685f4f912b83"><strong>xPaaS</strong></a>
+<ul>
+<li><a href="#configuració-de-l-engine:60ff5dd56c9d5f883640685f4f912b83">Configuració de l&rsquo;engine</a></li>
+</ul></li>
 <li><a href="#contenidors-docker:60ff5dd56c9d5f883640685f4f912b83"><strong>Contenidors (Docker)</strong></a></li>
 <li><a href="#saas:60ff5dd56c9d5f883640685f4f912b83">SaaS</a>
 <ul>
@@ -329,26 +332,26 @@
 
 <h2 id="xpaas:60ff5dd56c9d5f883640685f4f912b83"><strong>xPaaS</strong></h2>
 
-<p>Els xPaaS són runtimes d&rsquo;execució estàndards i, segons el &ldquo;gust&rdquo; sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d&rsquo;aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en cloudfoundry i openshift:</p>
+<p>Els xPaaS són runtimes d&rsquo;execució estàndards i, segons el &ldquo;gust&rdquo; sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d&rsquo;aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry i OpenShift:</p>
 
 <ul>
-<li><strong>buildpack</strong> (cloud foundry), disponible a <strong>cloud públic</strong>
+<li><strong>buildpack</strong> (Cloud Foundry), disponible a <strong>cloud públic</strong>
 
 <ul>
 <li>Liberty for Java</li>
-<li>SDK for Node.js</li>
+<li>Node.js</li>
 <li>Go</li>
 <li>PHP</li>
 <li>Python</li>
 <li>Ruby</li>
-<li>Static (nginx)</li>
+<li>Static site (Nginx)</li>
 </ul></li>
 </ul>
 
 <p><br /></p>
 
 <ul>
-<li><strong>xpaas</strong> (openshift), disponible a <strong>cloud privat</strong>
+<li><strong>xpaas</strong> (OpenShift), disponible a <strong>cloud privat</strong>
 
 <ul>
 <li>Tomcat (7, 8)</li>
@@ -363,12 +366,51 @@
 <p>Les denominacions en altres clouds són:</p>
 
 <ul>
-<li>elastic beanstalk (amazon web services)</li>
-<li>appservice (azure)</li>
-<li>appengine (google)</li>
+<li>elastic beanstalk (Amazon Web Services)</li>
+<li>appservice (Azure)</li>
+<li>appengine (Google)</li>
 </ul>
 
 <p>En aquests xPaaS, quan es fa un &ldquo;push&rdquo; del codi o de l&rsquo;artefacte, s&rsquo;aixeca un entorn d&rsquo;execució amb una potència i nombre d&rsquo;instàncies prefixades.</p>
+
+<h3 id="configuració-de-l-engine:60ff5dd56c9d5f883640685f4f912b83">Configuració de l&rsquo;engine</h3>
+
+<p>Cada xPaaS dona suport a diferents versions de l&rsquo;engine que ha d&rsquo;executar el codi. Posem com a exemple el <a href="https://github.com/cloudfoundry/nodejs-buildpack">buildpack Node.js de Cloud Foundry</a>. Per tal de configurar la versió 4.x de l&rsquo;engine de Node.js corresponent a la versió actual CTTI del <a href="https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta">full de ruta</a>, cal fer la següent configuració en el fitxer &ldquo;package.json&rdquo; ubicat a l&rsquo;arrel de l&rsquo;aplicació:</p>
+
+<p><em>package.json</em></p>
+
+<pre><code>{
+	name: &quot;AppDemoNodeJS&quot;,
+	version: &quot;0.0.1&quot;,
+	private: true,
+	scripts: {
+		start: &quot;node app.js&quot;,
+		test: &quot;make test&quot;
+	},
+	engines: {
+		node: &quot;4.6.0&quot;
+	},
+	dependencies: {
+		express: &quot;^4.13.3&quot;,
+		...
+	},
+	devDependencies: {
+		mocha: &quot;^2.4.5&quot;,
+		...
+	}
+}
+</code></pre>
+
+<p>Com es pot observar, en la secció engines cal especificar la versió exacte de Node.js amb que volem que s&rsquo;executi l&rsquo;aplicació. En cas que no s&rsquo;especifiqui, el buildpack executarà la versió per defecte que tingui establerta. En el cas del buildpack Node.js de Cloud Foundry coincideix amb la versió que hem indicat en el descriptor &ldquo;package.json&rdquo; de l&rsquo;aplicació:</p>
+
+<p><em>manifest.yml</em> (veure a <a href="https://github.com/cloudfoundry/nodejs-buildpack/blob/master/manifest.yml">Github</a>)</p>
+
+<pre><code>language: nodejs
+default_versions:
+- name: node
+  version: 4.6.0
+...
+</code></pre>
 
 <h2 id="contenidors-docker:60ff5dd56c9d5f883640685f4f912b83"><strong>Contenidors (Docker)</strong></h2>
 
@@ -450,7 +492,7 @@
 
 <ul>
 <li>MongoDB, disponible a <strong>cloud públic</strong></li>
-<li>ElasticSearch, disponible a <strong>cloud públic</strong></li>
+<li>ElasticSearch, disponible a <strong>cloud públic</strong> de l</li>
 </ul>
 
 
