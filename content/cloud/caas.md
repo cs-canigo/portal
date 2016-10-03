@@ -13,7 +13,7 @@ categories  = ["cloud","docker","container","paas"]
 	- http://bluemix.net, basat en cloud foundry
 	- Concepte xPaaS: buildpack/runtime, https://console.ng.bluemix.net/docs/cfapps/runtimes.html
 	- Contenidors: Docker, Docker-compose
-	- DBaaS: ElasticSearch, MongoDB <br /><br />
+	- DBaaS: ElasticSearch, MongoDB, PostgreSQL <br /><br />
 
 * **Azure**
 	- http://azure.net
