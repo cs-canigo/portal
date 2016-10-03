@@ -14,21 +14,21 @@ En aquest sentit, treballarem amb dos elements principals - xPaaS i Docker - i a
 
 ## **xPaaS**
 
-Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en cloudfoundry i openshift: 
+Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry i OpenShift: 
 
 
-- **buildpack** (cloud foundry), disponible a **cloud públic**
+- **buildpack** (Cloud Foundry), disponible a **cloud públic**
 	* Liberty for Java
-	* SDK for Node.js
+	* Node.js
 	* Go
 	* PHP
 	* Python
 	* Ruby
-	* Static (nginx)
+	* Static site (Nginx)
 
 <br />
 
-- **xpaas** (openshift), disponible a **cloud privat**
+- **xpaas** (OpenShift), disponible a **cloud privat**
 	* Tomcat (7, 8)
 	* Node.js
 	* Go
@@ -38,12 +38,53 @@ Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que
 
 Les denominacions en altres clouds són:
 
-- elastic beanstalk (amazon web services)
-- appservice (azure)
-- appengine (google)
+- elastic beanstalk (Amazon Web Services)
+- appservice (Azure)
+- appengine (Google)
 
 En aquests xPaaS, quan es fa un "push" del codi o de l'artefacte, s'aixeca un entorn d'execució amb una potència i nombre d'instàncies prefixades.
 
+
+### Configuració de l'engine
+
+Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 4.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
+
+_package.json_
+
+```
+{
+	name: "AppDemoNodeJS",
+	version: "0.0.1",
+	private: true,
+	scripts: {
+		start: "node app.js",
+		test: "make test"
+	},
+	engines: {
+		node: "4.6.0"
+	},
+	dependencies: {
+		express: "^4.13.3",
+		...
+	},
+	devDependencies: {
+		mocha: "^2.4.5",
+		...
+	}
+}
+```
+
+Com es pot observar, en la secció engines cal especificar la versió exacte de Node.js amb que volem que s'executi l'aplicació. En cas que no s'especifiqui, el buildpack executarà la versió per defecte que tingui establerta. En el cas del buildpack Node.js de Cloud Foundry coincideix amb la versió que hem indicat en el descriptor "package.json" de l'aplicació:
+
+_manifest.yml_ (veure a [Github](https://github.com/cloudfoundry/nodejs-buildpack/blob/master/manifest.yml))
+
+```
+language: nodejs
+default_versions:
+- name: node
+  version: 4.6.0
+...
+```
 
 ## **Contenidors (Docker)**
 
@@ -71,4 +112,4 @@ Més informació sobre Docker: https://www.docker.com/
 ### DBaaS - Base de dades com a servei
 
 - MongoDB, disponible a **cloud públic**
-- ElasticSearch, disponible a **cloud públic**
+- ElasticSearch, disponible a **cloud públic** de l
