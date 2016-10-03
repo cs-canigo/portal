@@ -112,4 +112,4 @@ Més informació sobre Docker: https://www.docker.com/
 ### DBaaS - Base de dades com a servei
 
 - MongoDB, disponible a **cloud públic**
-- ElasticSearch, disponible a **cloud públic** de l
+- ElasticSearch, disponible a **cloud públic**
