@@ -185,11 +185,13 @@
   }
   
   td.llegiu_mes  {
+    background-color: #333333;
     text-align: center;
     font-size: 14px;
     font-family: OpenSansRegular, Open Sans, sans-serif;
     padding: 0 10px 0 10px;
     height: 25px;
+    width: 125px;
   }
   
   td.llegiu_mes > a {
@@ -277,6 +279,9 @@
     padding: 0px !important;
     }
   
+    td.llegiu_mes {
+        padding: 3px 0px 0px 0px;
+    }
     .content-news-text .content-text {
       padding: 20px;
     }
@@ -290,6 +295,7 @@
     
     img#logo_bottom {
         display: block;
+        width: 100%;
         margin: 10px;
         width: 101px;
         margin: 25px 0px 0px 15px;
@@ -298,9 +304,8 @@
     
     td.avis_legal {
         display: block;
-        width: 70%; 
-        float: right;
-        top: -35px;
+        width: 100%; 
+        top: 15px;
         position: relative;
         
     }
@@ -550,7 +555,7 @@
             </tr>
             <tr>
               <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td class="llegiu_mes">
                       <a href="/noticies/2015-11-06-CS%20Canigo-Roadmap/">Llegiu més</a>
@@ -588,7 +593,7 @@
             </tr>
             <tr>
               <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td class="llegiu_mes">
                       <a href="/noticies/2015-11-05-FAQs%20SIC/">Llegiu més</a>
@@ -626,7 +631,7 @@
             </tr>
             <tr>
               <td style="padding:5px 20px 15px 25px">
-                <table bgcolor="#333333" border="0" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td class="llegiu_mes">
                       <a href="/noticies/2015-10-27-Canigo-Adaptacio-al-PIV/">Llegiu més</a>
@@ -916,7 +921,7 @@
         <td class="p-0-20">
           <table width="100%">
             <tr>
-              <td colspan="3">
+              <td>
                 <table width="100%">
                   <tr>
                     <td style="background: #ddd;height: 0px;"></td>
@@ -933,7 +938,13 @@
                   </tr>
                 </table>
               </td>
-              <td colspan="2">
+            </tr>
+            <tr>
+              <td>&nbsp;
+              </td>
+            </tr>
+            <tr>
+              <td>
                 <table align="left" style="margin-left: 20px; width:90%">
                   <tr>
                     <td class="avis_legal"><strong style="color:#656565;"><a href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" style="text-decoration: none;">Avís legal:</a></strong> La ©Generalitat de Catalunya permet la reutilizació de les dades sempre que se citi la font i la data d´actualizació, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.</td>
