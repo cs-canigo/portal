@@ -1,7 +1,7 @@
 +++
 date        = "2016-10-04"
-title       = "SIC. Tractament dels fitxers Web.config als jobs d'aplicacions .NET"
-description = "El SIC ja compta amb un cas d'èxit de desplegament d'aplicació .NET mitjançant jobs de Jenkins. S'ha perfeccionat l'operativa dels jobs de desplegament d'aplicacions .NET per tal de fer-los capaços d'escollir el fitxer de configuració d'aplicació (*Web.config*) adient per a cada entorn on es desplegarà l'aplicació. "
+title       = "SIC. Cas d'èxit de desplegament d'aplicació .NET"
+description = "El SIC ja compta amb un cas d'èxit de desplegament d'aplicació .NET mitjançant jobs de Jenkins. S'ha perfeccionat l'operativa dels jobs de desplegament d'aplicacions .NET per tal de fer-los capaços d'escollir el fitxer de configuració d'aplicació adient per a cada entorn on es desplegarà l'aplicació."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "OCTUBRE2016"
