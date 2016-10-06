@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Thu, 15 Sep 2016 00:00:00 UTC</updated>
+    <updated>Tue, 04 Oct 2016 00:00:00 UTC</updated>
 
     
     
@@ -38,6 +38,18 @@
     
     
      
+         
+    <item>
+      <title>
+        
+        SIC. Cas d&#39;èxit de desplegament d&#39;aplicació .NET
+      </title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-10-04-SIC-Cas-exit-desplegament-dotNET/</link>
+      <pubDate>Tue, 04 Oct 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-10-04-SIC-Cas-exit-desplegament-dotNET/</guid>
+      <description>El SIC ja compta amb un cas d&#39;èxit de desplegament d&#39;aplicació .NET mitjançant jobs de Jenkins. S&#39;ha perfeccionat l&#39;operativa dels jobs de desplegament d&#39;aplicacions .NET per tal de fer-los capaços d&#39;escollir el fitxer de configuració d&#39;aplicació adient per a cada entorn on es desplegarà l&#39;aplicació.</description>
+    </item>
          
     <item>
       <title>
@@ -150,18 +162,8 @@
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-NodeJS/</guid>
       <description>Suport a construcció i desplegament d&#39;aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.</description>
     </item>
-         
-    <item>
-      <title>
-        
-        Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1
-      </title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/</link>
-      <pubDate>Sat, 28 May 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/</guid>
-      <description>Recordatori del procediment per a realitzar l&#39;actualització d&#39;aplicacions Canigo 3.0 a Canigó 3.1</description>
-    </item>
+    
+    
     
     
     
