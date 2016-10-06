@@ -71,10 +71,21 @@
         {{ partial "comunicat/grafica.html" . }}
       {{ end }}
 
-      {{ if gt (len .Params.relacionats) 0 }}
-        {{ partial "comunicat/relacionats.html" . }}
+	  {{ if isset .Params "relacionats" }}
+		  {{ if gt (len .Params.relacionats) 0 }}
+			{{ partial "comunicat/relacionats.html" . }}
+		  {{ end }}
+	  {{ end }}
+	  
+	  
+	<!--
+	{{ range (where .Site.Pages.ByDate.Reverse "Section" "howtos") }}
+		{{ if eq .Params.key $key }}
+  				{{ partial "comunicat/howto.html" . }}
+  			{{ end }}	
       {{ end }}
-
+	  -->
+	  
       {{ partial "comunicat/social-media.html" . }}
 
         </table>

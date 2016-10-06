@@ -2,9 +2,9 @@
 date        = "2016-09-30"
 title       = "Afegir Spring Batch a una aplicació Canigó"
 description = "How To de com afegir Spring Batch a una aplicació Canigó."
-sections    = ["Canigo", "Howto"]
+sections    = ["Canigo", "howtos"]
 categories  = ["canigo"]
-key         = "SETEMBRE2016"
+key         = "OCTUBRE2016"
 +++
 
 ### A qui va dirigit
