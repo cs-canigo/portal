@@ -26,7 +26,10 @@
                               {{ range .Params.relacionats }}
                               <li style="color: #cc3333;">
                                 <p style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:600">
-                                  {{ .doctitle }}
+				  <a href="{{ .docurl }}" target="_blank">
+                                    {{ .doctitle }}
+                                  </a>
+
                                   <br />
                                   <span style="font-family:Open Sans, sans-serif; font-size: 14px; color: #333; font-weight:300">
                                     {{ .docdescription }}
