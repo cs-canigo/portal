@@ -1,1 +1,3 @@
-User-agent: *
+User-agent: * 
+Disallow: *.xml
+Disallow: /drafts
