@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Mon, 19 Sep 2016 00:00:00 UTC</updated>
+    <updated>Thu, 06 Oct 2016 00:00:00 UTC</updated>
 
     
     
@@ -186,6 +186,15 @@
 
     
     <item>
+      <title>Canvis als web services del STD i eFormularis</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</link>
+      <pubDate>Thu, 06 Oct 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</guid>
+      <description>El mes passat es va iniciar a l&#39;entorn de PRE d&#39;eFormularis i STD un seguit de canvis als web services. La planificació dels canvis i el seu detall els podeu consultar al roadmap del CS Canigó</description>
+    </item>
+    
+    <item>
       <title>Els comunicats del CS Canigó són responsius web</title>
       <link>http://canigo.ctti.gencat.cat/destacats/comunicat-responsiu-web/</link>
       <pubDate>Mon, 19 Sep 2016 00:00:00 UTC</pubDate>
@@ -195,21 +204,12 @@
     </item>
     
     <item>
-      <title>Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</link>
+      <title>Certificació Canigó 3.1 en Tomcat 8/Weblogic 12c amb Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-wl12c-java8/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
       
-      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 amb rutnime Oracle Java 8</description>
-    </item>
-    
-    <item>
-      <title>Certificació Canigó 3.1 amb Weblogic 12c &#43; Oracle Java 8</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</link>
-      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c amb runtime Oracle Java 8</description>
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-wl12c-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 i Weblogic 12c amb runtime Oracle Java 8</description>
     </item>
     
     <item>

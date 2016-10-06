@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</loc>
+    <lastmod>2016-10-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://canigo.ctti.gencat.cat/comunicat/2016/10/</loc>
     <lastmod>2016-10-06T00:00:00+00:00</lastmod>
   </url>
@@ -33,12 +38,7 @@
   </url>
   
   <url>
-    <loc>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</loc>
-    <lastmod>2016-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</loc>
+    <loc>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-wl12c-java8/</loc>
     <lastmod>2016-09-15T00:00:00+00:00</lastmod>
   </url>
   
