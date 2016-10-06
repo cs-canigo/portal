@@ -1,7 +1,7 @@
 +++
 date        = "2016-09-30"
-title       = "Afegir Spring Batch a una aplicació Canigó"
-description = "How To de com afegir Spring Batch a una aplicació Canigó."
+title       = "Spring Batch a una aplicació Canigó"
+description = "How To per afegir Spring Batch a una aplicació Canigó."
 sections    = ["Canigo", "Howto"]
 categories  = ["canigo"]
 key         = "OCTUBRE2016"
@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.1.x del Framework
 
 ### Introducció
 
-En aquest HowTo s’explica com afegir Spring Batch a una aplicació Canigó Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó (amb una base de dades MySql) amb un procés batch que llegeixi d'un fitxer CSV cada cert temps i inserti les dades a BBDD.
+En aquest HowTo s’explica com afegir Spring Batch a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó (amb una base de dades MySql) amb un procés batch que llegeixi d'un fitxer CSV cada cert temps i inserti les dades a BBDD.
 Aquest procés ho implementarem amb Spring Batch.
 
 Per a mostrar el funcionament de Spring Batch amb diferents nodes, farem un altre exemple que realitzi la mateixa tasca que l'anterior però particionada de forma que diferents threads s'ocupin paral·lelament del processament del fitxer. 

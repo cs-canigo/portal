@@ -14,7 +14,7 @@ S'ha perfeccionat l'operativa dels jobs de desplegament d'aplicacions .NET per t
 El funcionament dels jobs que necessitin fer aquesta distinció serà el següent:
 
 * **Jobs de INT**: 
-	* Construrà els binaris de l'aplicació i empaquetarà en un ZIP tot el contingut a desplegar a l'IIS. 
+	* Construirà els binaris de l'aplicació i empaquetarà en un ZIP tot el contingut a desplegar a l'IIS. 
 	* Es realitzarà un tractament d'aquest paquet per tal que inclogui l'arxiu de configuració de l'entorn de INT (reanomenarà el fitxer *Web.config.INT* a *Web.config*).
 	* Mitjançant la utilitat MSDeploy, es desplegarà aquest paquet a l'IIS d'Integració.
 	
