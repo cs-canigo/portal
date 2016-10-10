@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Fri, 30 Sep 2016 00:00:00 UTC</updated>
+    <updated>Thu, 06 Oct 2016 00:00:00 UTC</updated>
 
     
     
@@ -38,6 +38,18 @@
     
     
      
+         
+    <item>
+      <title>
+        
+        SIC. Cas d&#39;èxit de desplegament d&#39;aplicació .NET
+      </title>
+      <link>http://canigo.ctti.gencat.cat/noticies/2016-10-04-SIC-Cas-exit-desplegament-dotNET/</link>
+      <pubDate>Tue, 04 Oct 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/noticies/2016-10-04-SIC-Cas-exit-desplegament-dotNET/</guid>
+      <description>El SIC ja compta amb un cas d&#39;èxit de desplegament d&#39;aplicació .NET mitjançant jobs de Jenkins. S&#39;ha perfeccionat l&#39;operativa dels jobs de desplegament d&#39;aplicacions .NET per tal de fer-los capaços d&#39;escollir el fitxer de configuració d&#39;aplicació adient per a cada entorn on es desplegarà l&#39;aplicació.</description>
+    </item>
          
     <item>
       <title>
@@ -150,18 +162,8 @@
       <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-NodeJS/</guid>
       <description>Suport a construcció i desplegament d&#39;aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.</description>
     </item>
-         
-    <item>
-      <title>
-        
-        Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1
-      </title>
-      <link>http://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/</link>
-      <pubDate>Sat, 28 May 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces%20actualitzacio%20a%20Canigo%203.1/</guid>
-      <description>Recordatori del procediment per a realitzar l&#39;actualització d&#39;aplicacions Canigo 3.0 a Canigó 3.1</description>
-    </item>
+    
+    
     
     
     
@@ -184,6 +186,15 @@
 
     
     <item>
+      <title>Canvis als web services del STD i eFormularis</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</link>
+      <pubDate>Thu, 06 Oct 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</guid>
+      <description>El mes passat es va iniciar a l&#39;entorn de PRE d&#39;eFormularis i STD un seguit de canvis als web services. La planificació dels canvis i el seu detall els podeu consultar al roadmap del CS Canigó</description>
+    </item>
+    
+    <item>
       <title>Els comunicats del CS Canigó són responsius web</title>
       <link>http://canigo.ctti.gencat.cat/destacats/comunicat-responsiu-web/</link>
       <pubDate>Mon, 19 Sep 2016 00:00:00 UTC</pubDate>
@@ -193,21 +204,12 @@
     </item>
     
     <item>
-      <title>Certificació Canigó 3.1 amb Tomcat 8 &#43; Oracle Java 8</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</link>
+      <title>Certificació Canigó 3.1 en Tomcat 8/Weblogic 12c amb Oracle Java 8</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-wl12c-java8/</link>
       <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
       
-      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 amb rutnime Oracle Java 8</description>
-    </item>
-    
-    <item>
-      <title>Certificació Canigó 3.1 amb Weblogic 12c &#43; Oracle Java 8</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</link>
-      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-wl12-java8/</guid>
-      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Weblogic 12c amb runtime Oracle Java 8</description>
+      <guid>http://canigo.ctti.gencat.cat/destacats/canigo31-tomcat8-wl12c-java8/</guid>
+      <description>Ha estat certificat el correcte funcionament de Canigó 3.1 en Tomcat 8 i Weblogic 12c amb runtime Oracle Java 8</description>
     </item>
     
     <item>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Spring Batch a una aplicació Canigó</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Spring Batch a una aplicació Canigó\" />");
+		document.write("<meta name=\"description\" content=\"How To per afegir Spring Batch a una aplicació Canigó.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="http://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Arquitectura CTTI</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+									
+									<li>
+										Spring Batch a una aplicació Canigó
+									</li>
+									
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+										Spring Batch a una aplicació Canigó
+									
+								</h1>
+
+								
+
+								
+								
+									
+								
+
+																	
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin afegir Spring Batch a una aplicació Canigó 3.1 Rest.</p>
+
+<h3 id="versió-de-canigó">Versió de Canigó</h3>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.1.x del Framework Canigó.</p>
+
+<h3 id="introducció">Introducció</h3>
+
+<p>En aquest HowTo s’explica com afegir Spring Batch a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó (amb una base de dades MySql) amb un procés batch que llegeixi d&rsquo;un fitxer CSV cada cert temps i inserti les dades a BBDD.
+Aquest procés ho implementarem amb Spring Batch.</p>
+
+<p>Per a mostrar el funcionament de Spring Batch amb diferents nodes, farem un altre exemple que realitzi la mateixa tasca que l&rsquo;anterior però particionada de forma que diferents threads s&rsquo;ocupin paral·lelament del processament del fitxer.
+En un entorn real s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(JMS) per a poder realitzar aquesta separació entre diferents nodes.</p>
+
+<h2 id="exemple-configuració-spring-batch">Exemple Configuració Spring Batch</h2>
+
+<h3 id="afegir-llibreries">Afegir Llibreries</h3>
+
+<p>S&rsquo;ha d&rsquo;afegir al pom.xml la dependència a Spring Batch Core</p>
+
+<pre><code>&lt;!-- SPRING BATCH --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.batch&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-batch-core&lt;/artifactId&gt;
+    &lt;version&gt;3.0.7.RELEASE&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h3 id="configuració-base-de-dades-de-spring-batch-job-repository">Configuració Base de Dades de Spring Batch (Job Repository)</h3>
+
+<p>Primer s&rsquo;han d&rsquo;afegir a la base dades les taules de Spring Batch: S&rsquo;ha d&rsquo;executar a la Base de Dades el següent script <a href="https://github.com/spring-projects/spring-batch/blob/master/spring-batch-core/src/main/resources/org/springframework/batch/core/schema-mysql.sql">https://github.com/spring-projects/spring-batch/blob/master/spring-batch-core/src/main/resources/org/springframework/batch/core/schema-mysql.sql</a></p>
+
+<p>En cas de tenir una Base de Dades diferent a MySQL seleccionar el script adient : <a href="https://github.com/spring-projects/spring-batch/tree/master/spring-batch-core/src/main/resources/org/springframework/batch/core">https://github.com/spring-projects/spring-batch/tree/master/spring-batch-core/src/main/resources/org/springframework/batch/core</a></p>
+
+<p>Després hem de definir el job repository. Al fitxer app-custom-persistence-jpa.xml afegirem els següents beans:</p>
+
+<pre><code>&lt;!-- Spring Batch --&gt;
+&lt;!-- stored job-meta in database --&gt;
+&lt;bean id=&quot;jobRepository&quot;
+    class=&quot;org.springframework.batch.core.repository.support.JobRepositoryFactoryBean&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
+    &lt;property name=&quot;transactionManager&quot; ref=&quot;transactionManager&quot; /&gt;
+    &lt;property name=&quot;databaseType&quot; value=&quot;mysql&quot; /&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;transactionManager&quot;
+    class=&quot;org.springframework.batch.support.transaction.ResourcelessTransactionManager&quot; /&gt;
+</code></pre>
+
+<h3 id="input-fitxer-csv">Input (Fitxer CSV)</h3>
+
+<p>En aquest howto l&rsquo;input del procés Batch és un fitxer CSV que hem desat a <strong>resources/cvs/input/input.csv</strong></p>
+
+<pre><code>'estacio autobusos', 'Balaguer'
+'Jutjat de Pau', 'Santa Coloma Gramenet'
+'centre obert Alba', 'Vilafranca'
+'La Salle Manlleu', 'Manlleu'
+'estacio metro', 'Barcelona'
+'Jutjat Social', 'Manresa'
+'centre obert Ocaso', 'Vic'
+'La Salle Salou', 'Salou'
+'estacio tren', 'Sant Celoni'
+'Jutjat Penal', 'Vielha'
+'centre obert Nit', 'Sabadell'
+'La Salle Lleida', 'Lleida'
+</code></pre>
+
+<h3 id="configuració-del-job">Configuració del Job</h3>
+
+<p>Hem de crear el fitxer app-custom-spring-batch.xml a la carpeta spring.</p>
+
+<p>A la definició del xml afegim els esquemes de batch y task (per a crida al job de forma asíncrona)</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; 
+xmlns:batch=&quot;http://www.springframework.org/schema/batch&quot;
+xmlns:task=&quot;http://www.springframework.org/schema/task&quot;
+xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/task
+       http://www.springframework.org/schema/task/spring-task-4.1.xsd
+       http://www.springframework.org/schema/batch
+       http://www.springframework.org/schema/batch/spring-batch-3.0.xsd&quot;&gt;
+</code></pre>
+
+<p>Definim el nostre job, que tindrà un step. Aquest step s&rsquo;encarrega de llegir del fitxer csv, processar la informació i escriure-la en base de dades:</p>
+
+<pre><code>&lt;batch:job id=&quot;howtoJob&quot;&gt;
+  &lt;batch:step id=&quot;step1&quot;&gt;
+    &lt;batch:tasklet&gt;
+        &lt;batch:chunk reader=&quot;cvsFileItemReader&quot; writer=&quot;jdbcItemWriter&quot; processor=&quot;itemProcessor&quot; commit-interval=&quot;2&quot;&gt;&lt;/batch:chunk&gt;
+    &lt;/batch:tasklet&gt;
+  &lt;/batch:step&gt;
+&lt;/batch:job&gt;
+
+&lt;bean id=&quot;cvsFileItemReader&quot; class=&quot;org.springframework.batch.item.file.FlatFileItemReader&quot;&gt;
+    &lt;property name=&quot;resource&quot; value=&quot;classpath:cvs/input/input.csv&quot; /&gt;
+
+    &lt;property name=&quot;lineMapper&quot;&gt;
+        &lt;bean class=&quot;org.springframework.batch.item.file.mapping.DefaultLineMapper&quot;&gt;
+        &lt;property name=&quot;lineTokenizer&quot;&gt;
+            &lt;bean
+                class=&quot;org.springframework.batch.item.file.transform.DelimitedLineTokenizer&quot;&gt;
+                &lt;property name=&quot;names&quot; value=&quot;nom,municipi&quot; /&gt;
+            &lt;/bean&gt;
+        &lt;/property&gt;
+        &lt;property name=&quot;fieldSetMapper&quot;&gt;
+            &lt;bean class=&quot;cat.gencat.howtobatch.batch.EquipamentFieldSetMapper&quot; /&gt;
+        &lt;/property&gt;
+        &lt;/bean&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;itemProcessor&quot; class=&quot;cat.gencat.howtobatch.batch.CustomItemProcessor&quot; /&gt;
+
+&lt;bean id=&quot;jdbcItemWriter&quot; class=&quot;org.springframework.batch.item.database.JdbcBatchItemWriter&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot; /&gt;
+    &lt;property name=&quot;sql&quot;&gt;
+      &lt;value&gt;
+            &lt;![CDATA[
+                insert into equipaments (nom, municipi)
+                values (:nom, :municipi)
+            ]]&gt;
+      &lt;/value&gt;
+    &lt;/property&gt;
+    &lt;!-- It will take care matching between object property and sql name parameter --&gt;
+    &lt;property name=&quot;itemSqlParameterSourceProvider&quot;&gt;
+        &lt;bean class=&quot;org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider&quot; /&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>Definim també el jobLauncher, que s&rsquo;encarrega de iniciar la execució dels diferents jobs que tinguem a l&rsquo;aplicació</p>
+
+<pre><code>&lt;bean id=&quot;jobLauncher&quot;
+    class=&quot;org.springframework.batch.core.launch.support.SimpleJobLauncher&quot;&gt;
+    &lt;property name=&quot;jobRepository&quot; ref=&quot;jobRepository&quot; /&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>I com en aquest howto volem iniciar de forma asíncrona el nostre procés batch definim un scheduler que s&rsquo;executi cada 15 segons.</p>
+
+<pre><code> &lt;bean id=&quot;runScheduler&quot; class=&quot;cat.gencat.howtobatch.batch.RunScheduler&quot; /&gt;
+
+&lt;!-- Run every 15 seconds --&gt;
+&lt;task:scheduled-tasks&gt;
+    &lt;task:scheduled ref=&quot;runScheduler&quot; method=&quot;run&quot; cron=&quot;*/15 * * * * *&quot; /&gt;
+&lt;/task:scheduled-tasks&gt;
+</code></pre>
+
+<p>Ara s&rsquo;ha de crear les classes que hem definit:</p>
+
+<ul>
+<li>EquipamentFieldSetMapper: S&rsquo;encarrega de convertir cada línea del CSV en un objecte Equipaments</li>
+<li>CustomItemProcessor: S&rsquo;encarrega de processar les dades obtingudas de la lectura (En aquest howto no fem res, però per a facilitar futures implementacions es mostra un exemple)</li>
+<li>RunScheduler: És la tasca que s&rsquo;executarà cada 15 segons. Aquí s&rsquo;inicia el job de Spring Batch</li>
+</ul>
+
+<h4 id="equipamentfieldsetmapper">EquipamentFieldSetMapper</h4>
+
+<pre><code>package cat.gencat.howtobatch.batch;
+
+import org.springframework.batch.item.file.mapping.FieldSetMapper;
+import org.springframework.batch.item.file.transform.FieldSet;
+import org.springframework.validation.BindException;
+
+import cat.gencat.howtobatch.model.Equipament;
+
+public class EquipamentFieldSetMapper implements FieldSetMapper&lt;Equipament&gt;{
+
+    @Override
+    public Equipament mapFieldSet(FieldSet fieldset) throws BindException {
+
+        Equipament equipament = new Equipament();
+        equipament.setNom(fieldset.readString(0));
+        equipament.setMunicipi(fieldset.readString(1));
+        return equipament;
+    }
+}
+</code></pre>
+
+<h4 id="customitemprocessor">CustomItemProcessor</h4>
+
+<pre><code>package cat.gencat.howtobatch.batch;
+
+import org.springframework.batch.item.ItemProcessor;
+import cat.gencat.howtobatch.model.Equipament;
+
+public class CustomItemProcessor implements ItemProcessor&lt;Equipament, Equipament&gt; {
+
+    @Override
+    public Equipament process(Equipament item) throws Exception {
+        System.out.println(&quot;Tractant...&quot; + item);
+        return item;
+    }
+}
+</code></pre>
+
+<h4 id="runscheduler">RunScheduler</h4>
+
+<pre><code>package cat.gencat.howtobatch.batch;
+
+import java.util.Date;
+
+import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecution;
+import org.springframework.batch.core.JobParameters;
+import org.springframework.batch.core.JobParametersBuilder;
+import org.springframework.batch.core.launch.JobLauncher;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class RunScheduler {
+
+    @Autowired
+    JobLauncher jobLauncher;
+
+    @Autowired
+    Job howtoJob;
+
+  public void run() {
+
+    try {
+
+    String dateParam = new Date().toString();
+    JobParameters param =
+      new JobParametersBuilder().addString(&quot;date&quot;, dateParam).toJobParameters();
+
+    System.out.println(dateParam);
+
+    JobExecution execution = jobLauncher.run(howtoJob, param);
+    System.out.println(&quot;Sortida: &quot; + execution.getStatus());
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+
+  }
+}
+</code></pre>
+
+<p>Un job només es pot executar 1 vegada (si s&rsquo;ha completat amb èxit). Com en aquest cas volem que el mateix job s&rsquo;executi continuament li hem de passar un paràmetre que el faci únic. En aquest cas li pasem la data.</p>
+
+<h3 id="resultat">Resultat</h3>
+
+<p>Si arranquem l&rsquo;aplicació, cada 15 segons veurem a la consola els logs que hem posat al procés batch:</p>
+
+<pre><code>Thu Sep 22 17:17:00 CEST 2016
+Tractant...Equipament [nom='estacio autobusos']
+Tractant...Equipament [nom='Jutjat de Pau']
+Tractant...Equipament [nom='centre obert Alba']
+Tractant...Equipament [nom='La Salle Manlleu']
+Tractant...Equipament [nom='estacio metro']
+Tractant...Equipament [nom='Jutjat Social']
+Tractant...Equipament [nom='centre obert Ocaso']
+Tractant...Equipament [nom='La Salle Salou']
+Tractant...Equipament [nom='estacio tren']
+Tractant...Equipament [nom='Jutjat Penal']
+Tractant...Equipament [nom='centre obert Nit']
+Tractant...Equipament [nom='La Salle Lleida']
+Sortida: COMPLETED
+Thu Sep 22 17:17:15 CEST 2016
+Tractant...Equipament [nom='estacio autobusos']
+Tractant...Equipament [nom='Jutjat de Pau']
+Tractant...Equipament [nom='centre obert Alba']
+Tractant...Equipament [nom='La Salle Manlleu']
+Tractant...Equipament [nom='estacio metro']
+Tractant...Equipament [nom='Jutjat Social']
+Tractant...Equipament [nom='centre obert Ocaso']
+Tractant...Equipament [nom='La Salle Salou']
+Tractant...Equipament [nom='estacio tren']
+Tractant...Equipament [nom='Jutjat Penal']
+Tractant...Equipament [nom='centre obert Nit']
+Tractant...Equipament [nom='La Salle Lleida']
+Sortida: COMPLETED
+Thu Sep 22 17:17:30 CEST 2016
+Tractant...Equipament [nom='estacio autobusos']
+Tractant...Equipament [nom='Jutjat de Pau']
+Tractant...Equipament [nom='centre obert Alba']
+Tractant...Equipament [nom='La Salle Manlleu']
+Tractant...Equipament [nom='estacio metro']
+Tractant...Equipament [nom='Jutjat Social']
+Tractant...Equipament [nom='centre obert Ocaso']
+Tractant...Equipament [nom='La Salle Salou']
+Tractant...Equipament [nom='estacio tren']
+Tractant...Equipament [nom='Jutjat Penal']
+Tractant...Equipament [nom='centre obert Nit']
+Tractant...Equipament [nom='La Salle Lleida']
+Sortida: COMPLETED
+</code></pre>
+
+<h2 id="exemple-partitioning-of-step">Exemple Partitioning of Step</h2>
+
+<p>En aquest howto es mostra com configurar el processament de jobs de forma paral·lela. Per a mostrar el funcionament partirem els steps d&rsquo;un job en N sub-steps i cadascún l&rsquo;executarà un thread diferent.</p>
+
+<p>Per a utilitzar aquest sistema en una aplicació amb diferents nodes de forma remota s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(JMS) per a la comunicació entre els nodes.</p>
+
+<p>Canvis a partir de l&rsquo;exemple anterior:</p>
+
+<h3 id="app-custom-spring-batch-config">app-custom-spring-batch-config</h3>
+
+<p>Es modifica el fitxer de configuració per a partir el job. S&rsquo;ha de implementar una classe que realitzi la partició</p>
+
+<pre><code>...
+
+&lt;job id=&quot;partitionJob&quot; xmlns=&quot;http://www.springframework.org/schema/batch&quot;&gt;
+    &lt;step id=&quot;howtoJob&quot;&gt;
+        &lt;partition step=&quot;slave&quot; partitioner=&quot;rangePartitioner&quot;&gt;
+            &lt;handler grid-size=&quot;4&quot; task-executor=&quot;taskExecutor&quot; /&gt;
+        &lt;/partition&gt;
+    &lt;/step&gt;
+&lt;/job&gt;
+
+&lt;bean id=&quot;taskExecutor&quot; class=&quot;org.springframework.core.task.SimpleAsyncTaskExecutor&quot; /&gt;
+
+ &lt;!-- each thread will run this job, with different stepExecutionContext values. --&gt;
+  &lt;step id=&quot;slave&quot; xmlns=&quot;http://www.springframework.org/schema/batch&quot;&gt;
+    &lt;tasklet&gt;
+        &lt;chunk reader=&quot;cvsFileItemReader&quot; writer=&quot;jdbcItemWriter&quot; processor=&quot;itemProcessor&quot; commit-interval=&quot;2&quot;&gt;
+        &lt;/chunk&gt;
+    &lt;/tasklet&gt;
+  &lt;/step&gt;
+
+&lt;bean id=&quot;rangePartitioner&quot; class=&quot;cat.gencat.howtobatch.batch.RangePartitioner&quot; /&gt;
+
+
+&lt;bean id=&quot;itemProcessor&quot; class=&quot;cat.gencat.howtobatch.batch.CustomItemProcessor&quot; scope=&quot;step&quot;&gt;
+    &lt;property name=&quot;threadName&quot; value=&quot;#{stepExecutionContext[name]}&quot; /&gt;
+&lt;/bean&gt;
+...
+</code></pre>
+
+<p>Els beans cvsFileItemReader, jdbcItemWriterm, jobLauncher i runScheduler són los mateixos que a l&rsquo;exemple anterior.</p>
+
+<p>Ara s&rsquo;ha de crear els fitxers que hem definit:</p>
+
+<ul>
+<li>rangePartitioner: S&rsquo;encarrega de dividir els steps en el nombre de sub-steps que s&rsquo;ha definit (grid-size)</li>
+</ul>
+
+<h4 id="rangepartitioner">RangePartitioner</h4>
+
+<pre><code>package cat.gencat.howtobatch.batch;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.batch.core.partition.support.Partitioner;
+import org.springframework.batch.item.ExecutionContext;
+
+public class RangePartitioner implements Partitioner {
+
+    @Override
+    public Map&lt;String, ExecutionContext&gt; partition(int gridSize) {
+
+        Map&lt;String, ExecutionContext&gt; result
+                       = new HashMap&lt;String, ExecutionContext&gt;();
+
+        for (int i = 1; i &lt;= gridSize; i++) {
+            ExecutionContext value = new ExecutionContext();
+
+            value.putString(&quot;name&quot;, &quot;Thread&quot; + i);
+            result.put(&quot;partition&quot; + i, value);
+        }
+        return result;
+    }
+}
+</code></pre>
+
+<p>Cada cop que es crea un ExecutionContext es crea un Thread, cada thread processarà 4 línies del fitxer CSV.</p>
+
+<p>Al dividir el step en N sub steps, hi haurà N sortides (en aquest cas és indiferent ja que la sortida és escriure a base de dades, però si la sortida fós escriure en un fitxer es crearien N fitxers de sortida, un per cada sub-step)</p>
+
+<h4 id="customitemprocessor-1">CustomItemProcessor</h4>
+
+<p>Hem modificat aquest fitxer per a incloure el nom del thread que està processant el step:</p>
+
+<pre><code>package cat.gencat.howtobatch.batch;
+
+import org.springframework.batch.item.ItemProcessor;
+
+import cat.gencat.howtobatch.model.Equipament;
+
+public class CustomItemProcessor implements ItemProcessor&lt;Equipament, Equipament&gt; {
+
+    private String threadName;
+
+    @Override
+    public Equipament process(Equipament item) throws Exception {
+        System.out.println(threadName  + &quot; Tractant... &quot; + item);
+        return item;
+    }
+
+    public String getThreadName() {
+        return threadName;
+    }
+
+    public void setThreadName(String threadName) {
+        this.threadName = threadName;
+    }
+
+}
+</code></pre>
+
+<h3 id="resultat-1">Resultat</h3>
+
+<pre><code>Fri Sep 23 09:49:00 CEST 2016
+Thread4 Tractant... Equipament [nom='estacio autobusos']
+Thread4 Tractant... Equipament [nom='Jutjat de Pau']
+Thread3 Tractant... Equipament [nom='centre obert Alba']
+Thread3 Tractant... Equipament [nom='La Salle Manlleu']
+Thread2 Tractant... Equipament [nom='estacio metro']
+Thread2 Tractant... Equipament [nom='Jutjat Social']
+Thread1 Tractant... Equipament [nom='centre obert Ocaso']
+Thread1 Tractant... Equipament [nom='La Salle Salou']
+Thread3 Tractant... Equipament [nom='Jutjat Penal']
+Thread3 Tractant... Equipament [nom='centre obert Nit']
+Thread4 Tractant... Equipament [nom='estacio tren']
+Thread4 Tractant... Equipament [nom='La Salle Lleida']
+Sortida: COMPLETED
+Fri Sep 23 09:49:15 CEST 2016
+Thread3 Tractant... Equipament [nom='estacio autobusos']
+Thread4 Tractant... Equipament [nom='centre obert Alba']
+Thread4 Tractant... Equipament [nom='La Salle Manlleu']
+Thread3 Tractant... Equipament [nom='Jutjat de Pau']
+Thread1 Tractant... Equipament [nom='estacio metro']
+Thread1 Tractant... Equipament [nom='Jutjat Social']
+Thread2 Tractant... Equipament [nom='centre obert Ocaso']
+Thread2 Tractant... Equipament [nom='La Salle Salou']
+Thread3 Tractant... Equipament [nom='estacio tren']
+Thread3 Tractant... Equipament [nom='Jutjat Penal']
+Thread2 Tractant... Equipament [nom='centre obert Nit']
+Thread4 Tractant... Equipament [nom='La Salle Lleida']
+Sortida: COMPLETED
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="http://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="http://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+</body>
+</html>
