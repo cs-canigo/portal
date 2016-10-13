@@ -4,7 +4,6 @@ title       = "Matriu catàleg cloud"
 description = ""
 sections    = ""
 categories  = [""]
-draft 		= true
 +++
 
 
@@ -52,6 +51,31 @@ Llegenda "Tipus":
 - **DBaaS**: base de dades com a servei, on és demana el tipus de DB i es proporcionen les credencials d'accés. Escala automàticament.
 - **IaaS**: màquines virtuals, on s'aprovisiona fins al nivell de SO.
 
+<style>
+	table tr:first-child th:first-child, table tr:first-child th:last-child{
+		background-color:#fff;
+	}
+	table tr:first-child th:first-child{
+		border-top: none!important;
+		border-left:none!important;
+	}
+	table tr:first-child th:last-child{
+		border-top: none!important;
+		border-right:none!important;
+	}
+
+	table tr:nth-child(1) th:nth-child(1), 
+	table tr:nth-child(1) th:nth-child(2), 
+	table tr:nth-child(1) th:nth-child(3),
+	table tr:nth-child(2) th:nth-child(3), 
+	table tr:nth-child(2) th:nth-child(7), 
+	table tr:nth-child(2) th:nth-child(9),
+	table tr td:nth-child(3), 
+	table tr td:nth-child(7), 
+	table tr td:nth-child(9){
+		border-right: 3px solid #aaa;
+	}
+</style>
 
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script>
