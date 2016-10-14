@@ -95,8 +95,8 @@ En quant als contenidors Docker, inicialment, aliniarem les versions del softwar
 ------------ | ----------------------- | ---------
 Apache 		 | 2.2                     | https://hub.docker.com/r/gencatcloud/httpd/
 Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/
-HaProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/
-Java		| 7		|	https://hub.docker.com/r/gencatcloud/java/
+HAProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/
+Java		 | 7		|	https://hub.docker.com/r/gencatcloud/java/
 MySql 		 | 5.7                     | https://hub.docker.com/r/gencatcloud/mysql/
 NodeJS 		 | 4.2.6                     | https://hub.docker.com/r/gencatcloud/nodejs/
 PHP 		 | 5.3.29                   | https://hub.docker.com/r/gencatcloud/php/

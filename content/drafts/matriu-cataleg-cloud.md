@@ -19,15 +19,17 @@ Tomcat             | Contenidor |App    |       |       |x      |       |x      
 Weblogic           | PaaS       |App    |x      |x      |x      |x      |        |       | 
 Websphere          | PaaS       |App    |x      |x      |x      |x      |        |       | 
 Websphere          | xPaaS      |App    |       |       |       |       |x       |       | 
-.Net               | PaaS       |App    |x      |x      |x      |x      |        |       | 
-.Net               | xPaaS      |App    |       |       |       |       |x       |x      | 
+HAProxy            | Contenidor |-      |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
+Java               | Contenidor |-      |       |       |x      |       |x       |       | 
 JBoss              | PaaS       |App    |x      |x      |x      |x      |        |       | 
 JBoss              | xPaaS      |App    |       |       |x      |       |        |       | 
+.Net               | PaaS       |App    |x      |x      |x      |x      |        |       | 
+.Net               | xPaaS      |App    |       |       |       |       |x       |x      | 
+NodeJS             | xPaaS      |App    |       |       |x      |       |x       |       | 
+NodeJS             | Contenidor |App    |       |       |x      |       |x       |       | 
 PHP                | PaaS       |App    |x      |       |       |       |        |       |    
 PHP                | xPaaS      |App    |       |       |x      |       |x       |       |    
 PHP                | Contenidor |App    |       |       |x      |       |x       |       |    
-NodeJS             | xPaaS      |App    |       |       |x      |       |x       |       | 
-NodeJS             | Contenidor |App    |       |       |x      |       |x       |       | 
 OracleDB           | PaaS       |DB     |x      |x      |x      |x      |        |       |    
 MySQL              | PaaS       |DB     |x      |x      |x      |x      |        |       |    
 MySQL              | Contenidor |DB     |       |       |x      |       |x       |       |    
