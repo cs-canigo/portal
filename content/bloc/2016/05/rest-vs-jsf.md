@@ -8,7 +8,7 @@ imatge 		= "/images/bloc/rest.png"
 key         = "JUNY2016"
 +++
 
-Des de fa més de 3 anys, des de la Unitat d'Arquitectura Corporativa i el Centre de Suport Canigó, promovem la creació d'aplicacions orientades a serveis/API (dins els moviments de API Economy, API First, API Strategy) on la capa de presentació és un client més d'aquesta API. A més, proposem que aquest client html sigui totalment estàtic, on no hi hagi renderització des del costat de servidor: d'aquesta manera, el manteniment i evolució de l'aplicació és més senzill i no depenem de frameworks pesats de servidor (com és JSF o Struts).
+Des de fa més de 3 anys, des de la Unitat d'Arquitectura Corporativa i el Centre de Suport Canigó, promovem la creació d'aplicacions orientades a serveis/API (dins els moviments de API Economy, API First, API Strategy) on la capa de presentació és un client més d'aquesta API. A més, proposem que aquest client html sigui totalment estàtic, on no hi hagi renderització des del costat de servidor: d'aquesta manera, el manteniment i evolució de l'aplicació és més senzill i no depenem de frameworks pesats de servidor (com són JSF o Struts).
 
 Per aquest motiu, us comuniquem que a partir d'aquest moment, **l'ús de JSF ha de ser exclusiu a efectes de manteniment d'aplicacions**. Qualsevol nova aplicació o funcionalitat dins d'una aplicació, s'hauria de desenvolupar seguint el patró REST, on el servidor exposa la lògica de negoci mitjançant serveis en format JSON (i seguint les millor pràctiques en desenvolupament d'APIs que trobareu al nostre bloc) i el client, normalment desenvolupat amb tecnologia estàtica (html/javascript/css), consumeix aquest servei.
 
