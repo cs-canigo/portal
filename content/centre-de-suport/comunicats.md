@@ -8,6 +8,9 @@ weight		= 4
 
 ## <span class="label label-cabecera">2016</span>
 
+#### [Setembre] (/comunicat/2016/09/)
+- (micro)serveis
+- SIC. Gestió de dependències per aplicacions ANT
 
 #### [Agost] (/comunicat/2016/08/)
 - SIC. Gestió de dependències per a aplicacions .NET

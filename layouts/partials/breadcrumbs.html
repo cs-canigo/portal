@@ -17,6 +17,10 @@
 	Notícies
 {{ end }}
 
+{{ if (eq $section "howtos") }}
+	How to
+{{ end }}
+
 {{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (eq $section .Site.Params.bloc_section) }}
 	Bloc d'Arquitectura
 {{ end }}

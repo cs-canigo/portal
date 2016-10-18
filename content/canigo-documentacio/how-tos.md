@@ -1,6 +1,6 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
-title       = "How to"
+title       = "Howto"
 description = "Normes aplicables al desenvolupament d'aplicacions"
 sections    = "How to"
 taxonomies  = []
@@ -13,6 +13,9 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Spring Batch en aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Spring-Batch)
+- [Canigó - Swagger en aplicació Canigó 3.1](/related/canigo/howto/Canigo - Howto - Swagger_en_aplicacio_Canigo_3_1.pdf)
+- [Canigó - Desplegament aplicació Canigo 3.1 en Docker](/related/canigo/howto/Canigo - Howto - Desplegament aplicacio Canigo 3.1 en Docker.pdf)
 - [Canigó - Contenidor GICAR en entorns de desenvolupament](/related/canigo/howto/Canigo - Howto - Contenidor GICAR en entorns de desenvolupament.pdf)
 - [Canigó - Incorporació mòdul Administració de logs a aplicació Canigó](/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicacio Canigo 3.pdf)
 - [Canigó - Anàlisi aplicació Canigó amb Sonar](/related/canigo/howto/Canigo - Analisi aplicacio Canigo amb Sonar.pdf)
