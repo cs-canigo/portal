@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -301,15 +301,15 @@
 
 						
 
-<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+<h3 id="a-qui-va-dirigit:f6111437e779c57659589dab60707795">A qui va dirigit</h3>
 
 <p>Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin afegir Spring Batch a una aplicació Canigó 3.1 Rest.</p>
 
-<h3 id="versió-de-canigó">Versió de Canigó</h3>
+<h3 id="versió-de-canigó:f6111437e779c57659589dab60707795">Versió de Canigó</h3>
 
 <p>Els passos descrits en aquest document apliquen a la versió 3.1.x del Framework Canigó.</p>
 
-<h3 id="introducció">Introducció</h3>
+<h3 id="introducció:f6111437e779c57659589dab60707795">Introducció</h3>
 
 <p>En aquest HowTo s’explica com afegir Spring Batch a una aplicació Canigó Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó (amb una base de dades MySql) amb un procés batch que llegeixi d&rsquo;un fitxer CSV cada cert temps i inserti les dades a BBDD.
 Aquest procés ho implementarem amb Spring Batch.</p>
@@ -317,9 +317,9 @@ Aquest procés ho implementarem amb Spring Batch.</p>
 <p>Per a mostrar el funcionament de Spring Batch amb diferents nodes, farem un altre exemple que realitzi la mateixa tasca que l&rsquo;anterior però particionada de forma que diferents threads s&rsquo;ocupin paral·lelament del processament del fitxer.
 En un entorn real s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(JMS) per a poder realitzar aquesta separació entre diferents nodes.</p>
 
-<h2 id="exemple-configuració-spring-batch">Exemple Configuració Spring Batch</h2>
+<h2 id="exemple-configuració-spring-batch:f6111437e779c57659589dab60707795">Exemple Configuració Spring Batch</h2>
 
-<h3 id="afegir-llibreries">Afegir Llibreries</h3>
+<h3 id="afegir-llibreries:f6111437e779c57659589dab60707795">Afegir Llibreries</h3>
 
 <p>S&rsquo;ha d&rsquo;afegir al pom.xml la dependència a Spring Batch Core</p>
 
@@ -331,7 +331,7 @@ En un entorn real s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(J
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració-base-de-dades-de-spring-batch-job-repository">Configuració Base de Dades de Spring Batch (Job Repository)</h3>
+<h3 id="configuració-base-de-dades-de-spring-batch-job-repository:f6111437e779c57659589dab60707795">Configuració Base de Dades de Spring Batch (Job Repository)</h3>
 
 <p>Primer s&rsquo;han d&rsquo;afegir a la base dades les taules de Spring Batch: S&rsquo;ha d&rsquo;executar a la Base de Dades el següent script <a href="https://github.com/spring-projects/spring-batch/blob/master/spring-batch-core/src/main/resources/org/springframework/batch/core/schema-mysql.sql">https://github.com/spring-projects/spring-batch/blob/master/spring-batch-core/src/main/resources/org/springframework/batch/core/schema-mysql.sql</a></p>
 
@@ -352,7 +352,7 @@ En un entorn real s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(J
     class=&quot;org.springframework.batch.support.transaction.ResourcelessTransactionManager&quot; /&gt;
 </code></pre>
 
-<h3 id="input-fitxer-csv">Input (Fitxer CSV)</h3>
+<h3 id="input-fitxer-csv:f6111437e779c57659589dab60707795">Input (Fitxer CSV)</h3>
 
 <p>En aquest howto l&rsquo;input del procés Batch és un fitxer CSV que hem desat a <strong>resources/cvs/input/input.csv</strong></p>
 
@@ -370,7 +370,7 @@ En un entorn real s&rsquo;hauria d&rsquo;utilitzar un framework de missatgeria(J
 'La Salle Lleida', 'Lleida'
 </code></pre>
 
-<h3 id="configuració-del-job">Configuració del Job</h3>
+<h3 id="configuració-del-job:f6111437e779c57659589dab60707795">Configuració del Job</h3>
 
 <p>Hem de crear el fitxer app-custom-spring-batch.xml a la carpeta spring.</p>
 
@@ -462,7 +462,7 @@ xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans
 <li>RunScheduler: És la tasca que s&rsquo;executarà cada 15 segons. Aquí s&rsquo;inicia el job de Spring Batch</li>
 </ul>
 
-<h4 id="equipamentfieldsetmapper">EquipamentFieldSetMapper</h4>
+<h4 id="equipamentfieldsetmapper:f6111437e779c57659589dab60707795">EquipamentFieldSetMapper</h4>
 
 <pre><code>package cat.gencat.howtobatch.batch;
 
@@ -485,7 +485,7 @@ public class EquipamentFieldSetMapper implements FieldSetMapper&lt;Equipament&gt
 }
 </code></pre>
 
-<h4 id="customitemprocessor">CustomItemProcessor</h4>
+<h4 id="customitemprocessor:f6111437e779c57659589dab60707795">CustomItemProcessor</h4>
 
 <pre><code>package cat.gencat.howtobatch.batch;
 
@@ -502,7 +502,7 @@ public class CustomItemProcessor implements ItemProcessor&lt;Equipament, Equipam
 }
 </code></pre>
 
-<h4 id="runscheduler">RunScheduler</h4>
+<h4 id="runscheduler:f6111437e779c57659589dab60707795">RunScheduler</h4>
 
 <pre><code>package cat.gencat.howtobatch.batch;
 
@@ -548,7 +548,7 @@ public class RunScheduler {
 
 <p>Un job només es pot executar 1 vegada (si s&rsquo;ha completat amb èxit). Com en aquest cas volem que el mateix job s&rsquo;executi continuament li hem de passar un paràmetre que el faci únic. En aquest cas li pasem la data.</p>
 
-<h3 id="resultat">Resultat</h3>
+<h3 id="resultat:f6111437e779c57659589dab60707795">Resultat</h3>
 
 <p>Si arranquem l&rsquo;aplicació, cada 15 segons veurem a la consola els logs que hem posat al procés batch:</p>
 
@@ -596,7 +596,7 @@ Tractant...Equipament [nom='La Salle Lleida']
 Sortida: COMPLETED
 </code></pre>
 
-<h2 id="exemple-partitioning-of-step">Exemple Partitioning of Step</h2>
+<h2 id="exemple-partitioning-of-step:f6111437e779c57659589dab60707795">Exemple Partitioning of Step</h2>
 
 <p>En aquest howto es mostra com configurar el processament de jobs de forma paral·lela. Per a mostrar el funcionament partirem els steps d&rsquo;un job en N sub-steps i cadascún l&rsquo;executarà un thread diferent.</p>
 
@@ -604,7 +604,7 @@ Sortida: COMPLETED
 
 <p>Canvis a partir de l&rsquo;exemple anterior:</p>
 
-<h3 id="app-custom-spring-batch-config">app-custom-spring-batch-config</h3>
+<h3 id="app-custom-spring-batch-config:f6111437e779c57659589dab60707795">app-custom-spring-batch-config</h3>
 
 <p>Es modifica el fitxer de configuració per a partir el job. S&rsquo;ha de implementar una classe que realitzi la partició</p>
 
@@ -645,7 +645,7 @@ Sortida: COMPLETED
 <li>rangePartitioner: S&rsquo;encarrega de dividir els steps en el nombre de sub-steps que s&rsquo;ha definit (grid-size)</li>
 </ul>
 
-<h4 id="rangepartitioner">RangePartitioner</h4>
+<h4 id="rangepartitioner:f6111437e779c57659589dab60707795">RangePartitioner</h4>
 
 <pre><code>package cat.gencat.howtobatch.batch;
 
@@ -678,7 +678,7 @@ public class RangePartitioner implements Partitioner {
 
 <p>Al dividir el step en N sub steps, hi haurà N sortides (en aquest cas és indiferent ja que la sortida és escriure a base de dades, però si la sortida fós escriure en un fitxer es crearien N fitxers de sortida, un per cada sub-step)</p>
 
-<h4 id="customitemprocessor-1">CustomItemProcessor</h4>
+<h4 id="customitemprocessor-1:f6111437e779c57659589dab60707795">CustomItemProcessor</h4>
 
 <p>Hem modificat aquest fitxer per a incloure el nom del thread que està processant el step:</p>
 
@@ -709,7 +709,7 @@ public class CustomItemProcessor implements ItemProcessor&lt;Equipament, Equipam
 }
 </code></pre>
 
-<h3 id="resultat-1">Resultat</h3>
+<h3 id="resultat-1:f6111437e779c57659589dab60707795">Resultat</h3>
 
 <pre><code>Fri Sep 23 09:49:00 CEST 2016
 Thread4 Tractant... Equipament [nom='estacio autobusos']

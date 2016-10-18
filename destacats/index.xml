@@ -6,7 +6,7 @@
     <language>ca-Es</language>
     
     
-    <updated>Thu, 06 Oct 2016 00:00:00 UTC</updated>
+    <updated>Mon, 17 Oct 2016 00:00:00 UTC</updated>
 
     
     
@@ -186,6 +186,15 @@
 
     
     <item>
+      <title>Nova versió del connector amb ARESTA per a Canigó 3</title>
+      <link>http://canigo.ctti.gencat.cat/destacats/patch-connector-psgd/</link>
+      <pubDate>Mon, 17 Oct 2016 00:00:00 UTC</pubDate>
+      
+      <guid>http://canigo.ctti.gencat.cat/destacats/patch-connector-psgd/</guid>
+      <description>S&#39;ha publicat la versió 1.1.1 del connector per solucionar problemes amb el desplegament a Weblogic.</description>
+    </item>
+    
+    <item>
       <title>Canvis als web services del STD i eFormularis</title>
       <link>http://canigo.ctti.gencat.cat/destacats/modificacions-ws-eforms/</link>
       <pubDate>Thu, 06 Oct 2016 00:00:00 UTC</pubDate>
@@ -264,15 +273,6 @@
       
       <guid>http://canigo.ctti.gencat.cat/destacats/full-de-ruta-2016.1/</guid>
       <description>Aquest mes de maig ha estat publicada la versió 2016.1 del Full de ruta del programari</description>
-    </item>
-    
-    <item>
-      <title>Transformació PICA</title>
-      <link>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</link>
-      <pubDate>Fri, 15 Apr 2016 00:00:00 UTC</pubDate>
-      
-      <guid>http://canigo.ctti.gencat.cat/destacats/transformacio-pica/</guid>
-      <description>El 19/4 es completarà la transformació de la PICA a l&#39;entorn de PRO. Totes aquelles aplicacions Canigó que facin ús dels connectors amb la PICA hauran d&#39;haver estat configurades per accedir al nou domini pica.intranet.gencat.cat</description>
     </item>
     
   </channel>

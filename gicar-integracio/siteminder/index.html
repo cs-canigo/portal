@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -327,7 +327,7 @@
 
 <p>Per últim en l’apartat 3.8 s’exposa com fer la integració d’una aplicació amb GICAR utilitzant com a protocol d’integració SAML2, indicat per a aplicacions que només puguin delegar l’autenticació a GICAR a través de SAML2.</p>
 
-<h2 id="característiques-de-siteminder">Característiques de SiteMinder</h2>
+<h2 id="característiques-de-siteminder:2d1d63788fbd5ccb485eee30b4409828">Característiques de SiteMinder</h2>
 
 <p>SiteMinder és l’eina de la plataforma GICAR que, de forma centralitzada i en alta disponibilitat, s’utilitza per gestionar les polítiques d’accés dels usuaris a les aplicacions web. Per tant, les aplicacions deleguen completament el procés d’autenticació en SiteMinder.</p>
 
@@ -343,7 +343,7 @@
 <li>Servei d’administració per tal de realitzar, per exemple, el manteniment del Servidor de Polítiques.</li>
 </ul>
 
-<h2 id="arquitectura-i-elements-de-siteminder">Arquitectura i elements de SiteMinder</h2>
+<h2 id="arquitectura-i-elements-de-siteminder:2d1d63788fbd5ccb485eee30b4409828">Arquitectura i elements de SiteMinder</h2>
 
 <p>El següent gràfic mostra l’arquitectura dels elements de GICAR responsables del procés d’autenticació:</p>
 
@@ -360,8 +360,7 @@
 <li>Permetre l’accés a determinats recursos d’aquells únicament dels usuaris autoritzats.</li>
 <li>Facilitar a les aplicacions les dades necessàries per a la identificació de l’usuari que accedeix al recurs.</li>
 <li>Oferir SSO (Single Sign-On) entre totes les aplicacions integrades.</li>
-<li>Separar la lògica d’autenticació de la lògica d’aplicació. Això permet modificar el procediment d’autenticació sense afectar a l’aplicació així com aplicar polítiques centralitzades de contrasenyes.
-<br /></li>
+<li>Separar la lògica d’autenticació de la lògica d’aplicació. Això permet modificar el procediment d’autenticació sense afectar a l’aplicació així com aplicar polítiques centralitzades de contrasenyes.</li>
 </ul></li>
 
 <li><p>Agent de SiteMinder: Es tracta d’una extensió del servidor web (un filtre ISAPI en el cas de l’IIS, un mòdul mod en el cas d’Apache) que intercepta les peticions abans de ser processades, tot aplicant la política definida al servidor central. S’instal·la en el Servidor Web on resideix el frontal de l’aplicació i s’ocupen d’interceptar les peticions d’accés a les pàgines web d’aquest servidor. Aquestes peticions són enviades al Servidor de Polítiques de SiteMinder per determinar si l’aplicació està protegida i requereix d’autenticació.

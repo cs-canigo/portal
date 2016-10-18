@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -320,7 +320,7 @@
 
 						
 
-<h2 id="propòsit">Propòsit</h2>
+<h2 id="propòsit:77fe47b60537997bf746a827907ca23f">Propòsit</h2>
 
 <p>La gestió d&rsquo;excepcions permet informar que s&rsquo;ha produït un error al realitzar una petició. Aquest error podrà ser tractat adequadament i en cas necessari informar a l&rsquo;usuari, llençar una traça, enviar un correu, etc.</p>
 
@@ -328,11 +328,11 @@
 
 <p>Per evitar l&rsquo;ús innecessari de blocs &lsquo;try-catch&rsquo; dins el codi dels nostres aplicatius Canigó proporciona un mecanisme d&rsquo;intercepció, pel qual indicarem quines excepcions volem tractar i quins gestors les tractaran sense haver d&rsquo;incorporar cap referència a cap classe de l&rsquo;aplicació.</p>
 
-<h2 id="glossari">Glossari</h2>
+<h2 id="glossari:77fe47b60537997bf746a827907ca23f">Glossari</h2>
 
-<h2 id="instal-lació-i-configuració">Instal.lació i configuració</h2>
+<h2 id="instal-lació-i-configuració:77fe47b60537997bf746a827907ca23f">Instal.lació i configuració</h2>
 
-<h3 id="instal-lació">Instal.lació</h3>
+<h3 id="instal-lació:77fe47b60537997bf746a827907ca23f">Instal.lació</h3>
 
 <p>El mòdul de configuració s&rsquo;inclou per defecte dins del core de Canigó 3. Durant el procés de creació de l&rsquo;aplicació (Struts o JSF), l&rsquo;eina de suport al desenvolupament inclourà la referència dins del pom.xml. En cas d&rsquo;una instal- lació manual afegir les següents línies al pom.xml de l&rsquo;aplicació:</p>
 
@@ -352,7 +352,7 @@
 &lt;/dependency&gt;
 </code></pre>
 
-<h3 id="configuració">Configuració</h3>
+<h3 id="configuració:77fe47b60537997bf746a827907ca23f">Configuració</h3>
 
 <p>La configuració del servei d&rsquo;exepcions es configura mitjançant el fitxer de configuració web.xml:</p>
 
@@ -375,7 +375,7 @@ També es definirà la pantalla d'error genèrica:
 &lt;/context-param&gt;
 </code></pre>
 
-<h2 id="utilització-del-mòdul">Utilització del mòdul</h2>
+<h2 id="utilització-del-mòdul:77fe47b60537997bf746a827907ca23f">Utilització del mòdul</h2>
 
 <p>El filtre, intercepta totes les peticions a les pàgines JSF. Per defecte el filtre ErrorHandlerFilter que ofereix el framework, el que fa es interceptar qualsevol petició que doni un error del tipus Exception i mostrar la pàgina d&rsquo;error genèrica definida al web.xml amb la informació de la excepció.</p>
 

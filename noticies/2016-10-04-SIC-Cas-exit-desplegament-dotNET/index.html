@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -315,8 +315,7 @@ S&rsquo;ha perfeccionat l&rsquo;operativa dels jobs de desplegament d&rsquo;apli
 <ul>
 <li>Construirà els binaris de l&rsquo;aplicació i empaquetarà en un ZIP tot el contingut a desplegar a l&rsquo;IIS.</li>
 <li>Es realitzarà un tractament d&rsquo;aquest paquet per tal que inclogui l&rsquo;arxiu de configuració de l&rsquo;entorn de INT (reanomenarà el fitxer <em>Web.config.INT</em> a <em>Web.config</em>).</li>
-<li>Mitjançant la utilitat MSDeploy, es desplegarà aquest paquet a l&rsquo;IIS d&rsquo;Integració.
-<br /></li>
+<li>Mitjançant la utilitat MSDeploy, es desplegarà aquest paquet a l&rsquo;IIS d&rsquo;Integració.</li>
 </ul></li>
 
 <li><p><strong>Jobs de PRE</strong>:</p>
@@ -324,8 +323,7 @@ S&rsquo;ha perfeccionat l&rsquo;operativa dels jobs de desplegament d&rsquo;apli
 <ul>
 <li>Recollirà el paquet amb els binaris construïts del job de INT.</li>
 <li>Es realitzarà un tractament d&rsquo;aquest paquet per tal que inclogui l&rsquo;arxiu de configuració de l&rsquo;entorn de PRE (reanomenarà el fitxer <em>Web.config.PRE</em> a <em>Web.config</em>).</li>
-<li>Pujarà a l&rsquo;sFTP de CPD aquest paquet i obrirà una petició Remedy/correu a SAU demanant-ne el desplegament a PRE d&rsquo;aquest.
-<br /></li>
+<li>Pujarà a l&rsquo;sFTP de CPD aquest paquet i obrirà una petició Remedy/correu a SAU demanant-ne el desplegament a PRE d&rsquo;aquest.</li>
 </ul></li>
 
 <li><p><strong>Jobs de PRO</strong>:</p>
@@ -333,8 +331,7 @@ S&rsquo;ha perfeccionat l&rsquo;operativa dels jobs de desplegament d&rsquo;apli
 <ul>
 <li>Recollirà el paquet amb els binaris fet servir al job de PRE.</li>
 <li>Es realitzarà un tractament d&rsquo;aquest paquet per tal que inclogui l&rsquo;arxiu de configuració de l&rsquo;entorn de PRO (reanomenarà el fitxer <em>Web.config.PRO</em> a <em>Web.config</em>).</li>
-<li>Pujarà a l&rsquo;sFTP de CPD aquest paquet i obrirà una petició Remedy/correu a SAU demanant-ne el desplegament a PRO d&rsquo;aquest.
-<br /></li>
+<li>Pujarà a l&rsquo;sFTP de CPD aquest paquet i obrirà una petició Remedy/correu a SAU demanant-ne el desplegament a PRO d&rsquo;aquest.</li>
 </ul></li>
 </ul>
 

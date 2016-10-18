@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -309,17 +309,16 @@
 
 <p>És un pas més a la componentització i modularització dels sistemes en totes les seves capes, on tant el <strong>software</strong> (la meva aplicació) com els <strong>middlewares</strong> (el programari sobre el que corre l&rsquo;aplicació: servidor web, base de dades, &hellip;) i els <strong>entorns de desplegament</strong> (contenidors o runtimes) es poden dedicar en exclusiva a cada (micro)servei.</p>
 
-<h3 id="millors-pràctiques">Millors pràctiques</h3>
+<h3 id="millors-pràctiques:6daf3763b5f2c14e635687e9163b77c0">Millors pràctiques</h3>
 
 <ul>
 <li>un servei, un repositori independent: els serveis no comparteixen repositori (lògic)</li>
 <li>cada servei té un procés de construcció (build) independent</li>
 <li>es recomana desplegar en contenidors o runtimes estàndards</li>
-<li>s&rsquo;han de respectar els contractes/interfícies interns (diferents equips de desenvolupament?) i externs (clients o aplicacions terceres)
-<br /></li>
+<li>s&rsquo;han de respectar els contractes/interfícies interns (diferents equips de desenvolupament?) i externs (clients o aplicacions terceres)</li>
 </ul>
 
-<h3 id="beneficis">Beneficis</h3>
+<h3 id="beneficis:6daf3763b5f2c14e635687e9163b77c0">Beneficis</h3>
 
 <ul>
 <li><p>cada servei és relativament petit i pot ser desplegat independentment de la resta (això sí, s&rsquo;han de vigilar els canvis de contracte i per a això és important el versionat dels serveis).</p></li>
@@ -331,7 +330,7 @@
 <li><p>si un servei té problemes, no té per què veure&rsquo;s afectat tot el sistema, això sí, s&rsquo;ha de gestionar en els diferents serveis la tolerància a errors de serveis tercers.</p></li>
 </ul>
 
-<h3 id="aspectes-a-tenir-presents">Aspectes a tenir presents</h3>
+<h3 id="aspectes-a-tenir-presents:6daf3763b5f2c14e635687e9163b77c0">Aspectes a tenir presents</h3>
 
 <ul>
 <li><p>s&rsquo;ha d&rsquo;automatitzar TOT des del principi del projecte, ja que la coordinació és la clau de l&rsquo;èxit.</p></li>
@@ -349,7 +348,7 @@
 <li><p>estem acostumats a tenir les dades centralitzades mentre que en aquest patró estan descentralitzades. Per exemple estem acostumats a tenir eines de reporting o BI que accedeixen a un repositori centralitzat. En aquest cas, on els repositoris poden ser diferents i estar ubicats en diferents llocs, es pot optar per disposar d&rsquo;una BD que agregui la informació per al reporting.</p></li>
 </ul>
 
-<h3 id="canigó-micro-serveis">Canigó + (micro)serveis</h3>
+<h3 id="canigó-micro-serveis:6daf3763b5f2c14e635687e9163b77c0">Canigó + (micro)serveis</h3>
 
 <p>Com que estem parlant d&rsquo;un patró, la seva implementació es pot realitzar de diverses maneres. I com ja hem comentat, aquest patró permet la coexistència de diverses tecnologies.</p>
 

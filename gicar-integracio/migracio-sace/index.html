@@ -105,49 +105,49 @@
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/principis' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
+							<a target='_self' class="dropdown-toggle" href='/principis/' data-toggle='_dropdown'>Principis d&#39;arquitectura</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/bloc' data-toggle='_dropdown'>Bloc</a>
+							<a target='_self' class="dropdown-toggle" href='/bloc/' data-toggle='_dropdown'>Bloc</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+							<a target='_self' class="dropdown-toggle" href='/cloud/' data-toggle='_dropdown'>Cloud</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+							<a target='_self' class="dropdown-toggle" href='/canigo/' data-toggle='_dropdown'>Canigó</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+							<a target='_self' class="dropdown-toggle" href='/sic/' data-toggle='_dropdown'>SIC</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+							<a target='_self' class="dropdown-toggle" href='/sgde/' data-toggle='_dropdown'>SGDE</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+							<a target='_self' class="dropdown-toggle" href='/gicar/' data-toggle='_dropdown'>GICAR</a>
 						</li>
 
 						
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+							<a target='_self' class="dropdown-toggle" href='/cs/' data-toggle='_dropdown'>Centres de Suport</a>
 						</li>
 
 						
@@ -319,7 +319,7 @@
 
 <p>Aquest apartat pretén donar unes directrius bàsiques sobre com abordar la migració d’una aplicació web integrada amb SACE vers GICAR. Es començarà explicant com s’integren actualment les aplicacions amb el SACE, i a continuació s’exposarà quin és el mecanisme que es proposa per a migrar l’autenticació a GICAR.</p>
 
-<h2 id="funcionament-actual-de-l-autenticació-de-les-aplicacions-amb-el-sace">Funcionament actual de l’autenticació de les aplicacions amb el SACE</h2>
+<h2 id="funcionament-actual-de-l-autenticació-de-les-aplicacions-amb-el-sace:ea5959943b4a64acdbb250ba56a98bb4">Funcionament actual de l’autenticació de les aplicacions amb el SACE</h2>
 
 <p>La manera d’integrar-se amb el SACE, consistia en fer una crida HTTPS a una adreça, passant com a informació un fitxer XML, que de sortida contindrà les dades requerides.</p>
 
@@ -350,7 +350,7 @@
 
 <p><img src="/related/gicar/sacejsp.png" alt="Integració Aplicacions GICAR" /></p>
 
-<h2 id="proposta-de-canvi-de-migració-de-sace-cap-a-gicar">Proposta de canvi de migració de SACE cap a GICAR</h2>
+<h2 id="proposta-de-canvi-de-migració-de-sace-cap-a-gicar:ea5959943b4a64acdbb250ba56a98bb4">Proposta de canvi de migració de SACE cap a GICAR</h2>
 
 <p>A continuació es descriu una estratègia orientada a la substitució del SACE per GICAR per a les aplicacions que utilitzen SACE. Comentar que l’estratègia que es descriu a continuació és la recomanada per a fer aquest tipus de migracions de SACE a GICAR, però no és la forma recomanada per a realitzar les intragracions amb GICAR per una aplicació que es construeixi des de 0.</p>
 
@@ -359,19 +359,15 @@
 <p>A nivell d’aplicacions el canvi proposat es basa en substituir el formulari de login propietari de l’aplicació anterior, per un JSP, ASP, PHP (element dinàmic de servidor), que estarà protegit a nivell de SiteMinder, que es limiti a fer el següent:</p>
 
 <ol>
-<li>Capturar les següents capçaleres HTTP:</li>
-</ol>
+<li><p>Capturar les següents capçaleres HTTP:</p></li>
 
-<ul>
 <li><p>HTTP_GICAR_ID (conté el NIF de l’usuari) &ndash;&gt; 11112222W
 Captura obligatòria, a partir del qual s’obtindria el DNI de l’usuari autenticat.</p></li>
 
 <li><p>HTTP_GICAR (conté les dades de l’usuari al DC) = “CODIINTERN=NRDRJN0001;NIF=11112222W;EMAIL=mail.admin@gencat.net;UNITAT_MAJOR=CTTI;UNITAT_MENOR=CTTI Qualitat”
 Captura addicional, a partir del qual s’obtindrien altres dades de l’usuari autenticat.</p></li>
-</ul>
 
-<ol>
-<li>Generar la sessió de l’aplicació en base a aquests paràmetres obtinguts en anterioritat.</li>
+<li><p>Generar la sessió de l’aplicació en base a aquests paràmetres obtinguts en anterioritat.</p></li>
 </ol>
 
 <p>Aquest element JSP, ASP, PHP seria l’únic punt de l’aplicació que estaria protegit per SiteMinder, d’aquesta forma aquest JSP, quan fos accedit pel navegador de l’usuari, faria saltar el formulari de login de GICAR, i demanaria les credencials a l’usuari.</p>
