@@ -13,6 +13,7 @@ disqusShortname = "arquitectura-ctti"
 
 Paginate = 10
 
+
 [params]
 	noticieshome = 10
 	destacatshome = 4
@@ -80,4 +81,4 @@ Paginate = 10
 	Name = "Centres de Suport"
     Weight = 17
     Identifier = "suport"
-    URL = "/cs"                        
+    URL = "/cs"
