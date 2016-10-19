@@ -1,4 +1,4 @@
-box: wercker/default
+box: python/weezy
 build:
   steps:
     - arjen/hugo-build@1.13.1:
