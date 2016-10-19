@@ -10,5 +10,6 @@ deploy:
         packages: git ssh-client
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
-        domain: cs-canigo.github.io
+        domain: canigo.ctti.gencat.cat
         basedir: public
+        repo: cs-canigo/cs-canigo.github.io
