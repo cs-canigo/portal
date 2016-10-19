@@ -7,42 +7,42 @@ categories  = [""]
 +++
 
 
-Element            |Tipus       | Capa  |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
--------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
-Apache             | PaaS       |Web    |x      |x      |x      |x      |        |       |Inclou GICAR
-Apache             | Contenidor |Web    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
-Nginx              | xPaaS      |Web    |       |       |       |       |x       |       |   
-IIS                | PaaS       |Web    |x      |x      |x      |x      |        |       | 
-Tomcat             | PaaS       |App    |x      |x      |x      |x      |        |       | 
-Tomcat             | xPaaS      |App    |       |       |x      |       |x       |       | 
-Tomcat             | Contenidor |App    |       |       |x      |       |x       |       | 
-Weblogic           | PaaS       |App    |x      |x      |x      |x      |        |       | 
-Websphere          | PaaS       |App    |x      |x      |x      |x      |        |       | 
-Websphere          | xPaaS      |App    |       |       |       |       |x       |       | 
-HAProxy            | Contenidor |-      |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
-Java               | Contenidor |-      |       |       |x      |       |x       |       | 
-JBoss              | PaaS       |App    |x      |x      |x      |x      |        |       | 
-JBoss              | xPaaS      |App    |       |       |x      |       |        |       | 
-.Net               | PaaS       |App    |x      |x      |x      |x      |        |       | 
-.Net               | xPaaS      |App    |       |       |       |       |x       |x      | 
-NodeJS             | xPaaS      |App    |       |       |x      |       |x       |       | 
-NodeJS             | Contenidor |App    |       |       |x      |       |x       |       | 
-PHP                | PaaS       |App    |x      |       |       |       |        |       |    
-PHP                | xPaaS      |App    |       |       |x      |       |x       |       |    
-PHP                | Contenidor |App    |       |       |x      |       |x       |       |    
-OracleDB           | PaaS       |DB     |x      |x      |x      |x      |        |       |    
-MySQL              | PaaS       |DB     |x      |x      |x      |x      |        |       |    
-MySQL              | Contenidor |DB     |       |       |x      |       |x       |       |    
-MySQL              | DBaaS      |DB     |       |       |       |       |x       |       |Beta    
-SQLServer          | PaaS       |DB     |x      |x      |x      |x      |        |       |    
-SQLServer          | DBaaS      |DB     |       |       |       |       |        |x      | 
-MongoDB            | DBaaS      |DB     |       |       |       |       |x       |       |    
-MongoDB            | PaaS       |DB     |x      |       |       |x      |        |       |Adhoc. En definició
-PostgreSQL         | Contenidor |DB     |       |       |x      |       |x       |       |    
-PostgreSQL         | DBaaS      |DB     |       |       |       |       |x       |       |    
-ElasticSearch      | DBaaS      |DB     |       |       |       |       |x       |       |    
-Contenidors a mida | Contenidor |-      |       |       |x      |       |x       |       |
-Màquines virtuals  | IaaS       |-      |x      |x      |x      |x      |        |x      |  
+Element            |Tipus       | Capa  |Versió |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
+-------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
+Apache             | PaaS       |Web    |2.2    |x      |x      |x      |x      |        |       |Inclou GICAR
+Apache             | Contenidor |Web    |2.2    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
+Nginx              | xPaaS      |Web    |1.8    |       |       |       |       |x       |       |   
+IIS                | PaaS       |Web    |8.5    |x      |x      |x      |x      |        |       | 
+Tomcat             | PaaS       |App    |7      |x      |x      |x      |x      |        |       | 
+Tomcat             | xPaaS      |App    |7      |       |       |x      |       |x       |       | 
+Tomcat             | Contenidor |App    |7      |       |       |x      |       |x       |       | 
+Weblogic           | PaaS       |App    |12.1   |x      |x      |x      |x      |        |       | 
+Websphere          | PaaS       |App    |8.5    |x      |x      |x      |x      |        |       | 
+Websphere          | xPaaS      |App    |-    |       |       |       |       |x       |       | 
+HAProxy            | Contenidor |-      |1.5.1  |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
+Java               | Contenidor |-      |7      |       |       |x      |       |x       |       | 
+JBoss              | PaaS       |App    |6.x    |x      |x      |x      |x      |        |       | 
+JBoss              | xPaaS      |App    |6      |       |       |x      |       |        |       | 
+.Net               | PaaS       |App    |4.5.2  |x      |x      |x      |x      |        |       | 
+.Net               | xPaaS      |App    |       |       |       |       |       |x       |x      | 
+NodeJS             | xPaaS      |App    |4.2    |       |       |x      |       |x       |       | 
+NodeJS             | Contenidor |App    |4.2    |       |       |x      |       |x       |       | 
+PHP                | PaaS       |App    |5.3    |x      |       |       |       |        |       |    
+PHP                | xPaaS      |App    |>5.5   |       |       |x      |       |x       |       |    
+PHP                | Contenidor |App    |5.3    |       |       |x      |       |x       |       |    
+OracleDB           | PaaS       |DB     |12.1   |x      |x      |x      |x      |        |       |    
+MySQL              | PaaS       |DB     |5.7    |x      |x      |x      |x      |        |       |    
+MySQL              | Contenidor |DB     |5.7    |       |       |x      |       |x       |       |    
+MySQL              | DBaaS      |DB     |-      |       |       |       |       |x       |       |Beta    
+SQLServer          | PaaS       |DB     |2012   |x      |x      |x      |x      |        |       |    
+SQLServer          | DBaaS      |DB     |1.x    |       |       |       |       |        |x      | 
+MongoDB            | DBaaS      |DB     |1.x    |       |       |       |       |x       |       |    
+MongoDB            | PaaS       |DB     |1.x    |x      |       |       |x      |        |       |Adhoc. En definició
+PostgreSQL         | Contenidor |DB     |9.5.3  |       |       |x      |       |x       |       |    
+PostgreSQL         | DBaaS      |DB     |9.5.4  |       |       |       |       |x       |       |    
+ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       |x       |       |    
+Contenidors a mida | Contenidor |-      |-      |       |       |x      |       |x       |       |
+Màquines virtuals  | IaaS       |-      |-      |x      |x      |x      |x      |        |x      |  
 
 
 Llegenda "Tipus":
@@ -69,12 +69,12 @@ Llegenda "Tipus":
 	table tr:nth-child(1) th:nth-child(1), 
 	table tr:nth-child(1) th:nth-child(2), 
 	table tr:nth-child(1) th:nth-child(3),
-	table tr:nth-child(2) th:nth-child(3), 
-	table tr:nth-child(2) th:nth-child(7), 
-	table tr:nth-child(2) th:nth-child(9),
-	table tr td:nth-child(3), 
-	table tr td:nth-child(7), 
-	table tr td:nth-child(9){
+	table tr:nth-child(2) th:nth-child(4), 
+	table tr:nth-child(2) th:nth-child(8), 
+	table tr:nth-child(2) th:nth-child(10),
+	table tr td:nth-child(4), 
+	table tr td:nth-child(8), 
+	table tr td:nth-child(10){
 		border-right: 3px solid #aaa;
 	}
 </style>
@@ -95,6 +95,7 @@ Llegenda "Tipus":
 	        initComplete: function () {
 	            this.api().columns().every( function () {
 	                var column = this;
+	                console.log(column.column())
 	                var select = $('<select><option value=""></option></select>')
 	                    .appendTo( $(column.header()) )
 	                    .on( 'change', function () {
@@ -113,8 +114,10 @@ Llegenda "Tipus":
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='3'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
 </script>
+
+ 
