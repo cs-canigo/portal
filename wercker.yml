@@ -11,4 +11,4 @@ deploy:
         token: $GIT_TOKEN
         domain: canigo.ctti.gencat.cat
         repo: cs-canigo/cs-canigo.github.io
-        basedir: ../web-canigo-public
+        basedir: public
