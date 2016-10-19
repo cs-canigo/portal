@@ -58,7 +58,7 @@ Aquest connector permet realitzar les següents accions:
 
 Es pot trobar el codi font i binaris referent a aquest component a la següent url:
 
-http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/1.1.0/
+http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/
 
 ### Requeriments
 
