@@ -1,4 +1,4 @@
-box: default
+box: pjvds/golang
 build:
   steps:
     - arjen/hugo-build@1.13.1:
