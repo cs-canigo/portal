@@ -2,7 +2,7 @@
 <html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
-	<title>Configuració Entorn Desenvolupament</title>
+	<title>Cercador</title>
 		<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +12,7 @@
 	<script src="/js/jquery.min.js" type="text/javascript"></script>
 
 	<script>
-		document.write("<meta name=\"titol\" content=\"Configuració Entorn Desenvolupament\" />");
+		document.write("<meta name=\"titol\" content=\"Cercador\" />");
 		document.write("<meta name=\"description\" content=\"\" />");
 	</script>
 
@@ -75,21 +75,7 @@
 								data-target=".navbar-collapse" data-toggle="collapse"
 								title="Tancar"></button>
 						</div>
-
-						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
-							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
-								<div class="form-group">
-									<label class="hidden" for="cerca2">Cerca</label>
-									<input id="cerca2" class="form-control" type="search" 
-									placeholder="Cerca" name="q" title="Cerca">
-									<input class="btn btn-default" type="submit" title="Cerca" value="">
-								</div>
-							</form>
-
-							
-
-						</div>
-
+						
 					</div>
 					<div class="col-xs-12 hidden-xs" id="nomPortal">
                     	<span class="titol-cap-nou">Arquitectura CTTI</span>
@@ -178,93 +164,10 @@
 									</li>
 									<li class="breadcrumbs2">
 									
-										<a href="/canigo-download-related">
-											
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-										</a>
 										
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	<a href="/canigo/">Framework Canigó</a> </li>
-	<li>
-		<a href="/canigo/download/">Descàrrega dels binaris de Canigó i de les API’s de suport</a>
-	</li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+											Cercador
+										
 									
-									</li>
-									
-									<li>
-										Configuració Entorn Desenvolupament
 									</li>
 									
 
@@ -272,7 +175,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt=".title">
 									
-										Configuració Entorn Desenvolupament
+										Cercador
 									
 								</h1>
 
@@ -283,6 +186,17 @@
 									
 								
 
+								
+								
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="return false;">
+									<div class="form-group">
+										<input type="search" name="q" id="query"
+											title="Introdu&iuml;u les paraules a cercar"
+											class="form-control"  placeholder="Cerca..." /> 
+										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+									</div>								
+								</form>
 																	
 
 							</div>
@@ -304,7 +218,45 @@
 
 					
 
-						
+						<section class="rslt" id="cercador_text">
+
+<div class="column hidden-xs ">
+    <p class="txt_result count_resultats"></p>  
+</div>
+
+<div class="row">
+    <div class="llistat_destacat_text col-md-12 col-xs-12 column ">
+            <div class="ajax_loader">
+                <img src="/img/ajax_loader.gif" alt="" style="width:32px" />
+            </div>
+            <ul id="resultats" class="llistat_destacat_text_cont list-group">
+
+            </ul>
+
+            <div class="column paginacio">
+                <ul class="pagination"> 
+
+                </ul>   
+            </div>  
+    </div>  
+</div>
+
+</section>
+
+<div id="template_result" class="hidden">
+    <div class="destacat_text_cont">
+        <h2>
+            <a href="#">{{title}}</a>
+        </h2>
+    
+        <p>
+            {{description}}
+        </p>
+    </div>
+</div>
+
+<script src="/js/cercador.js"></script>
+
 
 					
 
@@ -359,8 +311,6 @@
 	</div>
 
 <script src="/js/master.min.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 <script src="/js/custom.js" type="text/javascript"></script>
 
 
