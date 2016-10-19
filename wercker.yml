@@ -1,4 +1,4 @@
-box: pjvds/golang
+box: alpine
 build:
   steps:
     - arjen/hugo-build@1.13.1:
