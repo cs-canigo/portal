@@ -1,4 +1,4 @@
-box: alpine
+box: debian
 build:
   steps:
     - arjen/hugo-build@1.13.1:
