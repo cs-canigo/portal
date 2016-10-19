@@ -35,9 +35,9 @@ MySQL              | PaaS       |DB     |5.7    |x      |x      |x      |x      
 MySQL              | Contenidor |DB     |5.7    |       |       |x      |       |x       |       |    
 MySQL              | DBaaS      |DB     |-      |       |       |       |       |x       |       |Beta    
 SQLServer          | PaaS       |DB     |2012   |x      |x      |x      |x      |        |       |    
-SQLServer          | DBaaS      |DB     |1.x    |       |       |       |       |        |x      | 
-MongoDB            | DBaaS      |DB     |1.x    |       |       |       |       |x       |       |    
-MongoDB            | PaaS       |DB     |1.x    |x      |       |       |x      |        |       |Adhoc. En definició
+SQLServer          | DBaaS      |DB     |v12    |       |       |       |       |        |x      | 
+MongoDB            | DBaaS      |DB     |3.2    |       |       |       |       |x       |       |    
+MongoDB            | PaaS       |DB     |3.2    |x      |       |       |x      |        |       |Adhoc. En definició
 PostgreSQL         | Contenidor |DB     |9.5.3  |       |       |x      |       |x       |       |    
 PostgreSQL         | DBaaS      |DB     |9.5.4  |       |       |       |       |x       |       |    
 ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       |x       |       |    
@@ -93,9 +93,12 @@ Llegenda "Tipus":
 	        	"zeroRecords": "No s'han trobat registres"
 	        },
 	        initComplete: function () {
-	            this.api().columns().every( function () {
+	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                console.log(column.column())
+	                if(col_index===3){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+	                }
 	                var select = $('<select><option value=""></option></select>')
 	                    .appendTo( $(column.header()) )
 	                    .on( 'change', function () {
