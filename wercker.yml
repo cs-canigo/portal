@@ -10,5 +10,5 @@ deploy:
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: canigo.ctti.gencat.cat
-        repo: cs-canigo/cs-canigo.github.io
+        #repo: cs-canigo/cs-canigo.github.io
         basedir: public
