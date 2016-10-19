@@ -1,0 +1,14 @@
+box: wercker/default
+build:
+  steps:
+    - arjen/hugo-build@1.13.1:
+        version: "0.15"
+        
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: cs-canigo.github.io
+        basedir: public        
