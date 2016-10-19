@@ -4,7 +4,8 @@ title = "Arquitectura CTTI. Generalitat de Catalunya"
 
 contentdir = "content"
 layoutdir = "layouts"
-publishdir = "../web-canigo-public"
+#publishdir = "../web-canigo-public"
+publishdir = "public"
 builddrafts = false
 baseurl = "http://canigo.ctti.gencat.cat"
 canonifyurls = false
