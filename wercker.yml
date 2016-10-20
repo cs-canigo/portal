@@ -11,3 +11,8 @@ deploy:
         token: $GIT_TOKEN
         domain: canigo.ctti.gencat.cat
         basedir: public
+    - script:
+        name: echo nodejs information
+        code: |
+          echo "npm install markdown2json"        
+          echo "npm install algoliasearch"                  
