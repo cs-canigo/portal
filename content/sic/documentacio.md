@@ -1,7 +1,7 @@
 +++
 date        = "2015-06-26"
 title       = "Documentació"
-description = "Documentació de SIC"
+description = "Formularis, how to i manuals"
 sections    = "SIC"
 enllac		= "/sic-documentacio/"
 no_index 	= true

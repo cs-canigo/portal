@@ -4,8 +4,8 @@
 git pull
 
 # Actualitzem index algolia
-cd ../web-canigo
-node _tasks/algolia/index-algolia.js
+#cd ../web-canigo
+#node _tasks/algolia/index-algolia.js
 
 # Fem el commit i el push dels fonts
 git add -A
