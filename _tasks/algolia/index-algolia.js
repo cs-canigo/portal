@@ -14,10 +14,10 @@ algolia.setSettings({
 	'removeStopWords':[true,'ca']
 });
 
-var _indexDir = "./";
+var _indexDir = "../../";
 
 var indexSetup = {
-	"dir" : "../content/",
+	"dir" : "../../content/",
 	"index_empty_content" : true,
 	"excludeIfProps" : ["enllac","no_index"],
 	"excludes" : [
