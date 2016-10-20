@@ -15,8 +15,8 @@ rem Actualitzem els canvis que hagin pogut fer els companys
 git pull >nul
 
 rem Actualitzem index algolia
-cd ../web-canigo
-node _tasks/algolia/index-algolia.js
+rem cd ../web-canigo
+rem node _tasks/algolia/index-algolia.js
 
 rem Fem el commit i el push dels fonts
 git add -A >nul

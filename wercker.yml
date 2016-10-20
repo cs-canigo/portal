@@ -14,7 +14,7 @@ deploy:
     - script:
         name: echo nodejs information
         code: |
+          cd _tasks/algolia/
           npm install markdown2json
           npm install algoliasearch
-          pwd
-          node _tasks/algolia/index-algolia.js
+          node index-algolia.js
