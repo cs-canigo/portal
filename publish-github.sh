@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Actualitzem els canvis que hagin pogut fer els companys
 git pull
 
