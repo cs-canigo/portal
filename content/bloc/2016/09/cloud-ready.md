@@ -8,7 +8,7 @@ imatge 		= "/images/bloc/cloud-ready.png"
 key         = "OCTUBRE2016"
 +++
 
-Per tal que una aplicació pugui ser desplegada al **Cloud** i s'aprofiti dels beneficis que aquest aporta, cal que hagi estat dissenyada amb aquesta finalitat. Aquest disseny, normalment, és més complex que el disseny que es pugui realitzar per una aplicació destinada a ser desplegada en servidors "on-premise". Són molts els avantatges d'un entorn Cloud (flexibilitat, agilitat en aprovisionament, facilitat per desplegament continu,...) que fan que l'esforç en la **definició de l'arquitectura** valgui la pena.
+Per tal que una aplicació pugui ser desplegada al **Cloud** i s'aprofiti dels beneficis que aquest aporta, cal que hagi estat dissenyada amb aquesta finalitat. Aquest disseny, normalment, és més complex que el disseny que es pugui realitzar per una aplicació destinada a ser desplegada en servidors "on-premise". Són molts els avantatges d'un entorn Cloud (flexibilitat, agilitat en aprovisionament, facilitat per desplegament continu, ...) que fan que l'esforç en la **definició de l'arquitectura** valgui la pena.
 
 A continuació s'enumeren diferents conceptes a tenir en compte en el disseny d'una aplicació que vulgui estar preparada per anar al Cloud:
 
