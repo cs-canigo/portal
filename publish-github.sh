@@ -13,16 +13,16 @@ git commit -m "new version"
 git push
 
 # Generem l'HTML
-hugo
+##hugo
 
 # Gestionem els possibles conflictes de majúscules i minúscules
-cd ../web-canigo-public
-find . -name "*Conflicto*"  -exec rm -rf {} \;
-find . -name "*conflict*"  -exec rm -rf {} \;
+##cd ../web-canigo-public
+##find . -name "*Conflicto*"  -exec rm -rf {} \;
+##find . -name "*conflict*"  -exec rm -rf {} \;
 
 # Actualitzem els canvis del projecte generat
-git add -A
-git commit -m "new version"
-git push origin master --force
+##git add -A
+##git commit -m "new version"
+##git push origin master --force
 
 echo -e '\n'

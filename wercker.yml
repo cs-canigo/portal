@@ -1,8 +1,8 @@
-box: debian
+box: node:4.2.6-slim
 build:
   steps:
     - arjen/hugo-build@1.13.1:
-        version: "0.15"
+        version: "0.17"
 deploy:
   steps:
     - install-packages:
@@ -10,5 +10,4 @@ deploy:
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: canigo.ctti.gencat.cat
-        #repo: cs-canigo/cs-canigo.github.io
         basedir: public
