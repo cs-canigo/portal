@@ -12,7 +12,7 @@ deploy:
         domain: canigo.ctti.gencat.cat
         basedir: public
     - script:
-        name: echo nodejs information
+        name: Algolia Indexing
         code: |
           cd _tasks/algolia/
           npm install markdown2json
