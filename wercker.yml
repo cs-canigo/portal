@@ -17,4 +17,6 @@ deploy:
           cd _tasks/algolia/
           npm install markdown2json
           npm install algoliasearch
+          ls
+          ls ../
           node index-algolia.js
