@@ -7,7 +7,7 @@ taxonomies  = []
 weight 	    = 1
 +++
 
-Des del següent [enllaç](http://canigo.ctti.gencat.cat/docs-canigo-v2/) es pot accedir a la darrera versió de la documentació.
+Des del següent [enllaç](http://cs-canigo.github.io/docs-canigo-v2/) es pot accedir a la darrera versió de la documentació.
 
 ### Changelog
 
@@ -22,4 +22,3 @@ Des del següent [enllaç](http://canigo.ctti.gencat.cat/docs-canigo-v2/) es pot
 [1.0.0](https://github.com/cs-canigo/docs.canigo2.cs-canigo.github.io/archive/v1.0.0.zip) (6/2/2015)
 
 - Versió inicial exportada del Confluence
-
