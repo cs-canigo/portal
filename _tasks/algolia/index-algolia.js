@@ -51,6 +51,8 @@ function runIndex(){
 
 			if(!old){
 				console.log("no index file");
+				//TODO: delete and index all
+				refreshIndex(_newIdx);
 			}else{
 				var _readedIndex = {};
 				try{
@@ -83,8 +85,22 @@ function runIndex(){
 	);
 }
 
-/* Compare new index with oldest and get files to insert and to delete */
+/* refresh index by cleaning and indexing all*/
+function refreshIndex(_index){
+	algolia.deleteByQuery("", function(err) {
+		if (!err) {
+			console.log('success deleting all');
+		}
+		algolia.saveObjects(_index, function(err, content) {
+			if (!err) {
+				console.log('success indexing all');
+			}
+			console.log(content);
+		});
+	});
+}
 
+/* Compare new index with oldest and get files to insert and to delete */
 function compareIndexs(_oldIdx, _newIdx){
 	var compareObj;
 	var toIndex = [];
