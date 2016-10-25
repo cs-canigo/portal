@@ -10,7 +10,7 @@ weight 		= 1
 
 GICAR disposa d’una eina, el SiteMinder, per facilitar l’autenticació d’aplicacions web. A continuació es veurà que és Siteminder, quines són les seves característiques principals, els elements dels quals es composa (Servidor de Polítiques, Agents, Servidor Web i els diferents directoris) i les tasques que s’han de realitzar per tal d’integrar-ne una aplicació. 
 
-A part de tots el punts anteriors que enfoquen l’autenticació de l’usuari contra el Directori Corporatiu de la Generalitat (empleat públic de la Generalitat), al punt 3.6, s’exposaran quins són els passos a seguir per tal de que GICAR pugui proporcionar a una aplicació el servei d’autenticació anònima mitjançant l’ús d’un certificat digital. 
+A part de tots el punts anteriors que enfoquen l’autenticació de l’usuari contra el Directori Corporatiu de la Generalitat (empleat públic de la Generalitat), s’exposaran quins són els passos a seguir per tal de que GICAR pugui proporcionar a una aplicació el servei d’autenticació anònima mitjançant l’ús d’un certificat digital. 
 
 En cas que l’aplicació a integrar tingui la necessitat de que sigui accedida per usuaris de la Generalitat, i per usuaris de les administracions locals catalanes (AAL), GICAR permet també autenticar aquests usuaris gràcies al servei de validació que proporciona GICAR contra el Directori del Consorci AOC (EACAT). Podeu trobar informació de com fer aquesta integració al punt 3.7.
 
@@ -60,4 +60,3 @@ En línies generals, SiteMinder intercepta totes les peticions rebudes pel servi
 - Directori Corporatiu: és el repositori central d’identitats utilitzat per SiteMinder per comprovar la validesa o no d’una identitat que intenta accedir a una aplicació web protegida. En el Directori Corporatiu és on resideix la contrasenya única utilitzada per validar totes les aplicacions integrades amb SiteMinder.
 
 - Servidor Web: es on resideix el frontal de l’aplicació web a protegir i on cal instal.lar l’agent de SiteMinder.
-
