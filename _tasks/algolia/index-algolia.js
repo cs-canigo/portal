@@ -4,7 +4,8 @@ if(!process.env.ALGOLIA_API_KEY){
 }
 
 var indexer = require("markdown2json").Indexer;
-var fs = require("fs")
+var fs = require("fs");
+var request = require('request');
 
 var algoliasearch = require('algoliasearch');
 var client = algoliasearch('EWLW9DD0B6', process.env.ALGOLIA_API_KEY);
@@ -14,7 +15,7 @@ algolia.setSettings({
 	'removeStopWords':[true,'ca']
 });
 
-var _indexDir = "../../";
+var _indexDir = "../../public/"; //read index from and write to...
 
 var indexSetup = {
 	"dir" : "../../content/",
@@ -28,43 +29,59 @@ var indexSetup = {
 
 indexer = new indexer(indexSetup);
 
-indexer.run().then(
+if (!fs.existsSync(_indexDir)){
+    fs.mkdirSync(_indexDir);
+}
 
-	function(_newIdx){
-		var old = readFile(_indexDir+"index.json");
+//gets current index
+request('https://raw.githubusercontent.com/cs-canigo/portal/gh-pages/index.json', function (error, response, body) {
+  if (!error && response.statusCode == 200) {
+	fs.writeFileSync(_indexDir+"index.json", body);
+  }
+  runIndex();
+});
 
-		if(!old){
-			console.log("no index file");
-		}else{
-			var _readedIndex = {};
-			try{
-				_readedIndex = JSON.parse(old);
-			}catch(e){
-				//...
+function runIndex(){
+
+	indexer.run().then(
+
+		function(_newIdx){
+
+			var old = readFile(_indexDir+"index.json");
+
+			if(!old){
+				console.log("no index file");
+			}else{
+				var _readedIndex = {};
+				try{
+					_readedIndex = JSON.parse(old);
+				}catch(e){
+					//...
+				}
+				var compare = compareIndexs(_readedIndex, _newIdx);
+				console.log("INSERT: " + compare.index.length)
+				console.log("DELETE: " + compare.del.length)
+
+				if(compare.index.length>0){
+					saveAlgolia(compare.index)
+				}
+
+				if(compare.del.length>0){
+					deleteAlgolia(compare.del);
+				}
 			}
-			var compare = compareIndexs(_readedIndex, _newIdx);
-			console.log("INSERT: " + compare.index.length)
-			console.log("DELETE: " + compare.del.length)
 
-			if(compare.index.length>0){
-				saveAlgolia(compare.index)
-			}
-
-			if(compare.del.length>0){
-				deleteAlgolia(compare.del);
+			if(!compare || compare.index.length>0 || compare.del.length>0){
+				saveIndexLocal(_indexDir+"index.json", _newIdx);
 			}
 		}
 
-		if(!compare || compare.index.length>0 || compare.del.length>0){
-			saveIndexLocal(_indexDir+"index.json", _newIdx);
+	).catch(
+		function(err){
+			console.log(err);
 		}
-	}
-
-).catch(
-	function(err){
-		console.log(err);
-	}
-);
+	);
+}
 
 /* Compare new index with oldest and get files to insert and to delete */
 
