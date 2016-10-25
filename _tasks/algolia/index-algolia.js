@@ -51,7 +51,6 @@ function runIndex(){
 
 			if(!old){
 				console.log("no index file");
-				//TODO: delete and index all
 				refreshIndex(_newIdx);
 			}else{
 				var _readedIndex = {};
