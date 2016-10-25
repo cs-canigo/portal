@@ -12,7 +12,7 @@ GICAR disposa d’una eina, el SiteMinder, per facilitar l’autenticació d’a
 
 A part de tots el punts anteriors que enfoquen l’autenticació de l’usuari contra el Directori Corporatiu de la Generalitat (empleat públic de la Generalitat), s’exposaran quins són els passos a seguir per tal de que GICAR pugui proporcionar a una aplicació el servei d’autenticació anònima mitjançant l’ús d’un certificat digital. 
 
-En cas que l’aplicació a integrar tingui la necessitat de que sigui accedida per usuaris de la Generalitat, i per usuaris de les administracions locals catalanes (AAL), GICAR permet també autenticar aquests usuaris gràcies al servei de validació que proporciona GICAR contra el Directori del Consorci AOC (EACAT). Podeu trobar informació de com fer aquesta integració al punt 3.7.
+En cas que l’aplicació a integrar tingui la necessitat de que sigui accedida per usuaris de la Generalitat, i per usuaris de les administracions locals catalanes (AAL), GICAR permet també autenticar aquests usuaris gràcies al servei de validació que proporciona GICAR contra el Directori del Consorci AOC (EACAT). 
 
 Així doncs i a mode de resum, GICAR permet l’autenticació als següents col·lectius i amb les següents modalitats:
 
