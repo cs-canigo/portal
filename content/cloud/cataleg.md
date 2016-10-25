@@ -114,3 +114,5 @@ Més informació sobre Docker: https://www.docker.com/
 - MongoDB, disponible a **cloud públic**
 - ElasticSearch, disponible a **cloud públic**
 - PostgreSQL, disponible a **cloud públic**
+- MySQL, disponible a **cloud públic**
+- SQLServer, disponible a **cloud públic**
