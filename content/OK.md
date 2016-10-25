@@ -8,3 +8,4 @@ no_index 	= true
 # El formulari s'ha enviat correctament
 
 <a href="#" onclick="history.go(-1)">Torna</a>
+
