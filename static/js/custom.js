@@ -39,7 +39,7 @@ $(function(){
 
 });
 
-var client = algoliasearch('EWLW9DD0B6', 'fb84eb986e0a351c3f12f948e3ee99b8')
+var client = algoliasearch('WG3M5KTTLD', '74e38a958350c6495e632e89c5655c8c')
 var index = client.initIndex('arquitectura');
 autocomplete('#cerca2', {hint: false}, [
 {
