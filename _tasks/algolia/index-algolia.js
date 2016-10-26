@@ -35,13 +35,15 @@ if (!fs.existsSync(_indexDir)){
 
 //gets current index
 request('https://raw.githubusercontent.com/cs-canigo/portal/gh-pages/index.json', function (error, response, body) {
-  fs.unlinkSync(_indexDir+"index.json");
-  if (!error && response.statusCode == 200) {
-	fs.writeFileSync(_indexDir+"index.json", body);
-  }else{
-  	console.log("error retrieving index.json");
-  }
-  runIndex();
+	if (!fs.existsSync(_indexDir+"index.json")){
+		fs.unlinkSync(_indexDir+"index.json");
+	}
+	if (!error && response.statusCode == 200) {
+		fs.writeFileSync(_indexDir+"index.json", body);
+	}else{
+		console.log("error retrieving index.json");
+	}
+	runIndex();
 });
 
 function runIndex(){
