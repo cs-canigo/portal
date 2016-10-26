@@ -24,8 +24,8 @@ function replaceHighLight(content){
 
 /* global instantsearch */
 app({
-  appId: 'EWLW9DD0B6',
-  apiKey: 'fb84eb986e0a351c3f12f948e3ee99b8',
+  appId: 'WG3M5KTTLD',
+  apiKey: '74e38a958350c6495e632e89c5655c8c',
   indexName: 'arquitectura'
 });
 
