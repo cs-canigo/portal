@@ -35,7 +35,7 @@ if (!fs.existsSync(_indexDir)){
 
 //gets current index
 request('https://raw.githubusercontent.com/cs-canigo/portal/gh-pages/index.json', function (error, response, body) {
-	if (!fs.existsSync(_indexDir+"index.json")){
+	if(fs.existsSync(_indexDir+"index.json")){
 		fs.unlinkSync(_indexDir+"index.json");
 	}
 	if (!error && response.statusCode == 200) {
