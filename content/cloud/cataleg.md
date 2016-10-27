@@ -16,7 +16,6 @@ En aquest sentit, treballarem amb dos elements principals - xPaaS i Docker - i a
 
 Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry i OpenShift: 
 
-
 - **buildpack** (Cloud Foundry), disponible a **cloud públic**
 	* Liberty for Java
 	* Node.js
@@ -114,3 +113,5 @@ Més informació sobre Docker: https://www.docker.com/
 - MongoDB, disponible a **cloud públic**
 - ElasticSearch, disponible a **cloud públic**
 - PostgreSQL, disponible a **cloud públic**
+- MySQL, disponible a **cloud públic**
+- SQLServer, disponible a **cloud públic**

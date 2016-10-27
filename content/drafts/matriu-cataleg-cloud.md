@@ -1,7 +1,7 @@
 +++
 date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
-description = ""
+description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
 sections    = ""
 categories  = [""]
 +++
@@ -18,7 +18,7 @@ Tomcat             | xPaaS      |App    |7      |       |       |x      |       
 Tomcat             | Contenidor |App    |7      |       |       |x      |       |x       |       | 
 Weblogic           | PaaS       |App    |12.1   |x      |x      |x      |x      |        |       | 
 Websphere          | PaaS       |App    |8.5    |x      |x      |x      |x      |        |       | 
-Websphere          | xPaaS      |App    |-    |       |       |       |       |x       |       | 
+Websphere          | xPaaS      |App    |-      |       |       |       |       |x       |       | 
 HAProxy            | Contenidor |-      |1.5.1  |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
 Java               | Contenidor |-      |7      |       |       |x      |       |x       |       | 
 JBoss              | PaaS       |App    |6.x    |x      |x      |x      |x      |        |       | 
@@ -122,5 +122,3 @@ Llegenda "Tipus":
     	});
 	});
 </script>
-
- 
