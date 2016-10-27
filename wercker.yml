@@ -7,14 +7,16 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - lukevivier/gh-pages@0.2.1:
-        token: $GIT_TOKEN
-        domain: canigo.ctti.gencat.cat
-        basedir: public
+    # indexem primer i generem l'index.json que recuperarem a la propera indexació per a comparar els canvis.
     - script:
         name: Algolia Indexing
         code: |
           cd _tasks/algolia/
           npm install markdown2json
           npm install algoliasearch
+          npm install request
           node index-algolia.js
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: canigo.ctti.gencat.cat
+        basedir: public

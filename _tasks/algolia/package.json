@@ -5,6 +5,7 @@
   "main": "index-algolia.js",
   "dependencies": {
     "markdown2json": "*",
-    "algoliasearch": "^3.17.0"
+    "algoliasearch": "^3.17.0",
+    "request": "^2.76.0"
   }
 }

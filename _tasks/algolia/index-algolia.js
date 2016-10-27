@@ -4,17 +4,19 @@ if(!process.env.ALGOLIA_API_KEY){
 }
 
 var indexer = require("markdown2json").Indexer;
-var fs = require("fs")
+var fs = require("fs");
+var del = require("del");
+var request = require('request');
 
 var algoliasearch = require('algoliasearch');
-var client = algoliasearch('EWLW9DD0B6', process.env.ALGOLIA_API_KEY);
+var client = algoliasearch('WG3M5KTTLD', process.env.ALGOLIA_API_KEY);
 var algolia = client.initIndex('arquitectura');
 
 algolia.setSettings({
 	'removeStopWords':[true,'ca']
 });
 
-var _indexDir = "../../";
+var _indexDir = "../../public/"; //read index from and write to...
 
 var indexSetup = {
 	"dir" : "../../content/",
@@ -28,46 +30,82 @@ var indexSetup = {
 
 indexer = new indexer(indexSetup);
 
-indexer.run().then(
+if (!fs.existsSync(_indexDir)){
+    fs.mkdirSync(_indexDir);
+}
 
-	function(_newIdx){
-		var old = readFile(_indexDir+"index.json");
+//gets current index
+request('https://raw.githubusercontent.com/cs-canigo/portal/gh-pages/index.json', function (error, response, body) {
+	if(fs.existsSync(_indexDir+"index.json")){
+		fs.unlinkSync(_indexDir+"index.json");
+	}
+	if (!error && response.statusCode == 200) {
+		fs.writeFileSync(_indexDir+"index.json", body);
+	}else{
+		console.log("error retrieving index.json");
+	}
+	runIndex();
+});
 
-		if(!old){
-			console.log("no index file");
-		}else{
-			var _readedIndex = {};
-			try{
-				_readedIndex = JSON.parse(old);
-			}catch(e){
-				//...
+function runIndex(){
+
+	indexer.run().then(
+
+		function(_newIdx){
+
+			var old = readFile(_indexDir+"index.json");
+
+			if(!old){
+				console.log("no index file");
+				refreshIndex(_newIdx);
+			}else{
+				var _readedIndex = {};
+				try{
+					_readedIndex = JSON.parse(old);
+				}catch(e){
+					//...
+				}
+				var compare = compareIndexs(_readedIndex, _newIdx);
+				console.log("INSERT: " + compare.index.length)
+				console.log("DELETE: " + compare.del.length)
+
+				if(compare.index.length>0){
+					saveAlgolia(compare.index)
+				}
+
+				if(compare.del.length>0){
+					deleteAlgolia(compare.del);
+				}
 			}
-			var compare = compareIndexs(_readedIndex, _newIdx);
-			console.log("INSERT: " + compare.index.length)
-			console.log("DELETE: " + compare.del.length)
 
-			if(compare.index.length>0){
-				saveAlgolia(compare.index)
-			}
-
-			if(compare.del.length>0){
-				deleteAlgolia(compare.del);
+			if(!compare || compare.index.length>0 || compare.del.length>0){
+				saveIndexLocal(_indexDir+"index.json", _newIdx);
 			}
 		}
 
-		if(!compare || compare.index.length>0 || compare.del.length>0){
-			saveIndexLocal(_indexDir+"index.json", _newIdx);
+	).catch(
+		function(err){
+			console.log(err);
 		}
-	}
+	);
+}
 
-).catch(
-	function(err){
-		console.log(err);
-	}
-);
+/* refresh index by cleaning and indexing all*/
+function refreshIndex(_index){
+	algolia.deleteByQuery("", function(err) {
+		if (!err) {
+			console.log('success deleting all');
+		}
+		algolia.saveObjects(_index, function(err, content) {
+			if (!err) {
+				console.log('success indexing all');
+			}
+			console.log(content);
+		});
+	});
+}
 
 /* Compare new index with oldest and get files to insert and to delete */
-
 function compareIndexs(_oldIdx, _newIdx){
 	var compareObj;
 	var toIndex = [];
@@ -136,4 +174,3 @@ function deleteAlgolia(idx){
 		});			
 	});			
 }
-
