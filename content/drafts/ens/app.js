@@ -1,6 +1,5 @@
 /* global instantsearch */
 
-console.log("load app.js")
 app({
   appId: 'X6GHXEQ01H',
   apiKey: '73efe57acbf082fa6de48e680a3d7d2f',
@@ -46,7 +45,6 @@ function getDataNode(item, key, header){
     }
     stb.push("</tbody></table>");
   }
-  console.log(stb)
   return stb;
 }
 
@@ -172,8 +170,9 @@ function app(opts){
     )
   }else{
 
+    //creates node "cercador" in breadcrumbs
     search.on("render", function(){
-      $("<a href='#' onclick='history.go(-1); return false;'>Cercador</a>").appendTo($(".breadcrumbs2"));
+      $("<a href='../cercador' onclick='history.back();'>Cercador</a>").appendTo($(".breadcrumbs2"));
     })
 
   }
