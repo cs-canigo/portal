@@ -172,7 +172,7 @@ function app(opts){
 
     //creates node "cercador" in breadcrumbs
     search.on("render", function(){
-      $("<a href='../cercador' onclick='history.back();'>Cercador</a>").appendTo($(".breadcrumbs2"));
+      $("<a href='../cercador' onclick='if(document.referrer.indexOf(\"/ens/cercador\")>-1){this.href=document.referrer}'>Cercador</a>").appendTo($(".breadcrumbs2"));
     })
 
   }
