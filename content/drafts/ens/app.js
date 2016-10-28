@@ -7,7 +7,50 @@ app({
   indexName: 'cataleg_ens'
 });
 
+/* Funcions per a pintar la fitxa a la plana de detall*/
+function drawFitxa(item){
+  var stb = []; 
+  
+  stb.push("<h1>",item["Denominació"],"</h1><table class='fitxa_detall col-xs-12 col-md-12'><tbody><tr><th colspan='2'>Dades de l'ENS</th></tr>")
 
+  for(var k in item){
+    if(k.indexOf("_")===-1 && k!=="objectID" && typeof(item[k])!=="object" && item[k]){
+      stb.push("<tr><td class='col-md-4'>",k.replace(/\|/g,"'"),"</td><td>",item[k],"</td></tr>");
+    }
+  }
+
+  stb.push("</tbody></table>");
+
+  stb = stb.concat(getDataNode(item, "particeps", "Partíceps"));
+  stb = stb.concat(getDataNode(item, "membres_organ_govern", "Membres òrgan de govern"));
+  stb = stb.concat(getDataNode(item, "persones_organ_govern", "Persones òrgan de govern"));
+  stb = stb.concat(getDataNode(item, "persones_consell", "Persones del consell d'administració"));
+  stb = stb.concat(getDataNode(item, "registre", "Dades registrals"));
+
+  $(stb.join("")).appendTo($("#hits")); 
+}
+
+function getDataNode(item, key, header){
+  var stb = [];
+  if(item[key] && item[key].length){
+    stb.push("<table class='fitxa_detall col-xs-12 col-md-12'><tbody><tr><th colspan='2'>",header,"</th></tr>")
+    for(var i=0, z=item[key].length;i<z;i++){
+      if(i>0){
+        stb.push("<tr><td colspan='2' class='nested_background'></td></tr>");
+      }
+      for(var k in item[key][i]){
+        if(item[key][i][k]){
+          stb.push("<tr><td class='col-md-4'>",k.replace(/\|/g,"'"),"</td><td>",item[key][i][k],"</td></tr>");
+        }        
+      }
+    }
+    stb.push("</tbody></table>");
+  }
+  console.log(stb)
+  return stb;
+}
+
+/* Funcions per a l'instant search*/
 function app(opts){
 
   var isDetailPage = (window.location.pathname.indexOf("detall")>-1)
@@ -21,25 +64,17 @@ function app(opts){
 
   search.addWidget(
     instantsearch.widgets.hits({
-      container: '#hits',
+      container: (isDetailPage?'#hits_fake':'#hits'),
       hitsPerPage: 10,
       templates: {
         item: getTemplate('hit'),
         empty: getTemplate('no-results')
       },
       transformData : function(item){
-        if(isDetailPage && $("#fitxa_detall").size()===0){
-          var stb = []; 
-          for(var k in item){
-            if(k.indexOf("_")===-1 && k!=="objectID" && typeof(item[k])!=="object"){
-              stb.push("<tr><td>",k.replace(/\|/g,"'"),"</td><td>",item[k],"</td></tr>");
-            }
-          }
-          $("<h1>"+item["Denominació"]+"</h1><table id='fitxa_detall'>"+stb.join("")+"</table>").appendTo($("#hits")); 
-          return;
-        }else{
-          return item;
+        if(isDetailPage && $(".fitxa_detall").size()===0){
+          drawFitxa(item);
         }
+        return item;
       }
     })
   );
@@ -135,6 +170,12 @@ function app(opts){
         }
       })
     )
+  }else{
+
+    search.on("render", function(){
+      $("<a href='#' onclick='history.go(-1); return false;'>Cercador</a>").appendTo($(".breadcrumbs2"));
+    })
+
   }
 
   search.start();

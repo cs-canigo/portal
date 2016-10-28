@@ -36,7 +36,7 @@ no_index 	= true
 	<div class="destacat_text list-group-item">
         <h2><a href="../detall?q={{objectID}}&typoTolerance=false">{{Codi Catàleg}} - {{Denominació}}</a></h2>
         <div class="block-with-text">
-        	{{Tipus d|ens catàleg}}
+        	{{Funcions, objecte social o finalitat}}
         </div>
 	</div>
 </script>
