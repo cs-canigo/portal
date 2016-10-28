@@ -6,11 +6,11 @@ bloc_tags	= ["bones pràctiques"]
 sections    = ["Bloc", "home"]
 aliases = [
     "/principis",
+    "/principis/",
     "/bloc/principis",
     "/bloc/2015/11/principis",
     "/arquitectura/principis",
     "/arquitectura/2015/11/principis"
-
 ]
 imatge 		= "/images/bloc/principis.png"
 #teletext_id	= "principis"
