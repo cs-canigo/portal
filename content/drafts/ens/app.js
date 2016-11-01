@@ -70,7 +70,11 @@ function app(opts){
       },
       transformData : function(item){
         if(isDetailPage && $(".fitxa_detall").size()===0){
-          drawFitxa(item);
+          if(item && item.hits && item.hits.length===0){
+            $("#hits_fake").removeClass("hidden");  
+          }else{
+            drawFitxa(item);
+          }
         }
         return item;
       }

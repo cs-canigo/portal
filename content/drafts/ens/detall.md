@@ -18,7 +18,6 @@ no_index 	= true
     	
     </div>
 
-
 </div>
 
 </section>
@@ -34,7 +33,7 @@ no_index 	= true
 
 <script type="text/html" id="no-results-template">
 	<div id="no-results-message">
-	  <p>No s'han trobat resultats per a la cerca <em>"{{query}}"</em>.</p>
+	  <p>Aquest ENS no existeix</p>
 	  <!--a href="." class='clear-all'>Neteja la cerca</a-->
 	</div>
 </script>
