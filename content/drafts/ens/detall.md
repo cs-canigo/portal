@@ -117,7 +117,7 @@ no_index    = true
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
-<script src="../app2.js"></script>
+<script src="../app.js"></script>
 <style>
 .fitxa_detall tr td:first-child{
   font-weight: bold;
