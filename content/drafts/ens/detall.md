@@ -30,65 +30,75 @@ no_index    = true
         </tbody>
     </table>
 
-    {{#detall_de_partícips}}
+    {{#detall_de_partícips.length}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Partíceps</th></tr>
+            {{#detall_de_partícips}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
+            {{/detall_de_partícips}}
         </tbody>
     </table>
-    {{/detall_de_partícips}}
+    {{/detall_de_partícips.length}}
 
-    {{#membres_òrgan_de_govern}}
+    {{#membres_òrgan_de_govern.length}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Membres dels òrgans de govern</th></tr>
+            {{#membres_òrgan_de_govern}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
+            {{/membres_òrgan_de_govern}}
         </tbody>
     </table>
-    {{/membres_òrgan_de_govern}}
+    {{/membres_òrgan_de_govern.length}}
 
-    {{#persones_òrgan_de_govern}}
+    {{#persones_òrgan_de_govern.length}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Persones òrgan de govern</th></tr>
+            {{#persones_òrgan_de_govern}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
+            {{/persones_òrgan_de_govern}}
         </tbody>
     </table>
-    {{/persones_òrgan_de_govern}}
+    {{/persones_òrgan_de_govern.length}}
 
-    {{#persones_cons.adm.soc.mercantil}}
+    {{#persones_cons_adm_soc_mercantil.length}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Persones del consell d'administració</th></tr>
+            {{#persones_cons_adm_soc_mercantil}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
+            {{/persones_cons_adm_soc_mercantil}}
         </tbody>
     </table>
-    {{/persones_cons.adm.soc.mercantil}}
+    {{/persones_cons_adm_soc_mercantil.length}}
 
-    {{#dades_registrals}}
+    {{#dades_registrals.length}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Dades registrals</th></tr>
+            {{#dades_registrals}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
+            {{/dades_registrals}}
         </tbody>
     </table>
-    {{/dades_registrals}}
+    {{/dades_registrals.length}}
 
 </script>
 
