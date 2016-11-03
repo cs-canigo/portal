@@ -53,6 +53,7 @@ function app(opts){
             }
           }
           item = newItem;
+          console.log(item)
         }
         return item;
       }

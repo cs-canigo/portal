@@ -30,73 +30,66 @@ no_index    = true
         </tbody>
     </table>
 
+    {{#detall_de_partícips}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Partíceps</th></tr>
-            {{#particeps}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
-            {{/particeps}}
         </tbody>
     </table>
+    {{/detall_de_partícips}}
 
-    {{#membres_organ_govern}}
+    {{#membres_òrgan_de_govern}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Membres dels òrgans de govern</th></tr>
-            {{#membres_organ_govern}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
-            {{/membres_organ_govern}}
         </tbody>
     </table>
-    {{/membres_organ_govern}}
+    {{/membres_òrgan_de_govern}}
 
-    {{#persones_organ_govern}}
+    {{#persones_òrgan_de_govern}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Persones òrgan de govern</th></tr>
-            {{#persones_organ_govern}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
-            {{/persones_organ_govern}}
         </tbody>
     </table>
-    {{/persones_organ_govern}}
+    {{/persones_òrgan_de_govern}}
 
-    {{#persones_consell}}
+    {{#persones_cons.adm.soc.mercantil}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Persones del consell d'administració</th></tr>
-            {{#persones_consell}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
-            {{/persones_consell}}
         </tbody>
     </table>
-    {{/persones_consell}}
+    {{/persones_cons.adm.soc.mercantil}}
 
-    {{#registre}}
+    {{#dades_registrals}}
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Dades registrals</th></tr>
-            {{#registre}}
                 {{#.}}
                 <tr><td class='col-md-4'>{{key}}</td><td>{{value}}</td></tr>
                 {{/.}}
                 <tr><td colspan='2' class='nested_background'></td></tr>                
-            {{/registre}}
         </tbody>
     </table>
-    {{/registre}}
+    {{/dades_registrals}}
+
 </script>
 
 <script type="text/html" id="no-results-template">
