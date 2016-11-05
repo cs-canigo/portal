@@ -19,7 +19,8 @@ function app(opts){
   if(isDetailPage){
     opts.searchParameters = {
       typoTolerance : false
-    }
+    },
+    hitsPerPage : 1 
   }
 
   opts.searchFunction = function(helper){
