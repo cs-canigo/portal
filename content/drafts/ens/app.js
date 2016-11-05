@@ -184,9 +184,14 @@ function app(opts){
 
   }else{
 
-    //creates node "cercador" in breadcrumbs
+    //creates node "cercador" in breadcrumbs, detall and changes <title>
     search.on("render", function(){
       $("<a href='../cercador' onclick='if(document.referrer.indexOf(\"/ens/cercador\")>-1){this.href=document.referrer}'>Cercador</a>").appendTo($(".breadcrumbs2"));
+      $("ol.breadcrumb li:last").text("Detall ENS");
+
+      var title = $("h1.title_detail").text();
+      $("h1.capcelera_flotant").text(title);
+      $("title").text(title);
     })
 
   }

@@ -1,6 +1,6 @@
 +++
 date        = "2015-01-27"
-title       = "Fitxa detall"
+title       = ""
 description = ""
 no_index    = true
 +++
@@ -20,7 +20,7 @@ no_index    = true
 
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
-    <h1>{{title}}</h1>
+    <h1 class="hidden title_detail">{{title}}</h1>
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Dades de l'ENS</th></tr>
@@ -109,9 +109,6 @@ no_index    = true
     </div>
 </script>
 
-<script type="text/html" id="stats-template">
-  S'han trobat <b>{{nbHits}}</b> resultats
-</script>
 <!-- /TEMPLATES -->
 
 <div id="logo-algolia">
@@ -122,6 +119,9 @@ no_index    = true
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
 <script src="../app.js"></script>
 <style>
+.fitxa_detall td{
+    vertical-align: top;
+}
 .fitxa_detall tr td:first-child{
   font-weight: bold;
 }
