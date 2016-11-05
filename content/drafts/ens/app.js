@@ -3,20 +3,44 @@
 app({
   appId: 'X6GHXEQ01H',
   apiKey: '73efe57acbf082fa6de48e680a3d7d2f',
-  indexName: 'cataleg_ens'
+  indexName: 'cataleg_ens',
+  hitsPerPage : 10
 });
 
 /* Funcions per a l'instant search*/
 function app(opts){
 
-  var isDetailPage = (window.location.pathname.indexOf("detall")>-1)
+  var isDetailPage = (window.location.pathname.indexOf("/detall")>-1);
 
-  var search = instantsearch({
-    appId: opts.appId,
-    apiKey: opts.apiKey,
-    indexName: opts.indexName,
-    urlSync: true
-  });
+  opts.urlSync = { 
+    trackedParameters : ['query', 'attribute:*', 'page']
+  };
+
+  if(isDetailPage){
+    opts.searchParameters = {
+      typoTolerance : false
+    }
+  }
+
+  opts.searchFunction = function(helper){
+      if(isDetailPage){
+        var objectID = window.location.hash;
+        if(objectID && objectID.indexOf("#")>-1){
+          objectID = objectID.slice(objectID.indexOf("#")+1);
+        }
+
+        if(!objectID){
+          return;
+        }
+
+        helper.state.query = objectID
+        helper.search();
+      }else{
+        helper.search();        
+      }
+    }
+  
+  var search = instantsearch(opts);
 
   search.addWidget(
     instantsearch.widgets.hits({
@@ -53,7 +77,6 @@ function app(opts){
             }
           }
           item = newItem;
-          console.log(item)
         }
         return item;
       }
@@ -151,6 +174,12 @@ function app(opts){
         }
       })
     )
+
+    search.on("render", function(){
+      //$params = window.location.search.substr(1).replace(/[&?]p=0/g, "").replace(/[&?]is_v=1/g, "");
+      //window.history.pushState( {} , '', '?'+$params );
+    })
+
   }else{
 
     //creates node "cercador" in breadcrumbs
@@ -161,6 +190,7 @@ function app(opts){
   }
 
   search.start();
+
 
 }
 
