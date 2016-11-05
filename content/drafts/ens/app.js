@@ -18,9 +18,9 @@ function app(opts){
 
   if(isDetailPage){
     opts.searchParameters = {
-      typoTolerance : false
+      typoTolerance : false,
     },
-    opts.hitsPerPage : 1 
+    opts.hitsPerPage = 1 
   }
 
   opts.searchFunction = function(helper){
@@ -34,13 +34,14 @@ function app(opts){
           return;
         }
 
-        helper.state.query = objectID
+        helper.state.query = '"' + objectID + '"'
+        helper.state.typoTolerance = false
         helper.search();
       }else{
         helper.search();        
       }
-    }
-  
+  }
+
   var search = instantsearch(opts);
 
   search.addWidget(
