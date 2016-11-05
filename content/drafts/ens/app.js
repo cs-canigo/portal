@@ -20,7 +20,7 @@ function app(opts){
     opts.searchParameters = {
       typoTolerance : false
     },
-    hitsPerPage : 1 
+    opts.hitsPerPage : 1 
   }
 
   opts.searchFunction = function(helper){
