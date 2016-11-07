@@ -21,6 +21,7 @@ no_index    = true
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
     <h1 class="hidden title_detail">{{title}}</h1>
+
     <table class='fitxa_detall col-xs-12 col-md-12'>
         <tbody>
             <tr><th colspan='2'>Dades de l'ENS</th></tr>

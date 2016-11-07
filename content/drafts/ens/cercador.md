@@ -34,7 +34,7 @@ no_index 	= true
 <!-- TEMPLATES -->
 <script type="text/html" id="hit-template">
 	<div class="destacat_text list-group-item">
-        <h2><a href="../detall#{{objectID}}">{{Codi Catàleg}} - {{Denominació}}</a></h2>
+        <h2><a href="../detall#{{objectID}}">{{Denominació}}</a></h2>
         <div class="block-with-text">
         	{{Funcions, objecte social o finalitat}}
         </div>

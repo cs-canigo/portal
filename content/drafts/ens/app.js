@@ -23,6 +23,7 @@ function app(opts){
     opts.hitsPerPage = 1 
   }
 
+  //hook que s'executarà abans d'executar la cerca, per controlar per exemple, com traspassar url a paràmetres.
   opts.searchFunction = function(helper){
       if(isDetailPage){
         var objectID = window.location.hash;
@@ -62,7 +63,7 @@ function app(opts){
           };
           newItem.title = item["Denominació"];
           for(var k in item){
-            if(k.indexOf("_")===-1 && k!=="objectID" && typeof(item[k])!=="object" && item[k]){
+            if(k.indexOf("_")===-1 && k!=="objectID" && typeof(item[k])!=="object"){
               newItem.dades.push({"key" : k.replace(/\|/g,"'"), "value" : item[k]});
             }else{
               if(typeof(item[k])!=="object"){
