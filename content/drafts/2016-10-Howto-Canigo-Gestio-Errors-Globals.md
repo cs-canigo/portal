@@ -1,5 +1,5 @@
 +++
-date        = "2016-09-30"
+date        = "2016-10-30"
 title       = "Gestió global d'errors a una aplicació Canigó"
 description = "How To de com gestionar els errors de forma global a una aplicació Canigó Rest."
 sections    = ["Canigo", "howtos"]
