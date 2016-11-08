@@ -1,0 +1,262 @@
+{{ $title := .Title | html | lower}}
+{{ $section := .Section | html | lower}}
+
+<!-- switch subseccions -->
+<!-- Canigó - documentació -->
+{{ if or (eq $title "canigo-documentacios") (eq $section "canigo-documentacio") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/canigo-documentacio/">
+	{{ end }}
+
+	Documentació
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- Canigó - documentació - versions -->
+{{ if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
+	<a href="/canigo/">Framework Canigó</a> </li> <li> <a href="/canigo-documentacio/">Documentació</a> </li>
+
+	<li>
+
+	{{ if gt (len $section) 0 }}
+		<a href="/canigo-documentacio-versions/">
+	{{ end }}
+
+	Versions
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- Canigó - documentació - versions - anteriors -->
+{{ if or (eq $title "canigo-documentacio-versions-anteriors") (eq $section "canigo-documentacio-versions-anteriors") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-anteriors">Anteriors</a>
+		{{ else }}
+			Anteriors
+		{{ end }}
+
+{{ end }}
+
+<!-- Canigó - documentació - versions - 3x -->
+{{ if or (eq $title "canigo-documentacio-versions-3xes") (eq $section "canigo-documentacio-versions-3x") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+		{{ else }}
+			Versió 3.x
+		{{ end }}
+
+{{ end }}
+
+{{ if or (eq $title "canigo-documentacio-versions-3x-cores") (eq $section "canigo-documentacio-versions-3x-core") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-3x-core">Mòduls Generals</a>
+		{{ else }}
+			Mòduls Generals
+		{{ end }}
+
+{{ end }}
+
+{{ if or (eq $title "canigo-documentacio-versions-3x-integracios") (eq $section "canigo-documentacio-versions-3x-integracio") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-3x-integracio">Mòduls d'Integració</a>
+		{{ else }}
+			Mòduls d'Integració
+		{{ end }}
+
+{{ end }}
+
+{{ if or (eq $title "canigo-documentacio-versions-3x-suports") (eq $section "canigo-documentacio-versions-3x-suport") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-3x-suport">Mòduls de Suport</a>
+		{{ else }}
+			Mòduls de Suport
+		{{ end }}
+
+{{ end }}
+
+{{ if or (eq $title "canigo-documentacio-versions-3x-altres") (eq $section "canigo-documentacio-versions-3x-altres") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+	
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-3x-altres">Altres</a>
+		{{ else }}
+			Altres
+		{{ end }}
+
+{{ end }}
+
+<!-- Canigó - download - related-->
+{{ if or (eq $title "canigo-download-related") (eq $section "canigo-download-related") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo/download/">Descàrrega dels binaris de Canigó i de les API’s de suport</a>
+	</li>
+{{ end }}
+
+<!-- SIC - Related -->
+{{ if or (eq $title "sic-related") (eq $section "sic-related") }}
+	<a href="/sic/">Servei d'Integració Contínua</a> </li>
+	<li>
+		<a href="/sic/about/">Què és el Servei d'Integració Continua (SIC)</a>
+	</li>
+{{ end }}
+
+
+
+<!-- SIC - documentació -->
+{{ if or (eq $title "sic-documentacios") (eq $section "sic-documentacio") }}
+	<a href="/sic/">Servei d'Integració Contínua</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/sic-documentacio/">
+	{{ end }}
+
+	Documentació
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+
+<!-- SGDE - Related -->
+{{ if or (eq $title "sgde-related") (eq $section "sgde-related") }}
+	<a href="/sgde/">Servei de Gestió del Document Electrònic</a> </li>
+	<li>
+		<a href="/sgde/about">Què és el Servei de Gestió del Document Electrònic (SGDE)</a>
+	</li>
+{{ end }}
+
+<!--Centre de suport - Related -->
+{{ if or (eq $title "centre-de-suport-related") (eq $section "centre-de-suport-related") }}
+	<a href="/centre-de-suport/">Centre de Suport</a> </li>
+	<li>
+		<a href="/centre-de-suport/acces">Accés a les eines de suport</a>
+	</li>
+{{ end }}
+
+<!-- destacats -->
+{{ if or (eq $title "destacats-related") (eq $section "destacats-related") }}
+	Destacats
+{{ end }}
+
+
+<!-- GICAR - guia integració -->
+{{ if or (eq $title "gicar-integracios") (eq $section "gicar-integracio") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-integracio/">
+	{{ end }}
+
+	Integració
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+
+
+<!-- CENTRE DE SUPORT CANIGO -->
+{{ if or (eq $title "centre-de-suports") (eq $section "centre-de-suport") }}
+	<a href="/cs/">Centres de Suport</a> </li>
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/centre-de-suport/"> 
+		{{ end }}
+
+			Canigó
+		{{ if gt (len $section) 0 }}
+			</a> 
+		{{ end }}
+	</li>
+{{ end }}

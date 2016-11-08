@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>{{.Title}}</title>
+	{{ partial "head.html" . }}
+	<script>
+		document.write("<meta name=\"titol\" content=\"{{.Title}}\" />");
+	</script>
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+		{{ partial "menu.html" . }}
+
+	</div>
+
+	<section class="border-start">
+			<article class="bgGrey">
+				<div class="container">	
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/" title="Inici">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+										Pàgina no trobada
+									</li>
+								</ol>
+
+
+								<h1 class="capcalera_flotant pull-left" style="padding-left:0px">
+									Pàgina no trobada
+								</h1>
+
+							</div>
+						</div>
+					</div>					
+				</div>
+			</article>						
+
+			
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+					La pàgina que estàs cercant no s'ha trobat. Pots provar amb el cercador de trobar el que busques:
+					<p>&nbsp;</p>
+
+					<form id="cercadorIndex" role="search" class="navbar-form cercador_vermell col-sm-12" method="get" action="/cercador/" onsubmit="location.href=this.action+'#?query='+this.cerca.value; return false;">
+						<div class="form-group">
+							<input type="search" name="query" id="cerca"
+								title="Introdu&iuml;u les paraules a cercar"
+								class="form-control" placeholder="Cerca al lloc" /> 
+							<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
+							<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
+						</div>								
+					</form>					
+				</div>	
+			</article>	
+
+	</section>	
+
+	{{ partial "footer.html" . }}
+
+</body>
+</html>

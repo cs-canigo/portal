@@ -1,0 +1,49 @@
+#!/bin/bash
+comentari="new version"
+
+function mostrarAjuda {
+
+  SCRIPT=`basename ${BASH_SOURCE[0]}`
+  NORM=`tput sgr0`
+  BOLD=`tput bold`
+  RED=`tput setaf 1`
+
+cat <<END;
+
+Ajuda de ${BOLD}${RED}${SCRIPT}${NORM}
+
+Els paràmetres de la línia de comandes són opcionals. Els següents paràmetres
+son reconneguts:
+
+  -m Actualitza la versió del repositori amb el comentari indicat. El comentari
+     s'ha d'escriure entre cometes i per defecte es "new version".
+  -h Mostra aquesta ${BOLD}${RED}ajuda${NORM}.
+
+END
+}
+
+while getopts ":m:h" opt; do
+  case $opt in
+    m)
+      comentari="$OPTARG"
+      ;;
+    h)
+      mostrarAjuda
+      exit 0
+      ;;
+    \?)
+      echo -e "Opció incorrecta -$OPTARG\n" >&2
+      exit 0
+      ;;
+  esac
+done
+# Esborrem el contingut actual
+rm -fr ../web-canigo-public
+# Generem el HTML
+hugo
+#
+cd ../web-canigo-public
+git add -A
+git commit -m "$comentari"
+git push origin master
+echo -e '\n'

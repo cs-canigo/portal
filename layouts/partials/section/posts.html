@@ -1,0 +1,38 @@
+{{ $columns := 1 }}
+
+<div class="col-sm-8">
+
+
+{{ range $index, $page := .Paginator.Pages }}
+
+	{{ if eq (urlquery (mod $index $columns)) "0" }}
+			<!--div class="row"-->					
+	{{ end }}
+
+				<div class="destacat_noticies">
+					<div class="destacat_noticies_cont">
+						<h3>
+							<a href="{{ .Permalink }}" class="bloc_post">{{ .Title }}</a>
+						</h3>
+						<p>{{ .Description}}</p>
+						<span class="data_post">{{ .Date.Format "02-01-2006" }}</span> 
+						<span><a href="{{ .Permalink }}#comments" class="ncomments"> </a></span>
+						{{ if isset .Params "imatge" }}
+						<img src="{{ index .Params "imatge" }}" alt="" />
+						{{ end }}
+					</div>
+				</div>
+
+    {{ if and (eq (mod $index $columns) (sub $columns 1)) (gt $index 0)}}
+    		<!--/div-->
+    {{ end}}
+
+{{ end}}
+
+{{ template "_internal/pagination.html" . }} 
+
+	<a href="index.xml" class="rss pull-right"><img src="/img/NG_ico_rss.png_196546587.png" alt="RSS"/></a> 
+
+</div>
+
+{{ partial "section/categories.html" . }}

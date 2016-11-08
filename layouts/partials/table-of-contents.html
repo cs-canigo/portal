@@ -1,0 +1,19 @@
+
+	<!--div class="menu_flotant">
+		<button class="collapsed" type="button" data-toggle="collapse" data-target="#menu_flotant_cont"></button>
+		<div class="collapse" id="menu_flotant_cont">
+			<div class="panel-group" id="acordio_menu_flotant" style="border:none">
+				{{ .TableOfContents }}
+			</div>
+		</div>
+	</div-->			
+
+	{{ if and (isset .Params "toc") (eq (index .Params "toc") true) }}
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			{{ .TableOfContents }}
+    	</div>
+	</div>
+
+	{{ end }}

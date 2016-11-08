@@ -1,0 +1,42 @@
+{{ $title := .Title | html | lower}}
+{{ $section := .Section | html | lower}}
+
+{{ if or (eq $title "canigos") (eq $section "canigo")}}
+	Framework Canigó
+{{ end }}
+
+{{ if or (eq $title "sics") (eq $section "sic") }}
+	Servei d'Integració Contínua
+{{ end }}
+
+{{ if or (eq $title "sgdes") (eq $section "sgde") }}
+	Servei de Gestió del Document Electrònic
+{{ end }}
+
+{{ if or (eq $title "noticies") (eq $section "noticies") }}
+	Notícies
+{{ end }}
+
+{{ if (eq $section "howtos") }}
+	How to
+{{ end }}
+
+{{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (eq $section .Site.Params.bloc_section) }}
+	Bloc d'Arquitectura
+{{ end }}
+
+{{ if or (eq $title "cs") (eq $section "cs") }}
+	Centres de Suport
+{{ end }}
+
+{{ if or (eq $title "gicars") (eq $section "gicar") }}
+	GICAR
+{{ end }}
+
+{{ if or (eq $title "clouds") (eq $section "cloud") }}
+	Container Cloud
+{{ end }}
+
+{{ if in .URL "bloc_tags" }}
+	<a href="/bloc">Bloc d'Arquitectura</a> > {{ .Title }} 
+{{end}}

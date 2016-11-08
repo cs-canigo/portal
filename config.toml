@@ -1,0 +1,84 @@
+languageCode = "ca-Es"
+#title = "Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya"
+title = "Arquitectura CTTI. Generalitat de Catalunya"
+
+contentdir = "content"
+layoutdir = "layouts"
+#publishdir = "../web-canigo-public"
+publishdir = "public"
+builddrafts = false
+baseurl = "http://canigo.ctti.gencat.cat"
+canonifyurls = false
+disqusShortname = "arquitectura-ctti"
+
+Paginate = 10
+
+
+[params]
+	noticieshome = 10
+	destacatshome = 4
+	google_analytics_id = "UA-59408075-1"
+	titol = "Arquitectura CTTI"
+	bloc_section = "bloc"
+
+[taxonomies]
+	bloc_tag = "bloc_tags"
+    section = "sections"
+
+#----------------
+# MENU PRINCIPAL
+#----------------
+
+[[menu.main]]
+	Name = "Inici"
+    Weight = 1
+    Identifier = "inici"
+    URL = "/"
+
+[[menu.main]]
+	Name = "Principis d'arquitectura"
+    Weight = 3
+    Identifier = "principis"
+    URL = "/principis"   
+
+[[menu.main]]
+	Name = "Bloc"
+    Weight = 5
+    Identifier = "bloc"
+    URL = "/bloc"   
+
+[[menu.main]]
+	Name = "Cloud"
+    Weight = 7
+    Identifier = "cloud"
+    URL = "/cloud"
+
+[[menu.main]]
+	Name = "Canigó"
+    Weight = 9
+    Identifier = "framework"
+    URL = "/canigo"
+
+[[menu.main]]
+	Name = "SIC"
+    Weight = 11
+    Identifier = "sic"
+    URL = "/sic"
+
+[[menu.main]]
+	Name = "SGDE"
+    Weight = 13
+    Identifier = "sgde"
+    URL = "/sgde"
+
+[[menu.main]]
+	Name = "GICAR"
+    Weight = 15
+    Identifier = "gicar"
+    URL = "/gicar"
+
+[[menu.main]]
+	Name = "Centres de Suport"
+    Weight = 17
+    Identifier = "suport"
+    URL = "/cs"
