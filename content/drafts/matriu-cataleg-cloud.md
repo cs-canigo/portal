@@ -95,7 +95,7 @@ Llegenda "Tipus":
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===3){
+	                if(col_index===3 || col_index===10){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
