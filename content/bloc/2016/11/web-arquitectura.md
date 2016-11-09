@@ -5,7 +5,7 @@ description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'
 sections    = ["Bloc", "home"]
 bloc_tags	= ["patrons de disseny"]
 imatge 		= "/images/bloc/web-aq.png"
-key         = "DESEMBRE2016"
+key         = "NOVEMBRE2016"
 +++
 
 Amb el **Web d'Arquitectura** gaudim d'un petit laboratori d'investigació que ens permet avaluar tecnologies, provar aspectes que en un futur seran susceptibles de formar part del catàleg de solucions, i posar en producció principis i tècniques que serviran com a patrons per al disseny d'aplicacions.
@@ -50,4 +50,3 @@ A banda de Hugo com a generador del site, hem anat incoporant diverses peces a m
 * Markdown: https://guides.github.com/features/mastering-markdown/
 * Codi del web a github: https://github.com/cs-canigo/portal
 * Html generat a github pages: https://github.com/cs-canigo/portal/tree/gh-pages
-
