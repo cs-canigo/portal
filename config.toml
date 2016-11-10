@@ -42,7 +42,7 @@ Paginate = 10
     URL = "/principis"   
 
 [[menu.main]]
-	Name = "Bloc"
+	Name = "Blog"
     Weight = 5
     Identifier = "bloc"
     URL = "/bloc"   
