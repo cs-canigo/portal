@@ -5,14 +5,14 @@ description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'
 sections    = ["Bloc", "home"]
 bloc_tags	= ["patrons de disseny"]
 imatge 		= "/images/bloc/web-aq.png"
-key         = "DESEMBRE2016"
+key         = "NOVEMBRE2016"
 +++
 
 Amb el **Web d'Arquitectura** gaudim d'un petit laboratori d'investigació que ens permet avaluar tecnologies, provar aspectes que en un futur seran susceptibles de formar part del catàleg de solucions, i posar en producció principis i tècniques que serviran com a patrons per al disseny d'aplicacions.
 
 ## Web d'Arquitectura S01E01 "Pilot"
 
-El Web d'Arquitectura actual va néixer de l'antic web del Centre de Suport Canigó, desenvolupat amb _Confluence_, i era difícil de mantenir i evolucionar. En el moment que ens vàrem plantejar la modernització del web i l'ampliació de seccions i continguts, vam estudiar què es feia al món dels bloggers. 
+El **Web d'Arquitectura** actual va néixer de l'antic web del Centre de Suport Canigó, desenvolupat amb _Confluence_, i era difícil de mantenir i evolucionar. En el moment que ens vàrem plantejar la modernització del web i l'ampliació de seccions i continguts, vam estudiar què es feia al món dels bloggers. 
 
 Allà hi havia una tendència per a simplificar la pila tecnològica sobre la que corrien els blocs (normalment PHP + MySQL, com en el cas de Wordpress). D'aquest corrent varen començar a sorgir el que s'anomenen **Static Site Generators**. Aquestes eines simplificaven moltíssim la gestió de blocs, mitjançant un sistema de plantilles com qualsevol gestor de continguts. Utilitzant **markdown** com a metallenguatge que es "compila" a html, es generaven sites estàtics que es podien allotjar a tan sols un servidor web o en _(diverses plataformes)_ al núvol.
 
@@ -44,10 +44,12 @@ A banda de Hugo com a generador del site, hem anat incoporant diverses peces a m
 
 - [**Disqus**](https://disqus.com): Un cop creat el portal ens va semblar que li faltava un punt de interactivitat. Amb **Disqus** tenim una eina SaaS que ens permet la interacció amb els lectors en base a comentaris al propi bloc. Sent un portal obert al públic, Disqus ens permet també la gestió dels comentaris i així evitar comentaris malsonants o fora de lloc.
 
+![Workflow](/bloc/2016/11/workflow.png)
+
+
 ## Referències
 
 * Llista de generadors de sites estàtics: https://www.staticgen.com/
 * Markdown: https://guides.github.com/features/mastering-markdown/
 * Codi del web a github: https://github.com/cs-canigo/portal
 * Html generat a github pages: https://github.com/cs-canigo/portal/tree/gh-pages
-
