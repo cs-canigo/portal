@@ -17,7 +17,7 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la BBDD, permetent la
 Per tal d'instal-lar el mòdul d'hibernate fitxers es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.persistence.jpa.version>[1.1.0,1.2.0)</canigo.persistence.jpa.version>
+<canigo.persistence.jpa.version>[1.2.0,1.3.0)</canigo.persistence.jpa.version>
 
 <dependency>
  <groupId>cat.gencat.ctti</groupId>

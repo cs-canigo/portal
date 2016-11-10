@@ -8,6 +8,14 @@ weight		= 4
 
 ## <span class="label label-cabecera">2016</span>
 
+#### [Novembre] (/comunicat/2016/11/)
+- Tecnologia darrera del Web d'Arquitectura
+- SIC. Actualització de versions d'eines al SIC
+
+#### [Octubre] (/comunicat/2016/10/)
+- Cloud-Ready
+- SIC. Cas d'èxit de desplegament d'una aplicació .NET
+
 #### [Setembre] (/comunicat/2016/09/)
 - (micro)serveis
 - SIC. Gestió de dependències per aplicacions ANT
