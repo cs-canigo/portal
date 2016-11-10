@@ -12,7 +12,7 @@ Amb el **Web d'Arquitectura** gaudim d'un petit laboratori d'investigació que e
 
 ## Web d'Arquitectura S01E01 "Pilot"
 
-El Web d'Arquitectura actual va néixer de l'antic web del Centre de Suport Canigó, desenvolupat amb _Confluence_, i era difícil de mantenir i evolucionar. En el moment que ens vàrem plantejar la modernització del web i l'ampliació de seccions i continguts, vam estudiar què es feia al món dels bloggers. 
+El **Web d'Arquitectura** actual va néixer de l'antic web del Centre de Suport Canigó, desenvolupat amb _Confluence_, i era difícil de mantenir i evolucionar. En el moment que ens vàrem plantejar la modernització del web i l'ampliació de seccions i continguts, vam estudiar què es feia al món dels bloggers. 
 
 Allà hi havia una tendència per a simplificar la pila tecnològica sobre la que corrien els blocs (normalment PHP + MySQL, com en el cas de Wordpress). D'aquest corrent varen començar a sorgir el que s'anomenen **Static Site Generators**. Aquestes eines simplificaven moltíssim la gestió de blocs, mitjançant un sistema de plantilles com qualsevol gestor de continguts. Utilitzant **markdown** com a metallenguatge que es "compila" a html, es generaven sites estàtics que es podien allotjar a tan sols un servidor web o en _(diverses plataformes)_ al núvol.
 
