@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Gestió d'errors a una aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals)
 - [Canigó - Spring Batch en aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Spring-Batch)
 - [Canigó - Swagger en aplicació Canigó 3.1](/related/canigo/howto/Canigo - Howto - Swagger_en_aplicacio_Canigo_3_1.pdf)
 - [Canigó - Desplegament aplicació Canigo 3.1 en Docker](/related/canigo/howto/Canigo - Howto - Desplegament aplicacio Canigo 3.1 en Docker.pdf)
