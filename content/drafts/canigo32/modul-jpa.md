@@ -26,11 +26,41 @@ Per tal d'instal-lar el mòdul d'hibernate fitxers es pot incloure automàticame
 </dependency>
 ```
 
+Al pom.xml també s'ha d'afegir el plugin que genera les classes per als repositoris:
+```
+<build>
+	...
+	<plugins>
+		...
+		<plugin>
+			<groupId>com.mysema.maven</groupId>
+			<artifactId>apt-maven-plugin</artifactId>
+			<version>1.1.3</version>
+			<executions>
+				<execution>
+					<goals>
+						<goal>process</goal>
+						<goal>test-process</goal>
+					</goals>
+					<configuration>
+						<outputDirectory>target/generated-sources/java</outputDirectory>
+						<processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
+		...
+	</plugins>
+	...
+</build>	
+```
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
+La configuració es realitza automàticament a partir de la eina de suport al desenvolupament(plugin de Canigó per a Eclipse)
 
-L'eina de desenvolupament genera automàticament el fitxer de propietats necessari per a la configuració del servei.
+En cas que no es generi automàticament el codi, s'ha de realitzar manualment la següent configuració:
+
+**jpa.properties**
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jpa.properties
 
@@ -45,209 +75,348 @@ Propietat | Requerit | Descripció
 *.persistence.hibernate.generate_statistics | No | Hibernate recopila informació útil per a tunning.<br> Per defecte: false
 *.persistence.hibernate.jdbc.use_scrollable_resultset | No | Habilita l'ús de JDBC2 scrollable resultsets a Hibernate.<br> Per defecte: true
 
-## Utilització del Mòdul
-
-###  JSF
-
-Per a utilitzar aquest mòdul, cal crear un bean i una jsf:
-
-**crudBean.java**
-
-```java
-@Component("crudBean")
-@Lazy
-public class CRUDBean {
-
-	private String name;
-	private String password;
-	private UsersDAO<User,Integer> dao = null;
-	private User user = null;
-	private DataModel model = null;
-	private static final Log logger = LogFactory.getLog(CRUDBean.class);
-
-	@Autowired
-	public void setDao(UsersDAO<User,Integer> dao) {
-		this.dao = dao;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name){
-		this.name = name;
-	}
-
-	@Transactional(propagation=Propagation.REQUIRED)
-	public void save(){
-		User user = new User();
-		user.setName(this.getName());
-		user.setPassword(this.getPassword());
-		dao.save(user);
-	}
-
-	public String update(){
-		logger.debug("Init update");
-		User tmpUser = dao.get(this.user.getId());
-		logger.debug("Content: " + tmpUser);
-		tmpUser.setName(getName());
-		tmpUser.setPassword(getPassword());
-		dao.update(tmpUser);
-		dao.flush();
-		logger.debug("End update");
-		return "item_list";
-	}
-
-	public User getUser(){
-		return user;
-	}
-
-	public DataModel getUsers(){
-		model = new ListDataModel(dao.findByNamedQuery("findAllOrderBy"));
-		return model;
-	}
-
-	public String detailSetup() {
-		user = (User)model.getRowData();
-        return "item_detail";
-    }
-}
-```
-
-**crud.jsf**
-
-```java
-<h:form id="beanValidatorForm">
-     <rich:panel style="width:40%">
-	<f:facet name="header">
-	     <h:outputText value="#{msg.crudNewUser}" />
-	</f:facet>
-	<h:panelGrid columns="3">
-	     <h:outputText value="#{msg.crudName}:" />
-              <h:inputText value="#{crudBean.name}" id="name"/>
-	     <rich:message for="name" />
-	     <h:outputText value="#{msg.crudPassword}:" />
-	     <h:inputText value="#{crudBean.password}" id="password"/>
-              <rich:message for="password" />
-	     <f:facet name="footer">
-	          <a4j:commandButton value="#{msg.crudSave}" action="#{crudBean.save}" reRender="userList" />
-	     </f:facet>
-	</h:panelGrid>
-     </rich:panel>
-</h:form>
-```
-
-### STRUTS+TAGLIBS
-
-Per a utilitzar el mòdul cal crear una Acció i una JSP:
-
 **persistence.xml**
 
+Ubicació: <PROJECT_ROOT>/src/main/resources/config/persistence/persistence.xml
+
 ```
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="1.0">
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="1.0">
 
-     <persistence-unit name="canigo" transaction-type="RESOURCE_LOCAL">
-          <provider>org.hibernate.ejb.HibernatePersistence</provider>
-          <non-jta-data-source>jdbc/formacioDS</non-jta-data-source>
-
-          <properties>
-               <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
-          </properties>
-     </persistence-unit>
+	<persistence-unit name="canigo" transaction-type="RESOURCE_LOCAL"/>
 
 </persistence>
 ```
 
-**CrudExempleAction.java**
+**app-custom-persistence-jpa.xml**
 
-```java
-public class CrudExempleAction extends DispatchActionSupport {
+Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-custom-persistence-jpa.xml
 
-	private static final Log logger = LogFactory.getLog(CrudExempleAction.class);
-	private final String FORWARD_INICI = "success";
-	private final String FORWARD_SHOW_ELEMENT = "mostrar";
-	private final String FORWARD_ERROR = "error";
-	private ValueListActionHelper valueListActionHelper;
-	private CrudExempleBO crudExempleBO;
+Exemple del fitxer de configuració per a un base de dades H2:
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	/**
-	 * Mètode que es crida pel reqCode=inici
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward inici(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-		HttpServletResponse response) throws Exception {
-		logger.info("[CrudExempleAction][Inici] - Inici");
-		valueListActionHelper.search(mapping, form, request, response);
-		logger.info("[CrudExempleAction][Inici] - Fi");
-		return mapping.findForward(FORWARD_INICI);
+	<aop:aspectj-autoproxy />
+	
+	<jpa:repositories base-package="cat.gencat.test.repository" base-class="cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl"/>
+	
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<description>
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		</description>
+		<property name="showSql" value="true" />
+		<property name="generateDdl" value="false" />
+		<property name="database" value="${persistence.database}" />
+		<property name="databasePlatform" value="${persistence.dialect}" />
+	</bean>
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="filter*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<jdbc:embedded-database id="dataSource" type="H2">
+		<jdbc:script location="classpath:scripts/db-auth-hsqldb-schema.sql"/>
+		<jdbc:script location="classpath:scripts/db-auth-hsqldb-data.sql"/>
+		<jdbc:script location="classpath:scripts/db-app-hsqldb-schema.sql"/>
+		<jdbc:script location="classpath:scripts/db-app-hsqldb-data.sql"/>
+	</jdbc:embedded-database>
+
+</beans>
+```
+
+Al tag **jpa:repositories** al paràmetre **base-package** s'ha d'indicar el package on es troben els repositoris de l'aplicació.
+
+### Ús dels repositoris
+
+Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'extendre de **GenericRepository<T, ID extends Serializable>**
+
+#### Construcció de queries
+
+A un repositori es poden definir mètodes per cada query desitjada.
+
+La construcció utilitza els prefixos find...By, read...By, query...By, count...By i get...By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.
+
+Exemples
+```
+    List<Equipament> findDistinctByNomOrMunicipi(String nom, String municipi);
+	List<Equipament> findByNomIgnoreCase(String nom);
+	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
+```
+
+#### Utilització de QueryDSL
+
+Una de les funcionalitats proposades és la d'utilitzar QueryDSL per a realitzar cerques segons un filtre, amb paginació i ordenació.
+
+Per a utilitzar-la s'ha d'afegir el mètode següent al repository creat.
+
+```
+Page<T> findAll(Predicate predicate, Pageable pageable);
+```
+
+Aquest mètode espera un objecte org.springframework.data.domain.PageablePageable que conté el núm de pàgina (la primera pàgina és la 0), el nombre d'elements per pàgina, la direcció d'ordenació, el camp d'ordenació.
+I un objecte Predicate amb la query a realitzar que es construeix de la següent manera:
+
+Primer de tot el filtre ha de ser un String amb el següent patró:
+
+**field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN**
+
+On field és el nom d'una propietat de la entitat (per exemple id)<br>
+On Operador és un dels tipus d'operador suportats:
+
+Operador | Descripció
+--------- | --------
+> | major que
+>: | major o igual que
+< | menor que
+<: | menor o igual que
+<> | diferent de
+: | igual que
+
+On valor és el valor amb el qual es vol comparar.
+
+Per a cercar la entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser:<br>
+id>15,nom:Prova
+
+#### Projecció de resultats
+
+Amb QueryDSL també es pot realitzar cerques que en comptes de retornar l'objecte senser, retorni només una part del objecte dessitjat.<br>
+
+Per a utilitzar les projeccions al vostre repository heu d'afegir el mètode:
+```
+Page<T> findAll(FactoryExpression<T> factoryExpression, Predicate predicate, Pageable pageable);
+```
+
+El codi següent retorna una llista dels objectes Equipaments amb nom INDOORKARTING, però aquests objectes només tindran el camp nom.
+
+```
+String search = "nom:INDOORKARTING";
+		
+Pageable pageable = new PageRequest(0, 5, Sort.Direction.DESC, "nom");
+GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
+builder.populateSearchCriteria(search);
+		
+QEquipament qequipament = QEquipament.equipament;
+	
+Page<Equipament> page = repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
+```
+
+### Exemple 
+	
+Per exemple a l'aplicació inicial que genera el plugin de Canigó es generen els següents fitxers:
+
+**Equipament.java**
+
+Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/model/Equipament.java
+```
+package cat.gencat.test.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "equipaments")
+public class Equipament {
+
+	private Long id;
+	private String nom;
+	private String municipi;
+
+	public Equipament() {
+		
 	}
-
-	/**
-	 * Mètode que es crida pel reqCode=desar
-	 * @param mapping ActionMapping
-	 * @param form ActionForm
-	 * @param request HttpServletRequest
-	 * @param response HttpServletResponse
-	 * @return ActionForward
-	 * @throws Exception exception
-	 */
-	public ActionForward desar(ActionMapping mapping, ActionForm form, HttpServletRequest request,
-			HttpServletResponse response) throws Exception {
-
-		TbEntitats entitat = null;
-
-		try {
-			logger.info("[CrudExempleAction][desar] - Inici");
-
-			SpringBindingActionForm springBindingActionForm = (SpringBindingActionForm) form;
-			CrudExemplePojo pojoForm = (CrudExemplePojo)springBindingActionForm.getTarget();
-
-			entitat = new TbEntitats();
-			entitat.setNom(pojoForm.getNom());
-			entitat.setTelefon(new Long(pojoForm.getTelefon()));
-			entitat.setAdreca(pojoForm.getAdreca());
-			crudExempleBO.addEntitat(entitat);
-
-			valueListActionHelper.search(mapping, form, request, response);
-			logger.info("[CrudExempleAction][desar] - Fi");
-			return mapping.findForward(FORWARD_INICI);
-		} catch (Exception e) {
-			e.printStackTrace();
-			return mapping.findForward(FORWARD_ERROR);
-		}
+	
+	public Equipament(Long id) {
+		this.id =id;
 	}
-}
-```  
-
-**CrudExempleBOImpl**
-
-```java
-public class CrudExempleBOImpl implements CrudExempleBO {
-
-	private UniversalHibernateDAO hibernateDAO;
-
-	public Long addEntitat(TbEntitats entitat) throws Exception {
-
-		TbEntitats vo = new TbEntitats();
-		BeanUtils.copyProperties(vo, entitat);
-		Long id = (Long)hibernateDAO.save(vo);
-		hibernateDAO.flush();
+	
+	@Id
+	@Column(name = "id", nullable = false, unique = true)
+	public Long getId() {
 		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	@Column(name = "nom", nullable = false, unique = true)
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	@Column(name = "municipi")
+	public String getMunicipi() {
+		return municipi;
+	}
+
+	public void setMunicipi(String municipi) {
+		this.municipi = municipi;
+	}	
+	
+	@Override
+	public String toString() {
+		return "Equipament [nom=" + nom + "]";
 	}
 }
 ```
+
+**EquipamentRepository
+
+Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/repository/EquipamentRepository.java
+```
+package cat.gencat.test.repository;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import com.querydsl.core.types.FactoryExpression;
+import com.querydsl.core.types.Predicate;
+
+import cat.gencat.test.model.Equipament;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EquipamentRepository extends GenericRepository<Equipament, Long> {
+
+	Page<Equipament> findAll(Predicate predicate, Pageable pageable);
+	
+	Page<Equipament> findAll(FactoryExpression<Equipament> factoryExpression, Predicate predicate, Pageable pageable);
+	
+    List<Equipament> findDistinctByNomOrMunicipi(String nom, String municipi);
+	List<Equipament> findByNomIgnoreCase(String nom);
+	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
+}
+```
+
+**EquipamentService**
+
+Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/service/EquipamentService.java
+```
+package cat.gencat.test.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
+
+import com.querydsl.core.types.Projections;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.querydsl.GenericPredicateBuilder;
+import cat.gencat.test.model.Equipament;
+import cat.gencat.test.model.QEquipament;
+import cat.gencat.test.repository.EquipamentRepository;
+
+@Service("equipamentService")
+@Lazy
+public class EquipamentService {
+
+	@Autowired
+	private EquipamentRepository repository;
+	
+	public List<Equipament> findAll() {
+		return repository.findAll();
+	}
+
+	public Page<Equipament> findPaginated(Integer page, Integer rpp, String sortField, String sortDirection, String filter) {
+		
+		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
+		builder.populateSearchCriteria(filter);
+		
+		Direction direction = null;
+		
+		if (sortDirection != null && !"".equals(sortDirection)) {
+			if (sortDirection.equalsIgnoreCase("asc")){
+				direction = Sort.Direction.ASC;
+			}else{
+				direction = Sort.Direction.DESC;
+			}
+		}
+		
+	    Pageable pageable = new PageRequest(page-1, rpp, direction, sortField);
+		
+		return repository.findAll(builder.build(), pageable);
+	}
+	
+	public Page<Equipament> findPaginatedProjeccio(Integer page, Integer rpp, String sortField, String sortDirection, String filter) {
+		
+		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
+		builder.populateSearchCriteria(filter);
+		
+		Direction direction = null;
+		
+		if (sortDirection != null && !"".equals(sortDirection)) {
+			if (sortDirection.equalsIgnoreCase("asc")){
+				direction = Sort.Direction.ASC;
+			}else{
+				direction = Sort.Direction.DESC;
+			}
+		}
+		
+	    Pageable pageable = new PageRequest(page-1, rpp, direction, sortField);
+	    
+	    QEquipament qequipament = QEquipament.equipament;
+	    
+	    return repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
+	}
+
+	public Equipament getEquipament(Long equipamentId) {
+		return repository.findOne(equipamentId);
+	}
+
+	public Long saveEquipament(Equipament equipament) {
+		repository.save(equipament);
+
+		return equipament.getId();
+	}
+
+	public void updateEquipament(Equipament equipament) {
+		repository.save(equipament);
+	}
+
+	public void deleteEquipament(Long equipamentId) {
+		Equipament equipament = new Equipament(equipamentId);
+		repository.delete(equipament);
+	}
+
+}
+```
+
