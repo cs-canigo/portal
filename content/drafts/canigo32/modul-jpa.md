@@ -10,11 +10,11 @@ weight      = 2
 
 Aquest mòdul proporciona accés amb transaccionalitat amb la BBDD, permetent la execució d'operacions dintre de transaccions.
 
-## Instal.lació i Configuració
+## Instal·lació i Configuració
 
-### Instal.lació
+### Instal·lació
 
-Per tal d'instal-lar el mòdul d'hibernate fitxers es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul d'hibernate fitxers es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
 <canigo.persistence.jpa.version>[1.2.0,1.3.0)</canigo.persistence.jpa.version>
@@ -56,7 +56,7 @@ Al pom.xml també s'ha d'afegir el plugin que genera les classes per als reposit
 ```
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament(plugin de Canigó per a Eclipse)
+La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament(plugin de Canigó per a Eclipse)
 
 En cas que no es generi automàticament el codi, s'ha de realitzar manualment la següent configuració:
 
@@ -67,10 +67,10 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jpa.properti
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
 *.persistence.database | Si | Sistema de base de dades al que es conectarà.
-*.persistence.dialect | Si | El nom de classe de que permet a JPA generar SQL per a una base de dades relacional en particular: <br> - org.hibernate.dialect.Oracle9Dialect <-- Versió 9<br> - org.hibernate.dialect.Oracle10gDialect <-- Versió 10g<br> - org.hibernate.dialect.Oracle8iDialect <-- Versió 8i<br> - org.hibernate.dialect.MySQL5Dialect <-- Versió 5<br> - org.hibernate.dialect.MySQLDialect <-- Versions < 5<br> - org.hibernate.dialect.HSQLDialect<br> - org.hibernate.dialect.PostgreSQLDialect
+*.persistence.dialect | Si | El nom de classe que permet a JPA generar SQL per a una base de dades relacional en particular: <br> - org.hibernate.dialect.Oracle9Dialect <-- Versió 9<br> - org.hibernate.dialect.Oracle10gDialect <-- Versió 10g<br> - org.hibernate.dialect.Oracle8iDialect <-- Versió 8i<br> - org.hibernate.dialect.MySQL5Dialect <-- Versió 5<br> - org.hibernate.dialect.MySQLDialect <-- Versions < 5<br> - org.hibernate.dialect.HSQLDialect<br> - org.hibernate.dialect.PostgreSQLDialect
 *.persistence.showSQL | No | Escriu totes les sentències SQL al log aplicatiu.<br> Per defecte: true
-*.persistence.generateDdl |No | Exporta el DDL (Data Definition Language) a la BD després de que l'EntityManagerFactory s'inicialitzi, creant/actualitzant les taules.<br> Valor per defecte: false
-*.persistence.hibernate.connection.release_mode | No | Serveix per especificar quan Hibernate ha d'alliberar les connexions JDBC. Una connexió JDBC es manté fins que la sessió es tancada explícitament o desconnectat per defecte. Per a un datasource JTA s'hauria de seleccionar after_statement, i per non-JTA after_transaction. En mode auto, es seleccionarà after_statement per a JTA i CMT, i afte_transaction per JDBC.<br> Per defecte: auto
+*.persistence.generateDdl |No | Exporta el DDL (Data Definition Language) a la BD després que l'EntityManagerFactory s'inicialitzi, creant/actualitzant les taules.<br> Valor per defecte: false
+*.persistence.hibernate.connection.release_mode | No | Serveix per especificar quan Hibernate ha d'alliberar les connexions JDBC. Una connexió JDBC es manté fins que la sessió és tancada explícitament o desconnectat per defecte. Per a un datasource JTA s'hauria de seleccionar after_statement, i per non-JTA after_transaction. En mode auto, se seleccionarà after_statement per a JTA i CMT, i afte_transaction per JDBC.<br> Per defecte: auto
 *.persistence.hibernate.connection.autocommit | No | Habilita l'autocommit per a connexions pooled JDBC
 *.persistence.hibernate.generate_statistics | No | Hibernate recopila informació útil per a tunning.<br> Per defecte: false
 *.persistence.hibernate.jdbc.use_scrollable_resultset | No | Habilita l'ús de JDBC2 scrollable resultsets a Hibernate.<br> Per defecte: true
@@ -178,14 +178,14 @@ Per a utilitzar-la s'ha d'afegir el mètode següent al repository creat.
 Page<T> findAll(Predicate predicate, Pageable pageable);
 ```
 
-Aquest mètode espera un objecte org.springframework.data.domain.PageablePageable que conté el núm de pàgina (la primera pàgina és la 0), el nombre d'elements per pàgina, la direcció d'ordenació, el camp d'ordenació.
+Aquest mètode espera un objecte org.springframework.data.domain.Pageable que conté el núm. de pàgina (la primera pàgina és la 0), el nombre d'elements per pàgina, la direcció d'ordenació, el camp d'ordenació.
 I un objecte Predicate amb la query a realitzar que es construeix de la següent manera:
 
 Primer de tot el filtre ha de ser un String amb el següent patró:
 
 **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN**
 
-On field és el nom d'una propietat de la entitat (per exemple id)<br>
+On field és el nom d'una propietat de l'entitat (per exemple id)<br>
 On Operador és un dels tipus d'operador suportats:
 
 Operador | Descripció
@@ -199,12 +199,12 @@ Operador | Descripció
 
 On valor és el valor amb el qual es vol comparar.
 
-Per a cercar la entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser:<br>
+Per a cercar l'entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser:<br>
 id>15,nom:Prova
 
 #### Projecció de resultats
 
-Amb QueryDSL també es pot realitzar cerques que en comptes de retornar l'objecte senser, retorni només una part del objecte dessitjat.<br>
+Amb QueryDSL també es pot realitzar cerques que en comptes de retornar l'objecte senser, retorni només una part de l'objecte desitjat.<br>
 
 Per a utilitzar les projeccions al vostre repository heu d'afegir el mètode:
 ```
