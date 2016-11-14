@@ -22,7 +22,7 @@
 {{ end }}
 
 {{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (eq $section .Site.Params.bloc_section) }}
-	Bloc d'Arquitectura
+	Blog d'Arquitectura
 {{ end }}
 
 {{ if or (eq $title "cs") (eq $section "cs") }}
@@ -38,5 +38,5 @@
 {{ end }}
 
 {{ if in .URL "bloc_tags" }}
-	<a href="/bloc">Bloc d'Arquitectura</a> > {{ .Title }} 
+	<a href="/bloc">Blog d'Arquitectura</a> > {{ .Title }} 
 {{end}}

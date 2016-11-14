@@ -60,7 +60,7 @@
 								<li>
 									<a href="{{ .Permalink }}" class="a-vermell">
 									{{ if eq .Section "bloc" }}
-										BLOC. 
+										BLOG. 
 									{{ end }}
 									{{ .Title }}</a> ({{ .Date.Format "02-01-2006" }})
 									<p>{{ .Description }}<br /><br /></p>
@@ -74,6 +74,19 @@
 
 					<div class="col-sm-4">
 
+						{{ if gt (len (where .Data.Pages "Section" "quisom")) 0 }}
+
+						<div class="inform_relacionada superdestacat">
+							<div class="inform_relacionada_cont">
+								<span class="enllac"><h4><strong>Qui som?</strong></h4><span>
+								<div class="llistat_enllacos_filet llistat_enllacos_filet_cont">
+									<p><a href="/quisom/about" title="Qui som:"><img src="/images/bloc/web-aq.png" alt="QuiSom" /></a></p>
+								</div>
+							</div>
+						</div>
+
+						{{ end }}
+
 						<div class="inform_relacionada superdestacat">
 							<div class="inform_relacionada_cont">
 								<span class="enllac"><h4><strong>Roadmap de les solucions</strong></h4><span>
@@ -83,29 +96,29 @@
 							</div>
 						</div>
 
-					{{ if gt (len (where .Data.Pages "Section" "destacats")) 0 }}
+						{{ if gt (len (where .Data.Pages "Section" "destacats")) 0 }}
 
-					<div class="inform_relacionada">
-						<div class="inform_relacionada_cont">
-							<h4><strong>Destacats</strong></h4>
-							<div class="llistat_enllacos_filet">
-								<ul class="llistat_enllacos_filet_cont icones list-group">
-								{{ range first .Site.Params.destacatshome (where .Data.Pages "Section" "destacats") }}
-									<li class="list-group-item bullet">
-									  {{ if isset .Params "enllac" }}
-									    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
-										 {{ else }}
-										   <span class="enllac">{{ .Title }}</span>
-										 {{ end }}
-										{{ .Description }}
-									</li>
-								{{ end }}
-								</ul>
+						<div class="inform_relacionada">
+							<div class="inform_relacionada_cont">
+								<h4><strong>Destacats</strong></h4>
+								<div class="llistat_enllacos_filet">
+									<ul class="llistat_enllacos_filet_cont icones list-group">
+									{{ range first .Site.Params.destacatshome (where .Data.Pages "Section" "destacats") }}
+										<li class="list-group-item bullet">
+										  {{ if isset .Params "enllac" }}
+										    <a href="{{ index .Params "enllac" }}">{{ .Title }}</a>
+											 {{ else }}
+											   <span class="enllac">{{ .Title }}</span>
+											 {{ end }}
+											{{ .Description }}
+										</li>
+									{{ end }}
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					{{ end }}
+						{{ end }}
 
 <!--
 
