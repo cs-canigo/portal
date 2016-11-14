@@ -27,11 +27,11 @@
 
 						{{ $section := .Title | html | lower }}
 
-						{{ if and (ne $section "noticies") (ne $section (.Site.Params.bloc_section | pluralize)) }}
+						{{ if and (ne $section "noticies") (ne $section (.Site.Params.blog_section | pluralize)) }}
 				            
 							{{ partial "section/colors.html" . }}
 
-			            {{ else if (eq $section (.Site.Params.bloc_section | pluralize)) }}
+			            {{ else if (eq $section (.Site.Params.blog_section | pluralize)) }}
 
 							{{ partial "section/posts.html" . }}
 
@@ -48,7 +48,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if (eq $section (.Site.Params.bloc_section | pluralize)) }}
+	{{ if (eq $section (.Site.Params.blog_section | pluralize)) }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

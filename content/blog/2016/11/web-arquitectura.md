@@ -2,8 +2,8 @@
 date        = "2016-11-09"
 title       = "Tecnologia darrera del Web d'Arquitectura"
 description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'utilitzem de base per a part de la R&D que fem a la unitat"
-sections    = ["Bloc", "home"]
-bloc_tags	= ["patrons de disseny"]
+sections    = ["Blog", "home"]
+blog_tags	= ["patrons de disseny"]
 imatge 		= "/images/bloc/web-aq.png"
 key         = "NOVEMBRE2016"
 +++

@@ -14,7 +14,7 @@
     {{ range first $.Site.Params.noticieshome ($taxonomy.Pages) }}     
     <item>
       <title>
-        {{ if eq .Section "bloc" }}
+        {{ if eq .Section "blog" }}
           BLOG. 
         {{ end }}
         {{ .Title }}

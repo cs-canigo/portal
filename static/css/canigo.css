@@ -222,11 +222,11 @@ article table {
 .inform_relacionada{margin-bottom:1em;}
 .titol-mobil{padding-top: 1em;}
 
-body.blocs .destacat_noticies {margin-bottom: 1em}
-body.blocs .destacat_noticies .destacat_noticies_cont{padding-top:0;font-size:1.1em;}
-body.blocs .destacat_noticies .destacat_noticies_cont span.data_post{margin-right: .3em}
-body.blocs .destacat_noticies .destacat_noticies_cont a.ncomments {padding-left: .5em}
-body.blocs .destacat_noticies img{max-width:700px; width:95%;}
+body.blogs .destacat_noticies {margin-bottom: 1em}
+body.blogs .destacat_noticies .destacat_noticies_cont{padding-top:0;font-size:1.1em;}
+body.blogs .destacat_noticies .destacat_noticies_cont span.data_post{margin-right: .3em}
+body.blogs .destacat_noticies .destacat_noticies_cont a.ncomments {padding-left: .5em}
+body.blogs .destacat_noticies img{max-width:700px; width:95%;}
 
 div.superdestacat img{width:100%; margin-top: .5em;}
 

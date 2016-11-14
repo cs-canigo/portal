@@ -2,8 +2,8 @@
 date        = "2016-09-15"
 title       = "Cloud-Ready"
 description = "Aspectes a tenir en compte en la definició de l'arquitectura d'una aplicació per estar preparada per anar al Cloud"
-sections    = ["Bloc", "home"]
-bloc_tags	= ["patrons de disseny", "microserveis", "api"]
+sections    = ["Blog", "home"]
+blog_tags	= ["patrons de disseny", "microserveis", "api"]
 imatge 		= "/images/bloc/cloud-ready.png"
 key         = "OCTUBRE2016"
 +++
