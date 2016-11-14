@@ -5,6 +5,9 @@ description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'
 sections    = ["Blog", "home"]
 blog_tags	= ["patrons de disseny"]
 imatge 		= "/images/bloc/web-aq.png"
+aliases       = [
+"/bloc/2016/11/web-arquitectura/"
+]
 key         = "NOVEMBRE2016"
 +++
 
