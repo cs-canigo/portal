@@ -15,7 +15,7 @@
     <item>
       <title>
         {{ if eq .Section "bloc" }}
-          BLOC. 
+          BLOG. 
         {{ end }}
         {{ .Title }}
       </title>
