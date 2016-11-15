@@ -47,7 +47,7 @@ A banda de Hugo com a generador del site, hem anat incoporant diverses peces a m
 
 - [**Disqus**](https://disqus.com): Un cop creat el portal ens va semblar que li faltava un punt de interactivitat. Amb **Disqus** tenim una eina SaaS que ens permet la interacció amb els lectors en base a comentaris al propi bloc. Sent un portal obert al públic, Disqus ens permet també la gestió dels comentaris i així evitar comentaris malsonants o fora de lloc.
 
-![Workflow](workflow.png)
+![Workflow](../workflow.png)
 
 
 ## Referències
