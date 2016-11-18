@@ -8,7 +8,7 @@ weight      = 2
 
 ## Propòsit
 
-Aquest mòdul proporciona accés amb transaccionalitat amb la BBDD, permetent la execució d'operacions dintre de transaccions.
+Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, permetent la execució d'operacions dintre de transaccions.
 
 ## Instal·lació i Configuració
 
@@ -26,7 +26,7 @@ Per tal d'instal·lar el mòdul d'hibernate fitxers es pot incloure automàticam
 </dependency>
 ```
 
-Al pom.xml també s'ha d'afegir el plugin que genera les classes per als repositoris:
+Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de QueryDSL:
 ```
 <build>
 	...
@@ -153,9 +153,9 @@ Al tag **jpa:repositories** al paràmetre **base-package** s'ha d'indicar el pac
 
 ### Ús dels repositoris
 
-Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'extendre de **GenericRepository<T, ID extends Serializable>**
+Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'extendre de **cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository<T, ID extends Serializable>**
 
-#### Construcció de queries
+#### Construcció de queries automàtiques
 
 A un repositori es poden definir mètodes per cada query desitjada.
 
@@ -167,6 +167,8 @@ Exemples
 	List<Equipament> findByNomIgnoreCase(String nom);
 	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
 ```
+
+Més informació a la documentació oficial de [Spring Data JPA](http://docs.spring.io/spring-data/jpa/docs/current/reference/html/).
 
 #### Utilització de QueryDSL
 
@@ -224,6 +226,8 @@ QEquipament qequipament = QEquipament.equipament;
 	
 Page<Equipament> page = repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
 ```
+
+Més informació a la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
 ### Exemple 
 	
@@ -292,7 +296,7 @@ public class Equipament {
 }
 ```
 
-**EquipamentRepository
+**EquipamentRepository**
 
 Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/repository/EquipamentRepository.java
 ```
@@ -356,43 +360,19 @@ public class EquipamentService {
 		return repository.findAll();
 	}
 
-	public Page<Equipament> findPaginated(Integer page, Integer rpp, String sortField, String sortDirection, String filter) {
+	public Page<Equipament> findPaginated(Pageable pageable, String filter) {
 		
 		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
 		builder.populateSearchCriteria(filter);
-		
-		Direction direction = null;
-		
-		if (sortDirection != null && !"".equals(sortDirection)) {
-			if (sortDirection.equalsIgnoreCase("asc")){
-				direction = Sort.Direction.ASC;
-			}else{
-				direction = Sort.Direction.DESC;
-			}
-		}
-		
-	    Pageable pageable = new PageRequest(page-1, rpp, direction, sortField);
 		
 		return repository.findAll(builder.build(), pageable);
 	}
 	
-	public Page<Equipament> findPaginatedProjeccio(Integer page, Integer rpp, String sortField, String sortDirection, String filter) {
+	public Page<Equipament> findPaginatedProjeccio(Pageable pageable, String filter) {
 		
 		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
 		builder.populateSearchCriteria(filter);
 		
-		Direction direction = null;
-		
-		if (sortDirection != null && !"".equals(sortDirection)) {
-			if (sortDirection.equalsIgnoreCase("asc")){
-				direction = Sort.Direction.ASC;
-			}else{
-				direction = Sort.Direction.DESC;
-			}
-		}
-		
-	    Pageable pageable = new PageRequest(page-1, rpp, direction, sortField);
-	    
 	    QEquipament qequipament = QEquipament.equipament;
 	    
 	    return repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
@@ -419,4 +399,3 @@ public class EquipamentService {
 
 }
 ```
-
