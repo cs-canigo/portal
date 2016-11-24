@@ -399,3 +399,5 @@ public class EquipamentService {
 
 }
 ```
+Per a documentació sobre l'ús de BOs i DAOs la informació es troba a la versió anterior de [Canigó JPA](http://http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-jpa/).
+
