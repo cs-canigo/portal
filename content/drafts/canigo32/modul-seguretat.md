@@ -24,7 +24,7 @@ Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l'ú
 Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.security.version>[1.1.0,1.2.0)</canigo.security.version>
+<canigo.security.version>[1.2.0, 1.3.0)</canigo.security.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
