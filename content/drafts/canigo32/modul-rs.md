@@ -98,13 +98,16 @@ Si ho desitja pot definir quants RestControllerAdvice com necessiti.
 
 #### Objectes request
 S'han definit els següents objectes de petició  tal com es defineix en el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+
 ```
 	- BatchRequest --> Per a peticions batch
 
 ```
 #### Objectes response
 S'han definit els següents objectes de petició  tal com es defineix en el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+
 ```
 	- ResponseBatch --> Per a peticions batch
 	- ResponseError --> Per errors
 	- ResponsePage  --> Per documents paginats
+```
