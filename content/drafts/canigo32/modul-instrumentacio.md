@@ -23,7 +23,7 @@ Dins d'aquest mòdul podem trobar les següents funcionalitats:
 Per tal d'instal-lar el mòdul d'instrumentació es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.operation.instrumentation.version>[1.1.0,1.2.0)</canigo.operation.instrumentation.version>
+<canigo.operation.instrumentation.version>[1.2.0, 1.3.0)</canigo.operation.instrumentation.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
