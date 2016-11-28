@@ -44,7 +44,7 @@ La configuració es realitza automàticament a partir de la eina de suport al de
 * Configuració de l'Autorització
 * Configuració de la font de dades de l'esquema de seguretat
 
-#### Configuració dels filtres de l'aplicació Web
+#### Configuració dels filtres de l'aplicació REST
 
 Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autentificació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
 
@@ -62,16 +62,16 @@ Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'auto
 Per a més informació consultar la pàgina [Spring Security Doc](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#security-filter-chain)
 
 #### Configuració de JWT
-La nova versió de Canigó treballa amb JWT (JSON web Token). Per a això s'ha fet servir la llibreria Java JJWT. Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat, Configuració de l'Autenticació. Un cop autenticat l'usuari es genera un testimoni que serà enviat a cada petició a la capçalera. Aquest testimoni conté tota la informació de l'usuari pel que facilita l'escalabilitat del sistema. Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) les següents propietats:
+La nova versió de Canigó treballa amb JWT (JSON web Token). Per això s'ha fet servir la llibreria Java JJWT. Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat, Configuració de l'Autenticació. Un cop autenticat l'usuari es genera un token que serà enviat a cada petició a la capçalera. Aquest token conté tota la informació de l'usuari pel que facilita l'escalabilitat del sistema. Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) les següents propietats:
 
-Propietat                     | Requerit | Descripció                                                   | Valor per Defecte
------------------------------ | -------- | -------------------------------------------------------------|------------------
-*.jwt.header                  | No       | Nom JNDI d'accés a la BD. Obligatori per a connexions JNDI   | Authentication
-*.jwt.header.startToken       | No       | URL de connexió a la base de dades                           | Bearer
-*.jwt.tokenResponseHeaderName | No       | Usuari de connexió a la base de dades                        | jwtToken
-*.jwt.secret                  | No       | Password de connexió a la base de dades                      | canigo
-*.jwt.expiration              | No       | Password de connexió a la base de dades                      | 3600
-*.jwt.siteminderAuthentication| No       | Password de connexió a la base de dades                      | false
+Propietat                     | Requerit | Descripció                                 | Valor per Defecte
+----------------------------- | -------- | -------------------------------------------|------------------
+*.jwt.header                  | No       | nom del header del token JWT		      | Authentication
+*.jwt.header.startToken       | No       | Inici del token JWT       		      | Bearer
+*.jwt.tokenResponseHeaderName | No       | Nom del header del token JWT        	      | jwtToken
+*.jwt.secret                  | No       | Password per generar el token JWT          | canigo
+*.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
+*.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
 Per a més informació sobre JWT visitar la pàgina oficial a [JWT page] (https://jwt.io/)
 
