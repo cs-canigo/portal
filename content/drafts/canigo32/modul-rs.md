@@ -19,7 +19,7 @@ Entre altres proporciona un control genèric d'errors. La seva encapsulació en 
 Per tal d'instal·lar el mòdul web-rs es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.web.rs.version>[1.0.0,1.3.0)</canigo.web.rs.version>
+<canigo.web.rs.version>[1.0.0,1.1.0)</canigo.web.rs.version>
 
 <dependency>
  <groupId>cat.gencat.ctti</groupId>
