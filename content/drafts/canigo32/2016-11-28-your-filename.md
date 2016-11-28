@@ -1,5 +1,5 @@
 +++
-date        = "2015-04-02T11:48:54+02:00"
+date        = "2016-11-28T11:48:54+02:00"
 title       = "Seguretat"
 description = "Autentificació i autorització d'usuaris."
 sections    = "Canigó. Documentació versió 3.x"
@@ -15,7 +15,7 @@ L'especificació JAAS (Java Authorization and Authentication) de J2EE proporcion
 L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre que els temes d'autorització pateixen de moltes carències.
 </div>
 
-Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l'ús de 'Spring Security 3.0' com framework base i les extensions que Canigó proporciona.
+Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l'ús de 'Spring Security 4.2.1' com framework base i les extensions que Canigó proporciona.
 
 ## Instal.lació i Configuració
 
@@ -25,18 +25,13 @@ Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a t
 
 ```
 <canigo.security.version>[1.1.0,1.2.0)</canigo.security.version>
-<spring.security.facelets.tag.support.version>[1.0.0,1.1.0)</spring.security.facelets.tag.support.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.security</artifactId>
 	<version>${canigo.security.version}</version>
 </dependency>
-<dependency>
-	<groupId>org.springframework.security.taglibs</groupId>
-	<artifactId>spring.security.facelets.tag.support</artifactId>
-	<version>${spring.security.facelets.tag.support.version}</version>
-</dependency>
+
 ```
 
 ### Configuració
@@ -47,7 +42,6 @@ La configuració es realitza automàticament a partir de la eina de suport al de
 * Configuració de l'Autenticació
 * Configuració de l'Autorització
 * Configuració de la font de dades de l'esquema de seguretat
-* Configuració tags de seguretat en les pàgines
 
 #### Configuració dels filtres de l'aplicació Web
 
@@ -64,7 +58,7 @@ Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'auto
 </filter-mapping>
 ```
 
-Per a més informació consultar la pàgina http://static.springsource.org/spring-security/site/docs/3.0.x/reference/security-filter-chain.html
+Per a més informació consultar la pàgina [Spring Security Doc](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#security-filter-chain)
 
 #### Configuració de l'Autenticació
 
@@ -79,7 +73,6 @@ Dins d'aquest mòdul trobem els següents proveidors de seguretat:
 * Seguretat Base de dades
 * Seguretat LDAP
 * Seguretat GICAR
-* Seguretat SACE
 
 Els diferents proveidors comparteixen els següents arxius de configuració:
 
@@ -160,64 +153,6 @@ La configuració del provider en app-custom-security.xml per aquest proveidor é
 Accés base de dades
 
 L'eina de suport al desenvolupament automatitza la instal- lació del mòdul de persistència si aquest no ha estat instal- lat prèviament pel desenvolupador.
-</div>
-
-#### Configuració de l'Autorització per SACE
-
-Per a configurar l'acces a SACE és necessari:
-
-* Configurar l'arxiu de propietats security.properties.
-* Conigurar el proveidor de seguretat dins de la configuració de seguretat de Spring.
-
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament.
-
-Les propietats de l'arxiu **security.properties** son les següents:
-
-Propietat                                  | Requerit | Descripció
------------------------------------------- | -------- | --------------------------------------------------------------------------------------
-*.security.sace.userNameFormat             | No       | Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
-*.security.sace.authoritiesbyUserNameQuery | No       | Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
-*.security.sace.keyStore                   | Si       | Localització de la keystore
-*.security.sace.keyStorePassPhrase         | Si       | Password de la keystore
-*.security.sace.url                        | Si       | URL del servei de SACE
-
-<div class="message warning">
-Certificats/keystore<br>
-Cal tenir el contenidor de certificats desplegat amb l'aplicació per a poder fer la connexió correctament amb SACE. Per això és important que tingueu aquest fitxer dins el vostre projecte normalment dins "src/main/resources/keystore" i així es desplegarà dins "WEB-INF/classes/keystore". A més cal que configureu les dues propietats "keyStore" i "keyStorePassPhrase". La paraula clau del contenidor que us hemo posat disponible és "saceTrust_pre2007"
-</div>
-
-La configuració del proveidor dins de l'ariux de **app-custom-security.xml**:
-
-```
-<security:authentication-manager>
-	<security:authentication-provider ref="saceProvider"/>
-</security:authentication-manager>
-
-<bean id="saceProvider" class="cat.gencat.ctti.canigo.arch.security.provider.sace.SACEAuthenticationProvider">
-	<description>SACE Provider</description>
-	<property name="authenticationDao" ref="saceAuthenticationDao"/>
-</bean>
-
-<bean id="saceAuthenticationDao" class="cat.gencat.ctti.canigo.arch.security.SACEPasswordAuthenticationDaoStub">
-	<description>SACE Authentication DAO</description>
-	<property name="i18nResourceBundleMessageSource" ref="messageSource" />
-	<property name="userNameFormat" value="${security.sace.userNameFormat}" />
-	<property name="hostName" value="${security.sace.url}" />
-	<property name="keyStore" value="${security.sace.keyStore}" />
-	<property name="keyStorePassPhrase" value="${security.sace.keyStorePassPhrase}" />
-	<property name="authoritiesDAO" ref="saceAuthoritiesDAO"/>
-</bean>
-
-<bean id="saceAuthoritiesDAO" class="cat.gencat.ctti.canigo.arch.security.provider.sace.authorities.AuthoritiesDAOImpl">
-	<description>Authorities DAO implementation for SACE. Gets granted authorities for specified user</description>
-	<property name="authoritiesByUsernameQuery" value="${security.sace.authoritiesbyUserNameQuery:#{null}}"/>
-	<property name="dataSource" ref="dataSource"/>
-</bean>
-```
-
-<div class="message warning">
-Connexió a SACE<br>
-Per a realitzar les proves en desenvolupament podem instal- lar un VPN Client per connectar-se al servidor SACE (consultar el document 'Directori Corporatiu de la Generalitat de Catalunya - Guia d'integració d'aplicacions v3.7').ç
 </div>
 
 #### Configuració de l'Autorització per LDAP
@@ -413,74 +348,6 @@ Així doncs, els enllaços de logout són els següents:
 * Per a una aplicació ubicada en els apaches corporatius de internet: http://sso.gencat.cat/siteminderagent/forms/logoff.html
 * Per a una aplicació ubicada en els apaches corporatius de intranet: http://sso.gencat.intranet/siteminderagent/forms/logoff.html
 * Per a una aplicació amb apache "pròpi": http://****.gencat.***/siteminderagent/forms/logoff.html;
-
-#### Configuració tags de seguretat en les pàgines
-
-Spring Security permet incorporar tags a les pàgines JSP/JSF per tal de controlar la lògica d'aquesta segons els rols de l'usuari.
-
-**Configuració JSF
-
-Per a incorporar els tags dins de la JSF s'ha de referenciar el espai de noms (nameSpace) de seguretat dins del tag HTML de la pàgina:
-
-```
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:c="http://java.sun.com/jstl/core"
-	xmlns:sec="http://www.springframework.org/security/facelets/tags">
-....
-....
-....
-</html>
-```
-
-Una vegada definida la referència a la llibreria i el seu prefix 'sec', podem incorporar els següents tags a la pàgina JSF:
-
-Propietat     | Requerit | Valor
-------------- | -------- | ------------------------------------------------------------------------------------------------------------
-ifAllGranted  | No       | L'usuari ha de tenir tots els rols de l'atribut "roles" perquè el contingut dins del tag (body) sigui mostrat.
-ifAnyGranted: | No       | L'usuari ha de tenir qualsevol dels rols de l'atribut "roles" perquè el contingut dins del tag (body) sigui mostrat.
-ifNotGranted  | No       | L'usuari no ha de tenir cap dels rols de l'atribut "roles" perquè el contingut dins del tag (body) sigui mostrat.
-
-Exemple:
-
-```
-<sec:ifAnyGranted roles="ROLE_USER, ROLE_ADMIN">
-    <h:outputText>
-       Només visible per usuaris que tinguin el ROLE_USER o ROLE_ADMIN.
-       Un usuari amb només el rol ROLE_GESTOR no podria visualitzar el contingut.
-    </h:outputText>
-</sec:ifAnyGranted>
-
-<sec:ifAllGranted roles="ROLE_USER, ROLE_ADMIN">
-   <h:outputText>Només visible per a usuaris que tinguin els dos rols (ROLE_USER, ROLE_ADMIN) assignats.</h:outputText>
-</sec:ifAllGranted>
-
-<sec:ifNotGranted roles="ROLE_USER">
-   <h:outputText>Visible per a usuaris que no tinguin assignat el rol "ROLE_USER"</h:outputText><br/>
-</sec:ifNotGranted>
-```
-
-**Configuració Struts/Taglib**
-
-Des de la versió JSP 1.2 no és necessari configurar en el fitxer 'web.xml' la referència a les llibreries. Podem referenciar directament per mitjà d'una url el jar, tal com es mostra a continuació:
-
-    <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-
-Exemple de text només visible per administradors:
-
-```
-<sec:authorize access="hasRole('ROLE_ADMIN')">
-Text només visible per un administrador
-</sec:authorize>
-
-<sec:authorize access="hasAnyRole('ROLE_ADMIN, ROLE_USER')">
-Text només visible per un usuari amb rol "ROLE_ADMIN" i/o "ROLE_USER".
-</sec:authorize>
-```
-
-Per a més informació sobre el tag "sec", consultar la pàgina [Spring Security 3.x Taglib](http://static.springsource.org/spring-security/site/docs/3.1.x/reference/taglibs.html)
 
 ## Eines de Suport
 
