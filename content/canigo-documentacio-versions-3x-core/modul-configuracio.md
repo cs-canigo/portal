@@ -14,7 +14,7 @@ poden ser tant referències a altres objectes com propietats internes
 (atributs) que necessiten per al seu correcte funcionament.
 
 Una de les principals avantatges del mòdul respecte la classe
-[PropertyPlaceholderConfigurer](http://static.springsource.org/spring/docs/3.0.3.RELEASE/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html "Documentacio de Spring")
+[PropertyPlaceholderConfigurer](http://docs.spring.io/spring/docs/4.3.3.RELEASE/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html "Documentacio de Spring")
 aportada per Spring, és la possibilitat de disposar de propietats
 dependents d'entorn sense necessitat de cap configuració extra a nivell
 de beans - propietats.
