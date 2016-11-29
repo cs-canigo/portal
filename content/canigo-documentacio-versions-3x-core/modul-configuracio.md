@@ -24,7 +24,7 @@ de beans - propietats.
 ### Instal.lació
 
 El mòdul de configuració s'inclou per defecte dins del core de Canigó 3.
-Durant el procés de creació de l'aplicació (Struts o JSF), l'eina de
+Durant el procés de creació de l'aplicació, l'eina de
 suport al desenvolupament inclourà la referència dins del pom.xml. En
 cas d'una instal- lació manual afegir les següents línies al pom.xml de
 l'aplicació:
