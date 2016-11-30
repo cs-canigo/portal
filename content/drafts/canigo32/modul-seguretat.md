@@ -132,6 +132,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	@Lazy
 	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	@Lazy
+	private AuthenticationSuccessHandler restAuthenticationSuccessHandler;
 
 	@Autowired
 	@Lazy
@@ -156,6 +160,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				RequestMethod.POST.toString());
 		proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(true);
 		proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
 		return proxyUsernamePasswordAuthenticationFilter;
 	}
 
@@ -413,6 +418,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	@Lazy
 	private AuthenticationManager authenticationManager;
+	
+	@Autowired
+	@Lazy
+	private AuthenticationSuccessHandler restAuthenticationSuccessHandler;
 
 	@Autowired
 	@Lazy
@@ -425,8 +434,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/api/info/properties", "/api/info/modules").hasRole("ADMIN").antMatchers("/api/equipaments/**").hasRole("USER");
         http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
 		http.addFilterBefore(proxyUsernamePasswordAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
-		http.formLogin().loginPage("/api/login").permitAll();
-
+		
 	}
 	
 	@Override
@@ -442,6 +450,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				RequestMethod.POST.toString());
 		proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(true);
 		proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
 		return proxyUsernamePasswordAuthenticationFilter;
 	}
 
