@@ -75,7 +75,20 @@ Propietat                     | Requerit | Descripció                          
 
 Per a més informació sobre JWT visitar la pàgina oficial a [JWT page] (https://jwt.io/)
 
+Per provar l'autenticació per token s'ha de cridar a ".../api/auth" amb la capçalera GICAR. En caso de autenticación por Gicar. O en el cuerpo de la petición en formato JSON en otros casos.
+```
+{ 
+    username = user,
+	password  = secret
+} 
+```
+Aquesta crida ens retornarà un token vàlid. Per a les següents request s'ha d'enviar aquest token a la capçalera de la petició de la següent manera (configuració per defecte):
+
+Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
+
 Més endavant es mostra un exemple de configuració en Canigó de JWT amb GICAR.
+
+Nota: S'ha de tenir en compte que la nova arquitectura proposada a Canigó 3.2 és una arquitectura REST que separa totalment la part Backend de la part Frontend. Pel que l'API REST s'aconsella s'usi amb autenticació per token i de l'altre costat, del costat client es faci servir el frontal necessari en cada cas. Per exemple una aplicació AngularJS que és el recomanat. Si la seva aplicació no té requisits d'escalabilitat i opta per generar la seva aplicació amb plantilles del costat del servidor com ara Thymeleaf, la recomanació és que es creï una aplicació client que consumeixi l'API REST. Per a la implementació d'aquesta aplicació pot fer servir les plantilles REST de Spring. RestTemplate [Rest Template doc] (http://docs.spring.io/spring/docs/current/spring-framework-reference/html/remoting.html).
 
 #### Configuració de l'Autenticació
 
