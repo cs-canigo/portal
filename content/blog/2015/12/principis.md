@@ -2,8 +2,8 @@
 date        = "2015-12-01"
 title       = "Principis d'Arquitectura de Sistemes d'Informació"
 description = "Recomanacions a seguir en la construcció de sistemes d'informació a la Generalitat de Catalunya"
-bloc_tags	= ["bones pràctiques"]
-sections    = ["Bloc", "home"]
+blog_tags	= ["bones pràctiques"]
+sections    = ["Blog", "home"]
 aliases = [
     "/principis",
     "/principis/",

@@ -52,7 +52,7 @@
 			{{ end }}
 		   -->
 
-      {{ range (where .Site.Pages.ByDate.Reverse "Section" "bloc") }}
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "blog") }}
         {{ if eq .Params.key $key }}
           {{ partial "comunicat/noticia.html" . }}
         {{ end }} 

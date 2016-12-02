@@ -90,12 +90,12 @@ default_versions:
 En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades a [DockerHub](https://hub.docker.com/r/gencatcloud/).
 
 
-**Element**  | **Versió actual CTTI** | **Docker**
+**Element**  | **Versions suportades** | **Docker**
 ------------ | ----------------------- | ---------
-Apache 		 | 2.2                     | https://hub.docker.com/r/gencatcloud/httpd/
+Apache 		 | 2.2, 2.4                | https://hub.docker.com/r/gencatcloud/httpd/
 Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/
 HAProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/
-Java		 | 7		|	https://hub.docker.com/r/gencatcloud/java/
+Java		 | 7, 8		|	https://hub.docker.com/r/gencatcloud/java/
 MySql 		 | 5.7                     | https://hub.docker.com/r/gencatcloud/mysql/
 NodeJS 		 | 4.2.6                     | https://hub.docker.com/r/gencatcloud/nodejs/
 PHP 		 | 5.3.29                   | https://hub.docker.com/r/gencatcloud/php/

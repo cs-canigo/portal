@@ -26,7 +26,7 @@ $(function(){
 
 	//gestió del fil d'ariadna en el cercador
 	for(var i=0;i<fil_cercador.length;i++){
-		if(window.location.hash.indexOf("&type="+fil_cercador[i][0])>0){
+		if(window.location.hash.indexOf("&type="+fil_cercador[i][0])>-1){
 			var breadcrumbs2 = $(".breadcrumbs2");
 			$(breadcrumbs2).html("<a href='/"+fil_cercador[i][0]+"/'>"+fil_cercador[i][1]+"</a>");
 			$(breadcrumbs2).parent().append("<li>Cercador</li>");
@@ -35,6 +35,11 @@ $(function(){
 				$("<input type='hidden' name='sitesearch' value='"+url+"/"+fil_cercador[i][0]+"' />").appendTo("#cercadorIndex");
 			}
 		}		
+	}
+
+	//Fil ariadna QUI SOM
+	if(window.location.pathname.indexOf("/quisom")>-1){
+		$(".breadcrumbs2").remove();
 	}
 
 });

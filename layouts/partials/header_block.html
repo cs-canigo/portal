@@ -35,7 +35,7 @@
 
 								<h1 class="capcelera_flotant pull-left" data-txt="{{index .Params "teletext_id"}}.title">
 									{{ if and (eq $section "") (ne $title "cercador") }}
-										{{ if (eq (in .URL "bloc_tags") false) }}
+										{{ if (eq (in .URL "blog_tags") false) }}
 											{{ partial "breadcrumbs.html" . }}
 										{{ end }}
 										{{ partial "titles_subsection.html" . }}
@@ -63,13 +63,13 @@
 								</form>
 								{{end}}
 									
-								{{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (in .URL "bloc_tags") }}
-								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Bloc&amp;q='+this.cerca.value; return false;">
+								{{ if or (eq $title (.Site.Params.blog_section | pluralize)) (in .URL "blog_tags") }}
+								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Blog&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
 										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca al bloc" /> 
+											class="form-control" placeholder="Cerca al blog" /> 
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
 										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
 									</div>								

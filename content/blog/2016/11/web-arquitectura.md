@@ -2,9 +2,12 @@
 date        = "2016-11-09"
 title       = "Tecnologia darrera del Web d'Arquitectura"
 description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'utilitzem de base per a part de la R&D que fem a la unitat"
-sections    = ["Bloc", "home"]
-bloc_tags	= ["patrons de disseny"]
+sections    = ["Blog", "home"]
+blog_tags	= ["patrons de disseny"]
 imatge 		= "/images/bloc/web-aq.png"
+aliases       = [
+"/bloc/2016/11/web-arquitectura/"
+]
 key         = "NOVEMBRE2016"
 +++
 
@@ -44,7 +47,7 @@ A banda de Hugo com a generador del site, hem anat incoporant diverses peces a m
 
 - [**Disqus**](https://disqus.com): Un cop creat el portal ens va semblar que li faltava un punt de interactivitat. Amb **Disqus** tenim una eina SaaS que ens permet la interacció amb els lectors en base a comentaris al propi bloc. Sent un portal obert al públic, Disqus ens permet també la gestió dels comentaris i així evitar comentaris malsonants o fora de lloc.
 
-![Workflow](/bloc/2016/11/workflow.png)
+![Workflow](../workflow.png)
 
 
 ## Referències

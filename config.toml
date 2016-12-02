@@ -19,10 +19,10 @@ Paginate = 10
 	destacatshome = 4
 	google_analytics_id = "UA-59408075-1"
 	titol = "Arquitectura CTTI"
-	bloc_section = "bloc"
+	blog_section = "blog"
 
 [taxonomies]
-	bloc_tag = "bloc_tags"
+	blog_tag = "blog_tags"
     section = "sections"
 
 #----------------
@@ -44,8 +44,8 @@ Paginate = 10
 [[menu.main]]
 	Name = "Blog"
     Weight = 5
-    Identifier = "bloc"
-    URL = "/bloc"   
+    Identifier = "blog"
+    URL = "/blog"   
 
 [[menu.main]]
 	Name = "Cloud"

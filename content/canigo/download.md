@@ -13,7 +13,7 @@ weight		= 4
 
 <p>&nbsp;</p>
 
-## Canigó 3.1
+## Canigó 3.1 
 
 - [Mòduls de Canigó 3.1](http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/)
 - [Release notes Canigó 3.1](/canigo-download-related/release-notes-canigo-31)

@@ -21,8 +21,8 @@
 	How to
 {{ end }}
 
-{{ if or (eq $title (.Site.Params.bloc_section | pluralize)) (eq $section .Site.Params.bloc_section) }}
-	Bloc d'Arquitectura
+{{ if or (eq $title (.Site.Params.blog_section | pluralize)) (eq $section .Site.Params.blog_section) }}
+	Blog d'Arquitectura
 {{ end }}
 
 {{ if or (eq $title "cs") (eq $section "cs") }}
@@ -37,6 +37,6 @@
 	Container Cloud
 {{ end }}
 
-{{ if in .URL "bloc_tags" }}
-	<a href="/bloc">Bloc d'Arquitectura</a> > {{ .Title }} 
+{{ if in .URL "blog_tags" }}
+	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }} 
 {{end}}
