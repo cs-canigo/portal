@@ -1,7 +1,7 @@
 +++
 date        = "2016-11-30"
-title       = "Afegir Seguretat amb token a una aplicació Canigó 3.1 Rest"
-description = "Afegir Seguretat amb token a una aplicació Canigó 3.1 Rest"
+title       = "Autenticació amb JWT a una aplicació Canigó 3.1 (REST+HTML5/JS)"
+description = "Autenticació amb JWT a una aplicació Canigó 3.1 (REST+HTML5/JS)"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "DESEMBRE2016"
@@ -9,7 +9,7 @@ key         = "DESEMBRE2016"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin afegir seguretat amb token a una aplicació Canigó 3.1 Rest.
+Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin autenticar amb JWT a una aplicació Canigó 3.1 (REST+HTML5/JS).
 
 ### Versió de Canigó
 
@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.1.x del Framework
 
 ### Introducció
 
-En aquest HowTo s’explica com afegir Seguretat amb token (JWT) a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó amb seguretat per BBDD (amb una base de dades H2 en memòria).
+En aquest HowTo s’explica com autenticar amb  JWT a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó amb seguretat per BBDD (amb una base de dades H2 en memòria).
 
 
 ## Configuració
@@ -509,7 +509,7 @@ Al path *src/main/java/cata/gencat/canigorest311/security/authentication/entrypo
 	
 #### Controlador de l'autenticació
 
-A l'exemple hem generat un controlador (/auth) com a servei que hauria de cridar la pantalla de login.
+A l'exemple hem generat un controlador (/auth) com a servei que hauria de cridar el login.
 
 Al path *src/main/java/cata/gencat/canigorest311/security/authentication/controller* generem la classe **AuthController.java**
 
@@ -984,7 +984,7 @@ Amb aquesta configuració la primera vegada que un usuari vol accedir a l'aplica
 
 	jwtToken:eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0ODA2ODc0OTcsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.kmupP8B269D-SZemxkTdfdqYQ-vRMF3-nNtsWoi-bbDo5Wk38LbRYYf-sO3ceqZaYursfFIYyI0BR6keuko-4A
 	
-A partir d'aquí, l'aplicació ha d'enviar aquest token a la capçalera de les peticions:
+A partir d'aquí, l'aplicació ha d'enviar aquest token a la capçalera de les següents peticions:
 
 	Nom: Authentication
 	Valor: Bearer + token
@@ -992,4 +992,3 @@ A partir d'aquí, l'aplicació ha d'enviar aquest token a la capçalera de les p
 Exemple
 
 	Authentication: Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0ODA2ODc0OTcsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.kmupP8B269D-SZemxkTdfdqYQ-vRMF3-nNtsWoi-bbDo5Wk38LbRYYf-sO3ceqZaYursfFIYyI0BR6keuko-4A
-
