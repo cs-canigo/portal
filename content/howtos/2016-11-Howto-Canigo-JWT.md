@@ -13,7 +13,7 @@ Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin 
 
 ### Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.1.x del Framework Canigó.
+Els pasos descrits en aquest document apliquen a la versió 3.1.x del Framework Canigó.
 
 ### Introducció
 
