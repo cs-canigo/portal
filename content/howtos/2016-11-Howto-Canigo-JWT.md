@@ -1,6 +1,6 @@
 +++
 date        = "2016-11-30"
-title       = "Autenticació amb JWT a una aplicació Canigó 3.1"
+title       = "Autenticació amb JWT a una aplicació Canigó 3.1"
 description = "Autenticació amb JWT a una aplicació Canigó 3.1"
 section     = "howtos"
 categories  = ["canigo"]
