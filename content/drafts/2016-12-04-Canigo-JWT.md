@@ -19,7 +19,14 @@ Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inc
 
 * _CSRF (Cross-Site Request Forgery)_: 
 
-JWT...
+La principal avantatge de JWT és que no necessita mantenir informació de sessió al costat en servidor per autenticar l'usuari. El workflow és el següent:
+
+- L'usuari realitza una petició al servei d'autenticació enviant usuari i contrasenya
+- El servei d'autenticació respon amb un token JWT amb les dades identificatives de l'usuari
+- L'usuari sol·licita accés a un servei segur enviant el token al servidor
+- El capa de seguretat valida el token, i en cas satisfactori, es dona accés al recurs sol·licitat
+
+
 
 DIAGRAMA
 
@@ -32,6 +39,8 @@ Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 * Multiplataforma:
 
 * CORS
+
+En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web 
 
 En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT.
 
