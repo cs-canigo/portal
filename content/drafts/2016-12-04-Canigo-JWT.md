@@ -7,7 +7,9 @@ categories  = ["canigo"]
 key         = "DESEMBRE2016"
 +++
 
-El sistema d'autenticació tradicional utilitzat en aplicacions JEE/Canigó es basa en cookies (JSESSIONID). Aquest sistema té una sèrie d'inconvenients:
+El sistema d'autenticació tradicional utilitzat en aplicacions JEE/Canigó es basa en cookies. JSESSIONID és la cookie generada per contenidors de Servlets com Tomcat o Jetty, i s'utilitza per la gestió de la sessió en aplicacions web JEE pel protocol HTTP. Degut a que HTTP és un protocol sense estat (stateless) no hi ha manera que el servidor web pugui relacionar dos peticions separades que arribin d'un mateix client. Gràcies a la gestió de la sessió (Session management) es pot mantenir una sessió d'usuari utilitzant diferents tècniques com Cookies o URL Rewriting. Si un servidor utilitza cookies per la gestió de la sessió, aquest crea i envia la cookie JSESSIONID al client i aquest l'envia al servidor per a cada petició HTTP.
+
+Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inconvenients:
 
 * Sobrecàrrega:
 
