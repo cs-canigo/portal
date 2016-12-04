@@ -1,7 +1,7 @@
 +++
 date        = "2016-02-15"
 title       = "Desenvolupament web. Discontinuació dels Applets Java"
-description = ""
+description = "Desenvolupament web. Discontinuació dels Applets Java"
 sections    = "Notícies"
 categories  = ["desenvolupament", "canigó"]
 +++
@@ -37,4 +37,3 @@ Actualment, tenim identificats els casos d’ús següents:
 	* **Generació de pantalles a client**
 
 Durant les properes setmanes publicarem les alternatives per substituir aquesta tecnologia a les aplicacions.
-	
