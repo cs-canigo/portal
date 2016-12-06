@@ -32,20 +32,20 @@ El workflow amb JWT és el següent:
 
 En el següent diagrama observem de forma simplificada la diferència entre autenticació amb Cookies vs Tokens (JWT):
 
-[Cookies vs JWT](/related/cs/2016/12/cookie-token-auth.png)
+![Cookies vs JWT](/related/cs/2016/12/cookie-token-auth.png)
 
 Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
-* _Escalabilitat_:
+* _Escalabilitat_: els tokens s'emmagatzemen a nivell de client, podent ser enviats a qualsevol dels nodes de l'aplicació sense que això suposi cap problema. El node servidor tindrà la lògica de validació del token.
 
-* _Seguretat_:
+* _Seguretat_: al no utilitzar sessió, aquesta no podrà ser suplantada (CSRF).
 
-* _Multiplataforma_:
+* _Multiplataforma_: no tindrem problemes en accedir des de diferents dispositius als recursos expossats per la nostra aplicació. Només cal que aquests dispostius entenguin el protocol HTTP.
 
-* _CORS_: A token-based approach allows you to make AJAX calls to any server, on any domain because you use an HTTP header to transmit the user information.
+* _CORS_: es poden fer peticions AJAX a qualsevol servidor, a qualsevol domini donat que s'utilitza una capçalera HTTP per a transmetre la informació de l'usuari.
 
-En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web es pot fer ús del sessionStorage o localStorage. És possible codificar dins el token informació identificativa de l'usuari (email, privilegis, ...). Aquesta informació ha de ser mínima, mantenint el token molt lleuger. No es considera una bona pràctica utilitzar el token com a un símil de la sessió HTTP, i sobrecarregar-lo d'informació. El token viatja al servidor a cada petició, així que no és recomanable donar-li aquest ús. En cas de voler mantenir informació associada a l'usuari en el costat servidor, [Redis](https://redis.io/) pot ajudar a emmagatzemar i compartir aquesta informació entre els diferents nodes de l'aplicació.
+En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web es pot fer ús del sessionStorage o localStorage. És possible codificar dins el token informació identificativa de l'usuari (email, privilegis, ...). Aquesta informació ha de ser mínima, mantenint el token molt lleuger. No es considera una bona pràctica utilitzar el token com a un símil de la sessió HTTP, i sobrecarregar-lo d'informació. El token viatja al servidor a cada petició, així que no és recomanable donar-li aquest ús.
 
-En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT. A la propera versió de Canigó 3.2.0, aquest sistema d'autenticació es proporcionarà dins el servei de seguretat "out-of-the-box".
+En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT. A la propera versió Canigó 3.2, aquest sistema d'autenticació es proporcionarà dins el servei de seguretat "out-of-the-box".
 
 Per qualsevol dubte respecte a l'ús de JWT en aplicacions Canigó us podeu posar en contacte amb el CS Canigó obrint un tiquet de suport al servei CAN del JIRA CSTD o enviant un correu a la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
