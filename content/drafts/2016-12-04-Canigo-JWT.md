@@ -19,16 +19,20 @@ Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inc
 
 * _CSRF (Cross-Site Request Forgery)_: 
 
-La principal avantatge de JWT és que no necessita mantenir informació de sessió al costat en servidor per autenticar l'usuari. El workflow és el següent:
+JWT (JSON Web Tokens) està esdevenint un estàndard de-facto pel que fa a sistemes d'autenticació basats en tokens. La principal característica d'aquests sistemes d'autenticació és que són *stateless*. El servidor no emmagatzema informació dels usuaris logats a l'aplicació. Cada petició al servidor va acompanyada per un token el qual permet al servidor verificar la autenticitat de la petició.
+
+El fet que el servidor no necessiti mantenir informació de sessió per autenticar els usuaris és la principal avantatge de JWT respecte a l'ús de cookies.
+
+El workflow amb JWT és el següent:
 
 - L'usuari realitza una petició al servei d'autenticació enviant usuari i contrasenya
 - El servei d'autenticació respon amb un token JWT amb les dades identificatives de l'usuari
 - L'usuari sol·licita accés a un servei segur enviant el token al servidor
 - El capa de seguretat valida el token, i en cas satisfactori, es dona accés al recurs sol·licitat
 
-En el següent diagrama observem de forma simplificada la diferència entre autenticació amb Cookies vs Tokens (JWT:
+En el següent diagrama observem de forma simplificada la diferència entre autenticació amb Cookies vs Tokens (JWT):
 
-![Cookies vs JWT](/related/cs/2016/12/cookie-token-auth.png)
+[Cookies vs JWT](/related/cs/2016/12/cookie-token-auth.png)
 
 Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
@@ -38,9 +42,9 @@ Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
 * Multiplataforma:
 
-* CORS
+* CORS:
 
-En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb Jwt és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web 
+En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web es pot fer ús del sessionStorage o localStorage.
 
 En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT.
 
