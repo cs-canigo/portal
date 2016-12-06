@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "DESEMBRE2016"
 +++
 
-El sistema d'autenticació tradicional utilitzat en aplicacions Canigó es basa en cookies. JSESSIONID és la cookie generada per contenidors de Servlets com Tomcat o Jetty, i s'utilitza per la gestió de la sessió en aplicacions web. Degut a que HTTP és un protocol sense estat (stateless) no és possible que el servidor web pugui relacionar dos peticions separades que arribin d'un mateix client. Gràcies a la gestió de la sessió (Session management) es pot mantenir una sessió d'usuari utilitzant diferents tècniques com Cookies o URL Rewriting. Si un servidor utilitza cookies per la gestió de la sessió, aquest crea i envia la cookie JSESSIONID al client, el qual l'envia al servidor per a cada petició HTTP posterior.
+El sistema d'autenticació tradicional utilitzat en aplicacions Canigó es basa en cookies. JSESSIONID és la cookie generada per contenidors de Servlets com Tomcat o Jetty, i s'utilitza per la gestió de la sessió en aplicacions web. Degut a que HTTP és un protocol sense estat (stateless) no és possible que el servidor web pugui relacionar dos peticions separades que arribin d'un mateix client. Si un servidor utilitza cookies per la gestió de la sessió, aquest crea i envia la cookie JSESSIONID al client, el qual l'envia al servidor per a cada petició HTTP posterior. Aquest sistema d'autenticació basat en cookies és *stateful*. Això significa que es manté sessió tant al costat servidor (sessió HTTP), com al client (Cookie).
 
 Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inconvenients:
 
@@ -26,9 +26,9 @@ La principal avantatge de JWT és que no necessita mantenir informació de sessi
 - L'usuari sol·licita accés a un servei segur enviant el token al servidor
 - El capa de seguretat valida el token, i en cas satisfactori, es dona accés al recurs sol·licitat
 
+En el següent diagrama observem de forma simplificada la diferència entre autenticació amb Cookies vs Tokens (JWT:
 
-
-DIAGRAMA
+![Cookies vs JWT](/related/cs/2016/12/cookie-token-auth.png)
 
 Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
@@ -40,7 +40,7 @@ Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
 * CORS
 
-En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web 
+En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb Jwt és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web 
 
 En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT.
 
