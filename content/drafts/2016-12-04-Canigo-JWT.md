@@ -15,7 +15,7 @@ Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inc
 
 * _No escalable fàcilment_: degut a que s'emmagatzema informació en memòria, si necessitem balancejar la càrrega entre diferents servidors, l'usuari haurà de tornar a logar-se si les peticions no van sempre dirigides al mateix servidor. Gràcies a tècniques com sticky session o rèplica de sessió entre nodes es pot evitar. Tot i així, l'ús de cookies dificulta l'escalabilitat de les aplicacions, mentre que amb tokens el problema es soluciona de forma natural.
 
-* _CORS (Cross-Origin Resource Sharing)_: 
+* _CORS (Cross-Origin Resource Sharing)_: cookies + CORS don't play well across different domains. 
 
 * _CSRF (Cross-Site Request Forgery)_: 
 
@@ -42,7 +42,7 @@ Gràcies a l'ús de JWT obtenim una sèrie de beneficis:
 
 * Multiplataforma:
 
-* CORS:
+* CORS: A token-based approach allows you to make AJAX calls to any server, on any domain because you use an HTTP header to transmit the user information.
 
 En cas de necessitar mantenir informació associada a la sessió de l'usuari la opció més natural amb JWT és emmagatzemar-la al costat client. Per exemple, en el cas de navegadors web es pot fer ús del sessionStorage o localStorage.
 
