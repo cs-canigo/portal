@@ -1,21 +1,16 @@
 +++
 date        = "2016-11-28T11:48:54+02:00"
 title       = "Seguretat"
-description = "Autentificació i autorització d'usuaris."
+description = "Autenticació i autorització d'usuaris."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 9
 +++
 
 ## Propòsit
 
-El Servei de Seguretat té com a propòsit principal gestionar l'autentificació i l'autorització dels usuaris de les nostres aplicacions. L'objectiu de l'autentificació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que realment té accés al recurs sol.licitat.
+El Servei de Seguretat té com a propòsit principal gestionar l'autenticació i l'autorització dels usuaris en aplicacions Canigó. L'objectiu de l'autenticació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que realment té accés als recursos sol.licitat.
 	
-<div class="message warning">
-L'especificació JAAS (Java Authorization and Authentication) de J2EE proporciona els mecanismes necessaris de seguretat. Cada servidor d'aplicacions pot implementar l'estàndard però ho fa de diferents formes produint problemes de compatibilitat.  
-L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre que els temes d'autorització pateixen de moltes carències.
-</div>
-
-Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l'ús de 'Spring Security 4.2.1' com framework base i les extensions que Canigó proporciona.
+Canigó recomana l'ús de 'Spring Security 4.2.1' com a framework base i les extensions que Canigó proporciona.
 
 ## Instal.lació i Configuració
 
@@ -36,17 +31,17 @@ Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a t
 
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament i es descompon en les parts següents:
+La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament i es compon de les següents parts:
 
-* Configuració dels filtres de l'aplicació REST
-* Configuració de JWT
-* Configuració de l'Autenticació
-* Configuració de l'Autorització
+* Configuració de filtres web
+* Configuració de JWT (JSON Web Tokens)
+* Configuració d'autenticació
+* Configuració d'autorització
 * Configuració de la font de dades de l'esquema de seguretat
 
-#### Configuració dels filtres de l'aplicació REST
+#### Configuració de filtres web
 
-Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autentificació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
+Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
 
 ```
 <filter>
@@ -61,8 +56,11 @@ Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'auto
 
 Per a més informació consultar la pàgina [Spring Security Doc](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#security-filter-chain)
 
-#### Configuració de JWT
-La nova versió de Canigó treballa amb JWT (JSON web Token). Per això s'ha fet servir la llibreria Java JJWT. Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat, Configuració de l'Autenticació. Un cop autenticat l'usuari es genera un token que serà enviat a cada petició a la capçalera. Aquest token conté tota la informació de l'usuari pel que facilita l'escalabilitat del sistema. Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) les següents propietats:
+#### Configuració de JWT (JSON Web Tokens)
+
+La nova versió de Canigó treballa amb [JWT](https://jwt.io/) . Per això s'ha fet servir la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari el servidor genera un token que serà enviat pel client a cada petició a la capçalera HTTP.
+
+Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) la següent configuració:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
@@ -73,16 +71,14 @@ Propietat                     | Requerit | Descripció                          
 *.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
-Per a més informació sobre JWT visitar la pàgina oficial a [JWT page] (https://jwt.io/)
-
-Per provar l'autenticació per token s'ha de cridar a ".../api/auth" amb la capçalera GICAR. En caso de autenticación por Gicar. O en el cuerpo de la petición en formato JSON en otros casos.
+Per provar l'autenticació per token s'ha de cridar a "http://<app>/api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR. O en el cos de la petició en format JSON en altres casos.
 ```
 { 
     username = user,
 	password  = secret
 } 
 ```
-Aquesta crida ens retornarà un token vàlid. Per a les següents request s'ha d'enviar aquest token a la capçalera de la petició de la següent manera (configuració per defecte):
+Aquesta crida ens retornarà un token vàlid. Per a les següents peticions s'ha d'enviar aquest token a la capçalera HTTP de la petició de la següent manera (configuració per defecte):
 
 Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
 
