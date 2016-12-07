@@ -48,4 +48,4 @@ En cas de necessitar mantenir informació associada a la sessió de l'usuari, l'
 
 En aquest comunicat hem desenvolupat un [HowTo](howtos/2016-11-Howto-Canigo-JWT/) amb el detall de la configuració a un backend Canigó 3.1.x per habilitar autenticació amb JWT gràcies a [Java JWT](https://java.jsonwebtoken.io/). A la pròxima versió Canigó 3.2, aquest sistema d'autenticació es proporcionarà dins el servei de seguretat per a que sigui fàcilment configurable.
 
-Per qualsevol dubte respecte a l'ús de JWT en aplicacions Canigó us podeu posar en contacte amb el CS Canigó obrint un tiquet de suport al servei CAN del JIRA CSTD o enviant un correu a la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
+Per qualsevol dubte respecte a l'ús de JWT en aplicacions Canigó us podeu posar en contacte amb el CS Canigó obrint un tiquet de suport al [servei CAN del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o enviant un correu a la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
