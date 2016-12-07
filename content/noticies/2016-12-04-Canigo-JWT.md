@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "DESEMBRE2016"
 +++
 
-El sistema d'autenticació tradicional utilitzat en aplicacions Canigó es basa en cookies. JSESSIONID és la cookie generada per contenidors de Servlets i servidors JEE, i s'utilitza per a la gestió de la sessió. El servidor crea i envia la cookie al client, el qual l'envia al servidor per a cada petició HTTP posterior. D'aquesta manera el servidor pot relacionar peticions separades que arribin d'un mateix client. Aquest sistema d'autenticació basat en cookies és **stateful**. Això significa que es manté sessió tant al costat servidor (sessió HTTP), com al client (Cookie).
+El sistema d'autenticació tradicional utilitzat en aplicacions Canigó es basa en **cookies**. JSESSIONID és la cookie generada per contenidors de Servlets i servidors JEE, i s'utilitza per a la gestió de la sessió. El servidor crea i envia la cookie al client, el qual l'envia al servidor per a cada petició HTTP posterior. D'aquesta manera el servidor pot relacionar peticions separades que arribin d'un mateix client. Aquest sistema d'autenticació basat en cookies és **stateful**. Això significa que es manté sessió tant al costat servidor (sessió HTTP), com al client (Cookie).
 
 Aquest sistema de gestió de la sessió mitjançant cookies té una sèrie d'inconvenients:
 
