@@ -1,7 +1,7 @@
 +++
 date        = "2016-11-30"
 title       = "Autenticació amb JWT a una aplicació Canigó 3.1"
-description = "Autenticació amb JWT a una aplicació Canigó 3.1"
+description = "Autenticació amb JWT (JSON Web Tokens) a una aplicació Canigó 3.1.x (REST/HTML5+JS)"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "DESEMBRE2016"
@@ -17,14 +17,14 @@ Els pasos descrits en aquest document apliquen a la versió 3.1.x del Framework 
 
 ### Introducció
 
-En aquest HowTo s’explica com autenticar amb  JWT a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó amb seguretat per BBDD (amb una base de dades H2 en memòria).
+En aquest HowTo s’explica com autenticar amb  JWT a una aplicació Canigó 3.1 REST. Per a fer-ho desplegarem l’aplicació demo que genera el plugin de Canigó amb seguretat per BBDD (amb una base de dades HSQLDB en memòria).
 
 
 ## Configuració
 
 ### Afegir Llibreries
 
-S'ha d'afegir al pom.xml la dependència a JWT
+S'ha d'afegir al pom.xml la dependència amb Java JWT:
 
    	<!-- JJWT -->
 	<dependency>
@@ -35,7 +35,7 @@ S'ha d'afegir al pom.xml la dependència a JWT
 	
 ### Configuració Petició/Resposta
 
-Per configurar el JWT primer de tot creem les classes per gestionar la petició, la resposta, i el handler de la resposta:
+Per configurar JWT primer de tot creem les classes de petició, resposta, i el handler d'aquesta resposta:
 
 Al path *src/main/java/cata/gencat/canigorest311/security/authentication/dto* generem les següents classes:
 
@@ -201,7 +201,7 @@ Al path *src/main/java/cata/gencat/canigorest311/security/authentication/respons
 
 	}
 	
-Al path *src/main/java/cata/gencat/canigorest311/security/authentication/handler* generem les classes utilitzades per a construir la reposta:
+Al path *src/main/java/cata/gencat/canigorest311/security/authentication/handler* generem les classes utilitzades per a construïr la resposta:
 
 **RestAuthenticationFailureHandler.java**
 
@@ -509,7 +509,7 @@ Al path *src/main/java/cata/gencat/canigorest311/security/authentication/entrypo
 	
 #### Controlador de l'autenticació
 
-A l'exemple hem generat un controlador (/auth) com a servei que hauria de cridar el login.
+A l'exemple hem generat un controlador REST (/auth) com a servei que hauria de cridar el login.
 
 Al path *src/main/java/cata/gencat/canigorest311/security/authentication/controller* generem la classe **AuthController.java**
 
@@ -564,7 +564,7 @@ Al path *src/main/java/cata/gencat/canigorest311/security/authentication/control
 	
 #### Autenticació
 
-En aquest exemple només hem implementat el provider de l'autenticació per defecte (DefaultAuthenticationService), si l'aplicació estiguès protegida per un altre provider (per exemple GICAR), s'hauria d'implementar un GicarAuthenticationService (per exemple) per a realitzar l'autenticació per GICAR.
+En aquest exemple només hem implementat el provider de l'autenticació per defecte (DefaultAuthenticationService). Si l'aplicació estiguès protegida per un altre provider, com per exemple GICAR, s'hauria d'implementar un GicarAuthenticationService per a realitzar l'autenticació per GICAR.
 
 Al path *src/main/java/cata/gencat/canigorest311/security/authentication/service*
 
@@ -743,9 +743,9 @@ Al path *src/main/java/cata/gencat/canigorest311/security/authentication/service
 
 #### Filtre Autenticació
 
-S'ha de crear un nou filtre per a comprovar a les url protegides si l'usuari es troba autenticat, i en cas contrari intentar l'autenticació:
+S'ha de crear un nou filtre per a comprovar a les url protegides si l'usuari es troba autenticat, o en cas contrari intentar l'autenticació.
 
-	Al path *src/main/java/cata/gencat/canigorest311/security/authentication/jwt* generem la classe **JwtAuthenticationFilter.java**
+Al path *src/main/java/cata/gencat/canigorest311/security/authentication/jwt* generem la classe **JwtAuthenticationFilter.java**
 
 	package cat.gencat.canigorest311.security.authentication.jwt;
 
@@ -889,7 +889,7 @@ S'ha de crear un nou filtre per a comprovar a les url protegides si l'usuari es 
 	
 ### Configuració Seguretat a Spring
 
-Per a utilitzar la configuració de JWT que hem creat als punts anteriors, hem de realitzar la configuració al fitxer **app-custom-security.xml**
+Per a utilitzar les classes que hem creat als punts anteriors, hem de realitzar la configuració de Spring Security al fitxer **app-custom-security.xml**
 
 En aquest fitxer hem de fer que Spring tingui en compte el controlador creat:
 
@@ -980,7 +980,7 @@ Amb aquests canvis el fitxer quedaria de la següent manera:
 	
 ### Resultat
 
-Amb aquesta configuració la primera vegada que un usuari vol accedir a l'aplicació hauria de proporcionar el usuari i password, i l'aplicació a la response retornarà un token:
+Amb aquesta configuració, la primera vegada que un usuari vol accedir a l'aplicació haurà de proporcionar l'usuari i password, i l'aplicació a la response retornarà un token:
 
 	jwtToken:eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0ODA2ODc0OTcsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.kmupP8B269D-SZemxkTdfdqYQ-vRMF3-nNtsWoi-bbDo5Wk38LbRYYf-sO3ceqZaYursfFIYyI0BR6keuko-4A
 	
