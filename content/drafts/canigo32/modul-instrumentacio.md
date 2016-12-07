@@ -90,7 +90,7 @@ Classe de servei que serà invocada des del Rest Controller:
  * @author
  *
  */
-@Repository("statusService")
+@Service("statusService")
 public class StatusService {
 
 	@Autowired
@@ -149,31 +149,12 @@ Control d'excepcions
 Les excepcions dels diferents mètodes de validació han de propagar-se per tal de que Canigó detecti si ha finalitzat en execució correcta o errònia.
 </div>
 
-Les crides a aquest servei es realitzaran des de la classe CheckStatusBean proporcionada per l'eina de desenvolupament, dins del mètode check:
-
-```java
-@Component("statusBean")
-@Scope("singleton")
-@Lazy
-public class CheckStatusBean {
-
-        @Autowired
-	private StatusService service;
-
-	public void check() throws IOException{
-		service.checkPSIS();
-		service.checkDataBaseConnection();
-		service.checkLDAP();
-	}
-}
-```
-
 #### Instrumentació en format log de l'execució de mètodes de l'aplicació
 
 Amb l'anotació @Trace, el desenvolupador pot marcar un mètode d'una classe gestionada per Spring, i de automàticament aquest generarà traces d'instrumentació de la seva execució:
 
 ```java
-@Repository("myService")
+@Service("myService")
 public class ServiceImpl implements Service {
 
 
