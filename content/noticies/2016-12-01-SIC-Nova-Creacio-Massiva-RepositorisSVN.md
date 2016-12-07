@@ -14,7 +14,9 @@ S'ha extret de l'inventari d'aplicacions del Pòrtic la informació de les aplic
 
 El llistat dels repositoris SVN donats d'alta fins al moment es pot consultar al següent [document] (/related/sic/Repositoris_SVN_Creats_A_SIC_Novembre2016.xlsx). 
 
+
 <CENTER>![sic](/images/news/SIC_repositoris_creats_Novembre2016.png)</center>
+
 
 Es preveu repetir aquest procés d'identificació i creació massiva de repositoris periòdicament.
 
