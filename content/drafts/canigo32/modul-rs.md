@@ -37,7 +37,7 @@ Per tal d'instal·lar el Mòdul RS, aquest es pot incloure automàticament a tra
 
 No necessita cap configuració especial.
 
-### Ús dels controllers
+### Ús de controlados (REST Controllers)
 
 Hi ha dos controladors inclosos dins el mòdul:
 ```
@@ -106,7 +106,11 @@ Es pot personalitzar i "localitzar" (I18n) el missatge que s'envia al client per
 Es poden definir tants RestControllerAdvice com es necessiti.
 
 
-#### Objectes request
+#### Objectes de suport
+
+Amb la finalitat d'estandaritzar i facilitar la feina als desenvolupadors, es possa a la seva disposició objectes estàndar de petició i resposta.
+
+##### Request
 
 S'han definit els següents objectes de petició, tenint en compte el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
 
@@ -114,7 +118,7 @@ S'han definit els següents objectes de petició, tenint en compte el document d
 	- BatchRequest --> Per a peticions batch
 
 ```
-#### Objectes response
+#### Response
 
 S'han definit els següents objectes de resposta, tenint en compte el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
 
