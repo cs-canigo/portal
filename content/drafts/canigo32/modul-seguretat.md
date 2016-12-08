@@ -10,7 +10,7 @@ weight      = 9
 
 El Servei de Seguretat té com a propòsit principal gestionar l'autenticació i l'autorització dels usuaris en aplicacions Canigó. L'objectiu de l'autenticació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que realment té accés als recursos sol.licitat.
 	
-Canigó recomana l'ús de 'Spring Security 4.2.1' com a framework base i les extensions que Canigó proporciona.
+Canigó recomana l'ús de Spring Security com a framework base i les extensions que Canigó proporciona.
 
 ## Instal.lació i Configuració
 
@@ -58,20 +58,20 @@ Per a més informació consultar la pàgina [Spring Security Doc](http://docs.sp
 
 #### Configuració de JWT (JSON Web Tokens)
 
-La nova versió de Canigó treballa amb [JWT](https://jwt.io/) . Per això s'ha fet servir la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari el servidor genera un token que serà enviat pel client a cada petició a la capçalera HTTP.
+La nova versió de Canigó treballa amb [JWT](https://jwt.io/) . Per això s'ha fet servir la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un token que serà enviat pel client a la capçalera HTTP a cada petició.
 
 Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) la següent configuració:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
-*.jwt.header                  | No       | nom del header del token JWT		      | Authentication
+*.jwt.header                  | No       | Nom del header del token JWT		      | Authentication
 *.jwt.header.startToken       | No       | Inici del token JWT       		      | Bearer
 *.jwt.tokenResponseHeaderName | No       | Nom del header del token JWT        	      | jwtToken
 *.jwt.secret                  | No       | Password per generar el token JWT          | canigo
 *.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
-Per provar l'autenticació per token s'ha de cridar a "http://<app>/api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR. O en el cos de la petició en format JSON en altres casos.
+Per provar l'autenticació per token s'ha de cridar a "http://<app>/api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR, o en el cos de la petició en format JSON en altres casos.
 ```
 { 
     username = user,
