@@ -81,7 +81,7 @@ Una de les funcionalitats que incorpora el Mòdul RS és la de gestió d'errors 
 	- ResourceNotFoundException
     - Exception
 ```
-Un cop es produeix aquestes excepcions són capturades pel RestControllerAdvice i retornades en format JSON perquè puguin ser tractades en el client. Al client li arriba un JSON amb el codi i missatge de l'excepció en el cos de la resposta i en el format JSON o JSONP si s'ha fet la crida amb una funció de retorn.
+Un cop es produeix aquestes excepcions són capturades pel @RestControllerAdvice i retornades en format JSON perquè puguin ser tractades en el client. Al client li arriba un JSON amb el codi i missatge de l'excepció en el cos de la resposta i en el format JSON o JSONP si s'ha fet la crida amb una funció de retorn.
 Es pot personalitzar i "localitzar" (I18n) el missatge que s'envia al client per cadascuna de les excepcions. Això és possible fer-ho definint les següents propietats en els fitxers de recursos carregats a l'aplicació:
 
 ```	
