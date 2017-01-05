@@ -4,7 +4,7 @@ title       = "Oficina Tècnica de Canigó. Balanç 2016"
 description = "Evolució dels serveis de la Oficina Tècnica de Canigó a l'any 2016"
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "DESEMBRE2016"
+key         = "GENER2017"
 +++
 
 A continuació es mostren les fites aconseguides al 2016 segons ordre cronològic:
