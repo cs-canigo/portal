@@ -145,3 +145,9 @@ En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvol
 		$ sudo wget http://canigo.ctti.gencat.cat/devenv/fonspantalla_1280.png -O /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png
 
 * Revisar la configuració de teclat a Preferències -> IBus Preferences -> Input method (en cas de no estar activat l'IBus cal activar-lo a Preferències -> Language Support -> Keyboard input method system)
+
+#### 1.0.2 - Ubuntu 15.10 (9/1/2017)
+
+RELEASE NOTES
+
+* Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)
