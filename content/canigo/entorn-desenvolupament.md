@@ -17,7 +17,7 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.1) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.2) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
