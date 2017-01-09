@@ -6,8 +6,6 @@ sections    = "Canigó"
 weight 		= 99
 +++
 
-<span style="color:red;">Aquesta secció està en revisió. Actualment no es pot crear l'entorn de desenvolupament.</span>
-
 ### Objectius
 
 * Facilitar la posada en marxa de l'entorn de desenvolupament, aprovisionant una màquina virtual amb tot el necessari per a començar el desenvolupament d'una aplicació Canigó.
