@@ -3,7 +3,7 @@ date        = "2017-01-05"
 title       = "Oficina Tècnica de Canigó. Balanç 2016"
 description = "Evolució dels serveis de la Oficina Tècnica de Canigó a l'any 2016"
 sections    = ["Notícies", "home"]
-categories  = ["sic"]
+categories  = ["sic, canigo, sgde"]
 key         = "GENER2017"
 +++
 
@@ -11,7 +11,7 @@ A continuació es mostren les fites aconseguides al 2016 segons ordre cronològi
 
 <center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1sqpklweKg2oJIwJcStMksqj6jggC9idUe_A_RW2BPeo&font=Default&lang=ca&initial_zoom=2&height=500' width='100%' height='500' frameborder='0'></iframe></center>
 
-A mode resum, es podrien destacar les següents fites:
+A mode resum, destacariem les següents:
 
 * _SIC_ :
 
@@ -26,12 +26,13 @@ A mode resum, es podrien destacar les següents fites:
 
 	- Actualització connectors Canigó amb la PICA
 	- Nou connector amb el Gestor Documental Aresta (PSGD).
-	- Nou mòdul d'administració de logs.
+	- Nou mòdul d'Administració de Logs.
 	- Publicació de noves versions de l'entorn de desenvolupament Canigó.
-	- Certificació Canigó 3.1 en Tomcat8/Weblogic12c, Java 8
+	- Certificació Canigó 3.1 en Tomcat 8 i Weblogic 12c amb Oracle Java 8
 
 * _SGDE_ :
 
 	- Obligatorietat d'informar els camps 'ambit' i 'aplicacio' a les crides al WS
+    - Pilot de Mobilització de Formularis
 
-Per a més informació sobre els futurs evolutius que s'aplicaran, podeu consultar el [Roadmap d'arquitectura del CTTI](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
+Per a més informació sobre els futurs evolutius planificats, podeu consultar el [Roadmap d'arquitectura del CTTI](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
