@@ -23,7 +23,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.1.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.2.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -37,9 +37,12 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 ### Setup inicial
 
 * Usuari i password: canigo/canigo
+* Activar IBUS: Menú inici > Preferències > IBUS Preferences > Start ("Yes")
+* Configurar el teclat per català
+	
+	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Add ("Catalan; Valencian")
+	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Eliminar "English" i seleccionar ""Catalan; Valencian"
 
-* Configurar el teclat amb la configuració correcta: Menú inici > Preferències > Keyboard Input Methods > Input method > Add
-* Anara a IBUS Preferences -> Input Method -> Sel·leccionar l'idioma desitjat
 
 ### Programari instal·lat
 
