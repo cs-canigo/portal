@@ -5,6 +5,6 @@ description = "Ha estat publicada una nova versió de l'entorn de desenvolupamen
 enllac      = "http://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/"
 no_index 	= true
 sections    = "Canigó"
-key         = "ABRIL2016"
+key         = "GENER2016"
 +++
 
