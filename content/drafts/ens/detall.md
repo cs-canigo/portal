@@ -1,7 +1,7 @@
 +++
 date        = "2015-01-27"
-title       = ""
-description = ""
+title       = "Detall cercador"
+description = "Detall cercador"
 no_index    = true
 +++
 <link href="/css/cercador.css" rel="stylesheet" type="text/css" />
