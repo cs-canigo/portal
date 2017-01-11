@@ -21,6 +21,8 @@ A mode resum, destacariem les següents:
 	- Adaptació de Jenkins al sistema d'obertura de peticions de desplegament via Remedy.
 	- Disponibilitat de l'Slave Jenkins a CPD2.
 	- Actualització de versions de programari del SIC: Jenkins, SVN i Nexus.
+	- El SIC s'encarrega de la gestió integral del codi font i del reporting a direcció CTTI.
+	- Suport de Jenkins SIC per a l'execució d'scripts a BBDD PostgreSQL.
 
 * _FW Canigó_ :
 
