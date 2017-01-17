@@ -28,10 +28,8 @@ categories  = ["canigo","sic","sgde"]
 
 			    console.log(additionalOptions)
 
-			  	timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1ycTBuP_02_fFQYHePMhAxAnNt70R4GyTP4phJn3EHi8/pubhtml', additionalOptions);
+			  	timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1muWv3kPUZMv22VugPkWxY7Ipf5Imh4KWrdcEgOv7emE/pubhtml', additionalOptions);
 	   });
 
 
 </script>
-
-
