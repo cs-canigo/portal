@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Canigó - Autenticació amb JWT a una aplicació Canigó 3.1](/howtos/2016-11-Howto-Canigo-JWT)
 - [Canigó - Gestió d'errors a una aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals)
 - [Canigó - Spring Batch en aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Spring-Batch)
 - [Canigó - Swagger en aplicació Canigó 3.1](/related/canigo/howto/Canigo - Howto - Swagger_en_aplicacio_Canigo_3_1.pdf)
