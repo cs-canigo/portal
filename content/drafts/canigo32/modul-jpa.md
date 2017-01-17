@@ -14,7 +14,7 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, per
 
 ### Instal·lació
 
-Per tal d'instal·lar el mòdul d'hibernate fitxers es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul de persistència es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
 <canigo.persistence.jpa.version>[1.2.0,1.3.0)</canigo.persistence.jpa.version>
@@ -26,7 +26,7 @@ Per tal d'instal·lar el mòdul d'hibernate fitxers es pot incloure automàticam
 </dependency>
 ```
 
-Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de QueryDSL:
+Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/):
 ```
 <build>
 	...
@@ -56,7 +56,7 @@ Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres
 ```
 ### Configuració
 
-La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament(plugin de Canigó per a Eclipse)
+La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament (plugin de Canigó per a Eclipse)
 
 En cas que no es generi automàticament el codi, s'ha de realitzar manualment la següent configuració:
 
@@ -157,9 +157,7 @@ Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'en
 
 #### Construcció de queries automàtiques
 
-A un repositori es poden definir mètodes per cada query desitjada.
-
-La construcció utilitza els prefixos find...By, read...By, query...By, count...By i get...By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.
+A un repositori es poden definir mètodes per cada query que es vulgui definir. La construcció utilitza els prefixos find...By, read...By, query...By, count...By i get...By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.
 
 Exemples
 ```
@@ -172,7 +170,7 @@ Més informació a la documentació oficial de [Spring Data JPA](http://docs.spr
 
 #### Utilització de QueryDSL
 
-Una de les funcionalitats proposades és la d'utilitzar QueryDSL per a realitzar cerques segons un filtre, amb paginació i ordenació.
+Una de les funcionalitats proposades és la d'utilitzar QueryDSL per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.
 
 Per a utilitzar-la s'ha d'afegir el mètode següent al repository creat.
 
@@ -180,15 +178,14 @@ Per a utilitzar-la s'ha d'afegir el mètode següent al repository creat.
 Page<T> findAll(Predicate predicate, Pageable pageable);
 ```
 
-Aquest mètode espera un objecte org.springframework.data.domain.Pageable que conté el núm. de pàgina (la primera pàgina és la 0), el nombre d'elements per pàgina, la direcció d'ordenació, el camp d'ordenació.
-I un objecte Predicate amb la query a realitzar que es construeix de la següent manera:
+Aquest mètode espera un objecte org.springframework.data.domain.Pageable que conté el número de pàgina (la primera pàgina és la 0), el nombre d'elements per pàgina, la direcció d'ordenació, el camp d'ordenació. I un objecte Predicate amb la query a realitzar que es construeix de la següent manera:
 
 Primer de tot el filtre ha de ser un String amb el següent patró:
 
 **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN**
 
-On field és el nom d'una propietat de l'entitat (per exemple id)<br>
-On Operador és un dels tipus d'operador suportats:
+- on Field és el nom d'una propietat de l'entitat (per exemple id)<br>
+- on Operador és un dels tipus d'operador suportats:
 
 Operador | Descripció
 --------- | --------
@@ -199,14 +196,14 @@ Operador | Descripció
 <> | diferent de
 : | igual que
 
-On valor és el valor amb el qual es vol comparar.
+- on valor és el valor amb el qual es vol comparar.
 
-Per a cercar l'entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser:<br>
+Per exemple, per cercar l'entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser el següent:<br>
 id>15,nom:Prova
 
 #### Projecció de resultats
 
-Amb QueryDSL també es pot realitzar cerques que en comptes de retornar l'objecte senser, retorni només una part de l'objecte desitjat.<br>
+Amb QueryDSL també es poden realitzar cerques que en comptes de retornar l'objecte sencer, retorni només determinats camps de l'objecte desitjat.<br>
 
 Per a utilitzar les projeccions al vostre repository heu d'afegir el mètode:
 ```
@@ -399,4 +396,4 @@ public class EquipamentService {
 
 }
 ```
-Per a documentació sobre l'ús de BOs i DAOs la informació es troba a la versió anterior de [Canigó JPA](http://http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-jpa/).
+

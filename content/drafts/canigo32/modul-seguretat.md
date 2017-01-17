@@ -1,21 +1,16 @@
 +++
 date        = "2016-11-28T11:48:54+02:00"
 title       = "Seguretat"
-description = "Autentificació i autorització d'usuaris."
+description = "Autenticació i autorització d'usuaris."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 9
 +++
 
 ## Propòsit
 
-El Servei de Seguretat té com a propòsit principal gestionar l'autentificació i l'autorització dels usuaris de les nostres aplicacions. L'objectiu de l'autentificació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que realment té accés al recurs sol.licitat.
+El Servei de Seguretat té com a propòsit principal gestionar l'autenticació i l'autorització dels usuaris en aplicacions Canigó. L'objectiu de l'autenticació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que realment té accés als recursos sol.licitat.
 	
-<div class="message warning">
-L'especificació JAAS (Java Authorization and Authentication) de J2EE proporciona els mecanismes necessaris de seguretat. Cada servidor d'aplicacions pot implementar l'estàndard però ho fa de diferents formes produint problemes de compatibilitat.  
-L'especificació JAAS s'orienta principalment a temes d'autentificació, mentre que els temes d'autorització pateixen de moltes carències.
-</div>
-
-Actualment, i a causa del seu grau de maduresa i facilitat Canigó recomana l'ús de 'Spring Security 4.2.1' com framework base i les extensions que Canigó proporciona.
+Canigó recomana l'ús de Spring Security com a framework base i les extensions que Canigó proporciona.
 
 ## Instal.lació i Configuració
 
@@ -36,17 +31,17 @@ Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a t
 
 ### Configuració
 
-La configuració es realitza automàticament a partir de la eina de suport al desenvolupament i es descompon en les parts següents:
+La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament i es compon de les següents parts:
 
-* Configuració dels filtres de l'aplicació REST
-* Configuració de JWT
-* Configuració de l'Autenticació
-* Configuració de l'Autorització
+* Configuració de filtres web
+* Configuració de JWT (JSON Web Tokens)
+* Configuració d'autenticació
+* Configuració d'autorització
 * Configuració de la font de dades de l'esquema de seguretat
 
-#### Configuració dels filtres de l'aplicació REST
+#### Configuració de filtres web
 
-Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autentificació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
+Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
 
 ```
 <filter>
@@ -61,55 +56,54 @@ Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'auto
 
 Per a més informació consultar la pàgina [Spring Security Doc](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#security-filter-chain)
 
-#### Configuració de JWT
-La nova versió de Canigó treballa amb JWT (JSON web Token). Per això s'ha fet servir la llibreria Java JJWT. Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat, Configuració de l'Autenticació. Un cop autenticat l'usuari es genera un token que serà enviat a cada petició a la capçalera. Aquest token conté tota la informació de l'usuari pel que facilita l'escalabilitat del sistema. Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) les següents propietats:
+#### Configuració de JWT (JSON Web Tokens)
+
+La nova versió de Canigó treballa amb [JWT](https://jwt.io/) . Per això s'ha fet servir la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un token que serà enviat pel client a la capçalera HTTP a cada petició.
+
+Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) la següent configuració:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
-*.jwt.header                  | No       | nom del header del token JWT		      | Authentication
+*.jwt.header                  | No       | Nom del header del token JWT		      | Authentication
 *.jwt.header.startToken       | No       | Inici del token JWT       		      | Bearer
 *.jwt.tokenResponseHeaderName | No       | Nom del header del token JWT        	      | jwtToken
 *.jwt.secret                  | No       | Password per generar el token JWT          | canigo
 *.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
-Per a més informació sobre JWT visitar la pàgina oficial a [JWT page] (https://jwt.io/)
-
-Per provar l'autenticació per token s'ha de cridar a ".../api/auth" amb la capçalera GICAR. En caso de autenticación por Gicar. O en el cuerpo de la petición en formato JSON en otros casos.
+Per provar l'autenticació per token s'ha de cridar a "http://<app>/api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR, o en el cos de la petició en format JSON en altres casos.
 ```
 { 
     username = user,
 	password  = secret
 } 
 ```
-Aquesta crida ens retornarà un token vàlid. Per a les següents request s'ha d'enviar aquest token a la capçalera de la petició de la següent manera (configuració per defecte):
+Aquesta crida ens retornarà un token vàlid. Per a les següents peticions s'ha d'enviar aquest token a la capçalera HTTP de la petició de la següent manera (configuració per defecte):
 
 Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
 
-Més endavant es mostra un exemple de configuració en Canigó de JWT amb GICAR.
+Més endavant es mostra un exemple de configuració a Canigó de JWT + GICAR.
 
-Nota: S'ha de tenir en compte que la nova arquitectura proposada a Canigó 3.2 és una arquitectura REST que separa totalment la part Backend de la part Frontend. Pel que l'API REST s'aconsella s'usi amb autenticació per token i de l'altre costat, del costat client es faci servir el frontal necessari en cada cas. Per exemple una aplicació AngularJS que és el recomanat. Si la seva aplicació no té requisits d'escalabilitat i opta per generar la seva aplicació amb plantilles del costat del servidor com ara Thymeleaf, la recomanació és que es creï una aplicació client que consumeixi l'API REST. Per a la implementació d'aquesta aplicació pot fer servir les plantilles REST de Spring. RestTemplate [Rest Template doc] (http://docs.spring.io/spring/docs/current/spring-framework-reference/html/remoting.html).
+#### Configuració de l'autenticació
 
-#### Configuració de l'Autenticació
+En la configuració de l'autenticació tindrem en consideració:
 
-En la configuració de l'Autentificació tindrem en consideració:
-
-* Seleccionar la configuració de la font en que es realitza l'autentificació (per arxiu de propietats, base de dades, LDAP, per servei integrador al servidor corporatiu basat en HTTPS, ...)
-* Configurar el formulari d'autentificació web i la seqüència de cerca on ha de realitzar-se l'autentificació.
+* Seleccionar el tipus de font contra la que es realitza l'autenticació (per arxiu de propietats, base de dades, LDAP, ...)
+* Configurar el formulari d'autenticació web i la seqüència d'accions per realitzar l'autenticació.
 
 Dins d'aquest mòdul trobem els següents proveidors de seguretat:
 
-* Seguretat InMemory
+* Seguretat In-Memory
 * Seguretat Base de dades
 * Seguretat LDAP
 * Seguretat GICAR
 
 Els diferents proveidors comparteixen els següents arxius de configuració:
 
-* security.properties: Propietats del servei de seguretat
-* app-custom-security.xml: Arxiu XML amb la configuració de seguretat.
-* SecurityConfig.java: Clase Java amb la configuració de seguretat Web.
-* security.users.properties: Llistat en format pla dels usuaris/password/rols de l'aplicació per al proveidor "InMemory".
+* security.properties: propietats del servei de seguretat
+* app-custom-security.xml: arxiu XML amb la configuració de seguretat.
+* SecurityConfig.java: classe Java amb la configuració de seguretat Web.
+* security.users.properties: llistat en format pla dels usuaris/password/rols de l'aplicació per al proveïdor "InMemory".
 
 La disposició dels arxius és la següent:
 
@@ -268,12 +262,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
 
-#### Configuració de la Font d'Autorització per base de dades
+#### Configuració de la font d'autorització per base de dades
 
 Per a configurar la font d'autorització mitjançant base de dades és necessari:
 
 * Configurar l'arxiu de propietats security.properties.
-* Conigurar el proveidor de seguretat dins de la configuració de seguretat de Spring.
+* Conigurar el proveïdor de seguretat dins de la configuració de seguretat de Spring.
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament.
 
@@ -396,15 +390,13 @@ Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina 
 
 Les propietats de l'arxiu **security.properties** son les següents:
 
-Per a configurar l'acces a GICAR és necessari configurar l'arxiu de propietats **security.properties**. Aquest arxiu es genera automàticament des de l'eina de suport, i te el següent format:
+Per a configurar l'acces a GICAR és necessari configurar l'arxiu de propietats **security.properties**. Aquest arxiu es genera automàticament des de l'eina de suport, i té el següent format:
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
-La configuració específica del proveidor és el següent:
-
-A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR sense usar authorización per token JWT.
+A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació.
 
 ```
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -512,9 +504,9 @@ En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic
 
 **Logout**
 
-Per tots els mètodes d'autentificació, el procediment de logoff consisteix en invalidar la sessió, forçant així que el servei de seguretat intervingui en la següent petició solicitant la nova identificació de l'usuari.
+Per tots els mètodes d'autenticació, el procediment de logoff consisteix en invalidar la sessió, forçant així que el servei de seguretat intervingui en la següent petició solicitant la nova identificació de l'usuari.
 
-En el cas de Gicar, però, aquesta autentificació és realitzada per un sistema extern a l'aplicació i, per tant, s'ha de comunicar a aquest sistema extern la intenció de fer el logoff. El mecanisme previst per fer-ho consisteix en una URL de Gicar que, al ser invocada, realitza el logoff.
+En el cas de GICAR, però, aquesta autenticació és realitzada per un sistema extern a l'aplicació i, per tant, s'ha de comunicar a aquest sistema extern la intenció de fer el logoff. El mecanisme previst per fer-ho consisteix en una URL de Gicar que, al ser invocada, realitza el logoff.
 
 Aquest enllaç de logout és depenent de l'agent de SiteMinder que l'aplicació fa servir per a comunicar-se amb el Policy Server.
 

@@ -28,6 +28,10 @@ Aquesta configuració fa que l’Apache afegeixi la capçalera GICAR i GICAR_ID,
 
 ## Docker
 
+<span style="color:red">
+Temporalment aquesta funcionalitat està indisponible.
+</style>
+
 Hem creat un contenidor Docker exacte als Apache-GICAR que es poden trobar als CPDs de la Generalitat. Aixecant a l'entorn del desenvolupador aquest  contenidor, amb connexió a un Policy Server de desenvolupament que és visible des dels entorns dels proveïdors, es pot simular el funcionament real d'una aplicació integrada amb GICAR d'una manera molt senzilla (només permet simular proves amb usuari i contrasenya, no amb certificat digital).
 
 Per a fer això cal seguir el següent procediment:
@@ -179,4 +183,3 @@ Per a fer això cal seguir el següent procediment:
 			# copia el fitxer personalitzat httpd.conf a la ruta correcta
 			
 			COPY myhttpd.conf /etc/httpd/conf/httpd.conf
-

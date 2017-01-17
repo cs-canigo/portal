@@ -15,13 +15,13 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.1) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.2) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.1.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.2.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -35,9 +35,12 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 ### Setup inicial
 
 * Usuari i password: canigo/canigo
+* Activar IBUS: Menú inici > Preferències > IBUS Preferences > Start ("Yes")
+* Configurar el teclat per català
+	
+	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Add ("Catalan; Valencian")
+	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Eliminar "English" i seleccionar ""Catalan; Valencian"
 
-* Configurar el teclat amb la configuració correcta: Menú inici > Preferències > Keyboard Input Methods > Input method > Add
-* Anara a IBUS Preferences -> Input Method -> Sel·leccionar l'idioma desitjat
 
 ### Programari instal·lat
 
@@ -140,3 +143,9 @@ En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvol
 		$ sudo wget http://canigo.ctti.gencat.cat/devenv/fonspantalla_1280.png -O /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png
 
 * Revisar la configuració de teclat a Preferències -> IBus Preferences -> Input method (en cas de no estar activat l'IBus cal activar-lo a Preferències -> Language Support -> Keyboard input method system)
+
+#### 1.0.2 - Ubuntu 15.10 (9/1/2017)
+
+RELEASE NOTES
+
+* Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)

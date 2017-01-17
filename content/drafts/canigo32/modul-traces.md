@@ -1,7 +1,7 @@
 +++
 date        = "2015-03-05T17:11:42+01:00"
 title       = "Mòdul de traces"
-description = "Mòdul de detecció d'errades."
+description = "Mòdul de detecció d'errades i registre de les operacions realitzades a l'aplicació."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 7
 +++
@@ -41,7 +41,7 @@ Log4J2 Manual | http://logging.apache.org/log4j/2.x/
 
 **Log4J2**
 
-Evolució de Log4J. Un dels framework de traces més estès. Es basa en l'ús de Appenders,
+Evolució de Log4J, un dels framework de traces més estès. Es basa en l'ús d'Appenders,
 Loggers i Layouts. Veure l'annex per a més informació.
 
 ## Descripció detallada
@@ -89,7 +89,7 @@ diferents arxius de configuració de traces per entorn:
 
 Directori de configuració: <PROJECT_ROOT>/src/main/resources/log4j2/*.xml
 
-Per cadascun dels entorns els nivells de logs varien.
+Per cadascun dels entorns els nivells de logs poden variar.
 
 Exemple de configuració log4j2.xml en local:
 
@@ -197,7 +197,7 @@ Utilització del Servei
 
 ### Generar Missatges
 
-Per a generar les traces el framework utilitzat per les aplicacions Canigó és SLF4J
+Per a generar les traces el framework utilitzat per les aplicacions Canigó 3.2 és SLF4J
 Per generar una traça en nivell debug tindríem el següent codi:
 
 ```
@@ -238,7 +238,7 @@ aquesta informació si s'ha definit un appender de consola.
 ```
 try {
    ................
-} catch ( unaException e) {
+} catch (MyException e) {
     e.printStackTrace();
 }
 ```
@@ -366,7 +366,7 @@ petició perquè estigui disponible durant tot el processament d'aquesta. Per ta
 **Canigó** suporta la inserció d'aquesta informació mitjançant l'extensió del filtre
 LoggingFilter.
 Gràcies al mètode createCustomParameters, el desenvolupador pot afegir o
-eliminar paràmetres de la Mapped Diagnostic Context (MDC) de SL4J que
+eliminar paràmetres de la Mapped Diagnostic Context (MDC) de SLF4J que
 posteriorment seran inserits a les traces de l'aplicació.
 
 Un exemple de filtre que afegeix informació de l'usuari, adreça i host
