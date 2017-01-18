@@ -381,7 +381,7 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 
 #### Configuració de la Font d'Autorització per GICAR
 
-Per a configurar l'acces a GICAR és necessari:
+Per a configurar l'accés a GICAR és necessari:
 
 * Configurar l'arxiu de propietats **security.properties**.
 * Configurar el proveidor de seguretat dins de la configuració de seguretat de Spring.
@@ -395,6 +395,10 @@ Per a configurar l'acces a GICAR és necessari configurar l'arxiu de propietats 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
+
+<div class="message warning">
+El servei de seguretat de Canigó no dona suport a la capçalera "HTTP_GICAR_AUTH_CERT". En cas de requerir l'autenticació amb certificat cal sol·licitar a l'equip de GICAR la recepció d'aquesta capçalera per aplicació/entorn, i fer-ne la gestió pertinent a l'aplicació.
+</div>
 
 A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació.
 
