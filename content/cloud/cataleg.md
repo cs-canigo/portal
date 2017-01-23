@@ -28,18 +28,18 @@ Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que
 <br />
 
 - **xpaas** (OpenShift), disponible a **cloud privat**
-	* Tomcat (7, 8)
+	* Tomcat 7 i 8
 	* Node.js
-	* Go
+    * Perl
 	* PHP
 	* Python
 	* Ruby
 
 Les denominacions en altres clouds són:
 
-- elastic beanstalk (Amazon Web Services)
-- appservice (Azure)
-- appengine (Google)
+- Elastic Beanstalk (Amazon Web Services)
+- App Service (Azure)
+- App Engine (Google)
 
 En aquests xPaaS, quan es fa un "push" del codi o de l'artefacte, s'aixeca un entorn d'execució amb una potència i nombre d'instàncies prefixades.
 
@@ -113,5 +113,5 @@ Més informació sobre Docker: https://www.docker.com/
 - MongoDB, disponible a **cloud públic**
 - ElasticSearch, disponible a **cloud públic**
 - PostgreSQL, disponible a **cloud públic**
-- MySQL, disponible a **cloud públic**
+- MySQL (Beta), disponible a **cloud públic**
 - SQLServer, disponible a **cloud públic**
