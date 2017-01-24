@@ -22,7 +22,7 @@ categories  = ["canigo","sic","sgde"]
 			    	start_at_slide: 0,
 			        timenav_height: 200,
 			        height : 650,
-			        initial_zoom: 12,
+			        initial_zoom: 5,
 			        language : "ca"
 			    }	   			
 
