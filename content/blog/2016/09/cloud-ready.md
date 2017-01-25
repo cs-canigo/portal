@@ -78,7 +78,7 @@ En entorns cloud s'acostuma a utilitzar un servei extern que funciona com a **ag
 
 ## Canigó
 
-Es preveu una evolució del framework Canigó durant finals d'aquest any i 2017 en aquesta línia, per tal de facilitar el màxim possible el seu desplegament en entorns Cloud.
+Es preveu una evolució del framework Canigó durant l'any 2017 en aquesta línia, per tal de facilitar el màxim possible el seu desplegament en entorns Cloud.
 
 <br />
 
