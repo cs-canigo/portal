@@ -15,7 +15,11 @@ Expliquem, des d'un inici, quines són les passes que segueix una aplicació fin
 
 És en aquesta fase on el proveïdor d'aplicacions, conjuntament amb Integració de Solucions, analitzaran si l'aplicació és susceptible d'anar al Container Cloud. Amb el suport de l'equip d'Administració Cloud i Arquitectura CTTI es prendrà una decisió i es determinarà quin és el cloud destí més apropiat.
 
+Els proveïdors d'aplicacions poden adreçar qualsevol petició de consulta o suport al [CS Suport Cloud del CSTD|https://cstd.ctti.gencat.cat/jiracstd/browse/CLD].
+
 ### Alta projecte
+
+Un cop el document d'arquitectura hagi estat aprovat, així com el pressupost associat als elements a aprovisionar al cloud, es procedirà a l'alta del projecte.
 
 En aquesta fase s'aprovisionaran els recursos necessaris en el cloud destí i en el SIC per al desplegament de l'aplicació, així com els usuaris d'accés pels proveïdors d'aplicacions per la monitorització de l'aplicació (logs, consum recursos, ...) i el seu desplegament.
 

@@ -105,4 +105,4 @@ Es recomana que aquest mòdul es securitzi per a que només els usuaris amb rol 
 
 ### Demo
 
-Des del CS Canigó es proporciona una [demo online](http://canigo-admin-logs.eu-gb.mybluemix.net/loggingAdministration.html) d'aquest nou mòdul. Podeu trobar el codi font d'aquesta demo en el següent [repositori de Github](https://github.com/cs-canigo/demoAdminLogs).
+Des del CS Canigó es proporciona una aplicació de demo d'aquest nou mòdul. Podeu trobar el codi font en el següent [repositori de Github](https://github.com/gencat/demoAdminLogs).

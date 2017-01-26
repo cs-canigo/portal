@@ -15,13 +15,13 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/cs-canigo/dev-environment/releases/tag/1.0.2) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/1.0.2) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/cs-canigo/dev-environment/archive/1.0.2.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/1.0.2.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -59,6 +59,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	- Client VPNC per accés a XCAT
 
 ### Demo Equipaments
+<p sytle="color: red">(Aquesta secció està en manteniment)</p>
 
 Des del CS Canigó es proporciona un exemple d'aplicació Canigó 3 per ser desplegada en contenidors Docker. El stack és el següent:
 
@@ -74,13 +75,9 @@ A continuació es descriuen les passes a seguir per la instal·lació i execuci�
 
 		127.0.0.1	demos.canigo.ctti.gencat.cat
 
-	Aquesta modificació es pot realitzar executant el editor de text "leafpad":
-
-		$ sudo leafpad /etc/hosts
-
 * Des de l'Eclipse descarregar el projecte demo "equipaments":
 
-	File -> Import -> Projects from Git -> Clone URI https://github.com/cs-canigo/equipaments.git (introduïr unes credencials vàlides de Github) -> Sel·lecccionar branch "master" -> Sel·leccionar directori "/home/canigo/Documents/workspace-sts-3.7.1.RELEASE" com a Destinations -> Sel·leccionar l'opció "Import Existing Eclipse projects" -> Finish
+	File -> Import -> Projects from Git -> Clone URI https://github.com/gencat/equipaments.git (introduïr unes credencials vàlides de Github) -> Sel·lecccionar branch "master" -> Sel·leccionar directori "/home/canigo/Documents/workspace-sts-3.7.1.RELEASE" com a Destinations -> Sel·leccionar l'opció "Import Existing Eclipse projects" -> Finish
 
 * Construïr l'aplicació:
 
