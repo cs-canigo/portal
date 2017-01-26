@@ -59,7 +59,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	- Client VPNC per accés a XCAT
 
 ### Demo Equipaments
-<span sytle="color: red">(Aquesta secció està en manteniment)</span>
+<p sytle="color: red">(Aquesta secció està en manteniment)</p>
 
 Des del CS Canigó es proporciona un exemple d'aplicació Canigó 3 per ser desplegada en contenidors Docker. El stack és el següent:
 
