@@ -74,10 +74,6 @@ A continuació es descriuen les passes a seguir per la instal·lació i execuci�
 
 		127.0.0.1	demos.canigo.ctti.gencat.cat
 
-	Aquesta modificació es pot realitzar executant el editor de text "leafpad":
-
-		$ sudo leafpad /etc/hosts
-
 * Des de l'Eclipse descarregar el projecte demo "equipaments":
 
 	File -> Import -> Projects from Git -> Clone URI https://github.com/gencat/equipaments.git (introduïr unes credencials vàlides de Github) -> Sel·lecccionar branch "master" -> Sel·leccionar directori "/home/canigo/Documents/workspace-sts-3.7.1.RELEASE" com a Destinations -> Sel·leccionar l'opció "Import Existing Eclipse projects" -> Finish
