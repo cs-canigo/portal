@@ -1,5 +1,5 @@
 var converter = new showdown.Converter();
-converter.setOption('tables', true);
+converter.setOption('tables', true); 
 
 function replaceHighLight(content){
   var matches;
