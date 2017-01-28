@@ -44,7 +44,7 @@ $(function(){
 
 });
 
-var client = algoliasearch('WG3M5KTTLD', '74e38a958350c6495e632e89c5655c8c')
+var client = algoliasearch('FFROL6ZNSV', '92f8f4b77b2216972ebaec9954cd666f')
 var index = client.initIndex('arquitectura');
 autocomplete('#cerca2', {hint: false}, [
 {
