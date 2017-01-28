@@ -5,8 +5,8 @@ var search, results = {}, facet_data={};
 
 /* global instantsearch */
 app({
-  appId: 'WG3M5KTTLD',
-  apiKey: '74e38a958350c6495e632e89c5655c8c',
+  appId: 'FFROL6ZNSV',
+  apiKey: '92f8f4b77b2216972ebaec9954cd666f',
   indexName: 'moduls-canigo'
 });
 
