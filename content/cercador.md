@@ -57,7 +57,7 @@ no_index 	= true
 <!-- /TEMPLATES -->
 
 <div id="logo-algolia">
-	<img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" />
+	<!-- <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" /> -->
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
