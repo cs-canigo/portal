@@ -89,18 +89,22 @@ default_versions:
 
 En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades a [DockerHub](https://hub.docker.com/r/gencatcloud/).
 
+Es publiquen dos imatges per separat per cada element:
 
-**Element**  | **Versions suportades** | **Docker**
+- Docker: imatge certificada a [Bluemix IBM Containers](https://www.ibm.com/cloud-computing/bluemix/containers)
+- Docker-OpenShift: imatge certificada a [OpenShift](https://www.openshift.org/)
+
+**Element**  | **Versions suportades** | **Docker** | **Docker-OpenShift**
 ------------ | ----------------------- | ---------
-Apache 		 | 2.2, 2.4                | https://hub.docker.com/r/gencatcloud/httpd/
-Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/
-HAProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/
-Java		 | 7, 8		|	https://hub.docker.com/r/gencatcloud/java/
-MySql 		 | 5.7                     | https://hub.docker.com/r/gencatcloud/mysql/
-NodeJS 		 | 4.2.6                     | https://hub.docker.com/r/gencatcloud/nodejs/
-PHP 		 | 5.3.29                   | https://hub.docker.com/r/gencatcloud/php/
-Postgres	 | 9.5.3	                   | https://hub.docker.com/r/gencatcloud/postgres/
-Tomcat  	 | 7                     | https://hub.docker.com/r/gencatcloud/tomcat/
+Apache 		 | 2.2, 2.4                | https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
+Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
+HAProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/ | -
+Java		 | 7, 8		|	https://hub.docker.com/r/gencatcloud/java/  | https://hub.docker.com/r/gencatcloud/java-openshift/
+MySql 		 | 5.7                     | https://hub.docker.com/r/gencatcloud/mysql/    | https://hub.docker.com/r/gencatcloud/mysql-openshift
+NodeJS 		 | 4.2.6                     | https://hub.docker.com/r/gencatcloud/nodejs/ | https://hub.docker.com/r/gencatcloud/nodejs-openshift/
+PHP 		 | 5.3.29                   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.docker.com/r/gencatcloud/php-openshift/
+Postgres	 | 9.5.3	                   | https://hub.docker.com/r/gencatcloud/postgres/ | https://hub.docker.com/r/gencatcloud/postgres-openshift/
+Tomcat  	 | 7                     | https://hub.docker.com/r/gencatcloud/tomcat/ | https://hub.docker.com/r/gencatcloud/tomcat-openshift/
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
 
