@@ -12,7 +12,7 @@ El SIC està evolucionant per tal de poder donar cabuda a les tecnologies més e
 
 #### **Sistema de control de codi font**
 
-S'incorporarà [Gitlab](https://about.gitlab.com/) com a Sistema de control de codi font (SCM). Aquest SCM conviurà amb l'actual, el SVN, durant un període encara a determinar. Transcorregut aquest període, Gitlab romandrà com a unic SCM al SIC.
+S'incorporarà [Gitlab](https://about.gitlab.com/) com a Sistema de control de codi font (SCM). Aquest SCM conviurà amb l'actual, el SVN, durant un període encara a determinar. Transcorregut aquest període, Gitlab romandrà com a únic SCM al SIC.
 Les noves aplicacions que s'incorporin al SIC a partir d'aquest Abril, ja ho podran fer amb Gitlab. Els propis proveïdors de les aplicacions seran autònoms per poder crear els repositoris de codi de les aplicacions dins el Gitlab.
 Per a les aplicacions que ja custodien el codi font al repositori SVN, el SIC oferirà la possibilitat de migrar el contingut d'aquest sistema al de Gitlab.
 
