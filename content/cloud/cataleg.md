@@ -94,7 +94,7 @@ Es publiquen dos imatges per separat per cada element:
 - Docker: imatge certificada a [Bluemix IBM Containers](https://www.ibm.com/cloud-computing/bluemix/containers)
 - Docker-OpenShift: imatge certificada a [OpenShift](https://www.openshift.org/)
 
-**Element**  | **Versions suportades** | **Docker** | **Docker-OpenShift**
+**Element**  | **Versions suportades** | **Docker** | **Docker-OpenShift** |
 ------------ | ----------------------- | ---------
 Apache 		 | 2.2, 2.4                | https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
 Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
