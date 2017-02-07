@@ -17,6 +17,6 @@ La integració realitzada amb Swagger i [JWT](https://jwt.io/) (JSON Web Token) 
 
 Comentar que JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió de Canigó. En cap cas s'evolucionarà més enllà d'actualització de llibreries per tal de garantir la compatibilitat amb contenidors de servlets i servidors d'aplicacions del [Full de Ruta del Programari](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf).
 
-La data d'alliberament de Canigó 3.2 està prevista per finals d'aquest mes de Febrer de 2017. Una nova notícia o destacat serà publicada en aquest portal per tal de donar més detalls d'aquesta nova versió de Canigó: documentació, binaris i aplicació plantilla.
+La data d'alliberament de Canigó 3.2 està prevista per finals d'aquest mes de Febrer de 2017. Una nova notícia o destacat es publicarà en aquest portal per tal de donar més detalls d'aquesta nova versió de Canigó: documentació, binaris i aplicació plantilla.
 
 Per qualsevol dubte us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
