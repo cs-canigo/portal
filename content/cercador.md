@@ -56,9 +56,9 @@ no_index 	= true
 </script>
 <!-- /TEMPLATES -->
 
-<div id="logo-algolia">
-	<img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" />
-</div>
+<!--<div id="logo-algolia"> -->
+	<!-- <img src="/images/algolia/Algolia_logo_bg-white.jpg" alt="Logo Algolia" /> -->
+<!--</div> -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
 <script src="//cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>

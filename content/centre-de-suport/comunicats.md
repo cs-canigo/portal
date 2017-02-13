@@ -6,7 +6,16 @@ sections    = "Centre de Suport"
 weight		= 4
 +++
 
+## <span class="label label-cabecera">2017</span>
+
+#### [Gener] (/comunicat/2017/01/)
+- Oficina Tècnica de Canigó. Balanç 2016
+
 ## <span class="label label-cabecera">2016</span>
+
+#### [Desembre] (/comunicat/2016/12/)
+- Canigó. Autenticació amb JWT (JSON Web Tokens)
+- SIC. Nova creació massiva de repositoris SVN
 
 #### [Novembre] (/comunicat/2016/11/)
 - Tecnologia darrera del Web d'Arquitectura

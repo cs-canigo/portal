@@ -1,7 +1,7 @@
 var fs = require("fs")
 var algoliasearch = require('algoliasearch');
 
-var client = algoliasearch('WG3M5KTTLD', process.env.ALGOLIA_API_KEY);
+var client = algoliasearch('FFROL6ZNSV', process.env.ALGOLIA_API_KEY);
 var algolia = client.initIndex('moduls-canigo');
 
 data = readFile("./data/canigoAppsInfo.json");

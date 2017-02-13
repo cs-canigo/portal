@@ -279,7 +279,7 @@ tr.head_row td + td {
   background-color: #fff;
   border: 1px solid #999;
   border-top: none;
-  background-image: url("/images/algolia/Algolia_logo_bg-white.jpg");
+  /*background-image: url("/images/algolia/Algolia_logo_bg-white.jpg");*/
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 80px;

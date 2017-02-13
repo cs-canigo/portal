@@ -59,15 +59,14 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	- Client VPNC per accés a XCAT
 
 ### Demo Equipaments
-<p sytle="color: red">(Aquesta secció està en manteniment)</p>
 
 Des del CS Canigó es proporciona un exemple d'aplicació Canigó 3 per ser desplegada en contenidors Docker. El stack és el següent:
 
-* MySQL 5.6: [mysql:5.6](https://hub.docker.com/_/mysql/)
+* MySQL 5.7: [gencatcloud/mysql:5.7](https://hub.docker.com/r/gencatcloud/mysql/)
 
-* Tomcat 7 + Oracle JDK 7: [cscanigo/tomcat7-java7](https://hub.docker.com/r/cscanigo/tomcat7-java7/)
+* Tomcat 7 + Oracle JDK 7: [gencatcloud/tomcat:7](https://hub.docker.com/r/gencatcloud/tomcat/)
 
-* Apache 2.4: [cscanigo/httpd:2.4] (https://hub.docker.com/r/cscanigo/httpd/)
+* Apache 2.4: [gencatcloud/httpd:2.4] (https://hub.docker.com/r/gencatcloud/httpd/)
 
 A continuació es descriuen les passes a seguir per la instal·lació i execució de l'aplicació demo Equipaments:
 
