@@ -25,4 +25,4 @@ A la següent taula s'aporta el detall de les diferents versions existents del p
 + La llibreria que cal sobreescriure es troba a: \<eclipse_home\>/plugins/org.eclipse.m2e.maven.runtime_1.5.1.20150109-1819/jars/maven-embedder-3.2.1.jar
 + La llibrería amb la que s'ha de sobreescriure es pot descarregar des d'[aquest enllaç](http://canigo.ctti.gencat.cat/devenv/patch_plugin_canigo/maven-embedder-3.2.1.jar)
 
-Un cop finalitzat aquest procediment ja es pot crear un projecte Canigó des de l'Eclipse: New -> Other -> Asistent projectes Canigó -> Crear un projecte Canigó. Trobareu més informació relativa al Plugin de Canigó a la [documentació](http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/).
+Un cop finalitzat aquest procediment ja es pot crear un projecte Canigó des de l'Eclipse: New -> Other -> Asistent projectes Canigó -> Crear un projecte Canigó. Trobareu més informació relativa al Plugin de Canigó a la [documentació](/canigo-download-related/plugin-canigo).
