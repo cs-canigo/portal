@@ -94,7 +94,7 @@ Es publiquen dos imatges per separat per cada element:
 - Docker: imatge certificada a [Bluemix IBM Containers](https://www.ibm.com/cloud-computing/bluemix/containers)
 - Docker-OpenShift: imatge certificada a [OpenShift](https://www.openshift.org/)
 
-**Element**  | **Versió**   | **Docker** | **Docker-OpenShift**
+**Element**  | **Versió (1) (2)**   | **Docker** | **Docker-OpenShift**
 ------------ | ------------ |----------- | --------------------
 Apache 		 | actual FRP    |https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
 Apache-GICAR | 1.0 (Apache 2.2)   | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
@@ -106,8 +106,8 @@ PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.
 Postgres	 | 9.5.3    |https://hub.docker.com/r/gencatcloud/postgres/ | https://hub.docker.com/r/gencatcloud/postgres-openshift/
 Tomcat  	 | actual FRP   | https://hub.docker.com/r/gencatcloud/tomcat/ | https://hub.docker.com/r/gencatcloud/tomcat-openshift/
 
-_Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) està disponible la versió actual CTTI._
-_Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) s'especifica la versió disponible més actual._
+(1) Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) està disponible la versió actual CTTI.
+(2) Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) s'especifica la versió disponible més actual.
 
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
