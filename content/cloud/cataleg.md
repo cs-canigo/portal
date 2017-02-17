@@ -28,7 +28,7 @@ Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que
 <br />
 
 - **xpaas** (OpenShift), disponible a **cloud privat**
-	* Tomcat 7 i 8
+	* Tomcat
 	* Node.js
     * Perl
 	* PHP
@@ -46,7 +46,7 @@ En aquests xPaaS, quan es fa un "push" del codi o de l'artefacte, s'aixeca un en
 
 ### Configuració de l'engine
 
-Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 4.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf#search=full%20de%20ruta), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
+Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 4.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
 
 _package.json_
 
@@ -94,17 +94,23 @@ Es publiquen dos imatges per separat per cada element:
 - Docker: imatge certificada a [Bluemix IBM Containers](https://www.ibm.com/cloud-computing/bluemix/containers)
 - Docker-OpenShift: imatge certificada a [OpenShift](https://www.openshift.org/)
 
-**Element**  | **Versions suportades** | **Docker** | **Docker-OpenShift**
------------- | ----------------------- | --------- | -------------
-Apache 		 | 2.2, 2.4                | https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
-Apache-GICAR | 1.0 (basada en Apache 2.2)                       | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
-HAProxy		 | 1.5.1                   | https://hub.docker.com/r/gencatcloud/haproxy/ | -
-Java		 | 7, 8		|	https://hub.docker.com/r/gencatcloud/java/  | https://hub.docker.com/r/gencatcloud/java-openshift/
-MySql 		 | 5.7                     | https://hub.docker.com/r/gencatcloud/mysql/    | https://hub.docker.com/r/gencatcloud/mysql-openshift
-NodeJS 		 | 4.2.6                     | https://hub.docker.com/r/gencatcloud/nodejs/ | https://hub.docker.com/r/gencatcloud/nodejs-openshift/
-PHP 		 | 5.3.29                   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.docker.com/r/gencatcloud/php-openshift/
-Postgres	 | 9.5.3	                   | https://hub.docker.com/r/gencatcloud/postgres/ | https://hub.docker.com/r/gencatcloud/postgres-openshift/
-Tomcat  	 | 7                     | https://hub.docker.com/r/gencatcloud/tomcat/ | https://hub.docker.com/r/gencatcloud/tomcat-openshift/
+**Element**  | **Versió**   | **Docker** | **Docker-OpenShift**
+------------ | ------------ |----------- | --------------------
+Apache 		 | actual FRP    |https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
+Apache-GICAR | 1.0 (Apache 2.2)   | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
+HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/ | -
+Java		 | actual FRP   | https://hub.docker.com/r/gencatcloud/java/  | https://hub.docker.com/r/gencatcloud/java-openshift/
+MySql 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/mysql/    | https://hub.docker.com/r/gencatcloud/mysql-openshift
+NodeJS 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/nodejs/ | https://hub.docker.com/r/gencatcloud/nodejs-openshift/
+PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.docker.com/r/gencatcloud/php-openshift/
+Postgres	 | 9.5.3    |https://hub.docker.com/r/gencatcloud/postgres/ | https://hub.docker.com/r/gencatcloud/postgres-openshift/
+Tomcat  	 | actual FRP   | https://hub.docker.com/r/gencatcloud/tomcat/ | https://hub.docker.com/r/gencatcloud/tomcat-openshift/
+
+Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) està disponible la versió actual CTTI.
+
+Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) s'especifica la versió disponible més actual.
+
+* 1.0 (basada en Apache 2.2)
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
 
