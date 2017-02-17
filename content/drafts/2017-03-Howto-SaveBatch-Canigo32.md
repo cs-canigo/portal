@@ -1,10 +1,10 @@
 +++
-date        = "2017-01-03"
+date        = "2017-04-01"
 title       = "Batch Inserts a una aplicació Canigó 3.2"
 description = "Batch Inserts a una aplicació Canigó 3.2"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "MARÇ2017"
+key         = "ABRIL2017"
 +++
 
 ### A qui va dirigit
