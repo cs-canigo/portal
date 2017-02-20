@@ -9,32 +9,32 @@ categories  = [""]
 
 Element            |Tipus       | Capa  |Versió |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
 -------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
-Apache             | PaaS       |Web    |2.2    |x      |x      |x      |x      |        |       |Inclou GICAR
-Apache             | Contenidor |Web    |2.2    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
+Apache             | PaaS       |Web    |2.4    |x      |x      |x      |x      |        |       |Inclou GICAR
+Apache             | Contenidor |Web    |2.4    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |       |       |x       |       |   
 IIS                | PaaS       |Web    |8.5    |x      |x      |x      |x      |        |       | 
-Tomcat             | PaaS       |App    |7      |x      |x      |x      |x      |        |       | 
-Tomcat             | xPaaS      |App    |7      |       |       |x      |       |x       |       | 
-Tomcat             | Contenidor |App    |7      |       |       |x      |       |x       |       | 
+Tomcat             | PaaS       |App    |8      |x      |x      |x      |x      |        |       | 
+Tomcat             | xPaaS      |App    |8      |       |       |x      |       |x       |       | 
+Tomcat             | Contenidor |App    |8      |       |       |x      |       |x       |       | 
 Weblogic           | PaaS       |App    |12.1   |x      |x      |x      |x      |        |       | 
 Websphere          | PaaS       |App    |8.5    |x      |x      |x      |x      |        |       | 
 Websphere          | xPaaS      |App    |-      |       |       |       |       |x       |       | 
 HAProxy            | Contenidor |-      |1.5.1  |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
-Java               | Contenidor |-      |7      |       |       |x      |       |x       |       | 
+Java               | Contenidor |-      |8      |       |       |x      |       |x       |       | 
 JBoss              | PaaS       |App    |6.x    |x      |x      |x      |x      |        |       | 
 JBoss              | xPaaS      |App    |6      |       |       |x      |       |        |       | 
 .Net               | PaaS       |App    |4.5.2  |x      |x      |x      |x      |        |       | 
 .Net               | xPaaS      |App    |       |       |       |       |       |x       |x      | 
 NodeJS             | xPaaS      |App    |4.2    |       |       |x      |       |x       |       | 
 NodeJS             | Contenidor |App    |4.2    |       |       |x      |       |x       |       | 
-PHP                | PaaS       |App    |5.3    |x      |       |       |       |        |       |    
+PHP                | PaaS       |App    |5.6    |x      |       |       |       |        |       |    
 PHP                | xPaaS      |App    |>5.5   |       |       |x      |       |x       |       |    
-PHP                | Contenidor |App    |5.3    |       |       |x      |       |x       |       |    
+PHP                | Contenidor |App    |5.6    |       |       |x      |       |x       |       |    
 OracleDB           | PaaS       |DB     |12.1   |x      |x      |x      |x      |        |       |    
 MySQL              | PaaS       |DB     |5.7    |x      |x      |x      |x      |        |       |    
 MySQL              | Contenidor |DB     |5.7    |       |       |x      |       |x       |       |    
 MySQL              | DBaaS      |DB     |-      |       |       |       |       |x       |       |Beta    
-SQLServer          | PaaS       |DB     |2012   |x      |x      |x      |x      |        |       |    
+SQLServer          | PaaS       |DB     |2014   |x      |x      |x      |x      |        |       |    
 SQLServer          | DBaaS      |DB     |v12    |       |       |       |       |        |x      | 
 MongoDB            | DBaaS      |DB     |3.2    |       |       |       |       |x       |       |    
 MongoDB            | PaaS       |DB     |3.2    |x      |       |       |x      |        |       |Adhoc. En definició
