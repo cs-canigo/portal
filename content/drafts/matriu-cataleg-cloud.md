@@ -7,12 +7,12 @@ categories  = [""]
 +++
 
 
-Element            |Tipus       | Capa  |Versió |Container Cloud   |AppAgile  |Bluemix |Azure  |Compose  |Observacions
--------            |------      |:-----:|:-----:|:----------------:|:------:|:------:|:-----:|:-------:|-------------
-Apache             | Contenidor |Web    |actual FRP    |x      |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
-Nginx              | xPaaS      |Web    |1.8    |       |       |x       |       ||   
-Tomcat             | xPaaS      |App    |actual FRP      |      |       |x       |       || 
-Tomcat             | Contenidor |App    |actual FRP      |      |       |x       |       || 
+Element            |Tipus       | Capa  |Versió |ContainerCloud  |AppAgile  |Bluemix |Azure  |Compose  |Observacions
+-------            |------      |:-----:|:-----:|:---------------:|:------:|:------:|:-----:|:-------:|-------------
+Apache             | Contenidor |Web    |actual FRP    |x  |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
+Nginx              | xPaaS      |Web    |1.8    | |       |x       |       ||   
+Tomcat             | xPaaS      |App    |actual FRP      | |       |x       |       || 
+Tomcat             | Contenidor |App    |actual FRP      | |       |x       |       || 
 Websphere          | xPaaS      |App    |-      |       |       |x       |       || 
 HAProxy            | Contenidor |-      |1.5.1  |x      |       |x       |       ||Balanceig de contenidors arrencats amb docker-compose a Bluemix 
 Java               | Contenidor |-      |8      |x      |       |x       |       ||
