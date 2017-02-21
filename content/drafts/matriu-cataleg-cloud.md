@@ -85,7 +85,7 @@ Llegenda "Tipus":
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===3 || col_index===10){
+	                if(col_index===3 || col_index===9){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
@@ -107,7 +107,7 @@ Llegenda "Tipus":
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='2'></th><th colspan='4'>Privat</th><th colspan='3'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
