@@ -9,7 +9,6 @@ categories  = [""]
 
 Element            |Tipus       | Capa  |Versió |Container Cloud  |AppAgile  |Bluemix |Azure  |Compose  |Observacions
 -------            |------      |:-----:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|-------------
-Apache             | PaaS       |Web    |2.4    |x      |x      |        |       ||Inclou GICAR
 Apache             | Contenidor |Web    |2.4    |x      |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |x       |       ||   
 Tomcat             | xPaaS      |App    |8      |x      |       |x       |       || 
