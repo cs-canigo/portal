@@ -7,8 +7,8 @@ categories  = [""]
 +++
 
 
-Element            |Tipus       | Capa  |Versió |Container Cloud     |AppAgile  |Bluemix |Azure  |Compose  |Observacions
--------            |------      |:-----:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|-------------
+Element            |Tipus       | Capa  |Versió |Container Cloud   |AppAgile  |Bluemix |Azure  |Compose  |Observacions
+-------            |------      |:-----:|:-----:|:----------------:|:------:|:------:|:-----:|:-------:|-------------
 Apache             | Contenidor |Web    |actual FRP    |x      |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |x       |       ||   
 Tomcat             | xPaaS      |App    |actual FRP      |      |       |x       |       || 
@@ -87,7 +87,7 @@ Llegenda "Tipus":
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===3 || col_index===9){
+	                if(col_index===9){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
