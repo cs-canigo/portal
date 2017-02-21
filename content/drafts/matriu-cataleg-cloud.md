@@ -9,29 +9,32 @@ categories  = [""]
 
 Element            |Tipus       | Capa  |Versió |Container Cloud  |AppAgile  |Bluemix |Azure  |Compose  |Observacions
 -------            |------      |:-----:|:-----:|:-----:|:-----:|:------:|:-----:|:-----:|-------------
-Apache             | Contenidor |Web    |2.4    |x      |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
+Apache             | Contenidor |Web    |actual FRP    |x      |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |x       |       ||   
-Tomcat             | xPaaS      |App    |8      |x      |       |x       |       || 
-Tomcat             | Contenidor |App    |8      |x      |       |x       |       || 
+Tomcat             | xPaaS      |App    |actual FRP      |      |       |x       |       || 
+Tomcat             | Contenidor |App    |actual FRP      |      |       |x       |       || 
 Websphere          | xPaaS      |App    |-      |       |       |x       |       || 
 HAProxy            | Contenidor |-      |1.5.1  |x      |       |x       |       ||Balanceig de contenidors arrencats amb docker-compose a Bluemix 
 Java               | Contenidor |-      |8      |x      |       |x       |       ||
-JBoss              | xPaaS      |App    |6      |x      |       |        |       || 
-.Net               | xPaaS      |App    |       |       |       |x       |x      || 
-NodeJS             | xPaaS      |App    |4.2    |x      |       |x       |       || 
-NodeJS             | Contenidor |App    |4.2    |x      |       |x       |       || 
-PHP                | xPaaS      |App    |>5.5   |x      |       |x       |       ||    
-PHP                | Contenidor |App    |5.6    |x      |       |x       |       ||    
-MySQL              | Contenidor |DB     |5.7    |x      |       |x       |       ||    
+JBoss              | xPaaS      |App    |actual FRP      |      |       |x        |       || 
+.Net               | xPaaS      |App    |       |       |       |       |x      || 
+NodeJS             | xPaaS      |App    |actual FRP    |      |       |x       |       || 
+NodeJS             | Contenidor |App    |actual FRP    |x      |       |x       |       || 
+PHP                | xPaaS      |App    |>5.5   |      |       |x       |       ||    
+PHP                | Contenidor |App    |actual FRP    |x      |       |x       |       ||    
+MySQL              | Contenidor |DB     |actual FRP    |x      |       |x       |       ||    
 MySQL              | DBaaS      |DB     |-      |       |       |       |       |x  |Beta    
-SQLServer          | DBaaS      |DB     |v12    |       |       |        |x      |  || 
-MongoDB            | DBaaS      |DB     |3.2    |       |       |       |       |x  ||    
+SQLServer          | DBaaS      |DB     |12    |       |       |        |x      |  || 
+MongoDB            | DBaaS      |DB     |actual FRP    |       |       |       |       |x  ||    
 PostgreSQL         | Contenidor |DB     |9.5.3  |x      |       |       |       |x  |    
 PostgreSQL         | DBaaS      |DB     |9.5.4  |       |       |       |       |x  |    
 ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       |x  |    
 Contenidors a mida | Contenidor |-      |-      |x      |       |x       |       ||
 Màquines virtuals  | IaaS       |-      |-      |      |      |        |x      || 
 
+(1) Per a tots els elements presents al Full de Ruta del Programari (FRP) del CTTI està disponible la versió actual CTTI.
+
+(2) Per als elements que no estan presents al Full de Ruta del Programari (FRP) del CTTI s’especifica la versió disponible més actual.
 
 Llegenda "Tipus":
 
