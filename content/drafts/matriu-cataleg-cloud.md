@@ -1,7 +1,7 @@
 +++
 date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
-description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
+description = "Elements de catàleg disponibles en els diferents Container Clouds i Clouds Públics"
 sections    = ""
 categories  = [""]
 +++
