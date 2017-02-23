@@ -3,7 +3,7 @@ date        = "2016-05-11"
 title       = "Cicle de vida"
 description = "Cicle de vida de les aplicacions Cloud containeritzades i xPaas/buildpack"
 sections    = "Container Cloud"
-weight      = 3
+weight      = 4
 categories  = []
 +++
 
