@@ -7,7 +7,7 @@ categories  = [""]
 +++
 
 Element            |Tipus       | Capa  |Versió (1) |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
--------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
+-------            |------      |:-----:|:---------:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
 Apache             | PaaS       |Web    | 2.4    |x      |x      |x      |x      |        |       |Inclou GICAR
 Apache             | Contenidor |Web    | 2.4    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |       |       |x       |       |   
@@ -95,7 +95,7 @@ Llegenda "Tipus":
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===9){
+	                if(col_index===10){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
