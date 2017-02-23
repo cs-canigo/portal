@@ -6,7 +6,7 @@ sections    = ""
 categories  = [""]
 +++
 
-Element            |Tipus       | Capa  |Versió* |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
+Element            |Tipus       | Capa  |Versió (1) |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
 -------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
 Apache             | PaaS       |Web    | 2.4    |x      |x      |x      |x      |        |       |Inclou GICAR
 Apache             | Contenidor |Web    | 2.4    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
@@ -45,6 +45,7 @@ Màquines virtuals  | IaaS       |-      |-      |x      |x      |x      |x     
 
 (1) Les versions s'alineen amb la versió actual CTTI del [Full de Ruta del Programari (FRP)](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) per a tots els elements que hi estiguin presents
 
+
 Llegenda "Tipus":
 
 - **xPaaS**: és un entorn d'execució que s'arrenca en el moment de fer el push de l'artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.
@@ -69,12 +70,10 @@ Llegenda "Tipus":
 	table tr:nth-child(1) th:nth-child(2), 
 	table tr:nth-child(1) th:nth-child(3),
 	table tr:nth-child(2) th:nth-child(4),
-	table tr:nth-child(2) th:nth-child(6),
-	table tr:nth-child(2) th:nth-child(9), 
+	table tr:nth-child(2) th:nth-child(8), 
 	table tr:nth-child(2) th:nth-child(10),
 	table tr td:nth-child(4), 
-	table tr td:nth-child(6),
-	table tr td:nth-child(9), 
+	table tr td:nth-child(8), 
 	table tr td:nth-child(10){
 		border-right: 3px solid #aaa;
 	}
@@ -118,7 +117,7 @@ Llegenda "Tipus":
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='4'>Privat (on-premises)</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
