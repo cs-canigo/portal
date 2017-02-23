@@ -1,42 +1,49 @@
 +++
 date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
-description = "Elements de catàleg disponibles en els diferents Container Clouds i Clouds Públics"
+description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
 sections    = ""
-toc 	    = true
 categories  = [""]
 +++
 
-## Matriu catàleg Cloud
+Element            |Tipus       | Capa  |Versió* |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
+-------            |------      |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
+Apache             | PaaS       |Web    | 2.4    |x      |x      |x      |x      |        |       |Inclou GICAR
+Apache             | Contenidor |Web    | 2.4    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
+Nginx              | xPaaS      |Web    |1.8    |       |       |       |       |x       |       |   
+IIS                | PaaS       |Web    |8.5    |x      |x      |x      |x      |        |       | 
+Tomcat             | PaaS       |App    |8      |x      |x      |x      |x      |        |       | 
+Tomcat             | xPaaS      |App    |8      |       |       |x      |       |x       |       | 
+Tomcat             | Contenidor |App    |8      |       |       |x      |       |x       |       | 
+Weblogic           | PaaS       |App    |12.1   |x      |x      |x      |x      |        |       | 
+Websphere          | PaaS       |App    |8.5    |x      |x      |x      |x      |        |       | 
+Websphere          | xPaaS      |App    |-      |       |       |       |       |x       |       | 
+HAProxy            | Contenidor |-      |1.5.1  |       |       |x      |       |x       |       |Balanceig de contenidors arrencats amb docker-compose a Bluemix 
+Java               | Contenidor |-      |8      |       |       |x      |       |x       |       | 
+JBoss              | PaaS       |App    |6.x    |x      |x      |x      |x      |        |       | 
+JBoss              | xPaaS      |App    |6      |       |       |x      |       |        |       | 
+.Net               | PaaS       |App    |4.5.2  |x      |x      |x      |x      |        |       | 
+.Net               | xPaaS      |App    |       |       |       |       |       |x       |x      | 
+NodeJS             | xPaaS      |App    |4.2    |       |       |x      |       |x       |       | 
+NodeJS             | Contenidor |App    |4.2    |       |       |x      |       |x       |       | 
+PHP                | PaaS       |App    |5.6    |x      |       |       |       |        |       |    
+PHP                | xPaaS      |App    |>5.5   |       |       |x      |       |x       |       |    
+PHP                | Contenidor |App    |5.6    |       |       |x      |       |x       |       |    
+OracleDB           | PaaS       |DB     |12.1   |x      |x      |x      |x      |        |       |    
+MySQL              | PaaS       |DB     |5.7    |x      |x      |x      |x      |        |       |    
+MySQL              | Contenidor |DB     |5.7    |       |       |x      |       |x       |       |    
+MySQL              | DBaaS      |DB     |-      |       |       |       |       |x       |       |Beta    
+SQLServer          | PaaS       |DB     |2014   |x      |x      |x      |x      |        |       |    
+SQLServer          | DBaaS      |DB     |v12    |       |       |       |       |        |x      | 
+MongoDB            | DBaaS      |DB     |3.2    |       |       |       |       |x       |       |    
+MongoDB            | PaaS       |DB     |3.2    |x      |       |       |x      |        |       |Adhoc. En definició
+PostgreSQL         | Contenidor |DB     |9.5.3  |       |       |x      |       |x       |       |    
+PostgreSQL         | DBaaS      |DB     |9.5.4  |       |       |       |       |x       |       |    
+ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       |x       |       |    
+Contenidors a mida | Contenidor |-      |-      |       |       |x      |       |x       |       |
+Màquines virtuals  | IaaS       |-      |-      |x      |x      |x      |x      |        |x      |  
 
-Element            |Tipus       | Capa  |Versió |ContainerCloud  |AppAgile  |Bluemix |Azure  |Compose  |Observacions
--------            |------      |:-----:|:-----:|:---------------:|:------:|:------:|:-----:|:-------:|-------------
-Apache             | Contenidor |Web    |actual FRP    |x  |       |x       |       ||Amb o sense GICAR. Amb GICAR només a CPD Privat   
-Nginx              | xPaaS      |Web    |1.8    | |       |x       |       ||   
-Tomcat             | xPaaS      |App    |actual FRP      | |       |x       |       || 
-Tomcat             | Contenidor |App    |actual FRP      | |       |x       |       || 
-Websphere          | xPaaS      |App    |-      |       |       |x       |       || 
-HAProxy            | Contenidor |-      |1.5.1  |x      |       |x       |       ||Balanceig de contenidors arrencats amb docker-compose a Bluemix 
-Java               | Contenidor |-      |8      |x      |       |x       |       ||
-JBoss              | xPaaS      |App    |actual FRP      |      |       |x        |       || 
-.Net               | xPaaS      |App    |       |       |       |       |x      || 
-NodeJS             | xPaaS      |App    |actual FRP    |      |       |x       |       || 
-NodeJS             | Contenidor |App    |actual FRP    |x      |       |x       |       || 
-PHP                | xPaaS      |App    |>5.5   |      |       |x       |       ||    
-PHP                | Contenidor |App    |actual FRP    |x      |       |x       |       ||    
-MySQL              | Contenidor |DB     |actual FRP    |x      |       |x       |       ||    
-MySQL              | DBaaS      |DB     |-      |       |       |       |       |x  |Beta    
-SQLServer          | DBaaS      |DB     |12    |       |       |        |x      |  || 
-MongoDB            | DBaaS      |DB     |actual FRP    |       |       |       |       |x  ||    
-PostgreSQL         | Contenidor |DB     |9.5.3  |x      |       |       |       |x  |    
-PostgreSQL         | DBaaS      |DB     |9.5.4  |       |       |       |       |x  |    
-ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       |x  |    
-Contenidors a mida | Contenidor |-      |-      |x      |       |x       |       ||
-Màquines virtuals  | IaaS       |-      |-      |      |      |        |x      || 
-
-(1) Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) està disponible la versió actual CTTI.
-
-(2) Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) s’especifica la versió disponible més actual.
+(1) Les versions s'alineen amb la versió actual CTTI del [Full de Ruta del Programari (FRP)](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) per a tots els elements que hi estiguin presents
 
 Llegenda "Tipus":
 
@@ -111,31 +118,8 @@ Llegenda "Tipus":
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='2'>Privat</th><th colspan='3'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='4'></th><th colspan='4'>Privat (on-premises)</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
 </script>
-
-## Talles
-
-### Contenidors Docker i xPaaS Bluemix
-
-Pico - 64mb
-Nano - 128mb
-Micro - 256mb
-Molt petit - 512mb
-Petit - 1gb
-Mitja - 2gb
-Gran - 4gb
-Extra gran - 8gb
-Extra gran 2X - 16gb
-
-### Contenidors CPD3-MediaCloud (Openshift CPD3 Containers)
-
-D1 - 256mb
-D2 - 512mb
-D3 - 1024mb
-D4 - 2048mb
-
-
