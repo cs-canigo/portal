@@ -3,6 +3,7 @@ date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
 description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
 sections    = "Container Cloud"
+weight      = 2
 categories  = ["cloud","docker","container","paas"]
 +++
 
