@@ -50,7 +50,7 @@ Llegenda "Tipus":
 
 - **xPaaS**: és un entorn d'execució que s'arrenca en el moment de fer el push de l'artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.
 - **Contenidor**: artefacte de software que inclou tots les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)  
-- **DBaaS**: base de dades com a servei, és un subtipus de xPaaS. Es demana el tipus de DB i es proporcionen les credencials d'accés. Escala automàticament.
+- **DBaaS**: base de dades com a servei, és un subtipus de xPaaS. Escala automàticament.
 - **IaaS**: màquines virtuals, on s'aprovisiona fins al nivell de SO.
 
 <style>
