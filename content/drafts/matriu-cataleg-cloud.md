@@ -2,8 +2,8 @@
 date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
 description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
-sections    = ""
-categories  = [""]
+sections    = "Container Cloud"
+categories  = ["cloud","docker","container","paas"]
 +++
 
 Element            |Tipus       | Capa  |Versió (1)   |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
