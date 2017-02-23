@@ -6,8 +6,8 @@ sections    = ""
 categories  = [""]
 +++
 
-Element            |Tipus       | Capa  |Versió (1) |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
--------            |------      |:-----:|:---------:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
+Element            |Tipus       | Capa  |Versió (1)   |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
+-------            |------      |:-----:|:-----------:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
 Apache             | PaaS       |Web    | 2.4    |x      |x      |x      |x      |        |       |Inclou GICAR
 Apache             | Contenidor |Web    | 2.4    |       |       |x      |       |x       |       |Amb o sense GICAR. Amb GICAR només a CPD Privat   
 Nginx              | xPaaS      |Web    |1.8    |       |       |       |       |x       |       |   
@@ -44,7 +44,7 @@ Contenidors a mida | Contenidor |-      |-      |       |       |x      |       
 Màquines virtuals  | IaaS       |-      |-      |x      |x      |x      |x      |        |x      |  
 
 (1) Les versions s'alineen amb la versió actual CTTI del [Full de Ruta del Programari (FRP)](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) per a tots els elements que hi estiguin presents
-
+<br><br>
 
 Llegenda "Tipus":
 
