@@ -3,9 +3,11 @@ date        = "2016-10-11"
 title       = "Matriu catàleg cloud"
 description = "Elements de catàleg disponibles en els diferents Container Clouds i Clouds Públics"
 sections    = ""
+toc 	    = true
 categories  = [""]
 +++
 
+## Matriu catàleg Cloud
 
 Element            |Tipus       | Capa  |Versió |ContainerCloud  |AppAgile  |Bluemix |Azure  |Compose  |Observacions
 -------            |------      |:-----:|:-----:|:---------------:|:------:|:------:|:-----:|:-------:|-------------
@@ -32,9 +34,9 @@ ElasticSearch      | DBaaS      |DB     |2.4.0  |       |       |       |       
 Contenidors a mida | Contenidor |-      |-      |x      |       |x       |       ||
 Màquines virtuals  | IaaS       |-      |-      |      |      |        |x      || 
 
-(1) Per a tots els elements presents al Full de Ruta del Programari (FRP) del CTTI està disponible la versió actual CTTI.
+(1) Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) està disponible la versió actual CTTI.
 
-(2) Per als elements que no estan presents al Full de Ruta del Programari (FRP) del CTTI s’especifica la versió disponible més actual.
+(2) Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full de Ruta del Programari.pdf) s’especifica la versió disponible més actual.
 
 Llegenda "Tipus":
 
@@ -114,3 +116,26 @@ Llegenda "Tipus":
     	});
 	});
 </script>
+
+## Talles
+
+### Contenidors Docker i xPaaS Bluemix
+
+Pico - 64mb
+Nano - 128mb
+Micro - 256mb
+Molt petit - 512mb
+Petit - 1gb
+Mitja - 2gb
+Gran - 4gb
+Extra gran - 8gb
+Extra gran 2X - 16gb
+
+### Contenidors CPD3-MediaCloud (Openshift CPD3 Containers)
+
+D1 - 256mb
+D2 - 512mb
+D3 - 1024mb
+D4 - 2048mb
+
+
