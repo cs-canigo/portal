@@ -10,6 +10,8 @@ weight      = 2
 
 Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, permetent la execució d'operacions dintre de transaccions.
 
+Aquest mòdul utilitza Spring Data JPA. Es pot trobar informació sobre aquest framework al següent [enllaç] (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+
 ## Instal·lació i Configuració
 
 ### Instal·lació
@@ -155,16 +157,20 @@ Al tag **jpa:repositories** al paràmetre **base-package** s'ha d'indicar el pac
 
 Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'extendre de **cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository<T, ID extends Serializable>**
 
+	public interface EquipamentRepository extends GenericRepository<Equipament, Long>{
+
+	}
+
 #### Construcció de queries automàtiques
 
 A un repositori es poden definir mètodes per cada query que es vulgui definir. La construcció utilitza els prefixos find...By, read...By, query...By, count...By i get...By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.
 
-Exemples
-```
+Exemples:
+
     List<Equipament> findDistinctByNomOrMunicipi(String nom, String municipi);
 	List<Equipament> findByNomIgnoreCase(String nom);
 	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
-```
+
 
 Més informació a la documentació oficial de [Spring Data JPA](http://docs.spring.io/spring-data/jpa/docs/current/reference/html/).
 
@@ -172,7 +178,7 @@ Més informació a la documentació oficial de [Spring Data JPA](http://docs.spr
 
 Una de les funcionalitats proposades és la d'utilitzar QueryDSL per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.
 
-Per a utilitzar-la s'ha d'afegir el mètode següent al repository creat.
+El GenericRepository proporciona el següent mètode:
 
 ```
 Page<T> findAll(Predicate predicate, Pageable pageable);
@@ -203,9 +209,9 @@ id>15,nom:Prova
 
 #### Projecció de resultats
 
-Amb QueryDSL també es poden realitzar cerques que en comptes de retornar l'objecte sencer, retorni només determinats camps de l'objecte desitjat.<br>
+Amb QueryDSL també es poden realitzar cerques que en comptes de retornar l'objecte sencer, retorni només determinats camps de l'objecte desitjat, els camps no seleccionats els retorna amb valor null<br>
 
-Per a utilitzar les projeccions al vostre repository heu d'afegir el mètode:
+Per a utilitzar les projeccions el GenericRepository proporciona el següent mètode:
 ```
 Page<T> findAll(FactoryExpression<T> factoryExpression, Predicate predicate, Pageable pageable);
 ```
@@ -226,6 +232,13 @@ Page<Equipament> page = repository.findAll(Projections.bean(Equipament.class, qe
 
 Més informació a la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
+#### Batch Inserts/Update
+
+La classe GenericRepository també proporciona un mètode per a realitzar inserts/updates de forma massiva amb un rendiment òptim:
+
+	public <S extends T> List<S> bulkSave(Iterable<S> entities);
+	
+Es pot veure un exemple de com utilitzar aquesta classe al següent [howto] (/drafts/2017-03-Howto-SaveBatch-Canigo32)
 ### Exemple 
 	
 Per exemple a l'aplicació inicial que genera el plugin de Canigó es generen els següents fitxers:

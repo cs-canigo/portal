@@ -3,7 +3,7 @@ date        = "2016-05-11"
 title       = "Arquitectures tipus"
 description = "Exemples d'arquitectures"
 sections    = "Container Cloud"
-weight      = 3
+weight      = 5
 toc 	    = true
 categories  = ["cloud","docker","container","paas"]
 +++

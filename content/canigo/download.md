@@ -30,7 +30,7 @@ Veure [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/ento
 
 Altra informació d'interés:
 
-* Instal·lació plugin Canigó 3.1 per a Eclipse i creació d'aplicació: [HowTo generacio aplicació Canigo 3.1 amb plugin Eclipse](/related/canigo/howto/Canigo%20-%20HowTo%20-%20Generacio%20aplicacio%20Canigo%203.1%20amb%20plugin%20Eclipse.pdf)
+* [Plugin Canigó 3.1 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 * Actualització plugin Canigó 3.0 a 3.1 per a Eclipse i actualització de l'aplicació: [HowTo d'actualització de Canigó 3.0 a 3.1](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Actualitzacio+Canig%C3%B3+3.0+a+Canigo+3.1.pdf)
 
 <p>&nbsp;</p>

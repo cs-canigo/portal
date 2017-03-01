@@ -33,4 +33,4 @@ _Eclipse Mars_
 + La llibreria que cal sobreescriure es troba a: \<eclipse_home\>/plugins/org.eclipse.m2e.maven.runtime_1.6.0.20150526-2031/jars/maven-embedder-3.3.3.jar
 + La llibrería amb la que s'ha de sobreescriure es pot descarregar des d'[aquest enllaç](http://canigo.ctti.gencat.cat/devenv/patch_plugin_canigo/maven-embedder-3.3.3.jar)
 
-Un cop finalitzat aquest procediment ja es pot crear un projecte Canigó des de l'Eclipse: New -> Other -> Assistent projectes Canigó -> Crear un projecte Canigó. Trobareu més informació relativa al Plugin de Canigó a la [documentació](http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/).
+Un cop finalitzat aquest procediment ja es pot crear un projecte Canigó des de l'Eclipse: New -> Other -> Assistent projectes Canigó -> Crear un projecte Canigó. Trobareu més informació relativa al Plugin de Canigó a la [documentació](/canigo-download-related/plugin-canigo).
