@@ -1,7 +1,7 @@
 +++
 date = "2017-03-02"
 title = "Accés a Elasticsearch a cloud públic"
-description = "L'accés a un Elasticsearch a cloud públic (Compose) té una sèrie de consideracions de seguretat a tenir en compte"
+description = "L'accés a un Elasticsearch a cloud públic té una sèrie de consideracions de seguretat a tenir en compte"
 sections = ["Blog", "home"]
 blog_tags = ["dbaas", "seguretat"]
 imatge = "/images/bloc/elastic-search.png"
@@ -15,11 +15,11 @@ L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracion
 
 ## Seguretat
 
-És imprescindible que els accessos a l'ES només es realitzin des de servidors autoritzats. Serà necessari, per tant, que s'identifiquin les IPs d'accés per tal que es configurin a Compose.
+És imprescindible que els accessos a l'ES només es realitzin des de servidors autoritzats. Serà necessari, per tant, que s'identifiquin les IPs d'accés per tal que es configurin a una whitelist a Compose.
 
-### Accés des d'una aplicació a CPD corporatiu
+Exemple:
 
-Per les aplicacions desplegades a CPD corporatiu caldrà que CPD indiqui la IP de sortida de l'aplicació a Internet. Aquesta és la IP que s'haurà de configurar a la whitelist de Compose.
+![Whitelist Compose](/images/bloc/whitelist_compose.png)
 
 ### Accés des d'una aplicació a Bluemix
 
@@ -29,13 +29,17 @@ En el cas que l'aplicació origen que requereix accés a l'ES estigui a Bluemix,
 
 L'assignació d'una IP fixe de sortida permetrà la seva configuració a la whitelist de Compose.
 
+### Accés des d'una aplicació a CPD corporatiu
+
+Per les aplicacions desplegades a CPD corporatiu caldrà que CPD indiqui la IP de sortida de l'aplicació a Internet. Aquesta és la IP que s'haurà de configurar a la whitelist de Compose.
+
 ### Accés des d'una pàgina web
 
 En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Pels ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura.
 
 #### Proxy
 
-Per tal d'evitar el problema de sostracció de credencials, es recomana que l'accés a l'ES es realitzi via proxy. Aquest proxy (Apache, Nginx, ...) serà qui tindrà les credencials d'accés a l'ES. L'accés a aquest proxy només es podrà realitzar des del domini de l'aplicació.
+Per tal d'evitar el problema de sostracció de credencials, es recomana que l'accés a l'ES es realitzi via un proxy, per exemple, desplegat a Bluemix. Aquest proxy (Apache, Nginx, ...) serà qui tindrà les credencials d'accés a l'ES. L'accés al proxy només es podrà realitzar des del domini de l'aplicació.
 
 Per els servidors web Nginx i Apache els mòduls que permeten aquesta configuració són [ngx_http_access_module](http://nginx.org/en/docs/http/ngx_http_access_module.html) i [mod_authz_host](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html) respectivament.
 
@@ -47,6 +51,8 @@ Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qu
 
 - _Administrador_: responsable d'introduïr les dades a l'ES
 - _Usuari_: cerca d'informació a l'ES
+
+Existeix una altre opció que consistiria en que el backend també accedís a l'ES a través del Proxy. En aquest cas seria el Proxy quí tindria configurada a la seva whitelist la <ip_sortida_backend>, en lloc del Compose
 
 ## Referències
 
