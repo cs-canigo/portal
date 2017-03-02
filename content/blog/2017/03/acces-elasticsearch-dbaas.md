@@ -13,7 +13,7 @@ key = "MARC2017"
 
 L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack](https://www.elastic.co/products/x-pack/security) el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats.
 
-## Whitelist a Compose
+## Seguretat
 
 És imprescindible que els accessos a l'ES només es realitzin des de servidors autoritzats. Serà necessari, per tant, que s'identifiquin les IPs d'accés per tal que es configurin a Compose.
 
