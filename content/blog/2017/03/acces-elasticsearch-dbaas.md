@@ -27,29 +27,26 @@ En el cas que l'aplicació origen que requereix accés a l'ES estigui a Bluemix,
 
 ![Statica](/images/bloc/statica.png)
 
-L'assignació d'una IP fixe de sortida és necessària per ser configurada a la whitelist de Compose.
+L'assignació d'una IP fixe de sortida permetrà la seva configuració a la whitelist de Compose.
 
 ### Accés des d'una pàgina web
 
-En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut.
+En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Per a ES que no incorporin el mòdul X-Pack és més important encara ja que els usuaris de l'ES tenen privilegis de lectura i escriptura. 
 
 #### Proxy
 
 Per tal d'evitar el problema de sostracció de credencials, es recomana que l'accés a l'ES es realitzi via proxy. Aquest proxy (Apache, Nginx, ...) serà qui tindrà les credencials d'accés a l'ES. L'accés a aquest proxy només es podrà realitzar des del domini de l'aplicació.
 
-Nginx: http://nginx.org/en/docs/http/ngx_http_access_module.html
-Apache: https://httpd.apache.org/docs/2.4/howto/access.html
+Per els servidors web Nginx i Apache els mòduls que permeten aquesta configuració són [ngx_http_access_module](http://nginx.org/en/docs/http/ngx_http_access_module.html) i [mod_authz_host](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html) respectivament.
 
 ## Cas pràctic
 
-Un escenari real seria el d'un backend a CPD corporatiu el qual insereix dades a l'ES, i un cercador que les consulta.
+Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qual insereix dades a l'ES, i un cercador que les consulta des d'una plana web.
 
 DIAGRAMA
 
 ## Referències
 
-- Compose
+- [Static IPs with Bluemix and Statica](https://www.ibm.com/blogs/bluemix/2015/08/static-ips-with-bluemix-and-statica/)
+- [Securing Elasticsearch and Kibana](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html)
 - 
-
-
-
