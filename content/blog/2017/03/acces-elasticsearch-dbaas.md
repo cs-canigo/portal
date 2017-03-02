@@ -31,7 +31,7 @@ L'assignació d'una IP fixe de sortida permetrà la seva configuració a la whit
 
 ### Accés des d'una pàgina web
 
-En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Per a ES que no incorporin el mòdul X-Pack és més important encara ja que els usuaris de l'ES tenen privilegis de lectura i escriptura. 
+En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Per els ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura. 
 
 #### Proxy
 
@@ -43,10 +43,9 @@ Per els servidors web Nginx i Apache els mòduls que permeten aquesta configurac
 
 Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qual insereix dades a l'ES, i un cercador que les consulta des d'una plana web.
 
-DIAGRAMA
+![Seguretat accés a ES a cloud públic](/images/bloc/seguretat_es_cloud_public.png)
 
 ## Referències
 
 - [Static IPs with Bluemix and Statica](https://www.ibm.com/blogs/bluemix/2015/08/static-ips-with-bluemix-and-statica/)
 - [Securing Elasticsearch and Kibana](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html)
-- 
