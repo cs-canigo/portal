@@ -45,8 +45,8 @@ Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qu
 
 ![Seguretat accés a ES a cloud públic](/images/bloc/seguretat_es_cloud_public.png)
 
-_Administrador_: responsable d'introduïr les dades a l'ES
-_Usuari_: cerca d'informació a l'ES
+- _Administrador_: responsable d'introduïr les dades a l'ES
+- _Usuari_: cerca d'informació a l'ES
 
 ## Referències
 
