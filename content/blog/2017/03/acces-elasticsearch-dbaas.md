@@ -52,7 +52,7 @@ Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qu
 - _Administrador_: responsable d'introduïr les dades a l'ES
 - _Usuari_: cerca d'informació a l'ES
 
-Existeix una altre opció que consistiria en que el backend també accedís a l'ES a través del Proxy. En aquest cas seria el Proxy quí tindria configurada a la seva whitelist la <ip_sortida_backend>, en lloc del Compose
+Existeix una altra opció que consistiria en que el backend també accedís a l'ES a través del Proxy. En aquest cas seria el Proxy quí tindria configurada a la seva whitelist la "ip_sortida_backend", en lloc del Compose.
 
 ## Referències
 
