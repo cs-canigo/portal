@@ -1,6 +1,6 @@
 +++
 date = "2017-03-02"
-title = "Accés a Elasticsearch a cloud públic (Compose)"
+title = "Accés a Elasticsearch a cloud públic"
 description = "L'accés a un Elasticsearch a cloud públic (Compose) té una sèrie de consideracions de seguretat a tenir en compte"
 sections = ["Blog", "home"]
 blog_tags = ["dbaas", "seguretat"]
@@ -11,7 +11,7 @@ aliases = [
 key = "MARC2017"
 +++
 
-L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack|https://www.elastic.co/products/x-pack/security] el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats.
+L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack](https://www.elastic.co/products/x-pack/security) el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats.
 
 ## Whitelist a Compose
 
