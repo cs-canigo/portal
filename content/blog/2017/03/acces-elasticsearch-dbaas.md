@@ -1,17 +1,17 @@
 +++
-date        = "2017-03-02"
-title       = "Accés a Elastic Search a cloud públic (Compose)"
-description = "L'accés a un Elastic Search a cloud públic (Compose) té una sèrie de consideracions de seguretat a tenir en compte"
-sections    = ["Blog", "home"]
-blog_tags	= ["dbaas", "seguretat"]
-imatge 		= "/images/bloc/elastic-search.png"
-aliases       = [
+date = "2017-03-02"
+title = "Accés a Elasticsearch a cloud públic (Compose)"
+description = "L'accés a un Elasticsearch a cloud públic (Compose) té una sèrie de consideracions de seguretat a tenir en compte"
+sections = ["Blog", "home"]
+blog_tags = ["dbaas", "seguretat"]
+imatge = "/images/bloc/elastic-search.png"
+aliases = [
 "/bloc/2017/03/acces-elasticsearch-dbaas/"
 ]
-key         = "MARC2017"
+key = "MARC2017"
 +++
 
-L'accés a un Elastic Search (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack|https://www.elastic.co/products/x-pack/security] el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats. 
+L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack|https://www.elastic.co/products/x-pack/security] el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats.
 
 ## Whitelist a Compose
 
@@ -31,7 +31,7 @@ L'assignació d'una IP fixe de sortida permetrà la seva configuració a la whit
 
 ### Accés des d'una pàgina web
 
-En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Per els ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura. 
+En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Pels ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura.
 
 #### Proxy
 
