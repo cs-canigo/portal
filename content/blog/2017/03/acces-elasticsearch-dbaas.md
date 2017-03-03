@@ -1,6 +1,6 @@
 +++
 date = "2017-03-02"
-title = "Accés a Elasticsearch a cloud públic"
+title = "Elasticsearch, open source en cloud públic amb orientació empresarial"
 description = "L'accés a un Elasticsearch a cloud públic té una sèrie de consideracions de seguretat a tenir en compte"
 sections = ["Blog", "home"]
 blog_tags = ["dbaas", "seguretat"]
@@ -11,50 +11,30 @@ aliases = [
 key = "MARC2017"
 +++
 
-L'accés a un Elasticsearch (ES) a cloud públic té una sèrie de consideracions de seguretat a tenir en compte. En el cas de [Compose](https://www.compose.com/), plataforma utilitzada a solucions de cloud públic per l'aprovisionament de DBaaS, els ES no incorporen el mòdul [X-Pack](https://www.elastic.co/products/x-pack/security) el qual permet securitzar-ne l'accés. Cal incloure doncs mecanismes que impedeixin accessos no autoritzats.
+La base de dades Elasticsearch (ES) en la seva versió de programari lliure no incorpora el mòdul de seguretat [X-Pack](https://www.elastic.co/products/x-pack/security) que permet gestionar-ne els permisos de connexió per prevenir accessos no autoritzats.
 
-## Seguretat
+La gestió de la seguretat de la base de dades dedicada a cerques esdevé encara més crítica quan es tracta de solucions hostatjades en clouds públics i per a solucions amb visibilitat en portals web de lliure accés.
 
-És imprescindible que els accessos a l'ES només es realitzin des de servidors autoritzats. Serà necessari, per tant, que s'identifiquin les IPs d'accés per tal que es configurin a una whitelist a Compose.
+## Accés des d’una pàgina web
 
-Exemple:
+En alguns casos, com per exemple cercadors a portals web, és possible que l’accés a l’ES es realitzi directament des del navegador de l’usuari. Per fer-ho, cal que el client disposi de les credencials d’accés a l’ES. No entrarem en detall sobre millors pràctiques de seguretat al respecte, però ho deixarem en què és una pràctica clarament insegura. Pels ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura.
 
-![Whitelist Compose](/images/bloc/whitelist_compose.png)
+Una opció que nosaltres hem implementat amb èxit per evitar aquesta problemàtica és aprovisionar un Proxy intermig que evita la potencial sostracció de credencials.
 
-### Accés des d'una aplicació a Bluemix
+Les planes web no haurien d’incorporar les credencials a l’ES donat que la sostracció d’aquestes podria derivar en un ús indegut. Pels ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura.
 
-En el cas que l'aplicació origen que requereix accés a l'ES estigui a Bluemix, és necessari l'ús del servei [Statica](https://console.ng.bluemix.net/catalog/services/statica).
+Tenir en compte que el tràfic entre el Proxy i l’ElasticSearch ha d’estar encriptat per a evitar que es pugui interceptar les credencials.
 
-![Statica](/images/bloc/statica.png)
+## Accés per la indexació de contingut
 
-L'assignació d'una IP fixe de sortida permetrà la seva configuració a la whitelist de Compose.
+Addicionalment a la mesura anterior, és molt recomanable també implementar un control sobre les IP que podran accedir a l’ES per fer les gravacions d’informació que conformen l’índex.
 
-### Accés des d'una aplicació a CPD corporatiu
+En el nostre cas, també s’ha posat en pràctica aquest filtratge i l’ES disposa d’una whitelist que només permet l’accés des del backend per poder administar-ne el contingut. 
 
-Per les aplicacions desplegades a CPD corporatiu caldrà que CPD indiqui la IP de sortida de l'aplicació a Internet. Aquesta és la IP que s'haurà de configurar a la whitelist de Compose.
+Malgrat tot, si per algun motiu això no fos possible, alternativament també es podria utilitzar el Proxy que desacobla els accessos de les aplicacions per habilitar-hi el mecanisme de filtratge d’IPs en mode whitelist.
 
-### Accés des d'una pàgina web
-
-En alguns casos, com per exemple cercadors a portals web, és possible que l'accés a l'ES es realitzi des del navegador de l'usuari. Les planes web no haurien d'incorporar les credencials a l'ES donat que la sostracció d'aquestes podria derivar en un ús indegut. Pels ES que no incorporin el mòdul X-Pack és més important encara, ja que els usuaris tenen privilegis de lectura i escriptura.
-
-#### Proxy
-
-Per tal d'evitar el problema de sostracció de credencials, es recomana que l'accés a l'ES es realitzi via un proxy, per exemple, desplegat a Bluemix. Aquest proxy (Apache, Nginx, ...) serà qui tindrà les credencials d'accés a l'ES. L'accés al proxy només es podrà realitzar des del domini de l'aplicació.
-
-Per els servidors web Nginx i Apache els mòduls que permeten aquesta configuració són [ngx_http_access_module](http://nginx.org/en/docs/http/ngx_http_access_module.html) i [mod_authz_host](https://httpd.apache.org/docs/2.4/mod/mod_authz_host.html) respectivament.
-
-## Cas pràctic
-
-Un escenari real seria el d'una aplicació amb un backend a CPD corporatiu el qual insereix dades a l'ES, i un cercador que les consulta des d'una plana web.
-
-![Seguretat accés a ES a cloud públic](/images/bloc/seguretat_es_cloud_public.png)
-
-- _Administrador_: responsable d'introduïr les dades a l'ES
-- _Usuari_: cerca d'informació a l'ES
-
-Existeix una altra opció que consistiria en que el backend també accedís a l'ES a través del Proxy. En aquest cas seria el Proxy quí tindria configurada a la seva whitelist la "ip_sortida_backend", en lloc del Compose.
+![Seguretat accés a ES a cloud públic](/images/bloc/seguretat_es_cloud_public_generic.png)
 
 ## Referències
 
-- [Static IPs with Bluemix and Statica](https://www.ibm.com/blogs/bluemix/2015/08/static-ips-with-bluemix-and-statica/)
 - [Securing Elasticsearch and Kibana](https://www.elastic.co/guide/en/x-pack/current/xpack-security.html)
