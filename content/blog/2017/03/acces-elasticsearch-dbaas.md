@@ -2,13 +2,12 @@
 date = "2017-03-02"
 title = "Elasticsearch, open source en cloud públic amb orientació empresarial"
 description = "L'accés a un Elasticsearch a cloud públic té una sèrie de consideracions de seguretat a tenir en compte"
-sections = ["Blog", "home"]
+sections = ["Blog"]
 blog_tags = ["dbaas", "seguretat"]
 imatge = "/images/bloc/elastic-search.png"
 aliases = [
 "/bloc/2017/03/acces-elasticsearch-dbaas/"
 ]
-key = "MARC2017"
 +++
 
 La base de dades Elasticsearch (ES) en la seva versió de programari lliure no incorpora el mòdul de seguretat [X-Pack](https://www.elastic.co/products/x-pack/security) que permet gestionar-ne els permisos de connexió per prevenir accessos no autoritzats.
