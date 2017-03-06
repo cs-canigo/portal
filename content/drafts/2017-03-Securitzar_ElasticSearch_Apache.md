@@ -55,7 +55,7 @@ Hem utilitzat la [següent aplicació angularJS] (https://github.com/spalger/ela
 
 Una vegada seguits els passos accedim amb el navegador al fitxer index.html i ens trobem amb el següent error:
 
-![](/related/canigo/howto/imatges/20170301.jpg)
+![](/related/canigo/howto/imatges/20170301.JPG)
 
 Aquest error és degut al fet que tenim un ElasticSearch securitzat i no hem posat les credencials al index.html, com que precisament és això el que volem evitar aprovisionem un Apache amb les credencials
 
@@ -91,6 +91,6 @@ Modifiquem el index.html per a canviar la url d'accés a l'ElasticSearch
 	 
 I ara al accedir a l'index.html el navegador ens mostra el següent:
 
-![](/related/canigo/howto/imatges/20170302.jpg)
+![](/related/canigo/howto/imatges/20170302.JPG)
 
 
