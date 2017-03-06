@@ -2,8 +2,8 @@
 date = "2017-03-06"
 title = "Accés a Elasticsearch a cloud públic"
 description = "L'accés a un Elasticsearch a cloud públic té una sèrie de consideracions de seguretat a tenir en compte"
-sections = ["cloud"]
-blog_tags = ["dbaas", "seguretat"]
+sections = ["Notícies", "home"]
+categories  = ["cloud"]
 key = "MARC2017"
 +++
 
