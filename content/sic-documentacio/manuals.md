@@ -9,7 +9,6 @@ sections    = "SIC"
 
 - [Manual d'Usuari](/related/sic/manual-usuari.pdf)
 - [Manual d'Integració](/related/sic/manual-integracio.pdf)
-- [Manual d'Arquitectura](/related/sic/manual-arquitectura.pdf)
 
 
 <p>&nbsp;</p>

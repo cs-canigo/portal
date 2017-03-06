@@ -151,6 +151,6 @@ Aquest mètode el que fa es fer la crida als dos mètodes i ens retorna el temps
 
 Despleguem l'aplicació i utilitzant Swagger executem el mètode bulk amb el següent resultat
 
-![](/related/canigo/howto/imatges/20170301.jpg)
+![](/related/canigo/howto/imatges/20170401.jpg)
 
 Com es pot veure el temps amb el mètode de Spring Data és de 427 segons, mentres que el mètode optimitzat proporcionat per Canigó 3.2 ha trigat 19 segons
