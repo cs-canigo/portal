@@ -9,13 +9,13 @@ key         = "MARÇ2017"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells proveïdors d'aplicacions que utilitzin Elasticsearch (ES) i vulguin implementar un proxy amb Apache per a securitzar la connexió amb l'ES des de navegadors web.
+Aquest how-to va dirigit a tots aquells proveïdors d'aplicacions que utilitzin Elasticsearch (ES) i vulguin securitzar la connexió amb l'ES des de navegadors web.
 
 ### Introducció
 
 En cas que l'accés a un ES es realitzi directament des del navegador de l'usuari, cal que el client disposi de les credencials d'accés a aquest ES, amb les vulnerabilitats de seguretat que això pot implicar.
 
-Per evitar-ho es proposa aprovisionar un proxy intermig que sigui qui disposi d'aquestes credencials i així evitar la potencial sostracció de credencials.
+Per evitar-ho es proposa aprovisionar un proxy intermig que sigui qui disposi d'aquestes credencials i així evitar-ne la potencial sostracció.
 
 En aquest HowTo expliquem com configurar un Apache 2.4 per a que faci aquesta funció de proxy cap a l'ES.
 
@@ -79,7 +79,7 @@ I realitzat la següent configuració per la funcionalitat de proxy cap a l'ES:
 
 on
 * http://127.0.0.1:9200/ és la URL d'accés a l'ES
-* 192.168.99.1 és la IP de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>".
+* 192.168.99.1 és la IP de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>"
 
 Les credencials d'accés del nostre ES són (usuari=elastic, password=changeme).
 
@@ -87,7 +87,7 @@ Aquestes credencials s'han d'especificar codificades en BASE64 en la sentència 
 
 	elastic:changeme ---> ZWxhc3RpYzpjaGFuZ2VtZQ==
 	
-En aquest exemple hem afegit per seguretat (whitelist) la sentència **Require ip**. Aquesta sentència permet indicar les IPs des d'on el proxy accepta sol·licituds.
+En aquest exemple hem afegit per seguretat (whitelist) la sentència **Require ip**. Aquesta sentència permet indicar les IPs per les que el proxy accepta sol·licituds.
 	
 Modifiquem el index.html per a canviar la url d'accés per a que apunti al proxy:
 
