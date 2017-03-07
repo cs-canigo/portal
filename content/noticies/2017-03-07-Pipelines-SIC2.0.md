@@ -1,15 +1,14 @@
 +++
 date        = "2017-03-07"
 title       = "SIC. Introducció Pipelines a SIC 2.0"
-description = "L'altre gran peça de SIC, el Jenkins, també patirà un gran canvi amb l'evolució a SIC 2.0. S'incorpora el model de treball amb jobs de tipus Pipeline, job que engloba tots els estats del cicle de Integració Contínua."
+description = "El passat mes es van comentar algunes de les millores que incorporarà SIC 2.0 pel que fa al SCM (s'afegeix Gitlab). L'altre gran peça de SIC, el Jenkins, també patirà un gran canvi amb l'evolució a SIC 2.0. S'incorpora el model de treball amb jobs de tipus Pipeline, job que engloba tots els estats del cicle d'Integració Contínua."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "MARC2017"
 +++
 
 
-
-L'altre gran peça de SIC, el Jenkins, també patirà un gran canvi amb l'evolució a SIC 2.0. S'incorpora el model de treball amb jobs de tipus Pipeline, job que engloba tots els estats del cicle de Integració Contínua.
+El passat mes es van comentar algunes de les millores que incorporarà SIC 2.0 pel que fa al SCM (s'afegeix Gitlab). L'altre gran peça de SIC, el Jenkins, també patirà un gran canvi amb l'evolució a SIC 2.0. S'incorpora el model de treball amb jobs de tipus Pipeline, job que engloba tots els estats del cicle d'Integració Contínua.
 
 Fins el moment, es contempla el següent escenari:
 
@@ -17,7 +16,7 @@ Fins el moment, es contempla el següent escenari:
 - Tots ells s'executen per separat
 - Només es contempla el desplegament automàtic a entorns INT.
 
-La versió actual de Jenkins, la 2.7.4, incorpora un nou tipus de job, el de Pipeline. Aquest tipus de jobs faciliten la inclusió del cicle complet de Integració Contínua en un únic Job. S'està treballant en l'adaptació a aquest model de treball. Les característiques d'aquest seran:
+La versió actual de Jenkins, la 2.7.4, incorpora un nou tipus de job, el de Pipeline. Aquest tipus de jobs faciliten la inclusió del cicle complet d'Integració Contínua en un únic Job. S'està treballant en l'adaptació a aquest model de treball. Les característiques d'aquest seran:
 
 - El fluxe s'inicia a partir de la pujada de codi (estable) al GitLab . Un hook configurat al GitLab farà de llançadora del job Pipeline de l'aplicació.
 - El job descarrega la darrera versió de codi font i construirà el/s binaris.
