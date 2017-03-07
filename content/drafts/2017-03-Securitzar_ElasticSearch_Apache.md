@@ -53,7 +53,7 @@ Una vegada desplegat al accedir a http://localhost:9200 el navegador ens ha de m
 
 Hem utilitzat la [següent aplicació AngularJS] (https://github.com/spalger/elasticsearch-angular-example) per l'accés a l'ES.
 
-Una vegada seguits els passos per el seu desploegament, accedim amb el navegador al fitxer index.html i ens trobem amb el següent error:
+Una vegada seguits els passos pel seu desplegament, accedim amb el navegador al fitxer index.html i ens trobem amb el següent error:
 
 ![](/related/canigo/howto/imatges/20170301.JPG)
 
