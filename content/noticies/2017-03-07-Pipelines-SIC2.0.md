@@ -21,7 +21,7 @@ La versió actual de Jenkins, la 2.7.4, incorpora un nou tipus de job, el de Pip
 - El job ja no serà executat directament pel desenvolupador sinó que s'iniciarà automàticament en fer la pujada de codi al GitLab (un hook configurat al GitLab farà de llançadora).
 - El job descarregarà la darrera versió de codi font i construirà el/s binaris. Per a considerar el codi com a vàlid, s'efectuaran validacions de qualitat i test automàtics.
 - Prèviament al desplegament automàtic a entorns PRE i PRO, el job Pipeline contemplarà l'autorització per part dels responsables i validarà que el desplegament s'efectua dins la finestra d'execució de l'aplicació.
-- El flux del job Pipeline podrà ser aturat també de manera manual en cas de considerar una versió com a no apta per a desplegar.
+- El flux del job Pipeline podrà ser aturat en cas de considerar una versió com a no apta per a desplegar.
 
 
 A continuació es mostra un esquema simplificat del funcionament del nou tipus de Job Pipeline en contrapartida al sistema actual de jobs.
