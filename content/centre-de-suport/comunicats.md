@@ -8,6 +8,10 @@ weight		= 4
 
 ## <span class="label label-cabecera">2017</span>
 
+#### [Febrer] (/comunicat/2017/02/)
+- Canigó. Novetats a propera versió Canigó 3.2 
+- SIC. Introducció a SIC 2.0 
+
 #### [Gener] (/comunicat/2017/01/)
 - Oficina Tècnica de Canigó. Balanç 2016
 
