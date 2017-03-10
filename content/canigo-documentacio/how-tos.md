@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Securitzar accés a Elasticsearch des d'una pàgina web](/howtos/2017-03-Securitzar_ElasticSearch_Apache)
 - [Canigó - Autenticació amb JWT a una aplicació Canigó 3.1](/howtos/2016-11-Howto-Canigo-JWT)
 - [Canigó - Gestió d'errors a una aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals)
 - [Canigó - Spring Batch en aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Spring-Batch)

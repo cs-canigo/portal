@@ -17,7 +17,7 @@ En cas que l'accés a un ES es realitzi directament des del navegador de l'usuar
 
 Per evitar-ho es proposa aprovisionar un proxy intermig que sigui qui disposi d'aquestes credencials i així evitar-ne la potencial sostracció.
 
-En aquest HowTo expliquem com configurar un Apache 2.4 per a que faci aquesta funció de proxy cap a l'ES.
+En aquest HowTo expliquem com configurar un Apache 2.2 / 2.4 per a que faci aquesta funció de proxy cap a l'ES.
 
 ### Elasticsearch
 
@@ -70,16 +70,32 @@ Hem afegit els següents mòduls:
 	
 I realitzat la següent configuració per la funcionalitat de proxy cap a l'ES:
 
+**Apache 2.4**
+
 	<Location "/">
 		RequestHeader set Authorization "Basic ZWxhc3RpYzpjaGFuZ2VtZQ=="
 		Require ip 192.168.99.1
 		ProxyPass        "http://127.0.0.1:9200/"
 		ProxyPassReverse "http://127.0.0.1:9200/"
 	</Location>
-
+	
 on
 * http://127.0.0.1:9200/ és la URL d'accés a l'ES
-* 192.168.99.1 és la IP de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>"
+* 192.168.99.1 és la IP/Host de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>"
+
+**Apache 2.2**
+	
+	<Location "/">
+		RequestHeader set Authorization "Basic ZWxhc3RpYzpjaGFuZ2VtZQ=="
+		
+		Order deny,allow
+		Deny from all
+		Allow from 192.168.99.1
+		
+		ProxyPass        "http://127.0.0.1:9200/"
+		ProxyPassReverse "http://127.0.0.1:9200/"
+	</Location>
+	
 
 Les credencials d'accés del nostre ES són (usuari=elastic, password=changeme).
 
