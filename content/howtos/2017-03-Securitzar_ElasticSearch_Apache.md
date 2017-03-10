@@ -113,19 +113,27 @@ Ara al accedir a l'index.html el navegador ens mostrarà correctament l'estat de
 
 ![](/related/canigo/howto/imatges/20170302.JPG)
 
-### Elasticsearch per HTTPS
+### Elasticsearch per HTTPS i balancejat
 
-En cas que el nostre Elasticsearch només es pugui accedir per HTTPS (Per exemple un Elasticsearch desplegat a Compose) s'ha de modificar la configuració al Apache de la següent manera:
+En cas que el nostre Elasticsearch només es pugui accedir per HTTPS (Per exemple un Elasticsearch desplegat a Compose) i tingui més d'un node s'ha de modificar la configuració al Apache de la següent manera:
 
 Primer de tot afegir el mòdul ssl:
 
 	LoadModule ssl_module modules/mod_ssl.so
+	LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
 	
 **Apache 2.2**
 
 	<VirtualHost *:80>
 
 		SSLProxyEngine On
+		
+		<Proxy balancer://mycluster>
+			BalancerMember https://${ELASTIC_HOSTNAME1}:${ELASTIC_PORT1}/
+			BalancerMember https://${ELASTIC_HOSTNAME2}:${ELASTIC_PORT2}/
+			# Set counting algorithm to more evenly distribute work: 
+			ProxySet lbmethod=byrequests
+		</Proxy>
 		
 		<Location "/">
 			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
@@ -134,8 +142,8 @@ Primer de tot afegir el mòdul ssl:
 			Deny from all
 			Allow from 192.168.99.1
 			
-			ProxyPass "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
-			ProxyPassReverse "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+			ProxyPass balancer://mycluster/
+			ProxyPassReverse balancer://mycluster/
 		</Location>
 	</VirtualHost>
 	
@@ -145,14 +153,21 @@ Primer de tot afegir el mòdul ssl:
 
 		SSLProxyEngine On
 		
+		<Proxy balancer://mycluster>
+			BalancerMember https://${ELASTIC_HOSTNAME1}:${ELASTIC_PORT1}/
+			BalancerMember https://${ELASTIC_HOSTNAME2}:${ELASTIC_PORT2}/
+			# Set counting algorithm to more evenly distribute work: 
+			ProxySet lbmethod=byrequests
+		</Proxy>
+		
 		<Location "/">
 			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
 			
 			Require ip 192.168.99.1
 			
-			ProxyPass "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
-			ProxyPassReverse "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+			ProxyPass balancer://mycluster/
+			ProxyPassReverse balancer://mycluster/
 		</Location>
 	</VirtualHost>
 	
-On $ELASTIC_CREDENTIALS són les credentials en Base64 (De la mateixa manera que a l'exemple HTTP), i $ELASTIC_HOSTNAME:${ELASTIC_PORT} la url del Elasticsearch.
+On $ELASTIC_CREDENTIALS són les credentials en Base64 (De la mateixa manera que a l'exemple HTTP), i $ELASTIC_HOSTNAME1:${ELASTIC_PORT1} , $ELASTIC_HOSTNAME2:${ELASTIC_PORT2} són les dos url de connexió amb Elasticsearch.
