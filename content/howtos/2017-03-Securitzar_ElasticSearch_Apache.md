@@ -112,3 +112,47 @@ Modifiquem el index.html per a canviar la url d'accés per a que apunti al proxy
 Ara al accedir a l'index.html el navegador ens mostrarà correctament l'estat de l'ES:
 
 ![](/related/canigo/howto/imatges/20170302.JPG)
+
+### Elasticsearch per HTTPS
+
+En cas que el nostre Elasticsearch només es pugui accedir per HTTPS (Per exemple un Elasticsearch desplegat a Compose) s'ha de modificar la configuració al Apache de la següent manera:
+
+Primer de tot afegir el mòdul ssl:
+
+	LoadModule ssl_module modules/mod_ssl.so
+	
+**Apache 2.2**
+
+	<VirtualHost *:80>
+
+		SSLProxyEngine On
+		
+		<Location "/">
+			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
+			
+			Order deny,allow
+			Deny from all
+			Allow from 192.168.99.1
+			
+			ProxyPass "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+			ProxyPassReverse "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+		</Location>
+	</VirtualHost>
+	
+**Apache 2.4**
+
+	<VirtualHost *:80>
+
+		SSLProxyEngine On
+		
+		<Location "/">
+			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
+			
+			Require ip 192.168.99.1
+			
+			ProxyPass "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+			ProxyPassReverse "https://${ELASTIC_HOSTNAME}:${ELASTIC_PORT}/"
+		</Location>
+	</VirtualHost>
+	
+On $ELASTIC_CREDENTIALS són les credentials en Base64 (De la mateixa manera que a l'exemple HTTP), i $ELASTIC_HOSTNAME:${ELASTIC_PORT} la url del Elasticsearch.
