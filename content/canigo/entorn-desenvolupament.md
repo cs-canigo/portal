@@ -15,13 +15,13 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/1.0.2) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/1.0.3) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/1.0.2.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/1.0.3.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -40,7 +40,10 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	
 	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Add ("Catalan; Valencian")
 	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Eliminar "English" i seleccionar ""Catalan; Valencian"
+	
+* Obrir un terminal i executar
 
+		sudo dpkg-reconfigure keyboard-configuration
 
 ### Programari instal·lat
 
@@ -145,3 +148,10 @@ En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvol
 RELEASE NOTES
 
 * Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)
+
+#### 1.0.3 - Ubuntu 16.04 (21/03/2017)
+
+RELEASE NOTES
+
+* Actualitzada la màquina virtual a Ubuntu 16.04
+* Actualitzat el plugin SVN a la versió 1.12.x
