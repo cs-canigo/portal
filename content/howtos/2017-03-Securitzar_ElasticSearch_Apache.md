@@ -17,7 +17,7 @@ En cas que l'accés a un ES es realitzi directament des del navegador de l'usuar
 
 Per evitar-ho es proposa aprovisionar un proxy intermig que sigui qui disposi d'aquestes credencials i així evitar-ne la potencial sostracció.
 
-En aquest HowTo expliquem com configurar un Apache 2.4 per a que faci aquesta funció de proxy cap a l'ES.
+En aquest HowTo expliquem com configurar un Apache 2.2 / 2.4 per a que faci aquesta funció de proxy cap a l'ES.
 
 ### Elasticsearch
 
@@ -70,16 +70,32 @@ Hem afegit els següents mòduls:
 	
 I realitzat la següent configuració per la funcionalitat de proxy cap a l'ES:
 
+**Apache 2.4**
+
 	<Location "/">
 		RequestHeader set Authorization "Basic ZWxhc3RpYzpjaGFuZ2VtZQ=="
 		Require ip 192.168.99.1
 		ProxyPass        "http://127.0.0.1:9200/"
 		ProxyPassReverse "http://127.0.0.1:9200/"
 	</Location>
-
+	
 on
 * http://127.0.0.1:9200/ és la URL d'accés a l'ES
-* 192.168.99.1 és la IP de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>"
+* 192.168.99.1 és la IP/Host de l'aplicació. En cas d'especificar un domini enlloc d'una IP s'haurà de fer de la següent manera "Require host <domini>"
+
+**Apache 2.2**
+	
+	<Location "/">
+		RequestHeader set Authorization "Basic ZWxhc3RpYzpjaGFuZ2VtZQ=="
+		
+		Order deny,allow
+		Deny from all
+		Allow from 192.168.99.1
+		
+		ProxyPass        "http://127.0.0.1:9200/"
+		ProxyPassReverse "http://127.0.0.1:9200/"
+	</Location>
+	
 
 Les credencials d'accés del nostre ES són (usuari=elastic, password=changeme).
 
@@ -96,3 +112,62 @@ Modifiquem el index.html per a canviar la url d'accés per a que apunti al proxy
 Ara al accedir a l'index.html el navegador ens mostrarà correctament l'estat de l'ES:
 
 ![](/related/canigo/howto/imatges/20170302.JPG)
+
+### Elasticsearch per HTTPS i balancejat
+
+En cas que el nostre Elasticsearch només es pugui accedir per HTTPS (Per exemple un Elasticsearch desplegat a Compose) i tingui més d'un node s'ha de modificar la configuració al Apache de la següent manera:
+
+Primer de tot afegir el mòdul ssl:
+
+	LoadModule ssl_module modules/mod_ssl.so
+	LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+	
+**Apache 2.2**
+
+	<VirtualHost *:80>
+
+		SSLProxyEngine On
+		
+		<Proxy balancer://mycluster>
+			BalancerMember https://${ELASTIC_HOSTNAME1}:${ELASTIC_PORT1}/
+			BalancerMember https://${ELASTIC_HOSTNAME2}:${ELASTIC_PORT2}/
+			# Set counting algorithm to more evenly distribute work: 
+			ProxySet lbmethod=byrequests
+		</Proxy>
+		
+		<Location "/">
+			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
+			
+			Order deny,allow
+			Deny from all
+			Allow from 192.168.99.1
+			
+			ProxyPass balancer://mycluster/
+			ProxyPassReverse balancer://mycluster/
+		</Location>
+	</VirtualHost>
+	
+**Apache 2.4**
+
+	<VirtualHost *:80>
+
+		SSLProxyEngine On
+		
+		<Proxy balancer://mycluster>
+			BalancerMember https://${ELASTIC_HOSTNAME1}:${ELASTIC_PORT1}/
+			BalancerMember https://${ELASTIC_HOSTNAME2}:${ELASTIC_PORT2}/
+			# Set counting algorithm to more evenly distribute work: 
+			ProxySet lbmethod=byrequests
+		</Proxy>
+		
+		<Location "/">
+			RequestHeader set Authorization "Basic ${ELASTIC_CREDENTIALS}"
+			
+			Require ip 192.168.99.1
+			
+			ProxyPass balancer://mycluster/
+			ProxyPassReverse balancer://mycluster/
+		</Location>
+	</VirtualHost>
+	
+On $ELASTIC_CREDENTIALS són les credentials en Base64 (De la mateixa manera que a l'exemple HTTP), i $ELASTIC_HOSTNAME1:${ELASTIC_PORT1} , $ELASTIC_HOSTNAME2:${ELASTIC_PORT2} són les dos url de connexió amb Elasticsearch.
