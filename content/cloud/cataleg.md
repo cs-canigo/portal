@@ -100,6 +100,7 @@ Apache 		 | actual FRP    |https://hub.docker.com/r/gencatcloud/httpd/    | http
 Apache-GICAR | 1.0 (Apache 2.2)   | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
 HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/ | -
 Java		 | actual FRP   | https://hub.docker.com/r/gencatcloud/java/  | https://hub.docker.com/r/gencatcloud/java-openshift/
+MongoDB 	 | 3.2.7   | https://hub.docker.com/r/gencatcloud/mongodb/    | https://hub.docker.com/r/gencatcloud/mongodb-openshift
 MySql 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/mysql/    | https://hub.docker.com/r/gencatcloud/mysql-openshift
 NodeJS 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/nodejs/ | https://hub.docker.com/r/gencatcloud/nodejs-openshift/
 PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.docker.com/r/gencatcloud/php-openshift/
@@ -115,6 +116,10 @@ La llista anterior no exclou que no es puguin lliurar contenidors que corrin alt
 
 Més informació sobre Docker: https://www.docker.com/
 
+### Bases de dades a contenidors
+
+Les bases de dades a contenidors no disposen de cap servei com backups o gestió d'usuaris. El proveïdor d'aplicacions haurà de fer-se càrrec d'aquests serveis.
+
 ## SaaS
 
 ### DBaaS - Base de dades com a servei
@@ -124,3 +129,5 @@ Més informació sobre Docker: https://www.docker.com/
 - PostgreSQL, disponible a **cloud públic**
 - MySQL (Beta), disponible a **cloud públic**
 - SQLServer, disponible a **cloud públic**
+
+A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús.
