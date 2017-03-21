@@ -35,12 +35,6 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 ### Setup inicial
 
 * Usuari i password: canigo/canigo
-* Activar IBUS: Menú inici > Preferències > IBUS Preferences > Start ("Yes")
-* Configurar el teclat per català
-	
-	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Add ("Catalan; Valencian")
-	- Menú inici > Preferències > IBUS Preferences -> Input Method -> Eliminar "English" i seleccionar ""Catalan; Valencian"
-	
 * Obrir un terminal i executar
 
 		sudo dpkg-reconfigure keyboard-configuration
@@ -119,13 +113,13 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 
 ### Versions
 
-#### 1.0.0 - Ubuntu 15.04 (16/11/2015)
+#### 1.0.0 - Ubuntu 15.04 (16/11/2015) -- ``NO OPERATIVA``
 
 RELEASE NOTES
 
 * Versió inicial
 
-#### 1.0.1 - Ubuntu 15.10 (16/3/2016)
+#### 1.0.1 - Ubuntu 15.10 (16/3/2016) -- ``NO OPERATIVA``
 
 RELEASE NOTES
 
@@ -143,7 +137,7 @@ En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvol
 
 * Revisar la configuració de teclat a Preferències -> IBus Preferences -> Input method (en cas de no estar activat l'IBus cal activar-lo a Preferències -> Language Support -> Keyboard input method system)
 
-#### 1.0.2 - Ubuntu 15.10 (9/1/2017)
+#### 1.0.2 - Ubuntu 15.10 (9/1/2017) -- ``NO OPERATIVA``
 
 RELEASE NOTES
 
