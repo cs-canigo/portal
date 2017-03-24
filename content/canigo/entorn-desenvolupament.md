@@ -143,7 +143,7 @@ RELEASE NOTES
 
 * Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)
 
-#### 1.0.3 - Ubuntu 16.04 (21/03/2017)
+#### 1.0.3 - Ubuntu 16.04 (21/03/2017) -- <span style="color:green">OPERATIVA.</style>
 
 RELEASE NOTES
 
