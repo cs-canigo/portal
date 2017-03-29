@@ -10,10 +10,10 @@ weight      = 2
 
 Aquest mòdul proporciona eines per a l'exposició de serveis REST. Està basat en les millors pràctiques descrites a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/)
 
-Entre d'altres característiques, destaquem les següents:
+Entre altres característiques, destaquem les següents:
 
 - Control genèric d'errors
-- Classes estàndar de resposta
+- Classes estàndard de resposta
 - Controladors per exposar les propietats de configuració de l'aplicació i mòduls carregats
 
 Tot el contingut es serveix en format JSON.
@@ -89,7 +89,7 @@ Es pot personalitzar i "localitzar" (i18n) el missatge que s'envia al client per
 	- canigo.web.rs.resource.notfoud.msg --> Per a les excepcions de tipus ResourceNotFoundException
 	- canigo.web.rs.unauthorized.msg  --> Per a les excepcions de tipus AuthenticationException i AccessDeniedException
 	- canigo.web.rs.multipart.bad.request.msg --> Per a les excepcions de tipus MultipartException
-	- Per a la resta d'excepcions que extenguin del tipus Exception s'utilitza el localizedMessage de la pròpia excepció. Per tant, és necessari sobreescriure el mètode getLocalizedMessage amb la propietat el valor de la qual es vol enviar com a missatge al client. Un exemple seria el següent:
+	- Per a la resta d'excepcions que estenguin del tipus Exception s'utilitza el localizedMessage de la mateixa excepció. Per tant, és necessari sobreescriure el mètode getLocalizedMessage amb la propietat el valor de la qual es vol enviar com a missatge al client. Un exemple seria el següent:
 
 	public class CustomException extends Exception {
 
@@ -110,7 +110,7 @@ Es poden definir tants RestControllerAdvice com es necessiti.
 
 ### Objectes de suport
 
-Amb la finalitat d'estandaritzar i facilitar la feina als desenvolupadors, es possa a la seva disposició objectes estàndar de petició i resposta.
+Amb la finalitat d'estandaritzar i facilitar la feina als desenvolupadors, es posa a la seva disposició objectes estàndard de petició i resposta.
 
 #### Request
 
