@@ -1,5 +1,5 @@
 +++
-date        = "2016-11-22T09:26:16+01:00"
+date        = "2017-03-29T09:26:16+01:00"
 title       = "Mòdul RS"
 description = "Mòdul RESTful Services."
 sections    = "Canigó. Documentació versió 3.x"
@@ -8,13 +8,13 @@ weight      = 2
 
 ## Propòsit
 
-Aquest mòdul proporciona eines per a l'exposició de serveis REST. Està basat en les millors pràctiques descrites en: [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/)
+Aquest mòdul proporciona eines per a l'exposició de serveis REST. Està basat en les millors pràctiques descrites a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/)
 
 Entre d'altres característiques, destaquem les següents:
 
-- control genèric d'errors
-- classes estàndar de respostes
-- controladors per exposar les propietats de configuració de l'aplicació i mòduls carregats
+- Control genèric d'errors
+- Classes estàndar de resposta
+- Controladors per exposar les propietats de configuració de l'aplicació i mòduls carregats
 
 Tot el contingut es serveix en format JSON.
 
@@ -22,7 +22,7 @@ Tot el contingut es serveix en format JSON.
 
 ### Instal·lació
 
-Per tal d'instal·lar el Mòdul RS, aquest es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el Mòdul RS, aquest es pot incloure automàticament a través de l'eina de suport al desenvolupament (plugin Eclipse) o bé afegint manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
 <canigo.web.rs.version>[1.0.0,1.1.0)</canigo.web.rs.version>
@@ -47,7 +47,7 @@ Hi ha dos controladors inclosos dins el mòdul:
 
 #### Donar d'alta un nou controlador
 
-Per donar d'alta un nou controlador s'ha de seguir la guia de Spring MVC disponible a [Spring MVC reference](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html)
+Per donar d'alta un nou controlador a l'aplicació Canigó s'ha de seguir la [documentació de referència de Spring MVC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html)
 
 Exemple de definició d'un controlador:
 
@@ -80,9 +80,10 @@ Una de les funcionalitats que incorpora el Mòdul RS és la de gestió d'errors 
 	- AccessDeniedException
 	- ResourceNotFoundException
     - Exception
+    
 ```
-Un cop es produeix aquestes excepcions són capturades pel @RestControllerAdvice i retornades en format JSON perquè puguin ser tractades en el client. Al client li arriba un JSON amb el codi i missatge de l'excepció en el cos de la resposta i en el format JSON o JSONP si s'ha fet la crida amb una funció de retorn.
-Es pot personalitzar i "localitzar" (I18n) el missatge que s'envia al client per cadascuna de les excepcions. Això és possible fer-ho definint les següents propietats en els fitxers de recursos carregats a l'aplicació:
+Quan es produeix aquestes excepcions a l'aplicació, són capturades pel @RestControllerAdvice i retornades en format JSON al client. El client rep un JSON amb el codi i missatge de l'excepció en el cos de la resposta, i en format JSON o JSONP si s'ha fet la crida amb una funció de retorn.
+Es pot personalitzar i "localitzar" (i18n) el missatge que s'envia al client per cadascuna de les excepcions. Això és possible fer-ho definint les següents propietats en els fitxers de recursos carregats a l'aplicació:
 
 ```	
 	- canigo.web.rs.resource.notfoud.msg --> Per a les excepcions de tipus ResourceNotFoundException
@@ -103,6 +104,7 @@ Es pot personalitzar i "localitzar" (I18n) el missatge que s'envia al client per
     
     
 ```
+
 Es poden definir tants RestControllerAdvice com es necessiti.
 
 
@@ -112,18 +114,20 @@ Amb la finalitat d'estandaritzar i facilitar la feina als desenvolupadors, es po
 
 #### Request
 
-S'han definit els següents objectes de petició, tenint en compte el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+S'han definit els següents objectes de petició, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
 
 ```
 	- BatchRequest --> Per a peticions batch
 
 ```
+
 #### Response
 
-S'han definit els següents objectes de resposta, tenint en compte el document de bones pràctiques [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
+S'han definit els següents objectes de resposta, tenint en compte les bones pràctiques definides a [Canigó APIs RESTful](http://canigo.ctti.gencat.cat/blog/2016/01/api/):
 
 ```
 	- ResponseBatch --> Per a peticions batch
 	- ResponseError --> Per errors
 	- ResponsePage  --> Per documents paginats
+    
 ```
