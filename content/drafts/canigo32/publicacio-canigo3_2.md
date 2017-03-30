@@ -1,33 +1,43 @@
 +++
 date        = "2017-03-31"
 title       = "Canigó. Publicació Canigó 3.2"
-description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST amb un nou mòdul RS (RESTful Services) a més d'incorporar actualitzacions importants d'alguns mòduls principals com el de seguretat i persistència"
+description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com el de seguretat i persistència"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
 +++
 
-Des de l'equip de Canigó s'està treballant en la versió 3.2 de Canigó, la qual incorporarà novetats importants com el suport a serveis REST i autenticació amb JWT (JSON Web Token) entre d'altres. Fa temps que tant des d'Arquitectura CTTI com des del CS Canigó s'està promovent l'ús d'arquitectures basades en servei REST al backend i consum de dades via Javascript en frontals web HTML5, i és en aquesta nova versió que s'incorporaran classes i configuracions de suport per facilitar el desenvolupament d'aplicacions que segueixin aquesta arquitectura.
-
-Certificats amb els servidors del full de ruta Weblogic 12c i Tomcat 7/8. Java 7/8. Properament es realitzarà la certificació amb Websphere 8.5.
+Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com els de seguretat, persistència i traces, i afegit tecnologies actuals com Swagger, Spring Boot i Docker a l'aplicació plantilla.
 
 ### Mòdul RS (RESTFul Services) [NOU]
 
+...
 
 ### Mòdul de Seguretat [ACTUALITZAT]
 
+JWT
 
 ### Mòdul de Persistència [ACTUALITZAT]
 
+Spring Data JPA i QueryDSL
 
 ### Mòdul de Traces [ACTUALITZAT]
 
+SLF4J i Log4J2
 
 ### Mòdul JSF [DEPRECAT]
 
-Comentar que JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió de Canigó. En cap cas s'evolucionarà més enllà d'actualització de llibreries per tal de garantir la compatibilitat amb contenidors de servlets i servidors d'aplicacions del [Full de Ruta del Programari](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf).
+JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió de Canigó. No s'ha evolucionat més enllà d'actualitzar versions de llibreries per tal de garantir la compatibilitat amb contenidors de servlets i servidors d'aplicacions del [Full de Ruta del Programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf).
 
-### Plantilla
+### Repositori Maven al Nexus del SIC
+
+
+
+### Plantilla d'aplicació
+
+Gràcies al plugin d'Eclipse...
+
+#### Swagger
 
 La introducció de [Swagger](http://swagger.io/), framework pel disseny, construcció, documentació i consum d'APIs REST, és clau per disposar d'un ecosistema que permeti treballar amb APIs REST de forma fàcil i intuïtiva.
 
@@ -35,4 +45,19 @@ La introducció de [Swagger](http://swagger.io/), framework pel disseny, constru
 
 La integració realitzada amb Swagger i [JWT](https://jwt.io/) (JSON Web Token) permet validar la seguretat de les nostres APIs. Un cop obtingut el token (/api/auth) és possible fer crides a altres APIs REST de l'aplicació sempre que l'usuari hi estigui autoritzat. En cas contrari obtindrem un error "HTTP 401 - Unauthorized".
 
-Per qualsevol dubte us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
+#### Spring Boot
+
+
+
+#### Docker
+
+Comentar també que Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per Suport Cloud, ja sigui en un jar executable amb Spring Boot a "gencatcloud/java:7"/"gencatcloud/java:8" com en un war a "gencatcloud/tomcat:7"/"gencatcloud/tomcat:8".
+
+### Certificació amb servidors del full de ruta
+
+Canigó 3.2 ha estat certificat amb els servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf). Weblogic 12c i Tomcat 7/8 amb el runtime Java d'Oracle versió 7 i 8. Properament es realitzarà la certificació amb Websphere 8.5.
+
+
+
+
+Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
