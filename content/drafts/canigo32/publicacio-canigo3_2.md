@@ -31,14 +31,23 @@ Com a gran novetat s'incorpora el suport a [JWT (JSON Web Token)](https://jwt.io
 L'ús de JWT és compatible amb GICAR, i la resta de proveïdors de seguretat suportats per Canigó. 
 Un cop l'usuari ha estat autenticat, el backend Canigó genera un token que haurà de ser enviat pel client a la capçalera HTTP per a cada petició.
 
-### Mòdul de Persistència [_ACTUALITZAT_]
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-seguretat/) del portal.
 
+### Mòdul de Persistència (JPA) [_ACTUALITZAT_]
 
-Spring Data JPA i QueryDSL
+[Spring Data JPA] (http://projects.spring.io/spring-data-jpa/) i [QueryDSL] (http://www.querydsl.com/) passen a ser les llibreries de suport principals per l'accés a dades.
+
+Gràcies a Spring Data JPA i l'ús de repositoris es redueix el codi necessari per fer accessos a la base de dades. Les operacions més habituals són proporcionades pels repositoris i afegir nous mètodes d'accés a dades a aquests repositoris és molt fàcil.
+
+QueryDSL permet la generació de queries dinàmiques de forma segura mitjançant codi. És compatible amb JPA i, de la mateixa manera que Spring Data, dóna suport als motors de bases de dades més populars (Oracle, MySQL, PostgreSQL, SQLServer, MongoDB).
+
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-jpa/) del portal.
 
 ### Mòdul de Traces [_ACTUALITZAT_]
 
 SLF4J+Log4J2
+
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) del portal.
 
 ### Mòdul JSF [_DEPRECAT_]
 
