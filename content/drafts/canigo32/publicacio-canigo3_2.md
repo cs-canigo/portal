@@ -10,7 +10,7 @@ key         = "ABRIL2017"
 Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixen el patró d'arquitectura recomanat pel CS Canigó consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. Amb aquesta finalitat, s'ha incorporat un nou Mòdul RS (RESTful Services) el qual dóna suport al desenvolupament d'APIs REST, a més d'actualitzacions importants d'alguns mòduls principals com els de seguretat, persistència i traces. L'altre gran objectiu de Canigó 3.2 és facilitar el desplegament en entorns corporatius a CPDs i Container Clouds. En aquesta línia s'ha introduït Docker a la plantilla d'aplicació Canigó 3.2.
 
 
-### Mòdul RS (RESTFul Services) [NOU]
+### Mòdul RS (RESTFul Services) [_NOU_]
 
 El Mòdul RS ha estat introduït al framework per permetre l'exposició de dades mitjançant serveis REST de forma àgil i seguint les millors pràctiques d'[APIs REST](http://canigo.ctti.gencat.cat/blog/2016/01/api/).
 
@@ -24,19 +24,23 @@ Tot el contingut es serveix en format JSON.
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-rs/) del portal.
 
-### Mòdul de Seguretat [ACTUALITZAT]
+### Mòdul de Seguretat [_ACTUALITZAT_]
 
-JWT i compatibilitat amb GICAR
+Com a gran novetat s'incorpora el suport a [JWT (JSON Web Token)](https://jwt.io/) per tal de permetre la construcció d'aplicacions stateless que puguin ser fàcilment escalables. En concret, la llibreria utilitzada és [JJWT (Java JWT)](https://github.com/jwtk/jjwt).
 
-### Mòdul de Persistència [ACTUALITZAT]
+L'ús de JWT és compatible amb GICAR, i la resta de proveïdors de seguretat suportats per Canigó. 
+Un cop l'usuari ha estat autenticat, el backend Canigó genera un token que haurà de ser enviat pel client a la capçalera HTTP per a cada petició.
+
+### Mòdul de Persistència [_ACTUALITZAT_]
+
 
 Spring Data JPA i QueryDSL
 
-### Mòdul de Traces [ACTUALITZAT]
+### Mòdul de Traces [_ACTUALITZAT_]
 
 SLF4J+Log4J2
 
-### Mòdul JSF [DEPRECAT]
+### Mòdul JSF [_DEPRECAT_]
 
 JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió de Canigó. No s'ha evolucionat més enllà d'actualitzar versions de llibreries per tal de garantir la compatibilitat amb contenidors de servlets i servidors d'aplicacions del [Full de Ruta del Programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf).
 
