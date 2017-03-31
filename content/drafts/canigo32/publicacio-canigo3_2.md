@@ -2,6 +2,7 @@
 date        = "2017-03-31"
 title       = "Canigó. Publicació Canigó 3.2"
 description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com el de seguretat i persistència"
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
 +++
