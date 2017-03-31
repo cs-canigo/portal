@@ -115,4 +115,6 @@ D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entor
 
 Canigó 3.2 ha estat certificat amb els servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf). Weblogic 12c i Tomcat 7/8 amb el runtime Java d'Oracle versió 7 i 8. Properament es realitzarà la certificació amb Websphere 8.5.
 
+<br><br>
+
 Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
