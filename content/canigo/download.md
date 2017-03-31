@@ -1,6 +1,6 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
-title       = "Descàrrega dels binaris de Canigó i de les API’s de suport"
+title       = "Binaris de Canigó"
 description = "Descàrrega de les diferents versions de Canigó, entorn de treball, plugin d'eclipse..."
 sections    = "Canigó"
 weight		= 4
@@ -35,6 +35,11 @@ Veure [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/ento
 Altra informació d'interés:
 
 * [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
+* [Plantilla demo Canigó 3.2] (https://github.com/gencatcloud/plantilla-demo-canigo32)
+* [Plantilla demo Canigó 3.2 desplegada a Bluemix] (http://134.168.52.226:8080/canigo-api.html)
+	Credencials:
+		username -> admin
+		password -> password
 
 
 ## Canigó 2.3.21
