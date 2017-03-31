@@ -122,4 +122,4 @@ Canigó 3.2 ha estat certificat amb alguns dels servidors del [Full de ruta del 
 * Websphere 8.5 (_properament_)
 
 <br>
-Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
+Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
