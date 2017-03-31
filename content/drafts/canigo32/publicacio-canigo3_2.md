@@ -2,7 +2,6 @@
 date        = "2017-03-31"
 title       = "Canigó. Publicació Canigó 3.2"
 description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com el de seguretat i persistència"
-sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
 +++
@@ -66,15 +65,17 @@ Canigó 3.2, en el seu core, incorpora un canvi important. Aquest canvi és el p
 
 https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 
-Gràcies a l'ús d'aquest grup de repositoris configurats al Nexus del SIC, qualsevol canvi (actualització, eliminació, afegit) als repositoris que formen part del grup serà transparent al desenvolupador d'aplicacions Canigó.
+Gràcies a l'ús d'aquest grup de repositoris disponible al Nexus del SIC, qualsevol canvi (actualització, eliminació, afegit) als repositoris que formen part del grup serà transparent al desenvolupador d'aplicacions Canigó.
 
 L'accés SSL implica la instal·lació del certificat al cacerts de Java de la màquina des d'on el procés Maven de construcció és executat. Altrament, l'accés al repositori serà rebutjat.
 
-### Plantilla d'aplicació
+### Plantilla d'aplicació Canigó 3.2
 
-Gràcies al plugin d'Eclipse...
+La nova versió 1.6.0 del [Plugin d'Eclipse de Canigó]() permet la creació d'aplicacions Canigó 3.2. La documentació actualitzada del plugin la podeu trobar en el següent enllaç.
 
 A partir d'aquesta nova versió del plugin deixa de donar-se la opció de crear d'aplicacions Canigó basades en JSF.
+
+A continuació es descriuen les novetats més importants que incorpora la plantilla d'aplicació Canigó 3.2.
 
 #### Swagger
 
