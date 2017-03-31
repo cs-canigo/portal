@@ -76,7 +76,7 @@ La nova versió 1.6.0 del [Plugin d'Eclipse de Canigó](http://canigo.ctti.genca
 
 A continuació es descriuen les novetats més importants que incorpora la plantilla d'aplicació Canigó 3.2.
 
-#### Swagger
+##### Swagger
 
 La introducció de [Swagger](http://swagger.io/), framework pel disseny, construcció, documentació i consum d'APIs REST, és clau per disposar d'un ecosistema que permeti treballar amb APIs REST de forma fàcil i intuïtiva.
 
@@ -84,7 +84,7 @@ La introducció de [Swagger](http://swagger.io/), framework pel disseny, constru
 
 La integració realitzada amb Swagger i JWT permet validar la seguretat de les nostres APIs de forma ràpida.
 
-#### Spring Boot
+##### Spring Boot
 
 [Spring Boot](https://projects.spring.io/spring-boot/) ens permet executar l'aplicació sense necessitat de dispossar d'un servidor d'aplicacions o contenidor de servlets. És capaç d'executar un internament (Tomcat, Jetty o Undertow) i axecar l'aplicació.
 
@@ -95,7 +95,7 @@ Aquesta és la característica més important, però en té d'altres:
 * No genera codi i no requereix configuració per XML
 
 
-#### Docker
+##### Docker
 
 Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per [Suport Cloud](http://canigo.ctti.gencat.cat/cloud/), ja sigui en un jar executable (Spring Boot) amb Java o en un war a Tomcat:
 
