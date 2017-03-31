@@ -1,13 +1,13 @@
 +++
 date        = "2017-03-31"
 title       = "Canigó. Publicació Canigó 3.2"
-description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com el de seguretat i persistència"
+description = "Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls core com els de seguretat, persistència i traces"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
 +++
 
-Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixen el patró d'arquitectura recomanat pel CS Canigó consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. Amb aquesta finalitat, s'ha incorporat un nou Mòdul RS (RESTful Services) el qual dóna suport al desenvolupament d'APIs REST. A més d'aquest nou mòdul, Canigó 3.2 té actualitzacions importants d'alguns mòduls principals com els de seguretat, persistència i traces. L'altre gran objectiu de Canigó 3.2 és facilitar el desplegament en entorns corporatius a CPDs i Container Clouds. En aquesta línia s'ha introduït Docker a la plantilla d'aplicació Canigó 3.2.
+Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixen el patró d'arquitectura recomanat pel CS Canigó consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. Amb aquesta finalitat, s'ha incorporat un nou Mòdul RS (RESTful Services) el qual dóna suport al desenvolupament d'APIs REST. A més d'aquest nou mòdul, Canigó 3.2 té actualitzacions importants d'alguns mòduls core com els de seguretat, persistència i traces. L'altre gran objectiu d'aquesta nova versió de Canigó és facilitar el desplegament en entorns corporatius a CPDs i Container Clouds. En aquesta línia s'ha certificat el seu funcionament en Tomcat 8 i Weblogic 12c, i introduït Docker a la plantilla d'aplicació.
 
 <br>
 ### Mòdul RS (RESTFul Services) [_NOU_]
@@ -29,7 +29,7 @@ Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://
 
 Com a gran novetat s'incorpora el suport a [JWT (JSON Web Token)](https://jwt.io/) per tal de permetre la construcció d'aplicacions stateless que puguin ser fàcilment escalables. En concret, la llibreria utilitzada és [JJWT (Java JWT)](https://github.com/jwtk/jjwt).
 
-L'ús de JWT és compatible amb GICAR, i la resta de proveïdors de seguretat suportats per Canigó. 
+L'ús de JWT és compatible amb GICAR i la resta de proveïdors de seguretat suportats per Canigó. 
 Un cop l'usuari ha estat autenticat, el backend Canigó genera un token que haurà de ser enviat pel client a la capçalera HTTP per a cada petició.
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-seguretat/) del portal.
@@ -92,7 +92,7 @@ La integració realitzada amb Swagger i JWT permet validar la seguretat de les n
 
 ##### Spring Boot
 
-[Spring Boot](https://projects.spring.io/spring-boot/) ens permet executar l'aplicació sense necessitat de dispossar d'un servidor d'aplicacions o contenidor de servlets. És capaç d'executar un internament (Tomcat, Jetty o Undertow) i axecar l'aplicació.
+[Spring Boot](https://projects.spring.io/spring-boot/) ens permet executar l'aplicació sense necessitat de dispossar d'un servidor d'aplicacions o contenidor de servlets. És capaç d'executar-ne un internament (Tomcat, Jetty o Undertow) i axecar l'aplicació.
 
 Aquesta és la característica més important, però en té d'altres:
 
@@ -115,7 +115,7 @@ Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per [Suport 
 * [gencatcloud/java-openshift](https://hub.docker.com/r/gencatcloud/java-openshift)
 * [gencatcloud/tomcat-openshift](https://hub.docker.com/r/gencatcloud/tomcat-openshift)
 
-D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entorns Container Cloud com Bluemix i OpenShift.
+D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entorns Container Cloud com [Bluemix](https://console.eu-gb.bluemix.net/) i d'altres basats en OpenShift.
 
 <br>
 ### Certificació amb servidors del full de ruta
