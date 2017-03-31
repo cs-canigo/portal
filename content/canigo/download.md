@@ -8,16 +8,20 @@ weight		= 4
 
 ## Repositoris Maven
 
-+ Repositori Maven 1: http://repos.canigo.ctti.gencat.cat/repository/maven1
-+ Repositori Maven 2: http://repos.canigo.ctti.gencat.cat/repository/maven2
++ Repositori Maven: https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 
-<p>&nbsp;</p>
+Per a utilitzar el repositori s'ha d'afegir el certificat al cacerts de Java.
 
-## Canigó 3.1 
+S'ha de descarregar el certificat de la web i per afegir-lo utilitzar la eïna keytool
 
-- [Mòduls de Canigó 3.1](http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/)
-- [Release notes Canigó 3.1](/canigo-download-related/release-notes-canigo-31)
+	keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
+
+## Canigó 3.2 
+
+- [Mòduls de Canigó 3.2](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/)
+- [Release notes Canigó 3.2](/canigo-download-related/release-notes-canigo-32)
 - [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
+
 
 ### Creació de l'entorn local
 
@@ -30,23 +34,21 @@ Veure [Entorn desenvolupament Canigó](http://canigo.ctti.gencat.cat/canigo/ento
 
 Altra informació d'interés:
 
-* [Plugin Canigó 3.1 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
-* Actualització plugin Canigó 3.0 a 3.1 per a Eclipse i actualització de l'aplicació: [HowTo d'actualització de Canigó 3.0 a 3.1](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Actualitzacio+Canig%C3%B3+3.0+a+Canigo+3.1.pdf)
+* [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 
-<p>&nbsp;</p>
 
-## Canigó 2.3.20
+## Canigó 2.3.21
 
-- [Serveis de Canigó 2.3.20](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/)
-- [Connectors de Canigó 2.3.20](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/connectors/)
-- [Release notes Canigó 2.3.20](/canigo-download-related/release-notes-canigo-2)
+- [Serveis de Canigó 2.3.21](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/)
+- [Connectors de Canigó 2.3.21](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/connectors/)
+- [Release notes Canigó 2.3.21](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10452)
 - [Plantilla Canigó 2.3.20 (Amb exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-2.3.20.zip)
 - [Plantilla Canigó 2.3.20 (Sense exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/plantilla-canigo-2.3.20.zip)
 - [Contingut estàtic versió 2.3.20 (Comprimit) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-static-compress-2.3.20.zip)
 
 ### Creació de l'entorn local
 
-- Descàrrega de l'[entorn base de treball](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/entorn-treball/canigo.zip)
+- Descàrrega de l'[entorn base de treball](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/entorn-treball/canigo.zip)
 - Guia d'inici per a la configuració d'un entorn de desenvolupament. Veure aquest [link](/canigo-download-related/guia-inici-canigo2)
 
 <p>&nbsp;</p>

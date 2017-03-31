@@ -1,5 +1,5 @@
 +++
-date        = "2017-02-14"
+date        = "2017-03-31"
 title       = "Plugin Canigó per a Eclipse"
 description = "Plugin d'eclipse per a generar una aplicació Canigó."
 sections    = "Canigó."
@@ -27,16 +27,9 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar *Plug-ins Canigo (JSF 2.2 i Rest) Eclipse Mars (Comp.Linux).
+Seleccionar **Plug-in Canigo 3.2 - Canigo 3.2**
 
-![](/related/canigo/documentacio/plugin-canigo/img3.jpg)
-
-Una vegada instal·lat s'ha de tancar l'Eclipse i sobreescriure la llibreria:
-
-<eclipse_home>/plugins/org.eclipse.m2e.maven.runtime_1.6.0.20150526-2031/jars/maven-embedder-3.3.3.jar
-
-Amb la que s'ha de descarregar a:
-http://canigo.ctti.gencat.cat/devenv/patch_plugin_canigo/maven-embedder-3.3.3.jar
+![](/related/canigo/documentacio/plugin-canigo/img13.jpg)
 
 ## Crear Aplicació Canigó
 
@@ -46,30 +39,22 @@ A la vista Package Explorer de l'Eclipse fer botó dret: New -> Other
 
 Seleccionar Assistent Projectes Canigó -> Crear un Projecte Canigó
 
-![](/related/canigo/documentacio/plugin-canigo/img5.jpg)
+![](/related/canigo/documentacio/plugin-canigo/img10.jpg)
 
-El plugin pot generar dos tipus d'aplicacions:
+El plugin genera una aplicació REST amb un CRUD de demo implementat amb HTML5/Javascript. 
 
-* Aplicació web JSF: Crea una aplicació demo amb el front-end utilitzant Primefaces 5.0
-* Aplicació REST: Crea una aplicació demo amb un CRUD de demo implementat amb HTML5/Javascript. Es dóna llibertat per triar la tecnologia per a realitzar el front-end (AngularJS, Bootstrap, EmberJS...) sempre que es compleixi el PIV de Gencat.
-	
-### Aplicació web JSF
+Es dóna llibertat per triar la tecnologia per a realitzar el front-end (AngularJS, Bootstrap, EmberJS...) sempre que es compleixi el PIV de Gencat.
 
-Es genera un projecte a l'eclipse.
+L'aplicació inicial que es crea amb el plugin inclou d'inici:
 
-S'ha de prèmer el botó dret sobre el nou projecte i seleccionar Configure - Convert to maven project
+* mòdul de persistència (Base de dades a memòria H2)
+* mòdul d'administració de logs
 
-![](/related/canigo/documentacio/plugin-canigo/img6.jpg)
+Per a desplegar l'aplicació només s'ha de compilar i arrencar l'aplicació utilitzant Spring Boot.
 
-Una vegada convertit a Maven Project els errors que tenia el projecte desapareixen al actualitzar-se les llibreries. S'ha de compilar el projecte i ja es pot desplegar:
+![](/related/canigo/documentacio/plugin-canigo/img11.jpg)
 
-![](/related/canigo/documentacio/plugin-canigo/img7.jpg)
-
-### Aplicació REST
-
-Es genera un projecte Maven a l'eclipse. S'ha de compilar i ja es pot desplegar:
-
-![](/related/canigo/documentacio/plugin-canigo/img8.jpg)
+L'aplicació demo porta incorporat Swagger i és aquesta la pantalla que es carrega quan s'accedeix a localhost:8080
 
 ## Afegir/Esborrar nous mòduls
 
@@ -78,4 +63,8 @@ Per afegir o treure mòduls de Canigó el plugin proporciona la possibilitat de 
 S'ha de prèmer sobre el projecte, botó dret -> Canigó
 
 ![](/related/canigo/documentacio/plugin-canigo/img9.jpg)
+
+Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà la opció a triar si es desitja utilitzar JWT i el provider de seguretat a utilitzar (Arxiu, BBDD, Gicar o LDAP)
+
+![](/related/canigo/documentacio/plugin-canigo/img12.jpg)
 
