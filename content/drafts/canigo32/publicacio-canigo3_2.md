@@ -45,7 +45,14 @@ Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://
 
 ### Mòdul de Traces [_ACTUALITZAT_]
 
-SLF4J+Log4J2
+L'actualització de Log4j a SLF4J+Log4j2 és la principal novetat que incorpora aquest mòdul. A continuació s'enumeren els principals avantatges que suposa aquest canvi:
+
+* Loggers asíncrons
+* Nivells de log personalitzats
+* Reconfiguració automàtica
+* Ús més eficient de memòria i millores en la concurrència
+* Fàcilment extensible
+* Configuració en més formats: XML, JSON, YAML
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) del portal.
 
@@ -55,7 +62,13 @@ JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió d
 
 ### Repositori Maven al Nexus del SIC
 
+Canigó 3.2, en el seu core, incorpora un canvi important. Aquest canvi és el pas d'un repositori Maven a un grup de repositoris amb accés SSL:
+
 https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
+
+Gràcies a l'ús d'aquest grup de repositoris configurats al Nexus del SIC, qualsevol canvi (actualització, eliminació, afegit) als repositoris que formen part del grup serà transparent al desenvolupador d'aplicacions Canigó.
+
+L'accés SSL implica la instal·lació del certificat al cacerts de Java de la màquina des d'on el procés Maven de construcció és executat. Altrament, l'accés al repositori serà rebutjat.
 
 ### Plantilla d'aplicació
 
