@@ -1,8 +1,7 @@
 +++
 date        = "2017-03-31"
 title       = "Canigó. Publicada nova versió 3.2 del framework"
-description = "La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci.
-En aquesta línia es depreca JSF, sent aquesta l'última versió de Canigó en la que s'hi donarà suport"
+description = "La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. En aquesta línia es depreca JSF, sent aquesta l'última versió de Canigó en la que s'hi donarà suport"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
