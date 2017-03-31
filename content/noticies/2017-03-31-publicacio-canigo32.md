@@ -12,7 +12,7 @@ Amb l'alliberament de la versió 3.2 del framework Caniǵo s'assoleix un dels ob
 <br>
 ### Mòduls
 
-A continuació es descriuen els canvis més rellevants als mòduls que formen part del framework.
+A continuació es descriuen els canvis més rellevants que s'han fet als mòduls que formen part del framework.
 
 #### Mòdul RS (RESTFul Services) [_NOU!_]
 
@@ -115,10 +115,10 @@ D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entor
 <br>
 ### Certificació amb servidors del full de ruta
 
-Canigó 3.2 ha estat certificat amb alguns dels servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) amb el runtime Java d'Oracle suportat per c:
+Canigó 3.2 ha estat certificat amb alguns dels servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) corrent amb els runtimes Java d'Oracle suportats per cadascun d'ells:
 
 * Weblogic 12c
-* Tomcat 7/8
+* Tomcat 7 i 8
 * Websphere 8.5 (_properament_)
 
 <br><br>
