@@ -60,7 +60,7 @@ langs = ["ca","es"]
 
 1.  Davant solucions estàndards utilitzarem preferentment les tecnologies del **Full de Ruta.** Aquest fet no exclou que per a noves solucions es puguin utilitzar altres tecnologies, que eventualment passaran a formar-ne part.
 
-1.  Des de les unitats d'Arquitectura s'ha de fer un **seguiment de noves tecnologies**, per a avaluar el seu encaix i tenir altres opcions davant noves necessitats dels projectes (per exemple, [nous llenguatges i frameworks](http://canigo.ctti.gencat.cat/bloc/2015/12/llenguatges/) o [provisió d'infraestructura](http://canigo.ctti.gencat.cat/bloc/2015/12/contenidors/)).
+1.  Des de les unitats d'Arquitectura s'ha de fer un **seguiment de noves tecnologies**, per a avaluar el seu encaix i tenir altres opcions davant noves necessitats dels projectes (per exemple, [nous llenguatges i frameworks](http://canigo.ctti.gencat.cat/blog/2015/12/llenguatges/) o [provisió d'infraestructura](http://canigo.ctti.gencat.cat/blog/2015/12/contenidors/)).
 
 ## **Principis sobre el cost i manteniment de les solucions**
 
