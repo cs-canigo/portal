@@ -1,6 +1,6 @@
 +++
 date        = "2017-03-31"
-title       = "Publicada nova versió 3.2 del framework Canigó"
+title       = "Canigó. Publicada nova versió 3.2 del framework"
 description = "La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
