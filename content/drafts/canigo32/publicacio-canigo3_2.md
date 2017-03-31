@@ -7,13 +7,22 @@ categories  = ["canigo"]
 key         = "ABRIL2017"
 +++
 
-Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió es facilitar el desenvolupament d'APIs REST gràcies a la incorporació d'un nou Mòdul RS (RESTful Services). També s'han realitzat actualitzacions importants d'alguns mòduls principals com els de seguretat, persistència i traces, i afegit tecnologies actuals com Swagger, Spring Boot i Docker a l'aplicació plantilla.
+Ha estat alliberada la versió 3.2 del framework Canigó. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixen el patró d'arquitectura recomanat pel CS Canigó consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. Amb aquesta finalitat, s'ha incorporat un nou Mòdul RS (RESTful Services) el qual dóna suport al desenvolupament d'APIs REST, a més d'actualitzacions importants d'alguns mòduls principals com els de seguretat, persistència i traces. L'altre gran objectiu de Canigó 3.2 és facilitar el desplegament en entorns corporatius a CPDs i Container Clouds. En aquesta línia s'ha introduït Docker a la plantilla d'aplicació Canigó 3.2.
 
-DIAGRAMA DESTACANT ELS MÒDULS ACTUALITZATS
 
 ### Mòdul RS (RESTFul Services) [NOU]
 
-Spring MVC
+El Mòdul RS ha estat introduït al framework per permetre l'exposició de dades mitjançant serveis REST de forma àgil i seguint les millors pràctiques d'[APIs REST](http://canigo.ctti.gencat.cat/blog/2016/01/api/).
+
+Les principals característiques d'aquest mòdul són les següents:
+
+* Control genèric d'errors
+* Classes estàndard de resposta
+* APIs REST incorporades per exposar les propietats de configuració de l'aplicació i mòduls carregats
+
+Tot el contingut es serveix en format JSON.
+
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-rs/) del portal.
 
 ### Mòdul de Seguretat [ACTUALITZAT]
 
