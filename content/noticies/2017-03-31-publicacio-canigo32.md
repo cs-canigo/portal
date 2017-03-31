@@ -14,7 +14,7 @@ Amb l'alliberament de la versió 3.2 del framework Caniǵo s'assoleix un dels ob
 
 A continuació es descriuen els canvis més rellevants als mòduls que formen part del framework.
 
-##### Mòdul RS (RESTFul Services) [_NOU!_]
+#### Mòdul RS (RESTFul Services) [_NOU!_]
 
 El Mòdul RS ha estat introduït al framework per permetre l'exposició de dades mitjançant serveis REST de forma àgil i seguint les millors pràctiques d'[APIs REST](http://canigo.ctti.gencat.cat/blog/2016/01/api/).
 
@@ -28,7 +28,7 @@ Tot el contingut es serveix en format JSON.
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-rs/) del portal.
 
-##### Mòdul de Seguretat [_ACTUALITZAT!_]
+#### Mòdul de Seguretat [_ACTUALITZAT!_]
 
 Com a gran novetat al Mòdul de Seguretat s'incorpora el suport a [JWT (JSON Web Token)](https://jwt.io/) per tal de permetre la construcció d'aplicacions stateless que puguin ser fàcilment escalables. En concret, la llibreria utilitzada és [JJWT (Java JWT)](https://github.com/jwtk/jjwt).
 
@@ -37,7 +37,7 @@ Un cop l'usuari ha estat autenticat, el backend Canigó genera un token que haur
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-seguretat/) del portal.
 
-##### Mòdul de Persistència (JPA) [_ACTUALITZAT!_]
+#### Mòdul de Persistència (JPA) [_ACTUALITZAT!_]
 
 [Spring Data JPA] (http://projects.spring.io/spring-data-jpa/) i [QueryDSL] (http://www.querydsl.com/) passen a ser les llibreries de suport principals per l'accés a dades.
 
@@ -47,7 +47,7 @@ QueryDSL permet la generació de queries dinàmiques de forma segura mitjançant
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-jpa/) del portal.
 
-##### Mòdul de Traces [_ACTUALITZAT!_]
+#### Mòdul de Traces [_ACTUALITZAT!_]
 
 L'actualització de Log4j a SLF4J+Log4j2 és la principal novetat que incorpora aquest mòdul. A continuació s'enumeren els principals avantatges que suposa aquest canvi:
 
@@ -60,7 +60,7 @@ L'actualització de Log4j a SLF4J+Log4j2 és la principal novetat que incorpora 
 
 Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) del portal.
 
-##### Mòdul JSF [_DEPRECAT!_]
+#### Mòdul JSF [_DEPRECAT!_]
 
 JSF (JavaServer Faces) passa a ser una tecnologia deprecada en aquesta versió de Canigó. No s'ha evolucionat més enllà d'actualitzar versions de llibreries per tal de garantir la compatibilitat amb contenidors de servlets i servidors d'aplicacions del [Full de Ruta del Programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf).
 
@@ -78,7 +78,7 @@ La nova versió 1.6.0 del [Plugin d'Eclipse de Canigó](http://canigo.ctti.genca
 
 A continuació es descriuen les novetats més importants que incorpora la plantilla d'aplicació Canigó 3.2.
 
-##### Swagger
+#### Swagger
 
 La introducció de [Swagger](http://swagger.io/), framework pel disseny, construcció, documentació i consum d'APIs REST, és clau per disposar d'un ecosistema que permeti treballar amb APIs REST de forma fàcil i intuïtiva.
 
@@ -86,7 +86,7 @@ La introducció de [Swagger](http://swagger.io/), framework pel disseny, constru
 
 La integració realitzada amb Swagger i JWT permet validar la seguretat de les nostres APIs de forma ràpida.
 
-##### Spring Boot
+#### Spring Boot
 
 [Spring Boot](https://projects.spring.io/spring-boot/) ens permet executar l'aplicació sense necessitat de disposar d'un servidor d'aplicacions o contenidor de servlets. És capaç d'executar-ne un internament (Tomcat, Jetty o Undertow) i aixecar l'aplicació.
 
@@ -96,7 +96,7 @@ Aquesta és la característica més important, però en té d'altres:
 * Configuracions de Spring de forma automàtica
 * No genera codi i no requereix configuració per XML
 
-##### Docker
+#### Docker
 
 Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per [Suport Cloud](http://canigo.ctti.gencat.cat/cloud/), ja sigui en un jar executable (Spring Boot) amb Java o en un war a Tomcat:
 
