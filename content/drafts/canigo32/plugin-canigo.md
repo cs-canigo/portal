@@ -27,16 +27,9 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar *Plug-ins Canigo (JSF 2.2 i Rest) Eclipse Mars (Comp.Linux).
+Seleccionar *Plug-in Canigo 3.2*
 
 ![](/related/canigo/documentacio/plugin-canigo/img3.jpg)
-
-Una vegada instal·lat s'ha de tancar l'Eclipse i sobreescriure la llibreria:
-
-<eclipse_home>/plugins/org.eclipse.m2e.maven.runtime_1.6.0.20150526-2031/jars/maven-embedder-3.3.3.jar
-
-Amb la que s'ha de descarregar a:
-http://canigo.ctti.gencat.cat/devenv/patch_plugin_canigo/maven-embedder-3.3.3.jar
 
 ## Crear Aplicació Canigó
 
