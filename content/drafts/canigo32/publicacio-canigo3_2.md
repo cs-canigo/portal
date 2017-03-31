@@ -72,9 +72,7 @@ L'accés SSL implica la instal·lació del certificat al cacerts de Java de la m
 
 ### Plantilla d'aplicació Canigó 3.2
 
-La nova versió 1.6.0 del [Plugin d'Eclipse de Canigó]() permet la creació d'aplicacions Canigó 3.2. La documentació actualitzada del plugin la podeu trobar en el següent enllaç.
-
-A partir d'aquesta nova versió del plugin deixa de donar-se la opció de crear d'aplicacions Canigó basades en JSF.
+La nova versió 1.6.0 del [Plugin d'Eclipse de Canigó](http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) permet la creació d'aplicacions Canigó 3.2. A partir d'aquesta nova versió del plugin deixa de donar-se l'opció de crear aplicacions Canigó basades en JSF.
 
 A continuació es descriuen les novetats més importants que incorpora la plantilla d'aplicació Canigó 3.2.
 
@@ -84,15 +82,34 @@ La introducció de [Swagger](http://swagger.io/), framework pel disseny, constru
 
 <center>![Swagger a Canigó 3.2](/images/news/swagger-canigo.png)</center>
 
-La integració realitzada amb Swagger i [JWT](https://jwt.io/) (JSON Web Token) permet validar la seguretat de les nostres APIs. Un cop obtingut el token (/api/auth) és possible fer crides a altres APIs REST de l'aplicació sempre que l'usuari hi estigui autoritzat. En cas contrari obtindrem un error "HTTP 401 - Unauthorized".
+La integració realitzada amb Swagger i JWT permet validar la seguretat de les nostres APIs de forma ràpida.
 
 #### Spring Boot
 
-Agilitat en el desplegament...
+[Spring Boot](https://projects.spring.io/spring-boot/) ens permet executar l'aplicació sense necessitat de dispossar d'un servidor d'aplicacions o contenidor de servlets. És capaç d'executar un internament (Tomcat, Jetty o Undertow) i axecar l'aplicació.
+
+Aquesta és la característica més important, però en té d'altres:
+
+* Simplificació de configuració Maven
+* Configuracions de Spring de forma automàtica
+* No genera codi i no requereix configuració per XML
+
 
 #### Docker
 
-Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per Suport Cloud, ja sigui en un jar executable amb Spring Boot a "gencatcloud/java:7"/"gencatcloud/java:8" com en un war a "gencatcloud/tomcat:7"/"gencatcloud/tomcat:8". D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entorns cloud com Bluemix i Openshift.
+Canigó 3.2 pot ser desplegat en els contenidors Docker certificats per [Suport Cloud](http://canigo.ctti.gencat.cat/cloud/), ja sigui en un jar executable (Spring Boot) amb Java o en un war a Tomcat:
+
+*Bluemix*
+
+* gencatcloud/java:7 i gencatcloud/java:8
+* gencatcloud/tomcat:7 i gencatcloud/tomcat:8"
+
+*OpenShift*
+
+* gencatcloud/java-openshift:7 i gencatcloud/java-openshift:8
+* gencatcloud/tomcat-openshift:7 i gencatcloud/tomcat-openshift:8"
+
+D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entorns Container Cloud com Bluemix i OpenShift.
 
 ### Certificació amb servidors del full de ruta
 
