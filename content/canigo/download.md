@@ -8,7 +8,7 @@ weight		= 4
 
 ## Maven
 
-+ Repositori Maven: https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
+*Repositori*: https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 
 Per a utilitzar el repositori, en realitat grup de repositoris, s'ha d'afegir el certificat del domini "sic.ctti.extranet.gencat.cat" al "cacerts" de Java des d'on s'executi el procés Maven que construeixi l'aplicació Canigó. Les passes a seguir són les següents:
 
