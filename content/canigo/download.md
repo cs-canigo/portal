@@ -6,15 +6,19 @@ sections    = "Canigó"
 weight		= 4
 +++
 
-## Repositoris Maven
+## Maven
 
 + Repositori Maven: https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 
-Per a utilitzar el repositori s'ha d'afegir el certificat al cacerts de Java.
+Per a utilitzar el repositori, en realitat grup de repositoris, s'ha d'afegir el certificat del domini "sic.ctti.extranet.gencat.cat" al "cacerts" de Java des d'on s'executi el procés Maven que construeixi l'aplicació Canigó. Les passes a seguir són les següents:
 
-S'ha de descarregar el certificat de la web i per afegir-lo utilitzar la eïna keytool
+* Descarregar el certificat de la web mitjançant un navegador. Per exemple amb Google Chrome es pot fer amb les "Eines per a desenvolupadors" -> "Seguretat" -> "Veure certificat" -> "Detalls" -> "Exportar"
 
-	keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
+* Importar el certificat (Ex. "certificat.cer") al magatzem "cacerts" de Java amb l'eina keytool inclosa dins la JDK:
+
+	$ keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
+
+Un cop importat el certificat els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
 
 ## Canigó 3.2 
 
@@ -36,19 +40,13 @@ Altra informació d'interés:
 
 * [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 * [Codi plantilla demo Canigó 3.2] (https://github.com/gencatcloud/plantilla-demo-canigo32)
-* [Plantilla demo Canigó 3.2 desplegada a Bluemix] (http://134.168.52.226:8080/canigo-api.html)
-	
-Credencials:
+* [Plantilla demo Canigó 3.2 desplegada a Bluemix] (http://134.168.52.226:8080/canigo-api.html) (credencials per autenticació: username -> admin, password -> password)
 
-	username -> admin
-	password -> password
+## Canigó 2.3.22
 
-
-## Canigó 2.3.21
-
-- [Serveis de Canigó 2.3.21](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/)
-- [Connectors de Canigó 2.3.21](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/connectors/)
-- [Release notes Canigó 2.3.21](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10452)
+- [Serveis de Canigó 2.3.22](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/)
+- [Connectors de Canigó 2.3.22](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/connectors/)
+- [Release notes Canigó 2.3.22](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10452)
 - [Plantilla Canigó 2.3.20 (Amb exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-2.3.20.zip)
 - [Plantilla Canigó 2.3.20 (Sense exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/plantilla-canigo-2.3.20.zip)
 - [Contingut estàtic versió 2.3.20 (Comprimit) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-static-compress-2.3.20.zip)
