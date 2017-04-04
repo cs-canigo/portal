@@ -16,7 +16,7 @@ Per a utilitzar el repositori, en realitat grup de repositoris, s'ha d'afegir el
 
 * Importar el certificat (Ex. "certificat.cer") al magatzem "cacerts" de Java amb l'eina keytool inclosa dins la JDK:
 
-	$ keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
+    $ keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
 
 Un cop importat el certificat els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
 
