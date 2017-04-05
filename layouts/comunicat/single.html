@@ -52,18 +52,17 @@
 			{{ end }}
 		   -->
 
-      {{ range (where .Site.Pages.ByDate.Reverse "Section" "blog") }}
-        {{ if eq .Params.key $key }}
-          {{ partial "comunicat/noticia.html" . }}
-        {{ end }} 
-      {{ end }}
-
       {{ range (where .Site.Pages.ByDate.Reverse "Section" "noticies") }}
   			{{ if eq .Params.key $key }}
   				{{ partial "comunicat/noticia.html" . }}
   			{{ end }}	
       {{ end }}
-   
+
+      {{ range (where .Site.Pages.ByDate.Reverse "Section" "blog") }}
+        {{ if eq .Params.key $key }}
+          {{ partial "comunicat/noticia.html" . }}
+        {{ end }} 
+      {{ end }}
 
       {{ partial "comunicat/destacats.html" . }}
       
