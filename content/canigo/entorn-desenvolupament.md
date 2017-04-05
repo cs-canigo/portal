@@ -113,11 +113,18 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 
 ### Versions
 
-#### 1.0.0 - Ubuntu 15.04 (16/11/2015) -- ``NO OPERATIVA``
+#### 1.0.3 - Ubuntu 16.04 (21/03/2017) -- <span style="color:green">OPERATIVA.</style>
 
 RELEASE NOTES
 
-* Versió inicial
+* Actualitzada la màquina virtual a Ubuntu 16.04
+* Actualitzat el plugin SVN a la versió 1.12.x
+
+#### 1.0.2 - Ubuntu 15.10 (9/1/2017) -- ``NO OPERATIVA``
+
+RELEASE NOTES
+
+* Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)
 
 #### 1.0.1 - Ubuntu 15.10 (16/3/2016) -- ``NO OPERATIVA``
 
@@ -137,15 +144,8 @@ En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l'entorn de desenvol
 
 * Revisar la configuració de teclat a Preferències -> IBus Preferences -> Input method (en cas de no estar activat l'IBus cal activar-lo a Preferències -> Language Support -> Keyboard input method system)
 
-#### 1.0.2 - Ubuntu 15.10 (9/1/2017) -- ``NO OPERATIVA``
+#### 1.0.0 - Ubuntu 15.04 (16/11/2015) -- ``NO OPERATIVA``
 
 RELEASE NOTES
 
-* Revisats enllaços "trencats" a instal·lables (Subclipse, Docker Tooling, ...)
-
-#### 1.0.3 - Ubuntu 16.04 (21/03/2017) -- <span style="color:green">OPERATIVA.</style>
-
-RELEASE NOTES
-
-* Actualitzada la màquina virtual a Ubuntu 16.04
-* Actualitzat el plugin SVN a la versió 1.12.x
+* Versió inicial
