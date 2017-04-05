@@ -13,7 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
-- [Inserció/actualització massiva de dades a una aplicació Canigó 3.2](/howtos/2017-03-Howto-SaveBatch-Canigo32)
+- [Inserció/actualització massiva de dades a una aplicació Canigó 3.2](/howtos/2017-04-Batch-inserts-updates-canigo32)
 - [Securitzar accés a Elasticsearch des d'una pàgina web](/howtos/2017-03-Securitzar_ElasticSearch_Apache)
 - [Autenticació amb JWT a una aplicació Canigó 3.1](/howtos/2016-11-Howto-Canigo-JWT)
 - [Gestió d'errors a una aplicació Canigó 3.1](/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals)
