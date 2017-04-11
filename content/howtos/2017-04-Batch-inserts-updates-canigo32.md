@@ -1,7 +1,7 @@
 +++
-date        = "2017-04-01"
-title       = "Batch Inserts a una aplicació Canigó 3.2"
-description = "Batch Inserts a una aplicació Canigó 3.2"
+date        = "2017-04-05"
+title       = "Batch inserts/updates a una aplicació Canigó 3.2"
+description = "Batch inserts/updates a una aplicació Canigó 3.2"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "ABRIL2017"

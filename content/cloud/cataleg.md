@@ -120,6 +120,8 @@ Més informació sobre Docker: https://www.docker.com/
 
 Les bases de dades a contenidors no disposen de cap servei com backups o gestió d'usuaris. El proveïdor d'aplicacions haurà de fer-se càrrec d'aquests serveis.
 
+Tampoc ofereix un entorn en alta disponibilitat. És una modalitat no recomanada per entorns productius.
+
 ## SaaS
 
 ### DBaaS - Base de dades com a servei
@@ -130,4 +132,4 @@ Les bases de dades a contenidors no disposen de cap servei com backups o gestió
 - MySQL (Beta), disponible a **cloud públic**
 - SQLServer, disponible a **cloud públic**
 
-A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús.
+A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús enlloc de bases de dades en contenidors.

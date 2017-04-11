@@ -1,7 +1,7 @@
 +++
 date        = "2017-03-31"
 title       = "Canigó. Publicada nova versió 3.2 del framework"
-description = "La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci"
+description = "La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. En aquesta línia es depreca JSF, sent aquesta l'última versió de Canigó en la que s'hi donarà suport"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "ABRIL2017"
@@ -12,7 +12,7 @@ Amb l'alliberament de la versió 3.2 del framework Caniǵo s'assoleix un dels ob
 <br>
 ### Mòduls
 
-A continuació es descriuen els canvis més rellevants als mòduls que formen part del framework.
+A continuació es descriuen els canvis més rellevants que s'han fet als mòduls que formen part del framework.
 
 #### Mòdul RS (RESTFul Services) [_NOU!_]
 
@@ -115,12 +115,11 @@ D'aquesta manera es vol facilitar el desplegament d'aplicacions Canigó en entor
 <br>
 ### Certificació amb servidors del full de ruta
 
-Canigó 3.2 ha estat certificat amb alguns dels servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) amb el runtime Java d'Oracle suportat per c:
+Canigó 3.2 ha estat certificat amb alguns dels servidors del [Full de ruta del programari del CTTI](https://portic.ctti.gencat.cat/les_TIC/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) corrent amb els runtimes Java d'Oracle suportats per cadascun d'ells:
 
 * Weblogic 12c
-* Tomcat 7/8
+* Tomcat 7 i 8
 * Websphere 8.5 (_properament_)
 
-<br><br>
-
-Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
+<br>
+Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat) del CS Canigó.
