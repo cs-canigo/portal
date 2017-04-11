@@ -303,6 +303,15 @@ dins servidor. Per a aquest propòsit:
         Prèviament cal que l'administrador del servidor hagi consultat
         aquest **codi_aplicacio** al proveïdor de l'aplicació. 
          
+		 
+#### Modificar el PlaceHolder de les propietats
+
+Per defecte Canigó carrega les propietats que es troben a **classpath:/config/props/*.properties**. 
+
+Si es vol modificar aquest path s'ha d'afegir la propietat **application.configLocation** al fitxer **application.properties**. Per exemple per carregar fitxers de propietats en jars externs a l'aplicació:
+
+	*.application.configLocation=classpath*:/config/props/*.properties
+	
 
 Preguntes freqüents
 -------------------
