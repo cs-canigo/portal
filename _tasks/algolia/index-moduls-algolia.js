@@ -30,7 +30,7 @@ function processData(data){
           
           _major = _versions;
           if(_versions instanceof Array){
-            _major = _versions[_versions.length-1];
+            _major = _versions[0];
           }
 
           _minor = _major.slice(1);
@@ -62,11 +62,19 @@ function processData(data){
             'modules_version' : []
           };
           
-          if(!data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo){continue;}
+          if(!data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo){
+			  packageNames.push(aplicacio);
+			  continue;
+		  }
 
           for(var s=0,t=data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo.length;s<t;s++){
             aplicacio.modules.push(data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo[s].nomModul);
-            aplicacio.modules_version.push(data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo[s].nomModul+"_"+processVersion(data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo[s].versioModul));
+			_versions = processVersion(data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo[s].versioModul);
+			_major = _versions;
+			if(_versions instanceof Array){
+				_major = _versions[0];
+			}
+            aplicacio.modules_version.push(data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo[s].nomModul+"_"+_major);
           }
           packageNames.push(aplicacio);
         }
