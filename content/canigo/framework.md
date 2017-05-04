@@ -64,7 +64,7 @@ Canigó3 és un framework de codi obert per a la plataforma Java. Està basat en
 - l'accés a dades externes, mitjantçant Spring, gestionant els recursos, proporcionant APIs d'ajuda i suportant la majoria de les tecnologies d'accés a dades com: JDBC, Hibernate, JPA, JDO o iBatis. 
 
 Es pot considerar que la base principal de l'arquitectura de Canigó és un conjunt totalment integrat, i a la vegada modular, de les millors pràctiques tecnològiques existent actualment en aquest entorn, formada pels següents components:
-https://es.yahoo.com/
+
 - **Spring 4 Framework** com a contenidor centralitzat d'objectes i serveis, totalment configurable mitjançant fitxers XML. La injecció de dependències permet la configuració d'objectes fora del codi de l'aplicació (i de manera no intrusiva). Redueix el codi d'aplicació dedicat a configurar i localitzar recursos. Facilita millors pràctiques com programar contra interfícies enlloc de contra classes, permetent el desacoblament de serveis i el canvi ràpid d'una implementació concreta per una altra. Permet també la gestió de transaccions sense la utilització de APIs específiques mitjançant l'ús de Aspect Oriented Programming (AOP)
 - **JPA** proporciona un mòdel de persistència basat en POJO's (Plain Old Java Objects) per mapejar bases de dades relacionals en Java.
 - **AOP (Aspect Oriented Programming)** per intercepció d'events a l'aplicació sense necessitat de modificar el codi
@@ -124,4 +124,3 @@ Aquest mòdul facilita l'ús d'un conjunt addicional de funcionalitats mitjança
 - **Logging**: permet a l'aplicació mostrar una pantalla on canviar el nivell dels logs, monitoritzar el diferents fitxers de logs i descarregar-los.
 
 La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-documentacio">documentació del portal web</a>.
-
