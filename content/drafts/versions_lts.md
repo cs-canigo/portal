@@ -2,9 +2,10 @@
 date        = "2017-05-05"
 title       = "Nou principi d'arquitectura: Utilització preferent de versions LTS"
 description = "Les versions LTS (de Long Term Support) de productes opensource són les d'elecció principal per Arquitectura CTTI"
-section     = "blog"
-categories  = ["canigo"]
-key         = "LTS1705"
+sections    = ["Blog", "home"]
+blog_tags   = ["patrons de disseny", "LTS", "principis d'arquitectura"]
+categories  = ["principis"]
+key         = "MAIG2017"
 +++
 
 ### Què són les versions de Suport a Llarg Termini 
