@@ -2,7 +2,7 @@
 date        = "2017-05-05"
 title       = "Nou principi d'arquitectura: Utilització preferent de versions LTS de programari"
 description = "Les versions LTS (de Long Term Support) de productes opensource són les d'elecció preferent per Arquitectura CTTI"
-sections    = ["Blog", "home"]
+sections    = ["Blog", "drafts"]
 blog_tags   = ["patrons de disseny", "LTS", "principis d'arquitectura"]
 categories  = ["principis"]
 imatge      = "/images/bloc/keep-calm-and-use-lts-versions.jpg.png"
