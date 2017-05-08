@@ -2,6 +2,7 @@
 date        = "2017-05-08"
 title       = "Primeres proves de concepte d'integracions d'aplicacions que despleguen al Cloud Públic al SIC"
 description = "Durant el mes d'abril, s'han realitzat proves de concepte d'integracions d'aplicacions que despleguen al Cloud Públic al SIC amb èxit."
+enllac	    = "http://canigo.ctti.gencat.cat/destacats/2017-05-08-POC-apps-docker-al-SIC/"
 categories  = ["sic"]
 key         = "MAIG2017"
 +++
