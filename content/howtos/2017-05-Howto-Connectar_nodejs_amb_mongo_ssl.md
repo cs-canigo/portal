@@ -1,7 +1,7 @@
 +++
 date        = "2017-05-01"
-title       = "Connectar amb una BBDD Mongo amb SSL a través de NodeJS"
-description = "Connectar amb una BBDD Mongo amb SSL a través de NodeJS"
+title       = "Connectar amb una BBDD MongoDB amb SSL a través de NodeJS"
+description = "Connectar amb una BBDD MongoDB amb SSL a través de NodeJS"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "MAIG2017"
@@ -9,11 +9,11 @@ key         = "MAIG2017"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells que vulguin connectar-se amb una base de dades Mongo que requereix autenticació SSL(Per exemple un Mongo creat a Compose) des d'una aplicació NodeJS.
+Aquest how-to va dirigit a tots aquells que vulguin connectar-se amb una base de dades MongoDB que requereix autenticació SSL des d'una aplicació NodeJS.
 
 ### Introducció
 
-Quan es crea una base de dades Mongo a Compose, la url de connexió que es genera conté el paràmetre **ssl=true**. Això provoca que per a connecar-se des d'una aplicació nodejs s'hagi d'afegir el certificat.
+Les connexions entre les aplicacions i les base de dades MongoDB haurien de realitzar-se amb connexió segura (SSL). En aquest how-to s'explica que ha de fer una aplicació NodeJS per a realitzar la connexió de forma segura.
 
 ### Crear certificat
 
@@ -24,6 +24,8 @@ S'ha d'accedir a Compose i copiar el certificat proporcionat (SSL Certificate (S
 	-----END CERTIFICATE-----
 
 ### MongoClient
+
+És el connector oficial al qual dóna support MongoDB.
 
 Si s'utilitza el package mongodb el codi de la nostra aplicació serà el següent:
 
@@ -57,6 +59,8 @@ A la variable caFile es carrega el certificat i afegim un paràmetre a Mongoclie
 Per a configurar ssl, hem d'afegir les propietats **ssl** i **sslValidate** a true
 	
 ### Mongoose
+
+Aquest connector també és vàlid i està suportat per la comunitat.
 
 Si s'utilitza el package mongoose el codi de la nostra aplicació serà el següent:
 
