@@ -1,10 +1,10 @@
 +++
-date        = "2017-05-05"
+date        = "2010-05-05"
 title       = "Recordatori sobre el sistema d'accessos als repositoris SVN del SIC per a Release Managers"
 description = "S'han detectat dubtes per part de proveïdors d'aplicacions i responsables d'àmbit pel que fa al sistema d'accessos dels Release Manager a repositoris SVN del SIC. Aquest article pretén recordar com funciona el sistema d'accessos d'aquests usuaris als repositoris SVN del SIC i les restriccions a tenir en compte a l'hora de demanar-los."
 sections    = ["Notícies", "drafts"]
 categories  = ["sic"]
-key         = "MAIG2017"
+key         = "MAIG2010"
 +++
 
 S'han detectat dubtes per part de proveïdors d'aplicacions i responsables d'àmbit pel que fa al sistema d'accessos dels Release Manager a repositoris SVN del SIC. Aquest article pretén recordar com funciona el sistema d'accessos d'aquests usuaris als repositoris SVN del SIC i les restriccions a tenir en compte a l'hora de demanar-los.
