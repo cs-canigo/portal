@@ -8,6 +8,14 @@ weight		= 4
 
 ## <span class="label label-cabecera">2017</span>
 
+#### [Abril] (/comunicat/2017/04/)
+- Canigó. Publicada nova versió 3.2 del framework
+- Blog d'Arquitectura. Sobre les SDN
+
+#### [Març] (/comunicat/2017/03/)
+- Cloud. Accés a Elasticsearch a cloud públic
+- SIC. Introducció Pipelines a SIC 2.0 
+
 #### [Febrer] (/comunicat/2017/02/)
 - Canigó. Novetats a propera versió Canigó 3.2 
 - SIC. Introducció a SIC 2.0 
