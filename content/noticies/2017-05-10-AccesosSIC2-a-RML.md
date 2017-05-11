@@ -1,13 +1,13 @@
 +++
 date        = "2017-05-05"
 title       = "Accesos dels RML a SIC a SIC 2.0"
-description = "Amb l'entrada de SIC 2.0, el rol del Release Manager (RML) al SIC no es veurà afectada. Continuarà encarregant-se de centralitzar les pujades de codi de les aplicacions però patirà algunes modificacions."
+description = "Amb l'entrada de SIC 2.0, el rol del Release Manager (RML) al SIC no es veurà afectat. Continuarà encarregant-se de centralitzar les pujades de codi de les aplicacions del Lot però les gestions d'altes i accessos d'aquests es veuran afectats."
 sections    = ["Notícies", "drafts"]
 categories  = ["sic"]
 key         = "MAIG2017"
 +++
 
-Amb l'entrada de SIC 2.0, el rol del Release Manager (RML) al SIC no es veurà afectada. Continuarà encarregant-se de centralitzar les pujades de codi de les aplicacions però patirà algunes modificacions. La següent taula mostra aquestes:
+Amb l'entrada de SIC 2.0, el rol del Release Manager (RML) al SIC no es veurà afectat. Continuarà encarregant-se de centralitzar les pujades de codi de les aplicacions del Lot però les gestions d'altes i accessos d'aquests es veuran afectats. La següent taula mostra aquests canvis:
 
 ||RML a SIC 1.0|RML a SIC 2.0|
 |----------------------|-------------|---|
