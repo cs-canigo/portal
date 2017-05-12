@@ -1,7 +1,7 @@
 +++
 date        = "2017-05-01"
-title       = "Connectar amb una BBDD MongoDB amb SSL a través de NodeJS"
-description = "Connectar amb una BBDD MongoDB amb SSL a través de NodeJS"
+title       = "Connectar amb un cluster MongoDB per SSL en una aplicació NodeJS"
+description = "Connectar amb un cluster MongoDB per SSL en una aplicació NodeJS"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "MAIG2017"
@@ -9,32 +9,28 @@ key         = "MAIG2017"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells que vulguin connectar-se amb una base de dades MongoDB que requereix autenticació SSL des d'una aplicació NodeJS.
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de connectar-se amb un cluster MongoDB que requereixi SSL des d'una aplicació NodeJS.
 
 ### Introducció
 
-Les connexions entre les aplicacions i les base de dades MongoDB haurien de realitzar-se amb connexió segura (SSL). En aquest how-to s'explica que ha de fer una aplicació NodeJS per a realitzar la connexió de forma segura.
+Les connexions entre les aplicacions i les base de dades MongoDB haurien de realitzar-se amb connexió segura (SSL), sobretot en el cas que la base de dades estigui a cloud públic. En aquest how-to s'explica com fer-ho a una aplicació NodeJS.
 
-### Crear certificat
+### Obtenir certificat
 
-S'ha d'accedir a Compose i copiar el certificat proporcionat (SSL Certificate (Self-Signed)) i el desem a un fitxer, per exemple **mongodbcert.cert**, que quedarà de la següent manera:
+El primer pas és obtenir el certificat (ja sigui autosignat o emés per una entitat de confiança com Verisign) del proveïdor de la base de dades.
 
-	-----BEGIN CERTIFICATE-----
-	Codi certificat
-	-----END CERTIFICATE-----
+### [MongoClient](https://www.mongoclient.com/)
 
-### MongoClient
+És el connector oficial al qual dóna suport [MongoDB](https://www.mongodb.com/), i correspon al paquet 'mongodb' de NodeJS.
 
-És el connector oficial al qual dóna support MongoDB.
-
-Si s'utilitza el package mongodb el codi de la nostra aplicació serà el següent:
+Exemple:
 
 	var MongoClient = require('mongodb').MongoClient
 		, format = require('util').format;
 
 	var fs = require('fs');
 		
-	var caFile = fs.readFileSync(__dirname + '/mongodbcert.cert');
+	var caFile = fs.readFileSync(__dirname + '/mongodbcert.crt');
 		
 	MongoClient.connect('mongodb://user:password@host:port/db', 
 		{ 	mongos: {
@@ -54,15 +50,15 @@ Si s'utilitza el package mongodb el codi de la nostra aplicació serà el següe
 		db.close();
 	});
 	
-A la variable caFile es carrega el certificat i afegim un paràmetre a Mongoclient.connect amb les opcions de connexió a la propietat **sslCA**.
+A la variable caFile es carrega el certificat, i l'afegim com a paràmetre **sslCA** a Mongoclient.connect.
 
-Per a configurar ssl, hem d'afegir les propietats **ssl** i **sslValidate** a true
+Per a configurar l'accés SSL és necessari afegir també les propietats **ssl** i **sslValidate** amb valor "true".
 	
-### Mongoose
+### [Mongoose](http://mongoosejs.com/)
 
-Aquest connector també és vàlid i està suportat per la comunitat.
+El paquet 'mongoose', el qual permet treballar amb un model orientat a objectes, també és vàlid i suportat per la comunitat.
 
-Si s'utilitza el package mongoose el codi de la nostra aplicació serà el següent:
+Exemple:
 
 	const mongoose = require('mongoose');
 	const fs = require('fs');
@@ -96,4 +92,4 @@ Si s'utilitza el package mongoose el codi de la nostra aplicació serà el segü
 		mongoose.disconnect();
 	});
 
-Quan es realitza la connexió, al paràmetre d'opcions (mongoOpt) s'han d'afegir les propietats **ssl** i **sslValidate** a true i **sslCA** amb el fitxer del certificat
+Quan es realitza la connexió, al paràmetre d'opcions (mongoOpt) s'han d'afegir les propietats **ssl** i **sslValidate** a "true" i **sslCA** amb el fitxer corresponent al certificat.
