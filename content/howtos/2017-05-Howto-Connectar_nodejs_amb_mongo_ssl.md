@@ -17,7 +17,7 @@ Les connexions entre les aplicacions i les base de dades MongoDB haurien de real
 
 ### Obtenir certificat
 
-El primer pas és obtenir el certificat (ja sigui autosignat o emés per una entitat de confiança com Verisign) del proveïdor de la base de dades.
+El primer pas és obtenir el certificat (ja sigui autosignat o emès per una entitat de confiança com Verisign) del proveïdor de la base de dades.
 
 ### [MongoClient](https://www.mongoclient.com/)
 
