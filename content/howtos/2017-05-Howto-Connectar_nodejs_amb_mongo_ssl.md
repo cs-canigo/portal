@@ -75,7 +75,7 @@ Exemple:
 			  "mongos": {
 				"ssl": true,
 				"sslValidate": true,
-				"sslCA": fs.readFileSync(__dirname + '/mongodbcert.cert')
+				"sslCA": fs.readFileSync(__dirname + '/mongodbcert.crt')
 			  }
 			};
 
