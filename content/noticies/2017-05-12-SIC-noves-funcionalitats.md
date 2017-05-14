@@ -13,8 +13,8 @@ Atès la imminent arribada del SIC 2.0, és convenient que tots els usuaris sigu
 
 Amb l'autoservei d'usuaris, hi ha un rol que pateix una evolució sense precedents al SIC: el rol de *Release Manager*. Els usuaris amb aquest rol podran gestionar els usuaris dels seus projectes. En concret, podran realitzar, a més de les funcions que ja disposaven al SIC 1.0, les següents accions:
 
-* Concedir/treure els accesos dels seus projectes publicats al SIC als usuaris que considerin oportú.
-* Definir quins permisos té cada usuari en cadascun dels projectes (poden concedir el rol de *Release Manager* a d'altres usuaris que no el tinguin).
+* Concedir/treure els accessos dels seus projectes publicats al SIC als usuaris que considerin oportú.
+* Definir quins permisos té cada usuari en cadascun dels projectes (poden concedir el rol de *Release Manager* a altres usuaris que no el tinguin).
 
 A més d'aquestes noves funcionalitats, cal recordar que ja no caldrà sol·licitar les altes i baixes dels usuaris al SIC. El SIC 2.0 s'ha integrat amb GICAR i, per tant, la gestió d'usuaris es realitza a través de GICAR. 
 
@@ -32,12 +32,12 @@ Per tant, desapareix la necessitat de realitzar peticions a SAU/Remedy per sol·
 
 ## Avantatges
 
-Els avantantges de l'evolució del SIC 2.0 són:
+Els avantatges de l'evolució del SIC 2.0 són:
 
 * S'eliminen temps d'espera administratius. Els desenvolupadors poden treballar des del primer dia.
 * No cal fer cap tràmit administratiu addicional per poder treballar amb els repositoris del SIC. Els equips de desenvolupament es poden centrar exclusivament en les tasques tècniques pròpies del negoci, que són les que aporten valor.
-* Estandardització dels usuaris del SIC, a l'haver-se integrat aquest amb GICAR.
-* No cal involucrar a responsables d'àmbit ni de lot per a la gestió d'usuaris i de repositoris. El propi equip de desenvolupament és autònom.
+* Estandardització dels usuaris del SIC, en haver integrat aquest amb GICAR.
+* No cal involucrar a responsables d'àmbit ni de lot per a la gestió d'usuaris i de repositoris. L'equip de desenvolupament és autònom.
 * Desapareix la limitació de disposar com a màxim 3 *Release Managers* per lot i àmbit.
 
-Per a qualsevol dubte o suggerència, podeu contactar amb el sic a través de SAU/Remedy o un correu electrònic a: `oficina-tecnica.canigo.ctti@gencat.cat`.
+Per a qualsevol dubte o suggeriment, podeu contactar amb el SIC a través de SAU/Remedy o un correu electrònic a la bústia [`oficina-tecnica.canigo.ctti@gencat.cat`](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
