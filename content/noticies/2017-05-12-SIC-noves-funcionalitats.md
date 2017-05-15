@@ -39,4 +39,6 @@ Els avantatges de l'evolució del SIC 2.0 són:
 * No cal involucrar a responsables d'àmbit ni de lot per a la gestió d'usuaris i de repositoris. El lot d'aplicacions té l'autoritat per fer-ho.
 * Desapareix la limitació de disposar com a màxim 3 *Release Managers* per lot i àmbit.
 
+Aviat podreu consultar tota la documentació associada a aquesta nova versió del SIC al [portal|http://canigo.ctti.gencat.cat/sic-documentacio/.
+
 Per a qualsevol dubte o suggeriment, podeu contactar amb el SIC a través de SAU/Remedy o un correu electrònic a la bústia [`oficina-tecnica.canigo.ctti@gencat.cat`](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
