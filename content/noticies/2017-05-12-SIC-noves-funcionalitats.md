@@ -1,5 +1,5 @@
 +++
-date        = "2017-05-11"
+date        = "2017-05-12"
 title       = "SIC 2.0: Millores en la gestió d'usuaris i repositoris"
 description = "Atès la imminent arribada del SIC 2.0, és convenient que tots els usuaris siguin coneixedors de les noves funcionalitats que ofereix aquesta versió. En aquest article, fem un resum dels mòduls de gestió d'usuaris i repositoris."
 sections    = ["Notícies", "home"]
@@ -24,7 +24,7 @@ D'aquesta manera, ja no caldrà realitzar peticions a SAU/Remedy per cobrir cap 
 
 De forma similar que amb l'autoservei d'usuaris, el rol de *Release Manager* adquireix també més funcionalitats pel que fa a la gestió de repositoris.
 
-Al SIC 2.0 disposem d'un nou gestor de repositoris de codi font: **GitLab**. A més a més de les diferències tècniques (els repositoris són Git i no SVN), n'hi ha d'organitzatives. Aprofitant tota l'experiència adquirida amb el SIC 1.0, hem configurat els repositoris de forma diferent. Ara hi ha només un nivell d'agrupació: el codi d'aplicació. L'acrònim de Departament/Unitat Organitzativa l'hem eliminat. D'aquesta manera és més senzill localitzar els projectes a través de l'eina i l'estructura romana independent dels canvis departamentals.
+Al SIC 2.0 disposem d'un nou gestor de repositoris de codi font: **GitLab**. A més a més de les diferències tècniques (els repositoris són Git i no SVN), n'hi ha d'organitzatives. Aprofitant tota l'experiència adquirida amb el SIC 1.0, hem configurat els repositoris de forma diferent. Ara hi ha només un nivell d'agrupació: el codi d'aplicació. L'acrònim de Departament/Unitat Organitzativa l'hem eliminat. D'aquesta manera és més senzill localitzar els projectes a través de l'eina i l'estructura roman independent dels canvis departamentals.
 
 Tot usuari al GitLab pot crear repositoris i grups de repositoris en el seu propi espai personal. Els *Relase Managers*, a més a més, podran crear repositoris oficials en l'espai del SIC. Simplement, hauran d'entrar al grup corresponent al codi d'aplicació del projecte i els hi apareixerà l'opció de creació.
 
