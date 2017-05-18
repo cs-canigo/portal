@@ -30,3 +30,6 @@ Les versions LTS d'un programari usualment adrecen aquestes preocupacions desple
 ### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
 
 Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors.
+
+### Exemple gràfic : node.js
+### Exemple aplicat a casa: entorn de desenvolupament de canigo amb ubuntu 16.04 LTS
