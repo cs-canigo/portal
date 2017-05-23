@@ -1,5 +1,5 @@
 # Google Cloud Next' 17
-![Google Next 17](Screen Shot 2017-02-08 at 10.11.12 AM.png)
+![Google Next 17](https://github.com/cs-canigo/portal/blob/master/content/drafts/Screen%20Shot%202017-02-08%20at%2010.11.12%20AM.png)
 
 Google Cloud Next 17 és l'event que va organtizar Google a Sant Francisco els dies 8,9 i 10 de març. En aquest event s'aprofita per a presentar les novetats referents al treball a nivell empresarial en Cloud, tan en lloc de treball (GSuite), com a nivell d'aplicacions (Google Cloud Platform).
 
