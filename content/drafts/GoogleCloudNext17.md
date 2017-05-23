@@ -42,7 +42,7 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 	- Desplega a la màquina que té un mínim de prestacions a nivell de tipus de disc
 - Aprovisionamet dinàmic de volums estàtics 
 - Aplicacions amb estat
-- Federació de clústers (kubefed) en diverses regions(fins i tot entre on-premis i cloud)
+- Federació de clústers (kubefed) en diverses regions(fins i tot entre on-premise i cloud)
 - Afinitat a pods
 - Afinitat a zones
 - Definició dinàmica de DNS
@@ -59,13 +59,13 @@ En aquesta categoria, la principal novetat va ser la presentació de **Spanner**
 Punt molt potent de Google. Es van presentar varies novetats en aquest apartat:
 -**DPL Data Lost Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
 - **API d'indexació d'imatges**. API que permet categoritzar una imatge en diferents eixos, contingut, detecció de cares, OCR, geogràficament, etc.
-- **API d'indexació de videos**. API que permet no únicament categoritzar un video, sinó identificar el seu contingut i el moment en que apareix. Molt il.lustratiu la demo feta a l'event: [API video ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
+- **API d'indexació de videos**. API que permet no únicament categoritzar un video, sinó identificar el seu contingut i el moment en que apareix. Molt il.lustrativa la demo feta a l'event: [API video ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
 
 
 ## Xarxa
 Durant l'event es van presentar les funcionalitats de Google Cloud Platform en la definició de xarxa en que es va remarcar:
-**- La xarxa ha de ser global.**El Cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el Cloud) utilitzant l'espai d'IPs privades propies.
-**- La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuits i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN, Xarxes privades entre projectes.
+- **La xarxa ha de ser global.**El Cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el Cloud) utilitzant l'espai d'IPs privades propies.
+- **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuits i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN, Xarxes privades entre projectes.
 
 
 
