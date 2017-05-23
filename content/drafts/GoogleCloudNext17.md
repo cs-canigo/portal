@@ -1,11 +1,12 @@
 # Google Cloud Next' 17
-![GoogleNext17]({{site.baseurl}}/content/drafts/GC17/Screen Shot 2017-02-08 at 10.11.12 AM.png)
+
+![GoogleNext17](/content/drafts/GC17/Screen Shot 2017-02-08 at 10.11.12 AM.png)
 
 Google Cloud Next 17 és l'event que va organtizar Google a Sant Francisco els dies 8,9 i 10 de març. En aquest event s'aprofita per a presentar les novetats referents al treball a nivell empresarial en Cloud, tan en lloc de treball (GSuite), com a nivell d'aplicacions (Google Cloud Platform).
 
 Tota l'agenda de l'event es pot veure a [Shedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan publicades a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
 
-![GSuite]({{site.baseurl}}/content/drafts/GC17/Imatge1.png)
+![GSuite](/content/drafts/GC17/Imatge1.png)
 
 La solució de Google al treball col.laboratiu en Cloud amb funcionalitat empresarial és GSuite. Durant l'event es van presentar les principals novetats en aquesta Suite:
 ## Team Drive 
@@ -15,7 +16,7 @@ Entorn de desenvolupament d’aplicacions JS internes orientades a gestió de da
 ## Jamboard 
 Pissarra que permet col·laboració en temps real a través de Hangouts.
 
-![GCPlatform]({{site.baseurl}}/content/drafts/GC17/Imatge3.png)
+![GCPlatform](/content/drafts/GC17/Imatge3.png)
 
 Dins de la categoria de Cloud Platform, Google ofereix solucions a diferents nivells:
 ## Plataformes d'execució
