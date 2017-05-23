@@ -1,3 +1,5 @@
++++ date = "2017-05-23" title = "Google Cloud Next 17" description = "Google Cloud Next 17" section = "noticies" categories = ["cloud"] key = "MAIG2017" +++
+
 # Google Cloud Next' 17
 
 ![GoogleNext17](/content/drafts/GC17/GC17.png)
