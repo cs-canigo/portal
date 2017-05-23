@@ -33,6 +33,7 @@ Les principals novetats en aquesta categoria es van presentar a nivell de Kubern
 - Escalat horitzontal manual I automatitzat
 - Reinici automàtic
 - Balanceig integrat
+
 Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 - Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP (Ingress)
 - Nous paràmetres de desplegament:
