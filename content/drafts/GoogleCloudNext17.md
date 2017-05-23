@@ -1,5 +1,5 @@
 # Google Cloud Next' 17
-![Google Next 17]({{site.baseurl}}/content/drafts/Screen Shot 2017-02-08 at 10.11.12 AM.png)
+![Google Next 17](Screen Shot 2017-02-08 at 10.11.12 AM.png)
 
 Google Cloud Next 17 és l'event que va organtizar Google a Sant Francisco els dies 8,9 i 10 de març. En aquest event s'aprofita per a presentar les novetats referents al treball a nivell empresarial en Cloud, tan en lloc de treball (GSuite), com a nivell d'aplicacions (Google Cloud Platform).
 
@@ -67,8 +67,3 @@ Punt molt potent de Google. Es van presentar varies novetats en aquest apartat:
 Durant l'event es van presentar les funcionalitats de Google Cloud Platform en la definició de xarxa en que es va remarcar:
 - **La xarxa ha de ser global.**El Cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el Cloud) utilitzant l'espai d'IPs privades propies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuits i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN, Xarxes privades entre projectes.
-
-
-
-
-
