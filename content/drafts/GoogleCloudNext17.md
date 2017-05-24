@@ -1,6 +1,6 @@
 +++ date = "2017-05-24" title = "Google Cloud Next 17" description = "Google Cloud Next 17" sections = ["Blog", "home"] blog_tags = ["comunicacions", "noticies", "google"] imatge = "/images/bloc/GC17.png" key = "MAIG2017" +++
 
-# Google Cloud Next' 17
++++ date = "2017-05-24" title = "Google Cloud Next 17" description = "Google Cloud Next 17"  blog_tags = ["cloud", "google", "kubernetes"] imatge = "/images/bloc/GC17.png" aliases = [ "/bloc/2017/05/GC17/" ] key = "MAIG2017" +++
 
 ![GoogleNext17](/images/bloc/GC17.png)
 
