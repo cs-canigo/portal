@@ -29,7 +29,8 @@ La solució de Google al treball col.laboratiu en Cloud amb funcionalitat empres
 
 Dins de la categoria de Cloud Platform, Google ofereix solucions a diferents nivells:
 ## Plataformes d'execució
-On segons si la gestió recau més en el desenvolupador o en Google, ens ofereix.
+On segons si la gestió recau més en el desenvolupador o en Google, ens ofereix:
+
 - **AppEngines**. Motors d'execució gestionats per Google on sols es desplega el codi d'aplicació.
 - **Contenidors**. Desplegament de contenidors a través de l'orquestrador **Kubernetes**. 
 - **Infraestructura**. Potencia a nivell de SO.
