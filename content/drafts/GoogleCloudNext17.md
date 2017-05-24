@@ -1,7 +1,15 @@
-+++ date = "2017-05-24" title = "Google Cloud Next 17" description = "Google Cloud Next 17" sections = ["Blog", "home"] blog_tags = ["comunicacions", "noticies", "google"] imatge = "/images/bloc/GC17.png" key = "MAIG2017" +++
-
-+++ date = "2017-05-24" title = "Google Cloud Next 17" description = "Google Cloud Next 17"  blog_tags = ["cloud", "google", "kubernetes"] imatge = "/images/bloc/GC17.png" aliases = [ "/bloc/2017/05/GC17/" ] key = "MAIG2017" +++
-
++++
+date        = "2017-05-24"
+title       = "Google Cloud Next 17"
+description = "Novetats Google Cloud Next 17"
+sections = ["Blog", "home"]
+blog_tags = ["google", "kubernetes"]
+imatge = "/images/bloc/GC17.png"
+aliases = [
+"/bloc/2017/05/GC17/"
+]
+key         = "ABRIL2017"
++++
 ![GoogleNext17](/images/bloc/GC17.png)
 
 Google Cloud Next 17 és l'event que va organtizar Google a Sant Francisco els dies 8,9 i 10 de març. En aquest event s'aprofita per a presentar les novetats referents al treball a nivell empresarial en Cloud, tan en lloc de treball (GSuite), com a nivell d'aplicacions (Google Cloud Platform).
@@ -60,12 +68,14 @@ En aquesta categoria, la principal novetat va ser la presentació de **Spanner**
 
 ## Data Analytics - Machine Learning
 Punt molt potent de Google. Es van presentar varies novetats en aquest apartat:
--**DPL Data Lost Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
+
+- **DPL Data Lost Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
 - **API d'indexació d'imatges**. API que permet categoritzar una imatge en diferents eixos, contingut, detecció de cares, OCR, geogràficament, etc.
 - **API d'indexació de videos**. API que permet no únicament categoritzar un video, sinó identificar el seu contingut i el moment en que apareix. Molt il.lustrativa la demo feta a l'event: [API video ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
 
 
 ## Xarxa
 Durant l'event es van presentar les funcionalitats de Google Cloud Platform en la definició de xarxa en que es va remarcar:
+
 - **La xarxa ha de ser global.** El Cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el Cloud) utilitzant l'espai d'IPs privades propies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuits i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN, Xarxes privades entre projectes.
