@@ -15,7 +15,7 @@ key         = "MAIG2017"
 
 Google Cloud Next 17 és l'event que va organtizar Google a Sant Francisco els dies 8,9 i 10 de març. En aquest event s'aprofita per a presentar les novetats referents al treball a nivell empresarial en Cloud, tan en lloc de treball (GSuite), com a nivell d'aplicacions (Google Cloud Platform).
 
-Tota l'agenda de l'event es pot veure a [Shedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan publicades a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
+Tota l'agenda de l'event es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan publicades a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
 
 ![GSuite](/images/bloc/Imatge1.png)
 
