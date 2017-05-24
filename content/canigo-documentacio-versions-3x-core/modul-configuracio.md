@@ -312,6 +312,29 @@ Si es vol modificar aquest path s'ha d'afegir la propietat **application.configL
 
 	*.application.configLocation=classpath*:/config/props/*.properties
 	
+#### Condicionar la configuració de Spring Boot
+
+Spring Boot ofereix la possibilitat de condicionar diversos aspectes de la configuració (Per exemple quines classes s'han de carregar, o que controladors s'han d'exposar) segons si compleixen unes condicions:
+
+https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-auto-configuration.html
+
+Per a poder utilitzar propietats en aquestes condicions s'ha de carregar específicament per a aquest motiu un fitxer de configuració propi, ja que les propietats de l'aplicació es carreguen després de resoldre aquestes condicions.
+
+Per a carregar aquest fitxer de propietas s'ha d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
+
+
+	@Configuration
+	@PropertySource("classpath:/config/props/boot.properties")
+	@ImportResource({ "classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml" })
+	@EnableTransactionManagement
+	public class AppConfig {
+		
+	}
+
+Indicant el path on es troba aquest fitxer.
+
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat] (/canigo-documentacio-versions-3x-core/modul-seguretat/)
+		
 
 Preguntes freqüents
 -------------------

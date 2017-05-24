@@ -35,6 +35,7 @@ La configuració es realitza automàticament a partir de l'eina de suport al des
 
 * Configuració de filtres web
 * Configuració de JWT (JSON Web Token)
+* Publicació Controladors de Seguretat
 * Configuració d'autenticació
 * Configuració d'autorització
 * Configuració de la font de dades de l'esquema de seguretat
@@ -83,6 +84,26 @@ Aquesta crida ens retornarà un token vàlid. Per a les següents peticions s'ha
 Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
 
 Més endavant es mostra un exemple de configuració a Canigó de JWT + GICAR.
+
+#### Publicació Controladors de Seguretat
+
+Per defecte el mòdul de seguretat publica les api /auth i /login.
+
+En cas de no voler publicar-les a la nostra aplicació s'hauria de condicionar la càrrega de Spring Boot de la següent manera:
+
+Al fitxer de configuració de l'aplicació (AppConfig.java) afegir l'annotació @PropertySource al fitxer boot.properties que s'ha de crear:
+
+	@Configuration
+	@PropertySource("classpath:/config/props/boot.properties")
+	@ImportResource({ "classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml" })
+	@EnableTransactionManagement
+	public class AppConfig {
+	}
+	
+Crear el fitxer /src/main/reources/config/props/boot.properties amb la propietat *publishAuthController* a false:
+
+	publishAuthController=false
+
 
 #### Configuració de l'autenticació
 
