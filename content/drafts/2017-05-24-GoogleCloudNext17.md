@@ -2,7 +2,7 @@
 date        = "2017-05-24"
 title       = "Google Cloud Next 17"
 description = "Novetats Google Cloud Next 17"
-sections = ["Blog", "home"]
+sections = []
 blog_tags = ["google", "kubernetes"]
 imatge = "/images/bloc/GC17.png"
 aliases = [
