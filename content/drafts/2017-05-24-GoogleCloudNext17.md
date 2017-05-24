@@ -20,9 +20,9 @@ Tota l'agenda de l'event es pot veure a [Shedule](https://cloudnext.withgoogle.c
 ![GSuite](/images/bloc/Imatge1.png)
 
 La solució de Google al treball col.laboratiu en Cloud amb funcionalitat empresarial és GSuite. Durant l'event es van presentar les principals novetats en aquesta Suite:
-- ** Team Drive **. Google Drive Corporatiu . Permetrà veure’s com a unitat local tot i no estar sincronitzat. Els documentes hostatjats no pertanyen a una persona, sinó a la corporació.
-- ** App Maker ** Entorn de desenvolupament d’aplicacions JS internes orientades a gestió de dades. (https://developers.google.com/appmaker/)
-- ** Jamboard ** Pissarra que permet col·laboració en temps real a través de Hangouts.
+- **Team Drive**. Google Drive Corporatiu . Permetrà veure’s com a unitat local tot i no estar sincronitzat. Els documentes hostatjats no pertanyen a una persona, sinó a la corporació.
+- **App Maker** Entorn de desenvolupament d’aplicacions JS internes orientades a gestió de dades. (https://developers.google.com/appmaker/)
+- **Jamboard** Pissarra que permet col·laboració en temps real a través de Hangouts.
 
 ![GCPlatform](/images/bloc/Imatge3.png)
 
