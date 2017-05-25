@@ -14,7 +14,7 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 * Les imatges de docker es crearan sempre a partir del fitxer Dockerfile, en cap cas es crearan imatges a partir de contenidors.
 * En cas que existeixin imatges homologades pel CTTI de la tecnologia requerida, el Dockerfile particular de cada aplicació haurà de tenir com a base la imatge homologada, utilitzant la directiva **FROM**.
 * En cas que no existeixin imatges homologades pel CTTI de la tecnologia requerida, a l'hora d'escollir les imatges de base es faran servir els següents criteris:
-	* Imatge oficial de fabricant al [docker hub](docker hub)
+	* Imatge oficial de fabricant al [docker hub](https://hub.docker.com/).
 	* En cas que existeixi una imatge oficial basada en **[Alpine](https://hub.docker.com/_/alpine/)**, s'escollirà aquesta.
 	* En cas que no existeixi una imatge oficial basada en Alpine, s'escollirà la que recomani el fabricant. Sol ser la que al tag només s'indica la versió.
 
