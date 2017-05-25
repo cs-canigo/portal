@@ -19,7 +19,7 @@ En aquest HowTo es parteix de l'aplicació Canigó que genera el [plugin de Cani
 
 ### Modificar el pom.xml
 
-S'ha de realitzar la exclusions al mòdul de Spring Boot de Tomcat **spring-boot-starter-tomcat**
+S'ha de realitzar l'exclusió al mòdul de Spring Boot de Tomcat **spring-boot-starter-tomcat**
 
 	<dependency>
       <groupId>org.springframework.boot</groupId>
@@ -36,7 +36,7 @@ S'ha de realitzar la exclusions al mòdul de Spring Boot de Tomcat **spring-boot
       </exclusions>
     </dependency>
 
-S'ha de realitzar la exclusió de la llibreria **xml-apis** del mòdul de Spring Boot, spring-boot-starter-data-jpa
+S'ha de realitzar l'exclusió de la llibreria **xml-apis** del mòdul de Spring Boot, spring-boot-starter-data-jpa
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -53,9 +53,9 @@ S'ha de realitzar la exclusió de la llibreria **xml-apis** del mòdul de Spring
       </exclusions>
     </dependency>
 
-### PersistenceProviderRsolver
+### PersistenceProviderResolver
 
-Per a aconseguir que la nostra aplicació resolgui a HiberPersistenceProvider i no carregui el Provider que proporciona la implementació OpenJPA de Websphere hem de implementar la nostra pròpia classe de PersistenceProviderResolver i fer que la nostra aplicació utilitzi aquesta classe registrant-la abans de realitzar l'inicialització de la nostra capa de persistència.
+Per a aconseguir que la nostra aplicació resolgui a HibernatePersistenceProvider i no carregui el Provider que proporciona la implementació OpenJPA de Websphere hem de implementar la nostra pròpia classe de PersistenceProviderResolver i fer que la nostra aplicació utilitzi aquesta classe registrant-la abans de realitzar la inicialització de la nostra capa de persistència.
 
 Per fer això hem creat la carpeta webpshere a l'aplicació i creat el fitxer HibernatePersistenceProviderResolver.java amb el següent codi:
 
