@@ -5,7 +5,6 @@ description = "Criteris per crear les imatges dels contenidors docker que es des
 section = "Container Cloud"
 categories = ["cloud","docker","container","paas","openshift"]
 +++
-
 ### Introducció
 
 A l'hora de crear les imatges dels diferents contenidors docker per les aplicacions gencat cal establir un conjunt de criteris que garanteixin la seva estabilitat i seguretat.
@@ -21,7 +20,9 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 * Mai s'escollirà el tag latest. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
 
 ### Criteris generals per la creació de les imatges
+
 Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades pel CTTI.
+
 * Deixar instal·lat el nombre mínim de paquets al docker, si és necessari instal·lar paquets per realitzar compilacions, desinstal·lar-los un cop realitzada aquesta.
 * No deixar el codi font al docker, un cop compilat, eliminar-lo.
 * Incloure a la imatge el script **wait-for-it.sh**, adjuntat a baix, per poder testejar les comunicacions. Notar que requereix tenir el bash instal·lat.
@@ -32,13 +33,16 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Utilitzar el volum **/data** per desar la informació que cal persistir.
 
 ### Criteris de seguretat
+
 * Intentar utilitzar l'última versió del producte, sol ser la que té menys vulnerabilitats de seguretat.
 * Per validar la seguretat de les imatges creades, utilitzar l'eina [Clair](https://github.com/coreos/clair). En cas que es detectin vulnerabilitats, intentar eliminar-les instal·lant els patches necessaris.
 * Aplicar totes les configuracions de seguretat recomanades pel fabricant o la comunitat per cada producte en particular.
 
 ### Criteris específics de Openshift
+
 [Openshift](https://www.openshift.com/), tot i que suporta desplegar imatges de docker, presenta uns criteris més restrictius de seguretat que cal tenir present a l'hora de construir el Dockerfile.
-* No utilitzar l'usuari **root** ni per executar l'script principal del docker (normalment s'utilitza l'usuari root). Utilitzar la directiva **USER <uid>** per definir amb quin usuari s'executarà el procés.
+
+* No utilitzar l'usuari **root** ni per executar l'script principal del docker (normalment s'utilitza l'usuari root). Utilitzar la directiva **USER uid** per definir amb quin usuari s'executarà el procés.
 * Utilitzar variables d'entorn per la configuració
 * Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html)
 
