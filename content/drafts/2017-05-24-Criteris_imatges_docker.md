@@ -12,11 +12,13 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 ### Criteris per escollir la imatge base
 
 * Les imatges de docker es crearan sempre a partir del fitxer Dockerfile, en cap cas es crearan imatges a partir de contenidors.
-* En cas que existeixin imatges homologades pel CTTI de la tecnologia requerida, el Dockerfile particular de cada aplicació haurà de tenir com a base la imatge homologada, utilitzant la directiva **FROM**
+* En cas que existeixin imatges homologades pel CTTI de la tecnologia requerida, el Dockerfile particular de cada aplicació haurà de tenir com a base la imatge homologada, utilitzant la directiva **FROM**.
 * En cas que no existeixin imatges homologades pel CTTI de la tecnologia requerida, a l'hora d'escollir les imatges de base es faran servir els següents criteris:
+
 ** Imatge oficial de fabricant al [docker hub](docker hub)
 ** En cas que existeixi una imatge oficial basada en **[Alpine](https://hub.docker.com/_/alpine/)**, s'escollirà aquesta.
 ** En cas que no existeixi una imatge oficial basada en Alpine, s'escollirà la que recomani el fabricant. Sol ser la que al tag només s'indica la versió.
+
 * Mai s'escollirà el tag latest. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
 
 ### Criteris generals per la creació de les imatges
@@ -29,7 +31,7 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * No executar mai el procés final de les aplicacions amb l'usuari **root**. La majoria de tecnologies inclouen scripts que utilitzen usuaris específics per arrencar-les.
 * Fixar els uid i gid dels usuaris i grups utilitzats per executar els processos, amb l'objectiu d'evitar escalat de privilegis.
 * Assegurar la seguretat dels directoris definint el propietari i els permisos explícitament. S'adjunta a baix l'script **docker-setup.sh** d'exemple.
-* Executar el procés principal des d'un script, mai directament al Dockerfile
+* Executar el procés principal des d'un script, mai directament al Dockerfile.
 * Utilitzar el volum **/data** per desar la informació que cal persistir.
 
 ### Criteris de seguretat
@@ -43,8 +45,8 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 [Openshift](https://www.openshift.com/), tot i que suporta desplegar imatges de docker, presenta uns criteris més restrictius de seguretat que cal tenir present a l'hora de construir el Dockerfile.
 
 * No utilitzar l'usuari **root** ni per executar l'script principal del docker (normalment s'utilitza l'usuari root). Utilitzar la directiva **USER uid** per definir amb quin usuari s'executarà el procés.
-* Utilitzar variables d'entorn per la configuració
-* Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html)
+* Utilitzar variables d'entorn per la configuració.
+* Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html).
 
 ## Exemples
 Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [docker hub de gencatcloud](https://hub.docker.com/u/gencatcloud/).
