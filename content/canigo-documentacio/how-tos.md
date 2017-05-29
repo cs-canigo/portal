@@ -1,17 +1,17 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
-title       = "Howto"
-description = "Normes aplicables al desenvolupament d'aplicacions"
-sections    = "How to"
+title       = "HOWTOs"
+description = "HOWTOs d'utilitat per els diferents serveis que ofereix el CS Canigó"
+sections    = "HOWTOs"
 taxonomies  = []
 weight 		= 4
 +++
 
-Un how-to és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.
+Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.
 
-En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.
+En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.
 
-How-to disponibles actualment:
+HOWTOs disponibles actualment:
 
 - [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
 - [Connectar amb una BBDD Mongo amb SSL a través de NodeJS](/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl)
