@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar la 
 
 How-to disponibles actualment:
 
+- [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
 - [Connectar amb una BBDD Mongo amb SSL a través de NodeJS](/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl)
 - [Inserció/actualització massiva de dades a una aplicació Canigó 3.2](/howtos/2017-04-Batch-inserts-updates-canigo32)
 - [Securitzar accés a Elasticsearch des d'una pàgina web](/howtos/2017-03-Securitzar_ElasticSearch_Apache)
