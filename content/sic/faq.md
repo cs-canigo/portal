@@ -47,6 +47,11 @@ Mantindrà el mateix rol o rols al Gitlab/Jobs Jenkins, ja que aquest s'han here
 
 <br/>
 
+#### **Si ja estic logat a GICAR, per què em torna a demanar les credencials en accedir als portals Gitlab/Jenkins del SIC?** ####
+Els portals Gitlab/Jenkins del SIC no es troben adherits al Single Sign-On de GICAR (no llegeixen les capçaleres d'autenticació GICAR). L'autenticació i autorització es realitza contra l'LDAP del SIC, on s'han bolcat les dades dels usuaris GICAR.
+
+<br/>
+
 #### **CPD tindrà accés als binaris de l'aplicació que pugi al Gitlab?** ####
 No. Al Gitlab no es permetrà la pujada de binaris (.jar, .war, .ear, .exe, .dll, ...) tal com es va habilitar al SVN. Per tant no caldrà que CPD hi accedeixi.
 
@@ -64,12 +69,12 @@ Els accessos dels usuaris es maneguen a nivell de grups, no de projectes dins d'
 
 <br/>
 
-
 #### **Quina diferència hi ha entre espai privat i espai corporatiu al Gitlab de SIC i a quin espai he de crear els projectes?** ####
 
-Els usuaris Release Manager podran crear tant grups d'aplicació com projectes dins el seu espai personal al portal Gitlab. Per tal d''oficialitzar' l'entrega del codi font d'un projecte, aquest haurà de figurar a l'espai corporatiu de SIC
+Els usuaris Release Manager podran crear tant grups d'aplicació com projectes dins el seu espai personal al portal Gitlab. Per tal d''oficialitzar' a CTTI l'entrega del codi font d'un projecte, aquest haurà de figurar a l'espai corporatiu de SIC.
 
-Els grups d'aplicació oficials només podran ser creats per l'equip del SIC:. Els de les noves aplicacions es crearan arran les reunions de Fase0 de l'aplicació i els ja existents a partir de migracions de repositoris SVN.
+Els grups d'aplicació oficials només podran ser creats per l'equip del SIC. Els de les noves aplicacions es crearan arran les reunions de Fase0 de l'aplicació i els ja existents a partir de migracions de repositoris SVN.
 Els projectes dins els grups d'aplicació sí que podran ser creats per els propis usuaris Release Manager mitjançant el portal Gitlab.
 
+<br/>
 
