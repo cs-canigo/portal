@@ -26,14 +26,22 @@ weight 		= 3
 
 <br/>
 
-#### **Com puc migrar el codi dels repositoris SVN de SIC cap al Gitlab?** ####
-En breu es proporcionaran instruccions per realitzar la de migració de contingut d'un SCM cap a l'altre.
+#### **Com puc migrar el codi dels repositoris SVN de SIC cap als del Gitlab?** ####
+Caldrà:
+
+* Comprovar que es disposa d'accés al grup d'aplicació al Gitlab. En cas que no es disposi d'accés, haurà de demanar a algun usuari Release Manager del Lot que li concedeixi mitjançant l'Autoservei d'usuaris del Gitlab.
+* Crear el projecte de l'aplicació dins aquest grup.
+* Publicar el repositori GIT local en aquest.
+
+En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
 
 <br/>
 
-#### **Puc treballar simultàniament amb SIC 1.0 i SIC 2.0?** ####
-Pot continuar treballant amb els repositoris SVN en els que ja havia pujat codi amb anterioritat. Per a les noves aplicacions, ja haurà de començar a treballar amb Gitlab.
-No haurà de treballar en cap cas simultàniament amb el repositori SVN i repositori del projecte de la mateixa aplicació a Gitlab.
+#### **Puc treballar simultàniament amb el repositori SVN i repositori Gitlab de la mateixa aplicació?** ####
+No. En cas de fer-ho, seria difícil discernir quin dels 2 conté la darrera versió del codi. 
+
+Per a les noves aplicacions, ja haurà de començar a treballar directament amb Gitlab. Per a aquelles aplicacions que migri del SVN cap al Gitlab, haurà de deixar de treballar amb el repositori SVN i fer servir únicament el repositori al Gitlab.
+
 
 <br/>
 
@@ -52,13 +60,6 @@ Els portals Gitlab/Jenkins del SIC no es troben adherits al Single Sign-On de GI
 
 <br/>
 
-#### **CPD tindrà accés als binaris de l'aplicació que pugi al Gitlab?** ####
-No. Al Gitlab no es permetrà la pujada de binaris (.jar, .war, .ear, .exe, .dll, ...) tal com es va habilitar al SVN. Per tant no caldrà que CPD hi accedeixi.
-
-S'està treballant en un sistema alternatiu a SVN/Gitlab per a la compartició de binaris d'aplicació amb CPD. Aquest sistema es recolzarà amb el Jenkins de SIC.
-La previsió és que es trobi enllestit a finals Juny 2017. En breu s'alliberarà més informació sobre el funcionament d'aquest sistema. Entretant, caldrà continuar emprant el SVN per a la compartició de binaris.
-
-<br/>
 
 #### **Quina diferència hi ha entre grup d'aplicació i projecte dins el Gitlab de SIC?** ####
 
