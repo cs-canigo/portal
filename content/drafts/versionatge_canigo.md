@@ -4,7 +4,6 @@ title       = "Versionatge Canigó. Introducció de l'´ús de versions LTS"
 description = "Versionatge Canigó. Introducció de l'´ús de versions LTS"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "JUNY2017"
 +++
 
 En la futura evolució de Canigó es preveu introduïr el concepte de versions LTS, així com a dotar de significat especials als dígits de versionatge.
@@ -31,4 +30,3 @@ Mentrestant des de el CS Canigó treballarà en la futura versió LTS amb noves 
 
 	3.3 = versió de proves interna no apta per producció
 	3.4 = LTS + funcionalitats noves de CORE
-	
