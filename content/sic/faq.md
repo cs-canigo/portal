@@ -46,7 +46,7 @@ Caldrà:
 * Comprovar que es disposa d'accés al grup d'aplicació al Gitlab. En cas que no es disposi d'accés, haurà de demanar a algun usuari Release Manager del Lot que li concedeixi mitjançant l'Autoservei d'usuaris del Gitlab.
 * Crear el projecte de l'aplicació dins aquest grup.
 * Publicar el repositori GIT local en aquest.
-* Una vegada migrat el repositori, caldrà comunicar-ho a l'equip de SIC per tal que desactivin l'accés d'escriptura al repositori SVN.
+* Una vegada migrat el repositori, caldrà comunicar-ho a l'equip de SIC (consulta o petició de suport tècnic a Framework SIC via SAU-Remedy) per tal que desactivin l'accés d'escriptura al repositori SVN.
 En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
 
 <br/>
@@ -57,6 +57,12 @@ No. En cas de fer-ho, seria difícil discernir quin dels 2 conté la darrera ver
 Per a les noves aplicacions, ja haurà de començar a treballar directament amb Gitlab. Per a aquelles aplicacions que migri del SVN cap al Gitlab haurà de deixar de treballar amb el repositori SVN, comunicar-ho a l'equip de SIC i fer servir únicament el repositori al Gitlab.
 
 <br/>
+
+#### **Fins quan podem utilitzar el SVN?** ####
+La data planificada per al tancament definitiu del SVN és el **6 de Novembre de 2017**. Tots els repositoris SVN han d'estar migrats al Gitlab de SIC abans d'aquesta data.
+
+<br/>
+
 
 #### **Com afectarà la migració de codi de SVN a Gitlab als jobs Jenkins de l'aplicació?** ####
 S'actualitzarà l'origen de dades d'aquests per tal que apuntin al repositori del projecte de Gitlab. Els nous jobs es crearan seguint el nou tipus de job Pipeline però els ja creats romandran amb el format actual.
