@@ -26,8 +26,6 @@ ____
 
 **Notes addicionals per a SIC 1.0**
 
-És obligatori que tant la petició de creació d'aplicació al repositori de codi font del SIC com la petició d'alta dels Jobs d'una aplicació al Portal d'Integració Contínua del SIC sigui realitzada pel responsable del projecte (persona dins el CTTI o d'un Departament).
-
 És obligatori que les peticions de modificació de dades sobre una aplicació donada d'alta al repositori de codi font del SIC o al Portal d'Integració Contínua del SIC sigui realitzada pel responsable tècnic de l'aplicació (persona responsable per part del proveïdor) o bé pel responsable del projecte.
 
 Per aquelles aplicacions que no tenen codi de diàleg cal seguir el següent [procediment](/sic-related/procediment).
