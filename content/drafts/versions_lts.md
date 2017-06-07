@@ -35,10 +35,10 @@ En cas que el programari escollit no ofereixi versions LTS, s'hauran d'utilitzar
 
 ### Exemples
 
-#### NodeJS
+* NodeJS
 
 ![NodeJS schedule](/images/bloc/nodejs_schedule.png)
  
-#### Ubuntu
+* Ubuntu
 
 ![Ubuntu schedule](/images/bloc/ubuntu_schedule.png)
