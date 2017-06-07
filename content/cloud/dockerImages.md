@@ -7,11 +7,11 @@ weight        = 6
 toc           = true
 categories    = ["cloud","docker","container","paas","openshift"]
 +++
-### Introducció
+## Introducció
 
 A l'hora de crear les imatges dels diferents contenidors docker per les aplicacions gencat cal establir un conjunt de criteris que garanteixin la seva estabilitat i seguretat.
 
-### Criteris per escollir la imatge base
+## Criteris per escollir la imatge base
 
 * Les imatges de docker es crearan sempre a partir del fitxer Dockerfile, en cap cas es crearan imatges a partir de contenidors.
 * En cas que existeixin imatges homologades pel CTTI de la tecnologia requerida, el Dockerfile particular de cada aplicació haurà de tenir com a base la imatge homologada, utilitzant la directiva **FROM**.
@@ -22,7 +22,7 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 
 * Mai s'escollirà el tag latest. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
 
-### Criteris generals per la creació de les imatges
+## Criteris generals per la creació de les imatges
 
 Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades pel CTTI.
 
@@ -35,7 +35,7 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Executar el procés principal des d'un script, mai directament al Dockerfile.
 * Utilitzar el volum **/data** per desar la informació que cal persistir.
 
-### Criteris de seguretat
+## Criteris de seguretat
 
 * Intentar utilitzar l'última versió del producte, sol ser la que té menys vulnerabilitats de seguretat.
 * Per validar la seguretat de les imatges creades, utilitzar l'eina [Clair](https://github.com/coreos/clair). En cas que es detectin vulnerabilitats, intentar eliminar-les instal·lant els patches necessaris.
@@ -43,7 +43,7 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 
 Abans de desplegar un contenidor a producció, es realitzarà una validació de seguretat utilitzant l'eina Clair. En cas de detectar vulnerabilitats de caràcter greu la imatge no serà desplegada.
 
-### Criteris específics de Openshift
+## Criteris específics de Openshift
 
 [Openshift](https://www.openshift.com/), tot i que suporta desplegar imatges de docker, presenta uns criteris més restrictius de seguretat que cal tenir present a l'hora de construir el Dockerfile.
 
@@ -60,7 +60,7 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [docker hub de gencatcloud](https://hub.docker.com/u/gencatcloud/).
 Les imatges amb extensió **-openshift* són les compatibles amb la plataforma de xPaaS del mateix nom.
 
-### Annexos
+## Annexos
 _wait-for-it.sh_
 ```
 #!/usr/bin/env bash
