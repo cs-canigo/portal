@@ -13,14 +13,19 @@ key         = "MAIG2017"
 
 # Google Cloud Next '17
 
+
 ![GoogleNext17](/images/bloc/GC17.png)
+
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
 
 Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
 
 ## GSuite
+
+
 ![GSuite](/images/bloc/Imatge1.png)
+
 
 La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
 
@@ -48,6 +53,7 @@ Disposen de diferents opcions en que els integradors tenen més o menys graus de
 
 Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 **Kubernetes** és l'orquestrador de clusters de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
+
 - Auto-corregit [Toni: explicar. què s'autocorregeix?]
 - Programació [Toni: data i hora?] del desplegament [Toni: dels contenidors?, del creixement?]
 - Escalat horitzontal manual o automàtic
@@ -55,6 +61,7 @@ Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 - Balanceig integrat [Toni: Manual o automàtic o sempre automàtic?]
 
 Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
+
 - Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP (Ingress) [Toni: què és Ingress? posar link]
 - Nous paràmetres de desplegament:
     - Condicionar el desplegament a la tipologia de hardware sobre el que s'executa:
@@ -70,6 +77,7 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 
 ### Emmagatzemament de dades
 En aquesta categoria, la principal novetat va ser la presentació de **Spanner**. [Toni: afegir link] Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una demo [Toni: tenim link al youtube?] amb les següents característiques:
+
 - BBDD desplegada en tres regions Google
 - 500.000 ventes [Toni: vendes?] transaccionals per minut
 - 3 Bilions [Toni: són bilions americans?] de files
