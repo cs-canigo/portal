@@ -39,6 +39,8 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Per validar la seguretat de les imatges creades, utilitzar l'eina [Clair](https://github.com/coreos/clair). En cas que es detectin vulnerabilitats, intentar eliminar-les instal·lant els patches necessaris.
 * Aplicar totes les configuracions de seguretat recomanades pel fabricant o la comunitat per cada producte en particular.
 
+Abans de desplegar un contenidor a producció, es realitzarà una validació de seguretat utilitzant l'eina Clair. En cas de detectar vulnerabilitats de caràcter greu la imatge no serà desplegada.
+
 ### Criteris específics de Openshift
 
 [Openshift](https://www.openshift.com/), tot i que suporta desplegar imatges de docker, presenta uns criteris més restrictius de seguretat que cal tenir present a l'hora de construir el Dockerfile.
