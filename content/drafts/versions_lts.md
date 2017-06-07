@@ -37,8 +37,8 @@ En cas que el programari escollit no ofereixi versions LTS, s'hauran d'utilitzar
 
 #### NodeJS
 
- "/images/bloc/nodejs_schedule.png"
-
+![NodeJS schedule](/images/bloc/nodejs_schedule.png)
+ 
 #### Ubuntu
 
-"/images/bloc/ubuntu_schedule.png"
+![Ubuntu schedule](/images/bloc/ubuntu_schedule.png)
