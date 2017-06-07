@@ -8,7 +8,7 @@ categories  = ["sic"]
 
 ## SIC 2.0
 
-El passat 31/05 es va realitzar la presentació oficial del SIC 2.0. Com ja s'ha comentat en altres comunicats, aquesta nova versió del SIC incorpora:
+El passat 31 de Maig es va realitzar la presentació oficial del SIC 2.0. Com ja s'ha comentat en altres comunicats, aquesta nova versió del SIC incorpora:
 
 * Un autoservei d'usuaris, mitjançant el qual, els usuaris estan precarregats (només es requereix fer un login previ a GitLab) i s'ha establert un sistema d'assignació de privilegis que funciona de la següent manera:
 	* Per a Release Managers i administradors de CPD/Lloc de Treball, els privilegis s'assignen de forma automàtica.
@@ -24,7 +24,7 @@ Aquestes noves funcionalitats s'han adquirit gràcies a la implantació dels seg
 * Integració amb GICAR
 * GitLab
 * Versió 2+ de Jenkins
-* Implantació del mòdul de Gestió de Binaris (previst per al proper 26/06)
+* Implantació del mòdul de Gestió de Binaris (previst per al proper 26 de Juny)
 
 Podeu descarregar-vos la presentació fent clic a [aquest enllaç](/related/sic/2.0/SIC-2.0.pdf).
 
@@ -44,11 +44,11 @@ No es permet la inclusió d'arxius binaris al GitLab. En el cas que s'hagi d'emm
 
 * Per a llibreries: Utilitzar el Nexus del SIC.
 * Per a d'altres binaris:
-	* Fins al 26/06, s'haurà de seguir utilitzant el SVN per a la pujada de binaris.
-	* A partir del 26/06, s'haurà d'utilitzar el nou mòdul de Gestió de Binaris, que estarà disponible a través de l'URL: [`https://bin.sic.intranet.gencat.cat`](https://bin.sic.intranet.gencat.cat).
+	* Fins al 26 de Juny, s'haurà de seguir utilitzant el SVN per a la pujada de binaris.
+	* A partir del 26 de Juny, s'haurà d'utilitzar el nou mòdul de Gestió de Binaris, que estarà disponible a través de l'URL: [`https://bin.sic.intranet.gencat.cat`](https://bin.sic.intranet.gencat.cat).
 
 ## Informació disponible
 
 Aquestes són les característiques més importants que cal tenir en compte amb el SIC 2.0. Per a més informació, podeu consultar el [FAQ del SIC](/sic/faq/) i/o els [Manuals del SIC](/sic-documentacio/manuals/).
 
-En cas de tenir qualsevol dubte, ens podeu enviar una consulta a través de SAU-Remedy (servei Framework SIC) o al correu: [`oficina-tecnica.canigo.ctti@gencat.cat`](oficina-tecnica.canigo.ctti@gencat.cat).
+En cas de tenir qualsevol dubte, ens podeu enviar una consulta a través de SAU-Remedy (servei Framework SIC) o al correu: `oficina-tecnica.canigo.ctti@gencat.cat`.
