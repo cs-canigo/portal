@@ -1,5 +1,5 @@
 +++
-date        = "2017-06-7"
+date        = "2017-06-07"
 title       = "SIC. Llençament del SIC 2.0"
 description = "SIC. Llençament del SIC 2.0"
 sections    = ["Notícies"]
