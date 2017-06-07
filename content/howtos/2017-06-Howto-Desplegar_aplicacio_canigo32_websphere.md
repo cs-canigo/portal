@@ -1,7 +1,7 @@
 +++
 date        = "2017-06-01"
-title       = "Desplegar una aplicació Canigó 3.2 a Websphere 8.5.x"
-description = "Desplegar una aplicació Canigó 3.2 a Websphere 8.5.x"
+title       = "Desplegar una aplicació Canigó 3.2 a Websphere 8.5.5"
+description = "Desplegar una aplicació Canigó 3.2 a Websphere 8.5.5"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "JUNY2017"
@@ -9,11 +9,11 @@ key         = "JUNY2017"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells desenvolupadors que vulguin desplegar una aplicació Canigó 3.2 en un servidor d'aplicacions IBM Websphere 8.5.x
+Aquest how-to va dirigit a tots aquells desenvolupadors que vulguin desplegar una aplicació Canigó 3.2 en un servidor d'aplicacions IBM Websphere 8.5.5
 
 ### Introducció
 
-Canigó 3.2 incorpora JPA 2.1 i Hibernate 5.0 com a proveïdor. IBM Wesphere 8.5.x només dóna suport a JPA 2.0 incloent com a proveïdor OpenJPA 2.4. Degut a aquesta incompatibilitat, s'han de realitzar certes modificacions a les aplicacions Canigó per a poder ser desplegades a WebSphere 8.5.
+Canigó 3.2 incorpora JPA 2.1 i Hibernate 5.0 com a proveïdor. IBM Wesphere 8.5.5 només dóna suport a JPA 2.0 incloent com a proveïdor OpenJPA 2.4. Degut a aquesta incompatibilitat, s'han de realitzar certes modificacions a les aplicacions Canigó per a poder ser desplegades a WebSphere 8.5.5.
 
 En aquest HowTo es parteix de l'aplicació plantilla de Canigó que genera el [plugin d'Eclipse] (/canigo-download-related/plugin-canigo/).
 
@@ -148,4 +148,4 @@ Una vegada configurada la nostra aplicació a la consola web d'administració de
 
 ![](/related/canigo/howto/imatges/20170501.jpg)
 
-Seguint aquestes instruccions l'aplicació plantilla de Canigó 3.2 haurà estat desplegada de forma satisfactòria a WebSphere 8.5.
+Seguint aquestes instruccions l'aplicació plantilla de Canigó 3.2 haurà estat desplegada de forma satisfactòria a WebSphere 8.5.5.
