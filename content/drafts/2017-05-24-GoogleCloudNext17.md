@@ -13,14 +13,14 @@ key         = "MAIG2017"
 
 # Google Cloud Next '17
 
-![GoogleNext17](/static/images/bloc/GC17.png)
+![GoogleNext17](/images/bloc/GC17.png)
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
 
 Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
 
 ## GSuite
-![GSuite](/static/images/bloc/Imatge1.png)
+![GSuite](/images/bloc/Imatge1.png)
 
 La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
 
@@ -34,7 +34,7 @@ Entorn de desenvolupament d'aplicacions JS internes orientades a gestió de dade
 Pissarra que permet col·laboració en temps real a través de Hangouts.[Toni: incloure una foto. És una pissarra física o una aplicació que corre en navegador?]
 
 ## Google Cloud Platform
-![GCPlatform](/static/images/bloc/Imatge3.png)
+![GCPlatform](/images/bloc/Imatge3.png)
 
 Pel que respecte a les plataformes cloud que ofereix Google, van presentar les següents novetats:
 
