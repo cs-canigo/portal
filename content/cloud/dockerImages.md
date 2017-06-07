@@ -4,7 +4,6 @@ title         = "Criteris creació contenidors docker"
 description   = "Criteris per crear les imatges dels contenidors docker que es desplegaran als diferents clouds públics i privats"
 sections      = "Container Cloud"
 weight        = 6
-toc           = true
 categories    = ["cloud","docker","container","paas","openshift"]
 +++
 ## Introducció
