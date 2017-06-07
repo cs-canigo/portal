@@ -44,6 +44,11 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 [Openshift](https://www.openshift.com/), tot i que suporta desplegar imatges de docker, presenta uns criteris més restrictius de seguretat que cal tenir present a l'hora de construir el Dockerfile.
 
 * No utilitzar l'usuari **root** ni per executar l'script principal del docker (normalment s'utilitza l'usuari root). Utilitzar la directiva **USER uid** per definir amb quin usuari s'executarà el procés.
+* Cal tenir present que openshift executa el procés amb un id d'usuari aleatori que pertany al grup **root**.
+	* Aquest usuari es crea a l'executar el docker. No existeix, ni es coneix, en etapa de construcció de la imatge de docker.
+	* A causa de la característica anterior, és possible que algunes accions que habitualment es fan en etapa de construcció calgui fer-les en etapa d'execució amb alguna shell.
+	* Cal que les carpetes on el procés escriu dades, pertanyin al grup root. Es pot veure a l'script **docker-setup.sh** inclòs abaix.
+	* Algunes aplicacions necessiten que l'usuari estigui definit al fitxer /etc/passwd. En aquest cas és necessari utilitzar el paquet **[nss_wrapper](https://cwrap.org/nss_wrapper.html)** per emular els canvis en aquest fitxer. Es pot veure un exemple a la imatge docker [postgres-openshift](https://github.com/gencat/postgres-openshift). Veure la plana web [Openshift. Creating Images. Guidelines. OpenShift Origin-Specific Guidelines. Support Arbitrary User IDs] (https://docs.openshift.org/latest/creating_images/guidelines.html#openshift-origin-specific-guidelines) per més detalls.
 * Utilitzar variables d'entorn per la configuració.
 * Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html).
 
