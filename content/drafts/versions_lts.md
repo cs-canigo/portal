@@ -29,11 +29,17 @@ Al principi d'un període de suport a llarg termini, els desenvolupadors del pro
 
 ### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
 
-Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr les versions LTS dins els aspectes qualitatius del cicle de vida de les aplicacions, en concret al control de versions:
+Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr l'ús preferent de versions LTS dins dels [Principis d'Arquitectura (http://canigo.ctti.gencat.cat/principis/):
 
-	*Control de versions*. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, 	etc. Es recomana alliberar versions LTS (Long-Term Support) per tal de potenciar l'estabilitat dels sistemes de llarg recorregut. Les versions de les diferents peces (altres productes, llibreries, etc) que componen el sistema han de ser el més estable possible, d'aquí que es recomani també l'ús de versions LTS o, si de cas hi manca, GA (General Availability) o la  nomenclatura que hagi donat el fabricant. Versions productives d'un sistema mai haurien d'incorporar versions no consolidades (alpha, beta, release candidate, milestone, etc) dels components que en formen part.
+	*Les versions de les diferents peces (productes, llibreries, etc) que componen un sistema han de ser el més estable possible, d'aquí que es recomani l'ús de versions LTS (Long-Term Support) o, si de cas hi manca, GA (General Availability) o la nomenclatura que hagi donat el fabricant. Versions productives d'un sistema mai haurien d'incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone, etc) dels components que en formen part..
 
 ### Exemples
+
+A continuació es mostra el roadmap de versions de Symfony, NodeJS o Ubuntu com a exemples:
+
+* Symfony
+
+![Symfony](/images/bloc/symfony_schedule.png)
 
 * NodeJS
 
