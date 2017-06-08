@@ -1,8 +1,8 @@
 +++
-date        = "2017-05-05"
+date        = "2017-06-05"
 title       = "Utilització preferent de versions LTS de programari"
 description = "Les versions LTS (Long-Term Support) de programari lliure són les recomanades i a adoptar com a preferents seguint el criteri d'Arquitectura CTTI"
-sections    = ["Blog", "drafts"]
+sections    = ["Blog", "home"]
 blog_tags   = ["patrons de disseny", "LTS", "principis d'arquitectura"]
 categories  = ["principis"]
 imatge      = "/images/bloc/keep-calm-and-use-lts-versions.png"
