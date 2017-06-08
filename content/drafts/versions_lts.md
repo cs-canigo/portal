@@ -9,6 +9,12 @@ imatge      = "/images/bloc/lts.png"
 key         = "JUNY2017"
 +++
 
+### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
+
+Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors.
+
+En cas que el programari escollit no ofereixi versions LTS, s'hauran d'utilitzar les versions estables més recents. Aquestes versions estables acostumbren a rebre també el nom de general availability (GA).
+
 ### Què són les versions de Suport a Llarg Termini 
 
 El Suport a Llarg Termini (o LTS, Long-Term Support, en anglès) es un tipus especial de versions o edicions de programari que estan designades per a ser suportades per un període més llarg que el normal. És un concepte que ha aparegut majoritàriament en programari opensource.
@@ -26,12 +32,6 @@ Les grans organitzacions, i altres tipus de col·lectius amb projectes de missi�
 Encara que es pogués assegurar al 100% que les noves versions estan lliures de defectes, per aquests tipus d'usuaris, tractar amb noves funcionalitats és sovint molt car. Actualitzar una aplicació requereix la participació de molts equips que poden fer prohibitiu la certificació continua de noves versions.
 
 Les versions LTS d'un programari usualment adrecen aquestes preocupacions desplegant només aquelles actualitzacions que afecten a problemes de seguretat, donat que instal·lar-les aporta menys risc que no fer-ho.
-
-### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
-
-Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors.
-
-En cas que el programari escollit no ofereixi versions LTS, s'hauran d'utilitzar les versions estables més recents. Aquestes versions estables acostumbren a rebre també el nom de general availability (GA).
 
 ### Exemples
 
