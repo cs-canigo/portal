@@ -11,9 +11,9 @@ key         = "JUNY2017"
 
 ### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
 
-Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors.
+Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr les versions LTS dins els aspectes qualitatius del cicle de vida de les aplicacions, en concret al control de versions:
 
-En cas que el programari escollit no ofereixi versions LTS, s'hauran d'utilitzar les versions estables més recents. Aquestes versions estables acostumbren a rebre també el nom de general availability (GA).
+	*Control de versions*. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, 	etc. Es recomana alliberar versions LTS (Long-Term Support) per tal de potenciar l'estabilitat dels sistemes de llarg 	recorregut. Les versions de les diferents peces (altres productes, llibreries, etc) que componen el sistema han de ser el més 	estable possible, d'aquí que es recomani també l'ús de versions LTS o, si de cas hi manca, GA (General Availability) o la 	nomenclatura que hagi donat el fabricant. Versions productives d'un sistema mai haurien d'incorporar versions no consolidades 	(alpha, beta, release candidate, milestone, etc) dels components que en formen part.
 
 ### Què són les versions de Suport a Llarg Termini 
 
