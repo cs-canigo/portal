@@ -29,7 +29,7 @@ Al principi d'un període de suport a llarg termini, els desenvolupadors del pro
 
 ### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
 
-Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr l'ús preferent de versions LTS dins dels [Principis d'Arquitectura (http://canigo.ctti.gencat.cat/principis/):
+Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr l'ús preferent de versions LTS dins dels [Principis d'Arquitectura ](http://canigo.ctti.gencat.cat/principis/):
 
 ```
 Les versions de les diferents peces (productes, llibreries, etc) que componen un sistema han de ser el més estable possible, d'aquí que es recomani l'ús de versions LTS (Long-Term Support) o, si de cas hi manca, GA (General Availability) o la nomenclatura que hagi donat el fabricant. Versions productives d'un sistema mai haurien d'incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone, etc) dels components que en formen part.
