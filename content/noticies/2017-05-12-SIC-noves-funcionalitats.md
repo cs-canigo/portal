@@ -26,7 +26,7 @@ De forma similar que amb l'autoservei d'usuaris, el rol de *Release Manager* adq
 
 Al SIC 2.0 disposem d'un nou gestor de repositoris de codi font: **GitLab**. A més a més de les diferències tècniques (els repositoris són Git i no SVN), n'hi ha d'organitzatives. Aprofitant tota l'experiència adquirida amb el SIC 1.0, hem configurat els repositoris de forma diferent. Ara hi ha només un nivell d'agrupació: el codi d'aplicació. L'acrònim de Departament/Unitat Organitzativa l'hem eliminat. D'aquesta manera és més senzill localitzar els projectes a través de l'eina i l'estructura roman independent dels canvis departamentals.
 
-Tot usuari al GitLab pot crear repositoris i grups de repositoris en el seu propi espai personal. Els *Relase Managers*, a més a més, podran crear repositoris oficials en l'espai del SIC. Simplement, hauran d'entrar al grup corresponent al codi d'aplicació del projecte i els hi apareixerà l'opció de creació.
+Tot usuari al GitLab pot crear repositoris i grups de repositoris en el seu propi espai personal. Els *Release Managers*, a més a més, podran crear repositoris oficials en l'espai del SIC. Simplement, hauran d'entrar al grup corresponent al codi d'aplicació del projecte i els hi apareixerà l'opció de creació.
 
 Per tant, desapareix la necessitat de realitzar peticions a SAU/Remedy per sol·licitar la creació d'un nou repositori al SIC. Els lots d'aplicacions són autònoms pel que fa als repositoris.
 
@@ -39,6 +39,6 @@ Els avantatges de l'evolució del SIC 2.0 són:
 * No cal involucrar a responsables d'àmbit ni de lot per a la gestió d'usuaris i de repositoris. El lot d'aplicacions té l'autoritat per fer-ho.
 * Desapareix la limitació de disposar com a màxim 3 *Release Managers* per lot i àmbit.
 
-Aviat podreu consultar tota la documentació associada a aquesta nova versió del SIC al [portal|http://canigo.ctti.gencat.cat/sic-documentacio/.
+Aviat podreu consultar tota la documentació associada a aquesta nova versió del SIC al [portal](http://canigo.ctti.gencat.cat/sic-documentacio/).
 
 Per a qualsevol dubte o suggeriment, podeu contactar amb el SIC a través de SAU/Remedy o un correu electrònic a la bústia [`oficina-tecnica.canigo.ctti@gencat.cat`](mailto:oficina-tecnica.canigo.ctti@gencat.cat).

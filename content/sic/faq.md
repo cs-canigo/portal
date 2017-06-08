@@ -96,5 +96,9 @@ Els projectes dins els grups d'aplicació sí que podran ser creats per els prop
 
 <br/>
 
+#### **Puc crear subgrups dins els grups d'aplicació oficials al Gitlab?** ####
+És possible crear subgrups dins un grup d'aplicació oficial (nom grup = codi aplicació) però de cara a la integració amb Jenkins, comportarà una incompatibilitat. Per tant, es desaconsella treballar amb subgrups (almenys dins els grups d'aplicació oficials).
 
+
+<br/>
 
