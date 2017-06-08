@@ -1,7 +1,7 @@
 +++
 date        = "2017-05-05"
 title       = "Utilització preferent de versions LTS de programari"
-description = "Les versions LTS (de Long-Term Support) de programari lliure són les recomanades i d'elecció preferent per part d'Arquitectura CTTI"
+description = "Les versions LTS (Long-Term Support) de programari lliure són les recomanades i a adoptar com a preferents seguint el criteri d'Arquitectura CTTI"
 sections    = ["Blog", "drafts"]
 blog_tags   = ["patrons de disseny", "LTS", "principis d'arquitectura"]
 categories  = ["principis"]
@@ -29,7 +29,7 @@ Al principi d'un període de suport a llarg termini, els desenvolupadors del pro
 
 ### Nou Principi d'Arquitectura: fer servir versions LTS sempre que el programari escollit les ofereixi
 
-Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr l'ús preferent de versions LTS dins dels [Principis d'Arquitectura ](http://canigo.ctti.gencat.cat/principis/):
+Les versions LTS ofereixen a la Generalitat una opció ideal per a mantenir el versionat dels components del programari al dia amb una eficiència en cost. També s'adapta millor al cicle de vida habitual de les nostres aplicacions, més llarg que en altres sectors. És per aquest motiu que s'ha decidit introduïr l'ús preferent de versions LTS dins dels [Principis d'Arquitectura](http://canigo.ctti.gencat.cat/principis/):
 
 ```
 Les versions de les diferents peces (productes, llibreries, etc) que componen un sistema han de ser el més estable possible, d'aquí que es recomani l'ús de versions LTS (Long-Term Support) o, si de cas hi manca, GA (General Availability) o la nomenclatura que hagi donat el fabricant. Versions productives d'un sistema mai haurien d'incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone, etc) dels components que en formen part.
