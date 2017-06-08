@@ -5,7 +5,7 @@ description = "Les versions LTS (de Long-Term Support) de productes opensource s
 sections    = ["Blog", "drafts"]
 blog_tags   = ["patrons de disseny", "LTS", "principis d'arquitectura"]
 categories  = ["principis"]
-imatge      = "/images/bloc/lts.png"
+imatge      = "/images/bloc/keep-calm-and-use-lts-versions.png"
 key         = "JUNY2017"
 +++
 
