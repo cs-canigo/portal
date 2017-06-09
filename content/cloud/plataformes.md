@@ -1,13 +1,15 @@
 +++
 date        = "2016-05-11"
-title       = "Plataformes cloud de referència"
+title       = "Plataformes Cloud"
 description = "Bluemix, OpenShift, Azure, ..."
 sections    = "Container Cloud"
 weight      = 1
 categories  = ["cloud","docker","container","paas"]
 +++
 
-## Cloud Públic
+## Plataformes Cloud
+
+### Cloud Públic
 
 * **Bluemix**
 	- https://www.ibm.com/cloud-computing/bluemix/, basat en Cloud Foundry
@@ -17,17 +19,20 @@ categories  = ["cloud","docker","container","paas"]
 * **Compose.io**
 	- DBaaS: ElasticSearch, MongoDB, PostgreSQL
 
+_Tot i que és una plataforma Cloud independent a Bluemix, és propietat d'IBM, i s'espera a curt termini que hi estigui totalment integrat donant les mateixes prestacions (monitoratge, backups, etc) que com a plataforma independent_
+
 * **Azure**
 	- https://azure.microsoft.com
-	- xPaaS: websites/appservice, principalment les .Net
-	- DBaaS: SQLDatabase
-
-
-
-## Cloud Privat
+	- VM: màquines virtuals Windows/Linux
+	- xPaaS: websites/appservice, principalment les .NET
+	- DBaaS: SQL Database
+	
+### Cloud Privat
 
 * **Openshift**
 
 	- https://www.openshift.com/
 	- xPaaS: runtimes preparats per a fer córrer aplicacions https://www.openshift.com/features/cartridges.html
-	- Contenidors: Docker i orquestració basada en Kubernetes
+	- Contenidors: Docker i orquestració amb Kubernetes
+
+
