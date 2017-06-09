@@ -3,7 +3,7 @@ date        = "2017-06-09"
 title       = "Entorns de desenvolupament"
 description = "Entorns de desenvolupament recomanats compatibles amb les Plataformes Cloud"
 sections    = "Container Cloud"
-weight      = 1
+weight      = 7
 categories  = ["cloud","docker","container","paas"]
 +++
 
