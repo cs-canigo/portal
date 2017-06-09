@@ -3,7 +3,7 @@ date        = "2016-05-11"
 title       = "Elements del catàleg"
 description = "Docker, xPaaS, DBaaS"
 sections    = "Container Cloud"
-weight      = 1
+weight      = 2
 toc = true
 categories  = ["cloud","docker","container","paas"]
 +++
