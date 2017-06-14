@@ -35,14 +35,13 @@ Similar a Google Drive però amb vocació corporativa. [Team Drive](https://www.
 <!--[Toni: com és maneguen els usuaris? va per domini de correu?]-->
 
 ### App Maker
-Entorn de desenvolupament d'aplicacions JS internes orientades a gestió de dades. [App Maker](https://developers.google.com/appmaker/)
+Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió de dades a l'abast dels usuaris funcionals. Permet utilitzar plantilles així com les APIs propies de Google per a dotar de funcionalitat les aplicacions de manera senzilla. [App Maker](https://www.youtube.com/watch?v=Br6aNwDXDgQ)
 
 <!--[Toni: quina utilitat té a nivell empresa? Necessites un navegador? és scripting a com el gscript que hi ha a Spreadsheets? Ho pots explicar?]-->
 
 ### Jamboard 
 Pissarra que permet col·laboració en temps real a través de Hangouts.
-
-<!--[Toni: incloure una foto. És una pissarra física o una aplicació que corre en navegador?]-->
+![GSuite](/images/bloc/jamboard.jpg)
 
 ## Google Cloud Platform
 ![GCPlatform](/images/bloc/Imatge3.png)
