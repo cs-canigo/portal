@@ -51,13 +51,10 @@ Pel que respecte a les plataformes cloud que ofereix Google, van presentar les s
 ### Plataformes d'execució
 Disposen de diferents opcions en que els integradors tenen més o menys graus de llibertat:
 
-- **AppEngines**. Motors d'execució gestionats per Google on sols es desplega el codi d'aplicació. 
-<!--[Toni: Explicar la diferència entre AppEngines o Infraestructura, no queda clar]-->
+- **AppEngines**. Motors d'execució gestionats per Google i utilitzats com a servei on sols es desplega els recursos de l'aplicació, sigui codi o dades.
 - **Contenidors**. Desplegament de contenidors a través de l'orquestrador **Kubernetes**. 
-- **Infraestructura**. Potència a nivell de SO.
-<!--[Toni: explicar millor la diferència amb AppEngines]-->
-- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Té característiques similars a la que Amazon presenta com a AWS Lambda. Serveis Serverless 
-<!--[Toni: explicar una mica més que vol dir serverless]-->
+- **Infraestructura**. Potència a nivell de SO. Equivalent a un element IaaS, on sols es proporciona un SO.
+- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Té característiques similars a la que Amazon presenta com a AWS Lambda. Serveis Serverless, sols s'executa en rebre un event.
 
 Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 **Kubernetes** és l'orquestrador de clusters de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
