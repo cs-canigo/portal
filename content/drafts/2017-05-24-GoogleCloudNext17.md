@@ -15,8 +15,6 @@ key         = "MAIG2017"
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
 
-Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR). 
-
 ![GSuite](/images/bloc/Imatge1.png)
 
 La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
@@ -87,4 +85,4 @@ Es van presentar les funcionalitats en la definició de la xarxa en que es va re
 - **La xarxa ha de ser global.** El cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el cloud) utilitzant l'espai d'IPs privades pròpies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN (Cross-Project Networking), Xarxes privades entre projectes. 
 
-<!--[Toni: aquí caldria tancar l'article amb una valoració pròpia de l'esdeveniment. tancar-lo així és massa abrupte. També podem aportar referències a les slides i o vídeos]-->
+Podeu trobar tota l'agenda de l'esdeveniment a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR). 
