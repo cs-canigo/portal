@@ -17,30 +17,27 @@ Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco
 
 Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR). 
 
-## GSuite
-
 ![GSuite](/images/bloc/Imatge1.png)
 
 La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
 
-### Team Drive 
+## Team Drive 
 Similar a Google Drive però amb vocació corporativa. [Team Drive](https://www.youtube.com/watch?v=ywBuQZOHX-E) permetrà veure'l com a unitat local tot i no estar sincronitzat. La diferència principal amb Google Drive es que els documents emmagatzemats no pertanyen a una persona, sinó a la corporació. 
 
-### App Maker
+## App Maker
 Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió de dades a l'abast dels usuaris funcionals. Permet utilitzar plantilles així com les APIs propies de Google per a dotar de funcionalitat les aplicacions de manera senzilla. [App Maker](https://www.youtube.com/watch?v=Br6aNwDXDgQ)
 
 <!--[Toni: quina utilitat té a nivell empresa? Necessites un navegador? és scripting a com el gscript que hi ha a Spreadsheets? Ho pots explicar?]-->
 
-### Jamboard 
+## Jamboard 
 Pissarra que permet col·laboració en temps real a través de Hangouts.
 ![Jamboard](/images/bloc/jamboard.jpg)
 
-## Google Cloud Platform
 ![GCPlatform](/images/bloc/Imatge3.png)
 
 Pel que respecte a les plataformes cloud que ofereix Google, van presentar les següents novetats:
-
-### Plataformes d'execució
+2
+## Plataformes d'execució
 Disposen de diferents opcions en que els integradors tenen més o menys graus de llibertat:
 
 - **AppEngines**. Motors d'execució gestionats per Google i utilitzats com a servei on sols es desplega els recursos de l'aplicació, sigui codi o dades.
@@ -70,7 +67,7 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
   - Afinitat a zones geogràfiques
   - Definició dinàmica de DNS 
 
-### Emmagatzemament de dades
+## Emmagatzemament de dades
 En aquesta categoria, la principal novetat va ser la presentació de [Spanner](https://cloud.google.com/spanner/). Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una [demo](https://www.youtube.com/watch?v=AC9xUc4SkvU) amb les següents característiques:
 
 - BBDD desplegada en tres regions Google
@@ -79,13 +76,13 @@ En aquesta categoria, la principal novetat va ser la presentació de [Spanner](h
 - 80 TB BBDD
 - Completament administrada. Replicació, Failover [Toni: failover automàtic?]
 
-### Data Analytics - Machine Learning
+## Data Analytics - Machine Learning
 És un dels aspectes en que Google aposta fortament. Es van presentar vàries novetats en aquest apartat: 
 - **DLP Data Loss Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
 - **API d'indexació d'imatges**. API que permet categoritzar una imatge en diferents eixos, contingut, detecció de cares, OCR, geogràficament, etc.
 - **API d'indexació de vídeos**. API que permet categoritzar un vídeo, a més a més d'identificar el seu contingut i el moment en que apareix. Molt il·lustrativa la demo feta a l'esdeveniment: [API vídeo ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
 
-### Xarxa
+## Xarxa
 Es van presentar les funcionalitats en la definició de la xarxa en que es va remarcar:
 - **La xarxa ha de ser global.** El cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el cloud) utilitzant l'espai d'IPs privades pròpies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN (Cross-Project Networking), Xarxes privades entre projectes. 
