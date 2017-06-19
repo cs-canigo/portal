@@ -19,7 +19,7 @@ key         = "MAIG2017"
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
 
-Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR.). 
+Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR). 
 
 ## GSuite
 
@@ -41,7 +41,7 @@ Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió
 
 ### Jamboard 
 Pissarra que permet col·laboració en temps real a través de Hangouts.
-![GSuite](/images/bloc/jamboard.jpg)
+![Jamboard](/images/bloc/jamboard.jpg)
 
 ## Google Cloud Platform
 ![GCPlatform](/images/bloc/Imatge3.png)
@@ -59,15 +59,13 @@ Disposen de diferents opcions en que els integradors tenen més o menys graus de
 Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 **Kubernetes** és l'orquestrador de clusters de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
 
-- Auto-corregit  <!--[Toni: explicar. què s'autocorregeix?]-->
-- Programació <!--[Toni: data i hora?] del desplegament [Toni: dels contenidors?, del creixement?]-->
-- Escalat horitzontal manual o automàtic
-- Reinici automàtic <!--[Toni: en quins casos?]-->
-- Balanceig integrat <!--[Toni: Manual o automàtic o sempre automàtic?]-->
+- **Portable**, entre escenaris de cloud públic, privat o híbird
+- **Auto-corregit** ,permet auto-ubicar, auto-restart, auto-replica, auto-scaling
+- **Balanceig integrat** permet definir regles de balanceig de càrrega 
 
 Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 
-- Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP (Ingress) <!--[Toni: què és Ingress? posar link]-->
+- Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP. Ingress és un recurs Kubernetes que permet encapsular condicions i configuració per a enrutar tràfic extern a serveis interns.
 - Nous paràmetres de desplegament:
     - Condicionar el desplegament a la tipologia de hardware sobre el que s'executa:
         - Desplega a la màquina mes barata
@@ -75,9 +73,9 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
         - Desplega a la màquina que té un mínim de prestacions a nivell de tipus de disc
 - Aprovisionament dinàmic de volums estàtics 
 - Aplicacions amb estat
-- Federació de clústers (Kubefed)<!--[Toni: posar link]--> en diverses regions (fins i tot entre on-premise i cloud)
-- Afinitat a pods <!--[Toni: què són els pods?]-->
-- Afinitat a zones <!--[Toni: són les zones geogràfiques de disponibilitat de Google Cloud?]-->
+- Federació de clústers ([Kubefed](https://kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/)) en diverses regions (fins i tot entre on-premise i cloud)
+- Afinitat a pods <!--[Toni: què són els pods?]  No és l'objectiu de la publicació incloure definició dels conceptes, no hi encaixa-->
+- Afinitat a zones geogràfiques<!--[Toni: són les zones geogràfiques de disponibilitat de Google Cloud?]-->
 - Definició dinàmica de DNS <!--[Toni: què vol dir?]-->
 
 ### Emmagatzemament de dades
