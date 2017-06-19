@@ -83,6 +83,7 @@ En aquesta categoria, la principal novetat va ser la presentació de [Spanner](h
 
 ## Xarxa
 Es van presentar les funcionalitats en la definició de la xarxa en que es va remarcar:
+
 - **La xarxa ha de ser global.** El cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el cloud) utilitzant l'espai d'IPs privades pròpies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN (Cross-Project Networking), Xarxes privades entre projectes. 
 
