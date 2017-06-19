@@ -17,7 +17,7 @@ Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco
 
 ![GSuite](/images/bloc/Imatge1.png)
 
-La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
+La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és [GSuite](https://gsuite.google.es/) . Les principals novetats en aquest producte van ser:
 
 ## Team Drive 
 Similar a Google Drive però amb vocació corporativa. [Team Drive](https://www.youtube.com/watch?v=ywBuQZOHX-E) permetrà veure'l com a unitat local tot i no estar sincronitzat. La diferència principal amb Google Drive es que els documents emmagatzemats no pertanyen a una persona, sinó a la corporació. 
@@ -85,4 +85,4 @@ Es van presentar les funcionalitats en la definició de la xarxa en que es va re
 - **La xarxa ha de ser global.** El cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el cloud) utilitzant l'espai d'IPs privades pròpies.
 - **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN (Cross-Project Networking), Xarxes privades entre projectes. 
 
-Podeu trobar tota l'agenda de l'esdeveniment a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR). 
+Podeu trobar tota l'agenda de l'esdeveniment a [Schedule](https://cloudnext.withgoogle.com/schedule) i les conferències estan disponibles a [Youtube](https://www.youtube.com/playlist?list=PLIivdWyY5sqI8RuUibiH8sMb1ExIw0lAR).
