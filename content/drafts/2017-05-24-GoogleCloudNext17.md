@@ -61,16 +61,16 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 
 - Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP. Ingress és un recurs Kubernetes que permet encapsular condicions i configuració per a enrutar tràfic extern a serveis interns.
 - Nous paràmetres de desplegament:
-    - Condicionar el desplegament a la tipologia de hardware sobre el que s'executa:
+   - Condicionar el desplegament a la tipologia de hardware sobre el que s'executa:
         - Desplega a la màquina mes barata
         - Desplega a la màquina que té un mínim de prestacions a nivell de maquinari
         - Desplega a la màquina que té un mínim de prestacions a nivell de tipus de disc
-- Aprovisionament dinàmic de volums estàtics 
-- Aplicacions amb estat
-- Federació de clústers ([Kubefed](https://kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/)) en diverses regions (fins i tot entre on-premise i cloud)
-- Afinitat a pods
-- Afinitat a zones geogràfiques
-- Definició dinàmica de DNS <!--[Toni: què vol dir?]-->
+  - Aprovisionament dinàmic de volums estàtics 
+  - Aplicacions amb estat
+  - Federació de clústers ([Kubefed](https://kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/)) en diverses regions (fins i tot entre on-premise i cloud)
+  - Afinitat a pods
+  - Afinitat a zones geogràfiques
+  - Definició dinàmica de DNS <!--[Toni: què vol dir?]-->
 
 ### Emmagatzemament de dades
 En aquesta categoria, la principal novetat va ser la presentació de [Spanner](https://cloud.google.com/spanner/). Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una [demo](https://www.youtube.com/watch?v=AC9xUc4SkvU) amb les següents característiques:
