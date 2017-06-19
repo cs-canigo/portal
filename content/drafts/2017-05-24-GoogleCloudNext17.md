@@ -11,8 +11,6 @@ aliases = [
 key         = "MAIG2017"
 +++
 
-# Google Cloud Next '17
-
 ![GoogleNext17](/images/bloc/GC17.png)
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
@@ -55,7 +53,7 @@ Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 
 - **Portable**, entre escenaris de cloud públic, privat o híbird
 - **Auto-corregit** ,permet auto-ubicar, auto-restart, auto-replica, auto-scaling
-- **Balanceig integrat** permet definir regles de balanceig de càrrega 
+- **Balanceig integrat** permet definir regles de balanceig de càrrega entre els recursos 
 
 Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 
@@ -70,7 +68,7 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
   - Federació de clústers ([Kubefed](https://kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/)) en diverses regions (fins i tot entre on-premise i cloud)
   - Afinitat a pods
   - Afinitat a zones geogràfiques
-  - Definició dinàmica de DNS <!--[Toni: què vol dir?]-->
+  - Definició dinàmica de DNS 
 
 ### Emmagatzemament de dades
 En aquesta categoria, la principal novetat va ser la presentació de [Spanner](https://cloud.google.com/spanner/). Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una [demo](https://www.youtube.com/watch?v=AC9xUc4SkvU) amb les següents característiques:
