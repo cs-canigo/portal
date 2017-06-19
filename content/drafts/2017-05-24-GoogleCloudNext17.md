@@ -13,9 +13,7 @@ key         = "MAIG2017"
 
 # Google Cloud Next '17
 
-
 ![GoogleNext17](/images/bloc/GC17.png)
-
 
 Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco els dies 8, 9 i 10 de març. En aquest esdeveniment es presenten les novetats amb vocació empresarial al cloud, tan en el que respecta a lloc de treball (GSuite), com a nivell de construcció i desplegament d'aplicacions (Google Cloud Platform).
 
@@ -23,16 +21,12 @@ Tota l'agenda de l'esdeveniment es pot veure a [Schedule](https://cloudnext.with
 
 ## GSuite
 
-
 ![GSuite](/images/bloc/Imatge1.png)
-
 
 La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és GSuite [Toni: afegir link]. Les principals novetats en aquest producte van ser:
 
 ### Team Drive 
 Similar a Google Drive però amb vocació corporativa. [Team Drive](https://www.youtube.com/watch?v=ywBuQZOHX-E) permetrà veure'l com a unitat local tot i no estar sincronitzat. La diferència principal amb Google Drive es que els documents emmagatzemats no pertanyen a una persona, sinó a la corporació. 
-
-<!--[Toni: com és maneguen els usuaris? va per domini de correu?]-->
 
 ### App Maker
 Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió de dades a l'abast dels usuaris funcionals. Permet utilitzar plantilles així com les APIs propies de Google per a dotar de funcionalitat les aplicacions de manera senzilla. [App Maker](https://www.youtube.com/watch?v=Br6aNwDXDgQ)
@@ -74,12 +68,12 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 - Aprovisionament dinàmic de volums estàtics 
 - Aplicacions amb estat
 - Federació de clústers ([Kubefed](https://kubernetes.io/docs/tasks/federation/set-up-cluster-federation-kubefed/)) en diverses regions (fins i tot entre on-premise i cloud)
-- Afinitat a pods <!--[Toni: què són els pods?]  No és l'objectiu de la publicació incloure definició dels conceptes, no hi encaixa-->
-- Afinitat a zones geogràfiques<!--[Toni: són les zones geogràfiques de disponibilitat de Google Cloud?]-->
+- Afinitat a pods
+- Afinitat a zones geogràfiques
 - Definició dinàmica de DNS <!--[Toni: què vol dir?]-->
 
 ### Emmagatzemament de dades
-En aquesta categoria, la principal novetat va ser la presentació de **Spanner**. <!--[Toni: afegir link] -->Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una demo <!--[Toni: tenim link al youtube?]--> amb les següents característiques:
+En aquesta categoria, la principal novetat va ser la presentació de [Spanner](https://cloud.google.com/spanner/). Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una [demo](https://www.youtube.com/watch?v=AC9xUc4SkvU) amb les següents característiques:
 
 - BBDD desplegada en tres regions Google
 - 500.000 ventes [Toni: vendes?] transaccionals per minut
@@ -88,7 +82,7 @@ En aquesta categoria, la principal novetat va ser la presentació de **Spanner**
 - Completament administrada. Replicació, Failover [Toni: failover automàtic?]
 
 ### Data Analytics - Machine Learning
-És un dels aspectes en que Google aposta fortament. Es van presentar vàries novetats en aquest apartat: <!--[Toni: tot està basat en tractament d'imatges i videos? Potser cal indicar-ho al títol: "Machine Learning aplicat al tractament d'imatges i videos"]-->
+És un dels aspectes en que Google aposta fortament. Es van presentar vàries novetats en aquest apartat: 
 - **DLP Data Loss Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
 - **API d'indexació d'imatges**. API que permet categoritzar una imatge en diferents eixos, contingut, detecció de cares, OCR, geogràficament, etc.
 - **API d'indexació de vídeos**. API que permet categoritzar un vídeo, a més a més d'identificar el seu contingut i el moment en que apareix. Molt il·lustrativa la demo feta a l'esdeveniment: [API vídeo ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
@@ -96,7 +90,6 @@ En aquesta categoria, la principal novetat va ser la presentació de **Spanner**
 ### Xarxa
 Es van presentar les funcionalitats en la definició de la xarxa en que es va remarcar:
 - **La xarxa ha de ser global.** El cloud ha de ser una extensió de la xarxa local per tal de donar alta disponibilitat en diferents zones en format híbrid (part de la infraestructura en local, i part en el cloud) utilitzant l'espai d'IPs privades pròpies.
-- **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN, Xarxes privades entre projectes. 
-<!--[Toni: quina és la definició de XPN?]-->
+- **La xarxa com a servei.** Les funcions de xarxa s'han d'oferir com a serveis distribuïts i gestionats. Dins d'aquest punt es va presentar els diferents models de XPN (Cross-Project Networking), Xarxes privades entre projectes. 
 
 <!--[Toni: aquí caldria tancar l'article amb una valoració pròpia de l'esdeveniment. tancar-lo així és massa abrupte. També podem aportar referències a les slides i o vídeos]-->
