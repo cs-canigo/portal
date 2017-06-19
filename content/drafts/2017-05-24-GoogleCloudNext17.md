@@ -34,7 +34,7 @@ Pissarra que permet col·laboració en temps real a través de Hangouts.
 ![GCPlatform](/images/bloc/Imatge3.png)
 
 Pel que respecte a les plataformes cloud que ofereix Google, van presentar les següents novetats:
-2
+
 ## Plataformes d'execució
 Disposen de diferents opcions en que els integradors tenen més o menys graus de llibertat:
 
