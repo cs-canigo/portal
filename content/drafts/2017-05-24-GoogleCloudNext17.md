@@ -41,7 +41,7 @@ Disposen de diferents opcions en que els integradors tenen més o menys graus de
 - **AppEngines**. Motors d'execució gestionats per Google i utilitzats com a servei on sols es desplega els recursos de l'aplicació, sigui codi o dades.
 - **Contenidors**. Desplegament de contenidors a través de l'orquestrador **Kubernetes**. 
 - **Infraestructura**. Potència a nivell de SO. Equivalent a un element IaaS, on sols es proporciona un SO.
-- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Té característiques similars a la que Amazon presenta com a AWS Lambda. Serveis Serverless, sols s'executa en rebre un event.
+- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Serveis Serverless, sols s'executa en rebre un event.
 
 Les principals novetats en aquesta categoria es van presentar a Kubernetes.
 **Kubernetes** és l'orquestrador de clusters de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
