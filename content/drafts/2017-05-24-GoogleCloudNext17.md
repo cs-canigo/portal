@@ -69,10 +69,10 @@ Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 En aquesta categoria, la principal novetat va ser la presentació de [Spanner](https://cloud.google.com/spanner/). Una base de dades relacional com a servei, que permet l'escalat horitzontal a diferents zones de disponibilitat. En l'esdeveniment es va presentar una [demo](https://www.youtube.com/watch?v=AC9xUc4SkvU) amb les següents característiques:
 
 - BBDD desplegada en tres regions Google
-- 500.000 ventes [Toni: vendes?] transaccionals per minut
-- 3 Bilions [Toni: són bilions americans?] de files
+- 500.000 vendes transaccionals per minut
+- 3 Bilions de files
 - 80 TB BBDD
-- Completament administrada. Replicació, Failover [Toni: failover automàtic?]
+- DBaaS, Completament administrada. Replicació, Failover
 
 ## Data Analytics - Machine Learning
 És un dels aspectes en que Google aposta fortament. Es van presentar vàries novetats en aquest apartat: 
