@@ -76,6 +76,7 @@ En aquesta categoria, la principal novetat va ser la presentació de [Spanner](h
 
 ## Data Analytics - Machine Learning
 És un dels aspectes en que Google aposta fortament. Es van presentar vàries novetats en aquest apartat: 
+
 - **DLP Data Loss Prevention.** Basat en el principi de sols guardar les dades que son necessàries, identifica les dades sensibles de les imatges i les oculta abans de guardar-les.
 - **API d'indexació d'imatges**. API que permet categoritzar una imatge en diferents eixos, contingut, detecció de cares, OCR, geogràficament, etc.
 - **API d'indexació de vídeos**. API que permet categoritzar un vídeo, a més a més d'identificar el seu contingut i el moment en que apareix. Molt il·lustrativa la demo feta a l'esdeveniment: [API vídeo ](https://www.youtube.com/watch?v=mDAoLO4G4CQ)
