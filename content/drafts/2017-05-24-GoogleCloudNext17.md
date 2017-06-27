@@ -17,15 +17,13 @@ Google Cloud Next 17 és l'esdeveniment que va organitzar Google a San Francisco
 
 ![GSuite](/images/bloc/Imatge1.png)
 
-La solució de Google al treball col.laboratiu en cloud amb vocació empresarial és [GSuite](https://gsuite.google.es/) . Les principals novetats en aquest producte van ser:
+La solució de Google al treball col·laboratiu en cloud amb vocació empresarial és [GSuite](https://gsuite.google.es/) . Les principals novetats en aquest producte van ser:
 
 ## Team Drive 
 Similar a Google Drive però amb vocació corporativa. [Team Drive](https://www.youtube.com/watch?v=ywBuQZOHX-E) permetrà veure'l com a unitat local tot i no estar sincronitzat. La diferència principal amb Google Drive es que els documents emmagatzemats no pertanyen a una persona, sinó a la corporació. 
 
 ## App Maker
-Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió de dades a l'abast dels usuaris funcionals. Permet utilitzar plantilles així com les APIs propies de Google per a dotar de funcionalitat les aplicacions de manera senzilla. [App Maker](https://www.youtube.com/watch?v=Br6aNwDXDgQ)
-
-<!--[Toni: quina utilitat té a nivell empresa? Necessites un navegador? és scripting a com el gscript que hi ha a Spreadsheets? Ho pots explicar?]-->
+Entorn de desenvolupament d'aplicacions JavaScript internes orientades a gestió de dades a l'abast dels usuaris funcionals. Permet utilitzar plantilles així com les APIs pròpies de Google per a dotar de funcionalitat les aplicacions de manera senzilla. [App Maker](https://www.youtube.com/watch?v=Br6aNwDXDgQ)
 
 ## Jamboard 
 Pissarra que permet col·laboració en temps real a través de Hangouts.
@@ -41,21 +39,21 @@ Disposen de diferents opcions en que els integradors tenen més o menys graus de
 - **AppEngines**. Motors d'execució gestionats per Google i utilitzats com a servei on sols es desplega els recursos de l'aplicació, sigui codi o dades.
 - **Contenidors**. Desplegament de contenidors a través de l'orquestrador **Kubernetes**. 
 - **Infraestructura**. Potència a nivell de SO. Equivalent a un element IaaS, on sols es proporciona un SO.
-- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Serveis Serverless, sols s'executa en rebre un event.
+- **Cloud Functions**. Presentada en l'esdeveniment en estat beta. Serveis Serverless, sols s'executa en rebre un esdeveniment.
 
 Les principals novetats en aquesta categoria es van presentar a Kubernetes.
-**Kubernetes** és l'orquestrador de clusters de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
+**Kubernetes** és l'orquestrador de clústers de contenidors opensource desenvolupat per Google. Les seves principals funcionalitats inclouen:
 
-- **Portable**, entre escenaris de cloud públic, privat o híbird
-- **Auto-corregit** ,permet auto-ubicar, auto-restart, auto-replica, auto-scaling
+- **Portable**, entre escenaris de cloud públic, privat o híbrid
+- **Auto-corregit**, permet auto-ubicació, auto-restart, auto-rèplica, auto-escalat
 - **Balanceig integrat** permet definir regles de balanceig de càrrega entre els recursos 
 
 Algunes de les novetats presentades en la versió 1.6 de Kubernetes son:
 
-- Balanceig Multi-Cluster / multi-zona  N7 amb SSL amb una única IP. Ingress és un recurs Kubernetes que permet encapsular condicions i configuració per a enrutar tràfic extern a serveis interns.
+- Balanceig Multi-Clúster / multi-zona  N7 amb SSL amb una única IP. Ingress és un recurs Kubernetes que permet encapsular condicions i configuració per a enrutar tràfic extern a serveis interns.
 - Nous paràmetres de desplegament:
    - Condicionar el desplegament a la tipologia de hardware sobre el que s'executa:
-        - Desplega a la màquina mes barata
+        - Desplega a la màquina més barata
         - Desplega a la màquina que té un mínim de prestacions a nivell de maquinari
         - Desplega a la màquina que té un mínim de prestacions a nivell de tipus de disc
   - Aprovisionament dinàmic de volums estàtics 
