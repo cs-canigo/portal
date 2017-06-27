@@ -5,7 +5,7 @@ description = "Novetats Google Cloud Next 17"
 sections    = ["Blog", "home"]
 blog_tags   = ["cloud", "kubernetes", "contenidors"]
 imatge      = "/images/bloc/GC17.png"
-aliases     = ["/bloc/2017/05/GC17/"]
+aliases     = ["/bloc/2017/06/GC17/"]
 key         = "JUNY2017"
 +++
 
