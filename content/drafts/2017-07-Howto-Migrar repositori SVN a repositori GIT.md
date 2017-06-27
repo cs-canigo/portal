@@ -25,12 +25,12 @@ Primer de tot, s'ha d'obtenir quí ha modificat els arxius del SVN. Per fer aix�
 
 S'ha d'executar aquest job informant els següents paràmetres:
 
-DEPARTAMENT ->; acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
-CODI_DIALEG ->; codi de diàleg (Per exemple 0192)
+	DEPARTAMENT -> acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
+	CODI_DIALEG -> codi de diàleg (Per exemple 0192)
 
 Una vegada executat el job envia per email el fitxer author.txt a l'usuari que ha executat el job.
 
-S'ha de descarregar el fitxer i desar a la carpeta desitjada, en aquest howto /migracio.
+S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /migracio.
 
 ### Obtenir les dades del SVN
 
@@ -40,19 +40,19 @@ git svn clone --authors-file=author.txt http://svn.intranet.gencat.cat/$1/$2/$3 
 
 On s'ha de substituir les variables segons:
 
-$1 ->; acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
-$2 ->; codi de diàleg (Per exemple 0192)
-$3 ->; path de la carpeta que conté les carpetes tags, trunk i branches. En cas que estiguin a l'arrel no posar res.
-$4 ->; nom de la carpeta que es crea al sistema de fitxers locals on es deixa el codi
+	$1 -> acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
+	$2 -> codi de diàleg (Per exemple 0192)
+	$3 -> path de la carpeta que conté les carpetes tags, trunk i branches. En cas que estiguin a l'arrel no posar res.
+	$4 -> nom de la carpeta que es crea al sistema de fitxers locals on es deixa el codi
 
 ### Tractament del codi SVN
 
 Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el codi a Git executar les següents comandes:
 
-cp -Rf .git/refs/remotes/origin/tags/* .git/refs/tags/
-rm -Rf .git/refs/remotes/origin/tags
-cp -Rf .git/refs/remotes/* .git/refs/heads/
-rm -Rf .git/refs/remotes
+	cp -Rf .git/refs/remotes/origin/tags/* .git/refs/tags/
+	rm -Rf .git/refs/remotes/origin/tags
+	cp -Rf .git/refs/remotes/* .git/refs/heads/
+	rm -Rf .git/refs/remotes
 
 ### Crear projecte en Git
 
@@ -66,14 +66,14 @@ git remote add origin https://$1@git.intranet.gencat.cat/$2/$3.git
 
 On s'ha de substituir les variables segons:
 
-$1 ->; usuari GitLab
-$2 ->; codi de diàleg (Per exemple 0192)
-$3 ->; Nom del projecte de GitLab
+	$1 -> usuari GitLab
+	$2 -> codi de diàleg (Per exemple 0192)
+	$3 -> Nom del projecte de GitLab
 
 Per finalitzar es puja el codi a Git
 
-git push origin --all
-git push --tags
+	git push origin --all
+	git push --tags
 
 ### Establir mode lectura en el repositori SVN
 
