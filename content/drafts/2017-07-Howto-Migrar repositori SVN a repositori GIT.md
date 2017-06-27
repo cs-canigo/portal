@@ -21,24 +21,16 @@ Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-sv
 
 ### Obtenir els autors
 
-Primer de tot, s'ha d'obtenir quí ha modificat els arxius del SVN. Per fer això s'ha preparat un [script bash amb una llibreria Java que realitza aquest procés] (/related/sic/howto/obtenirAutors.zip).
+Primer de tot, s'ha d'obtenir quí ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
 
-S'ha de descarregar el fitxer i descomprimir a la carpeta desitjada, en aquest howto /migracio.
+S'ha d'executar aquest job informant els següents paràmetres:
 
-Anar a /migracio i executar:
+DEPARTAMENT ->; acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
+CODI_DIALEG ->; codi de diàleg (Per exemple 0192)
 
-REVISAR, S'HA DE FER MITJANÇANT UN JOB DE JENKINS I QUE ENVII UN MAIL A QUI INVOCA EL JOB
+Una vegada executat el job envia per email el fitxer author.txt a l'usuari que ha executat el job.
 
-./obtenirAutors.sh $1 $2 $3 $4
-
-On els paràmetres són:
-
-$1 ->; acrònim del departament (En una ruta com http://svn.intranet.gencat.cat/ctt/0192/) seria ctt )
-$2 ->; codi de diàleg (Per exemple 0192)
-$3 ->; usuari SVN
-$4 ->; password SVN
-
-Aquest procés genera un fitxer author.txt
+S'ha de descarregar el fitxer i desar a la carpeta desitjada, en aquest howto /migracio.
 
 ### Obtenir les dades del SVN
 
