@@ -18,9 +18,11 @@ La versió Canigó 3.2.0 publicada el passat mes de Març és considerada com la
 	
 	(1) en cas que no hi hagi noves funcionalitats a publicar, s'alliberaria una versió amb digit imparell i es pospossaria 3 mesos l'alliberament de la versió amb dígit parell
 
-Cada 2 anys, excepte aquest primer any per poder tenir una convivència d'un any entre versions LTS, es publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
+Cada 2 anys, publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
 
 	Ex: 3.2.4 = LTS (engloba les modificacions introduïdes a les versions 3.2.1 i 3.2.2 respecte la 3.2.0)
+	
+Aquestes versions LTS tindran un periode de suport de fins a 3 anys.
 	
 Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves, i per tant, no seran aptes per a ser desplegades en entorns productius. Les versions parelles incorporaran modificacions rellevants que poden suposar que sigui necessari realitzar adaptacions a l'aplicació.
 
@@ -32,37 +34,41 @@ Aquest és el roadmap previst per Canigó:
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 <script type="text/javascript">
-  google.charts.load("current", {packages:["timeline"]});
+  google.charts.load("current", {packages:["timeline"], 'language': 'es'});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-
-    var container = document.getElementById('example5.2');
+    var container = document.getElementById('roadmap');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
 
-    dataTable.addColumn({ type: 'string', id: 'Room' });
+	dataTable.addColumn({ type: 'string', id: 'id' });
     dataTable.addColumn({ type: 'string', id: 'Name' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-      [ 'Magnolia Room',  'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
-      [ 'Magnolia Room',  'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-      [ 'Magnolia Room',  'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
-      [ 'Gladiolus Room', 'Intermediate Perl',   new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
-      [ 'Gladiolus Room', 'Advanced Perl',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-      [ 'Gladiolus Room', 'Applied Perl',        new Date(0,0,0,16,30,0), new Date(0,0,0,18,0,0) ],
-      [ 'Petunia Room',   'Google Charts',       new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
-      [ 'Petunia Room',   'Closure',             new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
-      [ 'Petunia Room',   'App Engine',          new Date(0,0,0,16,30,0), new Date(0,0,0,18,30,0) ]]);
+      [ '1','Canigo 3.2.0 - LTS', new Date(2017, 2), new Date(2020, 2) ],
+      [ '2','Canigo 3.2.1', new Date(2017, 5), new Date(2017, 8) ],
+      [ '3','Canigo 3.2.2', new Date(2017, 8), new Date(2017, 11) ],
+	  [ '4','Canigo 3.2.3', new Date(2017, 11), new Date(2018, 2) ],
+	  [ '5','Canigo 3.2.4', new Date(2018, 2), new Date(2018, 5) ],
+	  [ '6','Canigo 3.2.5', new Date(2018, 5), new Date(2018, 8) ],
+      [ '7','Canigo 3.2.6', new Date(2018, 8), new Date(2018, 11) ],
+	  [ '8','Canigo 3.2.7', new Date(2018, 11), new Date(2019, 2) ],
+	  [ '9','Canigo 3.4 - LTS', new Date(2019, 2), new Date(2022, 2) ],
+	  [ '10','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
+	  [ '11','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
+	  [ '12','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
+	  [ '13','Canigo 3.4.4', new Date(2020, 2), new Date(2020, 5) ]]);
 
     var options = {
-      timeline: { singleColor: '#8d8' },
+      timeline: { groupByRowLabel: false, showRowLabels: false },
+	  colors: ['blue', 'orange', 'green', 'orange', 'green', 'orange', 'green', 'orange', 'blue','orange','green','orange','green']
     };
 
     chart.draw(dataTable, options);
   }
 </script>
 
-<div id="example5.2" style="height: 150px;"></div>
+<div id="roadmap" style="height: 590px;"></div>
 
-L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó, forçant la seva actualització com a màxim cada 2 anys a la versió LTS actual. Per qualsevol dubte al respecte us podeu posar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó, forçant la seva actualització com a màxim cada 3 anys a la versió LTS actual. Per qualsevol dubte al respecte us podeu posar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
