@@ -66,5 +66,3 @@ Aquest és el roadmap previst per Canigó:
 <div id="example5.2" style="height: 150px;"></div>
 
 L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó, forçant la seva actualització com a màxim cada 2 anys a la versió LTS actual. Per qualsevol dubte al respecte us podeu posar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
-
-
