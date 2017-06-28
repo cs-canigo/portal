@@ -8,7 +8,7 @@ categories  = ["canigo"]
 
 Des de Canigó s'ha decidit introduïr el concepte de versions LTS (Long-Term Support), així com a dotar d'un significat molt concret als dígits destinats al versionatge del framework.
 
-Les versions LTS són un tipus especial de versions que estan designades per a ser suportades per un periode més llarg del normal. En el període de temps entre dues versions LTS apareixeran versions de Canigó que solucionin bugs, eliminen vulnerabilitats o afegeixen noves funcionalitats.
+Les [versions LTS](http://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/) són un tipus especial de versions que estan designades per a ser suportades per un periode més llarg del normal, l'objectiu de les quals és ser el més estable possible. En el període de temps entre dues versions LTS apareixeran versions de Canigó que solucionin bugs, eliminin vulnerabilitats o afegeixen noves funcionalitats.
 
 La versió Canigó 3.2.0 publicada el passat mes de Març 2017 és considerada com la primera (i actual) versió LTS del framework.
 
