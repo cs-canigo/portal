@@ -14,19 +14,25 @@ La versió Canigó 3.2.0 publicada el passat mes de Març 2017 és considerada c
 
 Segons el tipus de release, el seu número de versió tindrà un significat:
 
-	4rt dígit: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3r dígit) [Ex. 3.2.0.1]
-	3r dígit imparell: correcció d'incidències i vulnerabilitats [Ex. 3.2.1]
-	3r dígit parell: correcció d'incidències i vulnerabilitats + Funcionalitats connectors [Ex 3.2.2]
+	4rt dígit: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3r dígit) - No planificades [Ex. 3.2.0.1]
+	3r dígit imparell: correcció d'incidències i vulnerabilitats, o millores - Cada 3 mesos [Ex. 3.2.1]
+	3r dígit parell: correcció d'incidències i vulnerabilitats + Noves funcionalitats - Cada 6 mesos [Ex 3.2.2] (1)
 	
-Cada cert temps (encara per determinar) es publicarà una nova versió LTS amb tots els canvis realitzats des de l'última versió també LTS:
+	(1) en cas que no hi hagi noves funcionalitats a publicar, s'alliberaria una versió amb digit imparell i es pospossaria 3 mesos l'alliberament de la versió amb dígit parell
 
-	Ex: 3.2.3 = LTS (engloba les modificacions introduïdes a les versions 3.2.1 i 3.2.2 respecte la 3.2.0)
+Cada 2 anys, excepte aquest primer any per poder tenir una convivència d'un any entre versions LTS, es publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
+
+	Ex: 3.2.4 = LTS (engloba les modificacions introduïdes a les versions 3.2.1 i 3.2.2 respecte la 3.2.0)
 	
-Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves, i per tant, no seran aptes per a ser desplegades en entorns productius. Les vesions parelles incorporaran modificacions rellevants que poden suposar que sigui necessàri realitzar adaptacions a l'aplicació.
+Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves, i per tant, no seran aptes per a ser desplegades en entorns productius. Les versions parelles incorporaran modificacions rellevants que poden suposar que sigui necessàri realitzar adaptacions a l'aplicació.
 
 	Ex: 3.3 = versió de proves interna no apta per producció
-	Ex: 3.4 = LTS + funcionalitats noves de CORE
+	Ex: 3.4 = LTS + funcionalitats noves al core
 
-PENDENT: OBJECTIUS QUE ES PERSEGUEIXEN AMB AQUESTA POLÍTICA DE VERSIONATGE
+Aquest és el roadmap previst per Canigó:
 
-Aquesta és la nova política que es comença a aplicar a Canigó respecte al versionatge per tal de millorar la mantenibilitat del framework i facilitar als proveïdors d'aplicacions l'evolució de les seves aplicacions.
+TODO
+
+L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó, forçant la seva actualització com a màxim cada 2 anys a la versió LTS actual. Per qualsevol dubte al respecte us podeu possar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+
+
