@@ -18,11 +18,11 @@ La versió Canigó 3.2.0 publicada el passat mes de Març és considerada com la
 	
 	(1) en cas que no hi hagi noves funcionalitats a publicar, s'alliberaria una versió amb digit imparell i es pospossaria 3 mesos l'alliberament de la versió amb dígit parell
 
-Cada 2 anys, publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
+Cada 2 anys es publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
 
 	Ex: 3.2.4 = LTS (engloba les modificacions introduïdes a les versions 3.2.1 i 3.2.2 respecte la 3.2.0)
 	
-Aquestes versions LTS tindran un periode de suport de fins a 3 anys.
+Aquestes versions LTS tindran un periode de suport de fins a 3 anys. La resta de versions tindran suport mentre sigui la versió actual.
 	
 Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves, i per tant, no seran aptes per a ser desplegades en entorns productius. Les versions parelles incorporaran modificacions rellevants que poden suposar que sigui necessari realitzar adaptacions a l'aplicació.
 
@@ -46,7 +46,7 @@ Aquest és el roadmap previst per Canigó:
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-      [ '1','Canigo 3.2.0 - LTS', new Date(2017, 2), new Date(2020, 2) ],
+      [ '1','Canigo 3.2.0 LTS', new Date(2017, 2), new Date(2020, 2) ],
       [ '2','Canigo 3.2.1', new Date(2017, 5), new Date(2017, 8) ],
       [ '3','Canigo 3.2.2', new Date(2017, 8), new Date(2017, 11) ],
 	  [ '4','Canigo 3.2.3', new Date(2017, 11), new Date(2018, 2) ],
@@ -54,7 +54,7 @@ Aquest és el roadmap previst per Canigó:
 	  [ '6','Canigo 3.2.5', new Date(2018, 5), new Date(2018, 8) ],
       [ '7','Canigo 3.2.6', new Date(2018, 8), new Date(2018, 11) ],
 	  [ '8','Canigo 3.2.7', new Date(2018, 11), new Date(2019, 2) ],
-	  [ '9','Canigo 3.4 - LTS', new Date(2019, 2), new Date(2022, 2) ],
+	  [ '9','Canigo 3.4.0 LTS', new Date(2019, 2), new Date(2022, 2) ],
 	  [ '10','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
 	  [ '11','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
 	  [ '12','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
