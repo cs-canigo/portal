@@ -12,22 +12,11 @@ Les [versions LTS](http://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/) só
 
 La versió Canigó 3.2.0 publicada el passat mes de Març és considerada com la primera (i actual) versió LTS del framework. És a partir d'aquesta versió que es comença aplicar la següent política de versions:
 
-	4rt dígit: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3r dígit) - No planificades [Ex. 3.2.0.1]
-	3r dígit imparell: correcció d'incidències i vulnerabilitats, o millores - Cada 3 mesos [Ex. 3.2.1]
-	3r dígit parell: correcció d'incidències i vulnerabilitats + Noves funcionalitats - Cada 6 mesos [Ex 3.2.2] (1)
+* _4rt dígit_: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3r dígit) - No planificades [Ex. 3.2.0.1]
+* _3r dígit_: correcció d'incidències, vulnerabilitats o noves funcionalitats que no introdueixen cap incompatibilitat - Cada 3 mesos [Ex 3.2.1]
+* _2on dígit_: noves funcionalitats que introdueixen incompatibilitats, i que per tant, fan necessari adaptacions a les aplicacions - Previsiblement cada 2 anys
 	
-	(1) en cas que no hi hagi noves funcionalitats a publicar, s'alliberaria una versió amb digit imparell i es pospossaria 3 mesos l'alliberament de la versió amb dígit parell
-
-Cada 2 anys es publicarà una nova versió LTS amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió també LTS:
-
-	Ex: 3.2.4 = LTS (engloba les modificacions introduïdes a les versions 3.2.1 i 3.2.2 respecte la 3.2.0)
-	
-Aquestes versions LTS tindran un periode de suport de fins a 3 anys. La resta de versions tindran suport mentre sigui la versió actual.
-	
-Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves, i per tant, no seran aptes per a ser desplegades en entorns productius. Les versions parelles incorporaran modificacions rellevants que poden suposar que sigui necessari realitzar adaptacions a l'aplicació.
-
-	Ex: 3.3 = versió de proves interna no apta per producció
-	Ex: 3.4 = LTS + noves funcionalitats al core
+Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves (Ex. 3.3), i per tant, no seran aptes per a ser desplegades en entorns productius. Les versions parelles (Ex. 3.4) incorporaran modificacions rellevants que poden suposar que sigui necessari realitzar adaptacions a l'aplicació.
 
 Aquest és el roadmap previst per Canigó:
 
@@ -62,7 +51,7 @@ Aquest és el roadmap previst per Canigó:
 
     var options = {
       timeline: { groupByRowLabel: false, showRowLabels: false },
-	  colors: ['blue', 'orange', 'green', 'orange', 'green', 'orange', 'green', 'orange', 'blue','orange','green','orange','green']
+	  colors: ['blue', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'blue','green','green','green','green']
     };
 
     chart.draw(dataTable, options);
@@ -71,4 +60,12 @@ Aquest és el roadmap previst per Canigó:
 
 <div id="roadmap" style="height: 590px;"></div>
 
-L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó, forçant la seva actualització com a màxim cada 3 anys a la versió LTS actual. Per qualsevol dubte al respecte d'aquesta nova política de versionatge us podeu posar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+Com es pot observar, cada 2 anys es publicarà una nova versió LTS (Ex. 3.4.0 LTS) amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió LTS.
+	
+Les **versions LTS** tindran un periode de suport de fins a 3 anys. Per garantir la màxima estabilitat rebran totes les correccions d'incidències i vulnerabilitats, però no noves funcionalitats.
+
+La **versions actuals (current)** tindran suport mentre siguin la versió actual. L'actualització, sempre que es tracti d'un 3er dígit, serà directe. Només en cas d'un increment de 2on dígit s'hauran de realitzar adaptacions a l'aplicació.
+
+L'objectiu d'aquesta política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó forçant la seva actualització com a màxim cada 3 anys a la versió LTS actual.
+
+Per qualsevol dubte al respecte d'aquesta nova política de versionatge us podeu posar en contacte amb l'Oficina Tècnica de Canigó fent una petició al [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o per correu a la [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
