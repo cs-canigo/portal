@@ -34,8 +34,9 @@ _Tot i que és una plataforma Cloud independent a Bluemix, és propietat d'IBM, 
 	- https://www.openshift.com/
 	- xPaaS: runtimes preparats per a fer córrer aplicacions https://www.openshift.com/features/cartridges.html
 	- Contenidors: Docker i orquestració amb Kubernetes
-
+<!---
 * **Rancher**
 
 	- http://rancher.com/rancher/
 	- Contenidors: Docker i orquestració amb Docker Swarm
+-->
