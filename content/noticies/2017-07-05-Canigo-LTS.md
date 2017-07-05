@@ -4,6 +4,7 @@ title = "Canigó. Versions LTS"
 description = "Canigó. Versions LTS"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
+key = "JULIOL2017"
 +++
 
 Des de Canigó s'ha decidit introduir el concepte de **versions LTS (Long-Term Support)**, així com a dotar d'un significat molt concret als dígits destinats al versionatge del framework.
