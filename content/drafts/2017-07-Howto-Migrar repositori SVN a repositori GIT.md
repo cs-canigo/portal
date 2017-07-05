@@ -32,11 +32,13 @@ Una vegada executat el job envia per email el fitxer author.txt a l'usuari que h
 
 S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /migracio.
 
+A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procès per a evitar errors en el següent pas.
+
 ### Obtenir les dades del SVN
 
 Per a obtenir les dades del SVN que s'han de migrar, dintre de la carpeta /migracio (on es troba el fitxer author.txt) executar:
 
-git svn clone --authors-file=author.txt http://svn.intranet.gencat.cat/$1/$2/$3 --no-metadata -s $4
+	git svn clone --authors-file=author.txt --authors-prog=unknown_author.sh http://svn.intranet.gencat.cat/$1/$2/$3 --no-metadata -s $4
 
 On s'ha de substituir les variables segons:
 
@@ -53,6 +55,8 @@ Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el
 	rm -Rf .git/refs/remotes/origin/tags
 	cp -Rf .git/refs/remotes/* .git/refs/heads/
 	rm -Rf .git/refs/remotes
+	for i in $(ls .git/refs/tags/ -1 | grep '@'); do rm ".git/refs/tags/$i"; done
+	
 
 ### Crear projecte en Git
 
@@ -62,7 +66,7 @@ Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ 
 
 Continuem en la carpeta on s'ha desat el codi SVN i executar:
 
-git remote add origin https://$1@git.intranet.gencat.cat/$2/$3.git
+	git remote add origin https://$1@git.intranet.gencat.cat/$2/$3.git
 
 On s'ha de substituir les variables segons:
 
@@ -74,6 +78,8 @@ Per finalitzar es puja el codi a Git
 
 	git push origin --all
 	git push --tags
+	
+Es importar mirar la resposta que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
 
 ### Establir mode lectura en el repositori SVN
 
