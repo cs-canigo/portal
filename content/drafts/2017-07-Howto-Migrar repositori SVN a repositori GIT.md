@@ -17,7 +17,21 @@ Aquest HowTo té la finalitat de proporcionar una guía per a realitzar la migra
 
 ### Prerrequisits
 
-Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
+* Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
+* El **repositori a migrar no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules").
+
+#### Per a repositoris amb binaris
+
+El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents pasos:
+
+	* Descarregar el darrer tag del SVN
+	* Eliminar els binaris. Podem tenir dos casos:
+		- binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
+		-  binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
+	* Inicialitzar el repositori Git local (git init)
+	* Fer el commit, push i tag d'aquesta versió inicial al Git
+
+Un cop finalitzat aquest procés al Git es dispossarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
 ### Obtenir els autors
 
@@ -64,7 +78,7 @@ Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ 
 
 ### Pujar el codi a Git
 
-Continuem en la carpeta on s'ha desat el codi SVN i executar:
+A la carpeta on s'ha desat el codi del SVN executar:
 
 	git remote add origin https://$1@git.intranet.gencat.cat/$2/$3.git
 
@@ -79,7 +93,7 @@ Per finalitzar es puja el codi a Git
 	git push origin --all
 	git push --tags
 	
-Es importar mirar la resposta que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
+És molt important analitzar el log que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
 
 ### Establir mode lectura en el repositori SVN
 
