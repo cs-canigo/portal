@@ -2,7 +2,7 @@
 date = "2017-07-05"
 title = "Canigó. Versions LTS"
 description = "Canigó. Versions LTS"
-sections = ["Notícies"]
+sections = ["Notícies", "home"]
 categories = ["canigo"]
 +++
 
