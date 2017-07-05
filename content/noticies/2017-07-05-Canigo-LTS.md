@@ -1,5 +1,5 @@
 +++
-date = "2017-05-31"
+date = "2017-07-05"
 title = "Canigó. Versions LTS"
 description = "Canigó. Versions LTS"
 sections = ["Notícies"]
