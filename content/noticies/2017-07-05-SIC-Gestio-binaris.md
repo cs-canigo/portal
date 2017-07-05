@@ -10,7 +10,7 @@ key         = "JULIOL2017"
 A data 27/06/2017 es va publicar el nou sistema de gestió de binaris del SIC. Aquest nou sistema s'encarrega de:
 
 * Emmagatzemar els binaris que carreguen els Release Managers de Lot i deixar-los a disposició del CPD encarregat de desplegar-los.
-* Emmagatzemar binaris i arxius pessats que no són permesos dins de GIT i que per algun motiu no es poden emmagatzemar al Nexus (material multimèdia pessat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
+* Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que per algun motiu no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
 
 D'aquesta manera s'evita la mala pràctica de dipositar binaris al SVN, procediment mitjançant el qual no es podien esborrar aquests fitxers de l'històric.
 
@@ -32,5 +32,4 @@ La pàgina de benvinguda disposa de dos botons:
 
 * **Recuperar artefactes del SIC**: És accessible tant pels Release Managers de tots els lots així com per a tots els administradors de tots els CPDS i de LdT. Els accessos són securitzats (requereixen autenticació amb credencials GICAR i cada codi d'aplicació requereix autorització per Lot/CPD/LdT).
 
-Per a més detalls, teniu tota la informació disponible al [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf). 
-
+Per a més detalls, teniu tota la informació disponible al [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
