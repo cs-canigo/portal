@@ -1,7 +1,7 @@
 +++
 date = "2017-07-05"
 title = "Canigó. Versions LTS"
-description = "Canigó. Versions LTS"
+description = "Nova política de versions per el framework Canigó"
 sections = ["Notícies", "home"]
 categories = ["canigo"]
 key = "JULIOL2017"
