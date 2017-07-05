@@ -13,8 +13,8 @@ Les [versions LTS](http://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/) só
 
 La versió Canigó 3.2.0 publicada el passat mes de Març és considerada com la primera (i actual) versió LTS del framework. És a partir d'aquesta versió que es comença aplicar la següent **política de versions**:
 
-* _4rt dígit_: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3r dígit) - _No planificades_ [Ex. 3.2.0.1]
-* _3r dígit_: correcció d'incidències, vulnerabilitats o noves funcionalitats que no introdueixen cap incompatibilitat - _Cada 3 mesos_ [Ex 3.2.1]
+* _4rt dígit_: publicació de correccions d'incidències o noves funcionalitats que la seva publicació no pot esperar a l'agrupació de correccions o noves funcionalitats (modificació 3er dígit) - _No planificades_ [Ex. 3.2.0.1]
+* _3er dígit_: correcció d'incidències, vulnerabilitats o noves funcionalitats que no introdueixen cap incompatibilitat - _Cada 3 mesos_ [Ex 3.2.1]
 * _2on dígit_: noves funcionalitats que introdueixen incompatibilitats, i que per tant, fan necessari adaptacions a les aplicacions - _Previsiblement cada 2 anys_
 
 Respecte al segon dígit, les versions imparelles es consideren internes destinades a proves (Ex. 3.3), i per tant, no seran aptes per a ser desplegades en entorns productius.
@@ -69,11 +69,11 @@ Pel que fa al **suport**:
 
 * Les _versions LTS_ tindran un període de suport de fins a 3 anys. Per garantir la màxima estabilitat rebran totes les correccions d'incidències i vulnerabilitats, però no noves funcionalitats.
 
-* Les _versions actuals (current)_ tindran suport mentre siguin la versió actual, és a dir, de 3 mesos.
+* Les _versions actuals (o "current")_ tindran suport mentre siguin la versió actual, és a dir, de 3 mesos.
 
 Com es pot observar, cada 2 anys es publicarà una nova versió LTS (Ex. 3.4.0 LTS) amb tots els canvis (correcció d'incidències i vulnerabilitats, millores, noves funcionalitats) realitzats des de l'última versió LTS. Hi haurà un període de convivència d'un any entre versions LTS per tal que les aplicacions es puguin **actualitzar**.
 
-L'actualització de les aplicacions, sempre que es tracti d'un 4er dígit (fix), serà directe. En el cas del 3er dígit o inferior, caldrà realitzar adaptacions. Per el 3er dígit les adaptacions seran mínimes, previsiblement només actualització de dependències amb mòduls Canigó.
+L'actualització de les aplicacions, sempre que es tracti d'un 4rt dígit (fix), serà directe. En el cas del 3er dígit o inferior, caldrà realitzar adaptacions. Per al 3er dígit les adaptacions seran mínimes, previsiblement només actualització de dependències amb mòduls Canigó.
 
 L'objectiu d'aquesta nova política de versionatge és evitar l'**obsolescència** tecnològica de les aplicacions que utilitzin Canigó forçant la seva actualització com a màxim cada 3 anys a la versió LTS actual.
 
