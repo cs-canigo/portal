@@ -22,14 +22,14 @@ Aquest HowTo té la finalitat de proporcionar una guía per a realitzar la migra
 
 #### Per a repositoris amb binaris
 
-El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents pasos:
+El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git, s'haurien de seguir els següents pasos:
 
-	* Descarregar el darrer tag del SVN
-	* Eliminar els binaris. Podem tenir dos casos:
-		- binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
-		-  binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
-	* Inicialitzar el repositori Git local (git init)
-	* Fer el commit, push i tag d'aquesta versió inicial al Git
+	- Descarregar el darrer tag del SVN
+	- Eliminar els binaris. Podem tenir dos casos:
+		1) binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
+		2) binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
+	- Inicialitzar el repositori Git local (git init)
+	- Fer el commit, push i tag d'aquesta versió inicial al Git
 
 Un cop finalitzat aquest procés al Git es dispossarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
