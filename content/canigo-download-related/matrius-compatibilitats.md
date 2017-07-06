@@ -56,7 +56,7 @@ weight      = 1
 | canigo.core                                           	|    [3.2.0,3.3.0)   	|                       |                       |
 | canigo.web.jsf                                       		|    [1.2.0,1.3.0)   	|                       |                       |
 |                                                       	|                    	|                       |                       |
-| **canigo.operation.logging**                          	|       1.2.0          	|                       |                       |
+| **canigo.operation.logging**                          	|       1.1.0          	|                       |                       |
 | canigo.core                                           	|    [3.2.0,3.3.0)     	|                       |                       |
 |                                                       	|                    	|                       |                       |
 | **canigo.integration.antivirus**                      	|        1.2.0       	|                       |                       |
