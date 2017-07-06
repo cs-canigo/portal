@@ -18,18 +18,20 @@ Aquest HowTo té la finalitat de proporcionar una guía per a realitzar la migra
 ### Prerrequisits
 
 * Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
-* El **repositori a migrar no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules").
+* El **repositori a migrar no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 20 MB**.
+
+<p style="color: #CC0000;font-weight: bold"> Advertència: Des del SIC recomanem no utilitzar els dos repositoris (l'original al SVN i el migrat al Git) alhora. Un cop s'hagi realitzat la migració i es comprovi que s'ha realitzat correctament, cal utilitzar el nou repositori del Git.</p>  
 
 #### Per a repositoris amb binaris
 
 El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents pasos:
 
-	* Descarregar el darrer tag del SVN
-	* Eliminar els binaris. Podem tenir dos casos:
-		- binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
-		-  binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
-	* Inicialitzar el repositori Git local (git init)
-	* Fer el commit, push i tag d'aquesta versió inicial al Git
+* Descarregar el darrer tag del SVN
+* Eliminar els binaris. Podem tenir dos casos:
+	- binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
+	-  binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
+* Inicialitzar el repositori Git local (git init)
+* Fer el commit, push i tag d'aquesta versió inicial al Git
 
 Un cop finalitzat aquest procés al Git es dispossarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
@@ -98,3 +100,5 @@ Per finalitzar es puja el codi a Git
 ### Establir mode lectura en el repositori SVN
 
 Un cop finalitzat el procés de migració és necessari demanar a l'equip del SIC, via petició a SAU Remedy al servei "FRAMEWORK SIC" o mail a la [Bústia de la Oficina Tècnica](mailto:oficina-tecnica.canigo.ctti@gencat.cat), que estableixi permisos només de lectura pel repositori. D'aquesta manera ens assegurem que només es faran modificacions en el Git.
+
+Us recordem que el 6 de novembre de 2017 el SVN del SIC passarà a mode de només lectura. Us animem a realitzar aquesta migració quant abans millor. Per a més informació sobre aquest i altres esdeveniments, podeu consultar el [RoadMap de l'Oficina Tècnica Canigó](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
