@@ -2,7 +2,7 @@
 date        = "2017-07-05"
 title       = "SIC. Nou sistema de gestió de binaris."
 description = "A data 27/06/2017 es va publicar el nou sistema de gestió de binaris del SIC."
-sections    = ["noticies"]
+sections    = ["noticies", "home"]
 categories  = ["sic"]
 key         = "JULIOL2017"
 +++
