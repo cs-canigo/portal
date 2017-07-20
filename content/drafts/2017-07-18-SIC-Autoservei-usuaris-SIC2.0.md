@@ -21,7 +21,7 @@ En crear els Projecte/s dins els grups d'aplicació, la resta d'usuaris del Lot 
 <CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
 <br/>
 <br/>
-Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icone <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
+Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icona <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
 
 Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de 'Projecte', no a nivell de Grup.
 
@@ -42,7 +42,7 @@ Per tal de concedir l'accés d'un usuari a un Projecte cal:
 <br/>
 
 Amb aquesta acció, l'usuari ja podrà accedir al Projecte.
-Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació ,l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
+Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
 
  <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
  <br/>
