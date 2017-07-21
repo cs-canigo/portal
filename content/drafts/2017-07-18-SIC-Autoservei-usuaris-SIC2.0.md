@@ -1,17 +1,19 @@
 +++
 date        = "2017-07-18"
 title       = "SIC 2.0. Funcionament de l'Autoservei d'usuaris al Gitlab"
-description = "Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab"
+description = "Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab."
 sections    = ["drafts"]
 categories  = ["sic"]
 key         = "AGOST2017"
 +++
 
-Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab
+Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab.
 
-Els usuaris que ja eren Release Manager Lot x àmbit al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir-hi al portal del Gitlab (mitjançant credencials GICAR), podran veure els Grups ja creats de les aplicacions que mantenen.
+Els usuaris que ja eren Release Manager Lot x àmbit al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir-hi al portal del Gitlab (mitjançant credencials GICAR), podran trobar els Grups de les aplicacions que mantenen ja creats. 
 
-Els Grups mantindran com a nom el codi de les aplicacions i de partida es trobaran buits. Caldrà que els usuaris Release Manager creïn 'Projectes' (repositoris GIT) dins aquests grups.
+Tanmateix, **durant el primer accés al Gitlab no es comptarà amb visibilitat cap a les carpetes de Grup d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de gaudir d'aquests accessos.**
+
+Els Grups mantindran com a nom el codi de les aplicacions. Els usuaris Release Manager hauran de crear 'Projectes' dins aquests grups per tal de disposar del repositori GIT on fer la pujada de codi font de les aplicacions.
 
 <center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
 <br/>
@@ -21,7 +23,7 @@ En crear els Projecte/s dins els grups d'aplicació, la resta d'usuaris del Lot 
 <CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
 <br/>
 <br/>
-Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icona <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
+Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icone <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
 
 Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de 'Projecte', no a nivell de Grup.
 
@@ -42,10 +44,10 @@ Per tal de concedir l'accés d'un usuari a un Projecte cal:
 <br/>
 
 Amb aquesta acció, l'usuari ja podrà accedir al Projecte.
-Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
+Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació ,l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
 
- <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
- <br/>
+<CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
+<br/>
  
  Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al Gitlab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy o contacta amb la bústia oficina-tecnica.canigo.ctti@gencat.cat.
  
