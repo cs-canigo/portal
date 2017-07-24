@@ -49,7 +49,11 @@ Amb aquest procés disposem del nostre certificat afegit al cacerts, ara s'ha de
 
 ### Extensió Java-Buildpack
 
-Per a extendre el buildpack hem d'accedir al github de [cloudfoundry] (https://github.com/cloudfoundry/java-buildpack) i fer un fork.
+Crear al Git del SIC: https://git.intranet.gencat.cat/codidialeg/ un projecte buit, per exemple java-buildpack
+
+Aleshores accedir al buildpack que es vol extendre, en aquest howto al github de [cloudfoundry] (https://github.com/cloudfoundry/java-buildpack) i fer un clone.
+
+Al clone realitzat, afegir el remote el nostre repositori creat i fer un push
 
 Aquest pas ens crea una còpia del buildpack al Git del SIC: https://git.intranet.gencat.cat/mygroup/java-buildpack
 
