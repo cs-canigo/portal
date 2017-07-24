@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Connectar una aplicació amb JavaBuildpack i Mongo(Compose) amb SSL] (/howtos/2017-08-Howto-Us_de_mongo_compose_amb_JavaBuildpack)
 - [Migrar repositori SVN a repositori Git del SIC] (/howtos/2017-07-Howto-Migrar repositori SVN a repositori GIT)
 - [Configurar l'entorn de treball per a GIT al SIC 2.0] (/howtos/2017-07-Howto-Configurar-entorn-treball)
 - [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)

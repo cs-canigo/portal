@@ -1,10 +1,10 @@
 +++
-date        = "2017-03-01"
+date        = "2017-07-24"
 title       = "Connectar una aplicació amb JavaBuildpack i Mongo(Compose) amb SSL"
 description = "Connectar una aplicació amb JavaBuildpack i Mongo(Compose) amb SSL"
 section     = "howtos"
-categories  = ["canigo"]
-key         = "MARÇ2017"
+categories  = ["cloud"]
+key         = "AGOST2017"
 +++
 
 ### A qui va dirigit
