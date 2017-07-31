@@ -2,7 +2,7 @@
 date        = "2017-07-18"
 title       = "SIC 2.0. Funcionament de l'Autoservei d'usuaris al Gitlab"
 description = "Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab."
-sections    = ["drafts"]
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "AGOST2017"
 +++
