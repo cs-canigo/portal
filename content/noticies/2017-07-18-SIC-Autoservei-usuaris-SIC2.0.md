@@ -26,8 +26,7 @@ Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a
 Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de 'Projecte', no a nivell de Grup.
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)</center>
-<br/>
-<br/>
+<br/><br/>
 Per tal de concedir l'accés d'un usuari a un Projecte cal:
 
 * Accedir al Projecte al qual es vol proporcionar accés.
