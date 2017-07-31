@@ -44,7 +44,7 @@ Per tal de concedir l'accés d'un usuari a un Projecte cal:
 <br/>
 
 Amb aquesta acció, l'usuari ja podrà accedir al Projecte.
-Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació ,l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
+Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
 
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
