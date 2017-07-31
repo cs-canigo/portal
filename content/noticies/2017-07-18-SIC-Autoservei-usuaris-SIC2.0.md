@@ -16,11 +16,13 @@ Tanmateix, **durant el primer accés al Gitlab no es comptarà amb visibilitat c
 Els Grups mantindran com a nom el codi de les aplicacions. Els usuaris Release Manager hauran de crear 'Projectes' dins aquests grups per tal de disposar del repositori GIT on fer la pujada de codi font de les aplicacions.
 
 <center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
-<br/><br/>
+<br/>
+<br/>
 En crear els Projecte/s dins els grups d'aplicació, la resta d'usuaris del Lot que no siguin Release Manager no tindran visibilitat a ells. 
 
 <CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
-<br/><br/>
+<br/>
+<br/>
 Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icone <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
 
 Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de 'Projecte', no a nivell de Grup.
