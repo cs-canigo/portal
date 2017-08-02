@@ -20,6 +20,35 @@ Per a utilitzar el repositori, en realitat grup de repositoris, s'ha d'afegir el
 
 Un cop importat el certificat els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
 
+Al settings.xml del Maven configurar el repository al profile per defecte:
+
+```
+	<profile>
+		<id>defaultProfile</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<repositories>
+			<repository>
+				<id>canigo</id>
+				<url>https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/</url>
+				<snapshots>
+					<enabled>true</enabled>
+					<updatePolicy>always</updatePolicy>
+				</snapshots>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+			</repository>
+		</repositories>
+		<properties>
+			<downloadSources>true</downloadSources>
+			<downloadJavadocs>false</downloadJavadocs>
+		</properties>
+	</profile>
+  
+```
+
 ## Canigó 3.2 
 
 - [Mòduls de Canigó 3.2](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/)

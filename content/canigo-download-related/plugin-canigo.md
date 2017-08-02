@@ -16,6 +16,10 @@ El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet 
 
 La última versió del plugin està certificada amb la versió d'Eclipse Mars, que podeu trobar al següent enllaç: https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr
 
+### Prerequisit
+
+Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó] (/canigo/download)
+
 ### Instal·lació
 
 A la pestanya Help de l'Eclipse seleccionar "Install New Software..."
