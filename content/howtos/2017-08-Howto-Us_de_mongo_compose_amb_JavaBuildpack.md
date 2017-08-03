@@ -1,7 +1,7 @@
 +++
 date        = "2017-07-24"
-title       = "Connectar una aplicació amb JavaBuildpack i Mongo(Compose) amb SSL"
-description = "Connectar una aplicació amb JavaBuildpack i Mongo(Compose) amb SSL"
+title       = "Accés per SSL a cluster MongoDB (Compose) des de buildpack Java (Cloud Foundry)"
+description = "Accés per SSL a cluster MongoDB (Compose) des de buildpack Java (Cloud Foundry)"
 section     = "howtos"
 categories  = ["cloud"]
 key         = "AGOST2017"
@@ -9,11 +9,13 @@ key         = "AGOST2017"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells que vulguin desplegar una aplicació java a Cloudfoundry utilitzant el buildpack de Java, i la seva aplicació utilitze una base de dades Mongo creada a Compose.
+Aquest how-to va dirigit a tots aquells que vulguin desplegar una aplicació Java a [Bluemix|https://console.bluemix.net/] com a app utilitzant el buildpack Cloud Foundry de Java, i necessiti accés a una base de dades MongoDB creada a [Compose|https://compose.io].
+
+Les configuracions explicades en aquest Howto pot aplicar-se a aplicacions Java i bases de dades MongoDB desplegades a altres plataformes, però s'ha certificat a Bluemix i Compose, plataformes cloud d'IBM.
 
 ### Introducció
 
-Quan es crea una base de dades Mongo a Compose, la url de connexió que es genera conté el paràmetre **ssl=true**. Això provoca que al desplegar l'aplicació amb el buildpack de java aparegui el següent error:
+Quan es crea un cluster MongoDB a Compose, la url de connexió que es genera conté el paràmetre **ssl=true**. Això significa que l'accés ha de realitzar-se per SSL. En cas que no es realitzi cap configuració, l'accés des d'una aplicació Java produïra el següent error:
 
 	Caused by: javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification
 	...
@@ -21,19 +23,11 @@ Quan es crea una base de dades Mongo a Compose, la url de connexió que es gener
 	...
 	Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 	
-Per a solucionar aquest error s'ha d'afegir el certificat que proporciona compose al cacerts de Java.
-
-### Crear certificat
-
-S'ha d'accedir a Compose i copiar el certificat proporcionat (SSL Certificate (Self-Signed)) i el desem a un fitxer, per exemple **mongodbcert.crt**, que quedarà de la següent manera:
-
-	-----BEGIN CERTIFICATE-----
-	Codi certificat
-	-----END CERTIFICATE-----
+Per a solucionar-ho cal afegir el certificat que proporciona Compose al cacerts de Java. Aquest certificat s'haurà de sol·licitar a [suport.cloud@gencat.cat|mailto:suport.cloud@gencat.cat].
 
 ### Afegir certificat a cacerts
 
-La versió actual d'OpenJDK que utilitza JavaBuildpack, a Març de 2017, és la versió 1.8.0.121, així que afegim el nostre certificat al cacerts inicial d'aquesta versió.
+La versió actual d'OpenJDK que utilitza el buildpack Java de Cloud Foundry, a Agost de 2017, és la versió 1.8.0_141, així que afegim el nostre certificat al cacerts inicial d'aquesta versió.
 
 Per descarregar [OpenJDK](https://github.com/ojdkbuild/ojdkbuild)
 
