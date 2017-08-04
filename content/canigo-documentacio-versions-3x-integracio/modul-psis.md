@@ -17,7 +17,7 @@ Aquest mòdul permet la validació de Signatures electròniques mitjançant els 
 Per tal d'instal- lar el mòdul de PSIS es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
-<canigo.integration.psis.version>[1.1.0,1.2.0)</canigo.integration.psis.version>
+<canigo.integration.psis.version>[1.2.0,1.3.0)</canigo.integration.psis.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -44,94 +44,129 @@ Propietat          | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-3x-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+
 ## Utilització del Mòdul
 
-### JSF
+### PicaService
 
-Per a utilitzar aquest mòdul, cal crear un bean i una jsf:
+El mòdul PSIS requereix de la creació del Bean del servei de la pica, per defecte Psis cerca un bean anomenat picaService. Si es dessitja canviar aquest nom es pot fer afegint al fitxer psis.propierties la següent propietat:
 
-**PsisBean.java**
+	psis.picaServiceBeanName=[nom del bean]
+	
+Un exemple del bean que s'ha de crear:
 
-Managed Bean de JSF expossat per Spring, i accesible desde la pàgina JSF amb el nom psisBean.
+	<!-- BEAN DE LA PICA -->
+	<bean id="picaService" parent="abstractPicaService">
+        <property name="modalitats">
+            <map>
+            </map>
+        </property>
+    </bean>
+
+### REST
+
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
+
+**PsisService.java**
+
+Classe Java on es realitzarà la lògica de la operació a realitzar.
 
 En aquest exemple es valida la caducitat d'un certificat amb PSIS:
 
 ```java
 import java.io.InputStream;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 
+import org.apache.commons.io.IOUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
+import cat.gencat.ctti.canigo.arch.integration.psis.PSISConnector;
+import cat.gencat.ctti.canigo.arch.integration.psis.exceptions.PSISException;
 import net.gencat.pica.psis.schemes.valCertSimpPICARequest.ValCertSimpPICARequestDocument;
 import net.gencat.pica.psis.schemes.valCertSimpPICARequest.ValCertSimpPICARequestDocument.ValCertSimpPICARequest;
 import net.gencat.pica.psis.schemes.valCertSimpPICAResponse.ValCertSimpPICAResponseDocument;
 
-import org.apache.commons.io.IOUtils;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Component;
-
-import cat.gencat.ctti.canigo.arch.integration.psis.PSISConnector;
-import cat.gencat.ctti.canigo.arch.integration.psis.exceptions.PSISException;
-
-@Component("modulPsisBean")
+@Service("psisService")
 @Lazy
-public class ModulPsisBean {
+public class PsisService {
+	
+	/** Logger  */  
+	private static final Logger logger = LoggerFactory.getLogger(PsisService.class);
 
-  @Autowired
-  private PSISConnector psisServices;
-  private static final Log log = LogFactory.getLog(ModulPsisBean.class);
-  private static byte[] certificatCaducat = getBytesFromInputStream(
-    Thread.currentThread().getContextClassLoader().getResourceAsStream("config/cert/certificatCaducat.crt"));
+	@Autowired
+	private PSISConnector psisServices;
+	
+	private static byte[] certificatCaducat = getBytesFromInputStream(Thread.currentThread().getContextClassLoader().getResourceAsStream("config/cert/certificatCaducat.crt"));
 
-  public void testValidarCertificatCaducat() throws PSISException {
-    log.debug("[testValidarCertificatCaducat]");
-    try{
-      ValCertSimpPICARequestDocument document = ValCertSimpPICARequestDocument.Factory.newInstance();
-      ValCertSimpPICARequest peticioValidar = ValCertSimpPICARequest.Factory.newInstance();
-      peticioValidar.setCertificat(certificatCaducat);
-      document.setValCertSimpPICARequest(peticioValidar);
-      ValCertSimpPICAResponseDocument resposta = psisServices.validarCertificat(document);
-      if (resposta!=null && resposta.getValCertSimpPICAResponse()!=null && resposta.getValCertSimpPICAResponse().getResultat()!=null){
-        FacesContext.getCurrentInstance().addMessage("psisForm",
-          new FacesMessage( FacesMessage.SEVERITY_INFO,  "S'ha verificat la caducitat del certificat amb el següent resultat: "+
-          resposta.getValCertSimpPICAResponse().getResultat(), null));
-      }else{
-        FacesContext.getCurrentInstance().addMessage("psisForm",
-          new FacesMessage( FacesMessage.SEVERITY_ERROR, "No s'ha rebut resposta del servei o el format d'aquesta no es l'esperat", null));
-      }
-    } catch (PSISException e) {
-      FacesContext.getCurrentInstance().addMessage("psisForm",
-        new FacesMessage( FacesMessage.SEVERITY_ERROR, "S'ha produït un error al servei", null));
-      e.printStackTrace();
-    } catch (Exception e) {
-      FacesContext.getCurrentInstance().addMessage("psisForm",
-        new FacesMessage( FacesMessage.SEVERITY_ERROR, "S'ha produït un error general", null));
-      e.printStackTrace();
-    }
-  }
 
-  private static byte[] getBytesFromInputStream(InputStream is) {
-    byte[] resultat = null;
-    try {
-      resultat = IOUtils.toByteArray(is);
-    } catch (Exception e) {
-      log.error(e);
-    }
-    return resultat;
-  }
+	 private static byte[] getBytesFromInputStream(InputStream is) {
+		 byte[] resultat = null;
+		 try {
+			 resultat = IOUtils.toByteArray(is);
+		 } catch (Exception e) {
+			 logger.error(e.getMessage(),e);
+		 }
+		 return resultat;
+	 }
+	 
+	 public String testValidarCertificatCaducat() {
+		 logger.debug("[testValidarCertificatCaducat]");
+		 
+		 String message;
+		 try{
+			 ValCertSimpPICARequestDocument document = ValCertSimpPICARequestDocument.Factory.newInstance();
+			 ValCertSimpPICARequest peticioValidar = ValCertSimpPICARequest.Factory.newInstance();
+			 peticioValidar.setCertificat(certificatCaducat);
+			 document.setValCertSimpPICARequest(peticioValidar);
+			 ValCertSimpPICAResponseDocument resposta = psisServices.validarCertificat(document);
+			 if (resposta!=null && resposta.getValCertSimpPICAResponse()!=null && resposta.getValCertSimpPICAResponse().getResultat()!=null){
+				 message = "S'ha verificat la caducitat del certificat amb el següent resultat: "+ resposta.getValCertSimpPICAResponse().getResultat();
+			 }else{
+				 message = "No s'ha rebut resposta del servei o el format d'aquesta no es l'esperat";
+			 }
+		 } catch (PSISException e) {
+			 message = "S'ha produït un error al servei";
+			 logger.error(e.getMessage(), e);
+		 } catch (Exception e) {
+			 message = "S'ha produït un error general";
+			 logger.error(e.getMessage(), e);
+		 }
+		 
+		 return message;
+	 }
+	 
 }
 ```
 
-**psis.jsf**  
-Pàgina JSF que conté un commandButton que realitza la crida al mètode "execute" del managed bean de JSF.
+**PsisServiceController.java**  
+Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
-```
-<h:form id="psisForm">
-       <h:panelGrid columns="1">
-           <h:commandButton value="#{msg.canigoSubmit}" action="#{modulPsisBean.testValidarCertificatCaducat}" />
-           <h:message for="psisForm" infoStyle="color: green;" errorStyle="color: red;" />
-       </h:panelGrid>
-</h:form>
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.PsisService;
+
+@RestController
+@RequestMapping("/psis")
+public class PsisServiceController {
+
+	@Autowired
+	PsisService psisService;
+
+	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testValidarCertificatCaducat() {
+		
+		String message = psisService.testValidarCertificatCaducat();
+		
+		return message;
+	}
+}
 ```
