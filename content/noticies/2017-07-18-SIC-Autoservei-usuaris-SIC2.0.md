@@ -1,19 +1,19 @@
 +++
 date        = "2017-07-18"
-title       = "SIC 2.0. Funcionament de l'Autoservei d'usuaris al Gitlab"
-description = "Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab."
+title       = "SIC 2.0. Funcionament de l'Autoservei d'usuaris al GitLab"
+description = "Aquest article descriu amb detall el funcionament de l'Autoservei d'usuaris SIC 2.0 al GitLab"
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "AGOST2017"
 +++
 
-Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al Gitlab.
+Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al [GitLab](https://git.intranet.gencat.cat/).
 
-Els usuaris que ja eren Release Manager Lot x àmbit al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir-hi al portal del Gitlab (mitjançant credencials GICAR), podran trobar els Grups de les aplicacions que mantenen ja creats. 
+Els usuaris que ja eren "Release Manager Lot x Àmbit" al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir al portal del GitLab (mitjançant credencials GICAR) podran trobar els Grups corresponents als codis de diàleg de les seves aplicacions. 
 
-Tanmateix, **durant el primer accés al Gitlab no es comptarà amb visibilitat cap a les carpetes de Grup d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de gaudir d'aquests accessos.**
+Tanmateix, **durant el primer accés al GitLab no es comptarà amb visibilitat en els Grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de gaudir d'aquests accessos.** Cal també destacar que l'identitat GICAR de l'usuari **ha de tenir informada l'adreça de correu, en cas contrari haurà de gestionar l'alta d'aquesta informació per poder accedir al Git**
 
-Els Grups mantindran com a nom el codi de les aplicacions. Els usuaris Release Manager hauran de crear 'Projectes' dins aquests grups per tal de disposar del repositori GIT on fer la pujada de codi font de les aplicacions.
+Els Grups tintran com a nom el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear 'Projectes' dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
 <center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
 <br/><br/>
@@ -41,11 +41,11 @@ Per tal de concedir l'accés d'un usuari a un Projecte cal:
 <br/>
 
 Amb aquesta acció, l'usuari ja podrà accedir al Projecte.
-Cas que el rol escollit per a l'usuari hagués estat de Màster, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de grups d'aplicació (+Projectes), convertint-se a efectes en un altre Release Manager.
+Cas que el rol escollit per a l'usuari hagués estat de Master, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de grups d'aplicació (Projectes), convertint-se a efectes pràctics en un altre Release Manager.
 
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
  
- Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al Gitlab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy o contacta amb la bústia oficina-tecnica.canigo.ctti@gencat.cat.
+Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy o contacta amb la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
  
  
