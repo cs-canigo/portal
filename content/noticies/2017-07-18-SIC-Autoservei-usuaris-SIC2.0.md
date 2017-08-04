@@ -7,13 +7,13 @@ categories  = ["sic"]
 key         = "AGOST2017"
 +++
 
-Aquest article pretén descriure al detall funcionament de l'Autoservei d'usuaris SIC 2.0 al [GitLab](https://git.intranet.gencat.cat/).
+Aquest article pretén descriure al detall funcionament de l'**Autoservei d'usuaris SIC 2.0 al [GitLab](https://git.intranet.gencat.cat/)**.
 
-Els usuaris que ja eren "Release Manager Lot x Àmbit" al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir al portal del GitLab (mitjançant credencials GICAR) podran trobar els Grups corresponents als codis de diàleg de les seves aplicacions. 
+Els usuaris que ja eren **"Release Manager Lot x Àmbit"** al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Això significa que en accedir al portal del GitLab (mitjançant credencials GICAR) podran trobar els Grups corresponents als codis de diàleg de les seves aplicacions. 
 
-Tanmateix, **durant el primer accés al GitLab no es comptarà amb visibilitat en els Grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de gaudir d'aquests accessos.** Cal també destacar que l'identitat GICAR de l'usuari **ha de tenir informada l'adreça de correu, en cas contrari haurà de gestionar l'alta d'aquesta informació per poder accedir al Git**
+_Important_: durant el primer accés al GitLab no es comptarà amb visibilitat en els Grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de gaudir d'aquests accessos. Cal també destacar que la identitat GICAR de l'usuari ha de tenir informada l'adreça de correu, en cas contrari haurà de gestionar l'alta d'aquesta informació per poder accedir al Git.
 
-Els Grups tintran com a nom el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear 'Projectes' dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
+Els **Grups** tindran com a nom el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
 <center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
 <br/><br/>
@@ -23,7 +23,7 @@ En crear els Projecte/s dins els grups d'aplicació, la resta d'usuaris del Lot 
 <br/><br/>
 Per tal de poder accedir a la vista d'aquests Grups/Projectes, cal navegar cap a les respectives seccions des del menú d'opcions. Aquest es desplega i replega picant al botó amb icone <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> , situat a la part superior esquerra.
 
-Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de 'Projecte', no a nivell de Grup.
+Els mateixos usuaris Release Manager poden donar visibilitat a la resta d'usuaris del Lot. La visibilitat la podran proporcionar a nivell de Projecte, no a nivell de Grup.
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)</center>
 <br/><br/>
