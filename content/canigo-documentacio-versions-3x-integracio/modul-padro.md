@@ -53,13 +53,13 @@ Serveis Asíncrons
 
 Es pot trobar el codi font referent aquests components a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.padro.pica/1.1.1/
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.padro.pica/
 
 ### Requeriments
 
 El connector PADRO és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
 
-Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei connector genèric de la PICA 1.0.
+Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-3x-integracio/modul-pica/) 1.2.0.
 
 ## Configuració
 
@@ -70,7 +70,7 @@ Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els s
 En el pom.xml:
 
 ```
-<canigo.integration.padro.pica.version>[1.1.0,1.2.0)</canigo.integration.padro.pica.version>
+<canigo.integration.padro.pica.version>[1.2.0,1.3.0)</canigo.integration.padro.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-PADRO -->

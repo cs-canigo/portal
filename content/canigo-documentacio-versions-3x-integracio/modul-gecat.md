@@ -39,7 +39,7 @@ Les classes que utilitzarem per fer les operacions han estat generades amb una e
 Per tal d'instal-lar el mòdul de GECAT es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.gecat.version>[1.1.0,1.2.0)</canigo.integration.gecat.version>
+<canigo.integration.gecat.version>[1.2.0,1.3.0)</canigo.integration.gecat.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -79,82 +79,98 @@ En el cas en que una mateixa línia pugui aparèixer més d'una vegada la forma 
 
 Un cop hem creat l'objecte de crida amb totes les dades necessàries, utilitzarem un objecte de la classe GecatConnector per obtenir l'objecte de retorn amb les dades retornades pel SAP.
 
-### JSF
+### REST
 
-GecatBean.java
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 
-Managed Bean de JSF que gestiona la crida al servei de la GECAT.
+**GecatService.java**
 
-En aquest bean es pot visualiztar:
-
-* Inyecció del servei de GECAT via annotacions (@Autowired) de Spring.
-* Inyecció del servei d'internacionaliztació via annotacions (@Autowired) de Spring.
+Classe Java on es realitzarà la lògica de la operació a realitzar i es connecta amb el mòdul de Notificacions electròniques.
 
 ```java
-    /**
-     * Classe d'exemple d'invocació al servei de GECAT
-     *
-     * @author cscanigo
-     *
-     */
-    @Component("gecatBean")
-    @Lazy
-    public class GecatBean {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
 
-    	@Autowired
-    	private GecatConnector service;
-    	@Autowired
-    	private I18nResourceBundleMessageSource resource;
-    	private static final Log log = LogFactory.getLog(GecatBean.class);
-            
+import cat.gencat.ctti.canigo.arch.integration.gecat.connector.GecatConnector;
+import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritori.DadesConsultaTerritoriType;
+import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritori.DadesConsultaType;
+import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritori.ObjectFactory;
+import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritoriRetorn.DadesConsultaTerritoriRetornType;
+
+@Service("gecatService")
+@Lazy
+public class GecatService {
+
+	private static final Logger log = LoggerFactory.getLogger(GecatService.class);
+
+	@Autowired
+    private GecatConnector gecatConnector;
+    
+
+	public String testGecat(){
+		
+		String message;
+
+		try {
+
+            ObjectFactory objectFactory = new ObjectFactory();
 
             /**
-             * Mètode cridat des de la JSF 
-             *
-             */
-    	public void execute(){
-    		try {
+             * creem l'objecte per fer la consulta
+             **/
+            DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
+            DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
+            dadesConsulta.setCodiTerritori("0217188");
+            dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
+            DadesConsultaTerritoriRetornType dadesConsultaRetorn = gecatConnector.consultaTerritori(dadesConsultaTerritori);
 
-    			ObjectFactory objectFactory = new ObjectFactory();
+            log.info("getCodiTerritori():" +
+                    dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
+            log.info("getNomTerritori():" +
+                    dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
 
-    			/**
-    			 * creem l'objecte per fer la consulta
-    			 **/
-    			DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
-    			DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
-    			dadesConsulta.setCodiTerritori("0217188");
-    			dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
-    			DadesConsultaTerritoriRetornType dadesConsultaRetorn = service.consultaTerritori(dadesConsultaTerritori);
-
-    			log.info("getCodiTerritori():" +
-    					dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
-    			log.info("getNomTerritori():" +
-    					dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
-
-    			FacesContext.getCurrentInstance().addMessage("gecatForm", new FacesMessage(
-    			        FacesMessage.SEVERITY_INFO, resource.getMessage("gecatSuccess") + ": "
-    			        + dadesConsultaRetorn.getDadesRetorn().getNomTerritori(), null));
-    	      } catch (Exception e) {
-    	    	  FacesContext.getCurrentInstance().addMessage("gecatForm", new FacesMessage(
-    				        FacesMessage.SEVERITY_ERROR, resource.getMessage("gecatError") + " - " + e.getMessage(), null));
-    	      }
-    	}
+            message = "Resultat test : " + dadesConsultaRetorn.getDadesRetorn().getNomTerritori();
+          } catch (Exception e) {
+        	  message = "Error al test : " + e.getMessage();
+        	  log.error(e.getMessage(),e);
+          }
+		
+		return message;
     }
+	
+}
 ```
 
+**GecatServiceController.java**  
 
-**gecat.jsf**    
+Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
-Invocació del métode "execute" del managed bean de JSF definit anteriorment com a picaBean. El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("picaForm"....).
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import cat.gencat.plantilla32.service.GecatService;
+
+@RestController
+@RequestMapping("/gecat")
+public class GecatServiceController {
+
+	@Autowired
+	GecatService gecatService;
+
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testGecat() throws Exception {
+		return gecatService.testGecat();
+	}
+}
 ```
-<h:form id="gecatForm">
-   <h:panelGrid columns="1">
-     <h:commandButton value="#{msg.canigoSubmit}" action="#{gecatBean.execute}" />
-     <h:message for="gecatForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
-```
+
 
 ### Consideracions
 
