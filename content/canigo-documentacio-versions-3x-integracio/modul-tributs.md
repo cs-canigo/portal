@@ -102,13 +102,13 @@ Totes les modalitats anteriors són síncrones.
 
 Es pot trobar tota el codi font referent aquests components a les següents url's:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.tributs.pica/1.1.0/  
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.tributs.pica/ 
 
 ### Requeriments
 
 El connector TRIBUTS és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no és garantit el seu correcte funcionament.
 
-Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, es s'ha de tenir configurat el servei connector genèric de la PICA 1.1.0.
+Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-3x-integracio/modul-pica/) 1.2.0.
 
 ## Configuració
 
@@ -120,12 +120,12 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 En el pom.xml:
 
 ```
-<canigo.integration.tributs.pica.version>[1.1.0,1.2.0)</canigo.integration.tributs.pica.version>
+<canigo.integration.tributs.pica.version>[1.2.0,1.3.0)</canigo.integration.tributs.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-TRIBUTS -->
 <dependency>
-        <groupId>cat.gencat.ctti</groupId>
+    <groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.integration.tributs.pica</artifactId>
 	<version>${canigo.integration.tributs.pica.version}</version>
 </dependency>
