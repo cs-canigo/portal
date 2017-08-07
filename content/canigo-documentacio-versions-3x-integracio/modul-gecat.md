@@ -146,7 +146,7 @@ public class GecatService {
 
 **GecatServiceController.java**  
 
-Controller que publica les operacions disponibles per a qui hagi de consumir-les
+Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
