@@ -25,13 +25,6 @@ Aquest document va dirigit als següents perfils:
 * Programador. Per conèixer l'ús del connector.
 * Arquitecte. Per conèixer quins són els components i la configuració del connector.
 
-## Documents i Fonts de Referència
-
-| Nom Document
-| ----------
-| Guia d'ús de l'API del Connector PICA-DNI.
-| Documentació funcional i tècnica del Connector PICA-DNI.
-
 ## Descripció Detallada
 
 Aquest connector permet realitzar les següents funcionalitats referents a les següent operacions amb un DNI:
@@ -52,13 +45,13 @@ Aquest connector permet realitzar les següents funcionalitats referents a les s
 
 Es pot trobar el codi font referent aquests components a les següents url's:
 
-Codi Font : http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.dni.pica/1.2.0/
+Codi Font : https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.dni.pica/
 
 ### Requeriments
 
 El connector DNI és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
 
-Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei connector genèric de la PICA 1.1.0.
+Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-3x-integracio/modul-pica/) 1.2.0.
 
 ## Configuració
 
@@ -69,7 +62,7 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 En el pom.xml;
 
 ```
-<canigo.integration.dni.pica.version>[1.2.0,1.3.0)</canigo.integration.dni.pica.version>
+<canigo.integration.dni.pica.version>[1.3.0,1.4.0)</canigo.integration.dni.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-DNI -->

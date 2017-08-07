@@ -44,13 +44,13 @@ Serveis Asíncrons
 
 Es pot trobar el codi font referent a aquest component a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.avisosalertes.pica/1.1.2/
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.avisosalertes.pica/
 
 #### Requeriments
 
 El connector AVISALERT és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
 
-Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei connector genèric de la PICA 1.1.0.
+Per tal de que el connector AVISALERT funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-3x-integracio/modul-pica/) 1.2.0.
 
 ### Configuració
 
@@ -61,7 +61,7 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 En el pom.xml:
 
 ```
-<canigo.integration.avisosalertes.pica.version>[1.1.0,1.2.0)</canigo.integration.avisosalertes.pica.version>
+<canigo.integration.avisosalertes.pica.version>[1.2.0,1.3.0)</canigo.integration.avisosalertes.pica.version>
 ...
 
 <!-- Dependencia del mòdul PICA-AVISALERT -->

@@ -86,7 +86,7 @@ Per tal d'instal- lar el mòdul de Documentum es pot incloure automàticament a 
 Per a la versió 5.3 de Documentum:
 
 ```
-<canigo.integration.documentum.version>[1.1.0,1.2.0)</canigo.integration.documentum.version>
+<canigo.integration.documentum.version>[1.2.0,1.3.0)</canigo.integration.documentum.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -98,7 +98,7 @@ Per a la versió 5.3 de Documentum:
 Per a la versió 6.5
 
 ```
-<canigo.integration.documentum.version>[2.1.0,2.2.0)</canigo.integration.documentum.version>
+<canigo.integration.documentum.version>[2.2.0,2.3.0)</canigo.integration.documentum.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -110,7 +110,7 @@ Per a la versió 6.5
 Per a la versió 7.1
 
 ```
-<canigo.integration.documentum.version>[3.0.0,3.1.0)</canigo.integration.documentum.version>
+<canigo.integration.documentum.version>[3.1.0,3.2.0)</canigo.integration.documentum.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -175,68 +175,82 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/dfc.properties
 
 ## Utilització del Mòdul
 
-### JSF
+### Exemple
 
-Per a utilitzar aquest mòdul, cal crear un bean i una jsf:
+En aquest exemple tenim dues classes, DocumentumServiceController que és l'endpoint del servei. I DocumentumAplicacioService, que és la classe Java on es realitza la lògica de la operació i es crida al mòdul de Documentum.
 
-**DocumentumBean.java**
-
-Managed Bean de JSF que gestiona la crida al servei de documentum.
-
-En aquest bean es pot visualiztar:
-
-* Inyecció del servei de Documentum via annotacions (@Autowired) de Spring.
-* Inyecció del conector de Documentum via annotacions (@Autowired) de Spring.
-* Inyecció del bean de configuració via annotacions (@Autowired) de Spring.
-* Inyecció del servei d'internacionaliztació via annotacions (@Autowired) de Spring.
+**DocumentumServiceController.java**
 
 ```java
-/**
-* Exemple invocació de Documentum 6.5
-*
-* @author cscanigo
-*/
-@Component("documentumBean")
-@Scope("singleton")
-@Lazy
-public class DocumentumBean {
-    @Autowired
-    private DocumentumService service;
-    @Autowired
-    private DocumentumConnector documentum;
-    @Autowired
-    private DocumentumConfigurator configurator;
-    @Autowired
-    private I18nResourceBundleMessageSource messageResource;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.http.MediaType;
+	import org.springframework.web.bind.annotation.PostMapping;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.RestController;
 
+	import cat.gencat.plantilla32.service.DocumentumAplicacioService;
 
-    /**
-     * Comprovem que es pot fer login al sistema de Documentum
-     */
-    public void submit(){
+	@RestController
+	@RequestMapping("/documentum")
+	public class DocumentumServiceController {
 
-        try{
-            service.login(configurator.getUser(), configurator.getPassword(),
-                    configurator.getDocBase(), this.documentum);
-        }catch(Exception e){
-             FacesContext.getCurrentInstance().addMessage("documentumForm", new FacesMessage(
-                        FacesMessage.SEVERITY_ERROR, messageResource.getMessage("documentumError"), null));
-        }
-        FacesContext.getCurrentInstance().addMessage("documentumForm", new FacesMessage(
-                FacesMessage.SEVERITY_INFO, messageResource.getMessage("documentumSuccess"), null));
-    }
-}
+		@Autowired
+		DocumentumAplicacioService documentumAplicacioService;
+
+		@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+		public String testLogin() throws Exception {
+			return documentumAplicacioService.testLogin();
+		}
+	}
 ```
 
-**documentum.jsf**
+**DocumentumAplicacioService.java**
 
-Pàgina JSF que conté un commandButton que realitza la crida al mètode "submit" del managed bean de JSF.El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("documentumForm"....).
+```java
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.context.annotation.Lazy;
+	import org.springframework.stereotype.Service;
 
-```
-<h:form id="documentumForm">
-   <h:panelGrid columns="1">
-     <h:commandButton value="#{msg.canigoSubmit}" action="#{documentumBean.submit}" />
-     <h:message for="documentumForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
+	import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumConnector;
+	import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumService;
+	import cat.gencat.ctti.canigo.arch.integration.documentum.impl.DocumentumConfigurator;
+
+	@Service("documentumAplicacioService")
+	@Lazy
+	public class DocumentumAplicacioService {
+
+		private static final Logger log = LoggerFactory.getLogger(DocumentumAplicacioService.class);
+
+		@Autowired
+		private DocumentumService service;
+		
+		@Autowired
+		private DocumentumConnector documentum;
+		
+		@Autowired
+		private DocumentumConfigurator configurator;
+		
+
+		/**
+		 * Comprovem que es pot fer login al sistema de Documentum
+		 */
+		public String testLogin(){
+			
+			String message = null;
+
+			try{
+				service.login(configurator.getUser(), configurator.getPassword(),configurator.getDocBase(), this.documentum);
+			}catch(Exception e){
+				message = "Error al realitzar login";
+				log.error(e.getMessage(), e);
+			}
+			
+			message = "Login correcte";
+			
+			return message;
+		}
+		
+	}
 ```
