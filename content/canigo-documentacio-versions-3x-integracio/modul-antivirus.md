@@ -17,7 +17,7 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[1.2.0,1.3.0)</canigo.integration.antivirus.version>
+<canigo.integration.antivirus.version>[1.3.0,1.4.0)</canigo.integration.antivirus.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -43,150 +43,132 @@ Propietat                              | Requerit | Descripció
 
 Per a utilizar aquest mòdul s'ha de demanar la llibreria sym-7.5.jar enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
 
-### JSF
+### Exemple d'ús
 
-Per a configurar el mòdul és necessari:
+**AntivirusServiceController.java**
 
-* Crear un managed bean de JSF que contingui la lògica d'invocació al servei d'antivirus.
-* Pàgina JSF per a realitzar la invocació al managed bean.
-
-**AntivirusBean.java**
-
-Managed Bean de JSF que gestiona la crida al servei d'antivirus.
-
-En aquest bean es pot veure:
-
-** Inyecció del servei d'antivirus via annotacions (@Autowired) de Spring.
-** Inserció del missatge de resultat de l'operació que posteriorment sera recuperat pel formulari JSF.
+Endpoint de l'aplicació que publica el servei de l'antivirus
 
 ```java
-/**
- * Classe d'exemple d'invocació al servei d'antivirus
- *
- * @author cscanigo
- *
- */
-@Component("antivirusBean")
-@Lazy
-public class AntivirusBean {
+	import java.io.InputStream;
 
-    private static final Log log = LogFactory.getLog(AntivirusBean.class);
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.http.MediaType;
+	import org.springframework.web.bind.annotation.PostMapping;
+	import org.springframework.web.bind.annotation.RequestMapping;
+	import org.springframework.web.bind.annotation.RestController;
 
-    @Autowired
-    private Antivirus service;
+	import com.sun.jersey.core.header.FormDataContentDisposition;
+	import com.sun.jersey.multipart.FormDataParam;
 
-    private UploadedFile upFile;
+	import cat.gencat.plantilla32.service.AntivirusService;
 
+	@RestController
+	@RequestMapping("/antivirus")
+	public class AntivirusServiceController {
 
-        /**
-         * Getter file
-         * @return file
-         */
-    public UploadedFile getUpFile(){
-        return upFile;
-    }
+		@Autowired
+		AntivirusService antivirusService;
 
-        /**
-         * Setter file
-         * @param file
-         */
-    public void setUpFile(UploadedFile upFile){
-        this.upFile = upFile;
-    }
-
-         /**
-         * Escaneig de l'arxiu pujat al servidor
-         *
-         */
-    public void scan(){
-        String resultat = null;
-        log.info("AntivirusAction [scan] - Inici");
-        ResultatEscaneig res = null;
-        try {
-
-            res = service.scan(getUpFile().getBytes());
-
-            if (res != null) {
-                switch (res.getEstat()) {
-                case 0:
-                    log.info("AntivirusAction [scan] - arxiu sense Virus");
-                    resultat = "Arxiu sense Virus";
-                    break;
-                case -1:
-                    log.info("AntivirusAction [scan] - arxiu amb Virus!");
-                    StringBuffer sb = new StringBuffer();
-                    sb.append("Arxiu amb Virus!");
-                    if(res.getArrayVirus()!=null){
-                        for(InfectionInfo i : res.getArrayVirus()){
-                            sb.append(i.getFileName() + " - " + i.getViolationName() + "; ");
-                        }
-                        resultat = sb.toString();
-                    }
-                    break;
-                case 1:
-                    log.info("AntivirusAction [scan] - Warning");
-                    resultat = res.getMissatge();
-                    break;
-                default:
-                    log.info("AntivirusAction [scan] - Error en el procés d'escaneig");
-                    resultat = "S'ha produit un error";
-                }
-            }
-
-            FacesContext.getCurrentInstance().addMessage("antivirusForm", new FacesMessage(
-                    FacesMessage.SEVERITY_INFO, "Resultat del escaneig: " + resultat, null));
-
-            log.info("AntivirusAction [scan] - Final");
-        } catch (AntivirusException ae) {
-            log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
-                    + " " + ae.getStackTrace());
-            FacesContext.getCurrentInstance().addMessage("antivirusForm", new FacesMessage(
-                    FacesMessage.SEVERITY_ERROR, "Resultat del escaneig: " + ae.getMessage(), null));
-        } catch (IOException e) {
-            log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
-                    + " " + e.getStackTrace());
-            FacesContext.getCurrentInstance().addMessage("antivirusForm", new FacesMessage(
-                    FacesMessage.SEVERITY_ERROR, "Resultat del escaneig: " + e.getMessage(), null));
-        }
-    }
-}
+		@PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, 
+				produces = { MediaType.APPLICATION_JSON_VALUE })
+		public String scan(@FormDataParam("file") InputStream inputStream, 
+							@FormDataParam("file") FormDataContentDisposition fileDetail) {
+			
+			return antivirusService.scan(inputStream);
+		}
+	}
 ```
 
-**antivirus.jsf**
+**AntivirusService.java**
 
-Invocació del métode "scan" del managed bean de JSF definit anteriorment com a "antivirusBean". El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("antivirusForm"....).
+Classe java on es realitza la lògica de la operació i es crida al mòdul de l'antivirus
 
+```java
+	import java.io.ByteArrayOutputStream;
+	import java.io.IOException;
+	import java.io.InputStream;
+
+	import org.h2.util.IOUtils;
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.context.annotation.Lazy;
+	import org.springframework.stereotype.Service;
+
+	import cat.gencat.ctti.canigo.arch.integration.antivirus.Antivirus;
+	import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
+	import cat.gencat.ctti.canigo.arch.integration.antivirus.beans.InfectionInfo;
+	import cat.gencat.ctti.canigo.arch.integration.antivirus.exceptions.AntivirusException;
+
+	@Service("antivirusService")
+	@Lazy
+	public class AntivirusService {
+
+		@Autowired
+		private Antivirus service;
+		
+		private static final Logger log = LoggerFactory.getLogger(AntivirusService.class);
+
+
+		 /**
+		 * Escaneig de l'arxiu pujat al servidor
+		 *
+		 */
+			public String scan(InputStream file){
+				String resultat = null;
+				String message = null;
+				log.info("AntivirusAction [scan] - Inici");
+				ResultatEscaneig res = null;
+				try {
+			
+					ByteArrayOutputStream out = new ByteArrayOutputStream();
+					
+					IOUtils.copy(file, out);
+					
+					res = service.scan(out.toByteArray());
+			
+					if (res != null) {
+						switch (res.getEstat()) {
+						case 0:
+							log.info("AntivirusAction [scan] - arxiu sense Virus");
+							resultat = "Arxiu sense Virus";
+							break;
+						case -1:
+							log.info("AntivirusAction [scan] - arxiu amb Virus!");
+							StringBuffer sb = new StringBuffer();
+							sb.append("Arxiu amb Virus!");
+							if(res.getArrayVirus()!=null){
+								for(InfectionInfo i : res.getArrayVirus()){
+									sb.append(i.getFileName() + " - " + i.getViolationName() + "; ");
+								}
+								resultat = sb.toString();
+							}
+							break;
+						case 1:
+							log.info("AntivirusAction [scan] - Warning");
+							resultat = res.getMissatge();
+							break;
+						default:
+							log.info("AntivirusAction [scan] - Error en el procés d'escaneig");
+							resultat = "S'ha produit un error";
+						}
+					}
+			
+					message = "Resultat del escaneig: " + resultat;
+			
+					log.info("AntivirusAction [scan] - Final");
+				} catch (AntivirusException ae) {
+					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
+							+ " " + ae.getStackTrace());
+					message = "Resultat del escaneig(Error): " + ae.getMessage();
+				} catch (IOException e) {
+					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
+							+ " " + e.getStackTrace());
+					message = "Resultat del escaneig(Error): " + e.getMessage();
+				} 
+				
+				return message;
+			}
+	}
 ```
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:c="http://java.sun.com/jstl/core"
-    xmlns:t="http://myfaces.apache.org/tomahawk">
-
-
-<ui:composition template="layouts/template.jsf">
-    <ui:define name="ariadna">
-        <h:outputLink value="index.jsf">
-            <h:outputFormat>#{msg.breadCrumbInit}</h:outputFormat>
-        </h:outputLink>
-    </ui:define>
-    <ui:define name="body">
-        <h1>${msg.menuIntegrationAntivirus}</h1>
-        <h:form id="antivirusForm" enctype="multipart/form-data">
-            <h:panelGrid columns="1">
-                <t:inputFileUpload id="fileupload" value="#{antivirusBean.upFile}"    size="20" />
-                <h:commandButton value="#{msg.antivirusUploadFile}" action="#{antivirusBean.scan}" />
-                <h:message for="antivirusForm" infoStyle="color: green;" errorStyle="color: red;" />
-            </h:panelGrid>
-        </h:form>
-    </ui:define>
-</ui:composition>
-
-</html>
-```
-<div class="message warning">
-Pujada d'arxius al servidor<br>
-Per a l'exemple s'ha fet servir a més el mòdul de fileupload per tal de gestionar la pujada d'arxius al servidor i el posterior escaneig d'aquest.
-</div>
