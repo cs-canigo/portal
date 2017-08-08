@@ -48,7 +48,7 @@ Modificar el pom.xml afegint:
 
 ```
 <properties>
-	<canigo.support.lopd>[1.3.0,1.4.0)</canigo.support.lopd>
+	<canigo.support.lopd>[1.4.0,1.5.0)</canigo.support.lopd>
 </properties>
 
 <dependency>

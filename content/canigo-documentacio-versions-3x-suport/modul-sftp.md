@@ -40,7 +40,7 @@ Port del servidor habilitat per realitzar la transferència de fitxers/streams m
 Per tal d'instal-lar el mòdul d'SFTP es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.support.sftp.version>[1.1.0,1.2.0)</canigo.support.sftp.version>
+<canigo.support.sftp.version>[1.2.0,1.3.0)</canigo.support.sftp.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>

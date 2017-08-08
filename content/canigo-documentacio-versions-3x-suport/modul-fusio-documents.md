@@ -23,7 +23,7 @@ Els marcadors consisteixen en una marca d'inici, un texte-clau i una marca de fi
 Per tal d'instal-lar el mòdul de fusió es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.support.merging.version>[1.1.0,1.2.0)</canigo.support.merging.version>
+<canigo.support.merging.version>[1.2.0,1.3.0)</canigo.support.merging.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -47,138 +47,102 @@ Propietat              | Requerit | Descripció
 
 ### Utilització del Mòdul
 
-#### JSF
+### REST
 
-Per a utilitzar aquest mòdul, cal crear un bean i una jsf:
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 
-**mergingBean.java**
+**MergingService.java**
+
+Classe Java on es realitzarà la lògica de la operació a realitzar i es connecta amb el mòdul de Fusió de documents.
 
 ```java
-@Component("mergingBean")
-@Scope("singleton")
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
+import cat.gencat.ctti.canigo.arch.support.merging.MergeTemplateEngine;
+
+@Service("mergingService")
 @Lazy
-public class MergingBean {
-	private String name;
-	private String text;
+public class MergingService {
+
+	private static final Logger log = LoggerFactory.getLogger(MergingService.class);
+
 	@Autowired
-	private MergeTemplateEngine engine;
-	@Autowired
-	private I18nResourceBundleMessageSource messageResource;
+    private MergeTemplateEngine engine;
+    
 
 
-	public MergeTemplateEngine getEngine() {
-		return engine;
-	}
+	public String testMerging(){
+		
+		String message;
 
-	/**
-	 * Get name
-	 * @return
-	 */
-	public String getName() {
-		return name;
-	}
+		HashMap<String,String> itemsMap = new HashMap<String,String>();
+		itemsMap.put("cosa", "Mancha");
+		itemsMap.put("marca", "Funciona");
 
-	/**
-	 * Set name
-	 * @param name
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+        List<Map<String,String>> dades = new ArrayList<Map<String,String>>();
+        dades.add(itemsMap);
 
-	/**
-	 * Get text
-	 * @return
-	 */
-	public String getText() {
-		return text;
-	}
+        try{
+            InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("TestDoc.xml");
+            ByteArrayOutputStream[] os = engine.mergeTemplate(is, dades);
 
-	/**
-	 * Set text
-	 * @param text
-	 */
-	public void setText(String text) {
-		this.text = text;
-	}
+            FileOutputStream ouputStream = new FileOutputStream(new File("c://tmp//file.xml"));
+            ouputStream.flush();
+            ouputStream.write(os[0].toByteArray(), 0, os[0].size());
+            ouputStream.flush();
+            ouputStream.close();
+            
 
-	/**
-	 * Merge document
-	 */
-	public void merge(){
-		Map<String,String> itemsMap = new HashMap<String,String>();
-		itemsMap.put("name", getName());
-		itemsMap.put("text", getText());
+        }catch(Exception e){
+        	message = "Test mergint erroni :" + e.getMessage();
+        	log.error(e.getMessage(),e);
+        }
+        
+        message = "Test merging correcte";
+        
+        return message;
 
-		List<Map<String,String>> dades = new ArrayList<Map<String,String>>();
-		dades.add(itemsMap);
-
-		try{
-			InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("TestDoc.xml");
-			ByteArrayOutputStream[] os = getEngine().mergeTemplate(is, dades);
-
-			HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance()
-			.getExternalContext().getResponse();
-			response.setContentType("application/xml");
-			response.setHeader("Content-Disposition", "attachment;filename=\"" +
-			         "test.xml" + "\"");
-			response.setContentLength(os[0].size());
-			ServletOutputStream ouputStream = response.getOutputStream();
-			ouputStream.flush();
-			ouputStream.write(os[0].toByteArray(), 0, os[0].size());
-			ouputStream.flush();
-			ouputStream.close();
-			FacesContext.getCurrentInstance().responseComplete();
-
-			FacesContext.getCurrentInstance().addMessage("mergingForm", new FacesMessage(
-                    FacesMessage.SEVERITY_INFO, getMessageResource().getMessage("mergingSuccess"), null));
-
-		}catch(Exception e){
-			FacesContext.getCurrentInstance().addMessage("mergingForm", new FacesMessage(
-	                FacesMessage.SEVERITY_ERROR, "mergingError", null));
-		}
-
-	}
-
-	public I18nResourceBundleMessageSource getMessageResource() {
-		return messageResource;
-	}
-
+    }
 }
 ```  
 
-**merging.jsf**
+**MergingServiceController.java**
 
-```
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:c="http://java.sun.com/jstl/core">
+Controller que publica les operacions disponibles per a qui hagi de consumir-les
+
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.MergingService;
+
+@RestController
+@RequestMapping("/merging")
+public class MergingServiceController {
+
+	@Autowired
+	MergingService mergingService;
 
 
-	<ui:composition template="layouts/template.jsf">
-		<ui:define name="ariadna">
-			<h:outputLink value="index.jsf">
-				<h:outputFormat>#{msg.breadCrumbInit}</h:outputFormat>
-			</h:outputLink>
-		</ui:define>
-		<ui:define name="body">
-			<h1>#{msg.menuSupportMerging}</h1>
-			<h:form id="mergingForm">
-                <h:panelGrid columns="2">
-                	<h:outputText value="Name:" />
-                	<h:inputText id="name" value="#{mergingBean.name}"/>
-                	<h:outputText value="Text:" />
-                	<h:inputTextarea id="text" value="#{mergingBean.text}"/>
-                    <h:commandButton value="#{msg.canigoSubmit}" action="#{mergingBean.merge}" />
-                    <br/>
-                    <h:message for="mergingForm" infoStyle="color: green;" errorStyle="color: red;" />
-                </h:panelGrid>
-            </h:form>
-		</ui:define>
-	</ui:composition>
-
-</html>
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testMerging() throws Exception {
+		return mergingService.testMerging();
+	}
+}
 ```
