@@ -30,7 +30,7 @@ cas d'una instal- lació manual afegir les següents línies al pom.xml de
 l'aplicació:
 
 ```xml
-<canigo.core.version>[3.1.0,3.2.0)</canigo.core.version>
+<canigo.core.version>[3.2.0,3.3.0)</canigo.core.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -318,10 +318,20 @@ Spring Boot ofereix la possibilitat de condicionar diversos aspectes de la confi
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-auto-configuration.html
 
-Per a poder utilitzar propietats en aquestes condicions s'ha de carregar específicament per a aquest motiu un fitxer de configuració propi, ja que les propietats de l'aplicació es carreguen després de resoldre aquestes condicions.
+Per a poder utilitzar propietats en aquestes condicions s'han de carregar específicament per a aquest motiu en un fitxer de configuració propi que llegeixi SpringBoot, ja que les propietats de l'aplicació es carreguen després de resoldre aquestes condicions.
 
-Per a carregar aquest fitxer de propietas s'ha d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
+SpringBoot per defecte cerca les propietats en un fitxer que es digui application.properties a src/resources. Les propietats que es dessitgi utilitzar en la configuració de SpringBoot s'han d'afegir en aquest fitxer.
 
+Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer applicacion-{profile}.properties.
+
+En aquest cas és recomanable afegir la propietat entorn dintre d'aquests fitxers per així sincronitzar els profiles de Spring amb l'entorn que utilitza Canigó.
+
+Un exemple del fitxer application-pre.properties podria ser:
+
+	entorn=pre
+	nom_propietat_condicio_pre=valor_condicio_pre
+
+Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
 
 	@Configuration
 	@PropertySource("classpath:/config/props/boot.properties")
