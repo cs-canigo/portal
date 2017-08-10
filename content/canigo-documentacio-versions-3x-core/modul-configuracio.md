@@ -324,13 +324,6 @@ SpringBoot per defecte cerca les propietats en un fitxer que es digui applicatio
 
 Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer applicacion-{profile}.properties.
 
-En aquest cas és recomanable afegir la propietat entorn dintre d'aquests fitxers per així sincronitzar els profiles de Spring amb l'entorn que utilitza Canigó.
-
-Un exemple del fitxer application-pre.properties podria ser:
-
-	entorn=pre
-	nom_propietat_condicio_pre=valor_condicio_pre
-
 Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
 
 	@Configuration
