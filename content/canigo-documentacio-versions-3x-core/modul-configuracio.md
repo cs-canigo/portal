@@ -27,7 +27,7 @@ Per aplicacions Canigó 3.2 que utilitzin Spring Boot, normalment noves aplicaci
 
 * no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
 
-*
+* condicionar la configuració de Spring Boot (Veure secció "Condicionar la configuració de Spring Boot" d'aquesta plana)
 
 ## Instal.lació i configuració
 
@@ -332,7 +332,7 @@ Per a poder utilitzar propietats en aquestes condicions s'han de carregar espec�
 
 SpringBoot per defecte cerca les propietats en un fitxer que es digui application.properties a src/resources. Les propietats que es dessitgi utilitzar en la configuració de SpringBoot s'han d'afegir en aquest fitxer.
 
-Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer applicacion-{profile}.properties.
+Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer application-{profile}.properties.
 
 Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
 
