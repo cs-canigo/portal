@@ -23,7 +23,11 @@ de beans - propietats.
 
 Per aplicacions Canigó 3.2 que no utilitzin Spring Boot, normalment aplicacions que actualitzin de versions anteriors, el mòdul de configuració no presenta cap incompatibilitat.
 
+Per aplicacions Canigó 3.2 que utilitzin Spring Boot, normalment noves aplicacions, el mòdul de configuració presenta les següents limitacions:
 
+* no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
+
+*
 
 ## Instal.lació i configuració
 
