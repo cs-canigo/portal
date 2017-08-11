@@ -19,6 +19,12 @@ aportada per Spring, és la possibilitat de disposar de propietats
 dependents d'entorn sense necessitat de cap configuració extra a nivell
 de beans - propietats.
 
+## Limitacions
+
+Per aplicacions Canigó 3.2 que no utilitzin Spring Boot, normalment aplicacions que actualitzin de versions anteriors, el mòdul de configuració no presenta cap incompatibilitat.
+
+
+
 ## Instal.lació i configuració
 
 ### Instal.lació
