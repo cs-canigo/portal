@@ -29,6 +29,8 @@ Per aplicacions Canigó 3.2 que utilitzin Spring Boot, normalment noves aplicaci
 
 * condicionar la configuració de Spring Boot (Veure secció "Condicionar la configuració de Spring Boot" d'aquesta plana)
 
+	Donades aquestes limitacions, en una futura versió de Canigó, es preveu deprecar aquest mòdul de configuració en favor dels profiles de Spring Boot
+
 ## Instal.lació i configuració
 
 ### Instal.lació
