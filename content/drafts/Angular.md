@@ -5,6 +5,8 @@ Angular és un framework de JavaScript de codi obert, mantingut per Google, util
 
  (Imatge posaria el logo d'Angular, no el d'AngularJs)
 
+![Angular Logo]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/logo%20Angular.png)
+
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
 Utilitzant Google trends podem veure la tendència i popularitat d'AngularJs sobre els seus competidors:
