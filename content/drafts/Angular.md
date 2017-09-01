@@ -1,29 +1,26 @@
 # Angular: Estat actual i evolució
 
+Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom. 
 
-Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
-
- (Imatge posaria el logo d'Angular, no el d'AngularJs)
-
-![Angular Logo]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/logo%20Angular.png)
+![Angular Logo]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/logoAngular.svg)
 
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
 Utilitzant Google trends podem veure la tendència i popularitat d'AngularJs sobre els seus competidors:
 
-(Imatge)
+![Interès AngularJS]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/InteresAngular.png)
 
 Per què tanta popularitat? Hi ha varies raons:
 
 - Va sortir el primer: Ja al 2010 la versió 1.0
 - Sent mantingut per Google, genera confiança a la comunitat. Pot ser aquesta és la principal raó de la seva popularitat.
-- És senzill tenir-ho tot ben organitzat encara que siguin aplicatius grans [Revisar la frase "tenir-ho tot"]
-- Un dels objectius principals és la modularitat: més senzill testejar i extreure components [Revisar la frase. tinc entés que una de les dificultats d'AngularJs és precisament el testeig]
+- Proporciona una estructura estàndard pels projected que facilita l'organització encara que siguin aplicatius grans
+- Un dels objectius principals és la modularitat: més senzill testejar i extreure components 
 - Corba d'aprenentatge molt plana per començar a produir
 
 Ara bé, si AngularJS ha estat tan exitós i tan ben adoptat per la comunitat, calia trencar-ho tot i fer la transició d'AngularJs a Angular 2 tan traumàtica?
 
-Certament, hi va haver moltes coses millorables al procés, sobretot quan van anunciar [qui?] que no hi hauria pla de migració de AngularJS 1.x a 2.0. Això va acabar de dividir i radicalitzar a la comunitat i fa encara més difícil defensar l'adopció de Angular 2.x. [ojo amb el que dius doncs estem creant excepcions d'arquitectura per aplicacions amb angularjs, no pas per les d'angular 2!!!] Què passarà quan surti una nova versió, diguem-ne Angular 4?  Serà la transició igual de dolorosa? [La 4 ja ha sortit i em sembla que es retrocompatible amb la 2]
+Certament, hi va haver moltes coses millorables al procés, sobretot quan Google va anunciar que no hi hauria pla de migració de AngularJS 1.x a 2.0. Això va acabar de dividir i radicalitzar a la comunitat i feia encara més difícil defensar l'adopció de Angular 2.x. Què passarà quan surti una nova versió, diguem-ne Angular 4?  Serà la transició igual de dolorosa?
 
 Abans de mirar en detall com s'ha de gestionar això de cara al futur, mirem què ofereix Angular 2 respecte a AngularJS:
 
@@ -38,16 +35,16 @@ Si Angular és de fet un nou framework i té poc a veure amb AngularJS, és leg�
 Primer hem de dir que, desprès de la presentació d'Angular i de tota la incertesa que va generar, Google ha aprés i van reaccionar ràpid:
 
 - Van oferir un pla de migració ben documentat i fins i tot van publicar llibreries per ajudar amb la transició com ara ng-upgrade
-- Incorporen el concepte de SEMVER (semantic versioning). Això farà en el futur les actualitzacions menys traumàtiques [Per què]. Totes les noves publicacions de Angular constaran de 3 números: MAJOR.MINOR.PATCH
+- Incorporen el concepte de SEMVER (semantic versioning). Això farà en el futur les actualitzacions menys traumàtiques. Totes les noves publicacions de Angular constaran de 3 números: MAJOR.MINOR.PATCH
   - MAJOR: Nova funcionalitat amb canvis incompatibles a l'API.
   - MINOR: Nova funcionalitat i és compatible amb versions anteriors
   - PATCH: Corregeix bugs i es manté retrocompatible
 
 A més, l'equip d'Angular ha assegurat que en un futur una de les seves prioritats és facilitar al màxim la transició cap a noves versions.
 
-Recentment s'ha publicat la versió 4 d'Angular i la transició de Angular 2 a 4, en contrast a la transició d'AngularJS a Angular és força senzilla i molt bé documentada. [ojo amb la pregunta que envies al lector abans sobre una futura transició d'Angular 2 a una versió posterior. És un estil de redacció que pot provocar confusió]
+Recentment s'ha publicat la versió 4 d'Angular i la transició de Angular 2 a 4, en contrast a la transició d'AngularJS a Angular és força senzilla i molt bé documentada. 
 
-(imatge)
+![Tuit]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/tuit.png)
 
 Com hem mencionat, la versió actual es Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.
 
@@ -55,21 +52,21 @@ En utilitzar el versionat semàntic es van trobar amb un problema amb la numerac
 
 I com queda el panorama actual? On es situa Angular respecte als seus competidors?
 
-(imatge)
+![Interès Angular]({{site.baseurl}}/https://github.com/cs-canigo/portal/blob/master/static/images/bloc/201709/InteresAngularvsCompetencia.png)
 
 Per ser justos, la cerca per AngularJS engloba a AngularJs i Angular. A més, altres mètriques com la quantitat d'estrelles per projecte a github o npm trends, la quantitat de vegades que es baixa una llibreria, dóna com a guanyador a React sobre Angular. Com és possible?
 
-React és una llibreria ocupant-se de la part vista del MVC mentre que Angular és un framework i ofereix  una solució complerta per MVC a la part explorador així que no són totalment comparables. Una comparativa més acurada seria React + Redux [convindria explicar què és Redux o posar una referència] contra Angular tot i que React es pot utilitzar amb altres frameworks.
+React és una llibreria ocupant-se de la part vista del MVC mentre que Angular és un framework i ofereix  una solució complerta per MVC a la part explorador així que no són totalment comparables. Una comparativa més acurada seria React + [Redux](https://github.com/reactjs/redux "Redux") [Redux] contra Angular tot i que React es pot utilitzar amb altres frameworks.
 
-A més React no ha experimentat una revolució tan traumàtica com Angular i això ha permès fidelitzar més a la seva comunitat. Tot i que Google no ha sabut fer bé la transició d'AngularJs a Angular, han certament aprés de les seves errades i la projecció és clarament al alça. [Pot ser rellevant que React està creat i mantingut per Facebook?]
+A més React no ha experimentat una revolució tan traumàtica com Angular i això ha permès fidelitzar més a la seva comunitat, això i qué és de Facebook, que no és poc. Tot i que Google no ha sabut fer bé la transició d'AngularJs a Angular, han certament aprés de les seves errades i la projecció és clarament al alça. 
 
 Tant React com Angular semblen a dia d'avui les opcions més estables i recolzades per la comunitat tot i que l'esperança de vida de qualsevol tecnologia és difícil de estimar avui en dia.
 
+Com a referència, Molts dels projectes nous que arriben a CTTI utilitzen Angular, React i Polymer principalment, molt alineats amb les tendències actuals que hem vist abans.
+
 Estàndards emergents com WebAssembly, que permet l'execució de codi nadiu dins de màquines virtuals al browser, o web components, que permet estendre HTML i definir components reutilitzables, arriben per segmentar, encara més, un diversificat univers frontend.
 
-[A CTTI ja estem veient projectes amb AngularJs, Angular, React i Polymer. Potser cal esmentar-ho com a final de l'article]
-
-(imatge)
+![Estàndards]({{site.baseurl}}/https://xkcd.com/927)
 
 Font original:  https://xkcd.com/927/
 
