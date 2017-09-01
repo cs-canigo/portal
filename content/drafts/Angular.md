@@ -6,7 +6,7 @@
 
 Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
 
- (Imatge posaria el logo d'Angular, no el d'AngularJs)
+ (Imatge posaria el logo d'Angular, no el d'AngularJs, tm)
 
 ![Angular Logo](/images/bloc/201709/Angular.png)
 
