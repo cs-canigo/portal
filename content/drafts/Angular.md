@@ -4,13 +4,13 @@
 
 Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
 
-![Angular Logo](/images/bloc/201709/Angular.svg)
+![Angular Logo](/static/images/bloc/201709/Angular.svg)
 
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
 Utilitzant Google trends podem veure la tendència i popularitat d'AngularJs sobre els seus competidors:
 
-![Tendències](/images/bloc/201709/InteresAngular.png)
+![Tendències](/static/images/bloc/201709/InteresAngular.png)
 
 Per què tanta popularitat? Hi ha varies raons:
 
@@ -47,7 +47,7 @@ A més, l'equip d'Angular ha assegurat que en un futur una de les seves priorita
 
 Recentment s'ha publicat la versió 4 d'Angular i la transició de Angular 2 a 4, en contrast a la transició d'AngularJS a Angular és força senzilla i molt bé documentada.
 
-![Tuit](/images/bloc/201709/tuit.png)
+![Tuit](/static/images/bloc/201709/tuit.png)
 
 Com hem mencionat, la versió actual es Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.
 
@@ -55,7 +55,7 @@ En utilitzar el versionat semàntic es van trobar amb un problema amb la numerac
 
 I com queda el panorama actual? On es situa Angular respecte als seus competidors?
 
-![Tendències](/images/bloc/201709/InteresAngularvsCompetencia.png)
+![Tendències](/static/images/bloc/201709/InteresAngularvsCompetencia.png)
 
 Per ser justos, la cerca per AngularJS engloba a AngularJs i Angular. A més, altres mètriques com la quantitat d'estrelles per projecte a github o npm trends, la quantitat de vegades que es baixa una llibreria, dóna com a guanyador a React sobre Angular. Com és possible?
 
@@ -67,7 +67,7 @@ Tant React com Angular semblen a dia d'avui les opcions més estables i recolzad
 
 Estàndards emergents com WebAssembly, que permet l'execució de codi nadiu dins de màquines virtuals al browser, o web components, que permet estendre HTML i definir components reutilitzables, arriben per segmentar, encara més, un diversificat univers frontend.
 
-![Estàndards](https://xkcd.com/927/)
+![Estàndards](https://imgs.xkcd.com/comics/standards.png)
 
 Font original:  https://xkcd.com/927/
 
