@@ -4,7 +4,7 @@
 
 Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
 
-![Angular Logo](/static/images/bloc/201709/Angular.svg)
+![Angular Logo](/static/images/bloc/201709/Angular.png)
 
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
@@ -15,7 +15,7 @@ Utilitzant Google trends podem veure la tendència i popularitat d'AngularJs sob
 Per què tanta popularitat? Hi ha varies raons:
 
 - Va sortir el primer: Ja al 2010 la versió 1.0
-- Sent mantingut per Google, genera confiança a la comunitat. Pot ser aquesta és la principal raó de la seva popularitat.
+- Sent mantingut per Google, genera confiança a la comunitat. Aquesta és, potser, la principal raó de la seva popularitat.
 - Aporta una estructura estàndard de directoris per facilitar la organització encara que siguin aplicatius grans
 - Un dels objectius principals és la modularitat: més senzill testejar i extreure components
 - Corba d'aprenentatge molt plana per començar a produir
@@ -64,6 +64,8 @@ Primer, que React té el suport d'una gran companyia com és Facebook. Aquesta l
 A més React no ha experimentat una revolució tan traumàtica com Angular i això ha permès fidelitzar més a la seva comunitat. Tot i que Google no ha sabut fer bé la transició d'AngularJs a Angular, han certament aprés de les seves errades i la projecció és clarament al alça.
 
 Tant React com Angular semblen a dia d'avui les opcions més estables i recolzades per la comunitat tot i que l'esperança de vida de qualsevol tecnologia és difícil de estimar avui en dia.
+
+A CTTI veiem que els projectes que ens arriben s'alineen bastant amb les tendències vistes anteriorment. 
 
 Estàndards emergents com WebAssembly, que permet l'execució de codi nadiu dins de màquines virtuals al browser, o web components, que permet estendre HTML i definir components reutilitzables, arriben per segmentar, encara més, un diversificat univers frontend.
 
