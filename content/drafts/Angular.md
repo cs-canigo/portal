@@ -42,7 +42,7 @@ Abans de mirar en detall com s'ha de gestionar això de cara al futur, mirem qu�
 
 Si Angular és de fet un nou framework i té poc a veure amb AngularJS, és legítim qüestionar-se si val la pena fer la transició d'AngularJS a Angular o de fet triar altre framework.
 
-Primer hem de dir que, desprès de la presentació d'Angular i de tota la incertesa que va generar, Google ha aprés i van reaccionar ràpid:
+Primer hem de dir que, després de la presentació d'Angular i de tota la incertesa que va generar, Google ha aprés i van reaccionar ràpid:
 
 - Van oferir un pla de migració ben documentat i fins i tot van publicar llibreries per ajudar amb la transició com ara **ng-upgrade**
 - Incorporen el concepte de SEMVER (semantic versioning). Això farà en el futur les actualitzacions menys traumàtiques. Totes les noves publicacions de Angular constaran de 3 números: MAJOR.MINOR.PATCH
@@ -57,7 +57,7 @@ Recentment s'ha publicat la versió 4 d'Angular i la transició de Angular 2 a 4
 
 ![Tuit](/images/bloc/201709/tuit.png)
 
-Com hem mencionat, la versió actual es Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.
+Com hem mencionat, la versió actual és Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.
 
 En utilitzar el versionat semàntic es van trobar amb un problema amb la numeració de la llibreria router. Per ser coherents amb la nova adopció del SEMVER és va decidir de passar de la versió 2 a la 4 directament i així poder oferir un versionat coherent per totes les llibreries.
 
