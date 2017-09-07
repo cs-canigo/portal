@@ -1,16 +1,26 @@
-+++ date = "2017-09-01" title = "Angular: Estat actual i evolució" description = "Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom" sections = [] blog_tags = [] categories = [] imatge = "/images/bloc/201709/logoAngular.png" key = "SETEMBRE2017" +++
++++
+date        = "2017-09-01"
+title       = "Angular: Estat actual i evolució"
+description = "Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom"
+sections    = ["Blog", "home"]
+blog_tags   = ["desenvolupament", "Eines", "SPA", "Frameworks", "Angular"]
+categories  = ["desenvolupament", "Eines", "SPA", "Frameworks"]
+imatge      = "/images/bloc/keep-calm-and-use-lts-versions.png"
+imatge      = "/images/bloc/201709/logoAngular.png"
+key         = "SETEMBRE2017"
++++
 
-# Angular: Estat actual i evolució
+### Angular: Estat actual i evolució
 
 Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
 
-![Angular Logo](/static/images/bloc/201709/logoAngular.png)
+![Angular Logo](/images/bloc/201709/logoAngular.png)
 
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
 Utilitzant Google trends podem veure la tendència i popularitat d'AngularJs sobre els seus competidors:
 
-![Tendències](/static/images/bloc/201709/InteresAngular.png)
+![Tendències](/images/bloc/201709/InteresAngular.png)
 
 Per què tanta popularitat? Hi ha varies raons:
 
@@ -47,7 +57,7 @@ A més, l'equip d'Angular ha assegurat que en un futur una de les seves priorita
 
 Recentment s'ha publicat la versió 4 d'Angular i la transició de Angular 2 a 4, en contrast a la transició d'AngularJS a Angular és força senzilla i molt bé documentada.
 
-![Tuit](/static/images/bloc/201709/tuit.png)
+![Tuit](/images/bloc/201709/tuit.png)
 
 Com hem mencionat, la versió actual es Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.
 
@@ -55,7 +65,7 @@ En utilitzar el versionat semàntic es van trobar amb un problema amb la numerac
 
 I com queda el panorama actual? On es situa Angular respecte als seus competidors?
 
-![Tendències](/static/images/bloc/201709/InteresAngularvsCompetencia.png)
+![Tendències](/images/bloc/201709/InteresAngularvsCompetencia.png)
 
 Per ser justos, la cerca per AngularJS engloba a AngularJs i Angular. A més, altres mètriques com la quantitat d'estrelles per projecte a github o npm trends, la quantitat de vegades que es baixa una llibreria, dóna com a guanyador a React sobre Angular. Com és possible?
 
@@ -73,7 +83,7 @@ Estàndards emergents com WebAssembly, que permet l'execució de codi nadiu dins
 
 Font original:  https://xkcd.com/927/
 
-**Referències:**
+### Referències:
 
 Angular is not a massive monolith – but your mom is:
 
