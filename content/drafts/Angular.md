@@ -5,7 +5,6 @@ description = "Angular és un framework de JavaScript de codi obert, mantingut p
 sections    = ["Blog", "home"]
 blog_tags   = ["desenvolupament", "Eines", "SPA", "Frameworks", "Angular"]
 categories  = ["desenvolupament", "Eines", "SPA", "Frameworks"]
-imatge      = "/images/bloc/keep-calm-and-use-lts-versions.png"
 imatge      = "/images/bloc/201709/logoAngular.png"
 key         = "SETEMBRE2017"
 +++
