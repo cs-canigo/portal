@@ -1,10 +1,10 @@
-+++ date = "2017-09-01" title = "Angular: Estat actual i evolució" description = "Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom" sections = [] blog_tags = [] categories = [] imatge = "/images/bloc/201709/Angular.png" key = "SETEMBRE2017" +++
++++ date = "2017-09-01" title = "Angular: Estat actual i evolució" description = "Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom" sections = [] blog_tags = [] categories = [] imatge = "/images/bloc/201709/logoAngular.png" key = "SETEMBRE2017" +++
 
 # Angular: Estat actual i evolució
 
 Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d'una única pàgina (SPA). Deriva d'AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.  
 
-![Angular Logo](/static/images/bloc/201709/Angular.png)
+![Angular Logo](/static/images/bloc/201709/logoAngular.png)
 
 Fem una mica d'història. Des que es va alliberar el codi d'AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que ofereixen funcionalitat similar com ara Vue, React o Ember, l'ús d'AngularJs va guanyar dràsticament.
 
