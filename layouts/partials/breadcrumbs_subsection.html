@@ -244,7 +244,22 @@
 
 {{ end }}
 
+<!-- GICAR - integració directoris -->
+{{ if or (eq $title "directoris-integracios") (eq $section "directoris-integracio") }}
+	<a href="/gicar/">GICAR</a> </li>
 
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/directoris-integracio/">
+	{{ end }}
+
+	Integració amb els directoris de la Generalitat
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
 
 <!-- CENTRE DE SUPORT CANIGO -->
 {{ if or (eq $title "centre-de-suports") (eq $section "centre-de-suport") }}
