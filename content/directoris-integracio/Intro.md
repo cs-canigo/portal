@@ -2,7 +2,7 @@
 date        = "2017-09-08T17:11:42+01:00"
 title       = "Introducció"
 description = "Introducció a l'arquitectura de Directoris de la Generalitat"
-section     = "Documentació"
+section     = "directoris-integracio"
 taxonomies  = []
 toc 		= false
 weight 		= 2
