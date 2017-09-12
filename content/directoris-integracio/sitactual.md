@@ -47,7 +47,7 @@ A l’hora d’avaluar les relacions entre directoris de lloc de treball de LT1 
 
 En la següent il·lustració es mostra el flux de propagació de la informació dels usuaris establert:
 
-![Integració amb els Directoris de la Generalitat](/gicar/img/dir - gicar.PNG)
+![Integració amb els Directoris de la Generalitat](/related/directoris-integracio/dir - gicar.PNG)
 
 •	Els  interlocutors  de  RRHH  dels  diferents  departaments  treballen  sobre  les  eines  que  tenen establertes a per a dur a terme l’alta, la baixa i la modificació dels usuaris (GIP/SIP i GDI).
 
