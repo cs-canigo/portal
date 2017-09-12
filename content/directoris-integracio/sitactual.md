@@ -2,7 +2,7 @@
 date        = "2017-09-08T17:11:42+01:00"
 title       = "Descripció de la situació actual dels directoris de la Generalitat"
 description = "Mapa actual de Directoris de la Generalitat"
-section     = "Documentació"
+section     = "directoris-integracio"
 taxonomies  = []
 toc 		= false
 weight 		= 3
