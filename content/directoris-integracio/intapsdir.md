@@ -2,7 +2,7 @@
 date        = "2017-09-08T17:11:42+01:00"
 title       = "Integració d'aplicacions per autenticació en el nou model de directoris "
 description = ""
-section     = "Documentació"
+section     = "directoris-integracio"
 taxonomies  = []
 toc 		= false
 weight 		= 4
