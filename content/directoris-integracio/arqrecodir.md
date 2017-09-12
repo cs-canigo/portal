@@ -23,7 +23,7 @@ La implementació de Windows Authentication (Kerberos, Negotiate, o NTLM) es pot
 
 Activant “Basic Authentication” les peticions d’autenticació passen a fer-se via HTTP, i com a resultat d’això, les peticions flueixen a través de l’Apache.
 
-![Integració amb els Directoris de la Generalitat](/related/directoris-integracio/dir - 3capesBasicauth.PNG)
+![Integració amb els Directoris de la Generalitat](/related/directoris-integracio/dir - 3capesBasicAuth.PNG)
 
 •	Aquesta és una solució senzilla, i és la recomanada en cas que el producte o aplicació ho suporti. 
 •	Té, com a contrapartida, la pèrdua del Single Sign On amb l’estació de treball de l’usuari, tot i que l’usuari de la màquina i el que es faci servir per a accedir a l’aplicació sigui el mateix.
@@ -38,7 +38,7 @@ o	Que encara que el producte sigui compatible amb aquest esquema d’autenticaci
 Depenent de la tipologia d’autenticació de l’aplicació, es defineixen les següents alternatives: 
 
 
-![Integració amb els Directoris de la Generalitat](/related/directoris-integracio/dir - 3capeskerbauth.PNG)
+![Integració amb els Directoris de la Generalitat](/related/directoris-integracio/dir - 3capeskerbAuth.PNG)
 
 
 - **Vàlid per Kerberos, Negotiate o NTLM:**
