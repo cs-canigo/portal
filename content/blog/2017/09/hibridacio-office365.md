@@ -3,8 +3,8 @@ date        = "2017-09-15"
 title       = "Hibridació de l'autenticació i de la gestió d'identitats amb Office365"
 description = "Arquitectura implementada per a assolir la hibridació de la capa de gestió d'identitats i de control d'accés amb l'Office365 de la Generalitat"
 sections    = ["Blog", "home"]
-blog_tags   = ["gestió d`identitats", "GICAR", "Office365", "Microsoft", "cloud"]
-categories  = ["gestió d`identitats", "GICAR", "Office365", "Microsoft", "cloud"]
+blog_tags   = ["gestió d'identitats", "GICAR", "Office365", "Microsoft", "cloud"]
+categories  = ["gestió d'identitats", "GICAR", "Office365", "Microsoft", "cloud"]
 imatge      = "/related/gicar/adfs-index.PNG"
 key         = "SETEMBRE2017"
 +++
