@@ -5,7 +5,7 @@ description = "Aqruitectura implementada per a assolir la hibridació de la capa
 sections    = ["Blog", "home"]
 blog_tags   = ["gestió d`identitats", "GICAR", "Office365", "Microsoft", "cloud"]
 categories  = ["gestió d`identitats", "GICAR", "Office365", "Microsoft", "cloud"]
-imatge      = "/related/gicar/adfs-index.png"
+imatge      = "/related/gicar/adfs-index.PNG"
 key         = "SETEMBRE2017"
 +++
 
@@ -51,7 +51,7 @@ S'ha proposat i desplegat la següent arquitectura, suportada per Microsoft per 
 
 A continuació es descriuen les peces que componen aquesta arquitectura:
 
-![Integració Aplicacions GICAR](/related/gicar/adfs-hibridacio.png)
+![Integració Aplicacions GICAR](/related/gicar/adfs-hibridacio.PNG)
 
 - GICAR: plataforma de Gestió d'Identitats corporativa encarregada d'aprovisionar els usuaris i les contrasenyes d'aquests al directori actiu de LT1 on Premises.
 
@@ -65,7 +65,7 @@ A continuació es descriuen les peces que componen aquesta arquitectura:
 
 - AD Azure: Directori de Microsoft al núvol, el qual permet gestionar l'accés pels usuaris als recursos de l'Office 365.
 
-![Integració Aplicacions GICAR](/related/gicar/adfs-arquitectura.png)
+![Integració Aplicacions GICAR](/related/gicar/adfs-arquitectura.PNG)
 
 ## Descripció del procés d'autenticació
 
@@ -74,11 +74,11 @@ El procés d'autenticació que se segueix de cara a que l'usuari pugui accedir a
 Quan un usuari intenta accedir a un dels serveis de l'Office 365 es produeixen les següents accions:
 
 1.- Intent d’accés al recurs d’Office 365 i introducció de nom d’usuari @gencat.cat (direcció de correu del propi usuari).
-![Integració Aplicacions GICAR](/related/gicar/adfs-pas1.png)
+![Integració Aplicacions GICAR](/related/gicar/adfs-pas1.PNG)
 
 
 2.- Redirecció de l’usuari al ADFS de Gencat per a fer login
-![Integració Aplicacions GICAR](/related/gicar/adfs-pas2.png)
+![Integració Aplicacions GICAR](/related/gicar/adfs-pas2.PNG)
 
 La redirecció es fa amb els paràmetres que necessita el ADFS per identificar l'aplicació origen d'on ve la petició. Quan l'accés a aquest ADFS es fa des d'internet les peticions es fan a través d'un servidor WAP.
 
@@ -93,7 +93,7 @@ Per a fer això l'ADFS efectua un POST a **https://login.microsoftonline.com/log
 Al estar aquest token està signat per l'ADFS, no és possible generar aquesta resposta per un tercer si no disposa del certificat de signatura dels tokens que només té el ADFS.
 
 6.- Amb aquest token es concedeix l’accés a O365:
-![Integració Aplicacions GICAR](/related/gicar/adfs-pas3.png)
+![Integració Aplicacions GICAR](/related/gicar/adfs-pas3.PNG)
 
 ## Descripció del procés de sincronització d'usuaris
 
