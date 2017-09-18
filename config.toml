@@ -1,14 +1,12 @@
 languageCode = "ca-Es"
-#title = "Portal de Frameworks i Solucions d'Arquitectura. CTTI. Generalitat de Catalunya"
 title = "Arquitectura CTTI. Generalitat de Catalunya"
 
-contentdir = "content"
-layoutdir = "layouts"
-#publishdir = "../web-canigo-public"
-publishdir = "public"
-builddrafts = false
-baseurl = "http://canigo.ctti.gencat.cat"
-canonifyurls = false
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+buildDrafts = false
+baseURL = "http://canigo.ctti.gencat.cat"
+canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 
 Paginate = 10
