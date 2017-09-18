@@ -22,7 +22,7 @@ categories  = ["canigo","sic","sgde"]
 	   $.getJSON("https://script.google.com/macros/s/AKfycbwXOwdyefmpRayODliduXDI2m0wCm_TKMiB_tQkkDDKaA4l9WQ/exec?callback=?", null, function(results){
 	   			
 				var additionalOptions = {
-			    	start_at_slide: 31,
+			    	start_at_slide: 36,
 			        timenav_height: 200,
 			        height : 650,
 			        initial_zoom: 12,
