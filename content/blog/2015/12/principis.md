@@ -58,7 +58,7 @@ langs = ["ca","es"]
 
 1.  En el cas d'aplicacions web, la presentació estarà construïda amb **tecnologies estàtiques** (html5/javascript/css) i **consumirà els serveis** que li proporcioni el backend. 
 
-1.  Davant solucions estàndards s'utilitzaran preferentment les tecnologies del **Full de Ruta.** Aquest fet no exclou que per a noves solucions es puguin utilitzar altres tecnologies, que eventualment passaran a formar-ne part.
+1.  Davant solucions estàndards s'utilitzaran preferentment les tecnologies del **[Full de Ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).** Aquest fet no exclou que per a noves solucions es puguin utilitzar altres tecnologies, que eventualment passaran a formar-ne part.
 
 1.  Des de les unitats d'Arquitectura s'ha de fer un **seguiment de noves tecnologies**, per a avaluar el seu encaix i tenir altres opcions davant noves necessitats dels projectes (per exemple, [nous llenguatges i frameworks](http://canigo.ctti.gencat.cat/blog/2015/12/llenguatges/) o [provisió d'infraestructura](http://canigo.ctti.gencat.cat/blog/2015/12/contenidors/)).
 
