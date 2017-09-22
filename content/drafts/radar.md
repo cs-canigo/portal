@@ -8,19 +8,8 @@ weight= 5
 +++
 
 Aquest és el Radar tecnològic del CTTI
-<style type="text/css">
-  body, html
-  {
-    margin: 0; padding: 0; height: 100%; overflow: hidden;
-  }
 
-            #content
-            {
-                position:absolute; left: 0; right: 0; bottom: 0; top: 0px; 
-            }
-</style>
-<div id="content">
-<iframe width=100% height="100%" frameborder="0" src="https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1waDG0_W3-yNiAaUfxcZhTKvl7AUCgXwQw8mdPjCz86U%2Fpubhtml"></iframe>
-</div>
+<iframe src="https://radar.thoughtworks.com/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1waDG0_W3-yNiAaUfxcZhTKvl7AUCgXwQw8mdPjCz86U%2Fpubhtml" style="position:fixed; top:0px; bottom:0px; right:0px; width: 100%; border: none; margin:0; padding:0; overflow: hidden; z-index:999999; height: 100%;"></iframe>
+
 
 
