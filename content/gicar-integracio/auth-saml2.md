@@ -56,18 +56,9 @@ Com es deia en la introducció, GICAR disposa d’un “Identity Provider”, co
 
 A continuació es detalla quins són els dominis del Identity Provider als que caldrà accedir per a generar el tiquet de SAML2.
 
-- Dominis dels Identity Provider de GICAR
+PRE: https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO i https://preproduccio.idp4-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO
 
-		PRE: 
-		https://preproduccio.idp1-gicar.gencat.cat/
-		https://preproduccio.idp4-gicar.gencat.cat/
-
-		PRO: 
-		https://idp1-gicar.gencat.cat/
-		https://idp4-gicar.gencat.cat/
-
-
-- Construcció del SAML Request:
+PRO: https://idp1-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO i https://idp4-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO
 
 En cas que l’aplicació que vulgui cridar via SAML2 a GICAR ha de construir un SAMLRequest que ha de contenir exactament la següent informació, estructurada de la següent forma:
 
@@ -75,16 +66,61 @@ En cas que l’aplicació que vulgui cridar via SAML2 a GICAR ha de construir un
 
 En cas que l’aplicació no pugui generar un SAMLRequest amb aquesta parametrització, no podrà integrar-se directament contra GICAR via SAML2, i haurà d’analitzar una altra via d’integració.
 
+A continuació es proporciona un fragment de codi Javascript que, posat a dins d'una aplicació, permet redirigir a l'usuari cap a GICAR, generant automàticament un SAMLRequest.
 
-- Petició a l’equip GICAR per a incorporar aquesta aplicació com a consumidora del Identity Provider.
+	<script src="rawdeflate.js"></script>
 
-	Caldrà que l’equip desenvolupador de l’aplicació com a mínim faciliti la següent informació a l’equip GICAR per a que GICAR pugui autenticar a aquest servei:
+	<script>
 
-	- entityID = Haurà de contenir el valor del SAML:Issuer indicat en el SAMLRequest de les peticions que farà l’aplicació. Serà normalment la URL del servei peticionari.
+	//dades de l aplicacio a integrar
+	var entityid="entity ID de l'aplicació integrada definida a GICAR";
+	var AssertionConsumerServiceURL="URL de refirecció on espera el POST amb el SAMLResponse l'aplicació";
 
-	- Certificat = Certificat X509 que farà servir l’aplicació consumidora per a desencriptar els tiquets SAML que haurà emès GICAR.
+	//url endpoint de GICAR a utilitzar
+	var endpointGICAR="https://A-DEFINIR-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO?SAMLRequest=";
 
-	- AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" = S’haurà d’indicar a quina URL de l’aplicació GICAR haurà de redirigir un cop feta l’autenticació. Serà la URL on es farà la corresponent redirecció, i on es passarà per paràmetre l’atribut SAMLResponse amb el contingut de les respostes que haurà de decodificar i desencriptar l’aplicació.
+	//calculem el id de la peticio
+	var randomnumber = +new Date();
+	//calculem la data d'emissio de la peticio. El desitjable és que la data de la petició es calculi en el servidor web i no en Javascript. Aquest fragment de codi per a calcular la data en Javascript és només per a fer proves, en entorn de producció la data s'hauria de calcular al servidor web de cara a assegurar que estigui generada per un rellotge sincronitzar amb un servidor NTP.
+	var d = new Date();
+	var curr_date = d.getDate();
+	var curr_month = d.getUTCMonth()+1;
+	var curr_month2 = (curr_month<10?'0':'') + curr_month;
+	var curr_year = d.getFullYear();
+	var ymd= curr_year+"-"+curr_month2+"-"+ curr_date+"T";
+	var curr_hour = d.getUTCHours();
+	var curr_min = d.getUTCMinutes();
+	var curr_min2 = (curr_min<10?'0':'') + curr_min;
+	var curr_sec = d.getUTCSeconds();
+	var curr_msec = d.getUTCMilliseconds();
+	var hms=curr_hour + ":" + curr_min2 + ":" + curr_sec + "." + curr_msec;
+	var datasaml=ymd+hms;
+
+	//generem samlrequest en pla
+	var samlrequestpla="<?xml version=\"1.0\"?> <samlp:AuthnRequest xmlns:saml=\"urn:oasis:names:tc:SAML:2.0:assertion\" Version=\"2.0\" ID=\"b"+randomnumber+"a\" IssueInstant=\""+datasaml+"\" AssertionConsumerServiceURL=\""+AssertionConsumerServiceURL+"\" ProtocolBinding=\"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST\" IsPassive=\"false\" xmlns:samlp=\"urn:oasis:names:tc:SAML:2.0:protocol\"> <saml:Issuer>"+entityid+"</saml:Issuer> </samlp:AuthnRequest>";
+
+	//fem deflate i codificacio en base64
+	var samlrequestb64 = btoa(RawDeflate.deflate(samlrequestpla));
+
+	//codifiquem url
+	var samlrequest=encodeURIComponent(samlrequestb64);
+
+
+	var targeturl=endpointGICAR+samlrequest;
+
+	//fem el redirect
+	window.location.replace(targeturl);
+	</script>
+
+Aquest fragment de codi font té una dependència amb la llibreria "rawdeflate.js" que pot ser descarregada del següent [enllaç] (/related/gicar/rawdeflate.js)
+
+Caldrà que l'equip desenvolupador faci una petició a l’equip GICAR per a incorporar aquesta aplicació com a consumidora del Identity Provider. Com a mínim els responsables de l'aplicació hauran de facilitar la següent informació a l’equip GICAR per a poder autenticar aquest servei:
+
+- entityID = Haurà de contenir el valor del SAML:Issuer indicat en el SAMLRequest de les peticions que farà l’aplicació. Serà normalment la URL del servei peticionari.
+
+- Certificat = Certificat X509 que farà servir l’aplicació consumidora per a desencriptar els tiquets SAML que haurà emès GICAR.
+
+- AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" = S’haurà d’indicar a quina URL de l’aplicació GICAR haurà de redirigir un cop feta l’autenticació. Serà la URL on es farà la corresponent redirecció, i on es passarà per paràmetre l’atribut SAMLResponse amb el contingut de les respostes que haurà de decodificar i desencriptar l’aplicació.
 
 Caldrà addicionalment que el desenvolupador especifiqui quina informació voldrà rebre referent a l’usauri que s’haurà autenticat.
 
@@ -106,17 +142,25 @@ En aquest muntatge es configura l’ADFS com a Service Provider del Identity Pro
 * 	El Sharepoint és un dels seus service provider o relying party.
 	* GICAR és el seu identity provider.
 
+![Integració amb GICAR](/related/gicar/saml-ShibAdfsShp.png)
+
 El funcionament en aquests casos seria el següent:
 
-1.	El Sharepoint que es vol integrar amb GICAR sol·licita un token d’autenticació al ADFS. Per a fer això el Sharepoint provoca un redirect cap al ADFS indicant quin realm d’ADFS farà servir.
+1.	El client amb el seu navegador intenta accedir a una aplicació web desplegada sobre Sharepoint.
 
-1.	El ADFS avalua quins identity providers té disponibles. Troba GICAR com a identity provider disponible i li demana l’autenticació a través de protocol SAML i a través de l’operativa exposada en l’inici del punt 3.7
+2.	Sharepoint detecta que el recurs està protegit i redirigeix l’usuari cap a AD FS.
 
-1.	GICAR autentica l’usuari, i redirecciona de nou al ADFS amb el tiquet SAML de resposta.
+3.	El servei AD FS presenta a l’usuari la pàgina WAYF (Where Are you From) per a que l’usuari indiqui on es vol autenticar (actualment aquesta pàgina no es presenta ja que només es pot autenticar amb GICAR).
 
-1.	L’ADFS recull els paràmetres del tiquet SAML i crea els claims de l’entorn Microsoft.
+4.	El navegador del client es redirigeix cap a l’Identity Provider de GICAR (Shibboleth) e inicia una transacció d’autenticació sota el protocol SAML 2.0.
 
-1.	L’ADFS passa al Sharepoint els claims que sol·licita.
+5.	Se li presenta al client el formulari de captura de credencials de GICAR.
+
+6.	Es validen les credencials.
+
+7.	L’Identity Provider genera un token en format SAML 2.0 amb la informació de l’usuari autentica i redirigeix l’usuari cap a l’ADFS.
+
+8.	L’ADFS verifica el token rebut i modifica la informació per adaptar-la a la que necessita Sharepoint i finalment deixa passar l’usuari cap a Sharepoint amb aquesta informació. Sharepoint presentarà l’aplicació web sol·licitada en el punt 1.
 
 Per a més detall tècnic per a veure com integrar el Sharepoint-ADFS-GICAR consultar el document “Integració GICAR amb Sharepoint”.
 
