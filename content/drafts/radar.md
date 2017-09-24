@@ -10,5 +10,5 @@ weight= 5
 Aquest és el Radar tecnològic del CTTI
 <div id="radarctti"></div>
 
-<link type="text/css" rel="stylesheet"  href="https://cdn.rawgit.com/mostrovoi/radar/master/main.01fc7a96899fd0287538.css">
-<script type="application/javascript" src="https://cdn.rawgit.com/mostrovoi/radar/master/main.01fc7a96899fd0287538.js">
+<link type="text/css" rel="stylesheet"  href="https://cdn.rawgit.com/mostrovoi/radar/master/main.3be441707ca2948752c1.css">
+<script type="application/javascript" src="https://cdn.rawgit.com/mostrovoi/radar/master/main.3be441707ca2948752c1.js">
