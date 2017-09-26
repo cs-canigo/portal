@@ -9,5 +9,5 @@ weight= 5
 
 <div id="radarctti"></div>
 
-<link type="text/css" rel="stylesheet"  href="https://cdn.rawgit.com/mostrovoi/radar/master/main.98e8c1b72cdb7b956d6a.css">
-<script type="application/javascript" src="https://cdn.rawgit.com/mostrovoi/radar/master/main.98e8c1b72cdb7b956d6a.js">
+<link type="text/css" rel="stylesheet"  href="https://cdn.rawgit.com/mostrovoi/radar/master/main.1313d942afcc5ec06590.css">
+<script type="application/javascript" src="https://cdn.rawgit.com/mostrovoi/radar/master/main.1313d942afcc5ec06590.js">
