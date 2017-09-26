@@ -7,7 +7,7 @@ categories  = ["radar"]
 weight= 5
 +++
 
-El radar és un manera visual de definir els canvis que pensem que actualment són interessants en el desenvolupament de programari: coses que estem rebent en les revisions d'arquitectura i altres que creiem que s'hauria de prestar atenció i considerar l'ús en els projectes que es fan per a la Generalitat. A diferència del Full de Ruta, només reflecteix l'opinió d'un grup d'arquitectes, basada en el nostre treball i experiències quotidianes. Encara que pensem que és interessant, no s'ha de considerar una anàlisi profunda del mercat, ni un posicionament explícit sobre les eines, tècniques, plataformes o llenguatges que hi surten.
+El Radar CTTI és un manera visual de definir els canvis que pensem que actualment són interessants en el desenvolupament de programari: coses que estem rebent en les revisions d'arquitectura i altres que creiem que s'hauria de prestar atenció i considerar l'ús en els projectes que es fan per a la Generalitat. A diferència del **[Full de Ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).**, només reflecteix l'opinió d'un grup d'arquitectes, basada en el nostre treball i experiències quotidianes. Encara que pensem que és interessant, no s'ha de considerar una anàlisi profunda del mercat, ni un posicionament explícit sobre les eines, tècniques, plataformes o llenguatges que hi surten.
 
 Agraïm la col·laboració de Thoughtworks en deixar el codi per aquesta visualització del Radar.
 
