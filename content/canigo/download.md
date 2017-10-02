@@ -57,7 +57,7 @@ Al settings.xml del Maven configurar el repository al profile per defecte:
 
 |          Versió LTS Actual       	 |      Última versió disponible    	 |
 |--------------------------------- 	 |------------------------------------	 |
-|              3.2.0.1            	 |                3.2.1 	             |
+|              3.2.0.1            	 |                3.2.2 	             |
 
 
 ### Creació de l'entorn local
