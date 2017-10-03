@@ -10,6 +10,8 @@ imatge 		= "/images/bloc/json-api.png"
 
 Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofereixin els diferents sistemes de la Generalitat, ja siguin públics o d'ús intern.
 
+<span style="color:green">Actualitzat a data 03/10/2017 amb la publicació de Canigó 3.2.2</style>
+
 ## Acords generals
 
 - Utilitzarem estàndards HTTP: verbs, http codes, headers, ...
@@ -33,7 +35,7 @@ Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofer
  
 - GET = select
 - POST = insert
-- PATCH = update
+- [PATCH o PUT] (http://www.baeldung.com/http-put-patch-difference-spring) = update 
 - DELETE
 
 ###	 Exemple
@@ -47,7 +49,7 @@ Imaginem que la nostra API gestiona el recurs "Aplicació". La notra API exposar
 - GET **/aplicacions** - obté el llistat de totes les aplicacions
 - GET **/aplicacions/{id}** - obté la informació de l'aplicació amb l'id corresponent passat a l'URI
 - POST **/aplicacions** - crea una nova aplicació
-- PATCH **/aplicacions/{id}** - actualitza l'aplicació amb l'id corresponent passat a l'URI
+- PATCH o PUT **/aplicacions/{id}** - actualitza l'aplicació amb l'id corresponent passat a l'URI
 - DELETE **/aplicacions/{id}** - elimina l'aplicació amb l'id corresponent passat a l'URI	
 
 ## Esquemes JSON
@@ -59,48 +61,44 @@ Imaginem que la nostra API gestiona el recurs "Aplicació". La notra API exposar
 
 					total : 976,  //nombre total dels resultats de la petició
 					limit : 100,  //màxim nombre de resultats a retornar per a cada petició
+					numberOfElements : 10 // nombre d'elements que es mostren en la pàgina actual
 					offset : 200, //en quin resultat del total comença aquesta petició 
 					
 					included : [  //array de resultats
 						{
 							id : 1,
-							attributes : {
-								camp1 : "A",
-								camp2 : "B"
-							}
+							camp1 : "A",
+							camp2 : "B"
+							
 						},
 						{
 							id : 2,
-							attributes : {
-								camp1 : "C",
-								camp2 : "D"
-							}
+							camp1 : "C",
+							camp2 : "D"
 						},
 						...
 					]
 				} 
 			}
 
-- GET/POST/PATCH/DELETE
+- GET/POST/PATCH/PUT/DELETE
 
 			{
 				errors : [
 					{
 						code : 401,
-						desc : "l'usuari proporcionat no té permisos d'accés"
+						message : "l'usuari proporcionat no té permisos d'accés"
 					}
 				]
 			}
 
-- GET/POST/PATCH - Elements individuals
+- GET/POST/PATCH/PUT - Elements individuals
 
 
 			{
 				id : 1, // en el cas del POST no enviarem el id, normalment
-				attributes : {
-					camp1 : "A",
-					camp2 : "B"
-				}
+				camp1 : "A",
+				camp2 : "B"
 			}
 
 
@@ -128,6 +126,7 @@ Imaginem que la nostra API gestiona el recurs "Aplicació". La notra API exposar
 			data : {
 				total : 976,
 				limit : 100, 
+				numberOfElements : 10,
 				offset : 200,
 				included : [
 					...
@@ -215,22 +214,19 @@ Per a peticions GET, permetrem incloure un paràmetre "callback" amb el nom de l
 
 					total : 976,  
 					limit : 100,  
+					numberOfElements : 10,
 					offset : 200, 
 					
 					included : [  
 						{
 							id : 1,
-							attributes : {
-								camp1 : "A",
-								camp2 : "B"
-							}
+							camp1 : "A",
+							camp2 : "B"
 						},
 						{
 							id : 2,
-							attributes : {
-								camp1 : "C",
-								camp2 : "D"
-							}
+							camp1 : "C",
+							camp2 : "D"
 						},
 						...
 					]
@@ -251,10 +247,8 @@ Amb el verb POST crearem nous elements al nostre recurs:
 
 		{
 			data : {
-				attributes : {
-					camp1 : "A",
-					camp2 : "B"
-				}
+				camp1 : "A",
+				camp2 : "B"
 			}
 		}
 
@@ -267,10 +261,8 @@ Si tot ha anat correctament el HTTP response code serà 201. La resposta pot inc
 		{
 			data : {
 				id : "5220-4848-864539594927", // en el cas del POST no enviarem el id, normalment
-				attributes : {
-					camp1 : "A",
-					camp2 : "B"
-				}
+				camp1 : "A",
+				camp2 : "B"
 			}
 		}
 
@@ -285,9 +277,7 @@ Amb el verb PATCH actualitzarem un recurs concret.
 		{
 			data : {
 				id : 5220-4848-864539594927
-				attributes : {
-					camp1 : "X"
-				}
+				camp1 : "X"
 			}
 		}
 
@@ -323,15 +313,11 @@ Si tot ha anat correctament el HTTP response code serà 20x, depenent de si s'ha
 			data : [
 				{
 					id : 5220-4848-864539594927
-					attributes : {
-						camp1 : "X"
-					}
+					camp1 : "X"
 				},
 				{
 					id : 5220-4848-864539594928
-					attributes : {
-						camp1 : "Z"
-					}
+					camp1 : "Z"
 				}
 			]
 		}
@@ -355,7 +341,7 @@ Si tot ha anat correctament el HTTP response code serà 20x, depenent de si s'ha
 					errors : [
 						{
 							code : 999,
-							desc : "Falten camps obligatoris per informar"
+							message : "Falten camps obligatoris per informar"
 						}
 					]
 				}
@@ -412,7 +398,7 @@ En cas d'errors, inclourem un _payload_ en format JSON que informarà dels probl
 				errors : [
 					{
 						code : 404,
-						desc : "El recurs sol·licitat no s'ha trobat"
+						message : "El recurs sol·licitat no s'ha trobat"
 					}
 				]
 
