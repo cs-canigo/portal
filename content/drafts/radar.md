@@ -11,7 +11,7 @@ El Radar CTTI és un manera visual de definir els canvis que pensem que actualme
 
 El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.thoughtworks.com/radar).** 
 
-<div id="radarctti"></div>
+<div id="radarctti" class="container-radar"></div>
 
 <link type="text/css" rel="stylesheet"  href="https://rawgit.com/cs-canigo/radar/master/main.73b4e9069f72baa4a50d.css">
 <script type="application/javascript" src="https://rawgit.com/cs-canigo/radar/master/main.73b4e9069f72baa4a50d.js">
