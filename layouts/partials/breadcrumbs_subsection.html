@@ -1,5 +1,5 @@
-{{ $title := .Title | lower}}
-{{ $section := .Section | lower}}
+{{ $title := .Title | html | lower}}
+{{ $section := .Section | html| lower}}
 
 <!-- switch subseccions -->
 <!-- Canigó - documentació -->
