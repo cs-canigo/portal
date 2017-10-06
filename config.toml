@@ -8,6 +8,7 @@ buildDrafts = true
 baseURL = "http://canigo.ctti.gencat.cat"
 canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
+pluralizelisttitles = false
 
 Paginate = 10
 
