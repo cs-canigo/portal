@@ -19,7 +19,7 @@ El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a trav�
 Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.pica.version>[1.1.0,1.2.0)</canigo.integration.pica.version>
+<canigo.integration.pica.version>[1.2.0,1.3.0)</canigo.integration.pica.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -85,7 +85,7 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml
 
 ## Utilització del Mòdul
 
-### JSF
+### REST
 
 **app-integration-custom.xml**
 
@@ -124,181 +124,215 @@ Aquest arxiu XML conté la configuració de Spring per al servei de PICA. En l'e
 Les propietats pica.url, pica.codCertificado, pica.codProducto, etc, definides en XML de configuració anterior, son propietats específiques de la modalitat o producte invocat, per lo que s'hauran d'introduir manualment a l'arxiu pica.properties per tal de que el PlaceHolderResolver de Spring pugui resoldre el valor de la propietat durant l'arranc de l'aplicació.
 </div>
 
-**PicaBean.java**
+**PicaAplicacioService.java**
 
-Managed Bean de JSF que gestiona la crida al servei de la PICA.
+Classe Java amb la lògica de les peticions que es realitzin, i la connectivitat amb el mòdul de la PICA.
 
-En aquest bean es pot visualiztar:
+En aquesta classe es pot visualiztar:
 
-* Inyecció del servei de PSIS via annotacions (@Autowired/@Qualifier) de Spring.
-* Inyecció del servei d'internacionaliztació via annotacions (@Autowired) de Spring.
+* Injecció del servei de PICA via annotacions (@Autowired/@Qualifier) de Spring.
 * Invocació del producte/modalitat "PADRO_MUNICIPI_RESIDENCIA" definit en el map de modalitats que es troba al fitxer de configuració xml de Spring.
 
 ```java
-/**
- * Classe d'exemple d'invocació al servei de PICA
- *
- * @author cscanigo
- *
- */
-@Component("picaBean")
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+import com.generalitat.mp.ws.CridaSincronaResponseDocument;
+
+import cat.gencat.ctti.canigo.arch.integration.pica.IPicaServiceWrapper;
+import cat.gencat.pica.api.peticio.beans.DadesEspecifiques;
+import cat.gencat.pica.api.peticio.beans.Funcionari;
+import cat.gencat.pica.api.peticio.beans.Titular;
+import cat.gencat.pica.api.peticio.core.IPICAServiceSincron;
+
+@Service("picaAplicacioService")
 @Lazy
-public class PicaBean {
+public class PicaAplicacioService {
+
+	private static final Logger log = LoggerFactory.getLogger(PicaAplicacioService.class);
 
 	@Qualifier("picaService")
 	@Autowired
-	private IPicaServiceWrapper serviceWrapper;
-	@Autowired
-	private I18nResourceBundleMessageSource resource;
+    private IPicaServiceWrapper serviceWrapper;
+    
 	private static final int TIPO_DOC_TITULAR_NIF = 2;
-	private static final Log log = LogFactory.getLog(PicaBean.class);
 
-        /**
-         * Crea un objecte funcionari
-         *
-         * return funcionari
-         **/
-	private Funcionari creaFuncionari() {
-		Funcionari func = new Funcionari(  );
-		func.setNifFuncionario("22222222X");
-		func.setNombreFuncionario("Nom congnom1 cognom2");
-		func.setEmailFuncionario("ncognom1cognom2@gencat.net");
-		return func;
-	}
+	public String testPica(){
+		
+		String message;
 
-        /**
-         * Crea un objecte titular
-         *
-         * return titular
-         **/
+		 try{
+	            IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance("PADRO_MUNICIPI_RESIDENCIA");
+
+	            Funcionari func = getFuncionari();
+	            Titular tit = creaTitular();
+
+	            List<DadesEspecifiques> datosEspecificosXML = createDadesEspecifiques();
+
+	            service.setFuncionari(func);
+	            service.setTitular(tit);
+	            service.setDadesEspecifiques(datosEspecificosXML);
+
+	                        //Identificador únic de petició
+	            service.crearPeticio("PROVA_OTCANIGO_" + System.currentTimeMillis());
+
+	            //fer peticio
+	            CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
+	            //extreure resultat
+	            List<DadesEspecifiques> resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
+
+	            Iterator<DadesEspecifiques> it = resposta.iterator();
+	            while (it.hasNext()) {
+	                DadesEspecifiques object = it.next();
+	                String dadesXML = object.getDadesXML();
+
+	                // Parsejar resposta
+	                parseXML(dadesXML);
+	            }
+
+	            message = "Test correcte";
+
+	        }catch(Exception e){
+	        	message = "Test amb errors: " + e.getMessage();
+	            log.error(e.getMessage(), e);
+	        }
+        
+        return message;
+
+    }
+	
+    /**
+     * Crea un objecte funcionari
+     *
+     * return funcionari
+     **/
+    private Funcionari getFuncionari() {
+        Funcionari funcionari = new Funcionari();
+        funcionari.setNombreFuncionario("Nom Funcionari");
+        funcionari.setNifFuncionario("55555555A");
+        funcionari.setEmailFuncionario("prova@gencat.com");
+        return funcionari;
+    }
+
+    /**
+     * Crea un objecte titular
+     *
+     * return titular
+     **/
 	private Titular creaTitular() {
-		Titular tit = new Titular(  );
-		tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
-		tit.setTitularDocumentacion("NIF_TITULAR"); // Es posa el NIF real
-		tit.setTitularNombreCompleto("NOM_COMPLET_TITULAR"); // Es posa el nom real
-		return tit;
+	    Titular tit = new Titular(  );
+	    tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
+	    tit.setTitularDocumentacion("NIF_TITULAR"); // Es posa el NIF real
+	    tit.setTitularNombreCompleto("NOM_COMPLET_TITULAR"); // Es posa el nom real
+	    return tit;
 	}
-
-
-        /**
-         * Crea un objecte dades específiques
-         *
-         * return DadesEspecifiques
-         **/
+	
+	
+	    /**
+	     * Crea un objecte dades específiques
+	     *
+	     * return DadesEspecifiques
+	     **/
 	private List<DadesEspecifiques> createDadesEspecifiques() {
-		List<DadesEspecifiques> dadesEspecifiquesXML= new ArrayList<DadesEspecifiques>(  );
-		StringBuffer sb = new StringBuffer( "<ns1:request xmlns:ns1=\"http://www.gencat.net/tfn\">" );
-		sb.append( "<ns1:simpleparam name=\"NUMTIT\">83746573</ns1:simpleparam>" );
-		sb.append( "<ns1:simpleparam name=\"NUMNIF\">111111111H</ns1:simpleparam>" );
-		sb.append( "</ns1:request>" );
-
-		DadesEspecifiques dades = new DadesEspecifiques(  );
-		dades.setIdSolicitud( "1" );
-		dades.setDadesXML( sb.toString(  ) );
-		dadesEspecifiquesXML.add( dades );
-
-		return datosEspecificosXML;
+	    List<DadesEspecifiques> dadesEspecifiquesXML= new ArrayList<DadesEspecifiques>(  );
+	    StringBuffer sb = new StringBuffer( "<ns1:request xmlns:ns1=\"http://www.gencat.net/tfn\">" );
+	    sb.append( "<ns1:simpleparam name=\"NUMTIT\">83746573</ns1:simpleparam>" );
+	    sb.append( "<ns1:simpleparam name=\"NUMNIF\">111111111H</ns1:simpleparam>" );
+	    sb.append( "</ns1:request>" );
+	
+	    DadesEspecifiques dades = new DadesEspecifiques(  );
+	    dades.setIdSolicitud( "1" );
+	    dades.setDadesXML( sb.toString(  ) );
+	    dadesEspecifiquesXML.add( dades );
+	
+	    return dadesEspecifiquesXML;
 	}
-
-        /**
-         * Parsejar la resposta deixant constància en format de traces si la crida ha finalitzat o no correctament
-         *
-         **/
+	
+	    /**
+	     * Parsejar la resposta deixant constància en format de traces si la crida ha finalitzat o no correctament
+	     *
+	     **/
 	private void parseXML(String dadesXML) throws ParserConfigurationException, SAXException, IOException {
-		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		DocumentBuilder builder = factory.newDocumentBuilder();
-		InputSource inStream = new InputSource();
-		boolean error = false;
-
-		inStream.setCharacterStream(new StringReader(dadesXML));
-		Document doc = builder.parse(inStream);
-		NodeList nodes = doc.getElementsByTagName("error");
-		if(nodes.getLength() == 0) {
-			nodes = doc.getElementsByTagName("sol:SolicitudError");
-			error = true;
-		}
-
-		for(int i=0; i<nodes.getLength(); i++) {
-			Node node = nodes.item(i);
-			if(node.getNodeType() == Node.ELEMENT_NODE) {
-				Element element = (Element)node;
-				if(!error) {
-					log.info(dadesXML);
-				} else {
-					log.info(element.getTextContent());
-				}
-			}
-		}
+	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	    DocumentBuilder builder = factory.newDocumentBuilder();
+	    InputSource inStream = new InputSource();
+	    boolean error = false;
+	
+	    inStream.setCharacterStream(new StringReader(dadesXML));
+	    Document doc = builder.parse(inStream);
+	    NodeList nodes = doc.getElementsByTagName("error");
+	    if(nodes.getLength() == 0) {
+	        nodes = doc.getElementsByTagName("sol:SolicitudError");
+	        error = true;
+	    }
+	
+	    for(int i=0; i<nodes.getLength(); i++) {
+	        Node node = nodes.item(i);
+	        if(node.getNodeType() == Node.ELEMENT_NODE) {
+	            Element element = (Element)node;
+	            if(!error) {
+	                log.info(dadesXML);
+	            } else {
+	                log.info(element.getTextContent());
+	            }
+	        }
+	    }
 	}
-
-        /**
-         * Crida al servei sincron de la PICA.
-         *
-         * return titular
-         **/
-	public void execute(){
-
-		try{
-			IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance("PADRO_MUNICIPI_RESIDENCIA");
-
-			Funcionari func = creaFuncionari();
-			Titular tit = creaTitular();
-
-			List<DadesEspecifiques> datosEspecificosXML = createDadesEspecifiques();
-
-			service.setFuncionari(func);
-			service.setTitular(tit);
-			service.setDadesEspecifiques(datosEspecificosXML);
-
-                        //Identificador únic de petició
-			service.crearPeticio("PROVA_OTCANIGO_" + System.currentTimeMillis());
-
-			//fer peticio
-			CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
-			//extreure resultat
-			List<DadesEspecifiques> resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
-
-			Iterator<DadesEspecifiques> it = resposta.iterator();
-			while (it.hasNext()) {
-				DadesEspecifiques object = it.next();
-				String dadesXML = object.getDadesXML();
-
-				// Parsejar resposta
-				parseXML(dadesXML);
-			}
-
-                        //La crida ha finalitzat sense errors. Afegim el missatge de petició finalitzada correctament
-                        //al formulari JSF que ha gestionat la crida.
-			FacesContext.getCurrentInstance().addMessage("picaForm", new FacesMessage(
-			        FacesMessage.SEVERITY_INFO, resource.getMessage("picaSuccess"), null));
-
-		}catch(Exception e){
-			log.error("Error during PICA invocation. " + e);
-                        //S'ha produït un error durant la invocació de la PICA. Afegim el missatge d'error al formulari
-                        //JSF que ha gestionat la crida.
-			FacesContext.getCurrentInstance().addMessage("picaForm", new FacesMessage(
-			        FacesMessage.SEVERITY_ERROR, resource.getMessage("picaError") + " - " + e.toString(), null));
-		}
-	}
-
-
 }
 ```
 
 Cal destacar que l'identificador de la petició ha de ser únic, per aquest motiu es concatena un prefix de text qualsevol amb el timestamp del sistema.
+
 Per a més informació respecte l'especificació tècnica i funcional podeu contactar amb l'OT PICA.
+
 En aquest exemple, els mètodes privats crearFuncionari() i crearTitular() (creats simplement per aquest test) s'encarreguen de setejar les propietats del funcionari que fa la petició i titular sobre el que es fa la petició respectivament. El mètode també privat createDadesEspecifiques() conté una llista de les sol.licituds, en format XML, que s'enviaran dins la petició.
+
 Dins una petició (llista de dades específiques) es poden incloure diverses sol- licituds, els identificadors de les quals han de ser únics dins una mateixa petició. Si volguéssim afegir una altra sol- licitud en l'exemple, només caldria instanciar un nou objecte DadesEspecifiques, amb IdSolicitud="2", un nou StringBuffer amb les dades i afegir-lo a la llista dadesEspecifiquesXML dins del mètode createDadesEspecifiques() de l'exemple.
 
-**pica.jsf**  
+**PicaServiceController.java**  
 
-Invocació del métode "execute" del managed bean de JSF definit anteriorment com a picaBean. El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("picaForm"....).
+Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
-```
-<h:form id="picaForm">
-   <h:panelGrid columns="1">
-     <h:commandButton value="#{msg.canigoSubmit}" action="#{picaBean.execute}" />
-     <h:message for="picaForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.PicaAplicacioService;
+
+@RestController
+@RequestMapping("/pica")
+public class PicaServiceController {
+
+	@Autowired
+	PicaAplicacioService picaAplicacioService;
+
+
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testPica() throws Exception {
+		return picaAplicacioService.testPica();
+	}
+}
 ```

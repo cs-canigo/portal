@@ -19,6 +19,18 @@ aportada per Spring, és la possibilitat de disposar de propietats
 dependents d'entorn sense necessitat de cap configuració extra a nivell
 de beans - propietats.
 
+## Limitacions
+
+Per aplicacions Canigó 3.2 que no utilitzin Spring Boot, normalment aplicacions que actualitzin de versions anteriors, el mòdul de configuració no presenta cap incompatibilitat.
+
+Per aplicacions Canigó 3.2 que utilitzin Spring Boot, normalment noves aplicacions, el mòdul de configuració presenta les següents limitacions:
+
+* no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
+
+* condicionar la configuració de Spring Boot (Veure secció "Condicionar la configuració de Spring Boot" d'aquesta plana)
+
+	Donades aquestes limitacions, en una futura versió de Canigó, es preveu deprecar aquest mòdul de configuració en favor dels profiles de Spring Boot
+
 ## Instal.lació i configuració
 
 ### Instal.lació
@@ -30,7 +42,7 @@ cas d'una instal- lació manual afegir les següents línies al pom.xml de
 l'aplicació:
 
 ```xml
-<canigo.core.version>[3.1.0,3.2.0)</canigo.core.version>
+<canigo.core.version>[3.2.0,3.3.0)</canigo.core.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -318,10 +330,13 @@ Spring Boot ofereix la possibilitat de condicionar diversos aspectes de la confi
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-auto-configuration.html
 
-Per a poder utilitzar propietats en aquestes condicions s'ha de carregar específicament per a aquest motiu un fitxer de configuració propi, ja que les propietats de l'aplicació es carreguen després de resoldre aquestes condicions.
+Per a poder utilitzar propietats en aquestes condicions s'han de carregar específicament per a aquest motiu en un fitxer de configuració propi que llegeixi SpringBoot, ja que les propietats de l'aplicació es carreguen després de resoldre aquestes condicions.
 
-Per a carregar aquest fitxer de propietas s'ha d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
+SpringBoot per defecte cerca les propietats en un fitxer que es digui application.properties a src/resources. Les propietats que es dessitgi utilitzar en la configuració de SpringBoot s'han d'afegir en aquest fitxer.
 
+Si es vol utilitzar profiles de Spring, s'hauria de crear un fitxer application-{profile}.properties.
+
+Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @PropertySource al nostre fitxer de de configuració:
 
 	@Configuration
 	@PropertySource("classpath:/config/props/boot.properties")

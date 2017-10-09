@@ -15,7 +15,7 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/1.0.3) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/1.0.4) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
 
@@ -113,7 +113,13 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 
 ### Versions
 
-#### 1.0.3 - Ubuntu 16.04 (21/03/2017) -- <span style="color:green">OPERATIVA</style>
+#### 1.0.4 - Ubuntu 16.04 (29/05/2017) -- <span style="color:green">OPERATIVA</style>
+
+_RELEASE NOTES_
+
+* Actualitzada  la versió de Oracle Java a 1.8
+
+#### 1.0.3 - Ubuntu 16.04 (21/03/2017) -- ``NO OPERATIVA``
 
 _RELEASE NOTES_
 

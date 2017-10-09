@@ -1,8 +1,8 @@
-box: node:4.2.6-slim
+box: node:8-slim
 build:
   steps:
-    - arjen/hugo-build@1.13.1:
-        version: "0.17"
+    - arjen/hugo-build@1.21.1:
+        version: "0.27.1"
 deploy:
   steps:
     - install-packages:

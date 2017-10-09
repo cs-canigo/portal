@@ -50,7 +50,7 @@ Funcionalitats
 
 Es pot trobar el codi font referent a aquest component a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.icc/1.1.0/
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.icc/
 
 #### Requeriments
 
@@ -63,7 +63,7 @@ El connector ICC és compatible amb les versions 1.5 o superior de Java. Per ver
 Per tal d'instal-lar el connector ICC es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.icc.version>[1.1.0,1.2.0)</canigo.integration.icc.version>
+<canigo.integration.icc.version>[1.2.0,1.3.0)</canigo.integration.icc.version>
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.icc</artifactId>

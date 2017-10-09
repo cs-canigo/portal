@@ -9,7 +9,7 @@ weight 		= 3
 
 Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al servei de FRAMEWORK SIC a Remedy
 
-- [SIC - Howto - Obrir peticions SIC a Remedy ] (/related/sic/howto/SIC - Howto - Obrir peticions SIC a Remedy.pdf)
+- [SIC - Howto - Obrir peticions SIC a Autoservei Remedy ] (/related/sic/howto/SIC - Howto - Obrir peticions SIC a Autoservei Remedy.pdf)
 
 <br/>
 <br/>

@@ -8,6 +8,9 @@ weight		= 4
 
 ## <span class="label label-cabecera">2017</span>
 
+#### [Maig] (/comunicat/2017/05/)
+- SIC 2.0. Millores en la gestió d'usuaris i repositoris
+
 #### [Abril] (/comunicat/2017/04/)
 - Canigó. Publicada nova versió 3.2 del framework
 - Blog d'Arquitectura. Sobre les SDN

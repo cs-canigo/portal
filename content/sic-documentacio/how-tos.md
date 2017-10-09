@@ -12,3 +12,5 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar l'�
 - [SIC - Howto - Obrir peticions SIC a Remedy] (/related/sic/howto/SIC - Howto - Obrir peticions SIC a Remedy.pdf)
 
 - [SIC - Accés Tasques de Gestio del Framework SIC (versió oficial Remedy)] (/related/sic/howto/Acces Tasques de Gestio del Framework SIC.pptx)
+
+- [SIC - Migració de repositori SVN a repositori GIT] (/howtos/2017-07-Howto-Migrar%20repositori%20SVN%20a%20repositori%20GIT/)

@@ -81,7 +81,7 @@ Per poder utilitzar l'SGDE s'ha d'estar donat d'alta en el servei. Per poder fer
 
 Es pot trobar el codi font referent a aquest components a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.sgde/1.2.0/
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.sgde/
 
 #### Requeriments
 
@@ -101,7 +101,7 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.integration.sgde</artifactId>
-	<version>1.2.0</version>
+	<version>[1.3.0,1.4.0)</version>
 </dependency>
 
 ```
@@ -114,7 +114,7 @@ En el cas de que es vulgui integrar aquest connector en una aplicació que dispo
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.padro.pica</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
     <exclusions>
 		<exclusion>
 			<groupId>org.apache.axis2</groupId>

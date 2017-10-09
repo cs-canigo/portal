@@ -29,7 +29,7 @@ Ambdues necessiten la publicació d'un WebService per part del consumidor del Se
 Per instal.lar el WebService de notificacions electròniques s'han d'afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.notificacions.electroniques.version.ws>[2.1.0,2.2.0)</canigo.integration.notificacions.electroniques.version.ws>
+<canigo.integration.notificacions.electroniques.version.ws>[2.2.0,2.3.0)</canigo.integration.notificacions.electroniques.version.ws>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>

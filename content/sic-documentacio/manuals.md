@@ -7,15 +7,24 @@ sections    = "SIC"
 
 ### Manuals
 
+Durant el periode de convivència entre SIC 1.0 i SIC 2.0, podeu disposar dels manuals de cada versió.
+
+_____
+
+
+#### SIC 2.0
+- [Manual d'Usuari](/related/sic/2.0/manual-usuari.pdf)
+- [Manual d'Integració](/related/sic/2.0/manual-integracio.pdf)
+
+____
+
+
+#### SIC 1.0
 - [Manual d'Usuari](/related/sic/manual-usuari.pdf)
 - [Manual d'Integració](/related/sic/manual-integracio.pdf)
 
 
-<p>&nbsp;</p>
-
-**Notes**
-
-És obligatori que tant la petició de creació d'aplicació al repositori de codi font del SIC com la petició d'alta dels Jobs d'una aplicació al Portal d'Integració Contínua del SIC sigui realitzada pel responsable del projecte (persona dins el CTTI o d'un Departament).
+**Notes addicionals per a SIC 1.0**
 
 És obligatori que les peticions de modificació de dades sobre una aplicació donada d'alta al repositori de codi font del SIC o al Portal d'Integració Contínua del SIC sigui realitzada pel responsable tècnic de l'aplicació (persona responsable per part del proveïdor) o bé pel responsable del projecte.
 

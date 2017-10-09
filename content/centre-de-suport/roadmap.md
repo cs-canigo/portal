@@ -7,7 +7,7 @@ weight      = 5
 categories  = ["canigo","sic","sgde"]
 +++
 <!--Aquest és el Roadmap del CS Canigó per als serveis Canigó, SIC i SGDE:
-<iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1ycTBuP_02_fFQYHePMhAxAnNt70R4GyTP4phJn3EHi8&font=Default&lang=ca&initial_zoom=1&height=600&start_at_slide=17' width='100%' height='600' frameborder='0'></iframe-->
+<iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1ycTBuP_02_fFQYHePMhAxAnNt70R4GyTP4phJn3EHi8&font=Default&lang=ca&initial_zoom=1&height=600&start_at_slide=20' width='100%' height='600' frameborder='0'></iframe-->
 
 
 <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" />
@@ -22,7 +22,7 @@ categories  = ["canigo","sic","sgde"]
 	   $.getJSON("https://script.google.com/macros/s/AKfycbwXOwdyefmpRayODliduXDI2m0wCm_TKMiB_tQkkDDKaA4l9WQ/exec?callback=?", null, function(results){
 	   			
 				var additionalOptions = {
-			    	start_at_slide: results.slide,
+			    	start_at_slide: 36,
 			        timenav_height: 200,
 			        height : 650,
 			        initial_zoom: 12,
@@ -38,3 +38,5 @@ categories  = ["canigo","sic","sgde"]
 </script>
 
 *Aquest Roadmap està subjecte a canvis*
+
+Al següent [enllaç](/canigo/roadmap/) es pot trobar el roadmap del Framework Canigó

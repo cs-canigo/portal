@@ -35,7 +35,7 @@ Les classes que utilitzarem per fer les operacions han estat generades amb una e
 Per tal d'instal-lar el mòdul de SAP es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.sap.version>[1.1.0,1.2.0)</canigo.integration.sap.version>
+<canigo.integration.sap.version>[1.2.0,1.3.0)</canigo.integration.sap.version>
 -
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -65,73 +65,91 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/sap.properties
 
 ## Utilització del Mòdul
 
-### JSF
+### REST
 
-Per a configurar el mòdul és necessari:
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 
-    Crear un managed bean de JSF que contingui la lògica d'invocació al servei SAP.
-    Pàgina JSF per a realitzar la invocació al managed bean.
+**SapService.java**
 
-**SAPBean.java**
-
-Managed Bean de JSF que gestiona la crida al servei de SAP.
+Classe Java on es realitza la lògica de la operació a realitzar i es connecta amb el mòdul de SAP.
 
 En aquest bean es pot veure:
 
-* Inyecció del conector de SAP via annotacions (@Autowired) de Spring.
-* Inyecció del servei d'internacionaliztació via annotacions (@Autowired) de Spring.
+* Injecció del conector de SAP via annotacions (@Autowired) de Spring.
 * Invocació de la funció BAPI_MATERIAL_GETLIST, taula MATNRSELECTION.
-* Inserció del missatge de resultat de l'operació que posteriorment sera recuperat pel formulari JSF.
 * En la classe MaterialBean s'introduirà el resultat de l'invocació de la funció SAP de manera transparent.
 
 ```java
-/**
- * Classe d'exemple d'invocació al servei de SAP
- *
- * @author cscanigo
- *
- */
-@Component("sapBean")
+import java.util.Collection;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
+import cat.gencat.ctti.canigo.arch.integration.sap.SapConnector;
+import cat.gencat.plantilla32.model.MaterialBean;
+
+@Service("sapService")
 @Lazy
-public class SAPBean {
+public class SapService {
 
-    @Autowired
+	private static final Logger log = LoggerFactory.getLogger(SapService.class);
+
+	@Autowired
     private SapConnector connector;
-    @Autowired
-    private I18nResourceBundleMessageSource resource;
 
-        /**
-         * Execució de la funció SAP BAPI_MATERIAL_GETLIST
-         *
-         */
-    public void execute(){
-        try{
-            this.connector.connect();
-            Collection<Object> col = this.connector.executeFunction("BAPI_MATERIAL_GETLIST",
-                    "MATNRSELECTION", null, MaterialBean.class);
+    /**
+     * Execució de la funció SAP BAPI_MATERIAL_GETLIST
+     *
+     */
+	public String testSap(){
+		
+		String message;
 
-            FacesContext.getCurrentInstance().addMessage("sapForm", new FacesMessage(
-                    FacesMessage.SEVERITY_INFO, resource.getMessage("sapSuccess") + ": " + col.size(), null));
-        }catch(Exception e){
-            FacesContext.getCurrentInstance().addMessage("sapForm", new FacesMessage(
-                    FacesMessage.SEVERITY_ERROR, resource.getMessage("sapError") + " - " + e.getMessage(), null));
-        }finally{
-            this.connector.disconnect();
-        }
+		 try{
+	            this.connector.connect();
+	            Collection<Object> col = this.connector.executeFunction("BAPI_MATERIAL_GETLIST",
+	                    "MATNRSELECTION", null, MaterialBean.class);
+	            
+	            message = "Test correcte : " + col.size();
+
+	        }catch(Exception e){
+	        	message = "Test erròni: " + e.getMessage();
+	        	log.error(e.getMessage(), e);
+	        }finally{
+	            this.connector.disconnect();
+	        }      
+        return message;
     }
-
 }
 ```
 
-**sap.jsf**
+**SapServiceController.java**
 
-Invocació del métode "execute" del managed bean de JSF definit anteriorment com a "sapBean". El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("sapForm"....).
+Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```
-<h:form id="sapForm">
-   <h:panelGrid columns="1">
-      <h:commandButton value="#{msg.canigoSubmit}" action="#{sapBean.execute}" />
-      <h:message for="sapForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.SapService;
+
+@RestController
+@RequestMapping("/sap")
+public class SapServiceController {
+
+	@Autowired
+	SapService sapService;
+
+
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testSap() throws Exception {
+		return sapService.testSap();
+	}
+}
 ```

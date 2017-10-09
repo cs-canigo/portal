@@ -35,7 +35,7 @@ Funcionalitats per al ciutadà:
 Per tal d'instal-lar el mòdul de notificacions electròniques es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.notificacions.electroniques.version>[1.3.0,1.4.0)</canigo.integration.notificacions.electroniques.version>
+<canigo.integration.notificacions.electroniques.version>[1.4.0,1.5.0)</canigo.integration.notificacions.electroniques.version>
 
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
@@ -82,49 +82,94 @@ Propietat                                         | Requerit | Descripció
 
 Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-3x-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+
 ## Utilització del Mòdul
 
-### JSF
+### PicaService
 
-Per a utilitzar aquest mòdul cal:
+El mòdul ENOTUM requereix de la creació del Bean del servei de la pica, per defecte Enotum cerca un bean anomenat picaService. Si es dessitja canviar aquest nom es pot fer afegint al fitxer notificacions-electroniques.propierties la següent propietat:
 
-* Configurar el fitxer XML de Spring per inicialitzar el servei.
-* Crear una classe Managed Bean de JSF que contingui la lògica de la crida al servei.
-* JSF que gestioni la crida al managed bean.
+	notificacions.electroniques.picaServiceBeanName=[nom del bean]
+	
+Un exemple del bean que s'ha de crear:
 
-**app-enotum-config.xml**
+	<!-- BEAN DE LA PICA -->
+	<bean id="picaService" parent="abstractPicaService">
+        <property name="modalitats">
+            <map>
+            </map>
+        </property>
+    </bean>
 
-Arxiu de configuració que inicialitza el servei de notificacions electròniques. Aquest arxiu de configuració es recolza en arxius de configuració interns del servei de Notificacions i PICA per simplificar la seva configuració.
+### REST
 
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
-           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 
-    <bean id="picaEnotumService" parent="abstractPicaService" scope="prototype"/>
+**EnotumService.java**
 
-</beans>
-```
-
-**EnotumBean .java**
-
-Managed Bean de JSF exposat per Spring, i accessible des de la pàgina JSF amb el nom "enotumBean".
-
-En aquest exemple invoquem el servei de notificacions electròniques i afegim com a missatge de formulari, el resultat
-de la seva invocació.
+Classe Java on es realitzarà la lògica de la operació a realitzar i es connecta amb el mòdul de Notificacions electròniques.
 
 ```java
-@Component("enotumBean")
-@Scope("singleton")
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
+import cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.NotificacionsElectroniquesConnector;
+import cat.gencat.pica.api.peticio.beans.Funcionari;
+import net.gencat.scsp.esquemes.productes.nt.PeticioNtConsultarDetallNotificacioEPDocument;
+import net.gencat.scsp.esquemes.productes.nt.PeticioNtConsultarDetallNotificacioEPDocument.PeticioNtConsultarDetallNotificacioEP;
+import net.gencat.scsp.esquemes.productes.nt.RespostaNtConsultarDetallNotificacioEPDocument;
+
+@Service("enotumService")
 @Lazy
-public class EnotumBean {
+public class EnotumService {
 
-    @Autowired
+	private static final Logger log = LoggerFactory.getLogger(EnotumService.class);
+
+	@Autowired
     private NotificacionsElectroniquesConnector enotum;
+    
 
-    /**
+
+	public String testEnotum(){
+		
+		String message;
+
+        try{
+
+        	String idTramesaNT = "101230";
+        	
+        	PeticioNtConsultarDetallNotificacioEPDocument dades = PeticioNtConsultarDetallNotificacioEPDocument.Factory.newInstance();
+    		PeticioNtConsultarDetallNotificacioEP peticioNotificacio = PeticioNtConsultarDetallNotificacioEP.Factory.newInstance();
+
+    		// Petició
+    		peticioNotificacio.setIdNotificacioNT(idTramesaNT);
+
+    		dades.setPeticioNtConsultarDetallNotificacioEP(peticioNotificacio);
+
+    		RespostaNtConsultarDetallNotificacioEPDocument resposta = enotum
+    				.getServeisEmpleatPublic(getFuncionari())
+    				.consultarDetallNotificacio(dades);
+        	
+            if(resposta.getRespostaNtConsultarDetallNotificacioEP().getErrors() != null){
+            	message = resposta.getRespostaNtConsultarDetallNotificacioEP().getErrors().getPICAErrorArray(0).getDescripcio();
+            }else{
+            	message = resposta.getRespostaNtConsultarDetallNotificacioEP().getDetallNotificacio().getNotificacio().getEstat();
+            }
+
+        }catch(Exception e){
+        	message = "Error al test: " + e.getMessage();
+        	log.error(e.getMessage(), e);
+        }
+        
+        return message;
+
+    }
+	
+	 /**
      * Get funcionari
      * @return
      */
@@ -132,46 +177,36 @@ public class EnotumBean {
         Funcionari funcionari = new Funcionari();
         funcionari.setNombreFuncionario("Nom Funcionari");
         funcionari.setNifFuncionario("55555555A");
-        funcionari.setEmailFuncionario("jmvila@gfi-info.com");
+        funcionari.setEmailFuncionario("prova@gencat.com");
         return funcionari;
     }
-    /**
-     * Submit
-     */
-    public void submit(){
-
-        try{
-
-        String idTramesaNT = "101230";
-            RespostaConsultarEstatTramesa resposta = enotum.getServeisEmpleatPublic(getFuncionari()).consultarEstatTramesa(idTramesaNT);
-
-            if(resposta.getError()!=null){
-                FacesContext.getCurrentInstance().addMessage("enotumForm", new FacesMessage(
-                        FacesMessage.SEVERITY_ERROR, resposta.getError().getDescripcio(), null));
-            }else{
-                FacesContext.getCurrentInstance().addMessage("enotumForm", new FacesMessage(
-                        FacesMessage.SEVERITY_INFO, resposta.getTramesa().getEstatTramesa(), null));
-            }
-
-        }catch(Exception e){
-            FacesContext.getCurrentInstance().addMessage("enotumForm", new FacesMessage(
-                    FacesMessage.SEVERITY_ERROR, e.getMessage(), null));
-        }
-
-    }
-
 }
 ```
 
-**enotum.jsf**
+**EnotumServiceController.java**  
 
-Pàgina d'exemple que conté un commandButton que realitza la crida al mètode "submit" del managed bean de JSF.
+Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
-```
-<h:form id="enotumForm">
-   <h:panelGrid columns="1">
-     <h:commandButton value="#{msg.canigoSubmit}" action="#{enotumBean.submit}" />
-     <h:message for="enotumForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.EnotumService;
+
+@RestController
+@RequestMapping("/enotum")
+public class EnotumServiceController {
+
+	@Autowired
+	EnotumService enotumService;
+
+
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testEnotum() throws Exception {
+		return enotumService.testEnotum();
+	}
+}
 ```

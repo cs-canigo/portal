@@ -51,7 +51,7 @@ Posem (micro) entre parèntesis perquè la granularitat dels serveis dependrà d
 
 Com que estem parlant d'un patró, la seva implementació es pot realitzar de diverses maneres. I com ja hem comentat, aquest patró permet la coexistència de diverses tecnologies. 
 
-En el cas de Canigó, basat en Spring, tot dependrà del disseny que es faci de l'aplicació. Això sí, implica respectar els [principis d'arquitectura](http://canigo.ctti.gencat.cat/bloc/2015/12/principis/) i les [millors pràctiques en la construcció d'apis i serveis](http://canigo.ctti.gencat.cat/bloc/2016/01/api/). A més, algunes de les característiques d'aquest patró ja estan resoltes dins Spring Cloud (routing, load balancing, registry, discovery, ...) i per això recomanem el seu ús als projectes Canigó.
+En el cas de Canigó, basat en Spring, tot dependrà del disseny que es faci de l'aplicació. Això sí, implica respectar els [principis d'arquitectura](http://canigo.ctti.gencat.cat/blog/2015/12/principis/) i les [millors pràctiques en la construcció d'apis i serveis](http://canigo.ctti.gencat.cat/blog/2016/01/api/). A més, algunes de les característiques d'aquest patró ja estan resoltes dins Spring Cloud (routing, load balancing, registry, discovery, ...) i per això recomanem el seu ús als projectes Canigó.
 
 
 <br />

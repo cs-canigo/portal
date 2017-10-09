@@ -3,7 +3,7 @@ date        = "2016-05-11"
 title       = "Elements del catàleg"
 description = "Docker, xPaaS, DBaaS"
 sections    = "Container Cloud"
-weight      = 1
+weight      = 2
 toc = true
 categories  = ["cloud","docker","container","paas"]
 +++
@@ -129,7 +129,6 @@ Tampoc ofereix un entorn en alta disponibilitat. És una modalitat no recomanada
 - MongoDB, disponible a **cloud públic**
 - ElasticSearch, disponible a **cloud públic**
 - PostgreSQL, disponible a **cloud públic**
-- MySQL (Beta), disponible a **cloud públic**
 - SQLServer, disponible a **cloud públic**
 
 A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús enlloc de bases de dades en contenidors.

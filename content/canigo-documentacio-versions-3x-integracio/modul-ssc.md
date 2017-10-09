@@ -64,7 +64,7 @@ De cara a utilitzar el servei en PRE, els certificats i documentació necessaria
 
 Es pot trobar el codi font referent a aquests component a la següent url:
 
-Codi Font:  http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.ssc/1.1.0/
+Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.ssc/
 
 #### Requeriments
 
@@ -84,7 +84,7 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.ssc</artifactId>
-    <version>1.1.0</version>
+    <version>[1.2.0,1.3.0)</version>
 </dependency>
 ```
 
@@ -113,7 +113,7 @@ El resultat dels processos de signatura moltes vegades són arrays de bytes que 
 	<!-- BEAN SSC -->
 	<bean id="sscService" class="cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl" scope="prototype">
 		<description>
-			SSC Service for Canigo 3.1
+			SSC Service for Canigo 3
 		</description>
 		<property name="host" value="${ssc.host}"/>
 		<property name="distinguishedname" value="${ssc.distinguishedname}" /> 

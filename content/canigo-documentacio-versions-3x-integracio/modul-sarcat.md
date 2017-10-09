@@ -39,7 +39,7 @@ llistarTaulaMestra                | Recuperació de codis o valors possibles per
 Per tal d'instal-lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.sarcat.pica.version>[1.1.0,1.2.0)</canigo.integration.sarcat.pica.version>
+<canigo.integration.sarcat.pica.version>[1.2.0,1.3.0)</canigo.integration.sarcat.pica.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -68,98 +68,109 @@ Propietat           | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-3x-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+
 ## Utilització del Mòdul
 
-### JSF
+### REST
 
-Per a utilitzar el mòdul és necessari:
+Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
 
-* Crear un managed bean de JSF que contingui la lògica d'invocació al servei de SARCAT.
-* Pàgina JSF per a realitzar la invocació al managed bean.
+**SarcatService.java**
 
-**SarcatPicaBean.java**
-
-Managed Bean de JSF que gestiona la crida al servei de la PICA.
-
-En aquest bean es pot veure:
-
-* Inyecció del servei de SARCAT via annotacions (@Autowired) de Spring.
-* Inyecció del servei d'internacionaliztació via annotacions (@Autowired) de Spring.
-* Inserció del missatge de resultat de l'operació que posteriorment sera recuperat pel formulari JSF.
+Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
 ```java
-/**
- * Classe d'exemple d'invocació al servei de SARCAT
- *
- * @author cscanigo
- *
- */
-@Component("sarcatPicaBean")
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+
+import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.SarcatConnector;
+import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException;
+import net.gencat.scsp.esquemes.peticion.common.OrdreCerca;
+import net.gencat.scsp.esquemes.peticion.common.TipusAssentament;
+import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca;
+import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca.ParametresCerca;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument.SarcatAlConsultaRequest;
+import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponseDocument.SarcatAlConsultaResponse;
+
+@Service("sarcatService")
 @Lazy
-public class SarcatPicaBean {
+public class SarcatService {
 
-    private static final Log log = LogFactory.getLog(SarcatBean.class);
+	private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
 
-    @Autowired
+	@Autowired
     private SarcatConnector sarcatConnector;
-    @Autowired
-    private I18nResourceBundleMessageSource resource;
+    
 
-    public void cercaAssentament() {
-        log.debug("SarcatPicaBean START");
 
-        FacesMessage facesMessage = null;
+	public String testSarcat(){
+		
+		String message;
 
-        try {
-                Assert.notNull(sarcatConnector);
+		try {
 
-                SarcatAlConsultaRequestDocument document = SarcatAlConsultaRequestDocument.Factory.newInstance();
-                SarcatAlConsultaRequest request = document.addNewSarcatAlConsultaRequest();
+            SarcatAlConsultaRequestDocument document = SarcatAlConsultaRequestDocument.Factory.newInstance();
+            SarcatAlConsultaRequest request = document.addNewSarcatAlConsultaRequest();
 
-                AssentamentCerca cerca = request.addNewAssentamentCerca();
-                ParametresCerca params =  cerca.addNewParametresCerca();
-                params.setDataInici("09/03/2011");
-                params.setDataFinal("10/03/2011");
-                cerca.setParametresCerca(params);
-                cerca.setUrUsuari("0001");
-                cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
-                cerca.setTipus(TipusAssentament.ENTRADA);
-                   cerca.setDescendent(true);
+            AssentamentCerca cerca = request.addNewAssentamentCerca();
+            ParametresCerca params =  cerca.addNewParametresCerca();
+            params.setDataInici("09/03/2011");
+            params.setDataFinal("10/03/2011");
+            cerca.setParametresCerca(params);
+            cerca.setUrUsuari("0001");
+            cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
+            cerca.setTipus(TipusAssentament.ENTRADA);
+               cerca.setDescendent(true);
 
-                SarcatAlConsultaResponse resposta = sarcatConnector.cercaAssentaments(document).getSarcatAlConsultaResponse();
+            SarcatAlConsultaResponse resposta = sarcatConnector.cercaAssentaments(document).getSarcatAlConsultaResponse();
 
-            if (resposta.getError().getCodi() != 0) {
-                log.error("llistat error : " + resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio());
-                facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, resource.getMessage("sarcatError")
-                        + resposta.getError().getCodi(), null);
-                FacesContext.getCurrentInstance().addMessage("sarcatForm", facesMessage);
-            } else {
-                log.debug("long retorn : " + resposta.getAssentamentArray().length);
-                facesMessage = new FacesMessage(FacesMessage.SEVERITY_INFO, resource.getMessage("sarcatSuccess") + " = "
-                        + resposta.getAssentamentArray().length, null);
-                FacesContext.getCurrentInstance().addMessage("sarcatForm", facesMessage);
-            }
-
-        } catch (SarcatException e) {
-            log.error("Error en SarcatReleaseTest.test1 " + e.getMessage());
-            facesMessage = new FacesMessage(FacesMessage.SEVERITY_ERROR, resource.getMessage("sarcatError") + e.getMessage(), null);
-            FacesContext.getCurrentInstance().addMessage("sarcatForm", facesMessage);
-        }
-        log.debug("SarcatPicaBean FINISH");
+	        if (resposta.getError().getCodi() != 0) {
+	        	message = "Test amb errors: " + resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio();
+	        	log.error(resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio());
+	        } else {
+	            message = "Test correcte: " + resposta.getAssentamentArray().length;
+	        }
+	
+	    } catch (SarcatException e) {
+	    	message = "Test erròni: " + e.getMessage();
+	        log.error(e.getMessage(), e);
+	    }
+        
+        return message;
     }
-
+	
 }
 ```
 
-**sarcat.jsf**
+**SarcatServiceController.java**
 
-Invocació del métode "execute" del managed bean de JSF definit anteriorment com a "sarcatBean". El Tag message mostrarà el resultat de la crida (veure FacesContext.getCurrentInstance().addMessage("sapForm"....).
+Controller que publica les operacions disponibles per a qui hagi de consumir-les.
 
-```
-<h:form id="sarcatForm">
-   <h:panelGrid columns="1">
-      <h:commandButton value="#{msg.canigoSubmit}" action="#{sarcatPicaBean.execute}" />
-      <h:message for="sarcatForm" infoStyle="color: green;" errorStyle="color: red;" />
-   </h:panelGrid>
-</h:form>
+```java
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.plantilla32.service.SarcatService;
+
+@RestController
+@RequestMapping("/sarcat")
+public class SarcatServiceController {
+
+	@Autowired
+	SarcatService sarcatService;
+
+
+	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+	public String testSarcat() throws Exception {
+		return sarcatService.testSarcat();
+	}
+}
 ```
