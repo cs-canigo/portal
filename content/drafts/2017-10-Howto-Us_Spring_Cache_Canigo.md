@@ -22,7 +22,7 @@ Per a fer-ho es desplega l’aplicació demo que genera el plugin de Canigó, pe
 
 En aquest primer exemple no se li especifica cap proveïdor específic de caching (caffeine, ehcache, etc.) de tal manera que l'exemple utilitzarà simplement ConcurrentHashMap.
 
-A una aplicació real es pot triar la implementació de caching que es dessitgi, però es important utilitzar l'abstracció que proporciona [Spring Cache] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching) (estàndard JSR-107) ja que a banda de complir els estàndards no fixa una aplicació a un proveïdor de caching en concret i facilita en un futur qualsevol modificació.
+A una aplicació real es pot triar la implementació de caching que es desitgi, però es important utilitzar l'abstracció que proporciona [Spring Cache] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching) (estàndard JSR-107) ja que a banda de complir els estàndards no fixa una aplicació a un proveïdor de caching en concret i facilita en un futur qualsevol modificació.
 
 En un segon exemple es mostra com utilitzar un proveïdor de caching, en aquest exemple [Caffeine] (https://github.com/ben-manes/caffeine) com llibreria de caching
 
@@ -46,7 +46,7 @@ S'ha d'afegir al pom.xml la dependència a Spring Cache
 	
 ### Exemple d'accés sense Cache
 
-A la classe **EquipamentService** es crea els mètodes *getById* i *simularLentitud*, aquest segón mètode es crea per a veure millor els efectes de l'us de cache vs el no utilitzar cache.
+A la classe **EquipamentService** es crea els mètodes *getById* i *simularLentitud*, aquest segon mètode es crea per a veure millor els efectes de l'ús de cache respecte a no utilitzar cache.
 
 	 private void simularLentitud() {
         try {
@@ -98,9 +98,9 @@ Tot i que l'aplicació serveix els mateixos objectes múltiples vegades triga 3 
 
 ### Exemple d'accés amb Cache
 
-Per a activar la cache, hem de crear una Cache on s'enmmagatzemarà els Equipaments, per fer això utilitzem l'annotació @Cacheable de Spring (org.springframework.cache.annotation.Cacheable)
+Per a activar la cache, hem de crear una Cache on s'enmmagatzemarà els Equipaments, per fer això utilitzem l'anotació @Cacheable de Spring (org.springframework.cache.annotation.Cacheable)
 
-Al mètode que s'ha creat al punt anterior (getById) afegim l'annotació
+Al mètode que s'ha creat al punt anterior (getById) afegim l'anotació
 
 	@Cacheable("equipaments")
 	public Equipament getById(Long id) {
@@ -108,9 +108,9 @@ Al mètode que s'ha creat al punt anterior (getById) afegim l'annotació
         return getEquipament(id);
 	}
 	
-Amb aquesta annotació s'indica que es crea la Cache "equipaments" on es guardaran els objectes retornats pel mètode getById.
+Amb aquesta anotació s'indica que es crea la Cache "equipaments" on es guardaran els objectes retornats pel mètode getById.
 
-Per a que l'aplicació processi les annotacions de Caching hem d'afegir l'annotació @EnableCaching a la nostra classe Application.java
+Per a que l'aplicació processi les anotacions de Caching hem d'afegir l'anotació @EnableCaching a la nostra classe Application.java
 
 	@SpringBootApplication
 	@EnableCaching
@@ -134,7 +134,7 @@ Si ara s'arrenca l'aplicació i es crida a /equipaments/howto i el resultat al l
 	(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,182 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 -->Equipament [nom=estació autobusos]
 	(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,182 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 -->Equipament [nom=estació autobusos]
 	
-Ara es pot veure que les dos primeres crides trigen 3 segons ja que l'aplicació obté per primera vegada aquests Equipaments. Però per als 4 següents, entrega els objectes de manera inmediata (sense entrar al mètode i per tant sense aturar-se els 3 segons que hem simulat).
+Ara es pot veure que les dos primeres crides trigen 3 segons ja que l'aplicació obté per primera vegada aquests Equipaments. Però per als 4 següents, entrega els objectes de manera immediata (sense entrar al mètode i per tant sense aturar-se els 3 segons que hem simulat).
 
 Es recomana utilitzar un dels proveïdors compatibles amb [Spring Cache] (https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#_supported_cache_providers) ja que la configuració per defecte té evidents problemes com que l'objecte desat a Cache es manté indefinidament, amb els inconvenients que això comporta.
 
@@ -189,7 +189,7 @@ Si es torna a fer la crida abans que passin 30 segons:
 	(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 -->Equipament [nom=estació autobusos]
 	(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 -->Equipament [nom=estació autobusos]
 	
-Els objectes continúen entregant-se inmediatament, però si es torna a fer la crida una vegada han passat 30 segons de la seva inserció:
+Els objectes continuen entregant-se immediatament, però si es torna a fer la crida una vegada han passat 30 segons de la seva inserció:
 
 	(howtoSpringCache) canigo Message: 09 10 2017 13:23:52,326 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
 	(howtoSpringCache) canigo Message: 09 10 2017 13:23:55,329 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 -->Equipament [nom=estació autobusos]
