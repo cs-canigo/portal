@@ -21,7 +21,7 @@ El procediment actual quan es crea un Draft a Remedy és el següent en els desp
 
 Ja sigui realitzant un push a la branca master del projecte GitLab (mètode SIC 2.0), ja sigui invocant-lo directament (mètode SIC 1.0), el job comença l'execució identificant l'usuari que ha disparat l'execució del job.
 
-<div style="width:90%;"><CENTER>![Invocació de Jobs al SIC](/images/news/invocacioJobs.png)</center></div>
+<div style="width:90%;margin:0 auto;"><img src="/images/news/invocacioJobs.png" alt="Invocació de Jobs al SIC" title="Invocació de Jobs al SIC"></img></div>
 
 #### 2. Invocació a Remedy
 
@@ -29,13 +29,13 @@ Després de realitzar les tasques necessàries, el job invoca al Web Service de 
 
 Jenkins té un usuari genèric per autenticar-se amb aquest web service i, entre d'altres paràmetres, ha d'indicar un usuari com a **creador** de la CRQ. Jenkins assigna l'usuari que ha identificat en el pas anterior com a usuari creador.
 
-<div style="width:90%;"><CENTER>![Invocació al Web Service de Remedy](/images/news/InvocacioWSRemedy.png)</center></div>
+<div style="width:90%;margin:0 auto;"><img src="/images/news/InvocacioWSRemedy.png" alt="Invocació al Web Service de Remedy" title="Invocació al Web Service de Remedy"></img></div>
 
 #### 3. Funcionalitat interna a Remedy
 
 El Web Service de Remedy valida que l'usuari informat té permisos per poder crear CRQs en el servei sol·licitat. Un cop l'ha validat, el Web Service de Remedy obté un llistat de tots els coordinadors de canvi vàlids i n'agafa un a l'atzar. Finalment, acaba creant el Draft.
 
-<div style="width:90%;"><CENTER>![Tasques internes del WS de Remedy](/images/news/tasquesWSRemedy.png)</center></div>
+<div style="width:90%;margin:0 auto;"><img src="/images/news/tasquesWSRemedy.png" alt="Tasques internes del WS de Remedy" title="Tasques internes del WS de Remedy"></img></div>
 
-Podeu consultar aquesta i altra informació al [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
+Recordeu que podeu consultar aquesta i altra informació al [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
 
