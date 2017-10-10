@@ -13,4 +13,6 @@ En aquest apartat s'aniran afegint un seguit de how-to, per tal de facilitar l'�
 
 - [SIC - Accés Tasques de Gestio del Framework SIC (versió oficial Remedy)] (/related/sic/howto/Acces Tasques de Gestio del Framework SIC.pptx)
 
-- [SIC - Migració de repositori SVN a repositori GIT] (/howtos/2017-07-Howto-Migrar%20repositori%20SVN%20a%20repositori%20GIT/)
+- [SIC - Migració de repositori SVN a repositori GIT] (/howtos/2017-07-howto-migrar-repositori-svn-a-repositori-git)
+
+- [SIC - Configurar l'entorn de treball per a GIT al SIC 2.0] (/howtos/2017-07-howto-configurar-entorn-treball)
