@@ -13,9 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Ús de Spring Cache (Caffeine) en Canigó 3.2](/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/)
 - [Actualització aplicació de Canigó 3.1 a Canigó 3.2](/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/)
-- [Migrar repositori SVN a repositori Git del SIC] (/howtos/2017-07-Howto-Migrar repositori SVN a repositori GIT)
-- [Configurar l'entorn de treball per a GIT al SIC 2.0] (/howtos/2017-07-Howto-Configurar-entorn-treball)
 - [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
 - [Connectar amb una BBDD Mongo amb SSL a través de NodeJS](/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl)
 - [Inserció/actualització massiva de dades a una aplicació Canigó 3.2](/howtos/2017-04-Batch-inserts-updates-canigo32)

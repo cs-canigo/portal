@@ -1,7 +1,7 @@
 +++
 date        = "2017-05-01"
-title       = "Ús de Spring Cache (Caffeine) en Canigó 3.2"
-description = "Ús de Spring Cache (Caffeine) en Canigó 3.2"
+title       = "Ús de Spring Cache (Caffeine) en Canigó 3.2.2"
+description = "Ús de Spring Cache (Caffeine) en Canigó 3.2.2"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "OCTUBRE2017"
