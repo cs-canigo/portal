@@ -9,6 +9,7 @@ baseURL = "http://canigo.ctti.gencat.cat"
 canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false
+disablePathToLower = true
 
 Paginate = 10
 
