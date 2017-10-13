@@ -1,11 +1,11 @@
-﻿+++
++++
 date        = "2017-10-10"
 title       = "DevOps"
 description = "DevOps és un moviment que aplica pràctiques reconegudes i exitoses de la industria als sistemes d'informació"
 sections    = ["", ""]
 blog_tags   = ["Desenvolupament", "Operacions", "DevOps"]
 categories  = ["Desenvolupament", "Operacions", "DevOps"]
-imatge      = "/images/bloc/201710/devops-process.png"
+imatge      = "/images/bloc/201710/devopsprocess.png"
 key         = "OCTUBRE2017"
 +++
 
