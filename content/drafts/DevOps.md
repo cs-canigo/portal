@@ -9,11 +9,13 @@ imatge      = "/images/bloc/201710/devopsprocess.png"
 key         = "OCTUBRE2017"
 +++
 
-# Introducció
+
+## Introducció
 
 Els sistemes de informació han de ser fiables i estar disponibles, per a que les organitzacions hi puguin dependre amb confiança. De fet, avui en dia gairebé tota iniciativa de qualsevol negoci depèn de la tecnologia en major o menor grau. Una aplicació creada per suportar un cas d'ús determinat no aporta valor si el departament de tecnologies de la informació no és capaç d'oferir una operació normal i mantenir les disrupcions a la mínima expressió. En aquest sentit, Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l'aprovisionament d'infraestructures mitjançant codi. Ara és el moment de mirar més enllà i plantejar una estratègia de DevOps que permeti desplegar aquesta capacitat a tota la Generalitat. 
 
-# Origen i Motivació
+
+## Origen i Motivació
 
 El terme "DevOps" va ser creat per Patrick Debois i Andrew Shafer el 2008, i va començar a ser d'ús comú el 2009 amb la presentació oferta per John Allspaw i Paul Hammond "10+ Deploy Per Day: Dev and Ops Cooperation at Flickr" a la O'Reilly Velocity Conference.
 
@@ -35,11 +37,13 @@ La feina no planificada te un altre dany colateral. Quan es gasta tot el temps f
 
 Allspaw i Hammond van demostrar que aquesta espiral es podia trencar i obtenir resultats inimaginables abans, mitjançant la col·laboració i la confiança entre els equips de Devs i Ops.
 
-# Les Tres Vies de DevOps
 
-Dins del moviment DevOps es coneixen les Tres Vies com un recull de principis, patrons, valors i filosofies que guien els processos i pràctiques de DevOps.
+## Les Tres Vies de DevOps
 
-## La Primera Via
+Dins del moviment DevOps es coneixen les Tres Vies com un recull de principis, patrons, valors i filosofies que guien els processos i pràctiques de DevOps. Les Tres Vies van ser introduïdes per Gene Kim, Kevin Behr i George Spafford al seu llibre "The Phoenix Project, A Novel About IT, DevOps, and Helping Your Business Win", i ràpidament es van constituir en un recull fonamental per a qualsevol organització que es plantegi abordar un projecte d'implantació de DevOps.  
+
+
+### La Primera Via
 
 ![La Primera Via](/images/bloc/201710/Dev-to-Ops-1-way.png)
 
@@ -60,7 +64,8 @@ La gestió visual fa que les tasques es facin més ràpidament per que:
 1) Reduint les tasques en vol per recurs disminueix dràsticament els canvis de context i les interrupcions, el que accelera el seu acompliment.
 Una bona eina de gestió visual és el Kanban. En el Kanban s'implementa el flux de treball (p.ex.: "backlog", "tasques preparades", "en curs", "fetes") i sobre ell es van reflectint totes les tasques en forma de targetes. No es fa cap tasca que no hi sigui al Kanban, el que promou que totes les tasques apareguin i es visualitzin, i per tant la seva priorització sigui més simple. Accelera i assegura la consecució de tasques, millorant els temps d'execució i podent predir quan es podrà tenir una tasca, sols pel fet de limitar les tasques en vol, reduir les interrupcions, i els temps d'espera.
 
-### Composició dels Fluxos de Treball
+
+#### Composició dels Fluxos de Treball
 
 Qualsevol flux de treball està composat per quatre parts: la màquina, l'home, el mètode i les mesures. Fer servir només les tres primeres no dona opció a la millora. Calen mesures per saber quines limitacions es troba el flux i poder establir punts de millora.
 Les mesures poden ser de dos tipus:
@@ -72,11 +77,13 @@ Els fluxos de treball poden ser diversos segons el tipus d'aplicació o fins i t
 
 Dins d'aquesta part es contempla el manteniment preventiu de les aplicacions, com la gestió de pegats de seguretat, incorporació de noves funcionalitats, i de l'obsolescència dels components. Els sistemes d'informació no són gaire diferents als vehicles, la prevenció allarga la seva vida útil i evita disrupcions en el servei que donen. 
 
-### Identificar els colls d'ampolla
+
+#### Identificar els colls d'ampolla
 
 Un altre punt a treballar en aquesta part és localitzar les limitacions que te el flux de treball. Cal identificar-les per a focalitzar sobre elles les millores al procés. Qualsevol millora feta després del coll d'ampolla, no te cap impacte sobre la productivitat. De la mateixa manera, qualsevol millora feta abans del coll d'ampolla enviarà més eficientment feina cap al coll d'ampolla, que tampoc serà capaç d'absorbir doncs ja està al seu límit de capacitat.
 
-## La Segona Via
+
+### La Segona Via
 
 ![La Segona Via](/images/bloc/201710/Dev-to-Ops-2-way.png)
 
@@ -88,7 +95,8 @@ Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels r
 
 ![Temps d'Espera](/images/bloc/201710/Wait-Time.png)
 
-## La Tercera Via
+
+### La Tercera Via
 
 ![La Tercera Via](/images/bloc/201710/Dev-to-Ops-3-way.png)
 
@@ -100,7 +108,8 @@ L'experimentació i l'assumpció de riscos ens permeten millorar contínuament e
 
 Les pràctiques necessàries en aquesta via, inclouen la creació d'una cultura d'innovació i presa de riscos (a diferència de la por a prendre decisions sense sentit), d'alta confiança (a diferència de la de baixa confiança, basada en comandament i control), assignant un percentatge del temps de cicle de Desenvolupament i Operacions cap a la millora dels requisits no funcionals, la reducció de deute tècnic, i un reforç constant en que es fomentin i celebrin les millores aconseguides.
 
-# Valor de Negoci obtingut adoptant pràctiques DevOps
+
+## Valor de Negoci obtingut adoptant pràctiques DevOps
 
 Si s'observen els resultats obtinguts per empreses que han adoptat pràctiques DevOps, destaquen els següents efectes:
 * Els desplegaments de noves versions de codi són més freqüents
@@ -109,7 +118,8 @@ Si s'observen els resultats obtinguts per empreses que han adoptat pràctiques D
 * El temps mig de recuperació d'un sistema és menor
 En comptes de parlar de setmanes o mesos per disposar d'un desplegament, es passa a parlar d'hores o minuts. Els desplegaments que acaben amb èxit són la norma i en cas que vagin malament, la resolució de la incidència és molt més ràpida. En comptes de parlar de desplegaments en cap de setmana amb tall de servei, es gaudeix de desplegaments sense tall en horari laboral. Aquesta és la potència observada a moltes organitzacions que ja tenen experiència en aquesta disciplina. Despleguen noves funcionalitats més ràpidament i obtenint ratis molt alts de fiabilitat, estabilitat i seguretat.
 
-# Referències:
+
+## Referències:
 
 John Allspaw i Paul Hammond "10+ Deploys Per Day: Dev and Ops Cooperation at Flickr":
 [https://www.youtube.com/watch?v=LdOe18KhtT4](https://www.youtube.com/watch?v=LdOe18KhtT4)
