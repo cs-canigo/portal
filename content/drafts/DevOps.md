@@ -26,9 +26,9 @@ L'escenari que tenien era l'habitual en moltes organitzacions que es basen en le
 En aquest escenari, els resultats sovint no són satisfactoris. Normalment el producte és inestable i amb mancances d'usabilitat. A partir d'aquí és Operacions qui fa mans i mànigues en mantenir l'aplicació amunt, aplicant la força bruta, posant més servidors dels que estaven previstos en les estimacions, i havent de fer reinicis sovint, per culpa d'un codi que no ha passat un mínim control de qualitat ni és operat adequadament per manca d'instruccions fiables. 
 
 El deute tècnic no és un concepte eteri i difícil d'observar. Es tota aquella feina no planificada que s'està obligat a tirar endavant per un mal desenvolupament i un desplegament inadequat. Malgrat aplicar rigor, disciplina, eficiències i processos, la feina no planificada passa per davant dels altres tipus de feina:
-1) Projectes de negoci. Iniciatives de negoci que es materialitzen en aplicacions fetes per Desenvolupament.
-1) Projectes interns d'Operacions. Generats per donar suport als projectes de negoci o per iniciatives de millora dins mateix del departament d'Operacions.
-1) Canvis, normalment generats pels dos tipus anteriors i tractats en un sistema de ticketing com Remedy.
+1. Projectes de negoci. Iniciatives de negoci que es materialitzen en aplicacions fetes per Desenvolupament.
+1. Projectes interns d'Operacions. Generats per donar suport als projectes de negoci o per iniciatives de millora dins mateix del departament d'Operacions.
+1. Canvis, normalment generats pels dos tipus anteriors i tractats en un sistema de ticketing com Remedy.
 
 La feina no planificada inclou incidents i problemes causats pels tipus anteriors i que sovint tenen una precedència superior donat els escalats que porten afegits, i que afecten a sistemes en producció. 
 Distorsiona qualsevol planificació ordenada de la feina d'Operacions i de Desenvolupament. Crema als equips, impedeix que l'organització avanci i mina la confiança que pot tenir el negoci sobre els departaments de Tecnologies de la Informació.
@@ -49,19 +49,19 @@ Dins del moviment DevOps es coneixen les Tres Vies com un recull de principis, p
 
 La Primera Via es concentra en crear un flux de treball ràpid per passar de desenvolupament (commit) a "corrent en producció satisfactòriament". Aquest temps és el que hi ha entre la idea de negoci i tenir-la disponible per al seu consum. Necessita d'un coneixement profund del sistema de negoci i del sistema d'informació que el suporta.
 Es basa en els següents principis fonamentals:
-1) Automatitzar els processos de construcció, integració i desplegament, via SIC
-1) Eliminar totes les tasques manuals en els desplegaments, excepte les proves exploratòries d'usuari.
-1) Crear pipelines de desplegament que s'adaptin als requeriments del negoci i a l'estructura interna de l'aplicació.
-1) Tractar la infraestructura com a codi, aconseguint un aprovisionament automàtic d'infraestructures, via els serveis de contenidors a cloud públic i privat: contenidors, balancejadors i dns.
-1) Tenir tot sota control de versions: codi, infraestructura, fitxers de configuració, scripts de desplegament i jocs de proves automàtiques.
-1) Reduir els temps de cicle per a que el volum i temps de resolució d'incidències es redueixin al mínim possible.
-1) Per fer sostenible el servei, potenciar l'autoservei de repositoris, usuaris, i pipelines. Aquest últim via plantilles o via un llenguatge específic de domini que pugui incorporar pipelines creades en entorns de desenvolupament.
-1) Disposar d'una gestió visual de les tasques. Recopilar tota la feina pendent, penjar-la en un taulell comú, prioritzar les tasques i abordar-les d'una en una. 
-1) Limitar el nombre de tasques en vol, per evitar la multitasca.
+1. Automatitzar els processos de construcció, integració i desplegament, via SIC
+1. Eliminar totes les tasques manuals en els desplegaments, excepte les proves exploratòries d'usuari.
+1. Crear pipelines de desplegament que s'adaptin als requeriments del negoci i a l'estructura interna de l'aplicació.
+1. Tractar la infraestructura com a codi, aconseguint un aprovisionament automàtic d'infraestructures, via els serveis de contenidors a cloud públic i privat: contenidors, balancejadors i dns.
+1. Tenir tot sota control de versions: codi, infraestructura, fitxers de configuració, scripts de desplegament i jocs de proves automàtiques.
+1. Reduir els temps de cicle per a que el volum i temps de resolució d'incidències es redueixin al mínim possible.
+1. Per fer sostenible el servei, potenciar l'autoservei de repositoris, usuaris, i pipelines. Aquest últim via plantilles o via un llenguatge específic de domini que pugui incorporar pipelines creades en entorns de desenvolupament.
+1. Disposar d'una gestió visual de les tasques. Recopilar tota la feina pendent, penjar-la en un taulell comú, prioritzar les tasques i abordar-les d'una en una. 
+1. Limitar el nombre de tasques en vol, per evitar la multitasca.
 
 La gestió visual fa que les tasques es facin més ràpidament per que:
-1) és més fàcil prioritzar per que totes les tasques estan inventariades i són visibles per tothom.
-1) Reduint les tasques en vol per recurs disminueix dràsticament els canvis de context i les interrupcions, el que accelera el seu acompliment.
+1. és més fàcil prioritzar per que totes les tasques estan inventariades i són visibles per tothom.
+1. Reduint les tasques en vol per recurs disminueix dràsticament els canvis de context i les interrupcions, el que accelera el seu acompliment.
 Una bona eina de gestió visual és el Kanban. En el Kanban s'implementa el flux de treball (p.ex.: "backlog", "tasques preparades", "en curs", "fetes") i sobre ell es van reflectint totes les tasques en forma de targetes. No es fa cap tasca que no hi sigui al Kanban, el que promou que totes les tasques apareguin i es visualitzin, i per tant la seva priorització sigui més simple. Accelera i assegura la consecució de tasques, millorant els temps d'execució i podent predir quan es podrà tenir una tasca, sols pel fet de limitar les tasques en vol, reduir les interrupcions, i els temps d'espera.
 
 
@@ -69,8 +69,8 @@ Una bona eina de gestió visual és el Kanban. En el Kanban s'implementa el flux
 
 Qualsevol flux de treball està composat per quatre parts: la màquina, l'home, el mètode i les mesures. Fer servir només les tres primeres no dona opció a la millora. Calen mesures per saber quines limitacions es troba el flux i poder establir punts de millora.
 Les mesures poden ser de dos tipus:
-* agregant informació de logs que proporcionen les màquines i components
-* afegint informació de telemetria a les aplicacions, per a donar indicacions del rendiment i volum de les peticions que gestionen
+- agregant informació de logs que proporcionen les màquines i components
+- afegint informació de telemetria a les aplicacions, per a donar indicacions del rendiment i volum de les peticions que gestionen
 Les mesures no només serveixen per a prendre accions reactives, sinó que s'ha d'establir un procés d'anàlisi preventiu del rendiment i així poder-lo resoldre abans que es converteixi en un foc que cal apagar fora d'horari laboral. Un exemple de CTTI és el seguiment del nombre de receptes electròniques que es realitzen: una desviació en la gràfica normal indica que alguna cosa està passant. Una correlació efectiva de diferents indicadors pot ajudar a prevenir problemes que s'esdevindran amb greus conseqüències.
 
 Els fluxos de treball poden ser diversos segons el tipus d'aplicació o fins i tot d'artefacte que es vulgui desplegar. No és el mateix el desplegament d'una llibreria, una aplicació o una sonda. Tots es poden tractar com a codi font i ser guardats en control de versions, però el flux de treball és particular a cada tipus.
@@ -101,8 +101,8 @@ Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels r
 ![La Tercera Via](/images/bloc/201710/Dev-to-Ops-3-way.png)
 
 La Tercera Via consisteix a crear una cultura que fomenti dues coses: 
-* l'experimentació contínua, que requereix assumir riscos i aprendre dels èxits i dels fracassos, i 
-* entendre que la repetició i la pràctica són prerequisits per al mestratge.
+- l'experimentació contínua, que requereix assumir riscos i aprendre dels èxits i dels fracassos, i 
+- entendre que la repetició i la pràctica són prerequisits per al mestratge.
 
 L'experimentació i l'assumpció de riscos ens permeten millorar contínuament el sistema de treball, que sovint ens exigeix fer coses de manera molt diferent de com s'ha fet durant dècades. I quan les coses van malament, la constant repetició i pràctica diària és el que permet assolir les habilitats i hàbits que permeten tornar a la zona de confort i reactivar les operacions normals.
 
@@ -112,10 +112,10 @@ Les pràctiques necessàries en aquesta via, inclouen la creació d'una cultura 
 ## Valor de Negoci obtingut adoptant pràctiques DevOps
 
 Si s'observen els resultats obtinguts per empreses que han adoptat pràctiques DevOps, destaquen els següents efectes:
-* Els desplegaments de noves versions de codi són més freqüents
-* El temps de lliurament de codi és més ràpid
-* El percentatge de canvis amb èxit és superior
-* El temps mig de recuperació d'un sistema és menor
+- Els desplegaments de noves versions de codi són més freqüents
+- El temps de lliurament de codi és més ràpid
+- El percentatge de canvis amb èxit és superior
+- El temps mig de recuperació d'un sistema és menor
 En comptes de parlar de setmanes o mesos per disposar d'un desplegament, es passa a parlar d'hores o minuts. Els desplegaments que acaben amb èxit són la norma i en cas que vagin malament, la resolució de la incidència és molt més ràpida. En comptes de parlar de desplegaments en cap de setmana amb tall de servei, es gaudeix de desplegaments sense tall en horari laboral. Aquesta és la potència observada a moltes organitzacions que ja tenen experiència en aquesta disciplina. Despleguen noves funcionalitats més ràpidament i obtenint ratis molt alts de fiabilitat, estabilitat i seguretat.
 
 
