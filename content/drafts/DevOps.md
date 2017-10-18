@@ -49,7 +49,7 @@ Dins del moviment DevOps es coneixen les Tres Vies com un recull de principis, p
 
 ### La Primera Via
 
-![La Primera Via](/images/bloc/201710/Dev-to-Ops-1-way.png)
+![La Primera Via](/images/bloc/201710/Dev-to-Ops-1-way-narrow.png)
 
 La Primera Via es concentra en crear un flux de treball ràpid per passar de desenvolupament (commit) a "corrent en producció satisfactòriament". Aquest temps és el que hi ha entre la idea de negoci i tenir-la disponible per al seu consum. Necessita d'un coneixement profund del sistema de negoci i del sistema d'informació que el suporta.
 
