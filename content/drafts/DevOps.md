@@ -47,7 +47,7 @@ Allspaw i Hammond van demostrar que aquesta espiral es podia trencar i obtenir r
 Dins del moviment DevOps es coneixen les Tres Vies com un recull de principis, patrons, valors i filosofies que guien els processos i pràctiques de DevOps. Les Tres Vies van ser introduïdes per Gene Kim, Kevin Behr i George Spafford al seu llibre "The Phoenix Project, A Novel About IT, DevOps, and Helping Your Business Win", i ràpidament es van constituir en un recull fonamental per a qualsevol organització que es plantegi abordar un projecte d'implantació de DevOps.  
 
 
-### La Primera Via
+## La Primera Via
 
 ![La Primera Via](/images/bloc/201710/Dev-to-Ops-1-way-narrow.png)
 
@@ -82,7 +82,7 @@ La gestió visual fa que les tasques es facin més ràpidament per que:
 Una bona eina de gestió visual és el Kanban. En el Kanban s'implementa el flux de treball (p.ex.: "backlog", "tasques preparades", "en curs", "fetes") i sobre ell es van reflectint totes les tasques en forma de targetes. No es fa cap tasca que no hi sigui al Kanban, el que promou que totes les tasques apareguin i es visualitzin, i per tant la seva priorització sigui més simple. Accelera i assegura la consecució de tasques, millorant els temps d'execució i podent predir quan es podrà tenir una tasca, sols pel fet de limitar les tasques en vol, reduir les interrupcions, i els temps d'espera.
 
 
-#### Composició dels Fluxos de Treball
+### Composició dels Fluxos de Treball
 
 Qualsevol flux de treball està composat per quatre parts: la màquina, l'home, el mètode i les mesures. Fer servir només les tres primeres no dona opció a la millora. Calen mesures per saber quines limitacions es troba el flux i poder establir punts de millora.
 
@@ -99,12 +99,12 @@ Els fluxos de treball poden ser diversos segons el tipus d'aplicació o fins i t
 Dins d'aquesta part es contempla el manteniment preventiu de les aplicacions, com la gestió de pegats de seguretat, incorporació de noves funcionalitats, i de l'obsolescència dels components. Els sistemes d'informació no són gaire diferents als vehicles, la prevenció allarga la seva vida útil i evita disrupcions en el servei que donen. 
 
 
-#### Identificar els colls d'ampolla
+### Identificar els colls d'ampolla
 
 Un altre punt a treballar en aquesta part és localitzar les limitacions que te el flux de treball. Cal identificar-les per a focalitzar sobre elles les millores al procés. Qualsevol millora feta després del coll d'ampolla, no te cap impacte sobre la productivitat. De la mateixa manera, qualsevol millora feta abans del coll d'ampolla enviarà més eficientment feina cap al coll d'ampolla, que tampoc serà capaç d'absorbir doncs ja està al seu límit de capacitat.
 
 
-### La Segona Via
+## La Segona Via
 
 ![La Segona Via](/images/bloc/201710/Dev-to-Ops-2-way.png)
 
@@ -117,7 +117,7 @@ Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels r
 ![Temps d'Espera](/images/bloc/201710/Wait-Time.png)
 
 
-### La Tercera Via
+## La Tercera Via
 
 ![La Tercera Via](/images/bloc/201710/Dev-to-Ops-3-way.png)
 
