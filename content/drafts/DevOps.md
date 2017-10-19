@@ -84,22 +84,9 @@ Una bona eina de gestió visual és el Kanban. En el Kanban s'implementa el flux
 
 ### Composició dels Fluxos de Treball
 
-Qualsevol flux de treball està composat per quatre parts: la màquina, l'home, el mètode i les mesures. Fer servir només les tres primeres no dona opció a la millora. Calen mesures per saber quines limitacions es troba el flux i poder establir punts de millora.
-
-Les mesures poden ser de dos tipus:
-
-- agregant informació de logs que proporcionen les màquines i components.
-
-- afegint informació de telemetria a les aplicacions, per a donar indicacions del rendiment i volum de les peticions que gestionen.
-
-Les mesures no només serveixen per a prendre accions reactives, sinó que s'ha d'establir un procés d'anàlisi preventiu del rendiment i així poder-lo resoldre abans que es converteixi en un foc que cal apagar fora d'horari laboral. Un exemple de CTTI és el seguiment del nombre de receptes electròniques que es realitzen: una desviació en la gràfica normal indica que alguna cosa està passant. Una correlació efectiva de diferents indicadors pot ajudar a prevenir problemes que s'esdevindran amb greus conseqüències.
-
 Els fluxos de treball poden ser diversos segons el tipus d'aplicació o fins i tot d'artefacte que es vulgui desplegar. No és el mateix el desplegament d'una llibreria, una aplicació o una sonda. Tots es poden tractar com a codi font i ser guardats en control de versions, però el flux de treball és particular a cada tipus.
 
 Dins d'aquesta part es contempla el manteniment preventiu de les aplicacions, com la gestió de pegats de seguretat, incorporació de noves funcionalitats, i de l'obsolescència dels components. Els sistemes d'informació no són gaire diferents als vehicles, la prevenció allarga la seva vida útil i evita disrupcions en el servei que donen. 
-
-
-### Identificar els colls d'ampolla
 
 Un altre punt a treballar en aquesta part és localitzar les limitacions que te el flux de treball. Cal identificar-les per a focalitzar sobre elles les millores al procés. Qualsevol millora feta després del coll d'ampolla, no te cap impacte sobre la productivitat. De la mateixa manera, qualsevol millora feta abans del coll d'ampolla enviarà més eficientment feina cap al coll d'ampolla, que tampoc serà capaç d'absorbir doncs ja està al seu límit de capacitat.
 
@@ -116,6 +103,16 @@ Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels r
 
 ![Temps d'Espera](/images/bloc/201710/Wait-Time.png)
 
+Qualsevol flux de treball està composat per quatre parts: la màquina, l'home, el mètode i les mesures. Fer servir només les tres primeres no dona opció a la millora. Calen mesures per saber quines limitacions es troba el flux i poder establir punts de millora.
+
+Les mesures poden ser de dos tipus:
+
+- agregant informació de logs que proporcionen les màquines i components.
+
+- afegint informació de telemetria a les aplicacions, per a donar indicacions del rendiment i volum de les peticions que gestionen.
+
+Les mesures no només serveixen per a prendre accions reactives, sinó que s'ha d'establir un procés d'anàlisi preventiu del rendiment i així poder-lo resoldre abans que es converteixi en un foc que cal apagar fora d'horari laboral. Un exemple de CTTI és el seguiment del nombre de receptes electròniques que es realitzen: una desviació en la gràfica normal indica que alguna cosa està passant. Una correlació efectiva de diferents indicadors pot ajudar a prevenir problemes que s'esdevindran amb greus conseqüències.
+
 
 ## La Tercera Via
 
@@ -127,7 +124,7 @@ La Tercera Via consisteix a crear una cultura que fomenti dues coses:
 
 - entendre que la repetició i la pràctica són prerequisits per al mestratge.
 
-L'experimentació i l'assumpció de riscos ens permeten millorar contínuament el sistema de treball, que sovint ens exigeix fer coses de manera molt diferent de com s'ha fet durant dècades. I quan les coses van malament, la constant repetició i pràctica diària és el que permet assolir les habilitats i hàbits que permeten tornar a la zona de confort i reactivar les operacions normals.
+L'experimentació i l'assumpció de riscos permeten millorar contínuament el sistema de treball, que sovint exigeix fer coses de manera molt diferent de com s'ha fet durant dècades. I quan les coses van malament, la constant repetició i pràctica diària és el que permet assolir les habilitats i hàbits que permeten tornar a la zona de confort i reactivar les operacions normals.
 
 Les pràctiques necessàries en aquesta via, inclouen la creació d'una cultura d'innovació i presa de riscos (a diferència de la por a prendre decisions sense sentit), d'alta confiança (a diferència de la de baixa confiança, basada en comandament i control), assignant un percentatge del temps de cicle de Desenvolupament i Operacions cap a la millora dels requisits no funcionals, la reducció de deute tècnic, i un reforç constant en que es fomentin i celebrin les millores aconseguides.
 
