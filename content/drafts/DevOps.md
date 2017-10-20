@@ -95,11 +95,11 @@ Un altre punt a treballar en aquesta part és localitzar les limitacions que te 
 
 ![La Segona Via](/images/bloc/201710/Dev-to-Ops-2-way.png)
 
-La Segona Via tracta de tenir un flux constant de feedback ràpid sobre el funcionament de l'aplicació. Llavors es poden resoldre problemes de qualitat ja en el moment de pujar una nova versió i així estalviar retreball en moments més avançats del projecte. Es busca que el sistema reporti errors el més aviat possible per a que la seva resolució sigui també molt més ràpida i menys costosa. El feedback ha d'arribar no només a Desenvolupament, sinó també a la definició de les aplicacions-productes i al disseny d'aquestes.
+La Segona Via tracta de tenir un flux constant de feedback ràpid sobre el funcionament de l'aplicació. Llavors es poden resoldre problemes de qualitat ja en el moment de pujar una nova versió i així estalviar retreball en moments més avançats del projecte. Es busca que el sistema reporti errors el més aviat possible per a que la seva resolució sigui també molt més ràpida i menys costosa. El feedback ha d'arribar no només a Desenvolupament, sinó també a la definició de les aplicacions-productes, al disseny d'aquestes i a la seva arquitectura.
 
 Per això s'incorporen al flux de desplegament tota una sèrie de proves automàtiques i validacions de qualitat i seguretat. Quan alguna d'aquestes validacions falla, el flux s'atura i cal corregir els errors i tornar a iniciar el flux de desplegament. També s'afegeixen al codi font mecanismes de telemetria i avaluació continua del rendiment, per poder assegurar en tot moment que l'aplicació està funcionant com s'ha dissenyat i com esperen els seus promotors i usuaris.
 
-Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels recursos, tant humans com materials. Tant important és accelerar l'alliberament de tasques com gestionar els temps d'espera entre tasques. El temps d'espera d'un recurs és el percentatge en que està ocupat, dividit pel temps en què està lliure. Per exemple, si un recurs està ocupat al 50%, el temps d'espera és 50/50, o una unitat de temps. Si el recurs està ocupat al 90%, el temps d'espera és 90/10, és a dir, 9 vegades més gran. Explicita que malgrat una tasca tingui una durada prevista de 30', aquesta pot trigar setmanes a completar-se segons la quantitat de colls d'ampolla que ha de travessar.
+Una altra part crítica d'aquesta via és fer visibles els temps d'espera dels recursos, tant humans com materials. Tant important és accelerar l'alliberament de tasques com gestionar els temps d'espera entre tasques. El temps d'espera d'un recurs és el percentatge en que està ocupat, dividit pel temps en què està lliure. Per exemple, si un recurs està ocupat al 50%, el temps d'espera és 50 / 50, o una unitat de temps. Si el recurs està ocupat al 90%, el temps d'espera és 90 / 10, és a dir, 9 vegades més gran. Explicita que malgrat una tasca tingui una durada prevista de 30', aquesta pot trigar setmanes a completar-se segons la quantitat de recursos saturats que ha d'utilitzar.
 
 ![Temps d'Espera](/images/bloc/201710/Wait-Time.png)
 
@@ -124,9 +124,17 @@ La Tercera Via consisteix a crear una cultura que fomenti dues coses:
 
 - entendre que la repetició i la pràctica són prerequisits per al mestratge.
 
-L'experimentació i l'assumpció de riscos permeten millorar contínuament el sistema de treball, que sovint exigeix fer coses de manera molt diferent de com s'ha fet durant dècades. I quan les coses van malament, la constant repetició i pràctica diària és el que permet assolir les habilitats i hàbits que permeten tornar a la zona de confort i reactivar les operacions normals.
+L'experimentació i l'assumpció de riscos permeten millorar contínuament el sistema de treball, que sovint exigeix fer coses de manera molt diferent de com s'ha fet durant dècades. I si les coses van mal dades, la constant repetició i pràctica diària és el que permet assolir les habilitats i hàbits que permeten tornar a la zona de confort i reactivar les operacions normals, en un temps cada cop menor.
 
-Les pràctiques necessàries en aquesta via, inclouen la creació d'una cultura d'innovació i presa de riscos (a diferència de la por a prendre decisions sense sentit), d'alta confiança (a diferència de la de baixa confiança, basada en comandament i control), assignant un percentatge del temps de cicle de Desenvolupament i Operacions cap a la millora dels requisits no funcionals, la reducció de deute tècnic, i un reforç constant en que es fomentin i celebrin les millores aconseguides.
+Les pràctiques necessàries en aquesta via, inclouen:
+
+- la creació d'una cultura d'innovació i presa de riscos (a diferència de la por a prendre decisions),
+
+- d'alta confiança (a diferència de la de baixa confiança, basada en comandament i control), 
+
+- assignant un percentatge del temps de cicle de Desenvolupament i Operacions cap a la millora dels requisits no funcionals i la reducció de deute tècnic,
+
+- i un reforç constant en que es fomentin i celebrin les millores aconseguides.
 
 
 ## Valor de Negoci obtingut adoptant pràctiques DevOps
