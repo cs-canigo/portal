@@ -73,7 +73,6 @@ Altra informació d'interés:
 
 * [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 * [Codi plantilla demo Canigó 3.2] (https://github.com/gencatcloud/plantilla-demo-canigo32)
-* [Plantilla demo Canigó 3.2 desplegada a Bluemix] (http://134.168.52.226:8080/canigo-api.html) (credencials per autenticació: username -> admin, password -> password)
 
 ## Canigó 2.3.22
 
