@@ -54,11 +54,19 @@ L'aplicació inicial que es crea amb el plugin inclou d'inici:
 * mòdul de persistència (Base de dades a memòria H2)
 * mòdul d'administració de logs
 
-Per a desplegar l'aplicació només s'ha de compilar i arrencar l'aplicació utilitzant Spring Boot.
+Per a desplegar l'aplicació només s'ha de compilar "mvn install" i arrencar l'aplicació utilitzant Spring Boot.
 
 ![](/related/canigo/documentacio/plugin-canigo/img11.jpg)
 
-L'aplicació demo porta incorporat Swagger i és aquesta la pantalla que es carrega quan s'accedeix a localhost:8080
+L'aplicació demo porta incorporat Swagger i és aquesta la pantalla que es carrega quan s'accedeix a http://localhost:8080/canigo-api.html
+
+Per defecte, les APIs REST es publiquen a http://localhost:8080/api/*:
+
+Exemples:
+
+* http://localhost:8080/api/equipaments/
+* http://localhost:8080/api/equipaments/1
+
 
 ## Afegir/Esborrar nous mòduls
 
