@@ -41,10 +41,10 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 
 ### Programari instal·lat
 
-* IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 7 (Oracle) i els següents plugins:
+* IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 8 (Oracle) i els següents plugins:
 
 	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
-	- CTTI Canigó per creació aplicacions Canigó 3.1 basades en arquitectura REST+HTML5/JS o JSF
+	- [CTTI Canigó|http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/] per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
 	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
 	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
@@ -54,51 +54,6 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	- Engine Docker i Docker Compose Tool per l'execució de contenidors Docker
 	- Navegador Google Chrome
 	- Client VPNC per accés a XCAT
-
-### Demo Equipaments
-
-Des del CS Canigó es proporciona un exemple d'aplicació Canigó 3 per ser desplegada en contenidors Docker. El stack és el següent:
-
-* MySQL 5.7: [gencatcloud/mysql:5.7](https://hub.docker.com/r/gencatcloud/mysql/)
-
-* Tomcat 7 + Oracle JDK 7: [gencatcloud/tomcat:7](https://hub.docker.com/r/gencatcloud/tomcat/)
-
-* Apache 2.4: [gencatcloud/httpd:2.4] (https://hub.docker.com/r/gencatcloud/httpd/)
-
-A continuació es descriuen les passes a seguir per la instal·lació i execució de l'aplicació demo Equipaments:
-
-* Configurar al fitxer /etc/hosts la següent entrada:
-
-		127.0.0.1	demos.canigo.ctti.gencat.cat
-
-* Des de l'Eclipse descarregar el projecte demo "equipaments":
-
-	File -> Import -> Projects from Git -> Clone URI https://github.com/gencat/equipaments.git (introduïr unes credencials vàlides de Github) -> Sel·lecccionar branch "master" -> Sel·leccionar directori "/home/canigo/Documents/workspace-sts-3.7.1.RELEASE" com a Destinations -> Sel·leccionar l'opció "Import Existing Eclipse projects" -> Finish
-
-* Construïr l'aplicació:
-
-	Run as... -> Maven build -> Configurar Base Directory "${workspace_loc:/equipaments}", Goals "clean package"-> Executar
-
-* Adaptar els paths "home/canigo/..." del fitxer "``<workspace_eclipse>``/``<demo_equipaments>/``src/main/docker/stacks/dev/apache-tomcat-mysql/docker-compose.yml" als paths locals en cas de no haver fer servit els noms per defecte:
-
-	- ``<workspace_eclipse>``=/home/canigo/Documents/workspace-sts-3.7.1.RELEASE
-	- ``<demo_equipaments>``=equipaments
-
-* Executar la demo des de linia de comandes:
-
-		$ cd <workspace_eclipse>/<demo_equipaments>/src/main/docker/stacks/dev/apache-tomcat-mysql/
-		$ docker-compose up
-
-	O bé des d'Eclipse:
-
-	Run -> External tools -> External Tools Configurations... -> Program - New launch configuration -> Name "equipaments" -> Location: "/usr/local/bin/docker-compose", Working Directory: "${workspace_loc:/``<demo_equipaments>``/src/main/docker/stacks/dev/apache-tomcat-mysql}", Arguments: "up" -> Executar
-
-* Accedir amb el Chrome a la URL http://demos.canigo.ctti.gencat.cat/demo-equipaments
-
-* La forma més fàcil d'eliminar els contenidors en execució, i per tant aturar l'aplicació, és executar la següent comanda:
-
-		$ docker rm -f $(docker ps -qa)
-
 
 ### Oracle VirtualBox
 
