@@ -21,7 +21,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/1.0.3.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/1.0.4.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
