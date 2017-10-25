@@ -44,7 +44,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 * IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 8 (Oracle) i els següents plugins:
 
 	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
-	- [CTTI Canigó|http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/] per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
+	- [CTTI Canigó](http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
 	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
 	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
