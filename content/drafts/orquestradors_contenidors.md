@@ -12,6 +12,7 @@ En un entorn productiu, el desplegament utilitzant contenidors, moltes vegades n
 Aquests recursos són oferts pels orquestradors.
 Al mercar existeixen diferents eines per orquestrar els contenidors docker.
 La Generalitat de Catalunya dóna suport als següents orquestradors:
+
 * AppAgile (basat en Openshift)
 * Kubernetes
 * SwarmMe (basat en Swarm)
@@ -44,6 +45,7 @@ Els contenidors de docker s'exposen com a serveis a través de paràmetres a la 
 
 ### Enrutament
 Addicionalment al balanceig, és necessari disposar d'un element enrutador que permeti:
+
 * Configurar certificats SSL
 * Enrutar el transit entre diferents xarxes per oferir per exemple serveis només intranet o internet
 
@@ -94,13 +96,13 @@ Està basat en Swarm.
 Swarm és l'orquestrador oficial de docker. Actualment és el menys evolucionat dels tres.
 SwarmMe complementa alguna de les mancances que Swarm presenta (Registre, Sistema centralitzat de logs, eines de desplegament, ...)
 
-Per més informació podeu consultar https://docs.docker.com/engine/swarm/ .
+Per més informació podeu consultar https://docs.docker.com/engine/swarm/
 
 ### Kubernetes
 Va ser creat per Google.
 Actualment està evolucionant molt.
 Recentment ha rebut el suport oficial de docker.
-Per més informació podeu consultar la web https://kubernetes.io/ .
+Per més informació podeu consultar la web https://kubernetes.io/
 
 ### AppAgile
 AppAgile està basat en Openshift Container Platform.
@@ -108,9 +110,9 @@ Desenvolupat per Red Hat, basat en Kubernetes.
 Afegeix funcionalitat addicional a Kubernetes (gestió d'usuaris, segmentació de xarxa, sistema centralitzat de logs).
 Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'uns tres o quatre mesos.
 
-Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/drafts/contenidors_appagile/.
+Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/drafts/contenidors_appagile/
 
-Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.4/ .
+Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.4/
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.
