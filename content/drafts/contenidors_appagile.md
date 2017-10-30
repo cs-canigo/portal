@@ -9,10 +9,12 @@ categories    = ["cloud","docker","container","paas","openshift","appagile"]
 
 ## Introducció
 AppAgile és un orquestrador d'imatges docker basat en Openshift que addicionalment està basat en Kubernetes. La versió actual d'AppAgile es basa concretament en la versió OpenShift Container Platform 3.4.1.12 i Kubernetes 1.4.0.
+
 En aquest article es defineix l'arquitectura tipus d'una aplicació a AppAgile i es proporcionen diversos exemples.
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
+
 A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud/dockerImages/) podeu trobar més informació al respecte. 
 
 ## Arquitectura
@@ -25,7 +27,7 @@ A grans trets es poden distingir els següents components:
 * **Servei:** És l'element de configuració que permet exposar un servei basat en contenidors dins de la plataforma Openshift. Permet mapping de ports
 * **Desplegament:** És l'element de configuració que defineix com es desplegaran els contenidors:
 
-    * Nombre de répliques
+    * Nombre de rèpliques
     * Imatge a desplegar
     * Polítiques de recàrrega
     * Quotes
@@ -41,7 +43,7 @@ A grans trets es poden distingir els següents components:
 * **Petició d'emmagatzematge:** S'utilitza quan és necessari emmagatzematge persistent. És l'element de configuració que actua de pont entre el emmagatzematge físic i l'emmagatzematge lògic.
 * **Emmagatzematge:** És l'element de configuració responsable de definir l'emmagatzematge físic.
 * **Secret:** És l'element de configuració responsable de gestionar els elements de configuració amb informació sensible, com poden ser contrasenyes.
-* **Mapa de configuració:** Permet agrupar multiples variables de configuració. Seria equivalent a un fitxer de propietats en una aplicació.
+* **Mapa de configuració:** Permet agrupar múltiples variables de configuració. Seria equivalent a un fitxer de propietats en una aplicació.
 
 ### Arquitectura AppAgile
 A continuació es realitza la correlació entre els diferents components arquitectònics i els elements concrets a AppAgile i Openshift.
@@ -65,13 +67,13 @@ A continuació es realitza la correlació entre els diferents components arquite
 ## Informació necessària al crear l'aplicació
 Quan és sol·licita la creació d'una aplicació a AppAgile és necessària la següent informació:
 
-* **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als reponsables de l'aplicació el nom d'aquests Volums.
+* **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als responsables de l'aplicació el nom d'aquests Volums.
 * **Memòria RAM** total necessaria per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
 ## Exemples
 ### PersistentVolumeClaim
 En una aplicació el primer element que cal configurar és el PersistentVolumeClaim. Mapejarà PersistentVolume amb el volumes lògics que s'utilitzaran als pods.
-A 
-tenint present que el PersistentVolume s'anomena per exemple **XXXX-app1-data01-pre**
+
+Tenint present que el PersistentVolume s'anomena per exemple **XXXX-app1-data01-pre** el fitxer yaml seria:
 
 ```
 apiVersion: v1
@@ -92,14 +94,15 @@ items:
 
 ### DeploymentConfig
 El DeploymentConfig és el principal element de configuració de l'aplicació.
+
 Configuració de l'exemple:
 
 * Nom del projecte: **XXXX-app1-pre**
 * Nom de l'aplicació: **XXXX-app1-server**
 * Nom del deploymentConfig: **XXXX-app1-server-deployment**
-* Nombre de repliques: **2**
+* Nombre de rèpliques: **2**
 * **El pod conté un únic contenidor**.
-* Estràtègia de desplegament: **Rolling**. No es recomana modificar, ni variar els seus paràmetres.
+* Estratègia de desplegament: **Rolling**. No es recomana modificar, ni variar els seus paràmetres.
 * Quotes: **100 milicores de CPU** i **1024Mb de RAM**
 * Nom de la imatge dels contenidors: **XXXX-app1-pre/XXXX-app1-server:1.0.0**
 * Variables d'entorn dels contenidors:
@@ -195,7 +198,8 @@ items:
 ```
 
 ### Service
-A l'exemple es crea un servei per el DeploymentConfig creat anteriorment
+A l'exemple es crea un servei per el DeploymentConfig creat anteriorment.
+
 Configuració de l'exemple:
 
 * Port exposat per servei: **80**
@@ -223,7 +227,8 @@ items:
 ```
 
 ### Route
-A l'exemple es crea una ruta pel servei creat anteriorment
+A l'exemple es crea una ruta pel servei creat anteriorment.
+
 Configuració de l'exemple:
 
 * host: **app1-server.gencat.cat**
