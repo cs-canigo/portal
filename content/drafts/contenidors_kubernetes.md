@@ -1,16 +1,20 @@
 +++
 date          = "2017-11-02"
-title         = "AppAgile"
-description   = "Consideracions i exemples respecte AppAgile"
+title         = "Kubernetes"
+description   = "Consideracions i exemples respecte Kubernetes"
 sections      = "Container Cloud"
 weight        = 7
-categories    = ["cloud","docker","container","paas","openshift","appagile"]
+categories    = ["cloud","docker","container","paas","kubernetes"]
 +++
 
 ## Introducció
-AppAgile és un orquestrador d'imatges docker basat en Openshift que addicionalment està basat en Kubernetes. La versió actual d'AppAgile es basa concretament en la versió OpenShift Container Platform 3.4.1.12 i Kubernetes 1.4.0.
+Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que actualment és l'orquestrador que presenta més futur. Recentment ha re but el suport oficial de Docker.
 
-En aquest article es defineix l'arquitectura tipus d'una aplicació a AppAgile i es proporcionen diversos exemples.
+En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes i es proporcionen diversos exemples.
+
+A la Generalitat de Catalunya, actualment, Kubernetes està disponible a la plataforma d'IBM Bluemix. 
+
+La versió de Kubernetes disponible és la  **1.7.4_1503**.
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
@@ -51,10 +55,10 @@ A continuació es realitza la correlació entre els diferents components arquite
   Component genèric |  Component AppAgile | Observacions  |
 |:-----------------|:---------|:-----------|
 | Enrutador  |  Router | És gestionat per l'administrador de la plataforma. A nivell d'aplicació no és necessari configurar res.|
-| Ruta  |  Route | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
+| Ruta  |  Ingress | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
 | Servei  |  Service | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
-| Desplegament  |  DeploymentConfig | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
-| Controlador  |  ReplicationController | És generat directament pel DeploymentConfig. No és necessari configurar res.|
+| Desplegament  |  Deployment | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
+| Controlador  |  ReplicaSet | És generat directament pel Deployment. No és necessari configurar res.|
 | Pod  |  Pod | És generat directament pel ReplicationController. No és necessari configurar res.|
 | Contenidor  |  Container | És generat directament pel Pod. No és necessari configurar res.|
 | Petició d'emmagatzematge  |  PersistentVolumeClaim | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
@@ -62,10 +66,10 @@ A continuació es realitza la correlació entre els diferents components arquite
 | Secret  | Secret | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
 | Mapa de configuració  | ConfigMap | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
 
-![Components Openshift](/related/cloud/ArquitecturaOpenshift.png)
+![Components Kubernetes](/related/cloud/ArquitecturaKubernetes.png)
 
 ## Informació necessària al crear l'aplicació
-Quan és sol·licita la creació d'una aplicació a AppAgile és necessària la següent informació:
+Quan és sol·licita la creació d'una aplicació a Kubernetes és necessària la següent informació:
 
 * **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als responsables de l'aplicació el nom d'aquests Volums.
 * **Memòria RAM** total necessaria per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
@@ -73,36 +77,37 @@ Quan és sol·licita la creació d'una aplicació a AppAgile és necessària la 
 ### PersistentVolumeClaim
 En una aplicació el primer element que cal configurar és el PersistentVolumeClaim. Mapejarà PersistentVolume amb el volumes lògics que s'utilitzaran als pods.
 
-Tenint present que el PersistentVolume s'anomena per exemple **XXXX-app1-data01-pre** el fitxer yaml seria:
+Configuració de l'exemple:
+
+* Namespace del projecte: **XXXX-app1-data01-pre**
+* Nom del volum lògic: **XXXX-app1-data01-claim**
+* Mida del disc: **20Gb**
 
 ```
 apiVersion: v1
-kind: List
-items:
-- apiVersion: v1
-  kind: PersistentVolumeClaim
-  metadata:
-    name: XXXX-app1-data01-claim
-  spec:
-    accessModes:
-      - ReadWriteOnce
-    resources:
-      requests:
-        storage: 1Gi
-    volumeName: XXXX-app1-data01-pre
+kind: PersistentVolumeClaim
+metadata:
+  name: XXXX-app1-data01-claim
+  namespace: XXXX-app1-pre
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 20Gi
 ```
 
-### DeploymentConfig
-El DeploymentConfig és el principal element de configuració de l'aplicació.
+### Deployment
+El Deployment és el principal element de configuració de l'aplicació.
 
 Configuració de l'exemple:
 
-* Nom del projecte: **XXXX-app1-pre**
+* Namespace del projecte: **XXXX-app1-data01-pre**
 * Nom de l'aplicació: **XXXX-app1-server**
-* Nom del deploymentConfig: **XXXX-app1-server-deployment**
+* Nom del deployment: **XXXX-app1-server-deployment**
 * Nombre de rèpliques: **2**
 * **El pod conté un únic contenidor**.
-* Estratègia de desplegament: **Rolling**. No es recomana modificar, ni variar els seus paràmetres.
+* Estratègia de desplegament: **RollingUpdate**. No es recomana modificar, ni variar els seus paràmetres.
 * Quotes: **100 milicores de CPU** i **1024Mb de RAM**
 * Nom de la imatge dels contenidors: **XXXX-app1-pre/XXXX-app1-server:1.0.0**
 * Variables d'entorn dels contenidors:
@@ -113,99 +118,90 @@ Configuració de l'exemple:
 * **readinessProbe** per validar que el servidor està inicialitzat.
 * **livenessProbe** per validar que el servidor proporciona servei.
 * Volum persistit: dins del contenidor es monta a **/data**. Fà referència al PersistentVolumeClaim anomenat **XXXX-app1-data01-claim** (creat a l'exemple anterior)
+* Nom del defaultToken: **default-token-rwj8z**
 
 ```
-apiVersion: v1
-kind: List
-items:
-- apiVersion: v1
-  kind: DeploymentConfig
-  metadata:
-    labels:
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: XXXX-app1-server-deployment
+  namespace: XXXX-app1-data01-pre
+  labels:
+    app: XXXX-app1-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
       app: XXXX-app1-server
-    name: XXXX-app1-server-deployment
-  spec:
-    replicas: 2
-    selector:
-      app: XXXX-app1-server
-      deploymentconfig: XXXX-app1-server-deployment
-    strategy:
-      type: Rolling
-      rollingParams:
-        updatePeriodSeconds: 1
-        intervalSeconds: 1
-        timeoutSeconds: 600
-        maxUnavailable: 25%
-        maxSurge: 25%    
-      resources:
-        limits:
-            cpu: 0
-            memory: 0
-        requests:
-            cpu: 0
-            memory: 0
-    template:
-      metadata:
-        labels:
-          app: XXXX-app1-server
-          deploymentconfig: XXXX-app1-server-deployment
-      spec:
-        containers:
-        - image: XXXX-app1-pre/XXXX-app1-server:1.0.0
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  minReadySeconds: 0
+  revisionHistoryLimit: 3       
+  template:
+    metadata:
+      labels:
+        app: XXXX-app1-server
+    spec:
+      containers:
+      - name: XXXX-app1-server
+        image: XXXX-app1-pre/XXXX-app1-server:1.0.0
+        resources:
+          limits:
+            cpu: 100m
+            memory: 1024Mi
+          requests:
+            cpu: 100m
+            memory: 1024Mi
+        imagePullPolicy: Always
+        env:
+        - name: ENV1_NAME
+          value: env1_value                       
+        - name: ENV2_NAME
+          value: env2_value                       
+        ports:
+        - containerPort: 8080
+        readinessProbe:
+          tcpSocket:
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+            httpHeaders:
+            - name: X-Custom-Header
+              value: Awesome
+          initialDelaySeconds: 3
+          periodSeconds: 3      
+        volumeMounts:
+        - mountPath: /data
           name: XXXX-app1-server
-          env:
-          - name: ENV1_NAME
-            value: env1_value
-          - name: ENV2_NAME
-            value: env2_value            
-          ports:
-          - containerPort: 8080
-            protocol: TCP
-          resources:
-            limits:
-                cpu: 100m
-                memory: 1024Mi
-            requests:
-                cpu: 100m
-                memory: 1024Mi
-          readinessProbe:
-            httpGet:
-                path: /healthz
-                port: 8080
-            initialDelaySeconds: 15
-            timeoutSeconds: 1
-          livenessProbe:
-            tcpSocket:
-                port: 8080
-            initialDelaySeconds: 15
-            timeoutSeconds: 1                                              
-          volumeMounts:
-              - name: XXXX-app1-server-volume
-                mountPath: /data
-        terminationGracePeriodSeconds: 60                
-        volumes:
-          - name: XXXX-app1-server-volume
-            persistentVolumeClaim:
-              claimName: XXXX-app1-data01-claim           
-    test: false
-    triggers:
-    - type: ConfigChange
-    - imageChangeParams:
-        automatic: true
-        containerNames:
-        - XXXX-app1-server
-        from:
-          kind: ImageStreamTag
-          name: XXXX-app1-server:1.0.0
-          namespace: XXXX-app1-pre
-      type: ImageChange
+        - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+          name: default-token-rwj8z
+          readOnly: true           
+      imagePullSecrets:
+        - name: uk-docker-registry-secret      
+      volumes:
+      - name: *XXXX-app1-server
+        persistentVolumeClaim:
+          claimName: XXXX-app1-data01-claim
+      - name: default-token-rwj8z
+        secret:
+          defaultMode: 420
+          secretName: default-token-rwj8z
 ```
 
 ### Service
 A l'exemple es crea un servei per el DeploymentConfig creat anteriorment.
 
-AppAgile només suporta serveis amb protocol HTTP/HTTPS, no suporta altres protocols, com per exemple SSH, JDBC, ...
+Kubernetes suporta tant serveis amb protocol HTTP/HTTPS com  serveis amb altres tipus de protocols, com per exemple SSH, JDBC, ...
 
+#### Servei HTTP
+L'aplicació exposa un servei HTTP a través de la IP de l'Ingress.
 Configuració de l'exemple:
 
 * Port exposat per servei: **80**
@@ -213,26 +209,52 @@ Configuració de l'exemple:
 
 ```
 apiVersion: v1
-kind: List
-items:
-- apiVersion: v1
-  kind: Service
-  metadata:
-    labels:
-      app: XXXX-app1-server
+kind: Service
+metadata:
+  name: XXXX-app1-server
+  namespace: XXXX-app1-data01-pre
+  labels:
     name: XXXX-app1-server
-  spec:
-    ports:
-    - name: 80-tcp
-      port: 80
-      protocol: TCP
-      targetPort: 8080
-    selector:
-      app: XXXX-app1-server
-      deploymentconfig:  XXXX-app1-server-deployment
+spec:
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: NodePort    
+  selector:
+    app: XXXX-app1-server
+
 ```
 
-### Route
+#### Servei No HTTP
+L'aplicació exposa un servei no HTTP a través d'una IP pròpia.
+Configuració de l'exemple:
+
+* Port exposat per servei: **3030**
+* Port intern dels pods: **3731**
+* IP on s'exposa el servei: **169.45.10.144**
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    name: XXXX-app1-server
+  name: XXXX-app1-data01-pre
+  namespace:  XXXX-app1-server
+spec:
+  ports:
+  - protocol: TCP
+    port: 3030
+    targetPort: 3731
+  selector:
+    app: XXXX-app1-server
+  type: XXXX-app1-server
+  loadBalancerIP: 169.45.10.144
+```
+
+
+### Ingress
 A l'exemple es crea una ruta pel servei creat anteriorment.
 
 Configuració de l'exemple:
@@ -240,26 +262,23 @@ Configuració de l'exemple:
 * host: **app1-server.gencat.cat**
 
 ```
-apiVersion: v1
-kind: Route
+apiVersion: extensions/v1beta1
+kind: Ingress
 metadata:
   name: app1-route
   namespace: XXXX-app1-pre
-  labels:
-    app: app1-server
 spec:
-  host: app1-server.gencat.cat
-  to:
-    kind: Service
-    name:  XXXX-app1-server
-    weight: 100
-  port:
-    targetPort: 80-tcp
-  wildcardPolicy: None
+  rules:
+  - host: app1-server.gencat.cat
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: XXXX-app1-server
+          servicePort: 80   
 ```
 
 
 ## Informació relacionada
 
-* http://appagile.io/
-* https://docs.openshift.com/container-platform/3.4/
+* https://v1-7.docs.kubernetes.io/docs/home/
