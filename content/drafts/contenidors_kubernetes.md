@@ -49,10 +49,10 @@ A grans trets es poden distingir els següents components:
 * **Secret:** És l'element de configuració responsable de gestionar els elements de configuració amb informació sensible, com poden ser contrasenyes.
 * **Mapa de configuració:** Permet agrupar múltiples variables de configuració. Seria equivalent a un fitxer de propietats en una aplicació.
 
-### Arquitectura AppAgile
-A continuació es realitza la correlació entre els diferents components arquitectònics i els elements concrets a AppAgile i Openshift.
+### Arquitectura Kubernetes
+A continuació es realitza la correlació entre els diferents components arquitectònics i els elements concrets a Kubernetes.
 
-  Component genèric |  Component AppAgile | Observacions  |
+  Component genèric |  Component Kubernetes | Observacions  |
 |:-----------------|:---------|:-----------|
 | Enrutador  |  Router | És gestionat per l'administrador de la plataforma. A nivell d'aplicació no és necessari configurar res.|
 | Ruta  |  Ingress | A nivell d'aplicació cal definir un fitxer yaml de configuració.|
