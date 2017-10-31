@@ -8,7 +8,7 @@ categories    = ["cloud","docker","container","paas","kubernetes"]
 +++
 
 ## Introducció
-Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que actualment és l'orquestrador que presenta més futur. Recentment ha re but el suport oficial de Docker.
+Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que actualment és l'orquestrador que presenta més futur. Recentment ha rebut el suport oficial de Docker.
 
 En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes i es proporcionen diversos exemples.
 
