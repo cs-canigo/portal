@@ -1,7 +1,18 @@
+# Definició de la màquina mínima per executar node amb versió LTS
+# This image does not contain the common packages contained in the default tag and only contains the minimal packages needed to 
+# run node. Unless you are working in an environment where only the Node.js image will be deployed and you have space 
+# constraints, we highly recommend using the default image of this repository.
 box: node:8-slim
 build:
   steps:
+# This step will download the specified version of Hugo and run this over the source code to generate the static version of 
+# your site. This can then automatically be deployed using other steps.
+# Since version 1.9.0, the step has the latest two versions of Hugo already installed thereby skipping the download part of 
+# the step.
     - arjen/hugo-build@1.21.1:
+# Specifies the version of Hugo to be used, by default this is "0.30.2". It is recommended to set this, so you don't 
+# accidentally build you site with a version it isn't ready for. Due to Wercker not being able to properly handle 0.x version
+# numbers, you will need to put quotes around the version number.
         version: "0.27.1"
 deploy:
   steps:
@@ -16,6 +27,7 @@ deploy:
           npm install algoliasearch
           npm install request
           node index-algolia.js
+    # A wercker step to deploy to Github Pages.
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
         domain: canigo.ctti.gencat.cat
