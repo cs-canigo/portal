@@ -17,8 +17,8 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 * En cas que no existeixin imatges homologades pel CTTI de la tecnologia requerida, a l'hora d'escollir les imatges de base es faran servir els següents criteris:
 	* Imatge oficial de fabricant al [docker hub](https://hub.docker.com/).
 	* En cas que existeixi una imatge oficial basada en **[Alpine](https://hub.docker.com/_/alpine/)**, s'escollirà aquesta.
-	* En cas que no existeixi una imatge oficial basada en Alpine, s'escollirà la que recomani el fabricant. Sol ser la que al tag només s'indica la versió.
-
+    * En cas que no existeixi una imatge oficial basada en Alpine, s'escollirà la imatge basada en Centos, substituint Centos per la versió d'Oracle Linux corresponent. Aquesta substitució és necessaria pel support de pegats de seguretat que ofereix Oracle Linux i no ofereix Centos.
+	* En cas que no existeixi una imatge oficial basada en Alpine ni Centos, s'escollirà la que recomani el fabricant. Sol ser la que al tag només s'indica la versió.
 * Mai s'escollirà el tag latest. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
 
 ## Criteris generals per la creació de les imatges
@@ -26,6 +26,7 @@ A l'hora de crear les imatges dels diferents contenidors docker per les aplicaci
 Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades pel CTTI.
 
 * Deixar instal·lat el nombre mínim de paquets al docker, si és necessari instal·lar paquets per realitzar compilacions, desinstal·lar-los un cop realitzada aquesta.
+* Actualitzar els packets del sistema operatiu a la última versió disponible amb tots els pegats de seguretat aplicats.
 * No deixar el codi font al docker, un cop compilat, eliminar-lo.
 * Incloure a la imatge el script **wait-for-it.sh**, adjuntat a baix, per poder testejar les comunicacions. Notar que requereix tenir el bash instal·lat.
 * No executar mai el procés final de les aplicacions amb l'usuari **root**. La majoria de tecnologies inclouen scripts que utilitzen usuaris específics per arrencar-les.
@@ -33,6 +34,7 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Assegurar la seguretat dels directoris definint el propietari i els permisos explícitament. S'adjunta a baix l'script **docker-setup.sh** d'exemple.
 * Executar el procés principal des d'un script, mai directament al Dockerfile.
 * Utilitzar el volum **/data** per desar la informació que cal persistir.
+* No executar múltiples processos a dins de la imatge docker. Docker està pensat per executar un únic procés.
 
 ## Criteris de seguretat
 
