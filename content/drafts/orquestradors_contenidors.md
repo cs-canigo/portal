@@ -67,21 +67,6 @@ Són necessàries eines que facilitin la integració d'un model de basat en cont
 
 ### Característiques
 
-|  Característica |  AppAgile | Kubernetes  | SwarmMe  |
-|-----------------|:---------:|:-----------:|:--------:|
-| Registre  |  X | -  |  X |
-| Seguretat  | X  |  X | X  |
-| Alta disponibilitat i escalat  | X  | X  | X  |
-| Balanceig  | X  | X | X |
-| Serveis | X | X | X |
-| Enrutament | X  | X  | - |
-| Emmagatzematge | X | X | - |
-| Monitorizació de recursos i logs | X | X | X |
-| Quotes | X | X | - |
-| Desplegament | X | X | X |
-
-### Components
-
 Al següent diagrama es descriu:
 
 * Principals components de cada orquestrador
@@ -102,6 +87,9 @@ Per més informació podeu consultar https://docs.docker.com/engine/swarm/
 Va ser creat per Google.
 Actualment està evolucionant molt.
 Recentment ha rebut el suport oficial de docker.
+
+Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/drafts/contenidors_kubernetes/
+
 Per més informació podeu consultar la web https://kubernetes.io/
 
 ### AppAgile
