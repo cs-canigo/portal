@@ -21,7 +21,7 @@ Aquest mòdul permet administrar els logs de l'aplicació proporcionant les seg�
 La instal·lació del Mòdul d'Administració de Logs es pot incloure automàticament a través del [Plugin de Canigó per a Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf), o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.operation.logging.version>[1.0.0,1.1.0)</canigo.operation.logging.version>
+<canigo.operation.logging.version>[1.1.0,1.2.0)</canigo.operation.logging.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -69,7 +69,11 @@ Aquesta és l'API REST que publica el Mòdul d'Administració de Logs:
  * `<appContext>/api/logs/keepwatch`(PUT): missatge de monitorització activa (keep alive) per un fitxer de log
  * `<appContext>/api/logs/downloadLog/{index}` (GET): descarrega d'un fitxer de log
 
-Les URLs per accedir als serveis REST que ofereix aquest Mòdul d'Administració de Logs han estan definides tenint en compte que al fitxer de configuració `<aplicacio>\src\main\webapp\WEB-INF\web.xml` es tingui configurat el DispatcherServlet de Spring per interceptar el patró **/api/***. En cas que es canviïn aquestes URLs caldrà revisar el client.
+SpringBoot per defecte no permeteix peticions PUT, per a que es puguin realitzar al fitxer WebSecurityConfig, mètode configure s'ha d'afegir:
+
+```
+	http.csrf().ignoringAntMatchers("/api/logs/**");
+```
 
 Per tal d'evitar un deadlock en l'escriptura de logs a fitxer i el corresponent enviament de missatge a client, cal realitzar la següent configuració en el fitxer de configuració log4j.xml:
 

@@ -67,6 +67,9 @@ Exemples:
 * http://localhost:8080/api/equipaments/
 * http://localhost:8080/api/equipaments/1
 
+La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html 
+
+Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-documentacio-versions-3x-core/modul-logging-admin/)
 
 ## Afegir/Esborrar nous mòduls
 
