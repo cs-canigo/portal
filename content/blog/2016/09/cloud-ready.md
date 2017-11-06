@@ -16,7 +16,7 @@ A continuació s'enumeren diferents conceptes a tenir en compte en el disseny d'
 
 ### Micro-serveis <img src="/images/bloc/cloud-ready-microservices.png" alt="Microserveis" style="width: 80px;"/>
 
-L'aplicació ha de ser concebuda com una **col·lecció de serveis**, no com a una única peça (monòlit). Més informació en aquesta [entrada](/bloc/2016/08/microserveis/) d'aquest mateix bloc.
+L'aplicació ha de ser concebuda com una **col·lecció de serveis**, no com a una única peça (monòlit). Més informació en aquesta [entrada](/blog/2016/08/microserveis/) d'aquest mateix bloc.
 
 ### Escalabilitat <img src="/images/bloc/cloud-ready-scalability.png" alt="Escalabilitat" style="width: 80px;"/>
 
