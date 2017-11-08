@@ -21,6 +21,9 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 
+
+
+
 ##Principis de Microserveis
 
 Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar interès en posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió d'aplicacions monòlits cap a aplicacions basades en microserveis. En aquest post, presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.
