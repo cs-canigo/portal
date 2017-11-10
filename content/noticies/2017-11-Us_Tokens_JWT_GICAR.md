@@ -1,10 +1,10 @@
 +++
-date        = "2017-05-05"
+date        = "2017-11-10"
 title       = "Ús de JWT (JSON Web Token) amb GICAR"
 description = "Funcionament del servei de seguretat de Canigó amb tokens JWT i GICAR"
-sections    = ["drafts"]
+sections    = ["noticies", "home"]
 categories  = ["canigo"]
-key         = "MAIG2010"
+key         = "NOVEMBRE2017"
 +++
 
 La versió de Canigó 3.2 permet treballar amb [JWT](https://en.wikipedia.org/wiki/JSON_Web_Token) (JSON Web Tokens). Concretament Canigó utilitza la llibreria [Java JWT] (https://java.jsonwebtoken.io/). Aquesta llibreria permet, un cop realitzada l'autenticació de l'usuari, generar un token amb les dades bàsiques d'aquest usuari que serà enviat pel navegador web a la capçalera HTTP per cada petició. El backend Canigó 3.2 sap que les peticions rebudes amb aquest token són d'un usuari correctament autenticat, ja que aquest backend és l'únic que el pot haver generat.
