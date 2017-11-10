@@ -1,5 +1,5 @@
 +++
-date = "2017-05-01"
+date = "2017-11-10"
 title = "Ús del Servei de Persistencia en Canigó 3.2"
 description = "Ús del Servei de Persistencia en Canigó 3.2"
 section = "howtos"
