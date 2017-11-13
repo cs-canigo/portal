@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/)
 - [Ús de Spring Cache (Caffeine) en Canigó 3.2](/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/)
 - [Actualització aplicació de Canigó 3.1 a Canigó 3.2](/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/)
 - [Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x] (/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere)
