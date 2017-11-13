@@ -41,13 +41,7 @@ Cal tenir informat el correu electrònic a la identitat Gicar per tal que la inf
 <br/>
 
 #### **Com puc migrar el codi dels repositoris SVN de SIC cap als del Gitlab?** ####
-Caldrà:
-
-* Comprovar que es disposa d'accés al grup d'aplicació al Gitlab. En cas que no es disposi d'accés, haurà de demanar a algun usuari Release Manager del Lot que li concedeixi mitjançant l'Autoservei d'usuaris del Gitlab.
-* Crear el projecte de l'aplicació dins aquest grup.
-* Publicar el repositori GIT local en aquest.
-* Una vegada migrat el repositori, caldrà comunicar-ho a l'equip de SIC (consulta o petició de suport tècnic a Framework SIC via SAU-Remedy) per tal que desactivin l'accés d'escriptura al repositori SVN.
-En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
+Hem publicat un [howto](http://canigo.ctti.gencat.cat/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/) sobre com migrar els projectes de SVN a Git. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
 
 <br/>
 
@@ -59,7 +53,7 @@ Per a les noves aplicacions, ja haurà de començar a treballar directament amb 
 <br/>
 
 #### **Fins quan podem utilitzar el SVN?** ####
-La data planificada per al tancament definitiu del SVN és el **6 de Novembre de 2017**. Tots els repositoris SVN han d'estar migrats al Gitlab de SIC abans d'aquesta data.
+La data planificada per al tancament definitiu del SVN és el **5 de Febrer de 2018**. Tots els repositoris SVN han d'estar migrats al Gitlab de SIC abans d'aquesta data.
 
 <br/>
 
@@ -88,7 +82,6 @@ Els portals Gitlab/Jenkins del SIC no es troben adherits al Single Sign-On de GI
 <br/>
 
 #### **Quina diferència hi ha entre espai privat i espai corporatiu al Gitlab de SIC i a quin espai he de crear els projectes?** ####
-
 Els usuaris Release Manager podran crear tant grups d'aplicació com projectes dins el seu espai personal al portal Gitlab. Per tal d''oficialitzar' a CTTI l'entrega del codi font d'un projecte, aquest haurà de figurar a l'espai corporatiu de SIC.
 
 Els grups d'aplicació oficials només podran ser creats per l'equip del SIC. Els de les noves aplicacions es crearan arran les reunions de Fase0 de l'aplicació i els ja existents a partir de migracions de repositoris SVN.
@@ -98,6 +91,10 @@ Els projectes dins els grups d'aplicació sí que podran ser creats per els prop
 
 #### **Puc crear subgrups dins els grups d'aplicació oficials al Gitlab?** ####
 És possible crear subgrups dins un grup d'aplicació oficial (nom grup = codi aplicació) però de cara a la integració amb Jenkins, comportarà una incompatibilitat. Per tant, es desaconsella treballar amb subgrups (almenys dins els grups d'aplicació oficials).
+
+#### **Com puc concedir permisos als meus codis d'aplicació a altres membres?** ####
+* En el cas de CPD i LdT l'assignació de permisos és automàtica, per tant no cal fer res.
+* En el cas de lots i proveïdors d'aplicacions, us recordem que a l'agost de 2017 vam publicar un [article](http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) sobre com concedir permisos a d'altres companys. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
 
 
 <br/>
