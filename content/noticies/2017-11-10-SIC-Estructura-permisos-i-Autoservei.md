@@ -1,5 +1,5 @@
 +++
-date        = "2017-07-18"
+date        = "2017-11-10"
 title       = "SIC 2.0. Més detalls sobre el funcionament de l'Autoservei d'usuaris"
 description = "Degut al gran nombre de consultes rebudes sobre el funcionament d'aquest autoservei, hem decidit publicar aquest article on describim amb més detall la seva operativa."
 sections    = ["Notícies", "home"]
