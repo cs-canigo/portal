@@ -9,11 +9,11 @@ build:
 # your site. This can then automatically be deployed using other steps.
 # Since version 1.9.0, the step has the latest two versions of Hugo already installed thereby skipping the download part of 
 # the step.
-    - arjen/hugo-build@1.13.1:
+    - arjen/hugo-build@1.21.1:
 # Specifies the version of Hugo to be used, by default this is "0.30.2". It is recommended to set this, so you don't 
 # accidentally build you site with a version it isn't ready for. Due to Wercker not being able to properly handle 0.x version
 # numbers, you will need to put quotes around the version number.
-        version: "0.17"
+        version: "0.27.1"
 deploy:
   steps:
     - install-packages:
