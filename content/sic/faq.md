@@ -92,10 +92,11 @@ Els projectes dins els grups d'aplicació sí que podran ser creats per els prop
 #### **Puc crear subgrups dins els grups d'aplicació oficials al Gitlab?** ####
 És possible crear subgrups dins un grup d'aplicació oficial (nom grup = codi aplicació) però de cara a la integració amb Jenkins, comportarà una incompatibilitat. Per tant, es desaconsella treballar amb subgrups (almenys dins els grups d'aplicació oficials).
 
+<br/>
+
 #### **Com puc concedir permisos als meus codis d'aplicació a altres membres?** ####
 * En el cas de CPD i LdT l'assignació de permisos és automàtica, per tant no cal fer res.
 * En el cas de lots i proveïdors d'aplicacions, us recordem que a l'agost de 2017 vam publicar un [article](http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) sobre com concedir permisos a d'altres companys. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
-
 
 <br/>
 

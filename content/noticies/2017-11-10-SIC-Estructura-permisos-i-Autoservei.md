@@ -63,8 +63,6 @@ La membresia als grups d'aquest tipus es realitza de forma manual ja que els usu
 
 Per tant, l'autoservei d'usuaris afecta als lots i proveïdors fora de lot d'aplicacions. Tot usuari que necessiti accés haurà de sol·licitar als companys que ja en tenen que els hi concedeixin accés. Us recordem que vam publicar un [article](http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) on explicàvem com concedir permisos a companys per accedir al SIC com RML/RMNL.
 
-Hem inclòs referències a aquest article tant a l'apartat de documentació com a l'apartat de FAQ del SIC dins del web d'arquitectura per a que sigui més fàcil localitzar-lo.
- 
+Hem inclòs referències a aquest article tant a l'apartat de [manuals del SIC](http://canigo.ctti.gencat.cat/sic-documentacio/manuals/) com a l'apartat de [FAQ del SIC](http://canigo.ctti.gencat.cat/sic/faq/) dins del web d'arquitectura per a que sigui més fàcil localitzar-lo.
+
 Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy.
- 
- 
