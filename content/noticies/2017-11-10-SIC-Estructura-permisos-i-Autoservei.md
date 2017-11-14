@@ -29,7 +29,7 @@ A continuació, descriurem cadascun d'aquests subtipus.
 
 **Relase Managers d'àmbit i lot**
 
-Aquest tipus de grup recull als Release Managers d'Àmbit i Lot (RML, en endavant). És a dir, recullen a tots els usuaris amb perfil Release Manager que pertanyen a un Lot i a un Àmbit concret. Per exemple, el grup de RML del lot A6 i àmbit CTT conté a tots els usuaris del lot A6 que desenvolupen aplicacions per a CTTI.
+Aquest tipus de grup recull als Release Managers d'Àmbit i Lot (RML, en endavant). És a dir, recullen a tots els usuaris amb perfil Release Manager que pertanyen a un Lot i a un Àmbit concret. Per exemple, el grup de RML del lot A6 i àmbit CTT conté a tots els Release Managers del lot A6 que desenvolupen aplicacions per a CTTI.
 
 Els membres d'un grup RML són perfils que poden:
 
