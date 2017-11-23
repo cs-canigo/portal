@@ -50,7 +50,7 @@ Per a poder tenir autonomia, cal descentralitzar els serveis, tant organitzativa
 
 Potser la característica més important que necessiten els microserveis
 
-### 6. Els consumidors del microservei són els primers.
+### 6. Els consumidors del microserveis són els primers.
 
 Com a creador d'una API, fer els serveis fàcils de consumir
 
@@ -66,7 +66,6 @@ Amb moltes parts mòbils, pot ser un desafiament comprendre el que està passant
 
 Sam Newman: "Principles of Microservices"
 [http://samnewman.io/talks/principles-of-microservices/](http://samnewman.io/talks/principles-of-microservices/)
-
 
 Sam Newman: "The Principles of Microservices. Embrace Autonomy to Optimize Performance" [http://shop.oreilly.com/product/0636920043935.do#](http://shop.oreilly.com/product/0636920043935.do#)
 
