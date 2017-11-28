@@ -1,14 +1,14 @@
 +++
 date        = "2015-03-20T12:29:56+01:00"
 title       = "ICC"
-description = "Serveis de normalització d'adreces del Institud Cartografic de Catalunya."
+description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 8
 +++
 
 ## Introducció
 
-L'objectiu d'aquest connector, és el de proporcionar un punt d'accés als serveis de normalització d'adreces del ICC - Institud Cartografic de Catalunya.
+L'objectiu d'aquest connector, és el de proporcionar un punt d'accés als serveis de normalització d'adreces del ICC - Institut Cartogràfic de Catalunya.
 
 ### Propòsit
 
@@ -30,11 +30,11 @@ Aquest document va dirigit als següents perfils:
 | Referència
 | ---------------
 | [Guia d'ús de l'API del Connector ICC](/related/canigo/documentacio/modul-icc/Geocodificador_Manual_Integrador_v1.12.pdf "Guia d'us de l'API del Connector ICC").
-| [Institud Cartogràfic de Catalunya - ICC](http://www.icc.cat/).
+| [Institut Cartogràfic de Catalunya - ICC](http://www.icc.cat/).
 
 ## Descripció Detallada
 
-Aquest connector permet realitzar les següents funcionalitats referents a les següent operacions:
+Aquest connector permet realitzar les següents funcionalitats referents a les següents operacions:
 
 Funcionalitats
 
@@ -88,13 +88,13 @@ Propietat                     | Requerit | Descripció
 
 Cada aplicació que vulgui utilitzar les funcionalitats del ICC, haurà de seguir el següent procediment:
 
-1. Complimentar el Document d'Alta que es pot trobar aquí. No s'ha de complimentar l'apartat d'organisme sol?licitant i persona de contacte. Aquest organisme i persona sempre ha de ser de l'administració. Si una empresa privada desenvolupa l'aplicació, la petició ha de ser feta per algú de l'administració.
-2. Complimentar el document d'enquesta que es pot descarrega d'aquí.
+1. Emplenar el Document d'Alta que es pot trobar aquí. No s'ha d'emplenar l'apartat d'organisme sol?licitant i persona de contacte. Aquest organisme i persona sempre ha de ser de l'administració. Si una empresa privada desenvolupa l'aplicació, la petició ha de ser feta per algú de l'administració.
+2. Emplenar el document d'enquesta que es pot descàrrega d'aquí.
 3. Enviar aquests dos documents a la direcció de correu armand.guell@icc.cat demanant l'accés al servei ICC.
 
 L'usuari i password seran subministrats en aproximadament una setmana després de la petició.
 
-Els arxius de configuració que contenen els beans del mòdul i que serán carregats per Spring, son automàticament registrats pel core de Canigó, per lo que el desenvolupador no ha de definir cap arxiu XML per aixecar el servei.
+Els arxius de configuració que contenen els beans del mòdul i que seran carregats per Spring, són automàticament registrats pel core de Canigó, per el que el desenvolupador no ha de definir cap arxiu XML per aixecar el servei.
 
 ### Utilització del servei
 
