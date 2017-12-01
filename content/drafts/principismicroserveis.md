@@ -28,7 +28,11 @@ function googleTranslateElementInit() {
 
 Un cop acabada la fase de transformació i posada al dia del maquinari i dels programaris base que suporten les aplicacions i sistemes de la Generalitat, comencem a observar interès en posar al dia també les aplicacions. En la majoria de casos es posa damunt de la taula la conversió d'aplicacions monòlits cap a aplicacions basades en microserveis. D'aquesta manera es pretén dotar de lleugeresa i adaptabilitat als canvis a aplicacions que acostumen a durar molts més anys que les infraestructures i programaris que les sustenten. En aquest post, presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.
 
-Aquest post està basat en una sèrie de ponències i material videogràfic creat per [Sam Newman](http://samnewman.io/)
+*Aquest post està basat en una sèrie de ponències i material videogràfic creat per [Sam Newman](http://samnewman.io/)*
+
+### Què són els microserveis?
+
+Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis fa una cosa, i la fa bé.
 
 ### 1. Han d'estar modelats sobre el domini de negoci que volem cobrir.
 
