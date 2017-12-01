@@ -39,6 +39,8 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 
 		sudo dpkg-reconfigure keyboard-configuration
 
+* _Important_: es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense previa consulta a l'equip del CS Canigó. En aquesta linia s'hauria de configurar l'Eclipse per deshabilitar les notificacions d'actualitzacions disponibles a Preferences -> Install/Update -> Automatic Updates -> Automatically find new updates and notify me
+
 ### Programari instal·lat
 
 * IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 8 (Oracle) i els següents plugins:
@@ -56,6 +58,8 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 	- Client VPNC per accés a XCAT
 
 ### Oracle VirtualBox
+
+Si es vol poder copiar text entre la màquina host i la guest cal activar la opció Dispositiu -> Portapapers compartit -> Bidireccional
 
 Si es volen afegir carpetes compartides entre la màquina host i la guest s'han de seguir les següents passes:
 
