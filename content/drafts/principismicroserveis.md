@@ -40,15 +40,15 @@ Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat
 
 ### 2. Es basen en l'automatització.
 
-Es un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació. Les dependències, que són dificils de controlar en qualsevol projecte de programari, esdevenen un maldecap encara major si no s'automatitzen els fluxes de construcció i desplegament dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s'han d'executar la construcció i el desplegament dels microserveis és la clau per no fracassar. Si no es té prou clar aquest principi, millor no posar-s'hi.
+Aques és un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació. Les dependències, que són dificils de controlar en qualsevol projecte de programari, esdevenen un maldecap encara major si no s'automatitzen els fluxes de construcció i desplegament dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s'han d'executar la construcció i el desplegament dels microserveis és la clau per no fracassar. Si no es té prou clar aquest principi, millor no posar-s'hi.
 
 ### 3. Ocultar els detalls de la implementació.
 
-Un dels errors que sovint cometen els sistemes distribuïts és el d'acoplar excessivament els seus serveis entre ells.
+Un dels errors que sovint cometen els sistemes distribuïts és el d'acoplar excessivament els seus serveis entre ells. Com està fet el servei per dins no ha d'afectar a com els seus clients el consumeixen. De la mateixa manera, com més clients de diferents tecnologies pugui tenir un servei, més èxit tindrà i més podrà evolucionar. Per tant cal evitar a tota costa accessos directes a la base de dades del nostre servei, fer servir protocols propietaris a una tecnologia concreta, o utilitzar la distribució de clients o agents com a mitjà de connexió als nostres serveis. Com més universals siguin els protocols i la forma de cridar als nostres serveis, millor. REST és potser el paradigma d'aquest principi.
 
 ### 4. Descentralitzar totes les coses.
 
-Per a poder tenir autonomia, cal descentralitzar els serveis, tant organitzativament com a nivell de l'arquitectura que els forma.
+Autonomia. Responsabilitat. Programari lliure intern. Per a poder tenir autonomia, cal descentralitzar els serveis, tant organitzativament com a nivell de l'arquitectura que els forma.
 
 ### 5. Es despleguen independentment els uns dels altres.
 
