@@ -32,15 +32,15 @@ Un cop acabada la fase de transformació i posada al dia del maquinari i dels pr
 
 ### Què són els microserveis?
 
-Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis fa una cosa, i la fa bé.
+Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé.
 
 ### 1. Han d'estar modelats sobre el domini de negoci que volem cobrir.
 
-El disseny basat en el domini de negoci pot ajudar a trobar límits estables i reutilitzables
+Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat seguint els darrers anys, en que els serveis es creaven per capes tecnològiques: presentació, dades, totes les funcionalitats agrupades en una capa de negoci, interoperabilitat, etc. En aquest sentit els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix, utilitzant les capes tecnològiques però només dins del propi àmbit funcional del microservei. El **disseny basat en el domini de negoci** ajuda a trobar **límits estables** (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!) i seran **reutilitzables** (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei).
 
 ### 2. Es basen en l'automatització.
 
-Es un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació
+Es un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació. Les dependències, que són dificils de controlar en qualsevol projecte de programari, esdevenen un maldecap encara major si no s'automatitzen els fluxes de construcció i desplegament dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s'han d'executar la construcció i el desplegament dels microserveis és la clau per no fracassar. Si no es té prou clar aquest principi, millor no posar-s'hi.
 
 ### 3. Ocultar els detalls de la implementació.
 
