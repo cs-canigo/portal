@@ -50,9 +50,12 @@ Un dels errors que sovint cometen els sistemes distribuïts és el d'acoplar exc
 
 Com ja s'hi introduia en la definició, els microserveis han de ser autònoms. El microservei ha de ser autosuficient en recursos i en decissions de disseny. Una dependència d'altres elements, com una base de dades centralitzada o un bus de serveis trenquen aquest patró de disseny, donada la dependència d'altres equips i decisions. A nivell de codi es pot aplicar el paradigma de programari lliure internament a l'organització, on altres equips proposen millores i canvis al microservei afegint noves característiques a la base del codi i promovent aquests canvis a la consideració de l'equip propietari del microservei per a ser acceptats finalment com a part d'una nova versió. En el cas de processos de llarga durada, considerar tècniques com l'orquestració o la coreografia de serveis, implementades com un agregat de microserveis.
 
-### 5. Es despleguen independentment els uns dels altres.
+### 5. Desplegar-los independentment.
 
-Potser la característica més important que necessiten els microserveis
+És la característica més important que necessiten els microserveis. **Cada servei ha de desplegar-se en un sistema operatiu** per a poder gaudir d'independència d'altres components; la utilització de contenidors permet crear màquines mínimes per a un sol servei, sense haver de pagar els peatges de la sobrecapacitat dels servidors físics o dels recursos dedicats pels hipervisors en el cas de la virtualització. 
+Els serveis han de poder variar sense afectar als seus consumidors. Per això és convenient establir **Contractes Dirigits pels Consumidors**. En aquests, els consumidors estableixen les seves expectatives de funcionament en base a uns tests. Si la nova versió del servei falla en executar aquests tests, aquesta no pot pujar a producció doncs faria fallar l'execució a aquest consumidor. 
+Els serveis s'han de poder versionar independentment de les necessitats i els calendaris dels consumidors. Mitjançant la **Coexistència de versions** els serveis poden anar publicant noves versions sense afectar als consumidors de versions antigues. Aquesta pràctica ha de tenir un compromís per anar eliminant versions obsoletes, sinó, el manteniment dels serveis requeriria de múltiples branques actives, que és una pràctica altament desaconsellada per la complexitat que afegeix al desenvolupament en cas d'haver d'aplicar correccions a vàries versions. 
+Altra tècnica és la de **punts finals múltiples** en que el servei es desplega noves APIs en ports o camins diferents de l'aplicació, deixant el codi antic donant servei a les APIs originals. Aquest és un mètode útil en la majoria de casos, especialment quan no es pot controlar el calendari de canvis dels consumidors, com en el cas d'APIs públiques.Potser la característica més important que necessiten els microserveis
 
 ### 6. Els consumidors del microserveis són els primers.
 
