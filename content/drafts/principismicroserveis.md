@@ -48,7 +48,7 @@ Un dels errors que sovint cometen els sistemes distribuïts és el d'acoplar exc
 
 ### 4. Descentralitzar totes les coses.
 
-Autonomia. Responsabilitat. Programari lliure intern. Per a poder tenir autonomia, cal descentralitzar els serveis, tant organitzativament com a nivell de l'arquitectura que els forma.
+Com ja s'hi introduia en la definició, els microserveis han de ser autònoms. El microservei ha de ser autosuficient en recursos i en decissions de disseny. Una dependència d'altres elements, com una base de dades centralitzada o un bus de serveis trenquen aquest patró de disseny, donada la dependència d'altres equips i decisions. A nivell de codi es pot aplicar el paradigma de programari lliure internament a l'organització, on altres equips proposen millores i canvis al microservei afegint noves característiques a la base del codi i promovent aquests canvis a la consideració de l'equip propietari del microservei per a ser acceptats finalment com a part d'una nova versió. En el cas de processos de llarga durada, considerar tècniques com l'orquestració o la coreografia de serveis, implementades com un agregat de microserveis.
 
 ### 5. Es despleguen independentment els uns dels altres.
 
