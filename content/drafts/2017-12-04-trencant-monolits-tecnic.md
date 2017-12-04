@@ -12,9 +12,9 @@ categories  = ["microserveis","monolits"]
 
 Des d'arquitectura CTTI, hem decidit fer una sèrie de posts tractant els principis que han de governar el disseny i la implementació de les aplicacions basades en (micro)serveis com tècniques per tractar el problema tant des del punt de vista tècnic com funcional.
 
-Aquest post serà un hands on tècnic sobre el trencament del monolit.
+Aquest post serà un hands on tècnic sobre el trencament del monòlits.
 
-### Monolit i alternatives
+### Monòlit i alternatives
 
 Al post anterior hem parlat dels principis que han de governar el disseny dels serveis. Però, val sempre la pena trencar un monòlit? Són tan dolents?
 
@@ -23,17 +23,20 @@ OSGI, Java 9 with Jigsaw, tècniques per modularitzar
 SOA i diferència amb microserveis
 
 ### Què és un microservei?
+
 2 week work
 2 pizza team
 Owneership
 
 ### Per on començar?
 
-sdfd
 
 change algorithm. XX
-### Aplicant TDD/BDD
+
+### Testing
 fd ??
+
+### Integració
 
 ### Transaccionalitat
 ddd
@@ -52,5 +55,6 @@ fdfdkla.
 ### Evolució
 CI/CD
 Postel's law -> tolerant reader
+Conway's law -> Millor part 3: funcional
 Dont allow to coexsit old and new endpoint for long time -> consider merging bot into same service them
 REST best practices
