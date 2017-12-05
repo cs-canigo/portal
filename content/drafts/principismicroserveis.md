@@ -61,9 +61,15 @@ Altra tècnica és la de **punts finals múltiples** en que el servei es despleg
 
 Dissenyar serveis per a que siguin usats posa als consumidors d'aquests en primera línia de les preocupacions dels desenvolupadors. **Conèixer els teus consumidors** i que aquests et coneguin és primordial per a que els serveis facin bé la feina per la que han estat creats. Els **contractes creats pels consumidors** són una bona eina per a conèixer les expectatives dels consumidors respecte als serveis que es publiquen. Uns **estàndards d'ús clars** i que s'entenguin ajuden a que els consumidors entenguin la seva funció sense dubtes. Per això resulten útils eines com els **documentadors d'APIs**, els **programaris de descoberta de serveis** o els **registres llegibles per humans**.
 
-### 7. Aïllar les fallades.
+### 7. Aïllar les caigudes.
 
-Una arquitectura de microserveis no fa que els sistemes siguin més estables. Els altres microserveis han de poder seguir funcionant malgrat la caiguda o la lentitud d'un.
+En una arquitectura basada en microserveis, el fet que un falli no ha de comportar que tot el sistema caigui. L'arquitectura ha de dissenyar-se tenint en compte aquesta eventualitat, i que l'error d'un servei no bloquegi l'execució d'altres serveis, com les fitxes del dominó. Hi ha tres tècniques que poden ajudar a mantenir viva l'aplicació malgrat que un o varis serveis caiguin:
+
+* **Timeouts**. Posant timeouts adequats a la durada esperada de l'execució d'una crida a un servei pot donar més temps a resoldre el problema i fer el sistema més resilient.
+
+* **Mampares**. En un ús semblant a les mampares dels vaixells, separar en pools de connexions diferents serveis diferents, per tant si un servei cau no afecta a altres serveis que estan funcionant.
+
+* **Disjuntors**. Com els que tenim a les entrades de les cases per evitar mals majors amb l'electricitat, els disjuntors en microserveis donen una resposta alternativa als consumidors quan el servei no pot funcionar de la manera que s'espera.
 
 ### 8. Altament observables.
 
