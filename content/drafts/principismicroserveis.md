@@ -57,9 +57,9 @@ Els serveis han de poder variar sense afectar als seus consumidors. Per això é
 Els serveis s'han de poder versionar independentment de les necessitats i els calendaris dels consumidors. Mitjançant la **Coexistència de versions** els serveis poden anar publicant noves versions sense afectar als consumidors de versions antigues. Aquesta pràctica ha de tenir un compromís per anar eliminant versions obsoletes, sinó, el manteniment dels serveis requeriria de múltiples branques actives, que és una pràctica altament desaconsellada per la complexitat que afegeix al desenvolupament en cas d'haver d'aplicar correccions a vàries versions. 
 Altra tècnica és la de **punts finals múltiples** en que el servei es desplega noves APIs en ports o camins diferents de l'aplicació, deixant el codi antic donant servei a les APIs originals. Aquest és un mètode útil en la majoria de casos, especialment quan no es pot controlar el calendari de canvis dels consumidors, com en el cas d'APIs públiques.Potser la característica més important que necessiten els microserveis
 
-### 6. Els consumidors del microserveis són els primers.
+### 6. Donar preferència als consumidors dels serveis.
 
-Com a creador d'una API, fer els serveis fàcils de consumir
+Dissenyar serveis per a que siguin usats posa als consumidors d'aquests en primera línia de les preocupacions dels desenvolupadors. **Conèixer els teus consumidors** i que aquests et coneguin és primordial per a que els serveis facin bé la feina per la que han estat creats. Els **contractes creats pels consumidors** són una bona eina per a conèixer les expectatives dels consumidors respecte als serveis que es publiquen. Uns **estàndards d'ús clars** i que s'entenguin ajuden a que els consumidors entenguin la seva funció sense dubtes. Per això resulten útils eines com els **documentadors d'APIs**, els **programaris de descoberta de serveis** o els **registres llegibles per humans**.
 
 ### 7. Aïllar les fallades.
 
