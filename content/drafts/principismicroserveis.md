@@ -73,7 +73,7 @@ En una arquitectura basada en microserveis, el fet que un falli no ha de comport
 
 ### 8. Altament observables.
 
-Amb moltes parts mòbils, pot ser un desafiament comprendre el que està passant en el sistema
+En sistemes tradicionals, la **monitorització estàndard** basada en logs, temps de resposta i codis d'error a més a més del seguiment de les variables, de CPU, espai en disc, memoria i I/O poden ser suficients. Però en el cas dels microserveis amb múltiples parts mòbils i donant aquesta informació, potser inviable fer un seguiment a la manera clàssica. Un altre cop en aquest principi l'automatització i l'**agregació de logs i d'estadístiques** són claus per a donar una visió holística del sistema. També cal tenir en compte que els microserveis s'uneixen per xarxes i que aquestes poden fallar malgrat que els microserveis individualment estiguin aixecats i reportant bon funcionament. La  **monitorització semàntica**, en que s'executa un circuit funcional complet, com "Crear un Expedient", és útil per avaluar les funcionalitats més crítiques d'un sistema. Cal notar que aquestes transaccions són falses i que no han d'introduir soroll al sistema. La introducció de rastres o **IDs de correlació** pot donar idea de per on ha anat passant l'execució d'una funcionalitat, incloent sistemes dirigits per esdeveniments. És una eina molt potent alhora de realitzar investigacions d'informàtica forense. Finalment, la creació de panells on es mostri tota la informació en temps real del comportament del sistema i dels microserveis que el composen ajuden a la comprensió i al seguiment del seu funcionament.
 
 ## Referències:
 
