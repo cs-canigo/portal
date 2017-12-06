@@ -9,8 +9,6 @@ key         = "DESEMBRE2017"
 
 Des del passat mes de novembre, el SIC està preparat per oferir jobs de desplegament automàtic als entorns de Preproducció i Producció. Aquests jobs, executats per usuaris de CPD/LDT, automatitzen les tasques realitzades pels tècnics aportant robustesa, fiabilitat i traçabilitat en els desplegaments d'aplicacions en aquests entorns.
 
-# Funcionament
-
 A continuació es compararà el funcionament actual amb el nou funcionament que es pot adoptar gràcies als desplegaments automàtics a PRE i PRO.
 
 ## Funcionament actual
