@@ -36,7 +36,7 @@ Amb aquest nou funcionament, transparent per al proveïdor d'aplicacions, els pr
 
 ## Aspectes que cal tenir en consideració
 
-Aquests nous jobs pipline per CPD tenen les següents característiques:
+Aquests nous jobs pipeline per CPD tenen les següents característiques:
 
 * Aquests jobs de desplegament són compatibles amb plataformes en clúster i/o plataformes amb múltiples servidors per capa (servidors múltiples sense estar clusteritzats). Actualment, però, aquest sistema és compatible amb plataformes Tomcat. S'aniran integrant clústers d'altres tipus de servidors d'aplicacions a mesura que es vagin integrant aplicacions al SIC.
 * El job de CPD no realitza la marxa enrere d'entorns de BBDD. Caldrà que l'operari de CPD realitzi un backup previ de la BBDD abans de realitzar el desplegament.
