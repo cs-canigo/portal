@@ -21,9 +21,7 @@ Un cop acabada la fase de transformació i posada al dia del maquinari i dels pr
 
 ### Què són els microserveis?
 
-Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d'aquests serveis, que poden ser propis o creats per altres equips de dins o de fora de l'organització. En ser molts i petits, l'arquitectura, el disseny, el desenvolupament i les operacions dels microserveis són sustancialment diferents dels sistemes monolítics. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis.
-
-### Els Principis:
+Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d'aquests serveis, que poden ser propis o creats per altres equips de dins o de fora de l'organització. En ser molts i petits, l'arquitectura, el disseny, el desenvolupament i les operacions dels microserveis són sustancialment diferents dels sistemes monolítics. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis:
 
 ### 1. Han de ser modelats sobre el domini de negoci que volem cobrir.
 
@@ -80,6 +78,7 @@ En una arquitectura basada en microserveis, el fet que un microservei falli no h
 En sistemes tradicionals, la **monitorització estàndard** basada en logs, temps de resposta i codis d'error a més a més del seguiment de les variables de CPU, espai en disc, memoria i I/O poden ser suficients. Però en el cas dels microserveis, amb múltiples parts mòbils i donant aquesta informació, potser inviable fer un seguiment a la manera clàssica. L'automatització i l'**agregació de logs i d'estadístiques** són claus per a donar una visió holística del sistema. 
 
 Els microserveis poden fallar malgrat que estiguin aixecats i reportant bon funcionament de forma individual. La **monitorització de corrent** captura disfuncions de l'orquestració o coreografia dels microserveis provocades per la xarxa o per altres sistemes de suport a l'execució. La **monitorització semàntica**, en que s'executa un circuit funcional complet, com "Crear un Expedient", és útil per avaluar les funcionalitats més crítiques d'un sistema. Cal notar que aquestes transaccions són falses i que no han d'introduir soroll al sistema. La introducció de rastres o **IDs de correlació** pot donar idea de per on ha anat passant l'execució d'una funcionalitat. Aquesta tècnica és especialment útil en sistemes dirigits per esdeveniments. És una eina molt potent alhora de realitzar investigacions d'informàtica forense. Finalment, la creació de **panells** on es mostri tota la informació en temps real del comportament del sistema i dels microserveis que el composen ajuden a la comprensió i al seguiment del seu funcionament.
+
 
 ## Referències:
 
