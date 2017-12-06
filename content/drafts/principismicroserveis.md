@@ -17,6 +17,8 @@ Un cop acabada la fase de transformació i posada al dia del maquinari i dels pr
 
 *Aquest post està basat en una sèrie de ponències i material videogràfic creat per [Sam Newman](http://samnewman.io/)*
 
+![Microservices logo](/images/bloc/Services4.png)
+
 ### Què són els microserveis?
 
 Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé.
