@@ -21,17 +21,19 @@ Un cop acabada la fase de transformació i posada al dia del maquinari i dels pr
 
 ### Què són els microserveis?
 
-Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d'aquests serveis, que poden ser propis o creats per altres equips de l'organització. En ser molts i petits l'arquitectura, el disseny el desenvolupament i les operacions dels microserveis són sustancialment diferents dels sistemes grans. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis.
+Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d'aquests serveis, que poden ser propis o creats per altres equips de dins o de fora de l'organització. En ser molts i petits, l'arquitectura, el disseny, el desenvolupament i les operacions dels microserveis són sustancialment diferents dels sistemes monolítics. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis.
 
 ### Els Principis:
 
-### 1. Han d'estar modelats sobre el domini de negoci que volem cobrir.
+### 1. Han de ser modelats sobre el domini de negoci que volem cobrir.
 
-Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat seguint els darrers anys: els serveis es creaven per capes tecnològiques: presentació, dades, totes les funcionalitats agrupades en una capa de negoci, interoperabilitat, etc. En aquest sentit els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix. Les capes tecnològiques s'utilitzen només dins del propi àmbit funcional del microservei. El **disseny basat en el domini de negoci** ajuda a trobar **límits estables** (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!) i seran **reutilitzables** (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei) en l'aplicació que l'ha creat, o en altres.
+Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat seguint els darrers anys: els serveis es creaven per capes tecnològiques: presentació, dades, totes les funcionalitats agrupades en una única capa de negoci, interoperabilitat, etc. En canvi, els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix. Les capes tecnològiques s'utilitzen només dins del propi àmbit funcional del microservei. El **disseny basat en el domini de negoci** ajuda a trobar **límits estables** (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!), i preparats per a ser **reutilitzables**  en l'aplicació que l'ha creat, o en altres (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei).
 
 ### 2. Es basen en l'automatització.
 
-Aques és un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació. Les dependències, que són dificils de controlar en qualsevol projecte de programari, esdevenen un maldecap encara major si no s'automatitzen els fluxes de construcció i desplegament dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s'han d'executar la construcció i el desplegament dels microserveis és la clau per no fracassar. Si no es té prou clar aquest principi, millor no posar-s'hi.
+Aques és un principi crucial. Quan hi ha més parts a control·lar, l'automatització és clau per a poder construir i desplegar l'aplicació. Les dependències, que són dificils de controlar en qualsevol producte de programari, esdevenen un maldecap encara major si no **s'automatitzen els canals de construcció i desplegament** dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s'han d'executar la construcció i el desplegament dels microserveis és la clau per a no fracassar. L'**aprovisionament de plataformes per codi**, assegura que els microserveis es comporten sempre de la mateixa manera, doncs els entorns d'execució són exactament iguals a com s'han definit cada cop. D'aquesta manera s'evita el temut efecte d'entorns "floc de neu", on cada entorn es comporta diferent per que s'han creat manualment. L'**automatització de les proves** assegura que els resultats són coherents de versió en versió, detectant fàcilment si les funcionalitats no es cobreixen en qüestió de minuts.
+
+Si no es té prou clar aquest principi, millor no posar-s'hi.
 
 ### 3. Ocultar els detalls de la implementació.
 
