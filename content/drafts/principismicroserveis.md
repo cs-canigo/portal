@@ -21,11 +21,11 @@ Un cop acabada la fase de transformació i posada al dia del maquinari i dels pr
 
 ### Què són els microserveis?
 
-Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé.
+Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d'aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d'aquests serveis, que poden ser propis o creats per altres equips de l'organització. En ser molts i petits l'arquitectura, el disseny el desenvolupament i les operacions dels microserveis són sustancialment diferents dels sistemes grans. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis.
 
 ### 1. Han d'estar modelats sobre el domini de negoci que volem cobrir.
 
-Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat seguint els darrers anys, en que els serveis es creaven per capes tecnològiques: presentació, dades, totes les funcionalitats agrupades en una capa de negoci, interoperabilitat, etc. En aquest sentit els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix, utilitzant les capes tecnològiques però només dins del propi àmbit funcional del microservei. El **disseny basat en el domini de negoci** ajuda a trobar **límits estables** (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!) i seran **reutilitzables** (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei).
+Sembla un principi trivial i simple, però trenca d'arrel el model que s'ha anat seguint els darrers anys: els serveis es creaven per capes tecnològiques: presentació, dades, totes les funcionalitats agrupades en una capa de negoci, interoperabilitat, etc. En aquest sentit els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix. Les capes tecnològiques s'utilitzen només dins del propi àmbit funcional del microservei. El **disseny basat en el domini de negoci** ajuda a trobar **límits estables** (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!) i seran **reutilitzables** (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei) en l'aplicació que l'ha creat, o en altres.
 
 ### 2. Es basen en l'automatització.
 
