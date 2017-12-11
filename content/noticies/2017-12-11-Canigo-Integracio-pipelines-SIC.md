@@ -21,15 +21,15 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
 
 * Per la construcció i desplegament amb una pipeline al **Jenkins**: .
 
-  * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a "app-canigo/src/main/resources/sic/sic.yml" (Més detall en el HowTo).
+  * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a ```"<app-canigo>/sic/sic.yml"``` (Més detall en el HowTo).
   
     **sic.yml**
     ```
     version: 1.0.0
     ```
-    A la propera versió de Canigó que s'alliberi, aquesta configuració ja vindrà pre-establerta
+    A la propera versió de Canigó que s'alliberi, aquesta configuració ja vindrà pre-establerta. Podeu trobar més detal del fucionament de descriptor "sic.yml" al punt 3.3.3 del [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf)
   
-  * En cas que el frontend de l'aplicació es desenvolupi en un projecte apart del de backend i es desplegui també de forma independent (opció recomanada), cal també incorporar aquest descriptor "frontend/sic/sic.yml" i idealment automatitzar la seva generació
+  * En cas que el frontend de l'aplicació es desenvolupi en un projecte apart del de backend i es desplegui també de forma independent (opció recomanada), cal també incorporar aquest descriptor ```"<frontend>/sic/sic.yml"``` i idealment automatitzar la seva generació
   
   * Cal especificar a l'equip del SIC les passes per la construcció i desplegament de l'aplicació per a que configurin la pipeline al Jenkins. En el cas del backend Canigó, normalment l'empaquetat estàndard Maven, i per la part de frontend dependrà molt de la tecnologia utilitzada (Angular, React, ...) les quals utilitzaran gestors de paquets com [npm](https://www.npmjs.com/)
 
