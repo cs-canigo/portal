@@ -25,9 +25,9 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
   
   **sic.yml**
   
-```version: 1.0.0
-...
-```
+  ```version: 1.0.0
+  ...
+  ```
   
   A la propera versió de Canigó que s'alliberi, aquesta configuració ja vindrà pre-establerta
   
