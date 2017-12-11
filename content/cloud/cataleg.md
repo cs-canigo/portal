@@ -89,23 +89,18 @@ default_versions:
 
 En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades a [DockerHub](https://hub.docker.com/r/gencatcloud/).
 
-Es publiquen dos imatges per separat per cada element:
-
-- Docker: imatge certificada a [Bluemix IBM Containers](https://www.ibm.com/cloud-computing/bluemix/containers)
-- Docker-OpenShift: imatge certificada a [OpenShift](https://www.openshift.org/)
-
-**Element**  | **Versió (1) (2)**   | **Docker** | **Docker-OpenShift**
+**Element**  | **Versió (1) (2)**   | **Docker**
 ------------ | ------------ |----------- | --------------------
-Apache 		 | actual FRP    |https://hub.docker.com/r/gencatcloud/httpd/    | https://hub.docker.com/r/gencatcloud/httpd-openshift/
-Apache-GICAR | 1.0 (Apache 2.2)   | https://hub.docker.com/r/gencatcloud/gicar/ | https://hub.docker.com/r/gencatcloud/gicar-openshift/
-HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/ | -
-Java		 | actual FRP   | https://hub.docker.com/r/gencatcloud/java/  | https://hub.docker.com/r/gencatcloud/java-openshift/
-MongoDB 	 | 3.2.7   | https://hub.docker.com/r/gencatcloud/mongodb/    | https://hub.docker.com/r/gencatcloud/mongodb-openshift
-MySql 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/mysql/    | https://hub.docker.com/r/gencatcloud/mysql-openshift
-NodeJS 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/nodejs/ | https://hub.docker.com/r/gencatcloud/nodejs-openshift/
-PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/php/ | https://hub.docker.com/r/gencatcloud/php-openshift/
-Postgres	 | 9.5.3    |https://hub.docker.com/r/gencatcloud/postgres/ | https://hub.docker.com/r/gencatcloud/postgres-openshift/
-Tomcat  	 | actual FRP   | https://hub.docker.com/r/gencatcloud/tomcat/ | https://hub.docker.com/r/gencatcloud/tomcat-openshift/
+Apache 		 | actual FRP    | https://hub.docker.com/r/gencatcloud/httpd/
+Apache GICAR | 2.0    | Demanar a [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat)    | -
+HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/
+Java		 | actual FRP   | https://hub.docker.com/r/gencatcloud/java/
+MongoDB 	 | 3.2.7   | https://hub.docker.com/r/gencatcloud/mongodb/
+MySql 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/mysql/
+NodeJS 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/node/
+PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/apache-php/
+Postgres	 | 9.5.3    | https://hub.docker.com/r/gencatcloud/postgres/
+Tomcat  	 | actual FRP   | https://hub.docker.com/r/gencatcloud/tomcat/
 
 (1) Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) està disponible la versió actual CTTI.
 
