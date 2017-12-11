@@ -9,7 +9,7 @@ key         = "DESEMBRE2017"
 
 Des del passat mes de novembre, el SIC està preparat per oferir jobs de desplegament automàtic als entorns de Preproducció i Producció. Aquests jobs, executats per usuaris de CPD/LDT, automatitzen les tasques realitzades pels tècnics aportant robustesa, fiabilitat i traçabilitat en els desplegaments d'aplicacions en aquests entorns.
 
-A continuació es compararà el funcionament actual amb el nou funcionament que es pot adoptar gràcies als desplegaments automàtics a PRE i PRO.
+A continuació es compara el funcionament actual amb el nou funcionament que es pot adoptar gràcies als desplegaments automàtics a PRE i PRO.
 
 ## Funcionament actual
 
@@ -18,7 +18,7 @@ Si recordem el funcionament dels jobs pipeline que disposàvem fins ara amb el S
 <div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/Pipeline.png" alt="Pipeline amb jobs semiautomàtics" title="Pipeline amb jobs semiautomàtics"></img></div>
 
 
-Com es pot observar, es tracta d'una pipeline que en els entorns de PRE i PRO hi ha aturades per a que es pugui realitzar el desplegament externament. La pipeline crea el Draft de la petició, ubica els artefactes a desplegar en un SFTP on els tècnics de CPD poden recollir-los i s'espera fins que els desenvolupadors indiquen si el desplegament s'ha realitzat correctament o hi ha hagut algun problema i s'ha hagut de cancel·lar. Al SIC, aquest tipus de desplegament els anomenem **semiautomàtics**.
+Com es pot observar, es tracta d'una pipeline que en els entorns de PRE i PRO hi ha aturades per a que es pugui realitzar el desplegament externament. La pipeline crea l'esborrany de la petició, ubica els artefactes a desplegar en un SFTP on els tècnics de CPD poden recollir-los i s'espera fins que els desenvolupadors indiquen si el desplegament s'ha realitzat correctament o hi ha hagut algun problema i s'ha hagut de cancel·lar. Al SIC, aquest tipus de desplegament els anomenem **semiautomàtics**.
 
 ## Nou funcionament
 
@@ -30,21 +30,21 @@ Tal i com es pot observar al segon esquema, l'aturada per la creació del Remedy
 
 Fins ara els tècnics, quan els hi arribava el tiquet Remedy i estaven dins de la finestra vàlida de desplegament, realitzaven el desplegament a mà.
 
-Amb aquest nou model, els tècnics tenen una mini-pipeline per entorn per a la realització del desplegament. Al SIC, anomenem aquest tipus de desplegaments **automàtics**.
+Amb aquest nou model, els tècnics tenen una mini-pipeline per entorn per a la realització del desplegament. Al SIC, anomenem a aquest tipus de desplegaments com a **automàtics**.
 
 Amb aquest nou funcionament, transparent per al proveïdor d'aplicacions, els proveïdors d'infraestructura podran beneficiar-se de tenir jobs automàtics de desplegament per als entorns de PRE i PRO.
 
 ## Aspectes que cal tenir en consideració
 
-Aquests nous jobs pipeline per CPD tenen les següents característiques:
+Aquests nous jobs pipeline per CPD tenen les següents capacitats i limitacions:
 
 * Aquests jobs de desplegament són compatibles amb plataformes en clúster i/o plataformes amb múltiples servidors per capa (servidors múltiples sense estar clusteritzats). Actualment, però, aquest sistema és compatible amb plataformes Tomcat. S'aniran integrant clústers d'altres tipus de servidors d'aplicacions a mesura que es vagin integrant aplicacions al SIC.
 * El job de CPD no realitza la marxa enrere d'entorns de BBDD. Caldrà que l'operari de CPD realitzi un backup previ de la BBDD abans de realitzar el desplegament.
 * No es podrà realitzar cap manteniment als servidors mentre s'està realitzant el desplegament. Els servidors podrien estar indisponibles en el moment de desplegament, fet que provocaria l'execució de la marxa enrere. Si durant la marxa enrere el servidor segueix estant indisponible, el job acabarà amb un error.
 * Com sempre, caldrà notificar al SIC si hi ha canvis en la infraestructura (s'afegeixen, es modifiquen o es donen de baixa servidors).
-* El SIC s'encarrega de la custòdia de l'últim artefacte desplegat correctament. La marxa enrere es realitzarà utilitzant aquest artefacte emmagatzemat pel SIC.
+* El SIC s'encarrega de la custòdia de l'últim artefacte desplegat correctament des del propi SIC. La marxa enrere es realitzarà utilitzant aquest artefacte. 
 * En el cas que s'hagi de fer un desplegament sense estar el SIC disponible, es podrà realitzar manualment, però caldrà emmagatzemar a l'espai d'artefactes del SIC aquest darrer artefacte per a que sigui tingut en compte en la marxa enrere.
 
 En unes setmanes, oferirem una formació a Lots d'Aplicacions i CPD/LDT per tal de cobrir tant aquesta nova funcionalitat com futures que en vindran. En breu, tant els proveïdors d'aplicacions com els d'infraestructura rebran una convocatòria.
 
-Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy.
+Per a qualsevol dubte o aclariment sobre el funcionament dels desplegaments automàtics a PRE i PRO, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy.
