@@ -23,8 +23,10 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
 
   * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a "app-canigo/src/main/resources/sic/sic.yml" (Més detall en el HowTo).
   
-  sic.yml
+  **sic.yml**
+  
 ```version: 1.0.0
+...
 ```
   
   A la propera versió de Canigó que s'alliberi, aquesta configuració ja vindrà pre-establerta
