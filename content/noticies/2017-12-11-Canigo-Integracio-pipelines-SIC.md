@@ -26,8 +26,10 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
     **sic.yml**
     ```
     version: 1.0.0
+    ...
     ```
-    A la propera versió de Canigó que s'alliberi, aquesta configuració ja vindrà pre-establerta. Podeu trobar més detal del fucionament de descriptor "sic.yml" al punt 3.3.3 del [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf)
+    A la propera versió de Canigó que s'alliberi, aquesta configuració Maven ja vindrà pre-establerta.
+    Podeu trobar més detal del fucionament de descriptor "sic.yml" al punt 3.3.3 del [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf)
   
   * En cas que el frontend de l'aplicació es desenvolupi en un projecte apart del de backend i es desplegui també de forma independent (opció recomanada), cal també incorporar aquest descriptor ```"<frontend>/sic/sic.yml"``` i idealment automatitzar la seva generació
   
