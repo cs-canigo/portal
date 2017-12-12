@@ -19,17 +19,17 @@ Els passos descrits en aquest document apliquen a la versió 3.2.x del Framework
 
 En aquest HowTo s'explica els passos a realitzar per a realitzar la [integració d'una aplicació Canigó al SIC](noticies/2017-12-11-Canigo-Integracio-pipelines-SIC/).
 
-Aquest HowTo parteix de tenir una aplicació Canigó generada pel [pluguin de Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
+El punt de partida és una aplicació Canigó generada pel [pluguin de Canigó per a Eclipse](/canigo-download-related/plugin-canigo/), un projecte creat al [Gitlab de SIC] (http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) i un usuari amb permissos per treballar-hi.
 
 ### Connectar amb Git
 
-Una vegada es disposa d'un projecte creat al [Gitlab de SIC] (http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) els passos per a sincronitzar la nostra aplicació Canigó amb el Git són:
-
-Crear un fitxer [.gitignore](https://git-scm.com/docs/gitignore) a l'arrel de l'aplicació perquè ignori les parts que no s'han de sincronitzar amb el Git. Per exemple:
+Primer de tot cal que es configurin els binaris per estar fora del control del Git, ja que no corresponen a codi font. Per això cal crear un fitxer [.gitignore](https://git-scm.com/docs/gitignore) a l'arrel de l'aplicació perquè ignori les parts que no s'han de sincronitzar amb el Git. Per exemple:
 
 	target/
-		
-Inicialitzar l'aplicació com a repositori git i pujar el codi.
+	
+Típicament, a més de la carpeta de sortida de la compilació, també s'ignoren recursos propis de l'IDE de desenvolupament (Eclipse, NetBeans, IntelliJ, ...).
+
+Inicialitzem l'aplicació com a repositori Git i pugem el codi:
 
 	Anar a l'arrel de l'aplicació
 	git init
@@ -40,15 +40,15 @@ Inicialitzar l'aplicació com a repositori git i pujar el codi.
 	
 ### Automatitzar el descriptor sic.yml
 
-Per a la construcció i desplegament d'una pipeline al Jenkins l'aplicació ha de disposar del fitxer sic.yml amb la versió de l'aplicació. Més informació al punt 3.3.3 del [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
+Per a la construcció i desplegament d'una aplicació mitjançant una pipeline al Jenkins, l'aplicació ha de disposar del fitxer "sic.yml" amb la versió de l'aplicació. Més informació al punt 3.3.3 del [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf). Aquesta serà la versió amb que s'etiquetarà el codi pujat al master un cop hagi superat les diferents fases prèvies de la pipeline (construcció, tests, ...).
 
-Per a que cada vegada que es generi una nova versió de l'aplicació amb Maven aquest fitxer estigui actualitzat s'han de realitzar les següents passes:
+Per a que el camp "version" d'aquest fitxer "sic.yml" no hagi de ser actualitzat manualment, es recomana automatitzar el procés a partir de la versió del projecte Maven:
 
-A *src/resources* crear la plantilla el fitxer sic.yml amb el següent contingut:
+A *src/main/resources* crear el fitxer "sic.yml" amb el següent contingut:
 
 	version: ${project.version}
 	
-Al pom.xml s'ha d'afegir el plugin **maven-resources-plugin**
+Al pom.xml de l'aplicació s'ha d'afegir el plugin **maven-resources-plugin** amb la següent configuració:
 
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
@@ -78,9 +78,9 @@ Al pom.xml s'ha d'afegir el plugin **maven-resources-plugin**
 		</executions>
 	</plugin>
 
-Amb aquestes passes s'actualitza la versió al fitxer /sic/sic.yml. 
+D'aquesta manera, quan es construeixi l'aplicació, automàticament s'establirà la versió al fitxer "/sic/sic.yml", a partir del qual la pipeline del SIC generarà el tag de l'aplicació al Git. 
 
-*A partir de la versió 3.2.3 de Canigó aquesta configuració ja vendrà inclosa a la plantilla que es genera al plguin*
+*A partir de la versió 3.2.3 de Canigó, aquesta configuració ja estarà incorporada a la plantilla que genera el plugin d'Eclipse*
 	
 
 	
