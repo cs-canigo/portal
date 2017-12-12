@@ -87,6 +87,9 @@ Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul
                             <dependency>cat.gencat.ctti:canigo.core</dependency>
                             ...
                         </dependenciesToScan>
+			<excludes>
+				<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
                     </configuration>
                 </execution>
                 ...
