@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "DESEMBRE2017"
 +++
 
-Les aplicacions Canigó poden ser fàcilment integrables al [**SIC (Servei d'Integració Continua)**](http://canigo.ctti.gencat.cat/sic/), tant per la seva custodia de codi al Git, com per la seva construcció i desplegament amb Jenkins. Des del CS Canigó s'ha redactat aquest HowTo on s'explica pas a pas com fer aquesta integració.
+Les aplicacions Canigó poden ser fàcilment integrables al [**SIC (Servei d'Integració Continua)**](http://canigo.ctti.gencat.cat/sic/), tant per la seva custodia de codi al Git, com per la seva construcció i desplegament amb Jenkins. Des del CS Canigó s'ha redactat aquest [HowTo](http://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/) on s'explica pas a pas com fer aquesta integració.
 
 A mode de resum, els principals aspectes a tenir en compte són els següents:
 
@@ -21,7 +21,7 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
 
 * Per la construcció i desplegament amb una pipeline al **Jenkins**: .
 
-  * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a ```"<app-canigo>/sic/sic.yml"``` (Més detall en el HowTo).
+  * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a ```"<app-canigo>/sic/sic.yml"``` (Més detall en el [HowTo](http://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/)).
   
     **sic.yml**
     ```
