@@ -75,7 +75,7 @@ Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul
                             ...
                         </dependenciesToScan>
 			<excludes>
-				<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+                            <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
 			</excludes>
                     </configuration>
                 </execution>
