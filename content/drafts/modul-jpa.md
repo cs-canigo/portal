@@ -88,8 +88,11 @@ el que executa el test unitari del mòdul de persistència:
 		            	<dependenciesToScan>
 		            		<dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
 		            		...
-						</dependenciesToScan>
-			        </configuration>
+				</dependenciesToScan>
+				<excludes>
+					<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+				</excludes>
+			    </configuration>
 		        </execution>
 		        ...
 	        </executions>
