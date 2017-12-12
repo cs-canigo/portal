@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Integració d'una aplicació Canigó a SIC 2.0] (/howtos/2017-12-howto-integracio_canigo_sic/)
 - [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/)
 - [Ús de Spring Cache (Caffeine) en Canigó 3.2](/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/)
 - [Actualització aplicació de Canigó 3.1 a Canigó 3.2](/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/)
