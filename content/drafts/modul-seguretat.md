@@ -65,13 +65,16 @@ cal excloure la dependència del mòdul de seguretat per tal d'evitar conflictes
                     </goals>
                     <configuration>
                         <dependenciesToScan>
-		            		<dependency>cat.gencat.ctti:canigo.core</dependency>
-		            		<dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
-							<dependency>cat.gencat.ctti:canigo.web.rs</dependency>
+		          <dependency>cat.gencat.ctti:canigo.core</dependency>
+		          <dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
+			  <dependency>cat.gencat.ctti:canigo.web.rs</dependency>
                         </dependenciesToScan>
-						<classpathDependencyExcludes>
-						  <classpathDependencyExcludes>cat.gencat.ctti:canigo.security</classpathDependencyExcludes>
-						</classpathDependencyExcludes>
+			<excludes>
+			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
+			<classpathDependencyExcludes>
+			  <classpathDependencyExcludes>cat.gencat.ctti:canigo.security</classpathDependencyExcludes>
+			</classpathDependencyExcludes>
                     </configuration>
                 </execution>
                 <execution>
@@ -82,8 +85,11 @@ cal excloure la dependència del mòdul de seguretat per tal d'evitar conflictes
                     </goals>
                     <configuration>
                         <dependenciesToScan>
-                            <dependency>cat.gencat.ctti:canigo.security</dependency>
+                          <dependency>cat.gencat.ctti:canigo.security</dependency>
                         </dependenciesToScan>
+			<excludes>
+			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
                     </configuration>
                 </execution>
                 ...
