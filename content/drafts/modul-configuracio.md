@@ -100,7 +100,6 @@ Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul
     ...
 </build>    
 ```
-\
 
 ### Configuració
 
