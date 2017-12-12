@@ -23,7 +23,7 @@ Paginate = 10
 
 [taxonomies]
 	blog_tag = "blog_tags"
-    section = "sections"
+	section = "sections"
 
 #----------------
 # MENU PRINCIPAL

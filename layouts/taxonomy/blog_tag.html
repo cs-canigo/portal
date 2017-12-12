@@ -8,7 +8,7 @@
 
 </head>
 
-{{ $title := (.Site.Params.blog_section | pluralize)}}
+{{ $title := (.Site.Params.blog_section)}}
 
 <body class="section {{$title}}">
 	<div class="contenidor unfixed">
@@ -21,13 +21,13 @@
 
 			{{ partial "header_block.html" .}}
 
-			<article class="padding-xs padding-sm padding-md contingut">				
+			<article class="padding-xs padding-sm padding-md contingut">
 				<div class="container">
 				<div class="row">
 
 					{{ $section := .Title | html | lower }}
 					{{ partial "section/posts.html" . }}
-						
+
 				</div>
 				</div>
 			</article>
@@ -35,7 +35,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if or (eq $section (.Site.Params.blog_section | pluralize)) (in .URL "blog_tags") }}
+	{{ if or (eq $section (.Site.Params.blog_section)) (in .URL "blog_tags") }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

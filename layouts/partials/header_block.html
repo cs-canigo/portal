@@ -2,7 +2,7 @@
 			{{ $section := .Section | html | lower}}
 
 			<article class="bgGrey">
-				<div class="container">	
+				<div class="container">
 					<div class="row">
 						<div class="capcelera_basica col-sm-12">
 							<div class="capcelera_basica_cont">
@@ -56,23 +56,23 @@
 										<label class="hidden" for="cerca">Cerca</label>
 										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca a notícies" /> 
+											class="form-control" placeholder="Cerca a notícies" />
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
 										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>								
+									</div>
 								</form>
 								{{end}}
-									
-								{{ if or (eq $title (.Site.Params.blog_section | pluralize)) (in .URL "blog_tags") }}
+
+								{{ if or (eq $title (.Site.Params.blog_section)) (in .URL "blog_tags") }}
 								<form id="cercadorIndex" class="navbar-form cercador_vermell col-sm-3" method="get" action="/cercador/" onsubmit="location.href=this.action+'?dFR[sections][0]=Blog&amp;q='+this.cerca.value; return false;">
 									<div class="form-group">
 										<label class="hidden" for="cerca">Cerca</label>
 										<input type="search" name="q" id="cerca"
 											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control" placeholder="Cerca al blog" /> 
+											class="form-control" placeholder="Cerca al blog" />
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
 										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>								
+									</div>
 								</form>
 								{{end}}
 
@@ -82,12 +82,12 @@
 									<div class="form-group">
 										<input type="search" name="q" id="query"
 											title="Introdu&iuml;u les paraules a cercar"
-											class="form-control"  placeholder="Cerca..." /> 
+											class="form-control"  placeholder="Cerca..." />
 										<span class="btn btn-default hidden-xs" onclick="$('#cercadorIndex').submit()"></span>
 										<button class="btn btn-default visible-xs" title="Neteja" type="button"></button>
-									</div>								
+									</div>
 								</form>
-								{{end}}									
+								{{end}}
 
 							</div>
 						</div>

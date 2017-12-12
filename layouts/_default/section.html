@@ -21,24 +21,24 @@
 
 			{{ partial "header_block.html" .}}
 
-			<article class="padding-xs padding-sm padding-md contingut">				
+			<article class="padding-xs padding-sm padding-md contingut">
 				<div class="container">
 				<div class="row">
 
 						{{ $section := .Title | html | lower }}
 
-						{{ if and (ne $section "noticies") (ne $section (.Site.Params.blog_section | pluralize)) }}
-				            
+						{{ if and (ne $section "noticies") (ne $section (.Site.Params.blog_section)) }}
+
 							{{ partial "section/colors.html" . }}
 
-			            {{ else if (eq $section (.Site.Params.blog_section | pluralize)) }}
+			            {{ else if (eq $section (.Site.Params.blog_section)) }}
 
 							{{ partial "section/posts.html" . }}
 
 			            {{ else }}
 
 							{{ partial "section/noticies.html" . }}
-	
+
 			            {{ end }}
 
 				</div>
@@ -48,7 +48,7 @@
 	</section>
 
 	{{ partial "footer.html" . }}
-	{{ if (eq $section (.Site.Params.blog_section | pluralize)) }}
+	{{ if (eq $section (.Site.Params.blog_section)) }}
 		<script src="/js/bloc.js"></script>
 	{{ end }}
 

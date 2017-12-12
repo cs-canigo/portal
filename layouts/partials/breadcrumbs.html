@@ -21,7 +21,7 @@
 	How to
 {{ end }}
 
-{{ if or (eq $title (.Site.Params.blog_section | pluralize)) (eq $section .Site.Params.blog_section) }}
+{{ if or (eq $title (.Site.Params.blog_section)) (eq $section .Site.Params.blog_section) }}
 	Blog d'Arquitectura
 {{ end }}
 
@@ -38,5 +38,5 @@
 {{ end }}
 
 {{ if in .URL "blog_tags" }}
-	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }} 
+	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}
