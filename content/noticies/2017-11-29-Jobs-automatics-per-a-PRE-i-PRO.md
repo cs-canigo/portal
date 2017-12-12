@@ -1,6 +1,6 @@
 +++
 date        = "2017-11-29"
-title       = "Jobs automàtics per a PRE i PRO"
+title       = "SIC. Jobs automàtics per a PRE i PRO"
 description = "Des del passat mes de novembre, el SIC està preparat per oferir jobs de desplegament automàtic als entorns de Preproducció i Producció."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
