@@ -2,6 +2,7 @@
 date        = "2017-12-12"
 title       = "SIC. Recordatori de pas de SVN a mode només lectura"
 description = "Us recordem que a partir del 5 de febrer de 2018 el SVN del SIC passarà a mode només lectura. D'aquesta manera, a partir d'aquest dia no es podrà pujar noves versions de codi a aquesta plataforma."
+enllac      = "http://canigo.ctti.gencat.cat/destacats/2017-12-12-Recordatori-svn/"
 sections    = ["sic"]
 key         = "DESEMBRE2017"
 +++
