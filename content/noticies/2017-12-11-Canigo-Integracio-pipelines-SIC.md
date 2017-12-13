@@ -19,7 +19,7 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
   
   * Cal configurar l'aplicació per a que ignori la carpeta amb el resultat de la construcció (Ex. /target), meta-dades de l'Eclipse o IDE utilitzat, i binaris que puguin haver-hi en el codi del projecte. Aquests binaris que formen part de l'aplicació han d'ubicar-se al [Repositori de Binaris del SIC](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/)
 
-* Per la construcció i desplegament amb una pipeline al **Jenkins**: .
+* Per la construcció i desplegament amb una pipeline al **Jenkins**...
 
   * Cal configurar el procés de construcció Maven per a que auto-configuri la versió de l'aplicació al descriptor "sic.yml" que ha d'ubicar-se a ```"<app-canigo>/sic/sic.yml"``` (Més detall en el [HowTo](http://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/)).
   
@@ -33,6 +33,6 @@ A mode de resum, els principals aspectes a tenir en compte són els següents:
   
   * En cas que el frontend de l'aplicació es desenvolupi en un projecte apart del de backend i es desplegui també de forma independent (opció recomanada), cal també incorporar aquest descriptor ```"<frontend>/sic/sic.yml"``` i idealment automatitzar la seva generació
   
-  * Cal especificar a l'equip del SIC les passes per la construcció i desplegament de l'aplicació per a que configurin la pipeline al Jenkins. En el cas del backend Canigó, normalment l'empaquetat estàndard Maven, i per la part de frontend dependrà molt de la tecnologia utilitzada (Angular, React, ...) les quals utilitzaran gestors de paquets com [npm](https://www.npmjs.com/)
+  * Cal especificar a l'equip del SIC les passes per la construcció i desplegament de l'aplicació per a que configurin la pipeline al Jenkins. En el cas del backend Canigó, normalment l'empaquetat estàndard Maven, i per la part de frontend dependrà molt de la tecnologia utilitzada (Angular, React, ...) les quals utilitzaran gestors de paquets com [npm](https://www.npmjs.com/). Aquesta petició de suport s'ha de fer via Remedy al servei "FRAMEWORK SIC"
 
 Per qualsevol dubte relatiu a la integració al SIC d'aplicacions Canigó, us podeu posar en contacte amb el CS Canigó enviant un correu a [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat) o bé fent-nos arribar una petició de consulta/suport al [CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/).
