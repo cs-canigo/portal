@@ -12,7 +12,7 @@ categories  = ["microserveis","monolits"]
 
 Des d'arquitectura CTTI, hem decidit fer una sèrie de posts tractant els principis que han de governar el disseny i la implementació de les noves aplicacions basades en (micro)serveis així com tècniques per tractar el problema tant des del punt de vista tècnic com funcional.
 
-Aquest post serà un hands on tècnic sobre el trencament del monòlits.
+Aquest post serà un hands sobre el trencament del monòlits des d'una vessant tècnica.
 
 ### Monòlit i alternatives
 
@@ -20,15 +20,18 @@ Al post anterior hem parlat dels principis que han de governar el disseny dels s
 
 Un dels principals problemes amb monólits és que tot i que el diseny del monòlit sigui modular i en capes, les proteccions que ofereixen contra l'acoblament lògic són febles i la barrera per introduïr codi acoblat és baixa. Tot i que és posible, amb bones pràctiques, testeig i rigor, evitar l'increment d'acoblament amb el curs del temps, és rarament vist a la pràctica.
 
-Formes de modulització com ara la utilització de llibreries compartides 
+Formes de modularització com ara la utilització de llibreries compartides ajuden a combatre els monòlits. Tot i que llibreries compartides poden tenir sentit, en cas de crear codi per tasques comuns que no son especifiques al domini de negoci per ser reutilitzables sobre la organizació. El problema amb codi compartit és que fàcilment es converteix en un punt d'acoblament. A més, l'adopció de llibreries compartides trenca la heterogeneitat de llenguatges i la independencia del desplegament.
+
+Al mon Java, conscient de la problemàtica amb els monolits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
+
 Sobre els anys han sortit alternatives per oferir una barrera menys feble al voltant dels monolits, com ara OSGI o SOA.
 
 Ara bé SOA
 Java 9 with Jigsaw, tècniques per modularitzar
 When not microservices?
-The less you know the domain, the harder will be to get proper bounded contexts
-Getting service boundaries wrong results in making lots of changes to service2service collaboration (expensive operation)
-Understand domain prior to split into services
+The less you know the domain, the harder will be to get proper bounded contexts -> moure a funcional
+Getting service boundaries wrong results in making lots of changes to service2service collaboration (expensive operation) -> funcional
+Understand domain prior to split into services -> funcional
 Evolutionary architecture 
 
 
@@ -89,5 +92,5 @@ fdfdkla.
 CI/CD
 Postel's law -> tolerant reader
 Conway's law -> Millor part 3: funcional
-Dont allow to coexsit old and new endpoint for long time -> consider merging bot into same service them
+Dont allow to coexist old and new endpoint for long time -> consider merging bot into same service them
 REST best practices
