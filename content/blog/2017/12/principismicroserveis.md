@@ -1,9 +1,9 @@
 +++
-date        = "2017-10-07"
+date        = "2017-12-16"
 title       = "Principis de Microserveis"
-description = "Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis."
-sections    = ["drafts"]
-blog_tags   = ["microserveis"]
+description = "Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d'articles sobre els [microserveis](http://canigo.ctti.gencat.cat/blog/2016/08/microserveis/) i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis."
+sections    = ["Blog", "home"]
+blog_tags   = ["patrons de disseny","microserveis","automatització"]
 categories  = ["microserveis"]
 imatge      = "/images/bloc/Services4.png"
 key         = "DESEMBRE2017"
@@ -11,9 +11,12 @@ key         = "DESEMBRE2017"
 
 
 
+
 ## Principis de Microserveis
 
-Un cop acabada la fase de transformació i posada al dia del maquinari i dels programaris base que suporten les aplicacions de la Generalitat, comencem a observar interès en posar al dia també les aplicacions. En la majoria de casos es posa damunt de la taula la conversió d'aplicacions monòlits cap a aplicacions basades en microserveis. D'aquesta manera es pretén dotar de lleugeresa i adaptabilitat als canvis a aplicacions que acostumen a durar molts més anys que les infraestructures i programaris que les sustenten. En aquest post, presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.
+Un cop acabada la fase de transformació i posada al dia del maquinari i dels programaris base que suporten les aplicacions de la Generalitat, a Arquitectura CTTI comencem a observar interès en posar al dia també les aplicacions. En la majoria de casos es posa damunt de la taula la conversió d'aplicacions monòlits cap a aplicacions basades en microserveis. D'aquesta manera es pretén dotar de lleugeresa i adaptabilitat als canvis a les aplicacions. Aquestes acostumen a durar molts més anys que les infraestructures i programaris que les sustenten. Per tant, gaudir d'aplicacions basades en arquitectures flexibles i que facilitin els canvis esdevé un factor d'èxit decisiu. 
+
+En aquest post, continuem la sèrie d'articles sobre els [microserveis](http://canigo.ctti.gencat.cat/blog/2016/08/microserveis/) i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis. En properes entrades continuarem aprofundint en les arquitectures de microserveis i iniciarem una nova sèrie sobre la Refactorització d'aplicacions.
 
 *Aquest post està basat en una sèrie de ponències i material videogràfic creat per [Sam Newman](http://samnewman.io/)*
 
@@ -45,9 +48,11 @@ Un dels errors que sovint cometen els sistemes distribuïts és el d'acoblar exc
 
 **Com més universals siguin els protocols i la forma de cridar als nostres serveis, millor**. **REST** és potser el paradigma d'aquest principi.
 
-### 4. Descentralitzar totes les coses.
+### 4. Descentralitzar-ho tot.
 
-Com ja s'hi introduïa en la definició, els microserveis han de ser **autosuficients** en recursos i en decissions de disseny. Cada equip que crea microserveis ha d'actuar com un **operador autònom** en les decisions que afecten a la funcionalitat que pretenen cobrir. En el cas de processos de llarga durada, considerar tècniques com l'**orquestració** o la **coreografia** de serveis, implementades com un agregat de microserveis. Una dependència d'altres elements, com una base de dades centralitzada o un bus de serveis trenquen aquest principi de disseny. El microservei necessita doncs d'altres equips i en dependrà de llurs decisions.
+Com ja s'hi introduïa en la definició, els microserveis han de ser **autosuficients** en recursos i en decissions de disseny. Cada equip que crea microserveis ha d'actuar com un **operador autònom** en les decisions que afecten a la funcionalitat que pretenen cobrir. Una dependència d'altres elements, com una capa única de presentació, una base de dades centralitzada, o un bus de serveis, trenquen aquest principi de disseny. El microservei necessitaria doncs d'altres equips i recursos i en dependria de llurs decisions i de la seva disponibilitat. 
+
+En el cas de processos de llarga durada que requereixen la participació de varis microserveis, considerar tècniques com l'**orquestració** o la **coreografia** de serveis, implementades com un agregat de microserveis.
 
 ### 5. Desplegar-los independentment.
 
