@@ -1,11 +1,11 @@
 +++
 date        = "2017-12-16"
 title       = "Principis de Microserveis"
-description = "Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d'articles sobre els [microserveis](http://canigo.ctti.gencat.cat/blog/2016/08/microserveis/) i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis."
+description = "Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d'articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis."
 sections    = ["Blog", "home"]
 blog_tags   = ["patrons de disseny","microserveis","automatitzacio"]
 categories  = ["microserveis"]
-imatge      = "/images/bloc/Services4.png"
+<!--imatge      = "/images/bloc/Services4.png" -->
 key         = "DESEMBRE2017"
 +++
 
