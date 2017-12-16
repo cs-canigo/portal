@@ -5,7 +5,7 @@ description = "Un cop acabada la transformació del maquinari i dels programaris
 sections    = ["Blog", "home"]
 blog_tags   = ["patrons de disseny","microserveis","automatitzacio"]
 categories  = ["microserveis"]
-<!--imatge      = "/images/bloc/Services4.png" -->
+imatge      = "/images/bloc/Services4.png"
 key         = "DESEMBRE2017"
 +++
 
