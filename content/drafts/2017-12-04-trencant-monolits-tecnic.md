@@ -42,7 +42,30 @@ Per això, de vegades, convé més començar per una solució més monolitica i 
 
 Hem decidit transformar el monòlit en (micro)serveis. Perfecte, però per on començar? 
 Michael Feathers al seu llibre "Working effectively with legacy code" defineix el concepte de costura "seam", això és una porció de codi que pot ser tractat en aïllament i treballar en ell sense impactar la resta del codi base. 
-Però que serien bones costures? Els (sub)dominis de negoci o "bounded contexts" són els millors candidats a ser costures
+
+Però que serien bones costures? Els (sub)dominis de negoci o "bounded contexts" són els millors candidats a ser costures.
+
+Llavors, el primer pas seria identificar aquests límits a nivell de codi.
+La majoria dels llenguatges de programació proporcionen conceptes de namespace que ens permet agrupar codi similar tot junt. Tomant com referència Java, el concepte de package seria similar.
+
+Si el monòlit està dividit en múltiples repositoris, es pot agrupar temporalment tot el codi sobre el mateix repositori per fer la nova partició més àgilment. 
+
+Un cop fet això, es pot moure tot el codi i agrupar-ho en base a packages en el cas de Java.
+El codi hauria de representar la nostra organització, i per tant els packages representant els subdominis de la organització haurien d'interactuar de la mateixa forma que els grups organizatius del domini.
+
+Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests unitaris al codebase. Michael Feathers introdueix el "Legacy Code Change Algorithm": (foto)
+
+1. Identify change points
+2. Find test points.
+3. Break dependencies
+4. Write tests
+5. Make changes and refactor
+
+Els tests haurien de ser primordialment a nivell unitari. pag 154..
+Hi ha un antipatró conegut com "test snow cone" o piràmide invertida. Projectes adoptant massa tests de regressió i pocs tests de petit abast. Els tests haurien de ser executats com a part d'integració continua i la natura pròpia del build 
+
+
+
 
 
 graus de granularitat: foto
