@@ -33,22 +33,20 @@ Altra forma de modularització agnòstica del llenguatge és SOA (Service Orient
 ### Què és un microservei?
 
 Al post anterior ja hem tractar sobre que és un microservei i quins són els seus principis (referència). 
-Ara bé, quin seria l'abast d'un microservei? Com de gran? Netflix recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
+Ara bé, quin seria l'abast d'un microservei? Com de gran ha de ser l'equip? Amazon recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
 
-Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és la seva orientació a negoci o disseny guiat a domnini (DDD). Així doncs, quant menys es coneix el domini, més difici será aconseguir delimitar les fronteres entre els diferents serveis.
-Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
-De vegades, convé més començar per una solució més monolitica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
-
-Evolutionary architecture 
-
-2 week work
-2 pizza team
-Owneership
-graus de granularitat: foto
+Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels servies ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més difici será aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
+Per això, de vegades, convé més començar per una solució més monolitica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
 
 ### Per on començar?
 
+Hem decidit transformar el monòlit en (micro)serveis. Perfecte, però per on començar? 
+Michael Feathers al seu llibre "Working effectively with legacy code" defineix el concepte de costura "seam", això és una porció de codi que pot ser tractat en aïllament i treballar en ell sense impactar la resta del codi base. 
+Però que serien bones costures? Els (sub)dominis de negoci o "bounded contexts" són els millors candidats a ser costures
 
+
+graus de granularitat: foto
+Heroku 12 factor
 packages representing context and move code into them -> Test while moving code and refactoring
 Analyze dependencies (structure 101) jdeps in JDK8. Largely improved in JDK9
 No need to sort all code before splitting first service
@@ -100,11 +98,10 @@ REST best practices
 Referències:
 
 Sam Newman - Building Microservices - O'reilly Media (2015)
-Jigsaw: https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-los-modulos-de-java-9-y-maven-proyecto-jigsaw-jsr-376/
-Jigsaw problemes: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
+Jigsaw: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
 Marcuso refactoring: https://github.com/sandromancuso/trip-service-kata
 Michael Feathers - Working effectively with legacy code
 Mark Richards - Microservices vs. Service-Oriented Architecture
-Microserveis 
-https://martinfowler.com/articles/microservices.html
+Definició microserveis: https://martinfowler.com/articles/microservices.html
+Mark Richards - Microservices AntiPatterns and Pitfalls
 
