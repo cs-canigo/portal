@@ -48,33 +48,32 @@ Però que serien bones costures? Els (sub)dominis de negoci o "bounded contexts"
 Llavors, el primer pas seria identificar aquests límits a nivell de codi.
 La majoria dels llenguatges de programació proporcionen conceptes de namespace que ens permet agrupar codi similar tot junt. Tomant com referència Java, el concepte de package seria similar.
 
-Si el monòlit està dividit en múltiples repositoris, es pot agrupar temporalment tot el codi sobre el mateix repositori per fer la nova partició més àgilment. 
+Si el monòlit es troba dividit en múltiples repositoris, es pot agrupar temporalment tot el codi sobre el mateix repositori per fer la nova partició més àgilment. 
 
 Un cop fet això, es pot moure tot el codi i agrupar-ho en base a packages en el cas de Java.
-El codi hauria de representar la nostra organització, i per tant els packages representant els subdominis de la organització haurien d'interactuar de la mateixa forma que els grups organizatius del domini.
+El codi hauria de representar la nostra organització, i per tant els packages representant els subdominis de la organització haurien d'interactuar de la mateixa forma que els grups organizatius del domini. 
 
-Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests unitaris al codebase. Michael Feathers introdueix el "Legacy Code Change Algorithm": (foto)
-
-1. Identify change points
-2. Find test points.
-3. Break dependencies
-4. Write tests
-5. Make changes and refactor
-
-Els tests haurien de ser primordialment a nivell unitari. pag 154..
-Hi ha un antipatró conegut com "test snow cone" o piràmide invertida. Projectes adoptant massa tests de regressió i pocs tests de petit abast. Els tests haurien de ser executats com a part d'integració continua i la natura pròpia del build 
+Durant aquest procés podem utilitzar eines per analitzar les dependències entre aquests packages. Hi ha eines com Structure 101 o jdeps, que vé amb Java 8, que permeten veure dependències entre packages gràficament.
+Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de llínies de codi. Fins i tot podem plantejar separar el primer servei ben abans d'ordenar tot el codi en packages orientats a dominis.
+Un cop organitzat el codi en base a aquestes costures, què fem desprès? Quina costura/servei podem treure primer?
+Hi ha varis factors en base a que podem fer la decisió, un factor força indicatiu és treure la costura que sigui menys independent
 
 
+
+
+Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del "Legacy Code Change Algorithm": 
+
+1. Identificar punts de canvi
+2. Trobar punts de test
+3. Trencar dependències
+4. Escriure tests
+5. Fer canvis i refactoritzar
 
 
 
 graus de granularitat: foto
 Heroku 12 factor
-packages representing context and move code into them -> Test while moving code and refactoring
-Analyze dependencies (structure 101) jdeps in JDK8. Largely improved in JDK9
-No need to sort all code before splitting first service
-We have the seams
-Start pulling out the least tangled dependency
+
 Dont use shared libraries -> favour copy & paste instead
 Now, incremental approach using the algorithm Michael Feathers
 legacy code change algorithm
