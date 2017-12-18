@@ -18,26 +18,28 @@ Aquest post serà un hands sobre el trencament del monòlits des d'una vessant t
 
 Al post anterior hem parlat dels principis que han de governar el disseny dels serveis. Però, val sempre la pena trencar un monòlit? Són tan dolents? Quines alternatives n'hi ha?
 
-Un dels principals problemes amb monólits és que tot i que el diseny del monòlit sigui modular i en capes, les proteccions que ofereixen contra l'acoblament lògic són febles i la barrera per introduïr codi acoblat és baixa. Tot i que és posible, amb bones pràctiques, testeig i rigor, evitar l'increment d'acoblament amb el curs del temps, és rarament vist a la pràctica.
+Un dels principals problemes amb monólits és que tot i que el diseny del monòlit sigui modular i en capes, les proteccions que ofereixen contra l'acoblament lògic són febles i la barrera per introduïr codi acoblat és baixa. Tot i que és posible, amb bones pràctiques, testeig i rigor, evitar l'increment d'acoblament amb el curs del temps, és una cosa rarament vist a la pràctica.
 
 Formes de modularització com ara la utilització de llibreries compartides ajuden a combatre els monòlits. Tot i que llibreries compartides poden tenir sentit, en cas de crear codi per tasques comuns que no son especifiques al domini de negoci per ser reutilitzables sobre la organizació. El problema amb codi compartit és que fàcilment es converteix en un punt d'acoblament. A més, l'adopció de llibreries compartides trenca la heterogeneitat de llenguatges i la independencia del desplegament.
 
-Al mon Java, conscient de la problemàtica amb els monolits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
+El gruix d'aplicatius a la generalitat tenen com a base Java donat que Canigó és en Java. Al mon Java, conscient de la problemàtica amb els monolits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
 
-Sobre els anys han sortit alternatives per oferir una barrera menys feble al voltant dels monolits, com ara OSGI o SOA.
+The Open source Gateway Initiative (OSGI) va néixer com un framework per permetre plugins ser instal.lats a Eclipse de forma desacoblada. Ara, vist l'éxit, s'utilitza per a modularitzar el diseny a aplicacions Java.
+D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del modul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del modul per oferir aillament adequat a nivell de modul. OSGI, encara que sigui utiltzat per bons equips és senzill que es converteixi a una forma de complexitat major que els beneficis que dona.
+Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al propi Java. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt criticisme al seu voltant. (referencia)
 
-Ara bé SOA
-Java 9 with Jigsaw, tècniques per modularitzar
-When not microservices?
-The less you know the domain, the harder will be to get proper bounded contexts -> moure a funcional
-Getting service boundaries wrong results in making lots of changes to service2service collaboration (expensive operation) -> funcional
-Understand domain prior to split into services -> funcional
-Evolutionary architecture 
-
-
-SOA i diferència amb microserveis
+Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una aplicació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. (referència)
 
 ### Què és un microservei?
+
+Al post anterior ja hem tractar sobre que és un microservei i quins són els seus principis (referència). 
+Ara bé, quin seria l'abast d'un microservei? Com de gran? Netflix recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
+
+Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és la seva orientació a negoci o disseny guiat a domnini (DDD). Així doncs, quant menys es coneix el domini, més difici será aconseguir delimitar les fronteres entre els diferents serveis.
+Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
+De vegades, convé més començar per una solució més monolitica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
+
+Evolutionary architecture 
 
 2 week work
 2 pizza team
@@ -94,3 +96,15 @@ Postel's law -> tolerant reader
 Conway's law -> Millor part 3: funcional
 Dont allow to coexist old and new endpoint for long time -> consider merging bot into same service them
 REST best practices
+
+Referències:
+
+Sam Newman - Building Microservices - O'reilly Media (2015)
+Jigsaw: https://www.adictosaltrabajo.com/tutoriales/primeros-pasos-con-los-modulos-de-java-9-y-maven-proyecto-jigsaw-jsr-376/
+Jigsaw problemes: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
+Marcuso refactoring: https://github.com/sandromancuso/trip-service-kata
+Michael Feathers - Working effectively with legacy code
+Mark Richards - Microservices vs. Service-Oriented Architecture
+Microserveis 
+https://martinfowler.com/articles/microservices.html
+
