@@ -91,15 +91,15 @@ Un dels principals problemes amb tests d'integració, ja siguin end-to-end o ser
 ### Trencant el monòlit de la base de dades
 
 Quan parlem del trencament de monólits sovint ens oblidem de tractar el major monólit de tots: la base de dades. 
-Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té 
+Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduïr problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. 
 
-Find seams in the databases -> Difficult process!
-SchemaSpy -> tool to graphically represent relationship between tables
-Break foreign key -> Expose info via API -> will be slower but is it acceptable?
-Shared static data -> Duplicate in each service, treat it as code -> application.properties or move it to own service
-Shared data -> Usually create missing domain concept, exist
-Pag 166 -> staging the break
-First make sure DB separation makes sense, then think splitting out application code into services
+Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
+
+El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines que ens poden ajudar en el procés com ara SchemaSpy que permeten representar gràficament relacions entre taules.
+
+Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, a un nou esquema o fins i tot la solució pasa per unificar 2 serveis per evitar problemes transaccionals. 
+
+S'ha de tenir en compte que al separar la base de dades, 
 Transactional boundaries: 
 Accept eventual consistency as part of the solution for transactions -> Try again later
 Another option is abort operation
