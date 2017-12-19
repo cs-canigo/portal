@@ -62,11 +62,11 @@ Hi ha varis indicadors en base a que podem fer la decisió, ja siguin econòmics
 
 Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del "Legacy Code Change Algorithm" que consta dels següents pasos: 
 
-1. Identificar punts de canvi
-2. Trobar punts de test
-3. Trencar dependències
-4. Escriure tests
-5. Fer canvis i refactoritzar
+>1. Identificar punts de canvi
+>2. Trobar punts de test
+>3. Trencar dependències
+>4. Escriure tests
+>5. Fer canvis i refactoritzar
 
 El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring https://github.com/sandromancuso/trip-service-kata
 
