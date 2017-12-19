@@ -99,16 +99,16 @@ Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa at
 
 El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines que ens poden ajudar en el procés com ara SchemaSpy que permeten representar gràficament relacions entre taules.
 
-Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, a un nou esquema o fins i tot la solució pasa per unificar 2 serveis per evitar problemes transaccionals. 
+Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" on introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
 
-S'ha de tenir en compte que al separar la base de dades, s'ha d'acceptar com a solució la consistència eventual. Segons el teorema del CAP mai podrem tenir consistència, disponibilitat i partició a l'hora. Sam Newman recomana sacrificar consistència sobre disponibilitat. El sistema s'ha de dissenyar o bé tenint en compte la consistència eventual o agrupar serveis a on hi apareguin problemes amb transaccions. Enlloc de plantejar-se una arquitectura CP o AP, té més sentit parlar de serveis individuals CP o AP.
+Al separar la base de dades, s'ha d'acceptar com a solució la consistència eventual. Segons el teorema del CAP mai podrem tenir consistència, disponibilitat i partició a l'hora. Sam Newman recomana sacrificar consistència sobre disponibilitat. El sistema s'ha de dissenyar o bé tenint en compte la consistència eventual o agrupar serveis on hi apareguin problemes amb transaccions. De totes formes, més que plantejar-se una arquitectura CP o AP, té més sentit parlar de serveis individuals CP o AP.
 
 ### Orquestració o coreografia?
 
 Al trencar el monólit segurament hi surtiràn processos de negoci que necesiten de la interacció de multiples serveis.
 Per implementar el fluxe d'interacció entre serveis es pot optar per orquestració (un servei toma la responsabilitat de gestionar i guiar el procés, com un director d'orquestra) o bé per coreografia, on els serveis reaccionen i s'autogestionen en base a accions dels altres serveis.
 La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia.
-La comunicació entre serveis hauria de ser preferentment orientada a events i asíncrona. Tot i això el middleware per gestionar els events s'hauria de mantenir simple i ficar tota la "inteligència" als endpoints del serveis. Llibreries com Akka que implementa el paradigma de actor model poden ser un ajut molt important a l'hora d'implementar solucions asíncrones basades en events.
+La comunicació entre serveis hauria de ser preferentment orientada a events i asíncrona. Tot i això el middleware per gestionar els events s'hauria de mantenir simple i ficar tota la "inteligència" als endpoints del serveis. Resulta temptador afegir funcionalitat extra al middleware i que es converteixi en un Enterprise Service Bus. Llibreries com Akka que implementa el paradigma de actor model poden ser un ajut molt important a l'hora d'implementar solucions asíncrones basades en events.
 
 ### Més enllà
 
