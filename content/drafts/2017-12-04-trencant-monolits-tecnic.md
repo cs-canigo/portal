@@ -99,11 +99,7 @@ El trencament de monòlits de base de dades és conceptualment molt similar al d
 
 Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, a un nou esquema o fins i tot la solució pasa per unificar 2 serveis per evitar problemes transaccionals. 
 
-S'ha de tenir en compte que al separar la base de dades, 
-Transactional boundaries: 
-Accept eventual consistency as part of the solution for transactions -> Try again later
-Another option is abort operation
-Distributed transactions -> two-phase commit -> catches most failure cases but not foolproof
+S'ha de tenir en compte que al separar la base de dades, s'ha d'acceptar com a solució la consistència eventual. Segons el teorema del CAP mai podrem tenir consistència, disponibilitat i partició a l'hora. Sam Newman recomana sacrificar consistència sobre disponibilitat. El sistema s'ha de dissenyar o bé tenint en compte la consistència eventual o agrupar serveis a on hi apareguin problemes amb transaccions. Enlloc de plantejar-se una arquitectura CP o AP, té més sentit parlar de serveis individuals CP o AP.
 
 ### Orquestració o coreografia?
 
@@ -112,14 +108,7 @@ fdfdkla.
 graus de granularitat: foto
 
 
-### Evolució
-CI/CD
-Heroku 12 factor
-Swagger and HAL for documenting API (functional)
-Postel's law -> tolerant reader (maybe functional too)
-Conway's law -> Millor part 3: funcional
-Dont allow to coexist old and new endpoint for long time -> consider merging bot into same service them
-REST best practices
+Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduïrem tècniques per descomposar el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
 
 Referències:
 
