@@ -85,12 +85,14 @@ S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necess
 
 Sam Newman proposa per descomposició de monòlits una estructura de tests sent el 90% unitaris, 9% de servei i 1% de end-to-end o potser menys del darrer. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
 
-Un dels principals problemes amb tests d'integració, ja siguin end-to-end o servei, és que el número d'escenaris creix exponencialment per cada nou servei. "Consumer-driven test" és un nou concepte molt orientat a (micro)serveis que testeja que canvis a un servei existent o un nou servei no trenca els seus consumidors. Això s'aconsegueix definint les expectatives dels consumidors als serveis. Per interaccions amb altres serveis s'utilitzen mocks o stubs. Hi ha eines disponibles com ara Pact de RealEstate.com.au o Pacto de Thoughtworks. Pacto confia que les expectatives siguin més o menys fixes durant tot el cicle del projecte mentre que Pact recrea les expectatives al consumidor a cada build.
+Un dels principals problemes amb tests d'integració, ja siguin end-to-end o servei, és que el número d'escenaris a testejar creix exponencialment per cada nou servei. "Consumer-driven test" és un nou concepte molt orientat a (micro)serveis que testeja si canvis a un servei existent o un nou servei trenca els consumidors. Això s'aconsegueix definint les expectatives dels consumidors als serveis. Per interaccions amb altres serveis s'utilitzen mocks o stubs. Hi ha eines disponibles com ara Pact de RealEstate.com.au o Pacto de Thoughtworks. Pacto confia que les expectatives siguin més o menys fixes durant tot el cicle del projecte mentre que Pact recrea les expectatives al consumidor a cada build.
 
 
 ### Trencant el monòlit de la base de dades
 
 Quan parlem del trencament de monólits sovint ens oblidem de tractar el major monólit de tots: la base de dades. 
+Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té 
+
 Find seams in the databases -> Difficult process!
 SchemaSpy -> tool to graphically represent relationship between tables
 Break foreign key -> Expose info via API -> will be slower but is it acceptable?
@@ -108,11 +110,12 @@ Distributed transactions -> two-phase commit -> catches most failure cases but n
 fdfdkla. 
 
 graus de granularitat: foto
-Heroku 12 factor
-Swagger and HAL for documenting API (functional)
+
 
 ### Evolució
 CI/CD
+Heroku 12 factor
+Swagger and HAL for documenting API (functional)
 Postel's law -> tolerant reader (maybe functional too)
 Conway's law -> Millor part 3: funcional
 Dont allow to coexist old and new endpoint for long time -> consider merging bot into same service them
