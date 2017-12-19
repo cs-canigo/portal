@@ -74,7 +74,7 @@ El com executar un refactoring efectiu i les seves diverses tècniques s'escapen
 Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
 Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara security.jar o dateutils.jar. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar polítiques de versionat semàntic. 
 
-### Testeig
+### Testing
 
 Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però què testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
 De fet necessitarem de tot tipus per assegurar que la integració és coherent a tots els nivells. 
@@ -84,7 +84,7 @@ Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de te
 La part d'adalt del quadrant està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i com ajuda als desenvolupadors a crear el sistema.
 S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necessitats i que tots tenen trade-offs. 
 
-Sam Newman proposa per descomposició de monòlits una estructura de tests sent el 90% unitaris, 9% de servei i 1% de end-to-end o potser menys del darrer. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
+Sam Newman proposa per descomposició de monòlits una estructura de tests del 90% unitaris, 9% de servei i 1% o inclús menys de end-to-end. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
 
 Un dels principals problemes amb tests d'integració, ja siguin end-to-end o servei, és que el número d'escenaris a testejar creix exponencialment per cada nou servei. "Consumer-driven test" és un nou concepte molt orientat a (micro)serveis que testeja si canvis a un servei existent o un nou servei trenca els consumidors. Això s'aconsegueix definint les expectatives dels consumidors als serveis. Per interaccions amb altres serveis s'utilitzen mocks o stubs. Hi ha eines disponibles com ara Pact de RealEstate.com.au o Pacto de Thoughtworks. Pacto confia que les expectatives siguin més o menys fixes durant tot el cicle del projecte mentre que Pact recrea les expectatives al consumidor a cada build.
 
@@ -98,7 +98,7 @@ Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base
 
 Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
 
-El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines que ens poden ajudar en el procés com ara SchemaSpy que permeten representar gràficament relacions entre taules.
+El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines, com ara SchemaSpy, que ens poden ajudar en el procés representant gràficament relacions entre taules.
 
 Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" on introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
 
