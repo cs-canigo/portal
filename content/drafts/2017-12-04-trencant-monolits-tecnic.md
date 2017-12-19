@@ -116,11 +116,12 @@ Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. 
 
 Referències:
 
-Sam Newman - Building Microservices - O'reilly Media (2015)
-Jigsaw: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
-Marcuso refactoring: https://github.com/sandromancuso/trip-service-kata
-Michael Feathers - Working effectively with legacy code
-Mark Richards - Microservices vs. Service-Oriented Architecture
+Sam Newman - Building Microservices (2015)
+Michael Feathers - Working effectively with legacy code (2002)
+Mark Richards - Microservices vs. Service-Oriented Architecture (2017)
+Mark Richards - Microservices AntiPatterns and Pitfalls (2017)
+Scott J. Ambler - Refactoring Databases (2006)
+
+Critiques sobre Jigsaw: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
+Sandro Marcuso (refactoring): https://github.com/sandromancuso/trip-service-kata
 Definició microserveis: https://martinfowler.com/articles/microservices.html
-Mark Richards - Microservices AntiPatterns and Pitfalls
-Scott J. Ambler - Refactoring Databases
