@@ -54,7 +54,9 @@ Un cop fet això, es pot moure tot el codi i agrupar-ho en base a packages en el
 El codi hauria de representar la nostra organització, i per tant els packages representant els subdominis de la organització haurien d'interactuar de la mateixa forma que els grups organizatius del domini. 
 
 Durant aquest procés podem utilitzar eines per analitzar les dependències entre aquests packages. Hi ha eines com Structure 101 o jdeps, que vé amb Java 8, que permeten veure dependències entre packages gràficament.
-Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de llínies de codi. Fins i tot podem plantejar separar el primer servei ben abans d'ordenar tot el codi en packages orientats a dominis.
+
+Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de llínies de codi. Fins i tot podem plantejar extreure el primer (micro)servei ben abans d'ordenar tot el codi en packages orientats a dominis.
+
 Un cop organitzat el codi en base a aquestes costures, què fem desprès? Quina costura/servei podem treure primer?
 Hi ha varis indicadors en base a que podem fer la decisió, ja siguin econòmics o estructurals. En cas de no tenir indicador clar un factor força indicatiu és treure la costura que sigui menys enredada al reste.
 
