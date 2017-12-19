@@ -91,7 +91,10 @@ Un dels principals problemes amb tests d'integració, ja siguin end-to-end o ser
 ### Trencant el monòlit de la base de dades
 
 Quan parlem del trencament de monólits sovint ens oblidem de tractar el major monólit de tots: la base de dades. 
-Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduïr problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. 
+Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduïr problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. A la figura de a sota es mostra diferents graus de granularitat de serveis, el verd seria el nivell de granularitat desitjat mentre que als extrems ens trobem amb problemes com monòlits o nanoserveis.
+
+(figura de granularitat de serveis)
+
 
 Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
 
@@ -103,9 +106,9 @@ S'ha de tenir en compte que al separar la base de dades, s'ha d'acceptar com a s
 
 ### Orquestració o coreografia?
 
-fdfdkla. 
+xxx
 
-graus de granularitat: foto
+
 
 
 Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduïrem tècniques per descomposar el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
