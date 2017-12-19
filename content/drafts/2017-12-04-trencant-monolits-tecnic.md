@@ -84,7 +84,8 @@ La part d'adalt del quadrant està orientada a gent més funcional i de negoci m
 S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necessitats i que tots tenen trade-offs. 
 
 Sam Newman proposa per descomposició de monòlits una estructura de tests sent el 90% unitaris, 9% de servei i 1% de end-to-end o potser menys del darrer. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
-Per la part de tests d'integració ja siguin end-to-end or serveiha sortit un nou concepte de testeig per adreçar molts del seus problemes: consumer-driven test
+Un dels principals problemes amb tests d'integració, ja siguin end-to-end o servei, és que el número d'escenaris creix exponencialment per cada nou servei. "Consumer-driven test" és un nou concepte molt orientat a (micro)serveis que testeja que canvis a un servei existent o un nou servei no trenca els seus consumidors. Això s'aconsegueix definint les expectatives dels consumidors als serveis. Les expectatives  Hi ha eines disponibles com ara pact o pacto de thoughtworks 
+
 
 
 
