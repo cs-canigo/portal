@@ -74,7 +74,15 @@ Un darrer punt a tenir en compte és la utilització de llibreries compartides. 
 
 ### Testeig
 
-Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però que testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
+Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però què testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
+De fet necessitarem de tot tipus per assegurar que la integració és coherent a tots els nivells. 
+Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de testeig i què cobreix cada test 
+ (AFEGIR QUADRANT PAG 232 LLIBRE)
+ 
+La part d'adalt està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i ajuda als desenvolupadors a crear el sistema.
+S'ha d'entendre que no hi ha un tipus únic de test i que tots tenen trade-offs (pag 240)
+
+
 
 fd ??
 Stub vs mock -> preferir stub
