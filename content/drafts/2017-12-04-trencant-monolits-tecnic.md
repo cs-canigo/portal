@@ -95,7 +95,6 @@ Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base
 
 (figura de granularitat de serveis)
 
-
 Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
 
 El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines que ens poden ajudar en el procés com ara SchemaSpy que permeten representar gràficament relacions entre taules.
@@ -106,10 +105,12 @@ S'ha de tenir en compte que al separar la base de dades, s'ha d'acceptar com a s
 
 ### Orquestració o coreografia?
 
-xxx
+Al trencar el monólit segurament hi surtiràn processos de negoci que necesiten de la interacció de multiples serveis.
+Per implementar el fluxe d'interacció entre serveis es pot optar per orquestració (un servei toma la responsabilitat de gestionar i guiar el procés, com un director d'orquestra) o bé per coreografia, on els serveis reaccionen i s'autogestionen en base a accions dels altres serveis.
+La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia.
+La comunicació entre serveis hauria de ser preferentment orientada a events i asíncrona. Tot i això el middleware per gestionar els events s'hauria de mantenir simple i ficar tota la "inteligència" als endpoints del serveis. Llibreries com Akka que implementa el paradigma de actor model poden ser un ajut molt important a l'hora d'implementar solucions asíncrones basades en events.
 
-
-
+### Més enllà
 
 Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduïrem tècniques per descomposar el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
 
