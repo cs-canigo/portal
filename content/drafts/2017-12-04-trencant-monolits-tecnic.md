@@ -28,7 +28,7 @@ The Open source Gateway Initiative (OSGI) va néixer com un framework per permet
 D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del modul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del modul per oferir aillament adequat a nivell de modul. OSGI, encara que sigui utiltzat per bons equips és senzill que es converteixi a una forma de complexitat major que els beneficis que dona.
 Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al propi Java. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt criticisme al seu voltant. (referencia)
 
-Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una aplicació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. (referència)
+Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. (referència)
 
 ### Què és un microservei?
 
@@ -36,6 +36,7 @@ Al post anterior ja hem tractar sobre que és un microservei i quins són els se
 Ara bé, quin seria l'abast d'un microservei? Com de gran ha de ser l'equip? Amazon recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
 
 Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels servies ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més difici será aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
+
 Per això, de vegades, convé més començar per una solució més monolitica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
 
 ### Per on començar?
@@ -68,10 +69,10 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 >4. Escriure tests
 >5. Fer canvis i refactoritzar
 
-El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring https://github.com/sandromancuso/trip-service-kata
+El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring (referència)
 
 Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
-Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara security.jar o dateutils.jar 
+Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara security.jar o dateutils.jar. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar polítiques de versionat semàntic. 
 
 ### Testeig
 
