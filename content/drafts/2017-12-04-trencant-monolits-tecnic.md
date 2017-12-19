@@ -56,12 +56,9 @@ El codi hauria de representar la nostra organització, i per tant els packages r
 Durant aquest procés podem utilitzar eines per analitzar les dependències entre aquests packages. Hi ha eines com Structure 101 o jdeps, que vé amb Java 8, que permeten veure dependències entre packages gràficament.
 Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de llínies de codi. Fins i tot podem plantejar separar el primer servei ben abans d'ordenar tot el codi en packages orientats a dominis.
 Un cop organitzat el codi en base a aquestes costures, què fem desprès? Quina costura/servei podem treure primer?
-Hi ha varis factors en base a que podem fer la decisió, un factor força indicatiu és treure la costura que sigui menys independent
+Hi ha varis indicadors en base a que podem fer la decisió, ja siguin econòmics o estructurals. En cas de no tenir indicador clar un factor força indicatiu és treure la costura que sigui menys enredada al reste.
 
-
-
-
-Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del "Legacy Code Change Algorithm": 
+Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del "Legacy Code Change Algorithm" que consta dels següents pasos: 
 
 1. Identificar punts de canvi
 2. Trobar punts de test
@@ -69,26 +66,20 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 4. Escriure tests
 5. Fer canvis i refactoritzar
 
+El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring https://github.com/sandromancuso/trip-service-kata
 
+Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis.
 
-graus de granularitat: foto
-Heroku 12 factor
+### Testeig
 
-Dont use shared libraries -> favour copy & paste instead
-Now, incremental approach using the algorithm Michael Feathers
-legacy code change algorithm
-http://agileinaflash.blogspot.com.es/2009/03/legacy-code-change-algorithm.html
+Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però que testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
 
-### Testing
 fd ??
 Stub vs mock -> preferir stub
 e2e regression test are expensive and slow and not symmetrical 
 Pyramid of testing (picture)
 Swagger and HAL for documenting API
 CDC (consumer-driven-contract) -> pact or pacto
-
-### Integració
-
 
 ### Trencant el monolit de la base de dades
 
@@ -109,10 +100,14 @@ Distributed transactions -> two-phase commit -> catches most failure cases but n
 
 fdfdkla. 
 
+graus de granularitat: foto
+Heroku 12 factor
+
+
 
 ### Evolució
 CI/CD
-Postel's law -> tolerant reader
+Postel's law -> tolerant reader (maybe functional too)
 Conway's law -> Millor part 3: funcional
 Dont allow to coexist old and new endpoint for long time -> consider merging bot into same service them
 REST best practices
@@ -126,4 +121,4 @@ Michael Feathers - Working effectively with legacy code
 Mark Richards - Microservices vs. Service-Oriented Architecture
 Definició microserveis: https://martinfowler.com/articles/microservices.html
 Mark Richards - Microservices AntiPatterns and Pitfalls
-
+Scott J. Ambler - Refactoring Databases
