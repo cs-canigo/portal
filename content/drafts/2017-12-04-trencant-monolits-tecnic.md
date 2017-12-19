@@ -70,17 +70,22 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 
 El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring https://github.com/sandromancuso/trip-service-kata
 
-Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis.
+Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
+Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara security.jar o dateutils.jar 
 
 ### Testeig
 
 Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però què testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
 De fet necessitarem de tot tipus per assegurar que la integració és coherent a tots els nivells. 
-Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de testeig i què cobreix cada test 
+Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de testeig i què cobreix cada tipus de test 
  (AFEGIR QUADRANT PAG 232 LLIBRE)
  
-La part d'adalt està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i ajuda als desenvolupadors a crear el sistema.
-S'ha d'entendre que no hi ha un tipus únic de test i que tots tenen trade-offs (pag 240)
+La part d'adalt del quadrant està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i com ajuda als desenvolupadors a crear el sistema.
+S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necessitats i que tots tenen trade-offs. 
+
+Sam Newman proposa per descomposició de monòlits una estructura de tests sent el 90% unitaris, 9% de servei i 1% de end-to-end o potser menys del darrer. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
+Per la part de tests d'integració ja siguin end-to-end or serveiha sortit un nou concepte de testeig per adreçar molts del seus problemes: consumer-driven test
+
 
 
 
