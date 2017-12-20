@@ -20,6 +20,7 @@ Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a t
 
 ```
 <canigo.security.version>[1.2.0, 1.3.0)</canigo.security.version>
+<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
@@ -27,6 +28,77 @@ Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a t
 	<version>${canigo.security.version}</version>
 </dependency>
 
+<dependency>
+	<groupId>cat.gencat.ctti</groupId>
+	<artifactId>canigo.test</artifactId>
+	<version>${canigo.test.version}</version>
+	<scope>test</scope>
+</dependency>
+
+<dependency>
+   <groupId>cat.gencat.ctti</groupId>
+   <artifactId>canigo.security</artifactId>
+   <type>test-jar</type>
+   <version>${canigo.security.version}</version>
+   <scope>test</scope>
+   <classifier>tests</classifier>
+</dependency>
+
+```
+Al pom.xml també s'ha d'afegir el plugin executa el test unitari del mòdul de seguretat. 
+En el cas de tenir configurat l'execució del test dels mòduls de configuració i/o persistència,
+cal excloure la dependència del mòdul de seguretat per tal d'evitar conflictes:
+```
+<build>
+	...
+	<plugins>
+		...
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>base-test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                    <configuration>
+                        <dependenciesToScan>
+		          <dependency>cat.gencat.ctti:canigo.core</dependency>
+		          <dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
+			  <dependency>cat.gencat.ctti:canigo.web.rs</dependency>
+                        </dependenciesToScan>
+			<excludes>
+			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
+			<classpathDependencyExcludes>
+			  <classpathDependencyExcludes>cat.gencat.ctti:canigo.security</classpathDependencyExcludes>
+			</classpathDependencyExcludes>
+                    </configuration>
+                </execution>
+                <execution>
+                    <id>cat.gencat.ctti:canigo.security-test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                    <configuration>
+                        <dependenciesToScan>
+                          <dependency>cat.gencat.ctti:canigo.security</dependency>
+                        </dependenciesToScan>
+			<excludes>
+			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
+                    </configuration>
+                </execution>
+                ...
+            </executions>
+        </plugin>
+		...
+	</plugins>
+	...
+</build>	
 ```
 
 ### Configuració

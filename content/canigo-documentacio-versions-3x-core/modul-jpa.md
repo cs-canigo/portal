@@ -19,19 +19,39 @@ Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sob
 
 ### Instal·lació
 
-Per tal d'instal·lar el mòdul de persistència es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
+En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
 <canigo.persistence.jpa.version>[1.2.0,1.3.0)</canigo.persistence.jpa.version>
+<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
- <groupId>cat.gencat.ctti</groupId>
- <artifactId>canigo.persistence.jpa</artifactId>
- <version>${canigo.persistence.jpa.version}</version>
+	<groupId>cat.gencat.ctti</groupId>
+	<artifactId>canigo.persistence.jpa</artifactId>
+	<version>${canigo.persistence.jpa.version}</version>
+</dependency>
+
+<dependency>
+	<groupId>cat.gencat.ctti</groupId>
+	<artifactId>canigo.test</artifactId>
+	<version>${canigo.test.version}</version>
+	<scope>test</scope>
+</dependency>
+
+<dependency>
+   <groupId>cat.gencat.ctti</groupId>
+   <artifactId>canigo.persistence.jpa</artifactId>
+   <type>test-jar</type>
+   <version>${canigo.persistence.jpa.version}</version>
+   <scope>test</scope>
+   <classifier>tests</classifier>
 </dependency>
 ```
 
-Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/):
+Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
+el que executa el test unitari del mòdul de persistència:
 ```
 <build>
 	...
@@ -54,11 +74,35 @@ Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres
 				</execution>
 			</executions>
 		</plugin>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<executions>
+				<execution>
+		            <id>base-test</id>
+		            <phase>test</phase>
+		            <goals>
+		                <goal>test</goal>
+		            </goals>
+		            <configuration>
+		            	<dependenciesToScan>
+		            		<dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
+		            		...
+				</dependenciesToScan>
+				<excludes>
+					<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+				</excludes>
+			    </configuration>
+		        </execution>
+		        ...
+	        </executions>
+		</plugin>
 		...
 	</plugins>
 	...
 </build>	
 ```
+
 ### Configuració
 
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament (plugin de Canigó per a Eclipse)

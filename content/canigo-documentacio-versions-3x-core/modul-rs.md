@@ -22,16 +22,70 @@ Tot el contingut es serveix en format JSON.
 
 ### Instal·lació
 
-Per tal d'instal·lar el Mòdul RS, aquest es pot incloure automàticament a través de l'eina de suport al desenvolupament (plugin Eclipse) o bé afegint manualment en el pom.xml de l'aplicació la següent dependència:
+El mòdul RS i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
+En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-<canigo.web.rs.version>[1.0.0,1.1.0)</canigo.web.rs.version>
+<canigo.web.rs.version>[1.1.0,1.2.0)</canigo.web.rs.version>
+<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
  <groupId>cat.gencat.ctti</groupId>
  <artifactId>canigo.web.rs</artifactId>
  <version>${canigo.web.rs.version}</version>
 </dependency>
+
+<dependency>
+	<groupId>cat.gencat.ctti</groupId>
+	<artifactId>canigo.test</artifactId>
+	<version>${canigo.test.version}</version>
+	<scope>test</scope>
+</dependency>
+
+<dependency>
+   <groupId>cat.gencat.ctti</groupId>
+   <artifactId>canigo.web.rs</artifactId>
+   <type>test-jar</type>
+   <version>${canigo.web.rs.version}</version>
+   <scope>test</scope>
+   <classifier>tests</classifier>
+</dependency>
+```
+
+Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul RS:
+```
+<build>
+    ...
+    <plugins>
+        ...
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>base-test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                    <configuration>
+                        <dependenciesToScan>
+                            <dependency>cat.gencat.ctti:canigo.web.rs</dependency>
+                            ...
+                        </dependenciesToScan>
+			<excludes>
+                            <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
+                    </configuration>
+                </execution>
+                ...
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+    ...
+</build>    
 ```
 ### Configuració
 

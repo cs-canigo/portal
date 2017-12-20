@@ -35,23 +35,71 @@ Per aplicacions Canigó 3.2 que utilitzin Spring Boot, normalment noves aplicaci
 
 ### Instal.lació
 
-El mòdul de configuració s'inclou per defecte dins del core de Canigó 3.
-Durant el procés de creació de l'aplicació, l'eina de
-suport al desenvolupament inclourà la referència dins del pom.xml. En
-cas d'una instal- lació manual afegir les següents línies al pom.xml de
-l'aplicació:
+El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
+En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```xml
 <canigo.core.version>[3.2.0,3.3.0)</canigo.core.version>
+<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
-          <groupId>cat.gencat.ctti</groupId>
-          <artifactId>canigo.core</artifactId>
-          <version>${canigo.core.version}</version>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.core</artifactId>
+    <version>${canigo.core.version}</version>
+</dependency>
+
+<dependency>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.test</artifactId>
+    <version>${canigo.test.version}</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>cat.gencat.ctti</groupId>
+    <artifactId>canigo.core</artifactId>
+    <type>test-jar</type>
+    <version>${canigo.core.version}</version>
+    <scope>test</scope>
+    <classifier>tests</classifier>
 </dependency>
 ```
 
-\
+Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul de configuració:
+```
+<build>
+    ...
+    <plugins>
+        ...
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <executions>
+                <execution>
+                    <id>base-test</id>
+                    <phase>test</phase>
+                    <goals>
+                        <goal>test</goal>
+                    </goals>
+                    <configuration>
+                        <dependenciesToScan>
+                            <dependency>cat.gencat.ctti:canigo.core</dependency>
+                            ...
+                        </dependenciesToScan>
+			<excludes>
+				<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+			</excludes>
+                    </configuration>
+                </execution>
+                ...
+            </executions>
+        </plugin>
+        ...
+    </plugins>
+    ...
+</build>    
+```
 
 ### Configuració
 
