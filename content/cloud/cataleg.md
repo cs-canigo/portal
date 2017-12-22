@@ -90,7 +90,7 @@ default_versions:
 En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades a [DockerHub](https://hub.docker.com/r/gencatcloud/).
 
 **Element**  | **Versió (1) (2)**   | **Docker**
------------- | ------------ |----------- | --------------------
+------------ | ------------ |-----------
 Apache 		 | actual FRP    | https://hub.docker.com/r/gencatcloud/httpd/
 Apache GICAR | 2.0    | Demanar a [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat)    | -
 HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/
