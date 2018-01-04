@@ -118,18 +118,15 @@ Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. 
 
 Referències:
 
-## jigsaw 
 Sam Newman: "Building Microservices (2015)"
 [http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078]
 (http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078)
 
-## ref2
 Michael Feathers: "Working effectively with legacy code (2002)"
 {https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code]
 (https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code)
 
-## ref3
-Mark Richards:  "Microservices vs. Service-Oriented Architecture (2017)"
+<a name="msvssoa"></a>Mark Richards:  "Microservices vs. Service-Oriented Architecture (2017)"
 [https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture]
 (https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture)
 
@@ -141,7 +138,7 @@ Scott J. Ambler:  "Refactoring Databases (2006)"
 [https://www.goodreads.com/book/show/161302.Refactoring_Databases]
 (https://www.goodreads.com/book/show/161302.Refactoring_Databases)
 
-Critiques sobre Jigsaw
+<a name="jigsaw"></a>Crítiques sobre Jigsaw
 [https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns]
 (https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns)
 
