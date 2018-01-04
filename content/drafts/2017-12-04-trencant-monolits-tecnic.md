@@ -1,6 +1,6 @@
 +++
 date        = "2017-12-04"
-title       = "De monolits a (micro)serveis - Part 1: Descomposició tècnica"
+title       = "De monòlits a (micro)serveis - Part 1: Descomposició tècnica"
 description = "Com trencar un monòlit des del punt de vista tècnic"
 sections    = ["drafts"]
 categories  = ["microserveis","monolits"]
@@ -25,8 +25,8 @@ Formes de modularització com ara la utilització de llibreries compartides ajud
 El gruix d'aplicatius a la generalitat tenen com a base Java donat que Canigó és en Java. Al mon Java, conscient de la problemàtica amb els monolits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
 
 The Open source Gateway Initiative (OSGI) va néixer com un framework per permetre plugins ser instal.lats a Eclipse de forma desacoblada. Ara, vist l'éxit, s'utilitza per a modularitzar el diseny a aplicacions Java.
-D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del modul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del modul per oferir aillament adequat a nivell de modul. OSGI, encara que sigui utiltzat per bons equips és senzill que es converteixi a una forma de complexitat major que els beneficis que dona.
-Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al propi Java. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt [criticisme al seu voltant.](#jigsaw)
+D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del mòdul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del mòdul per oferir aîllament adequat a nivell de mòdul. A OSGI resulta senzill, tot i que sigui utiltzat per bons equips, que la complexitat introduîda per la seva gestió sigui major que els beneficis que aporta.
+Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al refactoring del propi Java i la seva JDK. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt [criticisme al seu voltant.](#jigsaw)
 
 Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. [MSvsSOA](#msvssoa)
 
