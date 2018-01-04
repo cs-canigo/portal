@@ -70,7 +70,7 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 >4. Escriure tests
 >5. Fer canvis i refactoritzar
 
-El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el [refactoring](#refactoring)
+El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el [refactoring.](#refactoring)
 
 Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
 Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara **security.jar** o **dateutils.jar**. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar [polítiques de versionat semàntic](#semver). 
@@ -110,7 +110,10 @@ Al separar la base de dades, s'ha d'acceptar com a solució la consistència eve
 
 Al trencar el monólit segurament hi surtiràn processos de negoci que necesiten de la interacció de multiples serveis.
 Per implementar el fluxe d'interacció entre serveis es pot optar per orquestració (un servei toma la responsabilitat de gestionar i guiar el procés, com un director d'orquestra) o bé per coreografia, on els serveis reaccionen i s'autogestionen en base a accions dels altres serveis.
-La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia.
+La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia. La seguënt imatge mostra gràficament com canvia l'acoblament entre serveis si s'utilitza orquestració o coreografia:
+
+![Orquestració vs coreografia](/images/bloc/201801/oc.png)
+
 La comunicació entre serveis hauria de ser preferentment orientada a events i asíncrona. Tot i això el middleware per gestionar els events s'hauria de mantenir simple i ficar tota la "intel.ligència" als endpoints del serveis. Tot i que resulti temptador afegir funcionalitat extra al middleware, s'ha d'evitar aquest procés. Les APIs del serveis han de ser el producte final i s'ha d'escapar de [plantejaments que adoptin ESB](#msvssoa) (Enterprise Service Bus). Llibreries com Akka que implementa el paradigma de actor model poden ser un ajut molt important a l'hora d'implementar solucions asíncrones basades en events.
 
 ### Més enllà
