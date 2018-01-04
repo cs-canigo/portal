@@ -36,9 +36,9 @@ Al post anterior ja hem tractar sobre que és un microservei i quins són els se
 
 Ara bé, quin seria l'abast d'un microservei? Com de gran ha de ser l'equip? Amazon recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
 
-Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels serveis ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més difici será aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
+Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels serveis ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més dificil serà aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
 
-Per això, de vegades, convé més començar per una solució més monolitica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
+Per això, de vegades, convé més començar per una solució més monolítica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
 
 ### Per on començar?
 
