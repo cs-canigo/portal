@@ -26,9 +26,9 @@ El gruix d'aplicatius a la generalitat tenen com a base Java donat que Canigó �
 
 The Open source Gateway Initiative (OSGI) va néixer com un framework per permetre plugins ser instal.lats a Eclipse de forma desacoblada. Ara, vist l'éxit, s'utilitza per a modularitzar el diseny a aplicacions Java.
 D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del modul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del modul per oferir aillament adequat a nivell de modul. OSGI, encara que sigui utiltzat per bons equips és senzill que es converteixi a una forma de complexitat major que els beneficis que dona.
-Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al propi Java. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt criticisme al seu voltant. (referencia)
+Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al propi Java. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt criticisme al seu voltant. [Jigsaw](#jigsaw)
 
-Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. (referència)
+Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. [MSvsSOA](#msvssoa)
 
 ### Què és un microservei?
 
@@ -79,7 +79,8 @@ Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar q
 Abans hem parlat del "Legacy code change algorithm" i la importància del testing a l'hora de fer refactoring. Però què testejar exactament? A quin nivell? End-to-end tests? Regressió? Unitaris?
 De fet necessitarem de tot tipus per assegurar que la integració és coherent a tots els nivells. 
 Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de testeig i què cobreix cada tipus de test 
- (AFEGIR QUADRANT PAG 232 LLIBRE)
+
+![Quadrants de tests](/images/bloc/201801/tipustests.png)
  
 La part d'adalt del quadrant està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i com ajuda als desenvolupadors a crear el sistema.
 S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necessitats i que tots tenen trade-offs. 
@@ -94,7 +95,7 @@ Un dels principals problemes amb tests d'integració, ja siguin end-to-end o ser
 Quan parlem del trencament de monólits sovint ens oblidem de tractar el major monólit de tots: la base de dades. 
 Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduïr problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. A la figura de a sota es mostra diferents graus de granularitat de serveis, el verd seria el nivell de granularitat desitjat mentre que als extrems ens trobem amb problemes com monòlits o nanoserveis.
 
-(figura de granularitat de serveis)
+![Granularitats de serveis](/images/bloc/201801/granularitatserveis.png)
 
 Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
 
@@ -117,12 +118,37 @@ Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. 
 
 Referències:
 
-Sam Newman - Building Microservices (2015)
-Michael Feathers - Working effectively with legacy code (2002)
-Mark Richards - Microservices vs. Service-Oriented Architecture (2017)
-Mark Richards - Microservices AntiPatterns and Pitfalls (2017)
-Scott J. Ambler - Refactoring Databases (2006)
+## jigsaw 
+Sam Newman: "Building Microservices (2015)"
+[http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078]
+(http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078)
 
-Critiques sobre Jigsaw: https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns
-Sandro Marcuso (refactoring): https://github.com/sandromancuso/trip-service-kata
-Definició microserveis: https://martinfowler.com/articles/microservices.html
+## ref2
+Michael Feathers: "Working effectively with legacy code (2002)"
+{https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code]
+(https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code)
+
+## ref3
+Mark Richards:  "Microservices vs. Service-Oriented Architecture (2017)"
+[https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture]
+(https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture)
+
+Mark Richards: "Microservices AntiPatterns and Pitfalls (2017)"
+[http://www.oreilly.com/programming/free/files/microservices-antipatterns-and-pitfalls.pdf]
+(http://www.oreilly.com/programming/free/files/microservices-antipatterns-and-pitfalls.pdf)
+
+Scott J. Ambler:  "Refactoring Databases (2006)"
+[https://www.goodreads.com/book/show/161302.Refactoring_Databases]
+(https://www.goodreads.com/book/show/161302.Refactoring_Databases)
+
+Critiques sobre Jigsaw
+[https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns]
+(https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns)
+
+Sandro Marcuso: "Refactoring"
+[https://github.com/sandromancuso/trip-service-kata]
+(https://github.com/sandromancuso/trip-service-kata)
+
+Definició microserveis
+[https://martinfowler.com/articles/microservices.html]
+(https://martinfowler.com/articles/microservices.html)
