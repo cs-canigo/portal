@@ -12,23 +12,23 @@ categories  = ["microserveis","monolits"]
 
 Des d'arquitectura CTTI, hem decidit fer una sèrie de posts tractant els principis que han de governar el disseny i la implementació de les noves aplicacions basades en (micro)serveis així com tècniques per tractar el problema tant des del punt de vista tècnic com funcional.
 
-Aquest post serà un hands sobre el trencament del monòlits des d'una vessant tècnica.
+Aquest post serà un hands on sobre el trencament del monòlits des d'una vessant tècnica.
 
 ### Monòlit i alternatives
 
 Al post anterior hem parlat dels principis que han de governar el disseny dels serveis. Però, val sempre la pena trencar un monòlit? Són tan dolents? Quines alternatives n'hi ha?
 
-Un dels principals problemes amb monólits és que tot i que el diseny del monòlit sigui modular i en capes, les proteccions que ofereixen contra l'acoblament lògic són febles i la barrera per introduïr codi acoblat és baixa. Tot i que és posible, amb bones pràctiques, testeig i rigor, evitar l'increment d'acoblament amb el curs del temps, és una cosa rarament vist a la pràctica.
+Un dels principals problemes amb monòlits és que tot i que el disseny del monòlit sigui modular i en capes, les proteccions que ofereixen contra l'acoblament lògic són febles i la barrera per introduir codi acoblat és baixa. Tot i que és possible, amb bones pràctiques, testeig i rigor, evitar l'increment d'acoblament amb el curs del temps, és una cosa rarament vist a la pràctica.
 
-Formes de modularització com ara la utilització de llibreries compartides ajuden a combatre els monòlits. Tot i que llibreries compartides poden tenir sentit, en cas de crear codi per tasques comuns que no són específiques al domini de negoci reutilitzables sobre la organizació. El problema amb codi compartit és que fàcilment es converteix en un punt d'acoblament. A més, l'adopció de llibreries compartides trenca la heterogeneïtat de llenguatges i la independència del desplegament.
+Formes de modularització com ara la utilització de llibreries compartides ajuden a combatre els monòlits. Tot i que llibreries compartides poden tenir sentit, en cas de crear codi per tasques comuns que no són específiques al domini de negoci reutilitzables sobre la organització. El problema amb codi compartit és que fàcilment es converteix en un punt d'acoblament. A més, l'adopció de llibreries compartides trenca la heterogeneïtat de llenguatges i la independència del desplegament.
 
-El gruix d'aplicatius a la generalitat tenen com a base Java donat que Canigó és en Java. Al mon Java, conscient de la problemàtica amb els monolits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
+El gruix d'aplicatius a la generalitat tenen com a base Java donat que Canigó és en Java. Al mon Java, conscient de la problemàtica amb els monòlits han sortit alternatives com OSGI i més recentment amb Java 9, Jigsaw.
 
-The Open source Gateway Initiative (OSGI) va néixer com un framework per permetre plugins ser instal.lats a Eclipse de forma desacoblada. Ara, vist l'éxit, s'utilitza per a modularitzar el diseny a aplicacions Java.
-D'acord a Sam Newman, el problema amb OSGI és que intenta enforçar coses com la gestió del cicle de vida del mòdul sense suficient suport al propi llenguage. Això resulta en més treball fet pels autors del mòdul per oferir aîllament adequat a nivell de mòdul. A OSGI resulta senzill, tot i que sigui utiltzat per bons equips, que la complexitat introduîda per la seva gestió sigui major que els beneficis que aporta.
-Java 9 ofereix de forma nadiva suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al refactoring del propi Java i la seva JDK. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt [criticisme al seu voltant.](#jigsaw)
+The Open source Gateway Initiative (OSGI) va néixer com un framework per permetre plugins ser instal·lats a Eclipse de forma desacoblada. Ara, vist l'èxit, s'utilitza per a modularitzar el disseny a aplicacions Java.
+D'acord a Sam Newman, el problema amb OSGI és que intenta reforçar coses com la gestió del cicle de vida del mòdul sense suficient suport al propi llenguatge. Això resulta en més treball fet pels autors del mòdul per oferir aïllament adequat a nivell de mòdul. A OSGI resulta senzill, tot i que sigui utiltzat per bons equips, que la complexitat introduïda per la seva gestió sigui major que els beneficis que aporta.
+Java 9 ofereix de forma nativa suport per la modularització a través del projecte Jigsaw que s'ha provat de forma exitosa al refactoring del propi Java i la seva JDK. Tot i que encara està per veure si realment és una solució vàlida ja hi ha molt [criticisme al seu voltant.](#jigsaw)
 
-Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatizar el desplegament i gestió. [MSvsSOA](#msvssoa)
+Altra forma de modularització agnòstica del llenguatge és SOA (Service Oriented Architecture). Microserveis, de fet, comparteix moltes coses comuns a SOA, fins i tot hi ha la idea per molts que microserveis no és més que una implementació correcta de SOA. No entrarem al detall de les diferències però microserveis es beneficia de noves tecnologies com ara contenidors i l'adopció de DevOps per automatitzar el desplegament i gestió. [MSvsSOA](#msvssoa)
 
 ### Què és un microservei?
 
@@ -36,7 +36,7 @@ Al post anterior ja hem tractar sobre que és un microservei i quins són els se
 
 Ara bé, quin seria l'abast d'un microservei? Com de gran ha de ser l'equip? Amazon recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
 
-Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels serveis ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més dificil serà aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
+Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels serveis ha de ser orientat a domini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més difícil serà aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col·laboració entre serveis.
 
 Per això, de vegades, convé més començar per una solució més monolítica i només plantejar-se el canvi a microserveis quant la part funcional estigui més madura.
 
@@ -57,7 +57,7 @@ El codi hauria de representar la nostra organització, i per tant els packages r
 
 Durant aquest procés podem utilitzar eines per analitzar les dependències entre aquests packages. Hi ha eines com **Structure 101** o **jdeps**, que vé amb Java 8, que permeten veure dependències entre packages gràficament.
 
-Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de llínies de codi. Fins i tot podem plantejar extreure el primer (micro)servei ben abans d'ordenar tot el codi en packages orientats a dominis.
+Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem de milions de línies de codi. Fins i tot podem plantejar extreure el primer (micro)servei ben abans d'ordenar tot el codi en packages orientats a dominis.
 
 Un cop organitzat el codi en base a aquestes costures, què fem desprès? Quina costura/servei podem treure primer?
 Hi ha varis indicadors en base a que podem fer la decisió, ja siguin econòmics o estructurals. En cas de no tenir indicador clar un factor força indicatiu és treure la costura que sigui menys enredada a la resta.
@@ -70,10 +70,10 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 >4. Escriure tests
 >5. Fer canvis i refactoritzar
 
-El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el [refactoring.](#refactoring)
+El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes receptes en diferents llenguatges per tractar el [refactoring.](#refactoring)
 
 Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
-Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara **security.jar** o **dateutils.jar**. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar [polítiques de versionat semàntic](#semver). 
+Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al context com ara **security.jar** o **dateutils.jar**. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar [polítiques de versionat semàntic](#semver). 
 
 ### Testing
 
@@ -83,7 +83,7 @@ Al llibre Agile Testing Lisa Crispin i Janet Gregory presenten el quadrant de te
 
 ![Quadrants de tests](/images/bloc/201801/tipustests.png)
  
-La part d'adalt del quadrant està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i com ajuda als desenvolupadors a crear el sistema.
+La part d'a dalt del quadrant està orientada a gent més funcional i de negoci mentre que la part de sota és més orientada a tecnologia i com ajuda als desenvolupadors a crear el sistema.
 S'ha d'entendre que no hi ha un únic tipus de test que cobreix totes les necessitats i que tots presenten avantatges i inconvenients. 
 
 Sam Newman proposa per la descomposició de monòlits una estructura de tests del 90% unitaris, 9% de servei i 1% o inclús menys de end-to-end. El testeig d'aplicacions ha de ser una cosa dinàmica i ràpida, la introducció de molts end-to-end tests a més de ampliar l'abast i fragilitat del sistema tendeix a espaiar en el temps la execució dels tests donada la seva lentitut. 
@@ -93,8 +93,8 @@ Un dels principals problemes amb tests d'integració, ja siguin end-to-end o ser
 
 ### Trencant el monòlit de la base de dades
 
-Quan parlem del trencament de monólits sovint ens oblidem de tractar el major monòlit de tots: la base de dades. 
-Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduïr problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. A la figura de a sota es mostra diferents graus de granularitat de serveis, el verd seria el nivell de granularitat desitjat mentre que als extrems ens trobem amb problemes com monòlits o nanoserveis.
+Quan parlem del trencament de monòlits sovint ens oblidem de tractar el major monòlit de tots: la base de dades. 
+Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base de dades al mateix cop que els serveis. Això té varis problemes. Per començar, és molt difícil encertar amb la correcta granularitat del servei d'inici. Serveis molt granulars afavoreixen el ràpid desenvolupament i evolució del servei però poden introduir problemes com ara transaccionalitat,  latència elevada o governança més complicada. Trobar el correcte grau de granularitat és més un art que una ciència i de segur tindrà múltiples iteracions. A la figura de a sota es mostra diferents graus de granularitat de serveis, el verd seria el nivell de granularitat desitjat mentre que als extrems ens trobem amb problemes com monòlits o nanoserveis.
 
 ![Granularitats de serveis](/images/bloc/201801/granularitatserveis.png)
 
@@ -102,15 +102,15 @@ Mark Richards al seu llibre ["Microservices Antipatterns and pitfalls"](#msantip
 
 El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines, com ara **SchemaSpy**, que ens poden ajudar en el procés representant gràficament relacions entre taules.
 
-Sam Newman utilitzant com a referència el llibre de [Scott Ambler "Refactoring Databases"](#dbrefactoring) on introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
+Sam Newman utilitzant com a referència el llibre de [Scott Ambler "Refactoring Databases"](#dbrefactoring) on introdueix diverses tècniques per tractar amb els diferents escenaris que puguin sortir. En base al problema, les dades extretes del monòlit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
 
 Al separar la base de dades, s'ha d'acceptar com a solució la consistència eventual. Segons el [teorema del CAP](#teoremacap) mai podrem tenir consistència, disponibilitat i partició a l'hora. Sam Newman recomana sacrificar consistència sobre disponibilitat. El sistema s'ha de dissenyar o bé tenint en compte la consistència eventual o agrupar serveis on hi apareguin problemes amb transaccions. De totes formes, més que plantejar-se una arquitectura CP o AP, té més sentit parlar de serveis individuals CP o AP.
 
 ### Orquestració o coreografia?
 
-Al trencar el monólit segurament hi surtiràn processos de negoci que necesiten de la interacció de multiples serveis.
+Al trencar el monòlit segurament hi surtiràn processos de negoci que necessiten de la interacció de multiples serveis.
 Per implementar el fluxe d'interacció entre serveis es pot optar per orquestració (un servei toma la responsabilitat de gestionar i guiar el procés, com un director d'orquestra) o bé per coreografia, on els serveis reaccionen i s'autogestionen en base a accions dels altres serveis.
-La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia. La seguënt imatge mostra gràficament com canvia l'acoblament entre serveis si s'utilitza orquestració o coreografia:
+La arquitectura de microserveis ha de tendir a ser molt desacoblada i això s'aconsegueix millor amb coreografia. La següent imatge mostra gràficament com canvia l'acoblament entre serveis si s'utilitza orquestració o coreografia:
 
 ![Orquestració vs coreografia](/images/bloc/201801/oc.png)
 
@@ -118,7 +118,7 @@ La comunicació entre serveis hauria de ser preferentment orientada a events i a
 
 ### Més enllà
 
-Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduïrem tècniques per descomposar el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
+Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduirem tècniques per descompondre el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
 
 Referències:
 
