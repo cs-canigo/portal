@@ -32,7 +32,8 @@ Altra forma de modularització agnòstica del llenguatge és SOA (Service Orient
 
 ### Què és un microservei?
 
-Al post anterior ja hem tractar sobre que és un microservei i quins són els seus principis (referència). 
+Al post anterior ja hem tractar sobre que és un microservei i quins són els seus principis.
+
 Ara bé, quin seria l'abast d'un microservei? Com de gran ha de ser l'equip? Amazon recomana com tamany ideal d'un equip el seu famós "two-pizza team", on 2 pizzes haurien de ser prou per alimentar a tot l'equip. Respecte al tamany del (micro)servei, Jon Eaves de RealEstate.com.au caracteritza un microservei com allò que podria ser reescrit completament en 2 setmanes.
 
 Com veurem al darrer post, més orientat a la part funcional, un dels principals problemes amb microserveis és que el disseny dels servies ha de ser orientat a domnini de negoci (DDD). Així doncs, quant menys es coneix el domini a modelar, més difici será aconseguir delimitar les fronteres entre els diferents serveis. Si les fronteres entre serveis no es capturen bé d'inici implicarà refer molts canvis a la col.laboració entre serveis.
@@ -42,7 +43,7 @@ Per això, de vegades, convé més començar per una solució més monolitica i 
 ### Per on començar?
 
 Hem decidit transformar el monòlit en (micro)serveis. Perfecte, però per on començar? 
-Michael Feathers al seu llibre "Working effectively with legacy code" defineix el concepte de costura "seam", això és una porció de codi que pot ser tractat en aïllament i treballar en ell sense impactar la resta del codi base. 
+Michael Feathers al seu llibre ["Working effectively with legacy code"](#legacycode) defineix el concepte de costura "seam", això és una porció de codi que pot ser tractat en aïllament i treballar en ell sense impactar la resta del codi base. 
 
 Però que serien bones costures? Els (sub)dominis de negoci o "bounded contexts" són els millors candidats a ser costures.
 
@@ -61,7 +62,7 @@ Aquest procés pot trigar una tarda a un petit projecte o fins mesos quan parlem
 Un cop organitzat el codi en base a aquestes costures, què fem desprès? Quina costura/servei podem treure primer?
 Hi ha varis indicadors en base a que podem fer la decisió, ja siguin econòmics o estructurals. En cas de no tenir indicador clar un factor força indicatiu és treure la costura que sigui menys enredada al reste.
 
-Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del "Legacy Code Change Algorithm" que consta dels següents pasos: 
+Aquest treball de refactorització hauria d'estar molt lligat a la introducció de tests, sobretot unitaris al codi a refactoritzar. Michael Feathers al seu llibre parla del ["Legacy Code Change Algorithm"](#legacycode) que consta dels següents pasos: 
 
 >1. Identificar punts de canvi
 >2. Trobar punts de test
@@ -69,7 +70,7 @@ Aquest treball de refactorització hauria d'estar molt lligat a la introducció 
 >4. Escriure tests
 >5. Fer canvis i refactoritzar
 
-El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el refactoring (referència)
+El com executar un refactoring efectiu i les seves diverses tècniques s'escapen de l'abast d'aquest post. Sandro Mancuso ofereix moltes recetes en diferents llenguatges per tractar el [refactoring](#refactoring)
 
 Un darrer punt a tenir en compte és la utilització de llibreries compartides. Pot semblar una bona idea promoure el codi compartit en llibreries compartides però aquestes llibreries presenten massa sovint un grau d'acoblament entre diferents serveis. Si una llibreria compartida canvia sovint en el temps o conté parts funcionals o entre serveis es preferible fer copiar-pegar en els diferents serveis. És a dir, aplicar DRY dins d'un mateix servei però permetre-ho entre diferents serveis. 
 Si s'utilitzen llibreries compartides, evitar l'ús de noms com ara common.jar que no indica si s'ha d'incorporar codi compartit ni quan. Millor utilitzar nom de llibreries en base al contexte com ara security.jar o dateutils.jar. Per facilitar la gestió i entendre implicacions entre canvis s'ha d'adoptar polítiques de versionat semàntic. 
@@ -97,11 +98,11 @@ Un dels antipatrons més vists a l'hora de tractar monòlits és trencar la base
 
 ![Granularitats de serveis](/images/bloc/201801/granularitatserveis.png)
 
-Mark Richards al seu llibre "Microservices Antipatterns and pitfalls" proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
+Mark Richards al seu llibre ["Microservices Antipatterns and pitfalls"](#msantipatterns) proposa atacar el problema des del punt de vista funcional. Un cop es tingui la granularitat desitjada als serveis es pot començar a dividir la base de dades per servei.
 
 El trencament de monòlits de base de dades és conceptualment molt similar al de codi. El primer pas es identificar les costures "seams". El trobar-les a nivell de base de dades és un procés més difícil encara que amb codi. Tenim eines, com ara SchemaSpy, que ens poden ajudar en el procés representant gràficament relacions entre taules.
 
-Sam Newman utilitzant com a referència el llibre de Scott Ambler "Refactoring Databases" on introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
+Sam Newman utilitzant com a referència el llibre de [Scott Ambler "Refactoring Databases"](#dbrefactoring) on introdueix diverses tècniques per tractar amb els diferents escenaris que poguin surtir. En base al problema, les dades extretes del monólit poden ser externalitzades a fitxers, duplicades, mogudes a un nou esquema o fins i tot la solució podria passar per unificar 2 serveis per evitar problemes transaccionals. 
 
 Al separar la base de dades, s'ha d'acceptar com a solució la consistència eventual. Segons el teorema del CAP mai podrem tenir consistència, disponibilitat i partició a l'hora. Sam Newman recomana sacrificar consistència sobre disponibilitat. El sistema s'ha de dissenyar o bé tenint en compte la consistència eventual o agrupar serveis on hi apareguin problemes amb transaccions. De totes formes, més que plantejar-se una arquitectura CP o AP, té més sentit parlar de serveis individuals CP o AP.
 
@@ -122,7 +123,7 @@ Sam Newman: "Building Microservices (2015)"
 [http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078]
 (http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078)
 
-Michael Feathers: "Working effectively with legacy code (2002)"
+<a name="legacycode"></a>Michael Feathers: "Working effectively with legacy code (2002)"
 {https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code]
 (https://www.goodreads.com/book/show/44919.Working_Effectively_with_Legacy_Code)
 
@@ -130,11 +131,11 @@ Michael Feathers: "Working effectively with legacy code (2002)"
 [https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture]
 (https://www.goodreads.com/book/show/28241543-microservices-vs-service-oriented-architecture)
 
-Mark Richards: "Microservices AntiPatterns and Pitfalls (2017)"
+<a name="msantipatterns"></a>Mark Richards: "Microservices AntiPatterns and Pitfalls (2017)"
 [http://www.oreilly.com/programming/free/files/microservices-antipatterns-and-pitfalls.pdf]
 (http://www.oreilly.com/programming/free/files/microservices-antipatterns-and-pitfalls.pdf)
 
-Scott J. Ambler:  "Refactoring Databases (2006)"
+<a name="dbrefactoring"></a>Scott J. Ambler:  "Refactoring Databases (2006)"
 [https://www.goodreads.com/book/show/161302.Refactoring_Databases]
 (https://www.goodreads.com/book/show/161302.Refactoring_Databases)
 
@@ -142,7 +143,7 @@ Scott J. Ambler:  "Refactoring Databases (2006)"
 [https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns]
 (https://developer.jboss.org/blogs/scott.stark/2017/04/14/critical-deficiencies-in-jigsawjsr-376-java-platform-module-system-ec-member-concerns)
 
-Sandro Marcuso: "Refactoring"
+<a name="refactoring"></a>Sandro Marcuso: "Refactoring"
 [https://github.com/sandromancuso/trip-service-kata]
 (https://github.com/sandromancuso/trip-service-kata)
 
