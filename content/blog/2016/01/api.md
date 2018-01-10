@@ -1,6 +1,6 @@
 +++
 date        = "2016-01-12"
-lastmod     = "2017-10-3"
+lastmod     = "2017-10-03"
 title       = "APIs RESTful: millors pràctiques"
 description = "Millors pràctiques per a la construcció d'APIs REST"
 toc 		= true
