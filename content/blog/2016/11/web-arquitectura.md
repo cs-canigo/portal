@@ -1,5 +1,6 @@
 +++
 date        = "2016-11-09"
+lastmod     = "2018-01-10"
 title       = "Tecnologia darrera del Web d'Arquitectura"
 description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'utilitzem de base per a part de la R&D que fem a la unitat"
 sections    = ["Blog", "home"]
