@@ -25,81 +25,86 @@ Amb aquests jars des de l'aplicació creada es pot executar aquests tests per a 
 
 Si es crea una nova aplicació amb el [plugin de Canigó](/canigo-download-related/plugin-canigo/) aquestes llibreries ja vénen incorporades al pom.xml
 
-
-cat.gencat.ctti
-canigo.core
-test-jar
-${canigo.core.version}
-test
-tests
-
-
-cat.gencat.ctti
-canigo.web.rs
-test-jar
-${canigo.web.rs.version}
-test
-tests
-
-
-cat.gencat.ctti
-canigo.persistence.jpa
-test-jar
-${canigo.persistence.jpa}
-test
-tests
+	<dependency>
+	   <groupId>cat.gencat.ctti</groupId>
+	   <artifactId>canigo.core</artifactId>
+	   <type>test-jar</type>
+	   <version>${canigo.core.version}</version>
+	   <scope>test</scope>
+	   <classifier>tests</classifier>
+	</dependency>
+	<dependency>
+	   <groupId>cat.gencat.ctti</groupId>
+	   <artifactId>canigo.web.rs</artifactId>
+	   <type>test-jar</type>
+	   <version>${canigo.web.rs.version}</version>
+	   <scope>test</scope>
+	   <classifier>tests</classifier>
+	</dependency>
+	<dependency>
+	   <groupId>cat.gencat.ctti</groupId>
+	   <artifactId>canigo.persistence.jpa</artifactId>
+	   <type>test-jar</type>
+	   <version>${canigo.persistence.jpa}</version>
+	   <scope>test</scope>
+	   <classifier>tests</classifier>
+	</dependency>
 
 I també el plugin de Maven que fa que s'executin els tests dels mòduls:
 
 
-org.apache.maven.plugins
-maven-surefire-plugin
-
-
-base-test
-test
-
-test
-
-
-
-cat.gencat.ctti:canigo.core
-cat.gencat.ctti:canigo.persistence.jpa
-cat.gencat.ctti:canigo.web.rs
-
-
-%regex[${project.groupId}.*.*Test.*]
-
-
-
-
-
+	<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<executions>
+				<execution>
+					<id>base-test</id>
+					<phase>test</phase>
+					<goals>
+						<goal>test</goal>
+					</goals>
+					<configuration>
+						<dependenciesToScan>
+							<dependency>cat.gencat.ctti:canigo.core</dependency>
+							<dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
+							<dependency>cat.gencat.ctti:canigo.web.rs</dependency>
+						</dependenciesToScan>
+						<excludes>
+							<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
+						</excludes>
+					</configuration>
+				</execution>
+			</executions>
+		</plugin>
 
 ### Executar els tests
 
-Per executar els tests només cal cridar al goal de maven *test*
+Per executar els tests només cal cridar al goal de maven **test**
 
-Results :
+	Results :
 
-Tests run: 57, Failures: 0, Errors: 0, Skipped: 0
+	Tests run: 57, Failures: 0, Errors: 0, Skipped: 0
 
 Si per exemple es vol probar que una nova versió d'Hibernate és compatible amb els mòduls Canigó s'ha d'afegir la llibreria que es desitgi provar amb **scope test**
 
 
-org.hibernate
-hibernate-core
-5.2.10.Final
-test
-
-
-org.hibernate
-hibernate-entitymanager
-5.2.10.Final
-test
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-core</artifactId>
+		<version>5.2.10.Final</version>
+	</dependency>
+			
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-entitymanager</artifactId>
+		<version>5.2.10.Final</version>
+	</dependency>
 
 I tornar a llençar el goal maven de test:
 
-Tests run: 57, Failures: 0, Errors: 2, Skipped: 0
+	Tests run: 57, Failures: 0, Errors: 2, Skipped: 0
 
 Amb aquestes noves llibreries, el mòdul canigo-persistence no passa els tests, amb el qual significa que no es pot utilitzar amb Canigó.
+
+Amb aquest procediment es pot validar si es poden utilitzar llibreries més actuals que les proporcionades als mòduls de Canigó.
 
