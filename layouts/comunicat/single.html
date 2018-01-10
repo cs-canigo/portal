@@ -14,21 +14,11 @@
     <tr>
 
       <td>
-        <!--[if (gte mso 9)|(IE)]>
-        	<table width="790" align="center" cellpadding="0" cellspacing="0" border="0">
-	        <tr>
-            <td>
-        <![endif]-->
 
         <table bgcolor="#ffffff" class="content" align="center" cellpadding="0" cellspacing="0" border="0" >
           <tr>
             <td style="background-color: #eee;">
-              <!--[if (gte mso 9)|(IE)]>
-                <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                    <tr>
 
-                        <td align="right" style="background-color: #fff; font-size: 12px; padding: 10px 60px;font-family: 'OpenSansRegular',Helvetica,Arial,sans-serif;">
-				<![endif]-->
               {{ $numany := .Date.Format "2006" }}
               {{ $nummes := .Date.Format "01" }}
               {{ $urlcom := print .Site.BaseURL "/comunicat/" $numany "/" $nummes "/" }}
@@ -46,11 +36,6 @@
 		  {{ $key := .Params.key }}
 		  
           {{ partial "comunicat/header" . }}
-		   <!--
-			{{ range first .Params.nombrenoticies (where .Site.Pages.ByDate.Reverse "Section" "noticies") }}		
-				{{ partial "comunicat/noticia.html" . }}
-			{{ end }}
-		   -->
 
       {{ range (where .Site.Pages.ByDate.Reverse "Section" "noticies") }}
   			{{ if eq .Params.key $key }}
@@ -77,23 +62,9 @@
 	  {{ end }}
 	  
 	  
-	<!--
-	{{ range (where .Site.Pages.ByDate.Reverse "Section" "howtos") }}
-		{{ if eq .Params.key $key }}
-  				{{ partial "comunicat/howto.html" . }}
-  			{{ end }}	
-      {{ end }}
-	  -->
-	  
       {{ partial "comunicat/social-media.html" . }}
 
         </table>
-
-        <!--[if (gte mso 9)|(IE)]>
-		  			</td>
-				</tr>
-				</table>
-			<![endif]-->
       </td>
 
     </tr>

@@ -1,5 +1,6 @@
 +++
 date        = "2016-11-09"
+lastmod     = "2018-01-10"
 title       = "Tecnologia darrera del Web d'Arquitectura"
 description = "Us expliquem la tecnologia darrera la web d'arquitectura i com l'utilitzem de base per a part de la R&D que fem a la unitat"
 sections    = ["Blog", "home"]
@@ -8,7 +9,6 @@ imatge 		= "/images/bloc/web-aq.png"
 aliases       = [
 "/bloc/2016/11/web-arquitectura/"
 ]
-key         = "NOVEMBRE2016"
 +++
 
 Amb el **Web d'Arquitectura** gaudim d'un petit laboratori d'investigació que ens permet avaluar tecnologies, provar aspectes que en un futur seran susceptibles de formar part del catàleg de solucions, i posar en producció principis i tècniques que serviran com a patrons per al disseny d'aplicacions.
