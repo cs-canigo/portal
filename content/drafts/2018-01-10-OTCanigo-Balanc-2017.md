@@ -1,5 +1,5 @@
 +++
-date        = "2017-01-05"
+date        = "2018-01-10"
 title       = "Oficina Tècnica de Canigó. Balanç 2017"
 description = "Evolució dels serveis de la Oficina Tècnica de Canigó a l'any 2017"
 sections    = ["drafts"]
@@ -9,19 +9,22 @@ key         = "GENER2018"
 
 A continuació es mostren les fites aconseguides al 2017 segons ordre cronològic:
 
-<center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1sqpklweKg2oJIwJcStMksqj6jggC9idUe_A_RW2BPeo&font=Default&lang=ca&initial_zoom=2&height=500' width='100%' height='500' frameborder='0'></iframe></center>
+<center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1se11kf-cofPGpMC7IQgwIcO3i1Lt_0SbVWjRMKZpHMQ&font=Georgia-Helvetica&lang=ca&initial_zoom=2&height=500' width='100%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center>
 
 A mode resum, destacaríem les següents:
 
 * _SIC_ :
 
-	- Suport de Jenkins SIC per a la generació d'artefactes i desplegaments automàtics en tecnologies .Net i NodeJS.
-	- Suport de Jenkins SIC per a l'execució d'scripts a BBDD MongoDB, MySQL, SQLServer i PostgreSQL.
-	- Desplegaments de sites estàtics al Cloud des de jobs Jenkins SIC.
-	- Adaptació de Jenkins al sistema d'obertura de peticions de desplegament via Remedy.
-	- Disponibilitat de l'Slave Jenkins a CPD2.
-	- Actualització de versions de programari del SIC: Jenkins, SVN i Nexus.
-	- El SIC s'encarrega de la gestió integral del codi font i del reporting a direcció CTTI.
+	- Integració al SIC del nou sistema de gestió de versions de codi (Git).
+	- Integració de la seguretat del SIC amb GICAR.
+	- Autoservei d'usuaris al SIC, mitjançant el qual els usuaris de CTTI i de CPD/LDT tenen accés de forma automàtica i els usuaris de Lot d'aplicacions poden concedir-se permisos entre companys del mateix lot i àmbit.
+	- Gràcies a la incorporació de l'Autoservei de repositoris al SIC, els usuaris de lot d'aplicacions poden crear-se de forma autonòma els seus repositoris.
+	- Integració de jobs en format pipeline al SIC.
+	- Creació d'un Sistema de Gestió de Binaris, mitjançant el qual s'evita l'antipatró de dispositar artefactes als sistemes de versions de codi.
+	- Integració del SIC als Clouds Kubernetes de Bluemix i AppAgile (Openshift).
+	- Integració del SIC en el procés d'alta d'aplicacions a CTTI a través de la participació a les reunions de fase 0 de nous projectes.
+	- Actualització de versió del servei Nexus a la versió 3.2.1.
+	- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei).
 
 * _FW Canigó_ :
 
