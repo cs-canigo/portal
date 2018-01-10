@@ -23,7 +23,11 @@
 		{{ partial "menu.html" . }}
 
 	</div>
-
+    <div>
+    	{{ if not .Lastmod.IsZero }}
+    	   Darrera actualització: {{ .Lastmod.Format "02-01-2006" }}
+        {{ end }}
+    </div>
 	<section class="border-start">
 
 		<article>
@@ -120,36 +124,6 @@
 
 						{{ end }}
 
-<!--
-
-						Teletext
-
-						<div class="inform_relacionada superdestacat">
-							<div class="inform_relacionada_cont">
-								<h4><strong data-txt="home.titol_destacat1"></strong></h4>
-								<div class="llistat_enllacos_filet llistat_enllacos_filet_cont"  data-txt="home.destacat1">
-								</div>
-							</div>
-						</div>
-
-						<div class="inform_relacionada">
-							<div class="inform_relacionada_cont">
-								<h4><strong data-txt="home.titol_destacat3"></strong></h4>
-								<div class="llistat_enllacos_filet_cont">
-									<p data-txt="home.destacat3"></p>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="inform_relacionada">
-							<div class="inform_relacionada_cont">
-								<h4 data-txt="home.titol_destacat2"><strong data-txt="home.titol_destacat2"></strong></h4>
-								<div class="llistat_enllacos_filet" data-txt="home.destacat2">
-								</div>
-							</div>
-						</div>
--->
 						<div class="inform_relacionada">
 							<div class="inform_relacionada_cont">
 								<h4><strong>Contacta</strong></h4>
