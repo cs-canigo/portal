@@ -16,7 +16,8 @@ Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofer
 - Utilitzarem estàndards HTTP: verbs, http codes, headers, ...
 - Els recursos exposats a través de la API seran en plural ("aplicacions" enlloc d' "aplicacio")
 - El format per defecte serà JSON. No es contemplaran altres formats, en general.
-- Si exposem dades d'accés públic, inclourem un paràmetre "callback" per a poder fer peticions JSONP
+- Recomanable utilitzar només caràcters alfanumérics per atributs que formin part d'una URI
+- Si exposem dades d'accés públic o per tercers, implementarem el verb OPTIONS per possibilitar CORS 
 - Paràmetres del querystring reservats explicats més endavant:
 	
 	- fields
@@ -36,6 +37,7 @@ Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofer
 - POST = insert
 - [PATCH o PUT] (http://www.baeldung.com/http-put-patch-difference-spring) = update 
 - DELETE
+- OPTIONS 
 
 ###	 Exemple
 
@@ -49,7 +51,8 @@ Imaginem que la nostra API gestiona el recurs "Aplicació". La notra API exposar
 - GET **/aplicacions/{id}** - obté la informació de l'aplicació amb l'id corresponent passat a l'URI
 - POST **/aplicacions** - crea una nova aplicació
 - PATCH o PUT **/aplicacions/{id}** - actualitza l'aplicació amb l'id corresponent passat a l'URI
-- DELETE **/aplicacions/{id}** - elimina l'aplicació amb l'id corresponent passat a l'URI	
+- DELETE **/aplicacions/{id}** - elimina l'aplicació amb l'id corresponent passat a l'URI
+- OPTIONS **/aplicacions** - obté  els verbs suportats per l'aplicacíó i si suporta CORS
 
 ## Esquemes JSON
 
@@ -198,44 +201,6 @@ Utilitzarem dues aproximacions:
 	- Last-modified
 	- Expires
 
-## GET - JSONP Callback
-
-Per a peticions GET, permetrem incloure un paràmetre "callback" amb el nom de la funció amb la que envolcallarem la nostra resposta (JSONP)
-
-		Request
-
-			GET /aplicacions?callback=f
-
-		Response
-
-			f({
-				data : {
-
-					total : 976,  
-					limit : 100,  
-					numberOfElements : 10,
-					offset : 200, 
-					
-					included : [  
-						{
-							id : 1,
-							camp1 : "A",
-							camp2 : "B"
-						},
-						{
-							id : 2,
-							camp1 : "C",
-							camp2 : "D"
-						},
-						...
-					]
-				} 
-			})
-
-
-	
-Retornarà la resposta JSON amb una funció de nom "f" que l'envolcallarà
-
 
 ## POST - Creació d'un recurs
 
@@ -265,10 +230,28 @@ Si tot ha anat correctament el HTTP response code serà 201. La resposta pot inc
 			}
 		}
 
+## PUT - Actualització total d'un recurs
 
-## PATCH - Actualització d'un recurs
+Amb el verb PUT substituirem un recurs concret completament. Si un dels camps és una llista, que inclou [1,2,3,4,5] la nova llista al aplicar la operació de sota quedaria [2,3,4,5]
 
-Amb el verb PATCH actualitzarem un recurs concret.
+		PUT /aplicacions/5220-4848-864539594927
+		Content-type: application/json
+
+		{
+			data : {
+				id : 5220-4848-864539594927
+				camp1 : "X"
+				camp2 : "Y"
+				lista : [2,3,4,5]
+			}
+		}
+
+
+Si tot ha anat correctament el HTTP response code serà 20x, depenent de si s'ha realitzat o s'ha encuat per a processar
+
+## PATCH - Actualització parcial d'un recurs
+
+Amb el verb PATCH actualitzarem un recurs concret. Només actualitzarem els camps que constin al payload. Això te avantatges sobretot amb llistes on només especifiquem els canvis a afegir. Al nostre cas d'abans quedaria [1,2,3,4,5,2,3,4,5]
 
 		PATCH /aplicacions/5220-4848-864539594927
 		Content-type: application/json
@@ -277,6 +260,8 @@ Amb el verb PATCH actualitzarem un recurs concret.
 			data : {
 				id : 5220-4848-864539594927
 				camp1 : "X"
+				camp2: "Y"
+				lista: [2,3,4,5]
 			}
 		}
 
