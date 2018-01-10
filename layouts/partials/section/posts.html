@@ -18,7 +18,7 @@
 						<span class="data_post">{{ .Date.Format "02-01-2006" }}</span> 
 						<span><a href="{{ .Permalink }}#comments" class="ncomments"> </a></span>
 						{{ if isset .Params "imatge" }}
-						<img src="{{ index .Params "imatge" }}" alt="" />
+						<img src="{{ index .Params "imatge" }}" alt="" width="100%" />
 						{{ end }}
 					</div>
 				</div>
