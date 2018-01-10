@@ -28,6 +28,14 @@
 
 			{{ partial "header_block.html" .}}
 			
+
+
+		   <div class="padding-xs container">
+	    	{{ if not .Lastmod.IsZero }}
+	    	   <i><b>Darrera actualització:</b></i> {{ .Lastmod.Format "02-01-2006" }}
+	        {{ end }}
+           </div>
+           
 			<article class="padding-xs padding-sm padding-md contingut">				
 				<div class="container">
  		
