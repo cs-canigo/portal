@@ -92,12 +92,14 @@ Si per exemple es vol probar que una nova versió d'Hibernate és compatible amb
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-core</artifactId>
 		<version>5.2.10.Final</version>
+		<scope>test</scope>
 	</dependency>
 			
 	<dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-entitymanager</artifactId>
 		<version>5.2.10.Final</version>
+		<scope>test</scope>
 	</dependency>
 
 I tornar a llençar el goal maven de test:
