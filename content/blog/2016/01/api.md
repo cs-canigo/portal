@@ -1,5 +1,6 @@
 +++
 date        = "2016-01-12"
+lastmod     = "2017-10-3"
 title       = "APIs RESTful: millors pràctiques"
 description = "Millors pràctiques per a la construcció d'APIs REST"
 toc 		= true
@@ -9,8 +10,6 @@ imatge 		= "/images/bloc/json-api.png"
 +++
 
 Aquest document pretèn unificar la manera d'interaccionar amb les APIs que ofereixin els diferents sistemes de la Generalitat, ja siguin públics o d'ús intern.
-
-<span style="color:green">Actualitzat a data 03/10/2017 amb la publicació de Canigó 3.2.2</style>
 
 ## Acords generals
 
