@@ -9,7 +9,6 @@ imatge 		= "/images/bloc/web-aq.png"
 aliases       = [
 "/bloc/2016/11/web-arquitectura/"
 ]
-key         = "NOVEMBRE2016"
 +++
 
 Amb el **Web d'Arquitectura** gaudim d'un petit laboratori d'investigació que ens permet avaluar tecnologies, provar aspectes que en un futur seran susceptibles de formar part del catàleg de solucions, i posar en producció principis i tècniques que serviran com a patrons per al disseny d'aplicacions.
