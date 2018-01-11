@@ -15,14 +15,15 @@ A mode resum, destacaríem les següents:
 
 * _SIC_ :
 
-	- Integració al SIC del nou sistema de gestió de versions de codi (Git).
-	- Integració de la seguretat del SIC amb GICAR.
-	- Autoservei d'usuaris al SIC, mitjançant el qual els usuaris de CTTI i de CPD/LDT tenen accés de forma automàtica i els usuaris de Lot d'aplicacions poden concedir-se permisos entre companys del mateix lot i àmbit.
-	- Gràcies a la incorporació de l'Autoservei de repositoris al SIC, els usuaris de lot d'aplicacions poden crear-se de forma autònoma els seus repositoris.
-	- Integració de jobs en format pipeline al SIC.
-	- Creació d'un Sistema de Gestió de Binaris, mitjançant el qual s'evita l'antipatró de dipositar artefactes als sistemes de versions de codi.
+	- Publicació del SIC 2.0, que inclou:
+		- Integració al SIC del nou sistema de gestió de versions de codi (Git).
+		- Integració de la seguretat del SIC amb GICAR.
+		- Autoservei d'usuaris al SIC, mitjançant el qual els usuaris de CTTI i de CPD/LDT tenen accés de forma automàtica i els usuaris de Lot d'aplicacions poden concedir-se permisos entre companys del mateix lot i àmbit.
+		- Gràcies a la incorporació de l'Autoservei de repositoris al SIC, els usuaris de lot d'aplicacions poden crear-se de forma autonòma els seus repositoris.
+		- Integració de jobs en format pipeline al SIC.
+		- Creació d'un Sistema de Gestió de Binaris, mitjançant el qual s'evita l'antipatró de dispositar artefactes als sistemes de versions de codi.
 	- Integració del SIC als Clouds Kubernetes de Bluemix i AppAgile (Openshift).
-	- Integració del SIC en el procés d'alta d'aplicacions a CTTI a través de la participació en les reunions de fase 0 de nous projectes.
+	- Integració del SIC en el procés d'alta d'aplicacions a CTTI a través de la participació a les reunions de fase 0 de nous projectes.
 	- Actualització de versió del servei Nexus a la versió 3.2.1.
 	- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei).
 
