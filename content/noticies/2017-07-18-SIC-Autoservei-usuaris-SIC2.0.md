@@ -45,7 +45,11 @@ Cas que el rol escollit per a l'usuari hagués estat de Master, l'endemà de l'a
 
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
- 
+
+**AVÍS**: Si es desitja concedir permisos a un usuari per a un grup que no té cap projecte, caldrà prèviament crear el projecte per fer l'assignació desitjada.
+
+
+
 Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una petició de Consulta a 'Framework SIC' via SAU-Remedy o contacta amb la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
  
  
