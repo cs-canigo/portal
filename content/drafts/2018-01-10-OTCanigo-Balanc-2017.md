@@ -24,6 +24,7 @@ A mode resum, destacaríem les següents:
 		- Creació d'un Sistema de Gestió de Binaris, mitjançant el qual s'evita l'antipatró de dispositar artefactes als sistemes de versions de codi.
 	- Integració del SIC als Clouds Kubernetes de Bluemix i AppAgile (Openshift).
 	- Integració del SIC en el procés d'alta d'aplicacions a CTTI a través de la participació a les reunions de fase 0 de nous projectes.
+	- Pas a HTTPs de la resta de serveis del SIC 2.0.
 	- Actualització de versió del servei Nexus a la versió 3.2.1.
 	- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei).
 
