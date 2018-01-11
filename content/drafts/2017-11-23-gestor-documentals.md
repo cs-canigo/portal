@@ -1,25 +1,20 @@
 +++
 date        = "2017-11-23"
+lastmod     = "2018-01-10"
 title       = "Gestors documentals"
-description = "Recomanacions de quan i com utilitzar gestors documentals. Què és un gestor documental, història i quins serveis transversals"
+description = "Recomanacions de quan i com utilitzar gestors documentals. Què és un gestor documental, història i quins serveis transversals cobreixen aquesta necessitat"
 sections    = ["drafts"]
 blog_tags   = ["eines"]
 categories  = ["blog"]
-key         = "NOVEMBRE2017"
 +++
-<div id="google_translate_element">
-</div>
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'ca', includedLanguages: 'en,es,fi', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
+## Gestor documentals
 
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
+Des d'arquitectura CTTI veiem que els gestors documentals són una solució molt utilitzada a diferent projectes, sent segurament Alfresco el més popular.
 
-##Gestor documentals
+Molt sovint, la necessitat a cobrir és, senzillament, poder emmagatzemar documents a un servidor sense aprofitar totes les avantatges d'un gestor documental. 
 
-Al CTTI veiem que s'utilitza molt sovint gestors documentals a diferent projectes sent segurament Alfresco el més popular.
-Molt sovint la necessitat a cobrir és senzillament poder emmagatzemar documents a un servidor sense realment aprofitar totes les avantatges d'un gestor documental. 
+Però què dona realment un gestor documental?  Quines són les seves característiques?
+
+Un gestor documental (DMS) és un sistema utilitzat per fer el seguiment, gestió i emmagatzematge dels documents. Permet fer un registre i seguiment de totes les versions dels documents creats i les modificacions dels diferents usuaris sobre ells.
+
