@@ -2,7 +2,7 @@
 date        = "2018-01-10"
 title       = "Oficina Tècnica de Canigó. Balanç 2017"
 description = "Evolució dels serveis de l'Oficina Tècnica de Canigó l'any 2017"
-sections    = ["drafts"]
+sections    = ["noticies", "home"]
 categories  = ["sic, canigo, sgde"]
 key         = "GENER2018"
 +++
