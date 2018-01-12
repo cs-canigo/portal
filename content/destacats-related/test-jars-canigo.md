@@ -20,7 +20,7 @@ D'inici, no es proporcionen test-jars per a tots els serveis Canigó, sino nomé
 
 - *Servei Core*: "canigo.core" versió 3.2.3 o superior
 - *Servei Web REST*: "canigo.web.rs" versió 1.1.1 o superior
-- *Servei de Persistència*: "canigo.persistence.jpa" 1.2.2 versió 1 o superior
+- *Servei de Persistència*: "canigo.persistence.jpa" versió 1.2.2 o superior
 - *Servei de Seguretat*: "canigo.security" versió 1.2.3 o superior
 
 Aquests binaris estan publicats al Nexus del SIC. Els podeu trobar al [repositori Maven públic](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven) cercant pel groupId "cat.gencat.ctti", i "artifactId" i "version" especificats al llistat anterior.
