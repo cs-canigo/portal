@@ -48,7 +48,7 @@ A mode resum, destacaríem les següents:
 - Publicació de [**Canigó 3.2.3**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
 - Nova política de [**versions LTS**] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
 - Certificació Canigó 3.2 en **JBoss EAP 6.4**
-- Publicació de la versió **[2.0.0 del entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb actualització de programari
+- Publicació de la [**versió 2.0.0 del entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb actualització de programari
 
 
 ### **SGDE (Servei de Gestió del Document Electrònic)**
