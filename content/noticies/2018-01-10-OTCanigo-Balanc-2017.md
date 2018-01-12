@@ -13,7 +13,7 @@ A continuació es mostren les fites aconseguides el 2017 segons ordre cronològi
 
 A mode resum, destacaríem les següents:
 
-**SIC (Servei d'Integració Continua)**
+**SIC (Servei d'Integració Continua)**:
 
 	- Publicació del SIC 2.0, el qual inclou:
 		- Integració al SIC del nou sistema de gestió de versions de codi (Git).
@@ -30,7 +30,7 @@ A mode resum, destacaríem les següents:
 	- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei)
 
 
-**Suport Cloud**
+**Suport Cloud**:
 
 	- Posada en servei de la plataforma de contenidors on-premise SwarmMe
 	- Posada en servei de la plataforma de contenidors on-premise AppAgile
@@ -40,7 +40,7 @@ A mode resum, destacaríem les següents:
 	- Suport al desplegament d'aplicacions en les diferents plataformes cloud: AppAgile, SwarmMe, Azure i Bluemix
 
 
-**Canigó**
+**Canigó**:
 
 	- Publicació de [Canigó 3.2.0](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: incorporació de Swagger, suport a seguretat basada en token JWT, exposició de dades de servei via REST, ...
 	- Publicació de [Canigó 3.2.1](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars i altres millores i resolució d'incidències
@@ -51,7 +51,7 @@ A mode resum, destacaríem les següents:
 	- Publicació de la versió 2.0.0 del [entorn de desenvolupament de Canigó] (/canigo/entorn-desenvolupament/) amb actualització de programari
 
 
-**SGDE (Servei de Gestió del Document Electrònic)**
+**SGDE (Servei de Gestió del Document Electrònic)**:
 
 	- STD (Servei de Transformació de Documents): augmentat el límit de mida de documents per les operacions de composició de PDFs a 20MB
 	- eFormularis: deprecada la versió v8 del WS de ServeisInvocacio
