@@ -34,27 +34,27 @@ A mode resum, destacaríem les següents:
 	- Creació d'un **Sistema de Gestió de Binaris**, mitjançant el qual s'evita l'antipatró de dispositar artefactes als sistemes de versions de codi.
 - Integració del SIC amb les plataformes de contenidors **Docker Bluemix Container Service (Kubernetes)** i **AppAgile (Openshift)**
 - Integració del SIC amb **Bluemix Cloud Foundry PaaS**
-- Participació de l'equip del SIC en el procés d'alta de noves solucions
-- Pas a HTTPs de la totalitat de serveis del SIC 2.0
-- Actualització de versió del servei Nexus a la versió 3.2.1
-- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei)
+- Participació de l'equip del SIC en el procés d'alta de **noves solucions**
+- Pas a **HTTPS** de la totalitat de serveis del SIC 2.0
+- Actualització de versió del servei **Nexus** a la versió 3.2.1
+- Integració d'un sistema de **desplegament automàtic** als entorns de PRE i PRO (amb tall de servei)
 
 
 ### **Canigó**
 
-- Publicació de [Canigó 3.2.0](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: incorporació de Swagger, suport a seguretat basada en token JWT, exposició de dades de servei via REST, ...
-- Publicació de [Canigó 3.2.1](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars i altres millores i resolució d'incidències
-- Publicació de [Canigó 3.2.2] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries i altres millores i resolució d'incidències
-- Publicació de [Canigó 3.2.3] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
-- Nova política de versions [LTS] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
-- Certificació Canigó 3.2 en JBoss EAP 6.4
-- Publicació de la versió 2.0.0 del [entorn de desenvolupament de Canigó] (/canigo/entorn-desenvolupament/) amb actualització de programari
+- Publicació de [**Canigó 3.2.0**](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: Spring Boot, Swagger, JWT,...
+- Publicació de [**Canigó 3.2.1**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars, millores i resolució d'incidències
+- Publicació de [**Canigó 3.2.2**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries, millores i resolució d'incidències
+- Publicació de [**Canigó 3.2.3**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
+- Nova política de [**versions LTS**] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
+- Certificació Canigó 3.2 en **JBoss EAP 6.4**
+- Publicació de la versió **[2.0.0 del entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb actualització de programari
 
 
 ### **SGDE (Servei de Gestió del Document Electrònic)**
 
-- STD (Servei de Transformació de Documents): augmentat el límit de mida de documents per les operacions de composició de PDFs a 20MB
-- eFormularis: deprecada la versió v8 del WS de ServeisInvocacio
-- STD (Servei de Transformació de Documents): composició de documents amb diferents orientacions de pàgina
+- STD (Servei de Transformació de Documents): **augmentat el límit de mida de documents** per les operacions de composició
+- eFormularis: **deprecada versió v8** del WS de ServeisInvocacio
+- STD (Servei de Transformació de Documents): composició de documents amb **diferents orientacions de pàgina**
 
 Per a més informació sobre els futurs evolutius planificats, podeu consultar el [Roadmap d'arquitectura del CTTI](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
