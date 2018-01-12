@@ -1,6 +1,6 @@
 +++
 date        = "2018-01-10"
-title       = "Oficina Tècnica de Canigó. Balanç 2017"
+title       = "Oficina Tècnica de Canigó i Suport Cloud. Balanç 2017"
 description = "Evolució dels serveis de l'Oficina Tècnica de Canigó i Suport Cloud a l'any 2017"
 sections    = ["noticies", "home"]
 categories  = ["sic, canigo, sgde", "cloud"]
@@ -12,6 +12,16 @@ A continuació es mostren les fites aconseguides el 2017 segons ordre cronològi
 <center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1se11kf-cofPGpMC7IQgwIcO3i1Lt_0SbVWjRMKZpHMQ&font=Georgia-Helvetica&lang=ca&initial_zoom=2&height=500' width='100%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center>
 
 A mode resum, destacaríem les següents:
+
+### **Suport Cloud**
+
+- Posada en servei de la plataforma de contenidors on-premise **SwarmMe**
+- Posada en servei de la plataforma de contenidors on-premise **AppAgile**
+- Migració d'aplicacions del servei Single and Scalable Group Container Service de Bluemix al nou **Bluemix Container Service** basat en Docker i Kubernetes
+- Millora d'imatges Docker estàndard de gencatcloud, ara basades en la distribució de Linux **Alpine**, més segures i de tamany més reduït
+- Implementació de nova imatge Docker Apache-Shibboleth per la integració amb **GICAR**, tant a cloud privat com públic
+- Suport al desplegament d'aplicacions en les diferents plataformes de contenidors i cloud públic en catàleg: AppAgile, SwarmMe, Azure i Bluemix
+
 
 ### SIC (Servei d'Integració Continua)
 
@@ -28,16 +38,6 @@ A mode resum, destacaríem les següents:
 - Pas a HTTPs de la totalitat de serveis del SIC 2.0
 - Actualització de versió del servei Nexus a la versió 3.2.1
 - Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei)
-
-
-### **Suport Cloud**
-
-- Posada en servei de la plataforma de contenidors on-premise **SwarmMe**
-- Posada en servei de la plataforma de contenidors on-premise **AppAgile**
-- Migració d'aplicacions del servei Single and Scalable Group Container Service de Bluemix al nou **Bluemix Container Service** basat en Docker i Kubernetes
-- Millora d'imatges Docker estàndard de gencatcloud, ara basades en la distribució de Linux **Alpine**, més segures i de tamany més reduït
-- Implementació de nova imatge Docker Apache-Shibboleth per la integració amb **GICAR**, tant a cloud privat com públic
-- Suport al desplegament d'aplicacions en les diferents plataformes cloud: AppAgile, SwarmMe, Azure i Bluemix
 
 
 ### **Canigó**
