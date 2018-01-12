@@ -1,7 +1,7 @@
 +++
 date        = "2018-01-10"
 title       = "Oficina Tècnica de Canigó. Balanç 2017"
-description = "Evolució dels serveis de l'Oficina Tècnica de Canigó l'any 2017"
+description = "Evolució dels serveis de l'Oficina Tècnica de Canigó i Suport Cloud a l'any 2017"
 sections    = ["noticies", "home"]
 categories  = ["sic, canigo, sgde", "cloud"]
 key         = "GENER2018"
@@ -14,7 +14,7 @@ A continuació es mostren les fites aconseguides el 2017 segons ordre cronològi
 A mode resum, destacaríem les següents:
 
 **SIC (Servei d'Integració Continua)**
-```
+
 	- Publicació del SIC 2.0, el qual inclou:
 		- Integració al SIC del nou sistema de gestió de versions de codi (Git).
 		- Integració de la seguretat del SIC amb GICAR.
@@ -28,34 +28,33 @@ A mode resum, destacaríem les següents:
 	- Pas a HTTPs de la totalitat de serveis del SIC 2.0
 	- Actualització de versió del servei Nexus a la versió 3.2.1
 	- Integració d'un sistema de desplegament automàtic als entorns de PRE i PRO (amb tall de servei)
-```
 
-**Container Cloud**
-```
+
+**Suport Cloud**
+
 	- Posada en servei de la plataforma de contenidors on-premise SwarmMe
 	- Posada en servei de la plataforma de contenidors on-premise AppAgile
 	- Migració d'aplicacions del servei "Single and Scalable Group Container Service de Bluemix" al nou "Bluemix Container Service" basat en Docker i Kubernetes
 	- Millora d'imatges Docker estàndard de gencatcloud, ara basades en Alpine, més segures i de tamany més reduït
 	- Implementació de nova imatge Docker Apache-Shibboleth per la integració amb GICAR, tant a cloud privat com públic
 	- Suport al desplegament d'aplicacions en les diferents plataformes cloud: AppAgile, SwarmMe, Azure i Bluemix
-```
+
 
 **Canigó**
-```
+
 	- Publicació de [Canigó 3.2.0](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: incorporació de Swagger, suport a seguretat basada en token JWT, exposició de dades de servei via REST, ...
 	- Publicació de [Canigó 3.2.1](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars i altres millores i resolució d'incidències
 	- Publicació de [Canigó 3.2.2] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries i altres millores i resolució d'incidències
 	- Publicació de [Canigó 3.2.3] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
 	- Nova política de versions [LTS] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
 	- Certificació Canigó 3.2 en JBoss EAP 6.4
-	- Publicació de la versió 2.0.0 del [entorn de desenvolupament de Canigó] (/canigo/entorn-desenvolupament/) amb actualització de programari 
-```
+	- Publicació de la versió 2.0.0 del [entorn de desenvolupament de Canigó] (/canigo/entorn-desenvolupament/) amb actualització de programari
+
 
 **SGDE (Servei de Gestió del Document Electrònic)**
-```
+
 	- STD (Servei de Transformació de Documents): augmentat el límit de mida de documents per les operacions de composició de PDFs a 20MB
 	- eFormularis: deprecada la versió v8 del WS de ServeisInvocacio
-	- STD (Servei de Transformació de Documents): composició de documents amb diferents orientacions de pàgina
-```
+        - STD (Servei de Transformació de Documents): composició de documents amb diferents orientacions de pàgina
 
 Per a més informació sobre els futurs evolutius planificats, podeu consultar el [Roadmap d'arquitectura del CTTI](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
