@@ -9,7 +9,7 @@ key         = "GENER2018"
 
 Amb l'objectiu que els proveïdors d'aplicacions puguin provar el funcionament dels mòduls de Canigó, podent sobreescriure versions de llibreries, es proporcionen binaris amb els tests unitaris integrats. A aquests binaris els coneixem com a **test-jars**.
 
-En ocasions, pot sorgir la necessitat per part del proveïdor d'aplicacions d'utilitzar una versió d'alguna llibreria diferent a la que incorpora Canigó, com pot ser per exemple Spring Framework o Hibernate. Els motius poden ser diversos, principalment:
+En ocasions, pot sorgir la necessitat per part del proveïdor d'aplicacions d'utilitzar una versió més recent d'alguna llibreria respecte a la que incorpora Canigó, sense poder esperar a una nova versió del framework que la incorpori. Exemples de llibreries poden ser Spring Framework o Hibernate. Els motius poden ser diversos, principalment:
 
 - Actualització a una fix version que soluciona algun **bug** que afecta a alguna funcionalitat de l'aplicació
 - Actualització a una minor o major version que incorpora alguna **nova funcionalitat** requerida per l'aplicació
