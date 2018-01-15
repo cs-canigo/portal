@@ -2,7 +2,7 @@
 date        = "2017-11-23"
 lastmod     = "2018-01-15"
 title       = "Gestors documentals"
-description = "Recomanacions de quan i com utilitzar gestors documentals. Què és un gestor documental, història i quins serveis transversals cobreixen aquesta necessitat"
+description = "Recomanacions de quan i com utilitzar gestors documentals. Què és un gestor documental, història i serveis transversals que cobreixen aquesta necessitat"
 sections    = ["drafts"]
 blog_tags   = ["eines"]
 categories  = ["blog","gestors"]
