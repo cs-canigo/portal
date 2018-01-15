@@ -161,45 +161,59 @@ Adoptar un producte amb funcionalitats que no calen a dia d'avui comporta un man
 <a name="dms"></a>**Definició de gestor documental (DMS)**
 [https://en.wikipedia.org/wiki/Document_management_system]
 (https://en.wikipedia.org/wiki/Document_management_system)
+
 <a name="cms"></a>**Definició de gestor de continguts (CMS)**
 [https://en.wikipedia.org/wiki/Content_management_system]
 (https://en.wikipedia.org/wiki/Content_management_system)
+
 <a name="ecm"></a>**Definició de gestor de continguts empresarials (ECM)**
 [https://en.wikipedia.org/wiki/Enterprise_content_management]
 (https://en.wikipedia.org/wiki/Enterprise_content_management)
+
 <a name="dam"></a>**Definició de gestor de actius digitals (DAM)**
 [https://en.wikipedia.org/wiki/Digital_asset_management]
 (https://en.wikipedia.org/wiki/Digital_asset_management)
+
 <a name="dmsvscms"></a>**Diferències entre DMS i CMS**
 [https://www.efilecabinet.com/content-management-systems-vs-document-management-systems/]
 (https://www.efilecabinet.com/content-management-systems-vs-document-management-systems/)
+
 <a name="dmsvsecm"></a>**Diferències entre ECM i DMS**
 [https://www.efilecabinet.com/the-differences-between-ecm-and-dms/]
 (https://www.efilecabinet.com/the-differences-between-ecm-and-dms/)
+
 <a name="cmsvsecm"></a>**Diferències entre CMS i ECM**
 [http://www.prescientdigital.com/articles/content-management/cms-or-ecm-2013-what-is-the-difference]
 (http://www.prescientdigital.com/articles/content-management/cms-or-ecm-2013-what-is-the-difference)
+
 <a name="futurcms"></a>**El futur de la gestió documental**
 [https://www.cmswire.com/cms/document-management/3-takes-on-the-future-of-document-management-027398.php]
 (https://www.cmswire.com/cms/document-management/3-takes-on-the-future-of-document-management-027398.php)
+
 <a name="eovluciocms"></a>**Evolució CMS**
 [https://www.fourkitchens.com/knowledge/webinars/the-future-of-the-cms/]
 (https://www.fourkitchens.com/knowledge/webinars/the-future-of-the-cms/)
+
 <a name="cmsmarketshare"></a>**Adopció CMS**
 [https://websitesetup.org/popular-cms/]
 (https://websitesetup.org/popular-cms/)
+
 <a name="criticaalfresco"></a>**Crítica Alfresco**
 [https://medium.com/@mathiasconradt/dumping-alfresco-for-nuxeo-as-my-preferred-document-management-system-2116cf421d36]
 (https://medium.com/@mathiasconradt/dumping-alfresco-for-nuxeo-as-my-preferred-document-management-system-2116cf421d36)
+
 <a name="gartner2017"></a>**Quadrant màgic per ECM (2017)**
 [https://www.gartner.com/doc/reprints?id=1-4G83I6W&ct=171002&st=sb]
 (https://www.gartner.com/doc/reprints?id=1-4G83I6W&ct=171002&st=sb)
+
 <a name="fsvsnosql"></a>**NoSQL vs Filesystem**
 [https://alexmarquardt.com/2017/03/02/trade-offs-to-consider-when-storing-binary-data-in-mongodb/]
 (https://alexmarquardt.com/2017/03/02/trade-offs-to-consider-when-storing-binary-data-in-mongodb/)
+
 <a name="aresta"></a>**Aresta**
 [http://ctti.gencat.cat/ca/detalls/detallarticle/aresta]
 (http://ctti.gencat.cat/ca/detalls/detallarticle/aresta)
+
 <a name="gitlfs"></a>**Git-lfs**
 [https://git-lfs.github.com/]
 (https://git-lfs.github.com/)
