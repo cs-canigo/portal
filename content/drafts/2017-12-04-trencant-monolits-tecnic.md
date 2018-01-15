@@ -1,5 +1,6 @@
 +++
 date        = "2017-12-04"
+lastmod     = "2017-12-29"
 title       = "De monòlits a (micro)serveis - Part 1: Descomposició tècnica"
 description = "Com trencar un monòlit des del punt de vista tècnic"
 sections    = ["drafts"]
