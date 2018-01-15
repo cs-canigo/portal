@@ -4,7 +4,7 @@ lastmod     = "2017-12-29"
 title       = "De monòlits a (micro)serveis - Part 1: Descomposició tècnica"
 description = "Com trencar un monòlit des del punt de vista tècnic"
 sections    = ["drafts"]
-blog_tags   = ["microserveis,"monolits"]
+blog_tags   = ["microserveis","monolits"]
 categories  = ["microserveis","monolits"]
 +++
 
