@@ -4,6 +4,7 @@ lastmod     = "2017-12-29"
 title       = "De monòlits a (micro)serveis - Part 1: Descomposició tècnica"
 description = "Com trencar un monòlit des del punt de vista tècnic"
 sections    = ["drafts"]
+blog_tags   = ["microserveis,"monolits"]
 categories  = ["microserveis","monolits"]
 +++
 
@@ -123,7 +124,7 @@ La comunicació entre serveis hauria de ser preferentment orientada a events i a
 
 Hi ha molt temes encara no tractats sobre la conversió de monòlits a serveis. Al següent post veurem com tractar la partició des d'un punt de vista funcional. Introduirem tècniques per descompondre el negoci en serveis així com tractar com es pot gestionar i evolucionar una arquitectura basada en (micro)serveis.
 
-Referències:
+## Referències:
 
 **Sam Newman: "Building Microservices (2015)"**
 [http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078]
