@@ -11,7 +11,7 @@ S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](h
 
 
 
-#### Aplicacions en running
+#### Aplicacions en "running"
 
 Per les aplicacions que estiguin en running:
 
@@ -28,7 +28,7 @@ Donat que a les plataformes Cloud gestionades des de Suport Cloud es dóna accé
 
 
 
-#### Aplicacions en fase de projecte
+#### Aplicacions en "fase de projecte"
 
 Per les aplicacions en fase de projecte, la comunicació sempre s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte <NOM_PROJECTE>". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició imatges Docker, definició descriptors de desplegament,...) es canalitzarà en aquesta petició.
 
