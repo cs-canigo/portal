@@ -38,6 +38,8 @@ A l'accedir, demanarà realitzar login a GICAR si no s'ha logat prèviament en a
 
 A continuació s'expliquen les 3 categories de peticions que contemplem i l'operativa a realitzar amb cadascuna d'elles per obrir les diferents peticions al SIC.
 
+______________________________________
+
 #### Obrir petició de suport funcional
 
 Caldrà obrir aquest tipus de petició a Remedy per demanar:
@@ -78,6 +80,8 @@ En aquest camp es pot detallar més informació sobre la petició.
 
 ![](/related/sic/howto/imatges/Remedy8.png)
 Indicar un o d’altre valor segons la urgència de la petició (seguir les instruccions per informar-ho).
+
+______________________________________
 
 #### Obrir consulta
 
@@ -122,6 +126,8 @@ Informar algun telèfon de contacte per tal que  en cas de necessitat l’equip 
 ![](/related/sic/howto/imatges/Remedy15.png)
 
 Descripció detallada sobre la consulta a realitzar. Cas que fos necessari complementar la consulta amb algun/s document/s, caldria annexar-ho/los també.
+
+______________________________________
 
 #### Reportar incidències
 
