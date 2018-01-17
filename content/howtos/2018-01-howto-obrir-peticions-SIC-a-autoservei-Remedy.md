@@ -38,9 +38,10 @@ A l'accedir, demanarà realitzar login a GICAR si no s'ha logat prèviament en a
 
 A continuació s'expliquen les 3 categories de peticions que contemplem i l'operativa a realitzar amb cadascuna d'elles per obrir les diferents peticions al SIC.
 
-* [Obrir petició de suport funcional](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#suport)
-* [Obrir consulta](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta)
-* [Reportar incidències](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#incidencia)
+* [Obrir petició de suport funcional](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#suport)
+* [Obrir consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta)
+* [Reportar incidències](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#incidencia)
+
 ______________________________________
 
 <div id="suport"></div>
