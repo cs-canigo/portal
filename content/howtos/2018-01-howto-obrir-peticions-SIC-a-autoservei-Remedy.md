@@ -38,8 +38,12 @@ A l'accedir, demanarà realitzar login a GICAR si no s'ha logat prèviament en a
 
 A continuació s'expliquen les 3 categories de peticions que contemplem i l'operativa a realitzar amb cadascuna d'elles per obrir les diferents peticions al SIC.
 
+* [Obrir petició de suport funcional](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#suport)
+* [Obrir consulta](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta)
+* [Reportar incidències](howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#incidencia)
 ______________________________________
 
+<div id="suport"></div>
 #### Obrir petició de suport funcional
 
 Caldrà obrir aquest tipus de petició a Remedy per demanar:
@@ -83,6 +87,7 @@ Indicar un o d’altre valor segons la urgència de la petició (seguir les inst
 
 ______________________________________
 
+<div id="consulta"></div>
 #### Obrir consulta
 
 Caldrà obrir aquest tipus de petició a Remedy per demanar qualsevol tipus d’informació relacionada amb els serveis de SIC.
@@ -129,6 +134,7 @@ Descripció detallada sobre la consulta a realitzar. Cas que fos necessari compl
 
 ______________________________________
 
+<div id="incidencia"></div>
 #### Reportar incidències
 
 Caldrà obrir aquest tipus de petició a Remedy per reportar qualsevol tipus d’incidència relacionada amb els serveis de SIC, com ara:
