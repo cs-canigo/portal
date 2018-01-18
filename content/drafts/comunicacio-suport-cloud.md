@@ -19,7 +19,7 @@ Per les aplicacions que estiguin en running:
 _Incidències_ i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "A6-N3-CLOUD" com a "Assigned Group".
 
 <div class="message information">
-Donat que a les plataformes Cloud gestionades des de Suport Cloud es dóna accés a logs i monitorització de l'aplicació, per l'agilitat en la resolució de les incidències és vital que el proveïdor d'aplicacions hagi revisat abans tota la informació de la qual disposa. També gràcies als jobs de desplegament del [**SIC**](http://canigo.ctti.gencat.cat/sic/) és autònom per redesplegar el servei afectat. Per tant, només haurien d'arribar incidències a Suport Cloud relacionades amb la plataforma (Ex. indisponibilitat global de la plataforma), que ni tan sols redesplegant el servei puguin resoldre's.
+Donat que a les plataformes Cloud gestionades des de Suport Cloud es dóna accés a <b>logs</b> i <b>monitorització</b> de l'aplicació, per l'agilitat en la resolució de les incidències és vital que el proveïdor d'aplicacions hagi revisat abans tota la informació de la qual disposa. També gràcies als <b>jobs de desplegament</b> del <a href="http://canigo.ctti.gencat.cat/sic/">SIC</a> és autònom per redesplegar el servei afectat. Per tant, només haurien d'arribar incidències a Suport Cloud relacionades amb la plataforma (Ex. indisponibilitat global de la plataforma), que ni tan sols redesplegant el servei puguin resoldre's.
 </div>
 
 - **CSTD**
