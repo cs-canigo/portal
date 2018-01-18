@@ -30,13 +30,13 @@ _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](http
 
 #### Aplicacions en "fase de projecte"
 
-Per les aplicacions en fase de projecte, la comunicació sempre s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte <NOM_PROJECTE>". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició imatges Docker, definició descriptors de desplegament,...) es canalitzarà en aquesta petició.
+Per les aplicacions en fase de projecte, la comunicació sempre s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte NOM_PROJECTE". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició imatges Docker, definició descriptors de desplegament,...) es canalitzarà en aquesta petició.
 
 <br/>
 
 #### Aplicacions que no han iniciat el procés d'alta dins CTTI
 
-**Consultes** i **Suports** han de realitzar-se al servei [**CS Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/CLD).
+_Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/CLD).
 
 <br/>
 
