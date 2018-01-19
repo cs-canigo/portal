@@ -42,4 +42,4 @@ _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](http
 
 En cas que no es disposi d'usuari al CSTD, cal que el gestor de projecte CTTI de l'aplicació faci arribar la petició d'alta d'usuari al propi [servei CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CSTD) o bé enviant un correu a la bústia [cstd.ctti@gencat.cat](mailto:cstd.ctti@gencat.cat).
 
-A partir de l'**1 de Març de 2018**, totes les peticions que s'enviïn a la bústia [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat) seràn redirigides el canal adient.
+A partir de l'**1 de Març de 2018**, totes les peticions que s'enviïn a la bústia [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat) seràn redirigides al canal adient.
