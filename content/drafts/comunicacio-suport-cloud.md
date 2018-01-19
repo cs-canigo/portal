@@ -6,7 +6,7 @@ sections    = "Container Cloud"
 categories  = ["cloud"]
 +++
 
-S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/) i [**Remedy**](https://pautic.gencat.cat/) com a únics canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
+S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
 
 <br/>
 
@@ -42,4 +42,4 @@ _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](http
 
 En cas que no es disposi d'usuari al CSTD, cal que el gestor de projecte CTTI de l'aplicació faci arribar la petició d'alta d'usuari al propi [servei CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CSTD) o bé enviant un correu a la bústia [cstd.ctti@gencat.cat](mailto:cstd.ctti@gencat.cat).
 
-Les peticions dirigides a la bústia [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat) seràn rebutjades comunicant el canal adient per realitzar la petició.
+A partir de l'**1 de Març de 2018**, totes les peticions que s'enviïn a la bústia [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat) seràn redirigides el canal adient.
