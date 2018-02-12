@@ -25,13 +25,66 @@ Amb el SIC 2.0, cal fer un push al repositori d'una versió o d'un tag anteriors
 
 ### Realitzar un push d'una versió o d'un tag anterior
 
-El procediment és el següent:
+Com exemple, tenim la següent consecucions de versions a un projecte:
+
+<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT1.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
+
+Volem fer marxa enrere, fins la versió A, generant una nova versió que anomenarem A':
+
+<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT2.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
+
+Existeixen tres estratègias per fer-ho:
+
+#### Fent "git revert" versió a versió
+La primera forma és, partint de l'última versió creada, anar fent "git revert" cap a enderrera, versió per versió, fins la que es desitja re-instaurar.
+
+A  <-- B  <-- C <-- D  
+
+El que farem serà executar les següents comandes:
+
+```
+$ git revert --no-commit D
+$ git revert --no-commit C
+$ git revert --no-commit B
+$ git commit -m "el missatge del commit"
+```
+
+#### Fent "git revert" optimitzat
+La segona forma és semblant a l'anterior, però indicant en el "git revert" el número de versions que es vol anar cap a endarere. 
+Al nostre cas son 3 versions, per tant la comanda a executar és:
+
+```
+git revert master~3..master --no-commit
+```
+
+
+#### Fent "checkout" directe
+Un altre forma és fer directament un checkout de la versió a re-instaurar.
+
+Per a fer marxa enrere a la versió A, executaríem les següents comandes:
+
+```
+$ git checkout -f A -- .
+$ git commit -a
+```
+
+
+
+________________________________________
+
+
+________________________________________
+
+________________________________________
 
 
 
 
 
-si l'aplicació compta amb jobs pipeline, aquests s'executen automàticament després de fer un push al repositori.
+
+
+
+
 
 Des de l'implantament del GitLab al SIC, tots els projectes disposen de la possibilitat de la creació de wikis internes per a la documentació i descripció tant dels processos inclosos al repositori com també per allotjar tots els procediments necessaris per al correcte desenvolupament, desplegament i proves relacionats amb el projecte.
 
