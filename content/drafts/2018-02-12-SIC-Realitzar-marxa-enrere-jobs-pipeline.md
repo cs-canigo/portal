@@ -23,22 +23,23 @@ Amb els antics jobs freestyle del SIC 1.0, es podia executar el job de l'entorn 
 
 Amb el SIC 2.0, cal fer un push al repositori d'una versió o d'un tag anteriors. A continuació, s'explica com fer-ho.
 
-### Realitzar un push d'una versió o d'un tag anterior
+## Realitzar un push d'una versió o d'un tag anterior
 
-Com exemple, tenim la següent consecucions de versions a un projecte:
+A mode d'exemple, partirem de la següent seqüència de versions d'un projecte qualsevol:
 
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT1.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
+<div style="width:90%;margin:5px auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT1.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
 
 Volem fer marxa enrere, fins la versió A, generant una nova versió que anomenarem A':
 
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT2.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
+<div style="width:90%;margin:5px auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT2.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
 
-Existeixen tres estratègias per fer-ho:
+Proposem tres estratègies per aconseguir-ho:
 
-#### Fent "git revert" versió a versió
-La primera forma és, partint de l'última versió creada, anar fent "git revert" cap a enderrera, versió per versió, fins la que es desitja re-instaurar.
+### Fent "git revert" versió a versió
 
-A  <-- B  <-- C <-- D  
+Partint de l'última versió creada, el primer mètode és anar fent "git revert" cap endarrere, versió per versió, fins la que es desitja reinstaurar.
+
+`A ← B ← C ← D`
 
 El que farem serà executar les següents comandes:
 
@@ -49,107 +50,31 @@ $ git revert --no-commit B
 $ git commit -m "el missatge del commit"
 ```
 
-#### Fent "git revert" optimitzat
-La segona forma és semblant a l'anterior, però indicant en el "git revert" el número de versions que es vol anar cap a endarere. 
-Al nostre cas son 3 versions, per tant la comanda a executar és:
+### Fent "git revert" optimitzat
+
+La segona forma és semblant a l'anterior, però indicant en el "git revert" el nombre de versions que es vol anar cap endarere.
+
+Assumint que es tracta de la branca master, en el nostre cas són 3 versions, per tant la comanda a executar és:
 
 ```
 git revert master~3..master --no-commit
+$ git commit -m "el missatge del commit"
 ```
 
+### Fent "checkout" directe
 
-#### Fent "checkout" directe
-Un altre forma és fer directament un checkout de la versió a re-instaurar.
+Una altra forma de realitzar aquesta marxa enrere és fer directament un checkout de la versió a reinstaurar.
 
 Per a fer marxa enrere a la versió A, executaríem les següents comandes:
 
 ```
 $ git checkout -f A -- .
-$ git commit -a
+$ git commit -m "el missatge del commit"
 ```
 
+### Aspectes a tenir en compte
 
+En el cas d'haver de realitzar alguna de les estratègies anteriors, es recomana:
 
-________________________________________
-
-
-________________________________________
-
-________________________________________
-
-
-
-
-
-
-
-
-
-
-Des de l'implantament del GitLab al SIC, tots els projectes disposen de la possibilitat de la creació de wikis internes per a la documentació i descripció tant dels processos inclosos al repositori com també per allotjar tots els procediments necessaris per al correcte desenvolupament, desplegament i proves relacionats amb el projecte.
-
-## Accés a la Wiki
-
-Dins de cada projecte tenim una opció al menú superior de manteniment del projecte que ens permet accedir a la Wiki.
-
-La primera vegada que accedim a la Wiki del nostre projecte, aquesta, te l'aspecte següent:
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-aspecte-inicial.png" alt="Aspecte inicial de la wiki" title="Aspecte inicial de la wiki"></img></div>
-
-## Organització de les Wikis d'un codi d'aplicació
-
-Dins del grup d'aplicació on estigui allotjat el repositori de la nostra aplicació, podem organitzar la Wiki de forma que tingui un abast general o podem tenir una wiki per a cada projecte independent.
-
-En el cas de decidir-nos per un àmbit general, cal crear un projecte separat de la resta per allotjar tota la documentació que generarem.
-
-Escollim la opció que sigui, si volem allotjar documents i imatges, hem de crear una estructura de directoris on penjar-los. Per exemple, aquí tenim un projecte anomenat **documentacio** on tenim una carpeta per als **manuals** i un altre per les **imatges**. El directori per allotjar les imatges, s’ha d'anomenar-se obligatòriament  **wiki/images**.
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-estructura-organitzacio-wiki.png" alt="Estructura de directoris de la wiki" title="Estructura de directoris de la wiki"></img></div>
-
-
-## Llenguatge de edició/generació de la Wiki
-
-Un dels llenguatges més utilitzat per a la generació de wikis, i que és el que utilitzem al SIC per la generació d'aquestes pàgines, és el **Markdown**.
-
-Markdown és un llenguatge de **marcat** que facilita l'aplicació de format a un text fent servir una series de caràcters d'una forma especial.
-
-```
-Per exemple, si escrivim **text en negreta**, aquest apareix en negreta.
-```
-Resultat: **text en negreta**.
-
-La sintaxis es molt senzilla i ens permet anar escrivint el text que vulguem i afegint els caràcters de marcatge de forma fluida per formatar el nostre text.
-
-Aquest llenguatge ens permet afegir títols de diferent nivell, diferents formats de text, taules, llistes, links, etc...
-
-Podeu accedir a més informació referent a Markdown als enllaços següents:  
-[Suport de Markdown al GitLab](https://git.intranet.gencat.cat/help/user/markdown)  
-[Markdown a la WikiPedia](https:/ca.wikipedia.org/wiki/Markdown)  
-[Pàgina del creador de Markdown](https://daringfireball.net/projects/markdown/)  
-
-
-## Procés de generació de la Wiki
-
-Per a la creació d'una pàgina wiki hem de fer click al botó **New Page** que es mostra a la wiki del projecte. En cas de no tenir cap pàgina a la wiki, nomès entrar ja s'ens mostra l'editor preparat per a generar una pàgina d'entrada a la wiki, tal com hem vist al primer punt d'aquest document.
-
-L'editor web ens permet escollir el tipus de **Format** que volem fer servir per a la pàgina, podem afegir directament el contingut i afegir un comentari als canvis fets al document. Ens permet escollir si volem un document Markdown, RDoc o AsciiDoc.
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-pagina-nova-format.png" alt="Format nova pàgina a la wiki" title="Format nova pàgina a la wiki"></img></div>
-
-Al crear una pàgina nova, el primer que ens demana és el nom.
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-pagina-nova-nom.png" alt="Nom nova pàgina a la wiki" title="Nom nova pàgina a la wiki"></img></div>  
-
-
-Editem el contingut:
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-pagina-text.png" alt="Text nova pàgina wiki" title="Text nova pàgina wiki"></img></div>
-
-I veiem els resultats fent **Preview**:
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-pagina-preview.png" alt="Preview nova pàgina wiki" title="Preview nova pàgina wiki"></img></div>
-
-
-Un cop finalitzada la edició de la pàgina wiki, la guardem i queda afegida a l'índex de la nostra wiki.
-
-<div style="width:90%;margin:0 auto;"><img style="width: 90%; height: auto" src="/images/news/SIC-wiki-pagina-prova.png" alt="Nova pàgina wiki" title="Nova pàgina wiki"></img></div>
+* Assegurar-se que no hi hagi modificacions en curs (la comanda `git status` no ha de retornar cap arxiu staged).
+* Caldrà modificar el nom del tag. Una vegada generat el tag amb èxit, al SIC no es permet reutiltizar-lo en altres commits.
