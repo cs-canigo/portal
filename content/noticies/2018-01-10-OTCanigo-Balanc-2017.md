@@ -56,5 +56,21 @@ A mode resum, destacaríem les següents:
 	- STD (Servei de Transformació de Documents): augmentat el límit de mida de documents per les operacions de composició de PDFs a 20MB
 	- eFormularis: deprecada la versió v8 del WS de ServeisInvocacio
         - STD (Servei de Transformació de Documents): composició de documents amb diferents orientacions de pàgina
+		
+* _SIC_ :
+
+	- PublicaciÃ³ del SIC 2.0, que inclou:
+		- IntegraciÃ³ al SIC del nou sistema de gestiÃ³ de versions de codi (Git).
+		- IntegraciÃ³ de la seguretat del SIC amb GICAR.
+		- Autoservei d'usuaris al SIC, mitjanÃ§ant el qual els usuaris de CTTI i de CPD/LDT tenen accÃ©s de forma automÃ tica i els usuaris de Lot d'aplicacions poden concedir-se permisos entre companys del mateix lot i Ã mbit.
+		- GrÃ cies a la incorporaciÃ³ de l'Autoservei de repositoris al SIC, els usuaris de lot d'aplicacions poden crear-se de forma autonÃ²ma els seus repositoris.
+		- IntegraciÃ³ de jobs en format pipeline al SIC.
+		- CreaciÃ³ d'un Sistema de GestiÃ³ de Binaris, mitjanÃ§ant el qual s'evita l'antipatrÃ³ de dispositar artefactes als sistemes de versions de codi.
+	- IntegraciÃ³ del SIC als Clouds Kubernetes de Bluemix i AppAgile (Openshift).
+	- IntegraciÃ³ del SIC en el procÃ©s d'alta d'aplicacions a CTTI a travÃ©s de la participaciÃ³ a les reunions de fase 0 de nous projectes.
+	- Pas a HTTPs de la resta de serveis del SIC 2.0.
+	- ActualitzaciÃ³ de versiÃ³ del servei Nexus a la versiÃ³ 3.2.1.
+	- IntegraciÃ³ d'un sistema de desplegament automÃ tic als entorns de PRE i PRO (amb tall de servei).
+
 
 Per a més informació sobre els futurs evolutius planificats, podeu consultar el [Roadmap d'arquitectura del CTTI](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
