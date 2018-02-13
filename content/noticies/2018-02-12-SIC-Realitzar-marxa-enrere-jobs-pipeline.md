@@ -2,7 +2,7 @@
 date        = "2018-02-12"
 title       = "SIC. Gestionar marxes enrere amb jobs pipeline"
 description = "En aquest article mostrem com redesplegar una versió anterior de l'aplicació al SIC després d'un desplegament fallit."
-sections    = ["notícies"]
+sections    = ["noticies"]
 categories  = ["sic"]
 key         = "FEBRER2018"
 draft =true
@@ -33,7 +33,7 @@ Volem fer marxa enrere, fins la versió A, generant una nova versió que anomena
 
 <div style="width:90%;margin:5px auto;"><img style="width: 90%; height: auto" src="/images/news/commitGIT2.png" alt="Versions al GIT" title="Versions al GIT"></img></div>
 
-Proposem tres estratègies per aconseguir-ho:
+Proposem tres estratègies per aconseguir-ho (als exemeples següents, `A`, `B`, `C`, `D` han de ser reemplaçats pels ID's de commit corresponents, que es poden obtenir amb la comanda `git log`):
 
 ### Fent "git revert" versió a versió
 
