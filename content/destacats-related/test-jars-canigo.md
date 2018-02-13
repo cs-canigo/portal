@@ -9,7 +9,7 @@ key         = "GENER2018"
 
 Amb l'objectiu que els proveïdors d'aplicacions puguin provar el funcionament dels mòduls de Canigó, podent sobreescriure versions de llibreries, es proporcionen binaris amb els tests unitaris integrats. A aquests binaris els coneixem com a **test-jars**.
 
-En ocasions, pot sorgir la necessitat per part del proveïdor d'aplicacions d'utilitzar una versió d'alguna llibreria diferent a la que incorpora Canigó, com pot ser per exemple Spring Framework o Hibernate. Els motius poden ser diversos, principalment:
+En ocasions, pot sorgir la necessitat per part del proveïdor d'aplicacions d'utilitzar una versió més recent d'alguna llibreria respecte a la que incorpora Canigó, sense poder esperar a una nova versió del framework que la incorpori. Exemples de llibreries poden ser Spring Framework o Hibernate. Els motius poden ser diversos, principalment:
 
 - Actualització a una fix version que soluciona algun **bug** que afecta a alguna funcionalitat de l'aplicació
 - Actualització a una minor o major version que incorpora alguna **nova funcionalitat** requerida per l'aplicació
@@ -20,7 +20,7 @@ D'inici, no es proporcionen test-jars per a tots els serveis Canigó, sino nomé
 
 - *Servei Core*: "canigo.core" versió 3.2.3 o superior
 - *Servei Web REST*: "canigo.web.rs" versió 1.1.1 o superior
-- *Servei de Persistència*: "canigo.persistence.jpa" 1.2.2 versió 1 o superior
+- *Servei de Persistència*: "canigo.persistence.jpa" versió 1.2.2 o superior
 - *Servei de Seguretat*: "canigo.security" versió 1.2.3 o superior
 
 Aquests binaris estan publicats al Nexus del SIC. Els podeu trobar al [repositori Maven públic](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven) cercant pel groupId "cat.gencat.ctti", i "artifactId" i "version" especificats al llistat anterior.

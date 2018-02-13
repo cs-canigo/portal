@@ -1,7 +1,7 @@
 +++
 date = "2018-02-13"
-title = "Generació de joc de proves per a Peticions REST amb SOAP-UI"
-description = "Generació de joc de proves per a Peticions REST amb SOAP-UI"
+title = "Generació de joc de proves per a peticions REST a SOAP-UI amb Swagger"
+description = "En aquest HowTo s'explica com generar un joc de proves per a peticions REST a SOAP-UI amb Swagger"
 section = "howtos"
 categories = ["canigo"]
 key = "FEBRER2018"
