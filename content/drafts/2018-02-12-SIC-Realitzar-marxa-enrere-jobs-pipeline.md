@@ -57,7 +57,7 @@ La segona forma és semblant a l'anterior, però indicant en el "git revert" el 
 Assumint que es tracta de la branca master, en el nostre cas són 3 versions, per tant la comanda a executar és:
 
 ```
-git revert master~3..master --no-commit
+$ git revert master~3..master --no-commit
 $ git commit -m "el missatge del commit"
 ```
 
@@ -77,4 +77,4 @@ $ git commit -m "el missatge del commit"
 En el cas d'haver de realitzar alguna de les estratègies anteriors, es recomana:
 
 * Assegurar-se que no hi hagi modificacions en curs (la comanda `git status` no ha de retornar cap arxiu staged).
-* Caldrà modificar el nom del tag. Una vegada generat el tag amb èxit, al SIC no es permet reutiltizar-lo en altres commits.
+* Caldrà modificar el nom del tag especificat a l'atribut `version` de l'arxiu `/sic/sic.yml`. Una vegada generat el tag amb èxit, al SIC no es permet reutiltizar-lo en altres commits.
