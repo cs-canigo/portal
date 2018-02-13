@@ -77,4 +77,4 @@ $ git commit -m "el missatge del commit"
 En el cas d'haver de realitzar alguna de les estratègies anteriors, es recomana:
 
 * Assegurar-se que no hi hagi modificacions en curs (la comanda `git status` no ha de retornar cap arxiu staged).
-* Caldrà modificar el nom del tag especificat a l'atribut `version` de l'arxiu `/sic/sic.yml`. Una vegada generat el tag amb èxit, al SIC no es permet reutiltizar-lo en altres commits.
+* Caldrà modificar el nom del tag especificat a l'atribut `version` de l'arxiu `/sic/sic.yml`. Una vegada generat el tag amb èxit, al SIC no es permet reutilitzar-lo en altres commits.
