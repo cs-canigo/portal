@@ -2,10 +2,9 @@
 date        = "2018-02-12"
 title       = "SIC. Gestionar marxes enrere amb jobs pipeline"
 description = "En aquest article mostrem com redesplegar una versió anterior de l'aplicació al SIC després d'un desplegament fallit."
-sections    = ["noticies"]
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "FEBRER2018"
-draft =true
 +++
 
 Amb la posada en marxa del SIC 2.0, el procés d'execució de jobs i de gestió de la marxa enrere ha canviat substancialment. A continuació us en fem un resum de les novetats més importants que aporta el SIC 2.0:

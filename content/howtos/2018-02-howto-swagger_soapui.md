@@ -1,5 +1,5 @@
 +++
-date = "2018-02-13"
+date = "2018-02-14"
 title = "Generació de joc de proves per a peticions REST a SOAP-UI amb Swagger"
 description = "En aquest HowTo s'explica com generar un joc de proves per a peticions REST a SOAP-UI amb Swagger"
 section = "howtos"
@@ -9,15 +9,15 @@ key = "FEBRER2018"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvolupin una aplicació Canigó 3.2.x.
+Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvolupin una aplicació Canigó 3.2.
 
 ### Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.2.x del Framework Canigó.
+Els passos descrits en aquest document apliquen a la versió 3.2 del Framework Canigó.
 
 ### Prerequisits
 
-Es necessita la versió 5.4.0 de [SOAP-UI] (https://www.soapui.org/downloads/soapui.html)
+Es necessita la versió 5.2.1 o superior de [SOAP-UI] (https://www.soapui.org/downloads/soapui.html)
 
 ### Introducció
 
@@ -27,9 +27,13 @@ Aquestes proves es poden realitzar amb un programa com el SOAP-UI que permet la 
 
 ### Obtenció swagger.json
 
-Per a importar les metadades del nostre projecte a SOAP-UI es necessita obtenir el fitxer json que genera Swagger.
+Per a importar les metadades del nostre projecte a SOAP-UI es necessita obtenir el fitxer json que genera Swagger:
 
-- Accedir a la plana de Swagger de la nostra aplicació (http://localhost:8080/canigo-api.html)
+- Accedir directament al json que genera: http://localhost:8080/api/v2/api-docs
+
+Una altre forma d'obtenir el fitxer json és:
+
+- Accedir a la plana de Swagger de la nostra aplicació http://localhost:8080/canigo-api.html
 - Obrir les eines de desenvolupador que proporciona el navegador. A Chrome es pot accedir mitjançant F12 o "Més eines - Eines per a desenvolupadors"
 - Anar a la pestanya Network i fer F5 per refrescar la pàgina
 - Seleccionar el filtre XHR

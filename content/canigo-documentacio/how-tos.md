@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Canigó. Jocs de proves API REST] (/howtos/2018-02-howto-swagger_soapui/)
 - [Proves Unitàries Mòduls de Canigó] (/howtos/2018-01-howto-test_jars_canigo/)
 - [Integració d'una aplicació Canigó a SIC 2.0] (/howtos/2017-12-howto-integracio_canigo_sic/)
 - [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/)
