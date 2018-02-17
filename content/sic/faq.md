@@ -100,3 +100,8 @@ Els projectes dins els grups d'aplicació sí que podran ser creats per els prop
 
 <br/>
 
+#### **Des de la nostra oficina no tenim connectivitat cap als serveis del SIC. Com podem resoldre aquest problema?** ####
+Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que tingui accés a les adreces IP del SIC. Si us cal saber les adreces IP dels serveis podeu obrir una consulta a Remedy al servei "Framework SIC".
+
+<br/>
+
