@@ -13,5 +13,5 @@ El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.tho
 
 <div id="radarctti" class="container-radar"></div>
 
-<link type="text/css" rel="stylesheet"  href="https://rawgit.com/cs-canigo/radar/master/main.73b4e9069f72baa4a50d.css">
-<script type="application/javascript" src="https://rawgit.com/cs-canigo/radar/master/main.73b4e9069f72baa4a50d.js">
+<link type="text/css" rel="stylesheet"  href="https://rawgit.com/cs-canigo/radar/master/main.e16a32eea7a55ccc5721.css">
+<script type="application/javascript" src="https://rawgit.com/cs-canigo/radar/master/main.e16a32eea7a55ccc5721.js">
