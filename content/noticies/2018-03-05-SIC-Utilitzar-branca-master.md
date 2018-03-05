@@ -9,10 +9,12 @@ key         = "FEBRER2018"
 
 Arrel les consultes rebudes les darreres setmanes, creiem convenient publicar aquest article on s'explica els usos de les branques al SIC.
 
+## Models de gestió de branques en repositoris Git
+
 Hi ha un gran ventall d'aproximacions que es poden conjugar per a la gestió de branques d'un repositori git:
 
 1. Ús d'una sola branca.
-2. Ús d'un sistema de branques procedimentat en el que hi ha branques fixes i branques temporals, com per exemple GitFlow.
+2. Ús d'un sistema de branques procedimentat en el que hi ha branques fixes i branques temporals, com per exemple [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/).
 3. Ús de branques no procedimentat.
 
 ## Model adoptat al SIC
