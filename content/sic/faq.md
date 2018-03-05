@@ -105,3 +105,7 @@ Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que tingui accés a les adrec
 
 <br/>
 
+#### **Quines branques provoquen l'execució de pipelines de construcció i desplegament al Jenkins?** ####
+Únicament la branca `master` és la que té el lligam amb les pipelines de Jenkins. No obstant, es pot publicar qualsevol branca al Git del SIC.
+
+<br/>

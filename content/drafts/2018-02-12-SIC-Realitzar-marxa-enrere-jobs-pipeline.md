@@ -2,7 +2,7 @@
 date        = "2018-02-12"
 title       = "SIC. Gestionar marxes enrere amb jobs pipeline"
 description = "En aquest article mostrem com redesplegar una versió anterior de l'aplicació al SIC després d'un desplegament fallit."
-sections    = ["Notícies", "home"]
+sections    = ["drafts"]
 categories  = ["sic"]
 key         = "FEBRER2018"
 +++
