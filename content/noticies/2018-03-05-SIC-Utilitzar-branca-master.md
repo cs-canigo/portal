@@ -25,7 +25,7 @@ L'adopció d'aquest model respon a l'ús que se'n fa del repositori Git del SIC:
 
 Les pipelines, que actualment només construeixen i despleguen, en el futur realitzaran altres tasques:
 
-* Anàlisi estàtic de la qualitat del codi
+* Anàlisi de la qualitat del codi
 * Anàlisi de vulnerabilitats
 * Proves d'acceptació, de fum, etc.
 
@@ -45,7 +45,7 @@ Pràcticament la totalitat de les funcionalitats que s'han de desenvolupar poden
 
 En resum, es passa d'un model incremental (en el que una funcionalitat va creixent i quan està completa s'integra a la branca central) a un model iteratiu (cada subfuncionalitat s'integra una rere l'altra) augmentant la freqüència d'integracions de codi i reduint-ne la seva complexitat. És a dir, s'adopta un model d'**Integració Contínua**.
 
-Per tant, en pro de la qualitat del codi i de la productivitat, des del SIC es recomana tenir integracions a la branca master amb una freqüència mínima diària (o quasi-diària) i treballar amb una metodologia **trunk-based**.
+Per tant, en pro de la qualitat del codi i de la productivitat, des del SIC es recomana tenir integracions a la branca master amb una freqüència mínima diària (o quasi diària) i treballar amb una metodologia **trunk-based**.
 
 S'han actualitzat el [FAQ](http://canigo.ctti.gencat.cat/sic/faq/), el [Manual d'Usuari](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf) i [Manual d'Integració](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-integracio.pdf) tot indicant aquesta informació.
 
