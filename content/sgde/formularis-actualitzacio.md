@@ -1,13 +1,13 @@
 +++
 date        = "2018-03-09"
-title       = "Actualització de plataforma a eFormularis"
+title       = "Actualització de plataforma al servei d'eFormularis"
 description = "Upgrade de versió d'Adobe LiveCycle a Adobe Experience Manager (AEM)"
 sections    = "SGDE"
 taxonomies  = []
 weight 		= 4
 +++
 
-Des del CS Canigó s'està treballant en l'actualització del producte base del servei, Adobe LiveCycle. **Adobe Experience Manager (AEM)** és l'evolució d'aquest producte, el qual, a més d'oferir les mateixes funcionalitats de les que ja disposava Adobe LiveCycle, n'afegeix de noves. D'entre aquestes noves funcionalitats destaca la possibilitat de poder treballar amb formularis HTML5.
+Des del CS Canigó s'està treballant en l'actualització del producte base del servei, Adobe LiveCycle. **Adobe Experience Manager (AEM)** és l'evolució d'aquest producte, el qual, a més d'oferir les mateixes funcionalitats de les que ja disposa Adobe LiveCycle, n'afegeix de noves. D'entre aquestes noves funcionalitats destaca la possibilitat de poder treballar amb formularis HTML5.
 
 Per tant, l'actualització del producte té principalment dos objectius:
 
@@ -41,9 +41,7 @@ http://sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
 
 - REST API (Nova)
 
-Com a millora a l'actual servei de Formularis PDF, s'incorpora una nova REST API amb les mateixes funcionalitats que ofereix el WS SOAP. Aqu
-
-REST API està basada en Swagger2.
+Com a millora a l'actual servei de Formularis PDF, s'incorpora una nova REST API amb les mateixes funcionalitats que ofereix el WS SOAP. Aquesta REST API està basada en Swagger2.
 
 ![REST API eForms](/related/sgde/serveis-invocacio-api.png)
 
@@ -57,8 +55,8 @@ En aquest punt s'està treballant tant en la vessant més tècnica com en la gov
 
 <br><br>
 
-Aquesta actualització del producte s'està realitzant en una infraestructura paral·lela a l'actual. Per tant, caldrà que els integradors facin proves en aquesta nova plataforma abans no es posi en servei. Si les proves són satisfactòries, el canvi haurà de ser totalment transparent.
+Aquesta actualització del producte s'està realitzant en una infraestructura paral·lela a l'actual. Per tant, caldrà que els integradors facin proves en aquesta nova plataforma abans no es posi en servei. Si les proves són satisfactòries, el canvi de plataforma haurà de ser totalment transparent.
 
-Durant les pròximes setmanes s'aniran comunicant amb més detall totes les novetats d'aquesta actualització en aquest mateix portal, així com una planificació de disponibilitat d'entorns, períodes de proves per part dels integradors, i posada en marxa del servei. També s'enviaran notificacions als integradors per consensuar aquest calendari.
+Durant les pròximes setmanes s'aniran comunicant amb més detall totes les novetats d'aquesta actualització en aquest mateix portal, així com una planificació de disponibilitat d'entorns, períodes de proves per part dels integradors, i posada en marxa del servei. També s'enviaran notificacions per correu als integradors per consensuar aquest calendari.
 
 Per qualsevol dubte us podeu posar en contacte amb el CS Canigó preferiblement a través del [servei STF del CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) o [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
