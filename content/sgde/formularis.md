@@ -1,7 +1,7 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Formularis electrònics"
-description = ""
+description = "Descripció del servei d'eFormularis"
 sections    = "SGDE"
 taxonomies  = []
 weight 		= 3
