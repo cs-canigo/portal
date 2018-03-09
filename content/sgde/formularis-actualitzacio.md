@@ -41,9 +41,11 @@ http://sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
 
 - REST API (Nova)
 
-Com a millora a l'actual servei de Formularis PDF, s'incorpora una nova REST API amb les mateixes funcionalitats que ofereix el WS SOAP. Aquesta REST API esta basada en Swagger2.
+Com a millora a l'actual servei de Formularis PDF, s'incorpora una nova REST API amb les mateixes funcionalitats que ofereix el WS SOAP. Aqu
 
-CAPTURA
+REST API està basada en Swagger2.
+
+![REST API eForms](/related/sgde/serveis-invocacio-api.png)
 
 Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacions que s'integrin al servei utilitzin aquesta REST API.
 
@@ -52,14 +54,11 @@ Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacio
 Oferir un nou motor per poder donar servei a **Formularis HTML5**.
 
 En aquest punt s'està treballant tant en la vessant més tècnica com en la governança d'aquest nou servei de Formularis HTML5.
-A mode molt esquemàtic, el model d'integració en el que s'està treballant és el següent:
-
-CAPTURA
 
 <br><br>
 
 Aquesta actualització del producte s'està realitzant en una infraestructura paral·lela a l'actual. Per tant, caldrà que els integradors facin proves en aquesta nova plataforma abans no es posi en servei. Si les proves són satisfactòries, el canvi haurà de ser totalment transparent.
 
-Durant les properes setmanes s'aniran comunicant amb més detall totes les novetats d'aquesta actualització en aquest mateix portal, així com una planificació de disponibilitat d'entorns, periodes de proves per part dels integradors, i posada en marxa del servei. També s'enviaran notificacions als integradors per consensuar aquest calendari.
+Durant les pròximes setmanes s'aniran comunicant amb més detall totes les novetats d'aquesta actualització en aquest mateix portal, així com una planificació de disponibilitat d'entorns, períodes de proves per part dels integradors, i posada en marxa del servei. També s'enviaran notificacions als integradors per consensuar aquest calendari.
 
 Per qualsevol dubte us podeu posar en contacte amb el CS Canigó preferiblement a través del [servei STF del CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) o [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
