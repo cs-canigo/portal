@@ -54,7 +54,7 @@ Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacio
 
 ### Formularis HTML5
 
-En aquest punt s'està treballant tant en la vessant més **tècnica** com en la **governança** d'aquest nou servei de Formularis HTML5. Els Adaptive Forms d'AEM són els elements que proporcionen formularis HTML5 adaptatius als usuaris
+En aquest punt s'està treballant tant en la vessant més **tècnica** com en la **governança** d'aquest nou servei de Formularis HTML5. Els Adaptive Forms d'AEM són els elements que proporcionen formularis HTML5 adaptatius als usuaris.
 
 ![REST API eForms](/related/sgde/formulari-html5.png)
 
