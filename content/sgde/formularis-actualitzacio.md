@@ -11,9 +11,10 @@ Des del CS Canigó s'està treballant en l'actualització del producte base del 
 
 Per tant, l'actualització del producte té principalment dos objectius:
 
-### Formularis PDF
+* Evitar l'obsolescència mantenint la compatibilitat amb les funcionalitats actuals relatives a **Formularis PDF**
+* Oferir un nou motor per poder donar servei a **Formularis HTML5**
 
-Evitar l'obsolescència mantenint la compatibilitat amb les funcionalitats actuals relatives a **Formularis PDF**.
+### Formularis PDF
 
 #### Autoservei Adobe (Existent)
 
@@ -53,9 +54,9 @@ Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacio
 
 ### Formularis HTML5
 
-Oferir un nou motor per poder donar servei a **Formularis HTML5**.
+En aquest punt s'està treballant tant en la vessant més **tècnica** com en la **governança** d'aquest nou servei de Formularis HTML5. Els Adaptive Forms d'AEM són els elements que proporcionen formularis HTML5 adaptatius als usuaris
 
-En aquest punt s'està treballant tant en la vessant més **tècnica** com en la **governança** d'aquest nou servei de Formularis HTML5.
+![REST API eForms](/related/sgde/formulari-html5.png)
 
 <br><br>
 
