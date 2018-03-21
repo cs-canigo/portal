@@ -20,13 +20,15 @@ L'URL d'accés a aquest nou sistema és: [https://bin.sic.intranet.gencat.cat](h
 
 La pàgina de benvinguda disposa de dos botons:
 
-* **Dipositar artefactes al SIC**: És només accessible per als lots d'aplicacions, reenvia a l'usuari al job de Jenkins de pujada d'artefactes al SIC. És un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i dels artefactes per correu electrònic a l'invocador del job. Aquest job sol·licita la següent informació:
+* **Dipositar artefactes al SIC**: És només accessible per als lots d'aplicacions, reenvia a l'usuari al job de Jenkins de pujada d'artefactes al SIC. És un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i dels artefactes per correu electrònic a l'invocador del job. 
+Aquest job sol·licita la següent informació:
 
-	* Codi d'aplicació
-	* Nom d'aplicació
-	* Versió
-	* Fitxer de binaris
-	* Fitxer de documentació
+	* Codi d'aplicació: obligatori (nombre de 4 xifres)
+	* Nom d'aplicació: obligatori
+	* Versió: obligatori
+	* Fitxer de binaris: obligatori (Fitxer de binaris a pujar)
+	* Descomprimir ZIP: indica si un cop l'ARTEFACTE_BINARIS s'hagi pujat, s'ha de descomprimir el .zip facilitat
+	* Fitxer de documentació: opcional (Fitxer de documentació a pujar)
 
 	El job valida que l'usuari tingui permisos sobre el codi d'aplicació especificat. **Avís**: Si s'especifica múltiples vegades els mateixos valors a la terna Codi d'aplicació, Nom d'aplicació i Versió, __**s'esborra el contingut previ i se sobreescriu el nou contingut**__.
 
