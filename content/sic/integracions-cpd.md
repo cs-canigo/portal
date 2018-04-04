@@ -4,7 +4,7 @@ title       = "Integració de CPDs al SIC"
 description = "Guia d'integració de CPDs al SIC"
 sections    = "SIC"
 taxonomies  = []
-weight 		= 4
+weight 		= 3
 +++
 
 Es posa a disposició dels usuaris de CPD la següent guia sobre els procediments d'integració de CPD al SIC:
