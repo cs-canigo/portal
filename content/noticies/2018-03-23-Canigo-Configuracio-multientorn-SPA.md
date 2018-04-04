@@ -63,4 +63,5 @@ Aquesta crida s'hauria de forma autenticada (Ex. JWT) un cop l'usuari ha fet log
 
 El principal inconvenient que té aquesta solució és el delay que s'afegeix en la càrrega de la SPA
 
+<br />
 Tot i que poden haver-hi altres solucions, l'**opció 3)** compleix els requeriments mínimament acceptables i és una solució força natural a aplicar en una SPA amb un backend Canigó 3.2. Per a més detall, des del CS Canigó hem preparat el [HowTo - Configuració multi-entorn a una SPA amb backend Canigó](http://canigo.ctti.gencat.cat/howtos/2018-04-howto-frontend-multientorn/).
