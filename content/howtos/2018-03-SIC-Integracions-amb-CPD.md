@@ -9,11 +9,11 @@ key         = "ABRIL2018"
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
-Quan s'integra una aplicació al SIC, el SIC pot requerir una sèrie d'actuacions per part del CPD on aquesta es deplega. Habitualment es tracta de creacions d'usuaris al Middleware amb permisos per realitzar desplegaments, creacions d'espais SFTP per a la pujada d'artefactes, etc.
+Quan s'integra una aplicació al SIC, el SIC pot requerir una sèrie d'actuacions per part del CPD on aquesta es desplega. Habitualment es tracta de creacions d'usuaris al Middleware amb permisos per realitzar desplegaments, creacions d'espais SFTP per a la pujada d'artefactes, etc.
 
 ## Models de desplegament
 
-Abans d'entrar amb els detalls del què es requereix, prèviament cal ser conscient del tipus de desplegament que es realitzarà a cada entorn. El sic pot realitzar dos tipus de desplegament:
+Abans d'entrar amb els detalls de què es requereix, prèviament cal ser conscient del tipus de desplegament que es realitzarà a cada entorn. El sic pot realitzar dos tipus de desplegament:
 
 * **Desplegament manual**: Desplegament realitzat manualment pels tècnics de CPD en el que el SIC facilita els artefactes.
 * **Desplegament semiautomàtic**: Desplegament realitzat de forma automàtica per jobs específics de CPD. Aquests jobs són invocats pels tècnics de CPD.
@@ -23,7 +23,7 @@ Abans d'entrar amb els detalls del què es requereix, prèviament cal ser consci
 
 Consisteix en:
 
-1. Pujar els artefactes a un espai SFTP del CPD on es deplega, d'aquesta manera els tècnics de CPD tenen accés de forma ràpida a aquests fitxers.
+1. Pujar els artefactes a un espai SFTP del CPD on es desplega, d'aquesta manera els tècnics de CPD tenen accés de forma ràpida a aquests fitxers.
 2. En funció de si l'aplicació està integrada a Remedy o no, obrir un tiquet de canvi a Remedy o enviar un correu al SAU corresponent. Sigui quina sigui l'opció escollida, s'inclou la ubicació dels artefactes.
 3. Dins de la finestra de desplegament, el tècnic realitzarà manualment les tasques de desplegament obtenint els artefactes proporcionats pel SIC.
 
@@ -31,7 +31,7 @@ Consisteix en:
 
 Els requeriments del SIC per a aquest tipus de desplegaments són:
 
-* Tenir un compte SFTP en el mateix entorn de desplegament on poder pujar els artefactes per a que CPD els reculli. La informació que s'ha de traspassar al SIC és:
+* Tenir un compte SFTP en el mateix entorn de desplegament on poder pujar els artefactes perquè CPD els reculli. La informació que s'ha de traspassar al SIC és:
 	* Usuari
 	* Paraula de pas
 	* Host
@@ -45,11 +45,11 @@ En cas de dubte sobre la mida que ha de tenir l'espai SFTP, consultar amb el SIC
 
 ### Desplegaments automàtic i semiautomàtic
 
-Aquests tipus de desplegament realitzen de forma automàtica el desplegament de l'aplicació. La diferència entre el desplegament automàtic i el desplegament semiautomàtic radica en qui invoca i el desplegament. En el cas dels desplegaments automàtics, és la pipeline de construcció i desplegament la que directament fa els desplegaments a l'entorn indicat. En els desplegaments semiautomàtics, la pipeline de desplegament s'atura i s'espera a rebre confirmació de que el job de desplegament automàtic de CPD s'hagi executat. En qualsevol cas (sigui el job de CPD o la pipeline de construcció i desplegament), les tasques de desplegament seran automàtiques.
+Aquests tipus de desplegament realitzen de forma automàtica el desplegament de l'aplicació. La diferència entre el desplegament automàtic i el desplegament semiautomàtic radica en qui invoca i el desplegament. En el cas dels desplegaments automàtics, és la pipeline de construcció i desplegament la que directament fa els desplegaments a l'entorn indicat. En els desplegaments semiautomàtics, la pipeline de desplegament s'atura i s'espera a rebre confirmació de què el job de desplegament automàtic de CPD s'hagi executat. En qualsevol cas (sigui el job de CPD o la pipeline de construcció i desplegament), les tasques de desplegament seran automàtiques.
 
 #### Requeriments
 
-Per tal d'automatitzar els desplegaments, el SIC requereix d'una sèrie d'accions per part de CPD. Les detallem a continuació en funció de la plataforma/tecnologia utilitzada.
+Per tal d'automatitzar els desplegaments, el SIC requereix una sèrie d'accions per part de CPD. Les detallem a continuació en funció de la plataforma/tecnologia utilitzada.
 
 Dreceres:
 
@@ -77,7 +77,7 @@ Dreceres:
 
 Per als servidors web, el SIC requereix un usuari amb un home propi (per poder pujar els artefactes) i accés al webroot del servidor web per esborrar el contingut estàtic del contexte de l'aplicació i descomprimir el del nou artefacte.
 
-Per tant, el SIC requerirà un __compte SSH__ (ens ha de permetre poder fer esborrats i descomprimir fitxers). **L'usuari del compte SSH ha de tenir permisos per escriure i esborrar fitxers publicats en el webroot**. La mida de l'espai de home pot variar, però generalment 100 MB són suficients. En concret, caldrà facilitar al SIC les següents dades:
+Per tant, el SIC requerirà un __compte SSH__ (ens ha de permetre poder fer esborrats i descomprimir fitxers). **L'usuari del compte SSH ha de tenir permisos per escriure i esborrar fitxers publicats en el webroot**. La mida de l'espai del _home_ pot variar, però generalment 100 MB són suficients. En concret, caldrà facilitar al SIC les següents dades:
 
 * Les dades del compte SSH:
 	* Usuari
@@ -116,7 +116,7 @@ Pel que fa als servidors IIS, el SIC fa desplegaments en remot. Per poder-los re
 * Compte d'usuari:
 	* L'usuari ha de tenir els privilegis suficients per administrar aplicacions i per crear i esborrar carpetes a l'IIS.
 
-Tan bon punt s'hagin realitzat les configuracions, cal informar al SIC amb la següent informació:
+Tan bon punt s'hagin realitzat les configuracions, cal informar el SIC amb la següent informació:
 
 * Compte d'usuari:
 	* Usuari
@@ -124,7 +124,7 @@ Tan bon punt s'hagin realitzat les configuracions, cal informar al SIC amb la se
 * Servidor:
 	* FQDN del host (nom complet amb el domini inclòs)
 	* Port
-* Dades de l'aplicació aplicació:
+* Dades de l'aplicació:
 	* ComputerName
 	* IISWebApplicationName
 
@@ -136,10 +136,10 @@ Tan bon punt s'hagin realitzat les configuracions, cal informar al SIC amb la se
 
 Per als servidors Weblogic, el SIC fa redeploys de l'aplicació. Per tant cal pujar l'artefacte a la mateixa ubicació des d'on es va fer el desplegament previ.
 
-Per tant, per a què el SIC pugui fer desplegaments a plataformes Weblogic, cal configurar:
+Per tant, perquè el SIC pugui fer desplegaments a plataformes Weblogic, cal configurar:
 
 * Un usuari amb rol deployer al Weblogic amb permisos per poder fer el desplegament.
-* Un compte sftp amb accés a l'ubicació dels artefactes i permisos per poder sobreescriure'ls.
+* Un compte sftp amb accés a la ubicació dels artefactes i permisos per poder sobreescriure'ls.
 
 Un cop s'ha realitzat la configuració, cal transmetre al SIC les següents dades:
 
