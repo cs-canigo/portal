@@ -39,7 +39,7 @@ Els requeriments del SIC per a aquest tipus de desplegaments són:
 
 L'espai varia en funció de la quantitat d'artefactes generats i de les seves mides. Per a garantir disposar de l'espai necessari, aquest hauria de ser el doble del sumatori de l'espai ocupat per tots els artefactes:
 
-<div>$$mida=2\sum_{i=0}^n artefacte_{i}$$</div>
+<div>$$mida_{Total}=2\sum_{i=0}^n mida(artefacte_{i})$$</div>
 
 En cas de dubte sobre la mida que ha de tenir l'espai SFTP, consultar amb el SIC.
 
