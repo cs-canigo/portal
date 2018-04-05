@@ -42,34 +42,19 @@ L'eina de desenvolupament genera automàticament el fitxer de propietats necessa
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mail.properties
 
-Propietat                | Requerit | Descripció
------------------------- | -------- | ----------
-*.mail.host              | Sí       | Nom del servidor de correu sortint (smtp).
-*.mail.port              | No       | Port del servidor de correu sortint (smtp). Valor per defecte: -1.
-*.mail.protocol          | No       | Protocol del servidor de correu sortint (smtp).
-*.mail.username          | No       | Usuari de connexió al servidor de correu sorting (smtp).
-*.mail.password          | No       | Password de l'usuari de connexió.
-*.mail.maxAttachmentSize | No       | Tamany màxim permés dels fitxers adjunts. Per defecte: 0 (sense limits).
-*.mail.isSmtpSSLEnabled  | No       | Habilitar o deshabilitar SSL.
-*.mail.debug             | No       | Activar les traces de debug.
-*.mail.timeout           | No       | Timeout pel servidor de correu.
+Propietat                | Requerit | Valor Defecte | Descripció
+------------------------ | -------- | ------------- | -----------
+*.mail.host              | Sí       |               | Nom del servidor de correu sortint (smtp).
+*.mail.port              | No       |      25       | Port del servidor de correu sortint (smtp). 
+*.mail.protocol          | No       |     smtp      | Protocol del servidor de correu sortint (smtp).
+*.mail.username          | No       |               | Usuari de connexió al servidor de correu sorting (smtp).
+*.mail.password          | No       |               | Password de l'usuari de connexió.
+*.mail.defaultEncoding   | No       |     UTF-8     | Encoding per defecte del correu.  
+*.mail.maxAttachmentSize | No       |0(sense límits)| Tamany màxim permés dels fitxers adjunts. 
+*.mail.isSmtpSSLEnabled  | No       |     false     | Habilitar o deshabilitar SSL.
+*.mail.debug             | No       |     false     | Activar les traces de debug.
+*.mail.timeout           | No       |     8500      | Timeout pel servidor de correu(ms).
 
-Per poder utilitzar correctament les propietats isSmtpSSLEnabled, debug i timeout s'ha de declarar un bean com aquest:
-
-```
-<bean id="mailSender" parent="mailSenderParent" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-	<property name="javaMailProperties">
-		<map>
-			<entry key="mail.smtp.auth" value="${mail.isSmtpSSLEnabled}"/>
-			<entry key="mail.smtp.starttls.enable" value="${mail.isSmtpSSLEnabled}"/>
-			<entry key="mail.smtp.timeout" value="${mail.timeout}"/>
-			<entry key="mail.smtps.debug" value="${mail.debug}"/>
-		</map>
-	</property>
-</bean>
-```
-
-que es recomana declarar en l'arxiu app-support-mailing.xml que s'ha de situar en /src/main/resources/spring/
 
 ## Utilització del Mòdul
 

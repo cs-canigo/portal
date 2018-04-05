@@ -18,6 +18,8 @@ weight      = 1
 
 [Canigó 3.2.3] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464)
 
+[Canigó 3.2.4] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10494)
+
 
 
 
