@@ -99,6 +99,26 @@ Hi ha dos controladors inclosos dins el mòdul:
     2. _InfoPropertiesController_: retorna la llista de propietats definides a l'aplicació i els seus valors. La seva URL és http://<app>/info/properties
 ```
 
+Per seguretat aquests controladors per defecte no es troben disponibles.
+
+Per a que es publiquin a l'aplicació s'ha de realitzar la següent configuració:
+
+Al fitxer de configuració de l’aplicació (AppConfig.java) afegir l’annotació @PropertySource al fitxer boot.properties que s’ha de crear:
+
+	@Configuration
+	@PropertySource("classpath:/config/props/boot.properties")
+	@ImportResource({ "classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml" })
+	@EnableTransactionManagement
+	public class AppConfig {
+	}
+	
+Crear el fitxer /src/main/reources/config/props/boot.properties amb les següents propietats a true:
+
+	publishInfoModules=true
+	publishInfoProperties=true
+	
+<span style="color:red">En entorns productius aquests endpoints s'han de protegir o bloquejar</style>
+
 #### Donar d'alta un nou controlador
 
 Per donar d'alta un nou controlador a l'aplicació Canigó s'ha de seguir la [documentació de referència de Spring MVC](http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html)
