@@ -34,6 +34,7 @@ Pot ser una configuració vàlida per un pilot però no per una aplicació que h
 Configuració multi-entorn "hardcoded" al client, i obtinguda en funció del domini de l'aplicació.
 
 Per exemple:
+
 - si el domini de l'aplicació és "preproduccio.app.gencat.cat", s'obtindria la configuració corresponent a l'entorn de preproducció
 - en cas de no portar el prefix preproduccio, sabríem que estem al de producció
 
