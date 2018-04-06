@@ -2,7 +2,7 @@
 date        = "2018-03-23"
 title       = "SIC. Canvi del sistema de permisos al SIC"
 description = "Durant el mes d'abril, es modificarà el sistema de permisos del SIC per tal de simplificar l'operativa de l'Autoservei. L'anterior model de seguretat quedarà obsolet i s'aplicarà el model de seguretat 2018."
-sections    = ["drafts"]
+sections    = ["Notícies","home"]
 categories  = ["sic"]
 key         = "ABRIL2018"
 +++
