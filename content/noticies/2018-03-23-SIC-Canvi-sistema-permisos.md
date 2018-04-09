@@ -40,12 +40,14 @@ Aquest nou model ens aporta una sèrie de beneficis:
 
 ### Activació del nou model
 
-L'aplicació del nou model entrarà en vigor a partir del **dijous 19 d'abril de 2018**. A partir d'aquest dia, estarà disponible la nova versió de la documentació relativa al sistema de permisos del SIC:
+Tan bon punt com entri en vigor el nou model de seguretat, estarà disponible la nova versió de la documentació relativa al sistema de permisos del SIC:
 
 * Els articles que ja parlaven dels sistemes de permisos del SIC 2.0:
 	* [Procediment de concessió de permisos al SIC](/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/)
 	* [Estructura de permisos al SIC](/noticies/2017-11-10-SIC-Estructura-permisos-i-Autoservei/)
 * El [Manual d'Usuari](/related/sic/2.0/manual-usuari.pdf)
 * El [Manual d'Integració](/related/sic/2.0/manual-integracio.pdf)
+
+Durant l'activació es migraran els permisos actuals dels Release Managers al nou model. Per tant, els usuaris actuals no es veuran afectats per aquest canvi d'estructura de permisos.
 
 Si teniu cap dubte al respecte, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
