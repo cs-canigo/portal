@@ -66,7 +66,7 @@ Durant les pròximes setmanes s'aniran comunicant amb més detall totes les nove
 
 ### Comunicacions
 
-### [6/4] Comunicat eFormularis - Actualització tecnològica del servei
+### [6-4-2018] Comunicat eFormularis - Actualització tecnològica del servei
 
 Benvolguts,
  
@@ -116,7 +116,7 @@ En cas que es requereixi accés a l’entorn antic de Preproducció a partir del
 Voldríem destacar com a canvi més important el realitzat en les operacions que treballen amb fitxers annexes. Per aquestes en concret s'haurien de fer proves el més exhaustives que sigui possible. Tal com hem indicat al paràgraf anterior, per qualsevol problema us podeu posar en contacte amb el CS Canigó pels canals oficials.
 
 
-### [6/4] Comunicat STD - Comunicat 6/4 - Canvi IPs del servei
+### [6-4-2018] Comunicat STD - Canvi IPs del servei
 
 Benvolguts,
 
