@@ -293,7 +293,5 @@ Un cop configurat el servidor, transmetre la següent informació al SIC:
 </div>
 <hr />
 
-S'han actualitzat el [FAQ](http://canigo.ctti.gencat.cat/sic/faq/), el [Manual d'Usuari](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf) i [Manual d'Integració](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-integracio.pdf) tot indicant que únicament la branca master és la que té associades pipelines de Jenkins.
-
 Si teniu cap dubte al respecte, podeu obrir una [consulta](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
 
