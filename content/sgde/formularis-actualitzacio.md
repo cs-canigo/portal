@@ -82,26 +82,34 @@ A continuació es descriuen els dominis i IPs dels entorns:
 **PREPRODUCCIÓ**
  
 _Dominis_:
+
 eformularis.pre.intranet.gencat.cat (Deprecat)
+
 preproduccio.sgde.intranet.gencat.cat
+
 preproduccio.eformularis.intranet.gencat.cat (Nou)
  
 _IP actual_:
+
 10.53.12.1 (port 80)
  
 _IP nova_:
 10.1.126.83 (ports 80 i 443)
  
-PRODUCCIÓ
+**PRODUCCIÓ**
  
 _Dominis_:
+
 sgde.intranet.gencat.cat
+
 eformularis.intranet.gencat.cat
  
 _IP actual_:
+
 10.52.12.1 (port 80)
  
 _IP nova_:
+
 10.1.118.54 (ports 80 i 443)
  
 Pel nou entorn de preproducció es crearà el domini "preproduccio.eformularis.intranet.gencat.cat" per tal d’acomplir la normativa de nomenclatura de dominis. El domini "eformularis.pre.intranet.gencat.cat" es donarà de baixa durant els propers mesos, per tant, recomanem que les aplicacions que l'estiguin fent servir canviïn al nou "preproduccio.eformularis.intranet.gencat.cat". La data definitiva de baixa del domini "eformularis.pre.intranet.gencat.cat" es comunicarà pròximament.
@@ -127,17 +135,21 @@ Des del CS Canigó us informem que pròximament les IPs dels dominis "preproducc
 **preproduccio.sgde.intranet.gencat.cat**
 
 IP actual:
+
 10.53.12.1 (port 80)
 
 IP nova:
+
 10.1.126.83(ports 80 i 443)
 
 **sgde.intranet.gencat.cat**
 
 IP actual:
+
 10.52.12.1 (port 80)
 
 IP nova:
+
 10.1.118.54 (ports 80 i 443)
 
 Les dates previstes pel canvi a cada entorn són les següents:
