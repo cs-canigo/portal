@@ -3,6 +3,7 @@ date        = "2018-03-09"
 title       = "Actualització de plataforma al servei d'eFormularis"
 description = "Upgrade de versió d'Adobe LiveCycle a Adobe Experience Manager (AEM)"
 sections    = "SGDE"
+toc         = true
 taxonomies  = []
 weight 		= 4
 +++
