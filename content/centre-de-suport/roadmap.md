@@ -39,5 +39,5 @@ categories  = ["canigo","sic","sgde"]
 </script>
 
 *Aquest Roadmap està subjecte a canvis*
-
+<br><br>
 Al següent [enllaç](/canigo/roadmap/) es pot trobar el roadmap del Framework Canigó
