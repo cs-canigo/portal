@@ -7,7 +7,7 @@ sections = ""
 weight          = 4
 +++
 
-El CS Canigó publica de forma periòdica un Comunicat amb articles, tutorials i notificacions sobre els serveis tractats al portal:
+El CS Canigó publica mensualment un Comunicat amb articles, tutorials i notificacions sobre els serveis tractats al portal:
 
 * CS Canigó
 * SIC
