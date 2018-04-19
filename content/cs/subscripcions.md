@@ -20,7 +20,7 @@ A continuació, es descriu com un usuari pot gestionar la seva subscripció.
 
 ## Creació de l'usuari per a la gestió de subscripcions als butlletins
 
-La gestió de subscripcions, es duu a terme a través del portal [https://butlletins.gencat.cat](https://butlletins.gencat.cat).
+La gestió de subscripcions es duu a terme a través del portal [https://butlletins.gencat.cat](https://butlletins.gencat.cat).
 
 Primer de tot, cal destacar que l'usuari s'ha de donar d'alta (si no està ja) en aquest web. Per fer-ho cal que s'intenti subscriure al butlletí desitjat. Durant el procés, haurà de loginar-se si ja té un usuari existent o haurà de crear-ne un de nou en cas contrari.
 
@@ -41,7 +41,7 @@ Per donar-se de baixa com a subscriptor de les Comunicacions Canigó, cal seguir
 
 1. Accedir amb un navegador web a: [https://butlletins.gencat.cat](https://butlletins.gencat.cat).
 2. Fer login amb el seu usuari.
-3. A la pantalla de benvinguda, apareixeran totes les subscripcions que tingui actives. Cercar la subscripció de **Comunicacions Canigó** i prémer el botó **Baixa** corresponent.
+3. A la pantalla de benvinguda, apareixeran totes les subscripcions que tingui actives. Cercar la subscripció de **Comunicacions Canigó** i prémer el botó de **Baixa** corresponent.
 
-En cas de dubte, podeu contactar al correu {{oficina-tecnica.canigo.ctti@gencat.cat}}, on us podrem resoldre els dubtes o problemes que tingueu associats a la subscripció del nostre butlletí.
+En cas de dubte, podeu contactar al correu `oficina-tecnica.canigo.ctti@gencat.cat`, on us podrem resoldre els dubtes o problemes que tingueu associats a la subscripció del nostre butlletí.
 
