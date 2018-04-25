@@ -8,7 +8,7 @@ taxonomies  = []
 weight 		= 4
 +++
 
-Des del CS Canigó s'està treballant en l'actualització del producte base del servei, Adobe LiveCycle. **Adobe Experience Manager (AEM)** és l'evolució d'aquest producte, el qual, a més d'oferir les mateixes funcionalitats de les que ja disposa Adobe LiveCycle, n'afegeix de noves. D'entre aquestes noves funcionalitats destaca la possibilitat de poder treballar amb formularis HTML5.
+Des del CS Canigó s'està treballant en l'actualització del producte base del servei, Adobe LiveCycle ES4. **Adobe Experience Manager (AEM) 6.3** és l'evolució d'aquest producte, el qual, a més d'oferir les mateixes funcionalitats de les que ja disposa Adobe LiveCycle, n'afegeix de noves. D'entre aquestes noves funcionalitats destaca la possibilitat de poder treballar amb formularis HTML5.
 
 Per tant, l'actualització del producte té principalment dos objectius:
 
@@ -17,17 +17,29 @@ Per tant, l'actualització del producte té principalment dos objectius:
 
 ## Formularis PDF
 
+_Dominis PRE_
+
+* preproduccio.eformularis.intranet.gencat.cat
+* eformularis.pre.intranet.gencat.cat
+* preproduccio.sgde.intranet.gencat.cat
+* sgde.pre.intranet.gencat.cat
+
+_Dominis PRO_
+
+* eformularis.intranet.gencat.cat
+* sgde.intranet.gencat.cat
+
 ### Autoservei Adobe (Existent)
 
 Aplicació web per l'activació i publicació de formularis PDF.
 
 _PRE_
 
-http://preproduccio.sgde.intranet.gencat.cat/AutoserveiAdobe
+http://preproduccio.eformularis.intranet.gencat.cat/AutoserveiAdobe
 
 _PRO_
 
-http://sgde.intranet.gencat.cat/AutoserveiAdobe
+http://eformularis.intranet.gencat.cat/AutoserveiAdobe
 
 ### WS SOAP (Existent)
 
@@ -35,15 +47,15 @@ Webservice per operar amb formularis PDF. Els contractes de les diferents versio
 
 _PRE_
 
-http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
-http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl
-http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
+http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl
+http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
 
 _PRO_
 
-http://sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
-http://sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl
-http://sgde.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
+http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl
+http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacio?wsdl
 
 ### REST API (Nova)
 
@@ -51,7 +63,7 @@ Com a millora a l'actual servei de Formularis PDF, s'incorpora una nova REST API
 
 ![REST API eForms](/related/sgde/serveis-invocacio-api.png)
 
-Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacions que s'integrin al servei utilitzin aquesta REST API.
+Es recomana que, un cop es posi en marxa la nova plataforma, les noves aplicacions que s'integrin al servei utilitzin aquesta REST API. En breu es publicarà informació de com fer ús d'aquesta nova API.
 
 ## Formularis HTML5
 
@@ -87,6 +99,9 @@ _Dominis_:
 eformularis.pre.intranet.gencat.cat (Deprecat)
 
 preproduccio.sgde.intranet.gencat.cat
+
+sgde.pre.intranet.gencat.cat (Deprecat)
+_Nota: aquest domini no es va informar en el comunicat. Aprofitem per indicar que, de la mateixa manera que el domini "eformularis.pre.intranet.gencat.cat", es donarà de baixa a mig termini donat que no compleix la normativa de dominis_
 
 preproduccio.eformularis.intranet.gencat.cat (Nou)
  
