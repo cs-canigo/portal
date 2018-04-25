@@ -101,6 +101,7 @@ eformularis.pre.intranet.gencat.cat (Deprecat)
 preproduccio.sgde.intranet.gencat.cat
 
 sgde.pre.intranet.gencat.cat (Deprecat)
+
 _Nota: aquest domini no es va informar en el comunicat. Aprofitem per indicar que, de la mateixa manera que el domini "eformularis.pre.intranet.gencat.cat", es donarà de baixa a mig termini donat que no compleix la normativa de dominis_
 
 preproduccio.eformularis.intranet.gencat.cat (Nou)
