@@ -14,4 +14,4 @@ Els nous repositoris de [Subversion] (http://svn.intranet.gencat.cat/) compten a
 
 Els repositoris de l'antic model es conserven com a backup però s'hi ha deshabilitat l'accés. Aquests es mantindran fins al 30 / 6, i passada aquesta data s'eliminaran. Destacar que totes aquelles persones que no hagin demanat permisos als nous repositoris no hi tindran accés donat que no s'han migrat usuaris i permisos. Aquest és l'enllaç a la [secció de documentació](/sic/documentacio) on es pot trobar el formulari de gestió d'usuaris del SIC. 
 
-Per qualsevol consulta referent a la migració de repositoris es pot fer arribar una petició de consulta al JIRA CSTD al servei [SICQ] (https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o bé enviar un correu a la <a href="mailto://sic.ctti@gencat.cat">bústia del SIC</a>.
+Per qualsevol consulta referent a la migració de repositoris es pot fer arribar una petició de consulta al JIRA CSTD al servei [SICQ] (https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o [s'ha d'obrir una petició Remedy de consulta al SIC](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta).

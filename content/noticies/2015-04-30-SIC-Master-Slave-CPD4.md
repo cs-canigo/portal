@@ -7,7 +7,7 @@ categories  = ["sic"]
 +++
 
 
-El SIC - Multi CPD basat en l'arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.
+El SIC - Multi CPD basat en l'arquitectura Master/Slave de Jenkins ja s’ha com****ençat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.
 
 Els avantatges d’aquesta arquitectura Master/Slave són els següents:
 
@@ -21,9 +21,10 @@ Destacar que entre els diferents slaves i el master hauran de sincronitzar-se ce
 
 Es recorda el procediment per a poder realitzar desplegaments de les aplicacions des de SIC:
 
-- Custodiar el codi font de l'aplicació al [SVN del SIC](http://svn.intranet.gencat.cat). Si encara no es disposa d'un espai per el codi de diàleg demanar-ne la creació enviant el "Formulari d’alta d’aplicació per a la Custòdia de codi al SIC" que podeu trobar dins la secció de [Documentació del SIC](http://canigo.ctti.gencat.cat/sic/documentacio/) al Portal de Frameworks i Solucions d'Arquitectura.
+- Custodiar el codi font de l'aplicació al [SVN del SIC](http://svn.intranet.gencat.cat). Si encara no es disposa d'un espai per el codi de diàleg demanar-ne la creació enviant el "Formulari d’alta d’aplicació per a la Custòdia de codi al SIC" que podeu trobar dins la secció de [Documentació del SIC](http://canigo.ctti.gencat.cat/sic/documentacio/Sic-documentacio) al Portal de Frameworks i Solucions d'Arquitectura.
 - Demanar l'alta de jobs a Jenkins mitjançant el "Formulari d’alta d’aplicació per al Portal d’Integració Contínua (Jenkins)" disponible també en la secció de [Documentació del SIC](http://canigo.ctti.gencat.cat/sic/documentacio/).
 
-Aquests formularis han de ser lliurats a la [bústia del SIC](mailto:sic.ctti@gencat.cat) pel responsable de l'aplicació (persona dins el CTTI o d’un Departament).
+Aquests formularis [s'ha d'obrir una petició Remedy](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/)  pel responsable de l'aplicació (persona dins el CTTI o d’un Departament).
 
-Per a obtenir més informació relativa al SIC podeu accedir a la [secció SIC](http://canigo.ctti.gencat.cat/sic/) dins el Portal de Frameworks i Solucions d'Arquitectura. Per consultes o suport preferiblement fer una petició al [Servei SICQ del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o bé enviar un correu a la [bústia del SIC](mailto:sic.ctti@gencat.cat).
+Per a obtenir més informació relativa al SIC podeu accedir a la [secció SIC](http://canigo.ctti.gencat.cat/sic/) dins el Portal de Frameworks i Solucions d'Arquitectura. Per consultes o suport preferiblement fer una petició al [Servei SICQ del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/SICQ) o bé  [s'ha d'obrir una petició Remedy](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/).
+

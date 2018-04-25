@@ -21,4 +21,4 @@ L'escenari final contempla que totes les aplicacions estiguin integrades a Remed
 
 <CENTER>![SIC-Desplegament-Remedy.png](/images/news/SIC-Desplegament-Remedy.png)</center>
 
-Per qualsevol dubte relatiu a aquesta integració del SIC amb Remedy us podeu posar en contacte amb l'equip del SIC a la bústia del [SIC](mailto:sic.ctti@gencat.cat).
+Per qualsevol dubte relatiu a aquesta integració del SIC amb Remedy us podeu posar en contacte amb l'equip del SIC [obrint una petició Remedy de consulta al SIC](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta).

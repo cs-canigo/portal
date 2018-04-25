@@ -19,4 +19,4 @@ En aquesta transformació s'han fet millores en l'arquitectura del SIC així com
 
 En aquest procés de transformació de CPD s'ha donat de baixa el servei Sonar (sonar.intranet.gencat.cat). Es segueix recomanant però l'ús d'aquest tipus d'eines en entorns de desenvolupament, prèviament a l'alliberament de noves versions de les aplicacions al SIC. L'eina corporativa per l'anàlisi de qualitat de codi és CAST. Més informació al Portal de Qualitat a la secció Eines - CAST.
 
-En cas de tenir qualsevol dubte o detectar qualsevol afectació conseqüència d'aquesta transformació us podeu posar en contacte amb l'equip del SIC preferiblement via JIRA CSTD al servei SICQ o bé enviant un correu a la bústia sic.ctti@gencat.cat
+En cas de tenir qualsevol dubte o detectar qualsevol afectació conseqüència d'aquesta transformació us podeu posar en contacte amb l'equip del SIC preferiblement via JIRA CSTD al servei SICQ o [s'ha d'obrir una petició Remedy de consulta al SIC](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta).
