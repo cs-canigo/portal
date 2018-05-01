@@ -1,6 +1,6 @@
 +++
 date        = "2018-04-30"
-title       = "eFormularis. Nova REST API"
+title       = "eFormularis. Serveis Invocació REST API"
 description = "En el projecte d'actualització tecnològica que s'està duent a terme a la plataforma d'eFormularis, s'introdueix una novetat que és la publicació d'una REST API per l'accés als Serveis d'Invocació de Formularis PDF"
 sections    = ["Notícies"]
 categories  = ["sgde"]
