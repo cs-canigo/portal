@@ -17,18 +17,21 @@ En el projecte d'actualització tecnològica que s'està duent a terme a la plat
 L'accés a aquesta REST API, a diferència de les versions precedessores basades en SOAP, ja es pot realitzar mitjançant **HTTPS**. L'especificació Swagger de la REST API es pot obtenir de la següent URL:
 
 **Producció**
+
 https://eformularis.intranet.gencat.cat/ServeisInvocacioApi/api/v2/api-docs (*No operativa fins a la posada en servei de la nova plataforma a Producció*)
 
 **Preproducció**
+
 https://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacioApi/api/v2/api-docs (*Operativa*)
 
 ![eforms-swagger-specification](/images/news/serveis-invocacio-rest-api.png)
 
+<br>
 Les noves funcionalitats que s'afegeixin als Serveis d'Invocació de Formularis PDF està previst que només s'incorporin a aquesta REST API, i no a les versions predecessores basades en SOAP. Pel versionat de la REST API es seguiran les [bones pràctiques](http://canigo.ctti.gencat.cat/blog/2016/01/api/#versionat) definides en el blog d'arquitectura de CTTI.
 
 Properament a Canigó es proporcionarà una nova versió del connector amb el SGDE per incorporar un client que permeti el consum d'aquesta REST API de forma fàcil.
 
-Com a afegit a aquesta notícia, enumerem alguns dels avantatges que suposa l'ús de REST APIs en lloc de WS SOAP, i que han influït en la decisió d'implementar aquesta REST API pels Serveis d'Invocació de Formularis PDF:
+Com a afegit a aquesta notícia, enumerem alguns dels **avantatges** que suposa l'ús de REST APIs en lloc de WS SOAP, i que han influït en la decisió d'implementar aquesta REST API pels Serveis d'Invocació de Formularis PDF:
 
 * *Rendiment*: permet format JSON per les dades, més lleuger que XML tant pel seu pes com pel seu processament
 * *Flexibilitat*: mentre que pels WS SOAP el codi dels clients ha de ser compilat amb el nou WSDL (Web Services Description Language), les REST API poden ser "backward compatible"
