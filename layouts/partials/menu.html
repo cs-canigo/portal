@@ -1,5 +1,4 @@
 		{{ $title := .Title | html | lower}}
-		{{ $baseurl := .BaseUrl | html | lower}}
 
 		<header class="fons_header navbar navbar-default z-index-menu">
 			<div class="container" role="menu">
@@ -86,7 +85,7 @@
 			        	{{ range .Site.Menus.main }}
 
 						<li>
-							<a class="dropdown-toggle" href='{{.BaseURL}}{{.URL}}' data-toggle='_dropdown'>{{ .Name }}</a>
+							<a class="dropdown-toggle" href='{{.URL}}' data-toggle='_dropdown'>{{ .Name }}</a>
 						</li>
 
 						{{end}}
