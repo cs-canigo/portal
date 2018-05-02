@@ -43,7 +43,7 @@ La _pipeline_ Jenkins que s'ha implementat al SIC és el resultat d'implementar 
 
 Amb aquests objectius, s'ha definit al SIC el següent model de _pipeline_:
 
-![Pipeline del SIC](/images/news/introduccio-pipelines-sic.2.0.png)
+![Pipeline del SIC](/images/news/PipelineJobsPREiPRO.png)
 
 ## Futures passes
 
