@@ -28,13 +28,13 @@ Els avantatges que ens proporciona aquesta nova forma de generar els jobs són e
 * Les _pipelines_ són un script Groovy amb una configuració especial. No cal crear el job mitjançant els formularis que s'empraven amb els jobs de tipus _freestyle_ que requerien plugins, més dedicació i més manteniment.
 * Els jobs es tornen molt més versàtils. S'obre un ventall de possibilitats:
 	* Continuen havent tasques predefinides que es poden enriquir amb plugins.
-	* També hi ha la possibilitat d'incloure _Shared Libraries_ de Jenkins per poder programar customitzacions de qualsevol mena.
-* Amb aquest increment d'alternatives, ja no cal dependre dels plugins per tal de disposar noves funcionalitats. Amb el desús dels plugins, la configuració i el manteniment de la plataforma Jenkins són més senzills, evitant l'aparició de _Snowflake servers_ amb configuracions excessivament complicades de reproduir.
+	* També hi ha la possibilitat d'incloure _[Shared Libraries](https://jenkins.io/doc/book/pipeline/shared-libraries/)_ de Jenkins per poder programar customitzacions de qualsevol mena.
+* Amb aquest increment d'alternatives, ja no cal dependre dels plugins per tal de disposar noves funcionalitats. Amb el desús dels plugins, la configuració i el manteniment de la plataforma Jenkins són més senzills, evitant l'aparició de _[Snowflake servers](https://martinfowler.com/bliki/SnowflakeServer.html)_ amb configuracions excessivament complicades de reproduir.
 * Permet realitzar la construcció i el desplegament en tots els entorns de l'aplicació amb un sol job. Facilitant el seguiment del cicle de vida de l'aplicació i garantint el principi de promoció d'artefactes entre entorns amb una única construcció.
 
 ## La _pipeline_ Jenkins al SIC
 
-La _pipeline_ Jenkins que s'ha implementat al SIC és el resultat d'implementar jobs amb dos objectius concrets:
+La _pipeline_ Jenkins que s'ha implementat al SIC és el resultat d'implementar jobs amb els següents objectius en ment:
 
 1. Aportar el valor de cada _commit_ amb la menor latència possible a Producció.
 2. Permetre la introducció de controls de qualitat, de robustesa i de seguretat al codi.
