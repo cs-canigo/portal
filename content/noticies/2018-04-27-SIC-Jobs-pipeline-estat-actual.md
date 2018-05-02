@@ -53,3 +53,4 @@ L'ús de _pipelines_ al SIC obre un nou món de possibilitats, com per exemple:
 * Es pot automatitzar la creació de _jobs_ generant aquesta _pipeline_ a partir d'una sèrie de paràmetres de configuració.
 
 Justament a finals d'abril s'ha finalitzat el projecte de l'**Autoservei de jobs pipeline**, amb el qual es podran crear _jobs_ de forma automàtica a partir de les configuracions introduïdes als repositoris GIT per part del proveïdor d'aplicacions i del proveïdor d'infraestructures. Teniu disponible tota la informació relativa al seu funcionament al [Manual d'Usuari del SIC](/related/sic/manual-usuari.pdf).
+
