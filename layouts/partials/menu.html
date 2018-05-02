@@ -85,7 +85,7 @@
 			        	{{ range .Site.Menus.main }}
 
 						<li>
-							<a target='_self' class="dropdown-toggle" href='{{.URL}}' data-toggle='_dropdown'>{{ .Name }}</a>
+							<a target='_self' class="dropdown-toggle" href='{{site.baseurl}}{{.URL}}' data-toggle='_dropdown'>{{ .Name }}</a>
 						</li>
 
 						{{end}}
