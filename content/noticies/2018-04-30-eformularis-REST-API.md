@@ -27,14 +27,14 @@ https://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacioApi/api/v2/
 ![eforms-swagger-specification](/images/news/serveis-invocacio-rest-api.png)
 
 <br>
-Les noves funcionalitats que s'afegeixin als Serveis d'Invocació de Formularis PDF està previst que només s'incorporin a aquesta REST API, i no a les versions predecessores basades en SOAP. Pel versionat de la REST API es seguiran les [bones pràctiques](http://canigo.ctti.gencat.cat/blog/2016/01/api/#versionat) definides en el blog d'arquitectura de CTTI.
+Les noves funcionalitats que s'afegeixin als Serveis d'Invocació de Formularis PDF està previst que només s'incorporin a aquesta REST API, i no a les versions predecessores basades en SOAP. Pel versionat de la REST API es seguiran les [bones pràctiques](http://canigo.ctti.gencat.cat/blog/2016/01/api/#versionat) definides en el blog d'arquitectura de CTTI. Tot i així, els serveis seran "backward compatible" sempre que sigui possible per evitar tenir que versionar la REST API.
 
 Properament a Canigó es proporcionarà una nova versió del connector amb el SGDE per incorporar un client que permeti el consum d'aquesta REST API de forma fàcil.
 
 Com a afegit a aquesta notícia, enumerem alguns dels **avantatges** que suposa l'ús de REST APIs en lloc de WS SOAP, i que han influït en la decisió d'implementar aquesta REST API pels Serveis d'Invocació de Formularis PDF:
 
 * *Rendiment*: permet format JSON per les dades, més lleuger que XML tant pel seu pes com pel seu processament
-* *Flexibilitat*: mentre que pels WS SOAP el codi dels clients ha de ser compilat amb el nou WSDL (Web Services Description Language), les REST API poden ser "backward compatible"
+* *Flexibilitat*: mentre que pels WS SOAP el codi dels clients ha de ser compilat per cada nou WSDL (Web Services Description Language), les REST API poden ser "backward compatible"
 * *Stateless*: les REST API estan concebudes per definició per a no mantenir estat, i en el cas d'operacions atòmiques, independents, com són les que formen part dels Serveis d'Invocació de Formularis PDF, encaixa perfectament
 * *Facilitat d'ús*: poden ser consumides per qualsevol client que suporti el protocol HTTP
 
