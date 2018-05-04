@@ -8,7 +8,7 @@ weight      = 1
 
 #### Release Notes
 
-[Canigó 3.2.4] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10494) (05/04/2017)
+[Canigó 3.2.4] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10494) (05/04/2018)
 
 - [No incloure per defecte els endpoints infoProperties i infoModules] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2287)
 - [Incorporar Bean mailSender a Canigo support mailing configurable] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2269)
