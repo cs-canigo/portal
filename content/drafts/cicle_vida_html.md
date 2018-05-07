@@ -32,24 +32,26 @@ $ java -jar <AEM_jar>
 
 S'ha de tenir en compte que per defecte el repositori d'AEM és crea al directori des d'on l'usuari executa aquest procés. És important ja que el volum de dades que s'hi emmagatzemen és gran (5GB aproximadament) i de vital importancia per el funcionament d'AEM.
 
-#### Desplegament a Preproducció
+#### Desplegament
 
-2. Una vegada creat el formulari l'usuari l'ha de proporcionar al CS Canigó:
+Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les següents pases:
 
-	- Exportar el formulari en format ZIP
-	- Crear una petició al JIRA-CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF)
-	- Adjuntar a la petició el ZIP amb el formulari
-	- Indicar a quin àmbit i aplicació pertany
-	
-3. El CS Canigó publicarà el formulari a la url:
-
-	http://AEM/content/forms/af/ambit/aplicacio/formulari.html
-	
+	* Exportar el formulari HTML5 a l'AEM autor de desenvolupament: AEM Start -> Forms -> Forms & Documents -> Sel·leccionar formulari -> Download
+	* Crear una petició al CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
+	** àmbit, aplicació, nom formulari
+	** adjunt zip amb el conjunt d'assets resultat de l'exportació del formulari
+	** entorn
+	* El CS Canigó validarà el formulari i el publicarà, retornant com a resultat la URL d'accés al formulari: 
+	** PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html
+	** PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html
+		
 	L'usuari pot fer referència a aquesta URL o incoportar el formulari a la seva aplicació.
-	
-4. L'usuari pot incorporar aquest formulari a la seva aplicació, per a realitzar això ha de realitzar els següents pasos:
 
-Incorporar el següent codi a una plana HTML de la seva aplicació:
+#### Integració
+
+Per la integració d'un formulari HTML5 a un lloc web s'han de seguir les següents pases:
+
+* Incorporar el següent codi a la plana HTML5 desitjada:
 	
 	<body>
 
@@ -57,7 +59,7 @@ Incorporar el següent codi a una plana HTML de la seva aplicació:
 
 	 
 	 <script>
-				var path = "http://AEM/content/forms/af/ambit/aplicacio/formulari.html";
+				var path = "https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html";
 				var pathXML = "URL que contingui les dades XML per a relitzar la precàrrega (si s'escau)
 				path += "/jcr:content/guideContainer.html";
 				$.ajax({
@@ -81,18 +83,19 @@ Incorporar el següent codi a una plana HTML de la seva aplicació:
 	 </script>
 
 	</body>
-		
-L'aplicació on es vol incorporar el formulari ha d'estar desplegada en un Apache, per a que es carreguin els estils i js, amb la següent configuració:
+
+## Prerequisits
+
+El lloc web on es vol incorporar el formulari ha de tenir uns frontals (Apache, NGinx,...) com a part de la seva infraestructura. És en aquests frontals on cal fer la següent configuració per l'accés als recursos (js, css, ...) d'AEM:
 	
-	ProxyPass /content http://<AEM_Instance>/content
-	ProxyPass /etc http://<AEM_Instance>/etc
-	ProxyPass /etc.clientlibs http://<AEM_Instance>/etc.clientlibs
+	ProxyPass /content https://preproduccio.publicador.eformularis.intranet.gencat/content
+	ProxyPass /etc https://preproduccio.publicador.eformularis.intranet.gencat/etc
+	ProxyPass /etc.clientlibs https://preproduccio.publicador.eformularis.intranet.gencat/etc.clientlibs
 	# CSRF Filter
-	ProxyPass /libs/granite/csrf/token.json http://<AEM_Instance>/libs/granite/csrf/token.json
+	ProxyPass /libs/granite/csrf/token.json https://preproduccio.publicador.eformularis.intranet.gencat/libs/granite/csrf/token.json
 	   
-	ProxyPassReverse /etc http://<AEM_Instance>/etc
-	ProxyPassReverse /etc.clientlibs http://<AEM_Instance>/etc.clientlibs
+	ProxyPassReverse /etc https://preproduccio.publicador.eformularis.intranet.gencat/etc
+	ProxyPassReverse /etc.clientlibs https://preproduccio.publicador.eformularis.intranet.gencat/etc.clientlibs
 	# written for thank you page and other URL present in AF during redirect
-	ProxyPassReverse /content http://<AEM_Instance>/content
-		
+	ProxyPassReverse /content https://preproduccio.publicador.eformularis.intranet.gencat/content
 		
