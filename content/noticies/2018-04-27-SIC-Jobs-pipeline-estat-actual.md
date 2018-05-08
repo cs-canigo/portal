@@ -1,7 +1,7 @@
 +++
 date        = "2018-04-27"
-title       = "SIC. Jobs pipeline: Estat de l'art."
-description = "Fa gairebé un any que es van implantar els jobs de tipus pipeline al SIC. En aquest article s'analitza l'estat actual d'aquests tipus de jobs i s'expliquen els futurs canvis que experimentaran aquesta modalitat de jobs."
+title       = "SIC. Jobs pipeline: Estat de l'art"
+description = "Fa gairebé un any que es van implantar els jobs de tipus pipeline al SIC. En aquest article s'analitza l'estat actual d'aquests tipus de jobs i s'expliquen els futurs canvis que experimentaran aquesta modalitat de jobs"
 sections    = ["Notícies","home"]
 categories  = ["sic"]
 key         = "MAIG2018"
