@@ -19,7 +19,7 @@ D'aquí en endavant, quan s'anomeni un formulari HTML5 ens estem referint exclus
 
 ## Sol·licitud d'alta
 
-Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel servei d'eFormularis, cal que faci arribar una petició de sol·licitud d'alta al [servei STF del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/STF).
+Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel servei d'eFormularis, cal que faci arribar una petició de sol·licitud d'alta al [servei STF del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) proporcionant la següent informació:
 
 **Dades generals**
 
@@ -34,20 +34,24 @@ Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel s
 - _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenició de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades no cal proporcionar aquesta informació
 - _Endpoint de submit_: en cas que el formulari tingui un botó de submit, caldrà que s'especifiqui el nom dns i port del servei que expossa l'endpoint al que es farà l'enviament de les dades. Si el formulari tindrà una acció per fer l'enviament de dades via AJAX sense fer el submit, no cal proporcionar aquesta informació
 
-<br><br>
+Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació al servei d'eFormularis:
 
-Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació:
+- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 
-PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+## Integració
 
-## Pre-requisits integració
+TODO: Diagrama que il·lustri la integració entre l'aplicació i eFormularis
 
 ### Configuració proxy HTTP
 
-El lloc web on es vol incorporar el formulari ha de tenir uns frontals (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquets frontals per tal que l'accés al servei d'eFormularis sigui transparent.
+El lloc web on es vulgui incorporar el formulari ha de tenir uns frontals (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
 
-En la secció Formulari demo es pot veure un exemple d'aquesta configuració.
+En la secció formulari demo es pot veure un exemple d'aquesta configuració.
+
+### Regles de firewall
+
+TODO: regles ha habilitar
 
 ## Cicle de vida formulari HTML5
 
@@ -55,7 +59,7 @@ A continuació es descriu el cicle de vida pel que passa un formulari HTML5 a la
 
 ### Desenvolupament
 
-Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM per aquesta instància d'AEM, ha de ser sol·licitada pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF|], o bé enviant un correu a la [bústia del CS Canigó|mailto:oficina-tecnica.canigo.ctti@gencat.cat].
+Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM per aquesta instància d'AEM, ha de ser sol·licitada pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF), o bé enviant un correu a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
 
 L'execució de la instància d'AEM en mode autor permetrà al desenvolupador fer el disseny del formulari HTML5.
 
@@ -69,31 +73,42 @@ S'ha de tenir en compte que per defecte el repositori d'AEM és crea al director
 
 Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les següents pases:
 
-* Exportar el formulari HTML5 a l'AEM autor de desenvolupament: AEM Start -> Forms -> Forms & Documents -> Sel·leccionar formulari -> Download
+- Exportar el formulari HTML5 a l'AEM autor de desenvolupament: AEM Start -> Forms -> Forms & Documents -> Sel·leccionar formulari -> Download
 
-* Crear una petició al CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
-** àmbit, aplicació, nom formulari i versió
-** adjunt zip amb el conjunt d'assets resultat de l'exportació del formulari
-** entorn
-** data publicació: data en que es vol programar la publicació del formulari. Si no s'informa es considerarà que es vol publicar el més aviat possible
+- Crear una petició al CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
 
-* El CS Canigó validarà el formulari i el publicarà, retornant com a resultat la URL d'accés al formulari: 
-** PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html
-** PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html
+	- àmbit, aplicació, nom formulari i versió
+	- adjunt zip amb el conjunt d'assets resultat de l'exportació del formulari
+	- entorn
+	- data publicació: data en que es vol programar la publicació del formulari. Si no s'informa es considerarà que es vol publicar el més aviat possible
+
+- El CS Canigó validarà el formulari i el publicarà, retornant com a resultat la URL d'accés al formulari: 
+
+	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+	- PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 		
 L'usuari pot fer referència a aquesta URL o incoportar el formulari a la seva aplicació.
 
 #### Versionatge
 
-TODO:
+Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d'un formulari caldrà que s'afegeix la versió a aquesta URL.
+
+Ex:
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+...
 
 ### Baixa
 
-TODO:
+Quan un formulari o una versió en concreta estigui en desús, s'haurà de demanar al CS Canigó la seva baixa. La petició s'haurà de fer al [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) informant la URL que l'identifica a cada entorn.
 
 ## Formulari demo
 
-### Configuració frontals
+A continuació es descriu un formulari HTML5 de demo preparat pel CS Canigó. En el següent [enllaç](TODO) podeu descarregar el recursos d'aquest formulari.
+
+### Configuració frontal
+
+TODO:
 
 És en aquests frontals on cal fer la següent configuració de proxy HTTP per l'accés als recursos (js, css, ...) d'AEM:
 	
@@ -111,18 +126,10 @@ TODO:
 
 ### Incrustar formulari
 
-
-### Integració
-
 Per la integració d'un formulari HTML5 a un lloc web s'han de seguir les següents pases:
 
 * Incorporar el següent codi a la plana HTML5 desitjada:
 	
-	<body>
-
-	<div></div>
-
-	 
 	 <script>
 				var path = "https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html";
 				var pathXML = "URL que contingui les dades XML per a relitzar la precàrrega (si s'escau)
@@ -144,9 +151,4 @@ Per la integració d'un formulari HTML5 a un lloc web s'han de seguir les següe
 						// any error handler
 					}
 				});
-
 	 </script>
-
-	</body>
-
-
