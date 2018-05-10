@@ -70,8 +70,6 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	table tr td:nth-child(8), 
 	table tr td:nth-child(10)
 </style>
-
-// <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script>
