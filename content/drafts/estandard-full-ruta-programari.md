@@ -65,10 +65,10 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	table tr:nth-child(1) th:nth-child(3),
 	table tr:nth-child(2) th:nth-child(4),
 	table tr:nth-child(2) th:nth-child(8), 
-	table tr:nth-child(2) th:nth-child(10)
-	{
-		border-right: 3px solid #aaa;
-	}
+	table tr:nth-child(2) th:nth-child(10),
+	table tr td:nth-child(4), 
+	table tr td:nth-child(8), 
+	table tr td:nth-child(10)
 </style>
 
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
