@@ -68,10 +68,11 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	table tr:nth-child(2) th:nth-child(10),
 	table tr td:nth-child(4), 
 	table tr td:nth-child(8), 
-	table tr td:nth-child(10)
+	table tr td:nth-child(10){
+		border-right: 3px solid #aaa;
+	}
 </style>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script>
 	$(document).ready(function() {
 		//Data table plugin
