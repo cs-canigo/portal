@@ -2,8 +2,8 @@
 date        = "2018-05-10"
 title       = "Prova Full de Ruta"
 description = "Full de Ruta del Programari"
-sections    = "Container Cloud"
-categories  = ["cloud","docker","container","paas"]
+sections    = "Full de Ruta"
+categories  = ["versions","programari","suportat","software"]
 +++
 
 Producte                    |  Categoria | Obsolet | Suportat | Versió actual CTTI | En Roadmap CTTI | Emergent
