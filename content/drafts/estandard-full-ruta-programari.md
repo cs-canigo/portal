@@ -111,7 +111,7 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='5'></th><th colspan='5'>Privat</th><th colspan='3'>Públic</th><th colspan='2'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
