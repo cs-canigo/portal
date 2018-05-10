@@ -71,7 +71,9 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	table tr td:nth-child(10)
 </style>
 
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+// <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script>
 	$(document).ready(function() {
 		//Data table plugin
@@ -113,11 +115,8 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	        }	        
     	});
 	});
-</script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-<script>
-	var dataSet = [
+    
+    var dataSet = [
     [ "Tiger Nixon", "System Architect", "Edinburgh", "5421", "2011/04/25", "$320,800" ],
     [ "Garrett Winters", "Accountant", "Tokyo", "8422", "2011/07/25", "$170,750" ],
     [ "Ashton Cox", "Junior Technical Author", "San Francisco", "1562", "2009/01/12", "$86,000" ],
