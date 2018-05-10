@@ -72,7 +72,7 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 		border-right: 3px solid #aaa;
 	}
 </style>
-<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script>
 	$(document).ready(function() {
 		//Data table plugin
