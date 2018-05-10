@@ -89,7 +89,7 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===10){
+	                if(col_index===7){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
