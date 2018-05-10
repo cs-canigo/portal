@@ -1,7 +1,7 @@
 +++
-date        = "2016-10-11"
+date        = "2018-05-10"
 title       = "Prova Full de Ruta"
-description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
+description = "Full de Ruta del Programari"
 sections    = "Container Cloud"
 categories  = ["cloud","docker","container","paas"]
 +++
