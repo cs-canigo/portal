@@ -1,18 +1,12 @@
 +++
-date        = "2017-07-28"
-title       = "Estàndard pel full de ruta del programari"
-description = "Estàndard pel full de ruta del programari"
-weight		= 3
-type = "estandard"
-toc         = true
-versio      = "1.0"
-responsable = "Unitat d'arquitectura"
-estandards =  ["programari"]
-codi = "35.080.03"
-
+date        = "2016-10-11"
+title       = "Prova Full de Ruta"
+description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
+sections    = "Container Cloud"
+categories  = ["cloud","docker","container","paas"]
 +++
 
- Producte                    |  Categoria | Obsolet | Suportat | Versió actual CTTI | En Roadmap CTTI | Emergent
+Producte                    |  Categoria | Obsolet | Suportat | Versió actual CTTI | En Roadmap CTTI | Emergent
  ---------------------       |:-------:| :--------:|:----------:|:--------------------:|:-----------------:|:--------:                 
  Windows estació de treball  | Sistemes operatius LLT | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
  Windows tauleta | Sistemes operatius LLT  | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
