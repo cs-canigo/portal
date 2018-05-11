@@ -72,7 +72,7 @@ categories  = ["versions","programari","suportat","software"]
 	table tr td:nth-child(10)	
 </style>
 
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script>
 	$(document).ready(function() {
 		//Data table plugin
