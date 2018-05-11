@@ -92,6 +92,10 @@ categories  = ["versions","programari","suportat","software"]
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
+		        if(col_index===3){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+	                }
 	                var select = $('<select><option value=""></option></select>')
 	                    .appendTo( $(column.header()) )
 	                    .on( 'change', function () {
