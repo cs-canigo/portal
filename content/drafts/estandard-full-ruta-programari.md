@@ -69,9 +69,7 @@ categories  = ["versions","programari","suportat","software"]
 	table tr:nth-child(2) th:nth-child(10),
 	table tr td:nth-child(4), 
 	table tr td:nth-child(8), 
-	table tr td:nth-child(10){
-		border-right: 3px solid #aaa;
-	}
+	table tr td:nth-child(10)
 </style>
 
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -112,7 +110,7 @@ categories  = ["versions","programari","suportat","software"]
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
