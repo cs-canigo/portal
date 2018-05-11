@@ -168,12 +168,12 @@ El primer conté només dos paràmetres,
 
 **sgde.forms.wsdl.url:** Url del WSDL del servei de formularis Adobe.
 
-* PRE: http://eformularis.pre.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
+* PRE: http://preproduccio.eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
 * PRO: http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV2?wsdl
 
 **sgde.std.wsdl.url:** Url del WSDL del STD.
 
-* PRE: http://sgde.pre.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
+* PRE: http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
 * PRO: http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTDV2?wsdl
 
 ### Utilització del Connector
