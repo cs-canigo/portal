@@ -88,7 +88,7 @@ categories  = ["versions","programari","suportat","software"]
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===2){
+	                if (col_index===2 or col_index===3 or col_index===4 or col_index===5 or col_index===6){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
