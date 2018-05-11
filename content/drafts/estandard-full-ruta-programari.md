@@ -1,17 +1,18 @@
 +++
-date        = "2018-05-10"
+date        = "2018-05-11"
 title       = "Prova Full de Ruta"
 description = "Full de Ruta del Programari"
 sections    = "Full de Ruta"
 categories  = ["versions","programari","suportat","software"]
 +++
 
-Producte                    |  Categoria | Obsolet | Suportat | Versió actual CTTI | En Roadmap CTTI | Emergent
+
+ Producte                    |  Categoria | Obsolet | Suportat | Versió actual CTTI | En Roadmap CTTI | Emergent
  ---------------------       |:-------:| :--------:|:----------:|:--------------------:|:-----------------:|:--------:                 
- Windows estació de treball  | Sistemes operatius LLT | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
- Windows tauleta | Sistemes operatius LLT  | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
- Branques Windows 10 | Sistemes operatius LLT  | 1507 (Inicial) | 1511, 1607, 1703,1709 | 1709 | 1803 | 1809
- MS Office estació de treball | Eines ofimàtiques    | 2003, 2007, 2010 | 2013, 2016               | 2016     | -- | 2019 
+| Windows estació de treball  | Sistemes operatius LLT | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
+| Windows tauleta | Sistemes operatius LLT  | XP, Vista, 7 | 8.1 | 8.1 | 10 | --
+| Branques Windows 10 | Sistemes operatius LLT  | 1507 (Inicial) | 1511, 1607, 1703,1709 | 1709 | 1803 | 1809
+| MS Office estació de treball | Eines ofimàtiques    | 2003, 2007, 2010 | 2013, 2016               | 2016     | -- | 2019 
 | MS Office tauleta            | Eines ofimàtiques    |2003, 2007, 2010  | 2013, 2016               | 2016     | -- | 2019 
 | Openoffice                   | Eines ofimàtiques    | 3.3, 3.4, 4.0    | 4.1.x| 4.1.3    | -- | -- 
 | LibreOffice                  | Eines ofimàtiques    | 5.0, 5.1, 5.2, 5.3  | 5.4       | 5.4.6    | -- | 6.0 
@@ -72,6 +73,7 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 		border-right: 3px solid #aaa;
 	}
 </style>
+
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
 <script>
 	$(document).ready(function() {
@@ -88,7 +90,7 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===7){
+	                if(col_index===10){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
@@ -110,9 +112,8 @@ Producte                    |  Categoria | Obsolet | Suportat | Versió actual C
 	            });
 
 	            //adds header private/public
-	            // $("<tr><th colspan='2'></th><th colspan='5'>Privat</th></tr>").insertBefore($("table thead tr"));
+	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
-    
 </script>
