@@ -1,19 +1,23 @@
 +++
 date        = "2015-03-31"
-title       = "Nou model TIC al SIC"
+title       = "Model TIC al SIC"
 description = ""
 sections    = "SIC"
 weight      = 1
+lastmod     = "2018-05-14"
 +++
 
-### Nou model TIC al SIC
+### Model TIC al SIC
 
-La implantació del nou model TIC al SIC ha consistit en:
+<div style="border-radius: 5px;background-color:#cc0000;padding:5px;color:white;">
+**Avís**: Aquesta pàgina ha estat editada a data 14/05/2018 amb l'aplicació del model de seguretat 2018 del SIC.
+</div>
 
-- Creació d'una nova estructura del repositoris on les aplicacions s'agrupen segons el seu àmbit i codi de diàleg (abans s'agrupaven per àmbit i nom d'aplicació).
+L'actual implantació del model TIC al SIC ha consistit en:
+
+- Creació d'una nova estructura del repositoris on les aplicacions s'agrupen per codi d'aplicació.
 - Les noves altes d'aplicació es realitzaran contra aquesta estructura.
 - Creació de nous grups de permissos per gestionar els accessos a aquests repositoris.
-- Homogeneïtzació de la llista dels d'àmbits al que poden pertanyen les aplicacions.
 
 ## Nous grups de permisos
 
@@ -24,10 +28,8 @@ El grup està integrat pels responsables CTTI de l'àmbit. La llista d'àmbits e
 - RSPL_LOT: Es defineix un grup de responsables per cada lot amb accés total al repositori de codi de les aplicacions SIC del seu lot.
 El grup està integrat amb els responsables d'arquitectura i qualitat dels lots.
 - CPD: Es defineix un grup per cada CPD dels codis de diàleg amb accés al repositori de codi de les aplicacions SIC del seu CPD.
-- RML_LOT_AMBIT: Es defineix un grup de release manager per a cada lot i àmbit amb accés total a les aplicacions SIC de l'àmbit que pertanyin al lot.
-El grup s'integra amb les persones sol- licitades per CTTI, aquesta sol- licitud es realitzarà com una petició estàndard al SIC.
-- APP_CODI_DIALEG_SVN: Es defineix un grup per a cada codi de diàleg amb accés al repositori de codi.
-El grup s'integra amb les persones sol- licitades per CTTI, aquesta sol- licitud es realitzarà com una petició estàndard al SIC.
+- RM_CODIAPLICACIÓ: Es defineix un grup de release manager per a cada codi d'aplicació amb accés total a les aplicacions SIC d'aquest codi d'aplicació.
+El grup s'integra amb les persones sol·licitades a les fases 0 en la seva creació i a partir d'aquell instant, pels usuaris afegits en mode autoservei.
 
 ## Llistat d'àmbits disponibles
 
@@ -63,7 +65,3 @@ El grup s'integra amb les persones sol- licitades per CTTI, aquesta sol- licitud
 | SOC			|	Servei d'Ocupació de Catalunya (SOC)									|
 | SUR			|	Secretaria d'Universitats i Recerca										|
 | TES			|	Departament de Territori i Sostenibilitat								|
-
-## Repositoris de codi que ja es troben creats de forma massiva
-
-L'equip de SIC en data 10-9-2014 va realitzar la creació massiva de repositoris de codi per a les aplicacions que figuren en aquest [Inventari d'Aplicacions](/related/sic/Inventari_SIC_140910.xlsx).
