@@ -94,39 +94,38 @@ A data de creació d'aquest exemple la última versió de CXF disponible és la 
 
 **pom.xml**
 
-```
-....
-<build>
-	<plugins>
-		...........
-                ...........
+	....
+	<build>
+		<plugins>
+			...........
+					...........
 
-		<plugin>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-codegen-plugin</artifactId>
-			<version>3.2.4</version>
-			<executions>
-				<execution>
-					<id>generate-sources</id>
-					<phase>generate-sources</phase>
-				    <configuration>
-					    <sourceRoot>${basedir}/src/main/java</sourceRoot>
-                        <wsdlOptions>
-							<wsdlOption>
-								<wsdl>http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl</wsdl>
-							</wsdlOption>
-						</wsdlOptions>
-					</configuration>
-					<goals>
-						<goal>wsdl2java</goal>
-					</goals>
-				</execution>
-			</executions>
-		</plugin>
-	</plugins>
-</build>
-......
-```
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>3.2.4</version>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<sourceRoot>${basedir}/src/main/java</sourceRoot>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	......
+
 
 Aquest plugin generarà automàticament el codi Java del WSDL informat:
 
@@ -149,7 +148,6 @@ Fitxer de configuració: canigo-webservices-config.xml
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 
-	```
 	<?xml version="1.0" encoding="UTF-8"?>
 	<beans xmlns="http://www.springframework.org/schema/beans"
 		xmlns:context="http://www.springframework.org/schema/context"
@@ -189,7 +187,6 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 		</bean>
 
 	</beans>
-	```
 
 En aquesta configuració destacar el bean [marshaller] (https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html#oxm-jaxb2) on a la propietat contextPath posem el package de les classes generades, en aquest exemple.
 
@@ -197,9 +194,8 @@ En aquesta configuració destacar el bean [marshaller] (https://docs.spring.io/s
 
 Codi d'exemple per a la crida al webservice.
 
-	**WebServiceClient.java**
+**WebServiceClient.java**
 
-	```java
 	import com.cdyne.ws.ResolveIPResponse;
 
 
@@ -207,11 +203,9 @@ Codi d'exemple per a la crida al webservice.
 		
 		ResolveIPResponse simpleSendAndReceive(String ip, String licenseKey);
 	}
-	```
 
 **WebServiceClientImpl.java**
 
-	```java
 	import org.springframework.ws.client.core.WebServiceTemplate;
 
 	import com.cdyne.ws.ResolveIP;
@@ -239,13 +233,11 @@ Codi d'exemple per a la crida al webservice.
 		}
 
 	}
-	```
 
 Definir un test per a certificar el seu funcionament
 
 **WebServiceClientTest .java**
 
-	```java
 	import org.junit.Assert;
 	import org.junit.Before;
 	import org.junit.Test;
@@ -282,7 +274,7 @@ Definir un test per a certificar el seu funcionament
 		}
 		
 	}
-	```
+	
 
 ### Configuració com a EndPoint
 
