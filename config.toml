@@ -18,7 +18,8 @@ Paginate = 10
 	noticieshome = 10
 	destacatshome = 4
 	google_analytics_id = "UA-59408075-1"
-	titol = "Arquitectura CTTI"
+	titol = "Centre de Telecomunicacions i Tecnologies de la Informació"
+	subtitol = "Arquitectura CTTI"
 	blog_section = "blog"
 
 [taxonomies]
