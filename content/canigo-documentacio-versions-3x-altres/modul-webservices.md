@@ -1,5 +1,5 @@
 +++
-date        = "2015-04-02T14:02:36+02:00"
+date        = "2018-05-15"
 title       = "Webservices"
 description = "Webservices"
 sections    = "Canigó. Documentació versió 3.x"
@@ -25,7 +25,9 @@ La integració de WebServices no es troba ubicat dins del framework de Canigó c
 
 Referència | URL
 ---------- | ---
-Spring Web Services | http://static.springsource.org/spring-ws/sites/2.0/reference/html/
+Spring Web Services | https://docs.spring.io/spring-ws/docs/2.3.x/reference/html/
+OXM | https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html
+
 
 ## Glossari
 
@@ -57,36 +59,38 @@ Un arxiu WSDL és un arxiu XML que descriu la forma de comunicació, es a dir, e
 
 ### Instal.lació
 
-La instal.lació del servei requereix de la utilització de la llibreria 'spring-ws-core' i les dependències indicades a l'apartat 'Introducció-Versions i Dependències'.
+La instal.lació del servei requereix de la utilització de la llibreria 'spring-ws-core'.
 
-### Configuració
+	 <dependency>
+      <groupId>org.springframework.ws</groupId>
+      <artifactId>spring-ws-core</artifactId>
+    </dependency>
+
+## Configuració
 
 Aquest punt el dividirem en dues parts segons si volem exposar un servei o bé som consumidor(clients) de ell:
 
-#### Configuració com a client
+### Configuració com a client
 
 La configuració del web implica els següents passos:
 
-* Definir l'arxiu de propietats amb les dades del webservice.
 * Generar les classes Java i els seus bindings a partir del WSDL del Webservice.
+* Definir l'arxiu de propietats amb les dades del webservice.
 * Definir l'arxiu de configuració de Spring: client, marshallers, WebserviceTemplate.
 * Definir el client que realitzarà la crida.
 * Test d'exemple
 
-#### Definició de l'arxiu de propietats
-
-Fitxer de configuració: webservices.properties
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props
-
-    *.ws.uri=http://ws.cdyne.com/WeatherWS/Weather.asmx
-
-Contindrà les URLs del webservices segons l'entorn al que es vulgui atacar.
-
 #### Generar les classes Java i els seus bindings a partir del WSDL del Webservice
 
-Per aquest procés s'utilitzarà un plugin de maven. Aquest serà l'encarregat de generar el codi Java i les anotacions de binding de manera automàtica a partir del WSDL.
+Per aquest procés s'utilitza el plugin [cxf-codegen-plugin](http://cxf.apache.org/docs/maven-cxf-codegen-plugin-wsdl-to-java.html) de maven. Aquest és l'encarregat de generar el codi Java i les anotacions de binding de manera automàtica a partir del WSDL.
+
+En aquest exemple utilitzem el WSDL públic: http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl
 	
     És recomanable generar aquestes classes en un projecte extern, i posteriorment afegir aquest projecte com a dependència del projecte
+	
+En un projecte tipus maven configurem el pom.xml.
+
+A data de creació d'aquest exemple la última versió de CXF disponible és la 3.2.4, recomanem utilitzar la última versió.
 
 **pom.xml**
 
@@ -100,16 +104,16 @@ Per aquest procés s'utilitzarà un plugin de maven. Aquest serà l'encarregat d
 		<plugin>
 			<groupId>org.apache.cxf</groupId>
 			<artifactId>cxf-codegen-plugin</artifactId>
-			<version>2.2.10</version>
+			<version>3.2.4</version>
 			<executions>
 				<execution>
 					<id>generate-sources</id>
 					<phase>generate-sources</phase>
-				        <configuration>
-					        <sourceRoot>${basedir}/src/main/java</sourceRoot>
-                                                <wsdlOptions>
+				    <configuration>
+					    <sourceRoot>${basedir}/src/main/java</sourceRoot>
+                        <wsdlOptions>
 							<wsdlOption>
-								<wsdl>http://wsf.cdyne.com/WeatherWS/Weather.asmx?wsdl</wsdl>
+								<wsdl>http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl</wsdl>
 							</wsdlOption>
 						</wsdlOptions>
 					</configuration>
@@ -118,149 +122,167 @@ Per aquest procés s'utilitzarà un plugin de maven. Aquest serà l'encarregat d
 					</goals>
 				</execution>
 			</executions>
-
-			<dependencies>
-				<dependency>
-					<groupId>org.jvnet.jaxb2_commons</groupId>
-					<artifactId>jaxb2-basics</artifactId>
-					<version>0.6.0</version>
-				</dependency>
-				<dependency>
-					<groupId>org.jvnet.jaxb2_commons</groupId>
-					<artifactId>jaxb2-basics-runtime</artifactId>
-					<version>0.6.0</version>
-				</dependency>
-			</dependencies>
 		</plugin>
 	</plugins>
 </build>
 ......
 ```
 
-Aquest plugin generarà automàticament el codi Java de el WSDL informat, en aquest cas: http://ws.cdyne.com/WeatherWS/Weather.asmx?wsdl. Un servei web gratuït per a consultar el temps a partir del ZIP code.
+Aquest plugin generarà automàticament el codi Java del WSDL informat:
 
-### Definir l'arxiu de configuració de Spring
+![classes_generades](/related/canigo/documentacio/modul-webservices/classes_generades.png)
+
+Copiem les classes generades al nostre projecte Canigó.
+
+#### Definició de l'arxiu de propietats
+
+Fitxer de configuració: webservices.properties
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props
+
+    *.ws.uri=http://ws.cdyne.com/ip2geo/ip2geo.asmx
+
+Contindrà les URLs del webservices segons l'entorn al que es vulgui atacar.
+
+#### Definir l'arxiu de configuració de Spring
 
 Fitxer de configuració: canigo-webservices-config.xml
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 
-```
-<bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory">
-	<property name="soapVersion">
-		<util:constant static-field="org.springframework.ws.soap.SoapVersion.SOAP_12" />
-	</property>
-</bean>
+	```
+	<?xml version="1.0" encoding="UTF-8"?>
+	<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:util="http://www.springframework.org/schema/util"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:p="http://www.springframework.org/schema/p"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+				http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+				http://www.springframework.org/schema/aop 
+				http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+				http://www.springframework.org/schema/context 
+				http://www.springframework.org/schema/context/spring-context-4.3.xsd
+				http://www.springframework.org/schema/util
+				http://www.springframework.org/schema/util/spring-util-4.3.xsd">
 
-<bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
-	<constructor-arg ref="messageFactory" />
-	<property name="marshaller" ref="marshaller" />
-	<property name="unmarshaller" ref="marshaller" />
-	<property name="defaultUri" value="${ws.uri}" />
-</bean>
+		<bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory">
+			<property name="soapVersion">
+				<util:constant static-field="org.springframework.ws.soap.SoapVersion.SOAP_12" />
+			</property>
+		</bean>
+		
+		<bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+			<constructor-arg ref="messageFactory" />
+			<property name="marshaller" ref="marshaller" />
+			<property name="unmarshaller" ref="marshaller" />
+			<property name="defaultUri" value="${ws.uri}" />
+		</bean>
+		
+		<bean id="webServiceClient" class="cat.gencat.wsprova.ws.WebServiceClientImpl">
+			<property name="webServiceTemplate" ref="webServiceTemplate"/>
+			<property name="defaultUri" value="${ws.uri}" />        
+		</bean>
+		
+		<bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+			<property name="contextPath" value="com.cdyne.ws"/>
+		</bean>
 
-<bean id="webServiceClient" class="cat.gencat.ctti.canigo.demo.ws.WebServiceClientImpl">
-	<property name="webServiceTemplate" ref="webServiceTemplate"/>
-	<property name="defaultUri" value="${ws.uri}" />		
-</bean>
+	</beans>
+	```
 
-<bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
-	<property name="classesToBeBound">
-		<list>
-			<value>com.cdyne.ws.weatherws.ArrayOfForecast</value>
-			<value>com.cdyne.ws.weatherws.ArrayOfWeatherDescription</value>
-			<value>com.cdyne.ws.weatherws.Forecast</value>
-			<value>com.cdyne.ws.weatherws.ForecastReturn</value>
-			<value>com.cdyne.ws.weatherws.GetCityForecastByZIP</value>
-			<value>com.cdyne.ws.weatherws.GetCityForecastByZIPResponse</value>
-			<value>com.cdyne.ws.weatherws.GetCityWeatherByZIP</value>
-			<value>com.cdyne.ws.weatherws.GetCityWeatherByZIPResponse</value>
-			<value>com.cdyne.ws.weatherws.GetWeatherInformation</value>
-			<value>com.cdyne.ws.weatherws.GetWeatherInformationResponse</value>
-			<value>com.cdyne.ws.weatherws.POP</value>
-			<value>com.cdyne.ws.weatherws.Temp</value>
-			<value>com.cdyne.ws.weatherws.WeatherDescription</value>
-			<value>com.cdyne.ws.weatherws.WeatherReturn</value>
-		</list>
-	</property>
-</bean>
-```
+En aquesta configuració destacar el bean [marshaller] (https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html#oxm-jaxb2) on a la propietat contextPath posem el package de les classes generades, en aquest exemple.
 
-En aquesta configuració destacar classesToBeBound: que és el conjunt de classes de les quals OXM farà el marshalling i unmarshalling sense necessitat de manipular XML per part del desenvolupador.
-
-### Definir el client que realitzarà la crida
+#### Definir el client que realitzarà la crida
 
 Codi d'exemple per a la crida al webservice.
 
+	**WebServiceClient.java**
+
+	```java
+	import com.cdyne.ws.ResolveIPResponse;
+
+
+	public interface WebServiceClient {
+		
+		ResolveIPResponse simpleSendAndReceive(String ip, String licenseKey);
+	}
+	```
+
 **WebServiceClientImpl.java**
 
-```java
-public class WebServiceClientImpl implements WebServiceClient {
-	
-	private WebServiceTemplate webServiceTemplate;
+	```java
+	import org.springframework.ws.client.core.WebServiceTemplate;
 
-	public void setWebServiceTemplate(WebServiceTemplate webServiceTemplate) {
-		this.webServiceTemplate = webServiceTemplate;
+	import com.cdyne.ws.ResolveIP;
+	import com.cdyne.ws.ResolveIPResponse;
+
+	public class WebServiceClientImpl implements WebServiceClient {
+		
+		private WebServiceTemplate webServiceTemplate;
+
+		public void setWebServiceTemplate(WebServiceTemplate webServiceTemplate) {
+			this.webServiceTemplate = webServiceTemplate;
+		}
+
+		public void setDefaultUri(String defaultUri) {
+			webServiceTemplate.setDefaultUri(defaultUri);
+		}
+
+		public ResolveIPResponse simpleSendAndReceive(String ip, String licenseKey) {
+			
+			ResolveIP request = new ResolveIP();
+			request.setIpAddress(ip);
+			request.setLicenseKey(licenseKey);
+					
+			return (ResolveIPResponse)webServiceTemplate.marshalSendAndReceive(request);
+		}
+
 	}
-
-	public void setDefaultUri(String defaultUri) {
-		webServiceTemplate.setDefaultUri(defaultUri);
-	}
-
-	public GetCityForecastByZIPResponse simpleSendAndReceive(String zip) {
-				
-		GetCityForecastByZIP request = new GetCityForecastByZIP();
-		request.setZIP(zip);
-				
-		return (GetCityForecastByZIPResponse)webServiceTemplate.marshalSendAndReceive(request);
-	}
-
-}
-```
-
-**WebServiceClient.java**
-
-```java
-public interface WebServiceClient {
-	GetCityForecastByZIPResponse simpleSendAndReceive(String zip);
-}
-```
+	```
 
 Definir un test per a certificar el seu funcionament
 
 **WebServiceClientTest .java**
 
-```java
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"ws-context.xml"})
-public class WebServiceClientTest {
-	
-	private static final Log LOGGER = LogFactory.getLog(WebServiceClientTest.class);
-	
-	@Autowired
-	public WebServiceClient client;
-	
-	@Before
-	public void init(){
-		Assert.assertNotNull(client);
-	}
-	
-	@Test
-	public void testCall(){
-		GetCityForecastByZIPResponse response = client.simpleSendAndReceive("35004");
+	```java
+	import org.junit.Assert;
+	import org.junit.Before;
+	import org.junit.Test;
+	import org.junit.runner.RunWith;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.test.context.ContextConfiguration;
+	import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+	import com.cdyne.ws.ResolveIPResponse;
+
+	import cat.gencat.wsprova.ws.WebServiceClient;
+
+
+	@RunWith(SpringJUnit4ClassRunner.class)
+	@ContextConfiguration(locations = {"classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml"})
+	public class WebServiceClientTest {
 		
-		Assert.assertNotNull(response);
-		Assert.assertEquals("Moody", response.getGetCityForecastByZIPResult().getCity());
-		Assert.assertEquals("AL", response.getGetCityForecastByZIPResult().getState());
-		Assert.assertEquals("Birmingham", response.getGetCityForecastByZIPResult().getWeatherStationCity());
+		@Autowired
+		public WebServiceClient client;
 		
-		
-		for(Forecast forecast : response.getGetCityForecastByZIPResult().getForecastResult().getForecast()){
-			LOGGER.debug(forecast.getDate() + ": " + forecast.getDesciption());
+		@Before
+		public void init(){
+			Assert.assertNotNull(client);
 		}
+		
+		@Test
+		public void testCall(){
+			ResolveIPResponse response = client.simpleSendAndReceive("91.126.217.34", "?");
+			
+			Assert.assertNotNull(response);
+			Assert.assertEquals("Fornells De La Selva", response.getResolveIPResult().getCity());
+			Assert.assertEquals("Spain", response.getResolveIPResult().getCountry());
+			
+		}
+		
 	}
-}
-```
+	```
 
 ### Configuració com a EndPoint
 
@@ -310,7 +332,7 @@ Aquest servlet MessageDispatcherServlet carregarà els arxius de configuració d
 </web-app>
 ```
 
-### Definir l'arxiu de configuració de Spring
+#### Definir l'arxiu de configuració de Spring
 
 Dins de l'arxiu de configuració definim:
 
@@ -364,7 +386,7 @@ ja que el context de l'aplicació web no és el mateix que el del webservice.
 </beans>
 ```
 
-### Definir el Endpoint
+#### Definir el Endpoint
 
 Interficie que defineix les operacions públiques del WS.
 
