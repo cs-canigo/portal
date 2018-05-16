@@ -29,6 +29,5 @@ Per poder utilitzar els serveis del SGDE és necessari donar-se d'alta en alguna
 
 - [Manual d'Usuari](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD.pdf)
 - [Manual de Creació de Plantilles](/related/sgde/CSCanigo.MU.P00.E01_Manual_creacio_plantilles_STD.pdf)
-- [Manual d'Arquitectura](/related/sgde/CSCanigo.MA.P00.E01_manual_arquitectura_STD.pdf)
 
 - [Formulari d'Alta d'aplicació](/related/sgde/CSCanigo.PA.P00.STD_ALTA_ambit-aplicacio.xlsx)
