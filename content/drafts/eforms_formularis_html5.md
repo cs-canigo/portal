@@ -31,13 +31,15 @@ Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel s
 
 **Dades tècniques**
 
-- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenició de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades no cal proporcionar aquesta informació
-- _Endpoint de submit_: en cas que el formulari tingui un botó de submit, caldrà que s'especifiqui el nom dns i port del servei que expossa l'endpoint al que es farà l'enviament de les dades. Si el formulari tindrà una acció per fer l'enviament de dades via AJAX sense fer el submit, no cal proporcionar aquesta informació
+- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenició de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació
+- _Endpoint de submit_: en cas que el formulari tingui un botó de tipus submit, caldrà que s'especifiqui el nom dns i port del servei que expossa l'endpoint al que es farà l'enviament de les dades. Si el formulari tindrà una acció per fer l'enviament de les dades del formuari via AJAX sense ser de tipus submit, no cal proporcionar aquesta informació
 
 Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació al servei d'eFormularis:
 
-- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+	- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+
+També confirmarà que s'han habilitat les connectivitats requerides des del servei d'eFormularis cap als endpoints necessaris per la integració.
 
 ## Integració
 
@@ -45,13 +47,26 @@ TODO: Diagrama que il·lustri la integració entre l'aplicació i eFormularis
 
 ### Configuració proxy HTTP
 
-El lloc web on es vulgui incorporar el formulari ha de tenir uns frontals (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
+El lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
 
 En la secció formulari demo es pot veure un exemple d'aquesta configuració.
 
-### Regles de firewall
+#### Regles de firewall
 
-TODO: regles ha habilitar
+Els frontals web de l'aplicació hauran de tenir connectivitat amb el servei de publicació de Formularis HMTL5 d'eFormularis:
+
+	- PRE
+		Nom: preproduccio.publicador.eformularis.intranet.gencat.cat
+		IP: 10.1.126.79
+		Port: 443
+	- PRO:
+		Nom: publicador.eformularis.intranet.gencat.cat
+		IP: 10.1.118.51
+		Port: 443
+
+### Consideracions de seguretat
+
+Es recomana que l'aplicació incorpori un token en la crida al formulari, i que aquest s'enviï en l'enviament de les dades del formulari per tal que l'aplicació pugui fer les validacions pertinents (autenticitat, timeout).
 
 ## Cicle de vida formulari HTML5
 
@@ -106,11 +121,9 @@ Quan un formulari o una versió en concreta estigui en desús, s'haurà de deman
 
 A continuació es descriu un formulari HTML5 de demo preparat pel CS Canigó. En el següent [enllaç](TODO) podeu descarregar el recursos d'aquest formulari.
 
-### Configuració frontal
+### Configuració frontal web
 
-TODO:
-
-És en aquests frontals on cal fer la següent configuració de proxy HTTP per l'accés als recursos (js, css, ...) d'AEM:
+Fer la següent configuració de proxy HTTP per l'accés als recursos (js, css, ...) d'AEM:
 	
 	ProxyPass /content https://preproduccio.publicador.eformularis.intranet.gencat/content
 	ProxyPass /etc https://preproduccio.publicador.eformularis.intranet.gencat/etc
@@ -126,29 +139,29 @@ TODO:
 
 ### Incrustar formulari
 
-Per la integració d'un formulari HTML5 a un lloc web s'han de seguir les següents pases:
-
-* Incorporar el següent codi a la plana HTML5 desitjada:
+Incorporar el següent codi a la plana HTML5 desitjada:
 	
 	 <script>
-				var path = "https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/ambit/aplicacio/formulari.html";
-				var pathXML = "URL que contingui les dades XML per a relitzar la precàrrega (si s'escau)
-				path += "/jcr:content/guideContainer.html";
-				$.ajax({
-					url  : path ,
-					type : "GET",
-					data : {
-						// Set the wcmmode to be disabled
-						wcmmode : "disabled",
-						"dataRef": pathXML
-					},
-					async: false,
-					success: function (data) {
-						//document.getElementById('output').innerHTML = data;
-						$( "div" ).html(data);
-					},
-					error: function (data) {
-						// any error handler
-					}
-				});
+		var path = "https://<domini-aplicacio>/content/forms/af/ambit/aplicacio/formulari.html";
+		var pathXML = "URL que contingui les dades XML per a relitzar la precàrrega (si s'escau)
+		path += "/jcr:content/guideContainer.html";
+		$.ajax({
+			url  : path ,
+			type : "GET",
+			data : {
+				// Set the wcmmode to be disabled
+				wcmmode : "disabled",
+				"dataRef": pathXML
+			},
+			async: false,
+			success: function (data) {
+				//document.getElementById('output').innerHTML = data;
+				$( "div" ).html(data);
+			},
+			error: function (data) {
+				// any error handler
+			}
+		});
 	 </script>
+
+on <domini-aplicacio> és el domini de l'aplicació que està publicant el formulari
