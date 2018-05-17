@@ -11,7 +11,7 @@ weight 		= 1
 
 ## Introducció
 
-En l'actualització tecnològica realitzada durant el 2018 (23/4 Preproducció - 11/6 Producció) a la plataforma d'eFormularis, l'Adobe LiveCycle es substituït per l'AEM (Adobe Experience Manager), el qual incorpora noves funcionalitats relatives a formuaris HTML5.
+En l'actualització tecnològica realitzada durant el 2018 (23-4-2018 Preproducció - 11-6-2018 Producció) a la plataforma d'eFormularis, Adobe LiveCycle es substituït per **AEM (Adobe Experience Manager)**, el qual incorpora noves funcionalitats relatives a formularis HTML5.
 
 Els **Adaptive Forms** són els formularis HTML5 d'AEM amb capacitat multi-dispositiu. Això vol dir que responen de forma diferent, s'adapten, depenent del dispositiu on siguin executats. Un altre gran diferència respecte als formularis PDF, és que el mode d'execució és **on-line**. El formulari ja no es descarrega i s'emplena en mode **off-line** com en el cas dels PDF, per a ser enviats posteriorment.
 
