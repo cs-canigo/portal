@@ -45,11 +45,11 @@ També confirmarà que s'han habilitat les connectivitats requerides des del ser
 
 ![model-integracio-formularisHTML5](/related/sgde/model_integracio_formularis-html5.png)
 
-### Configuració proxy HTTP
+### Frontals web aplicació
 
-El lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
+Com es pot observar en el punt anterior, el lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
 
-En la secció formulari demo es pot veure un exemple d'aquesta configuració.
+En la secció Configuracions es pot veure el detall de les configuracions a realitzar.
 
 #### Regles de firewall
 
@@ -113,39 +113,55 @@ https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt
 
 https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html
 
-Es recomana però que els formularis siguin sempre backward compatibles, evitant aquest versionatge en la publicació, podent mantenir sempre la mateixa URL.
+Es recomana però que els formularis siguin sempre **backward compatible**, evitant aquest versionatge en la publicació, podent mantenir sempre la mateixa URL.
 
 ### Baixa
 
 Quan un formulari o una versió en concreta estigui en desús, s'haurà de demanar al CS Canigó la seva baixa. La petició s'haurà de fer al [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) informant la URL que l'identifica a cada entorn.
 
-## Formulari demo
+## Configuracions
 
-A continuació es descriu un formulari HTML5 de demo preparat pel CS Canigó. En el següent [enllaç](TODO) podeu descarregar el recursos d'aquest formulari.
+A continuació es descriuen les principals configuracions a realitzar per el funcionament d'un formulari HTML5.
 
 ### Configuració frontal web
 
-Fer la següent configuració de proxy HTTP per l'accés als recursos (js, css, ...) d'AEM:
+Configuració de proxy HTTP invers als frontals web Apache de l'aplicació per l'accés als recursos (js, css, ...) d'AEM:
+
+	<VirtualHost *:80>
+		ProxyPreserveHost On
+
+		SSLProxyEngine on
+		SSLProxyVerify none 
+		SSLProxyCheckPeerCN off
+		SSLProxyCheckPeerName off
+		SSLProxyCheckPeerExpire off
+
+		ServerName <domini-aplicacio>
+
+		ProxyPass /forms/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/forms/
+		ProxyPassReverse /forms/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/forms/
+
+		ProxyPass /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
+		ProxyPass /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
+		ProxyPass /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+		# CSRF Filter
+		ProxyPass /libs/granite/csrf/token.json https://preproduccio.publicador.eformularis.intranet.gencat.cat/libs/granite/csrf/token.json
+
+		ProxyPassReverse /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
+		ProxyPassReverse /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+		# written for thank you page and other URL present in AF during redirect
+		ProxyPassReverse /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
+	</VirtualHost>
 	
-	ProxyPass /content https://preproduccio.publicador.eformularis.intranet.gencat/content
-	ProxyPass /etc https://preproduccio.publicador.eformularis.intranet.gencat/etc
-	ProxyPass /etc.clientlibs https://preproduccio.publicador.eformularis.intranet.gencat/etc.clientlibs
-	
-	# CSRF Filter
-	ProxyPass /libs/granite/csrf/token.json https://preproduccio.publicador.eformularis.intranet.gencat/libs/granite/csrf/token.json
-	   
-	ProxyPassReverse /etc https://preproduccio.publicador.eformularis.intranet.gencat/etc
-	ProxyPassReverse /etc.clientlibs https://preproduccio.publicador.eformularis.intranet.gencat/etc.clientlibs
-	# written for thank you page and other URL present in AF during redirect
-	ProxyPassReverse /content https://preproduccio.publicador.eformularis.intranet.gencat/content
+on &lt;domini-aplicacio&gt; és el domini de l'aplicació que està publicant el formulari
 
 ### Incrustar formulari
 
-Incorporar el següent codi a la plana HTML5 desitjada:
+Codi javascript per incrustar el formulari HTML5 a la plana web de l'aplicació:
 	
 	 <script>
 		var path = "https://<domini-aplicacio>/content/forms/af/ambit/aplicacio/formulari.html";
-		var pathXML = "URL que contingui les dades XML per a relitzar la precàrrega (si s'escau)
+		var pathXML = "<url-precarrega-dades>"
 		path += "/jcr:content/guideContainer.html";
 		$.ajax({
 			url  : path ,
@@ -166,4 +182,28 @@ Incorporar el següent codi a la plana HTML5 desitjada:
 		});
 	 </script>
 
-on <domini-aplicacio> és el domini de l'aplicació que està publicant el formulari
+on &lt;domini-aplicacio&gt; és el domini de l'aplicació que està publicant el formulari
+on &lt;url-precarrega-dades&gt; és la URL de l'endpoint del qual s'obtindran les dades per el preomplert
+
+### Enviament de dades
+
+Codi javascript a configurar en el botó de "Custom submit" a l'editor del formulari adaptatiu al node AEM Author:
+
+	function sendData (){
+		guideBridge.getData({
+			success : function (guideResultObject) {
+				//POST de guideResultObject.data a <endpoint-submit>
+			},
+			error : function (guideResultObject) {
+				 var msg = guideResultObject.getNextMessage();
+				 while (msg != null) {
+				 	alert("No s'han pogut obtenir les dades del formulari: " + msg.message);
+					msg = guideResultObject.getNextMessage();
+				 }
+			}
+		});
+	}
+	
+	sendData();
+ 
+on &lt;endpoint-submit&gt; és l'endpoint de l'aplicació on es vol fer l'enviament de les dades
