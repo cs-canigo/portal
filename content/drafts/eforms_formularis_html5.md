@@ -43,7 +43,7 @@ També confirmarà que s'han habilitat les connectivitats requerides des del ser
 
 ## Integració
 
-TODO: Diagrama que il·lustri la integració entre l'aplicació i eFormularis
+![model-integracio-formularisHTML5](/related/sgde/model_integracio_formularis-html5.png)
 
 ### Configuració proxy HTTP
 
@@ -109,9 +109,11 @@ L'usuari pot fer referència a aquesta URL o incoportar el formulari a la seva a
 Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d'un formulari caldrà que s'afegeix la versió a aquesta URL.
 
 Ex:
-https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-...
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html
+
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html
+
+Es recomana però que els formularis siguin sempre backward compatibles, evitant aquest versionatge en la publicació, podent mantenir sempre la mateixa URL.
 
 ### Baixa
 
