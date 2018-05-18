@@ -36,8 +36,8 @@ Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel s
 
 Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació al servei d'eFormularis:
 
-	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-	- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 
 També confirmarà que s'han habilitat les connectivitats requerides des del servei d'eFormularis cap als endpoints necessaris per la integració.
 
