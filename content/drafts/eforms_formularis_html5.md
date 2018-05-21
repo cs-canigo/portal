@@ -17,7 +17,7 @@ Els **Adaptive Forms** són els formularis HTML5 d'AEM amb capacitat multi-dispo
 
 D'aquí en endavant, quan s'anomeni un formulari HTML5 ens estem referint exclusivament a un adaptive form d'AEM.
 
-## Sol·licitud d'alta
+## Sol·licitud alta aplicació
 
 Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel servei d'eFormularis, cal que faci arribar una petició de sol·licitud d'alta al [servei STF del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/STF) proporcionant la següent informació:
 
@@ -41,7 +41,7 @@ Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la U
 
 També confirmarà que s'han habilitat les connectivitats requerides des del servei d'eFormularis cap als endpoints necessaris per la integració.
 
-## Integració
+## Model d'integració
 
 ![model-integracio-formularisHTML5](/related/sgde/model_integracio_formularis-html5.png)
 
@@ -49,7 +49,7 @@ També confirmarà que s'han habilitat les connectivitats requerides des del ser
 
 Com es pot observar en el punt anterior, el lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
 
-En la secció [Configuracions](#Configuracions) es pot veure el detall de les configuracions a realitzar.
+En la secció [Configuracions](#configuracions) es pot veure el detall de les configuracions a realitzar.
 
 #### Regles de firewall
 
