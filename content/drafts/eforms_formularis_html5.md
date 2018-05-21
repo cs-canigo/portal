@@ -31,7 +31,7 @@ Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel s
 
 **Dades tècniques**
 
-- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenició de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació
+- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenció de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació
 - _Endpoint de submit_: en cas que el formulari tingui un botó de tipus submit, caldrà que s'especifiqui el nom dns i port del servei que expossa l'endpoint al que es farà l'enviament de les dades. Si el formulari tindrà una acció per fer l'enviament de les dades del formuari via AJAX sense ser de tipus submit, no cal proporcionar aquesta informació
 
 Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació al servei d'eFormularis:
@@ -49,7 +49,7 @@ També confirmarà que s'han habilitat les connectivitats requerides des del ser
 
 Com es pot observar en el punt anterior, el lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,...) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l'aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l'accés al servei d'eFormularis sigui transparent.
 
-En la secció Configuracions es pot veure el detall de les configuracions a realitzar.
+En la secció [Configuracions](#Configuracions) es pot veure el detall de les configuracions a realitzar.
 
 #### Regles de firewall
 
@@ -74,7 +74,7 @@ A continuació es descriu el cicle de vida pel que passa un formulari HTML5 a la
 
 ### Desenvolupament
 
-Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM per aquesta instància d'AEM, ha de ser sol·licitada pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF), o bé enviant un correu a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM ha de ser sol·licitat al CS Canigó pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF), o bé enviant un correu a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
 
 L'execució de la instància d'AEM en mode autor permetrà al desenvolupador fer el disseny del formulari HTML5.
 
@@ -82,7 +82,7 @@ L'execució de la instància d'AEM en mode autor permetrà al desenvolupador fer
 $ java -jar <AEM_jar>
 ```
 
-S'ha de tenir en compte que per defecte el repositori d'AEM és crea al directori des d'on l'usuari executa aquest procés. És important ja que el volum de dades que s'hi emmagatzemen és gran (5GB aproximadament) i de vital importancia per el funcionament d'AEM.
+S'ha de tenir en compte que per defecte el repositori d'AEM és crea al directori des d'on l'usuari executa aquest procés. És important ja que el volum de dades que s'hi emmagatzema és gran (5GB aproximadament) i de vital importancia per el funcionament d'AEM.
 
 ### Desplegament
 
@@ -92,17 +92,15 @@ Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les seg
 
 - Crear una petició al CSTD, [servei STF] (https://cstd.ctti.gencat.cat/jiracstd/browse/STF) especificant aquesta informacio:
 
-	- àmbit, aplicació, nom formulari i versió
+	- àmbit, aplicació, nom formulari i versió (opcional, en cas que ja hi hagi alguna altre desplegada i no es vulgui sobreescriure)
 	- adjunt zip amb el conjunt d'assets resultat de l'exportació del formulari
 	- entorn
 	- data publicació: data en que es vol programar la publicació del formulari. Si no s'informa es considerarà que es vol publicar el més aviat possible
 
-- El CS Canigó validarà el formulari i el publicarà, retornant com a resultat la URL d'accés al formulari: 
+- El CS Canigó validarà el formulari a la instància AEM autor i el publicarà, retornant com a resultat la URL d'accés al formulari: 
 
 	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 	- PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-		
-L'usuari pot fer referència a aquesta URL o incoportar el formulari a la seva aplicació.
 
 #### Versionatge
 
