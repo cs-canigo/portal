@@ -37,5 +37,5 @@ En **plataformes de contenidors Docker** com l'ICS (IBM Container Service) de Bl
 ### Instrumentació
 
 El [**Mòdul d'Instrumentació**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-instrumentacio/), el qual no ha de confondre's amb el de traces, s'evolucionarà per tal de facilitar l'anàlisi del rendiment de les aplicacions (ús de memòria a la JVM, consum de cpu, temps de resposta de les peticions, healthchecks, ...) i permetre la integració amb serveis externs de centralització de la informació (Ex. Prometheus). A l'actualitat, el mòdul d'instrumentació facilita principalment la monitorització de l'execució de mètodes de l'aplicació, obtenint informació com el temps de resposta i si el resultat és correcte o no.
-
+<br><br>
 Per qualsevol dubte respecte a l'ús d'aquests mòduls i la seva evolució prevista us podeu posar en contacte amb el CS Canigó preferiblement via [JIRA CSTD al servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
