@@ -20,7 +20,7 @@ El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-ver
 * Millores de concurrència
 * Configuració en diferents formats (XML, JSON o YAML, a més de configuració programàtica)
 
-Volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, l'ús de **loggers asíncrons** (Ref:https://logging.apache.org/log4j/2.x/manual/async.html). Aquests loggers representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Per aquest motiu, no es recomana el seu ús en auditories.
+Volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, l'ús de [**loggers asíncrons**] (https://logging.apache.org/log4j/2.x/manual/async.html). Aquests loggers representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Per aquest motiu, no es recomana el seu ús en auditories.
 
 ### Solució de logs centralitzats
 
