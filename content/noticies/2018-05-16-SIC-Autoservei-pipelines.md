@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-16"
 title       = "SIC. Autoservei de jobs pipeline"
-description = "El passat mes de maig es va publicar un article sobre l'estat actual dels jobs pipeline al SIC. En aquest article s'exposa el funcionament del recentment creat autoservei de jobs pipeline."
+description = "El passat mes de maig es va publicar un article sobre l'estat actual dels jobs pipeline al SIC. En aquest article s'exposa el funcionament del recentment creat autoservei de jobs pipeline"
 sections    = ["Notícies"]
 categories  = ["sic"]
 key         = "JUNY2018"

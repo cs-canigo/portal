@@ -1,11 +1,29 @@
 +++
 date        = "2018-03-21"
-title       = "SIC. How-To: Autoservei jobs pipeline"
-description = "En aquest article es mostra els requeriments del SIC amb els CPDs en quant a la integració d'aplicacions."
-sections    = ["drafts"]
+title       = "SIC. How-to: Autoservei jobs pipeline"
+description = "En aquest how-to es mostra un exemple de com fer ús del nou Autoservei de jobs pipeline del SIC."
+sections    = ["howtos"]
 categories  = ["sic"]
 key         = "ABRIL2018"
 +++
+
+### A qui va dirigit
+
+Aquest how-to va dirigit als usuaris que formin part d'un proveïdor d'infraestructures o d'un proveïdor d'aplicacions de CTTI.
+
+### Introducció
+
+T
+
+
+
+
+
+
+
+
+
+
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 
