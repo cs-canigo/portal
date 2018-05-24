@@ -66,17 +66,6 @@ codi = "35.080.03"
 		border-right:none!important;
 	}
 
-	table tr:nth-child(1) th:nth-child(1), 
-	table tr:nth-child(1) th:nth-child(2), 
-	table tr:nth-child(1) th:nth-child(3),
-	table tr:nth-child(2) th:nth-child(4),
-	table tr:nth-child(2) th:nth-child(8), 
-	table tr:nth-child(2) th:nth-child(10),
-	table tr td:nth-child(4), 
-	table tr td:nth-child(8), 
-	table tr td:nth-child(10){
-		border-right: 3px solid #aaa;
-	}
 </style>
 
 <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
@@ -106,7 +95,7 @@ codi = "35.080.03"
 	                            $(this).val()
 	                        );
 	 
-	                        column
+	                 column
 	                            .search( val ? '^'+val+'$' : '', true, false )
 	                            .draw();
 	                    } );
@@ -121,57 +110,6 @@ codi = "35.080.03"
 	        }	        
     	});
 	});
-function format ( d ) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
-            '<td>Full name:</td>'+
-            '<td>'+d.name+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Extension number:</td>'+
-            '<td>'+d.extn+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<td>Extra info:</td>'+
-            '<td>And any further details here (images etc)...</td>'+
-        '</tr>'+
-    '</table>';
-}
- 
-$(document).ready(function() {
-    var table = $('#example').DataTable( {
-        "ajax": "../ajax/data/objects.txt",
-        "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": ''
-            },
-            { "data": "name" },
-            { "data": "position" },
-            { "data": "office" },
-            { "data": "salary" }
-        ],
-        "order": [[1, 'asc']]
-    } );
-     
-    // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
- 
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    } );
+
 } );
 </script>
