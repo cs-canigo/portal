@@ -1,10 +1,10 @@
 +++
-date        = "2018-03-21"
+date        = "2018-05-23"
 title       = "SIC. How-to: Autoservei jobs pipeline"
 description = "En aquest how-to es mostra un exemple de com fer ús del nou Autoservei de jobs pipeline del SIC."
 sections    = ["howtos"]
 categories  = ["sic"]
-key         = "ABRIL2018"
+key         = "JUNY2018"
 +++
 
 ### A qui va dirigit
@@ -13,7 +13,7 @@ Aquest how-to va dirigit als usuaris que formin part d'un proveïdor d'infraestr
 
 ### Introducció
 
-T
+A inicis del mes de maig d'aquest 
 
 
 
