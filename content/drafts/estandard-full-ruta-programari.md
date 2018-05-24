@@ -98,7 +98,7 @@ codi = "35.080.03"
 		'</table>';
 	}
 
-	$(document).ready(function() {
+$(document).ready(function() {
 		//Data table plugin
     	$('table').DataTable( {
 	        "paging": false,
@@ -127,10 +127,10 @@ codi = "35.080.03"
 	                            $(this).val()
 	                        );
 	 
-	                        column
-	                            .search( val ? '^'+val+'$' : '', true, false )
-	                            .draw();
-	                    } );
+	        column
+	                .search( val ? '^'+val+'$' : '', true, false )
+	                .draw();
+	   		} );
 	 
 	                column.data().unique().sort().each( function ( d, j ) {
 	                    select.append( '<option value="'+d+'">'+d+'</option>' )
@@ -143,11 +143,11 @@ codi = "35.080.03"
 	        }	        
     	});
 	});
-	$('#products tbody').on('click', 'td.details-control', function () {
+$('#products tbody').on('click', 'td.details-control', function () {
 		var tr = $(this).closest('tr');
 		var row = table.row( tr );
 
-		if ( row.child.isShown() ) {
+if ( row.child.isShown() ) {
 			// This row is already open - close it
 			$('div.slider', row.child()).slideUp( function () {
 				row.child.hide();
