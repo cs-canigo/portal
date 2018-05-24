@@ -1,6 +1,6 @@
 +++
 date        = "2018-03-21"
-title       = "SIC. Integracions amb CPD al SIC"
+title       = "SIC. How-To: Autoservei jobs pipeline"
 description = "En aquest article es mostra els requeriments del SIC amb els CPDs en quant a la integració d'aplicacions."
 sections    = ["drafts"]
 categories  = ["sic"]
