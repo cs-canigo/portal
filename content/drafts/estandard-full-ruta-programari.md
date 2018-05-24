@@ -66,10 +66,38 @@ codi = "35.080.03"
 		border-right:none!important;
 	}
 
+	table tr:nth-child(1) th:nth-child(1), 
+	table tr:nth-child(1) th:nth-child(2), 
+	table tr:nth-child(1) th:nth-child(3),
+	table tr:nth-child(2) th:nth-child(4),
+	table tr:nth-child(2) th:nth-child(8), 
+	table tr:nth-child(2) th:nth-child(10),
+	table tr td:nth-child(4), 
+	table tr td:nth-child(8), 
+	table tr td:nth-child(10)	
 </style>
 
-<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script>
+	/* Formatting function for row details - modify as you need */
+	function format ( d ) {
+		// `d` is the original data object for the row
+		return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+			'<tr>'+
+				'<td>Full name:</td>'+
+				'<td>'+d.name+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Extension number:</td>'+
+				'<td>'+d.extn+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Extra info:</td>'+
+				'<td>And any further details here (images etc)...</td>'+
+			'</tr>'+
+		'</table>';
+	}
+
 	$(document).ready(function() {
 		//Data table plugin
     	$('table').DataTable( {
@@ -84,7 +112,11 @@ codi = "35.080.03"
 	        initComplete: function () {
 	            this.api().columns().every( function (col_index) {
 	                var column = this;
-	                if(col_index===10){
+	                if (col_index===2){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+	                }
+		        if(col_index===3){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	                }
@@ -95,7 +127,7 @@ codi = "35.080.03"
 	                            $(this).val()
 	                        );
 	 
-	                 column
+	                        column
 	                            .search( val ? '^'+val+'$' : '', true, false )
 	                            .draw();
 	                    } );
@@ -106,10 +138,27 @@ codi = "35.080.03"
 	            });
 
 	            //adds header private/public
-	            $("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+	            //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+		    $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
 	        }	        
     	});
 	});
+	$('#products tbody').on('click', 'td.details-control', function () {
+		var tr = $(this).closest('tr');
+		var row = table.row( tr );
 
-} );
+		if ( row.child.isShown() ) {
+			// This row is already open - close it
+			$('div.slider', row.child()).slideUp( function () {
+				row.child.hide();
+				tr.removeClass('shown');
+			} );
+		}
+		else {
+			// Open this row
+			row.child( format(row.data()), 'no-padding' ).show();
+			tr.addClass('shown');
+			$('div.slider', row.child()).slideDown();
+		}
+	} );
 </script>
