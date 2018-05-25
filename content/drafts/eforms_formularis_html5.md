@@ -104,9 +104,8 @@ Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les seg
 
 #### Versionatge
 
-Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d'un formulari caldrà que s'afegeix la versió a aquesta URL.
+Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d'un formulari caldrà que s'afegeix la versió a aquesta URL:
 
-Ex:
 https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html
 
 https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html
@@ -119,7 +118,7 @@ Quan un formulari o una versió en concreta estigui en desús, s'haurà de deman
 
 ## Configuracions
 
-A continuació es descriuen les principals configuracions a realitzar per el funcionament d'un formulari HTML5.
+A continuació es descriuen les principals configuracions a realitzar pel funcionament d'un formulari HTML5.
 
 ### Configuració frontal web
 
@@ -185,7 +184,7 @@ on &lt;url-precarrega-dades&gt; és la URL de l'endpoint del qual s'obtindran le
 
 ### Enviament de dades
 
-Codi javascript a configurar en el botó de "Custom submit" a l'editor del formulari adaptatiu al node AEM Author:
+Codi javascript a configurar en el botó de "Custom submit" per l'enviament de les dades per AJAX:
 
 	function sendData (){
 		guideBridge.getData({
@@ -205,3 +204,5 @@ Codi javascript a configurar en el botó de "Custom submit" a l'editor del formu
 	sendData();
  
 on &lt;endpoint-submit&gt; és l'endpoint de l'aplicació on es vol fer l'enviament de les dades
+
+Aquesta configuració s'ha de realitzar a l'edició del formulari adaptatiu al node AEM Author de desenvolupament.
