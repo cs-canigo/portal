@@ -124,7 +124,7 @@ A continuació es descriuen les principals configuracions a realitzar pel funcio
 
 Configuració de proxy HTTP invers als frontals web Apache de l'aplicació per l'accés als recursos (js, css, ...) d'AEM:
 
-	<VirtualHost *:80>
+	<VirtualHost *:443>
 		ProxyPreserveHost On
 
 		SSLProxyEngine on
@@ -203,6 +203,6 @@ Codi javascript a configurar en el botó de "Custom submit" per l'enviament de l
 	
 	sendData();
  
-on &lt;endpoint-submit&gt; és l'endpoint de l'aplicació on es vol fer l'enviament de les dades
+on &lt;endpoint-submit&gt; és l'endpoint de l'aplicació on es vol fer l'enviament de les dades. Idealment aquest endpoint hauria de ser relatiu a la URL de publicació del formulari, ja que d’aquesta manera no caldrà fer cap diferenciació per entorn.
 
 Aquesta configuració s'ha de realitzar a l'edició del formulari adaptatiu al node AEM Author de desenvolupament.
