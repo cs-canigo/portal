@@ -12,6 +12,14 @@ codi = "35.080.03"
 
 +++
 
+td.details-control {
+    background: url('../resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../resources/details_close.png') no-repeat center center;
+}
+
 <table id="example" class="display" style="width:100%">
         <thead>
             <tr>
