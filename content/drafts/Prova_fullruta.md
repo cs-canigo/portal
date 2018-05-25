@@ -1,7 +1,7 @@
 +++
 date        = "2017-07-28"
-title       = "Estàndard pel full de ruta del programari"
-description = "Estàndard pel full de ruta del programari"
+title       = "Prova Datatables v1"
+description = "Prova Datatables v1"
 weight		= 3
 type = "estandard"
 toc         = true
