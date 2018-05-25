@@ -13,7 +13,7 @@ codi = "35.080.03"
 +++
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="./tableStyle.css">
+<link rel="stylesheet" type="text/css" href="../tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
@@ -60,7 +60,7 @@ function format ( d ) {
  
 $(document).ready(function() {
     var table = $('#example').DataTable( {
-        "ajax": "./objects.txt",
+        "ajax": "../objects.txt",
         "columns": [
             {
                 "className":      'details-control',
