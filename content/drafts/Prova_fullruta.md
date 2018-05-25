@@ -60,13 +60,6 @@ function format ( d ) {
  
 $(document).ready(function() {
     var table = $('#example').DataTable( {
-        "paging": false,
-        "info" : false,
-        "ordering": false,
-        "language":{
-            "search" : "<strong>Cerca:</strong> ",
-            "infoEmpty": "No hi ha registres",
-            "zeroRecords": "No s'han trobat registres"},
         "ajax": "../objects.txt",
         "columns": [
             {
@@ -115,29 +108,5 @@ $(document).ready(function() {
         //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
     $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
     }
-
-     
-
-
-
-
-
-
-    // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
- 
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    } );
 } );
 </script>
