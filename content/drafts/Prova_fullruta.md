@@ -104,8 +104,6 @@ $(document).ready(function() {
             });
         });
     */
-   $('#example').DataTable( {
-    initComplete: function () {
         this.api().columns().every( function () {
             var column = this;
             var select = $('<select><option value=""></option></select>')
@@ -124,7 +122,6 @@ $(document).ready(function() {
                 select.append( '<option value="'+d+'">'+d+'</option>' )
             } );
         } );
-    }
 } );
         //adds header private/public
         //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
