@@ -62,7 +62,7 @@ Dreceres:
 	* <a href="#WL">Servidors Weblogic</a>
 	* <a href="#WAS">Servidors Websphere</a>
 	* <a href="#Tomcat">Servidors Tomcat</a>
-	* Servidors JBoss (properament)
+	* <a href="#JBoss">Servidors JBoss</a>
 * Servidors de bases de dades:
 	* <a href="#Oracle">Bases de dades Oracle</a>
 	* <a href="#MySQL">Bases de dades MySQL</a>
@@ -200,6 +200,30 @@ En conret, necessitarem:
 	* Protocol d'accés (HTTP/HTTPs)
 * Dades de l'aplicació:
 	* Contexte
+
+<div style="text-align: right; padding: 0px; 5px;"><a href="#requeriments-1">Tornar amunt</a></div>
+</div>
+<hr />
+<div id="JBoss" style="background-color: #f5f5f5; padding: 10px;">
+<div style="font-weight: bold;margin: 5px 0px;">JBoss</div>
+
+Pel que fa als servidors JBoss, el SIC realitza desplegaments remots de l'aplicació. Ens caldrà un usuari administrador i la informació relativa al desplegament.
+
+En conret, necessitarem:
+
+* Dades de l'usuari:
+	* Usuari
+	* Paraula de pas
+* Dades del servidor:
+	* Versió de JBoss
+	* Domain Controller
+	* Port
+* Dades de l'aplicació:
+	* Server Group
+	* Nom de l'artefacte antic
+	* Nom de l'artefacte nou (amb path inclòs)
+	* Pieze
+	* Nom Runtime
 
 <div style="text-align: right; padding: 0px; 5px;"><a href="#requeriments-1">Tornar amunt</a></div>
 </div>
