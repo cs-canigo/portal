@@ -1,7 +1,7 @@
 +++
 date        = "2017-07-28"
-title       = "Prova Datatables v4"
-description = "Prova Datatables v3"
+title       = "Prova Datatables v5"
+description = "Prova Datatables v5"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -60,6 +60,13 @@ function format ( d ) {
  
 $(document).ready(function() {
     var table = $('#example').DataTable( {
+        "paging": false,
+        "info" : false,
+        "ordering": false,
+        "language":{
+            "search" : "<strong>Cerca:</strong> ",
+            "infoEmpty": "No hi ha registres",
+            "zeroRecords": "No s'han trobat registres"},
         "ajax": "../objects.txt",
         "columns": [
             {
@@ -75,7 +82,47 @@ $(document).ready(function() {
         ],
         "order": [[1, 'asc']]
     } );
+
+    initComplete: function () {
+        this.api().columns().every( function (col_index) {
+            var column = this;
+            if (col_index===2){
+                $("<p>&nbsp;</p>").appendTo($(column.header()));
+                return;
+            }
+        if(col_index===3){
+                $("<p>&nbsp;</p>").appendTo($(column.header()));
+                return;
+            }
+            var select = $('<select><option value=""></option></select>')
+                .appendTo( $(column.header()) )
+                .on( 'change', function () {
+                    var val = $.fn.dataTable.util.escapeRegex(
+                        $(this).val()
+                    );
+
+                    column
+                        .search( val ? '^'+val+'$' : '', true, false )
+                        .draw();
+                } );
+
+            column.data().unique().sort().each( function ( d, j ) {
+                select.append( '<option value="'+d+'">'+d+'</option>' )
+            });
+        });
+
+        //adds header private/public
+        //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+    $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
+    }
+
      
+
+
+
+
+
+
     // Add event listener for opening and closing details
     $('#example tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
@@ -94,54 +141,3 @@ $(document).ready(function() {
     } );
 } );
 </script>
-
-<script>
-	$(document).ready(function() {
-		//Data table plugin
-    	$('table').DataTable( {
-	        "paging": false,
-	        "info" : false,
-	        "ordering": false,
-	        "language":{
-	        	"search" : "<strong>Cerca:</strong> ",
-		        "infoEmpty": "No hi ha registres",
-	        	"zeroRecords": "No s'han trobat registres"
-	        },
-	        initComplete: function () {
-	            this.api().columns().every( function (col_index) {
-	                var column = this;
-	                if (col_index===2){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-	                }
-		        if(col_index===3){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-	                }
-	                var select = $('<select><option value=""></option></select>')
-	                    .appendTo( $(column.header()) )
-	                    .on( 'change', function () {
-	                        var val = $.fn.dataTable.util.escapeRegex(
-	                            $(this).val()
-	                        );
-	 
-	                        column
-	                            .search( val ? '^'+val+'$' : '', true, false )
-	                            .draw();
-	                    } );
-	 
-	                column.data().unique().sort().each( function ( d, j ) {
-	                    select.append( '<option value="'+d+'">'+d+'</option>' )
-	                });
-	            });
-
-	            //adds header private/public
-	            //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
-		    $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
-	        }	        
-    	});
-	});
-</script>
- 
-    
-  
