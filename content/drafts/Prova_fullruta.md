@@ -1,6 +1,6 @@
 +++
 date        = "2017-07-28"
-title       = "Prova Datatables v3"
+title       = "Prova Datatables v4"
 description = "Prova Datatables v3"
 weight		= 3
 type = "estandard"
