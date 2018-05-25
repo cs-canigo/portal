@@ -1,7 +1,7 @@
 +++
 date        = "2017-07-28"
-title       = "Prova Datatables v5"
-description = "Prova Datatables v5"
+title       = "Prova Datatables v6"
+description = "Prova Datatables v6"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -37,7 +37,6 @@ codi = "35.080.03"
             </tr>
         </tfoot>
 </table>
-
 <script>
 /* Formatting function for row details - modify as you need */
 function format ( d ) {
@@ -76,6 +75,7 @@ $(document).ready(function() {
         "order": [[1, 'asc']]
     } );
 
+    /*
     initComplete: function () {
         this.api().columns().every( function (col_index) {
             var column = this;
@@ -103,10 +103,33 @@ $(document).ready(function() {
                 select.append( '<option value="'+d+'">'+d+'</option>' )
             });
         });
+    */
+   $('#example').DataTable( {
+    initComplete: function () {
+        this.api().columns().every( function () {
+            var column = this;
+            var select = $('<select><option value=""></option></select>')
+                .appendTo( $(column.footer()).empty() )
+                .on( 'change', function () {
+                    var val = $.fn.dataTable.util.escapeRegex(
+                        $(this).val()
+                    );
 
+                    column
+                        .search( val ? '^'+val+'$' : '', true, false )
+                        .draw();
+                } );
+
+            column.data().unique().sort().each( function ( d, j ) {
+                select.append( '<option value="'+d+'">'+d+'</option>' )
+            } );
+        } );
+    }
+} );
         //adds header private/public
         //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
     $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
     }
 } );
 </script>
+
