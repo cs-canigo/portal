@@ -109,7 +109,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     } );
-     table.api().columns().every( function (col_index) {
+     this.api().columns().every( function (col_index) {
         var column = this;
         /*
 	    if (col_index===2){
