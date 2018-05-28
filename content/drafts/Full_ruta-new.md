@@ -107,6 +107,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
+    initComplete: function () {
     taulaFullRuta.api().columns().every( function (col_index) {
         var column = this;
 	    var select = $('<select><option value=""></option></select>')
@@ -123,5 +124,6 @@ $(document).ready(function() {
 	    select.append( '<option value="'+d+'">'+d+'</option>' )
 	    });
     });
+    }
 });
 </script>
