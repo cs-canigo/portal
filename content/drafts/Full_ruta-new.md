@@ -65,7 +65,7 @@ function format ( d ) {
     '</table>';
 }
 $(document).ready(function() {
-    var table = $('#FullRuta').DataTable( {
+    var taulaFullRuta = $('#FullRuta').DataTable( {
         "paging": false,
 	    "info" : false,
 	    "ordering": false,
@@ -92,22 +92,6 @@ $(document).ready(function() {
         ],
         "order": [[1, 'asc']]
     });
-    table.api().columns().every( function (col_index) {
-        var column = this;
-	    var select = $('<select><option value=""></option></select>')
-	    .appendTo( $(column.header()) )
-	    .on( 'change', function () {
-	    var val = $.fn.dataTable.util.escapeRegex(
-	    $(this).val()
-	    );
-	    column
-	    .search( val ? '^'+val+'$' : '', true, false )
-	    .draw();
-	    } );
-	 	column.data().unique().sort().each( function ( d, j ) {
-	    select.append( '<option value="'+d+'">'+d+'</option>' )
-	    });
-    });
     // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
@@ -122,6 +106,22 @@ $(document).ready(function() {
             row.child( format(row.data()) ).show();
             tr.addClass('shown');
         }
+    });
+    taulaFullRuta.api().columns().every( function (col_index) {
+        var column = this;
+	    var select = $('<select><option value=""></option></select>')
+	    .appendTo( $(column.header()) )
+	    .on( 'change', function () {
+	    var val = $.fn.dataTable.util.escapeRegex(
+	    $(this).val()
+	    );
+	    column
+	    .search( val ? '^'+val+'$' : '', true, false )
+	    .draw();
+	    } );
+	 	column.data().unique().sort().each( function ( d, j ) {
+	    select.append( '<option value="'+d+'">'+d+'</option>' )
+	    });
     });
 });
 </script>
