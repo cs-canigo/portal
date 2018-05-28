@@ -45,6 +45,7 @@ codi = "35.080.03"
 </table>
 
 <script>
+/*
 /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row
@@ -64,7 +65,7 @@ function format ( d ) {
         '</tr>'+
     '</table>';
 }
- 
+*/
 $(document).ready(function() {
     var table = $('#FullRuta').DataTable( {
         "ajax": "../Inventari.txt",
@@ -85,7 +86,7 @@ $(document).ready(function() {
         ],
         "order": [[1, 'asc']]
     } );
-     
+  /*   
     // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
@@ -102,6 +103,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     } );
+   */
 } );
 </script>
  
