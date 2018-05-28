@@ -13,7 +13,7 @@ Dins del paradigma de desplegament al Cloud, l'equip de desenvolupament ha d'ass
 
 ![Cloud devops](https://canigo.ctti.gencat.cat/drafts/cloud_devops.JPG)
 
-Aquestes tasques apliquen als elements desplegats
+Les pròpies tecnologies utilitzades en el catàleg clout com contenidors, i el desplegament en clouds públics fora del NUS, porta implícita l'adquisió de la responsabilitat de la configuració i el manteniment i securització de tots els elements que componen un desenvolupament. Les pricipals noves tasques assumides pel lot d'aplicacions es poden agrupar en les següents categories.
 
 ## Disponibilitat de l’aplicació
 
@@ -42,4 +42,4 @@ El lot d'aplicacions inclou en el desplegament l'aplicació, el Middleware, la p
 
 ## Resposta davant incidències
 
-El lot d'aplicacions serà el primer receptor de les incidències i peticions i tindrà les eines per a poder-les resoldre en la seva majoria. Havent d'escalar únicament aquelles que impliquin validació de cost per part del departament o incidències de plataforma.
+El lot d'aplicacions serà el primer receptor de les incidències i peticions i tindrà les eines per a poder-les resoldre en la seva majoria. Havent d'escalar únicament aquelles que impliquin validació de cost per part del departament o incidències de plataforma. Aquest fet implica que l'aplicació ha d'estar configurada per tal de que la gran majoria de tasques associades a incidències estiguin automatitzades.
