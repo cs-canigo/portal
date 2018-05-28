@@ -1,8 +1,8 @@
 +++
 date        = "2017-07-28"
-title       = "Prova Datatables v7"
-description = "Prova Datatables v7"
-weight		= 3
+title       = "Prova Datatables v4"
+description = "Prova Datatables v4"
+weight                = 3
 type = "estandard"
 toc         = true
 versio      = "1.0"
@@ -37,6 +37,7 @@ codi = "35.080.03"
             </tr>
         </tfoot>
 </table>
+
 <script>
 /* Formatting function for row details - modify as you need */
 function format ( d ) {
@@ -56,7 +57,7 @@ function format ( d ) {
         '</tr>'+
     '</table>';
 }
- 
+
 $(document).ready(function() {
     var table = $('#example').DataTable( {
         "ajax": "../objects.txt",
@@ -74,59 +75,22 @@ $(document).ready(function() {
         ],
         "order": [[1, 'asc']]
     } );
+     
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
 
-    /*
-    initComplete: function () {
-        this.api().columns().every( function (col_index) {
-            var column = this;
-            if (col_index===2){
-                $("<p>&nbsp;</p>").appendTo($(column.header()));
-                return;
-            }
-        if(col_index===3){
-                $("<p>&nbsp;</p>").appendTo($(column.header()));
-                return;
-            }
-            var select = $('<select><option value=""></option></select>')
-                .appendTo( $(column.header()) )
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );
-
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append( '<option value="'+d+'">'+d+'</option>' )
-            });
-        });
-    */
-        this.api().columns().every( function () {
-            var column = this;
-            var select = $('<select><option value=""></option></select>')
-                .appendTo( $(column.footer()).empty() )
-                .on( 'change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                        $(this).val()
-                    );
-
-                    column
-                        .search( val ? '^'+val+'$' : '', true, false )
-                        .draw();
-                } );
-
-            column.data().unique().sort().each( function ( d, j ) {
-                select.append( '<option value="'+d+'">'+d+'</option>' )
-            } );
-        } );
-} );
-        //adds header private/public
-        //$("<tr><th colspan='4'></th><th colspan='4'>Privat</th><th colspan='2'>Públic</th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
-    $("<tr><th colspan='4'></th><th colspan='1'></th></tr>").insertBefore($("table thead tr"));
-    }
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
 } );
 </script>
-
