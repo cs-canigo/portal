@@ -58,9 +58,9 @@ $(document).ready(function() {
             { "data": "Producte" },
             { "data": "Categoria" },
             { "data": "Obsolet" },
-            { "data": "Suportat" }
-            { "data": "VersioActual" }
-            { "data": "Roadmap" }
+            { "data": "Suportat" },
+            { "data": "VersioActual" },
+            { "data": "Roadmap" },
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
