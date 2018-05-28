@@ -92,19 +92,9 @@ $(document).ready(function() {
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
-	table.api().columns().every( function (col_index) {
+	table.api().columns().every(function (col_index) {
         var column = this;
-        /*
-	    if (col_index===2){
-	       	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	       	return;
-	    }
-		if(col_index===3){
-	        $("<p>&nbsp;</p>").appendTo($(column.header()));
-	        return;
-        }
-        */
-	    var select = $('<select><option value=""></option></select>')
+        var select = $('<select><option value=""></option></select>')
 	    .appendTo( $(column.header()) )
 	    .on( 'change', function () {
 	    var val = $.fn.dataTable.util.escapeRegex(
@@ -118,8 +108,7 @@ $(document).ready(function() {
 	    select.append( '<option value="'+d+'">'+d+'</option>' )
 	    });
 	});
-    } );
-    
+    }); 
  // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
