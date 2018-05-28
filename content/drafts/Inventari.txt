@@ -7,10 +7,10 @@
       "Obsolet": "5.0, 5.5, 6.0",
       "Suportat": "7.0, 8.0",
       "VersioActual": "8.0",
-      "Roadmap": "--"
-      "Emergent": "9.0"
-      "Tipus": "PaaS, xPaaS, Contenidor"
-      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure"
+      "Roadmap": "--",
+      "Emergent": "9.0",
+      "Tipus": "PaaS, xPaaS, Contenidor",
+      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure",
       "Observacions": "Texte de les observacions"
     },
 	{
@@ -20,10 +20,10 @@
       "Obsolet": "2000, 2013",
       "Suportat": "7.0, 8.0",
       "VersioActual": "8.0",
-      "Roadmap": "---"
-      "Emergent": "9.0"
-      "Tipus": "PaaS, xPaaS, Contenidor"
-      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure"
+      "Roadmap": "---",
+      "Emergent": "9.0",
+      "Tipus": "PaaS, xPaaS, Contenidor",
+      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure",
       "Observacions": "Windows"
     },
     {
@@ -33,11 +33,11 @@
       "Obsolet": "2.2, 2.4, 2.6, 3.0",
       "Suportat": "3.2, 3.4",
       "VersioActual": "3.4",
-      "Roadmap": "3.6"
-      "Emergent": "--"
-      "Tipus": "PaaS, Contenidor, DBaaS"
-      "CPDs": "CPD1, CPD4, Bluemix"
-      "Observacions": "Servidor de base de dades MongoDB"
+      "Roadmap": "3.6",
+      "Emergent": "--",
+      "Tipus": "PaaS, Contenidor, DBaaS",
+      "CPDs": "CPD1, CPD4, Bluemix",
+      "Observacions": "Servidor de base de dades MongoDB",
     },
     {
       "id": "4",
@@ -46,10 +46,10 @@
       "Obsolet": "1.3, 2.0, 2.2",
       "Suportat": "2.4",
       "VersioActual": "2.4",
-      "Roadmap": "---"
-      "Emergent": "--"
-      "Tipus": "PaaS, Contenidor"
-      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure"
+      "Roadmap": "---",
+      "Emergent": "--",
+      "Tipus": "PaaS, Contenidor",
+      "CPDs": "CPD1, CPD2, CPD3, CPD4, Bluemix, Azure",
       "Observacions": "Apaches"
     }
   ]
