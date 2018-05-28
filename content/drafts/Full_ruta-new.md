@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Prova Datatables v2"
-description = "Prova Datatables v2"
+title       = "Prova Datatables v1"
+description = "Prova Datatables v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -85,9 +85,9 @@ $(document).ready(function() {
             { "data": "Producte" },
             { "data": "Categoria" },
             { "data": "Obsolet" },
-            { "data": "Suportat" }
-            { "data": "VersioActual" }
-            { "data": "Roadmap" }
+            { "data": "Suportat" },
+            { "data": "VersioActual" },
+            { "data": "Roadmap" },
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
