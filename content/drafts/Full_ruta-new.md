@@ -45,8 +45,33 @@ codi = "35.080.03"
 </table>
 
 <script>
+
+// Formatting function for row details - modify as you need
+function format ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<td>Tipus Infraestructura:</td>'+
+            '<td>'+d.Tipus+'</td>'+
+            '<td>'+d.Versio_Actual+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>CPDs ofereixen Producte:</td>'+
+            '<td>'+d.CPDs+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Observacions:</td>'+
+            '<td>'+d.Observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
 $(document).ready(function() {
     var table = $('#FullRuta').DataTable( {
+    	 "language":{
+	        	"search" : "<strong>Cerca:</strong> ",
+		        "infoEmpty": "No hi ha registres",
+	        	"zeroRecords": "No s'han trobat registres"
+          },
         "ajax": "../Inventari.txt",
         "columns": [
             {
@@ -64,6 +89,22 @@ $(document).ready(function() {
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
+    } );
+    
+ // Add event listener for opening and closing details
+    $('#FullRuta tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
     } );
  } );
 </script>
