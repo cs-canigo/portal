@@ -59,7 +59,7 @@ $(document).ready(function() {
             { "data": "Categoria" },
             { "data": "Obsolet" },
             { "data": "Suportat" }
-            { "data": "Versio_Actual" }
+            { "data": "VersioActual" }
             { "data": "Roadmap" }
             { "data": "Emergent" }
         ],
