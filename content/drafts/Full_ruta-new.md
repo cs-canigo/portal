@@ -95,7 +95,7 @@ $(document).ready(function() {
     // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = table.row( tr );
+        var row = taulaFullRuta.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
