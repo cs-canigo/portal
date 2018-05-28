@@ -92,24 +92,7 @@ $(document).ready(function() {
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
-    } );
-    
- // Add event listener for opening and closing details
-    $('#FullRuta tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = table.row( tr );
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    } );
-     this.api().columns().every( function (col_index) {
+	table.api().columns().every( function (col_index) {
         var column = this;
         /*
 	    if (col_index===2){
@@ -135,5 +118,22 @@ $(document).ready(function() {
 	    select.append( '<option value="'+d+'">'+d+'</option>' )
 	    });
 	});
+    } );
+    
+ // Add event listener for opening and closing details
+    $('#FullRuta tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
  } );
 </script>
