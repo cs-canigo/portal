@@ -91,6 +91,7 @@ $(document).ready(function() {
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
+    });
     table.api().columns().every( function (col_index) {
         var column = this;
 	    var select = $('<select><option value=""></option></select>')
@@ -105,7 +106,6 @@ $(document).ready(function() {
 	    } );
 	 	column.data().unique().sort().each( function ( d, j ) {
 	    select.append( '<option value="'+d+'">'+d+'</option>' )
-	    });
 	    });
     });
     // Add event listener for opening and closing details
