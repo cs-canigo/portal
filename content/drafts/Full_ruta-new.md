@@ -53,7 +53,7 @@ function format ( d ) {
         '<tr>'+
             '<td>Tipus Infraestructura:</td>'+
             '<td>'+d.Tipus+'</td>'+
-            '<td>'+d.Versio_Actual+'</td>'+
+            '<td>'+d.VersioActual+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>CPDs ofereixen Producte:</td>'+
@@ -106,6 +106,31 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     } );
+     dataTableInstance.api().columns().every( function (col_index) {
+        var column = this;
+        /*
+	    if (col_index===2){
+	       	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	       	return;
+	    }
+		if(col_index===3){
+	        $("<p>&nbsp;</p>").appendTo($(column.header()));
+	        return;
+        }
+        */
+	    var select = $('<select><option value=""></option></select>')
+	    .appendTo( $(column.header()) )
+	    .on( 'change', function () {
+	    var val = $.fn.dataTable.util.escapeRegex(
+	    $(this).val()
+	    );
+	 	column
+	    .search( val ? '^'+val+'$' : '', true, false )
+	    .draw();
+	    } );
+	 	column.data().unique().sort().each( function ( d, j ) {
+	    select.append( '<option value="'+d+'">'+d+'</option>' )
+	    });
+	});
  } );
 </script>
- 
