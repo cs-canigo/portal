@@ -37,7 +37,7 @@
       "Emergent": "--",
       "Tipus": "PaaS, Contenidor, DBaaS",
       "CPDs": "CPD1, CPD4, Bluemix",
-      "Observacions": "Servidor de base de dades MongoDB",
+      "Observacions": "Servidor de base de dades MongoDB"
     },
     {
       "id": "4",
