@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Prova Datatables v3"
-description = "Prova Datatables v3"
+title       = "Prova Datatables v4"
+description = "Prova Datatables v4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -107,7 +107,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
-    initComplete: function () {
+    initComplete: function Ordre () {
     taulaFullRuta.api().columns().every( function (col_index) {
         var column = this;
 	    var select = $('<select><option value=""></option></select>')
