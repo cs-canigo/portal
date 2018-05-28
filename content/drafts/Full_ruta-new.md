@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Prova Datatables v1"
-description = "Prova Datatables v1"
+title       = "Prova Datatables v2"
+description = "Prova Datatables v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -45,18 +45,18 @@ codi = "35.080.03"
 </table>
 
 <script>
-// Formatting function for row details - modify as you need
 function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
-            '<td>Tipus Infraestructura:</td>'+
-            '<td>'+d.Tipus+'</td>'+
-            '<td>'+d.VersioActual+'</td>'+
+            '<td>Tipus Infraestructura</td>'+
+            '<td>CPDs ofereixen Producte</td>'+
+            '<td>Versions vigents a CPDs</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>CPDs ofereixen Producte:</td>'+
+            '<td>'+d.Tipus+'</td>'+
             '<td>'+d.CPDs+'</td>'+
+            '<td>'+d.VersioActual+'</td>'+
         '</tr>'+
         '<tr>'+
             '<td>Observacions:</td>'+
