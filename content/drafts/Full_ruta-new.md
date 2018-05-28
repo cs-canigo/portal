@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Prova Datatables v3"
-description = "Prova Datatables v3"
+title       = "Prova Datatables v1"
+description = "Prova Datatables v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -45,7 +45,6 @@ codi = "35.080.03"
 </table>
 
 <script>
-
 // Formatting function for row details - modify as you need
 function format ( d ) {
     // `d` is the original data object for the row
@@ -67,14 +66,14 @@ function format ( d ) {
 }
 $(document).ready(function() {
     var table = $('#FullRuta').DataTable( {
-    	 "paging": false,
-	 "info" : false,
-	 "ordering": false,
-    	 "language":{
+        "paging": false,
+	    "info" : false,
+	    "ordering": false,
+    	"language":{
 	        	"search" : "<strong>Cerca:</strong> ",
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
-          },
+        },
         "ajax": "../Inventari.txt",
         "columns": [
             {
@@ -86,30 +85,30 @@ $(document).ready(function() {
             { "data": "Producte" },
             { "data": "Categoria" },
             { "data": "Obsolet" },
-            { "data": "Suportat" },
-            { "data": "VersioActual" },
-            { "data": "Roadmap" },
+            { "data": "Suportat" }
+            { "data": "VersioActual" }
+            { "data": "Roadmap" }
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']]
-	table.api().columns().every(function (col_index) {
+    table.api().columns().every( function (col_index) {
         var column = this;
-        var select = $('<select><option value=""></option></select>')
+	    var select = $('<select><option value=""></option></select>')
 	    .appendTo( $(column.header()) )
 	    .on( 'change', function () {
 	    var val = $.fn.dataTable.util.escapeRegex(
 	    $(this).val()
 	    );
-	 	column
+	    column
 	    .search( val ? '^'+val+'$' : '', true, false )
 	    .draw();
 	    } );
 	 	column.data().unique().sort().each( function ( d, j ) {
 	    select.append( '<option value="'+d+'">'+d+'</option>' )
 	    });
-	});
-    }); 
- // Add event listener for opening and closing details
+	    });
+    });
+    // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = table.row( tr );
@@ -123,6 +122,6 @@ $(document).ready(function() {
             row.child( format(row.data()) ).show();
             tr.addClass('shown');
         }
-    } );
- } );
+    });
+});
 </script>
