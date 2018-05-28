@@ -67,6 +67,9 @@ function format ( d ) {
 }
 $(document).ready(function() {
     var table = $('#FullRuta').DataTable( {
+    	 "paging": false,
+	 "info" : false,
+	 "ordering": false,
     	 "language":{
 	        	"search" : "<strong>Cerca:</strong> ",
 		        "infoEmpty": "No hi ha registres",
