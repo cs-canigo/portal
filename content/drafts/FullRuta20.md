@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v1"
-description = "Full de Ruta 2.0 v1"
+title       = "Full de Ruta 3.0 v1"
+description = "Full de Ruta 3.0 v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -46,7 +46,7 @@ codi = "35.080.03"
 
 <script>
 // Formatting function for row details - modify as you need
-function format ( d ) {
+function format(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
@@ -89,8 +89,35 @@ $(document).ready(function() {
             { "data": "Roadmap" },
             { "data": "Emergent" }
         ],
-        "order": [[1, 'asc']]
-        initComplete: function Ordre () {
+        "order": [[1, 'asc']],
+        Ordre()
+    });
+
+
+
+
+    
+    // Add event listener for opening and closing details
+    $('#FullRuta tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRuta.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+});
+</script>
+
+<script>
+    function Ordre() {
         this.api().columns().every( function () {
                 var column = this;
                 var select = $('<select><option value=""></option></select>')
@@ -110,22 +137,5 @@ $(document).ready(function() {
                 } );
             } );
         }
-    });
-    // Add event listener for opening and closing details
-    $('#FullRuta tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = taulaFullRuta.row( tr );
- 
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( format(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    });
-});
 </script>
+ 
