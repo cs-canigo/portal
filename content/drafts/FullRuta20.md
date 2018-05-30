@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v8"
-description = "Full de Ruta 2.0 v8"
+title       = "Full de Ruta 2.0 v9"
+description = "Full de Ruta 2.0 v9"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -97,7 +97,7 @@ $(document).ready(function() {
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
 	            }
-                var select = $('<select><option value=""></option></select>')
+                var select = $("Producte").appendTo($('<select><option value=""></option></select>'))
                     .appendTo( $(column.header()).empty() )
                     .on( 'change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(
@@ -110,11 +110,6 @@ $(document).ready(function() {
                 column.data().unique().sort().each( function ( d, j ) {
                     select.append( '<option value="'+d+'">'+d+'</option>' )
                 } );
-
-                if (col_index===1){
-                        $("Producte").appendTo($(column.header()));
-                        return;
-                }
             } );
         }
     });
