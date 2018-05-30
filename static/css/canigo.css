@@ -70,6 +70,7 @@ h1.capcelera_flotant{padding-left:0px}
 h1.capcelera_flotant{padding-left:0px}
 h3{margin-top:0em;margin-bottom: .5em;}
 h4{font-size: 1.3em; }
+h5{font-size: 1.1em; font-weight: bold; }
 
 @media(min-width:100px){
 	body.home article ul.contingut{margin:0; padding:0;}
