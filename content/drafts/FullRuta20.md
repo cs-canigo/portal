@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v5"
-description = "Full de Ruta 2.0 v5"
+title       = "Full de Ruta 2.0 v1"
+description = "Full de Ruta 2.0 v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -91,8 +91,12 @@ $(document).ready(function() {
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
-            this.api().columns().every( function () {
-                var column = this;               
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index===0){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+	            }
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(column.header()).empty() )
                     .on( 'change', function () {
