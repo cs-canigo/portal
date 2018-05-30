@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v3"
-description = "Full de Ruta 2.0 v3"
+title       = "Full de Ruta 2.0 v4"
+description = "Full de Ruta 2.0 v4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -97,13 +97,8 @@ $(document).ready(function() {
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
-                if (col_index===1){
-	                	$("<p>producte</p>").appendTo($(column.header()));
-	                	return;
-                }
-
                 var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(column.header()).empty() )
+                    .appendTo( $(column.header()) )
                     .on( 'change', function () {
                         var val = $.fn.dataTable.util.escapeRegex(
                             $(this).val()
