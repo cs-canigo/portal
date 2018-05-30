@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v4"
-description = "Full de Ruta 2.0 v4"
+title       = "Full de Ruta 2.0"
+description = "Full de Ruta 2.0"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -11,6 +11,67 @@ estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
+
+## Part 1: Abast
+
+
+L’elevat volum de productes que estan desplegats als CPDs de la Generalitat de Catalunya i als seus
+entorns de treball i la seva heterogeneïtat de versions fa que resulti cada cop més difícil mantenir
+vigents les versions de programari de les diferents tecnologies.
+
+Com a peça facilitadora, i amb la intenció de donar una visió de l’estat de l’art de cadascuna de les
+tecnologies usades (o previstes d’usar) en els nous sistemes d’informació a desplegar s’ha elaborat el
+full de ruta de versions de programari.
+
+El full de ruta de versions de programari és un document que té com a objectiu **normalitzar i
+racionalitzar el desplegament de tecnologies**, alhora que es concreta tant el ventall de productes
+disponibles per a una determinada tecnologia, com la versió recomanada d’un programari concret. 
+
+Per cadascuna de les tecnologies se’n proporciona:
+
+- Una classificació bàsica del producte en funció del grau de coneixement i implantació de la
+tecnologia.
+- L’estat de maduresa del producte per facilitar la determinació tant de la versió a utilitzar en el
+moment de la seva implantació com el grau d’obsolescència dels productes que estan
+actualment en ús.
+
+
+## Part 2: Referències 
+
+## Part 3: Termes i definicions
+
+##### Maduresa d'una tecnologia
+
+La visió de la maduresa de la tecnologia consisteix en reflectir de forma objectiva el nivell de suport en què es troba una tecnologia concreta, tant si es tracta de versions que s’utilitzen des de fa temps com si es tracta de versions a utilitzar en un futur més o menys immediat.
+
+Al full de ruta es presenta la maduresa des de dos punts de vista diferents:
+
+- Des del punt de vista del grau de suport intern
+- Des del punt de vista del grau de suport del fabricant de programari 
+
+A l'annex <a href='{{<relref "#maduresa" >}}'>Maduresa d'una tecnologia</a> es recullen les diferents visions de maduresa incloses al full de ruta
+
+
+##### Mètode de classificació
+
+Per cada tecnologia inclosa en el full de ruta se li associen 2 valors:
+
+- El **Grup de tecnologies** al que pertany (base de dades, gestió documental, sistema operatiu,
+etc.)
+
+## Part 4: Requisits del programari
+
+1. Quan es defineixi la necessitat d'un nou programari **s'ha** d'usar el programari estandarditzat pel CTTI, segons les taules recollides a l'annex A l'annex <a href='{{<relref "#fullruta" >}}'>Programari estandarditzat</a>
+
+1. Si un programari no es troba al full de ruta no vol dir ni que no es pugui utilitzar ni que no estigui subjecte als mateixos criteris d’obsolescència que la resta de productes. En cas de dubtes sobre algun programari podeu adreçar-vos a la Unitat d’Arquitectura Corportiva de CTTI.
+
+1. Arran del dinamisme de les versions de les diferents tecnologies per part dels fabricants, el full de ruta ha de ser revisat quadrimestralment. D’aquesta forma cada full de ruta publicat contindrà les dates de la darrera revisió i validesa de la informació que conté.
+
+# ANNEX A (normatiu) Programari estandarditzat
+
+| Darrera revisió realitzada  | Revisió de full de ruta vigent fins 
+| --------------------------- |:-----------------------------------:
+| 1 de Maig de 2018           | 1 de Setembre de 2018
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="../tableStyle.css">
@@ -22,11 +83,11 @@ codi = "35.080.03"
             <tr>
                 <th></th>
                 <th>Producte</th>
-                <th>Categoria</th>
+                <th>Grup Tecnologia</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
-                <th>Versió Actual CTTI</th>
-                <th>En Roadmap CTTI</th>
+                <th>Versió Actual</th>
+                <th>En Roadmap</th>
                 <th>Emergent</th>
             </tr>
         </thead>
@@ -34,7 +95,7 @@ codi = "35.080.03"
             <tr>
                 <th></th>
                 <th>Producte</th>
-                <th>Categoria</th>
+                <th>Grup Tecnologia</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
                 <th>Versió Actual CTTI</th>
