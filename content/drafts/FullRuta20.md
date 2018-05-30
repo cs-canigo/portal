@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 3.0 v1"
-description = "Full de Ruta 3.0 v1"
+title       = "Full de Ruta 2.0 v2"
+description = "Full de Ruta 2.0 v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -92,16 +92,10 @@ $(document).ready(function() {
         "order": [[1, 'asc']],
         Ordre()
     });
-
-
-
-
-    
     // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRuta.row( tr );
- 
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
