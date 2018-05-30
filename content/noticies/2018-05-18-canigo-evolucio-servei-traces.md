@@ -1,13 +1,15 @@
 +++
 date        = "2018-05-18"
 title       = "Canigó. Evolució Mòdul de Traces"
-description = "Analitzem l'evolució realitzada en el mòdul de traces a Canigó 3.2, recomanacions en quan al seu ús, i l'evolució a futur prevista per aquest servei"
+description = "Analitzem l'evolució realitzada en el mòdul de traces a Canigó 3.2, recomanacions pel que fa al seu ús, i l'evolució a futur prevista per aquest servei"
 sections    = ["Notícies"]
 categories  = ["canigo"]
 key         = "JUNY2018"
 +++
 
-El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria:
+El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria. D'entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l'ús de [**loggers asíncrons**] (https://logging.apache.org/log4j/2.x/manual/async.html). Aquests loggers representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Per aquest motiu, no es recomana el seu ús en auditories.
+
+Aquestes són les principals novetats que incorpora Log4j 2.x:
 
 * Loggers asíncrons
 * Nivells de log personalitzats
@@ -19,8 +21,6 @@ El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-ver
 * Traces de missatges personalitzats
 * Millores de concurrència
 * Configuració en diferents formats (XML, JSON o YAML, a més de configuració programàtica)
-
-Volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, l'ús de [**loggers asíncrons**] (https://logging.apache.org/log4j/2.x/manual/async.html). Aquests loggers representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Per aquest motiu, no es recomana el seu ús en auditories.
 
 ### Solució de logs centralitzats
 
