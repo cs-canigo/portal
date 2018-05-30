@@ -9,3 +9,8 @@ tr.shown td.details-control {
 .intern {
 font-weight: bold;
 }
+
+#Revisio, #FullRuta
+{
+th {background-color: #d1d1d1}
+}
