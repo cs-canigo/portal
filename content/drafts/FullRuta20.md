@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v1"
-description = "Full de Ruta 2.0 v1"
+title       = "Full de Ruta 2.0 v5"
+description = "Full de Ruta 2.0 v5"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -49,7 +49,7 @@ codi = "35.080.03"
 function format(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
+        '<tr class="intern">'+
             '<td>Tipus Infraestructura</td>'+
             '<td>CPDs ofereixen Producte</td>'+
             '<td>Versions vigents a CPDs</td>'+
@@ -92,11 +92,7 @@ $(document).ready(function() {
         "order": [[1, 'asc']],
            "initComplete": function () {
             this.api().columns().every( function () {
-                var column = this;
-                if(col_index===0){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-	                }
+                var column = this;               
                 var select = $('<select><option value=""></option></select>')
                     .appendTo( $(column.header()).empty() )
                     .on( 'change', function () {
