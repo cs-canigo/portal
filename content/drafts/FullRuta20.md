@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v6"
-description = "Full de Ruta 2.0 v6"
+title       = "Full de Ruta 2.0 v7"
+description = "Full de Ruta 2.0 v7"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -110,6 +110,10 @@ $(document).ready(function() {
                 column.data().unique().sort().each( function ( d, j ) {
                     select.append( '<option value="'+d+'">'+d+'</option>' )
                 } );
+                if (col_index===1){
+                        $("<th>Producte</th>").appendTo($(column.header()));
+                        return;
+		}
             } );
         }
     });
