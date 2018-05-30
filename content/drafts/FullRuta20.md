@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v2"
-description = "Full de Ruta 2.0 v2"
+title       = "Full de Ruta 2.0 v3"
+description = "Full de Ruta 2.0 v3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -90,9 +90,7 @@ $(document).ready(function() {
             { "data": "Emergent" }
         ],
         "order": [[1, 'asc']],
-    });    
-    $('#FullRuta').DataTable( {
-        initComplete: function () {
+           "initComplete": function () {
             this.api().columns().every( function () {
                 var column = this;
                 var select = $('<select><option value=""></option></select>')
@@ -110,8 +108,8 @@ $(document).ready(function() {
                 } );
             } );
         }
-    } );
-    // Add event listener for opening and closing details
+    });
+     // Add event listener for opening and closing details
     $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRuta.row( tr );
