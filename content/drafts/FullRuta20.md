@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v3"
-description = "Full de Ruta 2.0 v3"
+title       = "Full de Ruta 2.0 v4"
+description = "Full de Ruta 2.0 v4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -69,11 +69,6 @@ etc.)
 
 # ANNEX A (normatiu) Programari estandarditzat
 
-
-| Darrera revisió realitzada  | Revisió de full de ruta vigent fins 
-| --------------------------- |:-----------------------------------:
-| 1 de Maig de 2018           | 1 de Setembre de 2018
-
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
 <link rel="stylesheet" type="text/css" href="../tableStyle.css">
@@ -101,8 +96,8 @@ etc.)
                 <th>Grup Tecnologia</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
-                <th>Versió Actual</th>
-                <th>En Roadmap</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap CTTI</th>
                 <th>Emergent</th>
             </tr>
         </thead>
@@ -132,6 +127,7 @@ $(document).ready(function() {
         "paging": false,
 	    "info" : false,
 	    "ordering": false,
+	    "search" : false,
     	"language":{
 	        	"search" : "<strong>Cerca:</strong> ",
 		        "infoEmpty": "No hi ha registres",
