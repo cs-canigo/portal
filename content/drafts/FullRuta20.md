@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v1"
-description = "Full de Ruta 2.0 v1"
+title       = "Full de Ruta 2.0 v2"
+description = "Full de Ruta 2.0 v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -68,14 +68,14 @@ etc.)
 1. Arran del dinamisme de les versions de les diferents tecnologies per part dels fabricants, el full de ruta ha de ser revisat quadrimestralment. D’aquesta forma cada full de ruta publicat contindrà les dates de la darrera revisió i validesa de la informació que conté.
 
 # ANNEX A (normatiu) Programari estandarditzat
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
+<link rel="stylesheet" type="text/css" href="../tableStyle.css">
 
 | Darrera revisió realitzada  | Revisió de full de ruta vigent fins 
 | --------------------------- |:-----------------------------------:
 | 1 de Maig de 2018           | 1 de Setembre de 2018
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.semanticui.min.css">
-<link rel="stylesheet" type="text/css" href="../tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
@@ -92,18 +92,6 @@ etc.)
                 <th>Emergent</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th></th>
-                <th>Producte</th>
-                <th>Grup Tecnologia</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
-                <th>Versió Actual</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
-            </tr>
-        </tfoot>
 </table>
 
 <script>
