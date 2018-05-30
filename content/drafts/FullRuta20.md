@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -113,10 +113,10 @@ function format(d) {
                 '<td>Observacions:</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>'+d.Tipus+'</td>'+
-            '<td>'+d.CPDs+'</td>'+
-            '<td>'+d.VersioActual+'</td>'+
-                '<td>'+d.Observacions+'</td>'+
+            '<td>'+d.tipus+'</td>'+
+            '<td>'+d.cpds+'</td>'+
+            '<td>'+d.versioactual+'</td>'+
+                '<td>'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -138,13 +138,13 @@ $(document).ready(function() {
                 "data":           null,
                 "defaultContent": ''
             },
-            { "data": "Producte" },
-            { "data": "Categoria" },
-            { "data": "Obsolet" },
-            { "data": "Suportat" },
-            { "data": "VersioActual" },
-            { "data": "Roadmap" },
-            { "data": "Emergent" }
+            { "data": "producte" },
+            { "data": "categoria" },
+            { "data": "obsolet" },
+            { "data": "suportat" },
+            { "data": "versioactual" },
+            { "data": "roadmap" },
+            { "data": "emergent" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
