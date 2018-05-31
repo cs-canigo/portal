@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v3"
-description = "Full de Ruta 2.0 v3"
+title       = "Full de Ruta 2.0 v4"
+description = "Full de Ruta 2.0 v4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -85,7 +85,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display responsive no-wrap" style="width:20%">
+<table id="FullRuta" class="display responsive no-wrap" style="width:50%">
         <thead>
             <tr>
                 <th></th>
