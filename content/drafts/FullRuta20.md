@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v4"
-description = "Full de Ruta 2.0 v4"
+title       = "Full de Ruta 2.0 v1"
+description = "Full de Ruta 2.0 v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -69,6 +69,7 @@ etc.)
 
 # ANNEX A (normatiu) Programari estandarditzat
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="../tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
