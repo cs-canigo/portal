@@ -91,7 +91,7 @@ th, td {
     width: 60px;
 }
 </style>
-<table id="FullRuta" class="display" style="width:60%">
+<table id="FullRuta" class="display" width="100" style="width:60%">
         <thead>
             <tr>
                 <th></th>
