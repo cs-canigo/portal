@@ -10,7 +10,5 @@ tr.shown td.details-control {
 font-weight: bold;
 }
 
-#Revisio, #FullRuta
-{
-th {background-color: #d1d1d1}
-}
+th { font-size: 10px; }
+td { font-size: 9px; }
