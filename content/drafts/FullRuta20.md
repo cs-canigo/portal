@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+title       = "Full de Ruta 2.0 v1"
+description = "Full de Ruta 2.0 v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -85,13 +85,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<style>
-th, td {
-    table-layout: fixed;
-    width: 60px;
-}
-</style>
-<table id="FullRuta" class="display" width="100" style="width:60%">
+<table id="FullRuta" class="display" style="width:60%">
         <thead>
             <tr>
                 <th></th>
@@ -141,7 +135,8 @@ $(document).ready(function() {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": ''
+                "defaultContent": '',
+	        "width": "20%"
             },
             { "data": "producte" },
             { "data": "categoria" },
