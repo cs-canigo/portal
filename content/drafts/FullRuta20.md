@@ -85,7 +85,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display responsive no-wrap" style="width:60%">
+<table id="FullRuta" class="display responsive no-wrap" style="width:20%">
         <thead>
             <tr>
                 <th></th>
