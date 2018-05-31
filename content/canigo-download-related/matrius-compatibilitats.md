@@ -60,7 +60,7 @@ weight      = 1
 | **canigo.operation.logging**                          	|       1.1.0          	|                       |                       |       1.1.1          	|                       |                     
 | canigo.core                                           	|    [3.2.0,3.3.0)     	|                       |                       |    [3.2.0,3.3.0)     	|                       |                     
 |                                                       	|                    	|                       |                       |                    	|                       |                     
-| **canigo.integration.antivirus**                      	|        1.2.0       	|                       |                       |        1.2.1       	|                       |                     
+| **canigo.integration.antivirus**                      	|        1.3.0       	|                       |                       |        1.3.1       	|                       |                     
 | canigo.core                                           	|    [3.2.0,3.3.0)   	|                       |                       |    [3.2.0,3.3.0)   	|                       |                     
 |                                                       	|                    	|                       |                       |                    	|                       |                     
 | **canigo.integration.avisosalertes.pica**             	|        1.2.0       	|                       |                       |        1.2.1       	|                       |                     
