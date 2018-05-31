@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0 v2"
-description = "Full de Ruta 2.0 v2"
+title       = "Full de Ruta 2.0 v3"
+description = "Full de Ruta 2.0 v3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -85,7 +85,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display" style="width:60%">
+<table id="FullRuta" class="display responsive no-wrap" style="width:60%">
         <thead>
             <tr>
                 <th></th>
@@ -124,7 +124,7 @@ $(document).ready(function() {
         "paging": false,
 	"info" : false,
 	"ordering": false,
-	"autoWidth": true,
+	"responsive": true,
     	"language":{
 	        	"search" : "<strong>Cerca:</strong> ",
 		        "infoEmpty": "No hi ha registres",
