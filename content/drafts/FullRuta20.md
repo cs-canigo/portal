@@ -85,8 +85,13 @@ etc.)
              </tr>
         </thead>
 </table>
-
-<table id="FullRuta" class="display" style="width:70%">
+<style>
+th, td {
+    table-layout: fixed;
+    width: 60px;
+}
+</style>
+<table id="FullRuta" class="display" style="width:60%">
         <thead>
             <tr>
                 <th></th>
