@@ -2,7 +2,7 @@
 date        = "2018-05-28"
 title       = "Full de Ruta 2.0"
 description = "Full de Ruta 2.0"
-weight		= 0
+weight		= 3
 type = "estandard"
 toc         = true
 versio      = "1.0"
