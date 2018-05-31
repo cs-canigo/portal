@@ -9,7 +9,7 @@ key         = "MAIG2018"
 
 # Tasques OPS del desenvolupament al Cloud
 
-Dins del paradigma de desplegament al Container Cloud, l'equip de desenvolupament ha d'assumir certes tasques incloses en la part "operativa" de CPD en la infraestructura On Premise.
+Dins del paradigma de desplegament al Container Cloud, l'equip de desenvolupament ha d'assumir certes tasques que en el  model "On Premise" son pròpies de l'operativa de CPD.
 
 ![Cloud devops](https://canigo.ctti.gencat.cat/drafts/cloud_devops.JPG)
 
