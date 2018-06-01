@@ -74,7 +74,7 @@ etc.)
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
 
-<table id="Revisio" class="ui celled table" style="width:50%">
+<table id="Revisio" class="display responsive no-wrap" style="width:50%">
         <thead>
             <tr>
                 <th>Darrera revisió realitzada</th>
