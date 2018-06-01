@@ -9,8 +9,9 @@ key         = "JUNY2018"
 
 ### Traces
 
-El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria. D'entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l'ús de [**loggers asíncrons**] (https://logging.apache.org/log4j/2.x/manual/async.html).
-Els loggers asíncrons representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Si es volgués utilitzar en auditories, o alguna funcionalitat on no fos acceptable perdre cap registre, s'hauria d'implementar un mecanisme de fallback i utilitzar-lo en cas de detectar algun error (Ex. disc sense espai, problema de connectivitat, ...).
+El [**Mòdul de Traces**](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l'ús d'aquesta nova versió de la llibreria. D'entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l'ús de [loggers asíncrons] (https://logging.apache.org/log4j/2.x/manual/async.html).
+
+Els **loggers asíncrons** representen una gran millora respecte els síncrons, sobretot si el registre de les traces s'ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S'ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns events podrien arribar a perdre's. Si es volgués utilitzar en auditories, o alguna funcionalitat on no fos acceptable perdre cap registre, s'hauria d'implementar un mecanisme de fallback i utilitzar-lo en cas de detectar algun error (Ex. disc sense espai, problema de connectivitat, ...).
 
 A mode de resum, enumerem les principals novetats que incorpora Log4j 2.x:
 
@@ -40,6 +41,6 @@ En l'actualitat, el mòdul d'instrumentació facilita principalment:
 * monitoritzar l'execució de serveis de l'aplicació, obtenint informació com el temps de resposta i si el resultat és correcte o no
 * validar l'estat d'un servei, confirmant que està responent correctament (Ex. base de dades, servidor smtp, ...)
 
-A Canigó 3.2, a diferència de versions predecessores, les dades d'instrumentació s'expossen mitjançant serveis REST. En frontends web aquestes dades podent ser presentades visualment amb qualsevol llibreria Javascript, com per exemple, [Chart.js](https://www.chartjs.org/).
+A Canigó 3.2, a diferència de versions predecessores, les dades d'instrumentació s'exposen mitjançant serveis REST. En frontends web aquestes dades podent ser presentades visualment amb qualsevol llibreria Javascript, com per exemple, [Chart.js](https://www.chartjs.org/).
 <br><br>
 Per qualsevol dubte respecte a l'ús d'aquests mòduls i la seva evolució prevista us podeu posar en contacte amb el CS Canigó preferiblement via [JIRA CSTD al servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
