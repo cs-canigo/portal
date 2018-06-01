@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-18"
 title       = "Canigó. Evolució Mòdul de Traces i Instrumentació"
-description = "Analitzem l'evolució realitzada en el mòdul de traces a Canigó 3.2, recomanacions pel que fa al seu ús, i l'evolució a futur prevista per aquest servei"
+description = "Analitzem l'evolució realitzada en els mòduls de traces i instrumentació a Canigó 3.2, recomanacions pel que fa al seu ús, i l'evolució a futur prevista per aquests serveis"
 sections    = ["Notícies"]
 categories  = ["canigo"]
 key         = "JUNY2018"
@@ -39,5 +39,7 @@ En l'actualitat, el mòdul d'instrumentació facilita principalment:
 
 * monitoritzar l'execució de serveis de l'aplicació, obtenint informació com el temps de resposta i si el resultat és correcte o no
 * validar l'estat d'un servei, confirmant que està responent correctament (Ex. base de dades, servidor smtp, ...)
+
+A Canigó 3.2, a diferència de versions predecessores, les dades d'instrumentació s'expossen mitjançant serveis REST. En frontals web aquestes dades podent ser presentades visualment amb qualsevol llibreria Javascript, com per exemple, [Chart.js](https://www.chartjs.org/).
 <br><br>
 Per qualsevol dubte respecte a l'ús d'aquests mòduls i la seva evolució prevista us podeu posar en contacte amb el CS Canigó preferiblement via [JIRA CSTD al servei CAN](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) o [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
