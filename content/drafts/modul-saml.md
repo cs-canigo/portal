@@ -114,6 +114,10 @@ Els certificats apache.crt i apache.key es poden generar amb [openssl](ttps://ww
 	
 Aquesta operació demanarà omplir algunes dades, la realment important el paràmetre "Common Name" que ha de ser el mateix que el valor posat a **ServerName** al fitxer httpd-ssl.conf
 
+Addicionalment en cas que el navegador no pugui resoldre el nom de servidor, s'haurà d'afegir al fitxer hosts:
+
+	127.0.0.1	vagrant.vm
+
 A l'aplicació Bridge per a realitzar la connexió per AJP es realitza al fitxer **TomcatAjpConfig**
 
 	import org.apache.catalina.connector.Connector;
