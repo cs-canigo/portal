@@ -17,6 +17,16 @@ Aquest autoservei de pipelines es basa en la generació de jobs a partir d'arxiu
 
 A continuació, entrarem en més detall com funciona aquest nou servei que ofereix el SIC.
 
+## Motivació
+
+Els objectius que vol assolir aquesta nova funcionalitat són:
+
+* La línia estratègica de DevOps que està marcant CTTI requereix **flexibilitat i independència** en els pricipals actors que intervenen en la construcció i els desplegaments de les aplicacions.
+* A tal efecte, una necessitat clau és anular la dependència existent cap a l'equip del SIC, que fins ara implementava els automatismes de construcció i desplegament. Amb aquest nou model **els usuaris del SIC són autosuficients per generar-se ells mateixos les seves pròpies pipelines**.
+* Com a conseqüència del punt anterior, **no cal ajustar-se al calendari de l'equip SIC per obtenir les pipelines de construcció i desplegament**. Els propis usuaris poden implementar-les en el moment que els hi sigui més adient.
+* **Augmenta l'eficiència en les integracions d'aplicacions al SIC**, ja que s'eliminen del procés traspassos innecessaris d'informació i de responsabilitats a l'equip SIC.
+* De retruc, el fet d'afegir un sistema de configuració amb arxius YML independents de la plataforma d'Integració Contínua Jenkins **proporciona al SIC un nivell d'abstracció addicional amb el que es podria disposar d'altres eines d'automatització sense afectar als usuaris**.
+
 ## Funcionament
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures. Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
