@@ -5,3 +5,10 @@ td.details-control {
 tr.shown td.details-control {
     background: url('../drafts/details_close.png') no-repeat center center;
 }
+
+.intern {
+font-weight: bold;
+}
+
+th { font-size: 10px; }
+td { font-size: 10px; }
