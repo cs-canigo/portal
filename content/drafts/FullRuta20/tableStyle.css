@@ -1,9 +1,9 @@
 td.details-control {
-    background: url('../drafts/details_open.png') no-repeat center center;
+    background: url('../drafts/FullRuta20/details_open.png') no-repeat center center;
     cursor: pointer;
 }
 tr.shown td.details-control {
-    background: url('../drafts/details_close.png') no-repeat center center;
+    background: url('../drafts/FullRuta20/details_close.png') no-repeat center center;
 }
 
 .intern {
