@@ -30,7 +30,7 @@
 {"id":27,"producte":"Tomcat","categoria":"Servidors d'aplicacions","obsolet":"5.0, 5.5, 6.0","suportat":"7.0, 8.0","versioactual":"8.0","roadmap":"–","emergent":"9.0","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":28,"producte":"WebLogic","categoria":"Servidors d'aplicacions","obsolet":"8.1, 9.2, 10.2, 12.1.x","suportat":"11g (10.3.x), 12.2.x","versioactual":"12.2.x","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":29,"producte":"WebSphere","categoria":"Servidors d'aplicacions","obsolet":"4.0, 5.1,6.1, 7.0, 8.0","suportat":"8.5, 9.0","versioactual":"9.0","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
-{"id":30,"producte":"Microsoft","categoria":"Servidors d'aplicacions","obsolet":"“DNA COM+, < .NET 3.5","suportat":"3.5 SP1, 4.5.x, 4.6.x, 4.7","versioactual":"4.7","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
+{"id":30,"producte":"Microsoft","categoria":"Servidors d'aplicacions","obsolet":"DNA COM+, < .NET 3.5","suportat":"3.5 SP1, 4.5.x, 4.6.x, 4.7","versioactual":"4.7","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":31,"producte":"Jboss EAP","categoria":"Servidors d'aplicacions","obsolet":"4.3, 5.x","suportat":"6.x, 7.x","versioactual":"7.x","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":32,"producte":"PHP","categoria":"Servidors d'aplicacions","obsolet":"4.x, 5.1, 5.3, 5.4, 5.5","suportat":"5.6,7.0,7.1","versioactual":"7.1","roadmap":"–","emergent":"7.2","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":33,"producte":"JDK","categoria":"Servidors d'aplicacions","obsolet":"1.4, 1.5, 1.6","suportat":"1.7, 1.8","versioactual":"1.8","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
@@ -79,7 +79,7 @@
 {"id":76,"producte":"SAP Data Services","categoria":"Sistemes SAP","obsolet":"<=4.1","suportat":"4.2","versioactual":"4.2","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":77,"producte":"SAP Nw Business Intelligence","categoria":"Sistemes SAP","obsolet":"<=Nw04, 7.0","suportat":"7.1 - 7.5","versioactual":"7.5","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":78,"producte":"SAP Crystal Reports","categoria":"Sistemes SAP","obsolet":"<2008, 2011","suportat":"2013, 2016","versioactual":"2016","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
-{"id":79,"producte":".Net","categoria":"Desenvolupament","obsolet":"<=4.0","suportat":"4.5","versioactual":"4.5.2","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
+{"id":79,"producte":".Net","categoria":"Desenvolupament","obsolet":"DNA COM+, < .NET 3.5","suportat":"3.5 SP1, 4.5.x, 4.6.x, 4.7","versioactual":"4.7","roadmap":"–","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"},
 {"id":80,"producte":"Angular","categoria":"Desenvolupament","obsolet":"<=1.x","suportat":"2.x, 4.x, 5.x","versioactual":"5.2","roadmap":"6.0","emergent":"–","tipus":"–","cpds":"–","sic":"–","observacions":"–"}
 ]
 }
