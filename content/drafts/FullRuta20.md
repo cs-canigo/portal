@@ -17,7 +17,7 @@ codi = "35.080.03"
 
 L’elevat volum de productes que estan desplegats als CPDs de la Generalitat de Catalunya i als seus
 entorns de treball i la seva heterogeneïtat de versions fa que resulti cada cop més difícil mantenir
-vigents les versions de programari de les diferents tecnologies.
+vigents les versions de programari de les diferents tecnologies..
 
 Com a peça facilitadora, i amb la intenció de donar una visió de l’estat de l’art de cadascuna de les
 tecnologies usades (o previstes d’usar) en els nous sistemes d’informació a desplegar s’ha elaborat el
