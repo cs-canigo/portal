@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-28"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+title       = "Full de Ruta 1.0"
+description = "Full de Ruta 1.0"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -131,7 +131,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/Inventari.txt",
+        "ajax": "../FullRuta20/Inventari.json",
         "columns": [
             {
                 "className":      'details-control',
