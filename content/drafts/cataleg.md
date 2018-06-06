@@ -82,6 +82,7 @@ Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.ext
 Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0
 Nginx  	 | 1.10.3   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.10.3
 Nginx  	 | 1.12.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12.2
+Nginx  	 | 1.14.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14.0
 HAProxy		 | 1.5.1        | docker-registry.ctti.extranet.gencat.cat/gencatcloud/haproxy:1.5.1
 Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
