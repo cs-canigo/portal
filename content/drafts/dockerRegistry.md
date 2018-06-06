@@ -1,5 +1,5 @@
 +++
-date          = "2018-06-21"
+date          = "2018-06-06"
 title         = "Registre docker privat"
 description   = "Descripció i ús del registre docker privat"
 sections      = "Container Cloud"

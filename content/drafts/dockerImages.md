@@ -1,5 +1,5 @@
 +++
-date          = "2017-05-24"
+date          = "2018-06-06"
 title         = "Criteris creació contenidors docker"
 description   = "Criteris per crear les imatges dels contenidors docker que es desplegaran als diferents clouds públics i privats"
 sections      = "Container Cloud"
