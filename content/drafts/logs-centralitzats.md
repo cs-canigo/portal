@@ -11,7 +11,7 @@ imatge      = "/images/bloc/2018/05/centralized_logging.png"
 
 La gestió de logs de forma centralitzada té una sèrie d'avantatges:
 
-* evidentment una de les principals és la possibilitat de **veure totes les dades** sense tenir que cercar a diferents fonts o eines. El volum de dades no hauria de ser un problema, ja que aquestes eines de gestió de logs centralitzats estan optimitzades i tenen filtres per poder veure únicament el que es necessita
+* **veure totes les dades** sense tenir que cercar a diferents fonts o eines. El volum de dades no hauria de ser un problema, ja que les eines de gestió de logs centralitzats estan optimitzades i tenen filtres per poder veure únicament el que es necessita
 * visualització de dades en **temps real**
 * capacitat per **identificar tendències i anomalies** i correlacionar esdeveniments en els sistemes
 * **optimització del temps** dedicat a l'anàlisi de logs, no havent d'anar saltant entre diferents ubicacions de registres de dades i panells
