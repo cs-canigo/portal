@@ -28,14 +28,13 @@ La gestió de logs de forma centralitzada té una sèrie d'avantatges:
 
 ![ELK](/images/news/ELK.png)
 
-**EFK** (Elasticsearch+Fluentd+Kibana) TODO
+**EFK** (Elasticsearch+Fluentd+Kibana) és una solució cada vegada més utilitzada. Logstash es substitueix per Fluentd, el qual té certes avantatges com menys consum de memòria, o suport enterprise.
 
 ### Integració d'aplicacions
 
+En **plataformes de contenidors Docker** les mateixes plataformes ja incorporen una solució de logs centralitzat. Els logs dels contenidors (sortida estàndard) són recol·lectats sense necessitat de realitzar cap configuració a nivell de contenidor. És important que les aplicacions siguin conscients d'aquesta diferència vers CPD, escrivint els logs a la sortida estàndard en lloc de fer-ho a fitxer.
+
 Existeixen opcions més intrusives com definir appenders al sistema de logs de l'aplicació per tal que enviïn els logs a Filebeat o Logstash, però sempre que sigui possible es recomana que sigui l'agent de Filebeat o Logstash qui recol·lecti la informació.
-
-En **plataformes de contenidors Docker** les mateixes plataformes ja incorporen una solució de logs centralitzat. Els logs dels contenidors (sortida estàndard) són recol·lectats sense necessitat de realitzar cap configuració a nivell de contenidor. És important que les aplicacions siguin conscients d'aquesta diferència vers CPD, escrivint els logs a la sortida estàndard en lloc de fer-ho a fitxer. També cal tenir-ho en compte també en aplicacions Canigó.
-
 
 . Els logs de les aplicacions ubicats a filesystems seran recol·lecats i enviats cap aquest servei.
 
@@ -45,3 +44,4 @@ Referències:
 * https://logz.io/learn/complete-guide-elk-stack/
 * https://logz.io/blog/filebeat-vs-logstash/
 * https://logz.io/blog/fluentd-logstash/
+* https://www.loomsystems.com/blog/single-post/2017/01/30/a-comparison-of-fluentd-vs-logstash-log-collector
