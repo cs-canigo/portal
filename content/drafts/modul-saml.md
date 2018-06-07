@@ -1,45 +1,47 @@
 +++
 date        = "2018-05-31T11:48:54+02:00"
 title       = "Mòdul Seguretat SAML"
-description = "Autenticació d'usuaris utilitzant SAML"
+description = "Autenticació d'usuaris utilitzant SAML2"
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 11
 +++
 
 ## Propòsit
 
-El Mòdul de Seguretat SAML té com a propòsit principal gestionar l'autenticació dels usuaris en aplicacions Canigó a partir [d'assercions SAML](https://en.wikipedia.org/wiki/SAML_2.0) del proveïdor d'identitat (Shibboleth) de GICAR. 
+El Mòdul de Seguretat SAML té com a propòsit principal gestionar l'autenticació dels usuaris en aplicacions Canigó a partir [d'assercions SAML2](https://en.wikipedia.org/wiki/SAML_2.0) del proveïdor d'identitats (Shibboleth) de GICAR. 
 
 ## Funcionament
 
-El sistema d'autenticació d'API Canigó a partir d'assercions SAML GICAR té dues particularitats:
+El sistema d'autenticació per API REST de Canigó a partir d'assercions SAML GICAR té dues particularitats:
 
 •	És totalment autocontingut en Java, es desplega amb la pròpia aplicació i és indiferent del servidor web per davant del servidor d’aplicacions. No requereix la instal•lació de software binari i configuració dels Apache que requereix Shibboleth SP.
 
-•	És totalment stateless pel que fa a l’API REST. Amb implicacions, ja que SAML (Security Assertion Markup Language) és un protocol totalment stateful i que fa ús de les cookies per desar informació.
+•	És totalment stateless pel que fa a l’API REST. Amb implicacions, ja que SAML (Security Assertion Markup Language) és un protocol totalment stateful i que fa ús de cookies per desar informació.
 
 
 Per poder fer conviure una API stateless (aplicació Canigó amb autenticació JWT) i un sistema d'autenticació basat en assercions SAML (stateful) s'ha de dividir l'aplicació en dues parts:
 
 •	Webapp stateless que conté l’API REST protegida per token JWT (Aplicació Canigó amb tota la funcionalitat)
 
-•	Webapp stateful (aplicació Bridge) que conté la interface d’usuari protegida per asserció SAML. (Service Provider(SP). S'encarrega únicament d'obtenir i tractar les assercions SAML amb el proveïdor d'identitat (GICAR))
+•	Webapp stateful (aplicació Bridge) que conté la interface d’usuari protegida per asserció SAML. Actua com a Service Provider(SP) encarregant-se únicament d'obtenir i tractar les assercions SAML amb el proveïdor d'identitat (GICAR)
 
-L'aplicació Stateful funciona com a una SPA protegida per SAML. Al accedir a la si l'usuari no es troba autenticat serà redirigit al login de GICAR, un cop realitzat el login de forma satisfactòria l'usuari disposarà d'una asserció SAML vàlida.
+L'aplicació Stateful funciona com a una SPA protegida per SAML. Al accedir, si l'usuari no es troba autenticat serà redirigit al login de GICAR. Un cop realitzat el login de forma satisfactòria l'usuari disposarà d'una asserció SAML vàlida.
 
 La SPA s'ha d'encarregar aleshores de cridar a l'endpoint /api/saml de l'aplicació Stateless amb l'asserció SAML com a paràmetre en Base64. Aquest endpoint retorna un token JWT vàlid per a accedir als serveis REST de l'aplicació Stateless protegits.
 
+TODO: Diagrama de seqüència
+
 ## Aplicació Bridge (Stateful)
 
-Canigó proporciona una aplicació d'exemple per tal de servir com a Service Provider.
+Des de Canigó es proporciona una aplicació bridge plantilla per tal de fer-se servir com a Service Provider.
 
 ### Configuració
 
 #### Servidor Web
 
-SAML depèn dels noms DNS dels servidors, i la generació de metadades SAML depèn de que l'aplicació conegui el nom de DNS del seu servidor. Els noms de DNS han de tenir sentit al navegador de l’usuari. Es poden crear metadades de SP amb noms de DNS locals encara que l’IdP no els conegui, però el navegador ha de ser capaç de resoldre'l.
+SAML depèn dels noms DNS dels serveis, i la generació de metadades SAML depèn de que l'aplicació conegui el nom DNS. Els noms de DNS han de tenir sentit al navegador de l’usuari. Es poden crear metadades de SP amb noms de DNS locals encara que l’IdP no els conegui, però el navegador ha de ser capaç de resoldre'l.
 
-Utilitzar localhost no funciona, cal un servidor web que exposi un nom DNS per SSL. Tampoc funciona si el servidor web passa les peticions per proxy invers HTTP, doncs l'aplicació creu que es troba en localhost. La solució és utilitzar AJP per connectar el servidor web amb l'aplicació Bridge.
+Utilitzar localhost no funciona, cal un proxy que exposi un nom DNS i es recomana que el protocol d'accés sigui SSL. Tampoc funciona si el servidor web passa les peticions per proxy invers HTTP, doncs l'aplicació creu que es troba en localhost. La solució és utilitzar AJP per connectar el servidor web amb l'aplicació Bridge.
 
 Per a realitzar aquesta configuració s'ha utilitzat Apache 2.4 amb la següent configuració:
 
@@ -51,7 +53,7 @@ Al fitxer httpd.conf s'han habilitat (si no es troben ja) els mòduls:
 	proxy_http_module
 	ssl_module
 	
-Es possible que aquests mòduls requereixin l'activació d'altres mòduls del que tinguin dependències. En cas que sigui falta, també s'haurien d'incloure per a que el servidor funcioni correctament.
+És possible que aquests mòduls requereixin l'activació d'altres mòduls del que tinguin dependències. En cas que sigui així, també s'haurien d'incloure per a que el servidor funcioni correctament.
 
 Incloure, si no es troba ja, al final del fitxer httpd.conf la següent configuració:
 
@@ -61,7 +63,7 @@ Incloure, si no es troba ja, al final del fitxer httpd.conf la següent configur
 	SSLRandomSeed connect builtin
 	</IfModule>
 
-A continuació al fitxer conf/extra/httpd-ssl.conf configurar el VirtualHost
+A continuació al fitxer conf/extra/httpd-ssl.conf configurar el VirtualHost_
 
 	<VirtualHost _default_:443>
 
@@ -112,7 +114,7 @@ Els certificats apache.crt i apache.key es poden generar amb [openssl](ttps://ww
 
 	openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out ${SRVROOT}/conf/ssl/apache.crt -keyout ${SRVROOT}/conf/ssl/apache.key
 	
-Aquesta operació demanarà omplir algunes dades, la realment important el paràmetre "Common Name" que ha de ser el mateix que el valor posat a **ServerName** al fitxer httpd-ssl.conf
+Aquesta operació demanarà omplir algunes dades, la realment important el paràmetre "Common Name" que ha de ser el mateix que el valor posat a **ServerName** al fitxer httpd-ssl.conf.
 
 Addicionalment en cas que el navegador no pugui resoldre el nom de servidor, s'haurà d'afegir al fitxer hosts:
 
@@ -153,7 +155,7 @@ A l'aplicació Bridge per a realitzar la connexió per AJP es realitza al fitxer
 			return tomcat;
 		}
 
-Al fitxer application.properties es troben les propietats de tomcat:
+Al fitxer application.properties es troben les propietats de Tomcat:
 
 	*.tomcat.ajp.port=8009
 	*.tomcat.ajp.enabled=true
@@ -166,7 +168,7 @@ Per obtenir les metadades de l'IdP GICAR s'ha de demanar a GICAR. A l'entorn de 
 
 	https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth 
 	
-A l'aplicació Bridge proporcionada per CS Canigó, aquest fitxer s'ha desat a src/resources/saml/metadata/metaDadesGicarPRE.xml
+A l'aplicació Bridge proporcionada pel CS Canigó, aquest fitxer s'ha desat a src/resources/saml/metadata/metaDadesGicarPRE.xml
 
 Al fitxer de propietats config/props/saml.properties s'ha d'indicar el path:
 
@@ -274,7 +276,7 @@ Propietat                     | Descripció                                     
 *.saml.spBridgeEntityId       | EntityID del SP. (Aplicació Bridge) | https://vagrant.vm/bridge00
 *.saml.extraValidityMinutes    | Les assercions tenen un temps de vida útil que potser massa estricte en cas de no generar el token JWT a l'instant, es pot afegir un temps addicional en minuts | 60
 
-Al fitxer **app-custom-security.xml** es necessiten dos authentication provider. Un per a realitzar la autenticació SAML i un altre que s'encarrega de l'autorització (Arxiu, Base de dades, etc)
+Al fitxer **app-custom-security.xml** és necessari definir dos authentication providers, un per a realitzar la autenticació SAML i un altre que s'encarrega de l'autorització (Arxiu, Base de dades, etc)
 
 Per exemple amb autorització per fitxer:
 
@@ -338,18 +340,16 @@ Al fitxer **WebSecurityConfig** s'han d'establir els Beans dels serveis d'autori
 
 Per a l'execució de prova s'ha desplegat l'aplicació Bridge al port 8080, i l'aplicació Canigó al port 9090.
 
-S'intenta accedir al SPA de l'aplicació Bridge: https://vagrant.vm/bridge/app sense tenir sessió, la capa de seguretat detecta la necessitat d'autenticació i fa una redirecció 302 a SS0, un URL de GICAR IdP.
+S'intenta accedir al SPA de l'aplicació Bridge: https://vagrant.vm/bridge/app sense tenir sessió, la capa de seguretat detecta la necessitat d'autenticació i fa una redirecció 302 al SS0 (URL de GICAR IdP).
 
-S'ha de introduir les credencials d'un usuari vàlid a GICAR i es fa la redirecció a la SPA amb l'asserció SAML.
+S'han d'introduïr les credencials d'un usuari vàlid a GICAR, i a continuació es fa la redirecció a la SPA amb l'asserció SAML.
 
-En la SPA proporcionada a l'aplicació Bridge es pot dividir en dues parts. Una on es mostra informació General obtinguda proporcionada a l'asserció SAML. Mostra a modo informatiu informació estreta de l'asserció.
+La SPA proporcionada a l'aplicació Bridge té dues parts:
+
+- Una on es mostra informació general obtinguda a partir de l'asserció SAML. Mostra a modo informatiu informació extreta de l'asserció.
 
 ![Informació General](/related/canigo/documentacio/modul-seguretat-saml/assertionInformation.jpg)
 
-L'altre part proporciona:
-
-Un botó per a capturar l'asserció i generar el JWT Token (Al ser una aplicació Demo es fa a través d'un botó, però en entorns productius aquesta part s'hauria de fer automàticament al carregar la pàgina)
-
-I un altre botó per accedir a un endpoint protegit de l'API de Canigó, en aquest cas obtenir un llistat dels equipaments.
+- L'altre part proporciona un botó per a capturar l'asserció i generar el JWT Token (Al ser una aplicació Demo es fa a través d'un botó, però en entorns productius aquesta part s'hauria de fer automàticament al carregar la pàgina), i un altre botó per accedir a un endpoint protegit de l'API de Canigó, en aquest cas obtenir un llistat dels equipaments.
 
 ![Test SAML](/related/canigo/documentacio/modul-seguretat-saml/testsaml.jpg)
