@@ -7,11 +7,28 @@ categories  = ["logs-centralitzats"]
 imatge      = "/images/bloc/2018/05/centralized_logging.png"
 +++
 
+### Avantatges
+
+La gestió de logs de forma centralitzada té una sèrie d'avantatges:
+
+* evidenment una de les principals és la posibilitat de **veure totes les dades** sense tenir que cercar a diferents fonts o eines. El volum de dades no hauria de ser un problema, ja que les eines de logs centralitzats estan optimitzades i tenen filtres per poder veure únicament el que es necessita
+* visualització de dades en **temps real**
+* capacitat per **identificar tendències i anomalíes** i correlacionar events en els sistemes
+* **optimització del temps** dedicat a l'anàlisi de logs, no tenint que anar saltant entre diferents ubicacions de registres de dades i panells
+* **generació d'alertes** en temps real en base a cerques, informes i quadres de comandament
+* **resolució de problemes més àgil** i notificació a les persones adecuades
+
 ### ELK
 
-**ELK** (Elasticsearch, Logstash, Kibana) és una de les implantacions més adoptades per solucions de logs centralitzats. Filebeat i Logstash s'encarreguen de recol·lectar els logs (Filebeat) i transformar-los (Logstash) en cas que sigui necessari abans de ser enviats cap al repositori (Elasticsearch). El motor de cerca d'Elasticsearch permetrà des del visualitzador (Kibana) consultar els logs de les diferents aplicacions:
+**ELK** (Elasticsearch+Logstash+Kibana) és una de les implantacions més adoptades per solucions de logs centralitzats. Aquest és el rol de cadascun dels elements:
+
+* _Elasticsearch_: motor de cerca i anàlisi on s'emmagatzemen les dades ja optimizades per a la indexació, distribuït, tolerant a fallades i alta disponibilitat
+* _Logstash_: llegeix les dades de diferents fonts, fa les transformacions que siguin necessaries per finalment emmagatzemar-les en aquest cas a Elasticsearch. Normalment Logstash s'utilitza conjuntament amb Filebeat, el qual s'encarrega de recol·lectar els logs, i Logstash transformar-los
+* _Kibana_: permet visualitzar les dades que es troben emmagatzemades a l'Elasticsearch, permetent presentar les dades de forma personalitzada. És l'eina de visualització i anàlisi de dades
 
 ![ELK](/images/news/ELK.png)
+
+**EFK** (Elasticsearch+Fluentd+Kibana) TODO
 
 ### Integració d'aplicacions
 
@@ -24,6 +41,7 @@ En **plataformes de contenidors Docker** les mateixes plataformes ja incorporen 
 
 Referències:
 
+* https://www.keycdn.com/blog/log-management/
 * https://logz.io/learn/complete-guide-elk-stack/
 * https://logz.io/blog/filebeat-vs-logstash/
 * https://logz.io/blog/fluentd-logstash/
