@@ -28,7 +28,7 @@ A mode de resum, enumerem les principals novetats que incorpora Log4j 2.x:
 
 #### Solució de logs centralitzats
 
-Les solucions de logs centralitzats tipus **ELK** (Elasticsearch+Logstash+Kibana) són cada cop més comuns. Des de CTTI s'està avaluant el seu ús. En la següent entrada del [blog](/blog/2018/05/logs-centralitzats/) podeu trobar informació al respecte.
+Les solucions de logs centralitzats tipus **ELK** (Elasticsearch+Logstash+Kibana) o **EFK** (Elasticsearch+Fluentd+Kibana) són cada cop més comuns. Des de CTTI s'està avaluant el seu ús.
 
 Les aplicacions Canigó 3.2 poden fer ús d'aquestes solucions de logs centralitzats, ja sigui escrivint traces a fitxer o sortida estàndard i que els agents de recol·lecció de logs els enviïn al repositori, o bé enviant-los directament mitjançant appenders de Log4j 2.x.
 
