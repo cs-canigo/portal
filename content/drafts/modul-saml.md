@@ -41,14 +41,13 @@ Des de Canigó es proporciona una aplicació bridge plantilla per tal de fer-se 
 
 SAML depèn dels noms DNS dels serveis, i la generació de metadades SAML depèn de que l'aplicació conegui el nom DNS. Els noms de DNS han de tenir sentit al navegador de l’usuari. Es poden crear metadades de SP amb noms de DNS locals encara que l’IdP no els conegui, però el navegador ha de ser capaç de resoldre'l.
 
-Utilitzar localhost no funciona, cal un proxy que exposi un nom DNS i es recomana que el protocol d'accés sigui SSL. Tampoc funciona si el servidor web passa les peticions per proxy invers HTTP, doncs l'aplicació creu que es troba en localhost. La solució és utilitzar AJP per connectar el servidor web amb l'aplicació Bridge.
+Utilitzar localhost no funciona, cal un proxy que exposi un nom DNS i es recomana que el protocol d'accés sigui SSL. 
 
 Per a realitzar aquesta configuració s'ha utilitzat Apache 2.4 amb la següent configuració:
 
 Al fitxer httpd.conf s'han habilitat (si no es troben ja) els mòduls:
 
 	proxy_module
-	proxy_ajp_module	
 	proxy_connect_module
 	proxy_http_module
 	ssl_module
@@ -83,8 +82,8 @@ A continuació al fitxer conf/extra/httpd-ssl.conf configurar el VirtualHost_
 	ProxyPreserveHost On
 
 	#connexió amb l'aplicació Bridge
-	ProxyPass /bridge/ ajp://localhost:8009/bridge/
-	ProxyPassReverse /bridge/ ajp://localhost:8009/bridge/
+	ProxyPass /bridge/ http://localhost:8080/bridge/
+	ProxyPassReverse /bridge/ http://localhost:8080/bridge/
 
 	#connexió amb l'API de Canigó
 	ProxyPass /api/ http://localhost:9090/api/
@@ -120,45 +119,34 @@ Addicionalment en cas que el navegador no pugui resoldre el nom de servidor, s'h
 
 	127.0.0.1	vagrant.vm
 
-A l'aplicació Bridge per a realitzar la connexió per AJP es realitza al fitxer **TomcatAjpConfig**
+A l'aplicació Bridge per a realitzar la connexió per HTTPS s'ha d'indicar el schema y el proxyPort al tomcat de Spring Boot, al fitxer **TomcatContainerCustomizer**
 
-	import org.apache.catalina.connector.Connector;
-	import org.springframework.beans.factory.annotation.Value;
-	import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
+	import org.slf4j.Logger;
+	import org.slf4j.LoggerFactory;
+	import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
+	import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 	import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
-	import org.springframework.context.annotation.Bean;
-	import org.springframework.context.annotation.Configuration;
+	import org.springframework.stereotype.Component;
 
-	@Configuration
-	public class TomcatAjpConfig {
+	@Component
+	public class TomcatContainerCustomizer implements EmbeddedServletContainerCustomizer{
+		
+		private static final Logger logger = LoggerFactory.getLogger(TomcatContainerCustomizer.class);
 
-		@Value("${tomcat.ajp.port}")
-		private int ajpPort;
-
-		@Value("${tomcat.ajp.enabled}")
-		boolean tomcatAjpEnabled;
-
-		@SuppressWarnings("deprecation")
-		@Bean
-		public EmbeddedServletContainerFactory servletContainer() {
-
-			TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory();
-			if (tomcatAjpEnabled) {
-				Connector ajpConnector = new Connector("AJP/1.3");
-				ajpConnector.setProtocol("AJP/1.3");
-				ajpConnector.setPort(ajpPort);
-				ajpConnector.setSecure(false);
-				ajpConnector.setAllowTrace(false);
-				ajpConnector.setScheme("http");
-				tomcat.addAdditionalTomcatConnectors(ajpConnector);
+		@Override
+		public void customize(ConfigurableEmbeddedServletContainer container) {
+			if (container instanceof TomcatEmbeddedServletContainerFactory) {
+				final TomcatEmbeddedServletContainerFactory tomcat = (TomcatEmbeddedServletContainerFactory) container;
+				tomcat.addConnectorCustomizers(connector -> { 
+					connector.setScheme("https");
+					connector.setProxyPort(443);
+				});
+				logger.info("Enabled secure scheme (https).");
+			} else {
+				logger.warn("Could not change protocol scheme because Tomcat is not used as servlet container.");
 			}
-			return tomcat;
 		}
-
-Al fitxer application.properties es troben les propietats de Tomcat:
-
-	*.tomcat.ajp.port=8009
-	*.tomcat.ajp.enabled=true
+	}
 
 #### Intercanvi de Metadades Aplicació Bridge (SP) amb IdP GICAR
 

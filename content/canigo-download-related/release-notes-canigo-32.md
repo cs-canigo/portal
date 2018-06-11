@@ -1,5 +1,5 @@
 +++
-date        = "2018-05-04"
+date        = "2018-06-11"
 title       = "Release Notes Canigó 3.2"
 description = ""
 sections    = "Canigó"
@@ -7,6 +7,13 @@ weight      = 1
 +++
 
 #### Release Notes
+
+[Canigó 3.2.5] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10498) (12/06/2018)
+
+- [Actualitzar Spring i altres llibreries] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2312)
+- [Reduïr el nombre de Threads que es crea a canigo.operation.instrumentation] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2295)
+- [El módul LOPD no interceptava GET/SET d'entitats] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2303)
+- [Configurar el filtre de QueryDSL per a que tracti els números com a Long] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2294)
 
 [Canigó 3.2.4] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10494) (05/04/2018)
 
