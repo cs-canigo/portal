@@ -65,8 +65,10 @@ docker pull docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
 ```
 docker logout https://docker-registry.ctti.extranet.gencat.cat
 ```
-#### Construir una imatge depenent d'una imatge repositada al registre privar
+
+#### Construir una imatge depenent d'una imatge repositada al registre privat
 Per exemple si tenim un dockerfile del tipus:
+
 ```
 FROM docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
 
@@ -77,6 +79,7 @@ ENV APP_DIR=/app
 COPY xxxx.jar ${APP_DIR}
 COPY run.sh /
 ```
+
 **Important notar que el FROM ha d'incloure el registre privat**
 * Cal primer connectar-se al registre:
 ```
