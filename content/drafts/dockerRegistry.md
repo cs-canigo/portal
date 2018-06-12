@@ -38,11 +38,13 @@ El registre docker privat de la Generalitat de Catalunya, està disponible a l'U
 
 ### Permisos
 L'equip de suport cloud subministrarà al proveïdor d'aplicacions un usuari amb els següents permisos:
+
 * Permís de lectura del projecte associat a l'aplicació del projecte.
 * Permís de lectura del projecte **gencatcloud** amb les imatges base mantingudes per l'equip de Suport Cloud.
 
 ### Consola web
 Es pot accedir a la consola web introduint a un navegador la url d'accés.
+
 * Des de la consola web es pot navegar pels projectes.
 * Es pot accedir als repositoris d'un projecte fent clic al **projecte**.
 * Es pot accedir a les diferents versions de les imatges d'un repositori fent clic al **repositori**.
@@ -52,6 +54,7 @@ Es pot accedir a la consola web introduint a un navegador la url d'accés.
 ### Docker
 #### Descarrega d'una imatge
 Per accedir a les imatges del registre des de docker, cal seguir els següents passos:
+
 * Connectar-se al registre:
 ```
 docker login https://docker-registry.ctti.extranet.gencat.cat
@@ -81,6 +84,7 @@ COPY run.sh /
 ```
 
 **Important notar que el FROM ha d'incloure el registre privat**
+
 * Cal primer connectar-se al registre:
 ```
 docker login https://docker-registry.ctti.extranet.gencat.cat
