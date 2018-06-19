@@ -1,5 +1,5 @@
 +++
-date        = "2018-05-31T11:48:54+02:00"
+date        = "2018-06-18"
 title       = "Mòdul Seguretat SAML"
 description = "Autenticació d'usuaris utilitzant SAML2"
 sections    = "Canigó. Documentació versió 3.x"
@@ -29,11 +29,11 @@ L'aplicació Stateful funciona com a una SPA protegida per SAML. Al accedir, si 
 
 La SPA s'ha d'encarregar aleshores de cridar a l'endpoint /api/saml de l'aplicació Stateless amb l'asserció SAML com a paràmetre en Base64. Aquest endpoint retorna un token JWT vàlid per a accedir als serveis REST de l'aplicació Stateless protegits.
 
-TODO: Diagrama de seqüència
+<div style="width:90%;margin:0 auto;"><img style="width: 70%; height: auto" src="/related/canigo/documentacio/modul-saml/diagrama.png" alt="Diagrama seqüencia SAML-GICAR-JWT" title="Diagrama seqüencia SAML-GICAR-JWT"></img></div>
 
 ## Aplicació Bridge (Stateful)
 
-Des de Canigó es proporciona una aplicació bridge plantilla per tal de fer-se servir com a Service Provider.
+Des de Canigó es proporciona una [aplicació bridge plantilla] (https://github.com/gencat/appBridge/releases/tag/1.0.0) per tal de fer-se servir com a Service Provider.
 
 ### Configuració
 
