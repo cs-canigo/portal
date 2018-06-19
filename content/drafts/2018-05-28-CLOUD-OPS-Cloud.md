@@ -20,7 +20,7 @@ Les pròpies tecnologies utilitzades en el catàleg cloud com contenidors, i el 
 L'equip de desenvolupament ha de definir la parametrització a nivell de monitorització dels elements disponibles dins de la plataforma cloud que s'utilitzi (llindars d'alarmes, helth checks, etc) així com les necessitats de backup per a la seva recuperació i la seva implementació.
 
 ## Monitorització de la infraestructura
-
+L'equip de desenvolupament té accés a la monitorització i defineix els mecanismes per a garantir la disponibilitat dels elements de l'aplicació, i assigna a un nou equip si no s'és autonom en la resolució de la disponibilitat.
 
 ## Dimensionament d’una aplicació
 L'equip de desenvolupament ha de dimensionar l'aplicació i el seu creixement en totes les seves vessants, inclouent qualsevol element facturable per ús tal com el consum de xarxa.
