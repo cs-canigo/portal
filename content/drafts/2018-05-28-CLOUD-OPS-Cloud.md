@@ -1,10 +1,11 @@
 ﻿+++
-date        = "2018-05-28"
+date        = "2018-06-16"
 title       = "Cloud. Tasques OPS del desenvolupament al Cloud"
 description = "En aquest article es descriuen les tasques OPS del model DEVOPS aplicat als entorns cloud GENCAT."
-sections    = ["drafts"]
-categories  = ["cloud"]
-key         = "MAIG2018"
+sections    = "Container Cloud" 
+weight      = 7 
+categories  = ["cloud","docker","container","kubernetes"] 
+key         = "JUNY2018"
 +++
 
 # Tasques OPS del desenvolupament al Cloud
