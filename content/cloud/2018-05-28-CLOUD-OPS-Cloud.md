@@ -1,4 +1,13 @@
-+++ date = "2018-06-16" title = "Cloud. Tasques OPS del desenvolupament al Cloud" description = "En aquest article es descriuen les tasques OPS del model DEVOPS aplicat als entorns cloud GENCAT." sections = "Container Cloud" weight = 7 categories = ["cloud","docker","container","kubernetes"] key = "JUNY2018" +++
++++
+date = "2018-06-16"
+title = "Cloud. Tasques OPS del desenvolupament al Cloud"
+description = "En aquest article es descriuen les tasques OPS del model DEVOPS aplicat als entorns cloud GENCAT."
+sections    = "Container Cloud"
+weight      = 2
+toc = true
+categories  = ["cloud","docker","container","kubernetes"]
+key = "JUNY2018"
++++
 
 # Tasques OPS del desenvolupament al Cloud
 
