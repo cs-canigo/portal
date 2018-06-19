@@ -1,11 +1,10 @@
 +++ date = "2018-06-16" title = "Cloud. Tasques OPS del desenvolupament al Cloud" description = "En aquest article es descriuen les tasques OPS del model DEVOPS aplicat als entorns cloud GENCAT." sections = "Container Cloud" weight = 7 categories = ["cloud","docker","container","kubernetes"] key = "JUNY2018" +++
 
 #Tasques OPS del desenvolupament al Cloud
+
 Dins del paradigma de desplegament al Container Cloud, l'equip de desenvolupament ha d'assumir certes tasques que en el model "On Premise" son pròpies de l'operativa de CPD.
 
-![Cloud devops](https://canigo.ctti.gencat.cat/drafts/cloud_devops.JPG)
-
-##Cloud devops
+![Cloud devops](https://canigo.ctti.gencat.cat/drafts/cloud_devops.JPG) Cloud devops
 
 Les pròpies tecnologies utilitzades en el catàleg cloud com contenidors, i el desplegament en clouds públics fora del NUS, porta implícita l'assumpció de la responsabilitat de la configuració i el manteniment i securització de tots els elements que componen un desenvolupament. Les pricipals noves tasques que l'equip de desenvolupament haurà d'assumir es poden agrupar en les següents categories.
 
