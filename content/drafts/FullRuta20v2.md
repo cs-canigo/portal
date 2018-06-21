@@ -156,7 +156,7 @@ $(document).ready(function() {
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": '',
-	        "width": "20%"
+	        "width": "80%"
             },
             { "data": "producte" },
             { "data": "categoria" },
