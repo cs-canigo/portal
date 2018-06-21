@@ -92,11 +92,11 @@ etc.)
                 <th></th>
                 <th>Producte</th>
                 <th>Categoria</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
+                <th>Obsolet     </th>
+                <th>Suportat     </th>
                 <th>Versió Actual</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
+                <th>En Roadmap   </th>
+                <th>Emergent     </th>
             </tr>
         </thead>
 </table>
