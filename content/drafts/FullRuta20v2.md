@@ -1,7 +1,7 @@
 +++
 date        = "2018-06-21"
-title       = "Full de Ruta 2.3"
-description = "Full de Ruta 2.3"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -158,8 +158,7 @@ $(document).ready(function() {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": '',
-	        "width": "80%"
+                "defaultContent": ''
             },
             { "data": "producte" },
             { "data": "categoria" },
