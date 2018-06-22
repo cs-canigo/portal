@@ -13,7 +13,7 @@ Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) ba
 
 **Plataforma Cloud**  | **Versió Openshift**   | **Versió Minishift compatible**
 ------------ | ------------ | ------------
-CPD4 AppAgile (privat)  |  3.4.1  | v1.0.0-beta.3 o superior
+CPD4 AppAgile (privat)  |  3.5.5  | v1.3.1 o superior
 
 ## Bluemix
 
@@ -31,7 +31,7 @@ Bluemix - Apps	| 270.030 | v0.30.0
 
 **Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
 ------------ | ------------ | ------------
-Bluemix - Kubernetes  |  1.9.7  | 0.25 o superior
+Bluemix - Kubernetes  |  1.9.8  | 0.25 o superior
 
 ## SwarmMe
 Per les Plataformes Cloud basades en Swarm, es recomana utilitzar  [docker-compose](https://docs.docker.com/compose/)
