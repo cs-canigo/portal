@@ -1,5 +1,5 @@
 +++
-date          = "2017-05-24"
+date          = "2018-06-06"
 title         = "Criteris creació contenidors docker"
 description   = "Criteris per crear les imatges dels contenidors docker que es desplegaran als diferents clouds públics i privats"
 sections      = "Container Cloud"
@@ -9,6 +9,14 @@ categories    = ["cloud","docker","container","paas","openshift"]
 ## Introducció
 
 A l'hora de crear les imatges dels diferents contenidors docker per les aplicacions gencat cal establir un conjunt de criteris que garanteixin la seva estabilitat i seguretat.
+
+## Imatges homologades pel CTTI
+L'equip de Suport Cloud del CTTI manté un conjunt d'imatges docker de les tecnologies més utilitzades a la Generalitat de Catalunya. Aquestes imatges són compatibles amb totes les plataformes basades en contenidors disponibles a la Generalitat (AppAgile,Openshift ,Kubernetes).
+
+Aquestes imatges docker es poden trobar al **registre docker privat**, al projecte **gencatcloud**.
+
+Podeu trobar més informació respecte el registre privat a [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/).
+
 
 ## Criteris per escollir la imatge base
 
@@ -59,7 +67,8 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 * Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html).
 
 ## Exemples
-Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [docker hub de gencatcloud](https://hub.docker.com/u/gencatcloud/).
+Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [registre docker privat](https://docker-registry.ctti.extranet.gencat.cat) projecte **gencatcloud**.
+
 Les imatges amb extensió **-openshift* són les compatibles amb la plataforma de xPaaS del mateix nom.
 
 ## Annexos

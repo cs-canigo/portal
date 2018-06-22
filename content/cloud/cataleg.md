@@ -1,5 +1,5 @@
 +++
-date        = "2016-05-11"
+date        = "2018-06-06"
 title       = "Elements del catàleg"
 description = "Docker, xPaaS, DBaaS"
 sections    = "Container Cloud"
@@ -14,7 +14,7 @@ En aquest sentit, treballarem amb dos elements principals - xPaaS i Docker - i a
 
 ## **xPaaS**
 
-Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry i OpenShift: 
+Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry: 
 
 - **buildpack** (Cloud Foundry), disponible a **cloud públic**
 	* Liberty for Java
@@ -25,28 +25,11 @@ Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que
 	* Ruby
 	* Static site (Nginx)
 
-<br />
-
-- **xpaas** (OpenShift), disponible a **cloud privat**
-	* Tomcat
-	* Node.js
-    * Perl
-	* PHP
-	* Python
-	* Ruby
-
-Les denominacions en altres clouds són:
-
-- Elastic Beanstalk (Amazon Web Services)
-- App Service (Azure)
-- App Engine (Google)
-
-En aquests xPaaS, quan es fa un "push" del codi o de l'artefacte, s'aixeca un entorn d'execució amb una potència i nombre d'instàncies prefixades.
 
 
 ### Configuració de l'engine
 
-Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 4.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
+Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 8.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
 
 _package.json_
 
@@ -60,14 +43,14 @@ _package.json_
 		test: "make test"
 	},
 	engines: {
-		node: "4.6.0"
+		node: "8.11.1"
 	},
 	dependencies: {
-		express: "^4.13.3",
+		express: "^4.16.3",
 		...
 	},
 	devDependencies: {
-		mocha: "^2.4.5",
+		mocha: "^5.2.0",
 		...
 	}
 }
@@ -81,33 +64,46 @@ _manifest.yml_ (veure a [Github](https://github.com/cloudfoundry/nodejs-buildpac
 language: nodejs
 default_versions:
 - name: node
-  version: 4.6.0
+  version: 8.11.1
 ...
 ```
 
 ## **Contenidors (Docker)**
 
-En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades a [DockerHub](https://hub.docker.com/r/gencatcloud/).
+En quant als contenidors Docker, inicialment, aliniarem les versions del software del Full de Ruta de Programari amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat).
 
-**Element**  | **Versió (1) (2)**   | **Docker**
+Si necessiteu més informació del registre privat podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/)
+
+**Element**  | **Versió**   | **Imatge Docker**
 ------------ | ------------ |-----------
-Apache 		 | actual FRP    | https://hub.docker.com/r/gencatcloud/httpd/
-Apache GICAR | 2.0    | Demanar a [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat)    | -
-HAProxy		 | 1.5.1        | https://hub.docker.com/r/gencatcloud/haproxy/
-Java		 | actual FRP   | https://hub.docker.com/r/gencatcloud/java/
-MongoDB 	 | 3.2.7   | https://hub.docker.com/r/gencatcloud/mongodb/
-MySql 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/mysql/
-NodeJS 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/node/
-PHP 		 | actual FRP   | https://hub.docker.com/r/gencatcloud/apache-php/
-Postgres	 | 9.5.3    | https://hub.docker.com/r/gencatcloud/postgres/
-Tomcat  	 | actual FRP   | https://hub.docker.com/r/gencatcloud/tomcat/
+Apache 		 | 2.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4
+Apache GICAR Shibboleth| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3   |
+Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   |
+Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0
+Nginx  	 | 1.10.3   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.10.3
+Nginx  	 | 1.12.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12.2
+Nginx  	 | 1.14.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14.0
+HAProxy		 | 1.5.1        | docker-registry.ctti.extranet.gencat.cat/gencatcloud/haproxy:1.5.1
+Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7
+Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
+MongoDB 	 | 3.2.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2
+MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7
+NodeJS 		 | 4.8.6   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4.8
+NodeJS 		 | 6.12.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:6.12
+NodeJS 		 | 8.9.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8.9
+PHP 		 | 5.6.32   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:5.6
+PHP 		 | 7.1.11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.1
+Postgres	 | 9.6.5    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6
+Tomcat  	 | 7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7
+Tomcat  	 | 8.0-java7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0-java7
+Tomcat  	 | 8.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0
+Tomcat  	 | 8.5   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.5
 
-(1) Per a tots els elements presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) està disponible la versió actual CTTI.
-
-(2) Per als elements que no estan presents al [Full de Ruta del Programari (FRP) del CTTI](https://portic.ctti.gencat.cat/les_tic/Normativa/arquitectura/Documents/Full%20de%20Ruta%20del%20Programari.pdf) s'especifica la versió disponible més actual.
 
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
+
+Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud/dockerImages/).
 
 Més informació sobre Docker: https://www.docker.com/
 
@@ -125,5 +121,6 @@ Tampoc ofereix un entorn en alta disponibilitat. És una modalitat no recomanada
 - ElasticSearch, disponible a **cloud públic**
 - PostgreSQL, disponible a **cloud públic**
 - SQLServer, disponible a **cloud públic**
+- MySQL, disponible a **cloud públic**
 
 A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús enlloc de bases de dades en contenidors.
