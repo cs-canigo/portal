@@ -153,7 +153,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/Inventariv2.json",
+        "ajax": "../FullRuta20/inventariv2.json",
 	"autoFill": {
             "columns": [3,4,5,6,7]
         },
