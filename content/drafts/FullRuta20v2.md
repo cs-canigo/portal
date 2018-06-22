@@ -140,10 +140,6 @@ function format(d) {
 }
 $(document).ready(function() {
     var taulaFullRuta = $('#FullRuta').DataTable( {
-       "ColumnDefs": [
-        { "Width": "50px", "Targets": [5,6,7] },
-        { "Width": "80px", "Targets": [1,2,3,4] },
-        ],
 	"paging": false,
 	"info" : false,
 	"ordering": false,
