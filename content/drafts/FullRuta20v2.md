@@ -1,7 +1,7 @@
 +++
-date        = "2018-06-21"
-title       = "Full de Ruta 2.1"
-description = "Full de Ruta 2.1"
+date        = "2018-05-28"
+title       = "Full de Ruta 2.5"
+description = "Full de Ruta 2.5"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -68,13 +68,14 @@ etc.)
 1. Arran del dinamisme de les versions de les diferents tecnologies per part dels fabricants, el full de ruta ha de ser revisat quadrimestralment. D’aquesta forma cada full de ruta publicat contindrà les dates de la darrera revisió i validesa de la informació que conté.
 
 # ANNEX A (normatiu) Programari estandarditzat
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.1/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
-<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-<table id="Revisio" class="display responsive no-wrap" style="width:50%">
+<table id="Revisio" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th>Darrera revisió realitzada</th>
@@ -86,17 +87,17 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display responsive no-wrap" style="width:50%">
+<table id="FullRuta" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th></th>
                 <th>Producte</th>
                 <th>Categoria</th>
-                <th>Obsolet     </th>
-                <th>Suportat     </th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
                 <th>Versió Actual</th>
-                <th>En Roadmap   </th>
-                <th>Emergent     </th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
             </tr>
         </thead>
 </table>
@@ -140,7 +141,13 @@ function format(d) {
 }
 $(document).ready(function() {
     var taulaFullRuta = $('#FullRuta').DataTable( {
-	"paging": false,
+    // Intento de cambiar ancho de columnas
+        "ColumnDefs": [
+    { "Width": "50px", "Targets": [5,6,7] },
+    { "Width": "80px", "Targets": [1,2,3,4] },
+    ],
+    // *************************************
+    "paging": false,
 	"info" : false,
 	"ordering": false,
 	"responsive": true,
@@ -149,13 +156,14 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariv2.json",
+        "ajax": "../FullRuta20/Inventari.json",
         "columns": [
             {
                 "className":      'details-control',
                 "orderable":      false,
                 "data":           null,
-                "defaultContent": ''
+                "defaultContent": '',
+	            "width": "80%"
             },
             { "data": "producte" },
             { "data": "categoria" },
