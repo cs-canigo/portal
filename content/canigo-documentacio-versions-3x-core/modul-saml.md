@@ -3,7 +3,7 @@ date        = "2018-06-18"
 title       = "Mòdul Seguretat SAML"
 description = "Autenticació d'usuaris utilitzant SAML2"
 sections    = "Canigó. Documentació versió 3.x"
-weight      = 11
+weight      = 10
 +++
 
 ## Propòsit
