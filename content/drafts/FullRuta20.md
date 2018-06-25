@@ -152,7 +152,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index===0){
+                if (col_index !==1 && col_index !==2){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
