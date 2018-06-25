@@ -6,7 +6,7 @@ tr.shown td.details-control {
     background: url('https://canigo.ctti.gencat.cat/drafts/FullRuta20/details_close.png') no-repeat center center;
 }
 
-div.container { max-width: 800px }
+div.container { width: 80%; }
 
 .intern {
 font-weight: bold;
