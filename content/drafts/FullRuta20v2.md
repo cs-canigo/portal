@@ -143,7 +143,7 @@ $(document).ready(function() {
     var taulaFullRuta = $('#FullRuta').DataTable( {
     "columnDefs": [
         { "width": "20%", "targets": 1 }
-    ]
+    ],
     "paging": false,
 	"info" : false,
 	"ordering": false,
