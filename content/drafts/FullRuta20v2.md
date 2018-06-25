@@ -87,7 +87,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display responsive nowrap" style="width:80%">
+<table id="FullRuta" class="display responsive nowrap" style="width:100%">
         <thead>
             <tr>
                 <th></th>
@@ -141,12 +141,6 @@ function format(d) {
 }
 $(document).ready(function() {
     var taulaFullRuta = $('#FullRuta').DataTable( {
-    // Intento de cambiar ancho de columnas
-        "ColumnDefs": [
-    { "Width": "50px", "Targets": [5,6,7] },
-    { "Width": "80px", "Targets": [1,2,3,4] },
-    ],
-    // *************************************
     "paging": false,
 	"info" : false,
 	"ordering": false,
@@ -158,7 +152,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/Inventari.json",
+        "ajax": "../FullRuta20/inventariv2.json",
         "columns": [
             {
                 "className":      'details-control',
