@@ -75,7 +75,7 @@ etc.)
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-<table id="Revisio" class="display responsive nowrap" style="width:100%">
+<table id="Revisio" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Darrera revisió realitzada</th>
@@ -87,7 +87,7 @@ etc.)
              </tr>
         </thead>
 </table>
-<table id="FullRuta" class="display responsive nowrap" style="width:100%">
+<table id="FullRuta" class="display" style="width:100%">
         <thead>
             <tr>
                 <th></th>
