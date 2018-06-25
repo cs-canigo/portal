@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-25"
-title       = "Full de Ruta 2.3"
-description = "Full de Ruta 2.3"
+title       = "Full de Ruta 2.4"
+description = "Full de Ruta 2.4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -141,6 +141,9 @@ function format(d) {
 }
 $(document).ready(function() {
     var taulaFullRuta = $('#FullRuta').DataTable( {
+    "columnDefs": [
+        { "width": "20%", "targets": 1 }
+    ]
     "paging": false,
 	"info" : false,
 	"ordering": false,
