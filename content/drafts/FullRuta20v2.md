@@ -1,7 +1,7 @@
 +++
-date        = "2018-05-28"
-title       = "Full de Ruta 2.5"
-description = "Full de Ruta 2.5"
+date        = "2018-05-25"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -150,7 +150,9 @@ $(document).ready(function() {
     "paging": false,
 	"info" : false,
 	"ordering": false,
-	"responsive": true,
+	"responsive": {
+            details: false
+    	},
     	"language":{
 	        	"search" : "<strong>Cerca:</strong> ",
 		        "infoEmpty": "No hi ha registres",
