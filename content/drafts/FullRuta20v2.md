@@ -164,7 +164,7 @@ $(document).ready(function() {
                 "defaultContent": '',
 	            "width": "20%"
             },
-            { "data": "producte" 
+            { "data": "producte", 
 	      "className":      'intern'
 	    },
             { "data": "categoria" },
