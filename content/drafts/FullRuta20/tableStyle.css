@@ -1,3 +1,9 @@
+#FullRuta td:nth-child(1),
+#FullRuta th:nth-child(1)
+{
+    text-align : center;
+    font-weight: bold;
+}
 td.details-control {
     background: url('https://canigo.ctti.gencat.cat/drafts/FullRuta20/details_open.png') no-repeat center center;
     cursor: pointer;
