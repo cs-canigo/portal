@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-25"
-title       = "Full de Ruta 2.3"
-description = "Full de Ruta 2.3"
+title       = "Full de Ruta 2.4"
+description = "Full de Ruta 2.4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -166,10 +166,10 @@ $(document).ready(function() {
             },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "100%"
+	      "width": "80%"
 	    },
             { "data": "categoria",
-	      "width": "100%" },
+	      "width": "90%" },
             { "data": "obsolet",
 	      "width": "100%" },
             { "data": "suportat",
