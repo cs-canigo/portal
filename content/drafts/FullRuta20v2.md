@@ -54,10 +54,7 @@ A l'annex <a href='{{<relref "#maduresa" >}}'>Maduresa d'una tecnologia</a> es r
 
 ##### Mètode de classificació
 
-Per cada tecnologia inclosa en el full de ruta se li associen 2 valors:
-
-- El **Grup de tecnologies** al que pertany (base de dades, gestió documental, sistema operatiu,
-etc.)
+Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnologies** al que pertany (base de dades, gestió documental, sistema operatiu, etc.)
 
 ## Part 4: Requisits del programari
 
@@ -92,7 +89,7 @@ etc.)
             <tr>
                 <th></th>
                 <th>Producte</th>
-                <th>Categoria</th>
+                <th>Grup de Tecnologies</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
                 <th>Versió Actual</th>
@@ -224,3 +221,30 @@ $(document).ready(function() {
     });
 });
 </script>
+
+# ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
+
+### La maduresa des del punt de vista del grau de suport intern
+
+Una tecnologia en les seves diferents versions pot passar per 5 estadis diferents. 
+
+- **Obsolet**. Una versió d’una tecnologia es considerarà obsoleta en el moment en què estigui fora de la línia de manteniment correctiu del seu fabricant, ja sigui perquè està en període de suport extès o completament fora de suport del fabricant.
+
+- **Suportat**. Una versió d’un producte es considerarà suportada mentre el fabricant (o una empresa de serveis especialitzada) doni suport de manteniment estàndard de la versió del programari.
+
+- **Versió actual CTTI**. És la versió de programari que s’està desplegant actualment. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar.
+
+- **En Roadmap CTTI**. És la versió de programari que està estudiant-se per la seva futura implantació. Un cop definida i implantada l’arquitectura de la versió, aquesta passarà a ser la “versió actual CTTI”.
+
+- **Emergent**. És la darrera versió de programari publicada pel fabricant i reconeguda internament però que encara no està en avaluació per la seva implantació (és a dir, ni “En Roadmap CTTI” ni en “Versió actual CTTI”).
+
+### La maduresa des del punt de vista del fabricant
+
+Segons el fabricant d’una tecnologia, un producte en les seves diferents versions pot passar per 3 estadis diferents. 
+
+- **No suportat**. Versió sobre la que ja no es presta suport o bé es presta un suport extès, normalment amb uns costos superiors als del manteniment habitual.
+
+- **Suport estàndard**. Versió de programari sobre la que es presta suport evolutiu i correctiu. 
+
+- **Actual**. Versió considerada com a actual per part del fabricant (coincideix amb les versions que estan en període de suport).
+ 
