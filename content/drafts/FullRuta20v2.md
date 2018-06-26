@@ -1,7 +1,7 @@
 +++
 date        = "2018-05-25"
-title       = "Full de Ruta 2.2"
-description = "Full de Ruta 2.2"
+title       = "Full de Ruta 2.3"
+description = "Full de Ruta 2.3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -162,17 +162,26 @@ $(document).ready(function() {
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": '',
-	            "width": "20%"
+	        "width": "20%"
             },
             { "data": "producte", 
-	      "className":      'intern'
+	      "className":      'intern',
+	      "width": "100%"
 	    },
-            { "data": "categoria" },
-            { "data": "obsolet" },
-            { "data": "suportat" },
-            { "data": "versioactual" },
-            { "data": "roadmap" },
-            { "data": "emergent" }
+            { "data": "categoria",
+	      "width": "100%" },
+            { "data": "obsolet",
+	      "width": "100%" },
+            { "data": "suportat",
+	      "width": "100%" },
+            { "data": "versioactual",
+	      "className":      'intern',
+	      "width": "80%"
+	    },
+            { "data": "roadmap",
+	      "width": "50%" },
+            { "data": "emergent",
+	      "width": "50%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
