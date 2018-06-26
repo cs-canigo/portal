@@ -166,7 +166,7 @@ $(document).ready(function() {
             },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "80%"
+	      "width": "50%"
 	    },
             { "data": "categoria",
 	      "width": "90%" },
