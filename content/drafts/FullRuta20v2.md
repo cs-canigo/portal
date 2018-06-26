@@ -1,7 +1,7 @@
 +++
-date        = "2018-05-25"
-title       = "Full de Ruta 2.4"
-description = "Full de Ruta 2.4"
+date        = "2018-06-26"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -72,7 +72,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-<table id="Revisio" class="display" style="width:100%">
+<table id="Revisio" class="display" style="width:50%">
         <thead>
             <tr>
                 <th>Darrera revisió realitzada</th>
@@ -221,6 +221,8 @@ $(document).ready(function() {
     });
 });
 </script>
+
+
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
 
