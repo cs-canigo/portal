@@ -1,5 +1,5 @@
 +++
-date          = "2017-11-02"
+date          = "2018-07-02"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
@@ -14,7 +14,7 @@ En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a la plataforma d'IBM Bluemix. 
 
-La versió de Kubernetes disponible és la  **1.7.4_1503**.
+La versió de Kubernetes disponible és la  **1.9.8**.
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
@@ -281,4 +281,4 @@ spec:
 
 ## Informació relacionada
 
-* https://v1-7.docs.kubernetes.io/docs/home/
+* https://v1-9.docs.kubernetes.io/

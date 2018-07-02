@@ -1,5 +1,5 @@
 +++
-date          = "2017-11-02"
+date          = "2018-07-02"
 title         = "Contenidors AppAgile"
 description   = "Consideracions i exemples respecte els contenidors a AppAgile"
 sections      = "Container Cloud"
@@ -8,7 +8,7 @@ categories    = ["cloud","docker","container","paas","openshift","appagile"]
 +++
 
 ## Introducció
-AppAgile és un orquestrador d'imatges docker basat en Openshift que addicionalment està basat en Kubernetes. La versió actual d'AppAgile es basa concretament en la versió OpenShift Container Platform 3.4.1.12 i Kubernetes 1.4.0.
+AppAgile és un orquestrador d'imatges docker basat en Openshift que addicionalment està basat en Kubernetes. La versió actual d'AppAgile es basa concretament en la versió OpenShift Container Platform 3.5.5 i Kubernetes 1.5.2.
 
 En aquest article es defineix l'arquitectura tipus d'una aplicació a AppAgile i es proporcionen diversos exemples.
 
@@ -262,4 +262,4 @@ spec:
 ## Informació relacionada
 
 * http://appagile.io/
-* https://docs.openshift.com/container-platform/3.4/
+* https://docs.openshift.com/container-platform/3.5/
