@@ -16,7 +16,7 @@ Per les aplicacions que estiguin en servei:
 
 - **Remedy**
 
-_Incidències_, _Consultes_(*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "A6-N3-CLOUD" com a "Assigned Group".
+_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "A6-N3-CLOUD" com a "Assigned Group".
 
 (*) per les consultes cal informar al camp “INCIDENT TYPE” el valor “USER SERVICE REQUEST”.
 
@@ -28,7 +28,7 @@ Donat que a les plataformes Cloud gestionades des de Suport Cloud es dóna accé
 
 #### Aplicacions en fase de projecte
 
-Per les aplicacions en fase de projecte, la comunicació sempre s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte NOM_PROJECTE". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició imatges Docker, definició descriptors de desplegament,...) es canalitzarà en aquesta petició.
+Per les aplicacions en fase de projecte la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament Suport Cloud**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD). El proveïdor d'aplicacions ha de crear una petició en aquest servei informant el camp Sumari "Suport projecte NOM_PROJECTE". Mentre l'aplicació estigui en fase de projecte tot el suport (Ex. definició imatges Docker, definició descriptors de desplegament,...) es canalitzarà en aquesta petició.
 
 <br/>
 
@@ -39,5 +39,3 @@ _Consultes_ i _Suports_ han de realitzar-se al servei [**CS Suport Cloud**](http
 <br/>
 
 En cas que no es disposi d'usuari al CSTD, cal que el gestor de projecte CTTI de l'aplicació faci arribar la petició d'alta d'usuari al propi [servei CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CSTD) o bé enviant un correu a la bústia [cstd.ctti@gencat.cat](mailto:cstd.ctti@gencat.cat).
-
-A partir de l'**1 de Març de 2018**, totes les peticions que s'enviïn a la bústia [suport.cloud@gencat.cat](mailto:suport.cloud@gencat.cat) seràn redirigides al canal adient.
