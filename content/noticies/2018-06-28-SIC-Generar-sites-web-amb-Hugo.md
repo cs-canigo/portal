@@ -27,14 +27,17 @@ A partir d'una configuració inicial (que sí requereix la participació d'un pe
 
 Com inconvenient, òbviament, per a webs que requereixin més funcionalitat que la de mostrar continguts (passarel·les de pagament, operatives funcionals, etc.) es requerirà disposar de continguts dinàmics i caldrà adoptar una altra solució.
 
+## Exemples de webs amb Hugo
+
+A CTTI ja s'està emprant aquest generador estàtic de webs. Webs com aquest mateix d'**Arquitectura** o com el de **Solucions Corporatives** han estat generats amb aquesta eina.
+
 ## Ús d'Hugo al SIC
 
 Si disposeu d'un web estàtic generat amb Hugo, per integrar-lo al SIC caldrà que seguiu el procediment estàndard d'integració:
 
 1. Repositar el web al Gitlab del SIC, dins del codi d'aplicació adient.
 2. Crear la carpeta `/sic` a l'arrel del projecte i incloure l'arxiu `/sic/sic.yml` per incloure la versió cada cop que feu un push.
-3. Com la funcionalitat de l'Autoservei de jobs Pipeline està en mode pilot encara, ens encarregarem des del SIC de generar els arxius ACA i ACI.
-4. Un cop estiguin creats aquests arxius, ja s'haurà integrat l'aplicació al SIC i en cada push haureu de confirmar el desplegament als entorns de PRE i PRO. Si disposeu d'entorn d'INT, el desplegament es farà automàticament.
+3. Un cop estiguin creats aquests arxius, ja s'haurà integrat l'aplicació al SIC i en cada push haureu de confirmar el desplegament als entorns de PRE i PRO. Si disposeu d'entorn d'INT, el desplegament es farà automàticament.
 
 Internament la pipeline generarà el web a una carpeta temporal i generarà un arxiu .zip que consistirà en l'artefacte estàtic que es desplegarà als servidors web de cada entorn.
 
