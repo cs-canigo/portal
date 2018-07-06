@@ -1,13 +1,13 @@
 +++
 date        = "2018-06-28"
-title       = "SIC. Generació de sites web amb Hugo"
-description = "En aquest article s'explica el procediment d'integració i el funcionament d'una web generada amb Hugo."
+title       = "SIC. Generació de llocs web estàtics amb Hugo"
+description = "En aquest article s'explica el funcionament d'una web generada amb Hugo i el procediment d'integració al SIC"
 sections    = ["Notícies","home"]
 categories  = ["sic"]
 key         = "JULIOL2018"
 +++
 
-El passat mes de juny es va integrar el generador Hugo al SIC, que permet generar webs amb contingut estàtic d'una forma còmoda, fiable i eficient.
+El passat mes de juny es va integrar el generador [Hugo](https://gohugo.io/) al SIC, el qual permet generar webs amb contingut estàtic d'una forma còmoda, fiable i eficient.
 
 ## Què és Hugo?
 
@@ -15,7 +15,7 @@ Hugo és un dels molts **generadors de webs estàtiques** que han sorgit en els 
 
 Un generador de webs estàtiques facilita la generació i la publicació dels continguts estàtics (HTML, CSS, elements multimèdia...) fins al punt que el manteniment del web no cal que es dugui a terme per part d'una persona amb perfil tècnic.
 
-Amb l'ús de la senzilla sintaxi de Markdown, que permet aplicar estils, introduir enllaços i imatges amb facilitat, els usuaris poden generar continguts amb aspecte professional sense entrar en els detalls tècnics dels estils CSS i dels elements HTML.
+Amb l'ús de la senzilla sintaxi de [Markdown](https://gohugo.io/content-management/formats/#learn-markdown), que permet aplicar estils, introduir enllaços i imatges amb facilitat, els usuaris poden generar continguts amb aspecte professional sense entrar en els detalls tècnics dels estils CSS i dels elements HTML.
 
 A partir d'una configuració inicial (que sí requereix la participació d'un perfil tècnic), la posterior generació de continguts pot ser realitzada per un redactor sense coneixements tècnics. A tots els efectes pot substituir el paper d'eines dinàmiques de generació de blogs (com Joomla, Drupal o Wordpress) amb els avantatges de les webs estàtiques:
 
@@ -29,7 +29,7 @@ Com inconvenient, òbviament, per a webs que requereixin més funcionalitat que 
 
 ## Exemples de webs amb Hugo
 
-A CTTI ja s'està emprant aquest generador estàtic de webs. Webs com aquest mateix d'**Arquitectura** o com el de **Solucions Corporatives** han estat generats amb aquesta eina.
+A CTTI ja s'està emprant aquest generador estàtic de webs. Webs com aquest mateix d'[**Arquitectura**](https://canigo.ctti.gencat.cat/) o com el de [**Qualitat**](https://qualitat.solucions.gencat.cat/) han estat generats amb aquesta eina.
 
 ## Ús d'Hugo al SIC
 
