@@ -12,16 +12,22 @@ key         = "JULIOL2018"
 
 ## Introducció
 
-Els sistemes de informació han de ser fiables i estar disponibles, perquè les organitzacions en puguin dependre amb confiança. De fet, avui en dia gairebé tota iniciativa de qualsevol negoci depèn de la tecnologia en major o menor grau. Una aplicació creada per suportar un cas d’ús determinat no aporta valor si el departament de tecnologies de la informació no és capaç d’oferir una operació normal i mantenir les disrupcions a la mínima expressió. En aquest sentit, Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l’aprovisionament d’infraestructures mitjançant codi. Ara és el moment de mirar més enllà i plantejar una estratègia de DevOps que permeti desplegar aquesta capacitat a tota la Generalitat. 
+Els sistemes de informació han de ser fiables i estar disponibles perquè les organitzacions en puguin dependre amb confiança. De fet, avui en dia gairebé tota iniciativa de qualsevol negoci depèn de la tecnologia en major o menor grau. Una aplicació creada per suportar un cas d’ús determinat no aporta valor si el departament de tecnologies de la informació no és capaç d’oferir una operació normal i mantenir les disrupcions a la mínima expressió. En aquest sentit, Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l’aprovisionament d’infraestructures mitjançant codi. Ara és el moment de mirar més enllà i plantejar una estratègia de DevOps que permeti desplegar aquesta capacitat a tota la Generalitat. 
 
 
 ## Origen i Motivació
 
 El terme “DevOps” va ser creat per Patrick Debois i Andrew Shafer el 2008, i va començar a ser d’ús comú el 2009 amb la ponència de John Allspaw i Paul Hammond “10+ Deploy Per Day: Dev and Ops Cooperation at Flickr” a la O’Reilly Velocity Conference.
+
 L’impacte que van produir Allspaw i Hammond va ser considerable. Presentaven una cosa mai vista abans com que Desenvolupament i Operacions col·laboraven per aconseguir fer més de 10 desplegaments al dia al portal Flickr. 
+
 L’escenari que tenien era l’habitual en moltes organitzacions que es basen en les tecnologies d’informació. Desenvolupament rep l’encàrrec de materialitzar una idea de negoci en una aplicació que pugui ser consumida amb fluïdesa pels usuaris. Operacions és el responsable de mantenir les aplicacions en marxa. Per la divisió de responsabilitats i coneixements entre els dos departaments, la comunicació és difícil, normalment basada en correus electrònics, tiquets i escalats. Per tirar endavant els projectes i que acabin en dates, s’hi aboquen desenvolupadors i múltiples capes de gestors que fan servir gran part del temps i pressupost en desenvolupar les funcionalitats. Els departaments de Qualitat i d’Operacions reben una part insuficient d’aquest temps, sense tenir marge a fer proves ni rebre convenientment l’aplicació a Operacions. Per la raó que ningú es vol fer responsable d’un retard a la data, tant QA com Operacions rebaixen la dedicació possible i s’assumeix un deute tècnic, que s’intentarà eixugar un cop l’aplicació ja estigui en producció.
+
 En aquest escenari, els resultats sovint no són satisfactoris. Normalment el producte és inestable i amb mancances d’usabilitat. A partir d’aquí és Operacions qui fa mans i mànigues per mantenir l’aplicació amunt, aplicant la força bruta, posant més servidors dels que estaven previstos en les estimacions, i havent de fer reinicis sovint, per culpa d’un codi que no ha passat un mínim control de qualitat ni és operat adequadament per manca d’instruccions fiables.
+
+
 El deute tècnic no és un concepte eteri ni difícil d’observar. Es tota aquella feina no planificada que s’està obligat a fer degut a un mal desenvolupament i un desplegament inadequat. Malgrat aplicar rigor, disciplina, eficiències i processos, la feina no planificada passa per davant dels altres tipus de feina; projectes de negoci, projectes d’operacions i canvis planificats.
+
 La feina no planificada distorsiona qualsevol planificació ordenada de la feina d’Operacions i de Desenvolupament. Crema als equips, impedeix que l’organització avanci i mina la confiança del Negoci sobre les àrees TIC.
 La feina no planificada resulta molt cara, doncs es realitza a canvi de feina planificada. Sense un control efectiu, el deute tècnic que comporta aquest fenomen provocarà que l’únic treball que es faci sigui la feina no planificada.
 Allspaw i Hammond van demostrar que aquesta espiral es podia trencar i obtenir resultats inimaginables abans, mitjançant la col·laboració i la confiança entre els equips de Devs i Ops.
