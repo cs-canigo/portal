@@ -1,5 +1,5 @@
 +++
-date        = "2018-06-01"
+date        = "2018-07-25"
 title       = "Entorns de desenvolupament"
 description = "Entorns de desenvolupament recomanats compatibles amb les Plataformes Cloud"
 sections    = "Container Cloud"
@@ -7,13 +7,13 @@ weight      = 7
 categories  = ["cloud","docker","container","paas"]
 +++
 
-## Openshift
+## AppAgile
 
 Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en OpenShift, es recomana utilitzar [Minishift](https://www.openshift.org/minishift/). La versió a instal·lar ha de ser compatible amb la versió d'OpenShift.
 
 **Plataforma Cloud**  | **Versió Openshift**   | **Versió Minishift compatible**
 ------------ | ------------ | ------------
-CPD4 AppAgile (privat)  |  3.5.5  | v1.3.1 o superior
+CPD4 AppAgile (privat)  |  3.6.1  | v1.11.0 o superior
 
 ## Bluemix
 
