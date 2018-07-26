@@ -11,7 +11,7 @@ Durant les darreres setmanes s'ha realitzat una tasca important d'actualització
 
 ### Tasques operatives (Novetat!)
 
-En el desplegament d'aplicacions al que anomenem Container Cloud, l'equip d'aplicacions ha d'assumir certes responsabilitats pròpies d'un model DevOps. En aquesta [plana](/cloud/2018-05-28-CLOUD-OPS-Cloud/] podeu trobar-ne el detall.
+En el desplegament d'aplicacions al que anomenem Container Cloud, l'equip d'aplicacions ha d'assumir certes responsabilitats pròpies d'un model DevOps. En aquesta [plana](/cloud/2018-05-28-CLOUD-OPS-Cloud/) podeu trobar-ne el detall.
 
 ### Elements del catàleg
 
