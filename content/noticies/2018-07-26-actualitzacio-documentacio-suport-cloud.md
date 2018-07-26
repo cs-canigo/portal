@@ -17,6 +17,10 @@ En el desplegament d'aplicacions al que anomenem Container Cloud, l'equip d'apli
 
 De forma periòdica es fa una actualització dels diferents elements que formen part del [catàleg](/cloud/cataleg/) de Suport Cloud. En el cas de les imatges Docker desenvolupades pel propi equip de Suport Cloud, l'objectiu és oferir sempre versions suportades de les diferents tecnologies i les més actuals possible. En cas que la tecnologia ofereixi una versió LTS (Long Term Support), com per exemple NodeJS, sempre s'intentarà estar alineat amb aquesta versió.
 
+Com novetat important, s'ha publicat el codi font de les imatges Docker de Suport Cloud. D'aquesta manera, els proveïdors d'aplicacions dispossen del detall de la implementació d'aquestes imatges. Només els usuaris amb accés al Git del SIC hi tenen accés.
+
+![suport-cloud-docker-images.png](/images/news/suport-cloud-docker-images.png)
+
 ### Matriu catàleg Cloud
 
 Per facilitar la recerca de disponibilitat d'elements de catàleg en un determinat Cloud Privat o Públic, es pot utilitzar la següent [matriu](/cloud/matriu-cataleg-cloud/).
