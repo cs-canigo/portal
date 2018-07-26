@@ -23,4 +23,4 @@ Per facilitar la recerca de disponibilitat d'elements de catàleg en un determin
 
 ### Entorns de desenvolupament
 
-Des de Suport Cloud es recomana utilitzar [entorns de desenvolupament o test](/cloud/entorns-dev/) el més alineats possibles amb les plataformes Container Cloud. És per aquest motiu que quan s'actualitza un Container Cloud, s'actualitza també la versió corresponent de la plataforma de desenvolupament equivalent. És molt important sobretot alhora de definir els descriptors de desplegament (yaml), ja que canvis de versió poden suposar canvis en aquests descriptors.
+Des de Suport Cloud es recomana utilitzar [entorns de desenvolupament o test](/cloud/entorns-dev/) el més alineats possible amb les plataformes Container Cloud. És per aquest motiu que quan s'actualitza un Container Cloud, s'actualitza també la versió de la plataforma de desenvolupament equivalent. És molt important sobretot alhora de definir els descriptors de desplegament (yaml), ja que canvis de versió poden suposar canvis en aquests descriptors.
