@@ -6,7 +6,7 @@ sections    = ["Blog", "home"]
 blog_tags   = ["Desenvolupament", "Operacions", "DevOps"]
 categories  = ["Desenvolupament", "Operacions", "DevOps"]
 imatge      = "/images/bloc/201710/devopsprocess.png"
-key         = "JULIOL2018"
+key         = "AGOST2018"
 +++
 
 
