@@ -1,7 +1,7 @@
 +++
 date        = "2018-07-26"
 title       = "Suport Cloud. Actualització documentació"
-description = "Durant les darreres setmanes s'ha realitzat una tasca important d'actualització de documentació per part de l'equip de Suport Cloud. En aquest article us fem un breu resum."
+description = "Durant les darreres setmanes s'ha realitzat una tasca important d'actualització de documentació per part de l'equip de Suport Cloud, principalment d'elements de catàleg i . En aquest article us fem un breu resum."
 sections    = ["Notícies"]
 categories  = ["cloud"]
 key         = "AGOST2018"
@@ -17,7 +17,7 @@ En el desplegament d'aplicacions al que anomenem Container Cloud, l'equip d'apli
 
 De forma periòdica es fa una actualització dels diferents elements que formen part del [catàleg](/cloud/cataleg/) de Suport Cloud. En el cas de les **imatges Docker** desenvolupades pel propi equip de Suport Cloud, l'objectiu és oferir sempre versions suportades de les diferents tecnologies i les més actuals possible. En cas que la tecnologia ofereixi una versió LTS (Long Term Support), com per exemple NodeJS, sempre s'intentarà estar alineat amb aquesta versió.
 
-Com novetat important, s'ha publicat el [codi font](https://git.intranet.gencat.cat/cloud/docker-images) de les imatges Docker de Suport Cloud. D'aquesta manera, els proveïdors d'aplicacions disposen del detall de la implementació d'aquestes imatges. Només els usuaris amb accés al [Git del SIC](https://git.intranet.gencat.cat/) hi tenen accés.
+Com novetat important, s'ha publicat el [codi font](https://git.intranet.gencat.cat/3048-intern/docker-images) de les imatges Docker de Suport Cloud. D'aquesta manera, els proveïdors d'aplicacions disposen del detall de la implementació d'aquestes imatges. Només els usuaris amb accés al [Git del SIC](https://git.intranet.gencat.cat/) hi tenen accés.
 <br><br>
 ![suport-cloud-docker-images.png](/images/news/suport-cloud-docker-images.png)
 <br>
