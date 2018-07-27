@@ -51,12 +51,17 @@ Primer de tot, afegim la següent entrada al fitxer "/etc/hosts":
 
 127.0.0.1 vagrant.vm vagrant
 
+TODO: Configuració Apache
+
 ### Proves
 
 Per a provar el funcionament, accedir a https://vagrant.vm/bridge/app mitjançant un navegador web. Veurem que se'ns redirigeix al login de GICAR. Un cop introduïdes les credencials veurem que se'ns presenta la següent plana:
 
-CAPTURA
+![samldemo-app.png](/related/canigo/howto/imatges/201808_01_samldemo-app.png)
 
 Aquesta és una plana web per proves del funcionament del mòdul de SAML, i que evidenment haurà de ser substituïda per la SPA de l'aplicació.
 
-PROVES
+(1) **Get SAML assertion and convert to JWT token**: amb aquesta acció s'obté l'asserció SAML de GICAR i es genera el token JWT per interactuar amb el backend stateless Canigó
+
+(2) **Test API equipaments**: crida a la REST API d'equipaments que ofereix l'aplicació demo Canigó "samldemo" generada amb el plugin d'Eclipse. Aquesta crida incorpora el token JWT generat a partir de l'asserció SAML
+
