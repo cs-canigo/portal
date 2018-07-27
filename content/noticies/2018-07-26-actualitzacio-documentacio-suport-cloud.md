@@ -17,10 +17,16 @@ En el desplegament d'aplicacions al que anomenem Container Cloud, l'equip d'apli
 
 De forma periòdica es fa una actualització dels diferents elements que formen part del [catàleg](/cloud/cataleg/) de Suport Cloud. En el cas de les **imatges Docker** desenvolupades pel propi equip de Suport Cloud, l'objectiu és oferir sempre versions suportades de les diferents tecnologies i les més actuals possible. En cas que la tecnologia ofereixi una versió LTS (Long Term Support), com per exemple NodeJS, sempre s'intentarà estar alineat amb aquesta versió.
 
-Com novetat important, s'ha publicat el [codi font](https://git.intranet.gencat.cat/3048-intern/docker-images) de les imatges Docker de Suport Cloud. D'aquesta manera, els proveïdors d'aplicacions disposen del detall de la implementació d'aquestes imatges. Només els usuaris amb accés al [Git del SIC](https://git.intranet.gencat.cat/) hi tenen accés.
+Com novetat important, s'ha repositat el [codi font](https://git.intranet.gencat.cat/3048-intern/docker-images) de les imatges Docker de Suport Cloud al [Git del SIC](https://git.intranet.gencat.cat/).
 <br><br>
 ![suport-cloud-docker-images.png](/images/news/suport-cloud-docker-images.png)
 <br>
+
+Aquest codi font ha estat eliminat de Github, i les imatges Docker de DockerHub, passant al registre Docker corporatiu.
+
+* https://github.com/gencat/ &rarr; https://git.intranet.gencat.cat/3048-intern/docker-images
+* https://hub.docker.com/u/gencatcloud/ &rarr; https://docker-registry.ctti.extranet.gencat.cat/
+
 ### Matriu catàleg Cloud
 
 Per facilitar la recerca de disponibilitat d'elements de catàleg en un determinat Cloud Privat o Públic, es pot utilitzar la següent [matriu](/cloud/matriu-cataleg-cloud/).
