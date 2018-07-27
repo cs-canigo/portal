@@ -20,10 +20,10 @@ categories  = ["canigo","sic","sgde"]
 
 <script type="text/javascript">
 
-	   $.getJSON("https://script.google.com/macros/s/AKfycbwXOwdyefmpRayODliduXDI2m0wCm_TKMiB_tQkkDDKaA4l9WQ/exec?callback=?", null, function(results){
+/*	   $.getJSON("https://script.google.com/macros/s/AKfycbwXOwdyefmpRayODliduXDI2m0wCm_TKMiB_tQkkDDKaA4l9WQ/exec?callback=?", null, function(results){ */
 	   			
 				var additionalOptions = {
-			    	start_at_slide: 43,
+			    	start_at_slide: 52,
 			        timenav_height: 200,
 			        height : 650,
 			        initial_zoom: 12,
@@ -33,7 +33,7 @@ categories  = ["canigo","sic","sgde"]
 			    console.log(additionalOptions)
 
 			  	timeline = new TL.Timeline('timeline-embed', 'https://docs.google.com/spreadsheets/d/1ycTBuP_02_fFQYHePMhAxAnNt70R4GyTP4phJn3EHi8/pubhtml', additionalOptions);
-	   });
+/*	   }); */
 
 
 </script>
