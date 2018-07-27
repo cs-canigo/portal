@@ -1,7 +1,7 @@
 +++
 date        = "2018-07-23"
 title       = "DevOps"
-description = "DevOps és un moviment que aplica pràctiques reconegudes i exitoses de la industria als sistemes d'informació"
+description = "DevOps és un moviment que aplica pràctiques reconegudes i exitoses de la industria als sistemes d'informació.  Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l’aprovisionament d’infraestructures mitjançant codi."
 sections    = ["Blog", "home"]
 blog_tags   = ["Desenvolupament", "Operacions", "DevOps"]
 categories  = ["Desenvolupament", "Operacions", "DevOps"]
