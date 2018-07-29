@@ -1,7 +1,7 @@
 +++
 date        = "2018-07-26"
 title       = "Suport Cloud. Actualització documentació"
-description = "Durant les darreres setmanes s'ha realitzat una tasca important d'actualització de documentació per part de l'equip de Suport Cloud, principalment d'elements de catàleg i . En aquest article us fem un breu resum."
+description = "Durant les darreres setmanes s'ha realitzat una tasca important d'actualització de documentació per part de l'equip de Suport Cloud, principalment d'elements de catàleg i tasques operatives a realitzar per part dels proveïdors d'aplicacions. En aquest article us fem un breu resum."
 sections    = ["Notícies"]
 categories  = ["cloud"]
 key         = "AGOST2018"
