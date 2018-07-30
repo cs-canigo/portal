@@ -51,7 +51,89 @@ Primer de tot, afegim la següent entrada al fitxer "/etc/hosts":
 
 127.0.0.1 vagrant.vm vagrant
 
-TODO: Configuració Apache
+Generem el certificat autosignat i la clau privada amb openssl:
+
+```
+$ openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/apache.crt -keyout /etc/apache2/ssl/apache.key
+```
+
+Activem els mòduls necessaris per el SSL i el proxy pass:
+
+```
+$ a2enmod ssl proxy proxy_connect proxy_http
+```
+
+Per la configuració del site:
+
+_/etc/apache2/sites-available/001-ssl.conf_
+```
+<VirtualHost _default_:443>
+
+#Path on es deixa el contingut stàtic de l'aplicació Bridge
+DocumentRoot "/var/www/html/saml"
+ServerName vagrant.vm
+ServerAlias www.vagrant.vm
+ServerAdmin admin@example.cat
+ErrorLog "/var/log/apache2/error_bridge.log"
+TransferLog "/var/log/apache2/access.log"
+
+SSLEngine on
+
+SSLProxyEngine on
+
+ProxyRequests Off
+ProxyPreserveHost On
+
+#connexió amb l'aplicació Bridge
+ProxyPass /bridge/ http://localhost:8080/bridge/
+ProxyPassReverse /bridge/ http://localhost:8080/bridge/
+
+#connexió amb l'API de Canigó
+ProxyPass /api/ http://localhost:9090/api/
+ProxyPassReverse /api/ http://localhost:9090/api/
+
+SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+
+#Certificats SSL
+SSLCertificateFile "/etc/apache2/ssl/apache.crt"
+SSLCertificateKeyFile "/etc/apache2/ssl/apache.key"
+
+<FilesMatch "\.(cgi|shtml|phtml|php)$">
+    SSLOptions +StdEnvVars
+</FilesMatch>
+<Directory "/usr/lib/cgi-bin">
+    SSLOptions +StdEnvVars
+</Directory>
+
+BrowserMatch ".*MSIE.*" \
+         nokeepalive ssl-unclean-shutdown \
+         downgrade-1.0 force-response-1.0
+
+
+</VirtualHost>
+```
+
+Habilitem el site amb la següent comanda:
+
+```
+$ a2ensite 001-ssl.conf
+```
+
+Per la configuració de l'accés SSL al site:
+
+_/etc/apache2/conf-available/ssl.conf_
+```
+<IfModule ssl_module>
+  Include sites-enabled/001-ssl.conf
+  SSLRandomSeed startup builtin
+  SSLRandomSeed connect builtin
+</IfModule>
+```
+I la seva activació:
+
+```
+$ a2enconf ssl
+```
 
 ### Proves
 
@@ -59,7 +141,7 @@ Per a provar el funcionament, accedir a https://vagrant.vm/bridge/app mitjançan
 
 ![samldemo-app.png](/related/canigo/howto/imatges/201808_01_samldemo-app.png)
 
-Aquesta és una plana web per proves del funcionament del mòdul de SAML, i que evidenment haurà de ser substituïda per la SPA de l'aplicació.
+Aquesta és una plana web de demo inclosa en l'aplicació bridge, per proves del funcionament del mòdul de SAML:
 
 (1) **Get SAML assertion and convert to JWT token**: amb aquesta acció s'obté l'asserció SAML de GICAR i es genera el token JWT per interactuar amb el backend stateless Canigó
 
