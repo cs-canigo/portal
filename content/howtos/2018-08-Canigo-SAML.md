@@ -25,13 +25,15 @@ Primer de tot cal dispossar de l'entorn de desenvolupament en cas de no haver-lo
 
 Per aquesta demo cal que l'aplicació creada mitjançant el plugin d'Eclipse de Canigó incorpori el mòdul de seguretat de SAML.
 
-_Eclipse_ &rarr; _New_ &rarr; _Other_ &rarr; _Create a Canigo Project_ &rarr; Valors per defecte i informar un nom de projecte (Ex. "samldemo")
+* _Eclipse_ &rarr; _New_ &rarr; _Other_ &rarr; _Create a Canigo Project_ &rarr; Valors per defecte i informar un nom de projecte (Ex. "samldemo")
 
-_"samldemo"_ &rarr; _Canigó_ &rarr; _Add new module_ &rarr; _Security Module_ &rarr; _Do you want token based security? (yes)_ &rarr; _Select security provider/s (Arxiu)_ &rarr; _Desitja utilitzar SAML (Yes)_
+* _"samldemo"_ &rarr; _Canigó_ &rarr; _Add new module_ &rarr; _Security Module_ &rarr; _Do you want token based security? (yes)_ &rarr; _Select security provider/s (Arxiu)_ &rarr; _Desitja utilitzar SAML (Yes)_
 
 Al fitxer samldemo/src/main/resources/config/props/security.users.properties afegir un usuari existent a GICAR PRE:
 
+```
 <DNI>=dummy,ROLE_USER,ROLE_ADMIN,enabled
+```
 
 Crear el fitxer samldemo/src/main/resources/application.properties i afegir l'entrada "server.port=9090"
 
@@ -39,7 +41,7 @@ En aquest punt, construïm l'aplicació _"samldemo" &rarr; _Run As_ &rarr; _Mave
 
 ### Aplicació bridge
 
-L'autenticació amb GICAR no es farà directament des de l'aplicació Canigó (stateless per defecte), si no a través d'una aplicació bridge (stateful). Aquesta aplicació bridge s'ha de sol·licitar a l'equip del CS Canigó ja que conté dades sensibles.
+L'autenticació amb GICAR no es farà directament des de l'aplicació Canigó (stateless per defecte), sinó a través d'una aplicació bridge (stateful). Aquesta aplicació bridge s'ha de sol·licitar a l'equip del CS Canigó ja que conté dades sensibles.
 
 Un cop importada al workspace de l'Eclipse, la construïm _"appBridge" &rarr; _Run As_ &rarr; _Maven install_
 
@@ -49,7 +51,9 @@ Per aquest HowTo, per treballar amb dominis i SSL, s'utilitzarà un frontal Apac
 
 Primer de tot, afegim la següent entrada al fitxer "/etc/hosts":
 
+```
 127.0.0.1 vagrant.vm vagrant
+```
 
 Generem el certificat autosignat i la clau privada amb openssl:
 
@@ -57,7 +61,7 @@ Generem el certificat autosignat i la clau privada amb openssl:
 $ openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out /etc/apache2/ssl/apache.crt -keyout /etc/apache2/ssl/apache.key
 ```
 
-Activem els mòduls necessaris per el SSL i el proxy pass:
+Activem els mòduls necessaris pel SSL i el proxy pass:
 
 ```
 $ a2enmod ssl proxy proxy_connect proxy_http
