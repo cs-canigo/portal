@@ -29,13 +29,19 @@ Per aquesta demo cal que l'aplicació creada mitjançant el plugin d'Eclipse de 
 
 * _"samldemo"_ &rarr; _Canigó_ &rarr; _Add new module_ &rarr; _Security Module_ &rarr; _Do you want token based security? (yes)_ &rarr; _Select security provider/s (Arxiu)_ &rarr; _Desitja utilitzar SAML (Yes)_
 
-Al fitxer samldemo/src/main/resources/config/props/security.users.properties afegir un usuari existent a GICAR PRE:
+Afegir un usuari existent a GICAR PRE:
 
+_samldemo/src/main/resources/config/props/security.users.properties_
 ```
 <DNI>=dummy,ROLE_USER,ROLE_ADMIN,enabled
 ```
 
-Crear el fitxer samldemo/src/main/resources/application.properties i afegir l'entrada "server.port=9090"
+Crear el fitxer "application.properties" i afegir l'entrada amb el port del servidor:
+
+_samldemo/src/main/resources/application.properties_
+```
+server.port=9090
+```
 
 En aquest punt, construïm l'aplicació _"samldemo" &rarr; _Run As_ &rarr; _Maven install_, i ja la tenim preparada pel seu funcionament.
 
