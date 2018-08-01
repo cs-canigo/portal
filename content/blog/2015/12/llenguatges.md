@@ -5,6 +5,7 @@ description = "Tecnologies de desenvolupament i altres opcions davant noves nece
 sections    = ["Blog", "home"]
 blog_tags	= ["desenvolupament"]
 imatge 		= "/images/bloc/nodejs_golang.png"
+expirydate	= "2018-07-31"
 +++
 
 Des de la Unitat d'Arquitectura fem un seguiment de noves tecnologies de desenvolupament, per a avaluar el seu encaix dins la Generalitat de Catalunya i tenir altres opcions davant noves necessitats dels projectes. 
