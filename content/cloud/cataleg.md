@@ -74,30 +74,30 @@ En quant als contenidors Docker, inicialment, aliniarem les versions del softwar
 
 Si necessiteu més informació del registre privat podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/)
 
-**Element**  | **Versió**   | **Imatge Docker**
------------- | ------------ |-----------
-Apache 		 | 2.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4
-Apache GICAR Shibboleth| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3   |
-Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   |
-Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0
-Nginx  	 | 1.10.3   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.10.3
-Nginx  	 | 1.12.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12.2
-Nginx  	 | 1.14.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14.0
-HAProxy		 | 1.5.1        | docker-registry.ctti.extranet.gencat.cat/gencatcloud/haproxy:1.5.1
-Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7
-Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8
-MongoDB 	 | 3.2.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2
-MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7
-NodeJS 		 | 4.8.6   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4.8
-NodeJS 		 | 6.12.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:6.12
-NodeJS 		 | 8.9.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8.9
-PHP 		 | 5.6.32   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:5.6
-PHP 		 | 7.1.11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.1
-Postgres	 | 9.6.5    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6
-Tomcat  	 | 7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7
-Tomcat  	 | 8.0-java7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0-java7
-Tomcat  	 | 8.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0
-Tomcat  	 | 8.5   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.5
+**Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
+------------ | ------------ |-------------------- |-----------
+Apache 		 | 2.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4   | [httpd](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd)
+Apache GICAR Shibboleth| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3   | [gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth)
+Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift)
+Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0   | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es)
+Nginx  	 | 1.10.3   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.10.3   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx)
+Nginx  	 | 1.12.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12.2   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx)
+Nginx  	 | 1.14.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14.0   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx)
+HAProxy		 | 1.5.1        | docker-registry.ctti.extranet.gencat.cat/gencatcloud/haproxy:1.5.1   | [haproxy](https://git.intranet.gencat.cat/3048-intern/imatges-docker/haproxy)
+Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java)
+Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java)
+MongoDB 	 | 3.2.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb)
+MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql)
+NodeJS 		 | 4.8.6   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4.8   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node)
+NodeJS 		 | 6.12.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:6.12   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node)
+NodeJS 		 | 8.9.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8.9   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node)
+PHP 		 | 5.6.32   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:5.6   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php)
+PHP 		 | 7.1.11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.1   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php)
+Postgres	 | 9.6.5    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres)
+Tomcat  	 | 7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:7   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat)
+Tomcat  	 | 8.0-java7   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0-java7   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat)
+Tomcat  	 | 8.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.0   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat)
+Tomcat  	 | 8.5   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:8.5   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat)
 
 
 

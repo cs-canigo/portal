@@ -33,7 +33,7 @@ La SPA s'ha d'encarregar aleshores de cridar a l'endpoint /api/saml de l'aplicac
 
 ## Aplicació Bridge (Stateful)
 
-Des de Canigó es proporciona una [aplicació bridge plantilla] (https://github.com/gencat/appBridge/releases/tag/1.0.0) per tal de fer-se servir com a Service Provider.
+Des de Canigó es proporciona una aplicació bridge plantilla per tal de fer-se servir com a Service Provider. Aquesta aplicació bridge s'ha de sol·licitar a l'equip del CS Canigó ja que conté dades sensibles.
 
 ### Configuració
 
