@@ -50,8 +50,9 @@ A continuació es presenta una petició típica d’un tiquet SAML2, decodificad
 
 Pel cas de GICAR ens podem trobar amb diverses modalitarts d'autenticació que fan ús del protocol SAML. Són les següents:
 
-1. Aplicació feta a mida que es faci a mida les crides SAML2.
-1. A través de la modalitat de Canigó SAML2.
-1. A través de ADFS.
+1. [Aplicació feta a mida que es faci a mida les crides SAML2](https://canigo.ctti.gencat.cat/gicar-saml2/auth-saml2-fet-a-mida/)
+1. [A través de la modalitat de Canigó SAML2](https://canigo.ctti.gencat.cat/gicar-saml2/auth-saml2-fet-a-mida/)
+1. [A través de ADFS] (https://canigo.ctti.gencat.cat/gicar-saml2/auth-saml2-adfs/)
 1. Aplicacions que ja suporten SAML2 "out-of-the-box"
+1. [A través de l'Apache amb mòdul de Shibboleth instal·lat](https://canigo.ctti.gencat.cat/gicar-saml2/auth-saml2-shibboleth/)
 
