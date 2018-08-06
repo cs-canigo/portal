@@ -227,16 +227,20 @@
 {{ end }}
 
 
-<!-- GICAR - guia integració -->
+<!-- GICAR - guia integració SM -->
 {{ if or (eq $title "gicar-integracios") (eq $section "gicar-integracio") }}
 	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+		<a href="/gicar-integracio-intro/">Modalitats d'integració possibles</a>
+	</li>
 
 	<li>
 	{{ if gt (len $section) 0 }}
 		<a href="/gicar-integracio/">
 	{{ end }}
 
-	Integració
+	Integració amb SiteMinder
 
 	{{ if gt (len $section) 0 }}
 		</a>
@@ -249,11 +253,53 @@
 	<a href="/gicar/">GICAR</a> </li>
 
 	<li>
+		<a href="/gicar-integracio-intro/">Modalitats d'integració possibles</a>
+	</li>
+
+	<li>
 	{{ if gt (len $section) 0 }}
 		<a href="/directoris-integracio/">
 	{{ end }}
 
 	Integració amb els directoris de la Generalitat
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- GICAR - integració saml2 -->
+{{ if or (eq $title "gicar-saml2s") (eq $section "gicar-saml2") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+		<a href="/gicar-integracio-intro/">Modalitats d'integració possibles</a>
+	</li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-saml2/">
+	{{ end }}
+
+	Integració amb SAML2
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- GICAR - integració intro -->
+{{ if or (eq $title "gicar-integracio-intros") (eq $section "gicar-integracio-intro") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-integracio-intro/">
+	{{ end }}
+
+	Modalitats d'integració possibles
 
 	{{ if gt (len $section) 0 }}
 		</a>
