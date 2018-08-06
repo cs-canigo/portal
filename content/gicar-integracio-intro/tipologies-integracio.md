@@ -10,7 +10,7 @@ weight 		= 1
 
 En aquest apartat es descriuen les diferents modalitats d'inetgració de l'autenticació amb GICAR que s'ofereixen. En la següent taula es citen les diferents casuístiques d'aplicacions que es despleguen a la Generalitat versus la modalitat d'integració de l'autenticació recomanada.
 
-![Integració Aplicacions GICAR](/related/gicar/modalitats-autenticacio.png)
+![Integració Aplicacions GICAR](/related/gicar/taula-modalitats-autenticacio.png)
 
 El 1 significa l'opció recomanada i el 3 l'opció menys recomanada, que només es proposa abordar-la si no és possible abordar les opcions anteriors.
 
