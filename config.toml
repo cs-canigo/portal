@@ -5,7 +5,6 @@ contentDir = "content"
 layoutDir = "layouts"
 publishDir = "public"
 buildDrafts = true
-baseURL = "http://preproduccio.dockersaml.gencat.cat"
 canonifyURLs = false
 disqusShortname = "arquitectura-ctti"
 pluralizelisttitles = false

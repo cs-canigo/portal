@@ -1,0 +1,40 @@
+<EntityDescriptor entityID="https://preproduccio.arquitectura.ctti.gencat.cat" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+ 
+  <SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
+ 
+    <KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate> MIIDkjCCAnqgAwIBAgICAIkwDQYJKoZIhvcNAQELBQAwaTEhMB8GA1UEChMYR2VuZXJhbGl0YXQgZGUgQ2F0YWx1bnlhMQ0wCwYDVQQLEwRDVFRJMREwDwYDVQQDEwhHSUNBUi1DQTEiMCAGCSqGSIb3DQEJARYTZ2RpLmN0dGlAZ2VuY2F0LmNhdDAeFw0xODA4MDEwNjAyMDBaFw00ODA4MDEwNjAyMDBaMB0xGzAZBgNVBAMTElBPUlRBTEFSUVVJVEVDVFVSQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMSPv7l5ObHwA36E+ZL969++8a+xh1fNQd/OJuxg+qGQHgrVyD/hQItJpwMqxHi//FnVWxjI4spfw7/6jQ051kO6lT3sfscGp0beedBwOoAokYPaLGUggkavPlOfTvgtx+JFtk2MvLkiFyXNp7rrlfTVBoCor+FtK+dJgOmJIsT3YXla2coMo6HG7ZXTDiNki/wzfNJahhjVURMDajebCdf898QKrB88hknRmj7sr4f5IFkF/rQ3hTVwaFI55+s43s4aAwgVj/wA4BrBQEuhrACGTgLqtRCYSd1b3G6XWbBIVdyCSBB7wV7r4Hq9xJIMCYzvFv84Y3yiP+ZNb7jRhxUCAwEAAaOBjzCBjDAMBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBT7eaQh1MWGzH+08pT7ic9hSNdd9jALBgNVHQ8EBAMCBeAwHQYDVR0lBBYwFAYIKwYBBQUHAwEGCCsGAQUFBwMCMBEGCWCGSAGG+EIBAQQEAwIGQDAeBglghkgBhvhCAQ0EERYPeGNhIGNlcnRpZmljYXRlMA0GCSqGSIb3DQEBCwUAA4IBAQCSpicjC+iwtp8bfx4jRqMfWLFP7gkCDFBWt85hwk72fOXgj4QM+k9uSluco5OIAkTUccDto3Qhz57lpHe2vjpOXxkbAualasdiFggXjxqIxZyDVIRxR6MGAfGKUB5LEJcIkVsDcFOIHTLiKXOvSk3zSgtOBkxPc/GUoIfWL3m/6LWn8MO6z8n8LVXWIU1oLbcw7uFuSEkmocurulESt6H4fD5JS3gQKqpwuxTUxPPC/z1Xg1iY96B4TqUGCcbjTM/SBwKciThyjTSPk0tHF1VIaaSQ0PwKzwEV9gNB+Z5UR59jHQej7sssl1FFf14HPgxlpDXT+iwHW7c62FAL7U3x
+         </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </KeyDescriptor>
+ 
+    <SingleLogoutService Location="https://preproduccio.arquitectura.ctti.gencat.cat/Shibboleth.sso/SLO/Redirect"
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"/>
+    <SingleLogoutService Location="https://preproduccio.arquitectura.ctti.gencat.cat/Shibboleth.sso/SLO/POST"
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
+	  
+	  <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:employeeID</NameIDFormat>
+	  <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+	  <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+ 
+
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://preproduccio.arquitectura.ctti.gencat.cat/Shibboleth.sso/SAML2/POST" 
+	index="0" isDefault="true"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://preproduccio.arquitectura.ctti.gencat.cat/Shibboleth.sso/SAML2/Artifact" 
+	index="1"/>
+    <AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://preproduccio.arquitectura.ctti.gencat.cat/Shibboleth.sso/SAML2/POST" 
+	index="2"/>
+ 
+
+  </SPSSODescriptor>
+ 
+  <Organization>
+    <OrganizationName xml:lang="es">Generalitat de Catalunya</OrganizationName>
+    <OrganizationDisplayName xml:lang="es">Generalitat de Catalunya</OrganizationDisplayName>
+    <OrganizationURL xml:lang="es">"https://preproduccio.arquitectura.ctti.gencat.cat"</OrganizationURL>
+  </Organization>
+ 
+</EntityDescriptor>
