@@ -31,13 +31,13 @@ Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel s
 
 **Dades tècniques**
 
-- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenció de les dades per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació
+- _Endpoint de preomplert de dades_: nom dns i port del servei que expossa l'endpoint per l'obtenció de les dades (XML o JSON) per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació
 - _Endpoint de submit_: en cas que el formulari tingui un botó de tipus submit, caldrà que s'especifiqui el nom dns i port del servei que expossa l'endpoint al que es farà l'enviament de les dades. Si el formulari tindrà una acció per fer l'enviament de les dades del formuari via AJAX sense ser de tipus submit, no cal proporcionar aquesta informació
 
 Com a resposta a la sol·licitud d'alta, el equip del CS Canigó retornarà la URL base dels formularis de l'aplicació al servei d'eFormularis:
 
-- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 
 També confirmarà que s'han habilitat les connectivitats requerides des del servei d'eFormularis cap als endpoints necessaris per la integració.
 
@@ -84,6 +84,18 @@ $ java -jar <AEM_jar>
 
 S'ha de tenir en compte que per defecte el repositori d'AEM és crea al directori des d'on l'usuari executa aquest procés. És important ja que el volum de dades que s'hi emmagatzema és gran (5GB aproximadament) i de vital importancia per el funcionament d'AEM.
 
+El formulari i tots els recursos associats (temes, fragments, ...) han de crear-se en un directori de l'aplicació, no directament a l'arrel. D'aquesta manera al fer l'export/import entre entorns quedaran ubicats al lloc adient.
+
+*Formularis*
+
+- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+
+*Temes*
+
+- PRE: https://preproduccio.autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;
+- PRO: https://autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;
+
 ### Desplegament
 
 Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les següents pases:
@@ -99,16 +111,18 @@ Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les seg
 
 - El CS Canigó validarà el formulari a la instància AEM autor i el publicarà, retornant com a resultat la URL d'accés al formulari: 
 
-	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-	- PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+	- PRE: https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+	- PRO: https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+
+Per altres recursos com els temes i els fragments el procediment de publicació és el mateix. Cal tenir en compte les dependències entre ells en l'ordre de publicació.
 
 #### Versionatge
 
 Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d'un formulari caldrà que s'afegeix la versió a aquesta URL:
 
-https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html
 
-https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;ambit&gt;/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html
+https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html
 
 Es recomana però que els formularis siguin sempre **backward compatible**, evitant aquest versionatge en la publicació, podent mantenir sempre la mateixa URL.
 
@@ -157,8 +171,8 @@ on &lt;domini-aplicacio&gt; és el domini de l'aplicació que està publicant el
 Codi javascript per incrustar el formulari HTML5 a la plana web de l'aplicació:
 	
 	 <script>
-		var path = "https://<domini-aplicacio>/content/forms/af/ambit/aplicacio/formulari.html";
-		var pathXML = "<url-precarrega-dades>"
+		var path = "https://<domini-aplicacio>/content/forms/af/<aplicacio>/<formulari>.html";
+		var pathData = "<url-precarrega-dades>"
 		path += "/jcr:content/guideContainer.html";
 		$.ajax({
 			url  : path ,
@@ -166,7 +180,7 @@ Codi javascript per incrustar el formulari HTML5 a la plana web de l'aplicació:
 			data : {
 				// Set the wcmmode to be disabled
 				wcmmode : "disabled",
-				"dataRef": pathXML
+				"dataRef": pathData
 			},
 			async: false,
 			success: function (data) {
