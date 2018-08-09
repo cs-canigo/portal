@@ -88,8 +88,8 @@ El formulari i tots els recursos associats (temes, fragments, ...) han de crear-
 
 *Formularis*
 
-- PRE: https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
-- PRO: https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRE: https://preproduccio.autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
+- PRO: https://autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html
 
 *Temes*
 
