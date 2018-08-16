@@ -109,25 +109,45 @@ Dintre de ADFS cal configurar Sharepoint com un “relying party” dels atribut
 ![Integració amb GICAR](/related/gicar/gicar-adfs1.png)
  
 3.	Fer click amb el botó dret sobre Relying Party Trusts i llavors fer click sobre Add Relying Party Trust per iniciar el “Relying Party trust wizard”. 
+
+![Integració amb GICAR](/related/gicar/gicar-adfs2.png)
  
 4.	Fer click sobre el botó Start per iniciar el procés d’afegir una aplicació web Sharepoint 2010 com a Relying Party.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs3.png)
  
 5.	A la plana Select Data Source, seleccionar Enter data about the Relying party manually, i fer click sobre el botó Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs4.png)
  
 6.	A la plana Specify Display Name, introduir el nom per mostrar, per exemple “SharePoint” i opcionalment una descripció, llavors fer click sobre Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs5.png)
  
 7.	A la plana Choose Profile seleccionar AD FS 2.0 profile i fer click sobre Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs6.png)
  
 8.	A la plana Configure Certificate, es pot seleccionar un certificat per xifrar el token intercanviat entre ADFS i Sharepoint però no es necessari ja que la connexió amb Sharepoint ja es fa sobre SSL.  Fer click sobre Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs7.png)
  
 9.	Marcar el checkbox  Enable support for the WS-Fed Passive protocol.  Per la URL del protocol, introduir la URL del site root per a la aplicació web Sharepoint amb la terminació “_trust/”. Fer click  a Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs8.png)
  
 10.	A la plana Configure Identifiers, s’indica un “realm” que l’aplicació web passarà a ADFS 2.0 quan un usuari accedeix a l’aplicació.  
 El  “realm” normalement es crea en el format urn:foo:bar.  Cal tenir en compte aquest nom ja que es necessitarà en configurar Sharepoint Fer click sobre Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs9.png)
  
 11.	A la plana Choose Issuance Authorization Rules no cal fer res, fer click a Next. 
+
+![Integració amb GICAR](/related/gicar/gicar-adfs10.png)
  
 12.	A la plana Ready to Add Trust, revisar la configuració i fer click a Next per continuar.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs11.png)
  
 13.	Deixar marcat el checkbox Open the Edit Claim Rules dialog for this relying party trust when the wizard closes per continuar en el següent punt.
 
@@ -136,19 +156,27 @@ El  “realm” normalement es crea en el format urn:foo:bar.  Cal tenir en comp
 Com a continuació del pas anterior (o fent click amb el botó dret sobre el “Relying Party” amb nom “Sharepoint” i seleccionat “Edit Claim Rules”), es poden configurar les regles que transformen els atributs de ADFS en els atributs que necessita Sharepoint.
  
 1.	Primer accedim a la pantalla d’edició de regles.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs12.png)
  
 2.	A la pestanya Issuance Transform Rules, fer click al botó Add Rule. 
+
+![Integració amb GICAR](/related/gicar/gicar-adfs13.png)
  
 3.	A la plana Select Rule Template, seleccionar Pass Through or Filter an Incoming Claim, i llavors fer click a Next.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs14.png)
  
 4.	A la plana Configuration Rule, introduir els següents valors:
+
 	Name					Value
 	Claim rule name			“E-Mail Address Claim from Shibboleth”
 	Incoming claim type		E-Mail Address
 
 5.	Deixar seleccionada la opció Pass through all claim values i fer click a Finish.
 
-6.	Repetir el mateix procés a Issuance Transform Rules amb els següents valors 
+6.	Repetir el mateix procés a Issuance Transform Rules amb els següents valors: 
+
 	Name					Value
 	Claim rule name			“NIF Claim from Shibboleth”
 	Incoming claim type		Name
@@ -202,6 +230,8 @@ Per associar ADFS (Trusted Identity Provider) a la aplicació web cal seguir els
 3.	Seleccionar a la llista l’aplicació web que farà servir AD FS 2.0 per i fer click a  Authentication Providers en el menu principal.
 4.	A la plana Authentication Provider, fer click a l’enllaç en el quadre de que correspon a la zona apropiada en que es farà servir ADFS 2.0 per autenticar. Probablement Default Zone si no hi cap altre configurada amb aquest propòsit.
 5.	A la plana Edit Authentication, baixar fins la secció Claims Authentication Types.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs15.png)
  
 6.	Seleccionar Trusted Identity Provider i llavors “ADFSv2-sts.idmgt.demo” a la llista.
 7.	Fer click a Save
