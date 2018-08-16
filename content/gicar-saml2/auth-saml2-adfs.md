@@ -105,6 +105,8 @@ Dintre de ADFS cal configurar Sharepoint com un “relying party” dels atribut
 
 1.	Obrir la consola de gestió de. En el menú Start, fer click a Administrative Tools, i llavors fer click sobre AD FS 2.0 Management.
 2.	Després que l’snap-in s’ha carregat, fer click sobre el node Trust Relationships, i llavors seleccionar Relying Party Trusts.
+
+![Integració amb GICAR](/related/gicar/gicar-adfs1.png)
  
 3.	Fer click amb el botó dret sobre Relying Party Trusts i llavors fer click sobre Add Relying Party Trust per iniciar el “Relying Party trust wizard”. 
  
