@@ -8,7 +8,9 @@ toc			= true
 weight 		= 4
 +++
 
-Aquesta documentació defineix les especificacions tècniques per a la integració de la federació d’identitats de GICAR implantat sobre el producte Shibboleth per accedir a aplicacions desplegades sobre Sharepoint mitjançant ADFS (Active Directory Federation Services) de Microsoft.
+Aquesta documentació defineix les especificacions tècniques per a la integració de la federació d’identitats de GICAR implantat sobre el producte Shibboleth per accedir a aplicacions desenvolupades en tecnologies Microsoft mitjançant ADFS (Active Directory Federation Services) de Microsoft.
+
+En aquest tutorial s'explica exactament com integrar un Sharepoint amb aquesta tipologia d'integració.
 
 A continuació es presenta la vista global del sistema:
 
@@ -16,14 +18,21 @@ A continuació es presenta la vista global del sistema:
 
 La seqüència es la següent:
 
-1.El client amb el seu navegador intenta accedir a una aplicació web desplegada sobre Sharepoint.
-2.Sharepoint detecta que el recurs està protegit i redirigeix l’usuari cap a AD FS.
-3.El servei AD FS presenta a l’usuari la pàgina WAYF (Where Are you From) per a que l’usuari indiqui on es vol autenticar (actualment aquesta pàgina no es presenta ja que només es pot autenticar amb GICAR)
-4.El navegador del client es redirigeix cap a l’Identity Provider de GICAR (Shibboleth) e inicia una transacció d’autenticació sota el protocol SAML 2.0.
-5.Se li presenta al client el formulari de captura de credencials de GICAR
-6.Es validen les credencials.
-7.L’Identity Provider genera un token en format SAML 2.0 amb la informació de l’usuari autentica i redirigeix l’usuari cap a l’ADFS.
-8.L’ADFS verifica el token rebut i modifica la informació per adaptar-la a la que necessita Sharepoint i finalment deixa passar l’usuari cap a Sharepoint amb aquesta informació. Sharepoint presentarà l’aplicació web sol·licitada en el punt 1.
+1. El client amb el seu navegador intenta accedir a una aplicació web desplegada sobre Sharepoint.
+
+2. Sharepoint detecta que el recurs està protegit i redirigeix l’usuari cap a AD FS.
+
+3. El servei AD FS presenta a l’usuari la pàgina WAYF (Where Are you From) per a que l’usuari indiqui on es vol autenticar (actualment aquesta pàgina no es presenta ja que només es pot autenticar amb GICAR).
+
+4. El navegador del client es redirigeix cap a l’Identity Provider de GICAR (Shibboleth) e inicia una transacció d’autenticació sota el protocol SAML 2.0.
+
+5. Se li presenta al client el formulari de captura de credencials de GICAR.
+
+6. Es validen les credencials.
+
+7. L’Identity Provider genera un token en format SAML 2.0 amb la informació de l’usuari autentica i redirigeix l’usuari cap a l’ADFS.
+
+8. L’ADFS verifica el token rebut i modifica la informació per adaptar-la a la que necessita Sharepoint i finalment deixa passar l’usuari cap a Sharepoint amb aquesta informació. Sharepoint presentarà l’aplicació web sol·licitada en el punt 1.
 
 ## Configuració de l'ADFS per autenticar contra GICAR:
 
