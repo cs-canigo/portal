@@ -1,5 +1,5 @@
 +++
-date        = "2016-06-08T17:11:42+01:00"
+date        = "2018-08-16T17:11:42+01:00"
 title       = "Aplicació Microsoft/.NET integrada amb GICAR via ADFS"
 description = ""
 sections    = "gicar-saml2"
