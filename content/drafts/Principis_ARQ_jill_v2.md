@@ -60,7 +60,7 @@ codi = "35.080.03"
 	
 	# 1. Principis sobre el disseny d’aplicacions
 
-<p>**1.1 Segregació de funcions/responsabilitats**, les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
+<p><strong>1.1 Segregació de funcions/responsabilitats</strong>, les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
 
 <ul>
     <li>Públic general (internet)</li>
