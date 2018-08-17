@@ -1,10 +1,10 @@
 +++
-date        = "2016-06-08T17:11:42+01:00"
+date        = "2018-08-17T12:45:42+01:00"
 title       = "Aplicació feta a mida autenticant via SAML2 sense ús d'Apache-Shibboleth"
 description = "Aplicació feta a mida consumint servei d'autenticació SAML2 sense ús d'Apache-Shibboleth"
 sections    = "gicar-saml2"
 taxonomies  = []
-toc			= true
+toc			= false
 weight 		= 3
 +++
 
@@ -21,10 +21,17 @@ A continuació es detalla quins són els dominis del Identity Provider als que c
 	https://idp4-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO (per autenticació contra el Directori Corporatiu + Autenticació Anònima)
 
 **En cas que l'aplicació feta a mida estigui feta amb Canigó es recomana l'ús de la llibreria de Canigó per a la integració amb GICAR via SAML2.**
+A través d'aquesta modalitat d'autenticació el framework Canigó és capaç d'integrar-se directament amb GICAR sense necessitat de cap llibreria externa. En aquest cas, veure documentació de Canigó [aquí](https://canigo.ctti.gencat.cat/howtos/2018-08-Canigo-SAML/).
 
-En cas que l’aplicació no estigui feta amb Canigó, caldrà que els desenvolupadors duguin a terme els següents passos per a cridar via SAML2 a GICAR. A continuació es descriuen:
+**En cas que l’aplicació no estigui feta amb Canigó, caldrà que el desenvolupador duguin a terme una de les següents dues opcions:**
 
-1. Cal construir un SAMLRequest que ha de contenir exactament la següent informació, estructurada de la següent forma:
+***- OPCIÓ 1:*** 
+Incorporar llibreries de tercers a l'aplicació per a generar i llegir la petició SAML2. Com a referència principal es pot cosultar la web https://www.samltool.com/, la qual disposa de nombrosos exemples i llibreries fetes en diverses tecnologies per a tractar les peticions SAML2.
+
+***- OPCIO 2:*** 
+Construir la petició SAML2 amb el codi javascript adjunt i decodificar-lo/desxifrar-lo posteriorment:
+
+Per a dur a terme aquesta opció, cal construir un SAMLRequest que ha de contenir exactament la següent informació, estructurada de la següent forma:
 
 	<?xml version="1.0"?> <samlp:AuthnRequest xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" Consent="urn:oasis:names:tc:SAML:2.0:consent:unspecified" Version="2.0" Destination="https://DOMINI _A_ESPECIFICAR_PER_L’EQUIP_GICAR/idp/profile/SAML2/Redirect/SSO" ID="xxxxxxxxxxxxxxxxxxxxx" IssueInstant="2014-12-24T10:35:25.4269359Z" IsPassive="false" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"> <saml:Issuer>https://URL del servei peticionari</saml:Issuer> <samlp:NameIDPolicy AllowCreate="True" Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified" /> </samlp:AuthnRequest>
 
@@ -88,4 +95,5 @@ Caldrà que l'equip desenvolupador faci una petició a l’equip GICAR per a inc
 
 Caldrà addicionalment que el desenvolupador especifiqui quina informació voldrà rebre referent a l’usauri que s’haurà autenticat.
 
-2. Caldrà finalment que el desenvolupador decodifiqui el paràmetre SAMLResponse que GICAR retornarà. Aquest paràmetre SAMLResponse contindrà tots els claims de resposta xifrats per defecte, i en casos excepcionals i per necessitats de l'aplicació serà possible que GICAR els envii en clar (assumint que el pas del paràmetre es farà per HTTPS).
+- Caldrà finalment que el desenvolupador decodifiqui el paràmetre SAMLResponse que GICAR retornarà. Aquest paràmetre SAMLResponse contindrà tots els claims de resposta xifrats per defecte, i en casos excepcionals i per necessitats de l'aplicació serà possible que GICAR els envii en clar (assumint que el pas del paràmetre es farà per HTTPS).
+
