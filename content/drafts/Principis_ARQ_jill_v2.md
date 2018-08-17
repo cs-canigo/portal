@@ -11,7 +11,6 @@ estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
-
 + [1. Principis sobre el disseny d’aplicacions] (# principis-aplicacions)
     - 1.1 Segregació de funcions/responsabilitats
     - 1.2 Arquitectura desacoblada
@@ -70,7 +69,7 @@ codi = "35.080.03"
     <li>Processos batch</li>
     <li>Extraccions (ETL)</li>
 </ul>
-<span style="color:blue">
+
 <p>**1.2 Arquitectura desacoblada**, permeten als components mantenir-se completament autònoms e independents:</p>
 
 <ul>
@@ -78,7 +77,7 @@ codi = "35.080.03"
     <li>1.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components.</li>
 	<li>1.2.3 Desacoblament entre aplicacions: Evitar les relacions entre aplicacions que impedeixin el seu desacoblament.(Per exemple, relacions a nivell de base de dades, us de llibreries compartides, fitxers de configuració compartits). Totes les relacions es tenen que porta a terme mitjançant serveis Web.</li>
 </ul>
-</span>
+
 <p>**1.3 Arquitectura Orientada a Serveis**, cada cop més, les aplicacions poden ser consumides externament o bé han d’integrar-se amb 3rs. Els backend han d’exposar la seva funcionalitat de negoci via serveis per facilitar-ho. 
 
 <p>**1.4 Maximitzar el rendiment**, emmagatzemar a la memòria cau tot allò que sigui possible. Per fer-ho, utilitzar la tecnologia que millor s’adapti tant a client (html5 cache, localstorage , etc.) com a servidor (Redis, Varnish, Memcache, caché personalitzada, etc.).</p>
@@ -89,7 +88,6 @@ codi = "35.080.03"
     <li> Si s’exposa una API REST i s’actualitza un servei, que sigui compatible amb versions anteriors per a evitar actualitzacions innecessàries als consumidors i d’aquesta manera poder evolucionar el servei lliurement (sense dependre de calendaris o recursos de tercers).</li>
 </ul>
 
-<span style="color:blue">
 <p>**1.6 Rendiment de les aplicacions**, el comportament de les  aplicacions han de satisfer les necessitats del negoci:</p>
 
 <ul>
@@ -98,9 +96,9 @@ codi = "35.080.03"
     <li>1.6.3 Elasticitat, els disseny de les aplicacions permetrà ampliar  o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
     <li>1.6.4 Zero DownTime, el serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
 </ul>
-</span>
+
 <p>**1.7 Facilitat d’utilització**, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
-<span style="color:blue">
+
 <p>**1.8 Autentificació**, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </p>
 
 <ul>
@@ -108,7 +106,7 @@ codi = "35.080.03"
     <li>1.8.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant “GICAR”.</li>
     <li>1.8.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
 </ul>
-</span>
+
 <p>**1.9 Model de qualitat**, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida:</p>
 <ul>
     <li>1.9.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
@@ -116,7 +114,7 @@ codi = "35.080.03"
     <li>1.9.3 Control de versions. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, etc.</li>
     <li>1.9.4 Desplegament automatitzat, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
 </ul>
-<span style="color:blue">
+
 <p> **1.10 Integració continua i custodia de codi**
 <ul>
 	<li> Totes les aplicacions tenen que tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
@@ -126,12 +124,9 @@ codi = "35.080.03"
 
 <p> **1.11 Es recomana l'ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p>**
 
-</span>	
 
 
 # 2. Principis sobre la Tecnologia
-
-<span style="color:blue">
 
 
 <p>**2.1 Continuïtat tecnològica**, d’acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:
@@ -176,7 +171,6 @@ codi = "35.080.03"
 <p>**2.16 Us d'Https**, es necessari l’ús d'Https per les urls de les aplicacions.
 <p>**2.17 Principis sobre la seguretat**, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a>
 
-</span>	
 
 # 3. Principis sobre el cost i manteniment de les solucions
 
