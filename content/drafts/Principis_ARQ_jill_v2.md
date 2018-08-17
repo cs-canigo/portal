@@ -123,7 +123,7 @@ codi = "35.080.03"
 	
 </ul>	
 
-<p> <strong>1.11 Es recomana l'ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p></strong>
+<p> <strong>1.11 Es recomana l'ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></strong></p>
 
 
 
@@ -170,7 +170,7 @@ codi = "35.080.03"
 <p><strong>2.14 Connectivitat de tercers</strong>, tenir en compte l'estàndard per la  <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-connexio-equips-tercers/">connexió d'equips de tercers.</a>
 <p><strong>2.15 Comunicacions per sFTP</strong>, no permeses les connexions no segures com el FTP.
 <p><strong>2.16 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions.
-<p><strong>2.17 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a>
+<p><strong>2.17 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></p>
 
 
 # 3. Principis sobre el cost i manteniment de les solucions
