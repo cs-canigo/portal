@@ -40,13 +40,13 @@ La seqüència es la següent:
 
 A la màquina on es trobat instal·lat el servei ADFS realitzar els següents passos:
 
-1. Demanar a la OTGICAR el certificat del Idnetity Provider de GICAR i copiar-lo a la màquina de l'ADFS.
-2. A la màquina del ADFS, en la finestra Certificate, a la pestanya General, clicar a  Install Certificate per iniciar el Certificate Import Wizard.
-3.	Clicar sobre el botó  Next.
-4.	A la finestra Certificate Store, clicar sobre la opció Place all certificates in the following store.
-5.	Clicar sobre el botó Browse, i llavors clicar sobre el botó Show physical stores.
-6.	Sobre la carpeta Trusted Root Certificate Authorities, seleccionar Local Computer, i llavors clicar sobre el botó OK.
-7.	Clicar sobre el botó Next, Finish, OK i finalment sobre el botó OK.
+- Demanar a la OTGICAR el certificat del Idnetity Provider de GICAR i copiar-lo a la màquina de l'ADFS.
+- A la màquina del ADFS, en la finestra Certificate, a la pestanya General, clicar a  Install Certificate per iniciar el Certificate Import Wizard.
+- Clicar sobre el botó  Next.
+- A la finestra Certificate Store, clicar sobre la opció Place all certificates in the following store.
+- Clicar sobre el botó Browse, i llavors clicar sobre el botó Show physical stores.
+- Sobre la carpeta Trusted Root Certificate Authorities, seleccionar Local Computer, i llavors clicar sobre el botó OK.
+- Clicar sobre el botó Next, Finish, OK i finalment sobre el botó OK.
 
 **Afegir Identity Provider (Shibboleth) com un Claim Provider**
 
@@ -76,27 +76,27 @@ Per altra banda, i també fent servir PowerShell, s’han d’executar les segü
 Les Claim Rules defineixen com els atributs rebuts en el token SAML 2.0 generat per l’Identity Provider es transformen en atributs de ADFS.
 
 Cal seguir els següents passos:
-1.	Obrir la consola de gestió de ADFS. En el menú Start, clicar sobre Administrative tools, i llavors clicar sobre AD FS 2.0 Management.
-2.	Després que el snap-in es carrega, clicar al node Trust Relationships, i llavors seleccionar Claims Provider Trusts.
-3.	En el panell central de AD FS 2.0 Management, fer click amb el botò dret Shibboleth IdP, i llavors fer click sobre Edit Claim Rules.
-4.	A la pestanya Acceptance Transform Rules, clicar sobre el botó Add Rule.
-5.	A la plana Select Rule Template, seleccionar Send Claims Using a Custom Rule, i llavors pitjar sobre el botó Next.
-6.	A la plana Configure Rule, dintre de la capsa Claim rule name, escriure “Transform mail to E-Mail Address”.
-7.	A la finestra Custom Rule, escriure o copiar/enganxar el següent text:
+- Obrir la consola de gestió de ADFS. En el menú Start, clicar sobre Administrative tools, i llavors clicar sobre AD FS Management.
+- Després que el snap-in es carrega, clicar al node Trust Relationships, i llavors seleccionar Claims Provider Trusts.
+- En el panell central de AD FS Management, fer click amb el botò dret Shibboleth IdP, i llavors fer click sobre Edit Claim Rules.
+- A la pestanya Acceptance Transform Rules, clicar sobre el botó Add Rule.
+- A la plana Select Rule Template, seleccionar Send Claims Using a Custom Rule, i llavors pitjar sobre el botó Next.
+- A la plana Configure Rule, dintre de la capsa Claim rule name, escriure “Transform mail to E-Mail Address”.
+- A la finestra Custom Rule, escriure o copiar/enganxar el següent text:
 
 	c:[Type == "urn:oid:0.9.2342.19200300.100.1.3"]
 	 => issue(Type = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value, ValueType = c.ValueType);
 
-8.	Fer click sobre el botó Finish.
-9.	A la pestanya Acceptance Transform Rules, fer click sobre el botó Add Rule.
-10.	A la plana Select Rule Template, seleccionar Send Claims Using a Custom Rule, i llavors fer click sobre el botó Next.
-11.	A la plana Configure Rule, en la capta Claim rule name, escriure “Transform NIF to Name”.
-12.	A la finestra Custom Rule, escriure o copiar/enganxar el següent text:
+- Fer click sobre el botó Finish.
+- A la pestanya Acceptance Transform Rules, fer click sobre el botó Add Rule.
+- A la plana Select Rule Template, seleccionar Send Claims Using a Custom Rule, i llavors fer click sobre el botó Next.
+- A la plana Configure Rule, en la capta Claim rule name, escriure “Transform NIF to Name”.
+- A la finestra Custom Rule, escriure o copiar/enganxar el següent text:
 
 	c:[Type == "urn:oid:1.3.6.1.4.1.5923.1.1.1.6"]
 	=> issue(Type = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, Value = c.Value, ValueType = c.ValueType);
 
-13.	Fer click sobre Finish, i finalment sobre OK.
+- Fer click sobre Finish, i finalment sobre OK.
 
 
 **Configurar Sharepoint com a Relying Party**
@@ -238,7 +238,7 @@ Per associar ADFS (Trusted Identity Provider) a la aplicació web cal seguir els
 
 ![Integració amb GICAR](/related/gicar/gicar-adfs15.png)
  
-6.	Seleccionar Trusted Identity Provider i llavors “ADFSv2-sts.idmgt.demo” a la llista.
-7.	Fer click a Save
-8.	Tancar  SharePoint Central Administration.
+- Seleccionar Trusted Identity Provider i llavors “ADFSv2-sts.idmgt.demo” a la llista.
+- Fer click a Save
+- Tancar  SharePoint Central Administration.
  
