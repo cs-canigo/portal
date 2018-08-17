@@ -1,5 +1,5 @@
 +++
-date        = "2016-06-08T17:11:42+01:00"
+date        = "2018-08-17T13:15:42+01:00"
 title       = "Webservice"
 description = "Com integrar-se amb el Webservice de GICAR"
 sections    = "GICAR"
@@ -110,6 +110,8 @@ En concret, es demana que s’incorporin en els missatges enviats l’estàndard
 	</soapenv:Envelope>
 
 Com es pot observar, les credencials d’autenticació estan presents en la capçalera i, per tant, són visibles per a qualsevol que sigui capaç de capturar el missatge. Es per això que es força que tota comunicació que s’estableixi amb el Web Service es realitzi a través d’un canal segur TLS/SSL amb certificat de servidor i sense necessitat de certificat al client. D’aquesta manera s’incorpora una capa de seguretat a nivell de transport que acaba de protegir del tot la comunicació.
+
+La spmlRequest ha d'anar codificada en Base64, i la resposta que s'obtindrà del Webservice també anirà codificada en Base64.
 
 ## Mètode enableUser
 
@@ -242,6 +244,8 @@ En cas d’error en algun punt de la validació o en l’execució de la petici�
 	</ns1:pso>
 	</ns1:lookupResponse>
 
+A través d'aquest mètode només és possible trobar usuaris catalogats com a "No Sensibles" a GICAR.
+
 ## Mètode searchUsers
 
 
@@ -373,4 +377,62 @@ Una petició com l’anterior retornaria una resposta com:
 		</ns1:pso>
 	</ns1:searchResponse>
  
+A través d'aquest mètode només és possible trobar usuaris catalogats com a "No Sensibles" a GICAR.
 
+
+## Mètode searchUsersSensibles
+
+A partir d'aquest mètode, si es disposen de permisos per a poder-ho fer és possible poder obtenir una mínima informació dels usauris sensibles que estan donats d'alta a GICAR.
+
+- Mètode encarregat de realitzar una cerca d’usuaris en el Directori Corporatiu. Retorna el NIF, el electrònic i el codi de la unitat menor dels usuaris que compleixin amb els paràmetres de la cerca especificats.
+- Caldrà establir com a mínim un paràmetre per a fer la cerca.
+- Es podran utilitzar múltiples paràmetres de cerca units mitjançant els operadors lògics AND i/o OR.
+
+A continuació s'exposa una petició d'exemple:
+
+	<?xml version=”1.0” encoding=”UTF-8”?>
+	<searchRequest returnData=”identifier” xmlns=”urn:oasis:names:tc:SPML:2:0:search” xmlns:dsml=”urn:oasis:names:tc:DSML:2:0:core”>
+	<query scope=”pso”>
+	<basePsoID ID=””/>
+	<and>
+	<dsml:filter>
+	<dsml:equalityMatch name=”givenName”>
+	<dsml:values>Perico</dsml:values>
+	</dsml:equalityMatch>
+	</dsml:filter>
+	<dsml:filter>
+	<dsml:equalityMatch name=”gencatFirstCognom”>
+	<dsml:values>Martínez</dsml:values>
+	</dsml:equalityMatch>
+	</dsml:filter>
+	</and>
+	</query>
+	</searchRequest>
+
+I com a resposta en aquest cas es retornaria el següent:
+
+	<?xml version=”1.0” encoding=”UTF-8”?>
+	<ns1:searchResponse xmlns:ns1=”urn:oasis:names:tc:SPML:2:0:search” status=”success”>
+	<ns1:pso>
+	<ns2:psoID xmlns:ns2=”urn:oasis:names:tc:SPML:2:0” ID=”11111111H”/>
+	<ns3:data xmlns:ns3=”urn:oasis:names:tc:SPML:2:0”>
+	<ns4:attr xmlns:ns4=”urn:oasis:names:tc:DSML:2:0:core” name=” gencatCompanyCodi”>
+	<ns4:value>GDI01</ns4:value>
+	</ns4:attr>
+	<ns5attr xmlns:ns4=”urn:oasis:names:tc:DSML:2:0:core” name=”mail”>
+	<ns5:value>correo@xxxx.yyy</ns4:value>
+	</ns5:attr>
+	</ns3:data>
+	</ns1:pso>
+	<ns1:pso>
+	<ns5:psoID xmlns:ns5=”urn:oasis:names:tc:SPML:2:0” ID=”12345678Z”/>
+	<ns6:data xmlns:ns6=”urn:oasis:names:tc:SPML:2:0”>
+	<ns7:attr xmlns:ns7=”urn:oasis:names:tc:DSML:2:0:core” name=” gencatCompanyCodi”>
+	<ns7:value>AG</ns4:value>
+	</ns7:attr>
+	<ns8attr xmlns:ns4=”urn:oasis:names:tc:DSML:2:0:core” name=”mail”>
+	<ns8:value>zzzz@xxxx.yyy</ns4:value>
+	</ns8:attr>
+	</ns6:data>
+	</ns1:pso>
+	</ns1:searchResponse>
