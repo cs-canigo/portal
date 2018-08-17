@@ -1,5 +1,5 @@
 +++
-date        = "2018-08-08T17:11:42+01:00"
+date        = "2018-08-17T12:20:42+01:00"
 title       = "Aplicació autenticant via SAML2 a través d'Apache-Shibboleth"
 description = "Descripció de com utilitzar la imatge de contenidor o com desplegar-ho On Premise."
 sections    = "gicar-saml2"
@@ -18,9 +18,62 @@ Aquesta modalitat d'integració està indicada per aplicacions fetes a mida, o p
 
 Per a poder possibilitar això es disposa d'una imatge de **contenidor Apache-GICAR-Shibboleth** que permet fer de forma senzilla aquesta integració. El desenvolupador per a poder utilitzar aquesta integració només ha d'indicar quina és la URL que se securitzarà amb aquesta modalitat d'integració, i a partir d'aquí es proporcionarà al desenvolupador tota la informació per a poder aixecar fàcilment el contenidor. Veure el següent [enllaç](https://canigo.ctti.gencat.cat/cloud/cataleg/) on es pot obtenir informació sobre com obtenir aquesta plantilla de contenidor.
 
-Aquest muntatge també és possible dur-lo a terme en entorns on premise. Per a dur-lo a terme es pot seguir el següent tutorial (basat en entorn RedHat7 amb un OHS instal·lat):
+Per a poder arrencar aquesta imatge de contenidor cal tenir present la següent informació:
+
+- Existeixen dues carpetes amb fitxers de configuració dins d'aquesta imatge docker:
+	- La carpeta "sp_gicar_default" conté els fitxers de configuració i binaris que no s'han de modificar per a arrencar l'aplicació.
+	- La carpeta "sp_gicar_conf_aplicacio" conté l'aplicació particular per a l'aplicació que es vol arrencar amb aquest contenidor. Per defecte conté una configuració per arrencar el contenidor en mode proves contra l'entorn de PRE de GICAR, i conté un fitxer "cgi" per a poder veure les capçaleres generades per GICAR. Dins d'aquesta carpeta caldrà doncs posar els següents fitxers de cara a que el contenidor pugui arrencar correctament:
+
+		- certificats (fitxers .key i .crt) els quals serveixen per a establir el canal d'encriptació entre el proveïdor d'identitats GICAR i l'apache.
+		- El fitxer "idp-metadata.xml" el qual defineix les propietats del proveïdor d'identitats GICAR. Aquest fitxer és diferent entre PRE i PRO.
+		- El fitxer "shib.conf" el qual defineix que es protegirà amb aquesta modalitat de protecció.
+
+
+- Un cop incorporats aquests fitxers per a construïr la imatge (build) cal fer el següent:
+
+ 		docker build -t gencatcloud/gicar-shibboleth:1.0.3 .
+
+- Un cop fet el build per a aixecar una instància de la imatge cal fer el següent:
+
+		docker run -ti --rm  --name gicar-shibboleth -p 80:80 -p 443:443 -e "url_entityid_gicar=[nom entityID aplicacio]" -e "url_idp_gicar=[nom entityID IDP]"  -e "certificate_name=[nom fitxer certificat sense .cer o .key]" -e "server_name=[schema i host de l'aplicació]" gencatcloud/gicar-shibboleth:1.0.3
+
+Cal tenir en compte que l'ordre d'arrencada del contenidor conté els següents paràmetres els quals seran proporcionats per l'OTGICAR/Suport Cloud/Integració de Solucions en el moment d'abordar el projecte:
+
+	- url_entityid_gicar -> application id in gicar
+
+	- url_idp_gicar -> gicar URL enpoint
+
+	- certificate_name -> certificate file name
+
+	- server_name -> public application serverName (with http schema) 
+
+
+
+Per exemple:
+
+	docker run -ti --rm  --name gicar-shibboleth -p 80:80 -p 443:443 -e "url_entityid_gicar=https://preproduccio.dockersaml.gencat.cat" -e "url_idp_gicar=https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth" -e "certificate_name=AplicacioProva" -e "server_name=https://preproduccio.dockersaml.gencat.cat" gencatcloud/gicar-shibboleth:1.0.3
+
+
+Per a provar la solució amb la configuració de proves que ve per defecte, cal fer el següent:
+
+- Afegir el domini preproduccio.dockersaml.gencat.cat associat a la teva IP al teu fitxer hosts de la teva màquina.
+- En un navegador accedir a https://preproduccio.dockersaml.gencat.cat/cgi-bin/headers.cgi.
+- Després de l'autenticació es redireccionarà al CGI on es podran veure les headers generades.
+
+NOTES A TENIR EN COMPTE:
+
+- **NOM DE LA HEADER A CAPTURAR**. Aquest contenidor està basat en una imatge d'Apache 2.4. En apaches 2.4 per temes de seguretat s'impedeix crear requestHeaders que continguin "underscores" (_). Això impacta directament a aplicacions que busquin la capçalera "GICAR_ID" per autenticar, donat que fent servir aquesta modalitat d'autenticació no la trobaran. **En aquest cas caldrà que les aplicacions busquin la capçalera "GICAR-ID" enlloc de la capçalera "GICAR_ID".** La header GICAR se seguirà dient de la mateixa manera al no contenir underscores.
+
+- **URL's de LOGOFF**. Les url's de logoff d'aquesta modalitat d'integració varien envers les URL's de logoff que es fan servir si es fa integració directa amb SiteMinder. En aquest cas, caldrà que les aplicacions cridin la següent URL de logoff per a destruir les sessions generades:
+
+		A PREPRODUCCIÓ: https://<domini_aplicació>/Shibboleth.sso/Logout?return=https://preproduccio.idp1-gicar.gencat.cat/siteminderagent/forms/logoff.fcc
+
+		A PRODUCCIÓ: https://<domini_aplicació>/Shibboleth.sso/Logout?return=https://idp1-gicar.gencat.cat/siteminderagent/forms/logoff.fcc
+
 
 ## Sobre plataformes On Premise:
+
+Aquest muntatge també és possible dur-lo a terme en entorns on premise. Per a dur-lo a terme es pot seguir el següent tutorial (basat en entorn RedHat7 amb un OHS instal·lat):
 
 ### Instal·lar l'agent de Shibboleth sobre l'apache:
 
