@@ -382,7 +382,7 @@ A través d'aquest mètode només és possible trobar usuaris catalogats com a "
 
 ## Mètode searchUsersSensibles
 
-A partir d'aquest mètode, si es disposen de permisos per a poder-ho fer és possible poder obtenir una mínima informació dels usauris sensibles que estan donats d'alta a GICAR.
+A partir d'aquest mètode, si es disposen de permisos per a poder-ho fer és possible poder obtenir una mínima informació dels usuaris sensibles que estan donats d'alta a GICAR.
 
 - Mètode encarregat de realitzar una cerca d’usuaris en el Directori Corporatiu. Retorna el NIF, el electrònic i el codi de la unitat menor dels usuaris que compleixin amb els paràmetres de la cerca especificats.
 - Caldrà establir com a mínim un paràmetre per a fer la cerca.
