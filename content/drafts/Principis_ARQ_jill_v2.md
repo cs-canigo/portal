@@ -1,3 +1,17 @@
++++
+date        = "2018-08-17"
+title       = "Principis Arquitectura"
+description = "Principis Arquitectura"
+weight		= 3
+type = "estandard"
+toc         = true
+versio      = "1.0"
+responsable = "Unitat d'arquitectura"
+estandards =  ["programari"]
+codi = "35.080.03"
+
++++
+
 + [1. Principis sobre el disseny d’aplicacions] (# principis-aplicacions)
     - 1.1 Segregació de funcions/responsabilitats
     - 1.2 Arquitectura desacoblada
