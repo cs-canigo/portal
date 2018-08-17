@@ -95,5 +95,7 @@ Caldrà que l'equip desenvolupador faci una petició a l’equip GICAR per a inc
 
 Caldrà addicionalment que el desenvolupador especifiqui quina informació voldrà rebre referent a l’usauri que s’haurà autenticat.
 
-- Caldrà finalment que el desenvolupador decodifiqui el paràmetre SAMLResponse que GICAR retornarà. Aquest paràmetre SAMLResponse contindrà tots els claims de resposta xifrats per defecte, i en casos excepcionals i per necessitats de l'aplicació serà possible que GICAR els envii en clar (assumint que el pas del paràmetre es farà per HTTPS).
+- Caldrà finalment que el desenvolupador decodifiqui el paràmetre SAMLResponse que GICAR retornarà. Aquest paràmetre SAMLResponse contindrà tots els claims de resposta xifrats per defecte, i en casos excepcionals i per necessitats de l'aplicació serà possible que GICAR els envii en clar (assumint que el pas del paràmetre es farà per HTTPS). Caldrà que de la resposta decodificada i desencriptada el desenvolupador capturi la següent informació:
+
+	Atribut: urn:oid:1.3.6.1.4.1.5923.1.1.1.6; Valor: NIF de l'usuari
 
