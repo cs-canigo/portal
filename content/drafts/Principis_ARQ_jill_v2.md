@@ -11,17 +11,18 @@ estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
-# Introducció
+## Introducció
+
 
 Els Principis d'Arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
 Els principis basats en el framework TOGAF s’estructuren jeràrquicament en diferent segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb, entre elles destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions Opensource.
 
-A continuació detallem quins són aquests principis.
+<p>A continuació detallem quins són aquests principis.</p>
 
 
 
-# 1. Principis sobre el disseny d’aplicacions
+## 1. Principis sobre el disseny d’aplicacions
 
 <p><strong>1.1 Segregació de funcions/responsabilitats</strong>, les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
 
@@ -91,7 +92,7 @@ A continuació detallem quins són aquests principis.
 
 
 
-# 2. Principis sobre la Tecnologia
+## 2. Principis sobre la Tecnologia
 
 
 <p><strong>2.1 Continuïtat tecnològica</strong>, d’acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:
@@ -135,10 +136,10 @@ A continuació detallem quins són aquests principis.
 <p><strong>2.15 Comunicacions per sFTP</strong>, no permeses les connexions no segures com el FTP.
 <p><strong>2.16 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions.
 <p><strong>2.17 Mateixa infraestructura per Preproduccio i Produccio</strong>,per que les proves fetes a preproduccio tinguin validessa, es necessari que els entorns de preproduccio i produccio siguin identics a nivell d'infraestructura.</p>
-<p><strong>2.18 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a>
+<p><strong>2.18 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></p>
 
 
-# 3. Principis sobre el cost i manteniment de les solucions
+## 3. Principis sobre el cost i manteniment de les solucions
 
 <p><strong>3.1 Prevalença dels principis</strong>, tots els principis definits en aquest document i els principis que estableix la Guia Web Gencat apliquen a tota l’organització, incloent els seus col·laboradors externs.
 
@@ -161,15 +162,3 @@ A continuació detallem quins són aquests principis.
 <p><strong>3.5 Protecció de la propietat intel·lectual</strong>, La propietat intel·lectual de l'empresa (IP) ha d'estar protegida.</p>
 
 <p><strong>3.6 Compliment de la Llei</strong>, les aplicacions desenvolupades compleixen amb totes les lleis, polítiques i regulacions pertinents.</p>
-
-# Principis de Dades
-
-<p>Les dades són un actiu , les dades són un recurs corporatiu valuós i per tant s’han de protegir; tenen  un valor real i mesurable. </p>
-
-<p>Les dades s’han de gestionar amb  cura, són el fonament de la nostra presa de decisions, per la qual cosa també les hem de gestionar acuradament per assegurar que sabem on estan i obtenir-les quan les necessitem.</p>
-
-<p>1.1 Accés a les dades,  les dades són accessibles per permetre als usuaris realitzar les seves funcions.</p>
-
-<p>1.2 Responsable de dades, cada element de dades té un reposable que s’encarrega d’assegurar la qualitat de les mateixes.</p>
-
-<p>1.3 Seguretat de les dades, les dades estan protegides contra l'ús i divulgació no autoritzades.</p>
