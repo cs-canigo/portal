@@ -1,5 +1,5 @@
 +++
-date        = "2018-08-17"
+date        = "2018-08-20"
 title       = "Principis d'Arquitectura"
 description = "Principis d'Arquitectura"
 weight		= 3
@@ -12,54 +12,15 @@ codi = "35.080.03"
 
 +++
 
-+ [1. Principis sobre el disseny d’aplicacions] (# principis-aplicacions)
-    - 1.1 Segregació de funcions/responsabilitats
-    - 1.2 Arquitectura desacoblada
-    - 1.3 Orientació a serveis
-    - 1.4 Maximitzar el rendiment
-    - 1.5 Compatibilitat de versions
-    - 1.6 Rendiment de les aplicacions
-    - 1.7 Facilitat d’utilització
-    - 1.8 Autentificació
-    - 1.9 Model de qualitat
-	- 1.10 Integració continua i custodia de codi
-	- 1.11 Framework Canigó.
+Els Principis d'Arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
-+ [2. Principis sobre la Tecnologia] (# principis-tecnologia)
-    - 2.1 Continuïtat tecnològica
-    - 2.2 Estabilitat del sistema
-    - 2.3 Control de la diversitat tècnica
-    - 2.4 Interoperabilitat
-    - 2.5 Portabilitat tecnològica
-    - 2.6 Reutilització tecnològica
-    - 2.7 Radar Tecnològic
-    - 2.8 Ubicació dels certificats
-    - 2.9 Nomenclatura de dominis
-    - 2.10 Nomenclatura de les infraestructures
-    - 2.11 Servidors SMTP Transversals
-    - 2.12 Accés a Internet des de xCAT
-    - 2.13 Us de Cloud Públic
-    - 2.14 Connectivitat de tercers.
-    - 2.15 Comunicacions per sFTP
-    - 2.16 Us d'Https
-	- 2.17 Principis sobre la seguretat
+Els principis basats en el framework TOGAF s’estructuren jeràrquicament en diferent segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb, entre elles destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions Opensource.
 
-+ [3. Principis sobre el cost i manteniment de les solucions] (# principis-cost)
-    - 3.1 Prioritat dels principis
-    - 3.2 Optimització de costos
-    - 3.3 Benefici màxim al menor cost i risc possible
-    - 3.4 Impacte d’actualització
-    - 3.5 Protecció de la propietat intel·lectual
-    - 3.6 Compliment de la Llei
+A continuació detallem quins són aquests principis.
 
-+ [Principis de Dades] (# principis-de-dades) 
-    - Les dades són un actiu
-    - Accés a les dades
-    - Responsable de dades
-    - Seguretat de les dades
 
-	
-	# 1. Principis sobre el disseny d’aplicacions
+
+# 1. Principis sobre el disseny d’aplicacions
 
 <p><strong>1.1 Segregació de funcions/responsabilitats</strong>, les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
 
@@ -108,12 +69,12 @@ codi = "35.080.03"
     <li>1.8.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
 </ul>
 
-<p><strong>1.9 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida:</p>
+<p><strong>1.9 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per mes informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 <ul>
     <li>1.9.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
     <li>1.9.2 Documentació detallada del projecte (descripció d’arquitectura, document funcional, manual de desplegament, manual d’explotació, …).</li>
     <li>1.9.3 Control de versions. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, etc.</li>
-    <li>1.9.4 Desplegament automatitzat, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
+    <li>1.9.4 Proves automàtiques, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
 </ul>
 
 <p> <strong>1.10 Integració continua i custodia de codi</strong>
@@ -123,7 +84,9 @@ codi = "35.080.03"
 	
 </ul>	
 
-<p> <strong>1.11 Es recomana l'ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></strong></p>
+<p> <strong>1.11 Es recomana l'ús del </strong><a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p>
+
+<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue agafar i desplegar-ho a producció sense necessitat de fer canvis.
 
 
 
@@ -140,7 +103,7 @@ codi = "35.080.03"
 
 <p><strong>2.2 Estabilitat del sistema</strong>, les versions de les diferents peces (productes, llibreries...) que componen un sistema han de ser el més estable possible, d’aquí que es recomani l’ús de versions LTS (Long-Term Support) o, si de cas hi manca, GA (General Availability) o la nomenclatura que hagi donat el fabricant. Versions productives d’un sistema mai haurien d’incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formen part.</p>
 
-<p><strong>2.3 Diversitat tècnica</strong>, davant solucions estàndards s’utilitzaran preferentment els components llestos per adoptar que es troben al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari.">Full de Ruta</a> com a suportats CTTI. Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies, que eventualment passaran a formar-ne part. Cal utilitzar les tecnologies que millor encaixin al cas d’ús, ja que en un mateix sistema en poden conviure diverses per cobrir diferents necessitats.</p>
+<p><strong>2.3 Diversitat tècnica</strong>, davant solucions estàndards s’utilitzaran preferentment els components llestos per adoptar que es troben al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">Full de Ruta</a> com a suportats CTTI. Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies, que eventualment passaran a formar-ne part. Cal utilitzar les tecnologies que millor encaixin al cas d’ús, ja que en un mateix sistema en poden conviure diverses per cobrir diferents necessitats.</p>
 
 <p><strong>2.4 Interoperabilitat</strong>, el programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.</p>
 
@@ -156,12 +119,12 @@ codi = "35.080.03"
 <p><strong>2.7 Radar Tecnològic</strong>, des de les unitats d'Arquitectura es fa un seguiment de noves tecnologies per a avaluar el seu encaix i tenir altres opcions davant noves necessitats dels projectes (per exemple, nous llenguatges i frameworks o provisió d'infraestructura). L'eina que s'utilitza per a aquesta tasca és el <a href="https://canigo.ctti.gencat.cat/drafts/radar/">Radar Tecnològic. </a>
 
 <p><strong>2.8 Ubicació dels certificats</strong>, els certificats de les URLs tenen que ser pujats als Balancejadors de NUS.
-<p><strong>2.9 Nomenclatura de dominis</strong>, es tenen que complir les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a> Els Dominis "aplicacio".gencat.cat tenen que ser validats per la DGAC.
+<p><strong>2.9 Nomenclatura de dominis</strong>, es tenen que complir les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a> 
 <p><strong>2.10 Nomenclatura de les infraestructures</strong>, es te que complir l'estàndard en quant al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a>
 <p><strong>2.11 Servidors SMTP Transversals</strong>, es te que fer us dels servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions, es necessari donar d'alta els servidors d'aplicacions per pogué reenviar correus des de la plataforma.
 			<a href="https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view">Manual per a la Integració SMTP</a>
 <p><strong>2.12 Accés a internet des de xCAT</strong>, l'accés a recursos internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.
-<p><strong>2.13 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les següents característiques:
+<p><strong>2.13 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les característiques detallades a continuació, per la resta utilitzar cloud privat o on premise:
 <ul>
 	<li> D'us des de Internet. </li>
 	<li> Aplicació sense requeriments de seguretat alts. </li>
@@ -170,7 +133,8 @@ codi = "35.080.03"
 <p><strong>2.14 Connectivitat de tercers</strong>, tenir en compte l'estàndard per la  <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-connexio-equips-tercers/">connexió d'equips de tercers.</a>
 <p><strong>2.15 Comunicacions per sFTP</strong>, no permeses les connexions no segures com el FTP.
 <p><strong>2.16 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions.
-<p><strong>2.17 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></p>
+<p><strong>2.17 Mateixa infraestructura per Preproduccio i Produccio</strong>,per que les proves fetes a preproduccio tinguin validessa, es necessari que els entorns de preproduccio i produccio siguin identics a nivell d'infraestructura.</p>
+<p><strong>2.18 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a>
 
 
 # 3. Principis sobre el cost i manteniment de les solucions
