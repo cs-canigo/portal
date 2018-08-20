@@ -11,6 +11,7 @@ estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
+# Introducció
 
 Els Principis d'Arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
