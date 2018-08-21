@@ -88,7 +88,7 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 
 <p> <strong>1.11 Es recomana l'ús del </strong><a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p>
 
-<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue agafar i desplegar-ho a producció sense necessitat de fer canvis.
+<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue agafar i desplegar-ho a producció sense necessitat de fer canvis.</p>
 
 
 
