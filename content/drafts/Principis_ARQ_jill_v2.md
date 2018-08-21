@@ -16,7 +16,7 @@ codi = "35.080.03"
 
 Els Principis d'Arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
-Els principis basats en el framework TOGAF s’estructuren jeràrquicament en diferent segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb, entre elles destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions Opensource.
+Els principis basats en el framework TOGAF s’estructuren jeràrquicament en diferents segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb, entre elles destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions Opensource.
 
 <p>A continuació detallem quins són aquests principis.</p>
 
@@ -34,19 +34,19 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
     <li>Extraccions (ETL)</li>
 </ul>
 
-<p><strong>1.2 Arquitectura desacoblada</strong>, permeten als components mantenir-se completament autònoms e independents:</p>
+<p><strong>1.2 Arquitectura desacoblada</strong>, permeten als components mantenir-se completament autònoms i independents:</p>
 
 <ul>
     <li>1.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.</li>
     <li>1.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components.</li>
-	<li>1.2.3 Desacoblament entre aplicacions: Evitar les relacions entre aplicacions que impedeixin el seu desacoblament.(Per exemple, relacions a nivell de base de dades, us de llibreries compartides, fitxers de configuració compartits). Totes les relacions es tenen que porta a terme mitjançant serveis Web.</li>
+	<li>1.2.3 Desacoblament entre aplicacions: Evitar les relacions entre aplicacions que impedeixin el seu desacoblament.(Per exemple, relacions pel que fa a base de dades, us de llibreries compartides, fitxers de configuració compartits). Totes les relacions es tenen que porta a terme mitjançant serveis Web.</li>
 </ul>
 
 <p><strong>1.3 Arquitectura Orientada a Serveis</strong>, cada cop més, les aplicacions poden ser consumides externament o bé han d’integrar-se amb 3rs. Els backend han d’exposar la seva funcionalitat de negoci via serveis per facilitar-ho. 
 
 <p><strong>1.4 Maximitzar el rendiment</strong>, emmagatzemar a la memòria cau tot allò que sigui possible. Per fer-ho, utilitzar la tecnologia que millor s’adapti tant a client (html5 cache, localstorage , etc.) com a servidor (Redis, Varnish, Memcache, caché personalitzada, etc.).</p>
 
-<p><strong>1.5 Compatibilitat de versions</strong>, tenir present sempre la compatibilitat cap a enrere dels components, com per exemple: </p>
+<p><strong>1.5 Compatibilitat de versions</strong>, tenir present sempre la compatibilitat cap enrere dels components, com per exemple: </p>
 
 <ul>
     <li> Si s’exposa una API REST i s’actualitza un servei, que sigui compatible amb versions anteriors per a evitar actualitzacions innecessàries als consumidors i d’aquesta manera poder evolucionar el servei lliurement (sense dependre de calendaris o recursos de tercers).</li>
@@ -57,8 +57,8 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 <ul>
     <li>1.6.1 Concurrència, els sistemes permetran que els processos s’executin simultàniament i que puguin interactuar entre ells.</li>
     <li>1.6.2 Disponibilitat, el sistema tindrà la capacitat de desenvolupar les funcions per les quals va estar dissenyat en les condicions d’ús determinades.</li>
-    <li>1.6.3 Elasticitat, els disseny de les aplicacions permetrà ampliar  o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
-    <li>1.6.4 Zero DownTime, el serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
+    <li>1.6.3 Elasticitat, el disseny de les aplicacions permetrà ampliar o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
+    <li>1.6.4 Zero DownTime, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
 </ul>
 
 <p><strong>1.7 Facilitat d’utilització</strong>, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
@@ -71,7 +71,7 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
     <li>1.8.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
 </ul>
 
-<p><strong>1.9 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per mes informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
+<p><strong>1.9 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 <ul>
     <li>1.9.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
     <li>1.9.2 Documentació detallada del projecte (descripció d’arquitectura, document funcional, manual de desplegament, manual d’explotació, …).</li>
@@ -79,16 +79,16 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
     <li>1.9.4 Proves automàtiques, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
 </ul>
 
-<p> <strong>1.10 Integració continua i custodia de codi</strong>
+<p> <strong>1.10 Integració continua i custòdia de codi</strong>
 <ul>
-	<li> Totes les aplicacions tenen que tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
-	<li> Totes les noves aplicacions que es donin d'alta tenen que estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades per el <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
+	<li> Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
+	<li> Totes les noves aplicacions que es donin d'alta han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
 	
 </ul>	
 
 <p> <strong>1.11 Es recomana l'ús del </strong><a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p>
 
-<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue desplegar a producció sense necessitat de fer canvis.</p>
+<p> <strong>1.12 Components únics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció és té que pogué desplegar a producció sense necessitat de fer canvis.</p>
 
 
 
@@ -120,12 +120,12 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 <p><strong>2.6 Reutilització tecnològica</strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.</p>
 <p><strong>2.7 Radar Tecnològic</strong>, des de les unitats d'Arquitectura es fa un seguiment de noves tecnologies per a avaluar el seu encaix i tenir altres opcions davant noves necessitats dels projectes (per exemple, nous llenguatges i frameworks o provisió d'infraestructura). L'eina que s'utilitza per a aquesta tasca és el <a href="https://canigo.ctti.gencat.cat/drafts/radar/">Radar Tecnològic. </a>
 
-<p><strong>2.8 Ubicació dels certificats</strong>, els certificats de les URLs tenen que ser pujats als Balancejadors de NUS.
-<p><strong>2.9 Nomenclatura de dominis</strong>, es tenen que complir les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a> 
-<p><strong>2.10 Nomenclatura de les infraestructures</strong>, es te que complir l'estàndard en quant al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a>
-<p><strong>2.11 Servidors SMTP Transversals</strong>, es te que fer us dels servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions, es necessari donar d'alta els servidors d'aplicacions per pogué reenviar correus des de la plataforma.
+<p><strong>2.8 Ubicació dels certificats</strong>, els certificats de les URLs han de que ser pujats als Balancejadors de NUS.
+<p><strong>2.9 Nomenclatura de dominis</strong>, respectar les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a> 
+<p><strong>2.10 Nomenclatura de les infraestructures</strong>, s'ha de complir l'estàndard pel que fa al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a>
+<p><strong>2.11 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
 			<a href="https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view">Manual per a la Integració SMTP</a>
-<p><strong>2.12 Accés a internet des de xCAT</strong>, l'accés a recursos internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.
+<p><strong>2.12 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.
 <p><strong>2.13 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les característiques detallades a continuació, per la resta utilitzar cloud privat o on premise:
 <ul>
 	<li> D'us des de Internet. </li>
@@ -135,7 +135,7 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 <p><strong>2.14 Connectivitat de tercers</strong>, tenir en compte l'estàndard per la  <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-connexio-equips-tercers/">connexió d'equips de tercers.</a>
 <p><strong>2.15 Comunicacions per sFTP</strong>, no permeses les connexions no segures com el FTP.
 <p><strong>2.16 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions.
-<p><strong>2.17 Mateixa infraestructura per Preproduccio i Produccio</strong>,per que les proves fetes a preproduccio tinguin validessa, es necessari que els entorns de preproduccio i produccio siguin identics a nivell d'infraestructura.</p>
+<p><strong>2.17 Mateixa infraestructura per Preproduccio i Produccio</strong>,per què les proves fetes a preproduccio tinguin validesa, és necessari que els entorns de preproduccio i produccio siguin idèntics pel que fa a la infraestructura.</p>
 <p><strong>2.18 Principis sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></p>
 
 
