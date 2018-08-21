@@ -1,7 +1,7 @@
 +++
-date        = "2018-08-20"
-title       = "Principis d'Arquitectura"
-description = "Principis d'Arquitectura"
+date        = "2018-08-21"
+title       = "Principis d'Arquitectura de Sistemes d'Informació "
+description = "Principis d'Arquitectura de Sistemes d'Informació "
 weight		= 3
 type = "estandard"
 toc         = true
