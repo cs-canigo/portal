@@ -82,13 +82,13 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 <p> <strong>1.10 Integració continua i custodia de codi</strong>
 <ul>
 	<li> Totes les aplicacions tenen que tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
-	<li> Totes les noves aplicacions que es donin d'alta tenen que esta preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades per el <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
+	<li> Totes les noves aplicacions que es donin d'alta tenen que estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades per el <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
 	
 </ul>	
 
 <p> <strong>1.11 Es recomana l'ús del </strong><a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></p>
 
-<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue agafar i desplegar-ho a producció sense necessitat de fer canvis.</p>
+<p> <strong>1.12 Components unics per tots els entorns</strong>, els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció es te que pogue desplegar a producció sense necessitat de fer canvis.</p>
 
 
 
