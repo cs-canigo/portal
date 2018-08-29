@@ -1,7 +1,7 @@
 +++
 date        = "2018-08-29"
-title       = "Principis d'Arquitectura de Sistemes d'Informació "
-description = "Principis d'Arquitectura de Sistemes d'Informació "
+title       = "Principis d'Arquitectura de Sistemes d'Informació v2"
+description = "Principis d'Arquitectura de Sistemes d'Informació v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -50,45 +50,43 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
     <li> Si s’exposa una API REST i s’actualitza un servei, que sigui compatible amb versions anteriors per a evitar actualitzacions innecessàries als consumidors i d’aquesta manera poder evolucionar el servei lliurement (sense dependre de calendaris o recursos de tercers).</li>
 </ul>
 
-<p><strong>1.6 Rendiment de les aplicacions</strong>, el comportament de les  aplicacions han de satisfer les necessitats del negoci:</p>
+<p><strong>1.5 Rendiment de les aplicacions</strong>, el comportament de les  aplicacions han de satisfer les necessitats del negoci:</p>
 
 <ul>
-    <li>1.6.1 Concurrència, els sistemes permetran que els processos s’executin simultàniament i que puguin interactuar entre ells.</li>
-    <li>1.6.2 Disponibilitat, el sistema tindrà la capacitat de desenvolupar les funcions per les quals va estar dissenyat en les condicions d’ús determinades.</li>
-    <li>1.6.3 Elasticitat, el disseny de les aplicacions permetrà ampliar o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
-    <li>1.6.4 Zero DownTime, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
+    <li>1.5.1 Concurrència, els sistemes permetran que els processos s’executin simultàniament i que puguin interactuar entre ells.</li>
+    <li>1.5.2 Disponibilitat, el sistema tindrà la capacitat de desenvolupar les funcions per les quals va estar dissenyat en les condicions d’ús determinades.</li>
+    <li>1.5.3 Elasticitat, el disseny de les aplicacions permetrà ampliar o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
+    <li>1.5.4 Zero DownTime, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
 </ul>
 
-<p><strong>1.7 Facilitat d’utilització</strong>, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
+<p><strong>1.6 Facilitat d’utilització</strong>, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
 
-
-
-<p><strong>1.9 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
+<p><strong>1.7 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 <ul>
-    <li>1.9.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
-    <li>1.9.2 Documentació detallada del projecte (descripció d’arquitectura, document funcional, manual de desplegament, manual d’explotació, …).</li>
-    <li>1.9.3 Control de versions. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, etc.</li>
-    <li>1.9.4 Proves automàtiques, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
+    <li>1.7.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
+    <li>1.7.2 Documentació detallada del projecte (descripció d’arquitectura, document funcional, manual de desplegament, manual d’explotació, …).</li>
+    <li>1.7.3 Control de versions. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, etc.</li>
+    <li>1.7.4 Proves automàtiques, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
 </ul>
 
-<p> <strong>1.10 Integració continua i custòdia de codi</strong>
+<p> <strong>1.8 Integració continua i custòdia de codi</strong>
 <ul>
-	<li> 1.10.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
-	<li> 1.10.2 Totes les noves aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
-	<li> 1.10.3 Els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció és té que pogué desplegar a producció sense necessitat de fer canvis.</li>	
+	<li> 1.8.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
+	<li> 1.8.2 Totes les noves aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
+	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció és té que pogué desplegar a producció sense necessitat de fer canvis.</li>	
 </ul>	
 
-<p> <strong>1.11 Solucions Transversals</strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. A continuació es detallen les solucions transversals mes exteses.</strong>
+<p> <strong>1.9 Solucions Transversals</strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. A continuació es detallen les solucions transversals mes exteses.</strong>
 <ul>
-	<li> <strong>1.11.1 Us del Framework Canigo</strong>, per aplicacions J2EE es te que fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
-	<li><strong>1.11.3 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
+	<li> <strong>1.9.1 Us del Framework Canigo</strong>, per aplicacions J2EE es te que fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
+	<li><strong>1.9.3 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
 			<a href="https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view">Manual per a la Integració SMTP</a></li>
-	<li><strong>1.11.4 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.</li>
-	<li><strong>1.11.5 Autentificació</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
+	<li><strong>1.9.4 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.</li>
+	<li><strong>1.9.5 Autentificació</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
 	<ul>
-		<li>1.11.5.1 Col·lectiu Gencat: autentificació mitjançant “GICAR”.</li>
-		<li>1.11.5.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant “GICAR”.</li>
-		<li>1.11.5.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
+		<li>1.9.5.1 Col·lectiu Gencat: autentificació mitjançant “GICAR”.</li>
+		<li>1.9.5.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant “GICAR”.</li>
+		<li>1.9.5.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
 	</ul>
 </ul>
 <p></p>
@@ -117,15 +115,15 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 <li><strong>2.4.5 Estàndars sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></li>
 </ul>
 
-<p><strong>2.8 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les característiques detallades a continuació:
+<p><strong>2.5 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les característiques detallades a continuació:
 <ul>
 	<li> D'us des de Internet. </li>
 	<li> Aplicacions sense requeriments de seguretat alts. </li>
 	<li> Sense integració amb altres serveis de Gencat. </li>
 	<li> Aplicacions que no siguin critiques pel negoci.</li>
 </ul>
-<p><strong>2.9 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT.
-<p><strong>2.10 Mateixa infraestructura per Preproduccio i Produccio</strong>,per què les proves fetes a preproduccio tinguin validesa, és necessari que els entorns de preproduccio i produccio siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproduccio siguin inferiors.</p>
+<p><strong>2.6 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT.
+<p><strong>2.7 Mateixa infraestructura per Preproduccio i Produccio</strong>,per què les proves fetes a preproduccio tinguin validesa, és necessari que els entorns de preproduccio i produccio siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproduccio siguin inferiors.</p>
 
 
 ## 3. Principis sobre el cost i manteniment de les solucions
