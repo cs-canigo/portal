@@ -76,18 +76,20 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció és té que pogué desplegar a producció sense necessitat de fer canvis.</li>	
 </ul>	
 
-<p> <strong>1.9 Solucions Transversals</strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. A continuació es detallen les solucions transversals mes exteses.</strong>
+<p> <strong>1.9 <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/">Solucions Transversals</a></strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. A continuació es detallen les solucions transversals mes exteses.</strong>
 <ul>
 	<li> <strong>1.9.1 Us del Framework Canigo</strong>, per aplicacions J2EE es te que fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
 	<li><strong>1.9.3 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
 			<a href="https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view">Manual per a la Integració SMTP</a></li>
 	<li><strong>1.9.4 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.</li>
-	<li><strong>1.9.5 Autentificació</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
+	<li><strong>1.9.5 Gestió d'identitats</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
 	<ul>
-		<li>1.9.5.1 Col·lectiu Gencat: autentificació mitjançant “GICAR”.</li>
-		<li>1.9.5.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant “GICAR”.</li>
-		<li>1.9.5.3 Ciutadans: autentificació mitjançant “VÀlid” de AOC.</li>
+		<li>1.9.5.1 Col·lectiu Gencat: autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
+		<li>1.9.5.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
+		<li>1.9.5.3 Ciutadans: autentificació mitjançant <a href="https://www.aoc.cat/serveis-aoc/valid/">“VÀlid”</a> de AOC.</li>
 	</ul>
+	<li><strong>1.9.6 Sistema de gestió del document electrònic </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/solucions-de-suport/sistema-de-gestio-del-document-electronic-sgde/">SGDE</a>), proporciona als sistemes d’informació les principals funcions necessàries per al tractament i transformació del document electrònic per tal de donar suport a l’intercanvi fiable i segur de documents i informació entre els ciutadans i la Generalitat de Catalunya.</li>	
+	<li><strong>1.9.7 Gestor de continguts web </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/comunicacio-i-relacio/webs/geco/">GECO+</a>), permet crear i mantenir continguts i portals d'Internet mitjançant un conjunt de peces i serveis comuns (framework).</li>	
 </ul>
 <p></p>
 
