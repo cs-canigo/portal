@@ -103,7 +103,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Formatting function for row details - modify as you need
 function format(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse: collapse;width:80%">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse: collapse;width:100%">'+
         '<tr>'+
             '<th>Tipus Serveis i versions </th>'+
             '<th width="300">CPD1</th>'+
