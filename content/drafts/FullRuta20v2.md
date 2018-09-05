@@ -131,10 +131,12 @@ function format(d) {
             '<td>'+d.bluemixv2+'</td>'+
             '<td>'+d.azurev2+'</td>'+
         '</tr>'+
-        '</table>'
-        
-        return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;">'+
         '<tr>'+
+	'<th>   </th>'+
+	'<th>   </th>'+
+	'<th>   </th>'+
+	'</tr>'+
+	'<tr>'+
             '<th>Desplegable al SIC</th>'+
             '<td>'+d.desplegablesicv1+'</td>'+
             '<td>'+d.desplegablesicv2+'</td>'+
