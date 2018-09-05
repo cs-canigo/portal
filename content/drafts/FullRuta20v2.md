@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.4"
-description = "Full de Ruta 2.4"
+title       = "Full de Ruta 2.0"
+description = "Full de Ruta 2.0"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -114,7 +114,7 @@ function format(d) {
             '<th>Azure Versions i Tipus Serveis </th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid black;">Cloud Privat</th>'+
+            '<th style="border: 1px solid gray;">Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
@@ -123,13 +123,13 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid black;">Containet Cloud</th>'+
-            '<td style="border: 1px solid black;">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid black;">'+d.cpd2v2+'</td>'+
-            '<td style="border: 1px solid black;">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid black;">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid black;">'+d.bluemixv2+'</td>'+
-            '<td style="border: 1px solid black;">'+d.azurev2+'</td>'+
+            '<th style="border: 1px solid gray;">Containet Cloud</th>'+
+            '<td style="border: 1px solid gray;">'+d.cpd1v2+'</td>'+
+            '<td style="border: 1px solid gray;">'+d.cpd2v2+'</td>'+
+            '<td style="border: 1px solid gray;">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid gray;">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid gray;">'+d.bluemixv2+'</td>'+
+            '<td style="border: 1px solid gray;">'+d.azurev2+'</td>'+
         '</tr>'+
         '<tr>'+
 	'<th>   </th>'+
