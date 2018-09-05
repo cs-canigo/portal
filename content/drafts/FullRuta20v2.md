@@ -104,7 +104,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 function format(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:20px;border-collapse: collapse;">'+
-        '<tr style="border: 1px solid black;background-color:rgb(48, 135, 223);">'+
+        '<tr>'+
             '<th>   </th>'+
             '<th>CPD1 Versions i Tipus Serveis </th>'+
             '<th>CPD2 Versions i Tipus Serveis </th>'+
@@ -114,7 +114,7 @@ function format(d) {
             '<th>Azure Versions i Tipus Serveis </th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid black;background-color:rgb(48, 135, 223);">Cloud Privat</th>'+
+            '<th style="border: 1px solid black;">Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
@@ -123,13 +123,13 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid black;background-color:rgb(48, 135, 223);">Containet Cloud</th>'+
-            '<td>'+d.cpd1v2+'</td>'+
-            '<td>'+d.cpd2v2+'</td>'+
-            '<td>'+d.cpd3v2+'</td>'+
-            '<td>'+d.cpd4v2+'</td>'+
-            '<td>'+d.bluemixv2+'</td>'+
-            '<td>'+d.azurev2+'</td>'+
+            '<th style="border: 1px solid black;">Containet Cloud</th>'+
+            '<td style="border: 1px solid black;">'+d.cpd1v2+'</td>'+
+            '<td style="border: 1px solid black;">'+d.cpd2v2+'</td>'+
+            '<td style="border: 1px solid black;">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid black;">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid black;">'+d.bluemixv2+'</td>'+
+            '<td style="border: 1px solid black;">'+d.azurev2+'</td>'+
         '</tr>'+
         '<tr>'+
 	'<th>   </th>'+
