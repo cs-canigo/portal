@@ -1,7 +1,7 @@
 +++
-date        = "2018-07-23"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+date        = "2018-09-05"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -105,33 +105,39 @@ function format(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr class="intern">'+
+            '<td>   </td>'+
             '<td>Versions i Tipus Serveis CPD1</td>'+
             '<td>Versions i Tipus Serveis CPD2</td>'+
             '<td>Versions i Tipus Serveis CPD3</td>'+
             '<td>Versions i Tipus Serveis CPD4</td>'+
             '<td>Versions i Tipus Serveis Bluemix</td>'+
             '<td>Versions i Tipus Serveis Azure</td>'+
-            '<td>Desplegable al SIC</td>'+
-                '<td>Observacions:</td>'+
         '</tr>'+
         '<tr>'+
+            '<td class="intern">Cloud Privat</td>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
             '<td>'+d.cpd4v1+'</td>'+
             '<td>'+d.bluemixv1+'</td>'+
             '<td>'+d.azurev1+'</td>'+
-            '<td>'+d.desplegablesicv1+'</td>'+
-                '<td>'+d.observacions+'</td>'+
         '</tr>'+
         '<tr>'+
-        '<td>'+d.cpd1v2+'</td>'+
-        '<td>'+d.cpd2v2+'</td>'+
-        '<td>'+d.cpd3v2+'</td>'+
-        '<td>'+d.cpd4v2+'</td>'+
-        '<td>'+d.bluemixv2+'</td>'+
-        '<td>'+d.azurev2+'</td>'+
-        '<td>'+d.desplegablesicv2+'</td>'+
+            '<td class="intern">Containet Cloud</td>'+
+            '<td>'+d.cpd1v2+'</td>'+
+            '<td>'+d.cpd2v2+'</td>'+
+            '<td>'+d.cpd3v2+'</td>'+
+            '<td>'+d.cpd4v2+'</td>'+
+            '<td>'+d.bluemixv2+'</td>'+
+            '<td>'+d.azurev2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Desplegable al SIC</td>'+
+            '<td>'+d.desplegablesicv1+'</td>'+
+            '<td>'+d.desplegablesicv2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<td>Observacions:</td>'+
             '<td>'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
