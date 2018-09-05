@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.2"
-description = "Full de Ruta 2.2"
+title       = "Full de Ruta 2.0"
+description = "Full de Ruta 2.0"
 weight		= 3
 type = "estandard"
 toc         = true
