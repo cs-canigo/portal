@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.1"
-description = "Full de Ruta 2.1"
+title       = "Full de Ruta 2.2"
+description = "Full de Ruta 2.2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -103,18 +103,18 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Formatting function for row details - modify as you need
 function format(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr class="intern">'+
-            '<td>   </td>'+
-            '<td>Versions i Tipus Serveis CPD1</td>'+
-            '<td>Versions i Tipus Serveis CPD2</td>'+
-            '<td>Versions i Tipus Serveis CPD3</td>'+
-            '<td>Versions i Tipus Serveis CPD4</td>'+
-            '<td>Versions i Tipus Serveis Bluemix</td>'+
-            '<td>Versions i Tipus Serveis Azure</td>'+
+    return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;">'+
+        '<tr>'+
+            '<th>   </th>'+
+            '<th>Versions i Tipus Serveis CPD1</th>'+
+            '<th>Versions i Tipus Serveis CPD2</th>'+
+            '<th>Versions i Tipus Serveis CPD3</th>'+
+            '<th>Versions i Tipus Serveis CPD4</th>'+
+            '<th>Versions i Tipus Serveis Bluemix</th>'+
+            '<th>Versions i Tipus Serveis Azure</th>'+
         '</tr>'+
         '<tr>'+
-            '<td class="intern">Cloud Privat</td>'+
+            '<th>Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
@@ -123,7 +123,7 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td class="intern">Containet Cloud</td>'+
+            '<th>Containet Cloud</th>'+
             '<td>'+d.cpd1v2+'</td>'+
             '<td>'+d.cpd2v2+'</td>'+
             '<td>'+d.cpd3v2+'</td>'+
@@ -131,13 +131,16 @@ function format(d) {
             '<td>'+d.bluemixv2+'</td>'+
             '<td>'+d.azurev2+'</td>'+
         '</tr>'+
+        '</table>'
+        
+        return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;">'+
         '<tr>'+
-            '<td>Desplegable al SIC</td>'+
+            '<th>Desplegable al SIC</th>'+
             '<td>'+d.desplegablesicv1+'</td>'+
             '<td>'+d.desplegablesicv2+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<td>Observacions:</td>'+
+            '<th>Observacions:</th>'+
             '<td>'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
