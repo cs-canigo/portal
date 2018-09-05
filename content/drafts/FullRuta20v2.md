@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.3"
-description = "Full de Ruta 2.3"
+title       = "Full de Ruta 2.4"
+description = "Full de Ruta 2.4"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -103,18 +103,18 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Formatting function for row details - modify as you need
 function format(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;border: 2px solid black;">'+
-        '<tr>'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:20px;border-collapse: collapse;">'+
+        '<tr style="border: 1px solid black;background-color:rgb(48, 135, 223);">'+
             '<th>   </th>'+
-            '<th>Versions i Tipus Serveis CPD1</th>'+
-            '<th>Versions i Tipus Serveis CPD2</th>'+
-            '<th>Versions i Tipus Serveis CPD3</th>'+
-            '<th>Versions i Tipus Serveis CPD4</th>'+
-            '<th>Versions i Tipus Serveis Bluemix</th>'+
-            '<th>Versions i Tipus Serveis Azure</th>'+
+            '<th>CPD1 Versions i Tipus Serveis </th>'+
+            '<th>CPD2 Versions i Tipus Serveis </th>'+
+            '<th>CPD3 Versions i Tipus Serveis </th>'+
+            '<th>CPD4 Versions i Tipus Serveis </th>'+
+            '<th>Bluemix Versions i Tipus Serveis </th>'+
+            '<th>Azure Versions i Tipus Serveis </th>'+
         '</tr>'+
         '<tr>'+
-            '<th>Cloud Privat</th>'+
+            '<th style="border: 1px solid black;background-color:rgb(48, 135, 223);">Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
@@ -123,7 +123,7 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th>Containet Cloud</th>'+
+            '<th style="border: 1px solid black;background-color:rgb(48, 135, 223);">Containet Cloud</th>'+
             '<td>'+d.cpd1v2+'</td>'+
             '<td>'+d.cpd2v2+'</td>'+
             '<td>'+d.cpd3v2+'</td>'+
