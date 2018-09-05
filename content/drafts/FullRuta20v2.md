@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -105,16 +105,16 @@ function format(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:20px;border-collapse: collapse;">'+
         '<tr>'+
-            '<th>   </th>'+
-            '<th>CPD1 Versions i Tipus Serveis </th>'+
-            '<th>CPD2 Versions i Tipus Serveis </th>'+
-            '<th>CPD3 Versions i Tipus Serveis </th>'+
-            '<th>CPD4 Versions i Tipus Serveis </th>'+
-            '<th>Bluemix Versions i Tipus Serveis </th>'+
-            '<th>Azure Versions i Tipus Serveis </th>'+
+            '<th> Versions i Tipus Serveis </th>'+
+            '<th>CPD1</th>'+
+            '<th>CPD2</th>'+
+            '<th>CPD3</th>'+
+            '<th>CPD4</th>'+
+            '<th>Bluemix</th>'+
+            '<th>Azure</th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid gray;">Cloud Privat</th>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
@@ -123,19 +123,19 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid gray;">Containet Cloud</th>'+
-            '<td style="border: 1px solid gray;">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid gray;">'+d.cpd2v2+'</td>'+
-            '<td style="border: 1px solid gray;">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid gray;">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid gray;">'+d.bluemixv2+'</td>'+
-            '<td style="border: 1px solid gray;">'+d.azurev2+'</td>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Containet Cloud</th>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
         '</tr>'+
         '<tr>'+
-	'<th>   </th>'+
-	'<th>   </th>'+
-	'</tr>'+
-	'<tr>'+
+	        '<th>   </th>'+
+	        '<th>   </th>'+
+	    '</tr>'+
+	    '<tr>'+
             '<th>Desplegable al SIC</th>'+
             '<td>'+d.desplegablesicv1+'</td>'+
         '</tr>'+
