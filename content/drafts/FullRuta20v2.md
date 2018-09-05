@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-05"
-title       = "Full de Ruta 2.2"
-description = "Full de Ruta 2.2"
+title       = "Full de Ruta 2.3"
+description = "Full de Ruta 2.3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -103,7 +103,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Formatting function for row details - modify as you need
 function format(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;">'+
+    return '<table cellpadding="7" cellspacing="1" border="0" style="padding-left:20px;border: 2px solid black;">'+
         '<tr>'+
             '<th>   </th>'+
             '<th>Versions i Tipus Serveis CPD1</th>'+
@@ -134,12 +134,10 @@ function format(d) {
         '<tr>'+
 	'<th>   </th>'+
 	'<th>   </th>'+
-	'<th>   </th>'+
 	'</tr>'+
 	'<tr>'+
             '<th>Desplegable al SIC</th>'+
             '<td>'+d.desplegablesicv1+'</td>'+
-            '<td>'+d.desplegablesicv2+'</td>'+
         '</tr>'+
         '<tr>'+
             '<th>Observacions:</th>'+
