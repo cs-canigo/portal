@@ -7,11 +7,11 @@ categories  = ["canigo"]
 key         = "SETEMBRE2018"
 +++
 
-La transmissió de dades binàries en un servei web, sobretot quan es tracta d'un volum de dades important, és un punt crític en el rendiment d'una aplicació. Cal tractar-ho amb deteniment, i aplicar la millor solució tècnica segons les característiques de l'aplicació.
+La **transmissió de dades binàries** en un servei web, sobretot quan es tracta d'un volum de dades important, és un punt crític en el rendiment d'una aplicació. Cal tractar-ho amb deteniment, i aplicar la millor solució tècnica segons les característiques de l'aplicació.
 
 ## Introducció
 
-Actualment els dos formats _human readable_ d'ús general més utilitzats per dades estructurades són JSON i XML.
+Actualment els dos formats _human readable_ d'ús general més utilitzats per dades estructurades són **JSON** i **XML**.
 
 Respecte al suport de dades binàries, el format XML suporta aquest tipus de dades de manera nativa principalment mitjançant el tipus `base64Binary`, mentre que el format JSON no en dóna suport directe, obligant a codificar aquesta informació de manera ad-hoc (p.e. com a Strings en Base64, Base85 o Base91).
 
@@ -83,8 +83,10 @@ Aquest format d'estructuració de dades és l'equivalent (salvant algunes difer�
 
 Els principals avantatges d'aquest format és un suport excel·lent dels principals llenguatges (Java, Python, C#, Go, etc.) i una bona interoperabilitat entre plataformes (Linux, Windows, IoT, etc.), tot mantenint un _overhead_ mínim i una velocitat de càrrega millors en comparació amb XML.
 
-Exemple (format text pla)
+Exemple (format text pla de protocol buffer)
 ```
+# Textual representation of a protocol buffer.
+# This is *not* the binary format used on the wire.
 person {
   name: "John Doe"
   email: "jdoe@example.com"
@@ -111,7 +113,7 @@ Des d'un punt de vista purament tècnic, i sense tenir en compte d'altres criter
 Els avantatges d'aquesta opció són clares: Un protocol binari eficient en la densitat d'informació, ràpid en el tractament de dades i interoperable entre plataformes.
 
 2. Multipart<br>
-L'avantatge principal d'aquesta opció és que és un format d'empaquetat i encapsulació orientat a text i independent del format subjacent (p.e. JSON, XML), mantenint _quasi_ intacta la compatibilitat cap enrere, i mantenint alhora una elevada eficiència en la transmissió de dades binàries.
+L'avantatge principal d'aquesta opció és que presenta un format d'empaquetat i encapsulació orientat a text i independent del format subjacent (p.e. JSON, XML), mantenint _quasi_ intacta la compatibilitat cap enrere, i mantenint alhora una elevada eficiència en la transmissió de dades binàries.
 
 3. XML:base64Binary<br>
 L'avantatge principal d'aquesta opció és que no requereix cap modificació especial, car que està suportat per l'estàndard XML, garantint una interoperabilitat màxima. Els desavantatges però són una eficiència i velocitat reduïdes (en comparació amb els protocols binaris).
