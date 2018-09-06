@@ -15,7 +15,7 @@ Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvol
 
 Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
-**NOTA:** La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring
+**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
 
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
 2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
@@ -25,6 +25,7 @@ Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per
 Un cop s'han executat els pasos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha d'afegir el suport específic pels *Protocol Buffers*, de la següent manera:
 
 1. Modificar pom.xml per afegir les següents dependències al final:
+
 ```
 		<!-- Dependències pròpies Protocol buffers -->
 		<dependency>
@@ -38,9 +39,11 @@ Un cop s'han executat els pasos previs per disposar d'una aplicació Canigó 3.2
 			<version>1.4</version>
 		</dependency>
 ```
+
 2. Definir els missatges que s'enviaran mitajançant *Protocol Buffers*:
 	1. Crear el directori on emmagatzemar les definicions en texte dels missatges: **src/main/protobuf**
 	2. Crear el/s fitxer/s `.proto`. Un exemple de definició seria aquest:
+	
 ```
 // src/main/protobuf/EquipamentEspecial.proto
 syntax = "proto2";
@@ -83,8 +86,10 @@ message CercaResponse {
 }
 
 ```
+
 3. Afegir al Application.java : `@Bean public ProtobufHttpMessageConverter protobufHttpMessageConverter() { return new ProtobufHttpMessageConverter(); }`
 4. Modificar pom.xml per afegir el plugin que compila els fitxers `.proto` a codi Java. Aquest plugin s'ha de posar abans de la definició del plugin `maven-compiler-plugin`:
+
 ```
 			<!-- compile proto file into java files. -->
 			<plugin>
@@ -119,6 +124,7 @@ message CercaResponse {
 **NOTA:** Per poder fer proves, es pot desactivar (de manera temporal) la protecció contra CSRF, afegint al final del mètode configure() de la classe WebSecurityConfig.java `http.csrf().disable();`.
 
 Un cop acabat el suport específic per *Protocol Buffers*, Spring ho integra automàticament amb les annotacions REST. Un exemple d'endpoint REST pels missatges *Protocol Buffer* seria el següent:
+
 ```
 package cscanigo.howto.rest.endpoints;
 
@@ -164,6 +170,7 @@ public class EquipamentEspecialServiceController {
 ```
 
 **NOTA:** En aquest cas concret, les implementacions actuals per browser (Firefox, Chrome, MSIE, etc.) no són prou madures per considerar-ne l'utilització fora de l'àmbit M2M (màquina a màquina). Tot i així, com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb *Protocol Buffers*:
+
 ```
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -223,8 +230,6 @@ public class EquipamentEspecialServiceController {
 </body>
 </html>
 ```
-
-
 Més info:
 * https://webapplog.com/json-is-not-cool-anymore/
 * https://github.com/azat-co/proto-buffer-api/tree/master/public
@@ -245,6 +250,7 @@ Abans de fer cap modificació cal generar, compilar i executar l'aplicació per 
 Un cop s'han executat els pasos previs, s'ha d'afegir el suport específic pel tractament de dades *Multipart*, de la següent manera:
 
 1. Modificar el mètode dispatcherServletRegistration() de la classe Application.java per afegir abans del retorn:
+
 ```
 		MultipartConfigFactory mcf = new MultipartConfigFactory();
 		mcf.setFileSizeThreshold("1MB");
@@ -256,6 +262,7 @@ Un cop s'han executat els pasos previs, s'ha d'afegir el suport específic pel t
 ```
 
 Un cop acabat el suport específic per *Multipart*, Spring ho integra automàticament amb les annotacions REST utilitzant la configuració prèvia. Un exemple d'endpoint REST per missatges *Multipart* seria el següent:
+
 ```
 	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE }, headers = "content-type=multipart/form-data")
 	@ResponseStatus(HttpStatus.ACCEPTED)
@@ -269,6 +276,7 @@ Un cop acabat el suport específic per *Multipart*, Spring ho integra automàtic
 ```
 
 **NOTA:** _Com a prova de concepte_ es pot utilitzar el següent codi HTML com a referència per enviar un fitxer mitjançant *Multipart*:
+
 ```
 <!DOCTYPE HTML>
 <html lang="en-US">
