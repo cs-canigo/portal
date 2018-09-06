@@ -9,19 +9,21 @@ key = "SETEMBRE2018"
 
 ### Audiència
 
-Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvolupin una aplicació Canigó 3.2 i que necessitin transferir binaris en REST APIs.
-
+Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvolupin una aplicació Canigó 3.2 i que necessitin transferir dades binàries en REST APIs.
 
 #### Protocol Buffers
 
-Abans de fer cap modificació cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
+Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
-1. Generar projecte amb archetype : `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
+1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
+
+(La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/))
+
 2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
 3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar protocolbuffers/target/protocolbuffers.war`
-4. Provar d'accedir amb Firefox a http://localhost:8080/index.html
+4. Provar d'accedir amb un navegador web a http://localhost:8080/index.html
 
-Un cop s'han executat els pasos previs, s'ha d'afegir el suport específic pels *Protocol Buffers*, de la següent manera:
+Un cop s'han executat els pasos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha d'afegir el suport específic pels *Protocol Buffers*, de la següent manera:
 
 1. Modificar pom.xml per afegir les següents dependències al final:
 ```
@@ -164,8 +166,7 @@ public class EquipamentEspecialServiceController {
 
 **NOTA:** En aquest cas concret, les implementacions actuals per browser (Firefox, Chrome, MSIE, etc.) no són prou madures per considerar-ne l'utilització fora de l'àmbit M2M (màquina a màquina).
 
-
-**NOTA2:** Tot i que actualment les implementacions de *Protocol Buffers* per a navagadors no són prou madures, _com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb *Protocol Buffers*:
+**NOTA:** Tot i que actualment les implementacions de *Protocol Buffers* per a navagadors no són prou madures, _com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb *Protocol Buffers*:
 ```
 <!DOCTYPE HTML>
 <html lang="en-US">
