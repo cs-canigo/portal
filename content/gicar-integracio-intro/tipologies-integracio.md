@@ -1,6 +1,7 @@
 +++
 date        = "2018-08-03T17:11:42+01:00"
 title       = "Modalitats d'integració possibles"
+aliases     = ["/noticies/2018-09-06-GICAR-Modalitats-integracio/"]
 description = "Modalitats d'integració possibles d'autenticació amb GICAR"
 section     = "gicar-integracio-intro"
 taxonomies  = []
