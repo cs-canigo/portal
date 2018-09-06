@@ -2,7 +2,7 @@
 date        = "2018-08-10"
 title       = "Canigó. Transmissió de binaris en REST APIs"
 description = "En aquest article expliquem diferents opcions per transmissió de dades binàries en REST APIs, recomanacions i millors pràctiques."
-sections    = ["Notícies"]
+sections    = ["Notícies","home"]
 categories  = ["canigo"]
 key         = "SETEMBRE2018"
 +++
