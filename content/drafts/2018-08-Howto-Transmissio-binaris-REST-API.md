@@ -15,10 +15,9 @@ Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvol
 
 Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
+**NOTA:** La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring
+
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
-
-(La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/))
-
 2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
 3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar protocolbuffers/target/protocolbuffers.war`
 4. Provar d'accedir amb un navegador web a http://localhost:8080/index.html
@@ -85,7 +84,7 @@ message CercaResponse {
 
 ```
 3. Afegir al Application.java : `@Bean public ProtobufHttpMessageConverter protobufHttpMessageConverter() { return new ProtobufHttpMessageConverter(); }`
-4. Modificar pom.xml per afegir el plugin que compila els fitxers `.proto` a codi Java. Aqust plugin s'ha de posar abans de la definició del plugin `maven-compiler-plugin`:
+4. Modificar pom.xml per afegir el plugin que compila els fitxers `.proto` a codi Java. Aquest plugin s'ha de posar abans de la definició del plugin `maven-compiler-plugin`:
 ```
 			<!-- compile proto file into java files. -->
 			<plugin>
@@ -164,9 +163,7 @@ public class EquipamentEspecialServiceController {
 
 ```
 
-**NOTA:** En aquest cas concret, les implementacions actuals per browser (Firefox, Chrome, MSIE, etc.) no són prou madures per considerar-ne l'utilització fora de l'àmbit M2M (màquina a màquina).
-
-**NOTA:** Tot i que actualment les implementacions de *Protocol Buffers* per a navagadors no són prou madures, _com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb *Protocol Buffers*:
+**NOTA:** En aquest cas concret, les implementacions actuals per browser (Firefox, Chrome, MSIE, etc.) no són prou madures per considerar-ne l'utilització fora de l'àmbit M2M (màquina a màquina). Tot i així, com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb *Protocol Buffers*:
 ```
 <!DOCTYPE HTML>
 <html lang="en-US">
@@ -238,6 +235,8 @@ Més info:
 
 Abans de fer cap modificació cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
+**NOTA:** La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring
+
 1. Generar projecte amb archetype : `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=multipart -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
 2. Compilar amb `mvn -B -f multipart/pom.xml clean package`
 3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar multipart/target/multipart.war`
@@ -294,4 +293,3 @@ Un cop acabat el suport específic per *Multipart*, Spring ho integra automàtic
 </body>
 </html>
 ```
-
