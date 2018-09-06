@@ -7,4 +7,4 @@ categories  = ["canigo"]
 key         = "SETEMBRE2018"
 +++
 
-{{% content "gicar-integracio-intro/tipologies-integracio.md" %}}
+{{% content link="/gicar-integracio-intro/tipologies-integracio/" %}}
