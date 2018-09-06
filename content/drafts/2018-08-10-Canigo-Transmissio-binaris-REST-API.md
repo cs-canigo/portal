@@ -104,7 +104,6 @@ Des d'un punt de vista de rendiment, la forma més eficient de transmissió de d
 En el cas que s'hagi de fer mitjançant un API REST, s'ha de tenir en compte diversos factors i el pes en la decisió final:
 
 * Volum de transferència de dades: Si el volum de dades a transmetre és _elevat_ es desaconsella utilitzar l'enviament explícit o implícit de les codificacions textuals (p.e. Base64), i es recomana l'ús de protocols binaris, donats el seu rendiment i eficiència.
-* Fase en la qual es troba el projecte: Si el projecte es troba en fase de manteniment o bé és un projecte _legacy_ llavors té més sentit utilitzar protocols textuals.
 * Interoperabilitat amb altres projectes/sistemes: En aquest cas les codificacions textuals (p.e. Base64) i més concretament el format XML, i el seu tipus de dades `base64Binary`, poden maximitzar la interoperabilitat permetent l'enviament de dades binàries.
 
 Des d'un punt de vista purament tècnic, i sense tenir en compte d'altres criteris, el ranking quedaria així:
@@ -117,6 +116,8 @@ L'avantatge principal d'aquesta opció és que presenta un format d'empaquetat i
 
 3. XML:base64Binary<br>
 L'avantatge principal d'aquesta opció és que no requereix cap modificació especial, car que està suportat per l'estàndard XML, garantint una interoperabilitat màxima. Els desavantatges però són una eficiència i velocitat reduïdes (en comparació amb els protocols binaris).
+
+Les opcions Base64 i MTOM quedarien descartades en favor d'aquestes.
 
 ## Enllaços d'interés
 
