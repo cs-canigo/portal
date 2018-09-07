@@ -119,6 +119,12 @@ L'avantatge principal d'aquesta opció és que no requereix cap modificació esp
 
 Les opcions Base64 i MTOM quedarien descartades en favor d'aquestes.
 
+### Streaming
+
+A banda de transmetre i tractar dades de manera eficient i còmode pel desenvolupador, la possibilitat de permetre _Streaming_ del contingut binari pot representar una necessitat en el cas que s'hagi de treballar amb un volum elevat de dades binàries, com per exemple els fitxers adjunts o reports pesants, car que les opcions estàndard carreguen aquestes dades binàries en memòria.
+
+En aquest sentit l'única opció recomanable actualment per poder donar suport a _Streaming_ és l'opció de **Multipart**, car que les implementacions d'aquest estàndard transfereixen a fitxers temporals els continguts binaris, abstraient el desenvolupador d'aquest detall.
+
 ## Enllaços d'interés
 
 * https://en.wikipedia.org/wiki/Base64
@@ -129,3 +135,4 @@ Les opcions Base64 i MTOM quedarien descartades en favor d'aquestes.
 * http://cxf.apache.org/docs/jax-rs-multiparts.html
 * https://en.wikipedia.org/wiki/Message_Transmission_Optimization_Mechanism
 * https://developers.google.com/protocol-buffers/docs/overview
+* https://github.com/protocolbuffers/protobuf/issues/5120
