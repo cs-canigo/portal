@@ -1,7 +1,6 @@
 +++
 date        = "2018-08-03T17:11:42+01:00"
 title       = "Modalitats d'integració possibles"
-aliases     = ["/noticies/2018-09-06-GICAR-Modalitats-integracio/"]
 description = "Modalitats d'integració possibles d'autenticació amb GICAR"
 section     = "gicar-integracio-intro"
 taxonomies  = []
@@ -68,4 +67,3 @@ Entenem per aquesta modalitat d’autenticació aquella en que l’aplicació (h
 - Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.
 
 Entenem per aquesta modalitat d’autenticació aquella en que l’aplicació delega l’autenticació a un directori actiu, LDAP o BBDD que GICAR aprovisiona. GICAR en aquesta BBDD pot sincronitzar l’usuari amb la seva contrasenya.
-
