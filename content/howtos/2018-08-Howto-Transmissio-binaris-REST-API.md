@@ -58,6 +58,15 @@ message EquipamentEspecial {
   required int64 id = 1;
   required string nom = 2;
   optional string municipi = 3;
+  repeated DocumentacioEquipamentEspecial documents = 4;
+}
+
+message DocumentacioEquipamentEspecial {
+  required int64 id = 1;
+  required string nom = 2;
+  optional string descripcio = 3;
+  // pot no ser obligatori definir el contingut del document
+  optional bytes contingut = 4;
 }
 
 // Missatges de cerca
@@ -153,15 +162,23 @@ public class EquipamentEspecialServiceController {
 
 		Equipament equipament = equipamentService.getEquipament(request.getId());
 
-		EquipamentEspecial equipamentEspecial = EquipamentEspecial.newBuilder() //
+		EquipamentEspecial.Builder equipamentEspecial = EquipamentEspecial.newBuilder() //
 				.setId(equipament.getId()) //
 				.setNom(equipament.getNom()) //
-				.setMunicipi(equipament.getMunicipi()) //
-				.build();
+				.setMunicipi(equipament.getMunicipi());
+
+		for (Documents documents : equipament.getDocuments()) {
+
+			equipamentEspecial.addDocumentsBuilder() //
+					.setId(documents.getId()) //
+					.setNom(documents.getNom()) //
+					.setContingut(ByteString.copyFrom(documents.getContingut())) //
+					.build();
+		}
 
 		return CercaResponse.newBuilder() //
 				.setTotal(1) //
-				.addEquipaments(equipamentEspecial) //
+				.addEquipaments(equipamentEspecial.build()) //
 				.build();
 	}
 
