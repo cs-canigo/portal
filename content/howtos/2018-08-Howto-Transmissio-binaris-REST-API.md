@@ -318,3 +318,181 @@ Un cop acabat el suport específic per *Multipart*, Spring ho integra automàtic
 </body>
 </html>
 ```
+
+#### XML:base64Binary
+
+Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
+
+**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
+
+1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=xmlbase64binary -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
+2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
+3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar protocolbuffers/target/protocolbuffers.war`
+4. Provar d'accedir amb un navegador web a http://localhost:8080/index.html
+
+Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha de triar la implementació (JAXB, CXF, Axis, Xmlbeans, etc.) per treballar. Per simplicitat en aquest exemple farem ús de l'estàndard JAXB per generar el codi java:
+
+1. Afegir el fitxer src/main/xsd/global.xjb
+```
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.0"
+  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  jaxb:extensionBindingPrefixes="xjc">
+  
+ <jaxb:globalBindings>
+    <xjc:simple />
+    <xjc:serializable uid="-1" />
+    <jaxb:javaType name="java.util.Calendar" xmlType="xs:dateTime"
+      parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+      printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+  </jaxb:globalBindings>
+</jaxb:bindings>
+```
+2. Crear el següent fitxer d'exemple: src/main/xsd/Equip.xjb
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:cscanigo.howto.rest:xmlbase64binary:1.0-SNAPSHOT"
+	xmlns:tns="urn:cscanigo.howto.rest:xmlbase64binary:1.0-SNAPSHOT"
+	elementFormDefault="unqualified">
+
+	<element name="Root">
+		<complexType>
+			<choice minOccurs="1">
+				<element name="CercaRequest" type="tns:CercaRequest"></element>
+				<element name="CercaPaginadaRequest" type="tns:CercaPaginadaRequest"></element>
+				<element name="CercaResponse" type="tns:CercaResponse"></element>
+			</choice>
+		</complexType>
+	</element>
+
+	<complexType name="CercaRequest">
+		<sequence>
+			<element name="id" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+	<complexType name="CercaPaginadaRequest">
+		<sequence>
+			<element name="id" type="long" minOccurs="0" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="page" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="rpp" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="sort" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="filter" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+	<complexType name="CercaResponse">
+		<sequence>
+			<element name="total" type="int" minOccurs="1" maxOccurs="1" />
+			<element name="equipaments" type="tns:EquipamentEspecial" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="EquipamentEspecial">
+		<sequence>
+			<element name="id" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="documents" type="tns:DocumentacioEquipamentEspecial" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="DocumentacioEquipamentEspecial">
+		<sequence>
+			<element name="total" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="descripcio" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="contingut" type="base64Binary" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType>
+
+</schema>
+```
+2. Modificar pom.xml per afegir el següent plugin:
+```
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<nv>true</nv>
+					<clearOutputDir>true</clearOutputDir>
+					<failOnNoSchemas>true</failOnNoSchemas>
+					<extension>true</extension>
+					<packageName>${project.groupId}</packageName>
+					<outputDirectory>${project.build.directory}/generated-sources/jaxb</outputDirectory>
+					<schemaDirectory>src/main/xsd</schemaDirectory>
+					<schemaFiles>*.xsd</schemaFiles>
+					<verbose>true</verbose>
+					<bindingDirectory>${project.basedir}/src/main/xsd</bindingDirectory>
+					<bindingFiles>global.xjb</bindingFiles>
+				</configuration>
+			</plugin>
+```
+
+Un cop afegit el suport específic per _JAXB_, Maven en la fase de generació de codi font genera les classes Java. En l'exemple del EquipamentEspecial.xsd la referència a *XML:base64binary* es generaria automàticament a codi Java de la següent manera (veure el camp "contingut"):
+
+```
+/**
+ * <p>Java class for DocumentacioEquipamentEspecial complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="DocumentacioEquipamentEspecial">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="total" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="nom" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="descripcio" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="contingut" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "DocumentacioEquipamentEspecial", propOrder = {
+    "total",
+    "nom",
+    "descripcio",
+    "contingut"
+})
+public class DocumentacioEquipamentEspecial
+    implements Serializable
+{
+
+    private final static long serialVersionUID = -1L;
+    protected long total;
+    @XmlElement(required = true)
+    protected String nom;
+    protected String descripcio;
+    protected byte[] contingut;
+
+// ... la resta de codi ...
+
+```
+
+Més info:
+1. https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html
+2. http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/
+3. https://www.journaldev.com/1312/jaxb2-maven-plugin-xjc-example-generate-java-classes-xsd
+
