@@ -326,8 +326,8 @@ Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per
 **NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
 
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=xmlbase64binary -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
-2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
-3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar protocolbuffers/target/protocolbuffers.war`
+2. Compilar amb `mvn -B -f xmlbase64binary/pom.xml clean package`
+3. Executar l'aplicació generada mitjançant `java -Dapplication.defaultLanguage=ca -jar xmlbase64binary/target/xmlbase64binary.war`
 4. Provar d'accedir amb un navegador web a http://localhost:8080/index.html
 
 Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha de triar la implementació (JAXB, CXF, Axis, Xmlbeans, etc.) per treballar. Per simplicitat en aquest exemple farem ús de l'estàndard JAXB per generar el codi java:
@@ -335,22 +335,24 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 1. Afegir el fitxer src/main/xsd/global.xjb
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<jaxb:bindings version="2.0"
-  xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-  xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  jaxb:extensionBindingPrefixes="xjc">
-  
- <jaxb:globalBindings>
-    <xjc:simple />
-    <xjc:serializable uid="-1" />
-    <jaxb:javaType name="java.util.Calendar" xmlType="xs:dateTime"
-      parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
-      printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
-  </jaxb:globalBindings>
+<jaxb:bindings 
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0">
+
+	<jaxb:globalBindings>
+		<xjc:simple />
+		<xjc:serializable uid="-1" />
+		<jaxb:javaType name="java.util.Calendar"
+			xmlType="xs:dateTime"
+			parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+			printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+	</jaxb:globalBindings>
+
 </jaxb:bindings>
 ```
-2. Crear el següent fitxer d'exemple: src/main/xsd/Equip.xjb
+2. Crear el següent fitxer d'exemple: src/main/xsd/EquipamentEspecial.xsd
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
@@ -420,26 +422,33 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.5</version>
+				<version>2.2</version>
 				<executions>
 					<execution>
+						<id>xjc1</id>
+						<phase>generate-sources</phase>
 						<goals>
 							<goal>xjc</goal>
 						</goals>
+						<configuration>
+							<packageName>${project.groupId}.xsd.equipamentEspecial</packageName>
+							<sources>
+								<source>${project.basedir}/src/main/xsd/EquipamentEspecial.xsd</source>
+							</sources>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>
-					<nv>true</nv>
-					<clearOutputDir>true</clearOutputDir>
-					<failOnNoSchemas>true</failOnNoSchemas>
+					<target>2.0</target>
+					<addGeneratedAnnotation>true</addGeneratedAnnotation>
 					<extension>true</extension>
-					<packageName>${project.groupId}</packageName>
-					<outputDirectory>${project.build.directory}/generated-sources/jaxb</outputDirectory>
-					<schemaDirectory>src/main/xsd</schemaDirectory>
-					<schemaFiles>*.xsd</schemaFiles>
-					<verbose>true</verbose>
-					<bindingDirectory>${project.basedir}/src/main/xsd</bindingDirectory>
-					<bindingFiles>global.xjb</bindingFiles>
+					<failOnNoSchemas>false</failOnNoSchemas>
+					<laxSchemaValidation>true</laxSchemaValidation>
+					<locale>en</locale>
+					<outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
+					<xjbSources>
+						<xjbSource>${project.basedir}/src/main/xsd/global.xjb</xjbSource>
+					</xjbSources>
 				</configuration>
 			</plugin>
 ```
@@ -453,18 +462,18 @@ Un cop afegit el suport específic per _JAXB_, Maven en la fase de generació de
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DocumentacioEquipamentEspecial">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="total" type="{http://www.w3.org/2001/XMLSchema}long"/>
- *         &lt;element name="nom" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="descripcio" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="contingut" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="DocumentacioEquipamentEspecial"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="total" type="{http://www.w3.org/2001/XMLSchema}long"/&gt;
+ *         &lt;element name="nom" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="descripcio" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="contingut" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -476,15 +485,21 @@ Un cop afegit el suport específic per _JAXB_, Maven en la fase de generació de
     "descripcio",
     "contingut"
 })
+@Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
 public class DocumentacioEquipamentEspecial
     implements Serializable
 {
 
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
     private final static long serialVersionUID = -1L;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
     protected long total;
     @XmlElement(required = true)
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
     protected String nom;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
     protected String descripcio;
+    @Generated(value = "com.sun.tools.xjc.Driver", date = "2018-09-12T12:59:02+02:00", comments = "JAXB RI v2.2.11")
     protected byte[] contingut;
 
 // ... la resta de codi ...
