@@ -1,7 +1,7 @@
 +++
-date        = "2018-09-05"
-title       = "Full de Ruta 2.0"
-description = "Full de Ruta 2.0"
+date        = "2018-09-13"
+title       = "Full de Ruta 2.1"
+description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -133,15 +133,15 @@ function format(d) {
         '</tr>'+
         '<tr>'+
 	        '<th>   </th>'+
-	        '<th>   </th>'+
+	        '<th  colspan="6">   </th>'+
 	    '</tr>'+
 	    '<tr>'+
-            '<th>Desplegable al SIC</th>'+
-            '<td>'+d.desplegablesicv1+'</td>'+
+            '<th >Desplegable al SIC</th>'+
+            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
         '</tr>'+
         '<tr>'+
             '<th>Observacions:</th>'+
-            '<td>'+d.observacions+'</td>'+
+            '<td colspan="6">'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
