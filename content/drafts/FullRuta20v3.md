@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT i CPD Separats v2"
-description = "Full de Ruta LLT i CPD Separats v2"
+title       = "Full de Ruta LLT i CPD Separats v3"
+description = "Full de Ruta LLT i CPD Separats v3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -145,7 +145,7 @@ function formatLLT(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRuta = $('#FullRutaLLT').DataTable( {
+    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -215,7 +215,7 @@ $(document).ready(function() {
      // Add event listener for opening and closing details
     $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRuta.row( tr );
+        var row = taulaFullRutaLLT.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -274,7 +274,7 @@ function formatCPD(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRuta = $('#FullRutaCPD').DataTable( {
+    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -344,7 +344,7 @@ $(document).ready(function() {
      // Add event listener for opening and closing details
     $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRuta.row( tr );
+        var row = taulaFullRutaCPD.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -358,7 +358,6 @@ $(document).ready(function() {
     });
 });
 </script>
-
 
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
