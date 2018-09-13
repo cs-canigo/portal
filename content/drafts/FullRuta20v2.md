@@ -123,7 +123,7 @@ function format(d) {
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Containet Cloud</th>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
