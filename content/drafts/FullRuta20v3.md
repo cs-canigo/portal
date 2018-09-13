@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT i CPD Separats v1"
-description = "Full de Ruta LLT i CPD Separats v1"
+title       = "Full de Ruta LLT i CPD Separats v2"
+description = "Full de Ruta LLT i CPD Separats v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -119,7 +119,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 
 <script>
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
-function formatLTT(d) {
+function formatLLT(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse: collapse;width:100%">'+
         '<tr>'+
@@ -145,7 +145,7 @@ function formatLTT(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRuta = $('#FullRutaLTT').DataTable( {
+    var taulaFullRuta = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -160,7 +160,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariLTT.json",
+        "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
             {
                 "className":      'details-control',
@@ -213,7 +213,7 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-    $('#FullRutaLTT tbody').on('click', 'td.details-control', function () {
+    $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRuta.row( tr );
         if ( row.child.isShown() ) {
