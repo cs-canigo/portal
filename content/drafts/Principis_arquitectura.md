@@ -56,7 +56,7 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
     <li>1.5.1 Concurrència, els sistemes permetran que els processos s’executin simultàniament i que puguin interactuar entre ells.</li>
     <li>1.5.2 Disponibilitat, el sistema tindrà la capacitat de desenvolupar les funcions per les quals va estar dissenyat en les condicions d’ús determinades.</li>
     <li>1.5.3 Elasticitat, el disseny de les aplicacions permetrà ampliar o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
-    <li>1.5.4 Zero DownTime, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
+    <li>1.5.4 Zero DownTime, en els casos que així es requereixi, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
 </ul>
 
 <p><strong>1.6 Facilitat d’utilització</strong>, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
