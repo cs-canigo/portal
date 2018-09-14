@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta test 2"
+title       = "Full de Ruta test 3"
 description = "Full de Ruta"
 weight		= 3
 type = "estandard"
@@ -33,8 +33,6 @@ codi = "35.080.03"
         </thead>
 </table>
 
-## Programari estandarditzat lloc de treball
-
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
             <tr>
@@ -49,8 +47,6 @@ codi = "35.080.03"
             </tr>
         </thead>
 </table>
-
-## Programari estandarditzat CPD
 
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
