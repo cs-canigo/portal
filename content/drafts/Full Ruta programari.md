@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT & CPD v2"
-description = "Full de Ruta LLT & CPD v2"
+title       = "Full de Ruta LLT & CPD v3"
+description = "Full de Ruta LLT & CPD v3"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -85,6 +85,20 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 <table id="FullRutaCPD" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Producte</th>
+                <th>Grup de Tecnologies</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+<table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
             <tr>
                 <th></th>
@@ -227,50 +241,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
-});
-</script>
-<table id="FullRutaLLT" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Producte</th>
-                <th>Grup de Tecnologies</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
-                <th>Versió Actual</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
-            </tr>
-        </thead>
-</table>
-<script>
-// Formatting function for row details - Lloc de treball
-function format ( d ) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
-            '<th>Versions per Lot </th>'+
-            '<th width="300">LT2A</th>'+
-            '<th width="300">LT2B</th>'+
-            '<th width="300">LT2C</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
-            '<td>'+d.lt2a+'</td>'+
-            '<td>'+d.lt2b+'</td>'+
-            '<td>'+d.lt2c+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="3">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="3">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
-$(document).ready(function() {
+    // LLT 
     var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
@@ -349,11 +320,37 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( format(row.data()) ).show();
+            row.child( formatLLT(row.data()) ).show();
             tr.addClass('shown');
         }
     });
 });
+// Formatting function for row details - Lloc de treball
+function formatLLT ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
+            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt2b+'</td>'+
+            '<td>'+d.lt2c+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="3">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="3">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
 </script>
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
