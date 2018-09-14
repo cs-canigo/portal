@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta test 1"
+title       = "Full de Ruta prova 1"
 description = "Full de Ruta 2.1"
 weight		= 3
 type = "estandard"
@@ -84,12 +84,11 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
              </tr>
         </thead>
 </table>
+## Programari estandarditzat lloc de treball
+
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
             <tr>
-                <th  colspan="8">  Programari estandarditzat lloc de treball  </th>
-            </tr>
-            <tr>
                 <th></th>
                 <th>Producte</th>
                 <th>Grup de Tecnologies</th>
@@ -101,12 +100,11 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+## Programari estandarditzat CPD
+
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
             <tr>
-                <th  colspan="8">  Programari estandarditzat CPD  </th>
-            </tr>
-            <tr>
                 <th></th>
                 <th>Producte</th>
                 <th>Grup de Tecnologies</th>
@@ -118,9 +116,11 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+
 <script>
+// Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
             '<th width="300">LT2A</th>'+
@@ -230,7 +230,7 @@ $(document).ready(function() {
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%;">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Tipus Serveis i versions </th>'+
             '<th width="300">CPD1</th>'+
