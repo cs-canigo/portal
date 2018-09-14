@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT & CPD v3"
-description = "Full de Ruta LLT & CPD v3"
+title       = "Full de Ruta LLT & CPD v1"
+description = "Full de Ruta LLT & CPD v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -113,51 +113,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 <script>
-// Formatting function for row details - CPD
-function format ( d ) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
-            '<th>Tipus Serveis i versions </th>'+
-            '<th width="300">CPD1</th>'+
-            '<th width="300">CPD2</th>'+
-            '<th width="300">CPD3</th>'+
-            '<th width="300">CPD4</th>'+
-            '<th width="300">Bluemix</th>'+
-            '<th width="300">Azure</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
-            '<td>'+d.cpd1v1+'</td>'+
-            '<td>'+d.cpd2v1+'</td>'+
-            '<td>'+d.cpd3v1+'</td>'+
-            '<td>'+d.cpd4v1+'</td>'+
-            '<td>'+d.bluemixv1+'</td>'+
-            '<td>'+d.azurev1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="6">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th >Desplegable al SIC</th>'+
-            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="6">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
 $(document).ready(function() {
     var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
     "columnDefs": [
@@ -237,7 +192,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( format(row.data()) ).show();
+            row.child( formatCPD(row.data()) ).show();
             tr.addClass('shown');
         }
     });
@@ -320,11 +275,56 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatLLT(row.data()) ).show();
+            //row.child( formatLLT(row.data()) ).show();
             tr.addClass('shown');
         }
     });
 });
+// Formatting function for row details - CPD
+function formatCPD ( d ) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr>'+
+            '<th>Tipus Serveis i versions </th>'+
+            '<th width="300">CPD1</th>'+
+            '<th width="300">CPD2</th>'+
+            '<th width="300">CPD3</th>'+
+            '<th width="300">CPD4</th>'+
+            '<th width="300">Bluemix</th>'+
+            '<th width="300">Azure</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
+            '<td>'+d.cpd1v1+'</td>'+
+            '<td>'+d.cpd2v1+'</td>'+
+            '<td>'+d.cpd3v1+'</td>'+
+            '<td>'+d.cpd4v1+'</td>'+
+            '<td>'+d.bluemixv1+'</td>'+
+            '<td>'+d.azurev1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="6">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th >Desplegable al SIC</th>'+
+            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="6">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
 // Formatting function for row details - Lloc de treball
 function formatLLT ( d ) {
     // `d` is the original data object for the row
