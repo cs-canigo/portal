@@ -85,7 +85,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 ## Programari estandarditzat lloc de treball
-
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
             <tr>
@@ -101,7 +100,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 ## Programari estandarditzat CPD
-
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
             <tr>
