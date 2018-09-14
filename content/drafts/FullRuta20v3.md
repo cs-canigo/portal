@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT i CPD Separats v3"
-description = "Full de Ruta LLT i CPD Separats v3"
+title       = "Full de Ruta LLT i CPD Separats v1"
+description = "Full de Ruta LLT i CPD Separats v1"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -84,22 +84,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
              </tr>
         </thead>
 </table>
-## Programari estandarditzat lloc de treball
 
-<table id="FullRutaLLT" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Producte</th>
-                <th>Grup de Tecnologies</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
-                <th>Versió Actual</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
-            </tr>
-        </thead>
-</table>
 ## Programari estandarditzat CPD
 
 <table id="FullRutaCPD" class="display" style="width:100%">
@@ -116,7 +101,22 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+## Programari estandarditzat lloc de treball
 
+<table id="FullRutaLLT" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Producte</th>
+                <th>Grup de Tecnologies</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
 <script>
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
