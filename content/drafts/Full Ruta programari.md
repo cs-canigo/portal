@@ -1,7 +1,7 @@
 +++
-date        = "2018-09-13"
-title       = "Full de Ruta LLT & CPD v2"
-description = "Full de Ruta LLT & CPD v2"
+date        = "2018-07-23"
+title       = "Full de Ruta 2.0"
+description = "Full de Ruta 2.0"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -84,7 +84,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
              </tr>
         </thead>
 </table>
-<table id="FullRutaCPD" class="display" style="width:100%">
+<table id="FullRuta" class="display" style="width:100%">
         <thead>
             <tr>
                 <th></th>
@@ -98,68 +98,46 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-<table id="FullRutaLLT" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th></th>
-                <th>Producte</th>
-                <th>Grup de Tecnologies</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
-                <th>Versió Actual</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
-            </tr>
-        </thead>
-</table>
+
 <script>
-// Formatting function for row details - CPD
-function formatCPD(d) {
+// Formatting function for row details - modify as you need
+function format(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px">'+
-        '<tr>'+
-            '<th>Tipus Serveis i versions </th>'+
-            '<th width="300">CPD1</th>'+
-            '<th width="300">CPD2</th>'+
-            '<th width="300">CPD3</th>'+
-            '<th width="300">CPD4</th>'+
-            '<th width="300">Bluemix</th>'+
-            '<th width="300">Azure</th>'+
+    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+        '<tr class="intern">'+
+            '<td>Versions i Tipus Serveis CPD1</td>'+
+            '<td>Versions i Tipus Serveis CPD2</td>'+
+            '<td>Versions i Tipus Serveis CPD3</td>'+
+            '<td>Versions i Tipus Serveis CPD4</td>'+
+            '<td>Versions i Tipus Serveis Bluemix</td>'+
+            '<td>Versions i Tipus Serveis Azure</td>'+
+            '<td>Desplegable al SIC</td>'+
+                '<td>Observacions:</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
             '<td>'+d.cpd1v1+'</td>'+
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
             '<td>'+d.cpd4v1+'</td>'+
             '<td>'+d.bluemixv1+'</td>'+
             '<td>'+d.azurev1+'</td>'+
+            '<td>'+d.desplegablesicv1+'</td>'+
+                '<td>'+d.observacions+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="6">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th >Desplegable al SIC</th>'+
-            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="6">'+d.observacions+'</td>'+
+        '<td>'+d.cpd1v2+'</td>'+
+        '<td>'+d.cpd2v2+'</td>'+
+        '<td>'+d.cpd3v2+'</td>'+
+        '<td>'+d.cpd4v2+'</td>'+
+        '<td>'+d.bluemixv2+'</td>'+
+        '<td>'+d.azurev2+'</td>'+
+        '<td>'+d.desplegablesicv2+'</td>'+
+            '<td>'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
+    var taulaFullRuta = $('#FullRuta').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -227,9 +205,9 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-    $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
+    $('#FullRuta tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRutaCPD.row( tr );
+        var row = taulaFullRuta.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -237,136 +215,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatCPD(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    });
-});
-// Formatting function for row details - Lloc de treball
-function formatLLT(d) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-        '<tr>'+
-            '<th>Tipus Serveis i versions </th>'+
-            '<th width="300">CPD1</th>'+
-            '<th width="300">CPD2</th>'+
-            '<th width="300">CPD3</th>'+
-            '<th width="300">CPD4</th>'+
-            '<th width="300">Bluemix</th>'+
-            '<th width="300">Azure</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
-            '<td>'+d.cpd1v1+'</td>'+
-            '<td>'+d.cpd2v1+'</td>'+
-            '<td>'+d.cpd3v1+'</td>'+
-            '<td>'+d.cpd4v1+'</td>'+
-            '<td>'+d.bluemixv1+'</td>'+
-            '<td>'+d.azurev1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="6">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th >Desplegable al SIC</th>'+
-            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="6">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
-$(document).ready(function() {
-    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
-    "columnDefs": [
-        { "width": "10%", "targets": 0 }
-    ],
-    "paging": false,
-	"info" : false,
-	"ordering": false,
-	"responsive": {
-            details: false
-    	},
-    	"language":{
-	        	"search" : "<strong>Cerca:</strong> ",
-		        "infoEmpty": "No hi ha registres",
-	        	"zeroRecords": "No s'han trobat registres"
-        },
-        "ajax": "../FullRuta20/inventariLLT.json",
-        "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": '',
-	        "width": "20%"
-            },
-            { "data": "producte", 
-	      "className":      'intern',
-	      "width": "50%"
-	    },
-            { "data": "categoria",
-	      "width": "90%" },
-            { "data": "obsolet",
-	      "width": "100%" },
-            { "data": "suportat",
-	      "width": "100%" },
-            { "data": "versioactual",
-	      "className":      'intern',
-	      "width": "80%"
-	    },
-            { "data": "roadmap",
-	      "width": "50%" },
-            { "data": "emergent",
-	      "width": "50%" }
-        ],
-        "order": [[1, 'asc']],
-           "initComplete": function () {
-            this.api().columns().every( function (col_index) {
-                var column = this;
-                if (col_index !==1 && col_index !==2){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-                }
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(column.header()) )
-                    .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        ); 
-                        column
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            .draw();
-                    } ); 
-                column.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                } );
-            } );
-        }
-    });
-     // Add event listener for opening and closing details
-    $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = taulaFullRutaLLT.row( tr );
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( formatCPD(row.data()) ).show();
+            row.child( format(row.data()) ).show();
             tr.addClass('shown');
         }
     });
