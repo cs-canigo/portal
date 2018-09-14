@@ -33,7 +33,6 @@ codi = "35.080.03"
         </thead>
 </table>
 ## Programari estandarditzat lloc de treball
-
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
             <tr>
@@ -49,7 +48,6 @@ codi = "35.080.03"
         </thead>
 </table>
 ## Programari estandarditzat CPD
-
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
             <tr>
@@ -64,7 +62,6 @@ codi = "35.080.03"
             </tr>
         </thead>
 </table>
-
 <script>
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
