@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta LLT & CPD v1"
-description = "Full de Ruta LLT & CPD v1"
+title       = "Full de Ruta LLT & CPD v2"
+description = "Full de Ruta LLT & CPD v2"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -100,7 +100,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 </table>
 <script>
 // Formatting function for row details - CPD
-function formatCPD ( d ) {
+function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
@@ -223,7 +223,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatCPD(row.data()) ).show();
+            row.child( format(row.data()) ).show();
             tr.addClass('shown');
         }
     });
@@ -245,7 +245,7 @@ $(document).ready(function() {
 </table>
 <script>
 // Formatting function for row details - Lloc de treball
-function formatLLT ( d ) {
+function format ( d ) {
     // `d` is the original data object for the row
     return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
         '<tr>'+
@@ -349,7 +349,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatLLT(row.data()) ).show();
+            row.child( format(row.data()) ).show();
             tr.addClass('shown');
         }
     });
