@@ -122,7 +122,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse: collapse;width:100%">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
             '<th width="300">LT2A</th>'+
@@ -232,7 +232,7 @@ $(document).ready(function() {
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
     // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse: collapse;width:100%">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Tipus Serveis i versions </th>'+
             '<th width="300">CPD1</th>'+
