@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-13"
+date        = "2018-09-17"
 title       = "Full de Ruta del programari v3"
 description = "Full de Ruta del programari"
 weight		= 3
