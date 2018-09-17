@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-13"
-title       = "Full de Ruta del programari v1"
+title       = "Full de Ruta del programari v2"
 description = "Full de Ruta del programari"
 weight		= 3
 type = "estandard"
@@ -84,11 +84,10 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
              </tr>
         </thead>
 </table>
-## Programari estandarditzat lloc de treball
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
-	    <tr bgcolor="#6B6BDC" align="center">
-                <th  colspan="8">  Programari estandarditzat lloc de treball  </th>
+	    <tr bgcolor="#6B6BDC">
+                <th  colspan="8" align="center" font-size="14px">  Programari estandarditzat lloc de treball  </th>
             </tr>
             <tr>
                 <th></th>
@@ -102,11 +101,10 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-## Programari estandarditzat CPD
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
-            <tr bgcolor="#6B6BDC" align="center">
-                <th  colspan="8">  Programari estandarditzat CPD  </th>
+            <tr bgcolor="#6B6BDC">
+                <th  colspan="8" align="center" font-size="14px">  Programari estandarditzat CPD  </th>
             </tr>
             <tr>
                 <th></th>
