@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-17"
-title       = "Full de Ruta del programari v6"
+title       = "Full de Ruta del programari v7"
 description = "Full de Ruta del programari"
 weight		= 3
 type = "estandard"
@@ -372,7 +372,17 @@ $(document).ready(function() {
 });
 </script>
 
+### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
 
+A la taula de CPD és manté la mateixa informació que es proporcionava anteriorment respecte a les versions de programari i s'ha afegit informació addicional respecte a la prestació del servei ofert per cada un dels CPDs, així com informació respecte a les tecnologies que són desplegables de forma automàtica des del SIC.
+
+#### Tipus de serveis
+
+- **xPaaS**: És un entorn d’execució que s’arrenca en el moment de fer el push de l’artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.
+- **Contenidor**: Artefacte de software que inclou tots les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)
+- **DBaaS**: Base de dades com a servei, és un subtipus de xPaaS. Escala automàticament.
+- **PaaS**: Plataforma de programari oferta al nuvol que es caracteritza per la seva rapida implementació i transparencia pel desenvolupador.
+- **IaaS**: màquines virtuals, on s’aprovisiona fins al nivell de SO i s'instal·la a sobre el programari personalitzat que es demani.
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
 
