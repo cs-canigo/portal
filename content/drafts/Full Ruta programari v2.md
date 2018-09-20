@@ -1,6 +1,6 @@
 +++
-date        = "2018-09-17"
-title       = "Full de Ruta del programari v7"
+date        = "2018-09-20"
+title       = "Full de Ruta del programari v8"
 description = "Full de Ruta del programari"
 weight		= 3
 type = "estandard"
@@ -374,7 +374,7 @@ $(document).ready(function() {
 
 ### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
 
-A la taula de CPD és manté la mateixa informació que es proporcionava anteriorment respecte a les versions de programari i s'ha afegit informació addicional respecte a la prestació del servei ofert per cada un dels CPDs, així com informació respecte a les tecnologies que són desplegables de forma automàtica des del SIC.
+A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='{{<relref "#maduresa" >}}'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.
 
 #### Tipus de serveis
 
