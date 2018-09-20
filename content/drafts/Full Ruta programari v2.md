@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-17"
-title       = "Full de Ruta del programari v5"
+title       = "Full de Ruta del programari v6"
 description = "Full de Ruta del programari"
 weight		= 3
 type = "estandard"
@@ -96,7 +96,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
                 <th>Obsolet</th>
@@ -118,9 +117,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 </font>
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
-            <tr>
-                <th  colspan="8" align="center" font-size="14px">  Programari estandarditzat CPD  </th>
-            </tr>
             <tr>
                 <th></th>
                 <th>Grup de Tecnologies</th>
@@ -208,7 +204,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==1 && col_index !==2){
+                if (col_index !==0 && col_index !==1){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
