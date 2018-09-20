@@ -1,5 +1,5 @@
 {
-Data
+"data":
 [
 {"id":1,"producte":"Apache","categoria":"Servidors Web","obsolet":"1.3, 2.0, 2.2","suportat":"2.4","versioactual":"2.4","roadmap":"–","emergent":"–","cpd1v1":"PaaS / 2.4","cpd1v2":"Contenidor / 2.4","cpd2v1":"PaaS / 2.4","cpd2v2":"--","cpd3v1":"PaaS / 2.4","cpd3v2":"--","cpd4v1":"PaaS / 2.4","cpd4v2":"Contenidor / 2.4","bluemixv1":"N/A","bluemixv2":"xPaaS;Contenidor / 2.4","azurev1":"N/A","azurev2":"--","desplegablesicv1":"Totes les versions","observacions":"–"},
 {"id":2,"producte":"Internet Information Services IIS","categoria":"Servidors Web","obsolet":"4.0, 5.0, 6.0","suportat":"7.0, 7.5, 8.0, 8.5, 10","versioactual":"10","roadmap":"–","emergent":"–","cpd1v1":"PaaS / 10","cpd1v2":"--","cpd2v1":"PaaS / 10","cpd2v2":"--","cpd3v1":"PaaS / 10","cpd3v2":"--","cpd4v1":"PaaS / 8.5 ; 10","cpd4v2":"--","bluemixv1":"N/A","bluemixv2":"--","azurev1":"N/A","azurev2":"--","desplegablesicv1":"--","observacions":"–"},
