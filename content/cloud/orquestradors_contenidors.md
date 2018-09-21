@@ -1,5 +1,5 @@
 +++
-date          = "2017-11-02"
+date          = "2018-07-02"
 title         = "Orquestradors de contenidors"
 description   = "Consideracions respecte als orquestradors de contenidors"
 sections      = "Container Cloud"
@@ -100,7 +100,7 @@ Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'
 
 Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud/contenidors_appagile/
 
-Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.4/
+Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.5/
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.

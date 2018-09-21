@@ -16,13 +16,13 @@ weight 		= 99
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/2.0.0) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/2.0.3) amb la configuració de l'entorn Canigó
 
-La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'aquesta versió o superior.
+La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/2.0.0.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/2.0.3.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -47,7 +47,7 @@ La creació de la VM ha estat certificada amb Vagrant 1.8. Es recomana l'ús d'a
 * IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 8 (Oracle) i els següents plugins:
 
 	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
-	- [CTTI Canigó](http://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
+	- [CTTI Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
 	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
 	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
 	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
@@ -73,7 +73,25 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 
 ### Versions
 
-#### 2.0.0 (20/11/2017) -- <span style="color:green">OPERATIVA</style>
+#### 2.0.3 (6/8/2018) -- <span style="color:green">OPERATIVA</style>
+
+_RELEASE NOTES_
+
+* Millores en el procés de construcció de la VM per tal d'aïllar-lo d'alguns recursos externs importats ara dins el [repositori](https://github.com/gencat/dev-environment/tree/master/Vagrant/resources) de l'entorn de desenvolupament.
+
+#### 2.0.2 (25/6/2018)
+
+_RELEASE NOTES_
+
+* Es detecten problemes amb el servei de VirtualBox Guest Additions. No s'instal·len i es deixa desactivada l'acceleració 3D
+
+#### 2.0.1 (19/6/2018)
+
+_RELEASE NOTES_
+
+* S'activa l'acceleració 3D i s'incrementa la memòria de video per poder arrencar la VM ja que havia deixat de funcionar el mode gràfic
+
+#### 2.0.0 (20/11/2017)
 
 _RELEASE NOTES_
 

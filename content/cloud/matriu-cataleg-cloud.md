@@ -1,5 +1,5 @@
 +++
-date        = "2018-04-12"
+date        = "2018-06-06"
 title       = "Matriu catàleg cloud"
 description = "Elements de catàleg disponibles en els diferents CPDs/Clouds"
 sections    = "Container Cloud"
@@ -10,11 +10,11 @@ categories  = ["cloud","docker","container","paas"]
 Element            |Tipus       | Capa  |Versió (1)   |CPD1   |CPD2   |CPD3   |CPD4   |Bluemix |Azure  |Observacions
 -------            |------      |:-----:|:-----------:|:-----:|:-----:|:-----:|:-----:|:------:|:-----:|-------------
 Apache             | PaaS       |Web    | 2.4   |x      |x      |x      |x      |        |       |Inclou GICAR
-Apache             | Contenidor |Web    | 2.2   |x      |       |       |x      |x       |       |Obsolet
 Apache             | Contenidor |Web    | 2.4   |x      |       |       |x      |x       |       |Amb o sense GICAR   
 Nginx              | xPaaS      |Web    |1.12   |       |       |       |       |x       |       |   
 Nginx              | Contenidor |Web    |1.10   |x      |       |       |x      |x       |       |Obsolet   
 Nginx              | Contenidor |Web    |1.12   |x      |       |       |x      |x       |       |   
+Nginx              | Contenidor |Web    |1.14   |x      |       |       |x      |x       |       |   
 IIS                | PaaS       |Web    |8.5    |x      |x      |x      |x      |        |       | 
 Tomcat             | PaaS       |App    |8      |x      |x      |x      |x      |        |       | 
 Tomcat             | xPaaS      |App    |8      |       |       |x      |x      |x       |       | 

@@ -2,7 +2,7 @@
 date        = "2018-05-16"
 title       = "SIC. Autoservei de jobs pipeline"
 description = "El passat mes de maig es va publicar un article sobre l'estat actual dels jobs pipeline al SIC. En aquest article s'exposa el funcionament del recentment creat autoservei de jobs pipeline"
-sections    = ["Notícies"]
+sections    = ["Notícies","home"]
 categories  = ["sic"]
 key         = "JUNY2018"
 +++
@@ -17,6 +17,16 @@ Aquest autoservei de pipelines es basa en la generació de jobs a partir d'arxiu
 
 A continuació, entrarem en més detall com funciona aquest nou servei que ofereix el SIC.
 
+## Motivació
+
+Els objectius que vol assolir aquesta nova funcionalitat són:
+
+* La línia estratègica de DevOps que està marcant CTTI requereix **flexibilitat i independència** en els pricipals actors que intervenen en la construcció i els desplegaments de les aplicacions.
+* A tal efecte, una necessitat clau és anular la dependència existent cap a l'equip del SIC, que fins ara implementava els automatismes de construcció i desplegament. Amb aquest nou model **els usuaris del SIC són autosuficients per generar-se ells mateixos les seves pròpies pipelines**.
+* Com a conseqüència del punt anterior, **no cal ajustar-se al calendari de l'equip SIC per obtenir les pipelines de construcció i desplegament**. Els propis usuaris poden implementar-les en el moment que els hi sigui més adient.
+* **Augmenta l'eficiència en les integracions d'aplicacions al SIC**, ja que s'eliminen del procés traspassos innecessaris d'informació i de responsabilitats a l'equip SIC.
+* De retruc, el fet d'afegir un sistema de configuració amb arxius YML independents de la plataforma d'Integració Contínua Jenkins **proporciona al SIC un nivell d'abstracció addicional amb el que es podria disposar d'altres eines d'automatització sense afectar als usuaris**.
+
 ## Funcionament
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures. Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
@@ -28,12 +38,12 @@ A continuació es mostra un esquema del funcionament:
 El funcionament és el següent:
 
 1. Els proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració.
-2. Si es fa algun canvi en el aca.yml s'invocarà a la pipeline generadora de jobs. Aquesta pipeline recupera els arxius de configuració necessaris per a la generació de la pipeline de l'aplicació i l'invoca.
-3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, no es tornarà a regenerar i s'inovocarà directament la darrera pipeline generada.
+2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de jobs. Aquesta pipeline recupera els arxius de configuració necessaris per a la generació de la pipeline de l'aplicació i l'invoca.
+3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, no es tornarà a regenerar i s'invocarà directament la darrera pipeline generada.
 
 ### Arxiu de Configuració de l'Aplicació (ACA)
 
-La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si Es tracta d'un arxiu de texte en format YAML que serà responsabilitat del proveïdor d'aplicacions de manternir-lo actualitzat en el que s'ha d'aportar la següent configuració:
+La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de texte en format YAML que serà responsabilitat del proveïdor d'aplicacions de mantenir-lo actualitzat en el que s'ha d'aportar la següent configuració:
 
 1. **La versió de l’ACA**: Versió (independent de la versió de l'aplicació) que s'utilitza per fer seguiment de l'arxiu de configuració.
 2. **Paràmetres de l’ACA**: Parells clau-valor en els que es farà substitució dins de la pipeline.
@@ -48,13 +58,13 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 
 D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC (`https://git.intranet.gencat.cat/<id_prov>/<id_prov>.git`). En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
 
-Serà responsabilitat del proveïdor d'infraestructures tenir actualitzada aquesta informació i de notificar al proveïdor d'aplicacions quan hagi realitzat algun canvi. El proveïdor d'aplicacions haurà de fer com a mínim un increment de versió a l'ACA per tal de provocar la regeneració de la pipeline incorporant els canvis realitzats pel proveïdor d'infraestructures a la nova pipeline generada. De moment, el SIC assumirà aquesta tasca temporalment.
+Serà responsabilitat del proveïdor d'infraestructures tenir actualitzada aquesta informació i de notificar al proveïdor d'aplicacions quan hagi realitzat algun canvi. El proveïdor d'aplicacions haurà de fer com a mínim un increment de versió a l'ACA per tal de provocar la regeneració de la pipeline incorporant els canvis realitzats pel proveïdor d'infraestructures a la nova pipeline generada.
 
 El proveïdor d'infraestructures haurà d'informar als seus arxius de configuració:
 
 1. **La versió de l'ACI**: Versió de l'arxiu de configuració.
 2. **Recursos de l'ACI**: Secció que recull tots els recursos de la part d'infraestrucures. Actualment, només hi ha el detall de cada infraestructura.
-    1.**Infraestructures**: Detall de les infraestructures incloses en aquest arxiu de configuració.
+3. **Infraestructures**: Detall de les infraestructures incloses en aquest arxiu de configuració.
 
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 

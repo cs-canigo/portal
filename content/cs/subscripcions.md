@@ -1,6 +1,6 @@
 +++
 date        = "2018-04-13T17:11:42+01:00"
-title       = "Subscripcions al butlletí de Comunicacions Canigó"
+title       = "Subscripcions al butlletí de Comunicacions Arquitectura"
 description = "Gestió de la subscripció al butlletí d'un usuari"
 draft           = false
 sections = ""
@@ -26,10 +26,10 @@ Primer de tot, cal destacar que l'usuari s'ha de donar d'alta (si no està ja) e
 
 ## Procediment de subscripció
 
-Per donar-se d'alta com a subscriptor de les Comunicacions Canigó, cal seguir les següents passes:
+Per donar-se d'alta com a subscriptor de les Comunicacions Arquitectura, cal seguir les següents passes:
 
 1. Accedir amb un navegador web a: [https://butlletins.gencat.cat](https://butlletins.gencat.cat).
-2. Desplegar el grup **Administració Pública** i sel·leccionar **Comunicacions Canigó**.
+2. Desplegar el grup **Tecnologia. Recerca i innovació** i sel·leccionar **Comunicacions Arquitectura**.
 3. Prémer el botó **Següent** (situat al final de la pàgina, cantó dret).
 4. Si mai s'ha donat d'alta com a suscriptor, haurà d'omplir el formulari inferior. En cas contrari, ha de fer login.
 5. Si s'ha hagut de donar d'alta, rebrà un correu de validació al compte de correu indicat. Haurà de confirmar accedint a l'enllaç **Confirmar alta** en el correu rebut.
@@ -37,11 +37,11 @@ Per donar-se d'alta com a subscriptor de les Comunicacions Canigó, cal seguir l
 
 ## Procediment de baixa de subscripció
 
-Per donar-se de baixa com a subscriptor de les Comunicacions Canigó, cal seguir les següents passes:
+Per donar-se de baixa com a subscriptor de les Comunicacions Arquitectura, cal seguir les següents passes:
 
 1. Accedir amb un navegador web a: [https://butlletins.gencat.cat](https://butlletins.gencat.cat).
 2. Fer login amb el seu usuari.
-3. A la pantalla de benvinguda, apareixeran totes les subscripcions que tingui actives. Cercar la subscripció de **Comunicacions Canigó** i prémer el botó de **Baixa** corresponent.
+3. A la pantalla de benvinguda, apareixeran totes les subscripcions que tingui actives. Cercar la subscripció de **Comunicacions Arquitectura** i prémer el botó de **Baixa** corresponent.
 
 En cas de dubte, podeu contactar al correu `oficina-tecnica.canigo.ctti@gencat.cat`, on us podrem resoldre els dubtes o problemes que tingueu associats a la subscripció del nostre butlletí.
 

@@ -1,5 +1,5 @@
 +++
-date        = "2017-06-09"
+date        = "2018-07-25"
 title       = "Entorns de desenvolupament"
 description = "Entorns de desenvolupament recomanats compatibles amb les Plataformes Cloud"
 sections    = "Container Cloud"
@@ -7,28 +7,37 @@ weight      = 7
 categories  = ["cloud","docker","container","paas"]
 +++
 
-## Openshift
+## AppAgile
 
 Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en OpenShift, es recomana utilitzar [Minishift](https://www.openshift.org/minishift/). La versió a instal·lar ha de ser compatible amb la versió d'OpenShift.
 
-**Plataforma Cloud**  | **Versió Openshift Origin**   | **Versió Minishift compatible**
+**Plataforma Cloud**  | **Versió Openshift**   | **Versió Minishift compatible**
 ------------ | ------------ | ------------
-CPD3 Containers (privat)		|  1.3.1 (OpenShift 3.3)  | 0.9.0
-CPD4 AppAgile (privat)  |  1.4.1 (OpenShift 3.4)  | 1.0.0
+CPD4 AppAgile (privat)  |  3.6.1  | v1.11.0 o superior
 
 ## Bluemix
 
+
 En el cas de Bluemix:
 
-* _Contenidors_: per els contenidors Docker es pot treballar amb l'engine [Docker](https://www.docker.com/community-edition/) i [Docker Compose](https://docs.docker.com/compose/) directament, sense necessitat de cap orquestrador específic ni plataforma "minimalista".
+* _Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en Kubernetes, es recomana utilitzar [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
 * _Apps_: per les apps (xPaaS de CloudFoundry) es recomana utilitzar [PCF Dev](https://pivotal.io/pcf-dev).
 
-La versió a instal·lar de Docker, Docker-Compose i PCF Dev en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
+La versió a instal·lar de Kubernetes, Docker i PCF Dev en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
 
 **Plataforma Cloud**  | **Versió Cloud Foundry**   | **Versió PCF Dev**
 ------------ | ------------ | ------------
-Bluemix - Apps	| 1.7.0 (v235) | 0.18.0
+Bluemix - Apps	| 270.030 | v0.30.0
 
-**Plataforma Cloud**  | **Versió Docker**   |  **Versió Docker-Compose**
+**Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
 ------------ | ------------ | ------------
-Bluemix - Containers  |  1.10 o posterior  | 1.6 o posterior
+Bluemix - Kubernetes  |  1.9.8  | 0.25 o superior
+
+## SwarmMe
+Per les Plataformes Cloud basades en Swarm, es recomana utilitzar  [docker-compose](https://docs.docker.com/compose/)
+
+La versió a instal·lar de docker-compose en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
+
+**Plataforma Cloud**  | **Versió Docker**   | **Versió Docker-compose**
+------------ | ------------ | ------------
+CPD1 SwarmMe (privat)	| 17.03.1-ce | 1.13.0
