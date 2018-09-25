@@ -1,7 +1,7 @@
 +++
-date        = "2018-09-17"
-title       = "Full de Ruta del programari v4"
-description = "Full de Ruta del programari"
+date        = "2018-09-21"
+title       = "Estàndard pel full de ruta del programari"
+description = "Estàndard pel full de ruta del programari"
 weight		= 3
 type = "estandard"
 toc         = true
@@ -80,15 +80,15 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
              </tr>
 	     <tr>
                 <td>1 de Maig de 2018 </td>
-                <td>1 de Setembre de 2018</td> 
+                <td>1 de octubre de 2018</td> 
              </tr>
         </thead>
 </table>
-<font size="10">
+<font size="20">
 <table id="Titol_LLT" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat Lloc de Treball  </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Lloc de Treball  </th>
             </tr>
  </thead>
 </table>
@@ -96,9 +96,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th></th>
-                <th>Producte</th>
                 <th>Grup de Tecnologies</th>
+                <th>Producte</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
                 <th>Versió Actual</th>
@@ -107,11 +106,11 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-<font size="10">
+<font size="20">
 <table id="Titol_CPD" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat CPD  </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Servidors</th>
             </tr>
  </thead>
 </table>
@@ -119,12 +118,9 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaCPD" class="display" style="width:100%">
         <thead>
             <tr>
-                <th  colspan="8" align="center" font-size="14px">  Programari estandarditzat CPD  </th>
-            </tr>
-            <tr>
                 <th></th>
-                <th>Producte</th>
                 <th>Grup de Tecnologies</th>
+                <th>Producte</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
                 <th>Versió Actual</th>
@@ -178,19 +174,19 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": '',
-	        "width": "20%"
-            },
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//	        "width": "20%"
+//            },
+            { "data": "categoria",
+	      "width": "90%" },
             { "data": "producte", 
 	      "className":      'intern',
 	      "width": "50%"
 	    },
-            { "data": "categoria",
-	      "width": "90%" },
             { "data": "obsolet",
 	      "width": "100%" },
             { "data": "suportat",
@@ -208,7 +204,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==1 && col_index !==2){
+                if (col_index !==0 && col_index !==1){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
@@ -229,7 +225,7 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-    $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRutaLLT.row( tr );
         if ( row.child.isShown() ) {
@@ -243,6 +239,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
+*/
 });
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
@@ -305,7 +302,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariv3.json",
+        "ajax": "../FullRuta20/inventariCPD.json",
         "columns": [
             {
                 "className":      'details-control',
@@ -314,12 +311,12 @@ $(document).ready(function() {
                 "defaultContent": '',
 	        "width": "20%"
             },
+            { "data": "categoria",
+	      "width": "90%" },
             { "data": "producte", 
 	      "className":      'intern',
 	      "width": "50%"
 	    },
-            { "data": "categoria",
-	      "width": "90%" },
             { "data": "obsolet",
 	      "width": "100%" },
             { "data": "suportat",
@@ -375,7 +372,17 @@ $(document).ready(function() {
 });
 </script>
 
+### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
 
+A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='{{<relref "#maduresa" >}}'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.
+
+#### Definició dels tipus de serveis
+
+- **xPaaS**: És un entorn d’execució que s’arrenca en el moment de fer el push de l’artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.
+- **Contenidor**: Artefacte de software que inclou tots les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)
+- **DBaaS**: Base de dades com a servei, és un subtipus de xPaaS. Escala automàticament.
+- **PaaS**: Plataforma de programari oferta al nuvol que es caracteritza per la seva rapida implementació i transparencia pel desenvolupador.
+- **IaaS**: màquines virtuals, on s’aprovisiona fins al nivell de SO i s'instal·la a sobre el programari personalitzat que es demani.
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
 
