@@ -250,7 +250,7 @@ public interface EquipamentMongoRepository extends MongoGenericRepository<MongoE
 
 A un repositori es poden definir mètodes per cada query que es vulgui definir. La construcció utilitza els prefixos find...By, read...By, query...By, count...By i get...By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.
 
-Més informació a la documentació oficial de Spring Data MongoDB https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/.
+Més informació a la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
 
 #### Utilització de QueryDSL
 
@@ -306,7 +306,7 @@ Operador | Descripció
 Per exemple, per cercar l'entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser el següent:<br>
 id>15,nom:Prova
 
-Més informació a la documentació oficial de QueryDSL http://www.querydsl.com/static/querydsl/latest/reference/html/
+Més informació a la documentació oficial de [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 **MongoListeners**
 
@@ -806,4 +806,13 @@ public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoReposi
 }
 ```
 
-Per més informació sobre Embeded MongoDB https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/
+Per més informació sobre [Embeded MongoDB] (https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
+
+### Logs
+Si es necessari el pintat de les consultes realitzades pel mòdul a la Base de Dades MongoDB, es pot afegir un "logger" per la categoria "org.springframework.data.mongodb.core.MongoTemplate" al fitxer "log4j" de l'aplicació
+Així per exemple si volem pintar les querys en el fitxer de logs, podriem tenir al nostre fitxer "log4j":
+```
+		<Logger name="org.springframework.data.mongodb.core.MongoTemplate" level="debug" additivity="false">
+			<AppenderRef ref="DAILY_LOG" />
+		</Logger>
+```
