@@ -2,7 +2,7 @@
 date        = "2018-09-25"
 title       = "Nou mòdul de Canigó 3 per a connexions amb Base de Dades MongoDB"
 description = "S'ha publicat un nou mòdul de Canigó 3 per a connexions amb Base de Dades MongoDB. El propòsit del mòdul és proporcionar les utilitats per a realitzat la connexió i consultes a una Base de Dades MongoDB"
-sections    = ["Notícies", "home"]
+sections    = ["Notícies"]
 categories  = ["canigo"]
 key         = "OCTUBRE2018"
 +++
