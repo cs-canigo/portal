@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-25"
+date        = "2018-09-26"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -251,7 +251,6 @@ function formatCPD(d) {
             '<th width="300">CPD2</th>'+
             '<th width="300">CPD3</th>'+
             '<th width="300">CPD4</th>'+
-            '<th width="300">Bluemix</th>'+
             '<th width="300">Azure</th>'+
         '</tr>'+
         '<tr>'+
@@ -260,16 +259,15 @@ function formatCPD(d) {
             '<td>'+d.cpd2v1+'</td>'+
             '<td>'+d.cpd3v1+'</td>'+
             '<td>'+d.cpd4v1+'</td>'+
-            '<td>'+d.bluemixv1+'</td>'+
             '<td>'+d.azurev1+'</td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd2v2+'</td>'+
+	//Container cloud CPD2 es realment el servei bluemix
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
         '</tr>'+
         '<tr>'+
@@ -376,13 +374,13 @@ $(document).ready(function() {
 
 A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='{{<relref "#maduresa" >}}'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.
 
-#### Definició dels tipus de serveis
+#### Definició dels tipus de serveis a cloud
 
 - **xPaaS**: És un entorn d’execució que s’arrenca en el moment de fer el push de l’artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.
-- **Contenidor**: Artefacte de software que inclou tots les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)
+- **Contenidor**: Artefacte de software que inclou totes les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)
 - **DBaaS**: Base de dades com a servei, és un subtipus de xPaaS. Escala automàticament.
-- **PaaS**: Plataforma de programari oferta al nuvol que es caracteritza per la seva rapida implementació i transparencia pel desenvolupador.
-- **IaaS**: màquines virtuals, on s’aprovisiona fins al nivell de SO i s'instal·la a sobre el programari personalitzat que es demani.
+- **PaaS**: Plataforma de programari oferta al nuvol que inclou el middleware administrat.
+- **IaaS**: Màquines virtuals a cloud, on s’aprovisiona inclouen el sistema operatiu administrat i s'instal·la a sobre el programari personalitzat que es demani.
 
 # ANNEX B (informatiu) Maduresa d'una tecnologia {#maduresa}
 
