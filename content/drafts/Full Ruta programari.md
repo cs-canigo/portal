@@ -179,26 +179,26 @@ $(document).ready(function() {
 //                "orderable":      false,
 //                "data":           null,
 //                "defaultContent": '',
-//	        "width": "20%"
+//	        "width": "10%"
 //            },
             { "data": "categoria",
-	      "width": "90%" },
+	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "50%"
+	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "100%" },
+	      "width": "20%" },
             { "data": "suportat",
-	      "width": "100%" },
+	      "width": "80%" },
             { "data": "versioactual",
 	      "className":      'intern',
 	      "width": "80%"
 	    },
             { "data": "roadmap",
-	      "width": "50%" },
+	      "width": "100%" },
             { "data": "emergent",
-	      "width": "50%" }
+	      "width": "100%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
@@ -307,26 +307,26 @@ $(document).ready(function() {
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": '',
-	        "width": "20%"
+	        "width": "10%"
             },
             { "data": "categoria",
-	      "width": "50%" },
+	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "50%"
+	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "100%" },
+	      "width": "20%" },
             { "data": "suportat",
-	      "width": "100%" },
+	      "width": "80%" },
             { "data": "versioactual",
 	      "className":      'intern',
-	      "width": "100%"
+	      "width": "80%"
 	    },
             { "data": "roadmap",
-	      "width": "50%" },
+	      "width": "100%" },
             { "data": "emergent",
-	      "width": "50%" }
+	      "width": "100%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {

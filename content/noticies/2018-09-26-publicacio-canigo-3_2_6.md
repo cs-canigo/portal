@@ -17,7 +17,7 @@ Tot i que la utilització de PostgreSQL es podia fer directament per part dels d
 
 [PostgreSQL]((https://www.postgresql.org/)) és una BBDD relacional robusta de codi obert, que ofereix un suport ampli de l'estàndard SQL:2011, a més a més d'un gran ventall de característiques opcionals (que no formen part del nucli de l'estàndard).
 
-Les principals característiques són un rendiment especialment bo en consultes complexes (escenaris OLTP/OLAP), compliment ACID estricte, replicació de dades entre diferents servidors, seguretat avançada de dades (rols i encriptació), suport avançat per tipus de dades com per exemple JSON, XML o GIS, consultes de tipus _full-text search_ ràpides i personalització i definició de nous/ves tipus de dades, funcions, operadors, etc.
+Les principals característiques són un rendiment especialment bo en consultes complexes (escenaris OLTP/OLAP), compliment ACID estricte, replicació de dades entre diferents servidors, seguretat avançada de dades (rols i encriptació), suport avançat per tipus de dades com per exemple JSON, XML o GIS, consultes de tipus _full-text search_ ràpides, personalització i definició de nous tipus de dades, funcions, operadors, etc.
 
 ## Suport a MongoDB
 
