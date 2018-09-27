@@ -182,7 +182,7 @@ $(document).ready(function() {
 //	        "width": "20%"
 //            },
             { "data": "categoria",
-	      "width": "90%" },
+	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
 	      "width": "50%"
@@ -310,7 +310,7 @@ $(document).ready(function() {
 	        "width": "20%"
             },
             { "data": "categoria",
-	      "width": "50%" },
+	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
 	      "width": "50%"
