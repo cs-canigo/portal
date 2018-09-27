@@ -2,7 +2,6 @@
 date        = "2018-09-26"
 title       = "Serverless Computing o FaaS"
 description = "Com a evolució dels serveis oferts al nuvol, apareix un nou concepte anomenat FaaS (Function as a service) o Serverless Computing (Informàtica sense Servidor) que proporciona una plataforma que permet als clients desenvolupar, executar i gestionar les funcionalitats de l'aplicació sense la complexitat de construir i mantenir la infraestructura associada al desenvolupament i llançament d'una aplicació."
-sections    = ["Blog", "home"]
 blog_tags   = ["cloud","nuvol","FaaS","Serverless"]
 categories  = ["Cloud Services"]
 imatge      = "/images/bloc/FaaS.png"
