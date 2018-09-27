@@ -6,7 +6,7 @@ sections    = ["Blog", "home"]
 blog_tags   = ["cloud","nuvol","FaaS","Serverless"]
 categories  = ["Cloud Services"]
 imatge      = "/images/bloc/201809/FaaS.png"
-key         = "SETEMBRE2018"
+key         = "OCTUBRE2018"
 +++
 
 ## Introducció
