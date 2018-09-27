@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-27"
-title       = "Estàndard pel full de ruta del programari"
+title       = "Estàndard pel full de ruta del programari 1"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
 type = "estandard"
@@ -188,7 +188,7 @@ $(document).ready(function() {
 	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "100%" },
+	      "width": "50%" },
             { "data": "suportat",
 	      "width": "100%" },
             { "data": "versioactual",
@@ -316,7 +316,7 @@ $(document).ready(function() {
 	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "100%" },
+	      "width": "50%" },
             { "data": "suportat",
 	      "width": "100%" },
             { "data": "versioactual",
