@@ -1,7 +1,7 @@
 +++
 date        = "2018-09-26"
 title       = "Connectors de Canigó amb serveis corporatius"
-description = "Fem un recordatori dels diferentes connectors de Canigó i el seu manteniment/suport associat"
+description = "Fem un recordatori de l'objectiu dels connectors que proporciona Canigó i el seu manteniment/suport associat"
 sections    = ["Notícies"]
 categories  = ["canigo"]
 key         = "OCTUBRE2018"
@@ -9,7 +9,7 @@ key         = "OCTUBRE2018"
 
 ## Manteniment de connectors Canigó
 
-Dins de la tasca de manteniment del framework de Canigó, aquest mes de setembre, s'ha encetat una tasca de revisió i manteniment dels diferents connectors de Canigó, revisant les proves unitàries i actualitzant el codi mirant d'adaptar-lo als nous _best practices_.
+Dins de la tasca de manteniment del framework de Canigó, aquest mes de setembre s'ha encetat una tasca de revisió i manteniment dels diferents [connectors o mòduls d'integració de Canigó](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-integracio/), revisant les proves unitàries i actualitzant el codi mirant d'adaptar-lo als nous _best practices_. Qualsevol problema amb els connectors és detectat de forma proactiva mitjançant l'automatització de l'execució d'aquests tests unitàris al [SIC](https://canigo.ctti.gencat.cat/sic/).
 
 Un connector de Canigó és un conjunt de funcionalitats dins un àmbit definit, empaquetades en un format accessible per al desenvolupador. L'objectiu dels connectors de Canigó és múltiple:
 
