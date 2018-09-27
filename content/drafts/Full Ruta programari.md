@@ -188,17 +188,17 @@ $(document).ready(function() {
 	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "30%" },
+	      "width": "20%" },
             { "data": "suportat",
 	      "width": "80%" },
             { "data": "versioactual",
 	      "className":      'intern',
-	      "width": "100%"
+	      "width": "80%"
 	    },
             { "data": "roadmap",
-	      "width": "80%" },
+	      "width": "100%" },
             { "data": "emergent",
-	      "width": "80%" }
+	      "width": "100%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
@@ -316,12 +316,12 @@ $(document).ready(function() {
 	      "width": "30%"
 	    },
             { "data": "obsolet",
-	      "width": "30%" },
+	      "width": "20%" },
             { "data": "suportat",
 	      "width": "80%" },
             { "data": "versioactual",
 	      "className":      'intern',
-	      "width": "100%"
+	      "width": "80%"
 	    },
             { "data": "roadmap",
 	      "width": "100%" },
