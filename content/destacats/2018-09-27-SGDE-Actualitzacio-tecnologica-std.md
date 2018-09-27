@@ -5,3 +5,4 @@ description = "Durant el primer trimestre del 2019 està previst realitzar una a
 sections = ["sgde"]
 key = "OCTUBRE2018"
 +++
+Add an optional extended description…
