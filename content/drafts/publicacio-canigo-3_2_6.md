@@ -36,9 +36,10 @@ En cas de tenir qualsevol dubte en l'ús del mòdul de Canigó 3 amb MongoDB pod
 
 ## Mòdul canigo.persistence.core
 
-Durant la fase de desenvolupament del nou mòdul  de persistència de dades s'ha creat un mòdul tècnic nou amb funcionalitats comunes dels paradigmes relacional/SQL i noSQL de MongoDB.
+Durant la fase de desenvolupament del nou mòdul de persistència de dades amb MongoDB s'ha creat un mòdul tècnic nou amb funcionalitats comunes dels paradigmes relacional/SQL (canigo.persistence.jpa) i noSQL de MongoDB (canigo.persistence.mongodb). Per tant, tots dos mòduls depenen d'aquest.
 
 ## Plugin Eclipse
 
-El plugin pe l'IDE Eclipse, utilitzat a l'entorn de desenvolupament amb Canigó oficial, s'ha actualitzat amb la incorporació de les dues noves opcions per configurar la BBDD: PostgreSQL i MongoDB.
+El plugin per l'IDE Eclipse, utilitzat a l'entorn de desenvolupament amb Canigó oficial, s'ha actualitzat a la versió 1.7.0 amb la incorporació de les dues noves opcions per configurar la BBDD: PostgreSQL i MongoDB.
 
+Més informació del plugin en [aquesta](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) plana del portal.
