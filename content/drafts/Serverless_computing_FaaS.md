@@ -33,17 +33,17 @@ Per cobrir aquest inconvenient en els microserveis apareix el ServerlessComputin
 
 El Serverless computing encaixa molt bé per càrregues de treball que responen a peticions entrants, els events inclouen:
 
-- --Temporitzadors / tasques programades
-- --Crides HTTP per escenaris API i WebHook
-- --Cues
+- Temporitzadors / tasques programades
+- Crides HTTP per escenaris API i WebHook
+- Cues
 
 També es pot fer ús d&#39;aquesta tecnologia per altres tipus d&#39;aplicacions com són:
 
-- --Processament de dades
+- Processament de dades
   - Processament d&#39;arxius en temps real
   - Processament de transmissions en temps real
   - Extracció, transformació i carrega
-- --Back-ends
+- Back-ends
   - Back-end per a IOT: Per administrar sol·licituds web, mòbils, Internet de les coses i API de tercers
   - Aplicacions Web
 
