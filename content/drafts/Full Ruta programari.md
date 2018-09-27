@@ -179,13 +179,13 @@ $(document).ready(function() {
 //                "orderable":      false,
 //                "data":           null,
 //                "defaultContent": '',
-//	        "width": "20%"
+//	        "width": "10%"
 //            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "50%"
+	      "width": "30%"
 	    },
             { "data": "obsolet",
 	      "width": "100%" },
@@ -193,12 +193,12 @@ $(document).ready(function() {
 	      "width": "100%" },
             { "data": "versioactual",
 	      "className":      'intern',
-	      "width": "80%"
+	      "width": "100%"
 	    },
             { "data": "roadmap",
-	      "width": "50%" },
+	      "width": "80%" },
             { "data": "emergent",
-	      "width": "50%" }
+	      "width": "80%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
@@ -307,13 +307,13 @@ $(document).ready(function() {
                 "orderable":      false,
                 "data":           null,
                 "defaultContent": '',
-	        "width": "20%"
+	        "width": "10%"
             },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
 	      "className":      'intern',
-	      "width": "50%"
+	      "width": "30%"
 	    },
             { "data": "obsolet",
 	      "width": "100%" },
@@ -324,9 +324,9 @@ $(document).ready(function() {
 	      "width": "100%"
 	    },
             { "data": "roadmap",
-	      "width": "50%" },
+	      "width": "100%" },
             { "data": "emergent",
-	      "width": "50%" }
+	      "width": "100%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
