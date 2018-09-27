@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-26"
+date        = "2018-09-27"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -100,7 +100,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
                 <th>Producte</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
-                <th>Versió Actual</th>
+                <th>Versió Actual CTTI</th>
                 <th>En Roadmap</th>
                 <th>Emergent</th>
             </tr>
@@ -123,7 +123,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
                 <th>Producte</th>
                 <th>Obsolet</th>
                 <th>Suportat</th>
-                <th>Versió Actual</th>
+                <th>Versió Actual CTTI</th>
                 <th>En Roadmap</th>
                 <th>Emergent</th>
             </tr>
@@ -310,7 +310,7 @@ $(document).ready(function() {
 	        "width": "20%"
             },
             { "data": "categoria",
-	      "width": "90%" },
+	      "width": "50%" },
             { "data": "producte", 
 	      "className":      'intern',
 	      "width": "50%"
@@ -321,7 +321,7 @@ $(document).ready(function() {
 	      "width": "100%" },
             { "data": "versioactual",
 	      "className":      'intern',
-	      "width": "80%"
+	      "width": "100%"
 	    },
             { "data": "roadmap",
 	      "width": "50%" },
