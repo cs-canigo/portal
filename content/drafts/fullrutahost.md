@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-28"
-title       = "full de ruta host 1"
+title       = "full de ruta host 2"
 description = "full de ruta host"
 weight		= 3
 type = "estandard"
@@ -177,8 +177,51 @@ function formatLLT(d) {
         '</tr>'+
     '</table>';
 }
+// Funció que dona format a la taula interna del Full de Ruta de CPD
+function formatCPD(d) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Tipus Serveis i versions </th>'+
+            '<th width="300">CPD1</th>'+
+            '<th width="300">CPD2</th>'+
+            '<th width="300">CPD3</th>'+
+            '<th width="300">CPD4</th>'+
+            '<th width="300">Azure</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
+            '<td>'+d.cpd1v1+'</td>'+
+            '<td>'+d.cpd2v1+'</td>'+
+            '<td>'+d.cpd3v1+'</td>'+
+            '<td>'+d.cpd4v1+'</td>'+
+            '<td>'+d.azurev1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
+	//Container cloud CPD2 es realment el servei bluemix
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="6">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th >Desplegable al SIC</th>'+
+            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="6">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
 $(document).ready(function() {
-    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -244,67 +287,8 @@ $(document).ready(function() {
                 } );
             } );
         }
-    });
-     // Add event listener for opening and closing details
-/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = taulaFullRutaLLT.row( tr );
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( formatLLT(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    });
-*/
-// Funció que dona format a la taula interna del Full de Ruta de CPD
-function formatCPD(d) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr>'+
-            '<th>Tipus Serveis i versions </th>'+
-            '<th width="300">CPD1</th>'+
-            '<th width="300">CPD2</th>'+
-            '<th width="300">CPD3</th>'+
-            '<th width="300">CPD4</th>'+
-            '<th width="300">Azure</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
-            '<td>'+d.cpd1v1+'</td>'+
-            '<td>'+d.cpd2v1+'</td>'+
-            '<td>'+d.cpd3v1+'</td>'+
-            '<td>'+d.cpd4v1+'</td>'+
-            '<td>'+d.azurev1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-	//Container cloud CPD2 es realment el servei bluemix
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="6">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th >Desplegable al SIC</th>'+
-            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="6">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
-    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
+});
+var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -370,7 +354,7 @@ function formatCPD(d) {
                 } );
             } );
         }
-    });
+});
      // Add event listener for opening and closing details
     $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
@@ -486,4 +470,3 @@ Segons el fabricant d’una tecnologia, un producte en les seves diferents versi
 - **Suport estàndard**. Versió de programari sobre la que es presta suport evolutiu i correctiu. 
 
 - **Actual**. Versió considerada com a actual per part del fabricant (coincideix amb les versions que estan en període de suport).
- 
