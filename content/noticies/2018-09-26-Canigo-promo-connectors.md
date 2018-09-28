@@ -2,7 +2,7 @@
 date        = "2018-09-26"
 title       = "Connectors de Canigó amb serveis corporatius"
 description = "Fem un recordatori de l'objectiu dels connectors que proporciona Canigó i el seu manteniment/suport associat"
-sections    = ["Notícies"]
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "OCTUBRE2018"
 +++
