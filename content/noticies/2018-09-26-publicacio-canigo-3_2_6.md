@@ -2,7 +2,7 @@
 date        = "2018-09-26"
 title       = "Publicació versió 3.2.6 Canigó"
 description = "S'ha publicat una nova versió de Canigó la qual incorpora un nou mòdul per a connexions amb bases de dades MongoDB, a més d'afegir suport a PostgreSQL en el mòdul de persistència ja existent"
-sections    = ["Notícies"]
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "OCTUBRE2018"
 +++
