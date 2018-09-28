@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-28"
-title       = "full de ruta host"
+title       = "full de ruta host 1"
 description = "full de ruta host"
 weight		= 3
 type = "estandard"
@@ -261,7 +261,6 @@ $(document).ready(function() {
         }
     });
 */
-});
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
     // `d` is the original data object for the row
@@ -305,7 +304,6 @@ function formatCPD(d) {
         '</tr>'+
     '</table>';
 }
-$(document).ready(function() {
     var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
@@ -388,9 +386,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
-});
-$(document).ready(function() {
-    var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
+var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
