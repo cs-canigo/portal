@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-28"
-title       = "full de ruta host 2"
+title       = "full de ruta host 3"
 description = "full de ruta host"
 weight		= 3
 type = "estandard"
@@ -11,6 +11,7 @@ estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
+
 
 ## Part 1: Abast
 
@@ -79,8 +80,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
                 <th> Revisió de full de ruta vigent fins</th>
              </tr>
 	     <tr>
-                <td>1 de octubre de 2018 </td>
-                <td>1 de gener de 2019</td> 
+                <td>1 de Maig de 2018 </td>
+                <td>1 de octubre de 2018</td> 
              </tr>
         </thead>
 </table>
@@ -129,28 +130,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-<font size="20">
-<table id="Titol_HOST" class="display" style="width:100%">
-        <thead>
-	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
-            </tr>
- </thead>
-</table>
-</font>
-<table id="FullRutaHOST" class="display" style="width:100%">
-        <thead>
-	    <tr>
-                <th>Grup de Tecnologies</th>
-                <th>Producte</th>
-                <th>Obsolet</th>
-                <th>Suportat</th>
-                <th>Versió Actual CTTI</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>
-            </tr>
-        </thead>
-</table>
+
 <script>
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
@@ -177,51 +157,8 @@ function formatLLT(d) {
         '</tr>'+
     '</table>';
 }
-// Funció que dona format a la taula interna del Full de Ruta de CPD
-function formatCPD(d) {
-    // `d` is the original data object for the row
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr>'+
-            '<th>Tipus Serveis i versions </th>'+
-            '<th width="300">CPD1</th>'+
-            '<th width="300">CPD2</th>'+
-            '<th width="300">CPD3</th>'+
-            '<th width="300">CPD4</th>'+
-            '<th width="300">Azure</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
-            '<td>'+d.cpd1v1+'</td>'+
-            '<td>'+d.cpd2v1+'</td>'+
-            '<td>'+d.cpd3v1+'</td>'+
-            '<td>'+d.cpd4v1+'</td>'+
-            '<td>'+d.azurev1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
-	//Container cloud CPD2 es realment el servei bluemix
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
-            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="6">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th >Desplegable al SIC</th>'+
-            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
-        '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="6">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
 $(document).ready(function() {
-var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -287,8 +224,179 @@ var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
                 } );
             } );
         }
+    });
+     // Add event listener for opening and closing details
+/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaLLT.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatLLT(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+*/
 });
-var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
+// Funció que dona format a la taula interna del Full de Ruta de HOST
+function formatHOST(d) {
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
+            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt2b+'</td>'+
+            '<td>'+d.lt2c+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="3">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="3">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+	"info" : false,
+	"ordering": false,
+	"responsive": {
+            details: false
+    	},
+    	"language":{
+	        	"search" : "<strong>Cerca:</strong> ",
+		        "infoEmpty": "No hi ha registres",
+	        	"zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariHOST.json",
+        "columns": [
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//	        "width": "10%"
+//            },
+            { "data": "categoria",
+	      "width": "30%" },
+            { "data": "producte", 
+	      "className":      'intern',
+	      "width": "30%"
+	    },
+            { "data": "obsolet",
+	      "width": "20%" },
+            { "data": "suportat",
+	      "width": "80%" },
+            { "data": "versioactual",
+	      "className":      'intern',
+	      "width": "80%"
+	    },
+            { "data": "roadmap",
+	      "width": "100%" },
+            { "data": "emergent",
+	      "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==0 && col_index !==1){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+/*  $('#FullRutaHOST tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaHOST.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatHOST(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+*/
+});
+// Funció que dona format a la taula interna del Full de Ruta de CPD
+function formatCPD(d) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Tipus Serveis i versions </th>'+
+            '<th width="300">CPD1</th>'+
+            '<th width="300">CPD2</th>'+
+            '<th width="300">CPD3</th>'+
+            '<th width="300">CPD4</th>'+
+            '<th width="300">Azure</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
+            '<td>'+d.cpd1v1+'</td>'+
+            '<td>'+d.cpd2v1+'</td>'+
+            '<td>'+d.cpd3v1+'</td>'+
+            '<td>'+d.cpd4v1+'</td>'+
+            '<td>'+d.azurev1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
+	//Container cloud CPD2 es realment el servei bluemix
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="6">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th >Desplegable al SIC</th>'+
+            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="6">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -354,7 +462,7 @@ var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
                 } );
             } );
         }
-});
+    });
      // Add event listener for opening and closing details
     $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
@@ -368,66 +476,6 @@ var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
             // Open this row
             row.child( formatCPD(row.data()) ).show();
             tr.addClass('shown');
-        }
-    });
-var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
-    "columnDefs": [
-        { "width": "10%", "targets": 0 }
-    ],
-    "paging": false,
-	"info" : false,
-	"ordering": false,
-	"responsive": {
-            details: false
-    	},
-    	"language":{
-	        	"search" : "<strong>Cerca:</strong> ",
-		        "infoEmpty": "No hi ha registres",
-	        	"zeroRecords": "No s'han trobat registres"
-        },
-        "ajax": "../FullRuta20/inventariHOST.json",
-        "columns": [
-            { "data": "categoria",
-	      "width": "30%" },
-            { "data": "producte", 
-	      "className":      'intern',
-	      "width": "30%"
-	    },
-            { "data": "obsolet",
-	      "width": "20%" },
-            { "data": "suportat",
-	      "width": "80%" },
-            { "data": "versioactual",
-	      "className":      'intern',
-	      "width": "80%"
-	    },
-            { "data": "roadmap",
-	      "width": "100%" },
-            { "data": "emergent",
-	      "width": "100%" }
-        ],
-        "order": [[1, 'asc']],
-           "initComplete": function () {
-            this.api().columns().every( function (col_index) {
-                var column = this;
-                if (col_index !==0 && col_index !==1){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-                }
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(column.header()) )
-                    .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        ); 
-                        column
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            .draw();
-                    } ); 
-                column.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                } );
-            } );
         }
     });
 });
@@ -470,3 +518,4 @@ Segons el fabricant d’una tecnologia, un producte en les seves diferents versi
 - **Suport estàndard**. Versió de programari sobre la que es presta suport evolutiu i correctiu. 
 
 - **Actual**. Versió considerada com a actual per part del fabricant (coincideix amb les versions que estan en període de suport).
+ 
