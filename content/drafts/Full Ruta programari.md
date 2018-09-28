@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-27"
+date        = "2018-09-28"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -79,8 +79,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
                 <th> Revisió de full de ruta vigent fins</th>
              </tr>
 	     <tr>
-                <td>1 de Maig de 2018 </td>
-                <td>1 de octubre de 2018</td> 
+                <td>1 de octubre de 2018 </td>
+                <td>1 de gener de 2019</td> 
              </tr>
         </thead>
 </table>
@@ -129,7 +129,28 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-
+<font size="20">
+<table id="Titol_HOST" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
+            </tr>
+ </thead>
+</table>
+</font>
+<table id="FullRutaHOST" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
 <script>
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
@@ -368,6 +389,67 @@ $(document).ready(function() {
         }
     });
 });
+$(document).ready(function() {
+    var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+	"info" : false,
+	"ordering": false,
+	"responsive": {
+            details: false
+    	},
+    	"language":{
+	        	"search" : "<strong>Cerca:</strong> ",
+		        "infoEmpty": "No hi ha registres",
+	        	"zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariHOST.json",
+        "columns": [
+            { "data": "categoria",
+	      "width": "30%" },
+            { "data": "producte", 
+	      "className":      'intern',
+	      "width": "30%"
+	    },
+            { "data": "obsolet",
+	      "width": "20%" },
+            { "data": "suportat",
+	      "width": "80%" },
+            { "data": "versioactual",
+	      "className":      'intern',
+	      "width": "80%"
+	    },
+            { "data": "roadmap",
+	      "width": "100%" },
+            { "data": "emergent",
+	      "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==0 && col_index !==1){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
 </script>
 
 ### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
