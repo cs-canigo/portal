@@ -1,6 +1,6 @@
 +++
 date        = "2018-09-28"
-title       = "full de ruta host 3"
+title       = "full de ruta host 4"
 description = "full de ruta host"
 weight		= 3
 type = "estandard"
@@ -120,6 +120,28 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         <thead>
             <tr>
                 <th></th>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+<font size="20">
+<table id="Titol_HOST" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
+            </tr>
+ </thead>
+</table>
+</font>
+<table id="FullRutaHOST" class="display" style="width:100%">
+        <thead>
+	    <tr>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
                 <th>Obsolet</th>
