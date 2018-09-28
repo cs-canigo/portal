@@ -19,7 +19,7 @@ Abans de fer cap modificació al projecte, cal generar, compilar i executar l'ap
 
 El plugin d'Eclipse de Canigó que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)) és la manera recomanada i més ràpida d'afegir el suport per a MongoDB. Per fer-ho s'ha de seguir les següents passes:
 
-1. Un cop es té el projecte Canigó actiu a l'entorn de desenvolupament de Canigó s'ha de fer clic al botó dret del ratolí al nom del projecte.
+1. Un cop es té el projecte Canigó actiu a l'entorn de desenvolupament s'ha de fer clic al botó dret del ratolí al nom del projecte.
 2. Un cop s'ha desplegat el menú d'opcions (entre d'altres hi ha "New", "Go into", "Import") s'han de triar les següents opcions:
 > Canigó > Add New Modules
 3. Ara s'ha obert una finestra amb el títol "Add new module" on es pot triar quins mòduls instal·lar. S'ha d'activar l'opció `MongoDB Module` dins l'opció `Persistence` i clicar al botó `Next>`. Per defecte la BBDD "MongoDB" vindrà pre-seleccionada, i només caldrà fer clic al botó `Finish`.
@@ -29,7 +29,7 @@ Ara només roman configurar l'aprovisionament (entorns, passwords, etc.) al fitx
 
 ### Configuració manual
 
-En el cas que es vulgui fer configurar de manera manual el suport per a MongoDB, primer de tot s'haurà de disposar una aplicació creada amb el "archetype" de Canigó. Per fer-ho s'han de seguir les següents passes:
+En el cas que es vulgui configurar de manera manual el suport per a MongoDB, primer de tot s'haurà de disposar una aplicació creada amb el "archetype" de Canigó. Per fer-ho s'han de seguir les següents passes:
 
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cat.gencat.mongodbapp -DartifactId=mongodbapp -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.6.0`
 2. Compilar amb `mvn -B -f mongodbapp/pom.xml clean package`
@@ -62,7 +62,7 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 	</dependency>
 ```
 
-2. Continuar modificant pom.xml per afegir uns processadors d'anotacions:
+3. Continuar modificant pom.xml per afegir uns processadors d'anotacions:
 
 ```
 	<plugin>
@@ -84,13 +84,13 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 	</plugin>
 ```
 
-3. Configurar el fitxer `src/main/resources/config/props/mongodb.properties` seguint el següent exemple:
+4. Configurar el fitxer `src/main/resources/config/props/mongodb.properties` seguint el següent exemple:
 
 ```
 *.mongodb.uri=mongodb://user:secret@127.0.0.1:27017/dataBase
 ```
 
-4. Crear una classe tècnica per poder configurar el `MongoCoreConfig` al paquet `...mongodb.config`:
+5. Crear una classe tècnica per poder configurar el `MongoCoreConfig` al paquet `...mongodb.config`:
 
 ```
 package cat.gencat.mongodbapp.mongodb.config;
@@ -124,7 +124,7 @@ public class MainMongoConfig extends MongoCoreConfig {
 }
 ```
 
-5. Modificar `AppConfig.java` anotant la definició de la classe de la següent manera:
+6. Modificar `AppConfig.java` anotant la definició de la classe de la següent manera:
 ```
 @Import(MainMongoConfig.class)
 ```
@@ -208,6 +208,6 @@ public interface EquipamentMongoRepository extends MongoGenericRepository<MongoE
 ```
 
 Més info:
+
 1. https://docs.spring.io/spring-data/mongodb/docs/current/reference/html
 2. https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
-
