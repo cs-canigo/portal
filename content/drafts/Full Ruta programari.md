@@ -500,6 +500,7 @@ $(document).ready(function() {
     });
 });
 </script>
+\* DB2: Verisó actual CTTI (DGP) es la 10, la versió actual CTTI (Corporatiu) es la 8.
 
 ### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
 
