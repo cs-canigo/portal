@@ -85,6 +85,7 @@ Serverless a vegades es considera erròniament més segur que les arquitectures 
 ## Tecnologia amb futur o només es tracta d&#39;una moda?
 
 La informàtica sense servidor o FaaS és una evolució dels serveis oferts al núvol i encara que es tracta d&#39;una tecnologia nova són molts els operadors de CloudComputing que ofereixen serveis de funcions &quot;Sense Servidor&quot;, entre ells podem destacar els següents:
+
 - Microsoft amb AzureFunctions.
 - Amazon amb AWS Lambda.
 - Google amb Google CloudFunctions
