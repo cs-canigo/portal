@@ -4,6 +4,7 @@ title       = "Matrius de Compatibilitats"
 description = ""
 sections    = "Canigó"
 weight      = 1
+toc         = true
 +++
 
 ## Canigó 3.2.x
