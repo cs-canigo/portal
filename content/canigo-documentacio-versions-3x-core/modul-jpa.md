@@ -116,14 +116,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jpa.properti
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
 *.persistence.database | Si | Sistema de base de dades al que es conectarà.
-*.persistence.dialect | Si | El nom de classe que permet a JPA generar SQL per a una base de dades relacional en particular. Aquests són els dialectes certificats: <br> - org.hibernate.dialect.Oracle12cDialect
-<br> - org.hibernate.dialect.Oracle10gDialect
-<br> - org.hibernate.dialect.Oracle9iDialect
-<br> - org.hibernate.dialect.Oracle8iDialect
-<br> - org.hibernate.dialect.MySQL5Dialect
-<br> - org.hibernate.dialect.MySQLDialect <-- Versions < 5
-<br> - org.hibernate.dialect.HSQLDialect
-<br> - org.hibernate.dialect.PostgreSQLDialect
+*.persistence.dialect | Si | El nom de classe que permet a JPA generar SQL per a una base de dades relacional en particular. Aquests són els dialectes certificats: org.hibernate.dialect.Oracle12cDialect<br> org.hibernate.dialect.Oracle10gDialect<br> org.hibernate.dialect.Oracle9iDialect<br> org.hibernate.dialect.Oracle8iDialect<br> org.hibernate.dialect.MySQL5Dialect<br> org.hibernate.dialect.MySQLDialect <-- Versions < 5<br> org.hibernate.dialect.HSQLDialect<br> org.hibernate.dialect.PostgreSQLDialect
 *.persistence.showSQL | No | Escriu totes les sentències SQL al log aplicatiu.<br> Per defecte: true
 *.persistence.generateDdl |No | Exporta el DDL (Data Definition Language) a la BD després que l'EntityManagerFactory s'inicialitzi, creant/actualitzant les taules.<br> Valor per defecte: false
 *.persistence.hibernate.connection.release_mode | No | Serveix per especificar quan Hibernate ha d'alliberar les connexions JDBC. Una connexió JDBC es manté fins que la sessió és tancada explícitament o desconnectat per defecte. Per a un datasource JTA s'hauria de seleccionar after_statement, i per non-JTA after_transaction. En mode auto, se seleccionarà after_statement per a JTA i CMT, i afte_transaction per JDBC.<br> Per defecte: auto
