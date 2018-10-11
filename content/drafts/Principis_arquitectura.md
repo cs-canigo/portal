@@ -16,7 +16,7 @@ codi = "35.080.03"
 
 Els Principis d'Arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
-Els principis basats en el framework TOGAF s’estructuren jeràrquicament en diferents segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb, entre elles destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions Opensource.
+Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en diferents segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb. Entre elles, destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions de programari lliure.
 
 <p>A continuació detallem quins són aquests principis.</p>
 
@@ -24,56 +24,34 @@ Els principis basats en el framework TOGAF s’estructuren jeràrquicament en di
 
 ## 1. Principis sobre el disseny d’aplicacions
 
-<p><strong>1.1 Segregació de funcions/responsabilitats</strong>, les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
+<p><strong>1.1 Segregació de funcions/responsabilitats</strong>. Les aplicacions han d’estar estructuralment dividides en blocs independents per funcionalitats, processos de negoci o serveis, per tal d’evitar els monòlits.</p><p>Aquest principi és d’aplicació a totes les capes. Una aplicació tipus pot dividir-se fàcilment, per exemple, en els següents mòduls:</p>
 
 <ul>
-    <li>Públic general (internet)</li>
+    <li>Públic general (Internet)</li>
     <li>Col·laboradors externs (extranet)</li>
     <li>BackOffice (intranet)</li>
     <li>Processos batch</li>
     <li>Extraccions (ETL)</li>
 </ul>
 
-<p><strong>1.2 Arquitectura desacoblada</strong>, permeten als components mantenir-se completament autònoms i independents:</p>
+<p><strong>1.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada</strong> per permeten als components i aplicacions mantenir-se completament autònoms i independents:</p>
 
 <ul>
     <li>1.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.</li>
     <li>1.2.2 Components independents, poden ser reemplaçats o actualitzats sense afectar a la resta de components.</li>
-	<li>1.2.3 Desacoblament entre aplicacions: Evitar les relacions entre aplicacions que impedeixin el seu desacoblament.(Per exemple, relacions pel que fa a base de dades, us de llibreries compartides, fitxers de configuració compartits). Totes les relacions s'han de dur a terme mitjançant serveis.</li>
+	<li>1.2.3 Desacoblament entre aplicacions. Cal evitar les relacions entre aplicacions que impedeixin el seu desacoblament.Per exemple, relacions a nivell de base de dades, ús de llibreries compartides, fitxers de configuració compartits, etc.. </li>
 </ul>
 
-<p><strong>1.3 Arquitectura Orientada a Serveis</strong>, cada cop més, les aplicacions poden ser consumides externament o bé han d’integrar-se amb 3rs. Els backend han d’exposar la seva funcionalitat de negoci via serveis per facilitar-ho. 
-
-<p><strong>1.4 Compatibilitat de versions</strong>, tenir present sempre la compatibilitat cap enrere dels components, com per exemple: </p>
-
-<ul>
-    <li> Si s’exposa una API REST i s’actualitza un servei, que sigui compatible amb versions anteriors per a evitar actualitzacions innecessàries als consumidors i d’aquesta manera poder evolucionar el servei lliurement (sense dependre de calendaris o recursos de tercers).</li>
-</ul>
-
-<p><strong>1.5 Rendiment de les aplicacions</strong>, el comportament de les  aplicacions han de satisfer les necessitats del negoci:</p>
-
-<ul>
-    <li>1.5.1 Concurrència, els sistemes permetran que els processos s’executin simultàniament i que puguin interactuar entre ells.</li>
-    <li>1.5.2 Disponibilitat, el sistema tindrà la capacitat de desenvolupar les funcions per les quals va estar dissenyat en les condicions d’ús determinades.</li>
-    <li>1.5.3 Elasticitat, el disseny de les aplicacions permetrà ampliar o reduir la infraestructura per poder donar el servei desitjat sense posar en perill els requeriments d'estabilitat, rendiment, seguretat, governabilitat o de compliment normatiu i legal.</li>
-    <li>1.5.4 Zero DownTime, en els casos que així es requereixi, els serveis no poden ser interromputs, s’han d’utilitzar els mecanismes necessaris per evitar situacions de parada de negoci.</li>
-</ul>
-
-<p><strong>1.6 Facilitat d’utilització</strong>, les aplicacions seran fàcils d'usar. La tecnologia subjacent ha de ser transparent per als usuaris.</p>
+<p><strong>1.3 Arquitectura Orientada a Serveis</strong>. Cada cop més, les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacoions han s'ha de dur a terme mitjançant serveis.
 
 <p><strong>1.7 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 <ul>
-    <li>1.7.1 Proves per a verificar la qualitat o requisits no funcionals del sistema.</li>
-    <li>1.7.2 Documentació detallada del projecte (descripció d’arquitectura, document funcional, manual de desplegament, manual d’explotació, …).</li>
-    <li>1.7.3 Control de versions. El sistema, en el seu conjunt, ha de ser tractat com un producte amb les seves versions majors, menors, etc.</li>
-    <li>1.7.4 Proves automàtiques, execució de proves automàtiques que verifiquin la instal·lació i integració contínua.</li>
-</ul>
 
-<p> <strong>1.8 Integració continua i custòdia de codi</strong>
+<p> <strong>1.8 Integració contínua i custòdia de codi</strong>
 <ul>
 	<li> 1.8.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
-	<li> 1.8.2 Totes les noves aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
-	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns, per tant el que s'hagi desplegat a Integració o preproducció és té que pogué desplegar a producció sense necessitat de fer canvis.</li>	
+	<li> 1.8.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
+	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o preproducció s'ha de poder pogué desplegar a producció sense necessitat de fer-hi canvis.</li>	
 </ul>	
 
 <p> <strong>1.9 <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/">Solucions Transversals</a></strong>, es prioritzarà la utilització de solucions transversals en comptes de fer-ne solucions a mida. A continuació es detallen les solucions transversals mes exteses.</strong>

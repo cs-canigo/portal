@@ -501,6 +501,8 @@ $(document).ready(function() {
 });
 </script>
 
+\* DB2: Versió actual CTTI (DGP) es la 10, versió actual CTTI (Corporatiu) es la 8.
+
 ### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
 
 A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='{{<relref "#maduresa" >}}'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.

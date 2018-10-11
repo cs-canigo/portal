@@ -13,6 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Canigó. Configuració de MongoDB a Canigó 3.2.6] (/howtos/2018-09-Howto-MongoDB/)
 - [Canigó. Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2] (/howtos/2018-08-Canigo-SAML/)
 - [SIC. Autoservei jobs pipeline (ACA)] (/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/)
 - [Canigó. Propietats Multientorn al Front-End] (/howtos/2018-04-howto-frontend-multientorn/)

@@ -61,12 +61,13 @@ Canigó3 és un framework de codi obert per a la plataforma Java. Està basat en
 - serveis de seguretat
 - connexió a base de dades, transaccionalitat, ... 
 - la realització de proves, a través de Spring, que permet realitzar tests unitaris desacoblant els objectes del seu context fent més senzill realitzar proves dels components per separat
-- l'accés a dades externes, mitjantçant Spring, gestionant els recursos, proporcionant APIs d'ajuda i suportant la majoria de les tecnologies d'accés a dades com: JDBC, Hibernate, JPA, JDO o iBatis. 
+- l'accés a dades externes, mitjantçant Spring, gestionant els recursos, proporcionant APIs d'ajuda i suportant la majoria de les tecnologies d'accés a dades com: JDBC, JPA (Hibernate com a proveïdor), MongoDB. 
 
 Es pot considerar que la base principal de l'arquitectura de Canigó és un conjunt totalment integrat, i a la vegada modular, de les millors pràctiques tecnològiques existent actualment en aquest entorn, formada pels següents components:
 
 - **Spring 4 Framework** com a contenidor centralitzat d'objectes i serveis, totalment configurable mitjançant fitxers XML. La injecció de dependències permet la configuració d'objectes fora del codi de l'aplicació (i de manera no intrusiva). Redueix el codi d'aplicació dedicat a configurar i localitzar recursos. Facilita millors pràctiques com programar contra interfícies enlloc de contra classes, permetent el desacoblament de serveis i el canvi ràpid d'una implementació concreta per una altra. Permet també la gestió de transaccions sense la utilització de APIs específiques mitjançant l'ús de Aspect Oriented Programming (AOP)
-- **JPA** proporciona un mòdel de persistència basat en POJO's (Plain Old Java Objects) per mapejar bases de dades relacionals en Java.
+- **Spring Data JPA** proporciona un model de persistència basat en POJO's (Plain Old Java Objects) per mapejar bases de dades relacionals en Java.
+- **Spring Data MongoDB** proporciona un model de persistència també basat en POJO's per la integració amb la base de dades orientada a documents MongoDB. La capa d'accés a dades es composa de repositoris
 - **AOP (Aspect Oriented Programming)** per intercepció d'events a l'aplicació sense necessitat de modificar el codi
 
 ## Nucli del Framework
@@ -104,7 +105,8 @@ La finalitat d'aquests mòduls és facilitar l'accés a diferents serveis que of
 
 Aquest mòdul permet persistir i recuperar dades entre l'aplicació i el motor de base de dades.
 
-- **JPA**: Java Persistence API busca la manera d'unificar les utilitats que proporcionen un mapeig objecte-relacional. La implementació de JPA per defecte a Canigó 3 és Hibernate.
+- **JPA**: Java Persistence API busca la manera d'unificar les utilitats que proporcionen un mapeig objecte-relacional. La implementació de JPA per defecte a Canigó 3 és Hibernate. Spring Data JPA permet implementar fàcilment repositoris per l'accés a dades amb JPA.
+- **MongoDB**: facilitat d'integració amb MongoDB gràcies a Spring Data MongoDB.
 
 ## Mòdul de Suport
 

@@ -32,6 +32,9 @@ Entenem per aquesta modalitat d’autenticació aquella en que en un frontal web
 - Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.
+- Autenticació contra el Valid del AOC (idCat SMS i Certificat digital).
+
+Amb aquesta modalitat es pot possibilitar que l'usuari pugui escollir quina modalitat d'autenticació vol utilitzar en el moment d'autenticar-se.
 
 Entenem per aquesta modalitat d’autenticació aquella en que en un frontal web que pot estar a XCAT o fora de XCAT té un agent de Shibboleth instal·lat i utilitza aquest agent per a validar les autenticacions. Aquesta modalitat d’autenticació permet que el frontal web estigui dins o fora de XCAT i és el més apropiat per a aplicacions que estan al núvol.
 
@@ -41,6 +44,7 @@ Entenem per aquesta modalitat d’autenticació aquella en que en un frontal web
 - Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.
+- Autenticació contra el Valid del AOC (idCat SMS i Certificat digital).
 
 Entenem per aquesta modalitat d’autenticació aquella en que l’aplicació nativament pot parlar protocol SAML2 contra GICAR. Aquesta modalitat d’autenticació permet que l’aplicació pugui fer login contra GICAR ja estigui l’aplicació dins del nus o no.
 
@@ -50,6 +54,7 @@ Entenem per aquesta modalitat d’autenticació aquella en que l’aplicació na
 - Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.
+- Autenticació contra el Valid del AOC (idCat SMS i Certificat digital).
 
 Entenem per aquesta modalitat d’autenticació aquella en que una aplicació construïda amb Canigó fa servir la llibreria de Canigó de SAML2 per a integrar-se directament amb GICAR sense necessitat d’altres dependències.
 
@@ -59,6 +64,9 @@ Entenem per aquesta modalitat d’autenticació aquella en que una aplicació co
 - Autenticació amb Usuari i contrasenya contra el Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que estigui al Directori Corporatiu.
 - Autenticació amb Certificat amb usuari que no està al Directori Corporatiu.
+- Autenticació contra el Valid del AOC (idCat SMS i Certificat digital).
+
+Amb aquesta modalitat es pot possibilitar que l'usuari pugui escollir quina modalitat d'autenticació vol utilitzar en el moment d'autenticar-se.
 
 Entenem per aquesta modalitat d’autenticació aquella en que l’aplicació (habitualment .NET o Microsoft) necessita utilitzar un ADFS per a poder establir la connectivitat contra GICAR.
 
