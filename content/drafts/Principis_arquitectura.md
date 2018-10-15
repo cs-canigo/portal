@@ -76,49 +76,47 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 
 ## 2. Principis sobre la Tecnologia
 
-<p><strong>2.1 Continuïtat tecnològica</strong>, d’acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:
+<p><strong>2.1 Continuïtat tecnològica</strong>. D’acord a les necessitats i amb l’objectiu de millorar el manteniment i evolució de les aplicacions es promou:
 
 <ul>
-	<li> 2.1.1 La creació d’aplicacions orientades a serveis; els serveis (backend) exposaran el seu negoci mitjançant REST i en format JSON (REST permet ser consumit per qualsevol tecnologia que interpreti Http).</li>
+	<li> 2.1.1 Per la creació d’aplicacions orientades a serveis, els serveis (backend) exposaran el seu negoci mitjançant REST i en format JSON (REST permet ser consumit per qualsevol tecnologia que interpreti Http).</li>
 	<li> 2.1.2 En el cas d’aplicacions web, la presentació estarà construïda amb tecnologies estàtiques  (html5/javascript/css) i consumirà els serveis que li proporcioni el backend. </li>
 </ul>
 
-<p><strong>2.2 Estabilitat del sistema</strong>, les versions de les diferents peces (productes, llibreries...) que componen un sistema han de ser el més estable possible, d’aquí que es recomani l’ús de versions LTS (Long-Term Support) o, si de cas hi manca, GA (General Availability) o la nomenclatura que hagi donat el fabricant. Versions productives d’un sistema mai haurien d’incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formen part.</p>
+<p><strong>2.2 Estabilitat del sistema</strong>. Les versions de les diferents peces (productes, llibreries...) que componen un sistema han de ser el més estables possible. S'ha de fer ús de versions LTS (Long-Term Support) o bé, enca de no haver-n'hi, la GA (General Availability) o la nomenclatura que hagi donat el fabricant com a estable. Un sistema productiu no pot incorporar versions no consolidades (snapshot, alpha, beta, release candidate, milestone...) dels components que en formin part.</p>
 
-<p><strong>2.3 Interoperabilitat</strong>, el programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.</p>
+<p><strong>2.3 Interoperabilitat</strong>. El programari i el maquinari han d’ajustar-se a estàndards definits que promouen la interoperabilitat de dades, aplicacions i tecnologia.</p>
 
-<p><strong>2.4 <a href="https://qualitat.solucions.gencat.cat/estandards/"> Estàndars de qualitat</a></strong>, aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya, es detallen a continuacio els relacionats amb els principis d'arquitectura
+<p><strong>2.4 <a href="https://qualitat.solucions.gencat.cat/estandards/"> Els estàndards de qualitat</a></strong> definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. A continuació es llisten els relacionats amb els principis d'arquitectura
 <ul>
-<li><strong>2.4.1 Full de Ruta</strong>, davant solucions estàndards s’utilitzaran preferentment els components llestos per adoptar que es troben al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">Full de Ruta</a> com a suportats CTTI. Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies, que eventualment passaran a formar-ne part. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.</li>
+<li><strong>2.4.1 Full de Ruta</strong>. Davant solucions estàndard s’utilitzaran preferentment els components que es troben al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">Full de Ruta</a> en la versió "versió actual CTTI" . Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies que, eventualment, podran passar a formar-ne part. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.</li>
 
-<li><strong>2.4.2 Principis de la Guia Web Gencat</strong>, son d'aplicació els principis detallats a la <a href="http://guiaweb.gencat.cat/ca/inici/"> Guia Web Gencat.</a></li>
+<li><strong>2.4.2 Principis de la Guia Web Gencat</strong>, són d'aplicació els principis detallats a la <a href="http://guiaweb.gencat.cat/ca/inici/"> Guia Web Gencat per aplicacions orientades a la ciutadania	.</a></li>
 
 <li><strong>2.4.3 Nomenclatura de dominis</strong>, respectar les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a></li> 
 <li><strong>2.4.4 Nomenclatura de les infraestructures</strong>, s'ha de complir l'estàndard pel que fa al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a></li>
-<li><strong>2.4.5 Estàndars sobre la seguretat</strong>, es tenen que tenir en compte els principis de seguretat publicats per CESICAT, per mes informació visitar el <a href="https://portal.cesicat.cat/index.php">Portal de CESICAT. </a></li>
-</ul>
 
-<p><strong>2.5 Us de Cloud Públic</strong>, valorar l'ús d'entorns Cloud públics, recomanat per aplicacions de les característiques detallades a continuació:
+<p><strong>2.5 Us de Cloud Públic</strong>. Cal valorar l'ús d'entorns de cloud públic. Recomanat per aplicacions de les característiques detallades a continuació:
 <ul>
-	<li> D'us des de Internet. </li>
-	<li> Aplicacions sense requeriments de seguretat alts. </li>
-	<li> Sense integració amb altres serveis de Gencat. </li>
-	<li> Aplicacions que no siguin critiques pel negoci.</li>
+	<li> Aplicacions que no siguin crítiques pel negoci.</li>
+	<li> D'ús des d'Internet. </li>
+	<li> Sense requeriments de seguretat alts. </li>
+	<li> Si requereix integració amb altres serveis de Gencat aquesta ha de ser lleugera. </li>
 </ul>
-<p><strong>2.6 Us d'Https</strong>, es necessari l’ús d'Https per les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT.
-<p><strong>2.7 Mateixa infraestructura per Preproduccio i Produccio</strong>,per què les proves fetes a preproduccio tinguin validesa, és necessari que els entorns de preproduccio i produccio siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproduccio siguin inferiors.</p>
+<p><strong>2.6 Us d'Https</strong>. Les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT es faran mitjançant l'ús de protocols segurs (https).
+<p><strong>2.7 Mateixa arquitectura per Preproduccio i Produccio</strong>. Perquè les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproducció siguin inferiors.</p>
 
 
 ## 3. Principis sobre el cost i manteniment de les solucions
 
 <p><strong>3.1 Optimització de costos</strong>, pensar en els costos i en la seva optimització:</p>
 <ul>
-    <li>3.1.1 onitoritzar els serveis per a identificar necessitats d’ampliació o reducció de recursos i poder ajustar els costos en conseqüència.</li>
-    <li>3.1.2 Arquitectura/dissenyar les càrregues de treball amb els costos en ment.</li>
-    <li>3.1.3 Arquitectura Mínima, tenir en compte l’escalabilitat i fer una previsió (mínim 1 any) amb l’objectiu d’aconseguir una arquitectura sostenible en el temps.</li>
+    <li>3.1.1 Monitoritzar els serveis per a identificar necessitats d’ampliació o reducció de recursos i poder ajustar els costos en conseqüència.</li>
+    <li>3.1.2 Arquitectura/dissenya les càrregues de treball amb els costos en ment.</li>
+    <li>3.1.3 Arquitectura Mínima. Cal tenir en compte l’escalabilitat i fer una previsió (mínim 1 any) amb l’objectiu d’aconseguir una arquitectura sostenible en el temps.</li>
 </ul>
 
-<p><strong>3.2 Benefici màxim al menor cost i risc possible</strong>, cal tenir presents els costos d’infraestructura i el model de llicenciament requerits per a posar en marxa una solució ja que representen un cost recurrent. Alhora de concebre una solució s’ha d’identificar quin tipus de llicenciament serà el millor per la solució desitjada. Quan s’escull un producte (opensource o comercial) o es tria fer un desenvolupament a mida, cal fer una avaluació del cost vs. benefici de l’opció triada respecte a les altres: </p>
+<p><strong>3.2 Benefici màxim al menor cost i risc possible</strong>. Cal tenir presents els costos d’infraestructura i el model de llicenciament requerits per a posar en marxa una solució ja que representen un cost recurrent. A l'hora de concebre una solució s’ha d’identificar quin tipus de llicenciament serà el millor per la solució desitjada. Quan s’escull un producte (opensource o comercial) o es tria fer un desenvolupament a mida, cal fer una avaluació del cost vs. benefici de l’opció triada respecte a les altres: </p>
 <ul>
     <li>3.2.1 Per a problemes comuns, utilitza “Opensource”. </li>
     <li>3.2.2 Per a problemes poc comuns, compra. </li>
