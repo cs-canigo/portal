@@ -50,7 +50,7 @@ per
 
 ## Canvis a Java 8
 
-A continuació es presenta un llistat de canvis introduïts a la versió 8 de Java que poden afectar a les aplicacions que funcionaven amb la versió 7, i en funció de les quals s'hauria de revisar el codi.
+A continuació es presenta un llistat de canvis introduïts a la versió 8 de Java que poden afectar a les aplicacions que funcionaven amb la versió 7, i en funció de les quals s'hauria de revisar el codi de l'aplicació.
 
 ### DateFormat i SimpleDateFormat
 
