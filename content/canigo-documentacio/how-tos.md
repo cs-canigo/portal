@@ -12,7 +12,7 @@ Un HOWTO és un document informal, generalment breu, que descriu com desenvolupa
 En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.
 
 HOWTOs disponibles actualment:
-
+- [Canigó. Ús de tipus de dades JSON amb JPA] (/howtos/2018-10-16-Howto-Us-tipus-json-a-jpa/)
 - [Canigó. Configuració de MongoDB a Canigó 3.2.6] (/howtos/2018-09-Howto-MongoDB/)
 - [Canigó. Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2] (/howtos/2018-08-Canigo-SAML/)
 - [SIC. Autoservei jobs pipeline (ACA)] (/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/)
