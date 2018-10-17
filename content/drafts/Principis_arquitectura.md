@@ -43,7 +43,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 </ul>
 
 <p><strong>1.3 Arquitectura Orientada a Serveis</strong>. Cada cop més, les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacoions han s'ha de dur a terme mitjançant serveis.
-
+</p>
 <p><strong>1.7 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 <ul>
 
@@ -53,7 +53,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 	<li> 1.8.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
 	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o preproducció s'ha de poder pogué desplegar a producció sense necessitat de fer-hi canvis.</li>	
 </ul>	
-
+</p>
 <p> <strong>1.9 <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/">Solucions Transversals</a></strong>. Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. A continuació es detallen algunes de les solucions transversals més esteses.</strong>
 <ul>
 	<li> <strong>1.9.1 Us del Framework Canigo</strong>. Per aplicacions JEE s'ha de fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
@@ -120,7 +120,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 <ul>
     <li>3.2.1 Per a problemes comuns, utilitza “Opensource”. </li>
     <li>3.2.2 Per a problemes poc comuns, compra. </li>
-    <li>3.2.3 Per a problemes únics, construeix.</li>
+    <li>3.2.3 Per a problemes únics, desenvolupa a mida.</li>
 </ul>
 
 <p><strong>3.3 Impacte d’actualització</strong>, pensar en l’impacte d’actualització que pugui tenir un canvi de sistema operatiu, middleware o producte allà on corre l’aplicació: com menys acoblament amb el sistema de base i més utilització d’estàndards existeix, més senzilla serà l’actualització o l’ampliació de funcionalitats de l’aplicació.</p>
