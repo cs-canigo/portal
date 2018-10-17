@@ -123,6 +123,7 @@ public class BaseEntity {
 
 Per l'exemple utilitzarem l'entitat Event que emmagatzema una entitat Location amb la informació de la country i la city
 Per l'entitat Location utilitzarem:
+
 ```
 import java.io.Serializable;
 
@@ -155,6 +156,7 @@ public class Location implements Serializable {
 Necessitem crear la taula Event:
 
 - Si la columna es de tipus json:
+
 ```
 CREATE TABLE "event" (
 	ID serial PRIMARY KEY,
@@ -163,6 +165,7 @@ CREATE TABLE "event" (
 ```
 
 - Si la columna es de tipus jsonb:
+
 ```
 CREATE TABLE "event" (
 	ID serial PRIMARY KEY,
@@ -173,6 +176,7 @@ CREATE TABLE "event" (
 Així tindrem les entitats:
 
 - Si la columna és de tipus json i volem emmagatzemar l'objecte Location utilitzarem @Column(columnDefinition = "json") amb @Type(type = "jsonb"):
+
 ```
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -260,7 +264,6 @@ public class EventJsonbNode extends BaseEntity {
 Amb els repositoris:
 
 ```
-
 import java.util.List;
 
 import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
@@ -408,20 +411,24 @@ public class EventJsonRepositoryImpl extends EventJsonBaseRepositoryImpl impleme
 ```
 
 Per a implementar la funció "findCountryEvents" utilitzarem la query nativa:
+
 ```
 SELECT id, location FROM event WHERE location->> 'country' = :country
 ```
+
 On :country serà el valor dinàmic passat per paràmetre
 
 ### MySQL
 
 Necessitem crear la taula Event:
+
 ```
 CREATE TABLE event (
 	ID bigint PRIMARY KEY,
 	location json NOT NULL
 );
 ```
+
 Així tindrem la entitat:
 
 ```
@@ -527,6 +534,7 @@ public class EventJsonRepositoryImpl extends EventJsonBaseRepositoryImpl impleme
 
 }
 ```
+
 Per a implementar la funció "findCountryEvents" utilitzarem la query nativa:
 
 ```
@@ -804,6 +812,7 @@ ATENCIÓ: Per executar aquests tests és necessari atacar a una bd PostgreSQL re
 ### MySQL
 
 Per provar els repositoris tindrem el test:
+
 ```
 import java.util.List;
 
