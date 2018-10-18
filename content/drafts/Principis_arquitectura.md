@@ -34,7 +34,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
     <li>Extraccions (ETL)</li>
 </ul>
 
-<p><strong>1.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada</strong> per permeten als components i aplicacions mantenir-se completament autònoms i independents:</p>
+<p><strong>1.2 Des del moment del disseny l'Arquitectura ha de ser desacoblada</strong> per permetre als components i aplicacions mantenir-se completament autònoms i independents:</p>
 
 <ul>
     <li>1.2.1 Components autònoms (separació de la frontend/presentació i el backend/negoci), es desenvolupen i es despleguen independentment.</li>
