@@ -89,12 +89,12 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 <p><strong>2.4 <a href="https://qualitat.solucions.gencat.cat/estandards/"> Els estàndards de qualitat</a></strong> definits pel CTTI són aplicables al desenvolupament, manteniment i ús de les solucions TI de la Generalitat de Catalunya. A continuació es llisten els relacionats amb els principis d'arquitectura
 <ul>
 <li><strong>2.4.1 Full de Ruta</strong>. Davant solucions estàndard s’utilitzaran preferentment els components que es troben al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">Full de Ruta</a> en la versió "versió actual CTTI" . Aquest fet no exclou que per a noves solucions es puguin proposar altres tecnologies que, eventualment, podran passar a formar-ne part. La reutilització d'infraestructura ja existent no eximeix del requeriment d'actualitzar el programari en cas que aquest ja no estigui suportat pel fabricant.</li>
-
-<li><strong>2.4.2 Principis de la Guia Web Gencat</strong>, són d'aplicació els principis detallats a la <a href="http://guiaweb.gencat.cat/ca/inici/"> Guia Web Gencat per aplicacions orientades a la ciutadania	.</a></li>
-
+<li><strong>2.4.2 Principis de la Guia Web Gencat</strong>, són d'aplicació els principis detallats a la <a href="http://guiaweb.gencat.cat/ca/inici/"> Guia Web Gencat per aplicacions orientades a la ciutadania.</a></li>
 <li><strong>2.4.3 Nomenclatura de dominis</strong>, respectar les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a></li> 
 <li><strong>2.4.4 Nomenclatura de les infraestructures</strong>, s'ha de complir l'estàndard pel que fa al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a></li>
+</ul>
 </p>
+
 <p><strong>2.5 Us de Cloud Públic</strong>. Cal valorar l'ús d'entorns de cloud públic. Recomanat per aplicacions de les característiques detallades a continuació:
 <ul>
 	<li> Aplicacions que no siguin crítiques pel negoci.</li>
@@ -103,7 +103,9 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 	<li> Si requereix integració amb altres serveis de Gencat aquesta ha de ser lleugera. </li>
 </ul>
 </p>
+
 <p><strong>2.6 Us d'Https</strong>. Les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT es faran mitjançant l'ús de protocols segurs (https).</p>	
+
 <p><strong>2.7 Mateixa arquitectura per Preproduccio i Produccio</strong>. Perquè les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproducció siguin inferiors.</p>
 
 
