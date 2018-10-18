@@ -94,7 +94,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 
 <li><strong>2.4.3 Nomenclatura de dominis</strong>, respectar les nomenclatures de noms de dominis del document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-dominis-dns/">Estandards Dominis DNS.</a></li> 
 <li><strong>2.4.4 Nomenclatura de les infraestructures</strong>, s'ha de complir l'estàndard pel que fa al nom de les infraestructures detallat al document <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-nomenclatura-infraestructures/">Estandard Nomenclatura Infraestructures</a></li>
-
+</p>
 <p><strong>2.5 Us de Cloud Públic</strong>. Cal valorar l'ús d'entorns de cloud públic. Recomanat per aplicacions de les característiques detallades a continuació:
 <ul>
 	<li> Aplicacions que no siguin crítiques pel negoci.</li>
@@ -102,8 +102,8 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 	<li> Sense requeriments de seguretat alts. </li>
 	<li> Si requereix integració amb altres serveis de Gencat aquesta ha de ser lleugera. </li>
 </ul>
-<p><strong>2.6 Us d'Https</strong>. Les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT es faran mitjançant l'ús de protocols segurs (https).
-	
+</p>
+<p><strong>2.6 Us d'Https</strong>. Les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT es faran mitjançant l'ús de protocols segurs (https).</p>	
 <p><strong>2.7 Mateixa arquitectura per Preproduccio i Produccio</strong>. Perquè les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproducció siguin inferiors.</p>
 
 
