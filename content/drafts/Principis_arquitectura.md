@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-04"
+date        = "2018-10-18"
 title       = "Principis d'Arquitectura de Sistemes d'Informació v2"
 description = "Principis d'Arquitectura de Sistemes d'Informació v2"
 weight		= 3
@@ -44,33 +44,32 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 
 <p><strong>1.3 Arquitectura Orientada a Serveis</strong>. Cada cop més, les aplicacions poden ser consumides externament (exposant la seva funcionalitat) o bé han d’integrar-se amb aplicacions de tercers. Les relacoions han s'ha de dur a terme mitjançant serveis.
 </p>
-<p><strong>1.7 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
-<ul>
+<p><strong>1.4 Model de qualitat</strong>, a l’hora de dissenyar un sistema cal incorporar aspectes qualitatius al cicle de vida, per més informació visitar el <a href="https://qualitat.solucions.gencat.cat/">Portal de Qualitat.</a> </p>
 
-<p> <strong>1.8 Integració contínua i custòdia de codi</strong>
+<p> <strong>1.5 Integració contínua i custòdia de codi</strong>
 <ul>
-	<li> 1.8.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
-	<li> 1.8.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
-	<li> 1.8.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o preproducció s'ha de poder pogué desplegar a producció sense necessitat de fer-hi canvis.</li>	
+	<li> 1.5.1 Totes les aplicacions han de tenir custodiat el codi font a algun dels repositoris oficials de la Generalitat.</li>
+	<li> 1.5.2 Totes les aplicacions han d'estar preparades per ser desplegades de forma automàtica utilitzant les eines proporcionades pel <a href="https://canigo.ctti.gencat.cat/sic-documentacio/">SIC 2.0.</a></li>
+	<li> 1.5.3 Els components a desplegar han de ser els mateixos per tots els entorns. Per tant, el que s'hagi desplegat a Integració o preproducció s'ha de poder pogué desplegar a producció sense necessitat de fer-hi canvis.</li>	
 </ul>	
 </p>
-<p> <strong>1.9 <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/">Solucions Transversals</a></strong>. Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. A continuació es detallen algunes de les solucions transversals més esteses.</strong>
+<p> <strong>1.6 <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/">Solucions Transversals</a></strong>. Es prioritzarà la utilització de solucions transversals en lloc de fer solucions a mida. S'ha d'evitar desenvolupar les funcionalitats que ja estan disponibles. A continuació es detallen algunes de les solucions transversals més esteses.</strong>
 <ul>
-	<li> <strong>1.9.1 Us del Framework Canigo</strong>. Per aplicacions JEE s'ha de fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
-	<li><strong>1.9.3 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
+	<li> <strong>1.6.1 Us del Framework Canigo</strong>. Per aplicacions JEE s'ha de fer ús del <a href="https://canigo.ctti.gencat.cat/canigo/framework/">Framework Canigó.</a></li>
+	<li><strong>1.6.2 Servidors SMTP Transversals</strong>, utilitzar els servidors Smtp transversals (IronPort) com servidor SMTP per enviar correus des de les aplicacions.
 			<a href="https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame.aspx?sourcedoc=%2Fsolucions%2Fsoltecnologiques%2FDocuments%2FLloc%20de%20Treball%2F10%2D02%2FCTTI%5F9%2E61%5FIntegraci%C3%B3%5FSMTP%5FIronPort%2Epdf&action=view">Manual per a la Integració SMTP</a></li>
-	<li><strong>1.9.4 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.</li>
-	<li><strong>1.9.5 Gestió d'identitats</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
+	<li><strong>1.6.3 Accés a internet des de xCAT</strong>, per accedir a recursos Internet des de servidors ubicats a la xarxa XCAT, es necessari utilitzar el ProxyPass, mai accedir directament a Internet.</li>
+	<li><strong>1.6.4 Gestió d'identitats</strong>, les aplicacions han d’autentificar els usuaris tenint en compte els següents models: </li>
 	<ul>
-		<li>1.9.5.1 Col·lectiu Gencat: autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
-		<li>1.9.5.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
-		<li>1.9.5.3 Ciutadans: autentificació mitjançant <a href="https://www.aoc.cat/serveis-aoc/valid/">“VÀlid”</a> de AOC.</li>
+		<li>1.6.4.1 Col·lectiu Gencat: autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
+		<li>1.6.4.2 Col·lectiu Híbrid (Gencat/Empreses): autentificació mitjançant <a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/gestio-didentitats/">“GICAR”</a>.</li>
+		<li>1.6.4.3 Ciutadans: autentificació mitjançant <a href="https://www.aoc.cat/serveis-aoc/valid/">“VÀlid”</a> de AOC.</li>
 	</ul>
-	<li><strong>1.9.6 Sistema de gestió del document electrònic </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/solucions-de-suport/sistema-de-gestio-del-document-electronic-sgde/">SGDE</a>), proporciona als sistemes d’informació les principals funcions necessàries per al tractament i transformació del document electrònic per tal de donar suport a l’intercanvi fiable i segur de documents i informació entre els ciutadans i la Generalitat de Catalunya.</li>	
-	<li><strong>1.9.7 Gestor de continguts web </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/comunicacio-i-relacio/webs/geco/">GECO+</a>), permet crear i mantenir continguts i portals d'Internet mitjançant un conjunt de peces i serveis comuns (framework).</li>	
-<li><strong>1.9.8 PICA - Plataforma d'Interorperabilitat</strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/administracio-electronica/serveis-dintegracio-i-interoperabilitat/">PICA</a>). Plataforma que permet l'accés a informació dels organismes de la Generalitat i altres administracions públiques i institucions, el consum de serveis comuns de tramitació, i la integració entre els sistemes d'informació departamentals i la plataforma de tramitació corporativa, tot sota criteris d'estandardització, rapidesa, senzillesa, seguretat i legalitat.</li>
+	<li><strong>1.6.5 Sistema de gestió del document electrònic </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/solucions-de-suport/sistema-de-gestio-del-document-electronic-sgde/">SGDE</a>), proporciona als sistemes d’informació les principals funcions necessàries per al tractament i transformació del document electrònic per tal de donar suport a l’intercanvi fiable i segur de documents i informació entre els ciutadans i la Generalitat de Catalunya.</li>	
+	<li><strong>1.6.6 Gestor de continguts web </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/comunicacio-i-relacio/webs/geco/">GECO+</a>), permet crear i mantenir continguts i portals d'Internet mitjançant un conjunt de peces i serveis comuns (framework).</li>	
+<li><strong>1.6.7 PICA - Plataforma d'Interorperabilitat</strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/administracio-electronica/serveis-dintegracio-i-interoperabilitat/">PICA</a>). Plataforma que permet l'accés a informació dels organismes de la Generalitat i altres administracions públiques i institucions, el consum de serveis comuns de tramitació, i la integració entre els sistemes d'informació departamentals i la plataforma de tramitació corporativa, tot sota criteris d'estandardització, rapidesa, senzillesa, seguretat i legalitat.</li>
 
-<li><strong>1.9.9 Tramitador d'ajuts i subvencions - </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/tramitacio-i-gestio-de-serveis/tais/">TAIS</a>). Sistema d'informació per a la gestió electrònica d'expedients de gestió de subvencions.</li>
+<li><strong>1.6.8 Tramitador d'ajuts i subvencions - </strong>(<a href="http://ctti.gencat.cat/ca/ctti/solucions-corporatives/tramitacio-i-gestio-de-serveis/tais/">TAIS</a>). Sistema d'informació per a la gestió electrònica d'expedients de gestió de subvencions.</li>
 </ul>
 <p></p>
 
@@ -104,6 +103,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 	<li> Si requereix integració amb altres serveis de Gencat aquesta ha de ser lleugera. </li>
 </ul>
 <p><strong>2.6 Us d'Https</strong>. Les urls de les aplicacions i els serveis publicats tant a Internet com a xCAT es faran mitjançant l'ús de protocols segurs (https).
+	
 <p><strong>2.7 Mateixa arquitectura per Preproduccio i Produccio</strong>. Perquè les proves fetes a preproducció tinguin validesa, és necessari que els entorns de preproducció i producció siguin idèntics pel que fa al diseny, encara que els recursos assignats a preproducció siguin inferiors.</p>
 
 
