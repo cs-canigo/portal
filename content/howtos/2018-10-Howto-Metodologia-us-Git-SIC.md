@@ -1,7 +1,7 @@
 +++
 date = "2018-10-02"
-title = "Proposta de treball amb GIT de la Generalitat"
-description = "En aquest HowTo es proposa i s'explica un mètode de treball amb GIT de la Generalitat"
+title = "Metodologia d'ús del Git del SIC"
+description = "En aquest HowTo es proposa i s'explica un metodologia d'ús del Git del SIC"
 section = "howtos"
 categories = ["canigo"]
 key = "NOVEMBRE2018"
@@ -13,14 +13,18 @@ Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors i in
 
 ## Contexte
 
-El SIC disposa d'un repositori GIT on (anomenat d'ara en andavant "GIT del SIC" o "SIC" directament) emmagatzemar i centralitzar les versions lliurables del codi. En aquest context, el workflow de treball proposat es compon de 2 repositoris:
+El SIC disposa d'un repositori Git (anomenat d'ara en andavant "Git del SIC" o "SIC" directament) on emmagatzemar i centralitzar les versions lliurables del codi.
 
-1. El repositori corporatiu amb el qual es desenvolupa el treball normal amb el codi: **origin**
-2. El repositori del SIC de la Generalitat on es puja el codi lliurable: **gencat**
+Amb anterioritat ja es va publicar un article ["SIC. Branca Master al Git del SIC"](https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/) referent a aquest tema.
+
+En aquest context, el workflow de treball proposat es compon de 2 repositoris:
+
+1. El repositori amb el qual es realitza el desenvolupament: **origin**
+2. El repositori del SIC on es pugen els lliurables: **gencat**
 
 ## Workflows
 
-Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per treballar de manera integrada amb el SIC, és seguir el workflow estàndard de GIT: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
+Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per treballar de manera integrada amb el SIC, és seguir el workflow estàndard de Git: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
 
 ### Inicialització i integració (només la primera vegada)
 
@@ -57,7 +61,7 @@ git push
 
 ### Desenvolupament amb GitFlow
 
-El workflow de desenvolupament recomanat és GitFlow. Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
+El workflow de desenvolupament recomanat és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
 
 1. Inicialització (només la primera vegada per a un mateix repositori)
 
@@ -115,13 +119,15 @@ git push gencat master
 git push gencat master --tags
 ```
 
+
+
 ## Informació adicional
 
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 * https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 * https://danielkummer.github.io/git-flow-cheatsheet/
 
-## Annexe. Inicialitzar el repositori
+## Annex. Inicialitzar el repositori
 
 El HowTo dóna per fet que es disposa d'un codi repositat amb GIT, però pot donar-se el cas que el codi no s'hagi repositat prèviament amb GIT. Aquest annexe adreça aquesta situació.
 
