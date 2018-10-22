@@ -1,30 +1,30 @@
 +++
 date = "2018-10-02"
-title = "Metodologia d'ús del Git del SIC"
-description = "En aquest HowTo es proposa i s'explica un metodologia d'ús del Git del SIC"
+title = "Com aplicar GitFlow en desenvolupament d'aplicacions al SIC"
+description = "En aquest HowTo s'explica com utilitzar GitFlow en desenvolupament d'aplicacions al SIC"
 section = "howtos"
-categories = ["canigo"]
+categories = ["sic"]
 key = "NOVEMBRE2018"
 +++
 
 ## Audiència
 
-Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors i integradors) que treballin amb l'eina GIT directament.
+Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors i arquitectes) que treballin amb Git com a eina de control de versions de codi font.
 
 ## Contexte
 
-El SIC disposa d'un repositori Git (anomenat d'ara en andavant "Git del SIC" o "SIC" directament) on emmagatzemar i centralitzar les versions lliurables del codi.
+El SIC disposa d'un repositori Git (anomenat d'ara en endavant "Git del SIC" o "SIC" directament) on emmagatzemar i centralitzar les versions lliurables del codi.
 
-Amb anterioritat ja es va publicar un article ["SIC. Branca Master al Git del SIC"](https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/) referent a aquest tema.
+Amb anterioritat ja es va publicar un article ["SIC. Branca Master al Git del SIC"](https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/) referent a quina era la metodologia recomanada per utilitzar el Git del SIC. I tot i que en aquest article es recomana l'ús de [trunk-based (o master-based)](https://continuousdelivery.com/foundations/continuous-integration/), ja que és la forma més natural de fer-ho en relació amb la filosofia del SIC actual, també és possible aplicar GitFlow en un Git de desenvolupament tenint en compte com es faria el pas al Git del SIC posteriorment.
 
 En aquest context, el workflow de treball proposat es compon de 2 repositoris:
 
-1. El repositori amb el qual es realitza el desenvolupament: **origin**
-2. El repositori del SIC on es pugen els lliurables: **gencat**
+1. El repositori amb el qual es realitza el desenvolupament o Git de desenvolupament: **origin**
+2. El repositori del SIC on es pugen els lliurables o Git del SIC: **gencat**
 
 ## Workflows
 
-Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per treballar de manera integrada amb el SIC, és seguir el workflow estàndard de Git: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
+Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per treballar de manera integrada amb el SIC, és seguir el workflow estàndard de GitFlow: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
 
 ### Inicialització i integració (només la primera vegada)
 
@@ -61,7 +61,7 @@ git push
 
 ### Desenvolupament amb GitFlow
 
-El workflow de desenvolupament recomanat és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
+El workflow de desenvolupament més popular per treballar amb Git és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
 
 1. Inicialització (només la primera vegada per a un mateix repositori)
 
@@ -126,12 +126,13 @@ git push gencat master --tags
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 * https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 * https://danielkummer.github.io/git-flow-cheatsheet/
+* https://www.toptal.com/software/trunk-based-development-git-flow
 
 ## Annex. Inicialitzar el repositori
 
-El HowTo dóna per fet que es disposa d'un codi repositat amb GIT, però pot donar-se el cas que el codi no s'hagi repositat prèviament amb GIT. Aquest annexe adreça aquesta situació.
+El HowTo dóna per fet que es disposa d'un codi repositat amb Git, però pot donar-se el cas que el codi no sigui així. Aquest annex adreça aquesta situació.
 
-Per inicialitzar el repositori s'ha de seguir les següents passes (Bash):
+Per inicialitzar el repositori s'ha de seguir les següents passes (bash):
 
 ```bash
 die () {
