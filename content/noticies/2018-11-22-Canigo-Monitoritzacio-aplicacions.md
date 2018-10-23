@@ -7,8 +7,23 @@ categories  = ["canigo"]
 key         = "NOVEMBRE2018"
 +++
 
-- Tractar els diferents mòduls d'operacions que existeixen al framework (instrumentation i logging)
+En aquest article es vol fer un recordatori de les diferents funcionalitats que ofereix el framework Canigó per tal de monitoritzar les aplicacions. Aquestes funcionalitats estan agrupades dins els mòduls "canigo.operation":
 
-- Tractar les diferents opcions fora del framework que existeixen en plataformes Cloud (Cloud Foundry o Docker) per logs i consum de recursos
+* _canigo.operation.instrumentation_:
 
-Parlar del roadmap: comentar opcions com Metrics o Micrometer, i que s'està treballant per la seva incorporació al framework com a evolució de l'actual mòdul així com la integració amb eines populars tipus Prometheus i amb el Centre de Control de CTTI.
+
+
+* _canigo.operation.logging_: 
+
+
+## Roadmap
+
+En en roadmap de Canigó està previst incorporar alguna llibreria com [Metrics](https://metrics.dropwizard.io/) o estàndar com [Micrometer](https://micrometer.io/) mitjançant [Spring](https://spring.io/blog/2018/03/16/micrometer-spring-boot-2-s-new-application-metrics-collector) com a evolució de l'actual mòdul d'instrumentació. A més d'una consola de monitorització bàsica de l'aplicació, també es vol integrar les aplicacions Canigó amb eines centralitzades tipus Prometheus o New Relic, a més del Centre de Control de CTTI on poder tenir una visió general de l'estat de les aplicacions.
+
+## Plataformes Container Cloud
+
+A més de la pròpia monitorització de l'aplicació, cal tenir en compte que plataformes com Cloud Foundry o orquestradors Docker com Kubernetes proporcionen funcionalitats de monitorització de consum de recursos i visualització de logs.
+
+
+
+L'objectiu final és poder oferir les facilitats necessaries als proveïdors d'aplicacions i personal CTTI 
