@@ -33,12 +33,12 @@ En en roadmap de Canigó està previst incorporar alguna llibreria com [Metrics]
 
 A més de la pròpia monitorització de l'aplicació, cal tenir en compte que plataformes com Cloud Foundry o orquestradors Docker com Kubernetes proporcionen funcionalitats de monitorització de consum de recursos i visualització de logs.
 
-**CloudFoundry**
+**Cloud Foundry**
 
 ![CloudFoundry Monitoring](/images/news/cloudfoundry-monitoring.png)
 
-**Kubernetes**
+**Dashboard Kubernetes**
 
 ![Kubernetes Monitoring](/images/news/kubernetes-monitoring.png)
 
-L'objectiu d'aquesta monitorització, ja sigui a nivell d'aplicació o PaaS/Docker, és tenir el màxim d'informació de l'estat de l'aplicació. L'agilitat en poder fer un diagnòstic quan hi ha un problema a una aplicació és molt important.
+L'objectiu d'aquesta monitorització, ja sigui a nivell d'aplicació o PaaS/Docker, és tenir el màxim d'informació de l'estat de l'aplicació. L'agilitat en poder fer un diagnòstic quan hi ha un problema a una aplicació és molt important, així com definir un pla de capacitat en funció dels recursos que requereixi l'aplicació amb caràcter preventiu.
