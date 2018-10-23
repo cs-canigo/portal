@@ -2,7 +2,7 @@
 date        = "2018-10-22"
 title       = "Canigó. Monitorització d'aplicacions"
 description = "En aquest article s'analitzen les opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó"
-sections    = ["drafts"]
+sections    = ["noticies"]
 categories  = ["canigo"]
 key         = "NOVEMBRE2018"
 +++
