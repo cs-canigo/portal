@@ -1,13 +1,28 @@
 +++
 date        = "2018-10-24"
-title       = "SIC Tecnologies suportades al SIC i conformitat amb el full de ruta"
+title       = "SIC: Tecnologies suportades i conformitat amb el full de ruta"
 description = "Aquest article és un recordatori de la matriu de tecnologies amb les que el SIC és compatible"
 sections    = ["Notícies","home"]
 categories  = ["sic"]
 key         = "NOVEMBRE2018"
 +++
 
-Us recordem A l'hora de dissenyar l'arquitectura d'una aplicació, és convenient revisar integrar aplicacions al SIC, convé tenir en compte 
+A l'hora de dissenyar l'arquitectura d'una aplicació, un dels passos que cal realitzar és escollir quines tecnologies s'empraran i per a cada una d'elles quina versió és la més adient. En aquest punt, cal tenir en compte que CTTI publica periòdicament el [Full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
+
+Aquest document web té valor normatiu i, indica per a les principals tecnologies, les versions que:
+
+* han passat a estat obsolet,
+* són encara compatibles,
+* són les preferides i
+* properament seran compatibles
+
+D'aquesta manera, es pot dissenyar l'aplicació 
+
+
+
+
+
+és convenient revisar les tecnologies i les versions que estan definides al [Full de ruta del CTTI](http://https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
 La **transmissió de dades binàries** en un servei web, sobretot quan es tracta d'un volum de dades important, és un punt crític en el rendiment d'una aplicació. Cal tractar-ho amb deteniment, i aplicar la millor solució tècnica segons les característiques de l'aplicació.
 
