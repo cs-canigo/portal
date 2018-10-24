@@ -21,7 +21,7 @@ La versió de Canigó 3.1.0 publicada a finals de 2014 va introduir la versió 4
 
 Per aplicacions Canigó 3.0.x, es recomana actualitzar a Canigó 3.1 seguint aquesta [guia](https://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces-actualitzacio-a-Canigo-3_1/).
 
-A continuació s'especifica el canvi a realitzar al codi de l'aplicació Canigó 3.1/3.2 per forçar que les classes generades siguin Java 8 compatibles, impedint el desplegament en servidors d'aplicacions que corrin en versions anteriors de Java. 
+A continuació s'especifica el canvi a realitzar al codi de l'aplicació Canigó 3.1 / 3.2 per forçar que les classes generades siguin Java 8 compatibles, impedint el desplegament en servidors d'aplicacions que corrin en versions anteriors de Java. 
 
 ### pom.xml
 
