@@ -1,13 +1,14 @@
 +++
 date        = "2018-10-22"
 title       = "Canigó. Monitorització d'aplicacions"
-description = "En aquest article s'analitzen les opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó"
-sections    = ["noticies"]
-categories  = ["canigo"]
+description = "Opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó"
+taxonomies  = []
+sections    = "Canigó"
 key         = "NOVEMBRE2018"
+weight 		  = 6
 +++
 
-En aquest article es vol fer un recordatori de les diferents funcionalitats que ofereix el framework Canigó per tal de monitoritzar les aplicacions. Aquestes funcionalitats es proporcionen als mòduls Canigó amb prefix "canigo.operation".
+En aquesta plana s'enumeren les diferents funcionalitats que ofereix el framework Canigó per tal de monitoritzar les aplicacions. Aquestes funcionalitats es proporcionen als mòduls Canigó amb prefix "canigo.operation".
 
 ### Instrumentació (canigo.operation.instrumentation)
 
