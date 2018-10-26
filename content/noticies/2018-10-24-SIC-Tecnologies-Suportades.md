@@ -2,7 +2,8 @@
 date = "2018-10-24"
 title = "SIC: Tecnologies suportades i conformitat amb el full de ruta"
 description = "Aquest article és un recordatori de la matriu de tecnologies amb les quals el SIC és compatible"
-sections = ["Notícies","home"]
+sections = ["Noticies"]
+draft = true
 categories = ["sic"]
 key = "NOVEMBRE2018"
 +++
@@ -23,18 +24,14 @@ Aquest estàndard de caràcter normatiu indica per a les principals tecnologies 
 
 D'aquesta manera, cal tenir en compte aquesta informació per no tenir problemes de compatibilitat amb les tecnologies que ofereixen els CPDs i les tecnologies amb les quals treballa el SIC.
 
-### Convergència del SIC
+### Convergència del SIC amb el full de ruta
 
-El SIC, en el seu full de ruta, té previst convergir amb les versions d'aquest estàndard. Hi ha casos, com amb les tecnologies JDK, en els quals el SIC és 100% compatible amb les tecnologies preferides i d'altres en les que encara no ofereix compatibilitat.
+El SIC, en el seu propi full de ruta, té previst convergir amb les versions d'aquest estàndard. Hi ha casos, com amb les tecnologies JDK, en els quals el SIC és 100% compatible amb les tecnologies preferides i d'altres en les que encara no ofereix compatibilitat.
 
-Si teniu cap dubte al respecte, podeu obrir una [consulta](http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
+## Altres tecnologies compatibles amb el SIC
 
-## Criteris per a tecnologies no descrites
+A més de les tecnologies associades a la plataforma, que figuren al Full de Ruta del Programari, hi ha les tecnologies de construcció i de cicle de vida de l'aplicació.
 
-Per a tecnologies no incloses en la normativa anterior, s'aconsella:
+A la secció de [tecnologies de desenvolupament](/sic/integracions-dev/) del SIC podreu trobar les tecnologies de construcció compatibles amb el SIC.
 
-* **Posar en coneixement aquesta situació tan aviat com es pugui.** Informar al responsable del servei i a CTTI de la decisió que s'ha pres, aportant la seva justificació. L'àrea d'Arquitectura de CTTI podrà recomanar alternatives o d'altres solucions amb les quals poder treballar, facilitant la integració de l'aplicació amb els entorns disponibles a CTTI.
-* **Escollir versions contemporànies amb les descrites al full de ruta.** D'aquesta manera, disminueix la possibilitat de tenir incompatibilitats entre les tecnologies escollides i les proposades per CTTI.
-* **Acollir-se sempre que sigui possible a versions LTS**. En les versions LTS, els fabricants ofereixen una extensió addicional de suport (correcció de bugs, pegats de seguretat...). Aquest fet disminueix el nombre de vegades que caldrà incrementar versions majors de la tecnologia escollida, que podrien ser traumàtiques en l'aplicació.
-
-
+Si teniu cap dubte al respecte, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
