@@ -4,5 +4,5 @@ title       = "Documentació"
 description = "Documentació del Framework"
 sections    = "Canigó"
 enllac		= "/canigo-documentacio/"
-weight		= 3
+weight		= 2
 +++
