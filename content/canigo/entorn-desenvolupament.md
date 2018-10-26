@@ -4,7 +4,7 @@ lastmod     = "2017-11-20"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
-weight 		= 99
+weight 		= 5
 +++
 
 ### Objectius
