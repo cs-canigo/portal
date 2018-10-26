@@ -34,7 +34,7 @@ _Documentació de referència_: https://canigo.ctti.gencat.cat/canigo-documentac
 
 ### Roadmap
 
-En en roadmap de Canigó està previst incorporar alguna llibreria com [Metrics](https://metrics.dropwizard.io/) o estàndar com [Micrometer](https://micrometer.io/) mitjançant [Spring](https://spring.io/blog/2018/03/16/micrometer-spring-boot-2-s-new-application-metrics-collector) com a evolució de l'actual mòdul d'instrumentació. A més d'una consola de monitorització bàsica de l'aplicació, també es vol donar l'opció d'integrar les mètriques d'aplicacions Canigó amb eines centralitzades tipus [Prometheus](https://prometheus.io/) o [New Relic](https://newrelic.com/), a més del Centre de Control de CTTI on poder tenir una visió general de l'estat de les aplicacions.
+En en roadmap de Canigó està previst incorporar alguna llibreria com [Metrics](https://metrics.dropwizard.io/) o estàndar com [Micrometer](https://micrometer.io/) mitjançant [Spring](https://spring.io/blog/2018/03/16/micrometer-spring-boot-2-s-new-application-metrics-collector) com a evolució de l'actual mòdul d'instrumentació. A més d'una consola de monitorització bàsica de l'aplicació, també es vol donar l'opció d'integrar les mètriques d'aplicacions Canigó amb eines tipus [Prometheus](https://prometheus.io/) o [New Relic](https://newrelic.com/), a més del Centre de Control de CTTI on poder tenir una visió general de l'estat de les aplicacions.
 
 ### Plataformes Container Cloud
 
