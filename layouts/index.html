@@ -58,7 +58,7 @@
 					        {{ if eq $key "home" }} 
 							{{ range first $.Site.Params.noticieshome ($taxonomy.Pages) }} 
 								<li>
-									<a href="{{ .Permalink }}" class="a-vermell">
+									<a href="{{ if (isset .Params "enllac") }}{{ .Params.enllac }}{{ else }}{{ .Permalink }}{{ end }}" class="a-vermell">
 									{{ if eq .Section "blog" }}
 										BLOG. 
 									{{ end }}
