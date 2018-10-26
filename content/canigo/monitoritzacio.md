@@ -1,6 +1,6 @@
 +++
 date        = "2018-10-22"
-title       = "Canigó. Monitorització d'aplicacions"
+title       = "Monitorització d'aplicacions"
 description = "Opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó"
 taxonomies  = []
 sections    = "Canigó"
