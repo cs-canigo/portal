@@ -13,9 +13,7 @@ weight 		= 3
 
 Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases.
 
-### Entorns *on premise*
-
-A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible amb entorns *on premise*.
+A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
 |Tecnologia|Versions|
 |-------|-------|
@@ -35,8 +33,6 @@ Cas particular de tecnologies front-end:
 |gulp|1.2.2|1.2.2|1.2.2|2.0.1|
 |grunt|1.2.0|1.2.0|1.2.0|1.3.1|
 
-### Entorns containeritzats
-
-En els entorns containeritzats no existeix cap limitació degut a l'ús del [patró builder](https://medium.com/@alexeiled/docker-pattern-the-build-container-b0d0e86ad601). En aquest model, es disposa d'un contenidor de construcció que genera l'artefacte desitjat, podent-ne instal·lar en el seu interior les tecnologies i eines necessàries que siguin requerides a tal efecte.
+A futur es preveu l'ús del patró builder amb Docker. En aquest model, es disposa d'un contenidor de construcció que genera l'artefacte desitjat, podent-ne instal·lar en el seu interior les tecnologies i eines necessàries que siguin requerides a tal efecte.
 
 Si teniu cap dubte al respecte, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
