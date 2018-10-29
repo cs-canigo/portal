@@ -29,7 +29,7 @@ Aquest codi font ha estat eliminat de Github, i les imatges Docker de DockerHub,
 
 ### Matriu catàleg Cloud
 
-Per facilitar la recerca de disponibilitat d'elements de catàleg en un determinat Cloud Privat o Públic, es pot utilitzar la següent [matriu](/cloud/matriu-cataleg-cloud/).
+Per facilitar la recerca de disponibilitat d'elements de catàleg en un determinat Cloud Privat o Públic, es pot utilitzar la següent [matriu](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
 ### Entorns de desenvolupament
 
