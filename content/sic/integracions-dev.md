@@ -28,39 +28,12 @@ Cas particular de tecnologies front-end:
 
 **Node 0.12.3**
 
-|Tecnologia|Versions|
-|-------|-------|
-|npm|2.15.0|
-|bower|1.8.0|
-|gulp|1.2.2|
-|grunt|1.2.0|
-
-**Node 4.4.3**
-
-|Tecnologia|Versions|
-|-------|-------|
-|npm|2.15.1|
-|bower|1.8.0|
-|gulp|1.2.2|
-|grunt|1.2.0|
-
-**Node 5.10.1**
-
-|Tecnologia|Versions|
-|-------|-------|
-|npm|3.8.3|
-|bower|1.8.0|
-|gulp|1.2.2|
-|grunt|1.2.0|
-
-**Node 8.12.0 (LTS)**
-
-|Tecnologia|Versions|
-|-------|-------|
-|npm|6.4.1|
-|bower|1.8.4|
-|gulp|2.0.1|
-|grunt|1.3.1|
+|Tecnologia|Node 0.12.3|Node 4.4.3|Node 5.10.1|Node 8.12.0 (LTS)|
+|----------|-----------|----------|-----------|-----------------|
+|npm|2.15.0|2.15.1|3.8.3|6.4.1|
+|bower|1.8.0|1.8.0|1.8.0|1.8.4|
+|gulp|1.2.2|1.2.2|1.2.2|2.0.1|
+|grunt|1.2.0|1.2.0|1.2.0|1.3.1|
 
 ### Entorns containeritzats
 
