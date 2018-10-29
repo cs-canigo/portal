@@ -18,13 +18,6 @@ Els diferents stacks tecnològics descrits en aquesta plana utilitzen [Docker Co
 
 Cal haver [instal·lat](https://docs.docker.com/compose/install/) prèviament Docker Compose.
 
-#### Desplegament a Bluemix
-
-- Bluemix suporta la creació d'aplicacions multicontainer mitjançant Docker Compose.
-- A diferència que els grup de contenidors, si es vol escalar una de les capes (per exemple, la capa d'aplicació), cal aprovisionar un balancejador, en aquest cas es proposa HAProxy.
-- A Bluemix, és necessari configurar un procés d'espera entre els contenidors que tinguin relacions entre ells (per exemple l'aplicació ha d'esperar que la bbdd estigui operativa per a funcionar). Per a realitzar aquesta espera s'utiliza el procés wait-for-it.sh. Un exemple del seu ús es pot veure al [Stack “arquitectura moderna” JEE]({{< relref "#stack-arquitectura-moderna-jee" >}})
-- En un futur proper serà possible desplegar aplicacions en contenidors definides amb docker-compose a Bluemix mitjançant el [SIC](http://canigo.ctti.gencat.cat/sic/).
-
 ## Stack "tradicional" JEE
 
 ![Spring](/related/cloud/spring.png "Spring") ![JSF](/related/cloud/jsf.jpg "JSF")
@@ -37,12 +30,12 @@ Aplicació JSF (Java Server Faces) amb context "/AppJava" per separació conting
 Aquest és un stack que ja no s'hauria d'utilitzar per noves aplicacions.
 </div>
 
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-AppJava).
+Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencat/demo-JEE-AppJava).
 
 Comandes per iniciar l'aplicació:
 
 ```
-$ git clone https://github.com/gencatcloud/demo-JEE-AppJava.git demo-JEE-AppJava
+$ git clone https://github.com/gencat/demo-JEE-AppJava.git demo-JEE-AppJava
 $ cd demo-JEE-AppJava
 $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
@@ -121,12 +114,12 @@ Accedir des d'un navegador web a http://localhost/canigoJSF i introduïr l'usuar
 
 Aplicació basada en serveis REST i presentació desacoblada
 
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-JEE-REST).
+Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencat/demo-JEE-REST).
 
 Comandes per iniciar l'aplicació:
 
 ```
-$ git clone https://github.com/gencatcloud/demo-JEE-REST.git demo-JEE-REST
+$ git clone https://github.com/gencat/demo-JEE-REST.git demo-JEE-REST
 $ cd demo-JEE-REST
 $ mvn package
 $ docker-compose -f ./src/main/docker/docker-compose.yml up -d
@@ -137,13 +130,13 @@ Abans d'executar la última comanda és necessari modificar el fitxer "docker-co
 _docker-compose.yml_
 ```
 lb:
- image: gencatcloud/haproxy:1.5.1
+ image: docker-registry.ctti.extranet.gencat.cat/gencatcloud/haproxy:1.5.1
  links:
   - bookstore
  ports:
   - 80:80
 db:
-  image: gencatcloud/postgres:9.5.3
+  image: docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6
   ports:
     - 5432:5432
   environment:
@@ -182,12 +175,12 @@ Accedir des d'un navegador web a http://localhost/ i introduïr l'usuari "admin"
 
 Aplicació basada en MongoDB+Express+AngularJS+NodeJS
 
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-MEAN).
+Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencat/demo-MEAN).
 
 Comandes per iniciar l'aplicació:
 
 ```
-$ git clone https://github.com/gencatcloud/demo-MEAN.git demo-MEAN
+$ git clone https://github.com/gencat/demo-MEAN.git demo-MEAN
 $ cd demo-MEAN
 $ docker-compose -f ./docker/docker-compose.yml up -d
 ```
@@ -197,7 +190,7 @@ Abans d'executar la última comanda és necessari modificar el fitxer "docker-co
 _docker-compose.yml_
 ```
 db:
-  image: gencatcloud/mongodb:3.2
+  image: docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2
   ports:
     - 27017:27017
     - 28017:28017
@@ -208,7 +201,7 @@ db:
   volumes:
     - /home/canigo/demo-MEAN/datadir:/data/db
 demo:
-  image: gencatcloud/nodejs:4.2.6
+  image: docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4.8
   links:
     - db:mybbdd
   volumes:
@@ -234,12 +227,12 @@ Accedir a http://localhost:3000/.
 
 Aplicació basada en Linux+PHP+MySQL
 
-Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencatcloud/demo-LAMP).
+Podeu trobar el codi font d'aquesta demo a [Github](https://github.com/gencat/demo-LAMP).
 
 Comandes per iniciar l'aplicació:
 
 ```
-$ git clone https://github.com/gencatcloud/demo-LAMP.git demo-LAMP
+$ git clone https://github.com/gencat/demo-LAMP.git demo-LAMP
 $ cd demo-LAMP
 $ docker-compose -f ./docker/docker-compose.yml up -d
 ```
@@ -286,15 +279,15 @@ A més de contenidors Docker, també és possible utilitzar xPaaS i DBaaS. Aques
 ### xPaaS + DBaaS
 
 - Exemple d'aplicació: http://serveisoberts.gencat.cat
-- Desplegat a Bluemix
+- Desplegat a plataforma Cloud Foundry de IBM Bluemix
 - Composat per:
-	- Buildpack: NodeJS, amb **escalat automàtic**
+	- Buildpack: NodeJS
 	- DBaaS: MongoDB
 
 ### Docker aplicació + Docker base de dades
 
 - Exemple d'aplicació: https://jocdelsdrets.gencat.cat
-- Desplegat a Bluemix
+- Desplegat a cluster Kubernetes a IBM Bluemix
 - Composat per:
-	- Grup de contenidors Docker per a la capa d'aplicació, amb **escalat automàtic**
+	- Docker PHP per a la capa d'aplicació
 	- Contenidor MySQL per a la capa de base de dades
