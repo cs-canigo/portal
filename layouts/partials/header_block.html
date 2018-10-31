@@ -68,7 +68,35 @@
 										{{ end }}
 										{{ partial "titles_subsection.html" . }}
 									{{ else }}
-										{{ .Title }}
+									
+										{{ if or (eq $title "canigos") (eq $section "canigo")}}
+											Framework Canigó
+										{{ end }}
+
+										{{ if or (eq $title "sics") (eq $section "sic") }}
+											Servei d'Integració Contínua
+										{{ end }}
+
+										{{ if or (eq $title "sgdes") (eq $section "sgde") }}
+											Servei de Gestió del Document Electrònic
+										{{ end }}
+
+										{{ if or (eq $title (.Site.Params.blog_section)) (eq $section .Site.Params.blog_section) }}
+											Blog d'Arquitectura
+										{{ end }}
+
+										{{ if or (eq $title "cs") (eq $section "cs") }}
+											Centres de Suport
+										{{ end }}
+
+										{{ if or (eq $title "gicars") (eq $section "gicar") }}
+											GICAR
+										{{ end }}
+
+										{{ if or (eq $title "clouds") (eq $section "cloud") }}
+											Container Cloud
+										{{ end }}
+									
 									{{ end }}
 								</h1>
 
