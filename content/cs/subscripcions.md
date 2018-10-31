@@ -1,20 +1,19 @@
 +++
 date        = "2018-04-13T17:11:42+01:00"
 title       = "Subscripcions al butlletí de Comunicacions Arquitectura"
-description = "Gestió de la subscripció al butlletí d'un usuari"
+description = "Gestió de la subscripció al butlletí per part d'un usuari"
 draft           = false
 sections = ""
 weight          = 4
 +++
 
-El CS Canigó publica mensualment un Comunicat amb articles, tutorials i notificacions sobre els serveis tractats al portal:
+El CS Canigó publica mensualment un Comunicat amb notícies, destacats i howtos sobre els següents serveis:
 
-* CS Canigó
+* Canigó
 * SIC
 * SGDE
 * GICAR
 * Cloud
-* CSTD
 
 A continuació, es descriu com un usuari pot gestionar la seva subscripció.
 
@@ -43,5 +42,5 @@ Per donar-se de baixa com a subscriptor de les Comunicacions Arquitectura, cal s
 2. Fer login amb el seu usuari.
 3. A la pantalla de benvinguda, apareixeran totes les subscripcions que tingui actives. Cercar la subscripció de **Comunicacions Arquitectura** i prémer el botó de **Baixa** corresponent.
 
-En cas de dubte, podeu contactar al correu `oficina-tecnica.canigo.ctti@gencat.cat`, on us podrem resoldre els dubtes o problemes que tingueu associats a la subscripció del nostre butlletí.
+En cas de dubte, podeu contactar al correu `oficina-tecnica.canigo.ctti@gencat.cat`, on us podrem resoldre els dubtes o problemes que tingueu associats a la subscripció del butlletí.
 
