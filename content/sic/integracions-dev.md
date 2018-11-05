@@ -15,6 +15,8 @@ Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle d
 
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
+### Tecnologies Back-End
+
 |Tecnologia|Versions|
 |-------|-------|
 |Ant|1.8.2<br />1.9.6|
@@ -22,9 +24,9 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |MS_Build|4.0|
 |MS_Deploy|7.1|
 
-Cas particular de tecnologies front-end:
+### Tecnologies Front-End
 
-**Node 0.12.3**
+Cas particular de tecnologies front-end:
 
 |Tecnologia|Node 0.12.3|Node 4.4.3|Node 5.10.1|Node 8.12.0 (LTS)|
 |----------|-----------|----------|-----------|-----------------|
@@ -32,6 +34,30 @@ Cas particular de tecnologies front-end:
 |bower|1.8.0|1.8.0|1.8.0|1.8.4|
 |gulp|1.2.2|1.2.2|1.2.2|2.0.1|
 |grunt|1.2.0|1.2.0|1.2.0|1.3.1|
+
+En quant a la versió de **ng** (Angular-cli), s'ha de configurar una secció `scripts` dins de l'arxiu de projecte `package.json`, on s'indiqui les comandes que cal executar per a la construcció de l'aplicació. D'aquesta manera s'executarà la versió d'angular-cli que es descarregui la pròpia aplicació. Exemple:
+
+package.json:
+```
+  [...]
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  }
+  [...]
+```
+
+Exemple de comanda que s'executarà per a la construcció:
+
+```
+npm run-script build --loglevel verbose --force --scripts-prepend-node-path true"
+```
+
+## Properes passes
 
 A futur es preveu l'ús del patró builder amb Docker. En aquest model, es disposa d'un contenidor de construcció que genera l'artefacte desitjat, podent-ne instal·lar en el seu interior les tecnologies i eines necessàries que siguin requerides a tal efecte.
 
