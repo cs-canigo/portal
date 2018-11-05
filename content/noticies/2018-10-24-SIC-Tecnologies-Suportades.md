@@ -8,7 +8,7 @@ categories = ["sic"]
 key = "NOVEMBRE2018"
 +++
 
-El SIC ha detectat en les darreres integracions un increment de casos en què les tecnologies escollides pels proveïdors d'aplicacions no s'ajusten a la normativa CTTI. Aquest article, a tall de recordatori, resumeix els punts més importants a tenir en compte a l'hora d'escollir tecnologies i versions per a una aplicació.
+El SIC ha detectat en les darreres integracions un increment de casos en què les tecnologies utilitzades en els desenvolupaments per part dels proveïdors d'aplicacions no s'ajusten a la normativa CTTI. Aquest article, a tall de recordatori, resumeix els punts més importants a tenir en compte a l'hora d'escollir tecnologies i versions per a una aplicació.
 
 ## Estàndard de Full de ruta del programari
 
