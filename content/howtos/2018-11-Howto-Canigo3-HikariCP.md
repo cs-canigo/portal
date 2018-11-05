@@ -202,5 +202,14 @@ A continuació es defineix una llista d'enllaços amb informació addicional per
 
 ## Annex. Configurar exemple de Swagger
 
-Per poder treballar amb l'exemple de l'API de Swagger fent ús del Hikari, només cal modificar el fitxer `src/main/resources/spring/app-custom-persistence-jpa.xml` i canviar el id del tag `<jdbc:embedded-database id="dataSource" type="H2">` per `<jdbc:embedded-database id="hikariDataSource" type="H2">`
+Per poder treballar amb l'exemple de l'API de Swagger fent ús del Hikari, només cal modificar el fitxer `src/main/resources/spring/app-custom-persistence-jpa.xml` de la següent manera:
+
+1. Comentar (o eliminar) el tag `<jdbc:embedded-database id="dataSource" type="H2">`
+2. Afegir el següent xml:
+```xml
+	<jdbc:initialize-database data-source="hikariDataSource" >
+		<jdbc:script location="classpath:scripts/h2/db-app-h2db-schema.sql"/>
+		<jdbc:script location="classpath:scripts/h2/db-app-h2db-data.sql"/>
+	</jdbc:initialize-database>
+```
 
