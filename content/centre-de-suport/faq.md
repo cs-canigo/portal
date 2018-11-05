@@ -6,13 +6,14 @@ sections    = "Centre de Suport"
 weight		= 3
 +++
 
-## Accés al portal
+## Accés al JIRA CSTD
+
 ### Com demanar un usuari d'accés?
-Enviant un correu a la bústia <oficina-tecnica.canigo.ctti@gencat.cat> amb el següent [formulari](/related/cs/formulari-altes.xls) omplert.
+Enviant un correu a la bústia <cstd.ctti@gencat.cat> sol·licitant accés al servei [Canigó](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN).
 
 ## Formació
 ### Com capacitar-se en Canigó?
-Mitjançant la realització de cursos presencials que es poden sol- licitar a través de la bústia del Centre de Suport
+Mitjançant la realització de cursos presencials que es poden sol- licitar a través de la bústia <oficina-tecnica.canigo.ctti@gencat.cat>
 
 ### Com inscriure's en un curs presencial?
 Enviar un correu a la bústia <oficina-tecnica.canigo.ctti@gencat.cat> indicant:
@@ -22,7 +23,6 @@ Enviar un correu a la bústia <oficina-tecnica.canigo.ctti@gencat.cat> indicant:
 - Departament/proveïdor
 - Projecte
 - Motius de la necessitat
-
 
 ### Com sol.licitar un curs presencial fora de calendari?
 Enviar un correu a la bústia <oficina-tecnica.canigo.ctti@gencat.cat> indicant:
@@ -34,10 +34,9 @@ Enviar un correu a la bústia <oficina-tecnica.canigo.ctti@gencat.cat> indicant:
 - Data d'inici desitjada
 - Nombre d'assistents previstos
 
-
 ## Incidències, Peticions de canvi, Consultes i Suport
 ### Com introduir una incidència, petició de canvi, consulta o petició de suport?
-Des del portal escollir l'opció [Obtenir Suport](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN).
+Accedir al servei [CAN del JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN) i crear una petició del tipus desitjat.
 
 ## Col.laboracions
 ### Com informar d'una col- laboració a Canigó?
