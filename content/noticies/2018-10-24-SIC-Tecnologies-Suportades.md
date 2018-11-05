@@ -1,6 +1,6 @@
 +++
 date = "2018-10-24"
-title = "SIC: Tecnologies suportades i conformitat amb el full de ruta"
+title = "SIC. Tecnologies suportades i conformitat amb el full de ruta"
 description = "Aquest article és un recordatori de la matriu de tecnologies amb les quals el SIC és compatible"
 sections = ["Noticies"]
 draft = true
@@ -19,19 +19,17 @@ Aquest estàndard de caràcter normatiu indica per a les principals tecnologies 
 * han passat a estat obsolet,
 * són encara compatibles,
 * són les preferides,
-* pròximament seran compatibles
+* pròximament seran compatibles,
 * i les versions compatibles amb el SIC
 
-D'aquesta manera, cal tenir en compte aquesta informació per no tenir problemes de compatibilitat amb les tecnologies que ofereixen els CPDs i les tecnologies amb les quals treballa el SIC.
+D'aquesta manera, cal tenir en compte aquesta informació per no tenir problemes de compatibilitat amb les tecnologies que ofereixen els CPDs en el seu catàleg i les tecnologies amb les quals treballa el SIC.
 
 ### Convergència del SIC amb el full de ruta
 
-El SIC, en el seu propi full de ruta, té previst convergir amb les versions d'aquest estàndard. Hi ha casos, com amb les tecnologies JDK, en els quals el SIC és 100% compatible amb les tecnologies preferides i d'altres en les que encara no ofereix compatibilitat.
+El SIC, en el seu propi full de ruta, treballa contínuament per convergir amb les versions d'aquest estàndard. Hi ha casos, com amb la tecnologia Java, en els quals el SIC és 100% compatible, i d'altres en les que encara no ofereix compatibilitat per a totes les versions. Des de l'equip del SIC, com ja s'ha comentat, es treballa per què sigui així.
 
 ## Altres tecnologies compatibles amb el SIC
 
-A més de les tecnologies associades a la plataforma, que figuren al Full de Ruta del Programari, hi ha les tecnologies de construcció i de cicle de vida de l'aplicació.
-
-A la secció de [tecnologies de desenvolupament](/sic/integracions-dev/) del SIC podreu trobar les tecnologies de construcció compatibles amb el SIC.
+A més de les tecnologies que figuren al Full de Ruta del Programari, hi ha tecnologies de construcció i de cicle de vida de les aplicacions que no hi apareixen. A la secció de [tecnologies de desenvolupament](/sic/integracions-dev/) del SIC podreu trobar les tecnologies de construcció compatibles amb el SIC.
 
 Si teniu cap dubte al respecte, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
