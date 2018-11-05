@@ -12,7 +12,7 @@ Actualment el Centre de Suport ofereix aquests serveis per a 3 productes diferen
 
 * **Framework Canigó**: espai comú de treball per al desenvolupament de noves aplicacions amb tecnologia JEE basades en entorn web. Aquest framework es composa de diferents serveis i proporciona una arquitectura d'aplicacions consistent i única per tots els desenvolupaments.
 * **Servei d'Integració Contínua (SIC)**: està composat per diferents sistemes que ens permeten, entre d'altres, el repositori controlat del codi font dels diferents sistemes d'informació de la Generalitat, i la construcció de l'aplicació a partir d'aquest codi i el seu desplegament a les infraestructures de la Generalitat.
-* **Plataforma formularis electrònics**: plataforma que permet la interacció amb formularis electrònics basats en Adobe Experience Manager 6.3. Ofereix les funcionalitats d'extracció de dades dels formularis o la seva renderització, a més de la publicació i activació de nous formularis PDF.
+* **Plataforma formularis electrònics**: plataforma que permet la interacció amb formularis electrònics basats en Adobe Experience Manager 6.3. Ofereix les funcionalitats d'extracció de dades dels formularis o la seva renderització, a més de la publicació i activació de nous formularis PDF i HTML5.
 
 ## Quins són els seus objectius?
 

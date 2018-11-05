@@ -10,7 +10,7 @@ Per obtenir suport de l'Oficina Tècnica de Canigó s'han de seguir els seguents
 
  - Accedir a l'eina de Gestió d'Incidències: Es pot accedir mitjançant l'enllaç [Obtenir Suport](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN).
  
- <CENTER>![JIRA](/images/cstd/jira.jpg)</center>
+ <CENTER>![JIRA](/images/cstd/jira.png)</center>
 
  - Donar d'alta una incidència: Podeu trobar més informació [aquí] (/centre-de-suport-related/obertura-peticions)
  - Fer el seguiment

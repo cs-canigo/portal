@@ -7,4 +7,4 @@ weight		= 10
 
 
 * [oficina-tecnica.canigo.ctti@gencat.cat](mailto://oficina-tecnica.canigo.ctti@gencat.cat)
-* [Centre de Suport Tecnològic al Desenvolupament](http://cstd.ctti.gencat.cat/)
+* [Centre de Suport Tecnològic al Desenvolupament](https://cstd.ctti.gencat.cat/jiracstd)

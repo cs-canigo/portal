@@ -3,7 +3,6 @@ date        = "2015-01-24T17:11:42+01:00"
 title       = "Comunicats"
 description = "Comunicats mensuals del CS Canigó"
 sections    = "Centre de Suport"
-toc         = true
 weight		= 4
 +++
 
