@@ -3,10 +3,91 @@ date        = "2015-01-24T17:11:42+01:00"
 title       = "Comunicats"
 description = "Comunicats mensuals del CS Canigó"
 sections    = "Centre de Suport"
+toc         = true
 weight		= 4
 +++
 
+## <span class="label label-cabecera">2018</span>
+
+#### [Novembre] (/comunicat/2018/11/)
+
+- Canigó. Monitorització d'aplicacions
+- SIC. Tecnologies suportades i conformitat amb el full de ruta
+
+#### [Octubre] (/comunicat/2018/10/)
+
+- Publicació versió 3.2.6 Canigó
+- Connectors de Canigó amb serveis corporatius
+- Serverless Computing o FaaS
+
+#### [Setembre] (/comunicat/2018/09/)
+
+- Canigó. Transmissió de binaris en REST APIs
+
+#### [Agost] (/comunicat/2018/08/)
+
+- Suport Cloud. Actualització documentació
+- DevOps
+
+#### [Juliol] (/comunicat/2018/07/)
+
+- SIC. Generació de llocs web estàtics amb Hugo
+
+#### [Juny] (/comunicat/2018/06/)
+
+- Canigó. Evolució Mòduls de Traces i Instrumentació
+- SIC. Autoservei de jobs pipeline
+
+#### [Maig] (/comunicat/2018/05/)
+
+- eFormularis. Serveis Invocació REST API
+- SIC. Jobs pipeline: Estat de l'art
+
+#### [Abril] (/comunicat/2018/04/)
+
+- Canigó. Configuració multi-entorn en SPAs
+- SIC. Canvi del sistema de permisos al SIC
+
+#### [Març] (/comunicat/2018/03/)
+
+- SIC. Branca Master al Git del SIC
+- Canigó. Jocs de proves API REST
+
+#### [Febrer] (/comunicat/2018/02/)
+
+_Aquest mes no es fa l'enviament del comunicat_
+
+#### [Gener] (/comunicat/2018/01/)
+- Oficina Tècnica de Canigó i Suport Cloud. Balanç 2017
+
 ## <span class="label label-cabecera">2017</span>
+
+#### [Desembre] (/comunicat/2017/12/)
+- Canigó. Integració amb SIC 2.0
+- SIC. Jobs automàtics per a PRE i PRO
+- Principis de Microserveis
+
+#### [Novembre] (/comunicat/2017/11/)
+- SIC 2.0. Estructura de permisos i autoservei d'usuaris
+- Ús de JWT (JSON Web Token) amb GICAR
+
+#### [Octubre] (/comunicat/2017/10/)
+- SIC. Interacció entre Jenkins i Remedy
+
+#### [Setembre] (/comunicat/2017/09/)
+- SIC. Actualització a Nexus 3
+- Hibridació de l'autenticació i de la gestió d'identitats amb Office365
+
+#### [Agost] (/comunicat/2017/08/)
+- SIC 2.0. Funcionament de l'Autoservei d'usuaris al GitLab
+
+#### [Juliol] (/comunicat/2017/07/)
+- SIC. Nou sistema de gestió de binaris
+- Canigó. Versions LTS
+
+#### [Juny] (/comunicat/2017/06/)
+- SIC. Llançament del SIC 2.0
+- Google Cloud Next 17
 
 #### [Maig] (/comunicat/2017/05/)
 - SIC 2.0. Millores en la gestió d'usuaris i repositoris
