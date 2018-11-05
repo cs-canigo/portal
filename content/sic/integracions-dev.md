@@ -35,27 +35,7 @@ Cas particular de tecnologies front-end:
 |gulp|1.2.2|1.2.2|1.2.2|2.0.1|
 |grunt|1.2.0|1.2.0|1.2.0|1.3.1|
 
-En quant a la versió de **ng** (Angular-cli), s'ha de configurar una secció `scripts` dins de l'arxiu de projecte `package.json`, on s'indiqui les comandes que cal executar per a la construcció de l'aplicació. D'aquesta manera s'executarà la versió d'angular-cli que es descarregui la pròpia aplicació. Exemple:
-
-package.json:
-```
-  [...]
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  }
-  [...]
-```
-
-Exemple de comanda que s'executarà per a la construcció:
-
-```
-npm run-script build --loglevel verbose --force --scripts-prepend-node-path true"
-```
+Pel que fa a [Angular](https://angular.io/), framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l'aplicació definirà la versió de **ng** (Angular-cli) a utilitzar per la construcció.
 
 ## Properes passes
 
