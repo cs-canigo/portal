@@ -15,8 +15,6 @@ Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle d
 
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
-### Tecnologies Back-End
-
 |Tecnologia|Versions|
 |-------|-------|
 |Ant|1.8.2<br />1.9.6|
@@ -24,16 +22,16 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |MS_Build|4.0|
 |MS_Deploy|7.1|
 
-### Tecnologies Front-End
-
 Cas particular de tecnologies front-end:
 
-|Tecnologia|Node 0.12.3|Node 4.4.3|Node 5.10.1|Node 8.12.0 (LTS)|
-|----------|-----------|----------|-----------|-----------------|
-|npm|2.15.0|2.15.1|3.8.3|6.4.1|
-|bower|1.8.0|1.8.0|1.8.0|1.8.4|
-|gulp|1.2.2|1.2.2|1.2.2|2.0.1|
-|grunt|1.2.0|1.2.0|1.2.0|1.3.1|
+|Versió node|Versió npm|
+|-----------|----------|
+|0.12.3|2.15.0|
+|4.4.3|2.15.1|
+|5.10.1|3.8.3|
+|8.12.0 (LTS)|6.4.1|
+
+L'única eina que va lligada en certa manera amb la versió de node és **npm**. La resta d'eines de cicle de vida (tals com **bower**, **gulp** i **grunt**) s'han d'incloure amb l'aplicació per a què el SIC les utilitzi per la seva construcció.
 
 Pel que fa a [Angular](https://angular.io/), framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l'aplicació definirà la versió de **ng** (Angular-cli) a utilitzar per la construcció.
 
