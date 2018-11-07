@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-27T09:26:16+01:00"
+date        = "2018-11-07T13:26:16+01:00"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
 sections    = "Canigó. Documentació versió 3.x"
@@ -457,3 +457,47 @@ public class EquipamentService {
 }
 ```
 
+### Test
+
+Per executar els tests del mòdul jpa al executar els test de l'aplicació és necessari incorporar la dependencia test-jar del mòdul en el pom:
+```
+...
+		<dependency>
+		   <groupId>cat.gencat.ctti</groupId>
+		   <artifactId>canigo.persistence.jpa</artifactId>
+		   <type>test-jar</type>
+		   <version>${canigo.persistence.jpa.version}</version>
+		   <scope>test</scope>
+		   <classifier>tests</classifier>
+		</dependency>
+...
+```
+
+**persistence.xml**
+
+Ubicació: <PROJECT_ROOT>/src/test/resources/config/persistence/persistence.xml
+És necessari afegir les entitats del mòdul jpa i les entitats de l'aplicació al fitxer persistence.xml:
+
+```
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+	version="1.0">
+
+	<persistence-unit name="canigo" transaction-type="RESOURCE_LOCAL">
+		<class>cat.gencat.test.model.Equipament</class>  
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.repository.Person</class> 
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.dao.Account</class>
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson</class>
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb</class>
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode</class>
+		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson</class>
+	</persistence-unit>
+
+</persistence>
+```
+
+On:
+- cat.gencat.test.model.Equipament és l'entitat de l'aplicació
+- cat.gencat.ctti.canigo.arch.persistence.jpa.* son les entitats del mòdul jpa
+
+Amb aquests canvis s'executaran els test del mòdul al executar els tests de l'aplicació
