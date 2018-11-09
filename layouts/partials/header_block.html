@@ -96,7 +96,10 @@
 										{{ if or (eq $title "clouds") (eq $section "cloud") }}
 											Container Cloud
 										{{ end }}
-									
+                                                                                {{ if (eq .Section "noticies") }}
+                                                                                    {{ .Title }}
+                                                                                {{ end }}
+
 									{{ end }}
 								</h1>
 
