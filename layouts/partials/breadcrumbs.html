@@ -37,6 +37,10 @@
 	Container Cloud
 {{ end }}
 
+{{ if (eq $title "principis d&#39;arquitectura de sistemes d&#39;informació") }}
+	Principis d'arquitectura
+{{ end }}
+
 {{ if in .URL "blog_tags" }}
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}

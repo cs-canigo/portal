@@ -40,13 +40,13 @@ Paginate = 10
 	Name = "Principis d'arquitectura"
     Weight = 3
     Identifier = "principis"
-    URL = "/principis"   
+    URL = "/principis"
 
 [[menu.main]]
 	Name = "Blog"
     Weight = 5
     Identifier = "blog"
-    URL = "/blog"   
+    URL = "/blog"
 
 [[menu.main]]
 	Name = "Cloud"
