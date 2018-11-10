@@ -99,7 +99,9 @@
                                                                                 {{ if (eq .Section "noticies") }}
                                                                                     {{ .Title }}
                                                                                 {{ end }}
-
+										{{ if (eq .Section "howtos") }}
+										    {{ .Title }}
+										{{ end }}
 									{{ end }}
 								</h1>
 
