@@ -13,7 +13,7 @@ build:
 # Specifies the version of Hugo to be used, by default this is "0.30.2". It is recommended to set this, so you don't 
 # accidentally build you site with a version it isn't ready for. Due to Wercker not being able to properly handle 0.x version
 # numbers, you will need to put quotes around the version number.
-        version: "0.49.2"
+        version: "0.27.1"
 deploy:
   steps:
     - install-packages:
