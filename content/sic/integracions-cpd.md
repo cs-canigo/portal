@@ -10,17 +10,14 @@ taxonomies  = []
 weight 		= 3
 +++
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
 En aquesta guia s'explica per a cada tipus de plataforma (Servidors web, servidors de fitxers, servidors d'aplicacions, bases de dades, etc.) què és el que necessita el SIC per part de CPD quan s'està posant en marxa una nova aplicació a CTTI. 
 
 ## Models de desplegament
 
-Abans d'entrar amb els detalls de què es requereix, prèviament cal ser conscient del tipus de desplegament que es realitzarà a cada entorn. El sic pot realitzar dos tipus de desplegament:
+Abans d'entrar amb els detalls de què es requereix, prèviament cal ser conscient del tipus de desplegament que es realitzarà a cada entorn. El SIC pot realitzar dos tipus de desplegament:
 
 * **Desplegament manual**: Desplegament realitzat manualment pels tècnics de CPD en el que el SIC facilita els artefactes.
-* **Desplegament semiautomàtic**: Desplegament realitzat de forma automàtica per jobs específics de CPD. Aquests jobs són invocats pels tècnics de CPD.
-* **Desplegament automàtic**: Desplegament realitzat de forma automàtica per la pipeline de construcció i desplegament invocada al fer-se un push al repositori Git del projecte.
+* **Desplegament automàtic**: Desplegament realitzat de forma automàtica per la pipeline.
 
 ### Desplegament manual
 
@@ -34,21 +31,20 @@ Consisteix en:
 
 Els requeriments del SIC per a aquest tipus de desplegaments són:
 
-* Tenir un compte SFTP en el mateix entorn de desplegament on poder pujar els artefactes perquè CPD els reculli. La informació que s'ha de traspassar al SIC és:
+* Tenir un compte SFTP a CPD on poder pujar els artefactes perquè el tècnic els reculli. La informació que s'ha de comunicar al SIC per aquest compte SFTP és:
+
 	* Usuari
 	* Paraula de pas
 	* Host
 	* Port
 
-L'espai varia en funció de la quantitat d'artefactes generats i de les seves mides. Per a garantir disposar de l'espai necessari, aquest hauria de ser el doble del sumatori de l'espai ocupat per tots els artefactes:
+L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes.
 
-<div>$$mida_{Total}=2\sum_{i=0}^n mida(artefacte_{i})$$</div>
+Aquest espai SFTP no ha d'estar mapejat directament a on el servidor web, d'aplicacions, etc, esperi que estigui el binari de l'aplicació. El tractament de l'artefacte desat pel SIC al SFTP el farà el tècnic de CPD.
 
-En cas de dubte sobre la mida que ha de tenir l'espai SFTP, consultar amb el SIC.
+### Desplegaments automàtic
 
-### Desplegaments automàtic i semiautomàtic
-
-Aquests tipus de desplegament realitzen de forma automàtica el desplegament de l'aplicació. La diferència entre el desplegament automàtic i el desplegament semiautomàtic radica en qui invoca i el desplegament. En el cas dels desplegaments automàtics, és la pipeline de construcció i desplegament la que directament fa els desplegaments a l'entorn indicat. En els desplegaments semiautomàtics, la pipeline de desplegament s'atura i s'espera a rebre confirmació de què el job de desplegament automàtic de CPD s'hagi executat. En qualsevol cas (sigui el job de CPD o la pipeline de construcció i desplegament), les tasques de desplegament seran automàtiques.
+Aquest tipus de desplegament realitza de forma automàtica el desplegament de l'aplicació a l'entorn indicat.
 
 #### Requeriments
 
