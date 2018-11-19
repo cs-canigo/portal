@@ -42,7 +42,7 @@ L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes.
 
 Aquest espai SFTP no ha d'estar mapejat directament a on el servidor web, d'aplicacions, etc, esperi que estigui el binari de l'aplicació. El tractament de l'artefacte desat pel SIC al SFTP el farà el tècnic de CPD.
 
-### Desplegaments automàtic
+### Desplegament automàtic
 
 Aquest tipus de desplegament realitza de forma automàtica el desplegament de l'aplicació a l'entorn indicat.
 
