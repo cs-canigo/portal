@@ -14,7 +14,7 @@ Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al
 <br/>
 <br/>
 
-En cas de mancança de disponibilitat del servei Remedy, es pot obrir la petició de SIC via bústia SAU de Remedy: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat).
+En cas de mancança de disponibilitat del servei Remedy, es pot obrir la petició de SIC via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat).
 
 Per tal que aquesta petició pugui ser atesa per el personal de SAU-Remedy, cal indicar la mateixa informació que s'indicaria a la petició oberta via l'eina Remedy.
 El redactat ha de ser en text plà, sense incloure sintaxi HTML. Es proposa seguir les següents plantilles a l'hora del redactat del correu de petició:
@@ -55,8 +55,6 @@ Cos correu: Cal indicar la següent informació:
 [**Petició de suport:**](mailto:sau.tic@gencat.cat?subject=Petici%C3%B3%20de%20suport%20funcional%20per%20a%20l%27aplicaci%C3%B3%20FRAMEWORK%20SIC&body=-%20Urg%C3%A8ncia%3A%20Alta%2C%20Mitjana%20o%20Baixa%0A-%20Nom%20de%20l%27aplicaci%C3%B3%3A%20FRAMEWORK%20SIC%0A-%20Descripci%C3%B3%20breu%20del%20suport%0A%0A-%20Descripci%C3%B3%20detallada%20del%20suport%0A)
 
 Títol correu: "Petició de suport funcional per a l'aplicació FRAMEWORK SIC"
-
-Adjunts: El [formulari](http://canigo.ctti.gencat.cat/sic-documentacio/formularis/) que es correspongui amb el tipus de petició que s'està demanant
 
 Cos correu: Cal indicar la següent informació:
 
