@@ -1,5 +1,5 @@
 +++
-date        = "2018-10-18"
+date        = "2018-11-19"
 title       = "Principis d'Arquitectura de Sistemes d'Informació v2"
 description = "Principis d'Arquitectura de Sistemes d'Informació v2"
 weight		= 3
