@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.2.x del Framework
 
 ### Introducció
 
-En aquest HowTo s'explica els passos a realitzar per a realitzar la [integració d'una aplicació Canigó al SIC](noticies/2017-12-11-Canigo-Integracio-pipelines-SIC/).
+En aquest HowTo s'explica els passos a realitzar per a realitzar la [integració d'una aplicació Canigó al SIC](/noticies/2017-12-11-Canigo-Integracio-pipelines-SIC/).
 
 El punt de partida és una aplicació Canigó generada pel [plugin de Canigó per a Eclipse](/canigo-download-related/plugin-canigo/), un projecte creat al [Gitlab de SIC] (http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) i un usuari amb permisos per treballar-hi.
 
