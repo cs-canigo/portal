@@ -38,7 +38,7 @@ Els requeriments del SIC per a aquest tipus de desplegaments són:
 	* Host
 	* Port
 
-A nivell de permisoss, es necessita, també, que tots els arxius i subcarpetes que estiguin ubicats en aquest espai tinguin com a owner aquest compte creat. 
+A nivell de permissos, es necessita, també, que tots els arxius i subcarpetes que estiguin ubicats en aquest espai tinguin com a owner aquest compte creat. 
 
 L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes.
 
