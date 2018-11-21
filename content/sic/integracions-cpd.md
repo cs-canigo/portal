@@ -38,6 +38,8 @@ Els requeriments del SIC per a aquest tipus de desplegaments són:
 	* Host
 	* Port
 
+A nivell de permisoss, es necessita, també, que tots els arxius i subcarpetes que estiguin ubicats en aquest espai tinguin com a owner aquest compte creat. 
+
 L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes.
 
 Aquest espai SFTP no ha d'estar mapejat directament a on el servidor web, d'aplicacions, etc, esperi que estigui el binari de l'aplicació. El tractament de l'artefacte desat pel SIC al SFTP el farà el tècnic de CPD.
@@ -92,7 +94,7 @@ Per tant, el SIC requerirà un __compte SFTP__ que ens ha de permetre **poder fe
 <div id="ServidorFitxers" style="background-color: #f5f5f5; padding: 10px;">
 <div style="font-weight: bold;margin: 5px 0px;">Servidors de fitxers</div>
 
-Per als servidors de fitxers, ens caldrà un **compte SFTP** amb accés directe al directori de l'aplicació. L'usuari ha de tenir permisos per esborrar, modificar i crear carpetes i arxius. No es requereix cap espai propi, es treballarà directament amb l'espai de l'aplicació.
+Per als servidors de fitxers, ens caldrà un **compte SFTP** amb accés directe al directori de l'aplicació. L'usuari ha de tenir permisos per esborrar, modificar i crear carpetes i arxius. Es necessita, també, que tots els arxius i subcarpetes que conformen el contingut tinguin com a owner aquest compte creat. No es requereix cap espai propi, es treballarà directament amb l'espai de l'aplicació.
 
 Caldrà facilitar al SIC:
 
