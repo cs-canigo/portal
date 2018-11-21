@@ -220,7 +220,7 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 8080
-  type: NodePort    
+  type: ClusterIP
   selector:
     app: XXXX-app1-server
 
@@ -249,7 +249,7 @@ spec:
     targetPort: 3731
   selector:
     app: XXXX-app1-server
-  type: XXXX-app1-server
+  type: LoadBalancer
   loadBalancerIP: 169.45.10.144
 ```
 
