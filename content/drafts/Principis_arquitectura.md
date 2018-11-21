@@ -114,7 +114,7 @@ Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en 
 <p><strong>3.1 Optimització de costos</strong>, pensar en els costos i en la seva optimització:</p>
 <ul>
     <li>3.1.1 Monitoritzar els serveis per a identificar necessitats d’ampliació o reducció de recursos i poder ajustar els costos en conseqüència.</li>
-    <li>3.1.2 Arquitectura / Dissenyar les càrregues de treball amb els costos en ment.</li>
+    <li>3.1.2 Dissenyar l’arquitectura amb una planificació de les càrregues de treball òptima en costos, de forma que s’equilibrin quan sigui possible les finestres d’execució dels components (online, extraccions, analítica, processos batch ...), per evitar els pics de càrrega i que es reparteixi de forma balancejada segons les necessitats del negoci.</li>
     <li>3.1.3 Arquitectura Mínima. Cal tenir en compte l’escalabilitat i fer una previsió (mínim 1 any) amb l’objectiu d’aconseguir una arquitectura sostenible en el temps.</li>
 </ul>
 
