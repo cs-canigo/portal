@@ -99,6 +99,8 @@ Maven builder  	 | 1.0-3.5.3-8   | docker-registry.ctti.extranet.gencat.cat/genc
 Npm builder  	 | 1.1-3.10.10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-3.10.10  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-3.10.10)
 Npm builder  	 | 1.1-5.6.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-5.6.0  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-5.6.0)
 
+**IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques podeu utilitzar les corresponents tasques a Jenkins.
+
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
 
 Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud/dockerImages/).
