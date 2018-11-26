@@ -73,7 +73,7 @@ Dreceres:
 <div id="ServidorWeb" style="background-color: #f5f5f5; padding: 10px;">
 <div  style="font-weight: bold;margin: 5px 0px;">Servidors web</div>
 
-Per als servidors web, el SIC requereix un usuari amb un home propi (per poder pujar els artefactes) i accés al webroot del servidor web per esborrar el contingut estàtic del contexte de l'aplicació i descomprimir el del nou artefacte.
+Per als servidors web, el SIC requereix un usuari i accés al webroot del servidor web per esborrar el contingut estàtic del contexte de l'aplicació i descomprimir el del nou artefacte.
 
 Per tant, el SIC requerirà un __compte SFTP__ que ens ha de permetre **poder fer esborrats de fitxers i carpetes publicats en el webroot**. Es necessita, també, que tots els arxius i subcarpetes que conformen el contingut estàtic tinguin com a owner aquest compte creat. La mida de l'espai del _home_ pot variar, però generalment 100 MB són suficients. En concret, caldrà facilitar al SIC les següents dades:
 
@@ -132,7 +132,7 @@ Tan bon punt s'hagin realitzat les configuracions, cal informar el SIC amb la se
 <div id="WL" style="background-color: #f5f5f5; padding: 10px;">
 <div style="font-weight: bold;margin: 5px 0px;">Servidors Weblogic</div>
 
-Per als servidors Weblogic, el SIC fa redeploys de l'aplicació. Per tant cal pujar l'artefacte a la mateixa ubicació des d'on es va fer el desplegament previ.
+Per als servidors Weblogic, el SIC fa redeploys de l'aplicació. Per tant cal pujar l'artefacte a la mateixa ubicació des d'on es va fer el desplegament previ. El servidor ha d'estar preparat per a desplegar l'artefacte empaquetat.
 
 Per tant, perquè el SIC pugui fer desplegaments a plataformes Weblogic, cal configurar:
 
@@ -147,7 +147,7 @@ Un cop s'ha realitzat la configuració, cal transmetre al SIC les següents dade
 	* FQDN del host (nom complet amb el domini inclòs)
 	* Port
 	* Protocol (t3s, per exemple)
-	* Name
+	* App Name
 	* ServerName
 
 * Accessos a l'espai dels artefactes:
