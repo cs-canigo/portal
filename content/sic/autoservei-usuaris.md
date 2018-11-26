@@ -3,7 +3,8 @@ date        = "2017-07-18"
 title       = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris SIC 2.0 al GitLab"
 aliases = [
-    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/"
+    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
+    "/noticies/2017-11-10-SIC-Estructura-permisos-i-Autoservei/
 ]
 sections    = "SIC"
 taxonomies  = []
@@ -64,6 +65,7 @@ El SIC 2.0 té estructurada la seva seguretat en diferents tipus de grups:
 * Grups per a CPDs i LdT
 * Altres grups
 
+
 #### Grups per a lots d'aplicacions
 
 Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen l'amalgama de perfils requerits per desenvolupar una aplicació. Dins d'aquests tipus de grups, distingim tres subtipus de grups:
@@ -89,11 +91,13 @@ Els membres d'un grup RM són perfils que poden:
 
 Aquest tipus de grup recull als Responsables de Lot (RSPL, en endavant). Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un RM. Actualment, al SIC 2.0, aquesta funcionalitat careix de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis RMs poden concedir accés a companys. Aquest grup ha passat a ser un agregador tots els codis d'aplicació per a un lot. És a dir, són membres d'un lot d'aplicacions amb una participació transversal a tots els codis d'aplicació i poden realitzar les mateixes accions que un RM.
 
+
 #### Grups de CPD i Ldt
 
 Aquests tipus de grups corresponen a CPDs (CPD1, CPD2...) i a LDT (LT2A, LT2B...). Els membres d'aquest tipus de grup tenen accés en mode lectura als repositoris i al mòdul de gestió de binaris i poden executar a Jenkins jobs de desplegament automàtic per als codis d'aplicació que els hi corresponen.
 
 La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR als usuaris, els quals assigna a un LOT/CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR per ser d'un CPD o un grup de LDT concrets té accés preconcedit al SIC 2.0.
+
 
 #### Altres tipus de grups
 
@@ -103,9 +107,10 @@ La pertincença als grups d'aquest tipus es realitza de forma manual ja que els 
 
 ### Autoservei
 
-Per tant, l'autoservei d'usuaris afecta als lots i proveïdors fora de lot d'aplicacions. Tot usuari que necessiti accés haurà de sol·licitar als companys que ja en tenen que els hi concedeixin accés. Us recordem que vam publicar un [article](http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) on explicàvem com concedir permisos a companys per accedir al SIC com RM.
+Per tant, l'autoservei d'usuaris afecta als lots i proveïdors fora de lot d'aplicacions. Tot usuari que necessiti accés haurà de sol·licitar als companys que ja en tenen que els hi concedeixin accés. Us recordem que a l'inici d'aquest document explicàvem com concedir permisos a companys per accedir al SIC com RM.
 
 Hem inclòs referències a aquest article tant a l'apartat de [manuals del SIC](http://canigo.ctti.gencat.cat/sic-documentacio/manuals/) com a l'apartat de [FAQ del SIC](http://canigo.ctti.gencat.cat/sic/faq/) dins del web d'arquitectura per a que sigui més fàcil localitzar-lo.
 
-Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
 
+
+Per a qualsevol dubte o aclariment sobre el funcionament de l'Autoservei d'usuaris SIC al GitLab, podeu obrir una [consulta](/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta) a SAU Remedy.
