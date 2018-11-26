@@ -31,18 +31,15 @@ Consisteix en:
 
 Els requeriments del SIC per a aquest tipus de desplegaments són:
 
-* Tenir un compte SFTP a CPD on poder pujar els artefactes perquè el tècnic els reculli. La informació que s'ha de comunicar al SIC per aquest compte SFTP és:
+* Tenir un **compte SFTP** a CPD on poder pujar els artefactes perquè el tècnic els reculli i pugui dur a terme el desplegament de l'aplicació. L’usuari ha de tenir permisos per esborrar, modificar i crear carpetes i arxius, i qualsevol contingut que pugui tenir haurà de tenir com a owner aquest compte creat.
+La informació que s'ha de comunicar al SIC per aquest compte SFTP és:
 
 	* Usuari
 	* Paraula de pas
-	* Host
+	* FQDN del host (nom complet amb el domini inclòs)
 	* Port
 
-A nivell de permissos, es necessita, també, que tots els arxius i subcarpetes que estiguin ubicats en aquest espai tinguin com a owner aquest compte creat. 
-
-L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes.
-
-Aquest espai SFTP no ha d'estar mapejat directament a on el servidor web, d'aplicacions, etc, esperi que estigui el binari de l'aplicació. El tractament de l'artefacte desat pel SIC al SFTP el farà el tècnic de CPD.
+L'espai SFTP ha de ser suficient per emmagatzemar tots els artefactes i no ha d'estar mapejat directament a on el servidor web, d'aplicacions, etcètera, esperi que estigui el binari de l'aplicació. El tractament de l'artefacte desat pel SIC el farà el tècnic de CPD.
 
 ### Desplegament automàtic
 
