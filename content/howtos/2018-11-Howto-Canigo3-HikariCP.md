@@ -1,10 +1,10 @@
 +++
 date = "2018-11-02"
-title = "HowTo usar Hikari CP a Canigó 3.2"
-description = "En aquest HowTo es proposa i s'explica un mètode per integrar i utilitzar Hikari CP a Canigó 3.2"
+title = "HowTo Ús de Hikari CP a Canigó 3.2"
+description = "En aquest HowTo es proposa i s'explica com integrar un pool de connexions Hikari CP a Canigó 3.2"
 section = "howtos"
 categories = ["canigo"]
-key = "NOVEMBRE2018"
+key = "DESEMBRE2018"
 +++
 
 ## Audiència
@@ -208,6 +208,7 @@ El *archetype* per aplicacions REST de Canigó `plugin-canigo-archetype-rest` ge
 
 1. Comentar (o eliminar) el tag `<jdbc:embedded-database id="dataSource" type="H2">`
 2. Afegir el següent xml:
+
 ```xml
 	<jdbc:initialize-database data-source="hikariDataSource" >
 		<jdbc:script location="classpath:scripts/h2/db-app-h2db-schema.sql"/>
