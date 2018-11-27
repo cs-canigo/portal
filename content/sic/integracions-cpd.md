@@ -75,7 +75,7 @@ Dreceres:
 
 Per als servidors web, el SIC requereix un usuari i accés al webroot del servidor web per esborrar el contingut estàtic del contexte de l'aplicació i descomprimir el del nou artefacte.
 
-Per tant, el SIC requerirà un __compte SFTP__ que ens ha de permetre **poder fer esborrats de fitxers i carpetes publicats en el webroot**. Es necessita, també, que tots els arxius i subcarpetes que conformen el contingut estàtic tinguin com a owner aquest compte creat. La mida de l'espai del _home_ pot variar, però generalment 100 MB són suficients. En concret, caldrà facilitar al SIC les següents dades:
+Per tant, el SIC requerirà un __compte SFTP__ que ens ha de permetre **poder fer esborrats de fitxers i carpetes publicats en el webroot**. Es necessita, també, que tots els arxius i subcarpetes que conformen el contingut estàtic tinguin com a owner aquest compte creat. La mida de l'espai assignat pot variar, però generalment 100 MB són suficients. En concret, caldrà facilitar al SIC les següents dades:
 
 * Les dades del compte SSH:
 	* Usuari
@@ -147,7 +147,7 @@ Un cop s'ha realitzat la configuració, cal transmetre al SIC les següents dade
 	* FQDN del host (nom complet amb el domini inclòs)
 	* Port
 	* Protocol (t3s, per exemple)
-	* App Name
+	* AppName
 	* ServerName
 
 * Accessos a l'espai dels artefactes:
