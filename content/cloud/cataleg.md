@@ -70,9 +70,7 @@ default_versions:
 
 ## **Contenidors (Docker)**
 
-En quant als contenidors Docker, inicialment, aliniarem les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat).
-
-Si necessiteu més informació del registre privat podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/)
+En quant als contenidors Docker, estan alineades les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat). Si necessiteu més informació d'aquest registre privat podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/).
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------
@@ -98,6 +96,10 @@ Tomcat  	 | 9.0-java8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/t
 Maven builder  	 | 1.0-3.5.3-8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/maven-builder:1.0-3.5.3-8   | [maven builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/maven-builder/tree/1.0-3.5.3-8)
 Npm builder  	 | 1.1-3.10.10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-3.10.10  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-3.10.10)
 Npm builder  	 | 1.1-5.6.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-5.6.0  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-5.6.0)
+
+<br>
+**IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
+<br>
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
 

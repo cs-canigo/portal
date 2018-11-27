@@ -16,13 +16,13 @@ weight 		= 5
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/2.0.3) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/2.0.4) amb la configuració de l'entorn Canigó
 
 La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d'aquesta versió o superior.
 
 ### Com començar?
 
-* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/2.0.3.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/2.0.4.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
 
 * Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
 
@@ -73,7 +73,14 @@ Si es volen afegir carpetes compartides entre la màquina host i la guest s'han 
 
 ### Versions
 
-#### 2.0.3 (6/8/2018) -- <span style="color:green">OPERATIVA</style>
+#### 2.0.4 (22/11/2018) -- <span style="color:green">OPERATIVA</style>
+
+_RELEASE NOTES_
+
+* Deshabilitats "Update sites" excepte pel plugin de Canigó
+* Certificació funcionament amb plugin d'Eclipse v1.7.0 de Canigó
+
+#### 2.0.3 (6/8/2018)
 
 _RELEASE NOTES_
 

@@ -1,10 +1,10 @@
 +++
 date = "2018-11-02"
-title = "HowTo usar Hikari CP a Canigó 3.2"
-description = "En aquest HowTo es proposa i s'explica un mètode per integrar i utilitzar Hikari CP a Canigó 3.2"
+title = "HowTo Ús de Hikari CP a Canigó 3.2"
+description = "En aquest HowTo es proposa i s'explica com integrar un pool de connexions Hikari CP a Canigó 3.2"
 section = "howtos"
 categories = ["canigo"]
-key = "NOVEMBRE2018"
+key = "DESEMBRE2018"
 +++
 
 ## Audiència
@@ -16,6 +16,8 @@ Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors, ana
 Els pools de connexions proporcionen una millora en el rendiment de les consultes SQL, minimitzant el temps d'adquisició i ús de les connexions a BBDD. Les diferents maneres de gestionar aquestes connexions i l'oferta de funcionalitats relacionades fa que hi hagi diferents implementacions (Apache DBCP2, Hikari CP, C3P0, Tomcat Pool, etc.)
 
 Hikari CP és un pool de connexions que actualment té un gran *momentum* degut principalment a una visió minimalista de la gestió de les connexions, fent que frameworks molt populars (com Spring) l'hagin triat com una opció més per la tasca de gestionar les connexions a BBDD.
+
+Els exemples i configuracions estan adaptats específicament per una aplicació estàndard de Canigó, tot i que es fàcilment adaptable a aplicacions J2EE més genèriques.
 
 ## Configuració
 
@@ -46,13 +48,13 @@ Hikari actualment proporciona 3 versions, segons la versió de Java sigui 8+ o p
 
 ### jpa.properties
 
-De manera ad-hoc s'ha definit que les propietats específiques del pool de connexions de Hikari tinguin el prefix `persistence.hikari`; agrupant la configuració de les propietats del pool de connexions en 3 parts:
+De manera ad-hoc s'ha definit per Canigó que les propietats específiques del pool de connexions de Hikari tinguin el prefix `persistence.hikari`; agrupant la configuració de les propietats del pool de connexions en 3 parts:
 
 1. Mode d'accés i/o autenticació: S'ha de definir l'accés a la BBDD o bé mitjançant l'identificador JNDI o bé mitjançant l'URL, l'usuari i el password.
 1. Propietats generals del pool: Quantitat de connexions i temporitzadors associats. En aquest cas, la resta de configuracions del pool són calculats en funció d'aquests valors.
 1. (Opcional) propietats específiques del driver JDBC: Ajustos específics per millorar el rendiment o per *troubleshooting*.
 
-Un exemple de configuració per Hikari seria el següent:
+Un exemple de configuració de Hikari per Canigó seria el següent:
 
 ```properties
 #
@@ -202,14 +204,14 @@ A continuació es defineix una llista d'enllaços amb informació addicional per
 
 ## Annex. Configurar exemple de Swagger
 
-Per poder treballar amb l'exemple de l'API de Swagger fent ús del Hikari, només cal modificar el fitxer `src/main/resources/spring/app-custom-persistence-jpa.xml` de la següent manera:
+El *archetype* per aplicacions REST de Canigó `plugin-canigo-archetype-rest` genera actualment un exemple funcional amb Swagger. Aquest exemple, per defecte, no s'integra amb Hikari de manera que per fer-ne ús del Hikari, només cal modificar el fitxer `src/main/resources/spring/app-custom-persistence-jpa.xml` de la següent manera:
 
 1. Comentar (o eliminar) el tag `<jdbc:embedded-database id="dataSource" type="H2">`
 2. Afegir el següent xml:
+
 ```xml
 	<jdbc:initialize-database data-source="hikariDataSource" >
 		<jdbc:script location="classpath:scripts/h2/db-app-h2db-schema.sql"/>
 		<jdbc:script location="classpath:scripts/h2/db-app-h2db-data.sql"/>
 	</jdbc:initialize-database>
 ```
-
