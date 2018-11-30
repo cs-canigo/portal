@@ -4,7 +4,8 @@ title       = "Anàlisi estàtic de codi al SIC"
 description = "Automatització de l'anàlisi de qualitat de codi a les pipelines del SIC"
 sections    = "SIC"
 taxonomies  = []
-weight 		= 12
+weight 	    = 12
+draft       = true
 +++
 
 
