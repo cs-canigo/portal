@@ -1,16 +1,15 @@
 +++ 
-date = "2018-12-04" 
-lastmod = "2018-12-05" 
-title = "Què és la Refactorització" 
+date        = "2018-12-04" 
+title       = "Què és la Refactorització" 
 description = "Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna" 
-sections = ["drafts"] 
-blog_tags = ["microserveis","monolits","refactorització"] 
-categories = ["microserveis","monolits","refactorització"] 
+responsable = "Unitat d'arquitectura"
+sections    = ["drafts"] 
+blog_tags   = ["microserveis","monolits","refactorització"] 
+categories  = ["microserveis","monolits","refactorització"] 
+key         = "DESEMBRE2018"
 +++
 
-
-
-## Què és la refactorització?
+# Què és la refactorització?
 
 Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna. És una forma disciplinada de netejar el codi que minimitza les possibilitats d'introduir errors. En essència, quan es refactoritza, s'està millorant el disseny del codi després d'haver estat escrit.
 
@@ -26,7 +25,7 @@ Paral·lelament a la modernització tecnològica, un dels objectius principals �
 
 La definició del pla de refactorització permetrà guiar aquest procés de transformació de la tecnologia i estructura del nou sistema.
 
-### Estructura d'un sistema típic.
+## Estructura d'un sistema típic.
 
 Habitualment ens trobem amb la necessitat d'adaptar una aplicació als nous requeriments del full de ruta per evitar la seva obsolescència, i unes funcionalitats que han d'evolucionar seguint els principis d'arquitectura. Tanmateix es disposa d'una base de dades monolítica i es planteja una convivència temporal de tots dos sistemes. Com a conseqüència s'estableix com a objectiu una estructura de codi que asseguri almenys les següents característiques:
 
@@ -38,13 +37,13 @@ Habitualment ens trobem amb la necessitat d'adaptar una aplicació als nous requ
 
 Tots els artefactes del projecte seguiran la nomenclatura de directoris estàndard definida per maven a nivell de codi font, arxius de configuració, proves unitàries i configuració de proves.
 
-### Configuració Comuna i Empaquetat.
+## Configuració Comuna i Empaquetat.
 
 El directori app correspon a l'artefacte de desplegament (war), i contindrà la configuració comuna a tots el mòduls. Permetrà tant l'arrencada com a aplicació Spring Boot com el desplegament en contenidor web o servidor d'aplicacions.
 Addicionalment, contindrà el codi de la interfície d'usuari desenvolupada amb el framework Angular.
 El procés d'empaquetatge generarà els arxius de distribució de l'aplicació Angular com un element separat per al seu desplegament en un servidor web.
 
-### Components comuns
+## Components comuns
 
 Inclourà aquelles utilitats que es determinin d'ús comú a diferents mòduls funcionals. Es desenvoluparan com a artefactes separats (llibreries jar). La estructura de la part de components comuns, inicialment, consistirà en tenir tants artefactes com sigui necessari, per posteriorment agrupar utilitats segons la capa tecnològica a la que s'apliquin, de manera que no s’arrastrin components que no s’utilitzaran en les diferents parts en què es divideix un mòdul funcional:
 - core-web: Utilitats comunes a la part "front" dels diferents mòduls funcionals
@@ -53,7 +52,8 @@ Inclourà aquelles utilitats que es determinin d'ús comú a diferents mòduls f
 - core-commons: Utilitats comunes aplicables a les diferents capes (tractament de dates, per exemple)
 
 
-### Estructura de mòdul funcional
+## Estructura de mòdul funcional
+
 Cada mòdul funcional estarà compost de tres artefactes separats (llibreries jar):
 -	Part services: Contindrà únicament definicions d'interfícies de servei i paràmetres d'entrada / sortida. Defineixen el contracte a nivell de serveis que proporciona el mòdul funcional de cara a altres mòduls.
 -	Part back: Contindrà la capa d'implementació dels serveis i d'accés a dades, així com la configuració necessària per a la seva arrencada dins del sistema.
@@ -62,7 +62,8 @@ Cada mòdul funcional estarà compost de tres artefactes separats (llibreries ja
 Aquesta divisió impedirà els accessos a la part interna del mòdul, tant des de la part frontal com des d'altres mòduls. L'única part visible d'un mòdul seran les seves interfícies de servei.
 
 
-### Passos del pla de refactorització.
+## Passos del pla de refactorització.
+
 El procés de transformació del sistema es realitzarà seguint un pla de refactorització que ordeni els passos a realitzar i permeti alliberar petits increments de la funcionalitat durant el desenvolupament.
 
 1.	Divisió funcional del sistema.
@@ -71,16 +72,14 @@ El primer pas del procés de transformació serà una anàlisi inicial de les fu
 2.	Anàlisi de dependències.
 La divisió funcional del sistema proposat haurà de validar pel que fa a les dependències que introdueix entre els diferents mòduls. Una excessiva inter-dependència o la presència de cicles seran senyals de que cal replantejar la divisió inicial o la generació d'un artefacte comú de forma separada.
 Si representem la dependència d'un mòdul M1 amb un mòdul M2 com M1 ==> M2, els senyals que indicaran la necessitat de revisió seran d'aquest tipus:
-o	M1 ==> M2 ==> M1: Inter-dependència entre móduls. 
-o	M1 ==> M2 ==> M3 ==> M1: Cicle de dependència.
+** M1 ==> M2 ==> M1: Inter-dependència entre móduls. 
+** M1 ==> M2 ==> M3 ==> M1: Cicle de dependència.
 Haurà d'analitzar-se quins elements provoquen aquests cicles, i determinar si poden eliminar-se redistribuint les responsabilitats o generant nous artefactes independents (bé un nou mòdul o component comú).
-
 
 Si bé els dos passos inicials del procés han de ser suficients per generar una divisió el més propera al resultat final, durant el desenvolupament de projecte podran detectar-se noves necessitats a nivell de components comuns per evitar la introducció de nous cicles de dependència.
 
 A nivell tècnic, es pot aplicar una eina de visualització de dependències com JDeps per tenir una primera aproximació de les dependències entre els diferents paquets de codi font.
 A partir d'aquí, el criteri de divisió en mòduls que es vol aplicar és purament funcional. Aquesta divisió segons funcionalitat ha de definir quines responsabilitats té cada mòdul, quines entitats està gestionant, quins serveis ha d'oferir i quins mòduls poden dependre d'aquests serveis. Aquest criteri és el que es farà servir després per moure classes o reimplementar canviant a la nova tenologia, des del sistema actual al nou.
-
 
 3.	Estructura inicial de mòduls funcionals.
 A nivell de codi es crearà l'estructura inicial del projecte amb el conjunt mòduls funcionals i components comuns detectats en els passos anteriors. L'anàlisi realitzada permetrà establir un ordre en el procés de refactorització. Aquells mòduls o components amb dependències d'entrada s'hauran d'abordar en primer lloc.
@@ -97,7 +96,5 @@ o	Backend Java: Divisió de codi i configuració en els diferents artefactes que
 Respecte a l’impacte, a nivell java en la fase 1 ja hi ha una separació a nivell de nomenclatura de paquets, una primera divisió en mòduls per a la funcionalitat del pilot, i el desenvolupament ja s'ha fet amb les noves tecnologies de Canigó 3. Per tant, l'esforç que es requereix és menor, ja que en aquest aspecte només és necessari moure els paquets a la nova estructura.
 En la part de la interfície d'usuari serà necessari crear una nova aplicació front-end que integri el desenvolupament realitzat en el pilot de fronatl esmentat anteriorment. Tècnicament, els frameworks de frontal ofereixen la solució per fer-ho (convivència de versions). Per tant, l'impacte no ha de ser gran, però pot donar més problemes que el canvi en la part Java.
 
-
 6.	Refactorització per mòdul.
 La refactorització per mòdul funcional serà un procés iteratiu que s'aplicarà a totes les capes de forma simultània. L'ordre en la refactorització de codi no vindrà determinat per la divisió de capes de l'arquitectura, sinó per increments de funcionalitat en el sistema que puguin validar-se durant el desenvolupament del projecte. L'ordre en el qual es desenvoluparan vindrà determinat per les necessitats detectades en els dos primers passos, donant prioritat a aquelles funcionalitats que formin la base per increments de funcionalitat posteriors.
-
