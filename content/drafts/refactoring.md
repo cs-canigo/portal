@@ -1,29 +1,29 @@
 +++ 
 date        = "2018-12-04" 
-title       = "Què és la Refactorització" 
-description = "Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna" 
+title       = "Què és la Refacció" 
+description = "Refacció és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna" 
 responsable = "Unitat d'arquitectura"
 sections    = ["drafts"] 
-blog_tags   = ["microserveis","monolits","refactorització"] 
-categories  = ["microserveis","monolits","refactorització"] 
+blog_tags   = ["microserveis","monolits","refacció"] 
+categories  = ["microserveis","monolits","refacció"] 
 key         = "DESEMBRE2018"
 +++
 
-# Què és la refactorització?
+# Què és la refacció?
 
-Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna. És una forma disciplinada de netejar el codi que minimitza les possibilitats d'introduir errors. En essència, quan es refactoritza, s'està millorant el disseny del codi després d'haver estat escrit.
+Refacció és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna. És una forma disciplinada de netejar el codi que minimitza les possibilitats d'introduir errors. En essència, quan es refacciona, s'està millorant el disseny del codi després d'haver estat escrit.
 
 "Millora del disseny després d'haver estat escrit". Això és un estrany gir de frase. Durant gran part de la història del desenvolupament de programari, la majoria de la gent creia que es dissenyava primer, i només quan el disseny està aprovat, s'ha de codificar. Amb el temps, el codi es modificarà i la integritat del sistema -la seva estructura segons aquest disseny- es va degradant gradualment. El codi s'enfonsa lentament de l'enginyeria al hacking.
 
-La refactorització és el contrari d'aquesta pràctica. Amb la refactorització, podem agafar un disseny dolent, fins i tot caòtic, i tornar-lo a treballar com un codi ben estructurat. Cada pas és senzill, fins i tot simplista. Mou un camp d'una classe a una altra, treu un codi d'un mètode per convertir-lo en el seu propi mètode, o empènyer un codi amunt o avall per una jerarquia. Tot i així, l'efecte acumulatiu d'aquests petits canvis pot millorar radicalment el disseny. És la inversa exacta de la noció de decadència del programari.
+La refacció és el contrari d'aquesta pràctica. Amb la refacció, podem agafar un disseny dolent, fins i tot caòtic, i tornar-lo a treballar com un codi ben estructurat. Cada pas és senzill, fins i tot simplista. Mou un camp d'una classe a una altra, treu un codi d'un mètode per convertir-lo en el seu propi mètode, o empènyer un codi amunt o avall per una jerarquia. Tot i així, l'efecte acumulatiu d'aquests petits canvis pot millorar radicalment el disseny. És la inversa exacta de la noció de decadència del programari.
 
-Amb la refactorització, la distribució de treball canvia. El disseny, en comptes de fer-ho tot per davant, es produeix de manera contínua durant el desenvolupament. A mesura que es construeix el sistema, s'aprèn a millorar el disseny. El resultat d'aquesta interacció és un programa on el disseny es manté bé mentre el desenvolupament continua.
+Amb la refacció, la distribució de treball canvia. El disseny, en comptes de fer-ho tot per davant, es produeix de manera contínua durant el desenvolupament. A mesura que es construeix el sistema, s'aprèn a millorar el disseny. El resultat d'aquesta interacció és un programa on el disseny es manté bé mentre el desenvolupament continua.
 
 Tot i que la necessitat fonamental de la transformació de les aplicacions és adaptar-les al nou software base especificat pel full de ruta del programari (Link), automatitzar la seva construcció/desplegament en entorns CTTI (link SIC), i seguir els principis d'arquitectura (link).
 
 Paral·lelament a la modernització tecnològica, un dels objectius principals és l'obtenció d'un sistema amb una estructura molt més modular i propera a les arquitectures basades en microserveis.
 
-La definició del pla de refactorització permetrà guiar aquest procés de transformació de la tecnologia i estructura del nou sistema.
+La definició del pla de refacció permetrà guiar aquest procés de transformació de la tecnologia i estructura del nou sistema.
 
 ## Estructura d'un sistema típic.
 
