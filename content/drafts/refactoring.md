@@ -62,9 +62,9 @@ Cada mòdul funcional estarà compost de tres artefactes separats (llibreries ja
 Aquesta divisió impedirà els accessos a la part interna del mòdul, tant des de la part frontal com des d'altres mòduls. L'única part visible d'un mòdul seran les seves interfícies de servei.
 
 
-## Passos del pla de refactorització.
+## Passos del pla de refacció.
 
-El procés de transformació del sistema es realitzarà seguint un pla de refactorització que ordeni els passos a realitzar i permeti alliberar petits increments de la funcionalitat durant el desenvolupament.
+El procés de transformació del sistema es realitzarà seguint un pla de refacció que ordeni els passos a realitzar i permeti alliberar petits increments de la funcionalitat durant el desenvolupament.
 
 1.	Divisió funcional del sistema.
 El primer pas del procés de transformació serà una anàlisi inicial de les funcionalitats del sistema actual que permeti agrupar-les en diferents mòduls funcionals. D'aquesta divisió inicial quedaran definides les responsabilitats de cada mòdul, amb una descripció d'alt nivell del que ofereixen a nivell de serveis i de funcionalitat a nivell d'interfície d'usuari.
@@ -82,7 +82,7 @@ A nivell tècnic, es pot aplicar una eina de visualització de dependències com
 A partir d'aquí, el criteri de divisió en mòduls que es vol aplicar és purament funcional. Aquesta divisió segons funcionalitat ha de definir quines responsabilitats té cada mòdul, quines entitats està gestionant, quins serveis ha d'oferir i quins mòduls poden dependre d'aquests serveis. Aquest criteri és el que es farà servir després per moure classes o reimplementar canviant a la nova tenologia, des del sistema actual al nou.
 
 3.	Estructura inicial de mòduls funcionals.
-A nivell de codi es crearà l'estructura inicial del projecte amb el conjunt mòduls funcionals i components comuns detectats en els passos anteriors. L'anàlisi realitzada permetrà establir un ordre en el procés de refactorització. Aquells mòduls o components amb dependències d'entrada s'hauran d'abordar en primer lloc.
+A nivell de codi es crearà l'estructura inicial del projecte amb el conjunt mòduls funcionals i components comuns detectats en els passos anteriors. L'anàlisi realitzada permetrà establir un ordre en el procés de refacció. Aquells mòduls o components amb dependències d'entrada s'hauran d'abordar en primer lloc.
 
 4.	Estructura inicial de frontal.
 Es crearà l'estructura inicial de l'aplicació front-end al directori de l'artefacte app. Utilitzant les característiques de modularitat que proporciona el framework de front-end utilitzat, l'estructura de l'aplicació frontal haurà de correspondre amb els diferents mòduls funcionals detectats.
@@ -90,11 +90,11 @@ Es crearà l'estructura inicial de l'aplicació front-end al directori de l'arte
 5.	Fases de la integració.
 La primera fase correspondria a un pilot desenvolupat amb un framework de front-end a nivell de frontal. En aquesta fase no es farà la divisió complerta en mòduls funcionals. 
 A la part Java s'ha seguit l'especificació base per al desenvolupament d'aplicacions rest amb el framework Canigó 3.
-En aquest pas del pla de refactorització s'adaptarà el desenvolupament del pilot de la fase 1 en els següents nivells:
+En aquest pas del pla de refacció s'adaptarà el desenvolupament del pilot de la fase 1 en els següents nivells:
 o	Interfície d'usuari: Integració del desenvolupament del pilot dins de l'aplicació front-end. Inicialment es mantindrà el codi integrat a la nova aplicació.
 o	Backend Java: Divisió de codi i configuració en els diferents artefactes que composen un mòdul funcional, així com separació de components comuns empresos en la primera fase en artefactes independents.
 Respecte a l’impacte, a nivell java en la fase 1 ja hi ha una separació a nivell de nomenclatura de paquets, una primera divisió en mòduls per a la funcionalitat del pilot, i el desenvolupament ja s'ha fet amb les noves tecnologies de Canigó 3. Per tant, l'esforç que es requereix és menor, ja que en aquest aspecte només és necessari moure els paquets a la nova estructura.
 En la part de la interfície d'usuari serà necessari crear una nova aplicació front-end que integri el desenvolupament realitzat en el pilot de fronatl esmentat anteriorment. Tècnicament, els frameworks de frontal ofereixen la solució per fer-ho (convivència de versions). Per tant, l'impacte no ha de ser gran, però pot donar més problemes que el canvi en la part Java.
 
-6.	Refactorització per mòdul.
-La refactorització per mòdul funcional serà un procés iteratiu que s'aplicarà a totes les capes de forma simultània. L'ordre en la refactorització de codi no vindrà determinat per la divisió de capes de l'arquitectura, sinó per increments de funcionalitat en el sistema que puguin validar-se durant el desenvolupament del projecte. L'ordre en el qual es desenvoluparan vindrà determinat per les necessitats detectades en els dos primers passos, donant prioritat a aquelles funcionalitats que formin la base per increments de funcionalitat posteriors.
+6.	Refacció per mòdul.
+La refacció per mòdul funcional serà un procés iteratiu que s'aplicarà a totes les capes de forma simultània. L'ordre en la refacció de codi no vindrà determinat per la divisió de capes de l'arquitectura, sinó per increments de funcionalitat en el sistema que puguin validar-se durant el desenvolupament del projecte. L'ordre en el qual es desenvoluparan vindrà determinat per les necessitats detectades en els dos primers passos, donant prioritat a aquelles funcionalitats que formin la base per increments de funcionalitat posteriors.
