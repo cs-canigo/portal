@@ -2,7 +2,7 @@
 
 
 
-## Què és la refactoritzaciói?
+## Què és la refactorització?
 
 Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna. És una forma disciplinada de netejar el codi que minimitza les possibilitats d'introduir errors. En essència, quan es refactoritza, s'està millorant el disseny del codi després d'haver estat escrit.
 
@@ -30,7 +30,7 @@ Habitualment ens trobem amb la necessitat d'adaptar una aplicació als nous requ
 
 Tots els artefactes del projecte seguiran la nomenclatura de directoris estàndard definida per maven a nivell de codi font, arxius de configuració, proves unitàries i configuració de proves.
 
-### Configuració Comú i Empaquetat.
+### Configuració Comuna i Empaquetat.
 
 El directori app correspon a l'artefacte de desplegament (war), i contindrà la configuració comuna a tots el mòduls. Permetrà tant l'arrencada com a aplicació Spring Boot com el desplegament en contenidor web o servidor d'aplicacions.
 Addicionalment, contindrà el codi de la interfície d'usuari desenvolupada amb el framework Angular.
