@@ -1,4 +1,4 @@
-+++ date = "2018-12-05" lastmod = "2018-12-05" title = "Què és la Refactorització" description = "Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna" sections = ["drafts"] blog_tags = ["microserveis","monolits","refactorització"] categories = ["microserveis","monolits","refactorització"] +++
++++ date = "2018-12-04" lastmod = "2018-12-05" title = "Què és la Refactorització" description = "Refactorització és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna" sections = ["drafts"] blog_tags = ["microserveis","monolits","refactorització"] categories = ["microserveis","monolits","refactorització"] +++
 
 
 
