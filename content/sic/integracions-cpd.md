@@ -186,7 +186,7 @@ En concret, necessitarem:
 
 Pel que fa als servidors Tomcat, el SIC realitza desplegaments remots de l'aplicació. Ens caldrà un usuari amb rol de manager-script i la informació relativa al desplegament.
 
-En conret, necessitarem:
+En concret, necessitarem:
 
 * Dades de l'usuari:
 	* Usuari
@@ -207,7 +207,7 @@ En conret, necessitarem:
 
 Pel que fa als servidors JBoss, el SIC realitza desplegaments remots de l'aplicació. Ens caldrà un usuari administrador i la informació relativa al desplegament.
 
-En conret, necessitarem:
+En concret, necessitarem:
 
 * Dades de l'usuari:
 	* Usuari
