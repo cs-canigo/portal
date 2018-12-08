@@ -1,12 +1,13 @@
 +++
-date        = "2018-04-04"
-title       = "Integració de CPDs al SIC"
-description = "Guia d'integració de CPDs al SIC"
-aliases = [
+date        	= "2018-04-04"
+title       	= "Integració de CPDs al SIC"
+description 	= "Guia d'integració de CPDs al SIC"
+aliases 	= [
     "/howtos/2018-03-SIC-Integracions-amb-CPD/"
 ]
-sections    = "SIC"
-taxonomies  = []
+sections    	= "SIC"
+taxonomies  	= []
+hidden 		= "true"
 weight 		= 3
 +++
 
