@@ -19,7 +19,9 @@ weight = 1
 
 ## Aplicació en servei - Remedy
 
-Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al servei de FRAMEWORK SIC a Remedy
+Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al servei de FRAMEWORK SIC a Remedy:
+
+Assegureu-vos que abans d'obrir un tiquet a Remedy no trobeu resposta a les [**FAQ**](/sic/sic-suport/faq/).
 
 - [SIC - Howto - Obrir peticions SIC a Autoservei Remedy ] (/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy)
 
