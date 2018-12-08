@@ -5,7 +5,8 @@ sections    = "SIC"
 toc         = true
 aliases = [
     "/noticies/2018-05-16-SIC-Autoservei-pipelines/",
-    "/sic/integracions-dev/"
+    "/sic/integracions-dev/",
+    "/sic/clau/"
 ]
 taxonomies  = []
 weight      = 2
