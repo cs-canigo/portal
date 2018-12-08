@@ -1,14 +1,13 @@
 +++
-date        = "2017-07-18"
-title       = "Autoservei d'usuaris"
-description = "Autoservei d'usuaris SIC 2.0 al GitLab"
-aliases = [
-    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
-    "/noticies/2017-11-10-SIC-Estructura-permisos-i-Autoservei/"
+date        	= "2017-07-18"
+title       	= "Autoservei d'usuaris"
+description 	= "Autoservei d'usuaris SIC 2.0 al GitLab"
+aliases 	= [
+    "/sic/autoservei-usuaris/"
 ]
-sections    = "SIC"
-taxonomies  = []
-weight 		= 10
+sections    	= "SIC"
+taxonomies  	= []
+weight 		= 4
 +++
 
 Aquest article pretén descriure al detall funcionament de l'**Autoservei d'usuaris SIC 2.0 al [GitLab](https://git.intranet.gencat.cat/)**.
