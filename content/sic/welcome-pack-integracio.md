@@ -5,7 +5,7 @@ description = "Welcome pack amb la informació més rellevant a tenir en compte 
 sections    = "SIC"
 no_index 	= true
 taxonomies  = []
-weight 		= 4
+weight 		= 3
 +++
 
 **TODO**
