@@ -6,5 +6,5 @@ enllac		= "/sic-suport/"
 sections    = "SIC"
 no_index 	= true
 taxonomies  = []
-weight 		= 5
+weight 		= 3
 +++
