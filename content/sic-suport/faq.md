@@ -1,6 +1,6 @@
 
 +++
-date = "2018-12-10"
+date = "2018-12-07"
 title = "FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
