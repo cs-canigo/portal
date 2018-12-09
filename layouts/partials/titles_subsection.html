@@ -3,27 +3,18 @@
 
 <!-- switch subseccions -->
 
-<!-- Canigó - documentació -->
 {{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
 	Documentació
-{{ end }}
-
-<!-- Canigó - documentació -versions -->
-{{ if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
+{{ else if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
 	Versions
-{{ end }}
-
-
-{{ if or (eq $title "canigo-documentacio-versions-anteriors") (eq $section "canigo-documentacio-versions-anteriors") }}
+{{ else if or (eq $title "canigo-documentacio-versions-anteriors") (eq $section "canigo-documentacio-versions-anteriors") }}
 	Versions anteriors
-{{ end }}
-
-<!-- SIC - documentació -->
-{{ if or (eq $title "sic-documentacio") (eq $section "sic-documentacio") }}
-	Documentació
-{{ end }}
-
-<!-- Bloc d'Arquitectura -->
-{{ if or (eq $title "blog") (eq $section "blog") (in .URL "blog_tags") }}
+{{ else if (eq $title "sic-serveis") }}
+	Serveis
+{{ else if (eq $title "sic-suport") }}
+	Suport
+{{ else if (eq $title "blog") }}
 	Blog d'Arquitectura
+{{ else }}
+	{{ .Title }}
 {{ end }}

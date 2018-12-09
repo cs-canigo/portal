@@ -86,7 +86,7 @@
 	<li>
 		<a href="/canigo-documentacio-versions/">Versions</a>
 	</li>
-	
+
 	<li>
 		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
 	</li>
@@ -109,7 +109,7 @@
 	<li>
 		<a href="/canigo-documentacio-versions/">Versions</a>
 	</li>
-	
+
 	<li>
 		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
 	</li>
@@ -132,7 +132,7 @@
 	<li>
 		<a href="/canigo-documentacio-versions/">Versions</a>
 	</li>
-	
+
 	<li>
 		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
 	</li>
@@ -155,7 +155,7 @@
 	<li>
 		<a href="/canigo-documentacio-versions/">Versions</a>
 	</li>
-	
+
 	<li>
 		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
 	</li>
@@ -187,16 +187,15 @@
 
 
 
-<!-- SIC - documentació -->
-{{ if or (eq $title "sic-documentacios") (eq $section "sic-documentacio") }}
+<!-- SIC - Serveis -->
+{{ if or (eq $title "sic-serveis") (eq $section "sic-serveis") }}
 	<a href="/sic/">Servei d'Integració Contínua</a> </li>
-
 	<li>
 	{{ if gt (len $section) 0 }}
-		<a href="/sic-documentacio/">
+		<a href="/sic-serveis/">
 	{{ end }}
 
-	Documentació
+	Serveis
 
 	{{ if gt (len $section) 0 }}
 		</a>
@@ -204,6 +203,22 @@
 
 {{ end }}
 
+
+<!-- SIC - Suport -->
+{{ if or (eq $title "sic-suport") (eq $section "sic-suport") }}
+	<a href="/sic/">Servei d'Integració Contínua</a> </li>
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/sic-suport/">
+	{{ end }}
+
+	Suport
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
 
 <!-- SGDE - Related -->
 {{ if or (eq $title "sgde-related") (eq $section "sgde-related") }}
@@ -312,12 +327,12 @@
 	<a href="/cs/">Centres de Suport</a> </li>
 	<li>
 		{{ if gt (len $section) 0 }}
-			<a href="/centre-de-suport/"> 
+			<a href="/centre-de-suport/">
 		{{ end }}
 
 			Canigó
 		{{ if gt (len $section) 0 }}
-			</a> 
+			</a>
 		{{ end }}
 	</li>
 {{ end }}

@@ -25,39 +25,6 @@
 										{{ end }}
 									{{ end }}
 									</li>
-									{{ if and (ne $title "cercador") (ne .Section "") }}
-									<li>
-
-										{{ if or (eq $title "canigos") (eq $section "canigo")}}
-											Framework Canigó
-										{{ end }}
-
-										{{ if or (eq $title "sics") (eq $section "sic") }}
-											Servei d'Integració Contínua
-										{{ end }}
-
-										{{ if or (eq $title "sgdes") (eq $section "sgde") }}
-											Servei de Gestió del Document Electrònic
-										{{ end }}
-
-										{{ if or (eq $title (.Site.Params.blog_section)) (eq $section .Site.Params.blog_section) }}
-											Blog d'Arquitectura
-										{{ end }}
-
-										{{ if or (eq $title "cs") (eq $section "cs") }}
-											Centres de Suport
-										{{ end }}
-
-										{{ if or (eq $title "gicars") (eq $section "gicar") }}
-											GICAR
-										{{ end }}
-
-										{{ if or (eq $title "clouds") (eq $section "cloud") }}
-											Container Cloud
-										{{ end }}
-
-									</li>
-									{{ end }}
 
 								</ol>
 
@@ -69,39 +36,24 @@
 										{{ partial "titles_subsection.html" . }}
 									{{ else }}
 
-										{{ if or (eq $title "canigos") (eq $section "canigo")}}
+										{{ if (eq $title "canigos") }}
 											Framework Canigó
-										{{ end }}
-
-										{{ if or (eq $title "sics") (eq $section "sic") }}
+										{{ else if (eq $title "sics") }}
 											Servei d'Integració Contínua
-										{{ end }}
-
-										{{ if or (eq $title "sgdes") (eq $section "sgde") }}
+										{{ else if (eq $title "sgdes") }}
 											Servei de Gestió del Document Electrònic
-										{{ end }}
-
-										{{ if or (eq $title (.Site.Params.blog_section)) (eq $section .Site.Params.blog_section) }}
-											Blog d'Arquitectura
-										{{ end }}
-
-										{{ if or (eq $title "cs") (eq $section "cs") }}
+										{{ else if (eq $title "cs") }}
 											Centres de Suport
-										{{ end }}
-
-										{{ if or (eq $title "gicars") (eq $section "gicar") }}
+									  {{ else if (eq $title "centre-de-suport") }}
+											Centre de Suport Canigó
+										{{ else if (eq $title "gicars") }}
 											GICAR
+										{{ else if (eq $title "clouds") }}
+											Container Cloud
+										{{ else }}
+											{{ partial "titles_subsection.html" . }}
 										{{ end }}
 
-										{{ if or (eq $title "clouds") (eq $section "cloud") }}
-											Container Cloud
-										{{ end }}
-                                                                                {{ if (eq .Section "noticies") }}
-                                                                                    {{ .Title }}
-                                                                                {{ end }}
-										{{ if (eq .Section "howtos") }}
-										    {{ .Title }}
-										{{ end }}
 									{{ end }}
 								</h1>
 
