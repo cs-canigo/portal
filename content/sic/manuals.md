@@ -5,7 +5,7 @@ description = "Manuals d'integració i d'usuari"
 sections    = "SIC"
 no_index 	= true
 taxonomies  = []
-weight 		= 5
+weight 		= 3
 +++
 
 ### Manuals
