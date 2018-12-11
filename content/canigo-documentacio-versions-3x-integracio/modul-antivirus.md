@@ -17,7 +17,7 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[1.3.0,1.4.0)</canigo.integration.antivirus.version>
+<canigo.integration.antivirus.version>[1.3.0,1.5.0)</canigo.integration.antivirus.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -38,6 +38,8 @@ Propietat                              | Requerit | Descripció
 *.antivirus.serverIp                   | Sí       | IP del Host on es troba el Servidor d'antivirus Centrals.<br>  antivirus.intranet.gencat.cat per entorns productius <br> preproduccio.antivirus.intranet.gencat.cat per entorns preproductius i d'altres
 *.antivirus.serverPort                 | Sí       | Port del Host on es troba el Servidor d'antivirus Centrals.<br> Valor per defecte: 1344
 *.antivirus.numDayDBExpirationWarning  | Sí       | Número de dies que han de passar per que una definició de virus de la base de dades d'antivirus centrals es consideri caducada. <br>Valor per defecte: 15
+*.antivirus.failRetryTime              | No       | Mil·lisegons d'espera màxima per obrir la connexió al servidor d'antivirus. <br>Valor per defecte: 30000
+*.antivirus.readWriteTime              | No       | Mil·lisegons d'espera màxima per obtenir resposta d'una consulta al servidor d'antivirus. <br>Valor per defecte: 3600000
 
 ## Utilització del Mòdul
 

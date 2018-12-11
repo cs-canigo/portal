@@ -25,7 +25,7 @@ Versions i Dependències
 Per tal d'instal-lar el mòdul d'enviament de correu es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.support.mailing.version>[1.2.0,1.3.0)</canigo.support.mailing.version>
+<canigo.support.mailing.version>[1.2.0,1.4.0)</canigo.support.mailing.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
@@ -57,6 +57,36 @@ Propietat                | Requerit | Valor Defecte | Descripció
 
 
 ## Utilització del Mòdul
+
+### Directe
+
+A la versió 1.3.0 del mòdul s'ha creat la interfície `cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService` seguint l'especificació *Fluent Builder*, proporcionant més flexibilitat i claredat en la definició dels paràmetres.
+Un exemple d'ús directe és el següent:
+
+```java
+import cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class MyExampleClass {
+
+	@Autowired
+	private FluentMailService fluentMailService;
+
+	public void sendTestEmail(boolean isHtml, boolean isInlineAttachment) {
+
+		fluentMailService.send(fluentMailService //
+				.from("from@test.com") //
+				.to("to@test.com") //
+				.subject("títol") //
+				.message("The results are OK.", isHtml) //
+				.attachments(new Attachment(logoByteArray, "companyLogo.gif", isInlineAttachment),
+						new Attachment(pdfInputStream, "results.pdf", false)) //
+		);
+	}
+}
+```
 
 ### REST
 

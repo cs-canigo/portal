@@ -489,9 +489,8 @@ Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
-<div class="message warning">
-El servei de seguretat de Canigó no dona suport a la capçalera "HTTP_GICAR_AUTH_CERT". En cas de requerir l'autenticació amb certificat cal sol·licitar a l'equip de GICAR la recepció d'aquesta capçalera per aplicació/entorn, i fer-ne la gestió pertinent a l'aplicació.
-</div>
+Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera automàtica la capçalera `HTTP_GICAR_PSIS` per autenticació amb certificats per usuaris que no estan en el DC (Autenticació Anònima), utilitzant-se com a font de dades alternativa per a tasques d'autententicació.
+A la pàgina del [Servei d'autenticació anònima amb GICAR](https://canigo.ctti.gencat.cat/gicar-integracio/auth-anonima/) es pot trobar informació detallada d'aquesta capçalera.
 
 A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació.
 
@@ -736,3 +735,4 @@ La contrasenya per defecte és "secret". La pantalla següent mostra els valors 
 Si tot ha funcionat bé, hauríem de veure la pantalla següent:
 
 ![Resultat JXplorer](/related/canigo/documentacio/modul-seguretat/ServeiSeguretat_img014.jpg.gif)
+

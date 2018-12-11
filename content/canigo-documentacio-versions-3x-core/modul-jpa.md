@@ -24,7 +24,7 @@ Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupame
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-<canigo.persistence.jpa.version>[1.2.0,1.3.0)</canigo.persistence.jpa.version>
+<canigo.persistence.jpa.version>[1.2.0,1.4.0)</canigo.persistence.jpa.version>
 <canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
@@ -501,3 +501,50 @@ On:
 - cat.gencat.ctti.canigo.arch.persistence.jpa.* son les entitats del mòdul jpa
 
 Amb aquests canvis s'executaran els test del mòdul al executar els tests de l'aplicació
+
+## Suport pel tipus de dada JSON
+
+Des de la versió 1.3.1 del mòdul de persistència el tipus de dada JSON està suportat per MySQL i per PostgreSQL, fent la transformació entre JSON i l'objecte mapejat de manera automàtica.
+
+Per fer ús només cal seguir els següents passos:
+
+1. Anotar l'entitat (o una superclasse) amb `@org.hibernate.annotations.TypeDef` per definir el/els àlies de mapeig.
+2. Anotar el camp de l'entitat amb `@org.hibernate.annotations.Type(type = "json")` com al següent exemple:
+
+Un exemple senzill seria el següent:
+
+```java
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonNodeBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStringType;
+
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@TypeDefs({ @TypeDef(name = "json", typeClass = JsonStringType.class),
+		@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class),
+		@TypeDef(name = "jsonb-node", typeClass = JsonNodeBinaryType.class), })
+@Entity(name = "MyCustomer")
+@Table(name = "customer")
+public class MyCustomer {
+
+	@Type(type = "json")
+	@Column
+	private ComplexCustomerData complexCustomerData;
+
+	public ComplexCustomerData getComplexCustomerData() {
+		return complexCustomerData;
+	}
+	
+	public void setComplexCustomerData(ComplexCustomerData complexCustomerData) {
+		this.complexCustomerData =complexCustomerData;
+	}
+}
+```
+
+NOTA: La definició SQL d'un camp de tipus JSON no és estandard i s'ha de consultar la documentació de la BBDD.
