@@ -38,3 +38,11 @@ Respecte a les llibreries requerides pels projectes, en funció del seu tipus, c
 * **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant jobs de Jenkins addicionals.
 * **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
 
+## Modalitats de desplegament
+Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actualment, el sistema establert és el següent:
+
+* Entorn **INT**: automàtica (es construeixen els artefactes i es despleguen als servidors web, d’aplicacions i/o de bases de dades).
+* Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats.
+* **Altres entorns**: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés.
+
+
