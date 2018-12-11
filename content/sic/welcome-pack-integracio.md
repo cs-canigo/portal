@@ -27,3 +27,5 @@ L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema
 * Dins del grup del codi de diàleg, es tindran tant projectes com a conjunts de codi font susceptibles de ser versionats de forma independent al de la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul o un programa sense fragments independents.
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivel de la carpeta de codi de projecte i, dins d’aquesta carpeta, cal crear l’arxiu **sic.yml** que albergarà la versió funcional del projecte. Per exemple: “version: 1.1.0”.
 * Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració **aca.yml** que caldrà ubicar dins la mateixa carpeta /sic/.
+* No es permet l'ús de versions Snapshot.
+* Si es contempla l'execució d'scripts de desplegament a BBDD, cal preparar el fitxer de **plans** i scripts a una carpeta independent.
