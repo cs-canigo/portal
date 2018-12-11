@@ -45,4 +45,12 @@ Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actu
 * Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats.
 * **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés.
 
-Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC. Si voleu més informació o disposar d’informació a un nivell major de detall podeu consultar la secció de [Manuals](manuals).
+Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC. Si voleu més informació o disposar d’informació a un nivell major de detall podeu consultar la secció de [Manuals](/sic/manuals).
+
+## Funcionament dels jobs de Jenkins
+En realitzar una pujada de codi sobre la branca MASTER, si el projecte té un job de Jenkins associat, automàticament es llençarà la canonada de desplegament. 
+
+* Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG definitiu**.
+* Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament. Per poder efectuar aquesta tasca caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
+* Els jobs **notificaran** dels resultats a les adreces de correu assignades.
+* En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
