@@ -43,6 +43,6 @@ Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actu
 
 * Entorn **INT**: automàtica (es construeixen els artefactes i es despleguen als servidors web, d’aplicacions i/o de bases de dades).
 * Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats.
-* **Altres entorns**: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés.
+* **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés.
 
 
