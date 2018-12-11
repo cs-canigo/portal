@@ -16,8 +16,6 @@ weight      = 1
 
 **TODO**
 
-GitLab...
-
 ## Migració repositoris SVN a Git
 
 ### Prerrequisits
