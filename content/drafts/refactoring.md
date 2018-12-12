@@ -12,7 +12,7 @@ key         = "DESEMBRE2018"
 # Què és la refacció?
 
 
-Refacció és el procés de canviar un sistema de programari d'una manera que no alteri el comportament extern del codi, però millora la seva estructura interna. És una forma disciplinada de netejar el codi que minimitza les possibilitats d'introduir errors. En essència, quan es refacciona, s'està millorant el disseny del codi després d'haver estat escrit.
+Segons el Termcat, la refacció és defineix com: "Acció de reestructurar el codi font d'una aplicació informàtica amb l'objectiu de millorar el disseny intern de l'aplicació sense que en resultin modificats el comportament extern ni la funcionalitat." És una disciplina que introdueix pràctiques d'enginyeria per netejar el codi sense alterar-ne el comportament visible pels usuaris i altres sistemes que interaccionen. Aquesta disciplina es dona normalment amb sistemes d'informació obsolets o al llindar de l'obsolescència.
 
 "Millora del disseny després d'haver estat escrit". Això és un estrany gir de frase. Durant gran part de la història del desenvolupament de programari, la majoria de la gent creia que es dissenyava primer, i només quan el disseny està aprovat, s'ha de codificar. Amb el temps, el codi es modificarà i la integritat del sistema -la seva estructura segons aquest disseny- es va degradant gradualment. El codi s'enfonsa lentament de l'enginyeria al hacking.
 
@@ -116,4 +116,3 @@ En la part de la interfície d'usuari serà necessari crear una nova aplicació 
 6.	Refacció per mòdul.
 
 La refacció per mòdul funcional serà un procés iteratiu que s'aplicarà a totes les capes de forma simultània. L'ordre en la refacció de codi no vindrà determinat per la divisió de capes de l'arquitectura, sinó per increments de funcionalitat en el sistema que puguin validar-se durant el desenvolupament del projecte. L'ordre en el qual es desenvoluparan vindrà determinat per les necessitats detectades en els dos primers passos, donant prioritat a aquelles funcionalitats que formin la base per increments de funcionalitat posteriors.
-
