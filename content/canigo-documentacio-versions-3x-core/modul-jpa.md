@@ -24,7 +24,7 @@ Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupame
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-<canigo.persistence.jpa.version>[1.2.0,1.4.0)</canigo.persistence.jpa.version>
+<canigo.persistence.jpa.version>[1.3.0,1.4.0)</canigo.persistence.jpa.version>
 <canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
 
 <dependency>
