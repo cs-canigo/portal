@@ -25,7 +25,7 @@ Versions i Dependències
 Per tal d'instal-lar el mòdul d'enviament de correu es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.support.mailing.version>[1.2.0,1.4.0)</canigo.support.mailing.version>
+<canigo.support.mailing.version>[1.3.0,1.4.0)</canigo.support.mailing.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
