@@ -14,34 +14,28 @@ key         = "DESEMBRE2018"
 
 Segons el Termcat, la refacció és defineix com: "Acció de reestructurar el codi font d'una aplicació informàtica amb l'objectiu de millorar el disseny intern de l'aplicació sense que en resultin modificats el comportament extern ni la funcionalitat." És una disciplina que introdueix pràctiques d'enginyeria per netejar el codi sense alterar-ne el comportament visible pels usuaris i altres sistemes que interaccionen. Aquesta disciplina es dona normalment amb sistemes d'informació obsolets o al llindar de l'obsolescència.
 
-"Millora del disseny després d'haver estat escrit". Això és un estrany gir de frase. Durant gran part de la història del desenvolupament de programari, la majoria de la gent creia que es dissenyava primer, i només quan el disseny està aprovat, s'ha de codificar. Amb el temps, el codi es modificarà i la integritat del sistema -la seva estructura segons aquest disseny- es va degradant gradualment. El codi s'enfonsa lentament de l'enginyeria al hacking.
+Hom considera que una bona pràctica d'enginyeria del programari, primer es dissenya - en els seus diferents tipus i  circuits d'aprovació - i després es programa. Amb el temps, el codi es modificarà però totes les activitats de disseny són obviades per les presses o per la manca de pressupost i la coherència del sistema -la seva estructura segons aquest disseny- es va degradant gradualment. De les pràctiques d'enginyeria es passa a una activitat cada cop més artesanal, feixuga i dificil de gestionar.
 
-La refacció és el contrari d'aquesta pràctica. Amb la refacció, podem agafar un disseny dolent, fins i tot caòtic, i tornar-lo a treballar com un codi ben estructurat. Cada pas és senzill, fins i tot simplista. Mou un camp d'una classe a una altra, treu un codi d'un mètode per convertir-lo en el seu propi mètode, o empènyer un codi amunt o avall per una jerarquia. Tot i així, l'efecte acumulatiu d'aquests petits canvis pot millorar radicalment el disseny. És la inversa exacta de la noció de decadència del programari.
+La refacció és el contrari d'aquesta pràctica. Amb la refacció, s'agafa un disseny desballestat durant el temps, i es ressuscita en un codi ben estructurat. Són petits canvis que, acumulats, milloren la capacitat del sistema de substituir-se a si mateix, mantenint les seves funcionalitat al temps que permet evolucionar i incorporant els canvis i millores que proposa el CTTI: transformar les aplicacions per adaptar-les a les versions especificades pel full de ruta del programari (Link), automatitzar la seva construcció/desplegament en entorns CTTI (link SIC) i seguir els principis d'arquitectura (link). Aleshores es pot obtenir un sistema amb una estructura molt més modular i propera a les arquitectures basades en microserveis.
 
-Amb la refacció, la distribució de treball canvia. El disseny, en comptes de fer-ho tot per davant, es produeix de manera contínua durant el desenvolupament. A mesura que es construeix el sistema, s'aprèn a millorar el disseny. El resultat d'aquesta interacció és un programa on el disseny es manté bé mentre el desenvolupament continua.
-
-Tot i que la necessitat fonamental de la transformació de les aplicacions és adaptar-les al nou software base especificat pel full de ruta del programari (Link), automatitzar la seva construcció/desplegament en entorns CTTI (link SIC), i seguir els principis d'arquitectura (link).
-
-Paral·lelament a la modernització tecnològica, un dels objectius principals és l'obtenció d'un sistema amb una estructura molt més modular i propera a les arquitectures basades en microserveis.
-
-La definició del pla de refacció permetrà guiar aquest procés de transformació de la tecnologia i estructura del nou sistema.
+Com qualsevol disciplina d'enginyeria, ha d'haver-hi un pla al darrera que ajudi a guiar aquest procés de transformació de la tecnologia i estructura del vell sistema i millorar el seu disseny intern.
 
 
 ## Estructura d'un sistema típic.
 
 
-Habitualment ens trobem amb la necessitat d'adaptar una aplicació als nous requeriments del full de ruta per evitar la seva obsolescència, i unes funcionalitats que han d'evolucionar seguint els principis d'arquitectura. Tanmateix es disposa d'una base de dades monolítica i es planteja una convivència temporal de tots dos sistemes. Com a conseqüència s'estableix com a objectiu una estructura de codi que asseguri almenys les següents característiques:
+Habitualment ens trobem amb la necessitat d'adaptar una aplicació als requeriments del full de ruta per evitar la seva obsolescència, i unes funcionalitats que han d'evolucionar seguint els principis d'arquitectura. Tanmateix es disposa d'una base de dades monolítica i es planteja una convivència temporal de tots dos enfocs. Com a conseqüència s'estableix com a objectiu una estructura de codi que asseguri almenys les següents característiques:
 
 -	Una visió clara dels diferents mòduls funcionals que componen el sistema.
 -	Una estructura homogènia pel que fa a nomenclatura de les diferents capes i artefactes.
 -	Capacitat per separar la configuració dels diferents mòduls, facilitant una possible independització a futur.
 -	Assegurament dels camins permesos per establir dependències entre mòduls.
--   Ús del framework Canigó
+-   Ús del framework Canigó.
 
 Tots els artefactes del projecte seguiran la nomenclatura de directoris estàndard definida per maven a nivell de codi font, arxius de configuració, proves unitàries i configuració de proves.
 
 
-## Configuració Comuna i Empaquetat.
+## Configuració comuna i empaquetat.
 
 
 El directori app correspon a l'artefacte de desplegament (war), i contindrà la configuració comuna a tots el mòduls. Permetrà tant l'arrencada com a aplicació Spring Boot com el desplegament en contenidor web o servidor d'aplicacions.
@@ -92,12 +86,11 @@ Haurà d'analitzar-se quins elements provoquen aquests cicles, i determinar si p
 
 Si bé els dos passos inicials del procés han de ser suficients per generar una divisió el més propera al resultat final, durant el desenvolupament de projecte podran detectar-se noves necessitats a nivell de components comuns per evitar la introducció de nous cicles de dependència.
 
-A nivell tècnic, es pot aplicar una eina de visualització de dependències com JDeps per tenir una primera aproximació de les dependències entre els diferents paquets de codi font.
-A partir d'aquí, el criteri de divisió en mòduls que es vol aplicar és purament funcional. Aquesta divisió segons funcionalitat ha de definir quines responsabilitats té cada mòdul, quines entitats està gestionant, quins serveis ha d'oferir i quins mòduls poden dependre d'aquests serveis. Aquest criteri és el que es farà servir després per moure classes o reimplementar canviant a la nova tenologia, des del sistema actual al nou.
+A nivell tècnic, es pot aplicar una eina de visualització de dependències com JDeps per tenir una primera aproximació de les dependències entre els diferents paquets de codi font. A partir d'aquí, el criteri de divisió en mòduls que es vol aplicar és purament funcional. Aquesta divisió segons funcionalitat ha de definir quines responsabilitats té cada mòdul, quines entitats està gestionant, quins serveis ha d'oferir i quins mòduls poden dependre d'aquests serveis. Aquest criteri és el que es farà servir després per moure classes o reimplementar canviant a la nova tenologia, des del sistema actual al nou.
 
 3.	Estructura inicial de mòduls funcionals.
 
-A nivell de codi es crearà l'estructura inicial del projecte amb el conjunt mòduls funcionals i components comuns detectats en els passos anteriors. L'anàlisi realitzada permetrà establir un ordre en el procés de refacció. Aquells mòduls o components amb dependències d'entrada s'hauran d'abordar en primer lloc.
+A nivell de codi es crearà l'estructura inicial del projecte amb el conjunt de mòduls funcionals i components comuns detectats en els passos anteriors. L'anàlisi realitzada permetrà establir un ordre en el procés de refacció. Aquells mòduls o components amb dependències d'entrada s'hauran d'abordar en primer lloc.
 
 4.	Estructura inicial de frontal.
 
@@ -107,11 +100,9 @@ Es crearà l'estructura inicial de l'aplicació front-end al directori de l'arte
 
 La primera fase correspondria a un pilot desenvolupat amb un framework de front-end a nivell de frontal. En aquesta fase no es farà la divisió complerta en mòduls funcionals. 
 A la part Java s'ha seguit l'especificació base per al desenvolupament d'aplicacions rest amb el framework Canigó 3.
-En aquest pas del pla de refacció s'adaptarà el desenvolupament del pilot de la fase 1 en els següents nivells:
+En aquest pas del pla de refacció s'adaptarà el desenvolupament en els següents nivells:
 o	Interfície d'usuari: Integració del desenvolupament del pilot dins de l'aplicació front-end. Inicialment es mantindrà el codi integrat a la nova aplicació.
 o	Backend Java: Divisió de codi i configuració en els diferents artefactes que composen un mòdul funcional, així com separació de components comuns empresos en la primera fase en artefactes independents.
-Respecte a l’impacte, a nivell java en la fase 1 ja hi ha una separació a nivell de nomenclatura de paquets, una primera divisió en mòduls per a la funcionalitat del pilot, i el desenvolupament ja s'ha fet amb les noves tecnologies de Canigó 3. Per tant, l'esforç que es requereix és menor, ja que en aquest aspecte només és necessari moure els paquets a la nova estructura.
-En la part de la interfície d'usuari serà necessari crear una nova aplicació front-end que integri el desenvolupament realitzat en el pilot de fronatl esmentat anteriorment. Tècnicament, els frameworks de frontal ofereixen la solució per fer-ho (convivència de versions). Per tant, l'impacte no ha de ser gran, però pot donar més problemes que el canvi en la part Java.
 
 6.	Refacció per mòdul.
 
