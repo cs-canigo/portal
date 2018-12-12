@@ -3,6 +3,7 @@ date        = "2017-06-08"
 title       = "Què és el Servei d'Integració Continua (SIC 2.0)"
 description = "Conceptes, motivació i funcionalitat del servei"
 sections    = "SIC"
+toc         = true
 taxonomies  = []
 weight 		= 1
 +++
@@ -29,7 +30,6 @@ A més, el concepte d'integració continua permet disposar permanentment d'una v
 
 El Servei d'Integració Continua (SIC) neix amb l'objectiu de donar aquest suport al cicle de vida de manera centralitzada i amb un cost reduït, ja que està basat en tecnologies de programari lliure.
 
-<br/>
 ## Serveis
 
 ### Lliurament del codi
@@ -37,8 +37,6 @@ Quan l'equip de desenvolupament té una nova versió del codi font llesta per ll
 La persona de l'equip que efectua aquesta acció és la que té el rol de Release Manager o Gestor de Lliuraments. 
 
 Tot i que qualsevol usuari de l'equip de desenvolupament podría accedir al SCM de SIC, es recomana que l'accés sigui efectuat només per les figures dels Release Manager. Se suposa que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal·lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
-
-
 
 ### Construcció de l'aplicació
 
@@ -49,7 +47,7 @@ La construcció del codi pot generar errors, i el procés de lliurar codi / cons
 
 ### Versionat del codi
 
-La versió de les aplicacions ha de ser sempre incremental, és a dir, qualsevol nova actualització de codi al SCM del SIC ha d'anar acompanyat amb un increment de la versió.
+La versió de les aplicacions ha de ser sempre incremental, és a dir, qualsevol nova actualització de codi al SCM del SIC ha d'anar acompanyat d'un increment de la versió.
 
 No es permetrà que una aplicació desplegui una versió d'una aplicació igual o inferior a una versió prèviament desplegada. Si no es fes així, es podria induir a confusió en els futurs desplegaments de pre-producció i producció. Per exemple, no se sabria quina versió d'integració està desplegada en l'entorn de pre-producció.
 
@@ -59,8 +57,8 @@ Dins del procés de construcció dels executables (i sempre que l'aplicació ho 
 
 Com a resultat de l'execució de les proves unitàries s'obtenen 2 tipus d'informes:
 
-* Nombre total de proves i percentatge de proves passades i fallades
-* Percentatge de cobertura de les proves respecte del codi font
+* Nombre total de proves i percentatge de proves passades i fallades.
+* Percentatge de cobertura de les proves respecte al codi font.
 
 ### Anàlisi del codi
 
@@ -74,12 +72,10 @@ A la pantalla principal del portal es pot veure, per cada projecte, unes icones 
 
 El SIC té capacitat per a poder realitzar el desplegament automàtic d'un gran nombre d'aplicacions de diferents tecnologies a diferents entorns. 
 
-Aquests es realticen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al SCM. 
+Aquests es realtizen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al SCM. 
 La tasca inclourà accions de construcció d'artefacte, execució de test i desplegaments a entorns no-productius i productius. En aquells entorns on no es pugui desplegar automàticament, el flux d'execució de la tasca s'aturarà esperant una resposta manual d'acceptació.
-
 
 ### Accés per a CPD al SCM
 
 No totes les aplicacions poden construir els seus artefactes a desplegar mitjançant el SIC, ja sigui per estar desenvolupades amb una tecnologia no suportada per SIC o per particularitats del procés de construcció (veure el [Manual Integració](/related/sic/manual-integracio.pdf)). 
 En aquests casos, es permet que les aplicacions puguin lliurar els artefactes (.war, .ear, .jar, .zip, etc.) a CPD mitjançant el sistema de gestió de binaris de SIC. Aquest estarà disponible a partir de Juliol 2017, conjuntament amb les instruccions de la seva operativa.
-
