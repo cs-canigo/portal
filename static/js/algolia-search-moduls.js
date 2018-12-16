@@ -5,9 +5,9 @@ var search, results = {}, facet_data={};
 
 /* global instantsearch */
 app({
-  appId: 'FFROL6ZNSV',
-  apiKey: '92f8f4b77b2216972ebaec9954cd666f',
-  indexName: 'moduls-canigo'
+  appId: 'SQZ0PDH35B',
+  apiKey: '142be7e9b4f045f95ff9b0761c5cddc0',
+  indexName: 'prod_MODULS-CANIGO'
 });
 
 function app(opts) {
@@ -18,14 +18,14 @@ function app(opts) {
     urlSync: true,
     searchFunction : function(helper) {
       results = helper.search();
-    }    
+    }
   });
 
   search.on('render', function(content){
     fillFacetData();
     drawCharts();
   });
- 
+
   search.addWidget(
     instantsearch.widgets.searchBox({
       container: '#query',
@@ -45,7 +45,7 @@ function app(opts) {
         if(item.modules_version){
           item.modules_version = item.modules_version.join(", ");
         }
-        return item; 
+        return item;
       }
     })
   );
@@ -64,7 +64,7 @@ function app(opts) {
       container: '#pagination',
       autoHideContainer: true,
       scrollTo: '#query',
-      showFirstLast : false,  
+      showFirstLast : false,
       maxpages : 10,
       labels: {
         previous : "anterior",
@@ -99,7 +99,7 @@ function app(opts) {
           }
           return obj;
         }
-      }*/    
+      }*/
     })
   )
 
@@ -196,7 +196,7 @@ function fillFacetData(){
           deletes[key].push(clau);
         }
       }
-    }  
+    }
   }
 
   for(var k in deletes){

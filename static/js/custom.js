@@ -1,4 +1,4 @@
-var 
+var
 	fil_cercador = [["noticies","Notícies"],["bloc","Bloc d'Arquitectura"]],
 	url = "canigo.ctti.gencat.cat"
 ;
@@ -34,7 +34,7 @@ $(function(){
 			if($("#cercadorIndex #sitesearch").size()===0){
 				$("<input type='hidden' name='sitesearch' value='"+url+"/"+fil_cercador[i][0]+"' />").appendTo("#cercadorIndex");
 			}
-		}		
+		}
 	}
 
 	//Fil ariadna QUI SOM
@@ -44,8 +44,8 @@ $(function(){
 
 });
 
-var client = algoliasearch('FFROL6ZNSV', '92f8f4b77b2216972ebaec9954cd666f')
-var index = client.initIndex('arquitectura');
+var client = algoliasearch('SQZ0PDH35B', '142be7e9b4f045f95ff9b0761c5cddc0')
+var index = client.initIndex('prod_ARQUITECTURA');
 autocomplete('#cerca2', {hint: false}, [
 {
   source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
