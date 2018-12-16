@@ -1,8 +1,8 @@
 var fs = require("fs")
 var algoliasearch = require('algoliasearch');
 
-var client = algoliasearch('FFROL6ZNSV', process.env.ALGOLIA_API_KEY);
-var algolia = client.initIndex('moduls-canigo');
+var client = algoliasearch('SQZ0PDH35B', process.env.ALGOLIA_API_KEY);
+var algolia = client.initIndex('prod_MODULS-CANIGO');
 
 data = readFile("./data/canigoAppsInfo.json");
 var _index = processData(JSON.parse(data));
@@ -21,13 +21,13 @@ function processData(data){
       if(!data.ambits[i].codisDialeg){continue;}
 
       for(var x=0,y=data.ambits[i].codisDialeg.length;x<y;x++){
-      
+
         if(!data.ambits[i].codisDialeg[x].appsInfo){continue;}
-      
+
         for(var w=0,q=data.ambits[i].codisDialeg[x].appsInfo.length;w<q;w++){
 
           _versions = processVersion(data.ambits[i].codisDialeg[x].appsInfo[w].versioCanigo);
-          
+
           _major = _versions;
           if(_versions instanceof Array){
             _major = _versions[0];
@@ -61,7 +61,7 @@ function processData(data){
             'modules' : [],
             'modules_version' : []
           };
-          
+
           if(!data.ambits[i].codisDialeg[x].appsInfo[w].modulsInfo){
 			  packageNames.push(aplicacio);
 			  continue;
@@ -123,7 +123,7 @@ function saveAlgolia(idx){
         console.log("nothing to publish!");
       }else{
         console.log(err);
-      } 
-    }); 
-  }); 
+      }
+    });
+  });
 }
