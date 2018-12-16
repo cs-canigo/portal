@@ -8,8 +8,8 @@ var fs = require("fs");
 var request = require('request');
 
 var algoliasearch = require('algoliasearch');
-var client = algoliasearch('FFROL6ZNSV', process.env.ALGOLIA_API_KEY);
-var algolia = client.initIndex('arquitectura');
+var client = algoliasearch('SQZ0PDH35B', process.env.ALGOLIA_API_KEY);
+var algolia = client.initIndex('prod_ARQUITECTURA');
 
 algolia.setSettings({
 	'removeStopWords':[true,'ca']
@@ -47,7 +47,6 @@ request('https://raw.githubusercontent.com/cs-canigo/portal/gh-pages/index.json'
 });
 
 function runIndex(){
-
 	indexer.run().then(
 
 		function(_newIdx){
@@ -124,7 +123,7 @@ function compareIndexs(_oldIdx, _newIdx){
 	for(var k in _oldIdx){
 		if(!_oldIdx[k].processed){
 			toDelete.push(_oldIdx[k].path);
-		}		
+		}
 	}
 
 	return {index:toIndex, del:toDelete};
@@ -142,7 +141,7 @@ function readFile(file, data){
 /* Saves index locally */
 function saveIndexLocal(file, data){
 	console.log("saving new index locally");
-	var compareIdx = {}; 
+	var compareIdx = {};
 	for(var i=0,z=data.length;i<z;i++){
 		delete data[i].indexTime
 		compareIdx[data[i].objectID] = data[i];
@@ -159,8 +158,8 @@ function saveAlgolia(idx){
 			console.log("nothing to publish!");
 		}else{
 			console.log(err);
-		}	
-	});	
+		}
+	});
 }
 
 /* Delete files from algolia */
@@ -170,6 +169,6 @@ function deleteAlgolia(idx){
 			if (!err) {
 				console.log(_file + ' deleted');
 			}
-		});			
-	});			
+		});
+	});
 }
