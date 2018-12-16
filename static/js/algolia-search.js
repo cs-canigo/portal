@@ -16,7 +16,7 @@ function replaceHighLight(content){
       if(highmatches)
       content = content.replace(matches[i], matches[i].replace(highmatches[0],highmatches[1]));
     }
-  }while(matches!=null) 
+  }while(matches!=null)
 
   return content;
 }
@@ -24,9 +24,9 @@ function replaceHighLight(content){
 
 /* global instantsearch */
 app({
-  appId: 'FFROL6ZNSV',
-  apiKey: '92f8f4b77b2216972ebaec9954cd666f',
-  indexName: 'arquitectura'
+  appId: 'SQZ0PDH35B',
+  apiKey: '142be7e9b4f045f95ff9b0761c5cddc0',
+  indexName: 'prod_ARQUITECTURA'
 });
 
 function app(opts) {
@@ -66,8 +66,8 @@ function app(opts) {
         if(item._snippetResult && item._snippetResult.content){
           item._snippetResult.content.value = converter.makeHtml(replaceHighLight(item._snippetResult.content.value));
         }
-        return item; 
-      }      
+        return item;
+      }
     })
   );
 
@@ -85,7 +85,7 @@ function app(opts) {
       container: '#pagination',
       autoHideContainer: true,
       scrollTo: '#query',
-      showFirstLast : false,  
+      showFirstLast : false,
       maxpages : 10,
       labels: {
         previous : "anterior",
