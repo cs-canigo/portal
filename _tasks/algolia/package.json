@@ -4,8 +4,8 @@
   "description": "",
   "main": "index-algolia.js",
   "dependencies": {
-    "algoliasearch": "^3.26.0",
+    "algoliasearch": "^3.31.0",
     "markdown2json": "^0.2.1",
-    "request": "^2.85.0"
+    "request": "^2.88.0"
   }
 }
