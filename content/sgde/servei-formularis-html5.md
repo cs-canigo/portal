@@ -198,7 +198,9 @@ on &lt;url-precarrega-dades&gt; és la URL de l'endpoint del qual s'obtindran le
 
 ### Enviament de dades
 
-Codi javascript a configurar en el botó de "Custom submit" per l'enviament de les dades per AJAX:
+La llibreria guideBridge ens dona una API de comunicació amb el formulari, que podem utilitzar per obtenir les dades introduïdes per el formulari.
+
+El següent codi javascript ens dóna un exemple per a l’enviament de les dades per AJAX:
 
 	function sendData (){
 		guideBridge.getData({
@@ -219,4 +221,52 @@ Codi javascript a configurar en el botó de "Custom submit" per l'enviament de l
  
 on &lt;endpoint-submit&gt; és l'endpoint de l'aplicació on es vol fer l'enviament de les dades. Idealment aquest endpoint hauria de ser relatiu a la URL de publicació del formulari, ja que d’aquesta manera no caldrà fer cap diferenciació per entorn.
 
-Aquesta configuració s'ha de realitzar a l'edició del formulari adaptatiu al node AEM Author de desenvolupament.
+Aquesta llibreria es pot utilitzar tant des del propi formulari com des de la pàgina de l’aplicació en la que s’ha incrustat el formulari. 
+
+Les funcionalitats es poden consultar a: https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html
+
+## Desenvolupament Avançat
+
+Pot ser que sigui necessari ampliar la funcionalitat per defecte d'un formulari de l'AEM, incloure nous components o convertir les regles dels formularis en funcions reutilitzables. Podem crea una llibreria javascript amb funcionalitat propia que podem incloure en el nostre formulari.
+
+### Creació nova llibreria
+Podem crear una llibreria dins l'AEM seguint els següents pasos: http://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/
+
+La llibreria haurà de situar-se en un path concret dintre de l'AEM:
+
+**/apps/&lt;aplicacio&gt;/&lt;nom_llibreria&gt;**
+
+Cal utilitzar la propietat allowProxy per tal de poder ser referenciada desde el formulari, tal i com s'explica a: https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/clientlibs.html#CreatingClientLibraryFolders
+
+Es poden crear nous components basats en components existents del Formularis de l'AEM. Podeu seguir el següent enllaç per a trobar la documentació oficial: https://helpx.adobe.com/experience-manager/6-3/forms/using/introduction-widgets.html
+
+#### Nota sobre la nomenclatura
+
+Les funcions que afegim en la nostra llibreria conviuran tant amb el javascript de l'aplicació que incrusta el formulari com amb altres llibreries del propi AEM. Per tant les funcions i objectes que creem haurien d'incloure un **Namespace** en la nomenclatura per a evitar col.lisions.
+
+### Deploy
+
+Tot aquesta funcionalitat cal empaquetar-se en un paquet **&lt;aplicacio&gt;_&lt;nom_llibreria&gt;__&lt;versio&gt;.zip** instalable en l'AEM. Aquest paquet també pot incloure els formularis de l'aplicació.
+La documentació oficial sobre la creació de paquets la podem trobar a: 
+https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html
+
+Es recomanable crear-se un entorn de treball en local utilitzant maven i l'arquetip que l'AEM ens proporciona:
+https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/vlt-mavenplugin.html#simplecontentpackagearchetype
+
+Desde el fitxer META-INF/vault/filter.xml del paquet que hem creat es pot controlar els directoris de l'AEM que s'inclouran en el deploy.
+
+### Normes d'empaquetament
+
+Els paquets enviats a desplegar a els servidors AEM han de complir les següents restriccions:
+
+1. Els paths a importar sempre han d'incloure el nom de l'aplicació:
+2. Imatges i recursos que utilitza la llibreria s'han d'incloure en una carpeta anomenada **resources** de la propia llibreria
+3. El codi javascript no pot anar minimitzat
+
+Els paths que s'han d'incloure en el **filter.xml** del vault han de ser:
+
+|Nom|Descripció|
+|---|----------|
+|/apps/&lt;aplicacio&gt;/&lt;nom_llibreria&gt;| Llibreries clients|
+|/content/forms/af/&lt;aplicacio&gt;/| Descpripció dels formularis |
+|/content/dam/formsanddocuments/&lt;aplicacio&gt;/| El formularis i els seus components |
