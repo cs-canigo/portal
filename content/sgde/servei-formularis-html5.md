@@ -227,10 +227,10 @@ Les funcionalitats es poden consultar a: https://helpx.adobe.com/experience-mana
 
 ## Desenvolupament Avançat
 
-Pot ser que sigui necessari ampliar la funcionalitat per defecte d'un formulari de l'AEM, incloure nous components o convertir les regles dels formularis en funcions reutilitzables. Podem crea una llibreria javascript amb funcionalitat propia que podem incloure en el nostre formulari.
+Pot ser que sigui necessari ampliar la funcionalitat per defecte d'un formulari de l'AEM, incloure nous components o convertir les regles dels formularis en funcions reutilitzables. Podem crea una llibreria javascript amb funcionalitat pròpia que podem incloure en el nostre formulari.
 
 ### Creació nova llibreria
-Podem crear una llibreria dins l'AEM seguint els següents pasos: http://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/
+Podem crear una llibreria dins l'AEM seguint els següents passos: http://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/
 
 La llibreria haurà de situar-se en un path concret dintre de l'AEM:
 
@@ -242,25 +242,25 @@ Es poden crear nous components basats en components existents del Formularis de 
 
 #### Nota sobre la nomenclatura
 
-Les funcions que afegim en la nostra llibreria conviuran tant amb el javascript de l'aplicació que incrusta el formulari com amb altres llibreries del propi AEM. Per tant les funcions i objectes que creem haurien d'incloure un **Namespace** en la nomenclatura per a evitar col.lisions.
+Les funcions que afegim en la nostra llibreria conviuran tant amb el javascript de l'aplicació que incrusta el formulari com amb altres llibreries del propi AEM. Per tant les funcions i objectes que creem haurien d'incloure un **Namespace** en la nomenclatura per a evitar col·lisions.
 
 ### Deploy
 
-Tot aquesta funcionalitat cal empaquetar-se en un paquet **&lt;aplicacio&gt;_&lt;nom_llibreria&gt;__&lt;versio&gt;.zip** instalable en l'AEM. Aquest paquet també pot incloure els formularis de l'aplicació.
+Tot aquesta funcionalitat cal empaquetar-se en un paquet **&lt;aplicacio&gt;_&lt;nom_llibreria&gt;__&lt;versio&gt;.zip** instal·lable en l'AEM. Aquest paquet també pot incloure els formularis de l'aplicació.
 La documentació oficial sobre la creació de paquets la podem trobar a: 
 https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html
 
-Es recomanable crear-se un entorn de treball en local utilitzant maven i l'arquetip que l'AEM ens proporciona:
+És recomanable crear-se un entorn de treball en local utilitzant maven i l'arquetip que l'AEM ens proporciona:
 https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/vlt-mavenplugin.html#simplecontentpackagearchetype
 
-Desde el fitxer META-INF/vault/filter.xml del paquet que hem creat es pot controlar els directoris de l'AEM que s'inclouran en el deploy.
+Des de el fitxer META-INF/vault/filter.xml del paquet que hem creat es pot controlar els directoris de l'AEM que s'inclouran en el deploy.
 
 ### Normes d'empaquetament
 
 Els paquets enviats a desplegar a els servidors AEM han de complir les següents restriccions:
 
-1. Els paths a importar sempre han d'incloure el nom de l'aplicació:
-2. Imatges i recursos que utilitza la llibreria s'han d'incloure en una carpeta anomenada **resources** de la propia llibreria
+1. Els paths a importar sempre han d'incloure el nom de l'aplicació.
+2. Imatges i recursos que utilitza la llibreria s'han d'incloure en una carpeta anomenada **resources** de la pròpia llibreria
 3. El codi javascript no pot anar minimitzat
 
 Els paths que s'han d'incloure en el **filter.xml** del vault han de ser:
