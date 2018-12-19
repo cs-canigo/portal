@@ -16,6 +16,6 @@ weight 		= 3
 * Què he de fer per desplegar noves versions de la meva aplicació ja integrada en el SIC?
   [**Manual d'Usuari**](/related/sic/2.0/manual-usuari.pdf)
 
-* Sóc una oficina. Què he de fer per integrar-me amb el SIC?
+* Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
   [**Suport a la integració d'oficines**](/documentacio/oficines/)
 
