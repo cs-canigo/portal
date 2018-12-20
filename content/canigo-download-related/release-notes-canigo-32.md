@@ -17,6 +17,11 @@ weight      = 1
 - [Revisió condicionals @ConditionalOnExpression al mòdul web.rs i security] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2343)
 - [Revisió nom dels fitxers que carrega els contextes de Spring als tests de canigo.security] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2344)
 
+[**Canigó 3.2.6**] (https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/fixforversion/10601) (28/09/2018)
+
+- [Suport a base de dades MongoDB] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2220)
+- [Suport a base de dades PostgreSQL] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2251)
+
 [**Canigó 3.2.5**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10498) (18/06/2018)
 
 - [Actualitzar Spring i altres llibreries] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2312)
