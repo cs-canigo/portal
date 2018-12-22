@@ -5,7 +5,7 @@ description = "Roadmap previst per a la evolució del Framework Canigó"
 sections    = "Canigó"
 taxonomies  = []
 toc 		= true
-weight 		= 5
+weight 		= 3
 +++
 
 Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
