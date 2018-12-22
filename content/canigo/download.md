@@ -2,8 +2,8 @@
 date        = "2015-01-24T17:11:42+01:00"
 title       = "Binaris de Canigó"
 description = "Descàrrega de les diferents versions de Canigó, entorn de treball, plugin d'eclipse..."
-sections    = "Canigó"
-weight		= 3
+sections    = "Canigó
+weight	    = 4
 +++
 
 ## Maven
