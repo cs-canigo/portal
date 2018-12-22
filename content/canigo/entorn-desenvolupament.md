@@ -4,7 +4,7 @@ lastmod     = "2017-11-20"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
-weight 		= 5
+weight 	    = 5
 +++
 
 ### Objectius
@@ -32,7 +32,6 @@ La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d
 
 * En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés ja haurà finalitzat. Podem tancar la màquina i engegar-la i aturar-la a través de VirtualBox.
 
-
 ### Setup inicial
 
 * Usuari i password: canigo/canigo
@@ -41,6 +40,19 @@ La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d
 		sudo dpkg-reconfigure keyboard-configuration
 
 * _Important_: es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense previa consulta a l'equip del CS Canigó. En aquesta linia s'hauria de configurar l'Eclipse per deshabilitar les notificacions d'actualitzacions disponibles a Preferences -> Install/Update -> Automatic Updates -> Automatically find new updates and notify me
+
+### Oracle VirtualBox
+
+Si es vol poder copiar text entre la màquina host i la guest cal activar la opció Dispositiu -> Portapapers compartit -> Bidireccional
+
+Si es volen afegir carpetes compartides entre la màquina host i la guest s'han de seguir les següents passes:
+
+* Afegir el grup vboxsf a l'usuari canigo (cal ser root o fer sudo):
+
+		$ sudo usermod -a -G vboxsf canigo
+
+* Reiniciar la màquina o tornar logar-se.
+* Afegir les carpetes desitjades a través de Dispositius -> Carpetes compartides -> Preferències de carpetes compartides... Es pot fer en "calent" i apareixen al directori "/media" dins la màquina virtual.
 
 ### Programari instal·lat
 
@@ -57,19 +69,6 @@ La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d
 	- Engine Docker i Docker Compose Tool per l'execució de contenidors Docker
 	- Navegador Google Chrome
 	- Client VPNC per accés a XCAT
-
-### Oracle VirtualBox
-
-Si es vol poder copiar text entre la màquina host i la guest cal activar la opció Dispositiu -> Portapapers compartit -> Bidireccional
-
-Si es volen afegir carpetes compartides entre la màquina host i la guest s'han de seguir les següents passes:
-
-* Afegir el grup vboxsf a l'usuari canigo (cal ser root o fer sudo):
-
-		$ sudo usermod -a -G vboxsf canigo
-
-* Reiniciar la màquina o tornar logar-se.
-* Afegir les carpetes desitjades a través de Dispositius -> Carpetes compartides -> Preferències de carpetes compartides... Es pot fer en "calent" i apareixen al directori "/media" dins la màquina virtual.
 
 ### Versions
 
