@@ -16,7 +16,6 @@ weight	    = 4
 |--------------------------------- 	 |------------------------------------	 |
 |              3.2.0.1            	 |                3.2.7	             |
 
-
 ### Creació de l'entorn local de desenvolupament
 
 <!--
@@ -31,28 +30,9 @@ Altra informació d'interés:
 * [Plugin Canigó 3.2 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 * [Codi plantilla demo Canigó 3.2] (https://github.com/gencatcloud/plantilla-demo-canigo32)
 
-## Canigó 2.3
+### Configuració Maven (manual)
 
-- [Release notes Canigó 2.3.22](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10452)
-- [Plantilla Canigó 2.3.20 (Amb exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-2.3.20.zip)
-- [Plantilla Canigó 2.3.20 (Sense exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/plantilla-canigo-2.3.20.zip)
-- [Contingut estàtic versió 2.3.20 (Comprimit) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-static-compress-2.3.20.zip)
-
-### Creació de l'entorn local de desenvolupament
-
-- Descàrrega de l'[entorn base de treball](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/entorn-treball/canigo.zip)
-- Guia d'inici per a la configuració d'un entorn de desenvolupament. Veure aquest [link](/canigo-download-related/guia-inici-canigo2)
-
-<p>&nbsp;</p>
-
-## Versions anteriors 2.x
-
-Per a versions antigues del Framework Canigó, contacteu amb el [Centre de Suport](https://canigo.ctti.gencat.cat/centre-de-suport/contacta/).
-<p>&nbsp;</p>
-
-## Configuració Maven (manual)
-
-Per a la resolució de dependències de Canigó i llibreries de tercers necessàries, fora dels entorns de desenvolupament proporcionats pel CS Canigó on ja està pre-configurat, cal configurar el següent repositori Maven:
+Per a la resolució de dependències de Canigó i llibreries de tercers necessàries, fora de l'entorn de desenvolupament proporcionats pel CS Canigó on ja està pre-configurat, cal configurar el següent repositori Maven:
 ```
     https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 ```
@@ -97,4 +77,21 @@ Al settings.xml del Maven configurar el repository al profile per defecte:
   
 ```
 
+## Canigó 2.3
 
+- [Release notes Canigó 2.3.22](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10452)
+- [Plantilla Canigó 2.3.20 (Amb exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-2.3.20.zip)
+- [Plantilla Canigó 2.3.20 (Sense exemples) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/plantilla-canigo-2.3.20.zip)
+- [Contingut estàtic versió 2.3.20 (Comprimit) (format .zip)](http://repos.canigo.ctti.gencat.cat/repository/maven2/canigo/plantilla-canigo-inicial/2.3.20/demo-canigo-static-compress-2.3.20.zip)
+
+### Creació de l'entorn local de desenvolupament
+
+- Descàrrega de l'[entorn base de treball](https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/canigo/entorn-treball/canigo.zip)
+- Guia d'inici per a la configuració d'un entorn de desenvolupament. Veure aquest [link](/canigo-download-related/guia-inici-canigo2)
+
+<p>&nbsp;</p>
+
+## Versions anteriors 2.x
+
+Per a versions antigues del Framework Canigó, contacteu amb el [Centre de Suport](https://canigo.ctti.gencat.cat/centre-de-suport/contacta/).
+<p>&nbsp;</p>
