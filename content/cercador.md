@@ -61,6 +61,6 @@ no_index 	= true
 <!--</div> -->
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/showdown/1.4.2/showdown.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/instantsearch.js@3.0.0/dist/instantsearch.production.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@1.12.1/dist/instantsearch.min.js"></script>
 <!--script src="/js/cercador.js"></script-->
 <script src="/js/algolia-search.js"></script>
