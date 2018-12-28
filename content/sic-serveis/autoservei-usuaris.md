@@ -3,7 +3,8 @@ date        	= "2017-07-18"
 title       	= "Autoservei d'usuaris"
 description 	= "Autoservei d'usuaris SIC 2.0 al GitLab"
 aliases 	= [
-    "/sic/autoservei-usuaris/"
+    "/sic/autoservei-usuaris/",
+    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/"
 ]
 sections    	= "SIC"
 taxonomies  	= []
