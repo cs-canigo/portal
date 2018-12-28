@@ -12,17 +12,16 @@ weight = 1
 +++
 
 
-## Aplicació en fase de projecte - Correu (oficina-tecnica.canigo.ctti@gencat.cat)
+## Aplicació en fase de projecte - Correu
 
-**TODO**
+Per les aplicacions en fase de projecte el suport es canalitzarà per correu mitjançant la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
 
 ## Aplicació en servei - Remedy
 
-Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al servei de FRAMEWORK SIC a Remedy:
+Es posa a disposició dels usuaris la següent guia sobre com obrir peticions al servei de FRAMEWORK SIC a Remedy: [SIC - Howto - Obrir peticions SIC a Autoservei Remedy ] (/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy)
 
-Assegureu-vos que abans d'obrir un tiquet a Remedy no trobeu resposta a les [**FAQ**](/sic/sic-suport/faq/).
-
-- [SIC - Howto - Obrir peticions SIC a Autoservei Remedy ] (/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy)
+<br/>
+Assegureu-vos abans d'obrir un tiquet a Remedy que no trobeu resposta a les [**FAQ**](/sic/sic-suport/faq/).
 
 <br/>
 <br/>
