@@ -8,11 +8,9 @@ taxonomies = []
 weight = 2
 +++
 
-**TODO**
-
 #### **Què necessito per poder començar a treballar amb SIC 2.0?** ####
 
-1) Client Git instal·lat a la màquina des d'on es faran les pujades. Aquest es pot descarregar des del [web oficial de Git](https://git-scm.com/downloads)
+1) Client Git instal·lat a la màquina des d'on es faran les pujades. Aquest es pot descarregar des del [web oficial de Git](https://git-scm.com/downloads). També es pot fer servir qualsevol altre client de Git com GitKraken, Sourcetree, o que estigui integrat en un IDE de desenvolupament com Visual Studio Code, Eclipse, IntelliJ, ...
 
 2) Usuari a GICAR, amb l'e-mail informat a la identitat.
 
@@ -32,20 +30,15 @@ Cal tenir informat el correu electrònic a la identitat Gicar per tal que la inf
 
 <br/>
 
+
 #### **Com puc migrar el codi dels repositoris SVN de SIC cap als del Gitlab?** ####
-Hem publicat un [howto](http://canigo.ctti.gencat.cat/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/) sobre com migrar els projectes de SVN a Git. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
+Hem publicat un [howto](http://canigo.ctti.gencat.cat/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/) sobre com migrar els projectes de SVN a Git. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "FRAMEWORK SIC".
 
 <br/>
 
-#### **Puc treballar simultàniament amb el repositori SVN i repositori Gitlab de la mateixa aplicació?** ####
-No. En cas de fer-ho, seria difícil discernir quin dels 2 conté la darrera versió del codi. 
-
-Per a les noves aplicacions, ja haurà de començar a treballar directament amb Gitlab. Per a aquelles aplicacions que migri del SVN cap al Gitlab haurà de deixar de treballar amb el repositori SVN, comunicar-ho a l'equip de SIC i fer servir únicament el repositori al Gitlab.
-
-<br/>
 
 #### **Fins quan podem utilitzar el SVN?** ####
-La data planificada per al tancament definitiu del SVN és el **5 de Febrer de 2018**. Tots els repositoris SVN han d'estar migrats al Gitlab de SIC abans d'aquesta data.
+El SVN es va passar a mode lectura el **5 de Febrer de 2018**.
 
 <br/>
 
@@ -56,7 +49,7 @@ S'actualitzarà l'origen de dades d'aquests per tal que apuntin al repositori de
 <br/>
 
 #### **Mantindré els meus accessos/rol de SIC 1.0 a SIC 2.0?** ####
-Mantindrà el mateix rol o rols al Gitlab/Jobs Jenkins, ja que aquest s'han heretat de l'anterior sistema d'usuaris.
+Mantindrà el mateix rol o rols al Gitlab/Jobs Jenkins, ja que aquest s'han heretat de l'anterior sistema de permissos.
 
 <br/>
 
@@ -88,7 +81,7 @@ Els projectes dins els grups d'aplicació sí que podran ser creats per els prop
 
 #### **Com puc concedir permisos als meus codis d'aplicació a altres membres?** ####
 * En el cas de CPD i LdT l'assignació de permisos és automàtica, per tant no cal fer res.
-* En el cas de lots i proveïdors d'aplicacions, us recordem que a l'agost de 2017 vam publicar un [article](http://canigo.ctti.gencat.cat/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) sobre com concedir permisos a d'altres companys. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
+* En el cas de lots i proveïdors d'aplicacions, us recordem que a l'agost de 2017 vam publicar un [article](/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/) sobre com concedir permisos a d'altres companys. En cas de dubtes sobre el procediment, pot obrir una consulta a Remedy al servei de "Framework SIC".
 
 <br/>
 
