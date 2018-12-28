@@ -16,7 +16,7 @@ weight      = 2
 
 ## Jenkins
 
-**TODO**
+TODO
 
 ## Matriu de tecnologies compatibles
 
@@ -149,14 +149,3 @@ Finalment, un cop generada la nova pipeline, aquesta és invocada per realitzar 
 En el comunicat del mes de Juny s'ha publicat també el següent [How-To](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús de l'Autoservei de Jobs Pipeline al SIC en el que es genera un ACA. En posteriors howtos es mostrarà com generar un ACI.
 
 També teniu disponible tota la informació relativa al seu funcionament al [Manual d'Usuari del SIC](/related/sic/manual-usuari.pdf).
-
-### Clau pública
-
-+++
-date        = "2018-05-02"
-title       = "Clau pública del SIC"
-description = "Clau pública del SIC"
-sections    = "SIC"
-taxonomies  = []
-weight 		= 11
-+++
