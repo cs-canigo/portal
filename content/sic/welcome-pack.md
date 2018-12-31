@@ -12,5 +12,5 @@ Els welcome packs son paquets de benvinguda que es posen a disposició dels nous
 En aquest apartat s'aniran afegint un seguit de documents temàtics amb la informació més rellevant en cada cas amb l'objectiu de donar resposta als dubtes o necessitats que puguin sorgir en el procés d'integració amb el SIC.
 
 
-- [Com fer ús de les eines del SIC] (/sic-welcome-pack/us-eines/)
-- [Com preparar una aplicació per integrar-se amb el SIC] (/sic-welcome-pack/preparar-aplicacio/)
+- [Ús de les eines del SIC] (/sic-welcome-pack/us-eines/)
+- [Preparar una aplicació per integrar-se amb el SIC] (/sic-welcome-pack/preparar-aplicacio/)
