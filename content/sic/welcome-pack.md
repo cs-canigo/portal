@@ -2,7 +2,7 @@
 date        = "2018-12-31"
 title       = "Welcome Pack"
 description = "Relació de paquets de benvinguda amb la informació més rellevant del SIC"
-sections    = "Welcome Pack"
+sections    = "SIC"
 taxonomies  = []
 weight 		= 4
 +++
