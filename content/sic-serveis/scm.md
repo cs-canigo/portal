@@ -40,7 +40,7 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l'acció "New project". Haurà d'indicar el nom del projecte i seleccionar el nivell de visibilitat "Private".
 
 <br/>
-<CENTER>![Nou projecte](/images/sic/new_project.PNG)</center>
+<CENTER>![Nou projecte](/related/sic/new_project.PNG)</center>
 <br/>
 
 ## Migració repositoris SVN a Git
