@@ -30,7 +30,7 @@ Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.
 
 ### Pujada d'artefactes
 
-Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegamr mitjançant el servei d'integració continua. <br/>
+Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegar mitjançant el servei d'integració continua. <br/>
 Per a més informació: [Manual Integració](/related/sic/manual-integracio.pdf)). <br/>
 
 En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Dipositar artefactes al SIC**. <br/>
