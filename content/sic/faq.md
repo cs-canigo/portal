@@ -1,6 +1,6 @@
 
 +++
-date = "2018-01-02"
+date = "2019-01-02"
 title = "FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
@@ -92,5 +92,3 @@ Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que tingui accés a les adrec
 
 #### **Quines branques provoquen l'execució de pipelines de construcció i desplegament al Jenkins?** ####
 Únicament la branca `master` és la que té el lligam amb les pipelines de Jenkins. No obstant, es pot publicar qualsevol branca al Git del SIC.
-
-<br/>
