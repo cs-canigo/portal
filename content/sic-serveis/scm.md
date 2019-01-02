@@ -25,7 +25,7 @@ Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme el procés d'alta.
 
-### Accés sobre grups i projectes
+### Permissos sobre grups i projectes
 
 Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 <br/>
