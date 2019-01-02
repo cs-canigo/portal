@@ -35,8 +35,8 @@ Es contemplen dos tipus de modalitats d’integració de les aplicacions al SIC:
 ## Serveis
 
 ### Custodia de codi font
-Quan l'equip de desenvolupament té una nova versió del codi font llesta per lliurar, es connecta al sistema de custodia de codi font del SIC (SCM – Source Code Management) i efectua la pujada de la nova versió. 
-La persona de l'equip que efectua aquesta acció és la que té el rol de **Release Manager** o Gestor de Lliuraments. 
+Quan l'equip de desenvolupament té una nova versió del codi font llesta per lliurar, es connecta al sistema de custodia de codi font del SIC i efectua la pujada de la nova versió. 
+La persona de l'equip que efectua aquesta acció és la que té el rol de Release Manager o **Gestor de Lliuraments**. 
 Tot i que qualsevol usuari de l'equip de desenvolupament podria accedir al servei de custodia de codi font de SIC, es recomana que l'accés sigui efectuat només per les figures dels Release Manager. Es considera que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal·lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
@@ -56,5 +56,5 @@ Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 ### Autoservei d’usuaris
 
-Els usuaris Release Managers, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure nous membres del grup de Release Managers mitjançant l’autoservei d’usuaris.
+Els usuaris **Release Managers**, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure nous membres del grup de Release Managers mitjançant l’autoservei d’usuaris.
 Per a més informació: [Binaris] (/sic-serveis/autoservei-usuaris/)
