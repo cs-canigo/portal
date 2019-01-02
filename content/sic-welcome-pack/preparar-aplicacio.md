@@ -25,7 +25,7 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 ## Estructura de projectes
 L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Continua:
 
-* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent al de la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul o un programa sense fragments independents.
+* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul o un programa sense fragments independents.
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, cal crear l’arxiu **sic.yml** que albergarà la versió funcional del projecte. Per exemple: “version: 1.1.0”.
 Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.
@@ -55,11 +55,11 @@ En realitzar una pujada de codi sobre la branca MASTER, si el projecte té un jo
 * Els jobs pipeline realitzen multitud de tasques encadenades mitjançant **STAGES**. En cas de produir-se alguna incidència, l'execució es cancel·larà i notificarà del que ha passat.
 * Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG definitiu**.
 * Els artefactes es construiran una sola vegada a l’etapa de **BUILD** i seran els que es desplegaran als diferents entorns. No es contempla, doncs, condicionar la construcció d’artefactes a l’entorn on es desplegaran (ús profiles maven o similar).
-* Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament. P
+* Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
 * Els jobs **notificaran** dels resultats a les adreces de correu assignades.
 * En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
 
 Per poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
 
-\b
+<br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC. Si voleu més informació o disposar d’informació a un nivell major de detall podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals).
