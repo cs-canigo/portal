@@ -25,6 +25,7 @@ L'existència d'un servei que gestioni el cicle de vida d'aquestes peces i perme
 - Simplificar i reduir el temps de desplegament als diferents entorns.
 A més, el concepte d'integració continua permet disposar permanentment d'una versió del codi provinent d'un repositori controlat i amb uns paràmetres de qualitat mesurables.
 El Servei d'Integració Continua (SIC) neix amb l'objectiu de donar aquest suport al cicle de vida de manera centralitzada i amb un cost reduït, ja que està basat en tecnologies de programari lliure.
+
 ## Modalitats d’integració
 Es contemplen dos tipus de modalitats d’integració de les aplicacions al SIC:
 - **Integracions automatitzades**: es fa ús de les eines per la custodia de codi font i les eines de construcció i desplegament automatitzat d’artefactes. Es divideixen en dos tipus:
@@ -38,6 +39,7 @@ Es contemplen dos tipus de modalitats d’integració de les aplicacions al SIC:
 Quan l'equip de desenvolupament té una nova versió del codi font llesta per lliurar, es connecta al sistema de custodia de codi font del SIC i efectua la pujada de la nova versió. 
 La persona de l'equip que efectua aquesta acció és la que té el rol de Release Manager o **Gestor de Lliuraments**. 
 Tot i que qualsevol usuari de l'equip de desenvolupament podria accedir al servei de custodia de codi font de SIC, es recomana que l'accés sigui efectuat només per les figures dels Release Manager. Es considera que l'equip de desenvolupament ja té el seu propi repositori de codi a les seves instal·lacions i que allà és on es fan les proves pertinents fins que es considera el codi llest per lliurar.
+
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
 ### Integració continua
@@ -45,16 +47,19 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 El SIC té capacitat per a poder realitzar el **desplegament automàtic** d'un gran nombre d'aplicacions de diferents tecnologies a diferents entorns. 
 Aquests es realitzen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al servei de custodia de codi font. 
 La tasca inclourà accions de construcció d'artefactes, versionat de codi, execució de tests, anàlisi de codi i desplegaments a entorns no-productius i productius. En aquells entorns on no es pugui desplegar automàticament, el flux d'execució de la tasca s'aturarà esperant una resposta manual d'acceptació.
+
 Per a més informació: [Integració continua] (/sic-serveis/ci/)
 
 ### Binaris
 
 No totes les aplicacions poden construir els seus artefactes a desplegar mitjançant el SIC, ja sigui per estar desenvolupades amb una tecnologia no suportada per SIC o per particularitats del procés de construcció (veure el [Manual Integració](/related/sic/manual-integracio.pdf)). 
 En aquests casos, es permet que les aplicacions puguin **lliurar els artefactes** (.war, .ear, .jar, .zip, etc.) a CPD mitjançant el sistema de gestió de binaris de SIC. 
+
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 
 ### Autoservei d’usuaris
 
 Els usuaris **Release Managers**, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure nous membres del grup de Release Managers mitjançant l’autoservei d’usuaris.
+
 Per a més informació: [Binaris] (/sic-serveis/autoservei-usuaris/)
