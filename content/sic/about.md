@@ -13,6 +13,7 @@ weight 		= 1
 
 La integració de les diferents peces de programari que componen una aplicació és un repte present en tot projecte de desenvolupament. 
 Sovint apareixen **problemàtiques** com els següents:
+
 * Proves d'integració ajornades fins moments massa propers al desplegament.
 * Alt cost de correcció dels errors.
 * Visibilitat baixa de l'estat de construcció dels projectes.
@@ -30,6 +31,7 @@ El Servei d'Integració Continua (SIC) neix amb l'objectiu de donar aquest supor
 ## Modalitats d’integració
 
 Es contemplen dos tipus de modalitats d’integració de les aplicacions al SIC:
+
 * **Integracions automatitzades**: es fa ús de les eines per la custodia de codi font i les eines de construcció i desplegament automatitzat d’artefactes. Es divideixen en dos tipus:
 	- Automatització en la construcció i desplegament fins a l’entorn d’integració i entrega dels artefactes a CPD a través del servei de gestió de binaris per a que CPD pugui realitzar el desplegament als entorns de preproducció i producció.
 	- Automatització en la construcció i desplegament fins a l’entorn de producció. Actualment disponible per aplicacions ubicades a Cloud Públic.
