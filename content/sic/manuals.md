@@ -9,6 +9,7 @@ weight 		= 3
 +++
 
 ### Manuals
+Es posen a disposició una sèrie de manuals per a dur a terme la integració d'aplicacions al SIC:
 
 * Què he de fer per integrar una aplicació al SIC?
   [**Manual d'Integració**](/related/sic/2.0/manual-integracio.pdf)
