@@ -22,7 +22,7 @@ Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
 
 ### Com crear un nou compte
 
-Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme l'alta del nou compte.
+Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme el procés d'alta.
 
 ### Com disposar d'accés als grups i projectes
 
@@ -102,7 +102,7 @@ Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el
 
 #### 5. Crear projecte en Git
 
-Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer **New Project**.
+Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer l'acció "New Project".
 
 #### 6. Pujar el codi a Git
 
