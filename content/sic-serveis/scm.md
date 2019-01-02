@@ -19,7 +19,7 @@ El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitla
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
+Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat
 
 ### Creació de comptes d'usuari
 
@@ -49,6 +49,7 @@ Per aplicacions que encara no hagi migrat el seu codi font cap a l'eina actual d
 
 Actualment el repositori original a SVN es troba disponible en mode lectura per a poder accedir a l'historial. Per a dur a terme la migració al nou sistema, caldrà seguir les següents passes:
 
+<br/>
 #### 1. Eliminació de binaris
 
 El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents passos:
@@ -62,6 +63,7 @@ El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot pro
 
 Un cop finalitzat aquest procés al Git es disposarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
+<br/>
 #### 2. Obtenir els autors
 
 En primer lloc, s'ha de consultar qui ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
@@ -77,6 +79,7 @@ S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /m
 
 A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procés per a evitar errors en el següent pas.
 
+<br/>
 #### 3. Obtenir les dades del SVN
 
 Per a obtenir les dades del SVN que s'han de migrar, dintre de la carpeta /migracio (on es troba el fitxer author.txt) executar:
@@ -90,6 +93,7 @@ On s'ha de substituir les variables segons:
 	$3 -> path de la carpeta que conté les carpetes tags, trunk i branches. En cas que estiguin a l'arrel no posar res.
 	$4 -> nom de la carpeta que es crea al sistema de fitxers locals on es deixa el codi
 
+<br/>
 #### 4. Tractament del codi SVN
 
 Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el codi a Git executar les següents comandes:
@@ -100,11 +104,12 @@ Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el
 	rm -Rf .git/refs/remotes
 	for i in $(ls .git/refs/tags/ -1 | grep '@'); do rm ".git/refs/tags/$i"; done
 	
-
+<br/>
 #### 5. Crear projecte en Git
 
-Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer l'acció "New Project".
+Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat anar al grup del vostre codi de diàleg i prémer l'acció "New Project".
 
+<br/>
 #### 6. Pujar el codi a Git
 
 A la carpeta on s'ha desat el codi del SVN executar:
