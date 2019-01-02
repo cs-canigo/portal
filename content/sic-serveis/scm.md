@@ -26,7 +26,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l
 
 ### Com disposar d'accés als grups i projectes
 
-Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que puguin incloure'l com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
+Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 <br/>
 Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
 
@@ -61,7 +61,7 @@ El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot pro
 
 Un cop finalitzat aquest procés al Git es disposarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
-### 2. Obtenir els autors
+#### 2. Obtenir els autors
 
 En primer lloc, s'ha de consultar qui ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
 
@@ -76,7 +76,7 @@ S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /m
 
 A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procés per a evitar errors en el següent pas.
 
-### 3. Obtenir les dades del SVN
+#### 3. Obtenir les dades del SVN
 
 Per a obtenir les dades del SVN que s'han de migrar, dintre de la carpeta /migracio (on es troba el fitxer author.txt) executar:
 
@@ -89,7 +89,7 @@ On s'ha de substituir les variables segons:
 	$3 -> path de la carpeta que conté les carpetes tags, trunk i branches. En cas que estiguin a l'arrel no posar res.
 	$4 -> nom de la carpeta que es crea al sistema de fitxers locals on es deixa el codi
 
-### 4. Tractament del codi SVN
+#### 4. Tractament del codi SVN
 
 Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el codi a Git executar les següents comandes:
 
@@ -100,11 +100,11 @@ Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el
 	for i in $(ls .git/refs/tags/ -1 | grep '@'); do rm ".git/refs/tags/$i"; done
 	
 
-### 5. Crear projecte en Git
+#### 5. Crear projecte en Git
 
 Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer **New Project**.
 
-### 6. Pujar el codi a Git
+#### 6. Pujar el codi a Git
 
 A la carpeta on s'ha desat el codi del SVN executar:
 
