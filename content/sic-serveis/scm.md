@@ -17,25 +17,25 @@ El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitla
 
 ## Operativa principal
 
-### Com accedir al servei
+### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
 
-### Com crear un nou compte
+### Creació de comptes d'usuari
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme el procés d'alta.
 
-### Com disposar d'accés als grups i projectes
+### Accés sobre grups i projectes
 
 Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 <br/>
 Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
 
-### Com s'organitza el codi font de les aplicacions
+### Organització del codi font de les aplicacions
 
 Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticament d'un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: https://git.intranet.gencat.cat/0192). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d'una llibreria, un microservei, un mòdul o un programa sense fragments independents.
 
-### Com crear nous projectes
+### Creació de nous projectes
 
 Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l'acció "New project". Haurà d'indicar el nom del projecte i seleccionar el nivell de visibilitat "Private".
 
