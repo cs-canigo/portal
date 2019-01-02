@@ -17,8 +17,6 @@ El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitla
 
 ## Operativa principal
 
-A continuació s'explica la operativa bàsica associada a aquest servei.
-
 ### Com accedir al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
