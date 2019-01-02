@@ -12,35 +12,58 @@ weight      = 1
 +++
 
 
-## Git
+## GitLab
 
-**TODO**
+El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitlab és un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
+
+### Com accedir-hi: 
+
+Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
+
+### Com crear un nou compte:
+
+Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme l'alta del nou compte.
+
+### Com disposar d'accés als grups i projectes
+
+Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que puguin incloure'l com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
+<br/>
+Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
+
+### Com s'organitza el codi font de les aplicacions
+
+Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticament d'un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: https://git.intranet.gencat.cat/0192). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d'una llibreria, un microservei, un mòdul o un programa sense fragments independents.
+
+### Com crear nous projectes
+
+Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l'acció "New project". Haurà d'indicar el nom del projecte i seleccionar el nivell de visibilitat "Private".
+
+![Nou projecte](/images/sic/new_project.PNG) 
 
 ## Migració repositoris SVN a Git
 
-### Prerrequisits
-
+Per aplicacions que encara no hagi migrat el seu codi font cap a l'eina actual de custodia de codi font del SIC (GitLab), podran fer-ho si s'acompleixen els següents requisits:
 * Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
-* El **repositori a migrar no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 20 MB**.
+* El repositori a migrar **no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 25 MB**.
 
-<p style="color: #CC0000;font-weight: bold"> Advertència: Des del SIC recomanem no utilitzar els dos repositoris (l'original al SVN i el migrat al Git) alhora. Un cop s'hagi realitzat la migració i es comprovi que s'ha realitzat correctament, cal utilitzar el nou repositori del Git.</p>  
+Actualment el repositori original a SVN es troba disponible en mode lectura per a poder accedir a l'historial. Per a dur a terme la migració al nou sistema, caldrà seguir les següents passes:
 
-#### Per a repositoris amb binaris
+#### 1. Eliminació de binaris
 
-El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents pasos:
+El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot provocar errors en el procés de migració. Aquests repositoris que tinguin binaris no es podran migrar al Git, romandran en el SVN en mode lectura. Per aquests casos, per començar a treballar amb Git s'haurien de seguir els següents passos:
 
 * Descarregar el darrer tag del SVN
 * Eliminar els binaris. Podem tenir dos casos:
-	- binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
-	- binaris no prescindibles: s'han d'ubicar en el [repositori de binaris](https://bin.sic.intranet.gencat.cat/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC. Per a més informació veure aquesta [notícia](http://canigo.ctti.gencat.cat/noticies/2017-07-05-SIC-Gestio-binaris/).
+	- Binaris prescindibles: es poden generar a partir de codi font de l'aplicació, i per tant, no cal conservar-los
+	- Binaris no prescindibles: s'han d'ubicar en el [servei de custodia de binaris](/sic-serveis/binaris/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC.
 * Inicialitzar el repositori Git local (git init)
 * Fer el commit, push i tag d'aquesta versió inicial al Git
 
-Un cop finalitzat aquest procés al Git es dispossarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
+Un cop finalitzat aquest procés al Git es disposarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
-### Obtenir els autors
+### 2. Obtenir els autors
 
-Primer de tot, s'ha d'obtenir quí ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
+En primer lloc, s'ha de consultar qui ha modificat els arxius del SVN. Per fer això s'ha preparat un [job de Jenkins] (https://hudson.intranet.gencat.cat/hudson/job/MIGRACIO_GENERAR_AUTORS/).
 
 S'ha d'executar aquest job informant els següents paràmetres:
 
@@ -49,11 +72,11 @@ S'ha d'executar aquest job informant els següents paràmetres:
 
 Una vegada executat el job envia per email el fitxer author.txt a l'usuari que ha executat el job.
 
-S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /migracio.
+S'ha de descarregar i desar el fitxer a la carpeta desitjada, en aquest howto /migració.
 
-A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procès per a evitar errors en el següent pas.
+A més d'obtenir el fitxer author.txt, s'ha de descarregar el següent [fitxer] (/related/sic/howto/unknown_author.zip) i descomprimir-lo en la mateixa carpeta (/migracio). Aquest zip conté un procés per a evitar errors en el següent pas.
 
-### Obtenir les dades del SVN
+### 3. Obtenir les dades del SVN
 
 Per a obtenir les dades del SVN que s'han de migrar, dintre de la carpeta /migracio (on es troba el fitxer author.txt) executar:
 
@@ -66,7 +89,7 @@ On s'ha de substituir les variables segons:
 	$3 -> path de la carpeta que conté les carpetes tags, trunk i branches. En cas que estiguin a l'arrel no posar res.
 	$4 -> nom de la carpeta que es crea al sistema de fitxers locals on es deixa el codi
 
-### Tractament del codi SVN
+### 4. Tractament del codi SVN
 
 Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el codi a Git executar les següents comandes:
 
@@ -77,11 +100,11 @@ Accedir a la carpeta que s'ha creat en el punt anterior ($4) i abans de pujar el
 	for i in $(ls .git/refs/tags/ -1 | grep '@'); do rm ".git/refs/tags/$i"; done
 	
 
-### Crear projecte en Git
+### 5. Crear projecte en Git
 
-Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer **New Project**
+Per a crear el projecte en Git heu d'accedir a https://git.intranet.gencat.cat/ anar al grup del vostre codi de diàleg i prémer **New Project**.
 
-### Pujar el codi a Git
+### 6. Pujar el codi a Git
 
 A la carpeta on s'ha desat el codi del SVN executar:
 
@@ -99,10 +122,3 @@ Per finalitzar es puja el codi a Git
 	git push --tags
 	
 És molt important analitzar el log que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
-
-### Establir mode lectura en el repositori SVN
-
-Un cop finalitzat el procés de migració és necessari demanar a l'equip del SIC, via petició a SAU Remedy al servei "FRAMEWORK SIC" o mail a la [Bústia de la Oficina Tècnica](mailto:oficina-tecnica.canigo.ctti@gencat.cat), que estableixi permisos només de lectura pel repositori. D'aquesta manera ens assegurem que només es faran modificacions en el Git.
-
-Us recordem que el 6 de novembre de 2017 el SVN del SIC passarà a mode de només lectura. Us animem a realitzar aquesta migració quant abans millor. Per a més informació sobre aquest i altres esdeveniments, podeu consultar el [RoadMap de l'Oficina Tècnica Canigó](http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/).
-
