@@ -1,5 +1,5 @@
 +++
-date = "2018-12-07"
+date = "2019-01-02"
 title = "Binaris"
 description = "Per la distribució d'artefactes a CPD"
 sections = "SIC"
@@ -10,31 +10,47 @@ taxonomies = []
 weight = 3
 +++
 
-A data 27/06/2017 es va publicar el nou sistema de gestió de binaris del SIC. Aquest nou sistema s'encarrega de:
+## Introducció
 
-* Emmagatzemar els binaris que carreguen els Release Managers de Lot i deixar-los a disposició del CPD encarregat de desplegar-los.
-* Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que per algun motiu no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
+El sistema de gestió de binaris del SIC s'encarrega de:
 
-D'aquesta manera s'evita la mala pràctica de dipositar binaris al SVN, procediment mitjançant el qual no es podien esborrar aquests fitxers de l'històric.
+* Emmagatzemar els binaris que carreguen els Release Managers (o carregats pel sistema d'integració continua per a entorns amb desplegament no automatitzat) i deixar-los a disposició del CPD encarregat de desplegar-los.
+* Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
 
-L'URL d'accés a aquest nou sistema és: [https://bin.sic.intranet.gencat.cat](https://bin.sic.intranet.gencat.cat).
+## Operativa principal
 
+### Accés al servei
+
+Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat
+
+<br/>
 <img alt="Portada Gestió Binaris SIC" src="/images/news/SIC-GestioBinarisPortal.png" style="margin: 10px auto;width: 80%;height: auto;display:block;"/>
+<br/>
 
-La pàgina de benvinguda disposa de dos botons:
+### Pujada d'artefactes
 
-* **Dipositar artefactes al SIC**: És només accessible per als lots d'aplicacions, reenvia a l'usuari al job de Jenkins de pujada d'artefactes al SIC. És un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i dels artefactes per correu electrònic a l'invocador del job. 
+En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Dipositar artefactes al SIC**. <br/>
+Aquesta acció és només accessible per als lots d'aplicacions i redirigieix a l'usuari al job de Jenkins de pujada d'artefactes al SIC. Es tracta d'un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i artefactes per correu electrònic a l'usuari que ha iniciat l'execució.
+
 Aquest job sol·licita la següent informació:
 
-	* Codi d'aplicació: obligatori (nombre de 4 xifres)
-	* Nom d'aplicació: obligatori
-	* Versió: obligatori
-	* Fitxer de binaris: obligatori (Fitxer de binaris a pujar)
-	* Descomprimir ZIP: indica si un cop l'ARTEFACTE_BINARIS s'hagi pujat, s'ha de descomprimir el .zip facilitat
-	* Fitxer de documentació: opcional (Fitxer de documentació a pujar)
+* Codi d'aplicació: obligatori (nombre de 4 xifres que es correspon amb el codi de diàleg)
+* Projecte: obligatori
+* Versió: obligatori
+* Arxiu de binaris: obligatori (arxiu de binaris que desitja dipositar)
+* Descomprimir ZIP: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat
+* Arxiu de documentació: opcional (arxiu de documentació que desitja associar)
 
-	El job valida que l'usuari tingui permisos sobre el codi d'aplicació especificat. **Avís**: Si s'especifica múltiples vegades els mateixos valors a la terna Codi d'aplicació, Nom d'aplicació i Versió, __**s'esborra el contingut previ i se sobreescriu el nou contingut**__.
+El job validarà que el codi d'aplicació existeixi i que l'usuari disposi dels corresponents permissos. Si s'especifica un codi d'aplicació - projecte - versió ja pujada anteriorment, el sistema sobreescriurà el seu contingut.
 
-* **Recuperar artefactes del SIC**: És accessible tant pels Release Managers de tots els lots així com per a tots els administradors de tots els CPDS i de LdT. Els accessos són securitzats (requereixen autenticació amb credencials GICAR i cada codi d'aplicació requereix autorització per Lot/CPD/LdT).
+<br/>
+**Avís**: A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte. Només estaran exemptes les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
 
-Per a més detalls, teniu tota la informació disponible al [Manual d'Usuari del SIC](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
+### Recuperació d'artefactes
+
+En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Recuperar artefactes del SIC**. <br/>
+Aquesta acció és accessible tant pels Release Managers de tots els lots com per a tots els administradors de tots els CPDS/LdT. Els accessos són securitzats (requereixen autenticació amb credencials GICAR i cada codi d'aplicació requereix autorització per Lot/CPD/LdT). <br/>
+Aquesta opció és la que utilitzarà CPD/LdT per al desplegament de les aplicacions. Aquests accediran al servei en mode lectura a través del frontal web.
+
+<br/>
+Per a més detalls, teniu tota la informació disponible al [Manual d'Usuari](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
