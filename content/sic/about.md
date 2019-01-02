@@ -60,6 +60,6 @@ Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 ### Autoservei d’usuaris
 
-Els usuaris **Release Managers**, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure nous membres del grup de Release Managers mitjançant l’autoservei d’usuaris.
+Els usuaris Release Managers, responsables de lot i tècnics de CPD assignats disposaran d’accés als corresponents serveis del SIC. No obstant, es podran incloure **nous membres del grup de Release Managers** mitjançant l’autoservei d’usuaris.
 
-Per a més informació: [Binaris] (/sic-serveis/autoservei-usuaris/)
+Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
