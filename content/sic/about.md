@@ -57,7 +57,7 @@ Per a més informació: [Integració continua] (/sic-serveis/ci/)
 
 ### Binaris
 
-Quan les aplicacions no permeten la construcció i desplegament d'artefactes mitjançant el sistema d'integració contínua, el SIC proporciona un servei per a que les aplicacions puguin **lliurar els artefactes** (.war, .ear, .jar, .zip, etc.) a CPD/LdT mitjançant el sistema de gestió de binaris de SIC. 
+Si les aplicacions no permeten la construcció i desplegament d'artefactes mitjançant el sistema d'integració contínua, el SIC proporciona un servei per a que les aplicacions puguin **lliurar els artefactes** (.war, .ear, .jar, .zip, etc.) a CPD/LdT mitjançant el sistema de gestió de binaris de SIC. 
 
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
