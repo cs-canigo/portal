@@ -6,6 +6,7 @@ sections = "SIC"
 aliases = [
   "/noticies/2017-07-05-SIC-Gestio-binaris/"
 ]
+toc = true
 taxonomies = []
 weight = 3
 +++
@@ -14,7 +15,7 @@ weight = 3
 
 El sistema de gestió de binaris del SIC s'encarrega de:
 
-* Emmagatzemar els binaris que carreguen els Release Managers (o carregats pel sistema d'integració continua per a entorns amb desplegament no automatitzat) i deixar-los a disposició del CPD encarregat de desplegar-los.
+* Emmagatzemar els binaris que carreguen els Release Managers (o carregats pel sistema d'integració continua per a entorns amb desplegament no automàtic) i deixar-los a disposició del CPD encarregat de desplegar-los.
 * Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
 
 ## Operativa principal
@@ -28,6 +29,9 @@ Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.
 <br/>
 
 ### Pujada d'artefactes
+
+Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegamr mitjançant el servei d'integració continua. <br/>
+Per a més informació: [Manual Integració](/related/sic/manual-integracio.pdf)). <br/>
 
 En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Dipositar artefactes al SIC**. <br/>
 Aquesta acció és només accessible per als lots d'aplicacions i redirigieix a l'usuari al job de Jenkins de pujada d'artefactes al SIC. Es tracta d'un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i artefactes per correu electrònic a l'usuari que ha iniciat l'execució.
@@ -52,5 +56,6 @@ En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Recupera
 Aquesta acció és accessible tant pels Release Managers de tots els lots com per a tots els administradors de tots els CPDS/LdT. Els accessos són securitzats (requereixen autenticació amb credencials GICAR i cada codi d'aplicació requereix autorització per Lot/CPD/LdT). <br/>
 Aquesta opció és la que utilitzarà CPD/LdT per al desplegament de les aplicacions. Aquests accediran al servei en mode lectura a través del frontal web.
 
-<br/>
-Per a més detalls, teniu tota la informació disponible al [Manual d'Usuari](http://canigo.ctti.gencat.cat/related/sic/2.0/manual-usuari.pdf).
+## Eliminació de binaris
+
+S'executa un procés diari nocturn d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No es tracta doncs d'un servei de custodia permanent de binaris si no d'un sistema d'intercanvi de binaris amb CPD/LdT.
