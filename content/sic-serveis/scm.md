@@ -11,10 +11,13 @@ toc         = true
 weight      = 1
 +++
 
-
-## GitLab
+## Introducció
 
 El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitlab és un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
+
+## Operativa principal
+
+A continuació s'explica la operativa bàsica associada a aquest servei.
 
 ### Com accedir al servei
 
