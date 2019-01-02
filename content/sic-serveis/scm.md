@@ -16,11 +16,11 @@ weight      = 1
 
 El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitlab és un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
 
-### Com accedir-hi: 
+### Com accedir al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat/
 
-### Com crear un nou compte:
+### Com crear un nou compte
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme l'alta del nou compte.
 
