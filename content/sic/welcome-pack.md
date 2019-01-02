@@ -9,7 +9,7 @@ weight 		= 4
 
 Els welcome packs son paquets de benvinguda que es posen a disposició dels nous usuaris dels serveis el SIC.
 
-En aquest apartat s'aniran afegint un seguit de documents temàtics amb la informació més rellevant en cada cas amb l'objectiu de donar resposta als dubtes o necessitats que puguin sorgir en el procés d'integració amb el SIC.
+En aquest apartat s'aniran afegint un seguit de documents temàtics amb la informació més rellevant amb l'objectiu de donar resposta als dubtes o necessitats que puguin anar sorgint durant el procés d'integració amb el SIC.
 
 
 - [Ús de les eines del SIC] (/sic-welcome-pack/us-eines/)
