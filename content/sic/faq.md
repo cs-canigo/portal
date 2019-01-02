@@ -5,7 +5,7 @@ title = "FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
 taxonomies = []
-weight = 2
+weight = 5
 +++
 
 #### **Què necessito per poder començar a treballar amb SIC 2.0?** ####
