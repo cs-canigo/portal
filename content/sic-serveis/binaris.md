@@ -24,7 +24,7 @@ El sistema de gestió de binaris del SIC s'encarrega de:
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat
 
 <br/>
-<img alt="Portada Gestió Binaris SIC" src="/images/news/SIC-GestioBinarisPortal.png" style="margin: 10px auto;width: 80%;height: auto;display:block;"/>
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal.PNG)</center>
 <br/>
 
 ### Pujada d'artefactes
