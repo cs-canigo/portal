@@ -22,22 +22,21 @@ weight      = 2
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. <br/>
-Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
+Podrà accedir mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ### Relació de tasques disponibles
 
-Una vegada fet el login s'accedeix a la llista de tasques en execució i la relació de tasques disponibles per l'usuari amb la informació més rellevant: nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather) basat en l'estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa en el número de construccions que han anat bé /malament, així com en el percentatge de proves i indicadors d'anàlisi.
+Una vegada fet el login s'accedeix a la llista de tasques en execució i la relació de tasques disponibles per l'usuari amb la informació més rellevant: **nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather)** basat en l'estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa en el número de construccions que han anat bé /malament, així com en el percentatge de proves i indicadors d'anàlisi.
 
 ### Detall de les tasques
 
-Es pot consultar la configuració, historial, estadístiques, resultats i situació de cadascuna de les tasques mitjançant l'enllaç habilitat. En cas de tractar-se de tasques de tipus "pipeline" (tipologia multi-etapa implementat al SIC 2.0) es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes. Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a la opció "Console Output". <br/>
-Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED. Aquest resultat serà notificat per correu electrònic als responsables assignats.
+Es pot consultar la **configuració, historial, estadístiques, resultats i situació** de cadascuna de les tasques mitjançant l'enllaç habilitat. En cas de tractar-se de tasques de tipus "pipeline" (tipologia multi-etapa implementat al SIC 2.0) es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes. <br/>
+Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a la opció "Console Output". Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED. Aquest resultat serà notificat per correu electrònic als responsables assignats.
 
 ### Execució de tasques
 
-Les tasques de tipus "pipeline" no es podran iniciar directament des del portal ni es podrà sol·licitar la seva execució. Les tasques s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custodia de codi i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
+Les tasques de tipus "pipeline" no es podran iniciar directament des del portal ni es podrà sol·licitar la seva execució. Les tasques **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte** per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custodia de codi i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
 
 ### Etapes de desplegament
 
@@ -48,34 +47,33 @@ Les tasques multi-etapa realitzen multitud de tasques organitzades en STAGES. En
 
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
 
-* Init: inicialitzacions internes.
-* Checkout: descàrrega del codi font del projecte a l'espai de treball.
-* Build: compilació i construcció d'artefactes en funció de la tecnologia i eines emprades.
-* Commit test: execució de tests de commit, si escau.
-* Unit test: execució de tests unitaris, si escau.
-* Anàlisi estàtic de codi: execució d'anàlisi de codi estàtic a partir d'unes regles predefinides.
-* Generació tag de build: generació del tag de Build al repositori de codi conforme es tracta d'una versió construïble.
-* Desplegament a INT: desplegament automàtic a l'entorn d'integració, si escau, incloent possibles processos d'actualització de l'estat de la base de dades.
-* Smoke test: verificació bàsica a l'entorn d'integració per assegurar que el projecte s'ha publicat correctament, si escau.
-* Desplegament a PRE: lliurament d'artefactes per al desplegament manual a l'entorn de preproducció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
-* Smoke test: verificació bàsica a l'entorn de preproducció per assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop finalitzat el procés de desplegament a preproducció.
-* Acceptancy test: execució de tests automàtics d'acceptació, si escau.
-* Exploratory test: execució de tests manuals d'acceptació, si escau.
-* Generació tag definitiu: generació del tag definitiu al repositori de codi conforme es tracta d'una versió desplegable a producció.
-* Desplegament a PRO: lliurament d'artefactes per al desplegament manual a l'entorn de producció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
-* Smoke test: verificació bàsica a l'entorn de producció per assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop finalitzat el procés de desplegament a producció.
+* **Init**: inicialitzacions internes.
+* **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
+* **Build**: compilació i construcció d'artefactes en funció de la tecnologia i eines emprades.
+* **Commit test**: execució de tests de commit, si escau.
+* **Unit test**: execució de tests unitaris, si escau.
+* **Anàlisi estàtic de codi**: execució d'anàlisi de codi estàtic a partir d'unes regles predefinides.
+* **Generació tag de build**: generació del tag de Build al repositori de codi conforme es tracta d'una versió construïble.
+* **Desplegament a INT**: desplegament automàtic a l'entorn d'integració, si escau, incloent possibles processos d'actualització de l'estat de la base de dades.
+* **Smoke test**: verificació bàsica a l'entorn d'integració per assegurar que el projecte s'ha publicat correctament, si escau.
+* **Desplegament a PRE**: lliurament d'artefactes per al desplegament manual a l'entorn de preproducció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
+* **Smoke test**: verificació bàsica a l'entorn de preproducció per assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop finalitzat el procés de desplegament a preproducció.
+* **Acceptancy test**: execució de tests automàtics d'acceptació, si escau.
+* **Exploratory test**: execució de tests manuals d'acceptació, si escau.
+* **Generació tag definitiu**: generació del tag definitiu al repositori de codi conforme es tracta d'una versió desplegable a producció.
+* **Desplegament a PRO**: lliurament d'artefactes per al desplegament manual a l'entorn de producció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
+* **Smoke test**: verificació bàsica a l'entorn de producció per assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop finalitzat el procés de desplegament a producció.
 
 ### Versionat
 
-La versió dels projectes ha de ser sempre incremental, és a dir, qualsevol nova actualització de codi lliurat al SIC ha d'anar acompanyat d'un increment de la versió. <br/>
-Per tant, no es permetrà que el projecte desplegui una versió igual o inferior a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
+La versió dels projectes ha de ser sempre **incremental**, és a dir, qualsevol nova actualització de codi lliurat al SIC ha d'anar acompanyat d'un increment de la versió. Per tant, no es permetrà que el projecte desplegui una versió igual o inferior a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
 
 ### Execució de proves unitàries
 
 Dins del procés de construcció dels executables (i sempre que l'aplicació ho requereixi) s'executen les proves unitàries. Com a resultat de l'execució de les proves unitàries s'obtenen dos tipus d'informes:
 
-* Nombre total de proves i percentatge de proves passades i fallides.
-* Percentatge de cobertura de les proves respecte al codi font.
+* Nombre total de **proves i percentatge** de proves passades i fallides.
+* Percentatge de **cobertura** de les proves respecte al codi font.
 
 ### Anàlisi del codi
 
@@ -85,15 +83,15 @@ L'anàlisi de codi és un altre dels processos que es passen dins la tasca de co
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per recuperar la versió anterior del codi del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD. 
+Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD. 
 
 ### Publicació de llibreries
 
-En cas de tractar-se d'una tasca d'instal·lació de dependències al SIC (llibreries pròpies amb el codi repositat en un projecte independent) les etapes es simplificaran considerablement de forma que bàsicament es construeixi l'artefacte i es publiqui al Nexus del SIC, ignorant la resta d'etapes no aplicables.
+En cas de tractar-se d'una tasca d'instal·lació de dependències al SIC (llibreries pròpies amb el codi repositat en un projecte independent) les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**, ignorant la resta d'etapes no aplicables.
 
 ## Autoservei de jobs pipeline
 
-L'Autoservei de jobs pipeline permet als usuaris del SIC la generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació sense la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per preparar la tasca corresponent a cada projecte de GitLab.
+L'Autoservei de jobs pipeline permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per preparar la tasca corresponent a cada projecte de GitLab.
 
 Aquest autoservei de pipelines es basa en la generació de jobs a partir d'arxius de configuració que els equips que en són responsables informen i publiquen al Git. La pipeline de generació identifica si hi ha hagut canvis en aquests arxius al fer un push i s'encarrega de generar una nova versió de la pipeline de desplegament. Finalment, l'executa.
 
@@ -113,15 +111,18 @@ Els objectius que vol assolir aquesta nova funcionalitat són:
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures. Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
 
-A continuació es mostra un esquema del funcionament:
-
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
 
 El funcionament previst és el següent:
 
-1. Els proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració.
-2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de jobs. Aquesta pipeline recupera els arxius de configuració necessaris per a la generació de la pipeline de l'aplicació i l'invoca.
-3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, no es tornarà a regenerar i s'invocarà directament la darrera pipeline generada.
+1. Els **proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració**.
+2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de jobs. Aquesta pipeline recupera els arxius de configuració necessaris per a la **generació de la pipeline** de l'aplicació i la dispara.
+3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, **no es tornarà a regenerar** i s'invocarà directament la darrera pipeline generada.
+
+### Configuració
+
+Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.
+
 
 #### Arxiu de Configuració de l'Aplicació (ACA)
 
@@ -152,13 +153,6 @@ S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu perti
 
 ##### Clau pública
 
-
-## Clau pública del SIC
-
-<a href="/related/sic/key/sic_id_rsa.pub.pem" download target="_blank" style="display: block; margin: 25px auto; border-radius: 5px; width: 200px; padding: 10px; color: white !important; text-decoration: none !important;background-color: #CC0000;text-align: center;font-weight:bold;">
-Descarregar la clau
-</a>
-
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
 
 El SIC aprofita els avantatges d'aquest sistema oferint aquesta clau pública als seus usuaris per tal que aquests puguin fer-ne ús en els procediments operatius que la requereixin. Es tracta d’un arxiu `.pem` amb la clau pública del SIC. Aquesta clau consisteix en una RSA de 4096 bits.
@@ -179,26 +173,22 @@ En el casos en els que el proveïdor d'infraestructures necessita introduir para
 	$
     ```
 
+<a href="/related/sic/key/sic_id_rsa.pub.pem" download target="_blank" style="display: block; margin: 25px auto; border-radius: 5px; width: 200px; padding: 10px; color: white !important; text-decoration: none !important;background-color: #CC0000;text-align: center;font-weight:bold;">
+Descarregar la clau
+</a>
+
 #### Generació i invocació de la pipeline
 
-D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una pipeline generadora de pipelines que construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació.
-
-Finalment, un cop generada la nova pipeline, aquesta és invocada per realitzar la construcció i el desplegament automatitzats definits als arxius de configuració.
+D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació.
+Finalment, un cop generada la nova pipeline, aquesta serà invocada per realitzar la construcció i el desplegament automatitzats definits als arxius de configuració.
 
 En el comunicat del mes de Juny s'ha publicat també el següent [How-To](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús de l'Autoservei de Jobs Pipeline al SIC en el que es genera un ACA. En posteriors howtos es mostrarà com generar un ACI.
 
 També teniu disponible tota la informació relativa al seu funcionament al [Manual d'Usuari del SIC](/related/sic/manual-usuari.pdf).
 
-
-
 ## Matriu de tecnologies compatibles
 
-**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC **no** invalida l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions), ans al contrari, l'estén per acabar de concretar els requeriments propis del SIC.
-
-### Tecnologies de construcció
-
-Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases.
-
+Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
 |Tecnologia|Versions|
@@ -221,9 +211,12 @@ L'única eina que va lligada en certa manera amb la versió de node és **npm**.
 
 Pel que fa a [Angular](https://angular.io/), framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l'aplicació definirà la versió de **ng** (Angular-cli) a utilitzar per la construcció.
 
+**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC **no** invalida l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions), ans al contrari, l'estén per acabar de concretar els requeriments propis del SIC.
+
 ### Properes passes
 
-A futur es preveu l'ús del patró builder amb Docker. En aquest model, es disposa d'un contenidor de construcció que genera l'artefacte desitjat, podent-ne instal·lar en el seu interior les tecnologies i eines necessàries que siguin requerides a tal efecte.
+Es preveu l'ús del patró builder amb Docker. En aquest model, es disposa d'un contenidor de construcció que genera l'artefacte desitjat, podent-ne instal·lar en el seu interior les tecnologies i eines necessàries que siguin requerides.
 
 <br/><br/><br/>
+Si voleu més informació podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals). <br/>
 Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

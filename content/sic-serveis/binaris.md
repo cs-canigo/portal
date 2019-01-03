@@ -22,9 +22,8 @@ El sistema de gestió de **binaris del SIC** s'encarrega de:
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. <br/>
-Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
+Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal.png)</center>
 <br/>
@@ -39,10 +38,10 @@ Aquesta acció és només accessible per als lots d'aplicacions i redirigieix a 
 
 Aquest job sol·licita la següent informació:
 
-* Codi d'aplicació: obligatori (nombre de 4 xifres que es correspon amb el codi de diàleg)
-* Projecte: obligatori
-* Versió: obligatori
-* Arxiu de binaris: obligatori (arxiu de binaris que desitja dipositar)
+* **Codi d'aplicació**: obligatori (nombre de 4 xifres que es correspon amb el codi de diàleg)
+* **Projecte**: obligatori
+* **Versió**: obligatori
+* **Arxiu de binaris**: obligatori (arxiu de binaris que desitja dipositar)
 * Descomprimir ZIP: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat
 * Arxiu de documentació: opcional (arxiu de documentació que desitja associar)
 
@@ -54,12 +53,12 @@ El job validarà que el codi d'aplicació existeixi i que l'usuari disposi dels 
 ### Recuperació d'artefactes
 
 En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Recuperar artefactes del SIC**. <br/>
-Aquesta acció és accessible tant pels Release Managers de tots els lots com per a tots els administradors de tots els CPDS/LdT. Els accessos són securitzats (requereixen autenticació amb credencials GICAR i cada codi d'aplicació requereix autorització per Lot/CPD/LdT). <br/>
-Aquesta opció és la que utilitzarà CPD/LdT per al desplegament de les aplicacions. Aquests accediran al servei en mode lectura a través del frontal web.
+Aquesta acció és accessible tant pels Release Managers de tots els lots com per a tots els administradors de tots els CPDS/LdT i serà utilitzada per CPD/LdT de cara al desplegament de les aplicacions. Aquests accediran al servei en mode lectura a través del frontal web.
 
 ## Eliminació de binaris
 
-S'executa un procés diari nocturn d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No es tracta doncs d'un servei de custodia permanent de binaris si no d'un sistema d'intercanvi de binaris amb CPD/LdT.
+S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No es tracta doncs d'un servei de custodia permanent de binaris si no d'un sistema d'intercanvi de binaris amb CPD/LdT.
 
 <br/><br/><br/>
+Si voleu més informació podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals). <br/>
 Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

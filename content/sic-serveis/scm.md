@@ -15,14 +15,14 @@ weight      = 1
 
 **GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
 
-Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
+Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de **consolidar el codi i lliurar-lo**. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
 
 ## Operativa principal
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR.
+Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ### Creació de comptes d'usuari
 
@@ -30,13 +30,13 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l
 
 ### Permisos sobre grups i projectes
 
-Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
+Per a disposar d'accés als grups i projectes s'haurà d'adreçar als **Release Managers** del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 <br/>
 Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
 
 ### Estructura de projectes
 
-Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticament d'un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: https://git.intranet.gencat.cat/0192). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d'una llibreria, un microservei, un mòdul o un programa sense fragments independents.
+Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticament d'un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: https://git.intranet.gencat.cat/0192). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d'una **llibreria, un microservei, un mòdul o un programa sense fragments independents**.
 <br/>
 No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de Binaris.
 
@@ -51,9 +51,9 @@ Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i pré
 
 En publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca associada en el sistema d'Integració Contínua (Jenkins). En aquest sentit, cal tenir pressents algunes premisses:
 
-* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca MASTER i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
-* Cal proporcionar processos de construcció d’artefactes independents de les màquines i plataformes on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
-* En realitzar la pujada d'una nova versió del codi font, es dispararà la tasca de construcció i desplegament associada.
+* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
+* Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
+* En realitzar la pujada d'una nova versió del codi font, es **dispararà la tasca de construcció i desplegament** associada.
 
 <br/>
 Per a més informació: [Integració continua] (/sic-serveis/ci/)
@@ -149,4 +149,5 @@ Per finalitzar es puja el codi a Git
 És molt important analitzar el log que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
 
 <br/><br/><br/>
+Si voleu més informació podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals). <br/>
 Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
