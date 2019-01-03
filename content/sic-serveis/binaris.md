@@ -18,7 +18,7 @@ El sistema de gestió de **binaris del SIC** s'encarrega de:
 * Emmagatzemar els binaris que carreguen els Release Managers (o carregats pel sistema d'integració continua per a entorns amb desplegament no automàtic) i deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
 * Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
 
-## Operativa principal
+## Funcionament
 
 ### Accés al servei
 

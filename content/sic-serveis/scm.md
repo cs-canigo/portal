@@ -17,7 +17,7 @@ weight      = 1
 
 Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de **consolidar el codi i lliurar-lo**. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
 
-## Operativa principal
+## Funcionament
 
 ### Accés al servei
 

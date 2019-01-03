@@ -34,8 +34,8 @@ Es contemplen dos tipus de modalitats d’integració de les aplicacions al SIC:
 
 * **Integracions automatitzades**: es fa ús de les eines per la custodia de codi font i les eines de construcció i desplegament automatitzat d’artefactes. Es divideixen en dos tipus:
 	- Automatització en la construcció i desplegament fins a l’entorn d’integració i entrega dels artefactes a CPD a través del servei de gestió de binaris per a que CPD pugui realitzar el desplegament als entorns de preproducció i producció.
-	- Automatització en la construcció i desplegament fins a l’entorn de producció. Actualment disponible per aplicacions ubicades a Cloud Públic.
-* **Integracions sense automatització**: es fa ús de les eines per c la custodia de codi font i és el proveïdor d’aplicacions qui s’encarrega de fer la construcció i lliurar els artefactes a través del servei de gestió de binaris per a que CPD pugui realitzar el desplegament.
+	- Automatització en la construcció i desplegament fins a l’entorn de producció. Actualment disponible per aplicacions desplegades al Cloud Públic.
+* **Integracions sense automatització**: es fa ús de les eines per a la custodia de codi font i és el proveïdor d’aplicacions qui s’encarrega de fer la construcció i lliurar els artefactes a través del servei de gestió de binaris per a que CPD pugui realitzar el desplegament.
 
 ## Serveis
 
