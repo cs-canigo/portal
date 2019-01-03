@@ -18,12 +18,19 @@ weight      = 2
 
 **Jenkins** és l'eina implantada al SIC per la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques, es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen automàticament als entorns preproductius i productius. Està basat en el projecte Hudson.
 
+<br/>
+**Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes, ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i paquets bower. <br/>
+Actualment aquest servei és administrat per l'equip del SIC i només permet consultar-lo en mode lectura.
+
 ## Funcionament
 
-### Accés al servei
+### Accés als serveis
 
-Podrà accedir mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
+Podrà accedir a Jenkins mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
+
+<br/>
+Podrà accedir a Nexus mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/
 
 ### Relació de tasques disponibles
 
@@ -100,7 +107,9 @@ Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa 
 
 ### Publicació de llibreries
 
-En cas de tractar-se d'una tasca d'instal·lació de dependències al SIC (llibreries pròpies amb el codi repositat en un projecte independent) les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**, ignorant la resta d'etapes no aplicables.
+Totes les dependències de l’aplicació han d’estar accessibles en els repositoris públics configurats al Nexus del SIC. Es pot validar la seva existència accedint a la següent URL: https://hudson.intranet.gencat.cat/nexus. <br/>
+
+En cas de tractar-se d'una llibreria propia amb codi repositat al SIC, caldrà construir una tasca d'instal·lació de dependències. En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**.
 
 ## Autoservei de jobs pipeline
 
