@@ -145,7 +145,7 @@ El funcionament previst és el següent:
 
 Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.
 
-
+<br/>
 #### Arxiu de Configuració de l'Aplicació (ACA)
 
 La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de text en format YAML que serà responsabilitat del proveïdor d'aplicacions de mantenir-lo actualitzat en el que s'ha d'aportar la següent configuració:
@@ -159,6 +159,9 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 4. **Procés de construcció**: Definició del procés de construcció amb l'ús de passes (*steps*) de construcció.
 5. **Procés de desplegament**: Definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 
+En el comunicat del mes de Juny s'ha publicat també el següent [How-To](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús de l'Autoservei de Jobs Pipeline al SIC en el que es genera un ACA. En posteriors howtos es mostrarà com generar un ACI.
+
+<br/>
 #### Arxiu de Configuració d'Infraestructures (ACI)
 
 D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC (`https://git.intranet.gencat.cat/<id_prov>/<id_prov>.git`). En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
@@ -173,6 +176,7 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
+<br/>
 ##### Clau pública
 
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
@@ -199,14 +203,10 @@ En el casos en els que el proveïdor d'infraestructures necessita introduir para
 Descarregar la clau
 </a>
 
-#### Generació i invocació de la pipeline
+### Generació i invocació de la pipeline
 
 D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació.
 Finalment, un cop generada la nova pipeline, aquesta serà invocada per realitzar la construcció i el desplegament automatitzats definits als arxius de configuració.
-
-En el comunicat del mes de Juny s'ha publicat també el següent [How-To](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús de l'Autoservei de Jobs Pipeline al SIC en el que es genera un ACA. En posteriors howtos es mostrarà com generar un ACI.
-
-També teniu disponible tota la informació relativa al seu funcionament al [Manual d'Usuari del SIC](/related/sic/manual-usuari.pdf).
 
 ## Matriu de tecnologies compatibles
 
