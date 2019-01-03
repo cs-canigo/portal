@@ -1,7 +1,7 @@
 +++
 date        = "2019-01-02"
 title       = "Custodia de codi font"
-description = "GitLab és el producte implantat al SIC per la custodia de codi font"
+description = "GitLab és l'eina implantada al SIC per la custodia de codi font"
 aliases = [
     "/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/"
 ]
@@ -13,13 +13,14 @@ weight      = 1
 
 ## Introducció
 
-El GitLab és el producte implantat al SIC per a la custodia de codi font. Gitlab és un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
+**GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
 
 ## Operativa principal
 
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR.
 
 ### Creació de comptes d'usuari
 
@@ -39,9 +40,14 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 
 Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l'acció "New project". Haurà d'indicar el nom del projecte i seleccionar el nivell de visibilitat "Private".
 
-<br/>
 <CENTER>![Nou projecte](/related/sic/new_project.PNG)</center>
 <br/>
+
+### Integració contínua
+
+En publicar una nova versió del codi font sobre la branca MASTER, automàticament es disparará la tasca associada en el sistema d'integració contínua (Jenkins).<br/>
+Per a més informació: [Integració continua] (/sic-serveis/ci/)
+
 
 ## Migració repositoris SVN a Git
 
@@ -130,3 +136,6 @@ Per finalitzar es puja el codi a Git
 	git push --tags
 	
 És molt important analitzar el log que mostra Git per pantalla per assegurar que no hi ha errors i s'han migrat tant el trunk com tots els tags.
+
+<br/><br/><br/>
+Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

@@ -1,7 +1,7 @@
 +++
 date = "2019-01-02"
 title = "Binaris"
-description = "Per la distribució d'artefactes a CPD"
+description = "Eina del SIC per el lliurament d'artefactes a CPD"
 sections = "SIC"
 aliases = [
   "/noticies/2017-07-05-SIC-Gestio-binaris/"
@@ -13,7 +13,7 @@ weight = 3
 
 ## Introducció
 
-El sistema de gestió de binaris del SIC s'encarrega de:
+El sistema de gestió de **binaris del SIC** s'encarrega de:
 
 * Emmagatzemar els binaris que carreguen els Release Managers (o carregats pel sistema d'integració continua per a entorns amb desplegament no automàtic) i deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
 * Emmagatzemar binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etc.) per a aplicacions que repositen codi font.
@@ -23,8 +23,8 @@ El sistema de gestió de binaris del SIC s'encarrega de:
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR.
 
-<br/>
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal.png)</center>
 <br/>
 
@@ -48,7 +48,7 @@ Aquest job sol·licita la següent informació:
 El job validarà que el codi d'aplicació existeixi i que l'usuari disposi dels corresponents permissos. Si s'especifica un codi d'aplicació - projecte - versió ja pujada anteriorment, el sistema sobreescriurà el seu contingut.
 
 <br/>
-<p style="color: #CC0000;font-weight: bold"> **Avís**: A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte.</p> Només estaran exemptes les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
+<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte.</span> Només estaran exemptes les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
 
 ### Recuperació d'artefactes
 
@@ -59,3 +59,6 @@ Aquesta opció és la que utilitzarà CPD/LdT per al desplegament de les aplicac
 ## Eliminació de binaris
 
 S'executa un procés diari nocturn d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No es tracta doncs d'un servei de custodia permanent de binaris si no d'un sistema d'intercanvi de binaris amb CPD/LdT.
+
+<br/><br/><br/>
+Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
