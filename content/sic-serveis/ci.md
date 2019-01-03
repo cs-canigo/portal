@@ -16,11 +16,25 @@ weight      = 2
 
 ## Introducció
 
-**Jenkins** és l'eina implantada al SIC per la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques, es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen automàticament als entorns preproductius i productius. Està basat en el projecte Hudson.
+**Jenkins** és l'eina implantada al SIC per la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques, es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
 
 <br/>
 **Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes, ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i paquets bower. <br/>
 Actualment aquest servei és administrat per l'equip del SIC i només permet consultar-lo en mode lectura.
+
+## Modalitats de desplegament
+
+Es contemplen diverses modalitats de desplegament:
+
+* **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les tasques prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
+* **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
+* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les tasques prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. 
+
+Actualment, el sistema previst seria el següent:
+
+* Entorn **INT**: modalitat automàtica.
+* Entorn **PRE/PRO**: modalitat semiautomàtica (per defecte) o automàtica per CPD si així s'acorda. Només s'aplica la modalitat automàtica en aplicacions desplegades al Cloud Públic.
+* **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
 ## Funcionament
 
@@ -85,20 +99,6 @@ Dins del procés de construcció dels executables (i sempre que l'aplicació ho 
 ### Anàlisi del codi
 
 L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides, s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'eina implantada al SIC per la Oficina de Qualitat es **Kiwuan**.
-
-### Modalitats de desplegament
-
-Es contemplen diverses modalitats de desplegament:
-
-* Semiautomàtica: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les tasques prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
-* Automàtica: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
-* Automàtica per CPD: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les tasques prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. 
-
-Actualment, el sistema previst seria el següent:
-
-* Entorn **INT**: modalitat automàtica.
-* Entorn **PRE/PRO**: modalitat semiautomàtica (per defecte) o automàtica per CPD si així s'acorda. Només s'aplica la modalitat automàtica en aplicacions desplegades al Cloud Públic.
-* **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
 ### Artefactes generats i gestió de possibles marxes enrere
 

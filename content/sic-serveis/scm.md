@@ -54,8 +54,6 @@ En publicar una nova versió del codi font sobre la branca MASTER, automàticame
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
 * En realitzar la pujada d'una nova versió del codi font, es **dispararà la tasca de construcció i desplegament** associada.
-
-<br/>
 Per a més informació: [Integració continua] (/sic-serveis/ci/)
 
 
@@ -65,7 +63,6 @@ Per aplicacions que encara no hagin migrat el seu codi font cap a l'eina actual 
 
 * Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
 * El repositori a migrar **no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 25 MB**.
-
 Actualment el repositori original a SVN es troba disponible en mode lectura per a poder accedir a l'historial. Per a dur a terme la migració al nou sistema, caldrà seguir les següents passes:
 
 <br/>
@@ -79,7 +76,6 @@ El Git del SIC té restriccions alhora de pujar fitxers binaris, fet que pot pro
 	- Binaris no prescindibles: s'han d'ubicar en el [servei de custodia de binaris](/sic-serveis/binaris/) o al [Nexus](https://hudson.intranet.gencat.cat/nexus/) del SIC.
 * Inicialitzar el repositori Git local (git init)
 * Fer el commit, push i tag d'aquesta versió inicial al Git
-
 Un cop finalitzat aquest procés al Git es disposarà del tag més recent. L'històric es mantindrà al SVN en mode lectura.
 
 <br/>
