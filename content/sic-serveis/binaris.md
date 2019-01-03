@@ -23,7 +23,8 @@ El sistema de gestió de **binaris del SIC** s'encarrega de:
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR.
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. <br/>
+Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal.png)</center>
 <br/>

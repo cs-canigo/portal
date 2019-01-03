@@ -15,6 +15,8 @@ weight      = 1
 
 **GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
 
+Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
+
 ## Operativa principal
 
 ### Accés al servei
@@ -26,15 +28,17 @@ Haurà d'autenticar-se amb de les seves credencials d'accés GICAR.
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà per a que pugui dur a terme el procés d'alta.
 
-### Permissos sobre grups i projectes
+### Permisos sobre grups i projectes
 
 Per a disposar d'accés als grups i projectes s'haurà d'adreçar als Release Managers del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 <br/>
 Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
 
-### Organització del codi font de les aplicacions
+### Estructura de projectes
 
 Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticament d'un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: https://git.intranet.gencat.cat/0192). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d'una llibreria, un microservei, un mòdul o un programa sense fragments independents.
+<br/>
+No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de Binaris.
 
 ### Creació de nous projectes
 
@@ -45,13 +49,20 @@ Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i pré
 
 ### Integració contínua
 
-En publicar una nova versió del codi font sobre la branca MASTER, automàticament es disparará la tasca associada en el sistema d'integració contínua (Jenkins).<br/>
+En publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca associada en el sistema d'Integració Contínua (Jenkins). En aquest sentit, cal tenir pressents algunes premisses:
+
+* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca MASTER i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
+* Cal proporcionar processos de construcció d’artefactes independents de les màquines i plataformes on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
+* En realitzar la pujada d'una nova versió del codi font, es dispararà la tasca de construcció i desplegament associada.
+
+<br/>
 Per a més informació: [Integració continua] (/sic-serveis/ci/)
 
 
 ## Migració repositoris SVN a Git
 
-Per aplicacions que encara no hagi migrat el seu codi font cap a l'eina actual de custodia de codi font del SIC (GitLab), podran fer-ho si s'acompleixen els següents requisits:
+Per aplicacions que encara no hagin migrat el seu codi font cap a l'eina actual de custodia de codi font del SIC (GitLab), podran fer-ho si s'acompleixen els següents requisits:
+
 * Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
 * El repositori a migrar **no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 25 MB**.
 

@@ -18,7 +18,7 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 
 * Els projectes han de crear-se dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs i creació de peticions Remedy s'associïn a l'aplicació corresponent.
 * **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de [Binaris](https://bin.sic.intranet.gencat.cat).
-* Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a **Release Managers** seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà uan es decideixi distribuir als entorns dels serveis TIC centrals.
+* Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a **Release Managers** seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que treballaran les pipelines de Jenkins.
 * Les pipelines de Jenkins seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS definitius un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
 
@@ -47,7 +47,7 @@ Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actu
 
 * Entorn **INT**: automàtica (es construeixen els artefactes i es despleguen als servidors web, d’aplicacions i/o de bases de dades).
 * Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats. Ambdues modalitats delegaran qualsevol tasca prèvia al desplegament (backup, preparació de marxa enrere...) als tècnics de CPD.
-* **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés.
+* **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés de desplegament.
 
 ## Funcionament dels jobs de Jenkins
 En realitzar una pujada de codi sobre la branca MASTER, si el projecte té un job de Jenkins associat, automàticament es llençarà la canonada de desplegament:
