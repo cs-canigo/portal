@@ -48,7 +48,7 @@ Aquest job sol·licita la següent informació:
 El job validarà que el codi d'aplicació existeixi i que l'usuari disposi dels corresponents permissos. Si s'especifica un codi d'aplicació - projecte - versió ja pujada anteriorment, el sistema sobreescriurà el seu contingut.
 
 <br/>
-**Avís**: A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte. Només estaran exemptes les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
+<p style="color: #CC0000;font-weight: bold"> **Avís**: A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte.</p> Només estaran exemptes les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
 
 ### Recuperació d'artefactes
 
