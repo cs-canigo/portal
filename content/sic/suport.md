@@ -7,7 +7,6 @@ aliases = [
     "/sic/peticions/",
     "/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/"
 ]
-]
 toc = true
 taxonomies = []
 weight = 5
