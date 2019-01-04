@@ -14,11 +14,13 @@ weight = 4
 
 ## Introducció
 
-El SIC 2.0 proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis. Aquest autoservei d'usuaris es realitza mitjançant l'eina de custodia de codi font implantada: [Gita](https://git.intranet.gencat.cat/)**.
+El SIC 2.0 proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis. <br/>
+Aquest autoservei d'usuaris es realitza mitjançant l'eina de custodia de codi font implantada: [Git](https://git.intranet.gencat.cat/).
 
 ## Estructura de permisos del SIC
 
 El SIC té estructurada la seva seguretat en diferents tipus de grups:
+
 * Grups per a lots i proveïdors d'aplicacions
 * Grups per a CPDs i LdT
 * Altres grups
@@ -29,6 +31,7 @@ Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen 
 * Release Managers
 * Responsable de lot
 A continuació, descriurem cadascun d'aquests subtipus.
+<br/>
 
 #### Release Managers
 
@@ -59,6 +62,8 @@ La pertinença als grups d'aquest tipus es realitza de forma manual ja que els u
 
 ## Funcionament
 
+A continuació, ens centrarem en la gestió de membres del grup de Release Managers mitjançant l'autoservei d'usuaris.
+
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
@@ -67,29 +72,36 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Rele
 ### Creació de comptes d'usuari
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
+
 **IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'adreça de correu i que l'usuari es trobi bolcat a l'LDAP del SIC (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça com si no pot accedir al servei perquè es produeix un error d'autenticació, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
 
 ### Estructura de grups i projectes
 
-Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions. <br/>
+Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
+
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
-### Comptabilitat SIC 1.0
+### Comptabilitat amb SIC 1.0
 
-Els usuaris que ja eren **"Release Manager Lot x Àmbit"** al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Per tant, en accedir al portal del GitLab (mitjançant les credencials GICAR corresponents) disposaran d'accés als grups per codi de diàleg de les seves aplicacions. <br/>
+Els usuaris que ja eren **"Release Manager Lot x Àmbit"** al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Per tant, en accedir al portal del GitLab (mitjançant les credencials GICAR corresponents) disposaran d'accés als grups per codi de diàleg de les seves aplicacions.
+
 **AVÍS**: durant el primer accés al GitLab no es comptarà amb visibilitat sobre els grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de disposar d'accés als grups i projectes corresponents.
+
 <center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
 <br/>
 
 ### Permisos d'accés
 
 En crear projectes dins els grups d'aplicació, la resta d'usuaris del lot que no siguin Release Manager no disposaran de visibilitat.
+
 <CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
 <br/>
-Els mateixos usuaris Release Manager poden proporcionar visibilitat a la resta d'usuaris i ho podran fer a nivell de projecte, no de grup de projectes. Podrà consultar, editar, afegir i eliminar membres del projecte.
+Els mateixos usuaris Release Manager poden proporcionar visibilitat a la resta d'usuaris i ho podran fer a nivell de projecte, no de grup de projectes. Podran consultar, editar, afegir i eliminar membres del projecte.
+
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)</center>
 <br/>
 Per a concedir accés sobre un projecte caldrà:
+
 * Accedir al projecte.
 * Mitjançant el menú superior cal seleccionar "Settings" i, dins aquest ,"Members".
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella cercar per NIF.
@@ -97,10 +109,11 @@ Per a concedir accés sobre un projecte caldrà:
 	* Rol Master: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
 	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió(descàrrega i pujades).
 * Picar sobre el botó de "Add to Project"
+
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
 
-En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager. Aquesta promoció a Release Manager permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
+En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
 

@@ -40,11 +40,11 @@ Actualment, el sistema previst seria el següent:
 
 ### Accés als serveis
 
-Podrà accedir a Jenkins mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
+Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 <br/>
-Podrà accedir a Nexus mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/
+Podrà accedir a **Nexus** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/
 
 ### Relació de tasques disponibles (jobs)
 

@@ -23,15 +23,12 @@ Aquest repositori no és un entorn de desenvolupament, per lo que només les per
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
-Per a més informació: [Autoservei d'usuaris]
 
 ### Creació de comptes d'usuari i permisos d'accés
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
+Si no disposa d'accés als grups i projectes s'haurà d'adreçar als **Release Managers** del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 
-Per a disposar d'accés als grups i projectes s'haurà d'adreçar als **Release Managers** del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
-
-<br/>
 Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
 
 ### Estructura de grups i projectes
@@ -40,7 +37,8 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 <br/>
 Per accedir a la vista de grups i projectes, ho podrà fer des del menú d'opcions generals (botó <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> situat a la part superior esquerra).
 <br/>
-No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. Es podrà fer ús del servei de gestió de binaris. <br/>
+No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. Es podrà fer ús del servei de gestió de binaris.
+
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 ### Creació de nous projectes
