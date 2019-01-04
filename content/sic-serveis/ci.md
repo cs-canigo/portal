@@ -1,16 +1,16 @@
 +++
-date        = "2019-01-03"
-title       = "Integració continua"
+date = "2019-01-03"
+title = "Integració continua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
-sections    = "SIC"
-toc         = true
+sections = "SIC"
+toc = true
 aliases = [
     "/noticies/2018-05-16-SIC-Autoservei-pipelines/",
     "/sic/integracions-dev/",
     "/sic/clau/"
 ]
-taxonomies  = []
-weight      = 2
+taxonomies = []
+weight = 2
 +++
 
 

@@ -1,14 +1,14 @@
 +++
-date        = "2019-01-02"
-title       = "Custodia de codi font"
+date = "2019-01-02"
+title = "Custodia de codi font"
 description = "GitLab és l'eina implantada al SIC per la custodia de codi font"
 aliases = [
     "/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/"
 ]
-sections    = "SIC"
-taxonomies  = []
-toc         = true
-weight      = 1
+sections = "SIC"
+taxonomies = []
+toc = true
+weight = 1
 +++
 
 ## Introducció
