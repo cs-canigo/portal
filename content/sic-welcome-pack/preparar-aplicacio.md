@@ -64,4 +64,4 @@ Per poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el 
 <br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
 Si voleu més informació podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals). <br/>
-Si teniu qualsevol dubte podeu contactar amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

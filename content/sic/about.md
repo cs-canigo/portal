@@ -8,7 +8,6 @@ taxonomies  = []
 weight 		= 1
 +++
 
-
 ## Conceptes i motivació
 
 La integració de les diferents peces de programari que componen una aplicació és un repte present en tot projecte de desenvolupament. 
