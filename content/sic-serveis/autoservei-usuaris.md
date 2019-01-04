@@ -15,9 +15,9 @@ weight = 4
 ## Introducció
 
 El SIC 2.0 proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis. <br/>
-Aquest autoservei d'usuaris es realitza mitjançant l'eina de custodia de codi font implantada: [Git](https://git.intranet.gencat.cat/).
+Abans d'entrar en el funcionament de l'autoservei d'usuaris, explicarem breument l'estructura actual de permisos del SIC.
 
-## Estructura de permisos del SIC
+## Estructura de permisos
 
 El SIC té estructurada la seva seguretat en diferents tipus de grups:
 
@@ -27,16 +27,17 @@ El SIC té estructurada la seva seguretat en diferents tipus de grups:
 
 ### Grups per a lots i proveïdors d'aplicacions
 
-Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen l'amalgama de perfils requerits per desenvolupar una aplicació. Dins d'aquests tipus de grups, distingim tres subtipus:
+Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen l'amalgama de perfils requerits per desenvolupar una aplicació. Dins d'aquests tipus de grups, distingim dos subtipus:
+
 * Release Managers
 * Responsables de lot
+
 A continuació, descriurem cadascun d'aquests subtipus.
 <br/>
 
 #### Release Managers
 
-Aquest tipus de grup recull als Release Managers. És a dir, recullen a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. <br/>
-Els membres d'un grup Release Managers són perfils que poden:
+Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
 * Operar amb servei de **custodia de codi**.
 * **Concedir permisos** a altres companys per accedir com a Developers o Masters al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
@@ -47,23 +48,24 @@ Els membres d'un grup Release Managers són perfils que poden:
 #### Responsables de lot
 
 Aquest tipus de grup recull als responsables de lot. <br/>
-Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat manca de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés als companys. <br/>
-Aquest grup, per tant, ha passat a ser un agregador de tots els codis d'aplicació del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager.
+Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat manca de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
+Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager.
 
 ### Grups de CPDs i LdTs
 
-Aquests tipus de grups corresponen a centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grup tenen **accés en mode lectura als repositoris i al mòdul de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, els quals assigna a un LOT/CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
+Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al mòdul de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
+La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT/CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
 
 ### Altres grups
 
-Al SIC 2.0 tenim altres grups per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. zbr/>
-Es tracta de grups per al correcte funcionament dels serveis i per a la integració del SIC amb la resta d'agents del CTTI. <br/>
-La pertinença als grups d'aquest tipus es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
+Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. <br/>
+Es tracta de grups per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+La pertinença a aquests tipus de grups es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
 
 ## Funcionament
 
 A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
+Aquest servei es realitza mitjançant l'eina de custodia de codi font implantada: [Git](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
 
@@ -74,7 +76,7 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Rele
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
 
-**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu** i que l'usuari es trobi bolcat a l'**LDAP del SIC** (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça com si no pot accedir al servei perquè es produeix un error d'autenticació, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
+**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu** i que l'usuari es trobi bolcat a l'**LDAP del SIC** (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça de correu, com si no pot accedir al servei perquè es produeix un error d'autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
 
 ### Estructura de grups i projectes
 
@@ -97,7 +99,7 @@ En crear projectes dins els grups d'aplicació, la resta d'usuaris del lot que n
 
 <CENTER>![Visibilitat resta usuaris Lot](/images/news/autoserveiUsuaris_2.PNG)</center>
 <br/>
-Els mateixos usuaris Release Manager podran proporcionar visibilitat a la resta d'usuaris i ho podran fer **a nivell de projecte**, no de grup de projectes. Podran consultar, editar, afegir i eliminar membres del projecte.
+Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar membres del projecte, però ho hauran de fer **a nivell de projecte**, no de grup de projectes.
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_3.PNG)</center>
 <br/>
