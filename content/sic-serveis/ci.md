@@ -16,6 +16,8 @@ weight = 2
 
 ## Introducció
 
+![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
+
 **Jenkins** és l'eina implantada al SIC per la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
 
 <br/>
