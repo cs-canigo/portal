@@ -109,7 +109,7 @@ Per a concedir accés sobre un projecte caldrà:
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella **cercar per NIF**.
 * Escollir el **rol** que ha de tenir l'usuari dins el projecte:
 	* Rol Master: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
-	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió(descàrrega i pujades).
+	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
 * Prémer el botó de "**Add to Project**"
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>

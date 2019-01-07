@@ -18,7 +18,7 @@ weight = 2
 
 ![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
 
-**Jenkins** és l'eina implantada al SIC per la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
+**Jenkins** és l'eina implantada al SIC per a la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
 
 <br/>
 **Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes, ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i paquets bower. <br/>
@@ -43,7 +43,7 @@ Actualment, el sistema previst seria el següent:
 ### Accés als serveis
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ![Jenkins](/related/sic/serveis/jenkins-sic.png)
 <br/>

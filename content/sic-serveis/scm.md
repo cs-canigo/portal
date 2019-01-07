@@ -24,7 +24,7 @@ Aquest repositori no és un entorn de desenvolupament, per lo que només les per
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei, així com la resta de membres de l'equip de desenvolupament als que es decideixi atorgar accés. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
 
 ![GitLab](/related/sic/serveis/gitlab-sic.png)
 <br/>
