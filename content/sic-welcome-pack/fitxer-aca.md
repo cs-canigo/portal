@@ -15,35 +15,35 @@ weight = 4
 
 Dins el sistema d'Integració Contínua, el SIC proporciona un servei mitjançant el qual, amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructures i sense la intervenció de l'equip del SIC, es pot construir un job d’automatització de la construcció i del desplegament de forma automàtica.
 
-### Requeriments
+## Requeriments generals
 
 * **Col·laboració**: 
 El requeriment més important és que tant el proveïdor d'aplicacions com el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació fluida. Per a aplicacions noves, un bon punt de trobada sol ser les reunions de **Fase 0** i el seu posterior seguiment.
 * **L'aplicació ha de ser integrable amb l'automatització de la construcció i del desplegament**: 
 Si l'aplicació empra tecnologies no compatibles amb el SIC, òbviament no es podrà generar un job que pugui realitzar les tasques necessàries per a la construcció i/o el desplegament de l'aplicació.
 
-### Requeriments per omplir l'ACA
+## Requeriments per omplir l'ACA
 
 Els requeriments per poder omplir l'ACA adequadament són:
 
 * Tenir coneixement dels entorns que disposarà l'aplicació a CTTI.
 * Disposar dels identificadors d'infraestructures on es desplegarà l'aplicació.
 
-### Cas d'exemple: Aplicació d'equipaments
+## Cas d'exemple: Aplicació d'equipaments
 
 A mode d'exemple, mostrarem com s'integraria una aplicació Canigó 3.2.4 com la d'Equipaments a l'Autoservei de jobs del SIC.
 
-#### Detalls de l'aplicació
+### Detalls de l'aplicació
 
 L'aplicació d'Equipaments és una aplicació Canigó 3.2.4 que està basada en un backend que al fer el build genera un petit artefacte estàtic i un artefacte dinàmic. A nivell de base de dades, disposa d'una h2 embeguda.
 
 Imaginarem que es tracta d'una aplicació amb codi d'aplicació 9999, el proveïdor de l'aplicació és lot A99 i el proveïdor d'infraestructures és CPD9.
 
-#### Punt d'inici
+### Punt d'inici
 
 Partim de l'escenari en que tenim un repositori al Gitlab amb aquesta aplicació. A més, disposem ja de la carpeta `/sic` amb l'arxiu `sic.yml` que inclou la seva versió.
 
-#### Pactar noms d'infraestructura
+### Pactar noms d'infraestructura
 
 A l'**Arxiu de Configuració de l'Aplicació (ACA)**, els proveïdors d'aplicacions han de fer referència a les infraestructures on despleguen el seus artefactes. No cal que en coneixin els detalls, simplement cal que s'enumerin indicant-ne en quins entorns estan habilitades.
 
@@ -59,7 +59,7 @@ El proveïdor d'infraestructures proposa els següents noms d'infraestructura:
 * **Apache** → `9999_equipaments_apaches`
 * **Tomcat** → `9999_equipaments_tomcats`
 
-#### Generació de l'ACA
+### Generació de l'ACA
 
 El proveïdor d'aplicacions haurà de generar l'ACA al repositori del seu projecte, a l'arxiu `/sic/aca.yml`.
 
@@ -85,7 +85,7 @@ Tot seguit, cal definir els recursos dins de l'entitat `resources`. Hi ha 3 tipu
 * infraestructures (`infrastructures`)
 * artefactes (`artifacts`)
 
-##### Entorns
+#### Entorns
 
 En aquest exemple, proposem tres entorns (INT → PRE → PRO):
 
@@ -103,7 +103,7 @@ resources:
       position: 3
 ```
 
-##### Infraestructures
+#### Infraestructures
 
 Tal i com s'ha comentat anteriorment, hi ha dues infraestructures:
 
@@ -142,7 +142,7 @@ resources:
       provider: cpd9
 ```
 
-##### Artefactes
+#### Artefactes
 
 Els artefactes generats, en aquest cas, són dos, un artefacte dinàmic i un d'estàtic. Cal incloure el path corresponent a cada artefacte:
 
@@ -158,7 +158,7 @@ resources:
       path: target/equipaments.war
 ```
 
-##### Procés de construcció
+#### Procés de construcció
 
 Per a construir l'aplicació Equipaments cal executar una comanda maven amb els gols `clean` i `package`. És un únic pas. Per tant, s'hauria d'incloure un únic *step*:
 
@@ -176,7 +176,7 @@ build:
 
 La secció `generates` inclou un llistat dels identificadors dels artefactes generats. Aquest han de correspondre amb els que hi hagi declarats a la secció `resources.artifacts`.
 
-##### Procés de desplegament
+#### Procés de desplegament
 
 Per al procés de desplegament, cal definir el desplegament de l'artefacte estàtic als servidors Apache i de l'artefacte binari als servidors Tomcat. El resultat el mostrem a continuació:
 
@@ -197,7 +197,7 @@ deploy:
 
 Encara que l'ordre sigui indiferent, cal imposar un ordre en els passos. En aquest cas, hem optat fer el desplegament de la capa web primer i després el desplegament de la capa d'aplicació.
 
-##### Resultat final
+#### Resultat final
 
 D'aquesta manera, l'ACA resultant quedaria de la següent manera:
 
