@@ -63,5 +63,5 @@ Aquesta acció és accessible tant pels Release Managers de tots els lots com pe
 S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [Manuals](https://canigo.ctti.gencat.cat/sic/manuals). <br/>
+Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
