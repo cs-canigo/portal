@@ -26,6 +26,9 @@ Aquest repositori no és un entorn de desenvolupament, per lo que només les per
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
 
+![GitLab](/related/sic/serveis/gitlab-sic.png)
+<br/>
+
 ### Creació de comptes d'usuari i permisos d'accés
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
@@ -47,7 +50,7 @@ Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l'acció "New project". Haurà d'indicar el nom del projecte i seleccionar el nivell de visibilitat "Private".
 
-<CENTER>![Nou projecte](/related/sic/new_project.PNG)</center>
+<CENTER>![Nou projecte](/related/sic/serveis/new_project.png)</center>
 <br/>
 
 ### Integració contínua

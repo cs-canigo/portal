@@ -45,8 +45,14 @@ Actualment, el sistema previst seria el següent:
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
+![Jenkins](/related/sic/serveis/jenkins-sic.png)
+<br/>
+
 <br/>
 Podrà accedir a **Nexus** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/
+
+![Nexus](/related/sic/serveis/nexus-sic.png)
+<br/>
 
 ### Relació de tasques disponibles (jobs)
 
@@ -65,7 +71,7 @@ Els jobs de tipus "pipeline" no es podran iniciar directament des del portal ni 
 
 Els jobs multi-etapa realitzen multitud d'accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
-<CENTER>![Nou projecte](/related/sic/jobs_stages.PNG)</center>
+<CENTER>![Nou projecte](/related/sic/serveis/jobs_stages.png)</center>
 <br/>
 
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
