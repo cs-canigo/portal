@@ -10,7 +10,7 @@ weight = 4
 
 ## Introducció
 
-El SIC proporciona una sèrie de serveis: custodia de codi font (GitLab), integració contínua (Jenkins i Nexus) i binaris. Aquests serveis resulten d'**obligat ús excepte si les aplicacions utilitzen altres repositoris homologats o n'estan exemptes**. Si no és el cas i la tecnologia de l'aplicació permet desplegar-la automàticament via SIC, esdevindrà requisit imprescindible per al pas a producció.
+El SIC proporciona una sèrie de serveis: custodia de codi font (GitLab), integració contínua (Jenkins i Nexus) i binaris. Aquests serveis resulten d'**obligat ús excepte si les aplicacions utilitzen altres sistemes homologats o n'estan exemptes**. Si no és el cas i la tecnologia de l'aplicació permet desplegar-la automàticament via SIC, esdevindrà requisit imprescindible per al pas a producció.
 
 Tots els serveis del SIC basen la gestió d'usuaris en la identitat **GICAR** associada proporcionant un **autoservei d'usuaris** per a disposar d’autonomia a l'hora d'atorgar-hi accés a la resta de membres de l'equip de desenvolupament.
 
@@ -21,11 +21,11 @@ Per tant, es contemplen tres tipus de modalitats d'ús dels serveis:
 * **Automatitzada**: 
 	- Es realitza custodia de codi i les fonts s'actualitzen en cada lliurament.
 	- S'utilitzen les eines de construcció i desplegament automatitzat d'artefactes, lliurant els artefactes per al desplegament de preproducció i producció mitjançant el servei de binaris (excepte Cloud que es desplega automàticament en aquests entorns).
-* **Sense automatització**, per aplicacions que no es poden desplegar automàticament perquè la seva tecnologia o especificitats no ho permeten.
+* **Sense automatització**, per aplicacions que no es poden desplegar automàticament perquè la seva tecnologia o especificitats no ho permeten:
     - Es realitza custodia de codi i les fonts s'actualitzen en cada lliurament.
 	- Els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
-* **Sense integrar**, per aplicacions exemptes de custodia de codi.
-    - Els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
+* **Sense integrar**, per aplicacions exemptes de custodia de codi:
+    - Si no es fa ús d'un altre sistema homologat, els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
     
 ## Custodia de codi (GitLab)
 
@@ -39,7 +39,9 @@ Per tant, es contemplen tres tipus de modalitats d'ús dels serveis:
 
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
-## Integració contínua - Jenkins
+## Integració contínua
+
+### Jenkins
 
 * **Com accedir**: https://hudson.intranet.gencat.cat/hudson/ mitjançant usuari GICAR.
 * **Tipus de solució**: servei per a la integració contínua (construcció, anàlisi, desplegament, proves... etcètera).
@@ -49,14 +51,15 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 * **Quines passes componen el desplegament automàtic**: construcció, generació de tags i desplegament als diferents entorns. Opcionalment es poden realitzar tests unitaris, tests d'integració i anàlisi de codi font.
 * **Quines passes de desplegament requereixen conformitat**: el pas a preproducció i producció requeriran de conformitat prèvia (etapes anteriors verificades). En funció de si el desplegament és semiautomàtic o automàtic per CPD, aquesta conformitat serà responsabilitat del grup de Release Managers o dels tècnics de CPD (respectivament).
 
-Per a més informació: [Integració contínua] (/sic-serveis/ci/)
-
-## Integració contínua - Nexus
+### Nexus
 
 * **Com accedir**: https://hudson.intranet.gencat.cat/nexus/.
 * **Tipus de solució**: servei per a l'administració central de biblioteques.
 * **Qui pot accedir**: no requereix autenticació, tothom pot accedir en mode lectura.
 * **Com publicar noves llibreries**: per a la publicació de noves llibreries no públiques (pròpies o de tercers) caldrà sol·licitar-ho a l'equip de SIC.
+
+<br/>
+Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
