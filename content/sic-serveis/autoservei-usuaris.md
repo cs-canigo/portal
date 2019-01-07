@@ -31,9 +31,8 @@ Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen 
 
 * Release Managers
 * Responsables de lot
-
 A continuació, descriurem cadascun d'aquests subtipus.
-<br/>
+<br/><br/>
 
 #### Release Managers
 
@@ -49,23 +48,23 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 
 Aquest tipus de grup recull als responsables de lot. <br/>
 Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat manca de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
-Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager.
+Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
+La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT concret en el moment de la creació
 
 ### Grups de CPDs i LdTs
 
-Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al mòdul de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT/CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
+Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
+La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
 
 ### Altres grups
 
-Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. <br/>
-Es tracta de grups per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
 La pertinença a aquests tipus de grups es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
 
 ## Funcionament
 
 A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
-Aquest servei es realitza mitjançant l'eina de custodia de codi font implantada: [Git](https://git.intranet.gencat.cat/).
+Aquest servei es realitza mitjançant l'eina de custodia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
 
@@ -116,7 +115,7 @@ Per a concedir accés sobre un projecte caldrà:
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
 
-En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
+En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
 

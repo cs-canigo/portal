@@ -39,7 +39,7 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 <br/>
 Per accedir a la vista de grups i projectes, ho podrà fer des del menú d'opcions generals (botó <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> situat a la part superior esquerra).
 <br/>
-No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. Es podrà fer ús del servei de gestió de binaris.
+No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. En tot cas, a tal efecte es podrà fer ús del servei de gestió de binaris.
 
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
 

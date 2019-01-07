@@ -17,7 +17,8 @@ Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [F
 ## Obrir nova petició a SAU-Remedy
 
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
-Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy. <br/>
+Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy per a que serveixi de guia per a aquells usuaris que no estiguin massa familiaritzat amb els procediments de Remedy a l’hora d’obrir peticions o que pateixin dificultats a l’hora d’identificar el tipus
+de petició a obrir al servei de SIC a Remedy segons la seva necessitat. <br/>
 
 Cal tenir pressent:
 
@@ -102,6 +103,8 @@ Tipus de petició per a demanar:
 
 * Construcció o adaptació de jobs de construcció i desplegament a Jenkins.
 * Publicació de noves llibreries al Nexus.
+* Creació d'usuaris de grups especials (administradors, oficines de qualitat... etcètera).
+* Esborrat de binaris i projectes al servei de custodia de codi.
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
@@ -119,6 +122,8 @@ Informació a emplenar:
 	  "SIC - Alta jobs aplicació [_codi diàleg_, _projecte_]" <br/>
 	  "SIC - Adaptació jobs aplicacio [_codi diàleg_, _projecte_]" + breu descripció de la sol·licitud <br/>
 	  "SIC - Publicació llibreries Nexus [_codi diàleg_]" + breu descripció de la sol·licitud <br/>
+	  "SIC - Creació d'usuaris" + breu descripció de la sol·licitud <br/>
+	  "SIC - Esborrat de projecte [_codi diàleg_, _projecte_]" + breu descripció de la sol·licitud <br/>
 	  ...	
 	- **Descripció detallada del suport**: informació de la sol·licitud al màxim nivell de detall possible.
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil com, per exemple, el document de Disseny d'Arquitectura de l'aplicació per tal de disposar d'una primera aproximació sobre la tasca, la llibreria a publicar... etcètera.
