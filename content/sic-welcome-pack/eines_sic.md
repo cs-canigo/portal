@@ -1,6 +1,6 @@
 +++
 date = "2019-01-07"
-title = "Quin son els serveis del SIC i quines són les primeres passes?"
+title = "Quin son els serveis del SIC i com fer-ne ús?"
 description = "Welcome pack amb la informació més rellevant per a l'ús dels serveis del SIC"
 sections = "SIC"
 toc = true
