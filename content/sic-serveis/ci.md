@@ -1,6 +1,6 @@
 +++
 date = "2019-01-03"
-title = "Integració continua"
+title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
 toc = true

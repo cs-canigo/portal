@@ -23,7 +23,7 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 * Les pipelines de Jenkins seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS definitius un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
 
 ## Estructura de projectes
-L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Continua:
+L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Contínua:
 
 * Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul o un programa sense fragments independents.
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.

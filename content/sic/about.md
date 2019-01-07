@@ -1,6 +1,6 @@
 +++
 date        = "2019-01-02"
-title       = "Què és el Servei d'Integració Continua (SIC 2.0)"
+title       = "Què és el Servei d'Integració Contínua (SIC 2.0)"
 description = "Conceptes, motivació, modalitats d’integració i serveis que es proporcionen"
 sections    = "SIC"
 toc         = true
@@ -24,8 +24,8 @@ L'existència d'un servei que gestioni el cicle de vida d'aquestes peces i perme
 * Disposar d'un conjunt d'eines comunes en la construcció de les aplicacions.
 * Establir un repositori comú on ubicar el codi font de les aplicacions.
 * Simplificar i reduir el temps de desplegament als diferents entorns.
-A més, el concepte d'integració continua permet disposar permanentment d'una versió del codi provinent d'un repositori controlat i amb uns paràmetres de qualitat mesurables.
-El Servei d'Integració Continua (SIC) neix amb l'objectiu de donar aquest suport al cicle de vida de manera centralitzada i amb un cost reduït, ja que està basat en tecnologies de programari lliure.
+A més, el concepte d'integració contínua permet disposar permanentment d'una versió del codi provinent d'un repositori controlat i amb uns paràmetres de qualitat mesurables.
+El Servei d'Integració Contínua (SIC) neix amb l'objectiu de donar aquest suport al cicle de vida de manera centralitzada i amb un cost reduït, ja que està basat en tecnologies de programari lliure.
 
 ## Modalitats d’integració
 
@@ -46,13 +46,13 @@ Tot i que qualsevol usuari de l'equip de desenvolupament podria accedir al serve
 
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
-### Integració continua
+### Integració contínua
 
 El SIC té capacitat per a poder realitzar el **desplegament automàtic** d'un gran nombre d'aplicacions de diferents tecnologies a diferents entorns. 
 Aquests es realitzen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al servei de custodia de codi font. <br/>
 La tasca inclourà accions de construcció d'artefactes, versionat de codi, execució de tests, anàlisi de codi i desplegaments a entorns no-productius i productius. En aquells entorns on no es pugui desplegar automàticament, el flux d'execució de la tasca s'aturarà esperant una resposta manual d'acceptació.
 
-Per a més informació: [Integració continua] (/sic-serveis/ci/)
+Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
 ### Binaris
 

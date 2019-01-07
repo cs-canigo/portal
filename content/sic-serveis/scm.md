@@ -59,7 +59,7 @@ En publicar una nova versió del codi font sobre la branca MASTER, automàticame
 
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
-Per a més informació: [Integració continua] (/sic-serveis/ci/)
+Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
 ## Migració repositoris SVN a Git
 

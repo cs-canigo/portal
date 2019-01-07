@@ -15,7 +15,7 @@ weight = 3
 
 El sistema de gestió de **binaris del SIC** s'encarrega de:
 
-* Emmagatzemar els binaris que entreguen els Release Managers (o el sistema d'integració continua per a entorns amb desplegament no automàtic) per  a deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
+* Emmagatzemar els binaris que entreguen els Release Managers (o el sistema d'integració contínua per a entorns amb desplegament no automàtic) per  a deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
 * Emmagatzemar els binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etcètera) per a aplicacions que repositen codi font.
 
 ## Funcionament
@@ -33,7 +33,7 @@ Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/
 
 ### Pujada d'artefactes
 
-Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegar mitjançant el servei d'integració continua. <br/>
+Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegar mitjançant el servei d'integració contínua. <br/>
 Per a més informació: [Manual d'Integració](/related/sic/manual-integracio.pdf). <br/>
 
 En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Dipositar artefactes al SIC**. <br/>
