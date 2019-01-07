@@ -1,9 +1,9 @@
 +++
 date = "2019-01-07"
-title = "Com es construeix el fitxer "aca.yml" per a l'autoservei de jobs?"
-description = "Welcome pack amb la informació de creació del fitxer "aca.yml" per a l'autoservei de jobs"
+title = "Com es construeix el fitxer ACA.yml per a l'autoservei de jobs?"
+description = "Welcome pack amb la informació de creació del fitxer ACA.yml per a l'autoservei de jobs"
 aliases = [
-    "/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA.md"
+    "/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/"
 ]
 sections = "SIC"
 toc = true
