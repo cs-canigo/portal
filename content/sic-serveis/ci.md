@@ -171,12 +171,12 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 * **Procés de desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
-En el comunicat del mes de Juny s'ha publicat també el següent [How-To](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús de l'Autoservei de Jobs Pipeline al SIC en el que es genera un ACA. En posteriors howtos es mostrarà com generar un ACI.
+Es proporciona una [Guia de construcció del fitxer ACA.yml](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús. En posteriors guies s'afegirà la relativa a la construcció del fitxer ACI.yml.
 
 <br/>
 #### Arxiu de Configuració d'Infraestructures (ACI)
 
-D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC ('https://git.intranet.gencat.cat/<id_prov>/<id_prov>.git'). En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
+D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC. En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
 
 Serà responsabilitat del proveïdor d'infraestructures tenir actualitzada aquesta informació i de notificar al proveïdor d'aplicacions quan hagi realitzat algun canvi. El proveïdor d'aplicacions haurà de fer com a mínim un increment de versió a l'ACA per tal de provocar la regeneració de la pipeline incorporant els canvis realitzats pel proveïdor d'infraestructures a la nova pipeline generada.
 

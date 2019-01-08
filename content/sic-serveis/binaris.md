@@ -45,7 +45,7 @@ Aquest job sol·licita la següent informació:
 * **Projecte**: identificador del projecte (obligatori).
 * **Versió**: número de versió de lliurament (obligatori).
 * **Arxiu de binaris**: arxiu de binaris que desitja dipositar (obligatori).
-* **Descomprimir ZIP**: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat (per defecte, no).
+* **Descomprimir ZIP**: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat (per defecte, sí).
 * **Arxiu de documentació**: arxiu de documentació que desitja associar (opcional).
 
 El job validarà que el codi d'aplicació sigui vàlid i que l'usuari disposi dels corresponents permisos. Si s'especifica una combinació de codi d'aplicació, projecte i versió ja lliurada anteriorment, el sistema sobreescriurà el seu contingut.
