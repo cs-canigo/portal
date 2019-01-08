@@ -33,8 +33,7 @@ A mode d'exemple, mostrarem com s'integraria una aplicació Canigó 3.2.4 com la
 * Proveïdor d'infraestructures: **CPD9**
 * Entorns i modalitats de desplegament: **INT (automàtica), PRE i PRO (semiautomàtica)**.
 * **Aplicació Canigó 3.2.4**.
-* Backend que en construir-se genera un **artefacte estàtic i un artefacte dinàmic**.
-*  que es despleguen en servidor web **Apache i Tomcat** (respectivament).
+* Backend que en construir-se genera un **artefacte estàtic i un artefacte dinàmic** que es despleguen en servidor web **Apache i Tomcat** (respectivament).
 * **DB h2** embeguda.
 * Projecte **repositat al GitLab**, incloent l'arxiu `sic.yml` que inclou la versió actual de l'aplicació.
 
@@ -81,7 +80,7 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 
 ##### Entorns
 
-Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.
+Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada:
 
 ```
 resources:
@@ -133,7 +132,7 @@ resources:
 
 ##### Artefactes
 
-Els artefactes generats, en aquest cas, són dos: un artefacte dinàmic i un d'estàtic. Caldrà incloure la ruta corresponent a cada un d'ells:
+Els artefactes generats, en aquest cas, són dos: un artefacte dinàmic i un d'estàtic. Caldrà incloure la ruta corresponent de cada un d'ells:
 
 ```
 resources:
@@ -149,7 +148,7 @@ resources:
 
 #### Procés de construcció
 
-Per a construir l'aplicació Equipaments, caldrà executar una comanda maven amb els goals `clean` i `package`. És un únic pas, per tant, s'hauria d'incloure un únic **step**:
+Per a construir l'aplicació Equipaments, caldrà executar una comanda maven amb els goals `clean` i `package`. És pot realitzar en un únic pas, per tant, s'hauria d'incloure un únic **step**:
 
 ```
 build:
@@ -196,9 +195,6 @@ notificationRecipients:
     - usuari1@domini
     - usuari2@domini
 ```
-
-En aquest cas, hem optat per fer primer el desplegament de la capa web i a continuació el desplegament de la capa d'aplicació.
-
 
 #### Resultat final
 
