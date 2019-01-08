@@ -1,7 +1,7 @@
 +++
 date = "2019-01-04"
-title = "Com preparar una aplicació per integrar-la amb el SIC?"
-description = "Welcome pack amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
+title = "Com preparar una aplicació per desplegar-la automàticament"
+description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
 toc = true
 taxonomies = []

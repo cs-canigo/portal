@@ -1,7 +1,7 @@
 +++
 date = "2019-01-07"
-title = "Quin son els serveis del SIC i com fer-ne ús?"
-description = "Welcome pack amb la informació més rellevant per a l'ús dels serveis del SIC"
+title = "Quin són els serveis del SIC i com fer-ne ús"
+description = "Guia amb la informació més rellevant per a l'ús dels serveis que proporciona el SIC"
 sections = "SIC"
 toc = true
 taxonomies = []
