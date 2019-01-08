@@ -5,5 +5,5 @@ description = "Relació de welcome packs amb la informació més rellevant del S
 enllac		= "/sic-welcome-pack/"
 sections    = "SIC"
 taxonomies  = []
-weight 		= 2
+weight 		= 4
 +++

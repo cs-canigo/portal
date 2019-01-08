@@ -171,7 +171,7 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 * **Procés de desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
-Es proporciona una [Guia de construcció del fitxer ACA.yml](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús. En posteriors guies s'afegirà la relativa a la construcció del fitxer ACI.yml.
+Es proporciona una [Guia de construcció del fitxer ACA](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús. En posteriors guies s'afegirà la relativa a la construcció del fitxer ACI.yml.
 
 <br/>
 #### Arxiu de Configuració d'Infraestructures (ACI)
