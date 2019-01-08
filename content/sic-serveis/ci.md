@@ -161,17 +161,17 @@ Caldrà realitzar les tasques prèvies de configuració per a que el sistema sig
 
 La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de text en format YAML, que serà responsabilitat del proveïdor d'aplicacions de mantenir-lo actualitzat, en el que s'ha d'aportar la següent configuració:
 
-* **La versió de l’ACA**: versió (independent de la versió de l'aplicació) que s'utilitza per fer seguiment de l'arxiu de configuració.
-* **Paràmetres de l’ACA**: parells clau-valor en els que es farà substitució dins de la pipeline.
-* **Recursos de l’ACA**: diferents tipus de recursos als que es fa referència en la pipeline.
+* **Versió**: versió (independent de la versió de l'aplicació) que s'utilitza per fer seguiment de l'arxiu de configuració.
+* **Paràmetres**: parells clau-valor en els que es farà substitució dins de la pipeline.
+* **Recursos**: diferents tipus de recursos als que es fa referència en la pipeline.
     - **Entorns**: entorns als que es desplega l'aplicació, així com el seu ordre i la modalitat de desplegament desitjada.
-    - **Denominació de la infraestructura destí**: denominació d'infraestructures destí (cal demanar al proveïdor d'infraestructures la denominació de la infraestructura).
+    - **Infraestructures**: denominació d'infraestructures destí (cal demanar al proveïdor d'infraestructures la denominació de la infraestructura).
     - **Artefactes**: artefactes a generar durant el procés de construcció que s'han de desplegar en el procés de desplegament.
 * **Procés de construcció**: definició del procés de construcció amb l'ús de passes (*steps*) de construcció.
 * **Procés de desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
-Es proporciona una [Guia de construcció del fitxer ACA](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple d'ús. En posteriors guies s'afegirà la relativa a la construcció del fitxer ACI.yml.
+Es proporciona una [Guia de construcció del fitxer ACA](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple de cas d'ús.
 
 <br/>
 #### Arxiu de Configuració d'Infraestructures (ACI)
@@ -182,8 +182,8 @@ Serà responsabilitat del proveïdor d'infraestructures tenir actualitzada aques
 
 El proveïdor d'infraestructures haurà d'informar als seus arxius de configuració:
 
-* **La versió de l'ACI**: versió de l'arxiu de configuració.
-* **Recursos de l'ACI**: secció que recull tots els recursos de la part d'infraestructures. Actualment, només hi ha el detall de cada infraestructura.
+* **Versió**: versió de l'arxiu de configuració.
+* **Recursos**: secció que recull tots els recursos de la part d'infraestructures. Actualment, només hi ha el detall de cada infraestructura.
 * **Infraestructures**: detall de les infraestructures incloses en aquest arxiu de configuració.
 
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.

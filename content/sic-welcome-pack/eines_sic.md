@@ -61,6 +61,17 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 <br/>
 Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
+## Binaris
+
+* **Com accedir**: https://bin.sic.intranet.gencat.cat/ mitjançant usuari GICAR.
+* **Tipus de solució**: servei de lliurament i recuperació d'artefactes.
+* **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
+* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Master). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
+* **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada.
+* **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
+
+Per a més informació: [Binaris] (/sic-serveis/binaris/)
+
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
 <br/>
