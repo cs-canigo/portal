@@ -37,7 +37,7 @@ A més del timeline anterior, fem una breu descripció de cadascuna d'aquestes f
 - Publicació de [**Canigó 3.2.5**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10498) amb la inclusió d'un nou mòdul per suport a SAML2, millores de rendiment al mòdul d'instrumentació, actualització de Spring per resolució de vulnerabilitats reconegudes (CVE's), i resolució d'incidències al servei de persistència i LOPD
 - Publicació de [**Canigó 3.2.6**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10601) amb la inclusió d'un nou mòdul de suport a MongoDB i a PostgreSQL al mòdul de persistència
 - Publicació de [**Canigó 3.2.7**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10602) amb suport a autenticació amb certificat per GICAR al mòdul de seguretat, millores a la gestió d'adjunts del servei de mailing, millores en la parametrització del connector amb l'Anvitirus corproatiu, suport a tipus de dades JSON a PostreSQL i MySQL, i resolució d'incidències
-- Publicació de les [**versions 2.0.1, 2.0.2, 2.0.3, i 2.0.4 de l'entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb millores al procés de construcció, actualitzacions del plugin d'Eclipse de Canigó i resolució d'incidències
+- Publicació de les [**versions 2.0.1, 2.0.2, 2.0.3, i 2.0.4 de l'entorn de desenvolupament de Canigó**](/canigo/entorn-desenvolupament/) amb millores al procés de construcció, actualitzacions del plugin d'Eclipse de Canigó i resolució d'incidències
 
 
 ### **SGDE (Servei de Gestió del Document Electrònic)**
