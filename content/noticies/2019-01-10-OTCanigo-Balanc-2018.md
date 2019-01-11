@@ -7,8 +7,6 @@ categories  = ["sic, canigo, sgde", "cloud"]
 key         = "GENER2019"
 +++
 
-**TODO**
-
 A continuació es mostren les fites aconseguides el 2018 segons ordre cronològic:
 
 <center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15wu7P9o-vGz4N9psnSswTD4FGbbWatxQDE58OGZcP70&font=Default&lang=ca&hash_bookmark=true&initial_zoom=1&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center>
@@ -36,13 +34,12 @@ A mode resum, destacaríem les següents:
 
 ### Canigó
 
-- Publicació de [**Canigó 3.2.0**](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: Spring Boot, Swagger, JWT,...
-- Publicació de [**Canigó 3.2.1**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars, millores i resolució d'incidències
-- Publicació de [**Canigó 3.2.2**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463) amb millores per donar suport a les best practices per la implementació d'APIs REST, actualització de llibreries, millores i resolució d'incidències
-- Publicació de [**Canigó 3.2.3**] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464) amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat
-- Nova política de [**versions LTS**] (/noticies/2017-07-05-Canigo-LTS/) pel Framework Canigó
+- Publicació de [**Canigó 3.2.4**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10494) amb millores al servei de mailing, d'instrumentació i de seguretat al servei RS (suport a serveis REST)
+- Publicació de [**Canigó 3.2.5**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10498) amb la inclusió d'un nou mòdul per suport a SAML2, millores de rendiment al mòdul d'instrumentació, actualització de Spring per resolució de vulnerabilitats reconegudes (CVE's), i resolució d'incidències al servei de persistència i LOPD
+- Publicació de [**Canigó 3.2.6**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10601) amb la inclusió d'un nou mòdul de suport a MongoDB i a PostgreSQL al mòdul de persistència
+- Publicació de [**Canigó 3.2.7**](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN/versions/10602) amb la inclusió de 
 - Certificació Canigó 3.2 en **JBoss EAP 6.4**
-- Publicació de la [**versió 2.0.0 del entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb actualització de programari
+- Publicació de les [**versions 2.0.1, 2.0.2, 2.0.3, i 2.0.4 de l'entorn de desenvolupament de Canigó**] (/canigo/entorn-desenvolupament/) amb millores al procés de construcció, actualitzacions del plugin d'Eclipse de Canigó i resolució d'incidències
 
 
 ### **SGDE (Servei de Gestió del Document Electrònic)**
