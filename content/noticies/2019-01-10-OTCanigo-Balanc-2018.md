@@ -11,11 +11,11 @@ key         = "GENER2019"
 
 A continuació es mostren les fites aconseguides el 2018 segons ordre cronològic:
 
-<center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1se11kf-cofPGpMC7IQgwIcO3i1Lt_0SbVWjRMKZpHMQ&font=Georgia-Helvetica&lang=ca&initial_zoom=2&height=500' width='100%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center>
+<center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=15wu7P9o-vGz4N9psnSswTD4FGbbWatxQDE58OGZcP70&font=Default&lang=ca&hash_bookmark=true&initial_zoom=1&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center>
 
 A mode resum, destacaríem les següents:
 
-### **Suport Cloud**
+### Suport Cloud
 
 - Posada en servei de la plataforma de contenidors on-premise **SwarmMe**
 - Posada en servei de la plataforma de contenidors on-premise **AppAgile**
@@ -27,22 +27,14 @@ A mode resum, destacaríem les següents:
 
 ### SIC (Servei d'Integració Continua)
 
-- Publicació del **SIC 2.0**, el qual inclou:
-	- Integració al SIC del nou sistema de gestió de versions de codi (**Git**).
-	- Integració de la seguretat del SIC amb **GICAR**.
-	- **Autoservei d'usuaris** al SIC, mitjançant el qual els usuaris de CTTI i de CPD/LDT tenen accés de forma automàtica i els usuaris de Lot d'aplicacions poden concedir-se permisos dins el mateix lot i àmbit.
-	- Gràcies a la incorporació de l'**Autoservei de repositoris** al SIC, els usuaris de lot d'aplicacions poden crear-se de forma autònoma els seus repositoris.
-	- Integració de jobs en format **pipeline** al SIC.
-	- Creació d'un **Sistema de Gestió de Binaris**, mitjançant el qual s'evita l'antipatró de dispositar artefactes als sistemes de versions de codi.
-- Integració del SIC amb les plataformes de contenidors **Docker Bluemix Container Service (Kubernetes)** i **AppAgile (Openshift)**
-- Integració del SIC amb **Bluemix Cloud Foundry PaaS**
-- Participació de l'equip del SIC en el procés d'alta de **noves solucions**
-- Pas a **HTTPS** de la totalitat de serveis del SIC 2.0
-- Actualització de versió del servei **Nexus** a la versió 3.2.1
-- Integració d'un sistema de **desplegament automàtic** als entorns de PRE i PRO (amb tall de servei)
+- Publicació de l'**autoservei de jobs del SIC**, mitjançant el qual els proveïdors són autònoms per a la generació de les seves pròpies pipelines de construcció i desplegament al SIC.
+- Integració del servidor d'aplicacions **JBoss**.
+- Integració del generador de webs estàtiques **Hugo**.
+- Creació d'un **procediment estàndard per a la integració d'oficines CTTI** al SIC.
+- Creació del **Connector de l'Oficina de Qualitat**.
 
 
-### **Canigó**
+### Canigó
 
 - Publicació de [**Canigó 3.2.0**](http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450) amb suport a arquitectures HTML5/JS+REST: Spring Boot, Swagger, JWT,...
 - Publicació de [**Canigó 3.2.1**](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461) amb actualització de llibreries, suport a la càrrega de propietats en jars, millores i resolució d'incidències
