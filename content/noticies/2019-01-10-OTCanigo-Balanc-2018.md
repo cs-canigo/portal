@@ -15,7 +15,6 @@ A més del timeline anterior, fem una breu descripció de cadascuna d'aquestes f
 
 ### Suport Cloud
 
-- Possada en servei del **CaaS privat d'IBM**???
 - Millora i evolució d'**imatges Docker corporatives**
 - Publicació del **Registre Docker Corporatiu** basat en Harbor
 - Suport a la construcció i desplegament d'aplicacions en les diferents plataformes de contenidors i clouds públic en catàleg: AppAgile, SwarmMe, CaaS IBM, Bluemix, Azure i Compose (DBaaS)
