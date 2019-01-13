@@ -2,7 +2,7 @@
 date        = "2019-01-10"
 title       = "Oficina Tècnica de Canigó i Suport Cloud. Balanç 2018"
 description = "Evolució dels serveis de l'Oficina Tècnica de Canigó i Suport Cloud a l'any 2018"
-sections    = ["noticies", "home"]
+sections    = ["noticies"]
 categories  = ["sic, canigo, sgde", "cloud"]
 key         = "GENER2019"
 +++
