@@ -189,6 +189,7 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
 <br/>
+
 ##### Clau pública
 
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
@@ -214,6 +215,44 @@ En el casos en els que el proveïdor d'infraestructures necessita introduir para
 <a href="/related/sic/key/sic_id_rsa.pub.pem" download target="_blank" style="display: block; margin: 25px auto; border-radius: 5px; width: 200px; padding: 10px; color: white !important; text-decoration: none !important;background-color: #CC0000;text-align: center;font-weight:bold;">
 Descarregar la clau
 </a>
+
+### Què es pot realitzar amb l'Autoservei de jobs pipeline?
+
+Amb l'autoservei de jobs pipeline es poden definir tants entorns i infraestructures com siguin necessaris per a la construcció i el desplegament d'una aplicació.
+
+#### Tecnologies integrades a l'Autoservei
+
+Hi ha les següents tecnologies de construcció integrades a l'Autoservei:
+
+* Maven (Java)
+* Ant (Java)
+* MS Build (.Net)
+* npm (nodejs)
+
+L'autoservei de jobs també disposa de tecnologies de generació:
+
+* hugo (webs estàtiques)
+* cf (cloudfoundry)
+
+Finalment, també s'integren els desplegaments a:
+
+* Servidors web
+* Servidors d'aplicacions:
+  * Java:
+    * Tomcat
+    * Weblogic
+    * WebSphere
+    * JBoss
+  * .Net:
+    * IIS
+* Servidors de Bases de Dades:
+  * MySQL
+  * MongoDB
+  * PostgreSQL
+  * Oracle
+  * SQL Server
+
+Per a més detall del que es pot fer amb l'Autoservei de Jobs pipeline, us recomanem que consulteu l'apartat 7 del [manual d'usuari.](/related/sic/manual-usuari.pdf).
 
 ## Matriu de tecnologies compatibles
 
