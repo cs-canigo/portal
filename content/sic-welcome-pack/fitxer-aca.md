@@ -157,6 +157,7 @@ build:
       position: 1
       tool: maven_3.2.2
       parameters: clean package -Dmaven.test.skip=true
+      jdk: JDK 1.8 
       generates:
         - artifact01
         - artifact02
@@ -250,6 +251,7 @@ build:
     - id: bs001
       position: 1
       tool: maven_3.2.2
+      jdk: JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       generates:
         - artifact01
