@@ -15,9 +15,12 @@ A més del timeline anterior, fem una breu descripció de cadascuna d'aquestes f
 
 ### Suport Cloud
 
-- Millora i evolució d'**imatges Docker corporatives**
-- Publicació del **Registre Docker Corporatiu** basat en Harbor
-- Suport a la construcció i desplegament d'aplicacions en les diferents plataformes de contenidors i clouds públic en catàleg: AppAgile, SwarmMe, CaaS IBM, Bluemix, Azure i Compose (DBaaS)
+- Millora i evolució d'**Imatges Docker corporatives** alineant-les amb el full de ruta de CTTI
+- Posada en servei  del **Registre Docker corporatiu** basat en Harbor
+- **Ampliació del catàleg de serveis** afegint la plataforma de contenidors CaaS d'IBM a cloud privat
+- **Suport a la construcció i desplegament d'aplicacions** en les diferents plataformes cloud en catàleg: AppAgile, SwarmMe, CaaS, Bluemix, Azure i Compose (DBaaS)
+- **Tasques d'operacions** disponibles pels proveïdors d'aplicacions
+- **Millores en el servei**: accés a logs, pla de comunicacions,...
 
 
 ### SIC (Servei d'Integració Continua)
