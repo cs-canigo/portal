@@ -203,6 +203,21 @@
 
 {{ end }}
 
+<!-- SIC - Welcome pack -->
+{{ if or (eq $title "sic-welcome-pack") (eq $section "sic-welcome-pack") }}
+	<a href="/sic/">Servei d'Integració Contínua</a> </li>
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/sic-welcome-pack/">
+	{{ end }}
+
+	Serveis
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
 
 <!-- SIC - Suport -->
 {{ if or (eq $title "sic-suport") (eq $section "sic-suport") }}
