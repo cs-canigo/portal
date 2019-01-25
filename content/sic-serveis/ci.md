@@ -235,12 +235,12 @@ Finalment, també s'integren els desplegaments a:
 * Servidor web Apache
 * Servidors d'aplicacions:
   * Java:
-    * Tomcat
-    * Weblogic
-    * WebSphere
-    * JBoss
+    ** Tomcat
+    ** Weblogic
+    ** WebSphere
+    ** JBoss
   * .Net:
-    * IIS
+    ** IIS
 * Servidors de Bases de Dades:
   * MySQL
   * MongoDB
