@@ -51,7 +51,7 @@ Aquest job sol·licita la següent informació:
 El job validarà que el codi d'aplicació sigui vàlid i que l'usuari disposi dels corresponents permisos. Si s'especifica una combinació de codi d'aplicació, projecte i versió ja lliurada anteriorment, el sistema sobreescriurà el seu contingut.
 
 <br/>
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte corresponent.</span> Únicament estaran exemptes d'aquesta validació les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
+<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">A partir del dia 24/01/2019 s'activa el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte corresponent al Git.</span> Només estan exemptes les aplicacions que disposen d'una excepció aprovada en la custodia de codi.
 
 ### Recuperació d'artefactes
 
