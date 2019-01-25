@@ -189,7 +189,7 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
 <br/>
-
+https://canigo.ctti.gencat.cat/sic-serveis/ci/#autoservei-de-jobs-pipeline
 ##### Clau pública
 
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
@@ -232,21 +232,21 @@ Hi ha les següents tecnologies de construcció suportades:
 
 Finalment, també s'integren els desplegaments a:
 
-* Servidor web Apache
-* Servidors d'aplicacions:
-  * Java:
-    ** Tomcat
-    ** Weblogic
-    ** WebSphere
-    ** JBoss
-  * .Net:
-    ** IIS
-* Servidors de Bases de Dades:
-  * MySQL
-  * MongoDB
-  * PostgreSQL
-  * Oracle
-  * SQL Server
+- Servidor web Apache
+- Servidors d'aplicacions:
+  - Java:
+    - Tomcat
+    - Weblogic
+    - WebSphere
+    - JBoss
+  - .Net:
+    - IIS
+- Servidors de Bases de Dades:
+  - MySQL
+  - MongoDB
+  - PostgreSQL
+  - Oracle
+  - SQL Server
 
 Per a més detall del que es pot fer amb l'Autoservei de Jobs pipeline, us recomanem que consulteu l'apartat 7 del [manual d'usuari.](/related/sic/manual-usuari.pdf).
 
