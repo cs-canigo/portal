@@ -233,15 +233,15 @@ Hi ha les següents tecnologies de construcció suportades:
 Finalment, també s'integren els desplegaments a:
 
 - Servidor web Apache
-- Servidors d'aplicacions:
-  - Java:
+- Servidors d'aplicacions
+  - Java
     - Tomcat
     - Weblogic
     - WebSphere
     - JBoss
   - .Net:
     - IIS
-- Servidors de Bases de Dades:
+- Servidors de Bases de Dades
   - MySQL
   - MongoDB
   - PostgreSQL
