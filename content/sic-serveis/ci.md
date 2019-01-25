@@ -226,7 +226,7 @@ Hi ha les següents tecnologies de construcció suportades:
 
 * Maven (Java)
 * Ant (Java)
-* MS Build (.Net)
+* MS Build (.NET)
 * Npm (NodeJS)
 * Hugo (Webs estàtiques)
 
@@ -234,13 +234,11 @@ Finalment, també s'integren els desplegaments a:
 
 - Servidor web Apache
 - Servidors d'aplicacions
-  - Java
-    - Tomcat
-    - Weblogic
-    - WebSphere
-    - JBoss
-  - .Net:
-    - IIS
+    - Tomcat (Java)
+    - Weblogic (Java)
+    - Websphere (Java)
+    - JBoss (Java)
+    - IIS (.NET)
 - Servidors de Bases de Dades
   - MySQL
   - MongoDB
