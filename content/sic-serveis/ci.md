@@ -220,23 +220,19 @@ Descarregar la clau
 
 Amb l'autoservei de jobs pipeline es poden definir tants entorns i infraestructures com siguin necessaris per a la construcció i el desplegament d'una aplicació.
 
-#### Tecnologies integrades a l'Autoservei
+#### Tecnologies integrades a l'Autoservei de jobs
 
-Hi ha les següents tecnologies de construcció integrades a l'Autoservei:
+Hi ha les següents tecnologies de construcció suportades:
 
 * Maven (Java)
 * Ant (Java)
 * MS Build (.Net)
-* npm (nodejs)
-
-L'autoservei de jobs també disposa de tecnologies de generació:
-
-* hugo (webs estàtiques)
-* cf (cloudfoundry)
+* Npm (NodeJS)
+* Hugo (Webs estàtiques)
 
 Finalment, també s'integren els desplegaments a:
 
-* Servidors web
+* Servidor web Apache
 * Servidors d'aplicacions:
   * Java:
     * Tomcat
