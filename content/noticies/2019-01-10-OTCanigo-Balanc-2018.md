@@ -28,7 +28,8 @@ A més del timeline anterior, fem una breu descripció de cadascuna d'aquestes f
 - Publicació de l'**Autoservei de jobs del SIC**, mitjançant el qual els proveïdors són autònoms en la definició per la generació de les pipelines de construcció i desplegament d'aplicacions a CPD des del SIC
 - Integració del servidor d'aplicacions **JBoss EAP**
 - Integració del generador de webs estàtiques **Hugo** i desplegament en servidors web
-- Creació d'un **procediment estàndard per a la integració d'Oficines CTTI** al SIC i creació del **Connector per l'Oficina de Qualitat**
+- Integració de **controls d’idoneïtat** de les versions de programari que han de pujar a producció, i que s’implementen a la pipeline
+- Integració dels **controls de qualitat** del codi font a la pipeline
 
 
 ### Canigó
