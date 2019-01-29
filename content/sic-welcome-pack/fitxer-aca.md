@@ -242,10 +242,10 @@ resources:
   artifacts:
     - id: artifact01
       artifactType: static
-      path: target/canigo324Armau-static.zip
+      path: target/canigo324-static.zip
     - id: artifact02
       artifactType: dynamic
-      path: target/canigo324Armau.war.original
+      path: target/canigo324.war.original
 build:
   steps:
     - id: bs001
