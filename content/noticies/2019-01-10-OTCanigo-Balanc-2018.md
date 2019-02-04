@@ -4,7 +4,7 @@ title       = "Oficina Tècnica de Canigó i Suport Cloud. Balanç 2018"
 description = "Evolució dels serveis de l'Oficina Tècnica de Canigó i Suport Cloud a l'any 2018"
 sections    = ["noticies"]
 categories  = ["sic, canigo, sgde", "cloud"]
-key         = "GENER2019"
+key         = "FEBRER2019"
 +++
 
 A continuació es mostren les fites aconseguides el 2018 segons ordre cronològic:
