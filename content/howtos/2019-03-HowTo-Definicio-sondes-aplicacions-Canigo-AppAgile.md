@@ -189,8 +189,7 @@ livenessProbe:
 El contenidor a AppAgile començarà a realitzar les comprovacions als 600 segons d'estar aixecat, amb una freqüencia de comprovacions cada 10 segons al servei /api/health i si es troba amb 3 indents fallits de comprovació reiniciarà el servidor
 
 Exemple d'events dins del AppAgile on mostra com es reinicia el servidor si el servei http /api/health no respon correctament:
-
-![Liveness_probe_service_killing_container](/content/drafts/Liveness_probe_service_killing_container.png "Liveness probe service killing container")
+![Liveness_probe_service_killing_container](/related/canigo/howto/imatges/201903_Liveness_probe_service_killing_container.png "Liveness probe service killing container")
 
 ### Exemple de com configurar el AppAgile perquè reinicï el servidor si un port no està actiu:
 
@@ -211,5 +210,5 @@ El contenidor AppAgile començarà a realitzar les comprovacions als 600 segons 
 
 Exemple d'events dins de l'AppAgile on mostra com es reinicia el servidor si el port 8100 no respon correctament:
 
-![Liveness_probe_port_killing_container](/content/drafts/Liveness_probe_port_killing_container.png "Liveness probe port killing container")
+![Liveness_probe_port_killing_container](/related/canigo/howto/imatges/201903_Liveness_probe_port_killing_container.png "Liveness probe port killing container")
 
