@@ -1,10 +1,10 @@
 +++
-date        = "2018-01-31T17:11:42+01:00"
-title       = "Definició sondes per aplicacions Canigó a AppAgile"
+date        = "2019-02-10"
+title       = "HowTo Definició sondes per aplicacions Canigó a AppAgile"
 description = "Definició sondes per aplicacions Canigó a AppAgile utilitzant livenessProbe i readinessProbe"
-sections    = "Canigó"
-taxonomies  = []
-weight 		= 1
+section = "howtos"
+categories = ["canigo", "cloud"]
+key = "MARC2018"
 +++
 
 ## Definició sondes per aplicacions Canigó a AppAgile
