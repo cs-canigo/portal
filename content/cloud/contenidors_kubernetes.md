@@ -1,5 +1,5 @@
 +++
-date          = "2018-07-02"
+date          = "2019-02-13"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
@@ -12,9 +12,10 @@ Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que a
 
 En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes i es proporcionen diversos exemples.
 
-A la Generalitat de Catalunya, actualment, Kubernetes està disponible a la plataforma d'IBM Bluemix. 
+A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
+* IBM Bluemix al cloud públic. **Versió Kubernetes 1.12.5. Versió containerd 1.1.5**
+* IBM CaaS al cloud privat. **Versió Kubernetes 1.11.5. Versió docker 17.3.2**
 
-La versió de Kubernetes disponible és la  **1.9.8**.
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
@@ -281,4 +282,4 @@ spec:
 
 ## Informació relacionada
 
-* https://v1-9.docs.kubernetes.io/
+* https://v1-12.docs.kubernetes.io/
