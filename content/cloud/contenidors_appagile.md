@@ -110,8 +110,8 @@ Configuració de l'exemple:
     * **ENV1_NAME** amb valor **env1_value**
     * **ENV2_NAME** amb valor **env2_value**
 * Port del contenidor: **8080**
-* **readinessProbe** per validar que el servidor està inicialitzat.
-* **livenessProbe** per validar que el servidor proporciona servei.
+* **readinessProbe** per identificar quan es pot començar a enviar peticions al contenidor.
+* **livenessProbe** per identificar quan cal reiniciar el contenidor.
 * Volum persistit: dins del contenidor es monta a **/data**. Fà referència al PersistentVolumeClaim anomenat **XXXX-app1-data01-claim** (creat a l'exemple anterior)
 
 ```
