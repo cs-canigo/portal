@@ -21,7 +21,7 @@ amb informació sobre les dades a inserir en els documents originals
 
 Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/). Només el servei de conversió de documents ofimàtics MS Office a PDF requereix d'un entorn Windows aprovisionat en VMs a CPD.
 
-![std2-arquitectura](/images/news/std2-arquitectura.png)
+![std2-arquitectura](/images/news/std2-arquitectura.PNG)
 
 Gràcies a aquesta rearquitectura és possible **escalar** els diferents serveis per separat dependent del seu consum, a més d'estar **aïllats**, motiu pel qual un problema en un dels serveis no afectarà la resta. Tot el cicle de vida (desenvolupament, construcció, tests, versionat, desplegament) de cada servei és independent dels altres, podent ser evolucionats per separat.
 
