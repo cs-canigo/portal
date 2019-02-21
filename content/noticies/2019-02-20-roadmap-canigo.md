@@ -55,15 +55,15 @@ En aquesta notícia presentem el roadmap previst per les properes versions del f
 
 * Aplicació amb microserveis
 * Integració amb peces d’un sistema de microserveis
-** Configuration service (Consul, Spring Cloud Config Server, ...)
-** Discovery service (Consul, Eureka Server, ...)
-** Gateway service (Zuul proxy, Ribbon, Istio, ...)
-** Acces control service (Spring Session, Istio, ...)
-** Cache distribuida (Hazelcast, redis, ...)
-** Client balancing (Ribbon, Hystrix, Turbine, Istio, ...)
-** Telemetria (Prometheus, Grafana, ...)
-** Traces distribuides (Zipkin)
-** Explotació traces (Logstash, Elastic Search, Kibana)
+    * Configuration service (Consul, Spring Cloud Config Server, ...)
+    * Discovery service (Consul, Eureka Server, ...)
+    * Gateway service (Zuul proxy, Ribbon, Istio, ...)
+    * Acces control service (Spring Session, Istio, ...)
+    * Cache distribuida (Hazelcast, redis, ...)
+    * Client balancing (Ribbon, Hystrix, Turbine, Istio, ...)
+    * Telemetria (Prometheus, Grafana, ...)
+    * Traces distribuides (Zipkin)
+    * Explotació traces (Logstash, Elastic Search, Kibana)
 
 ### Canigó 3.5.1 (Interna)
 
@@ -83,4 +83,4 @@ A banda del framework Java, des del CS Canigó s'estan avaluant altres iniciativ
 
 ...
 
-Per qualsevol suggerencia o consulta relativa a aquest roadmap podeu obrir un tiquet al servei CAN del CSTD, o enviar un correu a la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+Per qualsevol suggerència o consulta relativa a aquest roadmap podeu obrir un tiquet al servei CAN del CSTD, o enviar un correu a la bústia [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
