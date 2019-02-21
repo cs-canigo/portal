@@ -25,7 +25,7 @@ Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**]
 
 Gràcies a aquesta rearquitectura és possible **escalar** els diferents serveis per separat dependent del seu consum, a més d'estar **aïllats**, motiu pel qual un problema en un dels serveis no afectarà la resta. Tot el cicle de vida (desenvolupament, construcció, tests, versionat, desplegament) de cada servei és independent dels altres, podent ser evolucionats per separat.
 
-Totes les funcionalitats avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant.
+Totes les funcionalitats avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant. La documentació per l'ús d'aquesta nova API REST es publicarà properament al [Manual d'Usuari](https://canigo.ctti.gencat.cat/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD.pdf) del servei.
 
 ### Sondes
 
@@ -37,9 +37,9 @@ A continuació es detalla les actualitzacions de versions i canvis de productes 
 
 * Tots els serveis es basen en **Canigó**, i s'actualitzen a la versió [3.2.7](https://canigo.ctti.gencat.cat/canigo/roadmap/)
 * Es canvia l'engine de conversió de MS Office a PDF, passant de [J-Interop](http://www.j-interop.org/) a [**documents4j**](https://documents4j.com/)
-* S'actualitza la versió de MS Office de 2010 a 2016
-* S'actualitza OpenOffice 4.0.1 a LibreOffice 5.4.5.1
-* S'actualitza la versió de Tesseract, engine OCR, de 3.02.02 a 3.05.02
+* S'actualitza la versió de **MS Office** de 2010 a 2016
+* S'actualitza OpenOffice 4.0.1 a **LibreOffice** 5.4.5.1
+* S'actualitza la versió de **Tesseract**, engine OCR, de 3.02.02 a 3.05.02
 * S'actualitzen les versions de les llibreries de tractament de documents PDF (PDFBox, iText) així com d'altres d'ús intern dels diferents serveis
 
 ## Impacte en integradors
