@@ -35,11 +35,11 @@ Els contenidors desplegats a AppAgile tenen configurades sondes per garantir la 
 
 A continuació es detalla les actualitzacions de versions i canvis de productes més rellevants:
 
-* Tots els serveis es basen en **Canigó**, i s'actualitzen a la versió [3.2.7](https://canigo.ctti.gencat.cat/canigo/roadmap/)
+* Tots els serveis es basen en [**Canigó**](https://canigo.ctti.gencat.cat/canigo/), i s'actualitzen a la versió [3.2.7](https://canigo.ctti.gencat.cat/canigo/roadmap/)
 * Es canvia l'engine de conversió de MS Office a PDF, passant de [J-Interop](http://www.j-interop.org/) a [**documents4j**](https://documents4j.com/)
 * S'actualitza la versió de **MS Office** de 2010 a 2016
 * S'actualitza OpenOffice 4.0.1 a **LibreOffice** 5.4.5.1
-* S'actualitza la versió de **Tesseract**, engine OCR, de 3.02.02 a 3.05.02
+* S'actualitza la versió de [**Tesseract**](https://opensource.google.com/projects/tesseract), engine OCR, de 3.02.02 a 3.05.02
 * S'actualitzen les versions de les llibreries de tractament de documents PDF (PDFBox, iText) així com d'altres d'ús intern dels diferents serveis
 
 ## Impacte en integradors
@@ -48,8 +48,8 @@ El canvi tecnològic s'ha realitzat tenint en compte que l'impacte en els consum
 
 **WS SOAP**
 
-_PRE_: http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD\<V2\>?wsdl
-_PRO_: http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD\<V2\>?wsdl
+* _PRE_: ```http://preproduccio.sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD<V2>?wsdl```
+* _PRO_: ```http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD<V2>?wsdl```
 
 *L'antic domini de PRE "sgde.pre.intranet.gencat.cat" també seguirà funcionant com fins ara
 
@@ -57,8 +57,8 @@ També l'accés SFTP:
 
 **SFTP**
 
-_PRE_: sftp \<usuari-app\>@preproduccio.sftp.sgde.intranet.gencat.cat
-_PRO_: sftp \<usuari-app\>@sftp.sgde.intranet.gencat.cat
+* _PRE_: ```sftp <usuari-app>@preproduccio.sftp.sgde.intranet.gencat.cat```
+* _PRO_: ```sftp <usuari-app>@sftp.sgde.intranet.gencat.cat```
 
 *L'antic domini de PRE "sftp.sgde.pre.intranet.gencat.cat" també seguirà funcionant com fins ara
 
@@ -66,13 +66,13 @@ A més dels dominis existents, es donaran d'alta nous dominis dedicats al STD, e
 
 **WS SOAP (NOU!)**
 
-_PRE_: https://**preproduccio.std.intranet.gencat.cat**/ServeisInvocacioSTD/services/ServeisSTD\<V2\>?wsdl
-_PRO_: https://**std.intranet.gencat.cat**/ServeisInvocacioSTD/services/ServeisSTD\<V2\>?wsdl
+* _PRE_: ```https://preproduccio.std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD<V2>?wsdl```
+* _PRO_: ```https://std.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD<V2>?wsdl```
 
 **SFTP (NOU!)**
 
-_PRE_: sftp \<usuari-app\>@**preproduccio.sftp.std.intranet.gencat.cat**
-_PRO_: sftp \<usuari-app\>@**sftp.std.intranet.gencat.cat**
+* _PRE_: ```sftp <usuari-app>@preproduccio.sftp.std.intranet.gencat.cat```
+* _PRO_: ```sftp <usuari-app>@sftp.std.intranet.gencat.cat```
 
 Aviat s'informarà, tant en aquest portal com mitjançant comunicats destinats als integradors, la data de disponibilitat del nou entorn de Preproducció així com del període de proves abans no es posi en servei el nou entorn de Producció.
 
