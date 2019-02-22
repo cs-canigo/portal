@@ -18,7 +18,7 @@ El sistema de gestió de **binaris del SIC** s'encarrega de:
 * Emmagatzemar els binaris que entreguen els Release Managers (o el sistema d'integració contínua per a entorns amb desplegament no automàtic) per  a deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
 * Emmagatzemar els binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etcètera) per a aplicacions que repositen codi font.
 
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran els fitxers repositats amb menys d'un mes de vida (30 dies).</span>
+<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
 
 ## Funcionament
 
@@ -62,7 +62,7 @@ Aquesta acció és accessible tant pels Release Managers de tots els lots com pe
 
 ## Eliminació de binaris
 
-S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les versions pujades durant l'últim mes (30 dies) per codi d'aplicació i projecte. No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
+S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les últimes 5 versions repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
