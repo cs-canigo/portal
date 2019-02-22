@@ -11,11 +11,11 @@ L'últim trimestre del 2018 es va iniciar un projecte d'**actualització tecnol�
 
 Abans d'entrar en detall dels canvis que es realitzaran en aquest projecte, fem un recordatori de les diferents funcionalitats que ofereix el servei STD:
 
-* Creació de codis segurs de verificació (CSV) per a la identificació i registre de documents
-* Composició de documents PDF, consistent en la fusió de plantilles que contenen una sèrie de tags especials
+* Creació de codis segurs de verificació (**CSV**) per a la identificació i registre de documents
+* **Composició** de documents PDF, consistent en la fusió de plantilles que contenen una sèrie de tags especials
 amb informació sobre les dades a inserir en els documents originals
-* Conversió de diferents formats ofimàtics a PDF
-* OCR (Optical Character Recognition) per obtenir el text d’una imatge i generació de PDFs cercables
+* **Conversió** de diferents formats ofimàtics a PDF
+* **OCR** (Optical Character Recognition) per obtenir el text d’una imatge i generació de PDFs cercables
 
 ## Rearquitectura
 
@@ -74,6 +74,8 @@ A més dels dominis existents, es donaran d'alta nous dominis dedicats al STD, e
 * _PRE_: ```sftp <usuari-app>@preproduccio.sftp.std.intranet.gencat.cat```
 * _PRO_: ```sftp <usuari-app>@sftp.std.intranet.gencat.cat```
 
+<br />
 Aviat s'informarà, tant en aquest portal com mitjançant comunicats destinats als integradors, la data de disponibilitat del nou entorn de Preproducció així com del període de proves abans no es posi en servei el nou entorn de Producció.
 
+<br />
 Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
