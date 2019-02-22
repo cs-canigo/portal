@@ -1,5 +1,5 @@
 +++
-date = "2019-01-02"
+date = "2019-02-22"
 title = "Binaris"
 description = "Eina del SIC per el lliurament d'artefactes a CPD"
 sections = "SIC"
@@ -46,6 +46,9 @@ Aquest job sol·licita la següent informació:
 * **Codi d'aplicació**: número de 4 xifres que es correspon amb el codi de diàleg (obligatori).
 * **Projecte**: identificador del projecte (obligatori).
 * **Versió**: número de versió de lliurament (obligatori).
+
+<span style="color: #C00000;font-weight: bold">IMPORTANT:</span> <span style="color: #C00000">El codi de versió ha de complir la normativa establerta per l'Oficina de Qualitat respecte a la nomenclatura de versions. En breu el sistema comprovarà aquest requisit.</span> Per a més informació: [Estàndard de versions] (/https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/)
+
 * **Arxiu de binaris**: arxiu de binaris que desitja dipositar (obligatori).
 * **Descomprimir ZIP**: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat (per defecte, sí).
 * **Arxiu de documentació**: arxiu de documentació que desitja associar (opcional).
