@@ -18,10 +18,10 @@ En aquesta versió es realitzarà una actualització tecnològica del framework 
 
 **Actualització tecnologies base**
 
-* Java 9
-* Spring 5.0.7.RELEASE
-* Spring Boot 2.1.0.RELEASE
-* Spring Security 5.0.3.RELEASE
+* Java 11
+* Spring 5
+* Spring Boot 2
+* Spring Security 5
 
 **Arquitectura**
 
