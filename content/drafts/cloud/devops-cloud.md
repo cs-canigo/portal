@@ -7,8 +7,6 @@ categories  = ["cloud","docker","container","paas","openshift","kubernetes","swa
 weight = 3
 +++
 
-# Model Devops
-
 ![Devops](/related/cloud/devops.png)
 
 Devops representa un canvi en la cultura de les Tecnologies de la Informació, centrant-se en el lliurament ràpid de solucions TIC a través de l'adopció de pràctiques àgils i gestió Lean orientades a sistemes d’informació.

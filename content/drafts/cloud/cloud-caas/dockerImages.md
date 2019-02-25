@@ -6,6 +6,7 @@ sections      = "Container Cloud"
 weight        = 3
 categories    = ["cloud","docker","container","paas","openshift"]
 +++
+
 ## Introducció
 
 A l'hora de crear les imatges dels diferents contenidors docker per les aplicacions gencat cal establir un conjunt de criteris que garanteixin la seva estabilitat i seguretat.

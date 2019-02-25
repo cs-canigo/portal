@@ -3,11 +3,9 @@ date        = "2019-02-19"
 title       = "Consideracions en desplegaments de contenidors"
 description = "Consideracions generals a tenir present en desplegaments de contenidors"
 sections    = "Container Cloud"
-weight      = 8
+weight      = 9
 categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
 +++
-
-# Consideracions en desplegaments de contenidors
 
 Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.
 Algunes apliquen a qualsevol plataforma, altres apliquen a plataformes en concret.

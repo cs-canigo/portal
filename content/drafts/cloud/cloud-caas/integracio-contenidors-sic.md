@@ -7,8 +7,6 @@ weight      = 12
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm","sic"]
 +++
 
-# Integració de contenidors a SIC
-
 ## Informació necessària per la integració amb SIC
 
 ### Kubernetes/Openshift

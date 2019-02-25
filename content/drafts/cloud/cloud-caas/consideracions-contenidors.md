@@ -7,8 +7,6 @@ weight      = 8
 categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
 +++
 
-# Consideracions generals en contenidors
-
 * Els contenidors són volatils. Es poden destruir i reconstruir en qualsevol moment.
 * Si es requeriex persistir algun tipus d'informació cal:
 

@@ -7,8 +7,6 @@ weight      = 3
 categories  = ["cloud","xpaas","ibmcloud","azure","cloudfoundry"]
 +++
 
-# Monitoratge i traces a les plataformes xPaaS
-
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces de les diferents plataformes xPaaS.
 
 A continuació es descriuen les diferents eines a cadascuna de les plataformes disponibles.

@@ -7,8 +7,6 @@ weight      = 2
 categories  = ["cloud","caas","xpaas","dbaas","iaas"]
 +++
 
-# Plataformes Cloud
-
 ![Plataformes cloud](/related/cloud/catalegCloud.png)
 
 ## Cloud Privat

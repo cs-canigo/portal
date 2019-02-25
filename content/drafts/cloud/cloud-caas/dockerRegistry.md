@@ -6,6 +6,7 @@ sections      = "Container Cloud"
 weight        = 2
 categories    = ["cloud","docker","container","openshift","swarm"]
 +++
+
 ## Introducció
 
 Docker per defecte està configurat per utilitzar el registre públic [Docker Hub](https://hub.docker.com/) com a repositori d'imatges.

@@ -8,8 +8,6 @@ toc = true
 categories  = ["cloud","dbaas","compose","azure"]
 +++
 
-# Elements del catàleg DBaaS
-
 Els DBaaS són serveis de bases de dades administrades al Cloud.
 
 ## Cloud públic

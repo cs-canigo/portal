@@ -7,8 +7,6 @@ weight      = 2
 categories  = ["cloud","iaas","azure"]
 +++
 
-# Consideracions generals en plataformes IaaS
-
 * Només és recomanable utilitzar plataforms IaaS en cas de que l'aplicació no encaixi en un model CaaS o PaaS:
 
   * Productes

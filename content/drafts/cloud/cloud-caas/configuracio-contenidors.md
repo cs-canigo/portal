@@ -7,8 +7,6 @@ weight      = 10
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
 +++
 
-# Gestió de configuracions a Orquestradors de Contenidors
-
 A gestió de configuracions als Orquestradors docker, es poden distingir dos escenaris clarament diferenciats:
 
 - Gestió de configuracions a Kubernetes i Openshift

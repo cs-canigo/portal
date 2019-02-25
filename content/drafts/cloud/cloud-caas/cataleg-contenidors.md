@@ -8,8 +8,6 @@ toc = true
 categories  = ["cloud","docker","container", "kubernetes","openshift","swarm", "appagile", "swamme", "ibm", "caas"]
 +++
 
-# Elements del catàleg de contenidors
-
 En aquesta secció es descriuen les diferents imatges docker homologades pel CTTI i utilitzables a les diferents plataformes de contenidors.
 
 ## **Imatges de contenidors base**

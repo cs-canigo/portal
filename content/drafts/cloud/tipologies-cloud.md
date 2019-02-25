@@ -7,8 +7,6 @@ categories  = ["cloud","docker","container","paas","openshift","kubernetes","swa
 weight = 1
 +++
 
-# Tipologies Cloud
-
 Bàsicament es poden distingir 3 tipus de cloud:
 
 - Cloud públic

@@ -7,8 +7,6 @@ weight      = 2
 categories  = ["cloud","IBMCloud","cloudfoundry","sic"]
 +++
 
-# Integració d'aplicacions xPaaS a SIC
-
 ## Informació necessària per la integració amb SIC
 
 ### IBMCloud BuildPacks

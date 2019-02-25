@@ -7,8 +7,6 @@ weight      = 1
 categories  = ["cloud","iaas","azure"]
 +++
 
-# Elements del catàleg IaaS
-
 Els IaaS són màquines virtuals al Cloud.
 
 Dins dels elements de catàleg, només recomanem el seu ús si la resta d'elements no encaixen: desenvolupament complexos basats en productes que no funcionen en contenidors o buildpacks.

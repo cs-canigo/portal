@@ -7,8 +7,6 @@ weight      = 1
 categories  = ["cloud","cloudfoundry", "ibmcloud"]
 +++
 
-# Consideracions en desplegaments a plataformes xPaaS
-
 Al desplegar una aplicació a les diferents plataformes xPaaS cal tenir present una sèrie de consideracions.
 Algunes apliquen a qualsevol plataforma, altres apliquen a plataformes en concret.
 

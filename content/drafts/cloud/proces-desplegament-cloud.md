@@ -7,8 +7,6 @@ categories  = ["cloud","docker","container","paas","openshift","kubernetes","swa
 weight = 5
 +++
 
-# Procés de desplegament de solucions Cloud
-
 El desplegament de solucions cloud aplica el model DEVOPS.
 
 ## Procés de desplegament CTTI adaptat al Model DEVOPS

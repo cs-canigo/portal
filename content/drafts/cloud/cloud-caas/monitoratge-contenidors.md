@@ -8,8 +8,6 @@ toc         = true
 categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
 +++
 
-# Monitoratge i traces als contenidors
-
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces dels diferents contenidor.
 
 A continuació es descriuen les diferents eines a cadascuna de les plataformes disponibles.
@@ -89,9 +87,10 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 - Escollir el compte
 ```
         1. CENTRE DE TELECOMUNICACIONS?GENERALITAT DE CATALUNYA (db4051d27e4a2eff044e6d5062abdf69) <-> 1449381
-
 ```
+
 - Inicialitzar el container service
+- 
 ```
         ibmcloud ks init
     
@@ -100,7 +99,9 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
         Using default API endpoint: https://uk-south.containers.bluemix.net
         OK        
 ```
+
 - Mostrar el cluster
+- 
 ```
         ibmcloud ks clusters
 
@@ -110,7 +111,6 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
         Nombre        ID                                 Estado   Creado       Trabajadores   Ubicación   Versión         Nombre de grupo de recursos
         cluster_pre   390086041bd947d496e3be8f1ad25487   normal   1 year ago   2              London      1.12.5_1537     default
         cluster_pro   157e6387175449c1bdfff78eed37c4a6   normal   1 year ago   2              London      1.10.12_1543*   default
-
 ```
 
 - Configurar cluster de PRE
@@ -125,7 +125,6 @@ a windows respon alguna cosa similar a
 a linux respon alguna cosa similar a
 
     export KUBECONFIG=/home/user/.bluemix/plugins/container-service/clusters/cluster_pre/kube-config-lon02-cluster_pre.yml
-
 ```
 
 - Configurar cluster de PRO
@@ -140,7 +139,6 @@ a windows respon alguna cosa similar a
 a linux respon alguna cosa similar a
 
     export KUBECONFIG=/home/user/.bluemix/plugins/container-service/clusters/cluster_pro/kube-config-lon02-cluster_pro.yml
-
 ```
 
 Les comandes SET/export són les que cal executar per accedir als diferents clusters de Kubernetes.

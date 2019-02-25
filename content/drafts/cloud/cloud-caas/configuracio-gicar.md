@@ -7,8 +7,6 @@ weight      = 11
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
 +++
 
-# Configuració de Gicar en Contenidors
-
 La configuració de Gicar a les plataformes de contenidors dependrà de la plataforma en concret.
 
 ## SwarmMe
@@ -106,7 +104,7 @@ COPY conf/app.key /etc/shibboleth/app.key
 Passos a seguir:
 
 - Definir les 4 variables d'entorn al descriptor de desplegament
-- Crear un configMap amb el fitxer de configuració **idp-netadata.xml** que correspongui
+- Crear un configMap amb el fitxer de configuració **idp-metadata.xml** que correspongui
 - Mapejar el fitxers en un volum al descriptor de desplegament
 
 Fragment del descriptor de desplegament:
