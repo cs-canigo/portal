@@ -2,7 +2,7 @@
 date        = "2019-02-25"
 title       = "Monitoratge i traces a les plataformes IaaS"
 description = "Informació per accedir al monitoratge i traces a les diferents plataformes IaaS."
-IaaS Cloud
+sections    = "IaaS Cloud"
 weight      = 3
 categories  = ["cloud","iaas","azure"]
 +++
