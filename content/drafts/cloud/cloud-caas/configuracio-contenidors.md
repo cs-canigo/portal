@@ -1,6 +1,6 @@
 +++
 date        = "2019-02-20"
-title       = "Gestió de configuracions a Contenidors
+title       = "Gestió de configuracions a Contenidors"
 description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes ,Openshift i Swarm"
 sections    = "Container Cloud"
 weight      = 10
@@ -178,113 +178,6 @@ volumes:
 
 Podeu trobar més informació dels Secrets a [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
-
-### Exemple. Configuració d'Apache Gicar
-
-Actualment en entorns cloud, la integració de les Aplicacions amb Gicar es realitza amb el protocol SAMLv2 a través de Shibboleth.
-
-Aquesta configuració éstà diferenciada per cada entorn.
-
-Per una banda es requereixen 4 paràmetres que identifiquen l'aplicació a Gicar:
-
-- **url_entityid_gicar** -> application id in gicar
-- **url_idp_gicar** -> gicar URL enpoint
-- **certificate_name** -> certificate file name
-- **server_name** -> public application serverName (with http schema)
-
-Per una altra banda es requereix un fitxer de configuració de Gicar (**idp-metadata.xml**) que és diferent per entorn.
-
-La solució consisteix en, per cada entorn: 
-
-- definir les 4 variables d'entorn al descriptor de desplegament
-- crear un configMap amb el fitxer de configuració **idp-netadata.xml** que correspongui
-- Mapejar el fitxers en un volum al descriptor de desplegament
-
-Fragment del descriptor de desplegament:
-
-```
-...
-env:
-- name: url_entityid_gicar
-  value: https://preproduccio.pgec.gencat.cat
-- name: url_idp_gicar
-  value: https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth
-- name: certificate_name
-  value:  AplicacioProva
-- name: server_name
-  value: https://preproduccio.pgec.gencat.cat
-...
-volumeMounts:
-- name: gicar-metadata
-  mountPath: /gicar
-...
-volumes:
-    - name: gicar-metadata
-    configMap:
-        name: gicar-config
-        items:
-        - key: idp-metadata
-          path: idp-metadata.xml
-...
-```
-
-Descriptor del ConfigMap:
-```
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: gicar-config
-data:
-  idp-metadata: |
-    <?xml version="1.0" encoding="UTF-8"?>
-    <EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:shibmd="urn:mace:shibboleth:metadata:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" entityID="https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth">
-    <IDPSSODescriptor protocolSupportEnumeration="urn:mace:shibboleth:1.0 urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
-        <Extensions>
-            <shibmd:Scope regexp="false">preproduccio.idp1-gicar.gencat.cat</shibmd:Scope>
-        </Extensions>
-        <KeyDescriptor>
-            <ds:KeyInfo>
-                <ds:X509Data>
-                    <ds:X509Certificate>
-    MIIDkTCCAnmgAwIBAgIBQjANBgkqhkiG9w0BAQUFADBpMSEwHwYDVQQKExhHZW5l
-    ...
-    ksywNnQ=
-                    </ds:X509Certificate>
-                </ds:X509Data>
-            </ds:KeyInfo>
-        </KeyDescriptor>
-        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML1/SOAP/ArtifactResolution" index="1"/>
-        <ArtifactResolutionService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/SOAP/ArtifactResolution" index="2"/>     
-        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
-        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
-        <SingleSignOnService Binding="urn:mace:shibboleth:1.0:profiles:AuthnRequest" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/Shibboleth/SSO"/>
-        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/POST/SSO"/>
-        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST-SimpleSign" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/POST-SimpleSign/SSO"/>
-        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/Redirect/SSO"/>
-    </IDPSSODescriptor>
-    <AttributeAuthorityDescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:1.1:protocol urn:oasis:names:tc:SAML:2.0:protocol">
-        <Extensions>
-            <shibmd:Scope regexp="false">preproduccio.idp1-gicar.gencat.cat</shibmd:Scope>
-        </Extensions>
-        <KeyDescriptor>
-            <ds:KeyInfo>
-                <ds:X509Data>
-                    <ds:X509Certificate>
-    MIIDkTCCAnmgAwIBAgIBQjANBgkqhkiG9w0BAQUFADBpMSEwHwYDVQQKExhHZW5l
-    ...
-    nsH3Wp6sxmBqsS0ATZOMaqUD6KJz
-    ksywNnQ=
-                    </ds:X509Certificate>
-                </ds:X509Data>
-            </ds:KeyInfo>
-        </KeyDescriptor>
-        <AttributeService Binding="urn:oasis:names:tc:SAML:1.0:bindings:SOAP-binding" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML1/SOAP/AttributeQuery"/>
-        <AttributeService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="https://preproduccio.idp1-gicar.gencat.cat/idp/profile/SAML2/SOAP/AttributeQuery"/>
-        <NameIDFormat>urn:mace:shibboleth:1.0:nameIdentifier</NameIDFormat>
-        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
-    </AttributeAuthorityDescriptor>
-    </EntityDescriptor>
-```
 
 ## Gestió de configuracions a Swarm
 

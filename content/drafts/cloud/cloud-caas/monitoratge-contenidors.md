@@ -3,7 +3,7 @@ date        = "2019-02-22"
 title       = "Monitoratge i traces als contenidors"
 description = "Informació per accedir  al monitoratge i traces a les diferents plataformes de contenidors."
 sections    = "Container Cloud"
-weight      = 11
+weight      = 13
 toc         = true
 categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
 +++

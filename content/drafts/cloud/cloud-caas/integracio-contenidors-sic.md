@@ -3,7 +3,7 @@ date        = "2019-02-22"
 title       = "Integració de contenidors a SIC"
 description = "Informació respecte a la integració d'aplicacions basades en contenidors amb el SIC."
 sections    = "Container Cloud"
-weight      = 11
+weight      = 12
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm","sic"]
 +++
 
