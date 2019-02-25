@@ -1,76 +1,22 @@
 +++
-date        = "2018-11-07"
-title       = "Elements del catàleg"
-description = "Docker, xPaaS, DBaaS"
-sections    = "Container Cloud"
-weight      = 2
+date        = "2019-02-21"
+title       = "Elements del catàleg de contenidors"
+description = "Descripció de les imatges docker base proporcionades pel CTTI."
+sections    = "Cloud"
+weight      = 1
 toc = true
-categories  = ["cloud","docker","container","paas"]
+categories  = ["cloud","docker","container", "kubernetes","openshift","swarm", "appagile", "swamme", "ibm", "caas"]
 +++
 
-L'objectiu del "Container Cloud" - anomenarem així a les solucions basades en containers (CaaS, Containers as a Service) a cloud públic i privat - , es disposar d'una sèrie d'elements que ens permetin fer córrer el nostre software sobre entorns d'execució "commodity", sense conèixer la infraestructura subjacent.
+# Elements del catàleg de contenidors
 
-En aquest sentit, treballarem amb dos elements principals - xPaaS i Docker - i amb altres solucions com a servei -com algunes bases de dades-:
+En aquesta secció es descriuen les diferents imatges docker homologades pel CTTI i utilitzables a les diferents plataformes de contenidors.
 
-## **xPaaS**
+## **Imatges de contenidors base**
 
-Els xPaaS són runtimes d'execució estàndards i, segons el "gust" sobre el que treballem, tindrà denominacions diferents. Anomenarem a tots d'aquesta manera per a unificar conceptes. Actualment, els nostres xPaaS es basaran en Cloud Foundry: 
+Per facilitar la tasca de desenvolupament i creació d'aplicacions basades en contenidors, CTTI ofereix un conjunt d'imatges certificades i alineades amb les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
-- **buildpack** (Cloud Foundry), disponible a **cloud públic**
-	* Liberty for Java
-	* Node.js
-	* Go
-	* PHP
-	* Python
-	* Ruby
-	* Static site (Nginx)
-
-
-
-### Configuració de l'engine
-
-Cada xPaaS dona suport a diferents versions de l'engine que ha d'executar el codi. Posem com a exemple el [buildpack Node.js de Cloud Foundry](https://github.com/cloudfoundry/nodejs-buildpack). Per tal de configurar la versió 8.x de l'engine de Node.js corresponent a la versió actual CTTI del [full de ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/), cal fer la següent configuració en el fitxer "package.json" ubicat a l'arrel de l'aplicació:
-
-_package.json_
-
-```
-{
-	name: "AppDemoNodeJS",
-	version: "0.0.1",
-	private: true,
-	scripts: {
-		start: "node app.js",
-		test: "make test"
-	},
-	engines: {
-		node: "8.11.1"
-	},
-	dependencies: {
-		express: "^4.16.3",
-		...
-	},
-	devDependencies: {
-		mocha: "^5.2.0",
-		...
-	}
-}
-```
-
-Com es pot observar, en la secció engines cal especificar la versió exacte de Node.js amb que volem que s'executi l'aplicació. En cas que no s'especifiqui, el buildpack executarà la versió per defecte que tingui establerta. En el cas del buildpack Node.js de Cloud Foundry coincideix amb la versió que hem indicat en el descriptor "package.json" de l'aplicació:
-
-_manifest.yml_ (veure a [Github](https://github.com/cloudfoundry/nodejs-buildpack/blob/master/manifest.yml))
-
-```
-language: nodejs
-default_versions:
-- name: node
-  version: 8.11.1
-...
-```
-
-## **Contenidors (Docker)**
-
-En quant als contenidors Docker, estan alineades les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) amb les versions dels contenidors certificats per CTTI. Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat). Si necessiteu més informació d'aquest registre privat podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/).
+Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat). Si necessiteu més informació d'aquest registre privat, podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/dockerRegistry/).
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------
@@ -101,9 +47,9 @@ Npm builder  	 | 1.1-5.6.0   | docker-registry.ctti.extranet.gencat.cat/gencatcl
 **IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
 <br>
 
-La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat de les mateixes.
+La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat d'aquestes.
 
-Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud/dockerImages/).
+Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/dockerImages/).
 
 Més informació sobre Docker: https://www.docker.com/
 
@@ -113,9 +59,9 @@ Les bases de dades a contenidors no disposen de cap servei com backups o gestió
 
 Tampoc ofereix un entorn en alta disponibilitat. És una modalitat no recomanada per entorns productius.
 
-## **Contenidors (Docker) Obsolets**
+## **Imatges de contenidors obsoletes**
 
-**Aquest contenidors són obsolets/no suportats i no tenen manteniment. Poden contenir vulnerabilitats i no està recomanat el seu ús.** 
+**Aquestes imatges són obsoletes/no suportades i no tenen manteniment. Poden contenir vulnerabilitats i no està recomanat el seu ús.** 
 
 **En cas d'utilitzar aquestes imatges es recomana l'actualització a les imatges suportades.**
 
@@ -167,15 +113,3 @@ Npm builder  	 | 1.0-5.6.0   | docker-registry.ctti.extranet.gencat.cat/gencatcl
 * (2) renombrat a a node:6
 * (3) renombrat a a node:8
 * (4) renombrat a a node:10
-
-## SaaS
-
-### DBaaS - Base de dades com a servei
-
-- MongoDB, disponible a **cloud públic**
-- ElasticSearch, disponible a **cloud públic**
-- PostgreSQL, disponible a **cloud públic**
-- SQLServer, disponible a **cloud públic**
-- MySQL, disponible a **cloud públic**
-
-A diferència de les bases de dades a contenidors, els DBaaS si que incorporen serveis de backups i gestió d'accés entre d'altres, a més de proporcionar un entorn en alta disponibilitat. És per aquest motiu que per entorns productius és recomanable el seu ús enlloc de bases de dades en contenidors.
