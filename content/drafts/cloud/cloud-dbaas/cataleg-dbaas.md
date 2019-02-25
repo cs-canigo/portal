@@ -1,7 +1,7 @@
 +++
 date        = "2019-02-21"
 title       = "Elements del catàleg DBaaS"
-description = ""Descripció dels elements DBaaS disponibles a la Generalitat de Catalunya."
+description = "Descripció dels elements DBaaS disponibles a la Generalitat de Catalunya."
 sections    = "Cloud"
 weight      = 1
 toc = true

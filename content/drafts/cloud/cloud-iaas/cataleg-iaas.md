@@ -1,7 +1,7 @@
 +++
 date        = "2019-02-21"
 title       = "Elements del catàleg IaaS"
-description = ""Descripció dels elements IaaS disponibles a la Generalitat de Catalunya."
+description = "Descripció dels elements IaaS disponibles a la Generalitat de Catalunya."
 sections    = "IaaS Cloud"
 weight      = 1
 categories  = ["cloud","iaas","azure"]
