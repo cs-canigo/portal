@@ -66,7 +66,7 @@ En aquesta versió interna, no destinada a entorns productius, es realitzarà un
     * Discovery service (Consul, Eureka Server, ...)
     * Gateway service (Zuul proxy, Ribbon, Istio, ...)
     * Acces control service (Spring Session, Istio, ...)
-    * Cache distribuida (Hazelcast, redis, ...)
+    * Cache distribuida (Hazelcast, Redis, ...)
     * Client balancing (Ribbon, Hystrix, Turbine, Istio, ...)
     * Telemetria (Prometheus, Grafana, ...)
     * Traces distribuides (Zipkin)
@@ -74,7 +74,7 @@ En aquesta versió interna, no destinada a entorns productius, es realitzarà un
 
 ### Canigó 3.5.1 (Interna)
 
-En aquesta versió interna, no destinada a entorns productius, es realitzarà un pilot amb una aplicació Canigó per integrar-la amb serveis centralitzats de telemetria i traces, així com afegir-hi tests amb el suport d'entorns dockeritzats. També es planteja un nou generador d'aplicacions Canigó de l'estil [Spring Initializr](https://start.spring.io/) totalment agnòstic de l'IDE de desenvolupament.
+En aquesta versió interna, no destinada a entorns productius, es realitzarà un pilot amb una aplicació Canigó 3.4.x per integrar-la amb serveis centralitzats de telemetria i traces, així com afegir-hi tests amb el suport d'entorns dockeritzats. També es planteja un nou generador d'aplicacions Canigó de l'estil [Spring Initializr](https://start.spring.io/) totalment agnòstic de l'IDE de desenvolupament.
 
 **Pilot**
 
