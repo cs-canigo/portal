@@ -3,7 +3,7 @@ date        = "2019-02-22"
 title       = "Consideracions en desplegaments a XPaaS"
 description = "Consideracions generals a tenir present en desplegaments sobre plataformes xPaaS"
 sections    = "xPaaS Cloud"
-weight      = 1
+weight      = 2
 categories  = ["cloud","cloudfoundry", "ibmcloud"]
 +++
 

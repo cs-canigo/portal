@@ -3,7 +3,7 @@ date        = "2019-02-22"
 title       = "Integració d'aplicacions xPaaS a SIC"
 description = "Informació respecte a la integració d'aplicacions basades en xPaaS amb el SIC."
 sections    = "xPaaS Cloud"
-weight      = 2
+weight      = 3
 categories  = ["cloud","IBMCloud","cloudfoundry","sic"]
 +++
 

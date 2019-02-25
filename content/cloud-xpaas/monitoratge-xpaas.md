@@ -3,7 +3,7 @@ date        = "2019-02-25"
 title       = "Monitoratge i traces a les plataformes xPaaS"
 description = "Informació per accedir al monitoratge i traces a les diferents plataformes xPaaS."
 sections    = "xPaaS Cloud"
-weight      = 3
+weight      = 4
 categories  = ["cloud","xpaas","ibmcloud","azure","cloudfoundry"]
 +++
 
