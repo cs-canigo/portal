@@ -199,8 +199,8 @@ Els equips de SIC i Suport Cloud, amb el suport de Lot d'aplicacions configuren 
 
 Podeu veure més detalls dels requeriments necessaris per integrar-se amb SIC a:
 
-- [Integració de contenidors a SIC](https://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/integracio-contenidors-sic/)
-- [Integració d'aplicacions xPaaS a SIC](https://canigo.ctti.gencat.cat/draft/cloud/cloud-xpaas/integracio-xpaas-sic/)
+- [Integració de contenidors a SIC](https://canigo.ctti.gencat.cat/cloud-caas/integracio-contenidors-sic/)
+- [Integració d'aplicacions xPaaS a SIC](https://canigo.ctti.gencat.cat/cloud-xpaas/integracio-xpaas-sic/)
 
 #### Primer Desplegament a l'entorn no productiu
 
@@ -213,8 +213,9 @@ Addicionalment al desenvolupament de les aplicacions, per desplegar als diferent
 
 Podeu visitar els articles:
 
- - [Consideracions al desplegament de contenidors](https://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/consideracions-desplegament/), 
-  - [Consideracions al desplegament de contenidors](https://canigo.ctti.gencat.cat/draft/cloud/cloud-xpaas/consideracions-desplegament/), 
+ - [Consideracions en el desplegament de contenidors](https://canigo.ctti.gencat.cat/cloud-caas/consideracions-desplegament/), 
+  - [Consideracions en el desplegament a plataformes xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/consideracions-desplegament/), 
+  
   per consultar aquestes consideracions.
 
 Suport Cloud, amb el suport de lot d'aplicacions realitzarà un primer desplegament a l'entorn no productiu, preferentment a traves de la plataforma SIC.
@@ -326,4 +327,4 @@ Un cop l'aplicació està en servei es realitza el tancament del projecte.
 
 ## Comunicació amb CS Cloud
 
-La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [[Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/draft/cloud/comunicacio-suport-cloud/)
+La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [[Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/drafts_cloud/comunicacio-suport-cloud/)
