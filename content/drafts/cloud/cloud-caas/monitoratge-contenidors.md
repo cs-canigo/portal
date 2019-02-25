@@ -90,7 +90,7 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 ```
 
 - Inicialitzar el container service
-- 
+  
 ```
         ibmcloud ks init
     
@@ -101,7 +101,7 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 ```
 
 - Mostrar el cluster
-- 
+
 ```
         ibmcloud ks clusters
 
@@ -201,8 +201,8 @@ kubectl config --kubeconfig=<fitxer_configuracio> set-cluster <nom_cluster> --se
 
 on:
 
-- *<cluster>* és el nom del cluster que es desitgi.
-- *<fitxer_configuracio>* és el fitxer de configuració que es desitgi.
+- ***cluster*** és el nom del cluster que es desitgi.
+- ***fitxer_configuracio*** és el fitxer de configuració que es desitgi.
 
 ###### User
 
@@ -214,10 +214,10 @@ kubectl config --kubeconfig=<fitxer_configuracio> set-credentials <usuari>  --to
 
 on:
 
-- *<cluster>* és el nom del cluster que es desitgi.
-- *<fitxer_configuracio>* és el fitxer de configuració que es desitgi.
-- *<usuari>* és el nom d'usuari que es desitgi.
-- *<token>* és el nom token proporcionat per l'equip de Suport Cloud.
+- ***cluster*** és el nom del cluster que es desitgi.
+- ***fitxer_configuracio*** és el fitxer de configuració que es desitgi.
+- ***usuari*** és el nom d'usuari que es desitgi.
+- ***token*** és el nom token proporcionat per l'equip de Suport Cloud.
 
 ###### Context
 
@@ -229,10 +229,10 @@ kubectl config --kubeconfig=<fitxer_configuracio> set-context <context> --cluste
 
 on:
 
-- *<fitxer_configuracio>* és el fitxer de configuració que es desitgi.
-- *<cluster>* és el nom del cluster que es desitgi.
-- *<namespace>* és el nom del namespace del projecte, proporcionat per Suport cloud.
-- *<usuari>* és el nom d'usuari que es desitgi.
+- ***fitxer_configuracio*** és el fitxer de configuració que es desitgi.
+- ***cluster*** és el nom del cluster que es desitgi.
+- ***namespace*** és el nom del namespace del projecte, proporcionat per Suport cloud.
+- ***usuari*** és el nom d'usuari que es desitgi.
 
 
 **Tingueu present que els noms escollits als diferents elements han de coincidir.**
