@@ -78,8 +78,8 @@ Apache 		 | 2.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:
 Apache GICAR Shibboleth| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3   | [gicar-shibboleth](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth/tree/1.0.3)
 Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
 Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0   | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/tree/2.4-1.0)
-Nginx  	 | 1.12.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12.2   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.12.2)
-Nginx  	 | 1.14.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14.0   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.14.0)
+Nginx  	 | 1.12   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.12)
+Nginx  	 | 1.14   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.14)
 Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/7)
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
 MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/5.7)
@@ -91,9 +91,12 @@ PHP 		 | 7.2   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php
 Postgres	 | 10.5   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:10.5   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/10.5)
 Tomcat  	 | 9.0-java8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java8)
 Maven builder  	 | 1.0-3.5.3-8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/maven-builder:1.0-3.5.3-8   | [maven builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/maven-builder/tree/1.0-3.5.3-8)
-Npm builder  	 | 1.1-3.10.10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-3.10.10  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-3.10.10)
-Npm builder  	 | 1.1-5.6.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.1-5.6.0  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.1-5.6.0)
-
+Maven builder  	 | 1.0-3.6-8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/maven-builder:1.0-3.6-8   | [maven builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/maven-builder/tree/1.0-3.6-8)
+Npm builder  	 | 1.0-4-2.15.11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.0-4-2.15.11  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.0-4-2.15.11)
+Npm builder  	 | 1.0-6-3.10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.0-6-3.10  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.0-6-3.10)
+Npm builder  	 | 1.0-8-5.6    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.0-8-5.6   | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.0-8-5.6 )
+Npm builder  	 | 1.0-8-6.4   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.0-8-6.4  | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.0-8-6.4)
+Npm builder  	 | 1.0-10-6.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/npm-builder:1.0-10-6.4   | [npm builder](https://git.intranet.gencat.cat/3048-intern/imatges-docker/npm-builder/tree/1.0-10-6.4 )
 <br>
 **IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
 <br>
