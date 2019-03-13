@@ -88,7 +88,7 @@ Va ser creat per Google.
 Actualment està evolucionant molt.
 Recentment ha rebut el suport oficial de docker.
 
-Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud/contenidors_kubernetes/
+Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/
 
 Per més informació podeu consultar la web https://kubernetes.io/
 
@@ -98,13 +98,13 @@ Desenvolupat per Red Hat, basat en Kubernetes.
 Afegeix funcionalitat addicional a Kubernetes (gestió d'usuaris, segmentació de xarxa, sistema centralitzat de logs).
 Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'uns tres o quatre mesos.
 
-Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud/contenidors_appagile/
+Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/
 
 Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.5/
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud/dockerImages/) podeu trobar més informació al respecte. 
+A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte. 
 
 

@@ -16,7 +16,7 @@ L'equip de Suport Cloud del CTTI manté un conjunt d'imatges docker de les tecno
 
 Aquestes imatges docker es poden trobar al **registre docker privat**, al projecte **gencatcloud**.
 
-Podeu trobar més informació respecte al registre privat a [Registre docker privat](http://canigo.ctti.gencat.cat/cloud/dockerRegistry/).
+Podeu trobar més informació respecte al registre privat a [Registre docker privat](http://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/).
 
 
 ## Criteris per escollir la imatge base

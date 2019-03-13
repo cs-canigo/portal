@@ -14,7 +14,7 @@ En aquesta secció es descriuen les diferents imatges docker homologades pel CTT
 
 Per facilitar la tasca de desenvolupament i creació d'aplicacions basades en contenidors, CTTI ofereix un conjunt d'imatges certificades i alineades amb les versions del software del [Full de Ruta de Programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
-Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat). Si necessiteu més informació d'aquest registre privat, podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/dockerRegistry/).
+Podeu trobar aquestes imatges certificades al [registre privat](https://docker-registry.ctti.extranet.gencat.cat). Si necessiteu més informació d'aquest registre privat, podeu consultar [Registre docker privat](http://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/).
 
 **Element**  | **Versió**   | **Imatge Docker**   | **Codi font**
 ------------ | ------------ |-------------------- |-----------
@@ -48,7 +48,7 @@ Npm builder  	 | 1.0-10-6.4    | docker-registry.ctti.extranet.gencat.cat/gencat
 
 La llista anterior no exclou que no es puguin lliurar contenidors que corrin altres productes i personalitzacions. En qualsevol cas, les imatges construïdes passaran per un servei d'avaluació de vulnerabilitats per a garantir en una primera instància la qualitat d'aquestes.
 
-Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/dockerImages/).
+Per construir contenidors personalitzats, cal tenir present els [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/).
 
 Més informació sobre Docker: https://www.docker.com/
 

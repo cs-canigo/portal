@@ -29,7 +29,7 @@ Els artefactes destinats a ser desplegats. Es construiran a partir de codi font 
 ## Construcció dels artefactes
 
 És important notar que **l'artefacte desplegat serà el mateix a tots els entorns**, això implica que la definició de les propietats específiques de l'entorn han d'estar definides en variables d'entorn o fitxers de configuració.
-Podeu trobar més informació de com gestionar la configuració i contrasenyes en contenidors a  [Fitxers de configuració a contenidors](https://canigo.ctti.gencat.cat/draft/cloud-caas/configuracio-contenidors/)
+Podeu trobar més informació de com gestionar la configuració i contrasenyes en contenidors a  [Fitxers de configuració a contenidors](https://canigo.ctti.gencat.cat/cloud-caas/configuracio-contenidors/)
 
 Notar la necessitat de definir la versió de l'artefacte utilitzant el fitxer **sic.yml** a la carpeta **sic**, amb la propietat **version** que defineix la versió de l'artefacte/imatge.
 
@@ -39,14 +39,14 @@ La construcció de l'artefacte es realitzarà al SIC. En cap cas es construirà 
 
 Cal proporcionar l'equip de Sic/Suport Cloud les instruccions necessàries, incloent-hi les eines i versions, per construir els artefactes a desplegar.
 
-Podeu trobar més informació a [Integració de contenidors a SIC](https://canigo.ctti.gencat.cat/draft/cloud-caas/integracio-contenidors-sic/)
+Podeu trobar més informació a [Integració de contenidors a SIC](https://canigo.ctti.gencat.cat/cloud-caas/integracio-contenidors-sic/)
 
 ## Construcció de la imatge docker
 
 El CTTI disposa d'un conjunt d'imatges docker homologades que es recomana utilitzar com a base per construir les imatges docker de les diferents aplicacions.
-Aquestes imatges es poden consultar al [elements de catàleg](https://canigo.ctti.gencat.cat/cloud/cataleg/) i suporten les tecnologies més freqüents utilitzades a la Generalitat de Catalunya.
+Aquestes imatges es poden consultar al [elements de catàleg](https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/) i suporten les tecnologies més freqüents utilitzades a la Generalitat de Catalunya.
 
-En cas de necessitar una imatge d'una tecnologia o producte no suportat, cal tenir present les consideracions indicades a [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud/dockerImages/)
+En cas de necessitar una imatge d'una tecnologia o producte no suportat, cal tenir present les consideracions indicades a [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/)
 
 A l'hora d'utilitzar les imatges base, en cap cas les copieu i les modifiqueu, feu una imatge que hereti de la imatge base. Dockerfile ex:
 
@@ -60,7 +60,7 @@ COPY artefacte ${CATALINA_HOME}/webapps
 
 Totes les imatges base estan repositades al registre docker privat del CTTI i el seu codi font és accessible al gitlab a [Imatges-docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker).
 
-Podeu trobar més informació a [Registre docker privat.](https://canigo.ctti.gencat.cat/cloud/dockerRegistry/)
+Podeu trobar més informació a [Registre docker privat.](https://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/)
 
 ## Desplegament
 
@@ -81,8 +81,8 @@ Els Secrets s'inclouran sense les dades sensibles, que seran gestionades per l'e
 
 Podeu trobar més informació respecte als descriptors yaml de cadascuna de les plataformes a:
 
-- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/)
-- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud/contenidors_kubernetes/)
+- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/)
+- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 El desplegament a la plataforma SwarmMe no requereix descriptors específics, però si requereix disposar de la següent informació:
 
