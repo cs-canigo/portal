@@ -22,7 +22,7 @@ La integració amb Gicar es realitza a la plataforma de contenidors.
 
 La integració de les aplicacions amb Gicar es realitza amb el protocol SAMLv2 a través de Shibboleth.
 
-Cal utilitzar la imatge docker **gicar-shibboleth-openshift** disponible al [Registre privat](http://canigo.ctti.gencat.cat/draft/cloud/cloud-caas/dockerRegistry/) i [Gitlab.](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
+Cal utilitzar la imatge docker **gicar-shibboleth-openshift** disponible al [Registre privat](http://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/) i [Gitlab.](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
 
 
 ### Fitxers de configuració

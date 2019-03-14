@@ -38,7 +38,7 @@ La construcció de l'artefacte es realitzarà al SIC.
 
 Cal proporcionar a l'equip de Sic/Suport Cloud les instruccions necessàries, incloent-hi les eines i versions, per construir els artefactes a desplegar.
 
-Podeu trobar més informació a [Integració d'aplicacions xPaaS a SIC](https://canigo.ctti.gencat.cat/draft/cloud-xpaas/integracio-xpaas-sic/)
+Podeu trobar més informació a [Integració d'aplicacions xPaaS a SIC](https://canigo.ctti.gencat.cat/cloud-xpaas/integracio-xpaas-sic/)
 
 ## Construcció de fitxers de metadades de desplegament
 
