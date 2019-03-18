@@ -188,8 +188,6 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
-<br/>
-https://canigo.ctti.gencat.cat/sic-serveis/ci/#autoservei-de-jobs-pipeline
 ##### Clau pública
 
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
