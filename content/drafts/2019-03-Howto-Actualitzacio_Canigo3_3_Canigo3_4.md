@@ -23,7 +23,7 @@ L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitza
 
 ### Configuració de dependències
 
-A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.3.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
+A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.3.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
 
 La versió parent de Spring boot és la 2.1.3.RELEASE, per tant, per una aplicació amb Spring boot el parent quedaria:
 
