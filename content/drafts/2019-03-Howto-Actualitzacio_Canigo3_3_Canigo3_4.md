@@ -19,7 +19,7 @@ Els passos descrits en aquest document apliquen a la versió 3.4 del Framework C
 
 El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió és una [versió LTS](/canigo/roadmap), i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de tenir un suport continuat així com la màxima estabilitat que proporciona una versió LTS.
 
-L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitzar l'actualització d'una aplicació realitzada amb Canigó 3.1. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse.
+L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitzar l'actualització d'una aplicació realitzada amb Canigó 3.3. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse.
 
 ### Configuració de dependències
 
