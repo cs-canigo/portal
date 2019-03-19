@@ -32,6 +32,7 @@ weight	    = 4
 | jackson									         	 	|  2.9.5				        |
 | springfox-swagger2			         	 	|  2.7.0				        |
 | querydsl								         	 	|  4.2.1				        |
+| hibernate								         	 	|  5.3.7.Final	        |
 
 ## Canigó 3.2
 
