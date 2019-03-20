@@ -157,6 +157,7 @@ build:
       position: 1
       tool: maven_3.2.2
       parameters: clean package -Dmaven.test.skip=true
+      jdk: JDK 1.8 
       generates:
         - artifact01
         - artifact02
@@ -241,15 +242,16 @@ resources:
   artifacts:
     - id: artifact01
       artifactType: static
-      path: target/canigo324Armau-static.zip
+      path: target/canigo324-static.zip
     - id: artifact02
       artifactType: dynamic
-      path: target/canigo324Armau.war.original
+      path: target/canigo324.war.original
 build:
   steps:
     - id: bs001
       position: 1
       tool: maven_3.2.2
+      jdk: JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       generates:
         - artifact01

@@ -26,8 +26,8 @@ categories  = ["canigo","sic","sgde"]
 			    	start_at_slide: 53,
 			        timenav_height: 200,
 			        height : 650,
-			        initial_zoom: 12,
-			        language : "ca"
+			        initial_zoom: 12/*,
+			        language : "ca"*/
 			    }	   			
 
 			    console.log(additionalOptions)

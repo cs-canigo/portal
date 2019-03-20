@@ -1,5 +1,5 @@
 +++
-date = "2019-01-02"
+date = "2019-02-22"
 title = "Binaris"
 description = "Eina del SIC per el lliurament d'artefactes a CPD"
 sections = "SIC"
@@ -17,6 +17,8 @@ El sistema de gestió de **binaris del SIC** s'encarrega de:
 
 * Emmagatzemar els binaris que entreguen els Release Managers (o el sistema d'integració contínua per a entorns amb desplegament no automàtic) per  a deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
 * Emmagatzemar els binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etcètera) per a aplicacions que repositen codi font.
+
+<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
 
 ## Funcionament
 
@@ -43,7 +45,7 @@ Aquest job sol·licita la següent informació:
 
 * **Codi d'aplicació**: número de 4 xifres que es correspon amb el codi de diàleg (obligatori).
 * **Projecte**: identificador del projecte (obligatori).
-* **Versió**: número de versió de lliurament (obligatori).
+* **Versió**: número de versió de lliurament (obligatori). **El codi de versió ha de complir la normativa establerta per l'Oficina de Qualitat respecte a la nomenclatura de versions. En breu el sistema comprovarà aquest requisit.** Per a més informació: [Estàndard de versions] (https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari)
 * **Arxiu de binaris**: arxiu de binaris que desitja dipositar (obligatori).
 * **Descomprimir ZIP**: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat (per defecte, sí).
 * **Arxiu de documentació**: arxiu de documentació que desitja associar (opcional).
@@ -51,7 +53,7 @@ Aquest job sol·licita la següent informació:
 El job validarà que el codi d'aplicació sigui vàlid i que l'usuari disposi dels corresponents permisos. Si s'especifica una combinació de codi d'aplicació, projecte i versió ja lliurada anteriorment, el sistema sobreescriurà el seu contingut.
 
 <br/>
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">A partir del dia 24/01/2019 s'activarà el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte corresponent.</span> Únicament estaran exemptes d'aquesta validació les aplicacions que disposin d'una excepció aprovada en la custodia de codi. Fins aleshores, el control es realitza en mode informatiu permetent continuar.
+<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">El dia 24/01/2019 es va activar el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte corresponent al Git.</span> Només estan exemptes les aplicacions que disposen d'una excepció aprovada en la custodia de codi.
 
 ### Recuperació d'artefactes
 
@@ -60,7 +62,7 @@ Aquesta acció és accessible tant pels Release Managers de tots els lots com pe
 
 ## Eliminació de binaris
 
-S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les 5 últimes versions per codi d'aplicació i projecte. No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
+S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les últimes 5 versions repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>

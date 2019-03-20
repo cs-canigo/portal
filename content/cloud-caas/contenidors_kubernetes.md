@@ -3,7 +3,7 @@ date          = "2019-02-13"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
-weight        = 7
+weight        = 6
 categories    = ["cloud","docker","container","paas","kubernetes"]
 +++
 
@@ -45,7 +45,7 @@ A grans trets es poden distingir els següents components:
 * **Controlador:** És el component responsable de mantenir els contenidors sempre disponibles seguint els paràmetres configurats al Desplegament.
 * **Pod:** És el conjunt de contenidors que tenen el mateix cicle de vida i és necessari desplegar sempre conjuntament.
 * **Contenidor:** És el component mínim de la plataforma. És el contenidor docker.
-* **Petició d'emmagatzematge:** S'utilitza quan és necessari emmagatzematge persistent. És l'element de configuració que actua de pont entre el emmagatzematge físic i l'emmagatzematge lògic.
+* **Petició d'emmagatzematge:** S'utilitza quan és necessari emmagatzematge persistent. És l'element de configuració que actua de pont entre l'emmagatzematge físic i l'emmagatzematge lògic.
 * **Emmagatzematge:** És l'element de configuració responsable de definir l'emmagatzematge físic.
 * **Secret:** És l'element de configuració responsable de gestionar els elements de configuració amb informació sensible, com poden ser contrasenyes.
 * **Mapa de configuració:** Permet agrupar múltiples variables de configuració. Seria equivalent a un fitxer de propietats en una aplicació.
@@ -73,7 +73,7 @@ A continuació es realitza la correlació entre els diferents components arquite
 Quan és sol·licita la creació d'una aplicació a Kubernetes és necessària la següent informació:
 
 * **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als responsables de l'aplicació el nom d'aquests Volums.
-* **Memòria RAM** total necessaria per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
+* **Memòria RAM** total necessària per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
 ## Exemples
 ### PersistentVolumeClaim
 En una aplicació el primer element que cal configurar és el PersistentVolumeClaim. Mapejarà PersistentVolume amb el volumes lògics que s'utilitzaran als pods.

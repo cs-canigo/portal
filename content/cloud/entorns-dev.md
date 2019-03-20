@@ -1,5 +1,5 @@
 +++
-date        = "2018-07-25"
+date        = "2019-02-13"
 title       = "Entorns de desenvolupament"
 description = "Entorns de desenvolupament recomanats compatibles amb les Plataformes Cloud"
 sections    = "Container Cloud"
@@ -13,27 +13,36 @@ Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) ba
 
 **Plataforma Cloud**  | **Versió Openshift**   | **Versió Minishift compatible**
 ------------ | ------------ | ------------
-CPD4 AppAgile (privat)  |  3.6.1  | v1.11.0 o superior
+CPD4 AppAgile (privat)  |  3.9.65  | v1.16.1 o superior
 
 ## Bluemix
 
-
 En el cas de Bluemix:
 
-* _Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en Kubernetes, es recomana utilitzar [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
+* Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en Kubernetes, es recomana utilitzar [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
 * _Apps_: per les apps (xPaaS de CloudFoundry) es recomana utilitzar [PCF Dev](https://pivotal.io/pcf-dev).
 
-La versió a instal·lar de Kubernetes, Docker i PCF Dev en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
+La versió a instal·lar de Kubernetes i  Docker en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
 
-**Plataforma Cloud**  | **Versió Cloud Foundry**   | **Versió PCF Dev**
------------- | ------------ | ------------
-Bluemix - Apps	| 270.030 | v0.30.0
 
 **Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
 ------------ | ------------ | ------------
-Bluemix - Kubernetes  |  1.9.8  | 0.25 o superior
+Bluemix - Kubernetes  |  1.12.5  | 0.32 o superior
+
+## IBM CaaS
+
+En el cas de IBM CaaS:
+
+Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/) basades en Kubernetes, es recomana utilitzar [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
+
+La versió a instal·lar de Kubernetes i Docker en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
+
+**Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
+------------ | ------------ | ------------
+CaaS - Kubernetes  |  1.11.5  | 0.28.1 o superior
 
 ## SwarmMe
+
 Per les Plataformes Cloud basades en Swarm, es recomana utilitzar  [docker-compose](https://docs.docker.com/compose/)
 
 La versió a instal·lar de docker-compose en entorns de desenvolupament, ha de ser compatible amb la versió utilitzada en les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes/).
@@ -41,3 +50,4 @@ La versió a instal·lar de docker-compose en entorns de desenvolupament, ha de 
 **Plataforma Cloud**  | **Versió Docker**   | **Versió Docker-compose**
 ------------ | ------------ | ------------
 CPD1 SwarmMe (privat)	| 17.03.1-ce | 1.13.0
+
