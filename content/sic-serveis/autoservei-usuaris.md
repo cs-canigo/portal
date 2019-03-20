@@ -31,6 +31,7 @@ Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen 
 
 * Release Managers
 * Responsables de lot
+
 A continuació, descriurem cadascun d'aquests subtipus.
 <br/><br/>
 
