@@ -45,12 +45,27 @@ Aquest connector permet realitzar les següents accions:
 * **Obtenir Document:** Obtenció d’un document existent en el sistema i els identificadors únics de les seves versions prèvies.
 * **Cercar Documents:** Cerca de documents en funció de les seves metadades i contingut.
 
+
 **Funcionalitats d'Expedients**
 
 * **Alta Expedient:** Alta d’un nou expedient en el sistema.
 * **Baixa Expedient:** Baixa d’un expedient del sistema.
 * **Assignar Document:** Assignar un document existent en el sistema a un expedient existent en el sistema.
 * **Eliminar Assignació Document:** Eliminar l’assignació d’un document a un expedient.
+* **Tancar Expedient:** Tancar un expedient existent en el sistema i generar el foliat.
+* **Generar Foliat Parcial:** Generar un document foliat parcial d’un expedient.
+
+
+**Funcionalitats de llistats**
+
+* **Llista de Tipus Documentals:** Llistar els diferents tipus documentals suportats pel sistema.
+* **Llista de Productors:** Llistar els productors de documents.
+
+
+**Funcionalitats de sèries documentals**
+
+* **Alta/Modificació Sèries Documentals:** Alta d’una nova sèrie documental o modificació d’una existent.
+
 
 ## Arquitectura i Components
 
@@ -138,9 +153,9 @@ Fer la crida a la modalitat del servei desitjat, p.e.:
 ```java
 
  Document document = new Document();
-	         
+
  DocumentMetaData documentMetaData = new DocumentMetaData();
- 
+
  documentMetaData.setDocumentName("prova.txt");
  documentMetaData.setDocumentTypeCode("TD01-010");
  documentMetaData.setTitle("Prova");
@@ -149,9 +164,9 @@ Fer la crida a la modalitat del servei desitjat, p.e.:
  documentMetaData.setOrigin("0");
 
  InputStream documentData = new FileInputStream("pathfitxer")
- 
+
  document.setDocumentMetaData(documentMetaData);
- 
+
  CreateDocumentResponse result = psgdConnector.altaDocument(document, documentData);
 
 ```
@@ -182,7 +197,7 @@ Fer la crida a la modalitat del servei desitjat, p.e.:
 
 ```java
 DocumentGetContentData document = new DocumentGetContentData();
-         
+
 document.setDocumentID("478fbefa-4de5-49c7-881c-1b2e1d1a8535");
 document.setReaderID("canigo");
 
@@ -195,7 +210,7 @@ DocumentResponse result = psgdConnector.descarregarDocument(document);
  En cas de voler desar el document demanat a disc es podria fer de la següent manera.
 
 ```java
-OutputStream outputStream = new FileOutputStream ("givefilename"); 
+OutputStream outputStream = new FileOutputStream ("givefilename");
 result.getResult().getResultData().getData().writeTo(outputStream);
 ```
 
