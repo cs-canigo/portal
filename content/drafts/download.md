@@ -33,6 +33,8 @@ weight	    = 4
 | springfox-swagger2			         	 	|  2.7.0				        |
 | querydsl								         	 	|  4.2.1				        |
 | hibernate								         	 	|  5.3.7.Final	        |
+| mongodb.driver					         	 	|  3.10.1				        |
+| mongodb-driver-reactivestreams   	 	|  1.9.2				        |
 
 ## Canigó 3.2
 
