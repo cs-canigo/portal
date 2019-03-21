@@ -17,7 +17,7 @@ Els passos descrits en aquest document apliquen a la versió 3.4 del Framework C
 
 ### Introducció
 
-El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió versió incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
+El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
 
 Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.3 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_3_Canigo3_4)
 
@@ -26,7 +26,7 @@ L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitza
 
 ### Introducció programació reactiu
 
-En termes simples, la programació reactiva tracta d'aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d'aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s'estén des de la base de dades fins al socket HTTP quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi
+En termes simples, la programació reactiva tracta d'aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d'aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s'estén des de la base de dades fins al socket HTTP, quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi
 
 Canigó 3.4 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
 
@@ -94,60 +94,21 @@ Afegirem la propietat per la connexió a Mongodb, utilitzarem el estàndard de c
 *.mongodb.uri=mongodb://127.0.0.1:27017/canigo_persistence_mongo?socketTimeoutMS=5000
 ```
 
-Necessitem crear un configurador que extengui de *AbstractReactiveMongoConfiguration* que creï la connexió a la base de dades Mongodb a partir del String de connexió, un exemple de configurador podria ser:
+Necessitem crear un configurador que extengui de *cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig* que crearà la connexió a la base de dades Mongodb a partir del String de connexió, un exemple de configurador podria ser:
 
 ```java
-import javax.annotation.PreDestroy;
-
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration;
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
-import com.mongodb.MongoClientURI;
-import com.mongodb.reactivestreams.client.MongoClient;
-import com.mongodb.reactivestreams.client.MongoClients;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig;
 
 @Configuration
-@EnableReactiveMongoRepositories(basePackages = "cat.gencat")
-public class ReactiveMongoConfig extends AbstractReactiveMongoConfiguration {
+public class ReactiveMongoConfig extends ReactiveMongoCoreConfig {
 
-	@Value("${mongodb.uri:#{null}}")
-	protected String uri;
-
-	protected MongoClient mongo;
-
-	@Override
-	protected String getDatabaseName() {
-		return new MongoClientURI(uri).getDatabase();
-	}
-
-	@Override
-	public ReactiveMongoTemplate reactiveMongoTemplate() throws Exception {
-		return new ReactiveMongoTemplate(reactiveMongoClient(), getDatabaseName());
-	}
-
-	@PreDestroy
-	public void close() {
-		if (mongo != null) {
-			mongo.close();
-		}
-	}
-
-	@Override
-	public MongoClient reactiveMongoClient() {
-		if (mongo == null) {
-			mongo = MongoClients.create(uri);
-		}
-
-		return mongo;
-	}
 
 }
 ```
 
-En aquest configurador d'exemple estem aportant la connexió a Mongodb als repositoris que estiguin als packages a partir de "cat.gencat"
+En aquest configurador hi podríem registrar els listeners que necessitéssim de Mongodb
 
 Partim de l'entitat Tweet amb la definició:
 ```java
