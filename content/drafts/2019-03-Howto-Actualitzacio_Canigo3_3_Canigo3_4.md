@@ -19,11 +19,11 @@ Els passos descrits en aquest document apliquen a la versió 3.4 del Framework C
 
 El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió és una [versió LTS](/canigo/roadmap), i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de tenir un suport continuat així com la màxima estabilitat que proporciona una versió LTS.
 
-L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitzar l'actualització d'una aplicació realitzada amb Canigó 3.3. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse.
+L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitzar l'actualització d'una aplicació realitzada amb Canigó 3.1. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse.
 
 ### Configuració de dependències
 
-A la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.3.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
+A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.3.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
 
 La versió parent de Spring boot és la 2.1.3.RELEASE, per tant, per una aplicació amb Spring boot el parent quedaria:
 
@@ -76,8 +76,9 @@ a:
 ```
 System.setProperty("spring.main.allow-bean-definition-overriding", String.valueOf(true));
 ```
-13. Si l'aplicació utilitza BD mysql canviar el driver **com.mysql.jdbc.Driver** per **com.mysql.cj.jdbc.Driver** al fitxer jdbc.properties
-14. Si l'aplicació utilitza la seguretat per fitxer és necessari canviar el **"password-encoder"** del autentication provider, de:
+13. Si l'aplicació utilitza BD Mongodb, afegir l'annotació "@Configuration" a totes les classes que heredin de "cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig"
+14. Si l'aplicació utilitza BD mysql, canviar el driver **com.mysql.jdbc.Driver** per **com.mysql.cj.jdbc.Driver** al fitxer jdbc.properties
+15. Si l'aplicació utilitza la seguretat per fitxer és necessari canviar el **"password-encoder"** del autentication provider, de:
 ```
 		<security:authentication-provider>
  				<security:password-encoder hash="plaintext"/>
@@ -99,7 +100,7 @@ O fer un update dels passwords afegint "{noop}" davant dels passwords, aixi per 
 
 No es recomana utilitzar la seguretat per fitxer en entorns productius
 
-15. Si l'aplicació utilitza la seguretat **sense definir un "password-encoder"** en el atentication provider es necessari definir-ne un o utilitzar el "NoOpPasswordEncoder" que està deprecat, per exemple si tenim una security per BD amb:
+16. Si l'aplicació utilitza la seguretat **sense definir un "password-encoder"** en el atentication provider es necessari definir-ne un o utilitzar el "NoOpPasswordEncoder" que està deprecat, per exemple si tenim una security per BD amb:
 ```
 		<security:authentication-manager>
 			<security:authentication-provider>
