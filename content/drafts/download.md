@@ -16,7 +16,7 @@ weight	    = 4
 |--------------------------------- 	 |---------------------------------- |
 |              3.4.0          	  	 |                3.4.0	             |
 
-|          Dependencies externes   	 	|      Canigó 3.4.0     |
+|          Dependències externes   	 	|      Canigó 3.4.0     |
 |--------------------------------- 	 	|---------------------- |
 | springframework		           	 			|  5.1.5.RELEASE        |
 | spring.security		           	 			|  5.1.4.RELEASE        |
@@ -35,6 +35,21 @@ weight	    = 4
 | hibernate								         	 	|  5.3.7.Final	        |
 | mongodb.driver					         	 	|  3.10.1				        |
 | mongodb-driver-reactivestreams   	 	|  1.9.2				        |
+
+Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
+https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions
+
+S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats
+
+|     	Servidor incrustat					|      				Versió					     	|
+|--------------------------------- 	|--------------------------------- 	|
+|  Tomcat					          	  	 	|         9.0.16	             			|
+|  Undertow				          	  	 	|         2.0.17.Final         			|
+|  Jetty			  		        	  	 	|         9.4.14.v20181114    			|
+|  Netty (webflux)									|         4.1.33.Final        			|
+|  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE       			|
+
+Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
 
 ## Canigó 3.2
 
