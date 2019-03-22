@@ -75,19 +75,80 @@ A la versió 3.4.0 de Canigó amb Spring 5 i Spring Boot 2 es proporciona les se
 
 ### Configuració propietats amb yaml
 
+A la versió Canigó 3.4.0 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
+Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
+
+L'objectiu d'aquest canvi és utilitzar un estàndard més actual i llegible per a la definició de les propietas de les aplicacions i poder, en properes versions de Canigó, utilitzar totes les les funcionalitats de configuració de propietats de Spring
+
+Per a aplicacions amb Canigó 3.4, es recomana passar les propietats definides en format properties a format yaml
+
+En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats de Canigó, per utilitzar les funcionalitats de configuració de propietats de Spring
+
+Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-3x-core/modul-configuracio/)
 
 ### Programació amb estàndard de Streams Reactius
 
+Introduït a la versió 8 de Java, Streams són utilitzats pel processament eficient de colleccions d'objectes
+
+Streams Reactius és un estàndard per al processament de streams asíncrona, amb contrapressió i no bloquejant. L'estandard es defineix al [Manifest Reactiu](http://www.reactive-streams.org/)
+
+El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor i el publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix sense que hi hagi un bloqueig per part del publicador ni una contrapressió pel consumidor
+
+https://alexandreesl.com/tag/reactive-streams/
+
+TODO https://i0.wp.com/javasampleapproach.com/wp-content/uploads/2017/04/reactive-stream-flow-interface-behavior.png
+
+El resum de passos per una comunicació reactiva serien:
+1. El productor (o publicador) es subscriu amb un consumidor (o subscriptor)
+2. El consumidor quan està llest li indica al productor
+3. El productor li envia elements al consumidor
+4. El consumidor processa els elements i li demana més elements o cancela la petició al productor
+
+Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear sistemes reactius eficients
+
 ### Programació reactiva
 
-### Programació funcional (webflux)
+Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant el estàndard de Streams reactius
+
+L'objectiu és proporcionar eïnes per a crear aplicacions no bloquejants que sigui asíncron, orientat a esdeveniments i que requereixi un nombre reduït de fils
+
+Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programació tradicional amb Model-Vista-Controlador (MVC), però executat amb reactiu i no bloquejant
+
+A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Reactive
+
+https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png
+
+Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un Servidor HTTP (que actua com a consumidor) pot escriure com a resposta
+
+En l'exemple, el principal propòsit dels Streams Reactius seria deixar al Servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades
+
+Els serveis web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux a més proporciona suport per entrada de dades reactiva
+
+Per a que un repositori de dades suporti reactiu el seu driver ha de proporcionar les funcionalitats de non-blocking
+
+Els drivers de BD que actualment proporcionen non-blocking, són: Mongodb, Redis, Cassandra i Couchbase
+
+Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la guia d'[Utilització de mongo reactiu](/howtos/2019-03-Howto-Utilitzacio_mongo_reactiu.md)
+
+Per a més informació sobre programació reactiva amb Spring 5 podeu consultar:
+https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html
+
+### Programació funcional (WebFlux)
+
+Spring WebFlux proporciona endpoints web funcionals a més dels controlladors tradicionals
+
+A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux
+
+https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png
 
 ### Certificació amb servidors embeguts
 
 ## Connectors
 
-### Actualització connector amb ARESTA
+A la versió 3.4.0 s'ha actualitzat el següent mòdul d'integració:
+
+### Connector amb ARESTA
 
 L'objectiu d'aquest connector es proporcionar punt d’accés cap a la Plataforma de Serveis de Gestió Documental (PSGD) també coneguda com a ARESTA
 
@@ -99,9 +160,9 @@ Podeu consultar la documentació d'aquest connector a [Mòduls d'Integració - A
 
 ## Com utilitzar Canigó 3.4.0
 
-Properament es publicarà una actualització de l'entorn de desenvolupament i del plugin per l'eclipse per a la creació de projectes amb Canigó 3.4.0
+Properament es publicarà una actualització de l'entorn de desenvolupament i del plugin de Canigó per l'eclipse per a la creació de projectes amb Canigó 3.4.0
 
-Per poder passar una aplicació de Canigó 3.3.x a Canigó 3.4.0 podeu seguir els passos descrits a [Actualització Canigó 3.3 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_3_Canigo3_4)
+Per poder passar una aplicació de Canigó 3.3 a Canigó 3.4 podeu seguir els passos descrits a [Actualització Canigó 3.3 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_3_Canigo3_4)
 
 
 
