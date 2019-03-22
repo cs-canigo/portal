@@ -123,7 +123,7 @@ Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori 
 
 En l'exemple, el principal propòsit dels Streams Reactius seria deixar al Servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades
 
-Els serveis web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux a més proporciona suport per entrada de dades reactiva
+Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux a més proporciona suport per entrada de dades reactiva
 
 Per a que un repositori de dades suporti reactiu el seu driver ha de proporcionar les funcionalitats de non-blocking
 
@@ -134,13 +134,41 @@ Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la 
 Per a més informació sobre programació reactiva amb Spring 5 podeu consultar:
 https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html
 
+
 ### Programació funcional (WebFlux)
 
-Spring WebFlux proporciona endpoints web funcionals a més dels controlladors tradicionals
+Per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades va néixer la programació funcional
+
+Spring WebFlux proporciona endpoints web de forma funcional a més dels controlladors tradicionals, proporcionant un lleuger model de pogramació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa
 
 A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux
 
-https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png
+(TODO link https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
+
+Per a poder utilitzar WebFlux és necessari utilitzar un contenidor d'aplicacions que suporti Servlet 3.1+
+
+Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+
+
+Per a mostrar com utilitzar aquest nou paradigme de programació web s'ha publicat la guia [Utilització de web flux](/howtos/2019-03-Howto-Utilitzacio_web_flux.md)
+
+Per a més informació sobre programació funcional amb Spring 5 podeu consultar:
+https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn
+
+### Spring MVC o WebFlux
+
+Els següents punts són un resum dels punts que s'han de tenir en compte a l'hora de decidir-se per utilitzar Spring MVC o WebFlux en una aplicació:
+
+- Si l'aplicació amb Spring MVC funciona correctament, no hi ha necessitat de canvi
+
+- Si necessites un web stack amb non-blocking, Spring WebFlux et proporcionarà el màxim de funcionalitats reactives
+
+- Si necessites una aplicació el més lleuguera possible amb programació web funcional i utilització de lambdas de Java 8, Spring Web flux et proporcionarà endpoint web funcionals
+
+- Si l'aplicació utilitza apis de persistencia bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució
+
+- Encara que la teva aplicació hagi de ser amb Spring MVC, els controlladors de Spring MVC poden cridar a altres components reactius com serveis remots o repositoris de dades no bloquejants
+
+Si teniu dubtes a l'hora de decidir-vos utilitzar Spring MVC o WebFlux, no dubteu en posar-vos en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un mail a la bústia del CS Canigó
 
 ### Certificació amb servidors embeguts
 
