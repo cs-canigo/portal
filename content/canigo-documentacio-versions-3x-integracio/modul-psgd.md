@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-19T17:42:01+01:00"
+date        = "2019-03-21T17:25:18+01:00"
 title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació versió 3.x"
