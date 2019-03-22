@@ -116,11 +116,11 @@ Aquesta configuració de l'entorn es utilitzada pel servei de configuració per 
 
 A la versió Canigó 3.4 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
-Yaml es un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
+Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
 
 Es recomana passar les propietats definides en format properties a format yaml
 
-En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats per utilitzar les funcionalitats de configuració de propietats de Spring
+En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats de Canigó, per utilitzar les funcionalitats de configuració de propietats de Spring
 
 Els arxius de configuració de propietats de l'aplicació han d'estar en la següent ubicació:
 
