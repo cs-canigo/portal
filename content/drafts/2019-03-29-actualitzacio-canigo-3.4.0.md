@@ -116,7 +116,7 @@ Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programaci
 
 A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Reactive
 
-https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png
+![Web Reactive overview](https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png)
 
 Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un Servidor HTTP (que actua com a consumidor) que escriu com a resposta
 
