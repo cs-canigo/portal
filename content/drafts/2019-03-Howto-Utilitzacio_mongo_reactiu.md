@@ -295,11 +295,12 @@ http://localhost:8080/api/tweets/stream-json
 Observarem que el navegador està esperant resposta del servidor
 
 Enviarem un nou tweet, per exemple fent:
-
+```
 curl -X POST \
   http://localhost:8080/api/tweets \
   -H 'Content-Type: application/json' \
   -d '{"text":"Hello, World!"}'
+```
 
 I observarem com en el navegador ha aparegut el nou tweet simulant l'efecte de timeline
 
