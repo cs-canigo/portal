@@ -93,7 +93,7 @@ Introduït a la versió 8 de Java, Streams són utilitzats pel processament efic
 
 Streams Reactius és un estàndard per al processament de streams asíncrona, amb contrapressió i no bloquejant. L'estandard es defineix al [Manifest Reactiu](http://www.reactive-streams.org/)
 
-El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor i el publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix sense que hi hagi un bloqueig per part del publicador ni una contrapressió pel consumidor
+El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor. El publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix, sense que hi hagi un bloqueig per part del publicador, ni una contrapressió pel consumidor
 
 https://alexandreesl.com/tag/reactive-streams/
 
@@ -111,7 +111,7 @@ Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear 
 
 Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant el estàndard de Streams reactius
 
-L'objectiu és proporcionar eïnes per a crear aplicacions no bloquejants que sigui asíncron, orientat a esdeveniments i que requereixi un nombre reduït de fils
+L'objectiu és proporcionar eïnes per a crear aplicacions no bloquejants, que sigui asíncron, orientat a esdeveniments i que requereixi un nombre reduït de fils
 
 Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programació tradicional amb Model-Vista-Controlador (MVC), però executat amb reactiu i no bloquejant
 
@@ -119,11 +119,11 @@ A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Rea
 
 https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png
 
-Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un Servidor HTTP (que actua com a consumidor) pot escriure com a resposta
+Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un Servidor HTTP (que actua com a consumidor) que escriu com a resposta
 
 En l'exemple, el principal propòsit dels Streams Reactius seria deixar al Servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades
 
-Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux a més proporciona suport per entrada de dades reactiva
+Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux, a més, proporciona suport per entrada de dades reactiva
 
 Per a que un repositori de dades suporti reactiu el seu driver ha de proporcionar les funcionalitats de non-blocking
 
@@ -137,7 +137,7 @@ https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-refe
 
 ### Programació funcional (WebFlux)
 
-Per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades va néixer la programació funcional
+La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades
 
 Spring WebFlux proporciona endpoints web de forma funcional a més dels controlladors tradicionals, proporcionant un lleuger model de pogramació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa
 
@@ -162,7 +162,7 @@ Els següents punts són un resum dels punts que s'han de tenir en compte a l'ho
 
 - Si necessites un web stack amb non-blocking, Spring WebFlux et proporcionarà el màxim de funcionalitats reactives
 
-- Si necessites una aplicació el més lleuguera possible amb programació web funcional i utilització de lambdas de Java 8, Spring Web flux et proporcionarà endpoint web funcionals
+- Si necessites una aplicació el més lleuguera possible, amb programació web funcional i utilització de lambdas de Java 8, Spring Web flux et proporcionarà endpoint web funcionals
 
 - Si l'aplicació utilitza apis de persistencia bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució
 
@@ -170,7 +170,21 @@ Els següents punts són un resum dels punts que s'han de tenir en compte a l'ho
 
 Si teniu dubtes a l'hora de decidir-vos utilitzar Spring MVC o WebFlux, no dubteu en posar-vos en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un mail a la bústia del CS Canigó
 
-### Certificació amb servidors embeguts
+### Certificació amb servidors incrustats
+
+S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats
+
+|     	Servidor incrustat					|      				Versió					     	|
+|--------------------------------- 	|--------------------------------- 	|
+|  Tomcat					          	  	 	|         9.0.16	             			|
+|  Undertow				          	  	 	|         2.0.17.Final         			|
+|  Jetty			  		        	  	 	|         9.4.14.v20181114    			|
+|  Netty (webflux)									|         4.1.33.Final        			|
+|  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE       			|
+
+Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
+
+Per més informació podeu consultar [Binaris de Canigó](/canigo/download/)
 
 ## Connectors
 
