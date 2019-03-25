@@ -142,7 +142,7 @@ Spring WebFlux proporciona endpoints web de forma funcional a més dels controll
 
 A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux
 
-(TODO link https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
+![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
 Per a poder utilitzar WebFlux és necessari utilitzar un contenidor d'aplicacions que suporti Servlet 3.1+
 
