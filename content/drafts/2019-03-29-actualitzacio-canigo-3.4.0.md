@@ -95,6 +95,7 @@ Streams Reactius és un estàndard per al processament de streams asíncrona, am
 
 El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor. El publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix, sense que hi hagi un bloqueig per part del publicador, ni una contrapressió pel consumidor
 
+[comment]: <> (https://alexandreesl.com/tag/reactive-streams/)
 ![Reactive streams](/noticies/reactive-streams.png)
 
 El resum de passos per una comunicació reactiva serien:
