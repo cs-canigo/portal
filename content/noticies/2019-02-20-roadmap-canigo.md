@@ -25,7 +25,7 @@ En aquesta versió es realitzarà una actualització tecnològica del framework 
 
 **Arquitectura**
 
-* Possibilitat d’utilització de profiles de Spring
+* Possibilitat d’utilització propietats en yml
 * Programació amb estàndard de Streams Reactius
 * Programació reactiva (Spring WebFlux)
 * Programació funcional (Spring WebFlux)
