@@ -2,7 +2,7 @@
 date        = "2019-02-20"
 title       = "STD. Actualització tecnològica del servei"
 description = "L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents) que està previst que finalitzi a l'Abril. També es realitza una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. STD és el principal servei en el qual es recolza eCopia, servei de còpia autèntica de documents corporatiu de la Generalitat"
-sections    = ["Notícies"]
+sections    = ["Notícies", "home"]
 categories  = ["sgde"]
 key         = "MARC2019"
 +++
