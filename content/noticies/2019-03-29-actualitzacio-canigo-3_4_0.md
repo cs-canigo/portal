@@ -1,5 +1,5 @@
 +++
-date        = "2019-03-29"
+date        = "2019-03-25"
 title       = "Canigó. Publicació versió 3.4.0 Canigó"
 description = "S'ha publicat una nova versió de Canigó donant suport a Spring 5, Spring Boot 2 i nous paradigmes de programació. També s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD)"
 sections    = ["Notícies"]
