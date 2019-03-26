@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-21T12:04:16+01:00"
+date        = "2019-03-21T12:04:16+01:00"
 title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
 sections    = "Canigó. Documentació versió 3.x"
@@ -8,22 +8,22 @@ weight      = 3
 
 ## Propòsit
 
-Aquest mòdul proporciona accés amb la base de dades de MongoDB, permetent la execució d'operacions.
+Aquest mòdul proporciona accés i l'execució d'operacions a una base de dades Mongodb.
 
 Aquest mòdul utilitza Spring Data MongoDB i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data Mongo] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/). 
-* [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+* [Spring Data Mongo](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/). 
+* [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
-## Instal·lació i Configuració
+A partir de la versió 3.4 de Canigó, s'ha proporcionat les funcionalitats de reactiu per Mongodb
 
-### Instal·lació
+## Instal·lació
 
 Es pot afegir el mòdul MongoDB a una aplicació ja generada a partir de l'eina de suport al desenvolupador. L'eina de suport al desenvolupador inclourà la referència i les dependències dins del pom.xml.
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-    <canigo.persistence.mongodb.version>[1.0.0,1.1.0)</canigo.persistence.mongodb.version>
+    <canigo.persistence.mongodb.version>[2.0.0,2.1.0)</canigo.persistence.mongodb.version>
 
     <dependency>
       <groupId>cat.gencat.ctti</groupId>
@@ -90,11 +90,14 @@ Si es vol utilitzar Embeded Mongo per executar els tests es necessari afegir la 
         <version>RELEASE</version>
     </dependency>
 ```
-### Configuració
+
+## Configuració
 
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament (plugin de Canigó per a Eclipse)
 
 En cas que no es generi automàticament el codi, s'ha de realitzar manualment la següent configuració:
+
+### Configuració no reactiu
 
 **mongodb.properties**
 
@@ -111,7 +114,7 @@ Propietat | Requerit | Descripció
 *.mongodb.password | No | Requerit si no està definida la propietat mongodb.uri. Secret de la connexió amb la BD MongoDB
 
 
-**\*MongoConfig.java**
+**MongoConfig.java**
 
 Ubicació recomenada: <PROJECT_ROOT>/src/main/java/ *package de l'aplicacio* /mongodb/config
 
@@ -128,12 +131,13 @@ En aquest fitxer també s'hi pot afegir els diferents listeners de les diferents
 Un exemple de fitxer de configuració seria:
 ```
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 import com.mongodb.MongoClientOptions;
 
-import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig;
-import cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoEquipamentListener;
 
+@Configuration
 public class EquipamentMongoConfig extends MongoCoreConfig {
 
 	protected static MongoClientOptions mongoClientOptions;
@@ -159,14 +163,39 @@ public class EquipamentMongoConfig extends MongoCoreConfig {
 ```
 On s'està redefinit el socket time out de la connexió a 2000 ms i s'està registrant el listener cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener
 
-Una vegada creat el fitxer de configuració de MongoDB de l'aplicació es necessari importar-lo en el nostre AppConfig:
+### Configuració reactiu
+
+**mongodb.properties**
+
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties
+
+Propietat | Requerit | Descripció
+--------- | -------- | ----------
+*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
+
+**ReactiveMongoConfig.java**
+
+Ubicació recomenada: <PROJECT_ROOT>/src/main/java/ *package de l'aplicacio* /mongodb/config
+
+Es necessari crear l'arxiu de configuració de l'aplicació per a reactive MongoDB. Es necessari extendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig**
+
+En aquest fitxer també s'hi pot afegir els diferents listeners de les diferents entitats de MongoDB
+
+Un exemple de fitxer de configuració seria:
+```java
+
+import org.springframework.context.annotation.Configuration;
+
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig;
+
+@Configuration
+public class ReactiveMongoConfig extends ReactiveMongoCoreConfig {
+
+
+}
 ```
-@Import(EquipamentMongoConfig.class)
-```
 
-
-
-### Entitats
+## Entitats
 Per definir les entits de MongoDB es necessari utilitzar les annotations de JSR 380, Spring Data i Spring Data MongoDB. Per més informació:
 https://docs.oracle.com/javaee/7/api/javax/validation/package-summary.html
 https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
@@ -223,7 +252,7 @@ public class MongoEquipament {
 }
 ```
 
-### Ús dels repositoris
+## Ús dels repositoris
 
 Per a utilitzar els repositoris s'ha de generar un objecte MongoRepository per a l'entitat desitjada(T), que ha d'extendre de **cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository<T, ID extends Serializable>**
 
@@ -306,11 +335,13 @@ Operador | Descripció
 Per exemple, per cercar l'entitat que tingui id major que 15 i amb nom igual a 'Prova' el filtre hauria de ser el següent:<br>
 id>15,nom:Prova
 
-Més informació a la documentació oficial de [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
+Més informació a la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
+
+Querydsl està enfocat a bd relacionals, a partir de la versió 3.4 de Canigó s'ha deprecat els mètodes de "cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository", es recomana no utilitzar-los
 
 **MongoListeners**
 
-Si es necessari es pot crear un listener a una entitat de Mongo
+Si es necessari, es pot crear un listener a una entitat de Mongo
 
 Un exemple de listener seria:
 ```
