@@ -7,7 +7,7 @@ categories  = ["sgde"]
 key         = "MARC2019"
 +++
 
-L'últim trimestre del 2018 es va iniciar un projecte d'**actualització tecnològica del servei STD (Servei de Transformació de Documents)** que està previst que finalitzi a l'Abril. També es realitza una **rearquitectura** del servei per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. STD és el principal servei en el qual es recolza eCopia, servei de còpia autèntica de documents corporatiu de la Generalitat"
+L'últim trimestre del 2018 es va iniciar un projecte d'**actualització tecnològica del servei STD (Servei de Transformació de Documents)** que està previst que finalitzi a l'Abril. També es realitza una **rearquitectura** del servei per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. STD és el principal servei en el qual es recolza eCopia, servei de còpia autèntica de documents corporatiu de la Generalitat.
 
 Abans d'entrar en detall dels canvis que es realitzaran en aquest projecte, fem un recordatori de les diferents funcionalitats que ofereix el servei STD:
 
@@ -25,7 +25,7 @@ Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**]
 
 Gràcies a aquesta rearquitectura és possible **escalar** els diferents serveis per separat dependent del seu consum, a més d'estar **aïllats**, motiu pel qual un problema en un dels serveis no afectarà la resta. Tot el cicle de vida (desenvolupament, construcció, tests, versionat, desplegament) de cada servei és independent dels altres, podent ser evolucionats per separat.
 
-Totes les funcionalitats avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant. La documentació per l'ús d'aquesta nova API REST es publicarà properament al [Manual d'Usuari](https://canigo.ctti.gencat.cat/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD.pdf) del servei.
+Totes les funcionalitats del STD avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant. La documentació per l'ús d'aquesta nova API REST es publicarà properament al [Manual d'Usuari](https://canigo.ctti.gencat.cat/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD.pdf) del servei.
 
 ### Sondes
 
