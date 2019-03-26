@@ -1,5 +1,5 @@
 +++
-date        = "2015-01-24T17:11:42+01:00"
+date        = "2019-03-19T17:11:42+01:00"
 title       = "Binaris de Canigó"
 description = "Descàrrega de les diferents versions de Canigó, entorn de treball, plugin d'eclipse..."
 sections    = "Canigó"
@@ -7,13 +7,57 @@ toc	    = true
 weight	    = 4
 +++
 
+## Canigó 3.4
+
+- [Release notes Canigó 3.4](/canigo-download-related/release-notes-canigo-34)
+- [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
+
+|          Versió Canigó LTS Actual  |      Última versió disponible     |
+|--------------------------------- 	 |---------------------------------- |
+|              3.4.0          	  	 |                3.4.0	             |
+
+|          Dependències externes   	 	|      Canigó 3.4.0     |
+|--------------------------------- 	 	|---------------------- |
+| springframework		           	 			|  5.1.5.RELEASE        |
+| spring.security		           	 			|  5.1.4.RELEASE        |
+| spring.data				           	 			|  2.1.5.RELEASE        |
+| springframework.boot         	 			|  2.1.3.RELEASE        |
+| log4j										         	 	|  2.11.0				        |
+| slf4j										         	 	|  1.7.25				        |
+| junit										         	 	|  4.12					        |
+| hamcrest								         	 	|  1.3					        |
+| mockito									         	 	|  2.23.4				        |
+| json.path.assert				         	 	|  2.4.0				        |
+| jsonassert							         	 	|  2.4.0				        |
+| jackson									         	 	|  2.9.5				        |
+| springfox-swagger2			         	 	|  2.7.0				        |
+| querydsl								         	 	|  4.2.1				        |
+| hibernate								         	 	|  5.3.7.Final	        |
+| mongodb.driver					         	 	|  3.10.1				        |
+| mongodb-driver-reactivestreams   	 	|  1.9.2				        |
+
+Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
+https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions
+
+S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats
+
+|     	Servidor incrustat					|      				Versió					     	|
+|--------------------------------- 	|--------------------------------- 	|
+|  Tomcat					          	  	 	|         9.0.16	             			|
+|  Undertow				          	  	 	|         2.0.17.Final         			|
+|  Jetty			  		        	  	 	|         9.4.14.v20181114    			|
+|  Netty (webflux)									|         4.1.33.Final        			|
+|  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE       			|
+
+Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
+
 ## Canigó 3.2
 
 - [Release notes Canigó 3.2](/canigo-download-related/release-notes-canigo-32)
 - [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
 
-|          Versió LTS Actual       	 |      Última versió disponible    	 |
-|--------------------------------- 	 |------------------------------------	 |
+|          Versió LTS Actual       	 |      Última versió disponible     |
+|--------------------------------- 	 |---------------------------------- |
 |              3.2.0.1            	 |                3.2.7	             |
 
 ### Creació de l'entorn local de desenvolupament
