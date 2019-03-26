@@ -1,5 +1,5 @@
 +++
-date        = "2018-06-18"
+date        = "2019-03-19"
 title       = "Matrius de Compatibilitats"
 description = ""
 sections    = "Canigó"
@@ -7,12 +7,144 @@ weight      = 1
 toc         = true
 +++
 
+## Canigó 3.4.x
+
+|                                                   		| 25/03/2019 (3.4.0)	|
+|---------------------------------------------------		|------------------		|
+| **canigo.core**                                   		| 4.0.0         			|
+|                                                   		|               			|
+| **canigo.persistence.core**                        		| 2.0.0          			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.persistence.jpa**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.persistence.core                           		| [2.0.0,2.1.0)  			|
+|                                                   		|               			|
+| **canigo.persistence.mongodb**                     		| 2.0.0          			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.persistence.core                           		| [2.0.0,2.1.0)  			|
+|                                                   		|               			|
+| **canigo.security**                                		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.security.saml.rest**                      		| 2.0.0          			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.security                                   		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.web.core**                                		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.web.rs**                                  		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.web.core                                   		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.support.fileupload**                      		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.web.core                                   		| [2.0.0,2.1.0) 			|
+| canigo.integration.antivirus                      		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.support.lopd**                            		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.security                                   		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.support.mailing**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.support.merging**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.support.ole**                             		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.support.sftp**                            		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.operation.instrumentation**               		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.web.core                                   		| [2.0.0,2.1.0) 			|
+| canigo.web.rs                                   			| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.operation.logging**                       		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.antivirus**                   		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.avisosalertes.pica**          		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.dni.pica**                    		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.documentum(7.1)**             		| 4.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.gecat**                       		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.sap                            		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.icc**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.icc.datatypes                  		| [2.0.0,2.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.icc.datatypes**               		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.notificacions.electroniques** 		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.notificacions.electroniques.ws**	| 3.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.notificacions.electroniques    		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.padro.pica**                  		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.pica**                        		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.psgd**                        		| 2.0.1         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.psis**                        		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.sap**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+|                                                   		|               			|
+| **canigo.integration.sarcat**                      		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.support.sftp                               		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.sarcat.pica**                 		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.sgde**                        		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.operation.instrumentation                  		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.ssc**                         		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.operation.instrumentation                  		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+| **canigo.integration.tributs.pica**                		| 2.0.0         			|
+| canigo.core                                       		| [4.0.0,4.1.0)  			|
+| canigo.integration.pica                           		| [2.0.0,2.1.0) 			|
+|                                                   		|               			|
+
+
 ## Canigó 3.2.x
 
 |                                                       	| 31/03/2017 (3.2.0) 	| 02/06/2017 (3.2.0.1) 	| 26/06/2017 (3.2.1) 	| 29/09/2017 (3.2.2) 	| 20/12/2017 (3.2.3) 	| 05/04/2018 (3.2.4) | 18/06/2018 (3.2.5) | 28/09/2018 (3.2.6)
 |-------------------------------------------------------	|:------------------:	|:------------------:	|:------------------:	|:------------------:	|:------------------:	|:------------------:|:------------------:|:------------------:
 | **canigo.core**                                       	|        3.2.0       	|        3.2.0          |        3.2.1          |        3.2.2       	|        3.2.3          |                    |        3.2.4     |         
-|															|						|						|						|						|	                    |	                 |							|					
+|																													|						|						|						|						|	                    |	                 |							|					
 | **canigo.persistence.core**                            	|               	|                       |                       |               	|                  |                    |              	 |        1.0.0
 | canigo.core                                           	|       	|                       |                       |     	|          |                    |       	 |   [3.2.0,3.3.0)
 |                                                       	|                    	|                       |                       |                    	|                       |                    |                    	  
@@ -285,7 +417,6 @@ toc         = true
 ## Canigó 3.0
 
 - [Matriu Compatibilitat 3.0.x](/related/canigo/download/Matriu+Compatibilitat+Canigó3.0.6.pdf)
-
 
 
 
