@@ -2,7 +2,7 @@
 date        = "2019-02-20"
 title       = "Canigó. Roadmap del framework"
 description = "En aquesta notícia presentem el roadmap previst per les properes versions del framework Canigó"
-sections    = ["Notícies"]
+sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "MARC2019"
 +++
