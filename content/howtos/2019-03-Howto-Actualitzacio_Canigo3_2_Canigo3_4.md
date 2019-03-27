@@ -1,7 +1,7 @@
 +++
 date        = "2019-03-18"
-title       = "Actualització Canigó 3.3 a Canigó 3.4"
-description = "Com realitzar l'actualització d'una aplicació de Canigó 3.3 a Canigó 3.4"
+title       = "Actualització Canigó 3.2 a Canigó 3.4"
+description = "Com realitzar l'actualització d'una aplicació de Canigó 3.2 a Canigó 3.4"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "ABRIL2019"
@@ -9,11 +9,11 @@ key         = "ABRIL2019"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells usuaris que vulguin fer l'actualització a Canigó 3.3 de la seva aplicació Canigó 3.4
+Aquest how-to va dirigit a tots aquells usuaris que vulguin fer l'actualització a Canigó 3.2 de la seva aplicació Canigó 3.4.
 
 ### Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó
+Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó.
 
 ### Introducció
 
@@ -23,7 +23,7 @@ L'objectiu d'aquest Howto és mostrar els procediments necessaris per a realitza
 
 ### Configuració de dependències
 
-A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.3.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
+A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) es poden veure les versions dels mòduls i components de Canigó de les versions 3.2.x i 3.4.x. S'han d'actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.
 
 La versió parent de Spring boot és la 2.1.3.RELEASE, per tant, per una aplicació amb Spring boot el parent quedaria:
 
