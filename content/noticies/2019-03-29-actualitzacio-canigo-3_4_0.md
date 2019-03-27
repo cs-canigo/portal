@@ -116,32 +116,27 @@ Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però W
 
 Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la següent guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-3x-altres/modul-mongo-reactiu/).
 
-Per a més informació sobre programació reactiva amb Spring 5 podeu consultar:
-https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html
-
+Per a més informació sobre programació reactiva amb Spring 5 podeu consultar aquest [enllaç](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html).
 
 ### Programació funcional (WebFlux)
 
 La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades.
 
-Spring WebFlux proporciona endpoints web de forma funcional a més dels controlladors tradicionals, proporcionant un lleuger model de programació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa
+Spring WebFlux proporciona endpoints web de forma funcional a més dels controladors tradicionals, proporcionant un lleuger model de programació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa.
 
-A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux
+A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux:
 
 ![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
-Per a poder utilitzar WebFlux és necessari utilitzar un contenidor d'aplicacions que suporti Servlet 3.1+
+Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+.
 
-Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+
+Per a mostrar com utilitzar aquest nou paradigma de programació web s'ha publicat la guia [Utilització de web flux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
 
-Per a mostrar com utilitzar aquest nou paradigma de programació web s'ha publicat la guia [Utilització de web flux](/canigo-documentacio-versions-3x-altres/modul-webFlux/)
-
-Per a més informació sobre programació funcional amb Spring 5 podeu consultar:
-https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn
+Per a més informació sobre programació funcional amb Spring 5 podeu consultar aquest [enllaç](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn).
 
 ### Spring MVC o WebFlux
 
-Els següents punts són un resum dels punts que s'han de tenir en compte a l'hora de decidir-se per utilitzar Spring MVC o WebFlux en una aplicació:
+Els següents punts són un resum del què s'han de tenir en compte a l'hora de decidir-se per utilitzar Spring MVC o WebFlux en una aplicació:
 
 - Si l'aplicació amb Spring MVC funciona correctament, no hi ha necessitat de canvi
 
@@ -151,13 +146,13 @@ Els següents punts són un resum dels punts que s'han de tenir en compte a l'ho
 
 - Si l'aplicació utilitza apis de persistència bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució
 
-- Encara que la teva aplicació hagi de ser amb Spring MVC, els controlladors de Spring MVC poden cridar a altres components reactius com serveis remots o repositoris de dades no bloquejants
+- Encara que l'aplicació hagi d'estar basada en Spring MVC, els controladors de Spring MVC poden cridar a altres components reactius com serveis remots o repositoris de dades no bloquejants.
 
-Si teniu dubtes a l'hora de decidir-vos utilitzar Spring MVC o WebFlux, no dubteu en posar-vos en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un mail a la bústia del CS Canigó
+Si teniu dubtes a l'hora de decidir si utilitzar Spring MVC o WebFlux, podeu posar-vos en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat) per tractar el vostre cas.
 
-### Certificació amb servidors incrustats
+### Certificació amb servidors incrustats (Spring Boot)
 
-S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats
+S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats amb Spring Boot:
 
 |     	Servidor incrustat					|      				Versió					     	|
 |--------------------------------- 	|--------------------------------- 	|
@@ -169,28 +164,25 @@ S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors i
 
 Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
 
-Per més informació podeu consultar [Binaris de Canigó](/canigo/download/)
+Per més informació podeu consultar aquest [enllaç](/canigo/download/).
 
 ## Connectors
 
-A la versió 3.4.0 s'ha actualitzat el següent mòdul d'integració:
+Com a afegit, a la versió 3.4.0 s'ha actualitzat el següent mòdul d'integració:
 
-### Connector amb ARESTA
+### ARESTA
 
-L'objectiu d'aquest connector es proporcionar punt d’accés cap a la Plataforma de Serveis de Gestió Documental (PSGD) també coneguda com a ARESTA
+L'objectiu d'aquest connector és proporcionar un punt d’accés cap a la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a ARESTA, facilitant a les aplicacions l’ús d'aquesta plataforma.
 
-El propòsit d'aquest connector és proporcionar una interfície funcional que faciliti a les aplicacions l’ús de la PSGD
+A la versió 3.4.0 de Canigó, s'ha alineat el connector amb PSGD o ARESTA a la versió 6.0.
 
-A la versió 3.4.0 de Canigó, s'ha alineat el connector amb PSGD o ARESTA a la versió 6.0 
-
-Podeu consultar la documentació d'aquest connector a [Mòduls d'Integració - ARESTA (PSGD)](/canigo-documentacio-versions-3x-integracio/modul-psgd/)
+Podeu consultar la documentació d'aquest connector a [Mòduls d'Integració - ARESTA (PSGD)](/canigo-documentacio-versions-3x-integracio/modul-psgd/).
 
 ## Com utilitzar Canigó 3.4.0
 
-Properament es publicarà una actualització de l'entorn de desenvolupament i del plugin de Canigó per l'eclipse per a la creació de projectes amb Canigó 3.4.0
+Properament es publicarà una actualització de [l'entorn de desenvolupament](/canigo/entorn-desenvolupament/) i del [plugin de Canigó per Eclipse](/canigo-download-related/plugin-canigo/) per a la creació d'aplicacions Canigó 3.4.0.
 
-Per poder passar una aplicació de Canigó 3.3 a Canigó 3.4 podeu seguir els passos descrits a [Actualització Canigó 3.3 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_3_Canigo3_4/)
+Per poder passar una aplicació de Canigó 3.2 a Canigó 3.4 podeu seguir els passos descrits a [Actualització Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/).
 
-
-
-Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un mail a la bústia del CS Canigó
+<br/>
+Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant-nos un mail a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
