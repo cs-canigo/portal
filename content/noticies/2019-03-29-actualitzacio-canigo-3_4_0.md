@@ -1,6 +1,6 @@
 +++
 date        = "2019-03-25"
-title       = "Canigó. Publicació versió 3.4.0 Canigó"
+title       = "Canigó. Publicació versió 3.4.0"
 description = "S'ha publicat una nova versió de Canigó donant suport a Spring 5, Spring Boot 2 i nous paradigmes de programació. També s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD)"
 sections    = ["Notícies"]
 categories  = ["canigo"]
@@ -9,29 +9,23 @@ key         = "ABRIL2019"
 
 ## Propòsit
 
-Amb l’alliberament de la versió 3.4 del framework Canigó s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions suportades de Java i Spring i proporcionar nous paradigmes de programació.
+Amb l’alliberament de la versió 3.4 del framework Canigó s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions suportades de Java i Spring, a més de permetre nous paradigmes de programació.
 
-Amb la versió 3.4 també s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a ARESTA.
+Com a afegit, a la versió 3.4 també s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a ARESTA.
 
 ## Actualització tecnologies base
 
 ### Java 11
 
-El setembre del 2018 Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de Oracle
+El Setembre de 2018, Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les seves release notes al següent [enllaç](https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html).
 
-Podeu consultar la documentació d'aquesta versió, així com la seva release notes, a: https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html
-
-S'ha certificat la compatibilitat de Canigó 3.4.0 amb Java 11
-
-També s'ha certificat la compatibilitat de Canigó 3.4.0 amb el nou contenidor Docker per a Java 11 disponible al [Catàleg de components de Canigó Cloud](/cloud/cataleg/) 
+Des del CS Canigó, s'ha certificat la compatibilitat de Canigó 3.4.0 amb aquesta versió Java 11. També s'ha certificat la compatibilitat de Canigó 3.4.0 amb la nova imatge Docker per a Java 11 disponible al [catàleg de components de Suport Cloud](/cloud/cataleg/) 
 
 ### Spring 5
 
-El Spring Framework ofereix un model complet de programació i configuració per a aplicacions empresarials basades en Java modernes
+Spring Framework ofereix un model complet de programació i configuració per a aplicacions empresarials basades en Java. Spring 5 és la primera gran entrega de Spring Framework des de la versió 4 publicada el Desembre de 2013.
 
-Spring 5 és la primera gran entrega de Spring Framework des de la versió 4 publicada el desembre de 2013
-
-El principal objectiu de Spring 5 és proporcionar els nous paradigmes de programació amb programació funcional (webflux) i programació reactiva
+El principal objectiu de Spring 5 és proporcionar els nous paradigmes de programació amb programació funcional (webflux) i programació reactiva.
 
 A més, el resum d'actualitzacions que incorpora són les següents:
 
@@ -55,19 +49,19 @@ A més, el resum d'actualitzacions que incorpora són les següents:
 - Apache Johnzon 1.1
 - Refinat de la interacció amb resouces amb NIO.2
 
-Segons estudis realitzats a 5160 desenvolupadors a finals del 2018, el 24% de les aplicacions que utilitzaven Spring utilitzaven la versió 5
+Segons estudis realitzats a 5.160 desenvolupadors a finals del 2018, el 24% de les aplicacions que utilitzaven Spring ja utilitzaven la versió 5.
 
 ### Spring Boot 2
 
-Spring Boot, al igual que Canigó, proporciona eines pel desenvolupament fàcil d'aplicacions empresarials amb el mínim possible de configuració
+Spring Boot, al igual que Canigó, proporciona eines pel desenvolupament fàcil d'aplicacions empresarials amb el mínim possible de configuració.
 
-Spring Boot 1 acaba la seva línia de desenvolupament i manteniment a l'Agost del 2019
+Spring Boot 1 acaba la seva línia de desenvolupament i manteniment a l'Agost del 2019.
 
-Spring Boot 2 el seu principal objectiu és donar suport a Spring 5, Java 8 a la seva línia base i l'actualització de les versions de les seves dependències així com també actualització dels seus servidors suportats
+Spring Boot 2 el seu principal objectiu és donar suport a Spring 5, Java 8 a la seva línia base i l'actualització de les versions de les seves dependències així com també actualització dels seus servidors suportats.
 
-Segons estudis realitzats a 5160 desenvolupadors a finals del 2018, amb pocs mesos des de la seva publicació, el 30% de les aplicacions que utilitzaven Spring Boot utilitzaven la versió 2
+Segons estudis realitzats a 5.160 desenvolupadors a finals del 2018, amb pocs mesos des de la seva publicació, el 30% de les aplicacions que utilitzaven Spring Boot utilitzaven la versió 2,
 
-Amb l'actualització a Spring Boot 2, Canigó 3.4.0 proporciona una actualitzada, potent, fàcil i productiva eina de creació d'aplicacions amb Java
+Amb l'actualització a Spring Boot 2, Canigó 3.4.0 proporciona una actualitzada, potent, fàcil i productiva eina de creació d'aplicacions amb Java.
 
 ## Arquitectura
 
@@ -75,25 +69,25 @@ A la versió 3.4.0 de Canigó amb Spring 5 i Spring Boot 2 es proporciona les se
 
 ### Configuració propietats amb yaml
 
-A la versió Canigó 3.4.0 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
+YAML és un estàndard de format fàcilment llegible que significa "YAML Ain't Markup Language", per a més informació es pot consultar el següent [enllaç](https://yaml.org/).
 
-Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
+A la versió Canigó 3.4.0 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml.
 
-L'objectiu d'aquest canvi és utilitzar un estàndard més actual i llegible per a la definició de les propietats de les aplicacions i poder, en properes versions de Canigó, utilitzar totes les funcionalitats de configuració de propietats de Spring
+L'objectiu d'aquest canvi és utilitzar un estàndard més actual i llegible per a la definició de les propietats de les aplicacions i poder, en properes versions de Canigó, utilitzar totes les funcionalitats de configuració de propietats de Spring.
 
-Per a aplicacions amb Canigó 3.4, es recomana passar les propietats definides en format properties a format yaml
+Per a aplicacions amb Canigó 3.4, es recomana passar les propietats definides en format properties a format yaml.
 
-En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats de Canigó, per utilitzar les funcionalitats de configuració de propietats de Spring
+En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats pròpia de Canigó, per utilitzar les funcionalitats de configuració de propietats estàndard de Spring.
 
-Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-3x-core/modul-configuracio/)
+Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-3x-core/modul-configuracio/).
 
 ### Programació amb estàndard de Streams Reactius
 
-Introduït a la versió 8 de Java, Streams són utilitzats pel processament eficient de colleccions d'objectes
+Introduïts a la versió 8 de Java, els Streams són utilitzats pel processament eficient de col·leccions d'objectes.
 
 Streams Reactius és un estàndard per al processament de streams asíncrona, amb contrapressió i no bloquejant. L’estàndard es defineix al [Manifest Reactiu](http://www.reactive-streams.org/)
 
-El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor. El publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix, sense que hi hagi un bloqueig per part del publicador, ni una contrapressió pel consumidor
+El resum d'aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor. El publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix, sense que hi hagi un bloqueig per part del publicador, ni una contrapressió pel consumidor.
 
 [//]: # (https://alexandreesl.com/tag/reactive-streams/)
 ![Reactive streams](https://canigo.ctti.gencat.cat/noticies/reactive-streams.png)
@@ -104,31 +98,23 @@ El resum de passos per una comunicació reactiva serien:
 3. El productor li envia elements al consumidor
 4. El consumidor processa els elements i li demana més elements o cancel·la la petició al productor
 
-Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear sistemes reactius eficients
+Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear sistemes reactius eficients.
 
 ### Programació reactiva
 
-Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant el estàndard de Streams reactius
+Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant l'estàndard de Streams Reactius.
 
-L'objectiu és proporcionar eines per a crear aplicacions no bloquejants, que sigui asíncron, orientat a esdeveniments i que requereixi un nombre reduït de fils
+L'objectiu és proporcionar eines per a crear aplicacions no bloquejants, que siguin asíncrones, orientades a esdeveniments i que requereixin d'un nombre reduït de fils.
 
-Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programació tradicional amb Model-Vista-Controlador (MVC), però executat amb reactiu i no bloquejant
-
-A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Reactive
+Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programació tradicional amb Model-Vista-Controlador (MVC), però executat amb reactiu i no bloquejant. A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Reactive:
 
 ![Web Reactive overview](https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png)
 
-Un exemple on podria actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un Servidor HTTP (que actua com a consumidor) que escriu com a resposta
+Un exemple pràctic on podrien actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un servidor HTTP (que actua com a consumidor) escriu com a resposta. En l'exemple, el principal propòsit dels Streams Reactius seria delegar al servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades.
 
-En l'exemple, el principal propòsit dels Streams Reactius seria deixar al Servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades
+Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux, a més, proporciona suport per entrada de dades reactiva. Per a que un repositori de dades suporti reactiu el seu driver ha de ser no bloquejant (non-blocking). Els drivers de bases de dades que actualment proporcionen non-blocking, són: MongoDB, Redis, Cassandra i Couchbase.
 
-Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux, a més, proporciona suport per entrada de dades reactiva
-
-Per a que un repositori de dades suporti reactiu el seu driver ha de proporcionar les funcionalitats de non-blocking
-
-Els drivers de BD que actualment proporcionen non-blocking, són: Mongodb, Redis, Cassandra i Couchbase
-
-Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-3x-altres/modul-mongo-reactiu/)
+Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la següent guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-3x-altres/modul-mongo-reactiu/).
 
 Per a més informació sobre programació reactiva amb Spring 5 podeu consultar:
 https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html
@@ -136,7 +122,7 @@ https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-refe
 
 ### Programació funcional (WebFlux)
 
-La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades
+La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l'aplicació de funcions declarades.
 
 Spring WebFlux proporciona endpoints web de forma funcional a més dels controlladors tradicionals, proporcionant un lleuger model de programació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa
 
