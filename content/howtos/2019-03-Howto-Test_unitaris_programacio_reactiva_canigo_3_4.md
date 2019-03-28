@@ -9,17 +9,15 @@ key         = "ABRIL2019"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de crear test unitaris a Streams reactius proporcionats a la versió 3.4.0 de Canigó
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de crear test unitaris a Streams reactius proporcionats a la versió 3.4.0 de Canigó.
 
 ### Introducció programació reactiva
 
-Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5
+Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, proporcionant les funcionalitats per a la programació reactiva utilitzant el estàndard de Streams reactius.
 
-Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant el estàndard de Streams reactius
+L'objectiu és proporcionar eines per a crear aplicacions no bloquejants, que siguin asíncrones, orientades a esdeveniments i que requereixin un nombre reduït de fils.
 
-L'objectiu és proporcionar eines per a crear aplicacions no bloquejants, que sigui asíncron, orientat a esdeveniments i que requereixi un nombre reduït de fils
-
-Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear sistemes reactius eficients
+Spring 5 utilitza el projecte [Reactor](https://projectreactor.io/) per a crear sistemes reactius eficients.
 
 Per a més informació sobre programació reactiva amb Spring 5 podeu consultar:
 https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html
@@ -39,7 +37,7 @@ El resum dels passos a utilitzar per crear un test seria:
 - Els diferents passos a provar en el fluxe de dades del stream
 - Verificació final que la seqüència es compleix 
 
-Per a més informació podeu consultar la documentació del projecte [Reactor testing](https://projectreactor.io/docs/core/release/reference/#testing)
+Per a més informació podeu consultar la documentació del projecte [Reactor testing](https://projectreactor.io/docs/core/release/reference/#testing).
 
 ### Test unitaris streams 
 
@@ -174,12 +172,11 @@ On tenim que:
 	- "thenAwait" per esperar un temps en concret perquè hi hagi events 
 	- "expectNextCount" després de "thenAwait", per verificar que passat el temps definit a "thenAwait", hi ha el nombre d'elements que esperem
 	
-Altres funcionalitats interessants seria:
-- "expectNextMatches"	per verificar que els elements compleixen un predicat
+Altres funcionalitats interessants serien:
+- "expectNextMatches" per verificar que els elements compleixen un predicat
 - "expectError", "expectError" especificant l'error, "expectErrorMessage", "expectErrorMatches" i "expectErrorSatisfies" per fer comprovacions a l'error esperat
 	
-Per a més informació sobre l'exemple de la prova podeu consultar:
-https://github.com/simonbasle-demos/s1p-reactor-in-action
+Per a més informació sobre l'exemple de la prova podeu consultar aquests [exemples](https://github.com/simonbasle-demos/s1p-reactor-in-action).
 
 #### TestPublisher 
 Per il·lustrar exemples de tests unitaris de serveis utilitzant TestPublisher per a la creació del fluxe de dades, partirem d'una classe que exposa un servei per transformar un fluxe de dades amb String a majúscules:
@@ -200,7 +197,7 @@ class UppercaseConverter {
 }
 ```
 
-Utilitzarem TestPublisher per crear un fluxe de dades que es passarà a la classe UppercaseConverter
+Utilitzarem TestPublisher per crear un fluxe de dades que es passarà a la classe UppercaseConverter:
 ```java
     @Test
     public void testPublisherInAction() {
@@ -215,14 +212,14 @@ Utilitzarem TestPublisher per crear un fluxe de dades que es passarà a la class
     }
 ```
 
-Una vegada creat el fluxe i la connexió amb UppercaseConverter, s'utilitza el step "then" per emetre els elements a la subscripció i verificar que, en els següents passos, els elements creats al "TestPublisher" són transformats a majúscules
+Una vegada creat el fluxe i la connexió amb UppercaseConverter, s'utilitza el step "then" per emetre els elements a la subscripció i verificar que, en els següents passos, els elements creats al "TestPublisher" són transformats a majúscules.
 
 Per a més informació sobre l'exemple podeu consultar:
 https://github.com/eugenp/tutorials/tree/master/spring-5-reactive
 
 ### Test unitaris streams reactius
 
-Per il·lustrar exemples de tests unitaris de serveis amb streams reactius utilitzarem un repository amb Mongodb. Per a més informació com utilitzar reactiu amb un repositori de dades Mongodb, s'ha publicat la guia d'[Utilització de mongo reactiu](/howtos/2019-03-Howto-Utilitzacio_mongo_reactiu.md)
+Per il·lustrar exemples de tests unitaris de serveis amb streams reactius utilitzarem un repositori amb MongoDB. Per a més informació com utilitzar reactiu amb un repositori de dades Mongodb, s'ha publicat la guia d'[Utilització de mongo reactiu](/howtos/2019-03-Howto-Utilitzacio_mongo_reactiu.md).
 
 Per l'exemple partirem d'un element "Account", amb el id, owner i value
 ```java
@@ -277,11 +274,11 @@ public void givenValue_whenFindAllByValue_thenFindAccount() {
 ...
 ```
 
-Per la pròpia definició dels streams reactius, no es pot garantir que immediatament després de la crida al mètode "save" el repositori ha guardat la informació
+Per la pròpia definició dels streams reactius, no es pot garantir que immediatament després de la crida al mètode "save" el repositori ha guardat la informació.
 
-El mètode "block" s'ha d'evitar utilitzar en el tractament de streams ja que es crea un bloqueig
+El mètode "block" s'ha d'evitar utilitzar en el tractament de streams ja que es crea un bloqueig.
 
-Per a garantir que quan utilitzem el mètode "findAllByValue" s'ha guardat la informació al repository s'ha utilitzat 2 StepVerifier
+Per a garantir que quan utilitzem el mètode "findAllByValue" s'ha guardat la informació al repository s'ha utilitzat 2 StepVerifier.
 
 Per provar el mètode "findFirstByOwner" podriem utilitzar un test "homòleg" a l'anterior:
 ```java
@@ -319,4 +316,4 @@ public void givenAccount_whenSave_thenSaveAccount() {
 ...
 ```
 
-Com es pot apreciar a les proves, al step "assertNext" amb "FuntionalInterface" i lambdas de Java podem tenir els "Asserts" que necessitem
+Com es pot apreciar a les proves, al step "assertNext" amb "FuntionalInterface" i lambdas de Java podem tenir els "Asserts" que necessitem.
