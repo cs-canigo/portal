@@ -7,11 +7,9 @@ categories  = ["canigo"]
 key         = "ABRIL2019"
 +++
 
-## Propòsit
+Amb l’alliberament de la **versió 3.4.0 del framework Canigó** s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions suportades de Java i Spring, a més de permetre nous paradigmes de programació.
 
-Amb l’alliberament de la versió 3.4 del framework Canigó s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions suportades de Java i Spring, a més de permetre nous paradigmes de programació.
-
-Com a afegit, a la versió 3.4 també s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a ARESTA.
+Com a afegit, a la versió 3.4 també s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a **ARESTA**.
 
 ## Actualització tecnologies base
 
@@ -19,7 +17,7 @@ Com a afegit, a la versió 3.4 també s’inclou l’actualització del connecto
 
 El Setembre de 2018, Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les seves release notes al següent [enllaç](https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html).
 
-Des del CS Canigó, s'ha certificat la compatibilitat de Canigó 3.4.0 amb aquesta versió Java 11. També s'ha certificat la compatibilitat de Canigó 3.4.0 amb la nova imatge Docker per a Java 11 disponible al [catàleg de components de Suport Cloud](/cloud/cataleg/) 
+Des del CS Canigó, s'ha certificat la compatibilitat de Canigó 3.4.0 amb aquesta versió Java 11.
 
 ### Spring 5
 
