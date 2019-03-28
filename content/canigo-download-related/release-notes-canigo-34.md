@@ -24,4 +24,4 @@ weight      = 1
 	- Suport configuració propietats amb yaml
 	
 	
-- [Actualització mòdul integració ARESTA/PSGD](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2353)
+- [Actualització mòdul integració ARESTA/PSGD] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2353)
