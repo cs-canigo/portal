@@ -29,7 +29,7 @@ Aquest document va dirigit als següents perfils:
 
 | Nom Document
 | ----------
-| [PSGD Manual Integració](/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v5.5.pdf).
+| [PSGD Manual Integració](/related/canigo/documentacio/modul-psgd/PSGD_Manual_Integració_v6.0.pdf).
 
 ## Descripció Detallada
 
@@ -88,7 +88,7 @@ Per configurar el mòdul d'integració PSGD és necessari configurar els següen
 En el pom.xml;
 
 ```
-<canigo.integration.psgd.version>[1.1.0,1.2.0)</canigo.integration.psgd.version>
+<canigo.integration.psgd.version>[2.0.1,2.1.0)</canigo.integration.psgd.version>
 ...
 
 <!-- Dependencia del mòdul PSGD -->
