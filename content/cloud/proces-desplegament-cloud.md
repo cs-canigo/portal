@@ -327,4 +327,4 @@ Un cop l'aplicació està en servei es realitza el tancament del projecte.
 
 ## Comunicació amb CS Cloud
 
-La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [[Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/drafts_cloud/comunicacio-suport-cloud/)
+La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [[Comunicació proveïdors d'aplicacions amb Suport Cloud.](https://canigo.ctti.gencat.cat/cloud/comunicacio-suport-cloud/)
