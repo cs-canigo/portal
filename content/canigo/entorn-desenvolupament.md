@@ -34,11 +34,11 @@ La versió 3.0.0 ha simplificat i automatitzat la configuració inicial fins al 
 
 1. Descarregar la configuració del vagrant amb la següent comanda
 
-       git clone https://github.com/gencat/dev-environment.git
+        git clone https://github.com/gencat/dev-environment.git
 
 2. Anar al directori `dev-environment/Vagrant` i arrencar l'entorn amb
 
-       vagrant up
+        vagrant up
 
    Amb aquesta instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 90 minuts**, pel fet que ha de descarregar i instal·lar tot el software necessari.
 
@@ -86,14 +86,14 @@ A banda del software base s'ha instal·lat i configurat un conjunt de programari
 
 A continuació s'adjunta un petit recull de captures de pantalla on es pot copsar l'escriptori i diferents programes per treballar-hi.
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="50%" /></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="50%" /><p style="font-size: small;">Figura 1. Escriptori</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="50%" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center>font-size: small;
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="50%" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center>font-size: small;
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="50%" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="50%" /><p style="font-size: small;">Figura 5. VS Code</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="50%" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="50%" /><p style="font-size: small;">Figura 7. Language Tool</p></center>
 
-* ![Exemple de línia de comandes (CLI)](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png)
-* ![Eclipse Spring Tool Suite 4](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png)
-* ![Gestor DBeaver](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png)
-* ![VS Code](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png)
-* ![Editor jEdit](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png)
-* ![Language Tool](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png)
 
 
 ### Versions
