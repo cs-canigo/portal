@@ -1,78 +1,115 @@
 +++
 date        = "2015-11-18"
-lastmod     = "2017-11-20"
+lastmod     = "2019-04-17"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
 weight 	    = 5
 +++
 
+### Introducció
+
+_L'entorn de desenvolupament_ és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Beaver 18.04.2 LTS) per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian) i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
+
 ### Objectius
+
+Els objectius perseguits per l'entorn de desenvolupament són:
 
 * Facilitar la posada en marxa de l'entorn de desenvolupament, aprovisionant una màquina virtual amb tot el necessari per a començar el desenvolupament d'una aplicació Canigó.
 * Simular els entorns de desplegament als CPD Generalitat, facilitant contenidors amb les mateixes versions i configuracions dels PaaS que ens trobarem als clouds.
 
-### Pre requisits
+Addicionalment aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions estables del programari, sino que s'ha fet que estigui alineada amb l'última versió de Canigó 3.4 per proporcionar la millor experiència d'usuari *out-of-the-box* en el desenvolupament d'aplicacions Canigó.
+
+### Prerequisits
+
+Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviament el següent programari:
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/2.0.4) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/3.0.0) amb la configuració de l'entorn Canigó
 
-La creació de la VM ha estat certificada amb Vagrant 2.1.1. Es recomana l'ús d'aquesta versió o superior.
+### Instal·lació
 
-### Com començar?
+La versió 3.0.0 ha simplificat i automatitzat la configuració inicial fins al punt de no haver de fer cap acció especial per part de l'usuari (vegeu apartat _KNOWN ISSUES_ de la versió).
 
-* Descarregar i descomprimir el [zip](https://github.com/gencat/dev-environment/archive/2.0.4.zip) a la carpeta que desitgem (p.e. c:/vms o /home/user/vms)
+1. Descarregar la configuració del vagrant amb la següent comanda
 
-* Anar per línia de comanda a la carpeta on estigui el Vagrantfile i executem:
+       git clone https://github.com/gencat/dev-environment.git
 
-		vagrant up
+2. Anar al directori `dev-environment/Vagrant` i arrencar l'entorn amb
 
-	Amb aquesta instrucció, vagrant aixecarà una màquina virtual a Virtualbox i executarà les comandes que inclogui el Vagrantfile. El temps d'instal·lació serà llarg degut a que instal·la tot el software necessari per a desenvolupar i desplegar en els entorns de proves (es pot veure què instal·la reseguint el shell script).
+       vagrant up
 
-* En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés ja haurà finalitzat. Podem tancar la màquina i engegar-la i aturar-la a través de VirtualBox.
+   Amb aquesta instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 90 minuts**, pel fet que ha de descarregar i instal·lar tot el software necessari.
 
-### Setup inicial
+En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés haurà finalitzat.
 
-* Usuari i password: canigo/canigo
-* Obrir un terminal i executar
+#### Notes addicionals
 
-		sudo dpkg-reconfigure keyboard-configuration
+* Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les comandes `vagrant up` i `vagrant halt` per fer aquestes accions.
+* Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense prèvia consulta a l'equip del CS Canigó.
 
-* _Important_: es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense previa consulta a l'equip del CS Canigó. En aquesta linia s'hauria de configurar l'Eclipse per deshabilitar les notificacions d'actualitzacions disponibles a Preferences -> Install/Update -> Automatic Updates -> Automatically find new updates and notify me
+### Software base
 
-### Oracle VirtualBox
+El software base s'ha instal·lat un conjunt de programari per a les tasques complementàries de desenvolupament. Aquest software addicional s'ha instal·lat dins el directori `/opt`
 
-Si es vol poder copiar text entre la màquina host i la guest cal activar la opció Dispositiu -> Portapapers compartit -> Bidireccional
+* Open JDK 8 (1.8.0_191)
+* Visual VM 1.3
+* Clients per diferents BBDD (Mysql, PostgreSQL, MongoDB i Redis)
+* Navegador Mozilla FireFox Quantum (66.0.3)
+* Client VPNC per accés a XCAT
+* Navegador Google Chrome (73.0.3683.103)
+* Engine Docker i Docker Compose Tool per l'execució de contenidors Docker
+* Servidor Apache HTTP (2.4)
 
-Si es volen afegir carpetes compartides entre la màquina host i la guest s'han de seguir les següents passes:
 
-* Afegir el grup vboxsf a l'usuari canigo (cal ser root o fer sudo):
+### Software addicional
 
-		$ sudo usermod -a -G vboxsf canigo
+A banda del software base s'ha instal·lat i configurat un conjunt de programari addicional dins el directori `/opt`, amb les versions alineades al [full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
-* Reiniciar la màquina o tornar logar-se.
-* Afegir les carpetes desitjades a través de Dispositius -> Carpetes compartides -> Preferències de carpetes compartides... Es pot fer en "calent" i apareixen al directori "/media" dins la màquina virtual.
+* Open JDK 11 (11.0.2 : OpenJDK 64-Bit Server VM 18.9)
+* LanguageTool 5.3 - Per revisar gramàtica, ortografia i formes correctes del català.
+* DBeaver 6.0.2 - Eina multi-paradigma (SQL, No-SQL, etc.) per a BBDD.
+* SoapUI 5.5.0 - Eina per treballar amb serveis SOAP i REST.
+* jMeter 5.1.1 - Eina per fer validacions funcionals, proves de càrrega i mesures de rendiment d'aplicacions.
+* NodeJS - Servidor d'aplicacions JS. Les versions instal·lades són 8.15.1 i 10.15.3.
+* Visual Studio Code - Editor altament extensible (mitjançant plugins). Recomanable principalment per a treballar amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
+* Maven 3.5.3
+* IDE - [Spring Tool Suite 4.2.0](https://spring.io/tools) (basat en Eclipse 2019/03), i els següents plugins:
+  - [Plugin CTTI Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.4 basades en arquitectura REST+HTML5/JS.
+  - Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects).
+  - SonarLint permet detectar i solucionar problemes de qualitat al codi (actualment Java, JavaScript, Python i PHP) [SonarLint](https://www.sonarlint.org/).
+* jEdit 5.5.0 - Editor de textos (més lleuger que VS Code) basat en Java. Recomanable per a l'edició de fitxers grans (logs).
 
-### Programari instal·lat
 
-* IDE: [Spring Tool Suite] (https://spring.io/tools) (basat en Eclipse Mars) amb JDK 8 (Oracle) i els següents plugins:
+### Screenshots
 
-	- M2Eclipse per integració amb [Apache Maven](https://maven.apache.org/)
-	- [CTTI Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.2 basades en arquitectura REST+HTML5/JS
-	- Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects)
-	- Subclipse per integració amb [Subversion] (https://subversion.apache.org/)
-	- SonarQube per integració amb [SonarQube] (http://www.sonarqube.org/) (antic Sonar)
+A continuació s'adjunta un petit recull de captures de pantalla on es pot copsar l'escriptori i diferents programes per treballar-hi.
 
-* Altres
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="50%" /></center>
 
-	- Engine Docker i Docker Compose Tool per l'execució de contenidors Docker
-	- Navegador Google Chrome
-	- Client VPNC per accés a XCAT
+* ![Exemple de línia de comandes (CLI)](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png)
+* ![Eclipse Spring Tool Suite 4](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png)
+* ![Gestor DBeaver](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png)
+* ![VS Code](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png)
+* ![Editor jEdit](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png)
+* ![Language Tool](/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png)
+
 
 ### Versions
 
-#### 2.0.4 (22/11/2018) -- <span style="color:green">OPERATIVA</style>
+#### 3.0.0 (22/04/2019) -- <span style="color:green">OPERATIVA</span>
+
+_RELEASE NOTES_
+
+* Actualitzacions del programari i millores generals.
+* Certificació funcionament amb plugin d'Eclipse v1.7.0 de Canigó.
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 2.0.4 (22/11/2018)
 
 _RELEASE NOTES_
 
