@@ -10,11 +10,13 @@ weight      = 1
 
 ### Propòsit
 
-El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet d'una aplicació Canigó. L'aplicació que es crea està orientada a servir com a punt de partida per a la creació d'una aplicació més complexe, però des del moment de la seva creació ja es desplegable i funcional.
+El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet d'una aplicació Canigó. L'aplicació que es crea està orientada a servir com a punt de partida per a la creació d'una aplicació més complex, però des del moment de la seva creació ja és desplegable i funcional.
 
-#### Eclipse Mars
+*NOTA*: Tot i que les passes d'instal·lació i configuració del plugin són senzilles, [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) conté un Eclipse amb aquest plugin configurat i llest per ser emprat.
 
-La última versió del plugin està certificada amb la versió d'Eclipse Mars, que podeu trobar al següent enllaç: https://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/marsr
+#### Eclipse 2019-03
+
+L'última versió del plugin està certificada amb la versió d'Eclipse 2019-03, que podeu trobar al següent enllaç: https://www.eclipse.org/downloads/packages/release/2019-03/r/eclipse-ide-enterprise-java-developers
 
 ### Prerequisit
 
@@ -26,7 +28,7 @@ A la pestanya Help de l'Eclipse seleccionar "Install New Software..."
 
 ![](/related/canigo/documentacio/plugin-canigo/img1.jpg)
 
-Prèmer sobre el botó Add i afegir el respository de Canigó:
+Prémer sobre el botó Add i afegir el respository de Canigó:
 http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
@@ -45,7 +47,7 @@ Seleccionar Assistent Projectes Canigó -> Crear un Projecte Canigó
 
 ![](/related/canigo/documentacio/plugin-canigo/img10.jpg)
 
-El plugin genera una aplicació REST amb un CRUD de demo implementat amb HTML5/Javascript. 
+El plugin genera una aplicació REST amb un CRUD de demo implementat amb HTML5/Javascript.
 
 Es dóna llibertat per triar la tecnologia per a realitzar el front-end (AngularJS, Bootstrap, EmberJS...) sempre que es compleixi el PIV de Gencat.
 
@@ -67,7 +69,7 @@ Exemples:
 * http://localhost:8080/api/equipaments/
 * http://localhost:8080/api/equipaments/1
 
-La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html 
+La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html
 
 Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-documentacio-versions-3x-core/modul-logging-admin/)
 
@@ -75,11 +77,10 @@ Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-
 
 Per afegir o treure mòduls de Canigó el plugin proporciona la possibilitat de fer-ho de forma automàtica.
 
-S'ha de prèmer sobre el projecte, botó dret -> Canigó
+S'ha de prémer sobre el projecte, botó dret -> Canigó
 
 ![](/related/canigo/documentacio/plugin-canigo/img9.jpg)
 
-Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà la opció a triar si es desitja utilitzar JWT i el provider de seguretat a utilitzar (Arxiu, BBDD, Gicar o LDAP)
+Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà l'opció a triar si es desitja utilitzar JWT i el provider de seguretat a utilitzar (Arxiu, BBDD, Gicar o LDAP)
 
 ![](/related/canigo/documentacio/plugin-canigo/img12.jpg)
-
