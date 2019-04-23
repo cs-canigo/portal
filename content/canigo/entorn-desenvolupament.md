@@ -1,15 +1,17 @@
 +++
 date        = "2015-11-18"
-lastmod     = "2019-04-17"
+lastmod     = "2019-04-23"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
 weight 	    = 5
 +++
 
+
 ### Introducció
 
 _L'entorn de desenvolupament_ és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Beaver 18.04.2 LTS) per ser una distribució d'escriptori Linux lleugera, derivada d'una de les distribucions més esteses del món (Ubuntu / Debian) i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
+
 
 ### Objectius
 
@@ -20,6 +22,7 @@ Els objectius perseguits per l'entorn de desenvolupament són:
 
 Addicionalment aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions estables del programari, sino que s'ha fet que estigui alineada amb l'última versió de Canigó 3.4 per proporcionar la millor experiència d'usuari *out-of-the-box* en el desenvolupament d'aplicacions Canigó.
 
+
 ### Prerequisits
 
 Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviament el següent programari:
@@ -27,6 +30,7 @@ Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviame
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
 * [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/3.0.0) amb la configuració de l'entorn Canigó
+
 
 ### Instal·lació
 
@@ -40,14 +44,16 @@ La versió 3.0.0 ha simplificat i automatitzat la configuració inicial fins al 
 
         vagrant up
 
-   Amb aquesta instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 90 minuts**, pel fet que ha de descarregar i instal·lar tot el software necessari.
+    Amb aquesta última instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que inclogui el fitxer `Vagrantfile`. El temps d'instal·lació pot variar **entre 25 i 90 minuts**, pel fet que ha de descarregar i instal·lar tot el software necessari.
 
 En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés haurà finalitzat.
+
 
 #### Notes addicionals
 
 * Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les comandes `vagrant up` i `vagrant halt` per fer aquestes accions.
 * Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense prèvia consulta a l'equip del CS Canigó.
+
 
 ### Software base
 
@@ -87,13 +93,18 @@ A banda del software base s'ha instal·lat i configurat un conjunt de programari
 A continuació s'adjunta un petit recull de captures de pantalla on es pot copsar l'escriptori i diferents programes per treballar-hi.
 
 <center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="50%" /><p style="font-size: small;">Figura 1. Escriptori</p></center>
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="50%" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center>font-size: small;
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="50%" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center>font-size: small;
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="50%" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center>
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="50%" /><p style="font-size: small;">Figura 5. VS Code</p></center>
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="50%" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center>
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="50%" /><p style="font-size: small;">Figura 7. Language Tool</p></center>
 
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="50%" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center>
+
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="50%" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center>
+
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="50%" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center>
+
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="50%" /><p style="font-size: small;">Figura 5. VS Code</p></center>
+
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="50%" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center>
+
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="50%" /><p style="font-size: small;">Figura 7. Language Tool</p></center>
 
 
 ### Versions
