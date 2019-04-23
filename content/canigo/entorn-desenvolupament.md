@@ -92,19 +92,19 @@ A banda del software base s'ha instal·lat i configurat un conjunt de programari
 
 A continuació s'adjunta un petit recull de captures de pantalla on es pot copsar l'escriptori i diferents programes per treballar-hi.
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="50%" /><p style="font-size: small;">Figura 1. Escriptori</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="960px" /><p style="font-size: small;">Figura 1. Escriptori</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="50%" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="960px" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="50%" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="960px" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="50%" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="960px" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="50%" /><p style="font-size: small;">Figura 5. VS Code</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="960px" /><p style="font-size: small;">Figura 5. VS Code</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="50%" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="960px" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center>
 
-<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="50%" /><p style="font-size: small;">Figura 7. Language Tool</p></center>
+<center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="960px" /><p style="font-size: small;">Figura 7. Language Tool</p></center>
 
 
 ### Versions
