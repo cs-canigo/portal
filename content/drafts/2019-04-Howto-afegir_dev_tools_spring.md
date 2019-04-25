@@ -51,12 +51,12 @@ Per a més informació sobre les dev tools podeu consultar
 
 Si la nostra aplicació utilitza una bd h2 en entorn de desenvolupament, una vegada afegida la dependència maven, podem accedir a la consola web de les dev tools per a realitzar consultes a la bd h2, accedint a http://localhost:8080/h2-console i omplint el formulari amb la següent informació:
 
+```
 JDBC URL: jdbc:h2:mem:dataSource
-
 User Name: sa
-
 Pasword: <deixar buit>
-  
+```
+
 On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exemple:
 
 ![H2 console](https://github.com/cs-canigo/portal/blob/master/content/drafts/dev_tools_spring_h2_console.png)
