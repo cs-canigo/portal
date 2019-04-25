@@ -17,7 +17,7 @@ En aquest how-to es mostrarà com utilitzar la consola web per accedir a la bd h
 
 Amb Spring Boot s'inclou un conjunt addicional d'eines per poder fer que l'experiència del desenvolupament d'aplicacions amb Spring sigui més senzilla. Un dels mòduls que faciliten les funcionalitats de desenvolupament és el mòdul "spring-boot-devtools"
 
-Les funcionalitats més importats que aporta les dev tools de Spring són
+Les funcionalitats més importats que aporta les dev tools de Spring són:
 
 - Restart automàtic
 - Consola web de consulta d'una bd h2
