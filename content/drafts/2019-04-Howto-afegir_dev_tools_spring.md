@@ -64,4 +64,4 @@ On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exe
 
 Per a més informació sobre la consola web de les dev tools es pot consultar:
 - [boot features sql h2 console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
-- [how to connect to h2 database during development testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
+- [how to connect to h2 database during development/testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
