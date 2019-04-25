@@ -44,8 +44,8 @@ spring.h2.console.enabled=false
 ```
 
 Per a més informació sobre les dev tools podeu consultar 
-- [using boot devtools](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html)
-- [boot features sql h2 console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
+- [Using boot devtools](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html)
+- [Using H2’s Web Console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
 
 ### Accedir consola web bd h2
 
@@ -63,5 +63,5 @@ On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exe
 
 
 Per a més informació sobre la consola web de les dev tools es pot consultar:
-- [boot features sql h2 console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
-- [how to connect to h2 database during development/testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
+- [Using H2’s Web Console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
+- [How to connect to h2 database during development/testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
