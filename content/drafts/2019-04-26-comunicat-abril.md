@@ -20,5 +20,5 @@ key         = "ABRIL2019"
 - El 01/06/2019 es farà efectiva la nova configuració de lots d'aplicacions en base a la nova contractació de serveis de la Generalitat
 
 ## HowTo's:
-## Canigo:
+### Canigo:
 - Com afegir les dev tools de Spring a Canigo 3.4.0
