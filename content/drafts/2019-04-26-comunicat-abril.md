@@ -2,9 +2,9 @@
 date        = "2019-04-26"
 title       = "Comunicat Abril 2019"
 description = "...."
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "ABRIL2019"
+sections    = "...."
+categories  = "...."
+key         = "...."
 +++
 
 ## Noticies:
