@@ -61,7 +61,7 @@ Pasword: <deixar buit>
 
 On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exemple:
 
-![H2 console](https://canigo.ctti.gencat.cat/howtos/dev_tools_spring_h2_console.png)
+![H2 console](/images/dev_tools_spring_h2_console.png)
 
 
 Per a més informació sobre la consola web de les dev tools es pot consultar:
