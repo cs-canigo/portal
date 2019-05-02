@@ -103,11 +103,11 @@ Les IPs relacionades amb els dominis són:
 * _PRO_: ```sftp.std.intranet.gencat.cat 10.52.4.103```
 
 En data 15/04/2019 es va fer efectiva la posada en servei el nou entorn de Preproducció. Proporcionant el servei de STD amb la nova rearquitectura
-
+<br />
 <br />
 La data prevista de posada en servei del nou entorn de Producció és el 06/05/2019. Quan s'hagi materialitzat el canvi al nou entorn de Producció s'informarà, tant en aquest portal, com mitjançant comunicats destinats als integradors.
 <br />
-
+<br />
 Podeu trobar més detall de la rearquitecura a la noticia publicada al portal [STD. Actualització tecnològica del servei](/noticies/2019-02-20-actualitzacio-tecnologica-std/)
 
 Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
