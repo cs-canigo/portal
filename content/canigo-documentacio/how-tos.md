@@ -1,5 +1,5 @@
 +++
-date        = "2015-01-24T17:11:42+01:00"
+date        = "2019-05-02"
 title       = "HOWTOs"
 description = "HOWTOs d'utilitat per els diferents serveis que ofereix el CS Canigó"
 sections    = "HOWTOs"
