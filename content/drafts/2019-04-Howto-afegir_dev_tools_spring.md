@@ -44,7 +44,9 @@ spring.h2.console.enabled=false
 ```
 
 Per a més informació sobre les dev tools podeu consultar 
+
 - [Using boot devtools](https://docs.spring.io/spring-boot/docs/current/reference/html/using-boot-devtools.html)
+
 - [Using H2’s Web Console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
 
 ### Accedir consola web bd h2
@@ -59,9 +61,11 @@ Pasword: <deixar buit>
 
 On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exemple:
 
-![H2 console](https://github.com/cs-canigo/portal/blob/master/content/drafts/dev_tools_spring_h2_console.png)
+![H2 console](https://canigo.ctti.gencat.cat/drafts/dev_tools_spring_h2_console.png)
 
 
 Per a més informació sobre la consola web de les dev tools es pot consultar:
+
 - [Using H2’s Web Console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
+
 - [How to connect to h2 database during development/testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
