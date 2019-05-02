@@ -12,6 +12,7 @@ Un HOWTO és un document informal, generalment breu, que descriu com desenvolupa
 En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.
 
 HOWTOs disponibles actualment:
+
 - [How to per afegir les dev tools de Spring a Canigó 3.4.0] (/howtos/2019-04-Howto-afegir_dev_tools_spring/)
 
 - [Test unitaris amb programació reactiva a Canigó 3.4] (/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
