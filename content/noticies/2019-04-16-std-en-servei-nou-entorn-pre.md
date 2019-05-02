@@ -1,6 +1,6 @@
 +++
 date        = "2019-04-16"
-title       = "STD. En servei nou entorn de Proproducció"
+title       = "STD. En servei nou entorn de Preproducció"
 description = "L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents), realitzant una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. En data 15/04/2019 s'ha posat en servei el nou entorn de Preproducció"
 sections    = ["Notícies", "home"]
 categories  = ["sgde"]
