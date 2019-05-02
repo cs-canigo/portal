@@ -19,6 +19,10 @@ HOWTOs disponibles actualment:
 
 - [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4] (/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
 
+- [HowTo Definició sondes per aplicacions Canigó a AppAgile] (/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile)
+
+- [HowTo Ús de Hikari CP a Canigó 3.2] (/howtos/2018-11-Howto-Canigo3-HikariCP)
+
 - [Migració Canigó 3 de Java 7 a Java 8] (/howtos/2018-10-10-HowTo-Canigo-Java8/)
 
 - [Configuració de MongoDB a Canigó 3.2.6] (/howtos/2018-09-Howto-MongoDB/)
