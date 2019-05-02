@@ -63,9 +63,20 @@ On obtindrem una consola web de consulta de la bd h2 de l'aplicació com per exe
 
 ![H2 console](/images/news/dev_tools_spring_h2_console.png)
 
+Si s'utilitza Spring Security a l'aplicació s'ha de deshabilitar el CSRF i el X-Frame-Options, per això en el nostre fitxer
+```
+/src/main/java/cat/gencat/ctti/config/WebSecurityConfig.java
+```
+En el mètode *configure* Afegirem:
+```
+		http.csrf().disable();
+		http.headers().frameOptions().disable();
+```		
 
 Per a més informació sobre la consola web de les dev tools es pot consultar:
 
 - [Using H2’s Web Console](https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#boot-features-sql-h2-console)
 
 - [How to connect to h2 database during development/testing using spring boot](https://medium.com/@harittweets/how-to-connect-to-h2-database-during-development-testing-using-spring-boot-44bbb287570)
+
+- [Using the H2 Database Console in Spring Boot with Spring Security](https://springframework.guru/using-the-h2-database-console-in-spring-boot-with-spring-security/)
