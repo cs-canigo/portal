@@ -1,13 +1,12 @@
 +++
-date        = "2019-02-27"
-title       = "Estàndard pel full de ruta del programari"
-description = "Estàndard pel full de ruta del programari"
+date        = "2019-05-07"
+title       = "Plantilla DA"
+description = "Plantilla DA"
 weight		= 3
 type = "estandard"
 toc         = true
 versio      = "1.0"
 responsable = "Unitat d'arquitectura"
-estandards =  ["programari"]
 codi = "35.080.03"
 
 +++
