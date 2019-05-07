@@ -2,14 +2,11 @@
 date        = "2019-05-07"
 title       = "Plantilla DA"
 description = "Plantilla DA"
-weight		= 3
-type = "estandard"
-toc         = true
-versio      = "1.0"
-responsable = "Unitat d'arquitectura"
-codi = "35.080.03"
-
+sections    = "Container Cloud"
+weight      = 3
+categories  = ["Document Arquitectura","DA","Plantilla"]
 +++
+
 ## Vista Desplegament:
 ### *1 Tipus de Servei
 - PaaS
