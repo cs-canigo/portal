@@ -17,6 +17,31 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 ![Exemple Diagrama Funcional 1](/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG)
 
+## Vista d'Informació: {#VistaInformacio}
+
+### Nivell de RGPD assignat al fitxer {#NivellRGPD}
+
+**Quines dades es consideren Bàsiques:**
+ 
+- Dades identificatives (nom, cognoms, DNI, correu electrònic, adreça, telèfon, IP), 
+- Dades econòmiques (comptes bancaris, targetes de crèdit, nòmines,...), 
+- Característiques físiques
+- Característiques personals (estat civil, edat, sexe, nacionalitat,...)
+- Dades acadèmiques o professionals
+ 
+**Quines dades es consideren Especialment protegides:**
+ 
+- Origen ètnic o racial
+- Opinions polítiques
+- Conviccions religioses o filosòfiques
+- Afiliació sindical
+- Dades biomètriques 
+- Dades relatives a la salut
+- Dades relatives a la vida sexual o orientacions sexuals
+- Dades relatives a condemnes i infraccions penals
+- Dades de geolocalització
+- Dades financeres
+
 ## Vista Desenvolupament: {#DiagramesDesenvolupament}
 
 ![Exemple Diagrama Desenvolupament 1](/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG)
