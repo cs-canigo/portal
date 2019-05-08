@@ -1,6 +1,6 @@
 +++
-date        = "2019-05-08
-lastmod     = "2019-05-08
+date        = "2019-05-08"
+lastmod     = "2019-05-08"
 title       = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
 description = ""
 sections    = ""
