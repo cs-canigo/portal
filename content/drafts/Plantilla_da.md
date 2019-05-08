@@ -23,23 +23,38 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 **Quines dades es consideren Bàsiques:**
  
-- Dades identificatives (nom, cognoms, DNI, correu electrònic, adreça, telèfon, IP)
+- Dades identificatives (nom, cognoms, DNI, correu electrònic, adreça, telèfon, IP) 
 - Dades econòmiques (comptes bancaris, targetes de crèdit, nòmines,...)
 - Característiques físiques
 - Característiques personals (estat civil, edat, sexe, nacionalitat,...)
 - Dades acadèmiques o professionals
 
 **Quines dades es consideren Especialment protegides:**
+ 
 - Origen ètnic o racial
 - Opinions polítiques
 - Conviccions religioses o filosòfiques
 - Afiliació sindical
-- Dades biomètriques
+- Dades biomètriques 
 - Dades relatives a la salut
 - Dades relatives a la vida sexual o orientacions sexuals
 - Dades relatives a condemnes i infraccions penals
 - Dades de geolocalització
 - Dades financeres
+
+### Nivell de sensibilitat de les dades
+
+- **MOLT CRÍTIC**	La informació és altament confidencial, accessible per un nombre molt restringit d’individus, amb requeriments d’integritat, autenticitat i traçabilitat molt alts? (exemples: dades de Seguretat Pública, informació policial, gestió de claus criptogràfiques, etc.)
+
+- **CRÍTIC**	La informació és confidencial, restringida a un cercle reduït d’individus, amb requeriments de xifrat i traçabilitat dels accessos?
+	(Exemples: gestió de centres penitenciaris, eleccions, gabinets jurídics, subvencions, contractacions, plataformes transversals de suport a la tramitació, actuació de cossos d'emergències, inventari d'infraestructures crítiques, plans de protecció civil, etc.))
+	
+- **SENSIBLE**	La informació és restringida a àrees o unitats amb requeriments avançats de control d'accés i garanties d'intergitat i autenticitat? (Exemples: registre de ciutadans amb dades acadèmiques, sistemes de gestió de personal, llistes de col·lectius, la divulgació de les quals podria tenir repercussió política, registres d'empreses amb informació reservada, gestió de dades pressupostàries i econòmico-financeres, gestió del deute, sistemes d’ anàlisi de dades: estadístiques de serveis/operativa i quadres de comandament, actuacions de cossos operatius de la Generalitat (exceptuant els d'emergències), gestió de flotes d'emergència, tràmits de pagament on-line, tràmits electrònics i portals de tràmits, auditories, gestió de riscos, plans de continuïtat de negoci, assistència jurídica, gestió de la publicació d’informació (previ a la publicació))
+
+- **INTERN**	Hi ha informació no crítica on es pot permetre una lleu pèrdua d'integritat e informació? 
+	(Exemples: intranets departamentals, plataformes col·laboratives, fòrums, blogs, registres de professionals, convocatòries, concursos de personal, oposicions, usuaris d'aplicació, assistents a cursos, entrada/sortida de documents, gestió d'inventaris, qüestions parlamentàries, plecs, plans d'actuació, gestió de compres, consultes i suggeriments, queixes sense dades sensibles, infraestructures, expedients sense informació anterior, etc.)
+	
+- **PUBLIC**	La informació és pública sense restriccions de difusió del contingut?
 
 ## Vista Desenvolupament: {#DiagramesDesenvolupament}
 
