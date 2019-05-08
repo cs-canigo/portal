@@ -1,8 +1,8 @@
 +++
 date        = "2019-05-07"
-title       = "Plantilla DA"
+title       = "Exemples i ajuda Plantilla DA"
 description = "Plantilla DA"
-sections    = "Container Cloud"
+sections    = "Document Arquitectura"
 weight      = 3
 categories  = ["Document Arquitectura","DA","Plantilla"]
 +++
