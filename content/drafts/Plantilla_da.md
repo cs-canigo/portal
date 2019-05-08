@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-07"
+date        = "2019-05-08"
 title       = "Exemples i ajuda Plantilla DA"
 description = "Plantilla DA"
 sections    = "Document Arquitectura"
@@ -12,6 +12,10 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 ![Exemple Diagrama Context 1](/images/PlantillaDA/Exemple_Context.JPG)
 
 ![Exemple Diagrama Context 2](/images/PlantillaDA/Exemple_Context_2.JPG)
+
+## Vista Funcional: {#DiagramaFuncional}
+
+![Exemple Diagrama Funcional 1](/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG)
 
 ## Vista Desenvolupament: {#DiagramesDesenvolupament}
 
