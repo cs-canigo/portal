@@ -1,6 +1,6 @@
 +++
-date        = "2019-05-08"
-lastmod     = "2019-05-08"
+date        = "2019-05-06
+lastmod     = "2019-05-06
 title       = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
 description = ""
 sections    = ""
@@ -26,12 +26,12 @@ Veure: [Serveis](/sic/serveis/).
 ### Servei de custodia de codi font
 Per aplicacions que tinguin el codi font ubicat al repositori del SIC, serà necessari que el lot entrant disposi d'accés al Git Corporatiu. Per a poder fer un primer intent d'accés al Git, caldrà disposar prèviament del corresponent usuari GICAR i que aquest es trobi bolcat a l'LDAP del SIC. En cas d'incidència, caldrà obrir una incidència al portal d'atenció a l'usuari a través de l'[Autoservei](https://pautic.gencat.cat).
 
-Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints encarregats del manteniment de les aplicacions i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](sic-serveis/autoservei-usuaris/) otorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passi a administrar l'accés als serveis del SIC, passant a formar part del grup de Release Manager.
+Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints encarregats del manteniment de les aplicacions i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](sic-serveis/autoservei-usuaris/) atorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passi a administrar l'accés als serveis del SIC, passant a formar part del grup de Release Manager.
 
-Finalment, en el moment que es decideixi de forma consensuada, el proveïdor entrant **revocarà l'accés al proveïdor sortint a tots els seus projectes**, tot i que podran optar provisionalment per respectar l'accés en mode lectura abans de revocar els permissos de forma definitiva com a màxim durant els 6 mesos de garantia.
+Finalment, en el moment que es decideixi de forma consensuada, el proveïdor entrant **revocarà l'accés al proveïdor sortint a tots els seus projectes**, tot i que podran optar provisionalment per respectar l'accés en mode lectura abans de revocar els permisos de forma definitiva com a màxim durant els 6 mesos de garantia.
 
 ### Servei d'integració continua i servei de binaris
 
-Aquests serveis seràn accessibles actualment pels responsables de lot sortint i els Release Manager; ja siguin, aquests últims, corresponents al lot entrant o sortint. En el moment en que es revoqui l'accés als Release Managers del lot sortint, aquests deixaran de disposar d'accés als serveis.
+Aquests serveis seran accessibles actualment pels responsables de lot sortint i els Release Manager; ja siguin, aquests últims, corresponents al lot entrant o sortint. En el moment en que es revoqui l'accés als Release Managers del lot sortint, aquests deixaran de disposar d'accés als serveis.
 
 A partir del dia 01/06/2019, automàticament deixaran automàticament de disposar d'accés els responsables del lot sortint.
