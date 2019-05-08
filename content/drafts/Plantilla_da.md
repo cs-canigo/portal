@@ -7,8 +7,12 @@ weight      = 3
 categories  = ["Document Arquitectura","DA","Plantilla"]
 +++
 
-<a href='{{<relref "#RTORPO" >}}'>Prova link</a>
-<a href='{{<relref "#NivellDisc" >}}'>Prova link2</a>
+## Vista Context: {#DiagramesContext}
+
+![Exemple Diagrama Context 1](/images/PlantillaDA/Exemple_Context.JPG)
+
+![Exemple Diagrama Context 2](/images/PlantillaDA/Exemple_Context_2.JPG)
+
 
 ## Vista Desplegament:
 ### *1 Tipus de Servei {#TipusServei}
@@ -35,3 +39,13 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 ### *5 RTO i RPO {#RTORPO}
 - RTO: 2 hores / 8  hores / 12 hores
 - RPO: RPO Zero (No pot perdre cap transacció) /  RPO Darrer Backup
+
+## Vista Operacional:
+
+### Polítiques de retenció {#PolitiquesRetencio}
+
+- Estàndard - Diària incremental amb 2 setmanes de retenció, setmanal completa amb 1 mes de retenció, mensual completa amb 3 mesos de retenció i anual completa amb 1 any de retenció (cobrint 1 any i 3 mesos de retenció de dades)
+
+- Avançada - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 6 mesos de retenció i anual completa amb 2 anys de retenció (cobrint 2 anys i 6 mesos de retenció de dades)
+
+- Especial - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 12 mesos de retenció i anual completa amb 5 anys de retenció. (cobrint 6 anys de retenció de dades)
