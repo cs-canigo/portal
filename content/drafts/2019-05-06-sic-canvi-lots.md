@@ -25,7 +25,9 @@ A continuació, es defineix el procediment a seguir per a la gestió dels servei
 Veure: [Serveis del SIC](/sic/serveis/).
 
 ### Servei de custodia de codi font
-Per aplicacions que tinguin el codi font ubicat al repositori del SIC, serà necessari que el lot entrant disposi d'accés al Git Corporatiu. Per a poder fer un primer intent d'accés al Git, caldrà disposar prèviament del corresponent usuari GICAR i que aquest es trobi bolcat a l'LDAP del SIC. En cas d'incidència, caldrà obrir una incidència al portal d'atenció a l'usuari a través del [Portal d'autoservei](https://pautic.gencat.cat).
+Per aplicacions que tinguin el codi font ubicat al repositori del SIC, serà necessari que el lot entrant disposi d'accés al Git Corporatiu. Per a poder fer un primer intent d'accés al Git, caldrà disposar prèviament del corresponent usuari GICAR i que aquest es trobi bolcat a l'LDAP del SIC. 
+
+En cas d'incidència, caldrà obrir una incidència al portal d'atenció a l'usuari a través del [Portal d'autoservei](https://pautic.gencat.cat).
 
 **Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints** i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](sic-serveis/autoservei-usuaris/) atorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passin a formar part del grup de Release Manager i, per tant, passin a administrar els serveis del SIC.
 
