@@ -1,6 +1,6 @@
 +++
-date        = "2019-05-06"
-lastmod     = "2019-05-06"
+date        = "2019-05-08
+lastmod     = "2019-05-08
 title       = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
 description = ""
 sections    = ""
@@ -12,21 +12,26 @@ weight 	    = 5
 
 ## Introducció
 
-**El dia 01/06/2019 es farà efectiu la nova configuració de lots de les aplicacions** segons la nova contractació del 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya. S'ha constituït una Oficina Tècnica per a la Transició que s'encarregarà de la coordinació del canvi i s'ha elaborat un document que recopila la informació necessària per a fer, provisionalment, el traspàs d'accés al codi font de les aplicacions entre els proveïdors de manteniment d’aplicacions que surten i els que entren, definint el procediment durant el procés de transició i les responsabilitats de cada una de les parts que intervenen.
+**El dia 01/06/2019 es farà efectiva la nova configuració de lots de les aplicacions** segons la nova contractació de proveïdors del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya. Per al procés de transició, s'ha constituït una Oficina Tècnica de Transició que s'encarregarà de la coordinació del canvi i s'ha elaborat un document que recopila la informació necessària per a fer el traspàs d'accés al codi font de les aplicacions entre els proveïdors de manteniment d’aplicacions que surten i els que entren, definint el procediment durant el procés de transició i les responsabilitats de cada una de les parts intervinents.
 
 ## Objectius
 
-L'objectiu és informar als diferents lots entrants i sortints que, un cop es faci efectiva la nova configuració de lots de l'inventari d'aplicacions, els lots sortints deixaran de disposar d'accés a les aplicacions que traspassa i els lots entrants hauran d'encarregar-se de definir els usuaris que exerciran el rol de Release Manager de les aplicacions que recepciona. 
+L'objectiu és informar als diferents lots entrants i sortints del procediment de traspàs de les aplicacions, així com les actuacions que es duran a terme i la seva afectació.
 
 ## Procediment
 
-A continuació, es defineix el procediment a seguir a partir del dia 01/06/2019 per a la gestió dels serveis del SIC de custodia de codi font, integració continua i servei de binaris.
+A continuació, es defineix el procediment a seguir per a la gestió dels serveis del SIC de custodia de codi font, integració continua i servei de binaris.
 Veure: [Serveis](/sic/serveis/).
 
-### Nous usuaris Release Manager
+### Servei de custodia de codi font
+Per aplicacions que tinguin el codi font ubicat al repositori del SIC, serà necessari que el lot entrant disposi d'accés al Git Corporatiu. Per a poder fer un primer intent d'accés al Git, caldrà disposar prèviament del corresponent usuari GICAR i que aquest es trobi bolcat a l'LDAP del SIC. En cas d'incidència, caldrà obrir una incidència al portal d'atenció a l'usuari a través de l'[Autoservei](https://pautic.gencat.cat).
 
-Les aplicacions que canvien de lot, per defecte, no disposaran d'usuaris Release Manager. Els responsables de lot doncs seran els encarregats de definir els usuaris que exerciran el rol de Release Manager mitjançant l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i, per tant, passaran a disposar d'accés als serveis del SIC i podran otorgar accés a la resta de companys.
+Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints encarregats del manteniment de les aplicacions i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](sic-serveis/autoservei-usuaris/) otorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passi a administrar l'accés als serveis del SIC, passant a formar part del grup de Release Manager.
 
-### Accés provisional al lot sortints
+Finalment, en el moment que es decideixi de forma consensuada, el proveïdor entrant **revocarà l'accés al proveïdor sortint a tots els seus projectes**, tot i que podran optar provisionalment per respectar l'accés en mode lectura abans de revocar els permissos de forma definitiva com a màxim durant els 6 mesos de garantia.
 
-En cas de necessitar otorgar accés provisional al lot sortint durant els 6 mesos de periode de garantia, els responsables de lot i Release Managers podran otorgar accés en mode lectura al repositori de les aplicacions mitjançant l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/). Per a que l'accés sigui en mode lectura, caldrà assignar el rol REPORTER als usuaris.
+### Servei d'integració continua i servei de binaris
+
+Aquests serveis seràn accessibles actualment pels responsables de lot sortint i els Release Manager; ja siguin, aquests últims, corresponents al lot entrant o sortint. En el moment en que es revoqui l'accés als Release Managers del lot sortint, aquests deixaran de disposar d'accés als serveis.
+
+A partir del dia 01/06/2019, automàticament deixaran automàticament de disposar d'accés els responsables del lot sortint.
