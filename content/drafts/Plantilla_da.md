@@ -13,6 +13,9 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 ![Exemple Diagrama Context 2](/images/PlantillaDA/Exemple_Context_2.JPG)
 
+## Vista Desenvolupament: {#DiagramesDesenvolupament}
+
+![Exemple Diagrama Desenvolupament 1](/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG)
 
 ## Vista Desplegament:
 ### *1 Tipus de Servei {#TipusServei}
@@ -44,8 +47,8 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 ### Polítiques de retenció {#PolitiquesRetencio}
 
-- Estàndard - Diària incremental amb 2 setmanes de retenció, setmanal completa amb 1 mes de retenció, mensual completa amb 3 mesos de retenció i anual completa amb 1 any de retenció (cobrint 1 any i 3 mesos de retenció de dades)
+- **Estàndard** - Diària incremental amb 2 setmanes de retenció, setmanal completa amb 1 mes de retenció, mensual completa amb 3 mesos de retenció i anual completa amb 1 any de retenció (cobrint 1 any i 3 mesos de retenció de dades)
 
-- Avançada - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 6 mesos de retenció i anual completa amb 2 anys de retenció (cobrint 2 anys i 6 mesos de retenció de dades)
+- **Avançada** - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 6 mesos de retenció i anual completa amb 2 anys de retenció (cobrint 2 anys i 6 mesos de retenció de dades)
 
-- Especial - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 12 mesos de retenció i anual completa amb 5 anys de retenció. (cobrint 6 anys de retenció de dades)
+- **Especial** - Diària incremental amb 1 mes de retenció, setmanal completa amb 2 mesos de retenció, mensual completa amb 12 mesos de retenció i anual completa amb 5 anys de retenció. (cobrint 6 anys de retenció de dades)
