@@ -22,7 +22,7 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 ### Nivell de RGPD assignat al fitxer {#NivellRGPD}
 
 **Quines dades es consideren Bàsiques:**
- 
+
 - Dades identificatives (nom, cognoms, DNI, correu electrònic, adreça, telèfon, IP)
 
 - Dades econòmiques (comptes bancaris, targetes de crèdit, nòmines,...)
