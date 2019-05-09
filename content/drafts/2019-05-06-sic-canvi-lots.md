@@ -1,14 +1,11 @@
 +++
 date        = "2019-05-06"
-lastmod     = "2019-05-06"
-title       = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
-description = ""
-sections    = ""
-weight 	    = 5
+title       = "SIC. Canvi de lots segons la nova contractació 2019"
+description = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
+sections    = ["Notícies", "home"]
+categories  = ["sic"]
+key         = "MAIG2019"
 +++
-
-
-....
 
 ## Introducció
 
@@ -22,14 +19,14 @@ L'objectiu és informar als diferents lots entrants i sortints del procediment d
 
 A continuació, es defineix el procediment a seguir per a la gestió dels serveis del SIC de custodia de codi font, integració continua i servei de binaris.
 
-Veure: [Serveis del SIC](/sic/serveis/).
+Veure: [Serveis del SIC](/sic-serveis/).
 
 ### Servei de custodia de codi font
 Per aplicacions que tinguin el codi font ubicat al repositori del SIC, serà necessari que el lot entrant disposi d'accés al Git Corporatiu. Per a poder fer un primer intent d'accés al Git, caldrà disposar prèviament del corresponent usuari GICAR i que aquest es trobi bolcat a l'LDAP del SIC. 
 
 En cas d'incidència, caldrà obrir una incidència al portal d'atenció a l'usuari a través del [Portal d'autoservei](https://pautic.gencat.cat).
 
-**Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints** i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](sic-serveis/autoservei-usuaris/) atorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passin a formar part del grup de Release Manager i, per tant, passin a administrar els serveis del SIC.
+**Els responsables de proporcionar l'accés als repositoris seran els proveïdors sortints** i ho faran ells mateixos mitjançant l'[Autoservei d'usuaris](/sic-serveis/autoservei-usuaris/) atorgant accessos en mode lectura (rol REPORTER) al lot entrant. Quan es decideixi de forma consensuada entre els dos proveïdors, el proveïdor sortint li proporcionarà accés d'escriptura (rol MASTER/MANTAINER) al proveïdor entrant per a que passin a formar part del grup de Release Manager i, per tant, passin a administrar els serveis del SIC.
 
 Finalment, en el moment que es decideixi de forma consensuada, el proveïdor entrant **revocarà l'accés al proveïdor sortint a tots els seus projectes**, tot i que podran optar temporalment per permetre'ls accés en mode lectura durant els 6 mesos de garantia abans de revocar els permisos de forma definitiva.
 
