@@ -39,4 +39,6 @@ Aquests serveis seran accessibles actualment pels responsables de lot sortint i 
 
 A partir del **dia 01/06/2019, automàticament deixaran automàticament de disposar d'accés els responsables del lot sortint**.
 
+
+
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
