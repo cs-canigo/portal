@@ -36,7 +36,6 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 **Quines dades es consideren Especialment protegides:**
 
- 
 - Origen ètnic o racial
 
 - Opinions polítiques
