@@ -17,7 +17,7 @@ weight= 5
             <th><strong>Òrgan propietari</strong></th>
             <th><strong>Origen</strong></th>
             <th><strong>Darrera Actualització</strong></th>
-            <th><strong>Període Actualitzaci</strong></th>
+            <th><strong>Període Actualització</strong></th>
             <th><strong>Classificació funcional</strong></th>
             <th><strong>Agrupació temàtica</strong></th>
             <th><strong>Tipus</strong></th>
