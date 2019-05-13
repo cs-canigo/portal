@@ -1,6 +1,6 @@
 +++
 date        = "2017-09-23"
-title       = "Radar CTTI"
+title       = "Data Arquitectura"
 description = "Radar tecnològic del CTTI"
 sections    = ["Radar"]
 categories  = ["radar"]
