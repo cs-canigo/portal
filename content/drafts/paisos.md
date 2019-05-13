@@ -1,6 +1,6 @@
 +++
-date        = "2017-09-23"
-title       = "Dades de Referència"
+date        = "2019-05-13"
+title       = "Codis Territoris Països"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -99,7 +99,7 @@ weight= 5
       <td>baixa</td>
       <td>alt</td>
       <td>0001, Codis_Territori_Paisos</td>
-      <td><a href="/entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
+      <td><a href="../entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
     </tr>
   </tbody>
 </table>
