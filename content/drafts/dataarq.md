@@ -39,7 +39,7 @@ Algunes Dades de Referència són:
       <td>Codis</td>
       <td>Territori_Municipis_Espanya</td>
       <td>13/05/2019</td>
-      <td><a href="./paisos.md">detall</a></td>
+      <td><a href="../paisos.md">detall</a></td>
     </tr>
     </tr>
   </tbody>
