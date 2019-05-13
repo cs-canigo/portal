@@ -86,7 +86,7 @@ function formatDataArq(d) {
             '<td>'+d.nivell_seguretat+'</td>'+
             '<td>'+d.nivell_qualitat+'</td>'+
             '<td>'+d.identificador+'</td>'+
-            '<td><a href="/entitats/'+ d.download +'" download>download</td>'+
+            '<td><a href="/drafts/entitats/'+ d.download +'" download>download</td>'+
         '</tr>'+
         '<tr>'+
             '<th >Definició</th>'+
