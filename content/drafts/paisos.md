@@ -43,7 +43,7 @@ weight= 5
       <td>baixa</td>
       <td>alt</td>
       <td>0001, Codis_Territori_Paisos</td>
-      <td><a href="./entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
+      <td><a href="../entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
 
     </tr>
 
