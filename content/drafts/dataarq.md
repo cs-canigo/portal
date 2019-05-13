@@ -1,15 +1,21 @@
 +++
 date        = "2017-09-23"
-title       = "Data Architecture"
+title       = "Dade de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
 +++
 
-- El Radar CTTI és un manera visual de definir els canvis que pensem que actualment són interessants en el desenvolupament de programari: coses que estem rebent en les revisions d'arquitectura i altres que creiem que s'hauria de prestar atenció i considerar l'ús en els projectes que es fan per a la Generalitat. A diferència del **[Full de Ruta](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).**, només reflecteix l'opinió d'un grup d'arquitectes, basada en el nostre treball i experiències quotidianes. Encara que pensem que és interessant, no s'ha de considerar una anàlisi profunda del mercat, ni un posicionament explícit sobre les eines, tècniques, plataformes o llenguatges que hi surten.
+- Representen conceptes que serveixen de referència transversal per a tota o part de l’organització. 
+Les Dades Mestres es consideren les dades més acurades i rellevants disponibles sobre entitats clau de negoci emprades per establir el context de dades transaccionals i poden existir a múltiples llocs de l‘organització. 
 
-El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.thoughtworks.com/radar).** 
+- Exemples: dades d’un ciutadà compartides entre Departaments. Catàleg de tràmits de la Generalitat de Catalunya dirigits a la ciutadania, l’empresa, els ens locals i les entitats.
+
+- Són dades que defineixen els valors possibles que poden ser utilitzats per altres camps o conjunts de camps. Aquest tipus de dades aporten més valor contra més s’utilitzin arreu de l’organització.
+Algunes Dades de Referència són:
+•	CCAE (Classificació Catalana d'Activitats Econòmiques), que categoritzen les unitats productives, segons el tipus d'activitat que desenvolupin, per tal d'obtenir dades que permetin confeccionar estadístiques de rendibilitat o producció.
+•	CNAE (Classificació Nacional d’Activitats Econòmiques). Similar al CCAE però d’àmbit estatal, l’objectiu del qual és establir la jerarquia d’activitats econòmiques d’utilitat per la implementació d’estadístiques estatals segons les activitats circumscrites. 
 
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
