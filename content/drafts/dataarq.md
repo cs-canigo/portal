@@ -90,7 +90,7 @@ function formatDataArq(d) {
         '</tr>'+
         '<tr>'+
             '<th >Definició</th>'+
-            '<td colspan="13">'+d.cpd1v1+'</td>'+
+            '<td colspan="13">'+d.definicio+'</td>'+
         '</tr>'+
     '</table>';
 }
