@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "grup": "Apache",
+      "entitat": "Servidors Web",
+      "data_actualitzacio": "22/05/2019",
+      "responsable": "javier",
+	  "propietari": "harmand",
+	  "origen": "ctti",
+      "periode_actualitzacio": "6",
+      "clasificacio_funcional": "Administració Pública",
+      "agrupacio_tematica": "ajuts i subvencions",
+      "tipus": "tabular",
+      "visibilitat": "pública",
+      "nivell_seguretat": "alta",
+      "nivell_qualitat": "molt altt",
+      "identificador": "pepito",
+      "download": "Codis_Adreca_Pis.xlsx",
+	  "definicio": "Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend felis diam penatibus, vitae consequat facilisi turpis mauris inceptos massa in aptent. Dignissim lectus at id proin ante porta et mus curae posuere, viverra senectus penatibus facilisi sem turpis purus aenean nulla class pharetra, donec nostra interdum pulvinar fusce fermentum faucibus hendrerit venenatis. Fringilla blandit ligula libero in velit neque torquent habitant luctus, vel primis dictumst nam iaculis ut platea class, ridiculus leo nunc aptent egestas potenti sociis inceptos."
+    },
+	{
+      "id": 2,
+      "grup": "Apache",
+      "entitat": "Servidors Web",
+      "data_actualitzacio": "22/05/2019",
+      "responsable": "javier",
+	  "propietari": "harmand",
+	  "origen": "ctti",
+      "periode_actualitzacio": "6",
+      "clasificacio_funcional": "Administració Pública",
+      "agrupacio_tematica": "ajuts i subvencions",
+      "tipus": "tabular",
+      "visibilitat": "pública",
+      "nivell_seguretat": "alta",
+      "nivell_qualitat": "molt altt",
+      "identificador": "pepito",
+      "download": "Codis_Adreca_Pis.xlsx",
+	  "definicio": "Lorem ipsum dolor sit amet consectetur adipiscing elit eleifend felis diam penatibus, vitae consequat facilisi turpis mauris inceptos massa in aptent. Dignissim lectus at id proin ante porta et mus curae posuere, viverra senectus penatibus facilisi sem turpis purus aenean nulla class pharetra, donec nostra interdum pulvinar fusce fermentum faucibus hendrerit venenatis. Fringilla blandit ligula libero in velit neque torquent habitant luctus, vel primis dictumst nam iaculis ut platea class, ridiculus leo nunc aptent egestas potenti sociis inceptos."
+    }
+  ]
+}
