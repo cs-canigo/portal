@@ -105,7 +105,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "./json/entitats.json",
+        "ajax": "../dataArq/json/entitats.json",
         "columns": [
             {
                 "className":      'details-control',
