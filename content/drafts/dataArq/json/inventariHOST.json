@@ -1,0 +1,11 @@
+{
+"data":
+[{"id":1,"producte":"Content Manager","categoria":"Mainframe i AS400","obsolet":"<= V5R2","suportat":"V5R3","versioactual":"V5R3","roadmap":"–","emergent":"–"},
+{"id":2,"producte":"DB2 (AS400)","categoria":"Mainframe i AS400","obsolet":"<= V5R4, V6R1","suportat":"V7R1(7.1), V7R2(7.2)","versioactual":"V7R2","roadmap":"V7R3","emergent":"–"},
+{"id":3,"producte":"Iseries","categoria":"Mainframe i AS400","obsolet":"<= V5R4, V6R1","suportat":"V7R1(7.1), V7R2(7.2)","versioactual":"V7R2","roadmap":"V7R3","emergent":"–"},
+{"id":4,"producte":"z/OS","categoria":"Mainframe i AS400","obsolet":"1.x","suportat":"2.1","versioactual":"2.1","roadmap":"2.2","emergent":"2.3"},
+{"id":5,"producte":"DB2 (HOST) *","categoria":"Mainframe i AS400","obsolet":"8.1, 9","suportat":"10.2,11.x, 12.1","versioactual":"12.1","roadmap":"–","emergent":"12.2"},
+{"id":6,"producte":"CA IDMS Server","categoria":"Mainframe i AS400","obsolet":"16","suportat":"18","versioactual":"19","roadmap":"–","emergent":"–"},
+{"id":7,"producte":"CICS","categoria":"Mainframe i AS400","obsolet":"3.2","suportat":"5.2","versioactual":"5.2","roadmap":"5.3","emergent":"5.4"},
+{"id":8,"producte":"SNA Server","categoria":"Mainframe i AS400","obsolet":"SNA Server 4, HIS 2000","suportat":"HIS 2010, HIS 2013","versioactual":"HIS 2013","roadmap":"HIS 2016","emergent":"–"}]
+}
