@@ -9,58 +9,69 @@ weight= 5
 
 <p>Llistat de països que conté les equivalències entre INE - IDESCAT - ISO-3166 Alfabètic - ISO-3166 Numèric - ONU Alfabètic</p>
 
+
 <table>
-  <tr>
-    <th><strong>Òrgan Responsable</strong></th>
-    <td>CTTI/Arquitectura</td>
-  </tr>
-  <tr>
-    <th><strong>Òrgan propietari</strong></th>
-    <td>CTTI/Arquitectura</td>
-  </tr>
-  <tr>
-    <th><strong>Origen</strong></th>
-    <td>INE - IDESCAT - ISO-3166 - ONU</td>
-  </tr>
-  <tr>
-    <th><strong>Darrera Actualització</strong></th>
-    <td>13/05/2019  </td>
-  </tr>
-  <tr>
-    <th><strong>Període Actualització</strong></th>
-    <td>6 mesos </td>
-  </tr>
-  <tr>
-    <th><strong>Classificació funcional</strong></th>
-    <td>Administració Pública </td>
-  </tr>
-  <tr>
-    <th><strong>Agrupació temàtica</strong></th>
-    <td>països</td>
-  </tr>
-  <tr>
-    <th><strong>Tipus</strong></th>
-    <td>tabular</td>
-  </tr>
-  <tr>
-    <th><strong>Visibilitat</strong></th>
-    <td>pública</td>
-  </tr>
-  <tr>
-    <th><strong>Nivell de seguretat</strong></th>
-    <td>baixa</td>
-  </tr>
-  <tr>
-    <th><strong>Nivell de qualitat</strong></th>
-    <td>alt</td>
-  </tr>
-  <tr>
-    <th><strong>Identificador, Nom i Descripció</th>
-      <td>0001, Codis_Territori_Paisos</td>
+  <thead>
+    <tr>
+      <th><strong>Metadades</strong></th>
+      <th><strong>Descripció</strong></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Òrgan Responsable</strong></td>
+      <td>CTTI/Arquitectura</td>
     </tr>
     <tr>
-      <th><strong>Descàrrega</strong></th>
-      <td><a href="../entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
-  </tr>
-</table>
+      <td><strong>Òrgan propietari</strong></td>
+      <td>CTTI/Arquitectura</td>
+    </tr>
+    <tr>
+      <td><strong>Origen</strong></td>
+      <td>INE - IDESCAT - ISO-3166 - ONU</td>
+    </tr>
+    <tr>
+      <td><strong>Darrera Actualització</strong></td>
+      <td>13/05/2019  </td>
+    </tr>
+    <tr>
+      <td><strong>Període Actualitzaci</strong></td>
+      <td>6 mesos </td>
+    </tr>
+    <tr>
+      <td><strong>Classificació funcional</strong></td>
+      <td>Administració Pública </td>
+    </tr>
+    <tr>
+      <td><strong>Agrupació temàtica</strong></td>
+      <td>paisos</td>
+    </tr>
+    <tr>
+      <td><strong>Tipus</strong></td>
+      <td>tabular</td>
+    </tr>
+    <tr>
+      <td><strong>Visibilitat</strong></td>
+      <td>pública</td>
+    </tr>
+    <tr>
+      <td><strong>Nivell de seguretat</strong></td>
+      <td>baixa</td>
+    </tr>
+    <tr>
+      <td><strong>Nivell de qualitat</strong></td>
+      <td>alt</td>
+    </tr>
+    <tr>
+      <td><strong>Identificador, Nom i Descripció</td>
+        <td>0001, Codis_Territori_Paisos</td>
+      </tr>
+      <tr>
+        <td><strong>Descàrrega</strong></td>
+        <td><a href="../entitats/Codis_Territori_Paisos.xlsx" download>Descargar</td>
+        </tr>
+      </tbody>
+    </table>
+
 
