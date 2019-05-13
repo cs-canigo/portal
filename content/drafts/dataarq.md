@@ -12,7 +12,6 @@ weight= 5
 El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.thoughtworks.com/radar).** 
 
 
-# ANNEX A (normatiu) Programari estandarditzat
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
@@ -20,25 +19,28 @@ El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.tho
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-<table id="Titol_CPD" class="display" style="width:100%">
+
+<table id="Revisio" class="display" style="width:50%">
         <thead>
-	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Servidors</th>
-            </tr>
- </thead>
+            <tr>
+                <th>Darrera revisió realitzada</th>
+                <th> Revisió de full de ruta vigent fins</th>
+             </tr>
+	     <tr>
+                <td>febrer de 2019 </td>
+                <td>juny de 2019</td> 
+             </tr>
+        </thead>
 </table>
-</font>
-<table id="FullRutaCPD" class="display" style="width:100%">
+
+
+<table id="DataArq" class="display" style="width:100%">
         <thead>
             <tr>
                 <th></th>
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th>Data Actualització</th>
-                <!--<th>Suportat</th>
-                <th>Versió Actual CTTI</th>
-                <th>En Roadmap</th>
-                <th>Emergent</th>-->
             </tr>
         </thead>
 </table>
@@ -46,7 +48,7 @@ El Radar CTTI està basat en codi alliberat per **[Thoughtworks](https://www.tho
 <script>
 
 // Funció que dona format a la taula interna del Full de Ruta de CPD
-function formatCPD(d) {
+function formatDataArq(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
@@ -88,7 +90,7 @@ function formatCPD(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
+    var taulaDataArq = $('#DataArq').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -103,7 +105,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../dataArq/json/entitats.json",
+        "ajax": "./json/entitats.json",
         "columns": [
             {
                 "className":      'details-control',
@@ -119,17 +121,7 @@ $(document).ready(function() {
 	      "width": "30%"
 	    },
             { "data": "data_actualitzacio",
-	      "width": "20%" }/*,
-            { "data": "suportat",
-	      "width": "80%" },
-            { "data": "versioactual",
-	      "className":      'intern',
-	      "width": "80%"
-	    },
-            { "data": "roadmap",
-	      "width": "100%" },
-            { "data": "emergent",
-	      "width": "100%" }*/
+	      "width": "20%" }
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
@@ -156,9 +148,9 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-    $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
+    $('#DataArq tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRutaCPD.row( tr );
+        var row = taulaDataArq.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -166,7 +158,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatCPD(row.data()) ).show();
+            row.child( formatDataArq(row.data()) ).show();
             tr.addClass('shown');
         }
     });
