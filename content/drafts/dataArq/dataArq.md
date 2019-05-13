@@ -1,9 +1,9 @@
 +++
 date        = "2017-09-23"
-title       = "Radar CTTI"
-description = "Radar tecnològic del CTTI"
-sections    = ["Radar"]
-categories  = ["radar"]
+title       = "Data Architecture"
+description = "Arquitectura de Dades de CTTI"
+sections    = ["Data Architecture"]
+categories  = ["Data Architecture"]
 weight= 5
 +++
 
