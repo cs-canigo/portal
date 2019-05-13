@@ -1,6 +1,6 @@
 +++
 date        = "2019-05-13"
-title       = "Grup: Codis && Entitat: Territoris_Països"
+title       = "Grup: Codis , Entitat: Territoris_Països"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -27,7 +27,7 @@ weight= 5
     <td>13/05/2019  </td>
   </tr>
   <tr>
-    <th><strong>Període Actualitzaci</strong></th>
+    <th><strong>Període Actualització</strong></th>
     <td>6 mesos </td>
   </tr>
   <tr>
@@ -36,7 +36,7 @@ weight= 5
   </tr>
   <tr>
     <th><strong>Agrupació temàtica</strong></th>
-    <td>paisos</td>
+    <td>països</td>
   </tr>
   <tr>
     <th><strong>Tipus</strong></th>
