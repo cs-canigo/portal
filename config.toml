@@ -37,7 +37,7 @@ Paginate = 10
     URL = "/"
 
 [[menu.main]]
-	Name = "Principis d'arquitectura"
+	Name = "Principis"
     Weight = 3
     Identifier = "principis"
     URL = "/principis"
