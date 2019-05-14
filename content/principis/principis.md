@@ -1,7 +1,7 @@
 +++
 date        = "2018-11-15"
 title       = "Principis d'arquitectura de sistemes d'informació"
-description = "Recomanacions a seguir en la construcció de sistemes d'informació a la Generalitat de Catalunya"
+description = "Normas i directrius generals destinades a informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació."
 blog_tags	= ["bones pràctiques"]
 sections    = ["principis"]
 aliases = [
@@ -22,7 +22,7 @@ langs = ["ca","es"]
 ## Introducció
 
 
-Els principis d'arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
+Els principis d'arquitectura CTTI són les normas i directrius generals destinades a ser perdurables i rarament modificables i  tenen com a objectiu informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació.
 
 Els principis, basats en el framework TOGAF, s’estructuren jeràrquicament en diferents segments i s’amplien amb una sèrie d’estratègies i pràctiques que marquen el rumb. Entre elles, destaquen el moviment DEVOPS, els principis sobre Microserveis i l'aposta per solucions de programari lliure.
 
