@@ -97,23 +97,23 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 ### Taula de Cloud Privat {#TaulaCloudPrivat}
 S'ha de crear una taula com la de la plantilla per cada un dels entorns que forman part del servei.
 Detall de cada un dels camps de la taula:
-### Identificador d'instància
+#### Identificador d'instància
  Identificador unic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà despres per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies son noves, quinas han tingut canvis o quines son compartides amb altres serveis / solucions del departament.
 
-### *1 Tipus de Servei {#TipusServei}
+#### *1 Tipus de Servei {#TipusServei}
 - PaaS
 - IaaS
 - Hosting
 
-### Programari i versió
+#### Programari i versió
  Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari.
  
-### Talla i recursos adicionals
+#### Talla i recursos adicionals
  Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs adicional com pot ser vCPUs o Gb de ram.
  
  ![Taula de talles](/images/PlantillaDA/Talles.JPG)
 
-### *2 Possibles opcions de Nivell de Servei {#NivellServei}
+#### *2 Possibles opcions de Nivell de Servei {#NivellServei}
 - Continu - AD	24x7   
 - Continu	24x7
 - Laboral - AD	12x5
@@ -122,41 +122,41 @@ Detall de cada un dels camps de la taula:
 
 ### Taula d'emmagatzematge {#TaulaDisc}
 
-### Identificador d'Instància
+#### Identificador d'Instància
  Per relacionar la taula d'elements de cataleg cloud amb el disc adicional es fa us d'aquest camp, ha de coincidir amb l'identificador de la instancia que se li ha donat a la taula anterior.
 
-### *3 Tipus de disc {#TipusDisc}
+#### *3 Tipus de disc {#TipusDisc}
 - Blocs: Aquest tipus d’emmagatzematge està especialment pensat per quan es necessita una capacitat de disc dur en brut, com per exemple, espai per a una BBDD Oracle.
 - Fitxers: Aquest tipus d’emmagatzematge està especialment pensat per quan l’usuari necessita accés a una carpeta compartida de fitxers.
 
-### Mida del disc
+#### Mida del disc
  Indicar la mida en Gb del disc adicional necessari per la instancia indicada al camp "Identificador d'Instancia"
  
-### *4 Tier - Nivell de disc  {#NivellDisc}
+#### *4 Tier - Nivell de disc  {#NivellDisc}
 - Alt rendiment (TIER 1). Dades d’alta criticitat, fitxers que s’accedeixen sovint, etc.
 - Mig rendiment (TIER 2). Fitxers que no s’accedeixen gaire sovint. 
 - Alta Capacitat (TIER 3). Copies de seguretat.
 
-### *5 RTO i RPO {#RTORPO}
+#### *5 RTO i RPO {#RTORPO}
 - RTO: 2 hores / 8  hores / 12 hores
 - RPO: RPO Zero (No pot perdre cap transacció) /  RPO Darrer Backup
 
 ### Taula de Cloud Públic {#TaulaCloudPublic}
  Taula on es detalla la informació relativa als contenidors que forman part del servei.
 
-## Nombre de Pods / Contenidors
+#### Nombre de Pods / Contenidors
  Un POD es la unitat mes petita a crear a Kubernetes, en la majoria dels casos un POD equival a un contenidor, en aquest camp s'ha d'indicar el nombre de pods a crear del tipus que es detalla a la resta de camps de la taula.
 
-## Programari i versió / Imatge Docker
+#### Programari i versió / Imatge Docker
  Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari. Si es fa ú d'una imatge Docker ja existent al repositori oficial, indicar el seu nom.
 
-## Memoria Ram
+#### Memoria Ram
  Memoria Ram asignada al Pod / Contenidor.
 
-## Disc Persistent
+#### Disc Persistent
  Indicar si es necessari o no disc persistent, en cas afirmatiu s'ha d'informar de la mida del disc en Gb.
 
-## Administrat per CPD
+#### Administrat per CPD
  Indicar si el Pod / Contenidor es administrat per part del proveïdor de CPD o no disposa d'administració.
 
 ## Vista Operacional:
