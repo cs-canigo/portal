@@ -31,7 +31,7 @@ Finalment, en el moment que es decideixi de forma consensuada, el proveïdor ent
 
 Aquests serveis seran accessibles actualment pels responsables de lot sortint i els Release Manager; ja siguin, aquests últims, corresponents al lot entrant o sortint. En el moment en que es revoqui l'accés als Release Managers del lot sortint a tots els seus projectes, aquests deixaran de disposar d'accés als serveis del SIC.
 
-A partir del **dia 01/06/2019, automàticament deixaran automàticament de disposar d'accés els responsables del lot sortint**.
+A partir del **dia 01/06/2019, passaran automàticament a disposar d'accés els responsables del lot entrant**.
 
 
 
