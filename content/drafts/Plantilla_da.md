@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-08"
+date        = "2019-05-14"
 title       = "Exemples i ajuda Plantilla DA"
 description = "Plantilla DA"
 sections    = "Document Arquitectura"
@@ -69,17 +69,49 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 - **INTERN**	Hi ha informació no crítica on es pot permetre una lleu pèrdua d'integritat e informació? 
 	(Exemples: intranets departamentals, plataformes col·laboratives, fòrums, blogs, registres de professionals, convocatòries, concursos de personal, oposicions, usuaris d'aplicació, assistents a cursos, entrada/sortida de documents, gestió d'inventaris, qüestions parlamentàries, plecs, plans d'actuació, gestió de compres, consultes i suggeriments, queixes sense dades sensibles, infraestructures, expedients sense informació anterior, etc.)
 	
-- **PUBLIC**	La informació és pública sense restriccions de difusió del contingut?
+- **PUBLIC**	La informació és pública sense restriccions de difusió del contingut.
+
+### Mesures de seguretat bàsiques {#MesuresSeguretat}
+
+- Els entorns de Producció han d’estar separats de forma física i lògica dels entorns no productius.
+- La solució ha de tenir les diferents capes de la infraestructura (Publicació, Aplicació, BBDD) segregades tant a nivell físic com lògic.
+- La publicació de qualsevol aplicació oberta a internet s’ha de realitzar des d’una DMZ.
+- L’aplicació no ha de ser accessibles des de Internet en entorns no productius.
+- Les transmissions de dades en xarxes públiques han d’anar xifrades.
+- Els servidors i middelwares han de complir amb les guies de bastionat del CESICAT o, en el seu defecte, amb les guies de bastionat del fabricat.
+- Només s’han d’obrir aquells ports que siguin estrictament necessaris per l’ús del sistema d’informació.
+- Cal realitzar una anàlisi tècnica de vulnerabilitats de la infraestructura dels diferents entorns abans de la seva posada en producció.
+- S’ ha de realitzar una anàlisi tècnica de vulnerabilitats dels frontals web abans de la posada en producció.
+- Cal disposar de traçabilitat (traces d’aplicació i d’administració) de les accions que es realitzen en l’aplicació.
+- Cal definir la matriu d’escalat per la gestió dels incidents de seguretat.
+- L’autenticació a l’aplicació s’ha de realitzar utilitzant mecanismes corporatius (GICAR, VALID, ...).
+- Els entorns no Productius no poden contenir dades reals o aquestes han d’estar anonimitzades.
+- Si l’aplicació només és utilitzada pels empleats de la Generalitat, aquesta no hauria d’estar publicada fora de la xarxa corporativa.
 
 ## Vista Desenvolupament: {#DiagramesDesenvolupament}
 
 ![Exemple Diagrama Desenvolupament 1](/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG)
 
 ## Vista Desplegament:
+
+### Taula de Cloud Privat {#TaulaCloudPrivat}
+S'ha de crear una taula com la de la plantilla per cada un dels entorns que forman part del servei.
+Detall de cada un dels camps de la taula:
+### Identificador d'instància
+ Identificador unic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà despres per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies son noves, quinas han tingut canvis o quines son compartides amb altres serveis / solucions del departament.
+
 ### *1 Tipus de Servei {#TipusServei}
 - PaaS
 - IaaS
 - Hosting
+
+### Programari i versió
+ Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari.
+ 
+### Talla i recursos adicionals
+ Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs adicional com pot ser vCPUs o Gb de ram.
+ 
+ ![Taula de talles](/images/PlantillaDA/Talles.JPG)
 
 ### *2 Possibles opcions de Nivell de Servei {#NivellServei}
 - Continu - AD	24x7   
@@ -88,11 +120,19 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 - Laboral	12x5
 - No productiu	12x5
 
-### *3 Tipus d’emmagatzematge {#TipusDisc}
+### Taula d'emmagatzematge {#TaulaDisc}
+
+### Identificador d'Instància
+ Per relacionar la taula d'elements de cataleg cloud amb el disc adicional es fa us d'aquest camp, ha de coincidir amb l'identificador de la instancia que se li ha donat a la taula anterior.
+
+### *3 Tipus de disc {#TipusDisc}
 - Blocs: Aquest tipus d’emmagatzematge està especialment pensat per quan es necessita una capacitat de disc dur en brut, com per exemple, espai per a una BBDD Oracle.
 - Fitxers: Aquest tipus d’emmagatzematge està especialment pensat per quan l’usuari necessita accés a una carpeta compartida de fitxers.
 
-### *4 Nivell de disc  {#NivellDisc}
+### Mida del disc
+ Indicar la mida en Gb del disc adicional necessari per la instancia indicada al camp "Identificador d'Instancia"
+ 
+### *4 Tier - Nivell de disc  {#NivellDisc}
 - Alt rendiment (TIER 1). Dades d’alta criticitat, fitxers que s’accedeixen sovint, etc.
 - Mig rendiment (TIER 2). Fitxers que no s’accedeixen gaire sovint. 
 - Alta Capacitat (TIER 3). Copies de seguretat.
@@ -100,6 +140,24 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 ### *5 RTO i RPO {#RTORPO}
 - RTO: 2 hores / 8  hores / 12 hores
 - RPO: RPO Zero (No pot perdre cap transacció) /  RPO Darrer Backup
+
+### Taula de Cloud Públic {#TaulaCloudPublic}
+ Taula on es detalla la informació relativa als contenidors que forman part del servei.
+
+## Nombre de Pods / Contenidors
+ Un POD es la unitat mes petita a crear a Kubernetes, en la majoria dels casos un POD equival a un contenidor, en aquest camp s'ha d'indicar el nombre de pods a crear del tipus que es detalla a la resta de camps de la taula.
+
+## Programari i versió / Imatge Docker
+ Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari. Si es fa ú d'una imatge Docker ja existent al repositori oficial, indicar el seu nom.
+
+## Memoria Ram
+ Memoria Ram asignada al Pod / Contenidor.
+
+## Disc Persistent
+ Indicar si es necessari o no disc persistent, en cas afirmatiu s'ha d'informar de la mida del disc en Gb.
+
+## Administrat per CPD
+ Indicar si el Pod / Contenidor es administrat per part del proveïdor de CPD o no disposa d'administració.
 
 ## Vista Operacional:
 
