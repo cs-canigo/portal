@@ -1,7 +1,7 @@
 +++
 date        = "2019-05-15"
 title       = "SIC. Canvi de lots segons la nova contractació 2019"
-description = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
+description = "El dia 01/06/2019 es farà efectiva la nova configuració de lots de les aplicacions en base a la nova contractació de proveïdors del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
 categories  = ["sic"]
 sections    = ["Notícies","home"]
 +++
