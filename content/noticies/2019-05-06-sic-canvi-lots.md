@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-06"
+date        = "2019-05-15"
 title       = "SIC. Canvi de lots segons la nova contractació 2019"
 description = "SIC. Canvi de lots segons la nova contractació 2019 del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya"
 categories  = ["sic"]
