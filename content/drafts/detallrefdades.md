@@ -85,7 +85,7 @@ weight= 5
     hilera = document.createElement("tr");
    
     celda = document.createElement("td");
-    textoCelda =  document.createTextNode("descàrrega");
+    textoCelda =  document.createTextNode("Descàrrega");
     celda.style.fontWeight = "bold";
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
