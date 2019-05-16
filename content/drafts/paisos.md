@@ -36,7 +36,7 @@ weight= 5
       <td>13/05/2019  </td>
     </tr>
     <tr>
-      <td><strong>Període Actualitzaci</strong></td>
+      <td><strong>Període Actualització</strong></td>
       <td>6 mesos </td>
     </tr>
     <tr>
