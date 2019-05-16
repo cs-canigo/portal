@@ -30,9 +30,9 @@ weight= 5
 
 
     tabla = document.createElement("table");
-    tabla.style.width = "50%";
-    tabla.style.marginRight = "25%";
-    tabla.style.marginLeft = "25%";
+    tabla.style.width = "70%";
+    tabla.style.marginRight = "15%";
+    tabla.style.marginLeft = "15%";
     
     var tblBody = document.createElement("tbody");
     var tblThead = document.createElement("thead");
@@ -65,6 +65,7 @@ weight= 5
         if(j==0){
           celda = document.createElement("td");
           textoCelda = document.createTextNode(metadatos[i]);
+          celda.style.fontWeight = "bold";
           celda.appendChild(textoCelda);
           hilera.appendChild(celda);
         }
@@ -85,6 +86,7 @@ weight= 5
    
     celda = document.createElement("td");
     textoCelda =  document.createTextNode("descàrrega");
+    celda.style.fontWeight = "bold";
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
 
