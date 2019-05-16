@@ -121,7 +121,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
     </tr>
     <tr>
       <td>Territori</td>
-      <td>Paisos</td>
+      <td>Països</td>
       <td>13/05/2019</td>
       <td><a href='../paisos'>detall</a></td>
     </tr>
