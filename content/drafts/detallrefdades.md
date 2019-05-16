@@ -7,6 +7,8 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
+
+<div style="width:50%">
  <script type="text/javascript">
 
     var dades = JSON.parse(localStorage.getItem('data'));
@@ -97,6 +99,6 @@ weight= 5
     tabla.appendChild(tblBody);
     // appends <table> into <body>
     body.appendChild(tabla);
+</script>
 
-
-  </script>
+</div>
