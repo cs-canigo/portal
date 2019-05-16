@@ -17,6 +17,9 @@ weight= 5
     var body = document.getElementsByTagName("body")[0];
 
     var definicio = document.createElement("p");
+    definicio.style.width = "70%";
+    definicio.style.marginRight = "15%";
+    definicio.style.marginLeft = "15%";
     
     var textDeficicio = document.createTextNode(dades[16]);
     definicio.appendChild(textDeficicio);
@@ -27,6 +30,8 @@ weight= 5
 
 
     tabla = document.createElement("table");
+    tabla.style.width = "50%";
+    
     var tblBody = document.createElement("tbody");
     var tblThead = document.createElement("thead");
 
