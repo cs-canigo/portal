@@ -18,7 +18,12 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
       "ajax": '../dataarq/json/entity.json',
       "paging":   false,
       "ordering": false,
-      "info":     false
+      "info":     false,
+      "columnDefs": [ {
+            "targets": -1,
+            "data": null,
+            "defaultContent": "<button>Click!</button>"
+        } ]
     } );
      $('#example tbody').on('click', 'tr', function () {
         var data = table.row( this ).data();
