@@ -27,127 +27,128 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
       <td>Persona</td>
       <td>Comunicació Canal Avís</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Estat Civil</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Gènere</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Convivent Tipus</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Expedient</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Nòmina</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Parentiu</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Parentiu Grau</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Relació Parentiu Tipus</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Representació</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Representació Caràcter</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Tipus Identificador</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Persona</td>
       <td>Tipus Notificació</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Comarques Catalunya</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Comunitats Autònomes</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Municipis Espanya</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
-      <td>Països</td>
+      <td>Paisos</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Poblacions</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Províncies</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Unitat Orgànica</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
     <tr>
       <td>Territori</td>
       <td>Unitat Orgànica Tipus</td>
       <td>13/05/2019</td>
-      <td><a href='../paisos.md'>detall</a></td>
+      <td><a href='../paisos'>detall</a></td>
     </tr>
+
   </tbody>
 </table>
