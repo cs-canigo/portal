@@ -8,12 +8,6 @@ weight= 5
 +++
 
 
-<div style="width:50%">
-  <p id="definicio"></p>
-  <table id="detallDades" style="width:100%">
-          
-  </table>
-</div>
 
  <script type="text/javascript">
 
@@ -22,7 +16,7 @@ weight= 5
 
     var body = document.getElementsByTagName("body")[0];
 
-    var definicio = document.getElementById("definicio");
+    var definicio = document.createElement("p");
     
     var textDeficicio = document.createTextNode(dades[16]);
     definicio.appendChild(textDeficicio);
@@ -32,7 +26,7 @@ weight= 5
     var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Nivell de seguretat","Nivell de qualitat","Identificador, Nom i Descripció","Descàrrega"];
 
 
-    tabla = document.getElementById("detallDades");
+    tabla = document.createElement("table");
     var tblBody = document.createElement("tbody");
     var tblThead = document.createElement("thead");
 
