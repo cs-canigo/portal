@@ -105,7 +105,7 @@ Les IPs relacionades amb els dominis són:
 En data **15/04/2019** es va fer efectiva la posada en servei el nou entorn de **Preproducció**. Proporcionant el servei de STD amb la nova rearquitectura
 <br />
 <br />
-La data prevista de posada en servei del nou entorn de **Producció** és el **09/05/2019**. Quan s'hagi materialitzat el canvi al nou entorn de Producció s'informarà, tant en aquest portal, com mitjançant comunicats destinats als integradors.
+El més aviat possible s'informarà de la data prevista de posada en servei del nou entorn de **Producció**. Quan s'hagi materialitzat el canvi al nou entorn de Producció s'informarà, tant en aquest portal, com mitjançant comunicats destinats als integradors.
 <br />
 <br />
 Podeu trobar més detall de la rearquitecura a la noticia publicada al portal [STD. Actualització tecnològica del servei](/noticies/2019-02-20-actualitzacio-tecnologica-std/)
