@@ -15,7 +15,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 <script type="text/javascript">
   $(document).ready(function() {           
     var table =  $('#example').DataTable( {
-      "ajax": './json/entitats.json',
+      "ajax": '../dataarq/json/entity.json',
       "paging":   false,
       "ordering": false,
       "info":     false
