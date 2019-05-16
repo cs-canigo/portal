@@ -31,6 +31,8 @@ weight= 5
 
     tabla = document.createElement("table");
     tabla.style.width = "50%";
+    tabla.style.marginRight = "25%";
+    tabla.style.marginLeft = "25%";
     
     var tblBody = document.createElement("tbody");
     var tblThead = document.createElement("thead");
