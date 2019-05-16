@@ -92,7 +92,7 @@ weight= 5
 
     celda = document.createElement("td");
     var link = document.createElement('a');
-    link.setAttribute('href', './entitats/' + dades[15]);
+    link.setAttribute('href', '../entitats/' + dades[15]);
     link.innerHTML = dades[15];
     celda.appendChild(link);
     hilera.appendChild(celda);
