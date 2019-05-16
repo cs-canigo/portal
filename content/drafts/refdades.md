@@ -30,7 +30,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
         localStorage.setItem('data', JSON.stringify(data));
       
 
-        window.location = "detallrefdades";
+        window.location = "refdades/detallrefdades";
     } );
 
 });
