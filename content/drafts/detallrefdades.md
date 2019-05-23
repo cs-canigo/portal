@@ -7,7 +7,14 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
+ <script type="text/javascript">
+    $(document).ready(function(){
+     var dades = JSON.parse(localStorage.getItem('data'));
 
+     var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
+     $('#myframe').attr("src", url);
+      })
+  </script>
 
  <script type="text/javascript">
 
@@ -113,7 +120,6 @@ weight= 5
     tabla.appendChild(tblBody);
     // appends <table> into <body>
     body.appendChild(tabla);
-
-
   </script>
 
+  <iframe id ="myframe"  width='50%' height='565px' frameborder='0'> </iframe>
