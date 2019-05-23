@@ -8,7 +8,10 @@ weight= 5
 +++
 
    
-
+<p id="myDefinition"></p>
+<table id="myTable"></table>
+  
+ 
  <script type="text/javascript">
    
     var dades = JSON.parse(localStorage.getItem('data'));
@@ -16,7 +19,8 @@ weight= 5
 
     var body = document.getElementsByTagName("body")[0];
 
-    var definicio = document.createElement("p");
+    //var definicio = document.createElement("p");
+    var definicio = document.getElementById("myDefinition");
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
@@ -29,7 +33,8 @@ weight= 5
     var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Identificador","Descàrrega"];
 
 
-    var tabla   = document.createElement("table");
+   var tabla   = document.getElementById("myTable");
+    //var tabla   = document.createElement("table");
     tabla.style.width = "70%";
     tabla.style.marginRight = "15%";
     tabla.style.marginLeft = "15%";
@@ -122,10 +127,6 @@ weight= 5
    }
    
   </script>
-
+   
+  <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
 <button onclick="happycode()"> click!!!</button>
-<iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
-
-
-<button onclick="happycode()"> click!!!</button>
-<iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
