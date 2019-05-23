@@ -21,7 +21,7 @@ weight= 5
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
     
-    var textDeficicio = document.createTextNode(dades[16]);
+    var textDeficicio = document.createTextNode(dades[14]);
     definicio.appendChild(textDeficicio);
 
     body.appendChild(definicio);
