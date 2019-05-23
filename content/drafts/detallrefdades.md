@@ -10,7 +10,7 @@ weight= 5
    
 
  <script type="text/javascript">
-
+   
     var dades = JSON.parse(localStorage.getItem('data'));
 
 
@@ -113,19 +113,18 @@ weight= 5
     tabla.appendChild(tblBody);
     // appends <table> into <body>
     body.appendChild(tabla);
-  
-  </script>
+    </script>
   
      <script type="text/javascript">
-
      function happycode(){
      var dades = JSON.parse(localStorage.getItem('data'));
-
      var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
-     $('#myframe').attr("src", url);
-
-   }
+     $('#myframe').attr("src", url);}
     </script>
+
+
+<button onclick="happycode()"> click!!!</button>
+<iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
 
 
 <button onclick="happycode()"> click!!!</button>
