@@ -26,14 +26,14 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Nivell de seguretat","Nivell de qualitat","Identificador, Nom i Descripció","Descàrrega"];
+    var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Identificador","Descàrrega"];
 
 
-    tabla = document.createElement("table");
+    var tabla   = document.createElement("table");
     tabla.style.width = "70%";
     tabla.style.marginRight = "15%";
     tabla.style.marginLeft = "15%";
-    
+
     var tblBody = document.createElement("tbody");
     var tblThead = document.createElement("thead");
 
@@ -54,7 +54,7 @@ weight= 5
 
 
      // Crea las celdas
-     for (var i = 0; i < 12; i++) {
+     for (var i = 0; i < 10; i++) {
       // Crea las hileras de la tabla
       hilera = document.createElement("tr");
 
@@ -85,16 +85,23 @@ weight= 5
     hilera = document.createElement("tr");
    
     celda = document.createElement("td");
-    textoCelda =  document.createTextNode("Descàrrega");
     celda.style.fontWeight = "bold";
+    textoCelda =  document.createTextNode("Descàrrega");
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
 
     celda = document.createElement("td");
     var link = document.createElement('a');
-    link.setAttribute('href', '../entitats/' + dades[15]);
-    link.innerHTML = dades[15];
+    var image = document.createElement('img');
+
+    link.setAttribute('href', '../entitats/' + dades[13]);
+
+    image.setAttribute("src","../icon/icons8-excel-48.png");
+
+    //link.innerHTML = dades[15];
+    link.appendChild(image);
     celda.appendChild(link);
+    //celda.appendChild(link);
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
@@ -106,5 +113,7 @@ weight= 5
     tabla.appendChild(tblBody);
     // appends <table> into <body>
     body.appendChild(tabla);
-</script>
+
+
+  </script>
 
