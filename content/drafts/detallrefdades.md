@@ -11,7 +11,8 @@ weight= 5
 <p id="myDefinition"></p>
 <table id="myTable"></table>
 
- <script type="text/javascript">   
+ <script type="text/javascript">
+   
     var dades = JSON.parse(localStorage.getItem('data'));
     var body = document.getElementsByTagName("body")[0];
     //var definicio = document.createElement("p");
@@ -23,7 +24,8 @@ weight= 5
     definicio.appendChild(textDeficicio);
     body.appendChild(definicio);
     var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Identificador","Descàrrega"];
-   var tabla   = document.getElementById("myTable");
+    
+    var tabla   = document.getElementById("myTable");
     //var tabla   = document.createElement("table");
     tabla.style.width = "70%";
     tabla.style.marginRight = "15%";
@@ -90,8 +92,9 @@ weight= 5
     function happycode(){
      var dades = JSON.parse(localStorage.getItem('data'));
      var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
-     $('#myframe').attr("src", url);}    
+     $('#myframe').attr("src", url);}  
+     
    </script>
      
   <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
-<button onclick="happycode()"> click mmm!!!</button>
+<button onclick="happycode()"> click 1!!!</button>
