@@ -1,6 +1,6 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència11"
+title       = "Dades de Referència12"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -116,16 +116,41 @@ weight= 5
 
     // posiciona el <tbody> debajo del elemento <table>
 
+    //tabla.appendChild(tblThead);
+    //tabla.appendChild(tblBody);
+    // appends <table> into <body>
+    //body.appendChild(tabla);
+    
+     hilera = document.createElement("tr");
+   
+    celda = document.createElement("td");
+    celda.style.fontWeight = "bold";
+    textoCelda =  document.createTextNode("Preview");
+    celda.appendChild(textoCelda);
+    hilera.appendChild(celda);
+
+    celda = document.createElement("td");
+    var frame = document.createElement('iframe');
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
+    frame.style.width= "100%"
+    frame.style.height= "400px";
+    celda.appendChild(frame);
+    hilera.appendChild(celda);
+
+
+    tblBody.appendChild(hilera);
+
+
     tabla.appendChild(tblThead);
     tabla.appendChild(tblBody);
-    // appends <table> into <body>
+
     body.appendChild(tabla);
     
-    function happycode(){
-     var dades = JSON.parse(localStorage.getItem('data'));
-     var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
-     $('#myframe').attr("src", url);
-    }
+    //function happycode(){
+     //var dades = JSON.parse(localStorage.getItem('data'));
+     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
+     //$('#myframe').attr("src", url);
+    //}
 
 
 
