@@ -84,7 +84,6 @@ weight= 5
     // posiciona el <tbody> debajo del elemento <table>
     tabla.appendChild(tblThead);
     tabla.appendChild(tblBody);
-    // appends <table> into <body>
     body.appendChild(tabla);
     function happycode(){
      var dades = JSON.parse(localStorage.getItem('data'));
