@@ -1,6 +1,6 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència6"
+title       = "Dades de Referència7"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -121,7 +121,7 @@ weight= 5
     // appends <table> into <body>
     body.appendChild(tabla);
     
-    function happycode(){
+    $(window).load(function(){
      var dades = JSON.parse(localStorage.getItem('data'));
      var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
      $('#myframe').attr("src", url);
