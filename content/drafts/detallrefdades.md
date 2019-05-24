@@ -10,8 +10,6 @@ weight= 5
   <div>
     <p id="myDefinition"></p>
     <table id="myTable"></table>
-    <button onclick="happycode()"> click!!!</button>
-    <iframe  id ="myframe"> </iframe>
   </div>
   
 
