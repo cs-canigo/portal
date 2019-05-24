@@ -1,6 +1,6 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència5"
+title       = "Dades de Referència6"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -11,7 +11,7 @@ weight= 5
     <p id="myDefinition"></p>
     <table id="myTable"></table>
     <button onclick="happycode()"> click!!!</button>
-    <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
+    <iframe  id ="myframe" style="width:50%; height:565px;" frameborder='0' > </iframe>
   </div>
   
 
@@ -28,7 +28,7 @@ weight= 5
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
 
-    var textDeficicio = document.createTextNode(dades[16]);
+    var textDeficicio = document.createTextNode(dades[14]);
     definicio.appendChild(textDeficicio);
 
     body.appendChild(definicio);
@@ -101,7 +101,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', './entitats/' + dades[15]);
+    link.setAttribute('href', './entitats/' + dades[13]);
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
 
