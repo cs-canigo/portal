@@ -1,18 +1,14 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència1"
+title       = "Dades de Referència2"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
 +++
 
-<div style="width:50%">
-  <p id="definicio"></p>
-  <table id="detallDades" style="width:100%">
-          
-  </table>
-</div> 
+  <p id="myDefinition"></p>
+  <table id="myTable"></table>
 
 
 <script type="text/javascript">
@@ -22,7 +18,7 @@ weight= 5
 
     var body = document.getElementsByTagName("body")[0];
 
-    var definicio = document.createElement("p");
+    var definicio = document.getElementById("myDefinition");
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
@@ -35,7 +31,7 @@ weight= 5
     var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Nivell de seguretat","Nivell de qualitat","Identificador, Nom i Descripció","Descàrrega"];
 
 
-    var tabla   = document.createElement("table");
+    var tabla   =  document.getElementById("myTable");
     tabla.style.width = "70%";
     tabla.style.marginRight = "15%";
     tabla.style.marginLeft = "15%";
