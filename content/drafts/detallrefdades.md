@@ -1,14 +1,19 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència4"
+title       = "Dades de Referència5"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
 +++
 
-  <p id="myDefinition"></p>
-  <table id="myTable"></table>
+  <div>
+    <p id="myDefinition"></p>
+    <table id="myTable"></table>
+    <button onclick="happycode()"> click!!!</button>
+    <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
+  </div>
+  
 
 
 <script type="text/javascript">
@@ -56,7 +61,7 @@ weight= 5
 
 
      // Crea las celdas
-     for (var i = 0; i < 12; i++) {
+     for (var i = 0; i < 10; i++) {
       // Crea las hileras de la tabla
       hilera = document.createElement("tr");
 
@@ -126,5 +131,4 @@ weight= 5
 
   </script>
   
-  <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
-<button onclick="happycode()"> click!!!</button>
+  
