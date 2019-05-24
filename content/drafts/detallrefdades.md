@@ -1,6 +1,6 @@
 +++
 date        = "2017-09-23"
-title       = "Dades de Referència8"
+title       = "Dades de Referència9"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -8,8 +8,8 @@ weight= 5
 +++
 
   <div>
-    <p id="myDefinition"></p>
-    <table id="myTable"></table>
+    <p id="myDefinition" style="width:50%; height:565px;"></p>
+    <table id="myTable" style="width:50%; height:565px;"></table>
     <button onclick="happycode()"> click!!!</button>
     <iframe  id ="myframe" style="width:50%; height:565px;" frameborder='0' > </iframe>
   </div>
