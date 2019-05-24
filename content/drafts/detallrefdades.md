@@ -46,12 +46,12 @@ weight= 5
     var hilera = document.createElement("tr");
    
     var celda = document.createElement("th");
-    var textoCelda =  document.createTextNode("metadades");
+    var textoCelda =  document.createTextNode("Metadades");
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
 
     var celda2 = document.createElement("th");
-    var textoCelda2 =  document.createTextNode("definició");
+    var textoCelda2 =  document.createTextNode("Definició");
     celda2.appendChild(textoCelda2);
     hilera.appendChild(celda2);
 
