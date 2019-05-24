@@ -28,7 +28,7 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Nivell de seguretat","Nivell de qualitat","Identificador, Nom i Descripció","Descàrrega"];
+    var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Identificador","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -115,6 +115,13 @@ weight= 5
     tabla.appendChild(tblBody);
     // appends <table> into <body>
     body.appendChild(tabla);
+    
+    function happycode(){
+     var dades = JSON.parse(localStorage.getItem('data'));
+     var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
+     $('#myframe').attr("src", url);
+    }
+
 
 
   </script>
