@@ -99,7 +99,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', './entitats/' + dades[13]);
+    link.setAttribute('href', '../entitats/' + dades[13]);
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
 
