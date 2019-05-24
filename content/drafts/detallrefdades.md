@@ -10,10 +10,10 @@ weight= 5
    
 <p id="myDefinition"></p>
 <table id="myTable"></table>
- <script type="text/javascript">   
-    var dades = JSON.parse(localStorage.getItem('data'));
-    var body = document.getElementsByTagName("body")[0];
-    //var definicio = document.createElement("p");
+ <script type="text/javascript">
+   var dades = JSON.parse(localStorage.getItem('data'));
+   var body = document.getElementsByTagName("body")[0];
+   //var definicio = document.createElement("p");
     var definicio = document.getElementById("myDefinition");
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
@@ -91,4 +91,4 @@ weight= 5
      $('#myframe').attr("src", url);}       
    </script>     
   <iframe  id ="myframe"  width='50%' height='565px' frameborder='0' > </iframe>
-<button onclick="happycode()"> click 3!!!</button>
+<button onclick="happycode()"> click 4!!!</button>
