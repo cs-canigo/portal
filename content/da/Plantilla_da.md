@@ -6,8 +6,6 @@ sections    = "DA"
 weight      = 1
 +++
 
-### Plantilla del DA
-
 S'ha creat una nova plantilla per facilitar l'emplenat del document d'arquitectura i creat un document d'exemple per facilitar la seva comprensió:
 
 [Plantilla DA](/related/da/Assumpte_DT_DAQ_V1.2_14.docx)
