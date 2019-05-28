@@ -1,11 +1,13 @@
 +++
 date        = "2019-05-14"
 title       = "Exemples i ajuda Plantilla DA"
-description = "Plantilla DA"
+description = "Ajuda a l'emplenat de la plantilla DA"
 sections    = "Document Arquitectura"
 weight      = 3
 categories  = ["Document Arquitectura","DA","Plantilla"]
 +++
+
+Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, els següents apartats són accessibles des de la pròpia plantilla.
 
 ## Vista Context: {#DiagramesContext}
 
