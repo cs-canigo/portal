@@ -1,7 +1,7 @@
 +++
 date        = "2019-05-28"
-title       = "Plantilla DA"
-description = "Plantilla per el document d'arquitectura"
+title       = "Plantilla Descripció d'Arquitectura"
+description = "Plantilla per el document Descripció d'Arquitectura"
 sections    = "DA"
 weight      = 1
 +++
