@@ -5,6 +5,7 @@ description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
+hidden      = true 
 +++
 
   <div>
