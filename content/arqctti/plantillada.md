@@ -1,8 +1,13 @@
 +++
-date        = "2019-05-28T17:10:00+01:00"	
-title       = "Plantilla DA"	
-description = "Plantilla del document d'arquitectura "	
-enllac		  = "/da/"
-no_index 	  = true	
-weight 		  = 1	
+date        = "2019-05-28"
+title       = "Plantilla DA"
+description = "Plantilla per el document d'arquitectura"
+sections    = "DA"
+weight      = 1
 +++
+
+S'ha creat una nova plantilla per facilitar l'emplenat del document d'arquitectura i creat un document d'exemple per facilitar la seva comprensió:
+
+[Plantilla DA](/related/da/Assumpte_DT_DAQ_V1.2_14.docx)
+
+[DA Exemple](/related/da/Exemple_DA_1.0.docx)
