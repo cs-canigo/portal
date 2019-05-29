@@ -39,8 +39,8 @@ Paginate = 10
 [[menu.main]]
 	Name = "Arquitectura CTTI"
     Weight = 3
-    Identifier = "principis"
-    URL = "/principis"
+    Identifier = "arqctti"
+    URL = "/arqctti"
 
 [[menu.main]]
 	Name = "Blog"
