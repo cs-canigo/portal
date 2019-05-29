@@ -17,6 +17,7 @@ aliases = [
 imatge 		= "/images/bloc/principis.png"
 #teletext_id	= "principis"
 langs = ["ca","es"]
+weight 		  = 1
 +++
 
 ## Introducció
