@@ -2,6 +2,7 @@
 date        = "2018-11-15"
 title       = "Principis d'arquitectura de sistemes d'informació"
 description = "Normas i directrius generals destinades a informar i recolzar la forma en què CTTI vol que s'implementin els Sistemes d'Informació."
+weight = 1
 blog_tags	= ["directrius"]
 sections    = ["principis"]
 aliases = [
@@ -17,7 +18,6 @@ aliases = [
 imatge 		= "/images/bloc/principis.png"
 #teletext_id	= "principis"
 langs = ["ca","es"]
-weight 		  = 1
 +++
 
 ## Introducció
