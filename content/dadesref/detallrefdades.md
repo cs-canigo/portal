@@ -1,11 +1,10 @@
 +++
 date        = "2017-09-23"
-title       = "Detall Dades de Referència3"
+title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
-showhidden      = true 
 +++
 
   <div>
