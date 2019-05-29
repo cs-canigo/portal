@@ -3,7 +3,7 @@ date        = "2019-05-28"
 title       = "Plantilla Descripció d'Arquitectura"
 description = "Plantilla per el document Descripció d'Arquitectura"
 sections    = "DA"
-weight      = 1
+weight      = 2
 +++
 
 S'ha creat una nova plantilla per facilitar l'emplenat del document d'arquitectura i creat un document d'exemple per facilitar la seva comprensió:
