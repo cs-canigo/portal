@@ -4,7 +4,7 @@ title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight= 5
+weight= 2
 +++
 
   <div>
