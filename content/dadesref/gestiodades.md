@@ -20,7 +20,7 @@ L’ecosistema de les dades és molt ampli. La **Gestió Tècnica de les Dades**
    - **Dada Mestra Corporativa:** representen aquells atributs comuns i implementats arreu de la Generalitat de la mateixa manera, garantint la interoperabilitat, el tractament homogeni i la identificació unívoca (exemple: ciutadà, empresa).
    - **Dada Mestra Departamental:** proporcionen atributs particulars que estenen la dada mestra corporativa per especificitat dins d’un àmbit o departament concret (exemple: atribut de la targeta sanitària d’un ciutadà).
     
-2.	**Dades de Referència:** orientades a propòsits de classificació (codificacions i estàndards) o de suport a la gestió. Són dades bàsiques amb valors sobre dominis, termes estandarditzats, codificacions, identificadors únics de conceptes i, en general, qualsevol element orientat a la classificació consistent i exacta de les dades i la informació (per exemple, estat de tramitació, codis de comunitats, codis de països, etc.).
+2.	**[Dades de Referència](/dadesref/dadesref/)**: orientades a propòsits de classificació (codificacions i estàndards) o de suport a la gestió. Són dades bàsiques amb valors sobre dominis, termes estandarditzats, codificacions, identificadors únics de conceptes i, en general, qualsevol element orientat a la classificació consistent i exacta de les dades i la informació (per exemple, estat de tramitació, codis de comunitats, codis de països, etc.).
 
 3.	**Dades de negoci:** les vinculades directament a qualsevol de les diferents activitats que realitza la Generalitat (per exemple, prestacions sanitàries).
 
