@@ -38,40 +38,4 @@ La gestió tècnica de dades ha de permetre a la Generalitat de Catalunya:
 
 Des de l’Àrea d’Arquitectura Corporativa s’ha plantejat un projecte iteratiu amb diferents línies de treball:
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg .tg-3a3g{font-size:14px;font-family:Arial, Helvetica, sans-serif !important;;text-align:center;vertical-align:top}
-.tg .tg-7vsa{font-size:14px;font-family:Arial, Helvetica, sans-serif !important;;text-align:left;vertical-align:top}
-.tg .tg-esop{font-weight:bold;font-size:14px;font-family:Arial, Helvetica, sans-serif !important;;background-color:#c0c0c0;text-align:left;vertical-align:top}
-</style>
-<table class="tg">
-  <tr>
-    <th class="tg-esop"></th>
-    <th class="tg-esop">Línea de treball</th>
-    <th class="tg-esop">Objectiu</th>
-  </tr>
-  <tr>
-    <td class="tg-3a3g" rowspan="4"><br>Gestió tècnica de dades</td>
-    <td class="tg-7vsa">Descobriment de dades</td>
-    <td class="tg-7vsa" rowspan="4">•    Recopilar i publicar dades de referència d’ús comú per la Generalitat de Catalunya.<br>•    Descobrir i mantenir un catàleg tècnic de dades dels sistemes d’informació de la Generalitat.<br>•    Definir criteris de qualitat aplicables a dades de referència.<br>•    Establir un marc que estableixi una semàntica comú per facilitar la coordinació de la governança.<br>•    Definició de processos i procediments de governança tècnica de dades</td>
-  </tr>
-  <tr>
-    <td class="tg-7vsa">Diccionari tècnic de dades</td>
-  </tr>
-  <tr>
-    <td class="tg-7vsa">Qualitat de dades</td>
-  </tr>
-  <tr>
-    <td class="tg-7vsa">Processos en gestió tècnica</td>
-  </tr>
-  <tr>
-    <td class="tg-3a3g" rowspan="2">Plataformes de gestió de dades</td>
-    <td class="tg-7vsa">Definició conceptual</td>
-    <td class="tg-7vsa" rowspan="2">•    Definir un model tecnològic per gestionar les dades de referència.<br>•    Dissenyar plataformes de referència per a l’àmbit de dades i anàlisi de la informació</td>
-  </tr>
-  <tr>
-    <td class="tg-7vsa">Estàndards i Implementació física</td>
-  </tr>
-</table>
+![Taula Dades de referencia](/images/dadesref/ImgDadesReferencia.PNG)
