@@ -4,7 +4,7 @@ title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight= 1
+weight= 2
 +++
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament  transformen dades en informació significativa pel negoci.
