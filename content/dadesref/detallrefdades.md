@@ -1,10 +1,10 @@
 +++
-date        = "2119-05-29"
+date        = "2019-05-29"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight= 2
+weight= 3
 +++
 
   <div>
