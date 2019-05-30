@@ -4,7 +4,7 @@ title       = "Gestió Tècnica de Dades"
 description = "Gestió Tècnica de Dades"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
-weight= 3
+weight= 1
 +++
 
 ### Gestió Tècnica de Dades
