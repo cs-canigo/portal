@@ -16,6 +16,8 @@ El document esta dividit en dos parts diferenciades:
 - **Informació del projecte d’aprovisionament:** A l’apartat 4 s’ha d’afegir tota la informació relativa al projecte d’aprovisionament que ha requerit la nova versió del document d’arquitectura. En cas d’un servei nou, en aquest apartat només es necessari afegir dades d’aprovisionament que no estan contemplats a la resta del document.
 
 
-[Plantilla DA](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.0.docx)
+[Plantilla Document d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.0.docx)
+
+[Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
 [DA Exemple](/related/da/Exemple_DA_1.0.docx)
