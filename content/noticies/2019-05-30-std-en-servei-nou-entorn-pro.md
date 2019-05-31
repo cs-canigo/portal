@@ -2,6 +2,8 @@
 date        = "2019-05-30"
 title       = "STD. En servei nou entorn de Producció"
 description = "L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents), realitzant una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. En data 23/05/2019 s'ha posat en servei el nou entorn de Producció"
+sections    = ["Notícies", "home"]
+categories  = ["sgde"]
 +++
 
 L'últim trimestre del 2018 es va iniciar un projecte d'**actualització tecnològica del servei STD (Servei de Transformació de Documents)**. També es realitza una **rearquitectura** del servei per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. 
