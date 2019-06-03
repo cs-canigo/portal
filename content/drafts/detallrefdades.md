@@ -8,6 +8,7 @@ weight= 5
 +++
 
   <div>
+    <h2 id="entitatTitol"></h2>
     <p id="myDefinition"></p>
     <table id="myTable"></table>
   </div>
@@ -20,6 +21,16 @@ weight= 5
 
 
     var body = document.getElementsByTagName("body")[0];
+    
+    var entitatTitol = document.getElementById("entitatTitol");
+    entitatTitol.style.width = "70%";
+    entitatTitol.style.marginRight = "15%";
+    entitatTitol.style.marginLeft = "15%";
+
+    var textEntitatTitol = document.createTextNode(dades[1]);
+    entitatTitol.appendChild(textEntitatTitol);
+
+    body.appendChild(entitatTitol);
 
     var definicio = document.getElementById("myDefinition");
     definicio.style.width = "70%";
@@ -31,7 +42,7 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Òrgan Responsable","Òrgan propietari","Origen","Darrera Actualització","Període Actualització","Classificació funcional","Agrupació temàtica","Tipus","Visibilitat","Identificador","Descàrrega"];
+    var metadatos = ["Identificador","Darrera Actualització","Origen","Classificació funcional","Agrupació temàtica","Òrgan Responsable","Òrgan Propietari","Període Actualització","Tipus","Visibilitat","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
