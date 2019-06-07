@@ -1,0 +1,23 @@
+{
+"data":
+[
+{"id":1,"producte":"Windows estació de treball","categoria":"Sistemes operatius LLT","obsolet":"XP, Vista, 7","suportat":"8.1, 10","versioactual":"10","roadmap":"–","emergent":"–"},
+{"id":2,"producte":"Windows tauleta","categoria":"Sistemes operatius LLT","obsolet":"XP, Vista, 7","suportat":"8.1, 10","versioactual":"10","roadmap":"–","emergent":"–"},
+{"id":3,"producte":"Versions Windows 10","categoria":"Sistemes operatius LLT","obsolet":"1507 (Inicial), 1511, 1607","suportat":"1703, 1709, 1803, 1809","versioactual":"1809","roadmap":"–","emergent":"1903"},
+{"id":4,"producte":"MS Office estació de treball (inclou runtime Access)","categoria":"Eines ofimàtiques","obsolet":"2003, 2007, 2010","suportat":"2013, 2016","versioactual":"2016","roadmap":"–","emergent":"2019"},
+{"id":5,"producte":"MS Office tauleta","categoria":"Eines ofimàtiques","obsolet":"2003, 2007, 2010","suportat":"2013, 2016","versioactual":"2016","roadmap":"–","emergent":"2019"},
+{"id":6,"producte":"LibreOffice","categoria":"Eines ofimàtiques","obsolet":"<=6.0","suportat":"6.1.6","versioactual":"6.1.6","roadmap":"–","emergent":"6.2.3"},
+{"id":7,"producte":"Internet Explorer","categoria":"Navegadors Web","obsolet":"6, 7, 8, 9, 10","suportat":"11","versioactual":"11","roadmap":"–","emergent":"–"},
+{"id":8,"producte":"Microsoft Edge","categoria":"Navegadors Web","obsolet":"1507 (Inicial), 1511, 1607","suportat":"1703, 1709, 1803, 1809","versioactual":"1809","roadmap":"–","emergent":"1903"},
+{"id":9,"producte":"7-Zip","categoria":"Eines i programari","obsolet":"<=18.x","suportat":"19.x","versioactual":"19.x","roadmap":"–","emergent":"-"},
+{"id":10,"producte":"Adobe Reader","categoria":"Eines i programari","obsolet":"9, X, XI","suportat":"DC","versioactual":"DC","roadmap":"–","emergent":"–"},
+{"id":11,"producte":"SafeSign","categoria":"Eines i programari","obsolet":"<=3.076","suportat":"3.0.124","versioactual":"3.0.124","roadmap":"–","emergent":"–"},
+{"id":12,"producte":"FormSign","categoria":"Eines i programari","obsolet":"<2.1.04S1R2","suportat":"2.1.04S1R2","versioactual":"2.1.04S1R2","roadmap":"–","emergent":"–"},
+{"id":13,"producte":"DNIe","categoria":"Eines i programari","obsolet":"<=14.0.1","suportat":"14.0.2","versioactual":"14.0.2","roadmap":"–","emergent":"–"},
+{"id":14,"producte":"Client SAP GUI","categoria":"Eines i programari","obsolet":"<=7.30","suportat":"7.40 SP6","versioactual":"7.40 SP6","roadmap":"7.50","emergent":"–"},
+{"id":15,"producte":"Symantec Endpoint Proteccion","categoria":"Eines i programari","obsolet":"<=12","suportat":"14.2","versioactual":"14.2","roadmap":"–","emergent":"–"},
+{"id":16,"producte":"Filezilla","categoria":"Eines i programari","obsolet":"–","suportat":"3.42","versioactual":"3.42","roadmap":"–","emergent":"–"},
+{"id":17,"producte":"WinSCP","categoria":"Eines i programari","obsolet":"–","suportat":"5.15","versioactual":"5.15","roadmap":"–","emergent":"–"},
+{"id":18,"producte":"Client Cisco AnyConnect","categoria":"Eines i programari","obsolet":"<=4.2","suportat":"4.5, 4.6","versioactual":"4.6","roadmap":"–","emergent":"–"}																																 
+]
+}
