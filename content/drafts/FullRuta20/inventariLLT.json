@@ -17,6 +17,7 @@
 {"id":14,"producte":"Client SAP GUI","categoria":"Eines i programari","obsolet":"<=7.30","suportat":"7.40 SP6","versioactual":"7.40 SP6","roadmap":"7.50","emergent":"–"},
 {"id":15,"producte":"Symantec Endpoint Proteccion","categoria":"Eines i programari","obsolet":"<=12","suportat":"14.2","versioactual":"14.2","roadmap":"–","emergent":"–"},
 {"id":16,"producte":"Filezilla","categoria":"Eines i programari","obsolet":"–","suportat":"3.42","versioactual":"3.42","roadmap":"–","emergent":"–"},
-{"id":17,"producte":"WinSCP","categoria":"Eines i programari","obsolet":"–","suportat":"5.15","versioactual":"5.15","roadmap":"–","emergent":"–"}
+{"id":17,"producte":"WinSCP","categoria":"Eines i programari","obsolet":"–","suportat":"5.15","versioactual":"5.15","roadmap":"–","emergent":"–"},
+{"id":18,"producte":"Client Cisco AnyConnect","categoria":"Eines i programari","obsolet":"<=4.2","suportat":"4.5, 4.6","versioactual":"4.6","roadmap":"–","emergent":"–"}  
 ]
 }
