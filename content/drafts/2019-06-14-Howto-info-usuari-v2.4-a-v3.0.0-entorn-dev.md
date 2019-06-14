@@ -55,7 +55,7 @@ Crear una carpeta compartida amb les opcions permantente i automontar, en el nos
 ![Carpetas compartidas](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-carpetas-compartidas.png)
 
 
-6 Reiniciar
+5. Reiniciar
 
 Una vegada reiniciat comprovem que tenim accés a la carpeta compartida
 ![Accés carpeta compartida](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-acces-carpeta-compartida.png)
