@@ -45,19 +45,19 @@ sudo usermod -aG vboxsf canigo
 ```
 id canigo
 ```
-(pantallazo)
+![id canigo after add](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-id-canigo-after-add.png)
 
 4. Crear carpeta compartida
 
 A la pantalla de VirtualBox Máquina > Configuración > Carpetas compartidas
 
 Crear una carpeta compartida amb les opcions permantente i automontar, en el nostre cas hem compartit tota la unitat c: de la máquina host
-(pantallazo)
+![Carpetas compartidas](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-carpetas-compartidas.png)
 
 5. Reiniciar
 
 Una vegada reiniciat comprovem que tenim accés a la carpeta compartida
-(pantallazo)
+![Accés carpeta compartida](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-acces-carpeta-compartida.png)
 
 Realitzar els mateixos passos a les dues màquines virtuals per a tenir la mateixa carpeta compartida a les dues màquines
 
@@ -67,12 +67,12 @@ Realitzar els mateixos passos a les dues màquines virtuals per a tenir la matei
 
 8. Copiarem les següents carpetes o fitxers de la máquina virtual antiga
 - Fitxers que vulguem mantenir del Desktop, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/Desktop
-(Pantallazo)
+![Desktop](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-desktop.png)
 
 - Fitxers que vulguem mantenir del Documents, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/Documents
 
 En el nostre cas hem copiat: carpeta workspace antiga del eclipse (workspace-sts-3.7.1.RELEASE),  carpeta workspace antiga del soap ui (soapui-projects), carpeta on descarregavem els projectes del git (git), altres fitxers i carpetes de treball
-(Pantallazo)
+![Documents](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-documents.png)
 
 - Fitxers de video i imatges si tenim, per exemple a /tmp/backup_dev_env/Videos i /tmp/backup_dev_env/Pictures
 
@@ -81,12 +81,12 @@ En el nostre cas hem copiat: carpeta workspace antiga del eclipse (workspace-sts
 - Fitxers de la home de l'usuari que vulguem mantenir (per exemple scripts i documents), en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/
 
 - Fitxers del maven .m2, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/.m2
-(Pantallazo)
+![m2](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-m2.png)
 
 - Fitxers del git .gitconfig i .gitcredentials
 
 - Fitxers de configuració del docker .docker, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/.docker
-(Pantallazo)
+![docker](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-docker.png)
 
 - Fitxers de configuració del ssh .ssh, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/.ssh
 
@@ -98,7 +98,7 @@ tar -cvf backup_dev_env.tar backup_dev_env/
 ```
 
 10. Una vegada obtingut el paquet, el copiem a la carpeta compartida /media/sf_C_DRIVE/tmp/backup_dev_env
-(Pantallazo)
+![backup_dev_env.tar](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-backup_dev_env.tar.png)
 
 11. A la màquina virtual nova, copiem el paquet de la carpeta compartida /media/sf_C_DRIVE/tmp/backup_dev_env a una carpeta on hi hagi espai, per exemple a /opt
 
@@ -136,7 +136,7 @@ Una vegada copiats els fitxers és necessari actualitzar el client de docker, pe
 ```
 docker version
 ```
-(pantallazo)
+![docker version](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-docker-version.png)
 
 Agafarem la versió del client: 18.09.5
 
