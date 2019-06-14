@@ -34,7 +34,7 @@ Els passos següits per traslladar la informació són:
 ```
 id canigo
 ```
-(pantallazo)
+![id canigo](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-id-canigo.png)
 
 2. Sino està al grup, afegir-lo
 ```
