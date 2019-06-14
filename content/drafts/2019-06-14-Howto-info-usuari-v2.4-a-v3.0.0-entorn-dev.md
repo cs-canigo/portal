@@ -11,7 +11,7 @@ key         = "JUNY2019"
 
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat d'utilitzar l'entorn de desenvolupament de Canigó i vulguin traspassar la informació d'un entorn de desenvolupament antic a la versió 3.0.0.
 
-En aquest how-to es mostrarà els passos utilitzants per tralladar la informació d'un entorn de desenvolupament amb versió 2.4 a 3.0.0
+En aquest how-to es mostraran els passos utilitzants per tralladar la informació d'un entorn de desenvolupament amb versió 2.4 a 3.0.0
 
 Per a més informació podeu consultar la secció [Entorn de desenvolupament](/canigo/entorn-desenvolupament/)
 
