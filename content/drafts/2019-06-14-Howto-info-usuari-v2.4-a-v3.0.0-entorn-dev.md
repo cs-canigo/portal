@@ -67,6 +67,7 @@ Realitzar els mateixos passos a les dues màquines virtuals per a tenir la matei
 7. Crearem una carpeta temporal a la màquina virtual antiga on copiar els fitxers, per exemple a /tmp/backup_dev_env
 
 8. Copiarem les següents carpetes o fitxers de la máquina virtual antiga
+
 - Fitxers que vulguem mantenir del Desktop, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/Desktop
 ![Desktop](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-desktop.png)
 
