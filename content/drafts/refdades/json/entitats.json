@@ -1,56 +1,5 @@
 {"data":[
 [
-"Territori",
-"Tipus Via",
-"13/05/2019",
-"dtarq02",
-"20/05/2018",
-"INE",
-"Administració Pública",
-"Territori",
-"CTTI",
-"CTTI",
-"Sota demanda",
-"Tabular",
-"Pública",
-"Codis_Adreça_Tipus_Via.xlsx",
-"Defineix el tipus de via associat a una adreça postal."
-],
-[
-"Territori",
-"Pis",
-"13/05/2019",
-"dtarq03",
-"20/05/2018",
-"TSF",
-"Administració Pública",
-"Territori",
-"CTTI",
-"CTTI",
-"Sota demanda",
-"Tabular",
-"Pública",
-"Codis_Adreça_Pis.xlsx",
-"Permet definir la situació d'un habitatge dins d'un edifici."
-],
-[
-"Persona",
-"Condició",
-"13/05/2019",
-"dtarq07",
-"20/05/2018",
-"TSF",
-"Administració Pública",
-"Persona",
-"CTTI",
-"CTTI",
-"Sota demanda",
-"Tabular",
-"Pública",
-"Codis_Condicio_Detall.xlsx",
-"Condicions/situacions especials en què es pot trobar una persona."
-],
-[
 "Persona",
 "Relació Parentiu",
 "13/05/2019",
@@ -133,7 +82,7 @@
 "Tabular",
 "Pública",
 "Codis_Persona_Gènere.xlsx",
-"Permet descriure el gènere d'una persona."
+"Permet indicar el gènere d'una persona."
 ],
 [
 "Persona",
@@ -150,7 +99,7 @@
 "Tabular",
 "Pública",
 "Codis_Persona_Tipus_Identificador.xlsx",
-"Tipus de documentació que es poden utilitzar per identificar a un persona."
+"Tipus de documentació que es pot utilitzar per identificar a un persona."
 ],
 [
 "Persona",
@@ -171,23 +120,6 @@
 ],
 [
 "Persona",
-"Relació Nòmina",
-"13/05/2019",
-"dtarq51",
-"20/05/2018",
-"TSF",
-"Administració Pública",
-"Persona",
-"CTTI",
-"CTTI",
-"Sota demanda",
-"Tabular",
-"Pública",
-"Codis_Persona_Relació_Nòmina.xlsx",
-"Tipus de relació existent entre una persona i una nòmina."
-],
-[
-"Persona",
 "Tipologia relacions de parentiu",
 "13/05/2019",
 "dtarq52",
@@ -202,23 +134,6 @@
 "Pública",
 "Codis_Persona_Relació_Parentiu_Tipus.xlsx",
 "Relació de parentiu que uneix les persones."
-],
-[
-"Persona",
-"Indicador de convivencia entre persones",
-"13/05/2019",
-"dtarq53",
-"20/05/2018",
-"no data",
-"Administració Pública",
-"Persona",
-"CTTI",
-"CTTI",
-"Sota demanda",
-"Tabular",
-"Pública",
-"Codis_Persona_Relació_Convivent_Tipus.xlsx",
-"Indicador de convivència o no entre persones."
 ],
 [
 "Persona",
@@ -354,7 +269,7 @@
 "Tabular",
 "Pública",
 "Codis_Territori_Unitat_Orgànica.xlsx",
-"Llista d'unitats organiques indicant la seva tipologia."
+"Llista d'unitats orgàniques indicant la seva tipologia."
 ],
 [
 "Territori",
@@ -375,7 +290,7 @@
 ],
 [
 "Territori",
-"Poblacions",
+"Unitats poblacionals Catalunya",
 "13/05/2019",
 "dtarq86",
 "20/05/2018",
@@ -387,8 +302,8 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Poblacions.xlsx",
-"Llista de poblacions indicant el municipi a on pertanyen."
+"Codis_Territori_Poblacions_Catalunya.xlsx",
+"Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen."
 ],
 [
 "Territori",
