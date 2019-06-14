@@ -21,7 +21,7 @@ L’entorn de desenvolupament és una màquina virtual Linux, basada en Lubuntu 
 
 ### Passos per tralladar la informació
 
-Per poder copiar els fitxers d'una máquina virtual a una altre utilitzarem una carpeta compartida a la máquina host, això vol dir que per poder mantenir els fitxers és necessari tenir l'espai suficient en disc per allotjar els fitxers a copiar en 3 ubicacions (màquina virtual antiga, màquina host i màquina vitual nova)
+Per poder copiar els fitxers d'una máquina virtual a una altre utilitzarem una carpeta compartida a la máquina host, això vol dir que per poder mantenir els fitxers és necessari tenir l'espai suficient en disc per allotjar els fitxers a copiar en 3 ubicacions: màquina virtual antiga, màquina host i màquina vitual nova
 
 Recordem que per iniciar la màquina virtual és necessari realitzar-ho amb:
 ```
@@ -53,6 +53,7 @@ A la pantalla de VirtualBox Máquina > Configuración > Carpetas compartidas
 
 Crear una carpeta compartida amb les opcions permantente i automontar, en el nostre cas hem compartit tota la unitat c: de la máquina host
 ![Carpetas compartidas](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-carpetas-compartidas.png)
+
 
 5. Reiniciar
 
