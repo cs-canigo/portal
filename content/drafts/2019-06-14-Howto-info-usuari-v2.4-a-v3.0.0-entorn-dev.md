@@ -1,7 +1,7 @@
 +++
 date        = "2019-04-15"
-title       = "Passar traslladar info usuari v2.4 a v3.0.0 entorn desenvolupament"
-description = "Howto traslladar informació usuari versió 2.4 a 3.0.0 entorn desenvolupament"
+title       = "Passar traslladar info usuari entorn desenvolupament v2.4 a v3.0.0"
+description = "Howto traslladar informació usuari entorn desenvolupament versió 2.4 a 3.0.0"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "JUNY2019"
