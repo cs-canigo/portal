@@ -2,9 +2,12 @@
 date        = "2019-06-14"
 title       = "Howto Procediments de manteniment llibreries transversals"
 description = "Definició del procediment per mantenir les llibreries transversals en mode col·laboratiu"
-section = "howtos"
-categories = ["llibreria", "transversal", "procediment"]
-key = "JUNY2019"
+<!--- section = "howtos"-->
+<!---categories = ["llibreria", "transversal", "procediment"]-->
+<!---key = "JUNY2019"-->
+section = ""
+categories = [""]
+key = ""
 +++
 
 # Howto Procediments de manteniment llibreries transversals
