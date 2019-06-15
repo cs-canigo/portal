@@ -1,7 +1,7 @@
 +++
 date        = "2019-06-15"
 title       = "SIC. Actualització de versions Gitlab i Jenkins"
-description = "Durant el mes de Juny s'ha dut a terme l'actualització de versions del Servei d'Integració Continua (Jenkins) i del Servei de Custodia de Codi (Gitlab)"
+description = "Durant el mes de Maig s'ha dut a terme l'actualització de versions del Servei d'Integració Continua (Jenkins) i del Servei de Custodia de Codi (Gitlab)"
 categories  = [""]
 sections    = [""]
 +++
