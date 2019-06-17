@@ -18,6 +18,7 @@ En paral·lel es realitzaran sessions amb altres proveïdors de cara a començar
 
 ### Arxiu de Configuració de l’Aplicació (ACA, format YAML)
 Informació aportada pel proveïdor d’aplicacions repositada dins el propi projecte al Git corporatiu (ruta “/sic/aca.yml”):
+
 * Versió de l’arxiu
 * Paràmetres (opcional)
 * Recursos: entorns on es desplega, denominació d’infraestructures i artefactes generats
@@ -26,7 +27,8 @@ Informació aportada pel proveïdor d’aplicacions repositada dins el propi pro
 * Adreces de notificació
 
 ### Arxiu de Configuració d’Infraestructures (ACI, format YAML)
-* Informació aportada pel proveïdor d’infraestructures repositada dins un grup i projecte específic per proveïdor al Git corporatiu:
+Informació aportada pel proveïdor d’infraestructures repositada dins un grup i projecte específic per proveïdor al Git corporatiu:
+
 * Versió de l’arxiu
 * Recursos: dades d’infraestructures (paraules de pas encriptades)
 * Només resulta necessari si es realitzen desplegaments en modalitat automàtica (INT).
@@ -41,6 +43,7 @@ Informació aportada pel proveïdor d’aplicacions repositada dins el propi pro
 <br/><br/>
 
 Per a més informació, podeu consultar:
+
 * [Servei d’Integració Continua](/sic-serveis/ci/)
 * [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/)
 * [Manuals](/sic/manuals/)
