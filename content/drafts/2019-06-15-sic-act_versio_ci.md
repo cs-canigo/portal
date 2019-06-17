@@ -26,3 +26,6 @@ Les principals novetats d'aquesta nova versió son les següents:
 * Correccions de seguretat importants.
 * Millores en les cerques i paginació de l'historial d’execucions.
 * Demana conformitat en cancel·lar/avortar una execució.
+
+<br/><br/>
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
