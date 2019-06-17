@@ -12,6 +12,7 @@ sections    = [""]
 
 Jenkins és l’eina implantada al SIC per a la integració contínua en el desenvolupament de software. Es tracta d’un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s’executen tests i es despleguen als entorns preproductius i productius.
 <br>
+<br>
 Jenkins proporciona un entorn de treball i desplegament automatitzat estalviant temps i diners durant la vida d'un projecte
 
 ### Beneficis de la integració continua
