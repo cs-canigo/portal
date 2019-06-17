@@ -11,8 +11,8 @@ sections    = [""]
 ### Introducció
 
 GitLab és l’eina implantada al SIC per la custodia de codi font. Es tracta d’un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d’errors
-<br/>
-<br/>
+<br>
+<br>
 Gitlab és utilitzat per més de 100.000 organitzacions d'arreu del món. Han realitzar proves en organitzacions amb 10.000 projectes amb el mateix temps i la mateixa qualitat de resposta que amb un sol projecte
 <br/>
 El Gitlab està integrat amb el Servei d'Integració Continua, en publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d’Integració Contínua (Jenkins).
