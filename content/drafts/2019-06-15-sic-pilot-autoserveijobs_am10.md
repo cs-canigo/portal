@@ -1,7 +1,7 @@
 +++
 date        = "2019-06-15"
 title       = "SIC. Pilot de l'autoservei de jobs pipeline al lot AM10"
-description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline"
+description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline" 
 categories  = [""]
 sections    = [""]
 +++
