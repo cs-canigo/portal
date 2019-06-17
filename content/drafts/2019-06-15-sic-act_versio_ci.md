@@ -50,9 +50,8 @@ Les principals novetats d'aquesta nova versió són les següents:
 * Demana conformitat en cancel·lar/avortar una execució.
 
 Per a més informació de les novetats de la versió podeu consultar [Jenkins LTS Changelog](https://jenkins.io/changelog-stable/)
-
 <br/>
 Amb aquestes actualitzacions, s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als proveïdors d’aplicacions un sistema de integració continua actualitzats i estables amb la finalitat d'estalviar temps i diners
-
-<br/><br/>
+<br/>
+<br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
