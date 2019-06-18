@@ -26,7 +26,6 @@ Un resum dels beneficis de la integració continua són:
 * **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
 
 <br>
-<br>
 Per a més informació sobre el servei podeu consultar [Integració contínua](/sic-serveis/ci/)
 <br>
 Podeu accedir al Jenkins mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ 
