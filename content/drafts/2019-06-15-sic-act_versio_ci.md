@@ -29,6 +29,7 @@ Un resum dels beneficis de la integració continua són:
 Per a més informació sobre el servei podeu consultar [Integració contínua](/sic-serveis/ci/)
 <br>
 Podeu accedir al Jenkins mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ 
+<br>
 
 ### Actualització
 
