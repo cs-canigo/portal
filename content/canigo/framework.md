@@ -14,9 +14,9 @@ weight 		= 1
 Canigó es defineix com un "Espai de treball tecnològic comú per al desenvolupament i execució d'aplicacions en l'àmbit dels sistemes corporatius i departamentals de la Generalitat de Catalunya", i es els seus objectius són: 
 
 - Oferir una arquitectura comuna de construcció d'aplicacions JEE.
-- Proporcionar un entorn de treball, documentacó, suport i manteniment dels seus components.
+- Proporcionar un entorn de treball, documentació, suport i manteniment dels seus components.
 - Simplificar la complexitat inherent a JEE, oferint un marc de referència de treball.
-- Oferir una solució aliniada amb els estàndars i solucions més utilitzades per la comunitat OpenSource.
+- Oferir una solució alineada amb els estàndars i solucions més utilitzades per la comunitat OpenSource.
 - Oferir una solució oberta que permeti afegir i intercanviar qualsevol peça amb un cost reduït.
 - Oferir una solució d'interconnectivitat amb els serveis corporatius.
 - Oferir patrons de desenvolupament àmpliament acceptats.
@@ -45,7 +45,7 @@ Tanmateix, a més de l'estructura lògica dels components segons el patró MVC, 
 
 ![Arquitectura Canigó](/related/canigo/arquitectura.png)
 
-Com es mostra en el gràfic anterior, Canigó esta estructurat modularment donant així la opció de només utlitzar el mòdul del framework que es requereixi. Tots aquests mòduls es troben definits mitjançant interfícies, aïllant-los així de la implementació concreta escollida.
+Com es mostra en el gràfic anterior, Canigó esta estructurat modularment donant així la opció de només utilitzar el mòdul del framework que es requereixi. Tots aquests mòduls es troben definits mitjançant interfícies, aïllant-los així de la implementació concreta escollida.
 
 Canigó es basa en la utilització de interfícies i en la integració existent entre diferents APIs (JPA,...) i paquets oberts (Spring, Hibernate, ...). També ofereix extensions als paquets oberts, afegint un ampli ventall de components reutilitzables.
 
@@ -55,7 +55,7 @@ El framework base es pot classificar en els següents blocs:
 
 Canigó3 és un framework de codi obert per a la plataforma Java. Està basat en Spring, la primera versió del qual va ser creada per Rod Johnson a l'octubre de 2002. Està pensat per donar suport a:
 
-- la configuració d'aplicacións 
+- la configuració d'aplicacions 
 - facilitar el muntatge d'un sistema per parts fàcilment intercanviables i visibles entre elles
 - la integració de serveis
 - serveis de seguretat
@@ -72,9 +72,9 @@ Es pot considerar que la base principal de l'arquitectura de Canigó és un conj
 
 ## Nucli del Framework
 
-Aquest mòdul és el <i>core</i> del framework on es troben les principals caracteristiquest:
+Aquest mòdul és el <i>core</i> del framework on es troben les principals caracteristiques:
 
-- **Configuració Multientorn**: basat en el PropertyPlaceHolder ofert per Spring. Amb la diferència que aquest mòdul permet disposar de propietats depenents de l'entorn sense necessitat de cap configuració extra a nivell de beans o propietats.
+- **Configuració Multientorn**: basat en el PropertyPlaceHolder ofert per Spring. Amb la diferència que aquest mòdul permet disposar de propietats dependents de l'entorn sense necessitat de cap configuració extra a nivell de beans o propietats.
 - **Internacionalització (i18n)**: té com a objectiu facilitar el desenvolupament a l'hora d'oferir una aplicació en múltiples llenguatges.
 - **Servei de Traces**: basat en Log4j. Permet definir el nivell de traces, sortides, nivell mínim de traces, format de sortida, informació de context, ...
 - **Servei d'Excepcions**: permet informar que s'ha produït un error al realitzar una petició. Canigó ofereix una sèrie d'excepcions per defecte (BaseException, CoreException, ...). També proporciona un mecanisme d'intercepció d'Excepcions per a evitar "try-catch".
@@ -98,8 +98,8 @@ La finalitat d'aquests mòduls és facilitar l'accés a diferents serveis que of
 - **Notificacions Telemàtiques**: és un connector funcional cap a la PICA que simplifica l'utilització de Notificacions Telemàtiques de la Generalitat.
 - **Antivirus**: permet l'escaneig d'arxius mitjançant la Plataforma d'Antivirus Corporatiu de la Generalitat.
 - **SAP**: proporciona una interfície simplificada per a accedir a backends SAP de la Generalitat.
-- **Webservices**: Canigó 3 no disposa d'un mòdul de Webservices. S'ha realitzat una guia on s'explica com realitzar l'exportació de serveis Java mitjançant Webservices, l'importació de webservices externs i generació de les classes Java d'invocació. Proposa l'utilització d'Spring WS, Jaxb i OXM
-- **Cues**: Canigó 3 no disposa d'un mòdul de Gestió de Cues. S'ha realitzat una guia on s'explica com produir i consumir missatges d'una cua. Proposa l'utilització d'Spring JMS (Java Message Service).
+- **Webservices**: Canigó 3 no disposa d'un mòdul de Webservices. S'ha realitzat una guia on s'explica com realitzar l'exportació de serveis Java mitjançant Webservices, la importació de webservices externs i generació de les classes Java d'invocació. Proposa l'utilització d'Spring WS, Jaxb i OXM
+- **Cues**: Canigó 3 no disposa d'un mòdul de Gestió de Cues. S'ha realitzat una guia on s'explica com produir i consumir missatges d'una cua. Proposa la utilització d'Spring JMS (Java Message Service).
 
 ## Mòdul de Persistència
 
