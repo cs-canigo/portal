@@ -17,4 +17,4 @@ Els serveis inclosos per aquesta plataforma són:
 	- Inserció de diferents tipus de Tags de Text, Imatges, Codis QR, Codis de Barres, Codis CSV i Marques d'Aigua.
 - Generació de Codis Segurs de Validació o CSV
 
-Qualsevol aplicació que ho sol.liciti pot treballar amb l'STD prèvia petició d'alta en la plataforma. Per fer-ho s'ha d'enviar la Plantilla d'Alta al Servei, degudament omplerta a [oficina-tecnica.canigo.ctti@gencat.cat](mailto://oficina-tecnica.canigo.ctti@gencat.cat), sol.licitant formalment l'alta.
+Qualsevol aplicació que ho sol.liciti pot treballar amb l'STD prèvia petició d'alta en la plataforma. Per fer-ho s'ha d'enviar la Plantilla d'Alta al Servei, degudament omplerta a [otformularis@viewnext.com](mailto://otformularis@viewnext.com), sol.licitant formalment l'alta.

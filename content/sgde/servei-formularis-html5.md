@@ -74,7 +74,7 @@ A continuació es descriu el cicle de vida pel que passa un formulari HTML5 a la
 
 ### Desenvolupament
 
-Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM ha de ser sol·licitat al CS Canigó pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF), o bé enviant un correu a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d'AEM ha de ser sol·licitat al CS Canigó pel responsable CTTI de l'aplicació, preferiblement obrint una petició al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/browse/STF), o bé enviant un correu a [otformularis@viewnext.com](mailto:otformularis@viewnext.com).
 
 L'execució de la instància d'AEM en mode autor permetrà al desenvolupador fer el disseny del formulari HTML5.
 

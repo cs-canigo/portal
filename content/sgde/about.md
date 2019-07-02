@@ -45,5 +45,5 @@ Les funcionalitats que ofereix s'agrupen pel tipus de plataforma on es troben im
 
 Per poder utilitzar algun dels serveis de l'SGDE és necessari donar-se d'alta en alguna de les plataformes que l'integren. Per poder fer-ho s'ha de consultar la secció "Documentació SGDE" d'aquesta secció i seguir els passos documentats per cada plataforma.
 
-Mes informació en [oficina-tecnica.canigo.ctti@gencat.cat](mailto://oficina-tecnica.canigo.ctti@gencat.cat)
+Mes informació en [otformularis@viewnext.com](mailto://otformularis@viewnext.com)
 
