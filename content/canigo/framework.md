@@ -1,5 +1,5 @@
 +++
-date        = "2016-05-12"
+date        = "2019-07-03"
 title       = "Framework Canigó"
 description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
 sections    = "Canigó"
@@ -45,7 +45,7 @@ Tanmateix, a més de l'estructura lògica dels components segons el patró MVC, 
 
 ![Arquitectura Canigó](/related/canigo/arquitectura.png)
 
-Com es mostra en el gràfic anterior, Canigó esta estructurat modularment donant així la opció de només utilitzar el mòdul del framework que es requereixi. Tots aquests mòduls es troben definits mitjançant interfícies, aïllant-los així de la implementació concreta escollida.
+Com es mostra en el gràfic anterior, Canigó esta estructurat modularment donant així l'opció de només utilitzar el mòdul del framework que es requereixi. Tots aquests mòduls es troben definits mitjançant interfícies, aïllant-los així de la implementació concreta escollida.
 
 Canigó es basa en la utilització de interfícies i en la integració existent entre diferents APIs (JPA,...) i paquets oberts (Spring, Hibernate, ...). També ofereix extensions als paquets oberts, afegint un ampli ventall de components reutilitzables.
 
@@ -65,7 +65,7 @@ Canigó3 és un framework de codi obert per a la plataforma Java. Està basat en
 
 Es pot considerar que la base principal de l'arquitectura de Canigó és un conjunt totalment integrat, i a la vegada modular, de les millors pràctiques tecnològiques existent actualment en aquest entorn, formada pels següents components:
 
-- **Spring 4 Framework** com a contenidor centralitzat d'objectes i serveis, totalment configurable mitjançant fitxers XML. La injecció de dependències permet la configuració d'objectes fora del codi de l'aplicació (i de manera no intrusiva). Redueix el codi d'aplicació dedicat a configurar i localitzar recursos. Facilita millors pràctiques com programar contra interfícies enlloc de contra classes, permetent el desacoblament de serveis i el canvi ràpid d'una implementació concreta per una altra. Permet també la gestió de transaccions sense la utilització de APIs específiques mitjançant l'ús de Aspect Oriented Programming (AOP)
+- **Spring Framework** com a contenidor centralitzat d'objectes i serveis, totalment configurable mitjançant fitxers XML. La injecció de dependències permet la configuració d'objectes fora del codi de l'aplicació (i de manera no intrusiva). Redueix el codi d'aplicació dedicat a configurar i localitzar recursos. Facilita millors pràctiques com programar contra interfícies enlloc de contra classes, permetent el desacoblament de serveis i el canvi ràpid d'una implementació concreta per una altra. Permet també la gestió de transaccions sense la utilització de APIs específiques mitjançant l'ús de Aspect Oriented Programming (AOP)
 - **Spring Data JPA** proporciona un model de persistència basat en POJO's (Plain Old Java Objects) per mapejar bases de dades relacionals en Java.
 - **Spring Data MongoDB** proporciona un model de persistència també basat en POJO's per la integració amb la base de dades orientada a documents MongoDB. La capa d'accés a dades es composa de repositoris
 - **AOP (Aspect Oriented Programming)** per intercepció d'events a l'aplicació sense necessitat de modificar el codi
@@ -83,7 +83,7 @@ Aquest mòdul és el <i>core</i> del framework on es troben les principals carac
 
 Té com a propòsit gestionar l'autenticació i autorització dels usuaris que accedeixen a les aplicacions.
 
-- **Mòdul de Seguretat**: basat en Spring Security 3.0. Permet gestionar l'autenticació i l'autorització dels usuaris de les aplicacions.
+- **Mòdul de Seguretat**: basat en Spring Security. Permet gestionar l'autenticació i l'autorització dels usuaris de les aplicacions.
 - **Backends Seguretat**: El servei de seguretat s'integra amb GICAR, SACE, LDAP, Base de dades i Inmemory.
 
 ## Mòdul d'Integració
