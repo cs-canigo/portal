@@ -155,11 +155,13 @@ Configuració de proxy HTTP invers als frontals web Apache de l'aplicació per l
 		ProxyPass /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
 		ProxyPass /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
 		ProxyPass /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+		ProxyPass /bin/efo/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/bin/efo/
 		# CSRF Filter
 		ProxyPass /libs/granite/csrf/token.json https://preproduccio.publicador.eformularis.intranet.gencat.cat/libs/granite/csrf/token.json
 
 		ProxyPassReverse /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
 		ProxyPassReverse /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+		ProxyPassReverse /bin/efo/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/bin/efo/
 		# written for thank you page and other URL present in AF during redirect
 		ProxyPassReverse /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
 	</VirtualHost>
@@ -174,12 +176,14 @@ Codi javascript per incrustar el formulari HTML5 a la plana web de l'aplicació:
 		var path = "https://<domini-aplicacio>/content/forms/af/<aplicacio>/<formulari>.html";
 		var pathData = "<url-precarrega-dades>"
 		path += "/jcr:content/guideContainer.html";
+		$.ajaxSetup({cache:true});
 		$.ajax({
 			url  : path ,
 			type : "GET",
 			data : {
 				// Set the wcmmode to be disabled
-				wcmmode : "disabled",
+				// Només per node autor. Pels publicadors no s'ha de posar
+				// wcmmode : "disabled",
 				"dataRef": pathData
 			},
 			async: false,
