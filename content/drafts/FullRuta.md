@@ -78,8 +78,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
                 <th> Revisió de full de ruta vigent fins</th>
              </tr>
 	     <tr>
-                <td>febrer de 2019 </td>
-                <td>juny de 2019</td> 
+                <td>juliol de 2019 </td>
+                <td>octubre de 2019</td> 
              </tr>
         </thead>
 </table>
