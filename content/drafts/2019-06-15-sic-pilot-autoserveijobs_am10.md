@@ -4,6 +4,7 @@ title       = "SIC. Pilot de l'autoservei de jobs pipeline al lot AM10"
 description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline" 
 categories  = [""]
 sections    = [""]
+key = "JULIOL2019"
 +++
 
 Durant el mes de Maig s'ha dut a terme un **projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline** amb èxit.
