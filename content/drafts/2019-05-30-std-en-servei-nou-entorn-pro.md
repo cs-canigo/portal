@@ -24,7 +24,7 @@ Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**]
 
 Totes les funcionalitats del STD avui dia són exposades mitjançant serveis **SOAP**, i amb l'actualització tecnològica, s'exposa una nova **API REST**.
 
-Teniu disponible el [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.1.pdf) amb el detall de les funcionalitats i els serveis exposats a STD
+Teniu disponible el [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.2.pdf) amb el detall de les funcionalitats i els serveis exposats a STD
 
 Podeu trobar més detall de la rearquitecura a la noticia publicada al portal [STD. Actualització tecnològica del servei](/noticies/2019-02-20-actualitzacio-tecnologica-std/)
 
