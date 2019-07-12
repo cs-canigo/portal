@@ -18,4 +18,4 @@ Els serveis inclosos per aquesta plataforma són:
 - Generació de **Codis Segurs de Validació** o CSV
 - **OCR** (Optical Character Recognition)
 
-Qualsevol aplicació que ho sol.liciti pot treballar amb l'STD prèvia petició d'alta en la plataforma. Per fer-ho s'ha d'enviar la Plantilla d'Alta al Servei, degudament omplerta a [otformularis@viewnext.com] (mailto://otformularis@viewnext.com), sol.licitant formalment l'alta.
+Qualsevol aplicació que ho sol.liciti pot treballar amb l'STD prèvia petició d'alta en la plataforma. Per fer-ho s'ha d'enviar la Plantilla d'Alta al Servei, degudament omplerta a [sgde.ctti@gencat.cat] (mailto:sgde.ctti@gencat.cat), sol.licitant formalment l'alta.
