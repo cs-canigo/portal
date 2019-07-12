@@ -9,7 +9,7 @@ weight 		= 2
 
 ### Presentació del servei
 
-- [Presentació](/related/sgde/Presentació-SGDE-v1.1.pdf)
+- [Presentació](/related/sgde/Presentació-SGDE-v1.2.pdf)
 
 Per poder utilitzar els serveis del SGDE és necessari donar-se d'alta en alguna de les plataformes següents:
 
