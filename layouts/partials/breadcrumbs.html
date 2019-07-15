@@ -41,6 +41,10 @@
 	Arquitectura CTTI
 {{ end }}
 
+{{ if (eq $section "dadesref")}}
+	Entitats Referencia
+{{ end }}
+
 {{ if in .URL "blog_tags" }}
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}
