@@ -1,5 +1,5 @@
 +++
-date        = "2017-09-23"
+date        = "2019-07-15"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -84,7 +84,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
         localStorage.setItem('data', JSON.stringify(data));
       
 
-        window.location = "../detallrefdades";
+        window.location = "./detallrefdades";
     } );
 
 });
