@@ -97,7 +97,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
             <tr>
                 <th>Grup</th>
                 <th>Entitat</th>
-                <th>Data Actualització</th>
+                <th>Darrera Actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
