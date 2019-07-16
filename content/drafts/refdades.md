@@ -20,7 +20,7 @@ Està previst evolucionar la gestió tècnica de dades per definir els procedime
 Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un correu electrònic a la direcció següent: <code>oficina-tecnica.canigo.ctti@gencat.cat</code>
 
 <br/>
-Catàleg actual:
+<h5>Catàleg actual</h5>
 <br/>
 <br/>
 
