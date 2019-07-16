@@ -2,8 +2,8 @@
 [
 "Persona",
 "Relació Parentiu",
-"15/07/2019",
 "Vincle parentiu entre dues persones.",
+"15/07/2019",
 "dtarq44",
 "15/07/2019",
 "TSF",
@@ -19,8 +19,8 @@
 [
 "Persona",
 "Representació",
-"15/07/2019",
 "Tipus de relació entre la persona representant i la persona representada.",
+"15/07/2019",
 "dtarq45",
 "15/07/2019",
 "TSF",
@@ -36,8 +36,8 @@
 [
 "Persona",
 "Relació Expedient",
-"15/07/2019",
 "Permet descriure la relació que te una persona amb un expedient.",
+"15/07/2019",
 "dtarq46",
 "15/07/2019",
 "TSF",
@@ -53,8 +53,8 @@
 [
 "Persona",
 "Estat Civil",
-"15/07/2019",
 "Descriu l'estat civil d'una persona.",
+"15/07/2019",
 "dtarq47",
 "15/07/2019",
 "TSF",
@@ -70,8 +70,8 @@
 [
 "Persona",
 "Gènere",
-"15/07/2019",
 "Permet indicar el gènere d'una persona.",
+"15/07/2019",
 "dtarq48",
 "15/07/2019",
 "TSF",
@@ -87,8 +87,8 @@
 [
 "Persona",
 "Tipus Identificador",
-"15/07/2019",
 "Tipus de documentació que es pot utilitzar per identificar a un persona.",
+"15/07/2019",
 "dtarq49",
 "15/07/2019",
 "TSF",
@@ -104,8 +104,8 @@
 [
 "Persona",
 "Canals comunicació avisos",
-"15/07/2019",
 "Mecanismes de comunicació per contactar amb una persona.",
+"15/07/2019",
 "dtarq50",
 "15/07/2019",
 "TSF",
@@ -121,8 +121,8 @@
 [
 "Persona",
 "Tipologia relacions de parentiu",
-"15/07/2019",
 "Relació de parentiu que uneix les persones.",
+"15/07/2019",
 "dtarq52",
 "15/07/2019",
 "TSF",
@@ -137,9 +137,9 @@
 ],
 [
 "Persona",
-"Grau de parentiu entre persones",
+"Grau parentiu",
+"Grau de parentiu existent entre persones.",
 "15/07/2019",
-"Grau de parentiu entre persones.",
 "dtarq54",
 "15/07/2019",
 "TSF",
@@ -155,8 +155,8 @@
 [
 "Persona",
 "Tipus Notificació",
-"15/07/2019",
 "Tipus de comunicació.",
+"15/07/2019",
 "dtarq55",
 "15/07/2019",
 "TSF",
@@ -172,8 +172,8 @@
 [
 "Persona",
 "Representació Caràcter",
-"15/07/2019",
 "Permet indicar el caràcter de representació d'una persona envers una altra.",
+"15/07/2019",
 "dtarq56",
 "15/07/2019",
 "TSF",
@@ -189,8 +189,8 @@
 [
 "Territori",
 "Comunitats Autònomes",
-"15/07/2019",
 "Llista de comunitats/ciutats autònomes segons INE.",
+"15/07/2019",
 "dtarq80",
 "15/07/2019",
 "TSF",
@@ -206,8 +206,8 @@
 [
 "Territori",
 "Paisos",
-"15/07/2019",
 "Llista de països indicant el continent i subcontinent a on pertanyen.",
+"15/07/2019",
 "dtarq81",
 "15/07/2019",
 "INE",
@@ -223,8 +223,8 @@
 [
 "Territori",
 "Comarques Catalunya",
-"15/07/2019",
 "Llista de les comarques de Catalunya i Aran.",
+"15/07/2019",
 "dtarq82",
 "15/07/2019",
 "TSF",
@@ -240,8 +240,8 @@
 [
 "Territori",
 "Unitat Orgànica Tipus",
-"15/07/2019",
 "Llista de tipologies d'unitats orgàniques de Catalunya.",
+"15/07/2019",
 "dtarq83",
 "15/07/2019",
 "TSF",
@@ -257,8 +257,8 @@
 [
 "Territori",
 "Unitat Orgànica",
-"15/07/2019",
 "Llista d'unitats orgàniques indicant la seva tipologia.",
+"15/07/2019",
 "dtarq84",
 "15/07/2019",
 "TSF",
@@ -274,8 +274,8 @@
 [
 "Territori",
 "Províncies",
-"15/07/2019",
 "Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen.",
+"15/07/2019",
 "dtarq85",
 "15/07/2019",
 "TSF",
@@ -291,8 +291,8 @@
 [
 "Territori",
 "Unitats poblacionals Catalunya",
-"15/07/2019",
 "Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
+"15/07/2019",
 "dtarq86",
 "15/07/2019",
 "TSF",
@@ -308,8 +308,8 @@
 [
 "Territori",
 "Municipis Espanya",
-"15/07/2019",
 "Llista de municipis d'Espanya amb la relació codi INE vs IDESCAT i indicant la provincia a on pertanyen.",
+"15/07/2019",
 "dtarq87",
 "15/07/2019",
 "TSF",
@@ -325,8 +325,8 @@
 [
 "Territori",
 "Continents",
-"15/07/2019",
 "Llista de continents.",
+"15/07/2019",
 "dtarq900",
 "15/07/2019",
 "TSF",
@@ -342,8 +342,8 @@
 [
 "Territori",
 "Subcontinents",
+"Llista de subcontinents i el contient a on pertanyen.",
 "15/07/2019",
-"Llista de subcontinents.",
 "dtarq901",
 "15/07/2019",
 "TSF",
@@ -359,8 +359,8 @@
 [
 "Territori",
 "Regions del món",
+"Llista de regions del món relacionades amb el continent.",
 "15/07/2019",
-"Llista de regions del món relacionades amb el contienent a on pertanyen.",
 "dtarq902",
 "15/07/2019",
 "TSF",
