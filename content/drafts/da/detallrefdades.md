@@ -109,17 +109,15 @@ weight= 5
     celda = document.createElement("td");
     var link = document.createElement('a');
     var image = document.createElement('img');
-    textoCelda =  document.createTextNode("Descarregar Excel");
 
     link.setAttribute('href', '../entitats/' + dades[14]);
+    link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
 
     //link.innerHTML = dades[15];
-    link.appendChild(image);
-    link.appendChild(textoCelda);
+    //link.appendChild(image);
     celda.appendChild(link);
-    //celda.appendChild(link);
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
