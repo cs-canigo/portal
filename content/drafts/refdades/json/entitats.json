@@ -3,7 +3,7 @@
 "Persona",
 "Relació Parentiu",
 "15/07/2019",
-"Vincle parentiu entre dues persones."
+"Vincle parentiu entre dues persones.",
 "dtarq44",
 "15/07/2019",
 "TSF",
@@ -14,13 +14,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Relació_Parentiu.xlsx",
+"Codis_Persona_Relació_Parentiu.xlsx"
 ],
 [
 "Persona",
 "Representació",
 "15/07/2019",
-"Tipus de relació entre la persona representant i la persona representada."
+"Tipus de relació entre la persona representant i la persona representada.",
 "dtarq45",
 "15/07/2019",
 "TSF",
@@ -31,13 +31,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Representació.xlsx",
+"Codis_Persona_Representació.xlsx"
 ],
 [
 "Persona",
 "Relació Expedient",
 "15/07/2019",
-"Permet descriure la relació que te una persona amb un expedient."
+"Permet descriure la relació que te una persona amb un expedient.",
 "dtarq46",
 "15/07/2019",
 "TSF",
@@ -48,13 +48,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Relació_Expedient.xlsx",
+"Codis_Persona_Relació_Expedient.xlsx"
 ],
 [
 "Persona",
 "Estat Civil",
 "15/07/2019",
-"Descriu l'estat civil d'una persona."
+"Descriu l'estat civil d'una persona.",
 "dtarq47",
 "15/07/2019",
 "TSF",
@@ -65,13 +65,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Estat_Civil.xlsx",
+"Codis_Persona_Estat_Civil.xlsx"
 ],
 [
 "Persona",
 "Gènere",
 "15/07/2019",
-"Permet indicar el gènere d'una persona."
+"Permet indicar el gènere d'una persona.",
 "dtarq48",
 "15/07/2019",
 "TSF",
@@ -82,13 +82,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Gènere.xlsx",
+"Codis_Persona_Gènere.xlsx"
 ],
 [
 "Persona",
 "Tipus Identificador",
 "15/07/2019",
-"Tipus de documentació que es pot utilitzar per identificar a un persona."
+"Tipus de documentació que es pot utilitzar per identificar a un persona.",
 "dtarq49",
 "15/07/2019",
 "TSF",
@@ -99,13 +99,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Tipus_Identificador.xlsx",
+"Codis_Persona_Tipus_Identificador.xlsx"
 ],
 [
 "Persona",
 "Canals comunicació avisos",
 "15/07/2019",
-"Mecanismes de comunicació per contactar amb una persona."
+"Mecanismes de comunicació per contactar amb una persona.",
 "dtarq50",
 "15/07/2019",
 "TSF",
@@ -116,13 +116,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Comunicació_Canal_Avís.xlsx",
+"Codis_Persona_Comunicació_Canal_Avís.xlsx"
 ],
 [
 "Persona",
 "Tipologia relacions de parentiu",
 "15/07/2019",
-"Relació de parentiu que uneix les persones."
+"Relació de parentiu que uneix les persones.",
 "dtarq52",
 "15/07/2019",
 "TSF",
@@ -133,13 +133,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Relació_Parentiu_Tipus.xlsx",
+"Codis_Persona_Relació_Parentiu_Tipus.xlsx"
 ],
 [
 "Persona",
 "Grau de parentiu entre persones",
 "15/07/2019",
-"Grau de parentiu entre persones."
+"Grau de parentiu entre persones.",
 "dtarq54",
 "15/07/2019",
 "TSF",
@@ -150,13 +150,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Relació_Parentiu_Grau.xlsx",
+"Codis_Persona_Relació_Parentiu_Grau.xlsx"
 ],
 [
 "Persona",
 "Tipus Notificació",
 "15/07/2019",
-"Tipus de comunicació."
+"Tipus de comunicació.",
 "dtarq55",
 "15/07/2019",
 "TSF",
@@ -167,13 +167,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Tipus_Notificació.xlsx",
+"Codis_Persona_Tipus_Notificació.xlsx"
 ],
 [
 "Persona",
 "Representació Caràcter",
 "15/07/2019",
-"Permet indicar el caràcter de representació d'una persona envers una altra."
+"Permet indicar el caràcter de representació d'una persona envers una altra.",
 "dtarq56",
 "15/07/2019",
 "TSF",
@@ -184,13 +184,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Persona_Representació_Caràcter.xlsx",
+"Codis_Persona_Representació_Caràcter.xlsx"
 ],
 [
 "Territori",
 "Comunitats Autònomes",
 "15/07/2019",
-"Llista de comunitats/ciutats autònomes segons INE."
+"Llista de comunitats/ciutats autònomes segons INE.",
 "dtarq80",
 "15/07/2019",
 "TSF",
@@ -201,13 +201,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Comunitats_Autònomes.xlsx",
+"Codis_Territori_Comunitats_Autònomes.xlsx"
 ],
 [
 "Territori",
 "Paisos",
 "15/07/2019",
-"Llista de països indicant el continent i subcontinent a on pertanyen."
+"Llista de països indicant el continent i subcontinent a on pertanyen.",
 "dtarq81",
 "15/07/2019",
 "INE",
@@ -218,13 +218,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Paisos.xlsx",
+"Codis_Territori_Paisos.xlsx"
 ],
 [
 "Territori",
 "Comarques Catalunya",
 "15/07/2019",
-"Llista de les comarques de Catalunya i Aran."
+"Llista de les comarques de Catalunya i Aran.",
 "dtarq82",
 "15/07/2019",
 "TSF",
@@ -235,13 +235,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Comarques_Catalunya.xlsx",
+"Codis_Territori_Comarques_Catalunya.xlsx"
 ],
 [
 "Territori",
 "Unitat Orgànica Tipus",
 "15/07/2019",
-"Llista de tipologies d'unitats orgàniques de Catalunya."
+"Llista de tipologies d'unitats orgàniques de Catalunya.",
 "dtarq83",
 "15/07/2019",
 "TSF",
@@ -252,13 +252,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Unitat_Orgànica_Tipus.xlsx",
+"Codis_Territori_Unitat_Orgànica_Tipus.xlsx"
 ],
 [
 "Territori",
 "Unitat Orgànica",
 "15/07/2019",
-"Llista d'unitats orgàniques indicant la seva tipologia."
+"Llista d'unitats orgàniques indicant la seva tipologia.",
 "dtarq84",
 "15/07/2019",
 "TSF",
@@ -269,13 +269,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Unitat_Orgànica.xlsx",
+"Codis_Territori_Unitat_Orgànica.xlsx"
 ],
 [
 "Territori",
 "Províncies",
 "15/07/2019",
-"Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen."
+"Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen.",
 "dtarq85",
 "15/07/2019",
 "TSF",
@@ -286,13 +286,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Províncies.xlsx",
+"Codis_Territori_Províncies.xlsx"
 ],
 [
 "Territori",
 "Unitats poblacionals Catalunya",
 "15/07/2019",
-"Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen."
+"Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
 "dtarq86",
 "15/07/2019",
 "TSF",
@@ -303,13 +303,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Poblacions_Catalunya.xlsx",
+"Codis_Territori_Poblacions_Catalunya.xlsx"
 ],
 [
 "Territori",
 "Municipis Espanya",
 "15/07/2019",
-"Llista de municipis d'Espanya amb la relació codi INE vs IDESCAT i indicant la provincia a on pertanyen."
+"Llista de municipis d'Espanya amb la relació codi INE vs IDESCAT i indicant la provincia a on pertanyen.",
 "dtarq87",
 "15/07/2019",
 "TSF",
@@ -320,13 +320,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Municipis_Espanya.xlsx",
+"Codis_Territori_Municipis_Espanya.xlsx"
 ],
 [
 "Territori",
 "Continents",
 "15/07/2019",
-"Llista de continents."
+"Llista de continents.",
 "dtarq900",
 "15/07/2019",
 "TSF",
@@ -337,13 +337,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Continents.xlsx",
+"Codis_Territori_Continents.xlsx"
 ],
 [
 "Territori",
 "Subcontinents",
 "15/07/2019",
-"Llista de subcontinents."
+"Llista de subcontinents.",
 "dtarq901",
 "15/07/2019",
 "TSF",
@@ -354,13 +354,13 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Subcontinents.xlsx",
+"Codis_Territori_Subcontinents.xlsx"
 ],
 [
 "Territori",
 "Regions del món",
 "15/07/2019",
-"Llista de regions del món relacionades amb el contienent a on pertanyen."
+"Llista de regions del món relacionades amb el contienent a on pertanyen.",
 "dtarq902",
 "15/07/2019",
 "TSF",
@@ -371,6 +371,6 @@
 "Sota demanda",
 "Tabular",
 "Pública",
-"Codis_Territori_Regions_mon.xlsx",
+"Codis_Territori_Regions_mon.xlsx"
 ]
 ]}
