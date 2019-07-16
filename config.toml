@@ -85,7 +85,7 @@ Paginate = 10
     URL = "/cs"
 
 [[menu.main]]
-	Name = "Dades de Referència"
+	Name = "Gestió Tècnica de Dades"
     Weight = 18
     Identifier = "dadesrefsuport"
     URL = "/dadesref"
