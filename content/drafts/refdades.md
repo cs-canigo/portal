@@ -15,7 +15,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 
 Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
 
-Està previst evolucionar la gestió tècnica de dades per definir els procediments d'ús d'entitats de referència per part dels aplicatius. Aquests procediments registraran la petició i permetran poder notificar als aplicatius de qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació.
+Està previst evolucionar la gestió tècnica de dades per definir els procediments d'ús d'entitats de referència per part dels aplicatius. Aquests procediments registraran la petició i permetran poder notificar als aplicatius qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació.
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un correu electrònic a la direcció següent: <code>oficina-tecnica.canigo.ctti@gencat.cat</code>
 
