@@ -37,8 +37,8 @@ weight= 5
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
 
-    var textDeficicio = document.createTextNode(dades[14]);
-    definicio.appendChild(textDeficicio);
+    var textDefinicio = document.createTextNode(dades[2]);
+    definicio.appendChild(textDefinicio);
 
     body.appendChild(definicio);
 
@@ -87,7 +87,7 @@ weight= 5
         }
         else{
           celda = document.createElement("td");
-          textoCelda = document.createTextNode(dades[i+3]);
+          textoCelda = document.createTextNode(dades[i+4]);
           celda.appendChild(textoCelda);
           hilera.appendChild(celda);
         }
@@ -110,12 +110,13 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', '../entitats/' + dades[13]);
+    link.setAttribute('href', '../entitats/' + dades[14]);
+    link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
 
     //link.innerHTML = dades[15];
-    link.appendChild(image);
+    //link.appendChild(image);
     celda.appendChild(link);
     //celda.appendChild(link);
     hilera.appendChild(celda);
@@ -140,7 +141,7 @@ weight= 5
 
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13]);
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14]);
     frame.style.width= "100%"
     frame.style.height= "400px";
     celda.appendChild(frame);
@@ -157,7 +158,7 @@ weight= 5
     
     //function happycode(){
      //var dades = JSON.parse(localStorage.getItem('data'));
-     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13];
+     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14];
      //$('#myframe').attr("src", url);
     //}
 
