@@ -17,7 +17,7 @@ Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el 
 
 Està previst evolucionar la gestió tècnica de dades per definir els procediments d'ús d'entitats de referència per part dels aplicatius. Aquests procediments registraran la petició i permetran poder notificar als aplicatius de qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació.
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un correu electrònic a la direcció següent:   xxxxx@yyyyyy
+Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un correu electrònic a la direcció següent: <code>oficina-tecnica.canigo.ctti@gencat.cat</code>
 
 
 
