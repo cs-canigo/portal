@@ -11,6 +11,15 @@ Les dades de referència són un tipus especial de dades orientades amb propòsi
 El conjunt de dades de referència canvien lentament i les revisions s’han de fer sota l’autoritat d’un custodi de dades de referència.
 Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
+És possible **descarregar** un fitxer Excel amb la informació actual de la taula, la més recent.
+
+Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
+
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d'Arquitectura Corporativa.
+
+<br/>
+<h5>Catàleg actual</h5>
+<br/>
 
 <style>
 .myButton {
@@ -91,13 +100,14 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 </script>
 
   
-<div style="width:50%">
+<div style="width:80%">
 <table id="example" class="hover" style="width:100%">
         <thead>
             <tr>
                 <th>Grup</th>
                 <th>Entitat</th>
-                <th>Darrera Actualització</th>
+                <th style="width:40%">Descripció</th>
+                <th>Data Actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
