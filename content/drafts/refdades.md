@@ -91,14 +91,14 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 </script>
 
   
-<div style="width:50%">
+<div style="width:80%">
 <table id="example" class="hover" style="width:100%">
         <thead>
             <tr>
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th>Data Actualització</th>
-                <th>Descripció</th>
+                <th style="width:40%">Descripció</th>
                 <th>Detall</th>
             </tr>
         </thead>
