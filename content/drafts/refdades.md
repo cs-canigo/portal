@@ -13,9 +13,9 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 
 És possible *descarregar* un fitxer Excel amb la informació actual de la taula, la més recent.
 
-La taules son actualitzades periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
+Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
 
-Està previst evolucionar la gestió tècnica de dades per definir els procedimients a seguir per tal que els aplicatius interesants en utilitzar les dades de referència del catàleg proporcionat facin la sol·licitud i quedi registrada la petició per tal que siguin informats de qualsevol canvis que es realitzi en les entitats que utilitzen. Per altra banda, també es preveu la necessitat de poder especificar un mapeig de valors en funció de les necessitats de cadas aplicació.
+Està previst evolucionar la gestió tècnica de dades per definir els procediments d'ús d'entitats de referència per part dels aplicatius. Aquests procediments registraran la petició i permetran poder notificar als aplicatius de qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació.
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un correu electrònic a la direcció següent:   xxxxx@yyyyyy
 
