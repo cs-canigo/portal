@@ -98,6 +98,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th>Data Actualització</th>
+                <th>Idint</th>
                 <th>Detall</th>
             </tr>
         </thead>
