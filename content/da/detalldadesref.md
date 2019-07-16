@@ -110,7 +110,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', '../dadesref/entitats/' + dades[14]);
+    link.setAttribute('href', '../../dadesref/entitats/' + dades[14]);
     link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
