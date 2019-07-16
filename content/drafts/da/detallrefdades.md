@@ -1,5 +1,5 @@
 +++
-date        = "2019-07-15"
+date        = "2017-09-23"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -110,7 +110,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', '../entitats/' + dades[14]);
+    link.setAttribute('href', '../../entitats/' + dades[14]);
     link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
@@ -118,7 +118,6 @@ weight= 5
     //link.innerHTML = dades[15];
     //link.appendChild(image);
     celda.appendChild(link);
-    //celda.appendChild(link);
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
@@ -141,7 +140,7 @@ weight= 5
 
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14]);
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[14]);
     frame.style.width= "100%"
     frame.style.height= "400px";
     celda.appendChild(frame);
@@ -158,11 +157,12 @@ weight= 5
     
     //function happycode(){
      //var dades = JSON.parse(localStorage.getItem('data'));
-     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14];
+     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[14];
      //$('#myframe').attr("src", url);
     //}
 
 
 
   </script>
- 
+  
+  
