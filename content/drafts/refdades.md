@@ -109,8 +109,8 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte a través d'un corr
             <tr>
                 <th>Grup</th>
                 <th>Entitat</th>
-                <th>Data Actualització</th>
                 <th style="width:40%">Descripció</th>
+                <th>Data Actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
