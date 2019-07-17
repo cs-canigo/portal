@@ -19,10 +19,23 @@ weight = 2
 ![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
 
 **Jenkins** és l'eina implantada al SIC per a la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
+<br>
+Jenkins proporciona un entorn de treball i desplegament automatitzat estalviant temps i diners durant la vida d'un projecte.
 
 <br/>
 **Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes, ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i paquets bower. <br/>
 Actualment aquest servei és administrat per l'equip del SIC i només permet consultar-lo en mode lectura.
+
+## Beneficis de la integració continua
+
+Un resum dels beneficis de la integració continua seria el següent:
+
+* **Millora la qualitat del codi**: la integració continua contribueix en minimitzar els problemes en els sistemes per errors de codi. Proveeix un codi més robust millorant la qualitat del programari
+* **Detecció d'errors més ràpida i fàcil**: al poder realitzar construccions contínuament, de forma periòdica, és més fàcil detectar errors i poder donar-hi solució el més aviat possible.
+* **Redueix tasques repetitives i manuals**: amb processos automàtics es garanteix que els processos es realitzen sempre aplicant els mateixos estàndards.
+* **Visibilitat de l'evolució del projecte**: es pot tenir una visió de l'evolució de la qualitat del codi i un registre de l'evolució i publicació de les versions del codi
+* **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
+
 
 ## Modalitats de desplegament
 

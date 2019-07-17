@@ -12,8 +12,14 @@ Durant el mes de Maig s'ha dut a terme un **projecte pilot per a la construcció
 * **1114 – OBR i 3256 – GESTILS**: projectes Oracle Apex amb entorns de desplegament INT/PRE/PRO.
 * **1040 – SII, 1086 – POE i 1096 – FDC**: projectes Java Maven multimodule (.ear) amb desplegament de BBDD integrat en entorns de desplegament INT/PRE/PRO.
 
+Durant el mes de Juliol s'ha dut a terme un **projecte pilot per a la construcció i desplegament d'aplicacions del proveïdor IBM mitjançant l'autoservei de jobs pipeline** amb èxit.
+
+* **2560 - CCP**: projecte Java Maven amb contingut dinàmic (war) i estàtic (zip) amb entorns de desplegament PRE/PRO.
+* **1035 - GSA**: projecte Java Maven amb contingut dinàmic (war) i estàtic (zip) amb entorns de desplegament INT/PRE/PRO.
+* **2506 - GSIT_CEMP**: (en curs) projecte backend Java Maven, projecte frontend NodeJs i projecte de desplegament de base de dades amb entorns de desplegament INT/PRE/PRO.
+
 S'ha corroborat que l'autoservei de jobs pipeline és totalment operatiu per a determinades tecnologies i cal treballar per ampliar el seu abast per tal de donar cobertura a un % elevat de projectes de la Generalitat.
-En paral·lel es realitzaran sessions amb altres proveïdors de cara a començar a fer ús de l'autoservei de jobs per tal d'automatitzar la construcció i desplegament de les seves aplicacions.
+En paral·lel es realitzaran sessions amb altres proveïdors i àmbits de cara a començar a fer ús de l'autoservei de jobs per tal d'automatitzar la construcció i desplegament de les seves aplicacions i ja s'ha iniciat el pilot amb IBM.
 
 ## Funcionament
 

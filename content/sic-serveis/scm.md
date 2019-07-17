@@ -15,8 +15,15 @@ weight = 1
 
 ![GitLab](/related/sic/serveis/gitlab-logo.png "GitLab")
 
-**GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert. 
-
+**GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert.
+<br>
+<br>
+Gitlab és utilitzat per més de 100.000 organitzacions d'arreu del món. S’han realitzar proves en organitzacions amb 10.000 projectes amb el mateix temps i la mateixa qualitat de resposta que amb un sol projecte.
+<br>
+<br>
+El Gitlab està integrat amb el Servei d'Integració Continua, en publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d’Integració Contínua (Jenkins).
+<br>
+<br>
 Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de **consolidar el codi i lliurar-lo**. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
 
 ## Funcionament
