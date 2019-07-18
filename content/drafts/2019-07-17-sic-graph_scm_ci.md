@@ -19,7 +19,7 @@ Cal seguir treballant per assolir l'objectiu d'aconseguir un 100% en la custodia
 
 ## Servei d'Integració Continua
 
-La evolució del grau d'integració amb el SIC a nivell de construccions i desplegaments automatitzat de les aplicacions de la Generalitat és la següent:
+La evolució del grau d'integració amb el SIC, respecte al nivell de construccions i desplegaments automatitzat de les aplicacions de la Generalitat, és la següent:
 <br>
 <br>
 ![CI](/related/sic/serveis/graph_ci_0619.png "CI")
