@@ -1,13 +1,13 @@
 +++
 date        = "2019-06-15"
-title       = "SIC. Pilot de l'autoservei de jobs pipeline al lot AM10"
-description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline" 
+title       = "SIC. Pilot de l'autoservei de jobs pipeline amb TICxCAT i IBM"
+description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del proveÏdor TICxCAT i IBM mitjançant l'autoservei de jobs pipeline"
 categories  = [""]
 sections    = [""]
 key = "JULIOL2019"
 +++
 
-Durant el mes de Maig s'ha dut a terme un **projecte pilot per a la construcció i desplegament d'aplicacions del lot AM10 mitjançant l'autoservei de jobs pipeline** amb èxit.
+Durant el mes de Maig s'ha dut a terme un **projecte pilot per a la construcció i desplegament d'aplicacions del proveïdor TICxCAT mitjançant l'autoservei de jobs pipeline** amb èxit.
 
 * **1114 – OBR i 3256 – GESTILS**: projectes Oracle Apex amb entorns de desplegament INT/PRE/PRO.
 * **1040 – SII, 1086 – POE i 1096 – FDC**: projectes Java Maven multimodule (.ear) amb desplegament de BBDD integrat en entorns de desplegament INT/PRE/PRO.
