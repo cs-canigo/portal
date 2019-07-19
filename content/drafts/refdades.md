@@ -11,7 +11,12 @@ Les dades de referència són un tipus especial de dades orientades amb propòsi
 
 En aquesta primera versió del servei, s’ofereix un taula amb un primer conjunt d’entitats de referència que s’han descobert en la primera iteració del projecte. Dins de la taula, per cada entitat, es mostra: el grup a on pertany, el nom, la descripció, la data d’actualització de les dades i un botó que ens porta a veure el detall de l’entitat. Dins d’aquest detall es mostra les metadades de l’entitat, els valors actuals que es contemplen i s’ofereix la possibilitat de **descarregar** el fitxer de valors en format Excel.
 
-Està previst evolucionar la gestió tècnica de dades en una nova versió per tal de facilitar la consulta de les entitats i disposar dels procediments de sol·licitud de creació de noves entitats o incorporació/modificació de valors i de l'ús d'entitats ja identificades. Aquests procediments registraran la petició i permetran poder notificar als aplicatius qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació. Aquesta conversió de valors facilitarà l’intercanvi d’informació entre aplicacions.
+Està previst evolucionar la gestió tècnica de dades en una nova versió per tal de:
+•	Incrementar el nombre d'entitats de referència del catàleg.
+•	Millorar la presentació de les entitats. Degut als canvis que poden tenir les entitats al llarg del temps, tant en l'àmbit estructural com en el contingut, està previst crear i gestionar vàries versions vàlides sobre una mateixa entitat.
+•	Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
+•	Facilitar un procediment que permeti als aplicatius definir una conversió de valors sobre una entitat per tal d'adaptar als valors al seu propi sistema.
+•	Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’Arquitectura Corporativa.
 
