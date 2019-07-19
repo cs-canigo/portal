@@ -32,7 +32,7 @@ Transformar i combinar API's
 
 ## Plataforma
 
-L'API Manager corporatiu es IBM API Connect.
+L'API Manager corporatiu és IBM API Connect.
 
 Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services/apiconnect?topic=apiconnect-getting-started.
 
