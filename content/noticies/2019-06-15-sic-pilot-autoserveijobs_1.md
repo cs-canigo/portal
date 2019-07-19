@@ -19,7 +19,8 @@ Durant el mes de Juliol s'ha dut a terme un **projecte pilot per a la construcci
 * **2506 - GSIT_CEMP**: (en curs) projecte backend Java Maven, projecte frontend NodeJs i projecte de desplegament de base de dades amb entorns de desplegament INT/PRE/PRO.
 
 S'ha corroborat que l'autoservei de jobs pipeline és totalment operatiu per a determinades tecnologies i cal treballar per ampliar el seu abast per tal de donar cobertura a un % elevat de projectes de la Generalitat.
-En paral·lel es realitzaran sessions amb altres proveïdors i àmbits de cara a començar a fer ús de l'autoservei de jobs per tal d'automatitzar la construcció i desplegament de les seves aplicacions i ja s'ha iniciat el pilot amb IBM.
+<br/>
+En paral·lel es realitzaran sessions amb altres proveïdors i àmbits de cara a començar a fer ús de l'autoservei de jobs per tal d'automatitzar la construcció i desplegament de les seves aplicacions.
 
 ## Funcionament
 
@@ -32,6 +33,7 @@ Informació aportada pel proveïdor d’aplicacions repositada dins el propi pro
 * Procés de construcció: passes per a la construcció d’artefactes
 * Procés de desplegament: passes per al desplegament d’artefactes
 * Adreces de notificació
+<br/>
 
 ### Arxiu de Configuració d’Infraestructures (ACI, format YAML)
 Informació aportada pel proveïdor d’infraestructures repositada dins un grup i projecte específic per proveïdor al Git corporatiu:
@@ -39,16 +41,17 @@ Informació aportada pel proveïdor d’infraestructures repositada dins un grup
 * Versió de l’arxiu
 * Recursos: dades d’infraestructures (paraules de pas encriptades)
 * Només resulta necessari si es realitzen desplegaments en modalitat automàtica (INT).
+<br/>
 
-### Pipeline generadora de pipelines:
+### Pipeline generadora de pipelines
 * S’executa en fer un push al projecte (només si el projecte disposa d’un arxiu ACA i aquest ha estat creat o modificat)
 * Recupera els arxius de configuració ACA i ACI
 * Genera la pipeline de construcció i desplegament del projecte
 * Executa la pipeline generada (només si el projecte ha sofert altres modificacions)
+<br/>
 
 
-<br/><br/>
-
+<br/>
 Per a més informació, podeu consultar:
 
 * [Servei d’Integració Continua](/sic-serveis/ci/)
