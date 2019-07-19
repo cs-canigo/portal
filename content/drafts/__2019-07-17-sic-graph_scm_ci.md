@@ -4,7 +4,7 @@ title       = "SIC. Gràfic d'evolució del grau d'integració al SIC"
 description = "Es mostra la situació actual per tal d'avaluar el grau d'integració al SIC del parc d'aplicacions de la Generalitat"
 categories  = [""]
 sections    = [""]
-key = "JULIOL2019"
+key = ""
 +++
 
 ## Servei de Custodia de codi

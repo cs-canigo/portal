@@ -1,7 +1,7 @@
 +++
-date        = "2019-06-15"
+date        = "2019-07-19"
 title       = "SIC. Actualització de versió Gitlab"
-description = "Durant el mes de Maig s'ha dut a terme l'actualització de versió del Servei de Custodia de Codi (Gitlab)"
+description = "Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei de Custodia de Codi (Gitlab)"
 categories  = [""]
 sections    = [""]
 key = "JULIOL2019"
@@ -9,7 +9,7 @@ key = "JULIOL2019"
 
 ## Actualització del servei de Custodia de Codi
 
-**Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei de Custodia de Codi a la versió 11.9.12 de gitlab**.
+**Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei de Custodia de Codi a la versió 11.9.12 de Gitlab**.
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 

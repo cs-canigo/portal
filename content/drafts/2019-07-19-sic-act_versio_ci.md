@@ -1,7 +1,7 @@
 +++
-date        = "2019-06-15"
+date        = "2019-07-19"
 title       = "SIC. Actualització de versió Jenkins"
-description = "Durant el mes de Maig s'ha dut a terme l'actualització de versió del Servei d'Integració Continua (Jenkins)"
+description = "Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Continua (Jenkins)"
 categories  = [""]
 sections    = [""]
 key = "JULIOL2019"
