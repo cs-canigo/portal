@@ -7,15 +7,14 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament  transformen dades en informació significativa pel negoci.
-El conjunt de dades de referència canvien lentament i les revisions s’han de fer sota l’autoritat d’un custodi de dades de referència.
-Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
+Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. El conjunt de dades de referència canvien lentament i les revisions s’han de fer sota l’autoritat d’un custodi de dades de referència. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-És possible **descarregar** un fitxer Excel amb la informació actual de la taula, la més recent.
+En aquesta primera versió del servei, s’ofereix un taula amb un primer conjunt d’entitats de referència que s’han descobert en la primera iteració del projecte. Dins de la taula, per cada entitat, es mostra: el grup a on pertany, el nom, la descripció, la data d’actualització de les dades i un botó que ens porta a veure el detall de l’entitat. Dins d’aquest detall es mostra les metadades de l’entitat, els valors actuals que es contemplen i s’ofereix la possibilitat de **descarregar** el fitxer de valors en format Excel.
 
-Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
+Està previst evolucionar la gestió tècnica de dades en una nova versió per tal de facilitar la consulta de les entitats i disposar dels procediments de sol·licitud de creació de noves entitats o incorporació/modificació de valors i de l'ús d'entitats ja identificades. Aquests procediments registraran la petició i permetran poder notificar als aplicatius qualsevol canvi que es realitzi sobre les entitats de referència utilitzades. Per altra banda, també està previst donar servei a la necessitat de poder especificar una conversió de valors en funció de l'entitat de referència i l'aplicació. Aquesta conversió de valors facilitarà l’intercanvi d’informació entre aplicacions.
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d'Arquitectura Corporativa.
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’Arquitectura Corporativa.
+
 
 <br/>
 <h5>Catàleg actual</h5>
