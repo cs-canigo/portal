@@ -1,5 +1,5 @@
 +++
-date        = "2019-06-15"
+date        = "2019-07-19"
 title       = "SIC. Pilot de l'autoservei de jobs pipeline amb TICxCAT i IBM"
 description = "Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del proveÏdor TICxCAT i IBM mitjançant l'autoservei de jobs pipeline"
 categories  = ["SIC"]
