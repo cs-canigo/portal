@@ -36,4 +36,4 @@ La rearquitectura s'ha realitzat tenint en compte que l'impacte en els consumido
 
 Amb aquesta fita finalitza el projecte de **rearquitectura** i d'**actualització tecnològica del servei STD (Servei de Transformació de Documents)**
 
-Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
+Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [sgde.ctti@gencat.cat](mailto:sgde.ctti@gencat.cat)
