@@ -13,10 +13,10 @@ key = "JULIOL2019"
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 
-* **Nova imatge** de l'aplicacióq que modernitza el seu aspecte.
+* **Nova imatge** de l'aplicació que modernitza el seu aspecte.
 * **Navegació per pestanyes laterals** substituint la navegació en la capçalera: es millora la seva usabilitat.
 * Canvi de nom en el rol Master que passa a anomenar-se **Mantainer**: es tracta d'un canvi estètic per a identificar millor el rol amb els seves funcions, doncs els privilegis són els mateixos.
-* Possibilitat de crear **Releases** associats a tags de versions dels projectes: permet empaquetar automàticament el codi font en un derminat moment i afegir altres enllaços a altres continguts (binaris, documentació i altres).
+* Possibilitat de crear **Releases** associats a tags de versions dels projectes: permet empaquetar automàticament el codi font en un determinat moment i afegir altres enllaços a altres continguts (binaris, documentació i altres).
 * Millores de **rendiment**.
 * Correccions de **seguretat** importants.
 
