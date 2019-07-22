@@ -98,9 +98,10 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’A
             "defaultContent": "<button class=\"myButton\">Detall</button>"
         } ]
     } );
-     $('#example tbody').on('click', 'tr', function () {
-        var data = table.row( this ).data();
-
+     $('#example tbody').on('click', 'button', function () {
+        //var data = table.row( this ).data();
+        var data = table.row( $(this).parents('tr') ).data();
+        
         //console.log(data);
         //alert( 'You clicked on '+data[0]+'\'s row' );
         console.log("save data");
