@@ -38,8 +38,8 @@ weight= 5
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
-    entitatTitol.style.marginTop = "0.5em";
-    entitatTitol.style.marginBottom = "1.5em";
+    definicio.style.marginTop = "0.5em";
+    definicio.style.marginBottom = "1.5em";
 
     var textDefinicio = document.createTextNode(dades[2]);
     definicio.appendChild(textDefinicio);
