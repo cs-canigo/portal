@@ -98,7 +98,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’A
             "defaultContent": "<button class=\"myButton\">Detall</button>"
         } ]
     } );
-     $('#detall').on('click', 'tr', function () {
+     $('#myButton').on('click', 'tr', function () {
         var data = table.row( this ).data();
 
         //console.log(data);
