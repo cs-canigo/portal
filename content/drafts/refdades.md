@@ -98,7 +98,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’A
             "defaultContent": "<button class=\"myButton\">Detall</button>"
         } ]
     } );
-     $('#example tbody button').on('click', 'tr', function () {
+     $('#example tbody').on('click', 'tr', function () {
         var data = table.row( this ).data();
 
         //console.log(data);
@@ -123,7 +123,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’A
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
                 <th>Data Actualització</th>
-                <th id="detall">Detall</th>
+                <th>Detall</th>
             </tr>
         </thead>
     </table>
