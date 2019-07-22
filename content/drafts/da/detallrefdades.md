@@ -26,6 +26,7 @@ weight= 5
     entitatTitol.style.width = "70%";
     entitatTitol.style.marginRight = "15%";
     entitatTitol.style.marginLeft = "15%";
+    entitatTitol.style.marginTop = "0.5em";
 
     var textEntitatTitol = document.createTextNode(dades[1]);
     entitatTitol.appendChild(textEntitatTitol);
@@ -36,6 +37,8 @@ weight= 5
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
+    entitatTitol.style.marginTop = "0.5em";
+    entitatTitol.style.marginBottom = "1.5em";
 
     var textDefinicio = document.createTextNode(dades[2]);
     definicio.appendChild(textDefinicio);
