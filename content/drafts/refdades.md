@@ -95,10 +95,10 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’A
       "columnDefs": [ {
             "targets": -1,
             "data": null,
-            "defaultContent": "<button id=\"myBtn\" class=\"myButton\">Detall</button>"
+            "defaultContent": "<button class=\"myButton\">Detall</button>"
         } ]
     } );
-     $('#myBtn').on('click', 'tr', function () {
+     $('#example tbody button').on('click', 'tr', function () {
         var data = table.row( this ).data();
 
         //console.log(data);
