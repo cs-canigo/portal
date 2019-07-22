@@ -27,6 +27,7 @@ weight= 5
     entitatTitol.style.marginRight = "15%";
     entitatTitol.style.marginLeft = "15%";
     entitatTitol.style.marginTop = "0.5em";
+    entitatTitol.style.marginBottom = "0.5em";
 
     var textEntitatTitol = document.createTextNode(dades[1]);
     entitatTitol.appendChild(textEntitatTitol);
