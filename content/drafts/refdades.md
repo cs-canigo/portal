@@ -9,14 +9,21 @@ weight= 5
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. El conjunt de dades de referència canvien lentament i les revisions s’han de fer sota l’autoritat d’un custodi de dades de referència. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-En aquesta primera versió del servei, s’ofereix un taula amb un primer conjunt d’entitats de referència que s’han descobert en la primera iteració del projecte. Dins de la taula, per cada entitat, es mostra: el grup a on pertany, el nom, la descripció, la data d’actualització de les dades i un botó que ens porta a veure el detall de l’entitat. Dins d’aquest detall es mostra les metadades de l’entitat, els valors actuals que es contemplen i s’ofereix la possibilitat de **descarregar** el fitxer de valors en format Excel.
+En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d’actualització de les dades i un botó que ens pemet obrir una nova pàgina per consultar el detall. En aquesta pàgina de detall es mostren les metadades de l’entitat, un link que permet descarregar els valors de l’entitat en format fitxer Excel i una pre-visualització dels valors.
 
-Està previst evolucionar la gestió tècnica de dades en una nova versió per tal de:
-* Incrementar el nombre d'entitats de referència del catàleg.
-* Millorar la presentació de les entitats. Degut als canvis que poden tenir les entitats al llarg del temps, tant en l'àmbit estructural com en el contingut, està previst crear i gestionar vàries versions vàlides sobre una mateixa entitat.
-* Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
-* Facilitar un procediment que permeti als aplicatius definir una conversió de valors sobre una entitat per tal d'adaptar als valors al seu propi sistema.
-* Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
+Està previst evolucionar la gestió tècnica de dades a través de noves iteracions que permetran afegir contingut i serveis:
+
+- Incrementar el nombre d'entitats de referència del catàleg.
+
+- Millorar la presentació de les entitats. Degut als canvis que poden tenir les entitats al llarg del temps, tant en l'àmbit estructural com en el contingut, està previst crear i gestionar vàries versions vàlides sobre una mateixa entitat.
+
+- Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
+
+- Facilitar un procediment que permeti als aplicatius definir una conversió de valors sobre una entitat per tal d'adaptar als valors al seu propi sistema.
+
+- Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
+
+
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’Arquitectura Corporativa.
 
