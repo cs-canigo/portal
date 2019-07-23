@@ -15,7 +15,7 @@ Utilitzar dades de referència entre sistemes d’una organització permet comun
 
 En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d’actualització de les dades i un botó que permet obrir una nova pàgina per consultar el detall. En aquesta pàgina de detall es mostren les metadades de l’entitat, un enllaç que permet descarregar els valors de l’entitat en format fitxer Excel i una previsualització dels valors.
 
-Està previst evolucionar la gestió tècnica de dades per afegir contingut i serveis, com per exemple:
+Les següents actuacions planificadas són:
 
 - Incrementar el nombre d'entitats de referència del catàleg.
 
@@ -34,8 +34,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Ar
 <br/>
 <h5>Operativa actual</h5>
 <br/>
-
-Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Des de la pàgina que s'obrirà, a part de veure les metadades de les entitats, també es pot previsualitzant el contingut o descarregar un fitxer Excel amb els valors. 
+Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Els valors que contenen les entitats es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
 
 Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera versió no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
