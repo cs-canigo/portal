@@ -132,7 +132,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Data Actualització</th>
+                <th>Data Última Publicació</th>
                 <th>Detall</th>
             </tr>
         </thead>
