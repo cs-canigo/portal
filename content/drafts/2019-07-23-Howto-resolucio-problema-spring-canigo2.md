@@ -168,7 +168,7 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 
 ### Conclusió
 
-Si s'està utilitzant Spring anterior a la versió 3.1.2 es necessari revisar l'aplicació per si aplica aquest bug i quina sol·lució d'hauria d'aplicar
+Si s'està utilitzant Spring anterior a la versió 3.1.2 es necessari revisar l'aplicació per si aplica aquest bug i quina solució d'hauria d'aplicar
 
 Des de CS Canigó es recomana la solució d'afegir una caché a nivell de Spring
 
