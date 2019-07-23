@@ -13,7 +13,7 @@ El conjunt de dades de referència i els seus valors canvien en el transcurs del
 
 Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d’actualització de les dades i un botó que permet obrir una nova pàgina per consultar el detall. En aquesta pàgina de detall es mostren les metadades de l’entitat, un enllaç que permet descarregar els valors de l’entitat en format fitxer Excel i una previsualització dels valors.
+En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall. En aquesta pàgina de detall es mostren les metadades de l’entitat, un enllaç que permet descarregar els valors de l’entitat en format fitxer Excel i una previsualització dels valors.
 
 Les següents actuacions planificadas són:
 
