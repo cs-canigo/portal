@@ -13,7 +13,7 @@ El conjunt de dades de referència i els seus valors canvien en el transcurs del
 
 Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall. En aquesta pàgina de detall es mostren les metadades de l’entitat, un enllaç que permet descarregar els valors de l’entitat en format fitxer Excel i una previsualització dels valors.
+En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall: les metadades i els valors que conté l'entitat.
 
 Les següents actuacions planificadas són:
 
@@ -36,7 +36,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Ar
 <br/>
 Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Els valors que contenen les entitats es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
 
-Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera versió no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
+Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera versió no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
 Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats dels aplicatius.
 
