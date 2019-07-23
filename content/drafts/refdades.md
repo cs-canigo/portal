@@ -28,7 +28,7 @@ Les següents actuacions planificadas són:
 - Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
 
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Arquitectura Corporativa.
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
 
 <br/>
@@ -133,7 +133,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Data Última Publicació</th>
+                <th>Data última publicació</th>
                 <th>Detall</th>
             </tr>
         </thead>
