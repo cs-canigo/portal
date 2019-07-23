@@ -29,7 +29,7 @@ Està previst evolucionar la gestió tècnica de dades per afegir contingut i se
 
 
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d’Arquitectura Corporativa.
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Arquitectura Corporativa.
 
 
 <br/>
