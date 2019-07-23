@@ -64,12 +64,12 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 ### Solució al problema
 
-Hi ha 3 formes de resoldre el problema: optimitzant l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegint una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegint una caché a nivell de Spring
+Hi ha 3 formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring
 
 Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de Spring
 
 
-#### Solució 1: optimitzant l'obtenció dels beans de Spring als components de Canigó
+#### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
 
 Amb aquesta solució no es resolt el problema sino et mitiga ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2
 
@@ -161,9 +161,9 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 - Mode tag
 
 
-#### Solució 2: afegint una caché al mètode centralitzat de Canigó d'obtenció de Beans
+#### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
-#### Solució 3: afegint una caché a nivell de Spring
+#### Solució 3: afegir una caché a nivell de Spring
 
 
 ### Conclusió
