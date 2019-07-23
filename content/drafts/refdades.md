@@ -31,6 +31,16 @@ Està previst evolucionar la gestió tècnica de dades per afegir contingut i se
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Arquitectura Corporativa.
 
+<br/>
+<h5>Operativa actual</h5>
+<br/>
+
+Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Des de la pàgina que s'obrirà, a part de veure les metadades de les entitats, també es pot previsualitzant el contingut o descarregar un fitxer Excel amb els valors. 
+
+Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera versió no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
+
+Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats dels aplicatius.
+
 
 <br/>
 <h5>Catàleg actual</h5>
