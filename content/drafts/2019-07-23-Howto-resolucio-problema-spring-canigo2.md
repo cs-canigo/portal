@@ -19,7 +19,7 @@ El problema s'originava si hi havia una alta utilització del component **net.ge
 
 El problema generava un bloqueig als threads del servidor d'aplicacions i acabava desestabilitzant el sistema
 
-Un exemple de traça del servidor d'aplicacions amb  el thread bloquejat:
+Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
 
 ```
 
@@ -68,11 +68,98 @@ Hi ha 3 formes de resoldre el problema: optimitzant l'obtenció dels beans de Sp
 
 Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de Spring
 
+
 #### Solució 1: optimitzant l'obtenció dels beans de Spring als components de Canigó
 
 Amb aquesta solució no es resolt el problema sino et mitiga ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2
 
 Des de CS Canigó no es recomanaria l'utilització d'aquesta solució
+
+Canigó 2, per obtenir els beans de Spring fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeansOfType**
+
+Així, per exemple, per obtenir el servei per escriure a log des del component ** TagUtil **, s'obté a partir de la crida
+
+```
+
+LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                      .getServletContext(),
+                  LoggingService.class);
+
+```
+
+El component ** TagUtil ** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*
+
+Per exemple:
+```
+
+      } else if (!(aTag instanceof OptionsFieldTag)) {
+         
+         LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                   .getServletContext(),
+               LoggingService.class);
+
+         if (logService != null) {
+            
+            logService.getLog(TagUtil.class)
+                      .info("No bean found in tagsConfiguration property under styleId " +
+               aTag.getStyleId() + " for bean " + aTag.getClass().getName());
+         }
+
+         
+      } else {
+         LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                   .getServletContext(),
+               LoggingService.class);
+
+         if (logService != null) {
+            logService.getLog(TagUtil.class)
+                      .info("Skipping options field " + aTag.getStyleId());
+         }
+
+```
+
+Aquesta forma no optima d'obtenir el Bean fa que afloreixi ràpidament el problema d'optimització del retorn de Beans de Spring 
+
+Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global
+
+Així per exemple a **Tagutil** tindriem:
+
+```
+
+...
+public class TagUtil {
+	
+	private static LoggingService logService;
+    
+...
+
+```
+
+I abans de l'utilització del Bean LoggingService consultariem si aquest ja ha estat carregat anteriorment o no, per exemple:
+
+```
+
+if (logService == null)
+					logService = (LoggingService) WebApplicationContextUtils
+						.getBeanOfType(aTag.getPageContext().getServletContext(), LoggingService.class);
+				
+				if (logService != null) {
+					logService.getLog(TagUtil.class)
+							.error("Class from JSP " + aTag.getClass().getName()
+									+ " doesn't match with class in tagsConfiguration "
+									+ tagConfiguration.getClass().getName() + " for styleId " + aTag.getStyleId(), ex);
+				}
+
+```
+
+D'aquesta manera només li demanaríem a Spring que ens retornés el Bean una vegada
+
+S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modificar tots els components que utilitzin **WebApplicationContextUtils** mètode **getBeansOfType**:
+
+- Filtre de Loggin
+- Filtre de Acegi
+- Mode tag
+
 
 #### Solució 2: afegint una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
