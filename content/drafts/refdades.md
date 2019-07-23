@@ -28,8 +28,11 @@ Les següents actuacions planificadas són:
 - Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
 
 
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Arquitectura Corporativa.
+
+
 <br/>
-<h5>Operativa actual</h5>
+<h5>Operativa</h5>
 <br/>
 Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Els valors que contenen les entitats es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
 
@@ -37,8 +40,6 @@ Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot ut
 
 Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats dels aplicatius.
 
-
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l' Àrea d’Arquitectura Corporativa.
 
 
 <br/>
