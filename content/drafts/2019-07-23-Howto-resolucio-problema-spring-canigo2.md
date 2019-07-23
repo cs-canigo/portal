@@ -15,7 +15,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2
 
 El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven Canigó 2
 
-El problema s'originava si hi havia una alta utilització del component net.gencat.ctti.canigo.services.web.taglib.util.TagUtil de la llibreria canigo-services-web de Canigó 2
+El problema s'originava si hi havia una alta utilització del component **net.gencat.ctti.canigo.services.web.taglib.util.TagUtil** de la llibreria **canigo-services-web** de Canigó 2
 
 El problema generava un bloqueig als threads del servidor d'aplicacions i acabava desestabilitzant el sistema
 
@@ -48,11 +48,11 @@ Un exemple de traça del servidor d'aplicacions amb  el thread bloquejat:
 
 ### Detall del problema
 
-El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió de Spring que s'utilitza a Canigó 2, té el següent bug registrat:
+El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió 2.0.5 de Spring que s'utilitza a Canigó 2, té el següent bug registrat:
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-El bug que es reportava indicava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché
+En el bug s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché
 
 El bug va ser resolt per la versió 3.1.2 de Spring afegint una caché
 
@@ -66,8 +66,20 @@ Hi ha 3 formes de resoldre el problema: optimitzant l'obtenció dels beans de Sp
 
 Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de Spring
 
+#### Solució 1: optimitzant l'obtenció dels beans de Spring als components de Canigó
+
+#### Solució 2: afegint una caché al mètode centralitzat de Canigó d'obtenció de Beans
+
+#### Solució 3: afegint una caché a nivell de Spring
+
+
 ### Conclusió
 
+Si s'està utilitzant Spring anterior a la versió 3.1.2 es necessari revisar l'aplicació per si aplica aquest bug i quina sol·lució d'hauria d'aplicar
+
+Des de CS Canigó es recomana la solució d'afegir una caché a nivell de Spring
+
+Si a més informació preferiblement podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o en cas de no disposar de permisos d’accés, a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
 
 
 
