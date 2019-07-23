@@ -77,7 +77,7 @@ Des de CS Canigó no es recomanaria l'utilització d'aquesta solució
 
 Canigó 2, per obtenir els beans de Spring fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeansOfType**
 
-Així, per exemple, per obtenir el servei per escriure a log des del component ** TagUtil **, s'obté a partir de la crida
+Així, per exemple, per obtenir el servei per escriure a log des del component **TagUtil**, s'obté a partir de la crida
 
 ```
 
@@ -87,7 +87,7 @@ LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanO
 
 ```
 
-El component ** TagUtil ** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*
+El component **TagUtil** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*
 
 Per exemple:
 ```
