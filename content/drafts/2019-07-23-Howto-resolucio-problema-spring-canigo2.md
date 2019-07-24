@@ -56,7 +56,7 @@ https://github.com/spring-projects/spring-framework/issues/14083
 
 En el bug s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché
 
-El bug va ser resolt per la versió 3.1.2 de Spring afegint una caché
+El bug va ser resolt a la versió 3.1.2 de Spring afegint una caché
 
 Es pot consultar el detall de la resolució al següent commit de Spring:
 
@@ -71,7 +71,7 @@ Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de S
 
 #### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
 
-Amb aquesta solució no es resolt el problema sino et mitiga ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2
+Amb aquesta solució es mitiga el problema, no es resolt, ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2
 
 Des de CS Canigó no es recomanaria l'utilització d'aquesta solució
 
@@ -122,7 +122,7 @@ Aquesta forma no optima d'obtenir el Bean fa que afloreixi ràpidament el proble
 
 Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global
 
-Així per exemple a **Tagutil** tindriem:
+Així per exemple a **Tagutil** tindríem:
 
 ```
 
@@ -163,8 +163,130 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
+A Canigó 2 la forma d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**
+
+Per no haver de tocar als n llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component
+
+Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el bug de Spring
+
+https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
+
+Així, podríem tenir el component **WebApplicationContextUtils** amb la caché de la següent forma:
+
+```java
+
+public class WebApplicationContextUtils extends org.springframework.web.context.support.WebApplicationContextUtils {
+
+	/** Map of singleton bean names keyed by bean class */
+	private static final Map<Class<?>, String[]> cache = new ConcurrentHashMap<Class<?>, String[]>();
+
+	/**
+	 * Documentaci�.
+	 *
+	 * @param context
+	 *            Documentaci�
+	 * @param clazz
+	 *            Documentaci�
+	 *
+	 * @return Documentaci�
+	 */
+	public static Object getBeanOfType(ServletContext context, Class clazz) {
+		WebApplicationContext webAppContext = WebApplicationContextUtils.getWebApplicationContext(context);
+
+		if (webAppContext != null) {
+
+			Map map = getBeansOfType(webAppContext, clazz);
+
+			if ((map != null) && (map.size() > 0)) {
+				return map.get(map.keySet().iterator().next());
+			}
+		}
+
+		return null;
+	}
+
+	private static String[] getBeanNamesForType(WebApplicationContext webAppContext, Class clazz) {
+		String[] resolvedBeanNames = cache.get(clazz);
+		if (resolvedBeanNames != null) {
+			return resolvedBeanNames;
+		}
+		resolvedBeanNames = webAppContext.getBeanNamesForType(clazz);
+		cache.put(clazz, resolvedBeanNames);
+
+		return resolvedBeanNames;
+	}
+
+	private static Map getBeansOfType(WebApplicationContext webAppContext, Class clazz) {
+		Map result = null;
+		
+		String[] beanNames = getBeanNamesForType(webAppContext, clazz);
+		
+		if (beanNames != null) {
+			result = CollectionFactory.createLinkedMapIfPossible(beanNames.length);
+			for (int i = 0; i < beanNames.length; i++) {
+				String beanName = beanNames[i];
+				result.put(beanName, webAppContext.getBean(beanName));
+			}
+		}
+		
+		return result;
+	}
+
+```
+
 #### Solució 3: afegir una caché a nivell de Spring
 
+Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, es necessari afegir una caché a nivell global 
+
+La solució és homologa a la aportada al blog:
+
+http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/
+
+La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*
+
+```java
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+
+public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
+    private static Logger log = Logger.getLogger(CachingByTypeBeanFactory.class);
+    
+	/** Map of singleton bean names keyed by bean class */
+	private final Map<Class<?>, String[]> singletonBeanNamesByType = new ConcurrentHashMap<Class<?>, String[]>();
+
+	/** Map of non-singleton bean names keyed by bean class */
+	private final Map<Class<?>, String[]> nonSingletonBeanNamesByType = new ConcurrentHashMap<Class<?>, String[]>();
+
+    @Override
+    public String[] getBeanNamesForType(Class type) {
+        return getBeanNamesForType(type, true, true);
+    }
+
+    @Override
+    public String[] getBeanNamesForType(Class type, boolean includeNonSingletons, boolean allowEagerInit) {
+		if (type == null || !allowEagerInit) {
+			return super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
+		}
+		
+		Map<Class<?>, String[]> cache = includeNonSingletons ?
+				this.nonSingletonBeanNamesByType : this.singletonBeanNamesByType;
+		
+		String[] resolvedBeanNames = cache.get(type);
+		if (resolvedBeanNames != null) {
+			return resolvedBeanNames;
+		}
+		
+		resolvedBeanNames = super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
+		cache.put(type, resolvedBeanNames);
+		
+		return resolvedBeanNames;
+    }
+
+```
 
 ### Conclusió
 
