@@ -160,7 +160,8 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 - Filtre de Acegi
 - Mode tag
 
-
+<p>
+	
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
 A Canigó 2 la forma d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**
@@ -233,7 +234,8 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 	}
 
 ```
-
+<p>
+	
 #### Solució 3: afegir una caché a nivell de Spring
 
 Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, es necessari afegir una caché a nivell global 
@@ -290,13 +292,40 @@ public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
 
 ```
 
+Creem una factoria que creï la nova implementació amb caché de **DefaultListableBeanFactory**
 
+```java
+
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
+public class CachingWebApplicationContext extends XmlWebApplicationContext {
+
+    @Override
+    protected DefaultListableBeanFactory createBeanFactory() {
+        return new CachingByTypeBeanFactory();
+    }
+}
+
+```
+
+Registrarem aquesta factory al web.xml
+
+```xml
+    <context-param>
+	<param-name>contextClass</param-name>
+	<param-value>CachingWebApplicationContext</param-value>
+    </context-param>
+
+```
+
+<p>
 
 ### Conclusió
 
-Si s'està utilitzant Spring anterior a la versió 3.1.2 es necessari revisar l'aplicació per si aplica aquest bug i quina solució d'hauria d'aplicar
+Si l'aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució s'hauria d'aplicar
 
-Des de CS Canigó es recomana la solució d'afegir una caché a nivell de Spring
+La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring
 
 Si a més informació preferiblement podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o en cas de no disposar de permisos d’accés, a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
 
