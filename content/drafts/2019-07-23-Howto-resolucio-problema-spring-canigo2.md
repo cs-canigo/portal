@@ -244,6 +244,8 @@ http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortyp
 
 La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*
 
+La implementació amb caché de **DefaultListableBeanFactory** podria ser:
+
 ```java
 
 import java.util.Map;
@@ -287,6 +289,8 @@ public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
     }
 
 ```
+
+
 
 ### Conclusió
 
