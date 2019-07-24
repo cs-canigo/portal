@@ -11,6 +11,8 @@ key         = "AGOST2019"
 
 Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2 i/o Spring anterior a la versió 3.1.2
 
+<br></br>
+
 ### Introducció al problema
 
 El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven Canigó 2
@@ -48,6 +50,8 @@ Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
 
 ```
 
+<br></br>
+
 ### Detall del problema
 
 El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió 2.0.5 de Spring que s'utilitza a Canigó 2, té el següent bug registrat:
@@ -62,12 +66,15 @@ Es pot consultar el detall de la resolució al següent commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
+<br></br>
+
 ### Solució al problema
 
 Hi ha 3 formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring
 
 Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de Spring
 
+<br></br>
 
 #### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
 
@@ -160,7 +167,7 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 - Filtre de Acegi
 - Mode tag
 
-<p>
+<br></br>
 	
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
@@ -234,7 +241,7 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 	}
 
 ```
-<p>
+<br></br>
 	
 #### Solució 3: afegir una caché a nivell de Spring
 
@@ -319,7 +326,7 @@ Registrarem aquesta factory al web.xml
 
 ```
 
-<p>
+<br></br>
 
 ### Conclusió
 
