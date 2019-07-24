@@ -352,8 +352,11 @@ On s'utilitza les "FunctionalInterface" de Java per determinar quin mètode s'ut
 ## Test serveis rest
 
 Si provem els serveis web:
+<br>
 - /tweets
+<br>
 - /route-flux/tweets
+<br>
 - /handler-flux/tweets
 
 Per exemple, per provar el servei "/tweets":
@@ -365,8 +368,11 @@ curl -X POST \
 ```
   
 i els serveis web:
+<br>
 - /tweets/{id}
+<br>
 - /route-flux/tweets/{id}
+<br>
 - /handler-flux/tweets/{id}
 
 Per exemple, per provar el servei "/tweets/{id}":
