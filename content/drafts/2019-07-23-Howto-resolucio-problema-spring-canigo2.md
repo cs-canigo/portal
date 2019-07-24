@@ -11,7 +11,7 @@ key         = "AGOST2019"
 
 Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2 i/o Spring anterior a la versió 3.1.2
 
-<br></br>
+<br>
 
 ### Introducció al problema
 
@@ -50,7 +50,7 @@ Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
 
 ```
 
-<br></br>
+<br>
 
 ### Detall del problema
 
@@ -66,7 +66,7 @@ Es pot consultar el detall de la resolució al següent commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
-<br></br>
+<br>
 
 ### Solució al problema
 
@@ -167,7 +167,7 @@ S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modif
 - Filtre de Acegi
 - Mode tag
 
-<br></br>
+<br>
 	
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
@@ -241,8 +241,7 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 	}
 
 ```
-<br></br>
-<br></br>
+<br>
 	
 #### Solució 3: afegir una caché a nivell de Spring
 
@@ -327,7 +326,7 @@ Registrarem aquesta factory al web.xml
 
 ```
 
-<br></br>
+<br>
 
 ### Conclusió
 
