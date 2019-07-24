@@ -330,8 +330,8 @@ Registrarem aquesta factory al web.xml
 
 ### Conclusió
 
-Si l'aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució s'hauria d'aplicar
+Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució s'hauria d'aplicar
 
 La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring
 
-Si a més informació preferiblement podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o en cas de no disposar de permisos d’accés, a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
+Si necessiteu més informació, preferiblement, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN), o en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
