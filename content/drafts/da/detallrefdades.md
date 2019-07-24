@@ -46,7 +46,7 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Identificador","Data última modificació","Origen","Classificació funcional","Agrupació temàtica","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
+    var metadatos = ["Identificador","Origen","Classificació funcional","Agrupació temàtica","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -74,7 +74,7 @@ weight= 5
 
 
      // Crea las celdas
-     for (var i = 0; i < 10; i++) {
+     for (var i = 0; i < 9; i++) {
       // Crea las hileras de la tabla
       hilera = document.createElement("tr");
 
@@ -114,7 +114,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', '../../entitats/' + dades[14]);
+    link.setAttribute('href', '../../entitats/' + dades[13]);
     link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
@@ -144,7 +144,7 @@ weight= 5
 
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[14]);
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
     frame.style.width= "100%"
     frame.style.height= "400px";
     celda.appendChild(frame);
@@ -161,7 +161,7 @@ weight= 5
     
     //function happycode(){
      //var dades = JSON.parse(localStorage.getItem('data'));
-     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[14];
+     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
      //$('#myframe').attr("src", url);
     //}
 
