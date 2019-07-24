@@ -1,7 +1,7 @@
 +++
 date        = "2019-07-23"
 title       = "Resolució problema optimització Spring a Canigó 2"
-description = "Com resoldre el problema congeut d'optimització d'obtenció de Beans de Spring a Canigó 2"
+description = "Com resoldre el problema conegut d'optimització d'obtenció de Beans de Spring a Canigó 2"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "AGOST2019"
@@ -72,7 +72,7 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 Hi ha 3 formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring
 
-Des de CS Canigó recomenaríem la sol·lució d'afegir una caché a nivell de Spring
+Des de CS Canigó recomanaríem la solució d'afegir una caché a nivell de Spring
 
 <br></br>
 
@@ -125,7 +125,7 @@ Per exemple:
 
 ```
 
-Aquesta forma no optima d'obtenir el Bean fa que afloreixi ràpidament el problema d'optimització del retorn de Beans de Spring 
+Aquesta forma no optima d'obtenir el Bean fa que eflueixi ràpidament el problema d'optimització del retorn de Beans de Spring 
 
 Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global
 
@@ -335,7 +335,3 @@ Si l'aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessar
 La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring
 
 Si a més informació preferiblement podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o en cas de no disposar de permisos d’accés, a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
-
-
-
-
