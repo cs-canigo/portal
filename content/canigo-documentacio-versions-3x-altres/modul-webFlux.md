@@ -130,9 +130,9 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
-En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo reactive de Spring Boot
+En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
-Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-3x-altres/Mongo_reactiu)
+Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-3x-altres/modul-mongodb-reactiu)
 
 Afegirem la propietat per la connexió a Mongodb
 ```properties
