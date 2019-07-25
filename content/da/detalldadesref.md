@@ -1,5 +1,5 @@
 +++
-date        = "2019-07-15"
+date        = "2019-07-25"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -26,6 +26,8 @@ weight= 5
     entitatTitol.style.width = "70%";
     entitatTitol.style.marginRight = "15%";
     entitatTitol.style.marginLeft = "15%";
+    entitatTitol.style.marginTop = "0.5em";
+    entitatTitol.style.marginBottom = "0.5em";
 
     var textEntitatTitol = document.createTextNode(dades[1]);
     entitatTitol.appendChild(textEntitatTitol);
@@ -36,13 +38,15 @@ weight= 5
     definicio.style.width = "70%";
     definicio.style.marginRight = "15%";
     definicio.style.marginLeft = "15%";
+    definicio.style.marginTop = "0.5em";
+    definicio.style.marginBottom = "1.5em";
 
     var textDefinicio = document.createTextNode(dades[2]);
     definicio.appendChild(textDefinicio);
 
     body.appendChild(definicio);
 
-    var metadatos = ["Identificador","Darrera Actualització","Origen","Classificació funcional","Agrupació temàtica","Òrgan Responsable","Òrgan Propietari","Període Actualització","Tipus","Visibilitat","Descàrrega"];
+    var metadatos = ["Identificador","Origen","Classificació funcional","Agrupació temàtica","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -70,7 +74,7 @@ weight= 5
 
 
      // Crea las celdas
-     for (var i = 0; i < 10; i++) {
+     for (var i = 0; i < 9; i++) {
       // Crea las hileras de la tabla
       hilera = document.createElement("tr");
 
@@ -110,7 +114,7 @@ weight= 5
     var link = document.createElement('a');
     var image = document.createElement('img');
 
-    link.setAttribute('href', '../../dadesref/entitats/' + dades[14]);
+    link.setAttribute('href', '../../dadesref/entitats/' + dades[13]);
     link.innerHTML = "Descarregar Excel";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
@@ -118,7 +122,6 @@ weight= 5
     //link.innerHTML = dades[15];
     //link.appendChild(image);
     celda.appendChild(link);
-    //celda.appendChild(link);
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
@@ -141,7 +144,7 @@ weight= 5
 
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14]);
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13]);
     frame.style.width= "100%"
     frame.style.height= "400px";
     celda.appendChild(frame);
@@ -158,7 +161,7 @@ weight= 5
     
     //function happycode(){
      //var dades = JSON.parse(localStorage.getItem('data'));
-     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[14];
+     //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13];
      //$('#myframe').attr("src", url);
     //}
 
