@@ -1,7 +1,7 @@
 +++
 date        = "2019-03-18"
 title       = "Mongo reactiu"
-description = "Com configurar aplicació Canigó 3.4 per utilitzar mongo reactiu"
+description = "Com configurar aplicació Canigó 3.4 per utilitzar mongo db reactiu"
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 6
 key         = "ABRIL2019"
@@ -19,7 +19,7 @@ Els passos descrits en aquest document apliquen a la versió 3.4 del Framework C
 
 El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
 
-Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.3 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_3_Canigo3_4)
+Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.2 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4)
 
 L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.
 
