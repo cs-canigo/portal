@@ -9,13 +9,13 @@ weight= 5
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. 
 
-El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat sota l’autoritat d’un custodi de dades de referència. 
-
 Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-En aquesta primera iteració del projecte, es presenten 22 entitats de referència dins d’una taula de catàleg que mostra les dades principals: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall: les metadades i els valors que conté l'entitat.
+El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat sota l’autoritat d’un custodi de dades de referència. 
 
-Les següents actuacions planificadas són:
+En aquesta primera publicació del catàleg tècnic de dades es presenten 22 entitats de referència dins d’una taula a on es pot veure: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall amb les metadades i els valors que conté l'entitat.
+
+Les següents actuacions planificades són:
 
 - Incrementar el nombre d'entitats de referència del catàleg.
 
@@ -23,7 +23,7 @@ Les següents actuacions planificadas són:
 
 - Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
 
-- Facilitar un procediment que permeti als aplicatius definir una conversió de valors sobre una entitat per tal d'adaptar als valors al seu propi sistema.
+- Facilitar un procediment que permeti a les aplicacions definir una conversió de valors sobre una entitat per tal d'adaptar els valors al seu propi sistema.
 
 - Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
 
@@ -34,16 +34,16 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arq
 <br/>
 <h5>Operativa</h5>
 <br/>
-Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera iteració, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Els aplicatius poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix en la taula. Els valors que contenen les entitats es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
+Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera publicació, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Es poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix a la taula. Els valors es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
 
-Tot aplicatiu que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera versió no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
+Tota aplicació que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera publicació del catàleg tècnic de dades no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
-Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats dels aplicatius.
+Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats de les aplicacions.
 
 
 
 <br/>
-<h5>Catàleg actual</h5>
+<h5>Catàleg Tècnic de Dades</h5>
 <br/>
 
 <style>
