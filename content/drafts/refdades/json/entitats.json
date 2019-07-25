@@ -66,7 +66,7 @@
 [
 "Persona",
 "Gènere",
-"Permet descriure el gènere d'una persona.",
+"Permet indicar el gènere d'una persona.",
 "15/07/2019",
 "dtarq48",
 "TSF",
@@ -82,7 +82,7 @@
 [
 "Persona",
 "Tipus Identificador",
-"Tipus de documentació que es poden utilitzar per identificar a un persona.",
+"Tipus de documentació que es pot utilitzar per identificar a un persona.",
 "15/07/2019",
 "dtarq49",
 "TSF",
@@ -130,7 +130,7 @@
 [
 "Persona",
 "Grau parentiu",
-"Grau de parentiu entre persones.",
+"Grau de parentiu existent entre persones.",
 "15/07/2019",
 "dtarq54",
 "TSF",
@@ -193,7 +193,7 @@
 ],
 [
 "Territori",
-"Paisos",
+"Països",
 "Llista de països indicant el continent i subcontinent a on pertanyen.",
 "15/07/2019",
 "dtarq81",
@@ -337,8 +337,8 @@
 ],
 [
 "Territori",
-"Poblacions Catalunya",
-"Llista d'àmbits territorials inframunicipals recollits en el Nomenclàtor estadístic d'entitats de població de Catalunya i enllaçats. amb dades de l'INE",
+"Unitats poblacionals Catalunya",
+"Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
 "15/07/2019",
 "dtarq903",
 "Idescat",
