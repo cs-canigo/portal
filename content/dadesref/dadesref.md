@@ -1,5 +1,5 @@
 +++
-date        = "2019-07-15"
+date        = "2019-07-25"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -7,18 +7,43 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament  transformen dades en informació significativa pel negoci.
-El conjunt de dades de referència canvien lentament i les revisions s’han de fer sota l’autoritat d’un custodi de dades de referència.
+Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. 
+
 Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-És possible **descarregar** un fitxer Excel amb la informació actual de la taula, la més recent.
+El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat sota l’autoritat d’un custodi de dades de referència. 
 
-Les taules s'actualitzen periòdicament. Les dades evolucionen i canvien amb el temps i, en conseqüència, també ho fan les llistes de codis i les nomenclatures que les recullen. Qualsevol modificació d'una llista queda registrada amb una data de manera que és possible accedir al seu històric.
+En aquesta primera publicació del catàleg tècnic de dades es presenten 22 entitats de referència dins d’una taula a on es pot veure: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall amb les metadades i els valors que conté l'entitat.
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d'Arquitectura Corporativa.
+Les següents actuacions planificades són:
+
+- Incrementar el nombre d'entitats de referència del catàleg.
+
+- Millorar la presentació de les entitats. A causa dels canvis que poden tenir les entitats al llarg del temps, tant en l'àmbit estructural com en el contingut, està previst crear i gestionar diferents versions vàlides sobre una mateixa entitat.
+
+- Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
+
+- Facilitar un procediment que permeti a les aplicacions definir una conversió de valors sobre una entitat per tal d'adaptar els valors al seu propi sistema.
+
+- Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
+
+
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
+
 
 <br/>
-<h5>Catàleg actual</h5>
+<h5>Operativa</h5>
+<br/>
+Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera publicació, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Es poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix a la taula. Els valors es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
+
+Tota aplicació que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera publicació del catàleg tècnic de dades no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
+
+Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats de les aplicacions.
+
+
+
+<br/>
+<h5>Catàleg Tècnic de Dades</h5>
 <br/>
 
 <style>
@@ -83,8 +108,9 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d'Arq
             "defaultContent": "<button class=\"myButton\">Detall</button>"
         } ]
     } );
-     $('#example tbody').on('click', 'tr', function () {
-        var data = table.row( this ).data();
+     $('#example tbody').on('click', 'button', function () {
+        //var data = table.row( this ).data();
+        var data = table.row( $(this).parents('tr') ).data();
 
         //console.log(data);
         //alert( 'You clicked on '+data[0]+'\'s row' );
@@ -107,7 +133,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb la Unitat d'Arq
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Data Actualització</th>
+                <th>Data última publicació</th>
                 <th>Detall</th>
             </tr>
         </thead>
