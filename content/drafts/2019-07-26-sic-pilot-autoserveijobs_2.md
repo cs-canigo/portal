@@ -2,9 +2,9 @@
 date        = "2019-07-26"
 title       = "SIC. Pilot de l'autoservei de jobs pipeline amb T-Systems i l'àmbit ATC"
 description = "Durant el mes de Juliol s'han dut a terme sessions amb el proveïdor T-Systems i l'àmbit ATC per tal d'abordar nous projectes pilot per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline"
-categories  = [] <!--- ["SIC"] --->
-sections    = [] <!--- ["Notícies", "home"] --->
-key = "" <!--- "AGOST2019" --->
+section = ""
+categories = [""]
+key = ""
 +++
 
 Durant el mes de Juliol s'han dut a terme sessions amb el proveïdor T-Systems i l'àmbit ATC per tal d'abordar nous projectes pilot per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline.
