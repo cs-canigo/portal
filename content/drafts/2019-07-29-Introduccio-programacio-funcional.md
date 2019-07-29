@@ -10,6 +10,8 @@ categories  = ["canigo"]
 
 Existeixen dos grans blocs en la programació empresarial: la programació orientat a objectes i la programació funcional
 
+<br>
+
 #### Programació orientada a objectes 
 
 La programació orientada a objecte forma part de la programació imperativa, ja que amb la programació orientada a objectes, es descriu la seqüència de passos que ha de seguir un programa per resoldre un problema
@@ -19,6 +21,8 @@ La programació orientada a objectes utilitza estructura de dades anomenats obje
 A la programació orientatada a objecte es desciu com a objecte una estructura de dades que descriu amb la major fiabilitat possible un objecte del món real i descriu com es relaciona o interactua amb la resta del món que el rodeja
 
 En l'actualitat, en el món empresarial, la programació orientada a objectes és la més estesa
+
+<br>
 
 #### Programació funcional
 
@@ -39,6 +43,8 @@ Els principals avantatges de la programació funcional són:
 - Que l'estat sigui immutable ens ajuda en sistemes concurrents o paral·lels
 - Les funcions pures són sempre previsibles, ja que les funcions reben paràmetres i retornen un resultat
 - El testeig tendeix a ser més senzill ja que, si utilitzem funcions pures, els resultats són més previsibles
+
+<br>
 
 #### Exemple programació orientada objecte vs programació funcional
 
@@ -77,6 +83,8 @@ System.out.println(result);
 ```
 
 Com podem observar, amb una programació funcional es redueix les línies de codi i el codi es torna més llegible
+
+<br>
 
 ### Aplicació programació funcional a Canigó
 
