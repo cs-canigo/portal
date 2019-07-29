@@ -50,15 +50,21 @@ Aquests 2 serveis són exposats amb Web flux de dues vies diferents:
 - Mitjançant “Handlers” en l’enrutament de les “RouterFuntions” en el path “/handler-flux/tweets”
 
 En conclusió, tenim exposats 4 serveis rest:
+<br>
 - /route-flux/tweets
+<br>
 - /handler-flux/tweets
+<br>
 - /route-flux/tweets/{id}
+<br>
 - /handler-flux/tweets/{id}
 
 ### Test unitaris serveis WebFlux cas d'exemple
 
 Per a realitzar el test d'aquest 4 serveis rest tenim dues vies:
+<br>
 - Fer crides simulant un client al nostres serveis rest exposats de forma real
+<br>
 - Fer crides simulant un client als nostres serveis rest mockejats
 
 
