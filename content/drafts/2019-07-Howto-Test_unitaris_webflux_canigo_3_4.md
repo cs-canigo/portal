@@ -33,7 +33,7 @@ Aquest component de spring s'utilitza per simular les crides que realitzaria un 
 
 Aquest component del projecte reactor s'utilitza per verificar serveis exposats amb reactiu. En el nostre cas l'utilitzarem per verificar la resposta dels serveis web rest exposats amb webflux
 
-Per a més informació sobre com realitzar test amb programació reactiva podeu consultar [Test unitaris amb programació reactiva a Canigó 3.4](https://canigo.ctti.gencat.cat/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
+Per a més informació sobre com realitzar test amb programació reactiva podeu consultar [Test unitaris amb programació reactiva a Canigó 3.4](/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
 
 ### Introducció cas d’exemple
 
@@ -277,7 +277,8 @@ Així podríem tenir un mètode que s'executi al inici del test de la següent m
 ```
 
 Per a comprovar els serveis rest "all tweets" farem una crida al serveis rest, comprovant que la resposta és un OK (http code 200) i que en el body de la respota hi ha un llistat d'elements de tipus "tweet"
-Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier* que els elements que hem afegit al mètode "befone" són els que obtenim a la respota i que la seqüència amb que els obtenim és l'esperada
+
+Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que els elements que hem afegit al mètode "befone" són els que obtenim a la respota i que la seqüència amb que els obtenim és l'esperada
 
 Així per exemple, per testejar els serveis rest de "get all tweets" tindríem:
 
@@ -312,7 +313,8 @@ Així per exemple, per testejar els serveis rest de "get all tweets" tindríem:
 ```
 
 Per a comprovar els serveis rest "get tweet per id" farem una crida al serveis rest, comprovant que la resposta és un OK (http code 200) i que en el body de la respota hi ha elements de tipus "tweet"
-Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier* que l'element que hem afegit al mètode "befone" és el que obtenim a la resposta i que no obtenim cap més element
+
+Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que l'element que hem afegit al mètode "befone" és el que obtenim a la resposta i que no obtenim cap més element
 
 Per a comprovar els serveis rest "get tweet per id" tindríem:
 
@@ -345,8 +347,6 @@ Per a comprovar els serveis rest "get tweet per id" tindríem:
 	}
 
 ```
-
-
 
 La classe completa de test és:
 
@@ -449,7 +449,11 @@ public class TweetWebFluxMockWebTest {
 ### Conclusió
 
 Per a realitzar el test de serveis rest reactius utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*
+
 Per verificar la respota dels serveis rest reactius utilitzarem les funcionalitats que proporciona *org.springframework.test.web.reactive.server.WebTestClient* 
+
 Per verificar el contignut i la seqüencia de resposta dels serveis rest reactius utilitzarem *reactor.test.StepVerifier*
+
 Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia "Fer crides simulant un client als nostres serveis rest exposats de forma real"
+
 Si volem realitzar testos del negoci associat als serveis rest reactiu utilitzarem l'estratègia "Fer crides simulant un client als nostres serveis rest mockejats"
