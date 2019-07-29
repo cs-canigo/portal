@@ -158,6 +158,8 @@ Per a comprovar els serveis rest "get tweet per id" farem una crida al serveis r
 
 Cal tenir en compte que en aquest cas estem fent crides "reals", per tant, la instància repository de "tweets" ha d'estar inicialitzada. En el nostre cas, no estem atacant a una bd MongoDB real, sinó que estem utilitzant una instància "simulada" de MongoDB creada amb test containers
 
+En aquest cas no utilitzarem el component *reactor.test.StepVerifier* per a verificar els serveis rest amb reactiu ja que el connectar-nos als serveis en forma real, no podem garantir la seqüència de "tweets" de retorn
+
 La classe completa de test és:
 
 ```java
@@ -243,6 +245,233 @@ public class TweetWebFluxWebTest {
 ```
 #### Fer crides simulant un client als nostres serveis rest mockejats
 
+Per a realitzar les crides als nostres serveis rest mockejats utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient* i per verificar la respota dels serveis rest amb reactiu utilitzarem *reactor.test.StepVerifier*
+
+Per a poder verificar que la resposta és l'esperada, al inici del test introduirem elements "tweets" utilitzant el repository de tweets. Aquest el mockejarem per a no haver de tenir una bd instanciada i per poder tenir control de la resposta de cada mètode el repository
+
+Així podríem tenir un mètode que s'executi al inici del test de la següent manera:
+
+```java
+
+	@MockBean
+	TweetRepository tweetRepository;
+
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet("Hello, World!");
+		helloWorldTweet.setId("1");
+
+		secondTweet = new Tweet("Second tweet");
+		secondTweet.setId("2");
+
+		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
+
+		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
+	}
+
+```
+
+A cada test, al component *org.springframework.test.web.reactive.server.WebTestClient* li indicarem quina definició de serveis rest, amb quines funcions de WebFlux i quin repository utilitzar (el mockjejat) 
+
+Així per exemple, per testejar els serveis rest de "get all tweets" tindríem:
+
+```java
+
+	@Autowired
+	TweetRouteRouterFuntionConfig tweetRouteRouterFuntionConfig;
+
+	@Autowired
+	TweetHandlerRouterFuntionConfig tweetHandlerRouterFuntionConfig;
+
+	@Autowired
+	TweetHandler tweetHandler;
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		String uri = "/route-flux/tweets";
+
+		checkWebFluxGetAllTweets(WebTestClient
+				.bindToRouterFunction(tweetRouteRouterFuntionConfig.routeFluxRouterFunction(tweetRepository)).build()
+				.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		String uri = "/handler-flux/tweets";
+
+		checkWebFluxGetAllTweets(WebTestClient
+				.bindToRouterFunction(tweetHandlerRouterFuntionConfig.handlerFluxRouterFunction(tweetHandler)).build()
+				.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetAllTweets(Flux<Tweet> flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).expectNext(secondTweet)
+				.verifyComplete();
+	}
+
+```
+
+Per a comprovar els serveis rest "get tweet per id" tindríem:
+
+```java
+
+	@Autowired
+	TweetRouteRouterFuntionConfig tweetRouteRouterFuntionConfig;
+
+	@Autowired
+	TweetHandlerRouterFuntionConfig tweetHandlerRouterFuntionConfig;
+
+	@Autowired
+	TweetHandler tweetHandler;
+	
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		String uri = "/route-flux/tweets/{id}";
+
+		checkWebFluxGetSingleTweet(WebTestClient
+				.bindToRouterFunction(tweetRouteRouterFuntionConfig.routeFluxRouterFunction(tweetRepository)).build()
+				.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		String uri = "/handler-flux/tweets/{id}";
+
+		checkWebFluxGetSingleTweet(WebTestClient
+				.bindToRouterFunction(tweetHandlerRouterFuntionConfig.handlerFluxRouterFunction(tweetHandler)).build()
+				.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetSingleTweet(Flux<Tweet> flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).verifyComplete();
+	}
+
+```
+
+Com es pot comprovar amb el component *org.springframework.test.web.reactive.server.WebTestClient* verifiquem la definició del servei i amb *reactor.test.StepVerifier* verifiquem la seqüència d'elements de la resposta del servei reactiu, introduïts prèviament al mètode *before*
 
 
+La classe completa de test és:
 
+```java
+
+package cat.gencat.ctti.endpoints;
+
+import java.util.Collections;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.reactive.server.WebTestClient;
+
+import cat.gencat.ctti.endpoints.config.TweetHandlerRouterFuntionConfig;
+import cat.gencat.ctti.endpoints.config.TweetRouteRouterFuntionConfig;
+import cat.gencat.ctti.endpoints.handler.TweetHandler;
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = {
+		"spring.main.allow-bean-definition-overriding=true" })
+public class TweetWebFluxMockWebTest {
+
+	@Autowired
+	TweetRouteRouterFuntionConfig tweetRouteRouterFuntionConfig;
+
+	@Autowired
+	TweetHandlerRouterFuntionConfig tweetHandlerRouterFuntionConfig;
+
+	@Autowired
+	TweetHandler tweetHandler;
+
+	@MockBean
+	TweetRepository tweetRepository;
+
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet("Hello, World!");
+		helloWorldTweet.setId("1");
+
+		secondTweet = new Tweet("Second tweet");
+		secondTweet.setId("2");
+
+		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
+
+		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
+	}
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		String uri = "/route-flux/tweets";
+
+		checkWebFluxGetAllTweets(WebTestClient
+				.bindToRouterFunction(tweetRouteRouterFuntionConfig.routeFluxRouterFunction(tweetRepository)).build()
+				.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		String uri = "/handler-flux/tweets";
+
+		checkWebFluxGetAllTweets(WebTestClient
+				.bindToRouterFunction(tweetHandlerRouterFuntionConfig.handlerFluxRouterFunction(tweetHandler)).build()
+				.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetAllTweets(Flux<Tweet> flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).expectNext(secondTweet)
+				.verifyComplete();
+	}
+
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		String uri = "/route-flux/tweets/{id}";
+
+		checkWebFluxGetSingleTweet(WebTestClient
+				.bindToRouterFunction(tweetRouteRouterFuntionConfig.routeFluxRouterFunction(tweetRepository)).build()
+				.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		String uri = "/handler-flux/tweets/{id}";
+
+		checkWebFluxGetSingleTweet(WebTestClient
+				.bindToRouterFunction(tweetHandlerRouterFuntionConfig.handlerFluxRouterFunction(tweetHandler)).build()
+				.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetSingleTweet(Flux<Tweet> flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).verifyComplete();
+	}
+
+}
+
+```
