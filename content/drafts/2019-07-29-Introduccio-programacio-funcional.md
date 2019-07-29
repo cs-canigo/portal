@@ -12,25 +12,25 @@ Existeixen dos grans blocs en la programació empresarial: la programació orien
 
 #### Programació orientada a objectes 
 
-La programació orientada a objectes és la més estesa
-
-Forma part de la programació imperativa, ja que amb la programació orientada a objectes, es descriu la seqüència de passos que ha de seguir un programa per resoldre un problema
+La programació orientada a objecte forma part de la programació imperativa, ja que amb la programació orientada a objectes, es descriu la seqüència de passos que ha de seguir un programa per resoldre un problema
 
 La programació orientada a objectes utilitza estructura de dades anomenats objectes que aglutinen propietats i mètodes conjuntament amb les seves interaccions
 
-Un objecte és una estructura de dades que descriu amb la major fiabilitat possible un objecte del món real i descriu com es relaciona o interactua amb la resta del món que el rodeja
+A la programació orientatada a objecte es desciu com a objecte una estructura de dades que descriu amb la major fiabilitat possible un objecte del món real i descriu com es relaciona o interactua amb la resta del món que el rodeja
+
+En l'actualitat, en el món empresarial, la programació orientada a objectes és la més estesa
 
 #### Programació funcional
 
 La programació funcional és un paradigma de programació declarativa basat en ús de funcions
 
-El valor generat per una funció depèn en exclusiva dels arguments que l'alimenten
+La principal característica de la programació funcional es que el valor generat per una funció depèn en exclusiva dels arguments que l'alimenten
 
 A la programació funcional se centra amb "què" estem fent i no amb "com" s'està fent. Això vol dir que si utilitzem una programació funcional expressarem la nostre lògica sense descriure controls de fluxe (cicles, blucles o condicions)
 
 Encara que la programació funcional és de les més antigues, ha tingut un lleuger impacte en el món empresarial envers a altres paradigmes de programació
 
-En els últims anys hi ha hagut un repunt en la utilització de la programació funcional com a paradigma de programació
+En els últims anys, hi ha hagut un repunt en la utilització de la programació funcional com a paradigma de programació
 
 Els principals avantatges de la programació funcional són:
 
@@ -42,7 +42,7 @@ Els principals avantatges de la programació funcional són:
 
 #### Exemple programació orientada objecte vs programació funcional
 
-En el nostre exemple tenim una llista de números enters i volem saber la quantitat d'elements majors de 10 d'aquesta llista
+Per il·lustrar la diferència entre programació orientatda a objecte vs programació funcional utilitzarem el cas de volem saber la quantitat d'elements majors de 10 d'una llista de números enters
 
 Donat:
 ```java
