@@ -100,7 +100,7 @@ Així podríem tenir un mètode que s'executi al inici del test de la següent m
 
 Utilitzarem el mètode "block" per assegurar-nos que quan s'hagi executat el mètode "before" els elements han estat introduits al sistema
 
-Per a comprovar els serveis rest "all tweets" farem una crida al serveis rest, comprovant que la resposta és un OK (http code 200), que el en el body de la respota hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before"
+Per a comprovar els serveis rest "all tweets" farem una crida al serveis rest, comprovant que la resposta és un OK (http code 200), que en el body de la respota hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before"
 
 ```java
 
@@ -158,7 +158,7 @@ Per a comprovar els serveis rest "get tweet per id" farem una crida al serveis r
 
 Cal tenir en compte que en aquest cas estem fent crides "reals", per tant, la instància repository de "tweets" ha d'estar inicialitzada. En el nostre cas, no estem atacant a una bd MongoDB real, sinó que estem utilitzant una instància "simulada" de MongoDB creada amb test containers
 
-En aquest cas no utilitzarem el component *reactor.test.StepVerifier* per a verificar els serveis rest amb reactiu ja que el connectar-nos als serveis en forma real, no podem garantir la seqüència de "tweets" de retorn
+En aquest cas no utilitzarem el component *reactor.test.StepVerifier* per a verificar els serveis rest amb reactiu, ja que, al connectar-nos als serveis en forma real, no podem garantir la seqüència de "tweets" de retorn
 
 La classe completa de test és:
 
@@ -247,7 +247,7 @@ public class TweetWebFluxWebTest {
 
 Per a realitzar les crides als nostres serveis rest mockejats utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient* i per verificar la respota dels serveis rest amb reactiu utilitzarem *reactor.test.StepVerifier*
 
-Per a poder verificar que la resposta és l'esperada, al inici del test introduirem elements "tweets" utilitzant el repository de tweets. Aquest el mockejarem per a no haver de tenir una bd instanciada i per poder tenir control de la resposta de cada mètode el repository
+Per a poder verificar que la resposta és l'esperada, al inici del test introduirem elements "tweets" utilitzant el repository de tweets. Aquest el mockejarem per a no haver de tenir una bd instanciada i per poder tenir control de la resposta de cada mètode del repository
 
 Així podríem tenir un mètode que s'executi al inici del test de la següent manera:
 
@@ -258,7 +258,9 @@ Així podríem tenir un mètode que s'executi al inici del test de la següent m
 
 	Tweet helloWorldTweet;
 	Tweet secondTweet;
-
+	
+	...
+	
 	@Before
 	public void before() {
 		helloWorldTweet = new Tweet("Hello, World!");
@@ -288,6 +290,8 @@ Així per exemple, per testejar els serveis rest de "get all tweets" tindríem:
 
 	@Autowired
 	TweetHandler tweetHandler;
+	
+	...
 
 	@Test
 	public void testRouteWebFluxGetAllTweets() {
@@ -329,6 +333,8 @@ Per a comprovar els serveis rest "get tweet per id" tindríem:
 	@Autowired
 	TweetHandler tweetHandler;
 	
+	...
+	
 	@Test
 	public void testRouteWebFluxGetSingleTweet() {
 		String uri = "/route-flux/tweets/{id}";
@@ -357,7 +363,7 @@ Per a comprovar els serveis rest "get tweet per id" tindríem:
 
 ```
 
-Com es pot comprovar amb el component *org.springframework.test.web.reactive.server.WebTestClient* verifiquem la definició del servei i amb *reactor.test.StepVerifier* verifiquem la seqüència d'elements de la resposta del servei reactiu, introduïts prèviament al mètode *before*
+Com es pot comprovar, amb el component *org.springframework.test.web.reactive.server.WebTestClient* verifiquem la definició del servei i amb *reactor.test.StepVerifier* verifiquem la resposta del servei reactiu. Amb *reactor.test.StepVerifier* verifiquem la seqüència d'elements introduïts prèviament al mètode *before*
 
 
 La classe completa de test és:
