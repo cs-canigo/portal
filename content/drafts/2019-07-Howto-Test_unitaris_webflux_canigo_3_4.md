@@ -449,11 +449,11 @@ public class TweetWebFluxMockWebTest {
 ### Conclusió
 
 Per a realitzar el test de serveis rest reactius utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*
-
+<br>
 Per verificar la respota dels serveis rest reactius utilitzarem les funcionalitats que proporciona *org.springframework.test.web.reactive.server.WebTestClient* 
-
+<br>
 Per verificar el contignut i la seqüencia de resposta dels serveis rest reactius utilitzarem *reactor.test.StepVerifier*
-
+<br>
 Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia "Fer crides simulant un client als nostres serveis rest exposats de forma real"
-
+<br>
 Si volem realitzar testos del negoci associat als serveis rest reactiu utilitzarem l'estratègia "Fer crides simulant un client als nostres serveis rest mockejats"
