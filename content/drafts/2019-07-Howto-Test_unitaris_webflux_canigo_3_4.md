@@ -278,7 +278,7 @@ Així podríem tenir un mètode que s'executi al inici del test de la següent m
 
 Per a comprovar els serveis rest "all tweets" farem una crida al serveis rest, comprovant que la resposta és un OK (http code 200) i que en el body de la respota hi ha un llistat d'elements de tipus "tweet"
 
-Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que els elements que hem afegit al mètode "befone" són els que obtenim a la respota i que la seqüència amb que els obtenim és l'esperada
+Per verificar el contingut de la respota, obtindrem el fluxe del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que els elements que hem afegit al mètode "befone" són els que obtenim a la respota i que la seqüència amb que els obtenim, és l'esperada
 
 Així per exemple, per testejar els serveis rest de "get all tweets" tindríem:
 
@@ -448,9 +448,7 @@ public class TweetWebFluxMockWebTest {
 
 ### Conclusió
 
-Per a realitzar el test de serveis rest reactius utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*
-<br>
-Per verificar la respota dels serveis rest reactius utilitzarem les funcionalitats que proporciona *org.springframework.test.web.reactive.server.WebTestClient* 
+Per a simular la crida als serveis rest reactius i verificar la resposta utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*
 <br>
 Per verificar el contignut i la seqüencia de resposta dels serveis rest reactius utilitzarem *reactor.test.StepVerifier*
 <br>
