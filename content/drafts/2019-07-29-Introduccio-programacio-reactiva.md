@@ -1,7 +1,7 @@
 +++
 date        = "2019-07-29"
 title       = "Introducció programació reactiva"
-description = "Introducció als conceptes de programació reactiva"
+description = "Introducció al concepte de programació reactiva"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 +++

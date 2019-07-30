@@ -1,7 +1,7 @@
 +++
 date        = "2019-07-29"
 title       = "Introducció programació funcional"
-description = "Introducció als conceptes de programació funcional"
+description = "Introducció al concepte de programació funcional"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 +++
