@@ -14,7 +14,7 @@ weight	    = 4
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |--------------------------------- 	 |---------------------------------- |
-|              3.4.0          	  	 |                3.4.0	             |
+|              3.4.0 LTS          	  	 |                3.4.0	             |
 
 |          Dependències externes   	 	|      Canigó 3.4.0     |
 |--------------------------------- 	 	|---------------------- |
@@ -50,6 +50,16 @@ S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors i
 |  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE       			|
 
 Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
+
+Entregables associats a Canigó 3.4
+
+|          Entregable  |     Versió      |
+|--------------------------------- 	 |---------------------------------- |
+|              Entorn de desenvolupament 	|                3.0.0	             |
+|              Plugin eclipse 			|                3.2.6	             |
+|              Archetype 			|                1.6.2	             |
+
+
 
 ## Canigó 3.2
 
