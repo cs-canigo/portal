@@ -8,8 +8,10 @@ key = ""
 +++
 
 Durant el mes de Juliol s'han dut a terme sessions amb el proveïdor T-Systems i l'àmbit de l'Agència Tributària de Catalunya per tal d'abordar nous projectes pilot per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline.
+
 Aquestes **sessions formatives i d'establiment de plans d'acció** ha permès planificar l'inici d'aquests projectes que, en el cas de T-Systems, ja han estat iniciats per a tres aplicacions del Departament de Justícia i programades per a l'Octubre en el cas de l'Agència Tributària de Catalunya.
-<br/>
+
+
 A continuació expliquem quin és el funcionament de l'autoservei per a la construcció i desplegament d'aplicacions.
 
 ## Funcionament

@@ -9,17 +9,17 @@ key         = "AGOST2019"
 
 ### A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2 i/o Spring anterior a la versió 3.1.2
+Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2 i/o Spring anterior a la versió 3.1.2.
 
 <br>
 
 ### Introducció al problema
 
-El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven Canigó 2
+El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven Canigó 2.
 
-El problema s'originava si hi havia una alta utilització del component **net.gencat.ctti.canigo.services.web.taglib.util.TagUtil** de la llibreria **canigo-services-web** de Canigó 2
+El problema s'originava si hi havia una alta utilització del component **net.gencat.ctti.canigo.services.web.taglib.util.TagUtil** de la llibreria **canigo-services-web** de Canigó 2.
 
-El problema generava un bloqueig als threads del servidor d'aplicacions i acabava desestabilitzant el sistema
+El problema generava un bloqueig als threads del servidor d'aplicacions i acabava desestabilitzant el sistema.
 
 Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
 
@@ -58,9 +58,9 @@ El problema radica en la forma de llistar i retornar un Bean de Spring. A la ver
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-En el bug s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché
+En el bug s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché.
 
-El bug va ser resolt a la versió 3.1.2 de Spring afegint una caché
+El bug va ser resolt a la versió 3.1.2 de Spring afegint una caché.
 
 Es pot consultar el detall de la resolució al següent commit de Spring:
 
@@ -70,21 +70,21 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 ### Solució al problema
 
-Hi ha 3 formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring
+Hi ha diverses formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring.
 
-Des de CS Canigó recomanaríem la solució d'afegir una caché a nivell de Spring
+Des de CS Canigó recomanem aplicar la solució d'afegir una caché a nivell de Spring.
 
 <br></br>
 
 #### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
 
-Amb aquesta solució es mitiga el problema, no es resolt, ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2
+Amb aquesta solució es mitiga el problema, no es resol, ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2.
 
-Des de CS Canigó no es recomanaria l'utilització d'aquesta solució
+Des de CS Canigó **no es recomana la utilització d'aquesta solució**.
 
-Canigó 2, per obtenir els beans de Spring fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeansOfType**
+Canigó 2, per obtenir els beans de Spring, fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeansOfType**
 
-Així, per exemple, per obtenir el servei per escriure a log des del component **TagUtil**, s'obté a partir de la crida
+Així, per exemple, per obtenir el servei per escriure a log des del component **TagUtil**, s'obté a partir de la següent crida:
 
 ```
 
@@ -94,25 +94,25 @@ LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanO
 
 ```
 
-El component **TagUtil** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*
+El component **TagUtil** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*.
 
 Per exemple:
 ```
 
       } else if (!(aTag instanceof OptionsFieldTag)) {
-         
+
          LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
                                                                                                    .getServletContext(),
                LoggingService.class);
 
          if (logService != null) {
-            
+
             logService.getLog(TagUtil.class)
                       .info("No bean found in tagsConfiguration property under styleId " +
                aTag.getStyleId() + " for bean " + aTag.getClass().getName());
          }
 
-         
+
       } else {
          LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
                                                                                                    .getServletContext(),
@@ -125,9 +125,9 @@ Per exemple:
 
 ```
 
-Aquesta forma no optima d'obtenir el Bean fa que eflueixi ràpidament el problema d'optimització del retorn de Beans de Spring 
+Aquesta forma no òptima d'obtenir el Bean fa que eflueixi ràpidament el problema d'optimització del retorn de Beans de Spring.
 
-Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global
+Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global.
 
 Així per exemple a **Tagutil** tindríem:
 
@@ -135,21 +135,21 @@ Així per exemple a **Tagutil** tindríem:
 
 ...
 public class TagUtil {
-	
+
 	private static LoggingService logService;
-    
+
 ...
 
 ```
 
-I abans de l'utilització del Bean LoggingService consultariem si aquest ja ha estat carregat anteriorment o no, per exemple:
+I abans de la utilització del Bean LoggingService consultaríem si aquest ja ha estat carregat anteriorment o no, per exemple:
 
 ```
 
 if (logService == null)
 					logService = (LoggingService) WebApplicationContextUtils
 						.getBeanOfType(aTag.getPageContext().getServletContext(), LoggingService.class);
-				
+
 				if (logService != null) {
 					logService.getLog(TagUtil.class)
 							.error("Class from JSP " + aTag.getClass().getName()
@@ -159,27 +159,27 @@ if (logService == null)
 
 ```
 
-D'aquesta manera només li demanaríem a Spring que ens retornés el Bean una vegada
+D'aquesta manera només li demanaríem a Spring que ens retornés el Bean una vegada.
 
-S'ha de tenir en compte que si es vol aplicar aquesta solució s'hauran de modificar tots els components que utilitzin **WebApplicationContextUtils** mètode **getBeansOfType**:
+S'ha de tenir present que si es vol aplicar aquesta solució s'hauran de modificar tots els components que utilitzin **WebApplicationContextUtils** mètode **getBeansOfType**:
 
 - Filtre de Loggin
 - Filtre de Acegi
 - Mode tag
 
 <br>
-	
+
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
-A Canigó 2 la forma d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**
+A Canigó 2 la forma d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**.
 
-Per no haver de tocar als n llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component
+Per no haver de tocar als n llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component.
 
-Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el bug de Spring
+Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el bug de Spring.
 
 https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
 
-Així, podríem tenir el component **WebApplicationContextUtils** amb la caché de la següent forma:
+Així, podríem tenir el component **WebApplicationContextUtils** amb la caché de la següent manera:
 
 ```java
 
@@ -226,9 +226,9 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 
 	private static Map getBeansOfType(WebApplicationContext webAppContext, Class clazz) {
 		Map result = null;
-		
+
 		String[] beanNames = getBeanNamesForType(webAppContext, clazz);
-		
+
 		if (beanNames != null) {
 			result = CollectionFactory.createLinkedMapIfPossible(beanNames.length);
 			for (int i = 0; i < beanNames.length; i++) {
@@ -236,22 +236,22 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 				result.put(beanName, webAppContext.getBean(beanName));
 			}
 		}
-		
+
 		return result;
 	}
 
 ```
 <br>
-	
+
 #### Solució 3: afegir una caché a nivell de Spring
 
-Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, es necessari afegir una caché a nivell global 
+Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, es necessari afegir una caché a nivell global .
 
 La solució és homologa a la aportada al blog:
 
 http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/
 
-La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*
+La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*.
 
 La implementació amb caché de **DefaultListableBeanFactory** podria ser:
 
@@ -265,7 +265,7 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 
 public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
     private static Logger log = Logger.getLogger(CachingByTypeBeanFactory.class);
-    
+
 	/** Map of singleton bean names keyed by bean class */
 	private final Map<Class<?>, String[]> singletonBeanNamesByType = new ConcurrentHashMap<Class<?>, String[]>();
 
@@ -282,24 +282,24 @@ public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
 		if (type == null || !allowEagerInit) {
 			return super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
 		}
-		
+
 		Map<Class<?>, String[]> cache = includeNonSingletons ?
 				this.nonSingletonBeanNamesByType : this.singletonBeanNamesByType;
-		
+
 		String[] resolvedBeanNames = cache.get(type);
 		if (resolvedBeanNames != null) {
 			return resolvedBeanNames;
 		}
-		
+
 		resolvedBeanNames = super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
 		cache.put(type, resolvedBeanNames);
-		
+
 		return resolvedBeanNames;
     }
 
 ```
 
-Creem una factoria que creï la nova implementació amb caché de **DefaultListableBeanFactory**
+Creem una factoria que creï la nova implementació amb caché de **DefaultListableBeanFactory**:
 
 ```java
 
@@ -330,8 +330,8 @@ Registrarem aquesta factory al web.xml
 
 ### Conclusió
 
-Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució s'hauria d'aplicar
+Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució caldria aplicar.
 
-La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring
+**La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring**.
 
-Si necessiteu més informació, preferiblement, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN), o en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat)
+Si necessiteu més informació, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
