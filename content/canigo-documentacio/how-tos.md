@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Resolució problema optimització Spring a Canigó 2] (/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/)
+
 - [Afegir les dev tools de Spring a Canigó 3.4.0] (/howtos/2019-04-Howto-afegir_dev_tools_spring/)
 
 - [Test unitaris amb programació reactiva a Canigó 3.4] (/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/)
