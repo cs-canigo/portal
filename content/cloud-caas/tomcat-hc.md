@@ -189,14 +189,15 @@ Aquesta configuració presenta algunes diferències en funció de la versió de 
 
 La versió de **Hazelcast 3.12.x és compatible amb java 8 o superior.**
 
-La versió de **Hazelcast 3.11.x és compatible amb java 6 i 7.**  
+La versió de **Hazelcast 3.11.x és compatible amb java 6 i 7.**
 
-#### Configuració de Hazelcast 3.12.x
+<br/>
+#### Configuració de Hazelcast 3.12.x (java 8 o superior)
 
 Per configurar Hazelcast a Kubernetes/Openshift cal definir al fitxer xml les següents propietats:
 
 - **group/name** : Defineix el nom del cluster de Hazelcast
-- **hazelcast/network/join** : En aquest apartat es defineixen els diferents protocols i serveis que defineixen els nodes del cluster. Pel cas de Kubernetes i Openshift, cal desactivar tots els protocols (**enabled="false"**) i deixar activat només el de **kubernetes (**enabled="true"**). Addicionalment, a l'element kubernetes cal afegir el **\<service-dns\>** amb el nom de dsn del servei de kubernetes descrit anteriorment. 
+- **hazelcast/network/join** : En aquest apartat es defineixen els diferents protocols i serveis que defineixen els nodes del cluster. Pel cas de Kubernetes i Openshift, cal desactivar tots els protocols (**enabled="false"**) i deixar activat només el de **kubernetes (enabled="true")**. Addicionalment, a l'element kubernetes cal afegir el **\<service-dns\>** amb el nom de dsn del servei de kubernetes descrit anteriorment. 
 
 El dns de servei de kubernetes es construeix seguint el patró **\<nom_servei\>.\<nom_namespace\>.svc.cluster.local**
 
@@ -238,7 +239,7 @@ Podeu trobar més informació respecte la configuració de Hazelcast a:
 - https://github.com/hazelcast/hazelcast-kubernetes/tree/v1.5.1
 
 
-#### Configuració de Hazelcast 3.11.x
+#### Configuració de Hazelcast 3.11.x (java 6 o 7)
 
 Per configurar Hazelcast a Kubernetes/Openshift cal definir al fitxer xml les següents propietats:
 
