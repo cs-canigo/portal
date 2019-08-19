@@ -115,9 +115,29 @@ Per una banda cal configurar els elements bàsics de Kubernetes pel Tomcat:
 
 - **Deployment/DeploymentConfig** amb la imatge de l'aplicació
 - **Service** per exposar l'aplicació a Kubernetes
-- **Ingress/Route** per exposar l'aplicació cal a Internet/Intranet. És molt important que l'Ingress estigui configurat per a què utilitzi Sticki Session.
+- **Ingress/Route** per exposar l'aplicació cal a Internet/Intranet. És molt important que l'Ingress estigui configurat per a què utilitzi Sticky Session.
 
-Addicionalment a la configuració estàndard de qualsevol Tomcat, cal afegir la següent configuració addicional:
+Exemple de Ingress amb **Sticky Session** a Kubernetes.
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tomcat-hc-85
+  annotations:
+    ingress.bluemix.net/sticky-cookie-services: "serviceName=tomcat-hc-85 name=tomcat-hc-85"
+spec:
+  rules:
+  - host: www.tomcat85-hc.k8s.gencat.cat
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: tomcat-hc-85
+          servicePort: 80
+```
+
+Addicionalment a la configuració estàndard de qualsevol Tomcat, cal afegir la següent configuració:
 
  - **ConfigMap** amb el fitxer de configuració de Hazelcast
  - **Service addicional** que utilitza Hazelcast per descobrir automàticament els pods com a elements dins del cluster de Hazelcast
@@ -288,10 +308,7 @@ Podeu trobar més informació respecte a la configuració de Hazelcast a:
 
 - https://github.com/hazelcast/hazelcast/blob/v3.11.4/hazelcast/src/main/resources/hazelcast-full-example.xml
 - https://github.com/hazelcast/hazelcast-kubernetes/tree/v1.3.1
-- 
+
 ## Exemple
 
 Podeu trobar un exemple de la solució proposada a https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc-test
-
-
-
