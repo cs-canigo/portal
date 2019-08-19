@@ -192,6 +192,7 @@ La versió de **Hazelcast 3.12.x és compatible amb java 8 o superior.**
 
 La versió de **Hazelcast 3.11.x és compatible amb java 6 i 7.**
 
+
 #### Configuració de Hazelcast 3.12.x
 
 Per configurar Hazelcast a Kubernetes/Openshift cal definir al fitxer xml les següents propietats:
