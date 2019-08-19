@@ -100,7 +100,7 @@ La gestió de la sessió és la següent:
 
 - Quan el nou pod de Tomcat, es torna a aixecar, el Cluster de Hazelcast descubriex el nou membre i li proporciona total la informació que té, quedant el nou node tal com estan la resta de nodes.
 
-![Recuparació node](/related/cloud/tomcat-hc-7.png)
+![Recuparació node](/related/cloud/tomcat-hc-8.png)
 
 
 ## Configuració
