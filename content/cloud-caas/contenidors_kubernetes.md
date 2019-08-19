@@ -13,6 +13,7 @@ Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que a
 En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes i es proporcionen diversos exemples.
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
+
 * IBM Bluemix al cloud públic. **Versió Kubernetes 1.12.5. Versió containerd 1.1.5**
 * IBM CaaS al cloud privat. **Versió Kubernetes 1.11.5. Versió docker 17.3.2**
 
