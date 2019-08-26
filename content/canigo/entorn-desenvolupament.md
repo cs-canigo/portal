@@ -53,7 +53,7 @@ En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés
 
 * Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les comandes `vagrant up` i `vagrant halt` per fer aquestes accions.
 * Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense prèvia consulta a l'equip del CS Canigó.
-* **Hosts Windows/Mac**: En el cas que tingueu problemes de codificació en el moment d'arrencar l'entorn, es pot deure a que els fitxers de text (p.e. `provision.sh`) s'han adaptat automàticament als caracters EOL del host. En aquest cas s'ha d'indicar a GIT que no faci aquesta adaptació automàtica (respectant el contingut original), amb les següents dues comandes i tornant a instal·lar de zero l'entorn (`git clone` + `vagrant up`).
+* **Hosts Windows/Mac**: En el cas que hi hagi problemes de codificació en el moment d'arrencar l'entorn, es pot deure al fet que els fitxers de text (p.e. `provision.sh`) s'han adaptat automàticament als caràcters EOL del host. En aquest cas s'ha d'indicar a GIT que no faci aquesta adaptació automàtica (respectant el contingut original), amb les següents dues comandes i tornant a instal·lar de zero l'entorn (`git clone` + `vagrant up`).
 
         git config --global core.autocrlf false
         vagrant destroy -f
