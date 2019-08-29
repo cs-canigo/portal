@@ -40,7 +40,7 @@ A continuació, descriurem cadascun d'aquests subtipus.
 Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
 * Operar amb servei de **custodia de codi**.
-* **Concedir permisos** a altres companys per accedir com a Developers o Masters al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
+* **Concedir permisos** a altres companys per accedir com a Developers o Mantainers al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
 * **Crear nous projectes** dins del grup de l'aplicació.
 * Accedir als serveis d'**integració contínua**.
 * Accedir al servei de gestió de **binaris** per dipositar i recollir arxius.
@@ -109,14 +109,14 @@ Per a concedir accés sobre un projecte caldrà:
 * Mitjançant el menú superior cal seleccionar "**Settings**" i, dins aquest ,"**Members**".
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella **cercar per NIF**.
 * Escollir el **rol** que ha de tenir l'usuari dins el projecte:
-	* Rol Master: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
+	* Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
 	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
 * Prémer el botó de "**Add to Project**"
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
 
-En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
+En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
 

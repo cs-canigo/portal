@@ -1,5 +1,5 @@
 +++
-date        = "2018-12-18T13:03:42+01:00"
+date        = "2019-08-29"
 title       = "Integració d'oficines al SIC"
 description = ""
 sections    = ""
@@ -59,5 +59,6 @@ String arxiuDesti = "${WORKSPACE}/treball/arxiuDest.txt"
 cat.gencat.ctti.sic.oficines.utils.FileUtils.copyFile(arxiuOrigen, arxiuDesti)
 ```
 
-Per a més informació, podeu consultar la [presentació powerpoint](/related/sic/integracioOficines5.5.1.pptx) on es descriu amb detall les característiques d'integració d'oficines al SIC o a l'Àrea d'Arquitectura CTTI.
+<br/>
+Si teniu qualsevol dubte utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
 

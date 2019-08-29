@@ -33,7 +33,7 @@ Per tant, es contemplen tres tipus de modalitats d'ús dels serveis:
 * **Tipus de solució**: servei de control de versions.
 * **Com crear un compte**: introduir credencials d'accés GICAR, essent imperatiu disposar d'adreça de correu associada, i realitzar el procés d'alta del perfil.
 * **Qui pot accedir**: els Release Manager, responsables de lot, tècnics de CPD i els membres de l'equip de desenvolupament als que s'atorgui accés.
-* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s, ja sigui com a desenvolupador (Developer) o com a nou integrant del grup de Release Manager (Master).
+* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s, ja sigui com a desenvolupador (Developer) o com a nou integrant del grup de Release Manager (Mantainer).
 * **Com organitzar els projectes**: els projectes s'ubiquen dins el grup del codi d'aplicació, creant tants projectes com conjunts de codi susceptibles de ser versionats de forma independent.
 * **Quan i com fer el lliurament d'una nova versió**: un cop validat als entorns de desenvolupament, es consolidarà, es realitzarà l'increment de versió i es pujarà al repositori. Si el projecte disposa d'una tasca de construcció i desplegament automàtic i l'actualització s'ha fet sobre la branca MASTER, es dispararà la tasca corresponent al Jenkins.
 
@@ -46,7 +46,7 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 * **Com accedir**: https://hudson.intranet.gencat.cat/hudson/ mitjançant usuari GICAR.
 * **Tipus de solució**: servei per a la integració contínua (construcció, anàlisi, desplegament, proves... etcètera).
 * **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
-* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Master). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
+* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Mantainer). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
 * **Com fer el lliurament d'una nova versió**: l'actualització del codi de la branca MASTER dispararà la tasca de construcció i desplegament (job de tipus "pipeline").
 * **Quines passes componen el desplegament automàtic**: construcció, generació de tags i desplegament als diferents entorns. Opcionalment es poden realitzar tests unitaris, tests d'integració i anàlisi de codi font.
 * **Quines passes de desplegament requereixen conformitat**: el pas a preproducció i producció requeriran de conformitat prèvia (etapes anteriors verificades). En funció de si el desplegament és semiautomàtic o automàtic per CPD, aquesta conformitat serà responsabilitat del grup de Release Managers o dels tècnics de CPD (respectivament).
@@ -66,7 +66,7 @@ Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 * **Com accedir**: https://bin.sic.intranet.gencat.cat/ mitjançant usuari GICAR.
 * **Tipus de solució**: servei de lliurament i recuperació d'artefactes.
 * **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
-* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Master). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
+* **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Mantainer). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
 * **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada.
 * **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
 
