@@ -26,6 +26,8 @@ Per tant, es contemplen tres tipus de modalitats d'ús dels serveis:
 	- Els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
 * **Sense integrar**, per aplicacions exemptes de custodia de codi:
     - Si no es fa ús d'un altre sistema homologat, els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
+
+Les modalitats **Sense automatització** i **Sense integrar** són casos excepcionals que han de ser validats per l'Àrea d'Arquitectura del CTTI.
     
 ## Custodia de codi (GitLab)
 
@@ -48,7 +50,7 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 * **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
 * **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Mantainer). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
 * **Com fer el lliurament d'una nova versió**: l'actualització del codi de la branca MASTER dispararà la tasca de construcció i desplegament (job de tipus "pipeline").
-* **Quines passes componen el desplegament automàtic**: construcció, generació de tags i desplegament als diferents entorns. Opcionalment es poden realitzar tests unitaris, tests d'integració i anàlisi de codi font.
+* **Quines passes componen el desplegament automàtic**: construcció, generació de tags i desplegament als diferents entorns. Es contempla l'execució de tests unitaris, tests d'integració i anàlisi de codi font que s'aniran afegint progressivament que no es podran desactivar pel desenvolupador a no ser que hi hagi una causa que ho justifiqui.
 * **Quines passes de desplegament requereixen conformitat**: el pas a preproducció i producció requeriran de conformitat prèvia (etapes anteriors verificades). En funció de si el desplegament és semiautomàtic o automàtic per CPD, aquesta conformitat serà responsabilitat del grup de Release Managers o dels tècnics de CPD (respectivament).
 
 ### Nexus
@@ -67,7 +69,7 @@ Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 * **Tipus de solució**: servei de lliurament i recuperació d'artefactes.
 * **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
 * **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Mantainer). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
-* **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada.
+* **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada. Si l'aplicació no està exempta de repositar codi al Git, abans de cada pujada haurà d'assegurar-se d'haver **actualitzat el codi font** o el sistema no li permetrà realitzar la operació.
 * **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
 
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
