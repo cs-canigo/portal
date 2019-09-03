@@ -26,13 +26,13 @@ En aquest document es presenta una la solució que ofereix GICAR, per a donar al
 
 A continuació es mostren les dades que es faciliten des de GICAR actualment quan un usuari s’autentica a una aplicació si l'autenticació es fa OK:
 
-![Integració Aplicacions GICAR](/related/gicar/autoritzacio-previa.PNG)
+![Integració Aplicacions GICAR](/related/gicar/autoritzacio-previa.png)
 
 ## Arquitectura d'integració amb GICAR incorporant l'autorització
 
 A continuació es mostren les dades que es faciliten des de GICAR actualment quan un usuari s’autentica a una aplicació si l'autenticació es fa OK:
 
-![Integració Aplicacions GICAR](/related/gicar/autoritzacio-final.PNG)
+![Integració Aplicacions GICAR](/related/gicar/autoritzacio-final.png)
 
 ### Exemple de com es construeix la capçalera GICAR_MEMBER 
 
@@ -62,11 +62,11 @@ Des d’àmbit es podran disposar de dos tipus de privilegis que permetran:
 
 1. Rols d’autorització simples: representen un rol/permís dins d’una aplicació.
 
-![Integració Aplicacions GICAR](/related/gicar/autoritzacio-exemple1.PNG)
+![Integració Aplicacions GICAR](/related/gicar/autoritzacio-ex1.png)
 
 1. Rols d’autorització múltiples: representen un conjunt de rols d’autorització simples. Al assignar un rol d’assignació múltiple s’assignen de facto tots els simples que aquest conté.
 
-![Integració Aplicacions GICAR](/related/gicar/autoritzacio-exemple2.PNG)
+![Integració Aplicacions GICAR](/related/gicar/autoritzacio-ex2.png)
 
 ## Utilització del mòdul de gestió d'autoritzacions
 
