@@ -37,7 +37,7 @@ A continuació es mostren les dades que es faciliten des de GICAR actualment qua
 ### Exemple de com es construeix la capçalera GICAR_MEMBER 
 
 
-	HTTP_GICAR_MEMBER --> CN=VPN_PRE-GICARDC,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat^CN=VPN_GENERIC-GICARDC,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat^CN=ADMIN-OTGICAR-GICARDC,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat^CN=GESNUS_N3_Escriptura,OU=GESNUS,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat^CN=VPN_GENERIC,OU=VPN,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat^CN=Usuaris_ColectiuT3,OU=Grups,DC=produccio,DC=dc,DC=intranet,DC=gencat,DC=cat
+	HTTP_GICAR_MEMBERL --> CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
 
 Els grups estaran separats pel caràcter "^"
 
