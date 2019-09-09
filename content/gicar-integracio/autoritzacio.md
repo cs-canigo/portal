@@ -34,7 +34,7 @@ A continuació es mostren les dades que es faciliten des de GICAR actualment qua
 
 ![Integració Aplicacions GICAR](/related/gicar/autoritzacio-final.png)
 
-### Exemple de com es construeix la capçalera GICAR_MEMBER 
+### Exemple de com es construeix la capçalera GICAR_MEMBERL 
 
 
 	HTTP_GICAR_MEMBERL --> CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
