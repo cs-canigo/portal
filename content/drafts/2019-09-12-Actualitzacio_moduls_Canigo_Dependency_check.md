@@ -19,9 +19,9 @@ El Dependency check és una utilitat d’anàlisi de la composició de programar
 
 El motor principal conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
 
-S'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats
+S'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
 
-Un exemple d'informe de vulnerabilitats és:
+Un exemple d'informe de vulnerabilitats podria ser:
 
 ![Exemple informe vulnerabilitats](https://www.hascode.com/wp-content/uploads/2017/10/vulnerabilities-report.png)
 
