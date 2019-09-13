@@ -21,6 +21,17 @@ El motor principal conté una sèrie d'analitzadors que inspeccionen les depend�
 
 S'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats
 
+Un exemple d'informe de vulnerabilitats és:
+
+![Exemple informe vulnerabilitats](https://www.hascode.com/wp-content/uploads/2017/10/vulnerabilities-report.png)
+
+On es pot observar que el projecte "owsap-dendency-check-sample" té les següents vulnerabilitats:
+
+- commons-beanutils-1.7.0
+- commons-collections-2.1
+- commons-fileupload-1.0
+- struts-1.2.9
+
 Podeu trobar més informació sobre el Dependency Check a:
 
 https://www.owasp.org/index.php/OWASP_Dependency_Check
