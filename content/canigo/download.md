@@ -17,6 +17,7 @@ weight	    = 4
 |              3.4.0 LTS          	  	 |                3.4.1	             |
 
 
+
 |          Dependències externes   |      Canigó 3.4.0     |      Canigó 3.4.1     |
 |--------------------------------- |---------------------- |---------------------- |
 | springframework		   |  5.1.5.RELEASE        |  5.1.5.RELEASE        |
