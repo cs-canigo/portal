@@ -17,8 +17,25 @@ weight	    = 4
 |              3.4.0 LTS          	  	 |                3.4.0	             |
 
 
-| Dependències externes            | Canigó 3.4.0          | Canigó 3.4.1          |
+|          Dependències externes   |      Canigó 3.4.0     |      Canigó 3.4.1     |
 |--------------------------------- |---------------------- |---------------------- |
+| springframework		   |  5.1.5.RELEASE        |  5.1.5.RELEASE        |
+| spring.security		   |  5.1.4.RELEASE        |  5.1.5.RELEASE        |
+| spring.data			   |  2.1.5.RELEASE        |  2.1.5.RELEASE        |
+| springframework.boot         	   |  2.1.3.RELEASE        |  2.1.3.RELEASE        |
+| log4j				   |  2.11.0		   |  2.11.0		   |
+| slf4j				   |  1.7.25		   |  1.7.25		   |
+| junit				   |  4.12	           |  4.12		   |
+| hamcrest			   |  1.3		   |  1.3		   |
+| mockito			   |  2.23.4		   |  2.23.4		   |
+| json.path.assert		   |  2.4.0		   |  2.4.0		   |
+| jsonassert			   |  2.4.0		   |  2.4.0		   |
+| jackson			   |  2.9.5		   |  2.9.9		   |
+| springfox-swagger2		   |  2.7.0		   |  2.7.0		   |
+| querydsl			   |  4.2.1		   |  4.2.1		   |
+| hibernate			   |  5.3.7.Final	   |  5.3.7.Final	   |
+| mongodb.driver		   |  3.10.1		   |  3.10.1		   |
+| mongodb-driver-reactivestreams   |  1.9.2		   |  1.9.2		   | 
 
 Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
 https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions
