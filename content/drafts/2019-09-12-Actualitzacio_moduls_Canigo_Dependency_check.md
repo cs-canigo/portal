@@ -23,7 +23,7 @@ S'ha configurat el goal de maven en el mòdul root de Canigó, així tots els m�
 
 Un exemple d'informe de vulnerabilitats podria ser:
 
-![Exemple informe vulnerabilitats](https://www.hascode.com/wp-content/uploads/2017/10/vulnerabilities-report.png)
+![Exemple informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report.png)
 
 On es pot observar que el projecte "owsap-dendency-check-sample" té les següents vulnerabilitats:
 
