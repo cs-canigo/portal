@@ -11,7 +11,7 @@ weight      = 1
 [**Canigó 3.4.1**] (https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project+%3D+CAN+AND+fixVersion+%3D+3.4.1) (12/09/2018)
 
 - [Dependency Check] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2373)
-	- Actualització llibreries depenens dels mòduls passant el dependency check
+	- Actualització llibreries depenent dels mòduls passant el dependency check
 
 [**Canigó 3.4.0**] (https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project+%3D+CAN+AND+fixVersion+%3D+3.4.0) (29/03/2018)
 
