@@ -17,7 +17,7 @@ weight	    = 4
 |              3.4.0 LTS          	  	 |                3.4.0	             |
 
 
-| Dependències externes            | Canigó 3.4.0          | Canigó 3.4.1          | 
+| Dependències externes            | Canigó 3.4.0          | Canigó 3.4.1          |
 |--------------------------------- |---------------------- |---------------------- |
 
 Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
