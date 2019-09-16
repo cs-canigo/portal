@@ -15,7 +15,7 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 ## Introducció
 
-Les aplicacions estan composades de divereses llibreries externes que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització). Aquestes llibreries poden tenir forats de seguretat i es pot comprometre llavors la seguretat de l'aplicació.
+Les aplicacions estan composades de divereses llibreries externes que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització). Aquestes llibreries poden tenir forats de seguretat i poden comprometre la seguretat de l'aplicació.
 
 En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
 
