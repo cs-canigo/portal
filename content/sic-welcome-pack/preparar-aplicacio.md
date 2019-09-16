@@ -10,34 +10,69 @@ weight = 2
 
 ## Introducció
 
-En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes, s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció dels corresponents jobs de desplegament.
+En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes, s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament.
 
 ## Lliurament de codi font
 
 Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi font (SCM - Source Code Management) del SIC:
 
 * Els projectes han de crear-se dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs i creació de peticions Remedy s'associïn a l'aplicació corresponent.
-* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de [Binaris](https://bin.sic.intranet.gencat.cat).
-* Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a **Release Managers** seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
-* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que treballaran les pipelines de Jenkins.
-* Les pipelines de Jenkins seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS definitius un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
+* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
+* Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
+* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que treballaran les pipelines de construcció i desplegament.
+* Les pipelines seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS de versió definitiva un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
 
 ## Estructura de projectes
 L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Contínua:
 
-* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul o un programa sense fragments independents.
+* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'scripts o un programa sense fragments independents.
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
-* Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, cal crear l’arxiu **sic.yml** que albergarà la versió funcional del projecte. Per exemple: “version: 1.1.0”.
+* Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn on es desplegaran (ús profiles maven o similar).
+* Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, cal crear l’arxiu **sic.yml** que contindrà la versió funcional del projecte. Per exemple: “version: 1.1.0”.
 Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.
 * Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració **aca.yml** que caldrà ubicar dins la mateixa carpeta /sic/.
 * No es permet l'ús de versions **Snapshot**.
-* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de **plans** i scripts a una carpeta independent. 
+* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de **plans** i scripts a una carpeta independent.
+
+### Aplicacions APEX i PL/SQL, i altres projectes de desplegament d'scripts a BBDD
+
+Es tracta de projectes que es fonamenten en l'execució d'scripts a BBDD, a part de poder incloure contingut estàtic, per als quals ha estat establerta un criteri d'estructuració dins el sistema de gestió del codi font:
+Es tracta de projectes que es fonamenten en l'execució d'scripts a BBDD, a part de poder incloure contingut estàtic, per als quals ha estat establerta un criteri d'estructuració dins el sistema de gestió del codi font:
+
+![Jenkins](/related/sic/estructura_projectes_apex.png)
+<br/>
+
+On:
+* **docs**: directori per emmagatzemar documentació (típicament manuals d'usuari i d'explotació).
+* **bin**: directori per emmagatzemar binaris com Oracle Reports, BI Publishers, contingut estàtic i altres.
+* **sql_scripts**: directori per emmagatzemar tot el codi, que pot estar organitzat en subcarpetes a criteri del seu responsable. Caldrà incloure el fitxer de **plans** a la carpeta principal que serà el fitxer encarregat de definir els scripts a executar i el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
+
+El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia, el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
+Els tipus d'objectes inicialment contemplats són:
+
+|Tipus|Instrucció única|Extensió recomanada|Comentari|
+
+|-----------|----------|----------|----------|
+|Taula|No|.sql|Per modificar, alter table|
+|Vista|Sí|.sql||
+|Índex|Sí|.sql|Per modificar, drop + create|
+|Trigger|Sí|.sql||
+|Restricció|No|.sql|Per modificar, alter table|
+|Vista materialitzada|Sí|.sql|Per modificar, drop + create|
+|Tipus|Sí|.sql||
+|Seqüència|Sí|.sql|Per modificar, drop + create|
+|Sinònim|Sí|.sql||
+|Enllaç de BD|Sí|.sql|Per modificar, drop + create|
+|Especificació de paquet|Sí|.pks||
+|Cos de paquet|Sí|.pkb||
+|Procediment|Sí|.sql||
+|Funció|Sí|.sql||
 
 ## Llibreries
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
 
 * **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
-* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant jobs de Jenkins addicionals.
+* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
 * **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
 
 Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
@@ -49,12 +84,11 @@ Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actu
 * Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats. Ambdues modalitats delegaran qualsevol tasca prèvia al desplegament (backup, preparació de marxa enrere...) als tècnics de CPD.
 * **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés de desplegament.
 
-## Funcionament dels jobs de Jenkins
-En realitzar una pujada de codi sobre la branca MASTER, si el projecte té un job de Jenkins associat, automàticament es llençarà la canonada de desplegament:
+## Funcionament de les pipelines de construcció i desplegament
+En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà:
 
 * Els jobs pipeline realitzen multitud de tasques encadenades mitjançant **STAGES**. En cas de produir-se alguna incidència, l'execució es cancel·larà i notificarà del que ha passat.
-* Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG definitiu**.
-* Els artefactes es construiran una sola vegada a l’etapa de **BUILD** i seran els que es desplegaran als diferents entorns. No es contempla, doncs, condicionar la construcció d’artefactes a l’entorn on es desplegaran (ús profiles maven o similar).
+* Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG de versió definitiva**.
 * Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
 * Els jobs **notificaran** dels resultats a les adreces de correu assignades.
 * En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
