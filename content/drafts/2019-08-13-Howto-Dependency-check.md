@@ -9,28 +9,27 @@ key         = "AGOST2019"
 
 ## A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells perfils tècnics que hagin d'automatitzar les comprovacions de dependències vulnerables a les aplicacions amb Canigó.
+Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin automatitzar les comprovacions de dependències vulnerables per aplicacions amb Canigó.
 
 ## Introducció
 
-Les aplicacions estan composades de divereses llibreries que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització), però si aquestes llibreries tenen forats de seguretat, es pot comprometre llavors la seguretat de l'aplicació, i segons l'àmbit i abast pot haver des d'una fuga d'informació a la caiguda de infraestructures.
+En una aplicació és important identificar i solucionar vulnerabilitats conegudes.
 
-En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
+Una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats.
 
-El plugin `org.owasp:dependency-check-maven` per Maven automatiza aquesta comprovació de dependències, i en fa un report amb els resultats. A continuació s'adjunta una captura d'exemple:
+El projecte Dependency check és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte
 
-![exemple de report HTML](/images/2019-08-Howto-Dependency-check_01.png)
+Hi ha diversos pluggins, però per una aplicació Canigó utilitzarem el el plugin `org.owasp:dependency-check-maven` per Maven per automatizar aquesta comprovació de dependències, i obtenir un un report amb els resultats.
 
 ## Configuració i execució
 
-El plugin permet diferents modes d'execució (actualment CLI, Maven, Jenkins, ant, Gradle i SBT), tot i que aquest how-to es centrarà només en el *mode d'execució amb Maven*.
-
-Per poder executar el plugin s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, car que necessita accés a les BBDD de vulnerabilitats.
-
+Per poder executar el plugin s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, ja que necessita accés a les BBDD de vulnerabilitats.
 
 ### Maven
 
-S'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
+Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls o aplicacions que heredin del mòdul rool de Canigó generaran generen l'informe de les seves vulnerabilitats.
+
+Si no s'hereda del mòdul root de Canigó , s'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
 
 ```xml
 <plugin>
@@ -49,7 +48,7 @@ S'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
 </plugin>
 ```
 
-Un cop afegida la secció prèvia, cada cop que es faci una compilació es comprovarà les dependències de manera automàtica, generant-se el report a la següent ruta: `target/dependency-check-report.html`.
+Un cop afegit el plugin, cada cop que es faci una compilació es comprovarà les dependències de manera automàtica, generant-se el report a la següent ruta: `target/dependency-check-report.html`.
 
 S'ha de tenir en compte que, en el cas que es llenci el Maven en *mode offline (-o)* el plugin no farà cap validació i llençarà un WARNING als logs indicant-ho.
 
@@ -74,10 +73,40 @@ Tot i que el plugin funciona per defecte per a reportar vulnerabilitats, es pot 
 </plugin>
 ```
 
+## Informe de vulnerabilitats
+
+L'informe es genera per defecte a la ruta: `target/dependency-check-report.html`
+
+Un exemple d'informe amb vulnerabilitats podria ser:
+
+![Exemple informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report.png)
+
+On es pot observar que el mòdul "canigo.security" té les següents vulnerabilitats:
+
+- spring-security-core-5.1.3-RELEASE
+- spring-security-ldap-5.1.3-RELEASE
+
+El detall d'una de la vulnerabilitats:
+![Exemple detall informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-detail.png)
+
+Una vegada actualitzades les llibreries l'informe indica que no ha trobat vulnerabilitats:
+
+![Exemple després actualització informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-after.png)
+
+### Jenkins
+
+Es pot obtenir un report generat d'una execució del jenkins entrant dins del número de l'execució:
+![Exemple build jenkins](/images/2019-08-13-Dependency_check_jenkins_build_11_security.png)
+
+Secció `workspaces`, seleccionem l'últim workspace
+![Exemple workspace jenkins](/images/2019-08-13-Dependency_check_jenkins_workspace.png)
+
+Entrem a `treball/target/` trobem l'informe `dependency-check-report.html`
+![Exemple execució jenkins informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-after.png)
+
 
 ## Informació addicional
-
-Enllaços d'interès:
+Per a més informació sobre Dependency check podeu consultar:
 * https://jeremylong.github.io/DependencyCheck/
 * https://jeremylong.github.io/DependencyCheck/dependency-check-maven/configuration.html
 * https://jeremylong.github.io/DependencyCheck/data/index.html
