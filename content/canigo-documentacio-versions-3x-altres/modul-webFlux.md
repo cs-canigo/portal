@@ -19,7 +19,7 @@ Els passos descrits en aquest document apliquen a la versió 3.4 del Framework C
 
 El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d'utilitzar les funcionalitats de WebFlux
 
-Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.2 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4)
+Per a passar una aplicació 3.2 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.2 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4)
 
 L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.
 
