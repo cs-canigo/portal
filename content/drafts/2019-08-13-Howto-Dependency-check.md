@@ -4,7 +4,7 @@ title       = "Comprovació automàtica de dependències vulnerables per aplicac
 description = "Howto per configurar i fer-ne ús del plugin dependency-check per trobar dependències vulnerables"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "AGOST2019"
+key         = "SETEMBRE2019"
 +++
 
 ## A qui va dirigit
