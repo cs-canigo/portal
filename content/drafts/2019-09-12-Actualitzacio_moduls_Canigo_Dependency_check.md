@@ -15,7 +15,7 @@ https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fi
 
 ## Introducció
 
-Les aplicacions estan composades de divereses llibreries que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització), però si aquestes llibreries tenen forats de seguretat, es pot comprometre llavors la seguretat de l'aplicació, i segons l'àmbit i abast pot haver des d'una fuga d'informació a la caiguda de infraestructures.
+Les aplicacions estan composades de divereses llibreries externes que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització). Aquestes llibreries poden tenir forats de seguretat i es pot comprometre llavors la seguretat de l'aplicació.
 
 En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
 
@@ -25,7 +25,7 @@ El Dependency check és una utilitat d’anàlisi de la composició de programar
 
 El motor principal conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
 
-S'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
+Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
 
 Un exemple d'informe amb vulnerabilitats podria ser:
 
