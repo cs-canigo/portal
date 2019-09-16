@@ -47,6 +47,9 @@ Podeu trobar més informació sobre el Dependency Check a:
 
 https://www.owasp.org/index.php/OWASP_Dependency_Check
 
+Per a més informació sobre com configurar el Dependency Chek en aplicacions Canigó podeu consultar:
+[Comprovació automàtica de dependències vulnerables per aplicacions Canigó](/drafts/2019-08-13-Howto-Dependency-check/)
+
 ## Matriu de versions dels mòduls
 
 Teniu disponible la matriu de versions actualitzada de cada mòduls de Canigó de la versió 3.4 a:
