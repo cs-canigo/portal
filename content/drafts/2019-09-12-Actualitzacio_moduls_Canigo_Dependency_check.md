@@ -1,7 +1,7 @@
 +++
 date        = "2019-09-12"
-title       = "Actualització mòduls Canigó amb Dependency check"
-description = "S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency check"
+title       = "Actualització mòduls Canigó amb Dependency Check"
+description = "S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency Check"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "SETEMBRE2019"
@@ -11,7 +11,7 @@ S'ha allibrerat la primera part de la **versió 3.4.1 del framework Canigó**, a
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
-https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1
+[Abast Canigó 3.4.1](https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1)
 
 ## Introducció
 
@@ -19,9 +19,9 @@ Les aplicacions estan composades de divereses llibreries externes que donen supo
 
 En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
 
-## Dependency check
+## Dependency Check
 
-El Dependency check és una utilitat d’anàlisi de la composició de programari que identifica les dependències del projecte i comprova si hi ha alguna vulnerabilitat coneguda i divulgada públicament.
+El Dependency Check és una utilitat d’anàlisi de la composició de programari que identifica les dependències del projecte i comprova si hi ha alguna vulnerabilitat coneguda i divulgada públicament.
 
 El motor principal conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
 
