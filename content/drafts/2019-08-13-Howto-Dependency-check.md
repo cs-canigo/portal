@@ -107,8 +107,13 @@ Entrem a `treball/target/` trobem l'informe `dependency-check-report.html`
 
 ## Informació addicional
 Per a més informació sobre Dependency check podeu consultar:
+
 https://jeremylong.github.io/DependencyCheck/
+
 https://jeremylong.github.io/DependencyCheck/dependency-check-maven/configuration.html
+
 https://jeremylong.github.io/DependencyCheck/data/index.html
+
 https://www.owasp.org/index.php/OWASP_Dependency_Check
+
 https://nvd.nist.gov/
