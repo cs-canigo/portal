@@ -50,6 +50,7 @@ https://www.owasp.org/index.php/OWASP_Dependency_Check
 ## How to configurar Dependency Check
 
 Per a més informació sobre com configurar el Dependency Chek en aplicacions Canigó podeu consultar:
+
 [Comprovació automàtica de dependències vulnerables per aplicacions Canigó](/drafts/2019-08-13-Howto-Dependency-check/)
 
 ## Matriu de versions dels mòduls
