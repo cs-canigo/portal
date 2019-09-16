@@ -27,7 +27,7 @@ Per poder executar el plugin s'ha de tenir present que **es requereix que hi hag
 
 ### Maven
 
-Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls o aplicacions que heredin del mòdul rool de Canigó generaran generen l'informe de les seves vulnerabilitats.
+Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls o aplicacions que heredin del mòdul rool de Canigó generaran l'informe de les seves vulnerabilitats.
 
 Si no s'hereda del mòdul root de Canigó , s'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
 
@@ -96,10 +96,10 @@ Una vegada actualitzades les llibreries l'informe indica que no ha trobat vulner
 ### Jenkins
 
 Es pot obtenir un report generat d'una execució del jenkins entrant dins del número de l'execució:
-![Exemple build jenkins](/images/2019-08-13-Dependency_check_jenkins_build_11_security.png)
+![Exemple build jenkins](/images/news/2019-08-13-Dependency_check_jenkins_build_11_security.png)
 
 Secció `workspaces`, seleccionem l'últim workspace
-![Exemple workspace jenkins](/images/2019-08-13-Dependency_check_jenkins_workspace.png)
+![Exemple workspace jenkins](/images/news/2019-08-13-Dependency_check_jenkins_workspace.png)
 
 Entrem a `treball/target/` trobem l'informe `dependency-check-report.html`
 ![Exemple execució jenkins informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-after.png)
