@@ -13,6 +13,12 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1
 
+## Introducció
+
+Les aplicacions estan composades de divereses llibreries que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització), però si aquestes llibreries tenen forats de seguretat, es pot comprometre llavors la seguretat de l'aplicació, i segons l'àmbit i abast pot haver des d'una fuga d'informació a la caiguda de infraestructures.
+
+En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
+
 ## Dependency check
 
 El Dependency check és una utilitat d’anàlisi de la composició de programari que identifica les dependències del projecte i comprova si hi ha alguna vulnerabilitat coneguda i divulgada públicament.
