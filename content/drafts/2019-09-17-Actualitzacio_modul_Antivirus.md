@@ -42,3 +42,4 @@ producció      | antivirus.intranet.gencat.cat       			| 1344
 ## Documentació mòdul
 
 Per a obtenir més informació del Mòdul d’Antivirus podeu consultar la documentació del [Connector d’Antivirus](/canigo-documentacio-versions-3x-integracio/modul-antivirus/) al Portal de Frameworks i Solucions d’Arquitectura.
+
