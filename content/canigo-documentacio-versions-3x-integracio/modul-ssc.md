@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T11:17:51+01:00"
+date        = "2019-09-16"
 title       = "SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació versió 3.x"
@@ -29,23 +29,32 @@ Aquest document va dirigit als següents perfils:
 
 | Nom Document
 | ------------
-| [GuiaIntegracioSSC.v1.1.pdf] (/related/canigo/documentacio/modul-ssc/GuiaIntegracioSSC.v1.1.pdf "Guia Integració SSC")
+| [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
 
 ## Descripció Detallada
 
-Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder trevallar amb ell. És amb aquesta API amb la cual esta constituit aquest connector.
+Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder treballar amb ell. És amb aquesta API amb la qual està constituit aquest connector.
 
 Els principals serveis que ofereix el connector són els següents:
 
 * Accés a la plataforma amb certificat: Totes les aplicacions que desitgin utilitzar l'SSC hauran de disposar d'un certificat amb el qual s'autenticaran per utilitzar la plataforma. Aquest certificat s'haurà de demanar a CatCert.
 * Us de magatzem de certificats: Una de les principals funcionalitats del SSC és la signatura desatesa. Això s'aconsegueix configurant en el connector un magatzem de certificats que l'SSC utilitzarà pels diferents processos de signatura.
+
 * Tipus de signatura: L'SSC ofereix els següents tipus de signatura.
-    * CMS: Attached / Detached
+    * CMS: Attached / Detached / Detached Hash
+    * CAdES-BES: Attached / Detached / Detached Hash
+    * CAdES-T: Attached / Detached / Detached Hash
+    * CMS-PDF: Attached / Detached
+    * CAdES-BES-PDF: Attached / Detached
+    * CAdES-T-PDF: Attached / Detached
+    * XMLDSig: Enveloping / Enveloped / Detached / Detached Hash
+    * XAdES-BES: Enveloping / Enveloped / Detached / Detached Hash
+    * XAdES-T: Enveloping / Enveloped / Detached / Detached Hash
+
+* Suport per a fitxers grans amb els tipus de signatura:
     * CAdES-BES: Attached / Detached
-    * CAdES-T: Attached / Detached
-    * XMLDSig: enveloping/enveloped/detached
-    * XAdES-BES: enveloping/enveloped/detached
-    * XAdES-T: enveloping/enveloped/detached
+    * CAdES-BES-PDF: Attached / Detached
+    * XAdES-BES: Enveloping / Enveloped / Detached
 
 ### Alta Servei
 
@@ -64,13 +73,22 @@ De cara a utilitzar el servei en PRE, els certificats i documentació necessaria
 
 Es pot trobar el codi font referent a aquests component a la següent url:
 
-Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.ssc/
+[Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc:18ddeccdfb491ecba6cc83563709cf13)
 
 #### Requeriments
 
-El connector SSC és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
+El connector SSC és compatible amb les versions 1.8 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
 
-Donat que l'SSC s'ha desenvolupat per substituir altres sistemes de signatura anteriors s'ha desenvolupat per que sigui compatible amb components de Canigo 2.3.5 en endevant. Tot i això, s'ha de tindre en compte que conté una sèrie de dependències que podrien arribar a donar conflicte en una aplicació ja desenvolupada. Per aquest motiu es recomana consultar les seves dependències.
+Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0 
+```
+PropertyAllowTls10AsClient=true
+```
+
+Tal i com indica la guia:
+
+[guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
+
+La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conclicte amb les llibreries en una aplicació ja desenvolupada
 
 ### Instal.lació i Configuració
 
@@ -84,19 +102,10 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.ssc</artifactId>
-    <version>[1.2.0,1.3.0)</version>
+    <version>[2.2.0,2.3.0)</version>
 </dependency>
 ```
 
-El resultat dels processos de signatura moltes vegades són arrays de bytes que es troben codificats en Base64 amb classes d'Axis. Això fa que per la recuperació d'arxius s'hagi d'incorporar una llibreria més en el proyecte:
-
-```
-<dependency>
-	<groupId>axis</groupId>
-	<artifactId>axis</artifactId>
-	<version>1.2.1</version>
-</dependency>
-```
 
 #### Configuració
 
@@ -108,27 +117,31 @@ El resultat dels processos de signatura moltes vegades són arrays de bytes que 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-           http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
-	<!-- BEAN SSC -->
-	<bean id="sscService" class="cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl" scope="prototype">
+
+	<bean id="sscService" class="cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl">
+
 		<description>
-			SSC Service for Canigo 3
+			SSC Service for Canigó 3.4
 		</description>
-		<property name="host" value="${ssc.host}"/>
-		<property name="distinguishedname" value="${ssc.distinguishedname}" /> 
+
+		<property name="host" value="${ssc.host}" />
+		<property name="distinguishedname" value="${ssc.distinguishedname}" />
+		<property name="dipositari" value="${ssc.dipositari}" />
+		<property name="rol" value="${ssc.rol}" />
 	</bean>
 	
 </beans>
 ```
 
-on les variables ssc.host i ssc.distinguishedname són recuperades de l'arxiu ssc.properties que s'ha de crear en src/main/resources/config/props/ssc.properties
+on les variables ssc.host, ssc.distinguishedname, ssc.dipositari i ssc.rol són recuperades de l'arxiu ssc.properties que s'ha de crear en src/main/resources/config/props/ssc.properties
 
 2.- Configuiració dels arxius de properties.
 
 Existeixen dos arxius de properties per poder confiurar l'SSC. El ssc.properties i el smartwrapper.properties.
 
-El primer conté només dos paràmetres,
+El primer conté els paràmetres:
 
 * ssc.host: Url del servidor on es troba l'SSC.
     * PRE: https://ssc.preproduccio.catcert.cat:8443/trustedx-gw/SoapGateway
@@ -136,7 +149,11 @@ El primer conté només dos paràmetres,
 
 * ssc.distinguishedname: Nom del certificat amb el que l'aplicació s'autentica per consumir els serveis del SSC.
 
-El segón, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i esta documentat en el document [GuiaIntegracioSSC.v1.1.pdf](/related/canigo/documentacio/modul-ssc/GuiaIntegracioSSC.v1.1.pdf "Guia Integració SSC").
+* ssc.dipositari: Ens a afegir a la capçalera de la petició a SSCC.
+
+* ssc.rol: Rol d'usuari a afegir a la capçalera de la petició a SSCC.
+
+El segón, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i esta documentat en el document [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
 
 La ubicació d'aquest últim arxiu es recomana que sigui en el directori src/main/resoruces de l'aplicació que utilitzi el connector.
 
@@ -149,23 +166,37 @@ NOTA: Les dades de proves del connector relacionades amb certificats de proves s
 
 ```java
 @Autowired
-private SscConnectorImpl sscService;
+private SscConnector sscConnector;
 ```
 
 2.- Escollir una modalitat de signatura i passar-li els paràmetres que necessiti. En el cas d'aquest exemple es farà una signatura CAdES-BES en mode ATTACHED.
 
 ```java
-final String path_in = "path_arxiu_entrada";
-final String path_out = "path_arxiu_sortida";
-final String filename = "HelloWorld.txt";
-		
-log.info("[INFO][Arxiu a signar: " + path_in + filename);
-String data = Util.readBinaryFileB64(path_in + filename);
-		
-String resposta = sscService.signCadesBes(data, Constants.ATTACHED);
-		
-String destFilename = path_out + filename.substring(0, filename.lastIndexOf(".")) + "_Signature_CAdES_BES_Attached.p7b";
+final String filename = FILENAME_HELLOWORLD_TXT;
+
+log.info("[INI][signCadesBesAttached]");
+
+String inFilename = getInFilename(DOCS_TO_SIGN_PATH_IN, filename);
+log.info("[INFO][Arxiu a signar: " + inFilename);
+String data = Util.readBinaryFileB64(inFilename);
+
+String resposta = sscConnector.signCadesBes(data, Constants.ATTACHED);
+
+String destFilename = getDestFilename(CADES_SIGNATURES_PATH_OUT + SEPARADOR_PATH, filename,
+		"_Signature_CAdES_BES_Attached.txt");
 Util.writeBinaryFileB64(destFilename, resposta);
+		
+log.info("[INFO][Arxiu signat: " + destFilename);
+
+log.info("[FIN][signCadesBesAttached]");
 ```
+
+On:
+* FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar
+* DOCS_TO_SIGN_PATH_IN: És el path del fitxer a enviar
+* CADES_SIGNATURES_PATH_OUT: És el path on guardar la resposta
+* SEPARADOR_PATH: És el separador de path segons el sistema operatiu
+* getInFilename: mètode que retorna el path i nom del fitxer a enviar
+* getDestFilename: mètode que retorna el path i nom del fitxer on guardar la resposta
 
 Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API.
