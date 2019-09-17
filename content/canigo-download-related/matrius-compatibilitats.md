@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-16"
+date        = "2019-09-17"
 title       = "Matrius de Compatibilitats"
 description = ""
 sections    = "Canigó"
@@ -9,7 +9,7 @@ toc         = true
 
 ## Canigó 3.4.x
 
-|                                                   		| 25/03/2019 (3.4.0)	| 16/09/2019 (3.4.1)	|
+|                                                   		| 25/03/2019 (3.4.0)	| 17/09/2019 (3.4.1)	|
 |---------------------------------------------------		|------------------		|------------------		|
 | **canigo.core**                                   		| 4.0.0         			| 4.1.0         			|
 |                                                   		|               			|               			|
@@ -129,7 +129,7 @@ toc         = true
 | canigo.core                                       		| [4.0.0,4.1.0)  			| [4.0.0,4.2.0)  			|
 | canigo.operation.instrumentation                  		| [2.0.0,2.1.0) 			| [2.0.0,2.2.0) 			|
 |                                                   		|               			|               			|
-| **canigo.integration.ssc**                         		| 2.0.0         			| 2.2.0         			|
+| **canigo.integration.ssc**                         		| 2.0.0         			| 2.2.1         			|
 | canigo.core                                       		| [4.0.0,4.1.0)  			| [4.0.0,4.2.0)  			|
 | canigo.operation.instrumentation                  		| [2.0.0,2.1.0) 			| [2.0.0,2.2.0) 			|
 |                                                   		|               			|               			|
