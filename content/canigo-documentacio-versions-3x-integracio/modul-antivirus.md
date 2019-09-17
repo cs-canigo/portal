@@ -43,7 +43,7 @@ Propietat                              | Requerit | Descripció
 
 ## Utilització del Mòdul
 
-Per a utilizar aquest mòdul s'ha de demanar les següents llibreries enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
+Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
 
 * Versió mòdul antivirus < 1.3.2: llibreria sym-7.5.jar configurant el pom.xml amb:
 ```xml
