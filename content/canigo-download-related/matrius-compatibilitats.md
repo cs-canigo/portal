@@ -67,7 +67,7 @@ toc         = true
 | **canigo.operation.logging**                       		| 2.0.0         			| 2.1.0         			|
 | canigo.core                                       		| [4.0.0,4.1.0)  			| [4.0.0,4.2.0)  			|
 |                                                   		|               			|               			|
-| **canigo.integration.antivirus**                   		| 2.0.0         			| 2.1.0         			|
+| **canigo.integration.antivirus**                   		| 2.0.0         			| 2.2.0         			|
 | canigo.core                                       		| [4.0.0,4.1.0)  			| [4.0.0,4.2.0)  			|
 |                                                   		|               			|               			|
 | **canigo.integration.avisosalertes.pica**          		| 2.0.0         			| 2.1.0         			|
