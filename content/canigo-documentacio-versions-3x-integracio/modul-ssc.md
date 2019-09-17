@@ -60,9 +60,12 @@ Els principals serveis que ofereix el connector són els següents:
 
 Per poder utilitzar l'SSC en PRO s'ha d'estar donat d'alta en el servei. Per poder fer-ho s'han de seguir els següents passos:
 
-1. Enviar un mail a implantacio@aoc.cat sol- licitant l'alta al servei. Aquí s'espera que l'usuari informi del tipus de signatures que vol generar i se l'informarà del tipus de certificats que ha de sol- licitar.
-2. Els certificats a sol- litar s'hauran de fer a través de EACAT.
+1. Enviar un mail a implantacio@aoc.cat sol·licitant l'alta al servei. Aquí s'espera que l'usuari informi del tipus de signatures que vol generar i se l'informarà del tipus de certificats que ha de sol- licitar.
+
+2. Els certificats a sol·litar s'hauran de fer a través de EACAT.
+
 3. Finalment, el client haurà d'omplir un document d'alta al SSC, on haurà d'especificar el certificat amb el que s'autenticarà, així com els certificats de signatura allotjats en TrustedX que utilitzarà per signar.
+
 4. Una vegada validat el document d'alta, se li donarà accés al SSC en PRO.
 
 De cara a utilitzar el servei en PRE, els certificats i documentació necessaria es poden demanar obrint una petició a suport@aoc.cat.
@@ -77,9 +80,9 @@ Es pot trobar el codi font referent a aquests component a la següent url:
 
 #### Requeriments
 
-El connector SSC és compatible amb les versions 1.8 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
+El connector SSC és compatible amb les versions 1.8 o superior de Java. Per versions inferiors no està garantit el seu correcte funcionament.
 
-Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0 
+Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
 ```
 PropertyAllowTls10AsClient=true
 ```
@@ -88,13 +91,13 @@ Tal i com indica la guia:
 
 [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
 
-La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conclicte amb les llibreries en una aplicació ja desenvolupada
+La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conclicte amb les llibreries d'una aplicació ja desenvolupada
 
 ### Instal.lació i Configuració
 
 #### Instal.lació
 
-La instal.lació del connector requereix de la utilització de la llibreria 'canigo.integration.ssc' i les dependències indicades a l'apartat 'Introducció-Versions i Dependències'.
+La instal·lació del connector requereix de la utilització de la llibreria 'canigo.integration.ssc' 
 
 Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per incloure la llibreria del Connector.
 
@@ -153,7 +156,7 @@ El primer conté els paràmetres:
 
 * ssc.rol: Rol d'usuari a afegir a la capçalera de la petició a SSCC.
 
-El segón, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i esta documentat en el document [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
+El segon, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i està documentat en el document [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
 
 La ubicació d'aquest últim arxiu es recomana que sigui en el directori src/main/resoruces de l'aplicació que utilitzi el connector.
 
