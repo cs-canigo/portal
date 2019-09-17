@@ -42,29 +42,12 @@ Es tracta de projectes que es fonamenten en l'execució d'scripts a BBDD, a part
 <br/>
 
 On:
+
 * **docs**: directori per emmagatzemar documentació (típicament manuals d'usuari i d'explotació).
 * **bin**: directori per emmagatzemar binaris com Oracle Reports, BI Publishers, contingut estàtic i altres.
 * **sql_scripts**: directori per emmagatzemar tot el codi, que pot estar organitzat en subcarpetes a criteri del seu responsable. Caldrà incloure el fitxer de **plans** a la carpeta principal que serà el fitxer encarregat de definir els scripts a executar i el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
 
 El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia, el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
-Els tipus d'objectes inicialment contemplats són:
-
-|Tipus|Instrucció única|Extensió recomanada|Comentari|
-|-----------|----------|----------|----------|
-|Taula|No|.sql|Per modificar, alter table|
-|Vista|Sí|.sql||
-|Índex|Sí|.sql|Per modificar, drop + create|
-|Trigger|Sí|.sql||
-|Restricció|No|.sql|Per modificar, alter table|
-|Vista materialitzada|Sí|.sql|Per modificar, drop + create|
-|Tipus|Sí|.sql||
-|Seqüència|Sí|.sql|Per modificar, drop + create|
-|Sinònim|Sí|.sql||
-|Enllaç de BD|Sí|.sql|Per modificar, drop + create|
-|Especificació de paquet|Sí|.pks||
-|Cos de paquet|Sí|.pkb||
-|Procediment|Sí|.sql||
-|Funció|Sí|.sql||
 
 ## Llibreries
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
