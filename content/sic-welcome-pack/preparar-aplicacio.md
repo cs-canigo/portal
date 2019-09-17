@@ -37,6 +37,7 @@ Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven q
 ### Aplicacions APEX i PL/SQL, i altres projectes de desplegament d'scripts a BBDD
 
 Es tracta de projectes que es fonamenten en l'execució d'scripts a BBDD, a part de poder incloure contingut estàtic, per als quals ha estat establerta un criteri d'estructuració dins el sistema de gestió del codi font:
+<br/>
 
 ![Jenkins](/related/sic/estructura_projectes_apex.png "Jenkins")
 <br/>
