@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-19T12:06:35+01:00"
+date        = "2019-09-17"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació versió 3.x"
@@ -17,7 +17,7 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[1.4.0,1.5.0)</canigo.integration.antivirus.version>
+<canigo.integration.antivirus.version>[2.2.0,2.3.0)</canigo.integration.antivirus.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -43,7 +43,33 @@ Propietat                              | Requerit | Descripció
 
 ## Utilització del Mòdul
 
-Per a utilizar aquest mòdul s'ha de demanar la llibreria sym-7.5.jar enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
+Per a utilizar aquest mòdul s'ha de demanar les següents llibreries enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
+
+* Versió mòdul antivirus < 1.3.2: llibreria sym-7.5.jar configurant el pom.xml amb:
+```xml
+<dependency>
+	<groupId>sym</groupId>
+	<artifactId>sym</artifactId>
+	<version>7.5</version>
+</dependency>
+```
+
+* Versió mòdul antivirus >= 1.3.2 i < 2.2.0: llibreria scanengine-api-7.0.0.8.jar configurant el pom.xml amb:
+```xml
+<dependency>
+	<groupId>com.symantec.scanengine.api</groupId>
+	<artifactId>scanengine-api</artifactId>
+	<version>7.0.0.8</version>
+</dependency>
+```
+* Versió mòdul antivirus >= 2.2.0: llibreria scanengine-api-7.9.2.jar configurant el pom.xml amb:
+```xml
+<dependency>
+	<groupId>com.symantec.scanengine.api</groupId>
+	<artifactId>scanengine-api</artifactId>
+	<version>7.9.2</version>
+</dependency>
+```
 
 ### Exemple d'ús
 
