@@ -9,7 +9,9 @@ key         = "OCTUBRE2019"
 
 Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha allibrerat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió de l'engine de l'antivirus.
 
-Amb aquesta actualització s'aconsegueix un dels objectius prioritaris de CS Canigó consistent en proporcionar els connectors d'integració actualitzats utilitzant les últimes versions disponibles de les llibreries depenent per proporcionar un framework sense desvalorització 
+Amb aquesta actualització s'aconsegueix un dels objectius prioritaris de CS Canigó consistent en proporcionar els connectors d'integració actualitzats utilitzant les últimes versions disponibles de les seves llibreries depenent. 
+
+Amb aquest objectiu s'aconsegueix proporcionar un framework en tendència i sense desvalorització. 
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
