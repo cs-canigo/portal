@@ -43,9 +43,9 @@ Propietat                              | Requerit | Descripció
 
 ## Utilització del Mòdul
 
-Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
+Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat> al no estar disponible a cap repositori públic Maven:
 
-* Versió mòdul antivirus < 1.3.2: llibreria sym-7.5.jar configurant el pom.xml amb:
+* Versió mòdul antivirus < 1.3.2: llibreria "sym-7.5.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>sym</groupId>
@@ -54,7 +54,7 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 </dependency>
 ```
 
-* Versió mòdul antivirus >= 1.3.2 i < 2.2.0: llibreria scanengine-api-7.0.0.8.jar configurant el pom.xml amb:
+* Versió mòdul antivirus >= 1.3.2 i < 2.2.0: llibreria "scanengine-api-7.0.0.8.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
@@ -62,7 +62,7 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>7.0.0.8</version>
 </dependency>
 ```
-* Versió mòdul antivirus >= 2.2.0: llibreria scanengine-api-7.9.2.jar configurant el pom.xml amb:
+* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-7.9.2.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
@@ -70,6 +70,8 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>7.9.2</version>
 </dependency>
 ```
+
+Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions
 
 ### Exemple d'ús
 
