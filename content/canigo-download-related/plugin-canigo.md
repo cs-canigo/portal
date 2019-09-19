@@ -1,5 +1,5 @@
 +++
-date        = "2017-03-31"
+date        = "2019-09-19"
 title       = "Plugin Canigó per a Eclipse"
 description = "Plugin d'eclipse per a generar una aplicació Canigó."
 sections    = "Canigó."
@@ -12,7 +12,7 @@ weight      = 1
 
 El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet d'una aplicació Canigó. L'aplicació que es crea està orientada a servir com a punt de partida per a la creació d'una aplicació més complex, però des del moment de la seva creació ja és desplegable i funcional.
 
-*NOTA*: Tot i que les passes d'instal·lació i configuració del plugin són senzilles, [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) conté un Eclipse amb aquest plugin configurat i llest per ser emprat.
+*NOTA*: Tot i que les passes d'instal·lació i configuració del plugin són senzilles, [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/) conté un Eclipse amb aquest plugin configurat i llest per ser emprat.
 
 #### Eclipse 2019-03
 
@@ -33,9 +33,9 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar **Plug-in Canigo 3.2 - Canigo 3.2**
+Seleccionar **Plug-in 1.7.4 - Canigo 3.4.0**
 
-![](/related/canigo/documentacio/plugin-canigo/img13.jpg)
+![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_4.png)
 
 ## Crear Aplicació Canigó
 
@@ -45,9 +45,9 @@ A la vista Package Explorer de l'Eclipse fer botó dret: New -> Other
 
 Seleccionar Assistent Projectes Canigó -> Crear un Projecte Canigó
 
-![](/related/canigo/documentacio/plugin-canigo/img10.jpg)
+![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_4_new_project.png)
 
-El plugin genera una aplicació REST amb un CRUD de demo implementat amb HTML5/Javascript.
+El plugin genera una aplicació REST amb un CRUD de demo .
 
 Es dóna llibertat per triar la tecnologia per a realitzar el front-end (AngularJS, Bootstrap, EmberJS...) sempre que es compleixi el PIV de Gencat.
 
@@ -81,6 +81,6 @@ S'ha de prémer sobre el projecte, botó dret -> Canigó
 
 ![](/related/canigo/documentacio/plugin-canigo/img9.jpg)
 
-Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà l'opció a triar si es desitja utilitzar JWT i el provider de seguretat a utilitzar (Arxiu, BBDD, Gicar o LDAP)
+Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà l'opció a triar si es desitja utilitzar JWT, el provider de seguretat a utilitzar (Arxiu, BBDD o Gicar) i si es desitja utilitzar SAML
 
-![](/related/canigo/documentacio/plugin-canigo/img12.jpg)
+![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_4_add_modules_security.png)
