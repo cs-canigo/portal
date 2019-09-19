@@ -27,9 +27,9 @@ El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir men
 
 S'ha publicat la versió 1.6.4 del archetype del Canigó per a generar projectes amb Canigó 3.4.1.
 
-La principal novetat és la utilització de fitxers yml per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2 documentats a:
+La principal novetat és la utilització de fitxers yml per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2 publicats a Canigó 3.4.0 documentats a:
 
-[Actualització Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
+[Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
 
 ## Novetats plugin eclipse
 
@@ -46,6 +46,10 @@ Està disponible la documentació dels entregables de Canigó 3.4 a:
 La documentació del plugin del eclipse està disponible:
 
 [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
+
+Detall dels canvis de Canigó 3.4.0:
+
+[Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
 
 La guia per a passar manualment projectes de Canigó 3.2 a Canigó 3.4 està a:
 
