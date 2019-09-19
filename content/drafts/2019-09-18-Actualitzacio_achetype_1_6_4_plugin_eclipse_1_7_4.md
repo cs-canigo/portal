@@ -7,9 +7,9 @@ categories  = ["canigo"]
 key         = "OCTUBRE2019"
 +++
 
-Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1
+Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1.
 
-Aquesta actualització d'enmarca dins de l'abast de la **versió 3.4.1 del framework Canigó** 
+Aquesta actualització s'enmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**.
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
@@ -17,9 +17,9 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 ## Introducció
 
-Dins dels entregables de Canigó hi consta el achetype i el plugin del eclipse
+Dins dels entregables de Canigó hi consten el achetype i el plugin del eclipse.
 
-El achetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats
+El achetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
 El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el achetype i per afegir mòduls amb una preconfigruació ja donada a un projecte creat. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
@@ -33,7 +33,7 @@ La principal novetat és la utilització de fitxers yml per a la configuració d
 
 ## Novetats plugin eclipse
 
-La nova versió 1.7.4 del plugin utilitza la versió 1.6.4 del archetype de Canigó per generar projectes amb Canigó 3.4.1
+La nova versió 1.7.4 del plugin utilitza la versió 1.6.4 del archetype de Canigó per generar projectes amb Canigó 3.4.1.
 
 Per instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse # Instal·lació](/canigo-download-related/plugin-canigo/#instal-lació)
 
