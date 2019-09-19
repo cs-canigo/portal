@@ -23,7 +23,7 @@ weight	    = 4
 | springframework		   |  5.1.5.RELEASE        |  5.1.5.RELEASE        |
 | spring.security		   |  5.1.4.RELEASE        |  5.1.5.RELEASE        |
 | spring.data			   |  2.1.5.RELEASE        |  2.1.5.RELEASE        |
-| springframework.boot         	   |  2.1.3.RELEASE        |  2.1.3.RELEASE        |
+| springframework.boot         	   |  2.1.3.RELEASE        |  2.1.8.RELEASE        |
 | log4j				   |  2.11.0		   |  2.11.0		   |
 | slf4j				   |  1.7.25		   |  1.7.25		   |
 | junit				   |  4.12	           |  4.12		   |
@@ -58,8 +58,8 @@ Entregables associats a Canigó 3.4
 |          Entregable  |     Versió      |
 |--------------------------------- 	 |---------------------------------- |
 |              Entorn de desenvolupament 	|                3.0.1	             |
-|              Plugin eclipse 			|                3.2.6	             |
-|              Archetype 			|                1.6.2	             |
+|              Plugin eclipse 			|                1.7.4	             |
+|              Archetype 			|                1.6.4	             |
 
 
 
