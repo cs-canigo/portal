@@ -33,9 +33,9 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar **Plug-in 1.7.4 - Canigo 3.4.0**
+Seleccionar **Plug-in 1.7.5 - Canigo 3.4.1**
 
-![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_4.png)
+![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_5.png)
 
 ## Crear Aplicació Canigó
 
