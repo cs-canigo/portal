@@ -21,7 +21,7 @@ Dins dels entregables de Canigó hi consten el achetype i el plugin del eclipse.
 
 El achetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
-El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el achetype i per afegir mòduls amb una preconfigruació ja donada a un projecte creat. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
+El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el achetype i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
 ## Novetats archetype
 
