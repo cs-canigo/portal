@@ -14,7 +14,11 @@ Aquesta versió incorpora una gran actualització de les llibreries utilitzades 
 
 Aquest mes de setembre s'ha publicat la nova versió 3.4.1 de Canigó on s'ha realitzat l'actualització de les llibreries a versions sense vulnerabilitats públiques i amb l'actualització dels mòduls de Antivirus i SSC
 
-Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb un crud de serveis rest utilitzant una bd amb h2 i JWT amb autenticació amb GICAR generat amb el [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/) amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals
+Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals.
+
+Aquesta aplicació contenia amb un CRUD de serveis rest utilitzant una bd h2 i amb el mòdul de seguretat amb JWT i autenticació amb GICAR.  
+
+Aquesta aplicació s'ha generat amb el [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/) 
 
 ## Servidors full de ruta
 
