@@ -12,9 +12,11 @@ Canigó està basat en Spring i Spring boot, per tant, en una aplicació Canigó
 
 Això permet desplegar una aplicació Canigó amb el seu propi servidor. Sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o cloud.
 
-Per a aplicacions que utilitzin l'stack de servlets Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow
+Per a aplicacions que utilitzin l'stack de servlets, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow
 
-Per a aplicacions que utilitzin l'stack reactiu Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty
+Per a aplicacions que utilitzin l'stack reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty
+
+![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
 Les versions actuals que incorpora Spring Boot són:
 
