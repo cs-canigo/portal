@@ -33,7 +33,7 @@ Per tal d’instal·lar el mòdul d’enviament de correu es pot incloure autom�
 </dependency>
 ```
 
-Des de la versió 1.3.0 es proporciona la interfície cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService seguint l’especificació Fluent Builder, i la interfície deprecada cat.gencat.ctti.canigo.arch.support.mailing.MailService per a l'enviament de correus eletrònics des d'una aplicació Canigó.
+Des de la versió 1.3.0 es proporciona la interfície *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService* seguint l’especificació Fluent Builder, i la interfície deprecada *cat.gencat.ctti.canigo.arch.support.mailing.MailService* per a l'enviament de correus eletrònics des d'una aplicació Canigó.
 
 ## Configuració per utilitzar IronPort
 
@@ -53,7 +53,7 @@ Per a utilitzar el servidor SMPT IronPort és necessari refefinir el "mailSender
   ```
   
  En el fitxer "mail.properties" definir les propietats:
-   ```properties
+   ```
 *.mail.host=smtp-intranet.gencat.cat
 *.mail.port=25
 *.mail.protocol=smtp
@@ -72,15 +72,22 @@ Per a utilitzar el servidor SMPT IronPort és necessari refefinir el "mailSender
    ```
  On:
  - mail.maxAttachmentSize: Tamany màxim permés dels fitxers adjunts. Per defecte: 0 (sense limits)
+ 
  - mail.defaultEncoding: encoding del mail
+ 
  - mail.auth: indiquem que volem autenticació al IronPort
+ 
  - mail.username: Usuari del IronPort
+ 
  - mail.password: Password del IronPort
+ 
  - mail.timeout: Time out de la connexió amb el IronPort
+ 
  - mail.isSmtpSSLEnabled: Sense connexió amb SSL
+ 
  - mail.debug: Per treure traces de debug de l'enviament del correu
 
-Amb aquesta configuració ja podem utilitzar "FluentMailService" o "MailService", per exemple en un test:
+Amb aquesta configuració ja podem utilitzar els components "FluentMailService" o "MailService", per exemple en un test:
 
 ```
 import java.io.File;
