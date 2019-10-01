@@ -15,7 +15,9 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessit
 
 IronPort és el servidor SMTP corporatiu per fer ús del servei de correu corporatiu de la Generalitat des d'una aplicació de la Generalitat.
 
-El servei IronPort proporciona un sistema de cues i un sistema de protecció contra SPAM i virus.
+El servei IronPort de Cisco proporciona un sistema de cues i un sistema de protecció contra SPAM i virus.
+
+[IronPort]!(/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
 
 Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus eletrònics des d'una aplicació Canigó.
 
@@ -71,6 +73,7 @@ Per a utilitzar el servidor SMPT IronPort és necessari refefinir el "mailSender
 *.mail.debug=true
    ```
  On:
+ 
  - mail.maxAttachmentSize: Tamany màxim permés dels fitxers adjunts. Per defecte: 0 (sense limits)
  
  - mail.defaultEncoding: encoding del mail
