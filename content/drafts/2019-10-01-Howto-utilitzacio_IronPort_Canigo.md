@@ -17,7 +17,7 @@ IronPort és el servidor SMTP corporatiu per fer ús del servei de correu corpor
 
 El servei IronPort de Cisco proporciona un sistema de cues i un sistema de protecció contra SPAM i virus.
 
-[IronPort]!(/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
+![IronPort](/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
 
 Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus eletrònics des d'una aplicació Canigó.
 
