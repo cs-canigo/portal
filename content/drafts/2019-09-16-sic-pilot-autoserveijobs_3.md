@@ -35,6 +35,7 @@ L'arxiu de configuració d'infraestructures consisteix en informació aportada p
 
 * Versió de l’arxiu
 * Recursos: dades d’infraestructures (paraules de pas encriptades)
+
 Fem notar que aquest fitxer només resulta necessari si es realitzen desplegaments en modalitat automàtica, actualment només a l'entorn de INT.
 <br/>
 
