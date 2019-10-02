@@ -2,9 +2,9 @@
 date        = "2019-09-16"
 title       = "SIC. Pilot de l'autoservei de jobs pipeline amb T-Systems, l'àmbit ATC i el lot AM10 - TICxCAT"
 description = "Durant el mes d'Agost s'ha avançat amb T-Systems en els projectes pilot de l'àmbit de Justícia per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline i s'ha iniciat una Task Force per tal d'integrar totes les aplicacions APEX del lot AM10 (TICxCAT) mitjançant aquest mateix servei."
-sections    = ["Notícies", "home"]
-categories  = ["sic"]
-key         = "SETEMBRE2019"
+#sections    = ["Notícies", "home"]
+#categories  = ["sic"]
+key         = "OCTUBRE2019"
 +++
 
 Durant el mes d'Agost s'ha avançat amb **T-Systems** en els projectes pilot de l'àmbit de Justícia per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline i s'ha iniciat una Task Force per tal d'integrar totes les aplicacions APEX del lot AM10 (TICxCAT) mitjançant aquest mateix servei.
