@@ -2,9 +2,9 @@
 date        = "2019-09-18"
 title       = "Actualització achetype i plugin eclipse"
 description = "S'ha publicat una nova versió del achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1"
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "OCTUBRE2019"
+#sections    = ["Notícies", "home"]
+#categories  = ["canigo"]
+key         = "NOVEMBRE2019"
 +++
 
 Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1.
