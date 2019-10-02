@@ -2,9 +2,9 @@
 date        = "2019-09-12"
 title       = "Actualització mòduls Canigó amb Dependency Check"
 description = "S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency Check"
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "OCTUBRE2019"
+#sections    = ["Notícies", "home"]
+#categories  = ["canigo"]
+key         = "NOVEMBRE2019"
 +++
 
 S'ha allibrerat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries depenent i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
