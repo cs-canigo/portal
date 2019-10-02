@@ -2,9 +2,9 @@
 date        = "2019-09-12"
 title       = "Actualització mòdul SSC Canigó"
 description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC"
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "OCTUBRE2019"
+#sections    = ["Notícies", "home"]
+#categories  = ["canigo"]
+key         = "NOVEMBRE2019"
 +++
 
 Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha allibrerat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC
