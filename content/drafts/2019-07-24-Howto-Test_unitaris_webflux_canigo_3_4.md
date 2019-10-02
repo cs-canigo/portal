@@ -2,9 +2,9 @@
 date        = "2019-07-24"
 title       = "Test unitaris amb Webflux a Canigó 3.4"
 description = "How to per crear test unitaris amb Webflux a Canigó 3.4"
-section     = "howtos"
-categories  = ["canigo"]
-key         = "AGOST2019"
+#section     = "howtos"
+#categories  = ["canigo"]
+key         = "NOVEMBRE2019"
 +++
 
 ### A qui va dirigit
