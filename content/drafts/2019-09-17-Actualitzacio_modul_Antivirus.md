@@ -2,9 +2,9 @@
 date        = "2019-09-17"
 title       = "Actualització mòdul Antivirus Canigó"
 description = "S'ha publicat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió de l'engine de l'antivirus"
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "OCTUBRE2019"
+#sections    = ["Notícies", "home"]
+#categories  = ["canigo"]
+key         = "NOVEMBRE2019"
 +++
 
 Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha allibrerat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió de l'engine de l'antivirus.
