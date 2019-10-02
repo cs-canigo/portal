@@ -2,8 +2,8 @@
 date        = "2019-10-01"
 title       = "Utilitzar IronPort a Canigó"
 description = "Howto per configurar i utilitzar IronPort com a servidor SMTP per una aplicació Canigó"
-section     = "howtos"
-categories  = ["canigo"]
+#section     = "howtos"
+#categories  = ["canigo"]
 key         = "OCTUBRE2019"
 +++
 
