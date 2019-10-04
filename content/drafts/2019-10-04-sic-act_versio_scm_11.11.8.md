@@ -32,8 +32,10 @@ A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de c
 
 A vegades tenim la necessitat de descarregar una part d'un projecte. Fins ara per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
 
-A la versió 11.11 del Gitlab s'ha proporcionat la possibilitat de descarregar un directori d'un projecte, així si naveguem dins del projecte, si cliquem a l'icono de descàrrega del projecte obtenim:
+A la versió 11.11 del Gitlab s'ha proporcionat la possibilitat de descarregar un directori d'un projecte, així si naveguem dins del projecte, si cliquem a l'icona de descàrrega del projecte obtenim:
+
 - Descarregar tot el projecte (com fins ara)
+
 - Descarregar només aquell directory
 
 Un exemple seria:
@@ -43,7 +45,7 @@ Un exemple seria:
 
 ### Increment del rendiment
 
-A la versió 11.11 del Gitlab s'ha incrementat el rendiment en els següents punts:
+A la versió 11.11 del Gitlab s'ha incrementat el rendiment principalment en els següents punts:
 
 - [Increment del rendiment de les cerques de les issues](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/27817)
 
