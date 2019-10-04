@@ -12,17 +12,20 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del Serv
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 
-*** Multiples assigats per Merge Request
+***Multiples assigats per Merge Request
+
 No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers frontend i backend, o en equips on els enginyers treballen sempre en parella com en Programació extrema.
 
 A la versió 11.11 del Gitlab es proporciona que les Merge Request es pugui assignar diversos destinataris perquè totes les persones responsables del canvi puguin ser assignats a la Merge Request
 
-*** Serialització dels grafics de commits
+***Serialització dels grafics de commits
+
 Moltes operacions habituals de Git requereixen consultar el gràfic de commits. Aquestes operacions són més lentes a mesura que creix el nombre de commits perquè aquestes consultes requereixen que cada objecte es carregui des del disc.
 
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de commits serialitzada, introduïda en els darrers llançaments de Git, per aprofitar l'augment de rediment en la generació dels gràfics de commits.
 
-*** Descàrrega de directoris d'un projecte
+***Descàrrega de directoris d'un projecte
+
 A vegades tenim la necessitat de descarregar una part d'un projecte. Fins ara per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
 
 A la versió 11.11 del Gitlab s'ha proporcionat la possibilitat de descarregar un directori d'un projecte, així si naveguem dins del projecte, si cliquem a l'icono de descàrrega del projecte obtenim:
@@ -32,11 +35,15 @@ A la versió 11.11 del Gitlab s'ha proporcionat la possibilitat de descarregar u
 Un exemple seria:
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
 
-*** Increment del rendiment
+***Increment del rendiment
+
 A la versió 11.11 del Gitlab s'ha incrementat el rendiment en els següents punts:
 - [Increment del rendiment de les cerques de les issues](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/27817)
+
 - [Increment del rendiment en la funcionalitat de diff complet](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/27413)
+
 - [No carregar les pàgines wiki d'un projecte si només es llisten](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/22801)
+
 - [No crear una referència temporal si es comparen branch del mateix projecte](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/24038)
 
 
