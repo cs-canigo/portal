@@ -16,13 +16,17 @@ Les principals novetats d'aquesta actualització són les següents:
 
 No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers frontend i backend, o en equips on els enginyers treballen sempre en parella com en Programació extrema.
 
-A la versió 11.11 del Gitlab es proporciona que les Merge Request es pugui assignar diversos destinataris perquè totes les persones responsables del canvi puguin ser assignats a la Merge Request
+A la versió 11.11 del Gitlab es proporciona que les Merge Request es pugui assignar diversos destinataris perquè totes les persones responsables del canvi puguin ser assignats a la Merge Request.
+
+[Documentació funcionalitat Multiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
 
 ### Serialització dels gràfics de commits
 
 Moltes operacions habituals de Git requereixen consultar el gràfic de commits. Aquestes operacions són més lentes a mesura que creix el nombre de commits perquè aquestes consultes requereixen que cada objecte es carregui des del disc.
 
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de commits serialitzada, introduïda en els darrers llançaments de Git, per aprofitar l'augment de rediment en la generació dels gràfics de commits.
+
+[Documentació de les funcionalitats de gàfics de commits](https://git-scm.com/docs/commit-graph)
 
 ### Descàrrega de directoris d'un projecte
 
@@ -35,9 +39,12 @@ A la versió 11.11 del Gitlab s'ha proporcionat la possibilitat de descarregar u
 Un exemple seria:
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
 
+[Documentació descàrrega de directoris d'un projecte](https://docs.gitlab.com/ee/user/project/repository/#download-source-code)
+
 ### Increment del rendiment
 
 A la versió 11.11 del Gitlab s'ha incrementat el rendiment en els següents punts:
+
 - [Increment del rendiment de les cerques de les issues](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/27817)
 
 - [Increment del rendiment en la funcionalitat de diff complet](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/27413)
@@ -49,7 +56,11 @@ A la versió 11.11 del Gitlab s'ha incrementat el rendiment en els següents pun
 
 Recordem que a patir de la versió 11.11 del Gitlab és necessari utilitzar Git 2.21.0 o superior
 
-Per a més informació de les funcionalitats que proporciona gitlab versió 11.11 podeu consultar [GitLab 11.11](https://about.gitlab.com/2019/05/22/gitlab-11-11-released/).
+Per a més informació de les funcionalitats que proporciona gitlab versió 11.11 podeu consultar:
+
+[GitLab 11.11](https://about.gitlab.com/2019/05/22/gitlab-11-11-released/)
+
+[238 issues tancades a les versió 11.11](https://gitlab.com/gitlab-org/gitlab-foss/issues?scope=all&utf8=%E2%9C%93&state=all&milestone_title=11.11)
 <br>
 <br>
 Amb aquesta actualització proporciona als proveïdors d’aplicacions un sistema de custodia de codi consistent, de qualitat i amb els millors temps de resposta per a proporcionar un cicle de vida del codi el més agradable possible.
