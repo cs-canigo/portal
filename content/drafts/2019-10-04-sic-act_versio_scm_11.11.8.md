@@ -52,7 +52,7 @@ Recordem que a patir de la versió 11.11 del Gitlab és necessari utilitzar Git 
 Per a més informació de les funcionalitats que proporciona gitlab versió 11.11 podeu consultar [GitLab 11.11](https://about.gitlab.com/2019/05/22/gitlab-11-11-released/).
 <br>
 <br>
-Amb aquesta actualització es proporciona als proveïdors d’aplicacions un sistema de custodia de codi consistent, de qualitat i amb els millors temps de resposta per a proporcionar un cicle de vida del codi el més agradable possible.
+Amb aquesta actualització proporciona als proveïdors d’aplicacions un sistema de custodia de codi consistent, de qualitat i amb els millors temps de resposta per a proporcionar un cicle de vida del codi el més agradable possible.
 Recordem que dins del planning de CS Canigó es preveu l'actualització tecnològica programada de forma trimestral i anual per anar incorporant millores i nova funcionalitat.
 <br>
 <br>
