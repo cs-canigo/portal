@@ -80,17 +80,25 @@ Per a més informació: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-1
 ### Correccions de seguretat
 
 S'han corregit principalment els següents forats de seguretat:
+
 - [CVE-2018-16619](https://support.sonatype.com/hc/en-us/articles/360010789893-CVE-2018-16619-Nexus-Repository-Manager-XSS-October-17-2018?_ga=2.101227976.817663482.1570188895-1181263505.1548239726)
+
 - [CVE-2018-16620](https://support.sonatype.com/hc/en-us/articles/360010789453-CVE-2018-16620-Nexus-Repository-Manager-Missing-Access-Controls-October-17-2018?_ga=2.192442851.817663482.1570188895-1181263505.1548239726)
+
 - [CVE-2018-16621](https://support.sonatype.com/hc/en-us/articles/360010789153-CVE-2018-16621-Nexus-Repository-Manager-Java-Injection-October-17-2018?_ga=2.192442851.817663482.1570188895-1181263505.1548239726)
+
 - [CVE-2018-5306](https://support.sonatype.com/hc/en-us/articles/360000134968?_ga=2.126472772.817663482.1570188895-1181263505.1548239726)
 
 <br><br>
 Per a més informació de les funcionalitats que es proporcionen des de la versió 3.2.1 a la 3.16.2 podeu consultar:
 
 - [Release notes del 2019](https://help.sonatype.com/repomanager3/release-notes/2019-release-notes)
+
 - [Release notes del 2018](https://help.sonatype.com/repomanager3/release-notes/2018-release-notes)
+
 - [Release notes del 2017](https://help.sonatype.com/repomanager3/release-notes/2017-release-notes)
+
 - [615 issues tancades des de la versió 3.2.1 a la 3.16.1](https://issues.sonatype.org/browse/NEXUS-20170?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.10.0%2C%203.11.0%2C%203.12.0%2C%203.12.1%2C%203.13.0%2C%203.14.0%2C%203.15.0%2C%203.15.1%2C%203.15.2%2C%203.16.0%2C%203.16.1%2C%203.16.2%2C%203.2.0%2C%203.2.1%2C%203.3.0%2C%203.3.1%2C%203.3.2%2C%203.4.0%2C%203.5.0%2C%203.5.1%2C%203.5.2%2C%203.6.0%2C%203.6.1%2C%203.6.2%2C%203.7.0%2C%203.7.1%2C%203.8.0%2C%203.9.0))
+
 <br><br>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
