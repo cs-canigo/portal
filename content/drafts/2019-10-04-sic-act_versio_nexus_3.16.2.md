@@ -11,61 +11,74 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 **Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la versió 3.16.2 del Nexus**.
 <br>
 Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
-<br>
+<br><br>
 Les principals novetats i millores d'aquesta actualització són les següents:
 
 ### Novetats
-<br>
 
 #### Endpoint de salut per node
 
 Amb la versió 3.16 del Nexus s'ha proporcionat un endpoint per a consultar la salut d'un node del nexus. D'aquesta forma es permet consultar quan un node està disponible.
+
 Per a més informació: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949)
 <br>
 
 #### Creació de fitxer temporal a la càrrega d'artefactes per la interficie d'usuari
 
 Si s'utilitza la interficie d'usuari per a pujar un artefacte aquest es crearà físicament de forma temporal a java.io.tmpdir.
+
 Per a més informació: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277)
 <br>
 
 #### Verificat amb OpenJDK 8
 
 S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8.
+
 Per a més informació: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300)
 <br>
 
 ### Millores en les cerques
 
 Les principals millores en les cerques són:
+
 - [Cerques parcials](https://issues.sonatype.org/browse/NEXUS-8884)
+
 - [Llistats tots els snapshots i no només l'últim](https://issues.sonatype.org/browse/NEXUS-8798)
 <br>
 
 ### Resolució d'incidències en la interficie d'usuari
 
 Els principals aspectes resolts són els següents:
+
 - [Errors no tractats de "Uncaught TypeError"](https://issues.sonatype.org/browse/NEXUS-13057)
+
 - [Errors en Internet explorer](https://issues.sonatype.org/browse/NEXUS-19051)
+
 - [Ordenació incorrecte per versió](https://issues.sonatype.org/browse/NEXUS-12253)
+
 - [Cerques sense resultats erròniament](https://issues.sonatype.org/browse/NEXUS-18909)
+
 - [Error en pujar fitxers si el procés consumia més de 60 segons](https://issues.sonatype.org/browse/NEXUS-18494)
+
 - [Obtenció de NullPointerException si no s'envia la capçalera user-agent](https://issues.sonatype.org/browse/NEXUS-13136)
+
 - [Error de time out navegant per repositoris grans](https://issues.sonatype.org/browse/NEXUS-13095)
+
 <br>
 
 ### Resolució d'incidències
-<br>
 
 #### Correcció de bug amb NPM
 
 Correcció d'un bug registrat en el filtre de sol·licitut anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
+
 Per a més informació: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850)
 <br>
 
 #### Correcció de bug amb POMs llargs
 
 S'ha resolt un bug que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException".
+
 Per a més informació: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196)
 <br>
 
@@ -79,7 +92,6 @@ S'han corregit principalment els següents forats de seguretat:
 
 
 <br><br>
-
 Per a més informació de les funcionalitats que es proporcionen des de la versió 3.2.1 a la 3.16.2 podeu consultar:
 
 - [Release notes del 2019](https://help.sonatype.com/repomanager3/release-notes/2019-release-notes)
