@@ -12,20 +12,20 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 <br>
 Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
 <br><br>
-Les principals novetats i millores d'aquesta actualització són les següents:
+A continuació es detallen les principals novetats i millores d'aquesta actualització.
 
 ### Novetats
 
 #### Endpoint de salut per node
 
-Amb la versió 3.16 del Nexus s'ha proporcionat un endpoint per a consultar la salut d'un node del nexus. D'aquesta forma es permet consultar quan un node està disponible.
+Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del nexus. D'aquesta forma es permet consultar quan un node està disponible.
 
 Per a més informació: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949)
 <br>
 
-#### Creació de fitxer temporal a la càrrega d'artefactes per la interficie d'usuari
+#### Creació de fitxer temporal a la càrrega d'artefactes per la interfície d'usuari
 
-Si s'utilitza la interficie d'usuari per a pujar un artefacte aquest es crearà físicament de forma temporal a java.io.tmpdir.
+Si s'utilitza la interfície d'usuari per a pujar un artefacte aquest es crearà físicament de forma temporal a java.io.tmpdir.
 
 Per a més informació: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277)
 <br>
@@ -46,7 +46,7 @@ Les principals millores en les cerques són:
 - [Llistats tots els snapshots i no només l'últim](https://issues.sonatype.org/browse/NEXUS-8798)
 <br>
 
-### Resolució d'incidències en la interficie d'usuari
+### Resolució d'incidències en la interfície d'usuari
 
 Els principals aspectes resolts són els següents:
 
@@ -70,7 +70,7 @@ Els principals aspectes resolts són els següents:
 
 #### Correcció de bug amb NPM
 
-Correcció d'un bug registrat en el filtre de sol·licitut anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
+Correcció d'un bug registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
 
 Per a més informació: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850)
 <br>
@@ -90,7 +90,6 @@ S'han corregit principalment els següents forats de seguretat:
 - [CVE-2018-16621](https://support.sonatype.com/hc/en-us/articles/360010789153-CVE-2018-16621-Nexus-Repository-Manager-Java-Injection-October-17-2018?_ga=2.192442851.817663482.1570188895-1181263505.1548239726)
 - [CVE-2018-5306](https://support.sonatype.com/hc/en-us/articles/360000134968?_ga=2.126472772.817663482.1570188895-1181263505.1548239726)
 
-
 <br><br>
 Per a més informació de les funcionalitats que es proporcionen des de la versió 3.2.1 a la 3.16.2 podeu consultar:
 
@@ -98,6 +97,5 @@ Per a més informació de les funcionalitats que es proporcionen des de la versi
 - [Release notes del 2018](https://help.sonatype.com/repomanager3/release-notes/2018-release-notes)
 - [Release notes del 2017](https://help.sonatype.com/repomanager3/release-notes/2017-release-notes)
 - [615 issues tancades des de la versió 3.2.1 a la 3.16.1](https://issues.sonatype.org/browse/NEXUS-20170?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.10.0%2C%203.11.0%2C%203.12.0%2C%203.12.1%2C%203.13.0%2C%203.14.0%2C%203.15.0%2C%203.15.1%2C%203.15.2%2C%203.16.0%2C%203.16.1%2C%203.16.2%2C%203.2.0%2C%203.2.1%2C%203.3.0%2C%203.3.1%2C%203.3.2%2C%203.4.0%2C%203.5.0%2C%203.5.1%2C%203.5.2%2C%203.6.0%2C%203.6.1%2C%203.6.2%2C%203.7.0%2C%203.7.1%2C%203.8.0%2C%203.9.0))
-
 <br><br>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
