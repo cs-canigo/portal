@@ -61,7 +61,10 @@ A la versió 11.11 del Gitlab s'ha millorat el rendiment principalment en els se
 
 <br><br>
 Per a més informació sobre les funcionalitats que proporciona Gitlab a la versió 11.11 podeu consultar:
+
 - [GitLab v.11.11](https://about.gitlab.com/2019/05/22/gitlab-11-11-released/)
+
 - [238 issues tancades](https://gitlab.com/gitlab-org/gitlab-foss/issues?scope=all&utf8=%E2%9C%93&state=all&milestone_title=11.11)
+
 <br><br>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

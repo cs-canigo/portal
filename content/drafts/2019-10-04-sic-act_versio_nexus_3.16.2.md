@@ -21,21 +21,21 @@ A continuació es detallen les principals novetats i millores d'aquesta actualit
 Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del nexus. D'aquesta forma es permet consultar quan un node està disponible.
 
 Per a més informació: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949)
-<br>
+<br><br>
 
 #### Creació de fitxer temporal a la càrrega d'artefactes per la interfície d'usuari
 
 Si s'utilitza la interfície d'usuari per a pujar un artefacte aquest es crearà físicament de forma temporal a java.io.tmpdir.
 
 Per a més informació: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277)
-<br>
+<br><br>
 
 #### Verificat amb OpenJDK 8
 
 S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8.
 
 Per a més informació: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300)
-<br>
+<br><br>
 
 ### Millores en les cerques
 
@@ -64,8 +64,6 @@ Els principals aspectes resolts són els següents:
 
 - [Error de time out navegant per repositoris grans](https://issues.sonatype.org/browse/NEXUS-13095)
 
-<br>
-
 ### Resolució d'incidències
 
 #### Correcció de bug amb NPM
@@ -73,14 +71,14 @@ Els principals aspectes resolts són els següents:
 Correcció d'un bug registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
 
 Per a més informació: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850)
-<br>
+<br><br>
 
 #### Correcció de bug amb POMs llargs
 
 S'ha resolt un bug que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException".
 
 Per a més informació: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196)
-<br>
+<br><br>
 
 ### Correccions de seguretat
 
