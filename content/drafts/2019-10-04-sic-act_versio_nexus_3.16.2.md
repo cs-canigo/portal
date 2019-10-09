@@ -35,7 +35,6 @@ Per a més informació: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-1
 S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8.
 
 Per a més informació: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300)
-<br><br>
 
 ### Millores en les cerques
 
@@ -44,7 +43,6 @@ Les principals millores en les cerques són:
 - [Cerques parcials](https://issues.sonatype.org/browse/NEXUS-8884)
 
 - [Llistats tots els snapshots i no només l'últim](https://issues.sonatype.org/browse/NEXUS-8798)
-<br>
 
 ### Resolució d'incidències en la interfície d'usuari
 
@@ -78,7 +76,6 @@ Per a més informació: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-1
 S'ha resolt un bug que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException".
 
 Per a més informació: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196)
-<br><br>
 
 ### Correccions de seguretat
 
