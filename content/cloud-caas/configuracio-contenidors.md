@@ -194,7 +194,7 @@ Cal proporcionar-les a l'equip de Suport Cloud a l'hora de configurar el despleg
 
 ### Secrets
 
-Els secrets es cofiguren a la consola de SwarmMe i posterior es defineixen al contenidor al moment de desplegar. Aquests secrets es creen a la carpeta del contenidor /run/secrets i el nom del fitxer aplica a la clau i el contingut al valor.
+Els secrets es cofiguren a la consola de SwarmMe i posteriorment es defineixen al contenidor al moment de desplegar. Aquests secrets es creen a la carpeta del contenidor /run/secrets i el nom del fitxer aplica a la clau i el contingut al valor.
 
 L'aplicació s'encarregarà de carregar aquest valor, per al seu ús.
 
