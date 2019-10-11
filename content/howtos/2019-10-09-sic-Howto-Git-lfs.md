@@ -29,6 +29,7 @@ Les instruccions d'instal·lació les podeu trobar a:
 
 Un cop instal·lat, en qualsevol projecte podrem indicar les extensions dels fitxers que cal incloure en el git-lfs mitjançant la següent comanda executada a l'arrel del projecte:
 
+```
    git lfs track "*.iso"
 
 Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte git.
