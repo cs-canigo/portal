@@ -16,7 +16,6 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que encara no hagin mig
 L'eina actual de custodia de codi font al SIC és Gitlab i l'anterior eina SVN (Subversion) ha quedat operativa en mode lectura fins a finalitzar la migració de repositoris.
 
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
-<br/>
 
 ## Requisits
 
@@ -25,7 +24,6 @@ Per aplicacions que encara no hagin migrat el seu codi font, podran fer-ho si s'
 * Utilitzar un sistema operatiu Linux i tenir instal·lats els paquets git, git-svn i svn.
 * El repositori a migrar **no pot contenir binaris** (.jar, .war, .ear, .dll, .exe, carpeta "node_modules") **ni arxius de mida superior a 25 MB**.
 Actualment el repositori original a SVN es troba disponible en mode lectura per a poder accedir a l'historial. Per a dur a terme la migració al nou sistema, caldrà seguir les següents passes:
-<br/>
 
 ## Procediment a seguir
 

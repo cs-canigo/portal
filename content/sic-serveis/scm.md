@@ -70,7 +70,9 @@ Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
 
 Teniu a la vostra disposició alguns articles relacionats amb el servei:
+
 - [Migració de repositoris SVN al Git](/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git)
+- [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
