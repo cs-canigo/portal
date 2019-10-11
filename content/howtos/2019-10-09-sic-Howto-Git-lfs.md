@@ -35,8 +35,9 @@ Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que h
 
 ## Funcionament
 
-Un cop instal·lat i indicades les extensions dels fitxers afectades, en endavant tots els fitxer amb extensió afectada (.iso en l’exemple) es pujaran automàticament al mòdul lfs del servidor evitant les restriccions de tamany.
+Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al mòdul lfs del servidor evitant les restriccions de tamany.
 
 **Lfs** accepta expressions regulars semblants a les que podem trobar en el fitxer .gitignore, per tant el tracking pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
-La documentació oficial per el gitlab la podem trobar a [en la web oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)
+<br/><br/>
+La documentació oficial per el gitlab la podeu trobar a la [Web Oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)

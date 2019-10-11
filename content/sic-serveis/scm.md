@@ -68,7 +68,7 @@ En publicar una nova versió del codi font sobre la branca MASTER, automàticame
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
 Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
-
+<br/><br/>
 Teniu a la vostra disposició alguns articles relacionats amb el servei:
 
 - [Migració de repositoris SVN al Git](/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git)
