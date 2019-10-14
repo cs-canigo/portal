@@ -14,7 +14,6 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús 
 ## Introducció
 
 Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git.
-
 Git LFS és un projecte de codi obert i és una extensió de Git. El seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori donat:
 
 - Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin;
@@ -22,7 +21,9 @@ Git LFS és un projecte de codi obert i és una extensió de Git. El seu objecti
 - Git considerarà una **actualització d'un arxiu binari com un canvi complert de l'arxiu**, per lo que no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el
 repositori anirà creixent de tamany i les comandes Git cada cop seran més lentes.
 
-Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, es recomanable usar Git LFS. Git LFS utilitza punters enlloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS.
+Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, es recomanable usar Git LFS.
+
+Git LFS utilitza punters enlloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS.
 
 ## Requisits que cal complir
 
@@ -51,21 +52,21 @@ Es recomana confirmar i enviar aquest arxiu al repositori per a que tots els des
 
 ## Com funciona
 
-Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al mòdul lfs del servidor evitant les restriccions de tamany.
+Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de tamany.
 
-**Lfs** accepta expressions regulars semblants a les que podem trobar en el fitxer .gitignore, per tant el tracking pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
+Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el tracking pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
 Quan s'extrau un arxiu Git LFS al repositori local, l'arxiu s'envia a través d'un filtre que reemplaçarà el punter per l'arxiu real.
-L'extensió Git LFS permet integrar fitxers de àudio, de vídeo i gràfics en el nostre codi font sense incrementar el tamany en el repositori central i evitant possibles problemes de rendiment en el servidor.
+L'extensió Git LFS permet integrar **fitxers de àudio, de vídeo i gràfics** en el nostre codi font sense incrementar el tamany en el repositori central i evitant possibles problemes de rendiment en el servidor.
 
 ## Consells
 
-- La caché local de Git LFS no es netejarà automàticament per lo que, de forma regular, cal executar la següent comanda:
+- La **caché local de Git LFS no es netejarà automàticament** per lo que, de forma regular, cal executar la següent comanda:
 ```
 git lfs prune
 ```
-- Asseguri’s que tots els desenvolupadors tinguin instal·lat Git LFS doncs, si algú sense l’extensió confirma un arxiu que hauria d’estar associat amb Git LFS, obtindrà errors estranys que, tot i que son subsanables, millor evitar-los.
-- Abans de decidir assignar binaris a un repositori Git cal pensar en si realment és necessari fer-hi control de versions i si existeix alguna alternativa basada en texte.
+- Asseguri’s que **tots els desenvolupadors tinguin instal·lat Git LFS** doncs, si algú sense l’extensió confirma un arxiu que hauria d’estar associat amb Git LFS, obtindrà errors estranys que, tot i que son subsanables, millor evitar-los.
+- Abans de decidir assignar binaris a un repositori Git cal pensar en si **realment és necessari** fer control de versions i si existeix alguna alternativa basada en texte.
 
 <br/><br/>
 La documentació oficial la podeu trobar a la [Web Oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)
