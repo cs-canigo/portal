@@ -23,7 +23,7 @@ Cada usuari pot configurar les notificacions que vol rebre accedint a l'apartat 
 ![Notificacions Usuari](/related/sic/userNotifications.png)
 
 <br/>
-La documentació oficial la podreu trobar a: [Notifications](https://docs.gitlab.com/ce/workflow/notifications.html)
+La documentació oficial la podreu trobar a: [GitLab Notification Emails](https://docs.gitlab.com/ce/workflow/notifications.html).
 
 ## Com configurar les notificacions per projecte
 
@@ -32,4 +32,4 @@ Per a activar-les cal anar a l'apartat d'integracions del projecte i seleccionar
 
 ![Notificacions Projecte](/related/sic/projectNotifications.png)
 
-Per a més informació: [Emails on push](https://docs.gitlab.com/ee/user/project/integrations/emails_on_push.html)
+Per a més informació: [Enabling emails on push](https://docs.gitlab.com/ee/user/project/integrations/emails_on_push.html).
