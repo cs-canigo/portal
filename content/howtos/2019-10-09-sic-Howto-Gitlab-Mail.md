@@ -18,17 +18,25 @@ El sistema permet activar aquest servei per usuari i per projecte.
 
 ## Com configurar les notificacions per usuari
 
-Cada usuari pot configurar les notificacions que vol rebre accedint a l'apartat User -> Settings -> Notifications.
+Cada usuari pot configurar les notificacions que vol rebre accedint a l'apartat **User -> Settings -> Notifications**.
+
+La configuració de notificacions es divideix en tres grups: **global, de grup o de projecte**.
+
+Cada una d'aquestes configuracions disposa de diferents nivells de notificació: **global, watch, on mention, participate, disabled o custom**.
 
 ![Notificacions Usuari](/related/sic/userNotifications.png)
 
 <br/>
 La documentació oficial la podreu trobar a: [GitLab Notification Emails](https://docs.gitlab.com/ce/workflow/notifications.html).
 
-## Com configurar les notificacions per projecte
+## Com habilitar les notificacions per canvis als projectes
 
-També podem configurar notificacions per projecte, però en aquest cas haurem d'afegir les adreces de correu que volen rebre aquestes notificacions.
+També podem configurar notificacions per projecte, de forma que es rebin notificacions per correu electrònic per cada canvi que es faci al projecte.
+En aquest cas haurem d'afegir les adreces de correu electrònic destinatàries.
+
 Per a activar-les cal anar a l'apartat d'integracions del projecte i seleccionar la integració "Emails on push".
+
+Opcions disponibles: **push events, tag push events, send from committer i disable code diffs**.
 
 ![Notificacions Projecte](/related/sic/projectNotifications.png)
 
