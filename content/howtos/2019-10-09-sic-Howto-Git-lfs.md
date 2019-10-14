@@ -45,4 +45,4 @@ Un cop instal·lat el component i indicades les extensions dels fitxers afectade
 **Lfs** accepta expressions regulars semblants a les que podem trobar en el fitxer .gitignore, per tant el tracking pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
 <br/><br/>
-La documentació oficial per el gitlab la podeu trobar a la [Web Oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)
+La documentació oficial la podeu trobar a la [Web Oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)

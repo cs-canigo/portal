@@ -18,7 +18,7 @@ La programació reactiva és un paradigma de programació enfocat a treballar am
 
 La programació reactiva segueix el patró de disseny Observer:  quan hi ha un canvi a l'estat d'un objecte, els altres objectes són notificats i actualitzats segons el canvi. Per tant, enlloc de sondejar events pels canvis, els events es realitzen de forma asíncrona per a que els observadors puguin processar-los.
 
-La motivació darrera d'aquest nou paradigma procedeix de la necessitat de respondre a les limitacions d'escalat presents en els models de desenvolupaments actuals, que es caracteritzen per el seu desaprofitament de l’ús de la CPU degut al I/O, la sobreutilització de memòria i la ineficàcia de les interaccions bloquejants.
+La motivació darrera d'aquest nou paradigma procedeix de la necessitat de respondre a les limitacions d'escalat presents en els models de desenvolupaments actuals, que es caracteritzen pel seu desaprofitament de l’ús de la CPU degut al I/O, la sobreutilització de memòria i la ineficàcia de les interaccions bloquejants.
 
 <br>
 

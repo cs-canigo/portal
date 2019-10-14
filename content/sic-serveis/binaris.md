@@ -1,7 +1,7 @@
 +++
 date = "2019-02-22"
 title = "Binaris"
-description = "Eina del SIC per el lliurament d'artefactes a CPD"
+description = "Eina del SIC pel lliurament d'artefactes a CPD"
 sections = "SIC"
 aliases = [
   "/noticies/2017-07-05-SIC-Gestio-binaris/"
