@@ -27,7 +27,7 @@ Cada una d'aquestes configuracions disposa de diferents nivells de notificació:
 ![Notificacions Usuari](/related/sic/userNotifications.png)
 
 <br/>
-La documentació oficial la podreu trobar a: [GitLab Notification Emails](https://docs.gitlab.com/ce/workflow/notifications.html).
+Per a més informació: [GitLab Notification Emails](https://docs.gitlab.com/ce/workflow/notifications.html).
 
 ## Com habilitar les notificacions per canvis als projectes
 
