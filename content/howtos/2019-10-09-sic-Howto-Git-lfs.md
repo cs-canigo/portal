@@ -15,11 +15,11 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús 
 
 L'extensió Git-lfs permet integrar fitxers d’audio, de vídeo i gràfics en el nostre codi font sense incrementar el tamany en el repositori central i evitant possibles problemes de rendiment en el servidor.
 
-## Requisits
+## Requisits que cal complir
 
 Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball.
 
-## Instal·lació
+## Com dur a terme la instal·lació
 
 Les instruccions d'instal·lació les podeu trobar a:
 
@@ -34,7 +34,10 @@ Un cop instal·lat, en qualsevol projecte podrem indicar les extensions dels fit
 
 Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte git.
 
-## Funcionament
+![Git-lfs](/related/sic/git-lfs.png)
+<br/>
+
+## Quin és el funcionament
 
 Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al mòdul lfs del servidor evitant les restriccions de tamany.
 

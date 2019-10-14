@@ -17,7 +17,7 @@ L'eina actual de custodia de codi font al SIC és Gitlab i l'anterior eina SVN (
 
 Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 
-## Requisits
+## Requisits que cal complir
 
 Per aplicacions que encara no hagin migrat el seu codi font, podran fer-ho si s'acompleixen els següents requisits:
 

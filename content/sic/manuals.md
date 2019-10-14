@@ -15,6 +15,7 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 
 - [Migració de repositoris SVN al Git](/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git)
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
+- [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab_Mail)
 
 
 ### Manuals
