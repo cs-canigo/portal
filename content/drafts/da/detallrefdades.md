@@ -101,6 +101,30 @@ weight= 5
       tblBody.appendChild(hilera);
     }
 
+	// -----------------------------------------------------
+    //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
+	hilera = document.createElement("tr");
+
+    celda = document.createElement("td");
+    celda.style.fontWeight = "bold";
+    textoCelda =  document.createTextNode("Atributs");
+    celda.appendChild(textoCelda);
+    hilera.appendChild(celda);
+	
+    celda = document.createElement("td");
+    var frame = document.createElement('iframe');
+	var nomFitAtr="Atr_" + dades[13];
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
+    frame.style.width= "100%"
+    frame.style.height= "200px";
+    celda.appendChild(frame);
+    hilera.appendChild(celda);
+
+    tblBody.appendChild(hilera);
+
+    //  v02.CTD-16/10/2019 (fi)
+	// -----------------------------------------------------	
+	
 
     hilera = document.createElement("tr");
    
@@ -133,8 +157,9 @@ weight= 5
     //tabla.appendChild(tblBody);
     // appends <table> into <body>
     //body.appendChild(tabla);
+
     
-     hilera = document.createElement("tr");
+    hilera = document.createElement("tr");
    
     celda = document.createElement("td");
     celda.style.fontWeight = "bold";
