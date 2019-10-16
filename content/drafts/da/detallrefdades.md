@@ -113,7 +113,7 @@ weight= 5
 	
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
-	var nomFitAtr="Atr_" + dades[13] + ".doc";
+	var nomFitAtr="Atr_" + dades[13] + ".docx";
     frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
     frame.style.width= "100%"
     frame.style.height= "300px";
