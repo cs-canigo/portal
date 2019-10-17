@@ -115,11 +115,7 @@ weight= 5
     celda = document.createElement("td");
     var frame = document.createElement('iframe');
 	
-//	var nomFitAtr="Atr_" + dades[13] + ".docx";
-    -- Els atributs venen per un doc amb el mateix nom que l'excel canviant .xlsx per _ATR.doc--
-	-- Pendent de confirmar el canvi i veure si es més factible passar el nom del doc a parametre
-  	var nomFitAtr_aux=dades[13];
-    var nomFitAtr=nomFitAtr_aux.replace(".xlsx","_ATR.docx";
+  	var nomFitAtr=dades[14];
 	
     frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
     frame.style.width= "100%"
