@@ -27,6 +27,7 @@ Java		 | 7  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:7   | [j
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
 Java		 | 11-openjdk  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11)
 MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/5.7)
+MySql 		 | 8.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:8.0   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/8.0)
 NodeJS 		 | 8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/8)
 NodeJS 		 | 10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/10)
 PHP 		 | 7.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.1   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/7.1)
