@@ -710,7 +710,7 @@ On s'ha de tenir definit a la base de dades de l'aplicació les taules necessari
 
 Per a més informació sobre les taules podeu consultar la documentació de Spring [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#appendix-schema)
 
-Amb aquesta configuració ha de ser possible autoritzar un usuari que prèviament ha estat auntenticat en el servei de GICAR. Per aquest motiu és necessari rebre certes dades referents a aquesta autenticació ja realitzada. A la capçalera HTML podrem accedir a aquestes dades:
+Amb aquesta configuració ha de ser possible autoritzar un usuari que prèviament ha estat autenticat en el servei de GICAR. Per aquest motiu és necessari rebre certes dades referents a aquesta autenticació ja realitzada. A la capçalera HTML podrem accedir a aquestes dades:
 
 ```
 HTTP_GICAR=CODIINTERN=NRDRJN0001;NIF=11112222W;EMAIL=mail.admin@gencat.net;UNITAT_MAJOR=CTTI;
@@ -931,7 +931,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }			
 ```
 
-Amb aquesta configuració s'utilitzen les capçaleres *GICAR* i *GICAR_ID* per a l'autentiació i *HTTP_GICAR_MEMBERL* per l'autorització
+Amb aquesta configuració s'utilitzen les capçaleres *HTTP_GICAR* i *HTTP_GICAR_ID* o *HTTP_GICAR_CERT* i *HTTP_GICAR_PSIS* per a l'autentiació i *HTTP_GICAR_MEMBERL* per l'autorització
 
 Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
 
