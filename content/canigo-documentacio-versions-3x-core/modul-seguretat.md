@@ -744,7 +744,7 @@ Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
-A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació:
+A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR amb JWT com a sistema d'autenticació:
 
 ```
 import javax.inject.Named;
