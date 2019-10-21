@@ -71,7 +71,7 @@ Propietat                     | Requerit | Descripció                          
 *.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
-Per provar l'autenticació per token s'ha de cridar a "http://<app>/api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR, o en el cos de la petició en format JSON en altres casos.
+Per provar l'autenticació per token s'ha de cridar a "http:// < app > /api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR, o en el cos de la petició en format JSON en altres casos.
 ```
 { 
 	username = user,
