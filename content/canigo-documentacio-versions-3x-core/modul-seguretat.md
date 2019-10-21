@@ -1,5 +1,5 @@
 +++
-date        = "2016-11-28T11:48:54+02:00"
+date        = "2019-10-21"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
 sections    = "Canigó. Documentació versió 3.x"
@@ -19,86 +19,13 @@ Canigó recomana l'ús de Spring Security com a framework base i les extensions 
 Per tal d'instal- lar el mòdul de seguretat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.security.version>[1.2.0, 1.3.0)</canigo.security.version>
-<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
+<canigo.security.version>[2.0.0, 2.3.0)</canigo.security.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.security</artifactId>
 	<version>${canigo.security.version}</version>
 </dependency>
-
-<dependency>
-	<groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.test</artifactId>
-	<version>${canigo.test.version}</version>
-	<scope>test</scope>
-</dependency>
-
-<dependency>
-   <groupId>cat.gencat.ctti</groupId>
-   <artifactId>canigo.security</artifactId>
-   <type>test-jar</type>
-   <version>${canigo.security.version}</version>
-   <scope>test</scope>
-   <classifier>tests</classifier>
-</dependency>
-
-```
-Al pom.xml també s'ha d'afegir el plugin executa el test unitari del mòdul de seguretat. 
-En el cas de tenir configurat l'execució del test dels mòduls de configuració i/o persistència,
-cal excloure la dependència del mòdul de seguretat per tal d'evitar conflictes:
-```
-<build>
-	...
-	<plugins>
-		...
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>base-test</id>
-                    <phase>test</phase>
-                    <goals>
-                        <goal>test</goal>
-                    </goals>
-                    <configuration>
-                        <dependenciesToScan>
-		          <dependency>cat.gencat.ctti:canigo.core</dependency>
-		          <dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
-			  <dependency>cat.gencat.ctti:canigo.web.rs</dependency>
-                        </dependenciesToScan>
-			<excludes>
-			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
-			</excludes>
-			<classpathDependencyExcludes>
-			  <classpathDependencyExcludes>cat.gencat.ctti:canigo.security</classpathDependencyExcludes>
-			</classpathDependencyExcludes>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>cat.gencat.ctti:canigo.security-test</id>
-                    <phase>test</phase>
-                    <goals>
-                        <goal>test</goal>
-                    </goals>
-                    <configuration>
-                        <dependenciesToScan>
-                          <dependency>cat.gencat.ctti:canigo.security</dependency>
-                        </dependenciesToScan>
-			<excludes>
-			  <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
-			</excludes>
-                    </configuration>
-                </execution>
-                ...
-            </executions>
-        </plugin>
-		...
-	</plugins>
-	...
-</build>	
 ```
 
 ### Configuració
@@ -164,51 +91,51 @@ Per defecte el mòdul de seguretat publica les api /auth i /login.
 En cas de no voler publicar-les a la nostra aplicació s'hauria de condicionar la càrrega de Spring Boot de la següent manera:
 
 Al fitxer de configuració de l'aplicació (AppConfig.java) afegir l'annotació @PropertySource al fitxer boot.properties que s'ha de crear:
-
+```
 	@Configuration
 	@PropertySource("classpath:/config/props/boot.properties")
 	@ImportResource({ "classpath:cat/gencat/ctti/canigo/arch/core/config/canigo-core.xml" })
 	@EnableTransactionManagement
 	public class AppConfig {
 	}
-	
+```	
 Crear el fitxer /src/main/reources/config/props/boot.properties amb la propietat *publishAuthController* a false:
-
+```
 	publishAuthController=false
-
+```
 
 #### Configuració de l'autenticació
 
 En la configuració de l'autenticació tindrem en consideració:
 
-* Seleccionar el tipus de font contra la que es realitza l'autenticació (per arxiu de propietats, base de dades, LDAP, ...)
+* Seleccionar el tipus de font contra la que es realitza l'autenticació (per arxiu de propietats, base de dades, Gicar, ...)
 * Configurar el formulari d'autenticació web i la seqüència d'accions per realitzar l'autenticació.
 
 Dins d'aquest mòdul trobem els següents proveidors de seguretat:
 
 * Seguretat In-Memory
 * Seguretat Base de dades
-* Seguretat LDAP
 * Seguretat GICAR
 
 Els diferents proveidors comparteixen els següents arxius de configuració:
 
 * security.properties: propietats del servei de seguretat
 * app-custom-security.xml: arxiu XML amb la configuració de seguretat.
-* SecurityConfig.java: classe Java amb la configuració de seguretat Web.
+* WebSecurityConfig.java: classe Java amb la configuració de seguretat Web.
 * security.users.properties: llistat en format pla dels usuaris/password/rols de l'aplicació per al proveïdor "InMemory".
 
 La disposició dels arxius és la següent:
 
 * Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/security.users.properties
 * Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-custom-security.xml
-* Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/nomapp/config/SecurityConfig.java
+* Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/nomapp/config/WebSecurityConfig.java
 * Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/security.properties
 
-A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR amb token JWT en una aplicació Canigó:
+A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR amb token JWT en una aplicació Canigó:
 
 ```
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private AuthenticationEntryPoint restAuthenticationEntryPoint;
@@ -353,9 +280,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-
-
-#### Configuració de la font d'autorització per base de dades
+#### Configuració de la font d'autenticació i autorització per base de dades
 
 Per a configurar la font d'autorització mitjançant base de dades és necessari:
 
@@ -390,10 +315,12 @@ La configuració del provider en app-custom-security.xml per aquest proveidor é
 <div class="message warning">
 Accés base de dades
 
-L'eina de suport al desenvolupament automatitza la instal- lació del mòdul de persistència si aquest no ha estat instal- lat prèviament pel desenvolupador.
+L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de persistència si aquest no ha estat instal·lat prèviament pel desenvolupador.
 </div>
 
-#### Configuració de l'Autorització per LDAP
+#### Configuració de la font d'autenticació i autorització per LDAP
+
+Funcionalitat ja deprecada
 
 Per a configurar l'acces a LDAP és necessari:
 
@@ -438,7 +365,7 @@ Configuració del provider en **app-custom-security.xml**:
 manager-password="${security.ldap.manager.password}"/>
 ```
 
-#### Configuració de l'Autorització per arxiu de propietats
+#### Configuració de la font d'autenticació i autorització per arxiu de propietats
 
 Aquest proveidor de seguretat es recolça en un arxiu de propietats per carregar en memòria els usuaris/password/rols de l'aplicació.
 
@@ -458,7 +385,7 @@ user=password,ROLE_USER,enabled
 admin=password,ROLE_USER,ROLE_ADMIN,enabled
 ```
 
-#### Configuració del provider en **app-custom-security.xml**:
+Per a configurar el provider en **app-custom-security.xml** realitzarem:
 
 * Afegim el provider al authentication manager.
 * Afegim el tipus de codificador de password per tal de comparar el password de l'arxiu de propietats i el que ens ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: plaintext, sha, sha-256, md5, md4, ssha.
@@ -472,7 +399,7 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 </security:authentication-manager>
 ```
 
-#### Configuració de la Font d'Autorització per GICAR
+#### Configuració de la font d'autenticació per GICAR
 
 Per a configurar l'accés a GICAR és necessari:
 
@@ -492,10 +419,11 @@ Propietat                                   | Requerit | Descripció
 Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera automàtica la capçalera `HTTP_GICAR_PSIS` per autenticació amb certificats per usuaris que no estan en el DC (Autenticació Anònima), utilitzant-se com a font de dades alternativa per a tasques d'autententicació.
 A la pàgina del [Servei d'autenticació anònima amb GICAR](https://canigo.ctti.gencat.cat/gicar-integracio/auth-anonima/) es pot trobar informació detallada d'aquesta capçalera.
 
-A continuació es mostra la classe SecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació.
+A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació:
 
 ```
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private AuthenticationEntryPoint restAuthenticationEntryPoint;
@@ -581,6 +509,207 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 ```
 
+A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR amb JWT com a sistema d'autenticació:
+
+```
+import javax.inject.Named;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Primary;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration;
+import cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO;
+import cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl;
+import cat.gencat.ctti.canigo.arch.security.provider.gicar.GICARUserDetailsServiceImpl;
+import cat.gencat.ctti.canigo.arch.security.provider.siteminder.SiteminderAuthenticationProvider;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.gicar.ProxyUsernamePasswordAuthenticationFilter;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtAuthenticationFilter;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.AuthenticationService;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.impl.JwtAuthenticationService;
+
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	@Lazy
+	private AuthenticationEntryPoint restAuthenticationEntryPoint;
+
+	@Autowired
+	private PropertiesConfiguration propertiesConfiguration;
+
+	@Autowired
+	@Lazy
+	private AuthenticationManager authenticationManager;
+
+	@Autowired
+	@Lazy
+	private AuthenticationSuccessHandler restAuthenticationSuccessHandler;
+
+	@Autowired
+	@Lazy
+	private AuthenticationFailureHandler restAuthenticationFailureHandler;
+
+	@Autowired
+	@Lazy
+	private AccessDeniedHandler restAccessDeniedHandler;
+
+	@Autowired
+	@Lazy
+	private DataSource dataSource;
+
+	@Bean
+	@Autowired
+	public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
+		final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+		proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationFailureHandler(restAuthenticationFailureHandler);
+		return proxyUsernamePasswordAuthenticationFilter;
+	}
+
+	@Override
+	protected void configure(final HttpSecurity http) throws Exception {
+
+		http.authorizeRequests()
+		.antMatchers("/api/auth").permitAll()
+		.antMatchers("/images/*/**", "/css/*/**", "/js/*/**", "/fonts/*/**").permitAll()
+		.antMatchers("/api/info/**", "/api/logs/**").hasRole("ADMIN")
+		.antMatchers("/api/equipaments/**").hasRole("USER");
+
+		http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
+		http.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
+		http.csrf().disable();
+		
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.addFilterBefore(jwtAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
+	}
+
+	@Bean
+	public AuthenticationProvider authenticationProvider() {
+		final SiteminderAuthenticationProvider siteminderAuthenticationProvider = new SiteminderAuthenticationProvider();
+		siteminderAuthenticationProvider.setUserDetailsService(gicarUserDetailsService());
+		return siteminderAuthenticationProvider;
+	}
+
+	@Bean
+	@Primary
+	public UserDetailsService gicarUserDetailsService() {
+		final GICARUserDetailsServiceImpl gicarUserDetailsService = new GICARUserDetailsServiceImpl();
+		gicarUserDetailsService.setHttpGicarHeaderUsernameKey(getHttpGicarHeaderUsernameKey());
+		gicarUserDetailsService.setAuthoritiesDAO(authoritiesDAO());
+		return gicarUserDetailsService;
+	}
+
+	@Bean
+	public AuthoritiesDAO authoritiesDAO() {
+		final AuthoritiesDAOImpl authoritiesDAOImpl = new AuthoritiesDAOImpl();
+		authoritiesDAOImpl.setDataSource(dataSource);
+		return authoritiesDAOImpl;
+	}
+	
+	@Override
+    @Autowired
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(authenticationProvider());
+    }
+
+    @Bean
+    @Autowired
+    public AuthenticationManager authenticationManager(final AuthenticationManagerBuilder auth) {
+        return auth.getOrBuild();
+    }
+
+	private String getHttpGicarHeaderUsernameKey() {
+		final String gicarHeader = propertiesConfiguration.getProperty("security.gicar.httpGicarHeaderUsernameKey");
+		return gicarHeader != null ? gicarHeader : "NIF";
+	}
+
+	@Bean
+	@Named("jwtAuthenticationService")
+	public AuthenticationService jwtAuthenticationService() {
+		final JwtAuthenticationService jwtAuthenticationService = new JwtAuthenticationService();
+		jwtAuthenticationService.setSiteminderAuthentication(isSiteminderAuthentication());
+		jwtAuthenticationService.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		jwtAuthenticationService.setHeaderAuthName(getHeaderAuthName());
+
+		return jwtAuthenticationService;
+	}
+
+	@Bean
+	@Named("jwtAuthenticationFilter")
+	public JwtAuthenticationFilter jwtAuthenticationFilter() {
+		final JwtAuthenticationFilter jwtAuthenticationFilter = new JwtAuthenticationFilter();
+		jwtAuthenticationFilter.setHeaderAuthName(getHeaderAuthName());
+		jwtAuthenticationFilter.setStartToken(getStartToken());
+		jwtAuthenticationFilter.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		return jwtAuthenticationFilter;
+	}
+
+	@Bean
+	@Named("jwtTokenHandler")
+	public JwtTokenHandler jwtTokenHandler() {
+		final JwtTokenHandler JwtTokenHandler = new JwtTokenHandler();
+		JwtTokenHandler.setExpiration(getExpiration());
+		JwtTokenHandler.setSecret(getSecret());
+		return JwtTokenHandler;
+	}
+
+	private String getSecret() {
+		final String secret = propertiesConfiguration.getProperty("jwt.secret");
+		return secret != null ? secret : "canigo";
+	}
+
+	private Long getExpiration() {
+		final Long expiration = new Long(propertiesConfiguration.getProperty("jwt.expiration"));
+		return expiration != null ? expiration : 3600L;
+	}
+
+	private String getStartToken() {
+	final String startToken = propertiesConfiguration.getProperty("jwt.header.startToken");
+		return startToken != null ? startToken : "Bearer";
+	}
+
+	private String getHeaderAuthName() {
+		final String headerAythName = propertiesConfiguration.getProperty("jwt.header");
+		return headerAythName != null ? headerAythName : "Authentication";
+	}
+
+	private String getTokenResponseHeaderName() {
+		final String tokenResponseHeaderName = propertiesConfiguration.getProperty("jwt.tokenResponseHeaderName");
+		return tokenResponseHeaderName != null ? tokenResponseHeaderName : "jwtToken";
+	}
+
+	private boolean isSiteminderAuthentication() {
+		final Boolean siteminder = new Boolean(propertiesConfiguration.getProperty("jwt.siteminderAuthentication"));
+		return siteminder != null ? siteminder : false;
+	}
+
+}			
+```
+
+On s'ha de tenir definit a la base de dades de l'aplicació les taules necessaries per a obtenir les athorities al DAO AuthoritiesDAOImpl
+
+Per a més informació sobre les taules podeu consultar la documentació de Spring [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#appendix-schema)
+
 Amb aquesta configuració ha de ser possible autoritzar un usuari que prèviament ha estat auntenticat en el servei de GICAR. Per aquest motiu és necessari rebre certes dades referents a aquesta autenticació ja realitzada. A la capçalera HTML podrem accedir a aquestes dades:
 
 ```
@@ -597,6 +726,214 @@ En cas de que l'aplicació utilitzi la separació entre codi estàtic i dinàmic
 <b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
 
 </div>
+
+#### Configuració de la font d'autenticació i autorització per GICAR
+
+Per a configurar l'autenticació i l'autorització a GICAR és necessari:
+
+* Configurar l'arxiu de propietats **security.properties**.
+* Configurar el proveidor de seguretat dins de la configuració de seguretat de Spring.
+
+Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament:
+
+Les propietats de l'arxiu **security.properties** son les següents:
+
+Per a configurar l'acces a GICAR és necessari configurar l'arxiu de propietats **security.properties**. Aquest arxiu es genera automàticament des de l'eina de suport, i té el següent format:
+
+Propietat                                   | Requerit | Descripció
+------------------------------------------- | -------- | -----------------------------------
+*.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
+
+A continuació es mostra la classe WebSecurityConfig per a una configuració basada en GICAR sense utilitzar JWT com a sistema d'autenticació:
+
+```
+import javax.inject.Named;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Primary;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration;
+import cat.gencat.ctti.canigo.arch.security.provider.gicar.GICARWithMemberUserDetailsServiceImpl;
+import cat.gencat.ctti.canigo.arch.security.provider.siteminder.SiteminderAuthenticationProvider;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.gicar.ProxyUsernamePasswordAuthenticationFilter;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtAuthenticationFilter;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.AuthenticationService;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.impl.JwtGicarWithMemberAuthenticationService;
+
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	@Lazy
+	private AuthenticationEntryPoint restAuthenticationEntryPoint;
+
+	@Autowired
+	private PropertiesConfiguration propertiesConfiguration;
+
+	@Autowired
+	@Lazy
+	private AuthenticationManager authenticationManager;
+
+	@Autowired
+	@Lazy
+	private AuthenticationSuccessHandler restAuthenticationSuccessHandler;
+
+	@Autowired
+	@Lazy
+	private AuthenticationFailureHandler restAuthenticationFailureHandler;
+
+	@Autowired
+	@Lazy
+	private AccessDeniedHandler restAccessDeniedHandler;
+
+	@Autowired
+	@Lazy
+	private DataSource dataSource;
+
+	@Bean
+	@Autowired
+	public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
+		final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+		proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
+		proxyUsernamePasswordAuthenticationFilter.setAuthenticationFailureHandler(restAuthenticationFailureHandler);
+		return proxyUsernamePasswordAuthenticationFilter;
+	}
+
+	@Override
+	protected void configure(final HttpSecurity http) throws Exception {
+
+		http.authorizeRequests()
+		.antMatchers("/api/auth").permitAll()
+		.antMatchers("/images/*/**", "/css/*/**", "/js/*/**", "/fonts/*/**").permitAll()
+		.antMatchers("/api/info/**", "/api/logs/**").hasRole("ADMIN")
+		.antMatchers("/api/equipaments/**").hasRole("USER");
+
+		http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
+		http.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
+		http.csrf().disable();
+		
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.addFilterBefore(jwtAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
+	}
+
+	@Bean
+	public AuthenticationProvider authenticationProvider() {
+		final SiteminderAuthenticationProvider siteminderAuthenticationProvider = new SiteminderAuthenticationProvider();
+		siteminderAuthenticationProvider.setUserDetailsService(gicarUserDetailsService());
+		return siteminderAuthenticationProvider;
+	}
+
+	@Bean
+	@Primary
+	public UserDetailsService gicarUserDetailsService() {
+		final GICARWithMemberUserDetailsServiceImpl gicarUserDetailsService = new GICARWithMemberUserDetailsServiceImpl();
+		gicarUserDetailsService.setHttpGicarHeaderUsernameKey(getHttpGicarHeaderUsernameKey());
+		return gicarUserDetailsService;
+	}
+
+	@Override
+    @Autowired
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(authenticationProvider());
+    }
+
+    @Bean
+    @Autowired
+    public AuthenticationManager authenticationManager(final AuthenticationManagerBuilder auth) {
+        return auth.getOrBuild();
+    }
+
+	private String getHttpGicarHeaderUsernameKey() {
+		final String gicarHeader = propertiesConfiguration.getProperty("security.gicar.httpGicarHeaderUsernameKey");
+		return gicarHeader != null ? gicarHeader : "NIF";
+	}
+
+	@Bean
+	@Named("jwtAuthenticationService")
+	public AuthenticationService jwtAuthenticationService() {
+		final JwtGicarWithMemberAuthenticationService jwtAuthenticationService = new JwtGicarWithMemberAuthenticationService();
+		jwtAuthenticationService.setSiteminderAuthentication(isSiteminderAuthentication());
+		jwtAuthenticationService.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		jwtAuthenticationService.setHeaderAuthName(getHeaderAuthName());
+
+		return jwtAuthenticationService;
+	}
+
+	@Bean
+	@Named("jwtAuthenticationFilter")
+	public JwtAuthenticationFilter jwtAuthenticationFilter() {
+		final JwtAuthenticationFilter jwtAuthenticationFilter = new JwtAuthenticationFilter();
+		jwtAuthenticationFilter.setHeaderAuthName(getHeaderAuthName());
+		jwtAuthenticationFilter.setStartToken(getStartToken());
+		jwtAuthenticationFilter.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		return jwtAuthenticationFilter;
+	}
+
+	@Bean
+	@Named("jwtTokenHandler")
+	public JwtTokenHandler jwtTokenHandler() {
+		final JwtTokenHandler JwtTokenHandler = new JwtTokenHandler();
+		JwtTokenHandler.setExpiration(getExpiration());
+		JwtTokenHandler.setSecret(getSecret());
+		return JwtTokenHandler;
+	}
+
+	private String getSecret() {
+		final String secret = propertiesConfiguration.getProperty("jwt.secret");
+		return secret != null ? secret : "canigo";
+	}
+
+	private Long getExpiration() {
+		final Long expiration = new Long(propertiesConfiguration.getProperty("jwt.expiration"));
+		return expiration != null ? expiration : 3600L;
+	}
+
+	private String getStartToken() {
+	final String startToken = propertiesConfiguration.getProperty("jwt.header.startToken");
+		return startToken != null ? startToken : "Bearer";
+	}
+
+	private String getHeaderAuthName() {
+		final String headerAythName = propertiesConfiguration.getProperty("jwt.header");
+		return headerAythName != null ? headerAythName : "Authentication";
+	}
+
+	private String getTokenResponseHeaderName() {
+		final String tokenResponseHeaderName = propertiesConfiguration.getProperty("jwt.tokenResponseHeaderName");
+		return tokenResponseHeaderName != null ? tokenResponseHeaderName : "jwtToken";
+	}
+
+	private boolean isSiteminderAuthentication() {
+		final Boolean siteminder = new Boolean(propertiesConfiguration.getProperty("jwt.siteminderAuthentication"));
+		return siteminder != null ? siteminder : false;
+	}
+
+}			
+```
+
+Amb aquesta configuració s'utilitzen les capçaleres *GICAR* i *GICAR_ID* per a l'autentiació i *HTTP_GICAR_MEMBERL* per l'autorització
+
+Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
 
 **Logout**
 
