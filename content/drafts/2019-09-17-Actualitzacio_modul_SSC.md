@@ -7,7 +7,7 @@ description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utili
 key         = "NOVEMBRE2019"
 +++
 
-Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha allibrerat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC
+Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha allibrerat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC.
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
@@ -23,7 +23,7 @@ El Signador Centralitzat del AOC és la solució que dóna cobertura al concepte
 
 ## Novetats
 
-Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC del AOX versió 1.3.3
+Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC del AOX versió 1.3.3.
 
 Les principals novetats que propociona l'actualització del mòdul de SSC de Canigó són:
 
