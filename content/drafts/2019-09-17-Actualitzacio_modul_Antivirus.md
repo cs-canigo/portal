@@ -23,7 +23,7 @@ El mòdul de l'Antivirus permet l’escaneig d’arxius mitjançant el Servei d�
 
 Per a accedir a aquest servei s'utilitza l'API de Symantec.
 
-La versió actual del engine de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades
+La versió actual del engine de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades.
 
 ## Novetats
 
