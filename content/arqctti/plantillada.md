@@ -17,7 +17,7 @@ El document està dividit en dues parts:
 
 A continuació proporcionem enllaços als documents relacionats:
 
-[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.0.docx)
+[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.1.docx)
 
 [Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
