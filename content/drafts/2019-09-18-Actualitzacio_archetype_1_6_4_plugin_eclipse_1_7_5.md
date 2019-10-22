@@ -1,13 +1,13 @@
 +++
 date        = "2019-09-18"
-title       = "Actualització achetype i plugin eclipse"
-description = "S'ha publicat una nova versió del achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1"
+title       = "Actualització archetype i plugin eclipse"
+description = "S'ha publicat una nova versió del archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1"
 #sections    = ["Notícies", "home"]
 #categories  = ["canigo"]
 key         = "NOVEMBRE2019"
 +++
 
-Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el achetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1.
+Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1.
 
 Aquesta actualització s'enmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**.
 
@@ -17,11 +17,11 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 ## Introducció
 
-Dins dels entregables de Canigó hi consten el achetype i el plugin del eclipse.
+Dins dels entregables de Canigó hi consten el archetype i el plugin del eclipse.
 
-El achetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+El archetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
-El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el achetype i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
+El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el archetype i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
 ## Novetats archetype
 
