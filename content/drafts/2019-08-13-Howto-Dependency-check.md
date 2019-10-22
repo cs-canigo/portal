@@ -17,7 +17,7 @@ En una aplicació és important identificar i solucionar vulnerabilitats conegud
 
 Una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats.
 
-El projecte Dependency Check és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte
+El projecte Dependency Check és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte.
 
 Hi ha diversos pluggins, però per una aplicació Canigó utilitzarem el plugin `org.owasp:dependency-check-maven` per Maven per automatizar aquesta comprovació de dependències i obtenir un un report amb els resultats.
 
@@ -75,7 +75,7 @@ Tot i que el plugin funciona per defecte per a reportar vulnerabilitats, es pot 
 
 ## Informe de vulnerabilitats
 
-L'informe es genera per defecte a la ruta: `target/dependency-check-report.html`
+L'informe es genera per defecte a la ruta: `target/dependency-check-report.html`.
 
 Un exemple d'informe amb vulnerabilitats podria ser:
 
