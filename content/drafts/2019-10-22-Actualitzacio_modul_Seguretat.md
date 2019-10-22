@@ -25,25 +25,23 @@ La plataforma GICAR es fonamenta bàsicament en dos objectius principals:
 
 - Facilitar la gestió i el control de l’accés als recursos per part de les identitats
 
-Per a més informació podeu consultar la [Descripció servei](/gicar/descripcio/) de Gicar
+Per a més informació podeu consultar la [Descripció servei](/gicar/descripcio/) de Gicar.
 
-Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó
+Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó.
 
-Canigó utilitza com a framework base per la seguretat d'una aplicació Spring Security
+Canigó utilitza Spring Security com a framework base per la seguretat d'una aplicació.
 
-Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (deprecat) i Gicar
+Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (deprecat) i Gicar.
 
-Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO*
+Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO*.
 
-Canigó proporciona una implementació base de *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* en el component *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*. 
-
-Aquest necessita que cada aplicació tingui a la seva base de dades les taules necessaries per retornar el llistat de rols d'un usuari
+Canigó proporciona una implementació base de *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* en el component *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*, aquest necessita que cada aplicació tingui a la seva base de dades les taules necessaries per retornar el llistat de rols d'un usuari.
 
 Per més informació de la definició de les taules necessaries per retornar el llistat de rols d'un usuari, podeu consultar la documentació de Spring de [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#appendix-schema)
 
 ## Novetats
 
-En les últimes novetats dels serveis que proporciona Gicar, proporciona la centralització de la gestió dels rols dels usuaris, estalviant a les aplicacions haver de gestionar en la seva base de dades les taules necessaries per retornar el llistar de rols d'un usuari
+En les últimes novetats dels serveis de Gicar, proporciona la centralització de la gestió dels rols dels usuaris, estalviant a les aplicacions haver de gestionar en la seva base de dades les taules necessaries per retornar el llistar de rols d'un usuari.
 
 Les principals avantatges d'aquesta solució són:
 
@@ -65,7 +63,7 @@ Les principals avantatges d'aquesta solució són:
 
 9. Solució plenament compatible i orientada al model de directori únic futurible.
 
-La solució de l'arquitectura d’integració amb GICAR incorporant l’autorització, proporciona a les aplicacions una nova capçalera HTTP anemanada *HTTP_GICAR_MEMBERL*, amb el format:
+La solució de GICAR per incorporar l’autorització és proporcionar a les aplicacions una nova capçalera HTTP anemanada *HTTP_GICAR_MEMBERL*, amb el format:
 
 ```
 CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
@@ -73,7 +71,7 @@ CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
 
 Per a obtenir més informació del sobre aquesta nova integració amb Gicar podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
 
-A la versió 2.2.0 del Mòdul de Seguretat de Canigó es proporcionen els components per consultar aquesta nova capçalera HTTP per construir el llistat de rols de l'usuari, no sent necessari definir cap *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i per conseqüent, no sent necessari tenir cap taula per retornar el llistat de rols d'un usuari. 
+A la versió 2.2.0 del Mòdul de Seguretat de Canigó es proporcionen els components per consultar aquesta nova capçalera HTTP i per construir el llistat de rols de l'usuari a patir d'aquesta, no sent necessari definir cap *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i per conseqüent, no sent necessari tenir cap taula per retornar el llistat de rols d'un usuari. 
 
 ## Documentació mòdul
 
