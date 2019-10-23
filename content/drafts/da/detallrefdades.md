@@ -133,7 +133,7 @@ weight= 5
    
     celda = document.createElement("td");
     celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Descàrrega");
+    textoCelda =  document.createTextNode("Descàrregues");
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
 
@@ -142,7 +142,7 @@ weight= 5
     var image = document.createElement('img');
 
     link.setAttribute('href', '../../entitats/' + dades[13]);
-    link.innerHTML = "Descarregar Excel";
+    link.innerHTML = "Descarregar Dades";
 
     image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
 
@@ -166,7 +166,7 @@ weight= 5
    
     celda = document.createElement("td");
     celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Preview");
+    textoCelda =  document.createTextNode("Dades");
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
 
