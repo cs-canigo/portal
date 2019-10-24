@@ -139,12 +139,15 @@ weight= 5
 
     celda = document.createElement("td");
 
+	textoCelda =  document.createTextNode("     ");
+    celda.appendChild(textoCelda);
+
     var link_valors = document.createElement('a');
     link_valors.setAttribute('href', '../../entitats/' + dades[14]);
     link_valors.innerHTML = "Descarregar Valors";
     celda.appendChild(link_valors);
 
-	textoCelda =  document.createTextNode("    ");
+	textoCelda =  document.createTextNode("         ");
     celda.appendChild(textoCelda);
 	
     var link = document.createElement('a');
