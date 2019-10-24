@@ -139,20 +139,20 @@ weight= 5
 
     celda = document.createElement("td");
 
-	textoCelda =  document.createTextNode("     ");
+	textoCelda =  document.createTextNode("           ");
     celda.appendChild(textoCelda);
 
     var link_valors = document.createElement('a');
     link_valors.setAttribute('href', '../../entitats/' + dades[14]);
-    link_valors.innerHTML = "Descarregar Valors";
+    link_valors.innerHTML = "Descarregar definició atributs";
     celda.appendChild(link_valors);
 
-	textoCelda =  document.createTextNode("         ");
+	textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 	
     var link = document.createElement('a');
     link.setAttribute('href', '../../entitats/' + dades[13]);
-    link.innerHTML = "Descarregar Dades";
+    link.innerHTML = "Descarregar fitxer de dades";
     celda.appendChild(link);
 
     // var image = document.createElement('img');
