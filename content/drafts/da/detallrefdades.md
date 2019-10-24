@@ -1,5 +1,5 @@
 +++
-date        = "2017-09-23"
+date        = "2017-10-24"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -138,17 +138,25 @@ weight= 5
     hilera.appendChild(celda);
 
     celda = document.createElement("td");
-    var link = document.createElement('a');
-    var image = document.createElement('img');
 
+    var link_valors = document.createElement('a');
+    link_valors.setAttribute('href', '../../entitats/' + dades[14]);
+    link_valors.innerHTML = "Descarregar Valors";
+    celda.appendChild(link_valors);
+
+	textoCelda =  document.createTextNode("    ");
+    celda.appendChild(textoCelda);
+	
+    var link = document.createElement('a');
     link.setAttribute('href', '../../entitats/' + dades[13]);
     link.innerHTML = "Descarregar Dades";
+    celda.appendChild(link);
 
-    image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
-
+    // var image = document.createElement('img');
+    // image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
     //link.innerHTML = dades[15];
     //link.appendChild(image);
-    celda.appendChild(link);
+
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
