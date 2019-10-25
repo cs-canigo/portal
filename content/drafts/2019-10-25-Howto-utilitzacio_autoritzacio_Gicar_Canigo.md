@@ -15,11 +15,11 @@ Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicaci�
 
 En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT
 
-Per a més informació sobre aautenticació i autorització sense JWT podeu consultar l'informació del [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
+Per a més informació sobre autenticació i autorització sense JWT podeu consultar l'informació del [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 
 ## Introducció
 
-A les últimes novetat de GIcar incorpora la possibilitat de tenir l'autorització a més de l'autenticació a Gicar.
+A les últimes novetat de Gicar incorpora la possibilitat de tenir l'autorització a més de l'autenticació a Gicar.
 
 Gicar a l'autenticació proporciona les capçaleres HTTP:
 
@@ -38,7 +38,7 @@ Un exemple de la capçalera seria:
 HTTP_GICAR_MEMBERL --> CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
 ```
 
-A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir l'informació de l'usuari i els seus rols a utilitzar a una aplicació Canigó.
+A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir l'informació de l'usuari i els seus rols per a ser utilitzats a una aplicació Canigó.
 
 ## Mòdul de seguretat
 
@@ -62,7 +62,7 @@ Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot 
 
 ## Configuració per utilitzar l'autorització i l'autentiació via Gicar
 
-A la versió 1.7.6 del plugin de Canigó per l'eclipse ja incorpora la nova opció al afegir el mòdul de seguretat en una aplicació Canigó d'autenticació i d'autorització a Gicar, podeu veure les opcions a:
+A la versió 1.7.6 del plugin de Canigó per l'eclipse ja incorpora la nova opció d'autenticació i d'autorització Gicar al afegir el mòdul de seguretat en una aplicació Canigó, podeu veure les opcions a:
 
 [Actualització plugin eclipse 1.7.6](/drafts/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 
@@ -315,6 +315,8 @@ Amb les següent definició per defecte de propietats:
 *.jwt.siteminderAuthentication = true
 ```
 
+Amb aquesta informació, s'aconsegueix tenir una aplicació Canigó 3.4.x amb autenticació i autorització via Gicar
+
 ## Informació addicional
 
 Podeu trobar més informació sobre el mòdul de seguretat de Canigó a:
@@ -325,7 +327,7 @@ Per més informació sobre el plugin de Canigó de l'eclipse a:
 
 [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 
-Per més informació sobre l'autenticació i autorització a Gicar podeu consultar:
+Per més informació sobre l'autenticació i l'autorització a Gicar podeu consultar:
 
 [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
 
