@@ -4,7 +4,7 @@ title       = "Control d'accés als recursos amb GICAR"
 description = "Com integrar l'autorització d'una aplicació amb GICAR"
 sections    = "gicar-saml2"
 taxonomies  = []
-weight 		= 7
+weight	= 6
 +++
 
 
