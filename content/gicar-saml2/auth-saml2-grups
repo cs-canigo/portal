@@ -2,7 +2,7 @@
 date        = "2019-11-13T00:00:00+01:00"
 title       = "Control d'accés als recursos amb GICAR"
 description = "Com integrar l'autorització d'una aplicació amb GICAR"
-sections    = "GICAR"
+sections    = "gicar-saml2"
 taxonomies  = []
 weight 		= 7
 +++
