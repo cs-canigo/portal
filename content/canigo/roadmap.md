@@ -25,7 +25,7 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
-      [ '1','Canigo 3.2.0 LTS', new Date(2017, 2), new Date(2020, 2) ],
+      [ '1','Canigo 3.2 LTS', new Date(2017, 2), new Date(2020, 2) ],
       [ '2','Canigo 3.2.1', new Date(2017, 5), new Date(2017, 8) ],
       [ '3','Canigo 3.2.2', new Date(2017, 8), new Date(2017, 11) ],
 	  [ '4','Canigo 3.2.3', new Date(2017, 11), new Date(2018, 2) ],
@@ -33,7 +33,7 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 	  [ '6','Canigo 3.2.5', new Date(2018, 5), new Date(2018, 8) ],
       [ '7','Canigo 3.2.6', new Date(2018, 8), new Date(2018, 11) ],
 	  [ '8','Canigo 3.2.7', new Date(2018, 11), new Date(2019, 2) ],
-	  [ '9','Canigo 3.4.0 LTS', new Date(2019, 2), new Date(2022, 2) ],
+	  [ '9','Canigo 3.4 LTS', new Date(2019, 2), new Date(2022, 2) ],
 	  [ '10','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
 	  [ '11','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
 	  [ '12','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
