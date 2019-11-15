@@ -1,5 +1,5 @@
 +++
-date        = "2018-09-19"
+date        = "2018-11-15"
 title       = "Release Notes Canigó 3.4"
 description = ""
 sections    = "Canigó"
@@ -7,6 +7,14 @@ weight      = 1
 +++
 
 #### Release Notes
+
+[**Canigó 3.4.2**] (https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project+%3D+CAN+AND+fixVersion+%3D+3.4.2) (25/10/2018)
+- [Autorització GICAR a Canigó] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2383)
+	- Actualització del mòdul de seguretat per incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització)
+- [Actualitzar el archetype nova versió mòdul seguretat autorització GICAR] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2385)
+	- Actualització del archetype de Canigó per utiltizar la nova versió (2.2.0) del mòdul de seguretat (autorització)
+- [Actualitzar el plugin de Canigó per incloure nova opció seguretat autorització GICAR a Canigó] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2384)
+	- Actualització del plugin de l'eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat
 
 [**Canigó 3.4.1**] (https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project+%3D+CAN+AND+fixVersion+%3D+3.4.1) (19/09/2018)
 
