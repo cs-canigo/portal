@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-12"
+date        = "2019-11-18"
 title       = "Actualització mòdul SSC Canigó"
 description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC"
 #sections    = ["Notícies", "home"]
