@@ -193,11 +193,17 @@ log.info("[FIN][signCadesBesAttached]");
 ```
 
 On:
-* FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar.
-* DOCS_TO_SIGN_PATH_IN: És el _path_ del fitxer a enviar.
-* CADES_SIGNATURES_PATH_OUT: És el _path_ on guardar la resposta.
-* SEPARADOR_PATH: És el separador de _path_ segons el sistema operatiu.
-* getInFilename: mètode que retorna el _path_ i nom del fitxer a enviar.
-* getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
+- FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar.
+
+- DOCS_TO_SIGN_PATH_IN: És el _path_ del fitxer a enviar.
+
+- CADES_SIGNATURES_PATH_OUT: És el _path_ on guardar la resposta.
+
+- SEPARADOR_PATH: És el separador de _path_ segons el sistema operatiu.
+
+- getInFilename: mètode que retorna el _path_ i nom del fitxer a enviar.
+
+- getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
+
 
 Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API.
