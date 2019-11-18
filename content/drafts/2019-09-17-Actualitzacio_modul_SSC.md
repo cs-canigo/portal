@@ -9,9 +9,7 @@ key         = "NOVEMBRE2019"
 
 Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC.
 
-Podeu consultar l'abast complet de la versió 3.4.1 a:
-
-[Abast Canigó 3.4.1](https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1)
+Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1)
 
 ## Introducció
 
