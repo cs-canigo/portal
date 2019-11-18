@@ -42,13 +42,13 @@ Si una aplicació té alguna necessitat especial, cal revisar la documentació d
 
 La documentació dels servidors d'aplicacions està a:
 
-[Tomcat](http://tomcat.apache.org/tomcat-9.0-doc/)
+- [Tomcat](http://tomcat.apache.org/tomcat-9.0-doc/)
 
-[Jetty](https://www.eclipse.org/jetty/documentation/)
+- [Jetty](https://www.eclipse.org/jetty/documentation/)
 
-[Undertow](http://undertow.io/documentation.html)
+- [Undertow](http://undertow.io/documentation.html)
 
-[Reactor Netty](https://projectreactor.io/docs/netty/release/reference/index.html)
+- [Reactor Netty](https://projectreactor.io/docs/netty/release/reference/index.html)
 
 A part de l'stack que implementa un servidor o un altre, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cada servidor ja que això pot condicionar la rapidesa en la correcció de bugs o solució a problemes.
 
