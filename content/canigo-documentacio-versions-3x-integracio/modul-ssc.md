@@ -1,6 +1,6 @@
 +++
 date        = "2019-09-16"
-title       = "SSC"
+title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 15
@@ -33,7 +33,7 @@ Aquest document va dirigit als següents perfils:
 
 ## Descripció Detallada
 
-Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder treballar amb ell. És amb aquesta API amb la qual està constituit aquest connector.
+Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder treballar amb ell. És amb aquesta API amb la qual està constituït aquest connector.
 
 Els principals serveis que ofereix el connector són els següents:
 
@@ -60,15 +60,15 @@ Els principals serveis que ofereix el connector són els següents:
 
 Per poder utilitzar l'SSC en PRO s'ha d'estar donat d'alta en el servei. Per poder fer-ho s'han de seguir els següents passos:
 
-1. Enviar un mail a implantacio@aoc.cat sol·licitant l'alta al servei. Aquí s'espera que l'usuari informi del tipus de signatures que vol generar i se l'informarà del tipus de certificats que ha de sol- licitar.
+1. Enviar un correu electrònic a implantacio@aoc.cat sol·licitant l'alta al servei. Aquí s'espera que l'usuari informi del tipus de signatures que vol generar i se l'informarà del tipus de certificats que ha de sol- licitar.
 
-2. Els certificats a sol·litar s'hauran de fer a través de EACAT.
+2. Els certificats a sol·licitar s'hauran de fer a través de EACAT.
 
 3. Finalment, el client haurà d'omplir un document d'alta al SSC, on haurà d'especificar el certificat amb el que s'autenticarà, així com els certificats de signatura allotjats en TrustedX que utilitzarà per signar.
 
 4. Una vegada validat el document d'alta, se li donarà accés al SSC en PRO.
 
-De cara a utilitzar el servei en PRE, els certificats i documentació necessaria es poden demanar obrint una petició a suport@aoc.cat.
+De cara a utilitzar el servei en PRE, els certificats i documentació necessària es poden demanar obrint una petició a suport@aoc.cat.
 
 ### Arquitectura i Components
 
@@ -91,11 +91,11 @@ Tal i com indica la guia:
 
 [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
 
-La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conclicte amb les llibreries d'una aplicació ja desenvolupada
+La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada
 
-### Instal.lació i Configuració
+### Instal·lació i Configuració
 
-#### Instal.lació
+#### Instal·lació
 
 La instal·lació del connector requereix de la utilització de la llibreria 'canigo.integration.ssc' 
 
@@ -140,9 +140,9 @@ Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per
 
 on les variables ssc.host, ssc.distinguishedname, ssc.dipositari i ssc.rol són recuperades de l'arxiu ssc.properties que s'ha de crear en src/main/resources/config/props/ssc.properties
 
-2.- Configuiració dels arxius de properties.
+2.- Configuració dels arxius de _properties_.
 
-Existeixen dos arxius de properties per poder confiurar l'SSC. El ssc.properties i el smartwrapper.properties.
+Existeixen dos arxius de _properties_ per poder configurar l'SSC. El ssc.properties i el smartwrapper.properties.
 
 El primer conté els paràmetres:
 
@@ -158,14 +158,14 @@ El primer conté els paràmetres:
 
 El segon, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i està documentat en el document [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
 
-La ubicació d'aquest últim arxiu es recomana que sigui en el directori src/main/resoruces de l'aplicació que utilitzi el connector.
+La ubicació d'aquest últim arxiu es recomana que sigui en el directori src/main/resources de l'aplicació que utilitzi el connector.
 
 NOTA: Les dades de proves del connector relacionades amb certificats de proves s'han de demanar a CatCert
 
 ### Utilització del Connector
 
 
-1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.
+1.- En el _bean_ on es vulgui disposar dels serveis del connector declarar el servei.
 
 ```java
 @Autowired
@@ -196,10 +196,10 @@ log.info("[FIN][signCadesBesAttached]");
 
 On:
 * FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar
-* DOCS_TO_SIGN_PATH_IN: És el path del fitxer a enviar
-* CADES_SIGNATURES_PATH_OUT: És el path on guardar la resposta
-* SEPARADOR_PATH: És el separador de path segons el sistema operatiu
-* getInFilename: mètode que retorna el path i nom del fitxer a enviar
-* getDestFilename: mètode que retorna el path i nom del fitxer on guardar la resposta
+* DOCS_TO_SIGN_PATH_IN: És el _path_ del fitxer a enviar
+* CADES_SIGNATURES_PATH_OUT: És el _path_ on guardar la resposta
+* SEPARADOR_PATH: És el separador de _path_ segons el sistema operatiu
+* getInFilename: mètode que retorna el _path_ i nom del fitxer a enviar
+* getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta
 
 Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API.
