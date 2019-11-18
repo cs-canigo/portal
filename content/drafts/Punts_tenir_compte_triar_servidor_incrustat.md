@@ -54,7 +54,7 @@ A part de l'_stack_ que implementa cada servidor d'aplicacions, un altre punt im
 
 Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix _stack_ tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
 
-A continuació els detallem aquests punts en cada un dels servidors d'aplicacions.
+A continuació els detallem aquests punts en cadascun dels servidors d'aplicacions.
 
 ### Tomcat
 
