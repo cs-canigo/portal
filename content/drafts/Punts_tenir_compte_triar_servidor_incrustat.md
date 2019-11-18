@@ -10,11 +10,11 @@ sections    = "Canigó"
 
 Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot.
 
-Això permet desplegar una aplicació Canigó amb el seu propi servidor. Sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o cloud.
+Això permet desplegar una aplicació Canigó amb el seu propi servidor. Sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o _cloud_.
 
-Per a aplicacions que utilitzin l'stack de servlets, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow.
+Per a aplicacions que utilitzin l'_stack_ de _servlets_, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow.
 
-Per a aplicacions que utilitzin l'stack reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty.
+Per a aplicacions que utilitzin l'_stack_ reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty.
 
 ![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
@@ -50,17 +50,17 @@ La documentació dels servidors d'aplicacions està a:
 
 - [Reactor Netty](https://projectreactor.io/docs/netty/release/reference/index.html)
 
-A part de l'stack que implementa un servidor o un altre, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cada servidor ja que això pot condicionar la rapidesa en la correcció de bugs o solució a problemes.
+A part de l'_stack_ que implementa cada servidor d'aplicacions, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cadascun d'ells ja que això pot condicionar la rapidesa en la correcció de bugs o solució a problemes.
 
-Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix stack tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
+Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix _stack_ tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
 
 Tenint en compte aquests punts, anem a detallar-los en cada un dels servidors d'aplicacions.
 
 ### Tomcat
 
-Apache Tomcat és el servidor d’aplicacions més popular i compta amb suport d'Apache. És un programari de codi obert, molt ben documentat i mantingut per una gran comunitat de desenvolupadors, és flexible i extensible a una versió Enterprise.
+Tomcat és el servidor d’aplicacions més popular i compta amb suport d'Apache. És un programari de codi obert, molt ben documentat i mantingut per una gran comunitat de desenvolupadors, és flexible i extensible a una versió Enterprise.
 
-Suporta Java EE 8, Servlet 4.0, JSP 2.3, EL 3.0, WebSocket 1.1, JASPIC 1.1, HTTP/2, OpenSSL per TLS amb els connectos JSSE i TLS virtual hosting (SNI).
+Suporta Java EE 8, Servlet 4.0, JSP 2.3, EL 3.0, WebSocket 1.1, JASPIC 1.1, HTTP/2, OpenSSL per TLS amb els connectors JSSE i TLS virtual hosting (SNI).
 
 ### Jetty
 
@@ -80,7 +80,7 @@ Per defecte està habilitada la persistència de les connexions http. Funcionali
 
 Reactor Netty està en evolució, és part del projecte Reactor i està basat en el servidor Netty el qual és el servidor més utilitzat en aplicacions reactives i per tant, és el servidor a utilitzar si es vol funcionalitats de servidor o client amb reactiu.
 
-Suporta streams reactius, model de concurrència i bucle d'events, non blocking i backpressure-ready sobre TCP, UDP i HTTP i proporciona servidor http sobre HTTP/2.
+Suporta _streams_ reactius, model de concurrència i bucle d'_events_, _non blocking_ i _backpressure-ready_ sobre TCP, UDP i HTTP i proporciona servidor http sobre HTTP/2.
 
 ## Documentació:
 
