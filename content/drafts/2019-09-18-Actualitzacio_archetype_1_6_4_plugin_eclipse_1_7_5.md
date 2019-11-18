@@ -7,9 +7,9 @@ description = "S'ha publicat una nova versió del archetype i del plugin del ecl
 key         = "NOVEMBRE2019"
 +++
 
-Seguint l'objeciu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1.
+Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat el _archetype_ i del _plugin_ de l'Eclipse de Canigó per generar projectes amb Canigó 3.4.1.
 
-Aquesta actualització s'enmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**.
+Aquesta actualització s'emmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**.
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
@@ -17,19 +17,17 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 ## Introducció
 
-Dins dels entregables de Canigó hi consten el archetype i el plugin del eclipse.
+Dins dels lliurables de Canigó hi consten el archetype i el plugin de l'Eclipse.
 
-El archetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+El archetype és una eina maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
-El plugin del eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el archetype i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
+El plugin de l'Eclipse és una plugin desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant el archetype i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant Eclipse podem crear un projecte i afegir-li els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
 ## Novetats archetype
 
-S'ha publicat la versió 1.6.4 del archetype del Canigó per a generar projectes amb Canigó 3.4.1.
+S'ha publicat la versió 1.6.4 del archetype del Canigó per a generar projectes amb Canigó 3.4.1.  
 
-La principal novetat és la utilització de fitxers yml per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2 publicats a Canigó 3.4.0 documentats a:
-
-[Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
+La principal novetat és la utilització de fitxers yml per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2 publicats a Canigó 3.4.0 documentats a: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/).
 
 ## Novetats plugin eclipse
 
