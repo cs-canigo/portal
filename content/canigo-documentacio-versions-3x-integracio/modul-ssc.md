@@ -29,7 +29,7 @@ Aquest document va dirigit als següents perfils:
 
 | Nom Document
 | ------------
-| [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
+| [Guia d'integració al SSC] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
 
 ## Descripció Detallada
 
@@ -87,11 +87,9 @@ Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la s
 PropertyAllowTls10AsClient=true
 ```
 
-Tal i com indica la guia:
+Tal i com indica la a Guia d'integració al SSC:
 
-[guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
-
-La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada
+La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada.
 
 ### Instal·lació i Configuració
 
@@ -156,7 +154,7 @@ El primer conté els paràmetres:
 
 * ssc.rol: Rol d'usuari a afegir a la capçalera de la petició a SSCC.
 
-El segon, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i està documentat en el document [guiaintegraciossc-v1-3-3.pdf] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
+El segon, anomenat smartwrapper.properties conté la configuració de l'API SmartWrapper de TrustedX i està documentat a la Guia d’integració al SSC.
 
 La ubicació d'aquest últim arxiu es recomana que sigui en el directori src/main/resources de l'aplicació que utilitzi el connector.
 
@@ -195,11 +193,11 @@ log.info("[FIN][signCadesBesAttached]");
 ```
 
 On:
-* FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar
-* DOCS_TO_SIGN_PATH_IN: És el _path_ del fitxer a enviar
-* CADES_SIGNATURES_PATH_OUT: És el _path_ on guardar la resposta
-* SEPARADOR_PATH: És el separador de _path_ segons el sistema operatiu
-* getInFilename: mètode que retorna el _path_ i nom del fitxer a enviar
-* getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta
+* FILENAME_HELLOWORLD_TXT: És el nom del fitxer a enviar.
+* DOCS_TO_SIGN_PATH_IN: És el _path_ del fitxer a enviar.
+* CADES_SIGNATURES_PATH_OUT: És el _path_ on guardar la resposta.
+* SEPARADOR_PATH: És el separador de _path_ segons el sistema operatiu.
+* getInFilename: mètode que retorna el _path_ i nom del fitxer a enviar.
+* getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
 
 Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API.
