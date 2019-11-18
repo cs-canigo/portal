@@ -64,13 +64,13 @@ Suporta Java EE 8, Servlet 4.0, JSP 2.3, EL 3.0, WebSocket 1.1, JASPIC 1.1, HTTP
 
 ### Jetty
 
-Jetty és un servidor d'aplicacions de codi lliure i obert que te el suport de la comunitat Eclipse. Utilitza menys memòria que Tomcat, és senzill, menys pesat i per tant, proporciona més velocitat a l'escalat. És eficient i amb poca necessitat de manteniment. S'utilitza en alguns frameworks com GWT, JRuby, Grails i Scala/Lift.
+Jetty és un servidor d'aplicacions de codi lliure i obert que té el suport de la comunitat Eclipse. Utilitza menys memòria que Tomcat, és senzill, menys pesat i per tant, proporciona més velocitat a l'escalat. És eficient i amb poca necessitat de manteniment. S'utilitza en alguns frameworks com GWT, JRuby, Grails i Scala/Lift.
 
 Suporta Java EE 7, Servlet 3.1, JSP 2.3, EL 3.0, JSTL 1.2, JTA 1.2, WebSocket 1.0 i altres amb extensions.
 
 ### Undertow
 
-Undertow és el servidor web incrustat més lleuger, amb menys consum de memòria i amb una resposta més ràpida en peticions HTTP com les emprades en serveis Rest. Undertow és utilitzat dins del servidor d'aplicacions WildFly i te el suport de les comunitats JBoss i RedHat, tot i això, és el que té menys documentació i menys comunitat darrera.
+Undertow és el servidor web incrustat més lleuger, amb menys consum de memòria i amb una resposta més ràpida en peticions HTTP com les emprades en serveis Rest. Undertow és utilitzat dins del servidor d'aplicacions WildFly i té el suport de les comunitats JBoss i RedHat, tot i això, és el que té menys documentació i menys comunitat darrera.
 
 Suporta Servlet 4.0, HTTP/2 i WebSocket 1.1. 
 
