@@ -15,13 +15,13 @@ Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](htt
 
 El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat.
 
-El propòsit del connector és proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el Signador Centralitzat del AOC.
+El propòsit del connector és proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el Signador Centralitzat de l'AOC.
 
 El Signador Centralitzat del AOC és la solució que dóna cobertura al concepte de sistema de signatura electrònica per a l’actuació administrativa automatitzada, tal com es descriu a la LAECSP (art.18, Llei 11/2007).
 
 ## Novetats
 
-Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC del AOX versió 1.3.3.
+Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC de l'AOX versió 1.3.3.
 
 Les principals novetats que proporciona l'actualització del mòdul de SSC de Canigó són:
 
@@ -44,6 +44,6 @@ Està disponible la documentació del mòdul de SSC de Canigó al portal d'arqui
 
 [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/)
 
-Per a més informació sobre el servei de Signador Centralitzat del AOC podeu consultar:
+Per a més informació sobre el servei de Signador Centralitzat de l'AOC podeu consultar:
 
 [guiaintegraciossc-v1-3-3.pdf](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
