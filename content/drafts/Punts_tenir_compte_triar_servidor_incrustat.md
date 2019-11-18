@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-27"
+date        = "2019-11-18"
 title       = "Punts a tenir en compte a l'hora de triar un servidor incrustat"
 description = "Llistat dels diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó"
 sections    = "Canigó"
