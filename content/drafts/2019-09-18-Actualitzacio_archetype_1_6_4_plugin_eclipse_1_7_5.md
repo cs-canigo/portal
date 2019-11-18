@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-18"
+date        = "2019-11-18"
 title       = "Actualització archetype 1.6.4 i plugin Eclipse 1.7.6"
 description = "S'ha publicat una nova versió del archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1"
 #sections    = ["Notícies", "home"]
