@@ -36,7 +36,7 @@ Anem a llistar els diferents punts a tenir en compte a l'hora de triar un servid
 
 ### Funcionalitats a utilitzar
 
-El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació ja que no tots els servidors d'aplicacions implementen tot els stack de Java EE 8 o Java SE 8.
+El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació, ja que no tots els servidors d'aplicacions implementen tot els _stack_ de Java EE 8 o Java SE 8.
 
 Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor d'aplicacions per determinar si aquesta està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
 
@@ -50,11 +50,11 @@ La documentació dels servidors d'aplicacions està a:
 
 - [Reactor Netty](https://projectreactor.io/docs/netty/release/reference/index.html)
 
-A part de l'_stack_ que implementa cada servidor d'aplicacions, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cadascun d'ells ja que això pot condicionar la rapidesa en la correcció de bugs o solució a problemes.
+A part de l'_stack_ que implementa cada servidor d'aplicacions, un altre punt important a tenir en compte és la comunitat que hi ha darrere de cadascun d'ells, ja que això pot condicionar la rapidesa en la correcció de _bugs_ o solució a problemes.
 
 Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix _stack_ tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
 
-Tenint en compte aquests punts, anem a detallar-los en cada un dels servidors d'aplicacions.
+A continuació els detallem aquests punts en cada un dels servidors d'aplicacions.
 
 ### Tomcat
 
