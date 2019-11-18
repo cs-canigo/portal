@@ -8,7 +8,7 @@ sections    = "Canigó"
 
 ## Introducció
 
-Canigó està basat en Spring i Spring boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring boot.
+Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot.
 
 Això permet desplegar una aplicació Canigó amb el seu propi servidor. Sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o cloud.
 
@@ -36,9 +36,9 @@ Anem a llistar els diferents punts a tenir en compte a l'hora de triar un servid
 
 ### Funcionalitats a utilitzar
 
-El més important a l'hora de seleccionar una servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació ja que no tots els servidors d'aplicacions implementen tot els stack de Java EE 8 o Java SE 8.
+El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació ja que no tots els servidors d'aplicacions implementen tot els stack de Java EE 8 o Java SE 8.
 
-Si una aplicacació té una necessitat especial és necessari revisar la documentació del servidor d'aplicacions per si aquesta necessitat està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
+Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor d'aplicacions per determinar si aquesta està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
 
 La documentació dels servidors d'aplicacions està a:
 
@@ -50,61 +50,37 @@ La documentació dels servidors d'aplicacions està a:
 
 [Reactor Netty](https://projectreactor.io/docs/netty/release/reference/index.html)
 
-A part de l'stack que implementa un servidor o un altre, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cada servidor ja que això pot condicionar la rapidesa en la correció de bugs o sol·lució a problemes.
+A part de l'stack que implementa un servidor o un altre, un altre punt important a tenir en compte és la comunitat que hi ha darrera de cada servidor ja que això pot condicionar la rapidesa en la correcció de bugs o solució a problemes.
 
-Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix stack tecnològic que utilitzarem a una aplicació és la seva lleugueresa, consum de memòria i/o escabilitat.
+Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix stack tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
 
-Tenint en compte aquests punts, anem a llistat-los en cada un dels servidors d'aplicacions.
+Tenint en compte aquests punts, anem a detallar-los en cada un dels servidors d'aplicacions.
 
 ### Tomcat
 
-- El més popular servidor d'aplicacions amb suport de Apache.
+Apache Tomcat és el servidor d’aplicacions més popular i compta amb suport d'Apache. És un programari de codi obert, molt ben documentat i mantingut per una gran comunitat de desenvolupadors, és flexible i extensible a una versió Enterprise.
 
-- Ben documentat amb una gran i forta comunitat de desenvolupadors utilitant-lo.
-
-- Suporta Java EE 8, Servlet 4.0, JSP 2.3, EL 3.0, WebSocket 1.1, JASPIC 1.1, HTTP/2, OpenSSL per TLS amb els connectos JSSE i TLS virtual hosting (SNI).
-
-- Flexible i extensible a una versió Enterprise.
+Suporta Java EE 8, Servlet 4.0, JSP 2.3, EL 3.0, WebSocket 1.1, JASPIC 1.1, HTTP/2, OpenSSL per TLS amb els connectos JSSE i TLS virtual hosting (SNI).
 
 ### Jetty
 
-- Suport de la comunitat eclipse amb gran suport.
+Jetty és un servidor d'aplicacions de codi lliure i obert que te el suport de la comunitat Eclipse. Utilitza menys memòria que Tomcat, és senzill menys pesat, per tant, proporciona més velocitat a l'escalat. És eficient i amb poca necessitat de manteniment. S'utilitza en alguns frameworks com GWT, JRuby, Grails i Scala/Lift.
 
-- Menys utilitzat en producció que Tomcat.
-
-- Utilitzat en alguns frameworks com GWT, JRuby, Grails i Scala/Lift.
-
-- Suporta Java EE 7, Servlet 3.1, JSP 2.3, EL 3.0, JSTL 1.2, JTA 1.2, WebSocket 1.0 i altres amb extensions.
-
-- Utilitza menys memòria que Tomcat, és menys pesat i proporciona més velocitat a l'escalat.
-
-- És petit i eficient amb poca necessitat de manteniment.
+Suporta Java EE 7, Servlet 3.1, JSP 2.3, EL 3.0, JSTL 1.2, JTA 1.2, WebSocket 1.0 i altres amb extensions.
 
 ### Undertow
 
-- Suport de la comunitat JBoss i RedHad.
+Undertow és el servidor web incrustat més lleuger, amb menys consum de memòria i amb una resposta més ràpida en peticions HTTP com les emprades en serveis Rest. Utilitzat dins del servidor d'aplicacions WildFly. Te el suport de la comunitat JBoss i RedHat tot i això, és el que té menys documentació i menys comunitat darrera.
 
-- Utilitzat dins del servidor d'aplicacions Wildly.
+Suporta Servlet 4.0, HTTP/2 i WebSocket 1.1. 
 
-- És el que té menys documentació i menys comunitat darrera.
-
-- Suporta Servlet 4.0, HTTP/2 i WebSocket 1.1. 
-
-- És el servidor web incrustat més lleuguer, amb menys consum de memòria i amb una resposta més ràpida en peticions HTTP com les utilitzades en serveis Rest.
-
-- Per defecte està habilitada la persistencia de les connexions http. Això és una funcionalitat important a poder ser utilitzada per clients que suportin persistència en les connexions http per incrementar el rendiment.
+Per defecte està habilitada la persistència de les connexions http. Funcionalitat important a tenir en compte, per a clients que suportin persistència en les connexions http per incrementar el rendiment.
 
 ### Reactor Netty
 
-- És part del projecte Reactor i està basat en el servidor Netty.
+Reactor Netty està en evolució, és part del projecte Reactor i està basat en el servidor Netty el qual és el servidor més utilitzat en aplicacions reactives i per tant, és el servidor a utilitzar si es vol funcionalitats de servidor o client amb reactiu.
 
-- És el servidor més utilitzat en aplicacions reactives.
-
-- Està en evolució.
-
-- Suporta streams reactius, model de concurrència i bucle d'events, non blocking i backpressure-ready sobre TCP, UDP i HTTP i proporciona servidor http sobre HTTP/2.
-
-- És el servidor a utilitzar si es vol utilitzar funcionalits de servidor o client amb reactiu.
+Suporta streams reactius, model de concurrència i bucle d'events, non blocking i backpressure-ready sobre TCP, UDP i HTTP i proporciona servidor http sobre HTTP/2.
 
 ## Documentació:
 
