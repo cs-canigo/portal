@@ -38,7 +38,7 @@ Aquest connector permet utilitzar els diferents serveis de signatura del SSC a t
 Els principals serveis que ofereix el connector són els següents:
 
 * Accés a la plataforma amb certificat: Totes les aplicacions que desitgin utilitzar l'SSC hauran de disposar d'un certificat amb el qual s'autenticaran per utilitzar la plataforma. Aquest certificat s'haurà de demanar a CatCert.
-* Us de magatzem de certificats: Una de les principals funcionalitats del SSC és la signatura desatesa. Això s'aconsegueix configurant en el connector un magatzem de certificats que l'SSC utilitzarà pels diferents processos de signatura.
+* Ús de magatzem de certificats: Una de les principals funcionalitats del SSC és la signatura desatesa. Això s'aconsegueix configurant en el connector un magatzem de certificats que l'SSC utilitzarà pels diferents processos de signatura.
 
 * Tipus de signatura: L'SSC ofereix els següents tipus de signatura.
     * CMS: Attached / Detached / Detached Hash
@@ -62,7 +62,7 @@ Per poder utilitzar l'SSC en PRO s'ha d'estar donat d'alta en el servei. Per pod
 
 1. Enviar un correu electrònic a implantacio@aoc.cat sol·licitant l'alta al servei. Aquí s'espera que l'usuari informi del tipus de signatures que vol generar i se l'informarà del tipus de certificats que ha de sol- licitar.
 
-2. Els certificats a sol·licitar s'hauran de fer a través de EACAT.
+2. Els certificats a sol·licitar s'hauran de fer a través d'EACAT.
 
 3. Finalment, el client haurà d'omplir un document d'alta al SSC, on haurà d'especificar el certificat amb el que s'autenticarà, així com els certificats de signatura allotjats en TrustedX que utilitzarà per signar.
 
@@ -74,7 +74,7 @@ De cara a utilitzar el servei en PRE, els certificats i documentació necessàri
 
 #### Interfícies i Components Genèrics
 
-Es pot trobar el codi font referent a aquests component a la següent url:
+Es pot trobar el codi font referent a aquests component a la següent URL:
 
 [Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc:18ddeccdfb491ecba6cc83563709cf13)
 
@@ -87,15 +87,15 @@ Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la s
 PropertyAllowTls10AsClient=true
 ```
 
-Tal i com indica la a Guia d'integració al SSC:
+Tal com indica la a Guia d'integració al SSC:
 
-La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada.
+La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar, ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada.
 
 ### Instal·lació i Configuració
 
 #### Instal·lació
 
-La instal·lació del connector requereix de la utilització de la llibreria 'canigo.integration.ssc' 
+La instal·lació del connector requereix la utilització de la llibreria 'canigo.integration.ssc' 
 
 Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per incloure la llibreria del Connector.
 
@@ -148,7 +148,7 @@ El primer conté els paràmetres:
     * PRE: https://ssc.preproduccio.catcert.cat:8443/trustedx-gw/SoapGateway
     * PRO: https://ssc.catcert.cat:8443/trustedx-gw/SoapGatewayU1T
 
-* ssc.distinguishedname: Nom del certificat amb el que l'aplicació s'autentica per consumir els serveis del SSC.
+* ssc.distinguishedname: Nom del certificat amb el qual l'aplicació s'autentica per consumir els serveis del SSC.
 
 * ssc.dipositari: Ens a afegir a la capçalera de la petició a SSCC.
 
