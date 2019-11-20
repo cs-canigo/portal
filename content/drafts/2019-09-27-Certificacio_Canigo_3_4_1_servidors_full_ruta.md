@@ -1,5 +1,5 @@
 +++
-date        = "2019-11-18"
+date        = "2019-09-27"
 title       = "Certificació Canigó 3.4.1 amb servidors full de ruta"
 description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals"
 sections    = "Canigó"
