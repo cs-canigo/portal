@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-16"
+date        = "2019-11-20"
 title       = "Comprovació automàtica de dependències vulnerables per aplicacions Canigó"
 description = "Howto per configurar i fer-ne ús del plugin dependency-check per trobar dependències vulnerables"
 section     = "howtos"
@@ -19,17 +19,17 @@ Una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulne
 
 El projecte Dependency Check és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte.
 
-Hi ha diversos pluggins, però per una aplicació Canigó utilitzarem el plugin `org.owasp:dependency-check-maven` per Maven per automatizar aquesta comprovació de dependències i obtenir un un report amb els resultats.
+Hi ha diversos pluggins, però per una aplicació Canigó utilitzarem el plugin `org.owasp:dependency-check-maven` per Maven per automatitzar aquesta comprovació de dependències i obtenir un report amb els resultats.
 
 ## Configuració i execució
 
-Per poder executar el plugin s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, ja que necessita accés a les BBDD de vulnerabilitats.
+Per poder executar el plugin s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, ja que necessita accés a les bases de dades de vulnerabilitats.
 
 ### Maven
 
-Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls o aplicacions que heredin del mòdul rool de Canigó generaran l'informe de les seves vulnerabilitats.
+Per la versió 3.4.1 s'ha configurat el _goal_ de Maven en el mòdul _root_ de Canigó, així tots els mòduls o aplicacions que heretin del mòdul _root_ de Canigó generaran l'informe de les seves vulnerabilitats.
 
-Si no s'hereda del mòdul root de Canigó , s'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
+Si no s'hereta del mòdul _root_ de Canigó, s'ha d'afegir el següent codi a la secció de `<plugins>` del fitxer `pom.xml`:
 
 ```xml
 <plugin>
@@ -48,7 +48,7 @@ Si no s'hereda del mòdul root de Canigó , s'ha d'afegir el següent codi a la 
 </plugin>
 ```
 
-Un cop afegit el plugin, cada cop que es faci una compilació es comprovarà les dependències de manera automàtica, generant-se el report a la següent ruta: `target/dependency-check-report.html`.
+Un cop afegit el _plugin_, cada cop que es faci una compilació es comprovarà les dependències de manera automàtica, generant-se el report a la següent ruta: `target/dependency-check-report.html`.
 
 S'ha de tenir en compte que, en el cas que es llenci el Maven en *mode offline (-o)* el plugin no farà cap validació i llençarà un WARNING als logs indicant-ho.
 
@@ -62,7 +62,7 @@ mvn org.owasp:dependency-check-maven:5.2.1:check
 
 ### failBuildOnAnyVulnerability
 
-Tot i que el plugin funciona per defecte per a reportar vulnerabilitats, es pot configurar per cancel·lar la construcció en el cas que en trobi alguna vulnerabilitat, de la següent manera:
+Tot i que el _plugin_ funciona per defecte per a reportar vulnerabilitats, es pot configurar per cancel·lar la construcció en el cas que en trobi alguna vulnerabilitat, de la següent manera:
 
 ```xml
 ...
@@ -86,7 +86,7 @@ On es pot observar que el mòdul "canigo.security" té les següents vulnerabili
 - spring-security-core-5.1.3-RELEASE
 - spring-security-ldap-5.1.3-RELEASE
 
-El detall d'una de la vulnerabilitats:
+El detall d'una de les vulnerabilitats:
 ![Exemple detall informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-detail.png)
 
 Una vegada actualitzades les llibreries l'informe indica que no ha trobat vulnerabilitats:
