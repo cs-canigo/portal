@@ -7,7 +7,7 @@ description = "S'ha publicat una nova versió de Canigó amb les llibreries depe
 key         = "NOVEMBRE2019"
 +++
 
-S'ha allibrerat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries depenent i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
+S'ha alliberat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries depenent i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
@@ -15,9 +15,9 @@ Podeu consultar l'abast complet de la versió 3.4.1 a:
 
 ## Introducció
 
-Les aplicacions estan composades de divereses llibreries externes que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització). Aquestes llibreries poden tenir forats de seguretat i poden comprometre la seguretat de l'aplicació.
+Les aplicacions estan formades de diverses llibreries externes que donen suport per diferents aspectes de les aplicacions, com poden ser la interoperabilitat (WS, REST, etc.) o la seguretat (autenticació / autorització). Aquestes llibreries poden tenir forats de seguretat i poden comprometre la seguretat de l'aplicació.
 
-En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar i sol·lucionar-ho.
+En aquest sentit hi ha bases de dades públiques que tan bon punt es publiquen les vulnerabilitats, n'informen de les llibreries o aplicacions afectades, així com dels mètodes per identificar-ho i solucionar-ho.
 
 ## Dependency Check
 
