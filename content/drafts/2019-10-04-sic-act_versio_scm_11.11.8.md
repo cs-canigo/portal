@@ -6,12 +6,12 @@ description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Ser
 #sections    = ["Notícies", "home"]
 +++
 
-## Actualització del servei de custodia de Codi
+## Actualització del servei de custòdia de Codi
 
-**Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de Custodia de Codi a la versió 11.11.8 de Gitlab**.
+**Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de custòdia de Codi a la versió 11.11.8 de Gitlab**.
 A patir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**.
 <br>
-Amb aquesta actualització es vol proporcionar als proveïdors d’aplicacions un sistema de custodia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible.
+Amb aquesta actualització es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible.
 Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
 <br><br>
 A continuació es detallen les principals novetats i millores d'aquesta actualització.
@@ -26,10 +26,10 @@ A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assigna
 Per a més informació: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
 <br><br>
 
-#### Serialització dels gràfics de commits
+#### Serialització dels gràfics de _commits_
 
-Moltes operacions habituals de Git requereixen consultar el gràfic de commits. Aquestes operacions són més lentes a mesura que creix el nombre de commits perquè aquestes consultes requereixen que cada objecte es carregui des del disc.
-A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de commits serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de commits.
+Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_. Aquestes operacions són més lentes a mesura que creix el nombre de _commits_ perquè aquestes consultes requereixen que cada objecte es carregui des del disc.
+A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_.
 
 Per a més informació: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
 <br><br>
@@ -38,8 +38,8 @@ Per a més informació: [Funcionalitats de gràfics de commits](https://git-scm.
 
 A vegades tenim la necessitat de descarregar una part d'un projecte. Fins ara, per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
 A la versió 11.11 del Gitlab es proporciona la possibilitat de descarregar un directori d'un projecte. Si naveguem dins del projecte i cliquem a la icona de descàrrega del projecte ens permet:
-- Descarregar tot el projecte (com fins ara)
-- Descarregar només aquell directori
+- Descarregar tot el projecte (com fins ara).
+- Descarregar només aquell directori.
 
 Per a més informació: [Descàrrega de directoris d'un projecte](https://docs.gitlab.com/ee/user/project/repository/#download-source-code)
 
