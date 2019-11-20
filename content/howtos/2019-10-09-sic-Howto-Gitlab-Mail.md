@@ -9,7 +9,7 @@ key         = "NOVEMBRE2019"
 
 ## A qui va dirigit
 
-Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin rebre via email informació sobre l'activitat dels seus projectes al servei de custodia de codi (Gitlab).
+Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin rebre via email informació sobre l'activitat dels seus projectes al servei de custòdia de codi (Gitlab).
 
 ## Introducció
 
