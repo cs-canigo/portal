@@ -17,7 +17,7 @@ Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](htt
 
 Dins dels lliurables de Canigó hi consten l'arquetipus i el _plugin_ de l'Eclipse.
 
-L'_archetype_ és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+L'arquetipus és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
 El _plugin_ de l'Eclipse és un connector desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l'arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l'Eclipse podem crear un projecte i afegir-l'hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
