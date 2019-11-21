@@ -1,12 +1,45 @@
 +++
-date        = "2015-01-24T17:11:42+01:00"
+date        = "2019-11-21T17:11:42+01:00"
 title       = "Comunicats"
 description = "Comunicats mensuals del CS Canigó"
 sections    = "Centre de Suport"
 weight		= 4
 +++
 
+## <span class="label label-cabecera">2019</span>
+
+#### [Octubre] (/comunicat/2019/10/)
+- SIC. Pilot de l'autoservei de jobs pipeline amb T-Systems, l'àmbit ATC i el lot AM10 - TICxCAT
+
+#### [Agost] (/comunicat/2019/08/)
+- Publicació Catàleg Tècnic de Dades
+- Canigó. Introducció programació reactiva
+- Canigó. Introducció programació funcional
+- SIC. Pilot de l'autoservei de jobs pipeline amb T-Systems i l'àmbit ATC
+
+#### [Juliol] (/comunicat/2019/07/)
+- SIC. Pilot de l'autoservei de jobs pipeline amb TICxCAT i IBM
+
+#### [Maig] (/comunicat/2019/05/)
+- Entorn desenvolupament. Actualització entorn versió 3.0.0
+
+#### [Abril] (/comunicat/2019/04/)
+- Suport Cloud. Actualització documentació
+- Canigó. Publicació versió 3.4.0
+
+#### [Març] (/comunicat/2019/03/)
+- STD. Actualització tecnològica del servei
+- Canigó. Roadmap del framework
+
+#### [Febrer] (/comunicat/2019/02/)
+- Oficina Tècnica de Canigó i Suport Cloud. Balanç 2018
+
 ## <span class="label label-cabecera">2018</span>
+
+#### [Desembre] (/comunicat/2018/12/)
+
+- Suport Cloud. Millores en el procés actualització imatges Docker
+- Revisió dels Principis d'Arquitectura dels Sistemes d'Informació
 
 #### [Novembre] (/comunicat/2018/11/)
 
