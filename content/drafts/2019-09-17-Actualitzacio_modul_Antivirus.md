@@ -19,9 +19,7 @@ Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](htt
 
 El mòdul de l'Antivirus permet l’escaneig d’arxius mitjançant el Servei d’Antivirus Centrals del CTTI.
 
-Per a accedir a aquest servei s'utilitza l'API de Symantec.
-
-La versió actual de l'_engine_ de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades.
+Per a accedir a aquest servei s'utilitza l'API de Symantec. La versió actual de l'_engine_ de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades.
 
 ## Novetats
 
