@@ -7,7 +7,7 @@ description = "S'ha publicat una nova versió de Canigó amb les llibreries depe
 key         = "NOVEMBRE2019"
 +++
 
-S'ha alliberat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries depenent i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
+S'ha alliberat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, el qual consisteix en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries de les quals depèn i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
 
 Podeu consultar l'abast complet de la versió 3.4.1 a:
 
@@ -25,7 +25,7 @@ El Dependency Check és una utilitat d’anàlisi de la composició de programar
 
 El motor principal conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
 
-Per la versió 3.4.1 s'ha configurat el goal de maven en el mòdul root de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
+Per la versió 3.4.1 s'ha configurat el _goal_ de Maven en el mòdul _root_ de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
 
 Un exemple d'informe amb vulnerabilitats podria ser:
 
