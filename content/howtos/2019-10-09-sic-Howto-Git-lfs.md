@@ -61,7 +61,7 @@ L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** e
 
 ## Consells
 
-- La **caché local de Git LFS no es netejarà automàticament** per el que, de forma regular, cal executar la següent comanda:
+- La **caché local de Git LFS no es netejarà automàticament** pel que, de forma regular, cal executar la següent comanda:
 ```
 git lfs prune
 ```
