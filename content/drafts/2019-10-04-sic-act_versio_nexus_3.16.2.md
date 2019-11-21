@@ -8,7 +8,7 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 
 ## Actualització del servei repositori d'artefactes
 
-**Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la versió 3.16.2 del Nexus**.
+Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**.
 <br>
 Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
 <br><br>
@@ -64,16 +64,16 @@ Els principals aspectes resolts són els següents:
 
 ### Resolució d'incidències
 
-#### Correcció de bug amb NPM
+#### Correcció de _bug_ amb NPM
 
-Correcció d'un bug registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
+Correcció d'un _bug_ registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
 
 Per a més informació: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850)
 <br><br>
 
 #### Correcció de bug amb POMs llargs
 
-S'ha resolt un bug que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException".
+S'ha resolt un _bug_ que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException".
 
 Per a més informació: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196)
 
