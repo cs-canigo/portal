@@ -6,7 +6,7 @@ sections    = "Canigó"
 weight      = 1
 +++
 
-## Canigó 3.4.1 (17/09/2019)
+#### Canigó 3.4.1 (17/09/2019)
 
 - [Dependency Check] (/drafts/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check)
 	- Actualització llibreries depenent dels mòduls passant el dependency check.
@@ -18,7 +18,7 @@ weight      = 1
 	- Actualització del _archetype_ i del _plugin_ de l'Eclipse de Canigó per generar aplicacions amb versió de Canigó 3.4.1.
 
 
-## Canigó 3.4.0 (29/03/2018)
+#### Canigó 3.4.0 (29/03/2018)
 
 - [Actualització tecnologies base] (/noticies/2019-03-29-actualitzacio-canigo-3_4_0)
 	- Actualització a Java 11, Spring 5, Spring Boot 2.
