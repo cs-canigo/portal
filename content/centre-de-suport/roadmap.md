@@ -1,6 +1,6 @@
 +++
 date        = "2015-09-25"
-lastmod     = "2018-04-16"
+lastmod     = "2019-07-19"
 title       = "Roadmap CS Canigó"
 description = "Roadmap del CS Canigó: Canigó, SIC i SGDE"
 sections    = "Roadmap"
