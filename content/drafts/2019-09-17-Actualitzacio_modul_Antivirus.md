@@ -13,7 +13,7 @@ Amb aquesta actualització s'aconsegueix un dels objectius prioritaris de CS Can
 
 Amb aquest objectiu s'aconsegueix proporcionar un framework en tendència i sense desvalorització. 
 
-Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.1).
+Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](/drafts/release-notes-canigo-34).
 
 ## Introducció
 
