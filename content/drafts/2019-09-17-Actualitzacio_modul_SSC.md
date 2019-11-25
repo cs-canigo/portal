@@ -7,9 +7,9 @@ description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utili
 key         = "NOVEMBRE2019"
 +++
 
-Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC.
+Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC. 
 
-Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1] (/drafts/release-notes-canigo-34)
+Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"] (/drafts/release-notes-canigo-34)
 
 ## Introducció
 
