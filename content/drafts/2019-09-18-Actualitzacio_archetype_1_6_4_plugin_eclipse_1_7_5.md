@@ -31,7 +31,7 @@ La principal novetat és la utilització de fitxers _yml_ per a la configuració
 
 La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1.
 
-Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse # Instal·lació](/canigo-download-related/plugin-canigo/#instal-lació).
+Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del Plugin Canigó per a Eclipse.
 
 ## Documentació plugin eclipse
 
