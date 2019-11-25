@@ -9,9 +9,7 @@ key         = "NOVEMBRE2019"
 
 Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat l'arquetipus (_archetype_) i el _plugin_ de l'Eclipse de Canigó per generar projectes amb Canigó 3.4.1.
 
-Aquesta actualització s'emmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**.
-
-Podeu consultar l'abast complet de la versió 3.4.1 a: [Abast Canigó 3.4.1](/drafts/release-notes-canigo-34)
+Aquesta actualització s'emmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**. Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/drafts/release-notes-canigo-34)
 
 ## Introducció
 
