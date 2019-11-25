@@ -16,7 +16,7 @@ El propòsit del connector és proporcionar una interfície que utilitzi l'API S
 
 ### Context i Escenaris d'ús
 
-El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat.
+El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat. 
 
 ### A qui va dirigit
 
@@ -56,6 +56,8 @@ Els principals serveis que ofereix el connector són els següents:
     * CAdES-BES-PDF: Attached / Detached
     * XAdES-BES: Enveloping / Enveloped / Detached
 
+Actualment el connector de Canigó de la versió 3.4 utilitza el client de SSC versió 1.3.3 
+
 ### Alta Servei
 
 Per poder utilitzar l'SSC en PRO s'ha d'estar donat d'alta en el servei. Per poder fer-ho s'han de seguir els següents passos:
@@ -80,7 +82,7 @@ Es pot trobar el codi font referent a aquests component a la següent URL:
 
 #### Requeriments
 
-El connector SSC és compatible amb les versions 1.8 o superior de Java. Per versions inferiors no està garantit el seu correcte funcionament.
+El connector SSC que utilitza el client 1.3.3 de SSC està desenvolupat a Canigó 3.4. Canigó 3.4 només és compatible amb versions 1.8 o superior de Java, Spring 5 i Spring Boot 2. El connector SSC que utilitza el client 1.3.3 de SSC no és compatible amb versions anteriors a Canigó.
 
 Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
 ```
@@ -89,7 +91,7 @@ PropertyAllowTls10AsClient=true
 
 Tal com indica la a Guia d'integració al SSC:
 
-La versió 2.2.x està desenvolupada per Canigó 3.4. Aquest connector utilitza llibreries externes que es recomana revisar, ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada.
+Aquest connector utilitza llibreries externes que es recomana revisar, ja que poden arribar a donar conflicte amb les llibreries d'una aplicació ja desenvolupada.
 
 ### Instal·lació i Configuració
 
@@ -207,4 +209,4 @@ On:
 - getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
 
 
-Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API.
+Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API, disponible consultant el codi font del connector
