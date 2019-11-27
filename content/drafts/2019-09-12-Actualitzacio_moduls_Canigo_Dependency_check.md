@@ -9,7 +9,7 @@ key         = "NOVEMBRE2019"
 
 S'ha alliberat la primera part de la **versió 3.4.1 del framework Canigó**, assolint un dels objectius que es persegueix des de CS Canigó, el qual consisteix en proporcionar als desenvolupadors d'aplicacions un framework amb les últimes versions de les seves llibreries de les quals depèn i amb el màxim de garanties de resolució de vulnerabilitats conegudes.
 
-Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/drafts/release-notes-canigo-34)
+Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
 ## Introducció
 
