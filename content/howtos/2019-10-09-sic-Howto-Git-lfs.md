@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-11"
+date        = "2019-11-27"
 title       = "Utilitzar Git-lfs per a arxius de gran tamany"
 description = "Howto per a configurar i utilitzar Git-lfs que dóna suport a arxius de gran tamany al servei de custodia de codi"
 #section     = "howtos"
@@ -16,14 +16,11 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús 
 Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git.
 Git LFS és un projecte de codi obert i és una extensió de Git. El seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori donat:
 
-- Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin;
-- Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**;
-- Git considerarà una **actualització d'un arxiu binari com un canvi complet de l'arxiu**, per la qual cosa no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el
-repositori anirà creixent de tamany i les comandes Git cada cop seran més lentes.
+- Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin.
+- Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**.
+- Git considerarà una **actualització d'un arxiu binari com un canvi complet de l'arxiu**, per la qual cosa no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el repositori anirà creixent de tamany i les comandes Git cada cop seran més lentes.
 
-Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS.
-
-Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS.
+Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS, ja que aquest utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS.
 
 ## Requisits que cal complir
 
@@ -43,7 +40,7 @@ Un cop instal·lat, en qualsevol projecte podrem indicar les extensions dels fit
 git lfs track "*.iso"
 ```
 
-Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte git.
+Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte Git.
 
 ![Git-lfs](/related/sic/git-lfs.png)
 <br/>
