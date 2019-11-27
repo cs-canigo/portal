@@ -6,6 +6,16 @@ sections    = "Canigó"
 weight      = 1
 +++
 
+#### Canigó 3.4.2 (25/10/2019)
+
+- [Autorització GICAR a Canigó] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2383)
+	- Actualització del mòdul de seguretat per incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
+- [Actualitzar el archetype nova versió mòdul seguretat autorització GICAR] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2385)
+	- Actualització de l'arquetipus de Canigó per utilitzar la nova versió (2.2.0) del mòdul de seguretat (autorització).	
+- [Actualitzar el plugin de Canigó per incloure nova opció seguretat autorització GICAR a Canigó] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2384)
+	- Actualització del _plugin_ de l'eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat.
+
+
 #### Canigó 3.4.1 (17/09/2019)
 
 - [Dependency Check] (/drafts/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check)
