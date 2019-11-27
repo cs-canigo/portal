@@ -19,7 +19,7 @@ Dins dels lliurables de Canigó hi consten l'arquetipus i el _plugin_ de l'Eclip
 
 L'arquetipus és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
-El _plugin_ de l'Eclipse és un connector desenvolupat pel IDE eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l'arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l'Eclipse podem crear un projecte i afegir-l'hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
+El _plugin_ de l'Eclipse és un connector desenvolupat per l'IDE Eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l'arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l'Eclipse podem crear un projecte i afegir-l'hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
 ## Novetats archetype
 
@@ -28,8 +28,8 @@ S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar project
 La versió 3.4.1 de Canigó incorpora les següents novetats respecte la versió 3.4.0:
 
 - **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
-- **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a la última versió disponible.
-- **Evolució del mòdul d’integració SSC**: Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC del AOC.
+- **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a l'última versió disponible.
+- **Evolució del mòdul d’integració SSC**: Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC de l'AOC.
 
 La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2.
 
@@ -37,7 +37,7 @@ La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 é
 
 La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1.
 
-Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del Plugin Canigó per a Eclipse.
+Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del _plugin_ Canigó per a Eclipse.
 
 ## Documentació plugin eclipse
 
