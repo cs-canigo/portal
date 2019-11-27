@@ -198,4 +198,4 @@ On:
 - getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
 
 
-Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API, disponible consultant el codi font del connector
+Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API, disponible consultant el codi font del connector SCC.
