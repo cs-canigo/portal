@@ -28,7 +28,7 @@ S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar project
 La versió 3.4.1 de Canigó incorpora les següents novetats respecte la versió 3.4.0:
 
 - **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
-- **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 la última versió disponible.
+- **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a la última versió disponible.
 - **Evolució del mòdul d’integració SSC**: Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC del AOC.
 
 La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2.
