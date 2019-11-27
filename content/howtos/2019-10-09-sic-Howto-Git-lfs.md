@@ -13,8 +13,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús 
 
 ## Introducció
 
-Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git.
-Git LFS és un projecte de codi obert i és una extensió de Git. El seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori, donat que:
+Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git. Git LFS és un projecte de codi obert, és una extensió de Git i el seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori, donat que:
 
 - Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin.
 - Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**.
@@ -24,7 +23,7 @@ Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxiu
 
 ## Requisits que cal complir
 
-Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-se'l per separat.
+Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-la per separat.
 
 ## Com dur a terme la instal·lació
 
@@ -40,7 +39,7 @@ Un cop instal·lat, en qualsevol projecte podrem indicar les extensions dels fit
 git lfs track "*.iso"
 ```
 
-Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte Git.
+Aquesta instrucció s'encarregarà de generar un fitxer **.gitattributes** que haurem d'incloure en el nostre projecte Git:
 
 ![Git-lfs](/related/sic/git-lfs.png)
 <br/>
@@ -51,7 +50,7 @@ Es recomana confirmar i enviar aquest arxiu al repositori perquè tots els desen
 
 Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de tamany.
 
-Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el tracking pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
+Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el _tracking_ pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
 Quan s'extrau un arxiu Git LFS al repositori local, l'arxiu s'envia a través d'un filtre que reemplaçarà el punter per l'arxiu real.
 L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar el tamany en el repositori central i evitant possibles problemes de rendiment en el servidor.
