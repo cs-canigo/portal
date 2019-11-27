@@ -14,13 +14,13 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús 
 ## Introducció
 
 Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git.
-Git LFS és un projecte de codi obert i és una extensió de Git. El seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori donat:
+Git LFS és un projecte de codi obert i és una extensió de Git. El seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori, donat que:
 
 - Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin.
 - Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**.
 - Git considerarà una **actualització d'un arxiu binari com un canvi complet de l'arxiu**, per la qual cosa no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el repositori anirà creixent de tamany i les comandes Git cada cop seran més lentes.
 
-Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS, ja que aquest utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS.
+Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS, per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS.
 
 ## Requisits que cal complir
 
