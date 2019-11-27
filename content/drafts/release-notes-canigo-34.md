@@ -11,7 +11,7 @@ weight      = 1
 - [Dependency Check] (/drafts/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check)
 	- Actualització llibreries depenent dels mòduls passant el dependency check.
 - [Actualitzar connector antivirus Canigó de Symantec] (/drafts/2019-09-17-Actualitzacio_modul_Antivirus)
-	- Actualització del connector de l'Antivirus de Canigó que actualment està utilitzant la versió 7 la última versió disponible.
+	- Actualització del connector de l'Antivirus de Canigó que actualment està utilitzant la versió 7 a la última versió disponible.
 - [Evolució del mòdul d'integració SSC] (/drafts/2019-09-17-Actualitzacio_modul_SSC)
 	- Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC del AOC.
 - [Actualització plantilla i _plugin_ Canigó versió 3.4.1] (/drafts/2019-09-18-Actualitzacio_archetype_1_6_4_plugin_eclipse_1_7_5/)
