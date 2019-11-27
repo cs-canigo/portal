@@ -24,7 +24,7 @@ Per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és 
 
 ## Requisits que cal complir
 
-Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-se per separat.
+Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-se'l per separat.
 
 ## Com dur a terme la instal·lació
 
