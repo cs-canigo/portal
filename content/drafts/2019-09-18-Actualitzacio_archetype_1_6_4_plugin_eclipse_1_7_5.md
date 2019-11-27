@@ -25,7 +25,13 @@ El _plugin_ de l'Eclipse és un connector desenvolupat pel IDE eclipse per afegi
 
 S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1.  
 
-La principal novetat és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2 publicats a Canigó 3.4.0 documentats a: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/).
+La versió 3.4.1 de Canigó incorpora les següents novetats respecte la versió 3.4.0:
+
+- **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
+- **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 la última versió disponible.
+- **Evolució del mòdul d’integració SSC**: Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC del AOC.
+
+La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2.
 
 ## Novetats plugin Eclipse
 
