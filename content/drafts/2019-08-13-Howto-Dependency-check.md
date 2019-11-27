@@ -13,13 +13,9 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin automatitza
 
 ## Introducció
 
-En una aplicació és important identificar i solucionar vulnerabilitats conegudes.
+En una aplicació és important identificar i solucionar vulnerabilitats conegudes i una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats.
 
-Una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats.
-
-El projecte Dependency Check és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte.
-
-Hi ha diversos pluggins, però per una aplicació Canigó utilitzarem el plugin `org.owasp:dependency-check-maven` per Maven per automatitzar aquesta comprovació de dependències i obtenir un report amb els resultats.
+Hi ha diversos plugins, però per una aplicació Canigó, utilitzarem Dependency Check la qual és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte. El plugin `org.owasp:dependency-check-maven` per Maven, permet  automatitzar la comprovació de dependències vulnerables i obtenir un report amb els resultats.
 
 ## Configuració i execució
 
