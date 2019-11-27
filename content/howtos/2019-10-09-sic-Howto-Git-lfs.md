@@ -66,4 +66,4 @@ git lfs prune
 - Abans de decidir assignar binaris a un repositori Git cal pensar en si **realment és necessari** fer control de versions i si existeix alguna alternativa basada en text.
 
 <br/><br/>
-La documentació oficial la podeu trobar a la [Web Oficial](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html)
+La documentació oficial la podeu trobar a la Web de [Git LFS](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html).
