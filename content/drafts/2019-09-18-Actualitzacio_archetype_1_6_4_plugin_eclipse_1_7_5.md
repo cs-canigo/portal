@@ -1,5 +1,5 @@
 +++
-date        = "2019-11-18"
+date        = "2019-11-27"
 title       = "Actualització archetype 1.6.4 i plugin Eclipse 1.7.6"
 description = "S'ha publicat una nova versió del archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.1"
 #sections    = ["Notícies", "home"]
@@ -11,7 +11,7 @@ Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacio
 
 Aquesta actualització s'emmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**. 
 
-Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/drafts/release-notes-canigo-34)
+Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
 ## Introducció
 
