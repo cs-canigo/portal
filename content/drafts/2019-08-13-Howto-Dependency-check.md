@@ -7,19 +7,15 @@ categories  = ["canigo"]
 key         = "OCTUBRE2019"
 +++
 
-## A qui va dirigit
-
-Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin automatitzar les comprovacions de dependències vulnerables per aplicacions amb Canigó.
-
 ## Introducció
 
-En una aplicació és important identificar i solucionar vulnerabilitats conegudes i una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats.
+En una aplicació és important identificar i solucionar vulnerabilitats conegudes i una aplicació Canigó utilitza llibreries externes i aquestes poden tenir vulnerabilitats. Aquest how-to va dirigit a tots aquells perfils tècnics que vulguin automatitzar les comprovacions de dependències vulnerables per aplicacions amb Canigó.
 
 Hi ha diversos _plugins_, però per una aplicació Canigó, utilitzarem Dependency Check la qual és una eina per analitzar i identificar vulnerabilitats conegudes de les llibreries utilitzades en un projecte. El _plugin_ `org.owasp:dependency-check-maven` per Maven, permet  automatitzar la comprovació de dependències vulnerables i obtenir un report amb els resultats.
 
 ## Configuració i execució
 
-Per poder executar el plugin s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, ja que necessita accés a les bases de dades de vulnerabilitats.
+Per poder executar el _plugin_ s'ha de tenir present que **es requereix que hi hagi connectivitat a Internet** en el moment d'execució, ja que necessita accés a les bases de dades de vulnerabilitats.
 
 ### Maven
 
@@ -46,7 +42,7 @@ Si no s'hereta del mòdul _root_ de Canigó, s'ha d'afegir el següent codi a la
 
 Un cop afegit el _plugin_, cada cop que es faci una compilació es comprovarà les dependències de manera automàtica, generant-se el report a la següent ruta: `target/dependency-check-report.html`.
 
-S'ha de tenir en compte que, en el cas que es llenci el Maven en *mode offline (-o)* el plugin no farà cap validació i llençarà un WARNING als logs indicant-ho.
+S'ha de tenir en compte que, en el cas que es llenci el Maven en *mode offline (-o)* el _plugin_ no farà cap validació i llençarà un WARNING als logs indicant-ho.
 
 ### CLI
 
@@ -58,7 +54,7 @@ mvn org.owasp:dependency-check-maven:5.2.1:check
 
 ### failBuildOnAnyVulnerability
 
-Tot i que el _plugin_ funciona per defecte per a reportar vulnerabilitats, es pot configurar per cancel·lar la construcció en el cas que en trobi alguna vulnerabilitat, de la següent manera:
+Per defecte, el _plugin_ està preparat per reportar vulnerabilitats, tot i això, es pot configurar per cancel·lar la construcció en el cas que en trobi alguna vulnerabilitat de la següent manera:
 
 ```xml
 ...
