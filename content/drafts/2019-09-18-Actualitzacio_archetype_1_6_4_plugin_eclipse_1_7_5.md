@@ -17,7 +17,7 @@ El **_plugin_** de l'Eclipse és un connector desenvolupat per l'IDE Eclipse per
 
 ## Novetats _archetype_
 
-S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1, aquesta versió incorpora les següents novetats respecte la versió 3.4.0:
+S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1, aquesta versió incorpora les següents novetats respecte a la versió 3.4.0:
 
 - **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
 - **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a l'última versió disponible.
