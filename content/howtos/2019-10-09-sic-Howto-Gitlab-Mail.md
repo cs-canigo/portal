@@ -24,9 +24,7 @@ Per a més informació: [GitLab Notification Emails](https://docs.gitlab.com/ce/
 
 ## Com configurar les notificacions per projectes
 
-Podem configurar notificacions per projecte, de forma que es rebi un correu electrònic per cada un dels canvis que es facin al projecte. En aquest cas haurem d’afegir les adreces de correu electrònic destinatàries.
-
-Per a activar-les cal anar a l’apartat d’integracions del projecte i seleccionar la integració "**Emails on push**", on es disposa de les següents opcions: **push events, tag push events, send from committer i disable code diffs**.
+Per a configurar el servei de forma que es rebi un correu electrònic per cada un dels canvis que es facin al projecte, cal anar a l’apartat d’integracions del projecte i seleccionar la integració "**Emails on push**", on es disposa de les següents opcions: **push events, tag push events, send from committer i disable code diffs** i també haurem d’afegir les adreces de correu electrònic destinatàries.
 
 ![Notificacions Projecte](/related/sic/projectNotifications.png)
 
