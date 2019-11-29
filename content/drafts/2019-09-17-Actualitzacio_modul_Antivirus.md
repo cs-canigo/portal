@@ -7,15 +7,13 @@ description = "S'ha publicat una nova versió del mòdul de l'Antivirus de Canig
 key         = "NOVEMBRE2019"
 +++
 
+## Introducció
+
 Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió de l'_engine_ de l'antivirus. 
 
 Amb aquesta actualització, s'aconsegueix un dels objectius prioritaris de CS Canigó, el qual consisteix en proporcionar els connectors d'integració actualitzats utilitzant les últimes versions disponibles de les seves llibreries associades. Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
-## Introducció
-
-El mòdul de l'Antivirus permet l’escaneig d’arxius mitjançant el Servei d’Antivirus Centrals del CTTI, per a accedir a aquest servei s'utilitza l'API de Symantec.
-
-La versió actual de l'_engine_ de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades.
+El mòdul de l'Antivirus permet l’escaneig d’arxius mitjançant el Servei d’Antivirus Centrals del CTTI, per a accedir a aquest servei s'utilitza l'API de Symantec. La versió actual de l'_engine_ de l'API de Symantec és la 7.9.2, les versions posteriors, encara que continuen actives, estan deprecades.
 
 ## Novetats
 
