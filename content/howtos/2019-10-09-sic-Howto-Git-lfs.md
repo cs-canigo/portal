@@ -21,7 +21,7 @@ Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxiu
 
 ## Com dur a terme la instal·lació
 
-Per a utilitzar Git LFS dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball, ja que com s’ha comentat, és una extensió de Git i, per tant, cal instal·lar-la per separat. En els següents vincles trobareu les instruccions d'instal·lació en funció del sistema operatiu del qual es disposi:
+Per a utilitzar Git LFS dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball, ja que com s’ha comentat, és una extensió de Git i, per tant, cal instal·lar-la per separat. En els següents enllaços trobareu les instruccions d'instal·lació en funció del sistema operatiu del qual es disposi:
 
 * [Instal·lació Windows](https://github.com/git-lfs/git-lfs/wiki/Installation#windows)
 * [Instal·lació Linux](https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu)
