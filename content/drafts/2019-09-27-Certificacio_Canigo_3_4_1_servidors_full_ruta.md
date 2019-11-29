@@ -8,11 +8,9 @@ sections    = "Canigó"
 
 ## Introducció
 
-El passat mes de Març es va publicar la nova versió 3.4.0 de Canigó, vegeu la notícia [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/). Aquesta versió incorpora una gran actualització de les llibreries utilitzades a Canigó, passant a utilitzar Spring 5 i Spring Boot 2.
+El mes de Març es va publicar la nova versió 3.4.0 de Canigó, vegeu la notícia [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/), aquesta versió incorpora una gran actualització de les llibreries utilitzades a Canigó, passant a utilitzar Spring 5 i Spring Boot 2.
 
-El mes de setembre es va publicar la nova versió 3.4.1 de Canigó on s'ha realitzat l'actualització de les llibreries a versions sense vulnerabilitats públiques i amb l'actualització dels mòduls d'Antivirus i SSC.
-
-Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals. Aquesta aplicació contenia un _CRUD_ de serveis rest utilitzant una base de dades H2, el mòdul de seguretat amb _JWT_ i autenticació amb GICAR. S'ha generat amb el [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
+El passat mes de setembre es va publicar la nova **versió 3.4.1 de Canigó** on s'ha realitzat l'actualització de les llibreries a versions sense vulnerabilitats públiques i amb l'actualització dels mòduls d'Antivirus i SSC. Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb aquesta nova versió del framework amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals. Aquesta aplicació contenia un _CRUD_ de serveis rest utilitzant una base de dades H2, el mòdul de seguretat amb _JWT_ i autenticació amb GICAR. S'ha generat amb el [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
 
 ## Servidors full de ruta
 
