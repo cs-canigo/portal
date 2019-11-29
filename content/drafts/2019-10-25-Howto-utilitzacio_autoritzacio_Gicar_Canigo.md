@@ -9,7 +9,7 @@ description = "Howto per configurar una aplicació Canigó per utilitzar l'autor
 
 ## Introducció
 
-A les últimes novetats de Gicar incorpora la possibilitat de tenir l'autorització a més de l'autenticació. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar també l'autorització via Gicar a una aplicació Canigó.
+A les últimes novetats de Gicar incorpora la possibilitat de tenir l'autorització a més de l'autenticació. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
 
 Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: Amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT, per a més informació de la opció sense JWT, podeu consultar el [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/).
 
