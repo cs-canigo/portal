@@ -31,11 +31,11 @@ Un exemple de la capçalera seria:
 HTTP_GICAR_MEMBERL --> CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
 ```
 
-A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir l'informació de l'usuari i els seus rols per a ser utilitzats a una aplicació Canigó.
+A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir la informació de l'usuari i els seus rols per a ser utilitzats a una aplicació Canigó.
 
 ## Mòdul de seguretat
 
-Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot incloure automàticament a través del plugin de Canigó del eclipse o bé afegir manualment en el pom.xml de l’aplicació la següent dependència:
+Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot incloure automàticament a través del plugin de Canigó de l'Eclipse o bé afegir manualment en el pom.xml de l’aplicació la següent dependència:
 
 ```
 <canigo.security.version>[2.0.0,2.3.0)</canigo.security.version>
@@ -53,9 +53,9 @@ Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot 
     </dependency>
 ```
 
-## Configuració per utilitzar l'autorització i l'autentiació via Gicar
+## Configuració per utilitzar l'autorització i l'autenticació via Gicar
 
-A la versió 1.7.6 del plugin de Canigó per l'eclipse ja incorpora la nova opció d'autenticació i d'autorització Gicar al afegir el mòdul de seguretat en una aplicació Canigó, podeu veure les opcions a:
+A la versió 1.7.6 del plugin de Canigó per l'eclipse ja incorpora la nova opció d'autenticació i d'autorització Gicar a l'afegir el mòdul de seguretat en una aplicació Canigó, podeu veure les opcions a:
 
 [Actualització plugin eclipse 1.7.6](/drafts/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 
@@ -251,7 +251,7 @@ On es defineix com a punts més rellevants:
 
 ###  security.properties
 
-Amb les següent definició per defecte de propietats:
+Amb la següent definició per defecte de propietats:
 
 ```
 ###########################################################
@@ -316,7 +316,7 @@ Podeu trobar més informació sobre el mòdul de seguretat de Canigó a:
 
 [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 
-Per més informació sobre el plugin de Canigó de l'eclipse a:
+Per més informació sobre el plugin de Canigó de l'Eclipse a:
 
 [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 
