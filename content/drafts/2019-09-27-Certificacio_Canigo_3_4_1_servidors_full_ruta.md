@@ -16,7 +16,8 @@ Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb 
 
 ## Servidors full de ruta
 
-Els servidors d'aplicacions suportats actualment en el full de ruta del CTTI són:
+Els servidors d'aplicacions suportats actualment en el [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
+ són:
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
@@ -24,8 +25,6 @@ Els servidors d'aplicacions suportats actualment en el full de ruta del CTTI só
 |  Weblogic				          	  	 	|         12.2.x               			|
 |  Webshpere	  		        	  	 	|         9.0                 			|
 |  JBoss EAP       									|         7.x        			          |
-
-Per a més informació podeu consultar el [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
 
 Per a la certificació dels diferents servidors d'aplicacions s'han modificat les propietats de la _jvm_ que inicien els servidors d'aplicacions incorporant:
 
