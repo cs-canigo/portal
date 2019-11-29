@@ -8,28 +8,12 @@ weight      = 15
 
 ## Introducció
 
-L'objectiu d'aquest connector és el de proporcionar accés al Sistema de Signatura Centralitzada de Catcert (SSC).
-
-### Propòsit
-
-El propòsit del connector és proporcionar una interfície que utilitzi l'API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix l'SSC.
-
-### Context i Escenaris d'ús
-
-El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat. 
-
-### A qui va dirigit
+L'objectiu d'aquest connector és proporcionar accés al Sistema de Signatura Centralitzada de Catcert (SSC). Aquest connector, el qual es troba dins els connectors de serveis funcionals de la Generalitat, proporciona una interfície que utilitza l'API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix l'SSC.
 
 Aquest document va dirigit als següents perfils:
 
 * Programador. Per conèixer l'ús del connector.
 * Arquitecte. Per conèixer quins són els components i la configuració del connector.
-
-### Documents i Fonts de Referència
-
-| Nom Document
-| ------------
-| [Guia d'integració al SSC] (/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
 
 ## Descripció Detallada
 
@@ -76,7 +60,7 @@ De cara a utilitzar el servei en PRE, els certificats i documentació necessàri
 
 #### Interfícies i Components Genèrics
 
-Es pot trobar el codi font referent a aquests component a la següent URL: [Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc:18ddeccdfb491ecba6cc83563709cf13). Per poder consultar aquest codi, cal tenir permísos d'acccès al repositori del servidor Nexus del SIC.
+Si disposa de permís d'accès al repositori del servidor Nexus del SIC, podrà trobar el codi font referent a aquests component a la següent URL: [Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc:18ddeccdfb491ecba6cc83563709cf13).
 
 #### Requeriments
 
@@ -198,4 +182,8 @@ On:
 - getDestFilename: mètode que retorna el _path_ i nom del fitxer on guardar la resposta.
 
 
-Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API, disponible consultant el codi font del connector SCC.
+Per més informació sobre els diferents mètodes que ofereix el connector SSC es pot consultar l'API, disponible consultant el codi font del connector SCC el qual es pot trobar al Nexus.
+
+## Documentació de referència
+
+Per més informació, es pot consultar la [Guia d'integració al SSC](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
