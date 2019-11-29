@@ -8,7 +8,7 @@ weight      = 15
 
 ## Introducció
 
-L'objectiu d'aquest connector és proporcionar accés al Sistema de Signatura Centralitzada de Catcert (SSC). Aquest connector, el qual es troba dins els connectors de serveis funcionals de la Generalitat, proporciona una interfície que utilitza l'API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix l'SSC.
+L'objectiu d'aquest connector és proporcionar accés al Sistema de Signatura Centralitzada de Catcert (SSC). Aquest component, el qual es troba dins els connectors de serveis funcionals de la Generalitat, proporciona una interfície que utilitza l'API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix l'SSC.
 
 Aquest document va dirigit als següents perfils:
 
@@ -17,7 +17,7 @@ Aquest document va dirigit als següents perfils:
 
 ## Descripció Detallada
 
-Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix connector ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder treballar amb ell. És amb aquesta API amb la qual està constituït aquest connector.
+Aquest connector permet utilitzar els diferents serveis de signatura del SSC a través d'una API que el mateix component ofereix. El nucli principal del SSC és el sistema TrustedX que ofereix l'API SmartWrapper per poder treballar amb ell. És amb aquesta API amb la qual està constituït aquest connector.
 
 Els principals serveis que ofereix el connector són els següents:
 
