@@ -98,7 +98,7 @@ Entrem a `treball/target/` trobem l'informe `dependency-check-report.html`
 
 
 ## Informació addicional
-Per a més informació sobre Dependency Check podeu consultar:
+Per a més informació sobre Dependency Check podeu consultar els següents enllaços:
 
 https://jeremylong.github.io/DependencyCheck/
 
