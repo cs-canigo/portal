@@ -10,7 +10,9 @@ sections    = "Canigó"
 
 Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot. Això permet desplegar una aplicació Canigó amb el seu propi servidor, sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o _cloud_.
 
-Per a aplicacions que utilitzin l'_stack_ de _servlets_, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow i per a aplicacions que utilitzin l'_stack_ reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty.
+En funció de l'_stack_ que utilitzin les aplicacions, Spring Boot inclou uns o altres servidors incrustats, per l'_Stack_:
+- De _servlets_ inclou Tomcat, Jetty i Undertow.
+- Reactiu inclou Tomcat, Jetty, Undertow i Reactor Netty.
 
 ![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
@@ -30,7 +32,7 @@ Aquestes versions poden variar segons la versió de Spring Boot utilitzada.
 
 El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació, ja que no tots els servidors d'aplicacions implementen tot els _stack_ de Java EE 8 o Java SE 8.  Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor d'aplicacions per determinar si aquesta està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
 
-La documentació dels servidors d'aplicacions està a:
+En els següents enllaços, es pot trobar la documentació dels servidors d'aplicacions:
 
 - [Tomcat](http://tomcat.apache.org/tomcat-9.0-doc/)
 
