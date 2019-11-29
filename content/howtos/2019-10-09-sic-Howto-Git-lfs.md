@@ -1,7 +1,7 @@
 +++
 date        = "2019-11-29"
 title       = "Utilitzar Git-lfs per a arxius de gran tamany"
-description = "Howto per a configurar i utilitzar Git-lfs que dóna suport a arxius de gran tamany al servei de custodia de codi"
+description = "Howto per a configurar i utilitzar Git LFS que dóna suport a arxius de gran tamany al servei de custodia de codi"
 #section     = "howtos"
 #categories  = ["sic"]
 key         = "NOVEMBRE2019"
@@ -58,4 +58,4 @@ git lfs prune
 - Abans de decidir assignar binaris a un repositori Git cal pensar en si **realment és necessari** fer control de versions i si existeix alguna alternativa basada en text.
 
 <br/><br/>
-La documentació oficial la podeu trobar a la Web de [Git LFS](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html).
+Per a més informació, podeu consultar la documentació oficial a la Web de [Git LFS](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html).
