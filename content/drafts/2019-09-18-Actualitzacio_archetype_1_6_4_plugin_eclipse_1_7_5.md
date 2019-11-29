@@ -11,13 +11,13 @@ key         = "NOVEMBRE2019"
 
 Dins dels lliurables de Canigó hi consten l'arquetipus (_archetype_) i el _plugin_ de l'Eclipse. Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat ambdós lliurables per generar projectes amb Canigó **versió 3.4.1**. Podeu consultar l'abast complet de la nova versió del framework a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
-L'arquetipus és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+L'**arquetipus** és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
-El _plugin_ de l'Eclipse és un connector desenvolupat per l'IDE Eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l'arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l'Eclipse podem crear un projecte i afegir-l'hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
+El **_plugin_** de l'Eclipse és un connector desenvolupat per l'IDE Eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l'arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l'Eclipse podem crear un projecte i afegir-l'hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
-## Novetats archetype
+## Novetats _archetype_
 
-S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1. Aquesta versió de Canigó incorpora les següents novetats respecte la versió 3.4.0:
+S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1, aquesta versió incorpora les següents novetats respecte la versió 3.4.0:
 
 - **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
 - **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a l'última versió disponible.
@@ -25,7 +25,7 @@ S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar project
 
 La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2.
 
-## Novetats plugin Eclipse
+## Novetats _plugin_ Eclipse
 
 La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1.
 
