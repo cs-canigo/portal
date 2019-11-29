@@ -7,23 +7,17 @@ description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utili
 key         = "NOVEMBRE2019"
 +++
 
-Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC. 
-
-Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
-
 ## Introducció
 
-El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat.
+Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC. Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
-El propòsit del connector és proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el Signador Centralitzat de l'AOC.
+El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat. El propòsit d'aquest connector, és proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el Signador Centralitzat de l'AOC.
 
 El Signador Centralitzat del AOC és la solució que dóna cobertura al concepte de sistema de signatura electrònica per a l’actuació administrativa automatitzada, tal com es descriu a la LAECSP (art.18, Llei 11/2007).
 
 ## Novetats
 
-Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC de l'AOX versió 1.3.3.
-
-Les principals novetats que proporciona l'actualització del mòdul de SSC de Canigó són:
+Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC de l'AOX versió 1.3.3.  Les principals novetats que proporciona aquesta l'actualització són:
 
 * Suport a tipus de signatura Detached Hash pels serveis:
   * CMS
@@ -40,10 +34,6 @@ Les principals novetats que proporciona l'actualització del mòdul de SSC de Ca
 
 ## Documentació mòdul
 
-Està disponible la documentació del mòdul de SSC de Canigó al portal d'arquitectura:
+Està disponible la documentació del mòdul de SSC de Canigó al portal d'arquitectura: [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/).
 
-[Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/)
-
-Per a més informació sobre el servei de Signador Centralitzat de l'AOC podeu consultar:
-
-[guiaintegraciossc-v1-3-3.pdf](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC")
+Per a més informació sobre el servei de Signador Centralitzat de l'AOC podeu consultar la [Guia d'integracio SCC v1-3-3](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
