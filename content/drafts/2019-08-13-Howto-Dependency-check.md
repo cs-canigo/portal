@@ -1,5 +1,5 @@
 +++
-date        = "2019-11-27"
+date        = "2019-11-28"
 title       = "Comprovació automàtica de dependències vulnerables per aplicacions Canigó"
 description = "Howto per configurar i fer-ne ús del plugin dependency-check per trobar dependències vulnerables"
 section     = "howtos"
