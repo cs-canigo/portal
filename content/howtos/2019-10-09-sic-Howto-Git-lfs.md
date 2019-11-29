@@ -1,5 +1,5 @@
 +++
-date        = "2019-11-27"
+date        = "2019-11-29"
 title       = "Utilitzar Git-lfs per a arxius de gran tamany"
 description = "Howto per a configurar i utilitzar Git-lfs que dóna suport a arxius de gran tamany al servei de custodia de codi"
 #section     = "howtos"
@@ -7,13 +7,11 @@ description = "Howto per a configurar i utilitzar Git-lfs que dóna suport a arx
 key         = "NOVEMBRE2019"
 +++
 
-## A qui va dirigit
-
-Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús de l'extensió Git LFS per a poder incloure arxius al servei de custòdia de codi (Gitlab) que superin la limitació de 25 MB.
-
 ## Introducció
 
-Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git. Git LFS és un projecte de codi obert, és una extensió de Git i el seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori, donat que:
+Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git LFS (emmagatzematge d'arxius grans) sovint és desconegut per als usuaris de Git. Aquest how-to va dirigit a tots aquells perfils tècnics que necessitin fer ús de l'extensió Git LFS per a poder incloure arxius al servei de custòdia de codi (Gitlab) que superin la limitació de 25 MB.
+
+Git LFS és un projecte de codi obert, és una extensió de Git i el seu objectiu és treballar de manera més eficient amb arxius grans i arxius binaris en el repositori, donat que:
 
 - Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin.
 - Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**.
@@ -21,17 +19,12 @@ Tot i que Git és ben conegut com a sistema de control de versions, l'ús de Git
 
 Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS, per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS.
 
-## Requisits que cal complir
-
-Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-la per separat.
-
 ## Com dur a terme la instal·lació
 
-Les instruccions d'instal·lació les podeu trobar a:
+Per a utilitzar-lo dins d'un projecte cal que **tots els col·laboradors instal·lin l'extensió** en el lloc de treball. Com ja s’ha comentat, Git LFS és una extensió de Git i, per tant, cal instal·lar-la per separat. En els següents vincles trobareu les instruccions d'instal·lació en funció del sistema operatiu del qual es disposi:
 
 * [Instal·lació Windows](https://github.com/git-lfs/git-lfs/wiki/Installation#windows)
 * [Instal·lació Linux](https://github.com/git-lfs/git-lfs/wiki/Installation#debian-and-ubuntu)
-
 
 Un cop instal·lat, en qualsevol projecte podrem indicar les extensions dels fitxers que cal incloure en el Git LFS mitjançant la següent comanda executada a l'arrel del projecte:
 
@@ -48,7 +41,7 @@ Es recomana confirmar i enviar aquest arxiu al repositori perquè tots els desen
 
 ## Com funciona
 
-Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb extensió afectada (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de tamany.
+Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb les extensions indicades (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de tamany.
 
 Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el _tracking_ pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
