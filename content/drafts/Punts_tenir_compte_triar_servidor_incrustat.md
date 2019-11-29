@@ -8,13 +8,9 @@ sections    = "Canigó"
 
 ## Introducció
 
-Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot.
+Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot. Això permet desplegar una aplicació Canigó amb el seu propi servidor, sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o _cloud_.
 
-Això permet desplegar una aplicació Canigó amb el seu propi servidor. Sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o _cloud_.
-
-Per a aplicacions que utilitzin l'_stack_ de _servlets_, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow.
-
-Per a aplicacions que utilitzin l'_stack_ reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty.
+Per a aplicacions que utilitzin l'_stack_ de _servlets_, Spring Boot inclou els servidors incrustats: Tomcat, Jetty i Undertow i per a aplicacions que utilitzin l'_stack_ reactiu, Spring Boot inclou els servidors incrustats: Tomcat, Jetty, Undertow i Reactor Netty.
 
 ![Spring MVC Webflux Venn](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png)
 
@@ -32,13 +28,7 @@ Aquestes versions poden variar segons la versió de Spring Boot utilitzada.
 
 ## Punts a tenir en compte
 
-Anem a llistar els diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó.
-
-### Funcionalitats a utilitzar
-
-El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació, ja que no tots els servidors d'aplicacions implementen tot els _stack_ de Java EE 8 o Java SE 8.
-
-Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor d'aplicacions per determinar si aquesta està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
+El més important a l'hora de seleccionar un servidor d'aplicacions és tenir clar quines funcionalitats i necessitats té l'aplicació, ja que no tots els servidors d'aplicacions implementen tot els _stack_ de Java EE 8 o Java SE 8.  Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor d'aplicacions per determinar si aquesta està coberta pel servidor d'aplicacions incrustat que es vol utilitzar.
 
 La documentació dels servidors d'aplicacions està a:
 
@@ -54,7 +44,9 @@ A part de l'_stack_ que implementa cada servidor d'aplicacions, un altre punt im
 
 Per últim, la principal diferència tecnològica entre un servidor i un altre que implementin el mateix _stack_ tecnològic que utilitzarem a una aplicació és la seva lleugeresa, consum de memòria i/o escalabilitat.
 
-A continuació els detallem aquests punts en cadascun dels servidors d'aplicacions.
+## Servidors d'aplicacions per una aplicació Canigó 
+
+A continuació detallem cadascun dels possibles servidors incrustats per una aplicació Canigó, segons les funcionalitats a tenir en compte, comentades en l'apartat anterior:
 
 ### Tomcat
 
