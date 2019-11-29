@@ -7,15 +7,9 @@ description = "S'ha publicat una nova versió del archetype i del plugin del ecl
 key         = "NOVEMBRE2019"
 +++
 
-Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat l'arquetipus (_archetype_) i el _plugin_ de l'Eclipse de Canigó per generar projectes amb Canigó 3.4.1.
-
-Aquesta actualització s'emmarca dins de l'abast de la **versió 3.4.1 del framework Canigó**. 
-
-Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
-
 ## Introducció
 
-Dins dels lliurables de Canigó hi consten l'arquetipus i el _plugin_ de l'Eclipse.
+Dins dels lliurables de Canigó hi consten l'arquetipus (_archetype_) i el _plugin_ de l'Eclipse. Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacions les màximes eines útils per a la creació de projectes amb Canigó, s'ha actualitzat ambdós lliurables per generar projectes amb Canigó **versió 3.4.1**. Podeu consultar l'abast complet de la nova versió del framework a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
 
 L'arquetipus és una eina Maven per a la creació de projectes seguint una plantilla. Així executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
 
