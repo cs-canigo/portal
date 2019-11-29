@@ -9,9 +9,9 @@ key         = "OCTUBRE2019"
 
 ## Introducció
 
-IronPort és el servidor SMTP corporatiu per fer ús del servei de correu corporatiu de la Generalitat des d'una aplicació de la Generalitat. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquest servidor de SMTP IronPort per una aplicació Canigó.
+IronPort és el servidor SMTP corporatiu per fer ús del servei de correu corporatiu de la Generalitat. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquest servidor de SMTP per una aplicació Canigó.
 
-El servei IronPort de Cisco proporciona un sistema de cues i un sistema de protecció contra SPAM i virus.
+El servei utilitza els equips IronPort de Cisco, que a banda de la gestió de les cues de correu, també inclou un sistema de protecció contra SPAM i virus.
 
 ![IronPort](/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
 
@@ -33,7 +33,7 @@ Des de la versió 1.3.0 es proporciona la interfície *cat.gencat.ctti.canigo.ar
 
 ## Configuració per utilitzar IronPort
 
-Per a utilitzar el servidor SMPT IronPort és necessari refefinir el "mailSender":
+Per a utilitzar el servidor SMPT IronPort és necessari redefinir el "mailSender":
  
  ```xml
  <bean id="mailSender" parent="mailSenderParent" class="org.springframework.mail.javamail.JavaMailSenderImpl">
