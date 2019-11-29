@@ -17,9 +17,7 @@ El _plugin_ de l'Eclipse és un connector desenvolupat per l'IDE Eclipse per afe
 
 ## Novetats archetype
 
-S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1.  
-
-La versió 3.4.1 de Canigó incorpora les següents novetats respecte la versió 3.4.0:
+S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar projectes amb Canigó 3.4.1. Aquesta versió de Canigó incorpora les següents novetats respecte la versió 3.4.0:
 
 - **Dependency Check**: Actualització llibreries depenent dels mòduls passant el dependency check.
 - **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a l'última versió disponible.
@@ -33,20 +31,12 @@ La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de 
 
 Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del _plugin_ Canigó per a Eclipse.
 
-## Documentació plugin eclipse
+## Documentació addicional
 
-Està disponible la documentació dels lliurables de Canigó 3.4 a:
+Està disponible la documentació dels lliurables de Canigó 3.4 a: [Binaris de Canigó](/canigo/download/)
 
-[Binaris de Canigó](/canigo/download/)
+La documentació del _plugin_ de l'Eclipse està disponible: [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 
-La documentació del _plugin_ de l'Eclipse està disponible:
+Detall dels canvis de Canigó 3.4.0: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
 
-[Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
-
-Detall dels canvis de Canigó 3.4.0:
-
-[Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
-
-La guia per a passar manualment projectes de Canigó 3.2 a Canigó 3.4 està a:
-
-[Actualitzar aplicació de Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
+La guia per a passar manualment projectes de Canigó 3.2 a Canigó 3.4 es troba en el següent enllaç: [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
