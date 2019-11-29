@@ -28,7 +28,7 @@ Les versions actuals que incorpora Spring Boot són:
 
 Aquestes versions poden variar segons la versió de Spring Boot utilitzada.
 
-## Servidors d'aplicacions
+## Punts a tenir en compte
 
 El més important a l'hora de seleccionar un servidor d'aplicacions incrustat és tenir clar quines funcionalitats i necessitats té l'aplicació, ja que no tots els servidors d'aplicacions implementen tot els _stack_ de Java EE 8 o Java SE 8.  Si una aplicació té alguna necessitat especial, cal revisar la documentació del servidor per determinar si aquesta està coberta pel que es vol utilitzar, en els següents enllaços trobarà aquesta informació:
 
