@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-27"
+date        = "2019-09-29"
 title       = "Certificació Canigó 3.4.1 amb servidors full de ruta"
 description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals"
 sections    = "Canigó"
@@ -35,25 +35,19 @@ Per a la certificació dels diferents servidors d'aplicacions s'han modificat le
 
 ### Tomcat
 
-Per a la certificació s'ha utilitzat la versió 9.0.24.
-
-No s'ha requerit cap altra modificació.
+Per a la certificació s'ha utilitzat la versió 9.0.24 i no s'ha requerit cap altra modificació.
 
 ### Weblogic
 
-Per a la certificació s'ha utilitzat la versió 12.2.1.3. 
-
-No s'ha requerit cap altra modificació.
+Per a la certificació s'ha utilitzat la versió 12.2.1.3 i no s'ha requerit cap altra modificació.
 
 ### WebSphere
 
-Per a la certificació s'ha utilitzat la versió 9.0.0.10. 
+Per a la certificació s'ha utilitzat la versió 9.0.0.10 i ha estat necessari modificar el "Class loading and update detection" de l'aplicació en el WebSphere amb les opcions:
 
-Ha estat necessari modificar el "Class loading and update detection" de l'aplicació en el WebSphere amb les opcions:
+- Select Classes loaded with local class loader first (parent last).
 
-- Select Classes loaded with local class loader first (parent last) 
-
-- Single class loader for application
+- Single class loader for application.
 
 Seguint la secció "Configuració a WebSphere" del how to [Desplegar una aplicació Canigó 3.2 a WebSphere 8.5.5](/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere/#configuració-a-websphere)
 
@@ -61,6 +55,4 @@ Seguint la secció "Configuració a WebSphere" del how to [Desplegar una aplicac
 
 ### JBoss
 
-Per a la certificació s'ha utilitzat la versió EAP 7.1.
-
-Per un _bug_ en la versió del JBoss utilitzada, resolt a la versió JBoss EAP 7.9, https://issues.jboss.org/browse/JBPM-7454, ha estat necessari modificar l'arxiu /src/main/resources/config/persistence/persistence.xml amb el llistat d'entitats del nostre model.
+Per a la certificació s'ha utilitzat la versió EAP 7.1. Per un _bug_ en la versió del JBoss utilitzada, resolt a la versió JBoss EAP 7.9, https://issues.jboss.org/browse/JBPM-7454, ha estat necessari modificar l'arxiu /src/main/resources/config/persistence/persistence.xml amb el llistat d'entitats del nostre model.
