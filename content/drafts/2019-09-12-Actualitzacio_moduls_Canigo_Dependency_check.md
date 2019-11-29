@@ -41,18 +41,11 @@ Una vegada actualitzades les llibreries l'informe indica que no ha trobat vulner
 
 ![Exemple després actualització informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report-after.png)
 
-Podeu trobar més informació sobre el Dependency Check a:
+## Documentació addicional
 
-https://www.owasp.org/index.php/OWASP_Dependency_Check
+Podeu trobar més informació sobre el Dependency Check a: https://www.owasp.org/index.php/OWASP_Dependency_Check.
 
-## How to configurar Dependency Check
+Per a més informació sobre com configurar el Dependency Chek en aplicacions Canigó podeu consultar el How to: [Comprovació automàtica de dependències vulnerables per aplicacions Canigó](/drafts/2019-08-13-Howto-Dependency-check/)
 
-Per a més informació sobre com configurar el Dependency Chek en aplicacions Canigó podeu consultar:
-
-[Comprovació automàtica de dependències vulnerables per aplicacions Canigó](/drafts/2019-08-13-Howto-Dependency-check/)
-
-## Matriu de versions dels mòduls
-
-Teniu disponible la matriu de versions actualitzada de cada mòduls de Canigó de la versió 3.4 a:
-
+Al següent enllaç, hi trobareu disponible la matriu de versions actualitzada de cada mòdul de Canigó de la versió 3.4: 
 [Matriu de Compatibilitat Canigo 3.4](/canigo-download-related/matrius-compatibilitats/)
