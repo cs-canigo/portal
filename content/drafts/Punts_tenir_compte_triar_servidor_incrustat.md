@@ -11,6 +11,7 @@ sections    = "Canigó"
 Canigó està basat en Spring i Spring Boot, per tant, en una aplicació Canigó es poden utilitzar les funcionalitats de servidors incrustats que porta Spring Boot. Això permet desplegar una aplicació Canigó amb el seu propi servidor, sent una aplicació autocontinguda especialment útil en entorns de desenvolupament o _cloud_.
 
 En funció de l'_stack_ que utilitzin les aplicacions, Spring Boot inclou uns o altres servidors incrustats, per:
+
 - _Stack_ de _servlets_: Tomcat, Jetty i Undertow.
 - _Stack_ reactiu: Tomcat, Jetty, Undertow i Reactor Netty.
 
