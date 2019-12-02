@@ -47,7 +47,7 @@ El problema radica en la forma de llistar i retornar un Bean de Spring. A la ver
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-El inconvenient s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché. Aquest _bug_ va ser resolt a la versió 3.1.2 de Spring afegint una caché. Es pot consultar el detall de la resolució al següent commit de Spring:
+El _bug_ s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché. Aquest problema va ser resolt a la versió 3.1.2 de Spring afegint una caché. Es pot consultar el detall de la resolució al següent commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
