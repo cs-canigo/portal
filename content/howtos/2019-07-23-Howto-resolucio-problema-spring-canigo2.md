@@ -1,26 +1,16 @@
 +++
-date        = "2019-07-23"
+date        = "2019-12-02"
 title       = "Resolució problema optimització Spring a Canigó 2"
 description = "Com resoldre el problema conegut d'optimització d'obtenció de Beans de Spring a Canigó 2"
 section     = "howtos"
 categories  = ["canigo"]
 +++
 
-### A qui va dirigit
-
-Aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin Canigó 2 i/o Spring anterior a la versió 3.1.2.
-
-<br>
-
 ### Introducció al problema
 
-El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven Canigó 2.
+El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven la versió 2 de Canigó, per tant, aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin la versió 2 de Canigó i/o Spring anterior a la versió 3.1.2. 
 
-El problema s'originava si hi havia una alta utilització del component **net.gencat.ctti.canigo.services.web.taglib.util.TagUtil** de la llibreria **canigo-services-web** de Canigó 2.
-
-El problema generava un bloqueig als threads del servidor d'aplicacions i acabava desestabilitzant el sistema.
-
-Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
+El problema de rendiment s'originava si hi havia una alta utilització del component **net.gencat.ctti.canigo.services.web.taglib.util.TagUtil** de la llibreria **canigo-services-web** de Canigó 2 i més concretament, el que succeïa és que es generava un bloqueig als _threads_ del servidor d'aplicacions el qual acabava desestabilitzant el sistema. Un exemple de traça del servidor d'aplicacions amb el _thread_ bloquejat:
 
 ```
 
@@ -53,15 +43,11 @@ Un exemple de traça del servidor d'aplicacions amb el thread bloquejat:
 
 ### Detall del problema
 
-El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió 2.0.5 de Spring que s'utilitza a Canigó 2, té el següent bug registrat:
+El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió 2.0.5 de Spring que s'utilitza a Canigó 2, té el següent _bug_ registrat:
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-En el bug s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché.
-
-El bug va ser resolt a la versió 3.1.2 de Spring afegint una caché.
-
-Es pot consultar el detall de la resolució al següent commit de Spring:
+El inconvenient s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché. Aquest _bug_ va ser resolt a la versió 3.1.2 de Spring afegint una caché. Es pot consultar el detall de la resolució al següent commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
@@ -69,21 +55,15 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 ### Solució al problema
 
-Hi ha diverses formes de resoldre el problema: optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no es soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring.
-
-Des de CS Canigó recomanem aplicar la solució d'afegir una caché a nivell de Spring.
+Hi ha diverses formes de resoldre el problema: Optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring. En els següents apartats es detalla cadascuna d'aquestes solucions, des de CS Canigó recomanem aplicar la d’afegir una caché a nivell de Spring.
 
 <br></br>
 
 #### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
 
-Amb aquesta solució es mitiga el problema, no es resol, ja que s'optimitza la forma en que es demanen els beans a Spring des de Canigó 2.
+Amb aquesta solució es mitiga el problema però no es resol, ja que únicament s'optimitza la forma en què es demanen els _beans_ a Spring des de Canigó 2, per tant, des de CS Canigó **no es recomana la utilització d'aquesta solució**.
 
-Des de CS Canigó **no es recomana la utilització d'aquesta solució**.
-
-Canigó 2, per obtenir els beans de Spring, fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeansOfType**
-
-Així, per exemple, per obtenir el servei per escriure a log des del component **TagUtil**, s'obté a partir de la següent crida:
+Canigó 2, per obtenir els _beans_ de Spring, fa servir el component **net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils** mètode **getBeanOfType**. Així, per exemple, per obtenir el servei per escriure a log des del component **TagUtil**, s'obté a partir de la següent crida:
 
 ```
 
@@ -93,9 +73,7 @@ LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanO
 
 ```
 
-El component **TagUtil** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el Bean *LoggingService*.
-
-Per exemple:
+El component **TagUtil** no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el _bean_ *LoggingService*. Exemple:
 ```
 
       } else if (!(aTag instanceof OptionsFieldTag)) {
@@ -124,11 +102,7 @@ Per exemple:
 
 ```
 
-Aquesta forma no òptima d'obtenir el Bean fa que eflueixi ràpidament el problema d'optimització del retorn de Beans de Spring.
-
-Per a resoldre aquest problema es pot modificar el component de Canigó 2 reescrivint la forma com s'obté el Bean de Spring, guardant el Beans a una variable global.
-
-Així per exemple a **Tagutil** tindríem:
+Aquesta manera no òptima d'obtenir el _bean_ fa que aflueixi ràpidament el problema d'optimització del retorn de _beans_ de Spring, per a resoldre'l, es pot modificar el component de Canigó 2 reescrivint el com s'obté el _bean_ de Spring, guardant el Beans a una variable global. Així per exemple a **Tagutil** tindríem:
 
 ```
 
@@ -141,7 +115,7 @@ public class TagUtil {
 
 ```
 
-I abans de la utilització del Bean LoggingService consultaríem si aquest ja ha estat carregat anteriorment o no, per exemple:
+I abans de la utilització del Bean LoggingService consultaríem si aquest ja ha estat carregat anteriorment o no, per tal de només demanar a Spring que ens retornés el Bean una vegada. Per exemple:
 
 ```
 
@@ -158,9 +132,7 @@ if (logService == null)
 
 ```
 
-D'aquesta manera només li demanaríem a Spring que ens retornés el Bean una vegada.
-
-S'ha de tenir present que si es vol aplicar aquesta solució s'hauran de modificar tots els components que utilitzin **WebApplicationContextUtils** mètode **getBeansOfType**:
+S'ha de tenir present que si es vol aplicar aquesta solució s'haurà de modificar tots els components que utilitzin **WebApplicationContextUtils** mètode **getBeansOfType**:
 
 - Filtre de Loggin
 - Filtre de Acegi
@@ -170,11 +142,9 @@ S'ha de tenir present que si es vol aplicar aquesta solució s'hauran de modific
 
 #### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
-A Canigó 2 la forma d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**.
+A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**. Per no haver de tocar a tots els llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component. 
 
-Per no haver de tocar als n llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component.
-
-Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el bug de Spring.
+Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el _bug_ de Spring.
 
 https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
 
@@ -244,15 +214,11 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 
 #### Solució 3: afegir una caché a nivell de Spring
 
-Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, es necessari afegir una caché a nivell global .
-
-La solució és homologa a la aportada al blog:
+Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal necessari afegir una caché a nivell global. Aquesta solució és homologa a la aportada al blog:
 
 http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/
 
-La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*.
-
-La implementació amb caché de **DefaultListableBeanFactory** podria ser:
+La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*. Aquesta implementació podria ser:
 
 ```java
 
@@ -315,7 +281,7 @@ public class CachingWebApplicationContext extends XmlWebApplicationContext {
 
 ```
 
-Registrarem aquesta factory al web.xml
+Registrarem aquesta factoria al web.xml
 
 ```xml
     <context-param>
@@ -329,7 +295,7 @@ Registrarem aquesta factory al web.xml
 
 ### Conclusió
 
-Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per si l'aplicació està afectada per aquest bug i quina solució caldria aplicar.
+Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per determinar si està afectada per aquest problema i decidir quina solució caldria aplicar. 
 
 **La solució que es recomana des de CS Canigó és afegir una caché a nivell de Spring**.
 
