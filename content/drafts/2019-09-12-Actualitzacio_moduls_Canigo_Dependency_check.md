@@ -15,13 +15,9 @@ S'ha alliberat la primera part de la **versió 3.4.1 del framework Canigó**, as
 
 ## Dependency Check
 
-El Dependency Check és una utilitat d’anàlisi de la composició de programari que identifica les dependències del projecte i comprova si hi ha alguna vulnerabilitat coneguda i divulgada públicament.
+El Dependency Check és una utilitat d’anàlisi de la composició de programari que identifica les dependències del projecte i comprova si hi ha alguna vulnerabilitat coneguda i divulgada públicament. El motor principal, conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
 
-El motor principal conté una sèrie d'analitzadors que inspeccionen les dependències del projecte i recopilen informació sobre les dependències. La prova s'utilitza llavors per identificar el [Common Platform Enumeration (CPE)](https://nvd.nist.gov/products/cpe) per a la dependència donada. Si s'identifica un CPE, es mostra una llista de les entrades associades de [Common Vulnerability and Exposure (CVE)](https://cve.mitre.org/) en un informe.
-
-Per la versió 3.4.1 s'ha configurat el _goal_ de Maven en el mòdul _root_ de Canigó, així tots els mòduls de Canigó generen l'informe de les seves vulnerabilitats.
-
-Un exemple d'informe amb vulnerabilitats podria ser:
+Per la versió 3.4.1 de Canigó, s'ha configurat el _goal_ de Maven en el mòdul _root_ de Canigó, així tots els mòduls generen l'informe de les seves vulnerabilitats. Un exemple d'informe amb vulnerabilitats podria ser:
 
 ![Exemple informe vulnerabilitats](/images/news/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check_vulnerabilities-report.png)
 
