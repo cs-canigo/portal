@@ -142,11 +142,9 @@ S'ha de tenir present que si es vol aplicar aquesta solució s'haurà de modific
 
 #### Solució 2: Afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
-A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**. Per no haver de tocar a tots els llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component. 
+A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**, per tant, per no haver de tocar a tots els llocs on s'obté un Bean de Spring, a Canigó es pot afegir una caché a aquest component. 
 
-Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el _bug_ de Spring.
-
-https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
+Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el _bug_ de Spring. Es pot consultar aquesta solució en el següent enllaç: https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
 
 Així, podríem tenir el component **WebApplicationContextUtils** amb la caché de la següent manera:
 
@@ -214,7 +212,7 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 
 #### Solució 3: Afegir una caché a nivell de Spring
 
-Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal necessari afegir una caché a nivell global. Aquesta solució és homologa a la aportada al blog:
+Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal afegir una caché a nivell global. Aquesta solució és homologa a la aportada al blog:
 
 http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/
 
