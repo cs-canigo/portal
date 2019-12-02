@@ -43,11 +43,11 @@ El problema de rendiment s'originava si hi havia una alta utilització del compo
 
 ### Detall del problema
 
-El problema radica en la forma de llistar i retornar un Bean de Spring. A la versió 2.0.5 de Spring que s'utilitza a Canigó 2, té el següent _bug_ registrat:
+El _bug_ radica en la forma de llistar i retornar un Bean de Spring. La versió 2.0.5 de Spring que s'utilitza a Canigó 2, el te registrat a la següent _issue_:
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-El _bug_ s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché. Aquest problema va ser resolt a la versió 3.1.2 de Spring afegint una caché. Es pot consultar el detall de la resolució al següent commit de Spring:
+El problema s'apuntava que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché i per tant, aquest inconvenient va ser resolt afegint una caché a la versió 3.1.2 de Spring. Es pot consultar el detall de la resolució al següent Commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
@@ -55,11 +55,11 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 ### Solució al problema
 
-Hi ha diverses formes de resoldre el problema: Optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring. En els següents apartats es detalla cadascuna d'aquestes solucions, des de CS Canigó recomanem aplicar la d’afegir una caché a nivell de Spring.
+Hi ha diverses formes de resoldre el problema: Optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring. En els següents apartats es detalla cadascuna d'aquestes solucions, tot i que des de des de CS Canigó recomanem aplicar la d’afegir una caché a nivell de Spring.
 
 <br></br>
 
-#### Solució 1: optimitzar l'obtenció dels beans de Spring als components de Canigó
+#### Solució 1: Optimitzar l'obtenció dels beans de Spring als components de Canigó
 
 Amb aquesta solució es mitiga el problema però no es resol, ja que únicament s'optimitza la forma en què es demanen els _beans_ a Spring des de Canigó 2, per tant, des de CS Canigó **no es recomana la utilització d'aquesta solució**.
 
@@ -140,7 +140,7 @@ S'ha de tenir present que si es vol aplicar aquesta solució s'haurà de modific
 
 <br>
 
-#### Solució 2: afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
+#### Solució 2: Afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
 
 A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**. Per no haver de tocar a tots els llocs on s'obté un Bean de Spring a Canigó es pot afegir una caché a aquest component. 
 
@@ -212,7 +212,7 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 ```
 <br>
 
-#### Solució 3: afegir una caché a nivell de Spring
+#### Solució 3: Afegir una caché a nivell de Spring
 
 Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal necessari afegir una caché a nivell global. Aquesta solució és homologa a la aportada al blog:
 
