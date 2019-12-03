@@ -33,9 +33,9 @@ Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfi
 
 #### Descàrrega de directoris d'un projecte
 
-A vegades tenim la necessitat de descarregar una part d'un projecte i fins ara, per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
+A vegades tenim la necessitat de descarregar una part d'un projecte i fins ara, per obtenir-ne una part s'havia de descarregar tot el projecte, realitzant per tant, una descàrrega innecessària de components.
 
-A la versió 11.11 del Gitlab es proporciona la possibilitat de descarregar un directori d'un projecte. Si naveguem dins del projecte i cliquem a la icona de descàrrega del projecte ens permet:
+A la versió 11.11 del Gitlab es proporciona la possibilitat de descarregar un directori d'un projecte. Si naveguem dins del projecte i cliquem a la icona de descàrrega ens permet:
 
 - Descarregar tot el projecte (com fins ara).
 - Descarregar només aquell directori.
