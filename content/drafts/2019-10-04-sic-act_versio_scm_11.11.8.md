@@ -19,14 +19,18 @@ Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions 
 
 No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers _frontend_ i _backend_ o en equips on els enginyers treballen conjuntament com en Programació extrema.
 
-A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. Per a més informació: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
+A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
+
+Per a més informació, consultar el següent enllaç: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
 <br><br>
 
 #### Serialització dels gràfics de _commits_
 
 Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_. Aquestes operacions són més lentes a mesura que creix el nombre de _commits_ perquè aquestes consultes requereixen que cada objecte es carregui des del disc. 
 
-A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. Per a més informació: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
+A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
+
+Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
 <br><br>
 
 #### Descàrrega de directoris d'un projecte
@@ -38,7 +42,7 @@ A la versió 11.11 del Gitlab es proporciona la possibilitat de descarregar un d
 - Descarregar tot el projecte (com fins ara).
 - Descarregar només aquell directori.
 
-Per a més informació: [Descàrrega de directoris d'un projecte](https://docs.gitlab.com/ee/user/project/repository/#download-source-code)
+Per a més informació, consultar el següent enllaç: [Descàrrega de directoris d'un projecte](https://docs.gitlab.com/ee/user/project/repository/#download-source-code)
 
 <br>
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
