@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-17"
+date        = "2019-12-03"
 title       = "Actualització mòdul Seguretat Canigó"
 description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó per obtenir els rols de l’usuari a través de GICAR (autorització)"
 #sections    = ["Notícies", "home"]
@@ -7,43 +7,25 @@ description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó
 #key         = "NOVEMBRE2019"
 +++
 
-Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha allibrerat una nova versió del mòdul de Seguretat de Canigó consistent en incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització)
-
-Amb aquesta actualització s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR
-
-Podeu consultar l'abast complet de la versió 3.4.2 a:
-
-[Abast Canigó 3.4.2](https://cstd.ctti.gencat.cat/jiracstd/issues/?jql=project%20%3D%20CAN%20AND%20fixVersion%20%3D%203.4.2)
+Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una nova versió del mòdul de Seguretat la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització). Podeu consultar l'abast complet d'aquesta versió les [Release Notes, apartat Canigó 3.4.2](/drafts/release-notes-canigo-34).
 
 ## Introducció
 
-GICAR és l’eina amb que s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació.
+[GICAR](/gicar/descripcio/) és l’eina amb què s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació, aquesta eina es fonamenta bàsicament en dos objectius principals: 
 
-La plataforma GICAR es fonamenta bàsicament en dos objectius principals: 
-
-- Facilitar la gestió de les identitats (persones) de treballen o col•laboren amb la Generalitat de Catalunya (funcionaris, interins, empreses públiques, externs, etc). 
+- Facilitar la gestió de les identitats (persones) que treballen o col•laboren amb la Generalitat de Catalunya (funcionaris, interins, empreses públiques, externs, etc). 
 
 - Facilitar la gestió i el control de l’accés als recursos per part de les identitats
 
-Per a més informació podeu consultar la [Descripció servei](/gicar/descripcio/) de Gicar.
+Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions. En aquest mòdul, com a framework base s'utilitza Spring Security. Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (desfasat) i Gicar.
 
-Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó.
-
-Canigó utilitza Spring Security com a framework base per la seguretat d'una aplicació.
-
-Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (deprecat) i Gicar.
-
-Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO*.
-
-Canigó proporciona una implementació base de *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* en el component *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*, aquest necessita que cada aplicació tingui a la seva base de dades les taules necessaries per retornar el llistat de rols d'un usuari.
-
-Per més informació de la definició de les taules necessaries per retornar el llistat de rols d'un usuari, podeu consultar la documentació de Spring de [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#appendix-schema)
+Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i Canigó, proporciona una implementació base d'aquest en el component *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*, aquest component necessita que cada aplicació tingui a la seva base de dades les taules necessaries per retornar el llistat de rols d'un usuari. Per més informació de la definició d'aquestes taules, podeu consultar la documentació de Spring de [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#appendix-schema).
 
 ## Novetats
 
-En les últimes novetats dels serveis de Gicar, proporciona la centralització de la gestió dels rols dels usuaris, estalviant a les aplicacions haver de gestionar en la seva base de dades les taules necessaries per retornar el llistar de rols d'un usuari.
+En les últimes novetats dels serveis de Gicar, proporciona la centralització de la gestió dels rols dels usuaris, estalviant a les aplicacions haver de gestionar en la seva base de dades les taules necessàries per retornar el llistat de rols d'un usuari. 
 
-Les principals avantatges d'aquesta solució són:
+Els  principals avantatges d'aquesta solució són:
 
 1. Augmentar l’estandardització de com es construeixen les aplicacions.
 
