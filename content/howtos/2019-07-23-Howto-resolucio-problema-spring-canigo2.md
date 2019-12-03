@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-02"
+date        = "2019-12-03"
 title       = "Resolució problema optimització Spring a Canigó 2"
 description = "Com resoldre el problema conegut d'optimització d'obtenció de Beans de Spring a Canigó 2"
 section     = "howtos"
@@ -47,7 +47,7 @@ El _bug_ radica en la forma de llistar i retornar un Bean de Spring. La versió 
 
 https://github.com/spring-projects/spring-framework/issues/14083
 
-El problema s'apuntava a que la forma com Spring retornava un Bean no era òptim i era necessari incorporar una caché i per tant, va ser resolt afegint una caché a la versió 3.1.2 de Spring. Es pot consultar el detall de la resolució al següent Commit de Spring:
+El problema s'apuntava a la forma com Spring retornava un Bean no era òptim i era necessari incorporar una cau (_caché_) i així va ser resolt a partir de la versió 3.1.2 de Spring. Es pot consultar el detall de la resolució al següent Commit de Spring:
 
 https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32
 
@@ -55,7 +55,7 @@ https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812d
 
 ### Solució al problema
 
-Hi ha diverses formes de resoldre el problema: Optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans o afegir una caché a nivell de Spring. En els següents apartats es detalla cadascuna d'aquestes solucions, tot i això, des de des de CS Canigó recomanem aplicar la d’afegir una caché a nivell de Spring.
+Hi ha diverses formes de resoldre el problema: Optimitzar l'obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una cau al mètode centralitzat de Canigó d'obtenció de Beans o afegir-la a nivell de Spring. En els següents apartats es detalla cadascuna d'aquestes solucions, tot i això, des de des de CS Canigó recomanem aplicar la d’afegir una cau a nivell de Spring.
 
 <br></br>
 
@@ -140,13 +140,13 @@ S'ha de tenir present que si es vol aplicar aquesta solució s'haurà de modific
 
 <br>
 
-#### Solució 2: Afegir una caché al mètode centralitzat de Canigó d'obtenció de Beans
+#### Solució 2: Afegir una cau al mètode centralitzat de Canigó d'obtenció de Beans
 
-A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**, per tant, per no haver de tocar a tots els llocs on s'obté un Bean de Spring, es pot afegir una caché a aquest component. 
+A Canigó 2 la manera d'obtenció dels Beans de Spring estava centralitzat al component **WebApplicationContextUtils** mètode **getBeansOfType**, per tant, per no haver de tocar a tots els llocs on s'obté un Bean de Spring, es pot afegir una cau a aquest component. 
 
-Afegirem una caché dels noms dels beans de Spring de la mateixa manera com van resoldre el _bug_ de Spring. Es pot consultar aquesta solució en el següent enllaç: https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
+Afegirem una cau dels noms dels beans de Spring de la mateixa manera com van resoldre el _bug_ de Spring. Es pot consultar aquesta solució en el següent enllaç: https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java
 
-Així, podríem tenir el component **WebApplicationContextUtils** amb la caché de la següent manera:
+Així, podríem tenir el component **WebApplicationContextUtils** amb la cau de la següent manera:
 
 ```java
 
@@ -210,13 +210,13 @@ public class WebApplicationContextUtils extends org.springframework.web.context.
 ```
 <br>
 
-#### Solució 3: Afegir una caché a nivell de Spring
+#### Solució 3: Afegir una cau a nivell de Spring
 
-Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal afegir una caché a nivell global. Aquesta solució és homologa a l'aportada al blog:
+Per a optimitzar l'obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal afegir una cau a nivell global. Aquesta solució és homologa a l'aportada al blog:
 
 http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/
 
-La solució consta d'una implementació de **DefaultListableBeanFactory** amb caché i instanciant-la en el *WebApplicationContext*. Aquesta implementació podria ser:
+La solució consta d'una implementació de **DefaultListableBeanFactory** amb cau i instanciant-la en el *WebApplicationContext*. Aquesta implementació podria ser:
 
 ```java
 
@@ -262,7 +262,7 @@ public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
 
 ```
 
-Creem una factoria que creï la nova implementació amb caché de **DefaultListableBeanFactory**:
+Creem una factoria que creï la nova implementació amb cau de **DefaultListableBeanFactory**:
 
 ```java
 
@@ -293,6 +293,6 @@ Registrarem aquesta factoria al web.xml
 
 ### Conclusió
 
-Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per determinar si està afectada per aquest problema i decidir quina solució caldria aplicar tot i que **la que es recomana des de CS Canigó és la Solució 3 - Afegir una caché a nivell de Spring**.
+Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per determinar si està afectada per aquest problema i decidir quina solució caldria aplicar tot i que **la que es recomana des de CS Canigó és la Solució 3 - Afegir una cau a nivell de Spring**.
 
 Si necessiteu més informació, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
