@@ -102,7 +102,7 @@ El component **TagUtil** no està correctament optimitzat i cada cop que vol esc
 
 ```
 
-Aquesta manera no òptima d'obtenir el _bean_ fa que aflueixi ràpidament el problema d'optimització del retorn de _beans_ de Spring, per a resoldre'l, es pot modificar el component de Canigó 2 reescrivint el com s'obté el _bean_ de Spring, guardant el Beans a una variable global. Així per exemple a **Tagutil** tindríem:
+Aquesta manera no òptima d'obtenir el _bean_ fa que aflueixi ràpidament el problema d'optimització del retorn de _beans_ de Spring, per a resoldre'l, es pot modificar el component de Canigó 2 reescrivint el com s'obté el _bean_ de Spring, guardant-lo en una variable global. Així per exemple a **Tagutil** tindríem:
 
 ```
 
