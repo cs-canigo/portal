@@ -8,7 +8,7 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 
 ## Actualització del servei repositori d'artefactes
 
-Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**, en els següents apartats, es detallen les principals novetats i millores que s'incorporen amb aquesta versió.
+Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**, en els següents apartats, es detallen les principals novetats i millores que s'incorporen amb aquesta versió així com també els problemes resolts.
 
 ### Novetats
 
