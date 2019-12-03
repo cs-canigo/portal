@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-04"
+date        = "2019-11-29"
 title       = "SIC. Actualització de versió Nexus"
 description = "Durant el mes d'Octubre s'han dut a terme actualització del repositori d'artefactes (Nexus)"
 #categories  = ["SIC"]
@@ -8,27 +8,23 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 
 ## Actualització del servei repositori d'artefactes
 
-Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**.
-<br>
-Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
-<br><br>
-A continuació es detallen les principals novetats i millores d'aquesta actualització.
+Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**, en els següents apartats, es detallen les principals novetats i millores que s'incorporen amb aquesta versió.
 
 ### Novetats
 
 #### Endpoint de salut per node
 
-Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del nexus. D'aquesta forma es permet consultar quan un node està disponible.
+Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del Nexus, d'aquesta manera es permet consultar quan un node està disponible.
 
 Per a més informació: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949)
-<br><br>
+
 
 #### Creació de fitxer temporal a la càrrega d'artefactes per la interfície d'usuari
 
-Si s'utilitza la interfície d'usuari per a pujar un artefacte aquest es crearà físicament de forma temporal a java.io.tmpdir.
+Si s'utilitza la interfície d'usuari per a pujar un artefacte, aquest es crearà físicament de forma temporal a java.io.tmpdir.
 
 Per a més informació: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277)
-<br><br>
+
 
 #### Verificat amb OpenJDK 8
 
