@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-04"
+date        = "2019-11-29"
 title       = "SIC. Actualització de versió Gitlab"
 description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab)"
 #categories  = ["SIC"]
@@ -9,34 +9,36 @@ description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Ser
 ## Actualització del servei de custòdia de Codi
 
 Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de custòdia de Codi a la **versió 11.11.8 de Gitlab**.
-A patir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**.
-<br>
-Amb aquesta actualització es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible.
-Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
-<br><br>
-A continuació es detallen les principals novetats i millores d'aquesta actualització.
+A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**.
+
+Amb aquesta actualització es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible. Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
 
 ### Novetats
 
+A continuació es detallen les principals novetats i millores d'aquesta actualització.
+
 #### Assignacions múltiples per Merge Request
 
-No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers frontend i backend o en equips on els enginyers treballen sempre en parella com en Programació extrema.
-A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables.
+No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers _frontend_ i _backend_ o en equips on els enginyers treballen conjuntament com en Programació extrema.
+
+A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
 
 Per a més informació: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
 <br><br>
 
 #### Serialització dels gràfics de _commits_
 
-Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_. Aquestes operacions són més lentes a mesura que creix el nombre de _commits_ perquè aquestes consultes requereixen que cada objecte es carregui des del disc.
-A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_.
+Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_. Aquestes operacions són més lentes a mesura que creix el nombre de _commits_ perquè aquestes consultes requereixen que cada objecte es carregui des del disc. 
+
+A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
 
 Per a més informació: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
 <br><br>
 
 #### Descàrrega de directoris d'un projecte
 
-A vegades tenim la necessitat de descarregar una part d'un projecte. Fins ara, per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
+A vegades tenim la necessitat de descarregar una part d'un projecte i fins ara, per obtenir aquesta part del projecte s'havia de descarregar tot el projecte, realitzant una descàrrega innecessària de components.
+
 A la versió 11.11 del Gitlab es proporciona la possibilitat de descarregar un directori d'un projecte. Si naveguem dins del projecte i cliquem a la icona de descàrrega del projecte ens permet:
 - Descarregar tot el projecte (com fins ara).
 - Descarregar només aquell directori.
