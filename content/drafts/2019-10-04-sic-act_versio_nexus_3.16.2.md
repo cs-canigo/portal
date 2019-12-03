@@ -86,7 +86,8 @@ S'han corregit principalment els següents forats de seguretat:
 
 - [CVE-2018-5306](https://support.sonatype.com/hc/en-us/articles/360000134968?_ga=2.126472772.817663482.1570188895-1181263505.1548239726)
 
-<br><br>
+### Informació addicional
+
 Per a més informació de les funcionalitats que es proporcionen des de la versió 3.2.1 a la 3.16.2 podeu consultar els següents enllaços:
 
 - [Release notes del 2019](https://help.sonatype.com/repomanager3/release-notes/2019-release-notes)
