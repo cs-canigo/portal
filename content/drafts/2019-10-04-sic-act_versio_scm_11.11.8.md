@@ -57,7 +57,7 @@ A la versió 11.11 del Gitlab s'ha millorat el rendiment principalment en els se
 
 - [No crear una referència temporal si es comparen branques del mateix projecte](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/24038)
 
-## Informació addicional
+### Informació addicional
 
 Per a més informació sobre les funcionalitats que proporciona Gitlab a la versió 11.11 podeu consultar els següents enllaços:
 
