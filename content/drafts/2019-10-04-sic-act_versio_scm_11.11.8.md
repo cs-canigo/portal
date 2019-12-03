@@ -9,13 +9,11 @@ description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Ser
 ## Actualització del servei de custòdia de Codi
 
 Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de custòdia de Codi a la **versió 11.11.8 de Gitlab**.
-A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**.
+A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**. Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible.
 
-Amb aquesta actualització es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible. Recordem que dins de la planificació de CS Canigó es preveu l'**actualització tecnològica programada de forma trimestral i anual** per anar incorporant millores i noves funcionalitats.
+En els següents apartats, es detallen les principals novetats i millores d'aquesta actualització.
 
 ### Novetats
-
-A continuació es detallen les principals novetats i millores d'aquesta actualització.
 
 #### Assignacions múltiples per Merge Request
 
