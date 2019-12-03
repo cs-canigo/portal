@@ -15,7 +15,7 @@ Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una
 
 - Facilitar la gestió de les identitats (persones) que treballen o col·laboren amb la Generalitat de Catalunya (funcionaris, interins, empreses públiques, externs, etc.). 
 
-- Facilitar la gestió i el control de l’accés als recursos per part de les identitats
+- Facilitar la gestió i el control de l’accés als recursos per part de les identitats.
 
 Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions. En aquest mòdul, com a framework base s'utilitza Spring Security. Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (desfasat) i Gicar.
 
