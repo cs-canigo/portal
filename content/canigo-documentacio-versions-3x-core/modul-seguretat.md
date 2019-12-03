@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-21"
+date        = "2019-12-03"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
 sections    = "Canigó. Documentació versió 3.x"
@@ -32,16 +32,16 @@ Per tal d'instal·lar el mòdul de seguretat es pot incloure automàticament a t
 
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament i es compon de les següents parts:
 
-* Configuració de filtres web
-* Configuració de JWT (JSON Web Token)
-* Publicació Controladors de Seguretat
-* Configuració d'autenticació
-* Configuració d'autorització
-* Configuració de la font de dades de l'esquema de seguretat
+* Configuració de filtres web.
+* Configuració de JWT (JSON Web Token).
+* Publicació Controladors de Seguretat.
+* Configuració d'autenticació.
+* Configuració d'autorització.
+* Configuració de la font de dades de l'esquema de seguretat.
 
 #### Configuració de filtres web
 
-Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a fer-los servir definirem en el fitxer 'WEB-INF/web.xml el codi següent:
+Spring Security utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a utilitzar-los definirem en el fitxer 'WEB-INF/web.xml el codi següent:
 
 ```
 <filter>
@@ -58,17 +58,17 @@ Per a més informació consultar la pàgina [Spring Security Doc](http://docs.sp
 
 #### Configuració de JWT (JSON Web Token)
 
-La nova versió de Canigó permet treballar amb [JWT](https://jwt.io/). Per això s'ha fet servir la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un token que serà enviat pel client a la capçalera HTTP a cada petició.
+La nova versió de Canigó permet treballar amb [JWT](https://jwt.io/), per això s'ha utilitzat la llibreria [Java JWT](https://java.jsonwebtoken.io/). Aquesta llibreria permet autenticar l'usuari amb qualsevol dels mètodes descrits en el següent apartat "Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un _token_ que serà enviat pel client a la capçalera HTTP a cada petició.
 
 Per poder configurar JWT es necessita afegir al fitxer de propietats del Servei de Seguretat (security.properties) la següent configuració:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
-*.jwt.header                  | No       | Nom del header del token JWT		      | Authentication
-*.jwt.header.startToken       | No       | Inici del token JWT       		      | Bearer
-*.jwt.tokenResponseHeaderName | No       | Nom del header del token JWT        	      | jwtToken
-*.jwt.secret                  | No       | Password per generar el token JWT          | canigo
-*.jwt.expiration              | No       | Temps de vida del token JWT       	      | 3600
+*.jwt.header                  | No       | Nom del header del _token_ JWT		      | Authentication
+*.jwt.header.startToken       | No       | Inici del _token_ JWT       		      | Bearer
+*.jwt.tokenResponseHeaderName | No       | Nom del header del _token_ JWT        	      | jwtToken
+*.jwt.secret                  | No       | Password per generar el _token_ JWT          | canigo
+*.jwt.expiration              | No       | Temps de vida del _token_ JWT       	      | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication             	      | false
 
 Per provar l'autenticació per _token_ s'ha de cridar a "http:// < app > /api/auth" amb la capçalera GICAR, en cas d'autenticació per GICAR, o en el cos de la petició en format JSON en altres casos.
@@ -78,7 +78,7 @@ Per provar l'autenticació per _token_ s'ha de cridar a "http:// < app > /api/au
 	password  = secret
 } 
 ```
-Aquesta crida ens retornarà un _token_ vàlid. Per a les següents peticions s'ha d'enviar aquest token a la capçalera HTTP de la petició de la següent manera (configuració per defecte):
+Aquesta crida ens retornarà un _token_ vàlid. Per a les següents peticions s'ha d'enviar aquest _token_ a la capçalera HTTP de la petició de la següent manera (configuració per defecte):
 
 Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
 
@@ -86,9 +86,7 @@ Més endavant es mostra un exemple de configuració a Canigó de JWT + GICAR.
 
 #### Publicació Controladors de Seguretat
 
-Per defecte el mòdul de seguretat publica les api /auth i /login.
-
-En cas de no voler publicar-les a la nostra aplicació s'hauria de condicionar la càrrega de Spring Boot de la següent manera:
+Per defecte el mòdul de seguretat publica les api /auth i /login i en cas de no voler publicar-les a la nostra aplicació, s'hauria de condicionar la càrrega de Spring Boot de la següent manera:
 
 Al fitxer de configuració de l'aplicació (AppConfig.java) afegir l'anotació @PropertySource al fitxer boot.properties que s'ha de crear:
 ```
@@ -108,18 +106,18 @@ Crear el fitxer /src/main/reources/config/props/boot.properties amb la propietat
 
 En la configuració de l'autenticació tindrem en consideració:
 
-* Seleccionar el tipus de font contra la qual es realitza l'autenticació (per arxiu de propietats, base de dades, Gicar, ...)
+* Seleccionar el tipus de font contra la qual es realitza l'autenticació (per arxiu de propietats, base de dades, Gicar, ...).
 * Configurar el formulari d'autenticació web i la seqüència d'accions per realitzar l'autenticació.
 
 Dins d'aquest mòdul trobem els següents proveïdors de seguretat:
 
-* Seguretat In-Memory
-* Seguretat Base de dades
-* Seguretat GICAR
+* Seguretat In-Memory.
+* Seguretat Base de dades.
+* Seguretat GICAR.
 
 Els diferents proveïdors comparteixen els següents arxius de configuració:
 
-* security.properties: propietats del servei de seguretat
+* security.properties: propietats del servei de seguretat.
 * app-custom-security.xml: arxiu XML amb la configuració de seguretat.
 * WebSecurityConfig.java: classe Java amb la configuració de seguretat Web.
 * security.users.properties: llistat en format pla dels usuaris/password/rols de l'aplicació per al proveïdor "InMemory".
@@ -133,12 +131,12 @@ La disposició dels arxius és la següent:
 
 #### Configuració de la font d'autenticació i autorització per base de dades
 
-Per a configurar la font d'autorització mitjançant base de dades és necessari:
+Per a configurar la font d'autorització mitjançant base de dades és necessari configurar:
 
-* Configurar l'arxiu de propietats security.properties.
-* Configurar el proveïdor de seguretat dins de la configuració de seguretat de Spring.
+* L'arxiu de propietats security.properties.
+* El proveïdor de seguretat dins de la configuració de seguretat de Spring.
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament.
+Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. 
 
 Les propietats de l'arxiu security.properties són les següents:
 
@@ -405,12 +403,14 @@ L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de 
 
 #### Configuració de la font d'autenticació i autorització per LDAP
 
-Per a configurar l'acces a LDAP (funcionalitat ja desfasadada) és necessari:
+Per a configurar l'acces a LDAP (funcionalitat ja desfasadada) és necessari configurar:
 
-* Configurar l'arxiu de propietats security.properties.
-* Conigurar el proveidor de seguretat dins de la configuració de seguretat de Spring.
+* L'arxiu de propietats security.properties.
+* El proveidor de seguretat dins de la configuració de seguretat de Spring.
 
-Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Les propietats de l'arxiu security.properties són les següents:
+Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. 
+
+Les propietats de l'arxiu security.properties són les següents:
 
 Propietat                           | Requerit | Descripció
 ----------------------------------- | -------- | -----------------------------------------------------------------------
@@ -468,8 +468,8 @@ admin=password,ROLE_USER,ROLE_ADMIN,enabled
 
 Per a configurar el _provider_ a **app-custom-security.xml** realitzarem:
 
-* Afegim el _provider_ al _authentication manager_.
-* Afegim el tipus de codificador de _password_ per tal de comparar la clau de l'arxiu de propietats i la que ens ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: plaintext, sha, sha-256, md5, md4, ssha.
+* Afegir el _provider_ al _authentication manager_.
+* Afegir el tipus de codificador de _password_ per tal de comparar la clau de l'arxiu de propietats i la que ens ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: plaintext, sha, sha-256, md5, md4, ssha.
 
 ```
 <security:authentication-manager>
@@ -1074,10 +1074,10 @@ En cas que l'aplicació utilitzi la separació entre codi estàtic i dinàmic é
 
 #### Configuració de la font d'autenticació i autorització per GICAR
 
-Per a configurar l'autenticació i l'autorització a GICAR és necessari:
+Per a configurar l'autenticació i l'autorització a GICAR és necessari configurar:
 
-* Configurar l'arxiu de propietats **security.properties**.
-* Configurar el proveïdor de seguretat dins de la configuració de seguretat de Spring.
+* L'arxiu de propietats **security.properties**.
+* El proveïdor de seguretat dins de la configuració de seguretat de Spring.
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament:
 
@@ -1396,13 +1396,9 @@ Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'ac
 
 ### Logout
 
-Per tots els mètodes d'autenticació, el procediment de logoff consisteix en invalidar la sessió, forçant així que el servei de seguretat intervingui en la següent petició solicitant la nova identificació de l'usuari.
+Per tots els mètodes d'autenticació, el procediment de _logoff_ consisteix en invalidar la sessió, forçant així que el servei de seguretat intervingui en la següent petició solicitant la nova identificació de l'usuari. En el cas de GICAR, però, aquesta autenticació és realitzada per un sistema extern a l'aplicació i, per tant, s'ha de comunicar a aquest sistema extern la intenció de fer el _logoff_. El mecanisme previst per fer-ho consisteix en una URL de Gicar que, al ser invocada, realitza el _logoff_.
 
-En el cas de GICAR, però, aquesta autenticació és realitzada per un sistema extern a l'aplicació i, per tant, s'ha de comunicar a aquest sistema extern la intenció de fer el logoff. El mecanisme previst per fer-ho consisteix en una URL de Gicar que, al ser invocada, realitza el logoff.
-
-Aquest enllaç de logout és depenent de l'agent de SiteMinder que l'aplicació fa servir per a comunicar-se amb el Policy Server.
-
-Així doncs, els enllaços de logout són els següents:
+El _logoff_ depen de l'agent de SiteMinder que l'aplicació fa servir per a comunicar-se amb el Policy Server. Els enllaços de _logoff_ són els següents:
 
 * Per a una aplicació ubicada en els apaches corporatius de internet: http://sso.gencat.cat/siteminderagent/forms/logoff.html
 * Per a una aplicació ubicada en els apaches corporatius de intranet: http://sso.gencat.intranet/siteminderagent/forms/logoff.html
@@ -1412,7 +1408,7 @@ Així doncs, els enllaços de logout són els següents:
 
 ### Servidor LDAP de proves: openLDAP
 
-Els diferents passos per a instal- lar openLDAP i importar un directori LDAP d'exemple són:
+Els diferents passos per a instal·lar openLDAP i importar un directori LDAP d'exemple són:
 
 * Baixar openLDAP per a Windows http://sourceforge.net/projects/openldapwindows/ i instal- lar-ho.
 * Canviar la configuració per defecte de openldap. Copiar les dades següents en un fitxer slapd.conf. Copiarem el slapd.conf en la mateixa carpeta que openLDAP.
@@ -1521,7 +1517,7 @@ La contrasenya per defecte és "secret".
 
 Comprovarem que la importació de dades ha funcionat amb Jxplorer, un client LDAP Java i de codi obert.
 
-* Baixar Jxplorer a la url http://sourceforge.net/projects/jxplorer/ i instal·lar-ho
+* Baixar Jxplorer a la url http://sourceforge.net/projects/jxplorer/ i instal·lar-ho.
 * Prémer el botó per a connectar-se al nostre directori LDAP.
 
 La contrasenya per defecte és "secret". La pantalla següent mostra els valors dels diferents paràmetres:
