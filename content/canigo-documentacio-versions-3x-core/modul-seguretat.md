@@ -133,7 +133,7 @@ La disposició dels arxius és la següent:
 
 Per a configurar la font d'autorització mitjançant base de dades és necessari configurar:
 
-* L'arxiu de propietats security.properties.
+* L'arxiu de propietats **security.properties**.
 * El proveïdor de seguretat dins de la configuració de seguretat de Spring.
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. 
@@ -405,7 +405,7 @@ L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de 
 
 Per a configurar l'acces a LDAP (funcionalitat ja desfasadada) és necessari configurar:
 
-* L'arxiu de propietats security.properties.
+* L'arxiu de propietats **security.properties**.
 * El proveidor de seguretat dins de la configuració de seguretat de Spring.
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. 
@@ -723,7 +723,7 @@ Per a configurar l'accés a GICAR és necessari configurar:
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. 
 
-L'arxiu **security.properties** es té el següent format:
+L'arxiu **security.properties** té el següent format:
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
@@ -1081,9 +1081,7 @@ Per a configurar l'autenticació i l'autorització a GICAR és necessari configu
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament:
 
-Les propietats de l'arxiu **security.properties** són les següents:
-
-Per a configurar l'accés a GICAR és necessari configurar l'arxiu de propietats **security.properties**. Aquest arxiu es genera automàticament des de l'eina de suport, i té el següent format:
+Per a configurar l'accés a GICAR és necessari configurar l'arxiu de propietats **security.properties** el qual té el següent format:
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
@@ -1390,9 +1388,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }			
 ```
 
-Amb aquesta configuració s'utilitzen les capçaleres *HTTP_GICAR* i *HTTP_GICAR_ID* o *HTTP_GICAR_CERT* i *HTTP_GICAR_PSIS* per a l'autentiació i *HTTP_GICAR_MEMBERL* per l'autorització
-
-Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
+Amb aquesta configuració s'utilitzen les capçaleres *HTTP_GICAR* i *HTTP_GICAR_ID* o *HTTP_GICAR_CERT* i *HTTP_GICAR_PSIS* per a l'autenticació i *HTTP_GICAR_MEMBERL* per l'autorització. Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/).
 
 ### Logout
 
@@ -1410,8 +1406,8 @@ El _logoff_ depen de l'agent de SiteMinder que l'aplicació fa servir per a comu
 
 Els diferents passos per a instal·lar openLDAP i importar un directori LDAP d'exemple són:
 
-* Baixar openLDAP per a Windows http://sourceforge.net/projects/openldapwindows/ i instal- lar-ho.
-* Canviar la configuració per defecte de openldap. Copiar les dades següents en un fitxer slapd.conf. Copiarem el slapd.conf en la mateixa carpeta que openLDAP.
+* Baixar openLDAP per a Windows http://sourceforge.net/projects/openldapwindows/ i instal·lar-lo.
+* Canviar la configuració per defecte de openldap. Copiar les dades següents en un fitxer slapd.conf i afegir aquest fitxer a la mateixa carpeta que openLDAP:
 
 ```
 #######################################################################
@@ -1517,7 +1513,7 @@ La contrasenya per defecte és "secret".
 
 Comprovarem que la importació de dades ha funcionat amb Jxplorer, un client LDAP Java i de codi obert.
 
-* Baixar Jxplorer a la url http://sourceforge.net/projects/jxplorer/ i instal·lar-ho.
+* Baixar Jxplorer a la url http://sourceforge.net/projects/jxplorer/ i instal·lar-lo.
 * Prémer el botó per a connectar-se al nostre directori LDAP.
 
 La contrasenya per defecte és "secret". La pantalla següent mostra els valors dels diferents paràmetres:
