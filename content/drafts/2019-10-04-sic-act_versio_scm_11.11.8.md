@@ -9,9 +9,9 @@ description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Ser
 ## Actualització del servei de custòdia de Codi
 
 Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de custòdia de Codi a la **versió 11.11.8 de Gitlab**.
-A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**. Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible.
+A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**. 
 
-En els següents apartats, es detallen les principals novetats i millores d'aquesta actualització.
+Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible. En els següents apartats, es detallen les principals novetats i millores d'aquesta actualització.
 
 ### Novetats
 
