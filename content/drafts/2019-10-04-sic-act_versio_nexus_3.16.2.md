@@ -14,21 +14,15 @@ Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artef
 
 #### Endpoint de salut per node
 
-Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del Nexus, d'aquesta manera es permet consultar quan un node està disponible.  
-
-Per a més informació, consultar el següent enllaç: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949)
+Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del Nexus, d'aquesta manera es permet consultar quan un node està disponible. Per a més informació, consultar: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949).
 
 #### Creació de fitxer temporal a la càrrega d'artefactes per la interfície d'usuari
 
-Si s'utilitza la interfície d'usuari per a pujar un artefacte, aquest es crearà físicament de forma temporal a java.io.tmpdir. 
-
-Per a més informació, consultar el següent enllaç: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277)
+Si s'utilitza la interfície d'usuari per a pujar un artefacte, aquest es crearà físicament de forma temporal a java.io.tmpdir. Per a més informació, consultar: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277).
 
 #### Verificat amb OpenJDK 8
 
-S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8. 
-
-Per a més informació, consultar el següent enllaç: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300)
+S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8. Per a més informació, consultar: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300).
 
 
 ### Millores en les cerques
@@ -63,15 +57,11 @@ Els principals aspectes resolts són els següents:
 
 #### Correcció de _bug_ amb NPM
 
-Correcció d'un _bug_ registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes.
-
-Per a més informació, consultar el següent enllaç: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850)
+Correcció d'un _bug_ registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes. Per a més informació, consultar: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850).
 
 #### Correcció de bug amb POMs llargs
 
-S'ha resolt un _bug_ que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException". 
-
-Per a més informació, consultar el següent enllaç: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196)
+S'ha resolt un _bug_ que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException". Per a més informació, consultar: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196).
 
 
 ### Correccions de seguretat
