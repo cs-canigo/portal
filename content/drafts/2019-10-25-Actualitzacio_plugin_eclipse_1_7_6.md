@@ -13,7 +13,7 @@ Seguint l'objectiu de CS Canigó de proporcionar als desenvolupadors d'aplicacio
 
 El _plugin_ de l’Eclipse és un connector desenvolupat per l’IDE Eclipse per afegir menús contextuals per a la creació de projectes Canigó utilitzant l’arquetipus i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Així utilitzant l’Eclipse podem crear un projecte i afegir-l’hi els mòduls necessaris, obtenint un projecte preconfigurat, estalviant temps als desenvolupadors.
 
-Dins dels canvis de Canigó 3.4.2 hi costa l'evolució del mòdul de Seguretat de Canigó per permetre l'autenticació i l'autorització a Gicar, vegeu el tiquet [Autorització GICAR a Canigó](https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2383). Per a facilitar la utilització d'aquesta nova funcionalitat del mòdul de Seguretat, s'ha modificar el _plugin_ de Canigó per l'Eclipse.
+Dins dels canvis de Canigó 3.4.2 hi costa l'evolució del mòdul de Seguretat de Canigó per permetre l'autenticació i l'autorització a Gicar, vegeu el tiquet [Autorització GICAR a Canigó](/drafts/2019-10-22-Actualitzacio_modul_Seguretat). Per a facilitar la utilització d'aquesta nova funcionalitat del mòdul de Seguretat, s'ha modificar el _plugin_ de Canigó per l'Eclipse.
 
 ## Novetats plugin eclipse
 
