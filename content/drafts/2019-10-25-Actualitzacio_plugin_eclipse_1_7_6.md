@@ -34,7 +34,7 @@ Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els p
 
 ## Documentació plugin eclipse
 
-En els següents enllaços podeu consultar la documentació de:
+En els següents enllaços podeu consultar la documentació:
 
 * [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 * [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
