@@ -17,7 +17,7 @@ Dins dels canvis de Canigó 3.4.2 hi costa l'evolució del mòdul de Seguretat d
 
 ## Novetats plugin eclipse
 
-La nova versió 1.7.6 del _plugin_ incorpora una nova pregunta al mòdul de seguretat. Si s'ha seleccionat l'opció "GICAR" com a proveidor de seguretat:
+La nova versió 1.7.6 del _plugin_ incorpora una nova pregunta al mòdul de seguretat. Si s'ha seleccionat l'opció "GICAR" com a proveïdor de seguretat:
 
 ![](/images/news/Security_module_configuration_1_7_6.png)
 
