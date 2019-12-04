@@ -51,7 +51,7 @@ La solució de GICAR per incorporar l’autorització és proporcionar a les apl
 CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
 ```
 
-Per a obtenir més informació del sobre aquesta nova integració amb Gicar podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/).
+Per a obtenir més informació del sobre aquesta nova integració amb Gicar podeu consultar [Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/).
 
 A la **versió 2.2.0 del Mòdul de Seguretat de Canigó** es proporcionen els components per consultar aquesta nova capçalera HTTP i per construir el llistat de rols de l'usuari a patir d'aquesta, no sent necessari definir cap *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i en conseqüència, no sent necessari tenir cap taula per retornar el llistat de rols d'un usuari. 
 
