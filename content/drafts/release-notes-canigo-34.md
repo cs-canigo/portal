@@ -12,7 +12,7 @@ weight      = 1
 	- Actualització del mòdul de seguretat per incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
 - [Actualitzar el archetype nova versió mòdul seguretat autorització GICAR] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2385)
 	- Actualització de l'arquetipus de Canigó per utilitzar la nova versió (2.2.0) del mòdul de seguretat (autorització).	
-- [Actualitzar el plugin de Canigó per incloure nova opció seguretat autorització GICAR a Canigó] (https://cstd.ctti.gencat.cat/jiracstd/browse/CAN-2384)
+- [Actualitzar el plugin de Canigó per incloure nova opció seguretat autorització GICAR a Canigó] (/drafts/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 	- Actualització del _plugin_ de l'eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat.
 
 
