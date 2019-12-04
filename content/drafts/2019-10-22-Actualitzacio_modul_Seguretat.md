@@ -9,7 +9,7 @@ description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una nova versió del mòdul de Seguretat la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització). Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat Canigó 3.4.2](/drafts/release-notes-canigo-34).
+Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una nova versió del mòdul de Seguretat, amb la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització). Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat Canigó 3.4.2](/drafts/release-notes-canigo-34).
 
 [GICAR](/gicar/descripcio/) és l’eina amb què s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació, aquesta eina es fonamenta bàsicament en dos objectius principals: 
 
@@ -19,7 +19,7 @@ Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una
 
 Canigó té com a propòsit principal en el Mòdul de Seguretat gestionar l’autenticació i l’autorització dels usuaris en aplicacions. En aquest mòdul, com a framework base s'utilitza Spring Security. Actualment Canigó proporciona els components per a la configuració de la font d’autenticació per fitxer (local), base de dades, LDAP (desfasat) i Gicar.
 
-Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i Canigó, proporciona una implementació base d'aquest en el component *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*, aquest component necessita que cada aplicació tingui a la seva base de dades les taules necessàries per retornar el llistat de rols d'un usuari. Per més informació de la definició d'aquestes taules, podeu consultar la documentació de Spring de [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#appendix-schema).
+Actualment els components per la configuració de l'autenticació de la font d'autenticació per Gicar necessiten tenir definit un *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i Canigó, proporciona una implementació base d'aquest al *cat.gencat.ctti.canigo.arch.security.authorities.dao.impl.AuthoritiesDAOImpl*, aquest component necessita que cada aplicació tingui a la seva base de dades les taules necessàries per retornar el llistat de rols d'un usuari. Per més informació de la definició d'aquestes taules, podeu consultar la documentació de Spring [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#appendix-schema).
 
 ## Novetats
 
