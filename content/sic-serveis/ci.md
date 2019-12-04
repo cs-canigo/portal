@@ -119,7 +119,7 @@ Dins del procés de construcció dels executables (i sempre que l'aplicació ho 
 
 ### Anàlisi del codi
 
-L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides, s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui escull l'eina a utilitzar per a aquest anàlisi.
+L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides, s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui escull l'eina a utilitzar per a aquesta revisió de codi.
 
 ### Artefactes generats i gestió de possibles marxes enrere
 
