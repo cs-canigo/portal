@@ -9,7 +9,7 @@ description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una nova versió del mòdul de Seguretat la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització). Podeu consultar l'abast complet d'aquesta versió les [Release Notes, apartat Canigó 3.4.2](/drafts/release-notes-canigo-34).
+Dins de l'abast de la **versió 3.4.2 del framework Canigó** s'ha alliberat una nova versió del mòdul de Seguretat la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització). Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat Canigó 3.4.2](/drafts/release-notes-canigo-34).
 
 [GICAR](/gicar/descripcio/) és l’eina amb què s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació, aquesta eina es fonamenta bàsicament en dos objectius principals: 
 
