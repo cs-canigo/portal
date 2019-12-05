@@ -1,7 +1,7 @@
 +++
-date        = "2019-11-18"
-title       = "Actualització mòdul SSC Canigó"
-description = "S'ha publicat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat del AOC"
+date        = "2019-12-05"
+title       = "Actualització del mòdul de Canigó d'accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC)"
+description = "S'ha publicat una nova versió del mòdul de Canigó SSC utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC"
 #sections    = ["Notícies", "home"]
 #categories  = ["canigo"]
 key         = "NOVEMBRE2019"
@@ -9,15 +9,11 @@ key         = "NOVEMBRE2019"
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.1 del framework Canigó** s'ha alliberat una nova versió del mòdul de SSC de Canigó utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC. Podeu consultar l'abast complet de la nova versió a les [Release Notes apartat "Canigó 3.4.1"](/canigo-download-related/release-notes-canigo-34).
-
-El connector SSC es troba dins els connectors de serveis funcionals de la Generalitat. El propòsit d'aquest connector, és proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el Signador Centralitzat de l'AOC.
-
-El Signador Centralitzat del AOC és la solució que dóna cobertura al concepte de sistema de signatura electrònica per a l’actuació administrativa automatitzada, tal com es descriu a la LAECSP (art.18, Llei 11/2007).
+Dins de l'abast de la **[versió 3.4.1 del framework Canigó](/canigo-download-related/release-notes-canigo-34)** s'ha alliberat una nova versió del mòdul de Canigó d'accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC) utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC. El connector SSC, el qual es troba entre els connectors de serveis funcionals de la Generalitat, te el propòsit de proporcionar una interfície que utilitzi l’API SmartWrapper per poder donar accés als diferents tipus de signatura que ofereix el signador. El Signador Centralitzat de l'AOC és la solució que dóna cobertura al concepte de sistema de signatura electrònica per a l’actuació administrativa automatitzada, tal com es descriu a la LAECSP (art.18, Llei 11/2007).
 
 ## Novetats
 
-Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC de l'AOX versió 1.3.3.  Les principals novetats que proporciona aquesta l'actualització són:
+Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració amb els serveis de SSC de l'AOC versió 1.3.3.  Les principals novetats que proporciona aquesta l'actualització són:
 
 * Suport a tipus de signatura Detached Hash pels serveis:
   * CMS
@@ -34,6 +30,4 @@ Amb la versió 2.2.x del mòdul de SSC de Canigó es proporciona la integració 
 
 ## Documentació mòdul
 
-Està disponible la documentació del mòdul de SSC de Canigó al portal d'arquitectura: [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/).
-
-Per a més informació sobre el servei de Signador Centralitzat de l'AOC podeu consultar la [Guia d'integracio SCC v1-3-3](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
+Està disponible la documentació del mòdul de SSC de Canigó al portal d'arquitectura: [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/).Per a més informació sobre el servei de Signador Centralitzat de l'AOC podeu consultar la [Guia d'integracio SCC v1-3-3](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
