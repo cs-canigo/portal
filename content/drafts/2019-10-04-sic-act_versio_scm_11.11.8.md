@@ -12,6 +12,7 @@ Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de custòdi
 A partir de la versió 11.11 del Gitlab és necessari utilitzar **Git 2.21.0 o superior**. 
 
 Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions un sistema de custòdia de codi consistent, de qualitat i amb els millors temps de resposta per a permetre un cicle de vida del codi el més agradable possible. En els següents apartats, es detallen les principals novetats i millores d'aquesta actualització.
+<br><br>
 
 ### Novetats
 
@@ -22,7 +23,7 @@ No és infreqüent que diverses persones col·laborin en una funcionalitat en un
 A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
 
 Per a més informació, consultar el següent enllaç: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
-<br>
+<br><br>
 
 #### Serialització dels gràfics de _commits_
 
@@ -31,7 +32,7 @@ Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
 
 Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
-<br>
+<br><br>
 
 #### Descàrrega de directoris d'un projecte
 
@@ -46,7 +47,7 @@ Per a més informació, consultar el següent enllaç: [Descàrrega de directori
 
 <br>
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
-<br>
+<br><br>
 
 ### Millores de rendiment
 
@@ -59,7 +60,7 @@ A la versió 11.11 del Gitlab s'ha millorat el rendiment principalment en els se
 - [No carregar les pàgines Wiki d'un projecte si només es llisten](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/22801)
 
 - [No crear una referència temporal si es comparen branques del mateix projecte](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/24038)
-<br>
+<br><br>
 
 ### Informació addicional
 
