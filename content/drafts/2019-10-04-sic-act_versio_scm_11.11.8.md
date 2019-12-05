@@ -22,6 +22,7 @@ No és infreqüent que diverses persones col·laborin en una funcionalitat en un
 A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
 
 Per a més informació, consultar el següent enllaç: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
+<br></br>
 
 #### Serialització dels gràfics de _commits_
 
@@ -30,6 +31,7 @@ Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
 
 Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
+<br></br>
 
 #### Descàrrega de directoris d'un projecte
 
@@ -56,7 +58,7 @@ A la versió 11.11 del Gitlab s'ha millorat el rendiment principalment en els se
 - [No carregar les pàgines Wiki d'un projecte si només es llisten](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/22801)
 
 - [No crear una referència temporal si es comparen branques del mateix projecte](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/24038)
-
+<br></br>
 ### Informació addicional
 
 Per a més informació sobre les funcionalitats que proporciona Gitlab a la versió 11.11 podeu consultar els següents enllaços:
