@@ -15,7 +15,7 @@ Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions 
 <br><br>
 
 ### Novetats
-
+<br><br>
 #### Assignacions múltiples per Merge Request
 
 No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers _frontend_ i _backend_ o en equips on els enginyers treballen conjuntament com en Programació extrema.
@@ -23,7 +23,7 @@ No és infreqüent que diverses persones col·laborin en una funcionalitat en un
 A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
 
 Per a més informació, consultar el següent enllaç: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
-<br><br>
+<br><br><br>
 
 #### Serialització dels gràfics de _commits_
 
@@ -32,7 +32,7 @@ Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
 
 Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
-<br><br>
+<br><br><br>
 
 #### Descàrrega de directoris d'un projecte
 
@@ -47,7 +47,7 @@ Per a més informació, consultar el següent enllaç: [Descàrrega de directori
 
 <br>
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
-<br><br>
+<br><br><br>
 
 ### Millores de rendiment
 
