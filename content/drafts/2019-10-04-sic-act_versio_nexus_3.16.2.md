@@ -9,7 +9,7 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 ## Actualització del servei repositori d'artefactes
 
 Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**, en els següents apartats, es detallen les principals novetats i millores que s'incorporen amb aquesta versió així com també els problemes resolts.
-<br>
+<br><br>
 
 
 ### Novetats
@@ -17,17 +17,17 @@ Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artef
 #### Endpoint de salut per node
 
 Amb la versió 3.16 del Nexus s'ha proporcionat un EndPoint per a consultar la salut d'un node del Nexus, d'aquesta manera es permet consultar quan un node està disponible. Per a més informació, consultar: [NEXUS-18949](https://issues.sonatype.org/browse/NEXUS-18949).
-<br>
+<br><br>
 
 #### Creació de fitxer temporal a la càrrega d'artefactes per la interfície d'usuari
 
 Si s'utilitza la interfície d'usuari per a pujar un artefacte, aquest es crearà físicament de forma temporal a java.io.tmpdir. Per a més informació, consultar: [NEXUS-18277](https://issues.sonatype.org/browse/NEXUS-18277).
-<br>
+<br><br>
 
 #### Verificat amb OpenJDK 8
 
 S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8. Per a més informació, consultar: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300).
-<br>
+<br><br>
 
 
 ### Millores en les cerques
@@ -38,7 +38,7 @@ Les principals millores en les cerques són:
 
 - [Llistats tots els snapshots i no només l'últim](https://issues.sonatype.org/browse/NEXUS-8798)
 
-
+<br>
 
 ### Resolució d'incidències en la interfície d'usuari
 
@@ -58,19 +58,19 @@ Els principals aspectes resolts són els següents:
 
 - [Error de time out navegant per repositoris grans](https://issues.sonatype.org/browse/NEXUS-13095)
 
-
+<br>
 
 ### Resolució d'incidències
 
 #### Correcció de _bug_ amb NPM
 
 Correcció d'un _bug_ registrat en el filtre de sol·licitud anti-csrf per evitar la falsificació de petició en llocs creuats, que bloquejava peticions de NPM correctes. Per a més informació, consultar: [NEXUS-18850](https://issues.sonatype.org/browse/NEXUS-18850).
-<br>
+<br><br>
 
 #### Correcció de bug amb POMs llargs
 
 S'ha resolt un _bug_ que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException". Per a més informació, consultar: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196).
-<br>
+<br><br>
 
 
 
@@ -85,7 +85,7 @@ S'han corregit principalment els següents forats de seguretat:
 - [CVE-2018-16621](https://support.sonatype.com/hc/en-us/articles/360010789153-CVE-2018-16621-Nexus-Repository-Manager-Java-Injection-October-17-2018?_ga=2.192442851.817663482.1570188895-1181263505.1548239726)
 
 - [CVE-2018-5306](https://support.sonatype.com/hc/en-us/articles/360000134968?_ga=2.126472772.817663482.1570188895-1181263505.1548239726)
-
+<br>
 
 
 ### Informació addicional
