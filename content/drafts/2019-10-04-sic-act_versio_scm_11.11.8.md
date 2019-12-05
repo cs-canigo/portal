@@ -15,7 +15,7 @@ Amb aquesta actualització, es vol proporcionar als proveïdors d’aplicacions 
 <br><br>
 
 ### Novetats
-<br><br>
+<br>
 #### Assignacions múltiples per Merge Request
 
 No és infreqüent que diverses persones col·laborin en una funcionalitat en una branca compartida i sol·licitin una Merge Request, com ara una col·laboració d’enginyers _frontend_ i _backend_ o en equips on els enginyers treballen conjuntament com en Programació extrema.
