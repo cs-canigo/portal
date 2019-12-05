@@ -46,7 +46,7 @@ Un cop instal·lat el component i indicades les extensions dels fitxers afectade
 Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el _tracking_ pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
 Quan s'extrau un arxiu Git LFS al repositori local, l'arxiu s'envia a través d'un filtre que reemplaçarà el punter per l'arxiu real.
-L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar el mida en el repositori central i evitant possibles problemes de rendiment en el servidor.
+L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar la mida del repositori central i evitant possibles problemes de rendiment en el servidor.
 
 ## Consells
 
