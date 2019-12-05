@@ -22,7 +22,7 @@ No és infreqüent que diverses persones col·laborin en una funcionalitat en un
 A la versió 11.11 del Gitlab es permet que a les Merge Request es pugui assignar diversos destinataris per a indicar a totes les persones que ho estan revisant o en són responsables. 
 
 Per a més informació, consultar el següent enllaç: [Múltiples assignats per Merge Request](https://docs.gitlab.com/ee/user/project/merge_requests/#multiple-assignees-starter)
-<br></br>
+<br>
 
 #### Serialització dels gràfics de _commits_
 
@@ -31,7 +31,7 @@ Moltes operacions habituals de Git requereixen consultar el gràfic de _commits_
 A la versió 11.11 del Gitlab s'ha habilitat la característica de gràfics de _commits_ serialitzada, introduïda en els darrers llançaments de Git, per tal d'aprofitar la millora de rendiment en la generació dels gràfics de _commits_. 
 
 Per a més informació, consultar el següent enllaç: [Funcionalitats de gràfics de commits](https://git-scm.com/docs/commit-graph)
-<br></br>
+<br>
 
 #### Descàrrega de directoris d'un projecte
 
@@ -46,6 +46,7 @@ Per a més informació, consultar el següent enllaç: [Descàrrega de directori
 
 <br>
 ![](https://about.gitlab.com/images/11_11/repo_download-archive.png)
+<br>
 
 ### Millores de rendiment
 
@@ -58,7 +59,8 @@ A la versió 11.11 del Gitlab s'ha millorat el rendiment principalment en els se
 - [No carregar les pàgines Wiki d'un projecte si només es llisten](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/22801)
 
 - [No crear una referència temporal si es comparen branques del mateix projecte](https://gitlab.com/gitlab-org/gitlab-foss/merge_requests/24038)
-<br></br>
+<br>
+
 ### Informació addicional
 
 Per a més informació sobre les funcionalitats que proporciona Gitlab a la versió 11.11 podeu consultar els següents enllaços:
@@ -67,5 +69,5 @@ Per a més informació sobre les funcionalitats que proporciona Gitlab a la vers
 
 - [238 issues tancades](https://gitlab.com/gitlab-org/gitlab-foss/issues?scope=all&utf8=%E2%9C%93&state=all&milestone_title=11.11)
 
-<br><br>
+<br>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
