@@ -1,7 +1,7 @@
 +++
 date        = "2019-11-29"
-title       = "Utilitzar Git-lfs per a arxius de gran tamany"
-description = "Howto per a configurar i utilitzar Git LFS que dóna suport a arxius de gran tamany al servei de custodia de codi"
+title       = "Utilitzar Git-lfs per a arxius de grans"
+description = "Howto per a configurar i utilitzar Git LFS que dóna suport a arxius de grans al servei de custodia de codi"
 #section     = "howtos"
 #categories  = ["sic"]
 key         = "NOVEMBRE2019"
@@ -15,7 +15,7 @@ Git LFS és un projecte de codi obert, és una extensió de Git i el seu objecti
 
 - Els arxius grans faran **créixer l'historial** del repositori cada cop que s'actualitzin.
 - Els arxius grans faran que les **operacions sobre el projecte s'alenteixin**.
-- Git considerarà una **actualització d'un arxiu binari com un canvi complet de l'arxiu**, per la qual cosa no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el repositori anirà creixent de tamany i les comandes Git cada cop seran més lentes.
+- Git considerarà una **actualització d'un arxiu binari com un canvi complet de l'arxiu**, per la qual cosa no només s'emmagatzemaran les diferències i, si es fan canvis freqüents, el repositori anirà creixent de mida i les comandes Git cada cop seran més lentes.
 
 Git LFS utilitza punters en lloc d'arxius reals quan els arxius (o tipus d'arxius) es troben marcats com a arxius LFS, per tant, si disposa d'arxius grans en el seu repositori i/o molts binaris, és recomanable usar Git LFS.
 
@@ -41,12 +41,12 @@ Es recomana confirmar i enviar aquest arxiu al repositori perquè tots els desen
 
 ## Com funciona
 
-Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb les extensions indicades (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de tamany.
+Un cop instal·lat el component i indicades les extensions dels fitxers afectades, en endavant tots els fitxers amb les extensions indicades (.iso en l’exemple) es pujaran automàticament al Git LFS del servidor evitant les restriccions de mida.
 
 Git LFS **accepta expressions regulars** semblants a les que podem trobar en el fitxer .gitignore, per tant el _tracking_ pot ser tant d'un fitxer com de grups de fitxers per extensió o altres configuracions que siguin necessàries.
 
 Quan s'extrau un arxiu Git LFS al repositori local, l'arxiu s'envia a través d'un filtre que reemplaçarà el punter per l'arxiu real.
-L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar el tamany en el repositori central i evitant possibles problemes de rendiment en el servidor.
+L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar el mida en el repositori central i evitant possibles problemes de rendiment en el servidor.
 
 ## Consells
 
