@@ -11,6 +11,7 @@ description = "Durant el mes d'Octubre s'han dut a terme actualització del repo
 Durant el mes d'Octubre s'ha dut a terme l'actualització del repositori d'artefactes a la **versió 3.16.2 del Nexus**, en els següents apartats, es detallen les principals novetats i millores que s'incorporen amb aquesta versió així com també els problemes resolts.
 <br>
 
+
 ### Novetats
 
 #### Endpoint de salut per node
@@ -28,6 +29,7 @@ Si s'utilitza la interfície d'usuari per a pujar un artefacte, aquest es crear�
 S'ha certificat el correcte funcionament si s'inicia el Nexus amb OpenJDK 8. Per a més informació, consultar: [NEXUS-6300](https://issues.sonatype.org/browse/NEXUS-6300).
 <br>
 
+
 ### Millores en les cerques
 
 Les principals millores en les cerques són:
@@ -35,7 +37,7 @@ Les principals millores en les cerques són:
 - [Cerques parcials](https://issues.sonatype.org/browse/NEXUS-8884)
 
 - [Llistats tots els snapshots i no només l'últim](https://issues.sonatype.org/browse/NEXUS-8798)
-<br>
+
 
 
 ### Resolució d'incidències en la interfície d'usuari
@@ -55,7 +57,7 @@ Els principals aspectes resolts són els següents:
 - [Obtenció de NullPointerException si no s'envia la capçalera user-agent](https://issues.sonatype.org/browse/NEXUS-13136)
 
 - [Error de time out navegant per repositoris grans](https://issues.sonatype.org/browse/NEXUS-13095)
-<br>
+
 
 
 ### Resolució d'incidències
@@ -70,6 +72,8 @@ Correcció d'un _bug_ registrat en el filtre de sol·licitud anti-csrf per evita
 S'ha resolt un _bug_ que no permetia pujar POMs llargs obtenint l'error "ArrayIndexOutOfBoundsException". Per a més informació, consultar: [NEXUS-18196](https://issues.sonatype.org/browse/NEXUS-18196).
 <br>
 
+
+
 ### Correccions de seguretat
 
 S'han corregit principalment els següents forats de seguretat:
@@ -81,7 +85,8 @@ S'han corregit principalment els següents forats de seguretat:
 - [CVE-2018-16621](https://support.sonatype.com/hc/en-us/articles/360010789153-CVE-2018-16621-Nexus-Repository-Manager-Java-Injection-October-17-2018?_ga=2.192442851.817663482.1570188895-1181263505.1548239726)
 
 - [CVE-2018-5306](https://support.sonatype.com/hc/en-us/articles/360000134968?_ga=2.126472772.817663482.1570188895-1181263505.1548239726)
-<br>
+
+
 
 ### Informació addicional
 
