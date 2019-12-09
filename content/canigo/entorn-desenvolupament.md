@@ -1,6 +1,6 @@
 +++
 date        = "2015-11-18"
-lastmod     = "2019-04-23"
+lastmod     = "2019-12-09"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
@@ -118,7 +118,7 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 ### Versions
 
-#### 3.0.3 (25/11/2019) -- <span style="color:green">OPERATIVA</span>
+#### 3.0.3 (09/12/2019) -- <span style="color:green">OPERATIVA</span>
 
 _RELEASE NOTES_
 
