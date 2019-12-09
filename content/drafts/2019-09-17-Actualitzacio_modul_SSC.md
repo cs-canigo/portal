@@ -30,4 +30,4 @@ Amb la versió 2.2.x del mòdul SSC de Canigó es proporciona la integració amb
 
 ## Documentació mòdul
 
-Està disponible la documentació del mòdul SSC de Canigó al portal d'arquitectura: [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/). Per a més informació sobre el servei de signatura centralitzatzada de l'AOC podeu consultar la [Guia d'integracio SCC v1-3-3](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
+Està disponible la documentació del mòdul SSC de Canigó al portal d'arquitectura: [Mòdul SSC](/canigo-documentacio-versions-3x-integracio/modul-ssc/). Per a més informació sobre el servei de signatura centralitzada de l'AOC podeu consultar la [Guia d'integracio SCC v1-3-3](/related/canigo/documentacio/modul-ssc/guiaintegraciossc-v1-3-3.pdf "Guia Integració SSC").
