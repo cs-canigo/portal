@@ -31,6 +31,11 @@ Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviame
 * [Vagrant](http://www.vagrantup.com/downloads.html)
 * [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/3.0.0) amb la configuració de l'entorn Canigó
 
+Per a poder utilitzar l'entorn de desenvolupament és necessari:
+
+* 120 GB de disc dur lliure
+* 6 GB de memòria ram lliure
+* 32 MB de memòria de video lliure
 
 ### Instal·lació
 
@@ -113,7 +118,37 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 ### Versions
 
-#### 3.0.0 (22/04/2019) -- <span style="color:green">OPERATIVA</span>
+#### 3.0.3 (25/11/2019) -- <span style="color:green">OPERATIVA</span>
+
+_RELEASE NOTES_
+
+* Resolució error url jmeter
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.2 (14/11/2019)
+
+_RELEASE NOTES_
+
+* Millores en les traces d'error de la instal·lació
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.1 (19/09/2019)
+
+_RELEASE NOTES_
+
+* Resolució error carpetes personals usuari canigo
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.0 (22/04/2019)
 
 _RELEASE NOTES_
 
