@@ -27,7 +27,7 @@ La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 é
 
 ## Novetats _plugin_ Eclipse
 
-La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1. Per instal·lar o actualitzar aquesta versió del _plugin_, és necessari seguir els passos descrits a la secció "Instal·lació" del _plugin_ Canigó per a Eclipse.
+La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1. Per instal·lar o actualitzar aquesta versió del _plugin_, és necessari seguir els passos descrits a la secció "Instal·lació" de la documentació del _plugin_ Canigó per a Eclipse.
 
 ## Documentació addicional
 
