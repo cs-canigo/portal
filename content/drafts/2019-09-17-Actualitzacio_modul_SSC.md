@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-09"
 title       = "Actualització del mòdul Canigó d'accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC)"
-description = "S'ha publicat una nova versió del mòdul Canigó "SSC" utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC"
+description = "S'ha publicat una nova versió del mòdul Canigó 'SSC' utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC"
 #sections    = ["Notícies", "home"]
 #categories  = ["canigo"]
 key         = "DESEMBRE2019"
