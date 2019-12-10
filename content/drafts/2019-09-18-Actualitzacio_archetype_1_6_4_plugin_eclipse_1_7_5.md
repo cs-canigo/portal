@@ -23,18 +23,10 @@ S'ha publicat la versió 1.6.4 de l'arquetipus del Canigó per a generar project
 - **Actualitzar connector antivirus Canigó de Symantec**: Actualització del connector de l’Antivirus de Canigó que actualment està utilitzant la versió 7 a l'última versió disponible.
 - **Evolució del mòdul d’integració SSC**: Actualització del connector de SSC de Canigó per utilitzar la versió 1.3.3 del servei de SSC de l'AOC.
 
-La principal novetat de la versió 3.4.0 de Canigó respecte a la versió 3.2 és la utilització de fitxers _yml_ per a la configuració de propietats de l'aplicació i la incorporació dels canvis necessaris per Spring 5 i Spring Boot 2.
-
 ## Novetats _plugin_ Eclipse
 
-La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1. Per instal·lar o actualitzar aquesta versió del _plugin_, és necessari seguir els passos descrits a la secció "Instal·lació" de la documentació del _plugin_ Canigó per a Eclipse.
+La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de Canigó per generar projectes amb Canigó 3.4.1. Per instal·lar o actualitzar aquesta versió del _plugin_, és necessari seguir els passos descrits a la secció "Instal·lació" de la [documentació del _plugin_ Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
 
 ## Documentació addicional
 
 Està disponible la documentació dels lliurables de Canigó 3.4 a: [Binaris de Canigó](/canigo/download/)
-
-La documentació del _plugin_ de l'Eclipse està disponible: [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
-
-Detall dels canvis de Canigó 3.4.0: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0/)
-
-La guia per a passar manualment projectes de Canigó 3.2 a Canigó 3.4 es troba en el següent enllaç: [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/)
