@@ -31,4 +31,4 @@ La nova versió 1.7.5 del _plugin_ utilitza la versió 1.6.4 de l'arquetipus de 
 
 Està disponible la documentació dels lliurables de Canigó 3.4 a: [Binaris de Canigó](/canigo/download/)
 
-En el següent enllaç, pot consultar el detall dels canvis que s'incorporen a partir de la versió 3.4.0 i que també apliquen a la 3.4.1: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0).
+En el següent enllaç, pot consultar els canvis que s'incorporen a partir de la versió 3.4.0 i que també apliquen a la 3.4.1: [Canigó. Publicació versió 3.4.0](/noticies/2019-03-29-actualitzacio-canigo-3_4_0).
