@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-29"
+date        = "2019-12-10"
 title       = "Certificació Canigó 3.4.1 amb servidors full de ruta"
 description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals"
 sections    = "Canigó"
@@ -21,7 +21,7 @@ Els servidors d'aplicacions suportats actualment en el [full de ruta del CTTI](h
 |--------------------------------- 	|--------------------------------- 	|
 |  Tomcat					          	  	 	|         9.0   	             			|
 |  Weblogic				          	  	 	|         12.2.x               			|
-|  Webshpere	  		        	  	 	|         9.0                 			|
+|  WebSphere	  		        	  	 	|         9.0                 			|
 |  JBoss EAP       									|         7.x        			          |
 
 Per a la certificació dels diferents servidors d'aplicacions s'han modificat les propietats de la _jvm_ que inicien els servidors d'aplicacions incorporant:
