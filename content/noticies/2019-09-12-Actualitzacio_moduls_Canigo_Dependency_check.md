@@ -4,7 +4,7 @@ title       = "Actualització mòduls Canigó amb Dependency Check"
 description = "S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency Check"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "DECEMBRE2019"
+key         = "DESEMBRE2019"
 +++
 
 ## Introducció
