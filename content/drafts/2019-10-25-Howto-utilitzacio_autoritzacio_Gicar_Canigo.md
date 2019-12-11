@@ -1,10 +1,10 @@
 +++
-date        = "2019-11-29"
+date        = "2019-12-11"
 title       = "Utilitzar l'autorització via Gicar a Canigó"
 description = "Howto per configurar una aplicació Canigó per utilitzar l'autorització a més de la autenticació via Gicar"
 #section     = "howtos"
 #categories  = ["canigo"]
-#key         = "NOVEMBRE2019"
+#key         = "DESEMBRE2019"
 +++
 
 ## Introducció
@@ -322,4 +322,4 @@ Per més informació sobre el plugin de Canigó de l'Eclipse a:
 
 Per més informació sobre l'autenticació i l'autorització a Gicar podeu consultar:
 
-[Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/)
+[Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/)
