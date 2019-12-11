@@ -2,9 +2,9 @@
 date        = "2019-11-29"
 title       = "Utilitzar Git-lfs per a arxius grans"
 description = "Howto per a configurar i utilitzar Git LFS que dóna suport a arxius grans al servei de custodia de codi"
-#section     = "howtos"
-#categories  = ["sic"]
-key         = "NOVEMBRE2019"
+section     = "howtos"
+categories  = ["SIC"]
+key         = "DESEMBRE2019"
 +++
 
 ## Introducció
