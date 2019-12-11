@@ -1,6 +1,6 @@
 +++
 date        = "2019-09-29"
-title       = "Actualització mòduls Canigó amb Dependency Check"
+title       = "Canigó. Actualització mòduls amb Dependency Check"
 description = "S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency Check"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
