@@ -1,10 +1,10 @@
 +++
 date        = "2019-10-11"
-title       = "Configurar notificacions via email al Gitlab"
+title       = "SIC. Configurar notificacions via email al Gitlab"
 description = "Howto per a configurar les notificacions al Gitlab per tal de rebre correus electrònics informant de l'activitat dels projectes"
-#section     = "howtos"
-#categories  = ["sic"]
-key         = "NOVEMBRE2019"
+section     = "howtos"
+categories  = ["SIC"]
+key         = "DESEMBRE2019"
 +++
 
 ## Introducció
