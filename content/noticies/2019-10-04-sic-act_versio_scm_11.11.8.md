@@ -4,7 +4,7 @@ title       = "SIC. Actualització de versió Gitlab"
 description = "Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab)"
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
-key         = "DESEMBRE2019"
+#key         = "DESEMBRE2019"
 +++
 
 ## Actualització del servei de custòdia de Codi
