@@ -1,7 +1,7 @@
 +++
 date        = "2019-11-29"
 title       = "SIC. Actualització de versió Nexus"
-description = "Durant el mes d'Octubre s'han dut a terme actualització del repositori d'artefactes (Nexus)"
+description = "Durant el mes d'Octubre s'han dut a terme actualització del repositori d'artefactes (Nexus)."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 #key         = "DESEMBRE2019"
