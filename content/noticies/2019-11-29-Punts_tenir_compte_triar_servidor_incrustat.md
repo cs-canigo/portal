@@ -1,7 +1,7 @@
 +++
 date        = "2019-11-29"
 title       = "Canigó. Punts a tenir en compte a l'hora de triar un servidor incrustat"
-description = "Llistat dels diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó"
+description = "Llistat dels diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó."
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "DESEMBRE2019"
