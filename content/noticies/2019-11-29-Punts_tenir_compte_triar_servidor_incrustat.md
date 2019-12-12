@@ -4,7 +4,7 @@ title       = "Canigó. Punts a tenir en compte a l'hora de triar un servidor in
 description = "Llistat dels diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "DESEMBRE2019"
+#key         = "DESEMBRE2019"
 +++
 
 
