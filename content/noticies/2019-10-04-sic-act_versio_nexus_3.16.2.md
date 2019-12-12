@@ -4,7 +4,7 @@ title       = "SIC. Actualització de versió Nexus"
 description = "Durant el mes d'Octubre s'han dut a terme actualització del repositori d'artefactes (Nexus)"
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
-key         = "DESEMBRE2019"
+#key         = "DESEMBRE2019"
 +++
 
 ## Actualització del servei repositori d'artefactes
