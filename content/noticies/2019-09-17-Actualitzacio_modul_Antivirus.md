@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-10"
 title       = "Canigó. Actualització mòdul Antivirus"
-description = "S'ha publicat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió del client de l'antivirus"
+description = "S'ha publicat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió del client de l'antivirus."
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "DESEMBRE2019"
