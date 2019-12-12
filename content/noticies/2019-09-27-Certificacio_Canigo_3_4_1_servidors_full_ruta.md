@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-10"
 title       = "Canigó. Certificació versió 3.4.1 amb servidors full de ruta"
-description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals"
+description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals."
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "DESEMBRE2019"
