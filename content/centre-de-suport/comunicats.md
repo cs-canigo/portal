@@ -1,5 +1,5 @@
 +++
-date        = "2019-11-21T17:11:42+01:00"
+date        = "2019-12-13"
 title       = "Comunicats"
 description = "Comunicats mensuals del CS Canigó"
 sections    = "Centre de Suport"
@@ -7,6 +7,13 @@ weight		= 4
 +++
 
 ## <span class="label label-cabecera">2019</span>
+
+#### [Desembre] (/comunicat/2019/12/)
+- Canigó. Certificació versió 3.4.1 amb servidors full de ruta
+- Canigó. Actualització mòdul Antivirus
+- Canigó. Actualització archetype 1.6.4 i plugin Eclipse 1.7.5
+- Canigó. Actualització del mòdul d'accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC)
+- Canigó. Actualització mòduls amb Dependency Check
 
 #### [Octubre] (/comunicat/2019/10/)
 - SIC. Pilot de l'autoservei de jobs pipeline amb T-Systems, l'àmbit ATC i el lot AM10 - TICxCAT
