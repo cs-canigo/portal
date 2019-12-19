@@ -28,7 +28,7 @@ Per l'autorització, Gicar proporciona les capçaleres HTTP:
 Un exemple de la capçalera seria:
 
 ```
-HTTP_GICAR_MEMBERL --> CN=VPN_PRE-GICARDC^CN=VPN_GENERIC-GICARDC^CN=GESNUS_N3_Escriptura^CN=VPN_GENERIC
+HTTP_GICAR_MEMBERL --> VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;VPN_GENERIC
 ```
 
 A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir la informació de l'usuari i els seus rols per a ser utilitzats a una aplicació Canigó.
