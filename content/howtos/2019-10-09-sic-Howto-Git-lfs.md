@@ -48,8 +48,6 @@ Git LFS **accepta expressions regulars** semblants a les que podem trobar en el 
 Quan s'extrau un arxiu Git LFS al repositori local, l'arxiu s'envia a través d'un filtre que reemplaçarà el punter per l'arxiu real.
 L'extensió Git LFS permet integrar **fitxers d'àudio, de vídeo i gràfics** en el nostre codi font sense incrementar la mida del repositori central i evitant possibles problemes de rendiment en el servidor.
 
-Haureu de seguir la guia oficial de [Git LFS](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html).
-
 Per a conèixer el seu **funcionament en detall i les comandes que cal utilitzar** haureu de consutlar la documentació oficial a la Web de [Git LFS](https://docs.gitlab.com/ee/workflow/lfs/manage_large_binaries_with_git_lfs.html).
 
 ## Consells
