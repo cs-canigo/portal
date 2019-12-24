@@ -274,19 +274,19 @@ Aquest fitxer ha d'estar ubicat a "/src/main/resources/config/props" i ha d'incl
 #
 #
 #
-#	Propietat							 	Requerit		Descripció
+#	Propietat					Requerit	Descripció
 #	---------------------------------------------------------------------------------
-#	security.database.jndiName	 				Si	 		Nom JNDI d'accés a la BD
-#	security.database.driverClassName			Si			Driver per connexió amb JDBC
-#	security.database.url	 					Si	 		URL de connexió a la base de dades.
-#	security.database.username					Si	 		Usuari de connexió a la base de dades
-#	security.database.password					Si	 		Password de connexió a la base de dades
-#	security.gicar.httpGicarHeaderUsernameKey	No			Clau capçelera GICAR
-#	security.sace.userNameFormat				No			Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
+#	security.database.jndiName	 		Si	 	Nom JNDI d'accés a la BD
+#	security.database.driverClassName		Si		Driver per connexió amb JDBC
+#	security.database.url	 			Si	 	URL de connexió a la base de dades.
+#	security.database.username			Si	 	Usuari de connexió a la base de dades
+#	security.database.password			Si	 	Password de connexió a la base de dades
+#	security.gicar.httpGicarHeaderUsernameKey	No		Clau capçelera GICAR
+#	security.sace.userNameFormat			No		Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
 #	security.sace.authoritiesbyUserNameQuery	No    		Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
-#	security.sace.keyStore						Si			Localització de la keystore
-#	security.sace.keyStorePassPhrase		    Si			Password de la keystore
-#	security.sace.url						    S			URL del servei de SACE
+#	security.sace.keyStore				Si		Localització de la keystore
+#	security.sace.keyStorePassPhrase		Si		Password de la keystore
+#	security.sace.url				Si		URL del servei de SACE
 #
 #
 #########################################################################################################################################################################
