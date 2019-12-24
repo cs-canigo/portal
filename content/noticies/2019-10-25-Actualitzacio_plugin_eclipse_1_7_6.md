@@ -26,7 +26,7 @@ Segons l'opció seleccionada, el _plugin_ modificarà els fitxers del projecte a
 * BBDD: L'autenticació per Gicar i autorització per BBDD com fins ara. 
 * GICAR: L'autenticació i l'autorització per Gicar incorporats a la versió 3.4.2 de Canigó.
 
-Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse # Instal·lació](/canigo-download-related/plugin-canigo/#instal-lació).
+Per instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/#instal-lació).
 
 ## Documentació del Plugin d'Eclipse
 

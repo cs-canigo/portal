@@ -9,15 +9,17 @@ key         = "GENER2020"
 
 ## Introducció
 
-IronPort és el servidor SMTP que permet fer ús del servei de correu corporatiu de la Generalitat. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquest servidor de SMTP per una aplicació Canigó.
-
-El servei utilitza els equips IronPort de Cisco que, a banda de la gestió de les cues de correu, també incorpora un sistema de protecció contra correu no desitjat (Spam) i virus.
+IronPort és el servidor SMTP que permet fer ús del servei de correu corporatiu de la Generalitat. El servei utilitza els equips IronPort de Cisco que, a banda de la gestió de les cues de correu, també incorpora un sistema de protecció contra correu no desitjat (Spam) i virus.
 
 ![IronPort](/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
 
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquest servidor de SMTP per una aplicació Canigó.
+
+
 ## Mòdul de correu
 
-Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació. Es pot incorporar automàticament el mòdul d’enviament de correu mitjançant l’eina de suport al desenvolupament, o bé afegir manualment la següent dependència en el pom.xml de l'aplicació:
+Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació.
+Es pot optar per incorporar automàticament el mòdul d’enviament de correu mitjançant l’eina de suport al desenvolupament, o bé afegir manualment la següent dependència en el pom.xml de l'aplicació:
 
 ```
 <canigo.support.mailing.version>[2.0.0,2.2.0)</canigo.support.mailing.version>

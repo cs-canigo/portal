@@ -13,21 +13,22 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessit
 
 ### Introducció
 
-Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incoporporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
+Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incoporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
 Teniu disponible la documentació de WebFlux de Canigó 3.4 a [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/) i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn.
 
 
 Per a realitzar el **test de serveis WebFlux** hi intervenen dos objectes principals:
 
-- org.springframework.test.web.reactive.server.WebTestClient: aquest component de Spring s'utilitza per a simular les crides que realitzaria un client als nostres serveis web. En el cas d’aplicacions Canigó, s’utilitzarà per a simular les crides que realitzaria un client als nostres serveis REST exposats amb WebFlux.
+- *org.springframework.test.web.reactive.server.WebTestClient*: aquest component de Spring s'utilitza per a simular les crides que realitzaria un client als nostres serveis web. En el cas d’aplicacions Canigó, s’utilitzarà per a simular les crides que realitzaria un client als nostres serveis REST exposats amb WebFlux.
 
-- reactor.test.StepVerifier: aquest component del projecte reactor s'utilitza per a verificar els serveis exposats en reactiu. En el nostre cas l'utilitzarem per verificar la resposta dels serveis web REST exposats amb WebFlux.
+- *reactor.test.StepVerifier*: aquest component del projecte reactor s'utilitza per a verificar els serveis exposats en reactiu. En el nostre cas l'utilitzarem per a verificar la resposta dels serveis web REST exposats amb WebFlux.
 
 Per a més informació sobre com realitzar test amb programació reactiva podeu consultar [Test unitaris amb programació reactiva a Canigó 3.4](/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/).
+En aquest article utilitzarem els serveis exposats amb WebFlux seguint la guia [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
 
 ### Cas d’exemple
-Per a aquesta guia utilitzarem els serveis exposats amb WebFlux seguint la guia [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
-El cas d'exemple consta d'un repositori de dades que contindrà missatges homòlegs a un tweet on hi haurà un identificador, un text i una data de creació. Per aquest repositori de dades s’utilitzarà una base de dades Mongodb i tindrà el nom *cat.gencat.ctti.repository.TweetRepository*.
+
+El cas d'exemple consta d'un repositori de dades que contindrà missatges homòlegs a un tweet on hi haurà un **identificador, un text i una data de creació**. Per aquest repositori de dades s’utilitzarà una base de dades Mongodb *cat.gencat.ctti.repository.TweetRepository*.
 
 En el cas d'exemple hi consten dos serveis: obtenir tots els tweets i obtenir un tweet a partir del seu identificador. Aquests serveis són exposats amb Web flux de dues formes diferents:
 <br>

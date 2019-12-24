@@ -9,10 +9,12 @@ key         = "GENER2020"
 
 ## Introducció
 
-A les últimes novetats de Gicar s’incorpora la possibilitat de tenir l'autorització a més de l'autenticació. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
+A les últimes novetats de Gicar s’incorpora la possibilitat de disposar d'un sistema d'autorització a més de l'autenticació.
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
+
+## Cabçaleres HTTP
 
 Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/).
-
 
 Gicar, per l'autenticació, proporciona les capçaleres HTTP:
 
@@ -34,8 +36,8 @@ HTTP_GICAR_MEMBERL --> VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;
 A la versió 2.2.x del Mòdul de Seguretat de Canigó s'utilitzen aquestes capçaleres per a construir la informació de l'usuari i els seus rols i així poder ser utilitzats en una aplicació Canigó.
 
 ## Mòdul de seguretat
-Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació.
-Per tal d’instal·lar el mòdul d'enviament de correus en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:
+
+Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:
 
 ```
 <canigo.security.version>[2.0.0,2.3.0)</canigo.security.version>
@@ -64,7 +66,7 @@ En cas d'optar per fer-ho manualment, serà necessari crear els següents fitxer
 
 ###  WebSecurityConfig.java
 
-Aquest fitxer ha d'estar ubicat al package “config” del projecte, al mateix nivell que “AppConfig.java”, i ha de tenir el segÜent contingut:
+Aquest fitxer ha d'estar ubicat al package “config” del projecte, al mateix nivell que “AppConfig.java”, i ha de tenir el següent contingut:
 
 ```
 import javax.inject.Named;
@@ -298,8 +300,6 @@ Aquest fitxer ha d'estar ubicat a "/src/main/resources/config/props" i ha d'incl
 *.jwt.expiration = 3600
 *.jwt.siteminderAuthentication = true
 ```
-
-
 
 
 
