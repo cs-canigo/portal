@@ -203,13 +203,10 @@ public class MailServiceTest {
 
 ## Informació addicional
 
-Podeu trobar més informació mitjançant els següents enllaços:
+Podeu trobar més informació als següents enllaços:
 
-Manual SMTP:
-[Manual per a la integració SMTP (IronPort)](https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame2.aspx?sourcedoc=/solucions/soltecnologiques/Documents/Lloc%20de%20Treball/10-02/CTTI_9.61_Integraci%c3%b3_SMTP_IronPort.pdf)
+- [Manual per a la integració SMTP (IronPort)](https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame2.aspx?sourcedoc=/solucions/soltecnologiques/Documents/Lloc%20de%20Treball/10-02/CTTI_9.61_Integraci%c3%b3_SMTP_IronPort.pdf)
 
-Principis d'arquitectura:
-[Principis d'arquitectura de sistemes d'informació](/arqctti/principis_arq/)
+- [Principis d'arquitectura de sistemes d'informació](/arqctti/principis_arq/)
 
-Mòdul de correu:
-[Documentació mòdul correu](/canigo-documentacio-versions-3x-suport/modul-correu/)
+- [Documentació mòdul correu](/canigo-documentacio-versions-3x-suport/modul-correu/)

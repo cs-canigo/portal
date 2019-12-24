@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-11"
+date        = "2019-12-24"
 title       = "Canigó. Actualització mòdul Seguretat"
 description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó per a proporcionar un sistema estàndard en el tractament d'autoritzacions (rols d'usuari) via Gicar"
 sections    = ["Notícies", "home"]

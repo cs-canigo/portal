@@ -302,13 +302,10 @@ Amb aquesta configuració, s'aconsegueix disposar d’una aplicació Canigó 3.4
 
 ## Informació addicional
 
-Podeu trobar més informació mitjançant els següents enllaços:
+Podeu trobar més informació als següents enllaços:
 
-Mòdul de seguretat de Canigó:
-[Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
+- [Mòdul de Seguretat de Canigó](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 
-Plugin de Canigó per Eclipse:
-[Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
+- [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 
-Autenticació i autorització a Gicar:
-[Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/)
+- [Control d'accés als recursos via GICAR](/gicar-saml2/auth-saml2-grups2/)
