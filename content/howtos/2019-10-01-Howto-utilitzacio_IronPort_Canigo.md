@@ -1,7 +1,7 @@
 +++
-date        = "2019-11-29"
+date        = "2019-12-24"
 title       = "Canigó. Com utilitzar IronPort a aplicació Canigó"
-description = "Howto per configurar i utilitzar IronPort com a servidor SMTP per una aplicació Canigó"
+description = "Howto per a configurar i utilitzar IronPort com a servidor SMTP per una aplicació Canigó"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "GENER2020"
@@ -11,17 +11,16 @@ key         = "GENER2020"
 
 IronPort és el servidor SMTP que permet fer ús del servei de correu corporatiu de la Generalitat. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquest servidor de SMTP per una aplicació Canigó.
 
-El servei utilitza els equips IronPort de Cisco, que a banda de la gestió de les cues de correu, també inclou un sistema de protecció contra SPAM i virus.
+El servei utilitza els equips IronPort de Cisco que, a banda de la gestió de les cues de correu, també incorpora un sistema de protecció contra correu no desitjat (Spam) i virus.
 
 ![IronPort](/images/howtos/Howto-utilitzacio_IronPort_Canigo.png)
 
-## Mòdul de correu (mailing)
+## Mòdul de correu
 
-Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació. Per tal d’instal·lar el mòdul d’enviament de correu es pot incloure automàticament a través de l’eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l’aplicació la següent dependència:
+Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació. Es pot incorporar automàticament el mòdul d’enviament de correu mitjançant l’eina de suport al desenvolupament, o bé afegir manualment la següent dependència en el pom.xml de l'aplicació:
 
 ```
 <canigo.support.mailing.version>[2.0.0,2.2.0)</canigo.support.mailing.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.support.mailing</artifactId>
@@ -29,12 +28,11 @@ Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l
 </dependency>
 ```
 
-Des de la versió 1.3.0 es proporciona la interfície *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService* seguint l’especificació Fluent Builder, i la interfície deprecada *cat.gencat.ctti.canigo.arch.support.mailing.MailService* per a l'enviament de correus eletrònics des d'una aplicació Canigó.
+Per a l’enviament de correus electrònics des d’una aplicació Canigó, des de la versió 1.3.0 es proporciona la interfície *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService*, seguint l’especificació Fluent Builder, així com la interfície ja deprecada *cat.gencat.ctti.canigo.arch.support.mailing.MailService*.
 
 ## Configuració per utilitzar IronPort
+Per a poder utilitzar el servidor SMTP IronPort és necessari redefinir el "mailSender":
 
-Per a utilitzar el servidor SMPT IronPort és necessari redefinir el "mailSender":
- 
  ```xml
  <bean id="mailSender" parent="mailSenderParent" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="javaMailProperties">
@@ -47,44 +45,33 @@ Per a utilitzar el servidor SMPT IronPort és necessari redefinir el "mailSender
 		</property>
 	</bean>
   ```
-  
- En el fitxer "mail.properties" definir les propietats:
+
+I definir les següents propietats al fitxer "mail.properties":
    ```
 *.mail.host=smtp-intranet.gencat.cat
 *.mail.port=25
 *.mail.protocol=smtp
-*.mail.maxAttachmentSize=1048576 
-
+*.mail.maxAttachmentSize=1048576
 *.mail.defaultEncoding=UTF-8
-
 *.mail.auth=true
-
 *.mail.username=
 *.mail.password=
-
 *.mail.timeout=8500
 *.mail.isSmtpSSLEnabled=false
 *.mail.debug=true
    ```
  On:
- 
- - mail.maxAttachmentSize: Tamany màxim permés dels fitxers adjunts. Per defecte: 0 (sense limits)
- 
- - mail.defaultEncoding: encoding del mail
- 
- - mail.auth: indiquem que volem autenticació al IronPort
- 
- - mail.username: Usuari del IronPort
- 
- - mail.password: Password del IronPort
- 
- - mail.timeout: Time out de la connexió amb el IronPort
- 
- - mail.isSmtpSSLEnabled: Sense connexió amb SSL
- 
- - mail.debug: Per treure traces de debug de l'enviament del correu
 
-Amb aquesta configuració ja podem utilitzar els components "FluentMailService" o "MailService", per exemple en un test:
+ - mail.maxAttachmentSize: mida màxima permesa dels fitxers adjunts. Per defecte: 0 (sense límits).
+ - mail.defaultEncoding: codificació de caràcters del correu electrònic.
+ - mail.auth: s’indica si es requereix autenticació d’usuari.
+ - mail.username: usuari.
+ - mail.password: paraula de pas.
+ - mail.timeout: temps d’espera de la connexió amb l’IronPort.
+ - mail.isSmtpSSLEnabled: s’indica si s’estableix connexió segura SSL.
+ - mail.debug: s’indica si es volen treure traces de debug de l'enviament del correu.
+
+Amb aquesta configuració ja podem utilitzar els components "FluentMailService" o "MailService". A continuació adjuntem un exemple d’ús en un test:
 
 ```
 import java.io.File;
@@ -139,7 +126,7 @@ public class MailServiceTest {
 
 	/**
 	 * Send with multiple attachment
-	 * 
+	 *
 	 * @throws ModuleException
 	 * @throws MessagingException
 	 * @throws IOException
@@ -198,15 +185,15 @@ public class MailServiceTest {
 
 	/**
 	 * Test exceptions. Bad
-	 * 
+	 *
 	 * @throws ModuleException
 	 * @throws AddressException
 	 * @throws IOException
-	 * 
+	 *
 	 */
 	@Test
 	public void check05SendMessageWithoutAttachment() throws ModuleException, AddressException, IOException {
-		
+
 		mailService.send(from, subject, "check05SendMessageWithoutAttachment.mailService: " + aMessage, isHtml, to);
 
 		fluentMailService.send(fluentMailService.from(from).to(to).subject(subject)
@@ -216,10 +203,13 @@ public class MailServiceTest {
 
 ## Informació addicional
 
-En els següents enllaços, podeu trobar més informació sobre el servei de IronPort o el mòdul de correu (mailing) de Canigó:
+Podeu trobar més informació mitjançant els següents enllaços:
 
+Manual SMTP:
 [Manual per a la integració SMTP (IronPort)](https://portic.ctti.gencat.cat/solucions/soltecnologiques/_layouts/15/WopiFrame2.aspx?sourcedoc=/solucions/soltecnologiques/Documents/Lloc%20de%20Treball/10-02/CTTI_9.61_Integraci%c3%b3_SMTP_IronPort.pdf)
 
+Principis d'arquitectura:
 [Principis d'arquitectura de sistemes d'informació](/arqctti/principis_arq/)
 
+Mòdul de correu:
 [Documentació mòdul correu](/canigo-documentacio-versions-3x-suport/modul-correu/)

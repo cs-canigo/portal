@@ -9,37 +9,35 @@ key         = "GENER2020"
 
 ## Introducció
 
-A les últimes novetats de Gicar incorpora la possibilitat de tenir l'autorització a més de l'autenticació. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
+A les últimes novetats de Gicar s’incorpora la possibilitat de tenir l'autorització a més de l'autenticació. Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
 
-Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: Amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT, per a més informació de la opció sense JWT, podeu consultar el [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/).
+Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/).
 
 
-Gicar a l'autenticació proporciona les capçaleres HTTP:
-
+Gicar, per l'autenticació, proporciona les capçaleres HTTP:
 - HTTP_GICAR
 - HTTP_GICAR_ID
 - HTTP_GICAR_CERT
 - HTTP_GICAR_PSIS
 
-Per l'autorització, Gicar proporciona les capçaleres HTTP:
-
+Per l'autorització, proporciona les capçaleres HTTP:
 - HTTP_GICAR_MEMBERL
 
-Un exemple de la capçalera seria:
+Un exemple de capçalera seria:
 
 ```
 HTTP_GICAR_MEMBERL --> VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;VPN_GENERIC
 ```
 
-A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per construir la informació de l'usuari i els seus rols per a ser utilitzats a una aplicació Canigó.
+A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per a construir la informació de l'usuari i els seus rols per a poder ser utilitzats en una aplicació Canigó.
 
 ## Mòdul de seguretat
+Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació. Es pot incorporar automàticament el mòdul d’enviament de correu mitjançant l’eina de suport al desenvolupament, o bé afegir manualment la següent dependència en el pom.xml:
 
-Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot incloure automàticament a través del plugin de Canigó de l'Eclipse o bé afegir manualment en el pom.xml de l’aplicació la següent dependència:
+Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:
 
 ```
 <canigo.security.version>[2.0.0,2.3.0)</canigo.security.version>
-
 <dependency>
       <groupId>cat.gencat.ctti</groupId>
       <artifactId>canigo.security</artifactId>
@@ -53,16 +51,15 @@ Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot 
     </dependency>
 ```
 
-## Configuració per utilitzar l'autorització i l'autenticació via Gicar
+## Configuració per a utilitzar l'autorització i l'autenticació via Gicar
 
-A la versió 1.7.6 del plugin de Canigó per l'eclipse ja incorpora la nova opció d'autenticació i d'autorització Gicar a l'afegir el mòdul de seguretat en una aplicació Canigó, podeu veure les opcions a:
-
+A la versió 1.7.6 del plugin de Canigó per l'Eclipse ja s’incorpora la nova opció d'autenticació i d'autorització Gicar en afegir el mòdul de seguretat en una aplicació Canigó. Podeu veure les opcions disponibles a:
 [Actualització plugin eclipse 1.7.6](/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 
-Sinó és necessari crear els següents fitxers:
+En cas contrari, serà necessari crear els següents fitxers:
 
-- "WebSecurityConfig.java" al package "config" del projecte, al mateix nivell que "AppConfig.java"
-- "security.properties" a "/src/main/resources/config/props"
+- "WebSecurityConfig.java" al package "config" del projecte, al mateix nivell que "AppConfig.java".
+- "security.properties" a "/src/main/resources/config/props".
 
 ###  WebSecurityConfig.java
 
@@ -140,7 +137,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
 		http.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
 		http.csrf().disable();
-		
+
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterBefore(jwtAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
 	}
@@ -237,21 +234,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return siteminder != null ? siteminder : false;
 	}
 
-}	
+}
 ```
 
-On es defineix com a punts més rellevants:
+On es defineix, com a punts més rellevants:
 
 - Que totes les peticions "/api/auth" són acceptades. Aquest és el servei que utilitzarà Gicar per informar-nos de les capçaleres HTTP.
 
-- Que com a UserDetailsService utilitzarem GICARWithMemberUserDetailsServiceImpl.
+- Que com a UserDetailsService s’utilitzarà GICARWithMemberUserDetailsServiceImpl.
 
-- Que com a AuthenticationService utilitzarem JwtGicarWithMemberAuthenticationService.
+- Que com a AuthenticationService s’utilitzarà JwtGicarWithMemberAuthenticationService.
 
 
 ###  security.properties
 
-Amb la següent definició per defecte de propietats:
+Amb la següent definició de propietats per defecte:
 
 ```
 ###########################################################
@@ -260,66 +257,58 @@ Amb la següent definició per defecte de propietats:
 # ---------------------------------------------------------
 #
 #	Propietats de mòdul multientorn:
-#		
-#		Format de la propietat:  ENTORN.MÒDUL.PROPIETAT
-#			El concepte ENTORN és el valor de la propietat d'arranc de la màquina virtual Java informada al 
-#			servidor d'aplicacions.
 #
-#		
+#		Format de la propietat:  ENTORN.MÒDUL.PROPIETAT
+#			El concepte ENTORN és el valor de la propietat d’arrencada de la màquina virtual Java informada al
+#			servidor d'aplicacions.
 #		Exemples de configuració:
 #
-#			*.security.database.jndiName	 	->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat més especifica
-#							    		 			per al entorn en el qual s'executa l'aplicació.
-#			dev.security.database.jndiName  	->  Propietat vàlida només a desenvolupament
-#			test.security.database.jndiName 	->  Propietat vàlida només a test
-#			
-#			
+#			*.security.database.jndiName	   ->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat més especifica per al entorn en el qual s'executa l'aplicació.
+#			dev.security.database.jndiName  ->  Propietat vàlida només a desenvolupament.
+#			test.security.database.jndiName  ->  Propietat vàlida només a test.
 #
-#	
+#
+#
+#
 #
 #	Propietat							 	Requerit		Descripció
 #	---------------------------------------------------------------------------------
-#	security.database.jndiName	 				Si	 			Nom JNDI d'accés a la BD
-#	security.database.driverClassName			Si				Driver per connexió amb JDBC
-#	security.database.url	 					Si	 			URL de connexió a la base de dades.
-#	security.database.username					Si	 			Usuari de connexió a la base de dades
-#	security.database.password					Si	 			Password de connexió a la base de dades
-#
-#	security.gicar.httpGicarHeaderUsernameKey	No				Clau capçelera GICAR
-#
-#	security.sace.userNameFormat				No				Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
-#	security.sace.authoritiesbyUserNameQuery	No				Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
-#	security.sace.keyStore						Si				Localització de la keystore
-#	security.sace.keyStorePassPhrase			Si				Password de la keystore
-#	security.sace.url							Si				URL del servei de SACE
+#	security.database.jndiName	 				Si	 		Nom JNDI d'accés a la BD
+#	security.database.driverClassName			Si			Driver per connexió amb JDBC
+#	security.database.url	 					Si	 		URL de connexió a la base de dades.
+#	security.database.username					Si	 		Usuari de connexió a la base de dades
+#	security.database.password					Si	 		Password de connexió a la base de dades
+#	security.gicar.httpGicarHeaderUsernameKey	No			Clau capçelera GICAR
+#	security.sace.userNameFormat				No			Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
+#	security.sace.authoritiesbyUserNameQuery	No    		Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
+#	security.sace.keyStore						Si			Localització de la keystore
+#	security.sace.keyStorePassPhrase		    Si			Password de la keystore
+#	security.sace.url						    S			URL del servei de SACE
 #
 #
 #########################################################################################################################################################################
 # GICAR configuration
 #*.security.gicar.httpGicarHeaderUsernameKey=NIF
-
-# JWT Configuration 
+# JWT Configuration
 *.jwt.header = Authentication
 *.jwt.header.startToken = Bearer
 *.jwt.tokenResponseHeaderName = jwtToken
 *.jwt.secret = canigo
 *.jwt.expiration = 3600
-	
 *.jwt.siteminderAuthentication = true
 ```
 
-Amb aquesta informació, s'aconsegueix tenir una aplicació Canigó 3.4.x amb autenticació i autorització via Gicar
+Amb aquesta configuració, s'aconsegueix disposar d’una aplicació Canigó 3.4.x amb autenticació i autorització via Gicar.
 
 ## Informació addicional
 
-Podeu trobar més informació sobre el mòdul de seguretat de Canigó a:
+Podeu trobar més informació mitjançant els següents enllaços:
 
+Mòdul de seguretat de Canigó:
 [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 
-Per més informació sobre el plugin de Canigó de l'Eclipse a:
-
+Plugin de Canigó per Eclipse:
 [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 
-Per més informació sobre l'autenticació i l'autorització a Gicar podeu consultar:
-
+Autenticació i autorització a Gicar:
 [Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/)
