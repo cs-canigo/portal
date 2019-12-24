@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-11"
-title       = "Canigó. Com utilitzar l'autorització via Gicar a aplicacions Canigó"
-description = "Howto per configurar una aplicació Canigó per utilitzar l'autorització a més de la autenticació via Gicar"
+title       = "Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó"
+description = "Howto per a configurar una aplicació Canigó per a utilitzar l'autorització via Gicar, a més de la autenticació"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "GENER2020"

@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-24"
-title       = "Test unitaris amb Webflux a Canigó 3.4"
-description = "How to per crear test unitaris amb Webflux a Canigó 3.4"
+title       = "Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4"
+description = "How to per a implementar tests unitaris amb Webflux a aplicacions Canigó 3.4"
 #section     = "howtos"
 #categories  = ["canigo"]
 key         = "GENER2020"

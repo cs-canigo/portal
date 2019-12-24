@@ -1,6 +1,6 @@
 +++
 date        = "2019-12-24"
-title       = "Canigó. Com utilitzar IronPort a aplicació Canigó"
+title       = "Canigó. Com configurar i utilitzar IronPort a una aplicació Canigó"
 description = "Howto per a configurar i utilitzar IronPort com a servidor SMTP per una aplicació Canigó"
 section     = "howtos"
 categories  = ["canigo"]

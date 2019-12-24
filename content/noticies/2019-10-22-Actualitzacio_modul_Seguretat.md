@@ -1,7 +1,7 @@
 +++
 date        = "2019-12-11"
 title       = "Canigó. Actualització mòdul Seguretat"
-description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó per obtenir els rols de l’usuari a través de GICAR (autorització)"
+description = "S'ha publicat una nova versió del mòdul de Seguretat de Canigó per a proporcionar un sistema estàndard en el tractament d'autoritzacions (rols d'usuari) via Gicar"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "GENER2020"
@@ -53,6 +53,6 @@ Per a obtenir més informació sobre aquesta nova integració amb Gicar podeu co
 
 A la **versió 2.2.0 del Mòdul de Seguretat de Canigó** es proporcionen els components per consultar aquesta nova capçalera HTTP i per construir el llistat de rols de l'usuari a patir d'aquesta, no sent necessari definir cap *cat.gencat.ctti.canigo.arch.security.authorities.dao.AuthoritiesDAO* i en conseqüència, no sent necessari tenir cap taula per retornar el llistat de rols d'un usuari. 
 
-## Documentació mòdul
+## Documentació del mòdul
 
 Per a obtenir més informació del Mòdul de Seguretat podeu consultar la documentació del [Mòdul Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/) al Portal de Frameworks i Solucions d’Arquitectura.
