@@ -209,4 +209,4 @@ Podeu trobar més informació als següents enllaços:
 
 - [Principis d'arquitectura de sistemes d'informació](/arqctti/principis_arq/)
 
-- [Documentació mòdul correu](/canigo-documentacio-versions-3x-suport/modul-correu/)
+- [Documentació del Mòdul de Correu](/canigo-documentacio-versions-3x-suport/modul-correu/)

@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-11"
+date        = "2019-12-24"
 title       = "Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó"
 description = "Howto per a configurar una aplicació Canigó per a utilitzar l'autorització via Gicar, a més de la autenticació"
 section     = "howtos"
@@ -15,12 +15,14 @@ Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicaci�
 
 
 Gicar, per l'autenticació, proporciona les capçaleres HTTP:
+
 - HTTP_GICAR
 - HTTP_GICAR_ID
 - HTTP_GICAR_CERT
 - HTTP_GICAR_PSIS
 
 Per l'autorització, proporciona les capçaleres HTTP:
+
 - HTTP_GICAR_MEMBERL
 
 Un exemple de capçalera seria:
@@ -29,12 +31,11 @@ Un exemple de capçalera seria:
 HTTP_GICAR_MEMBERL --> VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;VPN_GENERIC
 ```
 
-A la versió 2.2.x del Mòdul de Seguretat de Canigó, s'utilitzen aquestes capçaleres per a construir la informació de l'usuari i els seus rols per a poder ser utilitzats en una aplicació Canigó.
+A la versió 2.2.x del Mòdul de Seguretat de Canigó s'utilitzen aquestes capçaleres per a construir la informació de l'usuari i els seus rols i així poder ser utilitzats en una aplicació Canigó.
 
 ## Mòdul de seguretat
-Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació. Es pot incorporar automàticament el mòdul d’enviament de correu mitjançant l’eina de suport al desenvolupament, o bé afegir manualment la següent dependència en el pom.xml:
-
-Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:
+Canigó proporciona, en el mòdul de suport de correu (mailing), serveis per a l'enviament de correus electrònics des d'una aplicació.
+Per tal d’instal·lar el mòdul d'enviament de correus en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:
 
 ```
 <canigo.security.version>[2.0.0,2.3.0)</canigo.security.version>
@@ -53,17 +54,17 @@ Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot 
 
 ## Configuració per a utilitzar l'autorització i l'autenticació via Gicar
 
-A la versió 1.7.6 del plugin de Canigó per l'Eclipse ja s’incorpora la nova opció d'autenticació i d'autorització Gicar en afegir el mòdul de seguretat en una aplicació Canigó. Podeu veure les opcions disponibles a:
+A la versió 1.7.6 del plugin de Canigó per l'Eclipse ja s’incorpora la nova opció d'autenticació i d'autorització Gicar quan s'afegeix el mòdul de seguretat en una aplicació Canigó. Podeu veure les opcions disponibles a:
 [Actualització plugin eclipse 1.7.6](/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 
-En cas contrari, serà necessari crear els següents fitxers:
+En cas d'optar per fer-ho manualment, serà necessari crear els següents fitxers:
 
-- "WebSecurityConfig.java" al package "config" del projecte, al mateix nivell que "AppConfig.java".
-- "security.properties" a "/src/main/resources/config/props".
+- **WebSecurityConfig.java**
+- **security.properties**
 
 ###  WebSecurityConfig.java
 
-Amb el següent contingut:
+Aquest fitxer ha d'estar ubicat al package “config” del projecte, al mateix nivell que “AppConfig.java”, i ha de tenir el segÜent contingut:
 
 ```
 import javax.inject.Named;
@@ -248,7 +249,7 @@ On es defineix, com a punts més rellevants:
 
 ###  security.properties
 
-Amb la següent definició de propietats per defecte:
+Aquest fitxer ha d'estar ubicat a "/src/main/resources/config/props" i ha d'incloure la següent definició de propietats per defecte:
 
 ```
 ###########################################################
@@ -297,6 +298,10 @@ Amb la següent definició de propietats per defecte:
 *.jwt.expiration = 3600
 *.jwt.siteminderAuthentication = true
 ```
+
+
+
+
 
 Amb aquesta configuració, s'aconsegueix disposar d’una aplicació Canigó 3.4.x amb autenticació i autorització via Gicar.
 
