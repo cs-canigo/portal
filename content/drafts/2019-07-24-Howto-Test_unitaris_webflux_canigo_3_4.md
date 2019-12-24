@@ -11,14 +11,14 @@ key         = "GENER2020"
 
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de crear tests unitaris a serveis desenvolupats amb WebFlux, funcionalitat proporcionada a partir de la versió 3.4.0 de Canigó.
 
-### Introducció a WebFlux
+### Introducció
 
 Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incoporporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
 Teniu disponible la documentació de WebFlux de Canigó 3.4 a [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/) i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn.
 
-### Introducció test WebFlux
 
-Per a realitzar el test de serveis WebFlux hi intervenen dos objectes principals:
+Per a realitzar el **test de serveis WebFlux** hi intervenen dos objectes principals:
+
 - org.springframework.test.web.reactive.server.WebTestClient: aquest component de Spring s'utilitza per a simular les crides que realitzaria un client als nostres serveis web. En el cas d’aplicacions Canigó, s’utilitzarà per a simular les crides que realitzaria un client als nostres serveis REST exposats amb WebFlux.
 
 - reactor.test.StepVerifier: aquest component del projecte reactor s'utilitza per a verificar els serveis exposats en reactiu. En el nostre cas l'utilitzarem per verificar la resposta dels serveis web REST exposats amb WebFlux.
@@ -27,8 +27,6 @@ Per a més informació sobre com realitzar test amb programació reactiva podeu 
 
 ### Cas d’exemple
 Per a aquesta guia utilitzarem els serveis exposats amb WebFlux seguint la guia [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
-
-#### Introducció
 El cas d'exemple consta d'un repositori de dades que contindrà missatges homòlegs a un tweet on hi haurà un identificador, un text i una data de creació. Per aquest repositori de dades s’utilitzarà una base de dades Mongodb i tindrà el nom *cat.gencat.ctti.repository.TweetRepository*.
 
 En el cas d'exemple hi consten dos serveis: obtenir tots els tweets i obtenir un tweet a partir del seu identificador. Aquests serveis són exposats amb Web flux de dues formes diferents:
@@ -55,32 +53,30 @@ Per a realitzar el test d'aquests quatre serveis REST tenim dues opcions:
 <br>
 - Fer crides simulant un client als nostres serveis rest mockejats.
 
-##### Fer crides simulant un client als nostres serveis rest exposats de forma real
 
-Per a realitzar les crides als nostres serveis REST exposats de forma real utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*. Per a poder verificar que la resposta és l'esperada, al inici del test introduirem elements "tweets" utilitzant el repositori de tweets. D’aquesta forma podríem tenir un mètode que s'executi al inici del test de la següent manera:
+##### Fer crides simulant un client als nostres serveis REST exposats de forma real
+
+Per a realitzar les crides als nostres serveis REST exposats de forma real utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient*.
+Per a poder verificar que la resposta és l'esperada, a l'inici del test introduirem elements "tweets" utilitzant el repositori de tweets. D’aquesta forma podríem tenir un mètode que s'executi a l'inici del test de la següent manera:
 
 ```java
 
 	@Autowired
 	TweetRepository tweetRepository;
-
 	Tweet helloWorldTweet;
 	Tweet secondTweet;
 
 	@Before
 	public void before() {
 		helloWorldTweet = new Tweet("Hello, World!");
-
 		secondTweet = new Tweet("Second tweet");
-
 		helloWorldTweet = tweetRepository.save(helloWorldTweet).block();
-
 		secondTweet = tweetRepository.save(secondTweet).block();
 	}
 
 ```
 
-Utilitzarem el mètode "block" per assegurar-nos que quan s'hagi executat el mètode "before" els elements han estat introduïts al sistema. Per a comprovar els serveis REST "all tweets" farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before".
+Utilitzarem el mètode "block" per assegurar-nos que, quan s'hagi executat el mètode "before", els elements han estat introduïts al sistema. Per a comprovar els serveis REST "all tweets" farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before".
 
 ```java
 
@@ -136,11 +132,10 @@ Per a comprovar els serveis REST "get tweet per identificador" farem una crida a
 
 ```
 
-Cal tenir present que en aquest cas estem fent crides "reals" i, per tant, la instància repositori de "tweets" ha d'estar inicialitzada. En el nostre cas, no estem atacant a una base de dades MongoDB real, sinó que estem utilitzant una instància "simulada" de MongoDB creada amb test containers.
-
+Cal tenir present que en aquest cas estem fent crides reals i, per tant, la instància repositori de "tweets" ha d'estar inicialitzada. En el nostre cas, no estem atacant a una base de dades MongoDB real, sinó que estem utilitzant una instància "simulada" de MongoDB creada amb test containers.
 En aquest cas no utilitzarem el component *reactor.test.StepVerifier* per a verificar els serveis REST amb reactiu ja que, al connectar-nos als serveis en forma real, no podem garantir la seqüència de "tweets" de retorn.
 
-La classe completa de test és la següent:
+La classe completa de test seria doncs:
 
 ```java
 
@@ -178,11 +173,8 @@ public class TweetWebFluxWebTest {
 	@Before
 	public void before() {
 		helloWorldTweet = new Tweet("Hello, World!");
-
 		secondTweet = new Tweet("Second tweet");
-
 		helloWorldTweet = tweetRepository.save(helloWorldTweet).block();
-
 		secondTweet = tweetRepository.save(secondTweet).block();
 	}
 
@@ -213,7 +205,6 @@ public class TweetWebFluxWebTest {
 	}
 
 	private void testGetSingleTweet(String uri) {
-
 		webTestClient.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
 				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
 				.contentType(MediaType.APPLICATION_JSON_UTF8).expectBody(Tweet.class).consumeWith(response -> Assertions
@@ -223,11 +214,11 @@ public class TweetWebFluxWebTest {
 }
 
 ```
-#### Fer crides simulant un client als nostres serveis rest mockejats
+
+##### Fer crides simulant un client als nostres serveis REST mockejats
 
 Per a realitzar les crides als nostres serveis rest mockejats utilitzarem les funcionalitats del component *org.springframework.test.web.reactive.server.WebTestClient* i, per a verificar la resposta dels serveis REST amb reactiu, utilitzarem *reactor.test.StepVerifier*
-
-Per a poder verificar que la resposta és l'esperada, al inici del test introduirem elements "tweets" utilitzant el repositori de tweets. Aquest el mockejarem per a no haver de tenir una base de dades instanciada i per a poder tenir control de la resposta de cada mètode del repositori.
+Per a poder verificar que la resposta és l'esperada, a l'inici del test introduirem elements "tweets" utilitzant el repositori de tweets. Aquest el mockejarem per a no haver de tenir una base de dades instanciada i per a poder tenir control de la resposta de cada mètode del repositori.
 
 Així podríem tenir un mètode que s'executi a l’inici del test de la següent manera:
 
@@ -235,7 +226,6 @@ Així podríem tenir un mètode que s'executi a l’inici del test de la següen
 
 	@MockBean
 	TweetRepository tweetRepository;
-
 	Tweet helloWorldTweet;
 	Tweet secondTweet;
 
@@ -245,18 +235,15 @@ Així podríem tenir un mètode que s'executi a l’inici del test de la següen
 	public void before() {
 		helloWorldTweet = new Tweet("Hello, World!");
 		helloWorldTweet.setId("1");
-
 		secondTweet = new Tweet("Second tweet");
 		secondTweet.setId("2");
-
 		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
-
 		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
 	}
 
 ```
 
-Per a comprovar els serveis REST "all tweets" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha un llistat d'elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que els elements que hem afegit al mètode "before" són els que obtenim a la resposta i que la seqüència amb que els obtenim és l'esperada
+Per a comprovar els serveis REST "all tweets" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha un llistat d'elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que els elements que hem afegit al mètode "before" són els que obtenim a la resposta i que la seqüència amb que els obtenim és l'esperada.
 
 Així per exemple, per a testejar els serveis REST de "get all tweets" tindríem:
 
@@ -290,7 +277,7 @@ Així per exemple, per a testejar els serveis REST de "get all tweets" tindríem
 
 ```
 
-Per a comprovar els serveis REST "get tweet per id" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que l'element que hem afegit al mètode "before" és el que obtenim a la resposta i que no obtenim cap més element.
+Per a comprovar els serveis REST "get tweet per identificador" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que l'element que hem afegit al mètode "before" és el que obtenim a la resposta i que no obtenim cap més element.
 
 Per a comprovar els serveis REST "get tweet per identificador" tindríem:
 
@@ -312,7 +299,6 @@ Per a comprovar els serveis REST "get tweet per identificador" tindríem:
 	}
 
 	private void testGetSingleTweet(String uri) {
-
 		checkWebFluxGetSingleTweet(webTestClient.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
 				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
 				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
@@ -367,12 +353,9 @@ public class TweetWebFluxMockWebTest {
 	public void before() {
 		helloWorldTweet = new Tweet("Hello, World!");
 		helloWorldTweet.setId("1");
-
 		secondTweet = new Tweet("Second tweet");
 		secondTweet.setId("2");
-
 		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
-
 		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
 	}
 
@@ -408,7 +391,6 @@ public class TweetWebFluxMockWebTest {
 	}
 
 	private void testGetSingleTweet(String uri) {
-
 		checkWebFluxGetSingleTweet(webTestClient.get().uri(uri, Collections.singletonMap("id", helloWorldTweet.getId()))
 				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
 				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
@@ -424,10 +406,7 @@ public class TweetWebFluxMockWebTest {
 
 ### Conclusions
 
-Per a simular la crida als serveis REST reactius i verificar la resposta utilitzarem les funcionalitats del component **org.springframework.test.web.reactive.server.WebTestClient**.
-<br>
-Per verificar el contingut i la seqüencia de resposta dels serveis rest reactius utilitzarem **reactor.test.StepVerifier**.
-<br>
-Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest exposats de forma real**.
-<br>
-Si volem realitzar testos del negoci associat als serveis REST reactius utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest mockejats**.
+- Per a simular la crida als serveis REST reactius i verificar la resposta utilitzarem les funcionalitats del component **org.springframework.test.web.reactive.server.WebTestClient**.
+- Per verificar el contingut i la seqüencia de resposta dels serveis rest reactius utilitzarem **reactor.test.StepVerifier**.
+- Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest exposats de forma real**.
+- Si volem realitzar testos del negoci associat als serveis REST reactius utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest mockejats**.
