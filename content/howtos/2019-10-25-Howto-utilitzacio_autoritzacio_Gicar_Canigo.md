@@ -266,9 +266,9 @@ Aquest fitxer ha d'estar ubicat a "/src/main/resources/config/props" i ha d'incl
 #			servidor d'aplicacions.
 #		Exemples de configuració:
 #
-#			*.security.database.jndiName	   ->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat més especifica per al entorn en el qual s'executa l'aplicació.
+#			*.security.database.jndiName	->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat més especifica per al entorn en el qual s'executa l'aplicació.
 #			dev.security.database.jndiName  ->  Propietat vàlida només a desenvolupament.
-#			test.security.database.jndiName  ->  Propietat vàlida només a test.
+#			test.security.database.jndiName ->  Propietat vàlida només a test.
 #
 #
 #
