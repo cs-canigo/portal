@@ -13,7 +13,7 @@ Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessit
 
 ### Introducció
 
-Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incoporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
+Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incorporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
 Teniu disponible la documentació de WebFlux de Canigó 3.4 a [modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/) i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn.
 
 
@@ -77,7 +77,7 @@ Per a poder verificar que la resposta és l'esperada, a l'inici del test introdu
 
 ```
 
-Utilitzarem el mètode "block" per assegurar-nos que, quan s'hagi executat el mètode "before", els elements han estat introduïts al sistema. Per a comprovar els serveis REST "all tweets" farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before".
+Utilitzarem el mètode "block" per assegurar-nos que, quan s'hagi executat el mètode "before", els elements han estat introduïts al sistema. Per a comprovar els serveis REST "all tweets" farem una crida als serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un llistat d'elements de tipus "tweet" i que en el llistat hi consten els elements afegits al mètode "before".
 
 ```java
 
@@ -104,7 +104,7 @@ Utilitzarem el mètode "block" per assegurar-nos que, quan s'hagi executat el m�
 
 ```
 
-Per a comprovar els serveis REST "get tweet per identificador" farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un element de tipus "tweet" i que l'element retornat és el "tweet" que hem insertat prèviament al mètode "before".
+Per a comprovar els serveis REST "get tweet per identificador" farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el _body_ de la resposta hi ha un element de tipus "tweet" i que l'element retornat és el "tweet" que hem inserit prèviament al mètode "before".
 
 ```java
 
@@ -278,7 +278,7 @@ Així per exemple, per a testejar els serveis REST de "get all tweets" tindríem
 
 ```
 
-Per a comprovar els serveis REST "get tweet per identificador" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que l'element que hem afegit al mètode "before" és el que obtenim a la resposta i que no obtenim cap més element.
+Per a comprovar els serveis REST "get tweet per identificador" farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el _body_ de la resposta hi ha elements de tipus "tweet". Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component *reactor.test.StepVerifier*, que l'element que hem afegit al mètode "before" és el que obtenim a la resposta i que no obtenim cap més element.
 
 Per a comprovar els serveis REST "get tweet per identificador" tindríem:
 
@@ -410,4 +410,4 @@ public class TweetWebFluxMockWebTest {
 - Per a simular la crida als serveis REST reactius i verificar la resposta utilitzarem les funcionalitats del component **org.springframework.test.web.reactive.server.WebTestClient**.
 - Per verificar el contingut i la seqüencia de resposta dels serveis rest reactius utilitzarem **reactor.test.StepVerifier**.
 - Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest exposats de forma real**.
-- Si volem realitzar testos del negoci associat als serveis REST reactius utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest mockejats**.
+- Si volem realitzar tests del negoci associats als serveis REST reactius utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest mockejats**.
