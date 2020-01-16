@@ -196,7 +196,7 @@ Exemple del fitxer de configuració per a un base de dades H2:
 </beans>
 ```
 
-Exemple del fitxer de configuració per a un base de dades Oracle, Mysql, Postgres per jdbc:
+Exemple del fitxer de configuració per a un base de dades Oracle, Mysql o Postgres per jdbc:
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -252,7 +252,7 @@ Exemple del fitxer de configuració per a un base de dades Oracle, Mysql, Postgr
 </beans>
 ```
 
-Exemple del fitxer de configuració per a un base de dades Oracle, Mysql, Postgres per jndi:
+Exemple del fitxer de configuració per a un base de dades Oracle, Mysql o Postgres per jndi:
 ```
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
