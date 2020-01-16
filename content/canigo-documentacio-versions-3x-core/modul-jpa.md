@@ -1,5 +1,5 @@
 +++
-date        = "2018-11-07T13:26:16+01:00"
+date        = "2019-01-16"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
 sections    = "Canigó. Documentació versió 3.x"
@@ -189,16 +189,151 @@ Exemple del fitxer de configuració per a un base de dades H2:
 	</tx:advice>
 	
 	<jdbc:embedded-database id="dataSource" type="H2">
-		<jdbc:script location="classpath:scripts/db-auth-hsqldb-schema.sql"/>
-		<jdbc:script location="classpath:scripts/db-auth-hsqldb-data.sql"/>
-		<jdbc:script location="classpath:scripts/db-app-hsqldb-schema.sql"/>
-		<jdbc:script location="classpath:scripts/db-app-hsqldb-data.sql"/>
+		<jdbc:script location="classpath:scripts/h2/h2-db-app-h2db-schema.sql"/>
+		<jdbc:script location="classpath:scripts/h2/h2-db-app-h2db-data.sql"/>
 	</jdbc:embedded-database>
 
 </beans>
 ```
 
+Exemple del fitxer de configuració per a un base de dades per jdbc (Oracle, mysql, postgres):
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<aop:aspectj-autoproxy />
+	
+	<jpa:repositories base-package="cat.gencat.test.repository" base-class="cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl"/>
+	
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<description>
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		</description>
+		<property name="showSql" value="true" />
+		<property name="generateDdl" value="false" />
+		<property name="database" value="${persistence.database}" />
+		<property name="databasePlatform" value="${persistence.dialect}" />
+	</bean>
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="filter*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+	  <property name="driverClassName" value="${jdbc.driverClassName}"/>
+	  <property name="url" value="${jdbc.url}"/>
+	  <property name="username" value="${jdbc.username}"/>
+	  <property name="password" value="${jdbc.password}"/>
+	</bean>
+
+</beans>
+```
+
+Exemple del fitxer de configuració per a un base de dades per jndi (Oracle, mysql, postgres):
+```
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+
+	<aop:aspectj-autoproxy />
+	
+	<jpa:repositories base-package="cat.gencat.test.repository" base-class="cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl"/>
+	
+	<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+		<description>
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		</description>
+		<property name="showSql" value="true" />
+		<property name="generateDdl" value="false" />
+		<property name="database" value="${persistence.database}" />
+		<property name="databasePlatform" value="${persistence.dialect}" />
+	</bean>
+
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="filter*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="load*" propagation="SUPPORTS" read-only="true" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="insert*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+	  <property name="jndiName" value="${jndi.name}"/>
+	  <property name="lookupOnStartup" value="${jndi.lookupOnStartup:true}"/>
+	  <property name="cache" value="${jndi.cache:true}"/>
+	  <property name="proxyInterface" value="javax.sql.DataSource"/>
+	</bean>
+
+</beans>
+```
+
 Al tag **jpa:repositories** al paràmetre **base-package** s'ha d'indicar el package on es troben els repositoris de l'aplicació.
+
+**jdbc.properties**
+
+Propietat si l'aplicació va per jdbc
+
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jdbc.properties
+
+Propietat | Requerit | Descripció
+--------- | -------- | ----------
+*.jdbc.driverClassName | Si | Nom de classe del driver per a la connexió a la base de dades.
+*.jdbc.url | Si | URL de connexió a la base de dades.
+*.jdbc.username | Si | Usuari de connexió a la base de dades.
+*.jdbc.password | Si | Password de connexió a la base de dades
+
+**jndi.properties**
+
+Propietat si l'aplicació va per jndi
+
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jndi.properties
+
+Propietat | Requerit | Descripció
+--------- | -------- | ----------
+*.jndi.name | Si | Especifica el nom JNDI a cercar.
+*.jndi.lookupOnStartup | No | Cerca l'objecte JNDI durant l'arranc. Per defecte: true.
+*.jndi.cache | No | Permet cachejar l'objecte JNDI. Per defecte: true.
 
 ### Ús dels repositoris
 
