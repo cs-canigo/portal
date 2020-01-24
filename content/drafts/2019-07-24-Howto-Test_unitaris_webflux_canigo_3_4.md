@@ -411,3 +411,5 @@ public class TweetWebFluxMockWebTest {
 - Per verificar el contingut i la seqüencia de resposta dels serveis rest reactius utilitzarem **reactor.test.StepVerifier**.
 - Si volem realitzar tests d'integració complets extrem a extrem utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest exposats de forma real**.
 - Si volem realitzar tests del negoci associats als serveis REST reactius utilitzarem l'estratègia de **fer crides simulant un client als nostres serveis rest mockejats**.
+
+Si necessiteu més informació, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
