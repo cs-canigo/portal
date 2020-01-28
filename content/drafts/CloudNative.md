@@ -91,14 +91,22 @@ Finalment, la CNCF també ofereix el [**“Cloud Native Serveless Landscape”**
 
 ## Referències:
  
-- [**Cloud Native – principios, aplicaciones y desafíos**]()
-- [**Cloud Native Computing Foundation**]()
-- [**What are Cloud-Native Applications?**]()
-- [**10 Key Attributes of Cloud-Native Applications**]()
-- [**Cloud Computing vs. Cloud Native: The Difference Revealed!**]()
-- [**Blog d’arquitectura CTTI: DevOps**]()
-- [**El legendario origen del movimiento DevOps**]()
-- [**Qué es DevOps (y sobre todo qué no es DevOps)**]()
-- [**DevOps, vampiros y licántropos**]()
+-[**Cloud Native – principios, aplicaciones y desafíos**](https://www.aplyca.com/es/blog/cloud-native)
+
+-[**Cloud Native Computing Foundation**](https://www.cncf.io/)
+
+-[**What are Cloud-Native Applications?**](https://pivotal.io/cloud-native)
+
+-[**10 Key Attributes of Cloud-Native Applications**](https://thenewstack.io/10-key-attributes-of-cloud-native-applications/)
+
+-[**Cloud Computing vs. Cloud Native: The Difference Revealed!**](https://container-solutions.com/cloud-computing-vs-cloud-native-the-difference-revealed/)
+
+-[**Blog d’arquitectura CTTI: DevOps**](https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/)
+
+-[**El legendario origen del movimiento DevOps**](https://www.paradigmadigital.com/techbiz/el-legendario-origen-del-movimiento-devops/)
+
+-[**Qué es DevOps (y sobre todo qué no es DevOps)**](https://www.paradigmadigital.com/techbiz/que-es-devops-y-sobre-todo-que-no-es-devops/)
+
+-[**DevOps, vampiros y licántropos**](https://www.paradigmadigital.com/techbiz/devops-vampiros-y-licantropos-la-solucion-a-un-conflicto-milenario/?utm_source=Site&utm_campaign=Related_Posts_Right&utm_medium=Blog)
 
 
