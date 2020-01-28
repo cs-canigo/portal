@@ -10,7 +10,7 @@ imatge      = "/images/bloc/2020/01/CloudNative1.png"
 key         = "GENER2020"
 +++
 
-#Natiu en núvol (Cloud Native)
+## Natiu en núvol (Cloud Native)
 
 ![CloudNative1](/images/bloc/2020/01/CloudNative1.png)
  
@@ -30,7 +30,7 @@ Tot i que natiu en núvol explota els principis essencials de la computació en 
 
 Per fer-ho, natiu en núvol es basa en quatre eixos o pilars:
  
-##1.	[**DevOps**](https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/): 
+## 1.	[DevOps](https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/): 
 
 ![CloudNative2](/images/bloc/2020/01/CloudNative2.png)
 
@@ -43,19 +43,19 @@ Alguna de les pràctiques més destacades són:
 -	Potenciar la col·laboració entre equips de desenvolupament i operacions.
 -	Reduir el risc de nous desplegaments en base a l’ús de la pràctica del lliurament continu.
  
-##2.	**Lliurament continu (Continuous Delivery):**
+## 2.	Lliurament continu (Continuous Delivery):
 
 ![CloudNative3](/images/bloc/2020/01/CloudNative3.png)
  
 Es tracta d’un enfocament en enginyeria de programari basat en la producció de noves versions en cicles curts per part dels equips, assegurant que el codi es pugui entregar de forma confiable en qualsevol moment, tot rebent retroacció en un temps menor. Sol basar-se en 3 etapes: automatització de la construcció dels artefactes i integració contínua, automatització de les proves i automatització de la implementació. 
  
-##3.	[**Microserveis:**](https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/): 
+## 3.	[Microserveis:](https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/): 
 
 ![CloudNative4](/images/bloc/2020/01/CloudNative4.png)
 
 Pot ser el pilar que aporta més al principi d'escalabilitat. Bàsicament tenim, en comptes de la clàssica aplicació monolítica, un conjunt de serveis (un per cada element o funcionalitat) per a ésser distribuïts i desplegats de forma desacoblada. Per tant, el que  es fa és passar d'una gran aplicació a un conjunt de petites funcionalitats molt més senzilles i àgils: serveis que a més son accessibles des de diversos sistemes tot proporcionant escalabilitat, reutilització de codi, simplificació de manteniment i configuració, etc.
  
-##4.	[**Contenidors:**](https://canigo.ctti.gencat.cat/blog/2015/12/contenidors/): 
+## 4.	[Contenidors:](https://canigo.ctti.gencat.cat/blog/2015/12/contenidors/): 
 
 ![CloudNative5](/images/bloc/2020/01/CloudNative5.png)
 
@@ -67,16 +67,16 @@ Coneguts els pilars en què  es basa natiu en núvol i els principis que atén, 
 
 Com afegit a tenir en compte, comentar que la CNCF, per ajudar a la implantació de natiu en núvol, recomana seguir el [**“Cloud Native Trail Map”**](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png), que és un itinerari recomanat de fins a deu etapes per aprofitar les tecnologies natives de codi obert. A cada etapa ens ofereix una sèrie de productes de programari especialitzats per cobrir les necessitats de la mateixa. Les etapes són (citant al propi document):
 
-*1.	“Containerization*
-*2.	CI/CD (Continuous Integration/Continuous Delivery)*
-*3.	Orchestration & Application Definition*
-*4.	Observability & Analysis*
-*5.	Service Proxy, Discovery & Mesh*
-*6.	Networking & Policy*
-*7.	Distributed Database & Storage*
-*8.	Streaming & Messaging*
-*9.	Container registry & Runtime*
-*10.	Software Distribution”*
+* 1.	*Containerization*
+* 2.	*CI/CD (Continuous Integration/Continuous Delivery)*
+* 3.	*Orchestration & Application Definition*
+* 4.	*Observability & Analysis*
+* 5.	*Service Proxy, Discovery & Mesh*
+* 6.	*Networking & Policy*
+* 7.	*Distributed Database & Storage*
+* 8.	*Streaming & Messaging*
+* 9.	*Container registry & Runtime*
+* 10.	*Software Distribution”*
 
 Cal aclarir que només les tres primeres etapes son obligatòries, mentre que la resta són opcionals en funció de les circumstàncies.
 
@@ -89,14 +89,16 @@ Finalment, la CNCF també ofereix el [**“Cloud Native Serveless Landscape”**
 ![CloudNative8](/images/bloc/2020/01/CloudNative8.png)
 
 
-##Referències:
+## Referències:
  
-[**Cloud Native – principios, aplicaciones y desafíos**]()
-[**Cloud Native Computing Foundation**]()
-[**What are Cloud-Native Applications?**]()
-[**10 Key Attributes of Cloud-Native Applications**]()
-[**Cloud Computing vs. Cloud Native: The Difference Revealed!**]()
-[**Blog d’arquitectura CTTI: DevOps**]()
-[**El legendario origen del movimiento DevOps**]()
-[**Qué es DevOps (y sobre todo qué no es DevOps)**]()
-[**DevOps, vampiros y licántropos**]()
+- [**Cloud Native – principios, aplicaciones y desafíos**]()
+- [**Cloud Native Computing Foundation**]()
+- [**What are Cloud-Native Applications?**]()
+- [**10 Key Attributes of Cloud-Native Applications**]()
+- [**Cloud Computing vs. Cloud Native: The Difference Revealed!**]()
+- [**Blog d’arquitectura CTTI: DevOps**]()
+- [**El legendario origen del movimiento DevOps**]()
+- [**Qué es DevOps (y sobre todo qué no es DevOps)**]()
+- [**DevOps, vampiros y licántropos**]()
+
+
