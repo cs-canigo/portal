@@ -32,7 +32,7 @@ Per fer-ho, natiu en núvol es basa en quatre eixos o pilars:
  
 ## 1.	[DevOps](https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/): 
 
-![CloudNative2](/images/bloc/2020/01/CloudNative2.png =250x)
+![CloudNative2](/images/bloc/2020/01/CloudNative2.png)
 
 Són un conjunt de pràctiques implementades en base a una sèrie de principis fonamentals que tenen per objectiu reduir el temps destinat a lliurar noves versions d’un programari a entorns productius, en base a l’automatització de tasques, a la detecció precoç d’errors abans d’entrar a producció i a la millora de la col·laboració i confiança entre el equips de desenvolupament (Dev) i d’operacions, qualitat i seguretat (Ops). 
 
@@ -51,7 +51,7 @@ Es tracta d’un enfocament en enginyeria de programari basat en la producció d
  
 ## 3.	[Microserveis:](https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/): 
 
-![CloudNative4](/images/bloc/2020/01/CloudNative4.png =250x)
+![CloudNative4](/images/bloc/2020/01/CloudNative4.png)
 
 Pot ser el pilar que aporta més al principi d'escalabilitat. Bàsicament tenim, en comptes de la clàssica aplicació monolítica, un conjunt de serveis (un per cada element o funcionalitat) per a ésser distribuïts i desplegats de forma desacoblada. Per tant, el que  es fa és passar d'una gran aplicació a un conjunt de petites funcionalitats molt més senzilles i àgils: serveis que a més son accessibles des de diversos sistemes tot proporcionant escalabilitat, reutilització de codi, simplificació de manteniment i configuració, etc.
  
