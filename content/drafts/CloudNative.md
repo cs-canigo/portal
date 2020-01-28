@@ -10,10 +10,11 @@ imatge      = "/images/bloc/2020/01/CloudNative1.png"
 key         = "GENER2020"
 +++
 
+![CloudNative1](/images/bloc/2020/01/CloudNative1.png)
+
+
 ## Natiu en núvol (Cloud Native)
 
-![CloudNative1](/images/bloc/2020/01/CloudNative1.png)
- 
 Natiu en núvol (de l’anglès “Cloud Native”) esdevé un patró d'arquitectura de programari per al desenvolupament d'aplicacions tot atenent a tres principis essencials: escalabilitat, elasticitat i agilitat.
 
 -	**Escalabilitat i elasticitat:** permetre el creixement vertical o horitzontal de forma ràpida i dinàmica, sense restriccions en termes del maquinari en el que s’executen, ja sigui pel creixement natural de l’aplicació o per necessitats extraordinàries derivades de pics en la demanda.
