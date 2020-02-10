@@ -12,20 +12,20 @@ Per a la construcció d'una aplicació, i sobretot amb estratègies DevOps, si l
 
 https://docs.docker.com/docker-hub/official_images/
 
-Les aplicacions Canigó utilitzen el [plugin de maven surfire](http://maven.apache.org/surefire/maven-surefire-plugin/). Amb aquest plugin ens permet indicar quins testos volem que s'executin i incorporar testos de mòduls depenents. Aquest plugin ve incorporat dins de canigo.root, per tant, si l'aplicació hereta de canigo.root utilitza aquest plugin per passar els tests.
+Les aplicacions Canigó utilitzen el [plugin de maven surfire](http://maven.apache.org/surefire/maven-surefire-plugin/). Amb aquest plugin ens permet indicar quins tests volem que s'executin i incorporar tests de mòduls depenents. Aquest plugin ve incorporat dins de canigo.root, per tant, si l'aplicació hereta de canigo.root, utilitza aquest plugin per passar els tests.
 
 S'ha comprovat que amb la versió de la imatge de docker 3.5.4-jdk-8, 3.5.4-jdk-9 i 3.5.4-jdk-10 de maven i la versió 2.19.1 del plugin de maven surefire, s'obté un error al executar els tests
 
 
 ## Detall del problema
 
-Partim d'una aplicació amb Canigó, que hereta de canigo.root i per tant incorpora el plugin de maven surefire versió 2.19.1. Si en aquesta aplicació li incorporem test i construïm l’aplicació amb la imatge de docker de maven versió 3.5.4-jdk-8, 3.5.4-jdk-9 i 3.5.4-jdk-10, executant per exemple en el cas de 3.5.4-jdk-8:
+Partim d'una aplicació amb Canigó, que hereta de canigo.root i per tant incorpora el plugin de maven surefire versió 2.19.1. Si en aquesta aplicació li incorporem tests i construïm l’aplicació amb la imatge de docker de maven versió 3.5.4-jdk-8, 3.5.4-jdk-9 i 3.5.4-jdk-10, executant per exemple en el cas de 3.5.4-jdk-8:
 
  ```
  docker run -v $PWD:/src -w "/src" maven:3.5.4-jdk-8 mvn clean package
  ```
 
-Al intentar executar els test de l'aplicació dona un error del tipus:
+Al intentar executar els tests de l'aplicació dona un error del tipus:
  
  ```
 [INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ BinarisApp ---
