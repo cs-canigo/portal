@@ -13,6 +13,12 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com implementar tests unitaris amb Webflux a Canigó 3.4] (/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
+
+- [Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó] (/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/)
+
+- [Com configurar i utilitzar IronPort a una aplicació Canigó] (/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/)
+
 - [Resolució problema optimització Spring a Canigó 2] (/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/)
 
 - [Afegir les dev tools de Spring a Canigó 3.4.0] (/howtos/2019-04-Howto-afegir_dev_tools_spring/)

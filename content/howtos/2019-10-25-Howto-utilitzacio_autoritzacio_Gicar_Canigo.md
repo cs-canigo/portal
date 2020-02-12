@@ -12,7 +12,7 @@ key         = "GENER2020"
 A les últimes novetats de Gicar s’incorpora la possibilitat de disposar d'un sistema d'autorització a més de l'autenticació.
 Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.
 
-## Cabçaleres HTTP
+## Capçaleres HTTP
 
 Hi ha dos tipus d'autenticació i d'autorització en els serveis d'una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l'opció d'autenticació i d'autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/).
 

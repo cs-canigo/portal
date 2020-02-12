@@ -92,11 +92,15 @@ git flow feature publish && git flow feature finish && git push
 
 4. Crear i publicar una nova release
 
+Si es vol es pot crear una nova release del codi, aquesta però, no pot tenir el mateix format que la versió de l'aplicació, ja que dins de les etapes de desplegament en la [Integració continua del SIC](https://canigo.ctti.gencat.cat/sic-serveis/ci/#etapes-de-desplegament), ja hi consta la generació del tag de build i la generació del tag definitiu amb la versió de l'aplicació
+
 ```bash
-git flow release start
+_RELEASE="Release 1.0.0"
+git flow release start $_RELEASE
+
 # Un cop s'han integrat canvis d'última hora de DEVELOP (si escau)
 
-git flow release finish
+git flow release finish $_RELEASE
 git push --tags
 ```
 
@@ -127,6 +131,8 @@ git push gencat master --tags
 * https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
 * https://danielkummer.github.io/git-flow-cheatsheet/
 * https://www.toptal.com/software/trunk-based-development-git-flow
+* https://canigo.ctti.gencat.cat/sic-serveis/ci/
+* https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
 
 ## Annex. Inicialitzar el repositori
 
