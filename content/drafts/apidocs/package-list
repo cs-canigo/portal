@@ -1,0 +1,16 @@
+cat.gencat.binarisapp
+cat.gencat.binarisapp.config
+cat.gencat.binarisapp.endpoints
+cat.gencat.binarisapp.model
+cat.gencat.binarisapp.model.rs.gitlab
+cat.gencat.binarisapp.model.rs.nexus
+cat.gencat.binarisapp.model.rs.response
+cat.gencat.binarisapp.repository
+cat.gencat.binarisapp.repository.impl
+cat.gencat.binarisapp.service
+cat.gencat.binarisapp.service.client
+cat.gencat.binarisapp.service.client.exception
+cat.gencat.binarisapp.service.client.impl
+cat.gencat.binarisapp.service.exception
+cat.gencat.binarisapp.service.impl
+cat.gencat.binarisapp.util
