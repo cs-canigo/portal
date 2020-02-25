@@ -23,7 +23,8 @@ Els objectius que es persegueixen són:
 * Reforçar el compliment normatiu de nomenclatura de versions
 * Possibilitat de fer-ne ús com a procediment de contingència en el desplegaments d’aplicacions
 
-No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
+No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu
+utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 ## Funcionament
 
@@ -31,7 +32,8 @@ No està pensat per a la pujada de binaris i arxius pesats que no són permesos 
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
 
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran
+d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
 Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) o sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
@@ -39,7 +41,13 @@ Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-ser
 
 ### Dipositar artefactes al SIC
 
-Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegar mitjançant el [Servei d'Integració Contínua] (/sic-serveis/ci/). <br/>
+Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web.
+
+Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
+procés de construcció, no es poden construir i desplegar mitjançant el [Servei d'Integració Contínua] (/sic-serveis/ci/). <br/>
+
+Els artefactes pujats al repositori podran ser sobreescrits sempre i quan es proporcioni la mateixa
+informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer)
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
@@ -55,9 +63,15 @@ En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i l
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
+
+**NOTA**: Els artefactes pujats al repositori podran ser sobreescrits sempre i quan es proporcioni la mateixa
+informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
+
 ### Recuperar artefactes del SIC
 
-Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. Aquesta acció és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament.
+
+Aquest servei és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
@@ -77,12 +91,15 @@ X GET [ u user:pwd ]
 "https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
 ```
 
-**IMPORTANT: L'anterior sistema de descàrrega d'artefactes romandrà activa fins el 30/04/2020** i, durant aquest periode, es pot accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
+**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà activa fins el 30/04/2020** i, durant aquest periode, es pot accedir mitjançant
+el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
 
 ## Eliminació de binaris
 
-S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
+S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi
+d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o
+contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
