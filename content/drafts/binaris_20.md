@@ -13,6 +13,10 @@ weight = 3
 
 ## Introducció
 
+PROVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
 El **Servei de Binaris del SIC** s'encarrega de centralitzar el lliurament d’artefactes a CPD/LldT per al desplegament d’aplicacions.
 
 No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs amb aquest objectiu es va habilitar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
