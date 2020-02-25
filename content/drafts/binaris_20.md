@@ -13,16 +13,17 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes per al seu desplegament. Els objectius que es persegueixen són:
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes a desplegar.
 
-* Centralitzar el sistema d'intercanvi d’artefactes a CPD/LldT
-* Potenciar la custodia de codi font al SIC
-* Centralitzar el repositori d’artefactes per a disposar en un únic sistema tant de llibreries com artefactes desplegables
-* Reforçar el compliment normatiu de nomenclatura de versions.
-* Adoptar-lo com procediment de contingència en el desplegaments d’aplicacions
+Els objectius que es persegueixen són:
+
+* Centralitzar el sistema d'intercanvi d’artefactes amb CPD/LldT
+* Potenciar la custodia de codi font al SIC de les aplicacions
+* Fer ús d'un únic repositori d’artefactes, tant de llibreries com artefactes desplegables
+* Reforçar el compliment normatiu de nomenclatura de versions
+* Possibilitat de fer-ne ús com a procediment de contingència en el desplegaments d’aplicacions
 
 No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
 
 ## Funcionament
 
@@ -76,9 +77,11 @@ X GET [ u user:pwd ]
 "https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
 ```
 
+**IMPORTANT: L'anterior sistema de descàrrega d'artefactes romandrà activa fins el 30/04/2020** i, durant aquest periode, es pot accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
+
 ## Eliminació de binaris
 
-S'executa un **procés diari nocturn** d'esborrat de binaris de forma que únicament es respectaran les últimes 5 versions repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
+S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
