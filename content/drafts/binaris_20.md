@@ -13,7 +13,7 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** s'encarrega de centralitzar el lliurament d’artefactes a CPD/LldT per al desplegament d’aplicacions. No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs amb aquest objectiu es va habilitar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
+El **Servei de Binaris del SIC** s'encarrega de centralitzar el lliurament d’artefactes a CPD/LldT per al desplegament d’aplicacions. No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 <span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
 
@@ -37,11 +37,11 @@ Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. Aquest s
 
 Es realitzen les següents comprovacions:
 
-* Dades obligatòries informades: codi de diàleg, projecte, versió i binari a pujar
-* El codi de versió acompleix l’estàndard de versions
-* El codi de projecte està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
-* Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi actualitzat el codi font en els últims 20 dies
-* El fitxer té una mida màxima de 500MB
+* Dades obligatòries informades: **codi de diàleg, projecte, versió i binari a pujar**
+* El codi de **versió** acompleix l’estàndard de versions
+* El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
+* Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
+* El fitxer té una **mida màxima de 500MB**
 
 En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i la URL de descàrrega:
 
@@ -49,11 +49,22 @@ En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i l
 
 ### Recuperar artefactes del SIC
 
-Permet la descàrrega d'artefactes lliurats pels responsables de l'aplicació per al seu desplegament. Aquesta acció és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. Aquesta acció és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
-La URL de descàrrega seguirà el patró: "<URL_NEXUS>/repository/binaris/<codi_diàleg>/<projecte>/<versió>/<artefacte>""
+La URL de descàrrega seguirà el patró: "_URL_NEXUS_/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_"
+
+El sistema permet la consulta i descàrrega remota d’artefactes:
+
+```
+curl
+X GET [ u user:pwd ]
+"https://hudson.pre.intranet.gencat.cat/nexus/ binaris / projecte /1.0.0/bin/DesktopOK.zip" O
+curl
+X GET [ u user:pwd ]
+"https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
+```
 
 ## Eliminació de binaris
 
