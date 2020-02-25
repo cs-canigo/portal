@@ -13,15 +13,15 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes a desplegar.
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes que cal desplegar.
 
 Els objectius que es persegueixen són:
 
-* Centralitzar el sistema d'intercanvi d’artefactes amb CPD/LldT
-* Potenciar la custodia de codi font al SIC de les aplicacions
-* Fer ús d'un únic repositori d’artefactes, tant de llibreries com artefactes desplegables
+* Unificar el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
+* Controlar la custodia de codi font al SIC de les aplicacions
+* Fer ús d'un únic repositori d’artefactes, tant per llibreries com per artefactes desplegables
 * Reforçar el compliment normatiu de nomenclatura de versions
-* Possibilitat de fer-ne ús com a procediment de contingència en el desplegaments d’aplicacions
+* Possibilitat de tenir un servei a usar com a procediment de contingència en el desplegaments d’aplicacions
 
 No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu
 utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
@@ -30,9 +30,9 @@ utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
+Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>.
 
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. Els **Release Manager i responsables de lot** disposaran
 d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
 Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
@@ -44,9 +44,9 @@ Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-ser
 Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web.
 
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
-procés de construcció, no es poden construir i desplegar mitjançant el [Servei d'Integració Contínua] (/sic-serveis/ci/). <br/>
+procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). <br/>
 
-Els artefactes pujats al repositori podran ser sobreescrits sempre i quan es proporcioni la mateixa
+Els artefactes pujats al repositori **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
