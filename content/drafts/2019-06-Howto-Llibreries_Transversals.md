@@ -9,10 +9,6 @@ key = ""
 
 # Howto Procediments de manteniment llibreries transversals
 
-PROVAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAA
-
 L'objectiu d'aquest article és mirar d'explicar els procediments a seguir per al manteniment de les llibreries transversals en mode col·laboratiu, des d'un punt de vista de gestió dels repositoris de codi.
 
 El públic a qui va dirigit aquest document és principalment tècnic i de gestió, enfocant els procediments a donar resposta a casos concrets.
