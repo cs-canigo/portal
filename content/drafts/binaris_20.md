@@ -34,7 +34,7 @@ Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.
 
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran
 d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
-Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) o sol·licitar-ho al seu responsable.
+Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
@@ -47,9 +47,10 @@ Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupade
 procés de construcció, no es poden construir i desplegar mitjançant el [Servei d'Integració Contínua] (/sic-serveis/ci/). <br/>
 
 Els artefactes pujats al repositori podran ser sobreescrits sempre i quan es proporcioni la mateixa
-informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer)
+informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
+
 
 Es realitzen les següents comprovacions:
 
@@ -58,6 +59,7 @@ Es realitzen les següents comprovacions:
 * El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
 * Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
 * El fitxer té una **mida màxima de 500MB**
+
 
 En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i la URL de descàrrega:
 
@@ -69,16 +71,19 @@ informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitx
 
 ### Recuperar artefactes del SIC
 
-Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament.
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. Pot optar per accedir
+directament mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris.
 
 Aquest servei és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
+
 La URL de descàrrega seguirà el següent patró:
 ```
-_URL_NEXUS_/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
+https://hudson.intranet.gencat.cat/nexus/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
 ```
+
 
 El sistema permet la consulta i descàrrega remota d’artefactes:
 
@@ -90,6 +95,7 @@ curl
 X GET [ u user:pwd ]
 "https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
 ```
+
 
 **NOTA: L'anterior sistema de descàrrega d'artefactes romandrà activa fins el 30/04/2020** i, durant aquest periode, es pot accedir mitjançant
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
