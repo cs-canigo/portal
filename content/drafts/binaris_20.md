@@ -13,8 +13,15 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** s'encarrega de centralitzar el lliurament d’artefactes a CPD/LldT per al desplegament d’aplicacions. No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes per al seu desplegament. Els objectius que es persegueixen són:
 
+* Centralitzar el sistema d'intercanvi d’artefactes a CPD/LldT
+* Potenciar la custodia de codi font al SIC
+* Centralitzar el repositori d’artefactes per a disposar en un únic sistema tant de llibreries com artefactes desplegables
+* Reforçar el compliment normatiu de nomenclatura de versions.
+* Adoptar-lo com procediment de contingència en el desplegaments d’aplicacions
+
+No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 <span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
 
 ## Funcionament
@@ -23,11 +30,11 @@ El **Servei de Binaris del SIC** s'encarrega de centralitzar el lliurament d’a
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
 
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
+Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) o sol·licitar-ho al seu responsable.
+
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
-
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager i responsables de lot disposaran d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
-Si no disposa d’accés haurà de sol·licitar-ho al seu responsable. Recordeu que teniu a la vostra disposició l’[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/).
 
 ### Dipositar artefactes al SIC
 
@@ -53,7 +60,10 @@ Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicaci�
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
-La URL de descàrrega seguirà el patró: "_URL_NEXUS_/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_"
+La URL de descàrrega seguirà el següent patró:
+```
+_URL_NEXUS_/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
+```
 
 El sistema permet la consulta i descàrrega remota d’artefactes:
 

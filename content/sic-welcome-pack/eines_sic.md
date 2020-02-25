@@ -63,7 +63,7 @@ Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
 <br/>
 Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
-## Binaris
+## Servei de binaris
 
 * **Com accedir**: https://bin.sic.intranet.gencat.cat/ mitjançant usuari GICAR.
 * **Tipus de solució**: servei de lliurament i recuperació d'artefactes.
@@ -72,7 +72,7 @@ Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 * **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada. Si l'aplicació no està exempta de repositar codi al Git, abans de cada pujada haurà d'assegurar-se d'haver **actualitzat el codi font** o el sistema no li permetrà realitzar la operació.
 * **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
 
-Per a més informació: [Binaris] (/sic-serveis/binaris/)
+Per a més informació: [Servei de binaris] (/sic-serveis/binaris/)
 
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
