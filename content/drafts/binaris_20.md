@@ -13,28 +13,28 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes que cal desplegar.
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes de cara al desplegament d'aplicacions.
 
 Els objectius que es persegueixen són:
 
-* Unificar el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
-* Controlar la custodia de codi font al SIC de les aplicacions
-* Fer ús d'un únic repositori d’artefactes, tant per llibreries com per artefactes desplegables
-* Reforçar el compliment normatiu de nomenclatura de versions
-* Possibilitat de tenir un servei a usar com a procediment de contingència en el desplegaments d’aplicacions
+* **Unificar** el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
+* **Potenciar la custodia de codi font** al SIC de les aplicacions
+* Fer ús d'un **únic repositori d’artefactes**, tant per llibreries com per artefactes desplegables
+* Reforçar el **compliment normatiu** de nomenclatura de versions
+* Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegaments d’aplicacions
 
-No està pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest objectiu podeu
+No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest finalitat, podeu
 utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 ## Funcionament
 
 ### Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>.
+Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat. <br/>
 
 Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. Els **Release Manager i responsables de lot** disposaran
-d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els tècnics de CPD només disposaran d’accés a la descàrrega de binaris.
-Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
+d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els **tècnics de CPD i lloc de treball** només disposaran d’accés a la descàrrega de binaris.
+En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
@@ -44,9 +44,8 @@ Si no disposa d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-ser
 Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web.
 
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
-procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). <br/>
-
-Els artefactes pujats al repositori **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
+procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/).
+Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
@@ -65,21 +64,18 @@ En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i l
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
-
-**NOTA**: Els artefactes pujats al repositori podran ser sobreescrits sempre i quan es proporcioni la mateixa
-informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
-
 ### Recuperar artefactes del SIC
 
-Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. Pot optar per accedir
-directament mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris.
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. També pot optar per accedir
+directament al repositori de binaris mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris.
 
-Aquest servei és accessible per Release Managers, responsables de lot i tècnics de CPD/LldT en mode lectura, no permetent la seva eliminació.
+Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, no permetent la seva edició
+o eliminació.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
 
-La URL de descàrrega seguirà el següent patró:
+La **URL de descàrrega** seguirà el següent patró:
 ```
 https://hudson.intranet.gencat.cat/nexus/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
 ```
@@ -96,14 +92,15 @@ X GET [ u user:pwd ]
 "https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
 ```
 
-
-**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà activa fins el 30/04/2020** i, durant aquest periode, es pot accedir mitjançant
+<br/>
+**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020** i, durant aquest periode, es podrà accedir mitjançant
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
 
+<!---
 ## Eliminació de binaris
-
 S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi
 d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
+--->
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
