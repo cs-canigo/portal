@@ -69,10 +69,12 @@ En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats 
 Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. També pot optar per accedir
 directament al repositori de binaris mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris.
 
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
+
 Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, no permetent la seva edició
 o eliminació.
 
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
 
 
 La **URL de descàrrega** seguirà el següent patró:
