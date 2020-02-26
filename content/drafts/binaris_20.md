@@ -13,7 +13,7 @@ weight = 3
 
 ## Introducció
 
-El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes de cara al desplegament d'aplicacions.
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors per al lliurament d'artefactes de cara al desplegament d'aplicacions. <br/>
 
 Els objectius que es persegueixen són:
 
@@ -23,30 +23,27 @@ Els objectius que es persegueixen són:
 * Reforçar el **compliment normatiu** de nomenclatura de versions
 * Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegaments d’aplicacions
 
-No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no són permesos al GIT doncs, amb aquest finalitat, podeu
-utilitzar el servei [GIT-LFS](/howtos/2019-10-09-sic-Howto-Git-lfs/).
+No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT doncs, amb aquest finalitat, s'ha habilitat
+el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
-## Funcionament
 
-### Accés al servei
+## Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat. <br/>
 
 Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. Els **Release Manager i responsables de lot** disposaran
-d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els **tècnics de CPD i lloc de treball** només disposaran d’accés a la descàrrega de binaris.
+d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
 En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
 
-### Dipositar artefactes al SIC
+## Dipositar artefactes al SIC
 
 Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web.
 
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
 procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/).
-Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
-informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
@@ -60,11 +57,14 @@ Es realitzen les següents comprovacions:
 * El fitxer té una **mida màxima de 500MB**
 
 
-En finalitzar la pujada es mostra per pantalla la llista de binaris lliurats i la URL de descàrrega:
+Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
+informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
+
+En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada:
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
-### Recuperar artefactes del SIC
+## Recuperar artefactes del SIC
 
 Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per al seu desplegament. També pot optar per accedir
 directament al repositori de binaris mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris.
