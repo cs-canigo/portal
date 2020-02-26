@@ -97,7 +97,7 @@ X GET [ u user:pwd ]
 ```
 
 <br/><br/><br/>
-**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020** i, durant aquest periode, es podrà accedir mitjançant
+**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020** i, durant aquest període, es podrà accedir mitjançant
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
 
 <!---
