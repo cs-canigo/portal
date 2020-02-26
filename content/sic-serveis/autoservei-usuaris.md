@@ -123,5 +123,5 @@ En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'e
 **AVÍS**: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l'assignació desitjada.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si voleu més informació podeu consultar la secció de [**Manuals**](/sic/manuals/). <br/>
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

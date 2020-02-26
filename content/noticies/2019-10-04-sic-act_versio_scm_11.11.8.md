@@ -68,4 +68,4 @@ Per a més informació sobre les funcionalitats que proporciona Gitlab a la vers
 - [238 issues tancades](https://gitlab.com/gitlab-org/gitlab-foss/issues?scope=all&utf8=%E2%9C%93&state=all&milestone_title=11.11)
 
 <br>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
