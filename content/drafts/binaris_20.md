@@ -30,7 +30,7 @@ el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
 ## Accés al servei
 
-Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat. <br/>
+Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
@@ -90,10 +90,10 @@ El sistema permet la consulta i descàrrega remota d’artefactes:
 ```
 curl
 X GET [ u user:pwd ]
-"https://hudson.pre.intranet.gencat.cat/nexus/ binaris / projecte /1.0.0/bin/DesktopOK.zip" O
+"https://hudson.pre.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" O
 curl
 X GET [ u user:pwd ]
-"https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/ assets?q = projecte /1.0.0/*& binaris
+"https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
 ```
 
 <br/><br/><br/>
