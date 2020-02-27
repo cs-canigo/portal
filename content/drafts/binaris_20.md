@@ -66,9 +66,12 @@ per tal d’emplenar la petició de desplegament.
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
 <br/>
-**IMPORTANT**: Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
+
+<div class="message information">
+Els artefactes pujats al repositori de binaris <b>podran ser sobreescrits</b> sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer). Per tant, en cas d'haver sol·licitat ja el desplegament del binari i haver
 emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantenen operatives.
+</div>
 
 ## Recuperar artefactes del SIC
 
@@ -102,10 +105,14 @@ X GET [ u user:pwd ]
 "https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
 ```
 
-<br/><br/><br/>
+<br/><br/>
+<div class="message information">
+<b>L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020</b>. Durant aquest període, es podrà seguir accedint mitjançant
+el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
+</div>
+
 **IMPORTANT: <br/>
-L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020**. Durant aquest període, es podrà seguir accedint mitjançant
-el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
+ <br/>
 
 <!---
 ## Eliminació de binaris
