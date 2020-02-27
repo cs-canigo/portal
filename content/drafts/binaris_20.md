@@ -31,16 +31,16 @@ Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
 
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR:
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR, de forma que:
 
-* Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega.
+* Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega dels mateixos.
 * Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
 
 En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 ## Dipositar artefactes al SIC
 
-Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la imatge següent s'explica el seu funcionament.
+Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la següent imatge s'explica el seu funcionament:
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
@@ -66,21 +66,21 @@ per tal d’emplenar la petició de desplegament.
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
 <br/>
-**IMPORTANT**: Els artefactes pujats al repositori de binaris "podran ser sobreescrits** sempre i quan es proporcioni la mateixa
+**IMPORTANT**: Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer). Per tant, en cas d'haver sol·licitat ja el desplegament del binari i haver
-emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantindran operatives.
+emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantenen operatives.
 
 ## Recuperar artefactes del SIC
 
 Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per a procedir a fer el desplegament.
 Aquesta opció el dirigirà cap al repositori de binaris (al que també pot accedir mitjançant l'enllaç https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris) on
 podrà cercar l'entrada i l'artefacte que vol descarregar.
-Per a descarregar l'artefacte pot simplement fer ús de la **URL que el proveïdor d'aplicacions ha indicat a la petició** de desplegament.
+O simplement pot fer ús de la **URL que el proveïdor d'aplicacions ha indicat a la petició** de desplegament per accedir a la descàrrega directa.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
-Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, no permetent la seva edició
-o eliminació. S'ofereixen diverses opcions de cerca i visualització.
+Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
+informació. S'ofereixen diverses opcions de cerca i visualització.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
 
