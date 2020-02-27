@@ -1,5 +1,5 @@
 +++
-date = "2020-02-25"
+date = "2020-03-09"
 title = "Servei de Binaris"
 description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
