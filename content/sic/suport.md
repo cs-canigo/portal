@@ -203,6 +203,7 @@ Contingut:
    - Nom de l'aplicació: FRAMEWORK SIC
    - Descripció breu del suport
    - Descripció detallada del suport
+   
 
 
 Si teniu qualsevol dubte o problema i no podeu utilitzar els canals de suport establerts, podeu contactar amb l'Oficina Tècnica Canigó CTTI a través
