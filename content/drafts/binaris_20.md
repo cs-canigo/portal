@@ -111,8 +111,6 @@ X GET [ u user:pwd ]
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 </div>
 
-**IMPORTANT: <br/>
- <br/>
 
 <!---
 ## Eliminació de binaris
