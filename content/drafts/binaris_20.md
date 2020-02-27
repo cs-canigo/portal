@@ -21,8 +21,8 @@ Cobreix les següents funcions i requeriments del servei SIC:
 * **Unificar** el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
 * **Potenciar la custodia de codi font** al SIC de les aplicacions
 * Fer ús d'un **únic repositori d’artefactes**, tant per llibreries com per artefactes desplegables
-* Reforçar el **compliment normatiu** de nomenclatura de versions
-* Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegaments d’aplicacions
+* Reforçar el **compliment normatiu** en el versionat de les aplicacions
+* Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegament d’aplicacions
 
 ## Accés al servei
 
@@ -41,9 +41,10 @@ Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la im
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
+<br/>
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
 procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). No obstant, també està pensat
-per a fer-ne ús com a **procediment de contingència** en el desplegaments d’aplicacions.
+per a fer-ne ús com a **procediment de contingència** en el desplegament d’aplicacions.
 
 <br/>
 Es realitzen les següents comprovacions:
@@ -52,32 +53,31 @@ Es realitzen les següents comprovacions:
 * El codi de **versió** acompleix l’estàndard de versions
 * El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
 * Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
-* El fitxer té una **mida màxima de 500MB**
+* El fitxer té una **mida màxima de 500MB**. No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT
+doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
-**NOTA:** No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT doncs, amb aquest finalitat, s'ha habilitat
-el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
-
-
+<br/>
 En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquesta llista mostrada es podrà utilitzar
 per tal d’emplenar la petició de desplegament.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
 <br/>
-**NOTA: Els artefactes pujats al repositori de binaris podran ser sobreescrits** sempre i quan es proporcioni la mateixa
+**IMPORTANT**: Els artefactes pujats al repositori de binaris "podran ser sobreescrits** sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer). Per tant, en cas d'haver sol·licitat ja el desplegament del binari i haver
-emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantindran.
+emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantindran operatives.
 
 ## Recuperar artefactes del SIC
 
-Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per a procedir al seu desplegament. Pot optar per accedir
-al repositori de binaris mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris (o l'enllaç
-que proporciona l'aplicació) o pot fer referència a la URL de l'artefacte que el proveïdor d'aplicacions ha indicat a la petició de desplegament.
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per a procedir a fer el desplegament.
+Aquesta opció el dirigirà cap al repositori de binaris (al que també pot accedir mitjançant l'enllaç https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris) on
+podrà cercar l'entrada i l'artefacte que vol descarregar.
+Per a descarregar l'artefacte pot simplement fer ús de la **URL que el proveïdor d'aplicacions ha indicat a la petició** de desplegament.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
 
 Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, no permetent la seva edició
-o eliminació. S'ofereixen diverses opcions de visualització.
+o eliminació. S'ofereixen diverses opcions de cerca i visualització.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
 
@@ -100,7 +100,8 @@ X GET [ u user:pwd ]
 ```
 
 <br/><br/><br/>
-**NOTA: L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020** i, durant aquest període, es podrà accedir mitjançant
+**IMPORTANT: <br/>
+L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020**. Durant aquest període, es podrà seguir accedint mitjançant
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/ <br/>
 
 <!---
