@@ -46,12 +46,18 @@ La solució ha de:
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures.
 Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
 
+Es composa de les següents peces:
+
+* Arxiu de Configuració d’Aplicació (ACA)
+* Arxiu de Configuració d’Infraestructura (ACI)
+* Pipeline generadora
+
 El funcionament previst és el següent:
 
-1. Els **proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració**.
-2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de pipelines.
+* Els **proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració**.
+* Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de pipelines.
 Aquesta pipeline recupera els arxius de configuració necessaris per a la **generació de la pipeline** de l'aplicació i la dispara.
-3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, **no es tornarà a regenerar** i s'invocarà directament la darrera pipeline generada.
+* En posteriors execucions, sempre que no es canviï l'arxiu de configuració, **no es tornarà a regenerar** i s'invocarà directament la darrera pipeline generada.
 
 D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que
 construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació. Finalment, un cop generada la nova pipeline, aquesta serà invocada
@@ -81,6 +87,9 @@ que serà responsabilitat del proveïdor d'aplicacions mantenir-lo actualitzat, 
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
 ![Pipeline del SIC](/images/news/AutoserveiJobs-ACA.png)
+<br/>
+
+Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/)
 <br/>
 
 ### Arxiu de Configuració d'Infraestructures (ACI)
