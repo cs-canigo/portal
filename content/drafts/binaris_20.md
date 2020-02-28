@@ -1,5 +1,5 @@
 +++
-date = "2020-02-25"
+date = "2020-02-28"
 title = "Servei de Binaris"
 description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
@@ -67,13 +67,11 @@ per tal d’emplenar la petició de desplegament.
 
 <br/>
 
-<!---
 <div class="message information">
 Els artefactes pujats al repositori de binaris <b>podran ser sobreescrits</b> sempre i quan es proporcioni la mateixa
 informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer). Per tant, en cas d'haver sol·licitat ja el desplegament del binari i haver
 emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantenen operatives.
 </div>
---->
 
 ## Recuperar artefactes del SIC
 
@@ -108,13 +106,10 @@ X GET [ u user:pwd ]
 ```
 
 <br/><br/>
-<!---
 <div class="message information">
 <b>L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020</b>. Durant aquest període, es podrà seguir accedint mitjançant
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 </div>
---->
-
 
 <!---
 ## Eliminació de binaris
