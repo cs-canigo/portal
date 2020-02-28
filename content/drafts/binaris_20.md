@@ -1,5 +1,5 @@
 +++
-date = "2020-02-25"
+date = "2020-03-09"
 title = "Servei de Binaris"
 description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
@@ -107,6 +107,6 @@ d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si a
 
 <br/><br/><br/>
 Podeu accedir al [**Material formatiu**](/related/sic/2.0/formacio-binaris-20.pdf). <br/>
-Si voleu més informació podeu consultar la secció de [**Manuals**](/sic/manuals/). <br/>
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o
 contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
