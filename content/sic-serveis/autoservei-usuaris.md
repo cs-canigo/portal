@@ -59,7 +59,7 @@ La pertinença als grups d'aquest tipus és automàtica i ve donada per la categ
 
 ### Altres grups
 
-Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Responsables d'àmbit, Oficina de Qualitat, Oficina de Seguretat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
 La pertinença a aquests tipus de grups es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
 
 ## Funcionament
