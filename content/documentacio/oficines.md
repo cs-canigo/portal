@@ -60,5 +60,5 @@ cat.gencat.ctti.sic.oficines.utils.FileUtils.copyFile(arxiuOrigen, arxiuDesti)
 ```
 
 <br/>
-Si teniu qualsevol dubte utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
 
