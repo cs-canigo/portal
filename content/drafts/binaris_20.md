@@ -40,12 +40,14 @@ En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (
 
 ## Dipositar artefactes al SIC
 
-Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web.
+Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la següent imatge s'explica el seu funcionament:
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
+<br/>
 Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
-procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/).
+procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). No obstant, també està pensat
+per a fer-ne ús com a **procediment de contingència** en el desplegament d’aplicacions.
 
 <br/>
 Es realitzen les següents comprovacions:
@@ -54,16 +56,16 @@ Es realitzen les següents comprovacions:
 * El codi de **versió** acompleix l’estàndard de versions
 * El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
 * Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
-* El fitxer té una **mida màxima de 500MB**
+* El fitxer té una **mida màxima de 500MB**. No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT
+doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
-
-En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada:
+<br/>
+En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquesta llista mostrada es podrà utilitzar
+per tal d’emplenar la petició de desplegament.
 
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
 
 <br/>
-Els artefactes pujats al repositori de binaris **podran ser sobreescrits** sempre i quan es proporcioni la mateixa
-informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer).
 
 ## Recuperar artefactes del SIC
 
