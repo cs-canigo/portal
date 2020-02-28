@@ -44,6 +44,7 @@ Per dubtes o incidències en l’ús dels serveis del SIC, incloent aspectes rel
 
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
 
+<br/>
 #### Obrir nova petició a SAU-Remedy
 
 Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy per a que serveixi de guia per a aquells usuaris que no estiguin
@@ -160,6 +161,7 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil com, per exemple, el document de Disseny d'Arquitectura de l'aplicació per tal de disposar d'una primera
 aproximació sobre la tasca, la llibreria a publicar... etcètera.
 
+<br/>
 #### Contactar amb bústia SAU
 
 En cas que el **servei Remedy no es trobi disponible**, podrà optar per obrir una petició via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat). <br/>
