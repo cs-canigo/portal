@@ -31,8 +31,11 @@ Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.
 <CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
 
-Haurà d'autenticar-se amb de les seves credencials d'accés GICAR. Els **Release Manager i responsables de lot** disposaran
-d'accés al servei de pujada de binaris i podran operar amb els codis de diàleg assignats. Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR, de forma que:
+
+* Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega dels mateixos.
+* Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
+
 En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
 ## Dipositar artefactes al SIC
