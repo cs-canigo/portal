@@ -133,8 +133,8 @@ En cas de tractar-se d'una llibreria pròpia amb codi repositat al SIC, caldrà 
 
 ## Autoservei de jobs pipeline
 
-L'Autoservei de jobs pipeline permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
-intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per preparar la construcció del job corresponent per a cada projecte de GitLab.
+L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
+intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
 Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies compatibles

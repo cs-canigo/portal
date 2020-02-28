@@ -25,7 +25,7 @@ Amb l'autoservei de pipelines es poden definir tants entorns i infraestructures 
 
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 
-### Motivació
+## Motivació
 
 Els objectius que vol assolir aquesta nova funcionalitat són:
 
@@ -35,7 +35,7 @@ Els objectius que vol assolir aquesta nova funcionalitat són:
 * **Augmenta l'eficiència en les integracions d'aplicacions al SIC**, ja que s'eliminen del procés traspassos innecessaris d'informació i de responsabilitats a l'equip SIC.
 * De retruc, el fet d'afegir un sistema de configuració amb arxius YML independents de la plataforma d'Integració Contínua Jenkins **proporciona al SIC un nivell d'abstracció addicional amb el que es podria disposar d'altres eines d'automatització sense afectar als usuaris**.
 
-### Funcionament
+## Funcionament
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures. Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
 
@@ -50,12 +50,12 @@ El funcionament previst és el següent:
 D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació.
 Finalment, un cop generada la nova pipeline, aquesta serà invocada per realitzar la construcció i el desplegament automatitzats definits als arxius de configuració.
 
-### Configuració
+## Configuració
 
 Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.
 
 <br/>
-#### Arxiu de Configuració de l'Aplicació (ACA)
+### Arxiu de Configuració de l'Aplicació (ACA)
 
 La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de text en format YAML, que serà responsabilitat del proveïdor d'aplicacions de mantenir-lo actualitzat, en el que s'ha d'aportar la següent configuració:
 
@@ -72,7 +72,7 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 Es proporciona una [Guia de construcció del fitxer ACA](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple de cas d'ús.
 
 <br/>
-#### Arxiu de Configuració d'Infraestructures (ACI)
+### Arxiu de Configuració d'Infraestructures (ACI)
 
 D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC. En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
 
@@ -87,7 +87,7 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
 </br>
-##### Clau pública
+#### Clau pública
 
 La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
 
@@ -113,7 +113,7 @@ En el casos en els que el proveïdor d'infraestructures necessita introduir para
 Descarregar la clau
 </a>
 
-### Tecnologies compatibles
+## Tecnologies compatibles
 
 Hi ha les següents tecnologies de construcció suportades:
 
