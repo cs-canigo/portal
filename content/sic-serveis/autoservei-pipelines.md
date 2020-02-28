@@ -18,11 +18,6 @@ L'Autoservei de pipelines permet als usuaris del SIC la **generació automàtica
 la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline corresponent a cada
 projecte repositat al Sistema de Custodia de Codi (Gitlab).
 
-Aquest servei es basa en la generació de tasques Jenkins **a partir d'arxius de configuració** que els equips que en són responsables informen i publiquen.
-La pipeline de generació identifica si ha hagut canvis en aquests arxius de configuració en fer un push i s'encarrega de generar una nova versió de la pipeline de desplegament.
-Finalment, si s'han produït altres canvis al codi font de l'aplicació, també s'encarrega d'executar la pipeline generada.
-Es poden definir tants entorns i infraestructures com siguin necessari/es.
-
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 
 ## Motivació

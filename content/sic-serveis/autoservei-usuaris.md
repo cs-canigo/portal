@@ -48,7 +48,7 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 #### Responsables de lot
 
 Aquest tipus de grup recull als responsables de lot. <br/>
-Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat manca de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
+Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat perd valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
 Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
 La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT concret en el moment de la creació
 
