@@ -14,8 +14,6 @@ weight = 5
 
 Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
 [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
-
-
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
 ## Integració al SIC d’aplicacions en fase de projecte
@@ -40,8 +38,8 @@ es farà per aquest canal recordant assignar el tiquet a la persona que ha de do
 
 ## Altres dubtes o problemàtiques
 
-Per dubtes o incidències en l’ús dels serveis del SIC, incloent aspectes relacionats amb les tasques d’automatització del desplegament de les aplicacions, caldrà comunicar-ho via **Remedy**.
-
+Per dubtes o incidències en l’ús dels serveis del SIC, incloent aspectes relacionats amb les tasques d’automatització del desplegament de les aplicacions,
+caldrà comunicar-ho via [**Remedy**] (https://pautic.gencat.cat/).
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
 
 <br/>
