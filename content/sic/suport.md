@@ -1,5 +1,5 @@
 +++
-date = "2019-01-04"
+date = "2020-02-28"
 title = "Canals de suport"
 description = "Com obtenir suport per part de l'equip del SIC"
 sections = "SIC"
@@ -12,9 +12,8 @@ taxonomies = []
 weight = 5
 +++
 
-Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de suport que s'estableixen.
-S'estableixen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/) i [**Remedy**](https://pautic.gencat.cat/) com a
-canals de comunicació amb l'equip de SIC.
+Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
+[**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
 
 
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
@@ -45,7 +44,7 @@ Per dubtes o incidències en l’ús dels serveis del SIC, incloent aspectes rel
 
 A continuació, descriurem el procediment a seguir per a **obrir noves peticions dirigides al servei de FRAMEWORK SIC a Remedy**. <br/>
 
-### Obrir nova petició a SAU-Remedy
+#### Obrir nova petició a SAU-Remedy
 
 Aquesta guia s’ha elaborat a partir de la "Guia d’usuari del Portal d’Autoservei" oficial de Remedy per a que serveixi de guia per a aquells usuaris que no estiguin
 massa familiaritzat amb els procediments de Remedy a l’hora d’obrir peticions o que pateixin dificultats a l’hora d’identificar el tipus
@@ -56,7 +55,7 @@ Cal tenir pressent:
 * Respectar una determinada sintaxi a l’hora d’informar el camp "**descripció breu de la petició**" per tal de facilitar la identificació de tasques per part dels tècnics de SAU-Remedy.
 * **Adjuntar qualsevol document que pugui ser útil** per a la resolució de la petició (formularis, captures de pantalla, exemples... etcètera).
 
-#### Accés al servei
+##### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir-se al portal d'autoservei. <br/>
@@ -64,7 +63,7 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir
 <CENTER>![Pàgina principal](/related/sic/Remedy1.png)</center>
 <br/>
 
-#### Procediment
+##### Procediment
 
 A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes les peticions s’han de demanar a partir de tres categories generals:
 
@@ -72,7 +71,7 @@ A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes le
 * **Necessito saber**: per a realitzar consultes.
 * **Necessito demanar**: per a realitzar sol·licituds.
 
-##### Avaria o mal funcionament (incidències)
+###### Avaria o mal funcionament (incidències)
 
 Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb els serveis del SIC: problemes d'accés als serveis, errors d'execució de jobs... etcètera.
 
@@ -103,7 +102,7 @@ Informació a emplenar:
    - **LOPD**: indicar si la incidència pot afectar o manté relació amb dades personals.
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la incidència.
 
-##### Necessito saber (consultes)
+###### Necessito saber (consultes)
 
 Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb els serveis del SIC.
 
@@ -129,7 +128,7 @@ Informació a emplenar:
    - **Descripció de la consulta**: informació de la consulta al màxim nivell de detall possible.
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la consulta.
 
-##### Necessito demanar (sol·licituds)
+###### Necessito demanar (sol·licituds)
 
 Tipus de petició per a demanar:
 
@@ -161,7 +160,7 @@ Informació a emplenar:
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil com, per exemple, el document de Disseny d'Arquitectura de l'aplicació per tal de disposar d'una primera
 aproximació sobre la tasca, la llibreria a publicar... etcètera.
 
-### Contactar amb bústia SAU
+#### Contactar amb bústia SAU
 
 En cas que el **servei Remedy no es trobi disponible**, podrà optar per obrir una petició via bústia SAU: [sau.tic@gencat.cat](mailto:sau.tic@gencat.cat). <br/>
 Per tal que aquesta petició pugui ser atesa pel personal de SAU-Remedy, cal indicar la mateixa informació que s'indicaria a la petició Remedy. El redactat ha de
@@ -202,6 +201,6 @@ Contingut:
    - Descripció detallada del suport
 
 
-
+<br/><br/><br/>
 Si teniu qualsevol dubte o problema i no podeu utilitzar els canals de suport establerts, podeu contactar amb l'Oficina Tècnica Canigó CTTI a través
 del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
