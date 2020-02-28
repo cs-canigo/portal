@@ -54,6 +54,7 @@ Cal tenir pressent:
 * Respectar una determinada sintaxi a l’hora d’informar el camp "**descripció breu de la petició**" per tal de facilitar la identificació de tasques per part dels tècnics de SAU-Remedy.
 * **Adjuntar qualsevol document que pugui ser útil** per a la resolució de la petició (formularis, captures de pantalla, exemples... etcètera).
 
+<br/>
 ##### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
@@ -62,6 +63,7 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir
 <CENTER>![Pàgina principal](/related/sic/Remedy1.png)</center>
 <br/>
 
+<br/>
 ##### Procediment
 
 A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes les peticions s’han de demanar a partir de tres categories generals:
@@ -70,6 +72,7 @@ A Remedy no hi ha tipus de peticions específiques per als serveis SIC, totes le
 * **Necessito saber**: per a realitzar consultes.
 * **Necessito demanar**: per a realitzar sol·licituds.
 
+<br/>
 ###### Avaria o mal funcionament (incidències)
 
 Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb els serveis del SIC: problemes d'accés als serveis, errors d'execució de jobs... etcètera.
@@ -101,6 +104,7 @@ Informació a emplenar:
    - **LOPD**: indicar si la incidència pot afectar o manté relació amb dades personals.
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la incidència.
 
+<br/>
 ###### Necessito saber (consultes)
 
 Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb els serveis del SIC.
@@ -127,6 +131,7 @@ Informació a emplenar:
    - **Descripció de la consulta**: informació de la consulta al màxim nivell de detall possible.
 * **Arxius adjunts**: qualsevol arxiu que pugui ser útil per a la resolució de la consulta.
 
+<br/>
 ###### Necessito demanar (sol·licituds)
 
 Tipus de petició per a demanar:
