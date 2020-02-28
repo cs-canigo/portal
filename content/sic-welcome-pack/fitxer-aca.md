@@ -1,7 +1,7 @@
 +++
 date = "2019-01-07"
 title = "Com construir el fitxer ACA"
-description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de Jobs"
+description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
     "/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/"
 ]
