@@ -14,50 +14,61 @@ weight = 5
 
 ## Introducció
 
-L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense
-la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per preparar la construcció de la pipeline corresponent per a cada projecte de GitLab.
+L'Autoservei de pipelines permet als usuaris del SIC la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense
+la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline corresponent a cada
+projecte repositat al Sistema de Custodia de Codi (Gitlab).
 
-Aquest autoservei de pipelines es basa en la generació de tasques Jenkins a partir d'arxius de configuració que els equips que en són responsables informen i publiquen al Git.
-La pipeline de generació identifica si ha hagut canvis en aquests arxius en fer un push i s'encarrega de generar una nova versió de la pipeline de desplegament. Finalment, si s'han produït
-altres canvis al codi font de l'aplicació, també s'encarrega d'executar la pipeline generada.
-
-Amb l'autoservei de pipelines es poden definir tants entorns i infraestructures com siguin necessari/es per a la construcció i el desplegament d'una aplicació.
+Aquest sevei es basa en la generació de tasques Jenkins **a partir d'arxius de configuració** que els equips que en són responsables informen i publiquen.
+La pipeline de generació identifica si ha hagut canvis en aquests arxius de configuració en fer un push i s'encarrega de generar una nova versió de la pipeline de desplegament.
+Finalment, si s'han produït altres canvis al codi font de l'aplicació, també s'encarrega d'executar la pipeline generada.
+Es poden definir tants entorns i infraestructures com siguin necessari/es.
 
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 
 ## Motivació
 
-Els objectius que vol assolir aquesta nova funcionalitat són:
+Cobreix les següents necessitats:
 
-* La línia estratègica de DevOps que està marcant CTTI requereix **flexibilitat i independència** en els principals actors que intervenen en la construcció i els desplegaments de les aplicacions.
-* A tal efecte, una necessitat clau és anular la dependència existent cap a l'equip del SIC, que fins ara implementava els automatismes de construcció i desplegament. Amb aquest nou model **els usuaris del SIC són autosuficients per generar-se ells mateixos les seves pròpies pipelines**.
-* Com a conseqüència del punt anterior, **no cal ajustar-se al calendari de l'equip SIC per obtenir les pipelines de construcció i desplegament**. Els propis usuaris poden implementar-les en el moment que els hi sigui més adient.
-* **Augmenta l'eficiència en les integracions d'aplicacions al SIC**, ja que s'eliminen del procés traspassos innecessaris d'informació i de responsabilitats a l'equip SIC.
-* De retruc, el fet d'afegir un sistema de configuració amb arxius YML independents de la plataforma d'Integració Contínua Jenkins **proporciona al SIC un nivell d'abstracció addicional amb el que es podria disposar d'altres eines d'automatització sense afectar als usuaris**.
+* Dotar de **flexibilitat i independència** als principals actors que intervenen en la construcció i els desplegaments de les aplicacions.
+* **Incrementar ràpidament el grau d’integració al SIC de les aplicacions** evitant traspassos innecessaris d'informació i responsabilitats.
+* Proporcionar un **nivell d'abstracció** que permeti ser independent de les tecnologies emprades i permeti evolucionar el producte mantenint compatibilitat amb versions anteriors.
+* **Acomplir les directrius** de CTTI sobre desplegaments i gestió de canvis.
+
+La solució ha de:
+
+* Ser **natural** per als usuaris del servei
+* Permetre definir **tot el necessari** per a construir i desplegar l’aplicació
+* Donar cobertura a **totes les tecnologies** amb les que el SIC és actualment compatible
+* Ser **mantenible, escalable i eficient**
 
 ## Funcionament
 
-Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures. Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
-
-![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
+Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures.
+Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de jobs pipeline del SIC aportant la informació necessària de la que cadascun és responsable.
 
 El funcionament previst és el següent:
 
 1. Els **proveïdors d'aplicacions i els proveïdors d'infraestructures aportaran cadascun d'ells el seu propi arxiu de configuració**.
-2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de pipelines. Aquesta pipeline recupera els arxius de configuració necessaris per a la **generació de la pipeline** de l'aplicació i la dispara.
+2. Si es fa algun canvi en la configuració de l'autoservei corresponent a l'aplicació s'invocarà a la pipeline generadora de pipelines.
+Aquesta pipeline recupera els arxius de configuració necessaris per a la **generació de la pipeline** de l'aplicació i la dispara.
 3. En posteriors execucions, sempre que no es canviï l'arxiu de configuració, **no es tornarà a regenerar** i s'invocarà directament la darrera pipeline generada.
 
-D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació.
-Finalment, un cop generada la nova pipeline, aquesta serà invocada per realitzar la construcció i el desplegament automatitzats definits als arxius de configuració.
+D'aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s'invoca a una **pipeline generadora de pipelines** que
+construeix la pipeline encarregada de la construcció i del desplegament de l'aplicació. Finalment, un cop generada la nova pipeline, aquesta serà invocada
+per realitzar la construcció i el desplegament de l'aplicació.
+
+![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
+</br>
 
 ## Configuració
 
 Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.
 
-<br/>
 ### Arxiu de Configuració de l'Aplicació (ACA)
 
-La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte. La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de text en format YAML, que serà responsabilitat del proveïdor d'aplicacions de mantenir-lo actualitzat, en el que s'ha d'aportar la següent configuració:
+La informació que aporta el **proveïdor d'aplicacions** quedarà recollida en l'arxiu `/sic/aca.yml` dins del repositori del projecte.
+La seva existència és la que determina si l'aplicació té actiu el mode Autoservei de Pipelines. Es tracta d'un arxiu de text en format YAML,
+que serà responsabilitat del proveïdor d'aplicacions mantenir-lo actualitzat, en el que s'ha d'aportar la següent informació:
 
 * **Versió**: versió (independent de la versió de l'aplicació) que s'utilitza per fer seguiment de l'arxiu de configuració.
 * **Paràmetres**: parells clau-valor en els que es farà substitució dins de la pipeline.
@@ -69,16 +80,16 @@ La informació que aporta el proveïdor d'aplicacions quedarà recollida en l'ar
 * **Procés de desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
-Es proporciona una [Guia de construcció del fitxer ACA](/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA) amb un exemple de cas d'ús.
-
+![Pipeline del SIC](/images/news/AutoserveiJobs-ACA.png)
 <br/>
+
 ### Arxiu de Configuració d'Infraestructures (ACI)
 
-D'altra banda, la informació que aporta el proveïdor d'infraestructures queda recollida en el seu repositori del SIC. En aquest repositori hi dipositarà els arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació o projecte), el nom dels quals -sense l'extensió- és l'identificador que ha de facilitar al proveïdor d'aplicacions.
-
-Serà responsabilitat del proveïdor d'infraestructures tenir actualitzada aquesta informació i de notificar al proveïdor d'aplicacions quan hagi realitzat algun canvi. El proveïdor d'aplicacions haurà de fer com a mínim un increment de versió a l'ACA per tal de provocar la regeneració de la pipeline incorporant els canvis realitzats pel proveïdor d'infraestructures a la nova pipeline generada.
-
-El proveïdor d'infraestructures haurà d'informar als seus arxius de configuració:
+La informació que aporta el **proveïdor d'infraestructures** queda recollida en el seu repositori del SIC. En aquest repositori hi dipositarà els
+arxius de configuració d'infraestructures (en pot tenir més d'un per aplicació-projecte), el nom dels quals (sense incloure l'extensió) serà l'identificador que ha
+de facilitar al proveïdor d'aplicacions. Serà responsabilitat del proveïdor d'infraestructures mantenir actualitzada aquesta informació i de notificar al
+proveïdor d'aplicacions quan hagi realitzat algun canvi. Es tracta d’un arxiu de text en format YAML, que serà responsabilitat del proveïdor d’infraestructures
+mantenir-lo actualitzat, en el que s’ha d’aportar la següent informació:
 
 * **Versió**: versió de l'arxiu de configuració.
 * **Recursos**: secció que recull tots els recursos de la part d'infraestructures. Actualment, només hi ha el detall de cada infraestructura.
@@ -86,14 +97,13 @@ El proveïdor d'infraestructures haurà d'informar als seus arxius de configurac
 
 S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu pertinent.
 
-</br>
+![Pipeline del SIC](/images/news/AutoserveiJobs-ACI.png)
+<br/>
+
 #### Clau pública
 
-La infraestructura de clau pública (PKI en anglès) permet establir un sistema de xifrat en el que es permet l'execució amb garanties operacionals criptogràfiques, tals com el xifrat, la firma digital i el no repudi de transaccions electròniques.
-
-El SIC aprofita els avantatges d'aquest sistema oferint aquesta clau pública als seus usuaris per tal que aquests puguin fer-ne ús en els procediments operatius que la requereixin. Es tracta d’un arxiu `.pem` amb la clau pública del SIC. Aquesta clau consisteix en una RSA de 4096 bits.
-
-En el casos en els que el proveïdor d'infraestructures necessita introduir paraules de pas als descriptors ACI, per encriptar-les pot utilitzar la següent comanda:
+El SIC aprofita els avantatges del sistema de clau pública (PKI en anglès), que ofereix garanties operacionals criptogràfiques tals com el xifrat, la firma digital i transaccions segures.
+Es tracta d’un arxiu `.pem` amb la clau pública que consisteix en una RSA de 4096 bits i permet encriptar paraules de pas mitjançant la següent comanda:
 
     ```
     $ echo '<password_a_encriptar>' | openssl rsautl -encrypt -pubin -inkey sic_id_rsa.pub.pem | base64
@@ -139,7 +149,6 @@ Finalment, també s'integren els desplegaments a:
   - Oracle
   - SQL Server
 
-Per a més detall del que es pot fer amb l'Autoservei de pipelines, us recomanem que consulteu l'apartat 7 del [manual d'usuari.](/related/sic/manual-usuari.pdf).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
