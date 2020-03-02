@@ -14,9 +14,9 @@ weight = 5
 
 ## Introducció
 
-L'Autoservei de pipelines permet als usuaris del SIC la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense
-la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline corresponent a cada
-projecte repositat al Sistema de Custodia de Codi (Gitlab).
+L'Autoservei de pipelines permet la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense
+la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline de desplegament
+associada a cada projecte repositat al Sistema de Custodia de Codi (Gitlab).
 
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 
@@ -36,6 +36,17 @@ La solució ha de:
 * Donar cobertura a **totes les tecnologies** amb les que el SIC és actualment compatible
 * Ser **mantenible, escalable i eficient**
 
+## Requeriments generals
+
+S'estableixen una sèrie de requeriments per a estar en disposició d'integrar l'aplicació mitjançant aquest servei:
+
+* Conèixer els **entorns** on es desplegarà l'aplicació i les **modalitats de desplegament** aplicables en cada cas.
+* **L'aplicació ha de ser integrable amb l'automatització de la construcció i del desplegament**: el sistema ha de ser capaç de construir i desplegar l'aplicació,
+per lo que la seva tecnologia i especificitats han d'estar contemplades al sistema d'Integració Continua.
+* [**Aplicació preparada**](/sic-welcome-pack/preparar-aplicacio/) per a poder ser desplegada
+* Per als entorns amb modalitat de desplegament automàtic, disposar dels **identificadors d'infraestructures** de desplegament.
+* **Col·laboració**: el proveïdor d'aplicacions i el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació de cara a alinear la configuració.
+
 ## Funcionament
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures.
@@ -43,9 +54,9 @@ Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'au
 
 Es composa de les següents peces:
 
-* Arxiu de Configuració d’Aplicació (ACA)
-* Arxiu de Configuració d’Infraestructura (ACI)
-* Pipeline generadora
+* **Arxiu de Configuració d’Aplicació (ACA)**
+* **Arxiu de Configuració d’Infraestructura (ACI)**
+* **Pipeline generadora**
 
 El funcionament previst és el següent:
 
