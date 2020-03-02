@@ -15,7 +15,6 @@ weight = 3
 
 Dins el sistema d'Integració Contínua, el SIC proporciona un servei mitjançant el qual, amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructures i
 sense la intervenció de l'equip del SIC, es poden **generar automàticament pipelines de construcció i desplegament d'aplicacions**.
-
 Si vol més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
 [**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada. En aquest article **ens centrarem exclusivament en explicar com preparar
 l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
@@ -36,9 +35,8 @@ version: x.y.z
 
 ### Paràmetres
 
-Caldrà indicar els paràmetres (són opcionals, per lo que pot tractar-se d'una llista sense elements). Els paràmetres s'utilitzen per aplicar substitucions,
-de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`. Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular
-les dades que es repeteixin.
+Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
+Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular les dades repetibles.
 
 ```
 parameters:
@@ -48,7 +46,7 @@ parameters:
     value: valor_param2
 ```
 
-Exemple:
+Exemple per a fer-ne referència:
 
 ```
 build:
@@ -91,9 +89,9 @@ resources:
 
 <div class="message information">
 Recordem breument el funcionament de les diferents modalitats: </br>
-* Semiautomàtica: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT. </br>
-* Automàtica: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades. </br>
-* Automàtica per CPD: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament.  </br>
+- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT. </br>
+- <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades. </br>
+- <b>Automàtica per CPD</b>: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament.  </br>
 </div>
 
 </br>
@@ -105,8 +103,10 @@ Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor
 * Entorns (`environments`)
 * Identificador del proveïdor (`provider`)
 
-**NOTA**: Per a la modalitat de desplegament SEMIAUTOMATIC, segons hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
-detall d’infraestructures**. Pot no definir-se la secció o pot tractar-se d'una llista buida.
+**NOTA**:
+
+Per a la modalitat de desplegament SEMIAUTOMATIC, en base al que hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
+detall d’infraestructures**. Pot optarse per no definir la secció o indicar una llista buida.
 
 ```
 resources:
@@ -134,7 +134,7 @@ resources:
       provider: cpd9
 ```
 
-Si cal definir variables d’entorn requerides a nivell d’infraestructures, caldrà emplenar la secció `vars`:
+Només si cal enviar variables d’entorn requerides per al desplegament a les infraestructures, s'haurà d'emplenar la secció `vars`:
 
 ```
 resources:
@@ -155,20 +155,20 @@ resources:
 ```
 
 <div class="message information">
-En desplegament **AUTOMATIC**, l’atribut <b>`id` a indicar NO és arbitrari i l’ha de facilitar el proveïdor d’infraestructures</b> ja que, com es veurà més
+En desplegament <b>AUTOMATIC</> cal indicar un atribut "id" que NO és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal conegui aquest identificador i empleni el tipus de plataforma i els entorns.
+el detall de les infraestructures, només cal conegui aquest identificador.
 </div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
 |Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|
-|-------|-------|-------|
+|-------|-------|-------|-------|
 |apache|tomcat|sftp|oracle|
-|nginx|weblogic|mysql|
-||websphere|sqlserver|
-||jboss|mongodb|
-||iis|postgresql|
+|nginx|weblogic||mysql|
+||websphere||sqlserver|
+||jboss||mongodb|
+||iis||postgresql|
 
 D'igual manera, la propietat `provider` suporta el següent conjunt de valors:
 
@@ -183,7 +183,7 @@ D'igual manera, la propietat `provider` suporta el següent conjunt de valors:
 </br>
 #### Artefactes
 
-El darrer element de la secció és dedica a la definició de quins artefactes genera el procés de construcció i on es troben ubicats.
+El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran.
 
 ```
 resources:
@@ -197,8 +197,8 @@ resources:
       path: target/nom_artefacte02.war
 ```
 
-En aquest cas, la propietat `id` simplement s'utilitzarà per a referenciar l’artefacte** en la definició dels passos de desplegament, per lo que és un valor arbitrari.
-la propietat `artifactType` suporta el següent conjunt de valors:
+En aquest cas, la propietat `id` simplement s'utilitzarà **per a referenciar l’artefacte** en la definició dels passos de desplegament.
+La propietat `artifactType` suporta el següent conjunt de valors:
 
 |Tipus d’artefacte|
 |-------|
@@ -207,7 +207,7 @@ la propietat `artifactType` suporta el següent conjunt de valors:
 |plans|
 
 
-En el cas de desplegaments de bases de dades, cal fer referència a l’ **arxiu de plans en format XML**.
+En el cas de desplegaments de bases de dades, caldrà fer referència a l’ **arxiu de plans en format XML**.
 
 ```
 resources:
@@ -220,7 +220,7 @@ resources:
 
 <div class="message information">
 En aquest cas, és important assegurar-se que l’<b>identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI</b>.
-Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui. </div>
+Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas. </div>
 
 ### Procés de construcció
 
@@ -230,13 +230,14 @@ els atributs dels passos de construcció varien en funció del seu tipus.
 
 Es contemplen les següents tecnologies de construcció:
 
-* Node (npm, gulp, bower i grunt)
-* Java (maven i ant)
-* .Net (msbuild)
-* Hugo
-* Altres comandes (zip, unzip)
+* **Node** (npm, gulp, bower i grunt)
+* **Java** (maven i ant)
+* **.Net** (msbuild)
+* **Hugo**
+* **Altres comandes** (zip, unzip)
 
-Cada pas de construcció té un identificador, una posició (odre), una eina de construcció i la llista d’artefactes que genera. Aquesta secció `generates` inclou la relació d'artefactes generats i han de correspondre’s amb els declarats a la secció `resources.artifacts`.
+Cada pas de construcció disposa d'un identificador, una posició o ordre, una eina de construcció i l'artefacte o llista d’artefactes que genera.
+Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondres els declarats a la secció `resources.artifacts`.
 
 ```
 build:
@@ -252,17 +253,18 @@ build:
         - artifact01
 ```
 
-<div class="message information">
-Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
+**NOTA**:
+
+Com es pot veure a l'exemple, en cas de requerir executar les passes de **construcció des d’un directori específic** caldrà definir la ubicació mitjançant
 la propietat "executionDir".
-</div>
 
 
 A continuació s’explica l’ús dels diferents tipus d’eines previstes.
 
 </br>
 #### Node
-Caldrà seleccionar la versió a utilitzar de l’eina i, opcionalment, l’eina a utilitzar (per defecte `npm`). No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i, només si es tracta d'una eina complementària, l’eina a utilitzar (per defecte `npm`).
+No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
 
 |Versions suportades|
 |-------|
@@ -285,7 +287,7 @@ build:
         - artifact01
 ```
 
-Dins d’aquesta tecnologia, se suporten altres eines complementàries que caldrà especificar mitjançant la propietat `module`.
+Dins d’aquesta tecnologia, es dóna cobertura a altres eines complementàries que caldrà especificar mitjançant la propietat `module`.
 
 |Eines complementàries|
 |-------|
@@ -411,6 +413,7 @@ Caldrà definir tots els passos del procés i la seva ordenació en el que s’a
 Es contemplen els següents tipus de desplegament:
 
 * Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
+
 ```
 - id: dp001
   position: 1
@@ -422,6 +425,7 @@ Es contemplen els següents tipus de desplegament:
 
 * Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
+
 ```
 - id: dp001
   position: 1
@@ -431,12 +435,12 @@ Es contemplen els següents tipus de desplegament:
 
 * Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
+
 ```
 - id: dp001
   position: 1
   type: custom
   command: zip -r app.zip dist/
-
 ```
 
 ### Notificacions
@@ -451,6 +455,7 @@ notificationRecipients:
 
 ## Exemples
 A continuació s'adjunten exemples de cas d'ús:
+
 - [**Aplicació Maven - Tomcat**](/related/sic/2.0/autoservei_mvn_tomcat.yml) <br/>
 - [**Llibreria Maven - Nexus**](/related/sic/2.0/autoservei_mvn_nexus.yml)
 - [**Aplicació Npm - Apache**](/related/sic/2.0/autoservei_npm_apache.yml)
