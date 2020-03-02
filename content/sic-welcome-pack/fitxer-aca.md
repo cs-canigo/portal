@@ -14,29 +14,31 @@ weight = 3
 ## Introducció
 
 Dins el sistema d'Integració Contínua, el SIC proporciona un servei mitjançant el qual, amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructures i
-sense la intervenció de l'equip del SIC, es poden **construir automàticament pipelines de construcció i desplegament d'aplicacions**.
+sense la intervenció de l'equip del SIC, es poden **generar automàticament pipelines de construcció i desplegament d'aplicacions**.
 
 Si vol més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
-[Autoservei de pipelines](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada.
+[**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada. En aquest article **ens centrarem exclusivament en explicar com preparar
+l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
 
-En aquest article ens centrarem en explicar com preparar l’arxiu ACA (Arxiu de Configuració d'Aplicacions).
+## Configuració
 
-## Configuració de l'Arxiu de Configuració d'Aplicació (ACA)
-
-El proveïdor d’aplicacions haurà de configurar aquest arxiu `/sic/aca.yml` dins del repositori del projecte.
-Es tracta d’un arxiu de text en format YAML en el que a continuació definirem la informació que cal configurar.
+El proveïdor d’aplicacions haurà de configurar aquest arxiu `/sic/aca.yml` dins del repositori del projecte (a nivell de carpeta del projecte).
+Es tracta d’un arxiu de text en **format YAML** en el que a continuació definirem la informació que cal configurar.
 
 ### Versió
 
-Caldrà indicar la versió de l'ACA, que segueix un versionatge diferent al de l'aplicació. En aquest cas, cada increment de versió es correspon amb **canvis en les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format `<versioMajor>.<versioMenor>.<pegat>`.
+Caldrà indicar la versió de l'ACA, que segueix un versionatge diferent al de l'aplicació ja que, cada increment de versió es correspondrà amb **canvis en
+les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
 
 ```
-version: X.Y.Z
+version: x.y.z
 ```
 
 ### Paràmetres
 
-Caldrà indicar els paràmetres (són opcionals, per lo que pot tractar-se d'una llista de 0 elements). Els paràmetres s'utilitzen per aplicar substitucions, de forma que on aparegui `${nom_param}` s'aplicarà el valor `valor_param`. Són útils per dotar de més llegibilitat a l’arxiu de configuració.
+Caldrà indicar els paràmetres (són opcionals, per lo que pot tractar-se d'una llista sense elements). Els paràmetres s'utilitzen per aplicar substitucions,
+de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`. Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular
+les dades que es repeteixin.
 
 ```
 parameters:
@@ -46,7 +48,7 @@ parameters:
     value: valor_param2
 ```
 
-Exemple d’utilització:
+Exemple:
 
 ```
 build:
@@ -54,7 +56,7 @@ build:
     - id: step01
       position: 1
       tool: maven_3.2.2
-	jdk: JDK 1.8
+      jdk: JDK 1.8
       parameters: ${nom_param1}
 ```
 
@@ -66,6 +68,7 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 * Infraestructures (`infrastructures`)
 * Artefactes (`artifacts`)
 
+</br>
 #### Entorns
 
 Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada:
@@ -87,13 +90,24 @@ resources:
       deploymentType: SEMIAUTOMATIC
 ```
 
+<div class="message information">
+Recordem breument el funcionament de les diferents modalitats:
+* Semiautomàtica: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.
+* Automàtica: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.
+* Automàtica per CPD: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament. A
+</div>
+
+</br>
 #### Infraestructures
 
-Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor: tipus `element`, entorns `environments` i identificador del proveïdor `provider`.
+Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor:
 
-<div class="message information">
-La modalitat de desplegament SEMIAUTOMATIC realitza el lliurament d’artefactes mitjançant el Servei de Binaris. Per tant, <b>no serà necessari preparar l’arxiu ACI ni definir el detall d’infraestructures</b> a no ser que es defineixi un desplegament AUTOMATIC o AUTOMATIC_CPD.</div>
+* Element o tipologia (`element`)
+* Entorns (`environments`)
+* Identificador del proveïdor (`provider`)
 
+**NOTA**: Per a la modalitat de desplegament SEMIAUTOMATIC, segons hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
+detall d’infraestructures**. Pot no definir-se la secció o pot tractar-se d'una llista buida.</div>
 
 ```
 resources:
@@ -141,38 +155,23 @@ resources:
       provider: cpd9
 ```
 
-
 <div class="message information">
-En cas de desplegament AUTOMATIC, l’<b>identificador a indicar NO és arbitrari</b>, l’ha de facilitar el proveïdor d’infraestructures ja que, com es veurà més endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui el detall de les infraestructures de la seva aplicació. Només cal que li assigni l’identificador que se li indiqui, juntament amb el tipus de plataforma i els entorns. </div>
+En desplegament **AUTOMATIC**, l’atribut <b>`id` a indicar NO és arbitrari i l’ha de facilitar el proveïdor d’infraestructures</b> ja que, com es veurà més
+endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
+el detall de les infraestructures, només cal conegui aquest identificador i empleni el tipus de plataforma i els entorns.
+</div>
 
+La propietat `element` suporta el següent conjunt de tipus de servidors:
 
-La propietat `element` suporta el següent conjunt de valors:
-|Servidors web|
-|-------|
-|apache|
-|nginx|
+|Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|
+|-------|-------|-------|
+|apache|tomcat|sftp|oracle|
+|nginx|weblogic|mysql|
+||websphere|sqlserver|
+||jboss|mongodb|
+||iis|postgresql|
 
-|Servidors d’aplicacions|
-|-------|
-|tomcat|
-|weblogic|
-|websphere|
-|jboss|
-|iis|
-
-|Servidors de fitxers|
-|-------|
-|sftp|
-
-|Servidors de base de dades|
-|-------|
-|oracle|
-|mysql|
-|sqlserver|
-|mongodb|
-|postgresql|
-
-De igual manera, la propietat `provider` suporta el següent conjunt de valors:
+D'igual manera, la propietat `provider` suporta el següent conjunt de valors:
 
 |Proveïdor|
 |-------|
@@ -182,11 +181,10 @@ De igual manera, la propietat `provider` suporta el següent conjunt de valors:
 |cpd3-mc|
 |cpd4|
 
-Recordem que la llista d’infraestructures pot estar buida si tots els entorns són de tipus SEMIAUTOMATIC.
-
+</br>
 #### Artefactes
 
-L’últim element de la secció és la definició de quins artefactes genera el procés de construcció i on es troben ubicats.
+El darrer element de la secció és dedica a la definició de quins artefactes genera el procés de construcció i on es troben ubicats.
 
 ```
 resources:
@@ -200,8 +198,7 @@ resources:
       path: target/nom_artefacte02.war
 ```
 
-En aquest cas l’**identificador sí que és arbitrari però és el literal que s’haurà d’utilitzar per a referenciar l’artefacte** en la definició del procés de desplegament.
-
+En aquest cas, la propietat `id` simplement s'utilitzarà per a referenciar l’artefacte** en la definició dels passos de desplegament, per lo que és un valor arbitrari.
 la propietat `artifactType` suporta el següent conjunt de valors:
 
 |Tipus d’artefacte|
@@ -220,17 +217,19 @@ resources:
     - id: artifact03
       artyfactType: plans
       path: sql/plans.xml
-
 ```
 
 <div class="message information">
-En aquest cas, serà necessari que l’<b>identificador de BBDD definit dins l’arxiu XML de plans coincideixi amb l’identificador de BBDD definit al fitxer ACI</b>. Per lo que caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador acordat. </div>
+En aquest cas, és important assegurar-se que l’<b>identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI</b>.
+Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui. </div>
 
 ### Procés de construcció
 
-Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de build`. La definició es basa en una sèrie d’eines anomenades `tools` predefinides. A més, els atributs dels passos de construcció varien en funció del seu tipus.
+Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de build`. La definició es basa en una sèrie de `tools` predefinides. A més,
+els atributs dels passos de construcció varien en funció del seu tipus.
 
-Es contemplen els següents tipus de construcció:
+
+Es contemplen les següents tecnologies de construcció:
 
 * Node (npm, gulp, bower i grunt)
 * Java (maven i ant)
@@ -239,10 +238,6 @@ Es contemplen els següents tipus de construcció:
 * Altres comandes (zip, unzip)
 
 Cada pas de construcció té un identificador, una posició (odre), una eina de construcció i la llista d’artefactes que genera. Aquesta secció `generates` inclou la relació d'artefactes generats i han de correspondre’s amb els declarats a la secció `resources.artifacts`.
-
-<div class="message information">
-En cas de requerir executar les passes de construcció des d’un directori específic caldrà definir la ubicació mitjançant la propietat `executionDir`.</div>
-
 
 ```
 build:
@@ -258,14 +253,19 @@ build:
         - artifact01
 ```
 
+<div class="message information">
+Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
+la propietat "executionDir".
+</div>
+
 
 A continuació s’explica l’ús dels diferents tipus d’eines previstes.
 
-
+</br>
 #### Node
-Caldrà seleccionar la versió a utilitzar de l’eina i, opcionalment, l’eina a utilitzar (per defecte `npm`). No caldrà indicar la comanda `npm ` en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i, opcionalment, l’eina a utilitzar (per defecte `npm`). No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
 
-|Eines predefinides|
+|Versions suportades|
 |-------|
 |nodejs_6_LTS|
 |nodejs_8_LTS|
@@ -286,16 +286,15 @@ build:
         - artifact01
 ```
 
-Dins d’aquesta tecnologia, les altres eines suportades són:
-|Mòduls|
+Dins d’aquesta tecnologia, se suporten altres eines complementàries que caldrà especificar mitjançant la propietat `module`.
+
+|Eines complementàries|
 |-------|
-|npm|
+|npm (per defecte)|
 |gulp|
 |grunt|
 |bower|
 
-
-En cal de requerir fer ús d’aquestes eines, caldrà especificar la propietat `module`:
 ```
 build:
   steps:
@@ -318,26 +317,19 @@ build:
         - artifact01
 ```
 
+</br>
 #### Java
-Caldrà seleccionar la versió a utilitzar de l’eina i la versió de Java. No caldrà indicar la comanda `maven` o `ant` en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i la versió de Java. No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
 
 
-|Eines predefinides|
-|-------|
-|ant_1.8.2|
-|ant_1.9.6|
-|maven_2.0.10|
-|maven_2.2.1|
+|Eines suportades|Versions JDK|
+|-------|-------|
+|ant_1.8.2|JDK 1.5|
+|ant_1.9.6|JDK 1.6|
+|maven_2.0.10|JDK 1.7|
+|maven_2.2.1|JDK 1.8|
 |maven_3.2.2|
 |maven_3.3.9|
-
-
-|Versions JDK|
-|-------|
-|JDK 1.5|
-|JDK 1.6|
-|JDK 1.7|
-|JDK 1.8|
 
 
 ```
@@ -353,8 +345,9 @@ build:
         - artifact02
 ```
 
+</br>
 #### .Net
-Caldrà seleccionar la versió a utilitzar de l’eina i definir i no caldrà indicar la comanda `msbuild` en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i no caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
 
 
 |Eines predefinides|
@@ -376,8 +369,10 @@ build:
         - artifact01
 ```
 
+</br>
 #### Hugo (sites estàtiques)
-Caldrà seleccionar el `pathOrig` i `pathDesti`, que es correspondran amb els directoris on es troben els components i on es deixarà l’artefacte comprimit generat (respectivament).
+Caldrà seleccionar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el directori on es troben els components i on es deixarà l’artefacte
+comprimit generat.
 
 
 ```
@@ -393,9 +388,10 @@ build:
         - artifact01
 ```
 
+</br>
 #### Altres comandes (zip, unzip)
 
-Es dona la opció d’executar certes comandes, principalment per a empaquetar (zip) o desempaquetar (unzip) informació.
+Es dona la opció d’executar certes comandes, principalment per passos en els que s'ha d'empaquetar o desempaquetar la informació.
 
 ```
 build:
@@ -410,14 +406,12 @@ build:
 ```
 
 
-#### Procés de desplegament
+### Procés de desplegament
 
-Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies anomenades `type` predefinides.
-
+Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
 
-* Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i la infraestructura destí.
-
+* Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
 ```
 - id: dp001
   position: 1
@@ -426,16 +420,18 @@ Es contemplen els següents tipus de desplegament:
   artifact: artifact01
 ```
 
-* Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una pausa a la pipeline, que es quedarà a l’espera de confirmació per a continuar endavant.
 
+* Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
+**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
 ```
 - id: dp001
   position: 1
   type: manual
 ```
 
-* Personalitzat (`custom`): pas de desplegament a utilitzar quan es necessita executar comandes no contemplades en els tipus predefinits. Permet doncs l’execució de comandes Bourne Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 
+* Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
+Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 ```
 - id: dp001
   position: 1
@@ -444,7 +440,7 @@ Es contemplen els següents tipus de desplegament:
 
 ```
 
-#### Notificacions
+### Notificacions
 
 Finalment, caldrà indicar les adreces de correu electrònic on notificar accions manuals en espera i els resultats de l’execució:
 
@@ -453,6 +449,14 @@ notificationRecipients:
     - usuari1@domini
     - usuari2@domini
 ```
+
+## Exemples
+A continuació s'adjunten exemples de cas d'ús:
+- Aplicació Maven que desplega en Tomcat
+- Llibreria Maven
+- Aplicació Npm que desplega en Apache
+- Llibreria Npm
+- Aplicació .Net amb desplegament semi-automàtic
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>

@@ -120,6 +120,7 @@ S'han d'incloure tots els entorns de les capes/stacks definides en l'arxiu perti
 El SIC aprofita els avantatges del sistema de clau pública (PKI en anglès), que ofereix garanties operacionals criptogràfiques tals com el xifrat, la firma digital i transaccions segures.
 Es tracta d’un arxiu `.pem` amb la clau pública que consisteix en una RSA de 4096 bits i permet encriptar paraules de pas mitjançant la següent comanda:
 
+
     ```
     $ echo '<password_a_encriptar>' | openssl rsautl -encrypt -pubin -inkey sic_id_rsa.pub.pem | base64
    K0zcD3BuLKN55XVjqpovmwbJDEVehnEN7pz06ytPMlBowuc2IATSyH/c/zN5EmLE5DFoJcRLFA9B
@@ -133,6 +134,7 @@ Es tracta d’un arxiu `.pem` amb la clau pública que consisteix en una RSA de 
    +x4v2PLCO1D2b59Bb3n9/rFENXHE8wYLPAecPoSNjB6dB2/JdZibUwDJz+T98nOlcgJ7FcBBQ4s=
    $
     ```
+
 
 <a href="/related/sic/key/sic_id_rsa.pub.pem" download target="_blank" style="display: block; margin: 25px auto; border-radius: 5px; width: 200px; padding: 10px; color: white !important; text-decoration: none !important;background-color: #CC0000;text-align: center;font-weight:bold;">
 Descarregar la clau
