@@ -456,11 +456,12 @@ notificationRecipients:
 ## Exemples
 A continuació s'adjunten exemples de cas d'ús:
 
-- [**Aplicació Maven - Tomcat**](/related/sic/2.0/autoservei_mvn_tomcat.yml) <br/>
+- [**Aplicació Maven - Weblogic**](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
 - [**Llibreria Maven - Nexus**](/related/sic/2.0/autoservei_mvn_nexus.yml)
 - [**Aplicació Npm - Apache**](/related/sic/2.0/autoservei_npm_apache.yml)
-- [**Aplicació Npm - Nexus*](/related/sic/2.0/autoservei_npm_nexus.yml)
-- [**Aplicació .NET desplegament semi-automàtic**](/related/sic/2.0/autoservei_net.yml)
+- [**Llibreria Npm - Nexus*](/related/sic/2.0/autoservei_npm_nexus.yml)
+- [**Aplicació .Net desplegament semi-automàtic**](/related/sic/2.0/autoservei_net.yml)
+- [**Llibreria .Net - Nexus**](/related/sic/2.0/autoservei_net_nexus.yml)
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
