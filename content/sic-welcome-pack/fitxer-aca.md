@@ -165,13 +165,13 @@ el detall de les infraestructures, només cal conegui aquest identificador.
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
-|Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|
-|-------|-------|-------|-------|
-|apache|tomcat|sftp|oracle|
-|nginx|weblogic||mysql|
-||websphere||sqlserver|
-||jboss||mongodb|
-||iis||postgresql|
+|Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|Altres|
+|-------|-------|-------|-------|-------|
+|apache|tomcat|sftp|oracle|nexus|
+|nginx|weblogic||mysql||
+||websphere||sqlserver||
+||jboss||mongodb||
+||iis||postgresql||
 
 D'igual manera, la propietat `provider` suporta el següent conjunt de valors:
 
@@ -425,7 +425,19 @@ Es contemplen els següents tipus de desplegament:
   artifact: artifact01
 ```
 
+</br>
+* Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build).
 
+```
+- id: ds001
+  position: 1
+  type: library
+  tool: maven_3.3.9
+  parameters: deploy -f ./pom.xml
+  destination: 9999_nexus
+```
+
+</br>
 * Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
 
@@ -435,7 +447,7 @@ Es contemplen els següents tipus de desplegament:
   type: manual
 ```
 
-
+</br>
 * Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 
@@ -448,7 +460,7 @@ Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 
 ### Notificacions
 
-Finalment, caldrà indicar les adreces de correu electrònic on notificar accions manuals en espera i els resultats de l’execució:
+Finalment, caldrà indicar les **adreces de correu electrònic on notificar** accions manuals en espera i els resultats de l’execució:
 
 ```
 notificationRecipients:
@@ -459,13 +471,13 @@ notificationRecipients:
 ## Exemples
 A continuació s'adjunten exemples de cas d'ús:
 
-- [Aplicació Maven - Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
-- [Llibreria Maven - Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml)
-- [Aplicació Npm - Apache](/related/sic/2.0/autoservei_npm_apache.yml)
-- [Llibreria Npm - Nexus](/related/sic/2.0/autoservei_npm_nexus.yml)
-- [Aplicació .Net desplegament semi-automàtic](/related/sic/2.0/autoservei_net.yml)
-- [Llibreria .Net - Nexus](/related/sic/2.0/autoservei_net_nexus.yml)
-- [Aplicació Oracle Apex](/related/sic/2.0/autoservei_apex.yml)
+1. [Llibreria Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml)
+2. [Aplicació Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
+3. [Llibreria Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml)
+4. [Aplicació Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
+5. [Llibreria .Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml)
+6. [Aplicació .Net desplegament semi-automàtic](/related/sic/2.0/autoservei_net.yml)
+7. [Aplicació Oracle Apex](/related/sic/2.0/autoservei_apex.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
