@@ -13,20 +13,21 @@ weight = 3
 
 ## Introducció
 
-Dins el sistema d'Integració Contínua, el SIC proporciona un servei mitjançant el qual, amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructures i
-sense la intervenció de l'equip del SIC, es poden **generar automàticament pipelines de construcció i desplegament d'aplicacions**.
-Si vol més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
-[**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada. En aquest article **ens centrarem exclusivament en explicar com preparar
-l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
+Dins el sistema d'Integració Contínua, el SIC proporciona un servei mitjançant el qual es poden **generar automàticament pipelines de construcció i desplegament d'aplicacions**,
+amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructures i sense la intervenció de l'equip del SIC.
+
+En aquest article **ens centrarem exclusivament en explicar com preparar l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
+Si voleu més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
+[**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada
 
 ## Configuració
 
-El proveïdor d’aplicacions haurà de configurar aquest arxiu `/sic/aca.yml` dins del repositori del projecte (a nivell de carpeta del projecte).
-Es tracta d’un arxiu de text en **format YAML** en el que a continuació definirem la informació que cal configurar.
+El proveïdor d’aplicacions haurà de configurar l'arxiu `/sic/aca.yml` dins del repositori del projecte (a nivell de carpeta del projecte).
+Es tracta d’un arxiu de text en **format YAML** en el que a continuació definirem la informació que cal emplenar.
 
 ### Versió
 
-Caldrà indicar la versió de l'ACA, que segueix un versionatge diferent al de l'aplicació ja que, cada increment de versió es correspondrà amb **canvis en
+Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
 les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
 
 ```
@@ -89,9 +90,9 @@ resources:
 
 <div class="message information">
 Recordem breument el funcionament de les diferents modalitats: </br>
-- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT. </br>
-- <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades. </br>
-- <b>Automàtica per CPD</b>: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament.  </br>
+- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.</br>
+- <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
+- <b>Automàtica per CPD</b>: similar a la automàtica però serà CPD qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament. </br>
 </div>
 
 </br>
@@ -107,6 +108,8 @@ Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor
 
 Per a la modalitat de desplegament SEMIAUTOMATIC, en base al que hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
 detall d’infraestructures**. Pot optarse per no definir la secció o indicar una llista buida.
+
+</br>
 
 ```
 resources:
@@ -155,7 +158,7 @@ resources:
 ```
 
 <div class="message information">
-En desplegament <b>AUTOMATIC</> cal indicar un atribut "id" que NO és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
+En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que NO és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
 el detall de les infraestructures, només cal conegui aquest identificador.
 </div>
@@ -257,7 +260,7 @@ build:
 
 Com es pot veure a l'exemple, en cas de requerir executar les passes de **construcció des d’un directori específic** caldrà definir la ubicació mitjançant
 la propietat "executionDir".
-
+</br>
 
 A continuació s’explica l’ús dels diferents tipus d’eines previstes.
 
@@ -456,14 +459,14 @@ notificationRecipients:
 ## Exemples
 A continuació s'adjunten exemples de cas d'ús:
 
-- [**Aplicació Maven - Weblogic**](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
-- [**Llibreria Maven - Nexus**](/related/sic/2.0/autoservei_mvn_nexus.yml)
-- [**Aplicació Npm - Apache**](/related/sic/2.0/autoservei_npm_apache.yml)
-- [**Llibreria Npm - Nexus*](/related/sic/2.0/autoservei_npm_nexus.yml)
-- [**Aplicació .Net desplegament semi-automàtic**](/related/sic/2.0/autoservei_net.yml)
-- [**Llibreria .Net - Nexus**](/related/sic/2.0/autoservei_net_nexus.yml)
+- [Aplicació Maven - Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
+- [Llibreria Maven - Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml)
+- [Aplicació Npm - Apache](/related/sic/2.0/autoservei_npm_apache.yml)
+- [Llibreria Npm - Nexus](/related/sic/2.0/autoservei_npm_nexus.yml)
+- [Aplicació .Net desplegament semi-automàtic](/related/sic/2.0/autoservei_net.yml)
+- [Llibreria .Net - Nexus](/related/sic/2.0/autoservei_net_nexus.yml)
 
-<br/><br/><br/>
+<br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o
 contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

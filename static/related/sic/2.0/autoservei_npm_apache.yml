@@ -1,0 +1,59 @@
+version: 1.0.0
+parameters:
+resources:
+  environments:
+    - id: int
+      environment: int
+      position: 1
+      deploymentType: AUTOMATIC
+    - id: pre
+      environment: pre
+      position: 2
+      deploymentType: SEMIAUTOMATIC
+    - id: pro
+      environment: pro
+      position: 3
+      deploymentType: SEMIAUTOMATIC
+  infrastructures:
+    - id: cpdx_apache_xxxx
+      element: apache
+      environments:
+        - environment: int
+          vars:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpdx
+  artifacts:
+    - id: artifact01
+      artifactType: static
+      path: dist/app.zip
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: nodejs_10_LTS
+      parameters: install --loglevel verbose --scripts-prepend-node-path true
+    - id: bs002
+      position: 2
+      tool: nodejs_10_LTS
+      parameters: run-script build --loglevel verbose --force --scripts-prepend-node-path true 
+      generates:
+        - artifact01
+    - id: bs003
+      position: 3
+      tool: command
+      executionDir: dist
+      parameters: zip -r app.zip *
+      generates:
+        - artifact01
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: cpdx_apache_xxxx
+      artifact: artifact01
+notificationRecipients:
+    - nom1@domini.cat

@@ -1,0 +1,24 @@
+version: 1.0.0
+parameters:
+resources:
+  infrastructures:
+    - id: cpdx_nexus_xxxx
+      element: nexus
+      environments:
+      provider: cpdx
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: MSBuild_14
+      parameters: pack .\\directory\\app.csproj -Prop Configuration=Release
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: MSBuild_15
+      parameters: push .\\app.nupkg
+      destination: cpdx_nexus_xxxx
+notificationRecipients:
+    - nom1@domini.cat
