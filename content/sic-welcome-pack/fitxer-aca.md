@@ -68,7 +68,6 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 * Infraestructures (`infrastructures`)
 * Artefactes (`artifacts`)
 
-</br>
 #### Entorns
 
 Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada:
@@ -91,10 +90,10 @@ resources:
 ```
 
 <div class="message information">
-Recordem breument el funcionament de les diferents modalitats:
-* Semiautomàtica: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.
-* Automàtica: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.
-* Automàtica per CPD: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament. A
+Recordem breument el funcionament de les diferents modalitats: </br>
+* Semiautomàtica: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT. </br>
+* Automàtica: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades. </br>
+* Automàtica per CPD: es similar a la automàtica però serà CPD/LdT qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament.  </br>
 </div>
 
 </br>
@@ -107,7 +106,7 @@ Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor
 * Identificador del proveïdor (`provider`)
 
 **NOTA**: Per a la modalitat de desplegament SEMIAUTOMATIC, segons hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
-detall d’infraestructures**. Pot no definir-se la secció o pot tractar-se d'una llista buida.</div>
+detall d’infraestructures**. Pot no definir-se la secció o pot tractar-se d'una llista buida.
 
 ```
 resources:
@@ -452,12 +451,13 @@ notificationRecipients:
 
 ## Exemples
 A continuació s'adjunten exemples de cas d'ús:
-- Aplicació Maven que desplega en Tomcat
-- Llibreria Maven
-- Aplicació Npm que desplega en Apache
-- Llibreria Npm
-- Aplicació .Net amb desplegament semi-automàtic
+- [**Aplicació Maven - Tomcat**](/related/sic/2.0/autoservei_mvn_tomcat.yml) <br/>
+- [**Llibreria Maven - Nexus**](/related/sic/2.0/autoservei_mvn_nexus.yml)
+- [**Aplicació Npm - Apache**](/related/sic/2.0/autoservei_npm_apache.yml)
+- [**Aplicació Npm - Nexus*](/related/sic/2.0/autoservei_npm_nexus.yml)
+- [**Aplicació .NET desplegament semi-automàtic**](/related/sic/2.0/autoservei_net.yml)
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o
+contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

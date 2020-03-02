@@ -40,12 +40,11 @@ La solució ha de:
 
 S'estableixen una sèrie de requeriments per a estar en disposició d'integrar l'aplicació mitjançant aquest servei:
 
-* Conèixer els **entorns** on es desplegarà l'aplicació i les **modalitats de desplegament** aplicables en cada cas.
-* **L'aplicació ha de ser integrable amb l'automatització de la construcció i del desplegament**: el sistema ha de ser capaç de construir i desplegar l'aplicació,
-per lo que la seva tecnologia i especificitats han d'estar contemplades al sistema d'Integració Continua.
-* [**Aplicació preparada**](/sic-welcome-pack/preparar-aplicacio/) per a poder ser desplegada
-* Per als entorns amb modalitat de desplegament automàtic, disposar dels **identificadors d'infraestructures** de desplegament.
-* **Col·laboració**: el proveïdor d'aplicacions i el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació de cara a alinear la configuració.
+* Conèixer els **entorns** on es desplegarà l'aplicació i les **modalitats de desplegament** aplicables en cada cas
+* L'**aplicació ha de ser integrable** amb el servei d'automatització de la construcció i desplegament
+* [**Aplicació preparada i acompleix els requeriments**](/sic-welcome-pack/preparar-aplicacio/) per a poder ser desplegada
+* Per als entorns amb modalitat de desplegament automàtic, disposar dels **identificadors d'infraestructures** de desplegament
+* **Col·laboració**: el proveïdor d'aplicacions i el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació
 
 ## Funcionament
 
