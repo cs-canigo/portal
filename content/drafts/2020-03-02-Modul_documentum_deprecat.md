@@ -13,7 +13,7 @@ Canigó, dins del mòduls d'integració, proporciona el [mòdul d'intergració a
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 prevista pel ** DATA **. El mòdul d'integració de documentum de Canigó quedarà deprecat
+A partir de la versió de Canigó 3.4.3 prevista pel **DATA**. El mòdul d'integració de documentum de Canigó quedarà **deprecat**
 
 Des de Canigó es recomana l'utilització dels components pòpis de Documentum per a la seva integració, així com els seus serveis rest
 
