@@ -92,7 +92,7 @@ resources:
 Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.</br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
-- <b>Automàtica per CPD</b>: similar a la automàtica però serà CPD qui s’encarregarà de donar conformitat i continuïtat a les etapes de desplegament. </br>
+- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament. </br>
 </div>
 
 </br>
@@ -103,13 +103,6 @@ Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor
 * Element o tipologia (`element`)
 * Entorns (`environments`)
 * Identificador del proveïdor (`provider`)
-
-**NOTA**:
-
-Per a la modalitat de desplegament SEMIAUTOMATIC, en base al que hem explicat anteriorment, **no serà necessari preparar l’arxiu ACI ni definir el
-detall d’infraestructures**. Pot optarse per no definir la secció o indicar una llista buida.
-
-</br>
 
 ```
 resources:
@@ -161,11 +154,12 @@ resources:
 En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que NO és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
 el detall de les infraestructures, només cal conegui aquest identificador.
+Per la modalitat de desplegament <b>SEMIAUTOMATIC</b> **no serà necessari preparar l’arxiu ACI ni definir el detall d’infraestructures**.
 </div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
-|Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|Altres|
+|Servidors web|Servidors d’aplicacions|Servidors de fitxers|Servidors de base de dades|Repositori de llibreries|
 |-------|-------|-------|-------|-------|
 |apache|tomcat|sftp|oracle|nexus|
 |nginx|weblogic||mysql||
@@ -173,7 +167,7 @@ La propietat `element` suporta el següent conjunt de tipus de servidors:
 ||jboss||mongodb||
 ||iis||postgresql||
 
-D'igual manera, la propietat `provider` suporta el següent conjunt de valors:
+La propietat `provider` suporta el següent conjunt de valors:
 
 |Proveïdor|
 |-------|
@@ -415,7 +409,7 @@ build:
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
 
-* Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
+- Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
 
 ```
 - id: dp001
@@ -426,7 +420,7 @@ Es contemplen els següents tipus de desplegament:
 ```
 
 </br>
-* Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build).
+- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build).
 
 ```
 - id: ds001
@@ -438,7 +432,7 @@ Es contemplen els següents tipus de desplegament:
 ```
 
 </br>
-* Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
+- Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
 
 ```
@@ -448,7 +442,7 @@ Es contemplen els següents tipus de desplegament:
 ```
 
 </br>
-* Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
+- Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 
 ```
@@ -469,7 +463,7 @@ notificationRecipients:
 ```
 
 ## Exemples
-A continuació s'adjunten exemples de cas d'ús:
+A continuació s'adjunten exemples de casos d'ús:
 
 1. [Llibreria Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml)
 2. [Aplicació Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
