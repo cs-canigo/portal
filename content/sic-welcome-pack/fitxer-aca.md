@@ -18,7 +18,7 @@ amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructure
 
 En aquest article **ens centrarem exclusivament en explicar com preparar l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
 Si voleu més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
-[**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada
+[**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/) on s'explica de forma detallada.
 
 ## Configuració
 
@@ -37,7 +37,7 @@ version: x.y.z
 ### Paràmetres
 
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
-Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular les dades repetibles.
+Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular dades repetibles.
 
 ```
 parameters:
@@ -92,13 +92,12 @@ resources:
 Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.</br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
-- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament. </br>
-</div>
+- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament. </div>
 
 </br>
 #### Infraestructures
 
-Caldrà relacionar les denominacions d'infraestructures indicades pel proveïdor:
+Es relacionaran les denominacions d'infraestructures indicades pel proveïdor:
 
 * Element o tipologia (`element`)
 * Entorns (`environments`)
@@ -130,7 +129,7 @@ resources:
       provider: cpd9
 ```
 
-Només si cal enviar variables d’entorn requerides per al desplegament a les infraestructures, s'haurà d'emplenar la secció `vars`:
+Només si cal enviar **variables d’entorn requerides per al desplegament** a les infraestructures, s'haurà d'emplenar la secció `vars`:
 
 ```
 resources:
@@ -151,11 +150,10 @@ resources:
 ```
 
 <div class="message information">
-En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que NO és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
+En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
 el detall de les infraestructures, només cal conegui aquest identificador.
-Per la modalitat de desplegament <b>SEMIAUTOMATIC</b> **no serà necessari preparar l’arxiu ACI ni definir el detall d’infraestructures**.
-</div>
+Per la modalitat de desplegament <b>SEMIAUTOMATIC</b> no serà necessari preparar l’arxiu ACI ni definir el detall d’infraestructures.</div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
@@ -180,7 +178,7 @@ La propietat `provider` suporta el següent conjunt de valors:
 </br>
 #### Artefactes
 
-El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran.
+El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
 
 ```
 resources:
@@ -233,8 +231,8 @@ Es contemplen les següents tecnologies de construcció:
 * **Hugo**
 * **Altres comandes** (zip, unzip)
 
-Cada pas de construcció disposa d'un identificador, una posició o ordre, una eina de construcció i l'artefacte o llista d’artefactes que genera.
-Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondres els declarats a la secció `resources.artifacts`.
+Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
+Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
 
 ```
 build:
@@ -250,10 +248,9 @@ build:
         - artifact01
 ```
 
-**NOTA**:
-
-Com es pot veure a l'exemple, en cas de requerir executar les passes de **construcció des d’un directori específic** caldrà definir la ubicació mitjançant
-la propietat "executionDir".
+<div class="message information">
+Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
+la propietat "executionDir".  </div>
 </br>
 
 A continuació s’explica l’ús dels diferents tipus d’eines previstes.
@@ -261,7 +258,7 @@ A continuació s’explica l’ús dels diferents tipus d’eines previstes.
 </br>
 #### Node
 Caldrà seleccionar la versió a utilitzar de l’eina i, només si es tracta d'una eina complementària, l’eina a utilitzar (per defecte `npm`).
-No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
+No caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada.
 
 |Versions suportades|
 |-------|
@@ -284,7 +281,7 @@ build:
         - artifact01
 ```
 
-Dins d’aquesta tecnologia, es dóna cobertura a altres eines complementàries que caldrà especificar mitjançant la propietat `module`.
+Dins d’aquesta tecnologia, es dóna cobertura a altres eines complementàries que caldrà especificar mitjançant la propietat `module`:
 
 |Eines complementàries|
 |-------|
@@ -317,7 +314,8 @@ build:
 
 </br>
 #### Java
-Caldrà seleccionar la versió a utilitzar de l’eina i la versió de Java. No caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i la versió de Java.
+No caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada
 
 
 |Eines suportades|Versions JDK|
@@ -345,7 +343,7 @@ build:
 
 </br>
 #### .Net
-Caldrà seleccionar la versió a utilitzar de l’eina i no caldrà que s'indiqui la comanda específica en els paràmetres d’execució.
+Caldrà seleccionar la versió a utilitzar de l’eina i no caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada
 
 
 |Eines predefinides|
@@ -408,8 +406,7 @@ build:
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
-
-- Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
+- Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
 ```
 - id: dp001
@@ -420,7 +417,7 @@ Es contemplen els següents tipus de desplegament:
 ```
 
 </br>
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build).
+- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build)
 
 ```
 - id: ds001
@@ -433,7 +430,7 @@ Es contemplen els següents tipus de desplegament:
 
 </br>
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
-**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
+**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
 
 ```
 - id: dp001
@@ -443,7 +440,7 @@ Es contemplen els següents tipus de desplegament:
 
 </br>
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
-Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
+Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 
 ```
 - id: dp001
