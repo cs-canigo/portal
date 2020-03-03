@@ -469,6 +469,7 @@ A continuació s'adjunten exemples de casos d'ús:
 5. [Llibreria .Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml)
 6. [Aplicació .Net desplegament semi-automàtic](/related/sic/2.0/autoservei_net.yml)
 7. [Aplicació Oracle Apex](/related/sic/2.0/autoservei_apex.yml)
+8. [Aplicació PHP](/related/sic/2.0/autoservei_php.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
