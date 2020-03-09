@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-09"
+date        = "2020-03-08"
 title       = "Canigó. Mòdul SAP deprecat"
 description = "A partir de la publicació de Canigó 3.4.3, el mòdul de SAP estarà deprecat"
 sections    = ["Notícies", "home"]
