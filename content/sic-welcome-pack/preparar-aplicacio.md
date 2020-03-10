@@ -45,13 +45,12 @@ la versió funcional del projecte.
 version: 1.1.0
 ```
 <div class="message information">
-Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.
-https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-configuracio/
-https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/
+Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.<br/>
+<a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/">Canigo-Configuracio-multientorn-SPA</a>
 </div>
 
-* Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració `aca.yml` que caldrà ubicar dins la mateixa carpeta /sic/:
-[Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+* Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració `aca.yml` que caldrà ubicar dins la mateixa carpeta /sic/.
+Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 * No es permet l'ús de versions **Snapshot**.
 
@@ -61,12 +60,14 @@ https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multiento
 ### Aplicacions APEX i PL/SQL, i altres desplegaments d'scripts a BBDD
 
 El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol desplegament d'aquest tipus.
-En general s'aconsella disposar d'un projectes específics de desplegament de BBDD, tot i que també es pot optar per integrarlo al desplegament d'un altre altefacte, habitualment el backend de l'aplicació.
+En general s'aconsella disposar d'un projecte específic de desplegament de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
+el backend de l'aplicació.
 
 En qualsevol cas, caldrà preparar:
 
 * **sql_scripts**: directori per emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes a criteri del seu responsable.
 * **plans.xml**: fitxer on es defineix el pla d'execució d'scripts, incloent el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
+
 
 Exemple:
 ```
@@ -81,6 +82,7 @@ Exemple:
 <script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO2.sql"/>
 </llista-scripts>
 ```
+
 
 El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
