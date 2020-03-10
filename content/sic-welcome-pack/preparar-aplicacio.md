@@ -1,5 +1,5 @@
 +++
-date = "2019-01-04"
+date = "2020-03-10"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -10,45 +10,80 @@ weight = 2
 
 ## Introducció
 
-En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes, s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament.
+En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes,
+s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament.
 
 ## Lliurament de codi font
 
 Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi font (SCM - Source Code Management) del SIC:
 
 * Els projectes han de crear-se dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs i creació de peticions Remedy s'associïn a l'aplicació corresponent.
-* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte, s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
-* Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
-* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que treballaran les pipelines de construcció i desplegament.
-* Les pipelines seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS de versió definitiva un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
+* **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte,
+s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
+* Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i
+lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
+* Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que
+treballaran les pipelines de construcció i desplegament.
+* Les pipelines seran les encarregades de generar els **TAGS** corresponents. Es generaran TAGs de build un cop s’aconsegueixi construir els artefactes i TAGS de versió
+definitiva un cop finalitzada la verificació a l’entorn de PREPRODUCCIÓ.
 
 ## Estructura de projectes
 L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Contínua:
 
-* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes. Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'scripts o un programa sense fragments independents.
-* Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
-* Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn on es desplegaran (ús profiles maven o similar).
-* Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, cal crear l’arxiu **sic.yml** que contindrà la versió funcional del projecte. Per exemple: “version: 1.1.0”.
+* Dins del grup del codi de diàleg, es tindran **tant projectes com a conjunts de codi font susceptibles de ser versionats** de forma independent a la resta de projectes.
+Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'scripts o un programa sense fragments independents.
+
+* Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
+desenvolupament com en els entorns del SIC.
+
+* Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
+on es desplegaran (ús profiles maven o similar).
+
+* Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
+la versió funcional del projecte.
+```
+version: 1.1.0
+```
+<div class="message information">
 Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.
-* Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració **aca.yml** que caldrà ubicar dins la mateixa carpeta /sic/.
+https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-configuracio/
+https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/
+</div>
+
+* Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració `aca.yml` que caldrà ubicar dins la mateixa carpeta /sic/:
+[Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+
 * No es permet l'ús de versions **Snapshot**.
-* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de **plans** i scripts a una carpeta independent.
 
-### Aplicacions APEX i PL/SQL, i altres projectes de desplegament d'scripts a BBDD
+* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
 
-Es tracta de projectes que es fonamenten en l'execució d'scripts a BBDD, a part de poder incloure contingut estàtic, per als quals ha estat establerta un criteri d'estructuració dins el sistema de gestió del codi font:
-<br/><br/>
 
-![Apex](/related/sic/estructura_projectes_apex.png "Apex")
-<br/>
+### Aplicacions APEX i PL/SQL, i altres desplegaments d'scripts a BBDD
 
-On:
+El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol desplegament d'aquest tipus.
+En general s'aconsella disposar d'un projectes específics de desplegament de BBDD, tot i que també es pot optar per integrarlo al desplegament d'un altre altefacte, habitualment el backend de l'aplicació.
 
-* **docs**: directori per emmagatzemar documentació (típicament manuals d'usuari i d'explotació).
-* **bin**: directori per emmagatzemar binaris com Oracle Reports, BI Publishers, contingut estàtic i altres.
-* **sql_scripts**: directori per emmagatzemar tot el codi, que pot estar organitzat en subcarpetes a criteri del seu responsable. Caldrà incloure el fitxer de **plans** a la carpeta principal que serà el fitxer encarregat de definir els scripts a executar i el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
+En qualsevol cas, caldrà preparar:
 
-El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia, el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
+* **sql_scripts**: directori per emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes a criteri del seu responsable.
+* **plans.xml**: fitxer on es defineix el pla d'execució d'scripts, incloent el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
+
+Exemple:
+```
+<llista-scripts>
+<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT1.sql"/>
+<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT2.sql"/>
+
+<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE1.sql"/>
+<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE2.sql"/>
+
+<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO1.sql"/>
+<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO2.sql"/>
+</llista-scripts>
+```
+
+El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
+el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Llibreries
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
