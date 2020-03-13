@@ -145,8 +145,8 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |Tecnologia|Versions|
 |-------|-------|
 |Ant|1.8.2<br />1.9.6|
-|Maven|2.0.10<br />2.2.1<br />3.2.2<br />3.3.9|
-|MS_Build|4.0|
+|Maven|3.5<br />3.6|
+|MS_Build|4.0<br />14<br />15|
 |MS_Deploy|7.1|
 
 Cas particular de tecnologies front-end:
@@ -156,7 +156,8 @@ Cas particular de tecnologies front-end:
 |0.12.3|2.15.0|
 |4.4.3|2.15.1|
 |5.10.1|3.8.3|
-|8.12.0 (LTS)|6.4.1|
+|8.16.2 (LTS)|6.4.1|
+|10.16.3 (LTS)|6.9.0|
 
 L'única eina que va lligada en certa manera amb la versió de node és **npm**. La resta d'eines de cicle de vida (tals com **bower**, **gulp** i **grunt**) s'han d'incloure amb l'aplicació per a què el SIC les utilitzi per a la seva construcció. Pel que fa a [Angular](https://angular.io/), framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l'aplicació definirà la versió de **ng** (Angular-cli) a utilitzar per a la seva construcció.
 

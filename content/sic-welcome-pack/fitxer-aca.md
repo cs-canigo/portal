@@ -54,7 +54,7 @@ build:
   steps:
     - id: step01
       position: 1
-      tool: maven_3.2.2
+      tool: maven_3.6
       jdk: JDK 1.8
       parameters: ${nom_param1}
 ```
@@ -239,7 +239,7 @@ build:
   steps:
     - id: bs001
       position: 1
-      tool: maven_3.2.2
+      tool: maven_3.6
       Jdk_ JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       jdk: JDK 1.8
@@ -322,10 +322,8 @@ No caldrà que s'indiqui la comanda específica en els paràmetres d’execució
 |-------|-------|
 |ant_1.8.2|JDK 1.5|
 |ant_1.9.6|JDK 1.6|
-|maven_2.0.10|JDK 1.7|
-|maven_2.2.1|JDK 1.8|
-|maven_3.2.2|
-|maven_3.3.9|
+|maven_3.5|JDK 1.8|
+|maven_2.6|JDK 1.8|
 
 
 ```
@@ -333,7 +331,7 @@ build:
   steps:
     - id: bs001
       position: 1
-      tool: maven_3.2.2
+      tool: maven_3.6
       jdk: JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       generates:
@@ -423,7 +421,7 @@ Es contemplen els següents tipus de desplegament:
 - id: ds001
   position: 1
   type: library
-  tool: maven_3.3.9
+  tool: maven_3.6
   parameters: deploy -f ./pom.xml
   destination: 9999_nexus
 ```
