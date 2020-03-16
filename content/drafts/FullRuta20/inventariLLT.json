@@ -2,8 +2,8 @@
 "data":
 [
 {"id":1,"producte":"Windows estació de treball","categoria":"Sistemes operatius LLT","obsolet":"XP, Vista, 7","suportat":"8.1, 10","versioactual":"10","roadmap":"–","emergent":"–"},
-{"id":2,"producte":"Windows tauleta","categoria":"Sistemes operatius LLT","obsolet":"XP, Vista, 7","suportat":"8.1, 10","versioactual":"10","roadmap":"–","emergent":"–"},
-{"id":3,"producte":"Versions Windows 10","categoria":"Sistemes operatius LLT","obsolet":"1507 (Inicial), 1511, 1607","suportat":"1703, 1709, 1803, 1809","versioactual":"1809","roadmap":"–","emergent":"1903"},
+{"id":2,"producte":"Windows tauleta","categoria":"Sistemes operatius LLT","obsolet":"XP, Vista, 7","suportat":"8.1, 10","versioactual":"10","roadmap":"–","emergent":""},
+{"id":3,"producte":"Versions Windows 10","categoria":"Sistemes operatius LLT","obsolet":"1507 (Inicial), 1511, 1607","suportat":"1709, 1809","versioactual":"1809","roadmap":"1909","emergent":"–"},
 {"id":4,"producte":"MS Office estació de treball (inclou runtime Access)","categoria":"Eines ofimàtiques","obsolet":"2003, 2007, 2010","suportat":"2013, 2016","versioactual":"2016","roadmap":"–","emergent":"2019"},
 {"id":5,"producte":"MS Office tauleta","categoria":"Eines ofimàtiques","obsolet":"2003, 2007, 2010","suportat":"2013, 2016","versioactual":"2016","roadmap":"–","emergent":"2019"},
 {"id":6,"producte":"LibreOffice","categoria":"Eines ofimàtiques","obsolet":"<=6.0","suportat":"6.1.6","versioactual":"6.1.6","roadmap":"–","emergent":"6.2.3"},
@@ -18,6 +18,6 @@
 {"id":15,"producte":"Symantec Endpoint Proteccion","categoria":"Eines i programari","obsolet":"<=12","suportat":"14.2","versioactual":"14.2","roadmap":"–","emergent":"–"},
 {"id":16,"producte":"Filezilla","categoria":"Eines i programari","obsolet":"–","suportat":"3.42","versioactual":"3.42","roadmap":"–","emergent":"–"},
 {"id":17,"producte":"WinSCP","categoria":"Eines i programari","obsolet":"–","suportat":"5.15","versioactual":"5.15","roadmap":"–","emergent":"–"},
-{"id":18,"producte":"Client Cisco AnyConnect","categoria":"Eines i programari","obsolet":"<=4.2","suportat":"4.5, 4.6","versioactual":"4.6","roadmap":"–","emergent":"–"}																																 
+{"id":18,"producte":"Client Cisco AnyConnect","categoria":"Eines i programari","obsolet":"<=4.2","suportat":"4.5, 4.6","versioactual":"4.6","roadmap":"–","emergent":"–"}
 ]
 }
