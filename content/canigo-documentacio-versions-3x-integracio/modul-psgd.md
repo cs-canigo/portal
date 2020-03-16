@@ -145,7 +145,7 @@ Recuperar el bean del servei de PSGD des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private PsgdConnectorImpl psgdConnector;
+private PsgdConnector psgdConnector;
 ```
 
 Fer la crida a la modalitat del servei desitjat, p.e.:
