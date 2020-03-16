@@ -1,5 +1,5 @@
 +++
-date        = "2019-07-08"
+date        = "2020-03-16"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -72,16 +72,16 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
 <table id="Revisio" class="display" style="width:50%">
-        <thead>
-            <tr>
-                <th>Darrera revisió realitzada</th>
-                <th> Revisió de full de ruta vigent fins</th>
-             </tr>
-	     <tr>
-                <td>novembre de 2019 </td>
-                <td>febrer de 2020</td> 
-             </tr>
-        </thead>
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>març de 2020 </td>
+<td>juny de 2020</td>
+</tr>
+</thead>
 </table>
 <font size="20">
 <table id="Titol_CPD" class="display" style="width:100%">
