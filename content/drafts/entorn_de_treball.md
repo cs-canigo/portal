@@ -40,7 +40,7 @@ weight= 5
 &nbsp;
 
 ---
-![minipic](/images/ET_icon.png)
+
 # 0. Principis globals
 &nbsp;
 &nbsp;
@@ -59,7 +59,7 @@ weight= 5
 &nbsp;
 
 ---
-![minipic](/images/arq.png)
+
 # 1. Solucions LLdT
 
 &nbsp;
@@ -139,7 +139,6 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ---
 
-![minipic](/images/lldt.png)
 # 2. Arquitectura LLdT
 &nbsp;
 &nbsp;
@@ -148,20 +147,21 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ## 2.1 Dispositius
 
-* **2.1.1	Eficiència energètica**. L'adquisició i la gestió dels dispositius es realitzarà amb un enfoc d'estalvi energètic, cuidant que els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin l'eficiència energètica i la sostenibilitat sense impactar en la funcionalitat. 
+* **2.1.1	Eficiència energètica** *(obligatori)*. L'adquisició i la gestió dels dispositius es realitzarà amb un enfoc d'estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar en la funcionalitat. 
 
-* **2.1.2	Simplicitat**. 
+* **2.1.2	Simplicitat** *(obligatori)*. Tot dispositiu ha de tenir les característiques extrictament necessàries per donar el servei demandat. S'evitarà l'adquisició de dispositius sobre-dimensionats a nivell de recursos o funcionalitats amb l'objectiu de minimitzar el cost, problemes i esforços de manteniment.
 
-* **2.1.3	Durabilitat i reaprofitament**. 
+* **2.1.3	Durabilitat i reaprofitament** *(desitjable)*. Cal procuprar que el dispositiu sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l'adopció de solucions tecnològiques amb aquest propòsit.
 
-* **2.1.4	Ampliable**.
+* **2.1.4	Ampliable** *(desitjable)* *(desitjable)*. Tot dispositiu hauria de permetre la seva ampliació a nivell de recursos i funcionalitats, mitjançant l'ús de perifèrics d'entrada o sortida, la substitució o ampliació dels components que formen el propi dispositiu i la interconnexió amb altres dispositius.
 
-* **2.1.5	Gestió centralitzada**.
+* **2.1.5	Gestió centralitzada** *(obligatori)*. Tot dispositiu ha de tenir la capacitat de ser gestionat de forma remota i centralitzada mitjançant les plataformes transversals de la Generalitat de Catalunya o, si no hi ha cap establerta, caldrà adoptar la plataforma corresponent a la tipologia de dispositiu per fer aquesta gestió.
 
-* **2.1.6	Seguretat**.
+* **2.1.6	Seguretat** *(obligatori)*. S'han d'aplicar les mesures restrictives i de control adients al servei que dona un dispositiu per assolir el nivell de seguretat establert per l'agència de ciberseguretat. 
 
+* **2.1.7	Suportat** *(obligatori)*. El dispositiu ha de comptar amb suport vigent del fabricant i ha de ser compatible amb la versió CTTI del sistema operatiu o firmware corresponent per aquesta tipologia de dispositiu.
 
-## 2.2 Terminals corporatius
+## 2.2 Terminals corporatius i sistema operatiu
 
 * **2.2.1	Rendiment persistent**.
 
@@ -179,7 +179,6 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 &nbsp;
 
 ---
-![minipic](/images/conn.png)
 
 # 3. Arquitectura TELCO
 &nbsp;
