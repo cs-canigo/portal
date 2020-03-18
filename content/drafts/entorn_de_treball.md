@@ -153,7 +153,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **2.1.3	Durabilitat i reaprofitament** *(desitjable)*. Cal procuprar que el dispositiu sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l'adopció de solucions tecnològiques amb aquest propòsit.
 
-* **2.1.4	Ampliable** *(desitjable)* *(desitjable)*. Tot dispositiu hauria de permetre la seva ampliació a nivell de recursos i funcionalitats, mitjançant l'ús de perifèrics d'entrada o sortida, la substitució o ampliació dels components que formen el propi dispositiu i la interconnexió amb altres dispositius.
+* **2.1.4	Ampliable** *(desitjable)*. Tot dispositiu hauria de permetre la seva ampliació a nivell de recursos i funcionalitats, mitjançant l'ús de perifèrics d'entrada o sortida, la substitució o ampliació dels components que formen el propi dispositiu i la interconnexió amb altres dispositius.
 
 * **2.1.5	Gestió centralitzada** *(obligatori)*. Tot dispositiu ha de tenir la capacitat de ser gestionat de forma remota i centralitzada mitjançant les plataformes transversals de la Generalitat de Catalunya o, si no hi ha cap establerta, caldrà adoptar la plataforma corresponent a la tipologia de dispositiu per fer aquesta gestió.
 
