@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-05"
+date        = "2020-03-18"
 title       = "Principis d'arquitectura de l'entorn de treball"
 description = "Arquitectura de l'entorn de treball"
 sections    = ["drafts"] 
