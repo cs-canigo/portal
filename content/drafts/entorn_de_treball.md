@@ -164,13 +164,13 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ## 2.2 Terminals corporatius i sistema operatiu
 
-* **2.2.1	Rendiment persistent**.
+* **2.2.1	Rendiment i funcionalitat persistent** *(obligatori)*. El lloc de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment de les aplicacions i del sistema operatiu, així com que la operativitat  perduri al llarg del temps gràcies a una correcte funcionalitat de tots els serveis i aplicacions implementades. Amb aquest propòsit es farà una monitorització continua dels recursos i una execució periòdica de proves de capacitat i d'estrès.
 
-* **2.2.2	Inventari i control**.
+* **2.2.2	Inventari i control** *(obligatori)*.
 
-* **2.2.3	Cicle de vida**.
+* **2.2.3	Cicle de vida** *(obligatori)*.
 
-* **2.2.4	Automatització i agilitat**.
+* **2.2.4	Automatització i agilitat** *(obligatori)*.
 
 &nbsp;
 &nbsp;
