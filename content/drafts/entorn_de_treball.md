@@ -49,7 +49,7 @@ weight= 5
   * [Estàndards de l'entorn de treball](https://gencat.sharepoint.com/:x:/s/arquitecturasicpd/EZseBopn5rlNunUw11ODpqkB4GjH8Xq1MpPlkc0lpERamg?e=uENvXu): catàleg dels estàndards establerts en els diferents àrees de l'entorn de treball.
 
 * **0.2 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC i de seguretat involucrades en el disseny. 
-  * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi també els principis d'aquesta àrea.
+  * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
   
 * **0.3 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats i s'ha d'evitar la orientació a certes solucions per interessos particulars.
 
@@ -73,7 +73,7 @@ weight= 5
 
 * **1.1.2 Desacoblada i multi-plataforma** *(desitjable)*. Les aplicacions Web són la tipologia d'aplicacions prioritària per lliurar al lloc de treball pels múltiples beneficis que ofereixen: agnòstiques al SO, maximitzen la mobilitat de l'usuari, faciliten l'administració, etc. Si per motius funcionals, tecnològics o econòmics, es requereix implementar una aplicació escriptori al lloc de treball caldrà avaluar les tecnologies, APIs i Frameworks que millor encaixen per assolir aquests principis.
 
-* **1.1.3 Modular i reutilitzable** *(desitjable)*. Les aplicacions ha d'estar preparades per oferir un servei amb la capacitat de resoldre requeriments funcionals i tècnics heterogenis, mitjançant una capa de personalització i la utilització de micro-serveis o components que permetin adaptar-se a l'escenari d'ús amb el mínim de canvis possible.
+* **1.1.3 Modular i flexible** *(desitjable)*. Les aplicacions haurien de tenir la capacitat d'adaptar-se a requeriments funcionals i tècnics heterogenis, mitjançant una capa de personalització a nivell usuari i emprant components o micro-serveis que maximitzin la compatibilitat amb múltiples sistemes i tecnologies amb el mínim de canvis possible, d'aquesta manera es podran aplicar canvis sense impactar a la resta de l'aplicació.
 
 * **1.1.4 Interoperabilitat** *(obligatori)*. El context d'execució de les aplicacions està format pel Sistema Operatiu, les plataformes integrades (impressió, eines de gestió i administració, recursos locals i en xarxa, etc), altres aplicacions i el perifèrics. La interoperabilitat amb aquests elements és una facultat necessària en les solucions del lloc de treball. Als següents enllaços es troba informació que permet conèixer aquest context d'execució al lloc de treball:
 
@@ -93,14 +93,14 @@ weight= 5
 
 ### 1.2.1 Virtualització d'aplicacions
 
-La virtualització d'aplicacions és l'acte d'aïllar o desacoblar un recurs informàtic dels altres, mitjançant la generació d'un paquet que inclou tots els objectes i fitxers que requereixi l'aplicació per funcionar i amb l'objectiu de poder-la executar sense necessitat d'instal·lació. 
+La virtualització és l'acte d'aïllar o desacoblar un recurs informàtic dels altres, tanmateix mitjançant la virtualització d'aplicacions es genararà un paquet que inclou tots els objectes i fitxers que requereixi l'aplicació per funcionar i amb l'objectiu de poder-la executar sense necessitat d'instal·lació. 
 
-En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mètode d'implementació adient caldrà seguir els següents principis associats amb la creació, execució i manteniment del paquet. Els principals motius pels que s'utilitzarà aquesta tecnologia són:
+En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mètode d'implementació adient caldrà seguir els següents principis associats amb la creació, execució i manteniment del paquet. Els principals motius pels quals s'utilitzarà aquesta tecnologia són:
 
-1. Execució de múltiples versions o instàncies de la mateixa aplicació escriptori en el mateix entorn.
+1. Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.
 2. Remeiar conflictes entre aplicacions.
-3. Ritme d'actualitzacions de l'aplicació escriptori molt elevat.
-4. Es requereixi un implementació o desimplementació de l'aplicació molt àgil.
+3. Ritme d'actualitzacions de l'aplicació molt elevat.
+4. Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
 
 ##### Principis *(obligatoris)*:
 
@@ -126,9 +126,9 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ## 1.3 Cost i mateniment
 
-* **1.3.2	Eficiència econòmica**. 
+* **1.3.2	Eficiència econòmica** *(obligatori)*. Cal revisar les sinèrgies funcionals amb els aplicatius disponibles a l'entorn de treball per garantir la necessitat del nou aplicatiu i per minimitzar els requeriments d'infraestructura (maquinari i llicenciament). 
 
-* **1.3.1	Evolució continua**. 
+* **1.3.1	Evolució continua** *(obligatori)*. Cal garantir la continuïnat del cicle de vida de tota aplicació implementada al lloc de treball mitjançant els mecanismes d'integració continua establerts per CTTI i que aquest estigui alineat amb el cicle de vida del sistema operatiu client on està implementada. 
 
 &nbsp;
 &nbsp;
