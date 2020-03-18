@@ -19,7 +19,7 @@ weight= 5
 &nbsp;
 - **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
   * [2.1 Dispositius](#21-dispositius)
-  * [2.2 Terminals corporatius i Sistema Operatiu](#22-terminals-corporatius-i-Sistema Operatiu)
+  * [2.2 Terminals corporatius i Sistema Operatiu](#22-terminals-corporatius-i-sistema-Operatiu)
 &nbsp;  
 - **[3. Arquitectura TELCO](#3-arquitectura-telco)**
   * [3.1 Principis de disseny](#31-principis-de-disseny)
@@ -162,7 +162,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **2.1.7	Suportat** *(obligatori)*. El dispositiu ha de comptar amb suport vigent del fabricant i ha de ser compatible amb la versió CTTI del sistema operatiu o firmware corresponent per aquesta tipologia de dispositiu.
 
-## 2.2 Terminals corporatius i sistema operatiu
+## 2.2 Terminals corporatius i Sistema Operatiu
 
 * **2.2.1	Rendiment i funcionalitat persistent** *(obligatori)*. El lloc de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment de les aplicacions i del sistema operatiu, així com que la operativitat  perduri al llarg del temps gràcies a una correcte funcionalitat de tots els serveis i aplicacions implementades. Amb aquest propòsit es farà una monitorització continua dels recursos i una execució periòdica de proves de capacitat i d'estrès.
 
