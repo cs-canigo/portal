@@ -164,13 +164,15 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ## 2.2 Terminals corporatius i Sistema Operatiu
 
-* **2.2.1	Rendiment i funcionalitat persistent** *(obligatori)*. El lloc de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment de les aplicacions i del sistema operatiu, així com que la operativitat  perduri al llarg del temps gràcies a una correcte funcionalitat de tots els serveis i aplicacions implementades. Amb aquest propòsit es farà una monitorització continua dels recursos i una execució periòdica de proves de capacitat i d'estrès.
+* **2.2.1	Rendiment i funcionalitat persistent** *(obligatori)*. El lloc de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment de les aplicacions i del sistema operatiu, així com que la funcionalitat perduri al llarg del temps gràcies a una correcte operativitat de tots els serveis i aplicacions implementades. Amb aquest propòsit es farà una monitorització continua dels recursos i una execució periòdica de proves de capacitat i d'estrès.
 
-* **2.2.2	Inventari i control** *(obligatori)*.
+* **2.2.2	Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s'ha d'implementar seguint les directrius de CTTI, les quals permeten assolir una homogenitat en l'aparença, les funcionalitats transversals i la operativitat del sistema.
 
-* **2.2.3	Cicle de vida** *(obligatori)*.
+* **2.2.2	Inventari i control** *(obligatori)*. Cal disposar dels mecanismes d'inventari i control pertinents que garanteixin una correcte gestió dels equips i del llicenciament.
 
-* **2.2.4	Automatització i agilitat** *(obligatori)*.
+* **2.2.3	Cicle de vida** *(obligatori)*. S'hauran de cumplir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes compotents de la Generalitat de Catalunya amb l'ojbectiu d'assolir el SLA del servei. 
+
+* **2.2.4	Automatització i agilitat** *(obligatori)*. Cal disposar de les plataformes, eines i automatismes nessaris per fer un desplegament àgil del terminal, així com la distribució del programari i polítiques corporatives corresponents amb l'objectiu de lliurar un terminal preparat pel negoci. 
 
 &nbsp;
 &nbsp;
