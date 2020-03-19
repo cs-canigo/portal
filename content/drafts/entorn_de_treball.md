@@ -41,7 +41,7 @@ img[alt="centrar"] {
 - **[1. Solucions LLdT](#1-solucions-lldt)**
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
   * [1.2 Principis tecnològics](#12-principis-tecnològics)   
-  * [1.3 Cost i mateniment](#13-cost-i-mateniment)
+
 &nbsp;
 - **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
   * [2.1 Dispositius](#21-dispositius)
