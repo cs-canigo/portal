@@ -457,6 +457,11 @@ notificationRecipients:
     - usuari2@domini
 ```
 
+## Validació
+Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer ACA en fer la pujada al Sistema de Custodia de Codi.
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines on-line de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
+
+
 ## Exemples
 A continuació s'adjunten exemples de casos d'ús:
 
