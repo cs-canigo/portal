@@ -40,15 +40,15 @@ img[alt="centrar"] {
 
 - **[1. Solucions LLdT](#1-solucions-lldt)**
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
-  * [1.2 Principis tecnològics](#12-principis-tecnològics)   
+  * [1.2 Principis tecnològics](#12-principis-tecnològics)
 
 - **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
   * [2.1 Dispositius](#21-dispositius)
     + [2.1.1 Equips corporatius i Sistema Operatiu](#22-equips-corporatius-i-sistema-Operatiu)
   * [2.2 Virtualització d'aplicacions](#22-virtualització-d'aplicacions)
     + [2.2.1 Execució local](#221-execució-local)
-    + [2.2.1 Execució remota](#221-execució-remota)
- 
+    + [2.2.2 Execució remota](#222-execució-remota)
+
 - **[3. Arquitectura TELCO](#3-arquitectura-telco)**
   * [3.1 Principis de disseny](#31-principis-de-disseny)
   * [3.2 Principis tecnològics](#32-principis-tecnològics)   
@@ -85,7 +85,7 @@ img[alt="centrar"] {
 &nbsp;
 &nbsp;
 
-##  0.2 Principis de cost i manteniment
+##  0.2 Principis de cost i mateniment
 
 * **0.2.1 Arquitectura mínima** *(obligatori)*. Cal tenir sempre en compte l’escalabilitat de la xarxa, i caldrà minimitzar al màxim el marge de creixement del disseny. Basat en el principi de la automatització s’aconsegueix una reducció dels costos i temps dels processos d’instal·lació i manteniment, i una arquitectura sostenible en el temps, que doni una bona rendibilitat. 
  
@@ -212,7 +212,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 &nbsp;
 &nbsp;
 
-### 2.3.1. Execució remota**
+### 2.2.2. Execució remota**
 
 &nbsp;
 &nbsp;
