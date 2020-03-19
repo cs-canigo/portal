@@ -7,6 +7,31 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
+
+<style type="text/css">
+img[alt="minipic"] { 
+  max-width: 80px;
+  float: left;
+  padding-right: 15px;
+}
+img[alt="centrar"] { 
+  margin: auto;
+  max-width: 75%;
+  display: block;
+}
+</style>
+
+
+<img src="https://cburgales.github.io/CTTI/images/ET_Banner.png" alt="centrar" usemap="#planetmap">
+
+
+<map name="planetmap">
+  <area shape="rect" coords="10,50,240,90" alt="Sun" href="#0-principis-globals">
+  <area shape="rect" coords="20,250,170,300" alt="Sun" href="#1-solucions-lldt">
+  <area shape="rect" coords="175,250,325,300" alt="Sun" href="#2-arquitectura-lldt">
+  <area shape="rect" coords="330,250,480,300" alt="Sun" href="#3-arquitectura-telco">
+</map>
+
 ### Índex dels principis de l'entorn de treball
 
 - **[0. Principis globals](#0-globals)**
