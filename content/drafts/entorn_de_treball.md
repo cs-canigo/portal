@@ -42,14 +42,13 @@ img[alt="centrar"] {
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
   * [1.2 Principis tecnològics](#12-principis-tecnològics)   
 
-&nbsp;
 - **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
   * [2.1 Dispositius](#21-dispositius)
     + [2.1.1 Equips corporatius i Sistema Operatiu](#22-equips-corporatius-i-sistema-Operatiu)
   * [2.2 Virtualització d'aplicacions](#22-virtualització-d'aplicacions)
     + [2.2.1 Execució local](#221-execució-local)
     + [2.2.1 Execució remota](#221-execució-remota)
-&nbsp;  
+ 
 - **[3. Arquitectura TELCO](#3-arquitectura-telco)**
   * [3.1 Principis de disseny](#31-principis-de-disseny)
   * [3.2 Principis tecnològics](#32-principis-tecnològics)   
