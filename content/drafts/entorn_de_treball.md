@@ -166,7 +166,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **2.2.1	Rendiment i funcionalitat persistent** *(obligatori)*. El lloc de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment de les aplicacions i del sistema operatiu, així com que la funcionalitat perduri al llarg del temps gràcies a una correcte operativitat de tots els serveis i aplicacions implementades. Amb aquest propòsit es farà una monitorització continua dels recursos i una execució periòdica de proves de capacitat i d'estrès.
 
-* **2.2.2	Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s'ha de desplegar seguint les directrius de CTTI, gràcies a les les quals s'assolirà una homogenitat en l'aparença, les funcionalitats transversals i la operativitat del sistema.
+* **2.2.2	Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s'ha de desplegar seguint les directrius de CTTI, gràcies a les quals s'assolirà una homogenitat en l'aparença, les funcionalitats transversals i la operativitat del sistema.
 
 * **2.2.2	Inventari i control** *(obligatori)*. Cal disposar dels mecanismes d'inventari i control pertinents que garanteixin una correcte gestió dels equips i del llicenciament.
 
