@@ -24,7 +24,7 @@
 {"id":23,"producte":"Firefox","categoria":"Programari LLdT - Navegadors Web","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":24,"producte":".Net Framework X.XX","categoria":"Programari LLdT - Components dev","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":25,"producte":"Microsoft Visual C++","categoria":"Programari LLdT - Components dev","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
-{"id":26,"producte":"JRE \ OpenJDK","categoria":"Programari LLdT - Components dev","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
+{"id":26,"producte":"JRE - OpenJDK","categoria":"Programari LLdT - Components dev","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":27,"producte":"7-Zip","categoria":"Programari LLdT - Miscel·lània","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":28,"producte":"Acrobat Reader","categoria":"Programari LLdT - Miscel·lània","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":29,"producte":"SAP Gui","categoria":"Programari LLdT - Miscel·lània","obsolet":"–","suportat":"–","versioactual":"–","roadmap":"–","emergent":"–"},
