@@ -26,10 +26,10 @@ img[alt="centrar"] {
 
 
 <map name="planetmap">
-  <area shape="rect" coords="10,50,240,90" alt="Sun" href="#0-principis-globals">
   <area shape="rect" coords="15,290,170,340" alt="Sun" href="#1-solucions-lldt">
   <area shape="rect" coords="195,290,350,340" alt="Sun" href="#2-arquitectura-lldt">
   <area shape="rect" coords="390,290,550,340" alt="Sun" href="#3-arquitectura-telco">
+   <area shape="rect" coords="195,360,350,410" alt="Sun" href="#0-principis-globals">
 </map>
 
 ### Índex dels principis de l'entorn de treball
