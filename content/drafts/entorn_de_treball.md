@@ -44,10 +44,10 @@ img[alt="centrar"] {
 
 - **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
   * [2.1 Dispositius](#21-dispositius)
-    + [2.1.1 Equips corporatius i Sistema Operatiu](#22-equips-corporatius-i-sistema-Operatiu)
+     + [2.1.1 Equips corporatius i Sistema Operatiu](#211-equips-corporatius-i-sistema-operatiu)
   * [2.2 Virtualització d'aplicacions](#22-virtualització-d'aplicacions)
-    + [2.2.1 Execució local](#221-execució-local)
-    + [2.2.2 Execució remota](#222-execució-remota)
+     + [2.2.1 Execució local](#221-execució-local)
+     + [2.2.2 Execució remota](#222-execució-remota)
 
 - **[3. Arquitectura TELCO](#3-arquitectura-telco)**
   * [3.1 Principis de disseny](#31-principis-de-disseny)
@@ -178,7 +178,7 @@ img[alt="centrar"] {
 
 ## 2.2 Virtualització d'aplicacions
 
-### 2.2.1. Execució local**
+### 2.2.1. Execució local
 
 La virtualització és l'acte d'aïllar o desacoblar un recurs informàtic dels altres, tanmateix mitjançant la virtualització d'aplicacions es genararà un paquet que inclou tots els objectes i fitxers que requereixi l'aplicació per funcionar i amb l'objectiu de poder-la executar sense necessitat d'instal·lació. 
 
@@ -212,7 +212,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 &nbsp;
 &nbsp;
 
-### 2.2.2. Execució remota**
+### 2.2.2. Execució remota
 
 &nbsp;
 &nbsp;
