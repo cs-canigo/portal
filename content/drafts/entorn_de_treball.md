@@ -22,7 +22,7 @@ img[alt="centrar"] {
 </style>
 
 
-<img src="https://cburgales.github.io/CTTI/images/ET_Banner4.png" alt="centrar" usemap="#planetmap">
+<img src="https://cburgales.github.io/CTTI/images/ET_Banner5.png" alt="centrar" usemap="#planetmap">
 
 
 <map name="planetmap">
@@ -87,16 +87,9 @@ img[alt="centrar"] {
 
 ##  0.2 Principis de cost i mateniment
 
-* **0.2.1 Arquitectura mínima** *(obligatori)*. Cal tenir sempre en compte l’escalabilitat de la xarxa, i caldrà minimitzar al màxim el marge de creixement del disseny. Basat en el principi de la automatització s’aconsegueix una reducció dels costos i temps dels processos d’instal·lació i manteniment, i una arquitectura sostenible en el temps, que doni una bona rendibilitat. 
- 
-* **0.2.2 Benefici màxim al menor cost i risc possible** *(obligatori)*. La solució de xarxa de telecomunicacions no només haurà d’aconseguir recollir unes especificacions tècniques, també haurà de valorar la rendibilitat tant del disseny com de la seva implementació, evitant sempre duplicitats en els serveis de xarxa. D’aquesta manera, haurà de prendre un enfoc per tal d’abaratir els costos, mentre es garanteixen els requeriments de la solució.
+* **0.2.1 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la rendibilitat, tant en el disseny com en la seva implementació, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de la solució.
 
-* **0.2.3 Impacte d’actualització** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització a nivell de software, o equipament hardware de la xarxa de telecomunicacions. Cal sempre valorar quins seran els possibles canvis dintre de la xarxa, quins riscos i millores aportarà.
-
-* **1.3.2	Eficiència econòmica** *(obligatori)*. Cal revisar les sinèrgies funcionals amb els aplicatius disponibles a l'entorn de treball per garantir la necessitat del nou aplicatiu i per minimitzar els requeriments d'infraestructura (maquinari i llicenciament). 
-
-* **1.3.1	Evolució continua** *(obligatori)*. Cal garantir la continuïnat del cicle de vida de tota aplicació implementada al lloc de treball mitjançant els mecanismes d'integració continua establerts per CTTI i que aquest estigui alineat amb el cicle de vida del sistema operatiu client on està implementada. 
-
+* **0.2.2 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s'han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l'impacte d'aquests canvis en el marc d'interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i aplicatiu. 
 
 &nbsp;
 &nbsp;
