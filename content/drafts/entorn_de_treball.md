@@ -203,8 +203,6 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 * **2.2.1.8	Cicle de vida inalterable**. La virtualització de l'aplicació no ha d'interferir en el cicle de vida de la mateixa, el qual haurà d'anar alineat amb la versió del SO i demés programari present en els terminals client on es pretén executar.
 
 &nbsp;
-&nbsp;
-
 ### 2.2.2. Execució remota
 
 &nbsp;
