@@ -99,10 +99,10 @@ El sistema permet la consulta i descàrrega remota d’artefactes:
 ```
 curl
 X GET [ u user:pwd ]
-"https://hudson.pre.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" O
+"https://hudson.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" O
 curl
 X GET [ u user:pwd ]
-"https://hudson.pre.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
+"https://hudson.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
 ```
 
 <br/><br/>
