@@ -17,7 +17,7 @@ El mòdul de seguretat SAML de Canigó té com a propòsit principal gestionar l
 
 ## Novetats
 
-Com a novetat dels serveis que ofereix el mòdul de seguretat SAML de Canigó és la possibilitat d'utilització centralitzada dels rols dels usuaris a Gicar, tenint l'opció d'obtenció dels rols de l'usuari per BBDD com fins ara i la nova opció per Gicar
+Com a novetat dels serveis que ofereix el mòdul de seguretat SAML de Canigó és la possibilitat d'utilització centralitzada dels rols dels usuaris a Gicar, tenint l'opció d'obtenció dels rols de l'usuari per BBDD com fins ara i la nova opció per Gicar.
 
 Els principals avantatges de la nova opció de gestió de rols per Gicar són:
 
@@ -41,7 +41,7 @@ Els principals avantatges de la nova opció de gestió de rols per Gicar són:
 
 Per a obtenir més informació sobre aquesta nova integració amb Gicar podeu consultar [Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/).
 
-A la **versió 2.2.0 del mòdul canigo.security.saml**, ** versió 2.2.1 del mòdul canigo.security.saml.bridge** i ** versió 2.2.1 del mòdul canigo.security.saml.rest** es proporcionen els components per obtenir els rols a partir de Gicar utilitzant el protocol SAML, no sent necessari definir cap altre provider que proporcioni informació dels rols de l'usuari. 
+A la **versió 2.2.0 del mòdul canigo.security.saml**, **versió 2.2.1 del mòdul canigo.security.saml.bridge** i **versió 2.2.1 del mòdul canigo.security.saml.rest** es proporcionen els components per obtenir els rols a partir de Gicar utilitzant el protocol SAML, no sent necessari definir cap altre provider que proporcioni informació dels rols de l'usuari. 
 
 ## Documentació del mòdul
 
