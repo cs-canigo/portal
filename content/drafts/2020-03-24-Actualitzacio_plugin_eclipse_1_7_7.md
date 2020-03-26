@@ -15,13 +15,29 @@ Seguint l'objectiu del Centre de Suport Canigó de proporcionar als desenvolupad
 
 A la nova versió 1.7.7 del plugin es modifiquen les preguntes al afegir el mòdul de seguretat, amb el següent resultat:
 
-![](/images/news/Security_module_configuration_1_7_7.png)
+Només tenim 3 preguntes:
 
-![](/images/news/)
+![](/images/news/Plugin_1.7.7_add_security.png)
 
-![](/images/news/)
+1. Si es vol token, amb les respostes si o no
 
-![](/images/news/)
+![](/images/news/Plugin_1.7.7_add_security_token.png)
+
+2. El provider que volem fer servir:
+
+![](/images/news/Plugin_1.7.7_add_security_provider.png)
+
+Amb les respostes Arxiu, BBDD, Gicar i Saml si es vol seguretat amb token i Arxiu, BBDD i Gicar si no es vol amb token
+
+3. La forma d'autorització:
+
+![](/images/news/Plugin_1.7.7_add_security_gicar.png)
+
+![](/images/news/Plugin_1.7.7_add_security_saml.png)
+
+Amb les respostes BBDD i Gicar si el provider es Gicar o Saml
+
+A la versió 1.7.7 del plugin s'ha afegit l'opció provider Saml i autorització per Gicar
 
 Segons l'opció seleccionada, el plugin modificarà els fitxers del projecte *WebSecurityConfig.java* i *app-custom-security.xml* per a configurar la seguretat del projecte segons les opcions seleccionades
 
@@ -32,4 +48,5 @@ Per instal·lar o actualitzar la versió del plugin és necessari seguir els pas
 Teniu disponible la següent documentació:
 
 * [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
+* [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 * [Mòdul de Seguretat SAML](/canigo-documentacio-versions-3x-core/modul-saml/)
