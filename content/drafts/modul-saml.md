@@ -255,7 +255,7 @@ Les assercions tenen un temps de vida útil que potser massa estricte en cas de 
 
 ```
 	*.extraValidityMinutes=60
-```	
+```
 
 ## API Canigó (Stateless)
 
