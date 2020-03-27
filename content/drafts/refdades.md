@@ -145,7 +145,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 <br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre  5) </h5>
+<h5>Catàleg Tècnic de Dades (prova filtre  6) </h5>
 <br/>
 
 <script type="text/javascript">
