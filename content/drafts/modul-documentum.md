@@ -6,10 +6,10 @@ sections    = "Canigó. Documentació versió 3.x"
 weight      = 4
 +++
 
-<div class="message warning">
+<div class="warning">
 	
 A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul està deprecat. No hi haurà més evolució d'aquest mòdul
-<br/>
+
 </div>
 
 ## Propòsit
