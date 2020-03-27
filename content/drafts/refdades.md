@@ -163,18 +163,14 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
 	  "columns": [
-          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 4 }
+          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: "<button class=\"myButton\">Detall</button>" }
            ],
-      "columnDefs": [ {
-            "targets": -1,
-            "data": null,
-            "defaultContent": "<button class=\"myButton\">Detall</button>"
-            },
+      "columnDefs": [ 
             {
             "targets": [ 0 ],
             "visible": false,
             } ],
- 	  "searchCols": [
+       "searchCols": [
                 { "search": "Consolidat" }, null,  null, null, null, null
 		  ]
     } );
