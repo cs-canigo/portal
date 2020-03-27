@@ -143,15 +143,16 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 
+
 <br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre  333) </h5>
+<h5>Catàleg Tècnic de Dades (prova filtre  5) </h5>
 <br/>
 
 <script type="text/javascript">
   $(document).ready(function() {           
     var tcons =  $('#prova').DataTable( {
       "ajax": './json/entitats.json',
-      "deferRender": true,
+	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
       "scrollY": "400px",
@@ -161,16 +162,20 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
+	  "columns": [
+          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }
+           ],
       "columnDefs": [ {
             "targets": -1,
             "data": null,
             "defaultContent": "<button class=\"myButton\">Detall</button>"
-        } ],
-	  "searchCols": [
-          { "search": "Territori" },
-		    null,
-		    null,
-		    null
+            },
+            {
+            "targets": [ 0 ],
+            "visible": false,
+            } ],
+ 	  "searchCols": [
+                { "search": "Consolidat" }, null,  null, null, null, null
 		  ]
     } );
 	 
@@ -202,6 +207,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 <table id="prova" class="hover" style="width:100%">
         <thead>
             <tr>
+                <th>Nivell Validació</th>
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
@@ -211,7 +217,6 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
         </thead>
     </table>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
