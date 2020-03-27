@@ -145,7 +145,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 <br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre  6) </h5>
+<h5>Catàleg Tècnic de Dades (prova filtre  6J) </h5>
 <br/>
 
 <script type="text/javascript">
@@ -163,9 +163,13 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
 	  "columns": [
-          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: "<button class=\"myButton\">Detall</button>" }
+          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: "" }
            ],
-      "columnDefs": [ 
+      "columnDefs": [ {
+            "targets": -1,
+            "data": null,
+            "defaultContent": "<button class=\"myButton\">Detall</button>"
+            },
             {
             "targets": [ 0 ],
             "visible": false,
