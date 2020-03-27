@@ -118,7 +118,9 @@ A continuació al fitxer conf/extra/httpd-ssl.conf configurar el VirtualHost_
 Els certificats apache.crt i apache.key es poden generar amb [openssl](ttps://www.openssl.org/):
 
 ```
+
 	openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out ${SRVROOT}/conf/ssl/apache.crt -keyout ${SRVROOT}/conf/ssl/apache.key
+
 ```	
   
 Aquesta operació demanarà omplir algunes dades, la realment important el paràmetre "Common Name" que ha de ser el mateix que el valor posat a **ServerName** al fitxer httpd-ssl.conf.
