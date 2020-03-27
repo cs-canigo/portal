@@ -60,7 +60,7 @@ En cas d'optar per fer-ho manualment, serà necessari crear els següents fitxer
 
 - **WebSecurityConfig.java**
 - **security.properties**
-- **app-custom-security.xml*
+- **app-custom-security.xml**
 
 ###  WebSecurityConfig.java
 
