@@ -144,7 +144,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 <br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre 222) </h5>
+<h5>Catàleg Tècnic de Dades (prova filtre  333) </h5>
 <br/>
 
 <script type="text/javascript">
@@ -165,14 +165,20 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
             "targets": -1,
             "data": null,
             "defaultContent": "<button class=\"myButton\">Detall</button>"
-        } ]
+        } ],
+	  "searchCols": [
+          { "search": "Territori" },
+		    null,
+		    null,
+		    null
+		  ]
     } );
 	 
 	//tcons
 	//  .columns(0)
     //  .search('Territori')
     //  .draw();
-	tcons.fnFilter('Territori', 0 );
+	//tcons.fnFilter('Territori', 0 );
 	  
      $('#prova tbody').on('click', 'button', function () {
         //var data = tcons.row( this ).data();
@@ -210,5 +216,5 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
   
- <script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
+<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
 <script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
