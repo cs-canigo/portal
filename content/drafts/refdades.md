@@ -144,7 +144,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 <br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre) </h5>
+<h5>Catàleg Tècnic de Dades (prova filtre 222) </h5>
 <br/>
 
 <script type="text/javascript">
@@ -152,9 +152,9 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
     var tcons =  $('#prova').DataTable( {
       "ajax": './json/entitats.json',
       "deferRender": true,
-      "bFilter": false,
+      "bFilter": true,
       "autoWidth": true,
-      "scrollY": "800px",
+      "scrollY": "400px",
       "scrollCollapse": true,
       "paging": false,
       "ordering": true,
@@ -168,10 +168,11 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
         } ]
     } );
 	 
-	tcons
-	  .columns(0)
-      .search('Territori')
-      .draw();
+	//tcons
+	//  .columns(0)
+    //  .search('Territori')
+    //  .draw();
+	tcons.fnFilter('Territori', 0 );
 	  
      $('#prova tbody').on('click', 'button', function () {
         //var data = tcons.row( this ).data();
