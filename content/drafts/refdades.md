@@ -143,6 +143,68 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 
+<br/><br/><br/>
+<h5>Catàleg Tècnic de Dades (prova filtre) </h5>
+<br/>
+
+<script type="text/javascript">
+  $(document).ready(function() {           
+    var tcons =  $('#prova').DataTable( {
+      "ajax": './json/entitats.json',
+      "deferRender": true,
+      "bFilter": false,
+      "autoWidth": true,
+      "scrollY": "800px",
+      "scrollCollapse": true,
+      "paging": false,
+      "ordering": true,
+      //"pageLength": 10,
+      //"order": [[ 0, 'asc' ]],
+      //"info":     false,
+      "columnDefs": [ {
+            "targets": -1,
+            "data": null,
+            "defaultContent": "<button class=\"myButton\">Detall</button>"
+        } ]
+    } );
+	 
+	tcons
+	  .columns(0)
+      .search('Territori')
+      .draw();
+	  
+     $('#prova tbody').on('click', 'button', function () {
+        //var data = tcons.row( this ).data();
+        var data = tcons.row( $(this).parents('tr') ).data();
+        
+        //console.log(data);
+        //alert( 'You clicked on '+data[0]+'\'s row' );
+        console.log("save data");
+        console.log(data);
+        localStorage.setItem('data', JSON.stringify(data));
+      
+
+        window.location = "../da/detallrefdades";
+    } );
+
+});
+</script>
+
+  
+<div style="width:80%">
+<table id="prova" class="hover" style="width:100%">
+        <thead>
+            <tr>
+                <th>Grup</th>
+                <th>Entitat</th>
+                <th style="width:40%">Descripció</th>
+                <th>Data última publicació</th>
+                <th>Detall</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
