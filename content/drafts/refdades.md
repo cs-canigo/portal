@@ -106,7 +106,7 @@ Es facilita també un gràfic de relació de les entitats.
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
-      "scrollY": "400px",
+      "scrollY": "450px",
       "scrollCollapse": true,
       "paging": false,
       "ordering": false,
@@ -154,15 +154,22 @@ Es facilita també un gràfic de relació de les entitats.
     var table =  $('#tabpendents').DataTable( {
       "ajax": './json/entitats.json',
       "deferRender": true,
-      "bFilter": false,
+      "bFilter": true,
       "autoWidth": true,
-      //"scrollY": "800px",
-      //"scrollCollapse": true,
-      "paging": true,
+      "scrollY": "450px",
+      "scrollCollapse": true,
+      "paging": false,
       "ordering": false,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
+	  "language":{
+                "search" : "<span style="color:red;padding-right: 0px !important;"><strong>Cerca:</strong></span>",
+                "infoEmpty": "No hi ha entitats",
+                "zeroRecords": "No s'han trobat entitats",
+                "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
+                "info": ""
+        },
 	  "columns": [
           { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
            ],
@@ -197,9 +204,9 @@ Es facilita també un gràfic de relació de les entitats.
 </script>
 
 <br/><br/>
-###  Entitats consolidades 
+####  Entitats consolidades 
 
-<div style="width:80%; padding-left:20px">
+<div style="width:80%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -219,9 +226,9 @@ Es facilita també un gràfic de relació de les entitats.
 
 
 <br/><br/>
-### Entitats pendents de consolidar
+#### Entitats pendents de consolidar
 
-<div style="width:80%; padding-left:20px">
+<div style="width:80%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -239,10 +246,10 @@ Es facilita també un gràfic de relació de les entitats.
 
 
 <br/><br/>
-### Gràfic de dependències entre entitats
+##### Gràfic dependències entre entitats
 
-<div style="width:90%;margin:0 auto;">
-    <img style="width: 70%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+<div style="width:90%;mpadding-left:30px">
+    <img style="width: 80%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
 </div>
 
 
