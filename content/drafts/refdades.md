@@ -32,7 +32,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arq
 
 
 <br/>
-<h5>Operativa</h5>
+## Operativa
 <br/>
 Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera publicació, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Es poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix a la taula. Els valors es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
 
@@ -43,7 +43,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 
 <br/>
-<h5>Catàleg Tècnic de Dades</h5>
+## Catàleg Tècnic de Dades
 <br/>
 
 <style>
@@ -90,67 +90,8 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 </style>
 
 <script type="text/javascript">
-  $(document).ready(function() {           
-    var table =  $('#example').DataTable( {
-      "ajax": './json/entitats.json',
-      "deferRender": true,
-      "bFilter": false,
-      "autoWidth": true,
-      "scrollY": "800px",
-      "scrollCollapse": true,
-      "paging": false,
-      "ordering": true,
-      //"pageLength": 10,
-      //"order": [[ 0, 'asc' ]],
-      //"info":     false,
-      "columnDefs": [ {
-            "targets": -1,
-            "data": null,
-            "defaultContent": "<button class=\"myButton\">Detall</button>"
-        } ]
-    } );
-     $('#example tbody').on('click', 'button', function () {
-        //var data = table.row( this ).data();
-        var data = table.row( $(this).parents('tr') ).data();
-        
-        //console.log(data);
-        //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("save data");
-        console.log(data);
-        localStorage.setItem('data', JSON.stringify(data));
-      
-
-        window.location = "../da/detallrefdades";
-    } );
-
-});
-</script>
-
-  
-<div style="width:80%">
-<table id="example" class="hover" style="width:100%">
-        <thead>
-            <tr>
-                <th>Grup</th>
-                <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data última publicació</th>
-                <th>Detall</th>
-            </tr>
-        </thead>
-    </table>
-</div>
-
-
-
-
-<br/><br/><br/>
-<h5>Catàleg Tècnic de Dades (prova filtre  6J) </h5>
-<br/>
-
-<script type="text/javascript">
-  $(document).ready(function() {           
-    var tcons =  $('#prova').DataTable( {
+  $(document).ready(function() {  
+    var tcons =  $('#tabvalidades').DataTable( {
       "ajax": './json/entitats.json',
 	  "deferRender": true,
       "bFilter": true,
@@ -178,16 +119,42 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
                 { "search": "Consolidat" }, null,  null, null, null, null
 		  ]
     } );
-	 
-	//tcons
-	//  .columns(0)
-    //  .search('Territori')
-    //  .draw();
-	//tcons.fnFilter('Territori', 0 );
-	  
-     $('#prova tbody').on('click', 'button', function () {
+    $('#tabvalidades tbody').on('click', 'button', function () {
         //var data = tcons.row( this ).data();
         var data = tcons.row( $(this).parents('tr') ).data();
+        
+        //console.log(data);
+        //alert( 'You clicked on '+data[0]+'\'s row' );
+        console.log("save data");
+        console.log(data);
+        localStorage.setItem('data', JSON.stringify(data));
+      
+
+        window.location = "../da/detallrefdades";
+    };
+
+  
+    var table =  $('#tabpendents').DataTable( {
+      "ajax": './json/entitats.json',
+      "deferRender": true,
+      "bFilter": false,
+      "autoWidth": true,
+      "scrollY": "800px",
+      "scrollCollapse": true,
+      "paging": false,
+      "ordering": true,
+      //"pageLength": 10,
+      //"order": [[ 0, 'asc' ]],
+      //"info":     false,
+      "columnDefs": [ {
+            "targets": -1,
+            "data": null,
+            "defaultContent": "<button class=\"myButton\">Detall</button>"
+        } ]
+    } );
+     $('#tabpendents tbody').on('click', 'button', function () {
+        //var data = table.row( this ).data();
+        var data = table.row( $(this).parents('tr') ).data();
         
         //console.log(data);
         //alert( 'You clicked on '+data[0]+'\'s row' );
@@ -202,9 +169,13 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 });
 </script>
 
-  
+<br/><br/>
+<h5>Entitats consolidades </h5> 
+Entitats que han sigut revisades i validades conjuntament per CTTI i OIAD.
+<br/>
+
 <div style="width:80%">
-<table id="prova" class="hover" style="width:100%">
+<table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
                 <th>Nivell Validació</th>
@@ -217,6 +188,33 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
         </thead>
     </table>
 </div>
+
+
+
+
+<br/><br/>
+<h5>Entitats pendents de consolidar </h5>
+Entitats que es presenten dins del catàleg tècnic de dades com a proposta prèvia a la revisió i validació conjunta per part de CTTI i OIAD.
+<br/>
+
+<div style="width:80%">
+<table id="tabpendents" class="hover" style="width:100%">
+        <thead>
+            <tr>
+                <th>Grup</th>
+                <th>Entitat</th>
+                <th style="width:40%">Descripció</th>
+                <th>Data última publicació</th>
+                <th>Detall</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+<br/><br/>
+<h5>Gràfic de dependències entre entitats </h5> 
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
