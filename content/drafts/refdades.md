@@ -131,7 +131,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
       
 
         window.location = "../da/detallrefdades";
-    };
+    } );
 
   
     var table =  $('#tabpendents').DataTable( {
