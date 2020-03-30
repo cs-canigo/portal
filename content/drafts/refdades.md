@@ -109,7 +109,7 @@ Es facilita també un gràfic de relació de les entitats.
       "scrollY": "400px",
       "scrollCollapse": true,
       "paging": false,
-      "ordering": true,
+      "ordering": false,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
@@ -156,18 +156,28 @@ Es facilita també un gràfic de relació de les entitats.
       "deferRender": true,
       "bFilter": false,
       "autoWidth": true,
-      "scrollY": "800px",
-      "scrollCollapse": true,
-      "paging": false,
-      "ordering": true,
+      //"scrollY": "800px",
+      //"scrollCollapse": true,
+      "paging": true,
+      "ordering": false,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
+	  "columns": [
+          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
+           ],
       "columnDefs": [ {
             "targets": -1,
             "data": null,
             "defaultContent": "<button class=\"myButton\">Detall</button>"
-        } ]
+        },
+            {
+            "targets": [ 0 ],
+            "visible": false,
+            } ],
+	  "searchCols": [
+                { "search": "Pendent" }, null,  null, null, null, null, null
+		  ]
     } );
      $('#tabpendents tbody').on('click', 'button', function () {
         //var data = table.row( this ).data();
@@ -189,8 +199,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 ###  Entitats consolidades 
 
-```
-<div style="width:80%">
+<div style="width:80%; padding-left:20px">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -212,15 +221,16 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 ### Entitats pendents de consolidar
 
-
-<div style="width:80%">
+<div style="width:80%; padding-left:20px">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
             <tr>
+                <th>Nivell Validació</th>
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
+                <th>Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
@@ -230,7 +240,6 @@ Es facilita també un gràfic de relació de les entitats.
 
 <br/><br/>
 ### Gràfic de dependències entre entitats
-
 
 <div style="width:90%;margin:0 auto;">
     <img style="width: 70%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
