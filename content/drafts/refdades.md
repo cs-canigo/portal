@@ -212,7 +212,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 ### Entitats pendents de consolidar
 
-```
+
 <div style="width:80%">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
@@ -226,16 +226,16 @@ Es facilita també un gràfic de relació de les entitats.
         </thead>
     </table>
 </div>
-```
+
 
 <br/><br/>
 ### Gràfic de dependències entre entitats
 
-```
+
 <div style="width:90%;margin:0 auto;">
     <img style="width: 70%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
 </div>
-```
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
