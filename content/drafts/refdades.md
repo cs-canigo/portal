@@ -206,7 +206,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 ####  Entitats consolidades 
 
-<div style="width:80%; padding-left:30px">
+<div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -228,7 +228,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 #### Entitats pendents de consolidar
 
-<div style="width:80%; padding-left:30px">
+<div style="width:100%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
             <tr>
@@ -248,7 +248,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 ##### Gràfic dependències entre entitats
 
-<div style="width:90%;mpadding-left:30px">
+<div style="width:100%;mpadding-left:30px">
     <img style="width: 80%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
 </div>
 
