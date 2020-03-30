@@ -164,7 +164,7 @@ Es facilita també un gràfic de relació de les entitats.
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
 	  "language":{
-                "search" : "<span style="color:red;padding-right: 0px !important;"><strong>Cerca:</strong></span>",
+                "search" : "<strong>Cerca:</strong>",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
                 "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
