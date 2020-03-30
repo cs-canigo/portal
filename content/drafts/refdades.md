@@ -34,7 +34,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arq
 <br/>
 ## Operativa
 <br/>
-Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l'objectiu de modelar-les i validar-les per incoporar-les dins del Catàleg Tècnic de Dades que s'ofereix en aquesta web (veure apartat següent a aquest).
+Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l'objectiu de modelar, validar i finalment incoporar dins del Catàleg Tècnic de Dades que s'ofereix en aquesta web (veure apartat següent a aquest).
 
 Tota aplicació que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera publicació del catàleg tècnic de dades no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
@@ -117,8 +117,8 @@ Es facilita també un gràfic de relació de les entitats.
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-                "infoFiltered":   "Consolidades d'un total _MAX_ entitats publicades",
-                "info": "Mostrant _START_ de _END_"
+                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
+                "info": ""
         },
 	  "columns": [
           { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
@@ -186,11 +186,10 @@ Es facilita també un gràfic de relació de les entitats.
 });
 </script>
 
+<br/><br/>
+###  Entitats consolidades 
 
-<h5>- Entitats consolidades </h5> 
-
-<br/>
-
+```
 <div style="width:80%">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
@@ -199,7 +198,7 @@ Es facilita també un gràfic de relació de les entitats.
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Data última publicació</th>
+                <th>Data publicació</th>
                 <th>Darrera actualització</th>
                 <th>Detall</th>
             </tr>
@@ -210,10 +209,10 @@ Es facilita també un gràfic de relació de les entitats.
 
 
 
-<br/>
-<h5>- Entitats pendents de consolidar </h5>
-<br/>
+<br/><br/>
+### Entitats pendents de consolidar
 
+```
 <div style="width:80%">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
@@ -227,11 +226,16 @@ Es facilita també un gràfic de relació de les entitats.
         </thead>
     </table>
 </div>
-
+```
 
 <br/><br/>
-<h5>Gràfic de dependències entre entitats </h5> 
+### Gràfic de dependències entre entitats
 
+```
+<div style="width:90%;margin:0 auto;">
+    <img style="width: 70%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+</div>
+```
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
