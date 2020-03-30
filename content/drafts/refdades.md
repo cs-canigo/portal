@@ -34,7 +34,7 @@ Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arq
 <br/>
 ## Operativa
 <br/>
-Posem en disposició dels aplicatius el conjunt de les 22 entitats de referència que s'han descobert en aquesta primera publicació, veure la taula "Catàleg actual" d'aquesta mateixa pàgina. Es poden consultar les metadades d'aquestes entitats i els valors que contenen, activant el botó de detall que apareix a la taula. Els valors es poden consultar mitjançant una previsualització o descarregant un fitxer Excel.
+Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l'objectiu de modelar-les i validar-les per incoporar-les dins del Catàleg Tècnic de Dades que s'ofereix en aquesta web (veure apartat següent a aquest).
 
 Tota aplicació que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera publicació del catàleg tècnic de dades no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
@@ -45,6 +45,15 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 <br/>
 ## Catàleg Tècnic de Dades
 <br/>
+Posem en disposició dels aplicatius un conjunt d'entitats de referència diferenciades en dos grups:
+
+- Entitats de referència consolidades: Són entitats que han sigut revisades i validades conjuntament per CTTI i per OIAD.
+
+- Entitats de referència proposades: Són entitats que es proposen des de CTTI, que estan pendents de  validar amb la OIAD o que per les seves característiques no es poden classificar com a consolidades.
+
+En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats i es facilita un botó per consultar-ne el detall: les metadades complertes, definició d'atributs i els valors que cotenen. Els atributs i els valors es poden consultar mitjançant una previsualització o descarregant els fitxers word o fitxer Excel respectivament.
+
+Es facilita també un gràfic de relació de les entitats. 
 
 <style>
 .myButton {
@@ -91,6 +100,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 <script type="text/javascript">
   $(document).ready(function() {  
+
     var tcons =  $('#tabvalidades').DataTable( {
       "ajax": './json/entitats.json',
 	  "deferRender": true,
@@ -103,8 +113,15 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
+	  "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha entitats",
+                "zeroRecords": "No s'han trobat entitats",
+                "infoFiltered":   "Consolidades d'un total _MAX_ entitats publicades",
+                "info": "Mostrant _START_ de _END_"
+        },
 	  "columns": [
-          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: "" }
+          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
            ],
       "columnDefs": [ {
             "targets": -1,
@@ -116,7 +133,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
             "visible": false,
             } ],
        "searchCols": [
-                { "search": "Consolidat" }, null,  null, null, null, null
+                { "search": "Consolidat" }, null,  null, null, null, null, null
 		  ]
     } );
     $('#tabvalidades tbody').on('click', 'button', function () {
@@ -169,9 +186,9 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 });
 </script>
 
-<br/><br/>
-<h5>Entitats consolidades </h5> 
-Entitats que han sigut revisades i validades conjuntament per CTTI i OIAD.
+
+<h5>- Entitats consolidades </h5> 
+
 <br/>
 
 <div style="width:80%">
@@ -183,6 +200,7 @@ Entitats que han sigut revisades i validades conjuntament per CTTI i OIAD.
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
                 <th>Data última publicació</th>
+                <th>Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
@@ -192,9 +210,8 @@ Entitats que han sigut revisades i validades conjuntament per CTTI i OIAD.
 
 
 
-<br/><br/>
-<h5>Entitats pendents de consolidar </h5>
-Entitats que es presenten dins del catàleg tècnic de dades com a proposta prèvia a la revisió i validació conjunta per part de CTTI i OIAD.
+<br/>
+<h5>- Entitats pendents de consolidar </h5>
 <br/>
 
 <div style="width:80%">
@@ -204,7 +221,7 @@ Entitats que es presenten dins del catàleg tècnic de dades com a proposta prè
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Data última publicació</th>
+                <th>Data publicació</th>
                 <th>Detall</th>
             </tr>
         </thead>
