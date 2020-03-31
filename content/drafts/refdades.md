@@ -200,9 +200,11 @@ Es facilita també un gràfic de relació de les entitats.
         window.location = "../da/detallrefdades";
     } );
 
-    $('.dataTables_filter').css('float','right'); 
+    $('.dataTables_filter').css('padding-right','20px');  
+    $('.dataTables_filter').css('padding-bottom','10px');  
 	
-	$('article table').css('margin','0'); 
+    $('article table').css('margin','0');
+    
 });
 </script>
 
