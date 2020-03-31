@@ -42,6 +42,6 @@
 {"id":39,"producte":"Cisco DNA Center","categoria":"Sistema Operatiu Xarxa","obsolet":"< 1.1.x","suportat":"1.3.x - 1.1.x","versioactual":"1.3.1.x ","roadmap":"1.3.3.x ","emergent":"–"},
 {"id":40,"producte":"Servidor DNS - Infoblox NIOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.x","suportat":"8.4.x - 7.x","versioactual":"8.4.x","roadmap":"8.5","emergent":"–"},
 {"id":41,"producte":"Servidor DHCP - Infoblox NIOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.x","suportat":"8.4.x - 7.x","versioactual":"8.4.x","roadmap":"8.5","emergent":"–"},
-{"id":42,"producte":"FW LAN - Cisco ASA OS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 4.0","suportat":"4.5 - 4.0","versioactual":"4.6","roadmap":"4.8","emergent":"–"},
+{"id":42,"producte":"FW LAN - Cisco ASA OS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 4.0","suportat":"4.5 - 4.0","versioactual":"4.6","roadmap":"4.8","emergent":"–"}
 ]
 }
