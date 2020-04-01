@@ -105,9 +105,7 @@ automàtica del tag de build i del tag definitiu en base a la versió de l'aplic
 _RELEASE="Release 1.0.0"
 git flow release start $_RELEASE
 
-
-#### 5. Un cop s'han integrat canvis d'última hora de DEVELOP (si escau)
-
+// Un cop s'han integrat canvis d'última hora de DEVELOP (si escau)
 git flow release finish $_RELEASE
 git push --tags
 ```
