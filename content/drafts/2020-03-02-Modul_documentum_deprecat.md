@@ -15,7 +15,7 @@ el [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/esta
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 prevista pel **DATA**, el mòdul d'integració de Documentum de Canigó quedarà **deprecat**.
+A partir de la versió de Canigó 3.4.3 prevista pel 27/03/2020, el mòdul d'integració de Documentum de Canigó quedarà **deprecat**.
 Es **recomana la utilització dels components propis de Documentum** per a la seva integració, així com els seus serveis Rest.
 
 ## Documentació
