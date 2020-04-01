@@ -14,7 +14,7 @@ Aquest mòdul utilitza la versió 2.1.6 del SAP Java Connector (SAP JCo) i actua
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 prevista pel **DATA**, el mòdul d'integració de SAP de Canigó quedarà **deprecat**.
+A partir de la versió de Canigó 3.4.3 prevista pel 27/03/2020, el mòdul d'integració de SAP de Canigó quedarà **deprecat**.
 Es **recomana la utilització dels components propis de SAP** per a la seva integració, així com els seus serveis Rest.
 
 ## Documentació
