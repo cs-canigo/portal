@@ -15,7 +15,7 @@ Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors i ar
 
 El SIC disposa d'un repositori Git (anomenat d'ara en endavant "Git del SIC" o "SIC" directament) on emmagatzemar i centralitzar les versions lliurables del codi.
 
-Amb anterioritat ja es va publicar un article ["SIC. Branca Master al Git del SIC"](https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/) referent a quina era la metodologia recomanada per utilitzar el Git del SIC. I tot i que en aquest article es recomana l'ús de [trunk-based (o master-based)](https://continuousdelivery.com/foundations/continuous-integration/), ja que és la forma més natural de fer-ho en relació amb la filosofia del SIC actual, també és possible aplicar GitFlow en un Git de desenvolupament tenint en compte com es faria el pas al Git del SIC posteriorment.
+Amb anterioritat ja es va publicar un article ["SIC. Branca Master al Git del SIC"](https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/) referent a quina era la metodologia recomanada per a utilitzar el Git del SIC. I tot i que en aquest article es recomana l'ús de [trunk-based (o master-based)](https://continuousdelivery.com/foundations/continuous-integration/), ja que és la forma més natural de fer-ho en relació amb la filosofia del SIC actual, també és possible aplicar GitFlow en un Git de desenvolupament tenint en compte com es faria el pas al Git del SIC posteriorment.
 
 En aquest context, el workflow de treball proposat es compon de 2 repositoris:
 
@@ -24,7 +24,7 @@ En aquest context, el workflow de treball proposat es compon de 2 repositoris:
 
 ## Workflows
 
-Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per treballar de manera integrada amb el SIC, és seguir el workflow estàndard de GitFlow: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
+Un cop definits els 2 repositoris, el seu nom i rols, el mètode proposat per a treballar de manera integrada amb el SIC, és seguir el workflow estàndard de GitFlow: una branca **develop** amb la línia de desenvolupament principal, i una branca **master** amb la línia de desplegaments a PRO.
 
 ### Inicialització i integració (només la primera vegada)
 
@@ -61,7 +61,8 @@ git push
 
 ### Desenvolupament amb GitFlow
 
-El workflow de desenvolupament més popular per treballar amb Git és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html). Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
+El workflow de desenvolupament més popular per a treballar amb Git és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
+Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
 
 1. Inicialització (només la primera vegada per a un mateix repositori)
 
@@ -70,11 +71,11 @@ sudo apt-get install git-flow
 git flow init -d
 ```
 
-2. Crear nova branca per una funcionalitat (manteniment, correctiu, sota demanda, etc.)
+2. Crear nova branca per a una funcionalitat (manteniment, correctiu, sota demanda, etc.)
 
 ```bash
-# Normalitzar el nom de la branca (p.e. a partir de una tasca JIRA)
-_FEATURE="INTEMO-1234 - Normalitzar i definir el procediment per treballar amb l'eina de  desenvolupament Git"
+# Normalitzar el nom de la branca (p.e. a partir d’una tasca JIRA)
+_FEATURE="INTEMO-1234 - Normalitzar i definir el procediment per a treballar amb l'eina de  desenvolupament Git"
 _FEATURE=$(echo $_FEATURE | sed -e 'y/ÀÁÈÉÌÍÒÓÙÚÜÇçÑñàáèéìíïòóùúü/AAEEIIOOUUUCcNnaaeeiiioouuu/' -e 's:[^-0-9A-Za-z]:_:g' -e 's:_\{2,\}:_:g' -e 's:^_::' -e s:_el_:_:g -e s:_l_:_:g -e s:_amb_:_:g -e s:_i_:_:g -e s:_-_:-:g -e 's:_$::' | cut -c-80)
 git pull origin
 git reset --hard ; git checkout -f
@@ -92,7 +93,9 @@ git flow feature publish && git flow feature finish && git push
 
 4. Crear i publicar una nova release
 
-Si es vol es pot crear una nova release del codi, aquesta però, no pot tenir el mateix format que la versió de l'aplicació, ja que dins de les etapes de desplegament en la [Integració continua del SIC](https://canigo.ctti.gencat.cat/sic-serveis/ci/#etapes-de-desplegament), ja hi consta la generació del tag de build i la generació del tag definitiu amb la versió de l'aplicació
+Es pot crear una nova release del codi, aquesta però no podrà tenir el mateix format que la versió de l'aplicació ja que dins de les etapes de
+desplegament en l’[Integració continua del SIC](https://canigo.ctti.gencat.cat/sic-serveis/ci/#etapes-de-desplegament) ja s’inclou la generació
+automàtica del tag de build i del tag definitiu en base a la versió de l'aplicació.
 
 ```bash
 _RELEASE="Release 1.0.0"
@@ -125,7 +128,7 @@ git push gencat master --tags
 
 
 
-## Informació adicional
+## Informació addicional
 
 * https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 * https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet
@@ -136,7 +139,7 @@ git push gencat master --tags
 
 ## Annex. Inicialitzar el repositori
 
-El HowTo dóna per fet que es disposa d'un codi repositat amb Git, però pot donar-se el cas que el codi no sigui així. Aquest annex adreça aquesta situació.
+El HowTo dóna per fet que es disposa d'un codi repositat amb Git però pot donar-se el cas que el codi no sigui així. Aquest annex adreça aquesta situació.
 
 Per inicialitzar el repositori s'ha de seguir les següents passes (bash):
 
@@ -146,7 +149,7 @@ die () {
   exit $1
 }
 do_repo_git_init () {
-  
+
   # carpeta temporal de treball
   local _CARPETA_GIT_NOU=/tmp/repogitnou
 
@@ -154,7 +157,7 @@ do_repo_git_init () {
   mkdir -p $_CARPETA_GIT_NOU || die 1 # crea la carpeta temporal de treball
   cd $_CARPETA_GIT_NOU || die 2
   echo ">> Ara s'ha de copiar el codi del projecte en aquesta carpeta : $_CARPETA_GIT_NOU <<"
-  echo "Premi INTRO per continuar..." && read
+  echo "Premi INTRO per a continuar..." && read
   git init || die 3
   cat>>.gitignore<<EOF
 .settings/
@@ -167,4 +170,3 @@ EOF
 }
 do_repo_git_init
 ```
-
