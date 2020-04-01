@@ -9,7 +9,7 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels mòduls d'integració, Canigó proporciona el [mòdul d’integració amb Documentum](/canigo-documentacio-versions-3x-integracio/modul-documentum/).
+Canigó proporciona el [mòdul d’integració amb Documentum](/canigo-documentacio-versions-3x-integracio/modul-documentum/).
 Les versions de Documentum que suporta són les versions 5.3, 6.1 i 7.1 i aquestes versions han estat deprecades en
 el [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 
@@ -18,8 +18,7 @@ el [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/esta
 A partir de la versió de Canigó 3.4.3 prevista pel **DATA**, el mòdul d'integració de Documentum de Canigó quedarà **deprecat**.
 Es **recomana la utilització dels components propis de Documentum** per a la seva integració, així com els seus serveis Rest.
 
-
-
+## Documentació
 
 Teniu disponible la següent documentació:
 

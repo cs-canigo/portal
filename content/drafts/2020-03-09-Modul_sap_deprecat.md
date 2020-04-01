@@ -9,7 +9,7 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels mòduls d'integració, Canigó proporciona el [mòdul de integració amb SAP](/canigo-documentacio-versions-3x-integracio/modul-sap/).
+Canigó proporciona el [mòdul de integració amb SAP](/canigo-documentacio-versions-3x-integracio/modul-sap/).
 Aquest mòdul utilitza la versió 2.1.6 del SAP Java Connector (SAP JCo) i actualment aquesta forma de connectivitat ja no està suportada.
 
 ## Novetat
@@ -17,8 +17,7 @@ Aquest mòdul utilitza la versió 2.1.6 del SAP Java Connector (SAP JCo) i actua
 A partir de la versió de Canigó 3.4.3 prevista pel **DATA**, el mòdul d'integració de SAP de Canigó quedarà **deprecat**.
 Es **recomana la utilització dels components propis de SAP** per a la seva integració, així com els seus serveis Rest.
 
-
-
+## Documentació
 
 Teniu disponible la següent documentació:
 
