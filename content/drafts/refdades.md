@@ -200,6 +200,7 @@ Es facilita també un gràfic de relació de les entitats.
         window.location = "../da/detallrefdades";
     } );
 
+    $('.dataTables_filter').css('float','right');  
     $('.dataTables_filter').css('padding-right','20px');  
     $('.dataTables_filter').css('padding-bottom','10px');  
 	
@@ -253,7 +254,7 @@ Es facilita també un gràfic de relació de les entitats.
 <br/><br/>
 #### Gràfic dependències entre entitats
 <br/>
-<div style="width:100%;mpadding-left:30px">
+<div style="width:100%;padding-left:30px">
     <img style="width: 80%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
 </div>
 
