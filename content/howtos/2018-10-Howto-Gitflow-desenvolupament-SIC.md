@@ -64,14 +64,15 @@ git push
 El workflow de desenvolupament més popular per a treballar amb Git és [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html).
 Hi ha publicada molta documentació al respecte, i exposarem aquí únicament la metodologia aplicada a desenvolupament de noves funcionalitats (el cas més comú).
 
-1. Inicialització (només la primera vegada per a un mateix repositori)
+* Inicialització (només la primera vegada per a un mateix repositori)
 
 ```bash
 sudo apt-get install git-flow
 git flow init -d
 ```
 
-2. Crear nova branca per a una funcionalitat (manteniment, correctiu, sota demanda, etc.)
+
+#### 1. Crear nova branca per a una funcionalitat (manteniment, correctiu, sota demanda, etc.)
 
 ```bash
 # Normalitzar el nom de la branca (p.e. a partir d’una tasca JIRA)
@@ -83,7 +84,8 @@ git checkout develop
 git flow feature start $_FEATURE
 ```
 
-3. Finalitzar i publicar la funcionalitat actual
+
+#### 2. Finalitzar i publicar la funcionalitat actual
 
 ```bash
 git pull origin
@@ -91,7 +93,8 @@ git commit -a
 git flow feature publish && git flow feature finish && git push
 ```
 
-4. Crear i publicar una nova release
+
+#### 3. Crear i publicar una nova release
 
 Es pot crear una nova release del codi, aquesta però no podrà tenir el mateix format que la versió de l'aplicació ja que dins de les etapes de
 desplegament en l’[Integració continua del SIC](https://canigo.ctti.gencat.cat/sic-serveis/ci/#etapes-de-desplegament) ja s’inclou la generació
@@ -101,7 +104,8 @@ automàtica del tag de build i del tag definitiu en base a la versió de l'aplic
 _RELEASE="Release 1.0.0"
 git flow release start $_RELEASE
 
-# Un cop s'han integrat canvis d'última hora de DEVELOP (si escau)
+
+#### 4. Un cop s'han integrat canvis d'última hora de DEVELOP (si escau)
 
 git flow release finish $_RELEASE
 git push --tags
