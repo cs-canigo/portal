@@ -17,9 +17,7 @@ Després de la realització de l'anàlisis de l'estat dels mòduls s'han realitz
 
 - El mòòdul canigo.integration.documentum passa a estar deprecat. La forma de comunicació amb documentum i la versió de documentum suportada estan obsoletes. No hi haurà més evolució d'aquest mòdul de Canigó
 
-- El mòdul canigo.integration.sap passa a estar deprecat. La forma de comunicació amb SAP i la versió de SAP suportada estan obsoletes. No hi haurà més evolució d'aquest mòdul de Canigó 
-
-- El mòdul canigo.integration.gecat passa a estar deprecat. La forma de comunicació amb SAP i la versió de SAP suportada estan obsoletes. No hi haurà més evolució d'aquest mòdul de Canigó 
+- El mòdul canigo.integration.sap i canigo.integration.gecat passen a estar deprecats. La forma de comunicació amb SAP i la versió de SAP suportada estan obsoletes. No hi haurà més evolució d'aquests mòduls de Canigó 
 
 - El mòdul canigo.symantec.stub passa a estar deprecat. S'ha canviat la forma de realitzar test sobre el mòdul d'antivirus utilitzant mockito, i per tant, ja no és necessari aquest mòdul. No hi haurà més evolució d'aquest mòdul de Canigó
 
