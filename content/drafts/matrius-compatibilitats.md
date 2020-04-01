@@ -1,7 +1,7 @@
 +++
 date        = "2019-09-17"
 title       = "Matrius de Compatibilitats"
-description = ""
+description = "Matriu de compatibilitats dels mòduls de Canigó"
 sections    = "Canigó"
 weight      = 1
 toc         = true
@@ -421,8 +421,4 @@ toc         = true
 
 ## Canigó 3.0
 
-- [Matriu Compatibilitat 3.0.x](/related/canigo/download/Matriu+Compatibilitat+Canigó3.0.6.pdf)
-
-
-
-
+[Matriu Compatibilitat 3.0.x](/related/canigo/download/Matriu+Compatibilitat+Canigó3.0.6.pdf)

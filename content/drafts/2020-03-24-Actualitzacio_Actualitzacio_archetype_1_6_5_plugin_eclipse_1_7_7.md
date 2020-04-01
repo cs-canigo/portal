@@ -1,7 +1,7 @@
 +++
 date        = "2020-03-24"
 title       = "Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7"
-description = "S'ha publicat una nova versió del archetype i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.3"
+description = "S'ha publicat una nova versió de l’arquetipus i del plugin del eclipse de Canigó per generar projectes amb Canigó 3.4.3"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "GENER2020"
@@ -9,52 +9,46 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels lliurables de Canigó hi consten l’arquetipus (archetype) i el plugin de l’Eclipse. Seguint l’objectiu de CS Canigó de proporcionar facilitadors per a la creació de projectes Canigó als desenvolupadors d’aplicacions, s’ha actualitzat ambdós lliurables per generar projectes amb **Canigó 3.4.3**. Podeu consultar l’abast complet de la nova versió del marc de treball a les [Release Notes, apartat Canigó 3.4.3](/canigo-download-related/release-notes-canigo-34).
+Dins dels lliurables de Canigó hi consten l’*archetype* i el plugin de l’Eclipse. Seguint l’objectiu de CS Canigó de proporcionar facilitadors per a la creació de projectes Canigó als desenvolupadors d’aplicacions, s’han actualitzat ambdós lliurables per a generar projectes amb **Canigó 3.4.3**. Podeu consultar l’abast complet de la nova versió del marc de treball a les [Release Notes, apartat Canigó 3.4.3](/canigo-download-related/release-notes-canigo-34).
 
-L’arquetipus és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l’arquetipus i executant un goal de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves funcionalitats.
+L’arquetipus és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l’arquetipus i executant un *goal* de maven obtenim un projecte Canigó amb una base preconfigurada i preparada per a incorporar-li noves funcionalitats.
 
-El plugin és un connector desenvolupat específicament per a l’IDE Eclipse que permet afegir-hi menús contextuals per a la creació de projectes Canigó utilitzant l’arquetipus de Maven, a més a més d’afegir mòduls a un projecte creat i amb una preconfiguració ja donada. Així, utilitzant l’Eclipse, podem crear un projecte i afegir-l’hi els mòduls necessaris obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant temps als desenvolupadors.
+El plugin és un connector desenvolupat específicament per a l’IDE Eclipse que permet afegir-hi menús contextuals per a la creació de projectes Canigó utilitzant l’arquetipus de Maven, a més de permetre afegir mòduls a un projecte creat i amb una configuració per defecte. D’aquesta manera, podem crear un projecte amb l’Eclipse i afegir-l’hi els mòduls necessaris obtenint un projecte preparat per al marc de treball Canigó i estalviant temps als desenvolupadors.
 
 
 ## Novetats *archetype*
 
 La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats respecte a la versió anterior:
 
-- Revisió de l'estat dels mòduls: Realització d’un anàlisis sobre l’estat dels mòduls, les seves funcionalitats i els testos associats.
+- Revisió de l'estat dels mòduls a partir d’un anàlisi de l’estat dels mòduls, les seves funcionalitats i els testos associats
 
-- Actualització mòdul de Seguretat SAML: Actualització del mòdul de Seguretat SAML incorporant l'opció d'autorització per Gicar.
+- Actualització del mòdul de Seguretat SAML, incorporant l'opció d'autorització per Gicar
 
 ## Novetats *plugin Eclipse*
 
-La nova versió 1.7.7 del plugin utilitza la versió 1.6.5 de l’arquetipus de Canigó per generar projectes amb Canigó 3.4.3 i s'han modificat les preguntes al afegir el mòdul de seguretat, amb el següent resultat:
+La nova versió 1.7.7 del plugin utilitza la versió 1.6.5 de l’arquetipus de Canigó per a generar projectes amb Canigó 3.4.3 i s'han modificat les opcions en afegir el mòdul de seguretat, amb el següent resultat:
 
-Només tenim 3 preguntes:
+Només tenim 3 opcions:
 
 ![](/images/news/Plugin_1.7.7_add_security.png)
 
-1. Si es vol token, amb les respostes si o no
+* Si es vol token, amb les possibles respostes: Si/No
 
 ![](/images/news/Plugin_1.7.7_add_security_token.png)
 
-2. El provider que volem fer servir:
+* El proveïdor que volem fer servir, amb les possibles respostes: Arxiu/BBDD/Gicar/Saml (si es vol seguretat amb token) o Arxiu/BBDD/Gicar (si no es vol amb token)
 
 ![](/images/news/Plugin_1.7.7_add_security_provider.png)
 
-Amb les respostes Arxiu, BBDD, Gicar i Saml si es vol seguretat amb token i Arxiu, BBDD i Gicar si no es vol amb token
-
-3. La forma d'autorització:
+* La forma d'autorització, amb les possibles respostes: BBDD/Gicar, només si el proveïdor es Gicar o Saml
 
 ![](/images/news/Plugin_1.7.7_add_security_gicar.png)
 
 ![](/images/news/Plugin_1.7.7_add_security_saml.png)
 
-Amb les respostes BBDD i Gicar si el provider es Gicar o Saml
+A la versió 1.7.7 del plugin s'ha afegit l'opció d’autorització per Saml i per Gicar. Segons l'opció seleccionada, el plugin modificarà els fitxers del projecte *WebSecurityConfig.java* i *app-custom-security.xml* per a configurar la seguretat del projecte segons les opcions seleccionades.
 
-A la versió 1.7.7 del plugin s'ha afegit l'opció provider Saml i autorització per Gicar
-
-Segons l'opció seleccionada, el plugin modificarà els fitxers del projecte *WebSecurityConfig.java* i *app-custom-security.xml* per a configurar la seguretat del projecte segons les opcions seleccionades
-
-Per instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/#instal-lació).
+Per a instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/#instal-lació).
 
 ## Documentació del Plugin d'Eclipse
 
