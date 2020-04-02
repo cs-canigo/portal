@@ -190,8 +190,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
     $('.dataTables_filter').css('padding-right',30px');  
     $('.dataTables_filter').css('padding-bottom','10px');
     
-    $('.dataTables_info').css('padding-top','20px');    
-	
     $('article table').css('margin','0');
     
 });
