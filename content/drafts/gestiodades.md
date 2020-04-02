@@ -40,10 +40,10 @@ Des de l’Àrea d’Arquitectura Corporativa s’ha plantejat un projecte itera
 
 ![Taula Dades de referencia](/images/dadesref/ImgDadesReferencia.PNG)
 
-Les següents actuacions planificades són:
+#### Les següents actuacions planificades són:
+
 - Incrementar el nombre d’entitats de referència del catàleg.
 - Millorar la presentació de les entitats. A causa dels canvis que poden tenir les entitats al llarg del temps, tant en l’àmbit estructural com en el contingut, està previst crear i gestionar diferents versions vàlides sobre una mateixa entitat.
 - Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
 - Facilitar un procediment que permeti a les aplicacions definir una conversió de valors sobre una entitat per tal d’adaptar els valors al seu propi sistema.
 - Comunicar a les aplicacions que fan ús d’una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
-
