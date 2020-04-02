@@ -179,7 +179,9 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 
     $('.dataTables_filter').css('float','right');  
     $('.dataTables_filter').css('padding-right','20px');  
-    $('.dataTables_filter').css('padding-bottom','10px');  
+    $('.dataTables_filter').css('padding-bottom','10px');
+	
+	$('.dataTables_info').css('padding-top','20px'); 
 	
     $('article table').css('margin','0');
     
@@ -203,14 +205,16 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
             </tr>
         </thead>
     </table>
-</div>
 
 <br/><br/>
+</div>
+
+<div style="width:100%; padding-left:15px">
 A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
 <br/>
 
-<div style="width:80%;padding-left:30px">
-    <img style="width: 100%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+    <img style="width: 100%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+	
 </div>
 
 
