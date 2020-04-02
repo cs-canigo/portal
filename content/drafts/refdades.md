@@ -88,7 +88,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": './json/entitats.json',
+      "ajax": './da/entitats.json',
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -134,7 +134,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 
   
     var table =  $('#tabpendents').DataTable( {
-      "ajax": './json/entitats.json',
+      "ajax": './da/entitats.json',
       "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
