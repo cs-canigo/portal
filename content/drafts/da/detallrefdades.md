@@ -1,5 +1,5 @@
 +++
-date        = "2017-10-24"
+date        = "2020-04-01"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -100,6 +100,39 @@ weight= 5
       // agrega la hilera al final de la tabla (al final del elemento tblbody)
       tblBody.appendChild(hilera);
     }
+	
+	// -----------------------------------------------------
+    //  v03.CTD-01/04/2020 (inici) Incorporar data de publicació i actualització abans dels atributs
+	
+		// Data publicació  
+		hilera = document.createElement("tr");	
+		celda = document.createElement("td");
+		textoCelda = document.createTextNode("Data publicació");
+		celda.style.fontWeight = "bold";
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
+
+		celda = document.createElement("td");
+		textoCelda = document.createTextNode(dades[3]);
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
+		  
+		// Data última actualització  
+		hilera = document.createElement("tr");	
+		celda = document.createElement("td");
+		textoCelda = document.createTextNode("Data darrera actualització");
+		celda.style.fontWeight = "bold";
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
+
+		celda = document.createElement("td");
+		textoCelda = document.createTextNode(dades[16]);
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
+	  
+    //  v03.CTD-01/04/2020 (fi) Incorporar data de publicació i actualització abans dels atributs
+	// -----------------------------------------------------
+
 
 	// -----------------------------------------------------
     //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
@@ -207,5 +240,4 @@ weight= 5
 
 
   </script>
-  
   
