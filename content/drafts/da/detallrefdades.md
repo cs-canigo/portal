@@ -43,7 +43,7 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Identificador","Origen","Classificació funcional","Agrupació temàtica","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
+    var metadatos = ["Identificador","Agrupació temàtica","Classificació funcional","Origen","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -238,7 +238,4 @@ weight= 5
      //$('#myframe').attr("src", url);
     //}
 
-
-
- </script>
-  
+</script>
