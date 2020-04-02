@@ -40,6 +40,7 @@ Des de l’Àrea d’Arquitectura Corporativa s’ha plantejat un projecte itera
 
 ![Taula Dades de referencia](/images/dadesref/ImgDadesReferencia.PNG)
 
+
 #### Les següents actuacions planificades són:
 
 - Incrementar el nombre d’entitats de referència del catàleg.
