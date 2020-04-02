@@ -1,5 +1,5 @@
 +++
-date        = "2019-07-15"
+date        = "2020-04-01"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -7,28 +7,14 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. 
+Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
+El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat per l’OIAD, òrgan responsable de la custodia de dades de referència. 
 
-El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat sota l’autoritat d’un custodi de dades de referència. 
+En aquest sentit, el Catàleg Tècnic de Dades de referència es divideix en dos grups: les Entitats de Referència consolidades aprovades per l’OIAD que son d’obligat ús, i les entitats de referència proposades que es troben en revisió per l’òrgan responsable, aquestes últimes poden patir canvis estructurals o inclús ser rebutjades.
 
-En aquesta primera publicació del catàleg tècnic de dades es presenten 22 entitats de referència dins d’una taula a on es pot veure: el grup a on pertany l’entitat, el nom, la descripció, la data d'última publicació i un botó que permet obrir una nova pàgina per consultar el detall amb les metadades i els valors que conté l'entitat.
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l’Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
 
-Les següents actuacions planificades són:
-
-- Incrementar el nombre d'entitats de referència del catàleg.
-
-- Millorar la presentació de les entitats. A causa dels canvis que poden tenir les entitats al llarg del temps, tant en l'àmbit estructural com en el contingut, està previst crear i gestionar diferents versions vàlides sobre una mateixa entitat.
-
-- Definir procediments de gestió que permetin tenir constància de quines aplicacions fan ús de les entitats i amb quin perfil (propietari o de consum) així com poder gestionar peticions de noves entitats de referència o canvis sobre les entitats ja existents. Qualsevol canvi haurà de passar per un control de qualitat i validació per part del propietari.
-
-- Facilitar un procediment que permeti a les aplicacions definir una conversió de valors sobre una entitat per tal d'adaptar els valors al seu propi sistema.
-
-- Comunicar a les aplicacions que fan ús d'una entitat qualsevol canvi que es faci sobre aquesta entitat per tal que, si és necessari, actualitzin la conversió de valors i les dades del seu propi sistema.
-
-
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
 
 
 <br/>
@@ -45,15 +31,15 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 <br/>
 ## Catàleg Tècnic de Dades
 <br/>
-Posem en disposició dels aplicatius un conjunt d'entitats de referència diferenciades en dos grups:
 
-- Entitats de referència consolidades: Són entitats que han sigut revisades i validades conjuntament per CTTI i per OIAD.
+Posem a disposició de les aplicacions el catàleg tècnic d’entitats de referència organitzades en dos grups:
 
-- Entitats de referència proposades: Són entitats que es proposen des de CTTI, que estan pendents de  validar amb la OIAD o que per les seves característiques no es poden classificar com a consolidades.
+- Entitats de referència validades: Són entitats que han estat autoritzades per l’òrgan responsable, l’OIAD..
 
-En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats i es facilita un botó per consultar-ne el detall: les metadades complertes, definició d'atributs i els valors que cotenen. Els atributs i els valors es poden consultar mitjançant una previsualització o descarregant els fitxers word o fitxer Excel respectivament.
+- Entitats de referència pendents d’aprovació: Són entitats que es proposen des de CTTI, que estan pendents de validar amb la OIAD, o que per les seves característiques no es poden classificar com a consolidades.
 
-Es facilita també un gràfic de relació de les entitats. 
+En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
+
 
 <style>
 .myButton {
@@ -210,7 +196,7 @@ Es facilita també un gràfic de relació de les entitats.
 </script>
 
 <br/><br/>
-####  Entitats consolidades 
+####  Entitats de referència validades 
 <br/>
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
@@ -232,7 +218,7 @@ Es facilita també un gràfic de relació de les entitats.
 
 
 <br/><br/>
-#### Entitats de referència proposades
+#### Entitats de referència pendents d’aprovació
 <br/>
 <div style="width:100%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
@@ -252,8 +238,9 @@ Es facilita també un gràfic de relació de les entitats.
 
 
 <br/><br/>
-#### Gràfic dependències entre entitats
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
 <br/>
+
 <div style="width:100%;padding-left:30px">
     <img style="width: 80%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
 </div>
