@@ -19,7 +19,7 @@ amb informació sobre les dades a inserir en els documents originals
 
 ## Rearquitectura
 
-Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/). Només el servei de conversió de documents ofimàtics MS Office a PDF requereix d'un entorn Windows aprovisionat en VMs a CPD.
+Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/). Només el servei de conversió de documents ofimàtics MS Office a PDF requereix d'un entorn Windows aprovisionat en VMs a CPD.
 
 ![std2-arquitectura](/images/news/std2-arquitectura.PNG)
 

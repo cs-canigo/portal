@@ -9,7 +9,7 @@ key = "MARC2018"
 
 ## Definició sondes per aplicacions Canigó a AppAgile
 
-La plataforma de contenidors [AppAgile](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/) proporciona un sistema de sondes per validar si un servei està iniciat i en funcionament.
+La plataforma de contenidors [AppAgile](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/) proporciona un sistema de sondes per validar si un servei està iniciat i en funcionament.
 
 Amb Spring Boot, gràcies a la llibreria **spring-boot-starter-actuator**, es pot definir un endpoint de health per expossar aquesta comprovació en una aplicació Canigó.
 
