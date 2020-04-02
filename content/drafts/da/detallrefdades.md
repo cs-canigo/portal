@@ -7,12 +7,9 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-  <div>
-    <h2 id="entitatTitol"></h2>
-    <p id="myDefinition"></p>
-    <table id="myTable"></table>
-  </div>
-  
+<h2 id="entitatTitol"></h2>
+<p id="myDefinition"></p>
+<table id="myTable"></table>
 
 
 <script type="text/javascript">
@@ -243,6 +240,5 @@ weight= 5
 
 
 
-  </script>
-  
+ </script>
   
