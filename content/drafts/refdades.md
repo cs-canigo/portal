@@ -34,7 +34,7 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 
 Posem a disposició de les aplicacions el catàleg tècnic d’entitats de referència organitzades en dos grups:
 
-- Entitats de referència validades: Són entitats que han estat autoritzades per l’òrgan responsable, l’OIAD..
+- Entitats de referència d'obligat compliment: Són entitats que han estat autoritzades per l’òrgan responsable, l’OIAD..
 
 - Entitats de referència pendents d’aprovació: Són entitats que es proposen des de CTTI, que estan pendents de validar amb la OIAD, o que per les seves característiques no es poden classificar com a consolidades.
 
@@ -109,19 +109,16 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 	  "columns": [
           { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
            ],
-      "columnDefs": [ {
-            "targets": -1,
-            "data": null,
-            "defaultContent": "<button class=\"myButton\">Detall</button>"
-            },
-            {
-            "targets": [ 0 ],
-            "visible": false,
-            } ],
+      "columnDefs": [ 
+	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
+            {"targets": [ 0 ], "visible": false },
+            {"targets": [ 4 ], "visible": false }
+             ],
        "searchCols": [
                 { "search": "Consolidat" }, null,  null, null, null, null, null
 		  ]
     } );
+	
     $('#tabvalidades tbody').on('click', 'button', function () {
         //var data = tcons.row( this ).data();
         var data = tcons.row( $(this).parents('tr') ).data();
@@ -131,7 +128,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
         console.log("save data");
         console.log(data);
         localStorage.setItem('data', JSON.stringify(data));
-      
 
         window.location = "../da/detallrefdades";
     } );
@@ -159,15 +155,11 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 	  "columns": [
           { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
            ],
-      "columnDefs": [ {
-            "targets": -1,
-            "data": null,
-            "defaultContent": "<button class=\"myButton\">Detall</button>"
-        },
-            {
-            "targets": [ 0 ],
-            "visible": false,
-            } ],
+      "columnDefs": [ 
+	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
+            {"targets": [ 0 ], "visible": false },
+            {"targets": [ 4 ], "visible": false }
+              ],
 	  "searchCols": [
                 { "search": "Pendent" }, null,  null, null, null, null, null
 		  ]
@@ -181,7 +173,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
         console.log("save data");
         console.log(data);
         localStorage.setItem('data', JSON.stringify(data));
-      
 
         window.location = "../da/detallrefdades";
     } );
@@ -196,8 +187,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Entitats de referència validades 
-<br/>
+####  Entitats de referència d'obligat compliment 
+
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
@@ -214,12 +205,18 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
     </table>
 </div>
 
+<br/><br/>
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
+<br/>
 
+<div style="width:80%;padding-left:30px">
+    <img style="width: 100%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+</div>
 
 
 <br/><br/>
 #### Entitats de referència pendents d’aprovació
-<br/>
+
 <div style="width:100%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
         <thead>
@@ -236,14 +233,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
     </table>
 </div>
 
-
-<br/><br/>
-A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
-<br/>
-
-<div style="width:100%;padding-left:30px">
-    <img style="width: 80%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
-</div>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
