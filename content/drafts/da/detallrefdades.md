@@ -116,6 +116,8 @@ weight= 5
 		textoCelda = document.createTextNode(dades[3]);
 		celda.appendChild(textoCelda);
 		hilera.appendChild(celda);
+		
+		tblBody.appendChild(hilera);
 		  
 		// Data última actualització  
 		hilera = document.createElement("tr");	
@@ -129,6 +131,8 @@ weight= 5
 		textoCelda = document.createTextNode(dades[16]);
 		celda.appendChild(textoCelda);
 		hilera.appendChild(celda);
+		
+		tblBody.appendChild(hilera);
 	  
     //  v03.CTD-01/04/2020 (fi) Incorporar data de publicació i actualització abans dels atributs
 	// -----------------------------------------------------
@@ -240,4 +244,5 @@ weight= 5
 
 
   </script>
+  
   
