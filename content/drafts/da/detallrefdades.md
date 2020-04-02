@@ -63,7 +63,7 @@ weight= 5
     hilera.appendChild(celda);
 
     var celda2 = document.createElement("th");
-    var textoCelda2 =  document.createTextNode("Definició");
+    var textoCelda2 =  document.createTextNode("Valor");
     celda2.appendChild(textoCelda2);
     hilera.appendChild(celda2);
 
