@@ -43,6 +43,8 @@ Aquesta aplicació bridge s'ha de sol·licitar a l'equip del CS Canigó ja que c
 
 ### Configuració
 
+A continuació es descriu la configuració que caldrà aplicar.
+
 #### Servidor Web
 
 **SAML depèn dels noms DNS dels serveis i la generació de metadades SAML depèn de que l'aplicació conegui el nom DNS**. Els noms de DNS han de tenir sentit al navegador de l’usuari.

@@ -34,7 +34,7 @@ La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats r
 La nova versió 1.7.7 del plugin utilitza la versió 1.6.5 de l’arquetipus de Canigó per a generar projectes amb Canigó 3.4.3 i s'han modificat les opcions en afegir el mòdul de seguretat.
 A continuació s'explica el seu funcionament.
 
-Només tenim 3 opcions:
+Es proporcionen tres opcions:
 
 * **Si es vol token**, amb les possibles respostes: Si/No
 
