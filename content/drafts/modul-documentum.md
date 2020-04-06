@@ -55,6 +55,7 @@ En aquest punt, indicarem el **host i el port del docBroker** que conté el maga
 <br/>
 Com a resultat de la instal·lació es generarà un **arxiu amb la configuració d'accés a Documentum**:
 
+<br/>
 * **Versió 5.3**: l'arxiu es generarà per defecte a `C:\WINDOWS\dmcl.ini` i tindrà el següent format:
 
 ```
@@ -68,6 +69,7 @@ token_storage_enabled=F
 token_storage_path=D:\Documentum\apptoken
 ```
 
+<br/>
 * **Versions 6.5 i 7.1**: l'arxiu es generarà per defecte a `C:\Documentum\config\dfc.properties` i tindrà el següent format:
 
 ```
@@ -90,7 +92,9 @@ dfc.globalregistry.password=passRepositoriClaus
 Per tal d'**instal·lar el Mòdul de Documentum** es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
 manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
+<br/>
 * **Versió 5.3**:
+
 ```
 <canigo.integration.documentum.version>[1.2.0,1.3.0)</canigo.integration.documentum.version>
 
@@ -101,7 +105,9 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
+<br/>
 * **Versió 6.5**:
+
 ```
 <canigo.integration.documentum.version>[2.2.0,2.3.0)</canigo.integration.documentum.version>
 
@@ -112,7 +118,9 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
+<br/>
 * **Versió 7.1**:
+
 ```
 <canigo.integration.documentum.version>[3.1.0,3.2.0)</canigo.integration.documentum.version>
 
