@@ -16,24 +16,24 @@ dels usuaris en aplicacions Canigó a partir d’assercions SAML2 del proveïdor
 El sistema d'autenticació per API REST de Canigó a partir d'assercions SAML GICAR té dues particularitats:
 
 * És **totalment autocontingut en Java**, es desplega amb la pròpia aplicació i és indiferent del servidor web per davant del servidor d’aplicacions.
-No requereix la instal·lació de software binari ni configuració dels Apache que requereix Shibboleth SP
+No requereix la instal·lació de software binari ni configuració dels Apache que requereix Shibboleth SP.
 
-* És totalment **stateless pel que fa a l’API REST**. Amb implicacions, doncs SAML és un protocol totalment *stateful* i que fa ús de *cookies* per a desar informació
+* És totalment **stateless pel que fa a l’API REST**. Amb implicacions, doncs SAML és un protocol totalment *stateful* i que fa ús de *cookies* per a desar informació.
 
 
 Per a poder fer conviure una API *stateless* (aplicació Canigó amb autenticació JWT) i un sistema d'autenticació basat en assercions SAML *stateful* s'ha de dividir l'aplicació en dues parts:
 
-•  **Webapp stateless** que conté l’API REST protegida per *token JWT* (Aplicació Canigó amb tota la funcionalitat)
+•  **Webapp stateless** que conté l’API REST protegida per *token JWT* (Aplicació Canigó amb tota la funcionalitat).
 
 •  **Webapp stateful** (aplicació Bridge) que conté la interfície d’usuari protegida per asserció SAML. Actua com a Service Provider(SP) encarregant-se únicament
-d'obtenir i tractar les assercions SAML amb el proveïdor d'identitat (GICAR)
+d'obtenir i tractar les assercions SAML amb el proveïdor d'identitat (GICAR).
 
 <br/>
 L'aplicació *Stateful* funciona com a una SPA protegida per SAML. En accedir, si l'usuari no es troba autenticat, serà redirigit al *login* de GICAR.
 Un cop autenticat de forma satisfactòria l'usuari disposarà d'una asserció SAML vàlida. La SPA s'ha d'encarregar, aleshores, de cridar a l'Endpoint `/api/saml` de l'aplicació *Stateless*
 amb l'asserció SAML com a paràmetre codificat en Base64. Aquest Endpoint retorna un token JWT vàlid per a accedir als serveis REST de l'aplicació *Stateless* protegits.
 
-Veure la següent imatge:
+<br/>
 <div style="width:90%;margin:0 auto;"><img style="width: 70%; height: auto" src="/related/canigo/documentacio/modul-saml/diagrama.png" alt="Diagrama seqüencia SAML-GICAR-JWT" title="Diagrama seqüencia SAML-GICAR-JWT"></img></div>
 
 ## Aplicació Bridge (Stateful)
@@ -43,13 +43,11 @@ Aquesta aplicació bridge s'ha de sol·licitar a l'equip del CS Canigó ja que c
 
 ### Configuració
 
-<br/>
 #### Servidor Web
 
-SAML depèn dels noms DNS dels serveis i la generació de metadades SAML depèn de que l'aplicació conegui el nom DNS. Els noms de DNS han de tenir sentit al navegador de l’usuari.
+**SAML depèn dels noms DNS dels serveis i la generació de metadades SAML depèn de que l'aplicació conegui el nom DNS**. Els noms de DNS han de tenir sentit al navegador de l’usuari.
 Es poden crear metadades de SP amb noms de DNS locals encara que l’IdP no els conegui però el navegador ha de ser capaç de resoldre'l.
 Utilitzar *localhost* no funciona, cal un proxy que exposi un nom DNS i es recomana que el protocol d'accés sigui SSL.
-
 Per a realitzar aquesta configuració s'ha utilitzat Apache 2.4. Es descriu a continuació.
 
 <br/>
@@ -75,6 +73,7 @@ Caldrà incloure la següent configuració al final del fitxer `httpd.conf`:
    </IfModule>
 ```
 
+<br/>
 I caldrà configurar el *VirtualHost* al fitxer `conf/extra/httpd-ssl.conf`:
 
 ```
@@ -124,12 +123,14 @@ I caldrà configurar el *VirtualHost* al fitxer `conf/extra/httpd-ssl.conf`:
    </VirtualHost>
 ```
 
+<br/>
 Els certificats `apache.crt` i `apache.key` es poden generar amb [Openssl](ttps://www.openssl.org/):
 
    ```
         openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out ${SRVROOT}/conf/ssl/apache.crt -keyout ${SRVROOT}/conf/ssl/apache.key
    ```
 
+<br/>
 Aquesta operació demanarà emplenar algunes dades però la que és realment important és el paràmetre *Common Name* que ha de ser el mateix que el valor indicat a *ServerName* al fitxer `httpd-ssl.conf`.
 Addicionalment, i en cas que el navegador no pugui resoldre el nom de servidor, s'haurà d'afegir al fitxer `hosts`:
 
@@ -137,6 +138,7 @@ Addicionalment, i en cas que el navegador no pugui resoldre el nom de servidor, 
    127.0.0.1  vagrant.vm
 ```
 
+<br/>
 Per a realitzar la connexió per HTTPS a l'aplicació Bridge, s'ha d'indicar el *schema* i el *proxyPort* al Tomcat de Spring Boot, concretament al fitxer `TomcatContainerCustomizer`:
 
 ```
@@ -174,7 +176,7 @@ Per a realitzar la connexió per HTTPS a l'aplicació Bridge, s'ha d'indicar el 
 Per a realitzar la comunicació SAML entre SP (aplicació Bridge) i IdP (GICAR) cadascun ha de tenir les metadades de l'altre. Per a obtenir les metadades de l'IdP GICAR s'ha de demanar a GICAR.
 A l'entorn de PRE, a la redacció d'aquest manual, es poden trobar a: https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth.
 
-
+<br/>
 A l'aplicació Bridge proporcionada pel CS Canigó, aquest fitxer s'ha ubicat a `src/resources/saml/metadata/metaDadesGicarPRE.xml`.
 De forma que, al fitxer de propietats `config/props/saml.properties` s’ha d’indicar la ruta:
 
@@ -182,12 +184,13 @@ De forma que, al fitxer de propietats `config/props/saml.properties` s’ha d’
    *.idpMetadata=/saml/metadata/metaDadesGicarPre.xml
 ```
 
-Del fitxer de metadades proporcionat per GICAR s'obté l'*entityId* que també caldrà indicar-lo al fitxer `saml.properties`:
+Del fitxer de metadades proporcionat per GICAR s'obté l'*entityId* que també caldrà indicar-lo també al fitxer `saml.properties`:
 
 ```
    *.idpEntityId=https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth
 ```
 
+<br/>
 Se li ha de proporcionar a GICAR el fitxer metadades del SP i, per a generar-lo, caldrà definir les següents propietats al fitxer `saml.properties`:
 
 Propietat                     | Descripció                                                              | Valor a l'aplicació Bridge proporcionada
@@ -200,9 +203,11 @@ Propietat                     | Descripció                                     
 *.spKeyname                   | Nom d'accés a la clau privada del certificat   | apollo
 *.spKeynamePass               | Paraula de pas d'accés a la clau privada del certificat   | nalle123
 
+<br/>
 Una vegada finalitzada la configuració, si s’accedeix a la url de l'aplicació Bridge mitjançant l'Endpoint `/saml/metadata` s'obté el fitxer metadades que s'ha de proporcionar a GICAR.
 A l'aplicació Bridge Demo la url seria https://vagrant.vm/bridge/saml/metadata.
 
+<br/>
 El fitxer que es genera amb la configuració predeterminada seria el següent:
 
 ```
@@ -399,10 +404,11 @@ Al fitxer `WebSecurityConfig` s'han d'establir els *Beans* dels serveis d'autori
 
 ## Exemple d'execució
 
-Per a les proves d'execució, s'ha desplegat l'aplicació Bridge al port 8080 i l'aplicació Canigó al port 9090. S'intenta accedir al SPA de l'aplicació Bridge: https://vagrant.vm/bridge/app sense
-tenir sessió, la capa de seguretat detecta la necessitat d'autenticació i fa una redirecció 302 al SS0 (URL de GICAR IdP). S'han d’introduir les credencials d'un usuari vàlid a GICAR i,
+Per a les proves d'execució, s'ha desplegat l'aplicació Bridge al port 8080 i l'aplicació Canigó al port 9090. S'intenta accedir al SPA de l'aplicació Bridge https://vagrant.vm/bridge/app sense
+tenir sessió, la capa de seguretat detecta la necessitat d'autenticació i realitza una redirecció 302 al SS0 (URL de GICAR IdP). S'han d’introduir les credencials d'un usuari vàlid a GICAR i,
 a continuació, es fa la redirecció a la SPA amb l'asserció SAML.
 
+<br/>
 La SPA proporcionada a l'aplicació Bridge té dues parts:
 
 * Una part on es mostra informació general obtinguda a partir de l'asserció SAML

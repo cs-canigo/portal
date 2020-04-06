@@ -77,6 +77,7 @@ cal configurar el següent repositori Maven:
     https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 ```
 
+<br/>
 Per a utilitzar aquest grup de repositoris s'ha d'afegir el certificat del domini *sic.ctti.extranet.gencat.cat* al *Cacerts* de Java des d'on s'executi el procés Maven que construeix l'aplicació Canigó.
 Les passes a seguir serien les següents:
 
@@ -152,6 +153,7 @@ cal configurar el següent repositori Maven:
     https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 ```
 
+<br/>
 Per a utilitzar aquest grup de repositoris s'ha d'afegir el certificat del domini *sic.ctti.extranet.gencat.ca* al *Cacerts* de Java des d'on s'executi el procés Maven que construeix l'aplicació Canigó.
 Les passes a seguir serien les següents:
 
