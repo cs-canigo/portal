@@ -20,7 +20,7 @@ amb informació sobre les dades a inserir en els documents originals
 
 Els principals punts de la rearquitectura són:
 
-Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/).
+Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/).
 
 ![std2-arquitectura](/images/news/std2-arquitectura.PNG)
 

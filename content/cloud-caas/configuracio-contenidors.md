@@ -47,8 +47,8 @@ Bàsicament s'exposen unes variables de tipus **{SVCNAME}_SERVICE_HOST** i **{SV
 Podeu trobar més informació a [Discovering services.](https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services)
 
 Podeu trobar exemples de yamls complets dels descriptors de desplegament a 
-- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/)
-- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud/contenidors_kubernetes/)
+- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/)
+- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 ### ConfigMap
 
