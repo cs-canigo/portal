@@ -1,44 +1,46 @@
 +++
 date        = "2020-03-27"
 title       = "SAP"
-description = "Interficie d'accés als Backends SAP de la Generalitat."
+description = "Interfície d'accés als Backends SAP de la Generalitat."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 12
 +++
 
 <div class="message warning">
-	
-A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul està deprecat. No hi haurà més evolució d'aquest mòdul
+
+A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, per lo que no es preveu seguir evolucionant aquest mòdul.
 
 </div>
 
 ## Propòsit
 
-El propòsit del connector és proporcionar una interfície simplificada per accedir a backends SAP de la Generalitat.
+L'objectiu d’aquest article és **descriure la metodologia a seguir en la utilització del connector al sistema *SAP* de la Generalitat des de qualsevol aplicació Java del Framework J2EE**
+i el propòsit del connector és proporcionar una interfície simplificada per accedir-hi.
 
-## Instal.lació i Configuració
+## Instal·lació
 
-### Instal.lació
+Per a poder utilitzar el connector haurem de configurar el projecte per a que inclogui unes **llibreries DLL i diferents llibreries Java**:
 
-Per poder utilitzar el connector haurem de configurar el projecte perquè inclogui dues llibreries dll i diferents jars:
+* Les llibreries DLL són: *sapjcorfc.dll* i *librfc32.dll*, s'hauran de copiar al directori *system32*.
 
-Les llibreries són sapjcorfc.dll i librfc32.dll i s'han de copiar al directori system32.
+* Per a fer les operacions sobre el sistema SAP és necessària la utilització de la llibreria *sapjco-2.1.6.jar*, que és el connector propi del SAP per a fer les crides a les seves funcions BAPI (RFC).
 
-Per fer les operacions sobre el sistema SAP és necessària la utilització del jar sapjco-2.1.6, que és el connector propi del SAP per fer les crides a les seves funcions BAPI (RFC).
+* Les classes que utilitzarem per a construir els objectes d'operacions estan disponibles a la llibreria del connector Gecat09 *canigo-connectors-gecat09-2.3.2.jar*.
 
-Les classes que utilitzarem per fer els objectes d'operacions estan en el jar del connector Gecat09 canigo-connectors-gecat09-2.3.2.jar
-
-Les classes que utilitzarem per fer les operacions han estat generades amb una eina Open Source anomenada JAXB (Java API for Xml Binding), que genera classes java a partir d'un esquema de xml (XMLSchema). Aquesta eina ens permet no solament generar automàticament classes java sinó també fer validacions per comprovar que les dades que contenen els objectes són vàlides. Per això també haurem d'incloure els jars que necessita JAXB:
+Les classes que utilitzarem per a fer les operacions han estat generades amb una eina Open Source anomenada JAXB (Java API for Xml Binding) que s’encarrega de
+generar les classes Java a partir d'un esquema de Xml (*XMLSchema*). Aquesta eina ens permet no solament generar automàticament classes sinó també fer validacions
+per a comprovar que les dades que contenen els objectes siguin vàlides. Serà necessari, per tant, incloure també:
 
 * jaxb-api-1.0.1.jar
-* jaxb-libs-1.0.1.jar
-* jaxb-impl-1.0.1.jar
+* jaxb-libs-1.0.6.jar
+* jaxb-impl-1.0.5.jar
 * jax-qname-1.1.jar
 * namespace-1.0.1.jar
-* relaxngDatatype-1.0.1.jar
-* xsdlib-1.1.2.jar
+* relaxngDatatype-20020414.jar
+* xsdlib-2013.6.1.jar
 
-Per tal d'instal-lar el mòdul de SAP es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el Mòdul de SAP es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
+manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```
 <canigo.integration.sap.version>[1.2.0,1.3.0)</canigo.integration.sap.version>
@@ -50,11 +52,10 @@ Per tal d'instal-lar el mòdul de SAP es pot incloure automàticament a través 
 </dependency>
 ```
 
-### Configuració
+## Configuració
 
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament.
-
-Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/sap.properties
+El fitxer de configuració es troba a: `<PROJECT_ROOT>/src/main/resources/config/props/sap.properties`.
 
 | Propietat                | Requerit     | Descripció
 | ------------------------ | ------------ | --------------
@@ -69,21 +70,16 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/sap.properties
 | *.sap.maxNumConnections  | No           | Número de connexions màximes. Per defecte: 5
 | *.sap.repositoryName     | No           | Nom del repository. Per defecte: ARAsoft
 
-## Utilització del Mòdul
+## Funcionament
+La utilització del connector es fonamenta en la seva **configuració prèvia i en la invocació des dels clients mitjançant les interfícies definides**.
 
 ### REST
 
-Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
+Per a utilitzar aquest mòdul, cal crear un *Service* i un *Controller*.
 
-**SapService.java**
+#### Service (SapService.java)
 
-Classe Java on es realitza la lògica de la operació a realitzar i es connecta amb el mòdul de SAP.
-
-En aquest bean es pot veure:
-
-* Injecció del conector de SAP via annotacions (@Autowired) de Spring.
-* Invocació de la funció BAPI_MATERIAL_GETLIST, taula MATNRSELECTION.
-* En la classe MaterialBean s'introduirà el resultat de l'invocació de la funció SAP de manera transparent.
+Aquesta classe és en la que s'implementarà la lògica de l’operació a realitzar i es connectarà amb el mòdul de SAP.
 
 ```java
 import java.util.Collection;
@@ -101,40 +97,44 @@ import cat.gencat.plantilla32.model.MaterialBean;
 @Lazy
 public class SapService {
 
-	private static final Logger log = LoggerFactory.getLogger(SapService.class);
+   private static final Logger log = LoggerFactory.getLogger(SapService.class);
 
-	@Autowired
+   @Autowired
     private SapConnector connector;
 
     /**
      * Execució de la funció SAP BAPI_MATERIAL_GETLIST
      *
      */
-	public String testSap(){
-		
-		String message;
-
-		 try{
-	            this.connector.connect();
-	            Collection<Object> col = this.connector.executeFunction("BAPI_MATERIAL_GETLIST",
-	                    "MATNRSELECTION", null, MaterialBean.class);
-	            
-	            message = "Test correcte : " + col.size();
-
-	        }catch(Exception e){
-	        	message = "Test erròni: " + e.getMessage();
-	        	log.error(e.getMessage(), e);
-	        }finally{
-	            this.connector.disconnect();
-	        }      
+   public String testSap(){
+      String message;
+       try{
+            this.connector.connect();
+            Collection<Object> col = this.connector.executeFunction("BAPI_MATERIAL_GETLIST",
+                    "MATNRSELECTION", null, MaterialBean.class);
+            message = "Test correcte : " + col.size();
+        }
+        catch(Exception e){
+            message = "Test erroni: " + e.getMessage();
+            log.error(e.getMessage(), e);
+        }
+        finally{
+            this.connector.disconnect();
+        }
         return message;
     }
 }
 ```
 
+En aquest bean es pot veure:
+
+* Injecció del connector de SAP via *annotacions* (*@Autowired*) de Spring
+* Invocació de la funció *BAPI_MATERIAL_GETLIST* (taula MATNRSELECTION)
+* En la classe *MaterialBean* s'introduirà el resultat de la invocació de la funció SAP de manera transparent
+
 **SapServiceController.java**
 
-Controller que publica les operacions disponibles per a qui hagi de consumir-les.
+Controlador que publica les operacions disponibles per a que es puguin consumir.
 
 ```
 import org.springframework.beans.factory.annotation.Autowired;
@@ -149,13 +149,12 @@ import cat.gencat.plantilla32.service.SapService;
 @RequestMapping("/sap")
 public class SapServiceController {
 
-	@Autowired
-	SapService sapService;
+   @Autowired
+   SapService sapService;
 
-
-	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-	public String testSap() throws Exception {
-		return sapService.testSap();
-	}
+   @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+   public String testSap() throws Exception {
+      return sapService.testSap();
+   }
 }
 ```

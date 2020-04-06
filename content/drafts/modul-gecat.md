@@ -16,7 +16,8 @@ A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà
 
 L'objectiu d’aquest article és **descriure la metodologia a seguir en la utilització del connector al sistema SAP de Gecat des de qualsevol aplicació Java del Framework J2EE**.
 L'abast d'aquest connector es fonamenta en la utilització de les funcions d'alta de factures, consultes i reserves online del SAP de Gecat, així com totes les funcions batch.
-El connector permet l'accés al SAP mitjançant objectes de consulta, transformant aquests objectes en una cadena de caràcters vàlida per al SAP. La cadena de retorn és transformada novament en un objecte que conté els registres de retorn.
+El connector permet l'accés al SAP mitjançant objectes de consulta, transformant aquests objectes en una cadena de caràcters vàlida per al SAP. La cadena de retorn és transformada
+novament en un objecte que conté els registres de retorn.
 
 ## Instal·lació
 Per a poder utilitzar el connector haurem de configurar el projecte per a que inclogui unes **llibreries DLL i diferents llibreries Java**:
@@ -57,20 +58,20 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament.
 El fitxer de configuració es troba a: *<PROJECT_ROOT>/src/main/resources/config/props/sap.properties*.
 
-Propietat                | Requerit | Descripció
------------------------- | -------- | ----------
-*.sap.client            | Sí       | Client
-*.sap.username              | Sí       | Usuari de connexió
-*.sap.password              | Sí       | Paraula de pas de connexió
-*.sap.language              | Sí       | Idioma
-*.sap.hostname              | Sí       | Nom del servidor
-*.sap.systemNumber          | Sí       | SAP system number
-*.sap.connectionPool     | No       | Connexió amb pool. Per defecte: true
-*.sap.connectionPoolName | No       | Nom del pool. Per defecte: poolCanigoSAP
-*.sap.maxNumConnections  | No       | Número de connexions màximes. Per defecte: 5
-*.sap.repositoryName     | No       | Nom del repositori. Per defecte: ARAsoft
+| Propietat                | Requerit     | Descripció
+| ------------------------ | ------------ | --------------
+| *.sap.client             | Sí           | Client
+| *.sap.username           | Sí           | Usuari de connexió
+| *.sap.password           | Sí           | Password de connexió
+| *.sap.language           | Sí           | Idioma
+| *.sap.hostname           | Sí           | Nom del servidor
+| *.sap.systemNumber       | Sí           | SAP system number
+| *.sap.connectionPool     | No           | Connexió amb pool. Per defecte: true
+| *.sap.connectionPoolName | No           | Nom del pool. Per defecte: poolCanigoSAP
+| *.sap.maxNumConnections  | No           | Número de connexions màximes. Per defecte: 5
+| *.sap.repositoryName     | No           | Nom del repository. Per defecte: ARAsoft
 
-## Utilització
+## Funcionament
 
 La utilització del connector es fonamenta en la seva **configuració prèvia i en la invocació des dels clients mitjançant les interfícies definides**.
 El connector del Gecat ofereix tres operacions: alta de factures online, consultes i reserves.
@@ -97,6 +98,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
+
 import cat.gencat.ctti.canigo.arch.integration.gecat.connector.GecatConnector;
 import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritori.DadesConsultaTerritoriType;
 import cat.gencat.ctti.canigo.arch.integration.gecat.consultes.ConsultaTerritori.DadesConsultaType;
@@ -112,34 +114,32 @@ public class GecatService {
    @Autowired
    private GecatConnector gecatConnector;
 
-
    public String testGecat(){
       String message;
       try {
 
-            ObjectFactory objectFactory = new ObjectFactory();
+        ObjectFactory objectFactory = new ObjectFactory();
 
-            /**
-             * creem l'objecte per fer la consulta
-             **/
-            DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
-            DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
-            dadesConsulta.setCodiTerritori("0217188");
-            dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
-            DadesConsultaTerritoriRetornType dadesConsultaRetorn = gecatConnector.consultaTerritori(dadesConsultaTerritori);
+        /**
+         * creem l'objecte per fer la consulta
+         **/
+        DadesConsultaTerritoriType dadesConsultaTerritori = objectFactory.createDadesConsultaTerritoriType();
+        DadesConsultaType dadesConsulta = objectFactory.createDadesConsultaType();
+        dadesConsulta.setCodiTerritori("0217188");
+        dadesConsultaTerritori.setDadesConsulta(dadesConsulta);
+        DadesConsultaTerritoriRetornType dadesConsultaRetorn = gecatConnector.consultaTerritori(dadesConsultaTerritori);
 
-            log.info("getCodiTerritori():" +
-                    dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
-            log.info("getNomTerritori():" +
-                    dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
+        log.info("getCodiTerritori():" +
+                dadesConsultaRetorn.getDadesRetorn().getCodiTerritori());
+        log.info("getNomTerritori():" +
+                dadesConsultaRetorn.getDadesRetorn().getNomTerritori());
 
-            message = "Resultat test : " + dadesConsultaRetorn.getDadesRetorn().getNomTerritori();
-
-          } catch (Exception e) {
-             message = "Error al test : " + e.getMessage();
-             log.error(e.getMessage(),e);
-          }
-
+        message = "Resultat test : " + dadesConsultaRetorn.getDadesRetorn().getNomTerritori();
+      }
+      catch (Exception e) {
+         message = "Error al test : " + e.getMessage();
+         log.error(e.getMessage(),e);
+      }
       return message;
     }
 

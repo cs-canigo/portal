@@ -9,8 +9,8 @@ key         = "GENER2020"
 
 ## Introducció
 
-A les últimes novetats de Gicar s’incorpora la **possibilitat de disposar d'un sistema d'autorització d'usuaris, a més del sistema d'autenticació**.
-Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta funcionalitat utilitzant el protocol SAML a una aplicació Canigó.
+A les últimes novetats de Gicar s’incorpora la possibilitat de disposar d'un sistema d'autorització d'usuaris, a més del sistema d'autenticació.
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de **configurar i utilitzar aquesta funcionalitat utilitzant el protocol SAML a una aplicació Canigó**.
 
 ## Asserció SAML
 
@@ -58,17 +58,15 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 ## Configuració per a utilitzar l'autorització (i autenticació) via Gicar mitjançant el protocol SAML
 
 A la versió 1.7.7 del plugin de Canigó per l'Eclipse ja s'incorpora la nova opció d'autenticació utilitzant el protocol SAML i l'autorització via Gicar quan
-s'afegeix el mòdul de seguretat en una aplicació Canigó.
-
-Podeu veure les opcions disponibles a:
+s'afegeix el mòdul de seguretat en una aplicació Canigó. Podeu veure les opcions disponibles a:
 [Actualització archetype 1.6.5 i plugin eclipse 1.7.7](/noticies/2020-03-24-Actualitzacio_Actualitzacio_archetype_1_6_5_plugin_eclipse_1_7_7).
+
 En cas d'optar per fer-ho manualment, serà necessari crear els següents fitxers:
 
 - `WebSecurityConfig.java`
 - `security.properties`
 - `app-custom-security.xml`
 
-<br/>
 ###  WebSecurityConfig
 
 Aquest fitxer ha d'estar ubicat al *package* `config` del projecte, al mateix nivell que `AppConfig.java`, i ha de tenir el següent contingut:
@@ -140,11 +138,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       .antMatchers("/api/info/**", "/api/logs/**").hasRole("ADMIN")
 //    .antMatchers("/api/equipaments/**").hasRole("USER");
       .antMatchers("/api/equipaments/**").hasAnyAuthority("ROLE_USER","192_189_sgde");
-
       http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
       http.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
       http.csrf().disable();
-
       http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
       http.addFilterBefore(jwtAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
    }
@@ -156,7 +152,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       jwtGicarAuthenticationService.setSiteminderAuthentication(isSiteminderAuthentication());
       jwtGicarAuthenticationService.setTokenResponseHeaderName(getTokenResponseHeaderName());
       jwtGicarAuthenticationService.setHeaderAuthName(getHeaderAuthName());
-
       return jwtGicarAuthenticationService;
    }
 
@@ -243,15 +238,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 <br/>
 On es defineix, com a punts més rellevants:
 
-- Que totes les peticions `/api/saml` són acceptades, és aquest el servei que s'utilitzarà per a informar de l'asserció SAML
+- Que totes les peticions `/api/saml` són acceptades. És aquest el servei que s'utilitzarà per a informar de l'asserció SAML.
 
-- Que com a *AuthenticationService* s’utilitzarà *SAMLAuthenticationService*
+- Que com a *AuthenticationService* s’utilitzarà *SAMLAuthenticationService*.
 
-- Que com a *SAMLValidationService* s’utilitzarà *SAMLValidationServiceOpenSAML*
+- Que com a *SAMLValidationService* s’utilitzarà *SAMLValidationServiceOpenSAML*.
 
 - Que com a *SAMLJwtTokenHandler* s'utilitzarà *SAMLJwtTokenHandler*.
 
-<br/>
 ###  security.properties
 
 Aquest fitxer ha d'estar ubicat a `/src/main/resources/config/props` i ha d'incloure, per defecte, la següent definició de propietats:
@@ -270,9 +264,8 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/config/props` i ha d'incl
 #
 #
 #     Exemples de configuració:
-#
-#        *.security.database.jndiName      ->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat
-#                                       més especifica per al entorn en el qual s'executa l'aplicació.
+#        *.security.database.jndiName       ->  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat
+#                                               més especifica per al entorn en el qual s'executa l'aplicació.
 #        dev.security.database.jndiName     ->  Propietat vàlida només a desenvolupament
 #        test.security.database.jndiName    ->  Propietat vàlida només a test
 #
@@ -280,22 +273,22 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/config/props` i ha d'incl
 #
 #
 #
-#  Propietat                       Requerit      Descripció
+#  Propietat                                  Requerit    Descripció
 #  ---------------------------------------------------------------------------------
-#  security.database.jndiName             Si          Nom JNDI d'accés a la base de dades.
-#  security.database.driverClassName        Si          Driver per connexió amb JDBC
-#  security.database.url                 Si          URL de connexió a la base de dades.
-#  security.database.username             Si          Usuari de connexió a la base de dades
-#  security.database.password             Si          Password de connexió a la base de dades
+#  security.database.jndiName                 Si          Nom JNDI d'accés a la base de dades.
+#  security.database.driverClassName          Si          Driver per connexió amb JDBC
+#  security.database.url                      Si          URL de connexió a la base de dades.
+#  security.database.username                 Si          Usuari de connexió a la base de dades
+#  security.database.password                 Si          Password de connexió a la base de dades
 #  security.gicar.httpGicarHeaderUsernameKey  No          Clau capçelera GICAR
-#  security.sace.userNameFormat            No          Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
+#  security.sace.userNameFormat               No          Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
 #  security.sace.authoritiesbyUserNameQuery   No          Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
-#  security.sace.keyStore                Si          Localització de la keystore
-#  security.sace.keyStorePassPhrase         Si          Password de la keystore
-#  security.sace.url                    Si          URL del servei de SACE
+#  security.sace.keyStore                     Si          Localització de la keystore
+#  security.sace.keyStorePassPhrase           Si          Password de la keystore
+#  security.sace.url                          Si          URL del servei de SACE
 #
 #
-#########################################################################################################################################################################
+###########################################################
 # GICAR configuration
 #*.security.gicar.httpGicarHeaderUsernameKey=NIF
 
@@ -305,9 +298,7 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/config/props` i ha d'incl
 *.jwt.tokenResponseHeaderName = jwtToken
 *.jwt.secret = canigo
 *.jwt.expiration = 3600
-
 *.jwt.siteminderAuthentication = true
-
 
 *.saml.extraValidityMinutes = 60
 *.saml.idpEntityId  = https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth
@@ -315,7 +306,6 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/config/props` i ha d'incl
 *.saml.spBridgeEntityId  = https://vagrant.vm/bridge00
 ```
 
-<br/>
 ###  app-custom-security.xml
 
 Aquest fitxer ha d'estar ubicat a `/src/main/resources/spring/` i ha d'incloure la següent definició:
@@ -328,10 +318,10 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/spring/` i ha d'incloure 
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
       xsi:schemaLocation=
-      "http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-       http://www.springframework.org/schema/context     http://www.springframework.org/schema/context/spring-context-4.3.xsd
-         http://www.springframework.org/schema/security    http://www.springframework.org/schema/security/spring-security-4.2.xsd
-         http://www.springframework.org/schema/jdbc       http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd">
+      "http://www.springframework.org/schema/beans      http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/context    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+       http://www.springframework.org/schema/security   http://www.springframework.org/schema/security/spring-security-4.2.xsd
+       http://www.springframework.org/schema/jdbc       http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd">
 
    <security:authentication-manager>
    <!-- SAML Authentication provider-->

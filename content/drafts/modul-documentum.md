@@ -7,56 +7,54 @@ weight      = 4
 +++
 
 <div class="message warning">
-	
-A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul està deprecat. No hi haurà més evolució d'aquest mòdul
+
+A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, per lo que no es preveu seguir evolucionant aquest mòdul.
 
 </div>
 
 ## Propòsit
 
-El propósit del connector és proporcionar una interfície Java per accedir a Documentum. Permetent emmagatzemar i recuperar documents a més d'altres operacions relacionades com crear carpetes i associar propietats.
-
-## Instal.lació i Configuració
-
-### Instal.lació del DFC
-
-Previ a la utilització del servei cal instal.lar a la màquina de desenvolupament/servidor la DFC's de la versió de Documentum que es farà servir :
-
-* Documentum 5.3 
-* Documentum 6.5
-* Documentum 7.1 
-
-En cas de no comptar amb aquests instal·lable, es pot sol·licitar a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat>
+L'objectiu d’aquest article és **descriure la metodologia a seguir en la utilització del connector al sistema *Documentum* des de qualsevol aplicació Java del Framework J2EE**.
+L'abast d'aquest sistema es fonamenta una interfície Java per a accedir a Documentum, permetent emmagatzemar i recuperar documents a més d'altres
+operacions relacionades com la creació de carpetes o assignació de propietats.
 
 
+## Instal·lació
 
-Els passos a seguir en l'instal.lació són els següents (similars a les 3 versions):
+### Instal·lació del DFC (Documentum Foundation Classes)
 
-![Instal.lació documentum pas 1](/related/canigo/documentacio/modul-documentum/image005.jpg "Instal.lació documentum pas 1")
+Com a requisit previ a la utilització del servei, cal **instal·lar a la màquina de desenvolupament/servidor la DFC (Documentum Foundation Classes) de la versió de *Documentum*
+que s'utilitzarà**. Pot tractar-se de les versions: 5.3, 6.5 o 7.1.
+En cas de no comptar amb aquests instal·lable, es pot sol·licitar mitjançant la bústia de la OT Canigó: <oficina-tecnica.canigo.ctti@gencat.cat>.
 
-![Instal.lació documentum pas 2](/related/canigo/documentacio/modul-documentum/image006.jpg "Instal.lació documentum pas 2")
 
-![Instal.lació documentum pas 3](/related/canigo/documentacio/modul-documentum/image007.jpg "Instal.lació documentum pas 3")
+Els passos a seguir en la instal·lació són similars a les tres versions i són els següents:
 
-![Instal.lació documentum pas 4](/related/canigo/documentacio/modul-documentum/image008.jpg "Instal.lació documentum pas 4")
+![Instal·lació documentum pas 1](/related/canigo/documentacio/modul-documentum/image005.jpg "Instal·lació documentum pas 1")
 
-Aquí indicarem el host i el port del docBroker que conté el magatzem de claus.
+![Instal·lació documentum pas 2](/related/canigo/documentacio/modul-documentum/image006.jpg "Instal·lació documentum pas 2")
 
-![Instal.lació documentum pas 5](/related/canigo/documentacio/modul-documentum/image009.jpg "Instal.lació documentum pas 5")
+![Instal·lació documentum pas 3](/related/canigo/documentacio/modul-documentum/image007.jpg "Instal·lació documentum pas 3")
 
-![Instal.lació documentum pas 6](/related/canigo/documentacio/modul-documentum/image010.jpg "Instal.lació documentum pas 6")
+![Instal·lació documentum pas 4](/related/canigo/documentacio/modul-documentum/image008.jpg "Instal·lació documentum pas 4")
 
-![Instal.lació documentum pas 7](/related/canigo/documentacio/modul-documentum/image011.jpg "Instal.lació documentum pas 7")
+En aquest punt, indicarem el host i el port del *docBroker* que conté el magatzem de claus.
 
-![Instal.lació documentum pas 8](/related/canigo/documentacio/modul-documentum/image012.jpg "Instal.lació documentum pas 8")
+![Instal·lació documentum pas 5](/related/canigo/documentacio/modul-documentum/image009.jpg "Instal·lació documentum pas 5")
 
-![Instal.lació documentum pas 9](/related/canigo/documentacio/modul-documentum/image013.jpg "Instal.lació documentum pas 9")
+![Instal·lació documentum pas 6](/related/canigo/documentacio/modul-documentum/image010.jpg "Instal·lació documentum pas 6")
 
-![Instal.lació documentum pas 10](/related/canigo/documentacio/modul-documentum/image014.jpg "Instal.lació documentum pas 10")
+![Instal·lació documentum pas 7](/related/canigo/documentacio/modul-documentum/image011.jpg "Instal·lació documentum pas 7")
 
-Com a resultat de la instalació es generarà un arxiu amb la configuració d'accés a documentum.
+![Instal·lació documentum pas 8](/related/canigo/documentacio/modul-documentum/image012.jpg "Instal·lació documentum pas 8")
 
-En el cas de Documentum 5.3,  aquest es generarà per defecte a **C:\WINDOWS\dmcl.ini** i tindrà el format següent:
+![Instal·lació documentum pas 9](/related/canigo/documentacio/modul-documentum/image013.jpg "Instal·lació documentum pas 9")
+
+![Instal·lació documentum pas 10](/related/canigo/documentacio/modul-documentum/image014.jpg "Instal·lació documentum pas 10")
+
+Com a resultat de la instal·lació es generarà un **arxiu amb la configuració d'accés a *Documentum***.
+
+En el cas de la **versió 5.3**,  l'arxiu es generarà per defecte a `C:\WINDOWS\dmcl.ini` i tindrà el següent format:
 ```
 [DOCBROKER_PRIMARY]
 host =es-hg2r02j
@@ -68,7 +66,7 @@ token_storage_enabled=F
 token_storage_path=D:\Documentum\apptoken
 ```
 
-En el cas de Documentum 6.5 i 7.1, aquest es generarà per defecte a **C:\Documentum\config\dfc.properties** i tindrà el format següent:
+En el cas de les **versions 6.5 i 7.1**, l'arxiu es generarà per defecte a `C:\Documentum\config\dfc.properties` i tindrà el següent format:
 ```
 dfc.data.dir=C\:/Documentum
 dfc.registry.mode=windows
@@ -86,10 +84,10 @@ dfc.globalregistry.password=passRepositoriClaus
 
 ### Instal·lació del connector
 
+Per tal d'**instal·lar el Mòdul de *Documentum*** es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
+manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
-Per tal d'instal- lar el mòdul de Documentum es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
-
-Per a la versió 5.3 de Documentum:
+* Per a la **versió 5.3**:
 
 ```
 <canigo.integration.documentum.version>[1.2.0,1.3.0)</canigo.integration.documentum.version>
@@ -101,7 +99,7 @@ Per a la versió 5.3 de Documentum:
 </dependency>
 ```
 
-Per a la versió 6.5
+* Per a la **versió 6.5**:
 
 ```
 <canigo.integration.documentum.version>[2.2.0,2.3.0)</canigo.integration.documentum.version>
@@ -113,7 +111,7 @@ Per a la versió 6.5
 </dependency>
 ```
 
-Per a la versió 7.1
+* Per a la **versió 7.1**:
 
 ```
 <canigo.integration.documentum.version>[3.1.0,3.2.0)</canigo.integration.documentum.version>
@@ -125,10 +123,15 @@ Per a la versió 7.1
 </dependency>
 ```
 
+<br/>
 #### Dependències amb llibreries del DFC instal·lat
-Els connectors tenen dependències amb llibreries de la versió del DFC instal·lat. Aquestes llibreries s'inclouen amb la instal·lació del DFC, a la carpeta **C:\Program Files\Documentum\Shared\**. Caldrà afegir-les al repositori .m2 local per tal que Maven les resolgui.
+Els connectors tenen dependències amb llibreries de la versió del DFC instal·lat.
+Aquestes llibreries s'inclouen durant la instal·lació del DFC a la carpeta `C:\Program Files\Documentum\Shared\`.
+No obstant, caldrà afegir-les al repositori de Maven local per a que es puguin resoldre.
 
-Per a la versió de DFC 7.1 , serà necessari instal·lar les següents llibreries :
+<br/>
+Per a la versió de DFC 7.1 , seran necessàries les següents:
+
 ```
 mvn install:install-file -Dfile="dfc.jar" -DgroupId=dfc -DartifactId=dfc -Dversion=7.1 -Dpackaging=jar
 mvn install:install-file -Dfile="certj.jar" -DgroupId=certj -DartifactId=certj -Dversion=5.2 -Dpackaging=jar
@@ -140,16 +143,18 @@ mvn install:install-file -Dfile="cryptojce.jar" -DgroupId=cryptojce -DartifactId
 mvn install:install-file -Dfile="cryptojcommon.jar" -DgroupId=cryptojcommon -DartifactId=cryptojcommon -Dversion=6.1 -Dpackaging=jar
 ```
 
-
-
-
-### Configuració del connector
+## Configuració
 
 La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
 
-#### Propietats del connector
+#### Propietats del DFC
+També caldrà incloure al CLASSPATH del projecte el dfc.properties generat durant la instal·lació del DFC.
 
-Ubicació: <PROJECT_ROOT>/src/main/resources/config/props/documentum.properties
+Ubicació: `<PROJECT_ROOT>/src/main/resources/dfc.properties`
+
+### Propietats del connector
+
+Ubicació: `<PROJECT_ROOT>/src/main/resources/config/props/documentum.properties`
 
 Propietat                   | Requerit | Descripció
 --------------------------- | -------- | ----------
@@ -174,89 +179,78 @@ Propietat                   | Requerit | Descripció
 *.documentum.estat          | No       | Estat
 *.documentum.grup           | No       | Grup
 
-#### Propietats del dfc
-També caldrà incloure al CLASSPATH del projecte el dfc.properties generat durant la instla·lació del DFC. 
+## Funcionament
 
-Ubicació: <PROJECT_ROOT>/src/main/resources/dfc.properties
+En aquest exemple tenim dues classes: *DocumentumServiceController*, que és l'Endpoint del servei, i *DocumentumAplicacioService*, que és la classe
+Java en la que s’implementa la lògica de l'operació i s'invoca al mòdul de *Documentum*.
 
-## Utilització del Mòdul
-
-### Exemple
-
-En aquest exemple tenim dues classes, DocumentumServiceController que és l'endpoint del servei. I DocumentumAplicacioService, que és la classe Java on es realitza la lògica de la operació i es crida al mòdul de Documentum.
-
-**DocumentumServiceController.java**
+### DocumentumServiceController.java
 
 ```java
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.http.MediaType;
-	import org.springframework.web.bind.annotation.PostMapping;
-	import org.springframework.web.bind.annotation.RequestMapping;
-	import org.springframework.web.bind.annotation.RestController;
+   import org.springframework.beans.factory.annotation.Autowired;
+   import org.springframework.http.MediaType;
+   import org.springframework.web.bind.annotation.PostMapping;
+   import org.springframework.web.bind.annotation.RequestMapping;
+   import org.springframework.web.bind.annotation.RestController;
 
-	import cat.gencat.plantilla32.service.DocumentumAplicacioService;
+   import cat.gencat.plantilla32.service.DocumentumAplicacioService;
 
-	@RestController
-	@RequestMapping("/documentum")
-	public class DocumentumServiceController {
+   @RestController
+   @RequestMapping("/documentum")
+   public class DocumentumServiceController {
 
-		@Autowired
-		DocumentumAplicacioService documentumAplicacioService;
+      @Autowired
+      DocumentumAplicacioService documentumAplicacioService;
 
-		@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-		public String testLogin() throws Exception {
-			return documentumAplicacioService.testLogin();
-		}
-	}
+      @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+      public String testLogin() throws Exception {
+         return documentumAplicacioService.testLogin();
+      }
+   }
 ```
 
-**DocumentumAplicacioService.java**
+### DocumentumAplicacioService.java
 
 ```java
-	import org.slf4j.Logger;
-	import org.slf4j.LoggerFactory;
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.context.annotation.Lazy;
-	import org.springframework.stereotype.Service;
+   import org.slf4j.Logger;
+   import org.slf4j.LoggerFactory;
+   import org.springframework.beans.factory.annotation.Autowired;
+   import org.springframework.context.annotation.Lazy;
+   import org.springframework.stereotype.Service;
 
-	import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumConnector;
-	import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumService;
-	import cat.gencat.ctti.canigo.arch.integration.documentum.impl.DocumentumConfigurator;
+   import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumConnector;
+   import cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumService;
+   import cat.gencat.ctti.canigo.arch.integration.documentum.impl.DocumentumConfigurator;
 
-	@Service("documentumAplicacioService")
-	@Lazy
-	public class DocumentumAplicacioService {
+   @Service("documentumAplicacioService")
+   @Lazy
+   public class DocumentumAplicacioService {
 
-		private static final Logger log = LoggerFactory.getLogger(DocumentumAplicacioService.class);
+      private static final Logger log = LoggerFactory.getLogger(DocumentumAplicacioService.class);
 
-		@Autowired
-		private DocumentumService service;
-		
-		@Autowired
-		private DocumentumConnector documentum;
-		
-		@Autowired
-		private DocumentumConfigurator configurator;
-		
+      @Autowired
+      private DocumentumService service;
 
-		/**
-		 * Comprovem que es pot fer login al sistema de Documentum
-		 */
-		public String testLogin(){
-			
-			String message = null;
+      @Autowired
+      private DocumentumConnector documentum;
 
-			try{
-				service.login(configurator.getUser(), configurator.getPassword(),configurator.getDocBase(), this.documentum);
-			}catch(Exception e){
-				message = "Error al realitzar login";
-				log.error(e.getMessage(), e);
-			}
-			
-			message = "Login correcte";
-			
-			return message;
-		}
-		
-	}
+      @Autowired
+      private DocumentumConfigurator configurator;
+
+      /**
+       * Comprovem que es pot fer login al sistema de Documentum
+       */
+      public String testLogin(){
+         String message = null;
+         try{
+            service.login(configurator.getUser(), configurator.getPassword(),configurator.getDocBase(), this.documentum);
+         }catch(Exception e){
+            message = "Error al realitzar login";
+            log.error(e.getMessage(), e);
+         }
+         message = "Login correcte";
+         return message;
+      }
+
+   }
 ```
