@@ -22,7 +22,7 @@ novament en un objecte que conté els registres de retorn.
 ## Instal·lació
 Per a poder utilitzar el connector haurem de configurar el projecte per a que inclogui unes **llibreries DLL i diferents llibreries Java**:
 
-* Les llibreries DLL són: *sapjcorfc.dll* i *librfc32.dll*, s'hauran de copiar al directori *system32*.
+* Les llibreries DLL són: *sapjcorfc.dll* i *librfc32.dll*, s'hauran de copiar al directori `system32`.
 
 * Per a fer les operacions sobre el sistema SAP del Gecat és necessària la utilització de la llibreria *sapjco-2.1.6.jar*, que és el connector propi del SAP per a fer les crides a les seves funcions BAPI (RFC).
 
@@ -56,7 +56,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 ## Configuració
 
 La configuració es realitza automàticament a partir de l'eina de suport al desenvolupament.
-El fitxer de configuració es troba a: *<PROJECT_ROOT>/src/main/resources/config/props/sap.properties*.
+El fitxer de configuració es troba a: `<PROJECT_ROOT>/src/main/resources/config/props/sap.properties`.
 
 | Propietat                | Requerit     | Descripció
 | ------------------------ | ------------ | --------------
@@ -176,13 +176,13 @@ public class GecatServiceController {
 
 ### Exemples
 
-
+<br/>
 #### Crides a Gecat sense línies repetides
 
 
 ##### Retorn sense línies repetides
 
-Per a mostrar aquest tipus de crida agafarem com a exemple la **consulta de partida **.
+Per a mostrar aquest tipus de crida agafarem com a exemple la **consulta de partida**.
 Primerament caldrà crear un objecte de la classe *ObjectFactory* que, com el seu nom indica, és una classe per a crear
 objectes d'altres classes. Aquestes classes són les que ofereix JAXB per a crear objectes amb una certa estructura predefinida.
 
@@ -252,7 +252,7 @@ List finalList = dadesConsultaRetorn.getDadesRetorn().getDadaRetorn();
 System.out.println("dadaRetorn.getAdreca:" + ((DadaRetornType)finalList.get(0)).getAdreca());
 ```
 
-
+<br/>
 #### Crides a Gecat amb línies repetides
 
 Per a mostrar aquest tipus de crida agafarem com a exemple la **consulta de factures d’habilitats**.

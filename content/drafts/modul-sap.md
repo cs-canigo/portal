@@ -21,7 +21,7 @@ i el propòsit del connector és proporcionar una interfície simplificada per a
 
 Per a poder utilitzar el connector haurem de configurar el projecte per a que inclogui unes **llibreries DLL i diferents llibreries Java**:
 
-* Les llibreries DLL són: *sapjcorfc.dll* i *librfc32.dll*, s'hauran de copiar al directori *system32*.
+* Les llibreries DLL són: *sapjcorfc.dll* i *librfc32.dll*, s'hauran de copiar al directori `system32`.
 
 * Per a fer les operacions sobre el sistema SAP és necessària la utilització de la llibreria *sapjco-2.1.6.jar*, que és el connector propi del SAP per a fer les crides a les seves funcions BAPI (RFC).
 

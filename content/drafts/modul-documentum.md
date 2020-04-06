@@ -24,7 +24,7 @@ operacions relacionades com la creació de carpetes o assignació de propietats.
 ### Instal·lació del DFC (Documentum Foundation Classes)
 
 Com a requisit previ a la utilització del servei, cal **instal·lar a la màquina de desenvolupament/servidor la DFC (Documentum Foundation Classes) de la versió de *Documentum*
-que s'utilitzarà**. Pot tractar-se de les versions: 5.3, 6.5 o 7.1.
+que s'utilitzarà: 5.3, 6.5 o 7.1**.
 En cas de no comptar amb aquests instal·lables, es poden sol·licitar mitjançant la bústia de la OT Canigó: <oficina-tecnica.canigo.ctti@gencat.cat>.
 
 
@@ -38,7 +38,7 @@ Els passos a seguir en la instal·lació, que són similars a les tres versions,
 
 ![Instal·lació documentum pas 4](/related/canigo/documentacio/modul-documentum/image008.jpg "Instal·lació documentum pas 4")
 
-En aquest punt, indicarem el host i el port del *docBroker* que conté el magatzem de claus.
+En aquest punt, indicarem el **host i el port del docBroker** que conté el magatzem de claus.
 
 ![Instal·lació documentum pas 5](/related/canigo/documentacio/modul-documentum/image009.jpg "Instal·lació documentum pas 5")
 
@@ -52,9 +52,11 @@ En aquest punt, indicarem el host i el port del *docBroker* que conté el magatz
 
 ![Instal·lació documentum pas 10](/related/canigo/documentacio/modul-documentum/image014.jpg "Instal·lació documentum pas 10")
 
+<br/>
 Com a resultat de la instal·lació es generarà un **arxiu amb la configuració d'accés a Documentum**:
 
 * **Versió 5.3**: l'arxiu es generarà per defecte a `C:\WINDOWS\dmcl.ini` i tindrà el següent format:
+
 ```
 [DOCBROKER_PRIMARY]
 host =es-hg2r02j
@@ -67,6 +69,7 @@ token_storage_path=D:\Documentum\apptoken
 ```
 
 * **Versions 6.5 i 7.1**: l'arxiu es generarà per defecte a `C:\Documentum\config\dfc.properties` i tindrà el següent format:
+
 ```
 dfc.data.dir=C\:/Documentum
 dfc.registry.mode=windows
