@@ -9,19 +9,24 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.3 del framework Canigó** s'ha alliberat una nova versió dels mòduls de Canigó després de la realització d'un anàlisis sobre l'estat dels mòduls, les seves funcionalitats i els testos associats.
+Dins de l'abast de la **versió 3.4.3 del Framework Canigó s'ha alliberat una nova versió dels mòduls de Canigó** a partir de la realització d'un anàlisis sobre l'estat
+dels mòduls, les seves funcionalitats i els testos associats.
 
 ## Novetats
 
-Després de la realització de l'anàlisis de l'estat dels mòduls s'han realitzat els següents canvis:
+A partir de l'anàlisi realitzat, s'han fet les següents revisions:
 
-- El mòòdul canigo.integration.documentum passa a estar deprecat. La forma de comunicació amb documentum i la versió de documentum suportada estan obsoletes. No hi haurà més evolució d'aquest mòdul de Canigó
+- El mòdul **canigo.integration.documentum** passa a estar deprecat.
+La forma de comunicació amb *Documentum* i la versió suportada han quedat obsoletes. No es preveu més evolució d'aquest mòdul.
 
-- El mòdul canigo.integration.sap i canigo.integration.gecat passen a estar deprecats. La forma de comunicació amb SAP i la versió de SAP suportada estan obsoletes. No hi haurà més evolució d'aquests mòduls de Canigó 
+- El mòdul **canigo.integration.sap** i **canigo.integration.gecat** passen a estar deprecats.
+La forma de comunicació amb SAP i la versió suportada han quedat obsoletes. No es preveu més evolució d'aquests mòduls.
 
-- El mòdul canigo.symantec.stub passa a estar deprecat. S'ha canviat la forma de realitzar test sobre el mòdul d'antivirus utilitzant mockito, i per tant, ja no és necessari aquest mòdul. No hi haurà més evolució d'aquest mòdul de Canigó
+- El mòdul **canigo.symantec.stub** passa a estar deprecat.
+S'ha canviat la forma de realitzar test sobre el mòdul d'antivirus utilitzant *mockito*, i per tant, ja no és necessari aquest mòdul. No es preveu més evolució d'aquest mòdul.
 
-- Ampliació dels testos dels mòduls canigo.integration.icc, canigo.integration.notificacions.electroniques.ws, canigo.integration.sgde, canigo.operation.logging, canigo.security.saml, canigo.security.saml.bridge, canigo.security.saml.rest, canigo.support.lopd, canigo.support.merging i canigo.test
+- Ampliació dels testos dels mòduls **canigo.integration.icc**, **canigo.integration.notificacions.electroniques.ws**, **canigo.integration.sgde**, **canigo.operation.logging**,
+**canigo.security.saml**, **canigo.security.saml.bridge**, **canigo.security.saml.rest**, **canigo.support.lopd**, **canigo.support.merging** i **canigo.test**.
 
 
 ## Documentació de Canigó
