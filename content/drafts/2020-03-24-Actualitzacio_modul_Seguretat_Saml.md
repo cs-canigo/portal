@@ -11,12 +11,11 @@ categories  = ["canigo"]
 
 Dins de l'abast de la **versió 3.4.3 del Framework Canigó s'ha alliberat una nova versió del mòdul de Seguretat SAML**,
 amb la qual s'aconsegueix proporcionar als proveïdors una forma estàndard d'obtenció dels rols de l'usuari autenticat a través de GICAR (autorització).
-Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat Canigó 3.4.3](/canigo-download-related/release-notes-canigo-34).
-
 [GICAR](/gicar/descripcio/) és l’eina amb què s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació
 i proporciona [assertions SAML2](https://en.wikipedia.org/wiki/SAML_2.0) per a l'autenticació i autorització dels usuaris.
-
 El mòdul de seguretat SAML de Canigó té com a propòsit principal **gestionar l’autenticació i l’autorització dels usuaris a les aplicacions Canigó a partir del protocol SAML**.
+
+Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat Canigó 3.4.3](/canigo-download-related/release-notes-canigo-34).
 
 ## Novetats
 

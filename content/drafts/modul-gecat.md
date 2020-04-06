@@ -39,8 +39,8 @@ per a comprovar que les dades que contenen els objectes siguin vàlides. Serà n
 * relaxngDatatype-20020414.jar
 * xsdlib-2013.6.1.jar
 
-Per tal d'instal·lar el mòdul de GECAT es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment
-en el fitxer *pom.xml* de l'aplicació la següent dependència:
+Per tal d'instal·lar el Mòdul de Gecat es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
+manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```
 <canigo.integration.gecat.version>[1.2.0,1.3.0)</canigo.integration.gecat.version>
