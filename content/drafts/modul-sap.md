@@ -77,6 +77,7 @@ La utilització del connector es fonamenta en la seva **configuració prèvia i 
 
 Per a utilitzar aquest mòdul, cal crear un *Service* i un *Controller*.
 
+<br/>
 #### Service (SapService.java)
 
 Aquesta classe és en la que s'implementarà la lògica de l’operació a realitzar i es connectarà amb el mòdul de SAP.
@@ -128,11 +129,12 @@ public class SapService {
 
 En aquest bean es pot veure:
 
-* Injecció del connector de SAP via *annotacions* (*@Autowired*) de Spring
-* Invocació de la funció *BAPI_MATERIAL_GETLIST* (taula MATNRSELECTION)
-* En la classe *MaterialBean* s'introduirà el resultat de la invocació de la funció SAP de manera transparent
+    1. Injecció del connector de SAP via *annotacions* (*@Autowired*) de Spring
+    2. Invocació de la funció *BAPI_MATERIAL_GETLIST* (taula MATNRSELECTION)
+    3. En la classe *MaterialBean* s'introduirà el resultat de la invocació de la funció SAP de manera transparent
 
-**SapServiceController.java**
+<br/>
+#### SapServiceController.java
 
 Controlador que publica les operacions disponibles per a que es puguin consumir.
 

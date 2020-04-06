@@ -87,7 +87,7 @@ Un cop hem creat l'objecte de crida amb totes les dades necessàries, utilitzare
 
 Per a utilitzar aquest mòdul, cal crear un *Service* i un *Controller*.
 
-
+<br/>
 #### Service (GecatService.java)
 
 Aquesta classe és en la que s'implementarà la lògica de l’operació a realitzar i es connectarà amb el mòdul de notificacions electròniques.
@@ -146,6 +146,7 @@ public class GecatService {
 }
 ```
 
+<br/>
 #### Controller (GecatServiceController.java)
 
 Controlador que publica les operacions disponibles per a que es puguin consumir.

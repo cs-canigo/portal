@@ -25,10 +25,10 @@ operacions relacionades com la creació de carpetes o assignació de propietats.
 
 Com a requisit previ a la utilització del servei, cal **instal·lar a la màquina de desenvolupament/servidor la DFC (Documentum Foundation Classes) de la versió de *Documentum*
 que s'utilitzarà**. Pot tractar-se de les versions: 5.3, 6.5 o 7.1.
-En cas de no comptar amb aquests instal·lable, es pot sol·licitar mitjançant la bústia de la OT Canigó: <oficina-tecnica.canigo.ctti@gencat.cat>.
+En cas de no comptar amb aquests instal·lables, es poden sol·licitar mitjançant la bústia de la OT Canigó: <oficina-tecnica.canigo.ctti@gencat.cat>.
 
 
-Els passos a seguir en la instal·lació són similars a les tres versions i són els següents:
+Els passos a seguir en la instal·lació, que són similars a les tres versions, són els següents:
 
 ![Instal·lació documentum pas 1](/related/canigo/documentacio/modul-documentum/image005.jpg "Instal·lació documentum pas 1")
 
@@ -52,9 +52,9 @@ En aquest punt, indicarem el host i el port del *docBroker* que conté el magatz
 
 ![Instal·lació documentum pas 10](/related/canigo/documentacio/modul-documentum/image014.jpg "Instal·lació documentum pas 10")
 
-Com a resultat de la instal·lació es generarà un **arxiu amb la configuració d'accés a *Documentum***.
+Com a resultat de la instal·lació es generarà un **arxiu amb la configuració d'accés a Documentum**:
 
-En el cas de la **versió 5.3**,  l'arxiu es generarà per defecte a `C:\WINDOWS\dmcl.ini` i tindrà el següent format:
+* **Versió 5.3**: l'arxiu es generarà per defecte a `C:\WINDOWS\dmcl.ini` i tindrà el següent format:
 ```
 [DOCBROKER_PRIMARY]
 host =es-hg2r02j
@@ -66,7 +66,7 @@ token_storage_enabled=F
 token_storage_path=D:\Documentum\apptoken
 ```
 
-En el cas de les **versions 6.5 i 7.1**, l'arxiu es generarà per defecte a `C:\Documentum\config\dfc.properties` i tindrà el següent format:
+* **Versions 6.5 i 7.1**: l'arxiu es generarà per defecte a `C:\Documentum\config\dfc.properties` i tindrà el següent format:
 ```
 dfc.data.dir=C\:/Documentum
 dfc.registry.mode=windows
@@ -84,11 +84,10 @@ dfc.globalregistry.password=passRepositoriClaus
 
 ### Instal·lació del connector
 
-Per tal d'**instal·lar el Mòdul de *Documentum*** es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
+Per tal d'**instal·lar el Mòdul de Documentum** es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
 manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
-* Per a la **versió 5.3**:
-
+* **Versió 5.3**:
 ```
 <canigo.integration.documentum.version>[1.2.0,1.3.0)</canigo.integration.documentum.version>
 
@@ -99,8 +98,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
-* Per a la **versió 6.5**:
-
+* **Versió 6.5**:
 ```
 <canigo.integration.documentum.version>[2.2.0,2.3.0)</canigo.integration.documentum.version>
 
@@ -111,8 +109,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
-* Per a la **versió 7.1**:
-
+* **Versió 7.1**:
 ```
 <canigo.integration.documentum.version>[3.1.0,3.2.0)</canigo.integration.documentum.version>
 
@@ -127,10 +124,10 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 #### Dependències amb llibreries del DFC instal·lat
 Els connectors tenen dependències amb llibreries de la versió del DFC instal·lat.
 Aquestes llibreries s'inclouen durant la instal·lació del DFC a la carpeta `C:\Program Files\Documentum\Shared\`.
-No obstant, caldrà afegir-les al repositori de Maven local per a que es puguin resoldre.
+No obstant, caldrà instal·lar-les al repositori de Maven local per a que es puguin resoldre.
 
 <br/>
-Per a la versió de DFC 7.1 , seran necessàries les següents:
+Per a la **versió 7.1**, seran necessàries les següents:
 
 ```
 mvn install:install-file -Dfile="dfc.jar" -DgroupId=dfc -DartifactId=dfc -Dversion=7.1 -Dpackaging=jar
@@ -147,8 +144,8 @@ mvn install:install-file -Dfile="cryptojcommon.jar" -DgroupId=cryptojcommon -Dar
 
 La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
 
-#### Propietats del DFC
-També caldrà incloure al CLASSPATH del projecte el dfc.properties generat durant la instal·lació del DFC.
+### Propietats del DFC
+Caldrà incloure al CLASSPATH del projecte el fitxer `dfc.properties` generat durant la instal·lació del DFC.
 
 Ubicació: `<PROJECT_ROOT>/src/main/resources/dfc.properties`
 
