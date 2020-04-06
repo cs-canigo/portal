@@ -5,15 +5,15 @@ description = "Revisió de l'estat dels mòduls de Canigó, deprecant funcionali
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "ABRIL2020"
+
 +++
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.3 del Framework Canigó s'ha alliberat una nova versió dels mòduls de Canigó** a partir de la realització d'un anàlisis sobre l'estat
+Dins de l'abast de la **versió 3.4.3 del Framework Canigó s'ha alliberat una nova versió dels mòduls de Canigó** a partir de la realització d'un anàlisis previ sobre l'estat
 dels mòduls, les seves funcionalitats i els testos associats.
 
 ## Novetats
-
 A partir de l'anàlisi realitzat, s'han fet les següents revisions:
 
 - El mòdul **canigo.integration.documentum** passa a estar deprecat.

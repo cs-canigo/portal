@@ -15,12 +15,13 @@ Podeu consultar l'abast complet d'aquesta versió a les [Release Notes, apartat 
 
 [GICAR](/gicar/descripcio/) és l’eina amb què s’ha dotat a la Generalitat de Catalunya per a la gestió centralitzada de les identitats de persones que interactuen amb els sistemes d’informació
 i proporciona [assertions SAML2](https://en.wikipedia.org/wiki/SAML_2.0) per a l'autenticació i autorització dels usuaris.
-El mòdul de seguretat SAML de Canigó té com a propòsit principal gestionar l’autenticació i l’autorització dels usuaris a les aplicacions Canigó a partir del protocol SAML.
+
+El mòdul de seguretat SAML de Canigó té com a propòsit principal **gestionar l’autenticació i l’autorització dels usuaris a les aplicacions Canigó a partir del protocol SAML**.
 
 ## Novetats
 
 La novetat dels serveis que ofereix el mòdul de seguretat SAML de Canigó és la possibilitat d'utilització centralitzada dels rols dels usuaris a Gicar, tenint l'opció d'obtenció
-dels rols de l'usuari per BBDD com fins ara i la nova opció per Gicar. Els principals avantatges de la nova opció de gestió de rols per Gicar són:
+dels rols de l'usuari per BBDD com fins ara i la nova opció per Gicar. Els principals avantatges són:
 
 1. Augmentar l’**estandardització** de la manera com es construeixen les aplicacions
 
