@@ -77,10 +77,15 @@ img[alt="centrar"] {
 * **0.1.1 Estandarització** *(obligatori)*. Cal vetllar perquè els dissenys d'alt nivell de les solucions de l'entorn de treball esdevinguin un model estàndar de referència que permeti implemantar-ho a qualsevol escenari amb el mínim de canvis necessaris. Tanmateix s'haurà de validar si cap dels estàndars ja definits resolen una necessitat TIC i en aquest cas s'implantarà aquesta solució.
   * [Estàndards de l'entorn de treball](https://gencat.sharepoint.com/:x:/s/arquitecturasicpd/EZseBopn5rlNunUw11ODpqkB4GjH8Xq1MpPlkc0lpERamg?e=uENvXu): catàleg dels estàndards establerts a les diferents àrees de l'entorn de treball.
 
-* **0.1.2 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC i de seguretat involucrades en el disseny. 
+* **0.1.2 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC involucrades en el disseny. 
   * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
   
-* **0.1.3 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
+* **0.1.3 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’agència de ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
+  * **0.1.3.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema.
+  * **0.1.3.2 Control d’accés** Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
+  * **0.1.3.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
+  
+* **0.1.4 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
 
 &nbsp;
 &nbsp;
@@ -115,8 +120,6 @@ img[alt="centrar"] {
 
 * **1.1.5 Centralització** *(desitjable)*. Si escau, les solucions han de permetre ajustar la parametrització de manera centralitzada, mitjançant consoles d'administració, polítiques de domini o altres tecnologies, amb l'objectiu de maximitzar la homogeneïtat en la configuració de tot el parc de terminals i alhora minimitzar les accions manuals en les instal·lacions i futurs canvis necessaris.  
 
-* **1.1.6 Traçabilitat** *(obligatori)*. Les solucions han de permetre enregistrar la informació adequada per realitzar un anàlisi de problemes, així com disposar de la capacitat per parametritzar el nivell de registre necessari (error, warning, info i debug).
-
 ## 1.2 Principis tecnològics
 
 * **1.2.1 Automatització** *(obligatori)*. Tota aplicació escriptori ha de permetre la seva completa instal·lació i desinstal·lació del lloc de treball de manera administrada i desatessa. Es desitjable utilitzar tecnologies de generació de paquets que segueixin una filosofia out-of-the-box amb l'objectiu de facilitar el procés i minimitzar els problemes d'implementació.
@@ -150,9 +153,7 @@ img[alt="centrar"] {
 
 * **2.1.5	Gestió centralitzada** *(obligatori)*. Tot dispositiu ha de tenir la capacitat de ser gestionat de forma remota i centralitzada mitjançant les plataformes transversals de la Generalitat de Catalunya o, si no hi ha cap establerta, caldrà adoptar la plataforma corresponent a la tipologia de dispositiu per fer aquesta gestió.
 
-* **2.1.6	Seguretat** *(obligatori)*. S'han d'aplicar les mesures restrictives i de control adients al servei que dona un dispositiu per assolir el nivell de seguretat establert per l'agència de ciberseguretat. 
-
-* **2.1.7	Suportat** *(obligatori)*. El dispositiu ha de comptar amb suport vigent del fabricant i ha de ser compatible amb la versió CTTI del sistema operatiu o firmware corresponent per aquesta tipologia de dispositiu.
+* **2.1.6	Suportat** *(obligatori)*. El dispositiu ha de comptar amb suport vigent del fabricant i ha de ser compatible amb la versió CTTI del sistema operatiu o firmware corresponent per aquesta tipologia de dispositiu.
 
 ### 2.1.1 Equips corporatius i Sistema Operatiu
 
@@ -231,15 +232,9 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **3.1.6 Automatització** *(desitjable)*. Tant la provisió com el manteniment de la xarxa de telecomunicacions haurà d’orientar-se cap a la màxima automatització dels seus processos.
 
-* **3.1.7 Seguretat** *(obligatori)*. Tota xarxa de telecomunicacions haurà d’establir un nivell de seguretat mínim que permeti aplicar els següents punts:
+* **3.1.7 Simplicitat** *(obligatori)*. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables. 
 
-  * **3.1.7.1 Traçabilitat**. Capacitat per identificar l’origen i les diferents etapes d’una connexió de xarxa.
-  * **3.1.7.2 Control d’accés**. Capacitat per limitar l’accés a la xarxa.
-  * **3.1.7.3 Auditoria**. Capacitat per enregistrar tots els accessos realitzats.
-
-* **3.1.8 Simplicitat** *(obligatori)*. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables. 
-
-* **3.1.9.X.X.X.X Provat** *(obligatori)*. Totes les noves solucions han de ser provades en un laboratori, per tal de revisar-les més enllà de la simulació i poder fer els ajustos necessaris. Obtenint així evidències de les proves efectuades, i conseqüentment del funcionament de la solució.
+* **3.1.8.X.X.X.X Provat** *(obligatori)*. Totes les noves solucions han de ser provades en un laboratori, per tal de revisar-les més enllà de la simulació i poder fer els ajustos necessaris. Obtenint així evidències de les proves efectuades, i conseqüentment del funcionament de la solució.
 
 
 ## 3.2 Principis tecnològics
