@@ -77,16 +77,16 @@ img[alt="centrar"] {
 * **0.1.1 Estandarització** *(obligatori)*. Cal vetllar perquè els dissenys d'alt nivell de les solucions de l'entorn de treball esdevinguin un model estàndar de referència que permeti implemantar-ho a qualsevol escenari amb el mínim de canvis necessaris. Tanmateix s'haurà de validar si cap dels estàndars ja definits resolen una necessitat TIC i en aquest cas s'implantarà aquesta solució.
   * [Estàndards de l'entorn de treball](https://gencat.sharepoint.com/:x:/s/arquitecturasicpd/EZseBopn5rlNunUw11ODpqkB4GjH8Xq1MpPlkc0lpERamg?e=uENvXu): catàleg dels estàndards establerts a les diferents àrees de l'entorn de treball.
 
-* **0.1.2 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC involucrades en el disseny. 
-  * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
-  
-* **0.1.3 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’agència de ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
-  * **0.1.3.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema.
-  * **0.1.3.2 Control d’accés** Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
-  * **0.1.3.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
-  
-* **0.1.4 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
+* **0.1.2 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
 
+* **0.1.3 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC involucrades en el disseny. 
+  * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
+
+ * **0.1.4 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’agència de ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
+  * **0.1.4.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema.
+  * **0.1.4.2 Control d’accés** Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
+  * **0.1.4.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
+  
 &nbsp;
 &nbsp;
 
