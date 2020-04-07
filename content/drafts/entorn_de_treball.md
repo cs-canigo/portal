@@ -38,7 +38,7 @@ img[alt="centrar"] {
   * [0.1 Generals](#01-generals)
   * [0.2 Principis de cost i mateniment](#02-principis-de-cost-i-mateniment)
 
-- **[1. Solucions LLdT](#1-solucions-lldt)**
+- **[1. Solucions escriptori LLdT](#1-solucions-escriptori-lldt)**
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
   * [1.2 Principis tecnològics](#12-principis-tecnològics)
 
@@ -101,7 +101,7 @@ img[alt="centrar"] {
 
 ---
 
-# 1. Solucions LLdT
+# 1. Solucions escriptori LLdT
 
 &nbsp;
 &nbsp;
