@@ -8,23 +8,21 @@ weight      = 4
 
 <div class="message warning">
 
-A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, per lo que no es preveu seguir evolucionant aquest mòdul.
+A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, pel que no es preveu seguir evolucionant aquest mòdul.
 
 </div>
 
 ## Propòsit
 
 L'objectiu d’aquest article és **descriure la metodologia a seguir en la utilització del connector al sistema *Documentum* des de qualsevol aplicació Java del Framework J2EE**.
-L'abast d'aquest sistema es fonamenta una interfície Java per a accedir a Documentum, permetent emmagatzemar i recuperar documents a més d'altres
-operacions relacionades com la creació de carpetes o assignació de propietats.
+L'abast d'aquest sistema es fonamenta una interfície Java per a accedir a Documentum, permetent emmagatzemar i recuperar documents a més d'altres operacions relacionades com la creació de carpetes o assignació de propietats.
 
 
 ## Instal·lació
 
 ### Instal·lació del DFC (Documentum Foundation Classes)
 
-Com a requisit previ a la utilització del servei, cal **instal·lar a la màquina de desenvolupament/servidor la DFC (Documentum Foundation Classes) de la versió de *Documentum*
-que s'utilitzarà: 5.3, 6.5 o 7.1**.
+Com a requisit previ a la utilització del servei, cal **instal·lar a la màquina de desenvolupament/servidor la DFC (Documentum Foundation Classes) de la versió de *Documentum* que s'utilitzarà: 5.3, 6.5 o 7.1**.
 En cas de no comptar amb aquests instal·lables, es poden sol·licitar mitjançant la bústia de la OT Canigó: <oficina-tecnica.canigo.ctti@gencat.cat>.
 
 
