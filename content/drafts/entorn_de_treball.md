@@ -34,8 +34,8 @@ img[alt="centrar"] {
 
 ### Índex dels principis de l'entorn de treball
 
-- **[0. Principis globals](#0-globals)**
-  * [0.1 Generals](#01-generals)
+- **[0. Principis globals](#0-principis-globals)**
+  * [0 1 Generals](#0-1-generals)
   * [0.2 Principis de cost i mateniment](#02-principis-de-cost-i-mateniment)
 
 - **[1. Solucions escriptori LLdT](#1-solucions-escriptori-lldt)**
