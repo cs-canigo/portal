@@ -205,6 +205,18 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ### 2.2.2. Execució remota
 
+* **2.2.2.1 Infraestructura eficient**. Malgrat que el gruix de la infraestructura està vinculada amb el model de lliurament més adient a cada cas (VDI o RDSH) i que aquest ho definiran 3 factors: el grup d'aplicacions, el nivell de persistència i les polítiques de privacitat i seguretat, tècnicament s'haurà de prioritzar l'ús del model que resolgui aquests factors amb un enfoc que maximitzi la densitat d'usuaris amb el mínim d'infraestructura. Amb aquest propòsit, és prioritzarà el desplegament d'entorns compartits i no persistents, tanmateix per assolir-ho és valorarà l'ús de la virtualització d'aplicacions (execució local) com a mètode d'implementació.
+
+* **2.2.2.2 Suportat**. Les imatges de referència utilitzades per apovisionar els equips (VDI i RDSH) seran les minimes necessàries i estaran alineades amb les versions de SO informades al FRP. De la mateixa manera, hauran de seguir les premisses indicades en el disseny de la maqueta establert per CTTI igual que s'està fent amb els equips d'usuari físics.
+
+* **2.2.2.3 Rendiment**. Donat que la degradació en el rendiment és una dels factors de risc en un entorn virtualitzat, on la compartició de recursos és una constant, davant una nova necessitat caldrà dimensionar la plataforma de forma proactiva, d'acord amb el volum d'usuaris previst i el seu perfil d'estrès (baix, mig i alt), condicionat per la tipologia d'aplicacions i escriptoris que consumiran. 
+
+* **2.2.2.4 Aprovisionament**. Cal vetllar perquè els automatismes i tecnologies utilitzades per aprovisionar els VDI i RDSH minimitzin el temps necessari per realitzar el desplegament i actualització de la capa de recursos.
+
+* **2.2.2.5 Elasticitat**. Tota plataforma de virtualització haurà de permetre un creixement àgil de les 3 capes que la constitueixin (accés, control i recursos) amb l'objectiu d’adaptar-se a la demanda d'escriptoris i aplicacions virtuals. En aquells casos que el creixement respon a una necessitat temporal, s’hauran d'estudiar les alternatives disponibles per decréixer de la mateixa manera.
+
+* **2.2.2.6 Cloud**. En el marc dels principis de rendiment, aprovisionament i elasticitat, caldrà avaluar si una nova publicació (aplicació o escriptori) encaixa millor a un entorn on-premise o al Cloud públic. Tanmateix caldrà contrastar aquests principis amb els factors econòmics de la solució.
+
 &nbsp;
 &nbsp;
 
