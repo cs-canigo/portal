@@ -4,7 +4,7 @@
 {"id":1,"producte":"Windows 10 (Enterprise i Education)","categoria":"Sistemes operatius LLdT","obsolet":"≤1703","suportat":"1709, 1809","versioactual":"1909","roadmap":"2009","emergent":"–"},
 {"id":2,"producte":"Windows 8.1","categoria":"Sistemes operatius LLdT","obsolet":"–","suportat":"8.1 (6.3.9600)","versioactual":"–","roadmap":"–","emergent":"–"},
 {"id":3,"producte":"MS Office Standard","categoria":"Eines ofimàtiques","obsolet":"≤2013","suportat":"2016, 2013","versioactual":"2016","roadmap":"2019","emergent":"–"},
-{"id":4,"producte":"Libre Office","categoria":"Eines ofimàtiques","obsolet":"–","suportat":"6.1.6","versioactual":"≤6.0","roadmap":"–","emergent":"–"},
+{"id":4,"producte":"Libre Office","categoria":"Eines ofimàtiques","obsolet":"≤6.0","suportat":"6.1.6","versioactual":"≤6.0","roadmap":"–","emergent":"–"},
 {"id":5,"producte":"Microsoft Edge","categoria":"Navegadors Web","obsolet":"≤1703","suportat":"1709, 1809","versioactual":"1909","roadmap":"2009","emergent":""},
 {"id":6,"producte":"Internet Explorer","categoria":"Navegadors Web","obsolet":"6, 7, 8, 9, 10","suportat":"11","versioactual":"11","roadmap":"–","emergent":"–"},
 {"id":7,"producte":"VMWare Horizon","categoria":"Eines i programari","obsolet":"< 7.0","suportat":"7.0 - 7.10","versioactual":"7.10","roadmap":"–","emergent":"–"},
