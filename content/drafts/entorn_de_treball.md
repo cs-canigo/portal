@@ -205,7 +205,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ### 2.2.2. Execució remota
 
-* **2.2.2.1 Infraestructura eficient**. Malgrat que el gruix de la infraestructura està vinculada amb el model de lliurament més adient a cada cas (VDI o RDSH) i que aquest ho definiran 3 factors: el grup d'aplicacions, el nivell de persistència i les polítiques de privacitat i seguretat, tècnicament s'haurà de prioritzar l'ús del model que resolgui aquests factors amb un enfoc que maximitzi la densitat d'usuaris amb el mínim d'infraestructura. Amb aquest propòsit, és prioritzarà el desplegament d'entorns compartits i no persistents, tanmateix per assolir-ho és valorarà l'ús de la virtualització d'aplicacions (execució local) com a mètode d'implementació.
+* **2.2.2.1 Infraestructura eficient**. Malgrat que el gruix de la infraestructura està vinculada amb el model de lliurament més adient a cada cas (VDI o RDSH) i que aquest ho definiran factors funcionals i de seguretat, tècnicament s'haurà de prioritzar l'ús del model que millor resolgui aquests factors però amb un enfoc que maximitzi la densitat d'usuaris amb el mínim d'infraestructura. Amb aquest propòsit, és prioritzarà el desplegament d'entorns compartits i no persistents, tanmateix per assolir-ho és valorarà l'ús de la virtualització d'aplicacions (execució local) com a mètode d'implementació.
 
 * **2.2.2.2 Suportat**. Les imatges de referència utilitzades per apovisionar els equips (VDI i RDSH) seran les minimes necessàries i estaran alineades amb les versions de SO informades al FRP. De la mateixa manera, hauran de seguir les premisses indicades en el disseny de la maqueta establert per CTTI igual que s'està fent amb els equips d'usuari físics.
 
