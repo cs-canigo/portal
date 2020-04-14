@@ -7,9 +7,9 @@ weight      = 1
 +++
 
 #### Canigó 3.4.3 (26/03/2020)
-- [Autorització GICAR a Canigó amb SAML] (/drafts/2020-03-24-Actualitzacio_modul_Seguretat_Saml/)
+- [Autorització GICAR a Canigó amb SAML] (/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/)
 	- Actualització del mòdul de seguretat SAML per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
-- [Revisió estat dels mòduls Canigó] (/drafts/2020-03-24-Revisio_estat_moduls_Canigo_3.4)
+- [Revisió estat dels mòduls Canigó] (/noticies/2020-03-24-Revisio_estat_moduls_Canigo_3.4)
 	- Revisió de l'estat dels mòduls de Canigó, deprecant funcionalitats obsoletes i ampliant els testos dels mòduls.
 
 #### Canigó 3.4.2 (25/10/2019)
