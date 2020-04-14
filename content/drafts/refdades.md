@@ -88,7 +88,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": './json/entitats.json',
+      "ajax": '../da/entitats.json',
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -134,7 +134,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 
   
     var table =  $('#tabpendents').DataTable( {
-      "ajax": './json/entitats.json',
+      "ajax": '../da/entitats.json',
       "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -210,11 +210,11 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </div>
 
 <div style="width:100%; padding-left:15px">
-A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència d’obligat compliment, indicant-se la cardinalitat per cada relació.
 <br/><br/>
-
-    <img style="padding-left:15px; width: 80%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
-	
+  <div style="padding-left:40px">
+    <img style="padding: 10px; width: 70%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+  </div>	
 </div>
 
 
