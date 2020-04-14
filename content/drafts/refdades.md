@@ -88,7 +88,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": '../da/entitats.json',
+      "ajax": './json/entitats.json',
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -107,7 +107,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
+          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
@@ -134,7 +134,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 
   
     var table =  $('#tabpendents').DataTable( {
-      "ajax": '../da/entitats.json',
+      "ajax": './json/entitats.json',
       "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -153,7 +153,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { data: 15 }, { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 16 }, { data: "" }
+          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
@@ -210,11 +210,11 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </div>
 
 <div style="width:100%; padding-left:15px">
-A continuació es presenta el diagrama amb les relacions entre les entitats de referència d’obligat compliment, indicant-se la cardinalitat per cada relació.
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència publicades, organitzades per domini, indicant-se la cardinalitat per cada relació.
 <br/><br/>
-  <div style="padding-left:40px">
-    <img style="padding: 10px; width: 70%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
-  </div>	
+
+    <img style="padding-left:15px; width: 80%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+	
 </div>
 
 
