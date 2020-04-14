@@ -83,7 +83,7 @@ img[alt="centrar"] {
   * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
 
 * **0.1.4 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’agència de ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
-  * **0.1.4.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema.
+  * **0.1.4.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema, d'aspectes legals i de seguretat.
   * **0.1.4.2 Control d’accés** Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
   * **0.1.4.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
   
@@ -215,7 +215,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **2.2.2.5 Elasticitat**. Tota plataforma de virtualització haurà de permetre un creixement àgil de les 3 capes que la constitueixin (accés, control i recursos) amb l'objectiu d’adaptar-se a la demanda d'escriptoris i aplicacions virtuals. En aquells casos que el creixement respon a una necessitat temporal, s’hauran d'estudiar les alternatives disponibles per decréixer de la mateixa manera.
 
-* **2.2.2.6 Cloud**. En el marc dels principis de rendiment, aprovisionament i elasticitat, caldrà avaluar si una nova publicació (aplicació o escriptori) encaixa millor a un entorn on-premise o al Cloud públic. Tanmateix caldrà contrastar aquests principis amb els factors econòmics de la solució.
+* **2.2.2.6 Cloud**. En el marc dels principis de rendiment, aprovisionament i elasticitat, caldrà sempre avaluar si una nova publicació (aplicació o escriptori) encaixa millor a un entorn on-premise o al Cloud públic. Així doncs, serà necessari posar de manifest quins són els avantatges i inconvenients de fer la publicació al Cloud i fer un balanç d'aquests factors amb els principis globals de l'entorn de treball. 
 
 &nbsp;
 &nbsp;
