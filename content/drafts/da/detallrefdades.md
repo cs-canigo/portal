@@ -43,7 +43,7 @@ weight= 5
 
     body.appendChild(definicio);
 
-    var metadatos = ["Identificador","Agrupació temàtica","Classificació funcional","Origen","Òrgan responsable","Òrgan propietari","Període actualització","Tipus","Visibilitat","Descàrrega"];
+    var metadatos = ["Identificador","Agrupació temàtica","Classificació funcional","Òrgan propietari","Període actualització","Tipus","Visibilitat","Data publicació","Data darrera actualització","Descàrrega"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -63,7 +63,7 @@ weight= 5
     hilera.appendChild(celda);
 
     var celda2 = document.createElement("th");
-    var textoCelda2 =  document.createTextNode("Valor");
+    var textoCelda2 =  document.createTextNode("Definició");
     celda2.appendChild(textoCelda2);
     hilera.appendChild(celda2);
 
@@ -98,42 +98,6 @@ weight= 5
       tblBody.appendChild(hilera);
     }
 	
-	// -----------------------------------------------------
-    //  v03.CTD-01/04/2020 (inici) Incorporar data de publicació i actualització abans dels atributs
-	
-		// Data publicació  
-		hilera = document.createElement("tr");	
-		celda = document.createElement("td");
-		textoCelda = document.createTextNode("Data publicació");
-		celda.style.fontWeight = "bold";
-		celda.appendChild(textoCelda);
-		hilera.appendChild(celda);
-
-		celda = document.createElement("td");
-		textoCelda = document.createTextNode(dades[3]);
-		celda.appendChild(textoCelda);
-		hilera.appendChild(celda);
-		
-		tblBody.appendChild(hilera);
-		  
-		// Data última actualització  
-		hilera = document.createElement("tr");	
-		celda = document.createElement("td");
-		textoCelda = document.createTextNode("Data darrera actualització");
-		celda.style.fontWeight = "bold";
-		celda.appendChild(textoCelda);
-		hilera.appendChild(celda);
-
-		celda = document.createElement("td");
-		textoCelda = document.createTextNode(dades[16]);
-		celda.appendChild(textoCelda);
-		hilera.appendChild(celda);
-		
-		tblBody.appendChild(hilera);
-	  
-    //  v03.CTD-01/04/2020 (fi) Incorporar data de publicació i actualització abans dels atributs
-	// -----------------------------------------------------
-
 
 	// -----------------------------------------------------
     //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
@@ -238,4 +202,8 @@ weight= 5
      //$('#myframe').attr("src", url);
     //}
 
-</script>
+
+
+  </script>
+  
+ 
