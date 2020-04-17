@@ -28,7 +28,7 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 	  [ '1','Canigo 3.4 LTS', new Date(2019, 2), new Date(2022, 2) ],
 	  [ '2','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
 	  [ '3','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
-	  [ '4','Canigo 3.4.3', new Date(2020, 11), new Date(2020, 2) ],
+	  [ '4','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
 	  [ '5','Canigo 3.4.4', new Date(2020, 2), new Date(2020, 5) ],
 	  [ '6','Canigo 3.4.5', new Date(2020, 5), new Date(2020, 8) ],
 	  [ '7','Canigo 3.4.6', new Date(2020, 8), new Date(2020, 11) ],
