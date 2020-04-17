@@ -37,7 +37,7 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 
     var options = {
       timeline: { groupByRowLabel: false, showRowLabels: false },
-	  colors: ['blue', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'blue','green','green','green','green']
+	  colors: ['blue', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green','green','green','green','green']
     };
 
     chart.draw(dataTable, options);
