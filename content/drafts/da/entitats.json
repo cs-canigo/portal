@@ -292,7 +292,7 @@
 "Consolidat",
 "Territori",
 "Municipis Espanya",
-"Llista de municipis d'Espanya amb la relació codi INE vs IDESCAT i indicant la provincia a on pertanyen.",
+"Llista de municipis d'Espanya indicant la provincia a on pertanyen.",
 "dtarq87",
 "Territori",
 "Administració Pública",
@@ -304,6 +304,24 @@
 "30/03/2020",
 "Codis_Territori_Municipis_Espanya.xlsx",
 "Codis_Territori_Municipis_Espanya_ATR.docx"
+],
+[
+"Consolidat",
+"Territori",
+"Municipis Catalunya Geo",
+"Llistat de municipis de Catalunya indicant la comarca a on pertanyen i amb dades de Geolocalització.
+Dels 8 atributs que conté l'entitat, 4 atributs tenen per font Idescat: Codi, Nom, Codi comarca i Nom comarca; i 4 tenen per font l'Institut Cartogràfic i Geològic de Catalunya : UTM X, UTM Y, Longitud i Latitud.",
+"dtarq128",
+"Territori",
+"Administració Pública",
+"Idescat, Cartogràfic",
+"Sota demanda",
+"Tabular",
+"Pública",
+"20/04/2020",
+"20/04/2020",
+"Codis_Territori_Municipis_Catalunya_Geo.xlsx",
+"Codis_Territori_Municipis_Catalunya_Geo_ATR.docx"
 ],
 [
 "Pendent",
