@@ -117,8 +117,8 @@ Una solució d'escriptori significa qualsevol programari que s'instal·la en un 
 Els principals grups en els que podem classificar les solucions escriptori són: 
 
 - Programari empresarial i departamental.
-- Programari per a treballadors de la informació.
-- Programari d'accés de contingut.
+- Programari per a treballadors de les TIC.
+- Programari d'accés a contingut.
 - Programari educatiu.
 
 
