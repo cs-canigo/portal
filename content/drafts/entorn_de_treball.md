@@ -61,7 +61,7 @@ img[alt="centrar"] {
 &nbsp;
 &nbsp;
 
-*Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables. Aquests principis tenen com a objectiu informar i guiar en el desenvolupament de solucions, sota els criteris establerts pel CTTI. 
+Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables. Aquests principis tenen com a objectiu informar i guiar en el desenvolupament de solucions, sota els criteris establerts pel CTTI. 
 D’aquesta manera, els principis exposats en aquest apartat fan referencia a les diverses solucions dintre de l’entorn de treball. Així, els principis es dividiran en 4 blocs:
 
 - **Bloc 0 – Principis Globals**: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn de treball. L’aplicació d’aquests principis s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
@@ -71,7 +71,6 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 - **Bloc 2 – Principis d’arquitectura de l’entorn de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre del lloc de treball.
 
 - **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre del lloc de treball.
-*
 
 &nbsp;
 &nbsp;
