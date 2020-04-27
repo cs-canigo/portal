@@ -67,11 +67,11 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 
 - **Bloc 0 – Principis Globals**: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn de treball. L’aplicació d’aquests principis s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
 
-- **Bloc 1 – Principis de solucions escriptori de l'entorn de treball**: Principis establerts com específics pel desenvolupament de solucions aplicatives d’escriptori de lloc de treball.
+- **Bloc 1 – Principis de solucions escriptori de l'entorn de treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l'entorn de terball.
 
-- **Bloc 2 – Principis d’arquitectura de l’entorn de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre del lloc de treball.
+- **Bloc 2 – Principis d’arquitectura de l’entorn de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l'entorn de terball.
 
-- **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre del lloc de treball.
+- **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l'entorn de terball.
 
 &nbsp;
 &nbsp;
