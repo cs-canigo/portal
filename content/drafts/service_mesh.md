@@ -238,6 +238,7 @@ Es proposen dos models en funció del model de traces distribuïdes
 ### Altres descriptors
 
 Podeu trobar informació de la resta de descriptors a:
+
 * https://archive.istio.io/v1.4/docs/reference/config/networking/
 * https://archive.istio.io/v1.4/docs/reference/config/security/
 * https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.mixer.v1.config.client/
