@@ -178,7 +178,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **2.1.1.2	Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s'ha de desplegar seguint les directrius de CTTI, gràcies a les quals s'assolirà una homogenitat en l'aparença, les funcionalitats transversals i la operativitat del sistema.
 
-* **2.1.1.3	Cicle de vida** *(obligatori)*. S'hauran de cumplir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes compotents de la Generalitat de Catalunya amb l'ojbectiu d'assolir el SLA del servei. 
+* **2.1.1.3	Cicle de vida** *(obligatori)*. S'hauran de cumplir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes compotents de la Generalitat de Catalunya amb l'ojbectiu d'assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn de treball suportades per CTTI.
 
 * **2.1.1.4	Automatització i agilitat** *(obligatori)*. Cal disposar de les plataformes, eines i automatismes nessaris per fer un desplegament àgil del terminal, així com la distribució del programari i polítiques corporatives corresponents amb l'objectiu de lliurar un terminal preparat pel negoci. 
 
