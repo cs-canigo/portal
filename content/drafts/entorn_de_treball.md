@@ -260,8 +260,6 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **3.1.7 Simplicitat** *(obligatori)*. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables. 
 
-* **3.1.8.X.X.X.X Provat** *(obligatori)*. Totes les noves solucions han de ser provades en un laboratori, per tal de revisar-les més enllà de la simulació i poder fer els ajustos necessaris. Obtenint així evidències de les proves efectuades, i conseqüentment del funcionament de la solució.
-
 
 ## 3.2 Principis tecnològics
 
