@@ -38,11 +38,11 @@ img[alt="centrar"] {
   * [0 1 Generals](#01-generals)
   * [0.2 Principis de cost i mateniment](#02-principis-de-cost-i-mateniment)
 
-- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l'entorn-de-treball)**
+- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l-entorn-de-treball)**
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
   * [1.2 Principis tecnològics](#12-principis-tecnològics)
 
-- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l'entorn-de-treball)**
+- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
   * [2.1 Dispositius](#21-dispositius)
      + [2.1.1 Equips corporatius i Sistema Operatiu](#211-equips-corporatius-i-sistema-operatiu)
   * [2.2 Virtualització d'aplicacions](#22-virtualització-d'aplicacions)
