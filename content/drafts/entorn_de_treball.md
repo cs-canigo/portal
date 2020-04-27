@@ -38,18 +38,18 @@ img[alt="centrar"] {
   * [0 1 Generals](#01-generals)
   * [0.2 Principis de cost i mateniment](#02-principis-de-cost-i-mateniment)
 
-- **[1. Solucions escriptori LLdT](#1-solucions-escriptori-lldt)**
+- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l'entorn-de-treball)**
   * [1.1 Disseny aplicacions escriptori](#11-disseny-aplicacions-escriptori)
   * [1.2 Principis tecnològics](#12-principis-tecnològics)
 
-- **[2. Arquitectura LLdT](#2-arquitectura-lldt)**
+- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l'entorn-de-treball)**
   * [2.1 Dispositius](#21-dispositius)
      + [2.1.1 Equips corporatius i Sistema Operatiu](#211-equips-corporatius-i-sistema-operatiu)
   * [2.2 Virtualització d'aplicacions](#22-virtualització-d'aplicacions)
      + [2.2.1 Execució local](#221-execució-local)
      + [2.2.2 Execució remota](#222-execució-remota)
 
-- **[3. Arquitectura TELCO](#3-arquitectura-telco)**
+- **[3. Arquitectura de connectivitat](#3-arquitectura-de-connectivitat)**
   * [3.1 Principis de disseny](#31-principis-de-disseny)
   * [3.2 Principis tecnològics](#32-principis-tecnològics)   
 
@@ -61,7 +61,21 @@ img[alt="centrar"] {
 &nbsp;
 &nbsp;
 
-*Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables i tenen com a objectiu informar i recolzar la forma en què CTTI vol que s’implementin les solucions i la infraestructura de l'entorn de treball.*
+*Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables. Aquests principis tenen com a objectiu informar i guiar en el desenvolupament de solucions, sota els criteris establerts pel CTTI. 
+D’aquesta manera, els principis exposats en aquest apartat fan referencia a les diverses solucions dintre de l’entorn de treball. Així, els principis es dividiran en 4 blocs:
+
+**Bloc 0 – Principis Globals**
+Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn de treball. L’aplicació d’aquests principis s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
+
+**Bloc 1 – Principis de solucions escriptori de l'entorn de treball**
+Principis establerts com específics pel desenvolupament de solucions aplicatives d’escriptori de lloc de treball.
+
+**Bloc 2 – Principis d’arquitectura de l’entorn de treball**
+Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre del lloc de treball.
+
+**Bloc 3 – Principis d'arquitectura de connectivitat**
+Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre del lloc de treball.
+*
 
 &nbsp;
 &nbsp;
@@ -79,46 +93,47 @@ img[alt="centrar"] {
 
 * **0.1.2 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
 
-* **0.1.3 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments i directrius de les demés àrees TIC involucrades en el disseny. 
+* **0.1.3 Compliment** *(obligatori)*. Tota solució de l'entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments tècnics, funcionals i de seguretat de la Generalitat de Catalunya per les diferents àrees TIC involucrades en el disseny. 
   * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
 
 * **0.1.4 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’agència de ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
   * **0.1.4.1 Traçabilitat** Capacitat per identificar les diferents etapes per les que travessa el consum d’un servei, permeten extreure la informació suficient per realitzar l’anàlisi d’un problema, d'aspectes legals i de seguretat.
   * **0.1.4.2 Control d’accés** Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
   * **0.1.4.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
-  
-&nbsp;
-&nbsp;
+  * **0.1.4.4 Disponibilitat, confidencialitat i integritat de les dades**, d'acord amb els requeriments de l'Agència de Ciberseguretat.
 
-##  0.2 Principis de cost i mateniment
+* **0.1.4 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de negoci.
 
-* **0.2.1 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la rendibilitat, tant en el disseny com en la seva implementació, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de la solució.
-
-* **0.2.2 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s'han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l'impacte d'aquests canvis en el marc d'interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i aplicatiu. 
+* **0.1.5 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s'han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l'impacte d'aquests canvis en el marc d'interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i aplicatiu. 
 
 &nbsp;
 &nbsp;
 
 ---
 
-# 1. Solucions escriptori LLdT
+# 1. Solucions escriptori de l'Entorn de Treball
 
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
+Una solució d'escriptori significa qualsevol programari que s'instal·la en un terminal d'usuari (portàtil o sobretaula) per realitzar funcions específiques. Algunes solucions d'escriptori també poden ser utilitzades per diversos usuaris en un entorn en xarxa.
+
+Els principals grups en els que podem classificar les solucions escriptori són: 
+
+- Programari empresarial i departamental.
+- Programari per a treballadors de la informació.
+- Programari d'accés de contingut.
+- Programari educatiu.
+
 
 ## 1.1 Disseny aplicacions escriptori
 
-* **1.1.1 Usabilitat** *(obligatori)*. Tota aplicació implementada al lloc de treball ha d'estar orientada a l'usuari, tanmateix la facilitat d'ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d'usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents.
+* **1.1.1 Usabilitat** *(obligatori)*. Tota aplicació implementada al lloc de treball ha d'estar orientada a satisfer uns requeriments d'usuari, tanmateix la facilitat d'ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d'usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents.
 
 * **1.1.2 Desacoblada i multi-plataforma** *(desitjable)*. Les aplicacions Web són la tipologia d'aplicacions prioritària per lliurar al lloc de treball pels múltiples beneficis que ofereixen: agnòstiques al SO, maximitzen la mobilitat de l'usuari, faciliten l'administració, etc. Si per motius funcionals, tecnològics o econòmics, es requereix implementar una aplicació escriptori al lloc de treball caldrà avaluar les tecnologies, APIs i Frameworks que millor encaixen per assolir aquests principis.
 
-* **1.1.3 Modular i flexible** *(desitjable)*. Les aplicacions haurien de tenir la capacitat d'adaptar-se a requeriments funcionals i tècnics heterogenis, mitjançant una capa de personalització a nivell usuari i emprant components o micro-serveis que maximitzin la seva compatibilitat amb múltiples sistemes i tecnologies. A més, gràcies a una arquitectura de micro-serveis tindrem la capacitat d'aplicar canvis a certs components sense impactar a la resta de l'aplicació.
+* **1.1.3 Modular i flexible** *(desitjable)*. Cal potenciar l'ús de solucions transversals a qualsevol departament, les quals haurien de tenir la capacitat d'adaptar-se a requeriments funcionals i tècnics heterogenis, mitjançant una capa de personalització a nivell usuari i emprant components o micro-serveis que maximitzin la seva compatibilitat amb múltiples sistemes i tecnologies. A més, gràcies a una arquitectura de micro-serveis tindrem la capacitat d'aplicar canvis a certs components sense impactar a la resta de l'aplicació.
 
-* **1.1.4 Interoperabilitat** *(obligatori)*. El context d'execució de les aplicacions està format pel Sistema Operatiu, les plataformes integrades (impressió, eines de gestió i administració, recursos locals i en xarxa, etc), altres aplicacions i el perifèrics. La interoperabilitat entre tots aquests elements és una facultat que han de tenir les solucions del lloc de treball. Als següents enllaços es troba informació que permet conèixer aquest context d'execució al lloc de treball:
+* **1.1.4 Interoperabilitat** *(obligatori)*. El context d'execució de les aplicacions està format pel Sistema Operatiu, les plataformes integrades (impressió, eines de gestió i administració, recursos locals i en xarxa, etc), altres aplicacions i el perifèrics. La interoperabilitat entre tots aquests elements és una facultat que han de tenir les solucions del lloc de treball. 
 
-* **1.1.5 Centralització** *(desitjable)*. Si escau, les solucions han de permetre ajustar la parametrització de manera centralitzada, mitjançant consoles d'administració, polítiques de domini o altres tecnologies, amb l'objectiu de maximitzar la homogeneïtat en la configuració de tot el parc de terminals i alhora minimitzar les accions manuals en les instal·lacions i futurs canvis necessaris.  
+* **1.1.5 Gestió centralitzada** *(desitjable)*. Si escau, les solucions han de permetre ajustar la parametrització de manera centralitzada, mitjançant consoles d'administració, polítiques de domini o altres tecnologies, amb l'objectiu de maximitzar la homogeneïtat en la configuració de tot el parc de terminals i alhora minimitzar les accions manuals en les instal·lacions i futurs canvis necessaris. Tanmateix, la solució ha de permetre que aquesta gestió sigui compartida entre diferents equips tècnics amb permissos d'administració granulars.
 
 ## 1.2 Principis tecnològics
 
@@ -126,6 +141,8 @@ img[alt="centrar"] {
 
 * **1.2.2 Estabilitat** *(obligatori)*. Les solucions a implementar al lloc de treball han de tenir suficient experiència en entorns empresarials amb els mateixos condicionats de interoperabilitat que els terminals de la Generalitat de Catalunya, encara que en ocasions caldrà avaluar l'ús de solucions emergents per garantir l'aplicació de la resta de principis definits. 
 
+* **1.2.3	Cicle de vida** *(obligatori)*. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d'aplicacions i sistema opeartiu amb els que necessita interactuar. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es pot consultar el programari transversal de l'entorn de treball, així com el versionat suportat per CTTI. 
+
 &nbsp;
 &nbsp;
 &nbsp;
@@ -135,7 +152,7 @@ img[alt="centrar"] {
 
 ---
 
-# 2. Arquitectura LLdT
+# 2. Arquitectura de l'Entorn de Treball
 &nbsp;
 &nbsp;
 &nbsp;
@@ -164,8 +181,6 @@ img[alt="centrar"] {
 * **2.1.1.3	Cicle de vida** *(obligatori)*. S'hauran de cumplir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes compotents de la Generalitat de Catalunya amb l'ojbectiu d'assolir el SLA del servei. 
 
 * **2.1.1.4	Automatització i agilitat** *(obligatori)*. Cal disposar de les plataformes, eines i automatismes nessaris per fer un desplegament àgil del terminal, així com la distribució del programari i polítiques corporatives corresponents amb l'objectiu de lliurar un terminal preparat pel negoci. 
-
-* **2.1.1.X.X.X.X	Inventari i control** *(obligatori)*. Cal disposar dels mecanismes d'inventari i control pertinents que garanteixin una correcte gestió dels equips i del llicenciament.
 
 &nbsp;
 &nbsp;
@@ -224,7 +239,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ---
 
-# 3. Arquitectura TELCO
+# 3. Arquitectura de connectivitat
 &nbsp;
 &nbsp;
 &nbsp;
