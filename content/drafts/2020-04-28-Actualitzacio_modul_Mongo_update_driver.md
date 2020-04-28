@@ -15,9 +15,11 @@ Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, aparta
 ## Novetats
 
 La principal novetat en aquesta actualització del mòdul és l'actualització de la versió del driver de Mongo a la versió 3.12.3 per a poder utilitzar les funcionalitats de Mongodb 4.2, podeu consultar la relació de versions del driver i de Mongodb a:
+
 https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility
 
 Les principals novetats de la versió 4.2 de Mongodb són:
+
 * Transaccions distribuides
 * Eliminat el MMAPv1 Storage Engine
 * Eliminació d'alguns components i mètodes
@@ -37,6 +39,7 @@ Les principals novetats de la versió 4.2 de Mongodb són:
 * Actualització de les provedures
 
 Podeu trobar el detall de les novetats a:
+
 https://docs.mongodb.com/manual/release-notes/4.2
 
 ## Documentació del mòdul
