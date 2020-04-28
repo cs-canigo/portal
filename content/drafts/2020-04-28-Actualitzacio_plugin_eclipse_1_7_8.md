@@ -9,7 +9,9 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Seguint l'objectiu del Centre de Suport Canigó de proporcionar als desenvolupadors d'aplicacions el màxim d'eines útils per a la creació de projectes amb aquest marc de treball, s'ha actualitzat el _plugin_ de l'Eclipse per modificar projectes afegint el mòdul de Mongodb 2.3.0. Podeu consultar l'abast complet a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34). Aquest plugin de l’Eclipse és un connector desenvolupat a mida que afegeix menús contextuals a l'IDE per a la creació de projectes Canigó utilitzant l’arquetipus Maven i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Dins dels canvis introduits en aquesta nova versió hi consta l'actualització del mòdul de Mongodb versió 2.3.0 per utilizar el driver de Mongo 2.13.3 compatible amb Mongodb 4.2.
+Seguint l'objectiu del Centre de Suport Canigó de proporcionar als desenvolupadors d'aplicacions el màxim d'eines útils per a la creació de projectes amb aquest marc de treball, s'ha actualitzat el _plugin_ de l'Eclipse per modificar projectes afegint el mòdul de Mongodb 2.3.0. Podeu consultar l'abast complet a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34). 
+
+Aquest plugin de l’Eclipse és un connector desenvolupat a mida que afegeix menús contextuals a l'IDE per a la creació de projectes Canigó utilitzant l’arquetipus Maven i per afegir mòduls, a un projecte creat, amb una preconfiguració ja donada. Dins dels canvis introduits en aquesta nova versió hi consta l'actualització del mòdul de Mongodb versió 2.3.0 per utilizar el driver de Mongo 2.13.3 compatible amb Mongodb 4.2.
 
 ## Novetats
 
