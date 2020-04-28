@@ -17,7 +17,7 @@ Aquest plugin de l’Eclipse és un connector desenvolupat a mida que afegeix me
 
 La nova versió 1.7.8 del _plugin_ al seleccionar l'opció mòdul de persistència > Mongodb module:
 
-![](/images/news/Plugin_1.7.8_add_mongodb_module)
+![](/images/news/Plugin_1.7.8_add_mongodb_module.png)
 
 Modificarà el projecte utilitzant la versió 2.3.0 del mòdul de Mongodb de Canigó, que utilitza la versió 2.13.3 del driver de Mongo per a utilitzar les funcionalitats de la versió 4.2 de Mongodb
 
