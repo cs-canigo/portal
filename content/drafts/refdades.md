@@ -1,5 +1,5 @@
 +++
-date        = "2020-04-01"
+date        = "2020-04-29"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -7,24 +7,15 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
+Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d'una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d'informació inconsistents.
 
-El conjunt de dades de referència i els seus valors canvien en el transcurs del temps. Qualsevol canvi ha de passar per un control de qualitat i ha de ser aprovat per l’OIAD, òrgan responsable de la custodia de dades de referència. 
+Coordinadament amb la Oficina d'Innovació i Administració Digital (OIAD), responsable d'impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la OIAD garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
 
-En aquest sentit, el Catàleg Tècnic de Dades de referència es divideix en dos grups: les Entitats de Referència consolidades aprovades per l’OIAD que son d’obligat ús, i les entitats de referència proposades que es troben en revisió per l’òrgan responsable, aquestes últimes poden patir canvis estructurals o inclús ser rebutjades.
+En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups: 
+	a)	Dades de Referència consolidades i avalades per l'OIAD que són d'obligat ús pels nous sistemes d'informació, i 
+	b)	Dades de Referència que es troben en revisió per l'òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 
-Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l’Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
-
-
-
-<br/>
-## Operativa
-<br/>
-Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l'objectiu de modelar, validar i finalment incoporar dins del Catàleg Tècnic de Dades que s'ofereix en aquesta web (veure apartat següent a aquest).
-
-Tota aplicació que trobi interessant utilitzar les dades d'alguna entitat, pot utilitzar-les tenint en compte que en aquesta primera publicació del catàleg tècnic de dades no es disposa de cap procediment de petició d'ús de les entitats ni es registra l'ús de les entitats. Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Àrea d’Arquitectura Corporativa.
-
-Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats de les aplicacions.
+Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
 
 
 
@@ -32,13 +23,13 @@ Així mateix, estem a la vostra disposició per rebre propostes d'incorporació 
 ## Catàleg Tècnic de Dades
 <br/>
 
-Posem a disposició de les aplicacions el catàleg tècnic d’entitats de referència organitzades en dos grups:
+Posem a disposició de les aplicacions el catàleg tècnic d'entitats de referència organitzades en els dos grups mencionats anteriorment:
 
-- Entitats de referència d'obligat compliment: Són entitats que han estat autoritzades per l’òrgan responsable, l’OIAD..
+- Dades de referència d'obligat compliment per les noves aplicacions.
 
-- Entitats de referència pendents d’aprovació: Són entitats que es proposen des de CTTI, que estan pendents de validar amb la OIAD, o que per les seves característiques no es poden classificar com a consolidades.
+- Dades de referència pendents d'aprovació.
 
-En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
+En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d'aquestes.
 
 
 <style>
@@ -210,7 +201,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </div>
 
 <div style="width:100%; padding-left:15px">
-A continuació es presenta el diagrama amb les relacions entre les entitats de referència d’obligat compliment, indicant-se la cardinalitat per cada relació.
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència d'obligat compliment, indicant-se la cardinalitat per cada relació.
 <br/><br/>
   <div style="padding-left:40px">
     <img style="padding: 10px; width: 70%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
@@ -219,7 +210,7 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 
 
 <br/><br/>
-#### Entitats de referència pendents d’aprovació
+#### Entitats de referència pendents d'aprovació
 
 <div style="width:100%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
@@ -239,8 +230,26 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 
 
 
+<br/>
+## Operativa
+<br/>
+Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l'objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
+
+Tota aplicació que necessiti utilitzar alguna dada de referència, s'ha de descarregar la informació i carregar-la manualment en la seva aplicació. 
+
+En properes versions del Catàleg inclourem prestacions de subscripcions, notificacions i facilitats per recuperar automàticament el contingut de les dades de referència.
+
+Si esteu interessats en què registrem l'ús per comunicar-vos qualsevol canvi que es produeixi sobre l'entitat, podeu posar-vos en contacte amb l'Oficina de Gestió Tècnica de Dades de CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
+
+Així mateix, estem a la vostra disposició per rebre propostes d'incorporació de noves entitats o adaptar les actuals a les necessitats de les aplicacions.
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
   
 <script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
 <script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
+
+
