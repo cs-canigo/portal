@@ -11,9 +11,11 @@ Les dades de referència són un tipus especial de dades orientades amb propòsi
 
 Coordinadament amb la Oficina d'Innovació i Administració Digital (OIAD), responsable d'impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la OIAD garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
 
-En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups: 
+En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
+<pre>
 	a)	Dades de Referència consolidades i avalades per l'OIAD que són d'obligat ús pels nous sistemes d'informació, i 
 	b)	Dades de Referència que es troben en revisió per l'òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
+</pre>
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
 
