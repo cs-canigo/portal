@@ -17,6 +17,7 @@ En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos
 a) Dades de Referència consolidades i avalades per l'OIAD que són d'obligat ús pels nous sistemes d'informació, i
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l'òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
+<br/>
 </div>
 
 Per qualsevol dubte o aclariment podeu posar-vos en contacte amb l'Oficina de Gestió Tècnica de Dades CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
