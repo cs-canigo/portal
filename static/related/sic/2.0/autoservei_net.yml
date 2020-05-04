@@ -45,3 +45,4 @@ deploy:
       artifact: artifact01
 notificationRecipients:
     - nom1@domini.cat
+
