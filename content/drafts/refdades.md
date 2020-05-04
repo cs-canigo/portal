@@ -99,7 +99,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
+//                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
+                "infoFiltered":   "",
                 "info": ""
         },
 	  "columns": [
@@ -145,7 +146,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "search" : "<strong>Cerca:</strong>",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-                "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
+//                "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
+                "infoFiltered":   "",
                 "info": ""
         },
 	  "columns": [
@@ -185,7 +187,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Entitats de referència d'obligat compliment 
+####  Dades de referència d'obligat compliment 
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
@@ -215,7 +217,7 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 
 
 <br/><br/>
-#### Entitats de referència pendents d'aprovació
+#### Dades de referència pendents d'aprovació
 
 <div style="width:100%; padding-left:30px">
 <table id="tabpendents" class="hover" style="width:100%">
@@ -244,7 +246,7 @@ El procés de gestió de les dades de referència es realitza de manera coordina
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
-<br/>
+
 <CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
 <br/>
 
