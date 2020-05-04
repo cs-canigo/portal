@@ -356,9 +356,12 @@ build:
     - id: bs001
       position: 1
       tool: MSBuild_15
-      slnPath: app.sln
-      buildTargetName: Build
-      buildParameters: app.proj
+      executionDir: src
+      restoreParameters: app.sln /// .<path>packages.config -PackagesDirectory ./packages
+      buildParameters:
+         - msbuild_parameter_1
+         - msbuild_parameter_2
+         - msbuild_parameter_3
       generates:
         - artifact01
 ```

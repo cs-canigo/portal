@@ -27,9 +27,13 @@ build:
     - id: bs001
       position: 1
       tool: MSBuild_15
-      slnPath: app.sln
-      buildTargetName: Build
-      buildParameters: app.proj
+      executionDir: src
+      restoreParameters: app.sln
+      buildParameters:
+         - app.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+         - app.SPARQL.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+         - app.SPARQL.DAL.csproj /p:Configuration=PRE /p:Platform=AnyCPU
+         - app.DS.csproj /p:Configuration=PRE /p:Platform=AnyCPU
       generates: 
         - artifact01
 deploy:    
