@@ -211,7 +211,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 A continuació es presenta el diagrama amb les relacions entre les entitats de referència d'obligat compliment, indicant-se la cardinalitat per cada relació.
 <br/><br/>
   <div style="padding-left:40px">
-    <img style="padding: 10px; width: 70%; height: auto; background-color:#eeeeee" src="./entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+    <img style="padding: 10px; width: 70%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
   </div>	
 </div>
 
@@ -247,7 +247,7 @@ El procés de gestió de les dades de referència es realitza de manera coordina
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
 
-<CENTER>![DadRefProc](./entitats/DadesRef_ProcesGeneral.png)</center>
+<CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
 <br/>
 
 Tota aplicació que necessiti utilitzar alguna dada de referència, s’ha de descarregar la informació del Catàleg Tècnic de Dades de Referència aquí publicat, i carregar-la manualment en la seva aplicació. 
