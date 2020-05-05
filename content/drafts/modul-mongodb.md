@@ -1284,13 +1284,177 @@ public MongoClient reactiveMongoClient()
 Un exemple de configuració per a Embeded MongoDB seria:
 
 ```java
+import java.io.IOException;
 
+import com.mongodb.MongoException;
+import com.mongodb.reactivestreams.client.MongoClient;
+
+/**
+ * Class EquipamentEmbeddedReactiveMongoConfig.
+ *
+ * @author cscanigo
+ */
+public class EquipamentEmbeddedReactiveMongoConfig extends EquipamentReactiveMongoConfig {
+
+    /**
+     * Reactive mongo client.
+     *
+     * @return mongo client
+     */
+    @Override
+    public MongoClient reactiveMongoClient() {
+        EmbeddedReactiveMongoFactoryBean embeddedReactiveMongoFactoryBean = new EmbeddedReactiveMongoFactoryBean();
+        if (mongo == null) {
+            try {
+                mongo = embeddedReactiveMongoFactoryBean.getObject();
+            } catch (IOException e) {
+                throw MongoException.fromThrowable(e);
+            }
+        }
+        return mongo;
+    }
+}
+```
+
+```java
+import java.io.IOException;
+import java.net.InetAddress;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.FactoryBean;
+
+import com.mongodb.reactivestreams.client.MongoClient;
+import com.mongodb.reactivestreams.client.MongoClients;
+
+import de.flapdoodle.embed.mongo.Command;
+import de.flapdoodle.embed.mongo.MongodExecutable;
+import de.flapdoodle.embed.mongo.MongodProcess;
+import de.flapdoodle.embed.mongo.MongodStarter;
+import de.flapdoodle.embed.mongo.config.IMongodConfig;
+import de.flapdoodle.embed.mongo.config.MongodConfigBuilder;
+import de.flapdoodle.embed.mongo.config.Net;
+import de.flapdoodle.embed.mongo.config.RuntimeConfigBuilder;
+import de.flapdoodle.embed.mongo.distribution.Version;
+import de.flapdoodle.embed.process.config.IRuntimeConfig;
+import de.flapdoodle.embed.process.runtime.Network;
+
+/**
+ * Class EmbeddedReactiveMongoFactoryBean.
+ *
+ * @author cscanigo
+ */
+public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient>, DisposableBean {
+
+    /** Constant LOG. */
+    private static final Logger LOG = LoggerFactory.getLogger(EmbeddedReactiveMongoFactoryBean.class);
+
+    /** Constant EMBEDDED_HOST. */
+    private static final String EMBEDDED_HOST = InetAddress.getLoopbackAddress().getHostAddress();
+
+    /** Constant EMBEDDED_PORT. */
+    private static final int EMBEDDED_PORT = getPort();
+
+    /** Constant EMBEDDED_TEST_URI. */
+    private static final String EMBEDDED_TEST_URI = "mongodb://" + EMBEDDED_HOST + ":" + EMBEDDED_PORT + "/canigo";
+
+    /** mongod executable. */
+    private static MongodExecutable mongodExecutable;
+    
+    /** mongo process. */
+    private static MongodProcess mongoProcess;
+
+    /**
+     * Obté object.
+     *
+     * @return object
+     * @throws IOException senyala que una excepció I/O s'ha produït.
+     */
+    @Override
+    public synchronized MongoClient getObject() throws IOException {
+        if (mongodExecutable == null) {
+            LOG.info("Starting embedded MongoDB instance");
+            initMongoServer();
+        }
+        return MongoClients.create(EMBEDDED_TEST_URI);
+    }
+
+    /**
+     * Destroy.
+     *
+     * @throws Exception exception
+     */
+    @Override
+    public void destroy() throws Exception {
+        if (mongodExecutable != null) {
+            LOG.info("Stopping embedded MongoDB instance");
+            mongodExecutable.stop();
+            mongoProcess.stop();
+        }
+    }
+    
+    /**
+     * Obté object type.
+     *
+     * @return object type
+     */
+    @Override
+    public Class<?> getObjectType() {
+        return MongoClient.class;
+    }
+
+    /**
+     * Inicialitza mongo server.
+     *
+     * @throws IOException senyala que una excepció I/O s'ha produït.
+     */
+    private synchronized void initMongoServer() throws IOException {
+        final IMongodConfig mongodConfig = new MongodConfigBuilder().version(Version.Main.V4_0)
+                .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).configServer(false).build();
+        final IRuntimeConfig runtimeConfig = new RuntimeConfigBuilder().defaults(Command.MongoD).build();
+        final MongodStarter runtime = MongodStarter.getInstance(runtimeConfig);
+
+        mongodExecutable = runtime.prepare(mongodConfig);
+        mongoProcess = mongodExecutable.start();
+    }
+
+    /**
+     * Obté port.
+     *
+     * @return port
+     */
+    private static int getPort() {
+        try {
+            return Network.getFreeServerPort();
+        } catch (IOException ex) {
+            LOG.error("Needed free port");
+            return 27017;
+        }
+    }
+}
 ```
 
 Per utilitzar la configuració amb Embeded MongoBD en un test, si no hem importat el EquipamentReactiveMongoConfig en el AppConfig:
 
 ```java
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.AppConfig;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentEmbeddedReactiveMongoConfig;
+
+/**
+ * Class EquipamentEmbeddedReactiveMongoRepositoryTest.
+ *
+ * @author cscanigo
+ */
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = { AppConfig.class, EquipamentEmbeddedReactiveMongoConfig.class })
+public class EquipamentEmbeddedReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
+
+}
 ```
 
 O crear un nou AppConfig important el EquipamentEmbeddedReactiveMongoConfig i carregar-lo al test:
