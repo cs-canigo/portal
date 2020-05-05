@@ -50,7 +50,6 @@ el que executa el test unitari del mòdul de persistència:
                     <id>org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor</id>
                     <goals>
                       <goal>process</goal>
-                      <goal>test-process</goal>
                     </goals>
                     <configuration>
                       <outputDirectory>target/generated-sources/java</outputDirectory>
