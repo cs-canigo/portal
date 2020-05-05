@@ -188,20 +188,39 @@ import com.mongodb.MongoClientOptions;
 
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoEquipamentListener;
 
+/**
+ * Class EquipamentMongoConfig.
+ *
+ * @author cscanigo
+ */
 @Configuration
 public class EquipamentMongoConfig extends MongoCoreConfig {
 
+	/** mongo client options. */
 	protected static MongoClientOptions mongoClientOptions;
 
+	/**
+	 * Inicialitza equipament mongo config.
+	 */
 	public EquipamentMongoConfig() {
 		super(mongoOptions());
 	}
 
+	/**
+	 * Mongo equipament listener.
+	 *
+	 * @return mongo equipament listener
+	 */
 	@Bean
 	public MongoEquipamentListener mongoEquipamentListener() {
 		return new MongoEquipamentListener();
 	}
 
+	/**
+	 * Mongo options.
+	 *
+	 * @return mongo client options
+	 */
 	@Bean
 	public static MongoClientOptions mongoOptions() {
 		if (mongoClientOptions == null) {
@@ -353,18 +372,24 @@ import java.util.Random;
 import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
 import org.springframework.data.mongodb.core.mapping.event.BeforeConvertEvent;
 
-import cat.gencat.ctti.mongodb.model.MongoEquipament;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.model.MongoEquipament;
 
 /**
  * Equivalent of a domain method annotated by <code>PrePersist</code>.
+ *
+ * @see MongoEquipamentEvent
  */
 public class MongoEquipamentListener extends AbstractMongoEventListener<MongoEquipament> {
 
+	/**
+	 * On before convert.
+	 *
+	 * @param event event
+	 */
 	@Override
 	public void onBeforeConvert(BeforeConvertEvent<MongoEquipament> event) {
 		MongoEquipament mongoEquipament = event.getSource();
 		if (mongoEquipament.getId() == null) {
-			// TODO use a better UUID generator in production
 			mongoEquipament.setId(new Random().nextLong());
 		}
 	}
@@ -383,21 +408,30 @@ Per a utilitzar els repositoris s'ha de generar un objecte MongoRepository per a
 Un exemple de repository seria:
 
 ```java
-import java.util.List;
+/**
+ * Interface EquipamentMongoRepository.
+ *
+ * @author cscanigo
+ */
+public interface EquipamentMongoRepository extends MongoGenericRepository<MongoEquipament, Long> {
 
-import org.springframework.data.domain.Sort;
-import org.springframework.data.mongodb.repository.Query;
+    /**
+     * Find by nom query.
+     *
+     * @param nom nom
+     * @return list
+     */
+    @Query("{ nom: ?0 }")
+    List<MongoEquipament> findByNomQuery(String nom);
 
-import cat.gencat.ctti.mongodb.model.MongoEquipament;
-import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository;
-
-public interface EquipamentMongoRepository extends MongoGenericRepository<MongoEquipament, Long>{
-
-	@Query("{ nom: ?0 }")
-	List<MongoEquipament> findByNomQuery(String nom);
-
-	List<MongoEquipament> findByNomLike(String nom, Sort sort);
-
+    /**
+     * Find by nom like.
+     *
+     * @param nom  nom
+     * @param sort sort
+     * @return list
+     */
+    List<MongoEquipament> findByNomLike(String nom, Sort sort);
 
 }
 ```
@@ -475,11 +509,13 @@ Un exemple de repository seria:
 
 ```java
 import java.util.List;
+
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
-import cat.gencat.provamongo.mongodb.model.MongoEquipament;
+
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.model.MongoEquipament;
 
 /**
  * Interface EquipamentReactiveMongoRepository.
@@ -489,9 +525,22 @@ import cat.gencat.provamongo.mongodb.model.MongoEquipament;
 @Repository
 public interface EquipamentReactiveMongoRepository extends ReactiveMongoRepository<MongoEquipament, Long> {
 
+    /**
+     * Find by nom query.
+     *
+     * @param nom nom
+     * @return list
+     */
     @Query("{ nom: ?0 }")
     List<MongoEquipament> findByNomQuery(String nom);
 
+    /**
+     * Find by nom like.
+     *
+     * @param nom  nom
+     * @param sort sort
+     * @return list
+     */
     List<MongoEquipament> findByNomLike(String nom, Sort sort);
 
 }
@@ -1057,11 +1106,6 @@ public MongoClient mongoClient()
 Un exemple de configuració per a Embeded MongoDB seria:
 
 ```java
-import java.io.IOException;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoException;
-import cz.jirutka.spring.embedmongo.EmbeddedMongoFactoryBean;
-
 /**
  * Class EquipamentEmbeddedMongoConfig.
  *
@@ -1069,9 +1113,14 @@ import cz.jirutka.spring.embedmongo.EmbeddedMongoFactoryBean;
  */
 public class EquipamentEmbeddedMongoConfig extends EquipamentMongoConfig {
 
+	/**
+	 * Mongo client.
+	 *
+	 * @return mongo client
+	 */
 	@Override
 	public MongoClient mongoClient() {
-		if (mongo == null) {
+		if (mongo == null) { 
 			EmbeddedMongoFactoryBean embeddedMongoFactoryBean = new EmbeddedMongoFactoryBean();
 			try {
 				mongo = embeddedMongoFactoryBean.getObject();
@@ -1155,26 +1204,6 @@ Per més informació sobre [Embeded MongoDB] (https://flapdoodle-oss.github.io/d
 Definirem els següents tests:
 
 ```java
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.assertTrue;
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-import javax.inject.Inject;
-import org.junit.Before;
-import org.junit.FixMethodOrder;
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
-import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
-import reactor.test.StepVerifier;
-
-import cat.gencat.provamongo.mongodb.model.MongoEquipament;
-import cat.gencat.provamongo.mongodb.model.repository.EquipamentReactiveMongoRepository;
-
-
 /**
  * Class EquipamentReactiveMongoRepositoryCoreTest.
  *
@@ -1182,22 +1211,28 @@ import cat.gencat.provamongo.mongodb.model.repository.EquipamentReactiveMongoRep
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public abstract class EquipamentReactiveMongoRepositoryCoreTest {
-
+    /** repository. */
     @Inject
     EquipamentReactiveMongoRepository repository;
 
+    /**
+     * Estableix up.
+     */
     @Before
     public void setUp() {
         assertNotNull(repository);
         repository.deleteAll();
     }
 
+    /**
+     * Test 1 CRUD operations.
+     */
     @Test
-    public void test01CRUDOperations() {
+    public void test1CRUDOperations() {
 
         // Test if table is empty
         Flux<MongoEquipament> mongoEquipamentInitialContent = repository.findAll();
-        List<MongoEquipament> mongoEquipamentList = new ArrayList<MongoEquipament>();
+        List<MongoEquipament> mongoEquipamentList = new ArrayList<>();
         mongoEquipamentInitialContent.subscribe(mongoEquipamentList::add);
         assertTrue(mongoEquipamentList.isEmpty());
 
@@ -1244,6 +1279,7 @@ public abstract class EquipamentReactiveMongoRepositoryCoreTest {
         .expectNext(true)
         .expectComplete()
         .verify();
+
     }
 }
 ```
