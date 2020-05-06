@@ -29,6 +29,20 @@ En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'
       <groupId>cat.gencat.ctti</groupId>
       <artifactId>canigo.persistence.mongodb</artifactId>
       <version>${canigo.persistence.mongodb.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>bson</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>mongodb-driver-core</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>mongodb-driver-async</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 ```
 
@@ -69,27 +83,35 @@ Si l'aplicació està configurada amb Spring Boot és necessari afegir la depend
 
 ```xml
     <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        <exclusions>
-            <exclusion>
-              <artifactId>mongo-java-driver</artifactId>
-              <groupId>org.mongodb</groupId>
-            </exclusion>
-            <exclusion>
-              <artifactId>spring-boot-starter-logging</artifactId>
-              <groupId>org.springframework.boot</groupId>
-            </exclusion>
-        </exclusions>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-mongodb</artifactId>
+      <exclusions>
+        <exclusion>
+          <artifactId>org.springframework.boot</artifactId>
+          <groupId>spring-boot-starter-logging</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>mongodb-driver</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>mongo-java-driver</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
 ```
 
 Si es vol utilitzar Embeded Mongo per executar els tests és necessari afegir la dependencia:
 
 ```xml
+<mongodb.flapdoodle.embed.mongo.version>2.2.0</mongodb.flapdoodle.embed.mongo.version>
+<mongodb.jirutka.spring.version>1.3.1</mongodb.jirutka.spring.version>
+
     <dependency>
       <groupId>de.flapdoodle.embed</groupId>
       <artifactId>de.flapdoodle.embed.mongo</artifactId>
+      <version>${mongodb.flapdoodle.embed.mongo.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>mongo-java-driver</artifactId>
@@ -100,7 +122,7 @@ Si es vol utilitzar Embeded Mongo per executar els tests és necessari afegir la
     <dependency>
       <groupId>cz.jirutka.spring</groupId>
       <artifactId>embedmongo-spring</artifactId>
-      <version>1.3.1</version>
+      <version>${mongodb.jirutka.spring.version}</version>
       <exclusions>
         <exclusion>
           <artifactId>mongo-java-driver</artifactId>
@@ -117,25 +139,58 @@ https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-comp
 Així necessitem importar la següent dependència:
 
 ```xml
+<mongodb.driver.core.version>3.12.3</mongodb.driver.core.version>
+<mongodb.bson.version>3.12.3</mongodb.bson.version>
+
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongodb-driver-core</artifactId>
-      <version>3.12.3</version>
+      <version>${mongodb.driver.core.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>bson</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>bson</artifactId>
-      <version>3.12.3</version>
+      <version>${mongodb.bson.version}</version>
     </dependency>
 ```
 
 I si volem utilitzar les funcionalitats reactives:
 
 ```xml
+<mongodb.driver.async.version>3.12.3</mongodb.driver.async.version>
+<mongodb.reactor.core.version>3.3.4.RELEASE</mongodb.reactor.core.version>
+<mongodb.reactor.test.version>3.3.3.RELEASE</mongodb.reactor.test.version>
+
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>mongodb-driver-async</artifactId>
-      <version>3.12.3</version>
+      <version>${mongodb.driver.async.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>bson</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>mongodb-driver-core</artifactId>
+          <groupId>org.mongodb</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+      <version>${mongodb.reactor.core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-test</artifactId>
+      <version>${mongodb.reactor.test.version}</version>
     </dependency>
 ```
 
