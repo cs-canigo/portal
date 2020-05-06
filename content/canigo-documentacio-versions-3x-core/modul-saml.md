@@ -34,7 +34,7 @@ Un cop autenticat de forma satisfactòria l'usuari disposarà d'una asserció SA
 amb l'asserció SAML com a paràmetre codificat en Base64. Aquest Endpoint retorna un token JWT vàlid per a accedir als serveis REST de l'aplicació *Stateless* protegits.
 
 <br/>
-<div style="width:90%;margin:0 auto;"><img style="width: 70%; height: auto" src="/related/canigo/documentacio/modul-saml/diagrama-fluxe-saml-drawio.png" alt="Diagrama seqüencia SAML-GICAR-JWT" title="Diagrama seqüencia SAML-GICAR-JWT"></img></div>
+<div><img src="/related/canigo/documentacio/modul-saml/diagrama-fluxe-saml-drawio.png" alt="Diagrama seqüencia SAML-GICAR-JWT" title="Diagrama seqüencia SAML-GICAR-JWT"></img></div>
 
 ## Aplicació Bridge (Stateful)
 
