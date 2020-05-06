@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-19"
+date        = "2020-05-06"
 title       = "Plugin Canigó per a Eclipse"
 description = "Plugin d'eclipse per a generar una aplicació Canigó."
 sections    = "Canigó."
@@ -84,3 +84,50 @@ S'ha de prémer sobre el projecte, botó dret -> Canigó
 Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà l'opció a triar si es desitja utilitzar JWT, el provider de seguretat a utilitzar (Arxiu, BBDD o Gicar) i si es desitja utilitzar SAML
 
 ![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_4_add_modules_security.png)
+
+## Solució problemes coneguts
+
+### Problema "Possiblement els Archetypes no s'han instal·lat correctament"
+
+### Detall problema
+
+Una vegada instal·lat el plugin del eclipse, al intentar crear un projecte de tipus Canigó s'obté l'error "Error al executar maven. Possiblement els Archetypes no s'han instal·lat correctament"
+
+![](/related/canigo/documentacio/plugin-canigo/Error_archetypes_no_installat_correctament.png)
+
+Aquest error es produeix quan la instal·lació del maven o la seva configuració no està a la ruta habitual, <home_del_usuari>/.m2/
+
+El plugin de Canigó utilitza una llibreria per executar maven per a construir els projectes, i aquesta llibreria agafa com a ruta per trobar el settings.xml i el repository la variable "user.home" de la màquina virtual Java. Si s'utilitza l'entorn de desenvolupament aquesta variable ja punta correctament a la ubicació del settings.xml i del repository maven
+
+### Solució
+
+Per a solucionar aquest problema es necessari cambiar la variable "user.home" de la JVM dintre de l'Eclipse. 
+
+* Per això accedirem a Windows -> Preferences -> Java -> Installed JREs 
+
+![](/related/canigo/documentacio/plugin-canigo/Solucio_error_archetypes_no_installat_correctament_jre)
+
+* Seleccionarem la JRE en ús i editarem: 
+
+![](/related/canigo/documentacio/plugin-canigo/Solucio_error_archetypes_no_installat_correctament_jre_utilitzada.png)
+
+* Agregarem el següent argument a la JRE: -Duser.home=/path-maven: 
+
+![](/related/canigo/documentacio/plugin-canigo/Solucio_error_archetypes_no_installat_correctament_afegir_variable.png)
+
+ON /path-maven és el path és la ruta base on está la configuració (settings.xml) i repositori (repository) de maven amb la següent estructura:
+
+```
+/path-maven
+    /-- .m2
+        /-- settings.xml (amb el nexus del sic)
+        /-- repository
+            /-- ...
+```
+
+Encara que les imatges són de una màquina amb Linux, també aplica per a màquines Windows
+
+Ja es pot tornar a provar la creació d'un projecte de tipus Canigó
+
+
+
