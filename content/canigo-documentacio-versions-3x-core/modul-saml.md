@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-27"
+date        = "2020-05-06"
 title       = "Mòdul Seguretat SAML"
 description = "Autenticació d'usuaris utilitzant SAML2"
 sections    = "Canigó. Documentació versió 3.x"
