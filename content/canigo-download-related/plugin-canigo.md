@@ -95,9 +95,9 @@ Una vegada instal·lat el plugin del eclipse, al intentar crear un projecte de t
 
 ![](/related/canigo/documentacio/plugin-canigo/Error_archetypes_no_installat_correctament.png)
 
-Aquest error es produeix quan la instal·lació del maven o la seva configuració no està a la ruta habitual, <home_del_usuari>/.m2/
+Aquest error es produeix quan l'instal·lació del maven o la seva configuració no està a la ruta habitual, < home_del_usuari >/.m2/
 
-El plugin de Canigó utilitza una llibreria per executar maven per a construir els projectes, i aquesta llibreria agafa com a ruta per trobar el settings.xml i el repository la variable "user.home" de la màquina virtual Java. Si s'utilitza l'entorn de desenvolupament aquesta variable ja punta correctament a la ubicació del settings.xml i del repository maven
+El plugin de Canigó utilitza una llibreria per executar maven per a construir els projectes, i aquesta llibreria agafa com a ruta per trobar el settings.xml i el repository la variable "user.home" de la màquina virtual Java. Si s'utilitza l'entorn de desenvolupament aquesta variable ja apunta correctament a la ubicació del settings.xml i del repository maven
 
 ### Solució
 
@@ -105,7 +105,7 @@ Per a solucionar aquest problema es necessari cambiar la variable "user.home" de
 
 * Per això accedirem a Windows -> Preferences -> Java -> Installed JREs 
 
-![](/related/canigo/documentacio/plugin-canigo/Solucio_error_archetypes_no_installat_correctament_jre)
+![](/related/canigo/documentacio/plugin-canigo/Solucio_error_archetypes_no_installat_correctament_jre.png)
 
 * Seleccionarem la JRE en ús i editarem: 
 
@@ -125,9 +125,8 @@ ON /path-maven és el path és la ruta base on está la configuració (settings.
             /-- ...
 ```
 
-Encara que les imatges són de una màquina amb Linux, també aplica per a màquines Windows
+Encara que les imatges són d'una màquina amb Linux, també aplica per a màquines Windows
 
-Ja es pot tornar a provar la creació d'un projecte de tipus Canigó
 
 
 
