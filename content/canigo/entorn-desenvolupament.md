@@ -1,6 +1,6 @@
 +++
 date        = "2015-11-18"
-lastmod     = "2019-12-09"
+lastmod     = "2020-05-07"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
