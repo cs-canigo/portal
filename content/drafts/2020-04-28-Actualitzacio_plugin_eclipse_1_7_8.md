@@ -2,7 +2,7 @@
 date        = "2020-04-28"
 title       = "Canigó. Actualització plugin eclipse 1.7.8"
 description = "S'ha publicat una nova versió del plugin del eclipse de Canigó per modificar projectes afegint el mòdul de Mongodb 2.3.0"
-sections    = ["Notícies", "home"]
+#sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "GENER2020"
 +++
