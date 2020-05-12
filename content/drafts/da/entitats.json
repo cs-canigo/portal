@@ -461,7 +461,7 @@
 [
 "Consolidat",
 "Territori",
-"Paisos_Correspondiencies",
+"Paisos_Correspondencies",
 "Llista única de tots els països i territoris que apareixen en els estàndards: 3166-1 (Alfa2 i Alfa3), INE, UNSD i Eurostat (A2 i N3) amb la correspondència sobre cada un d'ells. Atès que hi ha territoris que no apareixen en algunes de les geonomenclatures, l'assignació del codi corresponent en aquestes geonomenclatures és el del país (Estat sobirà) del qual formen part.",
 "dtarq137",
 "Territori",
