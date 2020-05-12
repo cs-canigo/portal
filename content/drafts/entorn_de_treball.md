@@ -98,9 +98,9 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
   * **0.1.4.3 Auditoria** Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
   * **0.1.4.4 Disponibilitat, confidencialitat i integritat de les dades**, d'acord amb els requeriments de l'Agència de Ciberseguretat.
 
-* **0.1.4 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de negoci.
+* **0.1.5 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de negoci.
 
-* **0.1.5 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s'han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l'impacte d'aquests canvis en el marc d'interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i aplicatiu. 
+* **0.1.6 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s'han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l'impacte d'aquests canvis en el marc d'interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i aplicatiu. 
 
 &nbsp;
 &nbsp;
