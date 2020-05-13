@@ -581,7 +581,7 @@
 "Consolidat",
 "Territori",
 "Països Mapeig",
-"Llista única formada per tots els països i territoris que apareixen en els estàndards: 3166-1 (Alfa2 i Alfa3), INE, UNSD i Eurostat (A2 i N3) amb el seu corresponent mapeig de codi i nom. En el cas que un país o territori no existeixi dins d'un estàndard, es posa el codi i valor del concepte \"No consta\".",
+"Llista única formada per tots els països i territoris que apareixen en els estàndards: 3166-1 (Alfa2 i Alfa3), INE, UNSD i Eurostat (A2 i N3) amb el seu corresponent mapeig de codi i nom sobre cada un d'ells. En el cas que un país o territori no existeixi dins d'un estàndard, es posa el codi i valor del concepte \"No consta\".",
 "dtarq138",
 "Territori",
 "Administració Pública",
