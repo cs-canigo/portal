@@ -100,7 +100,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
 //                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
-                "infoFiltered":   "",
+//                "infoFiltered":   "",
+                "infoFiltered":   "_END_ entitats",
                 "info": ""
         },
 	  "columns": [
@@ -147,8 +148,9 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
 //                "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
-                "infoFiltered":   "",
-                "info": ""
+//                "infoFiltered":   "",
+                "infoFiltered":   "_END_ entitats",
+               "info": ""
         },
 	  "columns": [
           { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
