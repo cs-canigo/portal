@@ -10,7 +10,7 @@ description = "S'ha publicat una nova versió del mòdul de Mongo de Canigó act
 ## Introducció
 
 Dins de l'abast de la **versió 3.4.4 el Framework Canigó s'ha alliberat una nova versió del mòdul de Mongo**, el qual té com a propòsit principal **gestionar l’execució d'operacions a una base de dades Mongodb**.
-Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, apartat Canigó 3.4.4(/canigo-download-related/release-notes-canigo-34).
+Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
 
 ## Novetats
 
