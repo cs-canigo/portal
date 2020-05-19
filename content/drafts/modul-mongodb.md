@@ -8,17 +8,15 @@ weight      = 3
 
 ## Propòsit
 
-El mòdul de MongoDB té com a propòsit gestionar l’accés i l’execució d'operacions a una base de dades MongoDB.
-Aquest mòdul utilitza _Spring Data MongoDB_ i _QueryDSL_:
-
-* [Spring Data Mongo](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
-* [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
+El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’execució d'operacions a una base de dades MongoDB.
+Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
+i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
 A partir de la versió 3.4 de Canigó, es proporcionen les fuuncionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
-Per tal d'instal·lar el Mòdul de MongoDB es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
+Per tal d'instal·lar el mòdul de MongoDB es pot optar per incloure’l automàticament a través de l'eina de suport al desenvolupament o bé afegir
 manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```xml
@@ -134,7 +132,7 @@ Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir la 
 
 <br/>
 Per a utilitzar les funcionalitats de Mongodb 4.2, serà necessari utilitzar la versió 3.12.3 o superior de *mongodb-driver-core*
-(https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility) caldrà afegir la següent dependència:
+(https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility) i caldrà afegir la següent dependència:
 
 ```xml
     <mongodb.driver.core.version>3.12.3</mongodb.driver.core.version>
@@ -158,7 +156,7 @@ Per a utilitzar les funcionalitats de Mongodb 4.2, serà necessari utilitzar la 
 ```
 
 <br/>
-I, finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
+Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
 
 ```xml
     <mongodb.driver.async.version>3.12.3</mongodb.driver.async.version>
@@ -194,7 +192,7 @@ I, finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir l
 ## Configuració
 
 La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament.
-Només en cas de no utilitzar-la caldrà realitzar manualment configuració que es descriu a continuació.
+Només en cas de no utilitzar-la, caldrà realitzar manualment configuració que es descriu a continuació.
 
 ### No reactiu
 
@@ -491,10 +489,10 @@ Es poden utilitzar les utilitzats de **cat.gencat.ctti.canigo.arch.persistence.c
    Predicate = builder.build();
 ```
 
-_String filter_ ha de seguir el patró: **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN** on.
+_String filter_ ha de seguir el patró: **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN** on:
 
-- _Field_ és el nom d'una propietat de l'entitat (per exemple “id”) ,
-- _Operador_ és un dels tipus d'operador suportats,
+- _Field_ és el nom d'una propietat de l'entitat (per exemple “id”)
+- _Operador_ és un dels tipus d'operador suportats
 
 Operador | Descripció
 --------- | --------
@@ -507,7 +505,7 @@ Operador | Descripció
 
 - _Valor_ és el valor amb el qual es vol comparar
 
-Per exemple, per a cercar l'entitat que tingui _id_ major que 15 i amb nom igual a “Prova”: el filtre hauria de ser _id>15,nom:Prova_.
+Per exemple, per a cercar l'entitat que tingui _id_ major que 15 i amb nom igual a “Prova”, el filtre hauria de ser **id>15,nom:Prova**.
 
 Per a més informació podeu consultar la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
@@ -599,12 +597,10 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.EquipamentMong
 
 /**
  * Test cases for the {@link EquipamentMongoRepository}.
- *
  * @author cscanigo
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public abstract class EquipamentMongoRepositoryCoreTest {
-
    protected static final String MUNICIPI_DESC_SORT = Direction.DESC + MongoEquipament.MUNICIPI;
 
    /** repository. */
@@ -1276,7 +1272,6 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentReactive
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = { AppConfig.class, EquipamentReactiveMongoConfig.class })
 public class EquipamentReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
-
 }
 ```
 
