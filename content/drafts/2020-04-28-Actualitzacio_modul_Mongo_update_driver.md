@@ -17,12 +17,10 @@ Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, aparta
 ## Novetats
 
 La principal novetat que proporciona aquesta actualització del mòdul és l'actualització de la versió del driver de MongoDB a la versió 3.12.3
-per a poder utilitzar les funcionalitats de la versió 4.2 de MongoDB.
-
-Podeu consultar la relació de versions del driver i de MongoDB a:
+per a poder utilitzar les funcionalitats de la versió 4.2 de MongoDB. Podeu consultar la relació de versions del driver i de MongoDB a:
 https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility.
 
-
+<br/>
 Les principals novetats de la versió 4.2 de MongoDB són:
 
 * Transaccions distribuïdes
@@ -43,10 +41,9 @@ Les principals novetats de la versió 4.2 de MongoDB són:
 * Optimització de la construcció d'índexs
 * Actualització de Procedures
 
-Podeu consultar el detall de les novetats a:
-https://docs.mongodb.com/manual/release-notes/4.2
+Podeu consultar el detall de les novetats a: https://docs.mongodb.com/manual/release-notes/4.2.
 
 ## Documentació del mòdul
 
 Per a obtenir més informació del Mòdul de MongoDB podeu consultar la documentació
-del [Mòdul de MongoDB](canigo-documentacio-versions-3x-core/modul-mongodb/) al Portal de Frameworks i Solucions d’Arquitectura.
+del [Mòdul de MongoDB](/canigo-documentacio-versions-3x-core/modul-mongodb/) al Portal de Frameworks i Solucions d’Arquitectura.
