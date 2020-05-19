@@ -9,7 +9,7 @@ weight      = 1
 #### Canigó 3.4.4 (29/06/2020)
 - [Autorització mòdul Mongodb] (/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
 	- Publicat. Actualització del mòdul de Mongodb per utilitzar el driver de Mongo compatible amb la versió 4.2 de Mongodb.
-- [Revisió regles SonarQube mòduls core Canigó] ()
+- Revisió regles SonarQube mòduls core Canigó
 	- Pendent publicació. Revisió de les regles de SonarQube als mòduls core de Canigó.	
   
 #### Canigó 3.4.3 (26/03/2020)
