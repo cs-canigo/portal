@@ -6,11 +6,11 @@ sections    = "Canigó"
 weight      = 1
 +++
 
-#### Canigó 3.4.4 (29/06/2020)
-- [Autorització mòdul Mongodb] (/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
-	- Publicat. Actualització del mòdul de Mongodb per utilitzar el driver de Mongo compatible amb la versió 4.2 de Mongodb.
+#### Canigó 3.4.4 (30/06/2020)
+- [Actualització mòdul MongoDB] (/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
+	- Actualització del mòdul de MongoDB per a utilitzar el _driver_ de MongoDB compatible amb la versió 4.2 de MongoDB.
 - Revisió regles SonarQube mòduls core Canigó
-	- Pendent publicació. Revisió de les regles de SonarQube als mòduls core de Canigó.	
+	- Pendent de publicació. Revisió de les regles de SonarQube als mòduls core de Canigó.
   
 #### Canigó 3.4.3 (26/03/2020)
 - [Autorització GICAR a Canigó amb SAML] (/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/)
