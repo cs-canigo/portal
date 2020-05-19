@@ -18,12 +18,11 @@ per a utilitzar el driver de Mongo 2.13.3 compatible amb Mongodb 4.2.
 
 ## Novetats
 
-Apareix una nova versió 1.7.8 del _plugin_ en seleccionar l'opció mòdul de persistència > Mongodb module:
+La nova versió 1.7.8 del _plugin_, en seleccionar l'opció mòdul de persistència anomenada **Mongodb module** adaptarà el
+projecte utilitzant la versió 2.3.0 del mòdul de Mongodb de Canigó, que utilitza la versió 2.13.3 del driver
+de Mongo per a utilitzar les funcionalitats de la versió 4.2 de Mongodb.
 
 ![](/images/news/Plugin_1.7.8_add_mongodb_module.png)
-
-Es modificarà el projecte utilitzant la versió 2.3.0 del mòdul de Mongodb de Canigó, que utilitza la versió 2.13.3 del driver
-de Mongo per a utilitzar les funcionalitats de la versió 4.2 de Mongodb.
 
 Per tal d’instal·lar o actualitzar la versió del _plugin_ és necessari seguir els passos descrits a la secció "Instal·lació"
 del [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/#instal-lació).

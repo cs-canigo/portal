@@ -8,14 +8,13 @@ weight      = 3
 
 ## Propòsit
 
-El mòdul de MongoDB té com a propòsit gestionar l’accés i l’execució d'operacions a una base de dades MongoDB. Aquest mòdul utilitza _Spring Data MongoDB_ i _QueryDSL_.
-
-Podeu consultar la documentació de referència d’aquests Frameworks:
+El mòdul de MongoDB té com a propòsit gestionar l’accés i l’execució d'operacions a una base de dades MongoDB.
+Aquest mòdul utilitza _Spring Data MongoDB_ i _QueryDSL_:
 
 * [Spring Data Mongo](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
 * [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
-A partir de la versió 3.4 de Canigó, s'ha proporcionat les funcionalitats de reactiu per MongoDB.
+A partir de la versió 3.4 de Canigó, es proporcionen les fuuncionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
@@ -134,10 +133,8 @@ Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir la 
 ```
 
 <br/>
-Per a utilitzar les funcionalitats de Mongodb 4.2, és necessari utilitzar la versió 3.12.3 o superior de *mongodb-driver-core*.
-Podeu consultar: https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility.
-
-Caldrà, per tant, afegir la següent dependència:
+Per a utilitzar les funcionalitats de Mongodb 4.2, serà necessari utilitzar la versió 3.12.3 o superior de *mongodb-driver-core*
+(https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility) caldrà afegir la següent dependència:
 
 ```xml
     <mongodb.driver.core.version>3.12.3</mongodb.driver.core.version>
@@ -161,7 +158,7 @@ Caldrà, per tant, afegir la següent dependència:
 ```
 
 <br/>
-I, finalment, si volem utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
+I, finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
 
 ```xml
     <mongodb.driver.async.version>3.12.3</mongodb.driver.async.version>
@@ -197,11 +194,12 @@ I, finalment, si volem utilitzar les funcionalitats reactives, caldrà afegir la
 ## Configuració
 
 La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament.
-Només en cas de no utilitzar-la, caldrà realitzar manualment configuració que es descriu a continuació.
+Només en cas de no utilitzar-la caldrà realitzar manualment configuració que es descriu a continuació.
 
 ### No reactiu
 
 Fitxer: **mongodb.properties**
+<br/>
 Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties`.
 
 Propietat | Requerit | Descripció
@@ -216,12 +214,13 @@ Propietat | Requerit | Descripció
 
 <br/>
 Fitxer: **MongoConfig.java**
+<br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
 
 Cal estendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig** i
-es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer, podeu afegir els _listeners_ de les diferents entitats de MongoDB:
+es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer,
+podeu afegir també els _listeners_ de les diferents entitats de MongoDB.
 
-<br/>
 Un exemple de configuració seria el següent:
 
 ```java
@@ -267,14 +266,14 @@ public class EquipamentMongoConfig extends MongoCoreConfig {
 }
 ```
 
-On s'està redefinit el socket timeout de la connexió a 2000 ms i s'està enregistrant el listener _cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener_.
+On s'està redefinint el socket timeout de la connexió a 2000 ms i s'està registrant el listener _cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener_.
 
-<br/>
-Per més informació sobre les configuracions podeu consultar: http://api.mongodb.com/java/current/com/mongodb/MongoClientOptions.html.
+Per a més informació sobre les configuracions podeu consultar: http://api.mongodb.com/java/current/com/mongodb/MongoClientOptions.html.
 
 ### Reactiu
 
-Fitxer: ** mongodb.properties **
+Fitxer: **mongodb.properties**
+<br/>
 Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.properties`.
 
 Propietat | Requerit | Descripció
@@ -283,12 +282,13 @@ Propietat | Requerit | Descripció
 
 <br/>
 Fitxer: **ReactiveMongoConfig.java**
+<br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
 
 Cal estendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig** i
-es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer, podeu afegir els _listeners_ de les diferents entitats de MongoDB:
+es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer,
+podeu afegir també els _listeners_ de les diferents entitats de MongoDB.
 
-<br/>
 Un exemple de configuració seria el següent:
 
 ```java
@@ -327,15 +327,15 @@ public class EquipamentReactiveMongoConfig extends ReactiveMongoCoreConfig {
 }
 ```
 
-On s'està redefinint el socket timeout de la connexió a 2000 ms i s'està enregistrant el listener _cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener_.
+On s'està redefinint el socket timeout de la connexió a 2000 ms i s'està registrant el listener _cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener_.
 
 ## Entitats
 
-Per tal de definir les entitats de MongoDB és necessari utilitzar les _annotations_ de JSR 380, Spring Data i Spring Data MongoDB. Per a més informació, podeu consultar:
+Per tal de definir les entitats de MongoDB serà necessari utilitzar les _annotations_ de _JSR 380_, _Spring Data_ i _Spring Data MongoDB_. Per a més informació, podeu consultar:
 
-* https://docs.oracle.com/javaee/7/api/javax/validation/package-summary.html
-* https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
-* https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/
+* Package javax.validation: https://docs.oracle.com/javaee/7/api/javax/validation/package-summary.html
+* Package org.springframework.data.annotation: https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
+* Spring Data MongoDB: https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/
 
 Un exemple d'entitat seria la següent:
 
@@ -410,14 +410,14 @@ public class MongoEquipamentListener extends AbstractMongoEventListener<MongoEqu
 }
 ```
 
-On s'està definint per a generar identificadors únics a l’entitat _MongoEquipament_.
+On s'està aplicant una assignació d'identificadors únics a l’entitat _MongoEquipament_.
 
 ## Repositoris
 
 ### No reactiu
 
 Per a utilitzar els repositoris s'ha de generar un objecte _MongoRepository_ per a l'entitat desitjada(T), que ha d'estendre de
-**cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository<T, ID extends Serializable>**
+**cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository<T, ID extends Serializable>**.
 
 Un exemple de repositori seria el següent:
 
@@ -444,7 +444,7 @@ public interface EquipamentMongoRepository extends MongoGenericRepository<MongoE
 }
 ```
 
-A un repositori es poden crear mètodes per a cada query que es vulgui definir. La construcció utilitza la convenció de prefixos
+A un repositori es poden crear mètodes per a cada query que es vulgui definir. La construcció utilitza els prefixos
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
@@ -453,8 +453,14 @@ Per a més informació, podeu consultar la documentació oficial de [Spring Data
 <br/>
 #### Utilització de QueryDSL
 
-Es proposa utilitzar _QueryDSL_ per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació. _MongoGenericRepository_ proporciona els següents mètodes:
+Una de les funcionalitats proposades és la d'utilitzar _QueryDSL_ per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.
 
+<div class="message information">
+QueryDSL està enfocat a bases de dades relacionals. A partir de la versió 3.4 de Canigó s'han deprecat els mètodes de
+"cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository" i es recomana no utilitzar-los.
+</div>
+
+_MongoGenericRepository_ proporciona els següents mètodes:
 
 ```java
    Page<T> findAll(Predicate predicate, Pageable pageable, Path<?>... paths);
@@ -464,9 +470,9 @@ Es proposa utilitzar _QueryDSL_ per a realitzar cerques segons filtres dinàmics
 
 Aquests mètodes esperen un objecte _Predicate_ amb la _query_ que es vol realitzar, un objecte _org.springframework.data.domain.Pageable_ que conté
 el número de pàgina (la primera és la 0), el nombre d'elements per pàgina, la direcció d'ordenació i el camp d'ordenació;
-i un objecte _Path_ o _FactoryExpression_ on s'indica la informació que es vol retornar.
+i un objecte _Path_ o _FactoryExpression_ on s'indica la informació de retorn.
 
-Un exemple seria el següent:
+Un exemple d'ús seria el següent:
 
 ```java
 List<MongoEquipament> mongoEquipamentList = repository.findAll(QMongoEquipament.mongoEquipament.nom.isNotNull().and(QMongoEquipament.mongoEquipament.nom.isNotEmpty())
@@ -476,7 +482,7 @@ List<MongoEquipament> mongoEquipamentList = repository.findAll(QMongoEquipament.
             new PageRequest(0, 10), paths).getContent();
 ```
 
-Es poden utilitzar les utilitzats de **cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder** per a generar el _Predicate_. Per exemple:
+Es poden utilitzar les utilitzats de **cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder** per a generar el _Predicate_ com per exemple:
 
 ```java
     GenericPredicateBuilder<MongoEquipament> builder = new GenericPredicateBuilder<MongoEquipament>(
@@ -485,10 +491,10 @@ Es poden utilitzar les utilitzats de **cat.gencat.ctti.canigo.arch.persistence.c
    Predicate = builder.build();
 ```
 
-On el _String filter_ ha de seguir el patró: **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN**.
+_String filter_ ha de seguir el patró: **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN** on.
 
-- on _Field_ és el nom d'una propietat de l'entitat (per exemple “id”) ,
-- on _Operador_ és un dels tipus d'operador suportats,
+- _Field_ és el nom d'una propietat de l'entitat (per exemple “id”) ,
+- _Operador_ és un dels tipus d'operador suportats,
 
 Operador | Descripció
 --------- | --------
@@ -499,21 +505,16 @@ Operador | Descripció
 <> | diferent de
 : | igual que
 
-- i on _Valor_ és el valor amb el qual es vol comparar
+- _Valor_ és el valor amb el qual es vol comparar
 
-Per exemple, per a cercar l'entitat que tingui _id_ major que 15 i amb nom igual a “Prova” el filtre hauria de : _id>15,nom:Prova_.
+Per exemple, per a cercar l'entitat que tingui _id_ major que 15 i amb nom igual a “Prova”: el filtre hauria de ser _id>15,nom:Prova_.
 
 Per a més informació podeu consultar la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
-<div class="message information">
-QueryDSL està enfocat a bases de dades relacionals. A partir de la versió 3.4 de Canigó s'han deprecat els mètodes de
-"cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository" i es recomana no utilitzar-los.
-</div>
-
 ### Reactiu
 
-Per a utilitzar els repositoris s'ha de generar un objecte _ ReactiveMongoRepository _ per a l'entitat desitjada(T), que ha d'estendre de
-** org.springframework.data.mongodb.repository.ReactiveMongoRepository<T, ID>**
+Per a utilitzar els repositoris s'ha de generar un objecte _ReactiveMongoRepository_ per a l'entitat desitjada(T), que ha d'estendre de
+**org.springframework.data.mongodb.repository.ReactiveMongoRepository<T, ID>**.
 
 Un exemple de repositori seria el següent:
 
@@ -548,12 +549,11 @@ public interface EquipamentReactiveMongoRepository extends ReactiveMongoReposito
 }
 ```
 
-A un repositori es poden crear mètodes per a cada query que es vulgui definir. La construcció utilitza els prefixos _find...By,
-read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
+A un repositori es poden crear mètodes per a cada query que es vulgui definir. La construcció utilitza els prefixos
+_find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB]
-(https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
 
 ## Test
 
@@ -568,16 +568,13 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-
 import javax.inject.Inject;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -589,14 +586,12 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.domain.Sort.Order;
 import org.springframework.data.querydsl.QSort;
-
 import com.querydsl.core.types.Expression;
 import com.querydsl.core.types.OrderSpecifier;
 import com.querydsl.core.types.Path;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 import com.querydsl.core.types.dsl.BooleanExpression;
-
 import cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.model.MongoEquipament;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.model.QMongoEquipament;
@@ -904,7 +899,6 @@ public abstract class EquipamentMongoRepositoryCoreTest {
          mongoEquipament.setMunicipi(text + i);
          repository.save(mongoEquipament);
       }
-
       Integer page = 1;
       Integer rpp = 10;
       String sort = MUNICIPI_DESC_SORT;
@@ -919,7 +913,6 @@ public abstract class EquipamentMongoRepositoryCoreTest {
 
    /**
     * Find paginated paths.
-    *
     * @param page
     *            page
     * @param rpp
@@ -935,28 +928,21 @@ public abstract class EquipamentMongoRepositoryCoreTest {
    @SuppressWarnings("deprecation")
    protected Page<MongoEquipament> findPaginatedPaths(final Integer page, final Integer rpp, final String sort,
          final String filter, final String fields) {
-
       Predicate predicate = getPredicate(filter);
-
       Pageable pageable = new PageRequest(page - 1, rpp, getOrdenacio(sort));
-
       List<Path<?>> listFields = getListFields(fields);
-
       return repository.findAll(predicate, pageable, listFields);
    }
 
    /**
     * Obté list fields.
-    *
     * @param fields
     *            fields
     * @return list fields
     */
    private List<Path<?>> getListFields(String fields) {
       QMongoEquipament qmongoequipament = QMongoEquipament.mongoEquipament;
-
       List<Path<?>> listFields = new ArrayList<>();
-
       if (fields != null && !fields.equals("")) {
          String[] selectedFields = fields.split(",");
          for (int i = 0; i < selectedFields.length; i++) {
@@ -976,13 +962,11 @@ public abstract class EquipamentMongoRepositoryCoreTest {
             }
          }
       }
-
       return listFields;
    }
 
    /**
     * Obté predicate.
-    *
     * @param filter
     *            filter
     * @return predicate
@@ -996,7 +980,6 @@ public abstract class EquipamentMongoRepositoryCoreTest {
 
    /**
     * Find paginated path id.
-    *
     * @param page
     *            page
     * @param rpp
@@ -1011,15 +994,12 @@ public abstract class EquipamentMongoRepositoryCoreTest {
    protected Page<MongoEquipament> findPaginatedPathId(final Integer page, final Integer rpp, final String sort,
          final String filter) {
       Predicate predicate = getPredicate(filter);
-
       Pageable pageable = new PageRequest(page - 1, rpp, getOrdenacio(sort));
-
       return repository.findAll(predicate, pageable, QMongoEquipament.mongoEquipament.id);
    }
 
    /**
     * Find paginated factory expression.
-    *
     * @param page
     *            page
     * @param rpp
@@ -1048,7 +1028,6 @@ public abstract class EquipamentMongoRepositoryCoreTest {
 
    /**
     * Obté ordenacio.
-    *
     * @param sort
     *            sort
     * @return ordenacio
@@ -1087,7 +1066,6 @@ configuració de MongoDB en el nostre test:
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import cat.gencat.ctti.config.AppConfig;
 import cat.gencat.ctti.mongodb.config.EquipamentMongoConfig;
 import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
@@ -1184,7 +1162,6 @@ public class EmbeddedMongoAppConfig {
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 import cat.gencat.ctti.config.EmbeddedMongoAppConfig;
 import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
 
@@ -1197,7 +1174,7 @@ public class EquipamentEmbeddedMongoRepositoryTest extends EquipamentMongoReposi
 }
 ```
 
-Per més informació sobre [Embeded MongoDB] (https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
+Per a més informació, podeu consultar la documentació oficial de [Embeded MongoDB] (https://flapdoodle-oss.github.io/de.flapdoodle.embed.mongo/)
 
 ### Reactiu
 
@@ -1270,7 +1247,6 @@ public abstract class EquipamentReactiveMongoRepositoryCoreTest {
         repository.deleteAll();
 
         Mono<Boolean> existsById = repository.existsById(mongoEquipament2.getId());
-
         StepVerifier
         .create(existsById)
         .expectNext(true)
@@ -1290,13 +1266,11 @@ configuració de MongoDB en el nostre test:
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.AppConfig;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentReactiveMongoConfig;
 
 /**
  * Class EquipamentReactiveMongoRepositoryTest.
- *
  * @author cscanigo
  */
 @RunWith(SpringRunner.class)
@@ -1349,15 +1323,12 @@ public class EquipamentEmbeddedReactiveMongoConfig extends EquipamentReactiveMon
 ```java
 import java.io.IOException;
 import java.net.InetAddress;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
-
 import com.mongodb.reactivestreams.client.MongoClient;
 import com.mongodb.reactivestreams.client.MongoClients;
-
 import de.flapdoodle.embed.mongo.Command;
 import de.flapdoodle.embed.mongo.MongodExecutable;
 import de.flapdoodle.embed.mongo.MongodProcess;
@@ -1397,7 +1368,6 @@ public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient
 
     /**
      * Obté object.
-     *
      * @return object
      * @throws IOException senyala que una excepció I/O s'ha produït.
      */
@@ -1426,7 +1396,6 @@ public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient
 
     /**
      * Obté object type.
-     *
      * @return object type
      */
     @Override
@@ -1436,7 +1405,6 @@ public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient
 
     /**
      * Inicialitza mongo server.
-     *
      * @throws IOException senyala que una excepció I/O s'ha produït.
      */
     private synchronized void initMongoServer() throws IOException {
@@ -1444,14 +1412,12 @@ public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient
                 .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).configServer(false).build();
         final IRuntimeConfig runtimeConfig = new RuntimeConfigBuilder().defaults(Command.MongoD).build();
         final MongodStarter runtime = MongodStarter.getInstance(runtimeConfig);
-
         mongodExecutable = runtime.prepare(mongodConfig);
         mongoProcess = mongodExecutable.start();
     }
 
     /**
      * Obté port.
-     *
      * @return port
      */
     private static int getPort() {
@@ -1471,7 +1437,6 @@ Per a utilitzar la configuració amb _Embeded MongoBD_ en un test si no hem impo
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.AppConfig;
 import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.EquipamentEmbeddedReactiveMongoConfig;
 
@@ -1486,7 +1451,7 @@ public class EquipamentEmbeddedReactiveMongoRepositoryTest extends EquipamentRea
 }
 ```
 
-O bé es pot optar per crear un nou _AppConfig_ important el _EquipamentEmbeddedReactiveMongoConfig_ i carregar-lo al test:
+O optar per crear un nou _AppConfig_ important el _EquipamentEmbeddedReactiveMongoConfig_ i carregar-lo al test:
 
 ```java
 import org.springframework.context.annotation.Configuration;
@@ -1494,7 +1459,6 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import cat.gencat.ctti.mongodb.config.EquipamentEmbeddedReactiveMongoConfig;
 
 @Configuration
@@ -1532,13 +1496,14 @@ import cat.gencat.ctti.mongodb.model.repository.EquipamentMongoRepository;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = { EmbeddedReactiveMongoAppConfig.class})
 public class EquipamentEmbeddedReactiveMongoRepositoryTest extends EquipamentReactiveMongoRepositoryCoreTest {
-
 }
 ```
 
 ## Logs
-Si es considera necessari el pintat de les consultes realitzades pel mòdul a la base de dades MongoDB, es pot afegir
-un "logger" per a la categoria "org.springframework.data.mongodb.core.MongoTemplate" al fitxer "log4j" de l'aplicació. Per exemple:
+Si es requereix el pintat de les consultes realitzades pel mòdul a la base de dades MongoDB, es pot afegir
+un "logger" per a la categoria **org.springframework.data.mongodb.core.MongoTemplate** al fitxer "log4j" de l'aplicació.
+
+Per exemple:
 
 ```xml
       <Logger name="org.springframework.data.mongodb.core.MongoTemplate" level="debug" additivity="false">
