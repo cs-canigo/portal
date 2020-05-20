@@ -202,7 +202,7 @@ Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.pro
 
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
-*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació http://api.mongodb.com/java/current/com/mongodb/MongoClientURI.html
+*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientURI.html
 *.mongodb.host | No | Requerit si no està definida la propietat mongodb.uri. Host de la connexió amb la BD MongoDB
 *.mongodb.port | No | Requerit si no està definida la propietat mongodb.uri. Port de la connexió amb la BD MongoDB
 *.mongodb.database | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD de la connexió amb la BD MongoDB
