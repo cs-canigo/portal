@@ -12,7 +12,7 @@ El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’exec
 Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
 i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
-A partir de la versió 3.4 de Canigó, es proporcionen les fuuncionalitats de reactiu per MongoDB.
+A partir de la versió 3.4 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
