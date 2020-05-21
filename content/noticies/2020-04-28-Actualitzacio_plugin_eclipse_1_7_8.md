@@ -1,7 +1,7 @@
 +++
 date        = "2020-05-21"
-title       = "Canigó. Actualització plugin Eclipse 1.7.8"
-description = "S'ha publicat una nova versió del plugin de l’Eclipse de Canigó per a modificar projectes afegint el mòdul de Mongodb 2.3.0"
+title       = "Canigó. Actualització archetype 1.6.6 i actualització plugin Eclipse 1.7.8"
+description = "S'ha publicat una nova versió de l’arquetipus i del plugin del eclipse de Canigó per a modificar projectes afegint el mòdul de Mongodb 2.3.0"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "GENER2020"
@@ -9,10 +9,9 @@ categories  = ["canigo"]
 
 ## Introducció
 
+Dins dels lliurables de Canigó hi consten l’*archetype* i el *plugin* de l’Eclipse.
 Seguint l'objectiu del Centre de Suport Canigó de proporcionar als desenvolupadors el màxim d'eines útils per a la creació de
-projectes dins el marc de treball, s'ha actualitzat el _plugin_ de l'Eclipse per a modificar projectes afegint el mòdul de
-Mongodb 2.3.0. Podeu consultar l'abast complet a les [Release Notes, apartat Canigó 3.4.4]
-(/canigo-download-related/release-notes-canigo-34).
+projectes dins el marc de treball, s'ha actualitzat l’*archetype* i el *plugin* de l'Eclipse per a modificar projectes afegint el mòdul de Mongodb 2.3.0. Podeu consultar l'abast complet a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
 
 Aquest plugin de l’Eclipse és un connector desenvolupat a mida que afegeix menús contextuals a l'IDE per a la
 creació de projectes Canigó utilitzant l’arquetipus Maven, encarregant-se de la incorporació de mòduls a un projecte amb
