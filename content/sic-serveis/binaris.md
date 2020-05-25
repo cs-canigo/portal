@@ -1,7 +1,7 @@
 +++
-date = "2019-02-22"
-title = "Binaris"
-description = "Eina del SIC pel lliurament d'artefactes a CPD"
+date = "2020-05-25"
+title = "Servei de Binaris"
+description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
 aliases = [
   "/noticies/2017-07-05-SIC-Gestio-binaris/"
@@ -13,57 +13,112 @@ weight = 3
 
 ## Introducció
 
-El sistema de gestió de **binaris del SIC** s'encarrega de:
+El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors de lots d’aplicacions i CPD per al lliurament i descarrega d’artefactes de cara al desplegament d’aplicacions.
 
-* Emmagatzemar els binaris que entreguen els Release Managers (o el sistema d'integració contínua per a entorns amb desplegament no automàtic) per  a deixar-los a disposició del CPD/LdT encarregat de desplegar-los.
-* Emmagatzemar els binaris i arxius pesats que no són permesos dins de GIT i que, per algun motiu, no es poden emmagatzemar al Nexus (material multimèdia pesat, binaris que no són dependències, etcètera) per a aplicacions que repositen codi font.
+<br/>
+Cobreix les següents funcions i requeriments del servei SIC:
 
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">Només es conservaran les últimes 5 versions per codi d'apliació i projecte, així com versions anteriors amb menys d'un mes de vida (30 dies).</span>
+* **Unificar** el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
+* **Potenciar la custodia de codi font** al SIC de les aplicacions
+* Fer ús d'un **únic repositori d’artefactes**, tant per llibreries com per artefactes desplegables
+* Reforçar el **compliment normatiu** en el versionat de les aplicacions
+* Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegament d’aplicacions
 
-## Funcionament
-
-### Accés al servei
+## Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://bin.sic.intranet.gencat.cat <br/>
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
-<br/>
-Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
-
-<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal.png)</center>
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20.png)</center>
 <br/>
 
-### Pujada d'artefactes
+Haurà d'autenticar-se amb de les seves credencials d'accés GICAR, de forma que:
 
-Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del procés de construcció, no es poden construir i desplegar mitjançant el servei d'integració contínua. <br/>
-Per a més informació: [Manual d'Integració](/related/sic/manual-integracio.pdf). <br/>
+* Els **Release Manager i responsables de lot** disposaran d'accés al servei de pujada de binaris i també a la descàrrega dels mateixos.
+* Els **tècnics de CPD i llocs de treball** només disposaran d’accés a la descàrrega de binaris.
 
-En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Dipositar artefactes al SIC**. <br/>
-Aquesta acció és únicament accessible per als lots d'aplicacions i redirigieix a l'usuari al job de Jenkins de pujada d'artefactes al SIC. Es tracta d'un mateix job per a tots els Release Managers de tots els lots. No registra traces amb informació sensible i transmet els links amb les ubicacions dels manuals i artefactes per correu electrònic a l'usuari que ha iniciat l'execució.
+En cas de no disposar d’accés haureu de fer ús de l'[Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/) i/o sol·licitar-ho al seu responsable.
 
-Aquest job sol·licita la següent informació:
+## Dipositar artefactes al SIC
 
-* **Codi d'aplicació**: número de 4 xifres que es correspon amb el codi de diàleg (obligatori).
-* **Projecte**: identificador del projecte (obligatori).
-* **Versió**: número de versió de lliurament (obligatori). **El codi de versió ha de complir la normativa establerta per l'Oficina de Qualitat respecte a la nomenclatura de versions. En breu el sistema comprovarà aquest requisit.** Per a més informació: [Estàndard de versions] (https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari)
-* **Arxiu de binaris**: arxiu de binaris que desitja dipositar (obligatori).
-* **Descomprimir ZIP**: indica si l'arxiu de binaris caldrà descomprimir-lo un cop pujat (per defecte, sí).
-* **Arxiu de documentació**: arxiu de documentació que desitja associar (opcional).
+Permet fer el **lliurament d'artefactes** mitjançant l'aplicació web. En la següent imatge s'explica el seu funcionament:
 
-El job validarà que el codi d'aplicació sigui vàlid i que l'usuari disposi dels corresponents permisos. Si s'especifica una combinació de codi d'aplicació, projecte i versió ja lliurada anteriorment, el sistema sobreescriurà el seu contingut.
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_2.png)</center>
 
 <br/>
-<span style="color: #C00000;font-weight: bold">AVÍS:</span> <span style="color: #C00000">El dia 24/01/2019 es va activar el mode restrictiu en la validació que la pujada d'un nou binari vingui acompanyada de l'actualització de la versió del codi font del projecte corresponent al Git.</span> Només estan exemptes les aplicacions que disposen d'una excepció aprovada en la custodia de codi.
+Aquest servei està destinat a aplicacions que, ja sigui per estar desenvolupades amb una tecnologia no suportada o per particularitats del
+procés de construcció, no es poden construir i desplegar mitjançant [Integració Contínua] (/sic-serveis/ci/). No obstant, també està pensat
+per a fer-ne ús com a **procediment de contingència** en el desplegament d’aplicacions.
 
-### Recuperació d'artefactes
+<br/>
+Es realitzen les següents comprovacions:
 
-En accedir al servei es mostra una pàgina de benvinguda amb l'acció **Recuperar artefactes del SIC**. <br/>
-Aquesta acció és accessible tant pels Release Managers de tots els lots com per a tots els administradors de tots els CPDS/LdT i serà utilitzada per CPD/LdT de cara al desplegament de les aplicacions. Aquests accediran al servei en mode lectura a través del frontal web.
+* Dades obligatòries informades: **codi de diàleg, projecte, versió i binari a pujar**
+* El codi de **versió** acompleix l’estàndard de versions
+* El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
+* Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
+* El fitxer té una **mida màxima de 500MB**. No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT
+doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
+<br/>
+En finalitzar la pujada es mostrarà per pantalla la llista de binaris lliurats i la URL de descàrrega associada. Aquesta llista mostrada es podrà utilitzar
+per tal d’emplenar la petició de desplegament.
+
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_3.png)</center>
+
+<br/>
+
+<div class="message information">
+Els artefactes pujats al repositori de binaris <b>podran ser sobreescrits</b> sempre i quan es proporcioni la mateixa
+informació al formulari de pujada (codi de diàleg, projecte, versió, nom fitxer). Per tant, en cas d'haver sol·licitat ja el desplegament del binari i haver
+emplenat la petició de desplegament, no serà necessari fer cap canvi doncs les URL's es mantenen operatives.
+</div>
+
+## Recuperar artefactes del SIC
+
+Permet la **descàrrega d'artefactes lliurats** pels responsables de l'aplicació per a procedir a fer el desplegament.
+Aquesta opció el dirigirà cap al repositori de binaris (al que també pot accedir mitjançant l'enllaç https://hudson.intranet.gencat.cat/nexus/#browse/browse:binaris) on
+podrà cercar l'entrada i l'artefacte que vol descarregar.
+O simplement pot fer ús de la **URL que el proveïdor d'aplicacions ha indicat a la petició** de desplegament per accedir a la descàrrega directa.
+
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_4.png)</center>
+
+Aquest servei és accessible per **Release Managers, responsables de lot i tècnics de CPD/LldT** en mode lectura, **no permetent pujar noves entrades, editar o eliminar**
+informació. S'ofereixen diverses opcions de cerca i visualització.
+
+<CENTER>![Binaris](/images/news/SIC-GestioBinarisPortal_20_5.png)</center>
+
+
+La **URL de descàrrega** seguirà el següent patró:
+```
+https://hudson.intranet.gencat.cat/nexus/repository/binaris/_codi_diàleg_/_projecte_/_versió_/_artefacte_
+```
+
+
+El sistema permet la consulta i descàrrega remota d’artefactes:
+
+```
+curl
+X GET [ u user:pwd ]
+"https://hudson.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" O
+curl
+X GET [ u user:pwd ]
+"https://hudson.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
+```
+
+<br/><br/>
+<div class="message information">
+<b>L'anterior sistema de descàrrega d'artefactes romandrà actiu fins el 30/04/2020</b>. Durant aquest període, es podrà seguir accedint mitjançant
+el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
+</div>
+
+<!---
 ## Eliminació de binaris
-
-S'executa un **procés diari nocturn** d'esborrat de binaris de forma que es respectaran únicament les últimes 5 versions repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris amb CPD/LdT per al desplegament d'aplicacions.
+S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi
+d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
+--->
 
 <br/><br/><br/>
+Podeu accedir al [**Material formatiu**](/related/sic/2.0/formacio-binaris-20.pdf). <br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o
+contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
