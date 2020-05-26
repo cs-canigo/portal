@@ -53,7 +53,7 @@ per a fer-ne ús com a **procediment de contingència** en el desplegament d’a
 Es realitzen les següents comprovacions:
 
 * Dades obligatòries informades: **codi de diàleg, projecte, versió i binari a pujar**
-* El codi de **versió** acompleix l’estàndard de versions
+* El codi de **versió** acompleix l’estàndard de versions: https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
 * El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
 * Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
 * El fitxer té una **mida màxima de 500MB**. No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT
