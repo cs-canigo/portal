@@ -6,23 +6,31 @@ sections    = "Canigó"
 weight      = 1
 +++
 
-#### Canigó 3.4.4 (30/06/2020)
-- [Actualització mòdul MongoDB] (/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
+#### Canigó 3.4.4 (09/06/2020)
+- [Actualització mòdul MongoDB](/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
 	- Actualització del mòdul de MongoDB per a utilitzar el _driver_ de Mongo compatible amb la versió 4.2 de MongoDB.
-- Revisió regles SonarQube mòduls core Canigó
-	- Pendent de publicació. Revisió de les regles de SonarQube als mòduls core de Canigó.
+- [Actualitzat el plugin de Canigó per utilitzar l'última versió del mòdul de Mongodb] (/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/)
+	- Actualització del _plugin_ de l'Eclipse de Canigó per utilitzar l'última versió del mòdul de MongoDB compatible amb la versió 4.2 de MongoDB.
+- [Revisió regles SonarQube mòduls core Canigó](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
+	- S'han revisat i resolt els problemes detectats per SonarQube als mòduls core de Canigó.	
+- Compresió token a mòdul Seguretat
+	- Actualització del mòdul de seguretat de Canigó per proporcionar la possibilitat de compresió del token JWT
+- Actualitzat el plugin de Canigó per utilitzar versions dels mòduls core Canigó revisats
+	- Actualització del _plugin_ de l'Eclipse de Canigó per utilitzar les versions dels mòduls core amb les correccions de l'anàlisis de SonarQube
   
 #### Canigó 3.4.3 (26/03/2020)
 - [Autorització GICAR a Canigó amb SAML] (/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/)
 	- Actualització del mòdul de seguretat SAML per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
 - [Revisió estat dels mòduls Canigó] (/noticies/2020-03-24-Revisio_estat_moduls_Canigo_3.4)
 	- Revisió de l'estat dels mòduls de Canigó, deprecant funcionalitats obsoletes i ampliant els testos dels mòduls.
+- [Actualitzat el plugin de Canigó per utilitzar l'última versió del mòdul de seguretat SAML] (/noticies/2020-03-24-Actualitzacio_Actualitzacio_archetype_1_6_5_plugin_eclipse_1_7_7/)	
+	- Actualització del _plugin_ de l'Eclipse de Canigó per utilitzar l'última versió del mòdul de seguretat SAML on ofereix la funcionalitat d’obtenció dels rols de l’usuari a través de GICAR (autorització).
 
 #### Canigó 3.4.2 (25/10/2019)
 
 - [Autorització GICAR a Canigó] (/noticies/2019-10-22-Actualitzacio_modul_Seguretat)
 	- Actualització del mòdul de seguretat per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
-- [Actualitzar el plugin de Canigó per a incloure nova opció seguretat autorització GICAR a Canigó] (/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
+- [Actualitzat el plugin de Canigó per a incloure nova opció seguretat autorització GICAR a Canigó] (/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
 	- Actualització del _plugin_ de l'Eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat.
 
 #### Canigó 3.4.1 (17/09/2019)
