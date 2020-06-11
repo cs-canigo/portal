@@ -24,6 +24,7 @@ afegir-l’hi els mòduls necessaris obtenint un projecte preparat per al marc d
 ## Novetats *archetype*
 
 La versió 1.6.7 de l’arquetipus de Canigó permet generar projectes amb Canigó 3.4.4, per això s'han modificat els rangs de versions dels següents mòduls:
+
 - canigo.core: [4.0.0,4.4.0)
 - canigo.operation.logging: [2.0.0,2.4.0)
 - canigo.persistence.jpa: [2.0.0,2.4.0)
