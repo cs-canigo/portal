@@ -102,7 +102,7 @@ Tenim disponibles els següents algoritmes de compressió a io.jsonwebtoken.Comp
 - [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): Algoritme per defecte. Compleix l'estandard [JWA](https://tools.ietf.org/html/rfc7518)
 - [GZIP](https://en.wikipedia.org/wiki/Gzip): No compleix l'estandard JWA. Si voleu utilitzar aquest algoritme comproveu que tots els sistemes ho suporten
 
-Així, si volem comprimir el token JWT amb GZIP ens cal:
+Així, si volem comprimir el token JWT amb DEFLATE ens cal:
 
 1. Definir al fitxer *security.properties* la següent propietat:
 ```
