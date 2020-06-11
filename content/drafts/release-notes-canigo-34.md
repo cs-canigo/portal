@@ -6,17 +6,17 @@ sections    = "Canigó"
 weight      = 1
 +++
 
-#### Canigó 3.4.4 (09/06/2020)
+#### Canigó 3.4.4 (11/06/2020)
 - [Actualització mòdul MongoDB](/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
 	- Actualització del mòdul de MongoDB per a utilitzar el _driver_ de Mongo compatible amb la versió 4.2 de MongoDB.
-- [Actualitzat el plugin de Canigó per utilitzar l'última versió del mòdul de Mongodb](/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/)
-	- Actualització del _plugin_ de l'Eclipse de Canigó per utilitzar l'última versió del mòdul de MongoDB compatible amb la versió 4.2 de MongoDB.
-- [Revisió regles SonarQube mòduls core Canigó](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
+- [Actualització archetype 1.6.6 i actualització plugin Eclipse 1.7.8](/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/)
+	- Actualització del archetype versió 1.6.6 i _plugin_ de l'Eclipse de Canigó versió 1.7.8 per utilitzar l'última versió del mòdul de MongoDB compatible amb la versió 4.2 de MongoDB.
+- [Revisió regles SonarQube mòduls core](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
 	- S'han revisat i resolt els problemes detectats per SonarQube als mòduls core de Canigó.	
-- Compresió token a mòdul Seguretat
+- [Actualització mòdul Seguretat](/noticies/2020-06-11-Actualitzacio_modul_Seguretat_compressio_token)
 	- Actualització del mòdul de seguretat de Canigó per proporcionar la possibilitat de compresió del token JWT
-- [Actualitzat el plugin de Canigó per utilitzar versions dels mòduls core Canigó revisats](/noticies/2020-06-11-Actualitzacio_Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9)
-	- Actualització del _plugin_ de l'Eclipse de Canigó per utilitzar les versions dels mòduls core amb les correccions de l'anàlisis de SonarQube
+- [Actualització archetype 1.6.7 i plugin eclipse 1.7.9](/noticies/2020-06-11-Actualitzacio_Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9)
+	- Actualització del archetype versió 1.6.7 i _plugin_ de l'Eclipse de Canigó versió 1.7.9 per utilitzar les versions dels mòduls core amb les correccions de l'anàlisis de SonarQube
   
 #### Canigó 3.4.3 (26/03/2020)
 - [Autorització GICAR a Canigó amb SAML] (/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/)
