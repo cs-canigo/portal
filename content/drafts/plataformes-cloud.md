@@ -11,7 +11,7 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per C
 
 ![Plataformes cloud per CPD ](/related/cloud/catalegCloud_cpd.png)
 
-
+<br/><br/>
 Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per tipologia, són les seguents:
 
 ![Plataformes cloud per Tipologia ](/related/cloud/catalegCloud_tipologia.png)
@@ -19,7 +19,7 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 
 ## Cloud Privat
 
-### CaaS
+### __CaaS__
 
 #### AppAgile
 
@@ -31,6 +31,7 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 - Versió:  **OpenShift Container Platform 3.9.65 i Kubernetes 1.9.1.** 
   
 Disponible a CPD4 en entorns de consolidables.
+<br/>
 
 #### Openshift 4
 
@@ -42,6 +43,7 @@ Disponible a CPD4 en entorns de consolidables.
 Disponible a CPD3 i CPD4 en entorns de consolidables.
 
 Disponible a CPD4 en entorns de critics.
+<br/>
 
 #### SwarmMe
 
@@ -50,6 +52,7 @@ Disponible a CPD4 en entorns de critics.
 - Versió: **Docker 18.9**
 
 Disponible a CPD1 en entorns de consolidables.
+<br/>
 
 #### KaaS
 
@@ -58,8 +61,9 @@ Disponible a CPD1 en entorns de consolidables.
 - Versió: **Kubernetes 1.14.8. Docker 18.9**
 
 Disponible a CPD2 en entorns de consolidables.
+<br/>
 
-### DBaaS
+### __DBaaS__
 
 #### AppAgile
 
@@ -70,6 +74,7 @@ Disponible a CPD2 en entorns de consolidables.
 - S'ofereixen les Bases de dades administrades PostgreSQL i MySQL.
 
 Disponible a CPD4 en entorns de consolidables.
+<br/>
 
 #### Openshift 4
 
@@ -79,6 +84,7 @@ Disponible a CPD4 en entorns de consolidables.
 Disponible a CPD4 en entorns de consolidables.
 
 Disponible a CPD4 en entorns de critics.
+<br/>
 
 #### KaaS
 
@@ -86,8 +92,9 @@ Disponible a CPD4 en entorns de critics.
 - S'ofereixen les Bases de dades administrades PostgreSQL, MongoDB i Redis.
 
 Disponible a CPD2 en entorns de consolidables.
+<br/>
 
-### xPaaS
+### __xPaaS__
 
 #### KaaS
 
@@ -95,28 +102,12 @@ Disponible a CPD2 en entorns de consolidables.
 - S'ofereixen serveis administrats de WAS Liberty, Zipkin, Nginx, Jaeger, Kafka, Zookeeper, ElasticSearch, Apache Ignite, Consul, Kong
 
 Disponible a CPD2 en entorns de consolidables.
-
+<br/>
 
 ## Cloud Públic
 
-### xPaaS
 
-#### IBMCloud Runtimes
-
-Basat en Cloud Foundry
-Java, Node.js, PHP, Python, Ruby, Swift i Go
-També permet runtimes i contenidors personalitzats.
-
-- https://www.ibm.com/cloud-computing/bluemix/es/runtimes
-
-#### Azure
-
-.NET, Java, Node.js, PHP i Python a Windows
-.NET Core, Node.js, PHP i Ruby a Linux
-
-- https://azure.microsoft.com/es-es/services/app-service/web/
-
-### CaaS
+### __CaaS__
 
 #### IBMCloud Kubernetes
 
@@ -124,14 +115,16 @@ Contenidors docker desplegats sobre la plataforma Kubernetes
 
 - https://www.ibm.com/cloud-computing/bluemix/es/containers
 - Versió: **Kubernetes 1.16.10 Containerd 1.3.4**
+<br/>
 
-### DBaaS
+### __DBaaS__
 
 #### Compose
 
 ElasticSearch, MongoDB, PostgreSQL, Redis
 
 - https://www.compose.com/
+<br/>
 
 #### Azure
 
@@ -140,8 +133,28 @@ Principalment SQL Server, PostgreSQL i MySQL
 - https://azure.microsoft.com/es-es/services/sql-database/
 - https://azure.microsoft.com/es-es/services/mysql/
 - https://azure.microsoft.com/es-es/services/postgresql/
+<br/>
 
-### IaaS
+### __xPaaS__
+
+#### IBMCloud Runtimes
+
+Basat en Cloud Foundry
+Java, Node.js, PHP, Python, Ruby, Swift i Go
+També permet runtimes i contenidors personalitzats.
+
+- https://www.ibm.com/cloud-computing/bluemix/es/runtimes
+<br/>
+
+#### Azure
+
+.NET, Java, Node.js, PHP i Python a Windows
+.NET Core, Node.js, PHP i Ruby a Linux
+
+- https://azure.microsoft.com/es-es/services/app-service/web/
+<br/>
+
+### __IaaS__
 
 #### Azure
 
