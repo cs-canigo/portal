@@ -42,18 +42,18 @@ La nova versió 1.7.9 del plugin utilitza la versió 1.6.7 de l’arquetipus de 
   - canigo.integration.notificacions.electroniques: [2.0.0,2.4.0)
   - canigo.integration.tributs.pica: [2.0.0,2.4.0)
  
- - Operació
+- Operació
   - canigo.operation.instrumentation: [2.0.0,2.4.0)
   - canigo.operation.logging: [2.0.0,2.4.0)
  
- - Persistència:
+- Persistència:
   - canigo.persistence.jpa: [2.0.0,2.4.0)
  
- - Seguretat:
+- Seguretat:
   - canigo.security: [2.0.0,2.5.0)
   - canigo.security.saml: [2.0.0, 2.4.0)
  
- - Suport:
+- Suport:
   - canigo.support.fileupload: [2.0.0,2.4.0)
   - canigo.support.lopd: [2.0.0,2.4.0)
   - canigo.support.mailing: [2.0.0,2.4.0)
