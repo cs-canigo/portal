@@ -97,7 +97,7 @@ Si activem la compressió, per defecte s'utilitzarà la compressió DEFLATE, si 
 ```
 public void setTokenCompressionCodec(CompressionCodec tokenCompressionCodec)
 ```
-Tenim disponibles els següents algoritmes de compressió a io.jsonwebtoken.CompressionCodecs:
+Tenim disponibles els següents algoritmes de compressió a *io.jsonwebtoken.CompressionCodecs*:
 
 - [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): Algoritme per defecte. Compleix l'estandard [JWA](https://tools.ietf.org/html/rfc7518)
 - [GZIP](https://en.wikipedia.org/wiki/Gzip): No compleix l'estandard JWA. Si voleu utilitzar aquest algoritme comproveu que tots els sistemes ho suporten
