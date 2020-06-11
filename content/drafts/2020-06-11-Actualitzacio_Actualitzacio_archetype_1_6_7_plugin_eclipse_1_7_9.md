@@ -65,8 +65,3 @@ La nova versió 1.7.9 del plugin utilitza la versió 1.6.7 de l’arquetipus de 
 <br/>
 Per a instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció "Instal·lació" del [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/#instal-lació).
 
-## Documentació
-
-Teniu disponible la següent documentació:
-
-* [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
