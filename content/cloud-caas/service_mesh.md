@@ -278,7 +278,7 @@ Podeu trobar informació de la resta de descriptors a:
 * https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.mixer.v1.config.client/
 * https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.policy.v1beta1/
 
-### Gestió del tràfic extern al Service Mesh
+## Gestió del tràfic extern al Service Mesh
 
 El Service Mesh, automaticament, només pel fet de tenir el proxy Envoy desplegat, controla tot el tràfic intern entre les microserveis de la plataforma, permetent veure els fluxes de tràfic i métriques corresponents.
 
@@ -353,7 +353,7 @@ spec:
           host: test-service.default.svc.cluster.local # The Target Service DNS name
         port:
           number: 9080
-````
+```
 
 ## Exemples
 
