@@ -1,5 +1,5 @@
 +++
-date          = "2018-07-02"
+date          = "2020-06-12"
 title         = "Orquestradors de contenidors"
 description   = "Consideracions respecte als orquestradors de contenidors"
 sections      = "Container Cloud"
