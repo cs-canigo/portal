@@ -183,7 +183,7 @@ Tràfic d'entrada sense  del Ingress Gateway
   * Mida de les peticions/respostes
 
 * Addicionalment també es mostren mètriques de consum i rendiment dels diferents elements del Control Plane.
-* **En cap cas es mostren metriques de consum i rendiemnt de les aplicacions que utilitzen el Service Mesh**
+* **En cap cas es mostren metriques de consum i rendiment de les aplicacions que utilitzen el Service Mesh**
 
 
 ![Grafana_01](/related/cloud/grafana01.png)
