@@ -1,7 +1,7 @@
 +++
-date        = "2019-10-11"
+date        = "2020-06-12"
 title       = "Gestió de configuracions a Contenidors"
-description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes ,Openshift i Swarm"
+description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes, Openshift i Swarm"
 sections    = "Container Cloud"
 weight      = 10
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
@@ -47,7 +47,8 @@ Bàsicament s'exposen unes variables de tipus **{SVCNAME}_SERVICE_HOST** i **{SV
 Podeu trobar més informació a [Discovering services.](https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services)
 
 Podeu trobar exemples de yamls complets dels descriptors de desplegament a 
-- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/)
+
+- [Contenidors Openshift](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
 - [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 ### ConfigMap

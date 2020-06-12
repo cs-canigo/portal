@@ -1,5 +1,5 @@
 +++
-date          = "2020-04-27"
+date          = "2020-06-12"
 title         = "Openshift Service Mesh"
 description   = "Introducció i exemples de l'ús d'Openshift Service Mesh"
 sections      = "Container Cloud"
@@ -64,7 +64,7 @@ El Service Mesh addicionalment ofereix monitoratge dels diferents microserveis, 
 
 * Estat dels microserveis
 * Flux de tràfic entre microserveis en temps real
-* Rendiment dels microserveis
+* Temps de resposta dels microserveis
 * Traces distribuides per identificar colls d'ampolla
 
 ## Openshift Service Mesh
@@ -107,7 +107,26 @@ S'encarreguen de les funcionalitats més importants del Service Mesh:
 
 ![Control Plane](/related/cloud/ServiceMeshControlPlane.png)
 
+#### Ingress Gateway
+
+* El Istio Ingress Gateway és un Edge Proxy de Istio
+* És necessari per a que el tràfic entrant als Microserveis no entri directament als contenidors sense passar pel Proxy d’Istio abans
+* Pot substituir el Router Controller o estar darrera d’ell
+* En el nostre cas particular l’Ingress Gateway està darrera del Router Controller
+  * Es simplifica la configuració
+  * No requereix configuració addicional al balancejador al afegir un nou Ingress Gateway a la plataforma
+
+
+Tràfic d'entrada a través del Ingress Gateway
+
+![Control Plane](/related/cloud/ServiceMeshWithIngressGateway.png)
+<br/><br/>
+Tràfic d'entrada sense  del Ingress Gateway
+
+![Control Plane](/related/cloud/ServiceMeshWithoutIngressGateway.png)
 ### Eines
+
+<br/><br/>
 
 #### Kiali
 
@@ -123,6 +142,8 @@ S'encarreguen de les funcionalitats més importants del Service Mesh:
 ![Kiali_01](/related/cloud/kiali01.png)
 
 ![Kiali_02](/related/cloud/kiali02.png)
+
+<br/><br/>
 
 #### Jaeger
 
@@ -141,8 +162,11 @@ S'encarreguen de les funcionalitats més importants del Service Mesh:
 * [Prometheus](https://prometheus.io/) s’està convertint en un estàndard de monitoratge en plataformes de contenidors
 * Es basa en la captura de mètriques a través d’exporters
 * A Openshift Service Mesh obté les mètriques a través del Mixer
+* Es capturen mètriques referent al tràfic de dades i serveis que utilitzen els proxies Envoy
 
 ![Prometheus_01](/related/cloud/prometheus01.png)
+
+<br/><br/>
 
 #### Grafana
 
@@ -151,6 +175,16 @@ S'encarreguen de les funcionalitats més importants del Service Mesh:
 * Permet la creació de Dashboards a mida
 * Permet la configuració d’Alarmes
 * Amb Openshift Service Mesh, es desplega amb un conjunt de Dashboards que informen de les mètriques dels diferents components i dels microserveis gestionats pel Control Plane
+* Es mostren mètiques referents a tràfic de dades i serveis que utilitzen els proxies Envoy:
+  
+  * Peticions per segon
+  * Temps de resposta de les peticions
+  * Percentatge de peticions amb codi de resposta diferent de 500  
+  * Mida de les peticions/respostes
+
+* Addicionalment també es mostren mètriques de consum i rendiment dels diferents elements del Control Plane.
+* **En cap cas es mostren metriques de consum i rendiemnt de les aplicacions que utilitzen el Service Mesh**
+
 
 ![Grafana_01](/related/cloud/grafana01.png)
 
@@ -243,6 +277,83 @@ Podeu trobar informació de la resta de descriptors a:
 * https://archive.istio.io/v1.4/docs/reference/config/security/
 * https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.mixer.v1.config.client/
 * https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.policy.v1beta1/
+
+### Gestió del tràfic extern al Service Mesh
+
+El Service Mesh, automaticament, només pel fet de tenir el proxy Envoy desplegat, controla tot el tràfic intern entre les microserveis de la plataforma, permetent veure els fluxes de tràfic i métriques corresponents.
+
+És important utilitzar el Ingress Gateway com a punt d'entrada dels 
+microserveis que criden des de l'exterior de la plataforma. En cas contrari, aquest tràfic no passarà pel Service Mesh, no podent sent possible el seu monitoratge ni control.
+
+De cara al ús del Service Mesh és important que absolutament tot el tràfic, tant l'intern com l'extern estigui controlat. En cas contraris es poden produir comportament no dessitjats.
+
+Per configurar el trafic extern a traves del service Mesh, cal configurar divesos descriptors:
+
+* **Route**: La route del microservei, deixa d'apuntar al Service del microservei i passa a apuntar al Service del Ingress Gateway. Les routes ja no es depleguen al namespace de l'aplicació, sinó al del Service Mesh.
+* **Gateway**: Definirà el Ingress Gateway en si. En el nostre cas, dexarem passar tot el trafic i posarem * a hosts.
+* **VirtualService**: Rebrà les peticions del Gateway i enviarà el tràfic al Service del Microservei   
+
+
+```yaml
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: istio-ingressgateway
+  namespace: control-plane-namespace
+  labels:
+    app: istio-ingressgateway  
+spec:
+  host: microservice.test.com #microservice url
+  to:
+    kind: Service
+    name: istio-ingressgateway
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
+---  
+kind: Gateway
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: ingress-gateway-configuration
+  namespace: app-namespace  
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"   # Domain name of the external website
+---
+kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: microservice-virtual-service  # "just" a name for this virtualservice
+  namespace: app-namespace
+spec:
+  hosts:      # which incoming host
+    - "*"
+  gateways:
+    - ingress-gateway-configuration
+  http:
+  - match:
+    - uri:
+        exact: /productpage
+    - uri:
+        exact: /login
+    - uri:
+        exact: /logout
+    - uri:
+        prefix: /api/v1/products
+    route:
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target Service DNS name
+        port:
+          number: 9080
+````
 
 ## Exemples
 

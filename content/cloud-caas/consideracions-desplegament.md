@@ -1,10 +1,10 @@
 +++
-date        = "2019-02-19"
+date        = "2020-06-1"
 title       = "Consideracions en desplegaments de contenidors"
 description = "Consideracions generals a tenir present en desplegaments de contenidors"
 sections    = "Container Cloud"
 weight      = 9
-categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","appagile","openshift","swarmme"]
 +++
 
 Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.
@@ -81,7 +81,7 @@ Els Secrets s'inclouran sense les dades sensibles, que seran gestionades per l'e
 
 Podeu trobar més informació respecte als descriptors yaml de cadascuna de les plataformes a:
 
-- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/)
+- [Contenidors Openshift](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
 - [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 El desplegament a la plataforma SwarmMe no requereix descriptors específics, però si requereix disposar de la següent informació:

@@ -1,5 +1,5 @@
 +++
-date          = "2020-04-02"
+date          = "2020-06-12"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
@@ -14,14 +14,14 @@ En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
 
-* IBM Bluemix al cloud públic. **Versió Kubernetes 1.15.11. Versió containerd 1.2.12**
+* IBM Bluemix al cloud públic. **Versió Kubernetes 1.16.10. Versió containerd 1.3.4**
 * IBM CaaS al cloud privat. **Versió Kubernetes 1.14.8. Versió docker 18.9.7**
 
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud/dockerImages/) podeu trobar més informació al respecte. 
+A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte. 
 
 ## Arquitectura
 ### Conceptes bàsics
@@ -123,7 +123,7 @@ Configuració de l'exemple:
 * Nom del defaultToken: **default-token-rwj8z**
 
 ```
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: XXXX-app1-server-deployment
@@ -283,4 +283,5 @@ spec:
 
 ## Informació relacionada
 
-* https://v1-12.docs.kubernetes.io/
+* https://v1-14.docs.kubernetes.io/es/docs/home/
+* https://v1-16.docs.kubernetes.io/es/docs/home/
