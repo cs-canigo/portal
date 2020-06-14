@@ -97,11 +97,9 @@ https://hudson.intranet.gencat.cat/nexus/repository/binaris/_codi_diàleg_/_proj
 El sistema permet la consulta i descàrrega remota d’artefactes:
 
 ```
-curl
-X GET [ u user:pwd ]
-"https://hudson.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" O
-curl
-X GET [ u user:pwd ]
+curl -X GET [ u user:pwd ]
+"https://hudson.intranet.gencat.cat/nexus/binaris/projecte/1.0.0/bin/DesktopOK.zip" -O
+curl -X GET [ u user:pwd ]
 "https://hudson.intranet.gencat.cat/nexus/service/rest/v1/assets?q=projecte/1.0.0/*& binaris
 ```
 

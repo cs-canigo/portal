@@ -9,47 +9,45 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.4 del Framework Canigó s'ha alliberat una nova versió del mòdul de Seguretat**, el qual té com a propòsit
-principal **oferir la funcionalitat de compressió de token JWT**.
+Dins de l'abast de la **versió 3.4.4 del Framework Canigó s'ha alliberat una nova versió del mòdul de Seguretat**, la qual té com a propòsit **oferir la funcionalitat de compressió de token JWT**.
 
 Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
 
 ## Novetats
 
-A partir de la versió 2.4.0 del mòdul es proporciona la funcionalitat de compressió del token JWT. Per defecte, sino li indiquem que volem utilitzar compressió, el mòdul genera el token JWT sense compressió
-
-Per activar la funcionalitat de compressió s'ha afegit el següent mètode a *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler*:
+A partir de la versió 2.4.0 del mòdul, es proporciona la funcionalitat de compressió del _token JWT_. Per defecte, si no indiquem que volem utilitzar compressió, el mòdul genera el _token JWT_ sense aplicar la compressió. Per a activar la funcionalitat de compressió s'ha afegit el següent mètode a *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler*:
 ```
 public void setTokenWithCompress(boolean tokenWithCompress)
 ```
 
-Si activem la compressió, per defecte s'utilitzarà la compressió DEFLATE, si volem utilitzar un altre algoritme de compressió tenim disponible el mètode:
+<br/>
+En cas d’activar la compressió, per defecte s'utilitzarà la compressió _DEFLATE_ i si volem utilitzar un altre algoritme de compressió tenim disponible el mètode:
 ```
 public void setTokenCompressionCodec(CompressionCodec tokenCompressionCodec)
 ```
+
 Tenim disponibles els següents algoritmes de compressió a *io.jsonwebtoken.CompressionCodecs*:
 
-- [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): Algoritme per defecte. Compleix l'estandard [JWA](https://tools.ietf.org/html/rfc7518)
-- [GZIP](https://en.wikipedia.org/wiki/Gzip): No compleix l'estandard JWA. Si voleu utilitzar aquest algoritme comproveu que tots els sistemes ho suporten
+- [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): algoritme per defecte. Acompleix l'estàndard [JWA](https://tools.ietf.org/html/rfc7518).
+- [GZIP](https://en.wikipedia.org/wiki/Gzip): algoritme alternatiu que no acompleix l'estàndard JWA. Si voleu utilitzar aquest algoritme comproveu que tots els sistemes ho suportin.
 
-Així, si volem comprimir el token JWT amb DEFLATE ens cal:
+Per tant, si volem comprimir el _token JWT_ amb _DEFLATE_ serà necessari:
 
-1. Definir al fitxer *security.properties* la següent propietat:
+1. Definir al fitxer `security.properties` la següent propietat:
 ```
 *.jwt.tokenWithCompress = true
 ```
 
-2. Carregar la nova propietat a *WebSecurityConfig.java*:
+2. Carregar la nova propietat a `WebSecurityConfig.java`:
 ```
-	@Value("${jwt.tokenWithCompress}")
-	private boolean tokenWithCompress;
+@Value("${jwt.tokenWithCompress}")
+private boolean tokenWithCompress;
 ```
 
-3. A la definició del *JwtTokenHandler* en el fitxer *WebSecurityConfig.java* indicar-li que volem utilitzar la compressió:
+3. A la definició del _JwtTokenHandler_ en el fitxer `WebSecurityConfig.java` indicar que volem utilitzar la compressió:
 ```
 jwtTokenHandler.setTokenWithCompress(tokenWithCompress);
 ```
-
 
 ## Documentació del mòdul
 
