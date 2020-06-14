@@ -12,7 +12,7 @@ weight      = 1
 - [Actualització de l’_archetype_ 1.6.6 i del _plugin_ Eclipse 1.7.8](/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/)
    - Actualització de l’_archetype_ versió 1.6.6 i del _plugin_ de l'Eclipse de Canigó versió 1.7.8 per a utilitzar l'última versió del mòdul de MongoDB compatible amb la versió 4.2 de MongoDB.
 - [Revisió de regles SonarQube als mòduls _core_](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
-   - S'han revisat i resolt els problemes detectats per SonarQube als mòduls _core_ de Canigó.
+   - S'han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls _core_ de Canigó.
 - [Actualització del mòdul Seguretat](/noticies/2020-06-11-Actualitzacio_modul_Seguretat_compressio_token)
    - Actualització del mòdul de seguretat de Canigó per a proporcionar la possibilitat de compressió del token JWT.
 - [Actualització de l’_archetype_ 1.6.7 i del _plugin_ Eclipse 1.7.9](/noticies/2020-06-11-Actualitzacio_Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9)

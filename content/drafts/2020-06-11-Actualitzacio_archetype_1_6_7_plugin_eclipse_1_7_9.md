@@ -9,7 +9,7 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels lliurables de Canigó hi consten l’_archetype_ i el _plugin_ de l’Eclipse.
+D'entre els lliurables de Canigó hi consten l’_archetype_ i el _plugin_ de l’Eclipse.
 Seguint l’objectiu de CS Canigó de proporcionar facilitadors per a la creació de projectes Canigó als desenvolupadors d’aplicacions,
 s’han actualitzat ambdós lliurables per a
 generar projectes amb **Canigó 3.4.4**. Podeu consultar l’abast complet de la nova versió del marc de treball a les [Release Notes,
@@ -17,7 +17,7 @@ apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
 
 * L’*archetype* és una eina _Maven_ que **facilita la creació de projectes seguint una plantilla**. Utilitzant l’arquetipus i
 executant un _goal_ de _Maven_ obtenim un projecte Canigó amb una
-base preconfigurada i preparada per a incorporar-li noves funcionalitats.
+base preconfigurada i preparada per a incorporar noves funcionalitats.
 
 * El *plugin* és un **connector desenvolupat específicament per a l’IDE Eclipse** que permet afegir menús contextuals per a la creació
 de projectes Canigó utilitzant l’arquetipus de Maven, i també per a permetre afegir mòduls a un projecte prèviament creat aportant una
@@ -27,7 +27,7 @@ preparat per al marc de treball Canigó i estalviant temps als desenvolupadors.
 
 ## Novetats *Archetype*
 
-La versió 1.6.7 de l’arquetipus de Canigó permet generar projectes amb Canigó 3.4.4, per això s'han modificat els rangs de
+La versió 1.6.7 de l’arquetipus de Canigó permet generar projectes amb Canigó 3.4.4, per aquest motiu s'han modificat els rangs de
 versions dels següents mòduls:
 
 - canigo.core: [4.0.0,4.4.0)

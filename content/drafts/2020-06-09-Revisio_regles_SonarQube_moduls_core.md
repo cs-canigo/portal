@@ -10,18 +10,18 @@ description = "S'han revisat i resolt els problemes detectats per SonarQube als 
 ## Introducció
 
 Dins de l'abast de la **versió 3.4.4 del Framework Canigó s'ha realitzat la revisió del codi font a partir de les regles
-de SonarQube als mòduls core de Canigó**.
-
-Podeu consultar l'abast complet de la versió 3.4.4 a les [Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
+de SonarQube als mòduls core de Canigó**. Podeu consultar l'abast complet de la versió 3.4.4 a les
+[Release Notes, apartat Canigó 3.4.4](/canigo-download-related/release-notes-canigo-34).
 
 ## Novetats
 
-Des de l'Oficina de Qualitat s’ha escollit SonarQube com a eina que serveix per a **detectar _bugs_, vulnerabilitats i
+Des de l'Oficina de Qualitat s’ha escollit SonarQube com a eina que s'encarrega de **detectar _bugs_, vulnerabilitats i
 defectes en el codi**. Aquesta eina pot ser integrada a l’entorn de desenvolupament, lo que permetria una inspecció continua, i
 pot ser instal·lada a un servidor. S'han definit unes portes o **_Quality Gates_ amb unes mesures mínimes que han d’acomplir els lliurables**,
-que els proveïdors hauran de configurar en els seus entorns.
+que els proveïdors hauran de configurar en els seus respectius entorns.
 
-S'han revisat i solucionat els problemes detectats pel SonarQube per acomplir les _Quality Gates_ als següents **mòduls de Canigó**:
+<br/>
+S'han revisat i solucionat els problemes detectats pel SonarQube als següents **mòduls de Canigó**:
 
 * canigo.core
 * canigo.operation.logging
@@ -51,4 +51,4 @@ Podeu consultar el detall de la versió de cada mòdul a la [Matriu de Compatibi
 al Portal de Frameworks i Solucions d’Arquitectura.
 
 Per a més informació sobre l'eina de revisió de codi font establerta per l'Oficina de Qualitat podeu
-consultar-ho a: https://qualitat.solucions.gencat.cat/.
+consultar: https://qualitat.solucions.gencat.cat/.

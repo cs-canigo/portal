@@ -8,11 +8,10 @@ weight      = 9
 
 ## Propòsit
 
-El Mòdul de Seguretat té com a propòsit principal **gestionar l'autenticació i l'autorització dels usuaris en aplicacions Canigó**.
+El Mòdul de Seguretat té com a propòsit general **gestionar l'autenticació i l'autorització dels usuaris en aplicacions Canigó**.
 L'objectiu de l'autenticació és comprovar que l'usuari és qui diu ser, mentre que l'autorització s'encarrega de comprovar que
-realment té accés als recursos sol·licitats.
-
-Canigó recomana l'ús de _Spring Security_ com a Framework base i les extensions que Canigó proporciona.
+realment té accés als recursos sol·licitats. Canigó recomana l'ús de _Spring Security_ com a Framework base i les extensions
+que Canigó proporciona.
 
 ## Instal·lació
 
@@ -62,11 +61,11 @@ Per a més informació podeu consultar la pàgina [Spring Security Doc](http://d
 
 ### Configuració de JWT (JSON Web Token)
 
-La nova versió de Canigó permet treballar amb [JWT](https://jwt.io/), per això s'ha utilitzat la
+La nova versió de Canigó permet treballar amb [JWT](https://jwt.io/), per aquest motiu s'utilitza la
 llibreria [Java JWT](https://java.jsonwebtoken.io/) que permet autenticar l'usuari amb qualsevol dels mètodes descrits a l’apartat
-"Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un _token_ que serà enviat pel client a la capçalera HTTP a cada petició.
+"Configuració d'autenticació". Un cop autenticat l'usuari, el servidor genera un _token_ que serà enviat pel client dins la capçalera HTTP a cada petició.
 
-Per a poder configurar JWT es necessita afegir al fitxer `security.properties` la següent configuració:
+Per a poder configurar JWT és necessari afegir al fitxer `security.properties` la següent configuració:
 
 Propietat                     | Requerit | Descripció                                 | Valor per Defecte
 ----------------------------- | -------- | -------------------------------------------|------------------
@@ -77,18 +76,16 @@ Propietat                     | Requerit | Descripció                          
 *.jwt.expiration              | No       | Temps de vida del _token_ JWT                 | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication                      | false
 
-Per a provar l'autenticació per _token_ s'ha de cridar al servei "http://<app>/api/auth" amb la capçalera GICAR en cas
-d'autenticació via GICAR, o en el cos de la petició en format JSON en altres casos:
+Per a verificar l'autenticació per _token_ s'ha d'invocar al servei "http://<app>/api/auth", amb la capçalera GICAR en cas
+d'autenticació via GICAR, o en el cos de la petició en format JSON en la resta de casos:
 
 ```
-{
-   username = user,
-   password  = secret
-}
+{  username = user,
+   password  = secret }
 ```
 
-Aquesta crida ens retornarà un _token_ vàlid. Per a les següents peticions s'ha d'enviar aquest _token_ a la capçalera HTTP de
-la petició com es mostra a continuació (configuració per defecte):
+Aquesta crida ens retornarà un _token_ vàlid que s'haurà d'enviar dins la capçalera HTTP de les corresponents peticions
+com es mostra a continuació (configuració per defecte):
 
 ```
 Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkbWluIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiJ9.jeApLoXyn4nrdp2iPRkjhoTWmzFNUYOkphnck0gmp1pLygOj1hgN1O1Ps86_jY6ZXaEhXl2Fk-o36SOMQAQGHA
@@ -96,27 +93,28 @@ Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkb
 
 En aquest mateix article es mostra un exemple de configuració a Canigó de JWT + GICAR.
 
-### Compressió token JWT
+##### Compressió token JWT
 
-A partir de la versió 2.4.0 del mòdul, es proporciona la funcionalitat de compressió del _token JWT_. Per defecte, si no
-indiquem que volem utilitzar compressió, el mòdul genera el _token JWT_ sense aplicar la compressió. Per a activar la funcionalitat
-de compressió s'ha afegit el següent mètode a *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler*:
+A partir de la versió 2.4.0 del mòdul, es proporciona la funcionalitat de compressió del _token JWT_. Per defecte,
+si no especifiquem que volem utilitzar compressió, el mòdul genera el _token JWT_ sense aplicar la compressió. Per a **activar la
+funcionalitat de compressió** s'ha afegit el següent mètode a *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler*:
 ```
 public void setTokenWithCompress(boolean tokenWithCompress)
 ```
 
 <br/>
-En cas d’activar la compressió, per defecte s'utilitzarà la compressió _DEFLATE_ i si volem utilitzar un altre algoritme de
-compressió tenim disponible el mètode:
+En cas d’activar la compressió, per defecte s'utilitzarà la compressió _DEFLATE_ i, si volem utilitzar un altre algoritme de
+compressió, disposem del següent mètode:
 ```
 public void setTokenCompressionCodec(CompressionCodec tokenCompressionCodec)
 ```
 
+<br/>
 Tenim disponibles els següents algoritmes de compressió a *io.jsonwebtoken.CompressionCodecs*:
 
-- [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): algoritme per defecte. Acompleix l'estàndard [JWA](https://tools.ietf.org/html/rfc7518).
-- [GZIP](https://en.wikipedia.org/wiki/Gzip): algoritme alternatiu que no acompleix l'estàndard JWA. Si voleu utilitzar
-aquest algoritme comproveu que tots els sistemes ho suportin.
+- [DEFLATE](https://en.wikipedia.org/wiki/DEFLATE): algoritme per defecte que acompleix l'estàndard [JWA](https://tools.ietf.org/html/rfc7518).
+- [GZIP](https://en.wikipedia.org/wiki/Gzip): algoritme que no acompleix l'estàndard JWA. Si voleu utilitzar aquest
+sistema de compressió comproveu que tots els sistemes ho suportin.
 
 Per tant, si volem comprimir el _token JWT_ amb _DEFLATE_ serà necessari:
 
@@ -131,22 +129,22 @@ Per tant, si volem comprimir el _token JWT_ amb _DEFLATE_ serà necessari:
 private boolean tokenWithCompress;
 ```
 
-3. A la definició del _JwtTokenHandler_ en el fitxer `WebSecurityConfig.java` indicar que volem utilitzar la compressió:
+3. A la definició del _JwtTokenHandler_ en el fitxer `WebSecurityConfig.java`, indicar que volem utilitzar la compressió:
 ```
 jwtTokenHandler.setTokenWithCompress(tokenWithCompress);
 ```
 
 ### Publicació controladors de seguretat
 
-Per defecte el mòdul de seguretat publica les api /auth i /login i, en cas de no voler publicar-les a la nostra aplicació,
-s'hauria de condicionar la càrrega de _Spring Boot_ com es mostra a continuació.
+Per defecte el mòdul de seguretat publica les api _/auth_ i _/login_. En cas de no voler publicar-les a la nostra aplicació,
+s'haurà de condicionar la càrrega de _Spring Boot_ com es mostra a continuació.
 
 1. Crear el fitxer `/src/main/reources/config/props/boot.properties` amb la propietat _publishAuthController_ a _false_:
 ```
    publishAuthController=false
 ```
 
-2. Al fitxer de configuració de l'aplicació `AppConfig.java` cal afegir l'anotació _@PropertySource_ cap al fitxer `boot.properties` creat:
+2. Al fitxer de configuració de l'aplicació `AppConfig.java`, afegir l'anotació _@PropertySource_ cap al fitxer `boot.properties` creat:
 ```
    @Configuration
    @PropertySource("classpath:/config/props/boot.properties")
@@ -158,17 +156,19 @@ s'hauria de condicionar la càrrega de _Spring Boot_ com es mostra a continuaci�
 
 ### Configuració d'autenticació
 
-En la configuració de l'autenticació haurem de tenir en consideració:
+En la configuració de l'autenticació haurem de considerar:
 
 * Seleccionar el tipus de font contra la que es realitza l'autenticació (per arxiu de propietats, base de dades, Gicar, ...).
 * Configurar el formulari d'autenticació web i la seqüència d'accions per a realitzar l'autenticació.
 
 Dins d'aquest mòdul trobem els següents proveïdors de seguretat:
+
 * Seguretat In-Memory
 * Seguretat Base de dades
 * Seguretat GICAR
 
 Els diferents proveïdors comparteixen els següents arxius de configuració:
+
 * `security.properties`: propietats del servei de seguretat
 * `app-custom-security.xml`: arxiu XML amb la configuració de seguretat
 * `WebSecurityConfig.java`: classe Java amb la configuració de seguretat Web
@@ -183,10 +183,10 @@ La disposició dels arxius és la següent:
 
 #### Configuració de la font d'autenticació i autorització per base de dades
 
-Per a configurar la font d'autorització mitjançant base de dades és necessari configurar:
+Per a configurar la font d'autorització mitjançant base de dades serà necessari configurar:
 
 * L'arxiu de propietats `security.properties`
-* El proveïdor de seguretat dins de la configuració de seguretat de _Spring_
+* El **proveïdor de seguretat** dins de la configuració de seguretat de _Spring_
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Les propietats de
 l'arxiu `security.properties` són les següents:
@@ -198,13 +198,13 @@ Propietat                    | Requerit | Descripció
 *.security.database.username | Si       | Usuari de connexió a la base de dades
 *.security.database.password | Si       | Password de connexió a la base de dades
 
-La configuració del _provider_ en `app-custom-security.xml` per a aquest proveïdor és la següent:
+La configuració del _provider_ en `app-custom-security.xml` per a aquest proveïdor es realitza com es descriu a continuació:
 
-* Afegim el _provider_ al _authentication manager_.
-* Afegim el tipus de codificador de _password_ per tal de comparar la clau de base de dades i la que ens ha proporcionat
-l'usuari de l'aplicació. Aquest codificador suporta: plaintext, sha, sha-256, md5, md4, ssha. Si a la base de dades tenim
-emmagatzemades les claus d'usuari en md5 i marquem _password-encode_ com a _md5_, de manera automàtica, la clau proporcionada
-per l'usuari via formulari de login (j_password) es codificarà en md5 per posteriorment ser comparada amb la emmagatzemada
+* Afegir el _provider_ al _authentication manager_.
+* Afegir el tipus de codificador de _password_ per tal de comparar la clau de base de dades i la que ens ha proporcionat
+l'usuari de l'aplicació. Aquest codificador suporta: _plaintext_, _sha_, _sha-256_, _md5_, _md4_ i _ssha_. Si a la base de dades tenim
+emmagatzemades les claus d'usuari en _md5_ i marquem _password-encode_ com a _md5_, de manera automàtica la clau proporcionada
+per l'usuari via formulari de login (_j_password_) es codificarà en md5 per a, posteriorment, ser comparada amb la emmagatzemada
 a la base de dades.
 
 ```
@@ -220,8 +220,7 @@ a la base de dades.
       factory-method="getInstance" />
 ```
 
-A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada l'autenticació i l'autorització per
-base de dades sense utilitzar JWT:
+A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en l’autenticació i l’autorització per base de dades sense utilitzar JWT:
 
 ```
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
@@ -282,7 +281,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
    @Override
    protected void configure(final HttpSecurity http) throws Exception {
-
       http.authorizeRequests()
       .antMatchers("/images/*/**", "/css/*/**", "/js/*/**", "/fonts/*/**").permitAll()
       .antMatchers("/api/info/**", "/api/logs/**").hasRole("ADMIN")
@@ -293,14 +291,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       http.csrf().disable();
 
       http.formLogin().loginProcessingUrl("/api/login").successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler);
-      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED)).invalidateHttpSession(true);
+      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED))
+                   .invalidateHttpSession(true);
       http.addFilterBefore(proxyUsernamePasswordAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
    }
 
    @Bean
    @Autowired
    public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
-      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter =
+            new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
       proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
@@ -311,11 +311,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
    private boolean isSiteminderAuthentication() {
       return false;
    }
-
 }
 ```
 
-A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada l'autenticació i l'autorització per base de dades amb JWT:
+A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en l’autenticació i l’autorització per base de dades amb JWT:
 
 ```
 import javax.inject.Named;
@@ -451,17 +450,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-<div class="message warning">
-Accés base de dades:
+<div class="message information">
 L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de persistència si aquest no ha estat instal·lat prèviament pel desenvolupador.
 </div>
 
 ### Configuració de la font d'autenticació i autorització per LDAP
 
-Per a configurar l'accés per LDAP (funcionalitat ja desfasada) és necessari configurar:
+Per a configurar l'accés per LDAP (funcionalitat ja desfasada) serà necessari configurar:
 
 * L'arxiu de propietats `security.properties`
-* El proveïdor de seguretat dins de la configuració de seguretat de Spring
+* El **proveïdor de seguretat** dins de la configuració de seguretat de Spring
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Les propietats de
 l'arxiu `security.properties` són les següents:
@@ -477,12 +475,11 @@ Propietat                           | Requerit | Descripció
 *.security.ldap.group.search.filter | No       | Filtre de cerca dels grups dins de l'estructura del LDAP. Per defecte: (cn={0})
 
 Per a realitzar les proves en l’entorn de desenvolupament podem instal·lar un servidor LDAP senzill (veure l'apartat
-'Eines de Suport' per a més informació).
+'Eines de Suport' per a més informació). La configuració del _provider_ en `app-custom-security.xml` es realitza
+com es descriu a continuació:
 
-Configuració del _provider_ en `app-custom-security.xml`:
-
-* Afegim el _provider_ a l’_Authentication Manager_
-* Afegim la connexió al LDAP server
+* Afegir el _provider_ a l’_Authentication Manager_
+* Afegir la connexió al LDAP server
 
 ```
 <security:authentication-manager>
@@ -503,15 +500,16 @@ manager-password="${security.ldap.manager.password}"/>
 
 ### Configuració de la font d'autenticació i autorització per arxiu de propietats
 
-Aquest proveïdor de seguretat es basa en un arxiu de propietats per carregar en memòria els usuaris/passwords/rols de
-l'aplicació. Per a configurar l'accés mitjançant un arxiu de propietats és necessari:
+Aquest proveïdor de seguretat es basa en un arxiu de propietats per a carregar en memòria els usuaris/passwords/rols de
+l'aplicació. Per a configurar l'accés mitjançant un arxiu de propietats serà necessari:
 
 * Configurar l'arxiu de propietats `security.users.properties`
 * Configurar el proveïdor de seguretat dins la configuració de seguretat de Spring `app-custom-security.xml`
 
 L'arxiu que conté aquesta configuració `security.users.properties` te el següent format:
 
-```    username=password,grantedAuthority[,grantedAuthority][,enabled|disabled]
+```
+username=password,grantedAuthority[,grantedAuthority][,enabled|disabled]
 ```
 
 A continuació es mostra un exemple de configuració:
@@ -521,11 +519,11 @@ user=password,ROLE_USER,enabled
 admin=password,ROLE_USER,ROLE_ADMIN,enabled
 ```
 
-Per a configurar el _provider_ a `app-custom-security.xml` farem el següent:
+Per a configurar el _provider_ a `app-custom-security.xml` s'ha de fer el següent:
 
 * Afegir el _provider_ al _authentication manager_
 * Afegir el tipus de codificador de _password_ per tal de comparar la clau de l'arxiu de propietats i la que ens
-ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: plaintext, sha, sha-256, md5, md4, ssha.
+ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: _plaintext_, _sha_, _sha-256_, _md5_, _md4_ i _ssha_.
 
 ```
 <security:authentication-manager>
@@ -541,7 +539,7 @@ ha proporcionat l'usuari de l'aplicació. Aquest codificador suporta: plaintext,
       factory-method="getInstance" />
 ```
 
-A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada l'autenticació i l'autorització
+A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en l'autenticació i l'autorització
 per arxiu de propietats sense utilitzar JWT:
 
 ```
@@ -614,14 +612,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       http.csrf().disable();
 
       http.formLogin().loginProcessingUrl("/api/login").successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler);
-      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED)).invalidateHttpSession(true);
+      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED))
+                   .invalidateHttpSession(true);
       http.addFilterBefore(proxyUsernamePasswordAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
    }
 
    @Bean
    @Autowired
    public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
-      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter =
+            new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
       proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
@@ -636,7 +636,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada l'autenticació i l'autorització per arxiu de propietats amb JWT:
+A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en l'autenticació i l'autorització
+per arxiu de propietats amb JWT:
 
 ```
 import javax.inject.Named;
@@ -774,10 +775,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 ### Configuració de la font d'autenticació per GICAR
 
-Per a configurar l'accés a GICAR és necessari configurar:
+Per a configurar l'accés a GICAR serà necessari configurar:
 
 * L'arxiu de propietats `security.properties`
-* El proveïdor de seguretat dins de la configuració de seguretat de _Spring_
+* El **proveïdor de seguretat** dins de la configuració de seguretat de _Spring_
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. L'arxiu **security.properties** té el següent format:
 
@@ -862,14 +863,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       http.csrf().disable();
 
       http.formLogin().loginProcessingUrl("/api/login").successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler);
-      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED)).invalidateHttpSession(true);
+      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED))
+                   .invalidateHttpSession(true);
       http.addFilterBefore(proxyUsernamePasswordAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
    }
 
    @Bean
    @Autowired
    public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
-      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter =
+            new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
       proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationSuccessHandler(restAuthenticationSuccessHandler);
@@ -1112,36 +1115,38 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 On s'ha d’haver definit a la base de dades de l'aplicació les taules necessàries per a obtenir les _athorities_ al
 DAO `AuthoritiesDAOImpl`. Per a més informació sobre aquestes taules, podeu consultar la documentació de
 Spring [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#appendix-schema).
-
 Amb aquesta configuració ha de ser possible autoritzar un usuari que prèviament ha estat autenticat en el servei de GICAR.
-Per aquest motiu és necessari rebre certes dades referents a aquesta autenticació ja realitzada. A la capçalera HTML
-podrem accedir a aquestes dades:
+Per aquest motiu serà necessari rebre certes dades referents a L'autenticació realitzada. A la capçalera HTML
+podrem accedir a les següents dades:
 
 ```
 HTTP_GICAR=CODIINTERN=NRDRJN0001;NIF=11112222W;EMAIL=mail.admin@gencat.net;UNITAT_MAJOR=CTTI;
 UNITAT_MENOR=CTTI Qualitat
 ```
 
-On CODIINTERN és el codi intern, el NIF el NIF, EMAIL l'adreça de correu electrònic registrada al Director Corporatiu,
-UNITAT_MAJOR és l'organització i UNITAT_MENOR és la unitat.
+On:
+- CODIINTERN és el codi intern de l'usuari,
+- el NIF el NIF de l'usuari,
+- EMAIL l'adreça de correu electrònic enregistrada al Director Corporatiu,
+- UNITAT_MAJOR és l'organització i
+- UNITAT_MENOR és la unitat
 
-<div class="message warning">
-En cas que l'aplicació utilitzi la separació entre codi estàtic i dinàmic és necessari indicar la següent propietat
+<div class="message information">
+En cas que l'aplicació estigui separada entre codi estàtic i dinàmic, serà necessari indicar la següent propietat
 dins el bean `proxyUsernamePasswordAuthenticationFilter`:
-<br><br>
-
+<br>
 <b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
 </div>
 
 ### Configuració de la font d'autenticació i autorització per GICAR
 
-Per a configurar l'autenticació i l'autorització a GICAR és necessari configurar:
+Per a configurar l'autenticació i l'autorització a GICAR serà necessari configurar:
 
 * L'arxiu de propietats `security.properties`
-* El proveïdor de seguretat dins de la configuració de seguretat de Spring
+* El **proveïdor de seguretat** dins de la configuració de seguretat de Spring
 
 Els dos arxius es generen i configuren de manera automàtica mitjançant l'eina de desenvolupament. Per a configurar
-l'accés a GICAR és necessari configurar l'arxiu de propietats `security.properties` que té el següent format:
+l'accés a GICAR serà necessari configurar l'arxiu de propietats `security.properties` que té el següent format:
 
 Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
@@ -1221,14 +1226,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       http.csrf().disable();
 
       http.formLogin().loginProcessingUrl("/api/login").successHandler(restAuthenticationSuccessHandler).failureHandler(restAuthenticationFailureHandler);
-      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED)).invalidateHttpSession(true);
+      http.logout().logoutUrl("/api/logout").logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler(HttpStatus.ACCEPTED))
+                   .invalidateHttpSession(true);
       http.addFilterBefore(proxyUsernamePasswordAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
    }
 
    @Bean
    @Autowired
    public ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter() {
-      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter = new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
+      final ProxyUsernamePasswordAuthenticationFilter proxyUsernamePasswordAuthenticationFilter =
+            new ProxyUsernamePasswordAuthenticationFilter("/api/login", RequestMethod.POST.toString());
       proxyUsernamePasswordAuthenticationFilter.setSiteminderAuthentication(isSiteminderAuthentication());
       proxyUsernamePasswordAuthenticationFilter.setGicarWithMemberAuthentication(true);
       proxyUsernamePasswordAuthenticationFilter.setAuthenticationManager(authenticationManager);
@@ -1450,13 +1457,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-Amb aquesta configuració s'utilitzen les capçaleres *HTTP_GICAR* i *HTTP_GICAR_ID* o *HTTP_GICAR_CERT* i *HTTP_GICAR_PSIS*
-per a l'autenticació i *HTTP_GICAR_MEMBERL* per l'autorització. Per a més informació sobre les capçaleres GICAR podeu consultar [Control d'accés als recursos amb GICAR](/gicar-integracio/autoritzacio/).
+Amb aquesta configuració s'utilitzen les capçaleres *HTTP_GICAR* i *HTTP_GICAR_ID*, o *HTTP_GICAR_CERT* i *HTTP_GICAR_PSIS*
+per a l'autenticació; i *HTTP_GICAR_MEMBERL* per l'autorització. Per a més informació sobre les capçaleres GICAR podeu
+consultar [Control d'accés als recursos amb GICAR](/gicar-saml2/auth-saml2-grups2/).
 
 ### Logout
 
-Per tots els mètodes d'autenticació, el procediment de _logoff_ consisteix en invalidar la sessió, forçant així que el
-servei de seguretat intervingui en la següent petició sol·licitant nova identificació per part de l’usuari. En el cas de GICAR, però, aquesta autenticació és realitzada per un sistema extern a l'aplicació i, per tant, s'ha de comunicar a aquest sistema extern la intenció de fer el _logoff_. El mecanisme previst per a fer-ho consisteix en una URL de Gicar que, en ser invocada, realitza el _logoff_. El _logoff_ depèn de l'agent de _SiteMinder_ que l'aplicació fa servir per a comunicar-se amb el _Policy Server_.
+Per a tots els mètodes d'autenticació, el procediment de _logoff_ consisteix en **invalidar la sessió, forçant així que el
+servei de seguretat intervingui en la següent petició sol·licitant nova identificació per part de l’usuari**.
+En el cas de **GICAR, aquesta autenticació és realitzada per un sistema extern** a l'aplicació i, per tant, s'ha de
+comunicar a aquest sistema extern la intenció de fer el _logoff_. El mecanisme previst per a fer-ho consisteix en
+una URL de Gicar que, en ser invocada, realitza el _logoff_. El _logoff_ depèn de l'agent de _SiteMinder_ que l'aplicació
+fa servir per a comunicar-se amb el _Policy Server_.
 
 Els enllaços de _logoff_ són els següents:
 
@@ -1473,7 +1485,6 @@ A continuació s’expliquen els diferents passos per a instal·lar openLDAP i i
 * Baixar OpenLDAP per a Windows http://sourceforge.net/projects/openldapwindows/ i instal·lar-lo
 * Canviar la configuració per defecte de OpenLDAP: copiar les dades següents en un fitxer `slapd.conf` i afegir
 aquest fitxer a la mateixa carpeta que OpenLDAP:
-
 ```
 #######################################################################
 # See slapd.conf(5) for details on configuration options.
@@ -1513,18 +1524,16 @@ index objectClass eq
 ```
 
 * Obrir una pantalla "DOS command", dirigir-se a la carpeta on hem instal·lat el programa i arrancar OpenLDAP amb la següent comanda:
-
 ```
 .\slapd -d 1
 ```
 
-Si tot ha funcionat bé, hauríem de veure una sortida d’aquest estil:
+Si tot ha funcionat bé, hauríem de veure una sortida com aquesta:
 
 ![Execució Open LDAP](/related/canigo/documentacio/modul-seguretat/ServeiSeguretat_img012.jpg.gif)
 
 * Copiar les dades següents en un fitxer `setup.ldif`. Aquest fitxer conté un directori LDAP de l'empresa "mycompany.com"
 amb 2 persones: "gestoruser" i "usuari". Copiarem el fitxer `setup.ldif` a la mateixa carpeta que openLDAP.
-
 ```
 ### Top level definition
 #dn: dc=mycompany,dc=com
@@ -1567,23 +1576,20 @@ uid: usuario
 userPassword: usuariopassword
 ```
 
-Obrir una altra pantalla "DOS command", dirigir-se a la carpeta on hem instal·lat el programa i importar les dades
-amb la següent comanda:
-
+* Obrir una altra pantalla "DOS command", dirigir-se a la carpeta on hem instal·lat el programa i importar les dades
+amb la següent comanda. La paraula de pas per defecte és "secret".
 ```
 ldapadd -x -D "cn=Manager,dc=mycompany,dc=com" -W -f setup.ldif
 ```
 
-La paraula de pas per defecte és "secret".
-
 ### Client LDAP Java: Jxplorer
 
-Comprovarem que la importació de dades ha funcionat amb _Jxplorer_, un client LDAP Java i de codi obert.
+Comprovarem que la importació de dades ha funcionat amb _Jxplorer_, un client LDAP Java de codi obert.
 
 * Baixar Jxplorer de la url http://sourceforge.net/projects/jxplorer/ i instal·lar-lo
-* Prémer el botó per a connectar-se al nostre directori LDAP
+* Prémer el botó per a connectar-se al nostre directori LDAP. La paraula de pas per defecte és "secret".
 
-La paraula de pas per defecte és "secret". La pantalla següent mostra els valors dels diferents paràmetres:
+La pantalla següent mostra els valors dels diferents paràmetres:
 
 ![Configuració paràmetres JXplorer](/related/canigo/documentacio/modul-seguretat/ServeiSeguretat_img013.jpg.gif)
 
