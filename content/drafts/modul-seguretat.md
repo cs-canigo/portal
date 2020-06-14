@@ -35,16 +35,15 @@ La configuració es realitza automàticament a l'aplicació a partir de l'eina d
 * Configuració de filtres web
 * Configuració de JWT (JSON Web Token)
 * Publicació de controladors de seguretat
-* Configuració d'autenticació
-* Configuració d'autorització
-* Configuració de la font de dades de l'esquema de seguretat
+* Configuració d'autenticació, autorització i font de dades de l'esquema de seguretat
+* Logout
 
 A continuació es detalla la configuració necessària en cada cas.
 
 ### Configuració de filtres web
 
-_Spring Security_ utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a utilitzar-los
- definirem en el fitxer `WEB-INF/web.xml` el següent:
+_Spring Security_ utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a utilitzar-los,
+definirem en el fitxer `WEB-INF/web.xml` el següent:
 
 ```
 <filter>
@@ -76,7 +75,7 @@ Propietat                     | Requerit | Descripció                          
 *.jwt.expiration              | No       | Temps de vida del _token_ JWT                 | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication                      | false
 
-Per a verificar l'autenticació per _token_ s'ha d'invocar al servei "http://<app>/api/auth", amb la capçalera GICAR en cas
+Per a verificar l'autenticació per _token_ s'ha d'invocar al servei `http://<app>/api/auth`, amb la capçalera GICAR en cas
 d'autenticació via GICAR, o en el cos de la petició en format JSON en la resta de casos:
 
 ```
@@ -93,6 +92,7 @@ Authentication Bearer eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE0NzkyMzEzODMsInN1YiI6ImFkb
 
 En aquest mateix article es mostra un exemple de configuració a Canigó de JWT + GICAR.
 
+<br/>
 ##### Compressió token JWT
 
 A partir de la versió 2.4.0 del mòdul, es proporciona la funcionalitat de compressió del _token JWT_. Per defecte,
@@ -154,7 +154,7 @@ s'haurà de condicionar la càrrega de _Spring Boot_ com es mostra a continuaci�
    }
 ```
 
-### Configuració d'autenticació
+### Configuració d'autenticació, autorització i font de dades de l'esquema de seguretat
 
 En la configuració de l'autenticació haurem de considerar:
 
@@ -181,7 +181,7 @@ La disposició dels arxius és la següent:
 * <PROJECT_ROOT>/src/main/java/cat/gencat/nomapp/config/WebSecurityConfig.java
 * <PROJECT_ROOT>/src/main/resources/config/props/security.properties
 
-#### Configuració de la font d'autenticació i autorització per base de dades
+#### Configuració per base de dades
 
 Per a configurar la font d'autorització mitjançant base de dades serà necessari configurar:
 
@@ -454,7 +454,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de persistència si aquest no ha estat instal·lat prèviament pel desenvolupador.
 </div>
 
-### Configuració de la font d'autenticació i autorització per LDAP
+#### Configuració per LDAP
 
 Per a configurar l'accés per LDAP (funcionalitat ja desfasada) serà necessari configurar:
 
@@ -475,7 +475,7 @@ Propietat                           | Requerit | Descripció
 *.security.ldap.group.search.filter | No       | Filtre de cerca dels grups dins de l'estructura del LDAP. Per defecte: (cn={0})
 
 Per a realitzar les proves en l’entorn de desenvolupament podem instal·lar un servidor LDAP senzill (veure l'apartat
-'Eines de Suport' per a més informació). La configuració del _provider_ en `app-custom-security.xml` es realitza
+"Eines de Suport" per a més informació). La configuració del _provider_ en `app-custom-security.xml` es realitza
 com es descriu a continuació:
 
 * Afegir el _provider_ a l’_Authentication Manager_
@@ -498,7 +498,7 @@ com es descriu a continuació:
 manager-password="${security.ldap.manager.password}"/>
 ```
 
-### Configuració de la font d'autenticació i autorització per arxiu de propietats
+#### Configuració per arxiu de propietats
 
 Aquest proveïdor de seguretat es basa en un arxiu de propietats per a carregar en memòria els usuaris/passwords/rols de
 l'aplicació. Per a configurar l'accés mitjançant un arxiu de propietats serà necessari:
@@ -506,7 +506,7 @@ l'aplicació. Per a configurar l'accés mitjançant un arxiu de propietats serà
 * Configurar l'arxiu de propietats `security.users.properties`
 * Configurar el proveïdor de seguretat dins la configuració de seguretat de Spring `app-custom-security.xml`
 
-L'arxiu que conté aquesta configuració `security.users.properties` te el següent format:
+L'arxiu `security.users.properties` conté aquesta configuració i té el següent format:
 
 ```
 username=password,grantedAuthority[,grantedAuthority][,enabled|disabled]
@@ -1116,7 +1116,7 @@ On s'ha d’haver definit a la base de dades de l'aplicació les taules necessà
 DAO `AuthoritiesDAOImpl`. Per a més informació sobre aquestes taules, podeu consultar la documentació de
 Spring [Security Database Schema](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#appendix-schema).
 Amb aquesta configuració ha de ser possible autoritzar un usuari que prèviament ha estat autenticat en el servei de GICAR.
-Per aquest motiu serà necessari rebre certes dades referents a L'autenticació realitzada. A la capçalera HTML
+Per aquest motiu serà necessari rebre certes dades referents a l'autenticació realitzada. A la capçalera HTML
 podrem accedir a les següents dades:
 
 ```
@@ -1125,6 +1125,7 @@ UNITAT_MENOR=CTTI Qualitat
 ```
 
 On:
+
 - CODIINTERN és el codi intern de l'usuari,
 - el NIF el NIF de l'usuari,
 - EMAIL l'adreça de correu electrònic enregistrada al Director Corporatiu,
@@ -1134,7 +1135,7 @@ On:
 <div class="message information">
 En cas que l'aplicació estigui separada entre codi estàtic i dinàmic, serà necessari indicar la següent propietat
 dins el bean `proxyUsernamePasswordAuthenticationFilter`:
-<br>
+<br><br>
 <b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
 </div>
 
@@ -1153,7 +1154,7 @@ Propietat                                   | Requerit | Descripció
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema
-d'autenticació i autorització sense JWT:
+d'autenticació i autorització sense utilitzar JWT:
 
 ```
 import javax.sql.DataSource;
@@ -1485,6 +1486,7 @@ A continuació s’expliquen els diferents passos per a instal·lar openLDAP i i
 * Baixar OpenLDAP per a Windows http://sourceforge.net/projects/openldapwindows/ i instal·lar-lo
 * Canviar la configuració per defecte de OpenLDAP: copiar les dades següents en un fitxer `slapd.conf` i afegir
 aquest fitxer a la mateixa carpeta que OpenLDAP:
+
 ```
 #######################################################################
 # See slapd.conf(5) for details on configuration options.
@@ -1524,6 +1526,7 @@ index objectClass eq
 ```
 
 * Obrir una pantalla "DOS command", dirigir-se a la carpeta on hem instal·lat el programa i arrancar OpenLDAP amb la següent comanda:
+
 ```
 .\slapd -d 1
 ```
@@ -1534,6 +1537,7 @@ Si tot ha funcionat bé, hauríem de veure una sortida com aquesta:
 
 * Copiar les dades següents en un fitxer `setup.ldif`. Aquest fitxer conté un directori LDAP de l'empresa "mycompany.com"
 amb 2 persones: "gestoruser" i "usuari". Copiarem el fitxer `setup.ldif` a la mateixa carpeta que openLDAP.
+
 ```
 ### Top level definition
 #dn: dc=mycompany,dc=com
@@ -1578,6 +1582,7 @@ userPassword: usuariopassword
 
 * Obrir una altra pantalla "DOS command", dirigir-se a la carpeta on hem instal·lat el programa i importar les dades
 amb la següent comanda. La paraula de pas per defecte és "secret".
+
 ```
 ldapadd -x -D "cn=Manager,dc=mycompany,dc=com" -W -f setup.ldif
 ```
