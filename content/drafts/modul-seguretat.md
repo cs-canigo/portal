@@ -30,15 +30,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ## Configuració
 
-La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament i es composa de les següents parts:
-
-* Configuració de filtres web
-* Configuració de JWT (JSON Web Token)
-* Publicació de controladors de seguretat
-* Configuració d'autenticació, autorització i font de dades de l'esquema de seguretat
-* Logout
-
-A continuació es detalla la configuració necessària en cada cas.
+La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament
 
 ### Configuració de filtres web
 
