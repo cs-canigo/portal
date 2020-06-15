@@ -181,6 +181,7 @@ La disposició dels arxius és la següent:
 * <PROJECT_ROOT>/src/main/java/cat/gencat/nomapp/config/WebSecurityConfig.java
 * <PROJECT_ROOT>/src/main/resources/config/props/security.properties
 
+<br/>
 #### Configuració per base de dades
 
 Per a configurar la font d'autorització mitjançant base de dades serà necessari configurar:
@@ -454,6 +455,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 L'eina de suport al desenvolupament automatitza la instal·lació del mòdul de persistència si aquest no ha estat instal·lat prèviament pel desenvolupador.
 </div>
 
+<br/>
 #### Configuració per LDAP
 
 Per a configurar l'accés per LDAP (funcionalitat ja desfasada) serà necessari configurar:
@@ -498,6 +500,7 @@ com es descriu a continuació:
 manager-password="${security.ldap.manager.password}"/>
 ```
 
+<br/>
 #### Configuració per arxiu de propietats
 
 Aquest proveïdor de seguretat es basa en un arxiu de propietats per a carregar en memòria els usuaris/passwords/rols de
@@ -773,7 +776,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
-### Configuració de la font d'autenticació per GICAR
+<br/>
+#### Configuració de la font d'autenticació per GICAR
 
 Per a configurar l'accés a GICAR serà necessari configurar:
 
@@ -1139,6 +1143,7 @@ dins el bean `proxyUsernamePasswordAuthenticationFilter`:
 <b>&lt;property name="filterProcessesUrl" value="/AppJava/j_spring_security_check" /&gt;</b>
 </div>
 
+<br/>
 ### Configuració de la font d'autenticació i autorització per GICAR
 
 Per a configurar l'autenticació i l'autorització a GICAR serà necessari configurar:

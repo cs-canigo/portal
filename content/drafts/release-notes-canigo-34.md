@@ -15,7 +15,7 @@ weight      = 1
    - S'han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls _core_ de Canigó.
 - [Actualització del mòdul Seguretat](/noticies/2020-06-11-Actualitzacio_modul_Seguretat_compressio_token)
    - Actualització del mòdul de seguretat de Canigó per a proporcionar la possibilitat de compressió del token JWT.
-- [Actualització de l’_archetype_ 1.6.7 i del _plugin_ Eclipse 1.7.9](/noticies/2020-06-11-Actualitzacio_Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9)
+- [Actualització de l’_archetype_ 1.6.7 i del _plugin_ Eclipse 1.7.9](/noticies/2020-06-11-Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9)
    - Actualització de l’_archetype_ versió 1.6.7 i del _plugin_ de l'Eclipse de Canigó versió 1.7.9 per a utilitzar les versions dels mòduls _core_ amb les correccions de l'anàlisi de SonarQube.
 
 #### Canigó 3.4.3 (26/03/2020)
