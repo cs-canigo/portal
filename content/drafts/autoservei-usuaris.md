@@ -1,5 +1,5 @@
 +++
-date = "2019-01-04"
+date = "2020-06-17"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris SIC 2.0 mitjançant GitLab"
 aliases = [

@@ -1,5 +1,5 @@
 +++
-date = "2019-01-02"
+date = "2020-06-17"
 title = "Custodia de codi font"
 description = "GitLab és l'eina implantada al SIC per la custodia de codi font"
 aliases = [
