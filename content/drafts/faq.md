@@ -19,7 +19,8 @@ Caldrà configurar la vostra VPN/Lan2Lan/PPP per a que disposi d'accés a les ad
 <br/><br/>
 
 #### **Com puc concedir permisos a altres membres als meus codis d'aplicació?** ####
-* En el cas de responsables de lot, CPD, LldT i Oficines, l'assignació de permisos és automàtica, per tant no calen accions addicionals. Aquests grups estaran gestionats per l’aplicació de control d’accés de recursos de GICAR (https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+* En el cas de responsables de lot, CPD, LldT i Oficines, l'assignació de permisos és automàtica, per tant no calen accions addicionals.
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 * En el cas de proveïdors d'aplicacions, el SIC proporciona l'[Autoservei d'usuaris](/sic-serveis/autoservei-usuaris/) que permet definir nous membres del grup de Release Manager i concedir accés a la resta de l'equip de desenvolupament.
 <br/><br/>
 
