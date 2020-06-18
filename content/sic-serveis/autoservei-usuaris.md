@@ -1,5 +1,5 @@
 +++
-date = "2019-01-04"
+date = "2020-06-17"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris SIC 2.0 mitjançant GitLab"
 aliases = [
@@ -50,17 +50,17 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 Aquest tipus de grup recull als responsables de lot. <br/>
 Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat perd valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
 Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT concret en el moment de la creació
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ### Grups de CPDs i LdTs
 
 Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ### Altres grups
 
 Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Responsables d'àmbit, Oficina de Qualitat, Oficina de Seguretat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
-La pertinença a aquests tipus de grups es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ## Funcionament
 

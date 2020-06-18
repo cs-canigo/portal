@@ -1,5 +1,5 @@
 +++
-date = "2019-01-02"
+date = "2020-06-17"
 title = "Custodia de codi font"
 description = "GitLab és l'eina implantada al SIC per la custodia de codi font"
 aliases = [
@@ -11,9 +11,9 @@ toc = true
 weight = 1
 +++
 
-## Introducció
-
 ![GitLab](/related/sic/serveis/gitlab-logo.png "GitLab")
+
+## Introducció
 
 **GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert.
 <br>
@@ -62,7 +62,7 @@ Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i pré
 
 ### Integració contínua
 
-En publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d'Integració Contínua (Jenkins). En aquest sentit, cal tenir pressents algunes premisses:
+En publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d'Integració Contínua (Jenkins). En aquest sentit, cal tenir presents algunes premisses:
 
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
