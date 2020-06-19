@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-19"
-title       = "Entorn de desenvolupament"
-description = "Entorn de desenvolupament Canigó"
+title       = "Entorn "
+description = "Entorn"
 sections    = "Canigó"
 enllac		= "/INTCAN2199-versions/"
 weight		= 5
