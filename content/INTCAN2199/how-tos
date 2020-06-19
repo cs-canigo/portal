@@ -4,5 +4,5 @@ title       = "Guies d'ús"
 description = "Guies d'ús del Framework"
 sections    = "Canigó"
 enllac		= "/INTCAN2199-versions/"
-weight		= 6
+weight		= 1
 +++
