@@ -4,5 +4,5 @@ title       = "Recomanacions generals"
 description = "Recomanacions de bones pràctiques i convencions generals Canigó 3.4.4"
 sections    = "Canigó"
 enllac		= "/INTCAN2199-versions-3.4LTS-3.4.4-recomanacions-generals/"
-weight		= 3
+weight		= 1
 +++
