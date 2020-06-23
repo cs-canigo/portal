@@ -4,5 +4,5 @@ title       = "Documentació autogenerada"
 description = "Documentació autogenerada per canigo.core 4.3.0"
 sections    = "Canigó"
 enllac		= "/moduls/canigo.core/4.3.0/site/project-info.html"
-weight      = 1
+weight      = 4
 +++
