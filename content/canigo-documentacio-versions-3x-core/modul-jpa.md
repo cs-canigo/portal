@@ -1,5 +1,5 @@
 +++
-date        = "2019-01-16"
+date        = "2020-06-25"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
 sections    = "Canigó. Documentació versió 3.x"
@@ -24,29 +24,12 @@ Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupame
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-<canigo.persistence.jpa.version>[1.3.0,1.4.0)</canigo.persistence.jpa.version>
-<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
+<canigo.persistence.jpa.version>[2.3.0,2.4.0)</canigo.persistence.jpa.version>
 
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.persistence.jpa</artifactId>
 	<version>${canigo.persistence.jpa.version}</version>
-</dependency>
-
-<dependency>
-	<groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.test</artifactId>
-	<version>${canigo.test.version}</version>
-	<scope>test</scope>
-</dependency>
-
-<dependency>
-   <groupId>cat.gencat.ctti</groupId>
-   <artifactId>canigo.persistence.jpa</artifactId>
-   <type>test-jar</type>
-   <version>${canigo.persistence.jpa.version}</version>
-   <scope>test</scope>
-   <classifier>tests</classifier>
 </dependency>
 ```
 
@@ -65,7 +48,6 @@ el que executa el test unitari del mòdul de persistència:
 				<execution>
 					<goals>
 						<goal>process</goal>
-						<goal>test-process</goal>
 					</goals>
 					<configuration>
 						<outputDirectory>target/generated-sources/java</outputDirectory>
@@ -73,29 +55,6 @@ el que executa el test unitari del mòdul de persistència:
 					</configuration>
 				</execution>
 			</executions>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<executions>
-				<execution>
-		            <id>base-test</id>
-		            <phase>test</phase>
-		            <goals>
-		                <goal>test</goal>
-		            </goals>
-		            <configuration>
-		            	<dependenciesToScan>
-		            		<dependency>cat.gencat.ctti:canigo.persistence.jpa</dependency>
-		            		...
-				</dependenciesToScan>
-				<excludes>
-					<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
-				</excludes>
-			    </configuration>
-		        </execution>
-		        ...
-	        </executions>
 		</plugin>
 		...
 	</plugins>
