@@ -46,10 +46,7 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 on es desplegaran (ús profiles maven o similar).
 
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
-la versió funcional del projecte. Per exemple:
-```
-version: 1.1.0
-```
+la versió funcional del projecte. Per exemple: `version: 1.1.0`
 <div class="message information">
 Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.<br/>
 <a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/">Canigo-Configuracio-multientorn-SPA</a>
