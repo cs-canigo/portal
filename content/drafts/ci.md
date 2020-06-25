@@ -89,7 +89,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Init**: inicialitzacions internes.
 * **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
-* **(nou) Build image**: (opcional) construcció i anàlisi de vulnerabilitats de la possible imatge Docker d'usuari que serà utilitzada, en la següent etapa, per a la compilació i construcció d'artefactes.
+* **(NOVETAT) Build image**: construcció i anàlisi de vulnerabilitats de la possible imatge Docker d'usuari que serà utilitzada, en la següent etapa, per a la compilació i construcció d'artefactes. Es tracta d'una etapa addicional que s'afegirà només en cas necessari.
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 * **Commit test**: etapa prevista per a l'execució de tests de commit, si escau.
 * **Unit test**: etapa prevista per a l'execució de tests unitaris, si escau.
