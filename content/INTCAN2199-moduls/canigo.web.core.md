@@ -1,8 +1,8 @@
 +++
 date        = "2020-06-19"
-title       = "canigo.web.core"
-description = "Mòdul canigo.web.core"
+title       = "canigo.persistence.jpa"
+description = "Mòdul canigo.persistence.jpa"
 sections    = "Canigó"
-enllac		= "/INTCAN2199-moduls-canigo.web.core/"
+enllac		= "/INTCAN2199-moduls-canigo.persistence.jpa/"
 weight		= 1
 +++
