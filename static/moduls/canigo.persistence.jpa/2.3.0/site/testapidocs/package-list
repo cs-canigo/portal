@@ -1,0 +1,14 @@
+cat.gencat.ctti.canigo.arch.persistence.jpa
+cat.gencat.ctti.canigo.arch.persistence.jpa.dao
+cat.gencat.ctti.canigo.arch.persistence.jpa.exception
+cat.gencat.ctti.canigo.arch.persistence.jpa.model.json
+cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql
+cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.impl
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.test
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.impl
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.test
+cat.gencat.ctti.canigo.arch.persistence.jpa.transaction
