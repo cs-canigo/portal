@@ -12,10 +12,9 @@ taxonomies = []
 weight = 2
 +++
 
+![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
 
 ## Introducció
-
-![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
 
 **Jenkins** és l'eina implantada al SIC per a la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
 <br>
@@ -90,7 +89,8 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Init**: inicialitzacions internes.
 * **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
-* **Build**: compilació i construcció d'artefactes en funció de la tecnologia i eines emprades.
+* **(nou) Build image**: (opcional) construcció i anàlisi de vulnerabilitats de la possible imatge Docker d'usuari que serà utilitzada, en la següent etapa, per a la compilació i construcció d'artefactes.
+* **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 * **Commit test**: etapa prevista per a l'execució de tests de commit, si escau.
 * **Unit test**: etapa prevista per a l'execució de tests unitaris, si escau.
 * **Anàlisi estàtic de codi**: etapa prevista per a l'execució d'anàlisi de codi estàtic a partir d'unes regles predefinides.
@@ -158,7 +158,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 
 
 ### Node/npm
-|Versió Node|Versió npm|
+|Versió Node|Versió Npm|
 |-----------|----------|
 |4|2.15|
 |6|3.10|
@@ -166,9 +166,14 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |10|6.11|
 |12|6.12|
 
-L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida, tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó), **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (package.json) i instal·lar-los a la construcció de l'aplicació amb **npm install**
+L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
+tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
+**bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (fitxer `package.json`) i instal·lar-los
+a la construcció de l'aplicació via **npm install**.
 
-**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions), ans al contrari, l'estén per acabar de concretar els requeriments propis del SIC.
+**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
+l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
+ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
