@@ -15,7 +15,7 @@ weight      = 7
 | **canigo.persistence.core**                        		| 2.3.0          																							|
 | canigo.core                                       		| [4.0.0,4.4.0)  																							|
 |                                                   		|               																							|
-| **canigo.persistence.jpa**                         		| 2.3.0         																							|
+| **canigo.persistence.jpa**                         		| [2.3.0](/INTCAN2199-moduls-canigo.persistence.jpa-2.3.0/)		|
 | canigo.core                                       		| [4.0.0,4.4.0)  																							|
 | canigo.persistence.core                           		| [2.0.0,2.4.0)  																							|
 |                                                   		|               																							|
