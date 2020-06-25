@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-19"
 title       = "Llistat de canvis"
-description = "Llistat de canvis canigo.persistence.jpa 2.3.0 Canigó 3.4.4"
+description = "Llistat de canvis canigo.persistence.jpa 2.3.0"
 sections    = "Canigó"
 weight		= 2
 +++
