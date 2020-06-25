@@ -148,28 +148,12 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |MS_Build|4.0<br />14<br />15|
 |MS_Deploy|7.1|
 
-|Versió Maven|Versió JDK|
+|Versió JDK|Versió Maven|
 |-------|-------|
-|2.0|6|
-|2.2|6|
-|3.2|6|
-|2.0|7|
-|2.2|7|
-|3.2|7|
-|3.3|7|
-|3.5|7|
-|3.6|7|
-|2.0|8|
-|2.2|8|
-|3.2|8|
-|2.2|8|
-|3.6|8|
-|2.0|11-openjdk|
-|2.2|11-openjdk|
-|3.2|11-openjdk|
-|3.3|11-openjdk|
-|3.5|11-openjdk|
-|3.6|11-openjdk|
+|6|2.0<br />2.2<br />3.2|
+|7|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
+|8|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
+|11-openjdk|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
 
 
 Cas particular de tecnologies front-end:
