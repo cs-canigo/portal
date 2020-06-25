@@ -142,12 +142,13 @@ Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipel
 Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
+### MS
 |Tecnologia|Versions|
 |-------|-------|
-|Ant|1.8.2<br />1.9.6|
 |MS_Build|4.0<br />14<br />15|
 |MS_Deploy|7.1|
 
+### JDK/Maven
 |Versió JDK|Versió Maven|
 |-------|-------|
 |6|2.0<br />2.2<br />3.2|
@@ -156,17 +157,16 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |11-openjdk|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
 
 
-Cas particular de tecnologies front-end:
-
-|Versió node|Versió npm|
+### Node/npm
+|Versió Node|Versió npm|
 |-----------|----------|
-|4.9.1|2.15.11|
-|6.17.1|3.10.10|
-|8.16.2|6.4.1|
-|10.17.0|6.11.3|
-|12.13.1|6.12.1|
+|4|2.15|
+|6|3.10|
+|8|6.4|
+|10|6.11|
+|12|6.12|
 
-L'única eina que va lligada en certa manera amb la versió de node és **npm**. La resta d'eines de cicle de vida (tals com **bower**, **gulp** i **grunt**) s'han d'incloure amb l'aplicació per a què el SIC les utilitzi per a la seva construcció. Pel que fa a [Angular](https://angular.io/), framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l'aplicació definirà la versió de **ng** (Angular-cli) a utilitzar per a la seva construcció.
+L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida, tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó), **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (package.json) i instal·lar-los a la construcció de l'aplicació amb **npm install**
 
 **<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions), ans al contrari, l'estén per acabar de concretar els requeriments propis del SIC.
 
