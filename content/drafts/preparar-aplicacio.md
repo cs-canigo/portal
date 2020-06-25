@@ -1,5 +1,5 @@
 +++
-date = "2020-03-10"
+date = "2020-06-25"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -11,7 +11,9 @@ weight = 2
 ## Introducció
 
 En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes,
-s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament.
+s’hauran d’acomplir una sèrie de **requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament**.
+
+Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
 
 ## Lliurament de codi font
 
@@ -36,11 +38,16 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
 desenvolupament com en els entorns del SIC.
 
+<div class="message information">
+El SIC actualment utilitza la **tecnologia Docker** per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment poden extendre del catàleg corporatiu.
+</div>
+
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).
 
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
-la versió funcional del projecte.
+la versió funcional del projecte. Per exemple:
 ```
 version: 1.1.0
 ```
@@ -57,10 +64,19 @@ Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 * Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
 
 
-### Aplicacions APEX i PL/SQL, i altres desplegaments d'scripts a BBDD
+## Llibreries
+Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
 
-El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol desplegament d'aquest tipus.
-En general s'aconsella disposar d'un projecte específic de desplegament de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
+* **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
+* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
+* **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
+
+Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
+
+### Aplicacions APEX i PL/SQL, i migracions de BBDD
+
+El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
+En general s'aconsella disposar d'un projecte específic de migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
 el backend de l'aplicació.
 
 En qualsevol cas, caldrà preparar:
@@ -87,22 +103,6 @@ Exemple:
 El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
-## Llibreries
-Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
-
-* **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
-* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
-* **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
-
-Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
-
-## Modalitats de desplegament
-Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actualment, el sistema previst seria el següent:
-
-* Entorn **INT**: automàtica (es construeixen els artefactes i es despleguen als servidors web, d’aplicacions i/o de bases de dades).
-* Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats. Ambdues modalitats delegaran qualsevol tasca prèvia al desplegament (backup, preparació de marxa enrere...) als tècnics de CPD.
-* **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés de desplegament.
-
 ## Funcionament de les pipelines de construcció i desplegament
 En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà:
 
@@ -113,9 +113,8 @@ En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una p
 * En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
 
 Per poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
+Per a més informació: [Integració Continua](/sic-serveis/ci/).
 
 <br/><br/><br/>
-Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
-<br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
