@@ -39,8 +39,8 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 desenvolupament com en els entorns del SIC.
 
 <div class="message information">
-El SIC actualment utilitza la **tecnologia Docker** per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
-Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment poden extendre del catàleg corporatiu.
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran extendre del catàleg d'imatges corporatiu.
 </div>
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
