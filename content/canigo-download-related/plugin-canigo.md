@@ -1,5 +1,5 @@
 +++
-date        = "2020-05-06"
+date        = "2020-06-26"
 title       = "Plugin Canigó per a Eclipse"
 description = "Plugin d'eclipse per a generar una aplicació Canigó."
 sections    = "Canigó."
@@ -33,9 +33,9 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar **Plug-in 1.7.5 - Canigo 3.4.1**
+Seleccionar **Plug-in 1.7.9 - Canigo 3.4.4**
 
-![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_5.png)
+![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_9.png)
 
 ## Crear Aplicació Canigó
 
