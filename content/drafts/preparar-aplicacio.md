@@ -57,7 +57,7 @@ Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 * No es permet l'ús de versions **Snapshot**.
 
-* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
+* Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
 
 
 ## Llibreries
@@ -72,7 +72,7 @@ Es pot validar la existència o no de la dependència accedint a la següent URL
 ### Aplicacions APEX i PL/SQL, i migracions de BBDD
 
 El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
-En general s'aconsella disposar d'un projecte específic de migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
+En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
 el backend de l'aplicació.
 
 En qualsevol cas, caldrà preparar:
