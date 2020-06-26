@@ -8,7 +8,7 @@ weight		= 1
 
 ## Llistat de canvis versió 3.0.4
 
-- Canvis a les urls del programari a instal·lar per urls controlades per CS Canigó
+- Resolució error url dbeaver
 
 ## _KNOWN ISSUES_
 
