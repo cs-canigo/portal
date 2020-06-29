@@ -60,10 +60,15 @@ docker run -it --rm \
 ```
 
 En aquest cas li estem dient:
+
 - Volem que el nom de la imatge executant-se tingui el nom *gencatsic-maven-builder*
+
 - Volem compartir el nostre repository maven, ubicat a *$HOME/.m2/repository*, amb el repository maven de la imatge docker 
+
 - Volem compartir el nostre settings.xml, ubicat a $HOME/.m2/settings.xml, amb el settings.xml de la imatge docker
+
 - Volem compartir el codi font de la nostre aplicació, ubicat a *$PWD*, amb el directori de treball de la imatge docker
+
 - Volem executar el goal de maven *mvn --version*
 
 ### Logout
