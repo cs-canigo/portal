@@ -44,7 +44,7 @@ Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de 
 
 ### Descàrrega d'imatges
 
-Una cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:
+Un cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:
 ```
 docker pull docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-8
 ```
