@@ -38,7 +38,7 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
 desenvolupament com en els entorns del SIC.
 <div class="message information">
-El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.<br/>
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran extendre del catàleg d'imatges corporatiu.<br/>
 <a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
 </div>
