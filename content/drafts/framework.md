@@ -141,22 +141,24 @@ Swagger proporciona una manera de descriure una API de forma estructurada i en u
 - Autoritzacions
 - Informació adicional com contractes o llicència
 
-Swagger proporciona una interficie disponible des del navegador que permet interactiuar i provar l'api directament des del navegador
+Swagger proporciona una interficie disponible des del navegador que permet interactuar i provar l'api directament des del navegador
 
 ## Creació de projecte base
 
-Des de CS Canigó es proporciona un [Pugin per l'eclipse](/canigo-download-related/plugin-canigo/) que utilitza un arquetip maven per a generar projectes base amb Canigó. Aquest plugin està disponible a l'[Entorn de desenvolupament](/canigo/entorn-desenvolupament/)
-El prjecte base generat és un projecte Maven amb un exemple de serveis rest disponibles a */api/equipaments* on s'utilitzen les capes Security, Controller, Service i Repository de JPA utilitzant Hibernate atacant a una base de dades H2 en memòria. 
+Des de CS Canigó es proporciona un [Pugin per l'eclipse](/canigo-download-related/plugin-canigo/) que utilitza un arquetip maven per a generar projectes base amb Canigó. Aquest plugin està disponible a l'[Entorn de desenvolupament](/canigo/entorn-desenvolupament/).
+
+El projecte base generat és un projecte Maven amb un exemple de serveis rest disponibles a */api/equipaments* on s'utilitzen les capes Security, Controller, Service i Repository de JPA utilitzant Hibernate atacant a una base de dades H2 en memòria. 
 
 ![Capes projecte base](/related/canigo/projecte_base.png)
 
 Un cop el projecte es generat amb el plugin es poden afegir i/o treure mòduls i modificar connectors com el de JPA per, per exemple, canviar el connector de H2 a Oracle, Mysql o PostgreSQL. 
-Aquests serveis rest estan disponibles per a la seva documentació o el seu testeig a través de la documentació dels serveis rest de Swagger en el contexte */*
 
 ## Desplegament
 
-El projecte base a través de maven construeix l'empaquetat del projecte per a ser desplegat al servidor d'aplicacions en format *war*
-Si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza [Spring Boot](https://spring.io/projects/spring-boot) per a ser autoexecutable amb un servidor incrustat. Per defecte el projecte base ve configurat amb el servidor incrustat tomcat, però aquest pot ser modificat. Així el projecte autoexecutable por allotgar-se dins d'una imatge docker i desplegar-se a algun servidor de contenidors dockers.
-El projecte base prorciona la configuració d'exemple en un Dockerfile per a generar una imatge [docker](https://www.docker.com/) amb el projecte autoexecutable dins
+El projecte base utilitza maven per a l'empaquetat del projecte. L'empaquetat es El projecte base a través de maven construeix l'empaquetat del projecte per a ser desplegat al servidor d'aplicacions en format *war*.
+
+Si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza [Spring Boot](https://spring.io/projects/spring-boot) per a ser autoexecutable amb un servidor incrustat. Per defecte el projecte base ve configurat amb el servidor incrustat tomcat, però aquest pot ser modificat. Així el projecte autoexecutable por allotgar-se dins d'una imatge [docker](https://www.docker.com/) i desplegar-se a algun servidor de contenidors dockers.
+
+El projecte base prorciona la configuració d'exemple en un Dockerfile per a generar una imatge docker amb el projecte autoexecutable dins.
 
 ![Desplegament projecte base](/related/canigo/desplegament_projecte_base.png)
