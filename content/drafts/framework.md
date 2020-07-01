@@ -157,7 +157,7 @@ Un cop el projecte es generat amb el plugin es poden afegir i/o treure mòduls i
 
 El projecte base utilitza maven per a l'empaquetat del projecte. L'empaquetat es El projecte base a través de maven construeix l'empaquetat del projecte per a ser desplegat al servidor d'aplicacions en format *war*.
 
-Si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza [Spring Boot](https://spring.io/projects/spring-boot) per a ser autoexecutable amb un servidor incrustat. Per defecte el projecte base ve configurat amb el servidor incrustat tomcat, però aquest pot ser modificat. Així el projecte autoexecutable por allotgar-se dins d'una imatge [docker](https://www.docker.com/) i desplegar-se a algun servidor de contenidors dockers.
+Si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza [Spring Boot](https://spring.io/projects/spring-boot) per a ser autoexecutable amb un servidor incrustat. Per defecte el projecte base ve configurat amb el servidor incrustat tomcat, però aquest pot ser modificat. Així el projecte autoexecutable por allotgar-se dins d'una imatge [docker](https://www.docker.com/) i desplegar-se a algun servidor de contenidor d'imatges docker.
 
 El projecte base prorciona la configuració d'exemple en un Dockerfile per a generar una imatge docker amb el projecte autoexecutable dins.
 
