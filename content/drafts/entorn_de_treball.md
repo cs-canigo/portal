@@ -35,23 +35,23 @@ img[alt="centrar"] {
 ### Índex dels principis de l'entorn de treball
 
 - **[0. Principis globals](#0-principis-globals)**
-  * [0 1 Generals]
-  * [0.2 Principis de cost i mateniment]
+  * 0 1 Generals
+  * 0.2 Principis de cost i mateniment
 
 - **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l-entorn-de-treball)**
-  * [1.1 Disseny aplicacions escriptori]
-  * [1.2 Principis tecnològics]
+  * 1.1 Disseny aplicacions escriptori
+  * 1.2 Principis tecnològics
 
 - **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
-  * [2.1 Dispositius]
-     + [2.1.1 Equips corporatius i Sistema Operatiu]
-  * [2.2 Virtualització d'aplicacions]
-     + [2.2.1 Execució local]
-     + [2.2.2 Execució remota]
+  * 2.1 Dispositius
+     + 2.1.1 Equips corporatius i Sistema Operatiu
+  * 2.2 Virtualització d'aplicacions
+     + 2.2.1 Execució local
+     + 2.2.2 Execució remota
 
 - **[3. Arquitectura de connectivitat](#3-arquitectura-de-connectivitat)**
-  * [3.1 Principis de disseny]
-  * [3.2 Principis tecnològics]
+  * 3.1 Principis de disseny
+  * 3.2 Principis tecnològics
 
 <!-- toc -->
 &nbsp;
