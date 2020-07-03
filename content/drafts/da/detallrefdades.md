@@ -192,7 +192,7 @@ weight= 5
     //++1 celda.appendChild(frame);
     
 	//++1 inici noves instruccions
-	celda.innerHTML = "Per consultar el conjunt de valors de l'entitat cal que envieu un correu a l'Oficina de Gestió Tècnica <br/> de Dades CTTI (<strong>gtd.ctti@gencat.cat</strong>) indicant quines són les entitats sobre les quals voleu consultar els valors.";
+	celda.innerHTML = "Per consultar el conjunt de valors de l'entitat cal que envieu un correu a l'Oficina de Gestió Tècnica <br/> de Dades CTTI (<a href="mailto:gtd.ctti@gencat.cat">gtd.ctti@gencat.cat</a>) indicant quines són les entitats sobre les quals voleu consultar els valors.";
 	//++1 fi noves instruccions
 
 	hilera.appendChild(celda);
@@ -211,5 +211,9 @@ weight= 5
      //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
      //$('#myframe').attr("src", url);
     //}
+	
+	
+	
+	
 
 </script>
