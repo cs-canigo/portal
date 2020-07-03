@@ -112,26 +112,14 @@ weight= 5
 	
     celda = document.createElement("td");
 	
-	//++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
+    var frame = document.createElement('iframe');
 	
-	//++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
-    //++1 var frame = document.createElement('iframe');
+  	var nomFitAtr=dades[14];
 	
-  	//++1 var nomFitAtr=dades[14];
-	
-    //++1 frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
-    //++1 frame.style.width= "100%"
-    //++1 frame.style.height= "300px";
-    //++1 celda.appendChild(frame);
-	
-	//++1 inici noves instruccions
-	//++1 textoCelda = document.createTextNode("Per consultar el conjunt de valors de l'entitat cal que envieu un correu a l'Oficina de Gestió Tècnica de Dades CTTI (gtd.ctti@gencat.cat) indicant quines són les entitats sobre les quals voleu consultar els valors." );
-    //++1 celda.appendChild(textoCelda);
-
-	celda.innerHTML = "Per consultar el conjunt de valors de l'entitat cal que envieu un correu a <br/> l'Oficina de Gestió Tècnica de Dades CTTI (<strong>gtd.ctti@gencat.cat</strong>) indicant quines són les entitats sobre <br/> les quals voleu consultar els valors.";
-
-	//++1 fi noves instruccions
-	
+    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
+    frame.style.width= "100%"
+    frame.style.height= "300px";
+    celda.appendChild(frame);
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
@@ -161,10 +149,10 @@ weight= 5
 	textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 	
-    var link = document.createElement('a');
-    link.setAttribute('href', '../../entitats/' + dades[13]);
-    link.innerHTML = "Descarregar fitxer de dades";
-    celda.appendChild(link);
+    //++1 var link = document.createElement('a');
+    //++1 link.setAttribute('href', '../../entitats/' + dades[13]);
+    //++1 link.innerHTML = "Descarregar fitxer de dades";
+    //++1 celda.appendChild(link);
 
     // var image = document.createElement('img');
     // image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
@@ -193,12 +181,21 @@ weight= 5
     hilera.appendChild(celda);
 
     celda = document.createElement("td");
-    var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
-    frame.style.width= "100%"
-    frame.style.height= "400px";
-    celda.appendChild(frame);
-    hilera.appendChild(celda);
+
+	//++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
+	//++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
+
+    //++1 var frame = document.createElement('iframe');
+    //++1 frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
+    //++1 frame.style.width= "100%"
+    //++1 frame.style.height= "400px";
+    //++1 celda.appendChild(frame);
+    
+	//++1 inici noves instruccions
+	celda.innerHTML = "Per consultar el conjunt de valors de l'entitat cal que envieu un correu a l'Oficina de Gestió Tècnica <br/> de Dades CTTI (<strong>gtd.ctti@gencat.cat</strong>) indicant quines són les entitats sobre les quals voleu consultar els valors.";
+	//++1 fi noves instruccions
+
+	hilera.appendChild(celda);
 
 
     tblBody.appendChild(hilera);
