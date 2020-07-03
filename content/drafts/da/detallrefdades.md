@@ -128,7 +128,7 @@ weight= 5
 	//++1 textoCelda = document.createTextNode("Per consultar el conjunt de valors de l'entitat cal que envieu un correu a l'Oficina de Gestió Tècnica de Dades CTTI (gtd.ctti@gencat.cat) indicant quines són les entitats sobre les quals voleu consultar els valors." );
     //++1 celda.appendChild(textoCelda);
 
-	celda.innerHTML = 'Per consultar el conjunt de valors de l'entitat cal que envieu un correu a <br/> l'Oficina de Gestió Tècnica de Dades CTTI (<strong>gtd.ctti@gencat.cat</strong>) indicant quines són les entitats sobre <br/> les quals voleu consultar els valors.';
+	celda.innerHTML = "Per consultar el conjunt de valors de l'entitat cal que envieu un correu a <br/> l'Oficina de Gestió Tècnica de Dades CTTI (<strong>gtd.ctti@gencat.cat</strong>) indicant quines són les entitats sobre <br/> les quals voleu consultar els valors.";
 
 	//++1 fi noves instruccions
 	
