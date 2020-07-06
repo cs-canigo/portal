@@ -3,7 +3,7 @@ date        = "2020-07-02"
 title       = "Principis d'arquitectura de l'entorn de treball"
 description = "Normes i directrius de CTTI en relació als serveis i dispositius de l'entorn de treball"
 sections    = ["principis"] 
-weight= 1
+weight= 2
 aliases = [
     "/principisET",
     "/principisET/",
