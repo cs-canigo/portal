@@ -1,5 +1,5 @@
 +++
-date        = "2020-04-01"
+date        = "2020-07-06"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -7,9 +7,12 @@ categories  = ["Data Architecture"]
 weight= 5
 +++
 
-<h2 id="entitatTitol"></h2>
-<p id="myDefinition"></p>
-<table id="myTable"></table>
+  <div>
+    <h2 id="entitatTitol"></h2>
+    <p id="myDefinition"></p>
+    <table id="myTable"></table>
+  </div>
+  
 
 
 <script type="text/javascript">
@@ -97,7 +100,6 @@ weight= 5
       // agrega la hilera al final de la tabla (al final del elemento tblbody)
       tblBody.appendChild(hilera);
     }
-	
 
 	// -----------------------------------------------------
     //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
@@ -111,7 +113,6 @@ weight= 5
     hilera.appendChild(celda);
 	
     celda = document.createElement("td");
-	
     var frame = document.createElement('iframe');
 	
   	var nomFitAtr=dades[14];
@@ -138,7 +139,7 @@ weight= 5
 
     celda = document.createElement("td");
 
-	textoCelda =  document.createTextNode("           ");
+    textoCelda =  document.createTextNode("           ");
     celda.appendChild(textoCelda);
 
     var link_valors = document.createElement('a');
@@ -149,27 +150,10 @@ weight= 5
 	textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 	
-    //++1 var link = document.createElement('a');
-    //++1 link.setAttribute('href', '../../entitats/' + dades[13]);
-    //++1 link.innerHTML = "Descarregar fitxer de dades";
-    //++1 celda.appendChild(link);
-
-    // var image = document.createElement('img');
-    // image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
-    //link.innerHTML = dades[15];
-    //link.appendChild(image);
 
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
-
-
-    // posiciona el <tbody> debajo del elemento <table>
-
-    //tabla.appendChild(tblThead);
-    //tabla.appendChild(tblBody);
-    // appends <table> into <body>
-    //body.appendChild(tabla);
 
     
     hilera = document.createElement("tr");
@@ -182,22 +166,15 @@ weight= 5
 
     celda = document.createElement("td");
 
-	//++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
-	//++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
-
-    //++1 var frame = document.createElement('iframe');
-    //++1 frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
-    //++1 frame.style.width= "100%"
-    //++1 frame.style.height= "400px";
-    //++1 celda.appendChild(frame);
+    //++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
+    //++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
     
 		
-	//++1 inici noves instruccions
-	celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de <br/> la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a>.";
-	//++1 fi noves instruccions
+    //++1 inici noves instruccions
+    celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de <br/> la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a>.";
+    //++1 fi noves instruccions
 
-	hilera.appendChild(celda);
-
+    hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
 
@@ -212,9 +189,5 @@ weight= 5
      //var url = "https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13];
      //$('#myframe').attr("src", url);
     //}
-	
-	
-	
-	
 
 </script>
