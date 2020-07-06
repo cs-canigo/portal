@@ -184,11 +184,11 @@ connector de H2 a Oracle, Mysql o PostgreSQL.
 ## Desplegament
 
 El projecte base utilitza _Maven_ per a l'empaquetat del projecte per a ser desplegat al servidor d'aplicacions en format *war*.
-No obstant, **si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza** [Spring Boot](https://spring.io/projects/spring-boot)
-per a ser auto-executable amb un servidor embegut que, per defecte, es troba configurat amb el servidor Tomcat.
+No obstant, **si el projecte ha de ser desplegat a alguna plataforma Cloud, el projecte base utilitza** [**Spring Boot**](https://spring.io/projects/spring-boot)
+per a ser auto-executable amb un servidor embegut que, per defecte, es troba configurat amb el servidor Tomcat, tot i que es pot canviar.
 D’aquesta forma, el projecte auto-executable por allotjar-se dins d'una imatge [Docker](https://www.docker.com/) i desplegar-se a algun servidor
 de contenidor d'imatges Docker. El projecte base ja proporciona la configuració d'exemple en un `Dockerfile` per a generar una imatge Docker amb el
-projecte auto-executable a dins.
+projecte auto-executable.
 
 ![Desplegament projecte base](/related/canigo/desplegament_projecte_base.png)
 
