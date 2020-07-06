@@ -3,7 +3,7 @@ date        = "2019-05-28"
 title       = "Plantilla Descripció d'Arquitectura"
 description = "Plantilla per la creació del document Descripció d'Arquitectura"
 sections    = "DA"
-weight = 2
+weight = 3
 +++
 
 El document d'arquitectura proporciona una visió general completa de l'arquitectura del servei / solució. Es tracta d'un document "viu" que s'ha d'actualitzar amb cada evolució que afecti a l'arquitectura del servei.
