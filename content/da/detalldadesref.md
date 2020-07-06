@@ -1,5 +1,5 @@
 +++
-date        = "2020-05-05"
+date        = "2020-07-06"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -150,27 +150,10 @@ weight= 5
     textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 	
-    var link = document.createElement('a');
-    link.setAttribute('href', '../../dadesref/entitats/' + dades[13]);
-    link.innerHTML = "Descarregar fitxer de dades";
-    celda.appendChild(link);
-
-    // var image = document.createElement('img');
-    // image.setAttribute("src","https://img.icons8.com/color/50/000000/ms-excel.png");
-    //link.innerHTML = dades[15];
-    //link.appendChild(image);
 
     hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
-
-
-    // posiciona el <tbody> debajo del elemento <table>
-
-    //tabla.appendChild(tblThead);
-    //tabla.appendChild(tblBody);
-    // appends <table> into <body>
-    //body.appendChild(tabla);
 
     
     hilera = document.createElement("tr");
@@ -182,13 +165,16 @@ weight= 5
     hilera.appendChild(celda);
 
     celda = document.createElement("td");
-    var frame = document.createElement('iframe');
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13]);
-    frame.style.width= "100%"
-    frame.style.height= "400px";
-    celda.appendChild(frame);
-    hilera.appendChild(celda);
 
+    //++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
+    //++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
+    
+		
+    //++1 inici noves instruccions
+    celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de <br/> la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a>.";
+    //++1 fi noves instruccions
+
+    hilera.appendChild(celda);
 
     tblBody.appendChild(hilera);
 
