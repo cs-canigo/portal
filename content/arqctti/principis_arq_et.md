@@ -169,7 +169,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **2.1.2	Simplicitat** *(obligatori)*. Tot dispositiu ha de tenir les característiques extrictament necessàries per donar el servei demandat. S'evitarà l'adquisició de dispositius sobre-dimensionats a nivell de recursos o funcionalitats amb l'objectiu de minimitzar el cost, problemes i esforços de manteniment associats.
 
-* **2.1.3	Durabilitat i reaprofitament** *(desitjable)*. Cal procuprar que el dispositiu sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l'adopció de solucions tecnològiques amb aquest propòsit.
+* **2.1.3	Durabilitat i reaprofitament** *(desitjable)*. Cal procurar que el dispositiu sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l'adopció de solucions tecnològiques amb aquest propòsit.
 
 * **2.1.4	Ampliable** *(desitjable)*. Tot dispositiu hauria de permetre la seva ampliació a nivell de recursos i funcionalitats, mitjançant l'ús de perifèrics d'entrada o sortida, la substitució o ampliació dels components que formen el propi dispositiu i la interconnexió amb altres dispositius.
 
@@ -183,7 +183,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **2.1.1.2	Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s'ha de desplegar seguint les directrius de CTTI, gràcies a les quals s'assolirà una homogenitat en l'aparença, les funcionalitats transversals i la operativitat del sistema.
 
-* **2.1.1.3	Cicle de vida** *(obligatori)*. S'hauran de cumplir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes compotents de la Generalitat de Catalunya amb l'ojbectiu d'assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn de treball suportades per CTTI.
+* **2.1.1.3	Cicle de vida** *(obligatori)*. S'hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l'objectiu d'assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn de treball suportades per CTTI.
 
 * **2.1.1.4	Automatització i agilitat** *(obligatori)*. Cal disposar de les plataformes, eines i automatismes nessaris per fer un desplegament àgil del terminal, així com la distribució del programari i polítiques corporatives corresponents amb l'objectiu de lliurar un terminal preparat pel negoci. 
 
@@ -227,7 +227,7 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 * **2.2.2.1 Infraestructura eficient**. Malgrat que el gruix de la infraestructura està vinculada amb el model de lliurament més adient a cada cas (VDI o RDSH) i que vindrà definit per factors funcionals i de seguretat, tècnicament s'haurà de prioritzar l'ús d'aquell model que millor resolgui aquests factors però amb un enfoc que maximitzi la densitat d'usuaris amb el mínim d'infraestructura. Amb aquest propòsit, és prioritzarà el desplegament d'entorns compartits i no persistents, tanmateix per assolir-ho és valorarà l'ús de la virtualització d'aplicacions (execució local) com a mètode d'implementació.
 
-* **2.2.2.2 Estandarització**. Les imatges de referència utilitzades per aprovisionar els equips (VDI i RDSH) seran les mínimes necessàries i estaran alineades amb les versions de SO informades al FRP. De la mateixa manera, hauran de seguir les directrius d'imatge corporativa i organització per capes lògiques informades per CTTI en el disseny de la maqueta Windows 10.
+* **2.2.2.2 Estandarització**. Les imatges de referència utilitzades per aprovisionar els equips (VDI i RDSH) seran les mínimes necessàries i estaran alineades amb les versions de SO informades al [full de ruta de programari]. De la mateixa manera, hauran de seguir les directrius d'imatge corporativa i organització per capes lògiques informades per CTTI en el disseny de la maqueta Windows 10.
 
 * **2.2.2.3 Rendiment**. Donat que la degradació en el rendiment és un dels factors de risc en un entorn virtualitzat, on la compartició de recursos és una constant, davant una nova necessitat caldrà dimensionar la plataforma de forma proactiva, d'acord amb el volum d'usuaris previst i el seu perfil d'estrès (baix, mig i alt), condicionat per la tipologia d'aplicacions i escriptoris que consumiran. 
 
@@ -269,9 +269,9 @@ En aquells casos d'ús on la virtualització d'aplicacions esdevingui com el mè
 
 ## 3.2 Principis tecnològics
 
-* **3.2.1 Estabilitat** *(obligatori)*. Les solucions a aplicar en les xarxes de telecomunicacions haurien de ser solucions amb un cert recorregut, no es recomanable utilitzar solucions poc madures a nivell de producció. Encara que, en certes situacions s’avaluarà implementar solucions emergents.
+* **3.2.1 Estabilitat** *(obligatori)*. Les solucions a aplicar en les xarxes de telecomunicacions haurien de ser solucions amb un cert recorregut, no és recomanable utilitzar solucions poc madures a nivell de producció. Encara que, en certes situacions s’avaluarà implementar solucions emergents.
 
-* **3.2.2 Evolució** *(obligatori)*. Monitoritzar la xarxa i els seus components per a identificar les necessitats de creixement o de canvi dels equipaments de xarxa, per tal de acollir les previsions e creixement, noves necessitats i/o la obsolescència tecnològica.
+* **3.2.2 Evolució** *(obligatori)*. Monitoritzar la xarxa i els seus components per a identificar les necessitats de creixement o de canvi dels equipaments de xarxa, per tal d'acollir les previsions i creixement, noves necessitats i/o la obsolescència tecnològica.
 
 * **3.2.3 Minimitzar la dependència sobre els fabricants** *(obligatori)*. Cal evitar sempre que sigui possible les solucions propietàries, i maximitzar la compatibilitat amb la resta dels components i sistemes. Però, allunyant-nos de solucions massa heterogènies que puguin generar problemes de governança. 
 
