@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Guies d'ús de desenvolupament"
 description = "Guies d'ús (HowTos) de desenvolupament"
 sections    = "Canigó"
-weight		= 1
+weight		= 2
 +++
 
 | Guies d'ús (HowTos) de desenvolupament             	                                                                                                                      | Etiquetes    	                    |
