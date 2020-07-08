@@ -1,5 +1,5 @@
 +++
-date        = "2020-07-06"
+date        = "2020-07-08"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -75,30 +75,36 @@ weight= 5
 
      // Crea las celdas
      for (var i = 0; i < 9; i++) {
-      // Crea las hileras de la tabla
-      hilera = document.createElement("tr");
+	  
+	  //++ 08/07/2020 (LAA) S'elimina la metadada Classificacio funcional. Per no modificar JSON, de moment 
+	  //++ es controla posant condicional. Quan es regeneri JSON es treurà el valor de la metadada i el seu tractament.
+	  if (metadatos[i]!="Classificació funcional")
+	  {
+		  // Crea las hileras de la tabla
+		  hilera = document.createElement("tr");
 
-      for (var j = 0; j < 2; j++) {
-        // Crea un elemento <td> y un nodo de texto, haz que el nodo de
-        // texto sea el contenido de <td>, ubica el elemento <td> al final
-        // de la hilera de la tabla
-        if(j==0){
-          celda = document.createElement("td");
-          textoCelda = document.createTextNode(metadatos[i]);
-          celda.style.fontWeight = "bold";
-          celda.appendChild(textoCelda);
-          hilera.appendChild(celda);
-        }
-        else{
-          celda = document.createElement("td");
-          textoCelda = document.createTextNode(dades[i+4]);
-          celda.appendChild(textoCelda);
-          hilera.appendChild(celda);
-        }
+		  for (var j = 0; j < 2; j++) {
+			// Crea un elemento <td> y un nodo de texto, haz que el nodo de
+			// texto sea el contenido de <td>, ubica el elemento <td> al final
+			// de la hilera de la tabla
+			if(j==0){
+			  celda = document.createElement("td");
+			  textoCelda = document.createTextNode(metadatos[i]);
+			  celda.style.fontWeight = "bold";
+			  celda.appendChild(textoCelda);
+			  hilera.appendChild(celda);
+			}
+			else{
+			  celda = document.createElement("td");
+			  textoCelda = document.createTextNode(dades[i+4]);
+			  celda.appendChild(textoCelda);
+			  hilera.appendChild(celda);
+			}
+		  }
+		 
+		  // agrega la hilera al final de la tabla (al final del elemento tblbody)
+          tblBody.appendChild(hilera);
       }
-
-      // agrega la hilera al final de la tabla (al final del elemento tblbody)
-      tblBody.appendChild(hilera);
     }
 
 	// -----------------------------------------------------
