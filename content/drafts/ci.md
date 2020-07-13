@@ -148,13 +148,15 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |MS_Build|4.0<br />14<br />15|
 |MS_Deploy|7.1|
 
-### JDK/Maven
-|Versió JDK|Versió Maven|
+### Maven/JDK
+|Versió Maven|Versió JDK|
 |-------|-------|
-|6|2.0<br />2.2<br />3.2|
-|7|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
-|8|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
-|11-openjdk|2.0<br />2.2<br />3.2<br />3.3<br />3.5<br />3.6|
+|2.2|7|
+|3.2|6<br />7<br />8|
+|3.5|7<br />8|
+|3.6 \*|7<br />8<br />11-openjdk|
+
+\* Versió amb suport i manteniment
 
 
 ### Node/npm
