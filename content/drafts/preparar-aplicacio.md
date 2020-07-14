@@ -72,8 +72,8 @@ Es pot validar la existència o no de la dependència accedint a la següent URL
 
 ### Aplicacions APEX i PL/SQL, i migracions de BBDD
 
-El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
-En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
+El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució de scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
+En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre artefacte, habitualment
 el backend de l'aplicació.
 
 <br/>
@@ -86,9 +86,9 @@ En qualsevol cas, caldrà preparar:
 |-----------|----------|----------|
 |entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Per defecte, aplica a tots els entorns.|
 |failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: parar o continuar.|
-|idBBDD|Obligatori|Identificador únic de la conexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb l'identificador del fitxer d'infraestructures.|
+|idBBDD|Obligatori|Identificador únic de la connexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb l'identificador del fitxer d'infraestructures.|
 |file|Obligatori|Fitxer que cal executar o empaquetar (segons la modalitat de desplegament).|
-|execute|Opcional|Indica, en cas de modalitat de desplegament automàtica, si a més d'empaquetar el fitxer aquest s'ha d'executar. Útil pel cas d'scripts anidats. Per defecte, s'executarà.|
+|execute|Opcional|Indica, en cas de modalitat de desplegament automàtica, si a més d'empaquetar el fitxer aquest s'ha d'executar. Útil pel cas de scripts anidats. Per defecte, s'executarà.|
 
 Exemple:
 ```
@@ -108,7 +108,7 @@ Exemple:
 ```
 
 
-El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
+El projecte ha de contenir tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Funcionament de les pipelines de construcció i desplegament
