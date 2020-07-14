@@ -118,7 +118,17 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 ### Versions
 
-#### 3.0.5 (07/05/2020) -- <span style="color:green">OPERATIVA</span>
+#### 3.0.6 (14/07/2020) -- <span style="color:green">OPERATIVA</span>
+
+_RELEASE NOTES_
+
+* Canvi del domini del plugin del eclipse de http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/ a https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.5 (07/05/2020)
 
 _RELEASE NOTES_
 
