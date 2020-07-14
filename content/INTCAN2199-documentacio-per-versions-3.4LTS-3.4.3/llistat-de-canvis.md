@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-16"
-title       = "Notes del llançament"
-description = "Notes del llançament Canigó 3.4.3"
+title       = "Llistat de canvis"
+description = "Llistat de canvis Canigó 3.4.3"
 sections    = "Canigó"
 weight      = 2
 +++
