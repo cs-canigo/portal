@@ -76,23 +76,24 @@ El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució 
 En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
 el backend de l'aplicació.
 
+<br/>
 En qualsevol cas, caldrà preparar:
 
-* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes si escau.
+* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que podran estar organitzat en subcarpetes si es considera.
 * **plans.xml**: fitxer on es defineix el pla d'execució dels scripts, on caldrà indicar:
 
 |Paràmetre|Tipus|Descripció|
 |-----------|----------|----------|
-|entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Si no s'indica aplica a tots els entorns.|
-|failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: stop, continue.|
-|idBBDD|Obligatori|Identificador únic de la conexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb el fitxer d'infraestructures.|
+|entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Per defecte, aplica a tots els entorns.|
+|failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: parar o continuar.|
+|idBBDD|Obligatori|Identificador únic de la conexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb l'identificador del fitxer d'infraestructures.|
 |file|Obligatori|Fitxer que cal executar o empaquetar (segons la modalitat de desplegament).|
-|execute|Opcional|Indica si a més d'empaquetar el fitxer, en cas de modalitat de desplegament automàtica, s'ha d'executar o no. Útil pel cas d'scripts anidats. Per defecte, es considera que sí.|
+|execute|Opcional|Indica, en cas de modalitat de desplegament automàtica, si a més d'empaquetar el fitxer aquest s'ha d'executar. Útil pel cas d'scripts anidats. Per defecte, s'executarà.|
 
 Exemple:
 ```
 <llista-scripts>
-<script entorn="INT" failure="stop" idBBDD="BD_INT" file="script_INT.sql"/>
+<script entorn="INT" failure="stop"     idBBDD="BD_INT" file="script_INT.sql"/>
 <script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT1.sql" execute="false"/>
 <script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT2.sql" execute="false"/>
 
