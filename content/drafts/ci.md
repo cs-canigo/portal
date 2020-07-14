@@ -156,7 +156,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |3.5|7<br />8|
 |3.6 \*|7<br />8<br />11-openjdk|
 
-\* Versió amb suport i manteniment
+(\*) Versió amb suport i manteniment.
 
 
 ### Node/npm

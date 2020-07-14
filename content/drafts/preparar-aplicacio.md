@@ -72,27 +72,37 @@ Es pot validar la existència o no de la dependència accedint a la següent URL
 
 ### Aplicacions APEX i PL/SQL, i migracions de BBDD
 
-El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
+El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
 En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
 el backend de l'aplicació.
 
 En qualsevol cas, caldrà preparar:
 
-* **sql_scripts**: directori per emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes a criteri del seu responsable.
-* **plans.xml**: fitxer on es defineix el pla d'execució d'scripts, incloent el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
+* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes si escau.
+* **plans.xml**: fitxer on es defineix el pla d'execució dels scripts, on caldrà indicar:
 
+|Paràmetre|Tipus|Descripció|
+|-----------|----------|----------|
+|entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Si no s'indica aplica a tots els entorns.|
+|failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: stop, continue.|
+|idBBDD|Obligatori|Identificador únic de la conexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb el fitxer d'infraestructures.|
+|file|Obligatori|Fitxer que cal executar o empaquetar (segons la modalitat de desplegament).|
+|execute|Opcional|Indica si a més d'empaquetar el fitxer, en cas de modalitat de desplegament automàtica, s'ha d'executar o no. Útil pel cas d'scripts anidats. Per defecte, es considera que sí.|
 
 Exemple:
 ```
 <llista-scripts>
-<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT1.sql"/>
-<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT2.sql"/>
+<script entorn="INT" failure="stop" idBBDD="BD_INT" file="script_INT.sql"/>
+<script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT1.sql" execute="false"/>
+<script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT2.sql" execute="false"/>
 
-<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE1.sql"/>
-<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE2.sql"/>
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE.sql"/>
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE1.sql" execute="false"/>
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE2.sql" execute="false"/>
 
-<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO1.sql"/>
-<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO2.sql"/>
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO.sql"/>
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO1.sql" execute="false"/>
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO2.sql" execute="false"/>
 </llista-scripts>
 ```
 
