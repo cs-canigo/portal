@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com canviar el domini on està allotgat el plugin del eclipse] (/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/)
+
 - [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó] (/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
 
 - [Com implementar tests unitaris amb Webflux a Canigó 3.4] (/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
