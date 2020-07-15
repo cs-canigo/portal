@@ -158,7 +158,6 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 
 (\*) Versió amb suport i manteniment.
 
-
 ### Node/npm
 |Versió Node|Versió Npm|
 |-----------|----------|
@@ -172,6 +171,11 @@ L'única eina que va lligada en certa manera amb la versió de Node és **npm**.
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
 **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (fitxer `package.json`) i instal·lar-los
 a la construcció de l'aplicació via **npm install**.
+
+### Hugo (Webs estàtiques)
+|Versió|
+|-------|
+|0.73|
 
 **<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
 l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
