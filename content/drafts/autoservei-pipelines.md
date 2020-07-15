@@ -18,12 +18,6 @@ L'Autoservei de pipelines permet la **generació automàtica de pipelines d'auto
 la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline de desplegament
 associada a cada projecte repositat al Sistema de Custodia de Codi (Gitlab).
 
-<div class="message information">
-El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
-Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran extendre del catàleg d'imatges corporatiu.<br/>
-<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
-</div>
-
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 
 ## Motivació
@@ -79,6 +73,13 @@ per realitzar la construcció i el desplegament de l'aplicació.
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
 </br>
 
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran extendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+
+</br>
 ## Configuració
 
 Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.

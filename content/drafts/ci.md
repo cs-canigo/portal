@@ -142,7 +142,7 @@ Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipel
 Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
 
-### MS
+### Microsoft
 |Tecnologia|Versions|
 |-------|-------|
 |MS_Build|4.0<br />14<br />15|
@@ -177,6 +177,7 @@ a la construcció de l'aplicació via **npm install**.
 |-------|
 |0.73|
 
+<br/>
 **<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
 l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
 ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
