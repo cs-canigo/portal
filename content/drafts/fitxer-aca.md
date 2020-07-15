@@ -1,5 +1,5 @@
 +++
-date = "2020-03-02"
+date = "2020-07-15"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
