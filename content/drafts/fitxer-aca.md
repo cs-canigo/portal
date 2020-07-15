@@ -202,7 +202,11 @@ La propietat `artifactType` suporta el següent conjunt de valors:
 |plans|
 
 
-En el cas de desplegaments de bases de dades, caldrà fer referència a l’ **arxiu de plans en format XML**.
+<div class="message information">
+En el cas de desplegaments de bases de dades, caldrà fer referència a l’arxiu de plans en format XML.
+En aquest cas, és important assegurar-se que l’identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI.
+Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas.
+Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar la aplicació</a>. </div>
 
 ```
 resources:
@@ -212,10 +216,6 @@ resources:
       artyfactType: plans
       path: sql/plans.xml
 ```
-
-<div class="message information">
-En aquest cas, és important assegurar-se que l’<b>identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI</b>.
-Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas. </div>
 
 ### Procés de construcció
 
