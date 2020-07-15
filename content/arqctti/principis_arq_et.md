@@ -44,11 +44,11 @@ img[alt="centrar"] {
   * 0 1 Generals
   * 0.2 Principis de cost i mateniment
 
-- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l-entorn-de-treball)**
+- **[1. Solucions escriptori del Lloc de Treball](#1-solucions-escriptori-del-lloc-de-treball)**
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
+- **[2. Arquitectura del Lloc de Treball](#2-arquitectura-del-lloc-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
@@ -113,7 +113,7 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 
 ---
 
-# 1. Solucions escriptori de l'Entorn de Treball
+# 1. Solucions escriptori del Lloc de Treball
 
 &nbsp;
 &nbsp;
@@ -157,7 +157,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 ---
 
-# 2. Arquitectura de l'Entorn de Treball
+# 2. Arquitectura del Lloc de Treball
 &nbsp;
 &nbsp;
 &nbsp;
