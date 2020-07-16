@@ -250,14 +250,9 @@ build:
       Jdk_ JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       jdk: JDK 1.8
-      executionDir: dir_n1/dir_n2
       generates:
         - artifact01
 ```
-
-<div class="message information">
-Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
-la propietat "executionDir".  </div>
 
 </br>
 A continuació s’explica l’ús dels diferents tipus d’eines previstes de construcció.
@@ -471,8 +466,8 @@ Es contemplen els següents tipus de desplegament:
   destination: 9999_tomcat
   artifact: artifact01
 ```
-
 </br>
+
 - Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build)
 
 ```
@@ -483,8 +478,8 @@ Es contemplen els següents tipus de desplegament:
   parameters: deploy -f ./pom.xml
   destination: 9999_nexus
 ```
-
 </br>
+
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
 
@@ -493,8 +488,8 @@ Es contemplen els següents tipus de desplegament:
   position: 1
   type: manual
 ```
-
 </br>
+
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 
@@ -523,15 +518,15 @@ Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines
 ## Exemples
 A continuació s'adjunten exemples de casos d'ús:
 
-1. [Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml) (llibreria)
-2. [Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
-3. [Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
-4. [Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
-5. [.Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
-6. [.Net](/related/sic/2.0/autoservei_net.yml)
-8. [PHP](/related/sic/2.0/autoservei_php.yml)
-7. [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
-8. [Docker Image](/related/sic/2.0/autoservei_docker.yml)
+- [Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml) (llibreria)
+- [Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
+- [Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
+- [Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
+- [.Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
+- [.Net](/related/sic/2.0/autoservei_net.yml)
+- [PHP](/related/sic/2.0/autoservei_php.yml)
+- [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
+- [Docker Image](/related/sic/2.0/autoservei_docker.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
