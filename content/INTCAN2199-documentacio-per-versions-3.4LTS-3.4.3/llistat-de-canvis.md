@@ -3,7 +3,7 @@ date        = "2020-06-16"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.4.3"
 sections    = "Canigó"
-weight      = 2
+weight      = 1
 +++
 
 #### Canigó 3.4.3 (26/03/2020)
