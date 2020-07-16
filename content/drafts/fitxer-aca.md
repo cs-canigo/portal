@@ -238,6 +238,7 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 <a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
 </div>
 
+</br>
 Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
 Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
 
@@ -284,10 +285,8 @@ build:
         - artifact01
 ```
 
-La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui la comanda específica en els `paràmetres` d’execució.
+La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui la comanda específica en els `parameters` d’execució.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
-
-
 La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
 Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
 
@@ -323,7 +322,7 @@ build:
         - artifact02
 ```
 
-No caldrà que s'indiqui el servei específic en els `paràmetres` d’execució doncs es deduirà a partir de l'eina seleccionada.
+No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
@@ -352,7 +351,7 @@ build:
         - artifact01
 ```
 
-No caldrà que s'indiqui el servei específic en els `paràmetres` d’execució doncs es deduirà a partir de l'eina seleccionada.
+No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
