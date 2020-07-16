@@ -296,7 +296,7 @@ Propietat | Requerit | Descripció
 
 ### Ús dels repositoris
 
-Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'extendre de **cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository<T, ID extends Serializable>**
+Per a utilitzar els repositoris s'ha de generar un objecte Repository per a l'entitat desitjada(T), que ha d'estendre de **cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository<T, ID extends Serializable>**
 
 	public interface EquipamentRepository extends GenericRepository<Equipament, Long>{
 

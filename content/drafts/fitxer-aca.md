@@ -28,7 +28,7 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 ### Versió
 
 Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
-les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
+les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`.
 
 ```
 version: x.y.z
@@ -37,7 +37,7 @@ version: x.y.z
 ### Paràmetres
 
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
-Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular dades repetibles.
+Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapsular dades repetibles.
 
 ```
 parameters:
@@ -228,13 +228,13 @@ Es contemplen les següents tecnologies:
 * **Java**
 * **.Net**
 * **Hugo**
-* **Compressió**: zip, unzip
+* **Compressió** (zip, unzip)
 * **BBDD**
 * **Docker Image**
 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
-Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran extendre del catàleg d'imatges corporatiu.<br/>
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
 <a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
 </div>
 
@@ -409,9 +409,10 @@ build:
 
 </br>
 #### Docker Image
-Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcció mitjançant una imatge Docker pròpia (_custom_).
+Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcció mitjançant una imatge Docker pròpia (_custom_). </br>
 Veure: [**Com utilitzar imatges Docker Builder**](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder).
 
+</br>
 Exemple d'ús d'imatge pròpia:
 
 ```
@@ -429,14 +430,15 @@ build:
 
 On:
 
-* `dockerfilePath`: ruta del ficher _DockerFile_ al codi font del projecte per a la construccio de la imatge.
-* `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construccio de la imatge.
+* `dockerfilePath`: ruta del fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+* `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construcció de la imatge.
 
 <div class="message information">
-En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image<b/> que s'encarregarà
+En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
 de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de la aplicació.
 </div>
 
+</br>
 Exemple d'ús d'imatge del catàleg:
 
 ```
