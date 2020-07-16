@@ -1,7 +1,7 @@
 +++
-date = "2020-02-28"
+date = "2020-07-14"
 title = "Autoservei de pipelines"
-description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les aplicacions"
+description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"
 toc = true
 aliases = [
@@ -27,14 +27,16 @@ Cobreix les següents necessitats:
 * Dotar de **flexibilitat i independència** als principals actors que intervenen en la construcció i els desplegaments de les aplicacions.
 * **Incrementar ràpidament el grau d’integració al SIC de les aplicacions** evitant traspassos innecessaris d'informació i responsabilitats.
 * Proporcionar un **nivell d'abstracció** que permeti ser independent de les tecnologies emprades i permeti evolucionar el producte mantenint compatibilitat amb versions anteriors.
+* Proporcionar un **entorn aïllat i immutable de construcció**, que a més pugui ser utilitzat i testejat pels propis proveïdors.
+* Facilitar la cobertura de tecnologies contemplant l’ús d’**imatges Docker pròpies** dels lots d’aplicacions.
 * **Acomplir les directrius** de CTTI sobre desplegaments i gestió de canvis.
 
 La solució ha de:
 
-* Ser **natural** per als usuaris del servei
-* Permetre definir **tot el necessari** per a construir i desplegar l’aplicació
-* Donar cobertura a **totes les tecnologies** amb les que el SIC és actualment compatible
-* Ser **mantenible, escalable i eficient**
+* Ser **natural** per als usuaris del servei.
+* Permetre definir **tot el necessari** per a construir i desplegar l’aplicació.
+* Donar cobertura a **totes les tecnologies** amb les que el SIC és actualment compatible.
+* Ser **mantenible, escalable i eficient**.
 
 ## Requeriments generals
 
@@ -71,6 +73,13 @@ per realitzar la construcció i el desplegament de l'aplicació.
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
 </br>
 
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+
+</br>
 ## Configuració
 
 Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.

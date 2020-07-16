@@ -1,5 +1,5 @@
 +++
-date = "2020-03-10"
+date = "2020-06-25"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -11,7 +11,9 @@ weight = 2
 ## Introducció
 
 En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes,
-s’hauran d’acomplir una sèrie de requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament.
+s’hauran d’acomplir una sèrie de **requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament**.
+
+Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
 
 ## Lliurament de codi font
 
@@ -35,15 +37,17 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
 desenvolupament com en els entorns del SIC.
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).
 
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
-la versió funcional del projecte.
-```
-version: 1.1.0
-```
+la versió funcional del projecte. Per exemple: `version: 1.1.0`
 <div class="message information">
 Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.<br/>
 <a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/">Canigo-Configuracio-multientorn-SPA</a>
@@ -54,38 +58,8 @@ Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 * No es permet l'ús de versions **Snapshot**.
 
-* Si es contempla l'execució de scripts de desplegament a BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
+* Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
 
-
-### Aplicacions APEX i PL/SQL, i altres desplegaments d'scripts a BBDD
-
-El desplegament d'aplicacions d'aquestes tecnologies es fonamenta en l'execució d'scripts a base de dades, tot i que els criteris apliquen a qualsevol desplegament d'aquest tipus.
-En general s'aconsella disposar d'un projecte específic de desplegament de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre altefacte, habitualment
-el backend de l'aplicació.
-
-En qualsevol cas, caldrà preparar:
-
-* **sql_scripts**: directori per emmagatzemar tots els scripts SQL/PL-SQL, que poden estar organitzat en subcarpetes a criteri del seu responsable.
-* **plans.xml**: fitxer on es defineix el pla d'execució d'scripts, incloent el seu ordre, tenint la possibilitat de diferenciar per entorn de desplegament.
-
-
-Exemple:
-```
-<llista-scripts>
-<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT1.sql"/>
-<script entorn="INT" failure="stop" idBBDD="IDBD" file="script_INT2.sql"/>
-
-<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE1.sql"/>
-<script entorn="PRE" failure="continue" idBBDD="IDBD" file="script_PRE2.sql"/>
-
-<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO1.sql"/>
-<script entorn="PRO" failure="continue" idBBDD="IDBD" file="script_PRO2.sql"/>
-</llista-scripts>
-```
-
-
-El projecte ha de contindre tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
-el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Llibreries
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
@@ -96,12 +70,46 @@ Respecte a les llibreries requerides pels projectes, en funció del seu tipus, c
 
 Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
 
-## Modalitats de desplegament
-Es contemplen diverses modalitats de desplegament en funció de l’entorn. Actualment, el sistema previst seria el següent:
+### Aplicacions APEX i PL/SQL, i migracions de BBDD
 
-* Entorn **INT**: automàtica (es construeixen els artefactes i es despleguen als servidors web, d’aplicacions i/o de bases de dades).
-* Entorn **PRE/PRO**: semiautomàtica (es dipositen els artefactes per a que el CPD s’encarregui del seu desplegament) o automàtic per CPD (modalitat automàtica on els tècnics de CPD assignats seran els encarregats d’autoritzar i executar les etapes de desplegament). Aquesta modalitat haurà d’acordar-se amb els diferents implicats. Ambdues modalitats delegaran qualsevol tasca prèvia al desplegament (backup, preparació de marxa enrere...) als tècnics de CPD.
-* **Altres** entorns: caldrà especificar la modalitat aplicable i quina posició ocuparan dins el procés de desplegament.
+El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució de scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
+En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre artefacte, habitualment
+el backend de l'aplicació.
+
+<br/>
+En qualsevol cas, caldrà preparar:
+
+* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que podran estar organitzat en subcarpetes si es considera.
+* **plans.xml**: fitxer on es defineix el pla d'execució dels scripts, on caldrà indicar:
+
+|Paràmetre|Tipus|Descripció|
+|-----------|----------|----------|
+|entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Per defecte, aplica a tots els entorns.|
+|failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: parar o continuar.|
+|idBBDD|Obligatori|Identificador únic de la connexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb l'identificador del fitxer d'infraestructures.|
+|file|Obligatori|Fitxer que cal executar o empaquetar (segons la modalitat de desplegament).|
+|execute|Opcional|Indica, en cas de modalitat de desplegament automàtica, si a més d'empaquetar el fitxer aquest s'ha d'executar. Útil pel cas de scripts anidats. Per defecte, s'executarà.|
+
+Exemple:
+```
+<llista-scripts>
+<script entorn="INT" failure="stop"     idBBDD="BD_INT" file="script_INT.sql"/>
+<script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT1.sql" execute="false"/>
+<script entorn="INT" failure="continue" idBBDD="BD_INT" file="script_INT2.sql" execute="false"/>
+
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE.sql"/>
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE1.sql" execute="false"/>
+<script entorn="PRE" failure="continue" idBBDD="BD_PRE" file="script_PRE2.sql" execute="false"/>
+
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO.sql"/>
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO1.sql" execute="false"/>
+<script entorn="PRO" failure="continue" idBBDD="BD_PRO" file="script_PRO2.sql" execute="false"/>
+</llista-scripts>
+```
+
+
+El projecte ha de contenir tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
+el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Funcionament de les pipelines de construcció i desplegament
 En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà:
@@ -113,9 +121,8 @@ En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una p
 * En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
 
 Per poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
+Per a més informació: [Integració Continua](/sic-serveis/ci/).
 
 <br/><br/><br/>
-Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
-<br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

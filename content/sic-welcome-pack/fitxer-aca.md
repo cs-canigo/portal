@@ -1,5 +1,5 @@
 +++
-date = "2020-03-02"
+date = "2020-07-15"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -28,7 +28,7 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 ### Versió
 
 Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
-les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
+les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`.
 
 ```
 version: x.y.z
@@ -37,7 +37,7 @@ version: x.y.z
 ### Paràmetres
 
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
-Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular dades repetibles.
+Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapsular dades repetibles.
 
 ```
 parameters:
@@ -46,8 +46,6 @@ parameters:
   - name: nom_param2
     value: valor_param2
 ```
-
-Exemple per a fer-ne referència:
 
 ```
 build:
@@ -69,7 +67,7 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 
 #### Entorns
 
-Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada:
+Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.
 
 ```
 resources:
@@ -150,10 +148,10 @@ resources:
 ```
 
 <div class="message information">
-En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas, doncs l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
+En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal conegui aquest identificador.
-Per la modalitat de desplegament <b>SEMIAUTOMATIC</b> no serà necessari preparar l’arxiu ACI ni definir el detall d’infraestructures.</div>
+el detall de les infraestructures, només cal conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> no serà necessari preparar l’arxiu ACI ni
+definir el detall d’infraestructures.</div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
@@ -202,7 +200,13 @@ La propietat `artifactType` suporta el següent conjunt de valors:
 |plans|
 
 
-En el cas de desplegaments de bases de dades, caldrà fer referència a l’ **arxiu de plans en format XML**.
+<div class="message information">
+En el cas de desplegaments de bases de dades, caldrà fer referència a l’arxiu de plans en format XML.
+En aquest cas, és important assegurar-se que l’identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI.
+Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas.
+Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar la aplicació</a>. </div>
+
+Exemple d'artefacte de BBDD:
 
 ```
 resources:
@@ -213,24 +217,28 @@ resources:
       path: sql/plans.xml
 ```
 
-<div class="message information">
-En aquest cas, és important assegurar-se que l’<b>identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI</b>.
-Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas. </div>
-
 ### Procés de construcció
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de build`. La definició es basa en una sèrie de `tools` predefinides. A més,
 els atributs dels passos de construcció varien en funció del seu tipus.
 
+Es contemplen les següents tecnologies:
 
-Es contemplen les següents tecnologies de construcció:
-
-* **Node** (npm, gulp, bower i grunt)
-* **Java** (maven i ant)
-* **.Net** (msbuild)
+* **Node**
+* **Java**
+* **.Net**
 * **Hugo**
-* **Altres comandes** (zip, unzip)
+* **Compressió** (zip, unzip)
+* **BBDD**
+* **Docker Image**
 
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+
+</br>
 Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
 Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
 
@@ -243,88 +251,63 @@ build:
       Jdk_ JDK 1.8
       parameters: clean package -Dmaven.test.skip=true
       jdk: JDK 1.8
-      executionDir: dir_n1/dir_n2
       generates:
         - artifact01
 ```
 
-<div class="message information">
-Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
-la propietat "executionDir".  </div>
 </br>
-
-A continuació s’explica l’ús dels diferents tipus d’eines previstes.
+A continuació s’explica l’ús dels diferents tipus d’eines previstes de construcció.
 
 </br>
 #### Node
-Caldrà seleccionar la versió a utilitzar de l’eina i, només si es tracta d'una eina complementària, l’eina a utilitzar (per defecte `npm`).
-No caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada.
+Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a continuació:
 
 |Versions suportades|
 |-------|
+|nodejs_4_4_3|
 |nodejs_6_LTS|
 |nodejs_8_LTS|
 |nodejs_10_LTS|
+|nodejs_12_LTS|
 
 ```
 build:
   steps:
     - id: bs001
       position: 1
-      tool: nodejs_10_LTS
+      tool: nodejs_12_LTS
       parameters: install --scripts-prepend-node-path true
     - id: bs002
       position: 2
-      tool: nodejs_10_LTS
+      tool: nodejs_12_LTS
       parameters: run-script build --scripts-prepend-node-path true
       generates:
         - artifact01
 ```
 
-Dins d’aquesta tecnologia, es dóna cobertura a altres eines complementàries que caldrà especificar mitjançant la propietat `module`:
-
-|Eines complementàries|
-|-------|
-|npm (per defecte)|
-|gulp|
-|grunt|
-|bower|
-
-```
-build:
-  steps:
-    - id: bs001
-      position: 1
-      tool: nodejs_10_LTS
- 	module: npm
-      parameters: install --scripts-prepend-node-path true
-    - id: bs002
-      position: 2
-      tool: nodejs_10_LTS
-	module: bower
-      parameters: install
-    - id: bs003
-      position: 3
-      tool: nodejs_10_LTS
-	module: gulp
-      parameters: build
-      generates:
-        - artifact01
-```
+La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui la comanda específica en els `parameters` d’execució.
+Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
+Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
 
 </br>
 #### Java
-Caldrà seleccionar la versió a utilitzar de l’eina i la versió de Java.
-No caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada
+Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` la versió de Java. Les combinacions previstes són les següents:
 
-
-|Eines suportades|Versions JDK|
+|Versions Maven|Versions JDK|
 |-------|-------|
-|ant_1.8.2|JDK 1.5|
-|ant_1.9.6|JDK 1.6|
+|maven_2.2.1|JDK 1.7|
+|maven_3.2.2|JDK 1.6|
+|maven_3.2.2|JDK 1.7|
+|maven_3.2.2|JDK 1.8|
+|maven_3.3.9|JDK 1.6|
+|maven_3.3.9|JDK 1.7|
+|maven_3.3.9|JDK 1.8|
+|maven_3.5|JDK 1.7|
 |maven_3.5|JDK 1.8|
-|maven_2.6|JDK 1.8|
-
+|maven_3.6|JDK 1.7|
+|maven_3.6|JDK 1.8|
+|maven_3.6|JDK 11-openjdk|
 
 ```
 build:
@@ -339,14 +322,16 @@ build:
         - artifact02
 ```
 
+No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
+Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+
 </br>
 #### .Net
-Caldrà seleccionar la versió a utilitzar de l’eina i no caldrà que s'indiqui la comanda específica en els paràmetres d’execució doncs es deduirà a partir de l'eina seleccionada
-
+Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a continuació:
 
 |Eines predefinides|
 |-------|
-|MSBuild_4|
+|MSBuild_4.0|
 |MSBuild_14|
 |MSBuild_15|
 
@@ -366,11 +351,13 @@ build:
         - artifact01
 ```
 
+No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
+Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+
 </br>
 #### Hugo (sites estàtiques)
-Caldrà seleccionar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el directori on es troben els components i on es deixarà l’artefacte
-comprimit generat.
-
+Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el
+directori on es troben els components i on es deixarà l’artefacte comprimit generat.
 
 ```
 build:
@@ -380,15 +367,13 @@ build:
       tool: hugo
       pathOrig: .
       pathDest: ./hugoGeneratedSite
-      parameters: "’’"
       generates:
         - artifact01
 ```
 
 </br>
-#### Altres comandes (zip, unzip)
-
-Es dona la opció d’executar certes comandes, principalment per passos en els que s'ha d'empaquetar o desempaquetar la informació.
+#### Compressió (zip, unzip)
+Caldrà seleccionar el literal "command" com a `tool` per tal d'executar les eines d'empaquetat (zip) i desempaquetat de la informació (unzip).
 
 ```
 build:
@@ -402,11 +387,75 @@ build:
         - artifact01
 ```
 
+</br>
+#### BBDD
+Caldrà seleccionar el literal "bbdd" com a `tool` per tal d'executar l'eina de desplegament de base de dades.
+
+```
+build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: bbdd
+      generates:
+        - artifact01
+```
+
+</br>
+#### Docker Image
+Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcció mitjançant una imatge Docker pròpia (_custom_). </br>
+Veure: [**Com utilitzar imatges Docker Builder**](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder).
+
+</br>
+Exemple d'ús d'imatge pròpia:
+
+```
+build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerfilePath: /app/docker
+      dockerfileName: DockerFile
+      parameters: clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+```
+
+On:
+
+* `dockerfilePath`: ruta del fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+* `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+
+<div class="message information">
+En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
+de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de la aplicació.
+</div>
+
+</br>
+Exemple d'ús d'imatge del catàleg:
+
+```
+build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerImageName: repo/image:version
+      parameters: clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+```
+
+On:
+
+* `dockerImageName`: nom de la imatge al catàleg d'imatges. Es composa pel repositori, el nom de la imatge i la seva versió.
 
 ### Procés de desplegament
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
+
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
 ```
@@ -416,8 +465,8 @@ Es contemplen els següents tipus de desplegament:
   destination: 9999_tomcat
   artifact: artifact01
 ```
-
 </br>
+
 - Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build)
 
 ```
@@ -428,8 +477,8 @@ Es contemplen els següents tipus de desplegament:
   parameters: deploy -f ./pom.xml
   destination: 9999_nexus
 ```
-
 </br>
+
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
 
@@ -438,8 +487,8 @@ Es contemplen els següents tipus de desplegament:
   position: 1
   type: manual
 ```
-
 </br>
+
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 
@@ -468,14 +517,15 @@ Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines
 ## Exemples
 A continuació s'adjunten exemples de casos d'ús:
 
-1. [Llibreria Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml)
-2. [Aplicació Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
-3. [Llibreria Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml)
-4. [Aplicació Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
-5. [Llibreria .Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml)
-6. [Aplicació .Net desplegament semi-automàtic](/related/sic/2.0/autoservei_net.yml)
-7. [Aplicació Oracle Apex](/related/sic/2.0/autoservei_apex.yml)
-8. [Aplicació PHP](/related/sic/2.0/autoservei_php.yml)
+- [Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml) (llibreria)
+- [Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
+- [Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
+- [Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
+- [.Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
+- [.Net](/related/sic/2.0/autoservei_net.yml)
+- [PHP](/related/sic/2.0/autoservei_php.yml)
+- [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
+- [Docker Image](/related/sic/2.0/autoservei_docker.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
