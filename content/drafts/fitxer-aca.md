@@ -30,6 +30,8 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
 les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
 
+Exemple:
+
 ```
 version: x.y.z
 ```
@@ -39,6 +41,8 @@ version: x.y.z
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
 Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular dades repetibles.
 
+Exemple:
+
 ```
 parameters:
   - name: nom_param1
@@ -46,8 +50,6 @@ parameters:
   - name: nom_param2
     value: valor_param2
 ```
-
-Exemple per a fer-ne referència:
 
 ```
 build:
@@ -69,7 +71,9 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 
 #### Entorns
 
-Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada:
+Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.
+
+Exemple:
 
 ```
 resources:
@@ -102,6 +106,8 @@ Es relacionaran les denominacions d'infraestructures indicades pel proveïdor:
 * Element o tipologia (`element`)
 * Entorns (`environments`)
 * Identificador del proveïdor (`provider`)
+
+Exemple:
 
 ```
 resources:
@@ -180,6 +186,8 @@ La propietat `provider` suporta el següent conjunt de valors:
 
 El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
 
+Exemple:
+
 ```
 resources:
   (...)
@@ -207,6 +215,8 @@ En el cas de desplegaments de bases de dades, caldrà fer referència a l’arxi
 En aquest cas, és important assegurar-se que l’identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI.
 Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas.
 Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar la aplicació</a>. </div>
+
+Exemple d'artefacte de BBDD:
 
 ```
 resources:
@@ -240,6 +250,8 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 
 Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
 Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
+
+Exemple:
 
 ```
 build:
@@ -275,6 +287,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |nodejs_12_LTS|
 
 Exemple:
+
 ```
 build:
   steps:
@@ -317,6 +330,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 |maven_3.6|JDK 11-openjdk|
 
 Exemple:
+
 ```
 build:
   steps:
@@ -344,6 +358,7 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |MSBuild_15|
 
 Exemple:
+
 ```
 build:
   steps:
@@ -369,6 +384,7 @@ Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el
 directori on es troben els components i on es deixarà l’artefacte comprimit generat.
 
 Exemple:
+
 ```
 build:
   steps:
@@ -386,6 +402,7 @@ build:
 Caldrà seleccionar el literal "command" com a `tool` per tal d'executar les eines d'empaquetat (zip) i desempaquetat de la informació (unzip).
 
 Exemple:
+
 ```
 build:
   steps:
@@ -403,6 +420,7 @@ build:
 Caldrà seleccionar el literal "bbdd" com a `tool` per tal d'executar l'eina de desplegament de base de dades.
 
 Exemple:
+
 ```
 build:
  steps:
@@ -419,6 +437,7 @@ Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcc
 Veure: [**Com utilitzar imatges Docker Builder**](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder).
 
 Exemple d'ús d'imatge pròpia:
+
 ```
 build:
  steps:
@@ -433,6 +452,7 @@ build:
 ```
 
 On:
+
 * `dockerfilePath`: ruta del ficher _DockerFile_ al codi font del projecte per a la construccio de la imatge.
 * `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construccio de la imatge.
 
@@ -442,6 +462,7 @@ de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari a
 </div>
 
 Exemple d'ús d'imatge del catàleg:
+
 ```
 build:
  steps:
@@ -455,12 +476,14 @@ build:
 ```
 
 On:
+
 * `dockerImageName`: nom de la imatge al catàleg d'imatges. Es composa pel repositori, el nom de la imatge i la seva versió.
 
 ### Procés de desplegament
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
+
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
 ```
@@ -507,6 +530,8 @@ Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 ### Notificacions
 
 Finalment, caldrà indicar les **adreces de correu electrònic on notificar** accions manuals en espera i els resultats de l’execució:
+
+Exemple:
 
 ```
 notificationRecipients:

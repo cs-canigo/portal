@@ -1,5 +1,5 @@
 +++
-date = "2020-06-25"
+date = "2020-07-15"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
