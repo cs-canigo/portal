@@ -30,8 +30,6 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 Caldrà indicar la versió de l'arxiu que, per tant, segueix un versionatge diferent al de l'aplicació ja que cada increment de versió es correspondrà amb **canvis en
 les especificacions de construcció i/o desplegament**. El seu valor ha de seguir el format estàndar: `<versioMajor>.<versioMenor>.<pegat>`.
 
-Exemple:
-
 ```
 version: x.y.z
 ```
@@ -40,8 +38,6 @@ version: x.y.z
 
 Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui `${nom_param}` se substituirà pel valor `valor_param`.
 Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapçular dades repetibles.
-
-Exemple:
 
 ```
 parameters:
@@ -72,8 +68,6 @@ Caldrà definir els recursos dins l'entitat `resources`. Hi ha tres tipus de rec
 #### Entorns
 
 Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.
-
-Exemple:
 
 ```
 resources:
@@ -106,8 +100,6 @@ Es relacionaran les denominacions d'infraestructures indicades pel proveïdor:
 * Element o tipologia (`element`)
 * Entorns (`environments`)
 * Identificador del proveïdor (`provider`)
-
-Exemple:
 
 ```
 resources:
@@ -186,8 +178,6 @@ La propietat `provider` suporta el següent conjunt de valors:
 
 El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
 
-Exemple:
-
 ```
 resources:
   (...)
@@ -251,8 +241,6 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 Cada pas de construcció disposa d'un identificador, una posició, l'eina de construcció i l'artefacte o llista d’artefactes que genera.
 Aquesta secció `generates` amb la llista d'artefactes generats ha de correspondre's amb els declarats a la secció `resources.artifacts`.
 
-Exemple:
-
 ```
 build:
   steps:
@@ -270,8 +258,8 @@ build:
 <div class="message information">
 Com es pot veure a l'exemple, en cas de requerir executar les passes de <b>construcció des d’un directori específic</b> caldrà definir la ubicació mitjançant
 la propietat "executionDir".  </div>
-</br>
 
+</br>
 A continuació s’explica l’ús dels diferents tipus d’eines previstes de construcció.
 
 </br>
@@ -285,8 +273,6 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |nodejs_8_LTS|
 |nodejs_10_LTS|
 |nodejs_12_LTS|
-
-Exemple:
 
 ```
 build:
@@ -329,8 +315,6 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 |maven_3.6|JDK 1.8|
 |maven_3.6|JDK 11-openjdk|
 
-Exemple:
-
 ```
 build:
   steps:
@@ -357,8 +341,6 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |MSBuild_14|
 |MSBuild_15|
 
-Exemple:
-
 ```
 build:
   steps:
@@ -383,8 +365,6 @@ Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la
 Caldrà seleccionar el literal "hugo" com a `tool` i, addicionalment, indicar el `pathOrig` i `pathDesti`, que es correspondran respectivament amb el
 directori on es troben els components i on es deixarà l’artefacte comprimit generat.
 
-Exemple:
-
 ```
 build:
   steps:
@@ -401,8 +381,6 @@ build:
 #### Compressió (zip, unzip)
 Caldrà seleccionar el literal "command" com a `tool` per tal d'executar les eines d'empaquetat (zip) i desempaquetat de la informació (unzip).
 
-Exemple:
-
 ```
 build:
   steps:
@@ -418,8 +396,6 @@ build:
 </br>
 #### BBDD
 Caldrà seleccionar el literal "bbdd" com a `tool` per tal d'executar l'eina de desplegament de base de dades.
-
-Exemple:
 
 ```
 build:
@@ -530,8 +506,6 @@ Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 ### Notificacions
 
 Finalment, caldrà indicar les **adreces de correu electrònic on notificar** accions manuals en espera i els resultats de l’execució:
-
-Exemple:
 
 ```
 notificationRecipients:
