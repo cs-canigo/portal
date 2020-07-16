@@ -365,7 +365,6 @@ build:
     - id: bs001
       position: 1
       tool: hugo
-      pathOrig: .
       pathDest: ./hugoGeneratedSite
       generates:
         - artifact01
