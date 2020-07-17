@@ -1,12 +1,7 @@
----
-url: "/INTCAN2199-documentacio-per-versions-3.4LTS-3.4.3-moduls/modul-x/a/"
----
 +++
 date        = "2020-06-19"
-title       = "Mòduls generals"
+title       = "Mòduls generals a"
 description = "Mòduls generals Canigó 3.4.3"
 sections    = "Canigó"
 weight		= 3
 +++
-
-a
