@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Compatibilitat servidors"
 description = "Compatibilitat servidors Canigó 3.4.4"
 sections    = "Canigó"
-weight		= 5
+weight		= 2
 +++
 
 S'ha certificat la compatibilitat de Canigó 3.4.4 amb els següents servidors embeguts:
