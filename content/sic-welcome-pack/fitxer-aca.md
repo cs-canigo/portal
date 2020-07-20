@@ -285,7 +285,7 @@ build:
         - artifact01
 ```
 
-La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui la comanda específica en els `parameters` d’execució.
+La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs vindrà donada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
 Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
@@ -322,7 +322,7 @@ build:
         - artifact02
 ```
 
-No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
+No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució doncs vindrà donada per l'eina.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
@@ -351,7 +351,7 @@ build:
         - artifact01
 ```
 
-No caldrà que s'indiqui el servei específic en els `parameters` d’execució doncs es deduirà a partir de l'eina seleccionada.
+No caldrà que s'indiqui la comanda en el `restore/build_parameters` d’execució doncs vindrà donada per l'eina de _restore_ (Nuget) i _build_ (MSBuild) respectivament.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
@@ -386,6 +386,8 @@ build:
         - artifact01
 ```
 
+Caldrà que s'indiqui la comanda `zip` o `unzip` en els `parameters` d’execució per a especificar el tipus d'acció a realitzar.
+
 </br>
 #### BBDD
 Caldrà seleccionar el literal "bbdd" com a `tool` per tal d'executar l'eina de desplegament de base de dades.
@@ -416,7 +418,7 @@ build:
       tool: docker
       dockerfilePath: /app/docker
       dockerfileName: DockerFile
-      parameters: clean package -Dmaven.test.skip=true
+      parameters: mvn clean package -Dmaven.test.skip=true
       generates:
         - artifact01
 ```
@@ -425,6 +427,7 @@ On:
 
 * `dockerfilePath`: ruta del fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
 * `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+* `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 <div class="message information">
 En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
@@ -440,15 +443,16 @@ build:
     - id: bs001
       position: 1
       tool: docker
-      dockerImageName: repo/image:version
-      parameters: clean package -Dmaven.test.skip=true
+      dockerImageName: repo/image:tag
+      parameters: mvn clean package -Dmaven.test.skip=true
       generates:
         - artifact01
 ```
 
 On:
 
-* `dockerImageName`: nom de la imatge al catàleg d'imatges. Es composa pel repositori, el nom de la imatge i la seva versió.
+* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i la etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
+* `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 ### Procés de desplegament
 
@@ -524,7 +528,8 @@ A continuació s'adjunten exemples de casos d'ús:
 - [.Net](/related/sic/2.0/autoservei_net.yml)
 - [PHP](/related/sic/2.0/autoservei_php.yml)
 - [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
-- [Docker Image](/related/sic/2.0/autoservei_docker.yml)
+- [Docker Gencat Image](/related/sic/2.0/autoservei_docker.yml)
+- [Docker Custom image](/related/sic/2.0/autoservei_custom_docker.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
