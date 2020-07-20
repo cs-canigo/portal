@@ -1,12 +1,12 @@
 +++
 date        = "2020-06-19"
 title       = "Errors coneguts"
-description = "Errors coneguts plugin eclipse 1.7.8"
+description = "Errors coneguts plugin eclipse 1.7.7"
 sections    = "Canigó"
 weight		= 2
 +++
 
-## Errors coneguts versió 1.7.8
+## Errors coneguts versió 1.7.7
 
 ### Error "Possiblement els Archetypes no s'han instal·lat correctament"
 

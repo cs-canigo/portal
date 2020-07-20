@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Documentació"
 description = "Documentació plugin eclipse 1.7.9"
 sections    = "Canigó"
-weight		= 2
+weight		= 3
 +++
 
 ## Introducció

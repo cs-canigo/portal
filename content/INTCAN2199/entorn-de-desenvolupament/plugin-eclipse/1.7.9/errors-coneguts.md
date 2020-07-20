@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Errors coneguts"
 description = "Errors coneguts plugin eclipse 1.7.9"
 sections    = "Canigó"
-weight		= 3
+weight		= 2
 +++
 
 ## Errors coneguts versió 1.7.9

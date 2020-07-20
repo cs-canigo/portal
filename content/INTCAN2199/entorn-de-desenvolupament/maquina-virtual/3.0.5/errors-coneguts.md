@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Errors coneguts"
 description = "Errors coneguts màquina virtual 3.0.5"
 sections    = "Canigó"
-weight		= 3
+weight		= 2
 +++
 
 ## Errors coneguts versió 3.0.5

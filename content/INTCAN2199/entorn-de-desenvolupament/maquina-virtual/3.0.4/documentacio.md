@@ -3,7 +3,7 @@ date        = "2020-06-19"
 title       = "Documentació"
 description = "Documentació màquina virtual 3.0.4"
 sections    = "Canigó"
-weight		= 2
+weight		= 3
 +++
 
 ### Introducció
