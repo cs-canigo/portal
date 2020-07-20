@@ -41,21 +41,22 @@ Google ha generat una convenció de guia d'estils de programació amb Java que t
 
 #### Convencions de les Classes
 
-El nom dels packages ha de seguir la notació:
-´´´
+En cas de que l'aplicació sigui d'ús corporatiu, el nom dels packages ha de seguir la notació:
+
+```
 cat.gencat.<ambit>.<nomaplicacio>.nomsubpackage...
-´´´
+```
+
 o
-´´´
+
+```
 cat.gencat.<nomaplicacio>.nomsubpackage...
-´´´
-en cas de que l'aplicació sigui d'ús corporatiu.
+```
 
 A continuació de 'nomaplicacio' es poden aniuar nous subpackages per estructurar les classes segons la seva responsabilitat, funcionalitat, etc.
 Exemples:
-´´´
+
+```
 cat.gencat.ctti.facturacio.model
 cat.gencat.ptop.pipex.control
-´´´
-
-
+```
