@@ -20,6 +20,7 @@ Mitigar els riscos associats a un mal desenvolupament i l'ús de males pràctiqu
 ### Àmbit i vigència
 
 Aquestes bones pràctiques van dirigides a:
+
 • Desenvolupadors, amb l’objectiu que coneguin com han de realitzar-se els desenvolupaments de les aplicacions segons les bones pràctiques del Centre de Telecomunicacions i Tecnologies de la Informació.
 
 ### Estàndards J2EE
@@ -27,16 +28,21 @@ Aquestes bones pràctiques van dirigides a:
 Els desenvolupaments a la Generalitat es basen en les millors pràctiques acceptades per la comunitat i els diferents patrons de desenvolupament que milloren el manteniment i la traçabilitat del
 desenvolupament.
 La referència a les millors pràctiques en el desenvolupament d’aplicacions Java empresarials es pot trobar en el següent enllaç: 
+
 • http://docs.oracle.com/javaee
 
 ### Bones pràctiques
 
 Un resum de les bones pràctiques a seguir al desenvolupar aplicacions J2EE es poden trobar a: 
+
 • https://www.ibm.com/developerworks/websphere/techjournal/0701_botzum/0701_botzum.html
 
 ### Patrons de disseny
 
 Es necessari seguir els patrons de disseny J2EE y Java a l'hora de desenvolupar aplicacions J2EE, podeu trobar diferents patrons de disseny a: 
+
 • https://www.oracle.com/technetwork/java/javaee/downloads/patterns-138526.html
+
 • https://www.journaldev.com/1827/java-design-patterns-example-tutorial
+
 • https://refactoring.guru/design-patterns/java

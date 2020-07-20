@@ -42,5 +42,7 @@ Un resum de les bones pràctiques a seguir al desenvolupar aplicacions J2EE es p
 Es necessari seguir els patrons de disseny J2EE y Java a l'hora de desenvolupar aplicacions J2EE, podeu trobar diferents patrons de disseny a: 
 
 • https://www.oracle.com/technetwork/java/javaee/downloads/patterns-138526.html
+
 • https://www.journaldev.com/1827/java-design-patterns-example-tutorial
+
 • https://refactoring.guru/design-patterns/java
