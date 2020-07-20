@@ -22,7 +22,7 @@ escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 ![Pipeline del SIC](/related/sic/harbor_docker_images.png)
 </br>
 
-Podeu accedir al codi font del catàleg d'imatges del SIC, i a la documentació associada, mitjançant el següent enllaç:
+Podeu accedir al codi font del catàleg d'imatges del SIC, i a la documentació associada, mitjançant el següent enllaç: </br>
 https://git.intranet.gencat.cat/0192-intern/docker-images.
 
 ![Pipeline del SIC](/related/sic/docker_images_project.png)
