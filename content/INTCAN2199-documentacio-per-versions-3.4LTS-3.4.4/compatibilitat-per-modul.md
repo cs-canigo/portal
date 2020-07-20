@@ -10,12 +10,12 @@ weight      = 7
 
 |                                                   		| 16/06/2020 (3.4.4)																														|
 |---------------------------------------------------		|------------------																															|
-| **canigo.core**                                   		| [4.3.0](/INTCAN2199-documentacio-llibreries-canigo.core-4.3.0/)  							|
+| **canigo.core**                                   		| [4.3.0](/INTCAN2199/documentacio-llibreries/canigo.core/4.3.0/)  							|
 |                                                   		|               																																|
 | **canigo.persistence.core**                        		| 2.3.0          																																|
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 |                                                   		|               																																|
-| **canigo.persistence.jpa**                         		| [2.3.0](/INTCAN2199-documentacio-llibreries-canigo.persistence.jpa-2.3.0/)		|
+| **canigo.persistence.jpa**                         		| [2.3.0](/INTCAN2199/documentacio-llibreries/canigo.persistence.jpa/2.3.0/)		|
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.persistence.core                           		| [2.0.0,2.4.0)  																																|
 |                                                   		|               																																|
