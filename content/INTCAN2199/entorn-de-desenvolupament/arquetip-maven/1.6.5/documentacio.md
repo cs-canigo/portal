@@ -73,11 +73,19 @@ mvn archetype:generate -DarchetypeGroupId=cat.gencat -DarchetypeArtifactId=plugi
 ```
 
 On:
+
 - archetype:generate: Goal de maven per generar el projecte amb l'arquetipus Canigó
+
 - archetypeGroupId: Grup maven al que pertany el arquetipus Canigó
+
 - archetypeArtifactId: Artifact maven al que pertany el arquetipus Canigó
+
 - archetypeVersion: Versió del arquetipus Canigó
+
 - artifactId: Artifact maven de l'aplicació que volem crear
+
 - groupId: Grup maven de l'aplicació que volem crear
+
 - version: Verció de l'aplicació que volem crear
+
 - -B: En mode batch perquè no ens realitzi les preguntes i crei l'aplicació directament
