@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-19"
 title       = "Documentació"
-description = "Documentació màquina virtual 3.0.5"
+description = "Documentació màquina virtual 3.0.6"
 sections    = "Canigó"
 weight		= 3
 +++
