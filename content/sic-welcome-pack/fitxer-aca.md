@@ -404,11 +404,31 @@ build:
 
 </br>
 #### Docker Image
-Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcció mitjançant una imatge Docker pròpia (_custom_). </br>
+Caldrà seleccionar el literal "docker" com a `tool` per tal de fer la construcció mitjançant una imatge docker. </br>
 Veure: [**Com utilitzar imatges Docker Builder**](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder).
 
 </br>
-Exemple d'ús d'imatge pròpia:
+Exemple d'ús d'imatge del catàleg:
+
+```
+build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerImageName: repo/image:tag
+      parameters: mvn clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+```
+
+On:
+
+* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i la etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
+* `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
+
+</br>
+Exemple d'ús d'imatge pròpia (custom):
 
 ```
 build:
@@ -433,26 +453,6 @@ On:
 En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
 de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de la aplicació.
 </div>
-
-</br>
-Exemple d'ús d'imatge del catàleg:
-
-```
-build:
- steps:
-    - id: bs001
-      position: 1
-      tool: docker
-      dockerImageName: repo/image:tag
-      parameters: mvn clean package -Dmaven.test.skip=true
-      generates:
-        - artifact01
-```
-
-On:
-
-* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i la etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
-* `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 ### Procés de desplegament
 
@@ -528,8 +528,8 @@ A continuació s'adjunten exemples de casos d'ús:
 - [.Net](/related/sic/2.0/autoservei_net.yml)
 - [PHP](/related/sic/2.0/autoservei_php.yml)
 - [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
-- [Docker Gencat Image](/related/sic/2.0/autoservei_docker.yml)
-- [Docker Custom image](/related/sic/2.0/autoservei_custom_docker.yml)
+- [Docker Image](/related/sic/2.0/autoservei_docker.yml)
+- [Docker Custom Image](/related/sic/2.0/autoservei_custom_docker.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
