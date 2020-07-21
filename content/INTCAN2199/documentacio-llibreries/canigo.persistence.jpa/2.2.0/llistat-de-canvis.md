@@ -6,6 +6,6 @@ sections    = "Canigó"
 weight		= 2
 +++
 
-## Llistat de canvis versió 4.2.0
+## Llistat de canvis versió 2.2.0
 
-
+- Revisió dels tests del mòdul per anàlisis SonarQube
