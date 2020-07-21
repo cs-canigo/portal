@@ -8,3 +8,4 @@ weight		= 2
 
 ## Llistat de canvis versió 4.2.0
 
+- Revisió Test del mòdul per anàlisis SonarQube
