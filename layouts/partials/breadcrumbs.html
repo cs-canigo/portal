@@ -49,8 +49,7 @@
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}
 
-{{ $section }}
-{{ if (eq $section "INTCAN2199")}}
+{{ if (eq $section "intcan2199")}}
 
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
