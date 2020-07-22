@@ -2,6 +2,7 @@
 {{ $section := .Section | html | lower}}
 
 <!-- switch subseccions -->
+{{ .Title }}
 
 {{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
 	Documentació
