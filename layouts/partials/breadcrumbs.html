@@ -57,6 +57,6 @@
   {{ $.Scratch.Add "path" $element }}
   {{ if ne $element "" }}
   	{{ $.Scratch.Add "path" "/" }}
-  	<a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+  	<li><a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a></li>
   {{ end }}
 {{ end }}
