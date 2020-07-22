@@ -1,6 +1,6 @@
 +++
 date        = "2020-06-19"
-title       = "Documentació per versions"
-description = "Documentació del Framework per versions"
+title       = "Documentaci%C3%B3 per versions"
+description = "Documentaci%C3%B3 del Framework per versions"
 sections    = "Canigó"
 +++
