@@ -1,6 +1,6 @@
 +++
 date        = "2020-06-16"
-title       = "Mòduls"
-description = "Mòduls Canigó 3.4.4"
-sections    = "Canigó"
+title       = "MÃ²duls"
+description = "MÃ²duls CanigÃ³ 3.4.4"
+sections    = "CanigÃ³"
 +++
