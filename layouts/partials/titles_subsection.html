@@ -1,10 +1,7 @@
 {{ $title := .Title | html | lower}}
 {{ $section := .Section | html | lower}}
-{{ $currentSection := .CurrentSection | html | lower}}
 
 <!-- switch subseccions -->
----------------- {{ $currentSection }} ----------------
-
 {{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
 	Documentació
 {{ else if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
