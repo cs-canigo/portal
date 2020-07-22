@@ -29,6 +29,7 @@
 								</ol>
 
 								<h1 class="capcelera_flotant pull-left" data-txt="{{index .Params "teletext_id"}}.title">
+									=============== {{ $title }} ===============
 									{{ if and (eq $section "") (ne $title "cercador") }}
 										{{ if (eq (in .URL "blog_tags") false) }}
 											{{ partial "breadcrumbs.html" . }}

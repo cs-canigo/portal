@@ -2,7 +2,7 @@
 {{ $section := .Section | html | lower}}
 
 <!-- switch subseccions -->
-{{ .Title }}
+---------------- {{ $title }} ----------------
 
 {{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
 	Documentació
@@ -23,5 +23,5 @@
 {{ else if (eq $title "dadesref") }}
 	Gestió Tècnica de Dades
 {{ else }}
-	{{ .Title }}
+	______________________ {{ .Title }} ______________________
 {{ end }}
