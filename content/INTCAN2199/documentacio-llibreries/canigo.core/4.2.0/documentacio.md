@@ -6,7 +6,7 @@ sections    = "Canigó"
 weight		= 3
 +++
 
-## Proposit
+## Propòsit
 
 Llibreria amb funcionalitats globals, transversals i core a centralitzar.
 
