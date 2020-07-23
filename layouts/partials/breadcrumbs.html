@@ -54,7 +54,7 @@
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
-	replace: {{ replace "M%C3%B2duls-x" "%C3%B2" "ò" }}
+	
 	{{ range $index, $element := split $url "/" }}
 	  {{ $.Scratch.Add "path" $element }}
 	  {{ if ne $element "" }}
