@@ -52,6 +52,8 @@
 {{ if (eq $section "intcan2199")}}
 
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+	{{ $url2 := $url | html }}
+	{{ $url2 }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
 	
