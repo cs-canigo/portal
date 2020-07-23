@@ -54,7 +54,7 @@
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
-	htmlUnescape: {{ safeHTML (htmlUnescape "M%C3%B2duls-x") }}
+	printf: {{ printf "%s" .Permalink }}
 	{{ range $index, $element := split $url "/" }}
 	  {{ $.Scratch.Add "path" $element }}
 	  {{ if ne $element "" }}
@@ -62,7 +62,7 @@
 	  	{{ if gt $index 1 }}
 	  		<li>
 	  	{{ end }}
-	  	<a href='{{ $.Scratch.Get "path" }}'>{{ . }}</a>
+	  	<a href='{{ $.Scratch.Get "path" }}'>{{ replaceRE . "-" " " }}</a>
 	  	{{ if gt $index 1 }}
 	  		</li>
 	  	{{ end }}
