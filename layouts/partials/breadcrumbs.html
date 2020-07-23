@@ -55,6 +55,7 @@
 	.Permalink: {{ .Permalink }}
 	htmlUnescape: {{ htmlUnescape .Permalink }}
 	htmlUnescape2: {{ .Permalink | htmlUnescape }}
+	safeHTML_htmlUnescape: {{ safeHTML (htmlUnescape .Permalink)  }}
 	safeHTML: {{ safeHTML .Permalink }}
 	safeHTML2: {{ .Permalink | safeHTML }}
 	safeHTMLAttr: {{ safeHTMLAttr .Permalink }}
