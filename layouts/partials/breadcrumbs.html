@@ -53,7 +53,9 @@
 
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $url2 := $url | markdownify }}
-	{{ $url2 }}
+	markdownify: {{ $url2 }}
+	{{ $url3 := $url | safeHTMLAttr }}
+	safeHTMLAttr: {{ $url3 }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
 	
