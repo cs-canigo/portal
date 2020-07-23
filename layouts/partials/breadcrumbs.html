@@ -52,22 +52,10 @@
 {{ if (eq $section "intcan2199")}}
 
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-	.Permalink: {{ .Permalink }}
-	htmlUnescape: {{ htmlUnescape .Permalink }}
-	htmlUnescape2: {{ .Permalink | htmlUnescape }}
-	safeHTML_htmlUnescape: {{ safeHTML (htmlUnescape .Permalink)  }}
-	safeHTML: {{ safeHTML .Permalink }}
-	safeHTML2: {{ .Permalink | safeHTML }}
-	safeHTMLAttr: {{ safeHTMLAttr .Permalink }}
-	safeHTMLAttr2: {{ .Permalink | safeHTMLAttr }}
-	safeURL: {{ safeURL .Permalink }}
-	safeURL2: {{ .Permalink | safeURL }}
-	decodeURI: <script type="text/javascript"> alert(decodeURI({{ .Permalink }})) </script>
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
 	
 	{{ range $index, $element := split $url "/" }}
-	humanize: {{ humanize . }}
 	  {{ $.Scratch.Add "path" $element }}
 	  {{ if ne $element "" }}
 	  	{{ $.Scratch.Add "path" "/" }}
