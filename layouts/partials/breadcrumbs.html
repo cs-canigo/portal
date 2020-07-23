@@ -62,7 +62,7 @@
 	safeHTMLAttr2: {{ .Permalink | safeHTMLAttr }}
 	safeURL: {{ safeURL .Permalink }}
 	safeURL2: {{ .Permalink | safeURL }}
-	decodeURI: <script> decodeURI({{ .Permalink }}) </script>
+	decodeURI: <script> safeHTML_htmlUnescape(decodeURI({{ .Permalink }})) </script>
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
 	
