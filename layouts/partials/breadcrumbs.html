@@ -54,7 +54,7 @@
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 	{{ $.Scratch.Add "path" .Site.BaseURL }}
 	{{ $.Scratch.Add "path" "/" }}
-	
+	htmlUnescape: {{ safeHTML (htmlUnescape "Hugo &amp; Caddy &gt; WordPress &amp; Apache") }}
 	{{ range $index, $element := split $url "/" }}
 	  {{ $.Scratch.Add "path" $element }}
 	  {{ if ne $element "" }}
