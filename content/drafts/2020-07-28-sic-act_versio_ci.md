@@ -1,5 +1,5 @@
 +++
-date        = "2020-07-28"
+date        = "2020-07-27"
 title       = "SIC. Actualització de versió Jenkins"
 description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei d'Integració Continua (Jenkins)"
 categories  = ["SIC"]
@@ -31,5 +31,6 @@ Es preveu seguir duent a terme una actualització tecnològica programada de for
 millores i nova funcionalitat.
 <br>
 <br>
+
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal
 de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
