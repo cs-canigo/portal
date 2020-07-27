@@ -1,5 +1,5 @@
 +++
-date        = "2020-07-27"
+date        = "2020-07-28"
 title       = "SIC. Actualització de versió Gitlab"
 description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab)"
 categories  = ["SIC"]
