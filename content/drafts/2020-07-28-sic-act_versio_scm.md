@@ -6,8 +6,6 @@ categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 +++
 
-## Servei d'Integració Continua
-
 **Durant el mes de Juliol s’ha dut a terme l’actualització del Servei de Custodia de Codi a la versió 12.8.5 de Gitlab.**.
 <br>
 <br>
@@ -16,6 +14,7 @@ Les principals novetats d'aquesta actualització són les següents:
 * Millores **generals**:
 
 |Merge Request|Descripció|
+|-----------|----------|
 |[20590](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/20590)|Fix project creation with templates using /projects/user/:id API.|
 |[22527](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/22527)|Fixes bug when using slashes on release tags.|
 |[20639](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/20639)|Set the SHA to be merged from push options.|
@@ -23,6 +22,7 @@ Les principals novetats d'aquesta actualització són les següents:
 * TODO **Novetats**:
 
 |Merge Request|Descripció|
+|-----------|----------|
 |TODO|TLS (Transport Layer Security) v1.1 ja no es pot utilitzar.|
 |TODO|Upgrade a PostgreSQL 10.12.|
 

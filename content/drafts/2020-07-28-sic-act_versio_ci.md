@@ -6,8 +6,6 @@ categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 +++
 
-## Servei d'Integració Continua
-
 **Durant el mes de Juliol s’ha dut a terme l’actualització del Servei d’Integració Continua a la versió 2.204.6 de Jenkins.**.
 <br>
 <br>
@@ -18,6 +16,7 @@ Les principals novetats d'aquesta actualització són les següents:
 * Correccions de **seguretat** importants, entre d’altres:
 
 |Issue|Descripció|
+|-----------|----------|
 |[SECURITY-1774](https://www.jenkins.io/security/advisory/2020-03-25/#SECURITY-1774)|El caràcter punt i coma (;) a la URL son eliminats per defecte.|
 |[SECURITY-1682](https://www.jenkins.io/security/advisory/2020-01-29/#SECURITY-1682)|Es deshabilita per defecte l'ús del TCP Agent Protocol/3.|
 |[SECURITY-1641](https://www.jenkins.io/security/advisory/2020-01-29/#SECURITY-1641)|Jenkins no habilita per defecte DNS multicast i UDP multicast/broadcast.|
