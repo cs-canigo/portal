@@ -10,26 +10,22 @@ sections    = ["Notícies", "home"]
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
-
+<br>
 * Millores **generals**:
 
 |Merge Request|Descripció|
 |-----------|----------|
-|[20590](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/20590)|Fix project creation with templates using /projects/user/:id API.|
-|[22527](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/22527)|Fixes bug when using slashes on release tags.|
-|[20639](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/20639)|Set the SHA to be merged from push options.|
+|[20590](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/20590)|Revisió de la creació de projectes amb plantilles fent ús de l'API "/projects/user/:id".|
+|[22527](https://gitlab.com/gitlab-org/gitlab/-/merge_requests/22527)|Revisió error quan s'usa el caràcter "\" en generar _Release tags_.|
 
-* TODO **Novetats**:
-
-|Merge Request|Descripció|
-|-----------|----------|
-|TODO|TLS (Transport Layer Security) v1.1 ja no es pot utilitzar.|
-|TODO|Upgrade a PostgreSQL 10.12.|
+* **Novetats**:
+    * TLS (Transport Layer Security) v1.1 ha estat deprecat i ja no es dóna suport.
+    * Actualització a PostgreSQL 10.12.
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
 
-
+<br>
 Per a més informació de les novetats de la versió podeu consultar [Gitlab v.12.8.5](https://about.gitlab.com/releases/2020/03/09/gitlab-12-8-5-released/).
 <br>
 <br>

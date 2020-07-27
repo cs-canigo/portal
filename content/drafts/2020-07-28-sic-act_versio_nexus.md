@@ -10,16 +10,16 @@ sections    = ["Notícies", "home"]
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
-
+<br>
 * Millores **generals**:
 
 |Issue|Descripció|
 |-----------|----------|
-|[NEXUS-16009](https://issues.sonatype.org/browse/NEXUS-16009)|Evitar que al navegar per l'arbre d'un repositori Nuget Proxy es mostrin paquets que no estan a la caché local pel fet de disposar de metadades.|
+|[NEXUS-16009](https://issues.sonatype.org/browse/NEXUS-16009)|Evitar que, en navegar per l'arbre d'un repositori Nuget Proxy, es mostrin paquets que no estan a la caché local pel fet de disposar de metadades.|
 |[NEXUS-18546](https://issues.sonatype.org/browse/NEXUS-18546)|Afegir suport per imatges Docker de multi-arquitectura.|
 |[NEXUS-18905](https://issues.sonatype.org/browse/NEXUS-18905)|Error a la tasca Cleanup amb el missatge "No search context found for id".|
 |[NEXUS-22896](https://issues.sonatype.org/browse/NEXUS-22896)|Regressió al temps de resposta a les cerques amb la REST API.|
-|[NEXUS-23399](https://issues.sonatype.org/browse/NEXUS-23399)|NuGet v3 proxy repository no serveix contingut a la caché si el remot està bloquejat.|
+|[NEXUS-23399](https://issues.sonatype.org/browse/NEXUS-23399)|NuGet v3 proxy repository no serveix contingut a la caché si el repositori remot es troba bloquejat.|
 
 * **Novetats**:
 
@@ -30,6 +30,7 @@ Les principals novetats d'aquesta actualització són les següents:
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
 
+<br>
 Per a més informació de les novetats de la versió podeu consultar:
 
 - [Release notes 2020] (https://help.sonatype.com/repomanager3/release-notes)

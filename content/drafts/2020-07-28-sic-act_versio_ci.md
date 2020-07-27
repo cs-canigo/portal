@@ -21,6 +21,8 @@ Les principals novetats d'aquesta actualització són les següents:
 |[SECURITY-1682](https://www.jenkins.io/security/advisory/2020-01-29/#SECURITY-1682)|Es deshabilita per defecte l'ús del TCP Agent Protocol/3.|
 |[SECURITY-1641](https://www.jenkins.io/security/advisory/2020-01-29/#SECURITY-1641)|Jenkins no habilita per defecte DNS multicast i UDP multicast/broadcast.|
 
+<br>
+<br>
 Per a més informació de les novetats de la versió podeu consultar [Jenkins LTS Changelog](https://jenkins.io/changelog-stable/).
 <br>
 <br>
