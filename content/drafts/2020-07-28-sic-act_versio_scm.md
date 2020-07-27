@@ -11,6 +11,7 @@ sections    = ["Notícies", "home"]
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 <br>
+
 * Millores **generals**:
 
 |Merge Request|Descripció|

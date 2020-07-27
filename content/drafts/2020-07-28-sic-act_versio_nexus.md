@@ -11,7 +11,8 @@ sections    = ["Notícies", "home"]
 <br>
 Les principals novetats d'aquesta actualització són les següents:
 <br>
-* Millores **generals**:
+
+* Millores **generals**, entre d'altres:
 
 |Issue|Descripció|
 |-----------|----------|
@@ -21,11 +22,11 @@ Les principals novetats d'aquesta actualització són les següents:
 |[NEXUS-22896](https://issues.sonatype.org/browse/NEXUS-22896)|Regressió al temps de resposta a les cerques amb la REST API.|
 |[NEXUS-23399](https://issues.sonatype.org/browse/NEXUS-23399)|NuGet v3 proxy repository no serveix contingut a la caché si el repositori remot es troba bloquejat.|
 
-* **Novetats**:
+* **Novetats**, entre d'altres:
 
 |Issue|Descripció|
 |-----------|----------|
-|[NEXUS-20939](https://issues.sonatype.org/browse/NEXUS-20939)|Integració amb SAML --Nexus Repository Manager allows users to authenticate with SAML identity providers.|
+|[NEXUS-20939](https://issues.sonatype.org/browse/NEXUS-20939)|Integració amb proveïdors d'identitat SAML.|
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
