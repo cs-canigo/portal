@@ -135,7 +135,7 @@ Recuperar el bean del servei de DNI des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private DniConnectorImpl dniConnector;
+private DniConnector dniConnector;
 ```
 
 Fer la crida a la modalitat del servei desitjat, p.e.:
