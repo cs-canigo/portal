@@ -6,7 +6,7 @@ categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 +++
 
-**Durant el mes de Juliol s’ha dut a terme l’actualització del Servei de Custodia de Codi a la versió 12.8.5 de Gitlab.**.
+**Durant el mes de Juliol s’ha dut a terme l’actualització del Servei de Custodia de Codi a la versió 12.0.12 de Gitlab.**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
@@ -21,7 +21,6 @@ Les principals novetats d'aquesta actualització són les següents:
 
 * **Novetats**:
     * TLS (Transport Layer Security) v1.1 ha estat deprecat i ja no es dóna suport.
-    * Actualització a PostgreSQL 10.12.
 
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
