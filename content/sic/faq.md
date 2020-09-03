@@ -59,7 +59,7 @@ Els projectes dins els grups oficials d'aplicació sí que podran ser creats pel
 <br/><br/>
 
 #### **Com puc migrar el codi dels repositoris SVN (SIC 1.0) cap als del Gitlab (SIC 2.0)?** ####
-Podeu consultar el procediment descrit a [Migració repositoris SVN a Git] (/sic/serveis/scm) a l'apartat corresponent.
+Podeu consultar el procediment descrit a [Migració repositoris SVN a Git] (/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git).
 <br/><br/>
 
 #### **Fins quan podem utilitzar el SVN?** ####
