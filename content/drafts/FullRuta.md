@@ -195,13 +195,13 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
-//            {
-//                "className":      'details-control',
-//                "orderable":      false,
-//                "data":           null,
-//                "defaultContent": '',
-//	        "width": "10%"
-//            },
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
+            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
@@ -246,7 +246,7 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRutaLLT.row( tr );
         if ( row.child.isShown() ) {
@@ -260,7 +260,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
-*/
+
 });
 // Funció que dona format a la taula interna del Full de Ruta de HOST
 function formatHOST(d) {
