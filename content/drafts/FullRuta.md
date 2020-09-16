@@ -195,13 +195,13 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
-//            {
-//                "className":      'details-control',
-//                "orderable":      false,
-//                "data":           null,
-//                "defaultContent": '',
-//	        "width": "10%"
-//            },
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
+            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
@@ -225,7 +225,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==0 && col_index !==1){
+                if (col_index !==1 && col_index !==2){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
