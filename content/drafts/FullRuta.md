@@ -118,6 +118,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
+                <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
                 <th>Obsolet</th>
