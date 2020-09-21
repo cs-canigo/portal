@@ -197,8 +197,8 @@ weight= 5
 		
 			
 		//++1 inici noves instruccions
-		celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de <br/> la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
-		celda.innerHTML = celda.innerHTML + "i se us donarà accès temporal a totes les entitats en revisió, pendents d'aprovació."
+		celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de la Gestió Tècnica <br/>  de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+		celda.innerHTML = celda.innerHTML + "i se us donarà accès temporal a totes <br/> les entitats en revisió, pendents d'aprovació."
 		//++1 fi noves instruccions
 	}
 
