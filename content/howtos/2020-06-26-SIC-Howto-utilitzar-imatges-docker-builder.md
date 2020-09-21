@@ -19,6 +19,15 @@ Docker per defecte està configurat per a utilitzar el registre públic [Docker 
 No obstant, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
 escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 
+![Pipeline del SIC](/related/sic/harbor_docker_images.png)
+</br>
+
+Podeu accedir al codi font del catàleg d'imatges del SIC, i a la documentació associada, mitjançant el següent enllaç: </br>
+https://git.intranet.gencat.cat/0192-intern/docker-images.
+
+![Pipeline del SIC](/related/sic/docker_images_project.png)
+</br>
+
 ## Ús del registre privat
 
 ### Accés

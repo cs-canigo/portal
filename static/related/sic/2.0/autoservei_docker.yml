@@ -34,9 +34,8 @@ build:
     - id: bs001
       position: 1
       tool: docker
-      dockerFilePath: /app/docker
-      dockerFileName: DockerFile
-      parameters: clean package -Dmaven.test.skip=true
+      dockerImageName: gencatsic/maven-builder:1.0-3.6-8
+      parameters: mvn clean package -Dmaven.test.skip=true
       generates:
         - artifact01
 deploy:

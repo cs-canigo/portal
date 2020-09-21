@@ -78,8 +78,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <th> Revisió de full de ruta vigent fins</th>
 </tr>
 <tr>
-<td>març de 2020 </td>
-<td>juny de 2020</td>
+<td>juliol de 2020 </td>
+<td>octubre de 2020</td>
 </tr>
 </thead>
 </table>
@@ -118,6 +118,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
+                <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
                 <th>Obsolet</th>
@@ -195,13 +196,13 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
-//            {
-//                "className":      'details-control',
-//                "orderable":      false,
-//                "data":           null,
-//                "defaultContent": '',
-//	        "width": "10%"
-//            },
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
+            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
@@ -225,7 +226,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==0 && col_index !==1){
+                if (col_index !==1 && col_index !==2){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
@@ -246,7 +247,7 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = taulaFullRutaLLT.row( tr );
         if ( row.child.isShown() ) {
@@ -260,7 +261,7 @@ $(document).ready(function() {
             tr.addClass('shown');
         }
     });
-*/
+
 });
 // Funció que dona format a la taula interna del Full de Ruta de HOST
 function formatHOST(d) {

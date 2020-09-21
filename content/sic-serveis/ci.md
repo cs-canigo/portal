@@ -140,7 +140,19 @@ Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipel
 ## Matriu de tecnologies compatibles
 
 Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
-A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible.
+A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
+
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+<br/>
+
+**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
+l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
+ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
+<br/>
 
 ### Microsoft
 |Tecnologia|Versions|
@@ -175,12 +187,8 @@ a la construcció de l'aplicació via **npm install**.
 ### Hugo (Webs estàtiques)
 |Versió|
 |-------|
+|0.27|
 |0.73|
-
-<br/>
-**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
-l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
-ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>

@@ -28,7 +28,7 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 - http://appagile.io/
 - Basat en Openshift: https://www.openshift.com/
 - Contenidors docker i orquestració amb Openshift
-- Versió:  **OpenShift Container Platform 3.9.65 i Kubernetes 1.9.1.** 
+- Versió:  **OpenShift Container Platform 3.9.65 i Kubernetes 1.14.1.** 
   
 Disponible a CPD4 en entorns de consolidables.
 <br/><br/>
