@@ -130,6 +130,29 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 <font size="20">
+<table id="Titol_Conn" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat de l'Entorn de Treball </th>
+            </tr>
+ </thead>
+</table>
+</font>
+<table id="FullRutaCONN" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th></th>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+<font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -262,6 +285,116 @@ $(document).ready(function() {
         }
     });
 
+});
+// Funció que dona format a la taula interna del Full de Ruta de Connectivitat de l'Entorn de Treball
+function formatCONN(d) {
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
+            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt2b+'</td>'+
+            '<td>'+d.lt2c+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="3">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="3">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaCONN = $('#FullRutaCONN').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+	"info" : false,
+	"ordering": false,
+	"responsive": {
+            details: false
+    	},
+    	"language":{
+	        	"search" : "<strong>Cerca:</strong> ",
+		        "infoEmpty": "No hi ha registres",
+	        	"zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariLLT.json",
+        "columns": [
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//	        "width": "10%"
+//            },
+            { "data": "categoria",
+	      "width": "30%" },
+            { "data": "producte", 
+	      "className":      'intern',
+	      "width": "30%"
+	    },
+            { "data": "obsolet",
+	      "width": "20%" },
+            { "data": "suportat",
+	      "width": "80%" },
+            { "data": "versioactual",
+	      "className":      'intern',
+	      "width": "80%"
+	    },
+            { "data": "roadmap",
+	      "width": "100%" },
+            { "data": "emergent",
+	      "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==7){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+/*  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaCONN.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatCONN(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+*/
 });
 // Funció que dona format a la taula interna del Full de Ruta de HOST
 function formatHOST(d) {
