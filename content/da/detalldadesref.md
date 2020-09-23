@@ -1,5 +1,5 @@
 +++
-date        = "2020-07-08"
+date        = "2020-09-23"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -156,6 +156,15 @@ weight= 5
     textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 	
+    //Si es una entitat consolidada s'ha de posar el link de descarga
+	if (dades[0]=="Consolidat")
+	{
+		var link = document.createElement('a');
+		link.setAttribute('href', '../../dadesref/entitats/' + dades[13]);
+		link.innerHTML = "Descarregar fitxer de dades";
+		celda.appendChild(link);
+	}
+
 
     hilera.appendChild(celda);
 
@@ -171,14 +180,27 @@ weight= 5
     hilera.appendChild(celda);
 
     celda = document.createElement("td");
-
-    //++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
-    //++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
-    
+	
+	// Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
+	if (dades[0]=="Consolidat")
+	{
+		var frame = document.createElement('iframe');
+		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/dadesref/entitats/"+ dades[13]);
+		frame.style.width= "100%"
+		frame.style.height= "400px";
+		celda.appendChild(frame);
+	}
+	else
+	{
+		//++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
+		//++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
 		
-    //++1 inici noves instruccions
-    celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de <br/> la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a>.";
-    //++1 fi noves instruccions
+			
+		//++1 inici noves instruccions
+		celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de la Gestió Tècnica <br/> de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+		celda.innerHTML = celda.innerHTML + "i se us donarà accès temporal a totes <br/> les entitats en revisió, pendents d'aprovació."
+		//++1 fi noves instruccions
+	}
 
     hilera.appendChild(celda);
 
