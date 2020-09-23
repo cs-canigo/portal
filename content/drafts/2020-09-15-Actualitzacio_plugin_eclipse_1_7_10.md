@@ -22,9 +22,8 @@ una configuració ja donada estalviant temps als desenvolupadors.
 
 S'han modificat els següents rangs de versions dels mòduls:
 
-- Integració:
-  - canigo.integration.sgde [2.0.0,2.5.0)
-  - canigo.integration.tributs.pica [2.0.0,2.5.0)
+- canigo.integration.sgde [2.0.0,2.5.0)
+- canigo.integration.tributs.pica [2.0.0,2.5.0)
 
 <br/>
 Per a instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció "Instal·lació" del
