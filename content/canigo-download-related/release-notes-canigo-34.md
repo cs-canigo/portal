@@ -6,6 +6,10 @@ sections    = "Canigó"
 weight      = 1
 +++
 
+#### Canigó 3.4.5 (09/09/2020)
+- [Revisió de regles SonarQube als mòduls d'_integració_](/noticies/2020-09-09-Revisio_regles_SonarQube_moduls_integracio/)
+   - S'han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls d'_integració_ de Canigó.
+
 #### Canigó 3.4.4 (16/06/2020)
 - [Actualització del mòdul MongoDB](/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/)
    - Actualització del mòdul de MongoDB per a utilitzar el _driver_ de Mongo compatible amb la versió 4.2 de MongoDB.
