@@ -180,23 +180,25 @@ function formatLLT(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
+	    '<th width="300">LT1</th>'+
             '<th width="300">LT2A</th>'+
             '<th width="300">LT2B</th>'+
             '<th width="300">LT2C</th>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
-            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt1+'</td>'+
+	    '<td>'+d.lt2a+'</td>'+
             '<td>'+d.lt2b+'</td>'+
             '<td>'+d.lt2c+'</td>'+
         '</tr>'+
         '<tr>'+
 	        '<th>   </th>'+
-	        '<th  colspan="3">   </th>'+
+	        '<th  colspan="4">   </th>'+
 	    '</tr>'+
 	    '<tr>'+
             '<th>Observacions:</th>'+
-            '<td colspan="3">'+d.observacions+'</td>'+
+            '<td colspan="4">'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
