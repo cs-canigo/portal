@@ -7,8 +7,8 @@ categories  = ["sic"]
 #key         = "SETEMBRE2020"
 +++
 
-Us recordem que a partir del 15 d'Octubre del 2020 el SVN del SIC es donarà de baixa definitivament.
-A partir d'aquest dia ja no serà possible que els usuaris puguin descarregar el contingut d'aquest repositori.
+Us recordem que **a partir del 15 d'Octubre del 2020 el SVN del SIC es donarà de baixa definitivament**.
+A partir d'aquest moment ja no serà possible que els usuaris puguin descarregar el contingut d'aquest repositori.
 
 Des del mes de Juny del 2017, el SIC disposa del <a href="https://git.intranet.gencat.cat" target="blank_">Git</a> com a repositori de codi.
 Recomanem als lots d'aplicació que migrin el més aviat possible el codi de les seves aplicacions a aquesta plataforma.
