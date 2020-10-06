@@ -121,12 +121,12 @@ public class CustomJwtTokenHandler extends JwtTokenHandler {
 }
 ```
 
-On estem definint el següent:
+On estem definint:
 
 - el codi de resposta HTTP serà HttpStatus.BAD_REQUEST,
 - el contingut de la resposta serà de tipus JSON,
-- l'objecte d'error per al client: codi d'error 999 (tot i que la recomanació seria definir-lo com a constant) i, com a descripció, un missatge internacionalitzat amb el codi *token.invalid*
-- assignar l'objecte d'error al _body_ de la resposta
+- l'objecte d'error per al client: codi d'error 999 (la recomanació seria definir-lo com a constant) i, com a descripció, un missatge internacionalitzat amb el codi *token.invalid*,
+- i finalment, assignem l'objecte d'error al _body_ de la resposta
 
 <br/>
 **2-** Definir el nou codi d'error als fitxers d'internacionalització */src/main/resources/config/i18n/*:
