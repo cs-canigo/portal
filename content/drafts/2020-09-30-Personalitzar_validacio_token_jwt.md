@@ -9,9 +9,9 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Canigó proporciona objectes per a la gestió del token JWT al [Mòdul de seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
-incloent una gestió per defecte dels errors en la validació del token. En aquest how-to explicarem una possible forma de re-implementar la gestió
-d'errors de la validació del token per a, per exemple, retornar informació personalitzada en el cas que el client ens enviï un token invàlid.
+Canigó proporciona una sèrie objectes per a la gestió del token JWT al [Mòdul de seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
+incloent per defecte una gestió dels possibles errors en la validació del token. En aquest how-to explicarem com re-implementar la gestió d'errors de la validació del token JWT
+amb un cas d'exemple però aquesta estratègia es podrà utilitzar per a modificar el comportament per defecte dels diferents casos de validació.
 
 ## Gestió del token per defecte
 
@@ -21,7 +21,7 @@ Canigó realitza la gestió del token JWT al component:
 cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtAuthenticationFilter
 ```
 
-S'encarrega de realitzar les validacions del token JWT i, si és vàlid, recupera la informació de l'usuari. Per tant, per a cada cas de validació del token JWT
+Aquest s'encarrega de realitzar les validacions del token JWT i, si és vàlid, recupera l'informació de l'usuari. Per tant, per a cada cas de validació del token JWT
 es realitza una crida a l'objecte *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler* instanciat al *WebSecurityConfig* del projecte mitjançant:
 
 ```
@@ -35,13 +35,13 @@ es realitza una crida a l'objecte *cat.gencat.ctti.canigo.arch.security.rest.aut
    }
 ```
 
-D'aquesta forma es realitza una crida als següents mètodes:
+D'aquesta forma es realitzarà una crida als següents mètodes:
 
-- **handleTokenValid**: si la petició requereix autenticació, s'ha proporcionat token i el token és vàlid
-- **handleTokenInvalid**: si la petició requereix autenticació, s'ha proporcionat token i el token és invàlid
-- **handleAuthenticationSecurity**: si la petició requereix autenticació, s'ha proporcionat token però ja hi ha una autenticació de Spring prèvia a l'autenticació amb token
-- **handleAuthentication**: si la petició requereix autenticació, s'ha proporcionat token
-- **handleNoAuthentication**: si es tracta d'una petició d'una URL que no requereix autenticació
+- **handleTokenValid**: si la petició requereix autenticació, s'ha proporcionat token i el token és vàlid.
+- **handleTokenInvalid**: si la petició requereix autenticació, s'ha proporcionat token i el token és invàlid.
+- **handleAuthenticationSecurity**: si la petició requereix autenticació, s'ha proporcionat token però ja hi ha una autenticació de Spring prèvia a l'autenticació amb token.
+- **handleAuthentication**: si la petició requereix autenticació, s'ha proporcionat token.
+- **handleNoAuthentication**: si es tracta d'una petició d'una URL que no requereix autenticació.
 
 Per tant, si es proporciona un token JWT i aquest és invàlid, es cridarà al mètode *handleTokenInvalid* i l'aplicació retornarà quelcom similar a:
 
@@ -69,11 +69,9 @@ Response Headers
 
 ## Gestió del token personalitzada
 
-A continuació es descriurà un cas d'exemple però aquesta estratègia es podrà utilitzar per a modificar el comportament
-per defecte de tots els casos de validació del token JWT.
-
-Per exemple, si volem retornar un missatge personalitzat al client indicant que el token és invàlid, retornant un error HTTP 400, i un missatge i codi d'error
-específics utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* les modificacions serien les següents:
+Si, per exemple, volem retornar un missatge personalitzat al client indicant que el token és invàlid, retornant un error HTTP 400, i un missatge i codi d'error
+específics utilitzant la classe *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* la implementació seria la següent:
+<br/>
 
 **1-** Crear un *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler* personalitzat re-implementant el mètode *handleTokenInvalid*
 
@@ -122,19 +120,21 @@ public class CustomJwtTokenHandler extends JwtTokenHandler {
 }
 ```
 
-A la re-implementació del mètode *handleTokenInvalid* definint el següent:
+A la re-implementació del mètode *handleTokenInvalid* estem definint el següent:
 
 - el codi de resposta HTTP serà HttpStatus.BAD_REQUEST,
 - el contingut de la resposta serà de tipus JSON,
 - l'objecte d'error per al client: codi d'error 999 (tot i que la recomanació seria definir-lo com a constant) i, com a descripció, un missatge internacionalitzat amb el codi *token.invalid*
 - assignar l'objecte d'error al _body_ de la resposta
 
+<br/>
 **2-** Definir el nou codi d'error als fitxers d'internacionalització */src/main/resources/config/i18n/*:
 ```
 token.invalid=Token invàlid!!
 ```
 
-**3-** Instanciar la nova classe *CustomJwtTokenHandler* al *WebSecurityConfig* del projecte enlloc del *JwtTokenHandler* per defecte:
+<br/>
+**3-** Instanciar la nova classe *CustomJwtTokenHandler* al *WebSecurityConfig* del projecte, enlloc del *JwtTokenHandler* per defecte:
 
 ```
  @Bean
@@ -147,7 +147,7 @@ token.invalid=Token invàlid!!
  }
 ```
 
-D'aquesta forma s'aconseguirà retornar quelcom similar a:
+D'aquesta forma s'aconsegueix retornar quelcom similar a:
 
 ```
 Response Body
