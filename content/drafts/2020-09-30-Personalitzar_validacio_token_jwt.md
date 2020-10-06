@@ -73,6 +73,7 @@ Si, per exemple, volem retornar un missatge personalitzat al client indicant que
 específics utilitzant la classe *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* la implementació seria la següent:
 <br/>
 
+<br/>
 **1-** Crear un *cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler* personalitzat re-implementant el mètode *handleTokenInvalid*
 
 ```
@@ -120,7 +121,7 @@ public class CustomJwtTokenHandler extends JwtTokenHandler {
 }
 ```
 
-A la re-implementació del mètode *handleTokenInvalid* estem definint el següent:
+On estem definint el següent:
 
 - el codi de resposta HTTP serà HttpStatus.BAD_REQUEST,
 - el contingut de la resposta serà de tipus JSON,
@@ -147,7 +148,8 @@ token.invalid=Token invàlid!!
  }
 ```
 
-D'aquesta forma s'aconsegueix retornar quelcom similar a:
+<br/>
+D'aquesta forma s'aconseguirà retornar quelcom similar a:
 
 ```
 Response Body
