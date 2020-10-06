@@ -1,6 +1,6 @@
 +++
    date        = "2020-09-30"
-   title       = "Canigó. Com definir comportaments personalitzats a les validacions del token JWT"
+   title       = "Canigó. Com personalitzar les validacions del token JWT"
    description = "Howto per a definir comportaments personalitzats a les validacions del token JWT"
    section     = "howtos"
    categories  = ["canigo"]
