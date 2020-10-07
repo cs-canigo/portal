@@ -40,7 +40,7 @@ D'aquesta forma es realitzarà una crida als següents mètodes:
 - **handleTokenValid**: si la petició requereix autenticació, s'ha proporcionat token i el token és vàlid.
 - **handleTokenInvalid**: si la petició requereix autenticació, s'ha proporcionat token i el token és invàlid.
 - **handleAuthenticationSecurity**: si la petició requereix autenticació, s'ha proporcionat token però ja hi ha una autenticació de Spring prèvia a l'autenticació amb token.
-- **handleAuthentication**: si la petició requereix autenticació, s'ha proporcionat token.
+- **handleAuthentication**: si la petició requereix autenticació, s'ha proporcionat un token però no té el format esperat.
 - **handleNoAuthentication**: si es tracta d'una petició d'una URL que no requereix autenticació.
 
 Per tant, si es proporciona un token JWT i aquest és invàlid, es cridarà al mètode *handleTokenInvalid* i l'aplicació retornarà quelcom similar a:
