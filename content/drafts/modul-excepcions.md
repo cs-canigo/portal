@@ -53,11 +53,11 @@ public class WrappedCheckedException extends CoreException
 public class ResourceNotFoundException extends RuntimeException
 ```
 
-Cada exception té un objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una exception a l'aplicació, segons quin sigui l'objectiu de l'excpetion, es pot extendre d'una o altre
+Cada exception té un objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una exception a l'aplicació, segons quin sigui l'objectiu de l'exception, es pot extendre d'una o altre
 
 ## Handlers disponibles
 
-Per a Serveis Rest, Canigó proporciona un *handler* global a l'objecte *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
+Per a serveis rest, Canigó proporciona un *handler* global a l'objecte *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
 
 Aquest és l'encarregat de caputar les següents exceptions:
 
