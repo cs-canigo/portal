@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com personalitzar les validacions del token JWT] (/howtos/2020-09-30-Personalitzar_validacio_token_jwt/)
+
 - [Com canviar el domini on està allotgat el plugin del eclipse] (/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/)
 
 - [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó] (/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
