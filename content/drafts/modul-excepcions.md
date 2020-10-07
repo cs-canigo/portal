@@ -43,4 +43,47 @@ Les classes disponibles i la seva jerarquia són:
 
 ![Imatge de les Excepcions Definides](/related/canigo/documentacio/modul-excepcions/jerarquia_exception.png)
 
+```
+public class BaseException extends Exception implements IBaseException
+public class BusinessException extends BaseException
+public class CoreException extends RuntimeException implements IBaseException
+public class ModuleException extends BaseException
+public class RuntimeModuleException extends RuntimeException implements IBaseException
+public class WrappedCheckedException extends CoreException
+public class ResourceNotFoundException extends RuntimeException
+```
+
+Cada exception té un objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una exception a l'aplicació, segons quin sigui l'objectiu de l'excpetion, es pot extendre d'una o altre
+
 ## Handlers disponibles
+
+Per a Serveis Rest, Canigó proporciona un *handler* global a l'objecte *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
+
+Aquest és l'encarregat de caputar les següents exceptions:
+
+- **org.springframework.web.multipart.MultipartException**: Caputarda al mètode *defaultErrorHandlerMultipartException*. Retorna un error http 400 de Bad Request informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
+
+- **java.lang.Exception**: Caputarda al mètode *defaultErrorHandlerException*. Retorna un error http 500 de Error intern informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
+
+- **org.springframework.web.multipart.MultipartException**: Caputarda al mètode *defaultErrorHandlerMultipartException*. Retorna un error http 400 de Bad Request informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
+
+- **org.springframework.security.core.AuthenticationException** i **org.springframework.security.access.AccessDeniedException**: Caputarda al mètode *defaultErrorHandlerAuthenticationException*. Retorna un error http 401 de Unathorized informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
+
+- **cat.gencat.ctti.canigo.arch.web.rs.controller.exception.ResourceNotFoundException**: Caputarda al mètode *resourceNotFound*. Retorna un error http 404 de Not found informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
+
+Si es vol sobreescriure el comportament per defecte es pot extendre aquesta classe i sobreescriure el mètode que es necessiti
+
+Si es vol retornar un missatge d'error o un codi http en concret per un tipus d'error, per exemple en una validació de paràmetres d'un servei rest, és necessari definir una exception pròpia (per exemple, ValidationException), i definir el *@ExceptionHandler* propi de cada exception a l'aplicació (en aquest cas seria un *@ExceptionHandler* de ValidationException)
+
+Per exemple:
+```
+	@ExceptionHandler(ValidationException.class)
+	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
+	public ResponseError defaultErrorHandlerValidationException(final HttpServletRequest request,
+			final HttpServletResponse response, final ValidationException e) {
+		if (log.isDebugEnabled()) {
+			log.debug("defaultErrorHandlerValidationException request {} response {}", request, response);
+		}
+		return new ResponseError(e.getErrors());
+	}
+```
