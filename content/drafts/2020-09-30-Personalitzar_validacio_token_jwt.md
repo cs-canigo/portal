@@ -11,7 +11,7 @@ categories  = ["canigo"]
 
 Canigó proporciona una sèrie objectes per a la gestió del token JWT al [Mòdul de seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/)
 incloent per defecte una gestió dels possibles errors en la validació del token. En aquest how-to explicarem com re-implementar la gestió d'errors de la validació del token JWT
-amb un cas d'exemple però aquesta estratègia es podrà utilitzar per a modificar el comportament per defecte dels diferents casos de validació.
+amb un cas d'exemple. Aquesta estratègia es podrà utilitzar per a modificar el comportament per defecte dels diferents casos de validació.
 
 ## Gestió del token per defecte
 
