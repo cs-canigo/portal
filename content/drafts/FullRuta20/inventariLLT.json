@@ -1,14 +1,14 @@
 {
 "data":
 [
-{"id":1,"producte":"Windows 10 (Enterprise i Education)","categoria":"Sistemes operatius LLdT","obsolet":"≤1703","suportat":"1709, 1809","versioactual":"1909","roadmap":"2009","emergent":"–","lt1":"-","lt2a":"-","lt2b":"1909","lt2c":"-","observacions":"-"},
+{"id":1,"producte":"Windows 10 (Enterprise i Education)","categoria":"Sistemes operatius LLdT","obsolet":"≤1703","suportat":"1709, 1809","versioactual":"1909","roadmap":"20H2","emergent":"–","lt1":"-","lt2a":"-","lt2b":"1909","lt2c":"-","observacions":"-"},
 {"id":2,"producte":"Windows 8.1","categoria":"Sistemes operatius LLdT","obsolet":"–","suportat":"8.1 (6.3.9600)","versioactual":"–","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"8.1 (6.3.9600)","lt2c":"-","observacions":"-"},
 {"id":3,"producte":"MS Office Standard","categoria":"Eines ofimàtiques","obsolet":"≤2013","suportat":"2013, 2016, 2019","versioactual":"2019","roadmap":"-","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"2016","observacions":"-"},
 {"id":4,"producte":"Libre Office","categoria":"Eines ofimàtiques","obsolet":"≤6.4","suportat":"≥6.4","versioactual":"7.0","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"4.1.3.2","observacions":"-"},
-{"id":5,"producte":"Microsoft Edge","categoria":"Navegadors Web","obsolet":"≤1703","suportat":"1709, 1809, 1909","versioactual":"1909","roadmap":"2009","emergent":"","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"-","observacions":"-"},
+{"id":5,"producte":"Microsoft Edge","categoria":"Navegadors Web","obsolet":"≤1703","suportat":"1709, 1809, 1909","versioactual":"1909","roadmap":"20H2","emergent":"","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"-","observacions":"-"},
 {"id":6,"producte":"Internet Explorer","categoria":"Navegadors Web","obsolet":"6, 7, 8, 9, 10","suportat":"11","versioactual":"11","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"-","observacions":"-"},
 {"id":7,"producte":"Cisco AnyConnect","categoria":"Eines i programari","obsolet":"≤4.2","suportat":"4.5 - 4.9","versioactual":"4.9","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"4.3","observacions":"-"},
-{"id":8,"producte":"Filezilla","categoria":"Eines i programari","obsolet":"≤2.x","suportat":"≥3.42","versioactual":"3.49","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"3.9.0.3","observacions":"-"},
+{"id":8,"producte":"Filezilla","categoria":"Eines i programari","obsolet":"≤2.x","suportat":"≥3.42","versioactual":"3.50","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"3.9.0.3","observacions":"-"},
 {"id":9,"producte":"WinSCP","categoria":"Eines i programari","obsolet":"–","suportat":"5.15","versioactual":"5.15","roadmap":"5.17.x","emergent":"","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"5.7.7","observacions":"-"},
 {"id":10,"producte":"DNIe","categoria":"Eines i programari","obsolet":"≤14.0.1","suportat":"14.0.2","versioactual":"14.0.2","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"14.0.2","observacions":"-"},
 {"id":11,"producte":"SafeSign","categoria":"Eines i programari","obsolet":"≤3.076","suportat":"3.0.124","versioactual":"3.0.124","roadmap":"–","emergent":"–","lt1":"-","lt2a":"-","lt2b":"-","lt2c":"3.0.124","observacions":"-"},
