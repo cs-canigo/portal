@@ -37,7 +37,7 @@ El mòdul de configuració s'inclou per defecte dins del core de Canigó 3. Dura
 </dependency>
 ```
 
-## Classes d'exceptions disponibles
+## Classes d'excepcions disponibles
 
 Les classes disponibles i la seva jerarquia són:
 
@@ -53,13 +53,13 @@ public class WrappedCheckedException extends CoreException
 public class ResourceNotFoundException extends RuntimeException
 ```
 
-Cada exception té un objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una exception a l'aplicació, segons quin sigui l'objectiu de l'exception, es pot extendre d'una o altre
+Cada excepció té un objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una exception a l'aplicació, segons quin sigui l'objectiu de l'exception, es pot extendre d'una o altre
 
 ## Handlers disponibles
 
 Per a serveis rest, Canigó proporciona un *handler* global a l'objecte *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
 
-Aquest és l'encarregat de caputar les següents exceptions:
+Aquest és l'encarregat de caputar les següents excepcions:
 
 - **org.springframework.web.multipart.MultipartException**: Caputarda al mètode *defaultErrorHandlerMultipartException*. Retorna un error http 400 de Bad Request informant de l'error al body de la respota utilitzant *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError*
 
