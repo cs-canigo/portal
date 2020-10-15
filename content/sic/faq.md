@@ -58,22 +58,14 @@ Els projectes dins els grups oficials d'aplicació sí que podran ser creats pel
 És possible crear subgrups dins un grup d'aplicació oficial però de cara a la integració amb Jenkins, comportarà una incompatibilitat. Per tant, es desaconsella treballar amb subgrups dins l'espai corporatiu del SIC.
 <br/><br/>
 
-#### **Com puc migrar el codi dels repositoris SVN (SIC 1.0) cap als del Gitlab (SIC 2.0)?** ####
-Podeu consultar el procediment descrit a [Migració repositoris SVN a Git] (/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git).
-<br/><br/>
-
 #### **Fins quan podem utilitzar el SVN?** ####
-El SVN es va passar a mode lectura el **5 de Febrer de 2018**.
+El SVN es va passar a mode lectura el **5 de Febrer de 2018** i s'ha donat de baixa definitivament el **15 d'Octubre de 2020**.
+A partir d'aquest dia ja no és possible que els usuaris puguin descarregar el contingut d'aquest repositori.
 <br/><br/>
 
-#### **Com afectarà la migració del projectes de SVN a Gitlab als jobs Jenkins associats?** ####
-Caldrà actualitzar l'origen del codi font dels jobs per tal que apuntin al repositori del projecte de Gitlab. Els nous jobs es crearan seguint el nou tipus de job Pipeline però els existents romandran amb el format actual.
+#### **Com afecta la baixa del SVN a les tasques Jenkins associades?** ####
+Caldrà actualitzar l'origen del codi font dels jobs per tal que apuntin al repositori del projecte de Gitlab.
 <br/><br/>
-
-#### **Mantindré els meus accessos de SIC 1.0 a SIC 2.0?** ####
-Mantindrà els mateixos rols d'accés als serveis, ja que aquests s'han heretat de l'anterior sistema de permisos.
-<br/><br/>
-
 
 ## Integració contínua
 
