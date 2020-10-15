@@ -19,6 +19,8 @@ HOWTOs disponibles actualment:
 
 - [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó] (/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
 
+- [Comprovació automàtica de dependències vulnerables per aplicacions Canigó] (/howtos/2019-08-13-Howto-Dependency-check/)
+
 - [Com implementar tests unitaris amb Webflux a Canigó 3.4] (/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
 
 - [Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó] (/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/)
