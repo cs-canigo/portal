@@ -4,6 +4,7 @@ title       = "SIC. Actualització de versió Gitlab"
 description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
+key         = "OCTUBRE2020"
 +++
 
 **Durant el mes de Juliol s’ha dut a terme l’actualització del Servei de Custodia de Codi a la versió 12.0.12 de Gitlab.**.
