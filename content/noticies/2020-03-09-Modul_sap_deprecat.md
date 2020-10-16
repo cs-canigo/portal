@@ -4,7 +4,7 @@ title       = "Canigó. Mòdul SAP deprecat"
 description = "A partir de la publicació de Canigó 3.4.3, el mòdul de SAP estarà deprecat"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "MARÇ2020"
+key         = "OCTUBRE2020"
 +++
 
 ## Introducció
