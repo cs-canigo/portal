@@ -4,6 +4,7 @@ title       = "SIC. Actualització de versió Jenkins"
 description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei d'Integració Continua (Jenkins)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
+key         = "OCTUBRE2020"
 +++
 
 **Durant el mes de Juliol s’ha dut a terme l’actualització del Servei d’Integració Continua a la versió 2.204.6 de Jenkins.**.
