@@ -4,8 +4,7 @@ title       = "Canigó. Revisió estat mòduls Canigó 3.4"
 description = "Revisió de l'estat dels mòduls de Canigó, deprecant funcionalitats obsoletes i ampliant els testos dels mòduls"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "OCTUBRE2020"
-
+#key         = "OCTUBRE2020"
 +++
 
 ## Introducció
