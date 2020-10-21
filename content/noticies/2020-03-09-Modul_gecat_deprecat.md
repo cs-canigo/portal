@@ -1,7 +1,7 @@
 +++
 date        = "2020-03-08"
 title       = "Canigó. Mòdul Gecat deprecat"
-description = "A partir de la publicació de Canigó 3.4.3, el mòdul de Gecat estarà deprecat"
+description = "A partir de la publicació de Canigó 3.4.3, el mòdul de Gecat queda deprecat"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "OCTUBRE2020"
@@ -14,7 +14,7 @@ Aquest mòdul utilitza una versió antiga del connector amb SAP per XCOM i actua
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 publicada al Març, el mòdul d'integració de Gecat de Canigó quedarà **deprecat**.
+A partir de la versió de Canigó 3.4.3 publicada al Març, el mòdul d'integració de Gecat de Canigó queda **deprecat**.
 Es **recomana la utilització dels components propis de SAP** per a la seva integració, així com els seus serveis Rest.
 
 ## Documentació

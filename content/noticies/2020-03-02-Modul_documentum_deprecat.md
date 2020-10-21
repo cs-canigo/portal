@@ -1,7 +1,7 @@
 +++
 date        = "2020-03-02"
 title       = "Canigó. Mòdul Documentum deprecat"
-description = "A partir de la publicació de Canigó 3.4.3, el mòdul de Documentum estarà deprecat"
+description = "A partir de la publicació de Canigó 3.4.3, el mòdul de Documentum queda deprecat"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "OCTUBRE2020"
@@ -15,7 +15,7 @@ el [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/esta
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 publicada al Març, el mòdul d'integració de Documentum de Canigó quedarà **deprecat**.
+A partir de la versió de Canigó 3.4.3 publicada al Març, el mòdul d'integració de Documentum de Canigó queda **deprecat**.
 Es **recomana la utilització dels components propis de Documentum** per a la seva integració, així com els seus serveis Rest.
 
 ## Documentació
