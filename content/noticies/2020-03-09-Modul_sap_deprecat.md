@@ -4,7 +4,7 @@ title       = "Canigó. Mòdul SAP deprecat"
 description = "A partir de la publicació de Canigó 3.4.3, el mòdul de SAP estarà deprecat"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "OCTUBRE2020"
+key         = "OCTUBRE2020"
 +++
 
 ## Introducció
@@ -14,7 +14,7 @@ Aquest mòdul utilitza la versió 2.1.6 del SAP Java Connector (SAP JCo) i actua
 
 ## Novetat
 
-A partir de la versió de Canigó 3.4.3 prevista pel 27/03/2020, el mòdul d'integració de SAP de Canigó quedarà **deprecat**.
+A partir de la versió de Canigó 3.4.3 publicada al Març, el mòdul d'integració de SAP de Canigó quedarà **deprecat**.
 Es **recomana la utilització dels components propis de SAP** per a la seva integració, així com els seus serveis Rest.
 
 ## Documentació
