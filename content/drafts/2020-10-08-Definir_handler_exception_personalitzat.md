@@ -18,8 +18,8 @@ incloent, per defecte, una gestió de les excepcions base més comunes. En aques
 
 Tal i com es detalla al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/), l'objecte
 *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler* conté els diferents handlers
-per a la gestió per defecte de les excepcions base més comunes. Així si, per exemple, tenim una excepció a l'aplicació de
-tipus *java.lang.Exception*, el servei rest podria retornar quelcom similar a:
+per a la gestió per defecte de les excepcions base més comunes. Així si, per exemple tenim una excepció a l'aplicació de
+tipus *java.lang.Exception*, el servei Rest podria retornar quelcom similar a:
 
 ```
 Response Body
@@ -47,12 +47,14 @@ Response Headers
 }
 ```
 
-## Com personalitzar la gestió de les excepcions base més comunes
+## Personalitzar la gestió de les excepcions base més comunes
 
 Si per una excepció de tipus *java.lang.Exception* volguéssim retornar a la propietat codi de l'objecte
 *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* de la response un mateix text internacionalitzat,
 hauríem de definir un handler propi a l'aplicació que estengués de *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
-i reimplementar el mètode que es vol personalitzar, en aquest cas, *defaultErrorHandlerException*. Per exemple:
+i reimplementar el mètode que es vol personalitzar, en aquest cas, *defaultErrorHandlerException*.
+
+Per exemple:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -91,7 +93,8 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
 }
 ```
 
-On estem retornant el codi 999 en el body de la resposta, tot i que la millor estratègia seria tenir-ho a un objecte de constants d'error:
+On estem retornant el codi 999 en el body de la resposta (tot i que la millor estratègia seria tenir-ho a un objecte de constants d'error)
+obtenint el següent:
 
 ```
 Response Body
@@ -122,7 +125,9 @@ Response Headers
 ## Definir un handler per una excepció base sense gestió per defecte
 
 Si volem, per exemple, retornar un codi d'error en concret per les excepcions base *cat.gencat.ctti.canigo.arch.core.exceptions.CoreException*,
-serà  necessari definir un nou "@ExceptionHandler". Per exemple:
+serà  necessari definir un nou "@ExceptionHandler".
+
+Per exemple:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -213,9 +218,11 @@ Response Headers
 
 ## Definir una excepció pròpia i definir-li un handler
 
-Si hi ha la necessitat de retornar un codi http i un codi d'error al body de la resposta propi, per una part específica del negoci de l'aplicació,
-s'ha de definir una excepció pròpia de l'aplicació i definir-li un handler. Així si, per exemple, volem tenir una excepció per les validacions dels serveis Rest,
-podem definir una excepció amb nom *ValidationException*. Per exemple:
+Si es necessita retornar un codi http i d'error al body de la resposta que sigui propi per a una part específica del negoci de l'aplicació,
+s'ha de definir una excepció pròpia a l'aplicació i definir-li un handler. Així si, donat el cas volem tenir una excepció per les validacions dels serveis Rest,
+podem definir una excepció amb nom *ValidationException*.
+
+Per exemple:
 
 ```
 import cat.gencat.ctti.canigo.arch.core.exceptions.BaseException;
@@ -250,7 +257,8 @@ public class ValidationException extends BaseException {
 
 }
 ```
-I definir un handler per a aquesta nova excepció:
+
+I definir el handler per a aquesta nova excepció:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -369,5 +377,5 @@ Response Headers
 }
 ```
 
-On estem indicant que si hi ha un error de validació, retornarem un codi http 400 (Bad request) i, en el body de la response,
+On estem indicant que, si hi ha un error de validació, retornarem un codi http 400 (Bad request) i, en el body de la response,
 hi haurà el detall de l’error de validació que, en aquest cas, està associat al codi 777 i missatge "És necessari informar l'identificador".

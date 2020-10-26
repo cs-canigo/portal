@@ -8,13 +8,13 @@ weight      = 4
 
 ## Propòsit
 
-**La gestió correcta de les excepcions és molt important i crítica**, però sovint la forma en la que es generen i gestionen les excepcions en les aplicacions
+La **correcta gestió de les excepcions és molt important i crítica** però, sovint, la forma en la que es generen i gestionen les excepcions en les aplicacions
 és un dels aspectes més ignorats en el disseny de les mateixes. L'ús apropiat de les excepcions fa que els nostres aplicatius siguin més robusts, més fàcils de
-desenvolupar i mantenir, més lliures d'errors i més fàcils d'utilitzar. Per aquest motiu és important que donem el màxim de detall en les excepcions.
+desenvolupar i mantenir, més lliures d'errors i més fàcils d'utilitzar. Per aquest motiu és important que tractem excepcions al màxim nivell de detall.
 
-**El mòdul d'excepcions permet gestionar els errors que es produeixen en realitzar una petició** de forma que aquests podran ser tractats adequadament i, en cas necessari,
+El **mòdul d'excepcions de Canigó permet gestionar els errors que es produeixen en realitzar una petició** de forma que aquests podran ser tractats adequadament i, si convé,
 informar a l'usuari, enregistrar una traça, enviar un correu electrònic... etcètera. Per tal d'evitar l'ús innecessari de blocs *try-catch* dins el codi dels nostres
-aplicatius, **Canigó proporciona un mecanisme d'intercepció**, al qual indicarem quines excepcions volem tractar i quins gestors les tractaran sense haver d'incorporar
+aplicatius, Canigó **proporciona un mecanisme d'intercepció**, al qual indicarem quines excepcions volem tractar i quins gestors les tractaran sense haver d'incorporar
 cap referència a les classes de l'aplicació.
 
 ## Glossari
@@ -57,8 +57,8 @@ public class WrappedCheckedException extends CoreException
 public class ResourceNotFoundException extends RuntimeException
 ```
 
-Cada excepció té el seu objectiu, sent de tipus *checked* o *unchecked*, així si s'ha de definir una nova excepció a l'aplicació,
-segons quin sigui l'objectiu de la mateixa, s'hauria d'estendre d'una o altre.
+Cada excepció té el seu objectiu, sent de tipus *checked* o *unchecked*. Per lo que, si s'ha de definir una nova excepció a l'aplicació,
+segons quin sigui l'objectiu de la mateixa s'hauria de decidir estendre d'una o d'una altra.
 
 ## Handlers disponibles
 
