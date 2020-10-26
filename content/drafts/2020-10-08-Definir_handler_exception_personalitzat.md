@@ -1,7 +1,7 @@
 +++
 date        = "2020-10-08"
 title       = "Canigó. Com definir handler exception personalitzat"
-description = "Howto per a definir un handler de exception personalitzat"
+description = "Howto per a definir un handler d'excepció personalitzat"
 section     = "howtos"
 categories  = ["canigo"]
 #key         = "NOVEMBRE2020"
@@ -9,14 +9,17 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Canigó proporciona una sèrie objectes i handlers per a la gestió de excepcions al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/)
-incloent per defecte una gestió de les excepcions base més comunes. En aquest how-to explicarem com reimplementar la gestió de les excepcions base més comunes, definir un hanlder per una excepció base sense gestió per defecte, definir una excepció pròpia de l'aplicació i definir-li un handler.
+Canigó proporciona una sèrie objectes i handlers per a la gestió d'excepcions al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/)
+incloent, per defecte, una gestió de les excepcions base més comunes. En aquest how-to explicarem:
 
-## Gestió de les excepcions base més comunes
+- 1. Com personalitzar la gestió de les excepcions base més comunes,
+- 2. Com definir un handler per una excepció base sense gestió per defecte,
+- 3. Com definir una excepció pròpia i definir-li un handler
 
-Tal i com es detalla al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/) l'objecte *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler* conté els diferents handlers per la gestió per defecte de les exceptions base més comunes.
-
-Així, si per exemple, tenim una excepció a l'aplicació de tipus *java.lang.Exception*, el servei rest podria retornar alguna cosa semblant a:
+Tal i com es detalla al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/), l'objecte
+*cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler* conté els diferents handlers
+per a la gestió per defecte de les excepcions base més comunes. Així si, per exemple, tenim una excepció a l'aplicació de
+tipus *java.lang.Exception*, el servei rest podria retornar quelcom similar a:
 
 ```
 Response Body
@@ -44,9 +47,12 @@ Response Headers
 }
 ```
 
-## Personalització de la gestió de les excepcions base més comunes
+## Com personalitzar la gestió de les excepcions base més comunes
 
-Si en el cas anterior, per una excepció de tipus *java.lang.Exception* vulguéssim retornar a la propietat codi de l'objecte *cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* de la response, un mateix text internacionalitzat, hauriem de definir un handler propi a l'aplicació que extengués de *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler* i reimplementar el mètode que es vol canviar el seu comportament, en aquest cas *defaultErrorHandlerException*, per exemple:
+Si per una excepció de tipus *java.lang.Exception* volguéssim retornar a la propietat codi de l'objecte
+*cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* de la response un mateix text internacionalitzat,
+hauríem de definir un handler propi a l'aplicació que estengués de *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
+i reimplementar el mètode que es vol personalitzar, en aquest cas, *defaultErrorHandlerException*. Per exemple:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -68,9 +74,9 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
     /**
      * Custom error handler exception.
      *
-     * @param request request
-     * @param response response
-     * @param e e
+     * @param request
+     * @param response
+     * @param e
      * @return response error
      */
     @Override
@@ -85,7 +91,7 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
 }
 ```
 
-On estem retornant el codi 999 (la millor estrategia seria tenir-ho a un objecte de constants d'error) en el body de la resposta, per exemple:
+On estem retornant el codi 999 en el body de la resposta, tot i que la millor estratègia seria tenir-ho a un objecte de constants d'error:
 
 ```
 Response Body
@@ -113,9 +119,10 @@ Response Headers
 }
 ```
 
-## Definir un hanlder per una excepció base sense gestió per defecte
+## Definir un handler per una excepció base sense gestió per defecte
 
-Si volem, per exemple, retornar un codi d'error en concret per les excepcions base *cat.gencat.ctti.canigo.arch.core.exceptions.CoreException*, és necessari definir un nou "@ExceptionHandler", per exemple:
+Si volem, per exemple, retornar un codi d'error en concret per les excepcions base *cat.gencat.ctti.canigo.arch.core.exceptions.CoreException*,
+serà  necessari definir un nou "@ExceptionHandler". Per exemple:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -141,9 +148,9 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
     /**
      * Custom error handler exception.
      *
-     * @param request request
-     * @param response response
-     * @param e e
+     * @param request
+     * @param response
+     * @param e
      * @return response error
      */
     @Override
@@ -154,7 +161,7 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
         }
         return new ResponseError(999, getMesssage(e.getLocalizedMessage(), null, e.getLocalizedMessage()));
     }
-    
+
     /**
      * Custom error handler core exception.
      *
@@ -176,7 +183,7 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
 }
 ```
 
-Així la resposta podria ser:
+D'aquesta forma, la resposta seria quelcom similar a:
 
 ```
 Response Body
@@ -204,9 +211,11 @@ Response Headers
 }
 ```
 
-## Definir una excepció pròpia de l'aplicació i definir-li un handler
+## Definir una excepció pròpia i definir-li un handler
 
-Si hi ha la necessitat de retornar un codi http i un codi d'error al body de la resposta pròpi, per una part específica del negoci de l'aplicació, s'ha de definir una excepció pròpia de l'aplicació i definir-li un handler. Així per exemple volem tenir una excepció per les validacions dels serveis rest, podriem definir una excepció amb nom *ValidationException*, per exemple:
+Si hi ha la necessitat de retornar un codi http i un codi d'error al body de la resposta propi, per una part específica del negoci de l'aplicació,
+s'ha de definir una excepció pròpia de l'aplicació i definir-li un handler. Així si, per exemple, volem tenir una excepció per les validacions dels serveis Rest,
+podem definir una excepció amb nom *ValidationException*. Per exemple:
 
 ```
 import cat.gencat.ctti.canigo.arch.core.exceptions.BaseException;
@@ -231,7 +240,7 @@ public class ValidationException extends BaseException {
 
     /**
      * Constructor for use message argument and errorCode
-     * 
+     *
      * @param message
      * @param anErrorCode
      */
@@ -241,7 +250,7 @@ public class ValidationException extends BaseException {
 
 }
 ```
-I definir un handler per aquesta excepció:
+I definir un handler per a aquesta nova excepció:
 
 ```
 import javax.servlet.http.HttpServletRequest;
@@ -332,7 +341,7 @@ public class CustomExceptionHandler extends GlobalDefaultExceptionHandler {
 }
 ```
 
-Obtenint com a resposta alguna cosa semblant a:
+Obtenint com a resposta quelcom similar a:
 
 ```
 Response Body
@@ -340,7 +349,7 @@ Response Body
   "errors": [
     {
       "code": 777,
-      "message": "És necessari informar el identificador"
+      "message": "És necessari informar l’identificador"
     }
   ]
 }
@@ -360,4 +369,5 @@ Response Headers
 }
 ```
 
-On estem definint que, si hi ha un error de validació, retornarem un codi http 400 (Bad request) i en el body de la response, hi haurà el detall del error, en aquest cas l'error de validació amb codi 777 i missatge "És necessari informar el identificador"
+On estem indicant que si hi ha un error de validació, retornarem un codi http 400 (Bad request) i, en el body de la response,
+hi haurà el detall de l’error de validació que, en aquest cas, està associat al codi 777 i missatge "És necessari informar l'identificador".
