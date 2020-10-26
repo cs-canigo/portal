@@ -36,7 +36,7 @@ On veiem que del codi duplicat i de les vulerabilitats venen de les llibreries e
 ![Duplicat inicial](/images/howtos/SonarProperties_duplicitat_inicial.png)
 ![Vulnerabilitats inicial](/images/howtos/SonarProperties_vulnerabilitats_inicial.png)
 
-Podriem excloure la carpeta *lib* per eliminar aquest soroll, per això afegirem un fitxer de propietats a l'arrel del projecte anomenat *sonar-project.properties* i afegirem la propietat *sonar.exclusions* amb l'expresió regular * /lib/** *, així tota la carpeta *lib* i subcarpetes quedaran excloses de l'informe al SonarQube:
+Podriem excloure la carpeta *lib* per eliminar aquest soroll, per això afegirem un fitxer de propietats a l'arrel del projecte anomenat *sonar-project.properties* i afegirem la propietat *sonar.exclusions* amb l'expresió regular /lib/** , així tota la carpeta *lib* i subcarpetes quedaran excloses de l'informe al SonarQube:
 ```
 sonar.exclusions=/lib/**
 ```
