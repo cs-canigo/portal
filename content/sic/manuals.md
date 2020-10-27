@@ -15,7 +15,7 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
-- [Howto utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)
+- [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)
 
 
 ### Manuals
