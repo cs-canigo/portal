@@ -458,21 +458,13 @@ de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari a
 Aquesta secció és opcional doncs, per defecte, tots els passos del procés i la seva ordenació vindrà determinada per la definició del
 procés de construcció. Així doncs, cada pas de construcció que impliqui l'enviament de codi font per al seu anàlisi esdevindrà
 automàticament en pas d'enviament de codi i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
-
 No obstant, es permet redefinir el seu comportament tal com es descriu a continuació.
-</br>
+</br></br>
 
 #### Activar o desactivar l'enviament de codi font i/o la comprovació de les regles establertes
 
 Es proporcionen unes propietats que permeten a l'usuari desactivar l'enviament de codi font i/o la comprovació de les regles establertes a l'eina davant urgències
-que pugui tenir per a desplegar o altres problemàtiques que calgui temps per a acabar de resoldre.
-
-```
-analysis:
-  evalStaticCode: true
-  checkQualityGates: false
-```
-</br>
+que pugui tenir per a desplegar o altres problemàtiques que es necessiti temps per a acabar de resoldre. Són les següents:
 
 - `evalStaticCode`: permet activar o desactivar l'etapa completa d'anàlisi estàtic de codi, per lo que no es realitzarà l'enviament del codi font ni, òbviament,
 es comprovarà l'acompliment de les regles establertes.
@@ -480,12 +472,18 @@ es comprovarà l'acompliment de les regles establertes.
 - `checkQualityGates`: permet activar o desactivar la comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/), per lo que
 el sistema no aturarà la pipeline en detectar un error en l'acompliment de les regles establertes.
 
+```
+analysis:
+  evalStaticCode: true
+  checkQualityGates: false
+```
+
 <div class="message information">
-En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada.
+IMPORTANT: En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada.
 </div>
 
-Per defecte, aquests dos indicadors es troben actius.
-</br>
+Per defecte, aquests indicadors es consideren actius.
+</br></br>
 
 #### Redefinir el timeout aplicat
 
@@ -502,9 +500,9 @@ analysis:
 
 Es permet redefinir el comportament per defecte d'aquest procés en el que s'anomenen `analysis steps` quan es detecta la necessitat de fer ús d'una imatge Docker
 diferent a la de construcció, es necessita editar la comanda a executar o el directori d'execució. Cal, però, tenir present que només cal redefinir-ho per al pas de build en
-qüestió i la resta seguiran funcionant segons el sistema estàndard.
+qüestió i la resta (si hi ha) seguiran comportant-se de forma estàndard.
 
-El sistema d'anàlisi estàtic de codi es basa en una sèrie de `tools` predefinides que es descriuen a continuació:
+El sistema es basa en una sèrie de `tools` predefinides que es descriuen a continuació:
 
 - `MAVEN`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.
 
@@ -513,12 +511,13 @@ El sistema d'anàlisi estàtic de codi es basa en una sèrie de `tools` predefin
 - `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
 Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
+</br>
 
 Caldrà definir la propietat `target` indicant l'identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de `build step`
-que hem descrit més amunt, i opcionalment es podran indicar les propietats:
+que hem definit més amunt, i opcionalment es podran indicar les propietats:
 
-- `imageName`: només per a fer ús d'una imatge Docker disponible diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
-al [catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images) del SIC,
+- `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
+al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
 
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`, i/o
 
