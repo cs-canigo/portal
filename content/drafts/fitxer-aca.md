@@ -488,7 +488,7 @@ Per defecte, aquests indicadors es consideren actius.
 #### Redefinir el timeout aplicat
 
 La Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
-d'anàlisi del codi font, l'usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat `timeout`.
+d'anàlisi del codi font, l'usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat `timeout` indicada en unitats de segon.
 
 ```
 analysis:
