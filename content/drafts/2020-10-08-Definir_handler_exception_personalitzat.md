@@ -50,7 +50,7 @@ Response Headers
 ## Personalitzar la gestió de les excepcions base més comunes
 
 Si per una excepció de tipus *java.lang.Exception* volguéssim retornar a la propietat codi de l'objecte
-*cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* de la response un mateix text internacionalitzat,
+*cat.gencat.ctti.canigo.arch.web.rs.response.ResponseError* de la response un text internacionalitzat,
 hauríem de definir un handler propi a l'aplicació que estengués de *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler*
 i reimplementar el mètode que es vol personalitzar, en aquest cas, *defaultErrorHandlerException*.
 
