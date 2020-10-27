@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-11"
+date        = "2020-10-27"
 title       = "HOWTOs i manuals"
 description = "HOWTOs d'utilitat i manuals d'integració i d'usuari"
 sections    = "SIC"
@@ -16,6 +16,7 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 - [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)
+- [Definir exclusions al SonarQube](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube)
 
 
 ### Manuals
