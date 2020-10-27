@@ -120,7 +120,8 @@ En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una p
 * Els jobs **notificaran** dels resultats a les adreces de correu assignades.
 * En els desplegaments en modalitat semiautomàtica, es generaran **tickets Remedy** en modo “Draft” a nom de l’usuari que ha iniciat l’execució, per lo que cal tenir pressent que aquest ha de disposar de permisos per a la creació de peticions de tipus CRQ.
 
-Per poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
+Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://hudson.intranet.gencat.cat/hudson).
+
 Per a més informació: [Integració Continua](/sic-serveis/ci/).
 
 <br/><br/><br/>
