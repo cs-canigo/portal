@@ -479,7 +479,7 @@ analysis:
 ```
 
 <div class="message information">
-IMPORTANT: En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada.
+En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada en el projecte.
 </div>
 
 Per defecte, aquests indicadors es consideren actius.
@@ -511,7 +511,7 @@ El sistema es basa en una sèrie de `tools` predefinides que es descriuen a cont
 - `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
 Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
-</br>
+</br></br>
 
 Caldrà definir la propietat `target` indicant l'identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de `build step`
 que hem definit més amunt, i opcionalment es podran indicar les propietats:
