@@ -460,12 +460,12 @@ procés de construcció. Així doncs, cada pas de construcció que impliqui l'en
 automàticament en pas d'enviament de codi i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
 
 No obstant, es permet redefinir el seu comportament tal com es descriu a continuació.
+</br>
 
 #### Activar o desactivar l'enviament de codi font i/o la comprovació de les regles establertes
 
-Es proporcionen unes propietats que permeten a l'usuari desactivar l'enviament de codi font i/o la comprovació de les regles establertes.
-No obstant, en cas de desactivar-ho, el sistema automàticament enviarà una notificació a la Oficina de Qualitat per a que sigui coneixedora
-de la operativa realitzada:
+Es proporcionen unes propietats que permeten a l'usuari desactivar l'enviament de codi font i/o la comprovació de les regles establertes a l'eina davant urgències
+que pugui tenir per a desplegar o altres problemàtiques que calgui temps per a acabar de resoldre.
 
 ```
 analysis:
@@ -474,45 +474,55 @@ analysis:
 ```
 </br>
 
-- `evalStaticCode`: permet activar o desactivar l'etapa completa d'anàlisi estàtic de codi, per lo que no es realitzarà l'enviament del codi font ni, obviament,
+- `evalStaticCode`: permet activar o desactivar l'etapa completa d'anàlisi estàtic de codi, per lo que no es realitzarà l'enviament del codi font ni, òbviament,
 es comprovarà l'acompliment de les regles establertes.
 
 - `checkQualityGates`: permet activar o desactivar la comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/), per lo que
 el sistema no aturarà la pipeline en detectar un error en l'acompliment de les regles establertes.
 
+<div class="message information">
+En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada.
+</div>
+
 Per defecte, aquests dos indicadors es troben actius.
+</br>
 
 #### Redefinir el timeout aplicat
 
-La Oficina de Qualitat defineix un timeout general per a tots els projectes. En cas que aquest esdevingui insuficient per a la finalització de la tasca
-d'anàlisi del codi font, l'usuari pot optar per redefnirlo a nivell de projecte mitjançant la propietat `aecStageTimeout`.
+La Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
+d'anàlisi del codi font, l'usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat `timeout`.
 
 ```
 analysis:
-  aecStageTimeout: 20
+  timeout: 20
 ```
 </br>
 
 #### Redefinir el sistema d'enviament de codi font
 
 Es permet redefinir el comportament per defecte d'aquest procés en el que s'anomenen `analysis steps` quan es detecta la necessitat de fer ús d'una imatge Docker
-diferent a la de construcció, es necessita editar la comanda a executar, el directori d'execució... etcètera. El sistema d'anàlisi estàtic de codi es basa en una
-sèrie de `tools` predefinides que es descriuen a continuació:
+diferent a la de construcció, es necessita editar la comanda a executar o el directori d'execució. Cal, però, tenir present que només cal redefinir-ho per al pas de build en
+qüestió i la resta seguiran funcionant segons el sistema estàndard.
+
+El sistema d'anàlisi estàtic de codi es basa en una sèrie de `tools` predefinides que es descriuen a continuació:
 
 - `MAVEN`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.
 
 - `MSBUILD`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes que utilitzen MSBuild.
 
-- `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que no són Maven ni MSBuild.
-
-Caldrà indicar la propietat `target` indicant l'identificador de l'step de build associat.
-Opcionalment, es podrà indicar les propietats:
-
-- `imageName`: per a fer ús d'una imatge Docker del catàleg diferent a la imatge de construcció de l'artefacte,
-- `commands`: per a especificar la comanda a executar, i
-- `executionDir`: per a indicar que l'enviament cal executar-lo en una ruta específica (per defecte, a l'arrel del projecte).
+- `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
 Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
+
+Caldrà definir la propietat `target` indicant l'identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de `build step`
+que hem descrit més amunt, i opcionalment es podran indicar les propietats:
+
+- `imageName`: només per a fer ús d'una imatge Docker disponible diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
+al [catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images) del SIC,
+
+- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`, i/o
+
+- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
 
 ### Procés de desplegament
 
