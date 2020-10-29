@@ -41,7 +41,7 @@ build:
 analysis:
   evalStaticCode: true
   checkQualityGates: true
-  timeout: 50
+  aecStageTimeout: 50
   steps:
     - id: aec001
       tool: MAVEN
