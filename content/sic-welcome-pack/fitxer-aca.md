@@ -469,8 +469,22 @@ Es contemplen els següents tipus de desplegament:
 ```
 </br>
 
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build)
+- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació `tool` seguint el mateix patró que les eines de construcció (steps de build).
+No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
+simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
 
+Exemple ús de la mateixa imatge de construcció:
+```
+- id: ds001
+  position: 1
+  type: library
+  parameters: deploy -f ./pom.xml
+  destination: cpdx_nexus_xxxx
+  artifact: artifact01
+```
+</br>
+
+Exemple ús d'una imatge docker diferent a la de construcció:
 ```
 - id: ds001
   position: 1
@@ -519,16 +533,17 @@ Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines
 ## Exemples
 A continuació s'adjunten exemples de casos d'ús:
 
-- [Maven-Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml) (llibreria)
-- [Maven-Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
-- [Npm-Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
-- [Npm-Apache](/related/sic/2.0/autoservei_npm_apache.yml)
-- [.Net-Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
+- [Maven - Nexus](/related/sic/2.0/autoservei_mvn_nexus.yml) (llibreria)
+- [Maven - Weblogic](/related/sic/2.0/autoservei_mvn_weblogic.yml) <br/>
+- [Npm - Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
+- [Npm - Apache](/related/sic/2.0/autoservei_npm_apache.yml)
+- [.Net - Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
 - [.Net](/related/sic/2.0/autoservei_net.yml)
 - [PHP](/related/sic/2.0/autoservei_php.yml)
 - [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
 - [Docker Image](/related/sic/2.0/autoservei_docker.yml)
 - [Docker Custom Image](/related/sic/2.0/autoservei_custom_docker.yml)
+- [Docker Custom Image - Nexus](/related/sic/2.0/autoservei_custom_docker_nexus.yml) (llibreria)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
