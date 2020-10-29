@@ -469,10 +469,22 @@ Es contemplen els següents tipus de desplegament:
 ```
 </br>
 
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació que segueix el mateix patró que les eines de construcció (steps de build).
-En aquest cas la propietat `tool` només serà requerida si cal fer ús d'una imatge docker del catáleg específica doncs, en cas de no indicar-se, s'utilitzarà la imatge utilitzada per a la
-construccio de l'artefacte en qüestió.
+- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació `tool` seguint el mateix patró que les eines de construcció (steps de build).
+No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
+simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
 
+Exemple ús de la mateixa imatge de construcció:
+```
+- id: ds001
+  position: 1
+  type: library
+  parameters: deploy -f ./pom.xml
+  destination: cpdx_nexus_xxxx
+  artifact: artifact01
+```
+</br>
+
+Exemple ús d'una imatge docker diferent a la de construcció:
 ```
 - id: ds001
   position: 1
