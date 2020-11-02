@@ -4,7 +4,7 @@ title       = "SIC. Actualització de versió Nexus"
 description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
-key         = "OCTUBRE2020"
+key         = "NOVEMBRE2020"
 +++
 
 **Durant el mes de Juliol s’ha dut a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.22.1 de Nexus.**.
