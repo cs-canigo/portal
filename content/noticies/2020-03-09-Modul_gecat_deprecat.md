@@ -4,7 +4,7 @@ title       = "Canigó. Mòdul Gecat deprecat"
 description = "A partir de la publicació de Canigó 3.4.3, el mòdul de Gecat queda deprecat"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "OCTUBRE2020"
+key         = "NOVEMBRE2020"
 +++
 
 ## Introducció
