@@ -4,7 +4,7 @@ title       = "Canigó. Actualització mòdul Seguretat SAML (rols Gicar)"
 description = "S'ha publicat una nova versió del mòdul de Seguretat SAML de Canigó per a proporcionar un sistema estàndard en el tractament de rols autoritzatius de Gicar"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "OCTUBRE2020"
+key         = "NOVEMBRE2020"
 +++
 
 ## Introducció
