@@ -78,7 +78,8 @@ weight= 5
 	  
 	  //++ 08/07/2020 (LAA) S'elimina la metadada Classificacio funcional. Per no modificar JSON, de moment 
 	  //++ es controla posant condicional. Quan es regeneri JSON es treurà el valor de la metadada i el seu tractament.
-	  if (metadatos[i]!="Classificació funcional")
+	  //++ 04/11/2020 (LAA) S'elimina la metadada Identificador
+	  if ((metadatos[i]!="Classificació funcional") && (metadatos[i]!="Identificador"))
 	  {
 		  // Crea las hileras de la tabla
 		  hilera = document.createElement("tr");
