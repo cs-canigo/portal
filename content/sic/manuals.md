@@ -29,4 +29,3 @@ Es posen a disposició una sèrie de manuals per a dur a terme la integració d'
 
 * Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
   [**Suport a la integració d'oficines**](/documentacio/oficines/)
-
