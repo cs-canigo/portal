@@ -16,23 +16,22 @@ Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a 
 [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
-## Integració al SIC del desplegament d’aplicacions en fase de projecte
+## Integració al SIC d’aplicacions en fase de projecte
 
 Per les aplicacions en fase de projecte que s’integraran amb SIC, la comunicació s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
 Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
 
-**Un cop finalitzada la reunió de Fase 0, l’equip de SIC prepararà les peticions, adjuntarà les plantilles a emplenar i assignarà els tiquets** de lot d’aplicacions i CPD a l’integrador de solucions per a que
+L’equip de SIC prepararà les peticions, adjuntarà les plantilles a emplenar i assignarà els tiquets de lot d’aplicacions i CPD a l’integrador de solucions per a que
 aquest coordini l’acompliment de requisits per a poder iniciar el projecte d’integració al SIC. En endavant, tota la comunicació es farà per aquest canal recordant
 assignar el tiquet a la persona que ha de donar resposta en cada cas.
 
 
-## Integració al SIC del desplegament d’aplicacions en servei
+## Integració al SIC d’aplicacions en servei
 
 Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
 Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
 
-En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines] (/sic-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
-qui crearà la petició en aquest servei** indicant el motiu. Caldrà indicar com a mínim el **codi de diàleg** i la
+En aquest cas serà el proveïdor d’aplicacions qui crearà la petició en aquest servei indicant el motiu. Caldrà indicar com a mínim el **codi de diàleg** i la
 descripció el més detallada possible del **motiu de la petició**. L’equip de SIC donarà resposta tant aviat com sigui possible i, en endavant, tota la comunicació
 es farà per aquest canal recordant assignar el tiquet a la persona que ha de donar resposta en cada cas.
 
@@ -155,6 +154,7 @@ Informació a emplenar:
    - **Nom de l'aplicació**: "FRAMEWORK SIC"
    - **Descripció breu del suport**:
      Es recomana utilitzar una nomenclatura d'aquest estil en funció de la necessitat: <br/>
+     "SIC - Alta jobs aplicació [_codi diàleg_, _projecte_]" <br/>
      "SIC - Adaptació jobs aplicacio [_codi diàleg_, _projecte_]" + breu descripció de la sol·licitud <br/>
      "SIC - Publicació llibreries Nexus [_codi diàleg_]" + breu descripció de la sol·licitud <br/>
      "SIC - Creació d'usuaris" + breu descripció de la sol·licitud <br/>

@@ -31,7 +31,6 @@ Aquest repositori no és un entorn de desenvolupament, per lo que només les per
 ### Accés al servei
 
 Podrà accedir mitjançant el següent enllaç: https://git.intranet.gencat.cat <br/>
-Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Firewals dels seus entorns.
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei, així com la resta de membres de l'equip de desenvolupament als que es decideixi atorgar accés. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable. <br/>
 
 ![GitLab](/related/sic/serveis/gitlab-sic.png)
@@ -50,8 +49,9 @@ Totes les aplicacions que recull l'inventari d'aplicacions disposen automàticam
 <br/>
 Per accedir a la vista de grups i projectes, ho podrà fer des del menú d'opcions generals (botó <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> situat a la part superior esquerra).
 <br/>
-No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB.
-En tot cas, per a arxius de gran tamany, es podrá fer ús de l'extensió [Git-lfs](/howtos/2019-10-09-sic-Howto-Git-lfs).
+No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB. En tot cas, a tal efecte es podrà fer ús del servei de gestió de binaris.
+
+Per a més informació: [Binaris] (/sic-serveis/binaris/)
 
 ### Creació de nous projectes
 
@@ -66,12 +66,12 @@ En publicar una nova versió del codi font sobre la branca MASTER, automàticame
 
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
-
 Per a més informació: [Integració contínua] (/sic-serveis/ci/)
 
 <br/><br/>
 Teniu a la vostra disposició alguns articles relacionats amb el servei:
 
+- [Migració de repositoris SVN al Git](/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git)
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 
