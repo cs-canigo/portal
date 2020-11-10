@@ -55,6 +55,7 @@ Actualment, el sistema previst seria el següent:
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
 Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Firewals dels seus entorns.
+
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ![Jenkins](/related/sic/serveis/jenkins-sic.png)
@@ -136,6 +137,7 @@ En aquest cas, les etapes es simplificaran considerablement de forma que bàsica
 
 En cas de tractar-se d'una **llibreria de tercers no disponible públicament** caldrà obrir una petició de suport
 funcional de l’aplicació indicant la següent informació:
+
 - Nom i versió de la llibreria
 - URL on obtenir la llibreria (o adjuntar-la a la pròpia petició Remedy)
 - Característiques i funcionalitat de la llibreria
@@ -223,7 +225,7 @@ ser desplegada sobre un dels següents servidors:
 
 Les tasques d’execució de desplegament automatitzat fan un re-desplegament de l’aplicació i no pas
 un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada (en format empaquetat
-WAR/EAR). La petició per fer aquest primer desplegament de l’aplicació corre a càrrec dels
+WAR/EAR). La petició per a fer aquest primer desplegament de l’aplicació corre a càrrec dels
 proveïdors de l’aplicació i en ella s’ha d’indicar a SAU de forma explicita que l’aplicació ha de
 desplegar-se en format empaquetat (WAR/EAR).
 Un cop integrada al SIC, qualsevol canvi que es faci en la referència a l'artefacte a desplegar
@@ -235,7 +237,7 @@ funcionar.
 |Tecnologia|Versions|
 |-------|-------|
 |Oracle|12c|
-|SQL Server|2014,edició standard i express|
+|SQL Server|2014, edició standard i express|
 |PostgreSQL|9.4.8, i anteriors|
 |MongoDB|3.2.5, i anteriors
 |MySQL|5.7.12, i anteriors

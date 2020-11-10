@@ -19,12 +19,12 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 
 
 ### Manuals
-Es posen a disposició una sèrie de manuals per a dur a terme la integració d'aplicacions al SIC:
+Es posen a disposició una sèrie de guies per a dur a terme la integració d'aplicacions al SIC:
 
-* Com preparar una aplicació per desplegar-la automàticament
+* Com preparar una aplicació per a desplegar-la automàticament:
   [**Preparar aplicació**](sic-welcome-pack/preparar-aplicacio/)
 
-* Com generar automàticament una pipeline de construcció i desplegament
+* Com generar automàticament una pipeline de construcció i desplegament:
   [**Autoservei de pipelines**](sic-serveis/autoservei-pipelines/)
 
 * Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
