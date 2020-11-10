@@ -1,5 +1,5 @@
 +++
-date        = "2019-10-11"
+date        = "2020-11-10"
 title       = "HOWTOs i guies"
 description = "HOWTOs d'utilitat i guies disponibles"
 sections    = "SIC"
@@ -22,7 +22,7 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 Es posen a disposició una sèrie de guies que poden resultar d'utilitat:
 
 * Quin són els serveis del SIC i com fer-ne ús:
-  [**Preparar aplicació**](/sic-welcome-pack/eines_sic/)
+  [**Serveis del SIC**](/sic-welcome-pack/eines_sic/)
 
 * Com preparar una aplicació per a desplegar-la automàticament:
   [**Preparar aplicació**](/sic-welcome-pack/preparar-aplicacio/)
