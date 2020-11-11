@@ -1,5 +1,5 @@
 +++
-date = "2020-10-27"
+date = "2020-11-11"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -41,7 +41,7 @@ Es contemplen diverses modalitats de desplegament:
 
 * **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 * **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
-* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. 
+* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 
 Actualment, el sistema previst seria el següent:
 
@@ -54,6 +54,8 @@ Actualment, el sistema previst seria el següent:
 ### Accés als serveis
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
+Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Firewals dels seus entorns.
+
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ![Jenkins](/related/sic/serveis/jenkins-sic.png)
@@ -123,13 +125,25 @@ L'anàlisi de codi és un altre dels processos que es passen dins la tasca de co
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD. 
+Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
 ### Publicació de llibreries
 
-Totes les dependències de l’aplicació han de ser accessibles en els repositoris públics configurats al Nexus del SIC. Es pot validar la seva existència accedint a la següent URL: https://hudson.intranet.gencat.cat/nexus. <br/>
+Totes les dependències de l’aplicació han de ser accessibles en els repositoris públics configurats al Nexus del SIC.
+Es pot validar la seva existència accedint a la següent URL: https://hudson.intranet.gencat.cat/nexus. <br/>
 
-En cas de tractar-se d'una llibreria pròpia amb codi repositat al SIC, caldrà construir un job d'instal·lació de dependències. En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**.
+En cas de tractar-se d'una **llibreria pròpia amb codi repositat al SIC**, caldrà construir un job d'instal·lació de dependències.
+En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**.
+
+En cas de tractar-se d'una **llibreria de tercers no disponible públicament** caldrà obrir una petició de suport
+funcional de l’aplicació indicant la següent informació:
+
+- Nom i versió de la llibreria
+- URL on obtenir la llibreria (o adjuntar-la a la pròpia petició Remedy)
+- Característiques i funcionalitat de la llibreria
+- Raons per l'ús de la llibreria
+
+Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques).
 
 ## Autoservei de jobs pipeline
 
@@ -137,7 +151,7 @@ L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de p
 intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
 Per a més informació: [Autoservei de pipelines] (/sic-serveis/autoservei-pipelines/)
 
-## Matriu de tecnologies compatibles
+## Matriu de tecnologies de construcció
 
 Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
@@ -189,6 +203,44 @@ a la construcció de l'aplicació via **npm install**.
 |-------|
 |0.27|
 |0.73|
+
+
+## Matriu de desplegament en servidors (IAAS)
+
+Si es volen fer servir les tasques de desplegaments automatitzat des de SIC, cal que l’aplicació pugui
+ser desplegada sobre un dels següents servidors:
+
+### Microsoft
+|Tecnologia|Versions|
+|-------|-------|
+|MS Web Deploy|3.6|
+
+### JEE
+|Tecnologia|Versions|
+|-------|-------|
+|Weblogic|9.2, 10.3.x, 11g, 12c|
+|Websphere|6.1, 8.5|
+|Tomcat|5.5, 6, 7, 8, 8.5|
+|JBoss|EAP 6.4, EAP 7.1|
+
+Les tasques d’execució de desplegament automatitzat fan un re-desplegament de l’aplicació i no pas
+un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada (en format empaquetat
+WAR/EAR). La petició per a fer aquest primer desplegament de l’aplicació corre a càrrec dels
+proveïdors de l’aplicació i en ella s’ha d’indicar a SAU de forma explicita que l’aplicació ha de
+desplegar-se en format empaquetat (WAR/EAR).
+Un cop integrada al SIC, qualsevol canvi que es faci en la referència a l'artefacte a desplegar
+o canvi en el nom de l’aplicació dins el servidor d’aplicacions,
+ha de ser notificat a l’equip del SIC, ja que en cas contrari el job de desplegament deixarà de
+funcionar.
+
+### BBDD
+|Tecnologia|Versions|
+|-------|-------|
+|Oracle|12c|
+|SQL Server|2014, edició standard i express|
+|PostgreSQL|9.4.8, i anteriors|
+|MongoDB|3.2.5, i anteriors
+|MySQL|5.7.12, i anteriors
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>

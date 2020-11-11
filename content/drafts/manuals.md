@@ -1,7 +1,7 @@
 +++
-date        = "2020-10-27"
-title       = "HOWTOs i manuals"
-description = "HOWTOs d'utilitat i manuals d'integració i d'usuari"
+date        = "2020-11-11"
+title       = "HOWTOs i guies"
+description = "HOWTOs d'utilitat i guies disponibles"
 sections    = "SIC"
 no_index 	= true
 taxonomies  = []
@@ -19,14 +19,20 @@ En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la
 - [Definir exclusions al SonarQube](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube)
 
 
-### Manuals
-Es posen a disposició una sèrie de manuals per a dur a terme la integració d'aplicacions al SIC:
+### Guies
+Es posen a disposició una sèrie de guies que poden resultar d'utilitat:
 
-* Què he de fer per integrar una aplicació al SIC?
-  [**Manual d'Integració**](/related/sic/2.0/manual-integracio.pdf)
+* Quin són els serveis del SIC i com fer-ne ús:
+  [**Serveis del SIC**](/sic-welcome-pack/eines_sic/)
 
-* Què he de fer per desplegar noves versions de la meva aplicació ja integrada en el SIC?
-  [**Manual d'Usuari**](/related/sic/2.0/manual-usuari.pdf)
+* Com preparar una aplicació per a desplegar-la automàticament:
+  [**Preparar aplicació**](/sic-welcome-pack/preparar-aplicacio/)
+
+* Com generar automàticament una pipeline de construcció i desplegament:
+  [**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/)
+
+* Guia per a la integració amb SonarQube:
+    [**Autoservei de pipelines**](/sic-welcome-pack/guia-integracio-sonarqube/)
 
 * Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
   [**Suport a la integració d'oficines**](/documentacio/oficines/)
