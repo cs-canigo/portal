@@ -4,8 +4,8 @@
 # constraints, we highly recommend using the default image of this repository.
 box: 
   id: node
-  username: cscanigo
-  password: EB28E1D38C0B7A5F3F8B4995C3151ECC
+  username: $DOCKER_HUB_USERNAME
+  password: $DOCKER_HUB_PASSWORD
   tag: 8-slim
 build:
   steps:
