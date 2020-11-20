@@ -1,5 +1,5 @@
 +++
-date        = "2020-05-21"
+date        = "2020-06-12"
 title       = "Canigó. Actualització archetype 1.6.6 i actualització plugin Eclipse 1.7.8"
 description = "S'ha publicat una nova versió de l’arquetipus i del plugin del eclipse de Canigó per a modificar projectes afegint el mòdul de Mongodb 2.3.0"
 sections    = ["Notícies", "home"]
