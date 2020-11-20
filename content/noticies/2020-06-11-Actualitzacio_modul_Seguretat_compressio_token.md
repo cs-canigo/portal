@@ -4,7 +4,7 @@ title       = "Canigó. Actualització mòdul Seguretat"
 description = "S'ha publicat una nova versió del mòdul Seguretat de Canigó per oferir la funcionalitat de compressió de token JWT"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "DESEMBRE2020"
+key         = "DESEMBRE2020"
 +++
 
 ## Introducció
