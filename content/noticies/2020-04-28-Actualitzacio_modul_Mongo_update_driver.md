@@ -4,7 +4,7 @@ title       = "Canigó. Actualització mòdul MongoDB"
 description = "S'ha publicat una nova versió del mòdul MongoDB de Canigó actualitzant el driver per a ser compatible amb la versió 4.2 de MongoDB"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "DESEMBRE2020"
+key         = "DESEMBRE2020"
 +++
 
 ## Introducció
