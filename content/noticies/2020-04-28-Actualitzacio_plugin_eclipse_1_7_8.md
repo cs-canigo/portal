@@ -4,7 +4,7 @@ title       = "Canigó. Actualització archetype 1.6.6 i actualització plugin E
 description = "S'ha publicat una nova versió de l’arquetipus i del plugin del eclipse de Canigó per a modificar projectes afegint el mòdul de Mongodb 2.3.0"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "GENER2020"
+key         = "DESEMBRE2020"
 +++
 
 ## Introducció
