@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-09"
+date        = "2020-06-11"
 title       = "Canigó. Revisió regles SonarQube mòduls core"
 description = "S'han revisat i resolt els problemes detectats per SonarQube als mòduls core de Canigó"
 sections    = ["Notícies", "home"]
