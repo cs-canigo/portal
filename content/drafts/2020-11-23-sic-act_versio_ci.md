@@ -7,7 +7,7 @@ categories  = ["SIC"]
 key         = "DESEMBRE2020"
 +++
 
-**El proper dia 09/12/2020 està previst dur a terme l’actualització del Servei d’Integració Continua a la versió 2.235.5 de Jenkins.**.
+**El proper dia 09/12/2020 està previst dur a terme l’actualització del Servei d’Integració Continua a la versió 2.235.5 de Jenkins**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:

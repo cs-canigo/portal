@@ -7,7 +7,7 @@ categories  = ["SIC"]
 key         = "DESEMBRE2020"
 +++
 
-**El proper dia 09/12/2020 està previst dur a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.27.0 de Nexus.**.
+**El proper dia 09/12/2020 està previst dur a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.27.0 de Nexus**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
