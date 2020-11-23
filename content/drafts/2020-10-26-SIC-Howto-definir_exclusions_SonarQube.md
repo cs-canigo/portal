@@ -1,6 +1,6 @@
 +++
 date        = "2020-10-27"
-title       = "SIC. Com definir exclusions projecte SonarQube"
+title       = "SIC. Com definir exclusions enviament SonarQube"
 description = "Howto per a mostrar com definir exclusions a un projecte de cara a l'enviament del codi font al SonarQube"
 section     = "howtos"
 categories  = ["SIC"]

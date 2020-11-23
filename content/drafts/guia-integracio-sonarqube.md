@@ -1,6 +1,6 @@
 +++
-date = "2020-11-10"
-title = "Guia integració eina d’anàlisi de codi de la OQUAL"
+date = "2020-11-23"
+title = "Guia integració eina d’anàlisi de codi de Qualitat"
 description = "Guia per a la integració amb eina d’anàlisi de codi de la Oficina de Qualitat"
 sections = "SIC"
 toc = true
@@ -10,22 +10,20 @@ weight = 2
 
 ## Eina d’anàlisi
 
-Al SIC s’ha dut a terme la integració de les aplicacions amb l’eina d’anàlisi estàtic de codi
-escollida per la Oficina de Qualitat: [SonarQube](https://docs.sonarqube.org/latest/).
-Es tracta d’una eina que servirà per a **detectar bugs, vulnerabilitats i defectes en el codi font** de les aplicacions.
+Al SIC s’ha dut a terme la integració de les aplicacions amb l’eina d’anàlisi estàtic de codi: [SonarQube CE](https://docs.sonarqube.org/latest/).
+Es tracta d’una eina que servirà per a **detectar issues crítiques i bloquejants així com duplicació de codi font** de les aplicacions.
 Podeu accedir mitjançant el següent enllaç: https://codi.qualitat.solucions.gencat.cat.
 
 Es recomana instal·lar SonarQube **a l’entorn de desenvolupament** per a facilitar una inspecció contínua.
-Per a unificar els criteris de l’anàlisi, s’han definit unes [Quality Gates](https://qualitat.solucions.gencat.cat/manuals/SonarQubeQualityGate.pptx)
-que els proveïdors hauran de configurar a les seves màquines. Altres eines actualment emprades per a l’anàlisi de codi (com per exemple, Kiwuan) no seran objecte d’aquest
-article donat no es contempla la seva integració al SIC.
+Per a unificar els criteris de l’anàlisi, Qualitat ha definit la Quality Gate de codi.
 
-Per a més informació: [Portal de la Oficina de Qualitat](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
+Per a més informació: [Portal de Qualitat](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
 ## Integració contínua
 
 El SIC implementarà un **nou *Stage* a totes les pipelines de construcció i desplegament d’aplicacions** de forma que
-aquest s’encarregarà de, un cop finalitzada amb èxit la construcció del/s artefacte/s, realitzar l’enviament del codi font al SonarQube.
+aquest s’encarregarà de, un cop finalitzada amb èxit la construcció del/s artefacte/s,
+fer l’anàlisi i comprovació de la quality gate de codi, i realitzar l’enviament de l’informe a SonarQube.
 
 ![Stage AEC](/related/sic/2.0/aec_stage.png)
 <br/>
@@ -64,7 +62,7 @@ per a escollir una modalitat més adequada, per exemple, per a salvar limitacion
 - Els projectes .Net han de compilar-se amb una versió mínima de MSBuild 14
 
 En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/latest/analysis/languages/overview/)
-per l’eina.
+(veure Community Edition) per l’eina.
 
 ### Configuració a nivell de projecte
 
@@ -74,29 +72,13 @@ https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
 En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions]
 (/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
 
-## Possibles problemàtiques
-
-En cas de detectar problemes com els següents:
-
--	Hi ha una incompatibilitat tècnica que impedeix l’enviament del codi font,
--	Les Quality Gates son fallides però es necessita continuar amb el desplegament de l’aplicació perquè resulta urgent,
--	Les Quality Gates son fallides perquè les regles aplicades no son les esperades,
--	...
-
-Fins a resoldre-ho, si és possible, podeu optar per inhibir aquests passos mitjançant la mateixa secció *analysis*
-del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
-Podent optar per inhibir tot l’stage si hi ha un problema a l’enviament, o només la comprovació de les Quality Gates
-per a que només eviti que la pipeline s’aturi en cas de no acompliment de les mateixes.
-
-En qualsevol cas, si s'inhibeixen els passos, en cada desplegament **s’enviarà automàticament una notificació a la Oficina de Qualitat**
-per a que aquesta sigui coneixedora del cas i pugui fer-ne seguiment.
-
 ## Canals de contacte
 El canal de contacte dependrà de l'àmbit del dubte o problema:
 
 - Si es localitza en la configuració i accessos a l’eina SonarQube o la configuració de les
-Quality Gates, haureu de posar-vos en contacte amb la Oficina de Qualitat a través del vostre responsable de qualitat a nivell de lot:
-https://qualitat.solucions.gencat.cat/.
+Quality Gates, ho deriveu al responsable de qualitat del vostre lot. Si el dubte o problema no s’ha resolt,
+el responsable de qualitat del vostre lot es posarà en contacte amb la Oficina de Qualitat mitjançant la
+bústia qualitat.solucions@gencat.cat.
 
 - Si es localitza en el comportament de les pipelines de desplegament, configuració de projectes i altres
 aspectes de la integració contínua, haureu de posar-vos en contracte a través dels
