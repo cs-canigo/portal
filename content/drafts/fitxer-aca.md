@@ -79,7 +79,7 @@ resources:
     - id: pre
       environment: pre
       position: 2
-      deploymentType: SEMIAUTOMATIC
+      deploymentType: DELEGATED
     - id: pro
       environment: pro
       position: 3
@@ -90,7 +90,9 @@ resources:
 Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.</br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
-- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament. </div>
+- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br>
+- <b>Delegat</b>: es construeixen els artefactes i s'envien a el servei de gestió de binaris, després es delega automàticament als CPD seu desplegament a través de llibreries compartides.
+</div>
 
 </br>
 #### Infraestructures
@@ -150,8 +152,8 @@ resources:
 <div class="message information">
 En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
 endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> no serà necessari preparar l’arxiu ACI ni
-definir el detall d’infraestructures.</div>
+el detall de les infraestructures, només cal conegui aquest identificador. En els desplegaments <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar l'arxiu ACI ni definir el detall d’infraestructures.
+</div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
