@@ -1,7 +1,7 @@
 +++
 date        = "2020-07-14"
-title       = "Canigó. Com canviar el domini on està allotjat el plugin del eclipse"
-description = "Howto per a canviar el domini on està allotjat el plugin del eclipse"
+title       = "Canigó. Com canviar el domini on està allotjat el plugin de l'eclipse"
+description = "Howto per a canviar el domini on està allotjat el plugin de l'eclipse"
 section     = "howtos"
 categories  = ["canigo"]
 #key         = "GENER2020"
@@ -17,13 +17,13 @@ En aquest how to es mostrarà com canviar el domini a entorns de desenvolupament
 
 ## Canvi de domini a l'eclipse
 
-Per canviar el domini on està allotjat el plugin del eclipse és necessari obrir l'eclipse i anar a:
+Per canviar el domini on està allotjat el plugin de l'eclipse és necessari obrir l'eclipse i anar a:
 
 Help > Install New Software...
 
 ![Available software](/related/canigo/howto/2020-07-14-Howto_canvi_domini_plugin_eclipse_available_software.png)
 
-Manage o Available site (depenent de la versió del eclipse)
+Manage o Available site (depenent de la versió de l'eclipse)
 
 ![Available software sites](/related/canigo/howto/2020-07-14-Howto_canvi_domini_plugin_eclipse_available_software_sites.png)
 

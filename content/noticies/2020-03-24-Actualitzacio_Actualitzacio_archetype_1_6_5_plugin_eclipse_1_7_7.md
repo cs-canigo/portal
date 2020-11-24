@@ -1,7 +1,7 @@
 +++
 date        = "2020-03-25"
 title       = "Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7"
-description = "S'ha publicat una nova versió de l’arquetipus i del plugin del eclipse de Canigó per a generar projectes amb Canigó 3.4.3"
+description = "S'ha publicat una nova versió de l’arquetipus i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.4.3"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "NOVEMBRE2020"

@@ -122,7 +122,7 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 _RELEASE NOTES_
 
-* Canvi del domini del plugin del eclipse de http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/ a https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/
+* Canvi del domini del plugin de l'eclipse de http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/ a https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/
 
 _KNOWN ISSUES_
 

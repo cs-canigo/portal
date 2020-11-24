@@ -12,7 +12,7 @@ weight		= 2
 
 #### Detall error
 
-Una vegada instal·lat el plugin del eclipse, al intentar crear un projecte de tipus Canigó s'obté l'error "Error al executar maven. Possiblement els Archetypes no s'han instal·lat correctament"
+Una vegada instal·lat el plugin de l'eclipse, al intentar crear un projecte de tipus Canigó s'obté l'error "Error al executar maven. Possiblement els Archetypes no s'han instal·lat correctament"
 
 ![](/related/canigo/documentacio/plugin-canigo/Error_archetypes_no_installat_correctament.png)
 

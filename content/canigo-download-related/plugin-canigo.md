@@ -91,7 +91,7 @@ Per exemple, per a afegir el mòdul de seguretat el plugins ens donarà l'opció
 
 ### Detall problema
 
-Una vegada instal·lat el plugin del eclipse, al intentar crear un projecte de tipus Canigó s'obté l'error "Error al executar maven. Possiblement els Archetypes no s'han instal·lat correctament"
+Una vegada instal·lat el plugin de l'eclipse, al intentar crear un projecte de tipus Canigó s'obté l'error "Error al executar maven. Possiblement els Archetypes no s'han instal·lat correctament"
 
 ![](/related/canigo/documentacio/plugin-canigo/Error_archetypes_no_installat_correctament.png)
 
