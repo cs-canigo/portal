@@ -150,10 +150,10 @@ resources:
 ```
 
 <div class="message information">
-En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
-endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal conegui aquest identificador. En els desplegaments <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
-l'arxiu ACI ni definir el detall d’infraestructures.
+En el desplegament <b>AUTOMATIC</b> o <b>DELEGATED</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures.
+Aquest identificador definirà la infraestructura sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
+el detall de les infraestructures, només cal conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
+l'arxiu ACI ni el detall d’infraestructures.
 </div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
