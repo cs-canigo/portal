@@ -90,8 +90,9 @@ que serà responsabilitat del proveïdor d'aplicacions mantenir-lo actualitzat, 
     - **Entorns**: entorns als que es desplega l'aplicació, així com el seu ordre i la modalitat de desplegament desitjada.
     - **Infraestructures**: denominació d'infraestructures destí (cal demanar al proveïdor d'infraestructures la denominació de la infraestructura).
     - **Artefactes**: artefactes a generar durant el procés de construcció que s'han de desplegar en el procés de desplegament.
-* **Procés de construcció**: definició del procés de construcció amb l'ús de passes (*steps*) de construcció.
-* **Procés de desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
+* **Construcció**: definició del procés de construcció amb l'ús de passes (*steps*) de construcció.
+* **Anàlisi estàtic de codi**: definició del sistema d'enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de la Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
+* **Desplegament**: definició del procés de desplegament amb l'ús de passes (*steps*) de desplegament.
 * **Notificacions**: definició d'adreces de correu electrònic on notificar accions manuals en espera i resultats de l'execució.
 
 ![Pipeline del SIC](/images/news/AutoserveiJobs-ACA.png)

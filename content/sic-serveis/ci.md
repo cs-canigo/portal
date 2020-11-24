@@ -1,5 +1,5 @@
 +++
-date = "2020-07-15"
+date = "2020-11-11"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -41,7 +41,7 @@ Es contemplen diverses modalitats de desplegament:
 
 * **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 * **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
-* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. 
+* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 
 Actualment, el sistema previst seria el següent:
 
@@ -95,7 +95,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 * **Commit test**: etapa prevista per a l'execució de tests de commit, si escau.
 * **Unit test**: etapa prevista per a l'execució de tests unitaris, si escau.
-* **Anàlisi estàtic de codi**: etapa prevista per a l'execució d'anàlisi de codi estàtic a partir d'unes regles predefinides.
+* **Anàlisi estàtic de codi**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de la Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
 * **Generació tag de build**: generació del tag de Build al repositori de codi conforme es tracta d'una versió construïble.
 * **Desplegament a INT**: desplegament automàtic a l'entorn d'integració, si escau, incloent possibles processos d'actualització de l'estat de la base de dades.
 * **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn d'integració per tal d'assegurar que el projecte s'ha publicat correctament, si escau.
@@ -125,7 +125,7 @@ L'anàlisi de codi és un altre dels processos que es passen dins la tasca de co
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD. 
+Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
 ### Publicació de llibreries
 

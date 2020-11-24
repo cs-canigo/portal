@@ -4,7 +4,7 @@ title       = "SIC. Com definir exclusions enviament SonarQube"
 description = "Howto per a mostrar com definir exclusions a un projecte de cara a l'enviament del codi font al SonarQube"
 section     = "howtos"
 categories  = ["SIC"]
-#key        = "NOVEMBRE2020"
+key        = "DESEMBRE2020"
 +++
 
 ## Introducció

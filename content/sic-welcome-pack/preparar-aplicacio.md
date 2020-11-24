@@ -1,5 +1,5 @@
 +++
-date = "2020-11-20"
+date = "2020-06-25"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
@@ -45,8 +45,6 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).
-
-* Si el projecte és multimòdul maven, és necessari que el pom pare i els submòduls estiguin correctament configurats per a poder fer la construcció a partir d'un goal en el pom pare i no un goal per cada submòdul.
 
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
 la versió funcional del projecte. Per exemple: `version: 1.1.0`

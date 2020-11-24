@@ -219,7 +219,7 @@ resources:
 
 ### Procés de construcció
 
-Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de build`. La definició es basa en una sèrie de `tools` predefinides. A més,
+Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `build steps`. La definició es basa en una sèrie de `tools` predefinides. A més,
 els atributs dels passos de construcció varien en funció del seu tipus.
 
 Es contemplen les següents tecnologies:
@@ -453,9 +453,79 @@ En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>buil
 de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de la aplicació.
 </div>
 
+### Anàlisi estàtic de codi
+
+Aquesta secció és opcional doncs, per defecte, tots els passos del procés i la seva ordenació vindrà determinada per la definició del
+procés de construcció. Així doncs, cada pas de construcció que impliqui l'enviament de codi font per al seu anàlisi esdevindrà
+automàticament en pas d'enviament de codi i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
+No obstant, es permet redefinir el seu comportament tal com es descriu a continuació.
+</br></br>
+
+#### Activar o desactivar l'enviament de codi font i/o la comprovació de les regles establertes
+
+Es proporcionen unes propietats que permeten a l'usuari desactivar l'enviament de codi font i/o la comprovació de les regles establertes a l'eina davant urgències
+que pugui tenir per a desplegar o altres problemàtiques que es necessiti temps per a acabar de resoldre. Són les següents:
+
+- `evalStaticCode`: permet activar o desactivar l'etapa completa d'anàlisi estàtic de codi, per lo que no es realitzarà l'enviament del codi font ni, òbviament,
+es comprovarà l'acompliment de les regles establertes.
+
+- `checkQualityGates`: permet activar o desactivar la comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/), per lo que
+el sistema no aturarà la pipeline en detectar un error en l'acompliment de les regles establertes.
+
+```
+analysis:
+  evalStaticCode: true
+  checkQualityGates: false
+```
+
+<div class="message information">
+En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada en el projecte.
+</div>
+
+Per defecte, aquests indicadors es consideren actius.
+</br></br>
+
+#### Redefinir el timeout aplicat
+
+La Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
+d'anàlisi del codi font, l'usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat `aecStageTimeout` indicada en unitats de segon.
+
+```
+analysis:
+  aecStageTimeout: 20
+```
+</br>
+
+#### Redefinir el sistema d'enviament de codi font
+
+Es permet redefinir el comportament per defecte d'aquest procés en el que s'anomenen `analysis steps` quan es detecta la necessitat de fer ús d'una imatge Docker
+diferent a la de construcció, es necessita editar la comanda a executar o el directori d'execució. Cal, però, tenir present que només cal redefinir-ho per al pas de build en
+qüestió i la resta (si hi ha) seguiran comportant-se de forma estàndard.
+
+El sistema es basa en una sèrie de `tools` predefinides que es descriuen a continuació:
+
+- `MAVEN`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.
+
+- `MSBUILD`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes que utilitzen MSBuild.
+
+- `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
+
+Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
+</br></br>
+
+Caldrà definir la propietat `target` indicant l'identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de `build step`
+que hem definit més amunt, i opcionalment es podran indicar les propietats:
+
+- `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
+al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
+
+- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`, i/o
+
+- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
+
 ### Procés de desplegament
 
-Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `steps de deploy`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
+Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
 
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
@@ -544,6 +614,7 @@ A continuació s'adjunten exemples de casos d'ús:
 - [Docker Image](/related/sic/2.0/autoservei_docker.yml)
 - [Docker Custom Image](/related/sic/2.0/autoservei_custom_docker.yml)
 - [Docker Custom Image - Nexus](/related/sic/2.0/autoservei_custom_docker_nexus.yml) (llibreria)
+- [Maven Code Analysis Redefined](/related/sic/2.0/autoservei_mvn_aec.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
