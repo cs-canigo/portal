@@ -1,7 +1,7 @@
 +++
 date        = "2020-07-14"
-title       = "Canigó. Com canviar el domini on està allotgat el plugin del eclipse"
-description = "Howto per a canviar el domini on està allotgat el plugin del eclipse"
+title       = "Canigó. Com canviar el domini on està allotjat el plugin del eclipse"
+description = "Howto per a canviar el domini on està allotjat el plugin del eclipse"
 section     = "howtos"
 categories  = ["canigo"]
 #key         = "GENER2020"
@@ -11,13 +11,13 @@ categories  = ["canigo"]
 
 El plugin de Canigó per a Eclipse permet crear de forma automàtica l’esquelet d’una aplicació Canigó. L’aplicació que es crea està orientada a servir com a punt de partida per a la creació d’una aplicació més complexe.
 
-Aquest plugin es proporcionat dins de l'[entorn de desenvolupament](/canigo/entorn-desenvolupament/). A partir de la versió 3.0.6 de l'entorn de desenvolupament, el domini on està allotgat el plugin de eclipse és https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/ però per entorns de desenvolupament anteriors a la versió 3.0.6 és http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/.
+Aquest plugin es proporcionat dins de l'[entorn de desenvolupament](/canigo/entorn-desenvolupament/). A partir de la versió 3.0.6 de l'entorn de desenvolupament, el domini on està allotjat el plugin de eclipse és https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/ però per entorns de desenvolupament anteriors a la versió 3.0.6 és http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/.
 
 En aquest how to es mostrarà com canviar el domini a entorns de desenvolupament anteriors a la versió 3.0.6 perquè apunti al domini https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/ .
 
 ## Canvi de domini a l'eclipse
 
-Per canviar el domini on està allotgat el plugin del eclipse és necessari obrir l'eclipse i anar a:
+Per canviar el domini on està allotjat el plugin del eclipse és necessari obrir l'eclipse i anar a:
 
 Help > Install New Software...
 
