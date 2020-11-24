@@ -5,7 +5,7 @@ description = "Guia per a la integració amb eina d’anàlisi de codi de la Ofi
 sections = "SIC"
 toc = true
 taxonomies = []
-weight = 2
+weight = 4
 +++
 
 ## Eina d’anàlisi

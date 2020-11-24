@@ -32,7 +32,7 @@ Es posen a disposició una sèrie de guies que poden resultar d'utilitat:
   [**Autoservei de pipelines**](/sic-serveis/autoservei-pipelines/)
 
 * Guia per a la integració amb SonarQube:
-    [**Autoservei de pipelines**](/sic-welcome-pack/guia-integracio-sonarqube/)
+    [**Intgració SonarQube**](/sic-welcome-pack/guia-integracio-sonarqube/)
 
 * Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
   [**Suport a la integració d'oficines**](/documentacio/oficines/)
