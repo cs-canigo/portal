@@ -91,7 +91,7 @@ Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT.</br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
 - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br>
-- <b>Delegat</b>: es construeixen els artefactes i s'envien a el servei de gestió de binaris, després es delega automàticament als CPD seu desplegament a través de llibreries compartides.
+- <b>Delegat</b>: es construeixen els artefactes, s'envien al servei de gestió de binaris i després es delega automàticament als CPD seu desplegament a través de llibreries compartides.
 </div>
 
 </br>
