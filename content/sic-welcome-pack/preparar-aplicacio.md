@@ -88,7 +88,7 @@ En qualsevol cas, caldrà preparar:
 |-----------|----------|----------|
 |entorn|Opcional|Entorn per al qual s'ha d'executar o empaquetar (segons la modalitat de desplegament) el fitxer. Per defecte, aplica a tots els entorns.|
 |failure|Obligatori|Indica la forma en la que s'ha de comportar el sistema en cas d'error: parar o continuar.|
-|idBBDD|Obligatori|Identificador únic de la connexió amb la bbdd. En cas de pipelines generades per l'autoservei i desplegament automàtic, s'haurà de correspondre amb l'identificador del fitxer d'infraestructures.|
+|idBBDD|Obligatori|Identificador únic de la connexió amb la bbdd. En cas de pipelines generades per l’autoservei i desplegament automàtic, s’haurà de correspondre amb l’identificador del fitxer d’infraestructures que determina la cadena de connexió podent referenciar-ne diferents.|
 |file|Obligatori|Fitxer que cal executar o empaquetar (segons la modalitat de desplegament).|
 |execute|Opcional|Indica, en cas de modalitat de desplegament automàtica, si a més d'empaquetar el fitxer aquest s'ha d'executar. Útil pel cas de scripts anidats. Per defecte, s'executarà.|
 
