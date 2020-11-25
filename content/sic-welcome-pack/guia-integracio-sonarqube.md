@@ -1,7 +1,7 @@
 +++
 date = "2020-11-23"
 title = "Guia integració eina d’anàlisi de codi de Qualitat"
-description = "Guia per a la integració amb eina d’anàlisi de codi de la Oficina de Qualitat"
+description = "Guia per a la integració amb eina d’anàlisi de codi de l'Oficina de Qualitat"
 sections = "SIC"
 toc = true
 taxonomies = []

@@ -96,7 +96,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 * **Commit test**: etapa prevista per a l'execució de tests de commit, si escau.
 * **Unit test**: etapa prevista per a l'execució de tests unitaris, si escau.
-* **Anàlisi estàtic de codi**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de la Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
+* **Anàlisi estàtic de codi**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
 * **Generació tag de build**: generació del tag de Build al repositori de codi conforme es tracta d'una versió construïble.
 * **Desplegament a INT**: desplegament automàtic a l'entorn d'integració, si escau, incloent possibles processos d'actualització de l'estat de la base de dades.
 * **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn d'integració per tal d'assegurar que el projecte s'ha publicat correctament, si escau.
