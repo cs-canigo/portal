@@ -284,7 +284,7 @@ build:
         - artifact01
 ```
 
-La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs vindrà donada.
+La eina que s’utilitzarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs vindrà donada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
 Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
@@ -445,7 +445,7 @@ build:
 On:
 
 * `dockerfilePath`: ruta del fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
-* `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+* `dockerfileName`: fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
 * `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 <div class="message information">
@@ -597,7 +597,7 @@ notificationRecipients:
 
 ## Validació
 Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer ACA en fer la pujada al Sistema de Custodia de Codi.
-Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines on-line de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
 
 
 ## Exemples
