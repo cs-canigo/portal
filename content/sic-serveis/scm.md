@@ -1,7 +1,7 @@
 +++
 date = "2020-06-17"
-title = "Custodia de codi font"
-description = "GitLab és l'eina implantada al SIC per la custodia de codi font"
+title = "Custòdia de codi font"
+description = "GitLab és l'eina implantada al SIC per la custòdia de codi font"
 aliases = [
     "/howtos/2017-07-Howto-Migrar-repositori-SVN-a-repositori-GIT/"
 ]
@@ -15,7 +15,7 @@ weight = 1
 
 ## Introducció
 
-**GitLab** és l'eina implantada al SIC per la custodia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert.
+**GitLab** és l'eina implantada al SIC per la custòdia de codi font. Es tracta d'un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d'errors, tot publicat sota una llicència de codi obert.
 <br>
 <br>
 Gitlab és utilitzat per més de 100.000 organitzacions d'arreu del món. S’han realitzar proves en organitzacions amb 10.000 projectes amb el mateix temps i la mateixa qualitat de resposta que amb un sol projecte.

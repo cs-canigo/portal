@@ -95,7 +95,7 @@ HOWTOs disponibles actualment:
 
 - [Certificació desplegaments d'aplicacions Canigó 3.X a Websphere 8.5](/related/canigo/howto/Canigo - HowTo - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5.pdf)
 
-- [Custodia i control de versions del codi de les aplicacions al SIC](/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
+- [Custòdia i control de versions del codi de les aplicacions al SIC](/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
 
 - [Generació aplicació Canigó 3.1 amb plugin d'Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf)
 
@@ -148,7 +148,7 @@ HOWTOs disponibles actualment:
 
 - [Mavenització d'aplicacions Android](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Mavenitzaci%C3%B3+d%27aplicacions+Android.pdf")
 
-- [Custodia i control de versions del codi de les aplicacions](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf")
+- [Custòdia i control de versions del codi de les aplicacions](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf")
 
 - [Generació de gràfiques amb Primefaces a Canigó 3](/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Generaci%C3%B3+de+gr%C3%A0fiques+amb+Primefaces+a+Canig%C3%B3+3.pdf")
 

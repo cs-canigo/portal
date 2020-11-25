@@ -19,7 +19,7 @@ El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors de
 Cobreix les següents funcions i requeriments del servei SIC:
 
 * **Unificar** el sistema d'intercanvi d’artefactes entre lots d'aplicacions i CPD/LldT
-* **Potenciar la custodia de codi font** al SIC de les aplicacions
+* **Potenciar la custòdia de codi font** al SIC de les aplicacions
 * Fer ús d'un **únic repositori d’artefactes**, tant per llibreries com per artefactes desplegables
 * Reforçar el **compliment normatiu** en el versionat de les aplicacions
 * Possibilitat de tenir un servei a usar com a **procediment de contingència** en el desplegament d’aplicacions
@@ -55,7 +55,7 @@ Es realitzen les següents comprovacions:
 * Dades obligatòries informades: **codi de diàleg, projecte, versió i binari a pujar**
 * El codi de **versió** acompleix l’estàndard de versions: https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
 * El codi de **projecte** està composat de lletres i números permetent addicionalment els caràcters: ‘-’, ‘_’ i ‘.’
-* Si l’aplicació no està exempta de la custodia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
+* Si l’aplicació no està exempta de la custòdia de codi, es verificarà que s’hagi **actualitzat el codi font en els últims 20 dies**
 * El fitxer té una **mida màxima de 500MB**. No es tracta d'un servei pensat per a la pujada de binaris i arxius pesats que no siguin permesos al GIT
 doncs, amb aquest finalitat, s'ha habilitat el servei [GIT-LFS (Large File Storage)](/howtos/2019-10-09-sic-Howto-Git-lfs/).
 
@@ -112,7 +112,7 @@ el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 <!---
 ## Eliminació de binaris
 S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi
-d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custodia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
+d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custòdia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
 --->
 
 <br/><br/><br/>

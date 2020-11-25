@@ -16,7 +16,7 @@ weight = 5
 
 L'Autoservei de pipelines permet la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense
 la intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció de la pipeline de desplegament
-associada a cada projecte repositat al Sistema de Custodia de Codi (Gitlab).
+associada a cada projecte repositat al Sistema de Custòdia de Codi (Gitlab).
 
 A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.
 

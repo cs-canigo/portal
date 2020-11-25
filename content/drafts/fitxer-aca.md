@@ -88,7 +88,7 @@ resources:
 
 <div class="message information">
 Recordem breument el funcionament de les diferents modalitats: </br>
-- <b>Automàtica</b>: es construeixen els artefactes i es despleguen al servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
+- <b>Automàtica</b>: es construeixen els artefactes i es despleguen als servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
 - <b>Delegada</b>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es delega als CPD el desplegament.</br>
 - <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a CPD/LdT a través del servei de gestió de binaris.</br>
 <!--- - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br> -->
@@ -152,7 +152,7 @@ resources:
 <div class="message information">
 En el desplegament <b>AUTOMATIC</b> o <b>DELEGATED</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures.
 Aquest identificador definirà la infraestructura sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
+el detall de les infraestructures, només cal que conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
 l'arxiu ACI ni el detall d’infraestructures.
 </div>
 
@@ -179,7 +179,7 @@ La propietat `provider` suporta el següent conjunt de valors:
 </br>
 #### Artefactes
 
-El darrer element de la secció és centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
+El darrer element de la secció es centra en la definició de quins artefactes genera el procés de construcció i on s'ubicaran aquests.
 
 ```
 resources:
@@ -207,7 +207,7 @@ La propietat `artifactType` suporta el següent conjunt de valors:
 En el cas de desplegaments de bases de dades, caldrà fer referència a l’arxiu de plans en format XML.
 En aquest cas, és important assegurar-se que l’identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI.
 Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas.
-Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar la aplicació</a>. </div>
+Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar l'aplicació</a>. </div>
 
 Exemple d'artefacte de BBDD:
 
@@ -287,7 +287,7 @@ build:
         - artifact01
 ```
 
-La eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs vindrà donada.
+L'eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs aquesta vindrà donada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
 Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
@@ -324,7 +324,7 @@ build:
         - artifact02
 ```
 
-No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució doncs vindrà donada per l'eina.
+No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució doncs aquesta vindrà donada per l'eina.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
@@ -353,7 +353,7 @@ build:
         - artifact01
 ```
 
-No caldrà que s'indiqui la comanda en el `restore/build_parameters` d’execució doncs vindrà donada per l'eina de _restore_ (Nuget) i _build_ (MSBuild) respectivament.
+No caldrà que s'indiqui la comanda en el `restore/build_parameters` d’execució doncs aquesta vindrà donada per l'eina de _restore_ (Nuget) i _build_ (MSBuild) respectivament.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
@@ -426,7 +426,7 @@ build:
 
 On:
 
-* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i la etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
+* `dockerImageName`: nom de la imatge al catàleg d'imatges del SIC. Es composa pel repositori, el nom de la imatge i l'etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.
 * `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 </br>
@@ -453,7 +453,7 @@ On:
 
 <div class="message information">
 En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
-de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de la aplicació.
+de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de l'aplicació.
 </div>
 
 ### Anàlisi estàtic de codi
@@ -482,7 +482,7 @@ analysis:
 ```
 
 <div class="message information">
-En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a la Oficina de Qualitat</b> per a que sigui coneixedora de la operativa realitzada en el projecte.
+En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a l'Oficina de Qualitat</b> per a que sigui coneixedora de l'operativa realitzada en el projecte.
 </div>
 
 Per defecte, aquests indicadors es consideren actius.
@@ -490,7 +490,7 @@ Per defecte, aquests indicadors es consideren actius.
 
 #### Redefinir el timeout aplicat
 
-La Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
+L'Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
 d'anàlisi del codi font, l'usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat `aecStageTimeout` indicada en unitats de segon.
 
 ```
@@ -599,8 +599,8 @@ notificationRecipients:
 ```
 
 ## Validació
-Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer ACA en fer la pujada al Sistema de Custodia de Codi.
-Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines on-line de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
+Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer ACA en fer la pujada al Sistema de Custòdia de Codi.
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
 
 
 ## Exemples

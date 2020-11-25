@@ -39,7 +39,7 @@ A continuació, descriurem cadascun d'aquests subtipus.
 
 Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
-* Operar amb servei de **custodia de codi**.
+* Operar amb servei de **custòdia de codi**.
 * **Concedir permisos** a altres companys per accedir com a Developers o Mantainers al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
 * **Crear nous projectes** dins del grup de l'aplicació.
 * Accedir als serveis d'**integració contínua**.
@@ -65,7 +65,7 @@ Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Re
 ## Funcionament
 
 A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
-Aquest servei es realitza mitjançant l'eina de custodia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
+Aquest servei es realitza mitjançant l'eina de custòdia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
 
@@ -82,7 +82,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crea
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
-Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
 
 ### Comptabilitat amb SIC 1.0
 
@@ -116,7 +116,7 @@ Per a concedir accés sobre un projecte caldrà:
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
 
-En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
+En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custòdia de codi, gestió de binaris i integració contínua.
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
 

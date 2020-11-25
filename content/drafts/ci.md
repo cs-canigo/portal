@@ -79,7 +79,7 @@ Per tal de disposar de la informació detallada de passes realitzades i logs gen
 
 ### Execució de tasques (jobs)
 
-Els jobs de tipus "pipeline" no es podran iniciar directament des del portal ni es podrà sol·licitar la seva execució. Les tasques **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte** per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custodia de codi i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
+Els jobs de tipus "pipeline" no es podran iniciar directament des del portal ni es podrà sol·licitar la seva execució. Les tasques **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte** per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custòdia de codi i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
 
 ### Etapes de desplegament
 

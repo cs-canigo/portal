@@ -10,7 +10,7 @@ weight = 2
 
 ## Introducció
 
-En el cas que l’aplicació utilitzi el servei de custodia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes,
+En el cas que l’aplicació utilitzi el servei de custòdia de codi i la seva tecnologia permeti la construcció i desplegament automatitzat d’artefactes,
 s’hauran d’acomplir una sèrie de **requeriments per a que es pugui dur a terme la construcció de les corresponents pipelines de desplegament**.
 
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte quan una aplicació es vol integrar amb el SIC.
@@ -110,7 +110,7 @@ Exemple:
 ```
 
 
-El projecte ha de contenir tot el codi de l'aplicació i el sistema de custodia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
+El projecte ha de contenir tot el codi de l'aplicació i el sistema de custòdia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Funcionament de les pipelines de construcció i desplegament

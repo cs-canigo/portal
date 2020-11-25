@@ -10,7 +10,7 @@ weight = 1
 
 ## Introducció
 
-El SIC proporciona una sèrie de serveis: custodia de codi font (GitLab), integració contínua (Jenkins i Nexus) i binaris. Aquests serveis resulten d'**obligat ús excepte si les aplicacions utilitzen altres sistemes homologats o n'estan exemptes**. Si no és el cas i la tecnologia de l'aplicació permet desplegar-la automàticament via SIC, esdevindrà requisit imprescindible per al pas a producció.
+El SIC proporciona una sèrie de serveis: custòdia de codi font (GitLab), integració contínua (Jenkins i Nexus) i binaris. Aquests serveis resulten d'**obligat ús excepte si les aplicacions utilitzen altres sistemes homologats o n'estan exemptes**. Si no és el cas i la tecnologia de l'aplicació permet desplegar-la automàticament via SIC, esdevindrà requisit imprescindible per al pas a producció.
 
 Tots els serveis del SIC basen la gestió d'usuaris en la identitat **GICAR** associada proporcionant un **autoservei d'usuaris** per a disposar d’autonomia a l'hora d'atorgar-hi accés a la resta de membres de l'equip de desenvolupament.
 
@@ -19,17 +19,17 @@ Tots els serveis del SIC basen la gestió d'usuaris en la identitat **GICAR** as
 Per tant, es contemplen tres tipus de modalitats d'ús dels serveis:
 
 * **Automatitzada**: 
-	- Es realitza custodia de codi i les fonts s'actualitzen en cada lliurament.
+	- Es realitza custòdia de codi i les fonts s'actualitzen en cada lliurament.
 	- S'utilitzen les eines de construcció i desplegament automatitzat d'artefactes, lliurant els artefactes per al desplegament de preproducció i producció mitjançant el servei de binaris (excepte Cloud que es desplega automàticament en aquests entorns).
 * **Sense automatització**, per aplicacions que no es poden desplegar automàticament perquè la seva tecnologia o especificitats no ho permeten:
-    - Es realitza custodia de codi i les fonts s'actualitzen en cada lliurament.
+    - Es realitza custòdia de codi i les fonts s'actualitzen en cada lliurament.
 	- Els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
-* **Sense integrar**, per aplicacions exemptes de custodia de codi:
+* **Sense integrar**, per aplicacions exemptes de custòdia de codi:
     - Si no es fa ús d'un altre sistema homologat, els arxius es lliuren a CPD/LdT mitjançant el servei de binaris.
 
 Les modalitats **Sense automatització** i **Sense integrar** són casos excepcionals que han de ser validats per l'Àrea d'Arquitectura del CTTI.
     
-## Custodia de codi (GitLab)
+## Custòdia de codi (GitLab)
 
 * **Com accedir**: https://git.intranet.gencat.cat mitjançant usuari GICAR.
 * **Tipus de solució**: servei de control de versions.
@@ -39,7 +39,7 @@ Les modalitats **Sense automatització** i **Sense integrar** són casos excepci
 * **Com organitzar els projectes**: els projectes s'ubiquen dins el grup del codi d'aplicació, creant tants projectes com conjunts de codi susceptibles de ser versionats de forma independent.
 * **Quan i com fer el lliurament d'una nova versió**: un cop validat als entorns de desenvolupament, es consolidarà, es realitzarà l'increment de versió i es pujarà al repositori. Si el projecte disposa d'una tasca de construcció i desplegament automàtic i l'actualització s'ha fet sobre la branca MASTER, es dispararà la tasca corresponent al Jenkins.
 
-Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
 
 ## Integració contínua
 

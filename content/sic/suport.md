@@ -140,7 +140,7 @@ Tipus de petició per a demanar:
 * Construcció o adaptació de jobs de construcció i desplegament a Jenkins.
 * Publicació de noves llibreries al Nexus.
 * Creació d'usuaris de grups especials (administradors, oficines de qualitat... etcètera).
-* Esborrat de binaris i projectes al servei de custodia de codi.
+* Esborrat de binaris i projectes al servei de custòdia de codi.
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
