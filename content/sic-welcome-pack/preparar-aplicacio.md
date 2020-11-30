@@ -22,7 +22,7 @@ Cal que es pugi el codi font de l’aplicació al sistema de gestió de codi fon
 * Els projectes han de crear-se dins el **codi de diàleg** adient, de forma que tota la gestió posterior de jobs i creació de peticions Remedy s'associïn a l'aplicació corresponent.
 * **No es poden incloure binaris** de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE...) i la mida màxima dels arxius serà de 25MB. A tal efecte,
 s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat).
-* No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml" si aquest les referencia.
+* No es permet l'ús de versions **snapshot**, per lo que s'impedirà la pujada del fitxer `pom.xml` si aquest les referencia.
 * No es permet la pujada del fitxer `package-lock.json` en el cas dels frontals.
 * Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i
 lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
