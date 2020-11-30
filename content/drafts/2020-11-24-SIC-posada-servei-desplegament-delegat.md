@@ -4,7 +4,7 @@ title       = "SIC. Desplegament delegat a CPD"
 description = "El dia 01/12/2020 es posa en servei el desplegament delegat com a nova modalitat en el desplegament d'aplicacions"
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "DESEMBRE2020"
+#key         = "GENER2020"
 +++
 
 **A partir de l'1 de desembre del 2020 es posa en servei el desplegament delegat com a una nova modalitat de desplegament automàtic d'aplicacions**,
