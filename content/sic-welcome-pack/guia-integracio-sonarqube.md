@@ -47,9 +47,6 @@ El sistema farà l’enviament amb el client SonarScanner més adequat per a cad
 - `MSBUILD`: per a projectes que utilitzen MSBuild.
 - `GENERIC`: per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
-Per a més informació:
-https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
-
 <br/>
 Per defecte, l’enviament es farà utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte en base a la classificació del
 pas de construcció (*step*) configurat al [fitxer ACA](/sic-welcome-pack/fitxer-aca/)
@@ -57,9 +54,12 @@ repositat al codi font dels projectes i que origina la generació de les pipelin
 Podeu veure que, com a novetat, es permet incloure una secció *analysis* on es pot redefinir el sistema d’enviament
 per a escollir una modalitat més adequada, per exemple, per a salvar limitacions conegudes com les següents:
 
-- Els projectes mavenitzats han d'empaquetar-se amb una versió mínima de maven 3.
-- Els projectes java han de poder-se compilar amb una jdk mínima 1.8
-- Els projectes .Net han de compilar-se amb una versió mínima de MSBuild 14
+- Els projectes mavenitzats han d'empaquetar-se amb una versió mínima de Maven.
+- Els projectes java han de poder-se compilar amb una versió mínima de Jdk.
+- Els projectes .Net han de compilar-se amb una versió mínima de MSBuild i .NET Framework.
+
+Per a més informació:
+https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
 
 En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/latest/analysis/languages/overview/)
 (veure Community Edition) per l’eina.
