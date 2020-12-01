@@ -47,7 +47,6 @@ El sistema farà l’enviament amb el client SonarScanner més adequat per a cad
 - `MSBUILD`: per a projectes que utilitzen MSBuild.
 - `GENERIC`: per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
-<br/>
 Per defecte, l’enviament es farà utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte en base a la classificació del
 pas de construcció (*step*) configurat al [fitxer ACA](/sic-welcome-pack/fitxer-aca/)
 repositat al codi font dels projectes i que origina la generació de les pipelines al SIC.
