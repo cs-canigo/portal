@@ -129,7 +129,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-/*
 <font size="20">
 <table id="Titol_Conn" class="display" style="width:100%">
         <thead>
@@ -152,7 +151,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-*/
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
@@ -290,7 +288,6 @@ $(document).ready(function() {
 
 });
 // Funció que dona format a la taula interna del Full de Ruta de Connectivitat de l'Entorn de Treball
-/*
 function formatCONN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
@@ -383,7 +380,6 @@ $(document).ready(function() {
             } );
         }
     });
- */
      // Add event listener for opening and closing details
 /*  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
