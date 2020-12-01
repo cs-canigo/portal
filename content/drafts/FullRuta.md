@@ -129,7 +129,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-/* <font size="20">
+<!--
+<font size="20">
 <table id="Titol_Conn" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -138,7 +139,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
-*/
+-->
+<!--
 <table id="FullRutaCONN" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -152,6 +154,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+-->
+
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
