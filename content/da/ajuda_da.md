@@ -1,6 +1,6 @@
 +++
-date        = "2019-05-14"
-title       = "Exemples i ajuda Plantilla DA"
+date        = "2020-12-03"
+title       = "Preguntes Freqüentes a l'hora d'omplir un DA"
 description = "Ajuda a l'emplenat de la plantilla DA"
 sections    = "Document Arquitectura"
 weight      = 3
