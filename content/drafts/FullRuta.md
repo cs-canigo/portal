@@ -193,9 +193,9 @@ function formatLLT(d) {
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
             '<td>No aplica</td>'+
-	    '<td>'+d.lt2a+'</td>'+
-            '<td>'+d.lt2b+'</td>'+
-            '<td>'+d.lt2c+'</td>'+
+	    '<td>-</td>'+
+            '<td>-</td>'+
+            '<td>-</td>'+
         '</tr>'+
 	'<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
@@ -207,9 +207,9 @@ function formatLLT(d) {
 	  '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
             '<td>'+d.lt1+'</td>'+
-	    '<td>'+d.lt2a+'</td>'+
-            '<td>'+d.lt2b+'</td>'+
-            '<td>'+d.lt2c+'</td>'+
+	    '<td>-</td>'+
+            '<td>-</td>'+
+            '<td>-</td>'+
 	  '</tr>'+
         '<tr>'+
 	        '<th>   </th>'+
