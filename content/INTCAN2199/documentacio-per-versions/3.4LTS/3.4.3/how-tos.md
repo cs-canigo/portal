@@ -1,8 +1,8 @@
 +++
 date        = "2020-06-19"
-title       = "Guies d'ús (HowTOs)"
-description = "Guies d'ús (HowTOs)"
-sections    = "Canigó"
+title       = "Guies d'Ãºs (HowTOs)"
+description = "Guies d'Ãºs (HowTOs)"
+sections    = "CanigÃ³"
 enllac      = "/INTCAN2199/documentacio-per-versions/3.4LTS/3.4.3/how-tos/"
 weight      = 1
 +++
