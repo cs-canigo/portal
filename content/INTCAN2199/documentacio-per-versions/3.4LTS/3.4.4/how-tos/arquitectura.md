@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-19"
 title       = "Guies d'ús d'arquitectura"
-description = "Guies d'ús (HowTOs) d'arquitectura"
+description = "Guies d'ús (HowTOs) d'arquitectura 3.4.4"
 sections    = "Canigó"
 weight        = 1
 +++
