@@ -4,7 +4,7 @@ title       = "Canigó. Com configurar i utilitzar autoritzacions via Gicar pel 
 description = "Howto per a configurar una aplicació Canigó per a utilitzar l'autorització amb Gicar mitjançant el protocol SAML, a més de l’autenticació"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "GENER2020"
+#key         = "GENER2021"
 +++
 
 ## Introducció
