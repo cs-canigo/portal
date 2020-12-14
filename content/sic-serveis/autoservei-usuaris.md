@@ -1,5 +1,5 @@
 +++
-date = "2019-01-04"
+date = "2020-06-17"
 title = "Autoservei d'usuaris"
 description = "Autoservei d'usuaris SIC 2.0 mitjançant GitLab"
 aliases = [
@@ -39,8 +39,8 @@ A continuació, descriurem cadascun d'aquests subtipus.
 
 Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
-* Operar amb servei de **custodia de codi**.
-* **Concedir permisos** a altres companys per accedir com a Developers o Masters al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
+* Operar amb servei de **custòdia de codi**.
+* **Concedir permisos** a altres companys per accedir com a Developers o Mantainers al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
 * **Crear nous projectes** dins del grup de l'aplicació.
 * Accedir als serveis d'**integració contínua**.
 * Accedir al servei de gestió de **binaris** per dipositar i recollir arxius.
@@ -48,24 +48,24 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 #### Responsables de lot
 
 Aquest tipus de grup recull als responsables de lot. <br/>
-Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat manca de valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
+Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat perd valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
 Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un LOT concret en el moment de la creació
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ### Grups de CPDs i LdTs
 
 Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-La pertinença als grups d'aquest tipus és automàtica i ve donada per la categorització que fa GICAR dels usuaris, als quals s'assigna a un CPD/LDT concret en el moment de la creació. Per tant, tot usuari de GICAR, pel fet de ser d'un CPD o d'un grup de LDT concrets, té accés preconcedit al SIC.
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ### Altres grups
 
-Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Oficina de Qualitat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
-La pertinença a aquests tipus de grups es realitza de forma manual ja que la seva composició varia amb molt poca freqüència.
+Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Responsables d'àmbit, Oficina de Qualitat, Oficina de Seguretat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
 
 ## Funcionament
 
 A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
-Aquest servei es realitza mitjançant l'eina de custodia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
+Aquest servei es realitza mitjançant l'eina de custòdia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
 
@@ -82,7 +82,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crea
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
-Per a més informació: [Custodia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
 
 ### Comptabilitat amb SIC 1.0
 
@@ -109,19 +109,19 @@ Per a concedir accés sobre un projecte caldrà:
 * Mitjançant el menú superior cal seleccionar "**Settings**" i, dins aquest ,"**Members**".
 * Al formulari que apareix, cercar l'usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S'aconsella **cercar per NIF**.
 * Escollir el **rol** que ha de tenir l'usuari dins el projecte:
-	* Rol Master: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
+	* Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l'aplicació i proporcionar accés a altres usuaris als projectes dins el grup.
 	* Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).
 * Prémer el botó de "**Add to Project**"
 
 <CENTER>![Proporcionar accés a Projecte](/images/news/autoserveiUsuaris_4.PNG)</center>
 <br/>
 
-En el cas que el rol escollit per a l'usuari hagués estat de **Master**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custodia de codi, gestió de binaris i integració contínua.
+En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'endemà de l'assignació, l'usuari haurà adquirit accés a la resta de projectes del grup de l'aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d'aplicació. Aquesta **promoció a Release Manager** permetrà l'accés a la resta de serveis del SIC: custòdia de codi, gestió de binaris i integració contínua.
 <CENTER>![Visibilitat adquirida segons Rol](/images/news/autoserveiUsuaris_5.PNG)</center>
 <br/>
 
 **AVÍS**: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l'assignació desitjada.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [Manuals](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [FAQ] (/sic/faq) i utilitzeu el canal de [Suport] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

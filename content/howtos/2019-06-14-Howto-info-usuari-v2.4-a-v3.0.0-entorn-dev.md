@@ -72,7 +72,7 @@ Realitzar els mateixos passos a les dues màquines virtuals per a tenir la matei
 
 - Fitxers que vulguem mantenir del Documents, en el nostre cas ho hem posat dins de la carpeta /tmp/backup_dev_env/Documents
 
-En el nostre cas hem copiat: carpeta workspace antiga del eclipse (workspace-sts-3.7.1.RELEASE),  carpeta workspace antiga del soap ui (soapui-projects), carpeta on descarregavem els projectes del git (git), altres fitxers i carpetes de treball
+En el nostre cas hem copiat: carpeta workspace antiga de l'eclipse (workspace-sts-3.7.1.RELEASE),  carpeta workspace antiga del soap ui (soapui-projects), carpeta on descarregavem els projectes del git (git), altres fitxers i carpetes de treball
 ![Documents](/images/news/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev-documents.png)
 
 - Fitxers de video i imatges si tenim, per exemple a /tmp/backup_dev_env/Videos i /tmp/backup_dev_env/Pictures

@@ -1,5 +1,5 @@
 +++
-date          = "2018-06-06"
+date          = "2020-06-11"
 title         = "Criteris creació contenidors docker"
 description   = "Criteris per crear les imatges dels contenidors docker que es desplegaran als diferents clouds públics i privats"
 sections      = "Container Cloud"
@@ -24,11 +24,12 @@ Podeu trobar més informació respecte al registre privat a [Registre docker pri
 * Les imatges de docker es crearan sempre a partir del fitxer Dockerfile, en cap cas es crearan imatges a partir de contenidors.
 * En cas que existeixin imatges homologades pel CTTI de la tecnologia requerida, el Dockerfile particular de cada aplicació haurà de tenir com a base la imatge homologada, utilitzant la directiva **FROM**.
 * En cas que no existeixin imatges homologades pel CTTI de la tecnologia requerida, a l'hora d'escollir les imatges de base es faran servir els següents criteris:
-	* Imatge oficial de fabricant al [docker hub](https://hub.docker.com/).
+    * **Sempre es crearan les imatges utilitzant Dockerfile, en cap cas s'utilitzaran imatges preconstruides.**
+    * S'utilitzarà preferentment el Dockerfile d'Imatges oficials dels fabricants, normalment disponibles al [docker hub](https://hub.docker.com/).
 	* En cas que existeixi una imatge oficial basada en **[Alpine](https://hub.docker.com/_/alpine/)**, s'escollirà aquesta.
     * En cas que no existeixi una imatge oficial basada en Alpine, s'escollirà la imatge basada en Centos, substituint Centos per la versió d'Oracle Linux Slim corresponent. Aquesta substitució és necessària pel support de pegats de seguretat que ofereix Oracle Linux i no ofereix Centos.
 	* En cas que no existeixi una imatge oficial basada en Alpine ni Centos, s'escollirà la que recomani el fabricant. Sol ser la que al tag només s'indica la versió.
-* Mai s'escollirà el tag latest. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
+* **Mai s'escollirà el tag latest**. És una versió que va canviant en el temps i genera inestabilitat a les aplicacions. Escollir sempre la versió més tancada possible.
 
 ## Criteris generals per la creació de les imatges
 
@@ -51,6 +52,7 @@ Alguns d'aquests criteris no apliquen en cas d'utilitzar les imatges homologades
 * Intentar utilitzar l'última versió del producte, sol ser la que té menys vulnerabilitats de seguretat.
 * Per validar la seguretat de les imatges creades, utilitzar l'eina [Clair](https://github.com/coreos/clair). En cas que es detectin vulnerabilitats, intentar eliminar-les instal·lant els patches necessaris.
 * Aplicar totes les configuracions de seguretat recomanades pel fabricant o la comunitat per cada producte en particular.
+* Es recomanable seguir les directrius de seguretat definides per CIS. [CIS Docker Benchmark](https://www.cisecurity.org/benchmark/docker/).
 
 Abans de desplegar un contenidor a producció, es realitzarà una validació de seguretat utilitzant l'eina Clair. En cas de detectar vulnerabilitats de caràcter greu la imatge no serà desplegada.
 
@@ -63,14 +65,26 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 	* Aquest usuari es crea a l'executar el docker. No existeix, ni es coneix, en etapa de construcció de la imatge de docker.
 	* A causa de la característica anterior, és possible que algunes accions que habitualment es fan en etapa de construcció calgui fer-les en etapa d'execució amb alguna shell.
 	* Cal que les carpetes on el procés escriu dades, pertanyin al grup root. Es pot veure a l'script **docker-setup.sh** inclòs abaix.
-	* Algunes aplicacions necessiten que l'usuari estigui definit al fitxer /etc/passwd. En aquest cas és necessari utilitzar el paquet **[nss_wrapper](https://cwrap.org/nss_wrapper.html)** per emular els canvis en aquest fitxer. Es pot veure un exemple a la imatge docker [postgres-openshift](https://github.com/gencat/postgres-openshift). Veure la plana web [Openshift. Creating Images. Guidelines. OpenShift Origin-Specific Guidelines. Support Arbitrary User IDs] (https://docs.openshift.org/latest/creating_images/guidelines.html#openshift-origin-specific-guidelines) per més detalls.
+	* Algunes aplicacions necessiten que l'usuari estigui definit al fitxer **/etc/passwd**. En aquest cas existeixen dues opcions:
+      * Utilitzar el paquet **[nss_wrapper](https://cwrap.org/nss_wrapper.html)** per emular els canvis en aquest fitxer.
+  Es necessari heretar de la imatge [alpine-nss](https://git.intranet.gencat.cat/3048-intern/imatges-docker/alpine-nss). Important llegir el README.md amb les instruccions de com utilitzar-la. 
+  
+        Es pot veure un exemple d'ús a la imatge docker [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres). Fixeu-vos sobretot en l'ús del ENTRYPOINT.
+    
+      * Utilitar la funcionalitat que ofereix [cri.o](https://cri-o.io/), motor de contenidors d'Openshift 4, que afegeix automàticament l'usuari amb que arrenca el contenidor al fitxer de **/etc/password**
+
+        Veure la plana web [Openshift. Creating Images. Guidelines. OpenShift Origin-Specific Guidelines. Support Arbitrary User IDs](https://docs.openshift.com/container-platform/4.3/openshift_images/create-images.html) per més detalls.
 * Utilitzar variables d'entorn per la configuració.
-* Més informació de com construir les imatges de docker està disponible a [Openshift. Creating Images. Guidelines](https://docs.openshift.org/latest/creating_images/guidelines.html).
+* Més informació de com construir les imatges de docker està disponible a :
+  * [Openshift 4.3. Creating Images. Guidelines](https://docs.openshift.com/container-platform/4.3/openshift_images/create-images.html#images-create-guide-openshift_create-images)
+  * [Openshift 3.11. Creating Images. Guidelines](https://docs.openshift.com/container-platform/3.11/creating_images/guidelines.html)
+  * [OpenShift Containers - Modification of /etc/passwd](https://access.redhat.com/articles/4859371)
 
 ## Exemples
-Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [registre docker privat](https://docker-registry.ctti.extranet.gencat.cat) projecte **gencatcloud**.
+Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [registre docker privat](https://docker-registry.ctti.extranet.gencat.cat) projecte **gencatcloud**. Podeu trobar els Dockerfiles de les imatges a [git imatges docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker/).
 
-Les imatges amb extensió **-openshift* són les compatibles amb la plataforma de xPaaS del mateix nom.
+Quan trobeu que per una tecnologia existeix la versió normal i la versió amb 
+amb sufix **-openshift**, les imatges amb versió normal son compatibles amb docker(local) i Swarme i les imatges amb amb sufix **-openshift** són compatibles amb Kubernetes i Openshift.
 
 ## Annexos
 _wait-for-it.sh_

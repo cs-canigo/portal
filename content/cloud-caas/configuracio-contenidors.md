@@ -1,13 +1,13 @@
 +++
-date        = "2019-02-20"
+date        = "2020-06-12"
 title       = "Gestió de configuracions a Contenidors"
-description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes ,Openshift i Swarm"
+description = "Model de gestió de configuracions en orquestradors basats en Kubernetes: Kubernetes, Openshift i Swarm"
 sections    = "Container Cloud"
 weight      = 10
 categories  = ["cloud","docker","container","kubernetes","openshift","Swarm"]
 +++
 
-A gestió de configuracions als Orquestradors docker, es poden distingir dos escenaris clarament diferenciats:
+La gestió de configuracions als Orquestradors docker, es poden distingir dos escenaris clarament diferenciats:
 
 - Gestió de configuracions a Kubernetes i Openshift
 - Gestió de configuracions a Swarm
@@ -47,8 +47,9 @@ Bàsicament s'exposen unes variables de tipus **{SVCNAME}_SERVICE_HOST** i **{SV
 Podeu trobar més informació a [Discovering services.](https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services)
 
 Podeu trobar exemples de yamls complets dels descriptors de desplegament a 
-- [Contenidors AppAgile](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/)
-- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud/contenidors_kubernetes/)
+
+- [Contenidors Openshift](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
+- [Contenidors Kubernetes](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/)
 
 ### ConfigMap
 
@@ -183,6 +184,7 @@ Per la gestió de configuració, kubeSwarmrnetes ens ofereix els següents compo
 
 - Variables d'entorn
 - Secret
+- Configs
 
 ### Variables d'entorn
 
@@ -193,4 +195,24 @@ Cal proporcionar-les a l'equip de Suport Cloud a l'hora de configurar el despleg
 
 ### Secrets
 
-El seu ús està en estudi i encara no està suportat en els desplegaments a SwarmMe.
+Els secrets es cofiguren a la consola de SwarmMe i posteriorment es defineixen al contenidor al moment de desplegar. Aquests secrets es creen a la carpeta del contenidor /run/secrets i el nom del fitxer aplica a la clau i el contingut al valor.
+
+L'aplicació s'encarregarà de carregar aquest valor, per al seu ús.
+
+### Configs
+
+Està orientat a configuracions més complexes. Suporta tant variables del tipus clau valor com fitxers de configuració.
+
+La seva configuració es realitza a la consola de SwarmMe i posteriorment s'associa al desplegament, de tal manera que caldrà indicar-se la ruta destí de la configuració.
+
+Un exemple:
+
+```
+# Application properties from config-map
+server.connection-timeout=60000
+server.tomcat.accesslog.enabled=true
+spring.profiles.active=pre
+mongo.host=my-mongo-host:27017
+mongo.databaseName=example
+api.url=http://external-url:8080/api
+```

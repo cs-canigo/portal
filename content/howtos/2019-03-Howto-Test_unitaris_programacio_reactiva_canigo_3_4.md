@@ -29,13 +29,20 @@ El projecte Reactor proporciona les principals funcionalitats pel testeig de pro
 - Producció de dades en un ordre en concret per testejar el comportament dels operadors
 
 Els principals components que proporcionen aquestes funcionalitats són:
+<br>
 - StepVerifier
+<br>
 - TestPublisher
+<br>
 
 El resum dels passos a utilitzar per crear un test seria:
+<br>
 - Creació de l'escenari
+<br>
 - Els diferents passos a provar en el fluxe de dades del stream
+<br>
 - Verificació final que la seqüència es compleix 
+<br>
 
 Per a més informació podeu consultar la documentació del projecte [Reactor testing](https://projectreactor.io/docs/core/release/reference/#testing).
 

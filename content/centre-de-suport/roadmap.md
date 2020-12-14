@@ -1,6 +1,6 @@
 +++
 date        = "2015-09-25"
-lastmod     = "2018-04-16"
+lastmod     = "2019-07-19"
 title       = "Roadmap CS Canigó"
 description = "Roadmap del CS Canigó: Canigó, SIC i SGDE"
 sections    = "Roadmap"
@@ -11,10 +11,10 @@ categories  = ["canigo","sic","sgde"]
 <iframe src='//cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1ycTBuP_02_fFQYHePMhAxAnNt70R4GyTP4phJn3EHi8&font=Default&lang=ca&initial_zoom=1&height=600&start_at_slide=20' width='100%' height='600' frameborder='0'></iframe-->
 
 
-<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css" />
+<link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/3.7.9/css/timeline.css" />
 
 <script src="/js/sheet2array.js"></script>
-<script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+<script src="https://cdn.knightlab.com/libs/timeline3/3.7.9/js/timeline.js"></script>
 
 <div id='timeline-embed' style="width: 100%; height: 600px;"></div>
 
@@ -23,7 +23,7 @@ categories  = ["canigo","sic","sgde"]
 /*	   $.getJSON("https://script.google.com/macros/s/AKfycbwXOwdyefmpRayODliduXDI2m0wCm_TKMiB_tQkkDDKaA4l9WQ/exec?callback=?", null, function(results){ */
 	   			
 				var additionalOptions = {
-			    	start_at_slide: 53,
+				start_at_end: true,
 			        timenav_height: 200,
 			        height : 650,
 			        initial_zoom: 12/*,

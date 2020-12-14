@@ -19,13 +19,13 @@ amb informació sobre les dades a inserir en els documents originals
 
 ## Rearquitectura
 
-Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/). Només el servei de conversió de documents ofimàtics MS Office a PDF requereix d'un entorn Windows aprovisionat en VMs a CPD.
+Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/). Només el servei de conversió de documents ofimàtics MS Office a PDF requereix d'un entorn Windows aprovisionat en VMs a CPD.
 
 ![std2-arquitectura](/images/news/std2-arquitectura.PNG)
 
 Gràcies a aquesta rearquitectura és possible **escalar** els diferents serveis per separat dependent del seu consum, a més d'estar **aïllats**, motiu pel qual un problema en un dels serveis no afectarà la resta. Tot el cicle de vida (desenvolupament, construcció, tests, versionat, desplegament) de cada servei és independent dels altres, podent ser evolucionats per separat.
 
-Totes les funcionalitats del STD avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant. La documentació per l'ús d'aquesta nova API REST està disponible al [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.0.pdf) del servei.
+Totes les funcionalitats del STD avui dia són exposades mitjançant serveis **SOAP**. Un cop finalitzat aquest projecte d'actualització tecnològica, a més de mantenir aquests serveis per compatibilitat amb els consumidors existents, s'exposarà una nova **API REST**. Aquesta és la línia que s'evolucionarà a futur i a la qual es recomana que les aplicacions noves s'integrin, i les existents vagin migrant. La documentació per l'ús d'aquesta nova API REST està disponible al [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.2.pdf) del servei.
 
 ### Sondes
 

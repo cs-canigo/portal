@@ -41,6 +41,31 @@
 	Arquitectura CTTI
 {{ end }}
 
+{{ if (eq $section "dadesref")}}
+	Gestió Tècnica de Dades
+{{ end }}
+
 {{ if in .URL "blog_tags" }}
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
+{{end}}
+
+{{ if (eq $section "intcan2199")}}
+
+	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+	{{ $.Scratch.Add "path" .Site.BaseURL }}
+	{{ $.Scratch.Add "path" "/" }}
+	
+	{{ range $index, $element := split $url "/" }}
+	  {{ $.Scratch.Add "path" $element }}
+	  {{ if ne $element "" }}
+	  	{{ $.Scratch.Add "path" "/" }}
+	  	{{ if gt $index 1 }}
+	  		<li>
+	  	{{ end }}
+	  	<a href='{{ $.Scratch.Get "path" }}'>{{ replace (replace (replace . "-" " ") "%C3%B2" "ò") "%C3%B3" "ó" }}</a>
+	  	{{ if gt $index 1 }}
+	  		</li>
+	  	{{ end }}
+	  {{ end }}
+	{{ end }}
 {{end}}

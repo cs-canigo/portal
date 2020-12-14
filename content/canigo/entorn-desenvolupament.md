@@ -1,6 +1,6 @@
 +++
 date        = "2015-11-18"
-lastmod     = "2019-04-23"
+lastmod     = "2020-05-07"
 title       = "Entorn de desenvolupament"
 description = "Màquina virtual amb l'ecosistema d'eines Canigó per a començar a desenvolupar"
 sections    = "Canigó"
@@ -31,6 +31,11 @@ Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviame
 * [Vagrant](http://www.vagrantup.com/downloads.html)
 * [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/3.0.0) amb la configuració de l'entorn Canigó
 
+Per a poder utilitzar l'entorn de desenvolupament és necessari:
+
+* 120 GB de disc dur lliure
+* 6 GB de memòria ram lliure
+* 32 MB de memòria de video lliure
 
 ### Instal·lació
 
@@ -53,6 +58,10 @@ En el moment que a la màquina virtual aixecada es vegi l'escriptori, el procés
 
 * Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les comandes `vagrant up` i `vagrant halt` per fer aquestes accions.
 * Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d'eines a l'entorn sense prèvia consulta a l'equip del CS Canigó.
+* **Hosts Windows/Mac**: En el cas que hi hagi problemes de codificació en el moment d'arrencar l'entorn, es pot deure al fet que els fitxers de text (p.e. `provision.sh`) s'han adaptat automàticament als caràcters EOL del host. En aquest cas s'ha d'indicar a GIT que no faci aquesta adaptació automàtica (respectant el contingut original), amb les següents dues comandes i tornant a instal·lar de zero l'entorn (`git clone` + `vagrant up`).
+
+        git config --global core.autocrlf false
+        vagrant destroy -f
 
 
 ### Software base
@@ -109,7 +118,67 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 ### Versions
 
-#### 3.0.0 (22/04/2019) -- <span style="color:green">OPERATIVA</span>
+#### 3.0.6 (14/07/2020) -- <span style="color:green">OPERATIVA</span>
+
+_RELEASE NOTES_
+
+* Canvi del domini del plugin de l'eclipse de http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/ a https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.5 (07/05/2020)
+
+_RELEASE NOTES_
+
+* Canvis a les urls del programari a instal·lar per urls controlades per CS Canigó
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.4 (14/04/2020) 
+
+_RELEASE NOTES_
+
+* Resolució error url dbeaver
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.3 (09/12/2019) 
+
+_RELEASE NOTES_
+
+* Resolució error url jmeter
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.2 (14/11/2019)
+
+_RELEASE NOTES_
+
+* Millores en les traces d'error de la instal·lació
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.1 (19/09/2019)
+
+_RELEASE NOTES_
+
+* Resolució error carpetes personals usuari canigo
+
+_KNOWN ISSUES_
+
+* El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
+
+#### 3.0.0 (22/04/2019)
 
 _RELEASE NOTES_
 

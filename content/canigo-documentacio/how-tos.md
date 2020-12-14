@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-02"
+date        = "2020-07-15"
 title       = "HOWTOs"
 description = "HOWTOs d'utilitat per els diferents serveis que ofereix el CS Canigó"
 sections    = "HOWTOs"
@@ -12,6 +12,24 @@ Un HOWTO és un document informal, generalment breu, que descriu com desenvolupa
 En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.
 
 HOWTOs disponibles actualment:
+
+- [Com definir handler exception personalitzat] (/howtos/2020-10-08-Definir_handler_exception_personalitzat/)
+
+- [Com personalitzar les validacions del token JWT] (/howtos/2020-09-30-Personalitzar_validacio_token_jwt/)
+
+- [Com canviar el domini on està allotjat el plugin de l'eclipse] (/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/)
+
+- [Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó] (/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/)
+
+- [Comprovació automàtica de dependències vulnerables per aplicacions Canigó] (/howtos/2019-08-13-Howto-Dependency-check/)
+
+- [Com implementar tests unitaris amb Webflux a Canigó 3.4] (/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/)
+
+- [Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó] (/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/)
+
+- [Com configurar i utilitzar IronPort a una aplicació Canigó] (/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/)
+
+- [Resolució problema optimització Spring a Canigó 2] (/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/)
 
 - [Afegir les dev tools de Spring a Canigó 3.4.0] (/howtos/2019-04-Howto-afegir_dev_tools_spring/)
 
@@ -77,7 +95,7 @@ HOWTOs disponibles actualment:
 
 - [Certificació desplegaments d'aplicacions Canigó 3.X a Websphere 8.5](/related/canigo/howto/Canigo - HowTo - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5.pdf)
 
-- [Custodia i control de versions del codi de les aplicacions al SIC](/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
+- [Custòdia i control de versions del codi de les aplicacions al SIC](/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf)
 
 - [Generació aplicació Canigó 3.1 amb plugin d'Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf)
 
@@ -130,7 +148,7 @@ HOWTOs disponibles actualment:
 
 - [Mavenització d'aplicacions Android](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Mavenitzaci%C3%B3+d%27aplicacions+Android.pdf")
 
-- [Custodia i control de versions del codi de les aplicacions](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf")
+- [Custòdia i control de versions del codi de les aplicacions](/related/canigo/howto/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf")
 
 - [Generació de gràfiques amb Primefaces a Canigó 3](/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Generaci%C3%B3+de+gr%C3%A0fiques+amb+Primefaces+a+Canig%C3%B3+3.pdf")
 

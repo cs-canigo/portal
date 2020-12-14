@@ -66,7 +66,7 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 - **CRÍTIC**	La informació és confidencial, restringida a un cercle reduït d’individus, amb requeriments de xifrat i traçabilitat dels accessos?
 	(Exemples: gestió de centres penitenciaris, eleccions, gabinets jurídics, subvencions, contractacions, plataformes transversals de suport a la tramitació, actuació de cossos d'emergències, inventari d'infraestructures crítiques, plans de protecció civil, etc.))
 	
-- **SENSIBLE**	La informació és restringida a àrees o unitats amb requeriments avançats de control d'accés i garanties d'intergitat i autenticitat? (Exemples: registre de ciutadans amb dades acadèmiques, sistemes de gestió de personal, llistes de col·lectius, la divulgació de les quals podria tenir repercussió política, registres d'empreses amb informació reservada, gestió de dades pressupostàries i econòmico-financeres, gestió del deute, sistemes d’ anàlisi de dades: estadístiques de serveis/operativa i quadres de comandament, actuacions de cossos operatius de la Generalitat (exceptuant els d'emergències), gestió de flotes d'emergència, tràmits de pagament on-line, tràmits electrònics i portals de tràmits, auditories, gestió de riscos, plans de continuïtat de negoci, assistència jurídica, gestió de la publicació d’informació (previ a la publicació))
+- **SENSIBLE**	La informació és restringida a àrees o unitats amb requeriments avançats de control d'accés i garanties d'integritat i autenticitat? (Exemples: registre de ciutadans amb dades acadèmiques, sistemes de gestió de personal, llistes de col·lectius, la divulgació de les quals podria tenir repercussió política, registres d'empreses amb informació reservada, gestió de dades pressupostàries i econòmic-financeres, gestió del deute, sistemes d’ anàlisi de dades: estadístiques de serveis/operativa i quadres de comandament, actuacions de cossos operatius de la Generalitat (exceptuant els d'emergències), gestió de flotes d'emergència, tràmits de pagament on-line, tràmits electrònics i portals de tràmits, auditories, gestió de riscos, plans de continuïtat de negoci, assistència jurídica, gestió de la publicació d’informació (previ a la publicació))
 
 - **INTERN**	Hi ha informació no crítica on es pot permetre una lleu pèrdua d'integritat e informació? 
 	(Exemples: intranets departamentals, plataformes col·laboratives, fòrums, blogs, registres de professionals, convocatòries, concursos de personal, oposicions, usuaris d'aplicació, assistents a cursos, entrada/sortida de documents, gestió d'inventaris, qüestions parlamentàries, plecs, plans d'actuació, gestió de compres, consultes i suggeriments, queixes sense dades sensibles, infraestructures, expedients sense informació anterior, etc.)
@@ -80,7 +80,7 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 - La publicació de qualsevol aplicació oberta a internet s’ha de realitzar des d’una DMZ.
 - L’aplicació no ha de ser accessibles des de Internet en entorns no productius.
 - Les transmissions de dades en xarxes públiques han d’anar xifrades.
-- Els servidors i middelwares han de complir amb les guies de bastionat del CESICAT o, en el seu defecte, amb les guies de bastionat del fabricat.
+- Els servidors i middlewares han de complir amb les guies de bastionat del CESICAT o, en el seu defecte, amb les guies de bastionat del fabricat.
 - Només s’han d’obrir aquells ports que siguin estrictament necessaris per l’ús del sistema d’informació.
 - Cal realitzar una anàlisi tècnica de vulnerabilitats de la infraestructura dels diferents entorns abans de la seva posada en producció.
 - S’ ha de realitzar una anàlisi tècnica de vulnerabilitats dels frontals web abans de la posada en producció.
@@ -97,10 +97,10 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 ## Vista Desplegament:
 
 ### Taula de Cloud Privat {#TaulaCloudPrivat}
-S'ha de crear una taula com la de la plantilla per cada un dels entorns que forman part del servei.
+S'ha de crear una taula com la de la plantilla per cada un dels entorns que formen part del servei.
 Detall de cada un dels camps de la taula:
 #### Identificador d'instància
- Identificador unic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà despres per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies son noves, quinas han tingut canvis o quines son compartides amb altres serveis / solucions del departament.
+ Identificador únic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà després per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies són noves, quines han tingut canvis o quines són compartides amb altres serveis / solucions del departament.
 
 #### *1 Tipus de Servei {#TipusServei}
 - PaaS
@@ -108,10 +108,10 @@ Detall de cada un dels camps de la taula:
 - Hosting
 
 #### Programari i versió
- Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari.
+ Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari.
  
 #### Talla i recursos adicionals
- Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs adicional com pot ser vCPUs o Gb de ram.
+ Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram.
  
  ![Taula de talles](/images/PlantillaDA/Talles.JPG)
 
@@ -125,7 +125,7 @@ Detall de cada un dels camps de la taula:
 ### Taula d'emmagatzematge {#TaulaDisc}
 
 #### Identificador d'Instància
- Per relacionar la taula d'elements de cataleg cloud amb el disc adicional es fa us d'aquest camp, ha de coincidir amb l'identificador de la instancia que se li ha donat a la taula anterior.
+ Per relacionar la taula d'elements de catàleg cloud amb el disc addicional es fa us d'aquest camp, ha de coincidir amb l'identificador de la instancia que se li ha donat a la taula anterior.
 
 #### *3 Tipus de disc {#TipusDisc}
 - Blocs: Aquest tipus d’emmagatzematge està especialment pensat per quan es necessita una capacitat de disc dur en brut, com per exemple, espai per a una BBDD Oracle.
@@ -144,16 +144,20 @@ Detall de cada un dels camps de la taula:
 - RPO: RPO Zero (No pot perdre cap transacció) /  RPO Darrer Backup
 
 ### Taula de Cloud Públic {#TaulaCloudPublic}
- Taula on es detalla la informació relativa als contenidors que forman part del servei.
+ Taula on es detalla la informació relativa als contenidors que formen part del servei.
+
+#### Identificador d'instància
+ Identificador únic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà després per referenciar la instancia a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies són noves, quines han tingut canvis.
 
 #### Nombre de Pods / Contenidors
  Un POD es la unitat mes petita a crear a Kubernetes, en la majoria dels casos un POD equival a un contenidor, en aquest camp s'ha d'indicar el nombre de pods a crear del tipus que es detalla a la resta de camps de la taula.
 
 #### Programari i versió / Imatge Docker
- Nom del programari i versió que s'instala. Ha d'estar alineat amb el full de ruta del programari. Si es fa ú d'una imatge Docker ja existent al repositori oficial, indicar el seu nom.
+ Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari. Si es fa ú d'una imatge Docker ja existent al repositori oficial, indicar el seu nom.
 
-#### Memoria Ram
- Memoria Ram asignada al Pod / Contenidor.
+#### Memòria Ram  i/o recursos addicionals
+ Memòria Ram assignada al Pod / Contenidor.
+ En algunes plataformes de cloud es requereix altre tipus de dades de recursos addicionals, per exemple CPU.
 
 #### Disc Persistent
  Indicar si es necessari o no disc persistent, en cas afirmatiu s'ha d'informar de la mida del disc en Gb.

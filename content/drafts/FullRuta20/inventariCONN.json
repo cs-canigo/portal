@@ -1,0 +1,16 @@
+{
+"data":
+[
+{"id":1,"producte":"Switch LAN - Cisco IOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 15.0(2)SE","suportat":"15.0(2)SE - 15.0(2)SE11","versioactual":"15.0(2)SE12","roadmap":"–","emergent":"–"},
+{"id":2,"producte":"Switch LAN - Cisco IOS XE","categoria":"Sistema Operatiu Xarxa","obsolet":"< 16.1.x","suportat":"16.8.x - 16.1.x  ","versioactual":"16.9.x","roadmap":"16.12.x","emergent":"–"},
+{"id":3,"producte":"Switch LAN - Cisco NX-OS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.0(3)I1(x)","suportat":" 7.0(3)I6(x) -7.0(3)l1(x), 9.2(x)","versioactual":"7.0(3)I7(x)","roadmap":"9.3(x)","emergent":"–"},
+{"id":4,"producte":"AP - Cisco IOS","categoria":"Sistema Operatiu Xarxa","obsolet":"≤ 15.2(4)x","suportat":"15.3(3)x","versioactual":"15.3(3)x","roadmap":"–","emergent":"–"},
+{"id":5,"producte":"AP - Cisco AireOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 8.0","suportat":"8.9 - 8.0","versioactual":"8.10","roadmap":"-","emergent":"–"},
+{"id":6,"producte":"Wireless LAN Controller - Cisco WLC Software","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.0.x","suportat":"8.10.x - 7.0.x","versioactual":"8.10.105.0 ","roadmap":"8.10.112.0","emergent":"–"},
+{"id":7,"producte":"Cisco ISE","categoria":"Sistema Operatiu Xarxa","obsolet":"< 2.0","suportat":"2.3 - 2.0","versioactual":"2.6","roadmap":"2.7","emergent":"–"},
+{"id":8,"producte":"Cisco DNA Center","categoria":"Sistema Operatiu Xarxa","obsolet":"< 1.1.x","suportat":"1.3.x - 1.1.x","versioactual":"1.3.1.x ","roadmap":"1.3.3.x ","emergent":"–"},
+{"id":9,"producte":"Servidor DNS - Infoblox NIOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.x","suportat":"8.4.x - 7.x","versioactual":"8.4.x","roadmap":"8.5","emergent":"–"},
+{"id":10,"producte":"Servidor DHCP - Infoblox NIOS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 7.x","suportat":"8.4.x - 7.x","versioactual":"8.4.x","roadmap":"8.5","emergent":"–"},
+{"id":11,"producte":"FW LAN - Cisco ASA OS","categoria":"Sistema Operatiu Xarxa","obsolet":"< 4.0","suportat":"4.5 - 4.0","versioactual":"4.6","roadmap":"4.8","emergent":"–"}
+]
+}

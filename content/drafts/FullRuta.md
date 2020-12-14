@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-14"
+date        = "2020-03-16"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -72,16 +72,16 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
 <table id="Revisio" class="display" style="width:50%">
-        <thead>
-            <tr>
-                <th>Darrera revisió realitzada</th>
-                <th> Revisió de full de ruta vigent fins</th>
-             </tr>
-	     <tr>
-                <td>febrer de 2019 </td>
-                <td>juny de 2019</td> 
-             </tr>
-        </thead>
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>juliol de 2020 </td>
+<td>octubre de 2020</td>
+</tr>
+</thead>
 </table>
 <font size="20">
 <table id="Titol_CPD" class="display" style="width:100%">
@@ -118,6 +118,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
+                <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
                 <th>Obsolet</th>
@@ -128,6 +129,33 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+<!--
+<font size="20">
+<table id="Titol_Conn" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat de l'Entorn de Treball </th>
+            </tr>
+ </thead>
+</table>
+</font>
+-->
+<!--
+<table id="FullRutaCONN" class="display" style="width:100%">
+        <thead>
+	    <tr>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+-->
+
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
@@ -157,6 +185,132 @@ function formatLLT(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
+	    '<th width="300">LT1</th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
+            '<td>NO APLICA</td>'+
+	    '<td>'+d.lt2avw8+'</td>'+
+            '<td>'+d.lt2bvw8+'</td>'+
+            '<td>'+d.lt2cvw8+'</td>'+
+        '</tr>'+
+	'<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
+            '<td>NO APLICA</td>'+
+	    '<td>'+d.lt2avw10+'</td>'+
+            '<td>'+d.lt2bvw10+'</td>'+
+            '<td>'+d.lt2cvw10+'</td>'+
+	  '</tr>'+
+	  '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
+            '<td>'+d.lt1+'</td>'+
+	    '<td>NO APLICA</td>'+
+             '<td>'+d.lt2bpl+'</td>'+
+            '<td>'+d.lt2cpl+'</td>'+
+	  '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="4">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="4">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+	"info" : false,
+	"ordering": false,
+	"responsive": {
+            details: false
+    	},
+    	"language":{
+	        	"search" : "<strong>Cerca:</strong> ",
+		        "infoEmpty": "No hi ha registres",
+	        	"zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariLLT.json",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
+            },
+            { "data": "categoria",
+	      "width": "30%" },
+            { "data": "producte", 
+	      "className":      'intern',
+	      "width": "30%"
+	    },
+            { "data": "obsolet",
+	      "width": "20%" },
+            { "data": "suportat",
+	      "width": "80%" },
+            { "data": "versioactual",
+	      "className":      'intern',
+	      "width": "80%"
+	    },
+            { "data": "roadmap",
+	      "width": "100%" },
+            { "data": "emergent",
+	      "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==1 && col_index !==2){
+	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
+	                	return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaLLT.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatLLT(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+
+});
+// Funció que dona format a la taula interna del Full de Ruta de Connectivitat de l'Entorn de Treball
+function formatCONN(d) {
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
             '<th width="300">LT2A</th>'+
             '<th width="300">LT2B</th>'+
             '<th width="300">LT2C</th>'+
@@ -178,7 +332,7 @@ function formatLLT(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+    var taulaFullRutaCONN = $('#FullRutaCONN').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -193,7 +347,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariLLT.json",
+        "ajax": "../FullRuta20/inventariCONN.json",
         "columns": [
 //            {
 //                "className":      'details-control',
@@ -225,7 +379,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==0 && col_index !==1){
+                if (col_index !==7){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
@@ -246,9 +400,9 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-/*  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+/*  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRutaLLT.row( tr );
+        var row = taulaFullRutaCONN.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -256,7 +410,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatLLT(row.data()) ).show();
+            row.child( formatCONN(row.data()) ).show();
             tr.addClass('shown');
         }
     });

@@ -20,13 +20,13 @@ amb informació sobre les dades a inserir en els documents originals
 
 Els principals punts de la rearquitectura són:
 
-Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud/contenidors_appagile/).
+Tota la capa d'aplicació del servei STD es mou de VM a contenidors [**Docker**](https://canigo.ctti.gencat.cat/cloud/cataleg/#contenidors-docker) a la plataforma [**AppAgile**](https://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/).
 
 ![std2-arquitectura](/images/news/std2-arquitectura.PNG)
 
 Totes les funcionalitats del STD avui dia són exposades mitjançant serveis **SOAP**, i amb l'actualització tecnològica, s'exposa una nova **API REST**.
 
-Teniu disponible el [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.0.pdf) amb el detall de les funcionalitats i els serveis exposats a STD
+Teniu disponible el [Manual d'Usuari STD versió 2](/related/sgde/CSCanigo.MU.P00.E01_manual_usuari_STD2_1.2.pdf) amb el detall de les funcionalitats i els serveis exposats a STD
 
 Podeu trobar més detall de la rearquitecura a la noticia publicada al portal [STD. Actualització tecnològica del servei](/noticies/2019-02-20-actualitzacio-tecnologica-std/)
 
@@ -36,4 +36,4 @@ La rearquitectura s'ha realitzat tenint en compte que l'impacte en els consumido
 
 Amb aquesta fita finalitza el projecte de **rearquitectura** i d'**actualització tecnològica del servei STD (Servei de Transformació de Documents)**
 
-Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [oficina-tecnica.canigo.ctti@gencat.cat](mailto:oficina-tecnica.canigo.ctti@gencat.cat)
+Per qualsevol dubte referent a aquest projecte de transformació tecnològica us podeu posar en contacte amb el CS Canigó obrint una petició de consulta o suport al servei [STF](https://cstd.ctti.gencat.cat/jiracstd/projects/STF) del CSTD, o bé enviant un correu a [sgde.ctti@gencat.cat](mailto:sgde.ctti@gencat.cat)

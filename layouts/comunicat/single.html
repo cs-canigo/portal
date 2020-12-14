@@ -37,13 +37,13 @@
 		  
           {{ partial "comunicat/header" . }}
 
-      {{ range (where .Site.Pages.ByDate.Reverse "Section" "noticies") }}
+      {{ range (where .Site.Pages.ByDate "Section" "noticies") }}
   			{{ if eq .Params.key $key }}
   				{{ partial "comunicat/noticia.html" . }}
   			{{ end }}	
       {{ end }}
 
-      {{ range (where .Site.Pages.ByDate.Reverse "Section" "blog") }}
+      {{ range (where .Site.Pages.ByDate "Section" "blog") }}
         {{ if eq .Params.key $key }}
           {{ partial "comunicat/noticia.html" . }}
         {{ end }} 

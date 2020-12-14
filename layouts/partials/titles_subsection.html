@@ -2,7 +2,6 @@
 {{ $section := .Section | html | lower}}
 
 <!-- switch subseccions -->
-
 {{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
 	Documentació
 {{ else if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
@@ -19,6 +18,8 @@
 	Blog d'Arquitectura
 {{ else if (eq $title "arqctti") }}
 	Arquitectura CTTI
+{{ else if (eq $title "dadesref") }}
+	Gestió Tècnica de Dades
 {{ else }}
 	{{ .Title }}
 {{ end }}

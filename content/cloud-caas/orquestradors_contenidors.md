@@ -1,5 +1,5 @@
 +++
-date          = "2018-07-02"
+date          = "2020-06-12"
 title         = "Orquestradors de contenidors"
 description   = "Consideracions respecte als orquestradors de contenidors"
 sections      = "Container Cloud"
@@ -13,7 +13,7 @@ Aquests recursos són oferts pels orquestradors.
 Al mercar existeixen diferents eines per orquestrar els contenidors docker.
 La Generalitat de Catalunya dóna suport als següents orquestradors:
 
-* AppAgile (basat en Openshift)
+* Openshift/AppAgile (basat en Openshift)
 * Kubernetes
 * SwarmMe (basat en Swarm)
 
@@ -92,15 +92,18 @@ Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/clou
 
 Per més informació podeu consultar la web https://kubernetes.io/
 
-### AppAgile
-AppAgile està basat en Openshift Container Platform.
+### Openshift/AppAgile
 Desenvolupat per Red Hat, basat en Kubernetes.
 Afegeix funcionalitat addicional a Kubernetes (gestió d'usuaris, segmentació de xarxa, sistema centralitzat de logs).
 Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'uns tres o quatre mesos.
 
-Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/cloud-caas/contenidors_appagile/
+Per detalls i exemples podeu visitar la plana [Contenidors Openshift](http://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/)
 
-Per més informació podeu consultar les webs http://appagile.io/ i https://docs.openshift.com/container-platform/3.5/
+Per més informació podeu consultar les webs:
+
+-  http://appagile.io/
+-  https://docs.openshift.com/container-platform/3.9/welcome/index.html
+-  https://docs.openshift.com/container-platform/4.3/welcome/index.html
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.

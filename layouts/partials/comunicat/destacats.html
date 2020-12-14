@@ -7,13 +7,13 @@
         </td>
       </tr>
 	   <!--
-      {{ range first .Params.nombredestacats (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
+      {{ range first .Params.nombredestacats (where .Site.Pages.ByDate "Section" "destacats") }}
         {{ partial "comunicat/destacat.html" . }}
       {{ end }}
 	  -->
 	  {{ $key := .Params.key }}
 	  
-      {{ range (where .Site.Pages.ByDate.Reverse "Section" "destacats") }}
+      {{ range (where .Site.Pages.ByDate "Section" "destacats") }}
 		    {{ if eq .Params.key $key }}
 			   {{ partial "comunicat/destacat.html" . }}
 		    {{ end }}	

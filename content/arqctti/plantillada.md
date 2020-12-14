@@ -3,7 +3,7 @@ date        = "2019-05-28"
 title       = "Plantilla Descripció d'Arquitectura"
 description = "Plantilla per la creació del document Descripció d'Arquitectura"
 sections    = "DA"
-weight = 2
+weight = 3
 +++
 
 El document d'arquitectura proporciona una visió general completa de l'arquitectura del servei / solució. Es tracta d'un document "viu" que s'ha d'actualitzar amb cada evolució que afecti a l'arquitectura del servei.
@@ -17,7 +17,7 @@ El document està dividit en dues parts:
 
 A continuació proporcionem enllaços als documents relacionats:
 
-[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.0.docx)
+[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.1.docx)
 
 [Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
