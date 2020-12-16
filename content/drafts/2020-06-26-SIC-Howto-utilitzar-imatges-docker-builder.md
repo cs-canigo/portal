@@ -97,9 +97,9 @@ FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
 
 Para evitar errores en la construcción de la imagen/contenedor extendido, es necesario tener en cuenta algunas recomendaciones:
 
-* Los usuarios se heredan de la imagen base, y por defecto los usuarios de las imagenes del SIC tienen permisos limitados, destinados a la construcción de artefactos; es decir, que sí se utiliza por ejemplo, una imagen maven del SIC, que tiene configurado el usuario *maven* y este usuario tiene permisos solo para ejecutar comandos asociados a maven. Sí se requiere instalar o ejecutar algún programa extra, se debera invocar la instrucción [USER](https://docs.docker.com/engine/reference/builder/#user) para cambiar el usuario a root.
+* Los usuarios se heredan de la imagen base y por defecto, los usuarios de las imagenes del SIC tienen permisos limitados, destinados a la construcción de artefactos; es decir, que sí se requiere instalar o ejecutar algún programa extra, se debera invocar la instrucción [USER](https://docs.docker.com/engine/reference/builder/#user) para cambiar el usuario a root.
 
-* Si se quiere mantener el comportamiento predeterminado de las imagenes SIC, es necesario agregar al final del Dockerfile la instrucción [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) tal como este configurada en la imagen base, y asegurarse que el usuario de ejecución del contenedor, sea el que indica la imagen base.
+* Sí se quiere mantener el comportamiento predeterminado de las imagenes SIC, es necesario agregar al final del Dockerfile la instrucción [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) tal como este configurada en la imagen base, y asegurarse que el usuario de ejecución del contenedor, sea el que indica la imagen base.
 
 * Debe revisarse el Dockerfile de la imagen base del SIC a utilizar, para asegurarse que las instrucciones que contiene aplican para la nueva imagen, por ejemplo, en una imagen extendida, el equipo que da soporte varia, por lo que deberia cambiarse el [MAINTAINER](https://docs.docker.com/engine/reference/builder/#maintainer-deprecated) y/o [LABEL](https://docs.docker.com/engine/reference/builder/#label) que contiene la dirección de correo de los responsables de la imagen.
 
