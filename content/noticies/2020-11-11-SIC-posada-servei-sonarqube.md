@@ -1,13 +1,13 @@
 +++
 date        = "2020-11-18"
 title       = "SIC. Integració SonarQube CE"
-description = "El dia 01/12/2020 es posa en servei la integració del SIC amb el sistema d'anàlisi estàtic de codi de la Oficina de Qualitat (SonarQube CE)"
+description = "El dia 09/12/2020 es posa en servei la integració del SIC amb el sistema d'anàlisi estàtic de codi de la Oficina de Qualitat (SonarQube CE)"
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
 #key         = "GENER2021"
 +++
 
-**A partir de l'1 de desembre del 2020 es posa en servei la integració del SIC amb el sistema d’anàlisi estàtic de codi
+**A partir del 9 de desembre del 2020 es posa en servei la integració del SIC amb el sistema d’anàlisi estàtic de codi
 que proporciona la Unitat de Qualitat (SonarQube)**, de forma que totes les pipelines de construcció i desplegament
 d’aplicacions inclouran un nou Stage que s’encarregarà d’analitzar i comprovar l’acompliment de les Quality Gates de codi definides.
 
