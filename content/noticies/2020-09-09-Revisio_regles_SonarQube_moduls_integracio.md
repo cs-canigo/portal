@@ -4,7 +4,7 @@ title       = "Canigó. Revisió regles SonarQube mòduls integració"
 description = "S'han revisat i resolt els problemes detectats per SonarQube als mòduls integració de Canigó"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "SETEMBRE2020"
+key         = "GENER2021"
 +++
 
 ## Introducció
