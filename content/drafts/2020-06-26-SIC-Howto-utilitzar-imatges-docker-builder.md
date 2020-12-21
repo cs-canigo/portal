@@ -85,6 +85,13 @@ En aquest cas estem indicant que volem:
 
 - Executar el goal de maven *mvn --version*.
 
+### Logout
+
+Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:
+```
+docker logout https://docker-registry.ctti.extranet.gencat.cat
+```
+
 ### Extendre imatges Docker del SIC
 
 És possible generar una imatge Docker agafant com a base una imatge del SIC. Per extendre d'una imatge del SIC, s'ha de colocar al Dockerfile la instrucció [FROM](https://docs.docker.com/engine/reference/builder/#from) seguit del nom de la imatge base a utilitzar.
@@ -128,11 +135,4 @@ RUN apk --update add --no-cache --quiet --virtual .build-deps curl unzip \
 # S'assegura que l'usuari d'execució dels contenidors associats a la imatge d'aquest Dockerfile sigui l'utilitzat a la imatge base, i que si la imatge base té un ENTRYPOINT, sigui invocat.
 USER maven
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-```
-
-### Logout
-
-Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:
-```
-docker logout https://docker-registry.ctti.extranet.gencat.cat
 ```
