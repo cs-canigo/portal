@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-26"
+date        = "2020-12-21"
 title       = "Utilitzar imatges Docker Builder"
 description = "Howto per mostrar com utilitzar les imatges Docker per a aplicar el patró Builder"
 section     = "howtos"
@@ -90,9 +90,9 @@ En aquest cas estem indicant que volem:
 És possible generar una imatge Docker agafant com a base una imatge del SIC. Per extendre d'una imatge del SIC, s'ha de colocar al Dockerfile la instrucció [FROM](https://docs.docker.com/engine/reference/builder/#from) seguit del nom de la imatge base a utilitzar.
 
 Exemple de FROM:
-'''bash
+```bash
 FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
-'''
+```
 
 Per evitar errors a la construcció de la imatge extesa, és necessari tenir en compte algunes recomanacions:
 
@@ -104,7 +104,7 @@ Per evitar errors a la construcció de la imatge extesa, és necessari tenir en 
 
 Exemple d'extensió d'una imatge del SIC:
 
-'''bash
+```bash
 # S'utilitza una imatge base del SIC.
 FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
 
