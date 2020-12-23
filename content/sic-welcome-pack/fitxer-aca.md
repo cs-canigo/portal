@@ -1,5 +1,5 @@
 +++
-date = "2020-07-15"
+date = "2020-12-23"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -557,15 +557,29 @@ Exemple ús de la mateixa imatge de construcció:
 ```
 </br>
 
-Exemple ús d'una imatge docker diferent a la de construcció:
+Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opció 1: es dedueix a partir de la `tool`):
 ```
 - id: ds001
   position: 1
   type: library
   tool: maven_3.6
   parameters: deploy -f ./pom.xml
-  destination: 9999_nexus
+  destination: cpdx_nexus_xxxx
 ```
+
+Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opció 2: s'indica la imatge del catàleg mitjançant les propietats `tool=maven` i `dockerImageName`):
+```
+- id: ds001
+  position: 1
+  type: library
+  tool: maven
+  dockerImageName: gencatsic/maven-builder:1.0-3.2-8
+  parameters: deploy -f ./pom.xml
+  destination: cpdx_nexus_xxxx
+```
+
+En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+
 </br>
 
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
