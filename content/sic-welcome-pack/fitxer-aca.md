@@ -557,7 +557,7 @@ Exemple ús de la mateixa imatge de construcció:
 ```
 </br>
 
-Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opció 1: es dedueix a partir de la `tool`):
+Exemple ús d'una imatge docker específica del catàleg (opció 1: es dedueix a partir de la `tool`):
 ```
 - id: ds001
   position: 1
@@ -566,8 +566,9 @@ Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opci
   parameters: deploy -f ./pom.xml
   destination: cpdx_nexus_xxxx
 ```
+</br>
 
-Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opció 2: s'indica la imatge del catàleg mitjançant les propietats `tool=maven` i `dockerImageName`):
+Exemple ús d'una imatge docker específica del catàleg (opció 2: s'indica la imatge del catàleg mitjançant les propietats `tool=maven` i `dockerImageName`):
 ```
 - id: ds001
   position: 1
@@ -577,6 +578,7 @@ Exemple ús d'una imatge docker del catàleg diferent a la de construcció (opci
   parameters: deploy -f ./pom.xml
   destination: cpdx_nexus_xxxx
 ```
+</br>
 
 En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
