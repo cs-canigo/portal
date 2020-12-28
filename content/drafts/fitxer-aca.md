@@ -571,7 +571,7 @@ Es contemplen els següents tipus de desplegament:
 No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
 
-* Exemple de desplegament de llibreria utilitzant imatge docker:
+> Exemple de desplegament de llibreria utilitzant imatge docker:
 
 ```
 deploy: 
@@ -584,7 +584,7 @@ deploy:
       parameters: mvn deploy -f pom.xml 
 ```
 
-* Exemple de desplegament de llibreria amb `tool` i` jdk`: 
+> Exemple de desplegament de llibreria amb `tool` i` jdk`: 
 
 ```
 deploy: 
@@ -597,7 +597,7 @@ deploy:
       parameters: deploy -f pom.xml  
 ```
 
-* Exemple de desplegament de llibreria sense `tool`, amb` artifact` per prendre les dades de la construcció (steps de build):
+> Exemple de desplegament de llibreria sense `tool`, amb` artifact` per prendre les dades de la construcció (steps de build):
 
 ```
 deploy: 
@@ -609,7 +609,7 @@ deploy:
       artifact: artifact1 
 ```
 
-* Exemple de desplegament de llibreria amb diversos `parameters`:
+> Exemple de desplegament de llibreria amb diversos `parameters`:
 
 ```
 deploy: 
@@ -625,7 +625,7 @@ deploy:
        -  mvn deploy -f app3/pom.xml
 ```
 
-* Exemple de desplegament de llibreria utilitzant MSBuild:
+> Exemple de desplegament de llibreria utilitzant MSBuild:
 
 ```
 - id: ds001
