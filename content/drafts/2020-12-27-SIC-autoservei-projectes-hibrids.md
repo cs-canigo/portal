@@ -1,10 +1,10 @@
 +++
-date        = "2021-01-15"
+date        = "2020-12-27"
 title       = "SIC. Autoservei Projectes Hibrids"
 description = "A partir del 01/15/2021 es possible desplegar projectes híbrids en l'autoservei"
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "GENER2021"
+key         = "DESEMBRE2020"
 +++
 
 
