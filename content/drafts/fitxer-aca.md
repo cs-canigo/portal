@@ -535,19 +535,19 @@ analysis:
   steps:
     - id: an001
       tool: maven
-      target: admin
+      target: app1
       imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f admin/pom.xml sonar:sonar -DskipTests  
+      commands: mvn -f app1/pom.xml sonar:sonar  
     - id: an002
       tool: maven
-      target: auxiliares
+      target: app2
       imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f auxiliares/pom.xml sonar:sonar -DskipTests 
+      commands: mvn -f app2/pom.xml sonar:sonar 
     - id: an003
       tool: maven
-      target: infointer
+      target: app3
       imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f infointer/pom.xml sonar:sonar -DskipTests 
+      commands: mvn -f app3/pom.xml sonar:sonar 
 ```
 </br>
 
@@ -634,7 +634,6 @@ deploy:
   parameters: deploy -f ./pom.xml
   destination: cpdx_nexus_xxxx
 ```
-</br>
 
 En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
