@@ -572,6 +572,7 @@ No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer �
 simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
 
 * Exemple de desplegament de llibreria utilitzant imatge docker:
+
 ```
 deploy: 
   steps:  
@@ -584,6 +585,7 @@ deploy:
 ```
 
 * Exemple de desplegament de llibreria amb `tool` i` jdk`: 
+
 ```
 deploy: 
   steps: 
@@ -596,6 +598,7 @@ deploy:
 ```
 
 * Exemple de desplegament de llibreria sense `tool`, amb` artifact` per prendre les dades de la construcció (steps de build):
+
 ```
 deploy: 
   steps: 
@@ -607,6 +610,7 @@ deploy:
 ```
 
 * Exemple de desplegament de llibreria amb diversos `parameters`:
+
 ```
 deploy: 
   steps:
@@ -622,6 +626,7 @@ deploy:
 ```
 
 * Exemple de desplegament de llibreria utilitzant MSBuild:
+
 ```
 - id: ds001
   position: 1
