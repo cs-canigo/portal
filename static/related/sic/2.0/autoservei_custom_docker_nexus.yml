@@ -1,11 +1,6 @@
 version: 1.0.0
-parameters:
 resources:
   infrastructures:
-    - id: cpdx_nexus_xxxx
-      element: nexus
-      environments:
-      provider: cpdx
 build:
   steps:
     - id: bs001
@@ -20,8 +15,7 @@ deploy:
     - id: ds001
       position: 1
       type: library
-      parameters: deploy -f ./pom.xml
-      destination: cpdx_nexus_xxxx
+      parameters: mvn deploy -f ./pom.xml
       artifact: artifact01
 notificationRecipients:
   - nom1@domini.cat
