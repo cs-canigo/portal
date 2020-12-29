@@ -557,7 +557,7 @@ analysis:
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
-</br>
+</br></br>
 
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
@@ -588,8 +588,8 @@ deploy:
       parameters: deploy -f pom.xml
       artifact: artifact1
 ```
-
 </br>
+
 > Exemple especificant la `tool` i la `jdk`:
 
 ```
@@ -602,8 +602,8 @@ deploy:
       jdk: JDK 1.8
       parameters: deploy -f pom.xml
 ```
-
 </br>
+
 > Exemple utilitzant imatge docker específica del catàleg:
 
 ```
@@ -616,8 +616,8 @@ deploy:
       dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
       parameters: mvn deploy -f pom.xml 
 ```
-
 </br>
+
 > Exemple amb diversos `parameters`:
 
 ```
@@ -633,8 +633,8 @@ deploy:
        -  mvn deploy -f app2/pom.xml 
        -  mvn deploy -f app3/pom.xml
 ```
-
 </br>
+
 > Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
 
 ```
@@ -646,6 +646,7 @@ deploy:
       parameters: deploy -f ./pom.xml
       destination: cpdx_nexus_xxxx
 ```
+</br>
 
 En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 </br>
