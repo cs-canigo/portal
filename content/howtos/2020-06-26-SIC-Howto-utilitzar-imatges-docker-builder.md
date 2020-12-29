@@ -1,7 +1,7 @@
 +++
-date        = "2020-06-26"
+date        = "2020-12-29"
 title       = "Utilitzar imatges Docker Builder"
-description = "Howto per mostrar com utilitzar les imatges Docker per a aplicar el patró Builder"
+description = "Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
 section     = "howtos"
 categories  = ["SIC"]
 #key        = "JUNY2019"
@@ -30,11 +30,10 @@ https://git.intranet.gencat.cat/0192-intern/docker-images.
 
 ## Ús del registre privat
 
-### Accés
 El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
 Es tracta d’un registre privat sense cap repositori d'accés públic.
 
-### Permisos
+### Permisos d'accés
 Per a disposar d'accés a les imatges Docker utilitzades al SIC és necessari contactar amb l'Oficina Tècnica de Canigó a través dels
 canals establerts: https://canigo.ctti.gencat.cat/sic/suport/. L'Oficina subministrarà al proveïdor d’aplicacions un usuari
 amb permís de lectura al projecte **gencatsic** que conté les imatges Docker utilitzades pel SIC.
@@ -90,4 +89,63 @@ En aquest cas estem indicant que volem:
 Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:
 ```
 docker logout https://docker-registry.ctti.extranet.gencat.cat
+```
+
+## Estendre d’imatges Docker de SIC
+
+És possible generar una imatge Docker heretant d'una imatge del catàleg de SIC.
+Per a fer-ho, s'ha d’incloure al fitxer `Dockerfile` la instrucció [FROM](https://docs.docker.com/engine/reference/builder/#from)
+seguit del nom de la imatge base a utilitzar.
+Per exemple:
+
+```bash
+FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
+```
+</br>
+
+
+Per tal d’evitar errors en la construcció de la imatge estesa, cal tenir en compte algunes recomanacions:
+
+* Els usuaris s'hereten de la imatge base i, per defecte, els usuaris de les imatges del SIC disposen de permisos limitats i
+destinats exclusivament a la construcció d'artefactes. És a dir, si es necessita instal·lar o executar algun programa addicional serà
+necessari invocar la instrucció [USER](https://docs.docker.com/engine/reference/builder/#user) per a canviar l'usuari a *root*.
+
+* Si es vol mantenir el comportament predeterminat de les imatges del SIC serà necessari agregar al final
+la instrucció [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) amb la mateixa instrucció que està
+configurada a la imatge base i assegurar-se que l'usuari d'execució del contenidor es correspon amb el que s'utilitza a la imatge base.
+
+* Cal revisar el fitxer `Dockerfile` de la imatge base del SIC a utilitzar per a assegurar-se que les instruccions que conté
+apliquen per a la nova imatge. Per exemple, en una imatge estesa l'equip responsable del manteniment i suport és diferent, per lo que cal
+canviar el [MAINTAINER](https://docs.docker.com/engine/reference/builder/#maintainer-deprecated) i/o
+[LABEL](https://docs.docker.com/engine/reference/builder/#label) per a indicar l’adreça de correu adient.
+</br>
+
+Exemple:
+
+```bash
+# S'utilitza una imatge base del SIC.
+FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
+
+# Es modifica el responsable de la imatge.
+LABEL maintainer="change.me@gencat.cat"
+
+# Es modifica l'usuari a root per a crear una variable d'entorn, instal·lar un programa addicional, donar permisos i
+eliminar fitxers innecessaris.
+USER root
+ENV FLEX_HOME='/flex-sdk'
+
+RUN apk --update add --no-cache --quiet --virtual .build-deps curl unzip \
+&& curl -fsSL -o /tmp/flex-sdk.zip http://download.macromedia.com/pub/flex/sdk/builds/flex3/flex_sdk_3.4.1.10084A.zip \
+&& curl -fsSL -o /tmp/flex-sdk-libs.zip http://download.macromedia.com/pub/flex/sdk/datavisualization_sdk3.4.zip \
+&& unzip /tmp/flex-sdk.zip -d "${FLEX_HOME}" \
+&& unzip /tmp/flex-sdk-libs.zip -d "${FLEX_HOME}" \
+&& chown -R maven:maven ${FLEX_HOME} \
+&& chmod -R a+rx ${FLEX_HOME} \
+&& apk del .build-deps \
+&& rm -rf /tmp/*
+
+# S'assegura que l'usuari d'execució dels contenidors associats a la imatge es correspongui amb l'utilitzat a la imatge
+base i que, si la imatge base té un ENTRYPOINT, aquest sigui invocat.
+USER maven
+ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 ```
