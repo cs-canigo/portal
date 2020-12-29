@@ -576,6 +576,7 @@ No obstant això, en aquest cas, aquesta propietat només serà requerida si cal
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
 
 > Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
+
 ```
 deploy:
   steps:
@@ -588,6 +589,7 @@ deploy:
 
 </br>
 > Exemple especificant la `tool` i la `jdk`:
+
 ```
 deploy:
   steps:
@@ -601,6 +603,7 @@ deploy:
 
 </br>
 > Exemple utilitzant imatge docker específica del catàleg:
+
 ```
 deploy: 
   steps:  
@@ -614,6 +617,7 @@ deploy:
 
 </br>
 > Exemple amb diversos `parameters`:
+
 ```
 deploy: 
   steps:
@@ -630,6 +634,7 @@ deploy:
 
 </br>
 > Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
+
 ```
 deploy:
   steps:
@@ -669,6 +674,7 @@ deploy:
 ```
 -->
 
+</br>
 ### Notificacions
 
 Finalment, caldrà indicar les **adreces de correu electrònic on es notificarà** d'accions manuals en espera i resultats de l’execució:
