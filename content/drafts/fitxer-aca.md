@@ -557,6 +557,7 @@ analysis:
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
+</br>
 
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
@@ -574,6 +575,7 @@ deploy:
 - Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
 No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
+
 
 > Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
 
