@@ -586,6 +586,7 @@ deploy:
       artifact: artifact1
 ```
 
+</br>
 > Exemple especificant la `tool` i la `jdk`:
 ```
 deploy:
@@ -598,6 +599,7 @@ deploy:
       parameters: deploy -f pom.xml
 ```
 
+</br>
 > Exemple utilitzant imatge docker específica del catàleg:
 ```
 deploy: 
@@ -610,6 +612,7 @@ deploy:
       parameters: mvn deploy -f pom.xml 
 ```
 
+</br>
 > Exemple amb diversos `parameters`:
 ```
 deploy: 
@@ -625,6 +628,7 @@ deploy:
        -  mvn deploy -f app3/pom.xml
 ```
 
+</br>
 > Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
 ```
 deploy:
@@ -637,9 +641,9 @@ deploy:
 ```
 
 En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
-
 </br>
 
+<!---
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
 
@@ -663,10 +667,11 @@ deploy:
       type: custom
       command: zip -r app.zip dist/
 ```
+-->
 
 ### Notificacions
 
-Finalment, caldrà indicar les **adreces de correu electrònic on notificar** accions manuals en espera i els resultats de l’execució:
+Finalment, caldrà indicar les **adreces de correu electrònic on es notificarà** d'accions manuals en espera i resultats de l’execució:
 
 ```
 notificationRecipients:
