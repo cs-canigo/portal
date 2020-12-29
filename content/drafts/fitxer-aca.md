@@ -561,11 +561,13 @@ Es contemplen els següents tipus de desplegament:
 - Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
 
 ```
-- id: dp001
-  position: 1
-  type: predefined
-  destination: 9999_tomcat
-  artifact: artifact01
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: 9999_tomcat
+      artifact: artifact01
 ```
 </br>
 
@@ -573,8 +575,7 @@ Es contemplen els següents tipus de desplegament:
 No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
 
-> Exemple de desplegament de llibreria sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
-
+> Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
 ```
 deploy:
   steps:
@@ -585,8 +586,7 @@ deploy:
       artifact: artifact1
 ```
 
-> Exemple de desplegament de llibreria especificant la `tool` i la `jdk`:
-
+> Exemple especificant la `tool` i la `jdk`:
 ```
 deploy:
   steps:
@@ -598,8 +598,7 @@ deploy:
       parameters: deploy -f pom.xml
 ```
 
-> Exemple de desplegament de llibreria utilitzant imatge docker específica del catàleg:
-
+> Exemple utilitzant imatge docker específica del catàleg:
 ```
 deploy: 
   steps:  
@@ -611,8 +610,7 @@ deploy:
       parameters: mvn deploy -f pom.xml 
 ```
 
-> Exemple de desplegament de llibreria amb diversos `parameters`:
-
+> Exemple amb diversos `parameters`:
 ```
 deploy: 
   steps:
@@ -627,14 +625,15 @@ deploy:
        -  mvn deploy -f app3/pom.xml
 ```
 
-> Exemple de desplegament de llibreria mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
-
+> Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
 ```
-- id: ds001
-  position: 1
-  type: library
-  parameters: deploy -f ./pom.xml
-  destination: cpdx_nexus_xxxx
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: deploy -f ./pom.xml
+      destination: cpdx_nexus_xxxx
 ```
 
 En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
@@ -645,9 +644,11 @@ En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` pe
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
 
 ```
-- id: dp001
-  position: 1
-  type: manual
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: manual
 ```
 </br>
 
@@ -655,10 +656,12 @@ En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` pe
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
 
 ```
-- id: dp001
-  position: 1
-  type: custom
-  command: zip -r app.zip dist/
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: custom
+      command: zip -r app.zip dist/
 ```
 
 ### Notificacions
