@@ -557,9 +557,11 @@ analysis:
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
-</br></br>
 
-- Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
+#### Predefinit (`predefined`)
+
+Pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
+Exemple:
 
 ```
 deploy:
@@ -572,13 +574,14 @@ deploy:
 ```
 </br>
 
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
+#### Llibreria (`library`)
+
+Pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
 No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
 
 
-> Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
-
+Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
 ```
 deploy:
   steps:
@@ -588,10 +591,8 @@ deploy:
       parameters: deploy -f pom.xml
       artifact: artifact1
 ```
-</br>
 
-> Exemple especificant la `tool` i la `jdk`:
-
+Exemple especificant la `tool` i la `jdk`:
 ```
 deploy:
   steps:
@@ -602,10 +603,8 @@ deploy:
       jdk: JDK 1.8
       parameters: deploy -f pom.xml
 ```
-</br>
 
-> Exemple utilitzant imatge docker específica del catàleg:
-
+Exemple utilitzant imatge docker específica del catàleg:
 ```
 deploy: 
   steps:  
@@ -616,10 +615,8 @@ deploy:
       dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
       parameters: mvn deploy -f pom.xml 
 ```
-</br>
 
-> Exemple amb diversos `parameters`:
-
+Exemple amb diversos `parameters`:
 ```
 deploy: 
   steps:
@@ -633,10 +630,8 @@ deploy:
        -  mvn deploy -f app2/pom.xml 
        -  mvn deploy -f app3/pom.xml
 ```
-</br>
 
-> Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
-
+Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
 ```
 deploy:
   steps:
@@ -648,13 +643,13 @@ deploy:
 ```
 </br>
 
-En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+En qualsevol cas, opcionalment es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 </br>
 
 <!---
+NRS: es comenta aquesta part perque no ha estat prou verificada i, de moment, no es considera que apliqui.
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
 **pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
-
 ```
 deploy:
   steps:
@@ -666,7 +661,6 @@ deploy:
 
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
 Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
-
 ```
 deploy:
   steps:
