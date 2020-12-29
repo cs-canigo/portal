@@ -1,5 +1,5 @@
 +++
-date = "2020-12-23"
+date = "2020-12-29"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -522,11 +522,13 @@ que hem definit més amunt, i opcionalment es podran indicar les propietats:
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
 al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
 
-- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`, i/o
+- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`,
 
-- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
+- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte), i
 
-També es pot utilitzar la propietat `target` per indicar el sufix de el projecte a enviar a sonar quan es configuren mes d'un` step` d'anàlisi. Exemple:
+- `target`: per a especificar el sufix que cal aplicar al projecte en l'enviament quan hi ha més d'un `step` d'anàlisi
+
+Exemple:
 
 ```
 analysis:
@@ -567,11 +569,36 @@ Es contemplen els següents tipus de desplegament:
 ```
 </br>
 
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació `tool` seguint el mateix patró que les eines de construcció (steps de build).
-No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
-simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
+- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
+No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
+simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
 
-> Exemple de desplegament de llibreria utilitzant imatge docker:
+> Exemple de desplegament de llibreria sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
+
+```
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: deploy -f pom.xml
+      artifact: artifact1
+```
+
+> Exemple de desplegament de llibreria especificant la `tool` i la `jdk`:
+
+```
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: deploy -f pom.xml
+```
+
+> Exemple de desplegament de llibreria utilitzant imatge docker específica del catàleg:
 
 ```
 deploy: 
@@ -582,31 +609,6 @@ deploy:
       tool: docker 
       dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
       parameters: mvn deploy -f pom.xml 
-```
-
-> Exemple de desplegament de llibreria amb `tool` i` jdk`: 
-
-```
-deploy: 
-  steps: 
-    - id: ds001 
-      position: 1 
-      type: library 
-      tool: maven_3.6 
-      jdk: JDK 1.8 
-      parameters: deploy -f pom.xml  
-```
-
-> Exemple de desplegament de llibreria sense `tool`, amb` artifact` per prendre les dades de la construcció (steps de build):
-
-```
-deploy: 
-  steps: 
-    - id: ds001 
-      position: 1 
-      type: library 
-      parameters: deploy -f pom.xml 
-      artifact: artifact1 
 ```
 
 > Exemple de desplegament de llibreria amb diversos `parameters`:
@@ -625,7 +627,7 @@ deploy:
        -  mvn deploy -f app3/pom.xml
 ```
 
-> Exemple de desplegament de llibreria utilitzant MSBuild:
+> Exemple de desplegament de llibreria mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
 
 ```
 - id: ds001
