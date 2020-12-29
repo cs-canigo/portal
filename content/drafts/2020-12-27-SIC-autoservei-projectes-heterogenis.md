@@ -12,7 +12,7 @@ key         = "DESEMBRE2020"
 És a dir, es passa a donar cobertura als projectes que requereixen, dins una mateixa pipeline, construir i publicar diverses llibreries,
 o bé, combinar la publicació de llibreries amb el desplegament d'artefactes.
 
-Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/arxiu-aca/).
+Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 <br/><br/>
 
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport)
