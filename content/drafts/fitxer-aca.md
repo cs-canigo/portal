@@ -556,8 +556,8 @@ analysis:
 ### Procés de desplegament
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
-Es contemplen els següents tipus de desplegament:
-</br>
+A continuació es descriuen els diferents tipus de desplegament que es poden configurar.
+</br></br></br>
 
 #### Estàndard (`predefined`)
 
