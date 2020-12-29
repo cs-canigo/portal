@@ -557,8 +557,9 @@ analysis:
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
 Es contemplen els següents tipus de desplegament:
+</br>
 
-#### Predefinit (`predefined`)
+#### Estàndard (`predefined`)
 
 Pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
 Exemple:
@@ -641,7 +642,6 @@ deploy:
       parameters: deploy -f ./pom.xml
       destination: cpdx_nexus_xxxx
 ```
-</br>
 
 En qualsevol cas, opcionalment es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 </br>
@@ -649,7 +649,7 @@ En qualsevol cas, opcionalment es podrà indicar la propietat `executionDir` per
 <!---
 NRS: es comenta aquesta part perque no ha estat prou verificada i, de moment, no es considera que apliqui.
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
-**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
+**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
 ```
 deploy:
   steps:
@@ -660,7 +660,7 @@ deploy:
 </br>
 
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
-Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
+Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 ```
 deploy:
   steps:
