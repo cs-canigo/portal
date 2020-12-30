@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "Test javadoc"
 description = "Test javadoc canigo.core 4.3.0"
 sections    = "Canigó"

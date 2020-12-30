@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "1.6.6"
 description = "Arquetip maven 1.6.6"
 sections    = "Canigó"

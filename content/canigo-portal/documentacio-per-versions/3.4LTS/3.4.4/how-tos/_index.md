@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "Guies d'ús (HowTOs)"
 description = "Guies d'ús (HowTOs)"
 sections    = "Canigó"

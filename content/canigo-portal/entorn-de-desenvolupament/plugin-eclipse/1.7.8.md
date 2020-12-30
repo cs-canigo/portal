@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "1.7.8"
 description = "Plugin eclipse 1.7.8"
 sections    = "Canigó"

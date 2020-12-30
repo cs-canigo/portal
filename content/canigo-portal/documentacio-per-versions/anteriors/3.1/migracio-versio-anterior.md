@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "Migració versió anterior"
 description = "Miagració versió Canigó 3.0 a Canigó 3.1"
 sections    = "Canigó"

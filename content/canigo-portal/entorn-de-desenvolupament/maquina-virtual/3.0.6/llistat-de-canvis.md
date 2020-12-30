@@ -1,5 +1,5 @@
 +++
-date        = "2021-02-01"
+date        = "2020-12-12"
 title       = "Llistat de canvis"
 description = "Llistat de canvis màquina virtual 3.0.6"
 sections    = "Canigó"
