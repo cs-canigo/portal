@@ -1,0 +1,13 @@
+cat.gencat.ctti.canigo.arch.security.provider.saml
+cat.gencat.ctti.canigo.arch.security.saml.authentication.claims.enforce
+cat.gencat.ctti.canigo.arch.security.saml.authentication.claims.enforce.impl
+cat.gencat.ctti.canigo.arch.security.saml.authentication.claims.select
+cat.gencat.ctti.canigo.arch.security.saml.authentication.claims.select.impl
+cat.gencat.ctti.canigo.arch.security.saml.authentication.constants
+cat.gencat.ctti.canigo.arch.security.saml.authentication.controller
+cat.gencat.ctti.canigo.arch.security.saml.authentication.dto
+cat.gencat.ctti.canigo.arch.security.saml.authentication.exception
+cat.gencat.ctti.canigo.arch.security.saml.authentication.jwt
+cat.gencat.ctti.canigo.arch.security.saml.authentication.service
+cat.gencat.ctti.canigo.arch.security.saml.authentication.service.impl
+cat.gencat.ctti.canigo.arch.security.saml.authentication.token

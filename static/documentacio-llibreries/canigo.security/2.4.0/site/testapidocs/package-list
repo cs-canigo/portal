@@ -1,0 +1,12 @@
+cat.gencat.ctti.canigo.arch.security
+cat.gencat.ctti.canigo.arch.security.authorities.dao
+cat.gencat.ctti.canigo.arch.security.provider.gicar
+cat.gencat.ctti.canigo.arch.security.provider.gicar.psis
+cat.gencat.ctti.canigo.arch.security.provider.siteminder
+cat.gencat.ctti.canigo.arch.security.rest.authentication
+cat.gencat.ctti.canigo.arch.security.rest.authentication.constants
+cat.gencat.ctti.canigo.arch.security.rest.authentication.controller
+cat.gencat.ctti.canigo.arch.security.rest.authentication.gicar
+cat.gencat.ctti.canigo.arch.security.rest.authentication.handler
+cat.gencat.ctti.canigo.arch.security.rest.authentication.service.impl
+cat.gencat.ctti.canigo.arch.security.rest.authentication.test.utils
