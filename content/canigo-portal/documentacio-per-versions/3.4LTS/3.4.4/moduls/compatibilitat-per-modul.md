@@ -113,7 +113,7 @@ weight      = 1
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.integration.pica                           		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.pica**                        		| [2.3.0](/canigo-portal/documentacio-llibreries/canigo.integration.pica/2.2.0/) |
+| **canigo.integration.pica**                        		| [2.3.0](/canigo-portal/documentacio-llibreries/canigo.integration.pica/2.3.0/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 |                                                   		|               																																|
 | **canigo.integration.psgd**                        		| [2.4.0](/canigo-portal/documentacio-llibreries/canigo.integration.psgd/2.4.0/) |
@@ -134,15 +134,15 @@ weight      = 1
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.integration.pica                           		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.sgde**                        		| [2.3.0](/canigo-portal/documentacio-llibreries/canigo.integration.sgde.pica/2.3.0/) |
+| **canigo.integration.sgde**                        		| [2.4.0](/canigo-portal/documentacio-llibreries/canigo.integration.sgde.pica/2.4.0/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.operation.instrumentation                  		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.ssc**                         		| [2.4.0](/canigo-portal/documentacio-llibreries/canigo.integration.ssc/2.4.0/) |
+| **canigo.integration.ssc**                         		| [2.4.1](/canigo-portal/documentacio-llibreries/canigo.integration.ssc/2.4.1/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.operation.instrumentation                  		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.tributs.pica**                		| [2.3.0](/canigo-portal/documentacio-llibreries/canigo.integration.tributs.pica/2.3.0/) |
+| **canigo.integration.tributs.pica**                		| [2.4.0](/canigo-portal/documentacio-llibreries/canigo.integration.tributs.pica/2.4.0/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.integration.pica                           		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
