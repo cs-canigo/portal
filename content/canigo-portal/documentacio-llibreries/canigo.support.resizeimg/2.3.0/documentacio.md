@@ -8,6 +8,14 @@ weight      = 3
 
 ## Propòsit
 
-
+El propòsit és proveir un servei per redimensionar una imatge
 
 ## Funcionalitats
+
+### Excepción
+
+Contiene la excepción que se genera al redimensionar una imagen "ResizeImgModuleException"
+
+### ResizeImg
+
+Contiene la interfaz e implementación de "ResizeImgService" que incluye los métodos para redimensionar. 

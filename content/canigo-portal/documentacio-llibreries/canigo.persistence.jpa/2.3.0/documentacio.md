@@ -23,4 +23,3 @@ En el paquet *cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json* s
 ### Repository
 
 S'ofereix la interficie *cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository* i la implementació *cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl* que exten les funcionalitats de *org.springframework.data.jpa.repository.JpaRepository* per a l'accés a les dades d'un domini de l'aplicació. Així si un repository de l'aplicació exten de *GenericRepository*, ja incorpora les accions comunes que es poden realitzar en un domini de l'aplicació: consulta, guardat, modificació i eliminació.
-

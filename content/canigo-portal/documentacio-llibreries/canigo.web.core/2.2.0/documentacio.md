@@ -8,6 +8,10 @@ weight      = 3
 
 ## Propòsit
 
-
+El propòsit és proveir listeners per a la capa web de Canigó
 
 ## Funcionalitats
+
+### Filters
+
+Contiene los filtros para exponer propiedades y confurar el formato de logs. 
