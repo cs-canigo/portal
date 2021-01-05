@@ -10,12 +10,14 @@ categories  = ["canigo"]
 
 ## Introducción
 
-El objetivo de este artículo es mostrar el uso de un complemento al compilador Java (javac) que permite la evaluación estática de código en tiempo de compilación. Este complemento es el proyecto [Google error-prone](https://errorprone.info/), [GIT repositorio](https://github.com/google/error-prone)
+El objetivo de este artículo es mostrar el uso de un complemento al compilador Java (javac) que permite la evaluación estática de código en tiempo de compilación. Este complemento es el proyecto: [Google error-prone](https://errorprone.info/) que tiene su repositorio: [GIT](https://github.com/google/error-prone)
 
 ---
 ## Justificación
 
-_Error Prone_ permite que el compilador de Java sea más poderoso al analizar el código fuente durante la compilación. Algunas de las ventajas son:
+_Error Prone_ permite que el compilador de Java sea más poderoso al analizar el código fuente durante la compilación. 
+
+Algunas de las ventajas de utilizar este complemento:
 
  * _Shift left testing_: Muestra los errores que se descubren al principio del ciclo de vida del desarrollo de software. En lugar de identificarse durante la revisión del código o en la producción, ahora se identifican en el momento de la compilación. Se capturan antes de que le cuesten su tiempo.
  * _Neutral al sistema de construcción_: Google Error Prone es un procesador de anotaciones Java que está conectado al compilador. Por tanto, se puede utilizar en cualquier sistema de construcción, por ejemplo, Bazel, Maven, Gradle, Ant.
@@ -24,11 +26,11 @@ _Error Prone_ permite que el compilador de Java sea más poderoso al analizar el
 ---
 ## Configuración
 
-Para poder utilizar el complemento del compilador Java en Canigó, es necesario modificar el archivo `pom.xml` que contiene la configuración maven del proyecto. 
+Para poder utilizar el complemento en Canigó, es necesario modificar el archivo `pom.xml` que contiene la configuración maven del proyecto. 
 
 > Se recomienda utilizar JDK 8 o superior aunque es posible configurarlos para JDK 6 o 7.
 
-### Cambios en `pom.xml`
+### Cambios en el archivo `pom.xml`
 
 > Dentro del plugin `maven-compiler-plugin` que ya está configurado en los proyectos generados con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) se deben agregar las etiquetas: `<compilerArgs>` y `<annotationProcessorPaths>`
 
@@ -149,14 +151,18 @@ Se excluye el error _GetClassOnClass_ de la validación.
 
 ![CLI Exclusion](/images/howtos/2021-01-02_error_prone_cli_exclusion.gif)
 
----
-## Limitaciones
+### Ejemplo con Intellij Idea
 
- * Hasta ahora no es posible crear una configuración global que permita aplicar a distintos proyectos no relacionados
- * No genera reportes estructurados con el resultado de la evaluación.
+####  Configuración:
+
+![Intellij Configuración](/images/howtos/2021-01-02_error_prone_ide_conf2.gif)
+
+#### Resultado:
+
+![Intellij Ejemplo](/images/howtos/2021-01-02_error_prone_ide_example2.gif)
+
 
 ---
 ## Conclusión
 
- * El uso de este complemento permite mejorar la calidad del desarrollo bajo el la premisa de encontrar errores lo mas rápido posible en el ciclo de vida del desarrollo. 
-
+ * El uso de este complemento permite mejorar la calidad del software bajo la premisa de encontrar errores lo mas rápido posible en el ciclo de vida del desarrollo. 
