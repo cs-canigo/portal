@@ -32,7 +32,7 @@ Para utilizar la opción de reintentos en un proyecto creado con [Canigó plugin
 
 > Los proyectos generados con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) ya contienen la dependencia de `AspectJ`, que es requerida para que funcionen los reintentos. Si se quiere excluir esa dependencia para hacer mas eficiente la carga de la aplicación, se requiere agregar la libreria `aspectjweaver` como depdendencia. 
 
-Dependencia requerida ya existente:
+Dependencia requerida existente:
 ```xml
   <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -67,9 +67,10 @@ Dependencia requerida ya existente:
 
 
 ---
-## Uso (De forma imperativa)
+## Uso 
+#### (de forma imperativa)
 
-### Cambios 
+### Desarrollo 
 
 > Configuración de propiedades: `application.yml`
 
@@ -91,7 +92,6 @@ retry:
 ```java
 @Configuration
 public class RetryConfig {
-
   @Value("${retry.maxAttempts:3}")
   private int maxAttempts;
 
@@ -128,7 +128,6 @@ public class RetryConfig {
 ```java
 @Service("equipamentService")
 public class EquipamentServiceImpl implements EquipamentService {
-  
   @Inject
   private EquipamentRepository repository;
 
@@ -146,7 +145,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 ### Pruebas 
 
-> La siguiente prueba unitaria permite evaluar 2 escenarios de reintentos: 
+> Pruebas unitarias que plantean 2 escenarios: 
 
 * Reintentar 3 veces, las 2 primeras generan una Excepción, y la ultima responde correctamente.
 * Reintentar 5 veces, en todas las ejecuciones se genera una Excepción, al alcanzar el máximo de reintentos se muetra la Excepción.
@@ -164,7 +163,6 @@ public class EquipamentServiceImpl implements EquipamentService {
 @ContextConfiguration(locations = { "classpath:spring/canigo-core.xml" })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EquipamentRetryTemplateTest {
-
   @Inject
   private RetryTemplate retryTemplate;
 
@@ -228,12 +226,10 @@ public class EquipamentRetryTemplateTest {
 }
 ```
 
-#### Resultado:
-
 ![Spring Retry Ejemplo 1](/images/howtos/2021-01-02_spring_retry_example1.gif)
 
 
-> Es posible tambien probar reintentos utilizando Postman, simulando el comportamiento de fallas.
+> Pruebas utilizando Postman
 
 > Se modifica la capa de servicios para crear un método que genera excepciones durante las primeras ejecuciones, y luego consulta correctamente la capa de persistencia.
 
@@ -273,22 +269,20 @@ public class EquipamentServiceImpl implements EquipamentService {
 }
 ```
 
-#### Resultado:
-
 ![Spring Retry Ejemplo 2](/images/howtos/2021-01-02_spring_retry_example2.gif)
 
 
 ---
-## Uso (De forma declarativa)
+## Uso 
+#### (de forma declarativa)
 
-### Cambios 
+### Desarrollo 
 
 > Agregar un componente que contenga la anotación que indica la aplicación de reintentos. La anotación `@Retryable` se debe agregar a cada método.
 
 ```java
 @Service
 public class RetryService {
-
   @Inject
   private EquipamentService equipamentService;
 
@@ -314,7 +308,6 @@ public class RetryService {
 @RestController
 @RequestMapping("/equipaments")
 public class EquipamentServiceController {
-
   @Inject
   private RetryService retryService;
 
@@ -337,7 +330,7 @@ public class EquipamentServiceController {
 
 ### Pruebas 
 
-> La siguiente prueba unitaria permite evaluar 2 escenarios de reintentos: 
+> Pruebas unitarias que plantean 2 escenarios:  
 
 * Reintentar 3 veces, las 2 primeras generan una Excepción, y la ultima responde correctamente.
 * Reintentar 5 veces, en todas las ejecuciones se genera una Excepción, al alcanzar el máximo de reintentos se muetra la Excepción.
@@ -347,7 +340,6 @@ public class EquipamentServiceController {
 @ContextConfiguration(locations = { "classpath:spring/canigo-core.xml" })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class EquipamentRetryTemplateTest {
-
   @Inject
   private RetryService retryService;
 
@@ -369,7 +361,6 @@ public class EquipamentRetryTemplateTest {
   @Test
   public void testRetryWithFinalResponse() throws RetryException {
     retryService.setEquipamentService(equipamentRetryService);
-    
     List<Equipament> equipaments = this.retryService.findAll();
     verify(equipamentRetryService, times(3)).findAll();
     assertFalse(equipaments.isEmpty());
@@ -378,7 +369,6 @@ public class EquipamentRetryTemplateTest {
   @Test(expected = RetryException.class)
   public void testRetryWithFinalException() throws RetryException {
     retryService.setEquipamentService(equipamentRetryExceptionService);
-    
     List<Equipament> equipaments = this.retryService.findAll();
     verify(equipamentRetryExceptionService, times(5)).findAll();
     assertTrue(equipaments.isEmpty());
@@ -391,32 +381,32 @@ public class EquipamentRetryTemplateTest {
     public EquipamentService equipamentRetryService() throws Exception {
       EquipamentService equipamentService = mock(EquipamentService.class);
       Equipament equipament = mock(Equipament.class);
-      when(equipamentService.findAll()).thenThrow(new RetryException("Remote Exception 1"))
-              .thenThrow(new RetryException("Remote Exception 2"))
-              .thenReturn(Collections.singletonList(equipament));
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException("Remote Exception 1"))
+        .thenThrow(new RetryException("Remote Exception 2"))
+        .thenReturn(Collections.singletonList(equipament));
       return equipamentService;
     }
 
     @Bean("equipamentRetryExceptionService")
     public EquipamentService equipamentRetryExceptionService() throws Exception {
       EquipamentService equipamentService = mock(EquipamentService.class);
-      when(equipamentService.findAll()).thenThrow(new RetryException("Remote Exception 1"))
-              .thenThrow(new RetryException("Remote Exception 2"))
-              .thenThrow(new RetryException("Remote Exception 3"))
-              .thenThrow(new RetryException("Remote Exception 4"))
-              .thenThrow(new RetryException("Remote Exception 5"));
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException("Remote Exception 1"))
+        .thenThrow(new RetryException("Remote Exception 2"))
+        .thenThrow(new RetryException("Remote Exception 3"))
+        .thenThrow(new RetryException("Remote Exception 4"))
+        .thenThrow(new RetryException("Remote Exception 5"));
       return equipamentService;
     }
   }
 }
 ```
 
-#### Resultado:
-
 ![Spring Retry Ejemplo 3](/images/howtos/2021-01-02_spring_retry_example3.gif)
 
 
-> Es posible tambien probar reintentos utilizando Postman.
+> Pruebas utilizando Postman
 
 > Se modifica la capa de servicios para crear un método que genera excepciones durante las primeras ejecuciones, y luego consulta correctamente la capa de persistencia.
 
@@ -450,8 +440,6 @@ public class EquipamentServiceImpl implements EquipamentService {
 }
 ```
 
-#### Resultado:
-
 ![Spring Retry Ejemplo 4](/images/howtos/2021-01-02_spring_retry_example4.gif)
 
 
@@ -459,7 +447,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 ## Conclusión
 
  * Implementar la opción de reintentos a través de Spring permite crear procesos robustos que toleren fallos ocasionales sobre todo asociados al consumo de servicios externos.
+ * Utilizar la implementación imperativa permite reutilizar patrones de reintentos sin tener que repetir anotaciones.
  * Utilizar la implementación basada en declaraciones, es mas sencillo de implementar, solo requiere de anotaciones, sin embargo, tiene algunas consideraciones, tales como: 
     - Se debe generar excepciones en el método que se está reintentando. Si se lanza la excepción en el método que contiene la anotación `@Retryable`, Retry no se ejecutará.
     - El método recuperable debe ser público y las llamadas a ese método deben ser de una clase externa para que Retry funcione.
-  * Utilizar la implementación imperativa permite reutilizar patrones de reintentos sin tener que repetir anotaciones.
