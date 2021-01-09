@@ -34,11 +34,11 @@ Para activar CORS en un proyecto creado con [Canigó plugin](https://canigo.ctti
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   ...
 
-	@Override
-	protected void configure(final HttpSecurity http) throws Exception {
-	  http.cors();
+  @Override
+  protected void configure(final HttpSecurity http) throws Exception {
+    http.cors();
     ...
-	}
+  }
 
   @Bean
   public CorsFilter corsFilter() {
