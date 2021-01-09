@@ -1,6 +1,6 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Como Spring Retry para reintentar acciones"
+title       = "Canigó. Como utilizar Spring Retry para reintentar acciones"
 description = "Como utilizar Spring Retry para reintentar acciones que generan una excepción al ejecutarse"
 section     = "howtos"
 categories  = ["canigo"]
@@ -444,7 +444,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 
 ---
-## Conclusión
+## Conclusiones
 
  * Implementar la opción de reintentos a través de Spring permite crear procesos robustos que toleren fallos ocasionales sobre todo asociados al consumo de servicios externos.
  * Utilizar la implementación imperativa permite reutilizar patrones de reintentos sin tener que repetir anotaciones.
