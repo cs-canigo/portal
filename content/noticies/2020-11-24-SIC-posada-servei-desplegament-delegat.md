@@ -12,7 +12,7 @@ de manera que comenci a ser possible desplegar de forma automàtica els artefact
 d'Integració Continua per a la sol·licitud i preparació de connectivitats.
 
 Durant el 2021, en col·laboració amb els diferents proveïdors d'infraestructures, es començarà a posar en marxa per a determinades aplicacions escollides
-per a començar a desplegar aplicacions mitjançant aquesta nova modalitat i que, en un futur, passi a ser el sistema de desplegament automàtic
+de cara a començar a desplegar aplicacions mitjançant aquesta nova modalitat i que, en un futur, passi a ser el sistema de desplegament automàtic
 aplicable a totes les aplicacions.
 <br/>
 
