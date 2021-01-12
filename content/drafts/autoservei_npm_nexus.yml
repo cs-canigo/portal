@@ -1,0 +1,18 @@
+version: 1.0.0
+resources:
+  infrastructures:
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: nodejs_12_LTS
+      parameters: run-script build
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: nodejs_12_LTS
+      parameters: publish --registry
+notificationRecipients:
+    - nom1@domini.cat
