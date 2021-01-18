@@ -15,18 +15,18 @@ L'objectiu d'aquest article és mostrar l'ús d'un complement al compilador Java
 ---
 ## Justificació
 
-_Error Prone_ permet que el compilador de Java sigui més poderós al analizar el codi font durant la compilació. 
+_Error Prone_ permet que el compilador de Java sigui més poderós a l'analizar el codi font durant la compilació. 
 
 Alguns avantatges d'utilitzar aquest complement:
 
- * _Shift left testing_: Mostra els errors que es descubreixen al principi del cicle de vida del desenvolupament de software. En lloc d'identificar-se durant la revisió del codi o en producció, ara s'identificaran en el moment de la compilació.
- * _Neutral al sistema de construcció_: Google Error Prone és un procesador d'anotacions Java que està connectat al compilador. Per tant, es pot utilitzar a qualsevol sistema de construcció, per exemple, Bazel, Maven, Gradle, Ant.
+ * _Shift left testing_: Mostra els errors que es descobreixen al principi del cicle de vida del desenvolupament de software. En lloc d'identificar-se durant la revisió del codi o en producció, ara s'identificaran en el moment de la compilació.
+ * _Neutral al sistema de construcció_: Google Error Prone és un processador d'anotacions Java que està connectat al compilador. Per tant, es pot utilitzar a qualsevol sistema de construcció, per exemple, Bazel, Maven, Gradle, Ant.
  * _Sugerencies de solució_: La solució del problema generalment es suggereix al mateix temps que s'identifica l'error.
 
 ---
 ## Configuració
 
-Per poder utilitzar el complement a Canigó, és necesari modificar l'archivo `pom.xml` que conté la configuració maven del proyecte. 
+Per poder utilitzar el complement a Canigó, és necessari modificar el fitxer `pom.xml` que conté la configuració maven del projecte. 
 
 > Es recomana utilitzar error prone amb JDK 8 o superior encara que és possible configurar-ho per JDK 6 o 7.
 
@@ -62,7 +62,7 @@ Per poder utilitzar el complement a Canigó, és necesari modificar l'archivo `p
 
  * Canviar el compilador de Java per un d'error prone
  
- Per a canviar el compilador de Java per utilitzar un d'error prone és necessari agregar la versió del compilador a la secció de propiedades del pom.xml:
+ Per a canviar el compilador de Java per utilitzar un d'error prone és necessari agregar la versió del compilador a la secció de propietats del pom.xml:
 
 ```xml
 <properties>
@@ -70,7 +70,7 @@ Per poder utilitzar el complement a Canigó, és necesari modificar l'archivo `p
 </properties>
 ```
 
- A més és necessari canviar el compiler, modificant el *maven-compiler-plugin*. Per a fer-ho, ho farem amb un perfil per així distinguir el compilador de desenvolupament del compilador d'entorns productius:
+ A més és necessari canviar el compiler, modificant el *maven-compiler-plugin*. Per a fer-ho, ho farem amb un perfil per així distingir el compilador de desenvolupament del compilador d'entorns productius:
 
 ```xml
   <profiles>
@@ -104,11 +104,11 @@ Per poder utilitzar el complement a Canigó, és necesari modificar l'archivo `p
 
 Al compilar amb maven: `mvn compile`, a través de CLI o d'un entorn de desenvolupament, el complement **errror-prone** realitzarà un anàlisis estàtic del projecte com a part del procés de compilació. En el cas de trobar bugs classificats com _Error per Defecte_ se pararà la compilació. En el cas de bugs classificats com _Warning per defecte_ no es pararà la compilació. En qualsevol dels casos es mostrarà el detall del error i alguna proposta de solució.
 
-El detall dels patrons d'errors que se validaran al compilar es descriuen aquí: [Patrons d'errors](https://errorprone.info/bugpatterns)
+El detall dels patrons d'errors que es validaran al compilar es descriuen aquí: [Patrons d'errors](https://errorprone.info/bugpatterns)
 
 ### Exemple amb CLI
 
-Si per exemple tinguessim el següent bug al projecte:
+Si per exemple tinguéssim el següent bug al projecte:
 
 ```java
   System.out.println(String.class.getClass().toString())
@@ -120,7 +120,7 @@ Al executar:
 mvn clean compile
 ```
 
-Obtindriem un resultat semblant a:
+Obtindríem un resultat semblant a:
 
 ![CLI Ejemplo](/images/howtos/2021-01-02_error_prone_cli_example1.gif)
 
@@ -132,27 +132,27 @@ Per utilitzar-ho al Eclipse és necessari tenir el plugin:
 
 ![Eclipse Configuración](/images/howtos/2021-01-02_error_prone_ide_conf.gif)
 
-Una vegada configurat el plugin obtindriem:
+Una vegada configurat el plugin obtindríem:
 
 ![Eclipse Ejemplo](/images/howtos/2021-01-02_error_prone_ide_example.gif)
 
 
 ### Exemple d'exclusió
 
-Es possible excloure algunes de les advertencies dels patrons d'error per evitar que es pari la compilació.
+És possible excloure algunes de les advertències dels patrons d'error per evitar que es pari la compilació.
 
 Per exemple, per excloure l'error _GetClassOnClass_ de la validació:
 
 ```xml
   <arg>-Xplugin:ErrorProne -Xep:GetClassOnClass:OFF</arg>
 ```
-Obtindriem com a resultat:
+Obtindríem com a resultat:
 
 ![CLI Exclusion](/images/howtos/2021-01-02_error_prone_cli_exclusion.gif)
 
 ### Exemple amb Intellij Idea
 
-Necessitariem la configuració:
+Necessitaríem la configuració:
 
 ![Intellij Configuración](/images/howtos/2021-01-02_error_prone_ide_conf2.gif)
 
