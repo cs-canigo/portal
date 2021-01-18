@@ -34,7 +34,7 @@ Per poder utilitzar el complement a Canigó, és necessari modificar el fitxer `
 
 > Dins del plugin `maven-compiler-plugin` que ja està configurat en els projectes generats amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) s'ha d'agregar les etiquetes: `<compilerArgs>` i `<annotationProcessorPaths>` indicant que es vol utilitzar el error prone
 
- * Exemple de configuració del plugin
+#### Exemple de configuració del plugin
 
 ```xml
 <plugin>
@@ -60,7 +60,7 @@ Per poder utilitzar el complement a Canigó, és necessari modificar el fitxer `
 
 > Si s'utilitza JDK 8, també és necessari canviar el compilador de Java per utilitzar una versió específica del compilador d'error prone: [javac](github.com/google/error-prone-javac)
 
- * Canviar el compilador de Java per un d'error prone
+#### Canviar el compilador de Java per un d'error prone
  
  Per a canviar el compilador de Java per utilitzar un d'error prone és necessari agregar la versió del compilador a la secció de propietats del pom.xml:
 
