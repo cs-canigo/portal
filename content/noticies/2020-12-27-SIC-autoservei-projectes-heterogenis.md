@@ -1,7 +1,7 @@
 +++
 date        = "2020-12-29"
 title       = "SIC. Autoservei per a projectes heterogenis"
-description = "A partir del 15/01/2021 és possible desplegar mitjançant l'Autoservei de Pipelines projectes multillibreria incloent la possible combinació amb el desplegament d'artefactes"
+description = "A partir del 20/01/2021 és possible desplegar mitjançant l'Autoservei de Pipelines projectes multillibreria incloent la possible combinació amb el desplegament d'artefactes"
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "FEBRER2021"
