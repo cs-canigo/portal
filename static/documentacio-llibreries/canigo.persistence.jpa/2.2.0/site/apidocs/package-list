@@ -1,0 +1,8 @@
+cat.gencat.ctti.canigo.arch.persistence.jpa.dao
+cat.gencat.ctti.canigo.arch.persistence.jpa.dao.impl
+cat.gencat.ctti.canigo.arch.persistence.jpa.exception
+cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json
+cat.gencat.ctti.canigo.arch.persistence.jpa.querydsl
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository
+cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl
+cat.gencat.ctti.canigo.arch.persistence.jpa.transaction

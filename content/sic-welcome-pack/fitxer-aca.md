@@ -1,5 +1,5 @@
 +++
-date = "2020-07-15"
+date = "2020-12-23"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -79,7 +79,7 @@ resources:
     - id: pre
       environment: pre
       position: 2
-      deploymentType: SEMIAUTOMATIC
+      deploymentType: DELEGATED
     - id: pro
       environment: pro
       position: 3
@@ -88,9 +88,11 @@ resources:
 
 <div class="message information">
 Recordem breument el funcionament de les diferents modalitats: </br>
-- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a CPD/LdT a través del servei de gestió de binaris.</br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen als servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
-- <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament. </div>
+- <b>Delegada</b>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es delega als CPD el desplegament.</br>
+- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a CPD/LdT a través del servei de gestió de binaris.</br>
+<!--- - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br> -->
+</div>
 
 </br>
 #### Infraestructures
@@ -148,10 +150,11 @@ resources:
 ```
 
 <div class="message information">
-En el desplegament <b>AUTOMATIC</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures. Com es veurà més
-endavant, aquest identificador definirà la infraestructura definida a l’arxiu ACI sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
-el detall de les infraestructures, només cal que conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> no serà necessari preparar l’arxiu ACI ni
-definir el detall d’infraestructures.</div>
+En el desplegament <b>AUTOMATIC</b> o <b>DELEGATED</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures.
+Aquest identificador definirà la infraestructura sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
+el detall de les infraestructures, només cal que conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
+l'arxiu ACI ni el detall d’infraestructures.
+</div>
 
 La propietat `element` suporta el següent conjunt de tipus de servidors:
 
@@ -284,7 +287,7 @@ build:
         - artifact01
 ```
 
-L'eina que s’utilitzarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs aquesta vindrà donada.
+L'eina que s'utilizarà per a la construcció serà `Npm` i no caldrà que s'indiqui en els `parameters` d’execució doncs aquesta vindrà donada.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
 Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.
@@ -445,7 +448,7 @@ build:
 On:
 
 * `dockerfilePath`: ruta del fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
-* `dockerfileName`: fitxer _DockerFile_ al codi font del projecte per a la construcció de la imatge.
+* `dockerfileName`: ficher _DockerFile_ al codi font del projecte per a la construcció de la imatge.
 * `parameters`: comanda específica a executar dins de la imatge per a la construcció de l'artefacte. En aquest cas no vindrà donada.
 
 <div class="message information">
@@ -554,15 +557,31 @@ Exemple ús de la mateixa imatge de construcció:
 ```
 </br>
 
-Exemple ús d'una imatge docker diferent a la de construcció:
+Exemple ús d'una imatge docker específica del catàleg (opció 1: es dedueix a partir de la `tool`):
 ```
 - id: ds001
   position: 1
   type: library
   tool: maven_3.6
   parameters: deploy -f ./pom.xml
-  destination: 9999_nexus
+  destination: cpdx_nexus_xxxx
 ```
+</br>
+
+Exemple ús d'una imatge docker específica del catàleg (opció 2: s'indica la imatge del catàleg mitjançant les propietats `tool=maven` i `dockerImageName`):
+```
+- id: ds001
+  position: 1
+  type: library
+  tool: maven
+  dockerImageName: gencatsic/maven-builder:1.0-3.2-8
+  parameters: deploy -f ./pom.xml
+  destination: cpdx_nexus_xxxx
+```
+</br>
+
+En qualsevol cas, opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+
 </br>
 
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una

@@ -1,5 +1,5 @@
 +++
-date = "2020-07-15"
+date = "2020-12-29"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -507,11 +507,11 @@ qüestió i la resta (si hi ha) seguiran comportant-se de forma estàndard.
 
 El sistema es basa en una sèrie de `tools` predefinides que es descriuen a continuació:
 
-- `MAVEN`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.
+- `maven`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.
 
-- `MSBUILD`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes que utilitzen MSBuild.
+- `msbuild`: pas d'anàlisi estàtic de codi mitjançant el SonarScanner per a projectes que utilitzen MSBuild.
 
-- `GENERIC`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
+- `generic`: pas d'anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres.
 
 Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
 </br></br>
@@ -522,75 +522,159 @@ que hem definit més amunt, i opcionalment es podran indicar les propietats:
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
 al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
 
-- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`, i/o
+- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`,
 
-- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
+- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte), i
+
+- `target`: per a especificar el sufix que cal aplicar al projecte en l'enviament quan hi ha més d'un `step` d'anàlisi
+
+Exemple:
+
+```
+analysis:
+  evalStaticCode: true
+  checkQualityGates: true
+  steps:
+    - id: an001
+      tool: maven
+      target: app1
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app1/pom.xml sonar:sonar  
+    - id: an002
+      tool: maven
+      target: app2
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app2/pom.xml sonar:sonar 
+    - id: an003
+      tool: maven
+      target: app3
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app3/pom.xml sonar:sonar 
+```
+</br>
 
 ### Procés de desplegament
 
 Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen `deploy steps`. La definició es basa en una sèrie de tipologies predefinides anomenades `type`.
-Es contemplen els següents tipus de desplegament:
+A continuació es descriuen els diferents tipus de desplegament que es poden configurar.
+</br></br></br>
 
-- Predefinit (`predefined`): pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard)
+#### Estàndard (`predefined`)
+
+Pas de desplegament en el que se li indica l’artefacte a desplegar i l'identificador d'**infraestructura destí** (cas estàndard).
+Exemple:
 
 ```
-- id: dp001
-  position: 1
-  type: predefined
-  destination: 9999_tomcat
-  artifact: artifact01
-```
-</br>
-
-- Llibreria (`library`): pas de publicació de llibreries al Nexus, en el que se li indica l'eina de publicació `tool` seguint el mateix patró que les eines de construcció (steps de build).
-No obstant, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
-simplement caldrà fer referència a l'artefacte en qüestió i el sistema utilitzarà la mateixa imatge de construcció.
-
-Exemple ús de la mateixa imatge de construcció:
-```
-- id: ds001
-  position: 1
-  type: library
-  parameters: deploy -f ./pom.xml
-  destination: cpdx_nexus_xxxx
-  artifact: artifact01
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: 9999_tomcat
+      artifact: artifact01
 ```
 </br>
 
-Exemple ús d'una imatge docker diferent a la de construcció:
+#### Llibreria (`library`)
+
+Pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
+No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
+simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
+
+
+Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
 ```
-- id: ds001
-  position: 1
-  type: library
-  tool: maven_3.6
-  parameters: deploy -f ./pom.xml
-  destination: 9999_nexus
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: deploy -f pom.xml
+      artifact: artifact1
 ```
+
+Exemple especificant la `tool` i la `jdk`:
+```
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: deploy -f pom.xml
+```
+
+Exemple utilitzant imatge docker específica del catàleg:
+```
+deploy: 
+  steps:  
+    - id: ds001 
+      position: 1 
+      type: library 
+      tool: docker 
+      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      parameters: mvn deploy -f pom.xml 
+```
+
+Exemple amb diversos `parameters`:
+```
+deploy: 
+  steps:
+    - id: ds001 
+      position: 1
+      type: library 
+      tool: docker 
+      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      parameters: 
+       -  mvn deploy -f app1/pom.xml 
+       -  mvn deploy -f app2/pom.xml 
+       -  mvn deploy -f app3/pom.xml
+```
+
+Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la `destination` per a extreure el node `provider` en el que cal realitzar el pas):
+```
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: deploy -f ./pom.xml
+      destination: cpdx_nexus_xxxx
+```
+
+En qualsevol cas, opcionalment es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 </br>
 
+<!---
+NRS: es comenta aquesta part perque no ha estat prou verificada i, de moment, no es considera que apliqui.
 - Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
-**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant
-
+**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
 ```
-- id: dp001
-  position: 1
-  type: manual
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: manual
 ```
 </br>
 
 - Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
-Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació
-
+Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
 ```
-- id: dp001
-  position: 1
-  type: custom
-  command: zip -r app.zip dist/
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: custom
+      command: zip -r app.zip dist/
 ```
+-->
 
+</br>
 ### Notificacions
 
-Finalment, caldrà indicar les **adreces de correu electrònic on notificar** accions manuals en espera i els resultats de l’execució:
+Finalment, caldrà indicar les **adreces de correu electrònic on es notificarà** d'accions manuals en espera i resultats de l’execució:
 
 ```
 notificationRecipients:

@@ -1,0 +1,8 @@
+cat.gencat.ctti.canigo.arch.operation.logging
+cat.gencat.ctti.canigo.arch.operation.logging.components
+cat.gencat.ctti.canigo.arch.operation.logging.config
+cat.gencat.ctti.canigo.arch.operation.logging.dto
+cat.gencat.ctti.canigo.arch.operation.logging.endpoints
+cat.gencat.ctti.canigo.arch.operation.logging.model
+cat.gencat.ctti.canigo.arch.operation.logging.service
+cat.gencat.ctti.canigo.arch.operation.logging.util

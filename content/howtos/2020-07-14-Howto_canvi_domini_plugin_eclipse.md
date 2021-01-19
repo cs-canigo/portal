@@ -4,7 +4,7 @@ title       = "Canigó. Com canviar el domini on està allotjat el plugin de l'e
 description = "Howto per a canviar el domini on està allotjat el plugin de l'eclipse"
 section     = "howtos"
 categories  = ["canigo"]
-#key         = "GENER2020"
+#key         = "GENER2021"
 +++
 
 ## Introducció

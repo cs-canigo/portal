@@ -1,0 +1,7 @@
+cat.gencat.ctti.canigo.arch.support.fileupload
+cat.gencat.ctti.canigo.arch.support.fileupload.beans
+cat.gencat.ctti.canigo.arch.support.fileupload.constants
+cat.gencat.ctti.canigo.arch.support.fileupload.exceptions
+cat.gencat.ctti.canigo.arch.support.fileupload.impl
+cat.gencat.ctti.canigo.arch.support.fileupload.utils
+org.apache.struts.upload

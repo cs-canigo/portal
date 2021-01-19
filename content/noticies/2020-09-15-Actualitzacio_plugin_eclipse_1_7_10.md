@@ -4,7 +4,7 @@ title       = "Canigó. Actualització plugin Eclipse 1.7.10"
 description = "S'ha publicat una nova versió del plugin de l'Eclipse de Canigó per a generar projectes amb Canigó 3.4.5"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-#key         = "SETEMBRE2020"
+key         = "GENER2021"
 +++
 
 ## Introducció
