@@ -4,11 +4,11 @@ title       = "SIC. Autoservei per a projectes heterogenis"
 description = "A partir del 15/01/2021 és possible desplegar mitjançant l'Autoservei de Pipelines projectes multillibreria incloent la possible combinació amb el desplegament d'artefactes"
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "DESEMBRE2020"
+key         = "FEBRER2021"
 +++
 
 
-**A partir del 15 de gener de 2021 és possible el desplegament de projectes heterogenis mitjançant l'Autoservei de Pipelines**.
+**A partir del 20 de gener de 2021 és possible el desplegament de projectes heterogenis mitjançant l'Autoservei de Pipelines**.
 És a dir, es passa a donar cobertura als projectes que requereixen, dins una mateixa pipeline, construir i publicar diverses llibreries,
 o bé, combinar la publicació de llibreries amb el desplegament d'artefactes.
 
