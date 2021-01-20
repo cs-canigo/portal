@@ -118,7 +118,7 @@ Per provar el funcionament s'iniciaran 2 instàncies de l'aplicació utilitzant 
 ---
 #### Prova amb CORS desactivat
 
-En aquesta prova anem a realitzar la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada al port 8080, podem observar que el navegador genera la petició correctament, però, genera un error a l'aplicació que està al port 8095 que indica que no està permès l'intercanvi de recursos.
+En aquesta prova anem a realitzar la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada al port 8090, podem observar que el navegador genera la petició correctament, però, genera un error a l'aplicació que està al port 8095 que indica que no està permès l'intercanvi de recursos.
 
 ![Spring CORS Ejemplo 1](/images/howtos/2021-01-02_spring_cors_example1.png)
 
