@@ -22,8 +22,8 @@ El funcionament de la pipeline de desplegament generada seria el següent:
 
 Per a més informació:
 
-- [Autoservei de pipelines](/sic-serveis/autoservei-pipelines/).
-- [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+- [Autoservei de pipelines](/sic-serveis/autoservei-pipelines/)
+- [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport)
