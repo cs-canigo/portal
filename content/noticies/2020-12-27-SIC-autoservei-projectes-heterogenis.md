@@ -16,9 +16,10 @@ o bé, combinar la publicació de llibreries amb el desplegament d'artefactes.
 <br/>
 
 Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
-<br/>
+<br/><br/>
 
 El funcionament de la pipeline de desplegament generada seria el següent:
+<br/>
 ![ACA](/related/sic/2.0/autoservei_heterogenis_diagrama.png)
 <br/>
 
