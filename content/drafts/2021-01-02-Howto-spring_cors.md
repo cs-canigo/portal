@@ -1,33 +1,35 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Como permitir el intercambio cruzado de recursos (CORS)"
-description = "Como permitir el intercambio cruzado de recursos (CORS) desde un servidor, en un origen distinto (dominio) al que pertenece."
+title       = "Canigó. Com permetre l'intercanvi creuat de recursos (CORS)"
+description = "Howto com permetre l'intercanvi creuat de recursos (CORS) des d'un servidor, en un origen diferent (domini) al que pertany."
 section     = "howtos"
 categories  = ["canigo"]
 #key        = "GENER2021"
 +++
 
 
-## Introducción
+## Introducció
 
-El objetivo de este artículo es mostrar como permitir el intercambio cruzado de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled)) desde un servidor, en un origen distinto (dominio) al que pertenece, dentro de un proyecto generado con el framework Canigó
-
----
-## Justificación
-
-CORS es un mecanismo que restringue el acceso web a recursos fuera del dominio al que pertenece quien hace una petición, es decir, sí desde un navegador web se realiza una petición a un servidor y se requiere algún recurso web que este en otro servidor, entonces se utiliza CORS para su gestión. 
-
-CORS define como interactua un navegador web con un servidor para determinar si el intercambio de recursos con otros servidores es seguro. Para su funcionamiento CORS utiliza las cabeceras HTTP.
-
-Cuando se utiliza un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que se basa en Spring, por defecto no se envian en la cabcera HTTP ninguno de los parámetros que permiten el intercambio cruzado; por lo que es necesario realizar algunos ajustes para su activación.
-
+L'objectiu d'aquest articule és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled)) des d'un servidor, en un origen diferent (domini) al que pertany, en un projecte generat amb el framework Canigó
 
 ---
-## Configuración
+## Justificació
 
-Para activar CORS en un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), se requiere crear un filtro web de Spring, agregarlo al contenedor de Spring y a la configuración del adaptador de seguridad de Spring.
+CORS és un mecanisme que restringeix l'accés web a recursos fora del dominio al que pertany qui realitza la petició, és a dir, si des d'un navegador web es realitza una petició a un servidor i es requereix algun recurs web que estigui a un altre servidor, llavors s'utilitza CORS per a la seva gestió. 
 
-### Cambios en `WebSecurityConfig.java`
+CORS defineix com interactua un navegador web amb un servidor per determinar si l'intercanvi de recursos amb altres servidors és segur. Pel seu funcionament CORS utilitza les capçaleres HTTP.
+
+Quan s'utilitza un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que es basa en Spring, per defecte no s'envien a la capçalera HTTP cap dels paràmetres que permeten l'intercanvi creuat; pel que és necessari realitzar alguns ajustos per a la seva activació.
+
+
+---
+## Configuració
+
+Per activar CORS en un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), es necessari crear un filtre web de Spring, agregar-lo al contenidor de Spring i a la configuració de l'adaptador de seguretat de Spring.
+
+### Canvis a `WebSecurityConfig.java`
+
+Un exemple d'activació de CORS podria ser:
 
 ```java
 @Configuration
@@ -56,13 +58,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ```
 
 ---
-## Uso 
+## Exemple d'utilització 
 
-### Desarrollo 
+Per a mostrar un exemple d'utilització de CORS es necessari crear un projecte Canigó amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i crear una pàgina HTML que invoqui a través de Javascript algun recurs del servidor utilitzant les APIs `XMLHttpRequest` o  `Fetch`.
 
-> Se requiere crear dentro de un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) con el módulo de seguridad instalado, una pagina HTML que invoque a través de Javascript algún recurso del servidor utilizando las APIs `XMLHttpRequest` o  `Fetch`.
+Exemple de pàgina web que invoca el servei REST `/equipaments/id` de prova del projecte de Canigó: 
 
-> Ejemplo de página web que invoca el servicio REST `/equipaments/id` de prueba que existe en Canigó: `cors_test.html`
+### cors_test.html
 
 ```html
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -98,9 +100,9 @@ $(document).ready(function() {
 });
 ```
 ---
-### Pruebas 
+### Proves 
 
-> Para probar el funcionamiento se inician 2 instancias de la aplicación utilizando puertos diferentes, en este caso se utilizan los puertos 8090 (donde se encuentra el servicio REST a consultar) y 8095 (donde se llamará la página Web)
+Per provar el funcionament s'iniciaran 2 instàncies de l'aplicació utilitzant ports diferents, en aquest cas s'utilitzen els ports 8090 (on es troba el servei REST a consultar) i 8095 (on cridarà la pàgina Web)
 
 ```sh
   mvn spring-boot:run \
@@ -114,28 +116,21 @@ $(document).ready(function() {
 ```
 
 ---
-> Prueba con CORS desactivado
+#### Prova amb CORS desactivat
 
-* Se realiza la prueba sin configurar el filtro
-
-> Se observa que el navegador genera la petición correctamente para la aplicación que está en el puerto 8090, sin embargo, genera un error en la aplicación que está en el puerto 8095, que indica que no está permitido el intercambio
+En aquesta prova anem a realitzar la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada al port 8080, podem observar que el navegador genera la petició correctament, però, genera un error a l'aplicació que està al port 8095 que indica que no està permès l'intercanvi de recursos.
 
 ![Spring CORS Ejemplo 1](/images/howtos/2021-01-02_spring_cors_example1.png)
 
 ![Spring CORS Ejemplo 2](/images/howtos/2021-01-02_spring_cors_example2.png)
 
 ---
-> Prueba con CORS activado
+#### Prova amb CORS activat
 
-* Se realiza la prueba con la configuración
-
-> Se observa que el navegador permite el intercambio y responde con los datos del servicio REST de prueba
+En aquesta prova anem a realitzar la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada al port 8080, podem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i respon amb les dades del servei REST de prova.
 
 ![Spring CORS Ejemplo 3](/images/howtos/2021-01-02_spring_cors_example3.png)
 
 ![Spring CORS Ejemplo 4](/images/howtos/2021-01-02_spring_cors_example4.png)
 
 ---
-## Conclusión
-
- * Implementar el intercambio cruzado de recursos utilizando Canigó y Spring es posible y sencillo.
