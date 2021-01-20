@@ -594,7 +594,8 @@ deploy:
       parameters: deploy -f pom.xml
 ```
 
-Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció (step de build):
+Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
+(en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
 ```
 deploy:
   steps:
@@ -604,10 +605,6 @@ deploy:
       parameters: deploy -f pom.xml
       artifact: artifact1
 ```
-
-<div class="message information">
-En cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat <i>artifact</i> indicada.
-</div>
 
 Exemple utilitzant imatge docker específica del catàleg:
 ```

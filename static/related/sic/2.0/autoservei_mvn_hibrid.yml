@@ -47,8 +47,8 @@ deploy:
       jdk: JDK 1.8
       executionDir: lib
       parameters: deploy -f pom.xml
-    - id: dp001
-      position: 1
+    - id: dp002
+      position: 2
       type: predefined
       destination: cpdx_weblogic_xxxx
       artifact: artifact01
