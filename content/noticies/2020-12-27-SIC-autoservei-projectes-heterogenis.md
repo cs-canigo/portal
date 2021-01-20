@@ -12,8 +12,16 @@ key         = "FEBRER2021"
 És a dir, es passa a donar cobertura als projectes que requereixen, dins una mateixa pipeline, construir i publicar diverses llibreries,
 o bé, combinar la publicació de llibreries amb el desplegament d'artefactes.
 
-Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
-<br/><br/>
+![ACA](/related/sic/2.0/autoservei_heterogenis_aca.png)
+<br/>
 
+Per a més informació: [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+<br/>
+
+El funcionament de la pipeline de desplegament generada seria el següent:
+![ACA](/related/sic/2.0/autoservei_heterogenis_diagrama.png)
+<br/>
+
+<br/><br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport)
 o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
