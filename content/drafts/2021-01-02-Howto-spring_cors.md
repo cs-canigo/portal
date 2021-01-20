@@ -86,6 +86,7 @@ Exemple de pàgina web que invoca el servei REST `/equipaments/id` de prova del 
   </body>
 </html>
 ```
+### cors_request.js
 
 ```javascript
 $(document).ready(function() {
@@ -127,7 +128,7 @@ En aquesta prova anem a realitzar la prova sense configurar el filtre. Si fem un
 ---
 #### Prova amb CORS activat
 
-En aquesta prova anem a realitzar la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada al port 8080, podem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i respon amb les dades del servei REST de prova.
+En aquesta prova anem a realitzar la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada al port 8090, podem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i respon amb les dades del servei REST de prova.
 
 ![Spring CORS Ejemplo 3](/images/howtos/2021-01-02_spring_cors_example3.png)
 
