@@ -15,9 +15,7 @@ El objetivo de este artículo es mostrar como implementar el patrón _[Circuit B
 ---
 ## Justificación
 
-El patrón _Circuit Breaker_ evita que una aplicación intente de manera indefinida una operación que con alta probabilidad vaya a fallar, permitiendo que esta continúe con su ejecución mientras el problema con la operación se resuelve. Adicionalmente, se puede detectar cuando se ha resuelto el problema permitiendo de esta manera volver a ejecutar la operación comprometida. 
-
-Se puede entender este patrón como un proxy entre una aplicación y servicios remotos que se implementa como si fuese una máquina de estados que imite el comportamiento de un interruptor de un circuito eléctrico.
+El patrón _Circuit Breaker_ evita que una aplicación intente de manera indefinida una operación que con alta probabilidad vaya a fallar, permitiendo que continúe la aplicación mientras el problema con la operación se resuelve. Adicionalmente, se puede detectar cuando se ha resuelto el problema permitiendo de esta manera volver a ejecutar la operación comprometida. 
 
 Los estados que plantea el patrón son:
 
@@ -29,23 +27,27 @@ Los estados que plantea el patrón son:
 
 Algunas de las ventajas son:
 
- * Monitoreo: Dado que exist un componente que su única funcionalidad es sondear el estado de vida de los servicios, es posible tener un monitoreo en tiempo real, que indique los tiempos de respuesta promedio, frecuencia de falla, estado actual del servicio y, sobre todo, notificaciones en tiempo real si algún servicio comienza a fallar.
+ * Monitoreo: Dado que existe un componente que su única funcionalidad es validar el estado de los servicios, es posible tener un monitoreo en tiempo real, que indique los tiempos de respuesta promedio, frecuencia de falla, estado actual del servicio y, sobre todo, notificaciones en tiempo real sí algún servicio comienza a fallar.
 
- * Sobrecarga: La capacidad de abrir el circuito ante un error o Timeout que se sabe que va a pasar, ahorra el hecho de tener muchos hilos esperando a que el servicio responda, y, si existen miles de usuarios, es probable tener muchísimos hilos detenidos,  provoque que el sistema se sobre cargue, incluso, puede provocar reacciones en cadena que afecten a otros componentes.
+ * Sobrecarga: La capacidad de abrir el circuito ante un error o timeout que se estima que va a pasar, ahorra el hecho de tener muchos hilos esperando a que un servicio responda, y si existen miles de usuarios, es probable tener muchísimos hilos detenidos, lo que provocaría que el sistema se sobre cargue, incluso, provocando reacciones en cadena que afecten a otros componentes.
 
- * Tolerancia a fallas: El patron puede redireccionar la petición al siguiente Supplier en caso de que alguno falle, evitando tener que enviarle el error al cliente.
+ * Tolerancia a fallas: El patron puede redireccionar la petición, evitando tener que enviarle un error al cliente.
 
 
-Cuando se utiliza un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que se basa en Spring, es posible implementar el patrón utilizando el proyecto [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix)
+Cuando se utiliza un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que se basa en Spring, es posible implementar el patrón utilizando los proyectos [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix) o [Resilience4j](https://github.com/resilience4j/resilience4j)
 
 <div class="message warning">
 
-El proyecto Hystrix ha dejado de desarrollarse de forma activa tal como se indica en [README.md](https://github.com/Netflix/Hystrix/blob/master/README.md). Como alternativa se puede utilizar el proyecto [Resilience4j](https://github.com/resilience4j/resilience4j)
+El proyecto Hystrix ha dejado de desarrollarse de forma activa tal como se indica en: <a href="https://github.com/Netflix/Hystrix/blob/master/README.md">Netflix/Hystrix README</a>. Como alternativa se puede utilizar el proyecto: <a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.
 
 </div>
 
 ---
-## Configuración
+---
+## Spring Cloud Netflix Hystrix
+
+---
+### Configuración
 
 Para aplicar este patrón, es necesario agregar algunas dependencias al proyecto maven:
 
@@ -57,9 +59,9 @@ Para aplicar este patrón, es necesario agregar algunas dependencias al proyecto
  
  * 'micrometer-registry-prometheus' exporta las metricas en un formato entendible por Prometheus.
 
-Es importante mantener la relación entre las depdendencias de 'Spring Cloud' y la versión de 'Spring Boot', En este caso, sí la versión de 'Spring Boot' es: '2.1.8.RELEASE', entonces le corresponde la versión: 'Greenwich.XX' de 'Spriing Cloud'. En esta matriz de compatibilidad se encuentran detalles: [spring-cloud](https://spring.io/projects/spring-cloud)
+Es importante mantener la relación entre las dependencias de 'Spring Cloud' y la versión de 'Spring Boot', En este caso, sí la versión de 'Spring Boot' es: '2.1.8.RELEASE', entonces le corresponde la versión: 'Greenwich.XX' de 'Spriing Cloud'. En esta matriz de compatibilidad se encuentran los detalles: [spring-cloud](https://spring.io/projects/spring-cloud)
 
-### Cambios en `pom.xml`
+Contenido de `pom.xml`
 
 ```xml
   <properties>
@@ -99,12 +101,16 @@ Es importante mantener la relación entre las depdendencias de 'Spring Cloud' y 
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  ...
 }
 ```
 
-### Cambios en `application.yml`
+Contenido de `application.yml`
 
 ```yaml
+
+...
 
 # Actuator
 management:
@@ -126,9 +132,9 @@ hystrix:
 ```
 
 ---
-## Uso 
+### Desarrollo 
 
-Para aplicar el patrón _Circuit Breaker_, se van a requerir, en este caso de ejemplo, 2 aplicaciones, ambas generadas con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/). La primera (CircuitBreakerClient) solo tendría el ejemplo de servicio Rest "Equipament" que contiene Canigó. Y la segunda (CircuitBreakerServer) consumiría el servicio de la primera y tendría los siguientes componentes: 
+Para aplicar el patrón _Circuit Breaker_, se van a requerir, en este caso de ejemplo, 2 aplicaciones, ambas generadas con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/). La primera (CircuitBreakerProvider) solo tendría el ejemplo de servicio Rest "Equipament" que contiene Canigó. Y la segunda (CircuitBreakerConsumer) consumiría el servicio de la primera y tendría los siguientes componentes: 
 
 * Un componente Spring de servicio donde se implementa el patrón _Circuit Breaker_.
 * Un componente Spring de control Rest que contiene un endpoint de prueba.
@@ -136,10 +142,10 @@ Para aplicar el patrón _Circuit Breaker_, se van a requerir, en este caso de ej
 
 > Ejemplo del componente de servicio con el patrón _Circuit Breaker_:
 
-### Cambios en `EquipamentClientService.java`
+Contenido de `EquipamentClientService.java`
 
 ```java
-package cat.gencat.circuitbreakerserver.config.client;
+package cat.gencat.circuitbreakerconsumer.config.client;
 
 ...
 
@@ -176,10 +182,10 @@ public class EquipamentClientService {
 
 > Ejemplo del componente de control:
 
-### Cambios en `EquipamentClientController.java`
+Contenido de `EquipamentClientController.java`
 
 ```java
-package cat.gencat.circuitbreakerserver.endpoints.client;
+package cat.gencat.circuitbreakerconsumer.endpoints.client;
 
 ...
 
@@ -199,10 +205,10 @@ public class EquipamentClientController {
 
 > Ejemplo de configuración de Spring:
 
-### Cambios en `EquipamentClientConfig.java`
+Contenido de `EquipamentClientConfig.java`
 
 ```java
-package cat.gencat.circuitbreakerserver.config.client;
+package cat.gencat.circuitbreakerconsumer.config.client;
 
 ...
 
@@ -217,6 +223,170 @@ public class EquipamentClientConfig {
   }
 }
 ```
+
+---
+---
+## Resilience4j
+
+---
+### Configuración
+
+Es necesario agregar algunas dependencias al proyecto maven:
+
+ * 'resilience4j-circuitbreaker' contiene la implementación del patrón _Circuit Breaker_.
+ 
+ * 'spring-boot-starter-actuator' contiene la implementacíon y generación de métricas.
+ 
+ * 'micrometer-registry-prometheus' exporta las metricas en un formato entendible por Prometheus.
+
+Contenido de `pom.xml`
+
+```xml
+  ...
+
+  <dependencies>
+    ...
+    <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-circuitbreaker</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.micrometer</groupId>
+      <artifactId>micrometer-registry-prometheus</artifactId>
+    </dependency>
+	</dependencies>
+	
+  ...
+}
+```
+
+Contenido de `application.yml`
+
+```yaml
+
+...
+
+# Actuator
+management:
+  endpoint:
+    health:
+      #### Show all details of health
+      enabled: true
+      show-details: always
+  endpoints:
+    web:
+      cors:
+        allowed-origins: true
+      exposure:
+        include: "*"
+```
+
+---
+### Desarrollo 
+
+Para aplicar el patrón _Circuit Breaker_, se van a requerir, en este caso de ejemplo, 2 aplicaciones, ambas generadas con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/). La primera (CircuitBreakerProvider) solo tendría el ejemplo de servicio Rest "Equipament" que contiene Canigó. Y la segunda (CircuitBreakerConsumer) consumiría el servicio de la primera y tendría los siguientes componentes: 
+
+* Un componente Spring de servicio donde se implementa el patrón _Circuit Breaker_.
+* Un componente Spring de control Rest que contiene un endpoint de prueba.
+* Una configuración de Spring que habilité el patrón _Circuit Breaker_ dentro de la aplicación.
+
+> Ejemplo del componente de servicio con el patrón _Circuit Breaker_:
+
+Contenido de `EquipamentClientService.java`
+
+```java
+package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@Service
+public class EquipamentClientService {
+
+  private static final Logger log = LoggerFactory.getLogger(EquipamentClientService.class);
+  private static final String EXTERNAL_EQUIPAMENTS_URL = "http://localhost:8090/equipaments/";
+  private final RestTemplate restTemplate;
+  private final CircuitBreaker circuitBreaker;
+
+  public EquipamentClientService(RestTemplate restTemplate) {
+    this.restTemplate = restTemplate;
+    this.circuitBreaker = createCircuitBreaker();
+  }
+
+  public Equipament getClientEquipament(Long equipamentId) {
+    CheckedFunction0<Equipament> providerServiceCall = CircuitBreaker.decorateCheckedSupplier(circuitBreaker,
+      () -> this.restTemplate.getForObject(URI.create(EXTERNAL_EQUIPAMENTS_URL + equipamentId), Equipament.class));
+    Try<Equipament> result = Try.of(providerServiceCall).recover(throwable -> getAltenatiuEquipament(equipamentId));
+    return result.get();
+  }
+
+  public Equipament getAltenatiuEquipament(Long equipamentId) {
+    Equipament equipament = new Equipament(equipamentId);
+    equipament.setNom("equipament genèric");
+    equipament.setMunicipi("municipi per defecte");
+    return equipament;
+  }
+  
+  private CircuitBreaker createCircuitBreaker() {
+    CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
+      .failureRateThreshold(50)
+      .waitDurationInOpenState(Duration.ofMillis(20000)).build();
+
+    CircuitBreaker breaker = CircuitBreaker.of("equipament-proveidor", circuitBreakerConfig);
+    breaker.getEventPublisher()
+      .onSuccess(event -> log.info("Truqueu a l'èxit mitjançant circuit breaker"))
+      .onCallNotPermitted(event -> log.info("Trucada denegada per circuit breaker"))
+      .onError(event -> log.info("La trucada ha fallat mitjançant circuit breaker"));
+    return breaker;
+  }
+}
+```
+
+> Ejemplo del componente de control:
+
+Contenido de `EquipamentClientController.java`
+
+```java
+package cat.gencat.circuitbreakerconsumer.endpoints.client;
+
+...
+
+@RestController
+@RequestMapping("/equipaments")
+public class EquipamentClientController {
+
+  @Inject
+  private EquipamentClientService clientService;
+
+  @GetMapping(value = "/externs/{id}", produces = { MediaType.APPLICATION_JSON_VALUE })
+  public Equipament getClientEquipament(@PathVariable("id") final Long equipamentId) {
+    return clientService.getClientEquipament(equipamentId);
+  }
+}
+```
+
+> Ejemplo de configuración de Spring:
+
+Contenido de `EquipamentClientConfig.java`
+
+```java
+package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@Configuration
+public class EquipamentClientConfig {
+
+  @Bean(name = "restTemplate")
+  public RestTemplate getRestTemplate() {
+    return new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
+  }
+}
+```
+
 
 ---
 ## Pruebas 
@@ -237,41 +407,42 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8095 -Dspring-boot
 ---
 > Prueba con el circuito cerrado
 
-* Utilizando Postman se invoca el servicio Rest que tiene el patrón _Circuit Breaker_, en este caso: [http://localhost:8095/equipaments/externs/10] y responde igual que el servicio externo: [http://localhost:8090/equipaments/10]
+* Utilizando Postman se invoca el Servicio Rest Consumidor, en este caso: http://localhost:8095/equipaments/externs/10 y responde igual que el Servicio Rest Proveedor: http://localhost:8090/equipaments/10
 
 ![Spring circuit Ejemplo 1](/images/howtos/2021-01-02_spring_circuit_example1.gif)
 
 ---
 > Prueba con el circuito abierto
 
-* Si se detiene la primera aplicación, y se invoca el servicio Rest que tiene el patrón _Circuit Breaker_, se desvia para invocar el método de recuperación, sin generar errores
+* Si se detiene la aplicación del Servicio Rest Consumidor, y se invoca el Servicio Rest Proveedor, se comprueba que se desvia para invocar el método de recuperación, sin generar errores
 
-![Spring circuit Ejemplo 2](/images/howtos/2021-01-02_spring_circuit_example2.gif))
+![Spring circuit Ejemplo 2](/images/howtos/2021-01-02_spring_circuit_example2.gif)
 
 ---
 > Monitorización
 
 * Es posible obtener métricas de la ejecución del patrón utilizando distintas herramientas, por ejemplo, el tablero básico de 'netflix-hystrix-dashboard', o con [Prometheus](https://github.com/prometheus/prometheus)/[Grafana](https://github.com/grafana/grafana).
 
-#### Métricas con 'netflix-hystrix-dashboard'
+ * Métricas con 'netflix-hystrix-dashboard'
 
 > http://localhost:8095/hystrix
 
-![Spring circuit Ejemplo 3](/images/howtos/2021-01-02_spring_circuit_example3.gif))
+![Spring circuit Ejemplo 3](/images/howtos/2021-01-02_spring_circuit_example3.gif)
 
-#### Métricas con Prometheus
+ * Métricas con Prometheus
 
 > http://localhost:9090/
 
-![Spring circuit Ejemplo 4](/images/howtos/2021-01-02_spring_circuit_example4.gif))
+![Spring circuit Ejemplo 4](/images/howtos/2021-01-02_spring_circuit_example4.gif)
 
-#### Métricas con Grafana
+ * Métricas con Grafana
 
 > http://localhost:3000/
 
-![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif))
+![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif)
+
 
 ---
 ## Conclusión
 
- * Es posible aplicar patrones de diseño de software sobre proyectos generados con Canigó que incorporen la tolerancia a fallos; uno de esos patrones es _Circuit Breaker_ y es posible implementarlo utilizando librerías como [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix)
+ * Es posible aplicar patrones de diseño de software sobre proyectos generados con Canigó que incorporen la tolerancia a fallos. Uno de esos patrones es _Circuit Breaker_ y se puede implementar utilizando proyectos como [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix) o [Resilience4j](https://github.com/resilience4j/resilience4j)
