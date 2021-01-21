@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:9090/initializr -->
+<html lang="ca"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Canigó Inicialitzador</title>
+	<style type="text/css">
+#app {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#side-left {
+    background: white;
+    -webkit-transition: all 100ms;
+    -moz-transition: all 100ms;
+    -ms-transition: all 100ms;
+    -o-transition: all 100ms;
+    transition: all 100ms;
+}
+
+#side-left .side-container {
+    border-right: 1px solid rgba(174,202,202,0.4);
+}
+
+#side-left, #side-right {
+    position: absolute;
+}
+
+#side-right {
+    right: 75px;
+}
+
+#side-right .side-container {
+    margin-left: auto;
+    background: #fff;
+    padding: 20px 0;
+    z-index: 198;
+    border-left: 1px solid #dce8e8;
+}
+
+#side-left .side-container, #side-right .side-container {
+    width: 75px;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    min-height: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+
+#main {
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 0 110px;
+    max-width: 1680px;
+}
+
+#header h1.logo {
+    max-width: 480px;
+    padding: 2rem 0;
+}
+
+#header h1, #header h2 {
+    margin: 0;
+}
+
+.form {
+    position: relative;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+
+body {
+    font-family: "Metropolis",Arial,sans-serif;
+    background-color: #fff;
+    margin: 0;
+}
+
+body, html {
+    text-rendering: optimizeLegibility;
+}
+
+html {
+    font-size: 15px;
+    font-family: "Metropolis",Arial,sans-serif;
+    color: #000;
+    font-weight: 300;
+    line-height: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+
+hr.divider {
+    border: 0 none;
+    border-top: 1px solid #dce8e8;
+    margin: 0.2rem 0 2rem;
+}
+
+.colset-main {
+    padding-bottom: 90px;
+    background: linear-gradient(#dce8e8, #dce8e8) no-repeat center/1px 100%;
+}
+
+.colset {
+    display: flex;
+}
+
+.colset .left {
+    padding-right: 5rem;
+    flex: 50%;
+}
+
+.colset .left, .colset .right {
+    flex: 50%;
+}
+
+.col-sticky {
+    position: sticky;
+    top: 20px;
+}
+
+.control .label {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+label {
+    cursor: default;
+}
+
+.control-inline label {
+    white-space: nowrap;
+    font-weight: 500;
+    flex: 110px 0;
+    text-align: right;
+}
+
+.control-inline input {
+    color: #000;
+    background: #fff;
+    max-width: 520px;
+}
+
+.control-inline input, .control-inline .group-radio {
+    margin-left: 1.3rem;
+    font-weight: 300;
+    flex: 1;
+}
+
+.input {
+    display: block;
+    border: 0;
+    outline: none;
+    border-bottom: 3px solid #000;
+    line-height: 16px;
+    font-family: "Metropolis",Arial,sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    width: 100%;
+    padding: 0.35rem 0 0.55rem;
+    border-radius: 0;
+    background: #fff;
+    font-weight: 300;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.control-inline {
+    display: flex;
+}
+
+.control {
+    padding: 0.6rem 0;
+}
+
+inline .group-radio {
+    margin-left: 1.3rem;
+    font-weight: 300;
+    flex: 1;
+}
+
+.checked {
+    color: #6db33f;
+}
+
+.radio {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    margin-right: 1.5rem;
+    margin-left: -5px;
+    cursor: pointer;
+    line-height: 18px;
+    outline: 1px dotted transparent;
+}
+
+.radio-content {
+    display: inline-block;
+    padding: 6px;
+    padding-left: 30px;
+    outline: none;
+    box-shadow: none;
+}
+
+.actions {
+    display: block;
+    text-align: center;
+    bottom: 0;
+    z-index: 3;
+    position: fixed;
+    right: 75px;
+    left: 75px;
+}
+
+.actions .actions-container {
+    background: #ecf2f2;
+    padding: 20px 0.5rem;
+    margin: 0 auto;
+    max-width: 1516px;
+    height: 50px;
+}
+
+.actions .button {
+    font-size: 16px;
+}
+
+button.button {
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    border: 2px solid #000;
+    color: #000;
+    padding: 0;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 1.23rem;
+    overflow: hidden;
+    margin-right: 1rem;
+    cursor: pointer;
+    background: transparent;
+    -webkit-transition: all .075s;
+    -moz-transition: all .075s;
+    -ms-transition: all .075s;
+    -o-transition: all .075s;
+    transition: all .075s;
+    z-index: 1;
+    background: #fff;
+    font-family: "Metropolis",Arial,sans-serif;
+}
+
+button.button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    -webkit-transition: all .075s;
+    -moz-transition: all .075s;
+    -ms-transition: all .075s;
+    -o-transition: all .075s;
+    transition: all .075s;
+    z-index: -1;
+}
+
+button.button span.button-content {
+    display: inline-block;
+    padding: 0;
+}
+
+button.button span.secondary {
+    font-weight: 400;
+    margin-left: -10px;
+    padding-left: 0;
+}
+
+.actions .button span {
+    padding: 0.9rem 1.5rem 0.8rem;
+}
+
+button.button span {
+    display: inline-block;
+    z-index: 1;
+    padding: 0.7rem 1.2rem 0.6rem;
+}
+	</style>
+	<script type="text/javascript">
+function validateCheckbox(selectBox) {
+	var groupBox = document.getElementsByName(selectBox.name);
+//	for (var checkbox of groupBox) {
+//		if (checkbox.value == 'JPA') {
+//			checkbox.checked = true;
+//		} else if (checkbox.checked && checkbox.value != selectBox.value) {
+//			checkbox.checked = false;
+//		}
+//	}
+}
+	</script>
+</head>
+<body class="default">
+  <div id="app">
+    <div id="side-left">
+      <div class="side-container"></div>
+    </div>
+		<div id="main">
+		  <header id="header">
+		     <h1 class="logo">
+	          Canigó Inicialitzador - <span>v1.0.0</span>
+		     </h1>
+		  </header>
+		  <hr class="divider">
+		  <form class="form" autocomplete="off">
+				<div class="colset colset-main">
+				  <div class="left">
+				    <div class="col-sticky">
+				      <div class="control">
+							    <label class="label">Projecte Metadata</label>
+									<div class="control-element">
+										
+						        <div class="control control-inline">
+						           <label>Projecte</label>
+						           <div class="group-radio">
+							           <input class="radio checked radio-content" type="radio" id="project-name" name="Projecte" value="Maven" checked="checked">Maven
+						           </div>
+						        </div>
+					        </div>
+									<div class="control-element">
+										
+						        <div class="control control-inline">
+						           <label>Llenguatge</label>
+						           <div class="group-radio">
+							           <input class="radio checked radio-content" type="radio" id="language" name="Llenguatge" value="Java" checked="checked">Java
+						           </div>
+						        </div>
+					        </div>
+									<div class="control-element">
+										
+						        <div class="control control-inline">
+						           <label>Canigó Versió</label>
+						           <div class="group-radio">
+							           <input class="radio checked radio-content" type="radio" id="framework-version" name="Canigó Versió" value="3.4.5" checked="checked">3.4.5<input class="radio checked radio-content" type="radio" id="framework-version" name="Canigó Versió" value="3.4.4">3.4.4<input class="radio checked radio-content" type="radio" id="framework-version" name="Canigó Versió" value="3.4.3">3.4.3
+						           </div>
+						        </div>
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Grup</label>
+						          <input class="input" type="text" id="group" name="Grup" value="com.example">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Artefacte</label>
+						          <input class="input" type="text" id="artifact" name="Artefacte" value="canigo_demo">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Nom</label>
+						          <input class="input" type="text" id="name" name="Nom" value="canigo">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Versió</label>
+						          <input class="input" type="text" id="version" name="Versió" value="1.0.0">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Descripció</label>
+						          <input class="input" type="text" id="description" name="Descripció" value="Canigó demo">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										<div class="control control-inline">
+						          <label>Nom de package</label>
+						          <input class="input" type="text" id="package-name" name="Nom de package" value="com.example.canigo.demo">
+						        </div>
+						        
+					        </div>
+									<div class="control-element">
+										
+						        <div class="control control-inline">
+						           <label>Empaquetat</label>
+						           <div class="group-radio">
+							           <input class="radio checked radio-content" type="radio" id="package-type" name="Empaquetat" value="Jar" checked="checked">Jar<input class="radio checked radio-content" type="radio" id="package-type" name="Empaquetat" value="War">War
+						           </div>
+						        </div>
+					        </div>
+									<div class="control-element">
+										
+						        <div class="control control-inline">
+						           <label>JDK</label>
+						           <div class="group-radio">
+							           <input class="radio checked radio-content" type="radio" id="jdk-version" name="JDK" value="15">15<input class="radio checked radio-content" type="radio" id="jdk-version" name="JDK" value="11">11<input class="radio checked radio-content" type="radio" id="jdk-version" name="JDK" value="8" checked="checked">8
+						           </div>
+						        </div>
+					        </div>
+			        </div>
+						</div>
+					</div>
+					<div class="right">
+					  <div class="col-sticky">
+	            <div class="control">
+								<label class="label">Mòduls</label>
+								<div class="control-element">
+					        <div class="control control-inline">
+					           <label>Per defecte</label>
+					           <div class="group-radio">
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="Per defecte" name="Per defecte" value="JPA" checked="checked">JPA
+								       </div>
+							       </div>
+					        </div>
+								</div>
+								<div class="control-element">
+					        <div class="control control-inline">
+					           <label>Generals</label>
+					           <div class="group-radio">
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="generals" name="modul" value="Mongodb">Mongodb
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="generals" name="modul" value="Logging">Logging
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="generals" name="modul" value="Instrumentalització">Instrumentalització
+								       </div>
+							       </div>
+					        </div>
+								</div>
+								<div class="control-element">
+					        <div class="control control-inline">
+					           <label>Seguretat</label>
+					           <div class="group-radio">
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat sense token amb proveïdor per arxiu">Seguretat sense token amb proveïdor per arxiu
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat sense token amb proveïdor per BBDD">Seguretat sense token amb proveïdor per BBDD
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat sense token amb proveïdor per GICAR">Seguretat sense token amb proveïdor per GICAR
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per arxiu">Seguretat amb token amb proveïdor per arxiu
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per BBDD">Seguretat amb token amb proveïdor per BBDD
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per Gicar amb autorització per BBDD">Seguretat amb token amb proveïdor per Gicar amb autorització per BBDD
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per Gicar amb autorització per GICAR" checked="checked">Seguretat amb token amb proveïdor per Gicar amb autorització per GICAR
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per SAML amb autorització per BBDD">Seguretat amb token amb proveïdor per SAML amb autorització per BBDD
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="security" name="modul" value="Seguretat amb token amb proveïdor per SAML amb autorització per GICAR">Seguretat amb token amb proveïdor per SAML amb autorització per GICAR
+								       </div>
+							       </div>
+					        </div>
+								</div>
+								<div class="control-element">
+					        <div class="control control-inline">
+					           <label>Integració</label>
+					           <div class="group-radio">
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Antivirus">Antivirus
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Avisos alertes Pica">Avisos alertes Pica
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Dni Pica">Dni Pica
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Icc">Icc
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Notificacions electroniques">Notificacions electroniques
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Notificacions electroniques ws">Notificacions electroniques ws
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Padro Pica">Padro Pica
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Pica">Pica
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Psgd">Psgd
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Psis">Psis
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Sarcat">Sarcat
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Sarcat Pica">Sarcat Pica
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Sarcat planificat">Sarcat planificat
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Sgde">Sgde
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Ssc">Ssc
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="integration" name="modul" value="Tributs Pica">Tributs Pica
+								       </div>
+							       </div>
+					        </div>
+								</div>
+								<div class="control-element">
+					        <div class="control control-inline">
+					           <label>Suport</label>
+					           <div class="group-radio">
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Fileupload">Fileupload
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Lopd">Lopd
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Mailing">Mailing
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Merging">Merging
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Ole">Ole
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Resizeimg">Resizeimg
+								       </div>
+						           <div>
+							           <input class="radio checked radio-content" type="radio" onclick="validateCheckbox(this)" id="support" name="modul" value="Sftp">Sftp
+								       </div>
+							       </div>
+					        </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="actions">
+				   <div class="actions-container">
+				     <button class="button primary" type="button" id="generate-project">
+				         <span class="button-content" tabindex="-1">
+				             <span>Generar projecte</span>
+				             <span class="secondary desktop-only">Ctrl + ⏎</span>
+				         </span>
+				    </button>
+				   </div>
+				</div>
+			</form>
+		</div>
+		<div id="side-right">
+      <div class="side-container">
+    </div>
+  </div>
+	</div>
+
+
+</body></html>
