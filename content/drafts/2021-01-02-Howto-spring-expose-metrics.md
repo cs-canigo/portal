@@ -95,7 +95,7 @@ docker run --rm -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheu
 Se requiere iniciar un contenedor con `Grafana`
 
 ```sh
-docker run --rm -d -p 3000:3000 --net=host grafana/grafana
+docker run --rm -d -p 3000:3000 grafana/grafana
 ```
 
 ---
@@ -110,9 +110,13 @@ docker run --rm -d -p 3000:3000 --net=host grafana/grafana
 ```
 
 > Se prueban algunos servicios que muestran las métricas disponibles
+
   * /actuator
+
   * /actuator/health
+
   * /actuator/metrics/jvm.memory.used
+  
   * /actuator/prometheus
 
 ![Spring Exposes Metrics Ejemplo 1](/images/howtos/2021-01-02_spring_expose_metrics_example1.gif)
