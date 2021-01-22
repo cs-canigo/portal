@@ -14,8 +14,8 @@ El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’exec
 
 ### Config
 
-Contiene las configuraciones de repositorios de MongoDB con Spring
+Conté les configuracions de repositoris de MongoDB amb Spring
 
 ### Support
 
-Contiene la clase "CanigoDBObjectMongodbQuery" que implementa QueryDSL sobre MongoDB. 
+Conté la classe "CanigoDBObjectMongodbQuery" que implementa QueryDSL sobre MongoDB.
