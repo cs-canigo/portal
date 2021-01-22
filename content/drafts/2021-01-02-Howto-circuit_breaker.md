@@ -168,9 +168,7 @@ public class EquipamentClientService {
       @HystrixProperty(name = "circuitBreaker.requestVolumeThreshold", value = "4"),
       @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "50"),
       @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
-    }
-  )
-
+    })
   public Equipament getClientEquipament(Long equipamentId) {
     return this.restTemplate.getForObject(URI.create(EXTERNAL_EQUIPAMENTS_URL + equipamentId), Equipament.class);
   }
