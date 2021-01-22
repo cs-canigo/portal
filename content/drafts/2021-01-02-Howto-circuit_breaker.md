@@ -55,7 +55,7 @@ Para aplicar este patrón, es necesario agregar algunas dependencias al proyecto
 
  * 'spring-cloud-starter-netflix-hystrix' contiene la implementación del patrón _Circuit Breaker_.
 
- * 'spring-cloud-starter-netflix-hystrix-dashboard' contiene un dashboard básico opcional para monitorear el el circuito.
+ * 'spring-cloud-starter-netflix-hystrix-dashboard' contiene un dashboard básico opcional para monitorear el circuito.
  
  * 'spring-boot-starter-actuator' contiene la implementacíon y generación de métricas.
  
@@ -170,6 +170,7 @@ public class EquipamentClientService {
       @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
     }
   )
+
   public Equipament getClientEquipament(Long equipamentId) {
     return this.restTemplate.getForObject(URI.create(EXTERNAL_EQUIPAMENTS_URL + equipamentId), Equipament.class);
   }
@@ -195,7 +196,6 @@ package cat.gencat.circuitbreakerconsumer.endpoints.client;
 @RestController
 @RequestMapping("/equipaments")
 public class EquipamentClientController {
-
   @Inject
   private EquipamentClientService clientService;
 
@@ -219,7 +219,6 @@ package cat.gencat.circuitbreakerconsumer.config.client;
 @EnableCircuitBreaker
 @Configuration
 public class EquipamentClientConfig {
-
   @Bean(name = "restTemplate")
   public RestTemplate getRestTemplate() {
     return new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
@@ -237,6 +236,8 @@ public class EquipamentClientConfig {
 Es necesario agregar algunas dependencias al proyecto maven:
 
  * 'resilience4j-circuitbreaker' contiene la implementación del patrón _Circuit Breaker_.
+ 
+ * 'resilience4j-micrometer' contiene la implementación de la generación de métricas.
  
  * 'spring-boot-starter-actuator' contiene la implementacíon y generación de métricas.
  
@@ -379,7 +380,6 @@ package cat.gencat.circuitbreakerconsumer.endpoints.client;
 @RestController
 @RequestMapping("/equipaments")
 public class EquipamentClientController {
-
   @Inject
   private EquipamentClientService clientService;
 
@@ -401,7 +401,6 @@ package cat.gencat.circuitbreakerconsumer.config.client;
 
 @Configuration
 public class EquipamentClientConfig {
-
   @Bean(name = "restTemplate")
   public RestTemplate getRestTemplate() {
     return new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
@@ -461,7 +460,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8095 -Dspring-boot
 
 > http://localhost:3000/
 
-![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.png)
+![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif)
 
 
 ---

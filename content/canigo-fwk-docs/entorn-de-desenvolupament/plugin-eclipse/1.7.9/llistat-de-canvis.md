@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Llistat de canvis"
 description = "Llistat de canvis plugin eclipse 1.7.9"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 

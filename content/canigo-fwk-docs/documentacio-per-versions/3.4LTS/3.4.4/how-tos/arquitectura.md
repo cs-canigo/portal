@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Guies d'ús d'arquitectura"
 description = "Guies d'ús (HowTOs) d'arquitectura 3.4.4"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight        = 1
 +++
 

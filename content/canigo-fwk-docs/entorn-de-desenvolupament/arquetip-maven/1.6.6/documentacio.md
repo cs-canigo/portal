@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Documentació"
 description = "Documentació arquetip maven 1.6.6"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 

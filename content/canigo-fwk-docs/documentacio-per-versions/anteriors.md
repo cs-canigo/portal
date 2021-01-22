@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Anteriors"
 description = "Anteriors"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 enllac		= "/canigo-fwk-docs/documentacio-per-versions/anteriors/"
 weight		= 2
 +++

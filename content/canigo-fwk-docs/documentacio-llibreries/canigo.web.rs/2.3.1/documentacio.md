@@ -2,7 +2,7 @@
 date        = "2020-06-25"
 title       = "Documentació"
 description = "Documentació canigo.web.rs 2.3.1"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 

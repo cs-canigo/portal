@@ -2,7 +2,7 @@
 date        = "2017-07-14"
 title       = "Roadmap Framework Canigó"
 description = "Roadmap previst per a la evolució del Framework Canigó"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 taxonomies  = []
 toc 		= true
 weight 		= 3

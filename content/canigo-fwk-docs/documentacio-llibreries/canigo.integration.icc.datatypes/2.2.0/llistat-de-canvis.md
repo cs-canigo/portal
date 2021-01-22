@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Llistat de canvis"
 description = "Llistat de canvis canigo.integration.icc.datatypes 2.2.0"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 

@@ -2,7 +2,7 @@
 date        = "2020-12-12"
 title       = "Errors coneguts"
 description = "Errors coneguts plugin eclipse 1.7.10"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 

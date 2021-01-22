@@ -2,7 +2,7 @@
 date        = "2020-12-17"
 title       = "Framework Canigó"
 description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
-sections    = "Canigó"
+sections    = "canigo-fwk-docs"
 taxonomies  = []
 toc       = true
 weight        = 1
