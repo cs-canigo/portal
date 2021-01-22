@@ -17,6 +17,8 @@ El objetivo de este artículo es mostrar como implementar el patrón _[Circuit B
 
 El patrón _Circuit Breaker_ evita que una aplicación intente de manera indefinida una operación que con alta probabilidad vaya a fallar, permitiendo que continúe la aplicación mientras el problema con la operación se resuelve. Adicionalmente, se puede detectar cuando se ha resuelto el problema permitiendo de esta manera volver a ejecutar la operación comprometida. 
 
+![Spring circuit Diagrama](/images/howtos/2021-01-02_spring_circuit_diagrama.png)
+
 Los estados que plantea el patrón son:
 
  * Closed: El circuito está cerrado y el flujo fluye ininterrumpidamente. Este es el estado inicial, todo funciona bien.
