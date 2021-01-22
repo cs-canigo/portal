@@ -25,4 +25,4 @@ S'ha certificat la versió de Canigó 3.4.5 amb els servidors suportats al [Full
 |  WebSphere	  		        	  	 	|         9.0                 			|
 |  JBoss EAP       									|         7.x        			          |
 
-La versió de Java mínima per utilitzar Canigó 3.4.4 és 1.8
+La versió de Java mínima per utilitzar Canigó 3.4.5 és 1.8
