@@ -59,7 +59,9 @@ Para aplicar este patrón, es necesario agregar algunas dependencias al proyecto
  
  * 'micrometer-registry-prometheus' exporta las metricas en un formato entendible por Prometheus.
 
-Es importante mantener la relación entre las dependencias de 'Spring Cloud' y la versión de 'Spring Boot', En este caso, sí la versión de 'Spring Boot' es: '2.1.8.RELEASE', entonces le corresponde la versión: 'Greenwich.XX' de 'Spriing Cloud'. En esta matriz de compatibilidad se encuentran los detalles: [spring-cloud](https://spring.io/projects/spring-cloud)
+Es importante mantener la relación entre las dependencias de 'Spring Cloud' y la versión de 'Spring Boot', En este caso, sí la versión de 'Spring Boot' es: '2.1.8.RELEASE', entonces le corresponde la versión: 'Greenwich.XX' de 'Spriing Cloud'. 
+
+En esta matriz de compatibilidad se encuentran los detalles: [spring-cloud](https://spring.io/projects/spring-cloud)
 
 Contenido de `pom.xml`
 
@@ -87,9 +89,8 @@ Contenido de `pom.xml`
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
     </dependency>
+  </dependencies>
 
-	</dependencies>
-	
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -246,8 +247,14 @@ Contenido de `pom.xml`
 
   <dependencies>
     ...
-    <groupId>io.github.resilience4j</groupId>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
       <artifactId>resilience4j-circuitbreaker</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.resilience4j</groupId>
+      <artifactId>resilience4j-micrometer</artifactId>
       <version>1.6.1</version>
     </dependency>
     <dependency>
@@ -258,8 +265,8 @@ Contenido de `pom.xml`
       <groupId>io.micrometer</groupId>
       <artifactId>micrometer-registry-prometheus</artifactId>
     </dependency>
-	</dependencies>
-	
+  </dependencies>
+
   ...
 }
 ```
@@ -309,10 +316,14 @@ public class EquipamentClientService {
   private static final Logger log = LoggerFactory.getLogger(EquipamentClientService.class);
   private static final String EXTERNAL_EQUIPAMENTS_URL = "http://localhost:8090/equipaments/";
   private final RestTemplate restTemplate;
+  private final MeterRegistry meterRegistry;
+  private final CircuitBreakerRegistry circuitBreakerRegistry;
   private final CircuitBreaker circuitBreaker;
 
-  public EquipamentClientService(RestTemplate restTemplate) {
+  public EquipamentClientService(RestTemplate restTemplate, MeterRegistry meterRegistry, CircuitBreakerRegistry circuitBreakerRegistry) {
     this.restTemplate = restTemplate;
+    this.meterRegistry = meterRegistry;
+    this.circuitBreakerRegistry = circuitBreakerRegistry;
     this.circuitBreaker = createCircuitBreaker();
   }
 
@@ -332,15 +343,24 @@ public class EquipamentClientService {
   
   private CircuitBreaker createCircuitBreaker() {
     CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
+      .minimumNumberOfCalls(4)
       .failureRateThreshold(50)
       .waitDurationInOpenState(Duration.ofMillis(20000)).build();
 
-    CircuitBreaker breaker = CircuitBreaker.of("equipament-proveidor", circuitBreakerConfig);
+    CircuitBreaker breaker = circuitBreakerRegistry.circuitBreaker("equipament-proveidor", circuitBreakerConfig);
     breaker.getEventPublisher()
       .onSuccess(event -> log.info("Truqueu a l'èxit mitjançant circuit breaker"))
       .onCallNotPermitted(event -> log.info("Trucada denegada per circuit breaker"))
       .onError(event -> log.info("La trucada ha fallat mitjançant circuit breaker"));
+
     return breaker;
+  }
+  
+  @PostConstruct
+  public void init() {
+    TaggedCircuitBreakerMetrics
+      .ofCircuitBreakerRegistry(circuitBreakerRegistry)
+      .bindTo(meterRegistry);
   }
 }
 ```
@@ -439,7 +459,7 @@ mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8095 -Dspring-boot
 
 > http://localhost:3000/
 
-![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif)
+![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.png)
 
 
 ---
