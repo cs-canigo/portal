@@ -28,6 +28,14 @@ Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través
 </dependency>
 ```
 
+### Dependències
+
+El mòdul de PICA utilitza el connector de la PICA, podeu trobar les dependències d'aquest connector a:
+
+http://transversals.ctti.intranet.gencat.cat/related/pica/integracio/lib.zip
+
+És necessari revisar les dependències a on es vagi a utilitzar el mòdul de PICA perquè no tinguin conflictes amb les dependències del connector, i si és el cas, excloure les que siguin necessàries
+
 ### Configuració
 
 La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
@@ -336,3 +344,8 @@ public class PicaServiceController {
 	}
 }
 ```
+### 
+
+Per a més informació sobre el connector de la PICA teniu:
+
+[Integració amb PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
