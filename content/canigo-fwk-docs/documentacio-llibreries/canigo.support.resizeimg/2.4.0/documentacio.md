@@ -1,7 +1,7 @@
 +++
 date        = "2020-06-25"
 title       = "Documentació"
-description = "Documentació canigo.support.resizeimg 2.3.0"
+description = "Documentació canigo.support.resizeimg 2.4.0"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
