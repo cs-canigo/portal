@@ -344,7 +344,8 @@ public class PicaServiceController {
 	}
 }
 ```
-### 
+
+### Més informació
 
 Per a més informació sobre el connector de la PICA teniu:
 
