@@ -12,7 +12,6 @@ key         = "GENER2021"
 Como parte del proceso de construcción de artefactos en el Autoservei, se inyectan los archivos de configuración de maven `settings.xml` y `.npmrc` dentro de los contenedores. En el caso de contenedores con imágenes maven, el archivo `settings.xml` se inyecta en la carpeta `.m2` del home del usuario. En el caso de contenedores con imágenes maven y NPM, el archivo `.npmrc` se inyecta en la raiz del espacio de trabajo, es decir, en el primer nivel del proyecto Git descargado.
 
 Sí en el primer nivel del proyecto no se encuentra el `package.json` que contiene los comandos de construcción, entonces al construir, no se va a establecer la comunicación con Nexus y no se podrán descargar las dependencias, lo que puede generar que falle la pipeline asociada al proyecto.
-npm
 
 ## Solución
 
