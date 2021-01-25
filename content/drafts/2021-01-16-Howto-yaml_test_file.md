@@ -105,7 +105,7 @@ public class EquipamentServiceTest {
 
 ### Pruebas 
 
-> Test:
+> Test: `EquipamentServiceTest.testYamlProperties`
 
 ![Spring Yaml Test Ejemplo 1](/images/howtos/2021-01-16_spring_yaml_test_example1.gif)
 
