@@ -1,0 +1,5 @@
+cat.gencat.ctti.canigo.arch.security.saml.authentication.controller
+cat.gencat.ctti.canigo.arch.security.saml.authentication.credentials
+cat.gencat.ctti.canigo.arch.security.saml.authentication.filter
+cat.gencat.ctti.canigo.arch.security.saml.authentication.service
+cat.gencat.ctti.canigo.arch.security.saml.authentication.service.impl

@@ -1,0 +1,9 @@
+cat.gencat.ctti.canigo.arch.integration.sarcat.exceptions
+cat.gencat.ctti.canigo.arch.integration.sarcat.ftp
+cat.gencat.ctti.canigo.arch.integration.sarcat.ftp.impl
+cat.gencat.ctti.canigo.arch.integration.sarcat.serveis
+cat.gencat.ctti.canigo.arch.integration.sarcat.serveis.impl
+cat.gencat.ctti.canigo.arch.integration.sarcat.utils.ftp
+cat.gencat.ctti.canigo.arch.integration.sarcat.utils.ftp.exceptions
+cat.gencat.ctti.canigo.arch.integration.sarcat.utils.ftp.impl
+org.springframework.oxm.xmlbeans

@@ -8,4 +8,5 @@ weight		= 2
 
 ## Llistat de canvis versió 4.2.0
 
-- Revisió dels tests del mòdul per anàlisis SonarQube
+- [Revisió de regles SonarQube als mòduls _core_](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
+   - S'han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls _core_ de Canigó.
