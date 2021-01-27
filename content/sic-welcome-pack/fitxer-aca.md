@@ -327,10 +327,6 @@ build:
 No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució doncs aquesta vindrà donada per l'eina.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
-<div class="message information">
-En cas de no especificar la versió de la JDK, per defecte s'utilitzarà JDK 1.8.
-</div>
-
 </br>
 #### .Net
 Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a continuació:
@@ -585,6 +581,8 @@ Pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desp
 No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
 
+Les versions suportades (i combinacions) de les diferents tecnologies són les mateixes que les indicades a l'apartat [**Procés de construcció**](/sic-welcome-pack/fitxer-aca/#procés-de-construcció).
+</br>
 
 Exemple especificant la `tool` i la `jdk`:
 ```
@@ -597,9 +595,6 @@ deploy:
       jdk: JDK 1.8
       parameters: deploy -f pom.xml
 ```
-<div class="message information">
-En cas de no especificar la versió de la JDK, per defecte s'utilitzarà JDK 1.8.
-</div>
 
 Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
 (en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
