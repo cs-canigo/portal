@@ -580,9 +580,8 @@ deploy:
 Pas de publicació de llibreries al Nexus, en el que se li indica l'eina de desplegament `tool` seguint el mateix patró que les passes de construcció (steps de build).
 No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d'una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
 simplement caldrà fer referència a l'`artifact` en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
-
 Les versions suportades (i combinacions) de les diferents tecnologies són les mateixes que les indicades a l'apartat [**Procés de construcció**](/sic-welcome-pack/fitxer-aca/#procés-de-construcció).
-</br>
+</br></br>
 
 Exemple especificant la `tool` i la `jdk`:
 ```
