@@ -1,5 +1,5 @@
 +++
-date = "2020-12-29"
+date = "2021-01-20"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 aliases = [
@@ -301,14 +301,14 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de Maven i com a `jdk` l
 |maven_2.2.1|JDK 1.7|
 |maven_3.2.2|JDK 1.6|
 |maven_3.2.2|JDK 1.7|
-|maven_3.2.2|JDK 1.8|
+|maven_3.2.2|JDK 1.8 (per defecte)|
 |maven_3.3.9|JDK 1.6|
 |maven_3.3.9|JDK 1.7|
-|maven_3.3.9|JDK 1.8|
+|maven_3.3.9|JDK 1.8 (per defecte)|
 |maven_3.5|JDK 1.7|
-|maven_3.5|JDK 1.8|
+|maven_3.5|JDK 1.8 (per defecte)|
 |maven_3.6|JDK 1.7|
-|maven_3.6|JDK 1.8|
+|maven_3.6|JDK 1.8 (per defecte)|
 |maven_3.6|JDK 11-openjdk|
 
 ```
@@ -326,6 +326,10 @@ build:
 
 No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució doncs aquesta vindrà donada per l'eina.
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
+
+<div class="message information">
+En cas de no especificar la versió de la JDK, per defecte s'utilitzarà JDK 1.8.
+</div>
 
 </br>
 #### .Net
@@ -593,6 +597,9 @@ deploy:
       jdk: JDK 1.8
       parameters: deploy -f pom.xml
 ```
+<div class="message information">
+En cas de no especificar la versió de la JDK, per defecte s'utilitzarà JDK 1.8.
+</div>
 
 Exemple sense indicar la `tool` i referenciant a un `artifact` per a fer ús de la mateixa imatge de construcció
 (en cas d'indicar simultàniament l'eina i l'artefacte, el sistema utilitzarà la imatge associada a l'eina indicada ignorant la propietat `artifact`):
