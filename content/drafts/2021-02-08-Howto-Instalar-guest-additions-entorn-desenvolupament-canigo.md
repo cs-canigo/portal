@@ -1,7 +1,7 @@
 +++
 date        = "2021-02-08"
-title       = "Canigó. Com instalar les VBOX guest additions"
-description = "Com instalar les VBOX guest additions a l'entorn de desenvolupament de Canigó."
+title       = "Canigó. Com instal·lar les VBOX guest additions"
+description = "Com instal·lar les VBOX guest additions a l'entorn de desenvolupament de Canigó."
 section     = "howtos"
 categories  = ["canigo"]
 #key        = "GENER2021"
@@ -20,13 +20,13 @@ Els objectius perseguits per l’entorn de desenvolupament són:
 
 * Simular els entorns de desplegament als CPD Generalitat, facilitant contenidors amb les mateixes versions i configuracions dels PaaS que ens trobarem als clouds.
 
-Per a poder utilizar l'entorn de desenvolupament més integrat amb l'ordinador Host on està allotjada, per, per exemple, compartir fitxers entre la màquina virtual i el Host, és necessari instalar les VBOX guest additions
+Per a poder utilizar l'entorn de desenvolupament més integrat amb l'ordinador Host on està allotjada, per, per exemple, compartir fitxers entre la màquina virtual i el Host, és necessari instal·lar les VBOX guest additions
 
-## Instalar VBOX guest additions
+## instal·lar VBOX guest additions
 
-### Coneixer la versió del Virtual Box
+### Conèixer la versió del Virtual Box
 
-Per a poder instalar les VBOX guest additions és necessari saber quina és la versió del Virtual Box, per a saber-ho anirem a:
+Per a poder instal·lar les VBOX guest additions és necessari saber quina és la versió del Virtual Box, per a saber-ho anirem a:
 
 Ayuda > Acerca de Virtual Box ...
 
@@ -34,9 +34,9 @@ Ayuda > Acerca de Virtual Box ...
 
 Aquí podem veure per exemple que la versió és la 5.2.16
 
-### Instalar VBOX guest additions
+### instal·lar VBOX guest additions
 
-Una vegada instalat l'entorn de desenvolupament de Canigó seguint les instruccions de:
+Una vegada instal·lat l'entorn de desenvolupament de Canigó seguint les instruccions de:
 
 [Entorn de desenvolupament](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)
 
@@ -62,7 +62,7 @@ Seleccionarem l'opció "Carpetas compartidas"
 
 ![Carpetas compartidas Virtual Box](/images/howtos/2021-02-08-Virtualbox_carpetas_compartidas.png)
 
-Selecionarem "Nueva carpeta compartida"
+Seleccionarem "Nueva carpeta compartida"
 
 Seleccionarem la carpeta que volem compartir i seleccionarem "Automontar" per a que sigui permanent
 
