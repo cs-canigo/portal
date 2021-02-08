@@ -30,7 +30,7 @@ Per a poder instalar les VBOX guest additions és necessari saber quina és la v
 
 Ayuda > Acerca de Virtual Box ...
 
-![Acerca de Virtual Box](/images/howtos/Acerca_virtual_box.png)
+![Acerca de Virtual Box](/images/howtos/2021-02-08-Acerca_virtual_box.png)
 
 Aquí podem veure per exemple que la versió és la 5.2.16
 
@@ -56,18 +56,18 @@ shutdown now
 
 Una vegada parada la màquina virtual ja podem afegir la carpeta compartida, per això seleccionarem el nom de la màquina virtual al Virtual Box, clicarem botó dret i seleccionarem "Configuracion" o clicarem Control+s
 
-![Configuración Virtual Box](/images/howtos/Virtualbox_configuracion.png)
+![Configuración Virtual Box](/images/howtos/2021-02-08-Virtualbox_configuracion.png)
 
 Seleccionarem l'opció "Carpetas compartidas"
 
-![Carpetas compartidas Virtual Box](/images/howtos/Virtualbox_carpetas_compartidas.png)
+![Carpetas compartidas Virtual Box](/images/howtos/2021-02-08-Virtualbox_carpetas_compartidas.png)
 
 Selecionarem "Nueva carpeta compartida"
 
 Seleccionarem la carpeta que volem compartir i seleccionarem "Automontar" per a que sigui permanent
 
-![Agregar carpetas compartidas Virtual Box](/images/howtos/Virtualbox_agregar_carpetas_compartidas.png)
+![Agregar carpetas compartidas Virtual Box](/images/howtos/2021-02-08-Virtualbox_agregar_carpetas_compartidas.png)
 
 Una vegada afegit, ja podem iniciar la màquina virtual i comprovar que tenim la carpeta muntada
 
-![Carpeta compartida entorn desenvolupament](/images/howtos/Carpeta_compartida_entorn_desenvolupament.png)
+![Carpeta compartida entorn desenvolupament](/images/howtos/2021-02-08-Carpeta_compartida_entorn_desenvolupament.png)
