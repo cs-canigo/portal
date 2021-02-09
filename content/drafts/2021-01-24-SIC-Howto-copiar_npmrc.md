@@ -1,7 +1,7 @@
 +++
 date        = "2021-01-24"
 title       = "SIC. Copiar l'arxiu de configuració .npmrc"
-description = "Howto per a mostrar com copiar l'arxiu de configuració .npmrc a la ruta on es troba el fitxer "package.json" per a una correcta resolució de dependències del projecte"
+description = "Howto per a mostrar com copiar l'arxiu de configuració .npmrc a la ruta on es troba el fitxer package.json per a una correcta resolució de les dependències del projecte"
 section     = "howtos"
 categories  = ["SIC"]
 key         = "FEBRER2021"
@@ -23,7 +23,7 @@ descarregar les dependències necessàries, la qual cosa ocasionarà errors de c
 ## Solució
 
 En general, el problema es podrà resoldre simplement especificant la propietat `executionDir` del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
-No obstant això, en el cas d'utilitzar algun plugin de Maven per a instal·lar i compilar Npm, es pot fer ús del plugin `maven-resources-plugin`
+No obstant això, en el cas d'utilitzar plugins de Maven per a instal·lar i compilar Npm, es pot fer ús del plugin `maven-resources-plugin`
 per a copiar l'arxiu `.npmrc` a la ruta on es trobi l'arxiu `package.json`.
 
 > Exemple d'arxiu `pom.xml`
