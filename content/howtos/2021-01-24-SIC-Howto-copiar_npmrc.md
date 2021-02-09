@@ -25,7 +25,7 @@ descarregar les dependències necessàries, la qual cosa acabarà ocasionant err
 ## Solució
 
 En general, el problema es podrà resoldre simplement especificant la propietat `executionDir` del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
-No obstant això, en el cas d'utilitzar plugins de Maven per a instal·lar i compilar Npm, es pot fer ús del plugin `maven-resources-plugin`
+No obstant això, en el cas d'utilitzar plugins de Maven per a instal·lar i compilar Npm, pot ser necessari fer ús del plugin `maven-resources-plugin`
 per a copiar l'arxiu `.npmrc` a la ruta on es trobi l'arxiu `package.json`.
 
 <br/>
