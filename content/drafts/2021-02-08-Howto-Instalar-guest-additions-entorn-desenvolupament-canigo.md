@@ -23,7 +23,7 @@ per a començar el desenvolupament d’una aplicació Canigó.
 * Simular els entorns de desplegament als CPD de la Generalitat, facilitant contenidors amb les mateixes versions i
 configuracions dels PaaS que ens trobarem als clouds.
 
-Per a poder utilitzar l'entorn de desenvolupament d'una forma més integrada amb l'ordinador host on està allotjada, per exemple,
+Per a poder utilitzar l'entorn de desenvolupament d'una forma més integrada amb l'ordinador host on està allotjada, per exemple
 per a compartir fitxers entre la màquina virtual i el host, és necessari instal·lar les *VBOX guest additions*.
 A continuació es descriuen els passos per a fer-ho.
 

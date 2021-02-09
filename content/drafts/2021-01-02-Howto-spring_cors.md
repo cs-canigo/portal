@@ -11,7 +11,7 @@ categories  = ["canigo"]
 ## Introducció
 
 L'objectiu d'aquest article és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled))
-des d'un servidor per a permetre ser consumit des d'un origen diferent al qual pertany (diferent domini) per a projectes creats
+des d'un servidor per a un origen diferent al qual pertany (diferent domini) en el cas de projectes creats
 amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
 
 ## Justificació
@@ -67,7 +67,7 @@ Per a mostrar un exemple d'ús de CORS és necessari crear un projecte Canigó a
 [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i
 crear una pàgina HTML que invoqui a través de Javascript algun recurs del servidor utilitzant les APIs `XMLHttpRequest` o `Fetch`.
 
-Exemple de pàgina web que invoca el servei REST `/equipaments/id` de prova:
+Un exemple de pàgina web que invoca el servei REST `/equipaments/id` podria ser la següent:
 
 ### cors_test.html
 
@@ -109,8 +109,8 @@ $(document).ready(function() {
 
 ### Proves 
 
-Per a comprovar el seu funcionament s'iniciaran dues instàncies de l'aplicació utilitzant ports diferents, en aquest cas
-s'utilitzaran els ports 8090 (on es troba el servei REST a consultar) i el 8095 (on cridarà la pàgina Web)
+Per a comprovar el seu funcionament s'iniciaran dues instàncies de l'aplicació utilitzant ports diferents. En aquest cas
+s'utilitzaran els ports 8090 (on es troba el servei REST a consultar) i el 8095 (on cridarà la pàgina Web):
 
 ```sh
   mvn spring-boot:run \
@@ -127,7 +127,7 @@ s'utilitzaran els ports 8090 (on es troba el servei REST a consultar) i el 8095 
 #### Prova amb CORS desactivat
 
 En aquest cas realitzarem la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada
-al port 8090, podrem observar que el navegador genera la petició correctament però genera un error a l'aplicació que
+al port 8090 observarem que el navegador genera la petició correctament però retorna un error a l'aplicació que
 està al port 8095 indicant que no està permès l'intercanvi de recursos.
 
 ![Spring CORS Ejemplo 1](/images/howtos/2021-01-02_spring_cors_example1.png)
@@ -138,7 +138,7 @@ està al port 8095 indicant que no està permès l'intercanvi de recursos.
 #### Prova amb CORS activat
 
 En aquest cas realitzarem la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada
-al port 8090, podrem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i
+al port 8090, observarem que el navegador genera la petició correctament i que el navegador permet l'intercanvi i
 respon amb les dades del servei REST de prova.
 
 ![Spring CORS Ejemplo 3](/images/howtos/2021-01-02_spring_cors_example3.png)
