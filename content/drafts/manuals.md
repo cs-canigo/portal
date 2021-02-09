@@ -11,14 +11,13 @@ weight 		= 3
 ### HOWTOs
 
 Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.
-En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs serveis, evitar possibles problemes i altres.
+En aquest apartat s’aniran afegint un seguit d'articles per tal de facilitar la configuració de certs serveis, evitar possibles problemes i altres.
 
 - [Copiar l'arxiu de configuració .npmrc](/howtos/2021-01-24-SIC-Howto-copiar_npmrc)
-- [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
-- [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 - [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)
 - [Definir exclusions al SonarQube](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube)
-
+- [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
+- [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 
 ### Guies
 Es posen a disposició una sèrie de guies que poden resultar d'utilitat:
@@ -37,4 +36,3 @@ Es posen a disposició una sèrie de guies que poden resultar d'utilitat:
 
 * Sóc una Oficina de Qualitat, Seguretat, Monitoratge, ... Què he de fer per integrar-me al SIC?
   [**Suport a la integració d'oficines**](/documentacio/oficines/)
-

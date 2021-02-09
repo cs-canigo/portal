@@ -11,23 +11,25 @@ key         = "FEBRER2021"
 
 Per a realitzar el procés de construcció d'artefactes via pipeline, **el SIC injecta els arxius de configuració de
 Maven `settings.xml` i Npm `.npmrc` dins els contenidors**:
+
 - **Imatges Maven**: l'arxiu `settings.xml` s'injecta al directori `.m²` del `home` de l'usuari.
+
 - **imatges Maven i Npm**: l'arxiu `.npmrc` s'injecta a l'arrel del directori de treball.
 Per defecte, a l'arrel del projecte, o a la ruta indicada mitjançant la propietat `executionDir`
 del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 Per tant, en el segon cas, si l'arxiu de configuració `.npmrc` no es troba ubicat al mateix directori que el fitxer `package.json`
 que conté les comandes de construcció, el procés de construcció no serà capaç d'establir la comunicació amb Nexus i no es podran
-descarregar les dependències necessàries, la qual cosa ocasionarà errors de compilació.
+descarregar les dependències necessàries, la qual cosa acabarà ocasionant errors de compilació.
 
 ## Solució
 
 En general, el problema es podrà resoldre simplement especificant la propietat `executionDir` del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+
 No obstant això, en el cas d'utilitzar plugins de Maven per a instal·lar i compilar Npm, es pot fer ús del plugin `maven-resources-plugin`
 per a copiar l'arxiu `.npmrc` a la ruta on es trobi l'arxiu `package.json`.
 
-> Exemple d'arxiu `pom.xml`
-
+Exemple d'arxiu `pom.xml`:
 ```xml
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
