@@ -10,9 +10,9 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels lliurables del framework Canigó hi consta l'[entorn de desenvolupament de Canigó]((https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)).
-L’entorn de desenvolupament **és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Beaver 18.04.2 LTS)
-pel fet de ser una distribució d’escriptori Linux lleugera**, derivada d’una de les distribucions més esteses del món (Ubuntu/Debian)
+Dins dels lliurables del framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+**Es tracta d'una màquina virtual Linux, basada en Lubuntu Desktop** (Ubuntu Bionic Beaver 18.04.2 LTS)
+pel fet de ser una distribució d’escriptori Linux lleugera, derivada d’una de les distribucions més esteses del món (Ubuntu/Debian)
 i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
 
 Els objectius perseguits per l’entorn de desenvolupament són:
@@ -23,14 +23,16 @@ per a començar el desenvolupament d’una aplicació Canigó.
 * Simular els entorns de desplegament als CPD de la Generalitat, facilitant contenidors amb les mateixes versions i
 configuracions dels PaaS que ens trobarem als clouds.
 
-Per a poder utilitzar l'entorn de desenvolupament d'una forma més integrada amb l'ordinador Host on està allotjada, per exemple,
-per a compartir fitxers entre la màquina virtual i el Host, és necessari instal·lar les *VBOX guest additions*.
+Per a poder utilitzar l'entorn de desenvolupament d'una forma més integrada amb l'ordinador host on està allotjada, per exemple,
+per a compartir fitxers entre la màquina virtual i el host, és necessari instal·lar les *VBOX guest additions*.
 A continuació es descriuen els passos per a fer-ho.
 
 ## Conèixer la versió de Virtual Box
 
 Per a poder instal·lar les *VBOX guest additions* és necessari saber abans quina és la versió de Virtual Box. Per a obtenir-la,
-cal anar al menú: *Ayuda > Acerca de Virtual Box ...*
+cal anar al menú:
+
+*Ayuda > Acerca de Virtual Box ...*
 
 ![Acerca de Virtual Box](/images/howtos/2021-02-08-Acerca_virtual_box.png)
 
@@ -38,7 +40,7 @@ On podrem comprovar que la versió, en aquest cas, és la 5.2.16.
 
 ## Instal·lar VBOX guest additions
 
-Un cop finalitzada la instal·lació de l'entorn de desenvolupament de Canigó seguint les instruccions indicades a:
+Un cop finalitzada la instal·lació de l'entorn de desenvolupament de Canigó seguint les instruccions indicades a l'
 [Entorn de desenvolupament](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), caldrà entrar en un terminal
 i executar les següents comandes indicant la versió adient.
 
