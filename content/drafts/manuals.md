@@ -1,5 +1,5 @@
 +++
-date        = "2020-11-11"
+date        = "2021-01-24"
 title       = "HOWTOs i guies"
 description = "HOWTOs d'utilitat i guies disponibles"
 sections    = "SIC"
@@ -13,7 +13,7 @@ weight 		= 3
 Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.
 En aquest apartat s’aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs serveis, evitar possibles problemes i altres.
 
-- [Como mover el archivo de configuración NPM](/howtos/2021-01-24-SIC-Howto-copiar_npmrc)
+- [Copiar l'arxiu de configuració .npmrc](/howtos/2021-01-24-SIC-Howto-copiar_npmrc)
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 - [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)

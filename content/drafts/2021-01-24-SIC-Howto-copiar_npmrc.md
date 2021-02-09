@@ -1,23 +1,32 @@
 +++
 date        = "2021-01-24"
-title       = "SIC. Como mover el archivo de configuración NPM"
-description = "Howto para mostrar como mover el archivo de configuración NPM"
+title       = "SIC. Copiar l'arxiu de configuració .npmrc"
+description = "Howto per a mostrar com copiar l'arxiu de configuració .npmrc a la ruta on es troba el fitxer "package.json" per a una correcta resolució de dependències del projecte"
 section     = "howtos"
 categories  = ["SIC"]
-key         = "GENER2021"
+key         = "FEBRER2021"
 +++
 
-## Introducción
+## Introducció
 
-Como parte del proceso de construcción de artefactos en el Autoservei, se inyectan los archivos de configuración de maven `settings.xml` y `.npmrc` dentro de los contenedores. En el caso de contenedores con imágenes maven, el archivo `settings.xml` se inyecta en la carpeta `.m2` del home del usuario. En el caso de contenedores con imágenes maven y NPM, el archivo `.npmrc` se inyecta en la raiz del espacio de trabajo, es decir, en el primer nivel del proyecto Git descargado.
+Per a realitzar el procés de construcció d'artefactes via pipeline, **el SIC injecta els arxius de configuració de
+Maven `settings.xml` i Npm `.npmrc` dins els contenidors**:
+- **Imatges Maven**: l'arxiu `settings.xml` s'injecta al directori `.m²` del `home` de l'usuari.
+- **imatges Maven i Npm**: l'arxiu `.npmrc` s'injecta a l'arrel del directori de treball.
+Per defecte, a l'arrel del projecte, o a la ruta indicada mitjançant la propietat `executionDir`
+del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
-Sí en el primer nivel del proyecto no se encuentra el `package.json` que contiene los comandos de construcción, entonces al construir, no se va a establecer la comunicación con Nexus y no se podrán descargar las dependencias, lo que puede generar que falle la pipeline asociada al proyecto.
+Per tant, en el segon cas, si l'arxiu de configuració `.npmrc` no es troba ubicat al mateix directori que el fitxer `package.json`
+que conté les comandes de construcció, el procés de construcció no serà capaç d'establir la comunicació amb Nexus i no es podran
+descarregar les dependències necessàries, la qual cosa ocasionarà errors de compilació.
 
-## Solución
+## Solució
 
-Por ejemplo: en el caso de maven, sí se está utilizando algún plugin de maven para instalar y compilar NPM, entonces, se puede utilizar el plugin `maven-resources-plugin` para copiar el archivo `.npmrc` en la ruta donde está el archivo `package.json`
+En general, el problema es podrà resoldre simplement especificant la propietat `executionDir` del [fitxer ACA](/sic-welcome-pack/fitxer-aca/).
+No obstant això, en el cas d'utilitzar algun plugin de Maven per a instal·lar i compilar Npm, es pot fer ús del plugin `maven-resources-plugin`
+per a copiar l'arxiu `.npmrc` a la ruta on es trobi l'arxiu `package.json`.
 
-> Ejemplo de pom.xml
+> Exemple d'arxiu `pom.xml`
 
 ```xml
 <plugin>
@@ -49,4 +58,4 @@ Por ejemplo: en el caso de maven, sí se está utilizando algún plugin de maven
     ...
 ```
 
-Para mas información: https://maven.apache.org/plugins/maven-resources-plugin/.
+Per a més informació: https://maven.apache.org/plugins/maven-resources-plugin/.
