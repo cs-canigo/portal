@@ -1,31 +1,36 @@
 +++
 date        = "2021-01-02"
 title       = "Canigó. Com permetre l'intercanvi creuat de recursos (CORS)"
-description = "Howto com permetre l'intercanvi creuat de recursos (CORS) des d'un servidor, en un origen diferent (domini) al que pertany."
+description = "Howto per a mostrar com permetre l'intercanvi creuat de recursos (CORS) des d'un servidor, en un origen diferent (domini) al qual pertany"
 section     = "howtos"
 categories  = ["canigo"]
-#key        = "GENER2021"
+#key        = "FEBRER2021"
 +++
 
 
 ## Introducció
 
-L'objectiu d'aquest articule és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled)) des d'un servidor, en un origen diferent (domini) al que pertany, en un projecte generat amb el framework Canigó
+L'objectiu d'aquest article és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled))
+des d'un servidor, en un origen diferent (domini) al qual pertany, per a projectes Canigó.
 
----
 ## Justificació
 
-CORS és un mecanisme que restringeix l'accés web a recursos fora del dominio al que pertany qui realitza la petició, és a dir, si des d'un navegador web es realitza una petició a un servidor i es requereix algun recurs web que estigui a un altre servidor, llavors s'utilitza CORS per a la seva gestió. 
+CORS és un mecanisme que restringeix l'accés web a recursos fora del domini al qual pertany qui realitza la petició.
+És a dir, si des d'un navegador web es realitza una petició a un servidor i es requereix algun recurs web que estigui a un altre servidor,
+s'utilitza CORS per a la seva gestió.
 
-CORS defineix com interactua un navegador web amb un servidor per determinar si l'intercanvi de recursos amb altres servidors és segur. Pel seu funcionament CORS utilitza les capçaleres HTTP.
+CORS defineix com interactua un navegador web amb un servidor per determinar si l'intercanvi de recursos amb altres servidors és segur.
+Pel seu funcionament CORS utilitza les capçaleres HTTP.
 
-Quan s'utilitza un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que es basa en Spring, per defecte no s'envien a la capçalera HTTP cap dels paràmetres que permeten l'intercanvi creuat; pel que és necessari realitzar alguns ajustos per a la seva activació.
+Quan s'utilitza un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que es
+basa en Spring, per defecte no s'envien a la capçalera HTTP cap dels paràmetres que permeten l'intercanvi creuat; per la qual cosa és necessari
+realitzar alguns ajustos per a la seva activació.
 
 
----
 ## Configuració
 
-Per activar CORS en un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), es necessari crear un filtre web de Spring, agregar-lo al contenidor de Spring i a la configuració de l'adaptador de seguretat de Spring.
+Per activar CORS en un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/),
+és necessari crear un filtre web de Spring, agregar-lo al contenidor de Spring i a la configuració de l'adaptador de seguretat de Spring.
 
 ### Canvis a `WebSecurityConfig.java`
 
@@ -57,10 +62,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }
 ```
 
----
-## Exemple d'utilització 
+## Exemple d'utilització
 
-Per a mostrar un exemple d'utilització de CORS es necessari crear un projecte Canigó amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i crear una pàgina HTML que invoqui a través de Javascript algun recurs del servidor utilitzant les APIs `XMLHttpRequest` o  `Fetch`.
+Per a mostrar un exemple d'utilització de CORS és necessari crear un projecte Canigó amb
+[Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i
+crear una pàgina HTML que invoqui a través de Javascript algun recurs del servidor utilitzant les APIs `XMLHttpRequest` o  `Fetch`.
 
 Exemple de pàgina web que invoca el servei REST `/equipaments/id` de prova del projecte de Canigó: 
 
@@ -100,10 +106,11 @@ $(document).ready(function() {
   });
 });
 ```
----
+
 ### Proves 
 
-Per provar el funcionament s'iniciaran 2 instàncies de l'aplicació utilitzant ports diferents, en aquest cas s'utilitzen els ports 8090 (on es troba el servei REST a consultar) i 8095 (on cridarà la pàgina Web)
+Per provar el funcionament s'iniciaran 2 instàncies de l'aplicació utilitzant ports diferents, en aquest cas
+s'utilitzen els ports 8090 (on es troba el servei REST a consultar) i 8095 (on cridarà la pàgina Web)
 
 ```sh
   mvn spring-boot:run \
@@ -116,22 +123,24 @@ Per provar el funcionament s'iniciaran 2 instàncies de l'aplicació utilitzant 
     -Dspring-boot.run.fork=false
 ```
 
----
+
 #### Prova amb CORS desactivat
 
-En aquesta prova anem a realitzar la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada al port 8090, podem observar que el navegador genera la petició correctament, però, genera un error a l'aplicació que està al port 8095 que indica que no està permès l'intercanvi de recursos.
+En aquest cas realitzarem la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada
+al port 8090, podem observar que el navegador genera la petició correctament, però, genera un error a l'aplicació que
+està al port 8095 que indica que no està permès l'intercanvi de recursos.
 
 ![Spring CORS Ejemplo 1](/images/howtos/2021-01-02_spring_cors_example1.png)
 
 ![Spring CORS Ejemplo 2](/images/howtos/2021-01-02_spring_cors_example2.png)
 
----
+
 #### Prova amb CORS activat
 
-En aquesta prova anem a realitzar la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada al port 8090, podem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i respon amb les dades del servei REST de prova.
+En aquest cas realitzarem la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada
+al port 8090, podem observar que el navegador genera la petició correctament i que el navegador permet l'intercanvi i
+respon amb les dades del servei REST de prova.
 
 ![Spring CORS Ejemplo 3](/images/howtos/2021-01-02_spring_cors_example3.png)
 
 ![Spring CORS Ejemplo 4](/images/howtos/2021-01-02_spring_cors_example4.png)
-
----

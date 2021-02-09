@@ -1,16 +1,16 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Com utilitzar Google error-prone"
-description = "Howto per com utilitzar Google error-prone per avaluació estàtica de codi en temps de compilació"
+title       = "Canigó. Com utilitzar Google Error-Prone"
+description = "Howto per a mostrar com utilitzar Google Error-Prone per a l'avaluació estàtica de codi en temps de compilació"
 section     = "howtos"
 categories  = ["canigo"]
-#key         = "GENER2021"
+#key         = "FEBRER2021"
 +++
 
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar l'ús d'un complement al compilador Java (javac) que permet l'avaluació estàtica de codi en temps de compilació. Aquest complement és el projecte: [Google error-prone](https://errorprone.info/) que té el seu repositori: [GIT](https://github.com/google/error-prone)
+L'objectiu d'aquest article és mostrar l'ús d'un complement al compilador Java (javac) que permet l'avaluació estàtica de codi en temps de compilació. Aquest complement és el projecte: [Google Error-Prone](https://errorprone.info/) que té el seu repositori: [GIT](https://github.com/google/error-prone)
 
 ---
 ## Justificació
@@ -97,7 +97,7 @@ Per poder utilitzar el complement a Canigó, és necessari modificar el fitxer `
   </profiles>
 ```
 
-> Per a més informació sobre [Instal·lació Google error-prone](https://errorprone.info/docs/installation)
+> Per a més informació sobre [Instal·lació Google Error-Prone](https://errorprone.info/docs/installation)
 
 ---
 ## Ús

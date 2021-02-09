@@ -29,12 +29,12 @@ A continuació es descriuen els passos per a fer-ho.
 
 ## Conèixer la versió de Virtual Box
 
-Per a poder instal·lar les *VBOX guest additions* és necessari saber abans quina és la versió de Virtual Box.
-Per a obtenir-la, cal anar a: Ayuda > Acerca de Virtual Box ...
+Per a poder instal·lar les *VBOX guest additions* és necessari saber abans quina és la versió de Virtual Box. Per a obtenir-la,
+cal anar al menú: *Ayuda > Acerca de Virtual Box ...*
 
 ![Acerca de Virtual Box](/images/howtos/2021-02-08-Acerca_virtual_box.png)
 
-On podrem comprovar que la versió, en aquest cas, és la v.5.2.16.
+On podrem comprovar que la versió, en aquest cas, és la 5.2.16.
 
 ## Instal·lar VBOX guest additions
 
@@ -42,7 +42,7 @@ Un cop finalitzada la instal·lació de l'entorn de desenvolupament de Canigó s
 [Entorn de desenvolupament](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), caldrà entrar en un terminal
 i executar les següents comandes indicant la versió adient.
 
-Exemple v.5.2.16:
+Exemple per a la versió 5.2.16:
 
 ```
 cd /tmp
