@@ -12,6 +12,10 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com instal·lar les VBOX guest additions] (/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
+
+- [Com permetre l'intercanvi creuat de recursos (CORS)] (/howtos/2021-01-02-Howto-spring_cors/)
+
 - [Com definir handler exception personalitzat] (/howtos/2020-10-08-Definir_handler_exception_personalitzat/)
 
 - [Com personalitzar les validacions del token JWT] (/howtos/2020-09-30-Personalitzar_validacio_token_jwt/)
