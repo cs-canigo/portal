@@ -11,7 +11,7 @@ categories  = ["canigo"]
 ## Introducció
 
 L'objectiu d'aquest article és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled))
-des d'un servidor per a un origen diferent al qual pertany (diferent domini) en el cas de projectes creats
+des d'un servidor per a un origen diferent del qual pertany (diferent domini) en el cas de projectes creats
 amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
 
 ## Justificació
@@ -29,7 +29,7 @@ realitzar alguns ajustos per a la seva activació**.
 ## Configuració
 
 Per a activar CORS en un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/),
-és necessari crear un filtre web de Spring, agregar-lo al contenidor i a la configuració de l'adaptador de seguretat de Spring.
+**és necessari crear un filtre web de Spring, agregar-lo al contenidor i a la configuració de l'adaptador de seguretat de Spring**.
 
 ### Classe `WebSecurityConfig.java`
 
@@ -123,10 +123,10 @@ s'utilitzaran els ports 8090 (on es troba el servei REST a consultar) i el 8095 
     -Dspring-boot.run.fork=false
 ```
 
-
+<br/>
 #### Prova amb CORS desactivat
 
-En aquest cas realitzarem la prova sense configurar el filtre. Si fem una crida a l'aplicació iniciada
+En aquest cas realitzarem la **prova sense configurar el filtre**. Si fem una crida a l'aplicació iniciada
 al port 8090 observarem que el navegador genera la petició correctament però retorna un error a l'aplicació que
 està al port 8095 indicant que no està permès l'intercanvi de recursos.
 
@@ -137,7 +137,7 @@ està al port 8095 indicant que no està permès l'intercanvi de recursos.
 
 #### Prova amb CORS activat
 
-En aquest cas realitzarem la prova amb la configuració del filtre. Si fem una crida a l'aplicació iniciada
+En aquest cas realitzarem la **prova amb la configuració del filtre**. Si fem una crida a l'aplicació iniciada
 al port 8090, observarem que el navegador genera la petició correctament i que el navegador permet l'intercanvi i
 respon amb les dades del servei REST de prova.
 

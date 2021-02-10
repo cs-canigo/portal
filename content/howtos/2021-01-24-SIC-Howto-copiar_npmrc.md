@@ -60,4 +60,6 @@ Exemple d'arxiu `pom.xml`:
     ...
 ```
 
+En aquest exemple, es pot veure que es copia el fitxer `.npmrc` de l'arrel del projecte al directori `/src/main/angular` del projecte.
+
 Per a més informació: https://maven.apache.org/plugins/maven-resources-plugin/.
