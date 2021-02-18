@@ -8,7 +8,7 @@ weight      = 3
 
 ## Propòsit
 
-El Mòdul de Seguretat SAML té com a propòsit general gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó utilitzant el protocol SAML.
+El Mòdul de Seguretat SAML té com a propòsit general gestionar la validació del contingut SAML utilitzat en la seguretat SAML de Canigó.
 
 ## Funcionalitats
 
