@@ -12,10 +12,16 @@ El Mòdul de Seguretat té com a propòsit general gestionar l’autenticació i
 
 ## Funcionalitats
 
-### Excepción
+### Beans
 
-Contiene la excepción que se genera al validar las aserciones "SAMLResponseException"
+Conté l'entitat que representa el resultat de la validació del contingut SAML a *cat.gencat.ctti.canigo.arch.security.saml.validation.SAMLValidatorResult*
 
-### Controller
+### Exception
 
-Contiene el Endpoint "AssertionController" que permite consultar aserciones. 
+Conté la exception que es genera al realitzar la validació del contingut SAML "cat.gencat.ctti.canigo.arch.security.saml.validation.SAMLValidatorException"
+
+### Validador
+
+L'encarregat de realitzar la validació del contingut SAML és *cat.gencat.ctti.canigo.arch.security.saml.validation.SAMLValidator*
+
+
