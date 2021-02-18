@@ -8,14 +8,24 @@ weight      = 3
 
 ## Propòsit
 
-El Mòdul de Seguretat té com a propòsit general gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó. L’objectiu de l’autenticació és comprovar que l’usuari és qui diu ser, mentre que l’autorització s’encarrega de comprovar que realment té accés als recursos sol·licitats. Canigó recomana l’ús de Spring Security com a Framework base i les extensions que Canigó proporciona.
+El Mòdul de Seguretat SAML bridge té com a propòsit general oferir els components per a l’autenticació utilitzant SAML.
 
 ## Funcionalitats
 
-### Excepción
+### Beans
 
-Contiene la excepción que se genera al validar las aserciones "SAMLResponseException"
+Conté l'entitat que representa la informació del idp i les metadata de les credencials de SAML a  *cat.gencat.ctti.canigo.arch.security.saml.authentication.credentials.SAMLIdPMetadataManagerCredentials*
+
+Conté l'entitat que representa la informació del key manager de les credencials de SAML a *cat.gencat.ctti.canigo.arch.security.saml.authentication.credentials.SAMLKeyManagerCredentials*
+
+### Service
+
+S'ofereix el servei que obté l'informació de l'assertion SAML a *cat.gencat.ctti.canigo.arch.security.saml.authentication.service.SAMLResponseToAssertionService*
+
+### Filter
+
+Per a la gestió de l'autenticació a través de les request amb SAML s'utilitza el filtre *cat.gencat.ctti.canigo.arch.security.saml.authentication.filter.SAMLProcessingCapturingFilter*
 
 ### Controller
 
-Contiene el Endpoint "AssertionController" que permite consultar aserciones. 
+Per a oferir serveis rest per a l'autenticació utilitzant SAML a partir de les assertions, existeix el controller *cat.gencat.ctti.canigo.arch.security.saml.authentication.controller.AssertionController*
