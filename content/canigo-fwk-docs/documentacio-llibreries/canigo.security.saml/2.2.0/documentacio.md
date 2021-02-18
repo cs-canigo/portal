@@ -8,7 +8,7 @@ weight      = 3
 
 ## Propòsit
 
-El Mòdul de Seguretat té com a propòsit general gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó. L’objectiu de l’autenticació és comprovar que l’usuari és qui diu ser, mentre que l’autorització s’encarrega de comprovar que realment té accés als recursos sol·licitats. Canigó recomana l’ús de Spring Security com a Framework base i les extensions que Canigó proporciona.
+El Mòdul de Seguretat SAML té com a propòsit general gestionar l’autenticació i l’autorització dels usuaris en aplicacions Canigó utilitzant el protocol SAML.
 
 ## Funcionalitats
 
