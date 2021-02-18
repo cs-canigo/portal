@@ -8,10 +8,14 @@ weight      = 3
 
 ## Propòsit
 
-El propòsit és proveir listeners per a la capa web de Canigó
+El propòsit de la llibreria canigo.web.core és oferir funcionalitats genèriques per a la capa web de Canigó
 
 ## Funcionalitats
 
 ### Filters
 
-Contiene los filtros para exponer propiedades y confurar el formato de logs. 
+Per a l'escriptura de dades genèriques de les request als logs de l'aplciació s'ofereix el filtre *cat.gencat.ctti.canigo.arch.web.core.filters.LoggingFilter*
+
+### Listeners
+
+Per a utilitzar la gestió de propietats aportada per Canigó s'ofereix el listener *cat.gencat.ctti.canigo.arch.web.core.filters.ConfigPropertiesExposerListener*
