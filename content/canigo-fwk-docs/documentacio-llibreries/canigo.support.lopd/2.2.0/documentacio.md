@@ -12,11 +12,10 @@ El servei de LOPD de Canigó permet assignar un determinat nivell de protecció 
 
 ## Funcionalitats
 
+### Annotation
+
+S'ofereix l'annotation *cat.gencat.ctti.canigo.arch.support.lopd.annotation.LOPDSecure* que utilitza AspectJ per a la protecció de les dades.
 
 ### Excepción
 
-Contiene la excepción que se genera al aplicar LOPD "LopdModuleException"
-
-### Annotation
-
-Contiene la interfaz e implementación de "LOPDSecure" que immplementa el AspectJ para la protección de datos. 
+S'oefereix l'exception *cat.gencat.ctti.canigo.arch.support.lopd.exceptions.LopdModuleException* per identificar els errors produits al mòdul.
