@@ -14,12 +14,14 @@ Aquest mòdul permet al servidor obtenir fitxers adjunts als formularis HTML de 
 
 ### Beans
 
-Contiene la entidad que representa la información "OptionalInfo"
+Conté l'entitat que representa la informació del fitxer rebut des de la request a *cat.gencat.ctti.canigo.arch.support.fileupload.UploadedFile*
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al subir archivos al servidor "FileUploadServiceException"
+Per a obtenir la llista de fitxers de la request s'ofereix *cat.gencat.ctti.canigo.arch.support.fileupload.FileUploadService*
 
-### Fileupload
+### Exception
 
-Contiene la interfaz e implementación de "FileUploadService" que incluye el método de subida de archivos. 
+Per identificar els errors produits en el mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.fileupload.exceptions.FileUploadServiceException*
+
+
