@@ -8,14 +8,16 @@ weight      = 3
 
 ## Propòsit
 
-El propòsit és proveir un servei per redimensionar una imatge
+El propòsit del mòdul és aportar funcionalitats per redimensionar una imatge
 
 ## Funcionalitats
 
+### Service
+
+Per a realitzar el redimensionament d'una imatge s'ofereix el servei *cat.gencat.ctti.canigo.arch.support.resizeImg.ResizeImgService*
+
 ### Excepción
 
-Contiene la excepción que se genera al redimensionar una imagen "ResizeImgModuleException"
+Per identificar els errors produits en el mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.resizeImg.exceptions.ResizeImgModuleException*
 
-### ResizeImg
 
-Contiene la interfaz e implementación de "ResizeImgService" que incluye los métodos para redimensionar. 
