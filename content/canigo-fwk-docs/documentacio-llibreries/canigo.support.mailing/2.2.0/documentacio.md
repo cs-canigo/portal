@@ -18,10 +18,26 @@ Permet diferents modes d’enviament, tant en text pla, com en mode HTML, i en t
 
 ## Funcionalitats
 
+### Beans
+
+Conté l'entitat que representa la informació de l'emissor del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentFrom*
+
+Conté l'entitat que representa la informació del receptor del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentTo*
+
+Conté l'entitat que representa la informació dels destinataris del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentRecipients*
+
+Conté l'entitat que representa la informació del títol del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentSubject*
+
+Conté l'entitat que representa la informació del missatge del mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentMessage*
+
+Conté l'entitat que representa la informació dels adjunts al mail a *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService.FluentAttachment*
+
+
+### Service
+
+Per a l'enviament l'enviament de mails s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService*
+
 ### Excepción
 
-Contiene la excepción que se genera al enviar correos "MailModuleException"
+Per identificar els errors produits al mòdul s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.exception.MailModuleException*
 
-### Mailing
-
-Contiene la interfaz e implementación de "FluentMailService" que incluye los métodos de envío. 
