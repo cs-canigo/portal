@@ -12,10 +12,14 @@ El propòsit d’aquesta documentació és donar a conèixer el mòdul de WebSer
 
 ## Funcionalitats
 
+### Beans
+
+Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta dels serveis de notiticacions per Enotum.
+
+### Service
+
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.NotificacionsElectroniquesService* per a realitzar la gestió de les notificacions per Enotum.
+
 ### Endpoint
 
-Contiene el punto de entrada al sevicio web "NotificacionsElectroniquesEndpoint"
-
-### Notificacions Electroniques
-
-Contiene la interfaz e implementación de "NotificacionsElectroniquesService" que gestiona las notificaciones. 
+S'ofereix el endpoint *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.endpoint.NotificacionsElectroniquesEndpoint* per exposar els serveis de notificacions per Enotum per Web Service.
