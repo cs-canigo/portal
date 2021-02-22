@@ -17,10 +17,15 @@ al Catàleg Tècnic de Dades de Referència va creixent mes a mes.
 ## Novetats
 
 En la darrera actualització del Catàleg Tècnic de Dades, publicada el 17/02/2021, s’han realitzat les següents accions:
+<br>
+<br>
 
 ![](/images/news/DadRef.grafic_publicació_20210217.png)
 
+<br>
+<br>
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
-- [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
-- [Dades de Referència] (https://canigo.ctti.gencat.cat/dadesref/dadesref/)
+
+* [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
+* [Dades de Referència] (https://canigo.ctti.gencat.cat/dadesref/dadesref/)
 
