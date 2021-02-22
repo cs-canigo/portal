@@ -12,10 +12,10 @@ L’SGDE o Servei de Gestió del Document Electrònic ofereix una sèrie de serv
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al consultar SGDE "SGDEException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sgde.ISGDEService* per a la gestió de les operacions amb el servei de SGDE.
 
-### SGDE
+### Exception
 
-Contiene la interfaz e implementación de "ISGDEService" que incluye los métodos de extraer, convertir, renderizar datos. 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sgde.exceptions.SGDEException* per identificar els errors produits al mòdul. 
