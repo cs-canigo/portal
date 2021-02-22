@@ -18,10 +18,20 @@ Utilització del connector al sistema SAP de Gecat des de qualsevol aplicació J
 
 ## Funcionalitats
 
-### Excepción
+### Beans
 
-Contiene la excepción que se genera durante la conexión con Gecat "GecatConnectorException"
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.batch* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *batch* de SAP de Gecat.
 
-### Connector
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.consultes* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *consultes* de SAP de Gecat.
 
-Contiene la interfaz e implementación de "GecatConnector" que incluye los métodos de consultas de Gecat. 
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.factures* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *factures* de SAP de Gecat.
+
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.reserves* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *reserves* de SAP de Gecat.
+
+### Service
+
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.gecat.connector.GecatConnector* per a realitzar les operacions d’alta de factures, consultes i reserves online del SAP de Gecat
+
+### Exception
+
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.gecat.exception.GecatConnectorException* per identiticar els errors produits al mòdul.
