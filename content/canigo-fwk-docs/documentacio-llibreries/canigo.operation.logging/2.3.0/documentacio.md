@@ -16,14 +16,28 @@ Aquest mòdul permet administrar els logs de l’aplicació proporcionant les se
 
 ## Funcionalitats
 
-### Model
+### Beans
 
-Contiene las entidades que representan los datos de consulta de logs
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació de control de la resposta dels serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerControl*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació i contingut dels logs en els serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerReader*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació del logger de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.LoggerDTO*
+
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació del appender de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.AppenderDTO*
 
 ### Service
 
-Contiene el servicio "FileTailService" que activa la monitorización
+S'ofereix el service *cat.gencat.ctti.canigo.arch.operation.logging.service.FileTailService* per a gestionar la monitorització dels logs de l'aplicació.
 
-### Endpoints
+### Controller
 
-Contiene el EndPoint de consulta de logs. 
+S’ofereix el controller *cat.gencat.ctti.canigo.arch.operation.logging.endpoints.LogsResource* per exposar serveis rest per a consultar i gestionar la monitorització dels logs de l'aplicació.
+
+### Runnable
+
+S'ofereix el runnable *cat.gencat.ctti.canigo.arch.operation.logging.util.Tailer* per executar un thread que realitzi la monitorització dels logs de l'aplicació.
+
+### Listener
+
+S'ofereix el listener *cat.gencat.ctti.canigo.arch.operation.logging.util.TailerListener* per a escotlar events que es produeixin a la monitorització dels logs de l'aplicació.
