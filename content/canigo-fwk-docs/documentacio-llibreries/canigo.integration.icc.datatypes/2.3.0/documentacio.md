@@ -12,6 +12,6 @@ L’objectiu d’aquest connector, és el de proporcionar un punt d’accés als
 
 ## Funcionalitats
 
-### Geocodificador
+### Beans
 
-Contiene las entidades asociadas a la geo localización
+S'ofereix el package *cat.icc.ws.geocodificador* que conté les entitats que s’ofereixen per representar la informació on s’allotgarà les respostes dels serveis del ICC
