@@ -12,10 +12,10 @@ Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al consultar Sarcat "SarcatException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.SarcatConnector* per a realitzar les operacions a Sarcat a través de la PICA.
 
-### Sarcat Pica
+### Exception
 
-Contiene la interfaz e implementación de "SarcatConnector" que incluye los métodos de consultas. 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException* per identiticar els errors produits al mòdul.
