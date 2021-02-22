@@ -14,14 +14,14 @@ A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà
 
 ## Propòsit
 
-L’objectiu d’aquest article és descriure la metodologia a seguir en la utilització del connector al sistema SAP de la Generalitat des de qualsevol aplicació Java del Framework J2EE i el propòsit del connector és proporcionar una interfície simplificada per accedir-hi.
+L’objectiu d'aquest mòdul és proporcionar una interfície simplificada per accedir al sistema SAP de la Generalitat des de qualsevol aplicació Java del Framework J2EE.
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al consultar SAP "SapConnectorException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sap.SapConnector* per a la gestió de les operacions al sistema SAP de la Generalitat.
 
-### SAP
+### Exception
 
-Contiene la interfaz e implementación de "SapConnector" que incluye los métodos para ejecutar funciones en SAP. 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sap.exceptions.SapConnectorException* per identificar els errors produits al mòdul.
