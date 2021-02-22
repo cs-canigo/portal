@@ -12,10 +12,6 @@ L’objectiu d’aquest connector, és el de proporcionar un punt d’accés als
 
 ## Funcionalitats
 
-### Beans
-
-S'ofereix el package *cat.icc.ws.geocodificador* que conté les entitats que s’ofereixen per representar la informació on s’allotgarà les respostes dels serveis del ICC
-
 ### Service
 
 S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.icc.IccWebServiceClient* per a l'accés de les funcionalitats del ICC.
