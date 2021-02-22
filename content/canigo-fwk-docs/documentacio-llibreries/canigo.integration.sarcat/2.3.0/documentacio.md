@@ -8,10 +8,14 @@ weight      = 3
 
 ## Propòsit
 
-Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu. El mòdul permet consumir els serveis oferts pels WebService amb peticions síncrones.
+Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de Sarcat. El mòdul permet consumir els serveis oferts pels WebService amb peticions síncrones.
 
 ## Funcionalitats
 
-### Serveis
+### Service
 
-Contiene la interfaz e implementación de "SarcatServices" que incluye los métodos de consultas. 
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sarcat.serveis.SarcatServices* per a la gestió de les diferents funcionalitats que ofereix la plataforma de Sarcat.
+
+### Exception
+
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sarcat.exceptions.SarcatException* per identificar els errors produits al mòdul.
