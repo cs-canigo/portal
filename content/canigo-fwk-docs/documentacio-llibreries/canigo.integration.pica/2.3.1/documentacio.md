@@ -12,10 +12,6 @@ El propòsit del connector és proporcionar una interfície java per accedir a l
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al conectar con PICA "PICAExceptionUtils"
-
-### Pica
-
-Contiene la interfaz e implementación de "IPicaServiceWrapper" que incluye los métodos de consulta. 
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.pica.IPicaServiceWrapper* per a la gestió de les operacions a realitzar a la PICA.
