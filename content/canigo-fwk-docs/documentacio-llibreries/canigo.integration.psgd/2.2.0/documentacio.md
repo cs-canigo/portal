@@ -14,12 +14,14 @@ L’objectiu d’aquest connector és proporcionar un punt d’accés cap a la P
 
 ### Beans
 
-Contiene las entidades que representan la gestión de documentos
+Conté el package *cat.gencat.ctti.canigo.arch.integration.psgd.beans* on s'ofereixen les entitats per representar la informació on s’allotgarà la resposta dels serveis de PSGD
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera durante la gestión de documentos "PsgdException"
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.psgd.PsgdService* per a la gestió de la sessió cap a PSGD.
 
-### PSGD
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.psgd.PsgdConnector* per a gestió de les operacions cap a PSGD.
 
-Contiene la interfaz e implementación de "PsgdConnector" que incluye los métodos de gestión de documentos. 
+### Exception
+
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psgd.exceptions.PsgdException* per identificar els erros produits en el mòdul.
