@@ -12,10 +12,10 @@ Aquest mòdul permet la validació de Signatures electròniques mitjançant els 
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera durante la consulta PSIS "PSISException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.psis.PSISConnector* per a la validació de signatures mitjançant els serveis de PSIS.
 
-### PSIS
+### Exception
 
-Contiene la interfaz e implementación de "PSISConnector" que incluye los métodos de validación. 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psis.exceptions.PSISException* per identificar els errors produits al mòdul.
