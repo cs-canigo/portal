@@ -12,14 +12,14 @@ L’objectiu d’aquest connector és proporcionar accés al Sistema de Signatur
 
 ## Funcionalitats
 
-### Builder
+### Builders
 
-Contiene los contructores de las entidades necesarias para SSC
+En el package *cat.gencat.ctti.canigo.arch.integration.ssc.builder* s'ofereixen els builders per a generar les entitats encarregades de la comunicació emb els serveis de SSC.
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al consultar SSC "SCException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.ssc.SscConnector* per a gestionar les operacions cap a SSC.
 
-### SSC
+### Exception
 
-Contiene la interfaz e implementación de "SscConnector" que incluye los métodos de firma. 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.ssc.exceptions.SCException* per identificar els errors produits al mòdul.
