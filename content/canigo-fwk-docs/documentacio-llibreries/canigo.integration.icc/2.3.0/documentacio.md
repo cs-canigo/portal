@@ -12,10 +12,14 @@ L’objectiu d’aquest connector, és el de proporcionar un punt d’accés als
 
 ## Funcionalitats
 
-### Excepción
+### Beans
 
-Contiene la excepción que se genera durante la conexxión con ICC "IccModuleException"
+S'ofereix el package *cat.icc.ws.geocodificador* que conté les entitats que s’ofereixen per representar la informació on s’allotgarà les respostes dels serveis del ICC
 
-### ICC
+### Service
 
-Contiene la interfaz e implementación de "IccWebServiceClient" que incluye los métodos localización de direcciones en ICC. 
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.icc.IccWebServiceClient* per a l'accés de les funcionalitats del ICC.
+
+### Exception
+
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.icc.exceptions.IccWebServiceClient* per identificar els errors produits al mòdul.
