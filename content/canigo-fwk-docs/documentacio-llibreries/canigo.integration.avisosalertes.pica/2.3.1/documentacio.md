@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
-## Propòsit
+### Propòsit
 
 L’objectiu d’aquest connector és el de proporcionar accés als serveis d’enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA.
 
@@ -14,12 +14,12 @@ L’objectiu d’aquest connector és el de proporcionar accés als serveis d’
 
 ### Beans
 
-Contiene la entidad que representa la respuesta asíncrona al envío de la alerta "DataResponse"
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la resposta de l'alerta síncrona a *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.beans.DataResponse*
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al enviar una alerta "AvisosAlertesException"
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.AvisosAlertesConnector* per a realitzar l'enviament d'avisos a través del servei AVISALERT de la PICA.
 
-### Avisos Alertes
+### Exception
 
-Contiene la interfaz e implementación de "AvisosAlertesConnector" que incluye los métodos de envío síncronos y asíncronos. 
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.exceptions.AvisosAlertesException* per identificar els errors produits al mòdul.
