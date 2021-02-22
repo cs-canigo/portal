@@ -8,7 +8,7 @@ weight      = 3
 
 ## Propòsit
 
-L’objectiu d’aquest connector ,es el de proporcionar accés als 3 grans serveis de consulta de dades fiscals que actualment ofereix la PICA. Aquests tres serveis són:
+L’objectiu d’aquest connector, es el de proporcionar accés als 3 grans serveis de consulta de dades fiscals que actualment ofereix la PICA. Aquests tres serveis són:
 
 * AEAT: Agència Estatal de l’Administració Tributària
 * ATC: Agència Tributària de Catalunya
@@ -20,12 +20,20 @@ a més també es troba integrat el servei AEAT_ATC_TGSS que sintetitza una petit
 
 ### Beans
 
-Contiene las entidades que representan las peticiones y respuestas
+En el package *cat.gencat.ctti.canigo.arch.integration.tributs.pica.beans* s'ofereixen les entitats que representen la informació on s’allotgarà la resposta dels serveis de tributs de la PICA
 
-### Excepción
+### Service
 
-Contiene las excepciones que se generan al consultar los tributos
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.tributs.pica.aeat.AeatConnector* per a la gestió de les operacions de AEAT a través de la PICA
 
-### Tributs Pica
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.tributs.pica.atc.AtcConnector* per a la gestió de les operacions de ATC a través de la PICA
 
-Contiene la clase abstracta "AbstractConnectorImpl" y sus implementaciones que incluyen los métodos de consultas.
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.tributs.pica.tgss.TgssConnector* per a la gestió de les operacions de TGSS a través de la PICA
+
+### Exception
+
+S'ofereixen la exception *cat.gencat.ctti.canigo.arch.integration.tributs.pica.exceptions.AeatException* per dentificar els errors produits a les operacions de AEAT.
+
+S'ofereixen la exception *cat.gencat.ctti.canigo.arch.integration.tributs.pica.exceptions.AtcException* per dentificar els errors produits a les operacions de ATC.
+
+S'ofereixen la exception *cat.gencat.ctti.canigo.arch.integration.tributs.pica.exceptions.TgssException* per dentificar els errors produits a les operacions de TGSS.
