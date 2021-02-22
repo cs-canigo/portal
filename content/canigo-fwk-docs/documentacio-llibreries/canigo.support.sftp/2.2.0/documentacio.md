@@ -12,10 +12,10 @@ El servei de SFTP de Canigó permet enviar i rebre arxius entre el servidor on s
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al enviar/recibir archivos por SFTP "SftpModuleException"
+S’ofereix el servei *cat.gencat.ctti.canigo.arch.support.sftp.SftpService* per a realitzar l'enviament de fitxers a través de SFTP.
 
-### SFTP
+### Exception
 
-Contiene la interfaz e implementación de "SftpService" que incluye los métodos de carga/descarga/creación/eliminación de archivos. 
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.support.sftp.exceptions.SftpModuleException* per a identificar els errors produits al mòdul.
