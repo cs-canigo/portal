@@ -18,10 +18,12 @@ Utilització del connector al sistema Documentum des de qualsevol aplicació Jav
 
 ## Funcionalitats
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera durante la gestión de documentos "DocumentumException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumService* per a la gestió de la sessió amb Documentum.
 
-### Documentum
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.documentum.DocumentumConnector* per a la gestió de les operacions amb Documentum.
 
-Contiene la interfaz e implementación de "DocumentumConnector" que incluye los métodos de administración de documentos. 
+### Exception
+
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.documentum.exceptions.DocumentumException* per identificar errors produits al mòdul.
