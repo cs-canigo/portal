@@ -14,12 +14,12 @@ L’objectiu d’aquest connector, és el de proporcionar un punt d’accés uti
 
 ### Beans
 
-Contiene la entidad que representa los datos de respuesta del empadronamiento "DataResponse"
+Conté l'entitat *cat.gencat.ctti.canigo.arch.integration.padro.pica.beans.DataResponse* per representar la informació on s’allotgarà la resposta dels serveis de consulta de Padró a través de la PICA.
 
-### Excepción
+### Service
 
-Contiene la excepción que se genera al consultar un empadronamiento "PadroException"
+S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.padro.pica.PadroConnector* per a realitzar les operacions pels serveis de consulta de Padró a través de la PICA.
 
-### Pica
+### Exception
 
-Contiene la interfaz e implementación de "PadroConnector" que incluye los métodos de consulta. 
+ S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.padro.pica.exceptions.PadroException* per identificar els errors produits en el mòdul.
