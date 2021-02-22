@@ -12,10 +12,18 @@ El propòsit d’aquesta documentació és donar a conèixer el mòdul de WebSer
 
 ## Funcionalitats
 
-### Excepción
+### Beans
 
-Contiene la excepción que se genera al manejar notificaciones electrónicas "NotificacionsElectroniquesModuleExcepcion"
+Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta dels serveis de notiticacions per Enotum.
 
-### Notificacions Electroniques
+### Service
 
-Contiene la interfaz e implementación de "NotificacionsElectroniquesConnector" que incluye los métodos del servicio. 
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.NotificacionsElectroniquesConnector* per obtenir els serveis per Enotum.
+
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.ServeisCiutada* per realitzar les notificacions per Enotum al ciutadà.
+
+S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.ServeisEmpleatPublic* per realitzar les notificacions per Enotum a un empleat públic.
+
+### Exception
+ 
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.exepcions.NotificacionsElectroniquesModuleExcepcion* per identificar els errors produits al mòdul.
