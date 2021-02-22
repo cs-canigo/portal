@@ -18,14 +18,18 @@ Dins d’aquest mòdul podem trobar les següents funcionalitats:
 
 ## Funcionalitats
 
-### Model
+### Beans
 
-Contiene la entidad que representa los datos de respuesta "Result"
+Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la resposta de la monitorització a *cat.gencat.ctti.canigo.arch.operation.instrumentation.model.Result*.
 
-### Excepción
+### Filter
 
-Contiene la excepción que se genera en la instrumentación "InstrumentationException"
+S'ofereix el filter *cat.gencat.ctti.canigo.arch.operation.instrumentation.filter.InstrumentationFilter* per a recuperar la infromació per a la monitorització de l'aplicació.
 
 ### Controller
 
-Contiene el EndPoint de consultas de instrumentación "InfoMonitoringController"
+S’ofereix el controller *cat.gencat.ctti.canigo.arch.operation.instrumentation.controller.InfoMonitoringController* per a exposar serveis rest per obtenir informació de monitorització de l'aplicació.
+
+### Exception
+
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.operation.instrumentation.exception.InstrumentationException* per identificar els erros produits al mòdul.
