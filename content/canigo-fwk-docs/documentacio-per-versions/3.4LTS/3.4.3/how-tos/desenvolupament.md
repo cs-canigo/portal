@@ -8,6 +8,7 @@ weight        = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
+| [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)| Entorn desenvolupament, Eclipse, IntelliJ |
 | [Com instal·lar les VBOX guest additions](https://canigo.ctti.gencat.cat/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)| Entorn desenvolupament |
 | [Com permetre l’intercanvi creuat de recursos (CORS)](https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-spring_cors/)| Cors, Spring |
 | [Com configurar i utilitzar IronPort a una aplicació Canigó](/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/) | IronPort, Correu |
