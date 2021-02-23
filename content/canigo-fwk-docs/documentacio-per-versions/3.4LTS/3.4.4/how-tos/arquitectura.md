@@ -10,4 +10,4 @@ weight        = 1
 | --- | ---    |
 | [Definició sondes per aplicacions Canigó a AppAgile](/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile) | Sondes, AppAgile |
 | [Integració d’una aplicació Canigó a SIC 2.0](/howtos/2017-12-howto-integracio_canigo_sic/) | SIC |
-| [Com configurar i utilitzar IronPort a una aplicació Canigó](/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/) | IronPort, Correu |
+
