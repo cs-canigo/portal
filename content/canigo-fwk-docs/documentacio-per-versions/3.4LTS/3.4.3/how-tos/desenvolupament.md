@@ -21,9 +21,9 @@ weight        = 2
 | [Afegir dev tools Spring](/howtos/2019-04-Howto-afegir_dev_tools_spring/) | Spring, DevTools |
 | [Test unitaris amb programació reactiva a Canigó 3.4](/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/) | Test, Test unitaris, Webflux, Reactor |
 | [Actualitzar aplicació de Canigó 3.2 a Canigó 3.4](https://canigo.ctti.gencat.cat/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/) | Migració versió |
-| [Configuració de MongoDB a Canigó 3.x] (https://canigo.ctti.gencat.cat/howtos/2018-09-Howto-MongoDB/) | Mongodb |
+| [Configuració de MongoDB a Canigó 3.x] (https://canigo.ctti.gencat.cat/howtos/2018-09-Howto-MongoDB/) | Mongodb, Spring Data |
 | [Configuració SAML per la integració amb GICAR en aplicació Canigó 3.x] (https://canigo.ctti.gencat.cat/howtos/2018-08-Canigo-SAML/) | Gicar, SAML |
 | [Propietats Multientorn al Front-End](https://canigo.ctti.gencat.cat/howtos/2018-04-howto-frontend-multientorn/) | Propietats, frontend|
 | [Proves Unitàries Mòduls de Canigó](https://canigo.ctti.gencat.cat/howtos/2018-01-howto-test_jars_canigo/) | Test, Test unitaris |
-| [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.x] (https://canigo.ctti.gencat.cat/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/) | Spring, Spring Data |
+| [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.x] (https://canigo.ctti.gencat.cat/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/) | JPA, Spring Data |
 
