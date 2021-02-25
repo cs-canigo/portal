@@ -4,7 +4,7 @@ title       = "SIC. Copiar l'arxiu de configuració .npmrc"
 description = "Howto per a mostrar com copiar l'arxiu de configuració .npmrc a la ruta on es troba el fitxer package.json per a una correcta resolució de les dependències del projecte"
 section     = "howtos"
 categories  = ["SIC"]
-key         = "FEBRER2021"
+key         = "MARÇ2021"
 +++
 
 ## Introducció
