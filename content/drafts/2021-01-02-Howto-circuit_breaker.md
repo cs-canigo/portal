@@ -1,46 +1,46 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Como implementar el patrón Circuit Breaker"
-description = "Como implementar el patrón Circuit Breaker dentro de un proyecto generado con el framework Canigó."
+title       = "Canigó. Com implementar el patró Circuit Breaker"
+description = "Com implementar el patró Circuit Breaker dins d'un projecte generat amb el framework Canigó."
 section     = "howtos"
 categories  = ["canigo"]
 #key        = "GENER2021"
 +++
 
 
-## Introducción
+## Introducció
 
-El objetivo de este artículo es mostrar como implementar el patrón _[Circuit Breaker](https://martinfowler.com/bliki/CircuitBreaker.html)_, dentro de un proyecto generado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+L'objectiu d'aquest article és mostrar com implementar el patró _[Circuit Breaker](https://martinfowler.com/bliki/CircuitBreaker.html)_, dins d'un projecte Canigó.
 
 ---
-## Justificación
+## Justificació
 
-El patrón _Circuit Breaker_ evita que una aplicación intente de manera indefinida una operación que con alta probabilidad vaya a fallar, permitiendo que continúe la aplicación mientras el problema con la operación se resuelve. Adicionalmente, se puede detectar cuando se ha resuelto el problema permitiendo de esta manera volver a ejecutar la operación comprometida. 
+El patró _Circuit Breaker_ evita que una aplicació intenti de manera indefinida una operació que amb alta probabilitat vagi a fallar, permetent que continui l'aplicació mentres el problema amb l'operació es resolt. Adicionalment, es pot detectar quan s'ha resolt el problema permetent d'aquesta manera tornar a executar l'operació compromesa. 
 
 ![Spring circuit Diagrama](/images/howtos/2021-01-02_spring_circuit_diagrama.png)
 
-Los estados que plantea el patrón son:
+Els estats que tracta el patró són:
 
- * Closed: El circuito está cerrado y el flujo fluye ininterrumpidamente. Este es el estado inicial, todo funciona bien.
+ * Closed: El circuit està tancat i el fluxe flueix ininterrumpudament. Aquest és l'estat inicial, tot funciona bé.
 
- * Open: El circuito está abierto y el flujo interrumpido. En este estado todas las llamadas al recurso/servicio fallan inmediatamente.
+ * Open: El circuit està obert i el fluxe interrumput. En aquest estat totes les crides al recurs/servei fallen inmediatament.
 
- * Half-Open: El circuito está medio abierto (o medio cerrado) dando una oportunidad al flujo para su restauración. En este estado la aplicación volverá a intentar realizar la petición al servicio/recurso que fallaba.
+ * Half-Open: El circuit està mig obert (o mig tancat) donant una oportunitat al fluxe per a la seva restauració. En aquest estat l'aplicació tornarà a intentar realizar l'operació que fallava.
 
-Algunas de las ventajas son:
+Algunas dels avantatges són:
 
- * Monitoreo: Dado que existe un componente que su única funcionalidad es validar el estado de los servicios, es posible tener un monitoreo en tiempo real, que indique los tiempos de respuesta promedio, frecuencia de falla, estado actual del servicio y, sobre todo, notificaciones en tiempo real sí algún servicio comienza a fallar.
+ * Monitoreig: Danat que existeix un component que la seva única funcionalitat és validar l'estat dels serveis, és possible tenir un monitoreig a tiemps real, que indiqui els temps de resposta promig, freqüència de fallada, estat actual del servei i, sobre tot, notificacions en temps real si algún servei comença a fallar.
 
- * Sobrecarga: La capacidad de abrir el circuito ante un error o timeout que se estima que va a pasar, ahorra el hecho de tener muchos hilos esperando a que un servicio responda, y si existen miles de usuarios, es probable tener muchísimos hilos detenidos, lo que provocaría que el sistema se sobre cargue, incluso, provocando reacciones en cadena que afecten a otros componentes.
+ * Sobrecarga: La capacitat d'obrir el circuit per un error o timeout que s'estima que passarà, ens estalvia el fet de tenir molts fills esperant a que un servei respongui, i si existen miles d'usuaris, és probable que s'arribi a tenir molts fils parats, el que provocaria que el sistema es sobrecargués, arribant a provocar reaccions en cadena que afectessin a altres components.
 
- * Tolerancia a fallas: El patron puede redireccionar la petición, evitando tener que enviarle un error al cliente.
+ * Tolerància a fallos: El patró pot redireccionar la petició, evitant tenir que respondre amb un error al client.
 
 
-Cuando se utiliza un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que se basa en Spring, es posible implementar el patrón utilizando los proyectos [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix) o [Resilience4j](https://github.com/resilience4j/resilience4j)
+Quan s'utilitza un projecte Canigó que se basa en Spring, és possible implementar el patró utilitzant els projectes [Spring Cloud Netflix Hystrix](https://github.com/Netflix/Hystrix) o [Resilience4j](https://github.com/resilience4j/resilience4j)
 
 <div class="message warning">
 
-El proyecto Hystrix ha dejado de desarrollarse de forma activa tal como se indica en: <a href="https://github.com/Netflix/Hystrix/blob/master/README.md">Netflix/Hystrix README</a>. Como alternativa se puede utilizar el proyecto: <a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.
+El projecte Hystrix han deixat de desenvolupar-lo de forma activa tal i com s'indica a: <a href="https://github.com/Netflix/Hystrix/blob/master/README.md">Netflix/Hystrix README</a>. Com alternativa es pot utilitzar el proyecte: <a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.
 
 </div>
 
@@ -49,23 +49,23 @@ El proyecto Hystrix ha dejado de desarrollarse de forma activa tal como se indic
 ## Spring Cloud Netflix Hystrix
 
 ---
-### Configuración
+### Configuració
 
-Para aplicar este patrón, es necesario agregar algunas dependencias al proyecto maven:
+Per aplicar aquest patró, és necessari agregar algunes dependències al projecte maven:
 
- * 'spring-cloud-starter-netflix-hystrix' contiene la implementación del patrón _Circuit Breaker_.
+ * 'spring-cloud-starter-netflix-hystrix' conté la implementación del patró _Circuit Breaker_.
 
- * 'spring-cloud-starter-netflix-hystrix-dashboard' contiene un dashboard básico opcional para monitorear el circuito.
+ * 'spring-cloud-starter-netflix-hystrix-dashboard' conté un panell bàsic opcional per monitoritzar el circuit.
  
- * 'spring-boot-starter-actuator' contiene la implementacíon y generación de métricas.
+ * 'spring-boot-starter-actuator' conté la implementacíon i generació de mètriques.
  
- * 'micrometer-registry-prometheus' exporta las metricas en un formato entendible por Prometheus.
+ * 'micrometer-registry-prometheus' exporta les mètriques en un format per ser entès per Prometheus.
 
-Es importante mantener la relación entre las dependencias de 'Spring Cloud' y la versión de 'Spring Boot', En este caso, sí la versión de 'Spring Boot' es: '2.1.8.RELEASE', entonces le corresponde la versión: 'Greenwich.XX' de 'Spriing Cloud'. 
+És important mantenir la relació entre les dependències de 'Spring Cloud' i la versió de 'Spring Boot'. En aquest cas, si la versió de 'Spring Boot' és: '2.1.8.RELEASE', llavorç li correspon la versió: 'Greenwich.XX' de 'Spriing Cloud'. 
 
-En esta matriz de compatibilidad se encuentran los detalles: [spring-cloud](https://spring.io/projects/spring-cloud)
+A aquesta matriu de compatibilidad es troben els detalls: [spring-cloud](https://spring.io/projects/spring-cloud)
 
-Contenido de `pom.xml`
+Contingut del `pom.xml`
 
 ```xml
   <properties>
@@ -135,17 +135,17 @@ hystrix:
 ```
 
 ---
-### Desarrollo 
+### Desenvolupament 
 
-Para aplicar el patrón _Circuit Breaker_, se van a requerir, en este caso de ejemplo, 2 aplicaciones, ambas generadas con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/). La primera (CircuitBreakerProvider) solo tendría el ejemplo de servicio Rest "Equipament" que contiene Canigó. Y la segunda (CircuitBreakerConsumer) consumiría el servicio de la primera y tendría los siguientes componentes: 
+Per aplicar i provar el patró _Circuit Breaker_, es necessitaran 2 aplicacions, les dues de tipus Canigó. La primera (CircuitBreakerProvider) només tindrà l'exemple de servei Rest "Equipament" que conté Canigó. I la segona (CircuitBreakerConsumer) consumirà el servicio de la primera aplicació i tindrà els següents components: 
 
-* Un componente Spring de servicio donde se implementa el patrón _Circuit Breaker_.
-* Un componente Spring de control Rest que contiene un endpoint de prueba.
-* Una configuración de Spring que habilité el patrón _Circuit Breaker_ dentro de la aplicación.
+* Un component Spring de servei on s'aplicarà el patró _Circuit Breaker_.
+* Un component Spring de control Rest que conté un endpoint de prova.
+* Una configuració de Spring que habiliti el patró _Circuit Breaker_ dins de l'aplicación.
 
-> Ejemplo del componente de servicio con el patrón _Circuit Breaker_:
+> Exemple del component de servei amb el patró _Circuit Breaker_:
 
-Contenido de `EquipamentClientService.java`
+Contingut de `EquipamentClientService.java`
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -182,7 +182,7 @@ public class EquipamentClientService {
 }
 ```
 
-> Ejemplo del componente de control:
+> Exemple del component de control:
 
 Contenido de `EquipamentClientController.java`
 
