@@ -1,3 +1,6 @@
+{
+"data":
+[
 {"id":30,"producte":"Cisco APs - AP 1550 Series","categoria":"Sistema Operatiu Xarxa - IOS","obsolet":"< 15.3.x","suportat":"15.3.x","versioactual":"15.3.x","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
 {"id":31,"producte":"Cisco APs - AP 3500 Series","categoria":"Sistema Operatiu Xarxa - IOS","obsolet":"< 15.3.x","suportat":"15.3.x","versioactual":"15.3.x","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
 {"id":32,"producte":"Cisco APs - AP 1600 Series","categoria":"Sistema Operatiu Xarxa - IOS","obsolet":"< 15.3.x","suportat":"15.3.3-JF12","versioactual":"15.3.3-JF12","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
@@ -46,4 +49,6 @@
 {"id":75,"producte":"Cisco Wireless Controllers - Catalyst 9800 Series","categoria":"Sistema Operatiu Xarxa - IOS XE","obsolet":"< 16.6.x","suportat":"17.4.1 - 16.16.x","versioactual":"16.12.4a","roadmap":"–","emergent":"–","geslan":"16.12.2t","lt2blan":"–"},
 {"id":76,"producte":"Cisco Industrial Switches - IE 3200 Series","categoria":"Sistema Operatiu Xarxa - IOS XE","obsolet":"< 16.6.x","suportat":"17.4.1 - 16.16.x","versioactual":"17.4.1","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
 {"id":77,"producte":"Cisco Industrial Switches - IE 3300 Series","categoria":"Sistema Operatiu Xarxa - IOS XE","obsolet":"< 16.6.x","suportat":"17.4.1 - 16.16.x","versioactual":"17.4.1","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
-{"id":78,"producte":"Cisco Industrial Switches - IE 3400 Series","categoria":"Sistema Operatiu Xarxa - IOS XE","obsolet":"< 16.6.x","suportat":"17.4.1 - 16.16.x","versioactual":"17.4.1","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"},
+{"id":78,"producte":"Cisco Industrial Switches - IE 3400 Series","categoria":"Sistema Operatiu Xarxa - IOS XE","obsolet":"< 16.6.x","suportat":"17.4.1 - 16.16.x","versioactual":"17.4.1","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"–"}
+]
+}
