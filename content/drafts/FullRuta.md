@@ -153,7 +153,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 
-// FRP Connectivitat LAN
 <font size="20">
 <table id="Titol_CONNLAN" class="display" style="width:100%">
         <thead>
@@ -304,7 +303,6 @@ $(document).ready(function() {
     });
 
 });
-/ Script FRP Connectivitat LAN
 // Funció que dona format a la taula interna del Full de Ruta de Connectivitat LAN
 function formatCONNLAN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
