@@ -131,15 +131,15 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 </table>
 
 <font size="20">
-<table id="Titol_HOST" class="display" style="width:100%">
+<table id="Titol_CONNLAN" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN </th>
             </tr>
  </thead>
 </table>
 </font>
-<table id="FullRutaHOST" class="display" style="width:100%">
+<table id="FullRutaCONNLAN" class="display" style="width:100%">
         <thead>
 	    <tr>
                 <th>Grup de Tecnologies</th>
@@ -152,17 +152,16 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-
 <font size="20">
-<table id="Titol_CONNLAN" class="display" style="width:100%">
+<table id="Titol_HOST" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
             </tr>
  </thead>
 </table>
 </font>
-<table id="FullRutaCONNLAN" class="display" style="width:100%">
+<table id="FullRutaHOST" class="display" style="width:100%">
         <thead>
 	    <tr>
                 <th>Grup de Tecnologies</th>
