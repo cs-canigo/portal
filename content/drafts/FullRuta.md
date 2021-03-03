@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-03"
+date        = "2021-03-00"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -307,39 +307,13 @@ function formatCONNLAN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
-	    '<th width="300">LT1</th>'+
-            '<th width="300">LT2A</th>'+
-            '<th width="300">LT2B</th>'+
-            '<th width="300">LT2C</th>'+
+            '<th width="300">GES-LAN</th>'+
+            '<th width="300">LT2B-LAN</th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw8+'</td>'+
-            '<td>'+d.lt2bvw8+'</td>'+
-            '<td>'+d.lt2cvw8+'</td>'+
-        '</tr>'+
-	'<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw10+'</td>'+
-            '<td>'+d.lt2bvw10+'</td>'+
-            '<td>'+d.lt2cvw10+'</td>'+
-	  '</tr>'+
-	  '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
-            '<td>'+d.lt1+'</td>'+
-	    '<td>NO APLICA</td>'+
-             '<td>'+d.lt2bpl+'</td>'+
-            '<td>'+d.lt2cpl+'</td>'+
-	  '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="4">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="4">'+d.observacions+'</td>'+
+			 '<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
+	         '<td>'+d.geslan+'</td>'+
+            '<td>'+d.lt2blan+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -359,7 +333,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariLLT.json",
+        "ajax": "../FullRuta20/inventariCONNLAN.json",
         "columns": [
             {
                 "className":      'details-control',
