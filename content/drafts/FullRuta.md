@@ -336,13 +336,12 @@ $(document).ready(function() {
 	        	"zeroRecords": "No s'han trobat registres"
         },
         "ajax": "../FullRuta20/inventariCONNLAN.json",
-        "columns": [
-            {
-              "className":      'details-control',
-              "orderable":      false,
-              "data":           null,
-              "defaultContent": '',
-	      "width": "10%"
+          {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
             },
             { "data": "categoria",
 	      "width": "30%" },
