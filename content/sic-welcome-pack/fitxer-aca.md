@@ -216,7 +216,7 @@ resources:
   (...)
   artifacts:
     - id: artifact03
-      artyfactType: plans
+      artifactType: plans
       path: sql/plans.xml
 ```
 
