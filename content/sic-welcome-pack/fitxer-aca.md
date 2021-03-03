@@ -90,7 +90,7 @@ resources:
 Recordem breument el funcionament de les diferents modalitats: </br>
 - <b>Automàtica</b>: es construeixen els artefactes i es despleguen als servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
 - <b>Delegada</b>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es delega als CPD el desplegament.</br>
-- <b>Semiautomàtica</b>: es construeixen els artefactes i es lliuren a CPD/LdT a través del servei de gestió de binaris.</br>
+- <b>Semiautomàtica</b>: es construeixen els artefactes, es lliuren a CPD/LdT a través del servei de gestió de binaris i es genera un tiquet Remedy en mode "Draft".</br>
 <!--- - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br> -->
 </div>
 

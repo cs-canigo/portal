@@ -41,13 +41,13 @@ Es contemplen diverses modalitats de desplegament:
 
 * **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.
-* **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
+* **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera un tiquet Remedy en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 <!---* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst seria el següent:
 
 * Entorn **INT**: modalitat automàtica, que anirà tendint cap a la modalitat delegada.
-* Entorn **PRE/PRO**: modalitat semiautomàtica (per defecte) o automàtica per CPD si així s'acorda. Només s'aplica la modalitat automàtica en aplicacions desplegades al Cloud Públic.
+* Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
 ## Funcionament
