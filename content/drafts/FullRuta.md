@@ -129,17 +129,19 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-
+<!--
 <font size="20">
-<table id="Titol_CONNLAN" class="display" style="width:100%">
+<table id="Titol_Conn" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat de l'Entorn de Treball </th>
             </tr>
  </thead>
 </table>
 </font>
-<table id="FullRutaCONNLAN" class="display" style="width:100%">
+-->
+<!--
+<table id="FullRutaCONN" class="display" style="width:100%">
         <thead>
 	    <tr>
                 <th>Grup de Tecnologies</th>
@@ -152,6 +154,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
+-->
+
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
@@ -302,23 +306,33 @@ $(document).ready(function() {
     });
 
 });
-// Funció que dona format a la taula interna del Full de Ruta de Connectivitat LAN
-function formatCONNLAN(d) {
+// Funció que dona format a la taula interna del Full de Ruta de Connectivitat de l'Entorn de Treball
+function formatCONN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th>Versions per Lot </th>'+
-            '<th width="300">GES-LAN</th>'+
-            '<th width="300">LT2B-LAN</th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
         '</tr>'+
         '<tr>'+
-			 '<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
-	         '<td>'+d.geslan+'</td>'+
-            '<td>'+d.lt2blan+'</td>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
+            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt2b+'</td>'+
+            '<td>'+d.lt2c+'</td>'+
+        '</tr>'+
+        '<tr>'+
+	        '<th>   </th>'+
+	        '<th  colspan="3">   </th>'+
+	    '</tr>'+
+	    '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="3">'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaCONNLAN = $('#FullRutaCONNLAN').DataTable( {
+    var taulaFullRutaCONN = $('#FullRutaCONN').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -333,15 +347,15 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariCONNLAN.json",
+        "ajax": "../FullRuta20/inventariCONN.json",
         "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": '',
-	        "width": "10%"
-            },
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//	        "width": "10%"
+//            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
@@ -365,7 +379,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-                if (col_index !==1 && col_index !==2){
+                if (col_index !==7){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
@@ -386,9 +400,9 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-  $('#FullRutaCONNLAN tbody').on('click', 'td.details-control', function () {
+/*  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRutaCONNLAN.row( tr );
+        var row = taulaFullRutaCONN.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -396,11 +410,11 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatCONNLAN(row.data()) ).show();
+            row.child( formatCONN(row.data()) ).show();
             tr.addClass('shown');
         }
     });
-
+*/
 });
 // Funció que dona format a la taula interna del Full de Ruta de HOST
 function formatHOST(d) {
@@ -680,4 +694,3 @@ Segons el fabricant d’una tecnologia, un producte en les seves diferents versi
 - **Suport estàndard**. Versió de programari sobre la que es presta suport evolutiu i correctiu. 
 
 - **Actual**. Versió considerada com a actual per part del fabricant (coincideix amb les versions que estan en període de suport).
- 
