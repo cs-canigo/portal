@@ -700,7 +700,7 @@ A continuació s'adjunten exemples de casos d'ús:
 - [.Net - Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
 - [.Net](/related/sic/2.0/autoservei_net.yml)
 - [PHP](/related/sic/2.0/autoservei_php.yml)
-- [Oracle Apex / migració de BBDD](/related/sic/2.0/autoservei_apex.yml)
+- [Oracle Apex o migracions de BBDD](/related/sic/2.0/autoservei_apex.yml)
 - [Docker Image](/related/sic/2.0/autoservei_docker.yml)
 - [Docker Custom Image](/related/sic/2.0/autoservei_custom_docker.yml)
 - [Docker Custom Image - Nexus](/related/sic/2.0/autoservei_custom_docker_nexus.yml) (llibreria)
