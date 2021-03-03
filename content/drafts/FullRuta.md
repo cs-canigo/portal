@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-16"
+date        = "2021-03-03"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -129,18 +129,17 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
-<!--
+
 <font size="20">
 <table id="Titol_Conn" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat de l'Entorn de Treball </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN </th>
             </tr>
  </thead>
 </table>
 </font>
--->
-<!--
+
 <table id="FullRutaCONN" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -154,7 +153,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
             </tr>
         </thead>
 </table>
--->
 
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
