@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-01"
+date        = "2021-03-04"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
