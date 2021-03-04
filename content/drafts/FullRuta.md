@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-02"
+date        = "2021-03-04"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -398,7 +398,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatCONN(row.data()) ).show();
+            row.child( formatLLT(row.data()) ).show();
             tr.addClass('shown');
         }
     });
