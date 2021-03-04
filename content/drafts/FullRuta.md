@@ -189,8 +189,8 @@ function formatLLT(d) {
         '</tr>'+
         '<tr>'+
 		'<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
-	      	'<td>'+d.lt2bvw10+'</td>'+
-            	'<td>'+d.lt2cvw10+'</td>'+
+	      	'<td>'+d.geslan+'</td>'+
+            	'<td>'+d.lt2blan+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -210,7 +210,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariLLT.json",
+        "ajax": "../FullRuta20/inventariCONNLAN.json",
         "columns": [
             {
                 "className":      'details-control',
