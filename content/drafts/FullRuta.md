@@ -139,7 +139,6 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
-
 <table id="FullRutaCON" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -237,13 +236,13 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
-            {
-                "className":      'details-control',
-                "orderable":      false,
-                "data":           null,
-                "defaultContent": '',
-	        "width": "10%"
-            },
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//	        "width": "10%"
+//            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
