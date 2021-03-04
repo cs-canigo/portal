@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-04"
+date        = "2021-03-01"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -317,23 +317,23 @@ function formatCONN(d) {
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
             '<td>NO APLICA</td>'+
-	    '<td>NO APLICA</td>'+
-            '<td>NO APLICA</td>'+
-            '<td>NO APLICA</td>'+
+	    '<td>'+d.lt2avw8+'</td>'+
+            '<td>'+d.lt2bvw8+'</td>'+
+            '<td>'+d.lt2cvw8+'</td>'+
         '</tr>'+
 	'<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
             '<td>NO APLICA</td>'+
-	    '<td>NO APLICA</td>'+
-            '<td>NO APLICA</td>'+
-            '<td>NO APLICA</td>'+
+	    '<td>'+d.lt2avw10+'</td>'+
+            '<td>'+d.lt2bvw10+'</td>'+
+            '<td>'+d.lt2cvw10+'</td>'+
 	  '</tr>'+
 	  '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
-            '<td>NO APLICA</td>'+
+            '<td>'+d.lt1+'</td>'+
 	    '<td>NO APLICA</td>'+
-             '<td>NO APLICA</td>'+
-            '<td>NO APLICA</td>'+
+             '<td>'+d.lt2bpl+'</td>'+
+            '<td>'+d.lt2cpl+'</td>'+
 	  '</tr>'+
         '<tr>'+
 	        '<th>   </th>'+
@@ -341,7 +341,7 @@ function formatCONN(d) {
 	    '</tr>'+
 	    '<tr>'+
             '<th>Observacions:</th>'+
-            '<td colspan="4">NO APLICA</td>'+
+            '<td colspan="4">'+d.observacions+'</td>'+
         '</tr>'+
     '</table>';
 }
@@ -361,7 +361,7 @@ $(document).ready(function() {
 		        "infoEmpty": "No hi ha registres",
 	        	"zeroRecords": "No s'han trobat registres"
         },
-        "ajax": "../FullRuta20/inventariCONNLAN.json",
+        "ajax": "../FullRuta20/inventariLLT.json",
         "columns": [
             {
                 "className":      'details-control',
@@ -393,7 +393,7 @@ $(document).ready(function() {
            "initComplete": function () {
             this.api().columns().every( function (col_index) {
                 var column = this;
-               if (col_index !==1 && col_index !==2){
+                if (col_index !==1 && col_index !==2){
 	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
 	                	return;
                 }
