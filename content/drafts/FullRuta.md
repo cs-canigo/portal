@@ -139,7 +139,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
-<table id="FullRutaCON" class="display" style="width:100%">
+<table id="FullRutaCONN" class="display" style="width:100%">
         <thead>
 	    <tr>
                 <th>Grup de Tecnologies</th>
