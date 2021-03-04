@@ -307,7 +307,7 @@ $(document).ready(function() {
 
 // Funció que dona format a la taula interna de Connectivitat LAN
 function formatCONN(d) {
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:150px;border-collapse:collapse;width:100%">'+
       	'<tr>'+
             '<th>Versions per Lot </th>'+
             '<th width="300">GES-LAN</th>'+
