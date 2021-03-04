@@ -308,9 +308,9 @@ $(document).ready(function() {
 function formatCONN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
       	'<tr>'+
-            '<th>Versions per Lot </th>'+
-            '<th width="300">GES-LAN</th>'+
-            '<th width="300">LT2B-LAN</th>'+
+        	'<th>Versions per Lot </th>'+
+            	'<th width="300">GES-LAN</th>'+
+            	'<th width="300">LT2B-LAN</th>'+
         '</tr>'+
         '<tr>'+
 		'<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
@@ -337,13 +337,13 @@ $(document).ready(function() {
         },
         "ajax": "../FullRuta20/inventariCONNLAN.json",
         "columns": [
-//            {
-//            "className":      'details-control',
-//            "orderable":      false,
-//            "data":           null,
-//            "defaultContent": '',
-//	      "width": "10%"
-//            },
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+	        "width": "10%"
+            },
             { "data": "categoria",
 	      "width": "30%" },
             { "data": "producte", 
