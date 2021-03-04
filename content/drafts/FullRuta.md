@@ -180,7 +180,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 // Funció que dona format a la taula interna de Connectivitat LAN
 
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
-function formatLLT(d) {
+function formatCONN(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
       	'<tr>'+
             '<th>Versions per Lot </th>'+
@@ -195,7 +195,7 @@ function formatLLT(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+    var taulaFullRutaCONN = $('#FullRutaCONN').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
@@ -263,9 +263,9 @@ $(document).ready(function() {
         }
     });
      // Add event listener for opening and closing details
-  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = taulaFullRutaLLT.row( tr );
+        var row = taulaFullRutaCONN.row( tr );
         if ( row.child.isShown() ) {
             // This row is already open - close it
             row.child.hide();
@@ -273,7 +273,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatLLT(row.data()) ).show();
+            row.child( formatCONN(row.data()) ).show();
             tr.addClass('shown');
         }
     });
