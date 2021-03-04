@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-01"
+date        = "2021-03-04"
 title       = "Estàndard pel full de ruta del programari"
 description = "Estàndard pel full de ruta del programari"
 weight		= 3
@@ -177,170 +177,20 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 </table>
 
 <script>
-// Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
-function formatCON(d) {
-    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr>'+
-            '<th>Versions per Lot </th>'+
-	    '<th width="300">LT1</th>'+
-            '<th width="300">LT2A</th>'+
-            '<th width="300">LT2B</th>'+
-            '<th width="300">LT2C</th>'+
-        '</tr>'+
-        '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw8+'</td>'+
-            '<td>'+d.lt2bvw8+'</td>'+
-            '<td>'+d.lt2cvw8+'</td>'+
-        '</tr>'+
-	'<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw10+'</td>'+
-            '<td>'+d.lt2bvw10+'</td>'+
-            '<td>'+d.lt2cvw10+'</td>'+
-	  '</tr>'+
-	  '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
-            '<td>'+d.lt1+'</td>'+
-	    '<td>NO APLICA</td>'+
-             '<td>'+d.lt2bpl+'</td>'+
-            '<td>'+d.lt2cpl+'</td>'+
-	  '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="4">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="4">'+d.observacions+'</td>'+
-        '</tr>'+
-    '</table>';
-}
-$(document).ready(function() {
-    var taulaFullRutaCON = $('#FullRutaCON').DataTable( {
-    "columnDefs": [
-        { "width": "10%", "targets": 0 }
-    ],
-    "paging": false,
-	"info" : false,
-	"ordering": false,
-	"responsive": {
-            details: false
-    	},
-    	"language":{
-	        	"search" : "<strong>Cerca:</strong> ",
-		        "infoEmpty": "No hi ha registres",
-	        	"zeroRecords": "No s'han trobat registres"
-        },
-        "ajax": "../FullRuta20/inventariLLT.json",
-        "columns": [
-//            {
-//                "className":      'details-control',
-//                "orderable":      false,
-//                "data":           null,
-//                "defaultContent": '',
-//	        "width": "10%"
-//            },
-            { "data": "categoria",
-	      "width": "30%" },
-            { "data": "producte", 
-	      "className":      'intern',
-	      "width": "30%"
-	    },
-            { "data": "obsolet",
-	      "width": "20%" },
-            { "data": "suportat",
-	      "width": "80%" },
-            { "data": "versioactual",
-	      "className":      'intern',
-	      "width": "80%"
-	    },
-            { "data": "roadmap",
-	      "width": "100%" },
-            { "data": "emergent",
-	      "width": "100%" }
-        ],
-        "order": [[1, 'asc']],
-           "initComplete": function () {
-            this.api().columns().every( function (col_index) {
-                var column = this;
-                if (col_index !==1 && col_index !==2){
-	                	$("<p>&nbsp;</p>").appendTo($(column.header()));
-	                	return;
-                }
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo( $(column.header()) )
-                    .on( 'change', function () {
-                        var val = $.fn.dataTable.util.escapeRegex(
-                            $(this).val()
-                        ); 
-                        column
-                            .search( val ? '^'+val+'$' : '', true, false )
-                            .draw();
-                    } ); 
-                column.data().unique().sort().each( function ( d, j ) {
-                    select.append( '<option value="'+d+'">'+d+'</option>' )
-                } );
-            } );
-        }
-    });
-     // Add event listener for opening and closing details
-  $('#FullRutaCON tbody').on('click', 'td.details-control', function () {
-        var tr = $(this).closest('tr');
-        var row = taulaFullRutaCON.row( tr );
-        if ( row.child.isShown() ) {
-            // This row is already open - close it
-            row.child.hide();
-            tr.removeClass('shown');
-        }
-        else {
-            // Open this row
-            row.child( formatCON(row.data()) ).show();
-            tr.addClass('shown');
-        }
-    });
+// Funció que dona format a la taula interna de Connectivitat LAN
 
-});
 // Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
 function formatLLT(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr>'+
+      	'<tr>'+
             '<th>Versions per Lot </th>'+
-	    '<th width="300">LT1</th>'+
-            '<th width="300">LT2A</th>'+
-            '<th width="300">LT2B</th>'+
-            '<th width="300">LT2C</th>'+
+            '<th width="300">GES-LAN</th>'+
+            '<th width="300">LT2B-LAN</th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw8+'</td>'+
-            '<td>'+d.lt2bvw8+'</td>'+
-            '<td>'+d.lt2cvw8+'</td>'+
-        '</tr>'+
-	'<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
-            '<td>NO APLICA</td>'+
-	    '<td>'+d.lt2avw10+'</td>'+
-            '<td>'+d.lt2bvw10+'</td>'+
-            '<td>'+d.lt2cvw10+'</td>'+
-	  '</tr>'+
-	  '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
-            '<td>'+d.lt1+'</td>'+
-	    '<td>NO APLICA</td>'+
-             '<td>'+d.lt2bpl+'</td>'+
-            '<td>'+d.lt2cpl+'</td>'+
-	  '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th  colspan="4">   </th>'+
-	    '</tr>'+
-	    '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="4">'+d.observacions+'</td>'+
+		'<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
+	      	'<td>'+d.lt2bvw10+'</td>'+
+            	'<td>'+d.lt2cvw10+'</td>'+
         '</tr>'+
     '</table>';
 }
