@@ -195,7 +195,7 @@ function formatCONN(d) {
     '</table>';
 }
 $(document).ready(function() {
-    var taulaFullRutaCONN = $('#FullRutaCONN').DataTable( {
+    var taulaFullRutaCONN = $('#FullRutaLLT').DataTable( {
     "columnDefs": [
         { "width": "10%", "targets": 0 }
     ],
