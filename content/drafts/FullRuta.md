@@ -398,8 +398,7 @@ $(document).ready(function() {
         }
         else {
             // Open this row
-            row.child( formatLLT(row.data()) ).show();
-            tr.addClass('shown');
+           
         }
     });
 
