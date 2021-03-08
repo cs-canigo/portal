@@ -1,12 +1,12 @@
 {
 "data":
 [
-{"id":1,"producte":"Cisco APs - AP 1700 Series","categoria":"Sistema Operatiu Xarxa - IOS","obsolet":"< 15.3.3.x","suportat":"15.3.3-JPJ5 - 15.3.3-JA1","versioactual":"15.3.3-JPK","roadmap":"–","emergent":"–","geslan":"–","lt2blan":"15.3(3)JC14"},
-{"id":2,"producte":"Cisco APs - AP 3500 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"–","emergent":"–","geslan":"8.3.141.3","lt2blan":"–"},
-{"id":3,"producte":"Cisco APs - AP 1600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"–","emergent":"–","geslan":"8.5.161.6","lt2blan":"8.2.166.0"},
-{"id":4,"producte":"Cisco APs - AP 2600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"–","emergent":"–","geslan":"8.3.141.3","lt2blan":"8.2.166.0"},
-{"id":5,"producte":"Cisco APs - AP 3600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"–","emergent":"–","geslan":"8.3.141.3","lt2blan":"–"},
-{"id":6,"producte":"Cisco APs - AP 1700 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"–","emergent":"–","geslan":"8.5.161.0","lt2blan":"–"},
+{"id":1,"producte":"Cisco APs - AP 1700 Series","categoria":"Sistema Operatiu Xarxa - IOS","obsolet":"< 15.3.3.x","suportat":"15.3.3-JPJ5 - 15.3.3-JA1","versioactual":"15.3.3-JPK","roadmap":"N/A","emergent":"N/A","geslan":"N/A","lt2blan":"15.3(3)JC14"},
+{"id":2,"producte":"Cisco APs - AP 3500 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.3.141.3","lt2blan":"N/A"},
+{"id":3,"producte":"Cisco APs - AP 1600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.5.161.6","lt2blan":"8.2.166.0"},
+{"id":4,"producte":"Cisco APs - AP 2600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.3.141.3","lt2blan":"8.2.166.0"},
+{"id":5,"producte":"Cisco APs - AP 3600 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.3.141.3","lt2blan":"N/A"},
+{"id":6,"producte":"Cisco APs - AP 1700 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.5.161.0","lt2blan":"N/A"},
 {"id":7,"producte":"Cisco APs - AP 3700 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.5.161.6","lt2blan":"8.0.152.12"},
 {"id":8,"producte":"Cisco APs - AP 2800 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.5.161.6","lt2blan":"N/A"},
 {"id":9,"producte":"Cisco APs - AP 3800 Series","categoria":"Sistema Operatiu Xarxa - AirOS","obsolet":"< 8.3.x","suportat":"8.5.x - 8.3.x","versioactual":"8.5.161.0","roadmap":"N/A","emergent":"N/A","geslan":"8.5.161.6","lt2blan":"8.8.120.0"},
