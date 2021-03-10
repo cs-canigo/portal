@@ -14,16 +14,16 @@ A dia 10/03/2021 s'ha realitzat una nova actualització del Catàleg Tècnic de 
 ## Novetats
 
 En la darrera actualització del Catàleg Tècnic de Dades, publicada el 10/04/2021, s'han realitzat les següents accions:
-<br>
+
 - S'ha incorporat l'entitat Nivells poblacionals dins del grup d'obligat compliment i s'ha eliminat de pendents d'aprovació.
-<br>
+
 - S'ha actualitzat el conjunt de valors de l'entitat Secretaries per eliminar la secretaria amb identificador 10187 i nom Presidència del Consell Català de Formació Professional.
-<br>
+
 - S'ha canviat el nom de dues entitats ja publicades dins del grup d'obligat compliment:
   - Productes comerç exterior NC 2019 a canviat a NC 2019 (productes comerç exterior).
   - Productes industrials PRODCOM EIP 2017  a canviat a PRODCOM EIP 2017 (productes industrials)
-<br>
-<br>
+
+
 Per a més informació sobre la Gestió Tècnica de Dades podeu consultar:
 
 * [Gestió Tècnica de Dades] (https://canigo.ctti.gencat.cat/dadesref/gestiodades/)
