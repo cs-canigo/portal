@@ -63,7 +63,7 @@
 "Tabular",
 "Ús no restringit",
 "18/12/2019",
-"20/01/2021",
+"10/03/2021",
 "Secretaries.xlsx",
 "Secretaries_ATR.docx"
 ],
@@ -155,7 +155,7 @@
 [
 "Consolidat",
 "Comerç i consum",
-"Productes comerç exterior NC 2019",
+"NC 2019 (productes comerç exterior)",
 "Classificació de productes per al comerç amb l'estranger 2019 (Nomenclatura combinada 2019, NC 2019)",
 "dtarq117",
 "Comerç i consum",
@@ -165,14 +165,14 @@
 "Tabular",
 "Ús no restringit",
 "20/02/2020",
-"17/02/2021",
-"Productes_NC_2019.xlsx",
-"Productes_NC_2019_ATR.docx"
+"10/03/2021",
+"NC_2019_prod_com_ext.xlsx",
+"NC_2019_prod_com_ext_ATR.docx"
 ],
 [
 "Consolidat",
 "Comerç i consum",
-"Productes industrials PRODCOM EIP 2017",
+"PRODCOM EIP 2017 (productes industrials)",
 "Classificació de l'Enquesta Industrial de Productes 2017 (PRODCOM-EIP 2017)",
 "dtarq116",
 "Comerç i consum",
@@ -182,9 +182,9 @@
 "Tabular",
 "Ús no restringit",
 "20/02/2020",
-"17/02/2021",
-"Productes_PRODCOM_EIP_2017.xlsx",
-"Productes_PRODCOM_EIP_2017_ATR.docx"
+"10/03/2021",
+"PRODCOM_EIP_2017_prod_ind.xlsx",
+"PRODCOM_EIP_2017_prod_ind_ATR.docx"
 ],
 [
 "Consolidat",
@@ -731,21 +731,21 @@
 "Codis_Territori_Municipis_Espanya_ATR.docx"
 ],
 [
-"Pendent",
+"Consolidat",
 "Territori i paisatge. Urbanisme",
 "Nivells poblacionals",
 "Llistat de nivells jeràrquics en què es classifiquen les unitats poblacionals, incloent-hi el municipi.",
 "dtarq127",
 "Territori i paisatge. Urbanisme",
 "Administració Pública",
-"Municat",
+"Institut d'Estadística de Catalunya (Idescat)",
 "Sota demanda",
 "Tabular",
 "Ús no restringit",
 "30/03/2020",
-"30/03/2020",
-"Codis_Territori_Nivell_Poblacional.xlsx",
-"Codis_Territori_Nivell_Poblacional_ATR.docx"
+"10/03/2021",
+"Nivells_Poblacionals.xlsx",
+"Nivells_Poblacionals_ATR.docx"
 ],
 [
 "Pendent",
