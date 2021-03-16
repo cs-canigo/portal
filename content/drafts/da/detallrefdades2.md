@@ -121,12 +121,12 @@ weight= 5
 	
     celda = document.createElement("td");
 
-    textoCelda =  document.createTextNode("           ");
-    celda.appendChild(textoCelda);
+    //textoCelda =  document.createTextNode("           ");
+    //celda.appendChild(textoCelda);
 
     var link_valors = document.createElement('a');
     link_valors.setAttribute('href', 'https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg');
-    link_valors.innerHTML = "Enllaç informació Dades Obertes - Continents";
+    link_valors.innerHTML = "Enllaç informació Continents";
     celda.appendChild(link_valors);
 	
 	hilera.appendChild(celda);
