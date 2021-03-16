@@ -108,30 +108,30 @@ weight= 5
       }
     }
 
-	// -----------------------------------------------------
+	// ---------------------------------------------------
     //  v02.CTD-16/03/2021 (inici) Prova per posar link a Dades Obertes
-
-	hilera = document.createElement("tr");
-
-    celda = document.createElement("td");
-    celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Dades Obertes");
-    celda.appendChild(textoCelda);
-    hilera.appendChild(celda);
+//
+//	hilera = document.createElement("tr");
+//
+//    celda = document.createElement("td");
+//    celda.style.fontWeight = "bold";
+//    textoCelda =  document.createTextNode("Dades Obertes");
+//    celda.appendChild(textoCelda);
+//    hilera.appendChild(celda);
 	
-    celda = document.createElement("td");
+//    celda = document.createElement("td");
 
     //No es posen espais al principi del link
     //textoCelda =  document.createTextNode("           ");
     //celda.appendChild(textoCelda);
 
-    var link_valors = document.createElement('a');
-    link_valors.setAttribute('href', 'https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg');
-    link_valors.innerHTML = "Enllaç informació Continents";
-    celda.appendChild(link_valors);
+//    var link_valors = document.createElement('a');
+//    link_valors.setAttribute('href', 'https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg');
+//    link_valors.innerHTML = "Enllaç informació Continents";
+//    celda.appendChild(link_valors);
 	
-	hilera.appendChild(celda);
-	tblBody.appendChild(hilera);
+//	hilera.appendChild(celda);
+//	tblBody.appendChild(hilera);
 	
 	//  v02.CTD-16/03/2021 (fi)
 	// -----------------------------------------------------
@@ -216,11 +216,22 @@ weight= 5
 	// Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
 	if (dades[0]=="Consolidat")
 	{
-		var frame = document.createElement('iframe');
-		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
-		frame.style.width= "100%"
-		frame.style.height= "400px";
-		celda.appendChild(frame);
+
+	// ---------------------------------------------------
+    //  v02.CTD-16/03/2021 (inici) Prova per posar link a Dades Obertes
+    //     Es comenta la visualització de fitxer Excel i es mostra link a Dades Obertes
+
+//		var frame = document.createElement('iframe');
+//		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
+//		frame.style.width= "100%"
+//		frame.style.height= "400px";
+//		celda.appendChild(frame);
+
+        var link_valors = document.createElement('a');
+        link_valors.setAttribute('href', 'https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg');
+        link_valors.innerHTML = "Consultar informació a Dades Obertes";
+        celda.appendChild(link_valors);
+
 	}
 	else
 	{
