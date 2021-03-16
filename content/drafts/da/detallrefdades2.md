@@ -121,6 +121,7 @@ weight= 5
 	
     celda = document.createElement("td");
 
+    //No es posen espais al principi del link
     //textoCelda =  document.createTextNode("           ");
     //celda.appendChild(textoCelda);
 
