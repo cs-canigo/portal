@@ -177,8 +177,8 @@ weight= 5
 
     celda = document.createElement("td");
 
-    textoCelda =  document.createTextNode("           ");
-    celda.appendChild(textoCelda);
+//    textoCelda =  document.createTextNode("           ");
+//    celda.appendChild(textoCelda);
 
     var link_valors = document.createElement('a');
     link_valors.setAttribute('href', '../../entitats/' + dades[14]);
