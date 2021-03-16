@@ -1,6 +1,6 @@
 +++
 date        = "2021-03-16"
-title       = "Detall Dades de Referència"
+title       = "Detall Dades de Referència Link Dades Obertes"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
