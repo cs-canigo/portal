@@ -188,15 +188,21 @@ weight= 5
 	textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 
+	// ---------------------------------------------------
+    //  v02.CTD-16/03/2021 (inici) Prova per posar link a Dades Obertes
+    //     Es comenta la descarrega del fitxer de dades -  Excel
+	
     //Si es una entitat consolidada s'ha de posar el link de descarga
-	if (dades[0]=="Consolidat")
-	{
-		var link = document.createElement('a');
-		link.setAttribute('href', '../../entitats/' + dades[13]);
-		link.innerHTML = "Descarregar fitxer de dades";
-		celda.appendChild(link);
-	}
-
+//	if (dades[0]=="Consolidat")
+//	{
+//		var link = document.createElement('a');
+//		link.setAttribute('href', '../../entitats/' + dades[13]);
+//		link.innerHTML = "Descarregar fitxer de dades";
+//		celda.appendChild(link);
+//	}
+   //  v02.CTD-16/03/2021 (fi) Prova per posar link a Dades Obertes
+	// ---------------------------------------------------
+  
 
     hilera.appendChild(celda);
 
@@ -231,7 +237,8 @@ weight= 5
         link_valors.setAttribute('href', 'https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg');
         link_valors.innerHTML = "Consultar informació a Dades Obertes";
         celda.appendChild(link_valors);
-
+   //  v02.CTD-16/03/2021 (fi) Prova per posar link a Dades Obertes
+	// ---------------------------------------------------
 	}
 	else
 	{
