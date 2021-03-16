@@ -1,5 +1,5 @@
 +++
-date        = "2020-11-04"
+date        = "2021-03-16"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -108,6 +108,7 @@ weight= 5
       }
     }
 
+
 	// -----------------------------------------------------
     //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
 
@@ -146,8 +147,8 @@ weight= 5
 
     celda = document.createElement("td");
 
-    textoCelda =  document.createTextNode("           ");
-    celda.appendChild(textoCelda);
+//    textoCelda =  document.createTextNode("           ");
+//    celda.appendChild(textoCelda);
 
     var link_valors = document.createElement('a');
     link_valors.setAttribute('href', '../../entitats/' + dades[14]);
@@ -157,18 +158,23 @@ weight= 5
 	textoCelda =  document.createTextNode("               ");
     celda.appendChild(textoCelda);
 
-    //Si es una entitat consolidada s'ha de posar el link de descarga
-	if (dades[0]=="Consolidat")
+	// ---------------------------------------------------
+    //  v02.CTD-16/03/2021 (inici) Si l'entitat esta consolidad i no te link a dades obertes, descarregar fitxer Excel
+	
+    //Si es una entitat consolidada i sense link a dades obertes s'ha de posar el link de descarga
+	if ((dades[0]=="Consolidat") || (dades[15]=="") )
 	{
 		var link = document.createElement('a');
 		link.setAttribute('href', '../../entitats/' + dades[13]);
 		link.innerHTML = "Descarregar fitxer de dades";
 		celda.appendChild(link);
 	}
-
-
+   //  v02.CTD-16/03/2021 (fi) 
+   // ---------------------------------------------------
+  
+  
     hilera.appendChild(celda);
-
+	
     tblBody.appendChild(hilera);
 
     
@@ -185,11 +191,27 @@ weight= 5
 	// Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
 	if (dades[0]=="Consolidat")
 	{
-		var frame = document.createElement('iframe');
-		frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
-		frame.style.width= "100%"
-		frame.style.height= "400px";
-		celda.appendChild(frame);
+
+	// ---------------------------------------------------
+    //  v02.CTD-16/03/2021 (inici) Si hi ha link a Dades Obertes posar el link, sino posar fitxer Excel
+ 
+       if (dades[15]!="") 
+	   {
+			var link_valors = document.createElement('a');
+			link_valors.setAttribute('href', dades[15]);
+			link_valors.innerHTML = "Consultar informació a Dades Obertes";
+			celda.appendChild(link_valors);
+	   }
+	   else
+	   {
+			var frame = document.createElement('iframe');
+			frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades[13]);
+			frame.style.width= "100%"
+			frame.style.height= "400px";
+			celda.appendChild(frame);
+       }
+    //  v02.CTD-16/03/2021 (fi) Prova per posar link a Dades Obertes
+	// ---------------------------------------------------
 	}
 	else
 	{
