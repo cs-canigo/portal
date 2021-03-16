@@ -30,4 +30,4 @@
 {"id":27,"producte":"VMWare ThinApp","categoria":"Plataformes del LLdT","obsolet":"< 5.X","suportat":"5.X","versioactual":"5.X","roadmap":"–","emergent":"N/A","lt1":"N/A","lt2avw8":"N/A","lt2avw10":"N/A","lt2bvw8":"5.2.9","lt2bvw10":"5.2.9","lt2bpl":"-","lt2cvw8":"N/A","lt2cvw10":"N/A","lt2cpl":"-","observacions":"-"},
 {"id":28,"producte":"VMWare Unified Endpoint Management","categoria":"Plataformes del LLdT","obsolet":"≤1908","suportat":"≥1909","versioactual":"2005","roadmap":"2008","emergent":"N/A","lt1":"N/A","lt2avw8":"N/A","lt2avw10":"N/A","lt2bvw8":"N/A","lt2bvw10":"N/A","lt2bpl":"-","lt2cvw8":"N/A","lt2cvw10":"N/A","lt2cpl":"-","observacions":"-"}
 ]
-
+}
