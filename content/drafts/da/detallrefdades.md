@@ -162,7 +162,7 @@ weight= 5
     //  v02.CTD-16/03/2021 (inici) Si l'entitat esta consolidad i no te link a dades obertes, descarregar fitxer Excel
 	
     //Si es una entitat consolidada i sense link a dades obertes s'ha de posar el link de descarga
-	if ((dades[0]=="Consolidat") || (dades[15]=="") )
+	if ((dades[0]=="Consolidat") && (dades[15]=="") )
 	{
 		var link = document.createElement('a');
 		link.setAttribute('href', '../../entitats/' + dades[13]);
@@ -199,7 +199,7 @@ weight= 5
 	   {
 			var link_valors = document.createElement('a');
 			link_valors.setAttribute('href', dades[15]);
-			link_valors.innerHTML = "Consultar informació a Dades Obertes";
+			link_valors.innerHTML = "Accedir a dades";
 			celda.appendChild(link_valors);
 	   }
 	   else
