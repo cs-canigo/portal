@@ -204,8 +204,8 @@ function formatLLT(d) {
 	  '</tr>'+
 	  '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
-            '<td>'+d.lt1+'</td>'+
-	    '<td>N/A</td>'+
+            '<td>'+d.lt1pl+'</td>'+
+	    '<td>'+d.lt2apl+'</td>'+
              '<td>'+d.lt2bpl+'</td>'+
             '<td>'+d.lt2cpl+'</td>'+
 	  '</tr>'+
