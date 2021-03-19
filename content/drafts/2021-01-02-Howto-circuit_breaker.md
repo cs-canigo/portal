@@ -17,7 +17,7 @@ L'objectiu d'aquest article és mostrar com implementar el patró _[Circuit Brea
 
 El patró _Circuit Breaker_ evita que una aplicació intenti de manera indefinida una operació que amb alta probabilitat vagi a fallar, permetent que continui l'aplicació mentres el problema amb l'operació es resolt. Adicionalment, es pot detectar quan s'ha resolt el problema permetent d'aquesta manera tornar a executar l'operació compromesa. 
 
-![Spring circuit Diagrama](/images/howtos/2021-01-02_spring_circuit_diagrama.png)
+![Spring circuit Diagrama](/images/howtos/2021-01-02_spring_circuit_diagrama.drawio.png)
 
 Els estats que tracta el patró són:
 
