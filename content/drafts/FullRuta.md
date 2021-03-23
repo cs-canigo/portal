@@ -118,6 +118,20 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>Març de 2021 </td>
+<td>Juliol de 2021</td>
+</tr>
+</thead>
+</table>
+
 <table id="FullRutaLLT" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -142,6 +156,20 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>Març de 2021 </td>
+<td>Juliol de 2021</td>
+</tr>
+</thead>
+</table>
+
 <table id="FullRutaCONN" class="display" style="width:100%">
         <thead>
 	    <tr>
@@ -168,6 +196,20 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
  </thead>
 </table>
 </font>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>juliol de 2020 </td>
+<td>octubre de 2020</td>
+</tr>
+</thead>
+</table>
+
 <table id="FullRutaHOST" class="display" style="width:100%">
         <thead>
 	    <tr>
