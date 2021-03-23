@@ -109,7 +109,7 @@ Exemple:
 </llista-scripts>
 ```
 
-
+<br/>
 El projecte ha de contenir tot el codi de l'aplicació i el sistema de custòdia de codi permetrà gestionar diferències, versions i altres. D'acord amb aquesta filosofia,
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
