@@ -81,8 +81,8 @@ el backend de l'aplicació.
 <br/>
 En qualsevol cas, caldrà preparar:
 
-* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que podran estar organitzat en subcarpetes si es considera.
-* **plans.xml**: fitxer on es defineix el pla d'execució dels scripts, on caldrà indicar:
+* **sql_scripts**: directori per a emmagatzemar tots els scripts SQL/PL-SQL, que podran estar organitzat en subcarpetes si es considera convenient.
+* **plans.xml**: fitxer on es defineix el pla d'execució dels scripts SQL/PL-SQL. Aquest fitxer **haurà d'estar ubicat a la mateixa carpeta `sql_scripts`, o a un nivell de carpeta superior**, i caldrà indicar:
 
 |Paràmetre|Tipus|Descripció|
 |-----------|----------|----------|
