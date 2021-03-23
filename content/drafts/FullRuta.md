@@ -154,6 +154,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
         </thead>
 </table>
 
+\* La versió del software del AP, ve donada per la versió de la controladora (WLC) a la que es troba associat.
+
 <font size="20">
 <table id="Titol_HOST" class="display" style="width:100%">
         <thead>
