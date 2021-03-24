@@ -157,7 +157,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 </table>
 </font>
 
-<table id="Revisio" class="display" style="width:50%" align="center">
+<table id="Revisio" class="display" style="width:50%" align="center" margin-left:auto margin-right:auto>
 <thead>
 <tr>
 <th>Darrera revisió realitzada</th>
