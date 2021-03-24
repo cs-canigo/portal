@@ -717,7 +717,7 @@ Una tecnologia en les seves diferents versions pot passar per 5 estadis diferent
 
 - **Versió actual CTTI**. És la versió de programari que s’està desplegant actualment. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar.
 
-- ***PROPOSTA*** **Versió actual CTTI**. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar. En el cas de Sistemes d'Informació, aquesta és la versió de programari que s’està desplegant actualment.
+- *** *PROPOSTA* *** **Versió actual CTTI**. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar. En el cas de Sistemes d'Informació, aquesta és la versió de programari que s’està desplegant actualment.
 
 - **En Roadmap CTTI**. És la versió de programari que està estudiant-se per la seva futura implantació. Un cop definida i implantada l’arquitectura de la versió, aquesta passarà a ser la “versió actual CTTI”.
 
