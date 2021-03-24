@@ -113,7 +113,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="Titol_LLT" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Lloc de Treball  </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Lloc de Treball</th>
             </tr>
  </thead>
 </table>
@@ -151,7 +151,7 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <table id="Titol_Conn" class="display" style="width:100%">
         <thead>
 	    <tr>
-                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN </th>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN</th>
             </tr>
  </thead>
 </table>
