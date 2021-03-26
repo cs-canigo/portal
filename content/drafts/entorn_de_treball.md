@@ -190,6 +190,8 @@ En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el
   * Ritme d'actualitzacions de l'aplicació molt elevat.
   * Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
 
+&nbsp;
+&nbsp;
 
 * **2.2.1.1 Filosofia de “microserveis” o “components desacoblats”** *(desitjable)*, ), amb l’objectiu de maximitzar la reutilització dels mateixos alhora que es minimitzen els esforços i l’impacte al servei per mantenir el cicle de vida de les aplicacions. Entenem que se segueix aquesta filosofia quan s’assoleixen les següents premisses:
   * a)	Ús de dependències: es generarà un paquet independent per aquells components susceptibles de ser reutilitzats o que poden ser modificats i actualitzats sense afectar a la resta de components (p.ex.: frameworks, runtimes, visors o editors de documents, plugins, etc).
