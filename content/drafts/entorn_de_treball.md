@@ -102,10 +102,10 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 * **0.9 Gestió Centralitzada**. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
 * **0.10 Rendiment i evolució**. L’entorn de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment, mitjançant la monitorització per a identificar les necessitats de creixement o de canvi d’equipaments, per tal d’acollir les previsions i creixement, de noves necessitats i/o  l’obsolescència tecnològica. 
 * **0.11 Arquitectura orientada a serveis**. Les arquitectures s’hauran de modelar com a serveis o microserveis i valorar el seu encaix  en un entorn cloud públic, híbrid o privat. Així doncs, serà necessari posar de manifest quins són els avantatges i inconvenients de solucions cloud i fer un balanç d’aquests factors amb els principis globals de l’entorn de treball. Malgrat que en termes tècnics l’ordre de preferència per seleccionar l’entorn on allotjar un servei o microservei és el que apareix a continuació, caldrà valorar-ho de forma general en el marc de la resta de principis.
-	1.**SAAS**  Per d’aplicacions o serveis específics aprovisionats amb un conjunt de funcions ben definides.
-	2.**PAAS** Per plataformes on es necessiti desenvolupar, implementar i  gestionar aplicacions sense preocupar-se del servei, l’emmagatzematge i l’administració de la base de dades. 
-	3.**IAAS** Per elements d’infraestructura com virtualització, emmagatzematge i xarxa amb la necessitat d’una infraestructura automatitzada i elàstica. 
-	4.**On premise** Per serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida. 
+  * **1. SAAS**. Per d’aplicacions o serveis específics aprovisionats amb un conjunt de funcions ben definides.
+  * **2. PAAS**. Per plataformes on es necessiti desenvolupar, implementar i  gestionar aplicacions sense preocupar-se del servei, l’emmagatzematge i l’administració de la base de dades. 
+  * **3. IAAS**. Per elements d’infraestructura com virtualització, emmagatzematge i xarxa amb la necessitat d’una infraestructura automatitzada i elàstica. 
+  * **3. On-premise**. Per serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida. 
 * **0.12 Experiència d’usuari**. Tota solució implementada a l’entorn de treball ha d’estar orientada a satisfer uns requeriments d’usuari, tanmateix la facilitat d’ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d’usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents. Els factors d’experiència d'usuari com la interfície, mobilitat i els aspectes de col·laboració en el lloc de treball són una prioritat clau en el disseny de la solució. 
 * **0.13 Sostenibilitat**. Construir solucions més respectuoses amb el medi ambient  i més  sensibles amb l’impacte social, en el marc  de l’exhauriment de matèries primeres, els alts costos ambientals i energètics, l’obsolescència del maquinari i del programari, els impactes ambientals del reciclatge o de la fractura digital. Les propostes que tenen com a propòsit la sostenibilitat són les següents:
 	**Eficiència energètica**  L’adquisició i la gestió de l’equipament es realitzarà amb un enfocament d’estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar a la funcionalitat. 
@@ -185,10 +185,10 @@ La virtualització és l’acte d’aïllar o desacoblar un recurs informàtic d
 
 En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el mètode d’implementació adient caldrà seguir els següents principis associats amb la creació, execució i manteniment del paquet. Els principals motius pels quals s’utilitzarà aquesta tecnologia són:
 
-+ Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.
-+ Remeiar conflictes entre aplicacions.
-+ Ritme d'actualitzacions de l'aplicació molt elevat.
-+ Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
+  + Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.
+  + Remeiar conflictes entre aplicacions.
+  + Ritme d'actualitzacions de l'aplicació molt elevat.
+  + Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
 
 
 * **2.2.1.1 Filosofia de “microserveis” o “components desacoblats”** *(desitjable)*, ), amb l’objectiu de maximitzar la reutilització dels mateixos alhora que es minimitzen els esforços i l’impacte al servei per mantenir el cicle de vida de les aplicacions. Entenem que se segueix aquesta filosofia quan s’assoleixen les següents premisses:
