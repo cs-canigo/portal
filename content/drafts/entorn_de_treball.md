@@ -36,11 +36,11 @@ img[alt="centrar"] {
 
 - **[0. Principis globals](#0-principis-globals)**
 
-- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-de-l-entorn-de-treball)**
+- **[1. Solucions escriptori de l'Entorn de Treball](#1-solucions-escriptori-del-entorn-de-treball)**
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
+- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-del-entorn-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
