@@ -80,7 +80,7 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 &nbsp;
 &nbsp;
 
-* **0.1. Aprofitar abans que comprar i construir **. Aprofitar si hi ha  solucions o estàndards ja definits que resolen una necessitat TIC i en aquest cas s’implantarà aquesta solució. Només seran construïdes de nou si realment hi ha un requeriment que ho necessiti. S’ha d’evitar solucions a mida. A tenir en compte que els estàndards aniran evolucionant.
+* **0.1. Aprofitar abans que comprar i construir**. Aprofitar si hi ha  solucions o estàndards ja definits que resolen una necessitat TIC i en aquest cas s’implantarà aquesta solució. Només seran construïdes de nou si realment hi ha un requeriment que ho necessiti. S’ha d’evitar solucions a mida. A tenir en compte que els estàndards aniran evolucionant.
 
 * **0.2 Estandardització. Solucions en recerca d’un model Transversal**. Cal vetllar perquè els dissenys d’alt nivell de les solucions de l’entorn de treball esdevinguin un model estàndard de referència a nivell transversal que permeti implementar-ho a qualsevol escenari amb el mínim de canvis necessaris.
 
