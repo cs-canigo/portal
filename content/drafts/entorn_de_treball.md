@@ -40,7 +40,7 @@ img[alt="centrar"] {
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura del Lloc de Treball](#2-arquitectura-del-lloc-de-treball)**
+- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
@@ -116,7 +116,7 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 
 ---
 
-# 1. Solucions escriptori del lloc de treball
+# 1. Solucions escriptori del Lloc de Treball
 
 &nbsp;
 &nbsp;
