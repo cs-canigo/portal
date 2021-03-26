@@ -184,11 +184,11 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 La virtualització és l’acte d’aïllar o desacoblar un recurs informàtic dels altres, tanmateix mitjançant la virtualització d’aplicacions es generarà un paquet que inclou tots els objectes i fitxers que requereixi l’aplicació per funcionar i amb l’objectiu de poder-la executar sense necessitat d’instal·lació.
 
 En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el mètode d’implementació adient caldrà seguir els següents principis associats amb la creació, execució i manteniment del paquet. Els principals motius pels quals s’utilitzarà aquesta tecnologia són:
-
-  * ** Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.
-  * ** Remeiar conflictes entre aplicacions.
-  * ** Ritme d'actualitzacions de l'aplicació molt elevat.
-  * ** Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
+* **
+  * Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.
+  * Remeiar conflictes entre aplicacions.
+  * Ritme d'actualitzacions de l'aplicació molt elevat.
+  * Es requereixi un implementació o completa desimplementació de l'aplicació molt àgil.
 
 
 * **2.2.1.1 Filosofia de “microserveis” o “components desacoblats”** *(desitjable)*, ), amb l’objectiu de maximitzar la reutilització dels mateixos alhora que es minimitzen els esforços i l’impacte al servei per mantenir el cicle de vida de les aplicacions. Entenem que se segueix aquesta filosofia quan s’assoleixen les següents premisses:
