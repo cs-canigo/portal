@@ -1,5 +1,5 @@
 +++
-date        = "2021-01-20"
+date        = "2021-03-26"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -213,7 +213,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 A continuació es presenta el diagrama amb les relacions entre les entitats de referència d'obligat compliment, indicant-se la cardinalitat per cada relació.
 <br/><br/>
   <div style="padding-left:40px">
-    <img style="padding: 10px; width: 90%; height: auto; background-color:#eeeeee" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+    <img style="padding: 5px; width: 100%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
   </div>	
 </div>
 
