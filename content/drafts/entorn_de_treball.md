@@ -26,7 +26,7 @@ img[alt="centrar"] {
 
 
 <map name="planetmap">
-  <area shape="rect" coords="15,275,170,320" alt="Sun" href="#1-solucions-escriptori-de-l-entorn-de-treball">
+  <area shape="rect" coords="15,275,170,320" alt="Sun" href="#1-solucions-escriptori-del-lloc-de-treball">
   <area shape="rect" coords="195,275,350,320" alt="Sun" href="#2-arquitectura-de-l-entorn-de-treball">
   <area shape="rect" coords="390,275,550,320" alt="Sun" href="#3-arquitectura-de-connectivitat">
    <area shape="rect" coords="195,322,350,372" alt="Sun" href="#0-principis-globals">
