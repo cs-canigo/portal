@@ -2,6 +2,24 @@
 [
 "Consolidat",
 "Administració pública",
+"Agrupació temàtica de serveis al ciutadà",
+"Llistat de temes o assumptes en que es poden agrupar els serveis que s'ofereixen al ciutadà",
+"dtarq141",
+"Administració pública",
+"Administració Pública",
+"Direcció General d'Atenció Ciutadana (DGAC)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"31/03/2021",
+"31/03/2021",
+"Agrupacio_tematica_serveis_ciutada.xlsx",
+"Agrupacio_tematica_serveis_ciutada_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Sector-P-blic/Agrupaci-tem-tica-de-serveis-al-ciutad-/wajj-p75b"
+],
+[
+"Consolidat",
+"Administració pública",
 "Departaments",
 "Llistat de departaments en què s'organitza la Generalitat de Catalunya",
 "dtarq101",
@@ -69,7 +87,7 @@
 "10/03/2021",
 "Secretaries.xlsx",
 "Secretaries_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g"
 ],
 [
 "Pendent",
@@ -468,22 +486,22 @@
 "https://analisi.transparenciacatalunya.cat/Societat-benestar/Estat-Civil/ivy5-d99b"
 ],
 [
-"Pendent",
+"Consolidat",
 "Societat, ciutadania i famílies",
 "Gènere",
-"Permet indicar el gènere d'una persona.",
+"Llistat dels grups en què es pot dividir el conjunt d’individus segons certes característiques psicològiques, socials i culturals.",
 "dtarq48",
 "Societat, ciutadania i famílies",
 "Administració Pública",
-"Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+"Departament de Treball, Afers Socials i Famílies",
 "Sota demanda",
 "Tabular",
 "Ús no restringit",
 "19/07/2019",
-"15/07/2019",
-"Codis_Persona_Gènere.xlsx",
-"Codis_Persona_Genere_ATR.docx",
-""
+"31/03/2021",
+"Genere.xlsx",
+"Genere_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Societat-benestar/G-nere/rpg6-9mu9"
 ],
 [
 "Pendent",
@@ -592,6 +610,24 @@
 "Codis_Persona_Relació_Parentiu_Tipus.xlsx",
 "Codis_Persona_Relació_Parentiu_Tipus_ATR.docx",
 ""
+],
+[
+"Consolidat",
+"Societat, ciutadania i famílies",
+"Sexe",
+"Llista de grups en què es divideixen els individus d’una espècie en mascles i femelles, segons un conjunt de peculiaritats biològiques, fisiològiques i orgàniques.",
+"dtarq142",
+"Societat, ciutadania i famílies",
+"Administració Pública",
+"Institut d'Estadística de Catalunya (Idescat)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"31/03/2021",
+"31/03/2021",
+"Sexe.xlsx",
+"Sexe_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Societat-benestar/Sexe/in7g-gc2u"
 ],
 [
 "Consolidat",
@@ -768,7 +804,7 @@
 "Tabular",
 "Ús no restringit",
 "19/07/2019",
-"20/01/2021",
+"31/03/2021",
 "Codis_Territori_Municipis_Espanya.xlsx",
 "Codis_Territori_Municipis_Espanya_ATR.docx",
 "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7"
@@ -984,10 +1020,28 @@
 "Tabular",
 "Ús no restringit",
 "19/07/2019",
-"04/12/2020",
+"31/03/2021",
 "Unitats_Poblacionals_Catalunya.xlsx",
 "Unitats_Poblacionals_Catalunya_ATR.docx",
 "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f"
+],
+[
+"Consolidat",
+"Territori i paisatge. Urbanisme",
+"Unitats poblacionals Espanya",
+"Llista d'unitats poblacionals d'Espanya indicant la província i el municipi a on pertanyen.",
+"dtarq140",
+"Territori i paisatge. Urbanisme",
+"Administració Pública",
+"Dirección General del Instituto Geográfico Nacional (IGN)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"31/03/2021",
+"31/03/2021",
+"Unitats_Poblacionals_Espanya.xlsx",
+"Unitats_Poblacionals_Espanya_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy"
 ],
 [
 "Consolidat",
