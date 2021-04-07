@@ -4,7 +4,7 @@ title       = "Canigó. Com definir handler exception personalitzat"
 description = "Howto per a definir un handler d'excepció personalitzat"
 section     = "howtos"
 categories  = ["canigo"]
-#key         = "NOVEMBRE2020"
+#key         = "ABRIL2021"
 +++
 
 ## Introducció
