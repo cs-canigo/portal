@@ -11,7 +11,7 @@ key         = "ABRIL2021"
 <br/><br/>
 
 Les principals novetats d'aquesta actualització són les següents:
-<br/>
+<br/><br/>
 
 * Novetats **generals**, entre d'altres:
 
@@ -20,6 +20,7 @@ Les principals novetats d'aquesta actualització són les següents:
 |-|Suport per Maven i Gradle SHA256/SHA512 Hashing.|
 |-|Filtratge per Root Metadata dels npm Package.|
 |[NEXUS-25506](https://issues.sonatype.org/browse/NEXUS-25506)|Ús de la V3 per defecte als nous repositoris nuget.org-proxy.|
+<br/>
 
 * Millores **generals**, entre d'altres:
 
@@ -31,8 +32,11 @@ Les principals novetats d'aquesta actualització són les següents:
 |[NEXUS-20267](https://issues.sonatype.org/browse/NEXUS-20267),[NEXUS-25786](https://issues.sonatype.org/browse/NEXUS-25786)|Millores de xifrat i del protocl TLS a les peticions via HTTPS.|
 |[NEXUS-25307](https://issues.sonatype.org/browse/NEXUS-25307)|Protegir l'eliminació de Blob Stores mentre s'estan fent canvis al blob store.|
 |[NEXUS-25774](https://issues.sonatype.org/browse/NEXUS-25774)|Upgrade de l'Eclipse Jetty a la versió 9.4.33.v20201020.|
+<br/>
 
 * Millores de **rendiment i control d’errors**.
+<br/>
+
 * Correccions de **seguretat** importants.
 
 <br>
