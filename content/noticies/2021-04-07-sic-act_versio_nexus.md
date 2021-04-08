@@ -11,7 +11,7 @@ key         = "ABRIL2021"
 <br/><br/>
 
 Les principals novetats d'aquesta actualització són les següents:
-<br/><br/>
+<br/>
 
 * Novetats **generals**, entre d'altres:
 
@@ -20,7 +20,6 @@ Les principals novetats d'aquesta actualització són les següents:
 |-|Suport per Maven i Gradle SHA256/SHA512 Hashing.|
 |-|Filtratge per Root Metadata dels npm Package.|
 |[NEXUS-25506](https://issues.sonatype.org/browse/NEXUS-25506)|Ús de la V3 per defecte als nous repositoris nuget.org-proxy.|
-<br/>
 
 * Millores **generals**, entre d'altres:
 
@@ -32,27 +31,26 @@ Les principals novetats d'aquesta actualització són les següents:
 |[NEXUS-20267](https://issues.sonatype.org/browse/NEXUS-20267),[NEXUS-25786](https://issues.sonatype.org/browse/NEXUS-25786)|Millores de xifrat i del protocl TLS a les peticions via HTTPS.|
 |[NEXUS-25307](https://issues.sonatype.org/browse/NEXUS-25307)|Protegir l'eliminació de Blob Stores mentre s'estan fent canvis al blob store.|
 |[NEXUS-25774](https://issues.sonatype.org/browse/NEXUS-25774)|Upgrade de l'Eclipse Jetty a la versió 9.4.33.v20201020.|
-<br/>
 
 * Millores de **rendiment i control d’errors**.
 <br/>
 
 * Correccions de **seguretat** importants.
 
-<br>
+<br/>
 Per a més informació de les novetats de la versió podeu consultar:
 
 - [Release notes 2020] (https://help.sonatype.com/repomanager3/release-notes/2020-release-notes)
 - [87 issues tancades des de la versió 3.27.0] (https://issues.sonatype.org/browse/NEXUS-26251?jql=project%20%3D%20NEXUS%20AND%20fixVersion%20in%20(3.28.0%2C%203.28.1%2C%203.29.0%2C%203.29.1%2C%203.29.2))
 
-<br>
-<br>
+<br/>
+<br/>
 Amb aquesta actualització, s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als
 proveïdors d’aplicacions un sistema d'integració continua actualitzats i estables amb la finalitat d’estalviar temps de desplegament.
 Es preveu seguir duent a terme una actualització tecnològica programada de forma bianual per a anar incorporant
 millores i nova funcionalitat.
-<br>
-<br>
+<br/>
+<br/>
 
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal
 de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
