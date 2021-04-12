@@ -5,7 +5,8 @@ description = "Guies disponibles i HOWTOs d'utilitat"
 enllac		= "/sic-guies/"
 sections    = "SIC"
 aliases = [
-    "/sic/manuals/"
+    "/sic/manuals/",
+    "/sic-guies/howtos/
 ]
 taxonomies  = []
 weight 		= 3

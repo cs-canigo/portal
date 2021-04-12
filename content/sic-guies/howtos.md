@@ -4,9 +4,6 @@ title = "HOWTOs"
 description = "HOWTOs d'utilitat"
 sections = "SIC"
 no_index = true
-aliases = [
-       "/sic/manuals/"
-   ]
 taxonomies  = []
 weight 		= 5
 +++
