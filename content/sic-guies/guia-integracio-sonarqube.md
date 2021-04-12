@@ -4,8 +4,11 @@ title = "Guia integració eina d’anàlisi de codi de Qualitat"
 description = "Guia per a la integració amb eina d’anàlisi de codi de l'Oficina de Qualitat"
 sections = "SIC"
 toc = true
+aliases = [
+    "/sic-welcome-pack/guia-integracio-sonarqube/"
+]
 taxonomies = []
-weight = 4
+weight = 3
 +++
 
 ## Eina d’anàlisi
