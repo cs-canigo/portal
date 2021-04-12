@@ -9,7 +9,7 @@ aliases = [
        "/sic-welcome-pack/fitxer-aca/"
    ]
 taxonomies = []
-weight = 2
+weight = 3
 +++
 
 ## Introducció

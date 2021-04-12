@@ -8,7 +8,7 @@ aliases = [
     "/sic-welcome-pack/preparar-aplicacio/"
 ]
 taxonomies = []
-weight = 1
+weight = 2
 +++
 
 ## Introducció

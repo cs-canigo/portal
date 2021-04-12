@@ -8,7 +8,7 @@ aliases = [
     "/sic-welcome-pack/guia-integracio-sonarqube/"
 ]
 taxonomies = []
-weight = 3
+weight = 4
 +++
 
 ## Eina d’anàlisi

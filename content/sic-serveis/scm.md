@@ -8,7 +8,7 @@ aliases = [
 sections = "SIC"
 taxonomies = []
 toc = true
-weight = 2
+weight = 1
 +++
 
 ![GitLab](/related/sic/serveis/gitlab-logo.png "GitLab")

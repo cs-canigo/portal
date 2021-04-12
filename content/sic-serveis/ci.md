@@ -9,7 +9,7 @@ aliases = [
     "/sic/clau/"
 ]
 taxonomies = []
-weight = 3
+weight = 2
 +++
 
 ![Jenkins](/related/sic/serveis/jenkins-logo.png "Jenkins")
