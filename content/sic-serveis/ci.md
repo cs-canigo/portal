@@ -16,33 +16,51 @@ weight = 2
 
 ## Introducció
 
-**Jenkins** és l'eina implantada al SIC per a la integració contínua en el desenvolupament de software. Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions, es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius. Està basat en el projecte Hudson.
+**Jenkins** és l'eina implantada al SIC per a la integració contínua en el desenvolupament de software.
+Es tracta d'un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions,
+es versionen, es realitzen anàlisis de qualitat, s'executen tests i inclús es despleguen als entorns preproductius i productius.
+Està basat en el projecte Hudson.
 <br>
 Jenkins proporciona un entorn de treball i desplegament automatitzat estalviant temps i diners durant la vida d'un projecte.
 
 <br/>
-**Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes, ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i paquets bower. <br/>
-Actualment aquest servei és administrat per l'equip del SIC i només permet consultar-lo en mode lectura.
+**Nexus** és l'eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient
+entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes,
+ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i
+paquets bower. <br/>
+Actualment aquest servei és administrat per l'equip del SIC i només permet consultar la informació de repositoris públics.
 
 ## Beneficis de la integració continua
 
 Un resum dels beneficis de la integració continua seria el següent:
 
-* **Millora la qualitat del codi**: la integració continua contribueix en minimitzar els problemes en els sistemes per errors de codi. Proveeix un codi més robust millorant la qualitat del programari
-* **Detecció d'errors més ràpida i fàcil**: al poder realitzar construccions contínuament, de forma periòdica, és més fàcil detectar errors i poder donar-hi solució el més aviat possible.
-* **Redueix tasques repetitives i manuals**: amb processos automàtics es garanteix que els processos es realitzen sempre aplicant els mateixos estàndards.
-* **Visibilitat de l'evolució del projecte**: es pot tenir una visió de l'evolució de la qualitat del codi i un registre de l'evolució i publicació de les versions del codi
-* **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
+* **Millora la qualitat del codi**: la integració continua contribueix en minimitzar els problemes en els sistemes per
+errors de codi. Proveeix un codi més robust millorant la qualitat del programari.
+* **Detecció d'errors més ràpida i fàcil**: al poder realitzar construccions contínuament, de forma periòdica,
+és més fàcil detectar errors i poder donar-hi solució el més aviat possible.
+* **Redueix tasques repetitives i manuals**: amb processos automàtics es garanteix que els processos es realitzen
+sempre aplicant els mateixos estàndards.
+* **Visibilitat de l'evolució del projecte**: es pot tenir una visió de l'evolució de la qualitat del codi i un
+registre de l'evolució i publicació de les versions del codi.
+* **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues
+de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
 
 
 ## Modalitats de desplegament
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
-* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.
-* **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera un tiquet Remedy en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT.
-<!---* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
+* **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors
+de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
+* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
+delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.
+* **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
+un tiquet Remedy en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
+que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies
+davant una possible marxa enrere aniran a càrrec de CPD/LdT.
+<!---* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i
+continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies
+davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst seria el següent:
 
@@ -55,9 +73,11 @@ Actualment, el sistema previst seria el següent:
 ### Accés als serveis
 
 Podrà accedir a **Jenkins** mitjançant el següent enllaç: https://hudson.intranet.gencat.cat/hudson/ <br/>
-Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l'obertura de Firewals dels seus entorns.
+Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de
+connectivitat, caldrà obrir una petició demanant l'obertura de Firewalls dels seus entorns.
 
-Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
+Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Release Manager, responsables de lot i tècnics
+de CPD disposaran d'accés al servei. Si no disposa d'accés, haurà de sol·licitar-ho al seu responsable.
 
 ![Jenkins](/related/sic/serveis/jenkins-sic.png)
 <br/>
@@ -68,18 +88,26 @@ Podrà accedir a **Nexus** mitjançant el següent enllaç: https://hudson.intra
 ![Nexus](/related/sic/serveis/nexus-sic.png)
 <br/>
 
-### Relació de tasques disponibles (jobs)
+### Relació de tasques i la seva execució (jobs)
 
-Una vegada fet el login s'accedeix a la llista de jobs en execució i la relació de jobs disponibles per l'usuari amb la informació més rellevant: **nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather)** basat en l'estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa en el número de construccions que han anat bé /malament, així com en el percentatge de proves i indicadors d'anàlisi.
+Una vegada fet el login s'accedeix a la llista de jobs en execució i la relació de jobs disponibles per l'usuari
+amb la informació més rellevant: **nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather)**
+basat en l'estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa
+en el número de construccions que han anat bé /malament, així com en el percentatge de proves i indicadors d'anàlisi.
 
-### Detall de les tasques (jobs)
+De cadascuna de les tasques, es pot consultar la **configuració, historial, estadístiques, resultats i situació**
+mitjançant l'enllaç habilitat. En cas de tractar-se de jobs de tipus "pipeline"
+es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes. <br/>
 
-Es pot consultar la **configuració, historial, estadístiques, resultats i situació** de cadascuna dels jobs mitjançant l'enllaç habilitat. En cas de tractar-se de jobs de tipus "pipeline" (tipologia multi-etapa implementat al SIC 2.0) es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes. <br/>
-Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a la opció "Console Output". Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED. Aquest resultat serà notificat per correu electrònic als responsables assignats.
+Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a la opció "Console Output".
+Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED.
+Aquest resultat serà notificat per correu electrònic als responsables assignats.<br/>
 
-### Execució de tasques (jobs)
+Els jobs de tipus "pipeline" **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte**
+per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custòdia de codi
+i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.<br/>
 
-Els jobs de tipus "pipeline" no es podran iniciar directament des del portal ni es podrà sol·licitar la seva execució. Les tasques **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte** per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custòdia de codi i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
+No obstant, en cas d'error o necessitat de redesplegar, les taques també **es podran executar directament mitjançant l'opció BuildWithParameters"**.
 
 ### Etapes de desplegament
 
@@ -110,23 +138,23 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 ### Versionat
 
-La versió dels projectes ha de ser sempre **incremental**, és a dir, qualsevol nova actualització de codi lliurat al SIC ha d'anar acompanyat d'un increment de la versió. Per tant, no es permetrà que el projecte desplegui una versió igual o inferior a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
-
-### Execució de proves unitàries
-
-Dins del procés de construcció dels executables (i sempre que l'aplicació ho requereixi) s'executen les proves unitàries. Com a resultat de l'execució de les proves unitàries s'obtenen dos tipus d'informes:
-
-* Nombre total de **proves i percentatge** de proves passades i fallides.
-* Percentatge de **cobertura** de les proves respecte al codi font.
+La versió dels projectes ha de ser sempre **incremental**, és a dir, qualsevol nova actualització de codi lliurat al SIC ha
+d'anar acompanyat d'un increment de la versió. Per tant, no es permetrà que el projecte desplegui una versió igual o inferior
+a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de
+preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
 
 ### Anàlisi del codi
 
-L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides, s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui escull l'eina a utilitzar per a aquesta revisió de codi.
+L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides,
+s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui
+escull l'eina a utilitzar per a aquesta revisió de codi.
 
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors. Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
+Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per
+**recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
+Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
 ### Publicació de llibreries
 
