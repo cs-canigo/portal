@@ -8,7 +8,7 @@ aliases = [
     "/noticies/2018-05-16-SIC-Autoservei-pipelines/"
 ]
 taxonomies = []
-weight = 3
+weight = 5
 +++
 
 
