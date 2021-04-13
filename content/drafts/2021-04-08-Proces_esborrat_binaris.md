@@ -17,6 +17,9 @@ Amb l'objectiu de controlar i limitar l'ús de l'espai de Binaris, s'ha desplega
 
 Per a determinar les versions d'una aplicació se seguirà l'estàndard del CTTI de versions establert a https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
 
+Si és necessari una política d'esborrat especial per aplicació, es pot obrir tiquet via [JIRA CSTD] (https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d'accés, enviar un correu a la bústia de l'CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
+
+
 ## Documentació
 
 Teniu disponible la següent documentació del servei:
