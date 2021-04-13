@@ -93,21 +93,19 @@ Podrà accedir a **Nexus** mitjançant el següent enllaç: https://hudson.intra
 Una vegada fet el login s'accedeix a la llista de jobs en execució i la relació de jobs disponibles per l'usuari
 amb la informació més rellevant: **nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather)**
 basat en l'estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa
-en el número de construccions que han anat bé /malament, així com en el percentatge de proves i indicadors d'anàlisi.
+en el número de construccions que han anat bé o malament, així com en el percentatge de proves i indicadors d'anàlisi.
 
 De cadascuna de les tasques, es pot consultar la **configuració, historial, estadístiques, resultats i situació**
 mitjançant l'enllaç habilitat. En cas de tractar-se de jobs de tipus "pipeline"
-es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes. <br/>
-
-Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a la opció "Console Output".
+es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes.
+Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a l'opció "Console Output".
 Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED.
 Aquest resultat serà notificat per correu electrònic als responsables assignats.<br/>
 
 Els jobs de tipus "pipeline" **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte**
 per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custòdia de codi
-i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.<br/>
-
-No obstant, en cas d'error o necessitat de redesplegar, les taques també **es podran executar directament mitjançant l'opció BuildWithParameters"**.
+i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
+No obstant, en cas d'error o necessitat de redesplegar, les taques també **es podran executar directament mitjançant l'opció "BuildWithParameters"**.
 
 ### Etapes de desplegament
 
