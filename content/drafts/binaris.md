@@ -113,7 +113,7 @@ el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 
 S'ha programat l'execució d'un procés d'esborrat de Binaris de manera que **únicament es respectaran les últimes 5 versions** repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim any (365 dies). 
 
-Binaris no està concebut, per tant, com un servei de custòdia permanent de binaris sinó com un sistema d'intercanvi de binaris per al desenvolupament d'aplicacions.
+Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi d'artefactes per al desenvolupament d'aplicacions.
 
 Si és necessari una política d'esborrat especial per aplicació, es pot obrir tiquet via [JIRA CSTD] (https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d'accés, enviar un correu a la bústia de l'CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
 
