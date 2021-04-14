@@ -1,6 +1,6 @@
 +++
 date        = "2021-03-10"
-title       = "Publicació Catàleg Tècnic de Dades"
+title       = "Publicació Catàleg Tècnic de Dades - Q1"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per incorporar l'entitat Nivells poblacionals dins del grup d'obligat compliment, actualitzar el conjunt de valors de l'entitat Secretaries i canviar el nom de dues entitats ja publicades."
 categories  = ["Data Architecture"]
 sections    = ["Notícies", "home"]
