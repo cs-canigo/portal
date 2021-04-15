@@ -107,6 +107,60 @@ global-env:
 
 ### components custom-builder
 
+Element per definir l'informació de com construir el contenidor que serà l'encarregat de construir l'aplicació si l'aplicació no utilitza per a la construcció els contenidors dels builders oferts per SIC ja que té necessitats pròpies.
+
+En aquest element hi contindrà el llistat dels diferents passos (steps) per a contruir el contenidor encarregat de construir l'aplicació.
+
+Per cada step es podrà definir informació del contenidor (container) i informació de les accions a executar (execution) si és necessari
+
+### components custom-builder steps container
+
+A aquest element hi contindrà informació de com construir el contenidor que realtizarà la construcció de l'aplicació. Informarem del path a la definició del contenidor (path) i del nom que li volem donar al contenidor (name)
+
+```
+components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                name: nom-contenidor
+                path: path/Dockerfile
+```
+
+### components custom-builder steps execution
+
+A aquest element hi contindrà les comandes a executar (commands) i el llistat variables que es necessitin per l'execució (env)
+
+```
+components:
+  - custom-builder:
+      steps:
+        - execution:
+            commands:
+              - build.sh
+            env: 
+              - VARIABLE_1: valor1
+              - VARIABLE_2: valor2
+```
+
+### Exemple
+
+Així per exemple podriem tenir:
+
+```
+components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                name: 7-768-arp-api-builder
+                path: builds/Dockerfile
+```
+
+On estem definint que la definició per la contrucció del contenidor per a la construcció de l'aplicació es troba al fitxer *builds/Dockerfile* i se li vol donar a aquest contenidor de construcció el nom *7-768-arp-api-builder*. Per a aquesta construcció del contenidor no necessitem definir-li, ni commandes ni variables d'entorn
+
 ### components build
 
 ### components publish
