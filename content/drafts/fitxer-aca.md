@@ -39,23 +39,29 @@ components:
 notifications    
 ```
 
-## version
+## Detall dels elements de l'estructura
 
-## info
+### version
 
-## global-env
+#### segon nivell
 
-## components custom-builder
+##### tercer nivell
 
-## components build
+### info
 
-## components publish
+### global-env
 
-## components bake
+### components custom-builder
 
-## components deployment
+### components build
 
-## notifications
+### components publish
+
+### components bake
+
+### components deployment
+
+### notifications
 
 ## Exemples
 
