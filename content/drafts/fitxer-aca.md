@@ -43,13 +43,67 @@ notifications
 
 ### version
 
-#### segon nivell
+Caldrà indicar la versió de l’arxiu ACA que, per tant, segueix un versionatge diferent al de l’aplicació ja que cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha de seguir el format estàndard: <versioMajor>.<versioMenor>.<pegat>.
 
-##### tercer nivell
+El valor actual és:
+
+```
+version: 2.0.0
+```
 
 ### info
 
+En aquest element hi contindrà informació sobre l'aplicació, l'element *info* i els subelements seran:
+
+```
+info:
+  version
+  description
+```
+
+#### info version 
+
+Caldrà indicar la versió funcional de l'aplicació seguint el format de:
+
+https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
+
+Per exemple:
+
+```
+info:
+  version: 1.0.0
+```
+
+#### info description
+
+L'objectiu d'aquest element és contenir una descripció de l'aplicació. És un camp de lliure contingut.
+
+Un exemple de contingut podria ser:
+
+```
+info:
+  description: Backend per l'aplicació de la gestió de continguts al CTTI
+```
+
 ### global-env
+
+Llistat de variables globals necessaris per l'execució del job de l'aplicació. Les variables actuals són:
+
+- CONTAINER_DOCKERFILE_PATH: per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al Cloud
+- CONTAINER_IMAGE_NAME: per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al Cloud
+- DEPLOYMENT_TYPE: per indicar-li el tipus de desplegament, per exemple, per indicar el tipus de desplegament al Openshift
+- APIC_PRODUCT_FILE
+- CF_BUILDPACK
+- CF_PATH
+
+Exemple de llistat de variables:
+
+```
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: petclinic-test-os
+  - DEPLOYMENT_TYPE: DeploymentConfig
+```
 
 ### components custom-builder
 
