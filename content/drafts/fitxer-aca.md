@@ -223,7 +223,15 @@ components:
 
 ###### **components[].build.steps[].container.image.remote**
 
-En aquest element especificarem quina imatge del contenidor constructor (builder) oferts pel SIC per la construcció disponibles a:
+En aquest element especificarem quina imatge del contenidor constructor (builder) i amb quina versió ofertes pel SIC per la construcció es vol utilitzar. Les imatges ofertes pel SIC estan disponibles al projecte *gencat-sic* del registre Docker privat de la Generalitat de Catalunya:
+
+https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/125/repositories
+
+Per a disposar d’accés a les imatges Docker utilitzades al SIC és necessari contactar amb l’Oficina Tècnica de Canigó a través dels canals establerts: https://canigo.ctti.gencat.cat/sic/suport/. L’Oficina subministrarà al proveïdor d’aplicacions un usuari amb permís de lectura al projecte *gencat-sic* que conté les imatges Docker utilitzades pel SIC.
+
+Podeu accedir al codi font del catàleg d’imatges del SIC, i a la documentació associada, mitjançant el següent enllaç:
+
+https://git.intranet.gencat.cat/0192-intern/docker-images
 
 **TODO**
 
