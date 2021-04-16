@@ -223,7 +223,7 @@ components:
 
 En aquest element especificarem quina imatge del contenidor constructor (builder) oferts pel SIC per la construcció disponibles a:
 
-**TODOD**
+**TODO**
 
 L'element a definir serà el nom (name), tenint l'estructura:
 
@@ -237,7 +237,7 @@ components:
                 name
 ```
 
-###### components build steps container image local
+###### **components build steps container image local**
 
 En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
 
@@ -281,7 +281,7 @@ components:
 
 ##### components build steps container volumes
 
-** TODO **
+**TODO**
 
 #### components build steps execution
 
