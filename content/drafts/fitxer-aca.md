@@ -197,7 +197,7 @@ En aquest element hi definirem informació de la imatge a utilitzar per la const
 
 - remote: Utilitzarem remote si la imatge del contenidor constructor (builder) és un dels oferts pel SIC per la construcció 
 
-- local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components[].custom-builder)
+- local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components-custom-builder)
 
 L'estructura per remote seria:
 
@@ -249,7 +249,7 @@ components:
 
 ###### **components[].build.steps[].container.image.local**
 
-En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components[].custom-builder)
+En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components-custom-builder)
 
 L'estructura seria:
 
@@ -337,6 +337,13 @@ components:
 
 A aquest element hi contindrà la informació de quins artefactes es volen publicar al Nexus 
 
+L'estructura serà:
+
+```
+components:
+  - publish
+```
+
 **TODO**
 
 ### components[].bake
@@ -360,6 +367,35 @@ Les variables a informar dependran del Cloud a on s'hagi de construir la imatge,
 **TODO**
 
 ### components[].deployment
+
+A aquest element hi contindrà informació sobre com i on es desplegarà l'aplicació. Aquest element es composarà d'un llistat d'entorns (enviroments) amb els elements:
+
+- name: nom de l'entorn a on es desplegarà l'aplicació
+
+- actions: accions a realitzar en el desplegament de l'aplicació: before-deploy, deploy, after-deploy i smoke-test 
+
+Tenint l'estructura:
+
+```
+components:
+  - deployment:
+      environments:
+        - name
+          actions
+```
+
+#### components[].deployment.enviroments[].name
+
+#### components[].deployment.enviroments[].actions
+
+##### components[].deployment.enviroments[].actions.before-deploy
+
+##### components[].deployment.enviroments[].actions.deploy
+
+##### components[].deployment.enviroments[].actions.after-deploy
+
+##### components[].deployment.enviroments[].actions.smoke-test
+
 
 ### notifications
 
