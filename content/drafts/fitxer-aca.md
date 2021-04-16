@@ -310,8 +310,12 @@ components:
               remote:
                 name: docker-registry.ctti.extranet.gencat.cat/gencat-sic/mvn-builder:1.0-3.6-8
             resources:
-              limits: { cpu: 1000m, memory: 1024Mi }
-              requests: { cpu: 100m, memory: 128Mi }
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
             volumes:
               - "nexus-maven-config": "/home/maven/.m2"
           execution:
