@@ -197,7 +197,7 @@ En aquest element hi definirem informació de la imatge a utilitzar per la const
 
 - remote: Utilitzarem remote si la imatge del contenidor constructor (builder) és un dels oferts pel SIC per la construcció 
 
-- local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
+- local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components[].custom-builder)
 
 L'estructura per remote seria:
 
@@ -249,7 +249,7 @@ components:
 
 ###### **components[].build.steps[].container.image.local**
 
-En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
+En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components[].custom-builder)
 
 L'estructura seria:
 
@@ -335,7 +335,29 @@ components:
 
 ### components[].publish
 
+A aquest element hi contindrà la informació de quins artefactes es volen publicar al Nexus 
+
+**TODO**
+
 ### components[].bake
+
+Si es necessari construir la imatge de l'aplicació que es desplegarà al Cloud en el propi Cloud, per exemple, per AWS o Azure, serà necessari detallar en aquest element els passos (steps) amb les variables (env) amb la informació necessaria per a l'execució (execution) del constructor de la imatge
+
+Així l'estructura serà:
+
+```
+components:
+  - bake:
+      steps:
+      - execution:
+          env
+```
+
+Les variables a informar dependran del Cloud a on s'hagi de construir la imatge, tenint:
+
+- IAAS_IMAGE_CONFIG_FILE: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
+
+**TODO**
 
 ### components[].deployment
 
