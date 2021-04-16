@@ -383,7 +383,8 @@ components:
 
 Les variables a informar dependran del Cloud a on s'hagi de construir la imatge, tenint:
 
-- IAAS_IMAGE_CONFIG_FILE: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
+- Per AWS
+   - IAAS_IMAGE_CONFIG_FILE: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
 
 **TODO**
 
