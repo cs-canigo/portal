@@ -219,7 +219,7 @@ components:
               local
 ```
 
-###### components build steps container image remote
+###### **components build steps container image remote**
 
 En aquest element especificarem quina imatge del contenidor constructor (builder) oferts pel SIC per la construcció disponibles a:
 
@@ -284,6 +284,18 @@ components:
 **TODO**
 
 #### components build steps execution
+
+En aquest element detallarem el llistat de comandes (commands) que s'han d'executar al contenidor per a construir el projecte. 
+
+Així tindrem l'estructura:
+
+```
+components:
+    build:
+      steps:
+        - execution:
+            commands
+```
 
 #### Exemple
 
