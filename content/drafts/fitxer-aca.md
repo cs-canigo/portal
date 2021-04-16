@@ -87,16 +87,37 @@ info:
 
 ### global-env
 
-Llistat de variables globals necessaris per l'execució del job de l'aplicació. Les variables actuals són:
+En aquest element hi contindrà el llistat de variables globals necessaris per l'execució del job de l'aplicació. Les variables dependrà de de les necessitats de cada projecte, segons:
 
-- CONTAINER_DOCKERFILE_PATH: per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al Cloud
-- CONTAINER_IMAGE_NAME: per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al Cloud
-- DEPLOYMENT_TYPE: per indicar-li el tipus de desplegament, per exemple, per indicar el tipus de desplegament al Openshift
-- APIC_PRODUCT_FILE
-- CF_BUILDPACK
-- CF_PATH
+- Pel desplegament al Openshift de CPD2, CPD3 i CPD4
+   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al Openshift
+   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al Openshift
+   - DEPLOYMENT_TYPE: Per indicar-li el tipus de desplegament al Openshift
 
-Exemple de llistat de variables:
+- Pel desplegament a Kubernetes IBMCloud i CaaS
+   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà a Kubernetes
+   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà a Kubernetes
+   - DEPLOYMENT_TYPE: Per indicar-li el tipus de desplegament a Kubernetes
+
+- Pel desplegament a WebApp Azure
+   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al WebApp Azure
+   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al WebApp Azure
+
+- Pel desplegament a SwarmMe
+   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al SwarmMe
+   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al SwarmMe
+
+- Pel desplegament al Api Manager
+   - APIC_PRODUCT_FILE: Nom del fitxer descriptor pel desplegament de l'aplicació al Api Manager
+
+- Pel desplegament al CloudFoundry IBMCloud
+   - CF_BUILDPACK: BuildPack utilitzat per preparar l'aplicació per ser desplegada al CloudFoundry
+   - CF_PATH: Ruta de l'entregable a desplegar al CloudFoundry
+   
+- Per la publicació de l'artefacte al Nexus
+   - ARTIFACT_PATH: Ruta de l'artefacte a publicar al Nexus
+
+Exemple de llistat de variables per Openshift:
 
 ```
 global-env:
