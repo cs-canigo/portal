@@ -115,7 +115,13 @@ Per cada step es podrà definir informació del contenidor (container) i informa
 
 ### components custom-builder steps container
 
-A aquest element hi contindrà informació de com construir el contenidor que realtizarà la construcció de l'aplicació. Per cada step, informarem del path a la definició del contenidor (path) i del nom que li volem donar al contenidor (name) a l'entorn local d'execució (local).
+A aquest element hi contindrà informació de com construir el contenidor que realtizarà la construcció de l'aplicació (custom builder). 
+
+Per cada step, a l'entorn local d'excució (local) informarem:
+
+- path: ruta a la definició del contenidor 
+
+- name: nom que li volem donar al contenidor
 
 ```
 components:
@@ -141,15 +147,15 @@ components:
                 path: builds/Dockerfile
 ```
 
-On estem definint que la definició per la contrucció del contenidor per a la construcció de l'aplicació es troba al fitxer *builds/Dockerfile* i se li vol donar a aquest contenidor de construcció el nom *7-768-arp-api-builder*. 
+On estem definint que la definició per la contrucció del contenidor per a la construcció (custom builder) de l'aplicació es troba al fitxer *builds/Dockerfile* i se li vol donar a aquest contenidor de construcció el nom *7-768-arp-api-builder*. 
 
 ### components build
 
-A aquest element hi contindrà informació de com realitzar la construcció de l'aplicació. PEr cada step definirem:
+A aquest element hi contindrà el llistat de passos (steps) amb informació de com realitzar la construcció de l'aplicació. Per cada step definirem:
 
-- Informació del contenidor encarregat de realtizar la construcció de l'aplicació (container)
+- container: Informació del contenidor encarregat de realtizar la construcció de l'aplicació
 
-- Informació de les comandes que s'han d'executar per la construcció de l'aplicació (execution)
+- execution: Informació de les comandes que s'han d'executar per la construcció de l'aplicació
 
 L'estructura serà:
 
@@ -163,11 +169,27 @@ components:
 
 #### components build steps container
 
+- image:
+
+- resources:
+
+- volumes
+
+##### components build steps container image
+
 En aquest element hi definirem informació de la imatge a utilitzar per la construcció amb els elements:
 
 - remote: Utilitzarem remote si el contenidor constructor (builder) és un dels oferts pel SIC per la construcció 
 
-- local: Utilitzarem local si es vol utilitzar un contenidor constructor (custom builder) propi creat en el element [custom-builder]()
+- local: Utilitzarem local si es vol utilitzar un contenidor constructor (custom builder) propi creat en el element [custom-builder](components-custom-builder-steps-container)
+
+###### components build steps container image remote
+
+###### components build steps container image local
+
+##### components build steps container resources
+
+##### components build steps container volumes
 
 #### components build steps execution
 
