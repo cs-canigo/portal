@@ -177,6 +177,18 @@ En aquest element hi definirem informació del contenidor encarregat de realitza
 
 - volumes: recursos que es necessiten mapejar a la imatge per a la contrucció del projecte
 
+L'estructura serà:
+
+```
+components:
+  - build:
+      steps:
+        - container:
+            image
+            resources
+            volumes
+```
+
 ##### components build steps container image
 
 En aquest element hi definirem informació de la imatge a utilitzar per la construcció del projecte amb els elements:
@@ -185,13 +197,91 @@ En aquest element hi definirem informació de la imatge a utilitzar per la const
 
 - local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
 
+L'estructura per remote seria:
+
+```
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote
+```
+
+L'estructura per local seria:
+
+```
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              local
+```
+
 ###### components build steps container image remote
+
+En aquest element especificarem quina imatge del contenidor constructor (builder) oferts pel SIC per la construcció disponibles a:
+
+**TODOD**
+
+L'element a definir serà el nom (name), tenint l'estructura:
+
+```
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name
+```
 
 ###### components build steps container image local
 
+En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
+
+L'estructura seria:
+
+```
+components:
+    build:
+      steps:
+        - container:
+            image:
+              local:
+                name
+```
+
 ##### components build steps container resources
 
+En aquest element detallarem els recursos de màquina necessaris per a que el contenidor realitzi la construcció del projecte. Es definiran els recursos de cpu i memòria del contenidor de límit i per request
+
+Així pels elements limits i request tindrem els elements:
+
+- cpu: Recursos de CPU mesurats en *cpu unitats*. 1 CPU equival a 1 vCPU/Core per a plataformes cloud i 1 hiperthread a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpu". Recomenem utilitzar l'unitat "milicpu"
+
+- memory: Recursos de memòria mesurats en bytes. Podeu expressar la memòria com un enter pla o com un número de punt fix mitjançant els sufixos: E, P, T, G, M, K. També podeu utilitzar la potència de dos equivalents: Ei, Pi, Ti , Gi, Mi, Ki. Per exemple, els següents representen aproximadament el mateix valor: 128974848, 129e6, 129M, 123Mi. Recomenem utilitzar l'unitat "Mi"
+
+L'estructura seria:
+
+```
+components:
+    build:
+      steps:
+        - container:
+            resources:
+              limits:
+                cpu
+                memory
+              requests:
+                cpu
+                memory
+```
+
 ##### components build steps container volumes
+
+** TODO **
 
 #### components build steps execution
 
