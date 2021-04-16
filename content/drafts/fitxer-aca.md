@@ -115,7 +115,7 @@ Per cada step es podrà definir informació del contenidor (container) i informa
 
 ### components custom-builder steps container
 
-A aquest element hi contindrà informació de com construir el contenidor que realtizarà la construcció de l'aplicació. Informarem del path a la definició del contenidor (path) i del nom que li volem donar al contenidor (name)
+A aquest element hi contindrà informació de com construir el contenidor que realtizarà la construcció de l'aplicació. Per cada step, informarem del path a la definició del contenidor (path) i del nom que li volem donar al contenidor (name) a l'entorn local d'execució (local).
 
 ```
 components:
@@ -127,24 +127,6 @@ components:
                 name: nom-contenidor
                 path: path/Dockerfile
 ```
-
-### components custom-builder steps execution
-
-A aquest element hi contindrà les comandes a executar (commands) i el llistat variables que es necessitin per l'execució (env)
-
-```
-components:
-  - custom-builder:
-      steps:
-        - execution:
-            commands:
-              - build.sh
-            env: 
-              - VARIABLE_1: valor1
-              - VARIABLE_2: valor2
-```
-
-### Exemple
 
 Així per exemple podriem tenir:
 
@@ -159,9 +141,57 @@ components:
                 path: builds/Dockerfile
 ```
 
-On estem definint que la definició per la contrucció del contenidor per a la construcció de l'aplicació es troba al fitxer *builds/Dockerfile* i se li vol donar a aquest contenidor de construcció el nom *7-768-arp-api-builder*. Per a aquesta construcció del contenidor no necessitem definir-li, ni commandes ni variables d'entorn
+On estem definint que la definició per la contrucció del contenidor per a la construcció de l'aplicació es troba al fitxer *builds/Dockerfile* i se li vol donar a aquest contenidor de construcció el nom *7-768-arp-api-builder*. 
 
 ### components build
+
+A aquest element hi contindrà informació de com realitzar la construcció de l'aplicació. PEr cada step definirem:
+
+- Informació del contenidor encarregat de realtizar la construcció de l'aplicació (container)
+
+- Informació de les comandes que s'han d'executar per la construcció de l'aplicació (execution)
+
+L'estructura serà:
+
+```
+components:
+  - build:
+      steps:
+        - container
+          execution
+```
+
+#### components build steps container
+
+En aquest element hi definirem informació de la imatge a utilitzar per la construcció amb els elements:
+
+- remote: Utilitzarem remote si el contenidor constructor (builder) és un dels oferts pel SIC per la construcció 
+
+- local: Utilitzarem local si es vol utilitzar un contenidor constructor (custom builder) propi creat en el element [custom-builder]()
+
+#### components build steps execution
+
+#### Exemple
+
+Per exemple, per la construcció d'una aplicació maven 3.6 i jdk 1.8 podriem tenir:
+
+```
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+            volumes:
+              - "nexus-maven-config": "/home/maven/.m2"
+          execution:
+            commands:
+              - mvn clean package -Dmaven.test.skip=true
+```
 
 ### components publish
 
