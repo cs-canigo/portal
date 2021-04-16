@@ -61,7 +61,7 @@ info:
   description
 ```
 
-#### info version 
+#### info.version 
 
 Caldrà indicar la versió funcional de l'aplicació seguint el format de:
 
@@ -74,7 +74,7 @@ info:
   version: 1.0.0
 ```
 
-#### info description
+#### info.description
 
 L'objectiu d'aquest element és contenir una descripció de l'aplicació. És un camp de lliure contingut.
 
@@ -105,19 +105,19 @@ global-env:
   - DEPLOYMENT_TYPE: DeploymentConfig
 ```
 
-### components custom-builder
+### components[].custom-builder
 
 Element per definir l'informació de com construir el contenidor que serà l'encarregat de construir l'aplicació si l'aplicació no utilitza per a la construcció els contenidors dels builders oferts per SIC ja que té necessitats pròpies.
 
 En aquest element hi contindrà el llistat dels diferents passos (steps) per a contruir el contenidor encarregat de construir l'aplicació.
 
-Per cada step es podrà definir informació del contenidor (container) i informació de les accions a executar (execution) si és necessari
+Per cada pas es podrà definir informació del contenidor (container) i informació de les accions a executar (execution) si és necessari
 
-### components custom-builder steps container
+#### components[].custom-builder.steps[].container
 
 A aquest element hi contindrà informació de com construir la imatge del contenidor que realtizarà la construcció de l'aplicació (custom builder). 
 
-Per cada step, a l'entorn local d'excució (local) informarem:
+A l'entorn local d'excució (local) informarem:
 
 - path: ruta a la definició de la imatge del contenidor 
 
@@ -134,6 +134,8 @@ components:
                 path: path/Dockerfile
 ```
 
+#### Exemple
+
 Així per exemple podriem tenir:
 
 ```
@@ -149,7 +151,7 @@ components:
 
 On estem definint que la definició per la contrucció de la imatge del contenidor per a la construcció (custom builder) del projecte es troba al fitxer *builds/Dockerfile* i se li vol donar a aquesta imatge de construcció el nom *7-768-arp-api-builder* que posteriorment al build s'utilitzarà. 
 
-### components build
+### components[].build
 
 A aquest element hi contindrà el llistat de passos (steps) amb informació de com realitzar la construcció del projecte. Per cada step definirem:
 
@@ -167,7 +169,7 @@ components:
           execution
 ```
 
-#### components build steps container
+#### components[].build.steps[].container
 
 En aquest element hi definirem informació del contenidor encarregat de realitzar la contrucció del projecte amb els elements:
 
@@ -189,7 +191,7 @@ components:
             volumes
 ```
 
-##### components build steps container image
+##### components[].build.steps[].container.image
 
 En aquest element hi definirem informació de la imatge a utilitzar per la construcció del projecte amb els elements:
 
@@ -219,7 +221,7 @@ components:
               local
 ```
 
-###### **components build steps container image remote**
+###### **components[].build.steps[].container.image.remote**
 
 En aquest element especificarem quina imatge del contenidor constructor (builder) oferts pel SIC per la construcció disponibles a:
 
@@ -237,7 +239,7 @@ components:
                 name
 ```
 
-###### **components build steps container image local**
+###### **components[].build.steps[].container.image.local**
 
 En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [custom-builder](components-custom-builder-steps-container)
 
@@ -253,7 +255,7 @@ components:
                 name
 ```
 
-##### components build steps container resources
+##### components[].build.steps[].container.resources
 
 En aquest element detallarem els recursos de màquina necessaris per a que el contenidor realitzi la construcció del projecte. Es definiran els recursos de cpu i memòria del contenidor de límit i per request
 
@@ -279,11 +281,11 @@ components:
                 memory
 ```
 
-##### components build steps container volumes
+##### components[].build.steps[].container.volumes
 
 **TODO**
 
-#### components build steps execution
+#### components[].build.steps[].execution
 
 En aquest element detallarem el llistat de comandes (commands) que s'han d'executar al contenidor per a construir el projecte. 
 
@@ -323,11 +325,11 @@ components:
               - mvn clean package -Dmaven.test.skip=true
 ```
 
-### components publish
+### components[].publish
 
-### components bake
+### components[].bake
 
-### components deployment
+### components[].deployment
 
 ### notifications
 
