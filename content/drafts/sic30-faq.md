@@ -89,7 +89,6 @@ No es realitza cap gestió de transaccions de BBDD per defecte. Si escau, caldr�
 Si el codi d'aplicació indicat és vàlid, probablement el sistema ha detectat inconsistències respecte al codi de projecte. És a dir, durant la pujada de binaris el sistema verifica que aquesta vingui acompanyada de l'actualització de la versió del codi font del projecte. Únicament estaran exemptes d’aquesta validació les aplicacions que disposin d’una excepció aprovada en la custòdia de codi. <br/>
 Per tant, per a resoldre el problema, caldrà actualitzar el codi font del projecte o tramitar, si escau, la corresponent excepció amb arquitectura del CTTI per a que l'aplicació no disposi d'aquesta restricció. <br/>
 En cas de tractar-se d'una aplicació multi projecte que sí reposita el codi però la pujada de binaris es vol realitzar en bloc (tots els artefactes, documentació...), o bé es vol lliurar un artefacte que no té un projecte al darrere (producte de tercers, llibreria sense codi...) caldrà optar per indicar un codi de projecte que acompleixi els requeriments indicats. En cas contrari, les pujades hauran de fer-se de forma diferenciada per a cada un dels projectes de l'aplicació.
-A partir del **24/01/2019 aquest control serà restrictiu**.
 <br/><br/>
 
 #### **He anat a recuperar binaris pujats i veig que ja no hi son. Què ha passat?** ####
