@@ -71,7 +71,7 @@ Caldrà actualitzar l'origen del codi font dels jobs per tal que apuntin al repo
 
 #### **Quines branques provoquen l'execució de pipelines de construcció i desplegament al Jenkins?** ####
 Únicament la branca MASTER és la que té el lligam amb les pipelines de Jenkins. No obstant això, es pot publicar qualsevol branca al Git del SIC
-i les pipelines de desplegament permetran seleccionar les branques: MASTER i evolutius.
+i les pipelines de desplegament permetran seleccionar d'entre les branques: MASTER i evolutius.
 <br/><br/>
 
 #### **El job de desplegament no funciona informant que ja existeix el tag definitiu. Quin és el problema?** ####

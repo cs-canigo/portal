@@ -30,8 +30,8 @@ s’ha habilitat un sistema de gestió de [Binaris](bin.sic.intranet.gencat.cat)
 * Aquest repositori **no és un entorn de desenvolupament**, per lo que només les persones assignades com a Release Managers seran les encarregades de consolidar el codi i
 lliurar-lo. Aquest codi font ja haurà d'estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la **branca MASTER** i el contingut d’aquesta branca serà amb el que
-treballaran les pipelines de construcció i desplegament per defecte. No obstant això, el sistema permetrà també desplegar el codi font associat a la *branca evolutius**.
-* Les pipelines seran les encarregades de generar els **TAGS** corresponents: tag de Build, tag d'Snapshot, tag de Release Candidate, tag de Release i tag de producció.
+treballaran les pipelines de construcció i desplegament per defecte. No obstant això, el sistema permetrà opcionalment desplegar el codi font associat a la **branca EVOLUTIUS**.
+* Les **pipelines seran les encarregades de generar els TAGS** corresponents: tag de Build, tag d'Snapshot, tag de Release Candidate, tag de Release i tag de Producció.
 
 ## Estructura de projectes
 L'estructura de projectes i el seu contingut ha de ser compatible amb el sistema establert d'Integració Contínua:
@@ -42,7 +42,8 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
 desenvolupament com en els entorns del SIC.
 <div class="message information">
-El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat
+i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
 <a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
 </div>
@@ -50,9 +51,11 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).
 
-* Si el projecte és multimòdul maven, és necessari que el fitxer `pom.xml` pare i els submòduls estiguin correctament configurats per a poder fer la construcció a partir d'un goal en el fitxer `pom.xml` pare i no un goal per cada submòdul.
+* Si el projecte és multimòdul maven, és necessari que el fitxer `pom.xml` pare i els submòduls estiguin correctament configurats per a poder fer la construcció a partir d'un goal
+en el fitxer `pom.xml` pare i no un goal per cada submòdul.
 
-* Per tal d’automatitzar la creació de pipelines, tots els projectes hauran de disposar de la carpeta `/sic` al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu de configuració `aca.yml`.
+* Per tal d’automatitzar la creació de pipelines, tots els projectes hauran de disposar de la carpeta `/sic` al primer nivell de carpeta i, dins d’aquesta
+carpeta, caldrà crear l’arxiu de configuració `aca.yml` que proporcionarà la configuració necessària.
 Veure [Com construir el fitxer ACA](/sic30-sic-guies/fitxer-aca/).
 
 * Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
@@ -62,8 +65,10 @@ Veure [Aplicacions APEX i PL/SQL, i migracions de BBDD](/sic30-sic-guies/prepara
 ## Llibreries
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
 
-* **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
-* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
+* **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les
+per tal d'enregistrar les llibreries oficials.
+* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg.
+Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
 * **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
 
 Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
@@ -110,10 +115,12 @@ El projecte ha de contenir tot el codi de l'aplicació i el sistema de custòdia
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Funcionament de les pipelines de construcció i desplegament
-En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà:
+En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà la corresponent pipeline de desplegament:
 
-* Els jobs pipeline realitzen multitud de tasques encadenades mitjançant **STAGES**. En cas de produir-se alguna incidència, l'execució es cancel·larà i notificarà del que ha passat.
-* Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG de versió definitiva**.
+* Les pipelines realitzen multitud de tasques encadenades mitjançant **STAGES**. En cas de produir-se alguna incidència, l'execució
+es cancel·larà i notificarà del que ha passat.
+* Caldrà limitar la quantitat d’usuaris que realitzen aquesta acció i tenir en compte que el sistema només permetrà fer una única
+pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà el **TAG de versió definitiva** (o Release Tag).
 * Durant el desplegament es requeriran **accions d’usuari** destinades a autoritzar l’evolució de les etapes de desplegament.
 * Els jobs **notificaran** dels resultats a les adreces de correu assignades.
 
@@ -123,4 +130,4 @@ Per a més informació: [Integració Continua](/sic30-sic-serveis/ci/).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-sic-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
