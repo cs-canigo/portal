@@ -1,6 +1,6 @@
 +++
-date = "2021-01-20"
-title = "Com construir el fitxer ACA"
+date = "2021-04-13"
+title = "SIC 3.0 - Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
 toc = true
