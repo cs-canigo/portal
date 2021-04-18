@@ -65,7 +65,7 @@ Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
 * **Com publicar noves llibreries**: per a la publicació de noves llibreries no públiques (pròpies o de tercers) caldrà sol·licitar-ho a l'equip de SIC.
 
 <br/>
-Per a més informació: [Integració contínua] (/sic-serveis/ci/)
+Per a més informació: [Integració contínua] (/sic30-sic-serveis/ci/)
 
 ## Servei de binaris
 
@@ -81,5 +81,5 @@ Per a més informació: [Servei de binaris] (/sic-serveis/binaris/)
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
 <br/>
-Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic/manuals/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-sic-guies/). <br/>
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
