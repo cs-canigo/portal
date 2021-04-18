@@ -15,7 +15,7 @@ amb el treball col·laboratiu dels proveïdors d'aplicacions i d'infraestructure
 
 En aquest article **ens centrarem exclusivament en explicar com preparar l’arxiu ACA (Arxiu de Configuració d'Aplicacions)**.
 Si voleu més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
-[**Autoservei de pipelines**](/sic30-sic-serveis/autoservei-pipelines/) on s'explica de forma detallada.
+[**Autoservei de pipelines**](/sic30-serveis/autoservei-pipelines/) on s'explica de forma detallada.
 
 ## Configuració
 
@@ -24,7 +24,7 @@ Es tracta d’un arxiu de text en **format YAML** en el que a continuació defin
 
 ## Estructura general
 
-L'arxiu ACA es compondrà de la següent estructrua:
+L'arxiu ACA es compondrà de la següent estructura:
 
 ```
 version
@@ -428,5 +428,5 @@ A continuació s'adjunten exemples de casos d'ús:
 - 
 
 <br/><br/>
-Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-sic-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

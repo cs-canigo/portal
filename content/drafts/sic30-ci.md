@@ -45,7 +45,6 @@ registre de l'evolució i publicació de les versions del codi.
 * **Millora de la confiança del treball realitzat**: al garantir una qualitat del codi i poder realitzar entregues
 de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.
 
-
 ## Modalitats de desplegament
 
 Es contemplen diverses modalitats de desplegament:
@@ -245,7 +244,7 @@ Per a més informació: [Canals de suport](/sic/sic30-suport/#altres-dubtes-o-pr
 
 L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
 intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
-Per a més informació: [Autoservei de pipelines] (/sic30-sic-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines] (/sic30-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció
 
@@ -340,5 +339,5 @@ funcionar.
 |MySQL|5.7.12, i anteriors
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-sic-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

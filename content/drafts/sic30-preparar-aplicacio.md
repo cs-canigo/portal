@@ -56,10 +56,10 @@ en el fitxer `pom.xml` pare i no un goal per cada submòdul.
 
 * Per tal d’automatitzar la creació de pipelines, tots els projectes hauran de disposar de la carpeta `/sic` al primer nivell de carpeta i, dins d’aquesta
 carpeta, caldrà crear l’arxiu de configuració `aca.yml` que proporcionarà la configuració necessària.
-Veure [Com construir el fitxer ACA](/sic30-sic-guies/fitxer-aca/).
+Veure [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/).
 
 * Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
-Veure [Aplicacions APEX i PL/SQL, i migracions de BBDD](/sic30-sic-guies/preparar-aplicacio/#Aplicacions APEX i PL/SQL, i migracions de BBDD).
+Veure [Aplicacions APEX i PL/SQL, i migracions de BBDD](/sic30-guies/preparar-aplicacio/#Aplicacions APEX i PL/SQL, i migracions de BBDD).
 
 
 ## Llibreries
@@ -126,8 +126,8 @@ pujada exitosa per versió del projecte ja que, un cop desplegat, es generarà e
 
 Per a poder efectuar certes tasques caldrà accedir a la plataforma mitjançat el formulari d’autenticació de [Jenkins](https://icdc.sic.intranet.gencat.cat).
 
-Per a més informació: [Integració Continua](/sic30-sic-serveis/ci/).
+Per a més informació: [Integració Continua](/sic30-serveis/ci/).
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-sic-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

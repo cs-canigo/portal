@@ -31,7 +31,7 @@ assignar el tiquet a la persona que ha de donar resposta en cada cas.
 Per les aplicacions en servei que s’integraran amb SIC, la comunicació també s'ha de fer via **CSTD** al servei [**Servei Acompanyament SIC**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOSIC).
 Si no disposeu d’accés ho podeu demanar mitjançant el correu electrònic **cstd.ctti@gencat.cat** sol·licitant permisos de rol desenvolupador.
 
-En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines] (/sic30-sic-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
+En aquest cas **serà el proveïdor d’aplicacions qui farà ús de l'[Autoservei de pipelines] (/sic30-serveis/autoservei-pipelines/) i, només si requereix suport per part de l'equip de SIC, serà
 qui crearà la petició en aquest servei** indicant el motiu. Caldrà indicar com a mínim el **codi de diàleg** i la
 descripció el més detallada possible del **motiu de la petició**. L’equip de SIC donarà resposta tant aviat com sigui possible i, en endavant, tota la comunicació
 es farà per aquest canal recordant assignar el tiquet a la persona que ha de donar resposta en cada cas.
