@@ -27,7 +27,7 @@ Cobreix les següents necessitats:
 * Dotar de **flexibilitat i independència** als principals actors que intervenen en la construcció i els desplegaments de les aplicacions.
 * **Incrementar ràpidament el grau d’integració al SIC de les aplicacions** evitant traspassos innecessaris d'informació i responsabilitats.
 * Proporcionar un **nivell d'abstracció** que permeti ser independent de les tecnologies emprades i permeti evolucionar el producte mantenint compatibilitat amb versions anteriors.
-* Proporcionar un **entorn aïllat i immutable de construcció**, que a més pugui ser utilitzat i testejat pels propis proveïdors.
+* Proporcionar un **entorn aïllat i immutable de construcció**, que a més pugui ser utilitzat i testejat pels mateixos proveïdors.
 * Facilitar la cobertura de tecnologies contemplant l’ús d’**imatges Docker pròpies** dels lots d’aplicacions.
 * **Acomplir les directrius** de CTTI sobre desplegaments i gestió de canvis.
 
@@ -51,7 +51,8 @@ S'estableixen una sèrie de requeriments per a estar en disposició d'integrar l
 ## Funcionament
 
 Generalment, a cada codi d'aplicació li correspon un proveïdor d'aplicacions i un proveïdor d'infraestructures.
-Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de pipelines del SIC aportant la informació necessària de la que cadascun és responsable.
+Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'autoservei de pipelines del SIC aportant
+la informació necessària de la qual cadascun és responsable.
 
 * **Arxiu de Configuració d’Aplicació (ACA)**
 * **Arxiu de Configuració d’Infraestructura (ACI)**
@@ -59,8 +60,8 @@ Aquests dos equips **han de participar i col·laborar** per tal d'utilitzar l'au
 El funcionament previst és el següent:
 
 * Els **proveïdors d'aplicacions aportaran el seu propi arxiu de configuració (ACA)**.
-* Els **proveïdors d'infraestructures aportaran el seu propi arxiu de configuració (ACI)** requerit únicament quan l'apliació es desplega en modalitat automàtica.
-* Únicament quan es crein o modifiquin aquests arxius de configuració, s'invocarà al sistema de generació de pipelines que s'encarregarà de recuperar la informació necessària
+* Els **proveïdors d'infraestructures aportaran el seu propi arxiu de configuració (ACI)** requerit únicament quan l'aplicació es desplega en modalitat automàtica.
+* Únicament quan es creïn o modifiquin aquests arxius de configuració, s'invocarà al sistema de generació de pipelines que s'encarregarà de recuperar la informació necessària
 i generar (o re-generar) la pipeline de construcció i desplegament de l'aplicació.
 
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
@@ -72,7 +73,7 @@ Es tracta d'un arxiu requerit per Autoservei de Pipelines, en format YAML, en el
 * **Version**: versió de l'arxiu (independent de la versió de l'aplicació o component) que es correspondrà amb els canvis en les especificacions
 de construcció i/o desplegament.
 
-* **Info**: informació sobre l'aplicació o component, incloent la seva versió funcional i una descripció.
+* **Info**: informació sobre l'aplicació o component, incloent-hi la seva versió funcional i una descripció.
 
 * **Global-env**: llistat de variables globals necessàries per al desplegament de l'aplicació o component.
 
