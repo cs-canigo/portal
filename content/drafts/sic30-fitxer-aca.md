@@ -89,33 +89,33 @@ info:
 
 En aquest element hi contindrà el llistat de variables globals necessaris per l'execució del job de l'aplicació. Les variables dependrà de de les necessitats de cada projecte, segons:
 
-- Pel desplegament al Openshift de CPD2, CPD3 i CPD4
-   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al Openshift
-   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al Openshift
-   - DEPLOYMENT_TYPE: Per indicar-li el tipus de desplegament al Openshift
+- **Pel desplegament al Openshift de CPD2, CPD3 i CPD4**
+   - **CONTAINER_DOCKERFILE_PATH**: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al Openshift
+   - **CONTAINER_IMAGE_NAME**: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al Openshift
+   - **DEPLOYMENT_TYPE**: Per indicar-li el tipus de desplegament al Openshift
 
-- Pel desplegament a Kubernetes IBMCloud i CaaS
-   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà a Kubernetes
-   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà a Kubernetes
-   - DEPLOYMENT_TYPE: Per indicar-li el tipus de desplegament a Kubernetes
+- **Pel desplegament a Kubernetes IBMCloud i CaaS**
+   - **CONTAINER_DOCKERFILE_PATH**: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà a Kubernetes
+   - **CONTAINER_IMAGE_NAME**: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà a Kubernetes
+   - **DEPLOYMENT_TYPE**: Per indicar-li el tipus de desplegament a Kubernetes
 
-- Pel desplegament a WebApp Azure
-   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al WebApp Azure
-   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al WebApp Azure
+- **Pel desplegament a WebApp Azure**
+   - **CONTAINER_DOCKERFILE_PATH**: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al WebApp Azure
+   - **CONTAINER_IMAGE_NAME**: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al WebApp Azure
 
-- Pel desplegament a SwarmMe
-   - CONTAINER_DOCKERFILE_PATH: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al SwarmMe
-   - CONTAINER_IMAGE_NAME: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al SwarmMe
+- **Pel desplegament a SwarmMe**
+   - **CONTAINER_DOCKERFILE_PATH**: Per indicar-li el nom del Dockerfile que utilitzarà per crear el contenidor que es desplegarà al SwarmMe
+   - **CONTAINER_IMAGE_NAME**: Per indicar-li el nom de la imatge que li assignarà al contenidor que es desplegarà al SwarmMe
 
-- Pel desplegament al Api Manager
-   - APIC_PRODUCT_FILE: Nom del fitxer descriptor pel desplegament de l'aplicació al Api Manager
+- **Pel desplegament al Api Manager**
+   - **APIC_PRODUCT_FILE**: Nom del fitxer descriptor pel desplegament de l'aplicació al Api Manager
 
-- Pel desplegament al CloudFoundry IBMCloud
-   - CF_BUILDPACK: BuildPack utilitzat per preparar l'aplicació per ser desplegada al CloudFoundry
-   - CF_PATH: Ruta de l'entregable a desplegar al CloudFoundry
+- **Pel desplegament al CloudFoundry IBMCloud**
+   - **CF_BUILDPACK**: BuildPack utilitzat per preparar l'aplicació per ser desplegada al CloudFoundry
+   - **CF_PATH**: Ruta de l'entregable a desplegar al CloudFoundry
    
-- Per la publicació de l'artefacte al Nexus
-   - ARTIFACT_PATH: Ruta de l'artefacte a publicar al Nexus
+- **Per la publicació de l'artefacte al Nexus**
+   - **ARTIFACT_PATH**: Ruta de l'artefacte a publicar al Nexus
 
 Exemple de llistat de variables per Openshift:
 
@@ -310,10 +310,6 @@ components:
                 memory
 ```
 
-##### components[].build.steps[].container.volumes
-
-**TODO**
-
 #### components[].build.steps[].execution
 
 En aquest element detallarem el llistat de comandes (commands) que s'han d'executar al contenidor per a construir el projecte. 
@@ -383,8 +379,8 @@ components:
 
 Les variables a informar dependran del Cloud a on s'hagi de construir la imatge, tenint:
 
-- Per AWS
-   - IAAS_IMAGE_CONFIG_FILE: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
+- **Per AWS**
+   - **IAAS_IMAGE_CONFIG_FILE**: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
 
 **TODO**
 
@@ -423,10 +419,10 @@ components:
 
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar abans de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Actualment està disponible la possibilitat de cridar a un job d'administració del Openshift de CPD3 abans de realitzar el deploy, informant les següents variables d'entorn:
 
-- JOB_NAME_PREFIX: Prefix de l'ubicació del job
-- JOB_IMAGE: Nom de la imatge a executar al job
-- JOB_WAIT: Temps d'espera del job
-- JOB_ENVS: Variables necessaris per l'execució del job
+- **JOB_NAME_PREFIX**: Prefix de l'ubicació del job
+- **JOB_IMAGE**: Nom de la imatge a executar al job
+- **JOB_WAIT**: Temps d'espera del job
+- **JOB_ENVS**: Variables necessaris per l'execució del job
 
 Per aquest element tindrem l'estructura:
 
@@ -464,28 +460,28 @@ components:
 
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar pel desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn, segons:
 
-- Pel desplegament al Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS
-   - DESCRIPTORS_PATH: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de (components[].deployment)[#components[].deployment] per desplegar l'aplicació al Openshift o a Kubernates
-   - DEPLOYMENT_NAME: Nom de l'aplicació al Openshift o a Kubernates
-   - DEPLOYMENT_WAIT: Temps d'espera pel desplegament de l'aplicació al Openshift o a Kubernates
+- **Pel desplegament al Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS**
+   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de (components[].deployment)[#components[].deployment] per desplegar l'aplicació al Openshift o a Kubernates
+   - **DEPLOYMENT_NAME**: Nom de l'aplicació al Openshift o a Kubernates
+   - **DEPLOYMENT_WAIT**: Temps d'espera pel desplegament de l'aplicació al Openshift o a Kubernates
 
-- Pel desplegament a WebApp Azure
-   - WEBAPP_NAME: Nom de l'aplicació al WebApp Azure
+- **Pel desplegament a WebApp Azure**
+   - **WEBAPP_NAME**: Nom de l'aplicació al WebApp Azure
 
-- Pel desplegament a SwarmMe
-   - SWARMME_SERVICE_NAME: Nom del servei al SwarmMe
-   - SWARMME_SERVICE_DOMAIN: Domini del servei al SwarmMe 
-   - SWARMME_SERVICE_PATH: Path del servei al SwarmMe 
-   - SWARMME_SERVICE_PORT: Port del servei al SwarmMe 
-   - SWARMME_REPLICAS: Número de instàncies del servei al SwarmMe 
+- **Pel desplegament a SwarmMe**
+   - **SWARMME_SERVICE_NAME**: Nom del servei al SwarmMe
+   - **SWARMME_SERVICE_DOMAIN**: Domini del servei al SwarmMe 
+   - **SWARMME_SERVICE_PATH**: Path del servei al SwarmMe 
+   - **SWARMME_SERVICE_PORT**: Port del servei al SwarmMe 
+   - **SWARMME_REPLICAS**: Número de instàncies del servei al SwarmMe 
 
-- Pel desplegament al Api Manager
-   - APIC_PLAN_MAP: Descripció de quin plan utilitzar per desplegar al Api Manager
+- **Pel desplegament al Api Manager**
+   - **APIC_PLAN_MAP**: Descripció de quin plan utilitzar per desplegar al Api Manager
 
-- Pel desplegament al CloudFoundry IBMCloud
-   - CF_NAME: Nom al CloudFoundry
-   - CF_COMMAND: Comanda a executar al CloudFoundry
-   - CF_ENV: Variables necessaris pel desplegament al CloudFoundry
+- **Pel desplegament al CloudFoundry IBMCloud**
+   - **CF_NAME**: Nom al CloudFoundry
+   - **CF_COMMAND**: Comanda a executar al CloudFoundry
+   - **CF_ENV**: Variables necessaris pel desplegament al CloudFoundry
    
  Així tindrem l'estructura:
  
@@ -523,10 +519,10 @@ components:
 
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar després de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Actualment està disponible la possibilitat de cridar a un job d'administració del Openshift de CPD3 després de realitzar el deploy, informant les següents variables d'entorn:
 
-- JOB_NAME_PREFIX: Prefix de l'ubicació del job
-- JOB_IMAGE: Nom de la imatge a executar al job
-- JOB_WAIT: Temps d'espera del job
-- JOB_ENVS: Variables necessaris per l'execució del job
+- **JOB_NAME_PREFIX**: Prefix de l'ubicació del job
+- **JOB_IMAGE**: Nom de la imatge a executar al job
+- **JOB_WAIT**: Temps d'espera del job
+- **JOB_ENVS**: Variables necessaris per l'execució del job
 
 Per aquest element tindrem l'estructura:
 
