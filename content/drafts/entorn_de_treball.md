@@ -1,7 +1,7 @@
 +++
 date        = "2021-03-26"
-title       = "Principis d'arquitectura de l'entorn de treball"
-description = "Arquitectura de l'entorn de treball"
+title       = "Principis d'arquitectura de l'entorn digital de treball"
+description = "Arquitectura de l'entorn digital de treball"
 sections    = ["drafts"] 
 categories  = ["Data Architecture"]
 weight= 5
@@ -40,7 +40,7 @@ img[alt="centrar"] {
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura de l'Entorn de Treball](#2-arquitectura-de-l-entorn-de-treball)**
+- **[2. Arquitectura de l'Entorn digital de Treball](#2-arquitectura-de-l-entorn-digital-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
@@ -61,14 +61,14 @@ img[alt="centrar"] {
 
 Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables. Aquests principis tenen com a objectiu informar i guiar en el desenvolupament de solucions, sota els criteris establerts pel CTTI. 
 
-D’aquesta manera, els principis exposats en aquest apartat fan referencia a les diverses solucions dintre de l’entorn de treball. Així, els principis es dividiran en 4 blocs:
+D’aquesta manera, els principis exposats en aquest apartat fan referencia a les diverses solucions dintre de l’entorn digital de treball. Així, els principis es dividiran en 4 blocs:
 
-- **Bloc 0 – Principis Globals**: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn de treball. L’aplicació d’aquests principis serà obligatòria i s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
+- **Bloc 0 – Principis Globals**: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn digital de treball. L’aplicació d’aquests principis serà obligatòria i s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
 
-- **Bloc 1 – Principis de solucions escriptori de l'entorn de treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn de treball.
+- **Bloc 1 – Principis de solucions escriptori de l'entorn digital de treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn digital de treball.
 
-- **Bloc 2 – Principis d’arquitectura de l’entorn de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn de treball.
-- **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’entorn de treball.
+- **Bloc 2 – Principis d’arquitectura de l’entorn digital de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.
+- **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’entorn digital de treball.
 
 &nbsp;
 &nbsp;
@@ -80,34 +80,34 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 &nbsp;
 &nbsp;
 
-* **0.1. Aprofitar abans que comprar i construir**. Aprofitar si hi ha  solucions o estàndards ja definits que resolen una necessitat TIC i en aquest cas s’implantarà aquesta solució. Només seran construïdes de nou si realment hi ha un requeriment que ho necessiti. S’ha d’evitar solucions a mida. A tenir en compte que els estàndards aniran evolucionant.
+* **0.1. Aprofitar abans que comprar i construir** *(obligatori)*. Aprofitar si hi ha  solucions o estàndards ja definits que resolen una necessitat TIC i en aquest cas s’implantarà aquesta solució. Només seran construïdes de nou si realment hi ha un requeriment que ho necessiti. S’ha d’evitar solucions a mida. A tenir en compte que els estàndards aniran evolucionant.
 
-* **0.2 Estandardització. Solucions en recerca d’un model Transversal**. Cal vetllar perquè els dissenys d’alt nivell de les solucions de l’entorn de treball esdevinguin un model estàndard de referència a nivell transversal que permeti implementar-ho a qualsevol escenari amb el mínim de canvis necessaris.
+* **0.2 Estandardització. Solucions en recerca d’un model Transversal** *(obligatori)*. Cal vetllar perquè els dissenys d’alt nivell de les solucions de l’entorn digital de treball esdevinguin un model estàndard de referència a nivell transversal que permeti implementar-ho a qualsevol escenari amb el mínim de canvis necessaris.
 
-* **0.3 Neutralitat tecnològica**. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s’ha d’escollir lliurement la tecnologia que més s’adapti a les necessitats.
+* **0.3 Neutralitat tecnològica** *(obligatori)*. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s’ha d’escollir lliurement la tecnologia que més s’adapti a les necessitats.
 
-* **0.4 Compliment**. Tota solució de l’entorn de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments tècnics, funcionals i de seguretat de la Generalitat de Catalunya per les diferents àrees TIC involucrades en el disseny.
+* **0.4 Compliment** *(obligatori)*. Tota solució de l’entorn digital de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments tècnics, funcionals i de seguretat de la Generalitat de Catalunya per les diferents àrees TIC involucrades en el disseny.
   * [Principis arquitectura de sistemes d'informació](https://canigo.ctti.gencat.cat/arqctti/principis_arq/). Si un component o aplicació implementada al lloc de treball forma part d'un sistema de la informació, caldrà que segueixi aquests principis d'arquitectura.
 
-* **0.5 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn de treball hauran de seguir les normes i directrius establertes per l’Agència de Ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
+* **0.5 Seguretat** *(obligatori)*.Tots els elements que formen part d’una arquitectura de l’entorn digital de treball hauran de seguir les normes i directrius establertes per l’Agència de Ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:
   * **0.5.1 Traçabilitat**. Capacitat per identificar les diferents etapes per les quals travessa el consum d’un servei, permetent extreure la informació suficient per realitzar l’anàlisi d’un problema, d’aspectes legals i de seguretat.
   * **0.5.2 Control d’accés**. Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.
   * **0.5.3 Auditoria**. Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.
   * **0.5.4 Disponibilitat, confidencialitat i integritat de les dades**. D’acord amb els requeriments de l’Agència de Ciberseguretat.
 
-* **0.6 Eficiència econòmica**. Les solucions de l'entorn de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de negoci.
+* **0.6 Eficiència econòmica** *(obligatori)*. Les solucions de l'entorn digital de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l'enfoc estarà orientat a l'abaratiment dels costos, es garantiran els requeriments de negoci.
 	En el cas d’optar per una solució Open Source per assolir aquesta eficiència, caldrà garantir que aquesta compleix amb la resta de principis anunciats, prestant especial atenció a aquells factors que acostumen a ser diferents respecte a les solucions propietàries: nivell de suport, maduresa, cicle de vida i l’acceptació en la industria. 
 * **0.7 Evolució continua i mínim impacte** *(obligatori)*. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s’han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l’impacte d’aquests canvis en el marc d’interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i d’aplicació. 
-* **0.8 Automatització**. Tant la provisió com el manteniment haurà d’orientar-se cap a la màxima automatització dels seus processos, amb l'objectiu de l'estalvi de costos, temps, millora en l’eficiència, i aconseguir evitar els problemes esdevinguts d'una implementació manual, obtenint així una major productivitat de la solució. 
-* **0.9 Gestió Centralitzada**. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s'ha d'escollir lliurement la tecnologia que més s'adapti a les necessitats.
-* **0.10 Rendiment i evolució**. L’entorn de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment, mitjançant la monitorització per a identificar les necessitats de creixement o de canvi d’equipaments, per tal d’acollir les previsions i creixement, de noves necessitats i/o  l’obsolescència tecnològica. 
-* **0.11 Arquitectura orientada a serveis**. Les arquitectures s’hauran de modelar com a serveis o microserveis i valorar el seu encaix  en un entorn cloud públic, híbrid o privat. Així doncs, serà necessari posar de manifest quins són els avantatges i inconvenients de solucions cloud i fer un balanç d’aquests factors amb els principis globals de l’entorn de treball. Malgrat que en termes tècnics l’ordre de preferència per seleccionar l’entorn on allotjar un servei o microservei és el que apareix a continuació, caldrà valorar-ho de forma general en el marc de la resta de principis.
-  * **1. SAAS**. Per d’aplicacions o serveis específics aprovisionats amb un conjunt de funcions ben definides.
-  * **2. PAAS**. Per plataformes on es necessiti desenvolupar, implementar i  gestionar aplicacions sense preocupar-se del servei, l’emmagatzematge i l’administració de la base de dades. 
-  * **3. IAAS**. Per elements d’infraestructura com virtualització, emmagatzematge i xarxa amb la necessitat d’una infraestructura automatitzada i elàstica. 
-  * **3. On-premise**. Per serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida. 
-* **0.12 Experiència d’usuari**. Tota solució implementada a l’entorn de treball ha d’estar orientada a satisfer uns requeriments d’usuari, tanmateix la facilitat d’ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d’usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents. Els factors d’experiència d'usuari com la interfície, mobilitat i els aspectes de col·laboració en el lloc de treball són una prioritat clau en el disseny de la solució. 
-* **0.13 Sostenibilitat**. Construir solucions més respectuoses amb el medi ambient  i més  sensibles amb l’impacte social, en el marc  de l’exhauriment de matèries primeres, els alts costos ambientals i energètics, l’obsolescència del maquinari i del programari, els impactes ambientals del reciclatge o de la fractura digital. Les propostes que tenen com a propòsit la sostenibilitat són les següents:
+* **0.8 Automatització** *(obligatori)*. Tant la provisió com el manteniment haurà d’orientar-se cap a la màxima automatització dels seus processos, amb l'objectiu de l'estalvi de costos, temps, millora en l’eficiència, i aconseguir evitar els problemes esdevinguts d'una implementació manual, obtenint així una major productivitat de la solució. 
+* **0.9 Gestió Centralitzada** *(obligatori)*. Els dispositius i serveis han de permetre la gestió i manteniment de la manera més centralitzada possible, amb l’objectiu de simplificar l’arquitectura del model de gestió, alhora minimitzar les accions manuals en les instal·lacions i futurs canvis necessaris. Tanmateix, la solució hauria de permetre que aquesta gestió sigui compartida entre diferents equips tècnics amb permisos d’administració granulars.
+* **0.10 Rendiment i evolució** *(obligatori)*. L’entorn digital de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment, mitjançant la monitorització per a identificar les necessitats de creixement o de canvi d’equipaments, per tal d’acollir les previsions i creixement, de noves necessitats i/o  l’obsolescència tecnològica. 
+* **0.11 Arquitectura orientada a serveis** *(obligatori)*. Les arquitectures s’hauran de modelar com a serveis o microserveis i valorar el seu encaix  en un entorn cloud públic, híbrid o privat. Així doncs, serà necessari posar de manifest quins són els avantatges i inconvenients de solucions cloud i fer un balanç d’aquests factors amb els principis globals de l’entorn digital de treball. Malgrat que en termes tècnics l’ordre de preferència per seleccionar l’entorn on allotjar un servei o microservei és el que apareix a continuació, caldrà valorar-ho de forma general en el marc de la resta de principis.
+  * **1. SAAS**. Per a aplicacions o serveis específics aprovisionats amb un conjunt de funcions ben definides.
+  * **2. PAAS**. Per a plataformes on es necessiti desenvolupar, implementar i  gestionar aplicacions sense preocupar-se del servei, l’emmagatzematge i l’administració de la base de dades. 
+  * **3. IAAS**. Per a elements d’infraestructura com virtualització, emmagatzematge i xarxa amb la necessitat d’una infraestructura automatitzada i elàstica. 
+  * **4. On-premise**. Per a serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida. 
+* **0.12 Experiència digital d’usuari** *(obligatori)*. Tota solució implementada a l’entorn digital de treball ha d’estar orientada a satisfer uns requeriments d’usuari, tanmateix la facilitat d’ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d’usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents. Els factors d’experiència d'usuari com la interfície, mobilitat i els aspectes de col·laboració en el lloc de treball són una prioritat clau en el disseny de la solució. 
+* **0.13 Sostenibilitat** *(obligatori)*. Construir solucions més respectuoses amb el medi ambient  i més  sensibles amb l’impacte social, en el marc  de l’exhauriment de matèries primeres, els alts costos ambientals i energètics, l’obsolescència del maquinari i del programari, els impactes ambientals del reciclatge o de la fractura digital. Les propostes que tenen com a propòsit la sostenibilitat són les següents:
 	**Eficiència energètica**  L’adquisició i la gestió de l’equipament es realitzarà amb un enfocament d’estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar a la funcionalitat. 
 	**Durabilitat i reaprofitament**  Cal procurar que l’equipament sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l’adopció de solucions tecnològiques amb aquest propòsit. L’equipament serà reaprofitat si és possible i només comprats de nou si realment hi ha un requeriment que ho necessita.
 
@@ -143,7 +143,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **1.2.1 Estabilitat** *(obligatori)*. Les solucions a implementar al lloc de treball han de tenir suficient experiència en entorns empresarials amb els mateixos condicionats d’interoperabilitat que els terminals de la Generalitat de Catalunya, encara que a vegades caldrà avaluar l’ús de solucions emergents per garantir l’aplicació de la resta de principis definits. 
 
-* **1.2.2 Cicle de vida** *(obligatori)*. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d’aplicacions i sistema operatiu amb els que necessita interactuar. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es pot consultar el programari transversal de l'entorn de treball, així com el versionat suportat per CTTI. 
+* **1.2.2 Cicle de vida** *(obligatori)*. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d’aplicacions i sistema operatiu amb els que necessita interactuar. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es pot consultar el programari transversal de l'entorn digital de treball, així com el versionat suportat per CTTI. 
 
 &nbsp;
 &nbsp;
@@ -154,7 +154,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 ---
 
-# 2. Arquitectura de l'Entorn de Treball
+# 2. Arquitectura de l'entorn digital de treball
 &nbsp;
 &nbsp;
 &nbsp;
@@ -172,7 +172,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **2.1.1.1 Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s’ha de desplegar seguint les directrius de CTTI, gràcies a les quals s’assolirà una homogeneïtat en l’aparença, les funcionalitats transversals i l’operativitat del sistema.
 
-* **2.1.1.2 Cicle de vida** *(obligatori)*. S’hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l’objectiu d’assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn de treball suportades per CTTI.
+* **2.1.1.2 Cicle de vida** *(obligatori)*. S’hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l’objectiu d’assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn digital de treball suportades per CTTI.
 
 &nbsp;
 &nbsp;
@@ -247,4 +247,5 @@ En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el
 * **3.2.1 Estabilitat** *(obligatori)*. Les solucions a aplicar en les xarxes de telecomunicacions haurien de ser solucions amb un cert recorregut, no és recomanable utilitzar solucions poc madures a nivell de producció. Encara que, en certes situacions s’avaluarà implementar solucions emergents.
 
 * **3.2.2 Minimitzar la dependència sobre els fabricants** *(obligatori)*. Cal evitar sempre que sigui possible les solucions propietàries, i maximitzar la compatibilitat amb la resta dels components i sistemes. Però, allunyant-nos de solucions massa heterogènies que puguin generar problemes de governança
+
 
