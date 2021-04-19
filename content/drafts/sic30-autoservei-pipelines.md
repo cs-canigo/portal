@@ -42,9 +42,9 @@ La solució ha de:
 
 S'estableixen una sèrie de requeriments per a estar en disposició d'integrar l'aplicació mitjançant aquest servei:
 
-* Conèixer els **entorns** on es desplegarà l'aplicació i les [modalitats de desplegament](/sic30-serveis/ci/#modalitats-de-desplegament) aplicables en cada cas.
-* L'[aplicació ha de ser integrable](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) amb el servei d'automatització de la construcció i desplegament.
-* [**Aplicació ha d'estar preparada i acomplir els requeriments**](/sic-welcome-pack/preparar-aplicacio/) per a poder ser desplegada.
+* Conèixer els **entorns** on es desplegarà l'aplicació i les [**modalitats de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) aplicables en cada cas.
+* L'[**aplicació ha de ser integrable**](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) amb el servei d'automatització de la construcció i desplegament.
+* [**Aplicació ha d'estar preparada i acomplir els requeriments**](/sic30-guies/preparar-aplicacio/) per a poder ser desplegada.
 * Per als entorns amb modalitat de desplegament automàtic o delegat a Cpd, disposar dels **identificadors d'infraestructures** de desplegament que proporcionarà l'equip SIC o Cpd (respectivament).
 * **Col·laboració**: el proveïdor d'aplicacions i el proveïdor d'infraestructures han d'estar disposats a col·laborar i mantenir una comunicació.
 
@@ -62,7 +62,7 @@ El funcionament previst és el següent:
 * Els **proveïdors d'aplicacions aportaran el seu propi arxiu de configuració (ACA)**.
 * Els **proveïdors d'infraestructures aportaran el seu propi arxiu de configuració (ACI)** requerit únicament quan l'aplicació es desplega en modalitat automàtica.
 * Únicament quan es creïn o modifiquin aquests arxius de configuració, s'invocarà al sistema de generació de pipelines que s'encarregarà de recuperar la informació necessària
-i generar (o re-generar) la pipeline de construcció i desplegament de l'aplicació.
+i generar (o regenerar) la pipeline de construcció i desplegament de l'aplicació.
 
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
 </br>
