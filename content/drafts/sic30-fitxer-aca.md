@@ -521,10 +521,68 @@ components:
 
 ##### components[].deployment.enviroments[].actions.after-deploy
 
+A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar després de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Actualment està disponible la possibilitat de cridar a un job d'administració del Openshift de CPD3 després de realitzar el deploy, informant les següents variables d'entorn:
+
+- JOB_NAME_PREFIX: Prefix de l'ubicació del job
+- JOB_IMAGE: Nom de la imatge a executar al job
+- JOB_WAIT: Temps d'espera del job
+- JOB_ENVS: Variables necessaris per l'execució del job
+
+Per aquest element tindrem l'estructura:
+
+```
+components:
+  - deployment:
+      environments:
+        - name
+          actions:
+            after-deploy:
+              steps:
+                - execution:
+                    env
+```                    
+
+Un exemple d'utilització d'aquest element seria:
+
+```
+components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            after-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin
+```
+
 ##### components[].deployment.enviroments[].actions.smoke-test
 
+**TODO**
 
 ### notifications
+
+A aquest element contindrà informació de la forma de notificació i on es notificarà les accions manuals en espera i els resultats de les execucions dels jobs de l'aplicació. Actualment la forma de notificació proporcionada és per email. Per la notiticació per email és necessari informar del llistat de destinataris amb l'estructura:
+
+```
+notifications:
+  email:
+    recipients:
+      - 
+```
+
+Per exemple:
+
+```
+notifications:
+  email:
+    recipients:
+      - correu@domini.cat
+```
 
 ## Exemples
 
