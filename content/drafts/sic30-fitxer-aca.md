@@ -33,8 +33,6 @@ global-env
 components:
   - custom-builder
     build
-    publish
-    bake
     deployment
 notifications    
 ```
@@ -347,40 +345,6 @@ components:
               - mvn clean package -Dmaven.test.skip=true
 ```
 
-### components[].publish
-
-A aquest element hi contindrà la informació de quins artefactes es volen publicar al Nexus 
-
-L'estructura serà:
-
-```
-components:
-  - publish
-```
-
-**TODO**
-
-### components[].bake
-
-Si es necessari construir la imatge de l'aplicació que es desplegarà al Cloud en el propi Cloud, per exemple, per AWS o Azure, serà necessari detallar en aquest element els passos (steps) amb les variables (env) amb la informació necessaria per a l'execució (execution) del constructor de la imatge
-
-Així l'estructura serà:
-
-```
-components:
-  - bake:
-      steps:
-      - execution:
-          env
-```
-
-Les variables a informar dependran del Cloud a on s'hagi de construir la imatge, tenint:
-
-- **Per AWS**
-   - **IAAS_IMAGE_CONFIG_FILE**: Nom del fitxer amb el detall per a la construcció de la imatge de l'aplicació a AWS
-
-**TODO**
-
 ### components[].deployment
 
 A aquest element hi contindrà informació sobre amb quin repositori de codi font (scm) hi contindrà els descriptors pel desplegament de l'aplicació (yml) al OpenShift, Kubernetes i AWS i també hi contindrà el llistat d'entorns a on desplegar l'aplicació (enviroments)
@@ -479,10 +443,6 @@ A aquest element hi contindrà informació de les execucions (execution) de cada
    - **CF_NAME**: Nom al CloudFoundry
    - **CF_COMMAND**: Comanda a executar al CloudFoundry
    - **CF_ENV**: Variables necessaris pel desplegament al CloudFoundry
-
-- **Pel desplegament a AWS**
-   - **TF_ENV**: Identificador del entorn de desplegament a Terraform pel desplegament a AWS
-   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de [components[].deployment](#components-deployment) per desplegar l'aplicació al AWS
    
  Així tindrem l'estructura:
  
@@ -591,7 +551,6 @@ A continuació s'adjunten exemples de casos d'ús:
 - Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure
 - Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació al Kubernetes IBMCloud
 - Exemple de fitxer ACA de desplegament d'aplicació al Api Manager
-- Exemple de fitxer ACA de construcció utilitzant AMI builder i desplegament d'aplicació al AWS 
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node
 
