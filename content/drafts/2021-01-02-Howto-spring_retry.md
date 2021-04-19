@@ -16,24 +16,25 @@ amb el framework Canigó
 ---
 ## Justificació
 
-Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quant es tracta d'errors temporals o transitoris com l'accés a un recurs extern.
+Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quant es tracte d'errors temporals o transitoris com l'accés a un recurs extern.
 
 _Spring Retry_ pot aplicar-se a diferents formes: 
 
- * De forma declarativa: Utilizando solo anotaciones de Spring. Esta vía permite facil y rapidamente aplicar reintentos. 
- * De forma imperativa: Utilizando `RetryTemplate` y las clases del package `org.springframework.retry.backoff` de la librería [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry).
- * Una mezcla de las anteriores.
+ * De forma declarativa: Utilitzant només anotacions de Spring. Aquesta forma permet fàcil i ràpidament aplicar reintents. 
+ * De forma imperativa: Utilitzant `RetryTemplate` i les classes del package `org.springframework.retry.backoff` de la llibreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry).
+ * Una mezcla de les anteriors.
 
 ---
-## Configuración
+## Configuració
 
-Para utilizar la opción de reintentos en un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), se requiere agregar algunas dependencias de maven.
+Per utilitzar l'opció de reintents en un projecte Canigó, es necessari agregar alguna dependències de maven.
 
-### Cambios en el archivo `pom.xml`
+### Canvis al fitxer `pom.xml`
 
-> Los proyectos generados con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) ya contienen la dependencia de `AspectJ`, que es requerida para que funcionen los reintentos. Si se quiere excluir esa dependencia para hacer mas eficiente la carga de la aplicación, se requiere agregar la libreria `aspectjweaver` como depdendencia. 
+> Els projectes de Canigó ja contenen les dependencies de `AspectJ`, que són necessàries per a que funcionin els reintents. Si es vol minimitzar l'impacte d'aquestes llibreries a la carga de l'aplicació, la llibreria mínima necessaria seria la llibreria `aspectjweaver`. 
 
-Dependencia requerida existente:
+Dependències necessaries:
+
 ```xml
   <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -41,7 +42,7 @@ Dependencia requerida existente:
   </dependency>
 ```
 
-> Se necesitan las librerías [spring-retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry) y [aspectjweaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)
+I les llibreries [spring-retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry) i [aspectjweaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver)
 
 ```xml
   <dependency>
@@ -54,9 +55,9 @@ Dependencia requerida existente:
   </dependency>
 ```
 
-### Cambios en inicializador del proyecto `Application.java`
+### Canvis a l'inicialitzador del projecte `Application.java`
 
-> Se necesita la anotación `@EnableRetry`
+> Es necessita afegir l'anotació `@EnableRetry`
 
 ```java
   @SpringBootApplication
@@ -68,12 +69,12 @@ Dependencia requerida existente:
 
 
 ---
-## Uso 
+## Ús 
 #### (de forma imperativa)
 
-### Desarrollo 
+### Desenvolupament 
 
-> Configuración de propiedades: `application.yml`
+> Configuració de propiedades: `application.yml`
 
 ```yaml
 retry:
@@ -83,12 +84,12 @@ retry:
   multiplierRetries: 2.0
 ```
 
-> Se requiere crear un `bean` con la plantilla que contiene el comportamiento de los reintentos. Existen distintas estrategias de espera (back off) ya implementadas, tales como:
+> Es necessari crear un `bean` amb la plantilla que conté el comportamient dels reintentos. Existen diferents estrategies d'espera (back off) ja implementadas, com:
 
- * ExponentialBackOffPolicy: aumenta el período de espera para cada reintento en un conjunto dado usando la función Math.exp(double).
- * ExponentialRandomBackOffPolicy: elige un múltiplo aleatorio del intervalo de espera para cada reintento.
+ * ExponentialBackOffPolicy: augmenta el periode d'espera per cada reintent en un conjunt donat utilitzant la función Math.exp(double).
+ * ExponentialRandomBackOffPolicy: escull un múltiple aleatori del interval d'espera definit per a cada reintent.
 
-> Ejemplo de configuración del `bean`
+> Exemple de configuració del `bean` utilitzant l'estrategia `ExponentialRandomBackOffPolicy`
 
 ```java
 @Configuration
@@ -124,7 +125,7 @@ public class RetryConfig {
 }
 ```
 
-> En la capa de servicio se requiere inyectar la plantilla `retryTemplate` y luego utilizar el método `execute` para envolver el contenido de los métodos que requieren reintentos.
+> A la capa de servei és necessari injectar la plantilla `retryTemplate` i utilitzar el mètode `execute` per embolcallar el contingut dels mètodes que requereixen reintents.
 
 ```java
 @Service("equipamentService")
@@ -144,7 +145,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 }
 ```
 
-### Pruebas 
+### Proves 
 
 > Pruebas unitarias que plantean 2 escenarios: 
 
