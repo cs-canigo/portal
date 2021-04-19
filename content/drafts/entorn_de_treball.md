@@ -1,7 +1,7 @@
 +++
 date        = "2021-03-26"
-title       = "Principis d'arquitectura de l'entorn digital de treball"
-description = "Arquitectura de l'entorn digital de treball"
+title       = "Principis d'Arquitectura de l'Entorn Digital de Treball"
+description = "Arquitectura de l'Entorn Digital de Treball"
 sections    = ["drafts"] 
 categories  = ["Data Architecture"]
 weight= 5
@@ -27,12 +27,12 @@ img[alt="centrar"] {
 
 <map name="planetmap">
   <area shape="rect" coords="15,275,170,320" alt="Sun" href="#1-solucions-escriptori-del-lloc-de-treball">
-  <area shape="rect" coords="195,275,350,320" alt="Sun" href="#2-arquitectura-de-l-entorn-digital-de-treball">
+  <area shape="rect" coords="195,275,350,320" alt="Sun" href="#2-arquitectura-del-lloc-de-treball">
   <area shape="rect" coords="390,275,550,320" alt="Sun" href="#3-arquitectura-de-connectivitat">
    <area shape="rect" coords="195,322,350,372" alt="Sun" href="#0-principis-globals">
 </map>
 
-### Índex dels principis de l'entorn digital de treball
+### Índex dels principis de l'Entorn Digital de Treball
 
 - **[0. Principis globals](#0-principis-globals)**
 
@@ -40,7 +40,7 @@ img[alt="centrar"] {
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura de l'entorn digital de treball](#2-arquitectura-de-l-entorn-digital-de-treball)**
+- **[2. Arquitectura del Lloc de Treball](#2-arquitectura-del-lloc-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
@@ -65,10 +65,10 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 
 - **Bloc 0 – Principis Globals**: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn digital de treball. L’aplicació d’aquests principis serà obligatòria i s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.
 
-- **Bloc 1 – Principis de solucions escriptori de l'entorn digital de treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn digital de treball.
+- **Bloc 1 – Principis de solucions escriptori del Lloc de Treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn digital de treball.
 
-- **Bloc 2 – Principis d’arquitectura de l’entorn digital de treball**: Principis establerts com específics de l’arquitectura de lloc de treball, on es defineixen els dispositius, equipaments on premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.
-- **Bloc 3 – Principis d'arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’entorn digital de treball.
+- **Bloc 2 – Principis d’Arquitectura del Lloc de Treball**: Principis establerts com específics de l’Arquitectura de Lloc de Treball, on es defineixen els dispositius, equipaments on premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.
+- **Bloc 3 – Principis d'Arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’Entorn Digital de Treball.
 
 &nbsp;
 &nbsp;
@@ -143,7 +143,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **1.2.1 Estabilitat** *(obligatori)*. Les solucions a implementar al lloc de treball han de tenir suficient experiència en entorns empresarials amb els mateixos condicionats d’interoperabilitat que els terminals de la Generalitat de Catalunya, encara que a vegades caldrà avaluar l’ús de solucions emergents per garantir l’aplicació de la resta de principis definits. 
 
-* **1.2.2 Cicle de vida** *(obligatori)*. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d’aplicacions i sistema operatiu amb els que necessita interactuar. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es pot consultar el programari transversal de l'entorn digital de treball, així com el versionat suportat per CTTI. 
+* **1.2.2 Cicle de vida** *(obligatori)*. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d’aplicacions i sistema operatiu amb els que necessita interactuar. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es pot consultar el programari transversal de l'Entorn Digital de Treball, així com el versionat suportat per CTTI. 
 
 &nbsp;
 &nbsp;
@@ -154,7 +154,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 ---
 
-# 2. Arquitectura de l'entorn digital de treball
+# 2. Arquitectura del Lloc de Treball
 &nbsp;
 &nbsp;
 &nbsp;
@@ -172,7 +172,7 @@ Els principals grups en els que podem classificar les solucions escriptori són:
 
 * **2.1.1.1 Maquetació** *(obligatori)*. Tot terminal corporatiu de la Generalitat de Catalunya s’ha de desplegar seguint les directrius de CTTI, gràcies a les quals s’assolirà una homogeneïtat en l’aparença, les funcionalitats transversals i l’operativitat del sistema.
 
-* **2.1.1.2 Cicle de vida** *(obligatori)*. S’hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l’objectiu d’assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'entorn digital de treball suportades per CTTI.
+* **2.1.1.2 Cicle de vida** *(obligatori)*. S’hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l’objectiu d’assolir el SLA del servei. Al [full de ruta de programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/) es poden consultar les versions dels sistemes operatius de l'Entorn Digital de Treball suportades per CTTI.
 
 &nbsp;
 &nbsp;
