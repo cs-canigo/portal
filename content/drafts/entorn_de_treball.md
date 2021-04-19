@@ -40,7 +40,7 @@ img[alt="centrar"] {
   * 1.1 Disseny aplicacions escriptori
   * 1.2 Principis tecnològics
 
-- **[2. Arquitectura de l'Entorn digital de Treball](#2-arquitectura-de-l-entorn-digital-de-treball)**
+- **[2. Arquitectura de l'entorn digital de treball](#2-arquitectura-de-l-entorn-digital-de-treball)**
   * 2.1 Dispositius
      + 2.1.1 Equips corporatius i Sistema Operatiu
   * 2.2 Virtualització d'aplicacions
