@@ -400,7 +400,7 @@ Per cada element de la llista hi contindrà informació sobre on (name) i com (a
 
 - name: nom de l'entorn a on es desplegarà l'aplicació
 
-- actions: accions a realitzar en el desplegament de l'aplicació: before-deploy, deploy, after-deploy i smoke-test 
+- actions: accions a realitzar en el desplegament de l'aplicació: before-deploy, deploy i after-deploy
 
 Tenint l'estructura:
 
@@ -556,10 +556,6 @@ components:
                       - JOB_WAIT: 60
                       - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin
 ```
-
-##### components[].deployment.enviroments[].actions.smoke-test
-
-**TODO**
 
 ### notifications
 
