@@ -479,6 +479,10 @@ A aquest element hi contindrà informació de les execucions (execution) de cada
    - **CF_NAME**: Nom al CloudFoundry
    - **CF_COMMAND**: Comanda a executar al CloudFoundry
    - **CF_ENV**: Variables necessaris pel desplegament al CloudFoundry
+
+- **Pel desplegament a AWS**
+   - **TF_ENV**: Identificador del entorn de desplegament a Terraform pel desplegament a AWS
+   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de [components[].deployment](#components-deployment) per desplegar l'aplicació al AWS
    
  Així tindrem l'estructura:
  
