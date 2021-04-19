@@ -581,7 +581,19 @@ notifications:
 
 A continuació s'adjunten exemples de casos d'ús:
 
-- 
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Openshift CPD3
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Kubernetes CaaS
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al SwarmMe
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al CloudFoundry IBMCloud
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació node al Openshift CPD4
+- Exemple de fitxer ACA de construcció i desplegament d'aplicació PHP al Openshift CPD4
+- Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al Openshift CPD2
+- Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure
+- Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació al Kubernetes IBMCloud
+- Exemple de fitxer ACA de desplegament d'aplicació al Api Manager
+- Exemple de fitxer ACA de construcció utilitzant AMI builder i desplegament d'aplicació al AWS 
+- Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven
+- Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
