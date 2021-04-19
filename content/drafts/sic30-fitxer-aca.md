@@ -390,7 +390,20 @@ Les variables a informar dependran del Cloud a on s'hagi de construir la imatge,
 
 ### components[].deployment
 
-A aquest element hi contindrà informació sobre com i on es desplegarà l'aplicació. Aquest element es composarà d'un llistat d'entorns (enviroments) amb els elements:
+A aquest element hi contindrà informació sobre amb quin repositori de codi font (scm) hi contindrà els descriptors pel desplegament de l'aplicació (yml) al OpenShift, Kubernetes i AWS i també hi contindrà el llistat d'entorns a on desplegar l'aplicació (enviroments)
+
+Així tindrem:
+
+```
+components:
+  - deployment:
+      scm
+      environments
+```     
+
+#### components[].deployment.enviroments[]
+
+Per cada element de la llista hi contindrà informació sobre on (name) i com (actions) es desplegarà l'aplicació. Aquest element es composarà dels elements:
 
 - name: nom de l'entorn a on es desplegarà l'aplicació
 
@@ -406,11 +419,36 @@ components:
           actions
 ```
 
-#### components[].deployment.enviroments[].name
-
-#### components[].deployment.enviroments[].actions
-
 ##### components[].deployment.enviroments[].actions.before-deploy
+
+A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar abans de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Actualment està disponible la possibilitat de cridar a un job d'administració del Openshift de CPD3 abans de realitzar el deploy, informant les següents variables d'entorn:
+
+- JOB_NAME_PREFIX: 
+- JOB_IMAGE: 
+- JOB_WAIT: 
+- JOB_ENVS: 
+
+
+Per aquest element tindrem l'estructura:
+
+Un exemple d'utilització d'aquest element seria:
+
+```
+components:
+  - deployment:
+      scm: https://git.intranet.gencat.cat/3048/tests/jenkins-tests/9996/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=PREDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
+```
 
 ##### components[].deployment.enviroments[].actions.deploy
 
