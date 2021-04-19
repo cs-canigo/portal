@@ -461,7 +461,7 @@ components:
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar pel desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn, segons:
 
 - **Pel desplegament al Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS**
-   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de (components[].deployment)[#components[].deployment] per desplegar l'aplicació al Openshift o a Kubernates
+   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de [components[].deployment](#components[].deployment) per desplegar l'aplicació al Openshift o a Kubernates
    - **DEPLOYMENT_NAME**: Nom de l'aplicació al Openshift o a Kubernates
    - **DEPLOYMENT_WAIT**: Temps d'espera pel desplegament de l'aplicació al Openshift o a Kubernates
 
