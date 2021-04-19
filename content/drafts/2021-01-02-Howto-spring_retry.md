@@ -1,23 +1,24 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Como utilizar Spring Retry para reintentar acciones"
-description = "Como utilizar Spring Retry para reintentar acciones que generan una excepción al ejecutarse"
+title       = "Canigó. Com utilitzar Spring Retry per a realitzar reintents d'accions"
+description = "Com utilitzar Spring Retry per a realitzar reintents d'accions que generen una excepció al executar-se"
 section     = "howtos"
 categories  = ["canigo"]
 #key         = "GENER2021"
 +++
 
 
-## Introducción
+## Introducció
 
-El objetivo de este artículo es mostrar el uso de la libreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry) dentro de un proyecto generado con el framework Canigó
+L'objectiu d'aquest article és mostrar l'ús de la llibreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry) en un projecte
+amb el framework Canigó
 
 ---
-## Justificación
+## Justificació
 
-Existen escenarios de negocios que requieren reintentar un proceso luego de una falla. Esto es útil por ejemplo, cuando se tratan errores temporales o transitorios como el acceso a un recurso externo.
+Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quant es tracta d'errors temporals o transitoris com l'accés a un recurs extern.
 
-_Spring Retry_ puede aplicarse de distintas formas: 
+_Spring Retry_ pot aplicar-se a diferents formes: 
 
  * De forma declarativa: Utilizando solo anotaciones de Spring. Esta vía permite facil y rapidamente aplicar reintentos. 
  * De forma imperativa: Utilizando `RetryTemplate` y las clases del package `org.springframework.retry.backoff` de la librería [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry).
