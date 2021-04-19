@@ -1,0 +1,69 @@
+version: 2.0.0
+info:
+  version: 0.80.80
+  description: PPP-API test custom builder
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: php.docker
+  - CONTAINER_IMAGE_NAME: 7-768-arp-ppp-server
+  - DEPLOYMENT_TYPE: DeploymentConfig
+components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                name: 7-768-arp-api-builder
+                path: builds/Dockerfile
+    build:
+      steps:
+        - container:
+            image:
+              local:
+                name: 7-768-arp-api-builder
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - composer install --working-dir=./source/pppAPI/apipreus
+              - composer update --working-dir=./source/pppAPI/apipreus
+              - sed -i 's/\/\/Maatwebsite/Maatwebsite/g' ./source/pppAPI/apipreus/config/app.php
+              - sed -i "s/\/\/'ExcelMaat/'ExcelMaat/g" ./source/pppAPI/apipreus/config/app.php
+              - php ./source/pppAPI/apipreus/artisan vendor:publish
+              - mkdir -p ./pppCloud/builds/api
+              - mkdir -p ./pppCloud/builds/html
+              - cp -r ./source/pppAPI/apipreus/bootstrap ./pppCloud/builds/api
+              - cp -r ./source/pppAPI/apipreus/vendor ./pppCloud/builds/api
+              - cp -r ./source/pppAPI/apipreus/app ./pppCloud/builds/api
+              - cp -r ./source/pppAPI/apipreus/config ./pppCloud/builds/api
+              - cp -r ./source/pppAPI/apipreus/storage ./pppCloud/builds/api
+              - cp -r ./source/pppAPI/apipreus/www/ ./pppCloud/builds/api/html
+    deployment:
+      scm: https://git.intranet.gencat.cat/0192/pppAPI.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRE
+                      - DEPLOYMENT_NAME: 7-768-arp-ppp-server-deployment
+                      - DEPLOYMENT_WAIT: 60
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRO
+                      - DEPLOYMENT_NAME: 7-768-arp-ppp-server-deployment
+                      - DEPLOYMENT_WAIT: 60
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat
