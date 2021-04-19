@@ -45,4 +45,4 @@ components:
                       - DEPLOYMENT_WAIT: 120
 notifications:
   email:
-    recipients: [ noreply@ticxcat.cat ]
+    recipients: [ noreply@gencat.cat ]
