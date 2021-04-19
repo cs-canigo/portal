@@ -423,20 +423,30 @@ components:
 
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar abans de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Actualment està disponible la possibilitat de cridar a un job d'administració del Openshift de CPD3 abans de realitzar el deploy, informant les següents variables d'entorn:
 
-- JOB_NAME_PREFIX: 
-- JOB_IMAGE: 
-- JOB_WAIT: 
-- JOB_ENVS: 
-
+- JOB_NAME_PREFIX: Prefix de l'ubicació del job
+- JOB_IMAGE: Nom de la imatge a executar al job
+- JOB_WAIT: Temps d'espera del job
+- JOB_ENVS: Variables necessaris per l'execució del job
 
 Per aquest element tindrem l'estructura:
+
+```
+components:
+  - deployment:
+      environments:
+        - name
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env
+```                    
 
 Un exemple d'utilització d'aquest element seria:
 
 ```
 components:
   - deployment:
-      scm: https://git.intranet.gencat.cat/3048/tests/jenkins-tests/9996/orchestrators.git
       environments:
         - name: preproduction
           actions:
@@ -451,6 +461,10 @@ components:
 ```
 
 ##### components[].deployment.enviroments[].actions.deploy
+
+A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar pel desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn, segons:
+
+- 
 
 ##### components[].deployment.enviroments[].actions.after-deploy
 
