@@ -21,7 +21,7 @@ components:
             commands:
               - mvn clean package -Dmaven.test.skip=true
     deployment:
-      scm: https://git.intranet.gencat.cat/3048/tests/jenkins-tests/9996/orchestrators.git
+      scm: https://git.intranet.gencat.cat/0192/sic-tests/9996/orchestrators.git
       environments:
         - name: preproduction
           actions:
