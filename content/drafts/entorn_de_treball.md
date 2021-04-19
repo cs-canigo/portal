@@ -32,7 +32,7 @@ img[alt="centrar"] {
    <area shape="rect" coords="195,322,350,372" alt="Sun" href="#0-principis-globals">
 </map>
 
-### Índex dels principis de l'entorn de treball
+### Índex dels principis de l'entorn digital de treball
 
 - **[0. Principis globals](#0-principis-globals)**
 
