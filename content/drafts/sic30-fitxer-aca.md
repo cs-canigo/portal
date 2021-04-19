@@ -464,7 +464,60 @@ components:
 
 A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar pel desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn, segons:
 
-- 
+- Pel desplegament al Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS
+   - DESCRIPTORS_PATH: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de (components[].deployment)[#components[].deployment] per desplegar l'aplicació al Openshift o a Kubernates
+   - DEPLOYMENT_NAME: Nom de l'aplicació al Openshift o a Kubernates
+   - DEPLOYMENT_WAIT: Temps d'espera pel desplegament de l'aplicació al Openshift o a Kubernates
+
+- Pel desplegament a WebApp Azure
+   - WEBAPP_NAME: Nom de l'aplicació al WebApp Azure
+
+- Pel desplegament a SwarmMe
+   - SWARMME_SERVICE_NAME: Nom del servei al SwarmMe
+   - SWARMME_SERVICE_DOMAIN: Domini del servei al SwarmMe 
+   - SWARMME_SERVICE_PATH: Path del servei al SwarmMe 
+   - SWARMME_SERVICE_PORT: Port del servei al SwarmMe 
+   - SWARMME_REPLICAS: Número de instàncies del servei al SwarmMe 
+
+- Pel desplegament al Api Manager
+   - APIC_PLAN_MAP: Descripció de quin plan utilitzar per desplegar al Api Manager
+
+- Pel desplegament al CloudFoundry IBMCloud
+   - CF_NAME: Nom al CloudFoundry
+   - CF_COMMAND: Comanda a executar al CloudFoundry
+   - CF_ENV: Variables necessaris pel desplegament al CloudFoundry
+   
+ Així tindrem l'estructura:
+ 
+```
+components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env
+ ```
+
+Un exemple pel desplegament a l'entorn de Preproducció al Openshift seria:
+
+```
+components:
+  - deployment:
+      scm: git.intranet.gencat.cat/0005/pppAPI.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRE
+                      - DEPLOYMENT_NAME: 7-768-arp-ppp-server-deployment
+                      - DEPLOYMENT_WAIT: 60
+```
 
 ##### components[].deployment.enviroments[].actions.after-deploy
 
