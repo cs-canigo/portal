@@ -347,7 +347,7 @@ components:
 
 ### components[].deployment
 
-A aquest element hi contindrà informació sobre amb quin repositori de codi font (scm) hi contindrà els descriptors pel desplegament de l'aplicació (yml) al OpenShift, Kubernetes i AWS i també hi contindrà el llistat d'entorns a on desplegar l'aplicació (enviroments)
+A aquest element hi contindrà informació sobre amb quin repositori de codi font (scm) hi contindrà els descriptors pel desplegament de l'aplicació (yml) al OpenShift i Kubernetes i també hi contindrà el llistat d'entorns a on desplegar l'aplicació (enviroments)
 
 Així tindrem:
 
