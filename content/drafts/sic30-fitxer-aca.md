@@ -549,7 +549,7 @@ A continuació s'adjunten exemples de casos d'ús:
 - [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al Openshift CPD2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
 - [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
 - [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació PHP al Openshift CPD4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
-- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació maven al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml
+- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació maven al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 - [Exemple de fitxer ACA de desplegament d'aplicació al Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node
