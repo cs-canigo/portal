@@ -23,7 +23,7 @@ components:
             env:
               - ENV: 'production'
     deployment:
-      scm: https://git.intranet.gencat.cat/3048/tests/jenkins-tests/9998/orchestrators.git
+      scm: https://git.intranet.gencat.cat/0192/sic-tests/9998/orchestrators.git
       environments:
         - name: preproduction
           actions:
