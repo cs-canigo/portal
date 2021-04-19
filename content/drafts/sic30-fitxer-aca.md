@@ -541,16 +541,16 @@ notifications:
 
 A continuació s'adjunten exemples de casos d'ús:
 
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Openshift CPD3
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Kubernetes CaaS
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al SwarmMe
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al CloudFoundry IBMCloud
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació node al Openshift CPD4
-- Exemple de fitxer ACA de construcció i desplegament d'aplicació PHP al Openshift CPD4
-- Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al Openshift CPD2
-- Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure
-- Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació al Kubernetes IBMCloud
-- Exemple de fitxer ACA de desplegament d'aplicació al Api Manager
+- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml)
+- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al SwarmMe](/related/sic/3.0/aca_const_despl_maven_swarmme.yml)
+- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
+- [Exemple de fitxer ACA de construcció i desplegament d'aplicació node al Openshift CPD4](/related/sic/3.0/aca_const_despl_node_openshift_cpd4.yml)
+- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven amb before-deploy i post-deploy al Openshift CPD3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
+- [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al Openshift CPD2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
+- [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
+- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació PHP al Openshift CPD4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
+- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació maven al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml
+- [Exemple de fitxer ACA de desplegament d'aplicació al Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven
 - Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node
 
