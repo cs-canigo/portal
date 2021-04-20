@@ -16,13 +16,13 @@ amb el framework Canigó
 ---
 ## Justificació
 
-Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quant es tracte d'errors temporals o transitoris com l'accés a un recurs extern.
+Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quan es tracte d'errors temporals o transitoris com l'accés a un recurs extern.
 
 _Spring Retry_ pot aplicar-se a diferents formes: 
 
- * De forma declarativa: Utilitzant només anotacions de Spring. Aquesta forma permet fàcil i ràpidament aplicar reintents. 
+ * De forma declarativa: Utilitzant només anotacions de Spring. Aquesta forma permet fàcilment i ràpidament aplicar reintents. 
  * De forma imperativa: Utilitzant `RetryTemplate` i les classes del package `org.springframework.retry.backoff` de la llibreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry).
- * Una mezcla de les anteriors.
+ * Una mescla de les anteriors.
 
 ---
 ## Configuració
@@ -31,9 +31,9 @@ Per utilitzar l'opció de reintents en un projecte Canigó, es necessari agregar
 
 ### Canvis al fitxer `pom.xml`
 
-> Els projectes de Canigó ja contenen les dependencies de `AspectJ`, que són necessàries per a que funcionin els reintents. Si es vol minimitzar l'impacte d'aquestes llibreries a la carga de l'aplicació, la llibreria mínima necessaria seria la llibreria `aspectjweaver`. 
+> Els projectes de Canigó ja contenen les dependències de `AspectJ`, que són necessàries perquè funcionin els reintents. Si es vol minimitzar l'impacte d'aquestes llibreries a la cèrrega de l'aplicació, la llibreria mínima necessària seria la llibreria `aspectjweaver`. 
 
-Dependències necessaries:
+Dependències necessàries:
 
 ```xml
   <dependency>
@@ -84,12 +84,12 @@ retry:
   multiplierRetries: 2.0
 ```
 
-> Es necessari crear un `bean` amb la plantilla que conté el comportament dels reintents. Existeixen diferents estrategies d'espera (back off) ja implementades, com:
+> Es necessari crear un `bean` amb la plantilla que conté el comportament dels reintents. Existeixen diferents estratègies d'espera (back off) ja implementades, com:
 
  * ExponentialBackOffPolicy: augmenta el període d'espera per cada reintent en un conjunt donat utilitzant la función Math.exp(double).
- * ExponentialRandomBackOffPolicy: escull un múltiple aleatori del interval d'espera definit per a cada reintent.
+ * ExponentialRandomBackOffPolicy: escull un múltiple aleatori de l'interval d'espera definit per a cada reintent.
 
-> Exemple de configuració del `bean` utilitzant l'estrategia `ExponentialRandomBackOffPolicy`
+> Exemple de configuració del `bean` utilitzant l'estratègia `ExponentialRandomBackOffPolicy`
 
 ```java
 @Configuration
@@ -149,8 +149,8 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 > Proves unitàries que plantegen 2 escenaris: 
 
-* Reintentar 3 vegades, les 2 primeres generen una Excepció, i l'última respon correctament.
-* Reintentar 5 vegades, en todes les execucions es genera una Excepció, al arribar al màxim de reintents es mostra la Excepció.
+* Reintentar 3 vegades, les 2 primeres generen una excepció, i l'última respon correctament.
+* Reintentar 5 vegades, en totes les execucions es genera una excepció, a l'arribar al màxim de reintents es mostra l'excepció.
 
 > Configuració: `/test/resources/spring/canigo-core.xml`
 
@@ -233,7 +233,7 @@ public class EquipamentRetryTemplateTest {
 
 > Proves utilitzant Postman
 
-> Es modificar la capa de serveis per crear un mètode que generi excepcions durant les primeres execucions, i després consulti correctament la capa de persistencia.
+> Es modificar la capa de serveis per crear un mètode que generi excepcions durant les primeres execucions, i després consulti correctament la capa de persistència.
 
 ```java
 @Service("equipamentService")
@@ -279,7 +279,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 #### Desenvolupament 
 
-> Crearem una nova capa on li agregarem l'anotació `@Retryable` amb la configuració dels reintents a cada mètode on es vulgui aplicar reintents. Això és així ja que els reintents es gestionen amb aspectes (AspectJ) i el mètode que es configura amb les anotacions ha de ser diferent al mètode que genera l'excepció.
+> Crearem una nova capa on li agregarem l'anotació `@Retryable` amb la configuració dels reintents a cada mètode on es vulgui aplicar reintents. Això és així, ja que els reintents es gestionen amb aspectes (AspectJ) i el mètode que es configura amb les anotacions ha de ser diferent del mètode que genera l'excepció.
 
 ```java
 @Service
@@ -303,7 +303,7 @@ public class RetryService {
 }
 ```
 
-> Per a que la capa de serveis rest utilitzi els reintents, ha d'invocar a la nova capa amb les anotacions (RetryService del exemple) i no directament a la capa de servei (EquipamentService del exemple).
+> Perquè la capa de serveis rest utilitzi els reintents, ha d'invocar a la nova capa amb les anotacions (RetryService del exemple) i no directament a la capa de servei (EquipamentService del exemple).
 
 ```java
 @RestController
@@ -333,8 +333,8 @@ public class EquipamentServiceController {
 
 > Proves unitàries que plantegen 2 escenaris:  
 
-* Reintentar 3 vegades, les 2 primeres generen una Excepció, i l'última respon correctament.
-* Reintentar 5 vegades, en totes les execucions es genera una Excepció, al arribar al màxim de reintents es mostra l'Excepció.
+* Reintentar 3 vegades, les 2 primeres generen una excepció, i l'última respon correctament.
+* Reintentar 5 vegades, en totes les execucions es genera una excepció, a l'arribar al màxim de reintents es mostra l'excepció.
 
 ```java
 @RunWith(SpringRunner.class)
@@ -447,8 +447,8 @@ public class EquipamentServiceImpl implements EquipamentService {
 ---
 ## Conclusió
 
- * Implementar l'opció de reintents a través de Spring permet crear procesos robusts amb tolerancia a fallades ocasionals, sobre tot associats al consum de serveis externs.
- * Utilitzar l'implementació imperativa permet reutilitzar patrons de reintents sense haver que repetir configuracions a varies anotacions.
- * Utilitzar l'implementació declarativa és més senzilla d'implementar, només requereix d'anotacions, encara que té algunes consideracions, tals com: 
+ * Implementar l'opció de reintents a través de Spring permet crear processos robusts amb tolerància a fallades ocasionals, sobretot associats al consum de serveis externs.
+ * Utilitzar la implementació imperativa permet reutilitzar patrons de reintents sense haver que repetir configuracions a vàries anotacions.
+ * Utilitzar la implementació declarativa és més senzilla d'implementar, només requereix d'anotacions, encara que té algunes consideracions, tals com: 
     - S'han de generar excepcions en el mètode que es vol reintentar. Si es llança l'excepció en el mètode que conté l'anotació `@Retryable`, els reintents no es realitzaran.
-    - El mètode recuperable ha de ser públic i les crides a aquest mètode han de ser d'una classe externa per a que els reintents es realitzin.
+    - El mètode recuperable ha de ser públic i les crides a aquest mètode han de ser d'una classe externa perquè els reintents es realitzin.
