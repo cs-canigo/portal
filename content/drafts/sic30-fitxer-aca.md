@@ -113,7 +113,10 @@ En aquest element hi contindrà el llistat de variables globals necessaris per l
    - **CF_PATH**: Ruta de l'entregable a desplegar al CloudFoundry
    
 - **Per la publicació de l'artefacte al Nexus**
-   - **ARTIFACT_PATH**: Ruta de l'artefacte a publicar al Nexus
+   - **Maven**
+      - **ARTIFACT_PATH**: Ruta al pom amb la definició del artefacte maven a publicar al Nexus. Si es vol publicar l'artefacte del pom pare el valor de la variable és ''
+   - **Node**
+      - **ARTIFACT_PATH**: Ruta al contingut de la llibreria compilada a publicar al Nexus
 
 Exemple de llistat de variables per Openshift:
 
@@ -551,8 +554,8 @@ A continuació s'adjunten exemples de casos d'ús:
 - [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació PHP al Openshift CPD4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
 - [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació maven al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 - [Exemple de fitxer ACA de desplegament d'aplicació al Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
-- Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven
-- Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node
+- [Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
+- [Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
 
 <br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
