@@ -10,7 +10,7 @@ categories  = ["canigo"]
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar l'ús de la llibreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry) en un projecte
+L'objectiu d'aquest article és mostrar l'ús de la llibreria [Spring Retry](https://github.com/spring-projects/spring-retry) en un projecte
 amb el framework Canigó
 
 ---
@@ -21,7 +21,7 @@ Existeixen escenaris de negoci que requereixen reintentar un procés una vegada 
 _Spring Retry_ pot aplicar-se a diferents formes: 
 
  * De forma declarativa: Utilitzant només anotacions de Spring. Aquesta forma permet fàcilment i ràpidament aplicar reintents. 
- * De forma imperativa: Utilitzant `RetryTemplate` i les classes del package `org.springframework.retry.backoff` de la llibreria [Spring Retry](https://mvnrepository.com/artifact/org.springframework.retry/spring-retry).
+ * De forma imperativa: Utilitzant `RetryTemplate` i les classes del package `org.springframework.retry.backoff` de la llibreria [Spring Retry](https://github.com/spring-projects/spring-retry).
  * Una mescla de les anteriors.
 
 ---
@@ -70,7 +70,7 @@ I les llibreries [spring-retry](https://mvnrepository.com/artifact/org.springfra
 
 ---
 ## Ús 
-### (de forma imperativa)
+### Forma imperativa
 
 #### Desenvolupament 
 
@@ -86,8 +86,8 @@ retry:
 
 > Es necessari crear un `bean` amb la plantilla que conté el comportament dels reintents. Existeixen diferents estratègies d'espera (back off) ja implementades, com:
 
- * ExponentialBackOffPolicy: augmenta el període d'espera per cada reintent en un conjunt donat utilitzant la función Math.exp(double).
- * ExponentialRandomBackOffPolicy: escull un múltiple aleatori de l'interval d'espera definit per a cada reintent.
+ * **ExponentialBackOffPolicy**: augmenta el període d'espera per cada reintent en un conjunt donat utilitzant la función Math.exp(double).
+ * **ExponentialRandomBackOffPolicy**: escull un múltiple aleatori de l'interval d'espera definit per a cada reintent.
 
 > Exemple de configuració del `bean` utilitzant l'estratègia `ExponentialRandomBackOffPolicy`
 
@@ -147,7 +147,9 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 #### Proves 
 
-> Proves unitàries que plantegen 2 escenaris: 
+##### Proves unitàries 
+
+> Es plantegen 2 escenaris: 
 
 * Reintentar 3 vegades, les 2 primeres generen una excepció, i l'última respon correctament.
 * Reintentar 5 vegades, en totes les execucions es genera una excepció, a l'arribar al màxim de reintents es mostra l'excepció.
@@ -231,9 +233,9 @@ public class EquipamentRetryTemplateTest {
 ![Spring Retry Exemple 1](/images/howtos/2021-01-02_spring_retry_example1.gif)
 
 
-> Proves utilitzant Postman
+##### Proves utilitzant Postman
 
-> Es modificar la capa de serveis per crear un mètode que generi excepcions durant les primeres execucions, i després consulti correctament la capa de persistència.
+> Es necessari modificar la capa de serveis per crear un mètode que generi excepcions durant les primeres execucions, i després consulti correctament la capa de persistència.
 
 ```java
 @Service("equipamentService")
@@ -275,7 +277,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 
 ---
-### (de forma declarativa)
+### Forma declarativa
 
 #### Desenvolupament 
 
@@ -331,7 +333,9 @@ public class EquipamentServiceController {
 
 #### Proves 
 
-> Proves unitàries que plantegen 2 escenaris:  
+##### Proves unitàries 
+
+> Es plantegen 2 escenaris:  
 
 * Reintentar 3 vegades, les 2 primeres generen una excepció, i l'última respon correctament.
 * Reintentar 5 vegades, en totes les execucions es genera una excepció, a l'arribar al màxim de reintents es mostra l'excepció.
@@ -407,7 +411,7 @@ public class EquipamentRetryTemplateTest {
 ![Spring Retry Exemplo 3](/images/howtos/2021-01-02_spring_retry_example3.gif)
 
 
-> Proves utilitzant Postman
+##### Proves utilitzant Postman
 
 > Es modifica la capa de servei per a crear un mètode que genera excepcions durant les primeres execucions, després consulta correctament la capa de persistència.
 
