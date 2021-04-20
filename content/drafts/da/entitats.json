@@ -90,21 +90,21 @@
 "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g"
 ],
 [
-"Pendent",
+"Consolidat",
 "Administració Pública",
 "Tipus ens locals",
 "Llista de tipus d'ens locals de Catalunya.",
 "dtarq126",
 "Administració Pública",
 "Administració Pública",
-"Municat",
+"Direcció General d'Administració Local (DGAL)",
 "Sota demanda",
 "Tabular",
 "Ús no restringit",
 "30/03/2020",
-"30/03/2020",
-"Codis_Territori_Tipus_Ens_Locals.xlsx",
-"Codis_Territori_Tipus_Ens_Locals_ATR.docx",
+"21/04/2021",
+"Tipus_Ens_Locals.xlsx",
+"Tipus_Ens_Locals_ATR.docx",
 ""
 ],
 [
@@ -159,7 +159,7 @@
 "17/02/2021",
 "CCPA_1996_REV1.xlsx",
 "CCPA_1996_REV1_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/CCPA-1996-REV1/kvs5-4ncg"
 ],
 [
 "Consolidat",
@@ -177,7 +177,7 @@
 "17/02/2021",
 "CCPA_2014.xlsx",
 "CCPA_2014_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/CCPA-2014/cvur-ezmm"
 ],
 [
 "Consolidat",
@@ -195,7 +195,25 @@
 "10/03/2021",
 "NC_2019_prod_com_ext.xlsx",
 "NC_2019_prod_com_ext_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Ind-stria/NC-2019-productes-comer-exterior-/dxc5-7sp7"
+],
+[
+"Consolidat",
+"Comerç i consum",
+"NC 2020 (productes comerç exterior)",
+"Classificació de productes per al comerç amb l'estranger 2020 (Nomenclatura combinada 2020, NC 2020)",
+"dtarq143",
+"Comerç i consum",
+"",
+"Institut d'Estadística de Catalunya (Idescat)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"21/04/2021",
+"21/04/2021",
+"NC_2020_prod_com_ext.xlsx",
+"NC_2020_prod_com_ext_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2020-productes-comer%C3%A7-exterior-/qixe-w7gm"
 ],
 [
 "Consolidat",
@@ -213,7 +231,25 @@
 "10/03/2021",
 "PRODCOM_EIP_2017_prod_ind.xlsx",
 "PRODCOM_EIP_2017_prod_ind_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Ind-stria/PRODCOM-EIP-2017-productes-industrials-/kcb3-zn5s"
+],
+[
+"Consolidat",
+"Comerç i consum",
+"PRODCOM EIP 2018 (productes industrials)",
+"Classificació de l'Enquesta Industrial de Productes 2018 (PRODCOM-EIP 2018)",
+"dtarq144",
+"Comerç i consum",
+"",
+"Institut d'Estadística de Catalunya (Idescat)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"21/04/2021",
+"21/04/2021",
+"PRODCOM_EIP_2018_prod_ind.xlsx",
+"PRODCOM_EIP_2018_prod_ind_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2018-productes-industrials-/3ggf-d6t2"
 ],
 [
 "Consolidat",
@@ -825,25 +861,25 @@
 "10/03/2021",
 "Nivells_Poblacionals.xlsx",
 "Nivells_Poblacionals_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nivells-poblacionals/67n6-5bpy"
 ],
 [
-"Pendent",
+"Consolidat",
 "Territori i paisatge. Urbanisme",
 "Nom de carrers de Catalunya",
-"Llistat de noms de via de Catalunya.",
+"Llistat de noms de via (carrers) associats a municipis de Catalunya.",
 "dtarq107",
 "Territori i paisatge. Urbanisme",
 "Administració Pública",
-"Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+"Institut Cartogràfic i Geològic de Catalunya (ICGC)",
 "Sota demanda",
 "Tabular",
 "Ús no restringit",
 "18/12/2019",
-"18/12/2019",
-"Codis_Territori_NomCarrers.xlsx",
-"Codis_Territori_NomCarrers_ATR.docx",
-""
+"21/04/2021",
+"Nom_carrers_Catalunya.xlsx",
+"Nom_carrers_Catalunya_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy"
 ],
 [
 "Consolidat",
@@ -961,12 +997,12 @@
 "dtarq105",
 "Territori i paisatge. Urbanisme",
 "Administració Pública",
-"Institut Cartogràfic i Geològic de Catalunya (icgc.cat)",
+"Institut Cartogràfic i Geològic de Catalunya (ICGC)",
 "Sota demanda",
 "Tabular",
 "Ús no restringit",
 "18/12/2019",
-"21/09/2020",
+"21/04/2021",
 "Codis_Territori_TipusVia.xlsx",
 "Codis_Territori_TipusVia_ATR.docx",
 "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw"
