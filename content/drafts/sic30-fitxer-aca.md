@@ -116,7 +116,7 @@ En aquest element hi contindrà el llistat de variables globals necessaris per l
    - **Maven**
       - **ARTIFACT_PATH**: Ruta al pom amb la definició del artefacte maven a publicar al Nexus. Si es vol publicar l'artefacte del pom pare el valor de la variable és ''
    - **Node**
-      - **ARTIFACT_PATH**: Ruta al contingut de la llibreria compilada a publicar al Nexus
+      - **ARTIFACT_PATH**: Ruta al contingut de l'artefacte node compilat a publicar al Nexus
 
 Exemple de llistat de variables per Openshift:
 
