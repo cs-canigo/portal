@@ -67,7 +67,7 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
 
 - **Bloc 1 – Principis de solucions escriptori del Lloc de Treball**: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn digital de treball.
 
-- **Bloc 2 – Principis d’Arquitectura del Lloc de Treball**: Principis establerts com específics de l’Arquitectura de Lloc de Treball, on es defineixen els dispositius, equipaments on premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.
+- **Bloc 2 – Principis d’Arquitectura del Lloc de Treball**: Principis establerts com específics de l’Arquitectura de Lloc de Treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.
 - **Bloc 3 – Principis d'Arquitectura de connectivitat**: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’Entorn Digital de Treball.
 
 &nbsp;
@@ -108,8 +108,8 @@ D’aquesta manera, els principis exposats en aquest apartat fan referencia a le
   * **4. On-premise**. Per a serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida. 
 * **0.12 Experiència digital d’usuari** *(obligatori)*. Tota solució implementada a l’entorn digital de treball ha d’estar orientada a satisfer uns requeriments d’usuari, tanmateix la facilitat d’ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d’usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents. Els factors d’experiència d'usuari com la interfície, mobilitat i els aspectes de col·laboració en el lloc de treball són una prioritat clau en el disseny de la solució. 
 * **0.13 Sostenibilitat** *(obligatori)*. Construir solucions més respectuoses amb el medi ambient  i més  sensibles amb l’impacte social, en el marc  de l’exhauriment de matèries primeres, els alts costos ambientals i energètics, l’obsolescència del maquinari i del programari, els impactes ambientals del reciclatge o de la fractura digital. Les propostes que tenen com a propòsit la sostenibilitat són les següents:
-	**Eficiència energètica**  L’adquisició i la gestió de l’equipament es realitzarà amb un enfocament d’estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar a la funcionalitat. 
-	**Durabilitat i reaprofitament**  Cal procurar que l’equipament sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l’adopció de solucions tecnològiques amb aquest propòsit. L’equipament serà reaprofitat si és possible i només comprats de nou si realment hi ha un requeriment que ho necessita.
+  * **Eficiència energètica**  L’adquisició i la gestió de l’equipament es realitzarà amb un enfocament d’estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar a la funcionalitat. 
+  * **Durabilitat i reaprofitament**  Cal procurar que l’equipament sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l’adopció de solucions tecnològiques amb aquest propòsit. L’equipament serà reaprofitat si és possible i només comprats de nou si realment hi ha un requeriment que ho necessita.
 
 &nbsp;
 &nbsp;
@@ -247,5 +247,4 @@ En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el
 * **3.2.1 Estabilitat** *(obligatori)*. Les solucions a aplicar en les xarxes de telecomunicacions haurien de ser solucions amb un cert recorregut, no és recomanable utilitzar solucions poc madures a nivell de producció. Encara que, en certes situacions s’avaluarà implementar solucions emergents.
 
 * **3.2.2 Minimitzar la dependència sobre els fabricants** *(obligatori)*. Cal evitar sempre que sigui possible les solucions propietàries, i maximitzar la compatibilitat amb la resta dels components i sistemes. Però, allunyant-nos de solucions massa heterogènies que puguin generar problemes de governança
-
 
