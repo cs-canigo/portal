@@ -1,7 +1,7 @@
 +++
 date        = "2021-04-08"
 title       = "SIC. Procés d'esborrat de binaris"
-description = "A partir del 20/04/2021 s'executa periòdicament un procés d'esborrat de binaris"
+description = "A partir del 21/04/2021 s'executa periòdicament un procés d'esborrat de binaris"
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
 #key         = "MAIG2021"
@@ -9,7 +9,7 @@ description = "A partir del 20/04/2021 s'executa periòdicament un procés d'esb
 
 El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors de lots d’aplicacions i CPD per al lliurament i
 descàrrega d’artefactes de cara al desplegament d’aplicacions.
-Amb l'objectiu de controlar i limitar l'ús de l'espai, a partir del 20/04/2021 es posa en servei un procés d'esborrat
+Amb l'objectiu de controlar i limitar l'ús de l'espai, a partir del 21/04/2021 es posa en servei un procés d'esborrat
 periòdic de manera que **únicament es respectaran les últimes 5 versions** repositades per codi d'aplicació i projecte;
 i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim any (365 dies).
 
