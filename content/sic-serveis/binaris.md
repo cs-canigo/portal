@@ -109,11 +109,14 @@ curl -X GET [ u user:pwd ]
 el següent enllaç: https://bin.sic.intranet.gencat.cat/binaris/
 </div>
 
-<!---
 ## Eliminació de binaris
-S'executa un procés diari nocturn d'esborrat de binaris de forma que **únicament es respectaran les últimes 5 versions** repositades per codi
-d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat pujades durant l'últim mes (30 dies). No està concebut, per tant, com un servei de custòdia permanent de binaris si no com un sistema d'intercanvi de binaris per al desplegament d'aplicacions.
---->
+
+Periòdicament s’executa un procés d'esborrat de binaris de manera que **únicament es respectaran les últimes 5 versions**
+repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat
+pujades durant l'últim any (365 dies).
+El Servei de Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi
+d'artefactes per al desplegament d'aplicacions.
+
 
 <br/><br/><br/>
 Podeu accedir al [**Material formatiu**](/related/sic/2.0/formacio-binaris-20.pdf). <br/>
