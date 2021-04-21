@@ -2,9 +2,9 @@
 date        = "2021-04-08"
 title       = "SIC. Procés d'esborrat de binaris"
 description = "A partir del 21/04/2021 s'executa periòdicament un procés d'esborrat de binaris"
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "MAIG2021"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "MAIG2021"
 +++
 
 El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors de lots d’aplicacions i CPD per al lliurament i
