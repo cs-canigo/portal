@@ -1,0 +1,127 @@
+{"data_entitats":[
+{
+"Estat":"Consolidat",
+"Ambit":"Administració pública",
+"Nom":"Secretaries",
+"Descripcio":"Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya",
+"Id":"dtarq103",
+"instancies":[
+		{"nom":"11_nom",
+		"descripcio":"11_descripció",
+		"promotor":"11_promotor",
+		"estat":"11_estat",
+		"creacio":"11_data_creacio",
+		"caducitat":"11_data_caducitat",
+		"fitxer_xls":"11_fitxer_xls",
+		"fitxer_doc":"11_fitxer_doc",
+		"url_d0":"11_dades_obertes"
+		},
+		{"nom":"12_nom",
+		"descripcio":"12_descripció",
+		"promotor":"12_promotor",
+		"estat":"12_estat",
+		"creacio":"12_data_creacio",
+		"caducitat":"12_data_caducitat",
+		"fitxer_xls":"12_fitxer_xls",
+		"fitxer_doc":"12_fitxer_doc",
+		"url_d0":"12_dades_obertes"
+		},
+		{"nom":"13_nom",
+		"descripcio":"13_descripció",
+		"promotor":"13_promotor",
+		"estat":"13_estat",
+		"creacio":"13_data_creacio",
+		"caducitat":"13_data_caducitat",
+		"fitxer_xls":"13_fitxer_xls",
+		"fitxer_doc":"13_fitxer_doc",
+		"url_d0":"13_dades_obertes"
+		}
+	]
+},
+{
+"Estat":"Consolidat",
+"Ambit":"Territori i paisatge. Urbanisme",
+"Nom":"Tipus de via",
+"Descripcio":"Llistat de tipologies d'espais aptes a transitar-hi.",
+"Id":"dtarq105",
+"instancies":[
+		{"nom":"21_nom",
+		"descripcio":"21_descripció",
+		"promotor":"21_promotor",
+		"estat":"21_estat",
+		"creacio":"21_data_creacio",
+		"caducitat":"21_data_caducitat",
+		"fitxer_xls":"21_fitxer_xls",
+		"fitxer_doc":"21_fitxer_doc",
+		"url_d0":"21_dades_obertes"
+		},
+		{"nom":"22_nom",
+		"descripcio":"22_descripció",
+		"promotor":"22_promotor",
+		"estat":"22_estat",
+		"creacio":"22_data_creacio",
+		"caducitat":"22_data_caducitat",
+		"fitxer_xls":"22_fitxer_xls",
+		"fitxer_doc":"22_fitxer_doc",
+		"url_d0":"22_dades_obertes"
+		}
+	]
+},
+{
+"Estat":"Consolidat",
+"Ambit":"Administració pública",
+"Nom":"Agrupació temàtica de serveis al ciutadà",
+"Descripcio":"Llistat de temes o assumptes en que es poden agrupar els serveis que s'ofereixen al ciutadà",
+"Id":"dtarq141",
+"instancies":[
+		{"nom":"31_nom",
+		"descripcio":"31_descripció",
+		"promotor":"31_promotor",
+		"estat":"31_estat",
+		"creacio":"31_data_creacio",
+		"caducitat":"31_data_caducitat",
+		"fitxer_xls":"31_fitxer_xls",
+		"fitxer_doc":"31_fitxer_doc",
+		"url_d0":"31_dades_obertes"
+		}
+	]
+},
+{
+"Estat":"Pendent",
+"Ambit":"Territori i paisatge. Urbanisme",
+"Nom":"Tipus Unitat Orgànica",
+"Descripcio":"Llista de tipologies d'unitats orgàniques de Catalunya.",
+"Id":"dtarq83",
+"instancies":[
+		{"nom":"41_nom",
+		"descripcio":"41_descripció",
+		"promotor":"41_promotor",
+		"estat":"41_estat",
+		"creacio":"41_data_creacio",
+		"caducitat":"41_data_caducitat",
+		"fitxer_xls":"41_fitxer_xls",
+		"fitxer_doc":"41_fitxer_doc",
+		"url_d0":"41_dades_obertes"
+		}
+	]
+},
+{
+"Estat":"Pendent",
+"Ambit":"Territori i paisatge. Urbanisme",
+"Nom":"Unitat Orgànica",
+"Descripcio":"Llista d'unitats orgàniques indicant la seva tipologia.",
+"Id":"dtarq84",
+"instancies":[
+		{"nom":"51_nom",
+		"descripcio":"51_descripció",
+		"promotor":"51_promotor",
+		"estat":"51_estat",
+		"creacio":"51_data_creacio",
+		"caducitat":"51_data_caducitat",
+		"fitxer_xls":"51_fitxer_xls",
+		"fitxer_doc":"51_fitxer_doc",
+		"url_d0":"51_dades_obertes"
+		}
+	]
+}
+]}
