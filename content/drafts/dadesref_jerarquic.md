@@ -184,12 +184,13 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 14_14
+####  Dades de referència d'obligat compliment 14_14_2
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
+                <th></th>
                 <th>Nivell Validació</th>
                 <th>Grup</th>
                 <th>Entitat</th>
