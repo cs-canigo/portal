@@ -104,7 +104,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { "data": "data_entitats.Estat" }, { "data": "data_entitats.Ambit" }, { "data": "data_entitats.Nom" }, { "data": "data_entitats.Descripcio" }, { "data": "data_entitats.Id" }, { "data": "" }
+          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 4 }, { "data": "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
