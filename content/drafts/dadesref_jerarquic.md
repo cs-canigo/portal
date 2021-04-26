@@ -85,7 +85,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": '../da/entitats.json',
+      "ajax": '../da/entitats_instancies.json',
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -106,7 +106,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
+          { "data": "Estat" }, { "data": "Ambit" }, { "data": "Nom" }, { "data": "Descripcio" }, { "data": "Id" }, { "data": "" }, { "data": "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
@@ -142,7 +142,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 
+####  Dades de referència d'obligat compliment 222222222
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
