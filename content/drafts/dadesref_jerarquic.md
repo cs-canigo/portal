@@ -79,65 +79,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 }
 
 </style>
-<script type="text/javascript">
-  $(document).ready(function() {  
-
-    var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": './da/entitats_instancies.json',
-	  "deferRender": true,
-      "bFilter": true,
-      "autoWidth": true,
-      "scrollY": "450px",
-      "scrollCollapse": true,
-      "paging": false,
-      "ordering": false,
-      //"pageLength": 10,
-      //"order": [[ 0, 'asc' ]],
-      //"info":     false,
-	  "language":{
-                "search" : "<strong>Cerca:</strong> ",
-                "infoEmpty": "No hi ha entitats",
-                "zeroRecords": "No s'han trobat entitats",
-//                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
-//                "infoFiltered":   "",
-                "infoFiltered":   "_END_ entitats",
-                "info": ""
-        },
-	  "columns": [
-          { "data": "Estat" }, { "data": "Ambit" }, { "data": "Nom" }, { "data": "Descripcio" }, { "data": "Id" }, { "data": "" }
-           ],
-      "columnDefs": [ 
-	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
-			],
-       "searchCols": [
-                { "search": "Consolidat" }, null,  null, null, null, null, null
-		  ]
-    } );
-	
-    $('#tabvalidades tbody').on('click', 'button', function () {
-        //var data = tcons.row( this ).data();
-        var data = tcons.row( $(this).parents('tr') ).data();
-        
-        //console.log(data);
-        //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("save data");
-        console.log(data);
-        localStorage.setItem('data', JSON.stringify(data));
-
-        window.location = "../../da/detalldadesref";
-    } );
-
-  
-    $('.dataTables_filter').css('float','right');  
-    $('.dataTables_filter').css('padding-right','20px');  
-    $('.dataTables_filter').css('padding-bottom','10px');
-	
-	$('.dataTables_info').css('padding-top','20px'); 
-	
-    $('article table').css('margin','0');
-    
-});
-</script>
 
 <br/><br/>
 ####  Dades de referència d'obligat compliment 
