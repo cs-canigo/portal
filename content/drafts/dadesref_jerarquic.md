@@ -157,7 +157,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
     // Add event listener for opening and closing details
     $('#example tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
-        var row = table.row( tr );
+        var row = tcons.row( tr );
  
         if ( row.child.isShown() ) {
             // This row is already open - close it
@@ -184,7 +184,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 14
+####  Dades de referència d'obligat compliment 14_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
