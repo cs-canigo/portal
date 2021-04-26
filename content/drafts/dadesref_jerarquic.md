@@ -78,6 +78,14 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   top:1px;
 }
 
+td.details-control {
+    background: url('../da/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../da/details_close.png') no-repeat center center;
+}
+
 </style>
 
 
@@ -133,8 +141,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
 			{ "data": "Id" },
-			{ "data": "" },
-			{ "data": "" }
+			{ "data": null },
+			{ "data": null }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
@@ -184,10 +192,10 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 14_14_28
+####  Dades de referència d'obligat compliment 2_14
 
 <div style="width:100%; padding-left:30px">
-<table id="tabvalidades" class="display" style="width:100%">
+<table id="tabvalidades" class="hover" style="width:100%">
         <thead>
             <tr>
                 <th></th>
