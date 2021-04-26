@@ -79,11 +79,13 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 }
 
 </style>
+
+
 <script type="text/javascript">
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
-      "ajax": '../da/entitats_instancies.json',
+      "ajax": '../da/entitats.json',
 	  "deferRender": true,
       "bFilter": true,
       "autoWidth": true,
@@ -104,7 +106,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 4 }, { "data": "" }
+          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
@@ -124,7 +126,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
         console.log(data);
         localStorage.setItem('data', JSON.stringify(data));
 
-        window.location = "../../da/detalldadesref";
+        window.location = "../da/detallrefdades";
     } );
 
   
@@ -150,7 +152,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
-                <th>Idint</th>
+                <th>Data publicació</th>
+                <th>Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
