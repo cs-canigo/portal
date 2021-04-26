@@ -79,7 +79,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 }
 
 </style>
-
 <script type="text/javascript">
   $(document).ready(function() {  
 
@@ -105,7 +104,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "info": ""
         },
 	  "columns": [
-          { "data": "Estat" }, { "data": "Ambit" }, { "data": "Nom" }, { "data": "Descripcio" }, { "data": "Id" }, { "data": "" }
+          { "data": "data_entitats.Estat" }, { "data": "data_entitats.Ambit" }, { "data": "data_entitats.Nom" }, { "data": "data_entitats.Descripcio" }, { "data": "data_entitats.Id" }, { "data": "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
