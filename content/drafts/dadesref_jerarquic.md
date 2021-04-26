@@ -82,6 +82,24 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 
 
 <script type="text/javascript">
+
+	function format_LAA ( d ) {
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
+			'<tr>'+
+				'<td>Full name:</td>'+
+				'<td>'+d.Id+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Extension number:</td>'+
+				'<td>'+d.Id+'</td>'+
+			'</tr>'+
+			'<tr>'+
+				'<td>Extra info:</td>'+
+				'<td>And any further details here (images etc)...</td>'+
+			'</tr>'+
+		'</table>';
+	}
+
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
@@ -100,20 +118,27 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-//                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
-//                "infoFiltered":   "",
                 "infoFiltered":   "_END_ entitats",
                 "info": ""
         },
 	  "columns": [
-          { "data": "Estat" }, { "data": "Ambit" }, { "data": "Nom" }, { "data": "Descripcio" }, { "data": "Id" }, { "data": "" }, { "data": "" }
+			{
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+			{ "data": "Estat" },
+			{ "data": "Ambit" },
+			{ "data": "Nom" },
+			{ "data": "Descripcio" },
+			{ "data": "Id" },
+			{ "data": "" },
+			{ "data": "" }
            ],
       "columnDefs": [ 
 	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
-			],
-       "searchCols": [
-                { "search": "Consolidat" }, null,  null, null, null, null, null
-		  ]
+			]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
@@ -129,6 +154,23 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
         window.location = "../da/detallrefdades";
     } );
 
+    // Add event listener for opening and closing details
+    $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( format_LAA(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+	
   
     $('.dataTables_filter').css('float','right');  
     $('.dataTables_filter').css('padding-right','20px');  
@@ -142,7 +184,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 222222222
+####  Dades de referència d'obligat compliment 14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
