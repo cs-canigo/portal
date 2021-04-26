@@ -155,7 +155,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
     } );
 
     // Add event listener for opening and closing details
-    $('#example tbody').on('click', 'td.details-control', function () {
+    $('#tabvalidades tbody').on('click', 'td.details-control', function () {
         var tr = $(this).closest('tr');
         var row = tcons.row( tr );
  
