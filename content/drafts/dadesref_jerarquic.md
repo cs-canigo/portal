@@ -81,6 +81,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 td.details-control {
     background: url('../da/details_open.png') no-repeat center center;
     cursor: pointer;
+	padding-left:5px;
+	padding-right:5px;
 }
 tr.shown td.details-control {
     background: url('../da/details_close.png') no-repeat center center;
@@ -92,19 +94,31 @@ tr.shown td.details-control {
 <script type="text/javascript">
 
 	function format_LAA ( d ) {
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
-			'<tr>'+
-				'<td>Full name:</td>'+
-				'<td>'+d.Id+'</td>'+
-			'</tr>'+
-			'<tr>'+
-				'<td>Extension number:</td>'+
-				'<td>'+d.Id+'</td>'+
-			'</tr>'+
-			'<tr>'+
-				'<td>Extra info:</td>'+
-				'<td>And any further details here (images etc)...</td>'+
-			'</tr>'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px; font-size:10px">'+
+			'<thead>'+
+				'<tr>'+
+					'<th>Nom</th>'+
+					'<th>Descripcio</th>'+
+					'<th>Promotor</th>'+
+					'<th>Estat</th>'+
+					'<th>Creada</th>'+
+					'<th>Modificada</th>'+
+					'<th>Caducitat</th>'+
+					'<th>Detall</th>'+					
+			    '</tr>'+
+			'</thead>'+
+			'<tbody>'+
+				'<tr>'+
+					'<td>'+d.instancies.nom+'</td>'+
+					'<td>'+d.instancies.descripcio+'</td>'+
+					'<td>'+d.instancies.promotor+'</td>'+
+					'<td>'+d.instancies.estat+'</td>'+
+					'<td>'+d.instancies.creacio+'</td>'+
+					'<td>'+d.instancies.caducitat+'</td>'+
+					'<td>'+d.instancies.caducitat+'</td>'+
+					'<td><input type='button'>Detall</input></td>'+
+				'</tr>'+
+			'</tbody>'+
 		'</table>';
 	}
 
