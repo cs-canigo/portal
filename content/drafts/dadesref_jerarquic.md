@@ -94,6 +94,22 @@ tr.shown td.details-control {
 <script type="text/javascript">
 
 	function format_LAA ( d ) {
+	    var vRowInstancia;
+		
+		vRowInstancia='';
+		for(var i=0,z=d.instancies.length;i<z;i++){
+			vRowInstancia=vRowInstancia+'<tr>'+
+					'<td>'+d.instancies[i].nom+'</td>'+
+					'<td>'+d.instancies[i].descripcio+'</td>'+
+					'<td>'+d.instancies[i].promotor+'</td>'+
+					'<td>'+d.instancies[i].estat+'</td>'+
+					'<td>'+d.instancies[i].creacio+'</td>'+
+					'<td></td>'+
+					'<td>'+d.instancies[i].caducitat+'</td>'+
+					'<td></td>'+
+				'</tr>';
+		}
+		
 		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
 			'<thead>'+
 				'<tr>'+
@@ -102,23 +118,12 @@ tr.shown td.details-control {
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Creada</th>'+
-					'<th>Modificada</th>'+
+					'<th>Mod</th>'+
 					'<th>Caducitat</th>'+
 					'<th>Detall</th>'+					
 			    '</tr>'+
 			'</thead>'+
-			'<tbody>'+
-				'<tr>'+
-					'<td>nom</td>'+
-					'<td>desc</td>'+
-					'<td>promotor</td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-				'</tr>'+
-			'</tbody>'+
+			'<tbody>'+vRowInstancia+'</tbody>'+
 		'</table>';
 	}
 
@@ -206,7 +211,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 2_14
+####  Dades de referència d'obligat compliment 3_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
