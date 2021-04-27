@@ -179,13 +179,13 @@ tr.shown td.details-control {
         console.log(data);
 		
 		var tr = $(this).closest('tr');
-		var row = tcons.row( tr )
+		var row = tcons.row( tr );
         console.log("save data 222");
         console.log(row.data());		
 
 		var tab = $(this).parent('table');
 		var tr = tab.parent('tr');
-		var row = tcons.row( tr )
+		var row = tcons.row( tr );
         console.log("save data 333");
         console.log(row.data());	
 
