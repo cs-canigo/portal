@@ -103,14 +103,14 @@ tr.shown td.details-control {
 					'<td>'+d.instancies[i].descripcio+'</td>'+
 					'<td>'+d.instancies[i].promotor+'</td>'+
 					'<td>'+d.instancies[i].estat+'</td>'+
-					'<td>'+d.instancies[i].creacio+'</td>'+
-					'<td></td>'+
-					'<td>'+d.instancies[i].caducitat+'</td>'+
-					'<td></td>'+
+					'<td>'+d.instancies[i].creada+'</td>'+
+					'<td>'+d.instancies[i].obsoleta+'</td>'+
+					'<td>'+d.instancies[i].caducada+'</td>'+
+					'<td><button class=\"myButton\">Detall</button></td>'+
 				'</tr>';
 		}
 		
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:10px;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
@@ -118,8 +118,8 @@ tr.shown td.details-control {
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Creada</th>'+
-					'<th>Mod</th>'+
-					'<th>Caducitat</th>'+
+					'<th>Obsoleta</th>'+
+					'<th>Caducada</th>'+
 					'<th>Detall</th>'+					
 			    '</tr>'+
 			'</thead>'+
@@ -211,7 +211,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 4_14
+####  Dades de referència d'obligat compliment 5_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
