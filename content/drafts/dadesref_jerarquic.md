@@ -175,6 +175,7 @@ tr.shown td.details-control {
     $('#tabvalidades tbody').on('click', 'button', function () {
         //var data = tcons.row( this ).data();
         var data = tcons.row( $(this).parents('tr') ).data();
+		data= tcons.row( $(this).parents('tr').prev() ).data();
         
         //console.log(data);
         //alert( 'You clicked on '+data[0]+'\'s row' );
