@@ -81,8 +81,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 td.details-control {
     background: url('../da/details_open.png') no-repeat center center;
     cursor: pointer;
-	padding-left:5px;
-	padding-right:5px;
+	padding-left:10px;
+	padding-right:10px;
 }
 tr.shown td.details-control {
     background: url('../da/details_close.png') no-repeat center center;
@@ -110,11 +110,11 @@ tr.shown td.details-control {
 				'</tr>';
 		}
 		
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:10px;">'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:11px;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
-					'<th>Descripcio</th>'+
+					'<th style="width:30%">Descripcio</th>'+
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Creada</th>'+
@@ -160,12 +160,12 @@ tr.shown td.details-control {
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
 			{ "data": "Id" },
-			{ "data": null },
 			{ "data": null }
+		//	,{ "data": null }
            ],
-      "columnDefs": [ 
-	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
-			]
+      //"columnDefs": [ 
+	  //       {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
+	  // 		]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
@@ -224,7 +224,6 @@ tr.shown td.details-control {
                 <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
                 <th>Darrera actualització</th>
-                <th>Detall</th>
             </tr>
         </thead>
     </table>
