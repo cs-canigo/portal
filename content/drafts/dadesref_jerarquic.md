@@ -177,6 +177,12 @@ tr.shown td.details-control {
         //alert( 'You clicked on '+data[0]+'\'s row' );
         console.log("save data");
         console.log(data);
+		
+		var tr = $(this).closest('tr');
+		var row = tcons.row( tr )
+        console.log("save data 222");
+        console.log(row.data());		
+
         localStorage.setItem('data', JSON.stringify(data));
 
         window.location = "../da/detallrefdades";
@@ -212,7 +218,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 6_14
+####  Dades de referència d'obligat compliment 7_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
