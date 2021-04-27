@@ -188,7 +188,7 @@ tr.shown td.details-control {
 
 		var tab = $(this).parent('table');
 		var tr = tab.parent('tr');
-		tr=$tr.prev();
+		tr=tr.prev();
 		var row = tcons.row( tr );
         console.log("save data 333");
         console.log(row.data());	
@@ -228,7 +228,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 10_14
+####  Dades de referència d'obligat compliment 11_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
