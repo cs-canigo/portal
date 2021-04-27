@@ -81,8 +81,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 td.details-control {
     background: url('../da/details_open.png') no-repeat center center;
     cursor: pointer;
-	padding-left:10px;
-	padding-right:10px;
+	padding-left:15px;
+	padding-right:15px;
 }
 tr.shown td.details-control {
     background: url('../da/details_close.png') no-repeat center center;
@@ -106,11 +106,11 @@ tr.shown td.details-control {
 					'<td>'+d.instancies[i].creada+'</td>'+
 					'<td>'+d.instancies[i].obsoleta+'</td>'+
 					'<td>'+d.instancies[i].caducada+'</td>'+
-					'<td><button class=\"myButton\">Detall</button></td>'+
+					'<td><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
 		
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:11px;">'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:11px;width:100%;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
@@ -120,7 +120,7 @@ tr.shown td.details-control {
 					'<th>Creada</th>'+
 					'<th>Obsoleta</th>'+
 					'<th>Caducada</th>'+
-					'<th>Detall</th>'+					
+					'<th></th>'+					
 			    '</tr>'+
 			'</thead>'+
 			'<tbody>'+vRowInstancia+'</tbody>'+
@@ -162,7 +162,8 @@ tr.shown td.details-control {
 			{ "data": "Id" },
 			{ "data": null }
 		//	,{ "data": null }
-           ],
+           ]
+      //     ],
       //"columnDefs": [ 
 	  //       {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
 	  // 		]
@@ -211,7 +212,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 5_14
+####  Dades de referència d'obligat compliment 6_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
