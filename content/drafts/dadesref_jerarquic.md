@@ -81,8 +81,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 td.details-control {
     background: url('../da/details_open.png') no-repeat center center;
     cursor: pointer;
-	padding-left:5px;
-	padding-right:5px;
+	padding-left:10px;
+	padding-right:10px;
 }
 tr.shown td.details-control {
     background: url('../da/details_close.png') no-repeat center center;
@@ -94,31 +94,36 @@ tr.shown td.details-control {
 <script type="text/javascript">
 
 	function format_LAA ( d ) {
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
+	    var vRowInstancia;
+		
+		vRowInstancia='';
+		for(var i=0,z=d.instancies.length;i<z;i++){
+			vRowInstancia=vRowInstancia+'<tr>'+
+					'<td>'+d.instancies[i].nom+'</td>'+
+					'<td>'+d.instancies[i].descripcio+'</td>'+
+					'<td>'+d.instancies[i].promotor+'</td>'+
+					'<td>'+d.instancies[i].estat+'</td>'+
+					'<td>'+d.instancies[i].creada+'</td>'+
+					'<td>'+d.instancies[i].obsoleta+'</td>'+
+					'<td>'+d.instancies[i].caducada+'</td>'+
+					'<td><button class=\"myButton\">Detall</button></td>'+
+				'</tr>';
+		}
+		
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:11px;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
-					'<th>Descripcio</th>'+
+					'<th style="width:30%">Descripcio</th>'+
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Creada</th>'+
-					'<th>Modificada</th>'+
-					'<th>Caducitat</th>'+
+					'<th>Obsoleta</th>'+
+					'<th>Caducada</th>'+
 					'<th>Detall</th>'+					
 			    '</tr>'+
 			'</thead>'+
-			'<tbody>'+
-				'<tr>'+
-					'<td>nom</td>'+
-					'<td>desc</td>'+
-					'<td>promotor</td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-					'<td></td>'+
-				'</tr>'+
-			'</tbody>'+
+			'<tbody>'+vRowInstancia+'</tbody>'+
 		'</table>';
 	}
 
@@ -155,12 +160,12 @@ tr.shown td.details-control {
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
 			{ "data": "Id" },
-			{ "data": null },
 			{ "data": null }
+		//	,{ "data": null }
            ],
-      "columnDefs": [ 
-	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
-			]
+      //"columnDefs": [ 
+	  //       {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
+	  // 		]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
@@ -206,7 +211,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 2_14
+####  Dades de referència d'obligat compliment 5_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
@@ -219,7 +224,6 @@ tr.shown td.details-control {
                 <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
                 <th>Darrera actualització</th>
-                <th>Detall</th>
             </tr>
         </thead>
     </table>
