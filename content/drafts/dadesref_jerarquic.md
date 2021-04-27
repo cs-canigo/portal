@@ -59,7 +59,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   color:#ffffff;
   font-family:Arial;
   font-size:14px;
-  padding:0px 40px;
+  padding:0px 20px;
   text-decoration:none;
   text-shadow:0px 1px 0px #283966;
 }
@@ -90,6 +90,9 @@ tr.shown td.details-control {
 
 </style>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 
@@ -185,6 +188,7 @@ tr.shown td.details-control {
 
 		var tab = $(this).parent('table');
 		var tr = tab.parent('tr');
+		tr=$tr.prev();
 		var row = tcons.row( tr );
         console.log("save data 333");
         console.log(row.data());	
@@ -224,7 +228,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 8_14
+####  Dades de referència d'obligat compliment 10_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
@@ -245,8 +249,3 @@ tr.shown td.details-control {
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-  
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
