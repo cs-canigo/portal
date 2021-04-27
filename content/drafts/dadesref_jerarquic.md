@@ -94,7 +94,7 @@ tr.shown td.details-control {
 <script type="text/javascript">
 
 	function format_LAA ( d ) {
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px; font-size:10px">'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:50px;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
@@ -109,14 +109,14 @@ tr.shown td.details-control {
 			'</thead>'+
 			'<tbody>'+
 				'<tr>'+
-					'<td>'+d.instancies.nom+'</td>'+
-					'<td>'+d.instancies.descripcio+'</td>'+
-					'<td>'+d.instancies.promotor+'</td>'+
-					'<td>'+d.instancies.estat+'</td>'+
-					'<td>'+d.instancies.creacio+'</td>'+
-					'<td>'+d.instancies.caducitat+'</td>'+
-					'<td>'+d.instancies.caducitat+'</td>'+
-					'<td><input type='button'>Detall</input></td>'+
+					'<td>nom</td>'+
+					'<td>desc</td>'+
+					'<td>promotor</td>'+
+					'<td></td>'+
+					'<td></td>'+
+					'<td></td>'+
+					'<td></td>'+
+					'<td></td>'+
 				'</tr>'+
 			'</tbody>'+
 		'</table>';
