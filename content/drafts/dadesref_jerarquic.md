@@ -183,6 +183,12 @@ tr.shown td.details-control {
         console.log("save data 222");
         console.log(row.data());		
 
+		var tab = $(this).closest('table');
+		var tr = tab.closest('tr');
+		var row = tcons.row( tr )
+        console.log("save data 333");
+        console.log(row.data());	
+
         localStorage.setItem('data', JSON.stringify(data));
 
         window.location = "../da/detallrefdades";
