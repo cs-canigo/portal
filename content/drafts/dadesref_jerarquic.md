@@ -211,7 +211,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 3_14
+####  Dades de referència d'obligat compliment 4_14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
