@@ -1,136 +1,117 @@
 {"data": [
-{
-"Estat": "Consolidat",
-"Ambit": "Administració pública",
-"Nom": "Secretaries",
-"Descripcio": "Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya",
-"Id": "dtarq103",
-"instancies": [
-		{"nom": "11_nom",
-		"descripcio": "11_descripció",
-		"promotor": "11_promotor",
-		"estat": "11_estat",
-		"creada": "11_data_creacio",
-		"obsoleta": "11_data_obsoleta",
-		"caducada": "11_data_caducitat",
-		"fitxer_xls": "11_fitxer_xls",
-		"fitxer_doc": "11_fitxer_doc",
-		"url_d0": "11_dades_obertes"
-		},
-		{"nom": "12_nom",
-		"descripcio": "12_descripció",
-		"promotor": "12_promotor",
-		"estat": "12_estat",
-		"creada": "12_data_creacio",
-		"obsoleta": "12_data_obsoleta",
-		"caducada": "12_data_caducitat",
-		"fitxer_xls": "12_fitxer_xls",
-		"fitxer_doc": "12_fitxer_doc",
-		"url_d0": "12_dades_obertes"
-		},
-		{"nom": "13_nom",
-		"descripcio": "13_descripció",
-		"promotor": "13_promotor",
-		"estat": "13_estat",
-		"creada": "13_data_creacio",
-		"obsoleta": "13_data_obsoleta",
-		"caducada": "13_data_caducitat",
-		"fitxer_xls": "13_fitxer_xls",
-		"fitxer_doc": "13_fitxer_doc",
-		"url_d0": "13_dades_obertes"
-		}
-	]
-},
-{
-"Estat": "Consolidat",
-"Ambit": "Territori i paisatge. Urbanisme",
-"Nom": "Tipus de via",
-"Descripcio": "Llistat de tipologies d'espais aptes a transitar-hi.",
-"Id": "dtarq105",
-"instancies": [
-		{"nom": "21_nom",
-		"descripcio": "21_descripció",
-		"promotor": "21_promotor",
-		"estat": "21_estat",
-		"creada": "21_data_creacio",
-		"obsoleta": "21_data_obsoleta",
-		"caducada": "21_data_caducitat",
-		"fitxer_xls": "21_fitxer_xls",
-		"fitxer_doc": "21_fitxer_doc",
-		"url_d0": "21_dades_obertes"
-		},
-		{"nom": "22_nom",
-		"descripcio": "22_descripció",
-		"promotor": "22_promotor",
-		"estat": "22_estat",
-		"creada": "22_data_creacio",
-		"obsoleta": "22_data_obsoleta",
-		"caducada": "22_data_caducitat",
-		"fitxer_xls": "22_fitxer_xls",
-		"fitxer_doc": "22_fitxer_doc",
-		"url_d0": "22_dades_obertes"
-		}
-	]
-},
-{
-"Estat": "Consolidat",
-"Ambit": "Administració pública",
-"Nom": "Agrupació temàtica de serveis al ciutadà",
-"Descripcio": "Llistat de temes o assumptes en que es poden agrupar els serveis que s'ofereixen al ciutadà",
-"Id": "dtarq141",
-"instancies": [
-		{"nom": "31_nom",
-		"descripcio": "31_descripció",
-		"promotor": "31_promotor",
-		"estat": "31_estat",
-		"creada": "31_data_creacio",
-		"obsoleta": "31_data_obsoleta",
-		"caducada": "31_data_caducitat",
-		"fitxer_xls": "31_fitxer_xls",
-		"fitxer_doc": "31_fitxer_doc",
-		"url_d0": "31_dades_obertes"
-		}
-	]
-},
-{
-"Estat": "Pendent",
-"Ambit": "Territori i paisatge. Urbanisme",
-"Nom": "Tipus Unitat Orgànica",
-"Descripcio": "Llista de tipologies d'unitats orgàniques de Catalunya.",
-"Id": "dtarq83",
-"instancies": [
-		{"nom": "41_nom",
-		"descripcio": "41_descripció",
-		"promotor": "41_promotor",
-		"estat": "41_estat",
-		"creada": "41_data_creacio",
-		"obsoleta": "41_data_obsoleta",
-		"caducada": "41_data_caducitat",
-		"fitxer_xls": "41_fitxer_xls",
-		"fitxer_doc": "41_fitxer_doc",
-		"url_d0": "41_dades_obertes"
-		}
-	]
-},
-{
-"Estat": "Pendent",
-"Ambit": "Territori i paisatge. Urbanisme",
-"Nom": "Unitat Orgànica",
-"Descripcio": "Llista d'unitats orgàniques indicant la seva tipologia.",
-"Id": "dtarq84",
-"instancies": [
-		{"nom": "51_nom",
-		"descripcio": "51_descripció",
-		"promotor": "51_promotor",
-		"estat": "51_estat",
-		"creada": "51_data_creacio",
-		"obsoleta": "51_data_obsoleta",
-		"caducada": "51_data_caducitat",
-		"fitxer_xls": "51_fitxer_xls",
-		"fitxer_doc": "51_fitxer_doc",
-		"url_d0": "51_dades_obertes"
-		}
-	]
-}
-]
+{"Classificacio": "Consolidat","Ambit": "Administració pública"
+,"Nom": "SECRETARIES"
+,"Descripcio": "Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya"
+,"Id": "103715"
+,"Publicacio": "20/01/2021"
+,"Actualitzacio": "10/03/2021"
+,"instancies": [
+          {"nom": "V02"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Gener 2021). Obsoleta"
+           ,"estat": "Obsoleta"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/01/2021"
+           ,"obsoleta": "10/03/2021"
+           ,"caducada": "10/03/2021"
+           ,"fitxer_xls": "Secretaries.xlsx"
+           ,"fitxer_doc": "Secretaries_ATR.docx"
+          ,"url_DO": ""
+		  }
+		  ,{"nom": "V03"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Gener 2021) [2021-03-10] S'ha eliminat un valor de la versió anterior."
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "10/03/2021"
+           ,"obsoleta": ""
+           ,"caducada": ""
+           ,"fitxer_xls": "Secretaries.xlsx"
+           ,"fitxer_doc": "Secretaries_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g"
+  } ] }
+  
+,{"Classificacio": "Consolidat","Ambit": "Territori i paisatge. Urbanisme"
+,"Nom": "TIPUS_VIA"
+,"Descripcio": "Llistat de tipologies d'espais aptes a transitar-hi."
+,"Id": "207466"
+,"Publicacio": "23/09/2020"
+,"Actualitzacio": "21/04/2021"
+,"instancies": [
+          {"nom": "V02"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Setembre 2020)"
+           ,"estat": "Obsoleta"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "23/09/2020"
+           ,"obsoleta": "21/04/2021"
+           ,"caducada": "21/04/2021"
+           ,"fitxer_xls": "Codis_Territori_TipusVia.xlsx"
+           ,"fitxer_doc": "Codis_Territori_TipusVia_ATR.docx"
+          ,"url_DO": ""
+          },
+          {"nom": "V03"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Setembre 2020. [2021-04-21] S'incorpora valor Eix."
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "21/04/2021"
+           ,"obsoleta": ""
+           ,"caducada": ""
+           ,"fitxer_xls": "Codis_Territori_TipusVia.xlsx"
+           ,"fitxer_doc": "Codis_Territori_TipusVia_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw"
+  } ] }
+,{"Classificacio": "Consolidat","Ambit": "Territori i paisatge. Urbanisme"
+,"Nom": "COMARQUES DE CATALUNYA"
+,"Descripcio": "Llista de les comarques de Catalunya i Aran."
+,"Id": "12"
+,"Publicacio": "20/04/2020"
+,"Actualitzacio": "20/04/2020"
+,"instancies": [
+          {"nom": "V02"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Maig 2020)"
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/04/2020"
+           ,"obsoleta": ""
+           ,"caducada": ""
+           ,"fitxer_xls": "Codis_Territori_Comarques_Catalunya.xlsx"
+           ,"fitxer_doc": "Codis_Territori_Comarques_Catalunya_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Comarques-Catalunya-i-Aran/gsjn-sema"
+  } ] }
+,{"Classificacio": "Consolidat","Ambit": "Territori i paisatge. Urbanisme"
+,"Nom": "PROVINCIES"
+,"Descripcio": "Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen."
+,"Id": "18"
+,"Publicacio": "20/04/2020"
+,"Actualitzacio": "20/04/2020"
+,"instancies": [
+          {"nom": "V02"
+           ,"descripcio": "Versió acordada CTTI i OIAD (Maig 2020)"
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/04/2020"
+           ,"obsoleta": ""
+           ,"caducada": ""
+           ,"fitxer_xls": "Codis_Territori_Provincies.xlsx"
+           ,"fitxer_doc": "Codis_Territori_Provincies_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Prov%C3%ADncies-d-Espanya/wkyq-jzxq"
+  } ] }
+  
+  ]
 }

@@ -1,5 +1,5 @@
 +++
-date        = "2021-04-25"
+date        = "2021-04-28"
 title       = "Dades de Referència Test Instancies"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -59,7 +59,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   color:#ffffff;
   font-family:Arial;
   font-size:14px;
-  padding:0px 20px;
+  padding:0px 25px;
   text-decoration:none;
   text-shadow:0px 1px 0px #283966;
 }
@@ -158,12 +158,12 @@ tr.shown td.details-control {
                 "data":           null,
                 "defaultContent": ''
             },
-			{ "data": "Estat" },
+            { "data": "Classificacio" },
 			{ "data": "Ambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
-			{ "data": "Id" },
-			{ "data": null }
+            { "data": "Publicacio" },
+            { "data": "Actualitzacio" }
 		//	,{ "data": null }
            ]
       //     ],
@@ -173,30 +173,25 @@ tr.shown td.details-control {
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
-        //var data = tcons.row( this ).data();
-        var data = tcons.row( $(this).parents('tr') ).data();
-		data= tcons.row( $(this).parents('tr').prev() ).data();
-        
-        //console.log(data);
-        //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("save data");
-        console.log(data);
+        //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
+	    var $tr = $(this).closest('tr');
+	    var posicio = $tr.index();
+        console.log("posicio: " + posicio);  //es mostra el resultat en el log - Debug
+
 		
-		var tr = $(this).closest('tr');
-		var row = tcons.row( tr );
-        console.log("save data 222");
-        console.log(row.data());		
-
-		var tab = $(this).parent('table');
-		var tr = tab.parent('tr');
-		tr=tr.prev();
-		var row = tcons.row( tr );
-        console.log("save data 333");
-        console.log(row.data());	
-
+        //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
+	    var data = tcons.row( $(this).parents('tr') ).data();
+        data= tcons.row( $(this).parents('tr').prev() ).data();
+        //alert( 'You clicked on '+data[0]+'\'s row' );
+        console.log("data: "); //es mostra el resultat en el log - Debug
+        console.log(data);         //es mostra el resultat en el log - Debug
+		
+		// Passem totes les dades de l'entitat i les instancies
         localStorage.setItem('data', JSON.stringify(data));
+		// Passem la posicio de la instancia seleccionada
+        localStorage.setItem('pos', posicio);
 
-        window.location = "../da/detallrefdades";
+        window.location = "../da/detallrefdades_instancia";
     } );
 
     // Add event listener for opening and closing details
@@ -229,7 +224,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 11_14
+####  Dades de referència d'obligat compliment 14
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">
