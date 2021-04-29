@@ -102,18 +102,14 @@ electrònic als responsables assignats.<br/>
 
 ### Execució de tasques
 
-Les taqsques **s'executaran quan es produeixi una pujada d'una nova versió del codi font del projecte**
-per part del lot d'aplicacions, per lo que caldrà limitar la quantitat d'usuaris que utilitzen el servei de custòdia de codi
-i fer una única pujada amb èxit per versió, moment en el que es realitzarà l'etiquetat definitiu.
-No obstant, en cas d'error o necessitat de redesplegar, les taques també **es podran executar directament mitjançant
-l'opció "BuildWithParameters"**.
+Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjançant l'opció "BuildWithParameters"**.
 
 ### Etapes de desplegament
 
 Els jobs multi-etapa realitzen multitud d'accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les
 seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
-<CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages.png)</center>
+<CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages-sense hook.png)</center>
 <br/>
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
 
