@@ -58,7 +58,7 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
-  font-size:14px;
+  font-size:12px;
   padding:0px 25px;
   text-decoration:none;
   text-shadow:0px 1px 0px #283966;
@@ -98,22 +98,29 @@ tr.shown td.details-control {
 
 	function format_LAA ( d ) {
 	    var vRowInstancia;
-		
+		var vStyle;
+        
 		vRowInstancia='';
 		for(var i=0,z=d.instancies.length;i<z;i++){
+			vStyle='style="fontWeight:bold;color:red;"';
+			if (d.instancies[i].estat=="Activa")
+			{
+				vStyle='style="fontWeight:bold;color:green;"';
+			}
+			
 			vRowInstancia=vRowInstancia+'<tr>'+
 					'<td>'+d.instancies[i].nom+'</td>'+
 					'<td>'+d.instancies[i].descripcio+'</td>'+
 					'<td>'+d.instancies[i].promotor+'</td>'+
-					'<td>'+d.instancies[i].estat+'</td>'+
+                    '<td '+vStyle+'>'+d.instancies[i].estat+'</td>'+
 					'<td>'+d.instancies[i].creada+'</td>'+
 					'<td>'+d.instancies[i].obsoleta+'</td>'+
 					'<td>'+d.instancies[i].caducada+'</td>'+
-					'<td><button class="myButton">Detall</button></td>'+
+                    '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
 		
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:11px;width:100%;">'+
+		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:12px;width:100%;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
@@ -224,7 +231,7 @@ tr.shown td.details-control {
 </script>
 
 <br/><br/>
-####  Dades de referència d'obligat compliment 14
+####  Dades de referència d'obligat compliment
 
 <div style="width:100%; padding-left:30px">
 <table id="tabvalidades" class="hover" style="width:100%">

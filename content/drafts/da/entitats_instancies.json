@@ -70,7 +70,56 @@
            ,"fitxer_doc": "Codis_Territori_TipusVia_ATR.docx"
           ,"url_DO": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw"
   } ] }
-,{"Classificacio": "Consolidat","Ambit": "Territori i paisatge. Urbanisme"
+
+,{"Classificacio": "Consolidat","Ambit": "Economia"
+,"Nom": "CCAE"
+,"Descripcio": "Classificació catalana d'activitats econòmiques."
+,"Id": "521557"
+,"Publicacio": "20/01/2021"
+,"Actualitzacio": "20/01/2021"
+,"instancies": [
+          {"nom": "CCAE-1993"
+           ,"descripcio": "Definició inicial, realitzada l'any 1993"
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/01/2021"
+           ,"obsoleta": "01/01/2022"
+           ,"caducada": ""
+           ,"fitxer_xls": "ActEconomica_CCAE_1993.xlsx"
+           ,"fitxer_doc": "ActEconomica_CCAE_1993_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-1993/sk42-hvbn"
+  }, {"nom": "CCAE-1993 Rev1"
+           ,"descripcio": "Revisió sobre la versió inicial CCAE-1993."
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/01/2021"
+           ,"obsoleta": "01/01/2022"
+           ,"caducada": ""
+           ,"fitxer_xls": "ActEconomica_CCAE_1993_REV1.xlsx"
+           ,"fitxer_doc": "ActEconomica_CCAE_1993_REV1_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-1993-Rev-1-/hyd8-fmny"
+  } , {"nom": "CCAE-2009"
+           ,"descripcio": "Nova versió de CCAE, realitzada l'any 2009"
+           ,"estat": "Activa"
+           ,"promotor": "Institut d'Estadística de Catalunya (Idescat)"
+           ,"tipus": "Tabular"
+           ,"tipusactualitzacio": "Sota demanda"
+           ,"tipusvisual": "Ús no restringit"
+           ,"creada": "20/01/2021"
+           ,"obsoleta": ""
+           ,"caducada": ""
+           ,"fitxer_xls": "ActEconomica_CCAE_2009.xlsx"
+           ,"fitxer_doc": "ActEconomica_CCAE_2009_ATR.docx"
+          ,"url_DO": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-2009/get5-imi7"
+  } ] }
+  
+ ,{"Classificacio": "Consolidat","Ambit": "Territori i paisatge. Urbanisme"
 ,"Nom": "COMARQUES DE CATALUNYA"
 ,"Descripcio": "Llista de les comarques de Catalunya i Aran."
 ,"Id": "12"
@@ -112,6 +161,7 @@
            ,"fitxer_doc": "Codis_Territori_Provincies_ATR.docx"
           ,"url_DO": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Prov%C3%ADncies-d-Espanya/wkyq-jzxq"
   } ] }
-  
+
+ 
   ]
 }
