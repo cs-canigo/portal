@@ -44,9 +44,9 @@ Les etapes del job pel desplegament en el nou sistema seran les següents:
 
 <CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages-sense hook.png)</center>
 
-A partir del maig del 2021 està previst començar a migrar les pipelines cloud del SIC 2.0 al nou SIC 3.0
+A partir del **maig del 2021** està previst començar a **migrar les pipelines cloud** del SIC 2.0 al nou SIC 3.0
 
-A partir de setembre-octubre del 2021 està previst començar a migrar les pipelines on-premise del SIC 2.0 al nou SIC 3.0
+A partir de **setembre-octubre del 2021** està previst començar a **migrar les pipelines on-premise** del SIC 2.0 al nou SIC 3.0
 
 <br/>
 
