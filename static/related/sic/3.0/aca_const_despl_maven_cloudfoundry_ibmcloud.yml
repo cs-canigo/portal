@@ -6,13 +6,12 @@ global-env:
   - CF_BUILDPACK: 'https://github.com/cloudfoundry/java-buildpack#v4.35'
   - CF_PATH: 'target/spring-petclinic.jar'
 components:
-  # Example of cloud Maven component
   - build:
       steps:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic/mvn-builder:1.0-3.6-8
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
             resources:
               limits: { cpu: 1000m, memory: 1024Mi }
               requests: { cpu: 100m, memory: 128Mi }

@@ -7,7 +7,6 @@ global-env:
   - CONTAINER_IMAGE_NAME: petclinic-test
   - DEPLOYMENT_TYPE: Deployment
 components:
-  # Example of cloud Maven component
   - custom-builder:
       steps:
         - container:

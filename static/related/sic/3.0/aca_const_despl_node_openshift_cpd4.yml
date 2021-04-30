@@ -1,7 +1,7 @@
 version: 2.0.0
 info:
-  version: 0.5.1
-  description: SFA-microservice-landing
+  version: 0.1.1
+  description: microservice-landing
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
   - CONTAINER_IMAGE_NAME: microservice-landing
@@ -12,7 +12,7 @@ components:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic/node-builder:1.0-8
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-8
             resources:
               limits:
                 cpu: 1000m
@@ -32,7 +32,7 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: microservice-landing/PRE
+                      - DESCRIPTORS_PATH: microservice-landing/pre
                       - DEPLOYMENT_NAME: landing
                       - DEPLOYMENT_WAIT: 900
         - name: production
@@ -41,7 +41,7 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: microservice-landing/PRO
+                      - DESCRIPTORS_PATH: microservice-landing/pro
                       - DEPLOYMENT_NAME: landing
                       - DEPLOYMENT_WAIT: 900
 notifications:

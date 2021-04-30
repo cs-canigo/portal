@@ -14,14 +14,14 @@ components:
               steps:
                 - execution:
                     env:
-                      - WEBAPP_NAME: 'edu-consultarapida-pre'
+                      - WEBAPP_NAME: 'sic-petclinic-pre'
         - name: production
           actions:
             deploy:
               steps:
                 - execution:
                     env:
-                      - WEBAPP_NAME: 'edu-consultarapida-pro'
+                      - WEBAPP_NAME: 'sic-petclinic-pro'
 notifications:
   email:
     recipients: [ noreply@gencat.cat ]

@@ -2,14 +2,14 @@ version: 2.0.0
 info:
   description: Lib node test uploader
 global-env:
-  - ARTIFACT_PATH: 'dist/prova-node-library'
+  - PUBLISH_PARAMS: 'dist/prova-node-library'
 components:
   - build:
       steps:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic/node-builder:1.0-10
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-10
             resources:
               limits:
                 cpu: 1000m
