@@ -30,7 +30,7 @@ Basant-nos en els següents fonaments:
 - Automatizació: Minimitzant recursos de servei i reemplaçant-los per automatització s'aconsegueix redireccionar els recursos cap a l'evolució constant
 
 El resum de la solució del nou sistema seria:
-- Nova plataforma CI/CD SIC 3.0 basada en cotenidors amb el stack:
+- Nova plataforma CI/CD SIC 3.0 basada en contenidors en Openshift amb el stack:
   - Jenkins amb slaves dinàmics
   - Prometheus i Grafana pel monitoratge
   - EFK per la gestió de logs
@@ -38,6 +38,10 @@ El resum de la solució del nou sistema seria:
 - Ampliació del cataleg d'imatges, tant per la construcció (pel patró builder), com pels desplegaments
 - Nou autoservei de pipelines basats en fitxers de configuració YML
 - Nou model de pipelines úniques per tipus d'operació 
+
+Les etapes del job pel desplegament en el nou sistema seran les següents:
+
+<CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages-sense hook.png)</center>
 
 <br/>
 
