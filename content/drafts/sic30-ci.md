@@ -49,7 +49,7 @@ de forma més periòdica, els responsables poden tenir major confiança del treb
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica** al cloud: es construeixen els artefactes i es despleguen al cloud. Aquesta modalitat no
+* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. Aquesta modalitat no
 aplica als desplegaments on-premise.
 
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
@@ -66,7 +66,7 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst seria el següent:
 
-* Entorn **INT**: modalitat automàtica al cloud o delegada a infraestructures on-premise.
+* Entorn **INT**: modalitat automàtica al cloud, o bé modalitat delegada per als desplegaments on-premise.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
