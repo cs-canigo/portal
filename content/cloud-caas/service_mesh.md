@@ -1,5 +1,5 @@
 +++
-date          = "2020-06-12"
+date          = "2021-05-05"
 title         = "Openshift Service Mesh"
 description   = "Introducció i exemples de l'ús d'Openshift Service Mesh"
 sections      = "Container Cloud"
@@ -19,7 +19,7 @@ Els Service Mesh faciliten la implementació de tots aquests aspectes amb un aco
 
 Tot i que es poden utilitzar en plataformes tradicionals, a causa de la pròpia arquitectura de microserveis, el seu ús és molt més comú en plataformes de contenidors.
 
-Openshift Service Mesh és l'eina escollida pel CTTI per realitzar aquestes funcions.  
+Openshift Service Mesh és l'eina escollida pel CTTI per realitzar aquestes funcions.
 
 ## Característiques
 
@@ -67,11 +67,11 @@ El Service Mesh addicionalment ofereix monitoratge dels diferents microserveis, 
 * Temps de resposta dels microserveis
 * Traces distribuides per identificar colls d'ampolla
 
-## Openshift Service Mesh
+## Openshift Service Mesh 2.x
 
 Un cop descrites les característiques generals dels service Mesh ens centrarem en Openshift Service Mesh:
 
-* Està basat en Istio 1.4
+* Està basat en Istio 1.6
 * Implementa multitenancy
 * Es desplega sobre la plataforma Openshift
 
@@ -176,10 +176,10 @@ Tràfic d'entrada sense  del Ingress Gateway
 * Permet la configuració d’Alarmes
 * Amb Openshift Service Mesh, es desplega amb un conjunt de Dashboards que informen de les mètriques dels diferents components i dels microserveis gestionats pel Control Plane
 * Es mostren mètiques referents a tràfic de dades i serveis que utilitzen els proxies Envoy:
-  
+
   * Peticions per segon
   * Temps de resposta de les peticions
-  * Percentatge de peticions amb codi de resposta diferent de 500  
+  * Percentatge de peticions amb codi de resposta diferent de 500
   * Mida de les peticions/respostes
 
 * Addicionalment també es mostren mètriques de consum i rendiment dels diferents elements del Control Plane.
@@ -220,7 +220,7 @@ Es proposen dos models en funció del model de traces distribuïdes
 
 #### Traces distribuïdes no persistents
 
-* Només es monitora un percentatge petit de les traces distribuïdes (1 o 2% com a màxim)
+* Només es monitora un percentatge petit de les traces distribuïdes (1-5% com a màxim)
 * No s’emmagatzemen les traces en disc
 * Traces emmagatzemades en memòria
 * En cas de reinici dels contenidors del Control es perden les traces
@@ -230,6 +230,53 @@ Es proposen dos models en funció del model de traces distribuïdes
 * Es monitora la totalitat de les traces distribuïdes
 * S’emmagatzemen les traces en disc
 * Requereix un cluster d’ElasticSearch per persistir les traces
+
+## Configuració del Data Plane
+
+* Per afegir de manera automàtica el sidecar del Proxy Envoy
+  * Afegir l'anotació
+    * **sidecar.istio.io/inject: "true"**
+  * a l'apartat **spec.template** del Deployment/DeploymentConfig/StatefulSet de l'aplicació
+* Configurar els recursos disponibles pel proxy Envoy
+  * Afegir les anotacions
+    * **sidecar.istio.io/proxyCPU: 200m**
+    * **sidecar.istio.io/proxyCPULimit: 500m**
+    * **sidecar.istio.io/proxyMemory: 256Mi**
+    * **sidecar.istio.io/proxyMemoryLimit: 512Mi**
+  * amb el recursos necessaris
+  * a l'apartat **spec.template** del Deployment/DeploymentConfig/StatefulSet de l'aplicació
+* Per definir els recursos necessaris pel Proxy es pot consultar la documentació de Istio: https://istio.io/v1.6/docs/ops/deployment/performance-and-scalability/
+
+* En cas de no definir els recursos utilitzats pel Proxy s’utilitzaran els valors per defecte definits al Control Plane:
+  * requests cpu: 50m
+  * limits cpu : 100m
+  * requests memory: 50Mi
+  * límits memory: 100Mi
+
+
+### Exemple
+
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+spec:
+  replicas: 1
+...
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: 1.0.0
+      annotations:
+        sidecar.istio.io/inject: "true"
+        sidecar.istio.io/proxyCPU: 200m
+        sidecar.istio.io/proxyCPULimit: 500m
+        sidecar.istio.io/proxyMemory: 256Mi
+        sidecar.istio.io/proxyMemoryLimit: 512Mi
+    spec:
+...
+```
+
 
 ## Descriptors destacats
 
@@ -248,7 +295,8 @@ Es proposen dos models en funció del model de traces distribuïdes
   * Un Service de Kubernetes és una espècie de DNS que resol el nom del service contra les IP’s dels pods
   * Un VirtualService configura els Proxies Envoy per definir l’enrutament dels pods
 * Permet definir el percentatge de peticions a enrutar per cada versió d’aplicació
-* Podeu trobar més informació a https://archive.istio.io/v1.4/docs/reference/config/networking/virtual-service/
+* Podeu trobar més informació a https://istio.io/v1.6/docs/reference/config/networking/virtual-service/
+
 
 ### DestinationRule
 
@@ -259,7 +307,8 @@ Es proposen dos models en funció del model de traces distribuïdes
   * Circuit Breakers
   * ...
 * Funciona exactament igual que el VirtualService, configurant els Proxies
-* Podeu trobar més informació a https://archive.istio.io/v1.4/docs/reference/config/networking/destination-rule/
+* Podeu trobar més informació a https://istio.io/v1.6/docs/reference/config/networking/destination-rule/
+
 
 ### Gateway
 
@@ -267,22 +316,22 @@ Es proposen dos models en funció del model de traces distribuïdes
 * En el cas del Ingress Gateway és molt semblant a les Routes
 * Bàsicament permet configurar els dominis, protocols, ports, certificats
 * Funciona exactament igual que el VirtualService, configurant els Edge Proxies
-* Podeu trobar més informació a https://archive.istio.io/v1.4/docs/reference/config/networking/gateway/
+* Podeu trobar més informació a https://istio.io/v1.6/docs/reference/config/networking/gateway/
+
 
 ### Altres descriptors
 
 Podeu trobar informació de la resta de descriptors a:
 
-* https://archive.istio.io/v1.4/docs/reference/config/networking/
-* https://archive.istio.io/v1.4/docs/reference/config/security/
-* https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.mixer.v1.config.client/
-* https://archive.istio.io/v1.4/docs/reference/config/policy-and-telemetry/istio.policy.v1beta1/
+* https://istio.io/v1.6/docs/reference/config/
+* https://istio.io/v1.6/docs/reference/config/networking/
+* https://istio.io/v1.6/docs/reference/config/security/
 
 ## Gestió del tràfic extern al Service Mesh
 
 El Service Mesh, automaticament, només pel fet de tenir el proxy Envoy desplegat, controla tot el tràfic intern entre les microserveis de la plataforma, permetent veure els fluxes de tràfic i métriques corresponents.
 
-És important utilitzar el Ingress Gateway com a punt d'entrada dels 
+És important utilitzar el Ingress Gateway com a punt d'entrada dels
 microserveis que criden des de l'exterior de la plataforma. En cas contrari, aquest tràfic no passarà pel Service Mesh, no podent sent possible el seu monitoratge ni control.
 
 De cara al ús del Service Mesh és important que absolutament tot el tràfic, tant l'intern com l'extern estigui controlat. En cas contraris es poden produir comportament no dessitjats.
@@ -291,7 +340,7 @@ Per configurar el trafic extern a traves del service Mesh, cal configurar diveso
 
 * **Route**: La route del microservei, deixa d'apuntar al Service del microservei i passa a apuntar al Service del Ingress Gateway. Les routes ja no es depleguen al namespace de l'aplicació, sinó al del Service Mesh.
 * **Gateway**: Definirà el Ingress Gateway en si. En el nostre cas, dexarem passar tot el trafic i posarem * a hosts.
-* **VirtualService**: Rebrà les peticions del Gateway i enviarà el tràfic al Service del Microservei   
+* **VirtualService**: Rebrà les peticions del Gateway i enviarà el tràfic al Service del Microservei
 
 
 ```yaml
@@ -301,7 +350,7 @@ metadata:
   name: istio-ingressgateway
   namespace: control-plane-namespace
   labels:
-    app: istio-ingressgateway  
+    app: istio-ingressgateway
 spec:
   host: microservice.test.com #microservice url
   to:
@@ -311,12 +360,12 @@ spec:
   port:
     targetPort: 8080
   wildcardPolicy: None
----  
+---
 kind: Gateway
 apiVersion: networking.istio.io/v1alpha3
 metadata:
   name: ingress-gateway-configuration
-  namespace: app-namespace  
+  namespace: app-namespace
 spec:
   selector:
     istio: ingressgateway # use Istio default gateway implementation
@@ -611,136 +660,99 @@ spec:
     baseEjectionTime: 30s
 ```
 
-### ACL
+### Mutual TLS
+
+* Força TLS pel tràfic entre els diferents pods dins del cluster
+* Elimina tot el tràfic no TLS
+* Molt recomanable per clusters públics multiregió
+* A la versió Openshift Service Mesh 2.x, el mutual TLS està habilitat per defecte
+* És recomanable no deshabilitar-lo de manera global
+* En cas de necessitar deshabilitar-lo per algun microservei concret, la configuració seria:
+
+```yaml
+# This switch MTLS on between proxies
+apiVersion: "networking.istio.io/v1alpha3"
+kind: "DestinationRule"
+metadata:
+  name: "default"
+  namespace: "istio-system" #Control Plane namespace
+spec:
+  host: "*.local" # Every SINGLE SERVICE eg test-service.default.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+```
+
+### Authorization Policy
 
 * Defineix la seguretat de les crides entre microserveis
 * Defineix quins microserveis poden cridar a un microservei concret
 * Simplifica la implementació de seguretat en microserveis, eliminant la necessitat de l’ús de keys per securitzar els microserveis
-* Està basat en Policies de Mixer
 * Per exemple, si tenim tres microserveis que només es poden cridar de manera seqüencial, Customer -> Preference -> Recommendation, la configuració seria la següent:
 
 ```yaml
-apiVersion: "config.istio.io/v1alpha2"
-kind: denier
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
 metadata:
-  name: do-not-pass-go
-spec:
-  status:
-    code: 7
-    message: Customer -> Preference -> Recommendation ONLY
+  name: deny-all
+spec:{}
 ---
-apiVersion: "config.istio.io/v1alpha2"
-kind: checknothing
+apiVersion: "security.istio.io/v1beta1"
+kind: "AuthorizationPolicy"
 metadata:
-  name: just-stop
+  name: "customer-viewer"
 spec:
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: rule
-metadata:
-  name: no-customer-to-recommendation
-spec:
-  match: source.labels["app"]=="customer" && destination.labels["app"] == "recommendation"
-  actions:
-  - handler: do-not-pass-go.denier
-    instances: [ just-stop.checknothing ]
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: rule
-metadata:
-  name: no-preference-to-customer
-spec:
-  match: source.labels["app"]=="preference" && destination.labels["app"] == "customer"
-  actions:
-  - handler: do-not-pass-go.denier
-    instances: [ just-stop.checknothing ]
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: rule
-metadata:
-  name: no-recommendation-to-customer
-spec:
-  match: source.labels["app"]=="recommendation" && destination.labels["app"] == "customer"
-  actions:
-  - handler: do-not-pass-go.denier
-    instances: [ just-stop.checknothing ]
----
-apiVersion: "config.istio.io/v1alpha2"
-kind: rule
-metadata:
-  name: no-recommendation-to-preference
-spec:
-  match: source.labels["app"]=="recommendation" && destination.labels["app"] == "preference"
-  actions:
-  - handler: do-not-pass-go.denier
-    instances: [ just-stop.checknothing ]
-
-```
-
-### RBAC
-
-* Permet definir quins usuaris fer peticions als serveis.
-* Permet restringir el tipus de petició HTTP (GET, POST, ...)
-* Funciona de manera similar al RBAC d’Openshift
-* Per exemple, tenim tres microserveis (Customer ,Preference i Recommendation) als que només volem permetre peticions GET, la configuració seria la següent:
-
-```yaml
-# Istio’s RBAC uses a deny-by-default strategy
-# Nothing is permitted until you explicitly define an access-control policy
-
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: RbacConfig
-metadata:
-  name: default
-spec:
-  mode: 'ON_WITH_INCLUSION'
-  inclusion:
-    namespaces: ["test"]
-
-# mode can be
-# OFF: Istio authorization is disabled.
-# ON: Istio authorization is enabled for all services in the mesh.
-# ON_WITH_INCLUSION: Enabled only for services and namespaces specified in the inclusion field.
-# ON_WITH_EXCLUSION: Enabled for all services in the mesh except the services and namespaces specified in the exclusion field.
-
----
-
-# Allow all users GET calls to microservices "customer", "recommendation", "preference"
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRole
-metadata:
-  name: service-viewer
-  namespace: test
-spec:
+  selector:
+    matchLabels:
+      app: customer
   rules:
-  - services: ["*"]
-    methods: ["GET"]
-    constraints:
-    - key: "destination.labels[app]"
-      values: ["customer", "recommendation", "preference"]
+  - to:
+    - operation:
+        methods: ["GET"]
 ---
-apiVersion: "rbac.istio.io/v1alpha1"
-kind: ServiceRoleBinding
+apiVersion: "security.istio.io/v1beta1"
+kind: "AuthorizationPolicy"
 metadata:
-  name: bind-service-viewer
-  namespace: test
+  name: "customer-to-preference"
 spec:
-  subjects:
-  - user: "*"
-  roleRef:
-    kind: ServiceRole
-    name: "service-viewer"
+  selector:
+    matchLabels:
+      app: preference
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/customer-sa"]
+    to:
+    - operation:
+        methods: ["GET"]
+---
+apiVersion: "security.istio.io/v1beta1"
+kind: "AuthorizationPolicy"
+metadata:
+  name: "preference-to-recommendation"
+spec:
+  selector:
+    matchLabels:
+      app: recommendation
+  rules:
+  - from:
+    - source:
+        principals: ["cluster.local/ns/default/sa/preference-sa"]
+    to:
+    - operation:
+        methods: ["GET"]
 
 ```
+
+Podeu trobar informació  a https://istio.io/v1.6/docs/concepts/security/#authorization
 
 ## Recursos addicionals
 
 ### Documentació
 
-* https://docs.openshift.com/container-platform/4.3/welcome/index.html
+* https://docs.openshift.com/container-platform/4.6/welcome/index.html
   * Apartat Service Mesh
-* https://archive.istio.io/v1.4/docs/
-  * Important no confondre amb la v1.5 (última versió) de Istio, hi ha importants diferències en Arquitectura i Seguretat especialment
+* https://istio.io/v1.6/docs/
 * https://maistra.io/
 * https://kiali.io/
 * https://www.jaegertracing.io/
@@ -750,6 +762,7 @@ spec:
 
 ### Tutorials i exemples
 
-* https://redhat-developer-demos.github.io/istio-tutorial/istio-tutorial/1.4.x/index.html
-* https://maistra.io/docs/examples/
+* https://redhat-scholars.github.io/istio-tutorial/istio-tutorial/1.6.x/index.html
+* https://github.com/maistra/istio/tree/maistra-2.0/samples
+
 
