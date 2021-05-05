@@ -202,13 +202,13 @@ En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el
 
 * **2.2.1.3 Auto-contingut i auto-configurat**. És necessari garantir que la combinació del paquet principal + paquets dependents incorporen el total de fitxers i claus de registre necessàries per treballar amb l’aplicació. Tanmateix, cal evitar la necessitat de configuracions manuals mitjançant una parametrització preestablerta.
 
-* **2.2.1.4 L’entorn d’execució (bombolla) ha de ser segur,** aplicant les mesures restrictives necessàries per permetre només la interoperabilitat amb el sistema i aquells serveis completament imprescindibles pel bon funcionament de l’aplicació.
+* **2.2.1.4 L’entorn d’execució (bombolla) ha de ser segur**, aplicant les mesures restrictives necessàries per permetre només la interoperabilitat amb el sistema i aquells serveis completament imprescindibles pel bon funcionament de l’aplicació.
 
-* **2.2.1.5 Cal vetllar per la compatibilitat del paquet,** , avaluant el correcte funcionament del mateix en les diverses versions de Windows suportades pel lloc de treball de la Generalitat de Catalunya, en aquelles arquitectures compatibles amb l’aplicació (32bit \ 64bit). Al full de ruta de programari, s’informa quines són aquestes versions i compilacions de SO.
+* **2.2.1.5 Cal vetllar per la compatibilitat del paquet**, avaluant el correcte funcionament del mateix en les diverses versions de Windows suportades pel lloc de treball de la Generalitat de Catalunya, en aquelles arquitectures compatibles amb l’aplicació (32bit \ 64bit). Al full de ruta de programari, s’informa quines són aquestes versions i compilacions de SO.
 
 * **2.2.1.6 L’experiència d’usuari persistent**, sense importar des de quin terminal -gestionat- s’executi, per tant, l’aplicació ha d’estar preparada per l’ús de perfils mòbils  i serà al perfil de l’usuari on es redirigiran tots els fitxers de treball i aquells fitxers destinats a personalitzar la configuració de l’aplicació.
 
-* **2.2.1.7 Cicle de vida inalterable**. . La virtualització de l’aplicació no ha d’interferir en el cicle de vida d’aquesta, el qual haurà d’anar alineat amb la versió del SO i  programari present en els terminals client on es pretén executar.
+* **2.2.1.7 Cicle de vida inalterable**. La virtualització de l’aplicació no ha d’interferir en el cicle de vida d’aquesta, el qual haurà d’anar alineat amb la versió del SO i  programari present en els terminals client on es pretén executar.
 
 ### 2.2.2. Execució remota
 
@@ -237,9 +237,9 @@ En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el
 
 * **3.1.3 Disponibilitat i rendiment** *(obligatori)*. S’ha d’establir el grau de disponibilitat per tota solució de xarxa de telecomunicacions. Aquest valor es mesurarà com el percentatge de temps de disponibilitat de la xarxa durant un temps indicat, o també es podrà valorar com el temps màxim permès que pugui estar caiguda la xarxa sense afectar els serveis principals de l’empresa.
 	  Caldrà determinar les càrregues de treball màximes, per tal de poder-les absorbir. Els paràmetres fonamentals a tenir en compte pel correcte funcionament dels serveis dintre de la xarxa (Telefonia IP, Videoconferència, Correu Electrònic, Etc…) són l’amplada de banda (Bandwidth), la pèrdua de paquets (Packet loss), el retard (Latency) i la variació de retard (Jitter).
-* **3.1.5 Administració** *(obligatori)*. Tota xarxa de telecomunicacions haurà de permetre de forma senzilla la seva administració, monitorització, control d’esdeveniment i incidències, amb enfocament cap a una gestió automatitzada.
+* **3.1.4 Administració** *(obligatori)*. Tota xarxa de telecomunicacions haurà de permetre de forma senzilla la seva administració, monitorització, control d’esdeveniment i incidències, amb enfocament cap a una gestió automatitzada.
 
-* **3.1.6 Simplicitat** *(obligatori)*. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables. 
+* **3.1.5 Simplicitat** *(obligatori)*. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables. 
 
 
 ## 3.2 Principis tecnològics
