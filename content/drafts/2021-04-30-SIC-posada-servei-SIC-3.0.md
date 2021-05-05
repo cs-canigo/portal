@@ -1,54 +1,70 @@
 +++
 date        = "2021-04-30"
-title       = "SIC. Posada en servei SIC 3.0"
-description = "El dia 01/04/2021 s'ha preparat el nou sistema d'integració contínua SIC 3.0 "
+title       = "SIC. Posada en servei Plataforma SIC 3.0"
+description = "El dia 01/05/2021 s'ha posat en servei la nova Plataforma del Sistema d'Integració Contínua 3.0 "
 #sections    = ["Notícies", "home"]
 categories  = ["sic"]
-key         = "MAIG2021"
+key         = "JUNY2021"
 +++
 
-Amb la visió de millorar el lliurament de solucions de TIC a la Generalitat emprant noves tecnologies, eines i processos dels quals permetin simplificar i lliurar solucions de més alt nivell amb una millor resiliència i robustesa d'una manera més àgil, **a partir del 01 d'abril del 2021 s'ha preparat el nou sistema d'integració contínua SIC 3.0**.
+L’objectiu perseguit ha estat millorar el lliurament de solucions de TIC a la Generalitat emprant noves tecnologies,
+eines i processos els quals permetin simplificar i lliurar solucions de més alt nivell amb una millor resiliència i
+robustesa d'una manera més àgil. **A partir del 01 de maig del 2021 s'ha posat en servei la nova Plataforma del
+Sistema d'integració contínua v.3.0**.
 
-Els objectius d'aquest nou sistema són:
+Els requeriments que cobreix d'aquest nou sistema són:
 
-- Maximitzar l'autoservei d'infraestructures
-- Maximitzar l'autonomia del lot d'aplicacions
-- Maximitzar la mantenibilitat i escalabilitat de les pipelines
-- Maximitzar la mantenibilitat i robustesa de la Plataforma SIC
-- Maximitzar la visibilitat de l'entorn per part de lot d'aplicacions
-- Maximitzar l'automatització de tasques
-- Desfer colls d’ampolla
-- Minimitzar els temps necessaris per posar una solució en servei
-- Minorar el cost dels futurs evolutius
-- Convergència desplegaments on-premise i cloud
+- Maximitzar l'autoservei d'infraestructures.
+- Maximitzar l'autonomia del lot d'aplicacions.
+- Maximitzar la mantenibilitat i escalabilitat de les pipelines.
+- Maximitzar la mantenibilitat i robustesa de la Plataforma SIC.
+- Maximitzar la visibilitat de l'entorn per part de lot d'aplicacions.
+- Maximitzar l'automatització de tasques.
+- Desfer colls d’ampolla.
+- Minimitzar els temps necessaris per posar una solució en servei.
+- Minorar el cost dels futurs evolutius.
+- Convergència desplegaments on-premise i cloud.
 
-Basant-nos en els següents fonaments:
+## Estratègia
 
-- Estandarditzar processos: En tenir processos estandarditzats i globals, es redueix el manteniment alhora que resulta més fàcil capacitar nous recursos
-- Millorar el servei: Major robustesa, disponibilitat i resiliència resulten en una major qualitat i un menor temps de time-to-market
-- Servei sostenible: Utilitzant el potencial de cloud s'aconsegueix que els costos operatius del servei siguin sostenibles
-- Automatització: Minimitzant recursos de servei i reemplaçant-los per automatització s'aconsegueix redireccionar els recursos cap a l'evolució constant
+Per a aconseguir-ho, s’han aplicat les següents decisions estratègiques:
 
-El resum de la solució del nou sistema seria:
+- **Estandarditzar processos**: en tenir processos estandarditzats i globals, es redueix el manteniment alhora
+que resulta més fàcil capacitar nous recursos.
+- **Millorar el servei**: major robustesa, disponibilitat i resiliència resulten en una major qualitat i un
+menor temps de time-to-market.
+- **Servei sostenible**: utilitzant el potencial de cloud s'aconsegueix que els costos operatius del servei siguin sostenibles.
+- **Automatització**: minimitzant recursos de servei i reemplaçant-los per automatització s'aconsegueix redirigir
+els recursos cap a l'evolució constant.
 
-- Nova plataforma CI/CD SIC 3.0 basada en contenidors en Openshift amb el stack:
-  - Jenkins amb slaves dinàmics
-  - Prometheus i Grafana pel monitoratge
-  - EFK per la gestió de logs
-  - Keycloak com a broker de seguretat amb integració amb Gicar
-- Ampliació del catàleg d'imatges, tant per la construcció (pel patró builder), com pels desplegaments
-- Nou autoservei de pipelines basats en fitxers de configuració YML
-- Nou model de pipelines úniques per tipus d'operació 
+## Detall de la solució
 
-Les etapes del job pel desplegament en el nou sistema seran les següents:
+La nova solució es compon dels següents elements:
+
+- **Nova plataforma CI/CD** basada en contenidors en Openshift amb el Stack:
+  - Jenkins amb agents dinàmics.
+  - Prometheus i Grafana pel monitoratge.
+  - EFK per a la gestió de logs.
+  - Keycloak com a broker de seguretat amb integració amb Gicar.
+- **Ampliació del catàleg d'imatges**, tant per a la construcció de les aplicacions com per als desplegaments.
+- **Nou Autoservei de Pipelines** basat en fitxers de configuració en format YML.
+- **Nou model de pipelines** úniques (dinàmiques) per tipus d'operació.
+
+Les etapes de desplegament són les següents:
 
 <CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages-sense hook.png)</center>
 
-A partir del **maig del 2021** està previst començar a **migrar les pipelines cloud** del SIC 2.0 al nou SIC 3.0
+## Calendaris
 
-A partir de **setembre-octubre del 2021** està previst començar a **migrar les pipelines on-premise** del SIC 2.0 al nou SIC 3.0
+En endavant, tota nova integració de projectes al SIC s’integrarà fent ús de la nova Plataforma si les necessitats
+es troben cobertes pel sistema i el calendari provisional de migració cap al nou sistema és el següent:
+
+- Al **juny del 2021 està previst iniciar la migració de les pipelines cloud**.
+
+- Al **setembre-octubre del 2021 està previst iniciar la migració de les pielines on-premise**.
 
 <br/>
 
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport)
-o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**](/sic/sic30-faq) i
+utilitzeu el canal de [**Suport**](/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través
+del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
