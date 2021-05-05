@@ -235,14 +235,14 @@ Es proposen dos models en funció del model de traces distribuïdes
 
 * Per afegir de manera automàtica el sidecar del Proxy Envoy
   * Afegir l'anotació
-    * **sidecar.istio.io/inject: "true"**
-  * a l'apartat **spec.template** del Deployment/DeploymentConfig/StatefulSet de l'aplicació
+      * **sidecar.istio.io/inject: "true"**
+  * a l'apartat **spec.template** del Deployment/DeploymentConfig/   StatefulSet de l'aplicació
 * Configurar els recursos disponibles pel proxy Envoy
   * Afegir les anotacions
-    * **sidecar.istio.io/proxyCPU: 200m**
-    * **sidecar.istio.io/proxyCPULimit: 500m**
-    * **sidecar.istio.io/proxyMemory: 256Mi**
-    * **sidecar.istio.io/proxyMemoryLimit: 512Mi**
+      * **sidecar.istio.io/proxyCPU: 200m**
+      * **sidecar.istio.io/proxyCPULimit: 500m**
+      * **sidecar.istio.io/proxyMemory: 256Mi**
+      * **sidecar.istio.io/proxyMemoryLimit: 512Mi**
   * amb el recursos necessaris
   * a l'apartat **spec.template** del Deployment/DeploymentConfig/StatefulSet de l'aplicació
 * Per definir els recursos necessaris pel Proxy es pot consultar la documentació de Istio: https://istio.io/v1.6/docs/ops/deployment/performance-and-scalability/
