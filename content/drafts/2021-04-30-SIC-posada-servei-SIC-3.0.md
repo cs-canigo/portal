@@ -14,16 +14,16 @@ Sistema d'integració contínua v.3.0**.
 
 Els requeriments que cobreix d'aquest nou sistema són:
 
-- Maximitzar l'autoservei d'infraestructures.
-- Maximitzar l'autonomia del lot d'aplicacions.
-- Maximitzar la mantenibilitat i escalabilitat de les pipelines.
-- Maximitzar la mantenibilitat i robustesa de la Plataforma SIC.
-- Maximitzar la visibilitat de l'entorn per part de lot d'aplicacions.
-- Maximitzar l'automatització de tasques.
-- Desfer colls d’ampolla.
-- Minimitzar els temps necessaris per posar una solució en servei.
-- Minorar el cost dels futurs evolutius.
-- Convergència desplegaments on-premise i cloud.
+- Maximitzar l'autoservei d'infraestructures
+- Maximitzar l'autonomia del lot d'aplicacions
+- Maximitzar la mantenibilitat i escalabilitat de les pipelines
+- Maximitzar la mantenibilitat i robustesa de la Plataforma SIC
+- Maximitzar la visibilitat de l'entorn per part de lot d'aplicacions
+- Maximitzar l'automatització de tasques
+- Desfer colls d’ampolla
+- Minimitzar els temps necessaris per posar una solució en servei
+- Minorar el cost dels futurs evolutius
+- Convergència desplegaments on-premise i cloud
 
 ## Estratègia
 
@@ -42,13 +42,13 @@ els recursos cap a l'evolució constant.
 La nova solució es compon dels següents elements:
 
 - **Nova plataforma CI/CD** basada en contenidors en Openshift amb el Stack:
-  - Jenkins amb agents dinàmics.
-  - Prometheus i Grafana pel monitoratge.
-  - EFK per a la gestió de logs.
-  - Keycloak com a broker de seguretat amb integració amb Gicar.
-- **Ampliació del catàleg d'imatges**, tant per a la construcció de les aplicacions com per als desplegaments.
-- **Nou Autoservei de Pipelines** basat en fitxers de configuració en format YML.
-- **Nou model de pipelines** úniques (dinàmiques) per tipus d'operació.
+  - Jenkins amb agents dinàmics
+  - Prometheus i Grafana pel monitoratge
+  - EFK per a la gestió de logs
+  - Keycloak com a broker de seguretat amb integració amb Gicar
+- **Ampliació del catàleg d'imatges**, tant per a la construcció de les aplicacions com per als desplegaments
+- **Nou Autoservei de Pipelines** basat en fitxers de configuració en format YML
+- **Nou model de pipelines** úniques (dinàmiques) per tipus d'operació
 
 Les etapes de desplegament són les següents:
 
@@ -59,9 +59,9 @@ Les etapes de desplegament són les següents:
 En endavant, tota nova integració de projectes al SIC s’integrarà fent ús de la nova Plataforma si les necessitats
 es troben cobertes pel sistema i el calendari provisional de migració cap al nou sistema és el següent:
 
-- Al **juny del 2021 està previst iniciar la migració de les pipelines cloud**.
+- Al **juny del 2021 està previst iniciar la migració de les pipelines cloud**
 
-- Al **setembre-octubre del 2021 està previst iniciar la migració de les pielines on-premise**.
+- Al **setembre-octubre del 2021 està previst iniciar la migració de les pielines on-premise**
 
 <br/>
 
