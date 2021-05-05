@@ -141,8 +141,6 @@ resources:
       environments:
         - environment: int
           vars:
-            - name: ironportURL
-            - value: integracio.stmp.intranet.gencat.cat
         - environment: pre
           vars:
         - environment: pro
