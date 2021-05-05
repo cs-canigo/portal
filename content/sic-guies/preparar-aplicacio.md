@@ -75,7 +75,7 @@ Respecte a les llibreries requerides pels projectes, en funció del seu tipus, c
 
 Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
 
-### Aplicacions APEX i PL/SQL, i migracions de BBDD
+## Aplicacions APEX i PL/SQL, i migracions de BBDD
 
 El desplegament d'aplicacions de certes tecnologies es fonamenta en l'execució de scripts a base de dades, tot i que els criteris apliquen a qualsevol migració de base de dades.
 En general s'aconsella disposar d'un projecte específic de desplegament/migració de BBDD, tot i que també es pot optar per integrar-lo al desplegament d'un altre artefacte, habitualment
