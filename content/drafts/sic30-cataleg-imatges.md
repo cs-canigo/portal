@@ -12,21 +12,20 @@ weight = 5
 
 El SIC actualment utilitza la [tecnologia Docker](https://www.docker.com/) per a disposar d’un **entorn aïllat i immutable
 de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors**.
-
 Per defecte, Docker està configurat per a utilitzar el registre públic [Docker Hub](https://hub.docker.com/) com a repositori d’imatges.
 No obstant això, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
 escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 
-![Pipeline del SIC](/related/sic/3.0/harbor_docker_images.png)
-</br>
-
 El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
 Es tracta d’un registre privat sense cap repositori d'accés públic.
 
-## Imatges de construcció disponibles
+## Imatges de construcció
 
 Podeu accedir al catàleg d'imatges per a la construcció d'aplicacions (`builder`) mitjançant el següent enllaç:
 https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories.
+
+![Pipeline del SIC](/related/sic/3.0/harbor_docker_images.png)
+</br>
 
 ## Permisos d'accés
 

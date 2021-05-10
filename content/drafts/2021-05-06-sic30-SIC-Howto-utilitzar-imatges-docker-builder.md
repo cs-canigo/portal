@@ -1,10 +1,10 @@
 +++
-date        = "2020-12-29"
-title       = "Utilitzar imatges Docker Builder"
-description = "Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
+date        = "2021-05-10"
+title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
+description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
 section     = "howtos"
 categories  = ["SIC"]
-#key        = "JUNY2019"
+#key        = "JUNY2021"
 +++
 
 ## Introducció
@@ -20,7 +20,8 @@ d'imatges, el codi font, la documentació associada i el procediment per a dispo
 
 ### Accés via consola web
 Es pot accedir al Harbor a través de la seva consola web mitjançant: https://docker-registry.ctti.extranet.gencat.cat.
-Un cop dins es pot navegar a través de les carpetes de les imatges del projecte **gencatsic**.
+Un cop dins es pot navegar a través de les carpetes de les imatges del projecte [**gencat-sic-builders**]
+(https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories).
 
 ### Login
 Per a poder descarregar les imatges en local primer ens hem de autenticar de la següent manera:
@@ -34,7 +35,7 @@ Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de 
 
 Un cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:
 ```
-docker pull docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-8
+docker pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
 ```
 
 On, en el cas d'exemple, estem descarregant-nos la imatge *maven-builder* versió 1.0-3.6-8.
@@ -48,7 +49,7 @@ docker run -it --rm \
  -v $HOME/.m2/repository:/repository \
  -v $HOME/.m2/settings.xml:/settings/settings.xml \
  -v $PWD:/app -w "/app" \
- docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-8 \
+ docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8 \
  mvn --version
 ```
 
@@ -79,7 +80,7 @@ seguit del nom de la imatge base a utilitzar.
 Per exemple:
 
 ```bash
-FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
 ```
 </br>
 
@@ -104,7 +105,7 @@ Exemple:
 
 ```bash
 # S'utilitza una imatge base del SIC.
-FROM docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-2.2-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
 
 # Es modifica el responsable de la imatge.
 LABEL maintainer="change.me@gencat.cat"
