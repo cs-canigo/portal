@@ -101,7 +101,7 @@ Per exemple, reimplementarem el mètode *insertarAssentamentSafata* de *cat.genc
     }	
 ```
 
-També serà necessari reimplementar el mètode *findNode* de la classe *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils* per a buscar el node que contingui el node a buscar, per perfetre ser independent del prefix:
+També serà necessari reimplementar el mètode *findNode* de la classe *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils* per a buscar el node que contingui el node a buscar, independentment del prefix:
 
 ```
 package cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils;
@@ -185,11 +185,11 @@ Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó 3.4.x, ve
 
 Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó inferior a 3.4.x, serà necessari reimplementar el connector tal i com hem mostrat
 
-# Informació
+## Informació
 
-- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl]()
+- Reimplementació de *insertarAssentamentSafata* a [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl](/related/canigo/howto/SARCAT/SarcatConnectorCustomImpl.java)
 
-- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils]()
+- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils](/related/canigo/howto/SARCAT/SarcatXMLUtils.java)
 
 - Podeu consultar la informació del connector de Canigó a [SARCAT](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
 
