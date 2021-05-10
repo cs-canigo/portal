@@ -1,7 +1,7 @@
 +++
 date = "2021-04-13"
 title = "SIC 3.0 - Com construir el fitxer ACA"
-description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
+description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
 toc = true
 taxonomies = []
@@ -17,14 +17,14 @@ En aquest article **ens centrarem exclusivament en explicar com preparar l’arx
 Si voleu més informació sobre el funcionament d'aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
 [**Autoservei de pipelines**](/sic30-serveis/autoservei-pipelines/) on s'explica de forma detallada.
 
+## Format i ubicació
+
+El proveïdor d’aplicacions haurà de configurar l'arxiu `/sic/aca.yml` dins del repositori del projecte (al primer nivell de carpeta).
+Es tracta d’un arxiu de text en **format YAML** en el que cal indicar tota la informació necessària per a la construcció i desplegament del component.
+
 ## Configuració
 
-El proveïdor d’aplicacions haurà de configurar l'arxiu `/sic/aca.yml` dins del repositori del projecte (a nivell de carpeta del projecte).
-Es tracta d’un arxiu de text en **format YAML** en el que a continuació definirem la informació que cal emplenar.
-
-## Estructura general
-
-L'arxiu ACA es compondrà de la següent estructura:
+L'arxiu ha de tenir la següent **estructura general**:
 
 ```
 version
@@ -37,11 +37,9 @@ components:
 notifications
 ```
 
-## Detall dels elements de l'estructura
-
 ### version
 
-Caldrà indicar la versió de l’arxiu ACA que, per tant, segueix un versionatge diferent al de l’aplicació ja que cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha de seguir el format estàndard: <versioMajor>.<versioMenor>.<pegat>.
+Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versionat diferent del de l’aplicació o component, ja que cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha de seguir el format estàndard: <versioMajor>.<versioMenor>.<pegat>.
 
 El valor actual és:
 
@@ -51,7 +49,7 @@ version: 2.0.0
 
 ### info
 
-En aquest element hi contindrà informació sobre l'aplicació, l'element *info* i els subelements seran:
+Aquest element contindrà informació general del component:
 
 ```
 info:
@@ -61,11 +59,7 @@ info:
 
 #### info.version
 
-Caldrà indicar la versió funcional de l'aplicació seguint el format de:
-
-https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari/
-
-Per exemple:
+Versió funcional de l’aplicació o component que ha d’acomplir l’[Estàndard de versions](https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari). Per exemple:
 
 ```
 info:
@@ -74,58 +68,81 @@ info:
 
 #### info.description
 
-L'objectiu d'aquest element és contenir una descripció de l'aplicació. És un camp de lliure contingut.
-
-Un exemple de contingut podria ser:
+Descripció de l'aplicació o component. Es tracta d’un camp de lliure contingut. Per exemple:
 
 ```
 info:
-  description: Backend per l'aplicació de la gestió de continguts al CTTI
+  description: Backend de l'aplicació de Gestió de Continguts CTTI
 ```
 
 ### global-env
 
-En aquest element hi contindrà el llistat de variables globals necessaris per l'execució del job de l'aplicació. Les variables dependrà de de les necessitats de cada projecte, segons:
+Relació de variables globals necessàries per a l’execució de la pipeline. Les variables requerides en cada cas dependran de les necessitats de desplegament aplicant els següents criteris:
 
-- **Pel desplegament a l'Openshift de CPD2, CPD3 i CPD4**
-   - **CONTAINER_DOCKERFILE_PATH**: Path complert incloent el nom del Dockerfile que utilitzarà per crear el contenidor de l'aplicació que es desplegarà a l'Openshift
-   - **CONTAINER_IMAGE_NAME**: Nom de la imatge que li assignarà al contenidor que es desplegarà a l'Openshift
-   - **DEPLOYMENT_TYPE**: Tipus de desplegament al Openshift, en aquest cas: **DeploymentConfig**, **Deployment** i **StatefulSet**
+Per al **desplegament a l'Openshift de CPD2, CPD3 i CPD4**:
 
-- **Pel desplegament a Kubernetes IBMCloud i CaaS**
-   - **CONTAINER_DOCKERFILE_PATH**: Path complert incloent el nom del Dockerfile que utilitzarà per crear el contenidor de l'aplicació que es desplegarà a Kubernetes
-   - **CONTAINER_IMAGE_NAME**: Nom de la imatge que li assignarà al contenidor que es desplegarà a Kubernetes
-   - **DEPLOYMENT_TYPE**: Tipus de desplegament a Kubernetes, en aquest cas: **Deployment** i **StatefulSet**
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Openshift|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift|
+|DEPLOYMENT_TYPE|Tipus de desplegament a Openshift. Possibles valors: **DeploymentConfig**, **Deployment** i **StatefulSet**|
 
-- **Pel desplegament a WebApp Azure**
-   - **CONTAINER_DOCKERFILE_PATH**: Path complert incloent el nom del Dockerfile que utilitzarà per crear el contenidor de l'aplicació que es desplegarà al WebApp Azure
-   - **CONTAINER_IMAGE_NAME**: Nom de la imatge que li assignarà al contenidor que es desplegarà al WebApp Azure
 
-- **Pel desplegament a SwarmMe**
-   - **CONTAINER_DOCKERFILE_PATH**: Path complert incloent el nom del Dockerfile que utilitzarà per crear el contenidor de l'aplicació que es desplegarà al SwarmMe
-   - **CONTAINER_IMAGE_NAME**: Nom de la imatge que li assignarà al contenidor que es desplegarà al SwarmMe
+Per al **desplegament a Kubernetes IBMCloud i CaaS**:
 
-- **Pel desplegament al Api Manager**
-   - **APIC_PRODUCT_FILE**: Path i nom del fitxer descriptor pel desplegament de l'aplicació al Api Manager
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Kubernetes|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes|
+|DEPLOYMENT_TYPE|Tipus de desplegament a Kubernetes. Possibles valors: **Deployment** i **StatefulSet**|
 
-- **Pel desplegament al CloudFoundry IBMCloud**
-   - **CF_BUILDPACK**: BuildPack utilitzat per preparar l'aplicació per ser desplegada al CloudFoundry. Consultar amb SuportCloud els buildpacks disponibles a la llista d'elements de [catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)
-   - **CF_PATH**: Ruta de l'artefacte a desplegar al CloudFoundry
 
-- **Per la publicació de l'artefacte al Nexus**
-  Compatible amb Maven i Node.
-   - **PUBLISH_PARAMS**: Paràmetres necessaris pel desplegament al Nexus
+Per al **desplegament a WebApp Azure**:
 
-   - Maven:
-     - Per la publicació de l'artefacte s'executa la comanda ``` mvn deploy ${PUBLISH_PARAMS} ```
-     - Llavors, per exemple, PUBLISH_PARAMS indicariem el path del pom de maven ``` -f ./pom.xml ```
-   - Node:
-      - Per la publicació de l'artefacte s'executa la comanda ``` npm publish ${PUBLISH_PARAMS} ```
-      - Llavors, per exemple, PUBLISH_PARAMS indicariem el path de la llibreria ``` dist/lib ```
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a WebApp Azure|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure|
 
-   - En tots dos casos, es poden indicar paràmetres adicionals per a cada cas particular. Els registres interns s'afegeixen automàticament
 
-Exemple de llistat de variables per Openshift:
+Per al **desplegament a SwarmMe**:
+
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
+
+
+Per al **desplegament a l’Api Manager**:
+
+|Variable|Valor|
+|-------|-------|
+|APIC_PRODUCT_FILE|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|
+
+
+Per al **desplegament al CloudFoundry IBMCloud**:
+
+|Variable|Valor|
+|-------|-------|
+|CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
+|CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
+
+
+Per a la **publicació de llibreries** al repositori:
+
+|Variable|Valor|
+|-------|-------|
+|PUBLISH_PARAMS|Paràmetres necessaris per a la publicació de llibreries. El valor dependrà de la tecnologia de construcció|
+
+Per exemple:
+
+- En el cas de **Maven** s’executarà la comanda ```mvn deploy ${PUBLISH_PARAMS}``` per la qual cosa haurem d’indicar la ruta del fitxer `pom.xml`. Per exemple: ```PUBLISH_PARAMS: -f ./pom.xml```.
+
+- En el cas de **Npm** s’executarà la comanda ```npm publish ${PUBLISH_PARAMS}``` per la qual cosa haurem d’indicar la ruta de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
+
+En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà automàticament a la comanda.
+
+Per exemple, per al desplegament a Openshift:
 
 ```
 global-env:
@@ -136,37 +153,19 @@ global-env:
 
 ### components[].custom-builder
 
-Element per definir l'informació de com construir el contenidor que serà l'encarregat de construir l'aplicació si l'aplicació no utilitza per a la construcció els contenidors dels builders oferts per SIC ja que té necessitats pròpies.
+Informació per a generar el contenidor que serà l'encarregat de construir l'aplicació o component. **Només caldrà indicar aquesta secció en cas que l’aplicació o component no pugui fer ús del catàleg d’imatges** perquè disposa de requeriments propis. En aquest cas, l’element indicarà els diferents passos (`steps`) per a generar el contenidor, proporcionant informació sobre el contenidor (`container`)i les accions a executar (`execution`). Opcionalment, les imatges podran estendre del catàleg d'imatges corporatiu.
 
-En aquest element hi contindrà el llistat dels diferents passos (steps) per a contruir el contenidor encarregat de construir l'aplicació.
-
-Per cada pas es podrà definir informació del contenidor (container) i informació de les accions a executar (execution) si és necessari
+Veure: [Utilitzar imatges Docker Builder](https://canigo.ctti.gencat.cat/howtos/2021-05-06-sic30-SIC-Howto-utilitzar-imatges-docker-builder/)
 
 #### components[].custom-builder.steps[].container
 
-A aquest element hi contindrà informació de com construir la imatge del contenidor que realtizarà la construcció de l'aplicació (custom builder).
+Informació per a construir la imatge del contenidor que s’encarregarà de la construcció de l'aplicació o component (`custom builder`). Caldrà afegir l’element local (`local`) indicant:
 
-A l'entorn local d'excució (local) informarem:
+- `path`: ruta del Dockerfile de la imatge del contenidor.
 
-- path: ruta al Dockerfile de la imatge del contenidor
+- `name`: nom que es desitja assignar a la imatge del contenidor
 
-- name: nom que li volem donar a la imatge del contenidor
-
-```
-components:
-  - custom-builder:
-      steps:
-        - container:
-            image:
-              local:
-                name: nom-contenidor
-                path: path/Dockerfile
-```
-
-#### Exemple
-
-Així per exemple podriem tenir:
-
+Per exemple:
 ```
 components:
   - custom-builder:
@@ -178,17 +177,14 @@ components:
                 path: builds/Dockerfile
 ```
 
-On estem definint que la definició per la contrucció de la imatge del contenidor per a la construcció (custom builder) del projecte es troba al fitxer *builds/Dockerfile* i se li vol donar a aquesta imatge de construcció el nom *7-768-arp-api-builder* que posteriorment al build s'utilitzarà.
+El nom de la imatge (`name`) serà referenciada des de la secció de construcció (`build`).
+
+TODO: execution? No es proporciona cap exemple?
+
 
 ### components[].build
 
-A aquest element hi contindrà el llistat de passos (steps) amb informació de com realitzar la construcció del projecte. Per cada step definirem:
-
-- container: Informació del contenidor encarregat de realtizar la construcció del projecte
-
-- execution: Informació de les comandes que s'han d'executar per la construcció del projecte
-
-L'estructura serà:
+Relació de passes (`steps`) per a la construcció del projecte segons la següent estructura:
 
 ```
 components:
@@ -198,15 +194,16 @@ components:
           execution
 ```
 
+On:
+
+- `container`: informació del contenidor encarregat de realitzar la construcció del projecte.
+
+- `execution`: informació de les comandes que cal executar per a la construcció del projecte.
+
+
 #### components[].build.steps[].container
 
-En aquest element hi definirem informació del contenidor encarregat de realitzar la contrucció del projecte amb els elements:
-
-- image: informació de la imatge encarregada de realitzar la construcció del projecte
-
-- resources: recursos necessaris per a que la imatge contrueixi correctament el projecte
-
-L'estructura serà:
+Informació del contenidor encarregat de realitzar la construcció del projecte segons la següent estructura:
 
 ```
 components:
@@ -217,15 +214,15 @@ components:
             resources
 ```
 
+On:
+
+- `image`: informació de la imatge encarregada de realitzar la construcció del projecte.
+
+- `resources`: recursos a assignar per a la correcta construcció del projecte (CPU i memòria).
+
+
 ##### components[].build.steps[].container.image
-
-En aquest element hi definirem informació de la imatge a utilitzar per la construcció del projecte amb els elements:
-
-- remote: Utilitzarem remote si la imatge del contenidor constructor (builder) és un dels oferts pel SIC per la construcció
-
-- local: Utilitzarem local si es vol utilitzar la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components-custom-builder)
-
-L'estructura per remote seria:
+Informació de la imatge a utilitzar per a la construcció del projecte segons la següent estructura.
 
 ```
 components:
@@ -233,33 +230,22 @@ components:
       steps:
         - container:
             image:
-              remote
+              remote/local
 ```
 
-L'estructura per local seria:
+La imatge pot ser de dos tipus:
 
-```
-components:
-  - build:
-      steps:
-        - container:
-            image:
-              local
-```
+- `remote`: indica que la imatge del contenidor constructor (`builder`) és una de les imatges proporcionades al catàleg d’imatges del SIC.
 
-###### **components[].build.steps[].container.image.remote**
+- `local`: indica que la imatge del contenidor constructor és pròpia (`custom builder`) creada en l’element [`components[].custom-builder`](#components-custom-builder).
 
-En aquest element especificarem quina imatge del contenidor constructor (builder) i amb quina versió ofertes pel SIC per la construcció es vol utilitzar. Les imatges ofertes pel SIC estan disponibles al projecte *gencat-sic-builders* del registre Docker privat de la Generalitat de Catalunya:
+###### components[].build.steps[].container.image.remote
 
-https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories
+Imatge i versió del contenidor constructor (`builder`) que cal utilitzar d’entre les imatges del catàleg del SIC.
 
-Per a disposar d’accés a les imatges Docker utilitzades al SIC és necessari contactar amb l’Oficina Tècnica de Canigó a través dels canals establerts: https://canigo.ctti.gencat.cat/sic/suport/. L’Oficina subministrarà al proveïdor d’aplicacions un usuari amb permís de lectura al projecte *gencat-sic-builders* que conté les imatges Docker utilitzades pel SIC.
+Les imatges de construcció ofertes pel SIC es troben disponibles al projecte [*gencat-sic-builders*]( https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories) del registre Docker privat de la Generalitat de Catalunya. Per a disposar d’accés és necessari contactar amb l’Oficina Tècnica de Canigó a través dels [canals de suport](https://canigo.ctti.gencat.cat/sic/suport/) proporcionant als proveïdors d’aplicacions un usuari amb permís de lectura. Podeu accedir al codi font i documentació associada al catàleg d’imatges del SIC mitjançant el següent enllaç: https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
-Podeu accedir al codi font del catàleg d’imatges del SIC, i a la documentació associada, mitjançant el següent enllaç:
-
-https://git.intranet.gencat.cat/0192-intern/sic-builders
-
-L'element a definir serà el nom (name), tenint l'estructura:
+Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
 
 ```
 components:
@@ -271,11 +257,9 @@ components:
                 name
 ```
 
-###### **components[].build.steps[].container.image.local**
+###### components[].build.steps[].container.image.local
 
-En aquest element especificarem el nom (name) de la imatge del contenidor constructor pròpia (custom builder) creada en el element [components[].custom-builder](#components-custom-builder)
-
-L'estructura seria:
+Imatge del contenidor constructor pròpia (custom builder) creada en l’element [components[].custom-builder](#components-custom-builder). Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
 
 ```
 components:
@@ -289,15 +273,7 @@ components:
 
 ##### components[].build.steps[].container.resources
 
-En aquest element detallarem els recursos de màquina necessaris per a que el contenidor realitzi la construcció del projecte. Es definiran els recursos de cpu i memòria del contenidor, tant dels limits com de request
-
-Així pels elements limits i request tindrem els elements:
-
-- cpu: Recursos de CPU mesurats en *cpu unitats*. 1 CPU equival a 1 vCPU/Core per a plataformes cloud i 1 hiperthread a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpu". Recomenem utilitzar l'unitat "milicore"
-
-- memory: Recursos de memòria mesurats en bytes. Podeu expressar la memòria com una potència de dos equivalents: Gi o Mi. Recomenem utilitzar l'unitat "Mi"
-
-L'estructura seria:
+Recursos de màquina necessaris per a que el contenidor pugui dur a terme la construcció del projecte. Es definiran els recursos de CPU i memòria del contenidor, tant de `limits` (recursos màxims) com de `request` (recursos mínims), segons la següent estructura:
 
 ```
 components:
@@ -313,13 +289,24 @@ components:
                 memory
 ```
 
-Tenir present que hi ha un màxim de recursos permesos, de tal manera que si se superen provocarà un error d'execució. Els valors màxims són: ***2048Mi*** de memòria i ***2000m*** de CPU
+On:
+
+- `cpu`: recursos de CPU mesurats en *unitats de CPU*. 1 CPU equival a 1 vCPU/Core per a plataformes cloud i 1 hyperthread a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1 CPU. L'expressió 0.1 equival a l'expressió 100m, que es pot llegir com "cent milicpus" o com a “cent milicores”. Es recomana utilitzar la unitat "milicore" tenint en compte que no es permet una precisió major que 1m.
+
+- `memory`: recursos de memòria mesurats en bytes. Podeu expressar la memòria amb un nombre sencer o com un nombre decimal fent ús d’aquests prefixos: G o M, o també podeu usar els equivalents en ptencia de dos: Gi o Mi. Es recomana utilitzar la unitat "Mi".
+
+<div class="message information">
+Cal tenir present que hi ha un màxim de recursos permesos, de tal manera que si se superen es produirà un error d'execució. Els valors màxims establerts són: ***2048Mi*** de memòria i ***2000m*** de CPU.
+</div>
+<br/>
+
+
+Per a més informació sobre l’administració de recursos: https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/.
+
 
 #### components[].build.steps[].execution
 
-En aquest element detallarem el llistat de comandes (commands) que s'han d'executar al contenidor per a construir el projecte.
-
-Així tindrem l'estructura:
+Relació de comandes (`commands`) que s'han d'executar al contenidor per a la construcció del projecte segons la següent estructura:
 
 ```
 components:
@@ -331,7 +318,7 @@ components:
 
 #### Exemple
 
-Per exemple, per la construcció d'una aplicació maven 3.6 i jdk 1.8 podriem tenir:
+Exemple de construcció d'una aplicació Maven 3.6 i Jdk 1.8:
 
 ```
 components:
@@ -355,9 +342,7 @@ components:
 
 ### components[].deployment
 
-A aquest element hi contindrà informació sobre amb quin repositori de codi font (scm) hi contindrà els descriptors pel desplegament de l'aplicació (yml) a l'OpenShift i Kubernetes i també hi contindrà el llistat d'entorns a on desplegar l'aplicació (enviroments)
-
-Així tindrem:
+Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l'aplicació a l'OpenShift i Kubernetes, així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
 
 ```
 components:
@@ -368,13 +353,7 @@ components:
 
 #### components[].deployment.enviroments[]
 
-Per cada element de la llista hi contindrà informació sobre on (name) i com (actions) es desplegarà l'aplicació. Aquest element es composarà dels elements:
-
-- name: nom de l'entorn a on es desplegarà l'aplicació
-
-- actions: accions a realitzar en el desplegament de l'aplicació: before-deploy, deploy i after-deploy
-
-Tenint l'estructura:
+Informació sobre “on” (`name’) i “de quina manera” (`actions`) es desplegarà l’aplicació segons la següent estructura:
 
 ```
 components:
@@ -384,22 +363,15 @@ components:
           actions
 ```
 
+On:
+
+- `name`: nom de l'entorn on es desplegarà l'aplicació.
+
+- `actions`: accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`.
+
 ##### components[].deployment.enviroments[].actions.before-deploy
 
-Pas previ al desplegament, pensat per realitzar tasques que calgui executar prèviament, per exemple, modificar l'estat d'un API Gateway
-
-Aquest pas és compatible únicament amb plataformes Openshift i Kubernetes
-
-La tasca s'executarà en format de Job
-
-Aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar abans de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Per a la seva correcta execució cal informar de les següents variables d'entorn:
-
-- **JOB_NAME_PREFIX**: Prefix del nom del job
-- **JOB_IMAGE**: Nom de la imatge a executar al job
-- **JOB_WAIT**: Temps d'espera del desplegament del job
-- **JOB_ENVS**: Variables necessàries per l'execució del job
-
-Per aquest element tindrem l'estructura:
+Informació sobre el possible pas previ al desplegament `before-deploy` concebut per a poder dur a terme tasques que calgui executar com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible únicament amb plataformes Openshift i Kubernetes** segons la següent estructura:
 
 ```
 components:
@@ -413,7 +385,19 @@ components:
                     env
 ```
 
-Un exemple d'utilització d'aquest element seria:
+On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps`) a realitzar indicant les següents variables d’entorn:
+
+|Variable|Valor|
+|-------|-------|
+|JOB_NAME_PREFIX|Prefix que se li assignarà a la tasca|
+|JOB_IMAGE|Nom de la imatge a utilitzar|
+|JOB_WAIT|Temps d'espera de la tasca|
+|JOB_ENVS|Variables d’entorn necessàries|
+
+TODO: JOB_NAME_PREFIX? És necessari? Podem assumir un valor fixe?
+
+
+Per exemple:
 
 ```
 components:
@@ -433,33 +417,7 @@ components:
 
 ##### components[].deployment.enviroments[].actions.deploy
 
-A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar pel desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn, segons:
-
-- **Pel desplegament al Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS**
-   - **DESCRIPTORS_PATH**: Ruta amb els descriptors (yml) dins del repositori definit al element *scm* de [components[].deployment](#components-deployment) per desplegar l'aplicació al Openshift o Kubernetes
-   - **DEPLOYMENT_NAME**: Nom de l'aplicació al Openshift o Kubernetes
-   - **DEPLOYMENT_WAIT**: Temps d'espera pel desplegament de l'aplicació al Openshift o Kubernetes
-
-- **Pel desplegament a WebApp Azure**
-   - **WEBAPP_NAME**: Nom de l'aplicació al WebApp Azure
-
-- **Pel desplegament a SwarmMe**
-   - **SWARMME_SERVICE_NAME**: Nom del servei al SwarmMe
-   - **SWARMME_SERVICE_DOMAIN**: Domini del servei al SwarmMe
-   - **SWARMME_SERVICE_PATH**: Path del servei al SwarmMe
-   - **SWARMME_SERVICE_PORT**: Port del servei al SwarmMe
-   - **SWARMME_REPLICAS**: Número de instàncies del servei al SwarmMe
-   - **EXTRA_PARAMS**: Paràmetres adicionals associats al desplegament, consultar amb SuportCloud
-
-- **Pel desplegament al Api Manager**
-   - **APIC_PLAN_MAP**: Descripció de quin plan utilitzar per desplegar al Api Manager, consultar a SuportCloud
-
-- **Pel desplegament al CloudFoundry IBMCloud**
-   - **CF_NAME**: Nom al CloudFoundry
-   - **CF_COMMAND**: Comanda a executar al CloudFoundry
-   - **CF_ENV**: Variables necessàries per la correcta execució de l'aplicació, separades per '|'
-
- Així tindrem l'estructura:
+Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
 ```
 components:
@@ -473,7 +431,54 @@ components:
                     env
  ```
 
-Un exemple pel desplegament a l'entorn de Preproducció al Openshift seria:
+On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps`) a realitzar indicant les variables requerides en cada cas i que dependran de les necessitats de desplegament aplicant els següents criteris:
+
+
+Per al **desplegament a l’Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS**
+
+|Variable|Valor|
+|-------|-------|
+|DESCRIPTORS_PATH|Ruta amb els descriptors en format YML dins el repositori definit a l’element *scm* de [components[].deployment](#components-deployment) per a desplegar l'aplicació a l’Openshift o Kubernetes|
+|DEPLOYMENT_NAME|Nom de l'aplicació a l’Openshift o Kubernetes|
+|DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes|
+
+
+Per al **desplegament a WebApp Azure**
+
+|Variable|Valor|
+|-------|-------|
+|WEBAPP_NAME|Nom de l'aplicació al WebApp Azure|
+
+
+Per al **desplegament a SwarmMe**
+
+|Variable|Valor|
+|-------|-------|
+|SWARMME_SERVICE_NAME|Nom del servei al SwarmMe|
+|SWARMME_SERVICE_DOMAIN|Domini del servei al SwarmMe|
+|SWARMME_SERVICE_PATH|Ruta del servei al SwarmMe|
+|SWARMME_SERVICE_PORT|Port del servei al SwarmMe|
+|SWARMME_REPLICAS|Nombre d’instàncies del servei al SwarmMe|
+|EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
+
+
+Per al **desplegament a l’Api Manager**
+
+|Variable|Valor|
+|-------|-------|
+|APIC_PLAN_MAP|Descripció del pla a utilitzar per al desplegament a l’Api Manager. Consultar a Suport Cloud|
+
+
+Per al **desplegament al CloudFoundry IBMCloud**
+
+|Variable|Valor|
+|-------|-------|
+|CF_NAME|Nom al CloudFoundry|
+|CF_COMMAND|Comanda a executar al CloudFoundry|
+|CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per '|'. Consultar a Suport Cloud|
+
+
+Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
 
 ```
 components:
@@ -493,20 +498,7 @@ components:
 
 ##### components[].deployment.enviroments[].actions.after-deploy
 
-Pas posterior al desplegament, pensat per realitzar tasques que calgui executar un cop desplegat, per exemple, modificar l'estat d'un API Gateway
-
-Aquest pas és compatible únicament amb plataformes Openshift i Kubernetes
-
-La tasca s'executarà en format de Job
-
-A aquest element hi contindrà informació de les execucions (execution) de cada pas (steps) a realitzar després de realitzar l'acció de desplegament de l'aplicació. Per cada execució de cada pas hi contindrà les variables d'entorn. Per a la seva correcta execució cal informar de les següents variables d'entorn:
-
-- **JOB_NAME_PREFIX**: Prefix del nom del job
-- **JOB_IMAGE**: Nom de la imatge a executar al job
-- **JOB_WAIT**: Temps d'espera del desplegament del job
-- **JOB_ENVS**: Variables necessàries per l'execució del job
-
-Per aquest element tindrem l'estructura:
+Informació sobre el possible pas posterior al desplegament `after-deploy` concebut per a poder dur a terme tasques que calgui executar com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible únicament amb plataformes Openshift i Kubernetes** segons la següent estructura:
 
 ```
 components:
@@ -520,7 +512,17 @@ components:
                     env
 ```
 
-Un exemple d'utilització d'aquest element seria:
+On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps`) a realitzar indicant les següents variables d’entorn:
+
+|Variable|Valor|
+|-------|-------|
+|JOB_NAME_PREFIX|Prefix que se li assignarà a la tasca|
+|JOB_IMAGE|Nom de la imatge a utilitzar|
+|JOB_WAIT|Temps d'espera de la tasca|
+|JOB_ENVS|Variables d’entorn necessàries|
+
+
+Per exemple:
 
 ```
 components:
@@ -540,7 +542,7 @@ components:
 
 ### notifications
 
-A aquest element contindrà informació de la forma de notificació i on es notificarà les accions manuals en espera i els resultats de les execucions dels jobs de l'aplicació. Actualment la forma de notificació proporcionada és per email. Per la notiticació per email és necessari informar del llistat de destinataris amb l'estructura:
+Informació sobre el canal de notificació i destinataris davant accions manuals en espera i informació sobre resultats de les execucions. Actualment, el canal de notificació és mitjançant el correu electrònic, essent necessari indicar la relació de destinataris segons la següent estructura:
 
 ```
 notifications:
@@ -558,25 +560,44 @@ notifications:
       - correu@domini.cat
 ```
 
+## Validació
+Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer en fer la pujada al Sistema de Custòdia de Codi.
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles com [**YAML Validator**](http://www.yamllint.com/).
+
+
 ## Exemples
 
-A continuació s'adjunten exemples de casos d'ús:
+A continuació s'adjunten exemples dels diferents casos d’ús:
 
-- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml)
-- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al SwarmMe](/related/sic/3.0/aca_const_despl_maven_swarmme.yml)
-- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
-- [Exemple de fitxer ACA de construcció i desplegament d'aplicació node al Openshift CPD4](/related/sic/3.0/aca_const_despl_node_openshift_cpd4.yml)
-- [Exemple de fitxer ACA de construcció i desplegament d'aplicació maven amb before-deploy i post-deploy al Openshift CPD3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
-- [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al Openshift CPD2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
-- [Exemple de fitxer ACA de desplegament d'aplicació a partir d'un contenidor creada la imatge des de Dockerfile al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
-- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació PHP al Openshift CPD4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
-- [Exemple de fitxer ACA de construcció utilitzant un custom builder i desplegament d'aplicació maven al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
-- [Exemple de fitxer ACA de desplegament d'aplicació al Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
-- [Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria maven](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
-- [Exemple de fitxer ACA de construcció i publicació al Nexus de llibreria node](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
+- [Construcció aplicació Maven i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml)
+
+- [Construcció aplicació Maven i desplegament al SwarmMe](/related/sic/3.0/aca_const_despl_maven_swarmme.yml)
+
+- [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
+
+- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4](/related/sic/3.0/aca_const_despl_node_openshift_cpd4.yml)
+
+- [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
+
+- [Desplegament aplicació mitjançant contenidor creat a partir de DockerFile i desplegament a l’Openshift de Cpd2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
+
+- [Desplegament aplicació mitjançant contenidor creat a partir de Dockerfile i desplegament al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
+
+- [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift Cpd4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
+
+- [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
+
+- [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
+
+- [Construcció i publicació de llibreria Maven al Nexus](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
+
+- [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
 
 
+TODO: Exemples sense la part de build??
 
+
+<br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/).
 
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**](/sic/sic30-faq) i utilitzeu el canal de [**Suport**](/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
