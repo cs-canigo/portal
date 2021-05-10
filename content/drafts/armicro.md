@@ -1,7 +1,7 @@
 +++
 date        = "2021-05-01"
 title       = "Arquitectura de Referència de Microserveis"
-description = "Davant la ràpida evolució dels estils d’arquitecturals, s'ha identificat la necessitat d’establir una arquitectura de referència per aquelles aplicacions que opten per arquitectures altament distribuïdes tant a nivell lògic com a nivell físic. L'arquitectura presentada en aquesta pàgina s'orienta al desplegament d'aplicacions en microserveis i microfrontends de forma que un arquitecte la pugui usar com a punt de partida per fer el disseny d'una solució."
+description = "Arquitectura de referència orientada al desplegament d'aplicacions en microserveis i microfrontends."
 sections    = ["drafts"]
 weight      = 1
 +++
