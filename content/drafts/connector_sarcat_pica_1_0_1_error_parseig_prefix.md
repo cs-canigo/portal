@@ -1,27 +1,61 @@
 +++
 date        = "2021-05-07"
-title       = "Error namespace connector sarcat-pica 1.0.1"
-description = "Error al recuperar resposta de PICA a les crides s@rcat en la versió 1.0.1 del connector"
+title       = "Error prefix namespace connector Sarcat"
+description = "Error al recuperar resposta de PICA a les crides Sarcat del connector Sarcat de Canigó"
 sections    = ["drafts"]
 weight      = 1
 +++
 
 ## Introducció al problema
 
-El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de sarcat en la seva versió 1.0.1. L'error es produeix perquè pica retorna el missatge sense namespace i el connector intenta cercar el node de resposta amb un namespace prefixat
+El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix perquè PICA ha modificat els prefixes dels namespace de les respostes i el connector intenta cercar els nodes de resposta amb un namespace prefixat
 
 ## Detall del problema
 
-El mòdul d'integració amb sarcat-pica, en la seva versió 1.0.1 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recupera la resposta amb un prefix. Actualment, la resposta de PICA no inclou aquest prefix i per tant es produeix un problema de parseig.
+El mòdul d'integració amb Sarcat, en la seva versió 1.0.1 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recupera la resposta amb un prefix. Actualment, la PICa respon amb un prefix diferent i per tant es produeix un problema de parseig.
 
 ```
 		Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
 		SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
+Quan la PICA respon per exemple:
+
+```
+<ns2:SarcatAlAltaResponse xmlns:ns2="http://gencat.net/scsp/esquemes/peticion/alta">
+
+<ns2:error>
+
+<ns3:codi xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common">0</ns3:codi>
+
+<ns3:descripcio xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common"/>
+
+<ns3:descripcioExtesa xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common"/>
+
+</ns2:error>
+
+<ns2:assentamentRetorn anyPK="2021" codiURPK="0278" dataAlta="28/04/2021 10:35:22" numPK="183">
+
+<ns2:errorAssentament>
+
+<ns3:codi xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common">0</ns3:codi>
+
+<ns3:descripcio xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common"/>
+
+<ns3:descripcioExtesa xmlns:ns3="http://gencat.net/scsp/esquemes/peticion/common"/>
+
+</ns2:errorAssentament>
+
+</ns2:assentamentRetorn>
+
+</ns2:SarcatAlAltaResponse>
+```
+
 ## Solució al problema
 
-Per a resoldre el problema, donat que la versió 1.0.1 del mòdul ja no té suport, cal reimplementar els mètodes necessaris del mòdul.
+S'ha publicat la versió 2.3.2 del connector Sarcat de la PICA de Canigó que resol aquest problema, buscant els nodes de resposta de la PICA independentment dels prefixes del namespace.
+
+Per a resoldre el problema per a versions anteriors a la versió 2.0.0, cal reimplementar els mètodes necessaris del mòdul.
 Cal crear una implementació custom per reimplementar els mètodes que fan crida a SarcatXMLUtils.findNode per especificar que no hi ha prefix en la crida.
 
 ```
