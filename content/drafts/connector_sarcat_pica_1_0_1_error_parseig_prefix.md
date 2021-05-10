@@ -63,13 +63,10 @@ Cal crear una implementació custom per reimplementar els mètodes que fan crida
 		SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-La nova implementació exten de la antiga i reimplementa els mètodes necessaris. Haurà de tenir un qualified name diferent per poder decidir quina implementació es farà servir.
+La nova implementació exten de la antiga i reimplementa els mètodes necessaris
 
 ```
-    @Service
-    @Qualifier("sarcatConnectorCustom")
     public class SarcatConnectorCustomImpl extends SarcatConnectorImpl implements SarcatConnector {
-        ...
         ...
 
 	@Override
@@ -102,19 +99,82 @@ La nova implementació exten de la antiga i reimplementa els mètodes necessaris
 ```
 Al següent link teniu el contingut sencer de la implementació custom.
 
-Al vostre projecte, haureu de fer servir la nova implementació
-```
-	private final SarcatConnector sarcatConnector;
+També serà necessari reimplementar el mètode *findNode* de la classe *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils*, 
 
+```
+package cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils;
+
+import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
+import javax.xml.XMLConstants;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.StringWriter;
+
+/**
+ * The type Pica xml utils.
+ *
+ * @author cscanigo
+ */
+public class SarcatXMLUtils {
+...
+  /**
+   * Mètode que busca el node dessitjat dintre d'un node pare.
+   *
+   * @param nodeInicial Node --> Node pare, que conté el node que volem buscar.
+   * @param nodeBuscar  String --> Nom del node a buscar.
+   * @return Node --> Node a buscar.
+   */
+  public static Node findNode(Node nodeInicial, String nodeBuscar) {
+    if (nodeInicial != null && nodeInicial.getNodeName() != null && nodeInicial.getNodeName().contains(nodeBuscar)) {
+      return nodeInicial;
+    } else if (nodeInicial != null && nodeInicial.getChildNodes() != null) {
+      NodeList llistaNodes = nodeInicial.getChildNodes();
+      for (int i = 0; i < llistaNodes.getLength(); i++) {
+        Node node = findNode(llistaNodes.item(i), nodeBuscar);
+        if (node != null) {
+          return node;
+        }
+      }
+    }
+    return null;
+  }
+...
+}
+
+```
+
+Amb la instanciació del bean, per exemple amb xml a *app-custom-beans.xml* ubicat a */src/main/resources/spring/*:
+
+```
+	<bean id="sarcatServiceCustom" class="cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl" scope="prototype">
+		<description>
+			S@RCAT service for Canigo 3.0
+		</description>
+		<property name="passwordType" value="${pica.modes.passwordType}"/>
+		<property name="picaService" ref="${sarcat.picaServiceBeanName:picaService}"/>
+		<property name="finalitat" value="${sarcat.finalitat}"/>
+		<property name="nifEmisor" value="${sarcat.nifEmisor}" />
+		<property name="nomEmisor" value="${sarcat.nomEmisor}" />
+		<property name="urlPica" value="${sarcat.urlPica}"/>
+		<property name="usuari" value="${sarcat.usuari}"/>
+		<property name="password" value="${sarcat.password}"/>
+		<property name="funcionari" ref="funcionari" />
+	</bean>
+```
+
+O instanciant-ho amb java.
+
+Al vostre projecte, haureu de fer servir la nova implementació
+
+```
 	@Autowired
-	public SarcatAppManager(@Qualifier("sarcatConnectorCustom") SarcatConnector sarcatConnector) {
-		this.sarcatConnector = sarcatConnector;
-	}
-	
-	
-	public void newAssentament (SarcatAlAltaRequestDocument document) throws SarcatException {
-		sarcatConnector.insertarAssentamentEntrada(SarcatAlAltaRequestDocument.Factory.newInstance());
-	}
+	@Qualifier("sarcatServiceCustom")
+    	private SarcatConnector sarcatConnector;
+
 ```
 
 ## Conclusió
