@@ -12,7 +12,7 @@ El maig del 2021 es va reportar un problema en la recuperació de les respostes 
 
 ## Detall del problema
 
-El mòdul d'integració amb Sarcat, a partir de la versió 1.0.0 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recupera la resposta amb un prefix. Actualment, la PICA respon amb un prefix diferent i per tant es produeix un problema de parseig.
+El mòdul d'integració amb Sarcat, a partir de la versió 1.0.0 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recuperar la resposta amb un prefix. Actualment, la PICA respon amb un prefix diferent i per tant es produeix un problema de parseig.
 
 ```
 		Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
@@ -53,7 +53,7 @@ Quan la PICA respon per exemple:
 
 ## Solució al problema
 
-S'ha publicat la versió 2.3.2 del connector SARCAT de la PICA de Canigó que resol aquest problema, buscant els nodes de resposta de la PICA independentment dels prefixes del namespace.
+S'ha publicat la [versió 2.3.2 del connector SARCAT de la PICA de Canigó]() que resol aquest problema, buscant els nodes de resposta de la PICA independentment dels prefixes del namespace.
 
 Per a resoldre el problema per a versions anteriors a la versió 2.0.0, cal reimplementar els mètodes necessaris del mòdul.
 Cal crear una implementació custom per reimplementar els mètodes que fan crida a *SarcatXMLUtils.findNode* per especificar que no hi ha prefix en la crida.
@@ -183,7 +183,7 @@ Al vostre projecte, haureu de fer servir la nova implementació
 
 Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó 3.4.x, versió 2.0.0 fins a la versió 3.2.1, recomenem actualitzar-se a la versió 2.3.2
 
-Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó inferior a 3.4.x, serà necessari reimplementar el connector tal i com hem mostrat
+Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó inferior a 3.4.x, de versió 1.0.0 fins a la versió 2.0.0, serà necessari reimplementar el connector tal i com hem mostrat
 
 ## Informació
 
