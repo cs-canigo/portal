@@ -41,7 +41,7 @@ components:
 notifications
 ```
 
-### > version
+### version
 
 Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versionat diferent del de l’aplicació o component, ja que
 cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha
@@ -51,7 +51,7 @@ de seguir el format estàndard: `<versioMajor>.<versioMenor>.<pegat>`. La versi�
 version: 2.0.0
 ```
 
-### > info
+### info
 
 Aquest element contindrà informació general del component:
 
@@ -61,7 +61,7 @@ info:
   description
 ```
 
-#### >> info.version
+#### info.version
 
 Versió funcional de l’aplicació o component que ha d’acomplir l’[Estàndard de versions](https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari).
 Per exemple:
@@ -71,7 +71,7 @@ info:
   version: 1.0.0
 ```
 
-#### >> info.description
+#### info.description
 
 Descripció de l'aplicació o component. Es tracta d’un camp de lliure contingut. Per exemple:
 
@@ -80,7 +80,7 @@ info:
   description: Backend de l'aplicació de Gestió de Continguts CTTI
 ```
 
-### > global-env
+### global-env
 
 Relació de variables globals necessàries per a l’execució de la pipeline. Les variables requerides en cada cas
 dependran de les necessitats de desplegament aplicant els següents criteris:
@@ -164,15 +164,15 @@ global-env:
   - DEPLOYMENT_TYPE: DeploymentConfig
 ```
 
-### > components[].custom-builder
+### components[].custom-builder
 
 Informació per a generar el contenidor que serà l'encarregat de construir l'aplicació o component. **Només caldrà indicar
-aquesta secció en cas que l’aplicació o component no pugui fer ús del catàleg d’imatges** perquè disposa de requeriments propis.
+aquesta secció en cas que l’aplicació o component no pugui fer ús del** [**Catàleg d’imatges**](/sic30-serveis/cataleg-imatges/)
+perquè disposa de requeriments propis.
 En aquest cas, l’element indicarà els diferents passos (`steps`) per a generar el contenidor, proporcionant informació sobre
-aquest (`container`) i les accions a executar (`execution`). Les imatges podran estendre del
-[**Catàleg d’imatges corporatiu**](/sic30-serveis/cataleg-imatges/).
+aquest (`container`) i les accions a executar (`execution`). Les imatges podran estendre del Catàleg d’imatges corporatiu.
 
-#### >> components[].custom-builder.steps[].container
+#### components[].custom-builder.steps[].container
 
 Informació per a construir la imatge del contenidor que s’encarregarà de la construcció de l'aplicació o component (`custom builder`).
 Caldrà afegir l’element local (`local`) indicant:
@@ -195,10 +195,7 @@ components:
 
 El nom de la imatge (`name`) serà referenciada des de la secció de construcció (`build`).
 
-TODO: execution? No es proporciona cap exemple?
-
-
-### > components[].build
+### components[].build
 
 Relació de passes (`steps`) per a la construcció del projecte segons la següent estructura:
 
@@ -217,7 +214,7 @@ On:
 - `execution`: informació de les comandes que cal executar per a la construcció del projecte
 
 
-#### >> components[].build.steps[].container
+#### components[].build.steps[].container
 
 Informació del contenidor encarregat de realitzar la construcció del projecte segons la següent estructura:
 
@@ -237,7 +234,7 @@ On:
 - `resources`: recursos a assignar per a la correcta construcció del projecte (CPU i memòria)
 
 
-##### >>> components[].build.steps[].container.image
+##### components[].build.steps[].container.image
 Informació de la imatge a utilitzar per a la construcció del projecte segons la següent estructura.
 
 ```
@@ -258,7 +255,7 @@ La imatge pot ser de dos tipus:
 [`components[].custom-builder`](#components-custom-builder).
 
 
-###### >>>> components[].build.steps[].container.image.remote
+**components[].build.steps[].container.image.remote**
 
 Imatge i versió del contenidor constructor (`builder`) que cal utilitzar d’entre les disponibles al
 [**Catàleg d’imatges corporatiu**](/sic30-serveis/cataleg-imatges/).
@@ -275,7 +272,7 @@ components:
                 name
 ```
 
-###### >>>> components[].build.steps[].container.image.local
+**components[].build.steps[].container.image.local**
 
 Imatge del contenidor constructor pròpia (custom builder) creada en l’element [components[].custom-builder](#components-custom-builder).
 Caldrà definir el nom de la imatge (`name`) segons la següent estructura:
@@ -290,7 +287,7 @@ components:
                 name
 ```
 
-##### >>> components[].build.steps[].container.resources
+##### components[].build.steps[].container.resources
 
 Recursos de màquina necessaris per a que el contenidor pugui dur a terme la construcció del projecte. Es definiran els
 recursos de CPU i memòria del contenidor, tant de `limits` (recursos màxims) com de `request` (recursos mínims), segons
@@ -329,7 +326,7 @@ Per a més informació sobre l’administració de recursos: https://kubernetes.
 </br>
 
 
-#### >> components[].build.steps[].execution
+#### components[].build.steps[].execution
 
 Relació de comandes (`commands`) que s'han d'executar al contenidor per a la construcció del projecte segons la següent estructura:
 
@@ -365,7 +362,7 @@ components:
               - mvn clean package -Dmaven.test.skip=true
 ```
 
-### > components[].deployment
+### components[].deployment
 
 Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l'aplicació a
 l'OpenShift i Kubernetes, així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
@@ -377,7 +374,7 @@ components:
       environments
 ```
 
-#### >> components[].deployment.enviroments[]
+#### components[].deployment.enviroments[]
 
 Informació sobre “on” (`name`) i de quina manera (`actions`) es desplegarà l’aplicació segons la següent estructura:
 
@@ -395,7 +392,7 @@ On:
 
 - `actions`: accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
 
-##### >>> components[].deployment.enviroments[].actions.before-deploy
+##### components[].deployment.enviroments[].actions.before-deploy
 
 Informació sobre el possible pas previ al desplegament `before-deploy` concebut per a poder dur a terme tasques que
 calgui executar abans del desplegament com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible
@@ -423,9 +420,6 @@ variables d’entorn:
 |JOB_WAIT|Temps d'espera de la tasca|
 |JOB_ENVS|Variables d’entorn necessàries|
 
-TODO: JOB_NAME_PREFIX? És necessari? Podem assumir un valor fixe?
-
-
 Per exemple:
 
 ```
@@ -444,7 +438,7 @@ components:
                       - JOB_ENVS: TYPE=PREDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
 ```
 
-##### >>> components[].deployment.enviroments[].actions.deploy
+##### components[].deployment.enviroments[].actions.deploy
 
 Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
@@ -527,7 +521,7 @@ components:
                       - DEPLOYMENT_WAIT: 60
 ```
 
-##### >>> components[].deployment.enviroments[].actions.after-deploy
+##### components[].deployment.enviroments[].actions.after-deploy
 
 Informació sobre el possible pas posterior al desplegament `after-deploy` concebut per a poder dur a terme tasques que
 calgui executar després del desplegament com, per exemple, modificar l'estat d'un API Gateway. Aquest pas és **compatible
@@ -574,7 +568,7 @@ components:
                       - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin
 ```
 
-### > notifications
+### notifications
 
 Informació sobre el canal de notificació i destinataris davant accions manuals en espera i informació sobre resultats
 de les execucions. Actualment, el canal de notificació és mitjançant el correu electrònic, essent necessari indicar la
