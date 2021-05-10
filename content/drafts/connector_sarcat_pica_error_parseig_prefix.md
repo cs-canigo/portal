@@ -1,18 +1,18 @@
 +++
 date        = "2021-05-07"
-title       = "Error prefix namespace connector Sarcat"
-description = "Error al recuperar resposta de PICA a les crides Sarcat del connector Sarcat de Canigó"
+title       = "Error prefix namespace connector SARCAT"
+description = "Error al recuperar resposta de PICA a les crides SARCAT del connector Sarcat de Canigó"
 sections    = ["drafts"]
 weight      = 1
 +++
 
 ## Introducció al problema
 
-El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix perquè PICA ha modificat els prefixes dels namespace de les respostes i el connector intenta cercar els nodes de resposta amb un namespace prefixat
+El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de SARCAT de Canigó en la seva versió 1.0.1. L'error es produeix perquè PICA ha modificat els prefixes dels namespace de les respostes i el connector intenta cercar els nodes de resposta amb un namespace prefixat
 
 ## Detall del problema
 
-El mòdul d'integració amb Sarcat, en la seva versió 1.0.1 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recupera la resposta amb un prefix. Actualment, la PICa respon amb un prefix diferent i per tant es produeix un problema de parseig.
+El mòdul d'integració amb Sarcat, a partir de la versió 1.0.0 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recupera la resposta amb un prefix. Actualment, la PICA respon amb un prefix diferent i per tant es produeix un problema de parseig.
 
 ```
 		Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
@@ -53,17 +53,17 @@ Quan la PICA respon per exemple:
 
 ## Solució al problema
 
-S'ha publicat la versió 2.3.2 del connector Sarcat de la PICA de Canigó que resol aquest problema, buscant els nodes de resposta de la PICA independentment dels prefixes del namespace.
+S'ha publicat la versió 2.3.2 del connector SARCAT de la PICA de Canigó que resol aquest problema, buscant els nodes de resposta de la PICA independentment dels prefixes del namespace.
 
 Per a resoldre el problema per a versions anteriors a la versió 2.0.0, cal reimplementar els mètodes necessaris del mòdul.
-Cal crear una implementació custom per reimplementar els mètodes que fan crida a SarcatXMLUtils.findNode per especificar que no hi ha prefix en la crida.
+Cal crear una implementació custom per reimplementar els mètodes que fan crida a *SarcatXMLUtils.findNode* per especificar que no hi ha prefix en la crida.
 
 ```
 		Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), ":SarcatAlAltaResponse");
 		SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-La nova implementació exten de la antiga i reimplementa els mètodes necessaris
+Per exemple, reimplementarem el mètode *insertarAssentamentSafata* de *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorImpl* que acaba utilitzant *findNode* de *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils* 
 
 ```
     public class SarcatConnectorCustomImpl extends SarcatConnectorImpl implements SarcatConnector {
@@ -96,10 +96,12 @@ La nova implementació exten de la antiga i reimplementa els mètodes necessaris
 					"Error al parsejar l'objecte de resposta", var7);
 		}
 	}
+	
+        ...
+    }	
 ```
-Al següent link teniu el contingut sencer de la implementació custom.
 
-També serà necessari reimplementar el mètode *findNode* de la classe *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils*, 
+També serà necessari reimplementar el mètode *findNode* de la classe *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils* per a buscar el node que contingui el node a buscar, per perfetre ser independent del prefix:
 
 ```
 package cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils;
@@ -179,7 +181,22 @@ Al vostre projecte, haureu de fer servir la nova implementació
 
 ## Conclusió
 
-To define
+Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó 3.4.x, versió 2.0.0 fins a la versió 3.2.1, recomenem actualitzar-se a la versió 2.3.2
+
+Si s'utilitza a l'aplicació el connector de SARCAT de PICA de Canigó inferior a 3.4.x, serà necessari reimplementar el connector tal i com hem mostrat
+
+# Informació
+
+- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl]()
+
+- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils]()
+
+- Podeu consultar la informació del connector de Canigó a [SARCAT](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
+
+- Podeu consultar el [Roadmap Framework Canigó](/canigo/roadmap/)
+
+- Podeu consultar la [Matrius de Compatibilitats de Canigó 3.4.x](/canigo-download-related/matrius-compatibilitats/#canig%C3%B3-3-4-x)
+
 
 
 Si necessiteu més informació, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
