@@ -14,30 +14,30 @@ weight     = 4
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
-|              3.4 LTS                 |                3.4.5                 |
+|              3.4 LTS                 |                3.4.6                 |
 
 
 
-|          Dependències externes       |      Canigó 3.4.0     |      Canigó 3.4.1     |      Canigó 3.4.2     |      Canigó 3.4.3     |      Canigó 3.4.4     |       Canigó 3.4.5     | 
-|---------------------------------     |---------------------- |---------------------- |---------------------- |---------------------- |---------------------- | ---------------------- | 
-| springframework                      |  5.1.5.RELEASE        |  5.1.5.RELEASE        |  5.1.9.RELEASE        |  5.1.9.RELEASE        |  5.1.9.RELEASE        |   5.1.9.RELEASE        | 
-| spring.security                      |  5.1.4.RELEASE        |  5.1.5.RELEASE        |  5.1.6.RELEASE        |  5.1.6.RELEASE        |  5.1.6.RELEASE        |   5.1.6.RELEASE        | 
-| spring.data                          |  2.1.5.RELEASE        |  2.1.5.RELEASE        |  2.1.10.RELEASE       |  2.1.10.RELEASE       |  2.1.10.RELEASE       |   2.1.10.RELEASE       | 
-| springframework.boot                 |  2.1.3.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |   2.1.8.RELEASE        | 
-| log4j                                |  2.11.0               |  2.11.0               |  2.11.2               |  2.11.2               |  2.11.2               |   2.11.2               | 
-| slf4j                                |  1.7.25               |  1.7.25               |  1.7.28               |  1.7.28               |  1.7.28               |   1.7.28               | 
-| junit                                |  4.12                 |  4.12                 |  4.12                 |  4.12                 |  4.12                 |   4.12                 | 
-| hamcrest                             |  1.3                  |  1.3                  |  1.3                  |  1.3                  |  1.3                  |   1.3                  | 
-| mockito-core                         |  2.23.4               |  2.23.4               |  2.23.4               |  2.23.4               |  2.23.4               |   2.23.4               | 
-| json.path.assert                     |  2.4.0                |  2.4.0                |  2.4.0                |  2.4.0                |  2.4.0                |   2.4.0                | 
-| jsonassert                           |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |   1.5.0                | 
-| jackson                              |  2.9.5                |  2.9.9                |  2.9.9                |  2.9.9                |  2.9.9                |   2.9.9                | 
-| springfox-swagger2                   |  2.7.0                |  2.7.0                |  2.7.0                |  2.7.0                |  2.7.0                |   2.7.0                | 
-| querydsl                             |  4.2.1                |  4.2.1                |  4.2.1                |  4.2.1                |  4.2.1                |   4.2.1                | 
-| hibernate                            |  5.3.7.Final          |  5.3.7.Final          |  5.3.11.Final         |  5.3.11.Final         |  5.3.11.Final         |   5.3.11.Final         | 
-| mongodb.driver                       |  3.10.1               |  3.10.1               |  3.10.1               |  3.10.1               |  -               		 |   -               		 	|  
-| mongodb-driver-legacy                |  -			               |  -			               |  -			               |  -			               |  3.12.3           		 |   3.12.3           		|
-| mongodb-driver-reactivestreams       |  1.9.2                |  1.9.2                |  1.9.2                |  1.9.2                |  1.13.1               |   1.13.1               | 
+|          Dependències externes       |      Canigó 3.4.0     |      Canigó 3.4.1     |      Canigó 3.4.2     |      Canigó 3.4.3     |      Canigó 3.4.4     |       Canigó 3.4.5     |       Canigó 3.4.6     |  
+|---------------------------------     |---------------------- |---------------------- |---------------------- |---------------------- |---------------------- | ---------------------- | ---------------------- |  
+| springframework                      |  5.1.5.RELEASE        |  5.1.5.RELEASE        |  5.1.9.RELEASE        |  5.1.9.RELEASE        |  5.1.9.RELEASE        |   5.1.9.RELEASE        |   5.1.9.RELEASE        |  
+| spring.security                      |  5.1.4.RELEASE        |  5.1.5.RELEASE        |  5.1.6.RELEASE        |  5.1.6.RELEASE        |  5.1.6.RELEASE        |   5.1.6.RELEASE        |   5.1.6.RELEASE        |  
+| spring.data                          |  2.1.5.RELEASE        |  2.1.5.RELEASE        |  2.1.10.RELEASE       |  2.1.10.RELEASE       |  2.1.10.RELEASE       |   2.1.10.RELEASE       |   2.1.10.RELEASE       |  
+| springframework.boot                 |  2.1.3.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |  2.1.8.RELEASE        |   2.1.8.RELEASE        |   2.1.8.RELEASE        |  
+| log4j                                |  2.11.0               |  2.11.0               |  2.11.2               |  2.11.2               |  2.11.2               |   2.11.2               |   2.11.2               |  
+| slf4j                                |  1.7.25               |  1.7.25               |  1.7.28               |  1.7.28               |  1.7.28               |   1.7.28               |   1.7.28               |  
+| junit                                |  4.12                 |  4.12                 |  4.12                 |  4.12                 |  4.12                 |   4.12                 |   4.12                 |  
+| hamcrest                             |  1.3                  |  1.3                  |  1.3                  |  1.3                  |  1.3                  |   1.3                  |   1.3                  |  
+| mockito-core                         |  2.23.4               |  2.23.4               |  2.23.4               |  2.23.4               |  2.23.4               |   2.23.4               |   2.23.4               |  
+| json.path.assert                     |  2.4.0                |  2.4.0                |  2.4.0                |  2.4.0                |  2.4.0                |   2.4.0                |   2.4.0                |  
+| jsonassert                           |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |   1.5.0                |   1.5.0                |  
+| jackson                              |  2.9.5                |  2.9.9                |  2.9.9                |  2.9.9                |  2.9.9                |   2.9.9                |   2.9.9                |  
+| springfox-swagger2                   |  2.7.0                |  2.7.0                |  2.7.0                |  2.7.0                |  2.7.0                |   2.7.0                |   2.7.0                |  
+| querydsl                             |  4.2.1                |  4.2.1                |  4.2.1                |  4.2.1                |  4.2.1                |   4.2.1                |   4.2.1                |  
+| hibernate                            |  5.3.7.Final          |  5.3.7.Final          |  5.3.11.Final         |  5.3.11.Final         |  5.3.11.Final         |   5.3.11.Final         |   5.3.11.Final         |  
+| mongodb.driver                       |  3.10.1               |  3.10.1               |  3.10.1               |  3.10.1               |  -               		 |   -               		 	|   -               		 |  
+| mongodb-driver-legacy                |  -			               |  -			               |  -			               |  -			               |  3.12.3           		 |   3.12.3           		|   3.12.3           		 |  
+| mongodb-driver-reactivestreams       |  1.9.2                |  1.9.2                |  1.9.2                |  1.9.2                |  1.13.1               |   1.13.1               |   1.13.1               |  
 
 Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
 https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions.
