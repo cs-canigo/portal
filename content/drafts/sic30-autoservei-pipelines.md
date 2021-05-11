@@ -67,6 +67,8 @@ i generar (o regenerar) la pipeline de construcció i desplegament de l'aplicaci
 ![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
 </br>
 
+### Configuració
+
 Pel que fa a l'**Arxiu de Configuració de l'Aplicació (ACA)**, la informació quedarà recollida a l'arxiu `/sic/aca.yml` dins del repositori del projecte.
 Es tracta d'un arxiu requerit per Autoservei de Pipelines, en format YAML, en el que s'ha d'aportar la següent informació:
 
@@ -84,40 +86,35 @@ de construcció i/o desplegament.
 Per a més informació: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 <br/>
 
-## Tecnologies compatibles
+### Generació de pipelines
 
-Hi ha les següents tecnologies de construcció suportades:
+Aquest servei s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
+altres pipelines per a dur a terme les operacions necessàries sobre plataformes cloud**:
 
-* Maven (Java)
-* Ant (Java)
-* MS Build (.NET)
-* Npm (NodeJS)
-* Hugo (Webs estàtiques)
+- **DEPLOY-DESCRIPTORS**: permet desplegar canvis en els descriptors.
 
-També s'integren els desplegaments a:
+- **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
 
-- Servidor web Apache
-- Servidors d'aplicacions
-    - Tomcat (Java)
-    - Weblogic (Java)
-    - Websphere (Java)
-    - JBoss (Java)
-    - IIS (.NET)
-- Servidors de Bases de Dades
-  - MySQL
-  - MongoDB
-  - PostgreSQL
-  - Oracle
-  - SQL Server
+- **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció (v.x.y.z-PR)
+bàsicament destinada a poder fer un *rollback* a una versió productiva anterior.
 
-Per a més informació: [Matriu de tecnologies](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció)
+- **DEPLOY-START**: permet iniciar el servei.
+
+- **DEPLOY-STOP**: permet aturar el servei.
+
+- **DEPLOY-RESTART**: permet aturar i tornar a iniciar el servei.
+
+Aquestes pipelines es generaran dins d'un directori diferenciat anomenat **Advanced** dins del directori associat al projecte.
+
+### Tecnologies compatibles
+
+Veure: [Matriu de tecnologies](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció)
 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-<a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
 </div>
-<br/>
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>

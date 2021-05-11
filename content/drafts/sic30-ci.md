@@ -53,7 +53,14 @@ Es contemplen diverses modalitats de desplegament:
 aplica als desplegaments on-premise.
 
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
-delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.
+delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides. En aquest cas,
+si es produeix un error en el desplegament, de cara a tractar-lo i reportar-lo, caldrà aplicar el següent criteri:
+
+|Codi d'error|Responsable|
+|-------|-------|
+|-1xx|Equip SIC|
+|-2xx|Proveïdor d'infraestructures (Cpd)|
+|-3xx|Lot d'aplicacions|
 
 * **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
 un tiquet Remedy CRQ en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
@@ -253,28 +260,31 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
-<a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
+Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
 </div>
-<br/>
 
 **<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
 l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
 ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
 <br/>
 
+<!---
 ### Microsoft
 |Tecnologia|Versions|
 |-------|-------|
 |MS_Build|4.0<br />14<br />15|
 |MS_Deploy|7.1|
+-->
 
 ### Maven/JDK
 |Versió Maven|Versió JDK|
 |-------|-------|
-|2.2|7|
+<!---|2.2|7|
 |3.2|6<br />7<br />8|
 |3.5|7<br />8|
 |3.6 \*|7<br />8<br />11-openjdk|
+-->
+|3.6 \*|8<br />11-openjdk|
 
 (\*) Versió amb suport i manteniment.
 
@@ -293,49 +303,30 @@ tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend rec
 **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (fitxer `package.json`) i instal·lar-los
 a la construcció de l'aplicació via **npm install**.
 
+<!---
 ### Hugo (Webs estàtiques)
 |Versió|
 |-------|
 |0.27|
 |0.73|
-
+-->
 
 ## Matriu de desplegament en servidors (IAAS)
 
-Si es volen fer servir les tasques de desplegaments automatitzat des de SIC, cal que l’aplicació pugui
-ser desplegada sobre un dels següents servidors:
+Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
+[**modalitat de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) **DELEGATED** i que l’aplicació
+es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
-### Microsoft
-|Tecnologia|Versions|
+|Proveïdor|Tipus de servidor|
 |-------|-------|
-|MS Web Deploy|3.6|
+|Cpd1|-|
+|Cpd2|-|
+|Cpd3|Tomcat<br/>Apache<br/>Oracle|
+|Cpd4|Weblogic<br/>Apache<br/>Oracle|
 
-### JEE
-|Tecnologia|Versions|
-|-------|-------|
-|Weblogic|9.2, 10.3.x, 11g, 12c|
-|Websphere|6.1, 8.5|
-|Tomcat|5.5, 6, 7, 8, 8.5|
-|JBoss|EAP 6.4, EAP 7.1|
-
-Les tasques d’execució de desplegament automatitzat fan un re-desplegament de l’aplicació i no pas
-un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada (en format empaquetat
-WAR/EAR). La petició per a fer aquest primer desplegament de l’aplicació corre a càrrec dels
-proveïdors de l’aplicació i en ella s’ha d’indicar a SAU de forma explicita que l’aplicació ha de
-desplegar-se en format empaquetat (WAR/EAR).
-Un cop integrada al SIC, qualsevol canvi que es faci en la referència a l'artefacte a desplegar
-o canvi en el nom de l’aplicació dins el servidor d’aplicacions,
-ha de ser notificat a l’equip del SIC, ja que en cas contrari el job de desplegament deixarà de
-funcionar.
-
-### BBDD
-|Tecnologia|Versions|
-|-------|-------|
-|Oracle|12c|
-|SQL Server|2014, edició standard i express|
-|PostgreSQL|9.4.8, i anteriors|
-|MongoDB|3.2.5, i anteriors
-|MySQL|5.7.12, i anteriors
+Les tasques d’execució de desplegament automatitzat fan un redesplegament de l’aplicació i no pas
+un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada prèviament.
+La petició per a fer aquest primer desplegament de l’aplicació va a càrrec dels proveïdors de l’aplicació.
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
