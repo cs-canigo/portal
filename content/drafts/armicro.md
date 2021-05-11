@@ -14,7 +14,7 @@ Davant la ràpida evolució dels estils d’arquitecturals, s'ha identificat la 
 
 ### Conceptualització de l’arquitectura de referència
 
-![Motivacions](/images/img1.png)
+![Motivacions](/images/armicro/img1.png)
 
 * **Principis de l’arquitectura de referència:** Els principis són els valors fonamentals que s’apliquen en l’arquitectura i que guien els models d’ús de disseny funcional i devops.
 
@@ -39,20 +39,20 @@ L’ús de l’arquitectura aporta avantatges, especialment, relacionats amb la 
 
 És per aquest motiu que s’estableixen uns criteris d’aplicabilitat per ajudar a la presa de decisió sobre l’ús de l’arquitectura. Aquests criteris es divideixen en **motivacions** que poden fer que una arquitectura de microserveis pugui ser beneficiosa per a un sistema i **condicionants** que hauria de complir el sistema per a poder-la aplicar amb garanties d’èxit.
 
-![Motivacions](/images/img2.png)
+![Motivacions](/images/armicro/img2.png)
 
 ### Condicionants
 
 Per d’altre banda, l’ús de l’arquitectura també implica uns condicionants que es poden classificar en diferents aspectes: solució, procés de construcció, equip i infraestructura de desplegament.
 
-![Condicionants](/images/img3.png)
+![Condicionants](/images/armicro/img3.png)
 
 
 ## Principis de l’arquitectura de referència
 
 Els principis són els **valors fonamentals** que s’apliquen en l’arquitectura i que guien els models d’ús de disseny funcional i devops.
 
-![Condicionants](/images/img4.png)
+![Condicionants](/images/armicro/img4.png)
 
 
 ## Models d’ús de l'arquitectura
@@ -67,7 +67,7 @@ Els principis bàsics que han de guiar la descomposició funcional són:
 
 * **Baix acoblament:** Quan un bloc funcional està poc acoblat amb un altre, un canvi en un d'ells no implica canviar l'altre.
 
-![Condicionants](/images/img4a.png)
+![Condicionants](/images/armicro/img4a.png)
 
 ### Model DevOps
 
@@ -77,7 +77,7 @@ Per a cada bloc funcional el desenvolupament hauria de seguir una **patró BFF (
 * La part front només es comunica amb la seva part back, de manera que la part front està acoblada amb la seva part back.
 * Si cal, cada bloc funcional hauria de disposar de la seva pròpia base de dades.
 
-![Condicionants](/images/img4b.png)
+![Condicionants](/images/armicro/img4b.png)
 
 *(\*) En el cas en què un microservei d'un bloc funcional tingui requisits no funcionals particulars que diferencien o identifiquen dues o més parts diferenciades dins del microservei, es recomana dividir el microservei en diferents components (dins del mateix bloc funcional) per poder així aplicar la particularitat cadascun (p.e. escalat diferenciat).*
 
@@ -110,7 +110,7 @@ El fet que l’arquitectura sigui altament distribuïda requereix l’existènci
 
 Aquests components són els que donen resposta als requeriments dels usuaris de negoci.
 
-![Condicionants](/images/img15.png)
+![Condicionants](/images/armicro/img15.png)
 
 #### *Arquitectura d’operació*
 
@@ -120,7 +120,7 @@ En arquitectures altament distribuïdes no és suficient una visió independent 
 
 Aquests components donen resposta als perfils d’operació de la solució.
 
-![Condicionants](/images/img16.png)
+![Condicionants](/images/armicro/img16.png)
 
 #### *Arquitectura de desenvolupament*
 
@@ -130,16 +130,16 @@ Per treure màxim profit de l’arquitectura és necessari que els diferents art
 
 Aquests components donen servei als equips de desenvolupament de la solució.
 
-![Condicionants](/images/img17.png)
+![Condicionants](/images/armicro/img17.png)
 
 ### Disseny lògic i físic
 
-El **disseny lògic** és una realització concreta del disseny conceptual especificant les tecnologies que poden resoldre cada servei i el **disseny físic** identifica i descriu els components que formen part o integren el sistema, i com aquests es configuren o interactuen. Aquests dos dissenys estan descrits amb més detalls en el document ["Arquitectura de referència microserveis"](/references/ArquitecturaReferenciaMicro_V0.7.pdf), en el que es basa aquesta pàgina.
+El **disseny lògic** és una realització concreta del disseny conceptual especificant les tecnologies que poden resoldre cada servei i el **disseny físic** identifica i descriu els components que formen part o integren el sistema, i com aquests es configuren o interactuen. Aquests dos dissenys estan descrits amb tot detall en el document ["Arquitectura de referència microserveis"](/related/armicro/ArquitecturaReferenciaMicro_V1.0.pdf), en el que es basa aquesta pàgina.
 
 
 ## Referències
 
-El document complet en el qual es basa aquesta pàgina Web es pot descarregar com a fitxer PDF en ["Arquitectura de referència microserveis"](/references/ArquitecturaReferenciaMicro_V0.7.pdf).
+El document complet en el qual es basa aquesta arquitectura de referència es pot descarregar com a fitxer PDF en ["Arquitectura de referència microserveis"](/related/armicro/ArquitecturaReferenciaMicro_V1.0.pdf).
 
 #### *Documentació complementària*
 
