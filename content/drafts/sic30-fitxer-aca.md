@@ -320,7 +320,7 @@ Els valors màxims establerts són: ***2048Mi*** de memòria i ***2000m*** de CP
 </div>
 
 Per a més informació sobre l’administració de recursos: https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/.
-</br>
+</br></br>
 
 
 #### components[].build.steps[].execution
@@ -373,7 +373,7 @@ components:
 
 #### components[].deployment.enviroments[]
 
-Informació sobre “on” (`name`) i de quina manera (`actions`) es desplegarà l’aplicació segons la següent estructura:
+Informació sobre els entorns (`name`) i de quina manera es desplegarà l’aplicació (`actions`) segons la següent estructura:
 
 ```
 components:
