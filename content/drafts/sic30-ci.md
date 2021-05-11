@@ -254,8 +254,10 @@ Per a més informació: [Autoservei de pipelines] (/sic30-serveis/autoservei-pip
 
 ## Matriu de tecnologies de construcció
 
-Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases. <br/>
-A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
+Les tecnologies de construcció d'aplicacions serveixen per gestionar el cicle de vida d'una aplicació o algunes de les seves fases.
+Aquesta normativa del SIC no invalida
+l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
+ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
 
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
@@ -263,10 +265,8 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
 </div>
 
-**<span style="color: #C00000;">AVÍS:</span>** Aquesta normativa del SIC no invalida
-l'[Estàndard pel full de ruta del programari](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions),
-ans al contrari, l'estén per a acabar de concretar els requeriments propis del SIC.
 <br/>
+A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
 
 <!---
 ### Microsoft
@@ -319,13 +319,13 @@ a la construcció de l'aplicació via **npm install**.
 ## Matriu de desplegament en servidors (IAAS)
 
 Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
-[**modalitat de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) **DELEGADA** i que l’aplicació
+modalitat de desplegament [**DELEGADA**](/sic30-serveis/ci/#modalitats-de-desplegament) per a que l’aplicació
 es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
 |Proveïdor|Tipus de servidor|
 |-------|-------|
-|Cpd1|Cap|
-|Cpd2|Cap|
+|Cpd1|-|
+|Cpd2|-|
 |Cpd3|Tomcat<br/>Apache<br/>Oracle|
 |Cpd4|Weblogic<br/>Apache<br/>Oracle|
 

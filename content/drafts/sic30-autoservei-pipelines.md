@@ -91,6 +91,12 @@ Per a més informació: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 Aquest servei s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
 altres pipelines per a dur a terme les operacions necessàries sobre plataformes cloud**:
 
+- **DEPLOY-START**: permet iniciar el servei.
+
+- **DEPLOY-STOP**: permet aturar el servei.
+
+- **DEPLOY-RESTART**: permet aturar i tornar a iniciar el servei.
+
 - **DEPLOY-DESCRIPTORS**: permet desplegar canvis en els descriptors (noves variables d'entorn, canvis en la configuració i altres)
 sense fer la construcció i desplegament de la imatge.
 
@@ -98,12 +104,6 @@ sense fer la construcció i desplegament de la imatge.
 
 - **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció (v.x.y.z-PR)
 concebuda per a poder fer un *rollback* a una versió anterior.
-
-- **DEPLOY-START**: permet iniciar el servei.
-
-- **DEPLOY-STOP**: permet aturar el servei.
-
-- **DEPLOY-RESTART**: permet aturar i tornar a iniciar el servei.
 
 Aquestes pipelines es generaran dins d'un directori diferenciat anomenat **Advanced** dins del directori de tasques Jenkins
 associat al projecte.
