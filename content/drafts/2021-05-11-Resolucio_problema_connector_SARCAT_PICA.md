@@ -15,8 +15,8 @@ Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el probl
 ## Motivació
 
 El maig del 2021 es va reportar un **problema en la recuperació de les respostes de PICA** que es fan a través del connector
-de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix arran la PICA ha fet modificacions en els prefixos
-dels namespace de les respostes perquè el connector intentava cercar els nodes de resposta amb un namespace prefixat.
+de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
+dels namespace de les respostes i el connector intentava cercar els nodes de resposta amb un namespace prefixat.
 
 Per exemple:
 ```
@@ -24,7 +24,7 @@ Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatA
 SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-En canvi, la PICA retorna una resposta com la següent:
+Quan la PICA retorna una resposta com la següent:
 
 ```
 <ns2:SarcatAlAltaResponse xmlns:ns2="http://gencat.net/scsp/esquemes/peticion/alta">
@@ -43,7 +43,7 @@ En canvi, la PICA retorna una resposta com la següent:
 </ns2:SarcatAlAltaResponse>
 ```
 
-On es pot comprovar que la resposta no té el prefix "alta" esperat.
+On es pot comprovar que la resposta no disposa del prefix "alta" esperat.
 
 ## Novetats
 
