@@ -14,7 +14,7 @@ weight     = 4
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
-|              3.4 LTS                 |                3.4.4                 |
+|              3.4 LTS                 |                3.4.5                 |
 
 
 
