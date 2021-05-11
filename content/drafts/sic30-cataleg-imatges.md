@@ -16,6 +16,9 @@ Per defecte, Docker està configurat per a utilitzar el registre públic [Docker
 No obstant això, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
 escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 
+![Pipeline del SIC](/related/sic/3.0/harbor_login.png)
+</br>
+
 El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
 Es tracta d’un registre privat sense cap repositori d'accés públic.
 
@@ -31,7 +34,7 @@ https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositorie
 
 Per a disposar d'accés a les imatges Docker utilitzades al SIC és necessari contactar amb l'Oficina Tècnica de Canigó a través dels
 canals establerts: https://canigo.ctti.gencat.cat/sic/suport/. L'Oficina subministrarà al proveïdor d’aplicacions un usuari
-amb permís de lectura al projecte **gencatsic** que conté les imatges Docker utilitzades pel SIC.
+amb permís de lectura al projecte **gencat-sic-builders** que conté les imatges Docker utilitzades pel SIC.
 
 ## Codi font i documentació
 
@@ -43,7 +46,7 @@ https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
 ## Ús del registre privat
 
-Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder).
+Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-05-06-sic30-SIC-Howto-utilitzar-imatges-docker-builder).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>

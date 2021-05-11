@@ -130,8 +130,7 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 
 |Variable|Valor|
 |-------|-------|
-|CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els
-buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
+|CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
 |CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
 
 
@@ -319,8 +318,6 @@ fent ús d’aquests prefixos: G o M, o també podeu usar els equivalents en pot
 Cal tenir present que hi ha un màxim de recursos permesos, de tal manera que si se superen es produiran erros en l’execució.
 Els valors màxims establerts són: ***2048Mi*** de memòria i ***2000m*** de CPU.
 </div>
-<br/>
-
 
 Per a més informació sobre l’administració de recursos: https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/.
 </br>
@@ -462,8 +459,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 
 |Variable|Valor|
 |-------|-------|
-|DESCRIPTORS_PATH|Ruta amb els descriptors en format YML dins el repositori definit a l’element *scm*
-de [components[].deployment](#components-deployment) per a desplegar l'aplicació a l’Openshift o Kubernetes|
+|DESCRIPTORS_PATH|Ruta amb els descriptors en format YML dins el repositori definit a l’element *scm* de [components[].deployment](#components-deployment) per a desplegar l'aplicació a l’Openshift o Kubernetes|
 |DEPLOYMENT_NAME|Nom de l'aplicació a l’Openshift o Kubernetes|
 |DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes|
 
