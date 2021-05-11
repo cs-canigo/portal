@@ -1,7 +1,7 @@
 +++
 date        = "2021-05-11"
-title       = "Canigó. Resolució problema connector SARCAT PICA"
-description = "S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector SARCAT PICA"
+title       = "Canigó. Resolució problema connector Sarcat PICA"
+description = "S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector Sarcat PICA"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 #key         = "JUNY2021"
@@ -9,21 +9,17 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el problema del connector SARCAT PICA del mòdul d'integració de Canigó**. Podeu consultar l'abast complet de la versió 3.4.5 a les
+Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el problema del connector Sarcat PICA al mòdul d'integració de Canigó**. Podeu consultar l'abast complet de la versió 3.4.6 a les
 [Release Notes, apartat Canigó 3.4.6](/canigo-download-related/release-notes-canigo-34).
 
-El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de SARCAT de Canigó en la seva versió 1.0.1. L'error es produeix perquè PICA ha modificat els prefixes dels namespace de les respostes i el connector intenta cercar els nodes de resposta amb un namespace prefixat
-
-## Novetats
-
-El mòdul d'integració amb Sarcat, a partir de la versió 1.0.0 fa servir un mètode per parsejar les respostes a les crides al servei. Aquest mètode intenta recuperar la resposta amb un prefix. Actualment, la PICA respon amb un prefix diferent i per tant es produeix un problema de parseig.
+El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix arran la PICA ha fet modificacions en els prefixos dels namespace de les respostes donat el connector intentava cercar els nodes de resposta amb un namespace prefixat.
 
 ```
-		Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
-		SarcatAlAltaResponseDocument respostaAlta = null;
+      Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
+      SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-Quan la PICA respon per exemple:
+Quan la PICA respon, per exemple:
 
 ```
 <ns2:SarcatAlAltaResponse xmlns:ns2="http://gencat.net/scsp/esquemes/peticion/alta">
@@ -55,13 +51,15 @@ Quan la PICA respon per exemple:
 </ns2:SarcatAlAltaResponse>
 ```
 
-S'han modificat els mòduls de la PICA per a poder recuperar la resposta independentment del prefix que retorni la PICA, centralitzant la classe d'utilitats per parsejar i transformar de objectes a xml a:
+## Novetats
+
+S'han modificat els mòduls de la PICA per a poder recuperar la resposta independentment del prefix que retorni la PICA, centralitzant la classe d'utilitats per a parsejar i transformar d’objectes a xml a:
 
 ```
 cat.gencat.ctti.canigo.arch.integration.pica.utils.PICAXMLUtils
 ```
 
-Els mòduls modificats són:
+Els mòduls revisats són els següents:
 
 - canigo.integration.pica versió 2.3.2
 - canigo.integration.sarcat.pica versió 2.3.2
