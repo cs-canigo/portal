@@ -128,7 +128,7 @@ El **disseny lògic** és una realització concreta del disseny conceptual espec
 
 El document complet en el qual es basa aquesta arquitectura de referència es pot descarregar com a fitxer PDF en ["Arquitectura de referència microserveis"](/related/armicro/ArquitecturaReferenciaMicro_V1.0.pdf).
 
-#### *Referències*
+## *Referències*
 
 * [AZ021] Microservices on Azure – What Is Microservices | Microsoft Azure [Internet]. [citat 18 març 2021]. Disponible a: https://azure.microsoft.com/en-us/solutions/microservice-applications/
 
