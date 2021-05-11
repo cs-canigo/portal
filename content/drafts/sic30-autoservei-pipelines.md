@@ -97,7 +97,7 @@ sense fer la construcció i desplegament de la imatge.
 - **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
 
 - **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció (v.x.y.z-PR)
-bàsicament destinada a poder fer un *rollback* a una versió productiva anterior.
+concebuda per a poder fer un *rollback* a una versió anterior.
 
 - **DEPLOY-START**: permet iniciar el servei.
 
@@ -105,7 +105,8 @@ bàsicament destinada a poder fer un *rollback* a una versió productiva anterio
 
 - **DEPLOY-RESTART**: permet aturar i tornar a iniciar el servei.
 
-Aquestes pipelines es generaran dins d'un directori diferenciat anomenat **Advanced** dins del directori associat al projecte.
+Aquestes pipelines es generaran dins d'un directori diferenciat anomenat **Advanced** dins del directori de tasques Jenkins
+associat al projecte.
 
 ### Tecnologies compatibles
 

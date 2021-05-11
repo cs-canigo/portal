@@ -71,7 +71,7 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT.
 continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies
 davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
-Actualment, el sistema previst seria el següent:
+Actualment, el sistema previst per entorn seria el següent:
 
 * Entorn **INT**: modalitat automàtica al cloud, o bé modalitat delegada per als desplegaments on-premise.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
@@ -276,17 +276,22 @@ ans al contrari, l'estén per a acabar de concretar els requeriments propis del 
 |MS_Deploy|7.1|
 -->
 
+<!---
 ### Maven/JDK
 |Versió Maven|Versió JDK|
 |-------|-------|
-<!---|2.2|7|
-|3.2|6<br />7<br />8|
-|3.5|7<br />8|
-|3.6 \*|7<br />8<br />11-openjdk|
--->
-|3.6 \*|8<br />11-openjdk|
+|2.2|7|
+|3.2|6<br/>7<br/>8|
+|3.5|7<br/>8|
+|3.6 \*|7<br/>8<br/>11-openjdk|
 
 (\*) Versió amb suport i manteniment.
+-->
+
+### Maven/JDK
+|Versió Maven|Versió JDK|
+|-------|-------|
+|3.6|8<br />11-openjdk|
 
 ### Node/npm
 |Versió Node|Versió Npm|
@@ -314,13 +319,13 @@ a la construcció de l'aplicació via **npm install**.
 ## Matriu de desplegament en servidors (IAAS)
 
 Si es volen fer servir les tasques de desplegaments automatitzats des de SIC, caldrà escollir la
-[**modalitat de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) **DELEGATED** i que l’aplicació
+[**modalitat de desplegament**](/sic30-serveis/ci/#modalitats-de-desplegament) **DELEGADA** i que l’aplicació
 es desplegui sobre un dels següents proveïdors d'infraestructures i tipus de servidor:
 
 |Proveïdor|Tipus de servidor|
 |-------|-------|
-|Cpd1|-|
-|Cpd2|-|
+|Cpd1|Cap|
+|Cpd2|Cap|
 |Cpd3|Tomcat<br/>Apache<br/>Oracle|
 |Cpd4|Weblogic<br/>Apache<br/>Oracle|
 
@@ -330,4 +335,6 @@ La petició per a fer aquest primer desplegament de l’aplicació va a càrrec 
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i
+utilitzeu el canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través
+del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
