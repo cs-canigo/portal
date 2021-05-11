@@ -12,18 +12,19 @@ categories  = ["canigo"]
 Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el problema del connector Sarcat PICA al mòdul d'integració de Canigó**. Podeu consultar l'abast complet de la versió 3.4.6 a les
 [Release Notes, apartat Canigó 3.4.6](/canigo-download-related/release-notes-canigo-34).
 
-## Problemàtica
+## Motivació
 
-El maig del 2021 es va reportar un problema en la recuperació de les respostes de PICA que es fan a través del connector
+El maig del 2021 es va reportar un **problema en la recuperació de les respostes de PICA** que es fan a través del connector
 de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix arran la PICA ha fet modificacions en els prefixos
 dels namespace de les respostes perquè el connector intentava cercar els nodes de resposta amb un namespace prefixat.
 
+Per exemple:
 ```
 Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), "alta:SarcatAlAltaResponse");
 SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-Quan la PICA retorna una resposta similar a la següent:
+En canvi, la PICA retorna una resposta com la següent:
 
 ```
 <ns2:SarcatAlAltaResponse xmlns:ns2="http://gencat.net/scsp/esquemes/peticion/alta">
@@ -42,9 +43,11 @@ Quan la PICA retorna una resposta similar a la següent:
 </ns2:SarcatAlAltaResponse>
 ```
 
+On es pot comprovar que la resposta no té el prefix "alta" esperat.
+
 ## Novetats
 
-S'han modificat els mòduls de la PICA per a poder recuperar la resposta independentment del prefix que
+S'han modificat els mòduls de la PICA per a poder **recuperar la resposta independentment del prefix** que
 retorni la PICA, centralitzant les utilitats per a parsejar i transformar d’objectes a XML a la classe:
 
 ```
@@ -52,7 +55,7 @@ cat.gencat.ctti.canigo.arch.integration.pica.utils.PICAXMLUtils
 ```
 
 <br/>
-Els mòduls que han estat revisats són els següents:
+Els **mòduls que han estat revisats** són els següents:
 
 - canigo.integration.pica versió 2.3.2
 - canigo.integration.sarcat.pica versió 2.3.2
@@ -65,5 +68,5 @@ Els mòduls que han estat revisats són els següents:
 
 Teniu disponible la següent documentació:
 
-- [Matriu de Compatibilitats](/canigo-download-related/matrius-compatibilitats/)
-- [mòdul SARCAT](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
+- [Matrius de compatibilitats](/canigo-download-related/matrius-compatibilitats/)
+- [Mòdul Sarcat](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
