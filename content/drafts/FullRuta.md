@@ -717,7 +717,7 @@ Una tecnologia en les seves diferents versions pot passar per 5 estadis diferent
 
 - **Versió actual CTTI**. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar, amb les següents consideracions:
   * En el cas de Sistemes d'Informació, aquesta és la versió de programari que s’està desplegant actualment.
-  * En el cas de la Connectivitat LAN, aquesta és la darrera versió alliberada pel fabricant amb una antiguitat mínima de 6 mesos per tal de garantir un mínim de recorregut i estabilitat del software a implantar. 
+  * En el cas de la Connectivitat LAN, aquesta és la darrera versió suportada pel fabricant amb una antiguitat mínima de 6 mesos per tal de garantir un mínim de recorregut i estabilitat del software a implantar. 
 
 - **En Roadmap CTTI**. És la versió de programari que està estudiant-se per la seva futura implantació. Un cop definida i implantada l’arquitectura de la versió, aquesta passarà a ser la “versió actual CTTI”.
 
