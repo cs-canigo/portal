@@ -516,7 +516,9 @@ Per a més informació: https://docs.sonarqube.org/latest/analysis/scan/sonarsca
 </br></br>
 
 Caldrà definir la propietat `target` indicant l'identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de `build step`
-que hem definit més amunt, i opcionalment es podran indicar les propietats:
+que hem definit més amunt i que s'afegirà com a sufix en l'enviament del projecte al SonarQube.
+
+Opcionalment es podran indicar les propietats:
 
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
 al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
@@ -524,8 +526,6 @@ al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-imag
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`,
 
 - `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte), i
-
-- `target`: per a especificar el sufix que cal aplicar al projecte en l'enviament quan hi ha més d'un `step` d'anàlisi
 
 Exemple:
 
@@ -536,17 +536,17 @@ analysis:
   steps:
     - id: an001
       tool: maven
-      target: app1
+      target: bs001
       imageName: gencatsic/maven-builder:1.0-3.2-8
       commands: mvn -f app1/pom.xml sonar:sonar  
     - id: an002
       tool: maven
-      target: app2
+      target: bs002
       imageName: gencatsic/maven-builder:1.0-3.2-8
       commands: mvn -f app2/pom.xml sonar:sonar 
     - id: an003
       tool: maven
-      target: app3
+      target: bs003
       imageName: gencatsic/maven-builder:1.0-3.2-8
       commands: mvn -f app3/pom.xml sonar:sonar 
 ```
