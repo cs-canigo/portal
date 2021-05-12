@@ -39,6 +39,7 @@ weight     = 4
 | mongodb-driver-legacy                |  -			               |  -			               |  -			               |  -			               |  3.12.3           		 |   3.12.3           		|
 | mongodb-driver-reactivestreams       |  1.9.2                |  1.9.2                |  1.9.2                |  1.9.2                |  1.13.1               |   1.13.1               | 
 
+
 Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
 https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions.
 
