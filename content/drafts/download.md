@@ -1,5 +1,5 @@
 +++
-date        = "2021-05-11"
+date        = "2020-05-11"
 title       = "Binaris de Canigó"
 description = "Descàrrega de les diferents versions de Canigó, entorn de treball, plugin d'eclipse..."
 sections    = "Canigó"
