@@ -85,7 +85,7 @@ info:
 Relació de variables globals necessàries per a l’execució de la pipeline. Les variables requerides en cada cas
 dependran de les necessitats de desplegament aplicant els següents criteris:
 
-#### Per al **desplegament a l'Openshift de CPD2, CPD3 i CPD4**:
+#### Per al **desplegament a l'Openshift**:
 
 |Variable|Valor|
 |-------|-------|
@@ -455,7 +455,7 @@ On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps
 requerides en cada cas i que dependran de les necessitats de desplegament aplicant els següents criteris:
 
 
-###### Per al **desplegament a l’Openshift de CPD2, CPD3, CPD4 i Kubernetes IBMCloud i CaaS**
+###### Per al **desplegament a l’Openshift i Kubernetes IBMCloud i CaaS**
 
 |Variable|Valor|
 |-------|-------|
