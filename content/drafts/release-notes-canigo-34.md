@@ -7,10 +7,10 @@ weight      = 1
 +++
 
 #### Canigó 3.4.6 (11/05/2021)
-- [Resolució problema connector SARCAT PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
+- [Resolució problema connector Sarcat PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
    - S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector SARCAT PICA.
-- Revisió interna forma execució test mòduls
-   - S'han revisar internament la forma d'execució dels test dels mòduls per utilitzar imatges del Patró Builder del SIC 2.0 
+- Revisió interna execució de tests dels mòduls
+   - S'ha revisat la forma d'execució dels tests dels mòduls per a utilitzar imatges docker builder del catàleg del SIC 2.0.
 
 #### Canigó 3.4.5 (09/09/2020)
 - [Revisió de regles SonarQube als mòduls d'_integració_](/noticies/2020-09-09-Revisio_regles_SonarQube_moduls_integracio/)

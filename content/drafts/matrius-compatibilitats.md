@@ -1,5 +1,5 @@
 +++
-date        = "2020-09-09"
+date        = "2021-05-11"
 title       = "Matrius de Compatibilitats"
 description = "Matriu de compatibilitats dels mòduls de Canigó"
 sections    = "Canigó"
