@@ -1,10 +1,16 @@
 +++
-date        = "2020-06-16"
+date        = "2021-05-11"
 title       = "Release Notes Canigó 3.4"
 description = "Release Notes Canigó 3.4"
 sections    = "Canigó"
 weight      = 1
 +++
+
+#### Canigó 3.4.6 (11/05/2021)
+- [Resolució problema connector Sarcat PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
+   - S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector SARCAT PICA.
+- Revisió interna execució de tests dels mòduls
+   - S'ha revisat la forma d'execució dels tests dels mòduls per a utilitzar imatges docker builder del catàleg del SIC 2.0.
 
 #### Canigó 3.4.5 (09/09/2020)
 - [Revisió de regles SonarQube als mòduls d'_integració_](/noticies/2020-09-09-Revisio_regles_SonarQube_moduls_integracio/)
