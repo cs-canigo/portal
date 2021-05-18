@@ -10,17 +10,17 @@ categories  = ["canigo"]
 ## Introducció
 
 El maig del 2021 es va reportar un **problema en la recuperació de les respostes de PICA** que es fan a través del connector
-de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
+de Sarcat de Canigó des de la seva versió 1.0.0. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
 dels namespace de les respostes i el connector intentava cercar els nodes de resposta amb un namespace prefixat.
-
-El problema ha estat resolt a la [**versió 3.4.6**](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA /) **del Framework Canigó**.
+El problema ha estat resolt a la [**versió 3.4.6**](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/) **del Framework Canigó**.
 
 L’objectiu d’aquest article és mostrar com resoldre en problema en versions anteriors del connector.
 
 
 ## Detall del problema
 
-El mòdul d'integració amb Sarcat fa servir un mètode per a parsejar les respostes a les crides al servei. Aquest mètode intenta recuperar la resposta amb un prefix i, actualment, la PICA respon amb un prefix diferent.
+El mòdul d'integració amb Sarcat fa servir un mètode per a parsejar les respostes a les crides al servei.
+Aquest mètode intenta recuperar la resposta amb un prefix i, actualment, la PICA respon amb un prefix diferent.
 
 Per exemple:
 ```
@@ -52,14 +52,17 @@ On es pot comprovar que la resposta no disposa del prefix "alta" esperat.
 
 ## Solució al problema en versions anteriors
 
-Per a resoldre el problema en versions anteriors a la 2.0.0, cal reimplementar els mètodes del mòdul que fan la crida a *SarcatXMLUtils.findNode* per a especificar que no hi ha prefix en la crida.
+Per a resoldre el problema en versions anteriors a la versió 2.0.0 del connector, cal reimplementar els mètodes del mòdul que fan
+la crida a *SarcatXMLUtils.findNode* per a especificar que no hi ha prefix en la crida:
 
 ```
 Node nodeResposta = SarcatXMLUtils.findNode(resposta.getDomNode(), ":SarcatAlAltaResponse");
 SarcatAlAltaResponseDocument respostaAlta = null;
 ```
 
-Per exemple, reimplementarem el mètode *insertarAssentamentSafata* de `cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorImpl` que acaba utilitzant *findNode* de `cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils`.
+A mode d'exemple, reimplementarem el mètode *insertarAssentamentSafata* de
+`cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorImpl` que acaba utilitzant *findNode*
+de `cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils`:
 
 ```
     public class SarcatConnectorCustomImpl extends SarcatConnectorImpl implements SarcatConnector {
@@ -97,7 +100,8 @@ Per exemple, reimplementarem el mètode *insertarAssentamentSafata* de `cat.genc
     }
 ```
 
-Serà necessari també reimplementar el mètode *findNode* de la classe `cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils` per a cercar el node independentment del prefix:
+Serà necessari reimplementar també el mètode *findNode* de la classe
+`cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils` per a cercar el node independentment del prefix:
 
 ```
 package cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils;
@@ -145,7 +149,7 @@ public class SarcatXMLUtils {
 
 ```
 
-Amb la instanciació del bean, per exemple amb xml a `app-custom-beans.xml` ubicat a */src/main/resources/spring/*:
+Amb la instanciació del bean, per exemple amb xml a `app-custom-beans.xml` ubicat a `/src/main/resources/spring/`:
 
 ```
    <bean id="sarcatServiceCustom" class="cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl" scope="prototype">
@@ -177,19 +181,20 @@ Finalment, al vostre projecte, caldrà aplicar la nova implementació:
 
 ## Conclusió
 
-En cas de fer ús del connector de Sarcat de PICA del Framework Canigó 3.4.x (versió 2.0.0 fins a la versió 3.2.1 del connector) recomanem actualitzar-se a la versió 2.3.2.
-
-En cas de fer ús del connector de Sarcat de PICA del Framework Canigó  inferior a 3.4.x (versió 1.0.0 fins a la versió 2.0.0 del connector) serà necessari reimplementar el connector tal com s’ha mostrat en aquest article.
+En cas de fer ús del connector de Sarcat de PICA del Framework Canigó 3.4.x (des de versió 2.0.0 fins a la versió 2.3.1 del connector)
+recomanem **actualitzar-se a la versió 2.3.2**.
+En cas de fer ús del connector de Sarcat de PICA del Framework Canigó  inferior a 3.4.x (des de versió 1.0.0 fins a la versió 1.2.3 del connector)
+serà necessari **reimplementar el connector tal com s’ha mostrat en aquest article**.
 
 ## Informació
 
 Per a més informació, podeu consultar:
 
-- Reimplementació de *insertarAssentamentSafata* a [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl](/related/canigo/howto/SARCAT/SarcatConnectorCustomImpl.java)
+- Reimplementació del mètode *insertarAssentamentSafata* a la classe [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl](/related/canigo/howto/SARCAT/SarcatConnectorCustomImpl.java)
 
-- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils](/related/canigo/howto/SARCAT/SarcatXMLUtils.java)
+- Reimplementació de la classe [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils](/related/canigo/howto/SARCAT/SarcatXMLUtils.java)
 
-- Connector de Canigó a [Sarcat](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
+- [Connector de Canigó a Sarcat](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
 
 - [Roadmap Framework Canigó](/canigo/roadmap/)
 

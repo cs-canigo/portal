@@ -15,7 +15,7 @@ Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el probl
 ## Motivació
 
 El maig del 2021 es va reportar un **problema en la recuperació de les respostes de PICA** que es fan a través del connector
-de Sarcat de Canigó en la seva versió 1.0.1. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
+de Sarcat de Canigó des de la seva versió 1.0.0. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
 dels namespace de les respostes i el connector intentava cercar els nodes de resposta amb un namespace prefixat.
 
 Per exemple:
