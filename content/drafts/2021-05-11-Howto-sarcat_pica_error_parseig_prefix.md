@@ -2,7 +2,7 @@
 date        = "2021-05-07"
 title       = "Com corregir l’error de parseig del connector Sarcat PICA"
 description = "Com corregir l’error en recuperar la resposta de PICA a les crides Sarcat del connector de Canigó en versions anteriors"
-section     = "howtos"
+#section     = "howtos"
 categories  = ["canigo"]
 #key         = "JUNY2021"
 +++
