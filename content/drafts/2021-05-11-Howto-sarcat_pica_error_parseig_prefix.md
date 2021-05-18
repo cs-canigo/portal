@@ -190,12 +190,12 @@ serà necessari **reimplementar el connector tal com s’ha mostrat en aquest ar
 
 Per a més informació, podeu consultar:
 
-- Reimplementació del mètode *insertarAssentamentSafata* a la classe [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl](/related/canigo/howto/SARCAT/SarcatConnectorCustomImpl.java)
-
-- Reimplementació de la classe [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils](/related/canigo/howto/SARCAT/SarcatXMLUtils.java)
-
 - [Connector de Canigó a Sarcat](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
 
 - [Roadmap Framework Canigó](/canigo/roadmap/)
 
 - [Matrius de Compatibilitats de Canigó 3.4.x](/canigo-download-related/matrius-compatibilitats/#canig%C3%B3-3-4-x)
+
+- Reimplementació del mètode *insertarAssentamentSafata* a [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.impl.SarcatConnectorCustomImpl](/related/canigo/howto/SARCAT/SarcatConnectorCustomImpl.java)
+
+- Reimplementació de [cat.gencat.ctti.canigo.arch.integration.sarcat.pica.utils.SarcatXMLUtils](/related/canigo/howto/SARCAT/SarcatXMLUtils.java)
