@@ -4,9 +4,6 @@ title = "SIC 3.0 - Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"
 toc = true
-aliases = [
-    "/noticies/2018-05-16-SIC-Autoservei-pipelines/"
-]
 taxonomies = []
 weight = 5
 +++

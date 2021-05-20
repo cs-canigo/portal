@@ -3,10 +3,6 @@ date = "2021-04-13"
 title = "SIC 3.0 - Canals de suport"
 description = "Com obtenir suport per part de l'equip del SIC"
 sections = "SIC"
-aliases = [
-    "/sic/peticions/",
-    "/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/"
-]
 toc = true
 taxonomies = []
 weight = 4

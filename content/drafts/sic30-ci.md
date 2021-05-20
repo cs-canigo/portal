@@ -4,11 +4,6 @@ title = "SIC 3.0 - Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
 toc = true
-aliases = [
-    "/sic/integracions-dev/",
-    "/sic/clau/",
-    "/sic-documentacio"
-]
 taxonomies = []
 weight = 2
 +++

@@ -4,9 +4,6 @@ title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"
 toc = true
-aliases = [
-    "/sic-welcome-pack/preparar-aplicacio/"
-]
 taxonomies = []
 weight = 2
 +++
