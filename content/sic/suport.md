@@ -1,6 +1,6 @@
 +++
 date = "2020-02-28"
-title = "SIC 2.0 - Canals de suport"
+title = "Canals de suport"
 description = "Com obtenir suport per part de l'equip del SIC"
 sections = "SIC"
 aliases = [
