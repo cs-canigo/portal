@@ -240,7 +240,7 @@ funcional de l’aplicació indicant la següent informació:
 - Característiques i funcionalitat de la llibreria
 - Raons per l'ús de la llibreria
 
-Per a més informació: [Canals de suport](/sic/sic-suport/#altres-dubtes-o-problem%C3%A0tiques).
+Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques).
 
 ## Autoservei de pipelines
 
@@ -331,6 +331,6 @@ La petició per a fer aquest primer desplegament de l’aplicació va a càrrec 
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic-faq) i
-utilitzeu el canal de [**Suport**] (/sic/sic-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i
+utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través
 del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

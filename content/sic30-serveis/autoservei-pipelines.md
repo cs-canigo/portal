@@ -117,4 +117,4 @@ Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">C
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic-faq) i utilitzeu el canal de [**Suport**] (/sic/sic-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
