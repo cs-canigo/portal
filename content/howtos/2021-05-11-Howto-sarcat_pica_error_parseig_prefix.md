@@ -4,7 +4,7 @@ title       = "Com corregir l’error de parseig del connector Sarcat PICA"
 description = "Com corregir l’error en recuperar la resposta de PICA a les crides Sarcat del connector de Canigó en versions anteriors Canigó 3.4.6"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "MAIG2021"
+key         = "JUNY2021"
 +++
 
 ## Introducció

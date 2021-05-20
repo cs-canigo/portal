@@ -4,7 +4,7 @@ title       = "Canigó. Resolució problema connector Sarcat PICA"
 description = "S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector Sarcat PICA"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
-key         = "MAIG2021"
+key         = "JUNY2021"
 +++
 
 ## Introducció
