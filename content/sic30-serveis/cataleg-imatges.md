@@ -46,10 +46,10 @@ https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
 ## Ús del registre privat
 
-Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-05-06-sic30-SIC-Howto-utilitzar-imatges-docker-builder).
+Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-05-06-SIC-Howto-utilitzar-imatges-docker-builder).
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**HOWTOs i manuals**](/sic30-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu el
-canal de [**Suport**] (/sic/sic30-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu
+Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
+Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/sic-faq) i utilitzeu el
+canal de [**Suport**] (/sic/sic-suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu
 electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
