@@ -204,11 +204,11 @@
 		Serveis
 
 		{{ if gt (len $section) 0 }}
-	</a>
+	</a></li>
 	{{ end }}
 
     {{ if gt (len $section) 0 }}
-    <a href="/sic20-serveis/">
+    <li><a href="/sic20-serveis/">
         {{ end }}
 
         Serveis (SIC 2.0)
@@ -230,11 +230,11 @@
         Serveis
 
         {{ if gt (len $section) 0 }}
-    </a>
+    </a></li>
     {{ end }}
 
 	{{ if gt (len $section) 0 }}
-	<a href="/sic30-serveis/">
+	<li><a href="/sic30-serveis/">
 		{{ end }}
 
 		Serveis (SIC 3.0)
@@ -266,7 +266,17 @@
 <a href="/sic/">Servei d'Integració Contínua</a> </li>
 <li>
 	{{ if gt (len $section) 0 }}
-	<a href="/sic20-guies/">
+    <a href="/sic-guies/">
+        {{ end }}
+
+        Guies
+
+        {{ if gt (len $section) 0 }}
+    </a></li>
+    {{ end }}
+	
+	{{ if gt (len $section) 0 }}
+	<li><a href="/sic20-guies/">
 		{{ end }}
 
 		Guies (SIC 2.0)
@@ -282,7 +292,17 @@
 <a href="/sic/">Servei d'Integració Contínua</a> </li>
 <li>
 	{{ if gt (len $section) 0 }}
-	<a href="/sic30-guies/">
+    <a href="/sic-guies/">
+        {{ end }}
+
+        Guies
+
+        {{ if gt (len $section) 0 }}
+    </a></li>
+    {{ end }}
+	
+	{{ if gt (len $section) 0 }}
+	<li><a href="/sic30-guies/">
 		{{ end }}
 
 		Guies (SIC 3.0)
