@@ -56,7 +56,7 @@ Per a més informació, podeu consultar:
 
 * [Servei d’Integració Continua](/sic-serveis/ci/)
 * [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/)
-* [Guies](/sic-guies/)
+* [Guies](/sic20-guies/)
 
 <br/>
 
