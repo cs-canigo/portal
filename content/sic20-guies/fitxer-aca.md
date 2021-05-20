@@ -6,7 +6,8 @@ sections = "SIC"
 toc = true
 aliases = [
        "/howtos/2018-05-SIC-Autoservei-jobs-pipeline-ACA/",
-       "/sic-welcome-pack/fitxer-aca/"
+       "/sic-welcome-pack/fitxer-aca/",
+       "/sic-guies/fitxer-aca/"
    ]
 taxonomies = []
 weight = 3

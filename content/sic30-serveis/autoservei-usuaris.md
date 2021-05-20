@@ -82,7 +82,7 @@ Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crea
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
-Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
 
 ### Comptabilitat amb SIC 1.0
 
@@ -123,5 +123,5 @@ En el cas que el rol escollit per a l'usuari hagués estat de **Mantainer**, l'e
 **AVÍS**: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l'assignació desitjada.
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

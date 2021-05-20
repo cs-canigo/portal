@@ -43,7 +43,7 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Rele
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu (amb l'adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
 Si no disposa d'accés als grups i projectes s'haurà d'adreçar als **Release Managers** del codi de diàleg o al responsable del lot per a que l'incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l'endemà l'usuari passarà a ser un Release Manager a tots els efectes, disposant d'accés a tots els serveis del SIC per al codi de diàleg corresponent.
 
-Per a més informació: [Autoservei d'usuaris] (/sic-serveis/autoservei-usuaris/)
+Per a més informació: [Autoservei d'usuaris] (/sic30-serveis/autoservei-usuaris/)
 
 ### Estructura de grups i projectes
 
@@ -68,7 +68,7 @@ En publicar una nova versió del codi font sobre la branca MASTER, automàticame
 * Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca **MASTER** i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.
 * Cal proporcionar processos de construcció d’artefactes **independents de les màquines i plataformes** on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.
 
-Per a més informació: [Integració contínua] (/sic-serveis/ci/)
+Per a més informació: [Integració contínua] (/sic30-serveis/ci/)
 
 <br/><br/>
 Teniu a la vostra disposició alguns articles relacionats amb el servei:
@@ -77,5 +77,5 @@ Teniu a la vostra disposició alguns articles relacionats amb el servei:
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)
 
 <br/><br/><br/>
-Si voleu més informació podeu consultar la secció de [**Guies**](/sic-guies/). <br/>
+Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>
 Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.

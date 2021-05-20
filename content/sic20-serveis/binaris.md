@@ -4,7 +4,8 @@ title = "Servei de Binaris"
 description = "Eina SIC per al lliurament d'artefactes a CPD/LldT"
 sections = "SIC"
 aliases = [
-  "/noticies/2017-07-05-SIC-Gestio-binaris/"
+  "/noticies/2017-07-05-SIC-Gestio-binaris/",
+  "/sic-serveis/binaris/"
 ]
 toc = true
 taxonomies = []

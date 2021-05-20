@@ -5,7 +5,8 @@ description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions se
 sections = "SIC"
 toc = true
 aliases = [
-    "/noticies/2018-05-16-SIC-Autoservei-pipelines/"
+    "/noticies/2018-05-16-SIC-Autoservei-pipelines/",
+    "/sic-serveis/autoservei-pipelines/"
 ]
 taxonomies = []
 weight = 5

@@ -39,7 +39,7 @@ Les modalitats **Sense automatització** i **Sense integrar** són casos excepci
 * **Com organitzar els projectes**: els projectes s'ubiquen dins el grup del codi d'aplicació, creant tants projectes com conjunts de codi susceptibles de ser versionats de forma independent.
 * **Quan i com fer el lliurament d'una nova versió**: un cop validat als entorns de desenvolupament, es consolidarà, es realitzarà l'increment de versió i es pujarà al repositori. Si el projecte disposa d'una tasca de construcció i desplegament automàtic i l'actualització s'ha fet sobre la branca MASTER, es dispararà la tasca corresponent al Jenkins.
 
-Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
+Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
 
 ## Integració contínua
 
@@ -72,7 +72,7 @@ Per a més informació: [Integració contínua] (/sic30-serveis/ci/)
 * **Com dipositar nous artefactes**: executar la tasca de pujada d'artefactes indicant, com a mínim: codi d'aplicació, projecte, versió i l'arxiu a dipositar. Pot incloure documentació associada. Si l'aplicació no està exempta de repositar codi al Git, abans de cada pujada haurà d'assegurar-se d'haver **actualitzat el codi font** o el sistema no li permetrà realitzar la operació.
 * **Com recuperar artefactes**: localitzar el codi d'aplicació, projecte i versió i podrà descarregar el contingut necessari.
 
-Per a més informació: [Servei de binaris] (/sic-serveis/binaris/)
+Per a més informació: [Servei de binaris] (/sic30-serveis/binaris/)
 
 <br/><br/><br/>
 Es tracta d’una guia ràpida per a informar dels aspectes més rellevants a tenir en compte per a l'ús de les eines del SIC.
