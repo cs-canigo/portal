@@ -198,21 +198,41 @@
 <a href="/sic/">Servei d'Integració Contínua</a> </li>
 <li>
 	{{ if gt (len $section) 0 }}
-	<a href="/sic20-serveis/">
+	<a href="/sic-serveis/">
 		{{ end }}
 
-		Serveis (SIC 2.0)
+		Serveis
 
 		{{ if gt (len $section) 0 }}
 	</a>
 	{{ end }}
 
-	{{ end }}
+    {{ if gt (len $section) 0 }}
+    <a href="/sic20-serveis/">
+        {{ end }}
+
+        Serveis (SIC 2.0)
+
+        {{ if gt (len $section) 0 }}
+    </a>
+    {{ end }}
+
+    {{ end }}
 
 <!-- SIC - Serveis (SIC 3.0) -->
 {{ if or (eq $title "sic30-serveis") (eq $section "sic30-serveis") }}
 <a href="/sic/">Servei d'Integració Contínua</a> </li>
 <li>
+    {{ if gt (len $section) 0 }}
+    <a href="/sic-serveis/">
+        {{ end }}
+
+        Serveis
+
+        {{ if gt (len $section) 0 }}
+    </a>
+    {{ end }}
+
 	{{ if gt (len $section) 0 }}
 	<a href="/sic30-serveis/">
 		{{ end }}
