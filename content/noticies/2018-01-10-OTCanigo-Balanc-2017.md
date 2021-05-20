@@ -23,7 +23,7 @@ A mode resum, destacaríem les següents:
 - Suport al desplegament d'aplicacions en les diferents plataformes de contenidors i cloud públic en catàleg: AppAgile, SwarmMe, Azure i Bluemix
 
 
-### SIC (Servei d'Integració Continua)
+### SIC (Servei d'Integració Contínua)
 
 - Publicació del **SIC 2.0**, el qual inclou:
 	- Integració al SIC del nou sistema de gestió de versions de codi (**Git**).

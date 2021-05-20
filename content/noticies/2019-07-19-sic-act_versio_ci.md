@@ -1,14 +1,14 @@
 +++
 date        = "2019-07-19"
 title       = "SIC. Actualització de versió Jenkins"
-description = "Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Continua (Jenkins)"
+description = "Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Contínua (Jenkins)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 +++
 
-## Servei d'Integració Continua
+## Servei d'Integració Contínua
 
-**Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Continua fins a la versió 2.164.3 de Jenkins**.
+**Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Contínua fins a la versió 2.164.3 de Jenkins**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:

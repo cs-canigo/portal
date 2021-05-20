@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "ABRIL2018"
 +++
 
-Amb la separació de frontend i backend que es recomana aplicar com a patró d'arquitectura en aplicacions Canigó, i per tal d'acomplir els requeriments d'una **única construcció no depenent de l'entorn** que s'imposa des del SIC (Servei d'Integració Continua), cal donar una solució de configuració multi-entorn per la part de frontend. Aquest frontend en les aplicacions web actuals típicament seran SPA (Single Page Application).
+Amb la separació de frontend i backend que es recomana aplicar com a patró d'arquitectura en aplicacions Canigó, i per tal d'acomplir els requeriments d'una **única construcció no depenent de l'entorn** que s'imposa des del SIC (Servei d'Integració Contínua), cal donar una solució de configuració multi-entorn per la part de frontend. Aquest frontend en les aplicacions web actuals típicament seran SPA (Single Page Application).
 
 A continuació s'enumeren diferents opcions:
 

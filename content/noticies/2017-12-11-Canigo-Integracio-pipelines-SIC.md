@@ -7,7 +7,7 @@ categories  = ["canigo"]
 key         = "DESEMBRE2017"
 +++
 
-Les aplicacions Canigó poden ser fàcilment integrables al [**SIC (Servei d'Integració Continua)**](http://canigo.ctti.gencat.cat/sic/), tant per la seva custodia de codi al Git, com per la seva construcció i desplegament amb Jenkins. Des del CS Canigó s'ha redactat aquest [HowTo](http://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/) on s'explica pas a pas com fer aquesta integració.
+Les aplicacions Canigó poden ser fàcilment integrables al [**SIC (Servei d'Integració Contínua)**](http://canigo.ctti.gencat.cat/sic/), tant per la seva custodia de codi al Git, com per la seva construcció i desplegament amb Jenkins. Des del CS Canigó s'ha redactat aquest [HowTo](http://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/) on s'explica pas a pas com fer aquesta integració.
 
 A mode de resum, els principals aspectes a tenir en compte són els següents:
 

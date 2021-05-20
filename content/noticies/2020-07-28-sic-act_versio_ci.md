@@ -1,7 +1,7 @@
 +++
 date        = "2020-07-28"
 title       = "SIC. Actualització de versió Jenkins"
-description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei d'Integració Continua (Jenkins)"
+description = "Durant el mes de Juliol s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "NOVEMBRE2020"

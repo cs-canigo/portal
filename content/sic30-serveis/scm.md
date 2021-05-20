@@ -21,7 +21,7 @@ weight = 1
 Gitlab és utilitzat per més de 100.000 organitzacions d'arreu del món. S’han realitzar proves en organitzacions amb 10.000 projectes amb el mateix temps i la mateixa qualitat de resposta que amb un sol projecte.
 <br>
 <br>
-El Gitlab està integrat amb el Servei d'Integració Continua, en publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d’Integració Contínua (Jenkins).
+El Gitlab està integrat amb el Servei d'Integració Contínua, en publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d’Integració Contínua (Jenkins).
 <br>
 <br>
 Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de **consolidar el codi i lliurar-lo**. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.

@@ -23,7 +23,7 @@ A més del timeline anterior, fem una breu descripció de cadascuna d'aquestes f
 - **Millores en el servei**: accés a logs, pla de comunicacions,...
 
 
-### SIC (Servei d'Integració Continua)
+### SIC (Servei d'Integració Contínua)
 
 - Publicació de l'**Autoservei de jobs del SIC**, mitjançant el qual els proveïdors són autònoms en la definició per la generació de les pipelines de construcció i desplegament d'aplicacions a CPD des del SIC
 - Integració del servidor d'aplicacions **JBoss EAP**
