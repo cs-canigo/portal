@@ -1,6 +1,6 @@
 +++
 date = "2021-05-20"
-title = "SIC 3.0 - Quin són els serveis del SIC i com fer-ne ús"
+title = "Quin són els serveis del SIC i com fer-ne ús"
 description = "Guia amb la informació més rellevant per a l'ús dels serveis que proporciona el SIC"
 sections = "SIC"
 toc = true

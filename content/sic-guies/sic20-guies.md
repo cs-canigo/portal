@@ -1,6 +1,6 @@
 +++
 date        = "2020-04-12"
-title       = "SIC 2.0"
+title       = "Guies (SIC 2.0)"
 description = "Guies disponibles i HOWTOs d'utilitat (SIC 2.0)"
 enllac		= "/sic20-guies/"
 sections    = "SIC"
