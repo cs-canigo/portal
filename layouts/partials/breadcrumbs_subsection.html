@@ -177,63 +177,101 @@
 	</li>
 {{ end }}
 
-<!-- SIC - Related -->
-{{ if or (eq $title "sic-related") (eq $section "sic-related") }}
-	<a href="/sic/">Servei d'Integració Contínua</a> </li>
-	<li>
-		<a href="/sic/about/">Què és el Servei d'Integració Continua (SIC)</a>
-	</li>
-{{ end }}
-
-
-
 <!-- SIC - Serveis -->
 {{ if or (eq $title "sic-serveis") (eq $section "sic-serveis") }}
-	<a href="/sic/">Servei d'Integració Contínua</a> </li>
-	<li>
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
 	{{ if gt (len $section) 0 }}
-		<a href="/sic-serveis/">
+	<a href="/sic-serveis/">
+		{{ end }}
+
+		Serveis
+
+		{{ if gt (len $section) 0 }}
+	</a>
 	{{ end }}
 
-	Serveis
-
-	{{ if gt (len $section) 0 }}
-		</a>
 	{{ end }}
 
-{{ end }}
-
-<!-- SIC - Welcome pack -->
-{{ if or (eq $title "sic-welcome-pack") (eq $section "sic-welcome-pack") }}
-	<a href="/sic/">Servei d'Integració Contínua</a> </li>
-	<li>
+<!-- SIC - Serveis (SIC 2.0) -->
+{{ if or (eq $title "sic20-serveis") (eq $section "sic20-serveis") }}
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
 	{{ if gt (len $section) 0 }}
-		<a href="/sic-welcome-pack/">
+	<a href="/sic20-serveis/">
+		{{ end }}
+
+		Serveis (SIC 2.0)
+
+		{{ if gt (len $section) 0 }}
+	</a>
 	{{ end }}
 
-	Welcome pack
-
-	{{ if gt (len $section) 0 }}
-		</a>
 	{{ end }}
 
-{{ end }}
-
-<!-- SIC - Suport -->
-{{ if or (eq $title "sic-suport") (eq $section "sic-suport") }}
-	<a href="/sic/">Servei d'Integració Contínua</a> </li>
-	<li>
+<!-- SIC - Serveis (SIC 3.0) -->
+{{ if or (eq $title "sic30-serveis") (eq $section "sic30-serveis") }}
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
 	{{ if gt (len $section) 0 }}
-		<a href="/sic-suport/">
+	<a href="/sic30-serveis/">
+		{{ end }}
+
+		Serveis (SIC 3.0)
+
+		{{ if gt (len $section) 0 }}
+	</a>
 	{{ end }}
 
-	Suport
-
-	{{ if gt (len $section) 0 }}
-		</a>
 	{{ end }}
 
-{{ end }}
+<!-- SIC - Guies -->
+{{ if or (eq $title "sic-guies") (eq $section "sic-guies") }}
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	{{ if gt (len $section) 0 }}
+	<a href="/sic-guies/">
+		{{ end }}
+
+		Guies
+
+		{{ if gt (len $section) 0 }}
+	</a>
+	{{ end }}
+
+	{{ end }}
+
+<!-- SIC - Guies (SIC 2.0) -->
+{{ if or (eq $title "sic20-guies") (eq $section "sic20-guies") }}
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	{{ if gt (len $section) 0 }}
+	<a href="/sic20-guies/">
+		{{ end }}
+
+		Guies (SIC 2.0)
+
+		{{ if gt (len $section) 0 }}
+	</a>
+	{{ end }}
+
+	{{ end }}
+
+<!-- SIC - Guies (SIC 3.0) -->
+{{ if or (eq $title "sic30-guies") (eq $section "sic30-guies") }}
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	{{ if gt (len $section) 0 }}
+	<a href="/sic30-guies/">
+		{{ end }}
+
+		Guies (SIC 3.0)
+
+		{{ if gt (len $section) 0 }}
+	</a>
+	{{ end }}
+
+	{{ end }}
 
 <!-- SGDE - Related -->
 {{ if or (eq $title "sgde-related") (eq $section "sgde-related") }}
