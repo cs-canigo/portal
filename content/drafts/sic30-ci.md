@@ -6,7 +6,8 @@ sections = "SIC"
 toc = true
 aliases = [
     "/sic/integracions-dev/",
-    "/sic/clau/"
+    "/sic/clau/",
+    "/sic-documentacio"
 ]
 taxonomies = []
 weight = 2
