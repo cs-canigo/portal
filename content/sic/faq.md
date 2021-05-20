@@ -4,7 +4,7 @@ title = "SIC 2.0 - FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
 taxonomies = []
-weight = 8
+weight = 5
 +++
 
 ## Accessibilitat

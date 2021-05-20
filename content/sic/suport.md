@@ -9,7 +9,7 @@ aliases = [
 ]
 toc = true
 taxonomies = []
-weight = 6
+weight = 4
 +++
 
 Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
