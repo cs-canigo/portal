@@ -1,6 +1,6 @@
 +++
 date        = "2019-01-02"
-title       = "Què és el Servei d'Integració Contínua (SIC 2.0)"
+title       = "Què és el Servei d'Integració Contínua"
 description = "Conceptes, motivació, modalitats d’integració i serveis que es proporcionen"
 sections    = "SIC"
 toc         = true

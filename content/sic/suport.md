@@ -1,6 +1,6 @@
 +++
 date = "2020-02-28"
-title = "Canals de suport"
+title = "SIC 2.0 - Canals de suport"
 description = "Com obtenir suport per part de l'equip del SIC"
 sections = "SIC"
 aliases = [
@@ -9,7 +9,7 @@ aliases = [
 ]
 toc = true
 taxonomies = []
-weight = 4
+weight = 6
 +++
 
 Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:

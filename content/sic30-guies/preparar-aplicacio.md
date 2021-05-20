@@ -1,5 +1,5 @@
 +++
-date = "2020-06-25"
+date = "2021-05-20"
 title = "Com preparar una aplicació per desplegar-la automàticament"
 description = "Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació"
 sections = "SIC"

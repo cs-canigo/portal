@@ -1,11 +1,11 @@
 +++
-date = "2021-05-07"
+date = "2021-05-20"
 title = "SIC 3.0 - Catàleg d'imatges builder"
 description = "El catàleg d'imatges del SIC proporciona imatges Docker builder als proveïdors d'aplicacions."
 sections = "SIC"
 toc = true
 taxonomies = []
-weight = 5
+weight = 6
 +++
 
 ## Introducció

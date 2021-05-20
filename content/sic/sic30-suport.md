@@ -1,11 +1,11 @@
 +++
-date = "2021-04-13"
+date = "2021-05-20"
 title = "SIC 3.0 - Canals de suport"
 description = "Com obtenir suport per part de l'equip del SIC"
 sections = "SIC"
 toc = true
 taxonomies = []
-weight = 4
+weight = 7
 +++
 
 Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/sic30-faq) i utilitzeu els canals de comunicació que s'estableixen:

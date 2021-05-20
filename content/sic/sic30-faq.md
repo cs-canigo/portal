@@ -1,10 +1,10 @@
 +++
-date = "2021-04-13"
+date = "2021-05-20"
 title = "SIC 3.0 - FAQ"
 description = "Preguntes freqüents sobre els serveis del SIC"
 sections = "SIC"
 taxonomies = []
-weight = 5
+weight = 9
 +++
 
 ## Accessibilitat
