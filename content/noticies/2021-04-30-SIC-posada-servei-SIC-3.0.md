@@ -62,7 +62,7 @@ es troben cobertes pel sistema i el calendari provisional de migració cap al no
 
 - Al **juny del 2021 està previst iniciar la migració de les pipelines cloud**
 
-- Al **setembre-octubre del 2021 està previst iniciar la migració de les pielines on-premise**
+- Al **setembre-octubre del 2021 està previst iniciar la migració de les pipelines on-premise**
 
 <br/>
 Per a més informació:
