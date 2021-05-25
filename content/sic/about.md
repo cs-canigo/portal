@@ -52,14 +52,16 @@ El SIC té capacitat per a poder realitzar el **desplegament automàtic** d'un g
 Aquests es realitzen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al servei de custòdia de codi font. <br/>
 La tasca inclourà accions de construcció d'artefactes, versionat de codi, execució de tests, anàlisi de codi i desplegaments a entorns no-productius i productius. En aquells entorns on no es pugui desplegar automàticament, el flux d'execució de la tasca s'aturarà esperant una resposta manual d'acceptació.
 
-Per a més informació: [Integració contínua] (/sic-serveis/ci/)
+Per a més informació:
+
+- [Integració contínua (SIC 2.0)] (/sic20-serveis/ci/)
+- [Integració contínua (SIC 3.0)] (/sic30-serveis/ci/)
 
 ### Binaris
 
 Si les aplicacions no permeten la construcció i desplegament d'artefactes mitjançant el sistema d'integració contínua, el SIC proporciona un servei per a que les aplicacions puguin **lliurar els artefactes** (.war, .ear, .jar, .zip, etc.) a CPD/LdT mitjançant el sistema de gestió de binaris de SIC. 
 
 Per a més informació: [Binaris] (/sic-serveis/binaris/)
-
 
 ### Autoservei d’usuaris
 
