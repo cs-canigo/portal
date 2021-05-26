@@ -158,7 +158,7 @@ A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necess
 
 * **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
 
-    * Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
+> Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -195,7 +195,7 @@ public class EquipamentClientService {
 }
 ```
 
-    * Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
+> Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -215,7 +215,7 @@ public class EquipamentClientController {
 }
 ```
 
-    * Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
+> Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -308,14 +308,7 @@ A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necess
 
 * **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
 
-    * Component Spring de servei on s’implementarà el patró _Circuit Breaker_.
-
-    * Component Spring de control Rest que contindrà un endpoint de prova.
-
-    * Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació.
-
-
-Exemple del component de servei amb el patró _Circuit Breaker_ (`EquipamentClientService.java`):
+> Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -377,7 +370,7 @@ public class EquipamentClientService {
 }
 ```
 
-Exemple del component de control (`EquipamentClientController.java`):
+> Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -397,7 +390,7 @@ public class EquipamentClientController {
 }
 ```
 
-Exemple de configuració de Spring (`EquipamentClientConfig.java`):
+> Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -452,18 +445,20 @@ desvia per a invocar el mètode de recuperació sense generar errors:
 bàsic de 'netflix-hystrix-dashboard' o [Prometheus](https://github.com/prometheus/prometheus)/
 [Grafana](https://github.com/grafana/grafana).
 
-* Mètriques amb 'netflix-hystrix-dashboard' (http://localhost:8095/hystrix):
+<br/>
+**Mètriques amb 'netflix-hystrix-dashboard'** (http://localhost:8095/hystrix):
 
 ![Spring circuit Ejemplo 3](/images/howtos/2021-01-02_spring_circuit_example3.gif)
 
-* Mètriques amb Prometheus (http://localhost:9090/):
+<br/>
+**Mètriques amb Prometheus** (http://localhost:9090/):
 
 ![Spring circuit Ejemplo 4](/images/howtos/2021-01-02_spring_circuit_example4.gif)
 
-* Mètriques amb Grafana (http://localhost:3000/):
+<br/>
+**Mètriques amb Grafana** (http://localhost:3000/):
 
 ![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif)
-
 
 ## Conclusió
 
