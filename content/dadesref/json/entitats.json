@@ -105,7 +105,7 @@
 "21/04/2021",
 "Tipus_Ens_Locals.xlsx",
 "Tipus_Ens_Locals_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-ens-locals/kmks-jb77"
 ],
 [
 "Pendent",
@@ -306,10 +306,10 @@
 "https://analisi.transparenciacatalunya.cat/Economia/CCAE-2009/get5-imi7"
 ],
 [
-"Pendent",
+"Consolidat",
 "Educació i formació",
-"Educació CCED 2000 NE",
-"Classificació catalana d'educació 2000 (CCED-2000) (programes per nivells educatius)",
+"Educació CCED 2000 P",
+"Classificació catalana d'educació any 2000 (classificació de programes per nivells educatius)",
 "dtarq123",
 "Educació i formació",
 "Administració Pública",
@@ -318,16 +318,16 @@
 "Tabular",
 "Ús no restringit",
 "20/02/2020",
-"20/02/2020",
-"Educacio_CCED_2000_NE.xlsx",
-"Educacio_CCED_2000_NE_ATR.docx",
-""
+"26/05/2021",
+"Educacio_CCED_2000_P.xlsx",
+"Educacio_CCED_2000_P_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-P/3j67-asqw"
 ],
 [
-"Pendent",
+"Consolidat",
 "Educació i formació",
-"Educació CCED 2000 NF",
-"Classificació catalana d'educació 2000 (CCED-2000) (nivell de formació assolit)",
+"Educació CCED 2000 A",
+"Classificació catalana d'educació any 2000 (Classificació del nivell de formació assolit)",
 "dtarq122",
 "Educació i formació",
 "Administració Pública",
@@ -336,16 +336,16 @@
 "Tabular",
 "Ús no restringit",
 "20/02/2020",
-"20/02/2020",
-"Educacio_CCED_2000_NF.xlsx",
-"Educacio_CCED_2000_NF_ATR.docx",
-""
+"26/05/2021",
+"Educacio_CCED_2000_A.xlsx",
+"Educacio_CCED_2000_A_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-A/dmdy-ht3g"
 ],
 [
-"Pendent",
+"Consolidat",
 "Educació i formació",
-"Educació CCED 2000 SE",
-"Classificació catalana d'educació 2000 (CCED-2000) (sector d'estudis)",
+"Educació CCED 2000 F",
+"Classificació catalana d'educació any 2000 (Classificació dels camps d'educació i capacitació)",
 "dtarq121",
 "Educació i formació",
 "Administració Pública",
@@ -354,10 +354,10 @@
 "Tabular",
 "Ús no restringit",
 "20/02/2020",
-"20/02/2020",
-"Educacio_CCED_2000_SE.xlsx",
-"Educacio_CCED_2000_SE_ATR.docx",
-""
+"26/05/2021",
+"Educacio_CCED_2000_F.xlsx",
+"Educacio_CCED_2000_F_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-F/txct-c7jr"
 ],
 [
 "Pendent",
@@ -466,6 +466,42 @@
 "Codis_Infra_TorresRadioCom.xlsx",
 "Codis_Infra_TorresRadioCom_ATR.docx",
 ""
+],
+[
+"Consolidat",
+"Llengua i comunicació",
+"Prefixos telefònics internacionals",
+"Llistat de prefixos de país per trucades de telèfon internacionals.",
+"dtarq145",
+"Llengua i comunicació",
+"Administració Pública",
+"Oficina d'Innovació i Administració Digital (OIAD)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"26/05/2021",
+"26/05/2021",
+"Prefixos_telefonics_internacionals.xlsx",
+"Prefixos_telefonics_internacionals_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Prefixos-telef%C3%B2nics-internacionals/i7dg-i8xw"
+],
+[
+"Consolidat",
+"Llengua i comunicació",
+"Relació Prefixos telefònics internacionals i Països",
+"Relació entre les entitats de prefixos telèfon internacionals i països.",
+"dtarq146",
+"Llengua i comunicació",
+"Administració Pública",
+"Oficina d'Innovació i Administració Digital (OIAD)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"26/05/2021",
+"26/05/2021",
+"Rel_PrefixTeleInter_Paisos.xlsx",
+"Rel_PrefixTeleInter_Paisos_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Relaci%C3%B3-Prefixos-telef%C3%B2nics-internacionals-i-Pa%C3%AFso/g8rh-xih2"
 ],
 [
 "Pendent",
@@ -704,6 +740,24 @@
 [
 "Consolidat",
 "Territori i paisatge. Urbanisme",
+"Codis postal per municipis de Catalunya",
+"Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
+"dtarq134",
+"Territori i paisatge. Urbanisme",
+"Administració Pública",
+"Institut d'Estadística de Catalunya (Idescat)",
+"Sota demanda",
+"Tabular",
+"Ús no restringit",
+"26/05/2021",
+"26/05/2021",
+"Codi_Postal_Municipis_Cat.xlsx",
+"Codi_Postal_Municipis_Cat_ATR.docx",
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g"
+],
+[
+"Consolidat",
+"Territori i paisatge. Urbanisme",
 "Comarques Catalunya i Aran",
 "Llista de les comarques de Catalunya i Aran.",
 "dtarq82",
@@ -876,7 +930,7 @@
 "Tabular",
 "Ús no restringit",
 "18/12/2019",
-"21/04/2021",
+"26/05/2021",
 "Nom_carrers_Catalunya.xlsx",
 "Nom_carrers_Catalunya_ATR.docx",
 "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy"
@@ -897,7 +951,7 @@
 "17/02/2021",
 "Territori_NUTS.xlsx",
 "Territori_NUTS_ATR.docx",
-""
+"https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nomenclatura-d-unitats-territorials-estad%C3%ADstiques/v467-kzwi"
 ],
 [
 "Consolidat",
