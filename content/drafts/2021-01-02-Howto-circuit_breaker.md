@@ -15,11 +15,9 @@ dins d'un projecte generat amb el Framework Canigó.
 
 ## Justificació
 
-
 És habitual que les aplicacions facin crides remotes a sistemes que poden fallar o penjar-se sense resposta fins
 que s’arribi a un límit de temps d’espera. Aquest fet pot acabar implicant que el sistema es quedi sense recursos i
 que impliquin fallades en cascada.
-
 El patró **_Circuit Breaker_ permet evitar que una aplicació intenti de manera indefinida una operació que amb alta
 probabilitat vagi a fallar**, permetent que continuï l'aplicació mentre el problema amb l'operació es resol.
 Addicionalment, permet un restabliment automàtic quan el problema hagi quedat resolt tornant a executar l'operació compromesa.
@@ -60,7 +58,8 @@ El projecte Hystrix ha deixat de desenvolupar-se de forma activa tal com s'indic
 Com a alternativa es pot utilitzar el projecte <a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.
 </div>
 
----
+A continuació es mostrarà informació de configuració i desenvolupament en cada cas.
+
 ## Spring Cloud Netflix Hystrix
 ---
 
@@ -78,8 +77,9 @@ Caldrà afegir algunes dependències al projecte _Maven_:
 
 És important mantenir la relació entre les dependències de _Spring Cloud_ i la versió de _Spring Boot_.
 Podeu consultar la matriu de compatibilitat de [Spring Cloud](https://spring.io/projects/spring-cloud).
-Per exemple, si la versió de _Spring Boot_ és 2.1.8.RELEASE li correspon la versió _Greenwich.XX_ de _Spring Cloud_.
+Per exemple, si la versió de _Spring Boot_ és 2.1.8.RELEASE, li correspondrà la versió _Greenwich.XX_ de _Spring Cloud_.
 
+<br/>
 Exemple de fitxer `pom.xml`:
 
 ```xml
@@ -124,7 +124,7 @@ Exemple de fitxer `pom.xml`:
 }
 ```
 
-Exemple de fitxer `application.yml`
+Exemple de fitxer `application.yml`:
 
 ```yaml
 
@@ -153,15 +153,18 @@ hystrix:
 
 A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necessitaran dues aplicacions de tipus Canigó:
 
-* `CircuitBreakerProvider`: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
-* `CircuitBreakerConsumer`: que consumirà el servei implementat i incorporarà els següents components:
+* **CircuitBreakerProvider**: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
 
-* Component Spring de servei on s’implementarà el patró _Circuit Breaker_.
-* Component Spring de control Rest que contindrà un endpoint de prova.
-* Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació.
+* **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
+
+    * Component Spring de servei on s’implementarà el patró _Circuit Breaker_.
+
+    * Component Spring de control Rest que contindrà un endpoint de prova.
+
+    * Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació.
 
 
-Exemple del component de servei amb el patró _Circuit Breaker_ (classe `EquipamentClientService.java`):
+Exemple del component de servei amb el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -198,7 +201,7 @@ public class EquipamentClientService {
 }
 ```
 
-Exemple del component de control (classe `EquipamentClientController.java`):
+Exemple del component de control (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -218,7 +221,7 @@ public class EquipamentClientController {
 }
 ```
 
-Exemple de configuració de Spring (classe `EquipamentClientConfig.java`):
+Exemple de configuració de Spring (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -236,7 +239,6 @@ public class EquipamentClientConfig {
 }
 ```
 
----
 ## Resilience4j
 ---
 
@@ -308,15 +310,18 @@ management:
 
 A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necessitaran dues aplicacions de tipus Canigó:
 
-* `CircuitBreakerProvider`: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
-* `CircuitBreakerConsumer`: que consumirà el servei implementat i incorporarà els següents components:
+* **CircuitBreakerProvider**: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
 
-* Component Spring de servei on s’implementarà el patró _Circuit Breaker_.
-* Component Spring de control Rest que contindrà un endpoint de prova.
-* Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació.
+* **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
+
+    * Component Spring de servei on s’implementarà el patró _Circuit Breaker_.
+
+    * Component Spring de control Rest que contindrà un endpoint de prova.
+
+    * Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació.
 
 
-Exemple del component de servei amb el patró _Circuit Breaker_ (classe `EquipamentClientService.java`):
+Exemple del component de servei amb el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -378,7 +383,7 @@ public class EquipamentClientService {
 }
 ```
 
-Exemple del component de control (classe `EquipamentClientController.java`):
+Exemple del component de control (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -398,7 +403,7 @@ public class EquipamentClientController {
 }
 ```
 
-Exemple de configuració de Spring (classe `EquipamentClientConfig.java`):
+Exemple de configuració de Spring (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -413,7 +418,6 @@ public class EquipamentClientConfig {
   }
 }
 ```
----
 
 ## Proves
 
@@ -431,6 +435,7 @@ cd CircuitBreakerServer/
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8095 -Dspring-boot.run.fork=false
 ```
 
+<br/>
 **Prova amb el circuit tancat**
 
 Utilitzant l’eina _Postman_ s'invoca el Servei Rest Consumidor http://localhost:8095/equipaments/externs/10 i,
@@ -438,6 +443,7 @@ com es pot veure, respon de la mateixa manera que el Servei Rest Proveïdor http
 
 ![Spring circuit Ejemplo 1](/images/howtos/2021-01-02_spring_circuit_example1.gif)
 
+<br/>
 **Prova amb el circuit obert**
 
 Si es para l'aplicació del Servei Rest Consumidor i s'invoca el Servei Rest Proveïdor, es pot comprovar que es
@@ -445,21 +451,25 @@ desvia per a invocar el mètode de recuperació sense generar errors:
 
 ![Spring circuit Ejemplo 2](/images/howtos/2021-01-02_spring_circuit_example2.gif)
 
+<br/>
 **Monitorització**
 
 És possible obtenir mètriques de l'execució del patró utilitzant diferents eines com, per exemple, el tauler
 bàsic de 'netflix-hystrix-dashboard' o [Prometheus](https://github.com/prometheus/prometheus)/
 [Grafana](https://github.com/grafana/grafana).
 
+<br/>
 * Mètriques amb 'netflix-hystrix-dashboard' (http://localhost:8095/hystrix):
 
 ![Spring circuit Ejemplo 3](/images/howtos/2021-01-02_spring_circuit_example3.gif)
 
-* Mètriques amb Prometheus (http://localhost:9090/)
+<br/>
+* Mètriques amb Prometheus (http://localhost:9090/):
 
 ![Spring circuit Ejemplo 4](/images/howtos/2021-01-02_spring_circuit_example4.gif)
 
- * Mètriques amb Grafana (http://localhost:3000/)
+<br/>
+* Mètriques amb Grafana (http://localhost:3000/):
 
 ![Spring circuit Ejemplo 5](/images/howtos/2021-01-02_spring_circuit_example5.gif)
 
