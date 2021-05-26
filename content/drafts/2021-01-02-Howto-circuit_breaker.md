@@ -153,12 +153,10 @@ hystrix:
 ### Desenvolupament
 
 A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necessitaran dues aplicacions de tipus Canigó:
+l'aplicació **CircuitBreakerProvider** que només tindrà l'exemple de servei Rest "Equipament" de Canigó, i
+l'aplicació **CircuitBreakerConsumer** que consumirà el servei implementat i incorporarà els següents components:
 
-* **CircuitBreakerProvider**: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
-
-* **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
-
-> Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
+* Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -195,7 +193,8 @@ public class EquipamentClientService {
 }
 ```
 
-> Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
+
+* Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -215,7 +214,8 @@ public class EquipamentClientController {
 }
 ```
 
-> Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
+
+* Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -303,12 +303,10 @@ management:
 ### Desenvolupament
 
 A mode d’exemple, per a aplicar i provar el patró _Circuit Breaker_ es necessitaran dues aplicacions de tipus Canigó:
+l'aplicació **CircuitBreakerProvider** que només tindrà l'exemple de servei Rest "Equipament" de Canigó, i
+l'aplicació **CircuitBreakerConsumer** que consumirà el servei implementat i incorporarà els següents components:
 
-* **CircuitBreakerProvider**: que només tindrà l'exemple de servei Rest "Equipament" de Canigó.
-
-* **CircuitBreakerConsumer**: que consumirà el servei implementat i incorporarà els següents components:
-
-> Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
+* Component Spring de servei on s’implementarà el patró _Circuit Breaker_ (`EquipamentClientService.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
@@ -370,7 +368,8 @@ public class EquipamentClientService {
 }
 ```
 
-> Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
+
+* Component Spring de control Rest que contindrà un endpoint de prova (`EquipamentClientController.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.endpoints.client;
@@ -390,7 +389,8 @@ public class EquipamentClientController {
 }
 ```
 
-> Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
+
+* Configuració de Spring que habilitarà el patró _Circuit Breaker_ dins de l'aplicació (`EquipamentClientConfig.java`):
 
 ```java
 package cat.gencat.circuitbreakerconsumer.config.client;
