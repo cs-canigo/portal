@@ -2,9 +2,9 @@
 date         = "2021-05-20"
 title       = "SIC. Posada en servei Plataforma SIC 3.0"
 description = "El dia 01/05/2021 s'ha posat en servei la nova Plataforma del Sistema d'Integració Contínua 3.0 "
-#sections    = ["Notícies", "home"]
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
-#key         = "JUNY2021"
+key         = "JUNY2021"
 +++
 
 **A partir del 01 de maig del 2021 s'ha posat en servei la nova Plataforma del
