@@ -1,8 +1,8 @@
 +++
-date        = "2016-06-09T17:11:42+01:00"	
-title       = "Centre de Suport Canigó"	
-description = "Framework Canigó i SIC"	
-enllac		  = "/centre-de-suport/"	
+date        = "2021-05-27"	
+title       = "Canals de suport CS Canigó"	
+description = "Canals de suport CS Canigó"	
+enllac		  = "centre-de-suport-cs-canigo"	
 no_index 	  = true	
 weight 		  = 1	
 +++
