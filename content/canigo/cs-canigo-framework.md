@@ -1,7 +1,7 @@
 +++
 date        = "2019-11-22T17:11:42+01:00"
-title       = "El Centre de suport Canigó"
-description = "Què és el Centre de suport Canigó?"
+title       = "El Centre de Suport Canigó - Framework"
+description = "Què és el Centre de Suport Canigó pel Framework Canigó?"
 sections    = "Centre de Suport"
 weight		= 8
 +++
