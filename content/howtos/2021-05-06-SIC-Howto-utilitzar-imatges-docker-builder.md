@@ -4,7 +4,7 @@ title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
 description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
 section     = "howtos"
 categories  = ["SIC"]
-#key        = "JUNY2021"
+key        = "JUNY2021"
 +++
 
 ## Introducció
