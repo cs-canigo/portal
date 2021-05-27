@@ -429,3 +429,18 @@
 		{{ end }}
 	</li>
 {{ end }}
+
+<!-- CENTRE DE SUPORT CANIGO - Oficina Tècnica Canigó -->
+{{ if or (eq $title "centre-de-suport-cs-canigo") (eq $section "centre-de-suport-cs-canigo") }}
+<a href="/cs/">Centres de Suport</a> </li>
+<li>
+	{{ if gt (len $section) 0 }}
+	<a href="/cs/">
+		{{ end }}
+
+		Centres de suport
+		{{ if gt (len $section) 0 }}
+	</a>
+	{{ end }}
+</li>
+{{ end }}

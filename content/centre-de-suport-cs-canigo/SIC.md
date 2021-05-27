@@ -1,7 +1,7 @@
 +++
 date        = "2021-05-27"	
-title       = "Canals de suport CS Canigó - SIC"	
-description = "Canals de suport CS Canigó - SIC"	
+title       = "SIC"
+description = "Contacte amb l'Oficina Tècnica de Canigó - Sistema d'Integració Contínua"
 enllac		  = "/sic/suport/"	
 no_index 	  = true	
 weight 		  = 1	
