@@ -13,6 +13,10 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com implementar el patró Circuit Breaker] (/howtos/2021-01-02-Howto-circuit_breaker/)
+
+- [Com corregir l’error de parseig del connector Sarcat PICA] (/howtos/2021-05-11-Howto-sarcat_pica_error_parseig_prefix/)
+
 - [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)
 
 - [Com instal·lar les VBOX guest additions] (/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
