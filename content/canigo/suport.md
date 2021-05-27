@@ -1,8 +1,8 @@
 +++
 date        = "2015-01-24T17:11:42+01:00"
-title       = "Canals de suport Framework Canigó"
-description = "Com obtenir suport per part de l'equip de CS Canigó - Framework"
-sections    = "Centre de Suport"
+title       = "Canals de suport"
+description = "Com obtenir suport per part de l'equip de Canigó"
+sections    = "Canigó"
 weight		= 7
 +++
 
