@@ -195,3 +195,13 @@ projecte auto-executable.
 
 <br/><br/><br/>
 La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-documentacio">documentació del portal web</a>.
+
+## Centre de Suport Canigó pel Framework Canigó
+
+El **Framework Canigó** es ofert pel **Centre de Suport Canigó** que s'orienta a proporcionar serveis d'acompanyament als Departaments oferint el suport i assessorament tecnològic necessaris per tal d'assolir l'èxit de les seves noves iniciatives tecnològiques així com donar suport al correcte funcionament de les aplicacions i serveis actualment desplegats.
+
+Els objectius principals del Centre de Suport pel servei de **Framework Canigó** es poden resumir en els següents aspectes:
+
+* Assegurar la seva evolució tant a nivell correctiu com evolutiu.
+* Garantir la màxima qualitat dels nostres productes, tant pel que fa al codi com al material de suport.
+* Planificar, controlar i produir de forma continuada noves versions o evolucions, seguint les necessitats de la Generalitat.
