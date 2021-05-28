@@ -14,68 +14,29 @@ Davant la ràpida evolució dels estils arquitecturals, s'ha identificat la nece
 
 ### Conceptualització de l’arquitectura de referència
 
+L'arquitectura de referència ha estat conceptualitzada en base a principis, criteris, models d'ús i una metodologia de disseny de més abstracte a més detallat. En la il·lustració es mostren els conceptes treballats:
+
 ![Motivacions](/images/armicro/img1.png)
 
-* **Principis de l’arquitectura de referència:** Els principis són els valors fonamentals que s’apliquen en l’arquitectura i que guien els models d’ús de disseny funcional i devops.
-
-* **Model d’ús de disseny funcional:** Proporciona guies i recomanacions per generar la vista funcional i informacional del disseny d’una solució.
-
-* **Model d’ús devops:** Proporciona guies i recomanacions per realitzar la vista de desenvolupament i operació del disseny d’una solució.
-
-* **Disseny conceptual:** Identifica els components de l’arquitectura de referència des d’un punt de vista tecnològicament neutre, definint quines capacitats aporten a l’arquitectura.
-
-* **Disseny lògic:** És una realització tecnològica del disseny conceptual i explicita les tecnologies possibles a usar per realitzar cadascun dels components definits al disseny conceptual. Un disseny conceptual pot tenir múltiples realitzacions tecnològiques diferents.
-
-* **Disseny físic:** És la implementació d’un disseny lògic sobre una arquitectura física concreta, per exemple, sobre on-premise, clouds públics, etc. De forma similar al cas anterior, un disseny lògic pot tenir vàries implementacions físiques.
-
-* **Criteris d’aplicabilitat:** Inclou criteris que permeten fer una discriminació inicial de quines solucions poden ser candidates a usar l’arquitectura de referència i, per tant, treure’n benefici de les seves qualitats.
-
-
-## Criteris d’aplicabilitat
-
-### Motivacions
-
-L’ús de l’arquitectura aporta avantatges, especialment, relacionats amb la capacitat de lliurar canvis i evolucions de la solució més ràpidament als usuaris però també introdueix dificultats i complexitats que fan que la decisió sobre l’ús d’aquest tipus d’arquitectura sigui rellevant.
-
-És per aquest motiu que s’estableixen uns criteris d’aplicabilitat per ajudar a la presa de decisió sobre l’ús de l’arquitectura. Aquests criteris es divideixen en **motivacions** que poden fer que una arquitectura de microserveis pugui ser beneficiosa per a un sistema i **condicionants** que hauria de complir el sistema per a poder-la aplicar amb garanties d’èxit.
-
-![Motivacions](/images/armicro/img2.png)
-
-### Condicionants
-
-Per altra banda, l’ús de l’arquitectura també implica uns condicionants que es poden classificar en diferents aspectes: solució, procés de construcció, equip i infraestructura de desplegament.
-
-![Condicionants](/images/armicro/img3.png)
-
+El primer punt a treballar han estat els  **principis de l’arquitectura de referència.** Aquests principis són els valors fonamentals que s’apliquen en l’arquitectura i que guien els models d’ús. Aquests s'han explicitat en dos, el de disseny funcional i el de devops. El **Model d’ús de disseny funcional** proporciona guies i recomanacions per generar la vista funcional i informacional del disseny d’una solució, mentre que el **Model d’ús de devops** proporciona guies i recomanacions per realitzar la vista de desenvolupament i operació del disseny d’una solució. Un cop realitzats els models d'ús, es creen els dissenys des del pla més abstracte - conceptual - fins el més detallat - físic. En primer lloc, el **Disseny conceptual** identifica els components de l’arquitectura de referència des d’un punt de vista tecnològicament neutre, definint quines capacitats aporten a l’arquitectura. A continuació, el **Disseny lògic** aporta una realització tecnològica del disseny conceptual i explicita les tecnologies possibles a usar per realitzar cadascun dels components definits, que poden tenir múltiples realitzacions tecnològiques diferents. L'últim dels dissenys és el **Disseny físic,** que representa la implementació del disseny lògic sobre una arquitectura física concreta, per exemple, sobre on-premise, clouds públics, etc. De forma similar al cas anterior, un disseny lògic pot tenir vàries implementacions físiques, segons altres condicionants que pot tenir el sistema. Finalment, s'ha considerat convenient afegir un conjunt de **Criteris d’aplicabilitat,** que permeten fer una discriminació inicial de quines solucions poden ser candidates a usar l’arquitectura de referència i, per tant, treure’n benefici de les seves qualitats.
 
 ## Principis de l’arquitectura de referència
 
 Els principis són els **valors fonamentals** que s’apliquen en l’arquitectura i que guien els models d’ús de disseny funcional i devops.
 
-![Condicionants](/images/armicro/img4.png)
-
+![Principis](/images/armicro/img4.png)
 
 ## Models d’ús de l'arquitectura
 
-### Disseny funcional
+### Model d'ús del disseny funcional
 
-L'objectiu del disseny funcional és la **distribució adequada del conjunt de funcionalitats de la solució en diferents blocs funcionals**. 
+L'objectiu del disseny funcional és la **distribució adequada del conjunt de funcionalitats de la solució en diferents blocs funcionals**. Els principis bàsics que han de guiar la descomposició funcional són: L'**alta cohesió** que per definició és que el codi que es modifica junt, que dona resposta a una funcionalitat concreta, ha d’estar arquitecturalment junt; i el **baix acoblament** que es produeix quan un bloc funcional està poc acoblat amb un altre, un canvi en un d'ells no implica canviar l'altre.
 
-Els principis bàsics que han de guiar la descomposició funcional són:
+![DFuncional](/images/armicro/img4a.png)
 
-* **Alta cohesió:** El codi que es modifica junt, que dona resposta a una funcionalitat concreta, ha d’estar arquitecturalment junt. 
+### Model d'ús de DevOps
 
-* **Baix acoblament:** Quan un bloc funcional està poc acoblat amb un altre, un canvi en un d'ells no implica canviar l'altre.
-
-![Condicionants](/images/armicro/img4a.png)
-
-### Model DevOps
-
-Per a cada bloc funcional el desenvolupament hauria de seguir un **patró BFF (Backend for frontend)**:
-
-* S'hauria de crear un únic projecte per a cada bloc funcional, que contindrà tant la part front com la part back.
-* La part front només es comunica amb la seva part back, de manera que la part front està acoblada amb la seva part back.
-* Si cal, cada bloc funcional hauria de disposar de la seva pròpia base de dades.
+Per a cada bloc funcional el desenvolupament hauria de seguir un **patró BFF (Backend for frontend)** amb les següents condicions: a) S'hauria de crear un únic projecte per a cada bloc funcional, que contindrà tant la part front com la part back, b) la part front només es comunica amb la seva part back, de manera que la part front està acoblada amb la seva part back, i c) si cal, cada bloc funcional hauria de disposar de la seva pròpia base de dades.
 
 ![Condicionants](/images/armicro/img4b.png)
 
@@ -87,14 +48,7 @@ La capa back del bloc funcional es desplega en un recurs dedicat i la capa front
 
 #### *Model d’operacions*
 
-* En els **serveis de monitorització, logging i observabilitat** s'han de crear dashboards independents per a cada bloc funcional.
-
-* Les plantilles per als **serveis de gestió de configuració** dels components dels que es compon un bloc funcional s'emmagatzemen en el propi projecte.
-
-* Els **serveis de control** per als blocs funcionals estan cobert per la pròpia infraestructura.
-
-Per millorar la disponibilitat i la resiliència dels blocs funcionals, en els serveis de control s'haurien d'implementar tant **healthiness i readiness checks** com el patró de **circuit breaker**.
-
+El model d'operacions ha de tenir en compte que en els **serveis de monitorització, logging i observabilitat** s'han de crear dashboards independents per a cada bloc funcional. Tanmateix s'ha de tenir en compte les plantilles per als **serveis de gestió de configuració** dels components dels que es compon un bloc funcional s'emmagatzemen en el propi projecte. Els **serveis de control** per als blocs funcionals estan coberts per la pròpia infraestructura. I per millorar la disponibilitat i la resiliència dels blocs funcionals, en els serveis de control s'haurien d'implementar tant **healthiness i readiness checks** com el patró de **circuit breaker**.
 
 ## Arquitectura tècnica
 
@@ -123,6 +77,23 @@ Inclou els components per poder desenvolupar i desplegar els microfrontends i mi
 ### Disseny lògic i físic
 
 El **disseny lògic** és una realització concreta del disseny conceptual especificant les tecnologies que poden resoldre cada servei i el **disseny físic** identifica i descriu els components que formen part o integren el sistema, i com aquests es configuren o interactuen. 
+
+
+## Criteris d’aplicabilitat
+
+L’ús de l’arquitectura aporta avantatges, especialment, relacionats amb la capacitat de lliurar canvis i evolucions de la solució més ràpidament als usuaris però també introdueix dificultats i complexitats que fan que la decisió sobre l’ús d’aquest tipus d’arquitectura sigui rellevant. És per aquest motiu que s’estableixen uns criteris d’aplicabilitat per ajudar a la presa de decisió sobre l’ús de l’arquitectura. Aquests criteris es divideixen en **motivacions** que poden fer que una arquitectura de microserveis pugui ser beneficiosa per a un sistema i **condicionants** que hauria de complir el sistema per a poder-la aplicar amb garanties d’èxit.
+
+### Motivacions
+
+Les motivacions serien aquelles circumstàncies o requeriments que impulsarien la decisió de crear una arquitectura basada en microserveis per a un sistema donat
+
+![Motivacions](/images/armicro/img2.png)
+
+### Condicionants
+
+Per altra banda, l’ús d'una arquitectura de microserveis també implica uns condicionants que es poden classificar en diferents aspectes: solució, procés de construcció, equip i infraestructura de desplegament.
+
+![Condicionants](/images/armicro/img3.png)
 
 ## Document de l'Arquitectura de Referència
 
