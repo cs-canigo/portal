@@ -9,7 +9,8 @@ key         = "JUNY2021"
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha adaptat el mòdul d'integració del connector Sarcat PICA de Canigó per a recuperar les respostes independentment del prefix**. Podeu consultar l'abast complet de la versió 3.4.6 a les
+Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha adaptat el mòdul d'integració del connector Sarcat PICA de Canigó per a
+recuperar les respostes de la PICA independentment del prefix**. Podeu consultar l'abast complet de la versió 3.4.6 a les
 [Release Notes, apartat Canigó 3.4.6](/canigo-download-related/release-notes-canigo-34).
 
 ## Motivació
