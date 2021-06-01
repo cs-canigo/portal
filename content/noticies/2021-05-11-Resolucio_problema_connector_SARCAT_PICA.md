@@ -1,7 +1,7 @@
 +++
 date        = "2021-05-11"
-title       = "Canigó. Resolució problema connector Sarcat PICA"
-description = "S'han revisat i resolt els problemes detectats en el mòdul d'integració del connector Sarcat PICA"
+title       = "Canigó. Adaptació connector Sarcat PICA"
+description = "S'ha adaptat el mòdul d'integració del connector Sarcat PICA arran les modificacions en els prefixos dels namespace de les respostes de la PICA"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "JUNY2021"
@@ -9,12 +9,12 @@ key         = "JUNY2021"
 
 ## Introducció
 
-Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha resolt el problema del connector Sarcat PICA al mòdul d'integració de Canigó**. Podeu consultar l'abast complet de la versió 3.4.6 a les
+Dins de l'abast de la **versió 3.4.6 del Framework Canigó s'ha adaptat el mòdul d'integració del connector Sarcat PICA de Canigó per a recuperar les respostes independentment del prefix**. Podeu consultar l'abast complet de la versió 3.4.6 a les
 [Release Notes, apartat Canigó 3.4.6](/canigo-download-related/release-notes-canigo-34).
 
 ## Motivació
 
-El maig del 2021 es va reportar un **problema en la recuperació de les respostes de PICA** que es fan a través del connector
+El maig del 2021 es va reportar una **incidència en la recuperació de les respostes de PICA** que es fan a través del connector
 de Sarcat de Canigó des de la seva versió 1.0.0. L'error es produeix perquè la PICA ha fet modificacions en els prefixos
 dels namespace de les respostes i el connector intentava cercar els nodes de resposta amb un namespace prefixat.
 
