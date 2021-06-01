@@ -176,4 +176,4 @@ Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionat
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic20-guies/). <br/>
-Si teniu qualsevol dubte o problema assegureu-vos de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu el canal de [**Suport**] (/sic/suport) o contacteu amb l'Oficina Tècnica Canigó CTTI a través del correu electrònic: **oficina-tecnica.canigo.ctti@gencat.cat**.
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

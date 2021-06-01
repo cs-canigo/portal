@@ -12,7 +12,7 @@ taxonomies = []
 weight = 4
 +++
 
-Si teniu qualsevol dubte o problema assegureu-vos abans de no trobar resposta a les [**FAQ**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) i utilitzeu els canals de comunicació que s'estableixen:
 [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/) i [**Remedy**](https://pautic.gencat.cat/).
 A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells.
 
