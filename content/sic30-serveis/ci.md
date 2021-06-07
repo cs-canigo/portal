@@ -69,7 +69,9 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst per entorn seria el següent:
 
-* Entorn **INT**: modalitat automàtica al cloud, o bé modalitat delegada per als desplegaments on-premise.
+* Entorn **INT**: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. **NOTA**: En cas d'aplicar la modalitat
+semi-automàtica, donat la majoria de proveïdors disposen d'accés als servidors per a fer els desplegaments, el sistema s'encarregarà
+de lliurar els binaris però no generarà el tiquet Remedy.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
@@ -203,6 +205,10 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **ITSM Production Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
+
+<div class="message information">
+Les pipelines generades <b>no permetran execucions concurrents i els punts de conformitat prèvia expiraran en 30 dies</b>.
+</div>
 
 ### Versionat
 
