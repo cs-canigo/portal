@@ -61,27 +61,12 @@ En aquest sentit, la situació actual (que és viva i s’anirà actualitzant) i
 
 |Data|Abast SIC 3.0|
 |-------|-------|
-|**05-2021**|Noves pipelines **cloud**|
-|**07-2021**|Totes les pipelines **cloud**|
-|**08-2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic (excepte .NET Framework)|
-|**09-2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic|
-|**11-2021**|Totes les pipelines on-premise amb desplegament delegat i semiautomàtic|
-|**12-2021**|Baixa SIC 2.0|
-
-
-## Documentació de referència
-
-La documentació del Portal d'Arquitectura s'ha separat en **dos blocs diferenciats: SIC 2.0 i SIC 3.0**, amb la finalitat que
-la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilitat. No obstant això, cal tenir present que
-la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
-en l'autoservei d'usuaris.
-
-* **SIC 2.0**: [**Serveis**](/sic20-serveis/) i [**Guies**](/sic20-guies/).
-* **SIC 3.0**: [**Serveis**](/sic30-serveis/) i [**Guies**](/sic30-guies/).
-
-El plantejament és, per tant, que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
-a tota la documentació relacionada.
-
+|**05-2021**|**Noves** pipelines **cloud**|
+|**07-2021**|**Totes** les pipelines **cloud**|
+|**08-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic (**excepte .NET Framework**)|
+|**09-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic|
+|**11-2021**|**Totes** les pipelines **on-premise** amb desplegament delegat i semiautomàtic|
+|**12-2021**|**Baixa SIC 2.0**|
 
 ## Principals canvis en l'operativa
 
@@ -114,11 +99,16 @@ de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme
 
 * **No es permeten execucions concurrents** d’una mateixa pipeline. Haurà, per tant, de finalitzar l'execució anterior abans d'iniciar-ne la nova.
 
-<br/>
-Per a més informació:
+## Documentació de referència
 
-- [Integració Continua](/sic30-serveis/ci/)
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+La documentació del Portal d'Arquitectura s'ha separat en **dos blocs diferenciats: SIC 2.0 i SIC 3.0**, amb la finalitat que
+la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilitat. No obstant això, cal tenir present que
+la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
+en l'autoservei d'usuaris.
+
+El plantejament és, per tant, que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
+a tota la documentació relacionada.
+
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
