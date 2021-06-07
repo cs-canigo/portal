@@ -10,18 +10,17 @@ weight      = 1
 
 ## Introducció
 
-**S'ha posat en servei la Nova Plataforma del
-Sistema d'integració contínua v.3.0**.
+**Al Maig del 2021 es va posar en servei la Nova Plataforma del Sistema d'integració contínua v.3.0**.
 L’objectiu perseguit ha estat millorar el lliurament de solucions de TIC a la Generalitat emprant noves tecnologies,
 eines i processos els quals permetin simplificar i lliurar solucions de més alt nivell amb una millor resiliència i
 robustesa d'una manera més àgil.
 
-Durant un temps, **aquest nou sistema conviurà amb l'actual SIC 2.0 de forma que, progressivament, s'aniran transferint les tasques
+Durant una temporada, **aquest nou sistema conviurà amb l'actual SIC 2.0 de forma que, progressivament, s'aniran transferint les tasques
 de construcció i desplegament de les aplicacions**. Aquest article pretén conèixer els principals canvis, com està prevista
-la transició i quina és la documentació de referència a consultar.
+la transició i quina és la documentació de referència a consultar en cada cas.
 
 
-## SIC 3.0
+## Nova solució
 
 Els requeriments que ha pretès cobrir d'aquest nou sistema són:
 
@@ -46,28 +45,45 @@ menor temps de time-to-market.
 - **Automatització**: minimitzant recursos de servei i reemplaçant-los per automatització s'aconsegueix redirigir
 els recursos cap a l'evolució constant.
 
-
-### Detall de la solució
-
 La nova solució es compon dels següents components:
 
-- **Nova plataforma CI/CD** basada en contenidors en Openshift amb el Stack:
-  - Jenkins amb agents dinàmics
-  - Prometheus i Grafana pel monitoratge
-  - EFK per a la gestió de logs
-  - Keycloak com a broker de seguretat amb integració amb Gicar
+- **Nova plataforma CI/CD** basada en contenidors
 - **Ampliació del catàleg d'imatges**, tant per a la construcció de les aplicacions com per als desplegaments
 - **Nou Autoservei de Pipelines** basat en fitxers de configuració en format YML
 - **Nou model de pipelines** úniques (dinàmiques) per tipus d'operació
 
-<br/>
-Per a més informació:
+## Procés de transició
 
-- [Integració Continua](/sic30-serveis/ci/)
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+Progressivament, i a mesura que la nova Plataforma SIC 3.0 doni cobertura a les necessitats, els usuaris passaran a fer ús de la nova
+versió i el SIC 2.0 anirà caient en desús fins que es pugui donar de baixa definitivament.
+
+En aquest sentit, la situació actual (que és viva i s’anirà actualitzant) i els calendaris provisionals són els següents:
+
+|Data|Abast SIC 3.0|
+|-------|-------|
+|**05-2021**|Noves pipelines **cloud**|
+|**07-2021**|Totes les pipelines **cloud**|
+|**08-2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic (excepte .NET Framework)|
+|**09-2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic|
+|**11-2021**|Totes les pipelines on-premise amb desplegament delegat i semiautomàtic|
+|**12-2021**|Baixa SIC 2.0|
 
 
-### Principals canvis operatius
+## Documentació de referència
+
+La documentació del Portal d'Arquitectura s'ha separat en **dos blocs diferenciats: SIC 2.0 i SIC 3.0**, amb la finalitat que
+la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilitat. No obstant això, cal tenir present que
+la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
+en l'autoservei d'usuaris.
+
+* **SIC 2.0**: [**Serveis**](/sic20-serveis/) i [**Guies**](/sic20-guies/).
+* **SIC 3.0**: [**Serveis**](/sic30-serveis/) i [**Guies**](/sic30-guies/).
+
+El plantejament és, per tant, que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
+a tota la documentació relacionada.
+
+
+## Principals canvis en l'operativa
 
 A continuació es descriuen els principals canvis que cal que l’usuari tingui presents de cara a la preparació dels projectes
 i al funcionament de les noves pipelines de desplegament:
@@ -98,36 +114,11 @@ de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme
 
 * **No es permeten execucions concurrents** d’una mateixa pipeline. Haurà, per tant, de finalitzar l'execució anterior abans d'iniciar-ne la nova.
 
+<br/>
+Per a més informació:
 
-## Transició
-
-Progressivament, i a mesura que la nova Plataforma SIC 3.0 doni cobertura a les necessitats, els usuaris passaran a fer ús de la nova
-versió i el SIC 2.0 anirà caient en desús fins que es pugui donar de baixa definitivament.
-
-En aquest sentit, la situació actual (que és viva i s’anirà actualitzant) i els calendaris provisionals són els següents:
-
-|Data|Abast SIC 3.0|
-|-------|-------|
-|**05/2021**|Noves pipelines **cloud**|
-|**07/2021**|Totes les pipelines **cloud**|
-|**08/2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic (excepte .NET Framework)|
-|**09/2021**|Noves pipelines **on-premise** amb desplegament delegat i semiautomàtic|
-|**11/2021**|Totes les pipelines on-premise amb desplegament delegat i semiautomàtic|
-|**12/2021**|Baixa SIC 2.0|
-
-
-## Documentació de referència
-
-La documentació del Portal d'Arquitectura s'ha separat en **dos blocs diferenciats: SIC 2.0 i SIC 3.0**, amb la finalitat que
-la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilitat. No obstant això, cal tenir present que
-la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
-en l'autoservei d'usuaris.
-
-* **SIC 2.0**: [**Serveis**](/sic20-serveis/) i [**Guies**](/sic20-guies/).
-* **SIC 3.0**: [**Serveis**](/sic30-serveis/) i [**Guies**](/sic30-guies/).
-
-El plantejament és, per tant, que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
-a tota la documentació relacionada.
+- [Integració Continua](/sic30-serveis/ci/)
+- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
