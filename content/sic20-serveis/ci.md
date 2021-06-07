@@ -66,9 +66,9 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst seria el següent:
 
-* Entorn **INT**: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. **NOTA**: En cas d'aplicar la modalitat
-semi-automàtica, donat la majoria de proveïdors disposen d'accés als servidors per a fer els desplegaments, el sistema s'encarregarà
-de lliurar els binaris però no generarà el tiquet Remedy.
+* Entorn **INT**: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. **IMPORTANT: En cas d'aplicar la modalitat
+semi-automàtica**, donat la majoria de proveïdors disposen d'accés als servidors per a fer els desplegaments, el sistema s'encarregarà
+de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
