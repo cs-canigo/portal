@@ -77,13 +77,20 @@ i al funcionament de les noves pipelines de desplegament:
 desplegament al cloud** mitjançant el `fitxer ACA` en format YML. Aquesta autonomia que s’adquireix implica també la responsabilitat
 de fer una correcta configuració, incloent-hi l'assignació adequat de recursos, temps d'espera (*timeouts*) i altres aspectes.
 
-* El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
-obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
-l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homologa `info.version`.
-
 * Ha canviat l'**estructura d'etapes** (o *stages*) de les pipelines de desplegament per a donar cobertura als requeriments presents i futurs, i
 l'arquitectura que hi ha al darrere és completament diferent, per la qual cosa no són comparables les tasques que es realitzen ni els
 temps que s'hi destinen.
+
+* Les pipelines passen a **executar-se en contenidors** en lloc d'en una màquina virtual, per la qual cosa cal fer una correcta assignació
+de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida. Cal tenir present que cada etapa de la pipeline aixeca un contenidor,
+cosa que implica que el temps destinat per les diferents etapes es vegi incrementat en aproximadament 1 minut.
+
+* Es defineix el temps d'espera (timeout) aplicable al desplegament, que caldrà ajustar a les necessitats. En aquest sentit, cal remarcar que al
+SIC 2.0 hi havia un bug que feia que el temps d'espera es tripliqués i, per tant, no estava prou ajustat.
+
+* El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
+obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
+l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homologa `info.version`.
 
 * Es proporciona una nova **pipeline DEPLOY-ALL** que permet fer un desplegament complet davant canvis en l’aplicació, orquestradors
 i/o descriptors.
@@ -91,9 +98,6 @@ i/o descriptors.
 * El sistema genera noves **pipelines auxiliars DEPLOYER i CLEANER** ubicades a una nova carpeta `/Aux` que s’encarreguen del desplegament de les
 aplicacions i l’esborrat final de l’espai de treball (respectivament). Es tracta de pipelines secundàries que són invocades internament des
 de totes les pipelines per a dur a terme tasques comunes.
-
-* Les pipelines passen a **executar-se en contenidors** en lloc d'en una màquina virtual, per la qual cosa cal fer una correcta assignació
-de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida.
 
 * Els **punts d’aprovació expiren en 30 dies**.
 
