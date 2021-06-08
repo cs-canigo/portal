@@ -5,5 +5,5 @@ description = "Guies disponibles i HOWTOs d'utilitat (SIC 2.0)"
 enllac		= "/sic20-guies/"
 sections    = "SIC"
 taxonomies  = []
-weight 		= 1
+weight 		= 2
 +++
