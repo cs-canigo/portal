@@ -85,7 +85,7 @@ temps que s'hi destinen.
 de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida. Cal tenir present que cada etapa de la pipeline aixeca un contenidor,
 cosa que implica que el temps destinat per les diferents etapes es vegi incrementat en aproximadament 1 minut.
 
-* Es defineix el temps d'espera (timeout) aplicable al desplegament, que caldrà ajustar a les necessitats.
+* Es defineix el **temps d'espera** (timeout) aplicable al desplegament, que caldrà ajustar a les necessitats.
 
 * El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
 obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
