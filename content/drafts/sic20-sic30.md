@@ -16,7 +16,7 @@ eines i processos els quals permetin simplificar i lliurar solucions de més alt
 robustesa d'una manera més àgil.
 
 Durant una temporada, **aquest nou sistema conviurà amb l'actual SIC 2.0 de forma que, progressivament, s'aniran transferint les tasques
-de construcció i desplegament de les aplicacions**. Aquest article pretén conèixer els principals canvis, com està prevista
+de construcció i desplegament de les aplicacions** cap al nou sistema. Aquest article pretén conèixer els principals canvis, com està prevista
 la transició i quina és la documentació de referència a consultar en cada cas.
 
 
@@ -97,7 +97,7 @@ de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme
 
 * Els **punts d’aprovació expiren en 30 dies**.
 
-* **No es permeten execucions concurrents** d’una mateixa pipeline. Haurà, per tant, de finalitzar l'execució anterior abans d'iniciar-ne la nova.
+* **No es permeten execucions concurrents** d’una mateixa pipeline. S'haurà, per tant, de finalitzar l'execució anterior abans d'iniciar-ne la nova.
 
 ## Documentació de referència
 
@@ -106,7 +106,7 @@ la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilit
 la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
 en l'autoservei d'usuaris.
 
-El plantejament és, per tant, que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
+El plantejament és que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
 a tota la documentació relacionada.
 
 
