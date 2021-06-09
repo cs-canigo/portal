@@ -371,6 +371,8 @@ components:
       environments
 ```
 
+On `scm` indica el repositori on es troben ubicats els orquestradors per a dur a terme el desplegament de l'aplicació.
+
 #### components[].deployment.enviroments[]
 
 Informació sobre els entorns (`name`) i de quina manera es desplegarà l’aplicació (`actions`) segons la següent estructura:
@@ -504,7 +506,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 ```
 components:
   - deployment:
-      scm: git.intranet.gencat.cat/0192/backend.git
+      scm: git.intranet.gencat.cat/0192/orchestrators.git
       environments:
         - name: preproduction
           actions:
