@@ -106,8 +106,8 @@ de totes les pipelines per a dur a terme tasques comunes.
 
 La documentació del Portal d'Arquitectura s'ha separat en **dos blocs diferenciats: SIC 2.0 i SIC 3.0**, amb la finalitat que
 la documentació estigui ordenada, sigui clara, usable i no es perdi navegabilitat. No obstant això, cal tenir present que
-la nova versió no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
-en l'autoservei d'usuaris.
+la nova versió **no implica de moment canvis en el funcionament dels serveis de custòdia de codi, de custòdia de binaris ni
+en l'autoservei d'usuaris**.
 
 El plantejament és que els usuaris, segons la versió que estiguin utilitzant de la Plataforma CI/CD, puguin accedir
 a tota la documentació relacionada.
