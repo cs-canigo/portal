@@ -56,6 +56,13 @@ Es contemplen diverses modalitats de desplegament:
 de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
 delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.
+
+|Codi d'error|Responsable|
+|-------|-------|
+|-1xx|Equip SIC|
+|-2xx|Proveïdor d'infraestructures (Cpd)|
+|-3xx|Lot d'aplicacions|
+
 * **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
 un tiquet Remedy en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
 que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies
