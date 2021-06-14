@@ -103,9 +103,8 @@ sense fer la construcció i desplegament de la imatge.
 - **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció (v.x.y.z-PR)
 concebuda per a poder fer un *rollback* a una versió anterior.
 
-Per altra banda, es generaran les pipelines auxiliars (o secundàries) dedicades a certes tasques comunes i que seran executades
-per la pipeline principal. Aquestes pipelines es generaran dins d'un directori diferenciat
-`/Aux` dins del directori de tasques Jenkins associat al projecte i seran les següents:
+Per altra banda, cal comentar que es generaran les pipelines internes dedicades a certes tasques comunes i que seran executades
+per la pipeline principal. Aquestes pipelines no seran visibles per l'usuari i són les següents:
 
 - **DEPLOYER**: s'encarrega del desplegament de l'aplicació als diferents entorns de rebuda. Serà invocada per la pipeline principal per al
 desplegament de cada component a cada un dels entorns.

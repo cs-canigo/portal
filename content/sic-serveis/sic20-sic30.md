@@ -94,8 +94,8 @@ l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, 
 * Es proporciona una nova **pipeline DEPLOY-ALL** que permet fer un desplegament complet davant canvis en l’aplicació, orquestradors
 i/o descriptors.
 
-* El sistema genera noves **pipelines auxiliars DEPLOYER i CLEANER** ubicades a una nova carpeta `/Aux` que s’encarreguen del desplegament de les
-aplicacions i l’esborrat final de l’espai de treball (respectivament). Es tracta de pipelines secundàries que són invocades internament des
+* El sistema genera noves **pipelines auxiliars DEPLOYER i CLEANER** que s’encarreguen del desplegament de les
+aplicacions i l’esborrat final de l’espai de treball (respectivament). Es tracta de pipelines que són invocades internament des
 de totes les pipelines per a dur a terme tasques comunes.
 
 * Els **punts d’aprovació expiren en 30 dies**.
