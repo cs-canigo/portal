@@ -85,11 +85,14 @@ temps que s'hi destinen.
 de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida. Cal tenir present que cada etapa de la pipeline aixeca un contenidor,
 cosa que implica que el temps destinat per les diferents etapes es vegi incrementat en aproximadament 1 minut.
 
-* Es defineix el **temps d'espera** (timeout) aplicable al desplegament, que caldrà ajustar a les necessitats.
+* Es defineix el **temps d'espera** (DEPLOYMENT_WAIT/JOB_WAIT) aplicable al desplegament, que caldrà ajustar a les necessitats de l'aplicació.
 
 * El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
 obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
-l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homologa `info.version`.
+l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homòloga `info.version`.
+
+* La **pipeline DEPLOY-TAG** permetrà desplegar tags de la imatge de l'aplicació que hagin arribat a Producció amb èxit. Per tant, si no hi ha tags `v.x.y.z-PR` l'execució
+retornarà un error del tipus "No hi ha tags de producció disponibles".
 
 * Es proporciona una nova **pipeline DEPLOY-ALL** que permet fer un desplegament complet davant canvis en l’aplicació, orquestradors
 i/o descriptors.
