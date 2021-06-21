@@ -19,5 +19,6 @@ Al ["següent enllaç"](https://canigo.ctti.gencat.cat/cloud/plataformes-cloud/)
 
 Des de l'equip del SIC us recomanem revisar aquest enllaç amb ["exemples de fitxers ACA"](https://canigo.ctti.gencat.cat/sic30-guies/fitxer-aca/#exemples) per aquest nou propòsit.
 
+Aquí teniu un exemple de fitxer aca de [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 i CPD2](aca_const_despl_node_openshift_cpd4_cpd2.yml) (Nota. Això ho treurem quan ho afegim al link anterior dels aca)
 
 Si teniu qualsevol dubte o problema podeu revisar les [Preguntes Freqüents] (/sic/faq) o utilitzar els canals de [Suport](/sic/suport).
