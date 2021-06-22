@@ -316,7 +316,7 @@ fent ús d’aquests prefixos: G o M, o també podeu usar els equivalents en pot
 
 <div class="message information">
 Cal tenir present que hi ha un màxim de recursos permesos, de tal manera que si se superen es produiran erros en l’execució.
-Els valors màxims establerts són: <b>2048Mi</b> de memòria i <b>2000m</b> de CPU.
+Els valors màxims establerts són: <b>3072Mi</b> de memòria i <b>3000m</b> de CPU.
 </div>
 
 Per a més informació sobre l’administració de recursos: https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/.
