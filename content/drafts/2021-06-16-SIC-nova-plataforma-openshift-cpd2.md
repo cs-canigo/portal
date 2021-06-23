@@ -17,6 +17,6 @@ A l'equip del SIC 3.0, s'han realitzat una sèrie d'accions tant a nivell del pr
 
 Al ["següent enllaç"](https://canigo.ctti.gencat.cat/cloud/plataformes-cloud/), podeu trobar referències al respecte de la plataforma.
 
-Des de l'equip del SIC us recomanem revisar aquest enllaç amb ["exemples de fitxers ACA"](https://canigo.ctti.gencat.cat/sic30-guies/fitxer-aca/#exemples) per aquest nou propòsit.
+Des de l'equip del SIC us recomanem revisar aquest enllaç amb [exemples de fitxers ACA](/drafts/fitxer-aca#exemples) per aquest nou propòsit.
 
 Si teniu qualsevol dubte o problema podeu revisar les [Preguntes Freqüents] (/sic/faq) o utilitzar els canals de [Suport](/sic/suport).
