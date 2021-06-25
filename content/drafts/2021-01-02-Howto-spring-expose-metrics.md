@@ -134,7 +134,7 @@ docker run --rm -d -p 3000:3000 grafana/grafana
 ![Spring Exposes Metrics Ejemplo 3](/images/howtos/2021-01-02_spring_expose_metrics_example3.gif)
 
 
-> Es configura `Grafana` per obtenir les dades del `Prometheus` i ja podem visualitzar les mètriques en gràfics
+> Es configura `Grafana` per obtenir les dades del `Prometheus` i s'importen els `Dashboard` per visualitzar les mètriques en gràfics
 
 ![Spring Exposes Metrics Ejemplo 4](/images/howtos/2021-01-02_spring_expose_metrics_example4.gif)
 
