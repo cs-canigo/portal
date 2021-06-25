@@ -10,12 +10,12 @@ categories  = ["canigo"]
 
 ## Introducció
 
-L'objetiu d'aquest article és mostrar com exposar mètriques d'acompliment d'aplicacions, en un projecte generat amb el framework Canigó, i capturades per serveis de monitarizació, alerta i visualizació OpenSource com: [Prometheus](https://github.com/prometheus/prometheus) i [Grafana](https://github.com/grafana/grafana)
+L'objectiu d'aquest article és mostrar com exposar mètriques d'acompliment d'aplicacions, en un projecte generat amb el framework Canigó, i capturades per serveis de monitarització, alerta i visualizació OpenSource com: [Prometheus](https://github.com/prometheus/prometheus) i [Grafana](https://github.com/grafana/grafana)
 
 ---
 ## Justificació
 
-Un dels reptes d'una aplicació és tenir visibilitat del què succeeix durant la seva execució, sobretot en escenaris de desplegament sobre contenidors. Els contenidors afegeixen velocitat i augmenten el rendiment dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament i la gestió d'alertes relacionades. És en aquest punt en el que les solucions de monitoreig com Prometheus i Grafana poden ajudar.
+Un dels reptes d'una aplicació és tenir visibilitat del què succeeix durant la seva execució, sobretot en escenaris de desplegament sobre contenidors. Els contenidors afegeixen velocitat i augmenten el rendiment dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament i la gestió d'alertes relacionades. És en aquest punt en el què les solucions de monitoratge com Prometheus i Grafana poden ajudar.
 
 Quan s'utilitza un projecte creat amb Canigó que se basa en Spring, és possible exposar diferents mètriques utilitzant la llibreria `spring-boot-starter-actuator`, i és possible exposar les mètriques en un format compatible amb Prometheus amb la llibreria `micrometer-registry-prometheus`.
 
@@ -72,7 +72,7 @@ server:
           include: "*"
 ```
 
-Per a recollir les mètriques, iniciarem un `Prometheus`, en aquest cas iniciarem un `Prometheus` en contenidor
+Per a recollir les mètriques, iniciarem un `Prometheus`, en aquest cas iniciarem un `Prometheus` en contenidor.
 
 ### Fitxer de configuració `prometheus.yml`
 
@@ -94,7 +94,7 @@ Iniciarem el contenidor de `Prometheus` amb el fitxer de configuració:
 docker run --rm -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-Per visualitzar les mètriques, iniciarem un `Grafana`, en aquest cas iniciarem un `Grafana` en contenidor
+Per visualitzar les mètriques, iniciarem un `Grafana`, en aquest cas iniciarem un `Grafana` en contenidor.
 
 ```sh
 docker run --rm -d -p 3000:3000 grafana/grafana
