@@ -1,21 +1,21 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Como exponer y capturar métricas de desempeño (Prometheus, Grafana)"
-description = "Como exponer y capturar métricas de desempeño generadas a través de Spring y capturadas por servicios como Prometheus y Grafana."
+title       = "Canigó. Com exposar i capturar mètriques d'acompliment (Prometheus, Grafana)"
+description = "Com exposar i capturar mètriques d'acompliment generades a través de Spring i capturades per serveis com Prometheus i Grafana."
 section     = "howtos"
 categories  = ["canigo"]
 #key        = "GENER2021"
 +++
 
 
-## Introducción
+## Introducció
 
-El objetivo de este artículo es mostrar como exponer métricas de desempeño de aplicaciones, dentro de un proyecto generado con el framework Canigó, y capturadas por servicios de monitarización, alerta y visualización OpenSource tales como: [Prometheus](https://github.com/prometheus/prometheus) y [Grafana](https://github.com/grafana/grafana)
+L'objetiu d'aquest article és mostrar com exposar mètriques d'acompliment d'aplicacions, en un projecte generat amb el framework Canigó, i capturades per serveis de monitarizació, alerta i visualizació OpenSource com: [Prometheus](https://github.com/prometheus/prometheus) i [Grafana](https://github.com/grafana/grafana)
 
 ---
-## Justificación
+## Justificació
 
-Uno de los retos de una aplicación es tener visibilidad de lo que ocurre durante su ejecución, sobre todo en escenarios de despliegues sobre contenedores. Los contenedores agregan velocidad y aumentan el rendimiento dentro del proceso de desarrollo, pero aportan complejidad adicional sobre la visibilidad del comportamiento y la gestión de alertas relacionadas. Es en este punto en el que las soluciones de monitoreo como Prometheus y Grafana pueden ayudar.
+Un dels reptes d'una aplicació és tenir visibilitat del què succeeix durant la seva execució, sobretot en escenaris de desplegament sobre contenidors. Els contenidors afegeixen velocitat i augmenten el rendiment dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament i la gestió d'alertes relacionades. És en aquest punt en el que les solucions de monitoreig com Prometheus i Grafana poden ajudar.
 
 Cuando se utiliza un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que se basa en Spring, es posible exponer distintas métricas utilizando la librería `spring-boot-starter-actuator`, y es posible exportar las métricas en un formato compatible con Prometheus con esta libreria `micrometer-registry-prometheus`.
 
