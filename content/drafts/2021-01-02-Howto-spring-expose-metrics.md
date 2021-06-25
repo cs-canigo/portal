@@ -94,7 +94,7 @@ Iniciarem el contenidor de `Prometheus` amb el fitxer de configuració:
 docker run --rm -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-Per visaulitzar les mètriques, iniciarem un `Grafana`, en aquest cas iniciarem un `Grafana` en contenidor
+Per visualitzar les mètriques, iniciarem un `Grafana`, en aquest cas iniciarem un `Grafana` en contenidor
 
 ```sh
 docker run --rm -d -p 3000:3000 grafana/grafana
