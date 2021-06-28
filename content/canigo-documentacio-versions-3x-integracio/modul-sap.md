@@ -8,7 +8,7 @@ weight      = 12
 
 <div class="message warning">
 
-A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, per lo que no es preveu seguir evolucionant aquest mòdul.
+A partir de la publicació de Canigó 3.4.3 el 26/03/2020 aquest mòdul quedarà deprecat, per el que no es preveu seguir evolucionant aquest mòdul.
 
 </div>
 
