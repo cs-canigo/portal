@@ -1,5 +1,5 @@
 +++
-date        = "2019-09-17"
+date        = "2021-06-28"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació versió 3.x"
@@ -17,7 +17,7 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[2.2.0,2.3.0)</canigo.integration.antivirus.version>
+<canigo.integration.antivirus.version>[2.4.0,2.5.0)</canigo.integration.antivirus.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -25,6 +25,18 @@ Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a tra
     <version>${canigo.integration.antivirus.version}</version>
 </dependency>
 ```
+
+<div class="message warning">
+
+L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
+
+El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
+
+Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
+
+[Matrius de Compatibilitats](/canigo-download-related/matrius-compatibilitats/)
+
+</div>
 
 ### Configuració
 
