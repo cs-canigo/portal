@@ -30,11 +30,17 @@ Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a tra
 
 L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
 
+<br>
+
 El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
+
+<br>
 
 Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
 
-[Matrius de Compatibilitats](/canigo-download-related/matrius-compatibilitats/)
+<br>
+
+<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
 
 </div>
 
