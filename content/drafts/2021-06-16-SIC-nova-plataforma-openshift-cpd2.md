@@ -1,22 +1,31 @@
 +++
 date        = "2021-06-16"
-title       = "Nova plataforma Openshift a CPD2"
-description = "Preparació SIC 3.0 per desplegaments a nova plataforma Cloud Openshift CPD2."
-sections    = ["drafts"]
-weight      = 1
+title       = "Nova plataforma CaaS Openshift de CPD2"
+description = "Preparació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions a la nova plataforma CaaS Openshift de Cpd2."
+sections    = ["Notícies", "home"]
+categories  = ["sic"]
+key         = "AGOST2021"
 +++
 
 ## Introducció
 
-A **CPD2** s'ha afegit una nova plataforma CaaS amb l'objectiu d'automatitzar desplegaments des del nou SIC 3.0, a una plataforma **Openshift**.
+Dins de les plataformes cloud que ofereix la Generalitat de Catalunya, **Cpd2 passa a proporcionar una nova plataforma
+CaaS Openshift**. Aquesta nova plataforma a Cloud Privat ha estat certificada per a poder començar a
+desplegar automàticament aplicacions des del Sistema d’Integració Contínua.
 
 ## Novetats
 
-Des de infraestructura, al SIC 3.0, actualment es permet la creació de jobs i pipelines amb desplegament automàtic a la plataforma Openshift de CPD2.
-A l'equip del SIC 3.0, s'han realitzat una sèrie d'accions tant a nivell del propi Jenkins, com a nivell de definció de nous fitxers ACI, ACD per CPD2.
+El **SIC 3.0 permet el desplegament d’aplicacions a la nova plataforma CaaS Openshift de Cpd2**, generant
+totes les pipelines necessàries, tant de desplegament com operatives. Amb l’objectiu que els usuaris
+sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
+incorporat exemples.
 
-Al ["següent enllaç"](https://canigo.ctti.gencat.cat/cloud/plataformes-cloud/), podeu trobar referències al respecte de la plataforma.
+<br/>
+Per a més informació:
 
-Des de l'equip del SIC us recomanem revisar aquest enllaç amb [exemples de fitxers ACA](/drafts/fitxer-aca#exemples) per aquest nou propòsit.
+- [Plataformes Cloud](/cloud/plataformes-cloud/)
+- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+- [Exemple fitxer ACA](/related/sic/3.0/ aca_const_despl_node_openshift_cpd4_cpd2.yml)
 
-Si teniu qualsevol dubte o problema podeu revisar les [Preguntes Freqüents] (/sic/faq) o utilitzar els canals de [Suport](/sic/suport).
+<br/><br/>
+Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
