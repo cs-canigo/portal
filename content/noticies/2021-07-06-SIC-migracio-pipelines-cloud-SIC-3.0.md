@@ -1,8 +1,7 @@
 +++
 date        = "2021-07-06"
 title       = "SIC. Migració pipelines cloud al SIC 3.0"
-description = "Durant els mesos de juny i juliol s'està avançant en la migració de pipelines que despleguen al cloud cap
-a la nova Plataforma SIC 3.0."
+description = "Durant els mesos de juny i juliol s'està avançant en la migració de pipelines que despleguen al cloud cap a la nova Plataforma SIC 3.0."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "JULIOL2021"
