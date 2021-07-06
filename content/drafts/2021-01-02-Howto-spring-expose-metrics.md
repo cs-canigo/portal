@@ -1,30 +1,30 @@
 +++
 date        = "2021-01-02"
-title       = "Canigó. Com exposar i capturar mètriques d'acompliment (Prometheus, Grafana)"
-description = "Com exposar i capturar mètriques d'acompliment generades a través de Spring i capturades per serveis com Prometheus i Grafana."
+title       = "Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana"
+description = "Com exposar i capturar mètriques generades a través de Spring i capturades per serveis com Prometheus i Grafana."
 section     = "howtos"
 categories  = ["canigo"]
-#key        = "GENER2021"
+#key        = "JULIOL2021"
 +++
 
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar com exposar mètriques d'acompliment d'aplicacions, en un projecte generat amb el framework Canigó, i capturades per serveis de monitarització, alerta i visualizació OpenSource com: [Prometheus](https://github.com/prometheus/prometheus) i [Grafana](https://github.com/grafana/grafana)
+L'objectiu d'aquest article és mostrar com es poden exposar mètriques de les aplicacions per a projectes generats amb el Framework Canigó i capturades per serveis de monitorització, alerta i visualizació de codi obert com: [Prometheus](https://github.com/prometheus/prometheus) i [Grafana](https://github.com/grafana/grafana).
 
----
+
 ## Justificació
 
-Un dels reptes d'una aplicació és tenir visibilitat del què succeeix durant la seva execució, sobretot en escenaris de desplegament sobre contenidors. Els contenidors afegeixen velocitat i augmenten el rendiment dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament i la gestió d'alertes relacionades. És en aquest punt en el què les solucions de monitoratge com Prometheus i Grafana poden ajudar.
+Un dels principals reptes d'una aplicació és tenir visibilitat de què succeeix durant la seva execució, sobretot en escenaris de desplegament sobre contenidors. Els contenidors afegeixen velocitat i augmenten el rendiment dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament i la gestió d'alertes relacionades. És en aquest punt en el qual les solucions de monitoratge com Prometheus, per a l’explotació de dades, i Grafana, per a la seva visualització i anàlisi, poden ajudar molt.
 
-Quan s'utilitza un projecte creat amb Canigó que es basa en Spring, és possible exposar diferents mètriques utilitzant la llibreria `spring-boot-starter-actuator`, i és possible exposar les mètriques en un format compatible amb Prometheus amb la llibreria `micrometer-registry-prometheus`.
+Quan s'utilitza un projecte creat amb Canigó basat en Spring, és possible exposar diferents mètriques utilitzant la llibreria `spring-boot-starter-actuator`, i és possible exposar les mètriques en un format compatible amb Prometheus amb la llibreria `micrometer-registry-prometheus`.
 
----
+
 ## Configuració
 
-Per activar les mètriques amb `actuator`, i exposar-les amb un exporter de `Prometheus` en un projecte creat amb Canigó, es necessari afegir algunes dependències.
+Per a activar les mètriques amb `actuator` i exposar-les amb un exporter de Prometheus en un projecte creat amb Canigó, és necessari afegir algunes dependències i configuracions que es detallen a continuació.
 
-### Canvis al `pom.xml`
+### Dependències a afegir al fitxer `pom.xml`
 
 ```xml
   ...
@@ -48,7 +48,7 @@ Per activar les mètriques amb `actuator`, i exposar-les amb un exporter de `Pro
   ...
 ```
 
-### Canvis al `application.yml` per configurar els `endpoints` de `actuator`
+### Configuració dels `endpoints` de `actuator` al fitxer `application.yml`
 
 ```yaml
 server:
@@ -72,9 +72,10 @@ server:
           include: "*"
 ```
 
-Per a recollir les mètriques, iniciarem un `Prometheus`, en aquest cas iniciarem un `Prometheus` en contenidor.
 
 ### Fitxer de configuració `prometheus.yml`
+
+Per a recollir les mètriques iniciarem un Prometheus, en aquest cas, l’iniciarem en un contenidor.
 
 ```yaml
 global:
@@ -88,63 +89,60 @@ scrape_configs:
       - targets: ['xxx.xxx.xxx.xxx:8099']  ## On xxx.xxx.xxx.xxx és la ip del servidor de la aplicación
 ```
 
-Iniciarem el contenidor de `Prometheus` amb el fitxer de configuració:
+Iniciarem el contenidor amb el fitxer de configuració:
 
 ```sh
 docker run --rm -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-Per visualitzar les mètriques, iniciarem un `Grafana`, en aquest cas iniciarem un `Grafana` en contenidor.
+Per a visualitzar les mètriques, iniciarem un Grafana, en aquest cas, també l’iniciarem en un contenidor.
 
 ```sh
 docker run --rm -d -p 3000:3000 grafana/grafana
 ```
 
----
-## Ús
+## Funcionament
 
-### Proves 
+### Proves
 
-> Per provar el funcionament iniciarem l'aplicació
+Per a provar el funcionament iniciarem l'aplicació:
 
 ```sh
-  mvn spring-boot:run 
+  mvn spring-boot:run
 ```
 
-> Provarem alguns serveis que mostren les mètriques disponibles
+I provarem alguns serveis que mostren les mètriques disponibles:
 
   * /actuator
 
   * /actuator/health
 
   * /actuator/metrics/jvm.memory.used
-  
+
   * /actuator/prometheus
 
 ![Spring Exposes Metrics Ejemplo 1](/images/howtos/2021-01-02_spring_expose_metrics_example1.gif)
 
 
-> Es consulta a `Prometheus` que estigui configurat el job d'importació de mètriques
+Es comprova a Prometheus que estigui configurada la tasca d'importació de mètriques:
 
 ![Spring Exposes Metrics Ejemplo 2](/images/howtos/2021-01-02_spring_expose_metrics_example2.gif)
 
 
-> Es consulta a `Prometheus` les mètriques
+Es consulten a Prometheus les mètriques:
 
 ![Spring Exposes Metrics Ejemplo 3](/images/howtos/2021-01-02_spring_expose_metrics_example3.gif)
 
 
-> Es configura `Grafana` per obtenir les dades del `Prometheus` i s'importen els `Dashboards` per visualitzar les mètriques en gràfics
+Es configura Grafana per a obtenir les dades del Prometheus i s'importen els Dashboards per a visualitzar les mètriques en format gràfic:
 
 ![Spring Exposes Metrics Ejemplo 4](/images/howtos/2021-01-02_spring_expose_metrics_example4.gif)
 
 
----
 ## Conclusió
 
- * És possible a partir de configuració exposar mètriques en un projecte creat amb Canigó per a poder-les explotar i visualitzar utilitzant `Prometheus` i `Grafana`
+És possible a configurar un projecte Canigó per a exposar mètriques en i poder-les explotar i visualitzar utilitzant eines com Prometheus i Grafana.
 
----
 ## Referències
 
 Per a més informació podeu consultar:
