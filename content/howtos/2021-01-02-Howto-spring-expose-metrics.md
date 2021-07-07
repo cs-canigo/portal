@@ -149,7 +149,7 @@ mètriques en format gràfic:
 
 ## Conclusió
 
-És possible a configurar un projecte Canigó per a exposar mètriques en i poder-les explotar i visualitzar
+És possible configurar un projecte Canigó per a que exposi mètriques i poder-les explotar i visualitzar
 utilitzant eines com Prometheus i Grafana.
 
 ## Referències
