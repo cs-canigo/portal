@@ -4,7 +4,7 @@ title       = "Canigó. Com exposar i capturar mètriques amb Prometheus i Grafa
 description = "Com exposar i capturar mètriques generades a través de Spring i capturades per serveis com Prometheus i Grafana."
 section     = "howtos"
 categories  = ["canigo"]
-#key        = "JULIOL2021"
+key        = "JULIOL2021"
 +++
 
 
@@ -149,7 +149,7 @@ mètriques en format gràfic:
 
 ## Conclusió
 
-És possible a configurar un projecte Canigó per a exposar mètriques en i poder-les explotar i visualitzar
+És possible configurar un projecte Canigó per a que exposi mètriques i poder-les explotar i visualitzar
 utilitzant eines com Prometheus i Grafana.
 
 ## Referències
