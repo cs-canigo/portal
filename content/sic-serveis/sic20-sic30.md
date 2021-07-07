@@ -81,6 +81,9 @@ de fer una correcta configuració, incloent-hi l'assignació adequat de recursos
 l'arquitectura que hi ha al darrere és completament diferent, per la qual cosa no són comparables les tasques que es realitzen ni els
 temps que s'hi destinen.
 
+* Les pipelines no s'executen automàticament en fer un commit al repositori de codi font. Cal, per tant, que l'usuari executi la pipeline de
+desplegament mitjançant l'opció *Build with Parameters*.
+
 * Les pipelines passen a **executar-se en contenidors** en lloc d'en una màquina virtual, per la qual cosa cal fer una correcta assignació
 de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida. Cal tenir present que cada etapa de la pipeline aixeca un contenidor,
 cosa que implica que el temps destinat per les diferents etapes es vegi incrementat en aproximadament 1 minut.
