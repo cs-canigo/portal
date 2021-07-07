@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com exposar i capturar mètriques amb Prometheus i Grafana] (/howtos/2021-01-02-Howto-spring-expose-metrics/)
+
 - [Com implementar el patró Circuit Breaker] (/howtos/2021-01-02-Howto-circuit_breaker/)
 
 - [Com corregir l’error de parseig del connector Sarcat PICA] (/howtos/2021-05-11-Howto-sarcat_pica_error_parseig_prefix/)
