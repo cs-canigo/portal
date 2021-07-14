@@ -103,18 +103,18 @@ tr.shown td.details-control {
 		vRowInstancia='';
 		for(var i=0,z=d.instancies.length;i<z;i++){
 			vStyle='style="fontWeight:bold;color:red;"';
-			if (d.instancies[i].estat=="Activa")
+			if (d.instancies[i].iestat=="Activa")
 			{
 				vStyle='style="fontWeight:bold;color:green;"';
 			}
 			
 			vRowInstancia=vRowInstancia+'<tr>'+
-					'<td>'+d.instancies[i].inom+'</td>'+
-					'<td>'+d.instancies[i].idescripcio+'</td>'+
-					'<td>'+d.instancies[i].ipromotor+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].inom+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idescripcio+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].ipromotor+'</td>'+
                     '<td '+vStyle+'>'+d.instancies[i].iestat+'</td>'+
-					'<td>'+d.instancies[i].idatapublicacio+'</td>'+
-					'<td>'+d.instancies[i].idataobsoleta+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idatapublicacio+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idataobsoleta+'</td>'+
                     '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
@@ -127,7 +127,7 @@ tr.shown td.details-control {
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Publicada</th>'+
-					'<th>Descartada</th>'+
+					'<th>Substituïda</th>'+
 					'<th></th>'+					
 			    '</tr>'+
 			'</thead>'+
@@ -170,7 +170,13 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
 		//	,{ "data": null }
-           ]
+           ],
+      "columnDefs": [ 
+	        {"targets": [ 1 ], "visible": false }
+             ],
+       "searchCols": [
+                { null, "search": "Consolidat" }, null,  null, null, null, null
+		  ]
       //     ],
       //"columnDefs": [ 
 	  //       {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
