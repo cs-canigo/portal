@@ -233,7 +233,7 @@ weight= 5
     //  v02.CTD-16/03/2021 (inici) Si l'entitat esta consolidada i no te link a dades obertes, descarregar fitxer Excel
 	
     //Si es una entitat consolidada i sense link a dades obertes s'ha de posar el link de descarga
-    if ((dades.Classificacio=="Consolidat") && (dades.instancies[numInstancia].iurl_dades_obertes=="") )
+    if ((dades.Classificacio=="Consolidat") && ( (dades.instancies[numInstancia].iurl_dades_obertes=="") || (dades.instancies[numInstancia].iestat!="Activa") ))
     {
         var link = document.createElement('a');
         link.setAttribute('href', '../../entitats/' + dades.instancies[numInstancia].ifitxer_xls);
@@ -266,7 +266,7 @@ weight= 5
 	// ---------------------------------------------------
     //  v02.CTD-16/03/2021 (inici) Si hi ha link a Dades Obertes posar el link, sino posar fitxer Excel
  
-       if (dades.instancies[numInstancia].iurl_dades_obertes!="") 
+       if (dades.instancies[numInstancia].iurl_dades_obertes!="" && (dades.instancies[numInstancia].iestat=="Activa")) 
        {
             var link_valors = document.createElement('a');
             link_valors.setAttribute('href', dades.instancies[numInstancia].iurl_dades_obertes);

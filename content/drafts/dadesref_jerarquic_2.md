@@ -145,7 +145,7 @@ tr.shown td.details-control {
       "scrollY": "450px",
       "scrollCollapse": true,
       "paging": false,
-      "ordering": false,
+      "ordering": true,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
       //"info":     false,
@@ -170,7 +170,8 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
-	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null]
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null],
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
