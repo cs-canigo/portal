@@ -163,7 +163,7 @@ tr.shown td.details-control {
                 "data":           null,
                 "defaultContent": ''
             },
-            { "data": "Classificacio" },
+            { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
