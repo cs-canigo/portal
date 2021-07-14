@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Mòdul de traces</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mòdul de traces\" />");
+		document.write("<meta name=\"description\" content=\"Mòdul de detecció d\x27errades i registre de les operacions realitzades a l\x27aplicació.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-documentacio-versions-3x-core">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions-3x">Versió 3.x</a>
+	</li>
+
+	<li>
+		
+			<a href="/canigo-documentacio-versions-3x-core">Mòduls Generals</a>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Mòdul de traces
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 05-03-2015
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<h3 id="propòsit">Propòsit</h3>
+
+<p>El mòdul de traces té com a missió:</p>
+
+<ul>
+<li>Detectar i localitzar amb més facilitat errors de l&rsquo;aplicació</li>
+<li>Entrada de dades incorrectes segons la lògica del sistema</li>
+<li>Seguiment per a auditoria</li>
+</ul>
+
+<p>Per a què això pugui ser portat a terme, el servei ofereix la
+possibilitat de:</p>
+
+<ol>
+<li>Definir nivells de traces (d&rsquo;informació, fatals, errors, etc.)</li>
+<li>Definir en quines sortides es generarà la traça: consola, fitxers,
+base de dades, correu electrònic, etc.</li>
+<li>Canviar en qualsevol moment quin és el mínim nivell de traces que
+volem mostrar, sense haver d&rsquo;afectar a les classes que generen les
+traces</li>
+<li>Definir el format de sortida de les nostres traces: incorporar
+l&rsquo;hora, el número de línia del codi on s&rsquo;ha produït i la seva
+classe, etc.</li>
+<li>Incorporar informació de context a la traça: usuari, IP del client,
+etc.</li>
+</ol>
+
+<h3 id="documents-i-fonts-de-referència">Documents i Fonts de Referència</h3>
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Adreça</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Log4J2 Manual</td>
+<td><a href="http://logging.apache.org/log4j/2.x/">http://logging.apache.org/log4j/2.x/</a></td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="glossari">Glossari</h3>
+
+<p><strong>Log4J2</strong></p>
+
+<p>Evolució de Log4J, un dels framework de traces més estès. Es basa en l&rsquo;ús d&rsquo;Appenders,
+Loggers i Layouts. Veure l&rsquo;annex per a més informació.</p>
+
+<h2 id="descripció-detallada">Descripció detallada</h2>
+
+<h3 id="arquitectura-i-components">Arquitectura i components</h3>
+
+<p>A més de les funcionalitats oferides per la pròpia API de Log4j2, Canigó
+disposa d&rsquo;un conjunt de components addicionals:</p>
+
+<ol>
+<li>Configuració de traces multientorn.</li>
+<li>Modificar el nivell de traces en calent d&rsquo;una aplicació.</li>
+<li>Eina de consulta de logs en calent.</li>
+<li>Afegir informació contextual als logs.</li>
+</ol>
+
+<h3 id="instal-lació-i-configuració">Instal·lació i configuració</h3>
+
+<h4 id="instal-lació">Instal·lació</h4>
+
+<p>El mòdul de traces s&rsquo;inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l&rsquo;aplicació, l&rsquo;eina de
+suport al desenvolupament inclourà la referència dins del pom.xml. En
+cas d&rsquo;una instal·lació manual afegir les següents línies al pom.xml de
+l&rsquo;aplicació:</p>
+
+<pre><code class="language-java">&lt;canigo.core.version&gt;[3.2.0,3.3.0)&lt;/canigo.core.version&gt;
+
+&lt;dependency&gt;
+          &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+          &lt;artifactId&gt;canigo.core&lt;/artifactId&gt;
+          &lt;version&gt;${canigo.core.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h4 id="configuració">Configuració</h4>
+
+<p>L&rsquo;eina de desenvolupament de Canigó 3 genera de manera automàtica els
+diferents arxius de configuració de traces per entorn:</p>
+
+<ul>
+<li>log4j2.loc.xml Arxiu de configuració per a entorn locals.</li>
+<li>log4j2.int.xml Arxiu de configuració per a l&rsquo;entorn d&rsquo;integració.</li>
+<li>log4j2.pre.xml Arxiu de configuració per a l&rsquo;entorn de preproducció.</li>
+<li>log4j2.pro.xml Arxiu de configuració per a l&rsquo;entorn de producció.</li>
+<li>log4j2.xml Arxiu de configuració per defecte. En el cas de no trobar cap configuració específica per a l&rsquo;entorn, aquesta pasarà a ser la de per defecte.</li>
+</ul>
+
+<p>Directori de configuració: <PROJECT_ROOT>/src/main/resources/log4j2/*.xml</p>
+
+<p>Per cadascun dels entorns els nivells de logs poden variar.</p>
+
+<p>Exemple de configuració log4j2.xml en local:</p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Configuration&gt;
+    &lt;Appenders&gt;
+        &lt;RollingFile name=&quot;DAILY_LOG&quot; fileName=&quot;/tmp/log.log&quot; filePattern=&quot;tmp/%d{ddMMyyyy}_log.log&quot; append=&quot;true&quot;&gt;
+            &lt;PatternLayout pattern=&quot;canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n&quot;/&gt;
+            &lt;Policies&gt;
+                &lt;TimeBasedTriggeringPolicy interval=&quot;1&quot;/&gt;
+            &lt;/Policies&gt;                               
+        &lt;/RollingFile&gt;
+        &lt;Console name=&quot;STDOUT&quot; target=&quot;SYSTEM_OUT&quot;&gt;
+            &lt;PatternLayout
+                pattern=&quot;canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n&quot; /&gt;
+        &lt;/Console&gt;
+    &lt;/Appenders&gt;
+    &lt;Loggers&gt;
+        &lt;Logger name=&quot;cat.gencat.ctti&quot; level=&quot;debug&quot; additivity=&quot;false&quot;&gt;
+            &lt;AppenderRef ref=&quot;DAILY_LOG&quot; /&gt;
+            &lt;AppenderRef ref=&quot;STDOUT&quot; /&gt;
+        &lt;/Logger&gt;
+        &lt;Root level=&quot;info&quot;&gt;
+            &lt;AppenderRef ref=&quot;DAILY_LOG&quot; /&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;
+
+</code></pre>
+
+<p>D&rsquo;aquesta configuració d&rsquo;exemple destaquem:</p>
+
+<ul>
+<li>Existeixen dos tipus d&rsquo;appender, un que mostrarà la informació per
+la consola del servidor d&rsquo;aplicacions, i un altre que inserirà les
+traces a un log que rotarà automàticament cada dia.</li>
+<li>Les traces provinents del package &ldquo;cat.gencat.ctti&rdquo; es
+visualitzaran tant en la consola d&rsquo;arranc del servidor com a un
+arxiu de logs.</li>
+<li>Els packages restants (aplicació i llibreries de tercers) es
+mostraran només per consola i amb nivell de log INFO.</li>
+</ul>
+
+<h4 id="appenders">Appenders</h4>
+
+<p>Els appenders més comuns i utilitzat son Console i RollingFile.</p>
+
+<p>El appender Console treu els missatges per consola</p>
+
+<pre><code>&lt;Console name=&quot;STDOUT&quot; target=&quot;SYSTEM_OUT&quot;&gt;
+    &lt;PatternLayout
+        pattern=&quot;canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n&quot; /&gt;
+&lt;/Console&gt;
+</code></pre>
+
+<p>El appender RollingFile treu els missatges per un fitxer que es va rotant cada cert temps.
+A filePattern s&rsquo;indica un patró de data pel nom del fitxer que es rota. Al paràmetre TimeBaseTriggeringPolicy s&rsquo;indica cada quan es rota el fitxer. Aquest número farà referència a la mínima unitat de temps del patró trobat a filePattern.</p>
+
+<p>Per exemple si en indiquem 1, i el patró és ddMMyyyy, es rotarà cada dia. Si el patró fos MMyyyy, es rotaria cada mes</p>
+
+<pre><code>&lt;RollingFile name=&quot;DAILY_LOG&quot; fileName=&quot;/tmp/log.log&quot; filePattern=&quot;tmp/%d{ddMMyyyy}_log.log&quot; append=&quot;true&quot;&gt;
+    &lt;PatternLayout pattern=&quot;canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n&quot;/&gt;
+    &lt;Policies&gt;
+        &lt;TimeBasedTriggeringPolicy interval=&quot;1&quot;/&gt;
+    &lt;/Policies&gt;                               
+&lt;/RollingFile&gt;
+</code></pre>
+
+<p>Al següent enllaç es troba la informació de tots els appenders existents a Log4J2.</p>
+
+<p><a href="https://logging.apache.org/log4j/2.x/manual/appenders.html">https://logging.apache.org/log4j/2.x/manual/appenders.html</a></p>
+
+<h4 id="patternlayout">PatternLayout</h4>
+
+<p>Permet especificar la sortida amb patrons de conversió. El seu ús és equivalent a la funció printf del llenguatje C.</p>
+
+<p>Alguns dels caràcters de conversió més interessants són (per a més referència consultar la API de la classe):</p>
+
+<table>
+<thead>
+<tr>
+<th><strong>Caràcter</strong></th>
+<th><strong>Descripció</strong></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>%c</td>
+<td>Nom del &ldquo;logger&rdquo;</td>
+</tr>
+
+<tr>
+<td>%C</td>
+<td>Mostrar el nom qualificat de la classe que ha llençat el missatge.</td>
+</tr>
+
+<tr>
+<td>%d</td>
+<td>Mostrar la data en què es va produir el missatge. A continuació opcionalment pot aparèixer el patró de conversió de data. Si no s&rsquo;especifica s&rsquo;utilitza per defecte <strong>ISO 8601.</strong> <br>Exemple: %d{dd MMM yyyy HH:mm:ss,SSS}.</td>
+</tr>
+
+<tr>
+<td>%L</td>
+<td>Número de línia a on es va llençar el missatge (<strong>no fer servir si es necessita un bon rendiment</strong>).</td>
+</tr>
+
+<tr>
+<td>%m</td>
+<td>Missatge</td>
+</tr>
+
+<tr>
+<td>%p</td>
+<td>Prioritat/nivell del missatge (WARN,&hellip;).</td>
+</tr>
+
+<tr>
+<td>%X{clau}</td>
+<td>Informació contextual &ldquo;clau&rdquo;</td>
+</tr>
+
+<tr>
+<td>%n</td>
+<td>Separador de línia (un \n).</td>
+</tr>
+</tbody>
+</table>
+
+<p>El resultat de l&rsquo;aplicació d&rsquo;aquests patrons són missatges de text pla
+uniformement formatejats.</p>
+
+<p>El patró per defecte a les aplicacions Canigó és el següent:</p>
+
+<pre><code>canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n
+
+Que fa que els logs surten de la següent manera:
+
+canigo Message: 10 11 2016 16:25:39,578 DEBUG [http-bio-8081-exec-1] DEBUG [http-bio-8081-exec-1] org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+canigo Message: 10 11 2016 16:25:39,579 DEBUG [http-bio-8081-exec-1] DEBUG [http-bio-8081-exec-1] org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select equipament.nom from cat.gencat.test.model.Equipament equipament
+</code></pre>
+
+<h2 id="utilització-del-servei">Utilització del Servei</h2>
+
+<h3 id="generar-missatges">Generar Missatges</h3>
+
+<p>Per a generar les traces el framework utilitzat per les aplicacions Canigó 3.2 és SLF4J
+Per generar una traça en nivell debug tindríem el següent codi:</p>
+
+<pre><code>import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class ExempleTrace{
+
+   private static final Logger LOGGER = LoggerFactory.getLogger(ExempleTrace.class);
+
+   public void execute(){
+      if (LOGGER.isDebugEnabled()){
+         LOGGER.debug(&quot;Traça d'exemple&quot;);
+      }
+   }
+}
+</code></pre>
+
+<h3 id="recomanacions">Recomanacions</h3>
+
+<h4 id="recomanacions-generals">Recomanacions generals</h4>
+
+<ul>
+<li>Mai utilitzar System.out.println.</li>
+<li>Instància de manera estàtica i final el log per evitar
+instanciacions innecessàries.</li>
+<li>Sobreescriu sempre el mètode toString() per donar una representació
+de l&rsquo;objecte. Obtenir una traça del tipus className@16cd7d5 no aporta
+res.</li>
+<li>Valida el nivell de traces abans d&rsquo;escriure.</li>
+</ul>
+
+<h4 id="recomanacions-davant-excepcions">Recomanacions davant excepcions</h4>
+
+<ul>
+<li>No utilitzar e.printStackTrace.</li>
+</ul>
+
+<p>e.printStackTrace només imprimeix en consola. Només es podrà visualitzar
+aquesta informació si s&rsquo;ha definit un appender de consola.</p>
+
+<pre><code>try {
+   ................
+} catch (MyException e) {
+    e.printStackTrace();
+}
+</code></pre>
+
+<p>Utilitzar LOGGER.error(message, t) on t és l&rsquo;excepció capturada:</p>
+
+<pre><code>try {
+    ................
+} catch (MyException e) {
+    LOGGER.error(&quot;S'ha produït un error: &quot;, e);
+    .........................
+}
+</code></pre>
+
+<ul>
+<li>No utilitzar LOGGER.error i després rellançar l&rsquo;excepció si no és
+estrictament necessari:</li>
+</ul>
+
+<pre><code>try {
+    ................
+} catch (MyException e) {
+    LOGGER.error(&quot;S'ha produït un error: &quot;, e);
+    throw e;
+}
+</code></pre>
+
+<p>Si en altres nivells es fa el mateix, s&rsquo;imprimirà les excepcions
+diverses vegades, portant a la confusió.</p>
+
+<ul>
+<li>No eliminar el stacktrace</li>
+</ul>
+
+<pre><code>try{
+    ......
+}catch(MyException e){
+    throw new RuntimeException(&quot;S'ha produït un error: &quot; + e.getMessage());
+}
+</code></pre>
+
+<p>Aquest codi elimina el stacktrace de MyException. Es perd informació
+útil sobre l&rsquo;excepció. L&rsquo;alternativa correcta és:</p>
+
+<pre><code>try{
+   ...
+}catch(MyException e){
+   throw new RuntimeException(&quot;S'ha produït un error: &quot;, e);
+}
+</code></pre>
+
+<h4 id="evitar-càlculs-innecessaris">Evitar càlculs innecessaris</h4>
+
+<p>Una de les qüestions més importants del sistema de traces és el cost de
+computació. Si en un moment donat es desactiven determinats nivells de
+traces, encara que aquesta traça no es generi a la sortida el missatge és
+avaluat (ja que es troba com un paràmetre de la crida). Si l&rsquo;avaluació
+del missatge comporta càlculs estem afegint un cost innecessari.</p>
+
+<p>Per evitar afegir costos addicionals de còmput innecessari es recomana
+prèviament comprovar que es troba activat el nivell pel qual generarem
+el missatge. Així, per exemple, enlloc de:</p>
+
+<pre><code>LOGGER.debug(&quot;....&quot;);
+</code></pre>
+
+<p>Haurem sempre de realitzar:</p>
+
+<pre><code>if (LOGGER.isDebugEnabled())
+LOGGER.debug(&quot;....&quot;);
+</code></pre>
+
+<h4 id="programació-de-traces">Programació de traces</h4>
+
+<p>Com a recomanació de traces i nivell d&rsquo;aquestes dins d&rsquo;un mètode podrien
+ser les següents:</p>
+
+<ol>
+<li>Traça a nivell debug al començament del mètode, informant els
+paràmetres d&rsquo;entrada que poden arribar a ser útils per a detectar
+l&rsquo;operació realitzada.</li>
+<li>Traça a nivell info informant de l&rsquo;operació realitzada, si
+escau.</li>
+<li>Traça a nivell error o warn per a blocs destinats a la captura
+d&rsquo;excepcions.</li>
+</ol>
+
+<pre><code>public void inserirUsuari(String nom){
+try {
+      if (LOGGER.isDebugEnabled()) {
+    LOGGER.debug(&quot;UsuarioDAOImpl:eliminarUsuario ...identificador del usuario:&quot; + identificadorUsuario);
+      }
+
+      User user = new User();
+      user.setName(nom);
+      getUserDAO().insert(user);
+
+      if (LOGGER.isInfoEnabled()) {
+     LOGGER.info(&quot;Usuari &quot; + user + &quot; inserit a la BD&quot;);
+      }
+
+ }
+ catch (Exception e) {
+    LOGGER.error(&quot;S'ha produït un error, e);
+    ........
+ }
+}
+</code></pre>
+
+<h3 id="generar-informació-contextual">Generar Informació Contextual</h3>
+
+<p>Moltes vegades no és suficient amb la informació estàndard que es mostra
+a les traces i és necessari complementar-la amb informació contextual
+com: usuari que fa la petició, temps d&rsquo;inici i final, etc. Per afegir
+aquesta informació, és necessari inicialitzar-la en algun moment de la
+petició perquè estigui disponible durant tot el processament d&rsquo;aquesta. Per tant, el patró de treball a seguir és:</p>
+
+<ol>
+<li>Inicialització de la informació addicional abans de processar la
+petició.</li>
+<li>Processament de la petició (utilització de la informació addicional en
+el mòdul de traces).</li>
+<li>Finalització de la petició.</li>
+</ol>
+
+<p><strong>Canigó</strong> suporta la inserció d&rsquo;aquesta informació mitjançant l&rsquo;extensió del filtre
+LoggingFilter.
+Gràcies al mètode createCustomParameters, el desenvolupador pot afegir o
+eliminar paràmetres de la Mapped Diagnostic Context (MDC) de SLF4J que
+posteriorment seran inserits a les traces de l&rsquo;aplicació.</p>
+
+<p>Un exemple de filtre que afegeix informació de l&rsquo;usuari, adreça i host
+remot a les traces podria ser:</p>
+
+<pre><code>public class ExtendedLoggingFilter extends LoggingFilter {
+
+     private final static String USERNAME = &quot;USERNAME&quot;;
+     private final static String REMOTEHOST = &quot;REMOTEHOST&quot;;
+     private final static String REMOTEADDR = &quot;REMOTEADDR&quot;;
+
+     @Override
+     protected Map&lt;String, Object&gt; createCustomParameters( ServletRequest request, ServletResponse response) {
+
+        Map&lt;String,Object&gt; custom = new HashMap&lt;String, Object&gt;();
+        custom.put(REMOTEHOST, request.getRemoteHost());
+        custom.put(REMOTEADDR, request.getRemoteAddr());
+
+        HttpServletRequest httprequest = (HttpServletRequest) request;
+        String userLogin = (String)httprequest .getSession().getAttribute(&quot;userLogin&quot;);
+
+        if (userLogin!=null) {
+            custom.put(USERNAME, userLoginId);
+        }
+        return custom;
+     }
+}
+</code></pre>
+
+<p>Configuració del layout per a mostrar les dades:</p>
+
+<pre><code>&lt;Console name=&quot;STDOUT&quot; target=&quot;SYSTEM_OUT&quot;&gt;
+    &lt;PatternLayout
+        pattern=&quot;%X{USERNAME}%n - %X{REMOTEHOST} - %X{REMOTEADDR} canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n&quot; /&gt;
+&lt;/Console&gt;
+</code></pre>
+
+<h2 id="annexos">Annexos</h2>
+
+<h3 id="introducció-a-log4j2">Introducció a Log4J2</h3>
+
+<p>En aquest annex s&rsquo;ofereix una breu introducció a conceptes de Log4J2 que
+cal entendre per utilitzar el Servei de Traces.</p>
+
+<p>A Log4J2, existeixen diversos elements clau:</p>
+
+<ol>
+<li><p>Prioritats o nivells de les traces. Log4J2 defineix per defecte 5
+nivells: DEBUG, INFO, WARN, ERROR i FATAL. Entre ells existeix una
+jerarquia (DEBUG&lt;INFO&lt;WARN&lt;ERROR&lt;FATAL), de forma que si en
+l&rsquo;aplicació s&rsquo;ha configurat que només es mostrin traces de nivell
+WARN, també es mostrarien els de nivell ERROR i FATAL.</p>
+
+<p><img src="/related/canigo/documentacio/modul-traces/ServeiTraces_img014.jpg" alt="" /></p></li>
+
+<li><p>Loggers. Els loggers donen control al programador per a
+determinar quins events requereixen ser capturats i quins no. Dins
+de l&rsquo;aplicació es poden definir diferents loggers organitzats
+per jerarquia que en la majoria dels casos es mapejen amb el nom
+qualificat de les classes java, a on cada classe tindria el seu logger.</p></li>
+
+<li><p>Appenders. Els &ldquo;appenders&rdquo; especifiquen a on es desarà la traça
+definida per a la categoria. Un logger pot definir diferents
+sortides o &ldquo;appenders&rdquo; a la vegada (consola, fitxer, correu
+electrònic, base de dades,etc.)</p></li>
+
+<li><p>Layouts. Permeten especificar com es mostren els events. Per exemple
+podem especificar que ens aparegui l&rsquo;hora en la què s&rsquo;ha produït
+l&rsquo;event, qui ho ha llençat, la línia en la què s&rsquo;ha fet, etc.</p></li>
+</ol>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

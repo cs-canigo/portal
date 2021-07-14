@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Què és la Refacció</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Què és la Refacció\" />");
+		document.write("<meta name=\"description\" content=\"Refacció és el procés de canviar un sistema de programari d\x27una manera que no alteri el comportament extern del codi, però millora la seva estructura interna\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Què és la Refacció
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 04-12-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h1 id="què-és-la-refacció">Què és la refacció?</h1>
+
+<p>Segons el Termcat, la refacció és defineix com: &ldquo;Acció de reestructurar el codi font d&rsquo;una aplicació informàtica amb l&rsquo;objectiu de millorar el disseny intern de l&rsquo;aplicació sense que en resultin modificats el comportament extern ni la funcionalitat.&rdquo; És una disciplina que introdueix pràctiques d&rsquo;enginyeria per netejar el codi sense alterar-ne el comportament visible pels usuaris i altres sistemes que interaccionen. Aquesta disciplina es dona normalment amb sistemes d&rsquo;informació obsolets o al llindar de l&rsquo;obsolescència.</p>
+
+<p>Hom considera que una bona pràctica d&rsquo;enginyeria del programari, primer es dissenya - en els seus diferents tipus i  circuits d&rsquo;aprovació - i després es programa. Amb el temps, el codi es modificarà però totes les activitats de disseny són obviades per les presses o per la manca de pressupost i la coherència del sistema -la seva estructura segons aquest disseny- es va degradant gradualment. De les pràctiques d&rsquo;enginyeria es passa a una activitat cada cop més artesanal, feixuga i dificil de gestionar.</p>
+
+<p>La refacció és el contrari d&rsquo;aquesta pràctica. Amb la refacció, s&rsquo;agafa un disseny desballestat durant el temps, i es ressuscita en un codi ben estructurat. Són petits canvis que, acumulats, milloren la capacitat del sistema de substituir-se a si mateix, mantenint les seves funcionalitat al temps que permet evolucionar i incorporant els canvis i millores que proposa el CTTI: transformar les aplicacions per adaptar-les a les versions especificades pel full de ruta del programari (Link), automatitzar la seva construcció/desplegament en entorns CTTI (link SIC) i seguir els principis d&rsquo;arquitectura (link). Aleshores es pot obtenir un sistema amb una estructura molt més modular i propera a les arquitectures basades en microserveis.</p>
+
+<p>Com qualsevol disciplina d&rsquo;enginyeria, ha d&rsquo;haver-hi un pla al darrera que ajudi a guiar aquest procés de transformació de la tecnologia i estructura del vell sistema i millorar el seu disseny intern.</p>
+
+<h2 id="estructura-d-un-sistema-típic">Estructura d&rsquo;un sistema típic.</h2>
+
+<p>Habitualment ens trobem amb la necessitat d&rsquo;adaptar una aplicació als requeriments del full de ruta per evitar la seva obsolescència, i unes funcionalitats que han d&rsquo;evolucionar seguint els principis d&rsquo;arquitectura. Tanmateix es disposa d&rsquo;una base de dades monolítica i es planteja una convivència temporal de tots dos enfocs. Com a conseqüència s&rsquo;estableix com a objectiu una estructura de codi que asseguri almenys les següents característiques:</p>
+
+<ul>
+<li>Una visió clara dels diferents mòduls funcionals que componen el sistema.</li>
+<li>Una estructura homogènia pel que fa a nomenclatura de les diferents capes i artefactes.</li>
+<li>Capacitat per separar la configuració dels diferents mòduls, facilitant una possible independització a futur.</li>
+<li>Assegurament dels camins permesos per establir dependències entre mòduls.</li>
+<li>Ús del framework Canigó.</li>
+</ul>
+
+<p>Tots els artefactes del projecte seguiran la nomenclatura de directoris estàndard definida per maven a nivell de codi font, arxius de configuració, proves unitàries i configuració de proves.</p>
+
+<h2 id="configuració-comuna-i-empaquetat">Configuració comuna i empaquetat.</h2>
+
+<p>El directori app correspon a l&rsquo;artefacte de desplegament (war), i contindrà la configuració comuna a tots el mòduls. Permetrà tant l&rsquo;arrencada com a aplicació Spring Boot com el desplegament en contenidor web o servidor d&rsquo;aplicacions.
+Addicionalment, contindrà el codi de la interfície d&rsquo;usuari desenvolupada amb el framework Angular.
+El procés d&rsquo;empaquetatge generarà els arxius de distribució de l&rsquo;aplicació Angular com un element separat per al seu desplegament en un servidor web.</p>
+
+<h2 id="components-comuns">Components comuns</h2>
+
+<p>Inclourà aquelles utilitats que es determinin d&rsquo;ús comú a diferents mòduls funcionals. Es desenvoluparan com a artefactes separats (llibreries jar). La estructura de la part de components comuns, inicialment, consistirà en tenir tants artefactes com sigui necessari, per posteriorment agrupar utilitats segons la capa tecnològica a la que s&rsquo;apliquin, de manera que no s’arrastrin components que no s’utilitzaran en les diferents parts en què es divideix un mòdul funcional:
+- core-web: Utilitats comunes a la part &ldquo;front&rdquo; dels diferents mòduls funcionals
+- core-back: Utilitats comunes per a la implementació de la part &ldquo;back&rdquo; dels mòduls funcionals.
+- core-security: Utilitats comunes per a la gestió de la seguretat.
+- core-commons: Utilitats comunes aplicables a les diferents capes (tractament de dates, per exemple)</p>
+
+<h2 id="estructura-de-mòdul-funcional">Estructura de mòdul funcional</h2>
+
+<p>Cada mòdul funcional estarà compost de tres artefactes separats (llibreries jar):
+-   Part services: Contindrà únicament definicions d&rsquo;interfícies de servei i paràmetres d&rsquo;entrada / sortida. Defineixen el contracte a nivell de serveis que proporciona el mòdul funcional de cara a altres mòduls.
+-   Part back: Contindrà la capa d&rsquo;implementació dels serveis i d&rsquo;accés a dades, així com la configuració necessària per a la seva arrencada dins del sistema.
+-   Part front: Contindrà la capa d&rsquo;exposició de serveis REST, així com la configuració necessària per a la seva arrencada en el sistema.</p>
+
+<p>Aquesta divisió impedirà els accessos a la part interna del mòdul, tant des de la part frontal com des d&rsquo;altres mòduls. L&rsquo;única part visible d&rsquo;un mòdul seran les seves interfícies de servei.</p>
+
+<h2 id="passos-del-pla-de-refacció">Passos del pla de refacció.</h2>
+
+<p>El procés de transformació del sistema es realitzarà seguint un pla de refacció que ordeni els passos a realitzar i permeti alliberar petits increments de la funcionalitat durant el desenvolupament.</p>
+
+<ol>
+<li>Divisió funcional del sistema.</li>
+</ol>
+
+<p>El primer pas del procés de transformació serà una anàlisi inicial de les funcionalitats del sistema actual que permeti agrupar-les en diferents mòduls funcionals. D&rsquo;aquesta divisió inicial quedaran definides les responsabilitats de cada mòdul, amb una descripció d&rsquo;alt nivell del que ofereixen a nivell de serveis i de funcionalitat a nivell d&rsquo;interfície d&rsquo;usuari.</p>
+
+<ol>
+<li>Anàlisi de dependències.</li>
+</ol>
+
+<p>La divisió funcional del sistema proposat haurà de validar pel que fa a les dependències que introdueix entre els diferents mòduls. Una excessiva inter-dependència o la presència de cicles seran senyals de que cal replantejar la divisió inicial o la generació d&rsquo;un artefacte comú de forma separada.
+Si representem la dependència d&rsquo;un mòdul M1 amb un mòdul M2 com M1 ==&gt; M2, els senyals que indicaran la necessitat de revisió seran d&rsquo;aquest tipus:</p>
+
+<p>** M1 ==&gt; M2 ==&gt; M1: Inter-dependència entre móduls.</p>
+
+<p>** M1 ==&gt; M2 ==&gt; M3 ==&gt; M1: Cicle de dependència.</p>
+
+<p>Haurà d&rsquo;analitzar-se quins elements provoquen aquests cicles, i determinar si poden eliminar-se redistribuint les responsabilitats o generant nous artefactes independents (bé un nou mòdul o component comú).</p>
+
+<p>Si bé els dos passos inicials del procés han de ser suficients per generar una divisió el més propera al resultat final, durant el desenvolupament de projecte podran detectar-se noves necessitats a nivell de components comuns per evitar la introducció de nous cicles de dependència.</p>
+
+<p>A nivell tècnic, es pot aplicar una eina de visualització de dependències com JDeps per tenir una primera aproximació de les dependències entre els diferents paquets de codi font. A partir d&rsquo;aquí, el criteri de divisió en mòduls que es vol aplicar és purament funcional. Aquesta divisió segons funcionalitat ha de definir quines responsabilitats té cada mòdul, quines entitats està gestionant, quins serveis ha d&rsquo;oferir i quins mòduls poden dependre d&rsquo;aquests serveis. Aquest criteri és el que es farà servir després per moure classes o reimplementar canviant a la nova tenologia, des del sistema actual al nou.</p>
+
+<ol>
+<li>Estructura inicial de mòduls funcionals.</li>
+</ol>
+
+<p>A nivell de codi es crearà l&rsquo;estructura inicial del projecte amb el conjunt de mòduls funcionals i components comuns detectats en els passos anteriors. L&rsquo;anàlisi realitzada permetrà establir un ordre en el procés de refacció. Aquells mòduls o components amb dependències d&rsquo;entrada s&rsquo;hauran d&rsquo;abordar en primer lloc.</p>
+
+<ol>
+<li>Estructura inicial de frontal.</li>
+</ol>
+
+<p>Es crearà l&rsquo;estructura inicial de l&rsquo;aplicació front-end al directori de l&rsquo;artefacte app. Utilitzant les característiques de modularitat que proporciona el framework de front-end utilitzat, l&rsquo;estructura de l&rsquo;aplicació frontal haurà de correspondre amb els diferents mòduls funcionals detectats.</p>
+
+<ol>
+<li>Fases de la integració.</li>
+</ol>
+
+<p>La primera fase correspondria a un pilot desenvolupat amb un framework de front-end a nivell de frontal. En aquesta fase no es farà la divisió complerta en mòduls funcionals.
+A la part Java s&rsquo;ha seguit l&rsquo;especificació base per al desenvolupament d&rsquo;aplicacions rest amb el framework Canigó 3.
+En aquest pas del pla de refacció s&rsquo;adaptarà el desenvolupament en els següents nivells:
+o   Interfície d&rsquo;usuari: Integració del desenvolupament del pilot dins de l&rsquo;aplicació front-end. Inicialment es mantindrà el codi integrat a la nova aplicació.
+o   Backend Java: Divisió de codi i configuració en els diferents artefactes que composen un mòdul funcional, així com separació de components comuns empresos en la primera fase en artefactes independents.</p>
+
+<ol>
+<li>Refacció per mòdul.</li>
+</ol>
+
+<p>La refacció per mòdul funcional serà un procés iteratiu que s&rsquo;aplicarà a totes les capes de forma simultània. L&rsquo;ordre en la refacció de codi no vindrà determinat per la divisió de capes de l&rsquo;arquitectura, sinó per increments de funcionalitat en el sistema que puguin validar-se durant el desenvolupament del projecte. L&rsquo;ordre en el qual es desenvoluparan vindrà determinat per les necessitats detectades en els dos primers passos, donant prioritat a aquelles funcionalitats que formin la base per increments de funcionalitat posteriors.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

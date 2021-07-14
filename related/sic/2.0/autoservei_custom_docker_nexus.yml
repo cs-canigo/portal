@@ -1,0 +1,21 @@
+version: 1.0.0
+resources:
+  infrastructures:
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerFileName: Dockerfile
+      parameters: clean package -Dmaven.test.skip=true -U
+      generates:
+        - artifact01
+deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: mvn deploy -f ./pom.xml
+      artifact: artifact01
+notificationRecipients:
+  - nom1@domini.cat

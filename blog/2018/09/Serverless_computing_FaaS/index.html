@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Serverless Computing o FaaS</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Serverless Computing o FaaS\" />");
+		document.write("<meta name=\"description\" content=\"Com a evolució dels serveis oferts al nuvol, apareix un nou concepte anomenat FaaS (Function as a service) o Serverless Computing (Informàtica sense Servidor) que proporciona una plataforma que permet als clients desenvolupar, executar i gestionar les funcionalitats de l\x27aplicació sense la complexitat de construir i mantenir la infraestructura associada al desenvolupament i llançament d\x27una aplicació.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Serverless Computing o FaaS
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 27-09-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Serverless computing, també conegut com a Function as a service (FaaS), és una categoria de serveis de cloudcomputing que proporciona una plataforma que permet als clients desenvolupar, executar i gestionar les funcionalitats de l&#39;aplicació sense la complexitat de construir i mantenir la infraestructura associada al desenvolupament i llançament d&#39;una aplicació.</p>
+
+<p><img src="/images/bloc/201809/FaaS.png" alt="FaaS logo" /></p>
+
+<h2 id="origen-i-motivació">Origen i Motivació</h2>
+
+<p>Des de fa anys s&#39;està incorporant als desenvolupaments l&#39;arquitectura de microserveis, una forma d&#39;arquitectura SOA (ServiceOrientedArquitecture). Les aplicacions basades en microserveis divideixen la funcionalitat en serveis especialitzats, molt desacoblats i que comuniquen entre ells i col·laboren a través d&#39;API&#39;s.
+La contrapartida dels microserveis és l&#39;augment en les tasques de gestió i manteniment d&#39;infraestructura, el que comporta que només sigui recomanable per aplicacions molt grans a empreses grans.
+Per cobrir aquest inconvenient en els microserveis apareix el ServerlessComputing, que permet als equips de desenvolupament centrar-se a definir cada funcionalitat i cada lògica de negoci, deixant a banda tots els aspectes relacionats amb la infraestructura com són:</p>
+
+<ul>
+<li>Aprovisionament de servidors</li>
+<li>Manteniment i gestió de servidors</li>
+<li>Escalabilitat de l&#39;aplicació</li>
+<li>Disponibilitat i tolerància a errors</li>
+</ul>
+
+<h2 id="casos-d-39-ús">Casos d&#39;ús</h2>
+
+<p>El Serverless computing encaixa molt bé per càrregues de treball que responen a peticions entrants, els events inclouen:</p>
+
+<ul>
+<li>Temporitzadors / tasques programades</li>
+<li>Crides HTTP per escenaris API i WebHook</li>
+<li>Cues</li>
+</ul>
+
+<p>També es pot fer ús d&#39;aquesta tecnologia per altres tipus d&#39;aplicacions com són:</p>
+
+<ul>
+<li>Processament de dades
+
+<ul>
+<li>Processament d&#39;arxius en temps real</li>
+<li>Processament de transmissions en temps real</li>
+<li>Extracció, transformació i carrega</li>
+</ul></li>
+<li>Back-ends
+
+<ul>
+<li>Back-end per a IOT: Per administrar sol·licituds web, mòbils, Internet de les coses i API de tercers</li>
+<li>Aplicacions Web</li>
+</ul></li>
+</ul>
+
+<h2 id="quins-són-els-avantatges-i-inconvenients">Quins són els avantatges i inconvenients?</h2>
+
+<p><strong>Respecte als avantatges podem destacar:</strong></p>
+
+<p><strong>Cost</strong></p>
+
+<p>Amb l&#39;arquitectura FaaS pagues només quan s&#39;està executant el teu codi, si no hi ha funcions actives no hi ha cost. Per exemple, si el teu codi només s&#39;executa un cop al dia amb una durada de 15 minuts, es factura 1 unitat d&#39;execució i 15 minuts de còmput.</p>
+
+<p><strong>Operacions</strong></p>
+
+<p>Una arquitectura sense servidor significa que els desenvolupadors i els operadors no necessiten dedicar temps a configurar i ajustar polítiques, el proveïdor del núvol s&#39;encarrega de garantir que la capacitat sempre satisfà la demanda.</p>
+
+<p><strong>Productivitat</strong></p>
+
+<p>En la informàtica sense servidor, les unitats de codi exposades al món exterior són funcions simples. Això vol dir que, normalment, el programador no ha de preocupar-se per la transmissió multidireccional o per gestionar directament les sol·licituds HTTP al seu codi, simplificant la tasca del desenvolupament de programari de fons.</p>
+
+<p><strong>Independència amb el Proveïdor</strong></p>
+
+<p>Existeixen biblioteques intermèdies que s&#39;encarreguen d&#39;unificar els diferents models dels principals proveïdors de forma que les funcions que es creïn puguin executar-se en els núvols més populars. La més coneguda d&#39;aquestes biblioteques és Serverless (<a href="https://serverless.com/">https://serverless.com/</a>), que a més es Open Source.</p>
+
+<p><strong>Alguns dels inconvenients de FaaS inclouen:</strong></p>
+
+<p><strong>Rendiment</strong></p>
+
+<p>El codi sense servidor utilitzat amb poca freqüència pot patir una major latència de resposta que el codi que s&#39;executa contínuament en un servidor dedicat, màquina virtual o contenidor. Això és degut al fet que, a diferència de l&#39;autocompressió, el proveïdor del núvol normalment &quot;atura o li treu prioritat&quot; al codi sense servidor quan no està en ús. Això vol dir que si el temps d&#39;execució (per exemple, el temps d&#39;execució de Java) requereix una quantitat considerable de temps per arrencar, crearà una latència addicional.</p>
+
+<p><strong>Límits de recursos</strong></p>
+
+<p>El programari sense servidor no és adequat per a algunes càrregues de treball computacionals, com ara l&#39;alt rendiment, a causa dels límits de recursos que imposen els proveïdors de núvol i també per que és probable que sigui més econòmic proporcionar massivament el nombre de servidors que es consideren necessaris en qualsevol moment en el temps.</p>
+
+<p><strong>Seguiment i depuració</strong></p>
+
+<p>El diagnòstic del rendiment o els problemes d&#39;ús de recursos excessius amb el codi sense servidor pot ser més difícil que amb el codi del servidor tradicional, ja que, tot i que es poden programar funcions completes, normalment no hi ha cap possibilitat d&#39;aprofundir en afegir perfils, depuradores o eines de monitoratge. A més, l&#39;entorn on s&#39;executa el codi no sol ser de codi obert, de manera que les seves característiques de rendiment no es poden reproduir exactament en un entorn local.</p>
+
+<p><strong>Seguretat</strong></p>
+
+<p>Serverless a vegades es considera erròniament més segur que les arquitectures tradicionals. Tot i que això és cert en certa manera perquè les vulnerabilitats del SO són ateses pel proveïdor del núvol, la superfície d&#39;atac total és significativament més gran, ja que hi ha molts més components per a l&#39;aplicació en comparació amb les arquitectures tradicionals i cada component és un punt d&#39;entrada a l&#39;aplicació sense servidor . A més, les solucions de seguretat que els clients solien tenir per protegir les seves càrregues de treball en el núvol es converteixen en irrellevants perquè els clients no poden controlar i instal·lar res al punt final i al nivell de xarxa com IDS / IPS.</p>
+
+<h2 id="tecnologia-amb-futur-o-només-es-tracta-d-39-una-moda">Tecnologia amb futur o només es tracta d&#39;una moda?</h2>
+
+<p>La informàtica sense servidor o FaaS és una evolució dels serveis oferts al núvol i encara que es tracta d&#39;una tecnologia nova són molts els operadors de CloudComputing que ofereixen serveis de funcions &quot;Sense Servidor&quot;, entre ells podem destacar els següents:</p>
+
+<ul>
+<li>Microsoft amb AzureFunctions.</li>
+<li>Amazon amb AWS Lambda.</li>
+<li>Google amb Google CloudFunctions</li>
+</ul>
+
+<h2 id="lectures-relacionades">Lectures relacionades</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Function_as_a_service"><strong>https://en.wikipedia.org/wiki/Function_as_a_service</strong></a></p>
+
+<p><a href="https://aws.amazon.com/es/lambda/features/"><strong>https://aws.amazon.com/es/lambda/features/</strong></a></p>
+
+<p><a href="https://azure.microsoft.com/es-es/services/functions/"><strong>https://azure.microsoft.com/es-es/services/functions/</strong></a></p>
+
+<p><a href="https://cloud.google.com/functions/docs/"><strong>https://cloud.google.com/functions/docs/</strong></a></p>
+
+<p><a href="https://www.ibm.com/cloud/functions"><strong>https://www.ibm.com/cloud/functions</strong></a></p>
+
+<p><a href="https://serverless.com/"><strong>https://serverless.com/</strong></a></p>
+
+<p><a href="https://www.slideshare.net/bennybauer1/serverless-when-to-faas"><strong>https://www.slideshare.net/bennybauer1/serverless-when-to-faas</strong></a></p>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

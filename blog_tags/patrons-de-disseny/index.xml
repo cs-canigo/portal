@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/patrons-de-disseny/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Sat, 16 Dec 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Principis de Microserveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</guid>
+      <description>Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d&#39;articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.</description>
+    </item>
+    
+    <item>
+      <title>Sobre les SDN</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/04/SDN-20170401/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/04/SDN-20170401/</guid>
+      <description>Què és i el per què de SDN. Consideracions per dummies que trobem al respecte</description>
+    </item>
+    
+    <item>
+      <title>Tecnologia darrera del Web d&#39;Arquitectura</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/11/web-arquitectura/</link>
+      <pubDate>Wed, 09 Nov 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/11/web-arquitectura/</guid>
+      <description>Us expliquem la tecnologia darrera la web d&#39;arquitectura i com l&#39;utilitzem de base per a part de la R&amp;D que fem a la unitat</description>
+    </item>
+    
+    <item>
+      <title>Cloud-Ready</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</guid>
+      <description>Aspectes a tenir en compte en la definició de l&#39;arquitectura d&#39;una aplicació per estar preparada per anar al Cloud</description>
+    </item>
+    
+    <item>
+      <title>(micro)serveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</link>
+      <pubDate>Thu, 04 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</guid>
+      <description>Introducció al patró de disseny basat en microserveis i les implicacions que té a l&#39;hora de pensar les aplicacions</description>
+    </item>
+    
+    <item>
+      <title>Aplicacions webs modernes: JSF vs REST</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</link>
+      <pubDate>Fri, 13 May 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</guid>
+      <description>Us donem una breu explicació d&#39;aquest canvi de paradigma en la capa de presentació</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Publicació versió 3.4.0</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Publicació versió 3.4.0\" />");
+		document.write("<meta name=\"description\" content=\"S\x27ha publicat una nova versió de Canigó donant suport a Spring 5, Spring Boot 2 i nous paradigmes de programació. També s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD)\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/noticies">
+											
+
+
+
+
+
+
+
+
+
+	Notícies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Publicació versió 3.4.0
+
+
+										
+
+									
+								</h1>
+
+								
+									<br />
+									25-03-2019
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 25-03-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>Amb l’alliberament de la <strong>versió 3.4.0 del framework Canigó</strong> s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als desenvolupadors d&rsquo;aplicacions un framework amb les últimes versions suportades de Java i Spring, a més de permetre nous paradigmes de programació.</p>
+
+<p>Com a afegit, a la versió 3.4 també s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a <strong>ARESTA</strong>.</p>
+
+<h2 id="actualització-tecnologies-base">Actualització tecnologies base</h2>
+
+<h3 id="java-11">Java 11</h3>
+
+<p>El Setembre de 2018, Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de suport. Podeu consultar la documentació d&rsquo;aquesta versió, així com les seves release notes al següent <a href="https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html">enllaç</a>.</p>
+
+<p>Des del CS Canigó, s&rsquo;ha certificat la compatibilitat de Canigó 3.4.0 amb aquesta versió Java 11.</p>
+
+<h3 id="spring-5">Spring 5</h3>
+
+<p>Spring Framework ofereix un model complet de programació i configuració per a aplicacions empresarials basades en Java. Spring 5 és la primera gran entrega de Spring Framework des de la versió 4 publicada el Desembre de 2013.</p>
+
+<p>El principal objectiu de Spring 5 és proporcionar els nous paradigmes de programació amb programació funcional (webflux) i programació reactiva.</p>
+
+<p>A més, el resum d&rsquo;actualitzacions que incorpora són les següents:</p>
+
+<h3 id="principals-actualitzacions-de-la-línia-base">Principals actualitzacions de la línia base:</h3>
+
+<ul>
+<li>Java SE 8+ Java EE 7+</li>
+<li>JDK 8</li>
+<li>Servlet 3.1</li>
+<li>Bean validation 1.1</li>
+<li>JPA 2.1</li>
+<li>JMS 2.0</li>
+<li>Millores en el test</li>
+</ul>
+
+<h3 id="principals-extensions-de-la-línia-base">Principals extensions de la línia base</h3>
+
+<ul>
+<li>Java EE 8</li>
+<li>Servlet 4.0</li>
+<li>Bean validation 2.0</li>
+<li>JPA 2.2</li>
+<li>JMS 2.0</li>
+<li>JSON Bingdins API 1.0</li>
+<li>Hibernate validator 6.0</li>
+<li>Apache Johnzon 1.1</li>
+<li>Refinat de la interacció amb resouces amb NIO.2</li>
+</ul>
+
+<p>Segons estudis realitzats a 5.160 desenvolupadors a finals del 2018, el 24% de les aplicacions que utilitzaven Spring ja utilitzaven la versió 5.</p>
+
+<h3 id="spring-boot-2">Spring Boot 2</h3>
+
+<p>Spring Boot, al igual que Canigó, proporciona eines pel desenvolupament fàcil d&rsquo;aplicacions empresarials amb el mínim possible de configuració.</p>
+
+<p>Spring Boot 1 acaba la seva línia de desenvolupament i manteniment a l&rsquo;Agost del 2019.</p>
+
+<p>Spring Boot 2 el seu principal objectiu és donar suport a Spring 5, Java 8 a la seva línia base i l&rsquo;actualització de les versions de les seves dependències així com també actualització dels seus servidors suportats.</p>
+
+<p>Segons estudis realitzats a 5.160 desenvolupadors a finals del 2018, amb pocs mesos des de la seva publicació, el 30% de les aplicacions que utilitzaven Spring Boot utilitzaven la versió 2,</p>
+
+<p>Amb l&rsquo;actualització a Spring Boot 2, Canigó 3.4.0 proporciona una actualitzada, potent, fàcil i productiva eina de creació d&rsquo;aplicacions amb Java.</p>
+
+<h2 id="arquitectura">Arquitectura</h2>
+
+<p>A la versió 3.4.0 de Canigó amb Spring 5 i Spring Boot 2 es proporciona les següents funcionalitats:</p>
+
+<h3 id="configuració-propietats-amb-yaml">Configuració propietats amb yaml</h3>
+
+<p>YAML és un estàndard de format fàcilment llegible que significa &ldquo;YAML Ain&rsquo;t Markup Language&rdquo;, per a més informació es pot consultar el següent <a href="https://yaml.org/">enllaç</a>.</p>
+
+<p>A la versió Canigó 3.4.0 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml.</p>
+
+<p>L&rsquo;objectiu d&rsquo;aquest canvi és utilitzar un estàndard més actual i llegible per a la definició de les propietats de les aplicacions i poder, en properes versions de Canigó, utilitzar totes les funcionalitats de configuració de propietats de Spring.</p>
+
+<p>Per a aplicacions amb Canigó 3.4, es recomana passar les propietats definides en format properties a format yaml.</p>
+
+<p>En properes versions de Canigó s&rsquo;eliminarà l&rsquo;actual funcionalitat de configuració de propietats pròpia de Canigó, per utilitzar les funcionalitats de configuració de propietats estàndard de Spring.</p>
+
+<p>Per a més informació podeu consultar la documentació del <a href="/canigo-documentacio-versions-3x-core/modul-configuracio/">Mòdul de configuració</a>.</p>
+
+<h3 id="programació-amb-estàndard-de-streams-reactius">Programació amb estàndard de Streams Reactius</h3>
+
+<p>Introduïts a la versió 8 de Java, els Streams són utilitzats pel processament eficient de col·leccions d&rsquo;objectes.</p>
+
+<p>Streams Reactius és un estàndard per al processament de streams asíncrona, amb contrapressió i no bloquejant. L’estàndard es defineix al <a href="http://www.reactive-streams.org/">Manifest Reactiu</a></p>
+
+<p>El resum d&rsquo;aquest estàndard seria que es crea un fluxe on existeix un publicador i un consumidor. El publicador va publicant elements al fluxe a la velocitat que el consumidor les consumeix, sense que hi hagi un bloqueig per part del publicador, ni una contrapressió pel consumidor.</p>
+
+<p><img src="/images/news/reactive-streams.png" alt="Reactive streams" /></p>
+
+<p>El resum de passos per una comunicació reactiva serien:
+1. El productor (o publicador) es subscriu amb un consumidor (o subscriptor)
+2. El consumidor quan està llest li indica al productor
+3. El productor li envia elements al consumidor
+4. El consumidor processa els elements i li demana més elements o cancel·la la petició al productor</p>
+
+<p>Spring 5 utilitza el projecte <a href="https://projectreactor.io/">Reactor</a> per a crear sistemes reactius eficients.</p>
+
+<h3 id="programació-reactiva">Programació reactiva</h3>
+
+<p>Spring 5 proporciona les funcionalitats per a la programació reactiva utilitzant l&rsquo;estàndard de Streams Reactius.</p>
+
+<p>L&rsquo;objectiu és proporcionar eines per a crear aplicacions no bloquejants, que siguin asíncrones, orientades a esdeveniments i que requereixin d&rsquo;un nombre reduït de fils.</p>
+
+<p>Amb el nou mòdul Spring Web Reactive, Spring proporciona un model de programació tradicional amb Model-Vista-Controlador (MVC), però executat amb reactiu i no bloquejant. A la imatge següent es mostra una comparativa entre Spring MVC i Spring Web Reactive:</p>
+
+<p><img src="https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/images/web-reactive-overview.png" alt="Web Reactive overview" /></p>
+
+<p>Un exemple pràctic on podrien actuar els Streams Reactius seria quan tenim un repositori de dades (que actua com a productor) que produeix dades que un servidor HTTP (que actua com a consumidor) escriu com a resposta. En l&rsquo;exemple, el principal propòsit dels Streams Reactius seria delegar al servidor HTTP el control de com de ràpid o lent el repositori de dades ha de proporcionar les dades.</p>
+
+<p>Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux, a més, proporciona suport per entrada de dades reactiva. Per a que un repositori de dades suporti reactiu el seu driver ha de ser no bloquejant (non-blocking). Els drivers de bases de dades que actualment proporcionen non-blocking, són: MongoDB, Redis, Cassandra i Couchbase.</p>
+
+<p>Per a mostrar com utilitzar reactiu amb un repositori de dades s&rsquo;ha publicat la següent guia d&rsquo;<a href="/canigo-documentacio-versions-3x-altres/modul-mongo-reactiu/">Utilització de mongo reactiu</a>.</p>
+
+<p>Per a més informació sobre programació reactiva amb Spring 5 podeu consultar aquest <a href="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html">enllaç</a>.</p>
+
+<h3 id="programació-funcional-webflux">Programació funcional (WebFlux)</h3>
+
+<p>La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l&rsquo;aplicació de funcions declarades.</p>
+
+<p>Spring WebFlux proporciona endpoints web de forma funcional a més dels controladors tradicionals, proporcionant un lleuger model de programació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa.</p>
+
+<p>A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux:</p>
+
+<p><img src="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png" alt="Spring MVC Webflux Venn" /></p>
+
+<p>Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+.</p>
+
+<p>Per a mostrar com utilitzar aquest nou paradigma de programació web s&rsquo;ha publicat la guia <a href="/canigo-documentacio-versions-3x-altres/modul-webFlux/">Utilització de web flux</a>.</p>
+
+<p>Per a més informació sobre programació funcional amb Spring 5 podeu consultar aquest <a href="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn">enllaç</a>.</p>
+
+<h3 id="spring-mvc-o-webflux">Spring MVC o WebFlux</h3>
+
+<p>Els següents punts són un resum del què s&rsquo;han de tenir en compte a l&rsquo;hora de decidir-se per utilitzar Spring MVC o WebFlux en una aplicació:</p>
+
+<ul>
+<li><p>Si l&rsquo;aplicació amb Spring MVC funciona correctament, no hi ha necessitat de canvi</p></li>
+
+<li><p>Si necessites un web stack amb non-blocking, Spring WebFlux et proporcionarà el màxim de funcionalitats reactives</p></li>
+
+<li><p>Si necessites una aplicació el més lleugera possible, amb programació web funcional i utilització de lambdas de Java 8, Spring Web flux et proporcionarà endpoint web funcionals</p></li>
+
+<li><p>Si l&rsquo;aplicació utilitza apis de persistència bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució</p></li>
+
+<li><p>Encara que l&rsquo;aplicació hagi d&rsquo;estar basada en Spring MVC, els controladors de Spring MVC poden cridar a altres components reactius com serveis remots o repositoris de dades no bloquejants.</p></li>
+</ul>
+
+<p>Si teniu dubtes a l&rsquo;hora de decidir si utilitzar Spring MVC o WebFlux, podeu posar-vos en contacte amb el CS Canigó al <a href="https://cstd.ctti.gencat.cat/jiracstd/projects/CAN">servei CAN</a> del JIRA CSTD o enviant-nos un mail a la <a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia del CS Canigó</a> per tractar el vostre cas.</p>
+
+<h3 id="certificació-amb-servidors-incrustats-spring-boot">Certificació amb servidors incrustats (Spring Boot)</h3>
+
+<p>S&rsquo;ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors incrustats amb Spring Boot:</p>
+
+<table>
+<thead>
+<tr>
+<th>Servidor incrustat</th>
+<th>Versió</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Tomcat</td>
+<td>9.0.16</td>
+</tr>
+
+<tr>
+<td>Undertow</td>
+<td>2.0.17.Final</td>
+</tr>
+
+<tr>
+<td>Jetty</td>
+<td>9.4.14.v20181114</td>
+</tr>
+
+<tr>
+<td>Netty (webflux)</td>
+<td>4.1.33.Final</td>
+</tr>
+
+<tr>
+<td>Reactor Netty (reactor webflux)</td>
+<td>0.8.5.RELEASE</td>
+</tr>
+</tbody>
+</table>
+
+<p>Per la següent versió de Canigó es certificarà Canigó 3.4.x amb els servidors suportats al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">full de ruta del CTTI</a></p>
+
+<p>Per més informació podeu consultar aquest <a href="/canigo/download/">enllaç</a>.</p>
+
+<h2 id="connectors">Connectors</h2>
+
+<p>Com a afegit, a la versió 3.4.0 s&rsquo;ha actualitzat el següent mòdul d&rsquo;integració:</p>
+
+<h3 id="aresta">ARESTA</h3>
+
+<p>L&rsquo;objectiu d&rsquo;aquest connector és proporcionar un punt d’accés cap a la Plataforma de Serveis de Gestió Documental (PSGD), també coneguda com a ARESTA, facilitant a les aplicacions l’ús d&rsquo;aquesta plataforma.</p>
+
+<p>A la versió 3.4.0 de Canigó, s&rsquo;ha alineat el connector amb PSGD o ARESTA a la versió 6.0.</p>
+
+<p>Podeu consultar la documentació d&rsquo;aquest connector a <a href="/canigo-documentacio-versions-3x-integracio/modul-psgd/">Mòduls d&rsquo;Integració - ARESTA (PSGD)</a>.</p>
+
+<h2 id="com-utilitzar-canigó-3-4-0">Com utilitzar Canigó 3.4.0</h2>
+
+<p>Properament es publicarà una actualització de <a href="/canigo/entorn-desenvolupament/">l&rsquo;entorn de desenvolupament</a> i del <a href="/canigo-download-related/plugin-canigo/">plugin de Canigó per Eclipse</a> per a la creació d&rsquo;aplicacions Canigó 3.4.0.</p>
+
+<p>Per poder passar una aplicació de Canigó 3.2 a Canigó 3.4 podeu seguir els passos descrits a <a href="/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/">Actualització Canigó 3.2 a Canigó 3.4</a>.</p>
+
+<p><br/>
+Per qualsevol dubte relatiu a aquesta nova versió de Canigó us podeu posar en contacte amb el CS Canigó al <a href="https://cstd.ctti.gencat.cat/jiracstd/projects/CAN">servei CAN</a> del JIRA CSTD o enviant-nos un mail a la <a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia del CS Canigó</a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

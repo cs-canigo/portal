@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Control d&#39;accés als recursos amb GICAR</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Control d\x27accés als recursos amb GICAR\" />");
+		document.write("<meta name=\"description\" content=\"Com integrar l\x27autorització d\x27una aplicació amb GICAR\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/gicar-saml2">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+		<a href="/gicar-integracio-intro/">Modalitats d'integració possibles</a>
+	</li>
+
+	<li>
+	
+		<a href="/gicar-saml2/">
+	
+
+	Integració amb SAML2
+
+	
+		</a>
+	
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Control d&#39;accés als recursos amb GICAR
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 13-11-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>En aquest document es presenta una la solució que ofereix GICAR, per a donar al procés d’autenticació de les funcionalitats per a poder afegir el rol que juga l’usuari dins de les aplicacions a GICAR i, d’aquesta manera, alliberar a l’aplicació d’haver de mantenir una taula d’usuari i rol, i per tant proporcionar a l’aplicació la informació per a fer l’autorització.</p>
+
+<h2 id="avantatges-que-aporta-la-solució-proposada">Avantatges que aporta la solució proposada</h2>
+
+<ol>
+<li>Augmentar l’estandardització de com es construeixen les aplicacions.</li>
+<li>Gestió autoservei i descentralitzada dels rols dels usuaris a les aplicacions.</li>
+<li>Uns mateixos rols definits poden servir per un grup d’aplicacions.</li>
+<li>Simplificació del model autoritzatiu de les aplicacions.</li>
+<li>Alleugeriment d’esforços al donar d’alta un usuari en aplicacions que tenen el model autoritzatiu creuat.</li>
+<li>Gestió automàtica de revocació de rols quan un usuari marxa de l’organització.</li>
+<li>Auditoria centralitzada d’assignació / des-assignació de rols.</li>
+<li>Capacitat d’integració de la solució definida amb Remedy.</li>
+<li>Solució plenament compatible i orientada al model de directori únic futurible.</li>
+</ol>
+
+<h2 id="arquitectura-d-integració-amb-gicar-només-amb-autenticació">Arquitectura d&rsquo;integració amb GICAR només amb autenticació</h2>
+
+<p>A continuació es mostren les dades que es faciliten des de GICAR actualment quan un usuari s’autentica a una aplicació si l&rsquo;autenticació es fa OK:</p>
+
+<p><img src="/related/gicar/autoritzacio-previa.png" alt="Integració Aplicacions GICAR" /></p>
+
+<h2 id="arquitectura-d-integració-amb-gicar-incorporant-l-autorització">Arquitectura d&rsquo;integració amb GICAR incorporant l&rsquo;autorització</h2>
+
+<p>A continuació es mostren les dades que es faciliten des de GICAR actualment quan un usuari s’autentica a una aplicació si l&rsquo;autenticació es fa OK:</p>
+
+<p><img src="/related/gicar/autoritzacio-final.png" alt="Integració Aplicacions GICAR" /></p>
+
+<p>Els rols seran transferits als frontals de les aplicacions a través de protocol SAMLv2, per tant si l&rsquo;aplicació vol assolir aquesta modalitat d&rsquo;integració caldrà que s&rsquo;integri via SAML2 (per exemple amb agent de Shibboleth, via Out Of The Box si l&rsquo;aplicació suporta SAML2, o via un ADFS).</p>
+
+<h2 id="com-es-passen-els-grups-d-usuaris-a-les-aplicacions">Com es passen els grups d&rsquo;usuaris a les aplicacions:</h2>
+
+<p>Els rols de l&rsquo;usuari viatjaran a través del claim:</p>
+
+<pre><code>&quot;urn:oid:2.16.840.1.113719.1.1.4.1.25&quot; - friendlyName=&quot;groupMembership&quot;.
+</code></pre>
+
+<p>Aquest claim tindrà el següent format:</p>
+
+<pre><code>&lt;saml2:Attribute FriendlyName=&quot;groupMembership&quot; Name=&quot;urn:oid:2.16.840.1.113719.1.1.4.1.25&quot; NameFormat=&quot;urn:oasis:names:tc:SAML:2.0:attrname-format:uri&quot;&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;77_11_VISCAT_Usuaris_ADI&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;elk_kibana_user&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;ACA_ADMIN_APLICACIONS-GICARDC&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;INT_98_01 TECA_Administracio_ADD&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;GESNUS_CESICAT_PROVA-GICARDC&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;0192_MANTAINER_3162&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;PROVA_MULTIPLE-GICARGESTIODC&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;INT_77_11_VISCAT_Usuaris_ACA_ADD&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;192_206_gaudi&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;CTTI_XPACK-GICARDC&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;prova&lt;/saml2:AttributeValue&gt;¡
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;Usuaris_ColectiuT2&lt;/saml2:AttributeValue&gt;
+    &lt;saml2:AttributeValue xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:type=&quot;xs:string&quot;&gt;INT_90_12_ SiteTributari_TecnicAca&lt;/saml2:AttributeValue&gt;
+&lt;saml2:AttributeValue xmlns:xs&lt;/saml2:Attribute&gt;
+</code></pre>
+
+<p>En el cas d&rsquo;utilitzar un agent de Shibboleth, el claim es transforma en capçalera HTTP i serà transcrita de la següent forma:</p>
+
+<pre><code>HTTP_GICAR_MEMBERL --&gt; VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;VPN_GENERIC
+</code></pre>
+
+<p>Els grups estaran separats pel caràcter &ldquo;;&rdquo;.</p>
+
+<h2 id="filosofia-del-mòdul-de-gestió-d-autoritzacions">Filosofia del mòdul de gestió d&rsquo;autoritzacions</h2>
+
+<p>En el nou mòdul de GDI de gestió d&rsquo;autoritzacions, existiran dos tipus de rols que es podran assignar a les identitats de GICAR:</p>
+
+<ol>
+<li>Rols d’autorització simples: representen un rol/permís dins d’una aplicació.</li>
+<li>Rols d’autorització múltiples: representen un conjunt de rols d’autorització simples. Al assignar un rol d’assignació múltiple s’assignen de facto tots els simples que aquest conté.</li>
+</ol>
+
+<p><img src="/related/gicar/autoritzacio-tipusrols.PNG" alt="Integració Aplicacions GICAR" /></p>
+
+<p>Des d’àmbit es podran disposar de dos tipus de privilegis que permetran:</p>
+
+<ol>
+<li>Operador de rols: gestionar l’assignació dels rols d’assignació simples i múltiples als usuaris de GICAR.</li>
+<li>Gestor de rols:</li>
+<li>Gestionar qui és l’operador de rols,</li>
+<li>Definir quins rols d’autorització simples composen cada rol d’autorització múltiple.</li>
+<li>Crear nous rols d’autorització simples o múltiples.</li>
+</ol>
+
+<h3 id="exemple">Exemple</h3>
+
+<ol>
+<li>Rols d’autorització simples: representen un rol/permís dins d’una aplicació.</li>
+</ol>
+
+<p><img src="/related/gicar/autoritzacio-ex1.png" alt="Integració Aplicacions GICAR" /></p>
+
+<ol>
+<li>Rols d’autorització múltiples: representen un conjunt de rols d’autorització simples. Al assignar un rol d’assignació múltiple s’assignen de facto tots els simples que aquest conté.</li>
+</ol>
+
+<p><img src="/related/gicar/autoritzacio-ex2.png" alt="Integració Aplicacions GICAR" /></p>
+
+<h2 id="utilització-del-mòdul-de-gestió-d-autoritzacions">Utilització del mòdul de gestió d&rsquo;autoritzacions</h2>
+
+<h3 id="rol-d-operador">Rol d&rsquo;Operador</h3>
+
+<p>Si es disposa del rol d&rsquo;Operador de rols, accedir amb un navegador al següent link <a href="https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/">https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/</a></p>
+
+<p><img src="/related/gicar/autoritzacio-md1.png" alt="Integració Aplicacions GICAR" /></p>
+
+<p>Seleccionar el botó &ldquo;Gestionar&rdquo;, en la pàgina següent apareixerà el llistat dels usuaris ja adscrits al grup seleccionat.
+En aquesta pàgina es podran gestionar les altes i les baixes individuals d&rsquo;usuaris:</p>
+
+<p><img src="/related/gicar/autoritzacio-md2.png" alt="Integració Aplicacions GICAR" /></p>
+
+<p>Per a ALTES: inserir el DNI de l&rsquo;usuari  (1) o, en la seva absència l&rsquo;adreça de correu electrònic i seleccionar el botó &ldquo;Enviar&rdquo; (2).</p>
+
+<p><img src="/related/gicar/autoritzacio-md3.png" alt="Integració Aplicacions GICAR" /></p>
+
+<p>Per a BAIXES: seleccionar el botó &ldquo;esborrar&rdquo; en la línia corresponent a l&rsquo;usuari a eliminar del grup.</p>
+
+<h3 id="rol-d-administrador">Rol d&rsquo;Administrador</h3>
+
+<p>Per a fer ús del rol d&rsquo;administrador contacteu amb la OTGICAR.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

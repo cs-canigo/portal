@@ -1,0 +1,11 @@
+cat.gencat.ctti.canigo.arch.core.config
+cat.gencat.ctti.canigo.arch.core.config.i18n
+cat.gencat.ctti.canigo.arch.core.constants
+cat.gencat.ctti.canigo.arch.core.exceptions
+cat.gencat.ctti.canigo.arch.core.logging
+cat.gencat.ctti.canigo.arch.core.logging.jmx
+cat.gencat.ctti.canigo.arch.core.services.info
+cat.gencat.ctti.canigo.arch.core.threadlocal
+cat.gencat.ctti.canigo.arch.core.utils
+cat.gencat.ctti.canigo.arch.core.uuid.exception
+cat.gencat.ctti.canigo.arch.core.uuid.impl

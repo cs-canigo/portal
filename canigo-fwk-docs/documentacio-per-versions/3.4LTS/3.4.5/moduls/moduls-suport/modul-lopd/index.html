@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>LOPD</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"LOPD\" />");
+		document.write("<meta name=\"description\" content=\"Aplicació de protecció de dades.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/'>3.4.5</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/moduls/'>moduls</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-suport/'>moduls suport</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.5/moduls/moduls-suport/modul-lopd/'>modul lopd</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	LOPD
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-04-2015
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El servei de LOPD de Canigó permet assignar un determinat nivell de protecció a les dades de l&rsquo;aplicació que l&rsquo;utilitzi.</p>
+
+<h2 id="context-i-escenaris-d-ús">Context i Escenaris d&rsquo;Ús</h2>
+
+<p>El servei de LOPD es troba dins dels serveis generals de Canigó.<br />
+El seu ús és necessari en cas de voler protegir dades sensibles de l&rsquo;aplicació o d&rsquo;enregistrar el seu accés.</p>
+
+<h2 id="a-qui-va-dirigit">A qui va dirigit</h2>
+
+<p>Aquest document va dirigit als següents perfils:</p>
+
+<ul>
+<li>Programador. Per conèixer l&rsquo;ús del servei.</li>
+<li>Arquitecte. Per conèixer quins són els components i la configuració del servei.</li>
+</ul>
+
+<h2 id="glossari">Glossari</h2>
+
+<p><strong>LOPD:</strong> Llei Orgànica de Protecció de Dades</p>
+
+<h2 id="descripció-detallada">Descripció Detallada</h2>
+
+<h3 id="arquitectura-i-components">Arquitectura i Components</h3>
+
+<h4 id="introducció">Introducció</h4>
+
+<p>El servei LOPD ofereix suport a les aplicacions basades en Canigó per facilitar el compliment de la LOPD. Donat que l&rsquo;aplicació dels mecanismes de seguretat afecta únicament a les dades emmagatzemades en la base de dades s&rsquo;ha definit un sistema d&rsquo;anotacions per tal de &ldquo;marcar&rdquo; les dades sensibles en els TO&rsquo;s (Transfer Object).</p>
+
+<h4 id="instal-lació">Instal-lació</h4>
+
+<p>Disposar del mòdul LOPD és pot fer mitjançant dos camins:</p>
+
+<p>1.- Utilitzar l&rsquo;eina de l&rsquo;entorn de treball de Canigó (plugin per l&rsquo;eclipse). On es podrà seleccionar el servei dintre del grup &ldquo;suport&rdquo;.</p>
+
+<p>NOTA: L&rsquo;eina afegeix automàticament un arxiu anomenat lopd.properties situat en src\main\resources\config\props\ que conté la llavor utilitzada per fer el xifrat/desxifrat de les dades. En la versió 1.0.0 del servei aquest paràmetre no s&rsquo;està utilitzant així que no es necessari configurar-lo.</p>
+
+<p>2.- Afegir de forma manual les dependències del servei.</p>
+
+<p>Modificar el pom.xml afegint:</p>
+
+<pre><code>&lt;properties&gt;
+    &lt;canigo.support.lopd&gt;[1.4.0,1.5.0)&lt;/canigo.support.lopd&gt;
+&lt;/properties&gt;
+
+&lt;dependency&gt;
+      &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+      &lt;artifactId&gt;canigo.support.lopd&lt;/artifactId&gt;
+      &lt;version&gt;${canigo.support.lopd}&lt;/version&gt;
+&lt;/dependency&gt;
+
+...
+
+&lt;build&gt;
+...
+     &lt;plugin&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;aspectj-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;1.10&lt;/version&gt;
+        &lt;configuration&gt;
+            &lt;complianceLevel&gt;1.7&lt;/complianceLevel&gt;
+            &lt;source&gt;1.7&lt;/source&gt;
+            &lt;target&gt;1.7&lt;/target&gt;
+             &lt;weaveDependencies&gt;
+            &lt;weaveDependency&gt;
+                  &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+                  &lt;artifactId&gt;canigo.support.lopd&lt;/artifactId&gt;
+            &lt;/weaveDependency&gt;
+          &lt;/weaveDependencies&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+            &lt;execution&gt;
+                &lt;goals&gt;
+                    &lt;goal&gt;compile&lt;/goal&gt;
+                &lt;/goals&gt;
+                &lt;configuration&gt;
+                    &lt;complianceLevel&gt;1.7&lt;/complianceLevel&gt;
+                    &lt;source&gt;1.7&lt;/source&gt;
+                    &lt;target&gt;1.7&lt;/target&gt;
+                &lt;/configuration&gt;
+            &lt;/execution&gt;
+        &lt;/executions&gt;
+    &lt;/plugin&gt;
+...
+&lt;/build&gt;
+
+</code></pre>
+
+<h4 id="components-del-servei">Components del Servei</h4>
+
+<p>El servei defineix tres nivells de seguretat diferents i dos tipus d&rsquo;operacions amb les dades. L&rsquo;aplicació dels nivells de seguretat està bassada en l&rsquo;ús d&rsquo;una anotació especial de seguretat anomenada LOPDSecure.</p>
+
+<p><strong>Nivells de seguretat</strong></p>
+
+<p>Els nivells de seguretat creats inicialment són els següents:</p>
+
+<ul>
+<li>LOW: Nivell de seguretat baix. Enregistrament de la dada.</li>
+<li>MED: Nivell de seguretat mitjà. Enregistrament de la dada.</li>
+<li>HIGH: Nivell de seguretat alt. Enregistrament i xifrat/desxifrat de la dada.</li>
+</ul>
+
+<p><strong>Operacions amb dades</strong></p>
+
+<p>S&rsquo;han definit dos tipus d&rsquo;operacions possibles aplicables en funció del nivell de seguretat.</p>
+
+<ul>
+<li>Enregistrament de les dades: Operació que registra l&rsquo;accés d&rsquo;una dada per part d&rsquo;un usuari.</li>
+<li>Xifrat/desxifrat de les dades: Operació que xifra o desxifra una dada accedida per un usuari.</li>
+</ul>
+
+<h3 id="ús-del-servei">Ús del servei</h3>
+
+<h4 id="configuració-del-servei">Configuració del servei</h4>
+
+<p>A spring s&rsquo;ha de configurar el servei per a indiciar la classe que realitza l&rsquo;enregistrament de les dades i el xifrat/desxifrat de les dades.</p>
+
+<pre><code>
+    &lt;!-- Actions --&gt;
+&lt;bean id=&quot;traceOperation&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.operations.trace.impl.TraceImpl&quot;&gt;
+&lt;/bean&gt;
+
+ &lt;bean id=&quot;cipherOperation&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.operations.cipher.impl.BouncyCastleAESCipherImpl&quot;&gt;
+    &lt;property name=&quot;key&quot; value=&quot;${lopd.secretkey}&quot;/&gt;
+    &lt;!--Optional --&gt;
+    &lt;property name=&quot;charset&quot; value=&quot;UTF-8&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- Levels --&gt;
+&lt;bean id=&quot;lowLevel&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.levels.Low&quot;&gt;
+    &lt;property name=&quot;trace&quot; ref=&quot;traceOperation&quot;/&gt;
+&lt;/bean&gt;
+&lt;bean id=&quot;medLevel&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.levels.Med&quot;&gt;
+    &lt;property name=&quot;trace&quot; ref=&quot;traceOperation&quot;/&gt;
+&lt;/bean&gt;
+&lt;bean id=&quot;highLevel&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.levels.High&quot;&gt;
+    &lt;property name=&quot;trace&quot; ref=&quot;traceOperation&quot;/&gt;
+    &lt;property name=&quot;cipher&quot; ref=&quot;cipherOperation&quot;/&gt;
+&lt;/bean&gt;
+
+&lt;!-- Defined Levels to be used --&gt;
+&lt;bean id=&quot;levels&quot; class=&quot;cat.gencat.ctti.canigo.arch.support.lopd.levels.Levels&quot;&gt;
+    &lt;property name=&quot;low&quot; ref=&quot;lowLevel&quot;/&gt;
+    &lt;property name=&quot;med&quot; ref=&quot;medLevel&quot;/&gt;
+    &lt;property name=&quot;high&quot; ref=&quot;highLevel&quot;/&gt;
+&lt;/bean&gt;
+</code></pre>
+
+<p>Al fitxer Application.Java s&rsquo;ha d&rsquo;afegir el Bean del AspectLOPD</p>
+
+<pre><code>@Bean
+public AspectLOPD aspectLOPD() {
+     return Aspects.aspectOf(AspectLOPD.class);
+}
+</code></pre>
+
+<h4 id="anotacions">Anotacions</h4>
+
+<p>Com s&rsquo;ha indicat en punts anteriors l&rsquo;aplicació de la seguretat es fa amb una anotació. Aquesta Anotació està dissenyada per posar-se en els mètodes setter i getter de les Entitats responsables de la transferència de les dades entre la base de dades i els objectes de negoci de l&rsquo;aplicació.</p>
+
+<p>Un exemple de com utilitzar la nova anotació seria el següent:</p>
+
+<pre><code class="language-java">import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import cat.gencat.ctti.canigo.arch.support.lopd.annotation.LOPDSecure;
+
+
+
+@Entity
+@Table(name = &quot;equipaments&quot;)
+public class Equipament {
+    
+    public static final String ID = &quot;id&quot;;
+    public static final String NOM = &quot;nom&quot;;
+    public static final String MUNICIPI = &quot;municipi&quot;;
+
+    private Long id;
+    
+    private String nom;
+    
+    private String municipi;
+    
+    public Equipament() {
+        
+    }
+    
+    public Equipament(Long id) {
+        this.id =id;
+    }
+    
+    @Id
+    @GeneratedValue(generator = &quot;generator&quot;)
+    @GenericGenerator(name = &quot;generator&quot;, strategy = &quot;increment&quot;)
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    
+    @Column(name = &quot;nom&quot;, nullable = false, unique = true)
+     @LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
+    public String getNom() {
+        return nom;
+    }
+
+     @LOPDSecure(level = &quot;LOW&quot;)//&lt;--Nova Anotació de seguretat
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+     @LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
+    @Column(name = &quot;municipi&quot;)
+    public String getMunicipi() {
+        return municipi;
+    }
+
+     @LOPDSecure(level = &quot;HIGH&quot;)//&lt;--Nova Anotació de seguretat
+    public void setMunicipi(String municipi) {
+        this.municipi = municipi;
+    }   
+    
+    @Override
+    public String toString() {
+        return &quot;Equipament [nom=&quot; + nom + &quot;]&quot;;
+    }
+    
+    public void addCustomer() {
+        System.out.println(&quot;addCustomer() is running &quot;);
+    }
+
+}
+
+</code></pre>
+
+<p>Com es pot apreciar l&rsquo;anotació</p>
+
+<pre><code>@LOPDSecure(value = [NIVELL_SEGURETAT])
+</code></pre>
+
+<p>està informada davant de cada setter i getter on es vol que s&rsquo;apliqui la seguretat. L&rsquo;anotació pot posar-se davant d&rsquo;un getter o davant d&rsquo;un setter per separat, donant així la possibilitat d&rsquo;aplicar la seguretat només a un determinat tipus d&rsquo;accés a la dada.
+S&rsquo;ha de tindre en compte que, en el cas especial de la política de seguretat HIGH, l&rsquo;anotació ha d&rsquo;anar en el setter i el getter de la dada en qüestió obligatòriament. Si no es fes així, la dada es xifraria i mai es podria recuperar el seu valor original o bé s&rsquo;interpretaria com a xifrada quan no ho fos i s&rsquo;intentaria desxifrar, provocant l&rsquo;alteració del valor mostrat.</p>
+
+<p>Un altre aspecte important, també en relació a la política HIGH, és que el tipus de la dada que ha de figurar en la base de dades sempre ha de ser format text. Això és així per que el procés de xifrat transforma la dada (del tipus que sigui) en un array de bytes, perdent qualsevol informació del tipus original. S&rsquo;haurà de tindre especial atenció en el xifrat de dades del tipus numèric o data, per aquest motiu.</p>
+
+<p><strong>Consulta de les dades</strong></p>
+
+<p>Una vegada aplicades les anotacions sempre que s&rsquo;accedeixi a una dada on el seu getter o setter hagi sigut anotat es podrà consultar en el log de l&rsquo;aplicació una traça com la següent:</p>
+
+<pre><code>canigo Message: 17 05 2018 16:17:48,403 DEBUG [http-nio-8080-exec-1] DEBUG [http-nio-8080-exec-1] cat.gencat.ctti.canigo.arch.support.lopd.annotation.impl.AspectLOPD - [AspectLOPD][level][valor = HIGH]
+canigo Message: 17 05 2018 16:17:58,043 INFO  [http-nio-8080-exec-1] INFO  [http-nio-8080-exec-1] cat.gencat.ctti.canigo.arch.support.lopd.operations.trace.impl.TraceImpl - [LOPD access entry][Property: Municipi][of Class: cat.gencat.can2303.model.Equipament][accessed by user: admin][at: 17/05/2018 04:17:54]
+
+</code></pre>
+
+<p>De cara al xifrat de les dades, totes les que hagin sigut anotades amb nivell de seguretat HIGH, apareixeran xifrades en base de dades.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

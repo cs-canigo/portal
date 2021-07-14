@@ -1,0 +1,43 @@
+version: 1.0.0
+resources:
+ environments:
+    - id: int
+      environment: int
+      position: 1
+      deploymentType: AUTOMATIC
+    - id: pre
+      environment: pre
+      position: 2
+      deploymentType: SEMIAUTOMATIC
+    - id: pro
+      environment: pro
+      position: 3
+      deploymentType: SEMIAUTOMATIC
+ infrastructures:
+    - id: cpdx_oracle_xxxx
+      element: oracle
+      environments:
+        - environment: int
+        - environment: pre
+        - environment: pro
+      provider: cpdx
+ artifacts:
+    - id: artifact01
+      artifactType: plans
+      path: sql_scripts/plans.xml
+build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: bbdd
+      generates:
+        - artifact01
+deploy:
+ steps:
+    - id: ds001
+      position: 1
+      type: predefined
+      destination: cpdx_oracle_xxxx
+      artifact: artifact01
+notificationRecipients:
+    - nom@domini.cat

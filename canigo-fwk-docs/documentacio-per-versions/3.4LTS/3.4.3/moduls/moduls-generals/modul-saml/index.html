@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Mòdul Seguretat SAML</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mòdul Seguretat SAML\" />");
+		document.write("<meta name=\"description\" content=\"Autenticació d\x27usuaris utilitzant SAML2\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.3/'>3.4.3</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.3/moduls/'>moduls</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.3/moduls/moduls-generals/'>moduls generals</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.3/moduls/moduls-generals/modul-saml/'>modul saml</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Mòdul Seguretat SAML
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 06-05-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El <strong>Mòdul de Seguretat SAML (<a href="https://en.wikipedia.org/wiki/SAML_2.0">Security Assertion Markup Language</a>)</strong> té com a propòsit principal gestionar l&rsquo;autenticació
+dels usuaris en aplicacions Canigó a partir d’assercions SAML2 del proveïdor d&rsquo;identitats (<em>Shibboleth</em>) de GICAR.</p>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<p>El sistema d&rsquo;autenticació per API REST de Canigó a partir d&rsquo;assercions SAML GICAR té dues particularitats:</p>
+
+<ul>
+<li><p>És <strong>totalment autocontingut en Java</strong>, es desplega amb la pròpia aplicació i és indiferent del servidor web per davant del servidor d’aplicacions.
+No requereix la instal·lació de software binari ni configuració dels Apache que requereix Shibboleth SP.</p></li>
+
+<li><p>És totalment <strong>stateless pel que fa a l’API REST</strong>. Amb implicacions, doncs SAML és un protocol totalment <em>stateful</em> i que fa ús de <em>cookies</em> per a desar informació.</p></li>
+</ul>
+
+<p>Per a poder fer conviure una API <em>stateless</em> (aplicació Canigó amb autenticació JWT) i un sistema d&rsquo;autenticació basat en assercions SAML <em>stateful</em> s&rsquo;ha de dividir l&rsquo;aplicació en dues parts:</p>
+
+<p>•  <strong>Webapp stateless</strong> que conté l’API REST protegida per <em>token JWT</em> (Aplicació Canigó amb tota la funcionalitat).</p>
+
+<p>•  <strong>Webapp stateful</strong> (aplicació Bridge) que conté la interfície d’usuari protegida per asserció SAML. Actua com a Service Provider(SP) encarregant-se únicament
+d&rsquo;obtenir i tractar les assercions SAML amb el proveïdor d&rsquo;identitat (GICAR).</p>
+
+<p><br/>
+L&rsquo;aplicació <em>Stateful</em> funciona com a una SPA protegida per SAML. En accedir, si l&rsquo;usuari no es troba autenticat, serà redirigit al <em>login</em> de GICAR.
+Un cop autenticat de forma satisfactòria l&rsquo;usuari disposarà d&rsquo;una asserció SAML vàlida. La SPA s&rsquo;ha d&rsquo;encarregar, aleshores, de cridar a l&rsquo;Endpoint <code>/api/saml</code> de l&rsquo;aplicació <em>Stateless</em>
+amb l&rsquo;asserció SAML com a paràmetre codificat en Base64. Aquest Endpoint retorna un token JWT vàlid per a accedir als serveis REST de l&rsquo;aplicació <em>Stateless</em> protegits.</p>
+
+<p><br/>
+<div><img src="/related/canigo/documentacio/modul-saml/diagrama-fluxe-saml-drawio.png" alt="Diagrama seqüencia SAML-GICAR-JWT" title="Diagrama seqüencia SAML-GICAR-JWT"></img></div></p>
+
+<h2 id="aplicació-bridge-stateful">Aplicació Bridge (Stateful)</h2>
+
+<p>Des de Canigó <strong>es proporciona una aplicació Bridge plantilla</strong> per tal de fer-se servir com a <em>Service Provider</em>.
+Aquesta aplicació bridge s&rsquo;ha de sol·licitar a l&rsquo;equip del CS Canigó ja que conté dades sensibles.</p>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>A continuació es descriu la configuració que caldrà aplicar.</p>
+
+<h4 id="servidor-web">Servidor Web</h4>
+
+<p><strong>SAML depèn dels noms DNS dels serveis i la generació de metadades SAML depèn de que l&rsquo;aplicació conegui el nom DNS</strong>. Els noms de DNS han de tenir sentit al navegador de l’usuari.
+Es poden crear metadades de SP amb noms de DNS locals encara que l’IdP no els conegui però el navegador ha de ser capaç de resoldre&rsquo;l.
+Utilitzar <em>localhost</em> no funciona, cal un proxy que exposi un nom DNS i es recomana que el protocol d&rsquo;accés sigui SSL.
+Per a realitzar aquesta configuració s&rsquo;ha utilitzat Apache 2.4. Es descriu a continuació.</p>
+
+<p><br/>
+Al fitxer <code>httpd.conf</code> s&rsquo;han habilitat els següents mòduls:</p>
+
+<pre><code>   proxy_module
+   proxy_connect_module
+   proxy_http_module
+   ssl_module
+</code></pre>
+
+<p>És possible que aquests mòduls requereixin l&rsquo;activació d&rsquo;altres mòduls del que tinguin dependències. En cas que sigui així, també s&rsquo;haurien d&rsquo;incloure per a que el servidor funcioni correctament.</p>
+
+<p><br/>
+Caldrà incloure la següent configuració al final del fitxer <code>httpd.conf</code>:</p>
+
+<pre><code>   &lt;IfModule ssl_module&gt;
+   Include conf/extra/httpd-ssl.conf
+   SSLRandomSeed startup builtin
+   SSLRandomSeed connect builtin
+   &lt;/IfModule&gt;
+</code></pre>
+
+<p><br/>
+I caldrà configurar el <em>VirtualHost</em> al fitxer <code>conf/extra/httpd-ssl.conf</code>:</p>
+
+<pre><code>   &lt;VirtualHost _default_:443&gt;
+
+   #Path on es deixa el contingut stàtic de l'aplicació Bridge
+   DocumentRoot &quot;${SRVROOT}/htdocs/saml&quot;
+   ServerName vagrant.vm
+   ServerAlias www.vagrant.vm
+   ServerAdmin admin@example.cat
+   ErrorLog &quot;${SRVROOT}/logs/error_bridge.log&quot;
+   TransferLog &quot;${SRVROOT}/logs/access.log&quot;
+
+   SSLEngine on
+
+   SSLProxyEngine on
+
+   ProxyRequests Off
+   ProxyPreserveHost On
+
+   #connexió amb l'aplicació Bridge
+   ProxyPass /bridge/ http://localhost:8080/bridge/
+   ProxyPassReverse /bridge/ http://localhost:8080/bridge/
+
+   #connexió amb l'API de Canigó
+   ProxyPass /api/ http://localhost:9090/api/
+   ProxyPassReverse /api/ http://localhost:9090/api/
+
+   SSLCipherSuite ALL:!ADH:!EXPORT56:RC4+RSA:+HIGH:+MEDIUM:+LOW:+SSLv2:+EXP:+eNULL
+
+   #Certificats SSL
+   SSLCertificateFile &quot;${SRVROOT}/conf/ssl/apache.crt&quot;
+   SSLCertificateKeyFile &quot;${SRVROOT}/conf/ssl/apache.key&quot;
+
+   &lt;FilesMatch &quot;\.(cgi|shtml|phtml|php)$&quot;&gt;
+      SSLOptions +StdEnvVars
+   &lt;/FilesMatch&gt;
+   &lt;Directory &quot;${SRVROOT}/cgi-bin&quot;&gt;
+      SSLOptions +StdEnvVars
+   &lt;/Directory&gt;
+
+   BrowserMatch &quot;.*MSIE.*&quot; \
+          nokeepalive ssl-unclean-shutdown \
+          downgrade-1.0 force-response-1.0
+
+
+   &lt;/VirtualHost&gt;
+</code></pre>
+
+<p><br/>
+Els certificats <code>apache.crt</code> i <code>apache.key</code> es poden generar amb <a href="ttps://www.openssl.org/">Openssl</a>:</p>
+
+<pre><code>        openssl req -x509 -nodes -days 1095 -newkey rsa:2048 -out ${SRVROOT}/conf/ssl/apache.crt -keyout ${SRVROOT}/conf/ssl/apache.key
+</code></pre>
+
+<p><br/>
+Aquesta operació demanarà emplenar algunes dades però la que és realment important és el paràmetre <em>Common Name</em> que ha de ser el mateix que el valor indicat a <em>ServerName</em> al fitxer <code>httpd-ssl.conf</code>.
+Addicionalment, i en cas que el navegador no pugui resoldre el nom de servidor, s&rsquo;haurà d&rsquo;afegir al fitxer <code>hosts</code>:</p>
+
+<pre><code>   127.0.0.1  vagrant.vm
+</code></pre>
+
+<p><br/>
+Per a realitzar la connexió per HTTPS a l&rsquo;aplicació Bridge, s&rsquo;ha d&rsquo;indicar el <em>schema</em> i el <em>proxyPort</em> al Tomcat de Spring Boot, concretament al fitxer <code>TomcatContainerCustomizer</code>:</p>
+
+<pre><code>   import org.slf4j.Logger;
+   import org.slf4j.LoggerFactory;
+   import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
+   import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+   import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
+   import org.springframework.stereotype.Component;
+
+   @Component
+   public class TomcatContainerCustomizer implements EmbeddedServletContainerCustomizer{
+
+      private static final Logger logger = LoggerFactory.getLogger(TomcatContainerCustomizer.class);
+
+      @Override
+      public void customize(ConfigurableEmbeddedServletContainer container) {
+         if (container instanceof TomcatEmbeddedServletContainerFactory) {
+            final TomcatEmbeddedServletContainerFactory tomcat = (TomcatEmbeddedServletContainerFactory) container;
+            tomcat.addConnectorCustomizers(connector -&gt; {
+               connector.setScheme(&quot;https&quot;);
+               connector.setProxyPort(443);
+            });
+            logger.info(&quot;Enabled secure scheme (https).&quot;);
+         } else {
+            logger.warn(&quot;Could not change protocol scheme because Tomcat is not used as servlet container.&quot;);
+         }
+      }
+   }
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="intercanvi-de-metadades-aplicació-bridge-sp-amb-idp-gicar">Intercanvi de Metadades Aplicació Bridge (SP) amb IdP GICAR</h4>
+
+<p>Per a realitzar la comunicació SAML entre SP (aplicació Bridge) i IdP (GICAR) cadascun ha de tenir les metadades de l&rsquo;altre. Per a obtenir les metadades de l&rsquo;IdP GICAR s&rsquo;ha de demanar a GICAR.
+A l&rsquo;entorn de PRE, a la redacció d&rsquo;aquest manual, es poden trobar a: <a href="https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth">https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth</a>.</p>
+
+<p><br/>
+A l&rsquo;aplicació Bridge proporcionada pel CS Canigó, aquest fitxer s&rsquo;ha ubicat a <code>src/resources/saml/metadata/metaDadesGicarPRE.xml</code>.
+De forma que, al fitxer de propietats <code>config/props/saml.properties</code> s’ha d’indicar la ruta:</p>
+
+<pre><code>   *.idpMetadata=/saml/metadata/metaDadesGicarPre.xml
+</code></pre>
+
+<p>Del fitxer de metadades proporcionat per GICAR s&rsquo;obté l&rsquo;<em>entityId</em> que també caldrà indicar-lo també al fitxer <code>saml.properties</code>:</p>
+
+<pre><code>   *.idpEntityId=https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth
+</code></pre>
+
+<p><br/>
+Se li ha de proporcionar a GICAR el fitxer metadades del SP i, per a generar-lo, caldrà definir les següents propietats al fitxer <code>saml.properties</code>:</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Descripció</th>
+<th>Valor a l&rsquo;aplicació Bridge proporcionada</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.spId</td>
+<td>Identificador del SP. Serveix un UUID a l’atzar precedit de id_. S&rsquo;ha de consensuar amb GICAR per a que sigui únic</td>
+<td>id_d1e325c0-f6ca-11e7-8c3f-9a214cf093ae</td>
+</tr>
+
+<tr>
+<td>*.spEntityId</td>
+<td>EntityID del SP. També ha de ser consensuat amb GICAR per a que sigui únic</td>
+<td><a href="https://vagrant.vm/bridge00">https://vagrant.vm/bridge00</a></td>
+</tr>
+
+<tr>
+<td>*.spEntityBaseURL</td>
+<td>URL de l&rsquo;aplicació</td>
+<td><a href="https://vagrant.vm/bridge">https://vagrant.vm/bridge</a></td>
+</tr>
+
+<tr>
+<td>*.spKeystore</td>
+<td>Localització del certificat del Service Provider</td>
+<td>classpath:/saml/samlKeystore.jk</td>
+</tr>
+
+<tr>
+<td>*.spKeystorePass</td>
+<td>Clau privada del certificat</td>
+<td>nalle123</td>
+</tr>
+
+<tr>
+<td>*.spKeyname</td>
+<td>Nom d&rsquo;accés a la clau privada del certificat</td>
+<td>apollo</td>
+</tr>
+
+<tr>
+<td>*.spKeynamePass</td>
+<td>Paraula de pas d&rsquo;accés a la clau privada del certificat</td>
+<td>nalle123</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/>
+Una vegada finalitzada la configuració, si s’accedeix a la url de l&rsquo;aplicació Bridge mitjançant l&rsquo;Endpoint <code>/saml/metadata</code> s&rsquo;obté el fitxer metadades que s&rsquo;ha de proporcionar a GICAR.
+A l&rsquo;aplicació Bridge Demo la url seria <a href="https://vagrant.vm/bridge/saml/metadata">https://vagrant.vm/bridge/saml/metadata</a>.</p>
+
+<p><br/>
+El fitxer que es genera amb la configuració predeterminada seria el següent:</p>
+
+<pre><code>   &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+   &lt;md:EntityDescriptor xmlns:md=&quot;urn:oasis:names:tc:SAML:2.0:metadata&quot;
+      ID=&quot;id_d1e325c0-f6ca-11e7-8c3f-9a214cf093ae&quot; entityID=&quot;https://vagrant.vm/bridge00&quot;&gt;
+      &lt;md:SPSSODescriptor AuthnRequestsSigned=&quot;true&quot;
+         WantAssertionsSigned=&quot;true&quot; protocolSupportEnumeration=&quot;urn:oasis:names:tc:SAML:2.0:protocol&quot;&gt;
+         &lt;md:KeyDescriptor use=&quot;signing&quot;&gt;
+            &lt;ds:KeyInfo xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+               &lt;ds:X509Data&gt;
+                  &lt;ds:X509Certificate&gt;certificat...
+                  &lt;/ds:X509Certificate&gt;
+               &lt;/ds:X509Data&gt;
+            &lt;/ds:KeyInfo&gt;
+         &lt;/md:KeyDescriptor&gt;
+         &lt;md:KeyDescriptor use=&quot;encryption&quot;&gt;
+            &lt;ds:KeyInfo xmlns:ds=&quot;http://www.w3.org/2000/09/xmldsig#&quot;&gt;
+               &lt;ds:X509Data&gt;
+                  &lt;ds:X509Certificate&gt;certificat...
+                  &lt;/ds:X509Certificate&gt;
+               &lt;/ds:X509Data&gt;
+            &lt;/ds:KeyInfo&gt;
+         &lt;/md:KeyDescriptor&gt;
+         &lt;md:SingleLogoutService
+            Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot; Location=&quot;https://vagrant.vm/bridge/saml/SingleLogout&quot; /&gt;
+         &lt;md:SingleLogoutService
+            Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect&quot;
+            Location=&quot;https://vagrant.vm/bridge/saml/SingleLogout&quot; /&gt;
+         &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress
+         &lt;/md:NameIDFormat&gt;
+         &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:2.0:nameid-format:transient
+         &lt;/md:NameIDFormat&gt;
+         &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:2.0:nameid-format:persistent
+         &lt;/md:NameIDFormat&gt;
+         &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified
+         &lt;/md:NameIDFormat&gt;
+         &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName
+         &lt;/md:NameIDFormat&gt;
+         &lt;md:AssertionConsumerService
+            Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST&quot; Location=&quot;https://vagrant.vm/bridge/saml/SSO&quot;
+            index=&quot;0&quot; isDefault=&quot;true&quot; /&gt;
+         &lt;md:AssertionConsumerService
+            Binding=&quot;urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact&quot;
+            Location=&quot;https://vagrant.vm/bridge/saml/SSO&quot; index=&quot;1&quot; /&gt;
+      &lt;/md:SPSSODescriptor&gt;
+   &lt;/md:EntityDescriptor&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="altres-configuracions-aplicació-bridge">Altres configuracions Aplicació Bridge</h4>
+
+<p>Les assercions tenen un temps de vida útil que pot ser massa estricte en cas de no generar el <em>Token JWT</em> a l&rsquo;instant.
+No obstant, es pot optar per afegir un temps addicional en minuts al fitxer <code>saml.properties</code>:</p>
+
+<pre><code>   *.extraValidityMinutes=60
+</code></pre>
+
+<h2 id="api-canigó-stateless">API Canigó (Stateless)</h2>
+
+<p>Aquesta és l&rsquo;<strong>aplicació a la que l&rsquo;usuari vol accedir</strong>.
+Per a poder accedir als Endpoints publicats l’usuari ha de tenir un <em>Token JWT</em> vàlid i, per a obtenir-lo, s&rsquo;haurà de fer a
+partir d&rsquo;un asserció SAML a través de l&rsquo;Endpoint <code>/api/saml</code> que proporciona el mòdul de seguretat SAML.</p>
+
+<h3 id="instal-lació">Instal·lació</h3>
+
+<p>Per tal d&rsquo;instal·lar el mòdul de Seguretat SAML s&rsquo;ha d&rsquo;afegir la següent dependència al fitxer <code>pom.xml</code> de l’aplicació:</p>
+
+<pre><code>   &lt;dependency&gt;
+      &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+      &lt;artifactId&gt;canigo.security.saml.rest&lt;/artifactId&gt;
+      &lt;version&gt;${canigo.security.saml.rest}&lt;/version&gt;
+   &lt;/dependency&gt;
+</code></pre>
+
+<p>A la <a href="/canigo-download-related/matrius-compatibilitats/">Matriu de Compatibilitats</a> es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.</p>
+
+<h3 id="configuració-1">Configuració</h3>
+
+<p>La configuració SAML requereix definir les següent propietats al fitxer <code>security.properties</code>:</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Descripció</th>
+<th>Valor a l&rsquo;aplicació</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.saml.idpMetadataResource</td>
+<td>Path del classpath on es troba el fitxer Metadades de GICAR</td>
+<td>/metadata/gicar/metaDadesGicarPre.xml</td>
+</tr>
+
+<tr>
+<td>*.saml.idpMetadaFile</td>
+<td>En cas de no informar el valor anterior i no tenir el fitxer Metadades al classpath, path on es troba el fitxer</td>
+<td></td>
+</tr>
+
+<tr>
+<td>*.saml.idpEntityId</td>
+<td>EntityID del IdP. (GICAR)</td>
+<td><a href="https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth">https://preproduccio.idp1-gicar.gencat.cat/idp/shibboleth</a></td>
+</tr>
+
+<tr>
+<td>*.saml.spBridgeEntityId</td>
+<td>EntityID del SP. (Aplicació Bridge)</td>
+<td><a href="https://vagrant.vm/bridge00">https://vagrant.vm/bridge00</a></td>
+</tr>
+
+<tr>
+<td>*.saml.extraValidityMinutes</td>
+<td>Les assercions tenen un temps de vida útil que potser massa estricte en cas de no generar el token JWT a l&rsquo;instant, es pot afegir un temps addicional en minuts</td>
+<td>60</td>
+</tr>
+</tbody>
+</table>
+
+<p>Al fitxer <code>app-custom-security.xml</code> és necessari definir dos proveïdors d’autenticació: un per a realitzar l’autenticació SAML i un altre que s&rsquo;encarrega de l&rsquo;autorització (Arxiu, Base de dades, etc).</p>
+
+<p><br/>
+Per exemple, tot i que no seria el sistema recomanat, amb l’<strong>autorització per fitxer</strong> seria:</p>
+
+<pre><code>   &lt;security:authentication-manager&gt;
+   &lt;!-- In-Memory Authentication provider--&gt;
+      &lt;security:authentication-provider&gt;
+         &lt;security:password-encoder ref=&quot;passwordEncoder&quot; /&gt;
+         &lt;security:user-service properties=&quot;classpath:config/props/security.users.properties&quot;/&gt;
+      &lt;/security:authentication-provider&gt;
+
+   &lt;!-- SAML Authentication provider--&gt;
+      &lt;security:authentication-provider ref=&quot;samlAuthenticationProvider&quot; /&gt;
+   &lt;/security:authentication-manager&gt;
+
+   &lt;bean id=&quot;passwordEncoder&quot;
+      class=&quot;org.springframework.security.crypto.password.NoOpPasswordEncoder&quot;
+      factory-method=&quot;getInstance&quot; /&gt;
+</code></pre>
+
+<p>Al fitxer <code>security.users.properties</code> es troben els detalls dels usuaris amb autorització per accedir a l&rsquo;aplicació amb el següent format:</p>
+
+<pre><code>   IDGICAR=password, ROLE, [ROLE_N..,] enabled
+</code></pre>
+
+<p>Com s&rsquo;utilitzen les assercions SAML per a les autenticacions, la paraula de pas proporcionada en aquest fitxer no s’utilitza.</p>
+
+<p><br/>
+Una altre exemple podria ser l&rsquo;<strong>autorització per base de dades</strong>:</p>
+
+<pre><code>   &lt;security:authentication-manager&gt;
+   &lt;!-- BBDD Authentication provider--&gt;
+      &lt;security:authentication-provider&gt;
+         &lt;security:password-encoder ref=&quot;passwordEncoder&quot; /&gt;
+         &lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot;/&gt;
+      &lt;/security:authentication-provider&gt;
+   &lt;!-- SAML Authentication provider--&gt;
+      &lt;security:authentication-provider ref=&quot;samlAuthenticationProvider&quot; /&gt;
+   &lt;/security:authentication-manager&gt;
+
+   &lt;bean id=&quot;passwordEncoder&quot;
+      class=&quot;org.springframework.security.crypto.password.NoOpPasswordEncoder&quot;
+      factory-method=&quot;getInstance&quot; /&gt;
+</code></pre>
+
+<p>Com en el cas anterior, com s&rsquo;utilitzen les assercions SAML per a les autenticacions, la paraula de pas proporcionada a les taules de la BBDD no s&rsquo;utilitza.</p>
+
+<p><br/>
+Per últim, si es vol utilitzar l&rsquo;<strong>autorització per Gicar</strong> la configuració seria:</p>
+
+<pre><code>   &lt;security:authentication-manager&gt;
+   &lt;!-- SAML Authentication provider--&gt;
+      &lt;security:authentication-provider ref=&quot;samlAuthenticationWithMemberProvider&quot; /&gt;
+   &lt;/security:authentication-manager&gt;
+</code></pre>
+
+<p>Amb aquesta configuració s&rsquo;utilitzaria la informació proporcionada al atribut <em>groupMembership</em> de l&rsquo;asserció SAML de Gicar per a construir el llistat de rols de l&rsquo;usuari. Per a més informació sobre els rols de Gicar podeu consultar la documentació del <a href="/gicar-saml2/auth-saml2-grups2/">Control d&rsquo;accés als recursos amb Gicar</a>.</p>
+
+<p><br/>
+Al fitxer <code>WebSecurityConfig</code> s&rsquo;han d&rsquo;establir els <em>Beans</em> dels serveis d&rsquo;autorització i validació SAML i un <em>JWT token handler</em> orientat a SAML:</p>
+
+<pre><code>   @Bean
+   @Named(&quot;samlAuthenticationService&quot;)
+   public AuthenticationService samlAuthenticationService() {
+      final SAMLAuthenticationService samlAuthenticationService = new SAMLAuthenticationService();
+      samlAuthenticationService.setTokenResponseHeaderName(getTokenResponseHeaderName());
+      return samlAuthenticationService;
+   }
+
+   @Bean
+   public SAMLValidationService samlValidationService() {
+
+      SAMLValidationServiceOpenSAML samlValidationService = new SAMLValidationServiceOpenSAML();
+      samlValidationService.config(propertiesConfiguration);
+
+      return samlValidationService;
+   }
+
+   @Bean
+   @Named(&quot;samlJwtTokenHandler&quot;)
+   public SAMLJwtTokenHandler samlJwtTokenHandler() {
+
+      final SAMLJwtTokenHandler samlJwtTokenHandler = new SAMLJwtTokenHandler();
+
+      samlJwtTokenHandler.setExpiration(getExpiration());
+      samlJwtTokenHandler.setSecret(getSecret());
+
+      SAMLJwtTokenClaimsEnforcer enforcer = new SAMLJwtTokenClaimsEnforcerMail();
+      samlJwtTokenHandler.setEnforcer(enforcer);
+
+      SAMLJwtTokenClaimsSelector selector = new SAMLJwtTokenClaimsSelectorMailNomCognoms();
+      samlJwtTokenHandler.setSelector(selector);
+
+      return samlJwtTokenHandler;
+   }
+</code></pre>
+
+<h2 id="exemple-d-execució">Exemple d&rsquo;execució</h2>
+
+<p>Per a les proves d&rsquo;execució, s&rsquo;ha desplegat l&rsquo;aplicació Bridge al port 8080 i l&rsquo;aplicació Canigó al port 9090. S&rsquo;intenta accedir al SPA de l&rsquo;aplicació Bridge <a href="https://vagrant.vm/bridge/app">https://vagrant.vm/bridge/app</a> sense
+tenir sessió, la capa de seguretat detecta la necessitat d&rsquo;autenticació i realitza una redirecció 302 al SS0 (URL de GICAR IdP). S&rsquo;han d’introduir les credencials d&rsquo;un usuari vàlid a GICAR i,
+a continuació, es fa la redirecció a la SPA amb l&rsquo;asserció SAML.</p>
+
+<p><br/>
+La SPA proporcionada a l&rsquo;aplicació Bridge té dues parts:</p>
+
+<ul>
+<li>Una part on es mostra informació general obtinguda a partir de l&rsquo;asserció SAML</li>
+</ul>
+
+<p><img src="/related/canigo/documentacio/modul-seguretat-saml/assertionInformation.jpg" alt="Informació General" /></p>
+
+<ul>
+<li>L&rsquo;altre part proporciona un botó per a capturar l&rsquo;asserció i generar el <em>JWT Token</em> que, al ser una aplicació Demo, es fa a través d&rsquo;un botó. No obstant, en entorns productius aquesta part s&rsquo;hauria de fer automàticament al carregar la pàgina. També proporciona un altre botó per a accedir a un <em>Endpoint</em> protegit de l&rsquo;API de Canigó, en aquest cas per a obtenir un llistat dels equipaments.</li>
+</ul>
+
+<p><img src="/related/canigo/documentacio/modul-seguretat-saml/testsaml.jpg" alt="Test SAML" /></p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

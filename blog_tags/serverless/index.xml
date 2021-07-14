@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/serverless/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Thu, 27 Sep 2018 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Serverless Computing o FaaS</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/09/Serverless_computing_FaaS/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/09/Serverless_computing_FaaS/</guid>
+      <description>Com a evolució dels serveis oferts al nuvol, apareix un nou concepte anomenat FaaS (Function as a service) o Serverless Computing (Informàtica sense Servidor) que proporciona una plataforma que permet als clients desenvolupar, executar i gestionar les funcionalitats de l&#39;aplicació sense la complexitat de construir i mantenir la infraestructura associada al desenvolupament i llançament d&#39;una aplicació.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Error al construir amb docker maven si s&#39;utilitza plugin maven surfire</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Error al construir amb docker maven si s\x27utilitza plugin maven surfire\" />");
+		document.write("<meta name=\"description\" content=\"Error al realitzar la construcció d\x27una aplicació amb el docker maven si aquesta utilitza el plugin maven surfire\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/'>3.4.4</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/errors-coneguts/'>errors coneguts</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/errors-coneguts/docker_maven_error_maven_surefire_plugin/'>docker_maven_error_maven_surefire_plugin</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Error al construir amb docker maven si s&#39;utilitza plugin maven surfire
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 10-02-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció-al-problema">Introducció al problema</h2>
+
+<p>Per a la construcció d&rsquo;una aplicació, i sobretot amb estratègies DevOps, si l&rsquo;aplicació és de tipus Maven amb Java, s&rsquo;utilitzen les imatges docker amb Maven i JDK. Aquestes et permeten construir el projecte i empaquetar-lo sense haver de tenir configurat el maven i la JDK. Les imatges maven oficials es poden trobar a:</p>
+
+<p><a href="https://docs.docker.com/docker-hub/official_images/">https://docs.docker.com/docker-hub/official_images/</a></p>
+
+<p>Les aplicacions Canigó utilitzen el <a href="http://maven.apache.org/surefire/maven-surefire-plugin/">plugin de maven surfire</a>. Amb aquest plugin ens permet indicar quins tests volem que s&rsquo;executin i incorporar tests de mòduls depenents. Aquest plugin ve incorporat dins de canigo.root, per tant, si l&rsquo;aplicació hereta de canigo.root, utilitza aquest plugin per passar els tests.</p>
+
+<p>S&rsquo;ha comprovat que amb la versió de la imatge de docker 3.5.4-jdk-8, 3.5.4-jdk-9 i 3.5.4-jdk-10 de maven i la versió 2.19.1 del plugin de maven surefire, s&rsquo;obté un error al executar els tests</p>
+
+<h2 id="detall-del-problema">Detall del problema</h2>
+
+<p>Partim d&rsquo;una aplicació amb Canigó, que hereta de canigo.root i per tant incorpora el plugin de maven surefire versió 2.19.1. Si en aquesta aplicació li incorporem tests i construïm l’aplicació amb la imatge de docker de maven versió 3.5.4-jdk-8, 3.5.4-jdk-9 i 3.5.4-jdk-10, executant per exemple en el cas de 3.5.4-jdk-8:</p>
+
+<pre><code> docker run -v $PWD:/src -w &quot;/src&quot; maven:3.5.4-jdk-8 mvn clean package
+</code></pre>
+
+<p>Al intentar executar els tests de l&rsquo;aplicació dona un error del tipus:</p>
+
+<pre><code>[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ BinarisApp ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 0, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 9.013 s
+[INFO] Finished at: 2020-02-10T12:21:12Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.19.1:test (default-test) on project BinarisApp: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /src/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /src &amp;&amp; /usr/lib/jvm/java-10-openjdk-amd64/bin/java -jar /src/target/surefire/surefirebooter12081133764758686654.jar /src/target/surefire 2020-02-10T12-21-12_164-jvmRun1 surefire3487392638308646192tmp surefire_0301742977522178285tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] org.apache.maven.surefire.booter.SurefireBooterForkException: The forked VM terminated without properly saying goodbye. VM crash or System.exit called?
+[ERROR] Command was /bin/sh -c cd /src &amp;&amp; /usr/lib/jvm/java-10-openjdk-amd64/bin/java -jar /src/target/surefire/surefirebooter12081133764758686654.jar /src/target/surefire 2020-02-10T12-21-12_164-jvmRun1 surefire3487392638308646192tmp surefire_0301742977522178285tmp
+[ERROR] Error occurred in starting fork, check output in log
+[ERROR] Process Exit Code: 1
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.fork(ForkStarter.java:669)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:282)
+[ERROR] 	at org.apache.maven.plugin.surefire.booterclient.ForkStarter.run(ForkStarter.java:245)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeProvider(AbstractSurefireMojo.java:1183)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.executeAfterPreconditionsChecked(AbstractSurefireMojo.java:1011)
+[ERROR] 	at org.apache.maven.plugin.surefire.AbstractSurefireMojo.execute(AbstractSurefireMojo.java:857)
+[ERROR] 	at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo(DefaultBuildPluginManager.java:137)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:208)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:154)
+[ERROR] 	at org.apache.maven.lifecycle.internal.MojoExecutor.execute(MojoExecutor.java:146)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:117)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject(LifecycleModuleBuilder.java:81)
+[ERROR] 	at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build(SingleThreadedBuilder.java:56)
+[ERROR] 	at org.apache.maven.lifecycle.internal.LifecycleStarter.execute(LifecycleStarter.java:128)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:305)
+[ERROR] 	at org.apache.maven.DefaultMaven.doExecute(DefaultMaven.java:192)
+[ERROR] 	at org.apache.maven.DefaultMaven.execute(DefaultMaven.java:105)
+[ERROR] 	at org.apache.maven.cli.MavenCli.execute(MavenCli.java:954)
+[ERROR] 	at org.apache.maven.cli.MavenCli.doMain(MavenCli.java:288)
+[ERROR] 	at org.apache.maven.cli.MavenCli.main(MavenCli.java:192)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[ERROR] 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[ERROR] 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[ERROR] 	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced(Launcher.java:289)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.launch(Launcher.java:229)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode(Launcher.java:415)
+[ERROR] 	at org.codehaus.plexus.classworlds.launcher.Launcher.main(Launcher.java:356)
+[ERROR] 
+[ERROR] -&gt; [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+</code></pre>
+
+<h2 id="solució-al-problema">Solució al problema</h2>
+
+<h3 id="solució-1">Solució 1</h3>
+
+<p>Si és possible, utilitzar una versió de JDK superior. A partir de la versió 11 de la JDK de la imatge docker Maven, el problema no es produeix, així per exemple:</p>
+
+<p>Enlloc de:</p>
+
+<pre><code> docker run -v $PWD:/src -w &quot;/src&quot; maven:3.5.4-jdk-8 mvn clean package
+</code></pre>
+
+<p>Utilitzem:</p>
+
+<pre><code> docker run -v $PWD:/src -w &quot;/src&quot; maven:3.5.4-jdk-11 mvn clean package
+</code></pre>
+
+<h3 id="solució-2">Solució 2</h3>
+
+<p>Deshabilitar el class loader de sistema del maven surefire, per això afegirem dins de la secció plugins del pom.xml del projecte:</p>
+
+<pre><code class="language-xml">&lt;plugin&gt;
+		&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+		&lt;configuration&gt;
+			&lt;useSystemClassLoader&gt;false&lt;/useSystemClassLoader&gt;
+		&lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<p>Amb aquesta solució utilitzarem un class loader aïllat, enlloc d&rsquo;executar l&rsquo;aplicació directament. Aquesta solució pot ser un problema si s&rsquo;utilitzen propietats com <em>java.class.path</em></p>
+
+<h3 id="solució-3">Solució 3</h3>
+
+<p>Deshabiltiar la creació de l&rsquo;aplicació en paral·lel, per això afegirem dins de la secció plugins del pom.xml del projecte:</p>
+
+<pre><code class="language-xml">&lt;plugin&gt;
+		&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+		&lt;configuration&gt;
+			&lt;forkCount&gt;0&lt;/forkCount&gt;
+		&lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<p>Amb aquesta solució estem indicant que no executi els tests en màquines virtuals concurrents, amb la penalització de temps que això pot suposar</p>
+
+<h2 id="conclusió">Conclusió</h2>
+
+<p>Si no estem utilitzant propietats de sistema o càrrega de classes de diferents class loaders, la millor solució és la solució 2</p>
+
+<p>Si no ens interessa l&rsquo;execució de test en paral·lel, la millor solució és la solució 3</p>
+
+<p>Si necessitem utilitzar propietats de sistema o càrrega de classes de diferents class loaders i volem executar els tests en paral·lel l&rsquo;única solució que tenim és utilitzar una versió de JDK superior. Així podríem tenir la JDK del projecte per compilar, per exemple la JDK8 i utilitzar una JDK superior per passar els test, per exemple utilitzar la JDK 11</p>
+
+<h2 id="referència">Referència</h2>
+
+<ul>
+<li><a href="https://github.com/carlossg/docker-maven/issues/90">Bug registrat a les imatges docker Maven</a></li>
+<li><a href="https://issues.apache.org/jira/browse/SUREFIRE-1588">Bug registrat al Maven Surefire</a></li>
+</ul>
+
+<p>Si necessiteu més informació, podeu obrir tiquet via <a href="https://cstd.ctti.gencat.cat/jiracstd/projects/CAN">JIRA CSTD</a> o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

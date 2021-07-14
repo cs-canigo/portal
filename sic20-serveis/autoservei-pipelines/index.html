@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Autoservei de pipelines</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Autoservei de pipelines\" />");
+		document.write("<meta name=\"description\" content=\"L\x27Autoservei de pipelines permet als proveïdors d\x27aplicacions ser autònoms per a integrar al SIC les seves aplicacions.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic20-serveis">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	
+	<a href="/sic-serveis/">
+		
+
+		Serveis
+
+		
+	</a></li>
+	
+
+    
+    <li><a href="/sic20-serveis/">
+        
+
+        Serveis (SIC 2.0)
+
+        
+    </a>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Autoservei de pipelines
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 14-07-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#motivació">Motivació</a></li>
+<li><a href="#requeriments-generals">Requeriments generals</a></li>
+<li><a href="#funcionament">Funcionament</a></li>
+<li><a href="#configuració">Configuració</a>
+<ul>
+<li><a href="#arxiu-de-configuració-de-l-aplicació-aca">Arxiu de Configuració de l&rsquo;Aplicació (ACA)</a></li>
+<li><a href="#arxiu-de-configuració-d-infraestructures-aci">Arxiu de Configuració d&rsquo;Infraestructures (ACI)</a>
+<ul>
+<li><a href="#clau-pública">Clau pública</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#tecnologies-compatibles">Tecnologies compatibles</a></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;Autoservei de pipelines permet la <strong>generació automàtica de pipelines d&rsquo;automatització de la construcció i del desplegament de les aplicacions</strong> sense
+la intervenció de l&rsquo;equip del SIC. D&rsquo;aquesta manera, els equips de cada codi d&rsquo;aplicació són independents per a preparar la construcció de la pipeline de desplegament
+associada a cada projecte repositat al Sistema de Custòdia de Codi (Gitlab).</p>
+
+<p>A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.</p>
+
+<h2 id="motivació">Motivació</h2>
+
+<p>Cobreix les següents necessitats:</p>
+
+<ul>
+<li>Dotar de <strong>flexibilitat i independència</strong> als principals actors que intervenen en la construcció i els desplegaments de les aplicacions.</li>
+<li><strong>Incrementar ràpidament el grau d’integració al SIC de les aplicacions</strong> evitant traspassos innecessaris d&rsquo;informació i responsabilitats.</li>
+<li>Proporcionar un <strong>nivell d&rsquo;abstracció</strong> que permeti ser independent de les tecnologies emprades i permeti evolucionar el producte mantenint compatibilitat amb versions anteriors.</li>
+<li>Proporcionar un <strong>entorn aïllat i immutable de construcció</strong>, que a més pugui ser utilitzat i testejat pels propis proveïdors.</li>
+<li>Facilitar la cobertura de tecnologies contemplant l’ús d’<strong>imatges Docker pròpies</strong> dels lots d’aplicacions.</li>
+<li><strong>Acomplir les directrius</strong> de CTTI sobre desplegaments i gestió de canvis.</li>
+</ul>
+
+<p>La solució ha de:</p>
+
+<ul>
+<li>Ser <strong>natural</strong> per als usuaris del servei.</li>
+<li>Permetre definir <strong>tot el necessari</strong> per a construir i desplegar l’aplicació.</li>
+<li>Donar cobertura a <strong>totes les tecnologies</strong> amb les que el SIC és actualment compatible.</li>
+<li>Ser <strong>mantenible, escalable i eficient</strong>.</li>
+</ul>
+
+<h2 id="requeriments-generals">Requeriments generals</h2>
+
+<p>S&rsquo;estableixen una sèrie de requeriments per a estar en disposició d&rsquo;integrar l&rsquo;aplicació mitjançant aquest servei:</p>
+
+<ul>
+<li>Conèixer els <strong>entorns</strong> on es desplegarà l&rsquo;aplicació i les <strong>modalitats de desplegament</strong> aplicables en cada cas</li>
+<li>L&rsquo;<strong>aplicació ha de ser integrable</strong> amb el servei d&rsquo;automatització de la construcció i desplegament</li>
+<li><a href="/sic-welcome-pack/preparar-aplicacio/"><strong>Aplicació preparada i acompleix els requeriments</strong></a> per a poder ser desplegada</li>
+<li>Per als entorns amb modalitat de desplegament automàtic, disposar dels <strong>identificadors d&rsquo;infraestructures</strong> de desplegament</li>
+<li><strong>Col·laboració</strong>: el proveïdor d&rsquo;aplicacions i el proveïdor d&rsquo;infraestructures han d&rsquo;estar disposats a col·laborar i mantenir una comunicació</li>
+</ul>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<p>Generalment, a cada codi d&rsquo;aplicació li correspon un proveïdor d&rsquo;aplicacions i un proveïdor d&rsquo;infraestructures.
+Aquests dos equips <strong>han de participar i col·laborar</strong> per tal d&rsquo;utilitzar l&rsquo;autoservei de pipelines del SIC aportant la informació necessària de la que cadascun és responsable.</p>
+
+<p>Es composa de les següents peces:</p>
+
+<ul>
+<li><strong>Arxiu de Configuració d’Aplicació (ACA)</strong></li>
+<li><strong>Arxiu de Configuració d’Infraestructura (ACI)</strong></li>
+<li><strong>Pipeline generadora</strong></li>
+</ul>
+
+<p>El funcionament previst és el següent:</p>
+
+<ul>
+<li>Els <strong>proveïdors d&rsquo;aplicacions i els proveïdors d&rsquo;infraestructures aportaran cadascun d&rsquo;ells el seu propi arxiu de configuració</strong>.</li>
+<li>Si es fa algun canvi en la configuració de l&rsquo;autoservei corresponent a l&rsquo;aplicació s&rsquo;invocarà a la pipeline generadora de pipelines.
+Aquesta pipeline recupera els arxius de configuració necessaris per a la <strong>generació de la pipeline</strong> de l&rsquo;aplicació i la dispara.</li>
+<li>En posteriors execucions, sempre que no es canviï l&rsquo;arxiu de configuració, <strong>no es tornarà a regenerar</strong> i s&rsquo;invocarà directament la darrera pipeline generada.</li>
+</ul>
+
+<p>D&rsquo;aquesta manera, mitjançant els arxius de configuració proporcionats per cada proveïdor, s&rsquo;invoca a una <strong>pipeline generadora de pipelines</strong> que
+construeix la pipeline encarregada de la construcció i del desplegament de l&rsquo;aplicació. Finalment, un cop generada la nova pipeline, aquesta serà invocada
+per realitzar la construcció i el desplegament de l&rsquo;aplicació.</p>
+
+<p><img src="/images/news/AutoserveiJobs-Funcionament.png" alt="Pipeline del SIC" />
+</br></p>
+
+<p></br></p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Caldrà realitzar les tasques prèvies de configuració per a que el sistema sigui capaç de generar una tasca de desplegament operativa.</p>
+
+<h3 id="arxiu-de-configuració-de-l-aplicació-aca">Arxiu de Configuració de l&rsquo;Aplicació (ACA)</h3>
+
+<p>La informació que aporta el <strong>proveïdor d&rsquo;aplicacions</strong> quedarà recollida en l&rsquo;arxiu <code>/sic/aca.yml</code> dins del repositori del projecte.
+La seva existència és la que determina si l&rsquo;aplicació té actiu el mode Autoservei de Pipelines. Es tracta d&rsquo;un arxiu de text en format YAML,
+que serà responsabilitat del proveïdor d&rsquo;aplicacions mantenir-lo actualitzat, en el que s&rsquo;ha d&rsquo;aportar la següent informació:</p>
+
+<ul>
+<li><strong>Versió</strong>: versió (independent de la versió de l&rsquo;aplicació) que s&rsquo;utilitza per fer seguiment de l&rsquo;arxiu de configuració.</li>
+<li><strong>Paràmetres</strong>: parells clau-valor en els que es farà substitució dins de la pipeline.</li>
+<li><strong>Recursos</strong>: diferents tipus de recursos als que es fa referència en la pipeline.
+
+<ul>
+<li><strong>Entorns</strong>: entorns als que es desplega l&rsquo;aplicació, així com el seu ordre i la modalitat de desplegament desitjada.</li>
+<li><strong>Infraestructures</strong>: denominació d&rsquo;infraestructures destí (cal demanar al proveïdor d&rsquo;infraestructures la denominació de la infraestructura).</li>
+<li><strong>Artefactes</strong>: artefactes a generar durant el procés de construcció que s&rsquo;han de desplegar en el procés de desplegament.</li>
+</ul></li>
+<li><strong>Construcció</strong>: definició del procés de construcció amb l&rsquo;ús de passes (<em>steps</em>) de construcció.</li>
+<li><strong>Anàlisi estàtic de codi</strong>: definició del sistema d&rsquo;enviament del codi font del projecte a l&rsquo;eina d&rsquo;anàlisi estàtic de codi de l&rsquo;Oficina de Qualitat i comprovació de les <a href="https://qualitat.solucions.gencat.cat/eines/sonarqube/">Quality Gates</a> corresponents.</li>
+<li><strong>Desplegament</strong>: definició del procés de desplegament amb l&rsquo;ús de passes (<em>steps</em>) de desplegament.</li>
+<li><strong>Notificacions</strong>: definició d&rsquo;adreces de correu electrònic on notificar accions manuals en espera i resultats de l&rsquo;execució.</li>
+</ul>
+
+<p><img src="/images/news/AutoserveiJobs-ACA.png" alt="Pipeline del SIC" />
+<br/></p>
+
+<p>Per a més informació: <a href="/sic-welcome-pack/fitxer-aca/">Com construir el fitxer ACA</a>
+<br/></p>
+
+<h3 id="arxiu-de-configuració-d-infraestructures-aci">Arxiu de Configuració d&rsquo;Infraestructures (ACI)</h3>
+
+<p>La informació que aporta el <strong>proveïdor d&rsquo;infraestructures</strong> queda recollida en el seu repositori del SIC. En aquest repositori hi dipositarà els
+arxius de configuració d&rsquo;infraestructures (en pot tenir més d&rsquo;un per aplicació-projecte), el nom dels quals (sense incloure l&rsquo;extensió) serà l&rsquo;identificador que ha
+de facilitar al proveïdor d&rsquo;aplicacions. Serà responsabilitat del proveïdor d&rsquo;infraestructures mantenir actualitzada aquesta informació i de notificar al
+proveïdor d&rsquo;aplicacions quan hagi realitzat algun canvi. Es tracta d’un arxiu de text en format YAML, que serà responsabilitat del proveïdor d’infraestructures
+mantenir-lo actualitzat, en el que s’ha d’aportar la següent informació:</p>
+
+<ul>
+<li><strong>Versió</strong>: versió de l&rsquo;arxiu de configuració.</li>
+<li><strong>Recursos</strong>: secció que recull tots els recursos de la part d&rsquo;infraestructures. Actualment, només hi ha el detall de cada infraestructura.</li>
+<li><strong>Infraestructures</strong>: detall de les infraestructures incloses en aquest arxiu de configuració.</li>
+</ul>
+
+<p>S&rsquo;han d&rsquo;incloure tots els entorns de les capes/stacks definides en l&rsquo;arxiu pertinent.</p>
+
+<p><img src="/images/news/AutoserveiJobs-ACI.png" alt="Pipeline del SIC" />
+<br/></p>
+
+<h4 id="clau-pública">Clau pública</h4>
+
+<p>El SIC aprofita els avantatges del sistema de clau pública (PKI en anglès), que ofereix garanties operacionals criptogràfiques tals com el xifrat, la firma digital i transaccions segures.
+Es tracta d’un arxiu <code>.pem</code> amb la clau pública que consisteix en una RSA de 4096 bits i permet encriptar paraules de pas mitjançant la següent comanda:</p>
+
+<pre><code>```
+$ echo '&lt;password_a_encriptar&gt;' | openssl rsautl -encrypt -pubin -inkey sic_id_rsa.pub.pem | base64
+K0zcD3BuLKN55XVjqpovmwbJDEVehnEN7pz06ytPMlBowuc2IATSyH/c/zN5EmLE5DFoJcRLFA9B
+Nmf0rh0yzUDb3kS+jXUuFhx+N35N2ScbemiZL3sjji3icXqgWmiQTmfp1hCAZgq5oMfMJzpwjWlq
+ubT15lXq/6jgkj0hS9pYUpZBz0rH6IX0q81xRvsnQteMyrtQik/p/2ZaTbj0ciiLG61kkVcGSZLo
+sr9iOVdFh3q8Ok7+CAPhKaa/maGn0LEeaafj+5pBLE9AWcOy98imBRUzr4C8bi9ydMjuRdvd12XT
+1JdcHer/G1ZWBx9yEIYQEGgG/eFR4njNBjtjH/A53YBcbLIH2ZzHI3v33PCE5W3aVoK5qVqdVf64
+GlicdVQ2VSm7ROE4bfcUu4BzVw1em6hUw6LSXxH6GrKVxFe0JVWbrIlOyDL1nGu3Yu6zdplayK+q
+anqNjSRixyLOjoKon2g80dHGd12S7j1av3oyhPz/1KlqMt71YgTrZG3GxeW7NB356V/18bY/PwCn
+UcNttMs3oOvt+6d4UgeqqesA1fgDx92X+zIoyOTh2rnkfWo554cwqg+w3JaB5Kp30vGJNXwrvR+W
++x4v2PLCO1D2b59Bb3n9/rFENXHE8wYLPAecPoSNjB6dB2/JdZibUwDJz+T98nOlcgJ7FcBBQ4s=
+$
+```
+</code></pre>
+
+<p><a href="/related/sic/key/sic_id_rsa.pub.pem" download target="_blank" style="display: block; margin: 25px auto; border-radius: 5px; width: 200px; padding: 10px; color: white !important; text-decoration: none !important;background-color: #CC0000;text-align: center;font-weight:bold;">
+Descarregar la clau
+</a></p>
+
+<h2 id="tecnologies-compatibles">Tecnologies compatibles</h2>
+
+<p>Hi ha les següents tecnologies de construcció suportades:</p>
+
+<ul>
+<li>Maven (Java)</li>
+<li>Ant (Java)</li>
+<li>MS Build (.NET)</li>
+<li>Npm (NodeJS)</li>
+<li>Hugo (Webs estàtiques)</li>
+</ul>
+
+<p>Finalment, també s&rsquo;integren els desplegaments a:</p>
+
+<ul>
+<li>Servidor web Apache</li>
+<li>Servidors d&rsquo;aplicacions
+
+<ul>
+<li>Tomcat (Java)</li>
+<li>Weblogic (Java)</li>
+<li>Websphere (Java)</li>
+<li>JBoss (Java)</li>
+<li>IIS (.NET)</li>
+</ul></li>
+<li>Servidors de Bases de Dades
+
+<ul>
+<li>MySQL</li>
+<li>MongoDB</li>
+<li>PostgreSQL</li>
+<li>Oracle</li>
+<li>SQL Server</li>
+</ul></li>
+</ul>
+
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic20-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

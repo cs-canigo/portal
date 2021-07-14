@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/angular/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Fri, 01 Sep 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Angular: Estat actual i evolució</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/09/Angular/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/09/Angular/</guid>
+      <description>Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d&#39;una única pàgina (SPA). Deriva d&#39;AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,49 @@
+version: 1.0.0
+parameters:
+resources:
+  environments:
+    - id: int
+      environment: int
+      position: 1
+      deploymentType: AUTOMATIC
+    - id: pre
+      environment: pre
+      position: 2
+      deploymentType: SEMIAUTOMATIC
+    - id: pro
+      environment: pro
+      position: 3
+      deploymentType: SEMIAUTOMATIC
+  infrastructures:
+    - id: cpdx_weblogic_xxxx
+      element: weblogic
+      environments:
+        - environment: int
+          vars:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpdx
+  artifacts:
+    - id: artifact01
+      artifactType: dynamic
+      path: target/app.war
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: maven_3.2.2
+      jdk: JDK 1.8
+      parameters: clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: cpdx_weblogic_xxxx
+      artifact: artifact01
+notificationRecipients:
+    - nom1@domini.cat

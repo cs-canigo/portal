@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/microserveis/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Tue, 04 Dec 2018 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Principis de Microserveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</guid>
+      <description>Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d&#39;articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.</description>
+    </item>
+    
+    <item>
+      <title>Cloud-Ready</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</guid>
+      <description>Aspectes a tenir en compte en la definició de l&#39;arquitectura d&#39;una aplicació per estar preparada per anar al Cloud</description>
+    </item>
+    
+    <item>
+      <title>(micro)serveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</link>
+      <pubDate>Thu, 04 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</guid>
+      <description>Introducció al patró de disseny basat en microserveis i les implicacions que té a l&#39;hora de pensar les aplicacions</description>
+    </item>
+    
+  </channel>
+</rss>

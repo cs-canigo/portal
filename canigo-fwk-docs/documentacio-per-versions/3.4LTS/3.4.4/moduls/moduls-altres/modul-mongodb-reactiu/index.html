@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Mongodb reactiu</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mongodb reactiu\" />");
+		document.write("<meta name=\"description\" content=\"Com configurar aplicació Canigó 3.4 per utilitzar mongo db reactiu\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/'>3.4.4</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/'>moduls</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-altres/'>moduls altres</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-altres/modul-mongodb-reactiu/'>modul mongodb reactiu</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Mongodb reactiu
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 18-03-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El propòsit d’aquest apartat és introduïr a les funcionalitats de reactiu en una base de dades Mongodb</p>
+
+<h3 id="versió-de-canigó">Versió de Canigó</h3>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó</p>
+
+<h3 id="introducció">Introducció</h3>
+
+<p>El mes de Març del 2019 s&rsquo;ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d&rsquo;utilitzar les funcionalitats de reactiu en una base de dades Mongodb</p>
+
+<p>Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia <a href="/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4">&ldquo;Actualització Canigó 3.2 a Canigó 3.4&rdquo;</a></p>
+
+<p>L&rsquo;objectiu d&rsquo;aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d&rsquo;aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.</p>
+
+<h3 id="introducció-programació-reactiu">Introducció programació reactiu</h3>
+
+<p>En termes simples, la programació reactiva tracta d&rsquo;aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d&rsquo;aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s&rsquo;estén des de la base de dades fins al socket HTTP, quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi</p>
+
+<p>Canigó 3.4 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor</p>
+
+<p>Per a més informació:</p>
+
+<p><a href="http://www.reactive-streams.org/">Reactive Stream</a></p>
+
+<p><a href="https://projectreactor.io/">Reactor</a></p>
+
+<p><a href="https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/web-reactive.html">Spring Framework reactive</a></p>
+
+<p><a href="https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape">Notes on Reactive Programming</a></p>
+
+<h3 id="introducció-cas-d-exemple">Introducció cas d&rsquo;exemple</h3>
+
+<p>Per il·lustrar aquesta guia utilitzarem un repositori de dades on hi contindrà missatges homòlegs a un tweet, on tindrà un id, un text i una data de creació</p>
+
+<p>Pel repositori de dades utilitzarem una base de dades Mongodb i utilitzarem les funcionalitats de reactiu per accedir-hi</p>
+
+<p>En l&rsquo;exemple exposarem un CRUD de serveis rest sobre l&rsquo;entitat tweet i exposarem 2 serveis rest de tipus stream per il·lustrar un efecte tipus timeline</p>
+
+<h3 id="exemple">Exemple</h3>
+
+<p>Per l&rsquo;exemple utilitzarem una base de dades Mongodb en local al port 27017 amb una base de dades amb nom &ldquo;canigo_persistence_mongo&rdquo;</p>
+
+<p>Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reactiu, reactor i Mongodb per test</p>
+
+<pre><code class="language-xml">&lt;canigo.persistence.mongodb.version&gt;[2.0.0,2.1.0)&lt;/canigo.persistence.mongodb.version&gt;
+</code></pre>
+
+<pre><code class="language-xml">		&lt;dependency&gt;
+			&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+			&lt;artifactId&gt;canigo.persistence.mongodb&lt;/artifactId&gt;
+			&lt;version&gt;${canigo.persistence.mongodb.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-data-mongodb-reactive&lt;/artifactId&gt;
+			&lt;exclusions&gt;
+				&lt;exclusion&gt;
+					&lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+					&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+				&lt;/exclusion&gt;
+			&lt;/exclusions&gt;
+		&lt;/dependency&gt;
+
+		&lt;dependency&gt;
+			&lt;groupId&gt;io.projectreactor&lt;/groupId&gt;
+			&lt;artifactId&gt;reactor-test&lt;/artifactId&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;de.flapdoodle.embed&lt;/groupId&gt;
+			&lt;artifactId&gt;de.flapdoodle.embed.mongo&lt;/artifactId&gt;
+			&lt;scope&gt;test&lt;/scope&gt;
+		&lt;/dependency&gt;
+</code></pre>
+
+<p>Afegirem la propietat per la connexió a Mongodb, utilitzarem el estàndard de connexió per String de connexió a Mongodb, recomanem utilitzar aquesta forma de connexió, per més informació podeu consultar: <a href="https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options">https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options</a></p>
+
+<pre><code class="language-properties">*.mongodb.uri=mongodb://127.0.0.1:27017/canigo_persistence_mongo?socketTimeoutMS=5000
+</code></pre>
+
+<p>Necessitem crear un configurador que extengui de <em>cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig</em> que crearà la connexió a la base de dades Mongodb a partir del String de connexió, un exemple de configurador podria ser:</p>
+
+<pre><code class="language-java">import org.springframework.context.annotation.Configuration;
+
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig;
+
+@Configuration
+public class ReactiveMongoConfig extends ReactiveMongoCoreConfig {
+
+
+}
+</code></pre>
+
+<p>En aquest configurador hi podríem registrar els listeners que necessitéssim de Mongodb</p>
+
+<p>Partim de l&rsquo;entitat Tweet amb la definició:</p>
+
+<pre><code class="language-java">import java.util.Date;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document(collection = &quot;tweets&quot;)
+public class Tweet {
+    @Id
+    private String id;
+
+    @NotBlank
+    @Size(max = 140)
+    private String text;
+
+    @NotNull
+    private Date createdAt = new Date();
+
+    public Tweet() {
+
+    }
+
+    public Tweet(String text) {
+        this.text = text;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+}
+</code></pre>
+
+<p>Crearem el repository de l&rsquo;entitat Tweet, utilitzarem les funcionalitats que aporta Spring per a repositoris reactius amb Mongo amb ReactiveMongoRepository</p>
+
+<pre><code class="language-java">import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.data.mongodb.repository.Tailable;
+import org.springframework.stereotype.Repository;
+
+import cat.gencat.ctti.model.Tweet;
+import reactor.core.publisher.Flux;
+
+@Repository
+public interface TweetRepository extends ReactiveMongoRepository&lt;Tweet, String&gt; {
+	
+	@Tailable
+	Flux&lt;Tweet&gt; findTweetsBy();
+
+}
+</code></pre>
+
+<p>Hem definit un mètode de consulta de tweets de tipus &ldquo;Tailable&rdquo; per mantenir la connectivitat esperant a nous tweets</p>
+
+<p>Per a utilitzar aquest mètode la collection de Mongo ha de ser de tipus capped. Si la collection és de tipus capped no es pot utilitzar la funcionalitat d&rsquo;eliminació d&rsquo;elements. Si s&rsquo;utilitza tailable a una collection no capped o s&rsquo;eliminen elements a una collection capped s&rsquo;obtindrà un error. Per tenir un exemple complet exposarem un servei utilitzant tailable i un servei d&rsquo;eliminació d&rsquo;elements però en un cas real no podrien conviure a la mateixa collection</p>
+
+<p>Per simplificar l&rsquo;exemple utilitzarem directament el repositori al controller, recomanem, però, utilitzar la capa service entre els controllers i els repositoris</p>
+
+<pre><code class="language-java">import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping(&quot;/tweets&quot;)
+public class TweetController {
+
+    @Autowired
+    private TweetRepository tweetRepository;
+
+    @GetMapping
+    public Flux&lt;Tweet&gt; getAllTweets() {
+        return tweetRepository.findAll();
+    }
+
+    @PostMapping
+    public Mono&lt;Tweet&gt; createTweets(@Valid @RequestBody Tweet tweet) {
+        return tweetRepository.save(tweet);
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Tweet&gt;&gt; getTweetById(@PathVariable(value = &quot;id&quot;) String tweetId) {
+        return tweetRepository.findById(tweetId)
+                .map(savedTweet -&gt; ResponseEntity.ok(savedTweet))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Tweet&gt;&gt; updateTweet(@PathVariable(value = &quot;id&quot;) String tweetId,
+                                                   @Valid @RequestBody Tweet tweet) {
+        return tweetRepository.findById(tweetId)
+                .flatMap(existingTweet -&gt; {
+                    existingTweet.setText(tweet.getText());
+                    return tweetRepository.save(existingTweet);
+                })
+                .map(updateTweet -&gt; new ResponseEntity&lt;&gt;(updateTweet, HttpStatus.OK))
+                .defaultIfEmpty(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Void&gt;&gt; deleteTweet(@PathVariable(value = &quot;id&quot;) String tweetId) {
+
+        return tweetRepository.findById(tweetId)
+                .flatMap(existingTweet -&gt;
+                        tweetRepository.delete(existingTweet)
+                            .then(Mono.just(new ResponseEntity&lt;Void&gt;(HttpStatus.OK)))
+                )
+                .defaultIfEmpty(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));
+    }
+
+    // Tweets are Sent to the client as Server Sent Events
+    @GetMapping(value = &quot;/event-stream&quot;, produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux&lt;Tweet&gt; eventStreamTweets() {
+        return tweetRepository.findTweetsBy();
+    }
+    
+    // Tweets are Sent to the client as stream json
+    @GetMapping(path = &quot;/stream-json&quot;, produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    public Flux&lt;Tweet&gt; streamJsonTweets() {
+        return tweetRepository.findTweetsBy();
+    }
+
+}
+</code></pre>
+
+<p>En aquest controller exposem un CRUD de serveis rest sobre el path &ldquo;/tweets&rdquo; i dos serveis en stream: &ldquo;/tweets/event-stream&rdquo; per enviar tweets produint &ldquo;text/event-stream&rdquo; i &ldquo;/tweets/stream-json&rdquo; per enviar tweets produint &ldquo;application/stream+json&rdquo; per simular un efecte de tipus timeline</p>
+
+<h4 id="test-serveis-rest">Test serveis rest</h4>
+
+<p>Per observar el comportament dels serveis amb streaming iniciarem l&rsquo;aplicació amb Spring boot i utilitzarem un navegador amb la url:</p>
+
+<pre><code>http://localhost:8080/api/tweets/event-stream
+</code></pre>
+
+<p>i</p>
+
+<pre><code>http://localhost:8080/api/tweets/stream-json
+</code></pre>
+
+<p>Observarem que el navegador està esperant resposta del servidor</p>
+
+<p>Enviarem un nou tweet, per exemple fent:</p>
+
+<pre><code>curl -X POST \
+  http://localhost:8080/api/tweets \
+  -H 'Content-Type: application/json' \
+  -d '{&quot;text&quot;:&quot;Hello, World!&quot;}'
+</code></pre>
+
+<p>I observarem com en el navegador ha aparegut el nou tweet simulant l&rsquo;efecte de timeline</p>
+
+<h4 id="junit-repositori-reactiu">Junit repositori reactiu</h4>
+
+<p>Per provar el respositori reactiu utilitzarem un Embeded Mongo</p>
+
+<p>Crearem una configuració utilitzant el Embeded Mongo</p>
+
+<pre><code class="language-java">import org.springframework.boot.autoconfigure.AutoConfigureAfter;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
+import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.core.env.Environment;
+import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
+
+import com.mongodb.reactivestreams.client.MongoClient;
+import com.mongodb.reactivestreams.client.MongoClients;
+
+@Configuration
+@EnableReactiveMongoRepositories(basePackages = &quot;cat.gencat&quot;)
+@EnableAutoConfiguration(exclude = { MongoAutoConfiguration.class })
+@AutoConfigureAfter(EmbeddedMongoAutoConfiguration.class)
+public class EmbeddedReactiveMongoConfig extends AbstractReactiveMongoConfiguration {
+
+	private final Environment environment;
+
+	public EmbeddedReactiveMongoConfig(Environment environment) {
+		this.environment = environment;
+	}
+
+	@Override
+	@Bean
+	@DependsOn(&quot;embeddedMongoServer&quot;)
+	public MongoClient reactiveMongoClient() {
+		int port = environment.getProperty(&quot;local.mongo.port&quot;, Integer.class);
+		return MongoClients.create(String.format(&quot;mongodb://localhost:%d&quot;, port));
+	}
+
+	@Override
+	protected String getDatabaseName() {
+		return &quot;embedded-reactive-mongo&quot;;
+	}
+
+}
+</code></pre>
+
+<p>En un test de Junit podem utilitzar aquesta configuració enlloc que la de l&rsquo;aplicació &ldquo;ReactiveMongoConfig&rdquo;, per exemple:</p>
+
+<pre><code class="language-java">import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import cat.gencat.ctti.config.AppConfig;
+import cat.gencat.ctti.config.EmbeddedReactiveMongoConfig;
+import cat.gencat.ctti.model.Tweet;
+import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = { AppConfig.class, EmbeddedReactiveMongoConfig.class })
+public class TweetRepositoryTest {
+
+	@Autowired
+	TweetRepository tweetRepository;
+
+	@Test
+	public void testSaveTweet() {
+		Tweet originTweet = new Tweet(&quot;Hello, World!&quot;);
+		Mono&lt;Tweet&gt; tweetMono = tweetRepository.save(originTweet);
+
+		StepVerifier.create(tweetMono).assertNext(createdTweet -&gt; {
+			Assert.assertNotNull(createdTweet);
+			Assert.assertNotNull(createdTweet.getId());
+			Assert.assertNotNull(createdTweet.getText());
+			Assert.assertEquals(originTweet.getText(), createdTweet.getText());
+			Assert.assertNotNull(createdTweet.getCreatedAt());
+			Assert.assertEquals(originTweet.getCreatedAt(), createdTweet.getCreatedAt());
+
+		}).expectComplete().verify();
+	}
+
+}
+</code></pre>
+
+<p>En aquest exemple provem el mètode de guardar tweets de forma reactiva</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

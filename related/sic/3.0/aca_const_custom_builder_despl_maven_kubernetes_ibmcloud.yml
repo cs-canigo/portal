@@ -1,0 +1,54 @@
+version: 2.0.0
+info:
+  version: 1.2.0
+  description: Petclinic (Kubernetes IBMCloud)
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: petclinic-test
+  - DEPLOYMENT_TYPE: Deployment
+components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                path: './builder/Dockerfile'
+                name: 'maven-custom-builder'
+    build:
+      steps:
+        - container:
+            image:
+              local:
+                name: 'maven-custom-builder'
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn clean package --no-transfer-progress -Dmaven.test.skip=true
+            env:
+              - ENV: 'production'
+    deployment:
+      scm: https://git.intranet.gencat.cat/0192/sic-tests/9997/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'preproduccio/petclinic'
+                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DEPLOYMENT_WAIT: 120
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'produccio/petclinic'
+                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DEPLOYMENT_WAIT: 120
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]

@@ -1,0 +1,47 @@
+version: 2.0.0
+info:
+  version: 1.4.0
+  description: Petclinic (Kubernetes CaaS)
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: petclinic-test
+  - DEPLOYMENT_TYPE: Deployment
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn clean package --no-transfer-progress -Dmaven.test.skip=true
+            env:
+              - ENV: 'production'
+    deployment:
+      scm: https://git.intranet.gencat.cat/0192/sic-tests/9998/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'preproduccio/petclinic'
+                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DEPLOYMENT_WAIT: 120
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'produccio/petclinic'
+                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DEPLOYMENT_WAIT: 120
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]

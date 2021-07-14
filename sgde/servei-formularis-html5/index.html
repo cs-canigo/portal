@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Formularis HTML5 a eFormularis</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Formularis HTML5 a eFormularis\" />");
+		document.write("<meta name=\"description\" content=\"Formularis HTML5 a eFormularis\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sgde">
+											
+
+
+
+
+
+
+
+	Servei de Gestió del Document Electrònic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Formularis HTML5 a eFormularis
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-05-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#sol-licitud-alta-aplicació">Sol·licitud alta aplicació</a></li>
+<li><a href="#model-d-integració">Model d&rsquo;integració</a>
+<ul>
+<li><a href="#frontals-web-aplicació">Frontals web aplicació</a>
+<ul>
+<li><a href="#regles-de-firewall">Regles de firewall</a></li>
+</ul></li>
+<li><a href="#consideracions-de-seguretat">Consideracions de seguretat</a></li>
+</ul></li>
+<li><a href="#cicle-de-vida-formulari-html5">Cicle de vida formulari HTML5</a>
+<ul>
+<li><a href="#desenvolupament">Desenvolupament</a></li>
+<li><a href="#desplegament">Desplegament</a>
+<ul>
+<li><a href="#versionatge">Versionatge</a></li>
+</ul></li>
+<li><a href="#baixa">Baixa</a></li>
+</ul></li>
+<li><a href="#configuracions">Configuracions</a>
+<ul>
+<li><a href="#configuració-frontal-web">Configuració frontal web</a></li>
+<li><a href="#incrustar-formulari">Incrustar formulari</a></li>
+<li><a href="#enviament-de-dades">Enviament de dades</a></li>
+</ul></li>
+<li><a href="#desenvolupament-avançat">Desenvolupament Avançat</a>
+<ul>
+<li><a href="#creació-nova-llibreria">Creació nova llibreria</a>
+<ul>
+<li><a href="#nota-sobre-la-nomenclatura">Nota sobre la nomenclatura</a></li>
+</ul></li>
+<li><a href="#deploy">Deploy</a></li>
+<li><a href="#normes-d-empaquetament">Normes d&rsquo;empaquetament</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>En l&rsquo;actualització tecnològica realitzada durant el 2018 (23-4-2018 Preproducció - 13-6-2018 Producció) a la plataforma d&rsquo;eFormularis, Adobe LiveCycle es substituït per <strong>AEM (Adobe Experience Manager)</strong>, el qual incorpora noves funcionalitats relatives a formularis HTML5.</p>
+
+<p>Els <strong>Adaptive Forms</strong> són els formularis HTML5 d&rsquo;AEM amb capacitat multi-dispositiu. Això vol dir que responen de forma diferent, s&rsquo;adapten, depenent del dispositiu on siguin executats. Un altre gran diferència respecte als formularis PDF, és que el mode d&rsquo;execució és <strong>on-line</strong>. El formulari ja no es descarrega i s&rsquo;emplena en mode <strong>off-line</strong> com en el cas dels PDF, per a ser enviats posteriorment.</p>
+
+<p>D&rsquo;aquí en endavant, quan s&rsquo;anomeni un formulari HTML5 ens estem referint exclusivament a un adaptive form d&rsquo;AEM.</p>
+
+<h2 id="sol-licitud-alta-aplicació">Sol·licitud alta aplicació</h2>
+
+<p>Per a que una aplicació web pugui incorporar un formulari HTML5 gestionat pel servei d&rsquo;eFormularis, cal que faci arribar una petició de sol·licitud d&rsquo;alta al <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/STF">servei STF del JIRA CSTD</a> proporcionant la següent informació:</p>
+
+<p><strong>Dades generals</strong></p>
+
+<ul>
+<li><em>Àmbit</em>: àmbit al que pertany l&rsquo;aplicació (Ex. DGAC, TSF, CTT, &hellip;)</li>
+<li><em>Codi de diàleg aplicació</em>: codi de diàleg de l&rsquo;aplicació</li>
+<li><em>Nom aplicació</em>: nom descriptiu de l&rsquo;aplicació</li>
+<li><em>Responsable CTTI</em>: persona responsable per part de CTTI de l&rsquo;aplicació</li>
+<li><em>Responsable proveïdor d&rsquo;aplicacions</em>: persona responsable per part del lot d&rsquo;aplicacions</li>
+</ul>
+
+<p><strong>Dades tècniques</strong></p>
+
+<ul>
+<li><em>Endpoint de preomplert de dades</em>: nom dns i port del servei que expossa l&rsquo;endpoint per l&rsquo;obtenció de les dades (XML o JSON) per realitzar el preomplert del formulari. Si el formulari no requereix preomplert de dades, ni per les noves instanciacions ni per carregar esborranys, no cal proporcionar aquesta informació</li>
+<li><em>Endpoint de submit</em>: en cas que el formulari tingui un botó de tipus submit, caldrà que s&rsquo;especifiqui el nom dns i port del servei que expossa l&rsquo;endpoint al que es farà l&rsquo;enviament de les dades. Si el formulari tindrà una acció per fer l&rsquo;enviament de les dades del formuari via AJAX sense ser de tipus submit, no cal proporcionar aquesta informació</li>
+</ul>
+
+<p>Com a resposta a la sol·licitud d&rsquo;alta, el equip del CS Canigó retornarà la URL base dels formularis de l&rsquo;aplicació al servei d&rsquo;eFormularis:</p>
+
+<ul>
+<li>PRE: <a href="https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+<li>PRO: <a href="https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://publicador.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+</ul>
+
+<p>També confirmarà que s&rsquo;han habilitat les connectivitats requerides des del servei d&rsquo;eFormularis cap als endpoints necessaris per la integració.</p>
+
+<h2 id="model-d-integració">Model d&rsquo;integració</h2>
+
+<p><img src="/related/sgde/model_integracio_formularis-html5.png" alt="model-integracio-formularisHTML5" /></p>
+
+<h3 id="frontals-web-aplicació">Frontals web aplicació</h3>
+
+<p>Com es pot observar en el punt anterior, el lloc web on es vulgui incorporar el formulari ha de tenir uns frontals web (Apache, NGinx,&hellip;) com a part de la seva infraestructura. El motiu és que, per tal de mantenir el context dins l&rsquo;aplicació i no fer una redirecció a un altre domini, cal fer una sèrie de configuracions en aquests frontals per tal que l&rsquo;accés al servei d&rsquo;eFormularis sigui transparent.</p>
+
+<p>En la secció <a href="#configuracions">Configuracions</a> es pot veure el detall de les configuracions a realitzar.</p>
+
+<h4 id="regles-de-firewall">Regles de firewall</h4>
+
+<p>Els frontals web de l&rsquo;aplicació hauran de tenir connectivitat amb el servei de publicació de Formularis HMTL5 d&rsquo;eFormularis:</p>
+
+<pre><code>- PRE
+    Nom: preproduccio.publicador.eformularis.intranet.gencat.cat
+    IP: 10.1.126.79
+    Port: 443
+- PRO:
+    Nom: publicador.eformularis.intranet.gencat.cat
+    IP: 10.1.118.51
+    Port: 443
+</code></pre>
+
+<h3 id="consideracions-de-seguretat">Consideracions de seguretat</h3>
+
+<p>Es recomana que l&rsquo;aplicació incorpori un token en la crida al formulari, i que aquest s&rsquo;enviï en l&rsquo;enviament de les dades del formulari per tal que l&rsquo;aplicació pugui fer les validacions pertinents (autenticitat, timeout).</p>
+
+<h2 id="cicle-de-vida-formulari-html5">Cicle de vida formulari HTML5</h2>
+
+<p>A continuació es descriu el cicle de vida pel que passa un formulari HTML5 a la plataforma d&rsquo;eFormularis</p>
+
+<h3 id="desenvolupament">Desenvolupament</h3>
+
+<p>Desenvolupament local en una instància AEM del desenvolupador, executada en mode autor. El instal·lable d&rsquo;AEM ha de ser sol·licitat al CS Canigó pel responsable CTTI de l&rsquo;aplicació, preferiblement obrint una petició al servei <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/STF">STF</a>, o bé enviant un correu a <a href="mailto:sgde.ctti@gencat.cat">sgde.ctti@gencat.cat</a>.</p>
+
+<p>L&rsquo;execució de la instància d&rsquo;AEM en mode autor permetrà al desenvolupador fer el disseny del formulari HTML5.</p>
+
+<pre><code>$ java -jar &lt;AEM_jar&gt;
+</code></pre>
+
+<p>S&rsquo;ha de tenir en compte que per defecte el repositori d&rsquo;AEM és crea al directori des d&rsquo;on l&rsquo;usuari executa aquest procés. És important ja que el volum de dades que s&rsquo;hi emmagatzema és gran (5GB aproximadament) i de vital importancia per el funcionament d&rsquo;AEM.</p>
+
+<p>El formulari i tots els recursos associats (temes, fragments, &hellip;) han de crear-se en un directori de l&rsquo;aplicació, no directament a l&rsquo;arrel. D&rsquo;aquesta manera al fer l&rsquo;export/import entre entorns quedaran ubicats al lloc adient.</p>
+
+<p><em>Formularis</em></p>
+
+<ul>
+<li>PRE: <a href="https://preproduccio.autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://preproduccio.autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+<li>PRO: <a href="https://autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://autor.eformularis.intranet.gencat.cat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+</ul>
+
+<p><em>Temes</em></p>
+
+<ul>
+<li>PRE: <a href="https://preproduccio.autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;">https://preproduccio.autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;</a></li>
+<li>PRO: <a href="https://autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;">https://autor.eformularis.intranet.gencat.cat/aem/formdetails.html/content/dam/formsanddocuments-themes/&lt;aplicacio&gt;/&lt;tema&gt;</a></li>
+</ul>
+
+<h3 id="desplegament">Desplegament</h3>
+
+<p>Per tal que un formulari HTML5 sigui desplegat a eFormularis, cal seguir les següents pases:</p>
+
+<ul>
+<li><p>Exportar el formulari HTML5 a l&rsquo;AEM autor de desenvolupament: AEM Start -&gt; Forms -&gt; Forms &amp; Documents -&gt; Sel·leccionar formulari -&gt; Download</p></li>
+
+<li><p>Crear una petició al CSTD, <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/STF">servei STF</a> especificant aquesta informacio:</p>
+
+<ul>
+<li>àmbit, aplicació, nom formulari i versió (opcional, en cas que ja hi hagi alguna altre desplegada i no es vulgui sobreescriure)</li>
+<li>adjunt zip amb el conjunt d&rsquo;assets resultat de l&rsquo;exportació del formulari</li>
+<li>entorn</li>
+<li>data publicació: data en que es vol programar la publicació del formulari. Si no s&rsquo;informa es considerarà que es vol publicar el més aviat possible</li>
+</ul></li>
+
+<li><p>El CS Canigó validarà el formulari a la instància AEM autor i el publicarà, retornant com a resultat la URL d&rsquo;accés al formulari:</p>
+
+<ul>
+<li>PRE: <a href="https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+<li>PRO: <a href="https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html">https://publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html</a></li>
+</ul></li>
+</ul>
+
+<p>Per altres recursos com els temes i els fragments el procediment de publicació és el mateix. Cal tenir en compte les dependències entre ells en l&rsquo;ordre de publicació.</p>
+
+<h4 id="versionatge">Versionatge</h4>
+
+<p>Donat que la URL de cada formulari ha de ser unívoca, en cas de que es vulgui que puguin conviure diferents versions d&rsquo;un formulari caldrà que s&rsquo;afegeix la versió a aquesta URL:</p>
+
+<p><a href="https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html">https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_1.0.0.html</a></p>
+
+<p><a href="https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html">https://preproduccio.publicador.eformularis.intranet.gencat/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;_2.0.0.html</a></p>
+
+<p>Es recomana però que els formularis siguin sempre <strong>backward compatible</strong>, evitant aquest versionatge en la publicació, podent mantenir sempre la mateixa URL.</p>
+
+<h3 id="baixa">Baixa</h3>
+
+<p>Quan un formulari o una versió en concreta estigui en desús, s&rsquo;haurà de demanar al CS Canigó la seva baixa. La petició s&rsquo;haurà de fer al <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/STF">servei STF</a> informant la URL que l&rsquo;identifica a cada entorn.</p>
+
+<h2 id="configuracions">Configuracions</h2>
+
+<p>A continuació es descriuen les principals configuracions a realitzar pel funcionament d&rsquo;un formulari HTML5.</p>
+
+<h3 id="configuració-frontal-web">Configuració frontal web</h3>
+
+<p>Configuració de proxy HTTP invers als frontals web Apache de l&rsquo;aplicació per l&rsquo;accés als recursos (js, css, &hellip;) d&rsquo;AEM:</p>
+
+<pre><code>&lt;VirtualHost *:443&gt;
+    ProxyPreserveHost On
+
+    SSLProxyEngine on
+    SSLProxyVerify none 
+    SSLProxyCheckPeerCN off
+    SSLProxyCheckPeerName off
+    SSLProxyCheckPeerExpire off
+
+    ServerName &lt;domini-aplicacio&gt;
+
+    ProxyPass /forms/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/forms/
+    ProxyPassReverse /forms/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/forms/
+
+    ProxyPass /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
+    ProxyPass /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
+    ProxyPass /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+    ProxyPass /bin/efo/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/bin/efo/
+    # CSRF Filter
+    ProxyPass /libs/granite/csrf/token.json https://preproduccio.publicador.eformularis.intranet.gencat.cat/libs/granite/csrf/token.json
+
+    ProxyPassReverse /etc/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc/
+    ProxyPassReverse /etc.clientlibs/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/etc.clientlibs/
+    ProxyPassReverse /bin/efo/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/bin/efo/
+    # written for thank you page and other URL present in AF during redirect
+    ProxyPassReverse /content/ https://preproduccio.publicador.eformularis.intranet.gencat.cat/content/
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>on &lt;domini-aplicacio&gt; és el domini de l&rsquo;aplicació que està publicant el formulari</p>
+
+<h3 id="incrustar-formulari">Incrustar formulari</h3>
+
+<p>Codi javascript per incrustar el formulari HTML5 a la plana web de l&rsquo;aplicació:</p>
+
+<pre><code> &lt;script&gt;
+    var path = &quot;https://&lt;domini-aplicacio&gt;/content/forms/af/&lt;aplicacio&gt;/&lt;formulari&gt;.html&quot;;
+    var pathData = &quot;&lt;url-precarrega-dades&gt;&quot;
+    path += &quot;/jcr:content/guideContainer.html&quot;;
+    $.ajaxSetup({cache:true});
+    $.ajax({
+        url  : path ,
+        type : &quot;GET&quot;,
+        data : {
+            // Set the wcmmode to be disabled
+            // Només per node autor. Pels publicadors no s'ha de posar
+            // wcmmode : &quot;disabled&quot;,
+            &quot;dataRef&quot;: pathData
+        },
+        async: false,
+        success: function (data) {
+            //document.getElementById('output').innerHTML = data;
+            $( &quot;div&quot; ).html(data);
+        },
+        error: function (data) {
+            // any error handler
+        }
+    });
+ &lt;/script&gt;
+</code></pre>
+
+<p>on &lt;domini-aplicacio&gt; és el domini de l&rsquo;aplicació que està publicant el formulari
+on &lt;url-precarrega-dades&gt; és la URL de l&rsquo;endpoint del qual s&rsquo;obtindran les dades per el preomplert</p>
+
+<h3 id="enviament-de-dades">Enviament de dades</h3>
+
+<p>La llibreria guideBridge ens dona una API de comunicació amb el formulari, que podem utilitzar per obtenir les dades introduïdes per el formulari.</p>
+
+<p>El següent codi javascript ens dóna un exemple per a l’enviament de les dades per AJAX:</p>
+
+<pre><code>function sendData (){
+    guideBridge.getData({
+        success : function (guideResultObject) {
+            //POST de guideResultObject.data a &lt;endpoint-submit&gt;
+        },
+        error : function (guideResultObject) {
+             var msg = guideResultObject.getNextMessage();
+             while (msg != null) {
+                alert(&quot;No s'han pogut obtenir les dades del formulari: &quot; + msg.message);
+                msg = guideResultObject.getNextMessage();
+             }
+        }
+    });
+}
+
+sendData();
+</code></pre>
+
+<p>on &lt;endpoint-submit&gt; és l&rsquo;endpoint de l&rsquo;aplicació on es vol fer l&rsquo;enviament de les dades. Idealment aquest endpoint hauria de ser relatiu a la URL de publicació del formulari, ja que d’aquesta manera no caldrà fer cap diferenciació per entorn.</p>
+
+<p>Aquesta llibreria es pot utilitzar tant des del propi formulari com des de la pàgina de l’aplicació en la que s’ha incrustat el formulari.</p>
+
+<p>Les funcionalitats es poden consultar a: <a href="https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html">https://helpx.adobe.com/experience-manager/6-3/forms/javascript-api/GuideBridge.html</a></p>
+
+<h2 id="desenvolupament-avançat">Desenvolupament Avançat</h2>
+
+<p>Pot ser que sigui necessari ampliar la funcionalitat per defecte d&rsquo;un formulari de l&rsquo;AEM, incloure nous components o convertir les regles dels formularis en funcions reutilitzables. Podem crea una llibreria javascript amb funcionalitat pròpia que podem incloure en el nostre formulari.</p>
+
+<h3 id="creació-nova-llibreria">Creació nova llibreria</h3>
+
+<p>Podem crear una llibreria dins l&rsquo;AEM seguint els següents passos: <a href="http://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/">http://blogs.adobe.com/experiencedelivers/experience-management/clientlibs-explained-example/</a></p>
+
+<p>La llibreria haurà de situar-se en un path concret dintre de l&rsquo;AEM:</p>
+
+<p><strong>/apps/&lt;aplicacio&gt;/&lt;nom_llibreria&gt;</strong></p>
+
+<p>Cal utilitzar la propietat allowProxy per tal de poder ser referenciada desde el formulari, tal i com s&rsquo;explica a: <a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/clientlibs.html#CreatingClientLibraryFolders">https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/clientlibs.html#CreatingClientLibraryFolders</a></p>
+
+<p>Es poden crear nous components basats en components existents del Formularis de l&rsquo;AEM. Podeu seguir el següent enllaç per a trobar la documentació oficial: <a href="https://helpx.adobe.com/experience-manager/6-3/forms/using/introduction-widgets.html">https://helpx.adobe.com/experience-manager/6-3/forms/using/introduction-widgets.html</a></p>
+
+<h4 id="nota-sobre-la-nomenclatura">Nota sobre la nomenclatura</h4>
+
+<p>Les funcions que afegim en la nostra llibreria conviuran tant amb el javascript de l&rsquo;aplicació que incrusta el formulari com amb altres llibreries del propi AEM. Per tant les funcions i objectes que creem haurien d&rsquo;incloure un <strong>Namespace</strong> en la nomenclatura per a evitar col·lisions.</p>
+
+<h3 id="deploy">Deploy</h3>
+
+<p>Tot aquesta funcionalitat cal empaquetar-se en un paquet <strong>&lt;aplicacio&gt;_&lt;nom_llibreria&gt;__&lt;versio&gt;.zip</strong> instal·lable en l&rsquo;AEM. Aquest paquet també pot incloure els formularis de l&rsquo;aplicació.
+La documentació oficial sobre la creació de paquets la podem trobar a:
+<a href="https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html">https://helpx.adobe.com/experience-manager/6-3/sites/administering/using/package-manager.html</a></p>
+
+<p>És recomanable crear-se un entorn de treball en local utilitzant maven i l&rsquo;arquetip que l&rsquo;AEM ens proporciona:
+<a href="https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/vlt-mavenplugin.html#simplecontentpackagearchetype">https://helpx.adobe.com/experience-manager/6-3/sites/developing/using/vlt-mavenplugin.html#simplecontentpackagearchetype</a></p>
+
+<p>Des de el fitxer META-INF/vault/filter.xml del paquet que hem creat es pot controlar els directoris de l&rsquo;AEM que s&rsquo;inclouran en el deploy.</p>
+
+<h3 id="normes-d-empaquetament">Normes d&rsquo;empaquetament</h3>
+
+<p>Els paquets enviats a desplegar a els servidors AEM han de complir les següents restriccions:</p>
+
+<ol>
+<li>Els paths a importar sempre han d&rsquo;incloure el nom de l&rsquo;aplicació.</li>
+<li>Imatges i recursos que utilitza la llibreria s&rsquo;han d&rsquo;incloure en una carpeta anomenada <strong>resources</strong> de la pròpia llibreria</li>
+<li>El codi javascript no pot anar minimitzat</li>
+</ol>
+
+<p>Els paths que s&rsquo;han d&rsquo;incloure en el <strong>filter.xml</strong> del vault han de ser:</p>
+
+<table>
+<thead>
+<tr>
+<th>Nom</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>/apps/&lt;aplicacio&gt;/&lt;nom_llibreria&gt;</td>
+<td>Llibreries clients</td>
+</tr>
+
+<tr>
+<td>/content/forms/af/&lt;aplicacio&gt;/</td>
+<td>Descpripció dels formularis</td>
+</tr>
+
+<tr>
+<td>/content/dam/formsanddocuments/&lt;aplicacio&gt;/</td>
+<td>El formularis i els seus components</td>
+</tr>
+</tbody>
+</table>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

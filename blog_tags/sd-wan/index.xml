@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/sd-wan/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Wed, 28 Nov 2018 00:00:00 UTC</updated>
+    
+    <item>
+      <title>SD-WAN</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/11/201812SDWAN/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/11/201812SDWAN/</guid>
+      <description>Fonaments de les SD-WAN per dummies</description>
+    </item>
+    
+  </channel>
+</rss>

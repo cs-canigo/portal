@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Principis de Microserveis</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Principis de Microserveis\" />");
+		document.write("<meta name=\"description\" content=\"Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d\x27articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Principis de Microserveis
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 16-12-2017
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="principis-de-microserveis">Principis de Microserveis</h2>
+
+<p>Un cop acabada la fase de transformació i posada al dia del maquinari i dels programaris base que suporten les aplicacions de la Generalitat, a Arquitectura CTTI comencem a observar interès en posar al dia també les aplicacions. En la majoria de casos es posa damunt de la taula la conversió d&rsquo;aplicacions monòlits cap a aplicacions basades en microserveis. D&rsquo;aquesta manera es pretén dotar de lleugeresa i adaptabilitat als canvis a les aplicacions. Aquestes acostumen a durar molts més anys que les infraestructures i programaris que les sustenten. Per tant, gaudir d&rsquo;aplicacions basades en arquitectures flexibles i que facilitin els canvis esdevé un factor d&rsquo;èxit decisiu.</p>
+
+<p>En aquest post, continuem la sèrie d&rsquo;articles sobre els <a href="http://canigo.ctti.gencat.cat/blog/2016/08/microserveis/">microserveis</a> i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis. En properes entrades continuarem aprofundint en les arquitectures de microserveis i iniciarem una nova sèrie sobre la Refactorització d&rsquo;aplicacions.</p>
+
+<p><em>Aquest post està basat en una sèrie de ponències i material videogràfic creat per <a href="http://samnewman.io/">Sam Newman</a></em></p>
+
+<p><img src="/images/bloc/Services4.png" alt="Microservices logo" /></p>
+
+<h3 id="què-són-els-microserveis">Què són els microserveis?</h3>
+
+<p>Els microserveis són serveis petits i autònoms que treballen plegats. Cadascun d&rsquo;aquests serveis té una funció determinada, i la fa bé. Una aplicació està composada per uns quants d&rsquo;aquests serveis, que poden ser propis o creats per altres equips de dins o de fora de l&rsquo;organització. En ser molts i petits, l&rsquo;arquitectura, el disseny, el desenvolupament i les operacions dels microserveis són substancialment diferents dels sistemes monolítics. En aquests principis es mostren directrius per a crear una bona arquitectura de microserveis:</p>
+
+<h3 id="1-han-de-ser-modelats-sobre-el-domini-de-negoci-que-volem-cobrir">1. Han de ser modelats sobre el domini de negoci que volem cobrir.</h3>
+
+<p>Sembla un principi trivial i simple, però trenca d&rsquo;arrel el model que s&rsquo;ha anat seguint els darrers anys: els serveis es creaven per capes tecnològiques; presentació, dades, totes les funcionalitats agrupades en una única capa de negoci, interoperabilitat, etc. En canvi, els microserveis es dissenyen per a cobrir funcionalitats senceres, de dalt a baix. Les capes tecnològiques s&rsquo;utilitzen només dins del propi àmbit funcional del microservei. El <strong>disseny basat en el domini de negoci</strong> ajuda a trobar <strong>límits estables</strong> (un pagament de nòmines sempre serà això mentre hi hagi treballadors a qui pagar una nòmina!), i preparats per a ser <strong>reutilitzables</strong>  en l&rsquo;aplicació que l&rsquo;ha creat, o en altres (es poden pagar n varietats de nòmines, independentment dels tipus de contracte que estigui vigent segons la llei).</p>
+
+<h3 id="2-es-basen-en-l-automatització">2. Es basen en l&rsquo;automatització.</h3>
+
+<p>Aquest és un principi crucial. Quan hi ha més parts a controlar, l&rsquo;automatització és clau per a poder construir i desplegar l&rsquo;aplicació. Les dependències, que són difícils de gestionar en qualsevol producte de programari, esdevenen un maldecap encara major si no <strong>s&rsquo;automatitzen els canals de construcció i desplegament</strong> dels microserveis. Deixar clar per escrit (en un script o fitxer de configuració) quines són les dependències i com s&rsquo;han d&rsquo;executar la construcció i el desplegament dels microserveis és la clau per a no fracassar. L&rsquo;<strong>aprovisionament de plataformes per codi</strong>, assegura que els microserveis es comporten sempre de la mateixa manera, doncs els entorns d&rsquo;execució són exactament iguals a com s&rsquo;han definit cada cop. D&rsquo;aquesta manera s&rsquo;evita que cada entorn es comporti de manera diferent perquè s&rsquo;ha creat manualment. L&rsquo;<strong>automatització de les proves</strong> assegura que els resultats són coherents de versió en versió, detectant fàcilment si les funcionalitats no es cobreixen en qüestió de minuts.</p>
+
+<p>Si no es té prou clar aquest principi, millor no posar-s&rsquo;hi.</p>
+
+<h3 id="3-ocultar-els-detalls-de-la-implementació">3. Ocultar els detalls de la implementació.</h3>
+
+<p>Un dels errors que sovint cometen els sistemes distribuïts és el d&rsquo;acoblar excessivament els seus serveis entre ells. Dissenyar i crear <strong>contextos limitats</strong>, amb abast determinat i sense interseccions amb altres serveis. Com està fet el servei per dins, no ha d&rsquo;afectar a com els seus clients el consumeixen. De la mateixa manera, com més clients de diferents tecnologies pugui tenir un servei, més èxit tindrà i més podrà evolucionar. Per tant cal <strong>evitar a tota costa</strong>:</p>
+
+<ul>
+<li><p><strong>accessos directes a la base de dades</strong> del nostre servei,</p></li>
+
+<li><p>fer servir <strong>protocols propietaris</strong> a una tecnologia concreta (RMI només funciona amb java), o</p></li>
+
+<li><p>utilitzar la distribució de <strong>clients o agents</strong> com a mitjà de connexió als nostres serveis. En aquest cas la distribució de clients i el seu manteniment és un maldecap addicional.</p></li>
+</ul>
+
+<p><strong>Com més universals siguin els protocols i la forma de cridar als nostres serveis, millor</strong>. <strong>REST</strong> és potser el paradigma d&rsquo;aquest principi.</p>
+
+<h3 id="4-descentralitzar-ho-tot">4. Descentralitzar-ho tot.</h3>
+
+<p>Com ja s&rsquo;hi introduïa en la definició, els microserveis han de ser <strong>autosuficients</strong> en recursos i en decissions de disseny. Cada equip que crea microserveis ha d&rsquo;actuar com un <strong>operador autònom</strong> en les decisions que afecten a la funcionalitat que pretenen cobrir. Una dependència d&rsquo;altres elements, com una capa única de presentació, una base de dades centralitzada, o un bus de serveis, trenquen aquest principi de disseny. El microservei necessitaria doncs d&rsquo;altres equips i recursos i en dependria de llurs decisions i de la seva disponibilitat.</p>
+
+<p>En el cas de processos de llarga durada que requereixen la participació de varis microserveis, considerar tècniques com l&rsquo;<strong>orquestració</strong> o la <strong>coreografia</strong> de serveis, implementades com un agregat de microserveis.</p>
+
+<h3 id="5-desplegar-los-independentment">5. Desplegar-los independentment.</h3>
+
+<p>És la característica més important que necessiten els microserveis. <strong>Cada servei ha de desplegar-se en un sistema operatiu</strong> per a poder gaudir d&rsquo;independència d&rsquo;altres components; la utilització de contenidors permet crear màquines mínimes per a un sol servei, sense haver de pagar els peatges de la sobrecapacitat dels servidors físics o dels recursos dedicats pels hipervisors en el cas de la virtualització.</p>
+
+<p>Els serveis han de poder variar sense afectar als seus consumidors. Per això és convenient establir <strong>contractes dirigits pels consumidors</strong>. En aquests, els consumidors estableixen les seves expectatives de funcionament en base a uns tests que faciliten als propietaris del microservei. Si la nova versió del servei falla en executar aquests tests, aquesta no pot pujar a producció doncs faria fallar l&rsquo;execució a aquest consumidor.</p>
+
+<p>Els serveis s&rsquo;han de poder versionar independentment de les necessitats i els calendaris dels consumidors. Mitjançant la <strong>Coexistència de versions</strong> els serveis poden anar publicant noves versions sense afectar als consumidors de versions antigues. Aquesta pràctica ha de tenir un compromís per anar eliminant versions obsoletes, sinó, el manteniment dels serveis requeriria de múltiples branques actives. Aquesta és una pràctica altament desaconsellada per la complexitat que afegeix al desenvolupament en cas d&rsquo;haver d&rsquo;aplicar correccions a vàries versions vives.</p>
+
+<p>Una altra tècnica que es pot utilitzar és la de <strong>punts finals múltiples</strong> en què el servei desplega noves APIs en ports o camins diferents de l&rsquo;aplicació, deixant el codi antic donant servei a les APIs originals. Aquest és un mètode útil en la majoria de casos, especialment quan no es pot controlar el calendari de canvis dels consumidors, com en el cas d&rsquo;APIs públiques.</p>
+
+<h3 id="6-donar-preferència-als-consumidors-dels-serveis">6. Donar preferència als consumidors dels serveis.</h3>
+
+<p>Dissenyar serveis perquè siguin usats posa als consumidors d&rsquo;aquests en primera línia de les preocupacions dels desenvolupadors. <strong>Conèixer els teus consumidors</strong> i que aquests et coneguin és primordial perquè els serveis facin bé la feina per la que han estat creats. Els <strong>contractes creats pels consumidors</strong> són una bona eina per a conèixer les expectatives dels consumidors respecte als serveis que es publiquen. Uns <strong>estàndards d&rsquo;ús clars</strong> i que s&rsquo;entenguin ajuden a que els consumidors entenguin la seva funció sense dubtes. Per això resulten útils eines com els <strong>documentadors d&rsquo;APIs</strong>, els <strong>programaris de descoberta de serveis</strong> o els <strong>registres llegibles per humans</strong>.</p>
+
+<h3 id="7-aïllar-les-caigudes">7. Aïllar les caigudes.</h3>
+
+<p>En una arquitectura basada en microserveis, el fet que un microservei falli no ha de comportar que tot el sistema caigui. L&rsquo;arquitectura ha de dissenyar-se tenint en compte aquesta eventualitat, i que l&rsquo;error d&rsquo;un servei no bloquegi l&rsquo;execució d&rsquo;altres serveis en la mesura del possible. Hi ha tres tècniques que poden ajudar a mantenir viva l&rsquo;aplicació malgrat que un o varis serveis caiguin:</p>
+
+<ul>
+<li><p><strong>Timeouts</strong>. Posant timeouts adequats a la durada esperada de l&rsquo;execució d&rsquo;una crida a un servei pot donar més temps a resoldre el problema i fer el sistema més resilient. Un microservei que ha de tenir un temps de resposta sub-segon, no cal que tingui un timeout de 10 minuts.</p></li>
+
+<li><p><strong>Mampares</strong>. En un ús semblant a les mampares dels vaixells, separar els fils d&rsquo;execució en pools de connexions dedicats en exclusiva a serveis diferents. Per tant si un servei cau no afecta a altres serveis que estan funcionant.</p></li>
+
+<li><p><strong>Tallacircuits</strong>. Com els que tenim a les entrades de les cases per evitar mals majors amb l&rsquo;electricitat, els tallacircuits en microserveis donen una resposta alternativa als consumidors quan el servei no pot funcionar de la manera que s&rsquo;espera.</p></li>
+</ul>
+
+<h3 id="8-altament-observables">8. Altament observables.</h3>
+
+<p>En sistemes tradicionals, la <strong>monitorització estàndard</strong> basada en logs, temps de resposta i codis d&rsquo;error a més a més del seguiment de les variables de CPU, espai en disc, memòria i I/O poden ser suficients. Però en el cas dels microserveis, amb múltiples parts mòbils i donant aquesta informació, pot ser inviable fer un seguiment a la manera clàssica. L&rsquo;automatització i l&rsquo;<strong>agregació de logs i d&rsquo;estadístiques</strong> són claus per a donar una visió holística del sistema.</p>
+
+<p>Els microserveis poden fallar malgrat que estiguin aixecats i reportant bon funcionament de forma individual. La <strong>monitorització de corrent</strong> captura disfuncions de l&rsquo;orquestració dels microserveis provocades per la xarxa o per altres sistemes de suport a l&rsquo;execució. La <strong>monitorització semàntica</strong>, en què s&rsquo;executa un circuit funcional complet, com &ldquo;Crear un Expedient&rdquo;, és útil per avaluar les funcionalitats més crítiques d&rsquo;un sistema. Cal notar que aquestes transaccions són falses i que no han d&rsquo;introduir soroll al sistema. La introducció de rastres o <strong>IDs de correlació</strong> pot donar idea de per on ha anat passant l&rsquo;execució d&rsquo;una funcionalitat. Aquesta tècnica és especialment útil en sistemes dirigits per esdeveniments. És una eina molt potent a l&rsquo;hora de realitzar investigacions d&rsquo;informàtica forense. Finalment, la creació de <strong>panells</strong> on es mostri tota la informació en temps real del comportament del sistema i dels microserveis que el composen ajuden a la comprensió i al seguiment del seu funcionament.</p>
+
+<h2 id="referències">Referències:</h2>
+
+<p>Sam Newman: &ldquo;Principles of Microservices&rdquo;
+<a href="http://samnewman.io/talks/principles-of-microservices/">http://samnewman.io/talks/principles-of-microservices/</a></p>
+
+<p>Sam Newman: &ldquo;The Principles of Microservices. Embrace Autonomy to Optimize Performance&rdquo; <a href="http://shop.oreilly.com/product/0636920043935.do#">http://shop.oreilly.com/product/0636920043935.do#</a></p>
+
+<p>Sam Newman: &ldquo;Building Microservices&rdquo;
+<a href="http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078">http://shop.oreilly.com/product/0636920033158.do?cmp=af-code-books-video-product_cj_0636920033158_7739078</a></p>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

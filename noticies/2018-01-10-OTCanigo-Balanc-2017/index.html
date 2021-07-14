@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Oficina Tècnica de Canigó i Suport Cloud. Balanç 2017</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Oficina Tècnica de Canigó i Suport Cloud. Balanç 2017\" />");
+		document.write("<meta name=\"description\" content=\"Evolució dels serveis de l\x27Oficina Tècnica de Canigó i Suport Cloud a l\x27any 2017\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/noticies">
+											
+
+
+
+
+
+
+
+
+
+	Notícies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Oficina Tècnica de Canigó i Suport Cloud. Balanç 2017
+
+
+										
+
+									
+								</h1>
+
+								
+									<br />
+									10-01-2018
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 10-01-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>A continuació es mostren les fites aconseguides el 2017 segons ordre cronològic:</p>
+
+<p><center><iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1se11kf-cofPGpMC7IQgwIcO3i1Lt_0SbVWjRMKZpHMQ&font=Georgia-Helvetica&lang=ca&initial_zoom=2&height=500' width='100%' height='500' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe></center></p>
+
+<p>A mode resum, destacaríem les següents:</p>
+
+<h3 id="suport-cloud"><strong>Suport Cloud</strong></h3>
+
+<ul>
+<li>Posada en servei de la plataforma de contenidors on-premise <strong>SwarmMe</strong></li>
+<li>Posada en servei de la plataforma de contenidors on-premise <strong>AppAgile</strong></li>
+<li>Migració d&rsquo;aplicacions del servei Single and Scalable Group Container Service de Bluemix al nou <strong>Bluemix Container Service</strong> basat en Docker i Kubernetes</li>
+<li>Millora d&rsquo;imatges Docker estàndard de gencatcloud, ara basades en la distribució de Linux <strong>Alpine</strong>, més segures i de tamany més reduït</li>
+<li>Implementació de nova imatge Docker Apache-Shibboleth per la integració amb <strong>GICAR</strong>, tant a cloud privat com públic</li>
+<li>Suport al desplegament d&rsquo;aplicacions en les diferents plataformes de contenidors i cloud públic en catàleg: AppAgile, SwarmMe, Azure i Bluemix</li>
+</ul>
+
+<h3 id="sic-servei-d-integració-contínua">SIC (Servei d&rsquo;Integració Contínua)</h3>
+
+<ul>
+<li>Publicació del <strong>SIC 2.0</strong>, el qual inclou:
+
+<ul>
+<li>Integració al SIC del nou sistema de gestió de versions de codi (<strong>Git</strong>).</li>
+<li>Integració de la seguretat del SIC amb <strong>GICAR</strong>.</li>
+<li><strong>Autoservei d&rsquo;usuaris</strong> al SIC, mitjançant el qual els usuaris de CTTI i de CPD/LDT tenen accés de forma automàtica i els usuaris de Lot d&rsquo;aplicacions poden concedir-se permisos dins el mateix lot i àmbit.</li>
+<li>Gràcies a la incorporació de l&rsquo;<strong>Autoservei de repositoris</strong> al SIC, els usuaris de lot d&rsquo;aplicacions poden crear-se de forma autònoma els seus repositoris.</li>
+<li>Integració de jobs en format <strong>pipeline</strong> al SIC.</li>
+<li>Creació d&rsquo;un <strong>Sistema de Gestió de Binaris</strong>, mitjançant el qual s&rsquo;evita l&rsquo;antipatró de dispositar artefactes als sistemes de versions de codi.</li>
+</ul></li>
+<li>Integració del SIC amb les plataformes de contenidors <strong>Docker Bluemix Container Service (Kubernetes)</strong> i <strong>AppAgile (Openshift)</strong></li>
+<li>Integració del SIC amb <strong>Bluemix Cloud Foundry PaaS</strong></li>
+<li>Participació de l&rsquo;equip del SIC en el procés d&rsquo;alta de <strong>noves solucions</strong></li>
+<li>Pas a <strong>HTTPS</strong> de la totalitat de serveis del SIC 2.0</li>
+<li>Actualització de versió del servei <strong>Nexus</strong> a la versió 3.2.1</li>
+<li>Integració d&rsquo;un sistema de <strong>desplegament automàtic</strong> als entorns de PRE i PRO (amb tall de servei)</li>
+</ul>
+
+<h3 id="canigó"><strong>Canigó</strong></h3>
+
+<ul>
+<li>Publicació de <a href="http://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10450"><strong>Canigó 3.2.0</strong></a> amb suport a arquitectures HTML5/JS+REST: Spring Boot, Swagger, JWT,&hellip;</li>
+<li>Publicació de <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10461"><strong>Canigó 3.2.1</strong></a> amb actualització de llibreries, suport a la càrrega de propietats en jars, millores i resolució d&rsquo;incidències</li>
+<li>Publicació de <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10463"><strong>Canigó 3.2.2</strong></a> amb millores per donar suport a les best practices per la implementació d&rsquo;APIs REST, actualització de llibreries, millores i resolució d&rsquo;incidències</li>
+<li>Publicació de <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/CAN/fixforversion/10464"><strong>Canigó 3.2.3</strong></a> amb la publicació de jars amb test unitaris per als mòduls core, web-rest, persistència i seguretat</li>
+<li>Nova política de <a href="/noticies/2017-07-05-Canigo-LTS/"><strong>versions LTS</strong></a> pel Framework Canigó</li>
+<li>Certificació Canigó 3.2 en <strong>JBoss EAP 6.4</strong></li>
+<li>Publicació de la <a href="/canigo/entorn-desenvolupament/"><strong>versió 2.0.0 del entorn de desenvolupament de Canigó</strong></a> amb actualització de programari</li>
+</ul>
+
+<h3 id="sgde-servei-de-gestió-del-document-electrònic"><strong>SGDE (Servei de Gestió del Document Electrònic)</strong></h3>
+
+<ul>
+<li>STD (Servei de Transformació de Documents): <strong>augmentat el límit de mida de documents</strong> per les operacions de composició</li>
+<li>eFormularis: <strong>deprecada versió v8</strong> del WS de ServeisInvocacio</li>
+<li>STD (Servei de Transformació de Documents): composició de documents amb <strong>diferents orientacions de pàgina</strong></li>
+</ul>
+
+<p>Per a més informació sobre els futurs evolutius planificats, podeu consultar el <a href="http://canigo.ctti.gencat.cat/centre-de-suport/roadmap/">Roadmap d&rsquo;arquitectura del CTTI</a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Custòdia de codi font</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Custòdia de codi font\" />");
+		document.write("<meta name=\"description\" content=\"GitLab és l\x27eina implantada al SIC per la custòdia de codi font\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic30-serveis">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+    
+    <a href="/sic-serveis/">
+        
+
+        Serveis
+
+        
+    </a></li>
+    
+
+	
+	<li><a href="/sic30-serveis/">
+		
+
+		Serveis (SIC 3.0)
+
+		
+	</a>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Custòdia de codi font
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 17-06-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#funcionament">Funcionament</a>
+<ul>
+<li><a href="#accés-al-servei">Accés al servei</a></li>
+<li><a href="#creació-de-comptes-d-usuari-i-permisos-d-accés">Creació de comptes d&rsquo;usuari i permisos d&rsquo;accés</a></li>
+<li><a href="#estructura-de-grups-i-projectes">Estructura de grups i projectes</a></li>
+<li><a href="#creació-de-nous-projectes">Creació de nous projectes</a></li>
+<li><a href="#integració-contínua">Integració contínua</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<p><img src="/related/sic/serveis/gitlab-logo.png" alt="GitLab" title="GitLab" /></p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p><strong>GitLab</strong> és l&rsquo;eina implantada al SIC per la custòdia de codi font. Es tracta d&rsquo;un servei web de control de versions i desenvolupament de software col·laboratiu basat en Git. A més de gestor de repositoris, el servei ofereix també allotjament de Wikis i un sistema de seguiment d&rsquo;errors, tot publicat sota una llicència de codi obert.
+<br>
+<br>
+Gitlab és utilitzat per més de 100.000 organitzacions d&rsquo;arreu del món. S’han realitzar proves en organitzacions amb 10.000 projectes amb el mateix temps i la mateixa qualitat de resposta que amb un sol projecte.
+<br>
+<br>
+El Gitlab està integrat amb el Servei d&rsquo;Integració Contínua, en publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d’Integració Contínua (Jenkins).
+<br>
+<br>
+Aquest repositori no és un entorn de desenvolupament, per lo que només les persones assignades com a Release Managers seran les encarregades de <strong>consolidar el codi i lliurar-lo</strong>. Aquest codi font ja haurà d’estar validat en entorns de desenvolupament i es lliurarà quan es decideixi distribuir als entorns dels serveis TIC centrals.</p>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<h3 id="accés-al-servei">Accés al servei</h3>
+
+<p>Podrà accedir mitjançant el següent enllaç: <a href="https://git.intranet.gencat.cat">https://git.intranet.gencat.cat</a> <br/>
+Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de connectivitat, caldrà obrir una petició demanant l&rsquo;obertura de Firewals dels seus entorns.</p>
+
+<p>Haurà d&rsquo;autenticar-se amb de les seves credencials d&rsquo;accés <strong>GICAR</strong>. Els Release Manager, responsables de lot i tècnics de CPD disposaran d&rsquo;accés al servei, així com la resta de membres de l&rsquo;equip de desenvolupament als que es decideixi atorgar accés. Si no disposa d&rsquo;accés, haurà de sol·licitar-ho al seu responsable. <br/></p>
+
+<p><img src="/related/sic/serveis/gitlab-sic.png" alt="GitLab" />
+<br/></p>
+
+<h3 id="creació-de-comptes-d-usuari-i-permisos-d-accés">Creació de comptes d&rsquo;usuari i permisos d&rsquo;accés</h3>
+
+<p>Per a poder accedir al servei caldrà disposar d&rsquo;un usuari GICAR operatiu (amb l&rsquo;adreça de correu associada) i crear el compte corresponent. Per a fer-ho, haurà d&rsquo;introduir l&rsquo;identificador d&rsquo;usuari i contrasenya i, en cas de tractar-se d&rsquo;un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d&rsquo;alta. <br/>
+Si no disposa d&rsquo;accés als grups i projectes s&rsquo;haurà d&rsquo;adreçar als <strong>Release Managers</strong> del codi de diàleg o al responsable del lot per a que l&rsquo;incloguin com a membre del projecte o projectes que es considerin. A partir d’aquest moment, ja podrà gestionar el codi font i a l&rsquo;endemà l&rsquo;usuari passarà a ser un Release Manager a tots els efectes, disposant d&rsquo;accés a tots els serveis del SIC per al codi de diàleg corresponent.</p>
+
+<p>Per a més informació: <a href="/sic30-serveis/autoservei-usuaris/">Autoservei d&rsquo;usuaris</a></p>
+
+<h3 id="estructura-de-grups-i-projectes">Estructura de grups i projectes</h3>
+
+<p>Totes les aplicacions que recull l&rsquo;inventari d&rsquo;aplicacions disposen automàticament d&rsquo;un grup al GitLab per al codi de diàleg del CTTI corresponent (per exemple: <a href="https://git.intranet.gencat.cat/0192">https://git.intranet.gencat.cat/0192</a>). Dins el grup assignat, es poden crear tants projectes com conjunts de codi susceptibles de ser versionats de forma independent. Pot tractar-se d&rsquo;una <strong>llibreria, un microservei, un mòdul o un programa sense fragments independents</strong>.
+<br/>
+Per accedir a la vista de grups i projectes, ho podrà fer des del menú d&rsquo;opcions generals (botó <img style="display:inline" src="/images/news/icone_menu_gitlab.PNG" alt="icone menu gitlab"/> situat a la part superior esquerra).
+<br/>
+No es poden incloure binaris de llibreries ni d’altres mòduls ni executables (JAR, WAR, EAR, DLL, EXE…) i la mida màxima dels arxius serà de 25MB.
+En tot cas, per a arxius de gran tamany, es podrá fer ús de l&rsquo;extensió <a href="/howtos/2019-10-09-sic-Howto-Git-lfs">Git-lfs</a>.</p>
+
+<h3 id="creació-de-nous-projectes">Creació de nous projectes</h3>
+
+<p>Per a crear nous projectes caldrà dirigir-se al grup del codi de diàleg i prémer l&rsquo;acció &ldquo;New project&rdquo;. Haurà d&rsquo;indicar el nom del projecte i seleccionar el nivell de visibilitat &ldquo;Private&rdquo;.</p>
+
+<p><CENTER><img src="/related/sic/serveis/new_project.png" alt="Nou projecte" /></center>
+<br/></p>
+
+<h3 id="integració-contínua">Integració contínua</h3>
+
+<p>En publicar una nova versió del codi font sobre la branca MASTER, automàticament es dispararà la tasca de construcció i desplegament associada en el sistema d&rsquo;Integració Contínua (Jenkins). En aquest sentit, cal tenir presents algunes premisses:</p>
+
+<ul>
+<li>Els repositoris poden tenir tantes branques com siguin necessàries, però sempre s’haurà d’incloure la branca <strong>MASTER</strong> i el contingut d’aquesta branca serà amb el que treballarà la tasca associada.</li>
+<li>Cal proporcionar processos de construcció d’artefactes <strong>independents de les màquines i plataformes</strong> on s’executen, de forma que siguin aplicables tant en els entorns de desenvolupament com en els entorns del SIC.</li>
+</ul>
+
+<p>Per a més informació: <a href="/sic30-serveis/ci/">Integració contínua</a></p>
+
+<p><br/><br/>
+Teniu a la vostra disposició alguns articles relacionats amb el servei:</p>
+
+<ul>
+<li><a href="/howtos/2019-10-09-sic-Howto-Git-lfs">Utilitzar Git-lfs per a arxius de gran tamany</a></li>
+<li><a href="/howtos/2019-10-09-sic-Howto-Gitlab-Mail">Configurar notificacions via email al Gitlab</a></li>
+</ul>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic30-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

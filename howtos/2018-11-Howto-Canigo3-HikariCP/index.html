@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>HowTo Ús de Hikari CP a Canigó 3.2</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"HowTo Ús de Hikari CP a Canigó 3.2\" />");
+		document.write("<meta name=\"description\" content=\"En aquest HowTo es proposa i s\x27explica com integrar un pool de connexions Hikari CP a Canigó 3.2\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	HowTo Ús de Hikari CP a Canigó 3.2
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-11-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="audiència">Audiència</h2>
+
+<p>Aquest how-to va dirigit principalment al personal tècnic (desenvolupadors, analistes tècnics i arquitectes) que desenvolupin una aplicació Canigó 3.2 i tinguin la necessitat de treballar amb un <em>Connection Pool</em> d&rsquo;alt rendiment.</p>
+
+<h2 id="context">Context</h2>
+
+<p>Els pools de connexions proporcionen una millora en el rendiment de les consultes SQL, minimitzant el temps d&rsquo;adquisició i ús de les connexions a BBDD. Les diferents maneres de gestionar aquestes connexions i l&rsquo;oferta de funcionalitats relacionades fa que hi hagi diferents implementacions (Apache DBCP2, Hikari CP, C3P0, Tomcat Pool, etc.)</p>
+
+<p>Hikari CP és un pool de connexions que actualment té un gran <em>momentum</em> degut principalment a una visió minimalista de la gestió de les connexions, fent que frameworks molt populars (com Spring) l&rsquo;hagin triat com una opció més per la tasca de gestionar les connexions a BBDD.</p>
+
+<p>Els exemples i configuracions estan adaptats específicament per una aplicació estàndard de Canigó, tot i que es fàcilment adaptable a aplicacions J2EE més genèriques.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Hikari actualment proporciona 3 versions, segons la versió de Java sigui 8+ o prèvies; tot i que les versions per Java 7 i 6 estan només en mode de manteniment. Segons la versió de Java s&rsquo;ha de triar la dependència Maven apropiada:</p>
+
+<pre><code class="language-xml">	&lt;!-- Java 8+ --&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.zaxxer&lt;/groupId&gt;
+		&lt;artifactId&gt;HikariCP&lt;/artifactId&gt;
+		&lt;version&gt;3.2.0&lt;/version&gt;
+	&lt;/dependency&gt;
+
+	&lt;!-- Java 7 --&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.zaxxer&lt;/groupId&gt;
+		&lt;artifactId&gt;HikariCP&lt;/artifactId&gt;
+		&lt;version&gt;2.4.7&lt;/version&gt;
+	&lt;/dependency&gt;
+
+	&lt;!-- Java 6 --&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.zaxxer&lt;/groupId&gt;
+		&lt;artifactId&gt;HikariCP&lt;/artifactId&gt;
+		&lt;version&gt;2.3.13&lt;/version&gt;
+	&lt;/dependency&gt;
+</code></pre>
+
+<h3 id="jpa-properties">jpa.properties</h3>
+
+<p>De manera ad-hoc s&rsquo;ha definit per Canigó que les propietats específiques del pool de connexions de Hikari tinguin el prefix <code>persistence.hikari</code>; agrupant la configuració de les propietats del pool de connexions en 3 parts:</p>
+
+<ol>
+<li>Mode d&rsquo;accés i/o autenticació: S&rsquo;ha de definir l&rsquo;accés a la BBDD o bé mitjançant l&rsquo;identificador JNDI o bé mitjançant l&rsquo;URL, l&rsquo;usuari i el password.</li>
+<li>Propietats generals del pool: Quantitat de connexions i temporitzadors associats. En aquest cas, la resta de configuracions del pool són calculats en funció d&rsquo;aquests valors.</li>
+<li>(Opcional) propietats específiques del driver JDBC: Ajustos específics per millorar el rendiment o per <em>troubleshooting</em>.</li>
+</ol>
+
+<p>Un exemple de configuració de Hikari per Canigó seria el següent:</p>
+
+<pre><code class="language-properties">#
+# HikariCP
+#
+
+# 1. Accés / Autenticació 
+# 1.a JDNI
+#*.persistence.hikari.jndiName=java:comp/env/jdbc/OracleIntranetDS
+
+# 1.b. JDBC Auth
+*.persistence.hikari.jdbc.url=jdbc:h2:mem:bbdd_proves;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
+*.persistence.hikari.jdbc.username=sa
+*.persistence.hikari.jdbc.password=
+
+# 2. Pool configuration
+# 20s
+*.persistence.hikari.connectionTimeout=20000
+# 4m
+*.persistence.hikari.maxLifetime=240000
+# Recomanació genèrica: 10 (per aplicacions web intranet), 20 (per aplicacions amb processos batch/nocturns), 50 (per aplicacions web extranet). Finalment 100+ (per grans aplicacions amb molts usuaris concurrents i/o transaccions lentes, OLAP, data Warehouse, etc.)
+*.persistence.hikari.maximumPoolSize=10
+
+# 3. JDBC Driver (MySql) específic
+#    Exemple de https://github.com/brettwooldridge/HikariCP#initialization
+*.persistence.hikari.driver.cachePrepStmts=true
+*.persistence.hikari.driver.prepStmtCacheSize=500
+*.persistence.hikari.driver.prepStmtCacheSqlLimit=2048
+*.persistence.hikari.driver.useServerPrepStmts=true
+*.persistence.hikari.driver.useLocalSessionState=true
+*.persistence.hikari.driver.rewriteBatchedStatements=true
+*.persistence.hikari.driver.cacheResultSetMetadata=true
+*.persistence.hikari.driver.cacheServerConfiguration=true
+*.persistence.hikari.driver.elideSetAutoCommits=true
+*.persistence.hikari.driver.maintainTimeStats=false
+</code></pre>
+
+<h3 id="application-java">Application.java</h3>
+
+<p>La creació del DataSource s&rsquo;ha de definir de la següent manera:</p>
+
+<pre><code class="language-java">	/**
+	 * NOTA: Sobreescrivim el bean &quot;dataSource&quot; creat anteriorment per a què, amb el
+	 * mateix àlies, sigui retornat el DS de Hikari.
+	 * 
+	 * @param configuration
+	 * @param configurer
+	 * @return
+	 */
+	@Bean(name = { &quot;hikariDataSource&quot;, &quot;dataSource&quot; }, destroyMethod = &quot;close&quot;)
+	@Primary
+	public DataSource hikariDataSource(final PropertiesConfiguration configuration,
+			final ICustomPropertyPlaceHolderConfigurer configurer) {
+
+		final DataSource ds = init(new HikariDataSource(), &quot;persistence.hikari.&quot;, //
+				configuration, configurer.getResolvedProps());
+
+		if (logger.isDebugEnabled())
+			logger.debug(ToStringBuilder.reflectionToString(ds));
+
+		return ds;
+	}
+
+	protected DataSource init(final HikariDataSource ds, final String prefix,
+			final PropertiesConfiguration configuration, final Map&lt;String, String&gt; properties) {
+
+		final String jndiName = configuration.getProperty(prefix + &quot;jndiName&quot;);
+		final String jdbcUrl = configuration.getProperty(prefix + &quot;jdbc.url&quot;);
+
+		if (jndiName != null &amp;&amp; jdbcUrl != null)
+			logger.warn(&quot;jndiName i jdbcUrl estan definits alhora per &quot; + prefix);
+
+		if (jndiName != null) {
+			ds.setDataSourceJNDI(jndiName);
+		} else {
+			ds.setJdbcUrl(jdbcUrl);
+			ds.setUsername(configuration.getProperty(prefix + &quot;jdbc.username&quot;));
+			ds.setPassword(configuration.getProperty(prefix + &quot;jdbc.password&quot;));
+		}
+
+		ds.setConnectionTimeout(new Integer(configuration.getProperty(prefix + &quot;connectionTimeout&quot;))); // ~20s
+		ds.setValidationTimeout(Math.max(ds.getConnectionTimeout() / 5, 5 * 1000)); // 20% connectionTimeout
+		//
+		final int MINUTE = 60 * 1000;
+		ds.setMaxLifetime(new Integer(configuration.getProperty(prefix + &quot;maxLifetime&quot;))); // ~4m
+		ds.setIdleTimeout(Math.max( //
+				Math.min(ds.getMaxLifetime() - MINUTE, 4 * MINUTE) //
+				, 10 * 1000));
+		//
+		ds.setMaximumPoolSize(new Integer(configuration.getProperty(prefix + &quot;maximumPoolSize&quot;))); // ~20
+		ds.setMinimumIdle(Math.max(ds.getMaximumPoolSize() / 10, 1)); // [ 10% maximumPoolSize, 1]
+
+		//
+		// Definició de les propietats : persistence.hikari.driver.XYZ -&gt;
+		// ds.addDataSourceProperty(XYZ, *)
+		//
+
+		for (final Entry&lt;String, String&gt; entry : properties.entrySet()) {
+
+			final String key = entry.getKey();
+
+			if (key.startsWith(prefix + &quot;driver.&quot;)) {
+				final String property = key.substring((prefix + &quot;driver.&quot;).length());
+				ds.addDataSourceProperty(property, parse(entry.getValue()));
+			}
+		}
+
+		return ds;
+	}
+
+	protected Object parse(final String value) {
+
+		try {
+			return new Integer(value);
+		} catch (NumberFormatException e) {
+			logger.debug(e.getMessage());
+		}
+
+		if (&quot;true&quot;.equals(value))
+			return true;
+
+		if (&quot;false&quot;.equals(value))
+			return false;
+
+		return value;
+	}
+</code></pre>
+
+<h2 id="informació-addicional">Informació addicional</h2>
+
+<p>A continuació es defineix una llista d&rsquo;enllaços amb informació addicional per poder aprofundir en els diferents aspectes i opcions mostrades al document.</p>
+
+<ul>
+<li>Hikari
+
+<ul>
+<li><a href="http://brettwooldridge.github.io/HikariCP/">http://brettwooldridge.github.io/HikariCP/</a></li>
+<li><a href="https://github.com/brettwooldridge/HikariCP">https://github.com/brettwooldridge/HikariCP</a></li>
+<li><a href="https://github.com/brettwooldridge/HikariCP/wiki">https://github.com/brettwooldridge/HikariCP/wiki</a></li>
+</ul></li>
+<li>Propietats específiques de drivers JDBC
+
+<ul>
+<li><a href="http://www.h2database.com/javadoc/org/h2/engine/SysProperties.html">http://www.h2database.com/javadoc/org/h2/engine/SysProperties.html</a></li>
+<li><a href="https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html">https://dev.mysql.com/doc/connector-j/5.1/en/connector-j-reference-configuration-properties.html</a></li>
+<li><a href="https://jdbc.postgresql.org/documentation/head/connect.html">https://jdbc.postgresql.org/documentation/head/connect.html</a></li>
+<li><a href="https://docs.oracle.com/database/121/JAJDB/oracle/jdbc/OracleDriver.html">https://docs.oracle.com/database/121/JAJDB/oracle/jdbc/OracleDriver.html</a></li>
+</ul></li>
+<li><a href="https://commons.apache.org/proper/commons-dbcp/">https://commons.apache.org/proper/commons-dbcp/</a></li>
+<li><a href="https://tomcat.apache.org/tomcat-8.0-doc/jdbc-pool.html">https://tomcat.apache.org/tomcat-8.0-doc/jdbc-pool.html</a>
+<br /></li>
+</ul>
+
+<h2 id="annex-configurar-exemple-de-swagger">Annex. Configurar exemple de Swagger</h2>
+
+<p>El <em>archetype</em> per aplicacions REST de Canigó <code>plugin-canigo-archetype-rest</code> genera actualment un exemple funcional amb Swagger. Aquest exemple, per defecte, no s&rsquo;integra amb Hikari de manera que per fer-ne ús del Hikari, només cal modificar el fitxer <code>src/main/resources/spring/app-custom-persistence-jpa.xml</code> de la següent manera:</p>
+
+<ol>
+<li>Comentar (o eliminar) el tag <code>&lt;jdbc:embedded-database id=&quot;dataSource&quot; type=&quot;H2&quot;&gt;</code></li>
+<li>Afegir el següent xml:</li>
+</ol>
+
+<pre><code class="language-xml">	&lt;jdbc:initialize-database data-source=&quot;hikariDataSource&quot; &gt;
+		&lt;jdbc:script location=&quot;classpath:scripts/h2/db-app-h2db-schema.sql&quot;/&gt;
+		&lt;jdbc:script location=&quot;classpath:scripts/h2/db-app-h2db-data.sql&quot;/&gt;
+	&lt;/jdbc:initialize-database&gt;
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Procés de desplegament de solucions Cloud</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Procés de desplegament de solucions Cloud\" />");
+		document.write("<meta name=\"description\" content=\"Descripció simplificada del procés de desplegament de solucions Cloud\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/cloud">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Container Cloud
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Procés de desplegament de solucions Cloud
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 15-02-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>El desplegament de solucions cloud aplica el model DEVOPS.</p>
+
+<h2 id="procés-de-desplegament-ctti-adaptat-al-model-devops">Procés de desplegament CTTI adaptat al Model DEVOPS</h2>
+
+<h3 id="resum-del-procés">Resum del procés</h3>
+
+<ul>
+<li>Creació del document Descripció d&rsquo;Arquitectura (DA) del projecte</li>
+<li>Obertura del Projecte d&rsquo;Aprovisionament d&rsquo;Infraestructura (PAI)</li>
+<li>Conformitat del DA per part de l&rsquo;equip d&rsquo;Arquitectura CTTI</li>
+<li>Assignació de CPD</li>
+<li>Reunió de Fase 0</li>
+<li>Oferta econòmica del PAI</li>
+<li>Acceptació Oferta Econòmica del PAI</li>
+<li>Alta de l&rsquo;aplicació al SIC</li>
+<li>Creació de projectes i assignació de permisos al SIC</li>
+<li>Desenvolupament de l&rsquo;aplicació</li>
+<li>Primer desplegament de l&rsquo;aplicació al cloud
+
+<ul>
+<li>Aprovisionament de l&rsquo;entorn d&rsquo;execució no productiu</li>
+<li>Configuració de l&rsquo;aplicació al SIC</li>
+<li>Primer Desplegament a l&rsquo;entorn no productiu</li>
+<li>Validació Aplicació a l&rsquo;entorn no productiu</li>
+<li>Estabilització de l&rsquo;aplicació</li>
+<li>Aprovisionament de l&rsquo;entorn d&rsquo;execució productiu</li>
+<li>Primer Desplegament a l&rsquo;entorn productiu</li>
+<li>Validació Aplicació a l&rsquo;entorn productiu</li>
+</ul></li>
+<li>Alta CMDB</li>
+<li>Posada en servei</li>
+<li>Afegir aplicació al servei de monitoratge Cloud</li>
+<li>Tancament de projecte</li>
+</ul>
+
+<h3 id="actors">Actors</h3>
+
+<ul>
+<li>Lot d&rsquo;Aplicacions</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Àrea d&rsquo;Arquitectura CTTI</li>
+<li>Equip de SIC</li>
+<li>Release manager SIC</li>
+<li>Equip de Suport Cloud</li>
+<li>Bústia de Projectes d&rsquo;Infraestructura</li>
+<li>Àrea d&rsquo;Aprovisionament de serveis TIC</li>
+<li>Equip de Cesicat</li>
+<li>Equip de NUS</li>
+<li>CPD</li>
+<li>&hellip;</li>
+</ul>
+
+<h3 id="creació-del-document-descripció-d-arquitectura-da-del-projecte">Creació del document Descripció d&rsquo;Arquitectura (DA) del projecte</h3>
+
+<p>Actor: Lot d&rsquo;Aplicacions</p>
+
+<p>El document de Descripció d&rsquo;Arquitectura inclou les diferents vistes lògiques i físiques del sistema d’informació.</p>
+
+<p>Es pot consultar el detall del document a l&rsquo;article <a href="https://qualitat.solucions.gencat.cat/lliurables/descripcio_arquitectura/">Descripció d&rsquo;Arquitectura.</a></p>
+
+<h3 id="obertura-del-projecte-d-aprovisionament-d-infraestructura-pai">Obertura del Projecte d&rsquo;Aprovisionament d&rsquo;Infraestructura (PAI)</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+</ul>
+
+<p>El gestor de Solucions del Departament/Organisme obrirà un Projecte d&rsquo;Aprovisionament d&rsquo;Infraestructura que serà gestionat per l&rsquo;equip d&rsquo;Integració de solucions durant la fase de projecte fins a la seva postada en Servei.</p>
+
+<h3 id="conformitat-del-da-per-part-de-l-equip-d-arquitectura-ctti">Conformitat del DA per part de l&rsquo;equip d&rsquo;Arquitectura CTTI</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Àrea d&rsquo;Arquitectura CTTI</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Lot d&rsquo;Aplicacions</li>
+</ul>
+
+<p>El DA pot arribar a l&rsquo;equip d&rsquo;arquitectura CTTI a través de dos canals:</p>
+
+<ul>
+<li>Des de la Unitat d&rsquo;Integració de solucions. És el canal més habitual i es produeix quan en un pas previ s&rsquo;ha obert un Projecte d&rsquo;aprovisionament d&rsquo;Infraestructura.</li>
+<li>Directament des del Gestor de Solucions del Departament/Organisme. Requereix que posteriorment s&rsquo;obri un projecte d&rsquo;Aprovisionament d&rsquo;Infraestructura.</li>
+</ul>
+
+<p>L&rsquo;Àrea d&rsquo;Arquitectura CTTI realitzarà la validació del DA seguint el procediment
+<a href="https://portic.ctti.gencat.cat/processosctti/Documents/FM09_Arquitectura,%20qualitat%20i%20est%C3%A0ndards/P09%20Arquitectura,%20qualitat%20i%20est%C3%A0ndards/P09S03N01_Gesti%C3%B3%20de%20Conformitats.pdf">Gestió de conformitats.</a></p>
+
+<p>En cas de dubtes o disconformitats, es realitzaran iteracions amb el Lot d&rsquo;Aplicacions per acabar de definir l&rsquo;arquitectura definitiva.</p>
+
+<p>Durant aquesta validació s&rsquo;identificaran les possibles excepcions i es concretaran els requisits tècnics que cal considerar a l&rsquo;hora de seleccionar la plataforma cloud on es desplegarà la solució.</p>
+
+<h3 id="assignació-de-cpd">Assignació de CPD</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Àrea d&rsquo;Aprovisionament de serveis TIC</li>
+</ul>
+
+<p>La Unitat d&rsquo;Integració de solucions i l&rsquo;Àrea d&rsquo;Aprovisionament de serveis TIC es reuneixen periòdicament per assignar a quina plataforma cloud cal desplegar la solució considerant entre altres els requisits tècnics validats per l&rsquo;Àrea d&rsquo;Arquitectura.</p>
+
+<h3 id="reunió-de-fase-0">Reunió de Fase 0</h3>
+
+<p>Actors assistents obligatoris:</p>
+
+<ul>
+<li>Lot d&rsquo;Aplicacions</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Equip de SIC</li>
+<li>Equip de Suport Cloud</li>
+<li>Equip de Cesicat</li>
+<li>Equip de NUS</li>
+</ul>
+
+<p>La unitat d&rsquo;Integració de solucions convoca la reunió de Fase 0 amb els actors assistents obligatoris i tots els actors addicionals que consideri necessaris.</p>
+
+<p>En aquesta reunió s&rsquo;acabaran de definir els possibles dubtes que hagin quedat pendents de DA i es definiran els propers passos a seguir.</p>
+
+<p>Un cop tancat definitivament el DA, la unitat d&rsquo;Integració de solucions l&rsquo;enviarà a Bústia de Projectes d&rsquo;Infraestructura amb la sol·licitud de noves infraestructures.</p>
+
+<h3 id="oferta-econòmica-del-pai">Oferta econòmica del PAI</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Bústia de Projectes d&rsquo;Infraestructura</li>
+<li>Suport Cloud</li>
+<li>CPD</li>
+</ul>
+
+<p>La Bústia de Projectes d&rsquo;Infraestructura sol·licitarà l&rsquo;oferta del PAI a:</p>
+
+<ul>
+<li>Suport cloud en el cas de clouds públics.</li>
+<li>CPD en el cas de clouds privats. Suport cloud inicialment realitza una oferta preliminar que posteriorment valida CPD.</li>
+</ul>
+
+<h3 id="acceptació-oferta-econòmica-del-pai">Acceptació Oferta Econòmica del PAI</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Bústia de Projectes d&rsquo;Infraestructura</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+</ul>
+
+<p>L&rsquo;equip de la Bústia de Projectes d&rsquo;Infraestructura envia l&rsquo;oferta a Gestor de Solucions del Departament/Organisme per a la seva acceptació.</p>
+
+<h3 id="alta-de-l-aplicació-al-sic">Alta de l&rsquo;aplicació al SIC</h3>
+
+<p>Actors:</p>
+
+<h3 id="creació-de-projectes-i-assignació-de-permisos-al-sic">Creació de projectes i assignació de permisos al SIC</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Release Manager SIC</li>
+<li>Lot d&rsquo;aplicacions</li>
+</ul>
+
+<p>La plataforma SIC disposa d&rsquo;un model d&rsquo;autoservei que permet crear projectes i assignar permisos a usuaris.</p>
+
+<p>Podeu veure més detalls a l&rsquo;article <a href="https://canigo.ctti.gencat.cat/sic-serveis/autoservei-usuaris/">Autoservei d&rsquo;usuaris</a></p>
+
+<h3 id="desenvolupament-de-l-aplicació">Desenvolupament de l&rsquo;aplicació</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+</ul>
+
+<p>El Lot d&rsquo;aplicacions desenvolupa l&rsquo;aplicació amb el suport del Gestor de Solucions del Departament/Organisme.</p>
+
+<h3 id="primer-desplegament-de-l-aplicació-al-cloud">Primer desplegament de l&rsquo;aplicació al cloud</h3>
+
+<h4 id="aprovisionament-de-l-entorn-d-execució-no-productiu">Aprovisionament de l&rsquo;entorn d&rsquo;execució no productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Suport Cloud</li>
+<li>CPD</li>
+</ul>
+
+<p>Un cop es consideri la necessitat de disposar de l&rsquo;entorn d&rsquo;execució no productiu, el Gestor de Solucions del Departament/Organisme sol·licitarà a la Unitat d&rsquo;Integració de solucions l&rsquo;aprovisionament de l&rsquo;entorn no productiu.</p>
+
+<p>Seguidament, la Unitat d&rsquo;Integració de solucions sol·licitarà la creació de l&rsquo;entorn a l&rsquo;equip de Suport Cloud.</p>
+
+<p>Pels clouds públics, suport cloud realitzarà l&rsquo;aprovisionament de l&rsquo;entorn.
+Pels clouds privats, suport cloud sol·licitarà al CPD que gestioni el cloud l&rsquo;aprovisionament de l&rsquo;entorn.</p>
+
+<h4 id="configuració-de-l-aplicació-al-sic">Configuració de l&rsquo;aplicació al SIC</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Suport Cloud</li>
+<li>SIC</li>
+</ul>
+
+<p>Els equips de SIC i Suport Cloud, amb el suport de Lot d&rsquo;aplicacions configuren les tasques necessàries a la plataforma SIC per automatitzar els desplegaments i operacions de l&rsquo;aplicació facilitant l&rsquo;autonomia del lot d&rsquo;aplicacions.</p>
+
+<p>Podeu veure més detalls dels requeriments necessaris per integrar-se amb SIC a:</p>
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-caas/integracio-contenidors-sic/">Integració de contenidors a SIC</a></li>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-xpaas/integracio-xpaas-sic/">Integració d&rsquo;aplicacions xPaaS a SIC</a></li>
+</ul>
+
+<h4 id="primer-desplegament-a-l-entorn-no-productiu">Primer Desplegament a l&rsquo;entorn no productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Suport Cloud
+<br /></li>
+</ul>
+
+<p>Addicionalment al desenvolupament de les aplicacions, per desplegar als diferents clouds, cal tenir present una sèrie de consideracions específiques de cada cloud que cal tenir present.</p>
+
+<p>Podeu visitar els articles:</p>
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-caas/consideracions-desplegament/">Consideracions en el desplegament de contenidors</a>,
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-xpaas/consideracions-desplegament/">Consideracions en el desplegament a plataformes xPaaS</a>,
+<br /></li>
+</ul></li>
+</ul>
+
+<p>per consultar aquestes consideracions.</p>
+
+<p>Suport Cloud, amb el suport de lot d&rsquo;aplicacions realitzarà un primer desplegament a l&rsquo;entorn no productiu, preferentment a traves de la plataforma SIC.</p>
+
+<h4 id="validació-aplicació-a-l-entorn-no-productiu">Validació Aplicació a l&rsquo;entorn no productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Cesicat</li>
+<li>&hellip;</li>
+</ul>
+
+<p>Un cop desplegada l&rsquo;aplicació a l&rsquo;entorn no productiu es realitzaran diverses validacions de l&rsquo;aplicació:</p>
+
+<ul>
+<li>Comunicacions</li>
+<li>Integracions</li>
+<li>Funcionals</li>
+<li>Rendiment</li>
+<li>Seguretat</li>
+<li>&hellip;</li>
+</ul>
+
+<p>En aquestes validacions participaran els actors necessaris per a cada tipologia.</p>
+
+<h4 id="aprovisionament-de-l-entorn-d-execució-productiu">Aprovisionament de l&rsquo;entorn d&rsquo;execució productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Unitat d&rsquo;Integració de solucions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Suport Cloud</li>
+<li>CPD</li>
+</ul>
+
+<p>Un cop es consideri la necessitat de disposar de l&rsquo;entorn d&rsquo;execució productiu, el Gestor de Solucions del Departament/Organisme sol·licitarà a la Unitat d&rsquo;Integració de solucions l&rsquo;aprovisionament de l&rsquo;entorn productiu.</p>
+
+<p>Seguidament, la Unitat d&rsquo;Integració de solucions sol·licitarà la creació de l&rsquo;entorn a l&rsquo;equip de Suport Cloud.</p>
+
+<p>Pels clouds públics, suport cloud realitzarà l&rsquo;aprovisionament de l&rsquo;entorn.
+Pels clouds privats, suport cloud sol·licitarà al CPD que gestioni el cloud l&rsquo;aprovisionament de l&rsquo;entorn.</p>
+
+<h4 id="primer-desplegament-a-l-entorn-productiu">Primer Desplegament a l&rsquo;entorn productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Suport Cloud
+<br /></li>
+</ul>
+
+<p>Suport Cloud, amb el suport de lot d&rsquo;aplicacions realitzarà un primer desplegament a l&rsquo;entorn productiu, a través de la plataforma SIC.
+Les actuacions necessàries pel desplegament són les mateixes realitzades per l&rsquo;entorn no productiu</p>
+
+<h4 id="validació-aplicació-a-l-entorn-productiu">Validació Aplicació a l&rsquo;entorn productiu</h4>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Cesicat</li>
+<li>&hellip;</li>
+</ul>
+
+<p>Un cop desplegada l&rsquo;aplicació a l&rsquo;entorn no productiu es realitzaran diverses validacions de l&rsquo;aplicació:</p>
+
+<ul>
+<li>Comunicacions</li>
+<li>Integracions</li>
+<li>Funcionals</li>
+<li>&hellip;</li>
+</ul>
+
+<p>En aquestes validacions participaran els actors necessaris per a cada tipologia.</p>
+
+<h3 id="alta-cmdb">Alta CMDB</h3>
+
+<p>Actors:</p>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Suport Cloud</li>
+<li>CPD</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+</ul>
+
+<p>Una vegada l&rsquo;aplicació ha estat validada, els diferents actors generaran la documentació necessària per donar d&rsquo;alta l&rsquo;aplicació a la CMDB</p>
+
+<p>La documentació serà sol·licitada i enviada a la Bústia de Projectes d&rsquo;Infraestructura.</p>
+
+<h3 id="posada-en-servei">Posada en servei</h3>
+
+<ul>
+<li>Bústia de Projectes d&rsquo;Infraestructura</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+</ul>
+
+<p>Sota petició de Gestor de Solucions del Departament/Organisme a Bústia de Projectes d&rsquo;Infraestructura a través de la Unitat d&rsquo;Integració de solucions, l&rsquo;aplicació es posa en servei.</p>
+
+<h3 id="afegir-aplicació-al-servei-de-monitoratge-cloud">Afegir aplicació al servei de monitoratge Cloud</h3>
+
+<ul>
+<li>Suport Cloud</li>
+</ul>
+
+<p>Un cop l&rsquo;aplicació està en servei, l&rsquo;equip de suport cloud afegeix l&rsquo;aplicació al servei de monitoratge cloud.</p>
+
+<h4 id="tancament-de-projecte">Tancament de projecte</h4>
+
+<ul>
+<li>Lot d&rsquo;aplicacions</li>
+<li>Bústia de Projectes d&rsquo;Infraestructura</li>
+<li>Gestor de Solucions del Departament/Organisme</li>
+<li>Unitat d&rsquo;Integració de solucions</li>
+</ul>
+
+<p>Un cop l&rsquo;aplicació està en servei es realitza el tancament del projecte.</p>
+
+<h2 id="comunicació-amb-cs-cloud">Comunicació amb CS Cloud</h2>
+
+<p>La comunicació amb Susport Cloud es realitzarà seguint les directrius definides a [<a href="https://canigo.ctti.gencat.cat/cloud/comunicacio-suport-cloud/">Comunicació proveïdors d&rsquo;aplicacions amb Suport Cloud.</a></p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

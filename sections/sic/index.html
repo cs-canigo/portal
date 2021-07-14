@@ -1,0 +1,1923 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
+	<meta name="robots" content="noindex,follow" />
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+
+
+
+<body class="section sic">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sections">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											Servei d'Integració Contínua
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+
+			<article class="padding-xs padding-sm padding-md contingut">
+				<div class="container">
+				<div class="row">
+
+						
+
+						
+
+							
+
+<div class="col-sm-12">
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic-serveis/sic20-sic30/" title="SIC 3.0 i procés de transició">SIC 3.0 i procés de transició</a>
+        				
+
+						</h2>
+						<p> Nova Plataforma SIC 3.0 i procés de transició previst</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic-serveis/sic20-sic30/" title="SIC 3.0 i procés de transició">SIC 3.0 i procés de transició</a>
+        				
+
+						</h2>
+						<p> Nova Plataforma SIC 3.0 i procés de transició previst</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-guies/eines_sic/" title="Quin són els serveis del SIC i com fer-ne ús">Quin són els serveis del SIC i com fer-ne ús</a>
+        				
+
+						</h2>
+						<p> Guia amb la informació més rellevant per a l'ús dels serveis que proporciona el SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-serveis/scm/" title="Custòdia de codi font">Custòdia de codi font</a>
+        				
+
+						</h2>
+						<p> GitLab és l'eina implantada al SIC per la custòdia de codi font</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/scm/" title="Custòdia de codi font">Custòdia de codi font</a>
+        				
+
+						</h2>
+						<p> GitLab és l'eina implantada al SIC per la custòdia de codi font</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-guies/eines_sic/" title="Quin són els serveis del SIC i com fer-ne ús">Quin són els serveis del SIC i com fer-ne ús</a>
+        				
+
+						</h2>
+						<p> Guia amb la informació més rellevant per a l'ús dels serveis que proporciona el SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic/about/" title="Què és el Servei d&#39;Integració Contínua">Què és el Servei d&#39;Integració Contínua</a>
+        				
+
+						</h2>
+						<p> Conceptes, motivació, modalitats d’integració i serveis que es proporcionen</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-guies/preparar-aplicacio/" title="Com preparar una aplicació per desplegar-la automàticament">Com preparar una aplicació per desplegar-la automàticament</a>
+        				
+
+						</h2>
+						<p> Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/ci/" title="Integració contínua">Integració contínua</a>
+        				
+
+						</h2>
+						<p> Jenkins és l'eina implantada al SIC per la integració contínua</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-serveis/ci/" title="Integració contínua">Integració contínua</a>
+        				
+
+						</h2>
+						<p> Jenkins és l'eina implantada al SIC per la integració contínua</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-guies/preparar-aplicacio/" title="Com preparar una aplicació per desplegar-la automàticament">Com preparar una aplicació per desplegar-la automàticament</a>
+        				
+
+						</h2>
+						<p> Guia amb la informació més rellevant a tenir en compte per la integració al SIC del desplegament d'una aplicació</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic20-guies/" title="Guies (SIC 2.0)">Guies (SIC 2.0)</a>
+        				
+
+						</h2>
+						<p> Guies disponibles i HOWTOs d'utilitat (SIC 2.0)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic-serveis/" title="Serveis">Serveis</a>
+        				
+
+						</h2>
+						<p> Informació dels diferents serveis que ofereix el SIC: custòdia de codi font i control de versions amb Git, integració contínua amb Jenkins, distribució d'artefactes a CPD mitjançant el servei de binaris i l'autoservei d'usuaris</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic20-serveis/" title="Serveis (SIC 2.0)">Serveis (SIC 2.0)</a>
+        				
+
+						</h2>
+						<p> Serveis que ofereix el SIC 2.0: custòdia de codi font i control de versions amb Git, integració contínua amb Jenkins, distribució d'artefactes a CPD mitjançant el servei de binaris i l'autoservei d'usuaris</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/drafts/fitxer-aca/" title="Com construir el fitxer ACA">Com construir el fitxer ACA</a>
+        				
+
+						</h2>
+						<p> Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-guies/fitxer-aca/" title="Com construir el fitxer ACA">Com construir el fitxer ACA</a>
+        				
+
+						</h2>
+						<p> Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="/sic30-guies/" title="Guies (SIC 3.0)">Guies (SIC 3.0)</a>
+        				
+
+						</h2>
+						<p> Guies disponibles i HOWTOs d'utilitat (SIC 3.0)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="/sic30-serveis/" title="Serveis (SIC 3.0)">Serveis (SIC 3.0)</a>
+        				
+
+						</h2>
+						<p> Serveis que ofereix el SIC 3.0: custòdia de codi font i control de versions amb Git, integració contínua amb Jenkins, distribució d'artefactes a CPD mitjançant el servei de binaris i l'autoservei d'usuaris</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-guies/fitxer-aca/" title="Com construir el fitxer ACA">Com construir el fitxer ACA</a>
+        				
+
+						</h2>
+						<p> Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-serveis/binaris/" title="Servei de Binaris">Servei de Binaris</a>
+        				
+
+						</h2>
+						<p> Eina SIC per al lliurament d'artefactes a CPD/LldT</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/binaris/" title="Servei de Binaris">Servei de Binaris</a>
+        				
+
+						</h2>
+						<p> Eina SIC per al lliurament d'artefactes a CPD/LldT</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/sic-guies/" title="Guies">Guies</a>
+        				
+
+						</h2>
+						<p> Guies disponibles i HOWTOs d'utilitat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-guies/howtos/" title="HOWTOs">HOWTOs</a>
+        				
+
+						</h2>
+						<p> HOWTOs d'utilitat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-guies/guia-integracio-sonarqube/" title="Guia integració eina d’anàlisi de codi de Qualitat">Guia integració eina d’anàlisi de codi de Qualitat</a>
+        				
+
+						</h2>
+						<p> Guia per a la integració amb eina d’anàlisi de codi de l'Oficina de Qualitat</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-serveis/autoservei-usuaris/" title="Autoservei d&#39;usuaris">Autoservei d&#39;usuaris</a>
+        				
+
+						</h2>
+						<p> Autoservei d'usuaris SIC 2.0 mitjançant GitLab</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/autoservei-usuaris/" title="Autoservei d&#39;usuaris">Autoservei d&#39;usuaris</a>
+        				
+
+						</h2>
+						<p> Autoservei d'usuaris mitjançant GitLab</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic/suport/" title="Canals de suport">Canals de suport</a>
+        				
+
+						</h2>
+						<p> Com obtenir suport per part de l'equip del SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/autoservei-pipelines/" title="Autoservei de pipelines">Autoservei de pipelines</a>
+        				
+
+						</h2>
+						<p> L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-guies/howtos/" title="HOWTOs">HOWTOs</a>
+        				
+
+						</h2>
+						<p> HOWTOs d'utilitat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic20-serveis/autoservei-pipelines/" title="Autoservei de pipelines">Autoservei de pipelines</a>
+        				
+
+						</h2>
+						<p> L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic/faq/" title="FAQ">FAQ</a>
+        				
+
+						</h2>
+						<p> Preguntes freqüents sobre els serveis del SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/drafts/cataleg-imatges/" title="Catàleg d&#39;imatges builder">Catàleg d&#39;imatges builder</a>
+        				
+
+						</h2>
+						<p> El catàleg d'imatges del SIC proporciona imatges Docker builder als proveïdors d'aplicacions.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/" title="Catàleg d&#39;imatges builder">Catàleg d&#39;imatges builder</a>
+        				
+
+						</h2>
+						<p> El catàleg d'imatges del SIC proporciona imatges Docker builder als proveïdors d'aplicacions.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/drafts/sic30-suport/" title="SIC 3.0 - Canals de suport">SIC 3.0 - Canals de suport</a>
+        				
+
+						</h2>
+						<p> Com obtenir suport per part de l'equip del SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/drafts/sic30-faq/" title="SIC 3.0 - FAQ">SIC 3.0 - FAQ</a>
+        				
+
+						</h2>
+						<p> Preguntes freqüents sobre els serveis del SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="/noticies/2019-07-19-sic-act_versio_scm/" title="SIC. Actualització de versió Gitlab">SIC. Actualització de versió Gitlab</a>
+        				
+
+						</h2>
+						<p> Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei de Custodia de Codi (Gitlab)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/noticies/2019-07-19-sic-act_versio_ci/" title="SIC. Actualització de versió Jenkins">SIC. Actualització de versió Jenkins</a>
+        				
+
+						</h2>
+						<p> Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Contínua (Jenkins)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/noticies/2019-05-06-sic-canvi-lots/" title="SIC. Canvi de lots segons la nova contractació 2019">SIC. Canvi de lots segons la nova contractació 2019</a>
+        				
+
+						</h2>
+						<p> El dia 01/06/2019 es farà efectiva la nova configuració de lots de les aplicacions en base a la nova contractació de proveïdors del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/sic-serveis/binaris/" title="Millores i actualització documentació del Servei de Binaris">Millores i actualització documentació del Servei de Binaris</a>
+        				
+
+						</h2>
+						<p> Arran de diferents consultes realitzades per proveïdors d'aplicacions, s'han realitzat millores en el Servei de Binaris i actualitzat la documentació de referència</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/cloud/dockerRegistry/" title="Cloud. Registre Docker privat corporatiu">Cloud. Registre Docker privat corporatiu</a>
+        				
+
+						</h2>
+						<p> Des de Suport Cloud s'ha habilitat un registre Docker privat corporatiu integrat amb el SIC (Servei d'Integració Contínua)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/destacats/2018-06-26-UpgradeSIC/" title="SIC. Actualització anual dels productes del SIC">SIC. Actualització anual dels productes del SIC</a>
+        				
+
+						</h2>
+						<p> S'està treballant en l'actualització tecnològica planificada de forma anual de la plataforma. En concret, durant el mes de setembre s'actualitzarà la plataforma de d'integració contínua Jenkins a la versió 2.121.1 i la versió de GitLab a la versió 10.8.4.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="http://canigo.ctti.gencat.cat/destacats/2017-12-12-Recordatori-svn/" title="SIC. Recordatori de pas de SVN a mode només lectura">SIC. Recordatori de pas de SVN a mode només lectura</a>
+        				
+
+						</h2>
+						<p> Us recordem que a partir del 5 de febrer de 2018 el SVN del SIC passarà a mode només lectura. D'aquesta manera, a partir d'aquest dia no es podrà pujar noves versions de codi a aquesta plataforma.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat/nexus/#view-repositories;Redhat~browseremote" title="Repositori Maven2 de Red Hat al Nexus de SIC">Repositori Maven2 de Red Hat al Nexus de SIC</a>
+        				
+
+						</h2>
+						<p> Des d'ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven2 de Red Hat a través del Nexus</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat/nexus" title="Repositori Maven d&#39;Oracle a Nexus de SIC">Repositori Maven d&#39;Oracle a Nexus de SIC</a>
+        				
+
+						</h2>
+						<p> Des d'ara el Jenkins del SIC és capaç de resoldre dependències del repositori Maven d'Oracle a través del Nexus</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="http://hudson.intranet.gencat.cat/hudson" title="Slave Jenkins a CPD2 disponible">Slave Jenkins a CPD2 disponible</a>
+        				
+
+						</h2>
+						<p> Ja es troba disponible el slave de Jenkins a CPD2 IBM per a desplegaments en aquest CPD. Amb aquest slave es completa el desplegament de slaves Jenkins a tots els cpds Cloud i Critics de la Generalitat de Catalunya.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/destacats-related/upgrade-nexus/" title="Upgrade Nexus al SIC">Upgrade Nexus al SIC</a>
+        				
+
+						</h2>
+						<p> </p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/destacats-related/sic-net/" title=".NET al SIC">.NET al SIC</a>
+        				
+
+						</h2>
+						<p> </p>
+					</div>	
+
+
+    
+
+
+
+
+			</div>
+		</div>
+
+
+</div>
+
+
+			            
+
+				</div>
+				</div>
+			</article>
+
+	</section>
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+	
+
+</body>
+</html>

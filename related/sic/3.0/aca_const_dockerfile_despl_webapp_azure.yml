@@ -1,0 +1,27 @@
+version: 2.0.0
+info:
+  version: 2.0.0
+  description: Petclinic (WebApp azure)
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: frontend
+components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - WEBAPP_NAME: 'sic-petclinic-pre'
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - WEBAPP_NAME: 'sic-petclinic-pro'
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]

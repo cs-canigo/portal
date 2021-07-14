@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/lts/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Mon, 05 Jun 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Utilització preferent de versions LTS de programari</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/</guid>
+      <description>Les versions LTS (Long-Term Support) de programari lliure són les recomanades i a adoptar com a preferents seguint el criteri d&#39;Arquitectura CTTI</description>
+    </item>
+    
+  </channel>
+</rss>

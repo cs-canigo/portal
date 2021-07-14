@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Consideracions en desplegaments de contenidors</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Consideracions en desplegaments de contenidors\" />");
+		document.write("<meta name=\"description\" content=\"Consideracions generals a tenir present en desplegaments de contenidors\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/cloud-caas">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Consideracions en desplegaments de contenidors
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.
+Algunes apliquen a qualsevol plataforma, altres apliquen a plataformes en concret.</p>
+
+<ul>
+<li><strong>Tots els desplegaments a les diferents de contenidors es faran via SIC</strong></li>
+
+<li><p>En un desplegament de contenidors es poden identificar quatre blocs clarament diferenciats:</p>
+
+<ul>
+<li><strong>Custòdia del codi font</strong>. És comú a totes les aplicacions.</li>
+<li><strong>Construcció dels artefactes de l&rsquo;aplicació</strong>. És comú a totes les aplicacions.</li>
+<li><strong>Construcció de la imatge docker</strong>. És un pas addicional que no és present en el desplegament d&rsquo;aplicacions tradicional.</li>
+<li><strong>Desplegament pròpiament dit</strong>. Tot i que és comú a totes les aplicacions, desplegar als orquestradors docker presenta certes particularitats que cal tenir present.</li>
+</ul></li>
+</ul>
+
+<h2 id="custòdia-del-codi-font">Custòdia del codi font</h2>
+
+<p>Els artefactes destinats a ser desplegats. Es construiran a partir de codi font repositat al <a href="https://canigo.ctti.gencat.cat/sic-serveis/scm/">Servei de custodia de codi font del SIC.</a></p>
+
+<p><strong>Es crearà un projecte/repositori diferent per cada component que sigui desplegat com a contenidor.</strong></p>
+
+<p><strong>En cas de generar llibreries que seran compartides per diferents aplicacions es crearà un projecte/repositori per cadascuna d&rsquo;elles.</strong></p>
+
+<h2 id="construcció-dels-artefactes">Construcció dels artefactes</h2>
+
+<p>És important notar que <strong>l&rsquo;artefacte desplegat serà el mateix a tots els entorns</strong>, això implica que la definició de les propietats específiques de l&rsquo;entorn han d&rsquo;estar definides en variables d&rsquo;entorn o fitxers de configuració.
+Podeu trobar més informació de com gestionar la configuració i contrasenyes en contenidors a  <a href="https://canigo.ctti.gencat.cat/cloud-caas/configuracio-contenidors/">Fitxers de configuració a contenidors</a></p>
+
+<p>Notar la necessitat de definir la versió de l&rsquo;artefacte utilitzant el fitxer <strong>sic.yml</strong> a la carpeta <strong>sic</strong>, amb la propietat <strong>version</strong> que defineix la versió de l&rsquo;artefacte/imatge.</p>
+
+<p>Addicionalment a la definició manual de la versió de l&rsquo;artefacte, en desenvolupaments basats en <strong>maven</strong> es pot generar la versió automàticament a partir de la versió definida al <strong>pom.xml</strong>. Es pot trobar més informació a l&rsquo;article <a href="https://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/">Integració d&rsquo;una aplicació Canigó a SIC 2.0</a></p>
+
+<p>La construcció de l&rsquo;artefacte es realitzarà al SIC. En cap cas es construirà l&rsquo;artefacte a la construcció de la imatge docker.</p>
+
+<p>Cal proporcionar l&rsquo;equip de Sic/Suport Cloud les instruccions necessàries, incloent-hi les eines i versions, per construir els artefactes a desplegar.</p>
+
+<p>Podeu trobar més informació a <a href="https://canigo.ctti.gencat.cat/cloud-caas/integracio-contenidors-sic/">Integració de contenidors a SIC</a></p>
+
+<h2 id="construcció-de-la-imatge-docker">Construcció de la imatge docker</h2>
+
+<p>El CTTI disposa d&rsquo;un conjunt d&rsquo;imatges docker homologades que es recomana utilitzar com a base per construir les imatges docker de les diferents aplicacions.
+Aquestes imatges es poden consultar al <a href="https://canigo.ctti.gencat.cat/cloud-caas/cataleg-contenidors/">elements de catàleg</a> i suporten les tecnologies més freqüents utilitzades a la Generalitat de Catalunya.</p>
+
+<p>En cas de necessitar una imatge d&rsquo;una tecnologia o producte no suportat, cal tenir present les consideracions indicades a <a href="https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/">Criteris creació contenidors docker</a></p>
+
+<p>A l&rsquo;hora d&rsquo;utilitzar les imatges base, en cap cas les copieu i les modifiqueu, feu una imatge que hereti de la imatge base. Dockerfile ex:</p>
+
+<pre><code>FROM docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8
+
+ENV CATALINA_HOME /usr/local/tomcat
+
+COPY artefacte ${CATALINA_HOME}/webapps
+</code></pre>
+
+<p>Totes les imatges base estan repositades al registre docker privat del CTTI i el seu codi font és accessible al gitlab a <a href="https://git.intranet.gencat.cat/3048-intern/imatges-docker">Imatges-docker</a>.</p>
+
+<p>Podeu trobar més informació a <a href="https://canigo.ctti.gencat.cat/cloud-caas/dockerRegistry/">Registre docker privat.</a></p>
+
+<h2 id="desplegament">Desplegament</h2>
+
+<p>El desplegament a plataformes docker basades en Kubernetes (Kubernetes i Openshift) requereix la creació d&rsquo;uns descriptors en format yaml.</p>
+
+<p>Aquests descriptors seran creats per l&rsquo;equip de desenvolupament i es repositaran a un projecte/repositori anomenat <strong>Orchestrators</strong> dins del grup del codi de diàleg del projecte.</p>
+
+<p>Cada entorn i component d&rsquo;aplicació estarà separat en carpetes. Ex:</p>
+
+<ul>
+<li>app1/PRE</li>
+<li>app1/PRO</li>
+<li>app2/PRE</li>
+<li>app2/PRO</li>
+<li>&hellip;</li>
+</ul>
+
+<p>En cadascuna d&rsquo;aquestes carpetes s&rsquo;inclouran tots els descriptors necessaris.
+Els Secrets s&rsquo;inclouran sense les dades sensibles, que seran gestionades per l&rsquo;equip de Suport Cloud.</p>
+
+<p>Podeu trobar més informació respecte als descriptors yaml de cadascuna de les plataformes a:</p>
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-caas/contenidors_openshift/">Contenidors Openshift</a></li>
+<li><a href="https://canigo.ctti.gencat.cat/cloud-caas/contenidors_kubernetes/">Contenidors Kubernetes</a></li>
+</ul>
+
+<p>El desplegament a la plataforma SwarmMe no requereix descriptors específics, però si requereix disposar de la següent informació:</p>
+
+<ul>
+<li>namespace</li>
+<li>imatge docker</li>
+<li>xarxa</li>
+<li>mida del contenidor</li>
+<li>domini</li>
+<li>port</li>
+<li>repliques</li>
+<li>paràmetres d&rsquo;entorn</li>
+<li>&hellip;</li>
+</ul>
+
+<p>Bàsicament són les mateixes dades que s&rsquo;informen als descriptors yaml.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

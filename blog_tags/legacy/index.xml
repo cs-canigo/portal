@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/legacy/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Fri, 13 May 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Aplicacions webs modernes: JSF vs REST</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</link>
+      <pubDate>Fri, 13 May 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</guid>
+      <description>Us donem una breu explicació d&#39;aquest canvi de paradigma en la capa de presentació</description>
+    </item>
+    
+    <item>
+      <title>Dels Applets a Java Web Start amb JNLP</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/04/applets-to-jnlp/</link>
+      <pubDate>Thu, 07 Apr 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/04/applets-to-jnlp/</guid>
+      <description>Us expliquem breument les estratègies de migració dels Applets Java i en concret, la migració a tecnologia Java Web Start amb JNLP</description>
+    </item>
+    
+    <item>
+      <title>Desenvolupament web. Discontinuació dels Applets Java</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/02/applets/</link>
+      <pubDate>Mon, 15 Feb 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/02/applets/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

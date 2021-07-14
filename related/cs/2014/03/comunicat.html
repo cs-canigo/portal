@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca-ES"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>Comunicat Mensual Oficina de Frameworks i Solucions d'Arquitectura</title>
+
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_blocs.css" rel="stylesheet" type="text/css" /><!-- <link
+href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_GridB2.css"
+rel="stylesheet" type="text/css" /> -->
+
+<link href="http://www.gencat.cat/piv/css/comuns/globals/FW_estils.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_capPeu.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_menuOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_estilsOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www.gencat.cat/piv/css/portals/PIV/css/FW_estils.css" rel="stylesheet" type="text/css" />
+<style>
+ul li {
+list-style-type: square;
+color: #000000;
+font-size: 1em;
+}
+ul li span{
+color: #000000;
+font-size: 1.3em;
+font-weight: bold;
+}
+a.link {
+text-decoration: none !important;
+color: black;
+padding: 1px 3px 1px 3px;
+font-size: .9em;
+color: #000000;
+padding: 5px;
+font-weight: bold;
+}
+a.sel {
+color: #AC2115;
+}
+td.top {
+vertical-align: top;
+}
+div.textoListados ul li {
+list-style-type: square;
+color: #000000;
+font-size: .9em;
+}
+hr.liniaVermella {
+color: #bf2f14;
+background-color:#bf2f14;
+height: 2px;
+border: none;
+}
+</style></head>
+<body>
+<div class="FW_bWidth">
+<div class="FW_bMinwidth">
+<div class="FW_bContainer"><!-- Inici FW_bMarc: Capa que cont&egrave; tota la plana en uns marges -->
+<div class="FW_bMarc">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" align="left"><!-- Inici FW_escut -->
+<div class="FW_bEscut">
+<h1> <a href="http://www.gencat.cat/" id="FW_gencat"> <img src="http://www.gencat.cat/piv/css/comuns/img/gcc_fs_logogeneralitat.gif" alt="Generalitat de Catalunya www.gencat.cat" title="Duu a la pàgina principal de la Generalitat de Catalunya" height="30" width="186" /> </a> </h1>
+</div>
+<!-- Fi FW_escut --> </td>
+<td> </td>
+<td align="right" valign="bottom"> <img src="http://canigo.ctti.gencat.cat/confluence/download/resources/OTCanigo_logo175x36.png" alt="Centre de Suport Canigó" height="30" width="186" />
+&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td> </td>
+<td class="navegacio" align="right"><!-- Inici FW_bMenuCap -->
+<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CAN/Centre+de+Suport">Frameworks i Solucions d'Arquitectura</a>&nbsp;&nbsp;<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CANPUB/Comunicats">Comunicats Anteriors</a><!-- Fi FW_bMenuCap --> </td>
+</tr>
+<tr>
+<td colspan="3">
+<hr class="liniaVermella" /> </td>
+</tr>
+</tbody>
+</table>
+<!-- Imatge de tracking del comunicat --><img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/5950/2011-06.png" />
+<!-- Inici Estructura del Contingut -->
+<table cellpadding="5" cellspacing="5" width="100%">
+<tbody>
+<tr>
+<!-- Area de continguts --> <td colspan="2" bgcolor="#ffffff" valign="top" width="75%">
+<div class="FW_bTitol">
+<h2>Canigó. Joc de caràcters en aplicacions Canigó 3</h2>
+<div style="text-align: justify;"><br />Des del CS Canigó, seguint les recomanacions&nbsp;del CTTI, es proposa la utilització del joc de caràcters <a href="http://www.utf-8.com/">UTF-8</a> a les noves aplicacions que es desenvolupin amb el framework Canigó 3.&nbsp;UTF-8 (8-bit Unicode Transformation Format) és un format de codificació de caràcters <a href="http://www.unicode.org/">Unicode</a> i <a href="http://www.iso10646.hkpc.org/en_background.asp">ISO 10646</a> utilitzant símbols de longitud variable. Com a principal característica destacar que és capaç de representar qualsevol caràcter Unicode proporcionant independització de la plataforma i del llenguatge.<br />
+<br />
+Per treballar amb aquest joc de caràcters és necessari que totes les peces que intervenen en el desenvolupament i execució de l'aplicació Canigó 3 estiguin correctament configurades. És molt important que totes elles mantinguin la coherència en la codificació del text.<br />
+<div style="text-align: center;"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6720/utf8.PNG" style="width: 336px; height: 276px;" alt="utf8.PNG" /><br />
+</div>
+<span style="font-weight: bold;">Entorn de treball (Eclipse)</span><br />
+Per defecte, l'entorn de treball de Canigó 3 fa servir la codificació de caràcters del sistema operatiu. En el cas d'entorns Windows és CP-1252 (Windows ANSI). A les preferències d'Eclipse cal fer el canvi de codificació per els fitxers de text per a que utilitzin UTF-8.<br />
+<br />
+<span style="font-weight: bold;">Servidor d'aplicacions</span><br /> Els mòduls de Canigó que accedeixen a fitxers de propietats, Servei de Configuració i Servei d'Internacionalització (i18n), han de configurar-se per tal que obtinguin els valors d'aquestes propietats utilitzant el joc de caràcters UTF-8. L'API <span style="font-style: italic;">java.util.Properties</span> de Java fa servir ISO-8859-1, d'aquí la necessitat de revisar aquesta configuració. També Java Server Faces (JSF), com a tecnologia utilitzada al Servei de Presentació de Canigó 3, ha de configurar-se per obtenir els missatges de fitxers de propietats (i18n) amb UTF-8.<br />
+Per tal que el servidor d'aplicacions descodifiqui les peticions HTTP fent servir UTF-8 és possible definir un filtre web a l'aplicació que forci la utilització d'aquest joc de caràcters.<br />
+<span style="font-weight: bold;"></span><br />
+<span style="font-weight: bold;">Base de dades</span><br />
+A nivell de base de dades ha de tenir-se en compte el joc de caràcters a emprar per l'emmagatzemament de les dades. A Oracle,&nbsp;AL32UTF8 és el joc de caràcters per defecte que es configura en entorns corporatius per a noves aplicacions. En entorns de desenvolupament s'ha d'utilitzar aquesta mateixa configuració.<br />
+<br />
+Aquests són&nbsp;els principals punts a tenir en compte per a utilitzar UTF-8 a cadascun dels components que formen part d'una arquitectura d'aplicació Canigó 3. Per aquest comunicat hem redactat el"<a href="http://canigo.ctti.gencat.net/confluence/download/attachments/6720/Canig%C3%B3+-+Howto+-+Joc+de+car%C3%A0cters+en+aplicacions+Canig%C3%B3+3.pdf">HowTo - Joc de caràcters en aplicacions Canigó 3</a>" amb la finalitat de proporcionar als proveïdors d'aplicacions tota la informació necessària per a que una aplicació Canigó 3 pugui utilitzar aquest joc de caràcters.</div>
+<br />
+</div>
+<div class="FW_bTitol">
+<h2>SIC. Accés per a administradors de CPD</h2>
+<div style="text-align: justify;">
+<div style="text-align: justify;"><br />Per a totes aquelles aplicacions per a les que que no és possible realitzar desplegaments automatitzats des del SIC, s'ha incorporat la possibilitat que els administradors de CPD puguin accedir als artefactes (.war, .ear, .zip, ...) custodiats al SIC per tal de poder realitzar desplegaments en els servidors dels nous CPDs.<br />
+<br />Com a pre-requisit per poder oferir aquesta funcionalitat al SIC, s'han hagut d'habilitar excepcions&nbsp;a les restriccions existents en els repositoris de Subversion. Aquestes restriccions impedien la custodia d'artefactes (.war, .ear, .jar) conjuntament amb el codi font de l'aplicació.<br />
+<br />Els administradors podran accedir indistintament tant als artefactes lliurats al Subversion com els que generi Jenkins per a una aplicació que ja està compilant i fent desplegaments automàtics al SIC. Amb aquesta finalitat s'ha modificat el formulari d'alta d'aplicació:&nbsp;<br />
+</div>
+<br />
+<div style="text-align: justify;"><span style="font-weight: bold;">Accés a Subversion</span>: en el formulari d'alta cal incorporar la figura d'administrador de CPD, i que aquest requereix "Accés a artefactes al repositori de codi font". D'aquesta manera podrà accedir al/s desplegable/s que el release manager del proveïdor d'aplicacions haurà lliurat per una determinada versió de l'aplicació (Ex: http://svn.intranet.gencat.cat/svn_ctti/demoApp/tags/1.0.0/bin/demoApp.ear).<br />
+</div>
+<br />
+</div>
+<div style="text-align: justify;"><span style="font-weight: bold;">
+Accés a Jenkins</span>: en el formulari d'alta cal especificar que l'administrador de CPD requereix "Accés a la tasca de creació dels artefactes". Aquest privilegi donarà accés al resultat de les execucions del job de Jenkins que construeix els artefactes a desplegar per cada versió de l'aplicació (Ex. http://hudson.intranet.gencat.cat/hudson/job/CTTI_demoApp_BLD/6/).<br />
+</div>
+<br />
+<div style="text-align: justify;">Per tal de sol·licitar aquests accessos és necessari <a href="http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/">obrir una petició Remedy al SIC</a>&nbsp;el <a href="http://canigo.ctti.gencat.cat/related/sic/SIC-Formulari-Custodia-Codi-Aplicacio-v2.0.1.xlsx">Formulari d'Alta de Projecte</a> degudament emplenat. A la versió 1.3.8 del formulari s'ha afegit la secció "Alta aplicació - Usuaris administradors de CPD" on poder informar les dades relatives als administradors de CPD que han de desplegar l'aplicació. Més informació en el <a href="http://canigo.ctti.gencat.cat/confluence/download/attachments/4008/SIC+Manual+Integraci%C3%B3+v1.0.13.pdf?version=1">Manual d'Integració</a> del SIC.</div>
+</div>
+</td>
+<!-- Area de noticies --> <td class="top" rowspan="2" style="border-left: 5px solid rgb(191, 47, 20);" bgcolor="#ffffff" valign="top">
+<div class="FW_bTitol" align="center">
+<h2>Notícies</h2>
+</div>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>Transformació JIRA CSTD al cloud d'HP</h4>
+</span></li>
+</ul>
+<div style="text-align: justify;">El passat dia 17 de Febrer es va completar la tranformació del servei JIRA CSTD al cloud del CPD1 d'HP. La URL d'accés al portal és manté: <a href="http://cstd.ctti.gencat.cat">http://cstd.ctti.gencat.cat</a><br />
+<br />
+Tots els proveïdors d'aplicacions i gestors de projectes&nbsp;del CTTI poden accedir als serveis i informes de la mateixa manera que ho feien a l'antic CPD.<br />
+<br />
+</div>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li> <span>
+<h4>Desplegaments d'aplicacions des del SIC<br /></h4>
+</span></li>
+</ul><div style="text-align: justify;">A la següent gràfica es mostra el número de desplegaments d'aplicacions realitzats des del SIC per departament i entorn durant el mes de Febrer:<br /></div><br /><img style="width: 447px; height: 347px;" alt="Desplegaments_SIC_Febrer_2014.PNG" src="http://canigo.ctti.gencat.net/confluence/download/attachments/6720/Desplegaments_SIC_Febrer_2014.PNG" /><br /><br />
+<div style="width: 400px;">
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<hr color="#ffffff" />
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>HowTo's Frameworks i Solucions d'Arquitectura</h4>
+</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">
+<table cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<td> <img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/4/howto.png" alt="howto" /> </td>
+<td> <a target="_blank" href="http://canigo.ctti.gencat.net/confluence/download/attachments/6720/Canig%C3%B3+-+Howto+-+Joc+de+car%C3%A0cters+en+aplicacions+Canig%C3%B3+3.pdf"> <b>HOWTO:</b> Joc de caràcters en aplicacions Canigó 3 </a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+</tbody>
+</table>
+<!-- Peu de pagina noticies -->
+<hr color="#ffffff" />
+<div align="center"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6359/logoCTTI.png" alt="CTTI" /></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Fi Estructura del Contingut --><!-- Inici FW_bPeu -->
+<div class="FW_bPeu">
+<div align="center"> <a href="http://www.gencat.net/web/cat/avis_legal.htm">Avís legal</a> | <a href="http://www.gencat.cat/web/cat/accessibilitat.htm">Accessibilitat</a> | <a href="http://www.gencat.net/web/cat/sobre_el_web.htm">Sobre el web</a> | <a href="http://www.gencat.cat/web/cat/copyright.htm">© Generalitat de Catalunya</a></div>
+</div>
+<!-- Fi FW_bPeu --> </div>
+<div style="text-align: center;" align="center"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black; text-decoration: none;">
+<hr style="color: rgb(214, 214, 214);" align="center" noshade="noshade" size="3" width="100%" /></span></div>
+<span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;">AVISO DE CONFIDENCIALIDAD.<br />
+Este correo y la información contenida o adjunta al mismo es privada y confidencial y va dirigida exclusivamente a su destinatario. TICxCAT informa a quien pueda haber recibido este correo por error que contiene información confidencial cuyo uso, copia, reproducción o distribución está expresamente prohibida. Si no es Vd. el destinatario del mismo y recibe este correo por error, le rogamos lo ponga en conocimiento del emisor y proceda a su eliminación sin copiarlo, imprimirlo o utilizarlo de ningún modo.<br />
+<br />
+</span><span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;" lang="EN-US">CONFIDENTIALITY WARNING.<br />
+This message and the information contained in or attached to it are private and confidential and intended exclusively for the addressee. TICxCAT informs to whom it may receive it in error that it contains privileged information and its use, copy, reproduction or distribution is prohibited. If you are not an intended recipient of this E-mail, please notify the sender, delete it and do not read, act upon, print, disclose, copy, retain or redistribute any portion of this E-mail.</span>
+</div>
+</div>
+</div>
+</body></html>

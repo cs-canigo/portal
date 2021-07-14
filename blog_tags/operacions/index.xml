@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/operacions/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Mon, 23 Jul 2018 00:00:00 UTC</updated>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/</guid>
+      <description>DevOps és un moviment que aplica pràctiques reconegudes i exitoses de la industria als sistemes d&#39;informació.  Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l’aprovisionament d’infraestructures mitjançant codi.</description>
+    </item>
+    
+  </channel>
+</rss>

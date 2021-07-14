@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Autoservei d&#39;usuaris</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Autoservei d\x27usuaris\" />");
+		document.write("<meta name=\"description\" content=\"Autoservei d\x27usuaris SIC 2.0 mitjançant GitLab\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic20-serveis">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	
+	<a href="/sic-serveis/">
+		
+
+		Serveis
+
+		
+	</a></li>
+	
+
+    
+    <li><a href="/sic20-serveis/">
+        
+
+        Serveis (SIC 2.0)
+
+        
+    </a>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Autoservei d&#39;usuaris
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 17-06-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#estructura-de-permisos">Estructura de permisos</a>
+<ul>
+<li><a href="#grups-per-a-lots-i-proveïdors-d-aplicacions">Grups per a lots i proveïdors d&rsquo;aplicacions</a>
+<ul>
+<li><a href="#release-managers">Release Managers</a></li>
+<li><a href="#responsables-de-lot">Responsables de lot</a></li>
+</ul></li>
+<li><a href="#grups-de-cpds-i-ldts">Grups de CPDs i LdTs</a></li>
+<li><a href="#altres-grups">Altres grups</a></li>
+</ul></li>
+<li><a href="#funcionament">Funcionament</a>
+<ul>
+<li><a href="#accés-al-servei">Accés al servei</a></li>
+<li><a href="#creació-de-comptes-d-usuari">Creació de comptes d&rsquo;usuari</a></li>
+<li><a href="#estructura-de-grups-i-projectes">Estructura de grups i projectes</a></li>
+<li><a href="#comptabilitat-amb-sic-1-0">Comptabilitat amb SIC 1.0</a></li>
+<li><a href="#permisos-d-accés">Permisos d&rsquo;accés</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>El SIC 2.0 proporciona un servei de gestió d&rsquo;usuaris per a que els lots d&rsquo;aplicacions disposin d&rsquo;autonomia a l&rsquo;hora d&rsquo;assignar permisos d&rsquo;accés sobre els diferents serveis. <br/>
+Abans d&rsquo;entrar en el funcionament de l&rsquo;autoservei d&rsquo;usuaris, explicarem breument l&rsquo;estructura actual de permisos del SIC.</p>
+
+<h2 id="estructura-de-permisos">Estructura de permisos</h2>
+
+<p>El SIC té estructurada la seva seguretat en diferents tipus de grups:</p>
+
+<ul>
+<li>Grups per a lots i proveïdors d&rsquo;aplicacions</li>
+<li>Grups per a CPDs i LdTs</li>
+<li>Altres grups</li>
+</ul>
+
+<h3 id="grups-per-a-lots-i-proveïdors-d-aplicacions">Grups per a lots i proveïdors d&rsquo;aplicacions</h3>
+
+<p>Aquests tipus de grups contenen a desenvolupadors i altres perfils que componen l&rsquo;amalgama de perfils requerits per desenvolupar una aplicació. Dins d&rsquo;aquests tipus de grups, distingim dos subtipus:</p>
+
+<ul>
+<li>Release Managers</li>
+<li>Responsables de lot</li>
+</ul>
+
+<p>A continuació, descriurem cadascun d&rsquo;aquests subtipus.
+<br/><br/></p>
+
+<h4 id="release-managers">Release Managers</h4>
+
+<p>Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d&rsquo;aplicació concret. Els membres d&rsquo;un grup Release Managers són perfils que poden:</p>
+
+<ul>
+<li>Operar amb servei de <strong>custòdia de codi</strong>.</li>
+<li><strong>Concedir permisos</strong> a altres companys per accedir com a Developers o Mantainers al codi d&rsquo;aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.</li>
+<li><strong>Crear nous projectes</strong> dins del grup de l&rsquo;aplicació.</li>
+<li>Accedir als serveis d&rsquo;<strong>integració contínua</strong>.</li>
+<li>Accedir al servei de gestió de <strong>binaris</strong> per dipositar i recollir arxius.</li>
+</ul>
+
+<h4 id="responsables-de-lot">Responsables de lot</h4>
+
+<p>Aquest tipus de grup recull als responsables de lot. <br/>
+Al SIC 1.0, els membres d&rsquo;aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat perd valor gràcies a l&rsquo;autoservei d&rsquo;usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
+Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d&rsquo;una <strong>participació transversal a tots els codis de les aplicacions</strong> i podent realitzar les mateixes accions que un Release Manager. <br/>
+Aquests grups estaran gestionats per l’aplicació de <a href="https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/">Control d’Accés de Recursos de GICAR</a> en mode autoservei per l’aplicació “SIC”.</p>
+
+<h3 id="grups-de-cpds-i-ldts">Grups de CPDs i LdTs</h3>
+
+<p>Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d&rsquo;aquest tipus de grups tenen <strong>accés en mode lectura als repositoris i al servei de gestió de binaris</strong>, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d&rsquo;aplicació corresponents. <br/>
+Aquests grups estaran gestionats per l’aplicació de <a href="https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/">Control d’Accés de Recursos de GICAR</a> en mode autoservei per l’aplicació “SIC”.</p>
+
+<h3 id="altres-grups">Altres grups</h3>
+
+<p>Es tracta de grups especials per a la gestió del servei i altres funcionalitats: <strong>Administració, Responsables d&rsquo;àmbit, Oficina de Qualitat, Oficina de Seguretat</strong>,&hellip; etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d&rsquo;agents del CTTI. <br/>
+Aquests grups estaran gestionats per l’aplicació de <a href="https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/">Control d’Accés de Recursos de GICAR</a> en mode autoservei per l’aplicació “SIC”.</p>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<p>A continuació, ens centrarem en la gestió de membres del grup de <strong>Release Managers mitjançant l&rsquo;autoservei d&rsquo;usuaris</strong>.
+Aquest servei es realitza mitjançant l&rsquo;eina de custòdia de codi font implantada: <a href="https://git.intranet.gencat.cat/">GitLab</a>.</p>
+
+<h3 id="accés-al-servei">Accés al servei</h3>
+
+<p>Podrà accedir mitjançant el següent enllaç: <a href="https://git.intranet.gencat.cat">https://git.intranet.gencat.cat</a> <br/>
+Haurà d&rsquo;autenticar-se amb de les seves credencials d&rsquo;accés <strong>GICAR</strong>. Els Release Manager, responsables de lot i tècnics de CPD disposaran d&rsquo;accés al servei. Si no disposa d&rsquo;accés, haurà de sol·licitar-ho al seu responsable.</p>
+
+<h3 id="creació-de-comptes-d-usuari">Creació de comptes d&rsquo;usuari</h3>
+
+<p>Per a poder accedir al servei caldrà disposar d&rsquo;un usuari GICAR operatiu i crear el compte corresponent. Per a fer-ho, haurà d&rsquo;introduir l&rsquo;identificador d&rsquo;usuari i contrasenya i, en cas de tractar-se d&rsquo;un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d&rsquo;alta. <br/></p>
+
+<p><strong>IMPORTANT</strong>: És imprescindible que la identitat GICAR de l&rsquo;usuari tingui informada l&rsquo;<strong>adreça de correu</strong> i que l&rsquo;usuari es trobi bolcat a l&rsquo;<strong>LDAP del SIC</strong> (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l&rsquo;adreça de correu, com si no pot accedir al servei perquè es produeix un error d&rsquo;autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.</p>
+
+<h3 id="estructura-de-grups-i-projectes">Estructura de grups i projectes</h3>
+
+<p>Els <strong>Grups</strong> tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear <strong>Projectes</strong> dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.</p>
+
+<p>Per a més informació: <a href="/sic-serveis/scm/">Custòdia de codi font</a></p>
+
+<h3 id="comptabilitat-amb-sic-1-0">Comptabilitat amb SIC 1.0</h3>
+
+<p>Els usuaris que ja eren <strong>&ldquo;Release Manager Lot x Àmbit&rdquo;</strong> al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Per tant, en accedir al portal del GitLab (mitjançant les credencials GICAR corresponents) disposaran d&rsquo;accés als grups per codi de diàleg de les seves aplicacions.</p>
+
+<p><strong>AVÍS</strong>: durant el primer accés al GitLab no es comptarà amb visibilitat sobre els grups d&rsquo;aplicacions. Caldrà esperar a l&rsquo;endemà del primer login per tal de disposar d&rsquo;accés als grups i projectes corresponents.</p>
+
+<p><center><img src="/images/news/autoserveiUsuaris_1.PNG" alt="RML a SIC 1.0 VS SIC 2.0" /></center>
+<br/></p>
+
+<h3 id="permisos-d-accés">Permisos d&rsquo;accés</h3>
+
+<p>En crear projectes dins els grups d&rsquo;aplicació, la resta d&rsquo;usuaris del lot que no siguin Release Manager no disposaran de visibilitat.</p>
+
+<p><CENTER><img src="/images/news/autoserveiUsuaris_2.PNG" alt="Visibilitat resta usuaris Lot" /></center>
+<br/>
+Els mateixos usuaris Release Manager podran consultar, editar, afegir i eliminar membres del projecte, però ho hauran de fer <strong>a nivell de projecte</strong>, no de grup de projectes.</p>
+
+<p><CENTER><img src="/images/news/autoserveiUsuaris_3.PNG" alt="Proporcionar accés a Projecte" /></center>
+<br/>
+Per a concedir accés sobre un projecte caldrà:</p>
+
+<ul>
+<li>Accedir al <strong>projecte</strong>.</li>
+<li>Mitjançant el menú superior cal seleccionar &ldquo;<strong>Settings</strong>&rdquo; i, dins aquest ,&rdquo;<strong>Members</strong>&rdquo;.</li>
+<li>Al formulari que apareix, cercar l&rsquo;usuari al qual es vol donar accés. La cerca es pot realitzar per nom o NIF. S&rsquo;aconsella <strong>cercar per NIF</strong>.</li>
+<li>Escollir el <strong>rol</strong> que ha de tenir l&rsquo;usuari dins el projecte:
+
+<ul>
+<li>Rol Mantainer: permetrà treballar amb el projecte en qüestió, crear nous projectes dins el grup de l&rsquo;aplicació i proporcionar accés a altres usuaris als projectes dins el grup.</li>
+<li>Rol Developer: únicament permetrà treballar amb el projecte en qüestió (descàrrega i pujades).</li>
+</ul></li>
+<li>Prémer el botó de &ldquo;<strong>Add to Project</strong>&ldquo;</li>
+</ul>
+
+<p><CENTER><img src="/images/news/autoserveiUsuaris_4.PNG" alt="Proporcionar accés a Projecte" /></center>
+<br/></p>
+
+<p>En el cas que el rol escollit per a l&rsquo;usuari hagués estat de <strong>Mantainer</strong>, l&rsquo;endemà de l&rsquo;assignació, l&rsquo;usuari haurà adquirit accés a la resta de projectes del grup de l&rsquo;aplicació, convertint-se a efectes pràctics en un nou Release Manager del codi d&rsquo;aplicació. Aquesta <strong>promoció a Release Manager</strong> permetrà l&rsquo;accés a la resta de serveis del SIC: custòdia de codi, gestió de binaris i integració contínua.
+<CENTER><img src="/images/news/autoserveiUsuaris_5.PNG" alt="Visibilitat adquirida segons Rol" /></center>
+<br/></p>
+
+<p><strong>AVÍS</strong>: Si desitja concedir permisos a un usuari per a un grup que no disposa de cap projecte, caldrà prèviament crear el projecte per a poder dur a terme l&rsquo;assignació desitjada.</p>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic20-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

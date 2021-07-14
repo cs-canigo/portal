@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com implementar el patró Circuit Breaker</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com implementar el patró Circuit Breaker\" />");
+		document.write("<meta name=\"description\" content=\"Com implementar el patró Circuit Breaker dins d\x27un projecte Canigó.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com implementar el patró Circuit Breaker
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 26-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest article és mostrar com implementar el patró <em><a href="https://martinfowler.com/bliki/CircuitBreaker.html">Circuit Breaker</a></em>,
+dins d&rsquo;un projecte generat amb el Framework Canigó.</p>
+
+<h2 id="justificació">Justificació</h2>
+
+<p>És habitual que les aplicacions facin crides remotes a sistemes que poden fallar o penjar-se sense resposta fins
+que s’arribi a un límit de temps d’espera. Aquest fet pot acabar implicant que el sistema es quedi sense recursos i
+que impliquin fallades en cascada.
+El patró <strong><em>Circuit Breaker</em> permet evitar que una aplicació intenti de manera indefinida una operació que amb alta
+probabilitat vagi a fallar</strong>, permetent que continuï l&rsquo;aplicació mentre el problema amb l&rsquo;operació es resol.
+Addicionalment, permet un restabliment automàtic quan el problema hagi quedat resolt tornant a executar l&rsquo;operació compromesa.</p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_diagrama.drawio.png" alt="Spring circuit Diagrama" /></p>
+
+<p>Els estats que es tracten són:</p>
+
+<ul>
+<li><p><strong>Closed</strong>: el circuit està tancat i el flux ininterromput. Aquest és l&rsquo;estat inicial quan tot funciona correctament.</p></li>
+
+<li><p><strong>Open</strong>: el circuit està obert i el flux interromput. En aquest estat totes les crides al recurs/servei tornen
+un error sense que es faci cap crida protegida.</p></li>
+
+<li><p><strong>Half-Open</strong>: el circuit està mig obert (o mig tancat) donant una oportunitat al flux per al seu restabliment.
+En aquest estat l&rsquo;aplicació tornarà a intentar fer l&rsquo;operació que estava fallant.</p></li>
+</ul>
+
+<p>Alguns dels avantatges són:</p>
+
+<ul>
+<li><p><strong>Monitoratge</strong>: donat existeix un component que la seva única funcionalitat és validar l&rsquo;estat dels serveis,
+és possible tenir un monitoratge en temps real que indiqui els temps de resposta mitjana, freqüència de fallada,
+estat actual del servei i, sobretot, notificacions en temps real si algun servei comença a fallar.</p></li>
+
+<li><p><strong>Sobrecàrrega</strong>: la capacitat d&rsquo;obrir el circuit per un error o timeout que es preveu que passarà, ens estalvia
+el fet de tenir molts fils esperant que un servei respongui. Si hi ha milers d&rsquo;usuaris, és probable que s&rsquo;arribi a
+tenir molts fils parats, cosa que provocaria que el sistema se sobrecarregués i pogués arribar a provocar reaccions
+en cadena que afectessin altres components.</p></li>
+
+<li><p><strong>Tolerància a fallades</strong>: el patró permet redirigir la petició per a evitar haver de respondre amb un error al client.</p></li>
+</ul>
+
+<p>Quan s&rsquo;utilitza un projecte Canigó que es basa en Spring és possible implementar el patró utilitzant els
+projectes <a href="https://github.com/Netflix/Hystrix">Spring Cloud Netflix Hystrix</a> o
+<a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.</p>
+
+<div class="message information">
+El projecte Hystrix ha deixat de desenvolupar-se de forma activa tal com s'indica a:
+<a href="https://github.com/Netflix/Hystrix/blob/master/README.md">Netflix/Hystrix README</a>.
+Com a alternativa es pot utilitzar el projecte <a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.
+</div>
+
+<p><br/>
+A continuació es mostrarà informació de configuració i desenvolupament en cada cas.</p>
+
+<h2 id="spring-cloud-netflix-hystrix">Spring Cloud Netflix Hystrix</h2>
+
+<hr />
+
+<h3 id="configuració">Configuració</h3>
+
+<p>Caldrà afegir algunes dependències al projecte <em>Maven</em>:</p>
+
+<ul>
+<li><p><code>spring-cloud-starter-netflix-hystrix</code>: proporciona la implementació del patró <em>Circuit Breaker</em>.</p></li>
+
+<li><p><code>spring-cloud-starter-netflix-hystrix-dashboard</code>: és opcional i proporciona un panell bàsic per a monitorar el circuit.</p></li>
+
+<li><p><code>spring-boot-starter-actuator</code>: proporciona la implementació i generació de mètriques.</p></li>
+
+<li><p><code>micrometer-registry-prometheus</code>: exporta les mètriques en un format per a ser entès per Prometheus.</p></li>
+</ul>
+
+<p>És important mantenir la relació entre les dependències de <em>Spring Cloud</em> i la versió de <em>Spring Boot</em>.
+Podeu consultar la matriu de compatibilitat de <a href="https://spring.io/projects/spring-cloud">Spring Cloud</a>.
+Per exemple, si la versió de <em>Spring Boot</em> és 2.1.8.RELEASE, li correspondrà la versió <em>Greenwich.XX</em> de <em>Spring Cloud</em>.</p>
+
+<p><br/>
+Exemple de fitxer <code>pom.xml</code>:</p>
+
+<pre><code class="language-xml">  &lt;properties&gt;
+    &lt;spring-cloud.version&gt;Greenwich.SR6&lt;/spring-cloud.version&gt;
+  &lt;/properties&gt;
+  ...
+
+  &lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-cloud-starter-netflix-hystrix-dashboard&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.micrometer&lt;/groupId&gt;
+      &lt;artifactId&gt;micrometer-registry-prometheus&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  &lt;dependencyManagement&gt;
+    &lt;dependencies&gt;
+      &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;${spring-cloud.version}&lt;/version&gt;
+        &lt;type&gt;pom&lt;/type&gt;
+        &lt;scope&gt;import&lt;/scope&gt;
+      &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+  &lt;/dependencyManagement&gt;
+
+  ...
+}
+</code></pre>
+
+<p>Exemple de fitxer <code>application.yml</code>:</p>
+
+<pre><code class="language-yaml">
+...
+
+# Actuator
+management:
+  endpoint:
+    health:
+      #### Show all details of health
+      enabled: true
+      show-details: always
+  endpoints:
+    web:
+      cors:
+        allowed-origins: true
+      exposure:
+        include: &quot;*&quot;
+
+hystrix:
+  metrics:
+    enabled: true
+</code></pre>
+
+<h3 id="desenvolupament">Desenvolupament</h3>
+
+<p>A mode d’exemple, per a aplicar i provar el patró <em>Circuit Breaker</em> es necessitaran dues aplicacions de tipus Canigó:
+l&rsquo;aplicació <strong>CircuitBreakerProvider</strong> que només tindrà l&rsquo;exemple de servei Rest &ldquo;Equipament&rdquo; de Canigó, i
+l&rsquo;aplicació <strong>CircuitBreakerConsumer</strong> que consumirà el servei implementat i incorporarà els següents components:</p>
+
+<ul>
+<li>Component Spring de servei on s’implementarà el patró <em>Circuit Breaker</em> (<code>EquipamentClientService.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@Service
+public class EquipamentClientService {
+
+  private static final String EXTERNAL_EQUIPAMENTS_URL = &quot;http://localhost:8090/equipaments/&quot;;
+  private final RestTemplate restTemplate;
+
+  public EquipamentClientService(RestTemplate restTemplate) {
+    this.restTemplate = restTemplate;
+  }
+
+  @HystrixCommand(
+    fallbackMethod = &quot;getAltenatiuEquipament&quot;,
+    commandProperties = {
+      @HystrixProperty(name = &quot;circuitBreaker.requestVolumeThreshold&quot;, value = &quot;4&quot;),
+      @HystrixProperty(name = &quot;circuitBreaker.errorThresholdPercentage&quot;, value = &quot;50&quot;),
+      @HystrixProperty(name = &quot;execution.isolation.thread.timeoutInMilliseconds&quot;, value = &quot;1000&quot;)
+    })
+  public Equipament getClientEquipament(Long equipamentId) {
+    return this.restTemplate.getForObject(URI.create(EXTERNAL_EQUIPAMENTS_URL + equipamentId), Equipament.class);
+  }
+
+  public Equipament getAltenatiuEquipament(Long equipamentId) {
+    Equipament equipament = new Equipament(equipamentId);
+    equipament.setNom(&quot;equipament genèric&quot;);
+    equipament.setMunicipi(&quot;municipi per defecte&quot;);
+    return equipament;
+  }
+}
+</code></pre>
+
+<ul>
+<li>Component Spring de control Rest que contindrà un endpoint de prova (<code>EquipamentClientController.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.endpoints.client;
+
+...
+
+@RestController
+@RequestMapping(&quot;/equipaments&quot;)
+public class EquipamentClientController {
+  @Inject
+  private EquipamentClientService clientService;
+
+  @GetMapping(value = &quot;/externs/{id}&quot;, produces = { MediaType.APPLICATION_JSON_VALUE })
+  public Equipament getClientEquipament(@PathVariable(&quot;id&quot;) final Long equipamentId) {
+    return clientService.getClientEquipament(equipamentId);
+  }
+}
+</code></pre>
+
+<ul>
+<li>Configuració de Spring que habilitarà el patró <em>Circuit Breaker</em> dins de l&rsquo;aplicació (<code>EquipamentClientConfig.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@EnableHystrixDashboard
+@EnableCircuitBreaker
+@Configuration
+public class EquipamentClientConfig {
+  @Bean(name = &quot;restTemplate&quot;)
+  public RestTemplate getRestTemplate() {
+    return new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
+  }
+}
+</code></pre>
+
+<h2 id="resilience4j">Resilience4j</h2>
+
+<hr />
+
+<h3 id="configuració-1">Configuració</h3>
+
+<p>Caldrà afegir algunes dependències al projecte <em>Maven</em>:</p>
+
+<ul>
+<li><p><code>resilience4j-circuitbreaker</code>: proporciona la implementació del patró <em>Circuit Breaker</em>.</p></li>
+
+<li><p><code>resilience4j-micrometer</code>: proporciona la implementació de la generació de mètriques.</p></li>
+
+<li><p><code>spring-boot-starter-actuator</code>: proporciona la implementació i generació de mètriques.</p></li>
+
+<li><p><code>micrometer-registry-prometheus</code>: exporta les mètriques en un format per a ser entès per Prometheus.</p></li>
+</ul>
+
+<p>Exemple de fitxer <code>pom.xml</code>:</p>
+
+<pre><code class="language-xml">  ...
+
+  &lt;dependencies&gt;
+    ...
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.github.resilience4j&lt;/groupId&gt;
+      &lt;artifactId&gt;resilience4j-circuitbreaker&lt;/artifactId&gt;
+      &lt;version&gt;1.6.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.github.resilience4j&lt;/groupId&gt;
+      &lt;artifactId&gt;resilience4j-micrometer&lt;/artifactId&gt;
+      &lt;version&gt;1.6.1&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+      &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.micrometer&lt;/groupId&gt;
+      &lt;artifactId&gt;micrometer-registry-prometheus&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  ...
+}
+</code></pre>
+
+<p>Exemple de fitxer <code>application.yml</code>:</p>
+
+<pre><code class="language-yaml">
+...
+
+# Actuator
+management:
+  endpoint:
+    health:
+      #### Show all details of health
+      enabled: true
+      show-details: always
+  endpoints:
+    web:
+      cors:
+        allowed-origins: true
+      exposure:
+        include: &quot;*&quot;
+</code></pre>
+
+<h3 id="desenvolupament-1">Desenvolupament</h3>
+
+<p>A mode d’exemple, per a aplicar i provar el patró <em>Circuit Breaker</em> es necessitaran dues aplicacions de tipus Canigó:
+l&rsquo;aplicació <strong>CircuitBreakerProvider</strong> que només tindrà l&rsquo;exemple de servei Rest &ldquo;Equipament&rdquo; de Canigó, i
+l&rsquo;aplicació <strong>CircuitBreakerConsumer</strong> que consumirà el servei implementat i incorporarà els següents components:</p>
+
+<ul>
+<li>Component Spring de servei on s’implementarà el patró <em>Circuit Breaker</em> (<code>EquipamentClientService.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@Service
+public class EquipamentClientService {
+
+  private static final Logger log = LoggerFactory.getLogger(EquipamentClientService.class);
+  private static final String EXTERNAL_EQUIPAMENTS_URL = &quot;http://localhost:8090/equipaments/&quot;;
+  private final RestTemplate restTemplate;
+  private final MeterRegistry meterRegistry;
+  private final CircuitBreakerRegistry circuitBreakerRegistry;
+  private final CircuitBreaker circuitBreaker;
+
+  public EquipamentClientService(RestTemplate restTemplate, MeterRegistry meterRegistry, CircuitBreakerRegistry circuitBreakerRegistry) {
+    this.restTemplate = restTemplate;
+    this.meterRegistry = meterRegistry;
+    this.circuitBreakerRegistry = circuitBreakerRegistry;
+    this.circuitBreaker = createCircuitBreaker();
+  }
+
+  public Equipament getClientEquipament(Long equipamentId) {
+    CheckedFunction0&lt;Equipament&gt; providerServiceCall = CircuitBreaker.decorateCheckedSupplier(circuitBreaker,
+      () -&gt; this.restTemplate.getForObject(URI.create(EXTERNAL_EQUIPAMENTS_URL + equipamentId), Equipament.class));
+    Try&lt;Equipament&gt; result = Try.of(providerServiceCall).recover(throwable -&gt; getAltenatiuEquipament(equipamentId));
+    return result.get();
+  }
+
+  public Equipament getAltenatiuEquipament(Long equipamentId) {
+    Equipament equipament = new Equipament(equipamentId);
+    equipament.setNom(&quot;equipament genèric&quot;);
+    equipament.setMunicipi(&quot;municipi per defecte&quot;);
+    return equipament;
+  }
+
+  private CircuitBreaker createCircuitBreaker() {
+    CircuitBreakerConfig circuitBreakerConfig = CircuitBreakerConfig.custom()
+      .minimumNumberOfCalls(4)
+      .failureRateThreshold(50)
+      .waitDurationInOpenState(Duration.ofMillis(20000)).build();
+
+    CircuitBreaker breaker = circuitBreakerRegistry.circuitBreaker(&quot;equipament-proveidor&quot;, circuitBreakerConfig);
+    breaker.getEventPublisher()
+      .onSuccess(event -&gt; log.info(&quot;Truqueu a l'èxit mitjançant circuit breaker&quot;))
+      .onCallNotPermitted(event -&gt; log.info(&quot;Trucada denegada per circuit breaker&quot;))
+      .onError(event -&gt; log.info(&quot;La trucada ha fallat mitjançant circuit breaker&quot;));
+
+    return breaker;
+  }
+
+  @PostConstruct
+  public void init() {
+    TaggedCircuitBreakerMetrics
+      .ofCircuitBreakerRegistry(circuitBreakerRegistry)
+      .bindTo(meterRegistry);
+  }
+}
+</code></pre>
+
+<ul>
+<li>Component Spring de control Rest que contindrà un endpoint de prova (<code>EquipamentClientController.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.endpoints.client;
+
+...
+
+@RestController
+@RequestMapping(&quot;/equipaments&quot;)
+public class EquipamentClientController {
+  @Inject
+  private EquipamentClientService clientService;
+
+  @GetMapping(value = &quot;/externs/{id}&quot;, produces = { MediaType.APPLICATION_JSON_VALUE })
+  public Equipament getClientEquipament(@PathVariable(&quot;id&quot;) final Long equipamentId) {
+    return clientService.getClientEquipament(equipamentId);
+  }
+}
+</code></pre>
+
+<ul>
+<li>Configuració de Spring que habilitarà el patró <em>Circuit Breaker</em> dins de l&rsquo;aplicació (<code>EquipamentClientConfig.java</code>):</li>
+</ul>
+
+<pre><code class="language-java">package cat.gencat.circuitbreakerconsumer.config.client;
+
+...
+
+@Configuration
+public class EquipamentClientConfig {
+  @Bean(name = &quot;restTemplate&quot;)
+  public RestTemplate getRestTemplate() {
+    return new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
+  }
+}
+</code></pre>
+
+<h2 id="proves">Proves</h2>
+
+<p>Per a verificar el funcionament s&rsquo;iniciaran les dues aplicacions utilitzant ports diferents.
+En aquest cas s&rsquo;utilitzarà el port 8090 (on es troba el servei REST extern) i el port 8095 (on s&rsquo;aplica el patró <em>Circuit Breaker</em>):</p>
+
+<pre><code class="language-sh">cd CircuitBreakerClient/
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8090
+</code></pre>
+
+<pre><code class="language-sh">cd CircuitBreakerServer/
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8095 -Dspring-boot.run.fork=false
+</code></pre>
+
+<p><br/>
+<strong>Prova amb el circuit tancat</strong></p>
+
+<p>Utilitzant l’eina <em>Postman</em> s&rsquo;invoca el Servei Rest Consumidor <a href="http://localhost:8095/equipaments/externs/10">http://localhost:8095/equipaments/externs/10</a> i,
+com es pot veure, respon de la mateixa manera que el Servei Rest Proveïdor <a href="http://localhost:8090/equipaments/10:">http://localhost:8090/equipaments/10:</a></p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_example1.gif" alt="Spring circuit Ejemplo 1" /></p>
+
+<p><br/>
+<strong>Prova amb el circuit obert</strong></p>
+
+<p>Si es para l&rsquo;aplicació del Servei Rest Consumidor i s&rsquo;invoca el Servei Rest Proveïdor, es pot comprovar que es
+desvia per a invocar el mètode de recuperació sense generar errors:</p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_example2.gif" alt="Spring circuit Ejemplo 2" /></p>
+
+<p><br/>
+<strong>Monitorització</strong></p>
+
+<p>És possible obtenir mètriques de l&rsquo;execució del patró utilitzant diferents eines com, per exemple, el tauler
+bàsic de &lsquo;netflix-hystrix-dashboard&rsquo; o <a href="https://github.com/prometheus/prometheus">Prometheus</a>/
+<a href="https://github.com/grafana/grafana">Grafana</a>.</p>
+
+<p><br/>
+<strong>Mètriques amb &lsquo;netflix-hystrix-dashboard&rsquo;</strong> (<a href="http://localhost:8095/hystrix):">http://localhost:8095/hystrix):</a></p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_example3.gif" alt="Spring circuit Ejemplo 3" /></p>
+
+<p><br/>
+<strong>Mètriques amb Prometheus</strong> (<a href="http://localhost:9090/):">http://localhost:9090/):</a></p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_example4.gif" alt="Spring circuit Ejemplo 4" /></p>
+
+<p><br/>
+<strong>Mètriques amb Grafana</strong> (<a href="http://localhost:3000/):">http://localhost:3000/):</a></p>
+
+<p><img src="/images/howtos/2021-01-02_spring_circuit_example5.gif" alt="Spring circuit Ejemplo 5" /></p>
+
+<h2 id="conclusió">Conclusió</h2>
+
+<p>És possible aplicar patrons de disseny de software sobre projectes generats amb Canigó que incorporen la
+tolerància a fallades. Un d&rsquo;aquests patrons és <em>Circuit Breaker</em> i es pot implementar utilitzant projectes
+com <a href="https://github.com/Netflix/Hystrix">Spring Cloud Netflix Hystrix</a> o
+<a href="https://github.com/resilience4j/resilience4j">Resilience4j</a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

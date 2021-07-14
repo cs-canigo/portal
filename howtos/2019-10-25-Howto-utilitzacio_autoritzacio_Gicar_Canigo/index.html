@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó\" />");
+		document.write("<meta name=\"description\" content=\"Howto per a configurar una aplicació Canigó per a utilitzar l\x27autorització via Gicar, a més de la autenticació\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 24-12-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>A les últimes novetats de Gicar s’incorpora la possibilitat de disposar d&rsquo;un sistema d&rsquo;autorització a més de l&rsquo;autenticació.
+Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de configurar i utilitzar aquesta utilitat a una aplicació Canigó.</p>
+
+<h2 id="capçaleres-http">Capçaleres HTTP</h2>
+
+<p>Hi ha dos tipus d&rsquo;autenticació i d&rsquo;autorització en els serveis d&rsquo;una aplicació Canigó: amb o sense JWT. En aquest how-to ens centrarem en l&rsquo;opció d&rsquo;autenticació i d&rsquo;autorització amb JWT. Per a més informació sobre l’opció sense JWT podeu consultar el <a href="/canigo-documentacio-versions-3x-core/modul-seguretat/">Mòdul de Seguretat</a>.</p>
+
+<p>Gicar, per l&rsquo;autenticació, proporciona les capçaleres HTTP:</p>
+
+<ul>
+<li>HTTP_GICAR</li>
+<li>HTTP_GICAR_ID</li>
+<li>HTTP_GICAR_CERT</li>
+<li>HTTP_GICAR_PSIS</li>
+</ul>
+
+<p>Per l&rsquo;autorització, proporciona les capçaleres HTTP:</p>
+
+<ul>
+<li>HTTP_GICAR_MEMBERL</li>
+</ul>
+
+<p>Un exemple de capçalera seria:</p>
+
+<pre><code>HTTP_GICAR_MEMBERL --&gt; VPN_PRE-GICARDC;VPN_GENERIC-GICARDC;GESNUS_N3_Escriptura;VPN_GENERIC
+</code></pre>
+
+<p>A la versió 2.2.x del Mòdul de Seguretat de Canigó s&rsquo;utilitzen aquestes capçaleres per a construir la informació de l&rsquo;usuari i els seus rols i així poder ser utilitzats en una aplicació Canigó.</p>
+
+<h2 id="mòdul-de-seguretat">Mòdul de seguretat</h2>
+
+<p>Per tal d’instal·lar el mòdul de seguretat en una aplicació Canigó es pot optar per incorporar automàticament el mòdul mitjançant el plugin de Canigó de l’Eclipse, o bé afegir manualment la següent dependència en el pom.xml de l’aplicació:</p>
+
+<pre><code>&lt;canigo.security.version&gt;[2.0.0,2.3.0)&lt;/canigo.security.version&gt;
+&lt;dependency&gt;
+      &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+      &lt;artifactId&gt;canigo.security&lt;/artifactId&gt;
+      &lt;version&gt;${canigo.security.version}&lt;/version&gt;
+      &lt;exclusions&gt;
+        &lt;exclusion&gt;
+          &lt;artifactId&gt;spring-security-taglibs&lt;/artifactId&gt;
+          &lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
+        &lt;/exclusion&gt;
+      &lt;/exclusions&gt;
+    &lt;/dependency&gt;
+</code></pre>
+
+<h2 id="configuració-per-a-utilitzar-l-autorització-i-l-autenticació-via-gicar">Configuració per a utilitzar l&rsquo;autorització i l&rsquo;autenticació via Gicar</h2>
+
+<p>A la versió 1.7.6 del plugin de Canigó per l&rsquo;Eclipse ja s’incorpora la nova opció d&rsquo;autenticació i d&rsquo;autorització Gicar quan s&rsquo;afegeix el mòdul de seguretat en una aplicació Canigó. Podeu veure les opcions disponibles a:
+<a href="/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6">Actualització plugin eclipse 1.7.6</a></p>
+
+<p>En cas d&rsquo;optar per fer-ho manualment, serà necessari crear els següents fitxers:</p>
+
+<ul>
+<li><strong>WebSecurityConfig.java</strong></li>
+<li><strong>security.properties</strong></li>
+</ul>
+
+<h3 id="websecurityconfig-java">WebSecurityConfig.java</h3>
+
+<p>Aquest fitxer ha d&rsquo;estar ubicat al package “config” del projecte, al mateix nivell que “AppConfig.java”, i ha de tenir el següent contingut:</p>
+
+<pre><code>import javax.inject.Named;
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Primary;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.access.AccessDeniedHandler;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
+
+import cat.gencat.ctti.canigo.arch.core.config.PropertiesConfiguration;
+import cat.gencat.ctti.canigo.arch.security.provider.gicar.GICARWithMemberUserDetailsServiceImpl;
+import cat.gencat.ctti.canigo.arch.security.provider.siteminder.SiteminderAuthenticationProvider;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtAuthenticationFilter;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.jwt.JwtTokenHandler;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.AuthenticationService;
+import cat.gencat.ctti.canigo.arch.security.rest.authentication.service.impl.JwtGicarWithMemberAuthenticationService;
+
+@Configuration
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	@Lazy
+	private AuthenticationEntryPoint restAuthenticationEntryPoint;
+
+	@Autowired
+	private PropertiesConfiguration propertiesConfiguration;
+
+	@Autowired
+	@Lazy
+	private AuthenticationManager authenticationManager;
+
+	@Autowired
+	@Lazy
+	private AuthenticationSuccessHandler restAuthenticationSuccessHandler;
+
+	@Autowired
+	@Lazy
+	private AuthenticationFailureHandler restAuthenticationFailureHandler;
+
+	@Autowired
+	@Lazy
+	private AccessDeniedHandler restAccessDeniedHandler;
+
+	@Autowired
+	@Lazy
+	private DataSource dataSource;
+
+	@Override
+	protected void configure(final HttpSecurity http) throws Exception {
+
+		http.authorizeRequests()
+		.antMatchers(&quot;/api/auth&quot;).permitAll()
+		.antMatchers(&quot;/images/*/**&quot;, &quot;/css/*/**&quot;, &quot;/js/*/**&quot;, &quot;/fonts/*/**&quot;).permitAll()
+		.antMatchers(&quot;/api/info/**&quot;, &quot;/api/logs/**&quot;).hasRole(&quot;ADMIN&quot;)
+		.antMatchers(&quot;/api/equipaments/**&quot;).hasRole(&quot;USER&quot;);
+
+		http.exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint);
+		http.exceptionHandling().accessDeniedHandler(restAccessDeniedHandler);
+		http.csrf().disable();
+
+		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		http.addFilterBefore(jwtAuthenticationFilter(), AbstractPreAuthenticatedProcessingFilter.class);
+	}
+
+	@Bean
+	public AuthenticationProvider authenticationProvider() {
+		final SiteminderAuthenticationProvider siteminderAuthenticationProvider = new SiteminderAuthenticationProvider();
+		siteminderAuthenticationProvider.setUserDetailsService(gicarUserDetailsService());
+		return siteminderAuthenticationProvider;
+	}
+
+	@Bean
+	@Primary
+	public UserDetailsService gicarUserDetailsService() {
+		final GICARWithMemberUserDetailsServiceImpl gicarWithMemberUserDetailsServiceImpl = new GICARWithMemberUserDetailsServiceImpl();
+		gicarWithMemberUserDetailsServiceImpl.setHttpGicarHeaderUsernameKey(getHttpGicarHeaderUsernameKey());
+		return gicarWithMemberUserDetailsServiceImpl;
+	}
+
+	@Override
+    @Autowired
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(authenticationProvider());
+    }
+
+    @Bean
+    @Autowired
+    public AuthenticationManager authenticationManager(final AuthenticationManagerBuilder auth) {
+        return auth.getOrBuild();
+    }
+
+	private String getHttpGicarHeaderUsernameKey() {
+		final String gicarHeader = propertiesConfiguration.getProperty(&quot;security.gicar.httpGicarHeaderUsernameKey&quot;);
+		return gicarHeader != null ? gicarHeader : &quot;NIF&quot;;
+	}
+
+	@Bean
+	@Named(&quot;jwtAuthenticationService&quot;)
+	public AuthenticationService jwtAuthenticationService() {
+		final JwtGicarWithMemberAuthenticationService jwtGicarWithMemberAuthenticationService = new JwtGicarWithMemberAuthenticationService();
+		jwtGicarWithMemberAuthenticationService.setSiteminderAuthentication(isSiteminderAuthentication());
+		jwtGicarWithMemberAuthenticationService.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		jwtGicarWithMemberAuthenticationService.setHeaderAuthName(getHeaderAuthName());
+
+		return jwtGicarWithMemberAuthenticationService;
+	}
+
+	@Bean
+	@Named(&quot;jwtAuthenticationFilter&quot;)
+	public JwtAuthenticationFilter jwtAuthenticationFilter() {
+		final JwtAuthenticationFilter jwtAuthenticationFilter = new JwtAuthenticationFilter();
+		jwtAuthenticationFilter.setHeaderAuthName(getHeaderAuthName());
+		jwtAuthenticationFilter.setStartToken(getStartToken());
+		jwtAuthenticationFilter.setTokenResponseHeaderName(getTokenResponseHeaderName());
+		return jwtAuthenticationFilter;
+	}
+
+	@Bean
+	@Named(&quot;jwtTokenHandler&quot;)
+	public JwtTokenHandler jwtTokenHandler() {
+		final JwtTokenHandler JwtTokenHandler = new JwtTokenHandler();
+		JwtTokenHandler.setExpiration(getExpiration());
+		JwtTokenHandler.setSecret(getSecret());
+		return JwtTokenHandler;
+	}
+
+	private String getSecret() {
+		final String secret = propertiesConfiguration.getProperty(&quot;jwt.secret&quot;);
+		return secret != null ? secret : &quot;canigo&quot;;
+	}
+
+	private Long getExpiration() {
+		final Long expiration = new Long(propertiesConfiguration.getProperty(&quot;jwt.expiration&quot;));
+		return expiration != null ? expiration : 3600L;
+	}
+
+	private String getStartToken() {
+	final String startToken = propertiesConfiguration.getProperty(&quot;jwt.header.startToken&quot;);
+		return startToken != null ? startToken : &quot;Bearer&quot;;
+	}
+
+	private String getHeaderAuthName() {
+		final String headerAythName = propertiesConfiguration.getProperty(&quot;jwt.header&quot;);
+		return headerAythName != null ? headerAythName : &quot;Authentication&quot;;
+	}
+
+	private String getTokenResponseHeaderName() {
+		final String tokenResponseHeaderName = propertiesConfiguration.getProperty(&quot;jwt.tokenResponseHeaderName&quot;);
+		return tokenResponseHeaderName != null ? tokenResponseHeaderName : &quot;jwtToken&quot;;
+	}
+
+	private boolean isSiteminderAuthentication() {
+		final Boolean siteminder = new Boolean(propertiesConfiguration.getProperty(&quot;jwt.siteminderAuthentication&quot;));
+		return siteminder != null ? siteminder : false;
+	}
+
+}
+</code></pre>
+
+<p>On es defineix, com a punts més rellevants:</p>
+
+<ul>
+<li><p>Que totes les peticions &ldquo;/api/auth&rdquo; són acceptades. Aquest és el servei que utilitzarà Gicar per informar-nos de les capçaleres HTTP.</p></li>
+
+<li><p>Que com a UserDetailsService s’utilitzarà GICARWithMemberUserDetailsServiceImpl.</p></li>
+
+<li><p>Que com a AuthenticationService s’utilitzarà JwtGicarWithMemberAuthenticationService.</p></li>
+</ul>
+
+<h3 id="security-properties">security.properties</h3>
+
+<p>Aquest fitxer ha d&rsquo;estar ubicat a &ldquo;/src/main/resources/config/props&rdquo; i ha d&rsquo;incloure la següent definició de propietats per defecte:</p>
+
+<pre><code>###########################################################
+#
+# Arxiu de configuració del mòdul de seguretat
+# ---------------------------------------------------------
+#
+#	Propietats de mòdul multientorn:
+#
+#		Format de la propietat:  ENTORN.MÒDUL.PROPIETAT
+#			El concepte ENTORN és el valor de la propietat d’arrencada de la màquina virtual Java informada al
+#			servidor d'aplicacions.
+#		Exemples de configuració:
+#
+#			*.security.database.jndiName	-&gt;  Propietat vàlida per a tots els entorns, sempre que no s'informi una propietat més especifica per al entorn en el qual s'executa l'aplicació.
+#			dev.security.database.jndiName  -&gt;  Propietat vàlida només a desenvolupament.
+#			test.security.database.jndiName -&gt;  Propietat vàlida només a test.
+#
+#
+#
+#
+#
+#	Propietat					Requerit	Descripció
+#	---------------------------------------------------------------------------------
+#	security.database.jndiName	 		Si	 	Nom JNDI d'accés a la BD
+#	security.database.driverClassName		Si		Driver per connexió amb JDBC
+#	security.database.url	 			Si	 	URL de connexió a la base de dades.
+#	security.database.username			Si	 	Usuari de connexió a la base de dades
+#	security.database.password			Si	 	Password de connexió a la base de dades
+#	security.gicar.httpGicarHeaderUsernameKey	No		Clau capçelera GICAR
+#	security.sace.userNameFormat			No		Format del camp userName. Per defecte: NIF. Valors possibles: NIF, INTERNAL_CODE
+#	security.sace.authoritiesbyUserNameQuery	No    		Aquesta propietat permet especificar la query SQL per a recollir els rols dels usuaris
+#	security.sace.keyStore				Si		Localització de la keystore
+#	security.sace.keyStorePassPhrase		Si		Password de la keystore
+#	security.sace.url				Si		URL del servei de SACE
+#
+#
+#########################################################################################################################################################################
+# GICAR configuration
+#*.security.gicar.httpGicarHeaderUsernameKey=NIF
+# JWT Configuration
+*.jwt.header = Authentication
+*.jwt.header.startToken = Bearer
+*.jwt.tokenResponseHeaderName = jwtToken
+*.jwt.secret = canigo
+*.jwt.expiration = 3600
+*.jwt.siteminderAuthentication = true
+</code></pre>
+
+<p>Amb aquesta configuració, s&rsquo;aconsegueix disposar d’una aplicació Canigó 3.4.x amb autenticació i autorització via Gicar.</p>
+
+<h2 id="informació-addicional">Informació addicional</h2>
+
+<p>Podeu trobar més informació als següents enllaços:</p>
+
+<ul>
+<li><p><a href="/canigo-documentacio-versions-3x-core/modul-seguretat/">Mòdul de Seguretat de Canigó</a></p></li>
+
+<li><p><a href="/canigo-download-related/plugin-canigo/">Plugin Canigó per a Eclipse</a></p></li>
+
+<li><p><a href="/gicar-saml2/auth-saml2-grups2/">Control d&rsquo;accés als recursos via GICAR</a></p></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

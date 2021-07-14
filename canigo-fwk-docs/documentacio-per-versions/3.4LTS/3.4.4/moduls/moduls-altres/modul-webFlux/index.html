@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>WebFlux</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"WebFlux\" />");
+		document.write("<meta name=\"description\" content=\"Com configurar aplicació Canigó 3.4 per utilitzar WebFlux\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/'>3.4.4</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/'>moduls</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-altres/'>moduls altres</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-altres/modul-webFlux/'>modul webFlux</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	WebFlux
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 20-03-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>El propòsit d’aquest apartat és introduïr al desenvolupador la programació amb WebFlux</p>
+
+<h2 id="versió-de-canigó">Versió de Canigó</h2>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó</p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p>El mes de Març del 2019 s&rsquo;ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d&rsquo;utilitzar les funcionalitats de WebFlux</p>
+
+<p>Per a passar una aplicació 3.2 a 3.4 hi ha disponible la següent guia <a href="/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4">&ldquo;Actualització Canigó 3.2 a Canigó 3.4&rdquo;</a></p>
+
+<p>L&rsquo;objectiu d&rsquo;aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d&rsquo;aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.</p>
+
+<h3 id="introducció-webflux">Introducció WebFlux</h3>
+
+<p>La programació funcional va néixer per poder proporcionar un desenvolupament orientat a l&rsquo;aplicació de funcions declarades</p>
+
+<p>Spring WebFlux proporciona endpoints web de forma funcional a més dels controlladors tradicionals, proporcionant un lleuger model de programació funcional on les funcions són utilitzades per enrutar i capturar peticions a més de la tradicional programació imperativa</p>
+
+<p>A la següent imatge es pot observar la comparativa de funcionalitats entre Spring MVC i Spring WebFlux</p>
+
+<p><img src="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/images/spring-mvc-and-webflux-venn.png" alt="Spring MVC Webflux Venn" /></p>
+
+<p>Per a poder utilitzar WebFlux és necessari utilitzar un contenidor d&rsquo;aplicacions que suporti Servlet 3.1+</p>
+
+<p>Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+</p>
+
+<p>El quadre següent mostra les funcionalitats que utilitza WebFlux dels servidors d&rsquo;aplicacions:</p>
+
+<table>
+<thead>
+<tr>
+<th>Servidor</th>
+<th>Api utilitzada</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Netty</td>
+<td>Netty API</td>
+</tr>
+
+<tr>
+<td>Undertow</td>
+<td>Undertow API</td>
+</tr>
+
+<tr>
+<td>Tomcat</td>
+<td>Servlet 3.1 non-blocking I/O; Tomcat API per escriure i llegir ByteBuffers vs byte[]</td>
+</tr>
+
+<tr>
+<td>Jetty</td>
+<td>Servlet 3.1 non-blocking I/O; Jetty API per escriure ByteBuffers vs byte[]</td>
+</tr>
+
+<tr>
+<td>Contenidor amb suport Servlet 3.1+</td>
+<td>Servlet 3.1 non-blocking I/O</td>
+</tr>
+</tbody>
+</table>
+
+<p>Per a més informació sobre programació funcional amb Spring 5 podeu consultar:
+<a href="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn">https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn</a></p>
+
+<h3 id="spring-mvc-o-webflux">Spring MVC o WebFlux</h3>
+
+<p>Els següents punts són un resum dels punts que s&rsquo;han de tenir en compte a l&rsquo;hora de decidir-se per utilitzar Spring MVC o WebFlux en una aplicació:</p>
+
+<ul>
+<li><p>Si l&rsquo;aplicació amb Spring MVC funciona correctament, no hi ha necessitat de canvi</p></li>
+
+<li><p>Si necessites un web stack amb non-blocking, Spring WebFlux et proporcionarà el màxim de funcionalitats reactives</p></li>
+
+<li><p>Si necessites una aplicació el més lleugera possible, amb programació web funcional i utilització de lambdas de Java 8, Spring WebFlux et proporcionarà endpoint web funcionals</p></li>
+
+<li><p>Si l&rsquo;aplicació utilitza apis de persistència bloquejants (JPA, JDBC) o apis externes bloquejants, Spring MVC és la millor solució</p></li>
+
+<li><p>Encara que la teva aplicació hagi de ser amb Spring MVC, els controlladors de Spring MVC poden cridar a altres components reactius com serveis remots o repositoris de dades no bloquejants</p></li>
+</ul>
+
+<p>Si teniu dubtes a l&rsquo;hora de decidir-vos utilitzar Spring MVC o WebFlux, no dubteu en posar-vos en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un mail a la bústia del CS Canigó</p>
+
+<h3 id="introducció-cas-d-exemple">Introducció cas d&rsquo;exemple</h3>
+
+<p>Per il·lustrar aquesta guia utilitzarem un repositori de dades on hi contindrà missatges homòlegs a un tweet, on tindrà un id, un text i una data de creació</p>
+
+<p>Pel repositori de dades utilitzarem una base de dades Mongodb</p>
+
+<p>En l&rsquo;exemple exposarem un CRUD de serveis rest sobre l&rsquo;entitat tweet i exposarem 2 serveis rest de tipus stream utilitzant controllers per l&rsquo;exposició dels serveis en el path &ldquo;/tweets&rdquo;</p>
+
+<p>Per mostrar la forma de programació web funcional exposarem 2 dels serveis del CRUD anterior (obtenir tots els tweets i obtenir un tweet pel seu id ) mitjançant la definició de l&rsquo;enrutament directament a les &ldquo;RouterFuntions&rdquo; en el path &ldquo;/route-flux/tweets&rdquo; i exposarem aquests mateixos serveis mitjançant &ldquo;Handlers&rdquo; en l&rsquo;enrutament de les &ldquo;RouterFuntions&rdquo; en el path &ldquo;/handler-flux/tweets&rdquo;</p>
+
+<h2 id="exemple">Exemple</h2>
+
+<p>Per l&rsquo;exemple utilitzarem una base de dades Mongodb en local al port 27017 amb una base de dades amb nom &ldquo;canigo_persistence_mongo&rdquo;</p>
+
+<p>Començarem incorporant el starter de Spring Boot per WebFlux</p>
+
+<pre><code class="language-xml">		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-webflux&lt;/artifactId&gt;
+			&lt;exclusions&gt;
+				&lt;exclusion&gt;
+					&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+					&lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+				&lt;/exclusion&gt;
+			&lt;/exclusions&gt;
+		&lt;/dependency&gt;
+</code></pre>
+
+<p>Enlloc de:</p>
+
+<pre><code class="language-xml">		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+			&lt;exclusions&gt;
+				&lt;exclusion&gt;
+					&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+					&lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+				&lt;/exclusion&gt;
+			&lt;/exclusions&gt;
+		&lt;/dependency&gt;
+</code></pre>
+
+<p>Actualment els mòduls &ldquo;canigo.web.core&rdquo;, &ldquo;canigo.web.rs&rdquo; i &ldquo;canigo.operation.logging&rdquo; estan desenvolupats sobre Spring MVC. WebFlux i Spring MVC son dos desenvolupaments separts, per tant, necessitarem eliminar les dependències a aquests mòduls</p>
+
+<p>Afegirem les dependències de Mongodb</p>
+
+<pre><code class="language-xml">		&lt;dependency&gt;
+			&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+			&lt;artifactId&gt;canigo.persistence.mongodb&lt;/artifactId&gt;
+			&lt;version&gt;${canigo.persistence.mongodb.version}&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+			&lt;artifactId&gt;spring-boot-starter-data-mongodb-reactive&lt;/artifactId&gt;
+			&lt;exclusions&gt;
+				&lt;exclusion&gt;
+					&lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+					&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+				&lt;/exclusion&gt;
+			&lt;/exclusions&gt;
+</code></pre>
+
+<p>En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot</p>
+
+<p>Per a més informació sobre utilització de mongo reactiu podeu consular la guia d&rsquo;<a href="/canigo-documentacio-versions-3x-altres/modul-mongodb-reactiu">Utilització de mongo db reactiu</a></p>
+
+<p>Afegirem la propietat per la connexió a Mongodb</p>
+
+<pre><code class="language-properties">*.mongodb.uri=mongodb://127.0.0.1:27017/canigo_persistence_mongo?socketTimeoutMS=5000
+</code></pre>
+
+<p>Necessitem crear un configurador que extengui de <em>cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig</em> que crearà la connexió a la base de dades Mongodb a partir del String de connexió, un exemple de configurador podria ser:</p>
+
+<pre><code class="language-java">import org.springframework.context.annotation.Configuration;
+
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig;
+
+@Configuration
+public class ReactiveMongoConfig extends ReactiveMongoCoreConfig {
+
+
+}
+</code></pre>
+
+<p>Crearem el repository de l&rsquo;entitat Tweet, utilitzarem les funcionalitats que aporta Spring per a repositoris reactius amb Mongo amb ReactiveMongoRepository</p>
+
+<pre><code class="language-java">import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.data.mongodb.repository.Tailable;
+import org.springframework.stereotype.Repository;
+
+import cat.gencat.ctti.model.Tweet;
+import reactor.core.publisher.Flux;
+
+@Repository
+public interface TweetRepository extends ReactiveMongoRepository&lt;Tweet, String&gt; {
+	
+	@Tailable
+	Flux&lt;Tweet&gt; findTweetsBy();
+
+}
+</code></pre>
+
+<p>Hem definit un mètode de consulta de tweets de tipus &ldquo;Tailable&rdquo; per mantenir la connectivitat esperant a nous tweets</p>
+
+<p>Per a utilitzar aquest mètode la collection de Mongo ha de ser de tipus capped. Si la collection és de tipus capped no es pot utilitzar la funcionalitat d&rsquo;eliminació d&rsquo;elements. Si s&rsquo;utilitza tailable a una collection no capped o s&rsquo;eliminen elements a una collection capped s&rsquo;obtindrà un error. Per tenir un exemple complet exposarem un servei utilitzant tailable i un servei d&rsquo;eliminació d&rsquo;elements però en un cas real no podrien conviure a la mateixa collection</p>
+
+<p>Per simplificar l&rsquo;exemple utilitzarem directament el repositori al controller, recomanem, però, utilitzar la capa service entre els controllers i els repositoris</p>
+
+<pre><code class="language-java">import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@RestController
+@RequestMapping(&quot;/tweets&quot;)
+public class TweetController {
+
+    @Autowired
+    private TweetRepository tweetRepository;
+
+    @GetMapping
+    public Flux&lt;Tweet&gt; getAllTweets() {
+        return tweetRepository.findAll();
+    }
+
+    @PostMapping
+    public Mono&lt;Tweet&gt; createTweets(@Valid @RequestBody Tweet tweet) {
+        return tweetRepository.save(tweet);
+    }
+
+    @GetMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Tweet&gt;&gt; getTweetById(@PathVariable(value = &quot;id&quot;) String tweetId) {
+        return tweetRepository.findById(tweetId)
+                .map(savedTweet -&gt; ResponseEntity.ok(savedTweet))
+                .defaultIfEmpty(ResponseEntity.notFound().build());
+    }
+
+    @PutMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Tweet&gt;&gt; updateTweet(@PathVariable(value = &quot;id&quot;) String tweetId,
+                                                   @Valid @RequestBody Tweet tweet) {
+        return tweetRepository.findById(tweetId)
+                .flatMap(existingTweet -&gt; {
+                    existingTweet.setText(tweet.getText());
+                    return tweetRepository.save(existingTweet);
+                })
+                .map(updateTweet -&gt; new ResponseEntity&lt;&gt;(updateTweet, HttpStatus.OK))
+                .defaultIfEmpty(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));
+    }
+
+    @DeleteMapping(&quot;/{id}&quot;)
+    public Mono&lt;ResponseEntity&lt;Void&gt;&gt; deleteTweet(@PathVariable(value = &quot;id&quot;) String tweetId) {
+
+        return tweetRepository.findById(tweetId)
+                .flatMap(existingTweet -&gt;
+                        tweetRepository.delete(existingTweet)
+                            .then(Mono.just(new ResponseEntity&lt;Void&gt;(HttpStatus.OK)))
+                )
+                .defaultIfEmpty(new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND));
+    }
+
+    // Tweets are Sent to the client as Server Sent Events
+    @GetMapping(value = &quot;/event-stream&quot;, produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+    public Flux&lt;Tweet&gt; eventStreamTweets() {
+        return tweetRepository.findTweetsBy();
+    }
+    
+    // Tweets are Sent to the client as stream json
+    @GetMapping(path = &quot;/stream-json&quot;, produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    public Flux&lt;Tweet&gt; streamJsonTweets() {
+        return tweetRepository.findTweetsBy();
+    }
+
+}
+</code></pre>
+
+<p>En aquest controller exposem un CRUD de serveis rest sobre el path &ldquo;/tweets&rdquo; i dos serveis en stream: &ldquo;/tweets/event-stream&rdquo; per enviar tweets produint &ldquo;text/event-stream&rdquo; i &ldquo;/tweets/stream-json&rdquo; per enviar tweets produint &ldquo;application/stream+json&rdquo; per simular un efecte de tipus timeline</p>
+
+<h3 id="exposició-serveis-mitjançant-definició-de-l-enrutament-a-les-routerfuntions">Exposició serveis mitjançant definició de l&rsquo;enrutament a les &ldquo;RouterFuntions&rdquo;</h3>
+
+<p>Per a la definició els serveis amb programacio web funcional necessitem definit les &ldquo;RouterFunctions&rdquo;, en aquest cas definirem les &ldquo;RouterFunctions&rdquo; directament a la seva definició</p>
+
+<p>Per això definirem un &ldquo;Configuration&rdquo; amb la definició dels dos serveis web, un exemple seria:</p>
+
+<pre><code class="language-java">import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.server.RequestPredicates;
+import org.springframework.web.reactive.function.server.RouterFunction;
+import org.springframework.web.reactive.function.server.RouterFunctions;
+import org.springframework.web.reactive.function.server.ServerResponse;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+
+@Configuration
+public class TweetRouteRouterFuntionConfig {
+
+	@Bean
+	RouterFunction&lt;ServerResponse&gt; routeFluxRouterFunction(TweetRepository tweetRepository) {
+		return RouterFunctions
+				.route(RequestPredicates.GET(&quot;/route-flux/tweets&quot;),
+						serverRequest -&gt; ServerResponse.ok().body(tweetRepository.findAll(), Tweet.class))
+				.andRoute(RequestPredicates.GET(&quot;/route-flux/tweets/{id}&quot;), serverRequest -&gt; ServerResponse.ok()
+						.body(tweetRepository.findById(serverRequest.pathVariable(&quot;id&quot;)), Tweet.class));
+	}
+	
+}
+</code></pre>
+
+<p>On s&rsquo;utilitza les &ldquo;FunctionalInterface&rdquo; i lambdas de Java per determinar quin mètode del repositori s&rsquo;utilitza per cada una de les rutes definides</p>
+
+<h3 id="exposició-serveis-mitjançant-handlers-en-l-enrutament-de-les-routerfuntions">Exposició serveis mitjançant &ldquo;Handlers&rdquo; en l&rsquo;enrutament de les &ldquo;RouterFuntions&rdquo;</h3>
+
+<p>En aquest cas utilitzarem &ldquo;Handlers&rdquo; en l&rsquo;enrutament de les &ldquo;RouterFunctions&rdquo;, per separar l&rsquo;enrutament de la lògica de dins de l&rsquo;enrutament</p>
+
+<p>Per això definirem un &ldquo;Configuration&rdquo; amb la definició dels dos serveis web, un exemple seria:</p>
+
+<pre><code class="language-java">import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.server.RequestPredicates;
+import org.springframework.web.reactive.function.server.RouterFunction;
+import org.springframework.web.reactive.function.server.RouterFunctions;
+import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+import reactor.core.publisher.Mono;
+
+@Configuration
+public class TweetHandlerRouterFuntionConfig {
+
+	@Bean
+	RouterFunction&lt;ServerResponse&gt; handlerFluxRouterFunction(TweetHandler tweetHandler) {
+		return RouterFunctions
+				.route(RequestPredicates.GET(&quot;/handler-flux/tweets&quot;), tweetHandler::getAllTweets)
+				.andRoute(RequestPredicates.GET(&quot;/handler-flux/tweets/{id}&quot;), tweetHandler::getTweetById);
+	}
+
+}
+
+@Component
+class TweetHandler {
+
+	@Autowired
+	private TweetRepository tweetRepository;
+
+	public Mono&lt;ServerResponse&gt; getAllTweets(ServerRequest serverRequest) {
+		return ServerResponse.ok().body(tweetRepository.findAll(), Tweet.class);
+	}
+
+	public Mono&lt;ServerResponse&gt; getTweetById(ServerRequest serverRequest) {
+		return ServerResponse.ok().body(tweetRepository.findById(serverRequest.pathVariable(&quot;id&quot;)), Tweet.class);
+	}
+
+}
+</code></pre>
+
+<p>On s&rsquo;utilitza les &ldquo;FunctionalInterface&rdquo; de Java per determinar quin mètode s&rsquo;utilitza de la classe &ldquo;Handler&rdquo; intern &ldquo;TweetHandler&rdquo;</p>
+
+<h2 id="test-serveis-rest">Test serveis rest</h2>
+
+<p>Si provem els serveis web:
+<br>
+- /tweets
+<br>
+- /route-flux/tweets
+<br>
+- /handler-flux/tweets</p>
+
+<p>Per exemple, per provar el servei &ldquo;/tweets&rdquo;:</p>
+
+<pre><code>curl -X POST \
+  http://localhost:8080/tweets \
+  -H 'Content-Type: application/json' \
+  -d '{&quot;text&quot;:&quot;Hello, World!&quot;}'
+</code></pre>
+
+<p>i els serveis web:
+<br>
+- /tweets/{id}
+<br>
+- /route-flux/tweets/{id}
+<br>
+- /handler-flux/tweets/{id}</p>
+
+<p>Per exemple, per provar el servei &ldquo;/tweets/{id}&rdquo;:</p>
+
+<pre><code>curl -X GET \
+  http://localhost:8080/tweets/99 
+</code></pre>
+
+<p>Podrem observar que retornen la mateixa informació</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

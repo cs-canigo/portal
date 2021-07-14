@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <table width="100%" bgcolor="#eeeeee" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding: 8px 20px;">
+          <h2 style="font-family:Open Sans, sans-serif; color: #333; font-size: 25px; font-weight: 600;">Notícies</h2>
+        </td>
+      </tr>
+      {{ range where .Data.Pages.ByDate "Type" "Noticies" }}
+        {{ partial "noticia.html" . }}
+      {{ end }}
+    </table>
+  </td>
+</tr>

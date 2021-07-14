@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4\" />");
+		document.write("<meta name=\"description\" content=\"How to per a implementar tests unitaris amb Webflux a aplicacions Canigó 3.4\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 24-12-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest how-to va dirigit a tots aquells perfils tècnics que tinguin la necessitat de crear tests unitaris a serveis desenvolupats amb WebFlux, funcionalitat proporcionada a partir de la versió 3.4.0 de Canigó.</p>
+
+<h3 id="introducció">Introducció</h3>
+
+<p>Amb la publicació de Canigó 3.4.0 es proporciona suport a Spring 5, incorporant les funcionalitats de WebFlux. Spring WebFlux proporciona endpoints web de forma funcional, on les funcions són utilitzades per enrutar i capturar peticions.
+Teniu disponible la documentació de WebFlux de Canigó 3.4 a <a href="/canigo-documentacio-versions-3x-altres/modul-webFlux/">modul-webFlux</a> i, per a més informació sobre programació funcional amb Spring 5, podeu consultar: <a href="https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn">https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn</a>.</p>
+
+<p>Per a realitzar el <strong>test de serveis WebFlux</strong> hi intervenen dos objectes principals:</p>
+
+<ul>
+<li><p><em>org.springframework.test.web.reactive.server.WebTestClient</em>: aquest component de Spring s&rsquo;utilitza per a simular les crides que realitzaria un client als nostres serveis web. En el cas d’aplicacions Canigó, s’utilitzarà per a simular les crides que realitzaria un client als nostres serveis REST exposats amb WebFlux.</p></li>
+
+<li><p><em>reactor.test.StepVerifier</em>: aquest component del projecte reactor s&rsquo;utilitza per a verificar els serveis exposats en reactiu. En el nostre cas l&rsquo;utilitzarem per a verificar la resposta dels serveis web REST exposats amb WebFlux.</p></li>
+</ul>
+
+<p>Per a més informació sobre com realitzar test amb programació reactiva podeu consultar <a href="/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/">Test unitaris amb programació reactiva a Canigó 3.4</a>.
+En aquest article utilitzarem els serveis exposats amb WebFlux seguint la guia <a href="/canigo-documentacio-versions-3x-altres/modul-webFlux/">modul-webFlux</a>.</p>
+
+<h3 id="cas-d-exemple">Cas d’exemple</h3>
+
+<p>El cas d&rsquo;exemple consta d&rsquo;un repositori de dades que contindrà missatges homòlegs a un tweet on hi haurà un <strong>identificador, un text i una data de creació</strong>. Per aquest repositori de dades s’utilitzarà una base de dades Mongodb <em>cat.gencat.ctti.repository.TweetRepository</em>.</p>
+
+<p>En el cas d&rsquo;exemple hi consten dos serveis: obtenir tots els tweets i obtenir un tweet a partir del seu identificador. Aquests serveis són exposats amb Web flux de dues formes diferents:
+<br>
+- Mitjançant la definició de l’enrutament directament a les “RouterFuntions” en el path “/route-flux/tweets”
+<br>
+- Mitjançant “Handlers” en l’enrutament de les “RouterFuntions” en el path “/handler-flux/tweets”</p>
+
+<p>En conclusió, tenim exposats quatre serveis REST:
+<br>
+- /route-flux/tweets
+<br>
+- /handler-flux/tweets
+<br>
+- /route-flux/tweets/{id}
+<br>
+- /handler-flux/tweets/{id}</p>
+
+<h4 id="test-unitaris-serveis-webflux">Test unitaris serveis WebFlux</h4>
+
+<p>Per a realitzar el test d&rsquo;aquests quatre serveis REST tenim dues opcions:
+<br>
+- Fer crides simulant un client als nostres serveis rest exposats de forma real.
+<br>
+- Fer crides simulant un client als nostres serveis rest mockejats.</p>
+
+<h5 id="fer-crides-simulant-un-client-als-nostres-serveis-rest-exposats-de-forma-real">Fer crides simulant un client als nostres serveis REST exposats de forma real</h5>
+
+<p>Per a realitzar les crides als nostres serveis REST exposats de forma real utilitzarem les funcionalitats del component <em>org.springframework.test.web.reactive.server.WebTestClient</em>.
+Per a poder verificar que la resposta és l&rsquo;esperada, a l&rsquo;inici del test introduirem elements &ldquo;tweets&rdquo; utilitzant el repositori de tweets. D’aquesta forma podríem tenir un mètode que s&rsquo;executi a l&rsquo;inici del test de la següent manera:</p>
+
+<pre><code class="language-java">
+	@Autowired
+	TweetRepository tweetRepository;
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet(&quot;Hello, World!&quot;);
+		secondTweet = new Tweet(&quot;Second tweet&quot;);
+		helloWorldTweet = tweetRepository.save(helloWorldTweet).block();
+		secondTweet = tweetRepository.save(secondTweet).block();
+	}
+
+</code></pre>
+
+<p>Utilitzarem el mètode &ldquo;block&rdquo; per assegurar-nos que, quan s&rsquo;hagi executat el mètode &ldquo;before&rdquo;, els elements han estat introduïts al sistema. Per a comprovar els serveis REST &ldquo;all tweets&rdquo; farem una crida als serveis comprovant que la resposta és un OK (http code 200), que en el body de la resposta hi ha un llistat d&rsquo;elements de tipus &ldquo;tweet&rdquo; i que en el llistat hi consten els elements afegits al mètode &ldquo;before&rdquo;.</p>
+
+<pre><code class="language-java">
+  @Autowired
+	WebTestClient webTestClient;
+
+  ...
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/route-flux/tweets&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/handler-flux/tweets&quot;);
+	}
+
+	private void testGetAllTweets(String uri) {
+		webTestClient.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk()
+				.expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8).expectBodyList(Tweet.class)
+				.contains(helloWorldTweet, secondTweet);
+	}
+
+</code></pre>
+
+<p>Per a comprovar els serveis REST &ldquo;get tweet per identificador&rdquo; farem una crida al serveis comprovant que la resposta és un OK (http code 200), que en el <em>body</em> de la resposta hi ha un element de tipus &ldquo;tweet&rdquo; i que l&rsquo;element retornat és el &ldquo;tweet&rdquo; que hem inserit prèviament al mètode &ldquo;before&rdquo;.</p>
+
+<pre><code class="language-java">
+  @Autowired
+	WebTestClient webTestClient;
+
+  ...
+
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/route-flux/tweets/{id}&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/handler-flux/tweets/{id}&quot;);
+	}
+
+	private void testGetSingleTweet(String uri) {
+
+		webTestClient.get().uri(uri, Collections.singletonMap(&quot;id&quot;, helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).expectBody(Tweet.class).consumeWith(response -&gt; Assertions
+						.assertThat(response.getResponseBody()).isNotNull().isEqualTo(helloWorldTweet));
+	}
+
+</code></pre>
+
+<p>Cal tenir present que en aquest cas estem fent crides reals i, per tant, la instància repositori de &ldquo;tweets&rdquo; ha d&rsquo;estar inicialitzada. En el nostre cas, no estem atacant a una base de dades MongoDB real, sinó que estem utilitzant una instància &ldquo;simulada&rdquo; de MongoDB creada amb test containers.
+En aquest cas no utilitzarem el component <em>reactor.test.StepVerifier</em> per a verificar els serveis REST amb reactiu ja que, al connectar-nos als serveis en forma real, no podem garantir la seqüència de &ldquo;tweets&rdquo; de retorn.</p>
+
+<p>La classe completa de test seria doncs:</p>
+
+<pre><code class="language-java">
+package cat.gencat.ctti.endpoints;
+
+import java.util.Collections;
+
+import org.assertj.core.api.Assertions;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.reactive.server.WebTestClient;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = {
+		&quot;spring.main.allow-bean-definition-overriding=true&quot; })
+public class TweetWebFluxWebTest {
+
+	@Autowired
+	WebTestClient webTestClient;
+
+	@Autowired
+	TweetRepository tweetRepository;
+
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet(&quot;Hello, World!&quot;);
+		secondTweet = new Tweet(&quot;Second tweet&quot;);
+		helloWorldTweet = tweetRepository.save(helloWorldTweet).block();
+		secondTweet = tweetRepository.save(secondTweet).block();
+	}
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/route-flux/tweets&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/handler-flux/tweets&quot;);
+	}
+
+	private void testGetAllTweets(String uri) {
+		webTestClient.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk()
+				.expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8).expectBodyList(Tweet.class)
+				.contains(helloWorldTweet, secondTweet);
+	}
+
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/route-flux/tweets/{id}&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/handler-flux/tweets/{id}&quot;);
+	}
+
+	private void testGetSingleTweet(String uri) {
+		webTestClient.get().uri(uri, Collections.singletonMap(&quot;id&quot;, helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).expectBody(Tweet.class).consumeWith(response -&gt; Assertions
+						.assertThat(response.getResponseBody()).isNotNull().isEqualTo(helloWorldTweet));
+	}
+
+}
+
+</code></pre>
+
+<h5 id="fer-crides-simulant-un-client-als-nostres-serveis-rest-mockejats">Fer crides simulant un client als nostres serveis REST mockejats</h5>
+
+<p>Per a realitzar les crides als nostres serveis rest mockejats utilitzarem les funcionalitats del component <em>org.springframework.test.web.reactive.server.WebTestClient</em> i, per a verificar la resposta dels serveis REST amb reactiu, utilitzarem <em>reactor.test.StepVerifier</em>
+Per a poder verificar que la resposta és l&rsquo;esperada, a l&rsquo;inici del test introduirem elements &ldquo;tweets&rdquo; utilitzant el repositori de tweets. Aquest el mockejarem per a no haver de tenir una base de dades instanciada i per a poder tenir control de la resposta de cada mètode del repositori.</p>
+
+<p>Així podríem tenir un mètode que s&rsquo;executi a l’inici del test de la següent manera:</p>
+
+<pre><code class="language-java">
+	@MockBean
+	TweetRepository tweetRepository;
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	...
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet(&quot;Hello, World!&quot;);
+		helloWorldTweet.setId(&quot;1&quot;);
+		secondTweet = new Tweet(&quot;Second tweet&quot;);
+		secondTweet.setId(&quot;2&quot;);
+		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
+		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
+	}
+
+</code></pre>
+
+<p>Per a comprovar els serveis REST &ldquo;all tweets&rdquo; farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el body de la resposta hi ha un llistat d&rsquo;elements de tipus &ldquo;tweet&rdquo;. Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component <em>reactor.test.StepVerifier</em>, que els elements que hem afegit al mètode &ldquo;before&rdquo; són els que obtenim a la resposta i que la seqüència amb que els obtenim és l&rsquo;esperada.</p>
+
+<p>Així per exemple, per a testejar els serveis REST de &ldquo;get all tweets&rdquo; tindríem:</p>
+
+<pre><code class="language-java">
+	@Autowired
+	WebTestClient webTestClient;
+
+	...
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/route-flux/tweets&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/handler-flux/tweets&quot;);
+	}
+
+	private void testGetAllTweets(String uri) {
+		checkWebFluxGetAllTweets(webTestClient.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange()
+				.expectStatus().isOk().expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
+				.returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetAllTweets(Flux&lt;Tweet&gt; flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).expectNext(secondTweet)
+				.verifyComplete();
+	}
+
+</code></pre>
+
+<p>Per a comprovar els serveis REST &ldquo;get tweet per identificador&rdquo; farem una crida al serveis comprovant que la resposta és un OK (http code 200) i que en el <em>body</em> de la resposta hi ha elements de tipus &ldquo;tweet&rdquo;. Per a verificar el contingut de la resposta, obtindrem el flux del servei reactiu i comprovarem, amb el component <em>reactor.test.StepVerifier</em>, que l&rsquo;element que hem afegit al mètode &ldquo;before&rdquo; és el que obtenim a la resposta i que no obtenim cap més element.</p>
+
+<p>Per a comprovar els serveis REST &ldquo;get tweet per identificador&rdquo; tindríem:</p>
+
+<pre><code class="language-java">
+	@Autowired
+	WebTestClient webTestClient;
+
+	...
+
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/route-flux/tweets/{id}&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/handler-flux/tweets/{id}&quot;);
+	}
+
+	private void testGetSingleTweet(String uri) {
+		checkWebFluxGetSingleTweet(webTestClient.get().uri(uri, Collections.singletonMap(&quot;id&quot;, helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetSingleTweet(Flux&lt;Tweet&gt; flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).verifyComplete();
+	}
+
+</code></pre>
+
+<p>La classe completa de test seria doncs:</p>
+
+<pre><code class="language-java">
+package cat.gencat.ctti.endpoints;
+
+import java.util.Collections;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.reactive.server.WebTestClient;
+
+import cat.gencat.ctti.model.Tweet;
+import cat.gencat.ctti.repository.TweetRepository;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, properties = {
+		&quot;spring.main.allow-bean-definition-overriding=true&quot; })
+public class TweetWebFluxMockWebTest {
+
+	@Autowired
+	WebTestClient webTestClient;
+
+	@MockBean
+	TweetRepository tweetRepository;
+
+	Tweet helloWorldTweet;
+	Tweet secondTweet;
+
+	@Before
+	public void before() {
+		helloWorldTweet = new Tweet(&quot;Hello, World!&quot;);
+		helloWorldTweet.setId(&quot;1&quot;);
+		secondTweet = new Tweet(&quot;Second tweet&quot;);
+		secondTweet.setId(&quot;2&quot;);
+		Mockito.when(tweetRepository.findAll()).thenReturn(Flux.just(helloWorldTweet, secondTweet));
+		Mockito.when(tweetRepository.findById(Mockito.anyString())).thenReturn(Mono.just(helloWorldTweet));
+	}
+
+	@Test
+	public void testRouteWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/route-flux/tweets&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetAllTweets() {
+		testGetAllTweets(&quot;/handler-flux/tweets&quot;);
+	}
+
+	private void testGetAllTweets(String uri) {
+		checkWebFluxGetAllTweets(webTestClient.get().uri(uri).accept(MediaType.APPLICATION_JSON_UTF8).exchange()
+				.expectStatus().isOk().expectHeader().contentType(MediaType.APPLICATION_JSON_UTF8)
+				.returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetAllTweets(Flux&lt;Tweet&gt; flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).expectNext(secondTweet)
+				.verifyComplete();
+	}
+
+	@Test
+	public void testRouteWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/route-flux/tweets/{id}&quot;);
+	}
+
+	@Test
+	public void testHandlerWebFluxGetSingleTweet() {
+		testGetSingleTweet(&quot;/handler-flux/tweets/{id}&quot;);
+	}
+
+	private void testGetSingleTweet(String uri) {
+		checkWebFluxGetSingleTweet(webTestClient.get().uri(uri, Collections.singletonMap(&quot;id&quot;, helloWorldTweet.getId()))
+				.accept(MediaType.APPLICATION_JSON_UTF8).exchange().expectStatus().isOk().expectHeader()
+				.contentType(MediaType.APPLICATION_JSON_UTF8).returnResult(Tweet.class).getResponseBody());
+	}
+
+	private void checkWebFluxGetSingleTweet(Flux&lt;Tweet&gt; flux) {
+		StepVerifier.create(flux).expectSubscription().expectNext(helloWorldTweet).verifyComplete();
+	}
+
+}
+
+</code></pre>
+
+<h3 id="conclusions">Conclusions</h3>
+
+<ul>
+<li>Per a simular la crida als serveis REST reactius i verificar la resposta utilitzarem les funcionalitats del component <strong>org.springframework.test.web.reactive.server.WebTestClient</strong>.</li>
+<li>Per verificar el contingut i la seqüencia de resposta dels serveis rest reactius utilitzarem <strong>reactor.test.StepVerifier</strong>.</li>
+<li>Si volem realitzar tests d&rsquo;integració complets extrem a extrem utilitzarem l&rsquo;estratègia de <strong>fer crides simulant un client als nostres serveis rest exposats de forma real</strong>.</li>
+<li>Si volem realitzar tests del negoci associats als serveis REST reactius utilitzarem l&rsquo;estratègia de <strong>fer crides simulant un client als nostres serveis rest mockejats</strong>.</li>
+</ul>
+
+<p>Si necessiteu més informació, podeu obrir tiquet via <a href="https://cstd.ctti.gencat.cat/jiracstd/projects/CAN">JIRA CSTD</a> o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

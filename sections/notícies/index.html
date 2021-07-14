@@ -1,0 +1,4618 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
+	<meta name="robots" content="noindex,follow" />
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+
+
+
+<body class="section notícies">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sections">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Notícies
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+
+			<article class="padding-xs padding-sm padding-md contingut">
+				<div class="container">
+				<div class="row">
+
+						
+
+						
+
+							
+
+<div class="col-sm-12">
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-07-14_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Juliol21">Publicació Catàleg Tècnic de Dades - Juliol21</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d'obligat compliment i actualitzar algunes entitats ja publicades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-07-06-SIC-migracio-pipelines-cloud-SIC-3.0/" title="SIC. Migració pipelines cloud al SIC 3.0">SIC. Migració pipelines cloud al SIC 3.0</a>
+        				
+
+						</h2>
+						<p> Durant els mesos de juny i juliol s'està avançant en la migració de pipelines que despleguen al cloud cap a la nova Plataforma SIC 3.0.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-06-30_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Juny21">Publicació Catàleg Tècnic de Dades - Juny21</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d'obligat compliment i actualitzar algunes entitats ja publicades.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-05-26_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Maig21">Publicació Catàleg Tècnic de Dades - Maig21</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d'obligat compliment i actualitzar algunes entitats ja publicades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-04-30-SIC-posada-servei-SIC-3.0/" title="SIC. Posada en servei Plataforma SIC 3.0">SIC. Posada en servei Plataforma SIC 3.0</a>
+        				
+
+						</h2>
+						<p> El dia 01/05/2021 s'ha posat en servei la nova Plataforma del Sistema d'Integració Contínua 3.0 </p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/" title="Canigó. Adaptació connector Sarcat PICA">Canigó. Adaptació connector Sarcat PICA</a>
+        				
+
+						</h2>
+						<p> S'ha adaptat el mòdul d'integració del connector Sarcat PICA arran les modificacions en els prefixos dels namespace de les respostes de la PICA</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-04-21_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Abril21">Publicació Catàleg Tècnic de Dades - Abril21</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d'obligat compliment i actualitzar algunes entitats ja publicades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-04-08-Proces_esborrat_binaris/" title="SIC. Procés d&#39;esborrat de binaris">SIC. Procés d&#39;esborrat de binaris</a>
+        				
+
+						</h2>
+						<p> A partir del 21/04/2021 s'executa periòdicament un procés d'esborrat de binaris</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-03-31_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Q2">Publicació Catàleg Tècnic de Dades - Q2</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d'obligat compliment i actualitzar algunes entitats ja publicades.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-03-10_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades - Q1">Publicació Catàleg Tècnic de Dades - Q1</a>
+        				
+
+						</h2>
+						<p> S'ha actualitzat el Catàleg Tècnic de Dades per incorporar l'entitat Nivells poblacionals dins del grup d'obligat compliment, actualitzar el conjunt de valors de l'entitat Secretaries i canviar el nom de dues entitats ja publicades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2021-02-22_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades">Publicació Catàleg Tècnic de Dades</a>
+        				
+
+						</h2>
+						<p> Fruit del procés de col·laboració que es va encetar fa uns mesos des del CTTI amb l'Àrea per al Govern de les Dades de la Direcció General d'Administració Digital (DGAD), responsable d'impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el nombre de dades de referència disponibles al Catàleg Tècnic de Dades de Referència va creixent mes a mes.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-09-30-Recordatori-baixa-svn/" title="SIC. Recordatori de baixa del SVN">SIC. Recordatori de baixa del SVN</a>
+        				
+
+						</h2>
+						<p> Us recordem que a partir del 15/10/2020 el SVN del SIC es donarà de baixa definitivament</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-09-15-Actualitzacio_plugin_eclipse_1_7_10/" title="Canigó. Actualització plugin Eclipse 1.7.10">Canigó. Actualització plugin Eclipse 1.7.10</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del plugin de l'Eclipse de Canigó per a generar projectes amb Canigó 3.4.5</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-09-09-Revisio_regles_SonarQube_moduls_integracio/" title="Canigó. Revisió regles SonarQube mòduls integració">Canigó. Revisió regles SonarQube mòduls integració</a>
+        				
+
+						</h2>
+						<p> S'han revisat i resolt els problemes detectats per SonarQube als mòduls integració de Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-07-28-sic-act_versio_scm/" title="SIC. Actualització de versió Gitlab">SIC. Actualització de versió Gitlab</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Juliol s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-07-28-sic-act_versio_ci/" title="SIC. Actualització de versió Jenkins">SIC. Actualització de versió Jenkins</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Juliol s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-07-28-sic-act_versio_nexus/" title="SIC. Actualització de versió Nexus">SIC. Actualització de versió Nexus</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Juliol s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/" title="Canigó. Actualització archetype 1.6.6 i actualització plugin Eclipse 1.7.8">Canigó. Actualització archetype 1.6.6 i actualització plugin Eclipse 1.7.8</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de l’arquetipus i del plugin de l'eclipse de Canigó per a modificar projectes afegint el mòdul de Mongodb 2.3.0</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-06-11-Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9/" title="Canigó. Actualització archetype 1.6.7 i plugin Eclipse 1.7.9">Canigó. Actualització archetype 1.6.7 i plugin Eclipse 1.7.9</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de l’archetype i del plugin de l’Eclipse de Canigó per a generar projectes amb Canigó 3.4.4</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-06-11-Actualitzacio_modul_Seguretat_compressio_token/" title="Canigó. Actualització mòdul Seguretat">Canigó. Actualització mòdul Seguretat</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul Seguretat de Canigó per oferir la funcionalitat de compressió de token JWT</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/" title="Canigó. Revisió regles SonarQube mòduls core">Canigó. Revisió regles SonarQube mòduls core</a>
+        				
+
+						</h2>
+						<p> S'han revisat i resolt els problemes detectats per SonarQube als mòduls core de Canigó</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/" title="Canigó. Actualització mòdul MongoDB">Canigó. Actualització mòdul MongoDB</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul MongoDB de Canigó actualitzant el driver per a ser compatible amb la versió 4.2 de MongoDB</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-05-15_Gestio_tecnica_dades/" title="Actualització Catàleg Tècnic de Dades">Actualització Catàleg Tècnic de Dades</a>
+        				
+
+						</h2>
+						<p> El mes de maig s'ha actualitzat la publicació del Catàleg Tècnic de Dades coincidint amb la publicació de l'OIAD al respecte del govern de les Dades de Referència. En aquesta publicació s'ha incorporat la identificació de Dades de Referència d'obligat compliment així com d'altres dades noves en procés d'aprovació i se n'ha millorat el format.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-24-Actualitzacio_Actualitzacio_archetype_1_6_5_plugin_eclipse_1_7_7/" title="Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7">Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de l’arquetipus i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.4.3</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/" title="Canigó. Actualització mòdul Seguretat SAML (rols Gicar)">Canigó. Actualització mòdul Seguretat SAML (rols Gicar)</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul de Seguretat SAML de Canigó per a proporcionar un sistema estàndard en el tractament de rols autoritzatius de Gicar</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-24-Revisio_estat_moduls_Canigo_3.4/" title="Canigó. Revisió estat mòduls Canigó 3.4">Canigó. Revisió estat mòduls Canigó 3.4</a>
+        				
+
+						</h2>
+						<p> Revisió de l'estat dels mòduls de Canigó, deprecant funcionalitats obsoletes i ampliant els testos dels mòduls</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-09-Modul_gecat_deprecat/" title="Canigó. Mòdul Gecat deprecat">Canigó. Mòdul Gecat deprecat</a>
+        				
+
+						</h2>
+						<p> A partir de la publicació de Canigó 3.4.3, el mòdul de Gecat queda deprecat</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-09-Modul_sap_deprecat/" title="Canigó. Mòdul SAP deprecat">Canigó. Mòdul SAP deprecat</a>
+        				
+
+						</h2>
+						<p> A partir de la publicació de Canigó 3.4.3, el mòdul de SAP queda deprecat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2020-03-02-Modul_documentum_deprecat/" title="Canigó. Mòdul Documentum deprecat">Canigó. Mòdul Documentum deprecat</a>
+        				
+
+						</h2>
+						<p> A partir de la publicació de Canigó 3.4.3, el mòdul de Documentum queda deprecat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-10-22-Actualitzacio_modul_Seguretat/" title="Canigó. Actualització mòdul Seguretat">Canigó. Actualització mòdul Seguretat</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul de Seguretat de Canigó per a proporcionar un sistema estàndard en el tractament d'autoritzacions (rols d'usuari) via Gicar</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6/" title="Canigó. Actualització plugin eclipse 1.7.6">Canigó. Actualització plugin eclipse 1.7.6</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del plugin de l'eclipse de Canigó per generar projectes amb Canigó 3.4.2</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-18-Actualitzacio_archetype_1_6_4_plugin_eclipse_1_7_5/" title="Canigó. Actualització archetype 1.6.4 i plugin Eclipse 1.7.5">Canigó. Actualització archetype 1.6.4 i plugin Eclipse 1.7.5</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del archetype i del plugin de l'eclipse de Canigó per generar projectes amb Canigó 3.4.1.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-17-Actualitzacio_modul_Antivirus/" title="Canigó. Actualització mòdul Antivirus">Canigó. Actualització mòdul Antivirus</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul de l'Antivirus de Canigó utilitzant l'última versió del client de l'antivirus.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-27-Certificacio_Canigo_3_4_1_servidors_full_ruta/" title="Canigó. Certificació versió 3.4.1 amb servidors full de ruta">Canigó. Certificació versió 3.4.1 amb servidors full de ruta</a>
+        				
+
+						</h2>
+						<p> Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació amb Canigó 3.4.1 amb els servidors d'aplicacions suportats en el full de ruta del CTTI actuals.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-17-Actualitzacio_modul_SSC/" title="Canigó. Actualització del mòdul d&#39;accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC)">Canigó. Actualització del mòdul d&#39;accés al Servei de Signatura Centralitzada (SSC) del consorci Administració Oberta de Catalunya (AOC)</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió del mòdul Canigó 'SSC' utilitzant la versió 1.3.3 del Signador Centralitzat de l'AOC.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-11-29-Punts_tenir_compte_triar_servidor_incrustat/" title="Canigó. Punts a tenir en compte a l&#39;hora de triar un servidor incrustat">Canigó. Punts a tenir en compte a l&#39;hora de triar un servidor incrustat</a>
+        				
+
+						</h2>
+						<p> Llistat dels diferents punts a tenir en compte a l'hora de triar un servidor incrustat per una aplicació Canigó.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-10-04-sic-act_versio_scm_11.11.8/" title="SIC. Actualització de versió Gitlab">SIC. Actualització de versió Gitlab</a>
+        				
+
+						</h2>
+						<p> Durant el mes d'Octubre s'ha dut a terme l'actualització del Servei de Custodia de Codi (Gitlab).</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-10-04-sic-act_versio_nexus_3.16.2/" title="SIC. Actualització de versió Nexus">SIC. Actualització de versió Nexus</a>
+        				
+
+						</h2>
+						<p> Durant el mes d'Octubre s'han dut a terme actualització del repositori d'artefactes (Nexus).</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-16-sic-pilot-autoserveijobs_3/" title="SIC. Pilot de l&#39;autoservei de jobs pipeline amb T-Systems, l&#39;àmbit ATC i el lot AM10 - TICxCAT">SIC. Pilot de l&#39;autoservei de jobs pipeline amb T-Systems, l&#39;àmbit ATC i el lot AM10 - TICxCAT</a>
+        				
+
+						</h2>
+						<p> Durant el mes d'Agost i de Setembre s'ha avançat amb T-Systems en els projectes pilot de l'àmbit de Justícia per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline i s'ha iniciat una Task Force per tal d'integrar totes les aplicacions APEX del lot AM10 (TICxCAT) mitjançant aquest mateix servei.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check/" title="Canigó. Actualització mòduls amb Dependency Check">Canigó. Actualització mòduls amb Dependency Check</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de Canigó amb les llibreries dependent passant l'escaneig de Dependency Check.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-08-05_Gestio_tecnica_dades/" title="Publicació Catàleg Tècnic de Dades">Publicació Catàleg Tècnic de Dades</a>
+        				
+
+						</h2>
+						<p> El mes de Juliol ha estat publicada en el portal la nova secció de “Gestió Tècnica de Dades”.  En aquesta nova secció hi trobareu informació relativa a l’abast i progrés del projecte engegat per CTTI en marc de la governança tècnica de les dades. A la secció s’hi aniran publicant periòdicament les descripcions de les Entitats de Dades de Referència que s’hagin validat així com el contingut de les mateixes, el Catàleg Tècnic de Dades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-07-29-Introduccio-programacio-funcional/" title="Canigó. Introducció programació funcional">Canigó. Introducció programació funcional</a>
+        				
+
+						</h2>
+						<p> Introducció al concepte de programació funcional</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-07-29-Introduccio-programacio-reactiva/" title="Canigó. Introducció programació reactiva">Canigó. Introducció programació reactiva</a>
+        				
+
+						</h2>
+						<p> Introducció al concepte de programació reactiva</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-07-26-sic-pilot-autoserveijobs_2/" title="SIC. Pilot de l&#39;autoservei de jobs pipeline amb T-Systems i l&#39;àmbit ATC">SIC. Pilot de l&#39;autoservei de jobs pipeline amb T-Systems i l&#39;àmbit ATC</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Juliol s'han dut a terme sessions amb el proveïdor T-Systems i l'àmbit ATC per tal d'abordar nous projectes pilot per a la construcció i desplegament d'aplicacions mitjançant l'autoservei de jobs pipeline</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-07-19-sic-act_versio_scm/" title="SIC. Actualització de versió Gitlab">SIC. Actualització de versió Gitlab</a>
+        				
+
+						</h2>
+						<p> Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei de Custodia de Codi (Gitlab)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-07-19-sic-act_versio_ci/" title="SIC. Actualització de versió Jenkins">SIC. Actualització de versió Jenkins</a>
+        				
+
+						</h2>
+						<p> Durant els mesos de Maig i Juliol s'han dut a terme actualitzacions del Servei d'Integració Contínua (Jenkins)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-06-15-sic-pilot-autoserveijobs_1/" title="SIC. Pilot de l&#39;autoservei de jobs pipeline amb TICxCAT i IBM">SIC. Pilot de l&#39;autoservei de jobs pipeline amb TICxCAT i IBM</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Maig s'ha dut a terme un projecte pilot per a la construcció i desplegament d'aplicacions del proveÏdor TICxCAT i IBM mitjançant l'autoservei de jobs pipeline</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-05-30-std-en-servei-nou-entorn-pro/" title="STD. En servei nou entorn de Producció">STD. En servei nou entorn de Producció</a>
+        				
+
+						</h2>
+						<p> L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents), realitzant una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. En data 23/05/2019 s'ha posat en servei el nou entorn de Producció</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-05-06-sic-canvi-lots/" title="SIC. Canvi de lots segons la nova contractació 2019">SIC. Canvi de lots segons la nova contractació 2019</a>
+        				
+
+						</h2>
+						<p> El dia 01/06/2019 es farà efectiva la nova configuració de lots de les aplicacions en base a la nova contractació de proveïdors del Centre de Telecomunicacions i Tecnologies de la Informació de la Generalitat de Catalunya</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/canigo/entorn-desenvolupament/" title="Entorn desenvolupament. Actualització entorn versió 3.0.0">Entorn desenvolupament. Actualització entorn versió 3.0.0</a>
+        				
+
+						</h2>
+						<p> Des de CS Canigó, amb l'objectiu de proporcionar la millor experiència, s'ha actualitzat el programari de l'entorn de desenvolupament amb les últimes versions estables del programari alineades amb Canigó 3.4</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-04-16-std-en-servei-nou-entorn-pre/" title="STD. En servei nou entorn de Preproducció">STD. En servei nou entorn de Preproducció</a>
+        				
+
+						</h2>
+						<p> L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents), realitzant una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. En data 15/04/2019 s'ha posat en servei el nou entorn de Preproducció</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="/cloud/" title="Suport Cloud. Actualització documentació">Suport Cloud. Actualització documentació</a>
+        				
+
+						</h2>
+						<p> Des de l'oficina de Suport Cloud s'ha realitzat una tasca important de millora de documentació, amb la finalitat que tant els proveïdors d'aplicacions com la resta de participants en el cicle de vida d'una aplicació al Cloud disposin del màxim d'informació (tipus de clouds, plataformes disponibles, tasques d'operacions, canals de comunicació, ...)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-03-29-actualitzacio-canigo-3_4_0/" title="Canigó. Publicació versió 3.4.0">Canigó. Publicació versió 3.4.0</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de Canigó donant suport a Spring 5, Spring Boot 2 i nous paradigmes de programació. També s’inclou l’actualització del connector amb la Plataforma de Serveis de Gestió Documental (PSGD)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-02-20-roadmap-canigo/" title="Canigó. Roadmap del framework">Canigó. Roadmap del framework</a>
+        				
+
+						</h2>
+						<p> En aquesta notícia presentem el roadmap previst per les properes versions del framework Canigó</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2019-02-20-actualitzacio-tecnologica-std/" title="STD. Actualització tecnològica del servei">STD. Actualització tecnològica del servei</a>
+        				
+
+						</h2>
+						<p> L'últim trimestre del 2018 es va iniciar un projecte d'actualització tecnològica del STD (Servei de Transformació de Documents) que està previst que finalitzi a l'Abril. També es realitza una rearquitectura per tal de millorar l'aïllament de les diferents funcionalitats que es proporcionen i la seva escalabilitat. STD és el principal servei en el qual es recolza eCopia, servei de còpia autèntica de documents corporatiu de la Generalitat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/cloud/cataleg/#contenidors-docker" title="Suport Cloud. Millores en el procés actualització imatges Docker">Suport Cloud. Millores en el procés actualització imatges Docker</a>
+        				
+
+						</h2>
+						<p> Dintre del procés de millora continua dels processos de l'Oficina de Suport Cloud, s'han afegit al cicle de manteniment d'imatges Docker eines que permeten automatitzar i millorar el procés. Aquesta millora permet una actualització més freqüent de les imatges certificades i una reducció de les vulnerabilitats presents a aquestes. Aprofitant la incorporació d'aquesta millora s'han actualitzat totes les imatges certificades i s'ha creat noves versions d'algunes d'elles per una millor alineació amb el full de ruta del programari</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/principis" title="Revisió dels Principis d&#39;Arquitectura dels Sistemes d&#39;Informació">Revisió dels Principis d&#39;Arquitectura dels Sistemes d&#39;Informació</a>
+        				
+
+						</h2>
+						<p> Des d'Arquitectura CTTI s'ha realitzat una revisió dels principis. Recordar que aquests principis corresponen a les directrius a seguir en la construcció de sistemes d'informació, i per tant, són els que es revisen per part de la Unitat d’Arquitectura en el moment de validar un DA (Document d'Arquitectura)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="/canigo/monitoritzacio/" title="Canigó. Monitorització d&#39;aplicacions">Canigó. Monitorització d&#39;aplicacions</a>
+        				
+
+						</h2>
+						<p> Opcions que existeixen a l'actualitat per la monitorització d'aplicacions Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-09-26-Canigo-promo-connectors/" title="Connectors de Canigó amb serveis corporatius">Connectors de Canigó amb serveis corporatius</a>
+        				
+
+						</h2>
+						<p> Fem un recordatori de l'objectiu dels connectors que proporciona Canigó i el seu manteniment/suport associat</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-09-26-publicacio-canigo-3_2_6/" title="Publicació versió 3.2.6 Canigó">Publicació versió 3.2.6 Canigó</a>
+        				
+
+						</h2>
+						<p> S'ha publicat una nova versió de Canigó la qual incorpora un nou mòdul per a connexions amb bases de dades MongoDB, a més d'afegir suport a PostgreSQL en el mòdul de persistència ja existent</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-08-10-Canigo-Transmissio-binaris-REST-API/" title="Canigó. Transmissió de binaris en REST APIs">Canigó. Transmissió de binaris en REST APIs</a>
+        				
+
+						</h2>
+						<p> En aquest article expliquem diferents opcions per transmissió de dades binàries en REST APIs, recomanacions i millors pràctiques.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-07-26-actualitzacio-documentacio-suport-cloud/" title="Suport Cloud. Actualització documentació">Suport Cloud. Actualització documentació</a>
+        				
+
+						</h2>
+						<p> Durant les darreres setmanes s'ha realitzat una tasca important d'actualització de documentació per part de l'equip de Suport Cloud, principalment d'elements de catàleg i tasques operatives a realitzar per part dels proveïdors d'aplicacions. En aquest article us fem un breu resum.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-06-28-SIC-Generar-sites-web-amb-Hugo/" title="SIC. Generació de llocs web estàtics amb Hugo">SIC. Generació de llocs web estàtics amb Hugo</a>
+        				
+
+						</h2>
+						<p> En aquest article s'explica el funcionament d'una web generada amb Hugo i el procediment d'integració al SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-05-18-canigo-evolucio-servei-traces/" title="Canigó. Evolució Mòduls de Traces i Instrumentació">Canigó. Evolució Mòduls de Traces i Instrumentació</a>
+        				
+
+						</h2>
+						<p> Analitzem l'evolució realitzada en els mòduls de traces i instrumentació a Canigó 3.2, recomanacions pel que fa al seu ús, i l'evolució a futur prevista per aquests serveis</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-04-30-eformularis-REST-API/" title="eFormularis. Serveis Invocació REST API">eFormularis. Serveis Invocació REST API</a>
+        				
+
+						</h2>
+						<p> En el projecte d'actualització tecnològica que s'està duent a terme a la plataforma d'eFormularis, s'introdueix una novetat que és la publicació d'una REST API per l'accés als Serveis d'Invocació de Formularis PDF</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-04-27-SIC-Jobs-pipeline-estat-actual/" title="SIC. Jobs pipeline: Estat de l&#39;art">SIC. Jobs pipeline: Estat de l&#39;art</a>
+        				
+
+						</h2>
+						<p> Fa gairebé un any que es van implantar els jobs de tipus pipeline al SIC. En aquest article s'analitza l'estat actual d'aquests tipus de jobs i s'expliquen els futurs canvis que experimentaran aquesta modalitat de jobs</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/" title="Canigó. Configuració multi-entorn en SPAs">Canigó. Configuració multi-entorn en SPAs</a>
+        				
+
+						</h2>
+						<p> Amb la separació de frontend i backend que es recomana aplicar com a patró d'arquitectura en aplicacions Canigó, i per tal d'acomplir els requeriments d'una única construcció no depenent de l'entorn que s'imposa des del SIC, cal donar una solució de configuració multi-entorn per la part de frontend</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-SIC-Canvi-sistema-permisos/" title="SIC. Canvi del sistema de permisos al SIC">SIC. Canvi del sistema de permisos al SIC</a>
+        				
+
+						</h2>
+						<p> Durant el mes d'abril, es modificarà el sistema de permisos del SIC per tal de simplificar l'operativa de l'Autoservei. L'anterior model de seguretat quedarà obsolet i s'aplicarà el model de seguretat 2018.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-03-05-SIC-Utilitzar-branca-master/" title="SIC. Branca Master al Git del SIC">SIC. Branca Master al Git del SIC</a>
+        				
+
+						</h2>
+						<p> Arrel les consultes rebudes les darreres setmanes, creiem convenient publicar aquest article on s'explica els usos de les branques al SIC.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2018-02-14-Canigo-Swagger-i-SOAP-UI/" title="Canigó. Jocs de proves API REST">Canigó. Jocs de proves API REST</a>
+        				
+
+						</h2>
+						<p> Des de Canigó 3.2 es dona suport a la implementació d'APIs REST. Poder generar un joc de proves automatitzat a partir del contracte de l'API REST és possible gràcies a eines com SOAP UI</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-11-29-Jobs-automatics-per-a-PRE-i-PRO/" title="SIC. Jobs automàtics per a PRE i PRO">SIC. Jobs automàtics per a PRE i PRO</a>
+        				
+
+						</h2>
+						<p> Des del passat mes de novembre, el SIC està preparat per oferir jobs de desplegament automàtic als entorns de Preproducció i Producció.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-07-05-Canigo-LTS/" title="Canigó. Versions LTS">Canigó. Versions LTS</a>
+        				
+
+						</h2>
+						<p> Nova política de versions per el framework Canigó</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-06-07-SIC-SIC_2.0/" title="SIC. Llançament del SIC 2.0">SIC. Llançament del SIC 2.0</a>
+        				
+
+						</h2>
+						<p> El passat 31 de Maig es va realitzar la presentació oficial del SIC 2.0. Presentem un resum amb les característiques més importants.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-05-12-SIC-noves-funcionalitats/" title="SIC 2.0: Millores en la gestió d&#39;usuaris i repositoris">SIC 2.0: Millores en la gestió d&#39;usuaris i repositoris</a>
+        				
+
+						</h2>
+						<p> Atès la imminent arribada del SIC 2.0, és convenient que tots els usuaris siguin coneixedors de les noves funcionalitats que ofereix aquesta versió. En aquest article, fem un resum dels mòduls de gestió d'usuaris i repositoris.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-03-31-publicacio-canigo32/" title="Canigó. Publicada nova versió 3.2 del framework">Canigó. Publicada nova versió 3.2 del framework</a>
+        				
+
+						</h2>
+						<p> La versió 3.2 del framework Canigó presenta novetats molt importants respecte a les seves predecessores. L'objectiu principal d'aquesta nova versió és facilitar el desenvolupament d'aplicacions que segueixin el patró d'arquitectura recomanat pel CS Canigó, consistent en el desacoblament del frontend web vers els serveis de backend que exposen les dades de negoci. En aquesta línia es depreca JSF, sent aquesta l'última versió de Canigó en la que s'hi donarà suport</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-03-07-Pipelines-SIC2.0/" title="SIC. Introducció Pipelines a SIC 2.0">SIC. Introducció Pipelines a SIC 2.0</a>
+        				
+
+						</h2>
+						<p> El passat mes es van comentar algunes de les millores que incorporarà SIC 2.0 pel que fa al SCM (s'afegeix Gitlab). L'altre gran peça de SIC, el Jenkins, també patirà un gran canvi amb l'evolució a SIC 2.0. S'incorpora el model de treball amb jobs de tipus Pipeline, job que engloba tots els estats del cicle d'Integració Contínua.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-03-06-Cloud-seguretat-acces-elasticsearch-oss/" title="Cloud. Accés a Elasticsearch a cloud públic">Cloud. Accés a Elasticsearch a cloud públic</a>
+        				
+
+						</h2>
+						<p> L'accés a un Elasticsearch a cloud públic té una sèrie de consideracions de seguretat a tenir en compte</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-02-06-Novetats-Canigo-32/" title="Canigó. Novetats a propera versió Canigó 3.2">Canigó. Novetats a propera versió Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> Des de l'equip de Canigó s'està treballant en la versió 3.2 de Canigó, la qual incorporarà novetats importants com el suport a serveis REST i autenticació amb JWT (JSON Web Token).</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-02-03-Introduccio-SIC2.0/" title="SIC. Introducció a SIC 2.0">SIC. Introducció a SIC 2.0</a>
+        				
+
+						</h2>
+						<p> El SIC està evolucionant per tal de poder donar cabuda a les tecnologies més emprades avui dia. La primera actualització està prevista d'aplicar-se a l'Abril d'aquest any.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2017-01-05-OTCanigo-Balanc-2016/" title="Oficina Tècnica de Canigó. Balanç 2016">Oficina Tècnica de Canigó. Balanç 2016</a>
+        				
+
+						</h2>
+						<p> Evolució dels serveis de la Oficina Tècnica de Canigó a l'any 2016</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-12-04-Canigo-JWT/" title="Canigó. Autenticació amb JWT (JSON Web Tokens)">Canigó. Autenticació amb JWT (JSON Web Tokens)</a>
+        				
+
+						</h2>
+						<p> Autenticació amb JWT en aplicacions Canigó 3.1.x. Comparativa amb sistema tradicional basat en cookies</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-12-01-SIC-Nova-Creacio-Massiva-RepositorisSVN/" title="SIC. Nova creació massiva de repositoris SVN">SIC. Nova creació massiva de repositoris SVN</a>
+        				
+
+						</h2>
+						<p> Des de SIC s'ha recopilat la informació de les aplicacions que encara no tenen repositori a SIC i s'ha portat a terme un nou procés de creació massiva de repositoris SVN</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-11-07-SIC-Actualitzacio-software/" title="SIC. Actualització de versions d&#39;eines al SIC">SIC. Actualització de versions d&#39;eines al SIC</a>
+        				
+
+						</h2>
+						<p> El 28 d'Octubre es va portar a terme una actualització de versions d'alguns components de software al SIC per tal d'acomplir el full de ruta del CTTI</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-10-04-SIC-Cas-exit-desplegament-dotNET/" title="SIC. Cas d&#39;èxit de desplegament d&#39;una aplicació .NET">SIC. Cas d&#39;èxit de desplegament d&#39;una aplicació .NET</a>
+        				
+
+						</h2>
+						<p> El SIC ja compta amb un cas d'èxit de desplegament d'aplicació .NET mitjançant jobs de Jenkins. S'ha perfeccionat l'operativa dels jobs de desplegament d'aplicacions .NET per tal de fer-los capaços d'escollir el fitxer de configuració d'aplicació adient per a cada entorn on es desplegarà l'aplicació.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT/" title="SIC. Gestió de dependències per aplicacions ANT">SIC. Gestió de dependències per aplicacions ANT</a>
+        				
+
+						</h2>
+						<p> Procediment de gestió de dependències amb aplicacions ANT al SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-dotNET/" title="SIC. Gestió de dependències per a aplicacions .NET">SIC. Gestió de dependències per a aplicacions .NET</a>
+        				
+
+						</h2>
+						<p> Procediment de gestió de dependències amb aplicacions .NET al SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-07-06-Cloud-documentacio/" title="Container Cloud. Publicació de la documentació al web d&#39;Arquitectura">Container Cloud. Publicació de la documentació al web d&#39;Arquitectura</a>
+        				
+
+						</h2>
+						<p> Ha estat publicada la documentació del Container Cloud al web d'arquitectura. En ella podreu trobar els diferents elements del catàleg, les plataformes cloud de referència, arquitectures tipus i la definició del cicle de vida de les aplicacions.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-07-04-SIC-MySQL-i-SQLSERVER/" title="SIC. Suport a MySQL i Microsoft SQL SERVER">SIC. Suport a MySQL i Microsoft SQL SERVER</a>
+        				
+
+						</h2>
+						<p> Suport a les bases de dades de tipus MySQL i Microsoft SQL SERVER. Els jobs de desplegament a INT són capaços d'executar scripts DDL i DML d'aquestes bases de dades.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-06-08-GICAR-documentacio/" title="GICAR. Publicació de la documentació al web d&#39;Arquitectura">GICAR. Publicació de la documentació al web d&#39;Arquitectura</a>
+        				
+
+						</h2>
+						<p> Publicació de la documentació de GICAR al web d'arquitectura i les novetats en quant a l'entorn de desenvolupament</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-MongoDB/" title="SIC. Suport a MongoDB">SIC. Suport a MongoDB</a>
+        				
+
+						</h2>
+						<p> Suport a la primera base de dades NoSQL al SIC. Els jobs de desplegament a INT són capaços d'executar codi Javascript per manipular documents i crear o eliminar col·leccions de documents, indexos, etc.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-05-30-SIC-NodeJS/" title="SIC. Suport a NodeJS">SIC. Suport a NodeJS</a>
+        				
+
+						</h2>
+						<p> Suport a construcció i desplegament d'aplicacions NodeJS. Inclou resolució de dependències amb npm (Node Package Manager) per JavaScript.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-05-28-Canigo-Proces-actualitzacio-a-Canigo-3_1/" title="Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1">Canigó. Actualització d&#39;aplicacions Canigó 3.0 a Canigó 3.1</a>
+        				
+
+						</h2>
+						<p> Recordatori del procediment per a realitzar l'actualització d'aplicacions Canigo 3.0 a Canigó 3.1</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-04-18-SIC-Politiques-respecte-noves-aplicacions/" title="SIC. Polítiques d&#39;integració respecte a noves aplicacions">SIC. Polítiques d&#39;integració respecte a noves aplicacions</a>
+        				
+
+						</h2>
+						<p> Des de SIC es pretén recuperar la funcionalitat original dels repositoris SVN (custòdia del codi font) i promocionar l'us de la Plataforma d'Integració Contínua per a construïr i desplegar els binaris de les aplicacions.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-04-14-Canigo-Administracio-Logs/" title="Canigó. Nou Mòdul d&#39;Administració de Logs">Canigó. Nou Mòdul d&#39;Administració de Logs</a>
+        				
+
+						</h2>
+						<p> Nou mòdul per al monitoratge i administració de logs d'aplicacions Canigó 3.1.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-04-01-SIC-Etiquetage-al-SVN/" title="SIC. Etiquetatge de versions al SVN del SIC">SIC. Etiquetatge de versions al SVN del SIC</a>
+        				
+
+						</h2>
+						<p> Hi ha diverses maneres de crear versions de codi al repositori SVN del SIC (sota directori /tags). Aquest article pretén recollir-ne algunes i aconsellar l'ús d'una en particular.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-03-31-SIC-Desplegament-de-sites-statics-al-cloud/" title="SIC. S&#39;habiliten els desplegaments de sites estàtics al núvol">SIC. S&#39;habiliten els desplegaments de sites estàtics al núvol</a>
+        				
+
+						</h2>
+						<p> A partir d'aquest mes de març, el SIC comença a fer les seves primeres passes amb les tecnologies cloud integrant el desplegament de sites estàtics a Bluemix, el servei al núvol d'IBM.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-03-01-Canigo-Connector-PSGD/" title="Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)">Nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (PSGD)</a>
+        				
+
+						</h2>
+						<p> S'ha publicat un nou connector de Canigó 3 amb la Plataforma de Serveis de Gestió documental (en endavant PSGD). El propòsit del connector és proporcionar una interfície Java per accedir als serveis exposats per la PSGD.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-02-10-SIC-Canvis-peticions-desplegaments-jobs-PRE-PRO/" title="Canvi al sistema d&#39;obertura de peticions als jobs de desplegament a PRE/PRO de SIC">Canvi al sistema d&#39;obertura de peticions als jobs de desplegament a PRE/PRO de SIC</a>
+        				
+
+						</h2>
+						<p> Fins el moment, les peticions de desplegament a entorns PRE/PRO que es demanaven mitjançant jobs de Jenkins SIC seguien l'antic model d'obertura de peticions: correu a la bústia de SAU. Amb l'entrada de Remedy, el mecanisme per a demanar desplegaments ha canviat.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-02-04-SIC-Integracio-Continua-dotNet/" title="Suport complet del SIC a la integració contínua amb .NET">Suport complet del SIC a la integració contínua amb .NET</a>
+        				
+
+						</h2>
+						<p> El SIC s'ha certificat en la construcció, en la gestió de dependències i en els desplegaments d'aplicatius programats amb .NET</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-01-28-Canigo-Connectors-PICA/" title="Noves versions dels connectors de Canigó amb la PICA">Noves versions dels connectors de Canigó amb la PICA</a>
+        				
+
+						</h2>
+						<p> S'han publicat noves versions dels connectors amb la PICA per a complir les noves restriccions d'esquema</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-12-24-Canigo-Balanc-2015/" title="Canigó. Balanç 2015">Canigó. Balanç 2015</a>
+        				
+
+						</h2>
+						<p> Resum de les tasques realitzades per l'equip de Canigó durant l'any 2015</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-12-23-SIC-Nou-rol-de-peticionari-a-SAU-Remedy/" title="SIC. Nou rol de peticionari SIC a SAU-Remedy">SIC. Nou rol de peticionari SIC a SAU-Remedy</a>
+        				
+
+						</h2>
+						<p> Neix a SIC un nou tipus d'usuari: Gestor de peticions a SAU-Remedy. Aquest tipus d'usuari pretén flexibilitzar el sistema d'autorització de peticions de SIC afegint un nou conjunt d'usuaris autoritzats per a poder demanar certs tipus de peticions de suport de FRAMEWORK SIC a SAU- Remedy.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-12-18-SIC-Sistema-autoritzacions-peticions/" title="SIC. Sistema d&#39;autoritzacions de peticions FRAMEWORK SIC a SAU-Remedy">SIC. Sistema d&#39;autoritzacions de peticions FRAMEWORK SIC a SAU-Remedy</a>
+        				
+
+						</h2>
+						<p> L'admissió de peticions al servei FRAMEWORK SIC de SAU-Remedy es troba restringit per un sistema de rols d'usuari que determina quines operacions pot demanar cada rol. Aquest article pretén explicar com es realitza aquesta discriminació.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-12-07-SIC-Balanc-2015/" title="SIC. Balanç 2015">SIC. Balanç 2015</a>
+        				
+
+						</h2>
+						<p> Evolució del SIC des de la implantació del nou model TIC fins al desembre del 2015</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-11-18-Canigo-Entorn-Dev/" title="Canigó. Nou entorn de desenvolupament">Canigó. Nou entorn de desenvolupament</a>
+        				
+
+						</h2>
+						<p> A mitjans d'aquest mes de Novembre ha estat publicat el nou entorn de desenvolupament de Canigó. Amb aquest nou entorn es canvia l'antic instal·lable (.exe) exclusiu per a sistemes operatius Windows per un entorn multiplaforma amb moltes més possibilitats.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-11-06-CS-Canigo-Roadmap/" title="CS Canigó. Roadmap">CS Canigó. Roadmap</a>
+        				
+
+						</h2>
+						<p> Aquest mes d'Octubre ha estat publicat el Roadmap del CS Canigó. D'aquesta manera es dona visibilitat a les tasques que es fan des del Centre de Suport a curt i llarg termini amb una previsió de lliurament.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-11-05-FAQs-SIC/" title="SIC. FAQ">SIC. FAQ</a>
+        				
+
+						</h2>
+						<p> Com a novetat, a la secció SIC del Portal de Frameworks i Solucions d'Arquitectura, pròximament es publicaran les FAQ del SIC. L'objectiu d'aquestes FAQ és donar resposta a les qüestions que sovint ens plantegen els proveïdors d'aplicacions respecte a la integració amb el SIC.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-10-27-Canigo-Adaptacio-al-PIV/" title="Canigó. Adaptació al PIV de Gencat">Canigó. Adaptació al PIV de Gencat</a>
+        				
+
+						</h2>
+						<p> L'adaptació al PIV de Gencat és un requeriment per moltes aplicacions. L'estratègia a seguir per les aplicacions Canigó depèn de la versió en què estigui implementada.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-10-05-SIC-Bones-practiques-desplegaments-INT/" title="SIC. Bones pràctiques per a no interferir en els mecanismes de SIC quan s’accedeix manualment a la consola d’administració del servidor d’aplicacions">SIC. Bones pràctiques per a no interferir en els mecanismes de SIC quan s’accedeix manualment a la consola d’administració del servidor d’aplicacions</a>
+        				
+
+						</h2>
+						<p> Una de les funcionalitats més destacades del SIC és el desplegament automàtic d'aplicacions en entorns d'INT. Amb l'experiència adquirida fins ara en els nous CPDs, des de l'equip del SIC recomanem una sèrie de bones pràctiques per tal d'evitar que actuacions alienes al SIC puguin interferir en el correcte funcionament d'aquests desplegaments automatitzats.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-09-23-Canigo-Us-applet-signatura-CAOC/" title="Canigó. Ús applet d&#39;e-signatura del CAOC">Canigó. Ús applet d&#39;e-signatura del CAOC</a>
+        				
+
+						</h2>
+						<p> La versió 45 del navegador web Google Chrome deixa de donar suport a la tecnologia NPAPI requerida per els applets Java. En conseqüència, l'applet d'e-signatura del CAOC s'ha d'executar en un altre navegador.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-09-01-Canigo-Plantilla-aplicacio-rest/" title="Canigó. Plantilla aplicació REST&#43;HTML5/Js">Canigó. Plantilla aplicació REST&#43;HTML5/Js</a>
+        				
+
+						</h2>
+						<p> Des de CS Canigó es proporciona una plantilla d'aplicació amb arquitectura REST+HTML5/Js. Aquesta és pot generar amb el plugin de Canigó per Eclipse versió 1.2.1 o superior</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-08-31-SIC-Integraci%C3%B3-del-SIC-a-Remedy/" title="SIC. Obertura de peticions al SIC via Remedy">SIC. Obertura de peticions al SIC via Remedy</a>
+        				
+
+						</h2>
+						<p> Degut a que els sistemes de suport a l'usuari de la Generalitat de Catalunya s'estan integrant a Remedy, el CS Canigó està treballant en la integració del SIC a aquest sistema.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2016-08-02-SIC-Gestio-Dependencies-ANT-dotNET/" title="SIC. Gestió de dependències per aplicacions .NET i JAVA al SIC">SIC. Gestió de dependències per aplicacions .NET i JAVA al SIC</a>
+        				
+
+						</h2>
+						<p> El SIC ha incorporat les tecnologies ANT i .NET. Us expliquem com implementar la gestió de dependències amb aquestes tecnologies.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-07-31-Canigo-Plugin-Eclipse-Mars/" title="Canigó. Certificació plugin Canigó a Eclipse Mars">Canigó. Certificació plugin Canigó a Eclipse Mars</a>
+        				
+
+						</h2>
+						<p> Donada la recent publicació d'Eclipse Mars (4.5) des del CS Canigó s'ha certificat el funcionament del plugin per la creació de projectes Canigó 3.1 en aquesta versió d'Eclipse.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-07-24-Canigo-Arquitectura-aplicacio-recomanada/" title="Canigó. Arquitectura aplicació recomanada">Canigó. Arquitectura aplicació recomanada</a>
+        				
+
+						</h2>
+						<p> Des del CS Canigó es segueix treballant per potenciar el desenvolupament d'aplicacions amb arquitectures client/servidor desacoblades basades en serveis Rest i HTML5/JS. Aquest tipus d'arquitectura facilita el desenvolupament de la part client i servidor de forma independent.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-06-26-SIC-Via-alternativa-pujada-artefactes-a-SIC/" title="SIC. Via alternativa pujada artefactes a SIC">SIC. Via alternativa pujada artefactes a SIC</a>
+        				
+
+						</h2>
+						<p> S'ha creat una via alternativa per al traspàs d'artefactes entre proveïdors d'aplicacions i CPD quan la via habitual de traspàs d'aquests artefactes, repositori SVN del SIC, no es trobi accessible.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-06-15-SIC-Desplegaments-Jobs-Remedy/" title="SIC. Peticions desplegament via Remedy">SIC. Peticions desplegament via Remedy</a>
+        				
+
+						</h2>
+						<p> Fins ara totes les peticions de desplegament de les aplicacions a entorns PRE i PRO realitzades des del SIC es demanaven via correu a SAU (sau.ctti@gencat.cat). El SIC està evolucionant per tal que aquestes peticions de desplegament es sol·licitin via Remedy a mida que van migrant les aplicacions a aquest nou sistema.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-06-02-Canigo-Plugin/" title="Canigó. Actualització del plugin de Canigó per Eclipse">Canigó. Actualització del plugin de Canigó per Eclipse</a>
+        				
+
+						</h2>
+						<p> Recentment s'ha publicat una nova versió del Plugin de Canigó per Eclipse. Aquesta versió és compatible amb la versió d'Eclipse Luna (4.4) per a dos de les seves 2 distribucions: Eclipse IDE for Java Developers i Eclipse IDE for Java EE Developers. A banda d'aquesta actualització del plugin també s'ha certificat el seu funcionament en S.O. Linux.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-05-29-SIC-Upgrade-SVN/" title="SIC. Upgrade versió Subversion al SIC">SIC. Upgrade versió Subversion al SIC</a>
+        				
+
+						</h2>
+						<p> En breu s'actualitzarà la versió de SVN del servidor de SIC, passant d'una 1.6.11 a una 1.8.13. Aquesta actualització comportarà una sèrie de millores en rendiment, robustesa i seguretat al SVN de SIC.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-04-30-SIC-Master-Slave-CPD4/" title="SIC. Multi-CPD - Desplegaments a CPD4-TSystems">SIC. Multi-CPD - Desplegaments a CPD4-TSystems</a>
+        				
+
+						</h2>
+						<p> El SIC - Multi CPD basat en l'arquitectura Master/Slave de Jenkins ja s’ha començat a implantar. El primer CPD on s’ha posat en marxa el Slave de Jenkins per als desplegaments d’aplicacions ha estat a CPD4-TSystems. Aquest slave és controlat pel Jenkins Master (CPD1-HP), el qual li delegarà el desplegament de les aplicacions ubicades a CPD4-TSystems.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-04-24-SIC--publicacio-antivirus/" title="Canigó. Nova versió del connector Antivirus">Canigó. Nova versió del connector Antivirus</a>
+        				
+
+						</h2>
+						<p> S'han publicat noves versions del connector d'Antivirus de Canigó 3 i Canigó 2. El funcionament d'aquestes versions, 1.2.0 i 2.3.21-SNAPSHOT respectivament, ha estat certificat amb la versió 7.5 de l'API de Symantec corresponent a la versió instal·lada per el nou Antivirus corporatiu. Cal destacar els canvis de dominis realitzats en la transformació del servei d'Antivirus. Les aplicacions han de fer canvis a la seva configuració per accedir-hi.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-04-05-SIC-migraci%C3%B3/" title="SIC. Migració a nou model TIC finalitzada">SIC. Migració a nou model TIC finalitzada</a>
+        				
+
+						</h2>
+						<p> El passat mes de Març ha finalitzat la migració d'aplicacions al SIC de l'antic model, basat en departaments i acrònims d'aplicació, cap al nou, basat en àmbits i codis de diàleg</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-04-05-SIC--autoritzacio-repositoris/" title="SIC. Nova política d&#39;autorització d&#39;accés a repositoris">SIC. Nova política d&#39;autorització d&#39;accés a repositoris</a>
+        				
+
+						</h2>
+						<p> Els repositoris de Subversion de l'antic model existents al SIC només comptaven amb un control d'accessibilitat (autenticació). Els usuaris podien accedir a determinats repositoris en funció del grup al qual se'ls hi havia assignat amb control total (Read/Write). En els repositoris del nou model s'ha incorporat un control d'autorització que permet definir els permisos sobre el contingut accedit (Read o Read/Write)</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-03-05-canig%C3%B3-captcha/" title="Canigó. Captcha en aplicacions Canigó 3">Canigó. Captcha en aplicacions Canigó 3</a>
+        				
+
+						</h2>
+						<p> Els Captcha són tests utilitzats per a diferenciar entre persones i robots que tracten d'evitar un mal ús de les aplicacions per part de robots/programes automàtics. En aplicacions Canigó els Captcha poden resultar molt útils per a validar que s'està fent un ús correcte de les accions destinades a l'usuari final de l'aplicació com per exemple omplir i enviar formularis</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-03-05-SIC-PHP/" title="SIC. PHP">SIC. PHP</a>
+        				
+
+						</h2>
+						<p> Durant el mes de Febrer s'ha dotat al SIC dels processos necessaris per poder fer desplegaments d'aplicacions PHP en entorns corporatius. A  la secció de Documentació del SIC del Portal de Frameworks i Solucions d'Arquitectura podeu trobar noves versions dels documents de referència.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-02-05-Canigo-integracio-serveis-rest-gicar/" title="Canigó. Integració de serveis REST amb GICAR">Canigó. Integració de serveis REST amb GICAR</a>
+        				
+
+						</h2>
+						<p> Les aplicacions Canigó 3 basades en l'arquitectura HTML5/JS+REST han de tenir en compte una sèrie de consideracions en cas que estiguin integrades amb GICAR. En concret, és probable que hagin de sol·licitar que s'apliquin les següents excepcions</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-02-05-SGDE-ocr-std/" title="SGDE. OCR al STD">SGDE. OCR al STD</a>
+        				
+
+						</h2>
+						<p> En el procés de transformació de CPD de l'entorn PROductiu del STD (Sistema de Transformació de Documents), finalitzat el passat 28/1, ha estat publicada una nova versió del WebService de Serveis Invocació STD</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-01-08-canig%C3%B3-REST/" title="Cas d&#39;èxit d&#39;aplicació Canigo 3 amb arquitectura HTML5 &#43; REST">Cas d&#39;èxit d&#39;aplicació Canigo 3 amb arquitectura HTML5 &#43; REST</a>
+        				
+
+						</h2>
+						<p> L'arquitectura que des del CS Canigó s'està promovent per aplicacions web ja està sent adoptada per noves aplicacions, com és el cas de l'aplicació d'Ajuts i Subvencions (Transversal)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-01-09-SIC-nou-model/" title="SIC. Calendari de migració d&#39;aplicacions al nou model">SIC. Calendari de migració d&#39;aplicacions al nou model</a>
+        				
+
+						</h2>
+						<p> Tal com es va notificar al comunicat de Novembre 2014 aviat començarà la migració d'aplicacions per adaptar-se al nou model TIC. Per organitzar aquest procés de migració s'ha elaborat un calendari i s'ha publicat a la plana principal del SVN del SIC, secció "Calendari de migració d'aplicacions al SIC"</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2014-12-09-connectors-canigo/" title="Canigó. Publicació serveis i connectors Canigó 3.1">Canigó. Publicació serveis i connectors Canigó 3.1</a>
+        				
+
+						</h2>
+						<p> Al mes de Novembre s'han alliberat noves versions dels serveis i connectors que formen part de Canigó 3.1. Aquesta és la referència a la Matriu de compatibilitats de Canigó 3.1. En ella s'especifica el detall de totes les versions dels serveis de Canigó 3.1 i les compatibilitats/dependències entre cadascun d'ells. </p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/noticies/2015-02-02-SIC-transformacio-servei/" title="SIC. Transformació del servei">SIC. Transformació del servei</a>
+        				
+
+						</h2>
+						<p> El passat 13/11 es va efectuar la transformació del servei SIC al CPD1-HP. En el següent diagrama es mostren els components més rellevants de la capa d'aplicacions i com es realitza la redirecció dels dominis cap als servidors del SIC</p>
+					</div>	
+
+
+    
+
+
+
+
+			</div>
+		</div>
+
+
+</div>
+
+
+			            
+
+				</div>
+				</div>
+			</article>
+
+	</section>
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+	
+
+</body>
+</html>

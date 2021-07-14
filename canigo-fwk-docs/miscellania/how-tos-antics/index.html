@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Guies d&#39;ús (HowTOs) antics</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Guies d\x27ús (HowTOs) antics\" />");
+		document.write("<meta name=\"description\" content=\"Guies d\x27ús (HowTOs) antics\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/miscellania/'>miscellania</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/miscellania/how-tos-antics/'>how tos antics</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Guies d&#39;ús (HowTOs) antics
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 12-12-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						<p>Un HOWTO és un document informal, generalment breu, que descriu com desenvolupar una certa tasca.</p>
+
+<p>En aquest apartat s&rsquo;aniran afegint un seguit de HOWTO, per tal de facilitar la configuració de certs components del framework, evitar possibles problemes, etc. Aquests documents estan disponibles en format pdf.</p>
+
+<p>HOWTOs disponibles actualment:</p>
+
+<ul>
+<li><p><a href="/howtos/2021-01-02-Howto-google_error_prone/">Com utilitzar Google Error-Prone</a></p></li>
+
+<li><p><a href="/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/">Com instal·lar les VBOX guest additions</a></p></li>
+
+<li><p><a href="/howtos/2021-01-02-Howto-spring_cors/">Com permetre l&rsquo;intercanvi creuat de recursos (CORS)</a></p></li>
+
+<li><p><a href="/howtos/2020-10-08-Definir_handler_exception_personalitzat/">Com definir handler exception personalitzat</a></p></li>
+
+<li><p><a href="/howtos/2020-09-30-Personalitzar_validacio_token_jwt/">Com personalitzar les validacions del token JWT</a></p></li>
+
+<li><p><a href="/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/">Com canviar el domini on està allotjat el plugin de l&rsquo;eclipse</a></p></li>
+
+<li><p><a href="/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/">Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó</a></p></li>
+
+<li><p><a href="/howtos/2019-08-13-Howto-Dependency-check/">Comprovació automàtica de dependències vulnerables per aplicacions Canigó</a></p></li>
+
+<li><p><a href="/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/">Com implementar tests unitaris amb Webflux a Canigó 3.4</a></p></li>
+
+<li><p><a href="/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/">Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó</a></p></li>
+
+<li><p><a href="/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/">Com configurar i utilitzar IronPort a una aplicació Canigó</a></p></li>
+
+<li><p><a href="/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/">Resolució problema optimització Spring a Canigó 2</a></p></li>
+
+<li><p><a href="/howtos/2019-04-Howto-afegir_dev_tools_spring/">Afegir les dev tools de Spring a Canigó 3.4.0</a></p></li>
+
+<li><p><a href="/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/">Test unitaris amb programació reactiva a Canigó 3.4</a></p></li>
+
+<li><p><a href="/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/">Actualitzar aplicació de Canigó 3.2 a Canigó 3.4</a></p></li>
+
+<li><p><a href="/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile">Definició sondes per aplicacions Canigó a AppAgile</a></p></li>
+
+<li><p><a href="/howtos/2018-11-Howto-Canigo3-HikariCP">Ús de Hikari CP a Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2018-10-10-HowTo-Canigo-Java8/">Migració Canigó 3 de Java 7 a Java 8</a></p></li>
+
+<li><p><a href="/howtos/2018-09-Howto-MongoDB/">Configuració de MongoDB a Canigó 3.2.6</a></p></li>
+
+<li><p><a href="/howtos/2018-08-Canigo-SAML/">Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2018-04-howto-frontend-multientorn/">Propietats Multientorn al Front-End</a></p></li>
+
+<li><p><a href="/howtos/2018-02-howto-swagger_soapui/">Jocs de proves API REST</a></p></li>
+
+<li><p><a href="/howtos/2018-01-howto-test_jars_canigo/">Proves Unitàries Mòduls de Canigó</a></p></li>
+
+<li><p><a href="/howtos/2017-12-howto-integracio_canigo_sic/">Integració d&rsquo;una aplicació Canigó a SIC 2.0</a></p></li>
+
+<li><p><a href="/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/">Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/">Ús de Spring Cache (Caffeine) en Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/">Actualització aplicació de Canigó 3.1 a Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere">Desplegar aplicació Canigó 3.2 en IBM Websphere 8.5.x</a></p></li>
+
+<li><p><a href="/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl">Connectar amb una BBDD Mongo amb SSL a través de NodeJS</a></p></li>
+
+<li><p><a href="/howtos/2017-04-Batch-inserts-updates-canigo32">Inserció/actualització massiva de dades a una aplicació Canigó 3.2</a></p></li>
+
+<li><p><a href="/howtos/2017-03-Securitzar_ElasticSearch_Apache">Securitzar accés a Elasticsearch des d&rsquo;una pàgina web</a></p></li>
+
+<li><p><a href="/howtos/2016-11-Howto-Canigo-JWT">Autenticació amb JWT a una aplicació Canigó 3.1</a></p></li>
+
+<li><p><a href="/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals">Gestió d&rsquo;errors a una aplicació Canigó 3.1</a></p></li>
+
+<li><p><a href="/howtos/2016-10-Howto-Canigo-Spring-Batch">Spring Batch en aplicació Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Howto - Swagger_en_aplicacio_Canigo_3_1.pdf">Swagger en aplicació Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Howto - Desplegament aplicacio Canigo 3.1 en Docker.pdf">Desplegament aplicació Canigo 3.1 en Docker</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Howto - Contenidor GICAR en entorns de desenvolupament.pdf">Contenidor Docker GICAR a Canigó en entorns de desenvolupament</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Incorporacio modul Administracio de logs a aplicacio Canigo 3.pdf">Incorporació Mòdul Administració de logs a aplicació Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Analisi aplicacio Canigo amb Sonar.pdf">Anàlisi d&rsquo;aplicació Canigó 3.1 amb Sonar</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Websockets a Canigo 3.1.pdf">Websockets a Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Streaming de fitxers en clients REST.pdf">Streaming de fitxers en clients REST a Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Actualitzacio Connectors PICA.pdf">Actualització connectors de Canigó amb la PICA</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - HowTo - Execucio demo Equipaments al nou Entorn de Treball.pdf">Execució demo Equipaments al nou Entorn de Treball de Canigó</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - HowTo - Certificació desplegaments d'aplicacions Canigó a Websphere 8.5.pdf">Certificació desplegaments d&rsquo;aplicacions Canigó 3.X a Websphere 8.5</a></p></li>
+
+<li><p><a href="/related/canigo/howto/SIC-Custodia_i_control_de_versions_del_codi_de_les_aplicacions.pdf">Custòdia i control de versions del codi de les aplicacions al SIC</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf">Generació aplicació Canigó 3.1 amb plugin d&rsquo;Eclipse</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - HowTo - Aplicacio Canigo 3.1 sense frontend.pdf">Aplicació Canigó 3.1 sense frontend</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo - Us de relacions Lazy en aplicacions REST.pdf">Ús de relacions lazy a entitats de domini en serveis REST</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigó - Configuració GICAR-CORS amb Apache en aplicacions REST_HTML5_JS.pdf">Configuració GICAR i CORS amb proxy invers Apache en aplicacions REST+HTML5/JS</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigó - Configuració autenticació bàsica a Canigó 3.1.pdf">Configuració autenticació bàsica a Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigó - Howto - Integració Recaptcha.pdf">Integració Recaptcha</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigó - Howto - Configuració de Canigo LOPD.pdf">Configuració de Canigo LOPD</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigó - Howto - Us checkstyle pmd i findbugs en entorns de desenvolupament.pdf">Us checkstyle pmd i findbugs en entorns de desenvolupament</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Actualitzacio+Canig%C3%B3+3.0+a+Canigo+3.1.pdf">Actualització Canigó 3.0 a Canigó 3.1</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Plantilla+Canigo+amb+Primefaces.pdf">Configuració plantilla canigó amb Primefaces</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Configuraci%C3%B3+scope+view+JSF+a+Spring+3.pdf">Configuració scope view JSF a Spring 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+AOP+i+AspectJ+amb+Canig%C3%B3+3.pdf">AOP i AspectJ a Canigó 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Configuraci%C3%B3+fil+d%27ariadna+a+Canig%C3%B33.pdf">Configuració fil d&rsquo;Ariadna a Canigó 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Men%C3%BA+Lateral+amb+Recordatori+d%27estat.pdf">Menú Lateral amb estat a Canigó 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Validacions+amb+Java+Bean+Validation+%28JSR-303%29.pdf">Validacions amb Java Bean Validation (JSR-303)</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Llistats+paginables+a+servidor+amb+Canig%C3%B3+3.pdf">Llistats paginables a servidor amb Canigó 3 </a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Joc+de+car%C3%A0cters+en+aplicacions+Canig%C3%B3+3.pdf">Joc de caràcters en aplicacions Canigó 3 </a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Upload+de+fitxers+a+Canig%C3%B3+3.pdf">Upload de fitxers a Canigó 3 </a></p></li>
+
+<li><p><a href="/related/canigo/howto/howto_crud_jsf2.zip">Generació de CRUDs amb JSF 2 </a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Gesti%C3%B3+d%27excepcions+amb+JSF+2.pdf">Gestió d&rsquo;excepcions amb JSF 2</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Exemple+d%27arquitectura+servidor+i+clients+desacoblats.pdf">Exemple d&rsquo;arquitectura servidor i clients desacoblats</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Generaci%C3%B3+d%27informes+amb+JasperReports.pdf">Generació d&rsquo;informes amb JasperReports</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Generaci%C3%B3+de+codis+de+barres.pdf">Generació de codis de barres</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Configuraci%C3%B3+slave+Windows+a+Jenkins.pdf">Configuració slave Windows a Jenkins</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Implementaci%C3%B3+CRUD+amb+servei+REST+i+JQuery.pdf">Implementació CRUD amb serveis REST i JQuery</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Mavenitzaci%C3%B3+d%27aplicacions+Android.pdf">Mavenització d&rsquo;aplicacions Android</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf">Custòdia i control de versions del codi de les aplicacions</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Generaci%C3%B3+de+gr%C3%A0fiques+amb+Primefaces+a+Canig%C3%B3+3.pdf">Generació de gràfiques amb Primefaces a Canigó 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo.+YUI+Compressor+al+SIC.pdf">Canigó - HowTo + YUI Compressor al SIC</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo++Creaci%C3%B3+d%27un+client+CXF+STD.pdf">Creació d&rsquo;un client CXF per l&rsquo;STD</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo.+Creaci%C3%B3+EAR+en+un+sol+pas.pdf">Creació EAR&rsquo;s en un sol pas</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo.Desplegament+Scripts+de+BBDD+en+INT.pdf">Desplegament Scripts de BBDD en INT</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo.+Personalitzaci%C3%B3+de+la+Instrumentaci%C3%B3+Canig%C3%B33.pdf">Instrumentació de Canigó 3 custom</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo++Operativa+Eina+de+creaci%C3%B3+de+projectes+Canig%C3%B3.pdf">Eina de Generació de Projectes Canigó 3</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto+Canigo3+-+WURFL_v1+3.pdf">WURFL</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo+-+Mavenitzaci%C3%B3+aplicacions+basades+en+scripts+ANT.pdf">Mavenització d&rsquo;aplicacions basades en scripts d&rsquo;ANT.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto+-+Configuraci%C3%B3+de+Webservices+MTOM.pdf">Configuració de Webservices per MTOM.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Upgrade+Weblogic+10g.pdf">Upgrade Weblogic 10g.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto - Crides webservices segurs SSL.pdf">Crides webservices segurs SSL.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto+-+Millora+entorn+desenvolupament.pdf">Millora entorn desenvolupament.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-++%C3%9As+d%3Feines+d%3Fincrement+de+la+productivitat+per+l%3Fentorn+de+treball+de+Canig%C3%B3.pdf">Ús d&rsquo;eines d&rsquo;increment de la productivitat per l&rsquo;entorn de treball de Canigó.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Tomcat+6.pdf">Tomcat 6.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Directrius+J2EE.pdf">Directrius J2EE.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/HowTo.Pujar+la+versi%C3%B3+de+Hibernate+a+3.2.6.ga.pdf">HowTo - Upgrade Hibernate 3.2.6.ga a Canigó 1.4.x.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Empaquetat+en+format+EAR.pdf">HowTo - Empaquetat en format EAR.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Construcci%C3%B3+de+projectes+amb+Maven.pdf">HowTo - Construcció de projectes amb Maven.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto+-+Utilitzaci%C3%B3+Proxy+Servei+Framework.pdf">Accés a WebServices externs des de la Xarxa XCAT.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Com+fer+upgrade+a+Servlet+2.4+i+JSP+2.0+%28J2EE+1.4%29.pdf">HowTo - Com fer upgrade a Servlet 2.4 i JSP 2.0 (J2EE 1.4)</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Com+pujar+la+versi%C3%B3+de+Hibernate+a+3.2.6.ga.pdf">Com pujar la versió de Hibernate a 3.2.6.ga.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+GICAR+v2.pdf">Integració amb Gicar</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+que+fer+si+els+missatges+d%27excepci%C3%B3+de+Hibernate+no+arriben+correctament.pdf">Què fer si els missatges d&rsquo;excepció d&rsquo;Hibernate no arriben correctament</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+mostrar+excepcions+produides+en+fase+de+renderitzat+.pdf">mostrar excepcions produides en fase de renderitzat .pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+WebServices-v1.1.pdf">Publicació i invocació de WebServices</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Generaci%C3%B3+i+visualitzaci%C3%B3+de+Traces.pdf">HowTo - Generació i visualització de Traces.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Com+securitzar+els+m%C3%A8todes+de+negoci.pdf">HowTo - Com securitzar els mètodes de negoci.pdf</a>&nbsp;</p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+Com+definir+tests+en+context+Spring.pdf">Com definir tests en context Spring.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canigo+-+HowTo+-+com+fer+paginacio+amb+grans+volums+de+dades.pdf">HowTo - com fer paginacio amb grans volums de dades.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Joc+de+Car%C3%A0cters+en+aplicacions+Canig%C3%B3.pdf">Joc de Caràcters en aplicacions Canigó.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+An%C3%A0lisi+d%27Utilitzaci%C3%B3+de+Mem%C3%B2ria.pdf">Anàlisi d&rsquo;Utilització de Memòria.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Integracio+Continua.pdf">Integracio Continua.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+d%27an%C3%A0lisi+de+rendiment+web.pdf">Eines d&rsquo;anàlisi de rendiment web.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+de+compressi%C3%B3+JavaScript.pdf">Eines de compressió JavaScript.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Antivirus.docx">Antivirus.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Transformaci%C3%B3+ppk+a+openssh.docx">Transformació ppk a openSSH.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+de+visualitzaci%C3%B3+del+GC.pdf">Eines de visualització del GC.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Eines+Intercepci%C3%B3+de+peticions.pdf">Eines Intercepció de peticions http.pdf</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Canig%C3%B3+-+HowTo+-+Entorn+Treball.pdf">Entorn Treball</a></p></li>
+
+<li><p><a href="/related/canigo/howto/Howto+-+Generaci%C3%B3+Crud+Canig%C3%B33.zip?version=2">Generació de CRUD Canigó 3</a> <a href="http://dl.dropbox.com/u/6456567/Videos%20Generaci%C3%B3%20CRUD.zip">Descarregar ScreenCast</a></p></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

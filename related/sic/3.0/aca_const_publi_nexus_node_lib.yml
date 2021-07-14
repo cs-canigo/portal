@@ -1,0 +1,27 @@
+version: 2.0.0
+info:
+  description: Lib node test uploader
+global-env:
+  - PUBLISH_PARAMS: 'dist/prova-node-library'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-10
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - npm install
+              - npm run-script build:prova-node-library
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]
+

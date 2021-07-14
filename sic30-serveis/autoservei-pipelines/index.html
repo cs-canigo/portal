@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Autoservei de pipelines</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Autoservei de pipelines\" />");
+		document.write("<meta name=\"description\" content=\"L\x27Autoservei de pipelines permet als proveïdors d\x27aplicacions ser autònoms per a integrar al SIC les seves aplicacions.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic30-serveis">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+    
+    <a href="/sic-serveis/">
+        
+
+        Serveis
+
+        
+    </a></li>
+    
+
+	
+	<li><a href="/sic30-serveis/">
+		
+
+		Serveis (SIC 3.0)
+
+		
+	</a>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Autoservei de pipelines
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 20-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#motivació">Motivació</a></li>
+<li><a href="#requeriments-generals">Requeriments generals</a></li>
+<li><a href="#funcionament">Funcionament</a>
+<ul>
+<li><a href="#configuració">Configuració</a></li>
+<li><a href="#generació-de-pipelines">Generació de pipelines</a></li>
+<li><a href="#tecnologies-compatibles">Tecnologies compatibles</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;Autoservei de pipelines permet la <strong>generació automàtica de pipelines d&rsquo;automatització de la construcció i del desplegament de les aplicacions</strong> sense, en molts casos,
+la intervenció de l&rsquo;equip del SIC. D&rsquo;aquesta manera, els equips de cada codi d&rsquo;aplicació són autònoms per a preparar i mantenir la construcció de la pipeline de desplegament
+associada a cada projecte repositat al Sistema de Custòdia de Codi (Gitlab).</p>
+
+<p>A continuació, entrarem en més detall sobre com funciona aquest nou servei que ofereix el SIC.</p>
+
+<h2 id="motivació">Motivació</h2>
+
+<p>Cobreix les següents necessitats:</p>
+
+<ul>
+<li>Dotar de <strong>flexibilitat i independència</strong> als principals actors que intervenen en la construcció i els desplegaments de les aplicacions.</li>
+<li><strong>Incrementar ràpidament el grau d’integració al SIC de les aplicacions</strong> evitant traspassos innecessaris d&rsquo;informació i responsabilitats.</li>
+<li>Proporcionar un <strong>nivell d&rsquo;abstracció</strong> que permeti ser independent de les tecnologies emprades i permeti evolucionar el producte mantenint compatibilitat amb versions anteriors.</li>
+<li>Proporcionar un <strong>entorn aïllat i immutable de construcció</strong>, que a més pugui ser utilitzat i testejat pels mateixos proveïdors.</li>
+<li>Facilitar la cobertura de tecnologies contemplant l’ús d’<strong>imatges Docker pròpies</strong> dels lots d’aplicacions.</li>
+<li><strong>Acomplir les directrius</strong> de CTTI sobre desplegaments i gestió de canvis.</li>
+</ul>
+
+<p>La solució ha de:</p>
+
+<ul>
+<li>Ser <strong>natural</strong> per als usuaris del servei.</li>
+<li>Permetre definir <strong>tot el necessari</strong> per a construir i desplegar l’aplicació.</li>
+<li>Donar cobertura a <strong>totes les tecnologies</strong> amb les que el SIC és actualment compatible.</li>
+<li>Ser <strong>mantenible, escalable i eficient</strong>.</li>
+</ul>
+
+<h2 id="requeriments-generals">Requeriments generals</h2>
+
+<p>S&rsquo;estableixen una sèrie de requeriments per a estar en disposició d&rsquo;integrar l&rsquo;aplicació mitjançant aquest servei:</p>
+
+<ul>
+<li>Conèixer els <strong>entorns</strong> on es desplegarà l&rsquo;aplicació i les <a href="/sic30-serveis/ci/#modalitats-de-desplegament"><strong>modalitats de desplegament</strong></a> aplicables en cada cas.</li>
+<li>L&rsquo;aplicació <a href="/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció"><strong>ha de ser integrable</strong></a> amb el servei d&rsquo;automatització de la construcció i desplegament.</li>
+<li>Aplicació <a href="/sic30-guies/preparar-aplicacio/"><strong>ha d&rsquo;estar preparada i acomplir els requeriments</strong></a> per a poder ser desplegada.</li>
+<li>Per als entorns amb modalitat de desplegament automàtic o delegat a Cpd, disposar dels <strong>identificadors d&rsquo;infraestructures</strong> de desplegament que proporcionarà l&rsquo;equip SIC o Cpd (respectivament).</li>
+<li><strong>Col·laboració</strong>: el proveïdor d&rsquo;aplicacions i el proveïdor d&rsquo;infraestructures han d&rsquo;estar disposats a col·laborar i mantenir una comunicació.</li>
+</ul>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<p>Generalment, a cada codi d&rsquo;aplicació li correspon un proveïdor d&rsquo;aplicacions i un proveïdor d&rsquo;infraestructures.
+Aquests dos equips <strong>han de participar i col·laborar</strong> per tal d&rsquo;utilitzar l&rsquo;autoservei de pipelines del SIC aportant
+la informació necessària de la qual cadascun és responsable.</p>
+
+<ul>
+<li><strong>Arxiu de Configuració d’Aplicació (ACA)</strong></li>
+<li><strong>Arxiu de Configuració d’Infraestructura (ACI)</strong></li>
+</ul>
+
+<p>El funcionament previst és el següent:</p>
+
+<ul>
+<li>Els <strong>proveïdors d&rsquo;aplicacions aportaran el seu propi arxiu de configuració (ACA)</strong>.</li>
+<li>Els <strong>proveïdors d&rsquo;infraestructures aportaran el seu propi arxiu de configuració (ACI)</strong> requerit únicament quan l&rsquo;aplicació es desplega en modalitat automàtica.</li>
+<li>Únicament quan es creïn o modifiquin aquests arxius de configuració, s&rsquo;invocarà al sistema de generació de pipelines que s&rsquo;encarregarà de recuperar la informació necessària
+i generar (o regenerar) la pipeline de construcció i desplegament de l&rsquo;aplicació.</li>
+</ul>
+
+<p><img src="/images/news/AutoserveiJobs-Funcionament.png" alt="Pipeline del SIC" />
+</br></p>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>Pel que fa a l&rsquo;<strong>Arxiu de Configuració de l&rsquo;Aplicació (ACA)</strong>, la informació quedarà recollida a l&rsquo;arxiu <code>/sic/aca.yml</code> dins del repositori del projecte.
+Es tracta d&rsquo;un arxiu requerit per Autoservei de Pipelines, en format YAML, en el que s&rsquo;ha d&rsquo;aportar la següent informació:</p>
+
+<ul>
+<li><p><strong>Version</strong>: versió de l&rsquo;arxiu (independent de la versió de l&rsquo;aplicació o component) que es correspondrà amb els canvis en les especificacions
+de construcció i/o desplegament.</p></li>
+
+<li><p><strong>Info</strong>: informació sobre l&rsquo;aplicació o component, incloent-hi la seva versió funcional i una descripció.</p></li>
+
+<li><p><strong>Global-env</strong>: llistat de variables globals necessàries per al desplegament de l&rsquo;aplicació o component.</p></li>
+
+<li><p><strong>Components</strong>: informació per a la construcció, publicació i desplegament de l&rsquo;aplicació o component</p></li>
+
+<li><p><strong>Notifications</strong>: definició d&rsquo;adreces de correu electrònic on es notificarà la necessitat d&rsquo;accions manuals i/o resultats de l&rsquo;execució.</p></li>
+</ul>
+
+<p>Per a més informació: <a href="/sic30-guies/fitxer-aca/">Com construir el fitxer ACA</a>
+<br/></p>
+
+<h3 id="generació-de-pipelines">Generació de pipelines</h3>
+
+<p>Aquest servei s&rsquo;encarregarà de generar automàticament totes les pipelines necessàries, tant per al <strong>desplegament del component o aplicació com
+altres pipelines per a dur a terme les operacions necessàries sobre plataformes cloud</strong>. Aquestes pipelines es generaran dins d&rsquo;un directori diferenciat
+<code>/Advanced</code> dins del directori de tasques Jenkins associat al projecte i seran les següents:</p>
+
+<ul>
+<li><p><strong>DEPLOY-START</strong>: permet iniciar el servei.</p></li>
+
+<li><p><strong>DEPLOY-STOP</strong>: permet aturar el servei.</p></li>
+
+<li><p><strong>DEPLOY-RESTART</strong>: permet aturar i tornar a iniciar el servei.</p></li>
+
+<li><p><strong>DEPLOY-DESCRIPTORS</strong>: permet desplegar canvis en els descriptors (noves variables d&rsquo;entorn, canvis en la configuració i altres)
+sense fer la construcció i desplegament de la imatge.</p></li>
+
+<li><p><strong>DEPLOY-ALL</strong>: permet fer un desplegament complet davant canvis en l&rsquo;aplicació, orquestradors i/o descriptors.</p></li>
+
+<li><p><strong>DEPLOY-TAG</strong>: permet redesplegar un determinat tag de la imatge de l&rsquo;aplicació que s&rsquo;hagi desplegat amb èxit a producció (v.x.y.z-PR)
+concebuda per a poder fer un <em>rollback</em> a una versió anterior.</p></li>
+</ul>
+
+<p>Per altra banda, cal comentar que es generaran les pipelines internes dedicades a certes tasques comunes i que seran executades
+per la pipeline principal. Aquestes pipelines no seran visibles per l&rsquo;usuari i són les següents:</p>
+
+<ul>
+<li><p><strong>DEPLOYER</strong>: s&rsquo;encarrega del desplegament de l&rsquo;aplicació als diferents entorns de rebuda. Serà invocada per la pipeline principal per al
+desplegament de cada component a cada un dels entorns.</p></li>
+
+<li><p><strong>CLEANER</strong>: s&rsquo;encarrega de l&rsquo;esborrat d&rsquo;espais de treball. Serà invocada per la pipeline principal en finalitzar.</p></li>
+</ul>
+
+<h3 id="tecnologies-compatibles">Tecnologies compatibles</h3>
+
+<p>Veure: <a href="/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció">Matriu de tecnologies</a></p>
+
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
+</div>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic30-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

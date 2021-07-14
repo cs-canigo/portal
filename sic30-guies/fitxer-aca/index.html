@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Com construir el fitxer ACA</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Com construir el fitxer ACA\" />");
+		document.write("<meta name=\"description\" content=\"Guia per a la preparació del fitxer ACA del projecte per a l’ús de l\x27Autoservei de Pipelines\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic30-guies">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	
+    <a href="/sic-guies/">
+        
+
+        Guies
+
+        
+    </a></li>
+    
+	
+	
+	<li><a href="/sic30-guies/">
+		
+
+		Guies (SIC 3.0)
+
+		
+	</a>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Com construir el fitxer ACA
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 20-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#format-i-ubicació">Format i ubicació</a></li>
+<li><a href="#configuració">Configuració</a>
+<ul>
+<li><a href="#version">version</a></li>
+<li><a href="#info">info</a>
+<ul>
+<li><a href="#info-version">info.version</a></li>
+<li><a href="#info-description">info.description</a></li>
+</ul></li>
+<li><a href="#global-env">global-env</a>
+<ul>
+<li><a href="#per-al-desplegament-a-l-openshift">Per al <strong>desplegament a l&rsquo;Openshift</strong>:</a></li>
+<li><a href="#per-al-desplegament-a-kubernetes-ibmcloud-i-caas">Per al <strong>desplegament a Kubernetes IBMCloud i CaaS</strong>:</a></li>
+<li><a href="#per-al-desplegament-a-webapp-azure">Per al <strong>desplegament a WebApp Azure</strong>:</a></li>
+<li><a href="#per-al-desplegament-a-swarmme">Per al <strong>desplegament a SwarmMe</strong>:</a></li>
+<li><a href="#per-al-desplegament-a-l-api-manager">Per al <strong>desplegament a l’Api Manager</strong>:</a></li>
+<li><a href="#per-al-desplegament-al-cloudfoundry-ibmcloud">Per al <strong>desplegament al CloudFoundry IBMCloud</strong>:</a></li>
+<li><a href="#per-a-la-publicació-de-llibreries-al-repositori">Per a la <strong>publicació de llibreries</strong> al repositori:</a></li>
+<li><a href="#exemple">Exemple</a></li>
+</ul></li>
+<li><a href="#components-custom-builder">components[].custom-builder</a>
+<ul>
+<li><a href="#components-custom-builder-steps-container">components[].custom-builder.steps[].container</a></li>
+</ul></li>
+<li><a href="#components-build">components[].build</a>
+<ul>
+<li><a href="#components-build-steps-container">components[].build.steps[].container</a>
+<ul>
+<li><a href="#components-build-steps-container-image">components[].build.steps[].container.image</a></li>
+<li><a href="#components-build-steps-container-resources">components[].build.steps[].container.resources</a></li>
+</ul></li>
+<li><a href="#components-build-steps-execution">components[].build.steps[].execution</a></li>
+<li><a href="#exemple-1">Exemple</a></li>
+</ul></li>
+<li><a href="#components-deployment">components[].deployment</a>
+<ul>
+<li><a href="#components-deployment-enviroments">components[].deployment.enviroments[]</a>
+<ul>
+<li><a href="#components-deployment-enviroments-actions-before-deploy">components[].deployment.enviroments[].actions.before-deploy</a></li>
+<li><a href="#components-deployment-enviroments-actions-deploy">components[].deployment.enviroments[].actions.deploy</a>
+<ul>
+<li><a href="#per-al-desplegament-a-l-openshift-i-kubernetes-ibmcloud-i-caas">Per al <strong>desplegament a l’Openshift i Kubernetes IBMCloud i CaaS</strong></a></li>
+<li><a href="#per-al-desplegament-a-webapp-azure-1">Per al <strong>desplegament a WebApp Azure</strong></a></li>
+<li><a href="#per-al-desplegament-a-swarmme-1">Per al <strong>desplegament a SwarmMe</strong></a></li>
+<li><a href="#per-al-desplegament-a-l-api-manager-1">Per al <strong>desplegament a l’Api Manager</strong></a></li>
+<li><a href="#per-al-desplegament-al-cloudfoundry-ibmcloud-1">Per al <strong>desplegament al CloudFoundry IBMCloud</strong></a></li>
+<li><a href="#per-exemple-per-al-desplegament-a-l-entorn-de-preproducció-a-l-openshift">Per exemple, per al desplegament a l&rsquo;entorn de Preproducció a l’Openshift:</a></li>
+</ul></li>
+<li><a href="#components-deployment-enviroments-actions-after-deploy">components[].deployment.enviroments[].actions.after-deploy</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#notifications">notifications</a></li>
+</ul></li>
+<li><a href="#validació">Validació</a></li>
+<li><a href="#exemples">Exemples</a></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Dins el sistema d&rsquo;Integració Contínua, el SIC proporciona un servei mitjançant el qual es poden <strong>generar automàticament
+pipelines de construcció i desplegament d&rsquo;aplicacions</strong>,
+amb el treball col·laboratiu dels proveïdors d&rsquo;aplicacions i d&rsquo;infraestructures i sense la intervenció de l&rsquo;equip del SIC.</p>
+
+<p>En aquest article <strong>ens centrarem exclusivament en explicar com preparar l’arxiu ACA (Arxiu de Configuració d&rsquo;Aplicacions)</strong>.
+Si voleu més informació sobre el funcionament d&rsquo;aquest servei, els requeriments que cal acomplir i altres, podeu consultar
+la secció
+<a href="/sic30-serveis/autoservei-pipelines/"><strong>Autoservei de pipelines</strong></a> on s&rsquo;explica de forma detallada.</p>
+
+<h2 id="format-i-ubicació">Format i ubicació</h2>
+
+<p>El proveïdor d’aplicacions haurà de configurar l&rsquo;arxiu <code>/sic/aca.yml</code> dins del repositori del projecte (al primer nivell
+de carpeta).
+Es tracta d’un arxiu de text en <strong>format YAML</strong> en el que cal indicar tota la informació necessària per a la construcció i
+desplegament de l’aplicació o component.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>L&rsquo;arxiu ha de tenir la següent <strong>estructura general</strong>:</p>
+
+<pre><code>version
+info
+global-env
+components:
+  - custom-builder
+    build
+    deployment
+notifications
+</code></pre>
+
+<h3 id="version">version</h3>
+
+<p>Caldrà indicar la versió de l’arxiu ACA. Aquesta versió segueix un versionat diferent del de l’aplicació o component, ja que
+cada increment de versió es correspondrà amb canvis en les especificacions de construcció i/o desplegament. El seu valor ha
+de seguir el format estàndard: <code>&lt;versioMajor&gt;.&lt;versioMenor&gt;.&lt;pegat&gt;</code>. La versió actual és:</p>
+
+<pre><code>version: 2.0.0
+</code></pre>
+
+<h3 id="info">info</h3>
+
+<p>Aquest element contindrà informació general del component:</p>
+
+<pre><code>info:
+  version
+  description
+</code></pre>
+
+<h4 id="info-version">info.version</h4>
+
+<p>Versió funcional de l’aplicació o component que ha d’acomplir l’<a href="https://qualitat.solucions.gencat.cat/estandards/estandard-versions-programari">Estàndard de versions</a>.
+Per exemple:</p>
+
+<pre><code>info:
+  version: 1.0.0
+</code></pre>
+
+<h4 id="info-description">info.description</h4>
+
+<p>Descripció de l&rsquo;aplicació o component. Es tracta d’un camp de lliure contingut. Per exemple:</p>
+
+<pre><code>info:
+  description: Backend de l'aplicació de Gestió de Continguts CTTI
+</code></pre>
+
+<h3 id="global-env">global-env</h3>
+
+<p>Relació de variables globals necessàries per a l’execució de la pipeline. Les variables requerides en cada cas
+dependran de les necessitats de desplegament aplicant els següents criteris:</p>
+
+<h4 id="per-al-desplegament-a-l-openshift">Per al <strong>desplegament a l&rsquo;Openshift</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CONTAINER_DOCKERFILE_PATH</td>
+<td>Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l&rsquo;aplicació a desplegar a Openshift</td>
+</tr>
+
+<tr>
+<td>CONTAINER_IMAGE_NAME</td>
+<td>Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift</td>
+</tr>
+
+<tr>
+<td>DEPLOYMENT_TYPE</td>
+<td>Tipus de desplegament a Openshift. Possibles valors: <strong>DeploymentConfig</strong>, <strong>Deployment</strong> i <strong>StatefulSet</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-al-desplegament-a-kubernetes-ibmcloud-i-caas">Per al <strong>desplegament a Kubernetes IBMCloud i CaaS</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CONTAINER_DOCKERFILE_PATH</td>
+<td>Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l&rsquo;aplicació a desplegar a Kubernetes</td>
+</tr>
+
+<tr>
+<td>CONTAINER_IMAGE_NAME</td>
+<td>Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes</td>
+</tr>
+
+<tr>
+<td>DEPLOYMENT_TYPE</td>
+<td>Tipus de desplegament a Kubernetes. Possibles valors: <strong>Deployment</strong> i <strong>StatefulSet</strong></td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-al-desplegament-a-webapp-azure">Per al <strong>desplegament a WebApp Azure</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CONTAINER_DOCKERFILE_PATH</td>
+<td>Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l&rsquo;aplicació a desplegar a WebApp Azure</td>
+</tr>
+
+<tr>
+<td>CONTAINER_IMAGE_NAME</td>
+<td>Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-al-desplegament-a-swarmme">Per al <strong>desplegament a SwarmMe</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CONTAINER_DOCKERFILE_PATH</td>
+<td>Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l&rsquo;aplicació a desplegar a SwarmMe</td>
+</tr>
+
+<tr>
+<td>CONTAINER_IMAGE_NAME</td>
+<td>Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-al-desplegament-a-l-api-manager">Per al <strong>desplegament a l’Api Manager</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>APIC_PRODUCT_FILE</td>
+<td>Ruta i nom del fitxer descriptor per al desplegament de l&rsquo;aplicació a l’Api Manager</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-al-desplegament-al-cloudfoundry-ibmcloud">Per al <strong>desplegament al CloudFoundry IBMCloud</strong>:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CF_BUILDPACK</td>
+<td>BuildPack utilitzat per a preparar l&rsquo;aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d&rsquo;elements del <a href="https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/">Catàleg xPaaS</a></td>
+</tr>
+
+<tr>
+<td>CF_PATH</td>
+<td>Path de l&rsquo;artefacte a desplegar al CloudFoundry</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="per-a-la-publicació-de-llibreries-al-repositori">Per a la <strong>publicació de llibreries</strong> al repositori:</h4>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>PUBLISH_PARAMS</td>
+<td>Paràmetres necessaris per a la publicació de llibreries. El valor dependrà de la tecnologia de construcció</td>
+</tr>
+</tbody>
+</table>
+
+<p>On:</p>
+
+<ul>
+<li><p>En el cas de <strong>Maven</strong> s’executarà la comanda <code>mvn deploy ${PUBLISH_PARAMS}</code> per la qual cosa haurem d’indicar la ruta
+del fitxer <code>pom.xml</code>. Per exemple: <code>PUBLISH_PARAMS: -f ./pom.xml</code>.</p></li>
+
+<li><p>En el cas de <strong>Npm</strong> s’executarà la comanda <code>npm publish ${PUBLISH_PARAMS}</code> per la qual cosa haurem d’indicar la ruta
+de la llibreria. Per exemple: <code>PUBLISH_PARAMS: dist/lib</code>.</p></li>
+</ul>
+
+<p>En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
+automàticament a la comanda.</p>
+
+<h4 id="exemple">Exemple</h4>
+
+<p>Exemple de definició de variables per al desplegament a Openshift:</p>
+
+<pre><code>global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: petclinic-test-os
+  - DEPLOYMENT_TYPE: DeploymentConfig
+</code></pre>
+
+<h3 id="components-custom-builder">components[].custom-builder</h3>
+
+<p>Informació per a generar el contenidor que serà l&rsquo;encarregat de construir l&rsquo;aplicació o component. <strong>Només caldrà indicar
+aquesta secció en cas que l’aplicació o component no pugui fer ús del</strong> <a href="/sic30-serveis/cataleg-imatges/"><strong>Catàleg d’imatges</strong></a>
+perquè disposa de requeriments propis.
+En aquest cas, l’element indicarà els diferents passos (<code>steps</code>) per a generar el contenidor, proporcionant informació sobre
+aquest (<code>container</code>) i les accions a executar (<code>execution</code>). Les imatges podran estendre del Catàleg d’imatges corporatiu.</p>
+
+<h4 id="components-custom-builder-steps-container">components[].custom-builder.steps[].container</h4>
+
+<p>Informació per a construir la imatge del contenidor que s’encarregarà de la construcció de l&rsquo;aplicació o component (<code>custom builder</code>).
+Caldrà afegir l’element local (<code>local</code>) indicant:</p>
+
+<ul>
+<li><p><code>name</code>: nom que es desitja assignar a la imatge del contenidor</p></li>
+
+<li><p><code>path</code>: ruta del Dockerfile de la imatge del contenidor</p></li>
+</ul>
+
+<p>Per exemple:</p>
+
+<pre><code>components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                name: 7-768-arp-api-builder
+                path: builds/Dockerfile
+</code></pre>
+
+<p>El nom de la imatge (<code>name</code>) serà referenciada des de la secció de construcció (<code>build</code>).</p>
+
+<h3 id="components-build">components[].build</h3>
+
+<p>Relació de passes (<code>steps</code>) per a la construcció del projecte segons la següent estructura:</p>
+
+<pre><code>components:
+  - build:
+      steps:
+        - container
+          execution
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><p><code>container</code>: informació del contenidor encarregat de realitzar la construcció del projecte</p></li>
+
+<li><p><code>execution</code>: informació de les comandes que cal executar per a la construcció del projecte</p></li>
+</ul>
+
+<h4 id="components-build-steps-container">components[].build.steps[].container</h4>
+
+<p>Informació del contenidor encarregat de realitzar la construcció del projecte segons la següent estructura:</p>
+
+<pre><code>components:
+  - build:
+      steps:
+        - container:
+            image
+            resources
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><p><code>image</code>: informació de la imatge encarregada de realitzar la construcció del projecte</p></li>
+
+<li><p><code>resources</code>: recursos a assignar per a la correcta construcció del projecte (CPU i memòria)</p></li>
+</ul>
+
+<h5 id="components-build-steps-container-image">components[].build.steps[].container.image</h5>
+
+<p>Informació de la imatge a utilitzar per a la construcció del projecte segons la següent estructura.</p>
+
+<pre><code>components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote/local
+</code></pre>
+
+<p>La imatge pot ser de dos tipus:</p>
+
+<ul>
+<li><p><code>remote</code>: si la imatge del contenidor constructor (<code>builder</code>) és una de les imatges proporcionades al
+<a href="/sic30-serveis/cataleg-imatges/">Catàleg d’imatges corporatiu</a>.</p></li>
+
+<li><p><code>local</code>: si la imatge del contenidor constructor és pròpia (<code>custom builder</code>) creada en l’element
+<a href="#components-custom-builder"><code>components[].custom-builder</code></a>.</p></li>
+</ul>
+
+<p><strong>components[].build.steps[].container.image.remote</strong></p>
+
+<p>Imatge i versió del contenidor constructor (<code>builder</code>) que cal utilitzar d’entre les disponibles al
+<a href="/sic30-serveis/cataleg-imatges/"><strong>Catàleg d’imatges corporatiu</strong></a>.</p>
+
+<p>Caldrà definir el nom de la imatge (<code>name</code>) segons la següent estructura:</p>
+
+<pre><code>components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name
+</code></pre>
+
+<p><strong>components[].build.steps[].container.image.local</strong></p>
+
+<p>Imatge del contenidor constructor pròpia (custom builder) creada en l’element <a href="#components-custom-builder">components[].custom-builder</a>.
+Caldrà definir el nom de la imatge (<code>name</code>) segons la següent estructura:</p>
+
+<pre><code>components:
+    build:
+      steps:
+        - container:
+            image:
+              local:
+                name
+</code></pre>
+
+<h5 id="components-build-steps-container-resources">components[].build.steps[].container.resources</h5>
+
+<p>Recursos de màquina necessaris per a que el contenidor pugui dur a terme la construcció del projecte. Es definiran els
+recursos de CPU i memòria del contenidor, tant de <code>limits</code> (recursos màxims) com de <code>request</code> (recursos mínims), segons
+la següent estructura:</p>
+
+<pre><code>components:
+    build:
+      steps:
+        - container:
+            resources:
+              limits:
+                cpu
+                memory
+              requests:
+                cpu
+                memory
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><p><code>cpu</code>: recursos de CPU mesurats en <em>unitats de CPU</em>. 1 CPU equival a 1 vCPU/Core per a plataformes cloud i 1 hyperthread
+a plataformes on premise. Es permeten sol·licituds fraccionades, per tant, si especifiquem 0.5 equival a la meitat de CPU que un que demana 1 CPU. L&rsquo;expressió 0.1 equival a l&rsquo;expressió 100m, que es pot llegir com &ldquo;cent milicpus&rdquo; o com a “cent milicores”. Es recomana utilitzar la unitat &ldquo;milicore&rdquo; tenint en compte que no es permet una precisió major que 1m.</p></li>
+
+<li><p><code>memory</code>: recursos de memòria mesurats en bytes. Podeu expressar la memòria amb un nombre sencer o com un nombre decimal
+fent ús d’aquests prefixos: G o M, o també podeu usar els equivalents en potencia de dos: Gi o Mi. Es recomana utilitzar la unitat &ldquo;Mi&rdquo;.</p></li>
+</ul>
+
+<div class="message information">
+Cal tenir present que hi ha un màxim de recursos permesos, de tal manera que si se superen es produiran erros en l’execució.
+Els valors màxims establerts són: <b>3072Mi</b> de memòria i <b>3000m</b> de CPU.
+</div>
+
+<p>Per a més informació sobre l’administració de recursos: <a href="https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/">https://kubernetes.io/es/docs/concepts/configuration/manage-resources-containers/</a>.
+</br></br></p>
+
+<h4 id="components-build-steps-execution">components[].build.steps[].execution</h4>
+
+<p>Relació de comandes (<code>commands</code>) que s&rsquo;han d&rsquo;executar al contenidor per a la construcció del projecte segons la següent estructura:</p>
+
+<pre><code>components:
+    build:
+      steps:
+        - execution:
+            commands
+</code></pre>
+
+<h4 id="exemple-1">Exemple</h4>
+
+<p>Exemple de construcció d&rsquo;una aplicació Maven 3.6 i Jdk 1.8:</p>
+
+<pre><code>components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - mvn clean package -Dmaven.test.skip=true
+</code></pre>
+
+<h3 id="components-deployment">components[].deployment</h3>
+
+<p>Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l&rsquo;aplicació a
+l&rsquo;OpenShift i Kubernetes, així com la relació d’entorns on es desplegarà l’aplicació (<code>enviroments</code>) segons la següent estructura:</p>
+
+<pre><code>components:
+  - deployment:
+      scm
+      environments
+</code></pre>
+
+<p>On <code>scm</code> indica el repositori on es troben ubicats els orquestradors per a dur a terme el desplegament de l&rsquo;aplicació.</p>
+
+<h4 id="components-deployment-enviroments">components[].deployment.enviroments[]</h4>
+
+<p>Informació sobre els entorns (<code>name</code>) i de quina manera es desplegarà l’aplicació (<code>actions</code>) segons la següent estructura:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name
+          actions
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><p><code>name</code>: nom de l&rsquo;entorn on es desplegarà l&rsquo;aplicació</p></li>
+
+<li><p><code>actions</code>: accions a realitzar per al desplegament de l&rsquo;aplicació diferenciant entre: <code>before-deploy</code>, <code>deploy</code> i <code>after-deploy</code></p></li>
+</ul>
+
+<h5 id="components-deployment-enviroments-actions-before-deploy">components[].deployment.enviroments[].actions.before-deploy</h5>
+
+<p>Informació sobre el possible pas previ al desplegament <code>before-deploy</code> concebut per a poder dur a terme tasques que
+calgui executar abans del desplegament com, per exemple, modificar l&rsquo;estat d&rsquo;un API Gateway. Aquest pas és <strong>compatible
+únicament amb plataformes Openshift i Kubernetes</strong> segons la següent estructura:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env
+</code></pre>
+
+<p>On caldrà indicar el detall de les execucions (<code>execution</code>) de cada pas (<code>steps</code>) a realitzar indicant les següents
+variables d’entorn:</p>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>JOB_NAME_PREFIX</td>
+<td>Prefix que se li assignarà a la tasca</td>
+</tr>
+
+<tr>
+<td>JOB_IMAGE</td>
+<td>Nom de la imatge a utilitzar</td>
+</tr>
+
+<tr>
+<td>JOB_WAIT</td>
+<td>Temps d&rsquo;espera de la tasca</td>
+</tr>
+
+<tr>
+<td>JOB_ENVS</td>
+<td>Variables d’entorn necessàries</td>
+</tr>
+</tbody>
+</table>
+
+<p>Per exemple:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=PREDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
+</code></pre>
+
+<h5 id="components-deployment-enviroments-actions-deploy">components[].deployment.enviroments[].actions.deploy</h5>
+
+<p>Informació sobre el desplegament de l’aplicació <code>deploy</code> segons la següent estructura:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env
+</code></pre>
+
+<p>On caldrà indicar el detall de les execucions (<code>execution</code>) de cada pas (<code>steps</code>) a realitzar indicant les variables
+requerides en cada cas i que dependran de les necessitats de desplegament aplicant els següents criteris:</p>
+
+<h6 id="per-al-desplegament-a-l-openshift-i-kubernetes-ibmcloud-i-caas">Per al <strong>desplegament a l’Openshift i Kubernetes IBMCloud i CaaS</strong></h6>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>DESCRIPTORS_PATH</td>
+<td>Ruta amb els descriptors en format YML dins el repositori definit a l’element <em>scm</em> de <a href="#components-deployment">components[].deployment</a> per a desplegar l&rsquo;aplicació a l’Openshift o Kubernetes</td>
+</tr>
+
+<tr>
+<td>DEPLOYMENT_NAME</td>
+<td>Nom de l&rsquo;aplicació a l’Openshift o Kubernetes</td>
+</tr>
+
+<tr>
+<td>DEPLOYMENT_WAIT</td>
+<td>Temps d&rsquo;espera per al desplegament de l&rsquo;aplicació a l’Openshift o Kubernetes</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="per-al-desplegament-a-webapp-azure-1">Per al <strong>desplegament a WebApp Azure</strong></h6>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>WEBAPP_NAME</td>
+<td>Nom de l&rsquo;aplicació al WebApp Azure</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="per-al-desplegament-a-swarmme-1">Per al <strong>desplegament a SwarmMe</strong></h6>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SWARMME_SERVICE_NAME</td>
+<td>Nom del servei al SwarmMe</td>
+</tr>
+
+<tr>
+<td>SWARMME_SERVICE_DOMAIN</td>
+<td>Domini del servei al SwarmMe</td>
+</tr>
+
+<tr>
+<td>SWARMME_SERVICE_PATH</td>
+<td>Ruta del servei al SwarmMe</td>
+</tr>
+
+<tr>
+<td>SWARMME_SERVICE_PORT</td>
+<td>Port del servei al SwarmMe</td>
+</tr>
+
+<tr>
+<td>SWARMME_REPLICAS</td>
+<td>Nombre d’instàncies del servei al SwarmMe</td>
+</tr>
+
+<tr>
+<td>EXTRA_PARAMS</td>
+<td>Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="per-al-desplegament-a-l-api-manager-1">Per al <strong>desplegament a l’Api Manager</strong></h6>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>APIC_PLAN_MAP</td>
+<td>Descripció del pla a utilitzar per al desplegament a l’Api Manager. Consultar a Suport Cloud</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="per-al-desplegament-al-cloudfoundry-ibmcloud-1">Per al <strong>desplegament al CloudFoundry IBMCloud</strong></h6>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CF_NAME</td>
+<td>Nom al CloudFoundry</td>
+</tr>
+
+<tr>
+<td>CF_COMMAND</td>
+<td>Comanda a executar al CloudFoundry</td>
+</tr>
+
+<tr>
+<td>CF_ENV</td>
+<td>Variables necessàries per a la correcta execució de l&rsquo;aplicació, separades per &lsquo;</td>
+</tr>
+</tbody>
+</table>
+
+<h6 id="per-exemple-per-al-desplegament-a-l-entorn-de-preproducció-a-l-openshift">Per exemple, per al desplegament a l&rsquo;entorn de Preproducció a l’Openshift:</h6>
+
+<pre><code>components:
+  - deployment:
+      scm: git.intranet.gencat.cat/0192/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRE
+                      - DEPLOYMENT_NAME: backend-deployment
+                      - DEPLOYMENT_WAIT: 60
+</code></pre>
+
+<h5 id="components-deployment-enviroments-actions-after-deploy">components[].deployment.enviroments[].actions.after-deploy</h5>
+
+<p>Informació sobre el possible pas posterior al desplegament <code>after-deploy</code> concebut per a poder dur a terme tasques que
+calgui executar després del desplegament com, per exemple, modificar l&rsquo;estat d&rsquo;un API Gateway. Aquest pas és <strong>compatible
+únicament amb plataformes Openshift i Kubernetes</strong> segons la següent estructura:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name
+          actions:
+            after-deploy:
+              steps:
+                - execution:
+                    env
+</code></pre>
+
+<p>On caldrà indicar el detall de les execucions (<code>execution</code>) de cada pas (<code>steps</code>) a realitzar indicant les següents
+variables d’entorn:</p>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Valor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>JOB_NAME_PREFIX</td>
+<td>Prefix que se li assignarà a la tasca</td>
+</tr>
+
+<tr>
+<td>JOB_IMAGE</td>
+<td>Nom de la imatge a utilitzar</td>
+</tr>
+
+<tr>
+<td>JOB_WAIT</td>
+<td>Temps d&rsquo;espera de la tasca</td>
+</tr>
+
+<tr>
+<td>JOB_ENVS</td>
+<td>Variables d’entorn necessàries</td>
+</tr>
+</tbody>
+</table>
+
+<p>Per exemple:</p>
+
+<pre><code>components:
+  - deployment:
+      environments:
+        - name: preproduction
+          actions:
+            after-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin
+</code></pre>
+
+<h3 id="notifications">notifications</h3>
+
+<p>Informació sobre el canal de notificació i destinataris davant accions manuals en espera i informació sobre resultats
+de les execucions. Actualment, el canal de notificació és mitjançant el correu electrònic, essent necessari indicar la
+relació de destinataris segons la següent estructura:</p>
+
+<pre><code>notifications:
+  email:
+    recipients:
+      -
+</code></pre>
+
+<p>Per exemple:</p>
+
+<pre><code>notifications:
+  email:
+    recipients:
+      - correu@domini.cat
+</code></pre>
+
+<h2 id="validació">Validació</h2>
+
+<p>Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer
+en fer la pujada al Sistema de Custòdia de Codi.
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles
+com <a href="http://www.yamllint.com/"><strong>YAML Validator</strong></a>.</p>
+
+<h2 id="exemples">Exemples</h2>
+
+<p>A continuació s&rsquo;adjunten exemples dels diferents casos d’ús:</p>
+
+<ul>
+<li><p><a href="/related/sic/3.0/aca_const_despl_maven_kubernetes_caas.yml">Construcció aplicació Maven i desplegament al Kubernetes CaaS</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_despl_maven_swarmme.yml">Construcció aplicació Maven i desplegament al SwarmMe</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml">Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_despl_node_openshift_cpd4.yml">Construcció aplicació Node i desplegament a l’Openshift de Cpd4</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml">Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml">Desplegament aplicació mitjançant contenidor creat a partir de DockerFile i desplegament a l’Openshift de Cpd2</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml">Desplegament aplicació mitjançant contenidor creat a partir de Dockerfile i desplegament al WebApp Azure</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml">Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift Cpd4</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml">Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_despl_api_manager.yml">Aplicació a desplegar a l’Api Manager</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml">Construcció i publicació de llibreria Maven al Nexus</a></p></li>
+
+<li><p><a href="/related/sic/3.0/aca_const_publi_nexus_node_lib.yml">Construcció i publicació de llibreria Node al Nexus</a></p></li>
+</ul>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic30-guies/"><strong>Guies</strong></a>.</p>
+
+<p>Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

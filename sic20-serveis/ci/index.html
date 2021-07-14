@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Integració contínua</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Integració contínua\" />");
+		document.write("<meta name=\"description\" content=\"Jenkins és l\x27eina implantada al SIC per la integració contínua\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic20-serveis">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	
+	<a href="/sic-serveis/">
+		
+
+		Serveis
+
+		
+	</a></li>
+	
+
+    
+    <li><a href="/sic20-serveis/">
+        
+
+        Serveis (SIC 2.0)
+
+        
+    </a>
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Integració contínua
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 11-11-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#beneficis-de-la-integració-continua">Beneficis de la integració continua</a></li>
+<li><a href="#modalitats-de-desplegament">Modalitats de desplegament</a></li>
+<li><a href="#funcionament">Funcionament</a>
+<ul>
+<li><a href="#accés-als-serveis">Accés als serveis</a></li>
+<li><a href="#relació-de-tasques-i-la-seva-execució-jobs">Relació de tasques i la seva execució (jobs)</a></li>
+<li><a href="#etapes-de-desplegament">Etapes de desplegament</a></li>
+<li><a href="#versionat">Versionat</a></li>
+<li><a href="#anàlisi-del-codi">Anàlisi del codi</a></li>
+<li><a href="#artefactes-generats-i-gestió-de-possibles-marxes-enrere">Artefactes generats i gestió de possibles marxes enrere</a></li>
+<li><a href="#publicació-de-llibreries">Publicació de llibreries</a></li>
+</ul></li>
+<li><a href="#autoservei-de-jobs-pipeline">Autoservei de jobs pipeline</a></li>
+<li><a href="#matriu-de-tecnologies-de-construcció">Matriu de tecnologies de construcció</a>
+<ul>
+<li><a href="#microsoft">Microsoft</a></li>
+<li><a href="#maven-jdk">Maven/JDK</a></li>
+<li><a href="#node-npm">Node/npm</a></li>
+<li><a href="#hugo-webs-estàtiques">Hugo (Webs estàtiques)</a></li>
+</ul></li>
+<li><a href="#matriu-de-desplegament-en-servidors-iaas">Matriu de desplegament en servidors (IAAS)</a>
+<ul>
+<li><a href="#microsoft-1">Microsoft</a></li>
+<li><a href="#jee">JEE</a></li>
+<li><a href="#bbdd">BBDD</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<p><img src="/related/sic/serveis/jenkins-logo.png" alt="Jenkins" title="Jenkins" /></p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p><strong>Jenkins</strong> és l&rsquo;eina implantada al SIC per a la integració contínua en el desenvolupament de software.
+Es tracta d&rsquo;un servei en el que, a partir de la definició previa de tasques (jobs), es construeixen les aplicacions,
+es versionen, es realitzen anàlisis de qualitat, s&rsquo;executen tests i inclús es despleguen als entorns preproductius i productius.
+Està basat en el projecte Hudson.
+<br>
+Jenkins proporciona un entorn de treball i desplegament automatitzat estalviant temps i diners durant la vida d&rsquo;un projecte.</p>
+
+<p><br/>
+<strong>Nexus</strong> és l&rsquo;eina implantada al SIC com a administrador central de biblioteques que facilita la col·laboració eficient
+entre els diferents col·laboradors i equips implicats. Permet crear servidors proxy, recopilar i administrar les dependències externes,
+ja siguin de tercers o pròpies. És compatible amb llibreries de diferents tecnologies: llibreries Java, paquets NuGet, paquets NPM i
+paquets bower. <br/>
+Actualment aquest servei és administrat per l&rsquo;equip del SIC i només permet consultar la informació de repositoris públics.</p>
+
+<h2 id="beneficis-de-la-integració-continua">Beneficis de la integració continua</h2>
+
+<p>Un resum dels beneficis de la integració continua seria el següent:</p>
+
+<ul>
+<li><strong>Millora la qualitat del codi</strong>: la integració continua contribueix en minimitzar els problemes en els sistemes per
+errors de codi. Proveeix un codi més robust millorant la qualitat del programari.</li>
+<li><strong>Detecció d&rsquo;errors més ràpida i fàcil</strong>: al poder realitzar construccions contínuament, de forma periòdica,
+és més fàcil detectar errors i poder donar-hi solució el més aviat possible.</li>
+<li><strong>Redueix tasques repetitives i manuals</strong>: amb processos automàtics es garanteix que els processos es realitzen
+sempre aplicant els mateixos estàndards.</li>
+<li><strong>Visibilitat de l&rsquo;evolució del projecte</strong>: es pot tenir una visió de l&rsquo;evolució de la qualitat del codi i un
+registre de l&rsquo;evolució i publicació de les versions del codi.</li>
+<li><strong>Millora de la confiança del treball realitzat</strong>: al garantir una qualitat del codi i poder realitzar entregues
+de forma més periòdica, els responsables poden tenir major confiança del treball realitzat i entregat.</li>
+</ul>
+
+<h2 id="modalitats-de-desplegament">Modalitats de desplegament</h2>
+
+<p>Es contemplen diverses modalitats de desplegament:</p>
+
+<ul>
+<li><strong>Automàtica</strong>: es construeixen els artefactes i es despleguen al servidors web, servidors d&rsquo;aplicacions i servidors
+de bases de dades. Aquesta modalitat no requerirà cap tipus de conformitat prèvia.</li>
+<li><strong>Delegada</strong>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
+delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Codi d&rsquo;error</th>
+<th>Responsable</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>-1xx</td>
+<td>Equip SIC</td>
+</tr>
+
+<tr>
+<td>-2xx</td>
+<td>Proveïdor d&rsquo;infraestructures (Cpd)</td>
+</tr>
+
+<tr>
+<td>-3xx</td>
+<td>Lot d&rsquo;aplicacions</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><strong>Semiautomàtica</strong>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
+un tiquet Remedy en mode &ldquo;Draft&rdquo; (que cal acabar d&rsquo;emplenar segons l&rsquo;operativa establerta per gestio de canvis) per a
+que CPD/LdT dugui a terme el procés de desplegament. Aquesta modalitat requerirà conformitat prèvia i les accions prèvies
+davant una possible marxa enrere aniran a càrrec de CPD/LdT.
+<!---* **Automàtica per CPD**: es similar a la automàtica però serà CPD/LdT qui s'encarregarà de donar conformitat i
+continuïtat a les etapes de desplegament. Aquesta modalitat, per tant, requerirà conformitat prèvia i les accions prèvies
+davant una possible marxa enrere aniran a càrrec de CPD/LdT. --></li>
+</ul>
+
+<p>Actualment, el sistema previst seria el següent:</p>
+
+<ul>
+<li>Entorn <strong>INT</strong>: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. <strong>IMPORTANT: En cas d&rsquo;aplicar la modalitat
+semi-automàtica</strong>, donat la majoria de proveïdors disposen d&rsquo;accés als servidors per a fer els desplegaments, el sistema s&rsquo;encarregarà
+de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.</li>
+<li>Entorn <strong>PRE/PRO</strong>: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.</li>
+<li><strong>Altres</strong> entorns: caldrà establir l&rsquo;ordre d&rsquo;execució d&rsquo;etapes i la modalitat de desplegament aplicable.</li>
+</ul>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<h3 id="accés-als-serveis">Accés als serveis</h3>
+
+<p>Podrà accedir a <strong>Jenkins</strong> mitjançant el següent enllaç: <a href="https://hudson.intranet.gencat.cat/hudson/">https://hudson.intranet.gencat.cat/hudson/</a> <br/>
+Per a poder accedir via VPN cal assegurar que es disposa de connectivitat pel port 443/TCP i, en cas de no disposar de
+connectivitat, caldrà obrir una petició demanant l&rsquo;obertura de Firewalls dels seus entorns.</p>
+
+<p>Haurà d&rsquo;autenticar-se amb de les seves credencials d&rsquo;accés <strong>GICAR</strong>. Els Release Manager, responsables de lot i tècnics
+de CPD disposaran d&rsquo;accés al servei. Si no disposa d&rsquo;accés, haurà de sol·licitar-ho al seu responsable.</p>
+
+<p><img src="/related/sic/serveis/jenkins-sic.png" alt="Jenkins" />
+<br/></p>
+
+<p><br/>
+Podrà accedir a <strong>Nexus</strong> mitjançant el següent enllaç: <a href="https://hudson.intranet.gencat.cat/nexus/">https://hudson.intranet.gencat.cat/nexus/</a></p>
+
+<p><img src="/related/sic/serveis/nexus-sic.png" alt="Nexus" />
+<br/></p>
+
+<h3 id="relació-de-tasques-i-la-seva-execució-jobs">Relació de tasques i la seva execució (jobs)</h3>
+
+<p>Una vegada fet el login s&rsquo;accedeix a la llista de jobs en execució i la relació de jobs disponibles per l&rsquo;usuari
+amb la informació més rellevant: <strong>nom, estat del darrer muntatge (Status) i el nivell de salut general del projecte (Weather)</strong>
+basat en l&rsquo;estabilitat, cobertura i tests realitzats. Aquest nivell de salut es pot definir per a cada projecte i es basa
+en el número de construccions que han anat bé o malament, així com en el percentatge de proves i indicadors d&rsquo;anàlisi.</p>
+
+<p>De cadascuna de les tasques, es pot consultar la <strong>configuració, historial, estadístiques, resultats i situació</strong>
+mitjançant l&rsquo;enllaç habilitat. En cas de tractar-se de jobs de tipus &ldquo;pipeline&rdquo;
+es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes.
+Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a l&rsquo;opció &ldquo;Console Output&rdquo;.
+Al final d&rsquo;aquest log es mostrarà el resultat general de l&rsquo;execució: SUCCES, FAILED o ABORTED.
+Aquest resultat serà notificat per correu electrònic als responsables assignats.<br/></p>
+
+<p>Els jobs de tipus &ldquo;pipeline&rdquo; <strong>s&rsquo;executaran quan es produeixi una pujada d&rsquo;una nova versió del codi font del projecte</strong>
+per part del lot d&rsquo;aplicacions, per lo que caldrà limitar la quantitat d&rsquo;usuaris que utilitzen el servei de custòdia de codi
+i fer una única pujada amb èxit per versió, moment en el que es realitzarà l&rsquo;etiquetat definitiu.
+No obstant, en cas d&rsquo;error o necessitat de redesplegar, les taques també <strong>es podran executar directament mitjançant l&rsquo;opció &ldquo;BuildWithParameters&rdquo;</strong>.</p>
+
+<h3 id="etapes-de-desplegament">Etapes de desplegament</h3>
+
+<p>Els jobs multi-etapa realitzen multitud d&rsquo;accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les seves etapes el job es cancel·larà i es notificarà per correu electrònic.</p>
+
+<p><CENTER><img src="/related/sic/serveis/jobs_stages.png" alt="Nou projecte" /></center>
+<br/></p>
+
+<p>A continuació s&rsquo;explica breument cadascuna de les etapes de desplegament previstes:</p>
+
+<ul>
+<li><strong>Init</strong>: inicialitzacions internes.</li>
+<li><strong>Checkout</strong>: descàrrega del codi font del projecte a l&rsquo;espai de treball.</li>
+<li><strong>Build image</strong>: (opcional) construcció i anàlisi de vulnerabilitats de la possible imatge Docker d&rsquo;usuari que serà utilitzada, en la següent etapa, per a la compilació i construcció d&rsquo;artefactes. Es tracta d&rsquo;una etapa addicional que s&rsquo;afegirà només si es requereix.</li>
+<li><strong>Build</strong>: compilació i construcció d&rsquo;artefactes en funció de la tecnologia i les eines emprades.</li>
+<li><strong>Commit test</strong>: etapa prevista per a l&rsquo;execució de tests de commit, si escau.</li>
+<li><strong>Unit test</strong>: etapa prevista per a l&rsquo;execució de tests unitaris, si escau.</li>
+<li><strong>Anàlisi estàtic de codi</strong>: enviament del codi font del projecte a l&rsquo;eina d&rsquo;anàlisi estàtic de codi de l&rsquo;Oficina de Qualitat i comprovació de les <a href="https://qualitat.solucions.gencat.cat/eines/sonarqube/">Quality Gates</a> corresponents.</li>
+<li><strong>Generació tag de build</strong>: generació del tag de Build al repositori de codi conforme es tracta d&rsquo;una versió construïble.</li>
+<li><strong>Desplegament a INT</strong>: desplegament automàtic a l&rsquo;entorn d&rsquo;integració, si escau, incloent possibles processos d&rsquo;actualització de l&rsquo;estat de la base de dades.</li>
+<li><strong>Smoke test</strong>: etapa prevista per a la verificació bàsica a l&rsquo;entorn d&rsquo;integració per tal d&rsquo;assegurar que el projecte s&rsquo;ha publicat correctament, si escau.</li>
+<li><strong>Desplegament a PRE</strong>: lliurament d&rsquo;artefactes per al desplegament manual a l&rsquo;entorn de preproducció i creació de ticket Remedy en mode &ldquo;Draft&rdquo;. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.</li>
+<li><strong>Smoke test</strong>: etapa prevista per a la verificació bàsica a l&rsquo;entorn de preproducció per tal d&rsquo;assegurar que el projecte s&rsquo;ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir a la verificació un cop finalitzat el procés de desplegament a preproducció.</li>
+<li><strong>Acceptancy test</strong>: etapa prevista per a l&rsquo;execució de tests automàtics d&rsquo;acceptació, si escau.</li>
+<li><strong>Exploratory test</strong>: etapa prevista per a l&rsquo;execució de tests manuals d&rsquo;acceptació, si escau.</li>
+<li><strong>Generació tag definitiu</strong>: generació del tag definitiu al repositori de codi conforme es tracta d&rsquo;una versió desplegable a producció.</li>
+<li><strong>Desplegament a PRO</strong>: lliurament d&rsquo;artefactes per al desplegament manual a l&rsquo;entorn de producció i creació de ticket Remedy en mode &ldquo;Draft&rdquo;. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.</li>
+<li><strong>Smoke test</strong>: etapa prevista per a la verificació bàsica a l&rsquo;entorn de producció per tal d&rsquo;assegurar que el projecte s&rsquo;ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir a la verificació un cop finalitzat el procés de desplegament a producció.</li>
+</ul>
+
+<h3 id="versionat">Versionat</h3>
+
+<p>La versió dels projectes ha de ser sempre <strong>incremental</strong>, és a dir, qualsevol nova actualització de codi lliurat al SIC ha
+d&rsquo;anar acompanyat d&rsquo;un increment de la versió. Per tant, no es permetrà que el projecte desplegui una versió igual o inferior
+a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de
+preproducció i producció. Per exemple, no se sabria quina versió d&rsquo;integració està desplegada a l&rsquo;entorn de preproducció.</p>
+
+<h3 id="anàlisi-del-codi">Anàlisi del codi</h3>
+
+<p>L&rsquo;anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d&rsquo;unes regles predefinides,
+s&rsquo;analitza el codi per tal d&rsquo;obtenir mètriques d&rsquo;adherència a estàndards i bones pràctiques. L&rsquo;Oficina de Qualitat és qui
+escull l&rsquo;eina a utilitzar per a aquesta revisió de codi.</p>
+
+<h3 id="artefactes-generats-i-gestió-de-possibles-marxes-enrere">Artefactes generats i gestió de possibles marxes enrere</h3>
+
+<p>Com a resultat de la construcció es generarà un conjunt d&rsquo;artefactes, bàsicament components estàtics i dinàmics.
+Els artefactes no queden emmagatzemats a l&rsquo;espai de treball per lo que la marxa enrere passaria per
+<strong>recuperar la versió anterior del codi</strong> del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
+Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.</p>
+
+<h3 id="publicació-de-llibreries">Publicació de llibreries</h3>
+
+<p>Totes les dependències de l’aplicació han de ser accessibles en els repositoris públics configurats al Nexus del SIC.
+Es pot validar la seva existència accedint a la següent URL: <a href="https://hudson.intranet.gencat.cat/nexus">https://hudson.intranet.gencat.cat/nexus</a>. <br/></p>
+
+<p>En cas de tractar-se d&rsquo;una <strong>llibreria pròpia amb codi repositat al SIC</strong>, caldrà construir un job d&rsquo;instal·lació de dependències.
+En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament <strong>es construeixi l&rsquo;artefacte i es publiqui al Nexus del SIC</strong>.</p>
+
+<p>En cas de tractar-se d&rsquo;una <strong>llibreria de tercers no disponible públicament</strong> caldrà obrir una petició de suport
+funcional de l’aplicació indicant la següent informació:</p>
+
+<ul>
+<li>Nom i versió de la llibreria</li>
+<li>URL on obtenir la llibreria (o adjuntar-la a la pròpia petició Remedy)</li>
+<li>Característiques i funcionalitat de la llibreria</li>
+<li>Raons per l&rsquo;ús de la llibreria</li>
+</ul>
+
+<p>Per a més informació: <a href="/sic/suport/#altres-dubtes-o-problem%C3%A0tiques">Canals de suport</a>.</p>
+
+<h2 id="autoservei-de-jobs-pipeline">Autoservei de jobs pipeline</h2>
+
+<p>L&rsquo;Autoservei de pipelines permet als usuaris del SIC la <strong>generació al vol de pipelines d&rsquo;automatització de la construcció i del desplegament de l&rsquo;aplicació</strong> sense la
+intervenció de l&rsquo;equip del SIC. D&rsquo;aquesta manera, els equips de cada codi d&rsquo;aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
+Per a més informació: <a href="/sic-serveis/autoservei-pipelines/">Autoservei de pipelines</a></p>
+
+<h2 id="matriu-de-tecnologies-de-construcció">Matriu de tecnologies de construcció</h2>
+
+<p>Les tecnologies de construcció d&rsquo;aplicacions serveixen per gestionar el cicle de vida d&rsquo;una aplicació o algunes de les seves fases. <br/>
+A continuació, s&rsquo;exposen les tecnologies i les versions amb les que el SIC és compatible d&rsquo;entrada.</p>
+
+<p><div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d&rsquo;un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l&rsquo;ús d&rsquo;entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d&rsquo;imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+<br/></p>
+
+<p><strong><span style="color: #C00000;">AVÍS:</span></strong> Aquesta normativa del SIC no invalida
+l&rsquo;<a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions">Estàndard pel full de ruta del programari</a>,
+ans al contrari, l&rsquo;estén per a acabar de concretar els requeriments propis del SIC.
+<br/></p>
+
+<h3 id="microsoft">Microsoft</h3>
+
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Versions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>MS_Build</td>
+<td>4.0<br />14<br />15</td>
+</tr>
+
+<tr>
+<td>MS_Deploy</td>
+<td>7.1</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="maven-jdk">Maven/JDK</h3>
+
+<table>
+<thead>
+<tr>
+<th>Versió Maven</th>
+<th>Versió JDK</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2.2</td>
+<td>7</td>
+</tr>
+
+<tr>
+<td>3.2</td>
+<td>6<br />7<br />8</td>
+</tr>
+
+<tr>
+<td>3.5</td>
+<td>7<br />8</td>
+</tr>
+
+<tr>
+<td>3.6 *</td>
+<td>7<br />8<br />11-openjdk</td>
+</tr>
+</tbody>
+</table>
+
+<p>(*) Versió amb suport i manteniment.</p>
+
+<h3 id="node-npm">Node/npm</h3>
+
+<table>
+<thead>
+<tr>
+<th>Versió Node</th>
+<th>Versió Npm</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>4</td>
+<td>2.15</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>3.10</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>6.4</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>6.11</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>6.12</td>
+</tr>
+</tbody>
+</table>
+
+<p>L&rsquo;única eina que va lligada en certa manera amb la versió de Node és <strong>npm</strong>. La resta d&rsquo;eines de cicle de vida,
+tals com <strong>ng</strong> de <strong><a href="https://angular.io/">Angular</a></strong> (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
+<strong>bower</strong>, <strong>gulp</strong> i <strong>grunt</strong>, s&rsquo;han de definir com a dependències a l&rsquo;aplicació (fitxer <code>package.json</code>) i instal·lar-los
+a la construcció de l&rsquo;aplicació via <strong>npm install</strong>.</p>
+
+<h3 id="hugo-webs-estàtiques">Hugo (Webs estàtiques)</h3>
+
+<table>
+<thead>
+<tr>
+<th>Versió</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0.27</td>
+</tr>
+
+<tr>
+<td>0.73</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="matriu-de-desplegament-en-servidors-iaas">Matriu de desplegament en servidors (IAAS)</h2>
+
+<p>Si es volen fer servir les tasques de desplegaments automatitzat des de SIC, cal que l’aplicació pugui
+ser desplegada sobre un dels següents servidors:</p>
+
+<h3 id="microsoft-1">Microsoft</h3>
+
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Versions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>MS Web Deploy</td>
+<td>3.6</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="jee">JEE</h3>
+
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Versions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Weblogic</td>
+<td>9.2, 10.3.x, 11g, 12c</td>
+</tr>
+
+<tr>
+<td>Websphere</td>
+<td>6.1, 8.5</td>
+</tr>
+
+<tr>
+<td>Tomcat</td>
+<td>5.5, 6, 7, 8, 8.5</td>
+</tr>
+
+<tr>
+<td>JBoss</td>
+<td>EAP 6.4, EAP 7.1</td>
+</tr>
+</tbody>
+</table>
+
+<p>Les tasques d’execució de desplegament automatitzat fan un re-desplegament de l’aplicació i no pas
+un desplegament. Per tant, cal que l’aplicació ja es trobi desplegada (en format empaquetat
+WAR/EAR). La petició per a fer aquest primer desplegament de l’aplicació corre a càrrec dels
+proveïdors de l’aplicació i en ella s’ha d’indicar a SAU de forma explicita que l’aplicació ha de
+desplegar-se en format empaquetat (WAR/EAR).
+Un cop integrada al SIC, qualsevol canvi que es faci en la referència a l&rsquo;artefacte a desplegar
+o canvi en el nom de l’aplicació dins el servidor d’aplicacions,
+ha de ser notificat a l’equip del SIC, ja que en cas contrari el job de desplegament deixarà de
+funcionar.</p>
+
+<h3 id="bbdd">BBDD</h3>
+
+<table>
+<thead>
+<tr>
+<th>Tecnologia</th>
+<th>Versions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Oracle</td>
+<td>12c</td>
+</tr>
+
+<tr>
+<td>SQL Server</td>
+<td>2014, edició standard i express</td>
+</tr>
+
+<tr>
+<td>PostgreSQL</td>
+<td>9.4.8, i anteriors</td>
+</tr>
+
+<tr>
+<td>MongoDB</td>
+<td>3.2.5, i anteriors</td>
+</tr>
+
+<tr>
+<td>MySQL</td>
+<td>5.7.12, i anteriors</td>
+</tr>
+</tbody>
+</table>
+
+<p><br/><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic20-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

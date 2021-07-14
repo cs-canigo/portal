@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Tue, 28 Jan 2020 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Cloud Native</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2020/01/CloudNative/</link>
+      <pubDate>Tue, 28 Jan 2020 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2020/01/CloudNative/</guid>
+      <description>Natiu en núvol (de l’anglès “Cloud Native”) esdevé un patró d&#39;arquitectura de programari per al desenvolupament d&#39;aplicacions tot atenent a tres principis essencials: escalabilitat, elasticitat i agilitat.</description>
+    </item>
+    
+    <item>
+      <title>SD-WAN</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/11/201812SDWAN/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/11/201812SDWAN/</guid>
+      <description>Fonaments de les SD-WAN per dummies</description>
+    </item>
+    
+    <item>
+      <title>Serverless Computing o FaaS</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/09/Serverless_computing_FaaS/</link>
+      <pubDate>Thu, 27 Sep 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/09/Serverless_computing_FaaS/</guid>
+      <description>Com a evolució dels serveis oferts al nuvol, apareix un nou concepte anomenat FaaS (Function as a service) o Serverless Computing (Informàtica sense Servidor) que proporciona una plataforma que permet als clients desenvolupar, executar i gestionar les funcionalitats de l&#39;aplicació sense la complexitat de construir i mantenir la infraestructura associada al desenvolupament i llançament d&#39;una aplicació.</description>
+    </item>
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/</guid>
+      <description>DevOps és un moviment que aplica pràctiques reconegudes i exitoses de la industria als sistemes d&#39;informació.  Arquitectura CTTI està introduint pràctiques bàsiques de DevOps, com són els desplegaments automàtics i l’aprovisionament d’infraestructures mitjançant codi.</description>
+    </item>
+    
+    <item>
+      <title>Principis de Microserveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</guid>
+      <description>Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d&#39;articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.</description>
+    </item>
+    
+    <item>
+      <title>Hibridació de l&#39;autenticació i de la gestió d&#39;identitats amb Office365</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/09/hibridacio-office365/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/09/hibridacio-office365/</guid>
+      <description>Arquitectura implementada per a assolir la hibridació de la capa de gestió d&#39;identitats i de control d&#39;accés amb l&#39;Office365 de la Generalitat</description>
+    </item>
+    
+    <item>
+      <title>Angular: Estat actual i evolució</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/09/Angular/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/09/Angular/</guid>
+      <description>Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d&#39;una única pàgina (SPA). Deriva d&#39;AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Next 17</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/06/GoogleCloudNext17/</link>
+      <pubDate>Tue, 27 Jun 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/06/GoogleCloudNext17/</guid>
+      <description>Novetats Google Cloud Next 17</description>
+    </item>
+    
+    <item>
+      <title>Utilització preferent de versions LTS de programari</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/</link>
+      <pubDate>Mon, 05 Jun 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/06/versions_lts/</guid>
+      <description>Les versions LTS (Long-Term Support) de programari lliure són les recomanades i a adoptar com a preferents seguint el criteri d&#39;Arquitectura CTTI</description>
+    </item>
+    
+    <item>
+      <title>Sobre les SDN</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/04/SDN-20170401/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/04/SDN-20170401/</guid>
+      <description>Què és i el per què de SDN. Consideracions per dummies que trobem al respecte</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Angular: Estat actual i evolució</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Angular: Estat actual i evolució\" />");
+		document.write("<meta name=\"description\" content=\"Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d\x27una única pàgina (SPA). Deriva d\x27AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Angular: Estat actual i evolució
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 01-09-2017
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="angular-estat-actual-i-evolució">Angular: Estat actual i evolució</h3>
+
+<p>Angular és un framework de JavaScript de codi obert, mantingut per Google, utilitzat per desenvolupar aplicacions web d&rsquo;una única pàgina (SPA). Deriva d&rsquo;AngularJs, un framework Javascript per a SPAs també mantingut per Google, però del que en conserva ben poques coses més enllà de la similitud del nom.</p>
+
+<p><img src="/images/bloc/201709/logoAngularllarg.png" alt="Angular Logo" /></p>
+
+<p>Fem una mica d&rsquo;història. Des que es va alliberar el codi d&rsquo;AngularJs, el seu ús i recolzament per part de la comunitat software va ser molt ample. Comparativament amb altres frameworks que oferien funcionalitat similar com ara Vue, React o Ember, l&rsquo;ús d&rsquo;AngularJs es va imposar sobre la resta.</p>
+
+<p>Utilitzant Google trends podem veure la tendència i popularitat d&rsquo;AngularJs sobre els seus competidors:</p>
+
+<p><img src="/images/bloc/201709/InteresAngular.png" alt="Tendències" /></p>
+
+<p>Per què va obtenir tanta popularitat? Hi ha varies raons:</p>
+
+<ul>
+<li>Va sortir el primer: la versió 1.0 es va publicar el 2010</li>
+<li>Sent mantingut per Google, generava confiança a la comunitat. Aquesta és, potser, la principal raó de la seva popularitat.</li>
+<li>Aporta una estructura estàndard de directoris per facilitar la organització encara que es tracti d&rsquo;aplicatius grans</li>
+<li>Un dels objectius principals és la modularitat: és més senzill crear i testejar components</li>
+<li>Corba d&rsquo;aprenentatge molt plana per començar a produir</li>
+</ul>
+
+<p>Ara bé, si AngularJs ha estat tan exitós i tan ben adoptat per la comunitat, calia trencar-ho tot i fer la transició d&rsquo;AngularJs a Angular 2 tan traumàtica? Calia mantenir el nom si el canvi entre els dos era tan radical?</p>
+
+<p>Certament, hi va haver moltes coses millorables al procés, sobretot quan Google va anunciar que no hi hauria pla de migració de AngularJS 1.x a Angular 2.0. Això va acabar de dividir i radicalitzar a la comunitat i fa encara més difícil defensar l&rsquo;adopció de qualsevol versió d&rsquo;Angular. Què passarà quan surti una nova versió, diguem-ne Angular 4?  Serà la transició igual de dolorosa?</p>
+
+<p>Abans de mirar en detall com s&rsquo;ha de gestionar això de cara al futur, mirem què ofereix Angular 2 respecte a AngularJS:</p>
+
+<ul>
+<li><strong>Suport per plataformes mòbils:</strong> AngularJS va ser pensat només per aplicacions responsives i de dades bidireccionals. L&rsquo;arquitectura d&rsquo;Angular, en canvi, està orientada a suport de plataformes mòbils des del començament. El mateix codi és generat diferent segons la plataforma final i l&rsquo;experiència d&rsquo;usuari és molt similar a aplicacions natives.</li>
+<li><strong>Millores de rendiment:</strong> El bootstrap, inicialització de l&rsquo;aplicatiu, és fa diferent segons la plataforma reduint el temps i millorant l&rsquo;experiència d&rsquo;usuari.</li>
+<li><strong>TypeScript</strong> :  És un superset de JavaScript ES6 mantingut i desenvolupat per Microsoft. Afegeix tipat estàtic i objectes basats en classes. Una de les grans avantatges d&rsquo;utilitzar TypeScript és el poder detectar errors abans d&rsquo;executar el codi. És completament compatible amb ES6.</li>
+<li>I molt més&hellip;: es canvia a programació basada en components, s&rsquo;elimina el controvertit $scope d&rsquo;AngularJS, simplificació de directives, més modular i un llarg etcètera.</li>
+</ul>
+
+<p>Si Angular és de fet un nou framework i té poc a veure amb AngularJS, és legítim qüestionar-se si val la pena fer la transició d&rsquo;AngularJS a Angular o de fet triar altre framework.</p>
+
+<p>Primer hem de dir que, després de la presentació d&rsquo;Angular i de tota la incertesa que va generar, Google ha aprés i van reaccionar ràpid:</p>
+
+<ul>
+<li>Van oferir un pla de migració ben documentat i fins i tot van publicar llibreries per ajudar amb la transició com ara <strong>ng-upgrade</strong></li>
+
+<li><p>Incorporen el concepte de SEMVER (semantic versioning). Això farà en el futur les actualitzacions menys traumàtiques. Totes les noves publicacions de Angular constaran de 3 números: MAJOR.MINOR.PATCH</p>
+
+<ul>
+<li>MAJOR: Nova funcionalitat amb canvis incompatibles a l&rsquo;API.</li>
+<li>MINOR: Nova funcionalitat i és compatible amb versions anteriors</li>
+<li>PATCH: Corregeix bugs i es manté retrocompatible</li>
+</ul></li>
+</ul>
+
+<p>A més, l&rsquo;equip d&rsquo;Angular ha assegurat que en un futur una de les seves prioritats és facilitar al màxim la transició cap a noves versions.</p>
+
+<p>Recentment s&rsquo;ha publicat la versió 4 d&rsquo;Angular i la transició de Angular 2 a 4, en contrast a la transició d&rsquo;AngularJS a Angular és força senzilla i molt ben documentada.</p>
+
+<p><img src="/images/bloc/201709/tuit.png" alt="Tuit" /></p>
+
+<p>Com hem mencionat, la versió actual és Angular 4, que va sortir el març de 2017. I què va passar amb la versió 3? Angular 3 mai va ser publicada.</p>
+
+<p>En utilitzar el versionat semàntic es van trobar amb un problema amb la numeració de la llibreria router. Per ser coherents amb la nova adopció del SEMVER és va decidir de passar de la versió 2 a la 4 directament i així poder oferir un versionat coherent per totes les llibreries.</p>
+
+<p>I com queda el panorama actual? On es situa Angular respecte als seus competidors?</p>
+
+<p><img src="/images/bloc/201709/InteresAngularvsCompetencia.png" alt="Tendències" /></p>
+
+<p>Per ser justos, la cerca per AngularJS engloba a AngularJs i Angular. A més, altres mètriques com la quantitat d&rsquo;estrelles per projecte a github o npm trends, la quantitat de vegades que es baixa una llibreria, dóna com a guanyador a React sobre Angular. Com és possible?</p>
+
+<p>Primer, React té el suport d&rsquo;una gran companyia com és Facebook. Aquesta llibreria s&rsquo;ocupa de la part vista del patró MVC mentre que Angular és un framework i ofereix una solució completa per MVC a la part explorador així que no són totalment comparables. Una comparativa més acurada seria React + <a href="http://redux.js.org/">Redux</a> contra Angular tot i que React es pot utilitzar amb altres frameworks.</p>
+
+<p>A més React no ha experimentat una revolució tan traumàtica com Angular i això ha permès fidelitzar més a la seva comunitat. Tot i que Google no ha sabut fer bé la transició d&rsquo;AngularJs a Angular, han certament aprés de les seves errades i la projecció és clarament al alça.</p>
+
+<p>Tant React com Angular semblen a dia d&rsquo;avui les opcions més estables i recolzades per la comunitat tot i que l&rsquo;esperança de vida de qualsevol tecnologia és difícil de estimar avui en dia.</p>
+
+<p>A CTTI observem que els projectes que ens arriben s&rsquo;alineen bastant amb les tendències vistes anteriorment.</p>
+
+<p>Estàndards emergents com WebAssembly, que permet l&rsquo;execució de codi nadiu dins de màquines virtuals al browser, o web components, que permet estendre HTML i definir components reutilitzables, arriben per segmentar, encara més, un diversificat univers frontend.</p>
+
+<p><img src="https://imgs.xkcd.com/comics/standards.png" alt="Estàndards" /></p>
+
+<p>Font original:  <a href="https://xkcd.com/927/">https://xkcd.com/927/</a></p>
+
+<h3 id="referències">Referències:</h3>
+
+<p>Angular is not a massive monolith – but your mom is:</p>
+
+<p><a href="https://gofore.com/angular-is-not-a-massive-monolith/">https://gofore.com/angular-is-not-a-massive-monolith/</a></p>
+
+<p>Angular 1 to Angular 2 Upgrade Strategy:</p>
+
+<p><a href="https://docs.google.com/document/d/1xvBZoFuNq9hsgRhPPZOJC-Z48AHEbIBPlOCBTSD8m0Y/edit">https://docs.google.com/document/d/1xvBZoFuNq9hsgRhPPZOJC-Z48AHEbIBPlOCBTSD8m0Y/edit</a></p>
+
+<p>React vs Angular: An in-depth comparison</p>
+
+<p><a href="https://www.sitepoint.com/react-vs-angular/">https://www.sitepoint.com/react-vs-angular/</a></p>
+
+<p>AngularJS to Angular quick reference</p>
+
+<p><a href="https://angular.io/guide/ajs-quick-reference">https://angular.io/guide/ajs-quick-reference</a></p>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

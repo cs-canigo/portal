@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7\" />");
+		document.write("<meta name=\"description\" content=\"S\x27ha publicat una nova versió de l’arquetipus i del plugin de l\x27eclipse de Canigó per a generar projectes amb Canigó 3.4.3\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/noticies">
+											
+
+
+
+
+
+
+
+
+
+	Notícies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Actualització archetype 1.6.5 i plugin eclipse 1.7.7
+
+
+										
+
+									
+								</h1>
+
+								
+									<br />
+									25-03-2020
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 25-03-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Dins dels lliurables de Canigó hi consten l’<em>archetype</em> i el <em>plugin</em> de l’Eclipse.
+Seguint l’objectiu de CS Canigó de proporcionar facilitadors per a la creació de projectes Canigó als desenvolupadors d’aplicacions, s’han actualitzat ambdós lliurables per a
+generar projectes amb <strong>Canigó 3.4.3</strong>. Podeu consultar l’abast complet de la nova versió del marc de treball a les <a href="/canigo-download-related/release-notes-canigo-34">Release Notes, apartat Canigó 3.4.3</a>.</p>
+
+<ul>
+<li><p>L’<em>archetype</em> és una eina Maven que <strong>facilita la creació de projectes seguint una plantilla</strong>. Utilitzant l’arquetipus i executant un <em>goal</em> de maven obtenim un projecte Canigó amb una
+base preconfigurada i preparada per a incorporar-li noves funcionalitats.</p></li>
+
+<li><p>El <em>plugin</em> és un <strong>connector desenvolupat específicament per a l’IDE Eclipse</strong> que permet afegir-hi menús contextuals per a la creació de projectes Canigó utilitzant
+l’arquetipus de Maven, a més de permetre afegir mòduls a un projecte creat i amb una configuració per defecte. D’aquesta manera, podem crear un projecte amb l’Eclipse i
+afegir-l’hi els mòduls necessaris obtenint un projecte preparat per al marc de treball Canigó i estalviant temps als desenvolupadors.</p></li>
+</ul>
+
+<h2 id="novetats-archetype">Novetats <em>archetype</em></h2>
+
+<p>La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats respecte a la versió anterior:</p>
+
+<ul>
+<li><p><strong>Revisió de l&rsquo;estat dels mòduls</strong> a partir de l&rsquo;anàlisi del seu estat, les seves funcionalitats i els testos associats</p></li>
+
+<li><p><strong>Actualització del mòdul de Seguretat SAML</strong>, incorporant l&rsquo;opció d&rsquo;autorització per Gicar</p></li>
+</ul>
+
+<h2 id="novetats-plugin-d-eclipse">Novetats <em>plugin</em> d&rsquo;Eclipse</h2>
+
+<p>La nova versió 1.7.7 del plugin utilitza la versió 1.6.5 de l’arquetipus de Canigó per a generar projectes amb Canigó 3.4.3 i s&rsquo;han modificat les opcions en afegir el mòdul de seguretat.
+A continuació s&rsquo;explica el seu funcionament.</p>
+
+<p>Es proporcionen tres opcions:</p>
+
+<ul>
+<li><strong>Si es vol token</strong>, amb les possibles respostes: Si/No</li>
+</ul>
+
+<p><img src="/images/news/Plugin_1.7.7_add_security_token.png" alt="" /></p>
+
+<ul>
+<li>El <strong>proveïdor que volem fer servir</strong>, amb les possibles respostes: Arxiu/BBDD/Gicar/Saml (si es vol seguretat amb token) o Arxiu/BBDD/Gicar (si no es vol amb token)</li>
+</ul>
+
+<p><img src="/images/news/Plugin_1.7.7_add_security_provider.png" alt="" /></p>
+
+<ul>
+<li>La <strong>forma d&rsquo;autorització</strong>, amb les possibles respostes: BBDD/Gicar, només si el proveïdor es Gicar o Saml</li>
+</ul>
+
+<p><img src="/images/news/Plugin_1.7.7_add_security_gicar.png" alt="" /></p>
+
+<p><br/>
+A la versió 1.7.7 del plugin s&rsquo;ha afegit l&rsquo;opció d’autorització per Saml i per Gicar de forma que, segons l&rsquo;opció seleccionada, el plugin modificarà els fitxers del
+projecte <code>WebSecurityConfig.java</code> i <code>app-custom-security.xml</code> per a configurar la seguretat del projecte segons les opcions seleccionades.</p>
+
+<p><br/>
+Per a instal·lar o actualitzar la versió del plugin és necessari seguir els passos descrits a la secció &ldquo;Instal·lació&rdquo; del <a href="/canigo-download-related/plugin-canigo/#instal-lació">Plugin Canigó per a Eclipse</a>.</p>
+
+<h2 id="documentació">Documentació</h2>
+
+<p>Teniu disponible la següent documentació:</p>
+
+<ul>
+<li><a href="/canigo-download-related/plugin-canigo/">Plugin Canigó per a Eclipse</a></li>
+<li><a href="/canigo-documentacio-versions-3x-core/modul-seguretat/">Mòdul de Seguretat</a></li>
+<li><a href="/canigo-documentacio-versions-3x-core/modul-saml/">Mòdul de Seguretat SAML</a></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

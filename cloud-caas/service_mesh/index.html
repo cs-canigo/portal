@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Openshift Service Mesh</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Openshift Service Mesh\" />");
+		document.write("<meta name=\"description\" content=\"Introducció i exemples de l\x27ús d\x27Openshift Service Mesh\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/cloud-caas">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Openshift Service Mesh
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 05-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#característiques">Característiques</a>
+<ul>
+<li><a href="#control-del-tràfic-entre-microserveis">Control del tràfic entre microserveis</a></li>
+<li><a href="#balanceig-i-desplegaments-avançats">Balanceig i desplegaments avançats</a></li>
+<li><a href="#seguretat">Seguretat</a></li>
+<li><a href="#monitoratge">Monitoratge</a></li>
+</ul></li>
+<li><a href="#openshift-service-mesh-2-x">Openshift Service Mesh 2.x</a>
+<ul>
+<li><a href="#arquitectura">Arquitectura</a>
+<ul>
+<li><a href="#data-plane">Data Plane</a></li>
+<li><a href="#control-plane">Control Plane</a></li>
+<li><a href="#ingress-gateway">Ingress Gateway</a></li>
+</ul></li>
+<li><a href="#eines">Eines</a>
+<ul>
+<li><a href="#kiali">Kiali</a></li>
+<li><a href="#jaeger">Jaeger</a></li>
+<li><a href="#prometheus">Prometheus</a></li>
+<li><a href="#grafana">Grafana</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#model-de-servei">Model de Servei</a>
+<ul>
+<li><a href="#segons-el-grau-d-aïllament">Segons el grau d&rsquo;aïllament</a>
+<ul>
+<li><a href="#service-mesh-compartit">Service Mesh Compartit</a></li>
+<li><a href="#service-mesh-dedicat">Service Mesh Dedicat</a></li>
+</ul></li>
+<li><a href="#segons-el-model-de-traces-distribuïdes">Segons el model de traces distribuïdes</a>
+<ul>
+<li><a href="#traces-distribuïdes-no-persistents">Traces distribuïdes no persistents</a></li>
+<li><a href="#traces-distribuïdes-persistents">Traces distribuïdes persistents</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#configuració-del-data-plane">Configuració del Data Plane</a>
+<ul>
+<li><a href="#exemple">Exemple</a></li>
+</ul></li>
+<li><a href="#descriptors-destacats">Descriptors destacats</a>
+<ul>
+<li><a href="#virtualservice">VirtualService</a></li>
+<li><a href="#destinationrule">DestinationRule</a></li>
+<li><a href="#gateway">Gateway</a></li>
+<li><a href="#altres-descriptors">Altres descriptors</a></li>
+</ul></li>
+<li><a href="#gestió-del-tràfic-extern-al-service-mesh">Gestió del tràfic extern al Service Mesh</a></li>
+<li><a href="#exemples">Exemples</a>
+<ul>
+<li><a href="#canary-deployment">Canary Deployment</a></li>
+<li><a href="#a-b-testing">A/B Testing</a></li>
+<li><a href="#fault-injection">Fault Injection</a></li>
+<li><a href="#timeouts">Timeouts</a></li>
+<li><a href="#reintents">Reintents</a></li>
+<li><a href="#throttling">Throttling</a></li>
+<li><a href="#circuit-breaker">Circuit Breaker</a></li>
+<li><a href="#mutual-tls">Mutual TLS</a></li>
+<li><a href="#authorization-policy">Authorization Policy</a></li>
+</ul></li>
+<li><a href="#recursos-addicionals">Recursos addicionals</a>
+<ul>
+<li><a href="#documentació">Documentació</a></li>
+<li><a href="#tutorials-i-exemples">Tutorials i exemples</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>En arquitectures basades en microserveis, la complexitat del sistema requereix tenir present tot un conjunt d&rsquo;aspectes que no cal tenir present en arquitectures tradicionals.</p>
+
+<p>Els Service Mesh faciliten la implementació de tots aquests aspectes amb un acoblament mínim amb les microserveis:</p>
+
+<ul>
+<li>Són independents de la tecnologia en què estan desenvolupats els microserveis</li>
+<li>No requereixen desenvolupaments pel seu ús</li>
+</ul>
+
+<p>Tot i que es poden utilitzar en plataformes tradicionals, a causa de la pròpia arquitectura de microserveis, el seu ús és molt més comú en plataformes de contenidors.</p>
+
+<p>Openshift Service Mesh és l&rsquo;eina escollida pel CTTI per realitzar aquestes funcions.</p>
+
+<h2 id="característiques">Característiques</h2>
+
+<h3 id="control-del-tràfic-entre-microserveis">Control del tràfic entre microserveis</h3>
+
+<p>En una arquitectura de microserveis és bastant habitual que els microserveis es cridin entre ells. Realitzar aquestes crides directament poden provocar diversos problemes, deguts bàsicament a fallides o mal funcionament d&rsquo;algun microservei o la xarxa, que finalment acaben en fallides en cascada de tot el sistema on l&rsquo;origen és difícilment identificable.</p>
+
+<p>Per mitigar aquest tipus de problemes, s&rsquo;implementen patrons del tipus:</p>
+
+<ul>
+<li>Timeouts</li>
+<li>Reintents</li>
+<li>Circuit Breakers</li>
+</ul>
+
+<p>La implementació d&rsquo;aquests patrons als propis microserveis és costós i afegeix un desenvolupament addicional al microservei, que no aporta res a la seva funcionalitat.</p>
+
+<p>Els Service Mesh permeten la implementació d&rsquo;aquests patrons sense necessitat de desenvolupament a través de simples fitxers de configuració.</p>
+
+<h3 id="balanceig-i-desplegaments-avançats">Balanceig i desplegaments avançats</h3>
+
+<p>Al controlar les comunicacions entre microserveis, els Service Mesh permeten realitzar Balanceig Avançat de tràfic, per exemple enviar un percentatge concret de peticions cap a una versió concreta d&rsquo;un microservei, que els orquestradors de contenidors no poden fer.</p>
+
+<p>Aquest tipus de funcionalitat permet fer a través de configuració desplegaments avançats d&rsquo;aplicacions:</p>
+
+<ul>
+<li>Canary</li>
+<li>Blue Green</li>
+<li>Dark launching</li>
+<li>&hellip;</li>
+</ul>
+
+<h3 id="seguretat">Seguretat</h3>
+
+<p>Implementar seguretat entre les crides de microserveis, és un altre dels aspectes que no és simple d&rsquo;implementar. Requereix molt desenvolupament.</p>
+
+<p>El Service Mesh permet aplicar seguretat entre les crides entre microserveis:</p>
+
+<ul>
+<li>Encriptació SSL del tràfic</li>
+<li>Mutual TLS per assegurar que la identitat de l&rsquo;origen i el destí del tràfic</li>
+<li>Control d&rsquo;accés, permetent indicar per exemple quins microserveis poden cridar a quins</li>
+</ul>
+
+<h3 id="monitoratge">Monitoratge</h3>
+
+<p>El Service Mesh addicionalment ofereix monitoratge dels diferents microserveis, facilitant la detecció i identificació de problemes:</p>
+
+<ul>
+<li>Estat dels microserveis</li>
+<li>Flux de tràfic entre microserveis en temps real</li>
+<li>Temps de resposta dels microserveis</li>
+<li>Traces distribuides per identificar colls d&rsquo;ampolla</li>
+</ul>
+
+<h2 id="openshift-service-mesh-2-x">Openshift Service Mesh 2.x</h2>
+
+<p>Un cop descrites les característiques generals dels service Mesh ens centrarem en Openshift Service Mesh:</p>
+
+<ul>
+<li>Està basat en Istio 1.6</li>
+<li>Implementa multitenancy</li>
+<li>Es desplega sobre la plataforma Openshift</li>
+</ul>
+
+<h3 id="arquitectura">Arquitectura</h3>
+
+<p>Openshift Service Mesh està format per dos components principals:</p>
+
+<ul>
+<li>Data Plane</li>
+<li>Control Plane</li>
+</ul>
+
+<p><img src="/related/cloud/ArquitecturaOpenshiftServiceMesh.png" alt="Components Openshift Service Mesh" /></p>
+
+<h4 id="data-plane">Data Plane</h4>
+
+<p>Està format per un conjunt de proxies basats en <a href="https://www.envoyproxy.io/">Envoy</a>.
+Es desplega com <a href="https://billglover.me/2020/01/12/the-sidecar-pattern/">Sidecar</a> a dins de cada pod dels microserveis.</p>
+
+<p>S&rsquo;encarreguen de les funcionalitats més importants del Service Mesh:</p>
+
+<ul>
+<li>Controlen el tràfic de dades entre els pods</li>
+<li>Fa enrutament i balanceig de tràfic</li>
+<li>Comproven la disponibilitat dels microserveis</li>
+<li>Capturen la telemetria dels pods</li>
+<li>Securitza el tràfic</li>
+</ul>
+
+<p><img src="/related/cloud/ServiceMeshDataPlane.png" alt="Data Plane" /></p>
+
+<h4 id="control-plane">Control Plane</h4>
+
+<ul>
+<li>És el responsable de gestionar, configurar i monitorar el Data Plane</li>
+<li>Implementa polítiques de control</li>
+<li>Recol·lecta totes les mètriques i les exposa a les diferents eines</li>
+</ul>
+
+<p><img src="/related/cloud/ServiceMeshControlPlane.png" alt="Control Plane" /></p>
+
+<h4 id="ingress-gateway">Ingress Gateway</h4>
+
+<ul>
+<li>El Istio Ingress Gateway és un Edge Proxy de Istio</li>
+<li>És necessari per a que el tràfic entrant als Microserveis no entri directament als contenidors sense passar pel Proxy d’Istio abans</li>
+<li>Pot substituir el Router Controller o estar darrera d’ell</li>
+<li>En el nostre cas particular l’Ingress Gateway està darrera del Router Controller
+
+<ul>
+<li>Es simplifica la configuració</li>
+<li>No requereix configuració addicional al balancejador al afegir un nou Ingress Gateway a la plataforma</li>
+</ul></li>
+</ul>
+
+<p>Tràfic d&rsquo;entrada a través del Ingress Gateway</p>
+
+<p><img src="/related/cloud/ServiceMeshWithIngressGateway.png" alt="Control Plane" />
+<br/><br/>
+Tràfic d&rsquo;entrada sense  del Ingress Gateway</p>
+
+<p><img src="/related/cloud/ServiceMeshWithoutIngressGateway.png" alt="Control Plane" /></p>
+
+<h3 id="eines">Eines</h3>
+
+<p><br/><br/></p>
+
+<h4 id="kiali">Kiali</h4>
+
+<ul>
+<li><a href="https://kiali.io/">Kiali</a> és la consola web del Service Mesh</li>
+<li>Funciona amb peticions a temps real</li>
+<li>Descriu la topologia de comunicacions entre microserveis</li>
+<li>Informa de la salut dels microserveis</li>
+<li>Informa dels Serveis i Pods dels microserveis</li>
+<li>Proporciona mètriques dels microserveis</li>
+<li>Valida la configuració del Service Mesh</li>
+<li>Permet la integració amb Jaeger per fer el seguiment de traces distribuïdes</li>
+</ul>
+
+<p><img src="/related/cloud/kiali01.png" alt="Kiali_01" /></p>
+
+<p><img src="/related/cloud/kiali02.png" alt="Kiali_02" /></p>
+
+<p><br/><br/></p>
+
+<h4 id="jaeger">Jaeger</h4>
+
+<ul>
+<li><a href="https://www.jaegertracing.io/">Jaeger</a> és una consola web per veure les traces distribuïdes.</li>
+<li>S’integra amb Opentracing</li>
+<li>Donada una petició a un microservei descriu tota la pila de peticions entre els diferents microserveis que es van cridant en cascada.</li>
+<li>Informa els temps de resposta de cadascun dels microserveis, permetent identificar colls d’ampolla</li>
+<li>És necessari que les peticions entre microserveis propaguin les capçaleres HTTP del tipus x-alguna_cosa</li>
+</ul>
+
+<p><img src="/related/cloud/jaeger01.png" alt="Jaeger_01" /></p>
+
+<p><img src="/related/cloud/jaeger02.png" alt="Jaeger_02" /></p>
+
+<h4 id="prometheus">Prometheus</h4>
+
+<ul>
+<li><a href="https://prometheus.io/">Prometheus</a> s’està convertint en un estàndard de monitoratge en plataformes de contenidors</li>
+<li>Es basa en la captura de mètriques a través d’exporters</li>
+<li>A Openshift Service Mesh obté les mètriques a través del Mixer</li>
+<li>Es capturen mètriques referent al tràfic de dades i serveis que utilitzen els proxies Envoy</li>
+</ul>
+
+<p><img src="/related/cloud/prometheus01.png" alt="Prometheus_01" /></p>
+
+<p><br/><br/></p>
+
+<h4 id="grafana">Grafana</h4>
+
+<ul>
+<li><a href="https://grafana.com/">Grafana</a> s’està convertint en un estàndard de visualització de Mètriques.</li>
+<li>S’integra amb múltiples fonts de dades, en aquest cas amb Prometheus</li>
+<li>Permet la creació de Dashboards a mida</li>
+<li>Permet la configuració d’Alarmes</li>
+<li>Amb Openshift Service Mesh, es desplega amb un conjunt de Dashboards que informen de les mètriques dels diferents components i dels microserveis gestionats pel Control Plane</li>
+
+<li><p>Es mostren mètiques referents a tràfic de dades i serveis que utilitzen els proxies Envoy:</p>
+
+<ul>
+<li>Peticions per segon</li>
+<li>Temps de resposta de les peticions</li>
+<li>Percentatge de peticions amb codi de resposta diferent de 500</li>
+<li>Mida de les peticions/respostes</li>
+</ul></li>
+
+<li><p>Addicionalment també es mostren mètriques de consum i rendiment dels diferents elements del Control Plane.</p></li>
+
+<li><p><strong>En cap cas es mostren metriques de consum i rendiment de les aplicacions que utilitzen el Service Mesh</strong></p></li>
+</ul>
+
+<p><img src="/related/cloud/grafana01.png" alt="Grafana_01" /></p>
+
+<p><img src="/related/cloud/grafana02.png" alt="Grafana_02" /></p>
+
+<h2 id="model-de-servei">Model de Servei</h2>
+
+<h3 id="segons-el-grau-d-aïllament">Segons el grau d&rsquo;aïllament</h3>
+
+<p>Es proposen dos models en funció del grau aïllament dessijat</p>
+
+<h4 id="service-mesh-compartit">Service Mesh Compartit</h4>
+
+<ul>
+<li>Control Plane únic compartit per diferents aplicacions</li>
+<li>Totes les eines de monitoratge seran compartides, sense segmentació per aplicació
+
+<ul>
+<li>Afecta a Kiali, Jaeger, Prometheus i Grafana</li>
+</ul></li>
+<li>Els gestors de les diferents aplicacions podran veure traces distribuïdes, configuració i mètriques de totes les aplicacions que comparteixen el Service Mesh</li>
+</ul>
+
+<p><img src="/related/cloud/ServiceMeshCompartit.png" alt="Service Mesh Compartit" /></p>
+
+<h4 id="service-mesh-dedicat">Service Mesh Dedicat</h4>
+
+<ul>
+<li>Control Plane exclusiu per una aplicació</li>
+<li>Totes les eines de monitoratge exclusives per una aplicació
+
+<ul>
+<li>Afecta a Kiali, Jaeger, Prometheus i Grafana</li>
+</ul></li>
+<li>Només els gestors de l’aplicació podran veure les traces distribuïdes, configuració i mètriques de l’aplicació</li>
+</ul>
+
+<p><img src="/related/cloud/ServiceMeshDedicat.png" alt="Service Mesh Dedicat" /></p>
+
+<h3 id="segons-el-model-de-traces-distribuïdes">Segons el model de traces distribuïdes</h3>
+
+<p>Es proposen dos models en funció del model de traces distribuïdes</p>
+
+<h4 id="traces-distribuïdes-no-persistents">Traces distribuïdes no persistents</h4>
+
+<ul>
+<li>Només es monitora un percentatge petit de les traces distribuïdes (1-5% com a màxim)</li>
+<li>No s’emmagatzemen les traces en disc</li>
+<li>Traces emmagatzemades en memòria</li>
+<li>En cas de reinici dels contenidors del Control es perden les traces</li>
+</ul>
+
+<h4 id="traces-distribuïdes-persistents">Traces distribuïdes persistents</h4>
+
+<ul>
+<li>Es monitora la totalitat de les traces distribuïdes</li>
+<li>S’emmagatzemen les traces en disc</li>
+<li>Requereix un cluster d’ElasticSearch per persistir les traces</li>
+</ul>
+
+<h2 id="configuració-del-data-plane">Configuració del Data Plane</h2>
+
+<ul>
+<li>Per afegir de manera automàtica el sidecar del Proxy Envoy
+
+<ul>
+<li>Afegir l&rsquo;anotació
+
+<ul>
+<li><strong>sidecar.istio.io/inject: &ldquo;true&rdquo;</strong></li>
+</ul></li>
+<li>a l&rsquo;apartat <strong>spec.template</strong> del Deployment/DeploymentConfig/   StatefulSet de l&rsquo;aplicació</li>
+</ul></li>
+<li>Configurar els recursos disponibles pel proxy Envoy
+
+<ul>
+<li>Afegir les anotacions
+
+<ul>
+<li><strong>sidecar.istio.io/proxyCPU: 200m</strong></li>
+<li><strong>sidecar.istio.io/proxyCPULimit: 500m</strong></li>
+<li><strong>sidecar.istio.io/proxyMemory: 256Mi</strong></li>
+<li><strong>sidecar.istio.io/proxyMemoryLimit: 512Mi</strong></li>
+</ul></li>
+<li>amb el recursos necessaris</li>
+<li>a l&rsquo;apartat <strong>spec.template</strong> del Deployment/DeploymentConfig/StatefulSet de l&rsquo;aplicació</li>
+</ul></li>
+
+<li><p>Per definir els recursos necessaris pel Proxy es pot consultar la documentació de Istio: <a href="https://istio.io/v1.6/docs/ops/deployment/performance-and-scalability/">https://istio.io/v1.6/docs/ops/deployment/performance-and-scalability/</a></p></li>
+
+<li><p>En cas de no definir els recursos utilitzats pel Proxy s’utilitzaran els valors per defecte definits al Control Plane:</p>
+
+<ul>
+<li>requests cpu: 50m</li>
+<li>limits cpu : 100m</li>
+<li>requests memory: 50Mi</li>
+<li>límits memory: 100Mi</li>
+</ul></li>
+</ul>
+
+<h3 id="exemple">Exemple</h3>
+
+<pre><code class="language-yaml">kind: Deployment
+apiVersion: apps/v1
+spec:
+  replicas: 1
+...
+  template:
+    metadata:
+      labels:
+        app: backend
+        version: 1.0.0
+      annotations:
+        sidecar.istio.io/inject: &quot;true&quot;
+        sidecar.istio.io/proxyCPU: 200m
+        sidecar.istio.io/proxyCPULimit: 500m
+        sidecar.istio.io/proxyMemory: 256Mi
+        sidecar.istio.io/proxyMemoryLimit: 512Mi
+    spec:
+...
+</code></pre>
+
+<h2 id="descriptors-destacats">Descriptors destacats</h2>
+
+<ul>
+<li>El component més important del Service Mesh és el Proxy Envoy</li>
+<li>La resta de components tenen la funció de facilitar la configuració del Proxy i donar suport a tasques auxiliars</li>
+<li>La majoria dels descriptors del Service Mesh, són elements de configuració dels Proxies Envoy. * Els més importants són:
+
+<ul>
+<li>VirtualService</li>
+<li>DestinationRule</li>
+<li>Gateway</li>
+</ul></li>
+<li>És important tenir clar quina és la funció de cada descriptor i només desplegar els descriptors necessaris</li>
+</ul>
+
+<h3 id="virtualservice">VirtualService</h3>
+
+<ul>
+<li>Configura les regles d’enrutament al Service Mesh</li>
+<li>No confondre amb els Services de Kubernetes/Openshift
+
+<ul>
+<li>Un Service de Kubernetes és una espècie de DNS que resol el nom del service contra les IP’s dels pods</li>
+<li>Un VirtualService configura els Proxies Envoy per definir l’enrutament dels pods</li>
+</ul></li>
+<li>Permet definir el percentatge de peticions a enrutar per cada versió d’aplicació</li>
+<li>Podeu trobar més informació a <a href="https://istio.io/v1.6/docs/reference/config/networking/virtual-service/">https://istio.io/v1.6/docs/reference/config/networking/virtual-service/</a></li>
+</ul>
+
+<h3 id="destinationrule">DestinationRule</h3>
+
+<ul>
+<li>Configura el LoadBalancer al Service Mesh</li>
+<li>Permet configurar
+
+<ul>
+<li>Reintents</li>
+<li>Timeouts</li>
+<li>Circuit Breakers</li>
+<li>&hellip;</li>
+</ul></li>
+<li>Funciona exactament igual que el VirtualService, configurant els Proxies</li>
+<li>Podeu trobar més informació a <a href="https://istio.io/v1.6/docs/reference/config/networking/destination-rule/">https://istio.io/v1.6/docs/reference/config/networking/destination-rule/</a></li>
+</ul>
+
+<h3 id="gateway">Gateway</h3>
+
+<ul>
+<li>Configura els Istio Ingress Gateway i Istio Egress Gateway al Service Mesh</li>
+<li>En el cas del Ingress Gateway és molt semblant a les Routes</li>
+<li>Bàsicament permet configurar els dominis, protocols, ports, certificats</li>
+<li>Funciona exactament igual que el VirtualService, configurant els Edge Proxies</li>
+<li>Podeu trobar més informació a <a href="https://istio.io/v1.6/docs/reference/config/networking/gateway/">https://istio.io/v1.6/docs/reference/config/networking/gateway/</a></li>
+</ul>
+
+<h3 id="altres-descriptors">Altres descriptors</h3>
+
+<p>Podeu trobar informació de la resta de descriptors a:</p>
+
+<ul>
+<li><a href="https://istio.io/v1.6/docs/reference/config/">https://istio.io/v1.6/docs/reference/config/</a></li>
+<li><a href="https://istio.io/v1.6/docs/reference/config/networking/">https://istio.io/v1.6/docs/reference/config/networking/</a></li>
+<li><a href="https://istio.io/v1.6/docs/reference/config/security/">https://istio.io/v1.6/docs/reference/config/security/</a></li>
+</ul>
+
+<h2 id="gestió-del-tràfic-extern-al-service-mesh">Gestió del tràfic extern al Service Mesh</h2>
+
+<p>El Service Mesh, automaticament, només pel fet de tenir el proxy Envoy desplegat, controla tot el tràfic intern entre les microserveis de la plataforma, permetent veure els fluxes de tràfic i métriques corresponents.</p>
+
+<p>És important utilitzar el Ingress Gateway com a punt d&rsquo;entrada dels
+microserveis que criden des de l&rsquo;exterior de la plataforma. En cas contrari, aquest tràfic no passarà pel Service Mesh, no podent sent possible el seu monitoratge ni control.</p>
+
+<p>De cara al ús del Service Mesh és important que absolutament tot el tràfic, tant l&rsquo;intern com l&rsquo;extern estigui controlat. En cas contraris es poden produir comportament no dessitjats.</p>
+
+<p>Per configurar el trafic extern a traves del service Mesh, cal configurar divesos descriptors:</p>
+
+<ul>
+<li><strong>Route</strong>: La route del microservei, deixa d&rsquo;apuntar al Service del microservei i passa a apuntar al Service del Ingress Gateway. Les routes ja no es depleguen al namespace de l&rsquo;aplicació, sinó al del Service Mesh.</li>
+<li><strong>Gateway</strong>: Definirà el Ingress Gateway en si. En el nostre cas, dexarem passar tot el trafic i posarem * a hosts.</li>
+<li><strong>VirtualService</strong>: Rebrà les peticions del Gateway i enviarà el tràfic al Service del Microservei</li>
+</ul>
+
+<pre><code class="language-yaml">kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: istio-ingressgateway
+  namespace: control-plane-namespace
+  labels:
+    app: istio-ingressgateway
+spec:
+  host: microservice.test.com #microservice url
+  to:
+    kind: Service
+    name: istio-ingressgateway
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
+---
+kind: Gateway
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: ingress-gateway-configuration
+  namespace: app-namespace
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - &quot;*&quot;   # Domain name of the external website
+---
+kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: microservice-virtual-service  # &quot;just&quot; a name for this virtualservice
+  namespace: app-namespace
+spec:
+  hosts:      # which incoming host
+    - &quot;*&quot;
+  gateways:
+    - ingress-gateway-configuration
+  http:
+  - match:
+    - uri:
+        exact: /productpage
+    - uri:
+        exact: /login
+    - uri:
+        exact: /logout
+    - uri:
+        prefix: /api/v1/products
+    route:
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target Service DNS name
+        port:
+          number: 9080
+</code></pre>
+
+<h2 id="exemples">Exemples</h2>
+
+<h3 id="canary-deployment">Canary Deployment</h3>
+
+<ul>
+<li>És un model de desplegament avançat en què la nova versió de l’aplicació (no segura) està desplegada simultàniament amb la versió estable</li>
+<li>Una petita part del tràfic s’envia a la versió nova i es va estudiant el seu comportament. Si el comportament és correcte, a poc a poc es va desviant més tràfic fins que tot el tràfic va a la versió nova</li>
+<li>Llavors ja es pot eliminar la versió antiga de l’aplicació</li>
+</ul>
+
+<p><img src="/related/cloud/canaryDeployment.png" alt="Canary Deployment" /></p>
+
+<p>Exemple:</p>
+
+<ul>
+<li>Tenim dos deployments desplegats, un amb la versió estable i un amb la nova versió</li>
+<li>Els dos deployments formen tenen el mateix service
+
+<ul>
+<li>Tenen la label <strong>app: test-service</strong></li>
+</ul></li>
+<li>Addicionalment tenen la label version per poder distingir-los per istio
+
+<ul>
+<li>La versió estable <strong>version: safe</strong></li>
+<li>La versió nova <strong>version: risky</strong></li>
+</ul></li>
+<li>L&rsquo;exemple no té <strong>Gateway</strong>, és per un servei intern al què no s&rsquo;accedeix des de l&rsquo;exterior de la plataforma a través d&rsquo;un navegador. En exemples posteriors s&rsquo;afegirà el Gateway per veure com la configuració per serveis accessibles des de navegadors web</li>
+<li>La configuració necessària del Service Mesh per enviar el 90% del tràfic a la versió estable i el 10% a la versió nova seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: a-set-of-routing-rules-we-can-call-this-anything  # &quot;just&quot; a name for this virtualservice
+  namespace: default
+spec:
+  hosts:
+    - test-service.default.svc.cluster.local  # The Service DNS (ie the regular K8S Service) name that we're applying routing rules to.
+  http:
+    - route:
+        - destination:
+            host: test-service.default.svc.cluster.local # The Target DNS name
+            subset: safe-group  # The name defined in the DestinationRule
+          weight: 90
+        - destination:
+            host: test-service.default.svc.cluster.local # The Target DNS name
+            subset: risky-group  # The name defined in the DestinationRule
+          weight: 10
+---
+kind: DestinationRule       # Defining which pods should be part of each subset
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: grouping-rules-for-our-canary-release # This can be anything you like.
+  namespace: default
+spec:
+  host: test-service # Service
+  trafficPolicy: ~
+  subsets:
+    - labels:   # SELECTOR.
+        version: safe # find pods with label &quot;safe&quot;
+      name: safe-group
+    - labels:
+        version: risky
+      name: risky-group
+</code></pre>
+
+<h3 id="a-b-testing">A/B Testing</h3>
+
+<ul>
+<li>És un model molt similar al Canary Deployment, també es basa en tenir dues versions desplegades y enviar part del tràfic a una versió i part a l’altre</li>
+<li>En el model de Canary Deployment, normalment no es decideix quins usuaris accedeixen a la nova versió i quins no, es fa per percentatge de tràfic</li>
+<li>En el model A/B Testing es pot decidir quins usuaris accedeixen a la nova versió i quins a l&rsquo;antiga</li>
+<li>Normalment es fa a través d’una capçalera HTTP</li>
+<li>L&rsquo;exemple té <strong>Gateway</strong>, és per serveis accessibles des de l&rsquo;exterior de la plataforma amb navegadors web</li>
+<li>La configuració necessària del Service Mesh per enviar el tràfic que tingui la capçalera HTTP <strong>x-my-header: test</strong> a la nova versió i la resta a la versió estable seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: Gateway
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: ingress-gateway-configuration
+spec:
+  selector:
+    istio: ingressgateway # use Istio default gateway implementation
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - &quot;*&quot;   # Domain name of the external website
+---
+kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: a-set-of-routing-rules-we-can-call-this-anything  # &quot;just&quot; a name for this virtualservice
+  namespace: default
+spec:
+  hosts:      # which incoming host are we applying the proxy rules to???
+    - &quot;*&quot;
+  gateways:
+    - ingress-gateway-configuration
+  http:
+    - match:
+      - headers:  # IF
+          x-my-header:
+            exact: test
+      route: # THEN
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target DNS name
+          subset: risky-group  # The name defined in the DestinationRule
+    - route: # CATCH ALL
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target DNS name
+          subset: safe-group  # The name defined in the DestinationRule
+
+---
+kind: DestinationRule # Defining which pods should be part of each subset
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name:grouping-rules-for-our-dark-launching # This can be anything you like.
+  namespace: default
+spec:
+  host: test-service # Service
+  subsets:
+    - labels: # SELECTOR.
+        version: safe # find pods with label &quot;safe&quot;
+      name: safe-group
+    - labels:
+        version: risky
+      name: risky-group
+</code></pre>
+
+<h3 id="fault-injection">Fault Injection</h3>
+
+<ul>
+<li>Permet injectar errors a un percentatge de les peticions</li>
+<li>Permet fer que un microservei respongui més lent</li>
+<li>Molt útil per simular i identificar el comportament de sistema en casos de fallida de la xarxa i/o microserveis</li>
+<li>Es pot utilitzar amb model similar al de A/B Testing, de manera que el valor d’una capçalera HTTP decideixi si s’injecten errors o no</li>
+<li>La configuració necessària del Service Mesh per introduir error quan la capçalera HTTP sigui <strong>x-my-header: test</strong> seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: a-set-of-routing-rules-we-can-call-this-anything  # &quot;just&quot; a name for this virtualservice
+  namespace: default
+spec:
+  hosts:
+    - test-service.default.svc.cluster.local # The Target DNS name
+  http:
+    - match:
+        - headers: # IF
+            x-my-header:
+              exact: test
+      fault:
+        abort:
+          httpStatus: 503 # BE CAREFUL WITH INDENTATION!
+          percentage:
+            value: 10
+      route: # THEN
+        - destination:
+            host: test-service.default.svc.cluster.local # The Target DNS name
+    - route: # CATCH ALL
+        - destination:
+            host: test-service.default.svc.cluster.local # The Target DNS name
+</code></pre>
+
+<h3 id="timeouts">Timeouts</h3>
+
+<ul>
+<li>Permet afegir, de manera transparent als microserveis, timeouts entre peticions per evitar colls d’ampolla i fallides en cascada</li>
+<li>La configuració necessària del Service Mesh per configurar Timeouts seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: a-set-of-routing-rules-we-can-call-this-anything  # &quot;just&quot; a name for this virtualservice
+  namespace: default
+spec:
+  hosts:
+    - test-service.default.svc.cluster.local #The service
+  http:
+    - route:
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target DNS name
+          subset: v1  # The name defined in the DestinationRule
+      timeout: 10s
+</code></pre>
+
+<h3 id="reintents">Reintents</h3>
+
+<ul>
+<li>Permet afegir, de manera transparent als microserveis, polítiques de reintents entre peticions per mitigar puntuals de xarxa o microserveis</li>
+<li>La configuració necessària del Service Mesh per configurar Reintents seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: VirtualService
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name: a-set-of-routing-rules-we-can-call-this-anything  # &quot;just&quot; a name for this virtualservice
+  namespace: default
+spec:
+  hosts:
+    - test-service.default.svc.cluster.local #The service
+  http:
+    - route:
+      - destination:
+          host: test-service.default.svc.cluster.local # The Target DNS name
+          subset: v1  # The name defined in the DestinationRule
+      retries:
+        attempts: 3
+        perTryTimeout: 2s
+</code></pre>
+
+<h3 id="throttling">Throttling</h3>
+
+<ul>
+<li>Permet limitar el nombre de peticions concurrents màxim a un microservei per evitar la seva saturació</li>
+<li>La configuració necessària del Service Mesh per configurar Throttling seria el següent:</li>
+</ul>
+
+<pre><code class="language-yaml">kind: DestinationRule # Defining which pods should be part of each subset
+apiVersion: networking.istio.io/v1alpha3
+metadata:
+  name:grouping-rules # This can be anything you like.
+  namespace: default
+spec:
+  host: test-service # Service
+  subsets:
+    - labels: # SELECTOR.
+        version: v1 # find pods with label &quot;v1&quot;
+      name: v1
+      trafficPolicy:
+        connectionPool:
+          tcp:
+            maxConnections: 100
+</code></pre>
+
+<h3 id="circuit-breaker">Circuit Breaker</h3>
+
+<ul>
+<li>Circuit Breaker és un patró introduït per Martin Fowler molt important, en el àmbit de microserveis
+
+<ul>
+<li><a href="https://martinfowler.com/bliki/CircuitBreaker.html">https://martinfowler.com/bliki/CircuitBreaker.html</a></li>
+<li><a href="https://www.oscarblancarteblog.com/2018/12/04/circuit-breaker-pattern/">https://www.oscarblancarteblog.com/2018/12/04/circuit-breaker-pattern/</a></li>
+</ul></li>
+<li>En un sistema complex, quan un dels elements comença a fallar i introduir latències, és fàcil que es produeixi una fallida en cascada on és molt difícil identificar l’origen</li>
+<li>Aquest patró ajuda a evitar les fallides en cascada</li>
+<li>Es basa en testejar el servei i en cas que no es comporti correctament tallar les peticions durant un cert període de temps per evitar una fallida en cascada.</li>
+</ul>
+
+<p><img src="/related/cloud/circuitBreaker.png" alt="Circuit Breaker" /></p>
+
+<ul>
+<li>La configuració necessària del Service Mesh per establir el Circuit Breaker seria:</li>
+</ul>
+
+<pre><code class="language-yaml">apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  name: circuit-breaker-for-test-service
+spec:
+  host: test-service.default.svc.cluster.local  # This is the name of the k8s service that we're configuring
+  trafficPolicy:
+    outlierDetection: # Circuit Breakers HAVE TO BE SWITCHED ON
+      consecutiveErrors: 3
+      interval: 20s
+      maxEjectionPercent: 100
+    baseEjectionTime: 30s
+</code></pre>
+
+<h3 id="mutual-tls">Mutual TLS</h3>
+
+<ul>
+<li>Força TLS pel tràfic entre els diferents pods dins del cluster</li>
+<li>Elimina tot el tràfic no TLS</li>
+<li>Molt recomanable per clusters públics multiregió</li>
+<li>A la versió Openshift Service Mesh 2.x, el mutual TLS està habilitat per defecte</li>
+<li>És recomanable no deshabilitar-lo de manera global</li>
+<li>En cas de necessitar deshabilitar-lo per algun microservei concret, la configuració seria:</li>
+</ul>
+
+<pre><code class="language-yaml"># This switch MTLS on between proxies
+apiVersion: &quot;networking.istio.io/v1alpha3&quot;
+kind: &quot;DestinationRule&quot;
+metadata:
+  name: &quot;default&quot;
+  namespace: &quot;istio-system&quot; #Control Plane namespace
+spec:
+  host: &quot;*.local&quot; # Every SINGLE SERVICE eg test-service.default.svc.cluster.local
+  trafficPolicy:
+    tls:
+      mode: DISABLE
+</code></pre>
+
+<h3 id="authorization-policy">Authorization Policy</h3>
+
+<ul>
+<li>Defineix la seguretat de les crides entre microserveis</li>
+<li>Defineix quins microserveis poden cridar a un microservei concret</li>
+<li>Simplifica la implementació de seguretat en microserveis, eliminant la necessitat de l’ús de keys per securitzar els microserveis</li>
+<li>Per exemple, si tenim tres microserveis que només es poden cridar de manera seqüencial, Customer -&gt; Preference -&gt; Recommendation, la configuració seria la següent:</li>
+</ul>
+
+<pre><code class="language-yaml">apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  name: deny-all
+spec:{}
+---
+apiVersion: &quot;security.istio.io/v1beta1&quot;
+kind: &quot;AuthorizationPolicy&quot;
+metadata:
+  name: &quot;customer-viewer&quot;
+spec:
+  selector:
+    matchLabels:
+      app: customer
+  rules:
+  - to:
+    - operation:
+        methods: [&quot;GET&quot;]
+---
+apiVersion: &quot;security.istio.io/v1beta1&quot;
+kind: &quot;AuthorizationPolicy&quot;
+metadata:
+  name: &quot;customer-to-preference&quot;
+spec:
+  selector:
+    matchLabels:
+      app: preference
+  rules:
+  - from:
+    - source:
+        principals: [&quot;cluster.local/ns/default/sa/customer-sa&quot;]
+    to:
+    - operation:
+        methods: [&quot;GET&quot;]
+---
+apiVersion: &quot;security.istio.io/v1beta1&quot;
+kind: &quot;AuthorizationPolicy&quot;
+metadata:
+  name: &quot;preference-to-recommendation&quot;
+spec:
+  selector:
+    matchLabels:
+      app: recommendation
+  rules:
+  - from:
+    - source:
+        principals: [&quot;cluster.local/ns/default/sa/preference-sa&quot;]
+    to:
+    - operation:
+        methods: [&quot;GET&quot;]
+
+</code></pre>
+
+<p>Podeu trobar informació  a <a href="https://istio.io/v1.6/docs/concepts/security/#authorization">https://istio.io/v1.6/docs/concepts/security/#authorization</a></p>
+
+<h2 id="recursos-addicionals">Recursos addicionals</h2>
+
+<h3 id="documentació">Documentació</h3>
+
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.6/welcome/index.html">https://docs.openshift.com/container-platform/4.6/welcome/index.html</a>
+
+<ul>
+<li>Apartat Service Mesh</li>
+</ul></li>
+<li><a href="https://istio.io/v1.6/docs/">https://istio.io/v1.6/docs/</a></li>
+<li><a href="https://maistra.io/">https://maistra.io/</a></li>
+<li><a href="https://kiali.io/">https://kiali.io/</a></li>
+<li><a href="https://www.jaegertracing.io/">https://www.jaegertracing.io/</a></li>
+<li><a href="https://opentracing.io/">https://opentracing.io/</a></li>
+<li><a href="https://prometheus.io/">https://prometheus.io/</a></li>
+<li><a href="https://grafana.com/">https://grafana.com/</a></li>
+</ul>
+
+<h3 id="tutorials-i-exemples">Tutorials i exemples</h3>
+
+<ul>
+<li><a href="https://redhat-scholars.github.io/istio-tutorial/istio-tutorial/1.6.x/index.html">https://redhat-scholars.github.io/istio-tutorial/istio-tutorial/1.6.x/index.html</a></li>
+<li><a href="https://github.com/maistra/istio/tree/maistra-2.0/samples">https://github.com/maistra/istio/tree/maistra-2.0/samples</a></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

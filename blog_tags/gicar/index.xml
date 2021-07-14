@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/gicar/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Fri, 15 Sep 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Hibridació de l&#39;autenticació i de la gestió d&#39;identitats amb Office365</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/09/hibridacio-office365/</link>
+      <pubDate>Fri, 15 Sep 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/09/hibridacio-office365/</guid>
+      <description>Arquitectura implementada per a assolir la hibridació de la capa de gestió d&#39;identitats i de control d&#39;accés amb l&#39;Office365 de la Generalitat</description>
+    </item>
+    
+  </channel>
+</rss>

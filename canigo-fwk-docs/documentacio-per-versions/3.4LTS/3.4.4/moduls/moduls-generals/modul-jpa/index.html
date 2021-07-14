@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Mòdul JPA</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Mòdul JPA\" />");
+		document.write("<meta name=\"description\" content=\"Mòdul de persistència de Base de Dades.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-fwk-docs">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	  
+	  
+	
+	  
+	  
+	  	
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/'>canigo fwk docs</a>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/'>documentacio per versions</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/'>3.4LTS</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/'>3.4.4</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/'>moduls</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-generals/'>moduls generals</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	  	
+	  	
+	  		<li>
+	  	
+	  	<a href='https://canigo.ctti.gencat.cat/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/moduls/moduls-generals/modul-jpa/'>modul jpa</a>
+	  	
+	  		</li>
+	  	
+	  
+	
+	  
+	  
+	
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Mòdul JPA
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 25-06-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="propòsit">Propòsit</h2>
+
+<p>Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, permetent la execució d&rsquo;operacions dintre de transaccions.</p>
+
+<p>Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:</p>
+
+<ul>
+<li><a href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Spring Data JPA</a>.</li>
+<li><a href="http://www.querydsl.com/static/querydsl/latest/reference/html/">QueryDSL</a></li>
+</ul>
+
+<h2 id="instal-lació-i-configuració">Instal·lació i Configuració</h2>
+
+<h3 id="instal-lació">Instal·lació</h3>
+
+<p>El mòdul de persistència i el corresponent test unitari s&rsquo;inclou per defecte dins del core de Canigó 3.
+Durant el procés de creació de l&rsquo;aplicació, l&rsquo;eina de suport al desenvolupament inclourà la referència dins del pom.xml.
+En cas d&rsquo;una instal- lació manual afegir les següents línies al pom.xml de l&rsquo;aplicació:</p>
+
+<pre><code>&lt;canigo.persistence.jpa.version&gt;[2.3.0,2.4.0)&lt;/canigo.persistence.jpa.version&gt;
+
+&lt;dependency&gt;
+	&lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+	&lt;artifactId&gt;canigo.persistence.jpa&lt;/artifactId&gt;
+	&lt;version&gt;${canigo.persistence.jpa.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>Al pom.xml també s&rsquo;ha d&rsquo;afegir el plugin que genera les classes per als filtres de <a href="http://www.querydsl.com/">QueryDSL</a> i
+el que executa el test unitari del mòdul de persistència:</p>
+
+<pre><code>&lt;build&gt;
+	...
+	&lt;plugins&gt;
+		...
+		&lt;plugin&gt;
+			&lt;groupId&gt;com.mysema.maven&lt;/groupId&gt;
+			&lt;artifactId&gt;apt-maven-plugin&lt;/artifactId&gt;
+			&lt;version&gt;1.1.3&lt;/version&gt;
+			&lt;executions&gt;
+				&lt;execution&gt;
+					&lt;goals&gt;
+						&lt;goal&gt;process&lt;/goal&gt;
+					&lt;/goals&gt;
+					&lt;configuration&gt;
+						&lt;outputDirectory&gt;target/generated-sources/java&lt;/outputDirectory&gt;
+						&lt;processor&gt;com.querydsl.apt.jpa.JPAAnnotationProcessor&lt;/processor&gt;
+					&lt;/configuration&gt;
+				&lt;/execution&gt;
+			&lt;/executions&gt;
+		&lt;/plugin&gt;
+		...
+	&lt;/plugins&gt;
+	...
+&lt;/build&gt;	
+</code></pre>
+
+<h3 id="configuració">Configuració</h3>
+
+<p>La configuració es realitza automàticament a partir de l&rsquo;eina de suport al desenvolupament (plugin de Canigó per a Eclipse)</p>
+
+<p>En cas que no es generi automàticament el codi, s&rsquo;ha de realitzar manualment la següent configuració:</p>
+
+<p><strong>jpa.properties</strong></p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jpa.properties</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Requerit</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.persistence.database</td>
+<td>Si</td>
+<td>Sistema de base de dades al que es conectarà.</td>
+</tr>
+
+<tr>
+<td>*.persistence.dialect</td>
+<td>Si</td>
+<td>El nom de classe que permet a JPA generar SQL per a una base de dades relacional en particular. Aquests són els dialectes certificats: org.hibernate.dialect.Oracle12cDialect<br> org.hibernate.dialect.Oracle10gDialect<br> org.hibernate.dialect.Oracle9iDialect<br> org.hibernate.dialect.Oracle8iDialect<br> org.hibernate.dialect.MySQL5Dialect<br> org.hibernate.dialect.MySQLDialect &lt;&ndash; Versions &lt; 5<br> org.hibernate.dialect.HSQLDialect<br> org.hibernate.dialect.PostgreSQLDialect</td>
+</tr>
+
+<tr>
+<td>*.persistence.showSQL</td>
+<td>No</td>
+<td>Escriu totes les sentències SQL al log aplicatiu.<br> Per defecte: true</td>
+</tr>
+
+<tr>
+<td>*.persistence.generateDdl</td>
+<td>No</td>
+<td>Exporta el DDL (Data Definition Language) a la BD després que l&rsquo;EntityManagerFactory s&rsquo;inicialitzi, creant/actualitzant les taules.<br> Valor per defecte: false</td>
+</tr>
+
+<tr>
+<td>*.persistence.hibernate.connection.release_mode</td>
+<td>No</td>
+<td>Serveix per especificar quan Hibernate ha d&rsquo;alliberar les connexions JDBC. Una connexió JDBC es manté fins que la sessió és tancada explícitament o desconnectat per defecte. Per a un datasource JTA s&rsquo;hauria de seleccionar after_statement, i per non-JTA after_transaction. En mode auto, se seleccionarà after_statement per a JTA i CMT, i afte_transaction per JDBC.<br> Per defecte: auto</td>
+</tr>
+
+<tr>
+<td>*.persistence.hibernate.connection.autocommit</td>
+<td>No</td>
+<td>Habilita l&rsquo;autocommit per a connexions pooled JDBC</td>
+</tr>
+
+<tr>
+<td>*.persistence.hibernate.generate_statistics</td>
+<td>No</td>
+<td>Hibernate recopila informació útil per a tunning.<br> Per defecte: false</td>
+</tr>
+
+<tr>
+<td>*.persistence.hibernate.jdbc.use_scrollable_resultset</td>
+<td>No</td>
+<td>Habilita l&rsquo;ús de JDBC2 scrollable resultsets a Hibernate.<br> Per defecte: true</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>persistence.xml</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/config/persistence/persistence.xml</p>
+
+<pre><code>&lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd&quot;
+	version=&quot;1.0&quot;&gt;
+
+	&lt;persistence-unit name=&quot;canigo&quot; transaction-type=&quot;RESOURCE_LOCAL&quot;/&gt;
+
+&lt;/persistence&gt;
+</code></pre>
+
+<p><strong>app-custom-persistence-jpa.xml</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-custom-persistence-jpa.xml</p>
+
+<p>Exemple del fitxer de configuració per a un base de dades H2:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+	xmlns:p=&quot;http://www.springframework.org/schema/p&quot; xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+	xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;
+	xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd&quot;&gt;
+
+	&lt;aop:aspectj-autoproxy /&gt;
+	
+	&lt;jpa:repositories base-package=&quot;cat.gencat.test.repository&quot; base-class=&quot;cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl&quot;/&gt;
+	
+	&lt;bean id=&quot;jpaVendorAdapter&quot; class=&quot;org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter&quot;&gt;
+		&lt;description&gt;
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		&lt;/description&gt;
+		&lt;property name=&quot;showSql&quot; value=&quot;true&quot; /&gt;
+		&lt;property name=&quot;generateDdl&quot; value=&quot;false&quot; /&gt;
+		&lt;property name=&quot;database&quot; value=&quot;${persistence.database}&quot; /&gt;
+		&lt;property name=&quot;databasePlatform&quot; value=&quot;${persistence.dialect}&quot; /&gt;
+	&lt;/bean&gt;
+
+	&lt;tx:advice id=&quot;txAdvice&quot;&gt;
+		&lt;tx:attributes&gt;
+			&lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;filter*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;find*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;load*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;save*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;insert*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+		&lt;/tx:attributes&gt;
+	&lt;/tx:advice&gt;
+	
+	&lt;jdbc:embedded-database id=&quot;dataSource&quot; type=&quot;H2&quot;&gt;
+		&lt;jdbc:script location=&quot;classpath:scripts/h2/h2-db-app-h2db-schema.sql&quot;/&gt;
+		&lt;jdbc:script location=&quot;classpath:scripts/h2/h2-db-app-h2db-data.sql&quot;/&gt;
+	&lt;/jdbc:embedded-database&gt;
+
+&lt;/beans&gt;
+</code></pre>
+
+<p>Exemple del fitxer de configuració per a un base de dades Oracle, Mysql o Postgres per jdbc:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+	xmlns:p=&quot;http://www.springframework.org/schema/p&quot; xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+	xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;
+	xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd&quot;&gt;
+
+	&lt;aop:aspectj-autoproxy /&gt;
+	
+	&lt;jpa:repositories base-package=&quot;cat.gencat.test.repository&quot; base-class=&quot;cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl&quot;/&gt;
+	
+	&lt;bean id=&quot;jpaVendorAdapter&quot; class=&quot;org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter&quot;&gt;
+		&lt;description&gt;
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		&lt;/description&gt;
+		&lt;property name=&quot;showSql&quot; value=&quot;true&quot; /&gt;
+		&lt;property name=&quot;generateDdl&quot; value=&quot;false&quot; /&gt;
+		&lt;property name=&quot;database&quot; value=&quot;${persistence.database}&quot; /&gt;
+		&lt;property name=&quot;databasePlatform&quot; value=&quot;${persistence.dialect}&quot; /&gt;
+	&lt;/bean&gt;
+
+	&lt;tx:advice id=&quot;txAdvice&quot;&gt;
+		&lt;tx:attributes&gt;
+			&lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;filter*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;find*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;load*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;save*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;insert*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+		&lt;/tx:attributes&gt;
+	&lt;/tx:advice&gt;
+	
+	&lt;bean id=&quot;dataSource&quot; class=&quot;org.apache.commons.dbcp2.BasicDataSource&quot; destroy-method=&quot;close&quot;&gt;
+	  &lt;property name=&quot;driverClassName&quot; value=&quot;${jdbc.driverClassName}&quot;/&gt;
+	  &lt;property name=&quot;url&quot; value=&quot;${jdbc.url}&quot;/&gt;
+	  &lt;property name=&quot;username&quot; value=&quot;${jdbc.username}&quot;/&gt;
+	  &lt;property name=&quot;password&quot; value=&quot;${jdbc.password}&quot;/&gt;
+	&lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+
+<p>Exemple del fitxer de configuració per a un base de dades Oracle, Mysql o Postgres per jndi:</p>
+
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+	xmlns:p=&quot;http://www.springframework.org/schema/p&quot; xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;
+	xmlns:jdbc=&quot;http://www.springframework.org/schema/jdbc&quot;
+	xmlns:jpa=&quot;http://www.springframework.org/schema/data/jpa&quot;
+	xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+           http://www.springframework.org/schema/jdbc 
+           http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd
+           http://www.springframework.org/schema/aop 
+           http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+           http://www.springframework.org/schema/data/jpa
+    	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd&quot;&gt;
+
+	&lt;aop:aspectj-autoproxy /&gt;
+	
+	&lt;jpa:repositories base-package=&quot;cat.gencat.test.repository&quot; base-class=&quot;cat.gencat.ctti.canigo.arch.persistence.jpa.repository.impl.JPAGenericRepositoryImpl&quot;/&gt;
+	
+	&lt;bean id=&quot;jpaVendorAdapter&quot; class=&quot;org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter&quot;&gt;
+		&lt;description&gt;
+			Fem servir Hibernate com a motor de persistència per sota de JPA.
+		&lt;/description&gt;
+		&lt;property name=&quot;showSql&quot; value=&quot;true&quot; /&gt;
+		&lt;property name=&quot;generateDdl&quot; value=&quot;false&quot; /&gt;
+		&lt;property name=&quot;database&quot; value=&quot;${persistence.database}&quot; /&gt;
+		&lt;property name=&quot;databasePlatform&quot; value=&quot;${persistence.dialect}&quot; /&gt;
+	&lt;/bean&gt;
+
+	&lt;tx:advice id=&quot;txAdvice&quot;&gt;
+		&lt;tx:attributes&gt;
+			&lt;tx:method name=&quot;get*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;filter*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;find*&quot; propagation=&quot;REQUIRED&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;load*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot; /&gt;
+			&lt;tx:method name=&quot;save*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+			&lt;tx:method name=&quot;insert*&quot; propagation=&quot;REQUIRED&quot; /&gt;
+		&lt;/tx:attributes&gt;
+	&lt;/tx:advice&gt;
+	
+	&lt;bean id=&quot;dataSource&quot; class=&quot;org.springframework.jndi.JndiObjectFactoryBean&quot;&gt;
+	  &lt;property name=&quot;jndiName&quot; value=&quot;${jndi.name}&quot;/&gt;
+	  &lt;property name=&quot;lookupOnStartup&quot; value=&quot;${jndi.lookupOnStartup:true}&quot;/&gt;
+	  &lt;property name=&quot;cache&quot; value=&quot;${jndi.cache:true}&quot;/&gt;
+	  &lt;property name=&quot;proxyInterface&quot; value=&quot;javax.sql.DataSource&quot;/&gt;
+	&lt;/bean&gt;
+
+&lt;/beans&gt;
+</code></pre>
+
+<p>Al tag <strong>jpa:repositories</strong> al paràmetre <strong>base-package</strong> s&rsquo;ha d&rsquo;indicar el package on es troben els repositoris de l&rsquo;aplicació.</p>
+
+<p><strong>jdbc.properties</strong></p>
+
+<p>Propietat si l&rsquo;aplicació va per jdbc</p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jdbc.properties</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Requerit</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.jdbc.driverClassName</td>
+<td>Si</td>
+<td>Nom de classe del driver per a la connexió a la base de dades.</td>
+</tr>
+
+<tr>
+<td>*.jdbc.url</td>
+<td>Si</td>
+<td>URL de connexió a la base de dades.</td>
+</tr>
+
+<tr>
+<td>*.jdbc.username</td>
+<td>Si</td>
+<td>Usuari de connexió a la base de dades.</td>
+</tr>
+
+<tr>
+<td>*.jdbc.password</td>
+<td>Si</td>
+<td>Password de connexió a la base de dades</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>jndi.properties</strong></p>
+
+<p>Propietat si l&rsquo;aplicació va per jndi</p>
+
+<p>Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/jndi.properties</p>
+
+<table>
+<thead>
+<tr>
+<th>Propietat</th>
+<th>Requerit</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>*.jndi.name</td>
+<td>Si</td>
+<td>Especifica el nom JNDI a cercar.</td>
+</tr>
+
+<tr>
+<td>*.jndi.lookupOnStartup</td>
+<td>No</td>
+<td>Cerca l&rsquo;objecte JNDI durant l&rsquo;arranc. Per defecte: true.</td>
+</tr>
+
+<tr>
+<td>*.jndi.cache</td>
+<td>No</td>
+<td>Permet cachejar l&rsquo;objecte JNDI. Per defecte: true.</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="ús-dels-repositoris">Ús dels repositoris</h3>
+
+<p>Per a utilitzar els repositoris s&rsquo;ha de generar un objecte Repository per a l&rsquo;entitat desitjada(T), que ha d&rsquo;estendre de <strong>cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository<T, ID extends Serializable></strong></p>
+
+<pre><code>public interface EquipamentRepository extends GenericRepository&lt;Equipament, Long&gt;{
+
+}
+</code></pre>
+
+<h4 id="construcció-de-queries-automàtiques">Construcció de queries automàtiques</h4>
+
+<p>A un repositori es poden definir mètodes per cada query que es vulgui definir. La construcció utilitza els prefixos find&hellip;By, read&hellip;By, query&hellip;By, count&hellip;By i get&hellip;By. El mètode pot incoporar la paraula Distinct, concatenar propietats amb And i Or o descriptors com OrderBy o IgnoreCase.</p>
+
+<p>Exemples:</p>
+
+<pre><code>List&lt;Equipament&gt; findDistinctByNomOrMunicipi(String nom, String municipi);
+List&lt;Equipament&gt; findByNomIgnoreCase(String nom);
+List&lt;Equipament&gt; findByMunicipiOrderByNomDesc(String municipi);
+</code></pre>
+
+<p>Més informació a la documentació oficial de <a href="http://docs.spring.io/spring-data/jpa/docs/current/reference/html/">Spring Data JPA</a>.</p>
+
+<h4 id="utilització-de-querydsl">Utilització de QueryDSL</h4>
+
+<p>Una de les funcionalitats proposades és la d&rsquo;utilitzar QueryDSL per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.</p>
+
+<p>El GenericRepository proporciona el següent mètode:</p>
+
+<pre><code>Page&lt;T&gt; findAll(Predicate predicate, Pageable pageable);
+</code></pre>
+
+<p>Aquest mètode espera un objecte org.springframework.data.domain.Pageable que conté el número de pàgina (la primera pàgina és la 0), el nombre d&rsquo;elements per pàgina, la direcció d&rsquo;ordenació, el camp d&rsquo;ordenació. I un objecte Predicate amb la query a realitzar que es construeix de la següent manera:</p>
+
+<p>Primer de tot el filtre ha de ser un String amb el següent patró:</p>
+
+<p><strong>field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN</strong></p>
+
+<ul>
+<li>on Field és el nom d&rsquo;una propietat de l&rsquo;entitat (per exemple id)<br></li>
+<li>on Operador és un dels tipus d&rsquo;operador suportats:</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Descripció</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>&gt;</td>
+<td>major que</td>
+</tr>
+
+<tr>
+<td>&gt;:</td>
+<td>major o igual que</td>
+</tr>
+
+<tr>
+<td>&lt;</td>
+<td>menor que</td>
+</tr>
+
+<tr>
+<td>&lt;:</td>
+<td>menor o igual que</td>
+</tr>
+
+<tr>
+<td>&lt;&gt;</td>
+<td>diferent de</td>
+</tr>
+
+<tr>
+<td>:</td>
+<td>igual que</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>on valor és el valor amb el qual es vol comparar.</li>
+</ul>
+
+<p>Per exemple, per cercar l&rsquo;entitat que tingui id major que 15 i amb nom igual a &lsquo;Prova&rsquo; el filtre hauria de ser el següent:<br>
+id&gt;15,nom:Prova</p>
+
+<h4 id="projecció-de-resultats">Projecció de resultats</h4>
+
+<p>Amb QueryDSL també es poden realitzar cerques que en comptes de retornar l&rsquo;objecte sencer, retorni només determinats camps de l&rsquo;objecte desitjat, els camps no seleccionats els retorna amb valor null<br></p>
+
+<p>Per a utilitzar les projeccions el GenericRepository proporciona el següent mètode:</p>
+
+<pre><code>Page&lt;T&gt; findAll(FactoryExpression&lt;T&gt; factoryExpression, Predicate predicate, Pageable pageable);
+</code></pre>
+
+<p>El codi següent retorna una llista dels objectes Equipaments amb nom INDOORKARTING, però aquests objectes només tindran el camp nom.</p>
+
+<pre><code>String search = &quot;nom:INDOORKARTING&quot;;
+		
+Pageable pageable = new PageRequest(0, 5, Sort.Direction.DESC, &quot;nom&quot;);
+GenericPredicateBuilder&lt;Equipament&gt; builder = new GenericPredicateBuilder&lt;Equipament&gt;(Equipament.class, &quot;equipament&quot;);
+builder.populateSearchCriteria(search);
+		
+QEquipament qequipament = QEquipament.equipament;
+	
+Page&lt;Equipament&gt; page = repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
+</code></pre>
+
+<p>Més informació a la documentació oficial de <a href="http://www.querydsl.com/static/querydsl/latest/reference/html/">QueryDSL</a>.</p>
+
+<h4 id="batch-inserts-update">Batch Inserts/Update</h4>
+
+<p>La classe GenericRepository també proporciona un mètode per a realitzar inserts/updates de forma massiva amb un rendiment òptim:</p>
+
+<pre><code>public &lt;S extends T&gt; List&lt;S&gt; bulkSave(Iterable&lt;S&gt; entities);
+</code></pre>
+
+<p>Es pot veure un exemple de com utilitzar aquesta classe al següent <a href="/drafts/2017-03-Howto-SaveBatch-Canigo32">howto</a></p>
+
+<h3 id="exemple">Exemple</h3>
+
+<p>Per exemple a l&rsquo;aplicació inicial que genera el plugin de Canigó es generen els següents fitxers:</p>
+
+<p><strong>Equipament.java</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/model/Equipament.java</p>
+
+<pre><code>package cat.gencat.test.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = &quot;equipaments&quot;)
+public class Equipament {
+
+	private Long id;
+	private String nom;
+	private String municipi;
+
+	public Equipament() {
+		
+	}
+	
+	public Equipament(Long id) {
+		this.id =id;
+	}
+	
+	@Id
+	@Column(name = &quot;id&quot;, nullable = false, unique = true)
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	
+	@Column(name = &quot;nom&quot;, nullable = false, unique = true)
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	@Column(name = &quot;municipi&quot;)
+	public String getMunicipi() {
+		return municipi;
+	}
+
+	public void setMunicipi(String municipi) {
+		this.municipi = municipi;
+	}	
+	
+	@Override
+	public String toString() {
+		return &quot;Equipament [nom=&quot; + nom + &quot;]&quot;;
+	}
+}
+</code></pre>
+
+<p><strong>EquipamentRepository</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/repository/EquipamentRepository.java</p>
+
+<pre><code>package cat.gencat.test.repository;
+
+import java.util.List;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import com.querydsl.core.types.FactoryExpression;
+import com.querydsl.core.types.Predicate;
+
+import cat.gencat.test.model.Equipament;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EquipamentRepository extends GenericRepository&lt;Equipament, Long&gt; {
+
+	Page&lt;Equipament&gt; findAll(Predicate predicate, Pageable pageable);
+	
+	Page&lt;Equipament&gt; findAll(FactoryExpression&lt;Equipament&gt; factoryExpression, Predicate predicate, Pageable pageable);
+	
+    List&lt;Equipament&gt; findDistinctByNomOrMunicipi(String nom, String municipi);
+	List&lt;Equipament&gt; findByNomIgnoreCase(String nom);
+	List&lt;Equipament&gt; findByMunicipiOrderByNomDesc(String municipi);
+}
+</code></pre>
+
+<p><strong>EquipamentService</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/service/EquipamentService.java</p>
+
+<pre><code>package cat.gencat.test.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.stereotype.Service;
+
+import com.querydsl.core.types.Projections;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.querydsl.GenericPredicateBuilder;
+import cat.gencat.test.model.Equipament;
+import cat.gencat.test.model.QEquipament;
+import cat.gencat.test.repository.EquipamentRepository;
+
+@Service(&quot;equipamentService&quot;)
+@Lazy
+public class EquipamentService {
+
+	@Autowired
+	private EquipamentRepository repository;
+	
+	public List&lt;Equipament&gt; findAll() {
+		return repository.findAll();
+	}
+
+	public Page&lt;Equipament&gt; findPaginated(Pageable pageable, String filter) {
+		
+		GenericPredicateBuilder&lt;Equipament&gt; builder = new GenericPredicateBuilder&lt;Equipament&gt;(Equipament.class, &quot;equipament&quot;);
+		builder.populateSearchCriteria(filter);
+		
+		return repository.findAll(builder.build(), pageable);
+	}
+	
+	public Page&lt;Equipament&gt; findPaginatedProjeccio(Pageable pageable, String filter) {
+		
+		GenericPredicateBuilder&lt;Equipament&gt; builder = new GenericPredicateBuilder&lt;Equipament&gt;(Equipament.class, &quot;equipament&quot;);
+		builder.populateSearchCriteria(filter);
+		
+	    QEquipament qequipament = QEquipament.equipament;
+	    
+	    return repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
+	}
+
+	public Equipament getEquipament(Long equipamentId) {
+		return repository.findOne(equipamentId);
+	}
+
+	public Long saveEquipament(Equipament equipament) {
+		repository.save(equipament);
+
+		return equipament.getId();
+	}
+
+	public void updateEquipament(Equipament equipament) {
+		repository.save(equipament);
+	}
+
+	public void deleteEquipament(Long equipamentId) {
+		Equipament equipament = new Equipament(equipamentId);
+		repository.delete(equipament);
+	}
+
+}
+</code></pre>
+
+<h3 id="test">Test</h3>
+
+<p>Per executar els tests del mòdul jpa al executar els test de l&rsquo;aplicació és necessari incorporar la dependencia test-jar del mòdul en el pom:</p>
+
+<pre><code>...
+		&lt;dependency&gt;
+		   &lt;groupId&gt;cat.gencat.ctti&lt;/groupId&gt;
+		   &lt;artifactId&gt;canigo.persistence.jpa&lt;/artifactId&gt;
+		   &lt;type&gt;test-jar&lt;/type&gt;
+		   &lt;version&gt;${canigo.persistence.jpa.version}&lt;/version&gt;
+		   &lt;scope&gt;test&lt;/scope&gt;
+		   &lt;classifier&gt;tests&lt;/classifier&gt;
+		&lt;/dependency&gt;
+...
+</code></pre>
+
+<p><strong>persistence.xml</strong></p>
+
+<p>Ubicació: <PROJECT_ROOT>/src/test/resources/config/persistence/persistence.xml
+És necessari afegir les entitats del mòdul jpa i les entitats de l&rsquo;aplicació al fitxer persistence.xml:</p>
+
+<pre><code>&lt;persistence xmlns=&quot;http://java.sun.com/xml/ns/persistence&quot;	xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+	xsi:schemaLocation=&quot;http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd&quot;
+	version=&quot;1.0&quot;&gt;
+
+	&lt;persistence-unit name=&quot;canigo&quot; transaction-type=&quot;RESOURCE_LOCAL&quot;&gt;
+		&lt;class&gt;cat.gencat.test.model.Equipament&lt;/class&gt;  
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.repository.Person&lt;/class&gt; 
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.dao.Account&lt;/class&gt;
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson&lt;/class&gt;
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb&lt;/class&gt;
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode&lt;/class&gt;
+		&lt;class&gt;cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson&lt;/class&gt;
+	&lt;/persistence-unit&gt;
+
+&lt;/persistence&gt;
+</code></pre>
+
+<p>On:
+- cat.gencat.test.model.Equipament és l&rsquo;entitat de l&rsquo;aplicació
+- cat.gencat.ctti.canigo.arch.persistence.jpa.* son les entitats del mòdul jpa</p>
+
+<p>Amb aquests canvis s&rsquo;executaran els test del mòdul al executar els tests de l&rsquo;aplicació</p>
+
+<h2 id="suport-pel-tipus-de-dada-json">Suport pel tipus de dada JSON</h2>
+
+<p>Des de la versió 1.3.1 del mòdul de persistència el tipus de dada JSON està suportat per MySQL i per PostgreSQL, fent la transformació entre JSON i l&rsquo;objecte mapejat de manera automàtica.</p>
+
+<p>Per fer ús només cal seguir els següents passos:</p>
+
+<ol>
+<li>Anotar l&rsquo;entitat (o una superclasse) amb <code>@org.hibernate.annotations.TypeDef</code> per definir el/els àlies de mapeig.</li>
+<li>Anotar el camp de l&rsquo;entitat amb <code>@org.hibernate.annotations.Type(type = &quot;json&quot;)</code> com al següent exemple:</li>
+</ol>
+
+<p>Un exemple senzill seria el següent:</p>
+
+<pre><code class="language-java">import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonNodeBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStringType;
+
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@TypeDefs({ @TypeDef(name = &quot;json&quot;, typeClass = JsonStringType.class),
+		@TypeDef(name = &quot;jsonb&quot;, typeClass = JsonBinaryType.class),
+		@TypeDef(name = &quot;jsonb-node&quot;, typeClass = JsonNodeBinaryType.class), })
+@Entity(name = &quot;MyCustomer&quot;)
+@Table(name = &quot;customer&quot;)
+public class MyCustomer {
+
+	@Type(type = &quot;json&quot;)
+	@Column
+	private ComplexCustomerData complexCustomerData;
+
+	public ComplexCustomerData getComplexCustomerData() {
+		return complexCustomerData;
+	}
+	
+	public void setComplexCustomerData(ComplexCustomerData complexCustomerData) {
+		this.complexCustomerData =complexCustomerData;
+	}
+}
+</code></pre>
+
+<p>NOTA: La definició SQL d&rsquo;un camp de tipus JSON no és estandard i s&rsquo;ha de consultar la documentació de la BBDD.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

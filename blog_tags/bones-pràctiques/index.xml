@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/bones-pr%C3%A0ctiques/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Thu, 15 Nov 2018 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Aplicacions webs modernes: JSF vs REST</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</link>
+      <pubDate>Fri, 13 May 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/05/rest-vs-jsf/</guid>
+      <description>Us donem una breu explicació d&#39;aquest canvi de paradigma en la capa de presentació</description>
+    </item>
+    
+    <item>
+      <title>APIs RESTful: millors pràctiques</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/01/api/</link>
+      <pubDate>Tue, 12 Jan 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/01/api/</guid>
+      <description>Millors pràctiques per a la construcció d&#39;APIs REST</description>
+    </item>
+    
+  </channel>
+</rss>

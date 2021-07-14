@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Cloud Native</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Cloud Native\" />");
+		document.write("<meta name=\"description\" content=\"Natiu en núvol (de l’anglès “Cloud Native”) esdevé un patró d\x27arquitectura de programari per al desenvolupament d\x27aplicacions tot atenent a tres principis essencials: escalabilitat, elasticitat i agilitat.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Cloud Native
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 28-01-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p><img src="/images/bloc/2020/01/CloudNative1.png" alt="CloudNative1" /></p>
+
+<h2 id="natiu-en-núvol-cloud-native">Natiu en núvol (Cloud Native)</h2>
+
+<p>Natiu en núvol (de l’anglès “Cloud Native”) esdevé un patró d&rsquo;arquitectura de programari per al desenvolupament d&rsquo;aplicacions tot atenent a tres principis essencials: escalabilitat, elasticitat i agilitat.</p>
+
+<ul>
+<li><strong>Escalabilitat i elasticitat:</strong> permetre el creixement vertical o horitzontal de forma ràpida i dinàmica, sense restriccions en termes del maquinari en el que s’executen, ja sigui pel creixement natural de l’aplicació o per necessitats extraordinàries derivades de pics en la demanda.</li>
+<li><strong>Agilitat:</strong> com que s’augmenta la flexibilitat dels usuaris al subministrar, afegir o expandir els recursos d’IT, les organitzacions en  surten beneficiades en esdevenir més àgils.</li>
+</ul>
+
+<p>La Cloud Native Computing Foundation (CNCF) defineix natiu en núvol de la següent forma:</p>
+
+<p><em>&ldquo;Les tecnologies natiu en núvol permeten a les organitzacions construir i executar aplicacions escalables en entorns moderns i dinàmics, com ara els núvols públics, privats i híbrids. Els contenidors, les malles de serveis, els microserveis, la infraestructura immutable i les API declaratives exemplifiquen aquest enfocament.</em></p>
+
+<p><em>Aquestes tècniques permeten sistemes connectats lliurement que són resilients, lleugers i observables. Combinat amb una automatització robusta, permeten als enginyers fer canvis d&rsquo;alt impacte amb freqüència i predicibilitat amb un mínim treball.&rdquo;</em></p>
+
+<p>Tot i que natiu en núvol explota els principis essencials de la computació en núvol, no hem de confondre l&rsquo;un amb l&rsquo;altre, doncs aquest patró determina com les aplicacions són desenvolupades i desplegades, no a on.</p>
+
+<p>Per fer-ho, natiu en núvol es basa en quatre eixos o pilars:</p>
+
+<h2 id="1-devops-https-canigo-ctti-gencat-cat-blog-2018-07-devops">1.   <a href="https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/">DevOps:</a></h2>
+
+<p><img src="/images/bloc/2020/01/CloudNative2.png" alt="CloudNative2" /></p>
+
+<p>Són un conjunt de pràctiques implementades en base a una sèrie de principis fonamentals que tenen per objectiu reduir el temps destinat a lliurar noves versions d’un programari a entorns productius, en base a l’automatització de tasques, a la detecció precoç d’errors abans d’entrar a producció i a la millora de la col·laboració i confiança entre el equips de desenvolupament (Dev) i d’operacions, qualitat i seguretat (Ops).</p>
+
+<p>Alguna de les pràctiques més destacades són:
+-   L’automatització dels processos de construcció, integració i desplegament, eliminar totes les tasques manuals dels desplegaments (excepte les proves exploratòries), incloent el codi font, la definició de la infraestructura, els fitxers de configuració, els scripts de desplegament i els jocs de proves automatitzades.
+-   Disposar d’una gestió visual de les tasques en curs a més a més de limitar el nombre de tasques en vol.
+-   Disposar d’eines d’observabilitat del funcionament de les aplicacions, que incloguin logs, telemetria i monitorització
+-   Potenciar la col·laboració entre equips de desenvolupament i operacions.
+-   Reduir el risc de nous desplegaments en base a l’ús de la pràctica del lliurament continu.</p>
+
+<h2 id="2-lliurament-continu-continuous-delivery">2.   Lliurament continu (Continuous Delivery):</h2>
+
+<p><img src="/images/bloc/2020/01/CloudNative3.png" alt="CloudNative3" /></p>
+
+<p>Es tracta d’un enfocament en enginyeria de programari basat en la producció de noves versions en cicles curts per part dels equips, assegurant que el codi es pugui entregar de forma confiable en qualsevol moment, tot rebent retroacció en un temps menor. Sol basar-se en 3 etapes: automatització de la construcció dels artefactes i integració contínua, automatització de les proves i automatització de la implementació.</p>
+
+<h2 id="3-microserveis-https-canigo-ctti-gencat-cat-blog-2016-08-microserveis">3.   <a href="https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/">Microserveis:</a></h2>
+
+<p><img src="/images/bloc/2020/01/CloudNative4.png" alt="CloudNative4" /></p>
+
+<p>Pot ser el pilar que aporta més al principi d&rsquo;escalabilitat. Bàsicament tenim, en comptes de la clàssica aplicació monolítica, un conjunt de serveis (un per cada element o funcionalitat) per a ésser distribuïts i desplegats de forma desacoblada. Per tant, el que  es fa és passar d&rsquo;una gran aplicació a un conjunt de petites funcionalitats molt més senzilles i àgils: serveis que a més son accessibles des de diversos sistemes tot proporcionant escalabilitat, reutilització de codi, simplificació de manteniment i configuració, etc.</p>
+
+<h2 id="4-contenidors-https-canigo-ctti-gencat-cat-blog-2015-12-contenidors">4.   <a href="https://canigo.ctti.gencat.cat/blog/2015/12/contenidors/">Contenidors:</a></h2>
+
+<p><img src="/images/bloc/2020/01/CloudNative5.png" alt="CloudNative5" /></p>
+
+<p>Un contenidor es podria definir com una màquina virtual portable que integra les llibreries, dependències i fins i tot el sistema operatiu que el servei empaquetat en el contenidor necessita. Aquesta agrupació de programari (que tant pot executar microserveis com una aplicació monolítica) té els avantatges de treballar com una màquina virtual dedicada, sense les necessitats pel que fa a recursos de les màquines virtuals, fent, a més a més, accessible el codi des de diversos sistemes.</p>
+
+<p>Coneguts els pilars en què  es basa natiu en núvol i els principis que atén, podríem fer un esbós de com hauria de ser una aplicació basada en aquest patró:</p>
+
+<p><img src="/images/bloc/2020/01/CloudNative6.png" alt="CloudNative6" /></p>
+
+<p>Com afegit a tenir en compte, comentar que la CNCF, per ajudar a la implantació de natiu en núvol, recomana seguir el <a href="https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png"><strong>“Cloud Native Trail Map”</strong></a>, que és un itinerari recomanat de fins a deu etapes per aprofitar les tecnologies natives de codi obert. A cada etapa ens ofereix una sèrie de productes de programari especialitzats per cobrir les necessitats de la mateixa. Les etapes són (citant al propi document):</p>
+
+<ul>
+<li>1.    <em>Containerization</em></li>
+<li>2.    <em>CI/CD (Continuous Integration/Continuous Delivery)</em></li>
+<li>3.    <em>Orchestration &amp; Application Definition</em></li>
+<li>4.    <em>Observability &amp; Analysis</em></li>
+<li>5.    <em>Service Proxy, Discovery &amp; Mesh</em></li>
+<li>6.    <em>Networking &amp; Policy</em></li>
+<li>7.    <em>Distributed Database &amp; Storage</em></li>
+<li>8.    <em>Streaming &amp; Messaging</em></li>
+<li>9.    <em>Container registry &amp; Runtime</em></li>
+<li>10.   <em>Software Distribution”</em></li>
+</ul>
+
+<p>Cal aclarir que només les tres primeres etapes son obligatòries, mentre que la resta són opcionals en funció de les circumstàncies.</p>
+
+<p>El “Cloud Native Trail Map” ens porta al <a href="https://landscape.cncf.io/"><strong>Cloud Native Interactive Landscape</strong></a>, a on es presenten totes les opcions per a cadascuna de les etapes:</p>
+
+<p><img src="/images/bloc/2020/01/CloudNative7.png" alt="CloudNative7" /></p>
+
+<p>Finalment, la CNCF també ofereix el <a href="https://landscape.cncf.io/format=serverless"><strong>“Cloud Native Serveless Landscape”</strong></a> per aquelles arquitectures que no requereixen gestió de servidors per generar i fer funcionar les aplicacions.</p>
+
+<p><img src="/images/bloc/2020/01/CloudNative8.png" alt="CloudNative8" /></p>
+
+<h2 id="referències">Referències:</h2>
+
+<p>-<a href="https://www.aplyca.com/es/blog/cloud-native"><strong>Cloud Native – principios, aplicaciones y desafíos</strong></a></p>
+
+<p>-<a href="https://www.cncf.io/"><strong>Cloud Native Computing Foundation</strong></a></p>
+
+<p>-<a href="https://pivotal.io/cloud-native"><strong>What are Cloud-Native Applications?</strong></a></p>
+
+<p>-<a href="https://thenewstack.io/10-key-attributes-of-cloud-native-applications/"><strong>10 Key Attributes of Cloud-Native Applications</strong></a></p>
+
+<p>-<a href="https://container-solutions.com/cloud-computing-vs-cloud-native-the-difference-revealed/"><strong>Cloud Computing vs. Cloud Native: The Difference Revealed!</strong></a></p>
+
+<p>-<a href="https://canigo.ctti.gencat.cat/blog/2018/07/DevOps/"><strong>Blog d’arquitectura CTTI: DevOps</strong></a></p>
+
+<p>-<a href="https://www.paradigmadigital.com/techbiz/el-legendario-origen-del-movimiento-devops/"><strong>El legendario origen del movimiento DevOps</strong></a></p>
+
+<p>-<a href="https://www.paradigmadigital.com/techbiz/que-es-devops-y-sobre-todo-que-no-es-devops/"><strong>Qué es DevOps (y sobre todo qué no es DevOps)</strong></a></p>
+
+<p>-<a href="https://www.paradigmadigital.com/techbiz/devops-vampiros-y-licantropos-la-solucion-a-un-conflicto-milenario/?utm_source=Site&amp;utm_campaign=Related_Posts_Right&amp;utm_medium=Blog"><strong>DevOps, vampiros y licántropos</strong></a></p>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

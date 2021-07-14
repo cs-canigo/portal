@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/api/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Thu, 15 Sep 2016 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Cloud-Ready</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</link>
+      <pubDate>Thu, 15 Sep 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/09/cloud-ready/</guid>
+      <description>Aspectes a tenir en compte en la definició de l&#39;arquitectura d&#39;una aplicació per estar preparada per anar al Cloud</description>
+    </item>
+    
+    <item>
+      <title>(micro)serveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</link>
+      <pubDate>Thu, 04 Aug 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/08/microserveis/</guid>
+      <description>Introducció al patró de disseny basat en microserveis i les implicacions que té a l&#39;hora de pensar les aplicacions</description>
+    </item>
+    
+    <item>
+      <title>APIs RESTful: millors pràctiques</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2016/01/api/</link>
+      <pubDate>Tue, 12 Jan 2016 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2016/01/api/</guid>
+      <description>Millors pràctiques per a la construcció d&#39;APIs REST</description>
+    </item>
+    
+  </channel>
+</rss>

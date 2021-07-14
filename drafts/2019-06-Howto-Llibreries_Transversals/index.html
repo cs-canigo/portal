@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Howto Procediments de manteniment llibreries transversals</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Howto Procediments de manteniment llibreries transversals\" />");
+		document.write("<meta name=\"description\" content=\"Definició del procediment per mantenir les llibreries transversals en mode col·laboratiu\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Howto Procediments de manteniment llibreries transversals
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 14-06-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h1 id="howto-procediments-de-manteniment-llibreries-transversals">Howto Procediments de manteniment llibreries transversals</h1>
+
+<p>L&rsquo;objectiu d&rsquo;aquest article és mirar d&rsquo;explicar els procediments a seguir per al manteniment de les llibreries transversals en mode col·laboratiu, des d&rsquo;un punt de vista de gestió dels repositoris de codi.</p>
+
+<p>El públic a qui va dirigit aquest document és principalment tècnic i de gestió, enfocant els procediments a donar resposta a casos concrets.</p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Les llibreries transversals són un conjunt de funcionalitats agrupades (normalment) en un únic artefacte (llibreria), i que a més a més són utilitzades a dos o més codis de diàleg.
+Un exemple seria la llibreria XXX, que proporciona funcionalitats als codis de diàleg AAA, BBB.</p>
+
+<p>Aquest tipus d&rsquo;artefactes presenten una problemàtica inherent a la seva transversalitat, com per exemple les següents:
+* Quin equip/proveïdor ha de fer el manteniment i suport?
+* Què passa amb les personalitzacions pròpies d&rsquo;un equip? S&rsquo;han d&rsquo;integrar o mantenir per separat?
+* Quan hi ha canvi de proveïdors, cóm s&rsquo;ha d&rsquo;actuar?</p>
+
+<h2 id="procediments-de-manteniment">Procediments de manteniment</h2>
+
+<p>Els diferents procediments treballen amb els següents actors:</p>
+
+<ul>
+<li>Equip de manteniment del SIC (EMSIC) - Equip amb permisos generals per operar al GitLab.</li>
+<li>Equip de manteniment de llibreria transversal (EMLT) - Equip encarregat del manteniment d&rsquo;una llibreria transversal.</li>
+<li>Col·laborador de llibreria transversal (CLT) - Equip que consumeix i que alhora pot col·laborar en desenvolupaments d&rsquo;una llibreria transversal.</li>
+</ul>
+
+<p>Els diferents procediments de manteniment treballen a més a més amb un conjunt de supòsits que s&rsquo;han de tenir presents en tot moment, i de manera ordenada són els següents:</p>
+
+<ol>
+<li>L&rsquo;equip de manteniment del SIC (EMSIC) tindrà permisos generals en tot moment del codi i les operacions tècniques (clone, commit, push, merge, revert, fork, pull-request, CI/CD, etc.). En aquest cas, serà el responsable de fer els forks, donat que té els permisos necessaris: per una banda de lectura al codi de dialeg orígen, i d&rsquo;escriptura al codi de diàleg destí.</li>
+<li>L&rsquo;equip de manteniment de llibreria transversal (EMLT) serà el responsable del manteniment de la llibreria transversal, i de garantir el seu bon funcionament. També serà responsable d&rsquo;integrar els merge-requests.</li>
+</ol>
+
+<h3 id="cas-1-nova-col-laboració-a-la-llibreria-transversal">Cas 1. Nova col·laboració a la llibreria transversal</h3>
+
+<p>En el cas que es vulgui fer una col·laboració a la llibreria transversal s&rsquo;ha de fer un fork del projecte per després integrar els canvis mitjançant un <em>merge-request</em>. Concretament:</p>
+
+<ol>
+<li>Fase de creació (<em>fork</em>)
+
+<ol>
+<li>El CLT ha de demanar i notificar la col·laboració al CTTI, EMLT i EMSIC.</li>
+<li>Un cop aprovada la col·laboració el EMSIC ha de crear la branca <em>develop</em>, en el cas que no existeixi, que servirà per fer les integracions dels canvis (veure <strong>Nota 1</strong>].</li>
+<li>El EMSIC ha de fer un <em>fork</em> de la branca <em>develop</em> del projecte mantingut pel EMLT cap al grup/subgrup indicat per CLT.</li>
+</ol></li>
+<li>Fase de d&rsquo;integració (<em>merge request</em>)
+
+<ol>
+<li>Un cop el CLT ha finalitzat els canvis, ha de crear un <em>merge request</em> per integrar els seus canvis al projecte original (mantingut per EMLT).</li>
+<li>El EMLT haurà de planficar la revisió i possible integració del <em>merge request</em>.</li>
+<li>Un cop integrat el <em>merge request</em> el EMLT informarà d&rsquo;aquest fet al CTTI i CLT.</li>
+<li>El CLT haurà d&rsquo;eliminar el <em>fork</em> en el cas que no hagi previst cap més desenvolupament. En cas necessari es podrà demanar un nou <em>fork</em> tornant al punt 1 de la fase de creació.</li>
+</ol></li>
+</ol>
+
+<h3 id="cas-2-canvi-del-codi-de-diàleg-de-la-llibreria-transversal">Cas 2. Canvi del codi de diàleg de la llibreria transversal</h3>
+
+<p>En el cas que s&rsquo;hagi de fer un canvi del codi de diàleg de la llibreria transversal, s&rsquo;ha de tractar com si fós una <em>transferència de projecte</em> (en terminlogia GitLab). Concretament:</p>
+
+<ol>
+<li>Un cop el CTTI hagi notificat als diferents departaments implicats, haurà de notificar i coordinar-ho amb el/s EMLT/s i el EMSIC.</li>
+<li>El EMSIC haurà d&rsquo;executar la <em>transferència de projecte</em> (<em>transfer project</em>), i notificar-ho al CTTI i al/s EMLT/s.</li>
+<li>El/s EMLT/s haurà &ldquo;d&rsquo;actualitzar-se&rdquo; amb el nou codi de diàleg.</li>
+</ol>
+
+<p>S&rsquo;especifica un o diversos EMLT/s perquè el canvi de codi de diàleg pot comportar un canvi de EMLT.</p>
+
+<h3 id="cas-3-canvi-de-emlt">Cas 3. Canvi de EMLT</h3>
+
+<p>En el cas que s&rsquo;hagi de fer un canvi del EMLT, s&rsquo;ha de tractar com si fós un canvi en els permisos del projecte. Concretament:</p>
+
+<ol>
+<li>Un cop el CTTI hagi notificat als diferents departaments implicats, haurà de notificar i coordinar-ho amb el/s EMLT actual i futur, i el EMSIC.</li>
+<li>El EMSIC haurà d&rsquo;efecutar el canvi de permisos, i notificar-ho al CTTI i al/s EMLT/s.</li>
+</ol>
+
+<h2 id="informació-addicional">Informació addicional</h2>
+
+<p>Enllaços d&rsquo;interès:
+* <a href="https://github.community/t5/Support-Protips/The-difference-between-forking-and-cloning-a-repository/ba-p/1372">https://github.community/t5/Support-Protips/The-difference-between-forking-and-cloning-a-repository/ba-p/1372</a>
+* <a href="https://github.community/t5/Support-Protips/What-the-fork/bc-p/1625">https://github.community/t5/Support-Protips/What-the-fork/bc-p/1625</a>
+* <a href="https://git.intranet.gencat.cat/help/public_access/public_access">https://git.intranet.gencat.cat/help/public_access/public_access</a>
+* <a href="https://docs.gitlab.com/ee/user/project/merge_requests/">https://docs.gitlab.com/ee/user/project/merge_requests/</a></p>
+
+<h3 id="nota-1-significat-i-funcionament-de-les-branques-master-i-develop">Nota 1. Significat i funcionament de les branques MASTER i DEVELOP</h3>
+
+<p><strong>TODO</strong></p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

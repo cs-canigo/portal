@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>SD-WAN</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"SD-WAN\" />");
+		document.write("<meta name=\"description\" content=\"Fonaments de les SD-WAN per dummies\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	SD-WAN
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 28-11-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h1 id="sd-wan-software-defined-networking-in-a-wide-area-network">SD-WAN (software-defined networking in a wide area network)</h1>
+
+<p>Per poder entendre millor la tecnologia SD-WAN, cal que fem una ullada al que implica el SDN (xarxes definides per software).
+I si per definir les xarxes dins d’un CPD utilitzen SDN, per què no fer el mateix amb les connexions WAN ?  D’aquí sorgeix SD-WAN.</p>
+
+<p>Podem definir SD-WAN com una tecnologia que ens permetrà poder connectar les nostres seus, utilitzant xarxes definides per software, podent determinar així la manera més eficient i eficaç de enrutar el tràfic entre aquests.</p>
+
+<p>Com en el cas de SDN, SD-WAN ens permet separar el pla de control del pla de dades, amb els avantatges que això implica, gestió centralitzada, automatització, etc.</p>
+
+<h2 id="d-on-sorgeix-la-necessitat">D’on sorgeix la necessitat</h2>
+
+<p>Estem en una època en què l’adaptació a les noves necessitats d’una forma ràpida i senzilla és fonamental perquè el nostre negoci prosperi.</p>
+
+<p>Un dels factors principals que mai hem d’oblidar és el de la seguretat, essencial per a poder protegir-nos de la gran infinitat d’atacs als que podem estar sotmesos cada dia.</p>
+
+<p><strong>Hem de aconseguir ser ràpids, eficients , segurs i tot a un preu raonable.</strong></p>
+
+<p>I just en aquest punt és on apareix una tecnologia, SD-WAN, que ens pot arribar a cobrir les nostres necessitats pel que fa a la connectivitat de les nostres seus.</p>
+
+<h2 id="principals-característiques-d-una-xarxa-sd-wan">Principals característiques d’una xarxa SD-WAN</h2>
+
+<p>Tot i que al tractar-se d’una tecnologia, les característiques de la xarxa SD-WAN que configurem dependran directament del fabricant escollit, sí que hi ha un seguit de característiques genèriques que tota xarxa SD-WAN hauria de complir. Aquestes característiques són les següents:</p>
+
+<ul>
+<li><p><strong>Gestió centralitzada.</strong> Tots els dispositius que formin part de la xarxa SD-WAN han de poder-se gestionar / administrar des d’un únic punt. Això ens ha de permetre poder crear plantilles amb les que configurar d’una forma fàcil i ràpida molts dispositius alhora. És important poder disposar d’APIs que ens permetin poder integrar-nos en altres solucions i ajudar-nos en l’automatització de tasques.</p></li>
+
+<li><p><strong>Gestió/utilització “activa”  les línies connectades a una mateixa seu.</strong> Si en la nostra organització tenim seus amb més d’una línia per connectar-se, per exemple, a la seu central, hauríem de ser capaços de  poder aplicar funcions sobre aquestes ( balanceig, QoS, acceleració de tràfic, etc.) de tal forma que poguéssim aprofitar activament totes les connexions, és a dir, les dues o més línies haurien d’estar treballant conjuntament, alhora.</p></li>
+
+<li><p><strong>Aprovisionament automàtic (“Zero Touch Provisioning”).</strong> Ha de ser possible poder aprovisionar/ connectar una nova seu de forma automàtica i centralitzada. Això ens dona una gran flexibilitat i velocitat en el moment de connectar noves seus a la nostra organització, sense necessitat d’estar desplaçant personal constantment.</p></li>
+
+<li><p><strong>Diferents serveis en un únic dispositiu.</strong>  Està clar que en l’actualitat ja tenim dispositius que poden realitzar cadascuna de les funcions que hem descrit anteriorment. Un dels avantatges de SD-WAN és el fet que aquestes funcions es centrin en únic dispositiu, permetent-nos així simplificar molt l’administració / gestió, poder resoldre més àgilment possibles problemes , poder automatitzar més tasques i sobretot baixar els costos.</p></li>
+</ul>
+
+<p><img src="/images/bloc/2018/12/sdwan1.jpg" alt="Imatge centralització funcions" /></p>
+
+<h2 id="beneficis-que-podem-obtenir">Beneficis que podem obtenir</h2>
+
+<p>Els beneficis que podem obtenir amb SD-WAN són:</p>
+
+<ul>
+<li><p><strong>Flexibilitat / agilitat.</strong> En tot moment podem adaptar les connexions (ampliació, creació de noves) entre les seus a les nostres necessitats.</p></li>
+
+<li><p><strong>Optimització/ disponibilitat.</strong> Es podrà determinar en cada instant, de forma automàtica,  quin és el millor camí per a comunicar les seus, poden utilitzar els dos alhora.</p></li>
+
+<li><p><strong>Seguretat.</strong> Podrem fer arribar la seguretat fins a l’entrada/sortida de la pròpia seu.</p></li>
+
+<li><p><strong>Visibilitat.</strong> Podrem tenir un control centralitzat de tot el que esta passant en la comunicació entre les diferents seus.</p></li>
+
+<li><p><strong>Administració centralitzada.</strong> L’administració / gestió de la connectivitat (amb les funcions incloses en aquesta, com potser el cas de la seguretat) de les seus es podrà realitzar  des de un únic punt.</p></li>
+
+<li><p><strong>Estalvi en els costos.</strong> Tot i l’estalvi que impliquen els punts anteriors, podríem determinar canviar el tipus de connexió contractat actualment per un altre de més baix cost, és a dir, podem determinar que ja no hi ha  necessitat de contractar línies punt a punt, ni treballar amb tecnologia MPLS, sinó que connectarem les nostres seus mitjançant Internet, o utilitzar també les connexions internet que ja tenim per poder comunicar les seus a part de les línies dedicades.</p></li>
+</ul>
+
+<p><img src="/images/bloc/2018/12/sdwan2.jpg" alt="Imatge centralització connexions" /></p>
+
+<p>A part dels beneficis descrits anteriorment, cal fer especial atenció a  les prestacions que ens ofereix SD-WAN en quant a administració centralitzada, automatització i visibilitat.</p>
+
+<h2 id="tipus-aproximacions-a-la-tecnologia-sd-wan">Tipus, aproximacions a la tecnologia SD-WAN</h2>
+
+<p>Segons “la naturalesa del negoci“ del fabricant, ens podem trobar amb varies aproximacions, fabricants que:</p>
+
+<ul>
+<li><p>Prioritzin el Routing (balanceig, acceleració,&hellip;).</p></li>
+
+<li><p>Prioritzin la Seguretat.</p></li>
+
+<li><p>Es vulguin apropar al màxim als sistemes de Informació / usuaris.</p></li>
+
+<li><p>Prioritzin la convergència amb la LAN.</p></li>
+
+<li><p>Tinguin una visió dirigida més a grans operadors.</p></li>
+</ul>
+
+<p>Cada fabricant, disposa de dispositius / software SD-WAN on preval les seves prioritats. Això no vol dir que no disposin d’altres funcionalitats, però si més no, estan especialitzats en les pròpies..<br />
+Tenint present els diferents tipus /aproximacions de SD-WAN que hi ha en el mercat, una mostra són les anomenades anteriorment, la següent qüestió que se’ns planteja és: Quin tipus de SD-WAN hauria d’aplicar a la meva empresa?</p>
+
+<h2 id="quin-tipus-de-sd-wan-hauria-d-aplicar-a-la-meva-empresa">Quin tipus de SD-WAN hauria d’aplicar a la meva empresa</h2>
+
+<p>És important tenir present que una determinada empresa pot tenir més d’un tipus de SD-WAN funcionant, tot dependrà del tipus de negoci que estigui tractant.<br />
+Crec que per poder determinar el tipus de SD-WAN, ens hem de fer un seguit de preguntes referents sobretot al negoci / negocis que tenim i el que implica poder disposar d’un tipus o un altre de SD-WAN. Aquestes preguntes aniran molt enfocades a la situació actual en què ens trobem. Per exemple, per una empresa que tingui moltes seus connectades amb línies punt a punt i la sortida Internet centralitzada a la Seu Central igual que els dispositius de seguretat, algunes de les preguntes que ens hauríem de plantejar són:</p>
+
+<ul>
+<li><p>Com s’estan administrant actualment les connectivitats de totes aquestes seus, d’una forma centralitzada o no?</p></li>
+
+<li><p>A nivell d’ocupació de les línies, quina part d’aquestes esta ocupada per tràfic “il·lícit”, que després es tallarà a la Seu Central?</p></li>
+
+<li><p>Quin tipus de seguretat necessitaria implementar a la pròpia seu, a nivell de connectivitat?</p></li>
+
+<li><p>Tinc serveis sensibles (aplicacions en temps real crítiques) que passin per aquestes línies?</p></li>
+
+<li><p>Necessito integrar la gestió / administració de la SD-WAN amb la LAN?</p></li>
+
+<li><p>En cas que l&rsquo;ocupació de les línies sigui molt elevada, a quin nivell he de poder garantir cert tràfic (aplicació, usuari, etc.)?</p></li>
+</ul>
+
+<p>Depenent de la resposta que donem a  aquestes qüestions, podrem determinar si ens interessa tenir una SD-WAN que prioritzi la seguretat de les Seus, una que prioritzi tot el tema de Routing, una que convergeixi la WAN i la LAN o simplement una combinació d’aquestes (diferenciant grups de Seus per tipus de SD-WAN a aplicar).</p>
+
+<h2 id="i-què-passa-amb-les-meves-connexions-wan">I què passa amb les meves connexions WAN?</h2>
+
+<p>Està clar que el fet de utilitzar una tecnologia com SD-WAN, ens pot suposar un gran estalvi a nivell de costos, i un dels motius pot ser substituir les línies que tenim actualment per altres de més baix cost.<br />
+Abans de donar aquest pas, el que hem de tenir present en tot moment és el tipus/ naturalesa de tràfic que va per aquestes línies i si ens interessa o no canviar-les. És a dir, el primer canvi en què podem pensar és el de substituir el conjunt de línies d’un determinat proveïdor (MPLS) per FTTH, però s’ha de tenir present la  qualitat que ens ofereix Internet, que si bé pot ser acceptable per la majoria de casos (segons el negoci), poden haver alguns casos en què no ens doni les garanties necessàries.<br />
+Tenint això present, els que s’hauria de fer és utilitzar la tecnologia SD-WAN en seus que puguin arribar a tenir connexions MPLS i FTTH, per exemple.<br />
+La reducció de la dependència del MPLS del proveïdor farà que cada cop hagin de dependre menys d’ell,  facilitant-nos tasques de futur, com potser el fet de voler canviar de proveïdor.<br />
+Un altre tendència a nivell de línies podria ser utilitzar línies de baix cost com a segona connexió, tot i que aquesta, amb SD-WAN  també estaria activa i utilitzant-se. En aquest cas, estaríem parlant físicament d’una WAN híbrida  (s’utilitzen diferents tipus de connexió).</p>
+
+<h2 id="connexió-al-núvol-una-nova-aproximació-a-la-sd-wan">Connexió al Núvol. Una nova aproximació a la SD-WAN ?</h2>
+
+<p>Dins dels diferents tipus / aproximacions a SD-WAN, en el mercat ens podem trobar un cas particular que es basa en connectar totes les seus, inclosa la central, a un determinat núvol.<br />
+La connexió entre les diferents seus es faria a través d’aquets núvol on hi haurien els serveis necessaris ( seguretat, balanceig, etc. ). Com en els casos anteriors, l’administració es faria de forma centralitzada però en la majoria de casos en el propi núvol.
+Tot i que podria ser una opció valida per poder connectar les seus de la nostra organització, podríem com a mínim dubtar si la podem tractar com un tipus de SD-WAN o no, tenint present que:</p>
+
+<ul>
+<li><p>Ens estem lligant a un proveïdor, en aquest cas el del núvol que triem.</p></li>
+
+<li><p>La majoria de serveis que s’apliquen són centralitzats en el núvol, no en cadascuna de les seus per separat. Hi haurà seus que ens interessi aplicar uns determinats serveis en la sortida/entrada de la pròpia seu, estalviant-nos així problemes de seguretat i de accessibilitat, no consumint línia amb tràfic que considerem il·lícit.</p></li>
+
+<li><p>Pel que fa a la visibilitat i automatització, estarem lligats a la que ens ofereixi el propi núvol.</p></li>
+</ul>
+
+<p>Tenint present això, caldria que cadascú determinés si al seu entendre aquests tipus de connexions es pot considerar SD-WAN o no.</p>
+
+<p>Per finalitzar, hem de ser conscients que es tracta d’una tecnologia “recent” i com a tal hi ha molts fabricants que encara la estan desenvolupant i evolucionant, podent sofrir molts canvis a curt / mig termini.</p>
+
+<h2 id="lectures-relacionades">Lectures relacionades:</h2>
+
+<p><a href="http://www.velocloud.com/"><strong>http://www.velocloud.com/</strong></a><br />
+<a href="https://www.cisco.com/c/es_es/solutions/enterprise-networks/sd-wan/index.html"><strong>https://www.cisco.com/c/es_es/solutions/enterprise-networks/sd-wan/index.html</strong></a><br />
+<a href="https://www.arubanetworks.com/products/networking/sd-wan/"><strong>https://www.arubanetworks.com/products/networking/sd-wan/</strong></a><br />
+<a href="https://www.fortinet.com/products/sd-wan.html"><strong>https://www.fortinet.com/products/sd-wan.html</strong></a><br />
+<a href="http://www.nuagenetworks.net/enterprise/software-defined-wan/"><strong>http://www.nuagenetworks.net/enterprise/software-defined-wan/</strong></a><br />
+<a href="https://e.huawei.com/es/solutions/technical/sdn/sd-wan"><strong>https://e.huawei.com/es/solutions/technical/sdn/sd-wan</strong></a><br />
+<a href="https://www.silver-peak.com/sd-wan"><strong>https://www.silver-peak.com/sd-wan</strong></a></p>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

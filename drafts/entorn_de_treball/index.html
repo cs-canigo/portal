@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Principis d&#39;Arquitectura de l&#39;Entorn Digital de Treball</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Principis d\x27Arquitectura de l\x27Entorn Digital de Treball\" />");
+		document.write("<meta name=\"description\" content=\"Arquitectura de l\x27Entorn Digital de Treball\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Principis d&#39;Arquitectura de l&#39;Entorn Digital de Treball
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 26-03-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<style type="text/css">
+img[alt="minipic"] { 
+  max-width: 80px;
+  float: left;
+  padding-right: 15px;
+}
+img[alt="centrar"] { 
+  margin: auto;
+  max-width: 75%;
+  display: block;
+}
+</style>
+
+<p><img src="https://cburgales.github.io/CTTI/images/ET_Banner5.png" alt="centrar" usemap="#planetmap"></p>
+
+<p><map name="planetmap">
+  <area shape="rect" coords="15,275,170,320" alt="Sun" href="#1-solucions-escriptori-del-lloc-de-treball">
+  <area shape="rect" coords="195,275,350,320" alt="Sun" href="#2-arquitectura-del-lloc-de-treball">
+  <area shape="rect" coords="390,275,550,320" alt="Sun" href="#3-arquitectura-de-connectivitat">
+   <area shape="rect" coords="195,322,350,372" alt="Sun" href="#0-principis-globals">
+</map></p>
+
+<h3 id="índex-dels-principis-de-l-entorn-digital-de-treball">Índex dels principis de l&rsquo;Entorn Digital de Treball</h3>
+
+<ul>
+<li><p><strong><a href="#0-principis-globals">0. Principis globals</a></strong></p></li>
+
+<li><p><strong><a href="#1-solucions-escriptori-del-lloc-de-treball">1. Solucions escriptori del Lloc de Treball</a></strong></p>
+
+<ul>
+<li>1.1 Disseny aplicacions escriptori</li>
+<li>1.2 Principis tecnològics</li>
+</ul></li>
+
+<li><p><strong><a href="#2-arquitectura-del-lloc-de-treball">2. Arquitectura del Lloc de Treball</a></strong></p>
+
+<ul>
+<li>2.1 Dispositius
+
+<ul>
+<li>2.1.1 Equips corporatius i Sistema Operatiu</li>
+</ul></li>
+<li>2.2 Virtualització d&rsquo;aplicacions
+
+<ul>
+<li>2.2.1 Execució local</li>
+<li>2.2.2 Execució remota</li>
+</ul></li>
+</ul></li>
+
+<li><p><strong><a href="#3-arquitectura-de-connectivitat">3. Arquitectura de connectivitat</a></strong></p>
+
+<ul>
+<li>3.1 Principis de disseny</li>
+<li>3.2 Principis tecnològics</li>
+</ul></li>
+</ul>
+
+<!-- toc -->
+
+<p>&nbsp;
+&nbsp;</p>
+
+<h1 id="introducció">Introducció</h1>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<p>Els principis d’arquitectura CTTI són les normes i directrius generals destinades a ser perdurables i rarament modificables. Aquests principis tenen com a objectiu informar i guiar en el desenvolupament de solucions, sota els criteris establerts pel CTTI.</p>
+
+<p>D’aquesta manera, els principis exposats en aquest apartat fan referencia a les diverses solucions dintre de l’entorn digital de treball. Així, els principis es dividiran en 4 blocs:</p>
+
+<ul>
+<li><p><strong>Bloc 0 – Principis Globals</strong>: Principis transversals establerts com universals per qualsevol solució inclosa dins del perímetre del servei a l’entorn digital de treball. L’aplicació d’aquests principis serà obligatòria i s’adaptarà a cadascun dels 3 blocs específics que es llisten a continuació.</p></li>
+
+<li><p><strong>Bloc 1 – Principis de solucions escriptori del Lloc de Treball</strong>: Principis establerts com específics pel desenvolupament de solucions escriptori de l’entorn digital de treball.</p></li>
+
+<li><p><strong>Bloc 2 – Principis d’Arquitectura del Lloc de Treball</strong>: Principis establerts com específics de l’Arquitectura de Lloc de Treball, on es defineixen els dispositius, equipaments on-premise, equipaments remots, sistemes operatius i aplicacions virtualitzades utilitzades dintre de l’entorn digital de treball.</p></li>
+
+<li><p><strong>Bloc 3 – Principis d&rsquo;Arquitectura de connectivitat</strong>: Principis establerts com específics de l’arquitectura de comunicacions que donen servei dintre de l’Entorn Digital de Treball.</p></li>
+</ul>
+
+<p>&nbsp;
+&nbsp;
+&nbsp;</p>
+
+<hr />
+
+<h1 id="0-principis-globals">0. Principis globals</h1>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<ul>
+<li><p><strong>0.1. Aprofitar abans que comprar i construir</strong> <em>(obligatori)</em>. Aprofitar si hi ha  solucions o estàndards ja definits que resolen una necessitat TIC i en aquest cas s’implantarà aquesta solució. Només seran construïdes de nou si realment hi ha un requeriment que ho necessiti. S’ha d’evitar solucions a mida. A tenir en compte que els estàndards aniran evolucionant.</p></li>
+
+<li><p><strong>0.2 Estandardització. Solucions en recerca d’un model Transversal</strong> <em>(obligatori)</em>. Cal vetllar perquè els dissenys d’alt nivell de les solucions de l’entorn digital de treball esdevinguin un model estàndard de referència a nivell transversal que permeti implementar-ho a qualsevol escenari amb el mínim de canvis necessaris.</p></li>
+
+<li><p><strong>0.3 Neutralitat tecnològica</strong> <em>(obligatori)</em>. Cal garantir la lliure adopció de tecnologies, tenint en compte recomanacions, conceptes i normatives dels organismes internacionals competents en la matèria. És a dir, s’ha d’escollir lliurement la tecnologia que més s’adapti a les necessitats.</p></li>
+
+<li><p><strong>0.4 Compliment</strong> <em>(obligatori)</em>. Tota solució de l’entorn digital de treball, a més de seguir els principis anunciats en aquest espai, haurà de complir amb els requeriments tècnics, funcionals i de seguretat de la Generalitat de Catalunya per les diferents àrees TIC involucrades en el disseny.</p>
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/arqctti/principis_arq/">Principis arquitectura de sistemes d&rsquo;informació</a>. Si un component o aplicació implementada al lloc de treball forma part d&rsquo;un sistema de la informació, caldrà que segueixi aquests principis d&rsquo;arquitectura.</li>
+</ul></li>
+
+<li><p><strong>0.5 Seguretat</strong> <em>(obligatori)</em>.Tots els elements que formen part d’una arquitectura de l’entorn digital de treball hauran de seguir les normes i directrius establertes per l’Agència de Ciberseguretat en matèria de control, seguretat i privacitat. Les principals àrees on s’hauran d’aplicar aquestes premisses són:</p>
+
+<ul>
+<li><strong>0.5.1 Traçabilitat</strong>. Capacitat per identificar les diferents etapes per les quals travessa el consum d’un servei, permetent extreure la informació suficient per realitzar l’anàlisi d’un problema, d’aspectes legals i de seguretat.</li>
+<li><strong>0.5.2 Control d’accés</strong>. Mecanismes i capacitats per limitar l’accés en les diferents capes d’un servei amb l’objectiu d’assolir un perímetre de seguretat que compleixi amb els requeriments de seguretat establerts pels organismes competents.</li>
+<li><strong>0.5.3 Auditoria</strong>. Capacitat per registrar els accessos i l’ús de les solucions. Es valorarà si el sistema o solució disposa de diferents nivells de registre per capturar major o menor informació segons sigui necessari.</li>
+<li><strong>0.5.4 Disponibilitat, confidencialitat i integritat de les dades</strong>. D’acord amb els requeriments de l’Agència de Ciberseguretat.</li>
+</ul></li>
+
+<li><p><strong>0.6 Eficiència econòmica</strong> <em>(obligatori)</em>. Les solucions de l&rsquo;entorn digital de treball, a més d’aconseguir resoldre unes especificacions tècniques també hauran de cercar la màxima funcionalitat al menor cost possible, evitant sempre les duplicitats en els serveis. D’aquesta manera, malgrant l&rsquo;enfoc estarà orientat a l&rsquo;abaratiment dels costos, es garantiran els requeriments de negoci.
+En el cas d’optar per una solució Open Source per assolir aquesta eficiència, caldrà garantir que aquesta compleix amb la resta de principis anunciats, prestant especial atenció a aquells factors que acostumen a ser diferents respecte a les solucions propietàries: nivell de suport, maduresa, cicle de vida i l’acceptació en la industria.</p></li>
+
+<li><p><strong>0.7 Evolució continua i mínim impacte</strong> <em>(obligatori)</em>. Cal pensar en l’impacte que pugui generar una actualització i en conseqüència, sempre s’han de valorar quins seran els possibles canvis i evolucions que requerirà la solució, així com quins riscos i quines millores aportarà. Tanmateix és necessari avaluar l’impacte d’aquests canvis en el marc d’interdependències de les capes que formen el servei: connectivitat, dispositiu, sistema i d’aplicació.</p></li>
+
+<li><p><strong>0.8 Automatització</strong> <em>(obligatori)</em>. Tant la provisió com el manteniment haurà d’orientar-se cap a la màxima automatització dels seus processos, amb l&rsquo;objectiu de l&rsquo;estalvi de costos, temps, millora en l’eficiència, i aconseguir evitar els problemes esdevinguts d&rsquo;una implementació manual, obtenint així una major productivitat de la solució.</p></li>
+
+<li><p><strong>0.9 Gestió Centralitzada</strong> <em>(obligatori)</em>. Els dispositius i serveis han de permetre la gestió i manteniment de la manera més centralitzada possible, amb l’objectiu de simplificar l’arquitectura del model de gestió, alhora minimitzar les accions manuals en les instal·lacions i futurs canvis necessaris. Tanmateix, la solució hauria de permetre que aquesta gestió sigui compartida entre diferents equips tècnics amb permisos d’administració granulars.</p></li>
+
+<li><p><strong>0.10 Rendiment i evolució</strong> <em>(obligatori)</em>. L’entorn digital de treball està en constant evolució, així que caldrà supervisar que no hi ha una degradació important en el rendiment, mitjançant la monitorització per a identificar les necessitats de creixement o de canvi d’equipaments, per tal d’acollir les previsions i creixement, de noves necessitats i/o  l’obsolescència tecnològica.</p></li>
+
+<li><p><strong>0.11 Arquitectura orientada a serveis</strong> <em>(obligatori)</em>. Les arquitectures s’hauran de modelar com a serveis o microserveis i valorar el seu encaix  en un entorn cloud públic, híbrid o privat. Així doncs, serà necessari posar de manifest quins són els avantatges i inconvenients de solucions cloud i fer un balanç d’aquests factors amb els principis globals de l’entorn digital de treball. Malgrat que en termes tècnics l’ordre de preferència per seleccionar l’entorn on allotjar un servei o microservei és el que apareix a continuació, caldrà valorar-ho de forma general en el marc de la resta de principis.</p>
+
+<ul>
+<li><strong>1. SAAS</strong>. Per a aplicacions o serveis específics aprovisionats amb un conjunt de funcions ben definides.</li>
+<li><strong>2. PAAS</strong>. Per a plataformes on es necessiti desenvolupar, implementar i  gestionar aplicacions sense preocupar-se del servei, l’emmagatzematge i l’administració de la base de dades.</li>
+<li><strong>3. IAAS</strong>. Per a elements d’infraestructura com virtualització, emmagatzematge i xarxa amb la necessitat d’una infraestructura automatitzada i elàstica.</li>
+<li><strong>4. On-premise</strong>. Per a serveis on es necessiti un major control tant per seguretat com per les mateixes dades i per a solucions a mida.</li>
+</ul></li>
+
+<li><p><strong>0.12 Experiència digital d’usuari</strong> <em>(obligatori)</em>. Tota solució implementada a l’entorn digital de treball ha d’estar orientada a satisfer uns requeriments d’usuari, tanmateix la facilitat d’ús de la solució juntament amb un bon rendiment de la mateixa donaran com a resultat una experiència d’usuari satisfactòria. Amb aquesta motivació caldrà realitzar les proves de qualitat i rendiment pertinents. Els factors d’experiència d&rsquo;usuari com la interfície, mobilitat i els aspectes de col·laboració en el lloc de treball són una prioritat clau en el disseny de la solució.</p></li>
+
+<li><p><strong>0.13 Sostenibilitat</strong> <em>(obligatori)</em>. Construir solucions més respectuoses amb el medi ambient  i més  sensibles amb l’impacte social, en el marc  de l’exhauriment de matèries primeres, els alts costos ambientals i energètics, l’obsolescència del maquinari i del programari, els impactes ambientals del reciclatge o de la fractura digital. Les propostes que tenen com a propòsit la sostenibilitat són les següents:</p>
+
+<ul>
+<li><strong>Eficiència energètica</strong>  L’adquisició i la gestió de l’equipament es realitzarà amb un enfocament d’estalvi energètic, cuidant perquè els requeriments energètics siguin els mínims possibles i que les polítiques energètiques aplicades maximitzin la sostenibilitat sense impactar a la funcionalitat.</li>
+<li><strong>Durabilitat i reaprofitament</strong>  Cal procurar que l’equipament sigui operatiu durant el màxim temps possible, assolint les funcionalitats i nivell de qualitat establerts pel servei. Es valorarà l’adopció de solucions tecnològiques amb aquest propòsit. L’equipament serà reaprofitat si és possible i només comprats de nou si realment hi ha un requeriment que ho necessita.</li>
+</ul></li>
+</ul>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<hr />
+
+<h1 id="1-solucions-escriptori-del-lloc-de-treball">1. Solucions escriptori del Lloc de Treball</h1>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<p>Una solució d’escriptori significa qualsevol programari que s’instal·la en un terminal d’usuari (portàtil o sobretaula) per realitzar funcions específiques. Algunes solucions d’escriptori també poden ser utilitzades per diversos usuaris en un entorn en xarxa.</p>
+
+<p>Els principals grups en els que podem classificar les solucions escriptori són:</p>
+
+<ul>
+<li>Programari empresarial i departamental.</li>
+<li>Programari per a treballadors de les TIC.</li>
+<li>Programari d&rsquo;accés a contingut.</li>
+<li>Programari educatiu.</li>
+</ul>
+
+<h2 id="1-1-disseny-aplicacions-escriptori">1.1 Disseny aplicacions escriptori</h2>
+
+<ul>
+<li><p><strong>1.1.1 Desacoblada i multi-plataforma</strong> <em>(desitjable)</em>. Les aplicacions Web són la tipologia d’aplicacions prioritària per lliurar al lloc de treball pels múltiples beneficis que ofereixen: agnòstiques al SO, maximitzen la mobilitat de l’usuari, faciliten l’administració, etc. Si per motius funcionals, tecnològics o econòmics, es requereix implementar una aplicació escriptori al lloc de treball caldrà avaluar les tecnologies, APIs i Frameworks que millor encaixen per assolir aquests principis.</p></li>
+
+<li><p><strong>1.1.2 Modular i flexible</strong> <em>(desitjable)</em>.  Cal potenciar l’ús de solucions transversals a qualsevol departament, les quals haurien de tenir la capacitat d’adaptar-se a requeriments funcionals i tècnics heterogenis, mitjançant una capa de personalització a nivell usuari i emprant components o microserveis que maximitzin la seva compatibilitat amb múltiples sistemes i tecnologies. A més, gràcies a una arquitectura de microserveis tindrem la capacitat d’aplicar canvis a certs components sense impactar a la resta de l’aplicació.</p></li>
+
+<li><p><strong>1.1.3 Interoperabilitat</strong> <em>(obligatori)</em>. El context d’execució de les aplicacions està format pel Sistema Operatiu, les plataformes integrades (impressió, eines de gestió i administració, recursos locals i en xarxa, etc..), altres aplicacions i els perifèrics. La interoperabilitat entre tots aquests elements és una facultat que han de tenir les solucions del lloc de treball.</p></li>
+</ul>
+
+<h2 id="1-2-principis-tecnològics">1.2 Principis tecnològics</h2>
+
+<ul>
+<li><p><strong>1.2.1 Estabilitat</strong> <em>(obligatori)</em>. Les solucions a implementar al lloc de treball han de tenir suficient experiència en entorns empresarials amb els mateixos condicionats d’interoperabilitat que els terminals de la Generalitat de Catalunya, encara que a vegades caldrà avaluar l’ús de solucions emergents per garantir l’aplicació de la resta de principis definits.</p></li>
+
+<li><p><strong>1.2.2 Cicle de vida</strong> <em>(obligatori)</em>. Tota solució haurà de comptar amb un cicle de vida actualitzat i consultable que garanteixi una evolució continua del programari de manera alineada amb la resta d’aplicacions i sistema operatiu amb els que necessita interactuar. Al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">full de ruta de programari</a> es pot consultar el programari transversal de l&rsquo;Entorn Digital de Treball, així com el versionat suportat per CTTI.</p></li>
+</ul>
+
+<p>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;</p>
+
+<hr />
+
+<h1 id="2-arquitectura-del-lloc-de-treball">2. Arquitectura del Lloc de Treball</h1>
+
+<p>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;</p>
+
+<h2 id="2-1-dispositius">2.1 Dispositius</h2>
+
+<ul>
+<li><p><strong>2.0.1 Simplicitat</strong> <em>(obligatori)</em>. Tot dispositiu ha de tenir les característiques estrictament necessàries per donar el servei demandat. S’evitarà l’adquisició de dispositius sobredimensionats a nivell de recursos o funcionalitats amb l’objectiu de minimitzar el cost, problemes i esforços de manteniment associats.</p></li>
+
+<li><p><strong>2.0.2 Ampliable</strong> <em>(desitjable)</em>. Tot dispositiu hauria de permetre la seva ampliació a nivell de recursos i funcionalitats, mitjançant l&rsquo;ús de perifèrics d&rsquo;entrada o sortida, la substitució o ampliació dels components que formen el propi dispositiu i la interconnexió amb altres dispositius.</p></li>
+
+<li><p><strong>2.0.3 Suportat</strong> <em>(obligatori)</em>. El dispositiu ha de comptar amb suport vigent del fabricant i ha de ser compatible amb la versió CTTI del sistema operatiu o firmware corresponent per aquesta tipologia de dispositiu.</p></li>
+</ul>
+
+<h3 id="2-1-1-equips-corporatius-i-sistema-operatiu">2.1.1 Equips corporatius i Sistema Operatiu</h3>
+
+<ul>
+<li><p><strong>2.1.1.1 Maquetació</strong> <em>(obligatori)</em>. Tot terminal corporatiu de la Generalitat de Catalunya s’ha de desplegar seguint les directrius de CTTI, gràcies a les quals s’assolirà una homogeneïtat en l’aparença, les funcionalitats transversals i l’operativitat del sistema.</p></li>
+
+<li><p><strong>2.1.1.2 Cicle de vida</strong> <em>(obligatori)</em>. S’hauran de complir amb els terminis del cicle de vida del sistema operatiu establerts pel fabricant en el temps i forma definits pels organismes components de la Generalitat de Catalunya amb l’objectiu d’assolir el SLA del servei. Al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">full de ruta de programari</a> es poden consultar les versions dels sistemes operatius de l&rsquo;Entorn Digital de Treball suportades per CTTI.</p></li>
+</ul>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<h2 id="2-2-virtualització-d-aplicacions">2.2 Virtualització d&rsquo;aplicacions</h2>
+
+<h3 id="2-2-1-execució-local">2.2.1. Execució local</h3>
+
+<p>La virtualització és l’acte d’aïllar o desacoblar un recurs informàtic dels altres, tanmateix mitjançant la virtualització d’aplicacions es generarà un paquet que inclou tots els objectes i fitxers que requereixi l’aplicació per funcionar i amb l’objectiu de poder-la executar sense necessitat d’instal·lació.</p>
+
+<p>En aquells casos d’ús on la virtualització d’aplicacions esdevingui com el mètode d’implementació adient caldrà seguir els següents principis associats amb la creació, execució i manteniment del paquet. Els principals motius pels quals s’utilitzarà aquesta tecnologia són:</p>
+
+<ul>
+<li>Execució de múltiples versions o instàncies de la mateixa aplicació en un mateix entorn.</li>
+<li>Remeiar conflictes entre aplicacions.</li>
+<li>Ritme d&rsquo;actualitzacions de l&rsquo;aplicació molt elevat.</li>
+<li>Es requereixi un implementació o completa desimplementació de l&rsquo;aplicació molt àgil.</li>
+</ul>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<ul>
+<li><p><strong>2.2.1.1 Filosofia de “microserveis” o “components desacoblats”</strong> <em>(desitjable)</em>, ), amb l’objectiu de maximitzar la reutilització dels mateixos alhora que es minimitzen els esforços i l’impacte al servei per mantenir el cicle de vida de les aplicacions. Entenem que se segueix aquesta filosofia quan s’assoleixen les següents premisses:</p>
+
+<ul>
+<li><p>a)  Ús de dependències: es generarà un paquet independent per aquells components susceptibles de ser reutilitzats o que poden ser modificats i actualitzats sense afectar a la resta de components (p.ex.: frameworks, runtimes, visors o editors de documents, plugins, etc).</p></li>
+
+<li><p>b)  Els paquets principals no han d’incloure paràmetres de configuracions específics de l&rsquo;aplicació o del sistema (p.ex.: strings de connexió, nom de BBDD, etc). Aquestes personalitzacions s&rsquo;inclouran en un paquet diferent o s&rsquo;implementaran mitjançant una eina de gestió de l&rsquo;entorn d&rsquo;usuari (UEM).</p></li>
+</ul></li>
+
+<li><p><strong>2.2.1.2 Simplicitat</strong> del paquet i del perfil d’usuari. Els fitxers i claus de registre a mantenir seran els mínims necessaris perquè l’aplicació sigui completament funcional.</p></li>
+
+<li><p><strong>2.2.1.3 Auto-contingut i auto-configurat</strong>. És necessari garantir que la combinació del paquet principal + paquets dependents incorporen el total de fitxers i claus de registre necessàries per treballar amb l’aplicació. Tanmateix, cal evitar la necessitat de configuracions manuals mitjançant una parametrització preestablerta.</p></li>
+
+<li><p><strong>2.2.1.4 L’entorn d’execució (bombolla) ha de ser segur,</strong> aplicant les mesures restrictives necessàries per permetre només la interoperabilitat amb el sistema i aquells serveis completament imprescindibles pel bon funcionament de l’aplicació.</p></li>
+
+<li><p><strong>2.2.1.5 Cal vetllar per la compatibilitat del paquet,</strong> , avaluant el correcte funcionament del mateix en les diverses versions de Windows suportades pel lloc de treball de la Generalitat de Catalunya, en aquelles arquitectures compatibles amb l’aplicació (32bit \ 64bit). Al full de ruta de programari, s’informa quines són aquestes versions i compilacions de SO.</p></li>
+
+<li><p><strong>2.2.1.6 L’experiència d’usuari persistent</strong>, sense importar des de quin terminal -gestionat- s’executi, per tant, l’aplicació ha d’estar preparada per l’ús de perfils mòbils  i serà al perfil de l’usuari on es redirigiran tots els fitxers de treball i aquells fitxers destinats a personalitzar la configuració de l’aplicació.</p></li>
+
+<li><p><strong>2.2.1.7 Cicle de vida inalterable</strong>. . La virtualització de l’aplicació no ha d’interferir en el cicle de vida d’aquesta, el qual haurà d’anar alineat amb la versió del SO i  programari present en els terminals client on es pretén executar.</p></li>
+</ul>
+
+<h3 id="2-2-2-execució-remota">2.2.2. Execució remota</h3>
+
+<ul>
+<li><strong>2.2.2.1 Infraestructura eficient</strong>. Malgrat que el gruix de la infraestructura està vinculada amb el model de lliurament més adient a cada cas (VDI o RDSH) i que vindrà definit per factors funcionals i de seguretat, tècnicament s’haurà de prioritzar l’ús d’aquell model que millor resolgui aquests factors, però amb un enfocament que maximitzi la densitat d’usuaris amb el mínim d’infraestructura. Amb aquest propòsit, es prioritzarà el desplegament d’entorns compartits i no persistents, tanmateix per assolir-ho es valorarà l’ús de la virtualització d’aplicacions (execució local) com a mètode d’implementació.</li>
+<li><strong>2.2.2.2 Estandarització</strong>. Les imatges de referència utilitzades per aprovisionar els equips (VDI i RDSH) seran les mínimes necessàries i estaran alineades amb les versions de SO informades al full de ruta de programari. De la mateixa manera, hauran de seguir les directrius d’imatge corporativa i organització per capes lògiques informades per CTTI en el disseny de la maqueta Windows 10.</li>
+<li><strong>2.2.2.3 Elasticitat</strong>. Tota plataforma de virtualització haurà de permetre un creixement àgil de les 3 capes que la constitueixin (accés, control i recursos) amb l’objectiu d’adaptar-se a la demanda d’escriptoris i aplicacions virtuals. Caldrà dimensionar la plataforma de forma proactiva, d’acord amb el volum d’usuaris previst i el seu perfil d’estrès (baix, mig i alt) En aquells casos que el creixement respon a una necessitat temporal, s’hauran d’estudiar les alternatives disponibles per decréixer de la mateixa manera.</li>
+</ul>
+
+<p>&nbsp;
+&nbsp;</p>
+
+<hr />
+
+<h1 id="3-arquitectura-de-connectivitat">3. Arquitectura de connectivitat</h1>
+
+<p>&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;</p>
+
+<h2 id="3-1-principis-de-disseny">3.1 Principis de disseny</h2>
+
+<ul>
+<li><p><strong>3.1.1 Adaptabilitat</strong> <em>(obligatori)</em>. Capacitat per acollir noves funcionalitats i/o tecnologies minimitzant els canvis estructurals i els costos d&rsquo;implementació.</p></li>
+
+<li><p><strong>3.1.2 Escalabilitat</strong> <em>(obligatori)</em>. Totes les solucions de xarxes de telecomunicacions han de suportar sense dificultats el creixement, moltes vegades continu, i sense que s’hagi que redissenyar novament la solució.</p></li>
+
+<li><p><strong>3.1.3 Disponibilitat i rendiment</strong> <em>(obligatori)</em>. S’ha d’establir el grau de disponibilitat per tota solució de xarxa de telecomunicacions. Aquest valor es mesurarà com el percentatge de temps de disponibilitat de la xarxa durant un temps indicat, o també es podrà valorar com el temps màxim permès que pugui estar caiguda la xarxa sense afectar els serveis principals de l’empresa.
+  Caldrà determinar les càrregues de treball màximes, per tal de poder-les absorbir. Els paràmetres fonamentals a tenir en compte pel correcte funcionament dels serveis dintre de la xarxa (Telefonia IP, Videoconferència, Correu Electrònic, Etc…) són l’amplada de banda (Bandwidth), la pèrdua de paquets (Packet loss), el retard (Latency) i la variació de retard (Jitter).</p></li>
+
+<li><p><strong>3.1.5 Administració</strong> <em>(obligatori)</em>. Tota xarxa de telecomunicacions haurà de permetre de forma senzilla la seva administració, monitorització, control d’esdeveniment i incidències, amb enfocament cap a una gestió automatitzada.</p></li>
+
+<li><p><strong>3.1.6 Simplicitat</strong> <em>(obligatori)</em>. Tot disseny està orientat a la senzillesa, evitant sempre desenvolupar solucions complicades, que acabin sent posteriorment ingovernables.</p></li>
+</ul>
+
+<h2 id="3-2-principis-tecnològics">3.2 Principis tecnològics</h2>
+
+<ul>
+<li><p><strong>3.2.1 Estabilitat</strong> <em>(obligatori)</em>. Les solucions a aplicar en les xarxes de telecomunicacions haurien de ser solucions amb un cert recorregut, no és recomanable utilitzar solucions poc madures a nivell de producció. Encara que, en certes situacions s’avaluarà implementar solucions emergents.</p></li>
+
+<li><p><strong>3.2.2 Minimitzar la dependència sobre els fabricants</strong> <em>(obligatori)</em>. Cal evitar sempre que sigui possible les solucions propietàries, i maximitzar la compatibilitat amb la resta dels components i sistemes. Però, allunyant-nos de solucions massa heterogènies que puguin generar problemes de governança</p></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

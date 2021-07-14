@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Release Notes Canigó 3.4</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Release Notes Canigó 3.4\" />");
+		document.write("<meta name=\"description\" content=\"Release Notes Canigó 3.4\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo-download-related">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo/download/">Descàrrega dels binaris de Canigó i de les API’s de suport</a>
+	</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Release Notes Canigó 3.4
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 11-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h4 id="canigó-3-4-6-11-05-2021">Canigó 3.4.6 (11/05/2021)</h4>
+
+<ul>
+<li><a href="/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/">Adaptació connector Sarcat PICA</a>
+
+<ul>
+<li>S&rsquo;ha revisat i resolt el problema detectat en el mòdul d&rsquo;integració del connector SARCAT PICA.</li>
+</ul></li>
+<li>Revisió interna execució de tests dels mòduls
+
+<ul>
+<li>S&rsquo;ha revisat la forma d&rsquo;execució dels tests dels mòduls per a utilitzar imatges docker builder del catàleg del SIC 2.0.</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-5-09-09-2020">Canigó 3.4.5 (09/09/2020)</h4>
+
+<ul>
+<li><a href="/noticies/2020-09-09-Revisio_regles_SonarQube_moduls_integracio/">Revisió de regles SonarQube als mòduls d&rsquo;<em>integració</em></a>
+
+<ul>
+<li>S&rsquo;han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls d&rsquo;<em>integració</em> de Canigó.</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-4-16-06-2020">Canigó 3.4.4 (16/06/2020)</h4>
+
+<ul>
+<li><a href="/noticies/2020-04-28-Actualitzacio_modul_Mongo_update_driver/">Actualització del mòdul MongoDB</a>
+
+<ul>
+<li>Actualització del mòdul de MongoDB per a utilitzar el <em>driver</em> de Mongo compatible amb la versió 4.2 de MongoDB.</li>
+</ul></li>
+<li><a href="/noticies/2020-04-28-Actualitzacio_plugin_eclipse_1_7_8/">Actualització de l’<em>archetype</em> 1.6.6 i del <em>plugin</em> Eclipse 1.7.8</a>
+
+<ul>
+<li>Actualització de l’<em>archetype</em> versió 1.6.6 i del <em>plugin</em> de l&rsquo;Eclipse de Canigó versió 1.7.8 per a utilitzar l&rsquo;última versió del mòdul de MongoDB compatible amb la versió 4.2 de MongoDB.</li>
+</ul></li>
+<li><a href="/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/">Revisió de regles SonarQube als mòduls <em>core</em></a>
+
+<ul>
+<li>S&rsquo;han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls <em>core</em> de Canigó.</li>
+</ul></li>
+<li><a href="/noticies/2020-06-11-Actualitzacio_modul_Seguretat_compressio_token">Actualització del mòdul Seguretat</a>
+
+<ul>
+<li>Actualització del mòdul de seguretat de Canigó per a proporcionar la possibilitat de compressió del token JWT.</li>
+</ul></li>
+<li><a href="/noticies/2020-06-11-Actualitzacio_archetype_1_6_7_plugin_eclipse_1_7_9">Actualització de l’<em>archetype</em> 1.6.7 i del <em>plugin</em> Eclipse 1.7.9</a>
+
+<ul>
+<li>Actualització de l’<em>archetype</em> versió 1.6.7 i del <em>plugin</em> de l&rsquo;Eclipse de Canigó versió 1.7.9 per a utilitzar les versions dels mòduls <em>core</em> amb les correccions de l&rsquo;anàlisi de SonarQube.</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-3-26-03-2020">Canigó 3.4.3 (26/03/2020)</h4>
+
+<ul>
+<li><a href="/noticies/2020-03-24-Actualitzacio_modul_Seguretat_Saml/">Autorització GICAR a Canigó amb SAML</a>
+
+<ul>
+<li>Actualització del mòdul de seguretat SAML per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).</li>
+</ul></li>
+<li><a href="/noticies/2020-03-24-Revisio_estat_moduls_Canigo_3.4">Revisió estat dels mòduls Canigó</a>
+
+<ul>
+<li>Revisió de l&rsquo;estat dels mòduls de Canigó, deprecant funcionalitats obsoletes i ampliant els testos dels mòduls.</li>
+</ul></li>
+<li><a href="/noticies/2020-03-24-Actualitzacio_Actualitzacio_archetype_1_6_5_plugin_eclipse_1_7_7/">Actualització del <em>plugin</em> de Canigó per a utilitzar l&rsquo;última versió del mòdul de seguretat SAML</a>
+
+<ul>
+<li>Actualització del <em>plugin</em> de l&rsquo;Eclipse de Canigó per a utilitzar l&rsquo;última versió del mòdul de seguretat SAML on s’ofereix la funcionalitat d’obtenció dels rols de l’usuari a través de GICAR (autorització).</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-2-25-10-2019">Canigó 3.4.2 (25/10/2019)</h4>
+
+<ul>
+<li><a href="/noticies/2019-10-22-Actualitzacio_modul_Seguretat">Autorització GICAR a Canigó</a>
+
+<ul>
+<li>Actualització del mòdul de seguretat per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).</li>
+</ul></li>
+<li><a href="/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6">Actualització del <em>plugin</em> de Canigó per a incloure nova opció seguretat autorització GICAR a Canigó</a>
+
+<ul>
+<li>Actualització del <em>plugin</em> de l&rsquo;Eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat.</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-1-17-09-2019">Canigó 3.4.1 (17/09/2019)</h4>
+
+<ul>
+<li><a href="/noticies/2019-09-12-Actualitzacio_moduls_Canigo_Dependency_check">Dependency Check</a>
+
+<ul>
+<li>Actualització de llibreries depenents dels mòduls passant el dependency check.</li>
+</ul></li>
+<li><a href="/noticies/2019-09-17-Actualitzacio_modul_Antivirus">Actualització del connector antivirus Canigó de Symantec</a>
+
+<ul>
+<li>Actualització del connector de l&rsquo;Antivirus de Canigó que actualment està utilitzant la versió 7 a la última versió disponible.</li>
+</ul></li>
+<li><a href="/noticies/2019-09-17-Actualitzacio_modul_SSC">Evolució del mòdul d&rsquo;integració SSC</a>
+
+<ul>
+<li>Actualització del connector de SSC de Canigó per a utilitzar la versió 1.3.3 del servei de SSC del AOC.</li>
+</ul></li>
+<li><a href="/noticies/2019-09-18-Actualitzacio_archetype_1_6_4_plugin_eclipse_1_7_5/">Actualització de la plantilla i del <em>plugin</em> Canigó versió 3.4.1</a>
+
+<ul>
+<li>Actualització del <em>archetype</em> i del <em>plugin</em> de l&rsquo;Eclipse de Canigó per a generar aplicacions amb versió de Canigó 3.4.1.</li>
+</ul></li>
+</ul>
+
+<h4 id="canigó-3-4-0-29-03-2018">Canigó 3.4.0 (29/03/2018)</h4>
+
+<ul>
+<li><a href="/noticies/2019-03-29-actualitzacio-canigo-3_4_0">Actualització de tecnologies base</a>
+
+<ul>
+<li>Actualització a Java 11, Spring 5, Spring Boot 2.</li>
+<li>Suport a programació amb Streams Reactius.</li>
+<li>Suport a programació reactiva.</li>
+<li>Suport a programació funcional.</li>
+<li>Suport configuració propietats amb yaml.</li>
+</ul></li>
+<li><a href="/canigo-documentacio-versions-3x-integracio/modul-psgd/">Actualització del mòdul integració ARESTA/PSGD</a></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

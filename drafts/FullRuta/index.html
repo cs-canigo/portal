@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Estàndard pel full de ruta del programari</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Estàndard pel full de ruta del programari\" />");
+		document.write("<meta name=\"description\" content=\"Estàndard pel full de ruta del programari\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Estàndard pel full de ruta del programari
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 04-03-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#part-1-abast">Part 1: Abast</a></li>
+<li><a href="#part-2-referències">Part 2: Referències</a></li>
+<li><a href="#part-3-termes-i-definicions">Part 3: Termes i definicions</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#maduresa-d-una-tecnologia">Maduresa d&rsquo;una tecnologia</a></li>
+<li><a href="#mètode-de-classificació">Mètode de classificació</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#part-4-requisits-del-programari">Part 4: Requisits del programari</a></li>
+</ul></li>
+<li><a href="#annex-a-normatiu-programari-estandarditzat">ANNEX A (normatiu) Programari estandarditzat</a>
+<ul>
+<li>
+<ul>
+<li><a href="#descripció-de-la-informació-proporcionada-a-la-taula-de-programari-estandarditzat-de-cpd">Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD</a>
+<ul>
+<li><a href="#definició-dels-tipus-de-serveis-a-cloud">Definició dels tipus de serveis a cloud</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#maduresa">ANNEX B (informatiu) Maduresa d&rsquo;una tecnologia</a>
+<ul>
+<li>
+<ul>
+<li><a href="#la-maduresa-des-del-punt-de-vista-del-grau-de-suport-intern">La maduresa des del punt de vista del grau de suport intern</a></li>
+<li><a href="#la-maduresa-des-del-punt-de-vista-del-fabricant">La maduresa des del punt de vista del fabricant</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="part-1-abast">Part 1: Abast</h2>
+
+<p>L’elevat volum de productes que estan desplegats als CPDs de la Generalitat de Catalunya i als seus
+entorns de treball i la seva heterogeneïtat de versions fa que resulti cada cop més difícil mantenir
+vigents les versions de programari de les diferents tecnologies..</p>
+
+<p>Com a peça facilitadora, i amb la intenció de donar una visió de l’estat de l’art de cadascuna de les
+tecnologies usades (o previstes d’usar) en els nous sistemes d’informació a desplegar s’ha elaborat el
+full de ruta de versions de programari.</p>
+
+<p>El full de ruta de versions de programari és un document que té com a objectiu <strong>normalitzar i
+racionalitzar el desplegament de tecnologies</strong>, alhora que es concreta tant el ventall de productes
+disponibles per a una determinada tecnologia, com la versió recomanada d’un programari concret.</p>
+
+<p>Per cadascuna de les tecnologies se’n proporciona:</p>
+
+<ul>
+<li>Una classificació bàsica del producte en funció del grau de coneixement i implantació de la
+tecnologia.</li>
+<li>L’estat de maduresa del producte per facilitar la determinació tant de la versió a utilitzar en el
+moment de la seva implantació com el grau d’obsolescència dels productes que estan
+actualment en ús.</li>
+</ul>
+
+<h2 id="part-2-referències">Part 2: Referències</h2>
+
+<h2 id="part-3-termes-i-definicions">Part 3: Termes i definicions</h2>
+
+<h5 id="maduresa-d-una-tecnologia">Maduresa d&rsquo;una tecnologia</h5>
+
+<p>La visió de la maduresa de la tecnologia consisteix en reflectir de forma objectiva el nivell de suport en què es troba una tecnologia concreta, tant si es tracta de versions que s’utilitzen des de fa temps com si es tracta de versions a utilitzar en un futur més o menys immediat.</p>
+
+<p>Al full de ruta es presenta la maduresa des de dos punts de vista diferents:</p>
+
+<ul>
+<li>Des del punt de vista del grau de suport intern</li>
+<li>Des del punt de vista del grau de suport del fabricant de programari</li>
+</ul>
+
+<p>A l&rsquo;annex <a href='#maduresa'>Maduresa d&rsquo;una tecnologia</a> es recullen les diferents visions de maduresa incloses al full de ruta</p>
+
+<h5 id="mètode-de-classificació">Mètode de classificació</h5>
+
+<p>Per cada tecnologia inclosa en el full de ruta se li associa el <strong>Grup de tecnologies</strong> al que pertany (base de dades, gestió documental, sistema operatiu, etc.)</p>
+
+<h2 id="part-4-requisits-del-programari">Part 4: Requisits del programari</h2>
+
+<ol>
+<li><p>Quan es defineixi la necessitat d&rsquo;un nou programari <strong>s&rsquo;ha d&rsquo;usar el programari estandarditzat pel CTTI</strong>, segons les taules recollides a l&rsquo;annex A l&rsquo;annex <a href='#fullruta'>Programari estandarditzat</a></p></li>
+
+<li><p>Si un programari no es troba al full de ruta no vol dir ni que no es pugui utilitzar ni que no estigui subjecte als mateixos criteris d’obsolescència que la resta de productes. En cas de dubtes sobre algun programari podeu adreçar-vos a la Unitat d’Arquitectura Corportiva de CTTI.</p></li>
+
+<li><p>Arran del dinamisme de les versions de les diferents tecnologies per part dels fabricants, el full de ruta ha de ser revisat quadrimestralment. D’aquesta forma cada full de ruta publicat contindrà les dates de la darrera revisió i validesa de la informació que conté.</p></li>
+</ol>
+
+<h1 id="annex-a-normatiu-programari-estandarditzat">ANNEX A (normatiu) Programari estandarditzat</h1>
+
+<p><link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script></p>
+
+<p><font size="20">
+<table id="Titol_CPD" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Servidors</th>
+            </tr>
+ </thead>
+</table>
+</font></p>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>juliol de 2020 </td>
+<td>octubre de 2020</td>
+</tr>
+</thead>
+</table>
+
+<table id="FullRutaCPD" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+<font size="20">
+<table id="Titol_LLT" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Lloc de Treball</th>
+            </tr>
+ </thead>
+</table>
+</font>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>Març de 2021 </td>
+<td>Juliol de 2021</td>
+</tr>
+</thead>
+</table>
+
+<table id="FullRutaLLT" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th></th>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+
+<p><font size="20">
+<table id="Titol_Conn" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Connectivitat LAN</th>
+            </tr>
+ </thead>
+</table>
+</font></p>
+
+<table id="Revisio" class="display" style="width:50%" align="center" margin-left:auto margin-right:auto>
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>Març de 2021 </td>
+<td>Juliol de 2021</td>
+</tr>
+</thead>
+</table>
+
+<table id="FullRutaCONN" class="display" style="width:100%">
+        <thead>
+        <tr>
+        <th></th>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+
+<p>* La versió del software del AP, ve donada per la versió de la controladora (WLC) a la que es troba associat.</p>
+
+<p><font size="20">
+<table id="Titol_HOST" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th  colspan="8" align="center" style="font-weight:bold">  Programari estandarditzat per Mainframe i AS400 </th>
+            </tr>
+ </thead>
+</table>
+</font></p>
+
+<table id="Revisio" class="display" style="width:50%" align="center">
+<thead>
+<tr>
+<th>Darrera revisió realitzada</th>
+<th> Revisió de full de ruta vigent fins</th>
+</tr>
+<tr>
+<td>juliol de 2020 </td>
+<td>octubre de 2020</td>
+</tr>
+</thead>
+</table>
+
+<table id="FullRutaHOST" class="display" style="width:100%">
+        <thead>
+        <tr>
+                <th>Grup de Tecnologies</th>
+                <th>Producte</th>
+                <th>Obsolet</th>
+                <th>Suportat</th>
+                <th>Versió Actual CTTI</th>
+                <th>En Roadmap</th>
+                <th>Emergent</th>
+            </tr>
+        </thead>
+</table>
+
+<script>
+// Funció que dona format a la taula interna del Full de Ruta de Lloc de Treball
+function formatLLT(d) {
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+        '<th width="300">LT1</th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W8.1</th>'+
+            '<td>N/A</td>'+
+        '<td>'+d.lt2avw8+'</td>'+
+            '<td>'+d.lt2bvw8+'</td>'+
+            '<td>'+d.lt2cvw8+'</td>'+
+        '</tr>'+
+    '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió producte a W10</th>'+
+            '<td>N/A</td>'+
+        '<td>'+d.lt2avw10+'</td>'+
+            '<td>'+d.lt2bvw10+'</td>'+
+            '<td>'+d.lt2cvw10+'</td>'+
+      '</tr>'+
+      '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versió plataforma</th>'+
+            '<td>'+d.lt1pl+'</td>'+
+        '<td>'+d.lt2apl+'</td>'+
+             '<td>'+d.lt2bpl+'</td>'+
+            '<td>'+d.lt2cpl+'</td>'+
+      '</tr>'+
+        '<tr>'+
+            '<th>   </th>'+
+            '<th  colspan="4">   </th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="4">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaLLT = $('#FullRutaLLT').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+    "info" : false,
+    "ordering": false,
+    "responsive": {
+            details: false
+        },
+        "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha registres",
+                "zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariLLT.json",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+            "width": "10%"
+            },
+            { "data": "categoria",
+          "width": "30%" },
+            { "data": "producte", 
+          "className":      'intern',
+          "width": "30%"
+        },
+            { "data": "obsolet",
+          "width": "20%" },
+            { "data": "suportat",
+          "width": "80%" },
+            { "data": "versioactual",
+          "className":      'intern',
+          "width": "80%"
+        },
+            { "data": "roadmap",
+          "width": "100%" },
+            { "data": "emergent",
+          "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==1 && col_index !==2){
+                        $("<p>&nbsp;</p>").appendTo($(column.header()));
+                        return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+  $('#FullRutaLLT tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaLLT.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatLLT(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+
+});
+
+// Funció que dona format a la taula interna de Connectivitat LAN
+function formatCONN(d) {
+    return '<table cellpadding="7" cellspacing="1" ;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+            '<th width="300">GES-LAN</th>'+
+            '<th width="300">LT2B-LAN</th>'+
+        '</tr>'+
+        '<tr>'+
+        '<th style="border: 1px solid rgb(165, 165, 165);">Versió Desplegada</th>'+
+            '<td>'+d.geslan+'</td>'+
+                '<td>'+d.lt2blan+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaCONN = $('#FullRutaCONN    ').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+    "info" : false,
+    "ordering": false,
+    "responsive": {
+            details: false
+        },
+        "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha registres",
+                "zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariCONNLAN.json",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+            "width": "10%"
+            },
+            { "data": "categoria",
+          "width": "30%" },
+            { "data": "producte", 
+          "className":      'intern',
+          "width": "30%"
+        },
+            { "data": "obsolet",
+          "width": "20%" },
+            { "data": "suportat",
+          "width": "80%" },
+            { "data": "versioactual",
+          "className":      'intern',
+          "width": "80%"
+        },
+            { "data": "roadmap",
+          "width": "100%" },
+            { "data": "emergent",
+          "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==1 && col_index !==2){
+                        $("<p>&nbsp;</p>").appendTo($(column.header()));
+                        return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+  $('#FullRutaCONN tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaCONN.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatCONN(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+
+});
+// Funció que dona format a la taula interna del Full de Ruta de HOST
+function formatHOST(d) {
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Versions per Lot </th>'+
+            '<th width="300">LT2A</th>'+
+            '<th width="300">LT2B</th>'+
+            '<th width="300">LT2C</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Versions disponibles</th>'+
+            '<td>'+d.lt2a+'</td>'+
+            '<td>'+d.lt2b+'</td>'+
+            '<td>'+d.lt2c+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>   </th>'+
+            '<th  colspan="3">   </th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="3">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaHOST = $('#FullRutaHOST').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+    "info" : false,
+    "ordering": false,
+    "responsive": {
+            details: false
+        },
+        "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha registres",
+                "zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariHOST.json",
+        "columns": [
+//            {
+//                "className":      'details-control',
+//                "orderable":      false,
+//                "data":           null,
+//                "defaultContent": '',
+//          "width": "10%"
+//            },
+            { "data": "categoria",
+          "width": "30%" },
+            { "data": "producte", 
+          "className":      'intern',
+          "width": "30%"
+        },
+            { "data": "obsolet",
+          "width": "20%" },
+            { "data": "suportat",
+          "width": "80%" },
+            { "data": "versioactual",
+          "className":      'intern',
+          "width": "80%"
+        },
+            { "data": "roadmap",
+          "width": "100%" },
+            { "data": "emergent",
+          "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==7){
+                        $("<p>&nbsp;</p>").appendTo($(column.header()));
+                        return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+/*  $('#FullRutaHOST tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaHOST.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatHOST(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+*/
+});
+// Funció que dona format a la taula interna del Full de Ruta de CPD
+function formatCPD(d) {
+    // `d` is the original data object for the row
+    return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
+        '<tr>'+
+            '<th>Tipus Serveis i versions </th>'+
+            '<th width="300">CPD1</th>'+
+            '<th width="300">CPD2</th>'+
+            '<th width="300">CPD3</th>'+
+            '<th width="300">CPD4</th>'+
+            '<th width="300">Azure</th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
+            '<td>'+d.cpd1v1+'</td>'+
+            '<td>'+d.cpd2v1+'</td>'+
+            '<td>'+d.cpd3v1+'</td>'+
+            '<td>'+d.cpd4v1+'</td>'+
+            '<td>'+d.azurev1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Container Cloud</th>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd1v2+'</td>'+
+    //Container cloud CPD2 es realment el servei bluemix
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.bluemixv2+'</td>'+ 
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd3v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.cpd4v2+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azurev2+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>   </th>'+
+            '<th  colspan="6">   </th>'+
+        '</tr>'+
+        '<tr>'+
+            '<th >Desplegable al SIC</th>'+
+            '<td colspan="6">'+d.desplegablesicv1+'</td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="6">'+d.observacions+'</td>'+
+        '</tr>'+
+    '</table>';
+}
+$(document).ready(function() {
+    var taulaFullRutaCPD = $('#FullRutaCPD').DataTable( {
+    "columnDefs": [
+        { "width": "10%", "targets": 0 }
+    ],
+    "paging": false,
+    "info" : false,
+    "ordering": false,
+    "responsive": {
+            details: false
+        },
+        "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha registres",
+                "zeroRecords": "No s'han trobat registres"
+        },
+        "ajax": "../FullRuta20/inventariCPD.json",
+        "columns": [
+            {
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": '',
+            "width": "10%"
+            },
+            { "data": "categoria",
+          "width": "30%" },
+            { "data": "producte", 
+          "className":      'intern',
+          "width": "30%"
+        },
+            { "data": "obsolet",
+          "width": "20%" },
+            { "data": "suportat",
+          "width": "80%" },
+            { "data": "versioactual",
+          "className":      'intern',
+          "width": "80%"
+        },
+            { "data": "roadmap",
+          "width": "100%" },
+            { "data": "emergent",
+          "width": "100%" }
+        ],
+        "order": [[1, 'asc']],
+           "initComplete": function () {
+            this.api().columns().every( function (col_index) {
+                var column = this;
+                if (col_index !==1 && col_index !==2){
+                        $("<p>&nbsp;</p>").appendTo($(column.header()));
+                        return;
+                }
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo( $(column.header()) )
+                    .on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        ); 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } ); 
+                column.data().unique().sort().each( function ( d, j ) {
+                    select.append( '<option value="'+d+'">'+d+'</option>' )
+                } );
+            } );
+        }
+    });
+     // Add event listener for opening and closing details
+    $('#FullRutaCPD tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaCPD.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatCPD(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    });
+});
+</script>
+
+<p>* DB2: Versió actual CTTI (DGP) es la 10, versió actual CTTI (Corporatiu) es la 8.</p>
+
+<h3 id="descripció-de-la-informació-proporcionada-a-la-taula-de-programari-estandarditzat-de-cpd">Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD</h3>
+
+<p>A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='#maduresa'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.</p>
+
+<h4 id="definició-dels-tipus-de-serveis-a-cloud">Definició dels tipus de serveis a cloud</h4>
+
+<ul>
+<li><strong>xPaaS</strong>: És un entorn d’execució que s’arrenca en el moment de fer el push de l’artefacte que volem fer córrer. No hi ha pre-aprovisionament. Talles flexibles. Escalat automàtic.</li>
+<li><strong>Contenidor</strong>: Artefacte de software que inclou totes les dependències necessàries per a dur a terme la seva funció i és portable entre clouds que els suportin (Docker)</li>
+<li><strong>DBaaS</strong>: Base de dades com a servei, és un subtipus de xPaaS. Escala automàticament.</li>
+<li><strong>PaaS</strong>: Plataforma de programari oferta al nuvol que inclou el middleware administrat.</li>
+<li><strong>IaaS</strong>: Màquines virtuals a cloud, on s’aprovisiona inclouen el sistema operatiu administrat i s&rsquo;instal·la a sobre el programari personalitzat que es demani.</li>
+</ul>
+
+<h1 id="maduresa">ANNEX B (informatiu) Maduresa d&rsquo;una tecnologia</h1>
+
+<h3 id="la-maduresa-des-del-punt-de-vista-del-grau-de-suport-intern">La maduresa des del punt de vista del grau de suport intern</h3>
+
+<p>Una tecnologia en les seves diferents versions pot passar per 5 estadis diferents.</p>
+
+<ul>
+<li><p><strong>Obsolet</strong>. Una versió d’una tecnologia es considerarà obsoleta en el moment en què estigui fora de la línia de manteniment correctiu del seu fabricant, ja sigui perquè està en període de suport extès o completament fora de suport del fabricant.</p></li>
+
+<li><p><strong>Suportat</strong>. Una versió d’un producte es considerarà suportada mentre el fabricant (o una empresa de serveis especialitzada) doni suport de manteniment estàndard de la versió del programari.</p></li>
+
+<li><p><strong>Versió actual CTTI</strong>. Si no hi ha cap motiu que requereixi reconsiderar l’elecció, és la versió de programari que es recomana utilitzar, amb les següents consideracions:</p>
+
+<ul>
+<li>En el cas de Sistemes d&rsquo;Informació, aquesta és la versió de programari que s’està desplegant actualment.</li>
+<li>En el cas de la Connectivitat LAN, aquesta és la darrera versió suportada pel fabricant amb una antiguitat mínima de 6 mesos per tal de garantir un mínim de recorregut i estabilitat del software a implantar.</li>
+</ul></li>
+
+<li><p><strong>En Roadmap CTTI</strong>. És la versió de programari que està estudiant-se per la seva futura implantació. Un cop definida i implantada l’arquitectura de la versió, aquesta passarà a ser la “versió actual CTTI”.</p></li>
+
+<li><p><strong>Emergent</strong>. És la darrera versió de programari publicada pel fabricant i reconeguda internament però que encara no està en avaluació per la seva implantació (és a dir, ni “En Roadmap CTTI” ni en “Versió actual CTTI”).</p></li>
+</ul>
+
+<h3 id="la-maduresa-des-del-punt-de-vista-del-fabricant">La maduresa des del punt de vista del fabricant</h3>
+
+<p>Segons el fabricant d’una tecnologia, un producte en les seves diferents versions pot passar per 3 estadis diferents.</p>
+
+<ul>
+<li><p><strong>No suportat</strong>. Versió sobre la que ja no es presta suport o bé es presta un suport extès, normalment amb uns costos superiors als del manteniment habitual.</p></li>
+
+<li><p><strong>Suport estàndard</strong>. Versió de programari sobre la que es presta suport evolutiu i correctiu.</p></li>
+
+<li><p><strong>Actual</strong>. Versió considerada com a actual per part del fabricant (coincideix amb les versions que estan en període de suport).</p></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Estàndard per la identificació de versions del programari</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Estàndard per la identificació de versions del programari\" />");
+		document.write("<meta name=\"description\" content=\"Requisits per la identificació de les versions dels lliurables d\x27una solució, tant la seva documentació generada, com el codi font i altres lliurables de suport\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Estàndard per la identificació de versions del programari
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 31-07-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#part-1-abast">Part 1: Abast</a></li>
+<li><a href="#part-2-referències">Part 2: Referències</a></li>
+<li><a href="#part-3-termes-i-definicions">Part 3: Termes i definicions</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#versió-major">Versió major</a></li>
+<li><a href="#versió-menor">Versió menor</a></li>
+<li><a href="#versió-de-pegat">Versió de pegat</a></li>
+<li><a href="#build">Build</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#part-4-identificació-de-versions-del-programari">Part 4: Identificació de versions del programari</a></li>
+<li><a href="#part-5-cicle-de-vida-de-les-versions">Part 5: Cicle de vida de les versions</a></li>
+</ul></li>
+<li><a href="#annex-a-informatiu-exemples-de-versionatge">ANNEX A (informatiu) Exemples de versionatge</a></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="part-1-abast">Part 1: Abast</h2>
+
+<p>Aquest document especifica els requisits per la identificació de les versions dels lliurables d&rsquo;una solució, tant la seva documentació generada, com el codi font i altres lliurables de suport</p>
+
+<h2 id="part-2-referències">Part 2: Referències</h2>
+
+<h2 id="part-3-termes-i-definicions">Part 3: Termes i definicions</h2>
+
+<h5 id="versió-major">Versió major</h5>
+
+<p>Representa una versió final relacionada amb un nou projecte o un gran evolutiu (canvis funcionals o d’arquitectura importants). No tenen una periodicitat establerta, sinó que es defineixen seguint el roadmap establert pel comitè de canvis.</p>
+
+<h5 id="versió-menor">Versió menor</h5>
+
+<p>Representa un conjunt d&rsquo;evolutius menors o paquets de correcció a diversos errors coneguts sobre la versió major. En general les versions menors es planifiquen en períodes preestablerts (exemple: trimestralment).</p>
+
+<h5 id="versió-de-pegat">Versió de pegat</h5>
+
+<p>Versions per modificacions urgents o pegats.</p>
+
+<h5 id="build">Build</h5>
+
+<p>Representa el cicle de vida intern de proves i acceptació per part del CTTI i/o client, abans de ser lliurat al client de negoci.</p>
+
+<h2 id="part-4-identificació-de-versions-del-programari">Part 4: Identificació de versions del programari</h2>
+
+<ol>
+<li><p>Tot lliurament  (documentació, codi font, executables, especificacions, &hellip;.) <strong>ha de</strong> tenir assignat una versió i un build, seguint la següent nomenclatura:</p>
+
+<pre><code>&lt;Versió&gt;[.&lt;Build&gt;]
+</code></pre>
+
+<p>o</p>
+
+<pre><code>&lt;Versió&gt;[-&lt;Build&gt;]
+</code></pre>
+
+<p>On versió estarà composada de 3 dígits:</p>
+
+<pre><code>&lt;Versió major&gt;.&lt;Versió Menor&gt;.&lt;Versió de Pegat&gt;
+</code></pre></li>
+
+<li><p>Els builds <strong>s&rsquo;han de</strong> identificar amb la nomenclatura &lsquo;B&rsquo; seguida d&rsquo;un nombre consecutiu de 3 dígits (que s&rsquo;han d&rsquo;omplir amb zeros a l&rsquo;esquerra en cas que es requereixi)</p></li>
+</ol>
+
+<h2 id="part-5-cicle-de-vida-de-les-versions">Part 5: Cicle de vida de les versions</h2>
+
+<ol>
+<li><p>Si es realitza una nova iteració o paquet de noves funcionalitats per una planificació, <strong>s&rsquo;ha de</strong> generar una nova versió, incloent la identificació del build (B001)</p></li>
+
+<li><p>Aquesta versió <strong>ha de</strong> ser provada, per exemple en el cicle de proves de qualificació. Si es detecten fallides, <strong>s&rsquo;ha de</strong> generar un nou build que inclogui les correccions (passaríem per exemple a B002).</p></li>
+
+<li><p>Si finalment les proves són exitoses, es pot passar la mateixa versió per a la realització de les proves d&rsquo;acceptació.</p></li>
+
+<li><p>Si durant les proves d&rsquo;acceptació es troben defectes, s&rsquo;ha de generar una nova versió (la B003 per exemple).</p></li>
+
+<li><p>Finalment, quan l&rsquo;aplicació està acceptada s&rsquo;etiqueta la versió a desplegar eliminant el sufix Build, per exemple lliurant la versió 1.2.2.</p></li>
+
+<li><p>Quan es posa en funcionament una solució, aquesta ha d&rsquo;estar identificada únicament per la versió, mai s&rsquo;ha de visualitzar el build.</p></li>
+</ol>
+
+<h1 id="annex-a-informatiu-exemples-de-versionatge">ANNEX A (informatiu) Exemples de versionatge</h1>
+
+<p><br/>
+Exemple1: Primer lliurament d&rsquo;un nou projecte</p>
+
+<p><img src="/images/versio1a.png" alt="versio_1" />　</p>
+
+<p>Un cop finalitzat el desenvolupament, s’etiqueta la versió conforme es considera apta per iniciar el procés de proves i acceptació (s&rsquo;afegeix B0001). Si el CTTI detecta un error durant les proves s&rsquo;haurà de fer les correccions i pujar una nova versió incrementant en 1 el dígit corresponent al build. Si finalment el CTTI realitza l&rsquo;acceptació s&rsquo;etiqueta la versió eliminant l&rsquo;últim dígit de build.</p>
+
+<p>Exemple 2: Detecció d&rsquo;una incidència urgent
+<img src="/images/versio2a.png" alt="versio_2" /></p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

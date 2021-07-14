@@ -1,0 +1,43 @@
+version: 1.0.0
+parameters:
+resources:
+  environments:
+    - id: pre
+      environment: pre
+      position: 2
+      deploymentType: SEMIAUTOMATIC
+    - id: pro
+      environment: pro
+      position: 3
+      deploymentType: SEMIAUTOMATIC
+  infrastructures:
+    - id: cpdx_apache_xxxx
+      element: apache
+      environments:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpdx
+  artifacts:
+    - id: artifact01
+      artifactType: static
+      path: artifact01.zip
+build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: command
+      parameters: zip -r artifact01.zip *
+      generates:
+      - artifact01
+
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: cpdx_apache_xxxx
+      artifact: artifact01
+notificationRecipients:
+    - nom@domini.cat

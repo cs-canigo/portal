@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana\" />");
+		document.write("<meta name=\"description\" content=\"Com exposar i capturar mètriques generades a través de Spring i capturades per serveis com Prometheus i Grafana.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-01-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest article és <strong>mostrar com es poden exposar mètriques de les aplicacions per a projectes generats amb el
+Framework Canigó i capturades per serveis de monitorització, alerta i visualizació</strong> de codi obert com:
+<a href="https://github.com/prometheus/prometheus">Prometheus</a> i <a href="https://github.com/grafana/grafana">Grafana</a>.</p>
+
+<h2 id="justificació">Justificació</h2>
+
+<p>Un dels principals reptes d&rsquo;una aplicació és <strong>tenir visibilitat de què succeeix durant la seva execució, sobretot
+en escenaris de desplegament sobre contenidors</strong>. Els contenidors afegeixen velocitat i augmenten el rendiment
+dins del procés de desenvolupament, però aporten complexitat addicional sobre la visibilitat del comportament
+i la gestió d&rsquo;alertes relacionades. És en aquest punt en el qual les solucions de monitoratge com Prometheus,
+per a l’explotació de dades, i Grafana, per a la seva visualització i anàlisi, poden ajudar molt.</p>
+
+<p>Quan s&rsquo;utilitza un projecte creat amb Canigó basat en Spring, és possible exposar diferents mètriques utilitzant
+la llibreria <code>spring-boot-starter-actuator</code>, i és possible exposar les mètriques en un format compatible amb
+Prometheus amb la llibreria <code>micrometer-registry-prometheus</code>.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Per a activar les mètriques amb <code>actuator</code> i exposar-les amb un exporter de Prometheus en un projecte creat amb
+Canigó, és necessari afegir algunes dependències i configuracions que es detallen a continuació.</p>
+
+<h3 id="dependències-a-afegir-al-fitxer-pom-xml">Dependències a afegir al fitxer <code>pom.xml</code></h3>
+
+<pre><code class="language-xml">  ...
+
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+    &lt;exclusions&gt;
+      &lt;exclusion&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+      &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+    &lt;groupId&gt;io.micrometer&lt;/groupId&gt;
+    &lt;artifactId&gt;micrometer-registry-prometheus&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+
+  ...
+</code></pre>
+
+<h3 id="configuració-dels-endpoints-de-actuator-al-fitxer-application-yml">Configuració dels <code>endpoints</code> de <code>actuator</code> al fitxer <code>application.yml</code></h3>
+
+<pre><code class="language-yaml">server:
+  port: 8099
+
+# Actuator
+  management:
+    endpoint:
+      shutdown:
+        enabled: true
+      beans:
+        cache:
+          time-to-live: 10s
+      health:
+        #### Show all details of health
+        show-details: always
+    endpoints:
+      web:
+        exposure:
+          #### Activate all web endpoints
+          include: &quot;*&quot;
+</code></pre>
+
+<h3 id="fitxer-de-configuració-prometheus-yml">Fitxer de configuració <code>prometheus.yml</code></h3>
+
+<p>Per a recollir les mètriques iniciarem un Prometheus, en aquest cas, en un contenidor:</p>
+
+<pre><code class="language-yaml">global:
+  scrape_interval: 10s
+
+scrape_configs:
+  - job_name: 'canigo_spring_prometheus'
+    metrics_path: '/actuator/prometheus'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['xxx.xxx.xxx.xxx:8099']  ## On xxx.xxx.xxx.xxx és la ip del servidor de la aplicación
+</code></pre>
+
+<p>Iniciarem el contenidor amb el fitxer de configuració:</p>
+
+<pre><code class="language-sh">docker run --rm -d -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+</code></pre>
+
+<p>Per a visualitzar les mètriques, iniciarem un Grafana, en aquest cas, en un contenidor:</p>
+
+<pre><code class="language-sh">docker run --rm -d -p 3000:3000 grafana/grafana
+</code></pre>
+
+<h2 id="funcionament">Funcionament</h2>
+
+<p>Per a provar el funcionament iniciarem l&rsquo;aplicació:</p>
+
+<pre><code class="language-sh">  mvn spring-boot:run
+</code></pre>
+
+<p>I provarem alguns serveis que mostren les mètriques disponibles:</p>
+
+<ul>
+<li><p>/actuator</p></li>
+
+<li><p>/actuator/health</p></li>
+
+<li><p>/actuator/metrics/jvm.memory.used</p></li>
+
+<li><p>/actuator/prometheus</p></li>
+</ul>
+
+<p><img src="/images/howtos/2021-01-02_spring_expose_metrics_example1.gif" alt="Spring Exposes Metrics Ejemplo 1" /></p>
+
+<p>Es comprova a Prometheus que estigui configurada la tasca d&rsquo;importació de mètriques:</p>
+
+<p><img src="/images/howtos/2021-01-02_spring_expose_metrics_example2.gif" alt="Spring Exposes Metrics Ejemplo 2" /></p>
+
+<p>Es consulten a Prometheus les mètriques:</p>
+
+<p><img src="/images/howtos/2021-01-02_spring_expose_metrics_example3.gif" alt="Spring Exposes Metrics Ejemplo 3" /></p>
+
+<p>Es configura Grafana per a obtenir les dades del Prometheus i s&rsquo;importen els Dashboards per a visualitzar les
+mètriques en format gràfic:</p>
+
+<p><img src="/images/howtos/2021-01-02_spring_expose_metrics_example4.gif" alt="Spring Exposes Metrics Ejemplo 4" /></p>
+
+<h2 id="conclusió">Conclusió</h2>
+
+<p>És possible configurar un projecte Canigó per a que exposi mètriques i poder-les explotar i visualitzar
+utilitzant eines com Prometheus i Grafana.</p>
+
+<h2 id="referències">Referències</h2>
+
+<p>Per a més informació podeu consultar:</p>
+
+<ul>
+<li><a href="https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html">Spring Boot Actuator</a></li>
+<li><a href="https://micrometer.io/docs/registry/prometheus">Micrometer Prometheus</a></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

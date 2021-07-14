@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Arquitectura CTTI. Generalitat de Catalunya</title>
+	<meta name="robots" content="noindex,follow" />
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+
+</head>
+
+
+
+<body class="section howtos">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Howtos
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+
+			<article class="padding-xs padding-sm padding-md contingut">
+				<div class="container">
+				<div class="row">
+
+						
+
+						
+
+							
+
+<div class="col-sm-12">
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-10-16-Howto-Us-tipus-json-a-jpa/" title="Suport a tipus de dades JSON al mòdul de persistència de Canigó">Suport a tipus de dades JSON al mòdul de persistència de Canigó</a>
+        				
+
+						</h2>
+						<p> Aquest howTo descriu com utilitzar el tipus de dada JSON existent a PostgreSQL i MySql amb JPA</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-circuit_breaker/" title="Canigó. Com implementar el patró Circuit Breaker">Canigó. Com implementar el patró Circuit Breaker</a>
+        				
+
+						</h2>
+						<p> Com implementar el patró Circuit Breaker dins d'un projecte Canigó.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-05-06-SIC-Howto-utilitzar-imatges-docker-builder/" title="SIC 3.0 - Utilitzar imatges Docker Builder">SIC 3.0 - Utilitzar imatges Docker Builder</a>
+        				
+
+						</h2>
+						<p> SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-05-11-Howto-sarcat_pica_error_parseig_prefix/" title="Com corregir l’error de parseig del connector Sarcat PICA">Com corregir l’error de parseig del connector Sarcat PICA</a>
+        				
+
+						</h2>
+						<p> Com corregir l’error en recuperar la resposta de PICA a les crides Sarcat del connector de Canigó en versions anteriors Canigó 3.4.6</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/" title="Canigó. Com instal·lar les VBOX guest additions">Canigó. Com instal·lar les VBOX guest additions</a>
+        				
+
+						</h2>
+						<p> Com instal·lar les VBOX guest additions a l'entorn de desenvolupament de Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-01-24-SIC-Howto-copiar_npmrc/" title="SIC. Copiar l&#39;arxiu de configuració .npmrc">SIC. Copiar l&#39;arxiu de configuració .npmrc</a>
+        				
+
+						</h2>
+						<p> Howto per a mostrar com copiar l'arxiu de configuració .npmrc a la ruta on es troba el fitxer package.json per a una correcta resolució de les dependències del projecte</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-spring-expose-metrics/" title="Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana">Canigó. Com exposar i capturar mètriques amb Prometheus i Grafana</a>
+        				
+
+						</h2>
+						<p> Com exposar i capturar mètriques generades a través de Spring i capturades per serveis com Prometheus i Grafana.</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-spring_cors/" title="Canigó. Com permetre l&#39;intercanvi creuat de recursos (CORS)">Canigó. Com permetre l&#39;intercanvi creuat de recursos (CORS)</a>
+        				
+
+						</h2>
+						<p> Howto per a mostrar com permetre l'intercanvi creuat de recursos (CORS) des d'un servidor, en un origen diferent (domini) al qual pertany</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-google_error_prone/" title="Canigó. Com utilitzar Google Error-Prone">Canigó. Com utilitzar Google Error-Prone</a>
+        				
+
+						</h2>
+						<p> Howto per a mostrar com utilitzar Google Error-Prone per a l'avaluació estàtica de codi en temps de compilació</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/" title="Utilitzar imatges Docker Builder">Utilitzar imatges Docker Builder</a>
+        				
+
+						</h2>
+						<p> Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/" title="SIC. Com definir exclusions enviament SonarQube">SIC. Com definir exclusions enviament SonarQube</a>
+        				
+
+						</h2>
+						<p> Howto per a mostrar com definir exclusions a un projecte de cara a l'enviament del codi font al SonarQube</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-10-08-Definir_handler_exception_personalitzat/" title="Canigó. Com definir handler exception personalitzat">Canigó. Com definir handler exception personalitzat</a>
+        				
+
+						</h2>
+						<p> Howto per a definir un handler d'excepció personalitzat</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-09-30-Personalitzar_validacio_token_jwt/" title="Canigó. Com personalitzar les validacions del token JWT">Canigó. Com personalitzar les validacions del token JWT</a>
+        				
+
+						</h2>
+						<p> Howto per a definir comportaments personalitzats a les validacions del token JWT</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-07-14-Howto_canvi_domini_plugin_eclipse/" title="Canigó. Com canviar el domini on està allotjat el plugin de l&#39;eclipse">Canigó. Com canviar el domini on està allotjat el plugin de l&#39;eclipse</a>
+        				
+
+						</h2>
+						<p> Howto per a canviar el domini on està allotjat el plugin de l'eclipse</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2020-03-27-Howto-utilitzacio_autoritzacio_Gicar_SAML_Canigo/" title="Canigó. Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó">Canigó. Com configurar i utilitzar autoritzacions via Gicar pel protocol SAML a una aplicació Canigó</a>
+        				
+
+						</h2>
+						<p> Howto per a configurar una aplicació Canigó per a utilitzar l'autorització amb Gicar mitjançant el protocol SAML, a més de l’autenticació</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-10-01-Howto-utilitzacio_IronPort_Canigo/" title="Canigó. Com configurar i utilitzar IronPort a una aplicació Canigó">Canigó. Com configurar i utilitzar IronPort a una aplicació Canigó</a>
+        				
+
+						</h2>
+						<p> Howto per a configurar i utilitzar IronPort com a servidor SMTP per una aplicació Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-10-25-Howto-utilitzacio_autoritzacio_Gicar_Canigo/" title="Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó">Canigó. Com configurar i utilitzar autoritzacions via Gicar a una aplicació Canigó</a>
+        				
+
+						</h2>
+						<p> Howto per a configurar una aplicació Canigó per a utilitzar l'autorització via Gicar, a més de la autenticació</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-07-24-Howto-Test_unitaris_webflux_canigo_3_4/" title="Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4">Canigó. Com implementar tests unitaris amb Webflux a Canigó 3.4</a>
+        				
+
+						</h2>
+						<p> How to per a implementar tests unitaris amb Webflux a aplicacions Canigó 3.4</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-08-13-Howto-Dependency-check/" title="Canigó. Comprovació automàtica de dependències vulnerables per aplicacions Canigó">Canigó. Comprovació automàtica de dependències vulnerables per aplicacions Canigó</a>
+        				
+
+						</h2>
+						<p> How-to per configurar i fer-ne ús del plugin dependency-check per trobar dependències vulnerables</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-07-23-Howto-resolucio-problema-spring-canigo2/" title="Resolució problema optimització Spring a Canigó 2">Resolució problema optimització Spring a Canigó 2</a>
+        				
+
+						</h2>
+						<p> Com resoldre el problema conegut d'optimització d'obtenció de Beans de Spring a Canigó 2</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-10-09-sic-Howto-Git-lfs/" title="SIC. Utilitzar Git-lfs per a arxius grans">SIC. Utilitzar Git-lfs per a arxius grans</a>
+        				
+
+						</h2>
+						<p> Howto per a configurar i utilitzar Git LFS que dóna suport a arxius grans al servei de custodia de codi</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-10-09-sic-Howto-Gitlab-Mail/" title="SIC. Configurar notificacions via email al Gitlab">SIC. Configurar notificacions via email al Gitlab</a>
+        				
+
+						</h2>
+						<p> Howto per a configurar les notificacions al Gitlab per tal de rebre correus electrònics informant de l'activitat dels projectes</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-04-Howto-afegir_dev_tools_spring/" title="Afegir dev tools Spring">Afegir dev tools Spring</a>
+        				
+
+						</h2>
+						<p> How to per afegir les dev tools de Spring a Canigó 3.4.0</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-06-14-Howto-info-usuari-v2.4-a-v3.0.0-entorn-dev/" title="Traslladar info usuari entorn desenvolupament v2.4 a v3.0.0">Traslladar info usuari entorn desenvolupament v2.4 a v3.0.0</a>
+        				
+
+						</h2>
+						<p> Howto traslladar informació usuari entorn desenvolupament versió 2.4 a 3.0.0</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-03-Howto-Test_unitaris_programacio_reactiva_canigo_3_4/" title="Test unitaris amb programació reactiva a Canigó 3.4">Test unitaris amb programació reactiva a Canigó 3.4</a>
+        				
+
+						</h2>
+						<p> How to per crear test unitaris amb programació reactiva a Canigó 3.4</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/" title="Actualització Canigó 3.2 a Canigó 3.4">Actualització Canigó 3.2 a Canigó 3.4</a>
+        				
+
+						</h2>
+						<p> Com realitzar l'actualització d'una aplicació de Canigó 3.2 a Canigó 3.4</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2019-03-HowTo-Definicio-sondes-aplicacions-Canigo-AppAgile/" title="HowTo Definició sondes per aplicacions Canigó a AppAgile">HowTo Definició sondes per aplicacions Canigó a AppAgile</a>
+        				
+
+						</h2>
+						<p> Definició sondes per aplicacions Canigó a AppAgile utilitzant livenessProbe i readinessProbe</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-12-31-sic-Howto-Migracio-Svn-Git/" title="Migració de repositoris SVN al Git">Migració de repositoris SVN al Git</a>
+        				
+
+						</h2>
+						<p> Howto per dur a terme la migració de repositoris del SVN al Git</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-11-Howto-Canigo3-HikariCP/" title="HowTo Ús de Hikari CP a Canigó 3.2">HowTo Ús de Hikari CP a Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo es proposa i s'explica com integrar un pool de connexions Hikari CP a Canigó 3.2</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-10-10-HowTo-Canigo-Java8/" title="Migració Canigó 3 de Java 7 a Java 8">Migració Canigó 3 de Java 7 a Java 8</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo es donen unes pautes per migrar aplicacions Canigó 3 de Java 7 a Java 8</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-10-Howto-Gitflow-desenvolupament-SIC/" title="Com aplicar GitFlow en desenvolupament d&#39;aplicacions al SIC">Com aplicar GitFlow en desenvolupament d&#39;aplicacions al SIC</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica com utilitzar GitFlow en desenvolupament d'aplicacions al SIC</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-09-Howto-MongoDB/" title="Configuració de MongoDB a Canigó 3.2.6">Configuració de MongoDB a Canigó 3.2.6</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica pas a pas com configurar el suport de MongoDB a Canigó 3.2.6 seguint les millors pràctiques definides pel CS Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-08-Howto-Transmissio-binaris-REST-API/" title="Transmissió de binaris en una REST API a Canigó 3.2">Transmissió de binaris en una REST API a Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica pas a pas com fer transferència de dades binàries en una REST API a Canigó 3.2 seguint les millors pràctiques definides pel CS Canigó</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-08-Canigo-SAML/" title="Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2">Configuració SAML per la integració amb GICAR en aplicació Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica pas a pas com configurar el mòdul de SAML de Canigó per la integració amb GICAR en una aplicació demo creada a l'entorn de desenvolupament</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-04-howto-frontend-multientorn/" title="Configuració multi-entorn a una SPA amb backend Canigó">Configuració multi-entorn a una SPA amb backend Canigó</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica com aplicar una configuració multi-entorn per una SPA amb un backend Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-02-howto-swagger_soapui/" title="Generació de joc de proves per a peticions REST a SOAP-UI amb Swagger">Generació de joc de proves per a peticions REST a SOAP-UI amb Swagger</a>
+        				
+
+						</h2>
+						<p> En aquest HowTo s'explica com generar un joc de proves per a peticions REST a SOAP-UI amb Swagger</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-12-howto-integracio_canigo_sic/" title="Integració d&#39;una aplicació Canigó a SIC 2.0">Integració d&#39;una aplicació Canigó a SIC 2.0</a>
+        				
+
+						</h2>
+						<p> Integració d'una aplicació Canigó a SIC 2.0</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2018-01-howto-test_jars_canigo/" title="Proves Unitàries Mòduls de Canigó">Proves Unitàries Mòduls de Canigó</a>
+        				
+
+						</h2>
+						<p> Realitzar proves unitàries de mòduls de Canigó</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/" title="Ús del Servei de Persistencia en Canigó 3.2">Ús del Servei de Persistencia en Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> Ús del Servei de Persistencia en Canigó 3.2</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/" title="Actualització Canigó 3.1 a Canigó 3.2">Actualització Canigó 3.1 a Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> Com realitzar l'actualització d'una aplicació de Canigó 3.1 a Canigó 3.2</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+						
+						<h2 class="border_morat">
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-08-Howto-Us_de_mongo_compose_amb_JavaBuildpack/" title="Accés per SSL a cluster MongoDB (Compose) des de buildpack Java (Cloud Foundry)">Accés per SSL a cluster MongoDB (Compose) des de buildpack Java (Cloud Foundry)</a>
+        				
+
+						</h2>
+						<p> Accés per SSL a cluster MongoDB (Compose) des de buildpack Java (Cloud Foundry)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+						
+						<h2 class="border_taronja">
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-06-Howto-Desplegar_aplicacio_canigo32_websphere/" title="Desplegar una aplicació Canigó 3.2 a Websphere 8.5.5">Desplegar una aplicació Canigó 3.2 a Websphere 8.5.5</a>
+        				
+
+						</h2>
+						<p> Desplegar una aplicació Canigó 3.2 a Websphere 8.5.5</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_blau">
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-05-Howto-Connectar_nodejs_amb_mongo_ssl/" title="Connectar amb un cluster MongoDB per SSL en una aplicació NodeJS">Connectar amb un cluster MongoDB per SSL en una aplicació NodeJS</a>
+        				
+
+						</h2>
+						<p> Connectar amb un cluster MongoDB per SSL en una aplicació NodeJS</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_fucsia">
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-10-Howto-Us_Spring_Cache_Canigo/" title="Ús de Spring Cache (Caffeine) en Canigó 3.2.2">Ús de Spring Cache (Caffeine) en Canigó 3.2.2</a>
+        				
+
+						</h2>
+						<p> Ús de Spring Cache (Caffeine) en Canigó 3.2.2</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+								
+								
+								
+								
+								
+						
+						<h2 class="border_verd_dos">
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-04-Batch-inserts-updates-canigo32/" title="Batch inserts/updates a una aplicació Canigó 3.2">Batch inserts/updates a una aplicació Canigó 3.2</a>
+        				
+
+						</h2>
+						<p> Batch inserts/updates a una aplicació Canigó 3.2</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+						
+						<h2 class="border_groc">
+								
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2017-03-Securitzar_ElasticSearch_Apache/" title="Securitzar accés a Elasticsearch des d&#39;una pàgina web">Securitzar accés a Elasticsearch des d&#39;una pàgina web</a>
+        				
+
+						</h2>
+						<p> Securitzar accés a Elasticsearch des d'una pàgina web</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+						
+						<h2 class="border_celeste">
+								
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2016-11-Howto-Canigo-JWT/" title="Autenticació amb JWT a una aplicació Canigó 3.1">Autenticació amb JWT a una aplicació Canigó 3.1</a>
+        				
+
+						</h2>
+						<p> Autenticació amb JWT (JSON Web Tokens) a una aplicació Canigó 3.1.x (REST/HTML5+JS)</p>
+					</div>	
+
+
+    
+
+
+
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+						
+						<h2 class="border_vermell">
+								
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2016-10-Howto-Canigo-Gestio-Errors-Globals/" title="Gestió global d&#39;errors a una aplicació Canigó">Gestió global d&#39;errors a una aplicació Canigó</a>
+        				
+
+						</h2>
+						<p> How To de com gestionar els errors de forma global a una aplicació Canigó Rest.</p>
+					</div>	
+
+
+    
+				</div>
+    		</div>
+    
+
+
+
+	
+			<div class="llistat_destacat_text_avancat col-xs-12">
+				<div class="llistat_destacat_text_avancat_cont">
+	
+
+
+					<div class="destacat_text_avancat_cont box">
+								
+								
+								
+						
+						<h2 class="border_verd">
+								
+								
+								
+								
+								
+							
+
+						
+						
+							<a href="https://canigo.ctti.gencat.cat/howtos/2016-10-Howto-Canigo-Spring-Batch/" title="Spring Batch a una aplicació Canigó">Spring Batch a una aplicació Canigó</a>
+        				
+
+						</h2>
+						<p> How To per afegir Spring Batch a una aplicació Canigó.</p>
+					</div>	
+
+
+    
+
+
+
+
+			</div>
+		</div>
+
+
+</div>
+
+
+			            
+
+				</div>
+				</div>
+			</article>
+
+	</section>
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+	
+
+</body>
+</html>

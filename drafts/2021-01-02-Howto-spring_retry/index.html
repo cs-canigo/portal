@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com utilitzar Spring Retry per a realitzar reintents d&#39;accions</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com utilitzar Spring Retry per a realitzar reintents d\x27accions\" />");
+		document.write("<meta name=\"description\" content=\"Com utilitzar Spring Retry per a realitzar reintents d\x27accions que generen una excepció al executar-se\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/drafts">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com utilitzar Spring Retry per a realitzar reintents d&#39;accions
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-01-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest article és mostrar l&rsquo;ús de la llibreria <a href="https://github.com/spring-projects/spring-retry">Spring Retry</a> en un projecte
+amb el framework Canigó</p>
+
+<hr />
+
+<h2 id="justificació">Justificació</h2>
+
+<p>Existeixen escenaris de negoci que requereixen reintentar un procés una vegada hi ha hagut una fallada. Això és útil per exemple, quan es tracte d&rsquo;errors temporals o transitoris com l&rsquo;accés a un recurs extern.</p>
+
+<p><em>Spring Retry</em> pot aplicar-se a diferents formes:</p>
+
+<ul>
+<li>De forma declarativa: Utilitzant només anotacions de Spring. Aquesta forma permet fàcilment i ràpidament aplicar reintents.</li>
+<li>De forma imperativa: Utilitzant <code>RetryTemplate</code> i les classes del package <code>org.springframework.retry.backoff</code> de la llibreria <a href="https://github.com/spring-projects/spring-retry">Spring Retry</a>.</li>
+<li>Una mescla de les anteriors.</li>
+</ul>
+
+<hr />
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Per utilitzar l&rsquo;opció de reintents en un projecte Canigó, es necessari agregar alguna dependències de maven.</p>
+
+<h3 id="canvis-al-fitxer-pom-xml">Canvis al fitxer <code>pom.xml</code></h3>
+
+<blockquote>
+<p>Els projectes de Canigó ja contenen les dependències de <code>AspectJ</code>, que són necessàries perquè funcionin els reintents. Si es vol minimitzar l&rsquo;impacte d&rsquo;aquestes llibreries a la cèrrega de l&rsquo;aplicació, la llibreria mínima necessària seria la llibreria <code>aspectjweaver</code>.</p>
+</blockquote>
+
+<p>Dependències necessàries:</p>
+
+<pre><code class="language-xml">  &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+</code></pre>
+
+<p>I les llibreries <a href="https://mvnrepository.com/artifact/org.springframework.retry/spring-retry">spring-retry</a> i <a href="https://mvnrepository.com/artifact/org.aspectj/aspectjweaver">aspectjweaver</a></p>
+
+<pre><code class="language-xml">  &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.retry&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-retry&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.aspectj&lt;/groupId&gt;
+    &lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;
+  &lt;/dependency&gt;
+</code></pre>
+
+<h3 id="canvis-a-l-inicialitzador-del-projecte-application-java">Canvis a l&rsquo;inicialitzador del projecte <code>Application.java</code></h3>
+
+<blockquote>
+<p>Es necessita afegir l&rsquo;anotació <code>@EnableRetry</code></p>
+</blockquote>
+
+<pre><code class="language-java">  @SpringBootApplication
+  @EnableRetry
+  public class Application extends SpringBootServletInitializer {
+    ...
+  }
+</code></pre>
+
+<hr />
+
+<h2 id="ús">Ús</h2>
+
+<h3 id="forma-imperativa">Forma imperativa</h3>
+
+<h4 id="desenvolupament">Desenvolupament</h4>
+
+<blockquote>
+<p>Configuració de propiedades: <code>application.yml</code></p>
+</blockquote>
+
+<pre><code class="language-yaml">retry:
+  maxAttempts: 5
+  initialIntervalRetries: 1000
+  maxIntervalRetries: 3000
+  multiplierRetries: 2.0
+</code></pre>
+
+<blockquote>
+<p>Es necessari crear un <code>bean</code> amb la plantilla que conté el comportament dels reintents. Existeixen diferents estratègies d&rsquo;espera (back off) ja implementades, com:</p>
+</blockquote>
+
+<ul>
+<li><strong>ExponentialBackOffPolicy</strong>: augmenta el període d&rsquo;espera per cada reintent en un conjunt donat utilitzant la función Math.exp(double).</li>
+<li><strong>ExponentialRandomBackOffPolicy</strong>: escull un múltiple aleatori de l&rsquo;interval d&rsquo;espera definit per a cada reintent.</li>
+</ul>
+
+<blockquote>
+<p>Exemple de configuració del <code>bean</code> utilitzant l&rsquo;estratègia <code>ExponentialRandomBackOffPolicy</code></p>
+</blockquote>
+
+<pre><code class="language-java">@Configuration
+public class RetryConfig {
+  @Value(&quot;${retry.maxAttempts:3}&quot;)
+  private int maxAttempts;
+
+  @Value(&quot;${retry.initialIntervalRetries:1000}&quot;)
+  private long initialIntervalRetries;
+
+  @Value(&quot;${retry.maxIntervalRetries:3000}&quot;)
+  private long maxIntervalRetries;
+
+  @Value(&quot;${retry.multiplierRetries:2.0}&quot;)
+  private double multiplierRetries;
+
+  @Bean
+  public RetryTemplate retryTemplate() {
+    RetryTemplate retryTemplate = new RetryTemplate();
+
+    ExponentialRandomBackOffPolicy backOffPolicy = new ExponentialRandomBackOffPolicy();
+    backOffPolicy.setInitialInterval(initialIntervalRetries);
+    backOffPolicy.setMultiplier(multiplierRetries);
+    backOffPolicy.setMaxInterval(maxIntervalRetries);
+    retryTemplate.setBackOffPolicy(backOffPolicy);
+
+    SimpleRetryPolicy retryPolicy = new SimpleRetryPolicy();
+    retryPolicy.setMaxAttempts(maxAttempts);
+    retryTemplate.setRetryPolicy(retryPolicy);
+
+    return retryTemplate;
+  }
+}
+</code></pre>
+
+<blockquote>
+<p>A la capa de servei és necessari injectar la plantilla <code>retryTemplate</code> i utilitzar el mètode <code>execute</code> per embolcallar el contingut dels mètodes que requereixen reintents.</p>
+</blockquote>
+
+<pre><code class="language-java">@Service(&quot;equipamentService&quot;)
+public class EquipamentServiceImpl implements EquipamentService {
+  @Inject
+  private EquipamentRepository repository;
+
+  @Inject
+  private RetryTemplate retryTemplate;
+
+  @Override
+  public List&lt;Equipament&gt; findAll() {
+    return retryTemplate.execute(arg -&gt; repository.findAll());
+  }
+
+  ...
+}
+</code></pre>
+
+<h4 id="proves">Proves</h4>
+
+<h5 id="proves-unitàries">Proves unitàries</h5>
+
+<blockquote>
+<p>Es plantegen 2 escenaris:</p>
+</blockquote>
+
+<ul>
+<li>Reintentar 3 vegades, les 2 primeres generen una excepció, i l&rsquo;última respon correctament.</li>
+<li>Reintentar 5 vegades, en totes les execucions es genera una excepció, a l&rsquo;arribar al màxim de reintents es mostra l&rsquo;excepció.</li>
+</ul>
+
+<blockquote>
+<p>Configuració: <code>/test/resources/spring/canigo-core.xml</code></p>
+</blockquote>
+
+<pre><code class="language-xml">  &lt;context:component-scan base-package=&quot;cat.gencat.retrycanigoexample.service, cat.gencat.retrycanigoexample.config.retry&quot; /&gt;
+</code></pre>
+
+<blockquote>
+<p>Test:</p>
+</blockquote>
+
+<pre><code class="language-java">@RunWith(SpringRunner.class)
+@ContextConfiguration(locations = { &quot;classpath:spring/canigo-core.xml&quot; })
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EquipamentRetryTemplateTest {
+  @Inject
+  private RetryTemplate retryTemplate;
+
+  @Inject
+  @Named(&quot;equipamentRetryService&quot;)
+  private EquipamentService equipamentRetryService;
+
+  @Inject
+  @Named(&quot;equipamentRetryExceptionService&quot;)
+  private EquipamentService equipamentRetryExceptionService;
+
+  @Before
+  public void settingUp() {
+    assertNotNull(retryTemplate);
+    assertNotNull(equipamentRetryService);
+    assertNotNull(equipamentRetryExceptionService);
+  }
+
+  @Test
+  public void testRetryWithFinalResponse() throws RetryException {
+    List&lt;Equipament&gt; equipaments = retryTemplate.execute(arg -&gt; this.equipamentRetryService.findAll());
+    verify(equipamentRetryService, times(3)).findAll();
+    assertFalse(equipaments.isEmpty());
+  }
+  
+  @Test(expected = RetryException.class)
+  public void testRetryWithFinalException() throws RetryException {
+    List&lt;Equipament&gt; equipaments = retryTemplate.execute(arg -&gt; this.equipamentRetryExceptionService.findAll());
+    verify(equipamentRetryExceptionService, times(5)).findAll();
+    assertTrue(equipaments.isEmpty());
+  }
+
+  @Configuration
+  @EnableAspectJAutoProxy
+  public static class SpringConfig {
+    @Bean(&quot;equipamentRetryService&quot;)
+    public EquipamentService equipamentRetryService() throws Exception {
+      EquipamentService equipamentService = mock(EquipamentService.class);
+      Equipament equipament = mock(Equipament.class);
+
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException(&quot;Remote Exception 1&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 2&quot;))
+        .thenReturn(Collections.singletonList(equipament));
+      return equipamentService;
+    }
+
+    @Bean(&quot;equipamentRetryExceptionService&quot;)
+    public EquipamentService equipamentRetryExceptionService() throws Exception {
+      EquipamentService equipamentService = mock(EquipamentService.class);
+
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException(&quot;Remote Exception 1&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 2&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 3&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 4&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 5&quot;));
+      return equipamentService;
+    }
+  }
+}
+</code></pre>
+
+<p><img src="/images/howtos/2021-01-02_spring_retry_example1.gif" alt="Spring Retry Exemple 1" /></p>
+
+<h5 id="proves-utilitzant-postman">Proves utilitzant Postman</h5>
+
+<blockquote>
+<p>Es necessari modificar la capa de serveis per crear un mètode que generi excepcions durant les primeres execucions, i després consulti correctament la capa de persistència.</p>
+</blockquote>
+
+<pre><code class="language-java">@Service(&quot;equipamentService&quot;)
+public class EquipamentServiceImpl implements EquipamentService {
+
+  private static final Logger logger = LoggerFactory.getLogger(EquipamentServiceImpl.class);
+  private int counter = 0;
+
+  @Inject
+  private EquipamentRepository repository;
+
+  @Inject
+  private RetryTemplate retryTemplate;
+
+  @Override
+  public Page&lt;Equipament&gt; findPaginated(final Integer page, final Integer rpp, final String sort, final String filter) {
+    return retryTemplate.execute(arg -&gt; {
+      if(++counter != 5) {
+        logger.error(&quot;findPaginated retry = {}&quot;, counter);
+        throw new RetryException(&quot;findPaginated retry&quot;);
+      }
+      counter = 0;
+      return findAllPaginated(page, rpp, sort, filter);
+    });
+  }
+
+  private Page&lt;Equipament&gt; findAllPaginated(final Integer page, final Integer rpp, final String sort, final String filter) {
+    GenericPredicateBuilder&lt;Equipament&gt; builder = new GenericPredicateBuilder&lt;&gt;(Equipament.class, &quot;equipament&quot;);
+    builder.populateSearchCriteria(filter);
+    Pageable pageable = PageRequest.of(page - 1, rpp, getOrdenacio(sort));
+    return repository.findAll(builder.build(), pageable);
+  }
+
+  ...
+}
+</code></pre>
+
+<p><img src="/images/howtos/2021-01-02_spring_retry_example2.gif" alt="Spring Retry Exemple 2" /></p>
+
+<hr />
+
+<h3 id="forma-declarativa">Forma declarativa</h3>
+
+<h4 id="desenvolupament-1">Desenvolupament</h4>
+
+<blockquote>
+<p>Crearem una nova capa on li agregarem l&rsquo;anotació <code>@Retryable</code> amb la configuració dels reintents a cada mètode on es vulgui aplicar reintents. Això és així, ja que els reintents es gestionen amb aspectes (AspectJ) i el mètode que es configura amb les anotacions ha de ser diferent del mètode que genera l&rsquo;excepció.</p>
+</blockquote>
+
+<pre><code class="language-java">@Service
+public class RetryService {
+  @Inject
+  private EquipamentService equipamentService;
+
+  public void setEquipamentService(EquipamentService equipamentService) {
+    this.equipamentService = equipamentService;
+  }
+
+  @Retryable(value = {RetryException.class}, maxAttempts = 5, backoff = @Backoff(1000))
+  public List&lt;Equipament&gt; findAll() {
+    return equipamentService.findAll();
+  }
+
+  @Retryable(value = {RetryException.class}, maxAttempts = 5, backoff = @Backoff(3000))
+  public Page&lt;Equipament&gt; findPaginated(final Integer page, final Integer rpp, final String sort, final String filter) {
+    return equipamentService.findPaginated(page, rpp, sort, filter);
+  }
+}
+</code></pre>
+
+<blockquote>
+<p>Perquè la capa de serveis rest utilitzi els reintents, ha d&rsquo;invocar a la nova capa amb les anotacions (RetryService del exemple) i no directament a la capa de servei (EquipamentService del exemple).</p>
+</blockquote>
+
+<pre><code class="language-java">@RestController
+@RequestMapping(&quot;/equipaments&quot;)
+public class EquipamentServiceController {
+  @Inject
+  private RetryService retryService;
+
+  @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+  public ResponsePage&lt;Equipament&gt; findPaginated(
+    @ApiParam(value = &quot;Nombre de p&amp;agrave;gines&quot;) @RequestParam(defaultValue = &quot;1&quot;, value = &quot;page&quot;, required = false) final Integer page,
+    @ApiParam(value = &quot;Valors per p&amp;agrave;gina&quot;) @RequestParam(defaultValue = &quot;10&quot;, value = &quot;rpp&quot;, required = false) final Integer rpp,
+    @ApiParam(value = &quot;Camp Ordenaci&amp;oacute; Ex(id,-municipi)&quot;) @RequestParam(defaultValue = &quot;id,-municipi&quot;, value = &quot;sort&quot;, required = false) final String sort,
+    @ApiParam(value = &quot;Filtre Ex(Municipi:Cambrils)&quot;) @RequestParam(value = &quot;filter&quot;, required = false) final String filter) {
+
+    Page&lt;Equipament&gt; equipaments = retryService.findPaginated(page, rpp, sort, filter);
+    long offset = Long.valueOf(equipaments.getNumber()) * equipaments.getSize();
+    Data&lt;Equipament&gt; data = new Data&lt;&gt;(equipaments.getTotalElements(), equipaments.getSize(),
+      equipaments.getNumberOfElements(), offset, equipaments.getContent());
+
+    return new ResponsePage&lt;&gt;(data);
+  }
+}
+</code></pre>
+
+<h4 id="proves-1">Proves</h4>
+
+<h5 id="proves-unitàries-1">Proves unitàries</h5>
+
+<blockquote>
+<p>Es plantegen 2 escenaris:</p>
+</blockquote>
+
+<ul>
+<li>Reintentar 3 vegades, les 2 primeres generen una excepció, i l&rsquo;última respon correctament.</li>
+<li>Reintentar 5 vegades, en totes les execucions es genera una excepció, a l&rsquo;arribar al màxim de reintents es mostra l&rsquo;excepció.</li>
+</ul>
+
+<pre><code class="language-java">@RunWith(SpringRunner.class)
+@ContextConfiguration(locations = { &quot;classpath:spring/canigo-core.xml&quot; })
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EquipamentRetryTemplateTest {
+  @Inject
+  private RetryService retryService;
+
+  @Inject
+  @Named(&quot;equipamentRetryService&quot;)
+  private EquipamentService equipamentRetryService;
+
+  @Inject
+  @Named(&quot;equipamentRetryExceptionService&quot;)
+  private EquipamentService equipamentRetryExceptionService;
+
+  @Before
+  public void settingUp() {
+    assertNotNull(retryService);
+    assertNotNull(equipamentRetryService);
+    assertNotNull(equipamentRetryExceptionService);
+  }
+
+  @Test
+  public void testRetryWithFinalResponse() throws RetryException {
+    retryService.setEquipamentService(equipamentRetryService);
+    List&lt;Equipament&gt; equipaments = this.retryService.findAll();
+    verify(equipamentRetryService, times(3)).findAll();
+    assertFalse(equipaments.isEmpty());
+  }
+
+  @Test(expected = RetryException.class)
+  public void testRetryWithFinalException() throws RetryException {
+    retryService.setEquipamentService(equipamentRetryExceptionService);
+    List&lt;Equipament&gt; equipaments = this.retryService.findAll();
+    verify(equipamentRetryExceptionService, times(5)).findAll();
+    assertTrue(equipaments.isEmpty());
+  }
+
+  @Configuration
+  @EnableRetry
+  public static class SpringConfig {
+    @Bean(&quot;equipamentRetryService&quot;)
+    public EquipamentService equipamentRetryService() throws Exception {
+      EquipamentService equipamentService = mock(EquipamentService.class);
+      Equipament equipament = mock(Equipament.class);
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException(&quot;Remote Exception 1&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 2&quot;))
+        .thenReturn(Collections.singletonList(equipament));
+      return equipamentService;
+    }
+
+    @Bean(&quot;equipamentRetryExceptionService&quot;)
+    public EquipamentService equipamentRetryExceptionService() throws Exception {
+      EquipamentService equipamentService = mock(EquipamentService.class);
+      when(equipamentService.findAll())
+        .thenThrow(new RetryException(&quot;Remote Exception 1&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 2&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 3&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 4&quot;))
+        .thenThrow(new RetryException(&quot;Remote Exception 5&quot;));
+      return equipamentService;
+    }
+  }
+}
+</code></pre>
+
+<p><img src="/images/howtos/2021-01-02_spring_retry_example3.gif" alt="Spring Retry Exemplo 3" /></p>
+
+<h5 id="proves-utilitzant-postman-1">Proves utilitzant Postman</h5>
+
+<blockquote>
+<p>Es modifica la capa de servei per a crear un mètode que genera excepcions durant les primeres execucions, després consulta correctament la capa de persistència.</p>
+</blockquote>
+
+<pre><code class="language-java">@Service(&quot;equipamentService&quot;)
+public class EquipamentServiceImpl implements EquipamentService {
+
+  private static final Logger logger = LoggerFactory.getLogger(EquipamentServiceImpl.class);
+
+  private int counter = 0;
+
+  @Inject
+  private EquipamentRepository repository;
+
+  ...
+
+  @Override
+  public Page&lt;Equipament&gt; findPaginated(final Integer page, final Integer rpp, final String sort, final String filter) {
+    if(++counter != 5) {
+      logger.error(&quot;findPaginated retry = {}&quot;, counter);
+      throw new RetryException(&quot;findPaginated retry&quot;);
+    }
+    counter = 0;
+    GenericPredicateBuilder&lt;Equipament&gt; builder = new GenericPredicateBuilder&lt;&gt;(Equipament.class, &quot;equipament&quot;);
+    builder.populateSearchCriteria(filter);
+    Pageable pageable = PageRequest.of(page - 1, rpp, getOrdenacio(sort));
+    return repository.findAll(builder.build(), pageable);
+  }
+
+  ...
+}
+</code></pre>
+
+<p><img src="/images/howtos/2021-01-02_spring_retry_example4.gif" alt="Spring Retry Exemplo 4" /></p>
+
+<hr />
+
+<h2 id="conclusió">Conclusió</h2>
+
+<ul>
+<li>Implementar l&rsquo;opció de reintents a través de Spring permet crear processos robusts amb tolerància a fallades ocasionals, sobretot associats al consum de serveis externs.</li>
+<li>Utilitzar la implementació imperativa permet reutilitzar patrons de reintents sense haver que repetir configuracions a vàries anotacions.</li>
+<li>Utilitzar la implementació declarativa és més senzilla d&rsquo;implementar, només requereix d&rsquo;anotacions, encara que té algunes consideracions, tals com:
+
+<ul>
+<li>S&rsquo;han de generar excepcions en el mètode que es vol reintentar. Si es llança l&rsquo;excepció en el mètode que conté l&rsquo;anotació <code>@Retryable</code>, els reintents no es realitzaran.</li>
+<li>El mètode recuperable ha de ser públic i les crides a aquest mètode han de ser d&rsquo;una classe externa perquè els reintents es realitzin.</li>
+</ul></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Com construir el fitxer ACA</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Com construir el fitxer ACA\" />");
+		document.write("<meta name=\"description\" content=\"Guia amb la informació de construcció del fitxer ACA per a l\x27Autoservei de pipelines\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/sic20-guies">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/sic/">Servei d'Integració Contínua</a> </li>
+<li>
+	
+    <a href="/sic-guies/">
+        
+
+        Guies
+
+        
+    </a></li>
+    
+	
+	
+	<li><a href="/sic20-guies/">
+		
+
+		Guies (SIC 2.0)
+
+		
+	</a>
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Com construir el fitxer ACA
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 20-01-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+	<div class="row" id="TOC">
+		<div class="col-md-12 col-xs-12"> 
+			<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#introducció">Introducció</a></li>
+<li><a href="#configuració">Configuració</a>
+<ul>
+<li><a href="#versió">Versió</a></li>
+<li><a href="#paràmetres">Paràmetres</a></li>
+<li><a href="#recursos">Recursos</a>
+<ul>
+<li><a href="#entorns">Entorns</a></li>
+<li><a href="#infraestructures">Infraestructures</a></li>
+<li><a href="#artefactes">Artefactes</a></li>
+</ul></li>
+<li><a href="#procés-de-construcció">Procés de construcció</a>
+<ul>
+<li><a href="#node">Node</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#net">.Net</a></li>
+<li><a href="#hugo-sites-estàtiques">Hugo (sites estàtiques)</a></li>
+<li><a href="#compressió-zip-unzip">Compressió (zip, unzip)</a></li>
+<li><a href="#bbdd">BBDD</a></li>
+<li><a href="#docker-image">Docker Image</a></li>
+</ul></li>
+<li><a href="#anàlisi-estàtic-de-codi">Anàlisi estàtic de codi</a>
+<ul>
+<li><a href="#activar-o-desactivar-l-enviament-de-codi-font-i-o-la-comprovació-de-les-regles-establertes">Activar o desactivar l&rsquo;enviament de codi font i/o la comprovació de les regles establertes</a></li>
+<li><a href="#redefinir-el-timeout-aplicat">Redefinir el timeout aplicat</a></li>
+<li><a href="#redefinir-el-sistema-d-enviament-de-codi-font">Redefinir el sistema d&rsquo;enviament de codi font</a></li>
+</ul></li>
+<li><a href="#procés-de-desplegament">Procés de desplegament</a>
+<ul>
+<li><a href="#estàndard-predefined">Estàndard (<code>predefined</code>)</a></li>
+<li><a href="#llibreria-library">Llibreria (<code>library</code>)</a></li>
+</ul></li>
+<li><a href="#notificacions">Notificacions</a></li>
+</ul></li>
+<li><a href="#validació">Validació</a></li>
+<li><a href="#exemples">Exemples</a></li>
+</ul></li>
+</ul>
+</nav>
+    	</div>
+	</div>
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Dins el sistema d&rsquo;Integració Contínua, el SIC proporciona un servei mitjançant el qual es poden <strong>generar automàticament pipelines de construcció i desplegament d&rsquo;aplicacions</strong>,
+amb el treball col·laboratiu dels proveïdors d&rsquo;aplicacions i d&rsquo;infraestructures i sense la intervenció de l&rsquo;equip del SIC.</p>
+
+<p>En aquest article <strong>ens centrarem exclusivament en explicar com preparar l’arxiu ACA (Arxiu de Configuració d&rsquo;Aplicacions)</strong>.
+Si voleu més informació sobre el funcionament d&rsquo;aquest servei, els requeriments que cal acomplir i altres, podeu consultar la secció
+<a href="/sic-serveis/autoservei-pipelines/"><strong>Autoservei de pipelines</strong></a> on s&rsquo;explica de forma detallada.</p>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>El proveïdor d’aplicacions haurà de configurar l&rsquo;arxiu <code>/sic/aca.yml</code> dins del repositori del projecte (a nivell de carpeta del projecte).
+Es tracta d’un arxiu de text en <strong>format YAML</strong> en el que a continuació definirem la informació que cal emplenar.</p>
+
+<h3 id="versió">Versió</h3>
+
+<p>Caldrà indicar la versió de l&rsquo;arxiu que, per tant, segueix un versionatge diferent al de l&rsquo;aplicació ja que cada increment de versió es correspondrà amb <strong>canvis en
+les especificacions de construcció i/o desplegament</strong>. El seu valor ha de seguir el format estàndard: <code>&lt;versioMajor&gt;.&lt;versioMenor&gt;.&lt;pegat&gt;</code>.</p>
+
+<pre><code>version: x.y.z
+</code></pre>
+
+<h3 id="paràmetres">Paràmetres</h3>
+
+<p>Opcionalment es poden definir paràmetres que permeten aplicar substitucions, de forma que allà on aparegui <code>${nom_param}</code> se substituirà pel valor <code>valor_param</code>.
+Són útils per a dotar de més llegibilitat a l’arxiu de configuració i encapsular dades repetibles.</p>
+
+<pre><code>parameters:
+  - name: nom_param1
+    value: valor_param1
+  - name: nom_param2
+    value: valor_param2
+</code></pre>
+
+<pre><code>build:
+  steps:
+    - id: step01
+      position: 1
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: ${nom_param1}
+</code></pre>
+
+<h3 id="recursos">Recursos</h3>
+
+<p>Caldrà definir els recursos dins l&rsquo;entitat <code>resources</code>. Hi ha tres tipus de recursos:</p>
+
+<ul>
+<li>Entorns (<code>environments</code>)</li>
+<li>Infraestructures (<code>infrastructures</code>)</li>
+<li>Artefactes (<code>artifacts</code>)</li>
+</ul>
+
+<h4 id="entorns">Entorns</h4>
+
+<p>Es tracta de definir els entorns de desplegament, incloent el seu ordre i la modalitat de desplegament aplicada.</p>
+
+<pre><code>resources:
+  environments:
+    - id: int
+      environment: int
+      position: 1
+      deploymentType: AUTOMATIC
+    - id: pre
+      environment: pre
+      position: 2
+      deploymentType: DELEGATED
+    - id: pro
+      environment: pro
+      position: 3
+      deploymentType: SEMIAUTOMATIC
+</code></pre>
+
+<div class="message information">
+Recordem breument el funcionament de les diferents modalitats: </br>
+- <b>Automàtica</b>: es construeixen els artefactes i es despleguen als servidors web, servidors d’aplicacions i servidors de bases de dades.</br>
+- <b>Delegada</b>: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es delega als CPD el desplegament.</br>
+- <b>Semiautomàtica</b>: es construeixen els artefactes, es lliuren a CPD/LdT a través del servei de gestió de binaris i es genera un tiquet Remedy en mode "Draft".</br>
+<!--- - <b>Automàtica per CPD</b>: com l'automàtica però és CPD qui s’encarrega de donar conformitat i continuïtat a les etapes de desplegament.</br> -->
+</div>
+
+<p></br></p>
+
+<h4 id="infraestructures">Infraestructures</h4>
+
+<p>Es relacionaran les denominacions d&rsquo;infraestructures indicades pel proveïdor:</p>
+
+<ul>
+<li>Element o tipologia (<code>element</code>)</li>
+<li>Entorns (<code>environments</code>)</li>
+<li>Identificador del proveïdor (<code>provider</code>)</li>
+</ul>
+
+<pre><code>resources:
+  (...)
+  infrastructures:
+    - id: 9999_apache
+      element: apache
+      environments:
+        - environment: int
+          vars:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpd9
+    - id: 9999_tomcat
+      element: tomcat
+      environments:
+        - environment: int
+          vars:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpd9
+</code></pre>
+
+<p>Només si cal enviar <strong>variables d’entorn requerides per al desplegament</strong> a les infraestructures, s&rsquo;haurà d&rsquo;emplenar la secció <code>vars</code>:</p>
+
+<pre><code>resources:
+  (...)
+  infrastructures:
+    - id: 9999_tomcat
+      element: tomcat
+      environments:
+        - environment: int
+          vars:
+        - environment: pre
+          vars:
+        - environment: pro
+          vars:
+      provider: cpd9
+</code></pre>
+
+<div class="message information">
+En el desplegament <b>AUTOMATIC</b> o <b>DELEGATED</b> cal indicar un atribut "id" que no és arbitrari, en aquest cas l’ha de facilitar el proveïdor d’infraestructures.
+Aquest identificador definirà la infraestructura sobre la que desplegar. No és necessari que el proveïdor d’aplicacions conegui
+el detall de les infraestructures, només cal que conegui aquest identificador. En el desplegament <b>SEMIAUTOMATIC</b> o <b>DELEGATED</b> no serà necessari preparar
+l'arxiu ACI ni el detall d’infraestructures.
+</div>
+
+<p>La propietat <code>element</code> suporta el següent conjunt de tipus de servidors:</p>
+
+<table>
+<thead>
+<tr>
+<th>Servidors web</th>
+<th>Servidors d’aplicacions</th>
+<th>Servidors de fitxers</th>
+<th>Servidors de base de dades</th>
+<th>Repositori de llibreries</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>apache</td>
+<td>tomcat</td>
+<td>sftp</td>
+<td>oracle</td>
+<td>nexus</td>
+</tr>
+
+<tr>
+<td>nginx</td>
+<td>weblogic</td>
+<td></td>
+<td>mysql</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>websphere</td>
+<td></td>
+<td>sqlserver</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>jboss</td>
+<td></td>
+<td>mongodb</td>
+<td></td>
+</tr>
+
+<tr>
+<td></td>
+<td>iis</td>
+<td></td>
+<td>postgresql</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<p>La propietat <code>provider</code> suporta el següent conjunt de valors:</p>
+
+<table>
+<thead>
+<tr>
+<th>Proveïdor</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>cpd1</td>
+</tr>
+
+<tr>
+<td>cpd2</td>
+</tr>
+
+<tr>
+<td>cpd3-nex</td>
+</tr>
+
+<tr>
+<td>cpd3-mc</td>
+</tr>
+
+<tr>
+<td>cpd4</td>
+</tr>
+</tbody>
+</table>
+
+<p></br></p>
+
+<h4 id="artefactes">Artefactes</h4>
+
+<p>El darrer element de la secció es centra en la definició de quins artefactes genera el procés de construcció i on s&rsquo;ubicaran aquests.</p>
+
+<pre><code>resources:
+  (...)
+  artifacts:
+    - id: artifact01
+      artifactType: static
+      path: target/nom_artefacte01.zip
+    - id: artifact02
+      artifactType: dynamic
+      path: target/nom_artefacte02.war
+</code></pre>
+
+<p>En aquest cas, la propietat <code>id</code> simplement s&rsquo;utilitzarà <strong>per a referenciar l’artefacte</strong> en la definició dels passos de desplegament.
+La propietat <code>artifactType</code> suporta el següent conjunt de valors:</p>
+
+<table>
+<thead>
+<tr>
+<th>Tipus d’artefacte</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>static</td>
+</tr>
+
+<tr>
+<td>dynamic</td>
+</tr>
+
+<tr>
+<td>plans</td>
+</tr>
+</tbody>
+</table>
+
+<div class="message information">
+En el cas de desplegaments de bases de dades, caldrà fer referència a l’arxiu de plans en format XML.
+En cas de pipelines generades per l’autoservei i desplegament automàtic, és important assegurar-se que l’identificador de BBDD definit dins l’arxiu XML de plans coincideix amb l’identificador de BBDD definit al fitxer ACI.
+Caldrà coordinar-ho amb el proveïdor d’infraestructures i assignar l’identificador que apliqui en cada cas.
+Per a més informació: <a href="https://canigo.ctti.gencat.cat/sic-welcome-pack/preparar-aplicacio/">Com preparar l'aplicació</a>. </div>
+
+<p>Exemple d&rsquo;artefacte de BBDD:</p>
+
+<pre><code>resources:
+  (...)
+  artifacts:
+    - id: artifact03
+      artifactType: plans
+      path: sql/plans.xml
+</code></pre>
+
+<h3 id="procés-de-construcció">Procés de construcció</h3>
+
+<p>Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen <code>build steps</code>. La definició es basa en una sèrie de <code>tools</code> predefinides. A més,
+els atributs dels passos de construcció varien en funció del seu tipus.</p>
+
+<p>Es contemplen les següents tecnologies:</p>
+
+<ul>
+<li><strong>Node</strong></li>
+<li><strong>Java</strong></li>
+<li><strong>.Net</strong></li>
+<li><strong>Hugo</strong></li>
+<li><strong>Compressió</strong> (zip, unzip)</li>
+<li><strong>BBDD</strong></li>
+<li><strong>Docker Image</strong></li>
+</ul>
+
+<div class="message information">
+El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
+Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
+<a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
+</div>
+
+<p></br>
+Cada pas de construcció disposa d&rsquo;un identificador, una posició, l&rsquo;eina de construcció i l&rsquo;artefacte o llista d’artefactes que genera.
+Aquesta secció <code>generates</code> amb la llista d&rsquo;artefactes generats ha de correspondre&rsquo;s amb els declarats a la secció <code>resources.artifacts</code>.</p>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+</code></pre>
+
+<p></br>
+A continuació s’explica l’ús dels diferents tipus d’eines previstes de construcció.</p>
+
+<p></br></p>
+
+<h4 id="node">Node</h4>
+
+<p>Caldrà seleccionar com a <code>tool</code> la versió a utilitzar de les disponibles a continuació:</p>
+
+<table>
+<thead>
+<tr>
+<th>Versions suportades</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>nodejs_4_4_3</td>
+</tr>
+
+<tr>
+<td>nodejs_6_LTS</td>
+</tr>
+
+<tr>
+<td>nodejs_8_LTS</td>
+</tr>
+
+<tr>
+<td>nodejs_10_LTS</td>
+</tr>
+
+<tr>
+<td>nodejs_12_LTS</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: nodejs_12_LTS
+      parameters: install --scripts-prepend-node-path true
+    - id: bs002
+      position: 2
+      tool: nodejs_12_LTS
+      parameters: run-script build --scripts-prepend-node-path true
+      generates:
+        - artifact01
+</code></pre>
+
+<p>L&rsquo;eina que s&rsquo;utilizarà per a la construcció serà <code>Npm</code> i no caldrà que s&rsquo;indiqui en els <code>parameters</code> d’execució doncs aquesta vindrà donada.
+Opcionalment, es podrà indicar la propietat <code>executionDir</code> per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l&rsquo;arrel del projecte).
+La resta d’eines de cicle de vida (tals com bower, gulp i grunt) s’han d’incloure amb l’aplicació per a què el SIC les utilitzi per a la seva construcció.
+Pel que fa a Angular, framework de frontend recomanat per Arquitectura CTTI i el CS Canigó, l’aplicació haurà de definir la versió de ng (Angular-cli) a utilitzar per a la seva construcció.</p>
+
+<p></br></p>
+
+<h4 id="java">Java</h4>
+
+<p>Caldrà seleccionar com a <code>tool</code> la versió a utilitzar de Maven i com a <code>jdk</code> la versió de Java. Les combinacions previstes són les següents:</p>
+
+<table>
+<thead>
+<tr>
+<th>Versions Maven</th>
+<th>Versions JDK</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>maven_2.2.1</td>
+<td>JDK 1.7</td>
+</tr>
+
+<tr>
+<td>maven_3.2.2</td>
+<td>JDK 1.6</td>
+</tr>
+
+<tr>
+<td>maven_3.2.2</td>
+<td>JDK 1.7</td>
+</tr>
+
+<tr>
+<td>maven_3.2.2</td>
+<td>JDK 1.8 (per defecte)</td>
+</tr>
+
+<tr>
+<td>maven_3.3.9</td>
+<td>JDK 1.6</td>
+</tr>
+
+<tr>
+<td>maven_3.3.9</td>
+<td>JDK 1.7</td>
+</tr>
+
+<tr>
+<td>maven_3.3.9</td>
+<td>JDK 1.8 (per defecte)</td>
+</tr>
+
+<tr>
+<td>maven_3.5</td>
+<td>JDK 1.7</td>
+</tr>
+
+<tr>
+<td>maven_3.5</td>
+<td>JDK 1.8 (per defecte)</td>
+</tr>
+
+<tr>
+<td>maven_3.6</td>
+<td>JDK 1.7</td>
+</tr>
+
+<tr>
+<td>maven_3.6</td>
+<td>JDK 1.8 (per defecte)</td>
+</tr>
+
+<tr>
+<td>maven_3.6</td>
+<td>JDK 11-openjdk</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+        - artifact02
+</code></pre>
+
+<p>No caldrà que s&rsquo;indiqui la comanda <code>mvn</code> en els <code>parameters</code> d’execució doncs aquesta vindrà donada per l&rsquo;eina.
+Opcionalment, es podrà indicar la propietat <code>executionDir</code> per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l&rsquo;arrel del projecte).</p>
+
+<p></br></p>
+
+<h4 id="net">.Net</h4>
+
+<p>Caldrà seleccionar com a <code>tool</code> la versió a utilitzar de les disponibles a continuació:</p>
+
+<table>
+<thead>
+<tr>
+<th>Eines predefinides</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>MSBuild_4.0</td>
+</tr>
+
+<tr>
+<td>MSBuild_14</td>
+</tr>
+
+<tr>
+<td>MSBuild_15</td>
+</tr>
+</tbody>
+</table>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: MSBuild_15
+      executionDir: src
+      restoreParameters: app.sln /// .&lt;path&gt;packages.config -PackagesDirectory ./packages
+      buildParameters:
+         - msbuild_parameter_1
+         - msbuild_parameter_2
+         - msbuild_parameter_3
+      generates:
+        - artifact01
+</code></pre>
+
+<p>No caldrà que s&rsquo;indiqui la comanda en el <code>restore/build_parameters</code> d’execució doncs aquesta vindrà donada per l&rsquo;eina de <em>restore</em> (Nuget) i <em>build</em> (MSBuild) respectivament.
+Opcionalment, es podrà indicar la propietat <code>executionDir</code> per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l&rsquo;arrel del projecte).</p>
+
+<p></br></p>
+
+<h4 id="hugo-sites-estàtiques">Hugo (sites estàtiques)</h4>
+
+<p>Caldrà seleccionar el literal &ldquo;hugo&rdquo; com a <code>tool</code> i, addicionalment, indicar el <code>pathOrig</code> i <code>pathDesti</code>, que es correspondran respectivament amb el
+directori on es troben els components i on es deixarà l’artefacte comprimit generat.</p>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: hugo
+      pathDest: ./hugoGeneratedSite
+      generates:
+        - artifact01
+</code></pre>
+
+<p></br></p>
+
+<h4 id="compressió-zip-unzip">Compressió (zip, unzip)</h4>
+
+<p>Caldrà seleccionar el literal &ldquo;command&rdquo; com a <code>tool</code> per tal d&rsquo;executar les eines d&rsquo;empaquetat (zip) i desempaquetat de la informació (unzip).</p>
+
+<pre><code>build:
+  steps:
+    - id: bs001
+      position: 1
+      tool: command
+      executionDir: dist
+      parameters: zip -r artefacte.zip
+      generates:
+        - artifact01
+</code></pre>
+
+<p>Caldrà que s&rsquo;indiqui la comanda <code>zip</code> o <code>unzip</code> en els <code>parameters</code> d’execució per a especificar el tipus d&rsquo;acció a realitzar.</p>
+
+<p></br></p>
+
+<h4 id="bbdd">BBDD</h4>
+
+<p>Caldrà seleccionar el literal &ldquo;bbdd&rdquo; com a <code>tool</code> per tal d&rsquo;executar l&rsquo;eina de desplegament de base de dades.</p>
+
+<pre><code>build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: bbdd
+      generates:
+        - artifact01
+</code></pre>
+
+<p></br></p>
+
+<h4 id="docker-image">Docker Image</h4>
+
+<p>Caldrà seleccionar el literal &ldquo;docker&rdquo; com a <code>tool</code> per tal de fer la construcció mitjançant una imatge docker. </br>
+Veure: <a href="/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder"><strong>Com utilitzar imatges Docker Builder</strong></a>.</p>
+
+<p></br>
+Exemple d&rsquo;ús d&rsquo;imatge del catàleg:</p>
+
+<pre><code>build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerImageName: repo/image:tag
+      parameters: mvn clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><code>dockerImageName</code>: nom de la imatge al catàleg d&rsquo;imatges del SIC. Es composa pel repositori, el nom de la imatge i l&rsquo;etiqueta de versió (tag). Per exemple: gencatsic/maven-builder:1.0-3.6-8.</li>
+<li><code>parameters</code>: comanda específica a executar dins de la imatge per a la construcció de l&rsquo;artefacte. En aquest cas no vindrà donada.</li>
+</ul>
+
+<p></br>
+Exemple d&rsquo;ús d&rsquo;imatge pròpia (custom):</p>
+
+<pre><code>build:
+ steps:
+    - id: bs001
+      position: 1
+      tool: docker
+      dockerfilePath: /app/docker
+      dockerfileName: DockerFile
+      parameters: mvn clean package -Dmaven.test.skip=true
+      generates:
+        - artifact01
+</code></pre>
+
+<p>On:</p>
+
+<ul>
+<li><code>dockerfilePath</code>: ruta del fitxer <em>DockerFile</em> al codi font del projecte per a la construcció de la imatge.</li>
+<li><code>dockerfileName</code>: ficher <em>DockerFile</em> al codi font del projecte per a la construcció de la imatge.</li>
+<li><code>parameters</code>: comanda específica a executar dins de la imatge per a la construcció de l&rsquo;artefacte. En aquest cas no vindrà donada.</li>
+</ul>
+
+<div class="message information">
+En aquest cas, es generarà una etapa addicional a la pipeline anomenada <b>build Image</b> que s'encarregarà
+de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari abans de procedir a la construcció de l'aplicació.
+</div>
+
+<h3 id="anàlisi-estàtic-de-codi">Anàlisi estàtic de codi</h3>
+
+<p>Aquesta secció és opcional doncs, per defecte, tots els passos del procés i la seva ordenació vindrà determinada per la definició del
+procés de construcció. Així doncs, cada pas de construcció que impliqui l&rsquo;enviament de codi font per al seu anàlisi esdevindrà
+automàticament en pas d&rsquo;enviament de codi i comprovació de les <a href="https://qualitat.solucions.gencat.cat/eines/sonarqube/">Quality Gates</a> corresponents.
+No obstant, es permet redefinir el seu comportament tal com es descriu a continuació.
+</br></br></p>
+
+<h4 id="activar-o-desactivar-l-enviament-de-codi-font-i-o-la-comprovació-de-les-regles-establertes">Activar o desactivar l&rsquo;enviament de codi font i/o la comprovació de les regles establertes</h4>
+
+<p>Es proporcionen unes propietats que permeten a l&rsquo;usuari desactivar l&rsquo;enviament de codi font i/o la comprovació de les regles establertes a l&rsquo;eina davant urgències
+que pugui tenir per a desplegar o altres problemàtiques que es necessiti temps per a acabar de resoldre. Són les següents:</p>
+
+<ul>
+<li><p><code>evalStaticCode</code>: permet activar o desactivar l&rsquo;etapa completa d&rsquo;anàlisi estàtic de codi, per lo que no es realitzarà l&rsquo;enviament del codi font ni, òbviament,
+es comprovarà l&rsquo;acompliment de les regles establertes.</p></li>
+
+<li><p><code>checkQualityGates</code>: permet activar o desactivar la comprovació de les <a href="https://qualitat.solucions.gencat.cat/eines/sonarqube/">Quality Gates</a>, per lo que
+el sistema no aturarà la pipeline en detectar un error en l&rsquo;acompliment de les regles establertes.</p></li>
+</ul>
+
+<pre><code>analysis:
+  evalStaticCode: true
+  checkQualityGates: false
+</code></pre>
+
+<div class="message information">
+En cas de <b>desactivar aquests indicadors el sistema automàticament enviarà una notificació a l'Oficina de Qualitat</b> per a que sigui coneixedora de l'operativa realitzada en el projecte.
+</div>
+
+<p>Per defecte, aquests indicadors es consideren actius.
+</br></br></p>
+
+<h4 id="redefinir-el-timeout-aplicat">Redefinir el timeout aplicat</h4>
+
+<p>L&rsquo;Oficina de Qualitat defineix un timeout estàndard per a tots els projectes però, en cas que aquest esdevingui excessiu o insuficient per a la finalització de la tasca
+d&rsquo;anàlisi del codi font, l&rsquo;usuari pot optar per redefinir-lo a nivell de projecte mitjançant la propietat <code>aecStageTimeout</code> indicada en unitats de segon.</p>
+
+<pre><code>analysis:
+  aecStageTimeout: 20
+</code></pre>
+
+<p></br></p>
+
+<h4 id="redefinir-el-sistema-d-enviament-de-codi-font">Redefinir el sistema d&rsquo;enviament de codi font</h4>
+
+<p>Es permet redefinir el comportament per defecte d&rsquo;aquest procés en el que s&rsquo;anomenen <code>analysis steps</code> quan es detecta la necessitat de fer ús d&rsquo;una imatge Docker
+diferent a la de construcció, es necessita editar la comanda a executar o el directori d&rsquo;execució. Cal, però, tenir present que només cal redefinir-ho per al pas de build en
+qüestió i la resta (si hi ha) seguiran comportant-se de forma estàndard.</p>
+
+<p>El sistema es basa en una sèrie de <code>tools</code> predefinides que es descriuen a continuació:</p>
+
+<ul>
+<li><p><code>maven</code>: pas d&rsquo;anàlisi estàtic de codi mitjançant el SonarScanner per a projectes Maven.</p></li>
+
+<li><p><code>msbuild</code>: pas d&rsquo;anàlisi estàtic de codi mitjançant el SonarScanner per a projectes que utilitzen MSBuild.</p></li>
+
+<li><p><code>generic</code>: pas d&rsquo;anàlisi estàtic de codi mitjançant el client genèric de SonarScanner. Es tracta del client utilitzat per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d&rsquo;altres.</p></li>
+</ul>
+
+<p>Per a més informació: <a href="https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/">https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/</a>.
+</br></br></p>
+
+<p>Caldrà definir la propietat <code>target</code> indicant l&rsquo;identificador del step de build associat que es vol sobreescriure, que obligatòriament ha de coincidir amb un identificador de <code>build step</code>
+que hem definit més amunt i que s&rsquo;afegirà com a sufix en l&rsquo;enviament del projecte al SonarQube.</p>
+
+<p>Opcionalment es podran indicar les propietats:</p>
+
+<ul>
+<li><p><code>imageName</code>: només per a fer ús d&rsquo;una imatge Docker diferent a la imatge de construcció de l&rsquo;artefacte i que ha d&rsquo;estar disponible
+al <a href="https://git.intranet.gencat.cat/0192-intern/docker-images">Catàleg d&rsquo;imatges</a>,</p></li>
+
+<li><p><code>commands</code>: per a especificar la comanda que cal executar només si s&rsquo;especifica una <code>imageName</code>,</p></li>
+
+<li><p><code>executionDir</code>: per a indicar que l&rsquo;enviament cal executar-lo sobre una ruta específica (per defecte, a l&rsquo;arrel del projecte), i</p></li>
+</ul>
+
+<p>Exemple:</p>
+
+<pre><code>analysis:
+  evalStaticCode: true
+  checkQualityGates: true
+  steps:
+    - id: an001
+      tool: maven
+      target: bs001
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app1/pom.xml sonar:sonar  
+    - id: an002
+      tool: maven
+      target: bs002
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app2/pom.xml sonar:sonar 
+    - id: an003
+      tool: maven
+      target: bs003
+      imageName: gencatsic/maven-builder:1.0-3.2-8
+      commands: mvn -f app3/pom.xml sonar:sonar 
+</code></pre>
+
+<p></br></p>
+
+<h3 id="procés-de-desplegament">Procés de desplegament</h3>
+
+<p>Caldrà definir tots els passos del procés i la seva ordenació en el que s’anomenen <code>deploy steps</code>. La definició es basa en una sèrie de tipologies predefinides anomenades <code>type</code>.
+A continuació es descriuen els diferents tipus de desplegament que es poden configurar.
+</br></br></br></p>
+
+<h4 id="estàndard-predefined">Estàndard (<code>predefined</code>)</h4>
+
+<p>Pas de desplegament en el que se li indica l’artefacte a desplegar i l&rsquo;identificador d&rsquo;<strong>infraestructura destí</strong> (cas estàndard).
+Exemple:</p>
+
+<pre><code>deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: predefined
+      destination: 9999_tomcat
+      artifact: artifact01
+</code></pre>
+
+<p></br></p>
+
+<h4 id="llibreria-library">Llibreria (<code>library</code>)</h4>
+
+<p>Pas de publicació de llibreries al Nexus, en el que se li indica l&rsquo;eina de desplegament <code>tool</code> seguint el mateix patró que el <a href="/sic-welcome-pack/fitxer-aca/#procés-de-construcció"><strong>Procés de construcció</strong></a>.
+No obstant això, en aquest cas, aquesta propietat només serà requerida si cal fer ús d&rsquo;una imatge docker del catàleg diferent de la utilitzada en la construcció. En cas de no ser necessari,
+serà suficient fer referència a l&rsquo;<code>artifact</code> en qüestió i el sistema aprofitarà la mateixa imatge de la construcció.
+</br></br></p>
+
+<p>Exemple especificant la <code>tool</code> i la <code>jdk</code>:</p>
+
+<pre><code>deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: maven_3.6
+      jdk: JDK 1.8
+      parameters: deploy -f pom.xml
+</code></pre>
+
+<p>Exemple sense indicar la <code>tool</code> i referenciant a un <code>artifact</code> per a fer ús de la mateixa imatge de construcció
+(en cas d&rsquo;indicar simultàniament l&rsquo;eina i l&rsquo;artefacte, el sistema utilitzarà la imatge associada a l&rsquo;eina indicada ignorant la propietat <code>artifact</code>):</p>
+
+<pre><code>deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      parameters: deploy -f pom.xml
+      artifact: artifact1
+</code></pre>
+
+<p>Exemple utilitzant imatge docker específica del catàleg:</p>
+
+<pre><code>deploy: 
+  steps:  
+    - id: ds001 
+      position: 1 
+      type: library 
+      tool: docker 
+      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      parameters: mvn deploy -f pom.xml 
+</code></pre>
+
+<p>Exemple amb diversos <code>parameters</code>:</p>
+
+<pre><code>deploy: 
+  steps:
+    - id: ds001 
+      position: 1
+      type: library 
+      tool: docker 
+      dockerImageName: gencatsic/maven-builder:1.0-3.2-7 
+      parameters: 
+       -  mvn deploy -f app1/pom.xml 
+       -  mvn deploy -f app2/pom.xml 
+       -  mvn deploy -f app3/pom.xml
+</code></pre>
+
+<p>Exemple mitjançant MSBuild (en aquest cas sí serà necessari indicar la <code>destination</code> per a extreure el node <code>provider</code> en el que cal realitzar el pas):</p>
+
+<pre><code>deploy:
+  steps:
+    - id: ds001
+      position: 1
+      type: library
+      tool: MSBuild_15
+      parameters: push .\\app.nupkg
+      destination: cpdx_nexus_xxxx
+</code></pre>
+
+<p>En qualsevol cas, opcionalment es podrà indicar la propietat <code>executionDir</code> per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l&rsquo;arrel del projecte).
+</br></p>
+
+<!---
+NRS: es comenta aquesta part perque no ha estat prou verificada i, de moment, no es considera que apliqui.
+- Manual (`manual`): pas de desplegament pensat per a quan dins el procés de desplegament es requereixen accions manuals per part dels tècnics de CPD. Es tradueix, per tant, en una
+**pausa a la pipeline**, que es quedarà a l’espera de confirmació per a continuar endavant.
+```
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: manual
+```
+</br>
+
+- Personalitzat (`custom`): pas de desplegament pensat per quan es necessita executar comandes no contemplades en els tipus predefinits. Permet l’execució de comandes Bourne
+Shell (sh) per tal que es pugui realitzar qualsevol tipus d’operació.
+```
+deploy:
+  steps:
+    - id: dp001
+      position: 1
+      type: custom
+      command: zip -r app.zip dist/
+```
+-->
+
+<p></br></p>
+
+<h3 id="notificacions">Notificacions</h3>
+
+<p>Finalment, caldrà indicar les <strong>adreces de correu electrònic on es notificarà</strong> d&rsquo;accions manuals en espera i resultats de l’execució:</p>
+
+<pre><code>notificationRecipients:
+    - usuari1@domini
+    - usuari2@domini
+</code></pre>
+
+<h2 id="validació">Validació</h2>
+
+<p>Està previst implementar un sistema de validació que comprovi el format, el contingut i les referències del fitxer ACA en fer la pujada al Sistema de Custòdia de Codi.
+Fins aleshores, recomanem fer una validació mínima del fitxer utilitzant eines online de validació disponibles com <a href="http://www.yamllint.com/"><strong>YAML Validator</strong></a>.</p>
+
+<h2 id="exemples">Exemples</h2>
+
+<p>A continuació s&rsquo;adjunten exemples de casos d&rsquo;ús:</p>
+
+<ul>
+<li><a href="/related/sic/2.0/autoservei_mvn_nexus.yml">Maven - Nexus</a> (llibreria)</li>
+<li><a href="/related/sic/2.0/autoservei_mvn_weblogic.yml">Maven - Weblogic</a> <br/></li>
+<li><a href="/related/sic/2.0/autoservei_mvn_hibrid.yml">Maven - Nexus &amp; Weblogic</a> <br/></li>
+<li><a href="/related/sic/2.0/autoservei_npm_nexus.yml">Npm - Nexus</a> (llibreria)</li>
+<li><a href="/related/sic/2.0/autoservei_npm_apache.yml">Npm - Apache</a></li>
+<li><a href="/related/sic/2.0/autoservei_net_nexus.yml">.Net - Nexus</a> (llibreria)</li>
+<li><a href="/related/sic/2.0/autoservei_net.yml">.Net</a></li>
+<li><a href="/related/sic/2.0/autoservei_php.yml">PHP</a></li>
+<li><a href="/related/sic/2.0/autoservei_apex.yml">Oracle Apex o migracions de BBDD</a></li>
+<li><a href="/related/sic/2.0/autoservei_docker.yml">Docker Image</a></li>
+<li><a href="/related/sic/2.0/autoservei_custom_docker.yml">Docker Custom Image</a></li>
+<li><a href="/related/sic/2.0/autoservei_custom_docker_nexus.yml">Docker Custom Image - Nexus</a> (llibreria)</li>
+<li><a href="/related/sic/2.0/autoservei_mvn_aec.yml">Maven Code Analysis Redefined</a></li>
+</ul>
+
+<p><br/><br/>
+Si voleu més informació podeu consultar la secció de <a href="/sic20-guies/"><strong>Guies</strong></a>. <br/>
+Si teniu qualsevol dubte o problema podeu revisar les <a href="/sic/faq"><strong>Preguntes Freqüents</strong></a> o utilitzar els canals de <a href="/sic/suport"><strong>Suport</strong></a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

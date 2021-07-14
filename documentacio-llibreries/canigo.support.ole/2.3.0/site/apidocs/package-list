@@ -1,0 +1,5 @@
+cat.gencat.ctti.canigo.arch.support.ole.controller
+cat.gencat.ctti.canigo.arch.support.ole.excel
+cat.gencat.ctti.canigo.arch.support.ole.exception
+cat.gencat.ctti.canigo.arch.support.ole.word
+org.apache.poi.hwpf.usermodel

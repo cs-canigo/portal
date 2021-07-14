@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/automatitzacio/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Sat, 16 Dec 2017 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Principis de Microserveis</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2017/12/principismicroserveis/</guid>
+      <description>Un cop acabada la transformació del maquinari i dels programaris que suporten les aplicacions, comencem a observar una certa tracció en les necessitats de posar al dia també les aplicacions. En la majoria de casos són plantejables la conversió de monòlits en aplicacions basades en microserveis. En aquest post, continuem la sèrie d&#39;articles sobre els microserveis i presentem els principis que han de governar el disseny i la implementació de les aplicacions basades en microserveis.</description>
+    </item>
+    
+  </channel>
+</rss>

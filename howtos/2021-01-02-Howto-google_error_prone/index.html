@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Com utilitzar Google Error-Prone</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Com utilitzar Google Error-Prone\" />");
+		document.write("<meta name=\"description\" content=\"Howto per a mostrar com utilitzar Google Error-Prone per a l\x27avaluació estàtica de codi en temps de compilació\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Com utilitzar Google Error-Prone
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 02-01-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>L&rsquo;objectiu d&rsquo;aquest article és mostrar l&rsquo;<strong>ús d&rsquo;un complement al compilador Java (<em>javac</em>) anomenat <a href="https://errorprone.info/">Google Error-Prone</a>
+que permet l&rsquo;avaluació estàtica de codi en temps de compilació</strong> per tal de detectar errors i evitar que aquests es traslladin a un entorn productiu.
+Aquest complement té el seu <a href="https://github.com/google/error-prone">repositori de codi font</a>.</p>
+
+<h2 id="justificació">Justificació</h2>
+
+<p><em>Error Prone</em> permet que el compilador de Java sigui més poderós en analitzar el codi font durant la compilació.
+Alguns avantatges que aporta són els següents:</p>
+
+<ul>
+<li>Mostra els <strong>errors que es detecten al principi del cicle de vida del desenvolupament</strong> de software (<em>Shift left testing</em>).
+En lloc de detectar-se durant la revisió del codi o en producció, ara es detectaran en el moment de la compilació.</li>
+<li>Google Error Prone és un processador d&rsquo;anotacions Java que està connectat al compilador, per la qual cosa
+<strong>es pot utilitzar per a diferents sistemes de construcció: Bazel, Maven, Ant i Gradle</strong>.</li>
+<li><strong>La solució del problema generalment se suggereix</strong> en el moment d&rsquo;identificar l&rsquo;error.</li>
+</ul>
+
+<h2 id="configuració">Configuració</h2>
+
+<p>Per a poder utilitzar el complement a Canigó, serà necessari modificar el fitxer <code>pom.xml</code> que conté la configuració maven del projecte.
+<strong>Es recomana utilitzar Google Error Prone amb JDK 8 o superior</strong>, encara que també és possible configurar-ho per a JDK 6 o 7.</p>
+
+<h3 id="configuració-del-plugin">Configuració del _plugin</h3>
+
+<p>Dins del <em>plugin</em> <code>maven-compiler-plugin</code>, que ja es troba configurat en els projectes generats amb <a href="https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/">Canigó plugin</a>,
+s&rsquo;han d&rsquo;agregar les etiquetes <code>&lt;compilerArgs&gt;</code> i <code>&lt;annotationProcessorPaths&gt;</code> indicant que es vol utilitzar el complement.</p>
+
+<p>Exemple:</p>
+
+<pre><code class="language-xml">&lt;plugin&gt;
+  &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+  &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+  &lt;configuration&gt;
+    &lt;source&gt;${maven.compiler.plugin.source}&lt;/source&gt;
+    &lt;target&gt;${maven.compiler.plugin.target}&lt;/target&gt;
+    &lt;compilerArgs&gt;
+      &lt;arg&gt;-XDcompilePolicy=simple&lt;/arg&gt;
+      &lt;arg&gt;-Xplugin:ErrorProne&lt;/arg&gt;
+    &lt;/compilerArgs&gt;
+    &lt;annotationProcessorPaths&gt;
+      &lt;path&gt;
+        &lt;groupId&gt;com.google.errorprone&lt;/groupId&gt;
+        &lt;artifactId&gt;error_prone_core&lt;/artifactId&gt;
+        &lt;version&gt;2.4.0&lt;/version&gt;
+      &lt;/path&gt;&gt;
+    &lt;/annotationProcessorPaths&gt;
+  &lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<h3 id="canviar-el-compilador-de-java-per-un-d-error-prone">Canviar el compilador de Java per un d&rsquo;Error Prone</h3>
+
+<p>Si s&rsquo;utilitza JDK 8, també serà necessari canviar el compilador de Java per a utilitzar una versió específica
+del compilador d&rsquo;<a href="https://github.com/google/error-prone-javac">Error Prone javac</a>.
+Per a fer-ho, serà necessari agregar la versió del compilador a la secció de propietats:</p>
+
+<pre><code class="language-xml">&lt;properties&gt;
+  &lt;javac.version&gt;9+181-r4173-1&lt;/javac.version&gt;
+&lt;/properties&gt;
+</code></pre>
+
+<p>A més, serà necessari canviar el compilador modificant el <em>maven-compiler-plugin</em>. Per a fer-ho, utilitzarem un perfil per
+a poder diferenciar el compilador de desenvolupament del compilador d&rsquo;entorns productius:</p>
+
+<pre><code class="language-xml">  &lt;profiles&gt;
+    &lt;profile&gt;
+      &lt;id&gt;jdk8&lt;/id&gt;
+      &lt;activation&gt;
+        &lt;jdk&gt;1.8&lt;/jdk&gt;
+      &lt;/activation&gt;
+      &lt;build&gt;
+        &lt;plugins&gt;
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+              &lt;fork&gt;true&lt;/fork&gt;
+              &lt;compilerArgs combine.children=&quot;append&quot;&gt;
+                &lt;arg&gt;-J-Xbootclasspath/p:${settings.localRepository}/com/google/errorprone/javac/${javac.version}/javac-${javac.version}.jar&lt;/arg&gt;
+              &lt;/compilerArgs&gt;
+            &lt;/configuration&gt;
+          &lt;/plugin&gt;
+        &lt;/plugins&gt;
+      &lt;/build&gt;
+    &lt;/profile&gt;
+  &lt;/profiles&gt;
+</code></pre>
+
+<p><br/>
+Per a més informació: <a href="https://errorprone.info/docs/installation">https://errorprone.info/docs/installation</a>.</p>
+
+<h2 id="ús-del-complement">Ús del complement</h2>
+
+<p>En compilar amb maven (<code>mvn compile</code>), sigui a través de CLI o d&rsquo;un entorn de desenvolupament integrat com Eclipse o IntelliJ IDEA,
+el complement <strong>error-prone</strong> farà un anàlisi estàtic del projecte com a part del procés de compilació de forma que:</p>
+
+<ul>
+<li>En cas de detectar <em>bugs</em> classificats com <em>Error per Defecte</em>, s&rsquo;aturarà la compilació.</li>
+<li>En cas de detectar <em>bugs</em> classificats com <em>Warning per defecte</em>, no s&rsquo;aturarà la compilació.</li>
+<li>En qualsevol cas, es mostrarà el detall de l&rsquo;error i alguns suggeriments de solució.</li>
+</ul>
+
+<p>El detall dels patrons d&rsquo;errors que es validaran en la compilació es troben descrits a: <a href="https://errorprone.info/bugpatterns">https://errorprone.info/bugpatterns</a>.</p>
+
+<h3 id="exemple-amb-cli">Exemple amb CLI</h3>
+
+<p>Per exemple, si tinguéssim el següent <em>bug</em> al projecte:</p>
+
+<pre><code class="language-java">System.out.println(String.class.getClass().toString())
+</code></pre>
+
+<p>En executar la compilació:</p>
+
+<pre><code class="language-sh">mvn clean compile
+</code></pre>
+
+<p>Obtindríem un resultat similar al que es mostra a continuació:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_cli_example1.gif" alt="CLI Ejemplo" /></p>
+
+<h3 id="exemple-amb-eclipse">Exemple amb Eclipse</h3>
+
+<p>Per utilitzar-ho a l&rsquo;Eclipse, serà necessari instal·lar el següent <em>plugin</em>:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_ide_conf.gif" alt="Eclipse Configuración" /></p>
+
+<p><br/>
+Un cop configurat, en executar la compilació obtindríem un resultat similar al que es mostra a continuació:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_ide_example.gif" alt="Eclipse Ejemplo" /></p>
+
+<h3 id="exemple-amb-intellij-idea">Exemple amb IntelliJ IDEA</h3>
+
+<p>Per a utilitzar-ho a l&rsquo;IntelliJ IDEA, serà necessari donar d&rsquo;alta la nova configuració <em>Run/Debug</em>:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_ide_conf2.gif" alt="Intellij Configuración" /></p>
+
+<p><br/>
+Un cop configurat, en executar la compilació obtindríem un resultat similar al que es mostra a continuació:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_ide_example2.gif" alt="Intellij Ejemplo" /></p>
+
+<h2 id="exclusió-de-patrons-d-error">Exclusió de patrons d&rsquo;error</h2>
+
+<p>És possible <strong>excloure algunes de les advertències dels patrons d&rsquo;error</strong> per a evitar que es pari la compilació.
+Per exemple, per a excloure l&rsquo;error <em>GetClassOnClass</em> de la validació hauríem de configurar al fitxer <code>pom.xml</code> el següent:</p>
+
+<pre><code class="language-xml">  &lt;arg&gt;-Xplugin:ErrorProne -Xep:GetClassOnClass:OFF&lt;/arg&gt;
+</code></pre>
+
+<p><br/>
+De forma que, en executar la compilació obtindríem un resultat similar al que es mostra a continuació:</p>
+
+<p><img src="/images/howtos/2021-01-02_error_prone_cli_exclusion.gif" alt="CLI Exclusion" /></p>
+
+<h2 id="conclusió">Conclusió</h2>
+
+<p>L&rsquo;ús d&rsquo;aquest complement permet millorar la qualitat del software permetent trobar errors com més aviat
+millor dins el cicle de vida del desenvolupament d&rsquo;aplicacions.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

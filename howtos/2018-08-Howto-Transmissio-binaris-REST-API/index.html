@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Transmissió de binaris en una REST API a Canigó 3.2</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Transmissió de binaris en una REST API a Canigó 3.2\" />");
+		document.write("<meta name=\"description\" content=\"En aquest HowTo s\x27explica pas a pas com fer transferència de dades binàries en una REST API a Canigó 3.2 seguint les millors pràctiques definides pel CS Canigó\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Transmissió de binaris en una REST API a Canigó 3.2
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 10-08-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="audiència">Audiència</h3>
+
+<p>Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvolupin una aplicació Canigó 3.2 i que necessitin transferir dades binàries en REST APIs.</p>
+
+<h4 id="protocol-buffers">Protocol Buffers</h4>
+
+<p>Abans de fer cap modificació, cal generar, compilar i executar l&rsquo;aplicació per verificar que tot funciona bé.</p>
+
+<p><strong>NOTA:</strong> <em>La manera recomanada de generar l&rsquo;aplicació és amb el plugin d&rsquo;Eclipse de Caniǵo que ve integrat amb <a href="https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/">l&rsquo;entorn de desenvolupament de Canigó</a>), i la compilació i desplegament amb els plugins d&rsquo;Eclipse de Maven i Spring</em></p>
+
+<ol>
+<li>Generar projecte amb archetype: <code>mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5</code></li>
+<li>Compilar amb <code>mvn -B -f protocolbuffers/pom.xml clean package</code></li>
+<li>Executar l&rsquo;aplicació generada mitjançant <code>java -Dapplication.defaultLanguage=ca -jar protocolbuffers/target/protocolbuffers.war</code></li>
+<li>Provar d&rsquo;accedir amb un navegador web a <a href="http://localhost:8080/index.html">http://localhost:8080/index.html</a></li>
+</ol>
+
+<p>Un cop s&rsquo;han executat els pasos previs per disposar d&rsquo;una aplicació Canigó 3.2 funcionant, s&rsquo;ha d&rsquo;afegir el suport específic pels <em>Protocol Buffers</em>, de la següent manera:</p>
+
+<ol>
+<li>Modificar pom.xml per afegir les següents dependències al final:</li>
+</ol>
+
+<pre><code>		&lt;!-- Dependències pròpies Protocol buffers --&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.google.protobuf&lt;/groupId&gt;
+			&lt;artifactId&gt;protobuf-java&lt;/artifactId&gt;
+			&lt;version&gt;3.2.0&lt;/version&gt;
+		&lt;/dependency&gt;
+		&lt;dependency&gt;
+			&lt;groupId&gt;com.googlecode.protobuf-java-format&lt;/groupId&gt;
+			&lt;artifactId&gt;protobuf-java-format&lt;/artifactId&gt;
+			&lt;version&gt;1.4&lt;/version&gt;
+		&lt;/dependency&gt;
+</code></pre>
+
+<ol>
+<li>Definir els missatges que s&rsquo;enviaran mitajançant <em>Protocol Buffers</em>:
+
+<ol>
+<li>Crear el directori on emmagatzemar les definicions en texte dels missatges: <strong>src/main/protobuf</strong></li>
+<li>Crear el/s fitxer/s <code>.proto</code>. Un exemple de definició seria aquest:
+<br /></li>
+</ol></li>
+</ol>
+
+<pre><code>// src/main/protobuf/EquipamentEspecial.proto
+syntax = &quot;proto2&quot;;
+
+// pot ser qualsevol package, però per mantenir la coherència
+option java_package = &quot;cscanigo.howto.rest.proto&quot;;
+option java_outer_classname = &quot;EquipamentEspecialProto&quot;;
+
+// Missatges pel model de dades
+
+message EquipamentEspecial {
+  required int64 id = 1;
+  required string nom = 2;
+  optional string municipi = 3;
+  repeated DocumentacioEquipamentEspecial documents = 4;
+}
+
+message DocumentacioEquipamentEspecial {
+  required int64 id = 1;
+  required string nom = 2;
+  optional string descripcio = 3;
+  // pot no ser obligatori definir el contingut del document
+  optional bytes contingut = 4;
+}
+
+// Missatges de cerca
+
+message CercaRequest {
+  optional int64 id = 1;
+  optional string nom = 2;
+  optional string municipi = 3;
+}
+
+message CercaPaginadaRequest {
+  optional int64 id = 1;
+  optional string nom = 2;
+  optional string municipi = 3;
+  optional int32 page = 4 [ default = 1 ];
+  optional int32 rpp = 5 [ default = 10 ];
+  optional string sort = 6;
+  optional string filter = 7;
+}
+
+// Missatges de resposta
+
+message CercaResponse {
+  required int32 total = 1;
+  repeated EquipamentEspecial equipaments = 2;
+}
+
+</code></pre>
+
+<ol>
+<li>Afegir al Application.java : <code>@Bean public ProtobufHttpMessageConverter protobufHttpMessageConverter() { return new ProtobufHttpMessageConverter(); }</code></li>
+<li>Modificar pom.xml per afegir el plugin que compila els fitxers <code>.proto</code> a codi Java. Aquest plugin s&rsquo;ha de posar abans de la definició del plugin <code>maven-compiler-plugin</code>:</li>
+</ol>
+
+<pre><code>			&lt;!-- compile proto file into java files. --&gt;
+			&lt;plugin&gt;
+				&lt;groupId&gt;com.github.os72&lt;/groupId&gt;
+				&lt;artifactId&gt;protoc-jar-maven-plugin&lt;/artifactId&gt;
+				&lt;version&gt;3.2.0.1&lt;/version&gt;
+				&lt;executions&gt;
+					&lt;execution&gt;
+						&lt;phase&gt;generate-sources&lt;/phase&gt;
+						&lt;goals&gt;
+							&lt;goal&gt;run&lt;/goal&gt;
+						&lt;/goals&gt;
+						&lt;configuration&gt;
+							&lt;!-- &lt;includeDirectories&gt; &lt;include&gt;src/main/protobuf&lt;/include&gt; &lt;/includeDirectories&gt; --&gt;
+							&lt;inputDirectories&gt;
+								&lt;include&gt;src/main/protobuf&lt;/include&gt;
+							&lt;/inputDirectories&gt;
+							&lt;!-- Create java files. And put them in the directory. --&gt;
+							&lt;outputTargets&gt;
+								&lt;outputTarget&gt;
+									&lt;type&gt;java&lt;/type&gt;
+									&lt;!-- &lt;outputDirectory&gt;src/main/java&lt;/outputDirectory&gt; --&gt;
+									&lt;outputDirectory&gt;target/generated-sources/java-protobuf&lt;/outputDirectory&gt;
+								&lt;/outputTarget&gt;
+							&lt;/outputTargets&gt;
+						&lt;/configuration&gt;
+					&lt;/execution&gt;
+				&lt;/executions&gt;
+			&lt;/plugin&gt;
+</code></pre>
+
+<p><strong>NOTA:</strong> Per poder fer proves, es pot desactivar (de manera temporal) la protecció contra CSRF, afegint al final del mètode configure() de la classe WebSecurityConfig.java <code>http.csrf().disable();</code>.</p>
+
+<p>Un cop acabat el suport específic per <em>Protocol Buffers</em>, Spring ho integra automàticament amb les annotacions REST. Un exemple d&rsquo;endpoint REST pels missatges <em>Protocol Buffer</em> seria el següent:</p>
+
+<pre><code>package cscanigo.howto.rest.endpoints;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import cscanigo.howto.rest.model.Equipament;
+import cscanigo.howto.rest.proto.EquipamentEspecialProto.CercaRequest;
+import cscanigo.howto.rest.proto.EquipamentEspecialProto.CercaResponse;
+import cscanigo.howto.rest.proto.EquipamentEspecialProto.EquipamentEspecial;
+import cscanigo.howto.rest.service.EquipamentService;
+
+@RestController
+@RequestMapping(&quot;/equipamentEspecial&quot;)
+public class EquipamentEspecialServiceController {
+
+	@Autowired
+	EquipamentService equipamentService;
+
+	@PostMapping(produces = { &quot;application/x-protobuf&quot;, MediaType.APPLICATION_JSON_VALUE })
+	public CercaResponse getEquipament(@RequestBody final CercaRequest request) {
+
+		Equipament equipament = equipamentService.getEquipament(request.getId());
+
+		EquipamentEspecial.Builder equipamentEspecial = EquipamentEspecial.newBuilder() //
+				.setId(equipament.getId()) //
+				.setNom(equipament.getNom()) //
+				.setMunicipi(equipament.getMunicipi());
+
+		for (Documents documents : equipament.getDocuments()) {
+
+			equipamentEspecial.addDocumentsBuilder() //
+					.setId(documents.getId()) //
+					.setNom(documents.getNom()) //
+					.setContingut(ByteString.copyFrom(documents.getContingut())) //
+					.build();
+		}
+
+		return CercaResponse.newBuilder() //
+				.setTotal(1) //
+				.addEquipaments(equipamentEspecial.build()) //
+				.build();
+	}
+
+}
+
+</code></pre>
+
+<p><strong>NOTA:</strong> En aquest cas concret, les implementacions actuals per browser (Firefox, Chrome, MSIE, etc.) no són prou madures per considerar-ne l&rsquo;utilització fora de l&rsquo;àmbit M2M (màquina a màquina). Tot i així, com a prova de concepte_ es pot utilitzar el següent codi HTML per fer enviar i rebre informació amb <em>Protocol Buffers</em>:</p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Prova de concepte&lt;/title&gt;
+&lt;script src=&quot;js/long.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bytebuffer.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/protobuf.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/axios.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+	      &quot;use strict&quot;;
+	      var CercaRequest, CercaResponse;
+	      let ProtoBuf = dcodeIO.ProtoBuf;
+
+	      let EquipamentEspecial = ProtoBuf
+	      .loadProtoFile('./EquipamentEspecial.proto', (err, builder)=&gt;{
+	    	  CercaRequest = builder.build('CercaRequest')
+	    	  CercaResponse = builder.build('CercaResponse')
+	    	  });
+
+	      let sendCercaRequest = () =&gt;{
+	    	
+	    	let vIdentificador = document.getElementById(&quot;identificador&quot;).value
+	       	let msg = new CercaRequest({ 
+	       		nom : &quot;&quot;, 
+	       		id: vIdentificador 
+	       		});
+	    	
+	    	let axiosRequestHeaders = {'Accept':'application/x-protobuf', 'Content-Type': 'application/x-protobuf'};
+	        axios.post('/api/equipamentEspecial', msg.toArrayBuffer(),
+	            { responseType: 'arraybuffer', headers: axiosRequestHeaders }
+	          ).then(function (response) {
+		            console.log('Response from the server: ', response)
+		            
+		            let msg = CercaResponse.decode(response.data)
+		            
+		            console.log('Decoded message', msg)
+		            document.getElementById('content').innerText = JSON.stringify(msg, null, 2)
+	          })
+	          .catch(function (response) {
+	            console.log(response)
+	          })
+	      }
+	&lt;/script&gt;
+	&lt;h1&gt;Prova amb Protocol Buffers&lt;/h1&gt;
+	&lt;p&gt;Prova de intercanvi de dades amb Protocol Buffers&lt;/p&gt;
+	&lt;pre id=&quot;content&quot;&gt;&lt;/pre&gt;
+	&lt;label for=&quot;identificador&quot;&gt;Identificador de l'equipament&lt;/label&gt;
+	&lt;input type=&quot;text&quot; id=&quot;identificador&quot; name=&quot;identificador&quot; value=&quot;2&quot; /&gt;
+	&lt;br /&gt;
+	&lt;!--  --&gt;
+	&lt;button onclick=&quot;sendCercaRequest()&quot;&gt;send message to
+		server&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Més info:
+* <a href="https://webapplog.com/json-is-not-cool-anymore/">https://webapplog.com/json-is-not-cool-anymore/</a>
+* <a href="https://github.com/azat-co/proto-buffer-api/tree/master/public">https://github.com/azat-co/proto-buffer-api/tree/master/public</a>
+* <a href="https://www.baeldung.com/spring-rest-api-with-protocol-buffers">https://www.baeldung.com/spring-rest-api-with-protocol-buffers</a>
+* <a href="https://dzone.com/articles/using-googles-protocol-buffers-with-java">https://dzone.com/articles/using-googles-protocol-buffers-with-java</a></p>
+
+<h4 id="multipart">Multipart</h4>
+
+<p>Abans de fer cap modificació cal generar, compilar i executar l&rsquo;aplicació per verificar que tot funciona bé.</p>
+
+<p><strong>NOTA:</strong> La manera recomanada de generar l&rsquo;aplicació és amb el plugin d&rsquo;Eclipse de Caniǵo que ve integrat amb <a href="https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/">l&rsquo;entorn de desenvolupament de Canigó</a>), i la compilació i desplegament amb els plugins d&rsquo;Eclipse de Maven i Spring</p>
+
+<ol>
+<li>Generar projecte amb archetype : <code>mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=multipart -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5</code></li>
+<li>Compilar amb <code>mvn -B -f multipart/pom.xml clean package</code></li>
+<li>Executar l&rsquo;aplicació generada mitjançant <code>java -Dapplication.defaultLanguage=ca -jar multipart/target/multipart.war</code></li>
+<li>Provar d&rsquo;accedir amb Firefox a <a href="http://localhost:8080/index.html">http://localhost:8080/index.html</a></li>
+</ol>
+
+<p>Un cop s&rsquo;han executat els pasos previs, s&rsquo;ha d&rsquo;afegir el suport específic pel tractament de dades <em>Multipart</em>, de la següent manera:</p>
+
+<ol>
+<li>Modificar el mètode dispatcherServletRegistration() de la classe Application.java per afegir abans del retorn:</li>
+</ol>
+
+<pre><code>		MultipartConfigFactory mcf = new MultipartConfigFactory();
+		mcf.setFileSizeThreshold(&quot;1MB&quot;);
+		mcf.setLocation(System.getProperty(&quot;java.io.tmpdir&quot;));
+		mcf.setMaxFileSize(&quot;1MB&quot;);
+		mcf.setMaxRequestSize(&quot;32MB&quot;);
+
+		registration.setMultipartConfig(mcf.createMultipartConfig());
+</code></pre>
+
+<p>Un cop acabat el suport específic per <em>Multipart</em>, Spring ho integra automàticament amb les annotacions REST utilitzant la configuració prèvia. Un exemple d&rsquo;endpoint REST per missatges <em>Multipart</em> seria el següent:</p>
+
+<pre><code>	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE }, headers = &quot;content-type=multipart/form-data&quot;)
+	@ResponseStatus(HttpStatus.ACCEPTED)
+	public void saveEquipamentMultipart(//
+			@RequestParam(&quot;descripcio1&quot;) String descripcio1, //
+			@RequestPart(&quot;fitxer1&quot;) MultipartFile file1, //
+			@RequestPart(name = &quot;fitxer2&quot;, required = false) MultipartFile file2 //
+	) throws Exception {
+		// TODO
+	}
+</code></pre>
+
+<p><strong>NOTA:</strong> <em>Com a prova de concepte</em> es pot utilitzar el següent codi HTML com a referència per enviar un fitxer mitjançant <em>Multipart</em>:</p>
+
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Prova amb Multipart&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;h1&gt;Prova amb Multipart&lt;/h1&gt;
+	&lt;p&gt;Prova de pujar un formulari Multipart&lt;/p&gt;
+	&lt;form name=&quot;miFormulario&quot; action=&quot;/api/equipaments&quot; method=&quot;post&quot;
+		enctype=&quot;multipart/form-data&quot;&gt;
+		&lt;!--  --&gt;
+		&lt;label for=&quot;descripcio1&quot;&gt;Descripció fitxer 1&lt;/label&gt;&lt;input type=&quot;text&quot;
+			name=&quot;descripcio1&quot; value=&quot;descripcio001&quot; /&gt;&lt;br /&gt;
+		&lt;!--  --&gt;
+		&lt;label for=&quot;fitxer1&quot;&gt;Adjuntar fitxer 1&lt;/label&gt;&lt;input type=&quot;file&quot;
+			name=&quot;fitxer1&quot; /&gt;&lt;br /&gt;
+		&lt;!--  --&gt;
+		&lt;input type=&quot;submit&quot; /&gt;
+	&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h4 id="xml-base64binary">XML:base64Binary</h4>
+
+<p>Abans de fer cap modificació, cal generar, compilar i executar l&rsquo;aplicació per verificar que tot funciona bé.</p>
+
+<p><strong>NOTA:</strong> <em>La manera recomanada de generar l&rsquo;aplicació és amb el plugin d&rsquo;Eclipse de Caniǵo que ve integrat amb <a href="https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/">l&rsquo;entorn de desenvolupament de Canigó</a>), i la compilació i desplegament amb els plugins d&rsquo;Eclipse de Maven i Spring</em></p>
+
+<ol>
+<li>Generar projecte amb archetype: <code>mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=xmlbase64binary -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5</code></li>
+<li>Compilar amb <code>mvn -B -f xmlbase64binary/pom.xml clean package</code></li>
+<li>Executar l&rsquo;aplicació generada mitjançant <code>java -Dapplication.defaultLanguage=ca -jar xmlbase64binary/target/xmlbase64binary.war</code></li>
+<li>Provar d&rsquo;accedir amb un navegador web a <a href="http://localhost:8080/index.html">http://localhost:8080/index.html</a></li>
+</ol>
+
+<p>Un cop s&rsquo;han executat els passos previs per disposar d&rsquo;una aplicació Canigó 3.2 funcionant, s&rsquo;ha de triar la implementació (JAXB, CXF, Axis, Xmlbeans, etc.) per treballar. Per simplicitat en aquest exemple farem ús de l&rsquo;estàndard JAXB per generar el codi java:</p>
+
+<ol>
+<li>Afegir el fitxer src/main/xsd/global.xjb
+```
+&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo; standalone=&ldquo;yes&rdquo;?&gt;
+<jaxb:bindings 
+	xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	jaxb:extensionBindingPrefixes="xjc" jaxb:version="2.0"></li>
+</ol>
+
+<p>	<a href="jaxb:globalBindings">jaxb:globalBindings</a>
+		<xjc:simple />
+		<xjc:serializable uid="-1" />
+		<jaxb:javaType name="java.util.Calendar"
+			xmlType="xs:dateTime"
+			parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime"
+			printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+	<a href="/jaxb:globalBindings">/jaxb:globalBindings</a></p>
+
+<p><a href="/jaxb:bindings">/jaxb:bindings</a></p>
+
+<pre><code>2. Crear el següent fitxer d'exemple: src/main/xsd/EquipamentEspecial.xsd
+</code></pre>
+
+<p>&lt;?xml version=&ldquo;1.0&rdquo; encoding=&ldquo;UTF-8&rdquo;?&gt;
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="urn:cscanigo.howto.rest:xmlbase64binary:1.0-SNAPSHOT"
+	xmlns:tns="urn:cscanigo.howto.rest:xmlbase64binary:1.0-SNAPSHOT"
+	elementFormDefault="unqualified"></p>
+
+<p>	<element name="Root">
+		<complexType>
+			<choice minOccurs="1">
+				<element name="CercaRequest" type="tns:CercaRequest"></element>
+				<element name="CercaPaginadaRequest" type="tns:CercaPaginadaRequest"></element>
+				<element name="CercaResponse" type="tns:CercaResponse"></element>
+			</choice>
+		</complexType>
+	</element></p>
+
+<p>	<complexType name="CercaRequest">
+		<sequence>
+			<element name="id" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType></p>
+
+<p>	<complexType name="CercaPaginadaRequest">
+		<sequence>
+			<element name="id" type="long" minOccurs="0" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="page" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="rpp" type="int" minOccurs="0" maxOccurs="1" />
+			<element name="sort" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="filter" type="string" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType></p>
+
+<p>	<complexType name="CercaResponse">
+		<sequence>
+			<element name="total" type="int" minOccurs="1" maxOccurs="1" />
+			<element name="equipaments" type="tns:EquipamentEspecial" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType></p>
+
+<p>	<complexType name="EquipamentEspecial">
+		<sequence>
+			<element name="id" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="municipi" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="documents" type="tns:DocumentacioEquipamentEspecial" minOccurs="0" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType></p>
+
+<p>	<complexType name="DocumentacioEquipamentEspecial">
+		<sequence>
+			<element name="total" type="long" minOccurs="1" maxOccurs="1" />
+			<element name="nom" type="string" minOccurs="1" maxOccurs="1" />
+			<element name="descripcio" type="string" minOccurs="0" maxOccurs="1" />
+			<element name="contingut" type="base64Binary" minOccurs="0" maxOccurs="1" />
+		</sequence>
+	</complexType></p>
+
+<p></schema></p>
+
+<pre><code>2. Modificar pom.xml per afegir el següent plugin:
+</code></pre>
+
+<p>			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>xjc1</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<packageName>${project.groupId}.xsd.equipamentEspecial</packageName>
+							<sources>
+								<source>${project.basedir}/src/main/xsd/EquipamentEspecial.xsd</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<target>2.0</target>
+					<addGeneratedAnnotation>true</addGeneratedAnnotation>
+					<extension>true</extension>
+					<failOnNoSchemas>false</failOnNoSchemas>
+					<laxSchemaValidation>true</laxSchemaValidation>
+					<locale>en</locale>
+					<outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
+					<xjbSources>
+						<xjbSource>${project.basedir}/src/main/xsd/global.xjb</xjbSource>
+					</xjbSources>
+				</configuration>
+			</plugin></p>
+
+<pre><code>
+Un cop afegit el suport específic per _JAXB_, Maven en la fase de generació de codi font genera les classes Java. En l'exemple del EquipamentEspecial.xsd la referència a *XML:base64binary* es generaria automàticament a codi Java de la següent manera (veure el camp &quot;contingut&quot;):
+
+</code></pre>
+
+<p>/**
+ * <p>Java class for DocumentacioEquipamentEspecial complex type.
+ *
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ *
+ * <pre>
+ * &lt;complexType name=&ldquo;DocumentacioEquipamentEspecial&rdquo;&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base=&ldquo;{<a href="http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;">http://www.w3.org/2001/XMLSchema}anyType&quot;&gt;</a>
+ *       &lt;sequence&gt;
+ *         &lt;element name=&ldquo;total&rdquo; type=&ldquo;{<a href="http://www.w3.org/2001/XMLSchema}long&quot;/&gt;">http://www.w3.org/2001/XMLSchema}long&quot;/&gt;</a>
+ *         &lt;element name=&ldquo;nom&rdquo; type=&ldquo;{<a href="http://www.w3.org/2001/XMLSchema}string&quot;/&gt;">http://www.w3.org/2001/XMLSchema}string&quot;/&gt;</a>
+ *         &lt;element name=&ldquo;descripcio&rdquo; type=&ldquo;{<a href="http://www.w3.org/2001/XMLSchema}string&quot;">http://www.w3.org/2001/XMLSchema}string&quot;</a> minOccurs=&ldquo;0&rdquo;/&gt;
+ *         &lt;element name=&ldquo;contingut&rdquo; type=&ldquo;{<a href="http://www.w3.org/2001/XMLSchema}base64Binary&quot;">http://www.w3.org/2001/XMLSchema}base64Binary&quot;</a> minOccurs=&ldquo;0&rdquo;/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * </pre>
+ *
+ *
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = &ldquo;DocumentacioEquipamentEspecial&rdquo;, propOrder = {
+    &ldquo;total&rdquo;,
+    &ldquo;nom&rdquo;,
+    &ldquo;descripcio&rdquo;,
+    &ldquo;contingut&rdquo;
+})
+@Generated(value = &ldquo;com.sun.tools.xjc.Driver&rdquo;, date = &ldquo;2018-09-12T12:59:02+02:00&rdquo;, comments = &ldquo;JAXB RI v2.2.11&rdquo;)
+public class DocumentacioEquipamentEspecial
+    implements Serializable
+{</p>
+
+<pre><code>@Generated(value = &quot;com.sun.tools.xjc.Driver&quot;, date = &quot;2018-09-12T12:59:02+02:00&quot;, comments = &quot;JAXB RI v2.2.11&quot;)
+private final static long serialVersionUID = -1L;
+@Generated(value = &quot;com.sun.tools.xjc.Driver&quot;, date = &quot;2018-09-12T12:59:02+02:00&quot;, comments = &quot;JAXB RI v2.2.11&quot;)
+protected long total;
+@XmlElement(required = true)
+@Generated(value = &quot;com.sun.tools.xjc.Driver&quot;, date = &quot;2018-09-12T12:59:02+02:00&quot;, comments = &quot;JAXB RI v2.2.11&quot;)
+protected String nom;
+@Generated(value = &quot;com.sun.tools.xjc.Driver&quot;, date = &quot;2018-09-12T12:59:02+02:00&quot;, comments = &quot;JAXB RI v2.2.11&quot;)
+protected String descripcio;
+@Generated(value = &quot;com.sun.tools.xjc.Driver&quot;, date = &quot;2018-09-12T12:59:02+02:00&quot;, comments = &quot;JAXB RI v2.2.11&quot;)
+protected byte[] contingut;
+</code></pre>
+
+<p>// &hellip; la resta de codi &hellip;</p>
+
+<p>```</p>
+
+<p>Més info:
+1. <a href="https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html">https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html</a>
+2. <a href="http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/">http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/</a>
+3. <a href="https://www.journaldev.com/1312/jaxb2-maven-plugin-xjc-example-generate-java-classes-xsd">https://www.journaldev.com/1312/jaxb2-maven-plugin-xjc-example-generate-java-classes-xsd</a></p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

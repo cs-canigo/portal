@@ -1,0 +1,8 @@
+cat.gencat.ctti.canigo.arch.web.rs
+cat.gencat.ctti.canigo.arch.web.rs.config
+cat.gencat.ctti.canigo.arch.web.rs.controller
+cat.gencat.ctti.canigo.arch.web.rs.controller.exception
+cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler
+cat.gencat.ctti.canigo.arch.web.rs.model
+cat.gencat.ctti.canigo.arch.web.rs.request
+cat.gencat.ctti.canigo.arch.web.rs.response

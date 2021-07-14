@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Resolució problema optimització Spring a Canigó 2</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Resolució problema optimització Spring a Canigó 2\" />");
+		document.write("<meta name=\"description\" content=\"Com resoldre el problema conegut d\x27optimització d\x27obtenció de Beans de Spring a Canigó 2\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Resolució problema optimització Spring a Canigó 2
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 03-12-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="introducció-al-problema">Introducció al problema</h3>
+
+<p>El Juliol de 2019 es va reportar un problema de rendiment a aplicacions que utilitzaven la versió 2 de Canigó, per tant, aquest how-to va dirigit a tots aquells perfils tècnics que utilitzin la versió 2 de Canigó i/o Spring anterior a la versió 3.1.2.</p>
+
+<p>El problema de rendiment s&rsquo;originava si hi havia una alta utilització del component <strong>net.gencat.ctti.canigo.services.web.taglib.util.TagUtil</strong> de la llibreria <strong>canigo-services-web</strong> de Canigó 2 i més concretament, el que succeïa és que es generava un bloqueig als <em>threads</em> del servidor d&rsquo;aplicacions el qual acabava desestabilitzant el sistema. Un exemple de traça del servidor d&rsquo;aplicacions amb el <em>thread</em> bloquejat:</p>
+
+<pre><code>
+&lt;Jul 17, 2019 12:35:42 PM CEST&gt; &lt;Error&gt; &lt;WebLogicServer&gt; &lt;BEA-000337&gt; &lt;[STUCK] ExecuteThread: '44' for queue: 'weblogic.kernel.Default (self-tuning)' has been busy for &quot;668&quot; seconds working on the request &quot;Http Request Information: weblogic.servlet.internal.ServletRequestImpl@1fc30e99[GET XXX.jsp]
+&quot;, which is more than the configured time (StuckThreadMaxTime) of &quot;600&quot; seconds in &quot;server-failure-trigger&quot;. Stack trace:
+    org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:141)
+    org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:246)
+    org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:160)
+    org.springframework.beans.factory.support.AbstractBeanFactory.getTypeForFactoryBean(AbstractBeanFactory.java:1145)
+    org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.getTypeForFactoryBean(AbstractAutowireCapableBeanFactory.java:569)
+    org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(AbstractBeanFactory.java:439)
+    org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanNamesForType(DefaultListableBeanFactory.java:174)
+    org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:243)
+    org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:237)
+    org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:814)
+    net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils.getBeanOfType(WebApplicationContextUtils.java:45)
+    net.gencat.ctti.canigo.services.web.taglib.util.TagUtil.copyConfiguration(TagUtil.java:163)
+    net.gencat.ctti.canigo.services.web.struts.taglib.forms.fields.OptionsFieldTag.doEndTag(OptionsFieldTag.java:85)
+    net.gencat.ctti.canigo.services.web.struts.taglib.forms.fields.helpers.SelectFieldTagHelper.generateOptions(SelectFieldTagHelper.java:174)
+    net.gencat.ctti.canigo.services.web.struts.taglib.forms.fields.SelectFieldTag.doAfterValue(SelectFieldTag.java:330)
+    fr.improve.struts.taglib.layout.field.SelectTag.doEndEditField(SelectTag.java:238)
+    fr.improve.struts.taglib.layout.field.SelectTag.doEndEditMode(SelectTag.java:229)
+    fr.improve.struts.taglib.layout.field.AbstractModeFieldTag.doEndLayoutTag(AbstractModeFieldTag.java:110)
+    net.gencat.ctti.canigo.services.web.struts.taglib.forms.fields.SelectFieldTag.doEndLayoutTag(SelectFieldTag.java:352)
+    fr.improve.struts.taglib.layout.LayoutTagSupport.doEndTag(LayoutTagSupport.java:47)
+
+</code></pre>
+
+<p><br></p>
+
+<h3 id="detall-del-problema">Detall del problema</h3>
+
+<p>El <em>bug</em> radica en la forma de llistar i retornar un Bean de Spring. La versió 2.0.5 de Spring que s&rsquo;utilitza a Canigó 2, el te registrat a la següent <em>issue</em>:</p>
+
+<p><a href="https://github.com/spring-projects/spring-framework/issues/14083">https://github.com/spring-projects/spring-framework/issues/14083</a></p>
+
+<p>El problema s&rsquo;apuntava a la forma com Spring retornava un Bean no era òptim i era necessari incorporar una cau (<em>caché</em>) i així va ser resolt a partir de la versió 3.1.2 de Spring. Es pot consultar el detall de la resolució al següent Commit de Spring:</p>
+
+<p><a href="https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32">https://github.com/spring-projects/spring-framework/commit/4c7a1c0a5403b35dd812dae1f2a753538928bb32</a></p>
+
+<p><br></p>
+
+<h3 id="solució-al-problema">Solució al problema</h3>
+
+<p>Hi ha diverses formes de resoldre el problema: Optimitzar l&rsquo;obtenció dels beans de Spring als components de Canigó (es mitiga el problema però no se soluciona), afegir una cau al mètode centralitzat de Canigó d&rsquo;obtenció de Beans o afegir-la a nivell de Spring. En els següents apartats es detalla cadascuna d&rsquo;aquestes solucions, tot i això, des de des de CS Canigó recomanem aplicar la d’afegir una cau a nivell de Spring.</p>
+
+<p><br></br></p>
+
+<h4 id="solució-1-optimitzar-l-obtenció-dels-beans-de-spring-als-components-de-canigó">Solució 1: Optimitzar l&rsquo;obtenció dels beans de Spring als components de Canigó</h4>
+
+<p>Amb aquesta solució es mitiga el problema però no es resol, ja que únicament s&rsquo;optimitza la forma en què es demanen els <em>beans</em> a Spring des de Canigó, per tant, des de CS Canigó <strong>no es recomana la utilització d&rsquo;aquesta solució</strong>.</p>
+
+<p>Canigó 2, per obtenir els <em>beans</em> de Spring, fa servir el component <strong>net.gencat.ctti.canigo.services.web.spring.util.WebApplicationContextUtils</strong> mètode <strong>getBeanOfType</strong>. Així, per exemple, per obtenir el servei per escriure a log des del component <strong>TagUtil</strong>, s&rsquo;obté a partir de la següent crida:</p>
+
+<pre><code>
+LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                      .getServletContext(),
+                  LoggingService.class);
+
+</code></pre>
+
+<p>El component <strong>TagUtil</strong> no està correctament optimitzat i cada cop que vol escriure demana a Spring que li retorni el <em>bean</em> <em>LoggingService</em>. Exemple:</p>
+
+<pre><code>
+      } else if (!(aTag instanceof OptionsFieldTag)) {
+
+         LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                   .getServletContext(),
+               LoggingService.class);
+
+         if (logService != null) {
+
+            logService.getLog(TagUtil.class)
+                      .info(&quot;No bean found in tagsConfiguration property under styleId &quot; +
+               aTag.getStyleId() + &quot; for bean &quot; + aTag.getClass().getName());
+         }
+
+
+      } else {
+         LoggingService logService = (LoggingService) WebApplicationContextUtils.getBeanOfType(aTag.getPageContext()
+                                                                                                   .getServletContext(),
+               LoggingService.class);
+
+         if (logService != null) {
+            logService.getLog(TagUtil.class)
+                      .info(&quot;Skipping options field &quot; + aTag.getStyleId());
+         }
+
+</code></pre>
+
+<p>Aquesta manera no òptima d&rsquo;obtenir el <em>bean</em> fa que aflueixi ràpidament el problema d&rsquo;optimització del retorn de <em>beans</em> de Spring, per a resoldre&rsquo;l, es pot modificar el component de Canigó 2 reescrivint el com s&rsquo;obté el <em>bean</em> de Spring, guardant-lo en una variable global. Així per exemple a <strong>Tagutil</strong> tindríem:</p>
+
+<pre><code>
+...
+public class TagUtil {
+
+	private static LoggingService logService;
+
+...
+
+</code></pre>
+
+<p>I abans de la utilització del Bean LoggingService consultaríem si aquest ja ha estat carregat anteriorment o no, per tal de només demanar a Spring que ens retornés el Bean una vegada. Per exemple:</p>
+
+<pre><code>
+if (logService == null)
+					logService = (LoggingService) WebApplicationContextUtils
+						.getBeanOfType(aTag.getPageContext().getServletContext(), LoggingService.class);
+
+				if (logService != null) {
+					logService.getLog(TagUtil.class)
+							.error(&quot;Class from JSP &quot; + aTag.getClass().getName()
+									+ &quot; doesn't match with class in tagsConfiguration &quot;
+									+ tagConfiguration.getClass().getName() + &quot; for styleId &quot; + aTag.getStyleId(), ex);
+				}
+
+</code></pre>
+
+<p>S&rsquo;ha de tenir present que si es vol aplicar aquesta solució s&rsquo;haurà de modificar tots els components que utilitzin <strong>WebApplicationContextUtils</strong> mètode <strong>getBeansOfType</strong>:</p>
+
+<ul>
+<li>Filtre de Loggin</li>
+<li>Filtre de Acegi</li>
+<li>Mode tag</li>
+</ul>
+
+<p><br></p>
+
+<h4 id="solució-2-afegir-una-cau-al-mètode-centralitzat-de-canigó-d-obtenció-de-beans">Solució 2: Afegir una cau al mètode centralitzat de Canigó d&rsquo;obtenció de Beans</h4>
+
+<p>A Canigó 2 la manera d&rsquo;obtenció dels Beans de Spring estava centralitzat al component <strong>WebApplicationContextUtils</strong> mètode <strong>getBeansOfType</strong>, per tant, per no haver de tocar a tots els llocs on s&rsquo;obté un Bean de Spring, es pot afegir una cau a aquest component.</p>
+
+<p>Afegirem una cau dels noms dels beans de Spring de la mateixa manera com van resoldre el <em>bug</em> de Spring. Es pot consultar aquesta solució en el següent enllaç: <a href="https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java">https://github.com/spring-projects/spring-framework/blob/4c7a1c0a5403b35dd812dae1f2a753538928bb32/spring-beans/src/main/java/org/springframework/beans/factory/support/DefaultListableBeanFactory.java</a></p>
+
+<p>Així, podríem tenir el component <strong>WebApplicationContextUtils</strong> amb la cau de la següent manera:</p>
+
+<pre><code class="language-java">
+public class WebApplicationContextUtils extends org.springframework.web.context.support.WebApplicationContextUtils {
+
+	/** Map of singleton bean names keyed by bean class */
+	private static final Map&lt;Class&lt;?&gt;, String[]&gt; cache = new ConcurrentHashMap&lt;Class&lt;?&gt;, String[]&gt;();
+
+	/**
+	 * Documentaci�.
+	 *
+	 * @param context
+	 *            Documentaci�
+	 * @param clazz
+	 *            Documentaci�
+	 *
+	 * @return Documentaci�
+	 */
+	public static Object getBeanOfType(ServletContext context, Class clazz) {
+		WebApplicationContext webAppContext = WebApplicationContextUtils.getWebApplicationContext(context);
+
+		if (webAppContext != null) {
+
+			Map map = getBeansOfType(webAppContext, clazz);
+
+			if ((map != null) &amp;&amp; (map.size() &gt; 0)) {
+				return map.get(map.keySet().iterator().next());
+			}
+		}
+
+		return null;
+	}
+
+	private static String[] getBeanNamesForType(WebApplicationContext webAppContext, Class clazz) {
+		String[] resolvedBeanNames = cache.get(clazz);
+		if (resolvedBeanNames != null) {
+			return resolvedBeanNames;
+		}
+		resolvedBeanNames = webAppContext.getBeanNamesForType(clazz);
+		cache.put(clazz, resolvedBeanNames);
+
+		return resolvedBeanNames;
+	}
+
+	private static Map getBeansOfType(WebApplicationContext webAppContext, Class clazz) {
+		Map result = null;
+
+		String[] beanNames = getBeanNamesForType(webAppContext, clazz);
+
+		if (beanNames != null) {
+			result = CollectionFactory.createLinkedMapIfPossible(beanNames.length);
+			for (int i = 0; i &lt; beanNames.length; i++) {
+				String beanName = beanNames[i];
+				result.put(beanName, webAppContext.getBean(beanName));
+			}
+		}
+
+		return result;
+	}
+
+</code></pre>
+
+<p><br></p>
+
+<h4 id="solució-3-afegir-una-cau-a-nivell-de-spring">Solució 3: Afegir una cau a nivell de Spring</h4>
+
+<p>Per a optimitzar l&rsquo;obtenció dels Beans de Spring a nivell global, no només als components de Canigó, cal afegir una cau a nivell global. Aquesta solució és homologa a l&rsquo;aportada al blog:</p>
+
+<p><a href="http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/">http://jawspeak.com/2010/11/28/spring-slow-autowiring-by-type-getbeannamesfortype-fix-10x-speed-boost-3600ms-to/</a></p>
+
+<p>La solució consta d&rsquo;una implementació de <strong>DefaultListableBeanFactory</strong> amb cau i instanciant-la en el <em>WebApplicationContext</em>. Aquesta implementació podria ser:</p>
+
+<pre><code class="language-java">
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.log4j.Logger;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+
+public class CachingByTypeBeanFactory extends DefaultListableBeanFactory {
+    private static Logger log = Logger.getLogger(CachingByTypeBeanFactory.class);
+
+	/** Map of singleton bean names keyed by bean class */
+	private final Map&lt;Class&lt;?&gt;, String[]&gt; singletonBeanNamesByType = new ConcurrentHashMap&lt;Class&lt;?&gt;, String[]&gt;();
+
+	/** Map of non-singleton bean names keyed by bean class */
+	private final Map&lt;Class&lt;?&gt;, String[]&gt; nonSingletonBeanNamesByType = new ConcurrentHashMap&lt;Class&lt;?&gt;, String[]&gt;();
+
+    @Override
+    public String[] getBeanNamesForType(Class type) {
+        return getBeanNamesForType(type, true, true);
+    }
+
+    @Override
+    public String[] getBeanNamesForType(Class type, boolean includeNonSingletons, boolean allowEagerInit) {
+		if (type == null || !allowEagerInit) {
+			return super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
+		}
+
+		Map&lt;Class&lt;?&gt;, String[]&gt; cache = includeNonSingletons ?
+				this.nonSingletonBeanNamesByType : this.singletonBeanNamesByType;
+
+		String[] resolvedBeanNames = cache.get(type);
+		if (resolvedBeanNames != null) {
+			return resolvedBeanNames;
+		}
+
+		resolvedBeanNames = super.getBeanNamesForType(type, includeNonSingletons, allowEagerInit);
+		cache.put(type, resolvedBeanNames);
+
+		return resolvedBeanNames;
+    }
+
+</code></pre>
+
+<p>Creem una factoria que creï la nova implementació amb cau de <strong>DefaultListableBeanFactory</strong>:</p>
+
+<pre><code class="language-java">
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
+public class CachingWebApplicationContext extends XmlWebApplicationContext {
+
+    @Override
+    protected DefaultListableBeanFactory createBeanFactory() {
+        return new CachingByTypeBeanFactory();
+    }
+}
+
+</code></pre>
+
+<p>Registrarem aquesta factoria al web.xml</p>
+
+<pre><code class="language-xml">    &lt;context-param&gt;
+	&lt;param-name&gt;contextClass&lt;/param-name&gt;
+	&lt;param-value&gt;CachingWebApplicationContext&lt;/param-value&gt;
+    &lt;/context-param&gt;
+
+</code></pre>
+
+<p><br></p>
+
+<h3 id="conclusió">Conclusió</h3>
+
+<p>Si una aplicació està utilitzant Spring anterior a la versió 3.1.2 és necessari revisar-la per determinar si està afectada per aquest problema i decidir quina solució caldria aplicar tot i que <strong>la que es recomana des de CS Canigó és la Solució 3 - Afegir una cau a nivell de Spring</strong>.</p>
+
+<p>Si necessiteu més informació, podeu obrir tiquet via <a href="https://cstd.ctti.gencat.cat/jiracstd/projects/CAN">JIRA CSTD</a> o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

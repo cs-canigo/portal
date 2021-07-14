@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>SIC 3.0 - Utilitzar imatges Docker Builder</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"SIC 3.0 - Utilitzar imatges Docker Builder\" />");
+		document.write("<meta name=\"description\" content=\"SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d\x27imatges de construcció del SIC\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	SIC 3.0 - Utilitzar imatges Docker Builder
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 10-05-2021
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="introducció">Introducció</h2>
+
+<p>El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d’un <strong>entorn aïllat i immutable
+de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors</strong>. Aquest how-to va dirigit a tots aquells
+perfils tècnics que tinguin la necessitat de simular i executar les imatges Docker en un entorn local tal i com ho realitza el SIC.</p>
+
+<h2 id="ús-del-registre-privat">Ús del registre privat</h2>
+
+<p>En el <a href="/sic30-serveis/cataleg-imatges/">Catàleg d&rsquo;imatges corporatiu</a> podreu trobar informació sobre el registre
+d&rsquo;imatges, el codi font, la documentació associada i el procediment per a disposar d&rsquo;accés.</p>
+
+<h3 id="accés-via-consola-web">Accés via consola web</h3>
+
+<p>Es pot accedir al Harbor a través de la seva consola web mitjançant: <a href="https://docker-registry.ctti.extranet.gencat.cat">https://docker-registry.ctti.extranet.gencat.cat</a>.
+Un cop dins es pot navegar a través de les carpetes de les imatges del projecte <a href="https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories"><strong>gencat-sic-builders</strong></a>.</p>
+
+<h3 id="login">Login</h3>
+
+<p>Per a poder descarregar les imatges en local primer ens hem de autenticar de la següent manera:</p>
+
+<pre><code>docker login https://docker-registry.ctti.extranet.gencat.cat
+</code></pre>
+
+<p>Cal introduir l&rsquo;usuari i paraula de pas proporcionats per l&rsquo;Oficina Tècnica de Canigó.</p>
+
+<h3 id="descàrrega-d-imatges">Descàrrega d&rsquo;imatges</h3>
+
+<p>Un cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:</p>
+
+<pre><code>docker pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
+</code></pre>
+
+<p>On, en el cas d&rsquo;exemple, estem descarregant-nos la imatge <em>maven-builder</em> versió 1.0-3.6-8.</p>
+
+<h3 id="execució-de-les-imatges">Execució de les imatges</h3>
+
+<p>Un cop descarregada la imatge Docker, la podem executar en el nostre entorn local mitjançant:</p>
+
+<pre><code>docker run -it --rm \
+ --name gencatsic-maven-builder \
+ -v $HOME/.m2/repository:/repository \
+ -v $HOME/.m2/settings.xml:/settings/settings.xml \
+ -v $PWD:/app -w &quot;/app&quot; \
+ docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8 \
+ mvn --version
+</code></pre>
+
+<p>En aquest cas estem indicant que volem:</p>
+
+<ul>
+<li><p>Que el nom de la imatge executant-se tingui el nom <em>gencatsic-maven-builder</em>.</p></li>
+
+<li><p>Compartir el nostre repository maven, ubicat a <em>$HOME/.m2/repository</em>, amb el repository maven de la imatge Docker .</p></li>
+
+<li><p>Compartir el nostre settings.xml, ubicat a $HOME/.m2/settings.xml, amb el settings.xml de la imatge Docker.</p></li>
+
+<li><p>Compartir el codi font de la nostre aplicació, ubicat a <em>$PWD</em>, amb el directori de treball de la imatge Docker.</p></li>
+
+<li><p>Executar el goal de maven <em>mvn &ndash;version</em>.</p></li>
+</ul>
+
+<h3 id="logout">Logout</h3>
+
+<p>Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:</p>
+
+<pre><code>docker logout https://docker-registry.ctti.extranet.gencat.cat
+</code></pre>
+
+<h2 id="estendre-d-imatges-docker-de-sic">Estendre d’imatges Docker de SIC</h2>
+
+<p>És possible generar una imatge Docker heretant d&rsquo;una imatge del catàleg de SIC.
+Per a fer-ho, s&rsquo;ha d’incloure al fitxer <code>Dockerfile</code> la instrucció <a href="https://docs.docker.com/engine/reference/builder/#from">FROM</a>
+seguit del nom de la imatge base a utilitzar.
+Per exemple:</p>
+
+<pre><code class="language-bash">FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
+</code></pre>
+
+<p></br></p>
+
+<p>Per tal d’evitar errors en la construcció de la imatge estesa, cal tenir en compte algunes recomanacions:</p>
+
+<ul>
+<li><p>Els usuaris s&rsquo;hereten de la imatge base i, per defecte, els usuaris de les imatges del SIC disposen de permisos limitats i
+destinats exclusivament a la construcció d&rsquo;artefactes. És a dir, si es necessita instal·lar o executar algun programa addicional serà
+necessari invocar la instrucció <a href="https://docs.docker.com/engine/reference/builder/#user">USER</a> per a canviar l&rsquo;usuari a <em>root</em>.</p></li>
+
+<li><p>Si es vol mantenir el comportament predeterminat de les imatges del SIC serà necessari agregar al final
+la instrucció <a href="https://docs.docker.com/engine/reference/builder/#entrypoint">ENTRYPOINT</a> amb la mateixa instrucció que està
+configurada a la imatge base i assegurar-se que l&rsquo;usuari d&rsquo;execució del contenidor es correspon amb el que s&rsquo;utilitza a la imatge base.</p></li>
+
+<li><p>Cal revisar el fitxer <code>Dockerfile</code> de la imatge base del SIC a utilitzar per a assegurar-se que les instruccions que conté
+apliquen per a la nova imatge. Per exemple, en una imatge estesa l&rsquo;equip responsable del manteniment i suport és diferent, per lo que cal
+canviar el <a href="https://docs.docker.com/engine/reference/builder/#maintainer-deprecated">MAINTAINER</a> i/o
+<a href="https://docs.docker.com/engine/reference/builder/#label">LABEL</a> per a indicar l’adreça de correu adient.
+</br></p></li>
+</ul>
+
+<p>Exemple:</p>
+
+<pre><code class="language-bash"># S'utilitza una imatge base del SIC.
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/maven-builder:1.0-3.6-8
+
+# Es modifica el responsable de la imatge.
+LABEL maintainer=&quot;change.me@gencat.cat&quot;
+
+# Es modifica l'usuari a root per a crear una variable d'entorn, instal·lar un programa addicional, donar permisos i
+eliminar fitxers innecessaris.
+USER root
+ENV FLEX_HOME='/flex-sdk'
+
+RUN apk --update add --no-cache --quiet --virtual .build-deps curl unzip \
+&amp;&amp; curl -fsSL -o /tmp/flex-sdk.zip http://download.macromedia.com/pub/flex/sdk/builds/flex3/flex_sdk_3.4.1.10084A.zip \
+&amp;&amp; curl -fsSL -o /tmp/flex-sdk-libs.zip http://download.macromedia.com/pub/flex/sdk/datavisualization_sdk3.4.zip \
+&amp;&amp; unzip /tmp/flex-sdk.zip -d &quot;${FLEX_HOME}&quot; \
+&amp;&amp; unzip /tmp/flex-sdk-libs.zip -d &quot;${FLEX_HOME}&quot; \
+&amp;&amp; chown -R maven:maven ${FLEX_HOME} \
+&amp;&amp; chmod -R a+rx ${FLEX_HOME} \
+&amp;&amp; apk del .build-deps \
+&amp;&amp; rm -rf /tmp/*
+
+# S'assegura que l'usuari d'execució dels contenidors associats a la imatge es correspongui amb l'utilitzat a la imatge
+base i que, si la imatge base té un ENTRYPOINT, aquest sigui invocat.
+USER maven
+ENTRYPOINT [&quot;/usr/local/bin/mvn-entrypoint.sh&quot;]
+</code></pre>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+version: 2.0.0
+info:
+  version: 1.2.0
+  description: Lib common
+global-env:
+  - PUBLISH_PARAMS: '-f pom.xml -Dmaven.test.skip=true'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn clean package -Dmaven.test.skip=true
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]

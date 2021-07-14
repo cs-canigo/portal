@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca-ES"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>Comunicat Mensual Oficina de Frameworks i Solucions d'Arquitectura</title>
+
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_blocs.css" rel="stylesheet" type="text/css" /><!-- <link
+href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_GridB2.css"
+rel="stylesheet" type="text/css" /> -->
+
+<link href="http://www.gencat.cat/piv/css/comuns/globals/FW_estils.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_capPeu.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_menuOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_estilsOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www.gencat.cat/piv/css/portals/PIV/css/FW_estils.css" rel="stylesheet" type="text/css" />
+<style>
+ul li {
+list-style-type: square;
+color: #000000;
+font-size: 1em;
+}
+ul li span{
+color: #000000;
+font-size: 1.3em;
+font-weight: bold;
+}
+a.link {
+text-decoration: none !important;
+color: black;
+padding: 1px 3px 1px 3px;
+font-size: .9em;
+color: #000000;
+padding: 5px;
+font-weight: bold;
+}
+a.sel {
+color: #AC2115;
+}
+td.top {
+vertical-align: top;
+}
+div.textoListados ul li {
+list-style-type: square;
+color: #000000;
+font-size: .9em;
+}
+hr.liniaVermella {
+color: #bf2f14;
+background-color:#bf2f14;
+height: 2px;
+border: none;
+}
+</style></head>
+<body>
+<div class="FW_bWidth">
+<div class="FW_bMinwidth">
+<div class="FW_bContainer"><!-- Inici FW_bMarc: Capa que cont&egrave; tota la plana en uns marges -->
+<div class="FW_bMarc">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" align="left"><!-- Inici FW_escut -->
+<div class="FW_bEscut">
+<h1> <a href="http://www.gencat.cat/" id="FW_gencat"> <img src="http://www.gencat.cat/piv/css/comuns/img/gcc_fs_logogeneralitat.gif" alt="Generalitat de Catalunya www.gencat.cat" title="Duu a la pàgina principal de la Generalitat de Catalunya" height="30" width="186" /> </a> </h1>
+</div>
+<!-- Fi FW_escut --> </td>
+<td> </td>
+<td align="right" valign="bottom"> <img src="http://canigo.ctti.gencat.cat/confluence/download/resources/OTCanigo_logo175x36.png" alt="Centre de Suport Canigó" height="30" width="186" />
+&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td> </td>
+<td class="navegacio" align="right"><!-- Inici FW_bMenuCap -->
+<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CAN/Centre+de+Suport">Frameworks i Solucions d'Arquitectura</a>&nbsp;&nbsp; <a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CANPUB/Comunicats">Comunicats Anteriors</a><!-- Fi FW_bMenuCap --> </td>
+</tr>
+<tr>
+<td colspan="3">
+<hr class="liniaVermella" /> </td>
+</tr>
+</tbody>
+</table>
+<!-- Imatge de tracking del comunicat --><img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/5950/2011-06.png" />
+<!-- Inici Estructura del Contingut -->
+<table cellpadding="5" cellspacing="5" width="100%">
+<tbody>
+<tr>
+<!-- Area de continguts --> <td colspan="2" bgcolor="#ffffff" valign="top" width="75%">
+<div class="FW_bTitol">
+<h2>SIC. Bones pràctiques en l'ús del Subversion</h2>
+<br />
+<div style="text-align: justify;">La plataforma SIC (Sistema d'Integració Continua) del CTTI posa a disposició dels departaments un Subversion on poder custodiar el codi i tenir un control de versions de les seves aplicacions. Per a aquest fi, en el procés d'alta de l'aplicació en el SIC es crea un repositori al Subversion amb la següent estructura:<br />
+</div>
+<br />
+<div style="text-align: justify;"><span style="font-style: italic;">http://svn.intranet.gencat.cat/&lt;svn_departament&gt;/&lt;app&gt;/</span><br />
+- trunk (Def.: línia principal de desenvolupament, on es porten a terme els canvis menys complexes del dia a dia)<br />
+És on es realitza el commit inicial. Degut a que el repositori del SIC no és un repositori de desenvolupament no es realitzaran operacions freqüentment.<br />
+- branches (Def.: noves línies de desenvolupament creades a partir d&#8217;una còpia del trunk en un cert punt)<br />
+No és imprescindible el seu ús dins el procés de custodia de codi i control de versions que es proposa per el SIC.<br />
+- tags (Def.: etiquetes que serveixen per identificar un cert moment en el desenvolupament que volem conservar)<br />
+És on es lliuraran les versions de les aplicacions.<br />
+</div>
+<br />
+<div style="text-align: justify;">A continuació s'enumeren una sèrie de punts que el Release Manager (Gestor de Lliuraments) ha de tenir en compte per fer bon ús del Subversion:<br />
+</div>
+<ul style="text-align: justify;">
+<li>El repositori de codi del SIC és un repositori d&#8217;entregables, no de desenvolupament. Per tant, l'equip que administra el SIC no carrega dumps de repositoris de desenvolupament.</li>
+<li>Per aplicacions Java mavenitzades i que construeixen els seus desplegables amb Jenkins no està permès pujar artefactes al repositori del SIC. Per tant, no es podran pujar fitxers amb extensió &#8220;.jar&#8221; , &#8220;.war&#8221; i &#8220;.ear&#8221; per aquestes aplicacions. Per aplicacions Java no mavenitzades o corresponents a d'altres llenguatges (.NET, PHP, etc.) es permeten excepcions per eximir-les d'aquestes restriccions.</li>
+<li>No incloure backups en el codi ni cap fitxer que no sigui estrictament necessari per la compilació i posterior&nbsp;execució de l'aplicació.&nbsp;</li>
+<li>Informar comentaris descriptius en els commits que permetin saber què conté el codi incorporat al repositori.</li>
+<li>Seguir la Nomenclatura de Versions del CTTI en l'etiquetatge de versions. Podeu trobar més detall d'aquesta Normativa de versions al <a href="http://www14.gencat.cat/pres_push/AppJava/TRD?encoding=iso-8859-1&amp;uid=oficina-tecnica.canigo.ctti@gencat.cat&amp;nid=NOID_24185097&amp;uri=http://qualitat.solucions.gencat.cat/MQS/guidances/guidelines/NOR-0010%20Nomenclatura%20de%20versions_83CCF092.html">Model de Qualitat de Solucions</a>.</li>
+</ul>
+<div style="text-align: justify;">Un bon ús del Subversion permet optimitzar els recursos del servidor, agilitzar les operacions que en ell es realitzin i tenir la informació de les versions de les aplicacions de forma estructurada. Aquest és el <a href="http://canigo.ctti.gencat.cat/confluence/download/attachments/4008/SIC+Manual+Usuari+v1.0.12.pdf?version=1">Manual d'Usuari</a> i el <a href="http://canigo.ctti.gencat.cat/confluence/download/attachments/229/Canig%C3%B3+-+Howto+-+Custodia+i+control+de+versions+del+codi+de+les+aplicacions.pdf">HowTo per la Custodia i control de versions del codi de les aplicacions</a> on podeu trobar més informació sobre l'ús del Subversion del SIC.<br />
+</div>
+<br />
+</div>
+<div class="FW_bTitol">
+<h2>Canigó. Upload de fitxers a Canigó 3</h2>
+<br />
+<div style="text-align: justify;">
+<div style="text-align: justify;">Canigó 3 proporciona un mòdul específic per poder fer <a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-suport/modul-upload/">Upload de Fitxers</a> a servidor. Aquest mòdul es basa en la llibreria Tomahawk de MyFaces però existeixen d'altres opcions com utilitzar el component de fileUpload que proporciona Richfaces. A continuació es mostra un breu resum de les característiques de cadascuna d'aquestes llibreries així com una captura amb el resultat de la visualització del component&nbsp;en una plana web:<br />
+<br />
+</div>
+<table style="text-align: left; width: 829px; height: 330px;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<h4>Tomahawk (mòdul d'Upload de Fitxers)</h4>
+- Simplicitat<br />
+- Enviament en submit de formulari (no Ajax)<br />
+- No selecció múltiple<br />
+- No filtratge per extensió de fitxer<br />
+- Limitació mida fitxer configurable<br />
+- No cal definir estils<br />
+<br />
+<div style="text-align: center;"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6713/tomahawk_fileUpload.JPG" style="width: 242px; height: 22px;" alt="tomahawk_fileUpload.png" /></div>
+</td>
+<td style="vertical-align: top;">
+<h4>Richfaces</h4>
+- Més complex que el de Tomahawk<br />
+- Enviament en selecció de fitxer (Ajax)<br />
+- Selecció múltiple (limitació de número de fitxers configurable)<br />
+- Filtratge per extensió de fitxers<br />
+- Limitació mida de fitxer configurable<br />
+- Necessitat d'adaptació a estils normatius<br />
+<br />
+<div style="text-align: center;"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6713/richfaces_fileUpload.png" style="width: 273px; height: 170px;" alt="richfaces_fileUpload.png" /><br />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+Per aquest comunicat des del CS Canigó hem redactat un <a href="http://canigo.ctti.gencat.net/confluence/download/attachments/6713/Canig%C3%B3+-+Howto+-+Upload+de+fitxers+a+Canig%C3%B3+3.pdf">HowTo</a> on podeu trobar el detall de l'ús d'aquestes llibreries de components JSF 2 per incorporar la funcionalitat d'upload de fitxers en aplicacions Canigó 3.
+</div>
+</div>
+</td>
+<!-- Area de noticies --> <td class="top" rowspan="2" style="border-left: 5px solid rgb(191, 47, 20);" bgcolor="#ffffff" valign="top">
+<div class="FW_bTitol" align="center">
+<h2>Notícies</h2>
+</div>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>Nova versió del formulari d'alta al SIC</h4></span></li></ul><div style="text-align: justify;">Durant el mes de Gener ha estat publicada una nova versió del Formulari d'Alta al SIC. Com a principal novetat incorpora la possibilitat de poder donar d'alta de forma massiva aplicacions d'un mateix àmbit per la seva custodia de codi. Aquest és l'enllaç al formulari:<br /><br /><a href="http://canigo.ctti.gencat.cat/related/sic/SIC-Formulari-Custodia-Codi-Aplicacio-v2.0.1.xlsx">Formulari d'Alta de Projecte v1.3.7</a><br /><br /></div><ul><span style="font-weight: bold;"></span>
+</ul>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li> <span>
+<h4>Operacions amb SVN per departament<br />
+</h4>
+</span></li>
+</ul>
+</div>
+<div style="text-align: center;"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6713/Operacions_SVN_per_departament.PNG" style="width: 452px; height: 268px;" alt="Operacions_SVN_per_departament" /><br />
+</div>
+<br />
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<hr color="#ffffff" />
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>HowTo's Frameworks i Solucions d'Arquitectura</h4>
+</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">
+<table cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<td> <img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/4/howto.png" alt="howto" /> </td>
+<td> <a target="_blank" href="http://canigo.ctti.gencat.net/confluence/download/attachments/6713/Canig%C3%B3+-+Howto+-+Upload+de+fitxers+a+Canig%C3%B3+3.pdf">
+<b>HOWTO:</b> Upload de fitxers a Canigó 3 </a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+</tbody>
+</table>
+<!-- Peu de pagina noticies -->
+<hr color="#ffffff" />
+<div align="center"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6359/logoCTTI.png" alt="CTTI" /></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Fi Estructura del Contingut --><!-- Inici FW_bPeu -->
+<div class="FW_bPeu">
+<div align="center"> <a href="http://www.gencat.net/web/cat/avis_legal.htm">Avís legal</a> | <a href="http://www.gencat.cat/web/cat/accessibilitat.htm">Accessibilitat</a> | <a href="http://www.gencat.net/web/cat/sobre_el_web.htm">Sobre el web</a> | <a href="http://www.gencat.cat/web/cat/copyright.htm">© Generalitat de Catalunya</a></div>
+</div>
+<!-- Fi FW_bPeu --> </div>
+<div style="text-align: center;" align="center"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black; text-decoration: none;">
+<hr style="color: rgb(214, 214, 214);" align="center" noshade="noshade" size="3" width="100%" /></span></div>
+<span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;">AVISO DE CONFIDENCIALIDAD.<br />
+Este correo y la información contenida o adjunta al mismo es privada y confidencial y va dirigida exclusivamente a su destinatario. TICxCAT informa a quien pueda haber recibido este correo por error que contiene información confidencial cuyo uso, copia, reproducción o distribución está expresamente prohibida. Si no es Vd. el destinatario del mismo y recibe este correo por error, le rogamos lo ponga en conocimiento del emisor y proceda a su eliminación sin copiarlo, imprimirlo o utilizarlo de ningún modo.<br />
+<br />
+</span><span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;" lang="EN-US">CONFIDENTIALITY WARNING.<br />
+This message and the information contained in or attached to it are private and confidential and intended exclusively for the addressee. TICxCAT informs to whom it may receive it in error that it contains privileged information and its use, copy, reproduction or distribution is prohibited. If you are not an intended recipient of this E-mail, please notify the sender, delete it and do not read, act upon, print, disclose, copy, retain or redistribute any portion of this E-mail.</span>
+</div>
+</div>
+</div>
+</body></html>

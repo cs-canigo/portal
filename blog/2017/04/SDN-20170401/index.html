@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Sobre les SDN</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Sobre les SDN\" />");
+		document.write("<meta name=\"description\" content=\"Què és i el per què de SDN. Consideracions per dummies que trobem al respecte\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/blog">
+											
+
+
+
+
+
+
+
+
+
+
+
+
+
+	Blog d'Arquitectura
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Sobre les SDN
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 01-04-2017
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h1 id="sdn-software-defined-network">SDN (Software Defined Network)</h1>
+
+<p>Si busquem la definició de SDN, ens trobarem en que es tracta d&rsquo;una <strong>arquitectura emergent</strong> que és dinàmica, rentable, adaptable i manegable, el que la fa ideal per l&rsquo;ample de banda i la naturalesa dinàmica de les aplicacions.
+Tot i que es tracta d’una <em>nova</em> arquitectura (separa el pla de control del pla de dades en els dispositius de xarxa), crec que la importància de la mateixa radica sobretot en el canvi de la forma de treballar permetent adaptar-nos, a nivell de xarxa, a les pròpies necessitats del mercat / aplicacions.</p>
+
+<h2 id="d-on-sorgeix-la-necessitat">D&rsquo;on sorgeix la necessitat</h2>
+
+<p>La pròpia evolució de la societat de la Informació, i en concret d&rsquo;Internet, ha fet que les necessitats del mercat vagin canviant i, com a conseqüència, els negocis hagin d&rsquo;evolucionar a gran velocitat. Ens trobem en una situació on conceptes com flexibilitat i rapidesa són fonamentals per evolucionar.</p>
+
+<p>L&rsquo;evolució dels sistemes d’informació ha estat i esta sent decisiva en el desenvolupament dels negocis,  i no només pel que fa referència al hardware  (major capacitat de processament, memòria, etc) sinó també a nivell de programari, virtualització fonamentalment.</p>
+
+<p>Aquesta evolució, juntament amb la aparició de noves tecnologies, estratègies (dockers, microserveis, etc.) ens permet poder crear aplicacions d’una forma ràpida i flexible reduint substancialment el temps emprat per  oferir el nostre producte.</p>
+
+<h2 id="canvi-en-la-direcció-del-tràfic-dins-dels-data-centers">Canvi en la direcció del tràfic dins dels Data Centers</h2>
+
+<p>Ens els Data Centera el sentit del tràfic, fins fa poc, era majoritàriament Nord-Sud (vertical). Aquesta tendència està canviat a gran velocitat, passant a ser Est-Oest (horitzontal).</p>
+
+<p>El motiu d’aquest canvi ve determinat principalment pel canvi / evolució que es produeix en l’arquitectura de les aplicacions, passant d’arquitectures monolítiques a arquitectures distribuïdes, com per exemple els (micro)serveis.</p>
+
+<p><img src="/images/bloc/ImatgeSDN1.PNG" alt="Distribució SDN1" /></p>
+
+<h2 id="però-i-la-xarxa">Però&hellip;   i la xarxa?</h2>
+
+<p>Tot i les evolucions / canvis descrits anteriorment, aquests no seran realment efectius sense l&rsquo;evolució pertinent del medi sobre el que ha de viatjar la informació, la xarxa.</p>
+
+<p>L’evolució constant dels equipaments de xarxa, ens permet anar <em>solucionant</em> tant problemes de capacitat com de configuració. Valgui com a exemple la limitació en quant a les VLANS actives per switch que, a part dels possibles altres problemes que això podria suposar, provocava que el moviment de les maquines virtuals dins del Data Center depengués en molts casos de la realització de tasques prèvies per part de xarxa, amb el temps que això comporta. En l’actualitat, aquesta limitació ja ha estat superada.</p>
+
+<p>Tot i així, un dels principals problemes amb què ens trobem és el d’aconseguir una xarxa flexible (on es puguin realitzar canvis de forma immediata),  ràpida i segura. En definitiva, <strong>la xarxa hauria de ser  transparent</strong>. Això permetrà que front a qualsevol canvi i/o nova necessitat ( a nivell d’aplicació / S.I.) la configuració de la part de xarxa no suposi cap “stopper” pel que fa al temps de provisionament.</p>
+
+<h2 id="entendre-sdn">Entendre SDN</h2>
+
+<p>Com ja hem indicat anteriorment, SDN es tracta d’una arquitectura emergent que es basa principalment en la separació del pla de control del pla de dades dels dispositius de xarxa.</p>
+
+<p>Tradicionalment, el funcionament de la xarxa, juntament amb la seva governabilitat està basada en dos conceptes bàsics, el <strong>pla de control</strong> (control plane) i el <strong>pla de dades</strong> (data plane).</p>
+
+<p>El <strong>pla de control</strong> és l’encarregat de dur a terme totes aquelles accions necessàries per a fer possible l’enviament dels paquets / dades, com pot ser la construcció de la taula de rutes, l’establiment de polítiques de seguretat, etc. En definitiva és l’encarregat de configurar el pla de dades</p>
+
+<p>El <strong>pla de dades</strong> en canvi, està format per totes aquelles activitats encarregades del propi enviament dels paquets, com per exemple la fragmentació i reconstrucció, replicació pel tràfic multicast, etc.</p>
+
+<p>Aquests dos plans es troben presents en els propis dispositius de xarxa separats lògicament o, en alguns dispositius, inclús físicament.</p>
+
+<p><img src="/images/bloc/ImatgeSDN2.PNG" alt="Control vs Dades" /></p>
+
+<p>Això comporta  que front a un canvi s’hagin de configurar  varis dispositius de forma separada, cuidant sempre de no caure en inconsistències. El resultat final és que el temps d&rsquo;aprovisionament / canvi d’un servei no sol ser curt, afegint el risc que implica el fet d&rsquo;haver d’anar configurant dispositiu a dispositiu.</p>
+
+<h2 id="separació-del-pla-de-control-del-de-dades">Separació del pla de control del de dades</h2>
+
+<p>Hem d’entendre que quan parlem de separació d’aquests dos plans, no ens referim a la separació dins del propi dispositiu de xarxa (aquesta ja existeix) sinó que ens referim a l&rsquo;extracció del pla de control dels dispositius de xarxa, ubicant-lo en un o varis elements externs a la mateixa., el que anomenarem a partir d’ara controlador.</p>
+
+<p>Per tant, el primer que ens proposa SDN, és <strong>centralitzar el Pla de control</strong> en un dispositiu (controlador) que serà l’encarregat de controlar a varis i/o tots els dispositius de xarxa.</p>
+
+<p><img src="/images/bloc/ImatgeSDN3.PNG" alt="Distribuït vs Centralitzat" /></p>
+
+<p>Aquesta centralització del pla de control fa que:</p>
+
+<ul>
+<li><p>Els switchos tan sols haurien de tenir el pla de dades ( realment, també tenen una mínima part de “pla de control”)</p></li>
+
+<li><p>La xarxa sigui més consistent</p></li>
+
+<li><p>La resposta front a canvis sigui més ràpida</p></li>
+
+<li><p>La gestió de gran quantitat de dispositius sigui molt més fàcil</p></li>
+</ul>
+
+<h2 id="arquitectura-sdn">Arquitectura SDN</h2>
+
+<p>Segons la  <a href="https://www.opennetworking.org/">Open Networking Foundation (ONF)</a>, organització que es dedica a accelerar la adopció de SDN y NFV, la arquitectura de SDN la podríem separar en les següents capes:</p>
+
+<ul>
+<li><p><strong>Capa d&rsquo;infraestructura</strong>. Formada pels nodes / equipaments  de xarxa que realitzen la commutació i enrutament dels paquets.</p></li>
+
+<li><p><strong>Capa de control</strong>. Es tracta de la capa més important dins de la arquitectura SDN. És la capa on esta ubicada la intel·ligència de la xarxa. Es on ens trobem amb el controlador (programari ) , encarregat de controlar i configurar els nodes de la xarxa dirigint així els fluxes de tràfic, és a dir, la intel·ligència de conmutació i enrutament de les dades dels nodes de la xarxa passa a ser propietat del controlador SDN. La comunicació entre el controlador i els dispositius de la xarxa a controlar, es fa mitjançant un protocol ( per exemple openflow), que pot variar segons el fabricant de la solució. Anomenarem interface <em>northbound</em> a la comunicació/fluxe que hi ha entre la capa de control i la d&rsquo;aplicació i interface <em>southbound</em> a la que hi ha entre la capa de cotnrol i la d&rsquo;infraestructura.</p></li>
+
+<li><p><strong>Capa d&rsquo;aplicació</strong>. Aquesta capa esta formada per aplicacions d’usuaris que incideixen directament en el controlador que ens permetran simplificar i automatitzar les tasques de configuració de la xarxa, aprovisionar y gestionar nous serveis, així com extreure informació de negoci, fent que  la xarxa es pugui anar adaptant automàticament a les necessitats que vagin sorgint. Aquestes aplicacions es comuniquen amb el controladors mitjançant APIs de la capa de control com REST, JSON, XML, etc.</p></li>
+</ul>
+
+<p><img src="/images/bloc/ImatgeSDN4.PNG" alt="Tres capes" /></p>
+
+<h2 id="on-aplicar-sdn">On aplicar SDN</h2>
+
+<p>Tot i que a priori pot semblar que la aplicació de SDN s’hauria de fer en tots els entorns on hi hagi xarxa, cal destacar que aquesta en principi és una tecnologia / arquitectura pensada per Data Centers. Això no vol dir que en altres entorns o tipus de xarxa, com per exemple Nodes de trànsit (NUS de Comunicacions) no s’arribi a aplicar mai, però, la finalitat no es aquesta i per tant encara avui no esta pensada per poder aplicar-se a aquest tipus de xarxa, tot i que s&rsquo;està treballant perquè acabi de ser una realitat.</p>
+
+<p>SDN ens ha d&rsquo;aportat tot un seguit d&rsquo;avantatges:</p>
+
+<ul>
+<li><p>Gestió unificada de milers de dispositius</p></li>
+
+<li><p>Escalat dinàmic, és a dir, ens ha de permetre poder créixer d’una forma transparent, sense afectar al servei</p></li>
+
+<li><p>Integració de nous serveis de forma ràpida</p></li>
+
+<li><p>Programable. Hem de ser capaços de programar la xarxa per a que aquesta canviï el seu comportament segons les circumstàncies que es donin</p></li>
+
+<li><p>Automatització: reducció progressiva de les tasques manuals mitjançant l’automatització de les mateixes, evitant així errades operacionals</p></li>
+</ul>
+
+<p>Una de les principals característiques és la que fa referència a la <strong>&ldquo;virtualització” de la xarxa</strong>. Això permetrà, que el propi desenvolupador de la aplicació o l’encarregat dels sistemes d’informació, pugui configurar-se la xarxa de forma automàtica i transparent, és a dir, front una determinada necessitat, la gent de sistemes podrà arribar a configurar-se fins i tot la part de la xarxa, <strong>sense haver de dependre de la intervenció per part del personal que gestiona la mateixa</strong>.</p>
+
+<p>Això no significa que hi hagi llibertat total per a fer el que vulgui en la xarxa, sempre s’hauran de establir unes normes molt bàsiques que permetran al personal que gestiona la xarxa no perdre el control de la mateixa i per tant garantir el servei. Com a exemple, els administradors de sistemes tindran assignat un pool de vlans per poder crear les xarxes que necessitin. Aquest pool serà definit pels administradors de la xarxa i de forma automàtica, aquestes VLANS s’afegiran i/o borraran dels ports de la xarxa segons necessitats dels administradors de sistemes.</p>
+
+<p>En definitiva, el que tindrem és una xarxa amb una configuració base, sobre la que de forma automàtica s’aniran creant xarxes superposades (overlay network).</p>
+
+<h2 id="maduresa">Maduresa</h2>
+
+<p>Tenint present la velocitat a la que s&rsquo;està evolucionant, per a que la implementació de SDN sigui eficient s’hauria de tenir present:</p>
+
+<ul>
+<li><p>Situació actual de la xarxa a transformar. Actualment, ens trobarem amb molta electrònica de xarxa que  no esta preparada i/o no compleix els requisits mínims per a ser gestionada per un controlador SDN.</p></li>
+
+<li><p>Convivència entre xarxes SDN i  no SDN. El pas de les xarxes actuals a SDN no és fàcil (fer-se de cop és poc menys que una bogeria). Per fer possible aquesta evolució, cal anar molt poc a poc amb una planificació molt detallada.</p></li>
+
+<li><p>Hi ha casos en els que separar el pla de control del de dades dels equipaments de xarxa no és el més adient, havent-se d’estudiar tots i cadascuna de les casuístiques  que ens apareguin.</p></li>
+</ul>
+
+<p>Donada la importància i l’impacte que pot suposar el fet de separar el pla de control del de dades dels dispositius, hi ha una tendència que defineix  SDN com la interacció de les aplicacions (moltes inclús a nivell de negoci) sobre la xarxa, sense la intervenció del operador de la mateixa. Tenint present aquesta definició, ens podem trobar amb:</p>
+
+<ul>
+<li><strong>Switchos  que no disposen de pla de control</strong> (tot i que sempre ha d’haver un mínim pla de control només pel fet que han de parlar amb el controlador i guardar les configuracions que aquest els hi fa arribar), el que s’anomena <em>Out-of-Band control Plane</em>. En cas de caiguda del controlador, la xarxa no podrà reaccionar front a qualsevol canvi.</li>
+<li><strong>Switchos que sí disposen de pla de control</strong>, <em>In-Band Control Plane</em>, però tot i així és el controlador el que configura el pla de control de tots i cadascun dels dispositius. En cas de caiguda del controlador, la xarxa podria reaccionar front a determinats canvis / incidències (caiguda d’un port, etc) i sempre, com a cas excepcional,  es podrien configurar els dispositius individualment.<br /></li>
+</ul>
+
+<h3 id="referències">Referències:</h3>
+
+<ul>
+<li><a href="https://www.opennetworking.org">Open Networking</a></li>
+<li><a href="http://www.cisco.com/c/en/us/solutions/software-defined-networking/overview.html">CISCO - SDN</a></li>
+<li><a href="http://canigo.ctti.gencat.cat/blog/2016/08/microserveis/">Microserveis</a></li>
+<li><a href="https://www.sdxcentral.com/sdn">SDX Central - SDN</a></li>
+</ul>
+
+
+					
+
+					
+						<a name="comments"></a>
+						<hr />		
+						<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "arquitectura-ctti" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+#stats{margin-bottom:2em;}
+
+#logo-algolia{float:right;}
+#logo-algolia img{width:75px;}
+
+#left-column h3{
+  margin-top:0!important;
+}
+
+.chart{
+  padding:0px;
+  margin-top:-30px;
+} 
+
+/* HIDE LONG TEXT */
+
+/* styles for '...' */ 
+.block-with-text {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative; 
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 37em; 
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;  
+  /* place for '...' */
+  margin-right: -1em;
+  padding-right: 1em;
+  font-size:.8em;
+}
+/* create the ... */
+.block-with-text:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+.block-with-text:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}
+
+
+/* HITS */
+.highlight_hit{
+  background-color: #BA9EB0; 
+}
+
+#hits img{
+  max-width:100%;
+}
+
+#hits div .destacat_text_cont h2{
+  padding:0;
+}
+
+#hits h2{ font-size: 1.1em;}
+
+.ais-hits--item div{border:none;}
+
+#hits .app_modules{
+  font-size:.8em;
+}
+
+#hits div.destacat_text{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+/* FACETS */
+.facet{
+  font-size:.8em;
+}
+.ais-refinement-list--count,
+.ais-menu--count {
+  position: relative;
+  float: right;
+  color: #999;
+}
+.ais-refinement-list--count{
+  padding-left: .5em;
+  padding-top: .2em;
+}
+
+.ais-refinement-list--label input{
+  margin-right: .5em;
+}
+
+.ais-refinement-list--count::before{
+  content : "(";
+}
+
+.ais-refinement-list--count::after{
+  content : ")";
+}
+
+.ais-refinement-list--list{margin-bottom:2em;}
+
+/* PAGINATION */
+#pagination {
+  /*margin-top: 60px;*/
+}
+#pagination ul {
+  list-style-type: none;
+  text-align: center;
+}
+#pagination li {
+  font-size: 1.1em;
+  display: inline;
+  padding: .5em;
+}
+#pagination a {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #BF0000;
+}
+
+#pagination a:hover {
+  background: #ddd;
+}
+
+/*#pagination li:first-child a {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#pagination li:last-child a {
+  border-right: 1px solid #eee;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}*/
+
+#pagination li.ais-pagination--item__active a {
+  color: #BF0000;
+  border-color: #ccc;
+  background: #ddd;
+}
+#pagination li.ais-pagination--item__active a:hover {
+  cursor: default;
+}
+#pagination li.ais-pagination--item__disabled a {
+  cursor: not-allowed;
+}
+#pagination li.ais-pagination--item__disabled a:hover {
+  background: none;
+}

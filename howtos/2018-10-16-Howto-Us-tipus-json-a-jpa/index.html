@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Suport a tipus de dades JSON al mòdul de persistència de Canigó</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Suport a tipus de dades JSON al mòdul de persistència de Canigó\" />");
+		document.write("<meta name=\"description\" content=\"Aquest howTo descriu com utilitzar el tipus de dada JSON existent a PostgreSQL i MySql amb JPA\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Suport a tipus de dades JSON al mòdul de persistència de Canigó
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 16-10-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h2 id="a-qui-va-dirigit">A qui va dirigit</h2>
+
+<p>Aquest Howto va dirigit a perfils tècnics que vulguin utilitzar el tipus de columna JSON a bases de dades PostgreSQL i MySQL mitjançant JPA i Hibernate com a proveïdor</p>
+
+<h2 id="versió-de-canigó">Versió de Canigó</h2>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.2.6 del Framework Canigó</p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Al Setembre del 2018 s’ha publicat la versió 3.2.6 del Framework Canigó. En aquesta 3.2.6 s&rsquo;incorpora el suport a bases de dades PostgreSQL. A partir dels seus dialectes, Hibernate dona suport a tipus de columnes JSON a PostgreSQL i MySQL, però al no ser un estàndard per a totes les bases de dades relacionals, per aquest tipus de columna, Hibernate no proporciona una implementació pel mapeig entre els objectes Java i la base de dades.</p>
+
+<p>L’objectiu d’aquest Howto és mostrar els procediments necessaris per a poder utilitzar els tipus de columna JSON amb PostgreSQL i MySQL utilitzant Hibernate i JPA.</p>
+
+<h2 id="dialectes-hibernate">Dialectes hibernate</h2>
+
+<h3 id="postgresql">PostgreSQL</h3>
+
+<p>Si s&rsquo;utilitza una base de dades de tipus PostgreSQL, el mòdul &ldquo;canigo.persistence.jpa&rdquo; a partir d&rsquo;Hibernate proporciona els següents dialectes:</p>
+
+<ul>
+<li>org.hibernate.dialect.PostgreSQL82Dialect mateix que org.hibernate.dialect.PostgreSQLDialect</li>
+<li>org.hibernate.dialect.PostgreSQL9Dialect: BD Postgres 9 amb suport a &ldquo;if exists&rdquo; quan s&rsquo;eliminen constraints</li>
+<li>org.hibernate.dialect.PostgreSQL92Dialect: BD Postgres 9.2 amb suport a JSON data type</li>
+<li>org.hibernate.dialect.PostgreSQL94Dialect: BD Postgres 9.4 amb suport a funcions de dates i temps</li>
+</ul>
+
+<p>Les versions més noves incorporen les funcionalitats de les versions anteriors.</p>
+
+<p>Així, si es vol utilitzar un tipus de columna JSON, la versió de PostgreSQL ha de ser a igual o superior a 9.2 i utilitzar com a mínim el dialecte org.hibernate.dialect.PostgreSQL92Dialect</p>
+
+<h3 id="mysql">MySql</h3>
+
+<p>Si s&rsquo;útilitza una bd de tipus MySql, el mòdul canigo.persistence.jpa a partir de hiberntate proporciona els següents dialectes:</p>
+
+<ul>
+<li>org.hibernate.dialect.MySQLDialect: Per versions de la bd inferiors a 5</li>
+<li>org.hibernate.dialect.MySQL5Dialect: Per versions de la bd 5.x</li>
+<li>org.hibernate.dialect.MySQL5InnoDBDialec: Per versions de la bd 5.x amb InnoDB</li>
+<li>org.hibernate.dialect.MySQL57InnoDBDialect: Per versions de la bd 5.x amb InnoDB amb suport a fractal seconds precision (fsp)</li>
+</ul>
+
+<p>Les versions més noves incorporen les funcionalitats de les versions anteriors.</p>
+
+<p>Així, si es vol utilitzar un tipus de columna JSON, la versió de MySql ha de ser igual o superior a 5.7 i utilitzar com a mínim el dialecte org.hibernate.dialect.MySQL5Dialect</p>
+
+<h2 id="hibernate-json-type">Hibernate JSON type</h2>
+
+<p>El mòdul canigo.persistence.jpa, a partir de la versió 1.3.1, proporciona una implementació pel mapeig entre els objectes Java i la base de dades mitjançant Hibernate. Els tipus són:</p>
+
+<ul>
+<li><strong>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStringType</strong>: Per a tipus de columna JSON de tipus text</li>
+<li><strong>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonBinaryType</strong>: Per a tipus de columna JSON de tipus binari</li>
+<li><strong>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonNodeBinaryType</strong>: Per a tipus de columna JSON de tipus binari emmagatzemant JSON Node</li>
+</ul>
+
+<p>Aquests, realitzen el binding d&rsquo;informació entre la base de dades i els objectes Java a partir de <a href="https://github.com/FasterXML/jackson">Jackson</a>.</p>
+
+<h2 id="carregar-hibernate-json-type">Carregar Hibernate JSON type</h2>
+
+<h3 id="postgres">Postgres</h3>
+
+<p>PostgreSQL a partir de la versió 9.2 dona suport als tipus:</p>
+
+<ul>
+<li>json</li>
+<li>jsonb</li>
+</ul>
+
+<p>Aquests tipus són emmagatzemats amb binari per tant serà necessari utilitzar:</p>
+
+<ul>
+<li>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonBinaryType</li>
+<li>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonNodeBinaryType</li>
+</ul>
+
+<h3 id="mysql-1">MySQL</h3>
+
+<p>MySQL a partir de la versió 5.7 dona suport als tipus:</p>
+
+<ul>
+<li>json</li>
+</ul>
+
+<p>Aquests tipus són emmagatzemats amb text per tant serà necessari utilitzar:</p>
+
+<ul>
+<li>cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStringType</li>
+</ul>
+
+<p>Perquè hibernate carregui aquests tipus de mapeig es necessari utilitzar @TypeDefs, així per exemple si tenim una classe base comuna podem tenir per exemple:</p>
+
+<pre><code>import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.TypeDef;
+import org.hibernate.annotations.TypeDefs;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonNodeBinaryType;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.hibernate.type.json.JsonStringType;
+
+@TypeDefs({ @TypeDef(name = &quot;json&quot;, typeClass = JsonStringType.class),
+		@TypeDef(name = &quot;jsonb&quot;, typeClass = JsonBinaryType.class),
+		@TypeDef(name = &quot;jsonb-node&quot;, typeClass = JsonNodeBinaryType.class), })
+@MappedSuperclass
+public class BaseEntity {
+
+	@Id
+	@GeneratedValue(generator = &quot;generator&quot;)
+	@GenericGenerator(name = &quot;generator&quot;, strategy = &quot;increment&quot;)
+	private Long id;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+}
+</code></pre>
+
+<h2 id="exemple-utilització-hibernate-json-type">Exemple utilització hibernate JSON type</h2>
+
+<p>Per l&rsquo;exemple utilitzarem l&rsquo;entitat Event que emmagatzema una entitat Location amb la informació de la country i la city
+Per l&rsquo;entitat Location utilitzarem:</p>
+
+<pre><code>import java.io.Serializable;
+
+public class Location implements Serializable {
+
+    private String country;
+
+    private String city;
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+}
+</code></pre>
+
+<h3 id="postgresql-1">PostgreSQL</h3>
+
+<p>Necessitem crear la taula Event:</p>
+
+<ul>
+<li>Si la columna es de tipus json:</li>
+</ul>
+
+<pre><code>CREATE TABLE &quot;event&quot; (
+	ID serial PRIMARY KEY,
+	&quot;location&quot; json NOT NULL
+);
+</code></pre>
+
+<ul>
+<li>Si la columna es de tipus jsonb:</li>
+</ul>
+
+<pre><code>CREATE TABLE &quot;event&quot; (
+	ID serial PRIMARY KEY,
+	&quot;location&quot; jsonb NOT NULL
+);
+</code></pre>
+
+<p>Així tindrem les entitats:</p>
+
+<ul>
+<li>Si la columna és de tipus json i volem emmagatzemar l&rsquo;objecte Location utilitzarem @Column(columnDefinition = &ldquo;json&rdquo;) amb @Type(type = &ldquo;jsonb&rdquo;):</li>
+</ul>
+
+<pre><code>import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+@Entity(name = &quot;EventJson&quot;)
+@Table(name = &quot;event&quot;)
+public class EventJson extends BaseEntity {
+
+    @Type(type = &quot;jsonb&quot;)
+    @Column(columnDefinition = &quot;json&quot;)
+    private Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+}
+</code></pre>
+
+<ul>
+<li>Si la columna és de tipus jsonb i volem emmagatzemar l&rsquo;objecte Location utilitzarem @Column(columnDefinition = &ldquo;jsonb&rdquo;) amb @Type(type = &ldquo;jsonb&rdquo;):</li>
+</ul>
+
+<pre><code>import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+@Entity(name = &quot;EventJsonb&quot;)
+@Table(name = &quot;event&quot;)
+public class EventJsonb extends BaseEntity {
+
+    @Type(type = &quot;jsonb&quot;)
+    @Column(columnDefinition = &quot;jsonb&quot;)
+    @Basic( fetch = FetchType.LAZY )
+    private Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+}
+</code></pre>
+
+<ul>
+<li>Si la columna és de tipus jsonb i volem emmagatzemar un objecte JsonNode utilitzarem @Column(columnDefinition = &ldquo;jsonb&rdquo;) amb @Type(type = &ldquo;jsonb-node&rdquo;):</li>
+</ul>
+
+<pre><code>import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import com.fasterxml.jackson.databind.JsonNode;
+
+@Entity(name = &quot;EventJsonbNode&quot;)
+@Table(name = &quot;event&quot;)
+public class EventJsonbNode extends BaseEntity {
+
+	@Type(type = &quot;jsonb-node&quot;)
+	@Column(columnDefinition = &quot;jsonb&quot;)
+	private JsonNode location;
+
+    public JsonNode getLocation() {
+        return location;
+    }
+
+    public void setLocation(JsonNode location) {
+        this.location = location;
+    }
+}
+</code></pre>
+
+<p>Amb els repositoris:</p>
+
+<pre><code>import java.util.List;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+
+public interface EventJsonBaseRepositoryCustom {
+
+	public List&lt;EventJson&gt; findCountryEvents(String country);
+	
+}
+</code></pre>
+
+<pre><code>import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EventJsonbNodeRepository extends GenericRepository&lt;EventJsonbNode, Long&gt;, EventJsonbNodeRepositoryCustom {
+
+}
+
+</code></pre>
+
+<pre><code>public interface EventJsonbNodeRepositoryCustom extends EventJsonBaseRepositoryCustom {
+
+}
+</code></pre>
+
+<pre><code>import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EventJsonbRepository extends GenericRepository&lt;EventJsonb, Long&gt;, EventJsonbRepositoryCustom {
+
+}
+</code></pre>
+
+<pre><code>public interface EventJsonbRepositoryCustom extends EventJsonBaseRepositoryCustom {
+
+}
+</code></pre>
+
+<pre><code>import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EventJsonRepository extends GenericRepository&lt;EventJson, Long&gt;, EventJsonRepositoryCustom {
+
+}
+</code></pre>
+
+<pre><code>public interface EventJsonRepositoryCustom extends EventJsonBaseRepositoryCustom {
+
+}
+</code></pre>
+
+<p>I les implementacions dels respositoris:</p>
+
+<pre><code>import java.util.List;
+
+import org.springframework.data.jpa.repository.support.QueryDslRepositorySupport;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonBaseRepositoryCustom;
+
+public abstract class EventJsonBaseRepositoryImpl extends QueryDslRepositorySupport implements EventJsonBaseRepositoryCustom {
+
+	public EventJsonBaseRepositoryImpl(Class&lt;?&gt; domainClass) {
+		super(domainClass);
+	}
+
+	@Override
+	public List&lt;EventJson&gt; findCountryEvents(String country) {
+		return getEntityManager()
+				.createNativeQuery(&quot;SELECT id, location FROM event WHERE location-&gt;&gt; 'country' = :country&quot;, EventJson.class)
+				.setParameter(&quot;country&quot;, country).getResultList();
+	}
+	
+}
+</code></pre>
+
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbNodeRepository;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbNodeRepositoryCustom;
+
+public class EventJsonbNodeRepositoryImpl extends EventJsonBaseRepositoryImpl implements EventJsonbNodeRepositoryCustom {
+
+	@Autowired
+	@Lazy
+	private EventJsonbNodeRepository eventRepository;
+
+	public EventJsonbNodeRepositoryImpl() {
+		super(EventJsonbNode.class);
+	}
+
+}
+</code></pre>
+
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbRepository;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbRepositoryCustom;
+
+public class EventJsonbRepositoryImpl extends EventJsonBaseRepositoryImpl implements EventJsonbRepositoryCustom {
+
+	@Autowired
+	@Lazy
+	private EventJsonbRepository eventRepository;
+
+	public EventJsonbRepositoryImpl() {
+		super(EventJsonb.class);
+	}
+
+}
+</code></pre>
+
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonRepository;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonRepositoryCustom;
+
+public class EventJsonRepositoryImpl extends EventJsonBaseRepositoryImpl implements EventJsonRepositoryCustom {
+
+	@Autowired
+	@Lazy
+	private EventJsonRepository eventRepository;
+
+	public EventJsonRepositoryImpl() {
+		super(EventJson.class);
+	}
+
+}
+</code></pre>
+
+<p>Per a implementar la funció &ldquo;findCountryEvents&rdquo; utilitzarem la query nativa:</p>
+
+<pre><code>SELECT id, location FROM event WHERE location-&gt;&gt; 'country' = :country
+</code></pre>
+
+<p>On :country serà el valor dinàmic passat per paràmetre</p>
+
+<h3 id="mysql-2">MySQL</h3>
+
+<p>Necessitem crear la taula Event:</p>
+
+<pre><code>CREATE TABLE event (
+	ID bigint PRIMARY KEY,
+	location json NOT NULL
+);
+</code></pre>
+
+<p>Així tindrem la entitat:</p>
+
+<pre><code>import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.BaseEntity;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.Location;
+
+@Entity(name = &quot;EventJson&quot;)
+@Table(name = &quot;event&quot;)
+public class EventJson extends BaseEntity {
+
+    @Type(type = &quot;json&quot;)
+    @Column(columnDefinition = &quot;json&quot;)
+    private Location location;
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+}
+</code></pre>
+
+<p>Amb els repositoris:</p>
+
+<pre><code>import java.util.List;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson;
+
+public interface EventJsonBaseRepositoryCustom {
+
+	public List&lt;EventJson&gt; findCountryEvents(String country);
+	
+}
+</code></pre>
+
+<pre><code>import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
+
+public interface EventJsonRepository extends GenericRepository&lt;EventJson, Long&gt;, EventJsonRepositoryCustom {
+
+}
+</code></pre>
+
+<pre><code>public interface EventJsonRepositoryCustom extends EventJsonBaseRepositoryCustom {
+
+}
+</code></pre>
+
+<p>I les implementacions dels respositoris:</p>
+
+<pre><code>import java.util.List;
+
+import org.springframework.data.jpa.repository.support.QueryDslRepositorySupport;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.EventJsonBaseRepositoryCustom;
+
+public abstract class EventJsonBaseRepositoryImpl extends QueryDslRepositorySupport implements EventJsonBaseRepositoryCustom {
+
+	public EventJsonBaseRepositoryImpl(Class&lt;?&gt; domainClass) {
+		super(domainClass);
+	}
+
+	@Override
+	public List&lt;EventJson&gt; findCountryEvents(String country) {
+		return getEntityManager()
+				.createNativeQuery(&quot;SELECT id, location FROM event WHERE JSON_EXTRACT(location, \&quot;$.country\&quot;) = :country&quot;, EventJson.class)
+				.setParameter(&quot;country&quot;, country).getResultList();
+	}
+	
+}
+</code></pre>
+
+<pre><code>import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.EventJsonRepository;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.EventJsonRepositoryCustom;
+
+public class EventJsonRepositoryImpl extends EventJsonBaseRepositoryImpl implements EventJsonRepositoryCustom {
+
+	@Autowired
+	@Lazy
+	private EventJsonRepository eventRepository;
+
+	public EventJsonRepositoryImpl() {
+		super(EventJson.class);
+	}
+
+}
+</code></pre>
+
+<p>Per a implementar la funció &ldquo;findCountryEvents&rdquo; utilitzarem la query nativa:</p>
+
+<pre><code>SELECT id, location FROM event WHERE JSON_EXTRACT(location, \&quot;$.country\&quot;) = :country
+</code></pre>
+
+<p>On :country serà el valor dinàmic passat per paràmetre</p>
+
+<h2 id="test-utilització-hibernate-json-type">Test utilització hibernate JSON type</h2>
+
+<p>Els tipus de bd JSON no estan suportats per la bd H2, per tant els test s&rsquo;han d&rsquo;executar atacant a una bd real</p>
+
+<h3 id="postgresql-2">PostgreSQL</h3>
+
+<p>Per provar els repositoris tindrem els tests:</p>
+
+<pre><code>import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+
+import com.fasterxml.jackson.databind.JsonNode;
+
+import cat.gencat.ctti.canigo.arch.core.utils.JacksonUtil;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbNodeRepository;
+
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {&quot;classpath:spring/canigo-core.xml&quot;})
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EventJsonbNodeRepositoryTest {
+	
+	@Autowired
+	private EventJsonbNodeRepository repository;
+
+	@Before
+	public void settingUp(){
+		Assert.assertNotNull(repository);
+		repository.deleteAll();
+	}
+
+	@Test
+	public void test1CRUDOperations(){
+
+		//Test if table is empty
+		Assert.assertTrue(repository.findAll().isEmpty());
+		
+		//Test save
+		JsonNode location = JacksonUtil.toJsonNode(
+                &quot;{&quot; +
+                &quot;   \&quot;country\&quot;: \&quot;Romania\&quot;,&quot; +
+                &quot;   \&quot;city\&quot;: \&quot;Cluj-Napoca\&quot;&quot; +
+                &quot;}&quot;
+            );
+		
+        EventJsonbNode event = new EventJsonbNode();
+        event.setLocation(location);
+		repository.save(event);
+
+		//Test insert and recover
+		EventJsonbNode event2 = new EventJsonbNode();
+		event2.setLocation(location);
+		repository.save(event2);
+		EventJsonbNode event3 = repository.findOne(event2.getId());
+		Assert.assertEquals(event3.getId(), event2.getId());
+		Assert.assertEquals(event3.getLocation().get(&quot;country&quot;).asText(), location.get(&quot;country&quot;).asText());
+		Assert.assertEquals(event3.getLocation().get(&quot;city&quot;).asText(), location.get(&quot;city&quot;).asText());
+		
+		//Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+		
+	}
+	
+	
+	@Test
+	public void testCountryEvents() {
+		JsonNode location = JacksonUtil.toJsonNode(
+                &quot;{&quot; +
+                &quot;   \&quot;country\&quot;: \&quot;Romania\&quot;,&quot; +
+                &quot;   \&quot;city\&quot;: \&quot;Cluj-Napoca\&quot;&quot; +
+                &quot;}&quot;
+            );
+		
+        EventJsonbNode event = new EventJsonbNode();
+        event.setLocation(location);
+		repository.save(event);
+		
+		List&lt;EventJson&gt; eventJsonList = repository.findCountryEvents(location.get(&quot;country&quot;).asText());
+		for (EventJson event3 : eventJsonList) {
+			Assert.assertEquals(event3.getLocation().getCountry(), location.get(&quot;country&quot;).asText());
+		}
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+	}
+	
+}
+</code></pre>
+
+<pre><code>import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.Location;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonbRepository;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {&quot;classpath:spring/canigo-core.xml&quot;})
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EventJsonbRepositoryTest {
+	
+	@Autowired
+	private EventJsonbRepository repository;
+
+	@Before
+	public void settingUp(){
+		Assert.assertNotNull(repository);
+		repository.deleteAll();
+	}
+
+	@Test
+	public void test1CRUDOperations(){
+
+		//Test if table is empty
+		Assert.assertTrue(repository.findAll().isEmpty());
+		
+		//Test save
+        Location location = new Location();
+        location.setCountry(&quot;Romania&quot;);
+        location.setCity(&quot;Cluj-Napoca&quot;);
+
+        EventJsonb event = new EventJsonb();
+        event.setLocation(location);
+		repository.save(event);
+
+		//Test insert and recover
+		EventJsonb event2 = new EventJsonb();
+		event2.setLocation(location);
+		repository.save(event2);
+		EventJsonb event3 = repository.findOne(event2.getId());
+		Assert.assertEquals(event3.getId(), event2.getId());
+		Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		Assert.assertEquals(event3.getLocation().getCity(), location.getCity());
+		
+		//Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+		
+	}
+	
+	@Test
+	public void testCountryEvents() {
+		Location location = new Location();
+		location.setCountry(&quot;Romania&quot;);
+		location.setCity(&quot;Cluj-Napoca&quot;);
+
+		EventJsonb event = new EventJsonb();
+		event.setLocation(location);
+		repository.save(event);
+		
+		List&lt;EventJson&gt; eventJsonList = repository.findCountryEvents(location.getCountry());
+		for (EventJson event3 : eventJsonList) {
+			Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		}
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+	}
+	
+}
+</code></pre>
+
+<pre><code>import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.Location;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.postgres.EventJsonRepository;
+
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { &quot;classpath:spring/canigo-core.xml&quot; })
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EventJsonRepositoryTest {
+
+	@Autowired
+	private EventJsonRepository repository;
+
+	@Before
+	public void settingUp() {
+		Assert.assertNotNull(repository);
+		repository.deleteAll();
+	}
+
+	@Test
+	public void test1CRUDOperations() {
+
+		// Test if table is empty
+		Assert.assertTrue(repository.findAll().isEmpty());
+
+		// Test save
+		Location location = new Location();
+		location.setCountry(&quot;Romania&quot;);
+		location.setCity(&quot;Cluj-Napoca&quot;);
+
+		EventJson event = new EventJson();
+		event.setLocation(location);
+		repository.save(event);
+
+		// Test insert and recover
+		EventJson event2 = new EventJson();
+		event2.setLocation(location);
+		repository.save(event2);
+		EventJson event3 = repository.findOne(event2.getId());
+		Assert.assertEquals(event3.getId(), event2.getId());
+		Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		Assert.assertEquals(event3.getLocation().getCity(), location.getCity());
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+
+	}
+
+	@Test
+	public void testCountryEvents() {
+		Location location = new Location();
+		location.setCountry(&quot;Romania&quot;);
+		location.setCity(&quot;Cluj-Napoca&quot;);
+
+		EventJson event = new EventJson();
+		event.setLocation(location);
+		repository.save(event);
+		
+		List&lt;EventJson&gt; eventJsonList = repository.findCountryEvents(location.getCountry());
+		for (EventJson event3 : eventJsonList) {
+			Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		}
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+	}
+
+}
+</code></pre>
+
+<p>ATENCIÓ: Per executar aquests tests és necessari atacar a una bd PostgreSQL real</p>
+
+<h3 id="mysql-3">MySQL</h3>
+
+<p>Per provar els repositoris tindrem el test:</p>
+
+<pre><code>import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.Location;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson;
+import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.json.mysql.EventJsonRepository;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = { &quot;classpath:spring/canigo-core.xml&quot; })
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class EventJsonRepositoryTest {
+
+	@Autowired
+	private EventJsonRepository repository;
+
+	@Before
+	public void settingUp() {
+		Assert.assertNotNull(repository);
+		repository.deleteAll();
+	}
+
+	@Test
+	public void test1CRUDOperations() {
+
+		// Test if table is empty
+		Assert.assertTrue(repository.findAll().isEmpty());
+
+		// Test save
+		Location location = new Location();
+		location.setCountry(&quot;Romania&quot;);
+		location.setCity(&quot;Cluj-Napoca&quot;);
+
+		EventJson event = new EventJson();
+		event.setLocation(location);
+		repository.save(event);
+
+		// Test insert and recover
+		EventJson event2 = new EventJson();
+		event2.setLocation(location);
+		repository.save(event2);
+		EventJson event3 = repository.findOne(event2.getId());
+		Assert.assertEquals(event3.getId(), event2.getId());
+		Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		Assert.assertEquals(event3.getLocation().getCity(), location.getCity());
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+
+	}
+
+	@Test
+	public void testCountryEvents() {
+		Location location = new Location();
+		location.setCountry(&quot;Romania&quot;);
+		location.setCity(&quot;Cluj-Napoca&quot;);
+
+		EventJson event = new EventJson();
+		event.setLocation(location);
+		repository.save(event);
+		
+		List&lt;EventJson&gt; eventJsonList = repository.findCountryEvents(location.getCountry());
+		for (EventJson event3 : eventJsonList) {
+			Assert.assertEquals(event3.getLocation().getCountry(), location.getCountry());
+		}
+
+		// Test delete all
+		repository.deleteAll();
+		Assert.assertTrue(repository.findAll().isEmpty());
+	}
+
+}
+</code></pre>
+
+<p>ATENCIÓ: Per executar aquests tests és necessari atacar a una bd MySQL real</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

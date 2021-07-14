@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Entorn de desenvolupament</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Entorn de desenvolupament\" />");
+		document.write("<meta name=\"description\" content=\"Màquina virtual amb l\x27ecosistema d\x27eines Canigó per a començar a desenvolupar\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/canigo">
+											
+
+
+
+	Framework Canigó
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Entorn de desenvolupament
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 07-05-2020
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="introducció">Introducció</h3>
+
+<p><em>L&rsquo;entorn de desenvolupament</em> és una màquina virtual Linux, basada en Lubuntu Desktop (Ubuntu Bionic Beaver 18.04.2 LTS) per ser una distribució d&rsquo;escriptori Linux lleugera, derivada d&rsquo;una de les distribucions més esteses del món (Ubuntu / Debian) i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.</p>
+
+<h3 id="objectius">Objectius</h3>
+
+<p>Els objectius perseguits per l&rsquo;entorn de desenvolupament són:</p>
+
+<ul>
+<li>Facilitar la posada en marxa de l&rsquo;entorn de desenvolupament, aprovisionant una màquina virtual amb tot el necessari per a començar el desenvolupament d&rsquo;una aplicació Canigó.</li>
+<li>Simular els entorns de desplegament als CPD Generalitat, facilitant contenidors amb les mateixes versions i configuracions dels PaaS que ens trobarem als clouds.</li>
+</ul>
+
+<p>Addicionalment aquesta versió de l&rsquo;entorn de desenvolupament no només s&rsquo;ha actualitzat amb les últimes versions estables del programari, sino que s&rsquo;ha fet que estigui alineada amb l&rsquo;última versió de Canigó 3.4 per proporcionar la millor experiència d&rsquo;usuari <em>out-of-the-box</em> en el desenvolupament d&rsquo;aplicacions Canigó.</p>
+
+<h3 id="prerequisits">Prerequisits</h3>
+
+<p>Per poder treballar amb l&rsquo;entorn de desenvolupament s&rsquo;ha d&rsquo;instal·lar prèviament el següent programari:</p>
+
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">Virtualbox</a></li>
+<li><a href="http://www.vagrantup.com/downloads.html">Vagrant</a></li>
+<li><a href="https://github.com/gencat/dev-environment/releases/tag/3.0.0">Vagranfile</a> amb la configuració de l&rsquo;entorn Canigó</li>
+</ul>
+
+<p>Per a poder utilitzar l&rsquo;entorn de desenvolupament és necessari:</p>
+
+<ul>
+<li>120 GB de disc dur lliure</li>
+<li>6 GB de memòria ram lliure</li>
+<li>32 MB de memòria de video lliure</li>
+</ul>
+
+<h3 id="instal-lació">Instal·lació</h3>
+
+<p>La versió 3.0.0 ha simplificat i automatitzat la configuració inicial fins al punt de no haver de fer cap acció especial per part de l&rsquo;usuari (vegeu apartat <em>KNOWN ISSUES</em> de la versió).</p>
+
+<ol>
+<li><p>Descarregar la configuració del vagrant amb la següent comanda</p>
+
+<pre><code>git clone https://github.com/gencat/dev-environment.git
+</code></pre></li>
+
+<li><p>Anar al directori <code>dev-environment/Vagrant</code> i arrencar l&rsquo;entorn amb</p>
+
+<pre><code>vagrant up
+</code></pre>
+
+<p>Amb aquesta última instrucció, vagrant aixeca una màquina virtual a Virtualbox, i executa les comandes que inclogui el fitxer <code>Vagrantfile</code>. El temps d&rsquo;instal·lació pot variar <strong>entre 25 i 90 minuts</strong>, pel fet que ha de descarregar i instal·lar tot el software necessari.</p></li>
+</ol>
+
+<p>En el moment que a la màquina virtual aixecada es vegi l&rsquo;escriptori, el procés haurà finalitzat.</p>
+
+<h4 id="notes-addicionals">Notes addicionals</h4>
+
+<ul>
+<li>Tot i que es pot engegar i aturar la màquina virtual a través de VirtualBox, es recomana utilitzar les comandes <code>vagrant up</code> i <code>vagrant halt</code> per fer aquestes accions.</li>
+<li>Es recomana no realitzar cap actualització ni de versió de sistema operatiu ni d&rsquo;eines a l&rsquo;entorn sense prèvia consulta a l&rsquo;equip del CS Canigó.</li>
+
+<li><p><strong>Hosts Windows/Mac</strong>: En el cas que hi hagi problemes de codificació en el moment d&rsquo;arrencar l&rsquo;entorn, es pot deure al fet que els fitxers de text (p.e. <code>provision.sh</code>) s&rsquo;han adaptat automàticament als caràcters EOL del host. En aquest cas s&rsquo;ha d&rsquo;indicar a GIT que no faci aquesta adaptació automàtica (respectant el contingut original), amb les següents dues comandes i tornant a instal·lar de zero l&rsquo;entorn (<code>git clone</code> + <code>vagrant up</code>).</p>
+
+<pre><code>git config --global core.autocrlf false
+vagrant destroy -f
+</code></pre></li>
+</ul>
+
+<h3 id="software-base">Software base</h3>
+
+<p>El software base s&rsquo;ha instal·lat un conjunt de programari per a les tasques complementàries de desenvolupament. Aquest software addicional s&rsquo;ha instal·lat dins el directori <code>/opt</code></p>
+
+<ul>
+<li>Open JDK 8 (1.8.0_191)</li>
+<li>Visual VM 1.3</li>
+<li>Clients per diferents BBDD (Mysql, PostgreSQL, MongoDB i Redis)</li>
+<li>Navegador Mozilla FireFox Quantum (66.0.3)</li>
+<li>Client VPNC per accés a XCAT</li>
+<li>Navegador Google Chrome (73.0.3683.103)</li>
+<li>Engine Docker i Docker Compose Tool per l&rsquo;execució de contenidors Docker</li>
+<li>Servidor Apache HTTP (2.4)</li>
+</ul>
+
+<h3 id="software-addicional">Software addicional</h3>
+
+<p>A banda del software base s&rsquo;ha instal·lat i configurat un conjunt de programari addicional dins el directori <code>/opt</code>, amb les versions alineades al <a href="https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/">full de ruta del programari</a>.</p>
+
+<ul>
+<li>Open JDK 11 (11.0.2 : OpenJDK 64-Bit Server VM 18.9)</li>
+<li>LanguageTool 5.3 - Per revisar gramàtica, ortografia i formes correctes del català.</li>
+<li>DBeaver 6.0.2 - Eina multi-paradigma (SQL, No-SQL, etc.) per a BBDD.</li>
+<li>SoapUI 5.5.0 - Eina per treballar amb serveis SOAP i REST.</li>
+<li>jMeter 5.1.1 - Eina per fer validacions funcionals, proves de càrrega i mesures de rendiment d&rsquo;aplicacions.</li>
+<li>NodeJS - Servidor d&rsquo;aplicacions JS. Les versions instal·lades són 8.15.1 i 10.15.3.</li>
+<li>Visual Studio Code - Editor altament extensible (mitjançant plugins). Recomanable principalment per a treballar amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)</li>
+<li>Maven 3.5.3</li>
+<li>IDE - <a href="https://spring.io/tools">Spring Tool Suite 4.2.0</a> (basat en Eclipse <sup>2019</sup>&frasl;<sub>03</sub>), i els següents plugins:
+
+<ul>
+<li><a href="https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/">Plugin CTTI Canigó</a> per creació aplicacions Canigó 3.4 basades en arquitectura REST+HTML5/JS.</li>
+<li>Spring Tool Suite per facilitar el desenvolupament d&rsquo;aplicacions basades en <a href="http://spring.io/projects">Spring</a>.</li>
+<li>SonarLint permet detectar i solucionar problemes de qualitat al codi (actualment Java, JavaScript, Python i PHP) <a href="https://www.sonarlint.org/">SonarLint</a>.</li>
+</ul></li>
+<li>jEdit 5.5.0 - Editor de textos (més lleuger que VS Code) basat en Java. Recomanable per a l&rsquo;edició de fitxers grans (logs).</li>
+</ul>
+
+<h3 id="screenshots">Screenshots</h3>
+
+<p>A continuació s&rsquo;adjunta un petit recull de captures de pantalla on es pot copsar l&rsquo;escriptori i diferents programes per treballar-hi.</p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_36.png" width="960px" /><p style="font-size: small;">Figura 1. Escriptori</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_37_15.png" width="960px" /><p style="font-size: small;">Figura 2. Exemples de comandes al terminal</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_33_42.png" width="960px" /><p style="font-size: small;">Figura 3. Eclipse Spring Tool Suite 4</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_45_54.png" width="960px" /><p style="font-size: small;">Figura 4. Gestor DBeaver</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_49_50.png" width="960px" /><p style="font-size: small;">Figura 5. VS Code</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_18_04_2019_10_35_03.png" width="960px" /><p style="font-size: small;">Figura 6. Editor jEdit</p></center></p>
+
+<p><center><img src="/images/bloc/201904-entorn-desenvolupament/VirtualBox_CanigoDev-3.0.0_23_04_2019_10_29_24.png" width="960px" /><p style="font-size: small;">Figura 7. Language Tool</p></center></p>
+
+<h3 id="versions">Versions</h3>
+
+<h4 id="3-0-6-14-07-2020-span-style-color-green-operativa-span">3.0.6 (14/07/2020) &ndash; <span style="color:green">OPERATIVA</span></h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Canvi del domini del plugin de l&rsquo;eclipse de <a href="http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/">http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plugin/update-site/</a> a <a href="https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/">https://hudson.intranet.gencat.cat/nexus/repository/canigo-group-maven2/cat/gencat/ctti/canigo.plugin/update-site/</a></li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li><p>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></p></li>
+
+<li><p>Compartir carpetes des del Host. Per a que funcioni s&rsquo;han d&rsquo;instal·lar les VirtualBox guest additions, seguint les instruccions del howto <a href="/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/">Com instal·lar les VBOX guest additions</a></p></li>
+</ul>
+
+<h4 id="3-0-5-07-05-2020">3.0.5 (07/05/2020)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Canvis a les urls del programari a instal·lar per urls controlades per CS Canigó</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="3-0-4-14-04-2020">3.0.4 (14/04/2020)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Resolució error url dbeaver</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="3-0-3-09-12-2019">3.0.3 (09/12/2019)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Resolució error url jmeter</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="3-0-2-14-11-2019">3.0.2 (14/11/2019)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Millores en les traces d&rsquo;error de la instal·lació</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="3-0-1-19-09-2019">3.0.1 (19/09/2019)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Resolució error carpetes personals usuari canigo</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="3-0-0-22-04-2019">3.0.0 (22/04/2019)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Actualitzacions del programari i millores generals.</li>
+<li>Certificació funcionament amb plugin d&rsquo;Eclipse v1.7.0 de Canigó.</li>
+</ul>
+
+<p><em>KNOWN ISSUES</em></p>
+
+<ul>
+<li>El sistema d&rsquo;àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (&gt;= 6.0.0) pot estar resolt (tot i que no s&rsquo;ha verificat aquest punt). Podeu trobar més informació al següent enllaç: <a href="https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190">https://forums.virtualbox.org/viewtopic.php?f=8&amp;t=91190</a></li>
+</ul>
+
+<h4 id="2-0-4-22-11-2018">2.0.4 (22/11/2018)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Deshabilitats &ldquo;Update sites&rdquo; excepte pel plugin de Canigó</li>
+<li>Certificació funcionament amb plugin d&rsquo;Eclipse v1.7.0 de Canigó</li>
+</ul>
+
+<h4 id="2-0-3-6-8-2018">2.0.3 (6/8/2018)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Millores en el procés de construcció de la VM per tal d&rsquo;aïllar-lo d&rsquo;alguns recursos externs importats ara dins el <a href="https://github.com/gencat/dev-environment/tree/master/Vagrant/resources">repositori</a> de l&rsquo;entorn de desenvolupament.</li>
+</ul>
+
+<h4 id="2-0-2-25-6-2018">2.0.2 (25/6/2018)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Es detecten problemes amb el servei de VirtualBox Guest Additions. No s&rsquo;instal·len i es deixa desactivada l&rsquo;acceleració 3D</li>
+</ul>
+
+<h4 id="2-0-1-19-6-2018">2.0.1 (19/6/2018)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>S&rsquo;activa l&rsquo;acceleració 3D i s&rsquo;incrementa la memòria de video per poder arrencar la VM ja que havia deixat de funcionar el mode gràfic</li>
+</ul>
+
+<h4 id="2-0-0-20-11-2017">2.0.0 (20/11/2017)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Incorporada nova versió del plugin d&rsquo;Eclipse per Canigó 3.2</li>
+<li>Implementat procés de healthcheck per comprovar el correcte funcionament del procés de construcció de la VM</li>
+</ul>
+
+<h4 id="1-0-4-29-05-2017">1.0.4 (29/05/2017)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Actualitzada la versió de Oracle Java a 1.8</li>
+</ul>
+
+<h4 id="1-0-3-21-03-2017">1.0.3 (21/03/2017)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Actualitzada la màquina virtual a Ubuntu 16.04</li>
+<li>Actualitzat el plugin SVN a la versió 1.12.x</li>
+</ul>
+
+<h4 id="1-0-2-9-1-2017">1.0.2 (9/1/2017)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Revisats enllaços &ldquo;trencats&rdquo; a instal·lables (Subclipse, Docker Tooling, &hellip;)</li>
+</ul>
+
+<h4 id="1-0-1-16-3-2016">1.0.1 (16/3/2016)</h4>
+
+<p><em>RELEASE NOTES</em></p>
+
+<ul>
+<li>Actualització a Ubuntu 15.10</li>
+</ul>
+
+<p><em>RELEASE NOTES</em></p>
+
+<p>En cas de voler actualitzar a la v1.0.1 des de la v1.0.0 de l&rsquo;entorn de desenvolupament cal&hellip;</p>
+
+<ul>
+<li>Fer l&rsquo;upgrade a la versió 15.10 d&rsquo;Ubuntu</li>
+
+<li><p>Executar les següents comandes per a que segueixi apareixent el fons de pantalla corporatiu CTTI:</p>
+
+<pre><code>$ sudo cp /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper_bck.png
+$ sudo wget http://canigo.ctti.gencat.cat/devenv/fonspantalla_1280.png -O /usr/share/lubuntu/wallpapers/1510-lubuntu-default-wallpaper.png
+</code></pre></li>
+
+<li><p>Revisar la configuració de teclat a Preferències -&gt; IBus Preferences -&gt; Input method (en cas de no estar activat l&rsquo;IBus cal activar-lo a Preferències -&gt; Language Support -&gt; Keyboard input method system)</p></li>
+</ul>
+
+<h4 id="1-0-0-16-11-2015">1.0.0 (16/11/2015)</h4>
+
+<p>RELEASE NOTES</p>
+
+<ul>
+<li>Versió inicial</li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

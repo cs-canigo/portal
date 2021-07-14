@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Actualització Canigó 3.2 a Canigó 3.4</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Actualització Canigó 3.2 a Canigó 3.4\" />");
+		document.write("<meta name=\"description\" content=\"Com realitzar l\x27actualització d\x27una aplicació de Canigó 3.2 a Canigó 3.4\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Actualització Canigó 3.2 a Canigó 3.4
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 18-03-2019
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest how-to va dirigit a tots aquells usuaris que vulguin fer l&rsquo;actualització a Canigó 3.2 de la seva aplicació Canigó 3.4.</p>
+
+<h3 id="versió-de-canigó">Versió de Canigó</h3>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó.</p>
+
+<h3 id="introducció">Introducció</h3>
+
+<p>El mes de Març del 2019 s&rsquo;ha publicat la versió 3.4 del Framework Canigó. Aquesta versió és una <a href="/canigo/roadmap">versió LTS</a>, i es recomana actualitzar les aplicacions Canigó a aquesta versió per tal de tenir un suport continuat així com la màxima estabilitat que proporciona una versió LTS.</p>
+
+<p>L&rsquo;objectiu d&rsquo;aquest Howto és mostrar els procediments necessaris per a realitzar l&rsquo;actualització d&rsquo;una aplicació realitzada amb Canigó 3.1. El punt de partida d&rsquo;aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse.</p>
+
+<h3 id="configuració-de-dependències">Configuració de dependències</h3>
+
+<p>A la <a href="/canigo-download-related/matrius-compatibilitats">matriu de compatibilitats</a> es poden veure les versions dels mòduls i components de Canigó de les versions 3.2.x i 3.4.x. S&rsquo;han d&rsquo;actualitzar els intervals dels mòduls utilitzats per a migrar a Canigó 3.4.</p>
+
+<p>La versió parent de Spring boot és la 2.1.8.RELEASE, per tant, per una aplicació amb Spring boot el parent quedaria:</p>
+
+<pre><code>	&lt;parent&gt;
+		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+		&lt;version&gt;2.1.8.RELEASE&lt;/version&gt;
+	&lt;/parent&gt;
+</code></pre>
+
+<p>La versió de spring loeaded és la 1.2.8.RELEASE</p>
+
+<h3 id="passos-a-realitzar">Passos a realitzar</h3>
+
+<p>Després de canviar les versions dels mòduls decrits a la secció anterior, és necessari realitzar els següents canvis:</p>
+
+<ol>
+<li>Canviar en el pom.xml el goal del plugin <strong>maven-assembly-plugin</strong> a <strong>single</strong></li>
+<li>Canviar la classe <strong>org.springframework.boot.web.support.SpringBootServletInitializer</strong> a <strong>org.springframework.boot.web.servlet.support.SpringBootServletInitializer</strong></li>
+<li>Canviar la classe <strong>org.springframework.boot.autoconfigure.web.DispatcherServletAutoConfiguration</strong> a <strong>org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration</strong></li>
+<li>Canviar la classe <strong>org.springframework.data.jpa.repository.support.QueryDslRepositorySupport</strong> a <strong>org.springframework.data.jpa.repository.support.QuerydslRepositorySupport</strong></li>
+<li>El mètode findOne de QuerydslPredicateExecutor retorna Optional, per simular el que retornava <strong>findOne</strong> de Spring 4.x es necessari canviar-ho per <strong>findById(E).orElse(null)</strong></li>
+<li>Modificar les <strong>named querys amb paràmetres</strong> per afegir-li el <strong>número de cada paràmetre</strong>, per exemple:
+de:
+<code>
+@Query(&quot;select p from Person p where p.lastname = ?&quot;)
+	List&lt;Person&gt; findByLastname(String lastname);
+</code>	
+a:
+<code>
+@Query(&quot;select p from Person p where p.lastname = ?1&quot;)
+List&lt;Person&gt; findByLastname(String lastname);
+</code></li>
+<li>Es recomana utilitzar <strong>org.springframework.data.mongodb.repository.support.QuerydslMongoPredicateExecutor</strong> enlloc de <strong>org.springframework.data.mongodb.repository.support.QuerydslMongoRepository</strong> ja que aquest està deprecat</li>
+<li>Modificar totes les utilitzacions del mètode <strong>save(Iterable)</strong> a <strong>saveAll(Iterable)</strong> de les classes que extenguin de cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository i de cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository</li>
+<li>Modificar la versió de <strong>java</strong> com a mínim a la <strong>versió 8</strong> amb el plugin <strong>maven-compiler-plugin</strong> del pom.xml
+<code>
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+                &lt;source&gt;1.8&lt;/source&gt;
+                &lt;target&gt;1.8&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+</code></li>
+<li>Modificar el nom del metode <strong>dispatcherServletRegistration</strong> de Application.java per <strong>apiDispatcherServletRegistration</strong></li>
+<li>Utilitzar mètode <strong>&ldquo;public MongoClient mongoClient()&rdquo;</strong> enlloc de <strong>&ldquo;public Mongo mongo() throws Exception&rdquo;</strong> dels objectes que heredin de cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig</li>
+<li>Afegir la propietat de sistema <strong>&ldquo;spring.main.allow-bean-definition-overriding&rdquo;</strong> a true al iniciar l&rsquo;aplicació, afegint al Application.java:
+<code>
+System.setProperty(&quot;spring.main.allow-bean-definition-overriding&quot;, String.valueOf(true));
+</code></li>
+<li>Si l&rsquo;aplicació utilitza BD Mongodb, afegir l&rsquo;annotació &ldquo;@Configuration&rdquo; a totes les classes que heredin de &ldquo;cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig&rdquo;</li>
+<li>Si l&rsquo;aplicació utilitza BD mysql, canviar el driver <strong>com.mysql.jdbc.Driver</strong> per <strong>com.mysql.cj.jdbc.Driver</strong> al fitxer jdbc.properties</li>
+<li>Si l&rsquo;aplicació utilitza la seguretat per fitxer és necessari canviar el <strong>&ldquo;password-encoder&rdquo;</strong> del autentication provider, de:
+<code>
+    &lt;security:authentication-provider&gt;
+            &lt;security:password-encoder hash=&quot;plaintext&quot;/&gt;
+            &lt;security:user-service properties=&quot;classpath:config/props/security.users.properties&quot;/&gt;
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+</code>
+a:
+<code>
+    &lt;security:authentication-manager&gt;
+        &lt;security:authentication-provider&gt;
+            &lt;security:password-encoder ref=&quot;passwordEncoder&quot; /&gt;
+            &lt;security:user-service properties=&quot;classpath:config/props/security.users.properties&quot;/&gt;
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+    &lt;bean id=&quot;passwordEncoder&quot; class=&quot;org.springframework.security.crypto.password.NoOpPasswordEncoder&quot; factory-method=&quot;getInstance&quot; /&gt;
+</code>
+O fer un update dels passwords afegint &ldquo;{noop}&rdquo; davant dels passwords, aixi per exemple si per l&rsquo;usuari &ldquo;user&rdquo; tenia el password al fitxer de text &ldquo;password&rdquo; es necessari canviar-ho per &ldquo;{noop}password&rdquo;</li>
+</ol>
+
+<p>No es recomana utilitzar la seguretat per fitxer en entorns productius</p>
+
+<ol>
+<li><p>Si l&rsquo;aplicació utilitza la seguretat <strong>sense definir un &ldquo;password-encoder&rdquo;</strong> en el atentication provider es necessari definir-ne un o utilitzar el &ldquo;NoOpPasswordEncoder&rdquo; que està deprecat, per exemple si tenim una security per BD amb:</p>
+
+<pre><code>    &lt;security:authentication-manager&gt;
+        &lt;security:authentication-provider&gt;
+            &lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot;/&gt;
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+</code></pre>
+
+<p>Es necessari canviar-ho per:</p>
+
+<pre><code>    &lt;security:authentication-manager&gt;
+        &lt;security:authentication-provider&gt;
+            &lt;security:jdbc-user-service data-source-ref=&quot;dataSource&quot;/&gt;
+            &lt;security:password-encoder ref=&quot;passwordEncoder&quot; /&gt;
+        &lt;/security:authentication-provider&gt;
+    &lt;/security:authentication-manager&gt;
+        
+    &lt;bean id=&quot;passwordEncoder&quot; class=&quot;org.springframework.security.crypto.password.NoOpPasswordEncoder&quot;
+    factory-method=&quot;getInstance&quot; /&gt;
+</code></pre></li>
+</ol>
+
+<p>O fer un update dels passwords afeint &ldquo;{noop}&rdquo; davant dels passwords, aixi per exemple si per l&rsquo;usuari &ldquo;user&rdquo; tenia el password a BD &ldquo;password&rdquo; es necessari canviar-ho per &ldquo;{noop}password&rdquo;</p>
+
+<p>Es recomana utilitzar els &ldquo;password.encoders&rdquo; BCryptPasswordEncoder, Pbkdf2PasswordEncoder o SCryptPasswordEncoder</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+version: 2.0.0
+info:
+  version: 1.0.0
+  description: Petclinic (CloudFoundry IBMCloud)
+global-env:
+  - CF_BUILDPACK: 'https://github.com/cloudfoundry/java-buildpack#v4.35'
+  - CF_PATH: 'target/spring-petclinic.jar'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn clean package -Dmaven.test.skip=true
+    deployment:
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - CF_NAME: 'app-test'
+                      - CF_COMMAND: ''
+                      - CF_ENV: 'ENV:pre|ENV_VAR1_v2:VALUE1_v2|VALUE1_v2:VALUE2_v2'
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - CF_NAME: 'app-test'
+                      - CF_COMMAND: ''
+                      - CF_ENV: 'ENV:pro|ENV_VAR1_v2:VALUE1_v2|VALUE1_v2:VALUE2_v2'
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

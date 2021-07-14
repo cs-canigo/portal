@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ca-ES"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" /><title>Comunicat Mensual Oficina de Frameworks i Solucions d'Arquitectura</title>
+
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_blocs.css" rel="stylesheet" type="text/css" /><!-- <link
+href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_GridB2.css"
+rel="stylesheet" type="text/css" /> -->
+
+<link href="http://www.gencat.cat/piv/css/comuns/globals/FW_estils.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/Globals/FW_capPeu.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_menuOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www20.gencat.cat/docs/Framework/estilos%20y%20scripts/NUEVOS%20Estilos,%20imagenes%20y%20js/organismes/FW_estilsOrganismes.css" rel="stylesheet" type="text/css" />
+<link href="http://www.gencat.cat/piv/css/portals/PIV/css/FW_estils.css" rel="stylesheet" type="text/css" />
+<style>
+ul li {
+list-style-type: square;
+color: #000000;
+font-size: 1em;
+}
+ul li span{
+color: #000000;
+font-size: 1.3em;
+font-weight: bold;
+}
+a.link {
+text-decoration: none !important;
+color: black;
+padding: 1px 3px 1px 3px;
+font-size: .9em;
+color: #000000;
+padding: 5px;
+font-weight: bold;
+}
+a.sel {
+color: #AC2115;
+}
+td.top {
+vertical-align: top;
+}
+div.textoListados ul li {
+list-style-type: square;
+color: #000000;
+font-size: .9em;
+}
+hr.liniaVermella {
+color: #bf2f14;
+background-color:#bf2f14;
+height: 2px;
+border: none;
+}
+</style></head>
+<body>
+<div class="FW_bWidth">
+<div class="FW_bMinwidth">
+<div class="FW_bContainer"><!-- Inici FW_bMarc: Capa que cont&egrave; tota la plana en uns marges -->
+<div class="FW_bMarc">
+<table cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+<tr>
+<td rowspan="2" align="left"><!-- Inici FW_escut -->
+<div class="FW_bEscut">
+<h1> <a href="http://www.gencat.cat/" id="FW_gencat"> <img src="http://www.gencat.cat/piv/css/comuns/img/gcc_fs_logogeneralitat.gif" alt="Generalitat de Catalunya www.gencat.cat" title="Duu a la pàgina principal de la Generalitat de Catalunya" height="30" width="186" /> </a> </h1>
+</div>
+<!-- Fi FW_escut --> </td>
+<td> </td>
+<td align="right" valign="bottom"> <img src="http://canigo.ctti.gencat.cat/confluence/download/resources/OTCanigo_logo175x36.png" alt="Centre de Suport Canigó" height="30" width="186" />&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td> </td>
+<td class="navegacio" align="right"><!-- Inici FW_bMenuCap -->
+<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CAN/Centre+de+Suport">Frameworks i Solucions d'Arquitectura</a>&nbsp;&nbsp;<a class="link" href="http://canigo.ctti.gencat.cat/confluence/display/CANPUB/Comunicats">Comunicats Anteriors</a><!-- Fi FW_bMenuCap --> </td>
+</tr>
+<tr>
+<td colspan="3">
+<hr class="liniaVermella" /> </td>
+</tr>
+</tbody>
+</table>
+<!-- Imatge de tracking del comunicat --><img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/5950/2011-06.png" />
+<!-- Inici Estructura del Contingut -->
+<table style="width: 100%;" cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<!-- Area de continguts --> <td colspan="2" style="width: 75%; vertical-align: top; background-color: rgb(255, 255, 255);">
+<div class="FW_bTitol">
+<h2>Canigó. Gestió de variables globals a Canigó 3 </h2>
+<br />
+<div style="text-align: justify;">La configuració dels diferents serveis i connectors que formen part de Canigó es realitza mitjançant variables definides en fitxers de propietats. Moltes d'aquestes variables fan referència a components de la infraestructura dels servidors on es despleguen les aplicacions dels quals el proveïdor de l'aplicació no hauria de necessitar conèixer el detall (URLs, noms de recursos, etc.). A continuació es mostren 3 exemples de mòduls de Canigó i variables que fan servir:<br />
+<br />
+<table style="text-align: left; width: 597px; height: 205px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Mòdul</small></td>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Variables de servidor</small></td>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Variables d'aplicació</small></td>
+</tr>
+<tr>
+<td><small>canigo.support.mailing</small></td>
+<td><small>mail.host=smpt-intranet.gencat.cat<br />
+mail.port=25</small></td>
+<td><small>mail.username=<br />&lt;usuari_appDemo&gt;<br />
+mail.password=<br />&lt;contrasenya_appDemo&gt;</small></td>
+</tr>
+<tr>
+<td><small>canigo.integration.sgde</small></td>
+<td><small>sgde.forms.wsdl.url=<br />http://eformularis.intranet.gencat.cat/ServeisInvocacio/serveis/ServeisInvocacioV1?wsdl<br />
+sgde.std.wsdl.url=<br />http://sgde.intranet.gencat.cat/ServeisInvocacioSTD/services/ServeisSTD?wsdl</small></td>
+<td style="text-align: center;"><small>-</small></td>
+</tr>
+<tr>
+<td><small>canigo.persistence.jpa</small></td>
+<td style="text-align: center;"><small>-</small></td>
+<td><small>jndi.name=<br />&lt;jdbc/appDemo&gt;</small></td>
+</tr>
+</tbody>
+</table>
+<br />
+En aquest exemple es pot veure com hi ha determinades variables que seran comunes per a totes les aplicacions desplegades en el servidor, anomenades Variables de servidor, i d'altres concretes per cada aplicació, anomenades Variables d'aplicació. Es preveu fer una millora en la gestió d'aquestes variables a Canigó 3 per tal d'eximir al proveïdor de l'aplicació de tenir que informar el que hem anomenat com a&nbsp;Variables de servidor. Aquestes variables les configuraran els administradors dels servidors d'aplicacions del CPD on es desplega l'aplicació, ja sigui a nivell global per a tot el servidor o bé per aquella aplicació en concret, en fitxers de propietats dins el propi servidor.<br />
+<br />
+Properament es publicarà&nbsp;una nova versió de Canigó 3 on s'incorpori aquesta millora en el <a href="http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-configuracio/">Mòdul de Configuració</a>. Aquesta publicació serà degudament notificada en un futur comunicat.<br />
+</div>
+<br />
+<div class="FW_bTitol">
+<h2>SIC. Aplicacions modulars al SIC</h2>
+<br />
+<div style="text-align: justify;">Les aplicacions que han d'integrar-se en el SIC, identificades per el codi de diàleg en el nou model TIC, poden estar composades per diferents mòduls o sub-aplicacions. Aquestes sub-aplicacions el més habitual és que requereixin versionatge, procés de construcció i desplegament independents. Per aquest motiu, la recomanació del CS Canigó és que es faci la <a href="http://canigo.ctti.gencat.cat/related/sic/SIC-Formulari-Custodia-Codi-Aplicacio-v2.0.1.xlsx">gestió d'alta al SIC</a> de forma separada i d'aquesta manera s'aprovisionarà un repositori de SVN per la seva custodia de codi i jobs de construcció i desplegament a Jenkins per cadascuna d'elles.<br />
+<br />
+A continuació es mostra un exemple de sub-aplicacions que podrien formar part d'una mateixa aplicació "app" (codi de diàleg) i com s'integrarien al SIC:<br />
+<br />
+<table style="text-align: left; width: 712px; height: 260px;" border="1" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Sub-aplicacions</small></td>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Descripció</small></td>
+<td style="font-weight: bold; background-color: rgb(204, 204, 204);"><small>Integració amb el SIC</small></td>
+<td style="background-color: rgb(204, 204, 204);"><small><span style="font-weight: bold;">Recursos al SIC</span></small></td>
+</tr>
+<tr>
+<td><small>app_portal</small></td>
+<td><small>Portal per la publicació de dades al ciutadà</small></td>
+<td><small>Aplicació</small></td>
+<td><small>- Repositori&nbsp;SVN<br />
+- Job construcció (BLD)<br />
+- Jobs desplegament (INT/PRE/PRO)</small></td>
+</tr>
+<tr>
+<td><small>app_backoffice</small></td>
+<td><small>Backoffice per la gestió interna de l'aplicació</small></td>
+<td><small>Aplicació</small></td>
+<td><small>- Repositori&nbsp;SVN<br />
+- Job construcció (BLD)<br />
+- Jobs desplegament (INT/PRE/PRO)</small></td>
+</tr>
+<tr>
+<td><small>app_common</small></td>
+<td><small>Llibreria comuna tant per backoffice com portal</small></td>
+<td><small>Projecte llibreria</small></td>
+<td><small>- Repositori&nbsp;SVN<br />
+- Job construcció (LIB)</small></td>
+</tr>
+<tr>
+<td><small>app_ext_ws</small></td>
+<td><small>Llibreria amb stub client per integració amb sistema extern utilitzada al backoffice</small></td>
+<td><small>Projecte llibreria</small></td>
+<td><small>- Repositori&nbsp;SVN<br />
+- Job construcció (LIB)</small></td>
+</tr>
+</tbody>
+</table>
+<br />
+En un moment determinat del cicle de vida de l'aplicació ens podriem trobar amb la següent situació: app_portal (v2.1.0), app_backoffice (v4.0.0), app_common (v1.0.0) i app_ext_ws (v1.0.1). El flux d'accions que s'haurien d'haver&nbsp;executat al SIC seria el següent:<br />
+<br />
+<div style="text-align: center;"><img style="width: 438px; height: 299px;" alt="SIC_Aplicacio_modula" src="http://canigo.ctti.gencat.net/confluence/download/attachments/6745/SIC_Aplicacio_modular.png" /><br />
+</div>
+<div style="text-align: center;"><span style="font-style: italic;">Flux accions desplegament aplicació modular</span>
+</div>
+</div>
+&nbsp;&nbsp;&nbsp; <br />
+<div style="text-align: justify;">Per a més detall de la integració d'aplicacions al SIC podeu consultar el <a href="http://canigo.ctti.gencat.cat/confluence/download/attachments/4008/SIC+Manual+Integraci%C3%B3+v1.0.15.pdf">Manual d'Integració</a> publicat al Portal de Frameworks i Solucions d'Arquitectura. En cas de dubtes podeu fer arribar les vostres consultes <a href="http://canigo.ctti.gencat.cat/howtos/2018-01-howto-obrir-peticions-SIC-a-autoservei-Remedy/#consulta">obrint una petició Remedy de consulta al SIC</a>.
+</div>
+</div>
+</div>
+</td>
+<!-- Area de noticies --> <td class="top" rowspan="2" style="border-left: 5px solid rgb(191, 47, 20);" bgcolor="#ffffff" valign="top">
+<div class="FW_bTitol" align="center">
+<h2>Notícies</h2>
+</div>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>Procediment d'alta d'aplicacions al SIC sense codi de diàleg</h4>
+</span></li>
+</ul><div style="text-align: justify;">
+Ha estat definit un procediment d'alta al SIC per aquelles aplicacions que no tenen codi de diàleg. Prèviament a l'alta al SIC, el proveïdor ha de tramitar l'alta a l'Inventari d'Aplicacions amb Gestió de Serveis. Aquest és l'<a href="http://canigo.ctti.gencat.cat/sic-related/procediment/">enllaç</a> al Portal de Frameworks i Solucions d'Arquitectura on podeu trobar el detall del procediment.<br /><br />
+</div><ul>
+<li><span>
+<h4>Signatura d'applets</h4>
+</span></li>
+</ul><div style="text-align: justify;">
+Aquelles aplicacions que requereixen signar applets arrel de la restricció de seguretat afegida a l'<a href="http://www.oracle.com/technetwork/java/javase/7u51-relnotes-2085002.html">upgrade 51</a> de la runtime Java (JRE 1.7.0_51) poden enviar un correu a la <a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia del CS Canigó</a> amb l&#8217;applet i se&#8217;ls hi retornarà signat.<br /><br />
+</div></div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<div class="noticia">
+<ul>
+<li> <span>
+<h4>Activacions de formularis</h4>
+</span></li>
+</ul>
+<div style="text-align: justify;">La següent gràfica mostra l'evolució d'activacions de formularis realitzades durant el darrer any per àmbit a la plataforma de Formularis Adobe (eFormularis):<div style="text-align: center;"><span style="font-weight: bold;"><br /><img style="width: 513px; height: 300px;" alt="Activacions_formularis" src="http://canigo.ctti.gencat.net/confluence/download/attachments/6745/Activacions_formularis.png" /><br /></span></div>
+<br />
+</div>
+</div>
+<center>
+<hr class="liniaVermella" width="80%" /> </center>
+<hr color="#ffffff" />
+<table width="100%">
+<tbody>
+<tr>
+<td>
+<div class="noticia">
+<ul>
+<li><span>
+<h4>HowTo's Frameworks i Solucions d'Arquitectura</h4>
+</span></li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">
+<table cellpadding="5" cellspacing="5">
+<tbody>
+<tr>
+<td> <img src="http://canigo.ctti.gencat.cat/confluence/download/attachments/4/howto.png" alt="howto" /> </td>
+<td> <a target="_blank" href="http://canigo.ctti.gencat.net/confluence/download/attachments/6745/Canig%C3%B3+-+Howto+-+Validacions+amb+Java+Bean+Validation+%28JSR-303%29.pdf">
+<b>HOWTO:</b> Validacions amb Java Bean Validation (JSR-303) </a> </td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+
+</tbody>
+</table>
+<!-- Peu de pagina noticies -->
+<hr color="#ffffff" />
+<div align="center"><img src="http://canigo.ctti.gencat.net/confluence/download/attachments/6359/logoCTTI.png" alt="CTTI" /></div>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Fi Estructura del Contingut --><!-- Inici FW_bPeu -->
+<div class="FW_bPeu">
+<div align="center"> <a href="http://www.gencat.net/web/cat/avis_legal.htm">Avís legal</a> | <a href="http://www.gencat.cat/web/cat/accessibilitat.htm">Accessibilitat</a> | <a href="http://www.gencat.net/web/cat/sobre_el_web.htm">Sobre el web</a> | <a href="http://www.gencat.cat/web/cat/copyright.htm">© Generalitat de Catalunya</a></div>
+</div>
+<!-- Fi FW_bPeu --> </div>
+<div style="text-align: center;" align="center"><span style="font-size: 11pt; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black; text-decoration: none;">
+<hr style="color: rgb(214, 214, 214);" align="center" noshade="noshade" size="3" width="100%" /></span></div>
+<span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;">AVISO DE CONFIDENCIALIDAD.<br />
+Este correo y la información contenida o adjunta al mismo es privada y confidencial y va dirigida exclusivamente a su destinatario. TICxCAT informa a quien pueda haber recibido este correo por error que contiene información confidencial cuyo uso, copia, reproducción o distribución está expresamente prohibida. Si no es Vd. el destinatario del mismo y recibe este correo por error, le rogamos lo ponga en conocimiento del emisor y proceda a su eliminación sin copiarlo, imprimirlo o utilizarlo de ningún modo.<br />
+<br />
+</span><span style="font-size: 7.5pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: gray;" lang="EN-US">CONFIDENTIALITY WARNING.<br />
+This message and the information contained in or attached to it are private and confidential and intended exclusively for the addressee. TICxCAT informs to whom it may receive it in error that it contains privileged information and its use, copy, reproduction or distribution is prohibited. If you are not an intended recipient of this E-mail, please notify the sender, delete it and do not read, act upon, print, disclose, copy, retain or redistribute any portion of this E-mail.</span>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,34 @@
+version: 2.0.0
+info:
+  version: 0.0.1
+  description: Nginx test
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: nginx
+  - DEPLOYMENT_TYPE: DeploymentConfig
+components:
+  - deployment:
+      scm: https://git.intranet.gencat.cat/0192/sic-tests/9990.2/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: preproduccio/nginx
+                      - DEPLOYMENT_NAME: nginx-116
+                      - DEPLOYMENT_WAIT: 60
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: produccio/nginx
+                      - DEPLOYMENT_NAME: nginx-116
+                      - DEPLOYMENT_WAIT: 60
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

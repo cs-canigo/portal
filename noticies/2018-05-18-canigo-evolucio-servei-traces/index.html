@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Evolució Mòduls de Traces i Instrumentació</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Evolució Mòduls de Traces i Instrumentació\" />");
+		document.write("<meta name=\"description\" content=\"Analitzem l\x27evolució realitzada en els mòduls de traces i instrumentació a Canigó 3.2, recomanacions pel que fa al seu ús, i l\x27evolució a futur prevista per aquests serveis\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/noticies">
+											
+
+
+
+
+
+
+
+
+
+	Notícies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Evolució Mòduls de Traces i Instrumentació
+
+
+										
+
+									
+								</h1>
+
+								
+									<br />
+									18-05-2018
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 18-05-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="traces">Traces</h3>
+
+<p>El <a href="https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/"><strong>Mòdul de Traces</strong></a> va ser actualitzat de Log4j 1.x a Log4j 2.x a Canigó 3.2. Amb aquesta actualització es va voler dotar a les aplicacions Canigó de tots els avantatges que suposa l&rsquo;ús d&rsquo;aquesta nova versió de la llibreria. D&rsquo;entre elles volem destacar la importància, pel que fa a aspectes de rendiment de les aplicacions, de l&rsquo;ús de <a href="https://logging.apache.org/log4j/2.x/manual/async.html">loggers asíncrons</a>.</p>
+
+<p>Els <strong>loggers asíncrons</strong> representen una gran millora respecte els síncrons, sobretot si el registre de les traces s&rsquo;ha de realitzar en un destí amb una latència considerable (Ex. filesystem en un NAS, socket a servei remot). S&rsquo;ha de tenir en compte que per obtenir aquesta millora de rendiment, es perd en fiabilitat, ja que alguns esdeveniments podrien arribar a perdre&rsquo;s. Si es volgués utilitzar en auditories, o alguna funcionalitat on no fos acceptable perdre cap registre, s&rsquo;hauria d&rsquo;implementar un mecanisme de fallback i utilitzar-lo en cas de detectar algun error (Ex. disc sense espai, problema de connectivitat, &hellip;).</p>
+
+<p>A mode de resum, enumerem les principals novetats que incorpora Log4j 2.x:</p>
+
+<ul>
+<li>Loggers asíncrons</li>
+<li>Nivells de log personalitzats</li>
+<li>Reconfiguracions en calent</li>
+<li>Suport a lambdas</li>
+<li>Filtres</li>
+<li>Plugins</li>
+<li>Suport a APIs</li>
+<li>Traces de missatges personalitzats</li>
+<li>Millores de concurrència</li>
+<li>Configuració en diferents formats (XML, JSON o YAML, a més de configuració programàtica)</li>
+</ul>
+
+<h4 id="solució-de-logs-centralitzats">Solució de logs centralitzats</h4>
+
+<p>Les solucions de logs centralitzats tipus <strong>ELK</strong> (Elasticsearch+Logstash+Kibana) o <strong>EFK</strong> (Elasticsearch+Fluentd+Kibana) són cada cop més comuns. Des de CTTI s&rsquo;està avaluant el seu ús.</p>
+
+<p>Les aplicacions Canigó 3.2 poden fer ús d&rsquo;aquestes solucions de logs centralitzats, ja sigui escrivint traces a fitxer o sortida estàndard i que els agents de recol·lecció de logs els enviïn al repositori, o bé enviant-los directament mitjançant appenders de Log4j 2.x.</p>
+
+<h3 id="instrumentació">Instrumentació</h3>
+
+<p>El <a href="https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-instrumentacio/"><strong>Mòdul d&rsquo;Instrumentació</strong></a>, el qual no ha de confondre&rsquo;s amb el de traces, s&rsquo;evolucionarà per tal de facilitar l&rsquo;anàlisi del rendiment de les aplicacions (ús de memòria a la JVM, consum de cpu, pool de connexions a base de dades, temps de resposta de les peticions, healthchecks, &hellip;) i permetre la integració amb serveis externs de centralització de la informació (Ex. Prometheus, InfluxDB, &hellip;). També es vol integrar una solució de <strong>traces distribuïdes</strong> que permeti poder fer seguiment d&rsquo;una acció d&rsquo;usuari o sistema que requereixi interactuar amb diferents serveis, mitjançant l’ús d’un ID de Correlació que es vagi traspassant entre totes les crides entre els serveis.</p>
+
+<p>En l&rsquo;actualitat, el mòdul d&rsquo;instrumentació facilita principalment:</p>
+
+<ul>
+<li>monitoritzar l&rsquo;execució de serveis de l&rsquo;aplicació, obtenint informació com el temps de resposta i si el resultat és correcte o no</li>
+<li>validar l&rsquo;estat d&rsquo;un servei, confirmant que està responent correctament (Ex. base de dades, servidor smtp, &hellip;)</li>
+</ul>
+
+<p>A Canigó 3.2, a diferència de versions predecessores, les dades d&rsquo;instrumentació s&rsquo;exposen mitjançant serveis REST. En frontends web aquestes dades podent ser presentades visualment amb qualsevol llibreria Javascript, com per exemple, <a href="https://www.chartjs.org/">Chart.js</a>.
+<br><br>
+Per qualsevol dubte respecte a l&rsquo;ús d&rsquo;aquests mòduls i la seva evolució prevista us podeu posar en contacte amb el CS Canigó preferiblement via <a href="https://cstd.ctti.gencat.cat/jiracstd/browse/CAN">JIRA CSTD al servei CAN</a> o <a href="mailto:oficina-tecnica.canigo.ctti@gencat.cat">bústia</a>.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

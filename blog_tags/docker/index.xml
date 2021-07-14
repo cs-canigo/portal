@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog d'Arquitectura del CTTI. Generalitat de Catalunya</title>
+    <link>https://canigo.ctti.gencat.cat/blog_tags/docker/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Wed, 02 Dec 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Docker: crea, desplega i executa aplicacions en contenidors</title>
+      <link>https://canigo.ctti.gencat.cat/blog/2015/12/contenidors/</link>
+      <pubDate>Wed, 02 Dec 2015 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/blog/2015/12/contenidors/</guid>
+      <description>Docker és una tecnologia que ha revolucionat el desplegament d’aplicacions i de programari degut a la seva senzillesa, facilitat d&#39;ús i velocitat de  desplegament.</description>
+    </item>
+    
+  </channel>
+</rss>

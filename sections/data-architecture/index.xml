@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Arquitectura CTTI. Generalitat de Catalunya </title>
+    <link>https://canigo.ctti.gencat.cat/sections/data-architecture/</link>
+    <language>ca-es</language>
+    
+    
+    <updated>Tue, 05 May 2020 00:00:00 UTC</updated>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Juliol21
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-07-14_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 14 Jul 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-07-14_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d&#39;obligat compliment i actualitzar algunes entitats ja publicades.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        SIC. Migració pipelines cloud al SIC 3.0
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-07-06-SIC-migracio-pipelines-cloud-SIC-3.0/</link>
+      <pubDate>Tue, 06 Jul 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-07-06-SIC-migracio-pipelines-cloud-SIC-3.0/</guid>
+      <description>Durant els mesos de juny i juliol s&#39;està avançant en la migració de pipelines que despleguen al cloud cap a la nova Plataforma SIC 3.0.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Juny21
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-06-30_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 30 Jun 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-06-30_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d&#39;obligat compliment i actualitzar algunes entitats ja publicades.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Maig21
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-05-26_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-05-26_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d&#39;obligat compliment i actualitzar algunes entitats ja publicades.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        SIC. Posada en servei Plataforma SIC 3.0
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-04-30-SIC-posada-servei-SIC-3.0/</link>
+      <pubDate>Thu, 20 May 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-04-30-SIC-posada-servei-SIC-3.0/</guid>
+      <description>El dia 01/05/2021 s&#39;ha posat en servei la nova Plataforma del Sistema d&#39;Integració Contínua 3.0 </description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Canigó. Adaptació connector Sarcat PICA
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/</link>
+      <pubDate>Tue, 11 May 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/</guid>
+      <description>S&#39;ha adaptat el mòdul d&#39;integració del connector Sarcat PICA arran les modificacions en els prefixos dels namespace de les respostes de la PICA</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Abril21
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-04-21_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-04-21_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d&#39;obligat compliment i actualitzar algunes entitats ja publicades.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        SIC. Procés d&#39;esborrat de binaris
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-04-08-Proces_esborrat_binaris/</link>
+      <pubDate>Thu, 08 Apr 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-04-08-Proces_esborrat_binaris/</guid>
+      <description>A partir del 21/04/2021 s&#39;executa periòdicament un procés d&#39;esborrat de binaris</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Q2
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-03-31_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 31 Mar 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-03-31_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar més entitats dins del grup d&#39;obligat compliment i actualitzar algunes entitats ja publicades.</description>
+    </item>
+         
+    <item>
+      <title>
+        
+        Publicació Catàleg Tècnic de Dades - Q1
+      </title>
+      <link>https://canigo.ctti.gencat.cat/noticies/2021-03-10_Gestio_tecnica_dades/</link>
+      <pubDate>Wed, 10 Mar 2021 00:00:00 UTC</pubDate>
+      
+      <guid>https://canigo.ctti.gencat.cat/noticies/2021-03-10_Gestio_tecnica_dades/</guid>
+      <description>S&#39;ha actualitzat el Catàleg Tècnic de Dades per incorporar l&#39;entitat Nivells poblacionals dins del grup d&#39;obligat compliment, actualitzar el conjunt de valors de l&#39;entitat Secretaries i canviar el nom de dues entitats ja publicades.</description>
+    </item>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+  </channel>
+</rss>

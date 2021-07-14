@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Canigó. Transmissió de binaris en REST APIs</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Canigó. Transmissió de binaris en REST APIs\" />");
+		document.write("<meta name=\"description\" content=\"En aquest article expliquem diferents opcions per transmissió de dades binàries en REST APIs, recomanacions i millors pràctiques.\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/noticies">
+											
+
+
+
+
+
+
+
+
+
+	Notícies
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Canigó. Transmissió de binaris en REST APIs
+
+
+										
+
+									
+								</h1>
+
+								
+									<br />
+									10-08-2018
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 10-08-2018
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<p>La <strong>transmissió de dades binàries</strong> en un servei web, sobretot quan es tracta d&rsquo;un volum de dades important, és un punt crític en el rendiment d&rsquo;una aplicació. Cal tractar-ho amb deteniment, i aplicar la millor solució tècnica segons les característiques de l&rsquo;aplicació.</p>
+
+<h2 id="introducció">Introducció</h2>
+
+<p>Actualment els dos formats <em>human readable</em> d&rsquo;ús general més utilitzats per dades estructurades són <strong>JSON</strong> i <strong>XML</strong>.</p>
+
+<p>Respecte al suport de dades binàries, el format XML suporta aquest tipus de dades de manera nativa principalment mitjançant el tipus <code>base64Binary</code>, mentre que el format JSON no en dóna suport directe, obligant a codificar aquesta informació de manera ad-hoc (p.e. com a Strings en Base64, Base85 o Base91).</p>
+
+<h2 id="opcions">Opcions</h2>
+
+<p>Tal com s&rsquo;ha introduït prèviament a l&rsquo;apartat anterior, hi ha diverses opcions tècniques per transmetre dades binàries les quals es descriuen a continuació.</p>
+
+<h3 id="base64">Base64</h3>
+
+<p>Una de les maneres més esteses de transmetre dades binàries és mitjançant la codificació en <strong>Base 64</strong>, sent aquesta l&rsquo;estàndard amb màxima interoperabilitat car que és independent del format amb el qual es transfereixen les dades (JSON, XML, etc.). Un dels defectes principals d&rsquo;aquest esquema de codificació és que augmenta la mida un <strong>33%</strong>, de manera que un arxiu de per exemple 6MB es transforma en un de 8MB.</p>
+
+<p>Relacionades amb la codificació prèvia hi ha (entre d&rsquo;altres) les codificacions en <em>Base85</em> i <em>Base91</em>, incrementant el rang de caràcters permesos segons la codificació, i reduint en conseqüència la mida final, però aquestes són menys esteses.</p>
+
+<p>Exemple:</p>
+
+<pre><code>$ echo -n 'Exemple de codificació' | base64 
+RXhlbXBsZSBkZSBjb2RpZmljYWNpw7M=
+</code></pre>
+
+<h4 id="xml-base64binary">XML:base64Binary</h4>
+
+<p>El format XML suporta de manera nativa l&rsquo;enviament de dades binàries especificant aquest el tipus de dada <code>base64Binary</code>, de manera que el desenvolupador no ha d&rsquo;encarregar-se de la tasca de codificació/decodificació de les dades, car que la biblioteca que implementa el tractament del format XML ho implementa internament.</p>
+
+<p>Exemple:</p>
+
+<pre><code>&lt;dades&gt;
+&lt;imatge&gt;iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAACjElEQVR4Aa2V30uTURjHnVBUgglC...&lt;/imatge&gt;
+&lt;/dades&gt;
+</code></pre>
+
+<h3 id="multipart-multipart-form-data">Multipart (multipart/form-data)</h3>
+
+<p>L&rsquo;estàndard MIME defineix un tipus de contingut (<em>Content-Type</em>) que permet agrupar de manera ordenada diferents continguts en un mateix missatge, el tipus <em>Multipart</em>, i dins d&rsquo;aquesta definició, hi ha un subtipus anomenat <em>Form-Data</em>.</p>
+
+<p>Aquest tipus de contingut <strong>multipart/form-data</strong> és un estàndard pel qual les pàgines web permeten pujar fitxers als servidors juntament amb altres dades.</p>
+
+<p>Un avantatge d&rsquo;utilitzar aquest estàndard és que és el mateix que utilitzen les pàgines web, alineant i unificant maneres de transmetre dades, a més a més sense incórrer en les des-avantatges d&rsquo;una codificació del tipus Base64.</p>
+
+<p>Exemple</p>
+
+<pre><code>HTTP POST https://api.onedrive.com/v1.0/drive/items/{folder-id}:/{child-folder-name}:/children
+Authorization: bearer EwB...
+Content-Type: multipart/form-data; boundary=87ca48b5-cc31-4889-9e81-87df743e08ae
+Content-Length: 1284
+--87ca48b5-cc31-4889-9e81-87df743e08ae
+Content-Disposition: form-data; name=&quot;metadata&quot;
+Content-Type: application/json; charset=UTF-8
+Content-Length: 31
+Content-Transfer-Encoding: binary
+{&quot;file&quot;:{},&quot;name&quot;:&quot;file-name.ext&quot;}
+--87ca48b5-cc31-4889-9e81-87df743e08ae
+Content-Disposition: form-data; name=&quot;content&quot;
+Content-Type: text/plain
+Content-Length: 842
+Content-Transfer-Encoding: binary
+  File content goes here
+--87ca48b5-cc31-4889-9e81-87df743e08ae--
+</code></pre>
+
+<h3 id="esquemes-binaris">Esquemes binaris</h3>
+
+<p>Les opcions prèvies mantenien la premissa que eren orientades a text (<em>human readable</em>), però també hi ha opcions que permeten enviar la informació de manera estructurada utilitzant protocols binaris, o <em>machine readable</em>.</p>
+
+<p>L&rsquo;avantatge d&rsquo;aquests esquemes binaris radica en que estan optimitzats per la transferència eficient de dades, i no pas per la seva inspecció/supervisió per part de persones.</p>
+
+<h4 id="protocol-buffers">Protocol Buffers</h4>
+
+<p>Aquest format d&rsquo;estructuració de dades és l&rsquo;equivalent (salvant algunes diferències) al format XML però en binari.</p>
+
+<p>Els principals avantatges d&rsquo;aquest format és un suport excel·lent dels principals llenguatges (Java, Python, C#, Go, etc.) i una bona interoperabilitat entre plataformes (Linux, Windows, IoT, etc.), tot mantenint un <em>overhead</em> mínim i una velocitat de càrrega millors en comparació amb XML.</p>
+
+<p>Exemple (format text pla de protocol buffer)</p>
+
+<pre><code># Textual representation of a protocol buffer.
+# This is *not* the binary format used on the wire.
+person {
+  name: &quot;John Doe&quot;
+  email: &quot;jdoe@example.com&quot;
+}
+</code></pre>
+
+<h4 id="mtom">MTOM</h4>
+
+<p>Message Transmission Optimization Mechanism (MTOM) és un estàndard de la W3C, que aglutina l&rsquo;empaquetat de dades XML en el format binari XOP, l&rsquo;enviament mitjançant <em>Multipart</em> dins d&rsquo;un protocol HTTP.</p>
+
+<h2 id="recomanació">Recomanació</h2>
+
+<p>Des d&rsquo;un punt de vista de rendiment, la forma més eficient de transmissió de dades binàries és fer-ho de manera <em>asíncrona</em>, directament a un servei especialitzat en l&rsquo;intercanvi de fitxers (p.e. FTP/SFTP/FTPS). En aquest sentit, no es fa cap codificació/escaneig de les dades per treballar amb les dades reals.</p>
+
+<p>En el cas que s&rsquo;hagi de fer mitjançant un API REST, s&rsquo;ha de tenir en compte diversos factors i el pes en la decisió final:</p>
+
+<ul>
+<li>Volum de transferència de dades: Si el volum de dades a transmetre és <em>elevat</em> es desaconsella utilitzar l&rsquo;enviament explícit o implícit de les codificacions textuals (p.e. Base64), i es recomana l&rsquo;ús de protocols binaris, donats el seu rendiment i eficiència.</li>
+<li>Interoperabilitat amb altres projectes/sistemes: En aquest cas les codificacions textuals (p.e. Base64) i més concretament el format XML, i el seu tipus de dades <code>base64Binary</code>, poden maximitzar la interoperabilitat permetent l&rsquo;enviament de dades binàries.</li>
+</ul>
+
+<p>Des d&rsquo;un punt de vista purament tècnic, i sense tenir en compte d&rsquo;altres criteris, el ranking quedaria així:</p>
+
+<ol>
+<li><p>Protocol Buffers<br>
+Els avantatges d&rsquo;aquesta opció són clares: Un protocol binari eficient en la densitat d&rsquo;informació, ràpid en el tractament de dades i interoperable entre plataformes.</p></li>
+
+<li><p>Multipart<br>
+L&rsquo;avantatge principal d&rsquo;aquesta opció és que presenta un format d&rsquo;empaquetat i encapsulació orientat a text i independent del format subjacent (p.e. JSON, XML), mantenint <em>quasi</em> intacta la compatibilitat cap enrere, i mantenint alhora una elevada eficiència en la transmissió de dades binàries.</p></li>
+
+<li><p>XML:base64Binary<br>
+L&rsquo;avantatge principal d&rsquo;aquesta opció és que no requereix cap modificació especial, car que està suportat per l&rsquo;estàndard XML, garantint una interoperabilitat màxima. Els desavantatges però són una eficiència i velocitat reduïdes (en comparació amb els protocols binaris).</p></li>
+</ol>
+
+<p>Les opcions Base64 i MTOM quedarien descartades en favor d&rsquo;aquestes.</p>
+
+<h3 id="streaming">Streaming</h3>
+
+<p>A banda de transmetre i tractar dades de manera eficient i còmode pel desenvolupador, la possibilitat de permetre <em>Streaming</em> del contingut binari pot representar una necessitat en el cas que s&rsquo;hagi de treballar amb un volum elevat de dades binàries, com per exemple els fitxers adjunts o reports pesants, car que les opcions estàndard carreguen aquestes dades binàries en memòria.</p>
+
+<p>En aquest sentit l&rsquo;única opció recomanable actualment per poder donar suport a <em>Streaming</em> és l&rsquo;opció de <strong>Multipart</strong>, car que les implementacions d&rsquo;aquest estàndard transfereixen a fitxers temporals els continguts binaris, abstraient el desenvolupador d&rsquo;aquest detall.</p>
+
+<h2 id="enllaços-d-interés">Enllaços d&rsquo;interés</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Base64">https://en.wikipedia.org/wiki/Base64</a></li>
+<li><a href="https://medium.com/walmartlabs/rest-easy-with-json-and-binary-f218f7e141be">https://medium.com/walmartlabs/rest-easy-with-json-and-binary-f218f7e141be</a></li>
+<li><a href="https://canigo.ctti.gencat.cat/related/canigo/howto/Canigo%20-%20Streaming%20de%20fitxers%20en%20clients%20REST.pdf">https://canigo.ctti.gencat.cat/related/canigo/howto/Canigo%20-%20Streaming%20de%20fitxers%20en%20clients%20REST.pdf</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MIME#Multipart_messages">https://en.wikipedia.org/wiki/MIME#Multipart_messages</a></li>
+<li><a href="https://ec.haxx.se/http-multipart.html">https://ec.haxx.se/http-multipart.html</a></li>
+<li><a href="http://cxf.apache.org/docs/jax-rs-multiparts.html">http://cxf.apache.org/docs/jax-rs-multiparts.html</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Message_Transmission_Optimization_Mechanism">https://en.wikipedia.org/wiki/Message_Transmission_Optimization_Mechanism</a></li>
+<li><a href="https://developers.google.com/protocol-buffers/docs/overview">https://developers.google.com/protocol-buffers/docs/overview</a></li>
+<li><a href="https://github.com/protocolbuffers/protobuf/issues/5120">https://github.com/protocolbuffers/protobuf/issues/5120</a></li>
+</ul>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>

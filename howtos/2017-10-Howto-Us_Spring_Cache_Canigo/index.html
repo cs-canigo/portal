@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html xml:lang="ca-ES" lang="ca-ES" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>Ús de Spring Cache (Caffeine) en Canigó 3.2.2</title>
+		<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+	<link href="/css/master.min.css" rel="stylesheet" type="text/css" />
+	<link href="/css/canigo.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
+
+	<script>
+		document.write("<meta name=\"titol\" content=\"Ús de Spring Cache (Caffeine) en Canigó 3.2.2\" />");
+		document.write("<meta name=\"description\" content=\"Ús de Spring Cache (Caffeine) en Canigó 3.2.2\" />");
+	</script>
+
+	
+
+</head>
+<body class="single">
+	<div class="contenidor unfixed">
+
+				
+
+		<header class="fons_header navbar navbar-default z-index-menu">
+			<div class="container" role="menu">
+				<div class="row clearfix menuNav">
+					<div class="col-md-3 col-xs-3 column visible-xs coloca ">
+						<button type="button" onclick="amunt();" title="Menu"
+							class="navbar-toggle pull-left" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="col-md-3 col-xs-6 col-offset-2 column visible-xs titol-mobil">
+						
+						<span class="white titol-mobil-destacat">canigo.ctti</span><span class="white">.gencat.cat</span>
+					</div>
+
+					<div class="col-md-3 col-xs-3 column visible-xs coloca1">
+						<button onclick="amunt();" type="button" title="Cerca"
+							class="ico_cerca " data-toggle="collapse" data-target=".dos">
+						</button>
+					</div>
+
+				</div>
+
+				<div class="collapse dos">
+					<div class="shadowBox">
+						<form class="navbar-form navbar-left primer" action="/cercador/" method="get"
+ 						onsubmit="location.href=this.action+'?q='+this.cerca_cap.value; return false;">
+							<div class="form-group">
+								<input type="search" class="form-control" name="q" id="cerca_cap"
+									title="Cerca"
+									placeholder="Cerca" />
+								<button type="button" title="Neteja" class="btn btn-default"></button>
+								<input type="submit" class="ocult" name="Cerca" value="Cerca" />
+							</div>
+						</form>
+					</div>
+				</div>	
+
+				<nav class="collapse navbar-collapse navbar-ex1-collapse ">
+				
+					<div class="row">
+						<div class="col-md-6 col-sm-4 column">
+							<a class="img-responsive logo" title="Generalitat de Catalunya"
+								href="https://ctti.gencat.cat/">gencat.cat</a>
+							<button class="menu_tancar visible-xs collapsed"
+								data-target=".navbar-collapse" data-toggle="collapse"
+								title="Tancar"></button>
+						</div>
+
+						<div class="col-md-6 col-sm-8 column hidden-xs hidden-mg">
+							<form class="navbar-form cercador_vermell hidden-xs pull-right" action="/cercador/"  method="get" onsubmit="location.href=this.action+'?q='+this.cerca2.value; return false;">
+								<div class="form-group">
+									<label class="hidden" for="cerca2">Cerca</label>
+									<input id="cerca2" class="form-control" type="search" 
+									placeholder="Cerca" name="q" title="Cerca">
+									<input class="btn btn-default" type="submit" title="Cerca" value="">
+								</div>
+							</form>
+
+							
+
+						</div>
+
+					</div>
+					<div class="col-xs-12 hidden-xs" id="nomPortal">
+                    	<span class="titol-cap-nou">Centre de Telecomunicacions i Tecnologies de la Informació</span>
+                    </div>					
+					<ul class="nav navbar-nav">
+
+			        	
+
+						<li>
+							<a class="dropdown-toggle" href='/' data-toggle='_dropdown'>Inici</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/arqctti' data-toggle='_dropdown'>Arquitectura CTTI</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/blog' data-toggle='_dropdown'>Blog</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cloud' data-toggle='_dropdown'>Cloud</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/canigo' data-toggle='_dropdown'>Canigó</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sic' data-toggle='_dropdown'>SIC</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/sgde' data-toggle='_dropdown'>SGDE</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/gicar' data-toggle='_dropdown'>GICAR</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/cs' data-toggle='_dropdown'>Centres de Suport</a>
+						</li>
+
+						
+
+						<li>
+							<a class="dropdown-toggle" href='/dadesref' data-toggle='_dropdown'>Gestió Tècnica de Dades</a>
+						</li>
+
+						
+
+					</ul>
+
+				</nav>
+			</div>
+		</header>
+
+
+
+	</div>
+
+	<section class="border-start">
+
+						
+			
+
+			<article class="bgGrey">
+				<div class="container">
+					<div class="row">
+						<div class="capcelera_basica col-sm-12">
+							<div class="capcelera_basica_cont">
+								<ol class="breadcrumb filariana hidden-xs">
+									<li>
+										<a href="/">Inici</a>
+									</li>
+									<li class="breadcrumbs2">
+									
+										<a href="/howtos">
+											
+
+
+
+
+
+
+
+
+
+
+
+	How to
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+										</a>
+										
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+									
+									</li>
+
+								</ol>
+
+								<h1 class="capcelera_flotant pull-left" data-txt=".title">
+									
+
+										
+											
+
+
+
+
+	Ús de Spring Cache (Caffeine) en Canigó 3.2.2
+
+
+										
+
+									
+								</h1>
+
+								
+
+								
+								
+
+								
+
+								
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</article>
+
+			
+
+
+		   <div class="padding-xs container">
+	    	
+	    	   <i><b>Darrera actualització:</b></i> 01-05-2017
+	        
+           </div>
+           
+			<article class="padding-xs padding-sm padding-md contingut">				
+				<div class="container">
+ 		
+					
+				
+
+	
+
+
+					
+
+						
+
+<h3 id="a-qui-va-dirigit">A qui va dirigit</h3>
+
+<p>Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que vulguin afegir Spring Cache a una aplicació Canigó 3.2.</p>
+
+<h3 id="versió-de-canigó">Versió de Canigó</h3>
+
+<p>Els passos descrits en aquest document apliquen a la versió 3.2.x del Framework Canigó.</p>
+
+<h3 id="introducció">Introducció</h3>
+
+<p>En aquest HowTo s’explica com afegir Spring Cache a una aplicació Canigó 3.2.
+Per a fer-ho es desplega l’aplicació demo que genera el plugin de Canigó, per a mostrar el funcionament de Spring Cache primer es fa una prova sense utilitzar la cache i després una altre utilitzant la cache.</p>
+
+<p>En aquest primer exemple no se li especifica cap proveïdor específic de caching (caffeine, ehcache, etc.) de tal manera que l&rsquo;exemple utilitzarà simplement ConcurrentHashMap.</p>
+
+<p>A una aplicació real es pot triar la implementació de caching que es desitgi, però es important utilitzar l&rsquo;abstracció que proporciona <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#boot-features-caching">Spring Cache</a> (estàndard JSR-107) ja que a banda de complir els estàndards no fixa una aplicació a un proveïdor de caching en concret i facilita en un futur qualsevol modificació.</p>
+
+<p>En un segon exemple es mostra com utilitzar un proveïdor de caching, en aquest exemple <a href="https://github.com/ben-manes/caffeine">Caffeine</a> com llibreria de caching</p>
+
+<h2 id="exemple-configuració-spring-cache">Exemple Configuració Spring Cache</h2>
+
+<h3 id="afegir-llibreries">Afegir Llibreries</h3>
+
+<p>S&rsquo;ha d&rsquo;afegir al pom.xml la dependència a Spring Cache</p>
+
+<pre><code>&lt;!-- SPRING BATCH --&gt;
+ &lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-cache&lt;/artifactId&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<h3 id="exemple-d-accés-sense-cache">Exemple d&rsquo;accés sense Cache</h3>
+
+<p>A la classe <strong>EquipamentService</strong> es crea els mètodes <em>getById</em> i <em>simularLentitud</em>, aquest segon mètode es crea per a veure millor els efectes de l&rsquo;ús de cache respecte a no utilitzar cache.</p>
+
+<pre><code> private void simularLentitud() {
+    try {
+        long time = 3000L;
+        Thread.sleep(time);
+    } catch (InterruptedException e) {
+        throw new IllegalStateException(e);
+    }
+}
+</code></pre>
+
+<p>Aquest mètode el que fa, es aturar el thread durant 3 segons.</p>
+
+<pre><code>public Equipament getById(Long id) {
+    simularLentitud();
+    return getEquipament(id);
+}
+</code></pre>
+
+<p>Amb aquest mètode obtenint un equipament segons el seu ID, però fem que la crida s&rsquo;aturi 3 segons.</p>
+
+<p>Al nostre endpoint (<strong>EquipamentServiceController</strong>) afegim un mètode que realitzi múltiples crides al mètode getById.</p>
+
+<pre><code>@GetMapping(value = &quot;/howto&quot;, produces = { MediaType.APPLICATION_JSON_VALUE })
+public ResponsePage&lt;String&gt; howto() {
+
+    logger.info(&quot;.... Obtenint equipaments&quot;);
+    logger.info(&quot;Equipament-1 --&gt;&quot; + equipamentService.getById(Long.valueOf(1)));
+    logger.info(&quot;Equipament-2 --&gt;&quot; + equipamentService.getById(Long.valueOf(2)));
+    logger.info(&quot;Equipament-1 --&gt;&quot; + equipamentService.getById(Long.valueOf(1)));
+    logger.info(&quot;Equipament-2 --&gt;&quot; + equipamentService.getById(Long.valueOf(2)));
+    logger.info(&quot;Equipament-1 --&gt;&quot; + equipamentService.getById(Long.valueOf(1)));
+    logger.info(&quot;Equipament-1 --&gt;&quot; + equipamentService.getById(Long.valueOf(1)));
+
+    return null;
+}
+</code></pre>
+
+<p>El que fa aquest mètode és simplement cridar 6 vegades a getById, tres vegades demanant el ID 1, i 3 vegades demanant el ID 2.</p>
+
+<p>Si s&rsquo;arrenca l&rsquo;aplicació, es crida a /equipaments/howto i el resultat al log és:</p>
+
+<pre><code>(howtoSpringCache) canigo Message: 09 10 2017 10:11:59,720 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:07,184 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:10,185 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:13,186 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:16,186 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:19,186 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:12:22,186 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+</code></pre>
+
+<p>Tot i que l&rsquo;aplicació serveix els mateixos objectes múltiples vegades triga 3 segons a servir cadascún (La simulació de lentitud que hem fet).</p>
+
+<h3 id="exemple-d-accés-amb-cache">Exemple d&rsquo;accés amb Cache</h3>
+
+<p>Per a activar la cache, hem de crear una Cache on s&rsquo;enmmagatzemarà els Equipaments, per fer això utilitzem l&rsquo;anotació @Cacheable de Spring (org.springframework.cache.annotation.Cacheable)</p>
+
+<p>Al mètode que s&rsquo;ha creat al punt anterior (getById) afegim l&rsquo;anotació</p>
+
+<pre><code>@Cacheable(&quot;equipaments&quot;)
+public Equipament getById(Long id) {
+    simularLentitud();
+    return getEquipament(id);
+}
+</code></pre>
+
+<p>Amb aquesta anotació s&rsquo;indica que es crea la Cache &ldquo;equipaments&rdquo; on es guardaran els objectes retornats pel mètode getById.</p>
+
+<p>Per a que l&rsquo;aplicació processi les anotacions de Caching hem d&rsquo;afegir l&rsquo;anotació @EnableCaching a la nostra classe Application.java</p>
+
+<pre><code>@SpringBootApplication
+@EnableCaching
+public class Application extends SpringBootServletInitializer implements WebApplicationInitializer {
+
+    public static void main(final String[] args) throws Exception {
+        if (System.getProperty(&quot;entorn&quot;) == null) {
+            System.setProperty(&quot;entorn&quot;, &quot;loc&quot;);
+        }
+
+        SpringApplication.run(Application.class, args);
+    }
+</code></pre>
+
+<p>Si ara s&rsquo;arrenca l&rsquo;aplicació i es crida a /equipaments/howto i el resultat al log és:</p>
+
+<pre><code>(howtoSpringCache) canigo Message: 09 10 2017 10:51:55,145 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
+(howtoSpringCache) canigo Message: 09 10 2017 10:51:58,179 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,180 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,181 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,182 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,182 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 10:52:01,182 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+</code></pre>
+
+<p>Ara es pot veure que les dos primeres crides trigen 3 segons ja que l&rsquo;aplicació obté per primera vegada aquests Equipaments. Però per als 4 següents, entrega els objectes de manera immediata (sense entrar al mètode i per tant sense aturar-se els 3 segons que hem simulat).</p>
+
+<p>Es recomana utilitzar un dels proveïdors compatibles amb <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-caching.html#_supported_cache_providers">Spring Cache</a> ja que la configuració per defecte té evidents problemes com que l&rsquo;objecte desat a Cache es manté indefinidament, amb els inconvenients que això comporta.</p>
+
+<h2 id="ús-de-caffeine">Ús de Caffeine</h2>
+
+<h3 id="prerequisits">Prerequisits</h3>
+
+<p>Caffeine només funciona con Java 1.8 o superior, per això s&rsquo;ha de compilar la nostra aplicació amb Java 1.8 i utilitzar Java 1.8 en el seu desplegament. Al pom.xml</p>
+
+<pre><code>&lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+    &lt;configuration&gt;
+        &lt;source&gt;1.8&lt;/source&gt;
+        &lt;target&gt;1.8&lt;/target&gt;
+    &lt;/configuration&gt;
+&lt;/plugin&gt;
+</code></pre>
+
+<h3 id="exemple">Exemple</h3>
+
+<p>S&rsquo;ha d&rsquo;afegir la dependència de Caffeine al pom.xml</p>
+
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;com.github.ben-manes.caffeine&lt;/groupId&gt;
+    &lt;artifactId&gt;caffeine&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+
+<p>A <strong>resources</strong> es crea el fitxer application.properties per afegir les propietats de configuració de Caffeine</p>
+
+<pre><code>spring.cache.cache-names: equipaments
+spring.cache.caffeine.spec: maximumSize=500, expireAfterWrite=30s
+</code></pre>
+
+<p>En aquesta configuració hem indicat que crea el directori de cache &ldquo;equipaments&rdquo;, que té una mida màxima de 500 elements i que cada element es guarda fins a 30 segons després d&rsquo;escriure&rsquo;s a la cache.</p>
+
+<p>Si ara s&rsquo;arrenca l&rsquo;aplicació i es crida a /equipaments/howto i el resultat al log és:</p>
+
+<pre><code>(howtoSpringCache) canigo Message: 09 10 2017 13:22:52,706 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:55,709 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:58,710 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:58,710 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:58,710 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:58,710 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:22:58,710 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+</code></pre>
+
+<p>Si es torna a fer la crida abans que passin 30 segons:</p>
+
+<pre><code>(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,510 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:09,511 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+</code></pre>
+
+<p>Els objectes continuen entregant-se immediatament, però si es torna a fer la crida una vegada han passat 30 segons de la seva inserció:</p>
+
+<pre><code>(howtoSpringCache) canigo Message: 09 10 2017 13:23:52,326 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - .... Obtenint equipaments
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:55,329 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:58,331 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:58,331 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:58,331 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-2 --&gt;Equipament [nom=centre obert Alba]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:58,331 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+(howtoSpringCache) canigo Message: 09 10 2017 13:23:58,331 INFO cat.gencat.howtospringcache.endpoints.EquipamentServiceController - Equipament-1 --&gt;Equipament [nom=estació autobusos]
+</code></pre>
+
+<p>Les dues primeres crides tornen a trigar 3 segons, ja que a la Cache ja no hi són els objectes.</p>
+
+
+					
+
+					
+				</div>	
+
+			</article>	
+
+
+	</section>	
+
+		<div class="fons_footer ">
+		<footer class="container center-block shadowBox2">
+			<div class="shadow2"></div>
+			<div class="row footer_tab_ord">
+
+				<div class="footer_tab_bot col-sm-12">
+					<div class="avis_legal">
+
+						<div id="fAvisLegal">
+							<div>
+								<div class="hidden-xs">
+									<a href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" alt="www.gencat.cat"
+										/></a>
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								<div class="visible-xs avis_legal">
+									<p>
+										<a title="Avis legal" href="https://web.gencat.cat/ca/menu-ajuda/ajuda/avis_legal/" target="_self">Avís legal</a>: La &copy; Generalitat de Catalunya permet la reutilització dels continguts i de les dades sempre que se citi la font i la data d'actualització, que no es desnaturalitzi la informació i que no es contradigui amb una llicència específica.
+									</p>
+								</div>
+								
+								<div class="fi_peu visible-xs">
+									<a title="www.gencat.cat" href="https://www.gencat.cat"> <img
+										src="/img/logo_generalitat_gris.png_679097835.png"
+										width="101" height="27" 
+										alt="www.gencat.cat" /></a> <a class="torna_amunt pull-right"
+										href=" javascript:tornarAmunt();" title="Torna amunt">
+										<p>Torna amunt</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+<script src="/js/master.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+<script src="/js/custom.js" type="text/javascript"></script>
+
+
+
+<script type="text/javascript">
+
+if(location.hostname!=="localhost"){
+
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', "UA-59408075-1", 'auto');
+	ga('send', 'pageview', {
+	  	'page': location.pathname + location.search  + location.hash
+	  }
+	);
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
