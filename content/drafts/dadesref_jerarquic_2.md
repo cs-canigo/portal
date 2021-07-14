@@ -169,18 +169,7 @@ tr.shown td.details-control {
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
-		//	,{ "data": null }
-           ],
-      "columnDefs": [ 
-	        {"targets": [ 1 ], "visible": false }
-             ],
-       "searchCols": [
-                { null, "search": "Consolidat" }, null,  null, null, null, null
-		  ]
-      //     ],
-      //"columnDefs": [ 
-	  //       {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" }
-	  // 		]
+           ]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
