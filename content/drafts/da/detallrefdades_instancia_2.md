@@ -90,7 +90,7 @@ weight= 5
 
 
     // Construccio taules per identificar Metadades i la seva correspondencia a JSON
-    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Publicació"        ,"Obsolescència"  ,"Caducitat"     ,"Descàrrega"];
+    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Substituïda"   ,"Descàrrega"];
     var tabkeys_ent = ["Id"           ,"Ambit"             ,"instancies" ,"instancies"      ,"instancies"  ,"instancies"           ,"instancies"   ,"instancies"        ,"instancies"     ,"instancies"    ,"instancies"];
     var tabkeys_ins = [""             ,""                  ,"iestat"     ,"ipromotor"       ,"itipus"      ,"itipusactualitzacio"  ,"itipusvisual" ,"idatapublicacio"   ,"idataobsoleta"  ,"idataobsoleta" ,"ifitxer_xls"];
 
@@ -126,7 +126,7 @@ weight= 5
 	  //++ 08/07/2020 (LAA) S'elimina la metadada Classificacio funcional. Per no modificar JSON, de moment 
 	  //++ es controla posant condicional. Quan es regeneri JSON es treurà el valor de la metadada i el seu tractament.
 	  //++ 04/11/2020 (LAA) S'elimina la metadada Identificador
-		if ((metadades[i]=="Classificació funcional") || (metadades[i]=="Identificador"))
+		if ((metadades[i]=="Classificació funcional") || (metadades[i]=="Identificador") || (metadades[i]=="Obsolescència"))
 		{
 			continue;
 		}

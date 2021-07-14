@@ -114,22 +114,20 @@ tr.shown td.details-control {
 					'<td>'+d.instancies[i].ipromotor+'</td>'+
                     '<td '+vStyle+'>'+d.instancies[i].iestat+'</td>'+
 					'<td>'+d.instancies[i].idatapublicacio+'</td>'+
-					'<td>'+'</td>'+
 					'<td>'+d.instancies[i].idataobsoleta+'</td>'+
                     '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
 		
-		return '<table cellpadding="8" cellspacing="0" border="0" style="padding-left:20px;font-size:12px;width:100%;">'+
+		return '<table cellpadding="7" cellspacing="0" border="0" style="padding-left:20px;font-size:12px;width:100%;">'+
 			'<thead>'+
 				'<tr>'+
 					'<th>Nom</th>'+
 					'<th style="width:30%">Descripcio</th>'+
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
-					'<th>Creada</th>'+
-					'<th>Obsoleta</th>'+
-					'<th>Caducada</th>'+
+					'<th>Publicada</th>'+
+					'<th>Descartada</th>'+
 					'<th></th>'+					
 			    '</tr>'+
 			'</thead>'+
