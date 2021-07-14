@@ -169,7 +169,8 @@ tr.shown td.details-control {
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
-           ]
+           ],
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null]
     } );
 	
     $('#tabvalidades tbody').on('click', 'button', function () {
