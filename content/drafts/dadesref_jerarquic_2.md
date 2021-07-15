@@ -135,6 +135,10 @@ tr.shown td.details-control {
 		'</table>';
 	}
 
+  //------------------------------------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------------------------
+   
+  
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
@@ -170,7 +174,7 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
-	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null],
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
 	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
 	
@@ -213,6 +217,61 @@ tr.shown td.details-control {
         }
     } );
 	
+	
+    var tpend =  $('#tabpendents').DataTable( {
+      "ajax": '../da/entitats_instancies_20210714.json',
+	  "deferRender": true,
+      "bFilter": true,
+      "autoWidth": true,
+      "scrollY": "450px",
+      "scrollCollapse": true,
+      "paging": false,
+      "ordering": true,
+      //"pageLength": 10,
+      //"order": [[ 0, 'asc' ]],
+      //"info":     false,
+	  "language":{
+                "search" : "<strong>Cerca:</strong> ",
+                "infoEmpty": "No hi ha entitats",
+                "zeroRecords": "No s'han trobat entitats",
+                "infoFiltered":   "_END_ entitats",
+                "info": ""
+        },
+	  "columns": [
+            { "data": "Classificacio", "visible": false },
+			{ "data": "Ambit" },
+			{ "data": "Nom" },
+			{ "data": "Descripcio" },
+            { "data": "Data_publicacio" },
+            { "data": "Data_actualitzacio" },
+			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
+           ],
+	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
+    } );
+	
+    $('#tabpendents tbody').on('click', 'button', function () {
+        //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
+	    var $tr = $(this).closest('tr');
+	    var posicio = $tr.index();
+        console.log("posicio pendents: " + posicio);  //es mostra el resultat en el log - Debug
+
+        //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
+        var data = tpend.row( $(this).parents('tr') ).data();
+        //alert( 'You clicked on '+data[0]+'\'s row' );
+        console.log("data pendents: "); //es mostra el resultat en el log - Debug
+        console.log(data);         //es mostra el resultat en el log - Debug
+        
+
+		// Passem totes les dades de l'entitat i les instancies
+        localStorage.setItem('data', JSON.stringify(data));
+		// Passem la posicio de la instancia seleccionada
+        localStorage.setItem('pos', posicio);
+
+        window.location = "../da/detallrefdades_instancia_2";			
+    } );
+
+	
   
     $('.dataTables_filter').css('float','right');  
     $('.dataTables_filter').css('padding-right','20px');  
@@ -245,5 +304,63 @@ tr.shown td.details-control {
 
 <br/><br/>
 </div>
+
+<div style="width:100%; padding-left:15px">
+A continuació es presenta el diagrama amb les relacions entre les entitats de referència d'obligat compliment, indicant-se la cardinalitat per cada relació.
+<br/><br/>
+  <div style="padding-left:40px">
+    <img style="padding: 5px; width: 100%; height: auto" src="./../entitats/DadesRef_DiagramaRelacions.png" alt="Relacions entre entitats" title="Diagrama relacions entre entitats"></img>
+  </div>	
+</div>
+
+
+<br/><br/>
+#### Dades de referència pendents d'aprovació
+
+<div style="width:100%; padding-left:30px">
+<table id="tabpendents" class="hover" style="width:100%">
+        <thead>
+            <tr>
+                <th>Nivell Validació</th>
+                <th>Grup</th>
+                <th>Entitat</th>
+                <th style="width:40%">Descripció</th>
+                <th>Data publicació</th>
+                <th>Darrera actualització</th>
+                <th>Detall</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+
+<br/>
+## Breu descripció  de la gestió tècnica i operativa
+<br/>
+Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l’objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
+
+El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d’Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Oficina d’Innovació i Administració Digital, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
+
+A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
+
+
+<CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
+<br/>
+
+Tota aplicació que necessiti utilitzar alguna dada de referència, s’ha de descarregar la informació del Catàleg Tècnic de Dades de Referència aquí publicat, i carregar-la manualment en la seva aplicació. 
+
+En properes versions del Catàleg inclourem prestacions de subscripcions, notificacions i facilitats per recuperar automàticament el contingut de les dades de referència.
+
+Si esteu interessats en què registrem l’ús per comunicar-vos qualsevol canvi que es produeixi sobre l’entitat, podeu posar-vos en contacte amb l’Oficina de Gestió Tècnica de Dades de CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
+
+Així mateix, estem a la vostra disposició per rebre propostes d’incorporació de noves dades de referència o adaptar les actuals a les necessitats de les aplicacions.
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  
+<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
+<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
 
 
