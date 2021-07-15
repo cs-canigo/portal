@@ -289,8 +289,8 @@ tr.shown td.details-control {
 <br/><br/>
 ####  Dades de referència d'obligat compliment
 
-<div style="width:100%; padding-left:30px">
-<table id="tabvalidades" class="hover" style="width:100%">
+<div style="width:100%; padding-left:30px;">
+<table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
                 <th></th>
@@ -319,8 +319,8 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <br/><br/>
 #### Dades de referència pendents d'aprovació
 
-<div style="width:100%; padding-left:30px">
-<table id="tabpendents" class="hover" style="width:100%">
+<div style="width:100%; padding-left:30px;">
+<table id="tabpendents" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
                 <th>Nivell Validació</th>
