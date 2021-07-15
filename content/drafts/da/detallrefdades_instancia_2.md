@@ -10,8 +10,8 @@ weight= 5
   <div>
     <h2 id="entitatTitol"></h2>
     <p id="myDefinition"></p>
-	<h3 id="instanciaTitol"></h2>
-    <p id="instanciaDefinicio"></p>
+	<h3 id="instanciaTitol"></h2><p id="instanciaDefinicio"></p>
+    <p></p>
     <table id="myTable"></table>
   </div>
   
@@ -70,7 +70,7 @@ weight= 5
     instanciaTitol.style.marginTop = "0.5em";
     instanciaTitol.style.marginBottom = "0.5em";
 
-    var textEntitatTitol = document.createTextNode("Instància: "+dades.instancies[numInstancia].inom);
+    var textEntitatTitol = document.createTextNode("Versió "+dades.instancies[numInstancia].inom+" - ");
     instanciaTitol.appendChild(textEntitatTitol);
 
     body.appendChild(instanciaTitol);
