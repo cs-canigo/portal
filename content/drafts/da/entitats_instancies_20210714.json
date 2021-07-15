@@ -7,7 +7,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Departament de Justícia",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -61,7 +61,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -88,7 +88,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -115,7 +115,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -130,7 +130,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020) [2021-03-31] Es modifica el nom de 2 municipis (codis ine: 031360 i 311568). Obsoleta",
@@ -145,7 +145,7 @@
         },
         {
             "inom": "V03",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021). [2021-06-30] GTDA-95: Es modifica el nom de 3 municipis (codis ine: 030670, 312074 i 461192). Obsoleta",
@@ -160,7 +160,7 @@
         },
         {
             "inom": "V04",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2021). [2021-07-14] GTDA-108: Es modifica el nom de 2 municipis (codis ine: 100974, 080235). ",
@@ -187,7 +187,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -214,7 +214,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020). Obsoleta",
@@ -229,7 +229,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2021). [2021-07-14] GTDA-106: Es modifica el nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\". ",
@@ -256,7 +256,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2020)",
@@ -283,7 +283,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2020)",
@@ -298,7 +298,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2020) [2021-03-31] S'elimina l'atribut nom_ine. Obsoleta",
@@ -313,7 +313,7 @@
         },
         {
             "inom": "V03",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2021). [2021-07-14] GTDA-107: Actualització general i modificació del nom del municipi de \"Bigues i Riells\" per \"Bigues i Riells del Fai\". ",
@@ -340,7 +340,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
             "idescripcio": "Versió acordada CTTI i OIAD (Març 2021). Obsoleta",
@@ -355,7 +355,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021). [2021-06-30] GTDA-96 i GTD-104: Revisió percanvi nom 3 municipis i actualització segons darrera versió fitxer font. Obsoleta",
@@ -370,7 +370,7 @@
         },
         {
             "inom": "V03",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2021). [2021-07-14] GTDA-109: Es modifica el nom de 2 municipis (codis ine: 100974, 080235). ",
@@ -397,7 +397,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Setembre 2020)",
@@ -412,7 +412,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Setembre 2020. [2021-04-21] S'incorpora valor Eix.",
@@ -439,7 +439,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Abril 2021). Obsoleta",
@@ -454,7 +454,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Abril 2021). [2021-05-26] GTDA-80: Eliminació de registres duplicats.",
@@ -508,7 +508,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Conselh Generau d’Aran",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021)",
@@ -616,7 +616,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Setembre 2020)",
@@ -643,7 +643,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Setembre 2020)",
@@ -670,7 +670,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Setembre 2020)",
@@ -697,7 +697,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20",
@@ -751,7 +751,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Administració Local (DGAL)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -778,7 +778,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Administració Local (DGAL)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -805,7 +805,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Administració Local (DGAL)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -832,7 +832,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Administració Local (DGAL)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2020)",
@@ -886,7 +886,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Gener 2021). Obsoleta",
@@ -901,7 +901,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021). [2021-06-09] GTDA-92: Actualització per canvi de govern. Obsoleta",
@@ -916,7 +916,7 @@
         },
         {
             "inom": "V03",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021). [2021-06-09] GTDA-92: Actualització per canvi de govern. [2021-06-30] GTDA-105: Actualització 2 acronims i 1 nom.",
@@ -942,7 +942,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Gener 2021)",
@@ -969,7 +969,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Gener 2021). Obsoleta",
@@ -984,7 +984,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
             "idescripcio": "Versió acordada CTTI i OIAD (Gener 2021) [2021-03-10] S'elimina valor.",
@@ -1011,7 +1011,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Administració Local (DGAL)",
             "idescripcio": "Versió acordada CTTI i OIAD (Abril 2021)",
@@ -1119,7 +1119,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2020)",
@@ -1146,7 +1146,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2020)",
@@ -1227,7 +1227,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021)",
@@ -1254,7 +1254,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021)",
@@ -1281,7 +1281,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juny 2021)",
@@ -1308,7 +1308,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",
@@ -1335,7 +1335,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",
@@ -1362,7 +1362,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",
@@ -1416,7 +1416,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1443,7 +1443,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20",
@@ -1470,7 +1470,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20",
@@ -1497,7 +1497,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20",
@@ -1524,7 +1524,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20",
@@ -1551,7 +1551,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Juliol 2021)",
@@ -1605,7 +1605,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Substituïda",
+            "iestat": "Obsoleta",
             "itipus": "Tabular",
             "ipromotor": "Departament de Treball, Afers Socials i Famílies",
             "idescripcio": "Versió inicial",
@@ -1620,7 +1620,7 @@
         },
         {
             "inom": "V02",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Departament de Treball, Afers Socials i Famílies",
             "idescripcio": "Versió acordada CTTI i OIAD (Març 2021)",
@@ -1647,7 +1647,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1674,7 +1674,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1701,7 +1701,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1728,7 +1728,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1755,7 +1755,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Entitats proposades per Idescat Febrer 20. Versió acordada CTTI i OIAD (Gener 2021)",
@@ -1782,7 +1782,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Març 2021)",
@@ -1809,7 +1809,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Direcció General d'Atenció Ciutadana (DGAC)",
             "idescripcio": "Versió acordada CTTI i OIAD (Març 2021)",
@@ -1836,7 +1836,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",
@@ -1863,7 +1863,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Abril 2021)",
@@ -1890,7 +1890,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",
@@ -1917,7 +1917,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
             "idescripcio": "Versió acordada CTTI i OIAD (Abril 2021)",
@@ -1944,7 +1944,7 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Activa",
+            "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
             "idescripcio": "Versió acordada CTTI i OIAD (Maig 2021)",

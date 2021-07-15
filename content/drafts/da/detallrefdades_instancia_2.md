@@ -164,10 +164,9 @@ weight= 5
 				if (metadades[i]=="Estat")
 				{
 					celda.style.fontWeight = "bold";
-					celda.style.color="red";
-					if (dades[tabkeys_ent[i]][numInstancia][tabkeys_ins[i]]=="Activa")
+					if (dades[tabkeys_ent[i]][numInstancia][tabkeys_ins[i]]!="Vigent")
 					{
-						celda.style.color="green";
+						celda.style.color="red";
 					}
 				}
 				
@@ -179,127 +178,174 @@ weight= 5
 		tblBody.appendChild(hilera);
     }
 
-
-	// -----------------------------------------------------
-    //  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
-
-	hilera = document.createElement("tr");
-
-    celda = document.createElement("td");
-    celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Atributs");
-    celda.appendChild(textoCelda);
-    hilera.appendChild(celda);
-	
-    celda = document.createElement("td");
-    var frame = document.createElement('iframe');
-	
-    var nomFitAtr=dades.instancies[numInstancia].ifitxer_doc;
-	
-    frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
-    frame.style.width= "100%"
-    frame.style.height= "300px";
-    celda.appendChild(frame);
-    hilera.appendChild(celda);
-
-    tblBody.appendChild(hilera);
-
-    //  v02.CTD-16/10/2019 (fi)
-	// -----------------------------------------------------	
-	
-
-    hilera = document.createElement("tr");
-   
-    celda = document.createElement("td");
-    celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Descàrregues");
-    celda.appendChild(textoCelda);
-    hilera.appendChild(celda);
-
-    celda = document.createElement("td");
-
-//    textoCelda =  document.createTextNode("           ");
-//    celda.appendChild(textoCelda);
-
-    var link_valors = document.createElement('a');
-    link_valors.setAttribute('href', '../../entitats/' + dades.instancies[numInstancia].ifitxer_doc);
-    link_valors.innerHTML = "Descarregar definició atributs";
-    celda.appendChild(link_valors);
-
-	textoCelda =  document.createTextNode("               ");
-    celda.appendChild(textoCelda);
-
-	// ---------------------------------------------------
-    //  v02.CTD-16/03/2021 (inici) Si l'entitat esta consolidada i no te link a dades obertes, descarregar fitxer Excel
-	
-    //Si es una entitat consolidada i sense link a dades obertes s'ha de posar el link de descarga
-    if ((dades.Classificacio=="Consolidat") && ( (dades.instancies[numInstancia].iurl_dades_obertes=="") || (dades.instancies[numInstancia].iestat!="Activa") ))
-    {
-        var link = document.createElement('a');
-        link.setAttribute('href', '../../entitats/' + dades.instancies[numInstancia].ifitxer_xls);
-		link.innerHTML = "Descarregar fitxer de dades";
-		celda.appendChild(link);
-	}
-   //  v02.CTD-16/03/2021 (fi) 
-   // ---------------------------------------------------
-  
-  
-    hilera.appendChild(celda);
-	
-    tblBody.appendChild(hilera);
-
-    
-    hilera = document.createElement("tr");
-   
-    celda = document.createElement("td");
-    celda.style.fontWeight = "bold";
-    textoCelda =  document.createTextNode("Dades");
-    celda.appendChild(textoCelda);
-    hilera.appendChild(celda);
-
-    celda = document.createElement("td");
-    
-    // Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
-    if (dades.Classificacio=="Consolidat")
+    // Determinem si s'ha de mostrar o no els fitxer de valors i atributs
+	// Per defecte, mostrem atributs i no mostrem valors  (servirà per entitats pendents de validar)
+	//    Per consolidades i estat vigent es mostren atributs i valors.
+	//    Per consolidades amb estat diferents de vigent, no es mostren ni atributs ni valors.
+	var bMostraAtributs = true;
+	var bMostraValors = false;
+	if (dades.Classificacio=="Consolidat") 
 	{
+	   if (dades.instancies[numInstancia].iestat=="Vigent")
+	   {
+	      bMostraAtributs = true;
+	      bMostraValors = true;
+		}
+		else
+		{
+	      bMostraAtributs = false;
+	      bMostraValors = false;
+		}
+	}
+	
+	// Si no s'han de mostrar ni atributs ni valors, creem una nova fila per posar el text que cal solicitar les dades
+	if (!bMostraAtributs && !bMostraValors)
+	{
+		
+		hilera = document.createElement("tr");
+	   
+		celda = document.createElement("td");
+		celda.style.fontWeight = "bold";
+		textoCelda =  document.createTextNode("Atributs i Dades");
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
 
-	// ---------------------------------------------------
-    //  v02.CTD-16/03/2021 (inici) Si hi ha link a Dades Obertes posar el link, sino posar fitxer Excel
- 
-       if (dades.instancies[numInstancia].iurl_dades_obertes!="" && (dades.instancies[numInstancia].iestat=="Activa")) 
-       {
-            var link_valors = document.createElement('a');
-            link_valors.setAttribute('href', dades.instancies[numInstancia].iurl_dades_obertes);
-            link_valors.innerHTML = "Accedir a dades";
-            celda.appendChild(link_valors);
-       }
-       else
-       {
-            var frame = document.createElement('iframe');
-            frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades.instancies[numInstancia].ifitxer_xls);
-			frame.style.width= "100%"
-			frame.style.height= "400px";
-			celda.appendChild(frame);
-       }
-    //  v02.CTD-16/03/2021 (fi) Prova per posar link a Dades Obertes
-	// ---------------------------------------------------
+		celda = document.createElement("td");
+		celda.innerHTML = "Per tractar-se d'una instància obsoleta, els atributs i els valors no es poden consultar directament. Si necessiteu aquesta informació, cal que envieu un correu  <br/> a la Bústia de la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+		celda.innerHTML = celda.innerHTML + "indicant el nom de l'entitat i de la instància que voleu consultar."
+
+		hilera.appendChild(celda);
+		
+		tblBody.appendChild(hilera);
 	}
 	else
 	{
-		//++1 (02/07/2020) Es comenta la visualitzacio dels fitxers excel i a canvi es posa un text
-		//++1 indicant que per consultar les dades s'ha de sol.licitar a la bústia de GTD
-		
+		// Creem la fila per mostrar els atributs
+		if (bMostraAtributs)
+		{
+			// -----------------------------------------------------
+			//  v02.CTD-16/10/2019 (inici) Crear nova fila de dades per mostrar informació sobre els atributs
+
+			hilera = document.createElement("tr");
+
+			celda = document.createElement("td");
+			celda.style.fontWeight = "bold";
+			textoCelda =  document.createTextNode("Atributs");
+			celda.appendChild(textoCelda);
+			hilera.appendChild(celda);
 			
-		//++1 inici noves instruccions
-		celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de la Gestió Tècnica <br/>  de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
-		celda.innerHTML = celda.innerHTML + "i se us donarà accès temporal a totes <br/> les entitats en revisió, pendents d'aprovació."
-		//++1 fi noves instruccions
+			celda = document.createElement("td");
+			var frame = document.createElement('iframe');
+			
+			var nomFitAtr=dades.instancies[numInstancia].ifitxer_doc;
+			
+			frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ nomFitAtr);
+			frame.style.width= "100%"
+			frame.style.height= "300px";
+			celda.appendChild(frame);
+			hilera.appendChild(celda);
+
+			tblBody.appendChild(hilera);
+
+			//  v02.CTD-16/10/2019 (fi)
+			// -----------------------------------------------------	
+		}
+		
+		// Creem la fila per mostrar els links de descàrrega de fitxers: atributs i/o valors
+		if (bMostraAtributs || bMostraValors)
+		{
+			hilera = document.createElement("tr");
+		   
+			celda = document.createElement("td");
+			celda.style.fontWeight = "bold";
+			textoCelda =  document.createTextNode("Descàrregues");
+			celda.appendChild(textoCelda);
+			hilera.appendChild(celda);
+
+			celda = document.createElement("td");
+
+			if (bMostraAtributs)
+			{
+				var link_valors = document.createElement('a');
+				link_valors.setAttribute('href', '../../entitats/' + dades.instancies[numInstancia].ifitxer_doc);
+				link_valors.innerHTML = "Descarregar definició atributs";
+				celda.appendChild(link_valors);
+			}
+			
+			// Si hi ha atributs i valors, posem espais per separar dels dos links de descàrrega.
+			if (bMostraAtributs && bMostraValors)
+			{
+				textoCelda =  document.createTextNode("               ");
+				celda.appendChild(textoCelda);
+			}
+
+			if (bMostraValors)
+			{
+				// ---------------------------------------------------
+				//  v02.CTD-16/03/2021 (inici) Si l'entitat esta consolidada i no te link a dades obertes, descarregar fitxer Excel
+				
+				//Si es una entitat consolidada i una instancia vigent però sense link a dades obertes s'ha de posar el link de descarga al fitxer xls.
+				if ((dades.Classificacio=="Consolidat") && (dades.instancies[numInstancia].iestat=="Vigent") && (dades.instancies[numInstancia].iurl_dades_obertes=="")  )
+				{
+					var link = document.createElement('a');
+					link.setAttribute('href', '../../entitats/' + dades.instancies[numInstancia].ifitxer_xls);
+					link.innerHTML = "Descarregar fitxer de dades";
+					celda.appendChild(link);
+				}
+			   //  v02.CTD-16/03/2021 (fi) 
+			   // ---------------------------------------------------
+			}		  
+		  
+			hilera.appendChild(celda);
+			
+			tblBody.appendChild(hilera);
+		}
+		
+		// --------------------------------------------------------------------------
+		// Creem la fila per mostrar els valors
+		// --------------------------------------------------------------------------
+		hilera = document.createElement("tr");
+	   
+		celda = document.createElement("td");
+		celda.style.fontWeight = "bold";
+		textoCelda =  document.createTextNode("Dades");
+		celda.appendChild(textoCelda);
+		hilera.appendChild(celda);
+
+		celda = document.createElement("td");
+		
+		// Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
+		if (dades.Classificacio=="Consolidat")
+		{
+
+			// v02.CTD-16/03/2021 (inici) Si hi ha link a Dades Obertes posar el link, sino posar fitxer Excel
+			if (dades.instancies[numInstancia].iurl_dades_obertes!="" && (dades.instancies[numInstancia].iestat=="Vigent")) 
+			{
+				var link_valors = document.createElement('a');
+				link_valors.setAttribute('href', dades.instancies[numInstancia].iurl_dades_obertes);
+				link_valors.innerHTML = "Accedir a dades";
+				celda.appendChild(link_valors);
+			}
+			else
+			{
+				var frame = document.createElement('iframe');
+				frame.setAttribute("src","https://view.officeapps.live.com/op/embed.aspx?src=https://canigo.ctti.gencat.cat/drafts/entitats/"+ dades.instancies[numInstancia].ifitxer_xls);
+				frame.style.width= "100%"
+				frame.style.height= "400px";
+				celda.appendChild(frame);
+			}
+			// v02.CTD-16/03/2021
+		}
+		else
+		{
+			celda.innerHTML = "Per obtenir els valors de l'entitat cal que envieu un correu a la Bústia de la Gestió Tècnica <br/>  de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+			celda.innerHTML = celda.innerHTML + "i se us donarà accès temporal a totes <br/> les entitats en revisió, pendents d'aprovació."
+		}
+
+		hilera.appendChild(celda);
+
+		tblBody.appendChild(hilera);
 	}
-
-    hilera.appendChild(celda);
-
-    tblBody.appendChild(hilera);
-
 
     tabla.appendChild(tblThead);
     tabla.appendChild(tblBody);

@@ -102,8 +102,8 @@ tr.shown td.details-control {
         
 		vRowInstancia='';
 		for(var i=0,z=d.instancies.length;i<z;i++){
-			vStyle='style="fontWeight:bold;color:red;"';
-			if (d.instancies[i].iestat=="Activa")
+			vStyle='style="fontWeight:bold;color:grey;"';
+			if (d.instancies[i].iestat=="Vigent")
 			{
 				vStyle='style="fontWeight:bold;color:green;"';
 			}
