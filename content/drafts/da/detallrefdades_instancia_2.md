@@ -90,7 +90,7 @@ weight= 5
 
 
     // Construccio taules per identificar Metadades i la seva correspondencia a JSON
-    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Substituïda"   ,"Descàrrega"];
+    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Obsoleta"   ,"Descàrrega"];
     var tabkeys_ent = ["Id"           ,"Ambit"             ,"instancies" ,"instancies"      ,"instancies"  ,"instancies"           ,"instancies"   ,"instancies"        ,"instancies"     ,"instancies"    ,"instancies"];
     var tabkeys_ins = [""             ,""                  ,"iestat"     ,"ipromotor"       ,"itipus"      ,"itipusactualitzacio"  ,"itipusvisual" ,"idatapublicacio"   ,"idataobsoleta"  ,"idataobsoleta" ,"ifitxer_xls"];
 
@@ -107,6 +107,7 @@ weight= 5
     var hilera = document.createElement("tr");
    
     var celda = document.createElement("th");
+	celda.style.width = "25%";
     var textoCelda =  document.createTextNode("Metadades");
     celda.appendChild(textoCelda);
     hilera.appendChild(celda);
@@ -163,9 +164,9 @@ weight= 5
 								
 				if (metadades[i]=="Estat")
 				{
-					celda.style.fontWeight = "bold";
 					if (dades[tabkeys_ent[i]][numInstancia][tabkeys_ins[i]]!="Vigent")
 					{
+						//celda.style.fontWeight = "bold";
 						celda.style.color="red";
 					}
 				}
@@ -211,7 +212,7 @@ weight= 5
 		hilera.appendChild(celda);
 
 		celda = document.createElement("td");
-		celda.innerHTML = "Per tractar-se d'una instància obsoleta, els atributs i els valors no es poden consultar directament. Si necessiteu aquesta informació, cal que envieu un correu  <br/> a la Bústia de la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+		celda.innerHTML = "Per tractar-se d'una instància obsoleta, els atributs i els valors no estàn disponibles dins d'aquesta pàgina. Si necessiteu aquesta informació, cal que envieu un correu a la Bústia de la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
 		celda.innerHTML = celda.innerHTML + "indicant el nom de l'entitat i de la instància que voleu consultar."
 
 		hilera.appendChild(celda);

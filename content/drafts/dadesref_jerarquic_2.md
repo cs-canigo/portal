@@ -102,10 +102,11 @@ tr.shown td.details-control {
         
 		vRowInstancia='';
 		for(var i=0,z=d.instancies.length;i<z;i++){
-			vStyle='style="fontWeight:bold;color:grey;"';
-			if (d.instancies[i].iestat=="Vigent")
+			//vStyle='style="fontWeight:bold;color:darkgrey;"';
+			vStyle='';
+			if (d.instancies[i].iestat!="Vigent")
 			{
-				vStyle='style="fontWeight:bold;color:green;"';
+				vStyle='style="color:darkgrey;"';
 			}
 			
 			vRowInstancia=vRowInstancia+'<tr>'+
@@ -127,7 +128,7 @@ tr.shown td.details-control {
 					'<th>Promotor</th>'+
 					'<th>Estat</th>'+
 					'<th>Publicada</th>'+
-					'<th>Substituïda</th>'+
+					'<th>Obsoleta</th>'+
 					'<th></th>'+					
 			    '</tr>'+
 			'</thead>'+
