@@ -252,8 +252,10 @@ tr.shown td.details-control {
 	
     $('#tabpendents tbody').on('click', 'button', function () {
         //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
-	    var $tr = $(this).closest('tr');
-	    var posicio = $tr.index();
+		//  En el cas de les pendents, la posició sempre és 0 perquè només hi ha una instancian de l'entitat
+			//var $tr = $(this).closest('tr');
+			//var posicio = $tr.index();
+		var posicio =0;
         console.log("posicio pendents: " + posicio);  //es mostra el resultat en el log - Debug
 
         //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;

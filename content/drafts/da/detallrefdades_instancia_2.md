@@ -28,7 +28,7 @@ weight= 5
     console.log(dades);
     console.log("Nom entitat: "+dades.Nom);
 	console.log("Instancia Index: "+numInstancia);
-	console.log("Nom instancia: "+dades.instancies[numInstancia].nom);
+	console.log("Nom instancia: "+dades.instancies[numInstancia].inom);
 
 	// Construim la pagina a visualitzar
 	  
@@ -70,7 +70,7 @@ weight= 5
     instanciaTitol.style.marginTop = "0.5em";
     instanciaTitol.style.marginBottom = "0.5em";
 
-    var textEntitatTitol = document.createTextNode("Instància: "+dades.instancies[numInstancia].nom);
+    var textEntitatTitol = document.createTextNode("Instància: "+dades.instancies[numInstancia].inom);
     instanciaTitol.appendChild(textEntitatTitol);
 
     body.appendChild(instanciaTitol);
@@ -82,7 +82,7 @@ weight= 5
     instanciaDefinicio.style.marginTop = "0.5em";
     instanciaDefinicio.style.marginBottom = "1.5em";
 
-    var textDefinicio = document.createTextNode(dades.instancies[numInstancia].descripcio);
+    var textDefinicio = document.createTextNode(dades.instancies[numInstancia].idescripcio);
     instanciaDefinicio.appendChild(textDefinicio);
 
     body.appendChild(instanciaDefinicio);
