@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-12"
+date        = "2021-07-15"
 title       = "Elements del catàleg de contenidors"
 description = "Descripció de les imatges docker base proporcionades pel CTTI."
 sections    = "Cloud"
@@ -24,26 +24,21 @@ Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.ext
 Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0   | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/tree/2.4-1.0)
 Nginx  	 | 1.14   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.14)
 Nginx  	 | 1.16   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.16)
+Nginx  	 | 1.18   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.18)
 GICAR Nginx 	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0   | [gicar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/tree/1.0.0)
 GICAR Nginx Kubernetes/Openshift	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0   | [gicar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/tree/1.0.0)
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
 Java		 | 11-openjdk  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11)
 NodeJS 		 | 10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/10)
 NodeJS 		 | 12   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/12)
+NodeJS 		 | 14   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/14)
 PHP 		 | 7.2   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/7.2)
 PHP 		 | 7.3   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/7.3)
+PHP 		 | 7.4   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/7.4)
 Tomcat  	 | 9.0-java8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java8)
 Tomcat  	 | 9.0-java11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat/tree/9.0-java11)
 Tomcat amb suport de Sessions distribuïdes | 9.0-java8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java8)
 Tomcat amb suport de Sessions distribuïdes  | 9.0-java11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/9.0-java11)
-Postgres	 | 9.5    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.5   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.5)
-Postgres	 | 9.6    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.6)
-Postgres	 | 10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:10   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/10)
-Postgres	 | 11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:11   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/11)
-MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/5.7)
-MySql 		 | 8.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:8.0   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/8.0)
-MongoDB 	 | 3.6   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.6   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/3.6)
-MongoDB 	 | 4.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:4.0   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/4.0)
 
 <br>
 **IMPORTANT**: De cara a minimitzar les vulnerabilitats de les aplicacions, es recomana que periòdicament els proveïdors d'aplicacions les reconstrueixin utilitzant aquestes imatges Docker certificades més actualitzades. Per realitzar aquestes tasques de construcció i desplegament s'ha de fer ús de les corresponents pipelines al Jenkins del SIC.
@@ -96,6 +91,14 @@ Tomcat amb suport de Sessions distribuïdes | 8.0   | docker-registry.ctti.extra
 Tomcat amb suport de Sessions distribuïdes | 8.5   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:8.5   | [tomcat](https://git.intranet.gencat.cat/3048-intern/imatges-docker/tomcat-hc/tree/8.5)
 Postgres	 | 9.3    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.3   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.3)
 Postgres	 | 9.4    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.4   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.4)
+Postgres	 | 9.5    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.5   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.5)
+Postgres	 | 9.6    | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:9.6   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/9.6)
+Postgres	 | 10   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:10   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/10)
+Postgres	 | 11   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/postgres:11   | [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres/tree/11)
 MongoDB 	 | 3.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.2   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/3.2)
 MongoDB 	 | 3.4   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.4   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/3.4)
 MongoDB 	 | 3.6   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:3.6   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/3.6)
+MongoDB 	 | 4.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:4.0   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/4.0)
+MongoDB 	 | 4.2   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mongodb:4.2   | [mongodb](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mongodb/tree/4.2)
+MySql 		 | 5.7   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:5.7   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/5.7)
+MySql 		 | 8.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/mysql:8.0   | [mysql](https://git.intranet.gencat.cat/3048-intern/imatges-docker/mysql/tree/8.0)
