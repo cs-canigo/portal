@@ -130,7 +130,7 @@ tr.shown td.details-control {
 					'<th style="background-color: papayawhip;">Estat</th>'+
 					'<th style="background-color: papayawhip;">Publicada</th>'+
 					'<th style="background-color: papayawhip;">Obsoleta</th>'+
-					'<th></th>'+					
+					'<th style="background-color: papayawhip;"></th>'+					
 			    '</tr>'+
 			'</thead>'+
 			'<tbody>'+vRowInstancia+'</tbody>'+
@@ -224,7 +224,7 @@ tr.shown td.details-control {
     var vigents=0;			 
     for (i = 0; i < dadesConso.length; i++) {			 
 		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  }
-	$('#numInstancies').text("Nombre total d'instàncies vigents: "+vigents+".");
+	$('#numInstancies').text('Nombre total d'instàncies vigents: ' + vigents.toString() + '.');
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 	
 	
 	
@@ -302,7 +302,7 @@ tr.shown td.details-control {
 
 <div style="width:100%; padding-left:30px;">
 <div id="divInstancies" style="float: left;">
-<p id="numInstancies" style="font-size:9px;" ></p>
+<p id="numInstancies" style="font-size:12px;" ></p>
 </div>
 <table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
