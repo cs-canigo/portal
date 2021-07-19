@@ -223,8 +223,11 @@ tr.shown td.details-control {
 	var dadesConso=$("#tabvalidades").DataTable().data(); 
     var vigents=0;			 
     for (i = 0; i < dadesConso.length; i++) {			 
-		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  }
-	$('#numInstancies').text('Nombre total d'instàncies vigents: ' + vigents.toString() + '.');
+		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+		}
+	console.log(vigents);
+	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
+
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 	
 	
 	
