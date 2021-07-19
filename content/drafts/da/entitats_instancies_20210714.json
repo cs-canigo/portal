@@ -23,7 +23,7 @@
     ],
     "Descripcio": "Descriu l'estat civil d'una persona.",
     "nom_dinsBD": "ESTAT_CIVIL",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -43,7 +43,7 @@
             "idatacreacio": "07/06/2019",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "21/06/2019",
+            "idatapublicacio": "19/07/2019",
             "iurl_dades_obertes": "",
             "itipusactualitzacio": "Sota demanda"
         }
@@ -51,7 +51,7 @@
     "Descripcio": "Relació de parentiu que uneix les persones.",
     "nom_dinsBD": "TIPUS_PARENTIU",
     "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_actualitzacio": "19/07/2019"
 },
 {
     "Id": "dtarq80",
@@ -77,7 +77,7 @@
     ],
     "Descripcio": "Llista de comunitats/ciutats autònomes segons INE.",
     "nom_dinsBD": "COMUNITATS_AUTO",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -104,7 +104,7 @@
     ],
     "Descripcio": "Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen.",
     "nom_dinsBD": "PROVINCIES",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -176,7 +176,7 @@
     ],
     "Descripcio": "Llista de municipis d'Espanya indicant la província a on pertanyen.",
     "nom_dinsBD": "MUNICIPIS_ESPANYA",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "14/07/2021"
 },
 {
@@ -203,7 +203,7 @@
     ],
     "Descripcio": "Llista de les comarques de Catalunya i Aran.",
     "nom_dinsBD": "COMARQUES",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -272,7 +272,7 @@
     ],
     "Descripcio": "Llistat de nivells jeràrquics en què es classifiquen les unitats poblacionals, incloent-hi el municipi.",
     "nom_dinsBD": "NIVELLS_POBLACIONALS",
-    "Data_publicacio": "30/03/2020",
+    "Data_publicacio": "10/03/2021",
     "Data_actualitzacio": "10/03/2021"
 },
 {
@@ -329,7 +329,7 @@
     ],
     "Descripcio": "Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
     "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "04/12/2020",
     "Data_actualitzacio": "14/07/2021"
 },
 {
@@ -373,7 +373,7 @@
             "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
-            "idescripcio": "Es modifica el nom de 2 municipis, relacionats amb els municipis de codi inee 100974 i 080235.",
+            "idescripcio": "Es modifica el nom de 2 municipis, relacionats amb els municipis de codi ine 100974 i 080235.",
             "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
             "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
             "idatacreacio": "12/07/2021",
@@ -428,7 +428,7 @@
     ],
     "Descripcio": "Llistat de tipologies d'espais aptes a transitar-hi.",
     "nom_dinsBD": "TIPUS_VIA",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "23/09/2020",
     "Data_actualitzacio": "21/04/2021"
 },
 {
@@ -470,7 +470,7 @@
     ],
     "Descripcio": "Llistat de noms de via (carrers) associats a municipis de Catalunya.",
     "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "21/04/2021",
     "Data_actualitzacio": "26/05/2021"
 },
 {
@@ -497,8 +497,8 @@
     ],
     "Descripcio": "Grau de parentiu existent entre persones.",
     "nom_dinsBD": "GRAU_PARENTIU",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq106",
@@ -524,7 +524,7 @@
     ],
     "Descripcio": "Llistat de demarcacions administratives de la Vall d'Aran.",
     "nom_dinsBD": "TERÇONS",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "30/06/2021",
     "Data_actualitzacio": "30/06/2021"
 },
 {
@@ -551,8 +551,8 @@
     ],
     "Descripcio": "Llista de tipologies d'unitats orgàniques de Catalunya.",
     "nom_dinsBD": "TIPUS_UNITAT_ORGANICA",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq84",
@@ -578,8 +578,8 @@
     ],
     "Descripcio": "Llista d'unitats orgàniques indicant la seva tipologia.",
     "nom_dinsBD": "UNITAT_ORGANICA",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq104",
@@ -598,7 +598,7 @@
             "idatacreacio": "06/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "20/04/2020",
+            "idatapublicacio": "18/12/2019",
             "iurl_dades_obertes": "",
             "itipusactualitzacio": "Sota demanda"
         }
@@ -632,8 +632,8 @@
     ],
     "Descripcio": "Llista de continents del món.",
     "nom_dinsBD": "CONTINENTS",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "21/09/2020"
+    "Data_publicacio": "23/09/2020",
+    "Data_actualitzacio": "23/09/2020"
 },
 {
     "Id": "dtarq130",
@@ -659,8 +659,8 @@
     ],
     "Descripcio": "Llista de subcontinents del món amb el continent a on pertanyen.",
     "nom_dinsBD": "SUBCONTINENTS",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "21/09/2020"
+    "Data_publicacio": "23/09/2020",
+    "Data_actualitzacio": "23/09/2020"
 },
 {
     "Id": "dtarq131",
@@ -679,15 +679,15 @@
             "idatacreacio": "25/05/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "23/09/2020",
+            "idatapublicacio": "26/05/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pa%C3%AFsos/u6te-2guv",
             "itipusactualitzacio": "Sota demanda"
         }
     ],
     "Descripcio": "Llistat de països i territoris del món segons l'estàndard ISO 3166-1 alfa-2 i alfa-3, amb el continent i subcontinent a on pertanyen.",
     "nom_dinsBD": "PAISOS",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "20/01/2021"
+    "Data_publicacio": "26/05/2021",
+    "Data_actualitzacio": "26/05/2021"
 },
 {
     "Id": "dtarq125",
@@ -713,7 +713,7 @@
     ],
     "Descripcio": "Nomenclatura d'unitats territorials estadístiques (NUTS) (regions europees)",
     "nom_dinsBD": "NUTS",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "17/02/2021",
     "Data_actualitzacio": "17/02/2021"
 },
 {
@@ -740,8 +740,8 @@
     ],
     "Descripcio": "Llista de regions del món relacionades amb el continent a on pertanyen.",
     "nom_dinsBD": "REGIONS_MON",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq90",
@@ -767,7 +767,7 @@
     ],
     "Descripcio": "Llista dels ajuntaments de Catalunya.",
     "nom_dinsBD": "AJUNTAMENTS",
-    "Data_publicacio": "16/10/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -794,7 +794,7 @@
     ],
     "Descripcio": "Llista dels consells comarcals de Catalunya i del Conselh Generau d'Aran.",
     "nom_dinsBD": "CONSELLS_COMARCALS",
-    "Data_publicacio": "16/10/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -821,7 +821,7 @@
     ],
     "Descripcio": "Llista de les diputacions provincials de Catalunya.",
     "nom_dinsBD": "DIPUTACIONS",
-    "Data_publicacio": "16/10/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -848,7 +848,7 @@
     ],
     "Descripcio": "Llista de les mancomunitats de municipis de Catalunya.",
     "nom_dinsBD": "MANCOMUNITATS",
-    "Data_publicacio": "16/10/2019",
+    "Data_publicacio": "20/04/2020",
     "Data_actualitzacio": "20/04/2020"
 },
 {
@@ -875,8 +875,8 @@
     ],
     "Descripcio": "Vincle parentiu entre dues persones.",
     "nom_dinsBD": "RELACIO_PARENTIU",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq101",
@@ -932,7 +932,7 @@
     ],
     "Descripcio": "Llistat de departaments en què s'organitza la Generalitat de Catalunya",
     "nom_dinsBD": "DEPARTAMENTS",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "30/06/2021"
 },
 {
@@ -959,7 +959,7 @@
     ],
     "Descripcio": "Llistat de direccions generals en què s'organitzen els departaments de la Generalitat de Catalunya",
     "nom_dinsBD": "DIRECCIONS_GENERALS",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "20/01/2021"
 },
 {
@@ -1001,7 +1001,7 @@
     ],
     "Descripcio": "Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya",
     "nom_dinsBD": "SECRETARIES",
-    "Data_publicacio": "18/12/2019",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "10/03/2021"
 },
 {
@@ -1028,7 +1028,7 @@
     ],
     "Descripcio": "Llista de tipus d'ens locals de Catalunya.",
     "nom_dinsBD": "TIPUS_ENS_LOCAL",
-    "Data_publicacio": "30/03/2020",
+    "Data_publicacio": "21/04/2021",
     "Data_actualitzacio": "21/04/2021"
 },
 {
@@ -1055,8 +1055,8 @@
     ],
     "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
     "nom_dinsBD": "PERSONA_REL_EXPEDIENT",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq45",
@@ -1082,8 +1082,8 @@
     ],
     "Descripcio": "Tipus de relació entre la persona representant i la persona representada.",
     "nom_dinsBD": "PERSONA_REPRESENTACIO",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq49",
@@ -1109,13 +1109,14 @@
     ],
     "Descripcio": "Tipus de documentació que es pot utilitzar per identificar a una persona.",
     "nom_dinsBD": "TIPUS_IDENTIFICADOR",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq133",
     "Nom": "Idioma de comunicació",
-    "Ambit": "Llengua i comunicació",
+    "Ambit": "Llengua i comunicació",15/07/2020
+
     "Classificacio": "Consolidat",
     "instancies": [
         {
@@ -1129,14 +1130,14 @@
             "idatacreacio": "13/07/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "15/07/2020",
+            "idatapublicacio": "20/01/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Idioma-de-comunicaci%C3%B3/e4zz-vv8p",
             "itipusactualitzacio": "Sota demanda"
         }
     ],
     "Descripcio": "Llistat d'idiomes que admesos per realitzar algun tipus de comunicació oficial.",
     "nom_dinsBD": "IDIOMA_COMUNICACIO",
-    "Data_publicacio": "15/07/2020",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "20/01/2021"
 },
 {
@@ -1183,7 +1184,7 @@
             "idatacreacio": "06/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "20/04/2020",
+            "idatapublicacio": "18/12/2019",
             "iurl_dades_obertes": "",
             "itipusactualitzacio": "Sota demanda"
         }
@@ -1217,8 +1218,8 @@
     ],
     "Descripcio": "Permet indicar el caràcter de representació d'una persona envers una altra.",
     "nom_dinsBD": "CARACTER_REPRE",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq118",
@@ -1319,7 +1320,7 @@
     ],
     "Descripcio": "Classificació catalana d'educació. Es disposa de vàries versions segons el concepte de classificació i l'any de revisió.",
     "nom_dinsBD": "EDUCACIO_CCED_2000_A",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "26/05/2021",
     "Data_actualitzacio": "30/06/2021"
 },
 {
@@ -1346,8 +1347,8 @@
     ],
     "Descripcio": "Permet indicar el tipus de notificació que accepta una persona.",
     "nom_dinsBD": "TIPUS_NOTIFICACIO",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq113",
@@ -1403,7 +1404,7 @@
     ],
     "Descripcio": "Classificació catalana de productes per activitats. Es disposa de vàries versions segons l'any de revisió.",
     "nom_dinsBD": "CCPA_2014",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "17/02/2021"
 },
 {
@@ -1423,7 +1424,7 @@
             "idatacreacio": "09/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "17/02/2021",
+            "idatapublicacio": "10/03/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/PRODCOM-EIP-2017-productes-industrials-/kcb3-zn5s",
             "itipusactualitzacio": "Sota demanda"
         },
@@ -1445,7 +1446,7 @@
     ],
     "Descripcio": "Classificació de l'Enquesta Industrial de Productes. Es disposa de vàries versions segons l'any.",
     "nom_dinsBD": "PRODCOM_EIP_2018_PRODUCTES_INDUSTRIALS",
-    "Data_publicacio": "27/02/2021",
+    "Data_publicacio": "10/03/2021",
     "Data_actualitzacio": "21/04/2021"
 },
 {
@@ -1465,7 +1466,7 @@
             "idatacreacio": "09/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "17/02/2021",
+            "idatapublicacio": "10/03/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/NC-2019-productes-comer-exterior-/dxc5-7sp7",
             "itipusactualitzacio": "Sota demanda"
         },
@@ -1487,7 +1488,7 @@
     ],
     "Descripcio": "Classificació de productes per al comerç amb l'estranger (Nomenclatura combinada). Es disposa de vàries versions segons l'any.",
     "nom_dinsBD": "NC_2019_PRODUCTES_COMERÇ_EXTERIOR",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "10/03/2021",
     "Data_actualitzacio": "21/04/2021"
 },
 {
@@ -1514,7 +1515,7 @@
     ],
     "Descripcio": "Classificació europea del consum individual per finalitats 2016 (ECOICOP 2016)",
     "nom_dinsBD": "ECOICOP_2016",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "14/07/2021",
     "Data_actualitzacio": "14/07/2021"
 },
 {
@@ -1541,8 +1542,8 @@
     ],
     "Descripcio": "Mecanismes de comunicació per contactar amb una persona.",
     "nom_dinsBD": "CONTACTE_CANAL_AVIS",
-    "Data_publicacio": "19/07/2019",
-    "Data_actualitzacio": "15/07/2019"
+    "Data_publicacio": "21/06/2019",
+    "Data_actualitzacio": "21/06/2019"
 },
 {
     "Id": "dtarq48",
@@ -1640,7 +1641,7 @@
     ],
     "Descripcio": "Classificació catalana d'activitats econòmiques. Es disposa de vàries versions segons l'any.",
     "nom_dinsBD": "ACTECONOMICA_CCAE_1993",
-    "Data_publicacio": "20/02/2020",
+    "Data_publicacio": "20/01/2021",
     "Data_actualitzacio": "20/01/2021"
 },
 {
@@ -1660,7 +1661,7 @@
             "idatacreacio": "09/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "20/01/2021",
+            "idatapublicacio": "17/02/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Ocupacions-CCO-1994/6k5y-hxp5",
             "itipusactualitzacio": "Sota demanda"
         },
@@ -1675,15 +1676,15 @@
             "idatacreacio": "09/03/2020",
             "itipusvisual": "Ús no restringit",
             "idataobsoleta": "",
-            "idatapublicacio": "20/01/2021",
+            "idatapublicacio": "17/02/2021",
             "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Ocupacions-CCO-2011/upzy-jfdd",
             "itipusactualitzacio": "Sota demanda"
         }
     ],
     "Descripcio": "Classificació catalana d'ocupacions. Es disposa de vàries versions segons l'any.",
     "nom_dinsBD": "CCO_2011",
-    "Data_publicacio": "20/02/2020",
-    "Data_actualitzacio": "20/01/2021"
+    "Data_publicacio": "17/02/2021",
+    "Data_actualitzacio": "17/02/2021"
 },
 {
     "Id": "dtarq142",

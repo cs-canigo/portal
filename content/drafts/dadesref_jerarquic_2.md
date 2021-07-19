@@ -119,16 +119,17 @@ tr.shown td.details-control {
                     '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
-		
-		return '<table cellpadding="7" cellspacing="0" border="0" style="padding-left:20px;font-size:12px;width:100%;">'+
+
+
+		return '<table cellpadding="7" cellspacing="0" border="0" style="margin-top:0px; padding-left:20px;font-size:12px;width:100%;">'+
 			'<thead>'+
 				'<tr>'+
-					'<th>Nom</th>'+
-					'<th style="width:30%">Descripcio</th>'+
-					'<th>Promotor</th>'+
-					'<th>Estat</th>'+
-					'<th>Publicada</th>'+
-					'<th>Obsoleta</th>'+
+					'<th style="background-color: papayawhip;">Nom</th>'+
+					'<th style="background-color: papayawhip; width:30%;">Descripcio</th>'+
+					'<th style="background-color: papayawhip; width:30%;">Promotor</th>'+
+					'<th style="background-color: papayawhip;">Estat</th>'+
+					'<th style="background-color: papayawhip;">Publicada</th>'+
+					'<th style="background-color: papayawhip;">Obsoleta</th>'+
 					'<th></th>'+					
 			    '</tr>'+
 			'</thead>'+
@@ -218,7 +219,16 @@ tr.shown td.details-control {
         }
     } );
 	
+	// calcular i mostrar missatge d'instàncies vigents
+	var dadesConso=$("#tabvalidades").DataTable().data(); 
+    var vigents=0;			 
+    for (i = 0; i < dadesConso.length; i++) {			 
+		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  }
+	$('#numInstancies').text("Nombre total d'instàncies vigents: "+vigents+".");
+	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 	
 	
+	
+	// carregar taula de pendents
     var tpend =  $('#tabpendents').DataTable( {
       "ajax": '../da/entitats_instancies_20210714.json',
 	  "deferRender": true,
@@ -291,6 +301,9 @@ tr.shown td.details-control {
 ####  Dades de referència d'obligat compliment
 
 <div style="width:100%; padding-left:30px;">
+<div id="divInstancies" style="float: left;">
+<p id="numInstancies" style="font-size:9px;" ></p>
+</div>
 <table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
