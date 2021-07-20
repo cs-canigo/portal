@@ -66,7 +66,7 @@ weight= 5
     var instanciaTitol = document.getElementById("instanciaTitol");
     instanciaTitol.style.width = "70%";
     instanciaTitol.style.marginRight = "15%";
-    instanciaTitol.style.marginLeft = "20%";
+    instanciaTitol.style.marginLeft = "15%";
     instanciaTitol.style.marginTop = "0.5em";
     instanciaTitol.style.marginBottom = "0.5em";
 
@@ -78,7 +78,7 @@ weight= 5
     var instanciaDefinicio = document.getElementById("instanciaDefinicio");
     instanciaDefinicio.style.width = "70%";
     instanciaDefinicio.style.marginRight = "15%";
-    instanciaDefinicio.style.marginLeft = "20%";
+    instanciaDefinicio.style.marginLeft = "15%";
     instanciaDefinicio.style.marginTop = "0.5em";
     instanciaDefinicio.style.marginBottom = "1.5em";
 

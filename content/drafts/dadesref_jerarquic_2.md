@@ -192,13 +192,23 @@ tr.shown td.details-control {
 		  },
 		  
 	  "infoCallback": function( settings, start, end, max, total, pre ) {
+	       
+		    // Calcula el número d'instàncies que es visualitzen aplicant el filtre
 			var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
 			var vigents2=0;			 
 			for (i = 0; i < dadesFiltre.length; i++) {			 
 				vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
 			}
-	 
-			return total + " entitats i " + vigents2 + " instancies vigents";
+			
+			// Constuim el tex tenint en compte el singular/plural, per defecte plural.
+			var txtEntitats=" entitats i ";
+			if (total == 1){ txtEntitats=" entitat i ";}
+			
+			var txtInstancies=" instàncies vigents";
+			if (vigents2 == 1){ txtInstancies=" instància vigent";}	
+             			
+	        //retornem el text que es visualitzarà
+			return total + txtEntitats + vigents2 + txtInstancies;
 			
 		}
     } ); 
