@@ -152,11 +152,8 @@ tr.shown td.details-control {
 
   //------------------------------------------------------------------------------------------------------------------
   //------------------------------------------------------------------------------------------------------------------
-   
-  
-  $(document).ready(function() {  
-
-    var tcons =  $('#tabvalidades').DataTable( {
+ 
+  $('#tabvalidades').DataTable( {
       "ajax": '../da/entitats_instancies_20210714.json',
 	  "deferRender": true,
       "bFilter": true,
@@ -191,9 +188,12 @@ tr.shown td.details-control {
            ],
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
 	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ]
-    } );
-	
-    $('#tabvalidades tbody').on('click', 'button', function () {
+    } ); 
+  
+  $(document).ready(function() {  
+     var tcons =  $('#tabvalidades').DataTable();
+	 
+     $('#tabvalidades tbody').on('click', 'button', function () {
         //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
 	    var $tr = $(this).closest('tr');
 	    var posicio = $tr.index();
@@ -300,11 +300,14 @@ tr.shown td.details-control {
     $('article table').css('margin','0');
 	
 	
-	// calcular i mostrar missatge d'instàncies vigents
- 
-    var vigents2=comptar_LAA( $("#tabvalidades").DataTable().data() );
-	console.log("vigents: " + vigents2);
-	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents2 + ".");
+	// calcular i mostrar missatge d'instàncies vigents 
+	var dadesConso=$("#tabvalidades").DataTable().data(); 
+    var vigents=0;			 
+    for (i = 0; i < dadesConso.length; i++) {			 
+		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+		}
+	console.log("vigents: " + vigents);
+	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
 
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
     
