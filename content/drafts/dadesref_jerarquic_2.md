@@ -219,17 +219,6 @@ tr.shown td.details-control {
         }
     } );
 	
-	// calcular i mostrar missatge d'instàncies vigents
-	var dadesConso=$("#tabvalidades").DataTable().data(); 
-    var vigents=0;			 
-    for (i = 0; i < dadesConso.length; i++) {			 
-		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-		}
-	console.log(vigents);
-	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
-
-	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 	
-	
 	
 	// carregar taula de pendents
     var tpend =  $('#tabpendents').DataTable( {
@@ -297,7 +286,24 @@ tr.shown td.details-control {
 	
     $('article table').css('margin','0');
     
-});
+  });
+
+  // Segon document ready per calcular número d'instàncies vigents
+  $(document).ready(function() {  
+  
+  	// calcular i mostrar missatge d'instàncies vigents
+	var dadesConso=$("#tabvalidades").DataTable().data(); 
+    var vigents=0;			 
+    for (i = 0; i < dadesConso.length; i++) {			 
+		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+		}
+	console.log("vigents: " + vigents);
+	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
+
+	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
+	
+	});
+ 
 </script>
 
 <br/><br/>
@@ -305,7 +311,7 @@ tr.shown td.details-control {
 
 <div style="width:100%; padding-left:30px;">
 <div id="divInstancies" style="float: left;">
-<p id="numInstancies" style="font-size:12px;" ></p>
+<p id="numInstancies" style="font-size:14px;" ></p>
 </div>
 <table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>

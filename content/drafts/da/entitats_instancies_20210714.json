@@ -1552,25 +1552,10 @@
     "instancies": [
         {
             "inom": "V01",
-            "iestat": "Obsoleta",
-            "itipus": "Tabular",
-            "ipromotor": "Departament de Treball, Afers Socials i Famílies",
-            "idescripcio": "Versió inicial.",
-            "ifitxer_doc": "Genere_ATR.docx",
-            "ifitxer_xls": "deprecated/Genere_V01.xlsx",
-            "idatacreacio": "07/06/2019",
-            "itipusvisual": "Ús no restringit",
-            "idataobsoleta": "31/03/2021",
-            "idatapublicacio": "21/06/2019",
-            "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/G-nere/rpg6-9mu9",
-            "itipusactualitzacio": "Sota demanda"
-        },
-        {
-            "inom": "V02",
             "iestat": "Vigent",
             "itipus": "Tabular",
             "ipromotor": "Departament de Treball, Afers Socials i Famílies",
-            "idescripcio": "Es modifica la codificació.",
+            "idescripcio": "Versió inicial.",
             "ifitxer_doc": "Genere_ATR.docx",
             "ifitxer_xls": "Genere.xlsx",
             "idatacreacio": "31/03/2021",
@@ -1583,7 +1568,7 @@
     ],
     "Descripcio": "Llistat dels grups en què es pot dividir el conjunt d’individus segons certes característiques psicològiques, socials i culturals.",
     "nom_dinsBD": "GENERE",
-    "Data_publicacio": "19/07/2019",
+    "Data_publicacio": "31/03/2021",
     "Data_actualitzacio": "31/03/2021"
 },
 {
