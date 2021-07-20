@@ -96,6 +96,19 @@ tr.shown td.details-control {
 
 <script type="text/javascript">
 
+	function comptar_LAA ( d ) {
+		// calcular i mostrar missatge d'instàncies vigents
+		var dadesConso=d; 
+		console.log("dadesConso " + dadesConso);
+		var vigents=0;			 
+		for (i = 0; i < dadesConso.length; i++) {			 
+			vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			}
+	    return vigents;
+	
+	}
+
+
 	function format_LAA ( d ) {
 	    var vRowInstancia;
 		var vStyle;
@@ -288,14 +301,10 @@ tr.shown td.details-control {
 	
 	
 	// calcular i mostrar missatge d'instàncies vigents
-	var dadesConso=tcons.data(); 
-    var vigents=0;			 
-    for (i = 0; i < dadesConso.length; i++) {			 
-		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-		}
-	console.log("vigents: " + vigents);
-	console.log(tcons);
-	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
+ 
+    var vigents2=comptar_LAA( $("#tabvalidades").DataTable().data() );
+	console.log("vigents: " + vigents2);
+	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents2 + ".");
 
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
     
