@@ -4,7 +4,7 @@ title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
 description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
 section     = "howtos"
 categories  = ["SIC"]
-key        = "JULY2021"
+key        = "AGOST2021"
 +++
 
 ## Introducció
@@ -62,9 +62,9 @@ docker run -it --rm \
 
 En aquest cas estem indicant que volem:
 
-- Se utlice el usuario 1000 (necesario para todas las imagenes builder en SIC 3.0) y el grupo del usuario Host
-- Se utilice el controlador `Host` de docker para compartir la red del host
-- Se inyecten como volúmenes los archivos de configuración de maven y npm si son necesarios
+- S'utilitzi l'usuari 1000 (necessari per totes les imatges builders al SIC 3.0) i el grup del usuario Host
+- S'utilitzi el controlador `Host` de docker per compartir la red del host
+- S'injectin com a volums els fitxers de configuració de maven i npm si són necesaris a la imatge
 
 ### Logout
 
@@ -98,7 +98,7 @@ la instrucció [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#en
 configurada a la imatge base i assegurar-se que l'usuari d'execució del contenidor es correspon amb el que s'utilitza a la imatge base.
 
 - Cal revisar el fitxer `Dockerfile` de la imatge base del SIC a utilitzar per a assegurar-se que les instruccions que conté
-apliquen per a la nova imatge. Per exemple, en una imatge estesa l'equip responsable del manteniment i suport és diferent, per lo que cal
+apliquen per a la nova imatge. Per exemple, en una imatge estesa l'equip responsable del manteniment i suport és diferent, per tant, cal
 canviar el [MAINTAINER](https://docs.docker.com/engine/reference/builder/#maintainer-deprecated) i/o
 [LABEL](https://docs.docker.com/engine/reference/builder/#label) per a indicar l’adreça de correu adient.
 
