@@ -154,7 +154,7 @@ tr.shown td.details-control {
       "ordering": true,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
-      //"info":     false,
+      "info":     true,
 	  "language":{
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
@@ -189,7 +189,18 @@ tr.shown td.details-control {
 			
 			//Mostrar text amb el nombre d'instàncies vigents
 			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
-		  }
+		  },
+		  
+	  "infoCallback": function( settings, start, end, max, total, pre ) {
+			var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
+			var vigents2=0;			 
+			for (i = 0; i < dadesFiltre.length; i++) {			 
+				vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			}
+	 
+			return total + " entitats i " + vigents2 + " instancies vigents";
+			
+		}
     } ); 
 
 	$('#tabvalidades').on( 'search.dt', function () {
