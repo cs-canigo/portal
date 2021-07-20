@@ -264,7 +264,17 @@ tr.shown td.details-control {
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
 	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ],
+	  "initComplete": function( settings, json ) {
+	        var dadesConso=json.data; 
+			var vigents=0;			 
+			for (i = 0; i < dadesConso.length; i++) {			 
+				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+				}
+			console.log("vigents: " + vigents);
+			//console.log(dadesConso);
+			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
+		  }
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
@@ -302,14 +312,14 @@ tr.shown td.details-control {
 	
 	
 	// calcular i mostrar missatge d'instàncies vigents 
-	var dadesConso=$("#tabvalidades").DataTable().data().ajax.json().data; 
-    var vigents=0;			 
-    for (i = 0; i < dadesConso.length; i++) {			 
-		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-		}
-	console.log("vigents: " + vigents);
-	console.log(dadesConso);
-	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
+	//var dadesConso=$("#tabvalidades").DataTable().data().ajax.json().data; 
+    //var vigents=0;			 
+  //  for (i = 0; i < dadesConso.length; i++) {			 
+//		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+//		}
+//	console.log("vigents: " + vigents);
+//	console.log(dadesConso);
+//	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
 
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
     
@@ -382,9 +392,10 @@ El procés de gestió de les dades de referència es realitza de manera coordina
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
-
+<div style="width:100%;">
 <CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
 <br/>
+</div>
 
 Tota aplicació que necessiti utilitzar alguna dada de referència, s’ha de descarregar la informació del Catàleg Tècnic de Dades de Referència aquí publicat, i carregar-la manualment en la seva aplicació. 
 
