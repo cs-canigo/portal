@@ -10,7 +10,7 @@ weight= 5
   <div>
     <h2 id="entitatTitol"></h2>
     <p id="myDefinition"></p>
-	<h3 id="instanciaTitol"></h2>
+	<h4 id="instanciaTitol"></h2>
 	<p id="instanciaDefinicio"></p>
     <table id="myTable"></table>
   </div>
@@ -24,11 +24,11 @@ weight= 5
 	var numInstancia = localStorage.getItem('pos');
 
     // Mostrem en el log els valors recollits
-    console.log("Dades Json: ");
-    console.log(dades);
-    console.log("Nom entitat: "+dades.Nom);
-	console.log("Instancia Index: "+numInstancia);
-	console.log("Nom instancia: "+dades.instancies[numInstancia].inom);
+    //console.log("Dades Json: ");
+    //console.log(dades);
+    //console.log("Nom entitat: "+dades.Nom);
+	//console.log("Instancia Index: "+numInstancia);
+	//console.log("Nom instancia: "+dades.instancies[numInstancia].inom);
 
 	// Construim la pagina a visualitzar
 	  
@@ -69,6 +69,7 @@ weight= 5
     instanciaTitol.style.marginLeft = "15%";
     instanciaTitol.style.marginTop = "0.5em";
     instanciaTitol.style.marginBottom = "0.5em";
+	instanciaTitol.style.padding-left = "20px";
 
     var textEntitatTitol = document.createTextNode("Versió "+dades.instancies[numInstancia].inom);
     instanciaTitol.appendChild(textEntitatTitol);
@@ -81,6 +82,7 @@ weight= 5
     instanciaDefinicio.style.marginLeft = "15%";
     instanciaDefinicio.style.marginTop = "0.5em";
     instanciaDefinicio.style.marginBottom = "1.5em";
+	instanciaDefinicio.style.padding-left = "20px";
 
     var textDefinicio = document.createTextNode(dades.instancies[numInstancia].idescripcio);
     instanciaDefinicio.appendChild(textDefinicio);
