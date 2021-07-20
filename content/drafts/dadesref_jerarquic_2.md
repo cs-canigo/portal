@@ -285,24 +285,23 @@ tr.shown td.details-control {
 	$('.dataTables_info').css('padding-top','20px'); 
 	
     $('article table').css('margin','0');
-    
-  });
-
-  // Segon document ready per calcular número d'instàncies vigents
-  $(document).ready(function() {  
-  
-  	// calcular i mostrar missatge d'instàncies vigents
-	var dadesConso=$("#tabvalidades").DataTable().data(); 
+	
+	
+	// calcular i mostrar missatge d'instàncies vigents
+	var dadesConso=tcons.data(); 
     var vigents=0;			 
     for (i = 0; i < dadesConso.length; i++) {			 
 		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
 		}
 	console.log("vigents: " + vigents);
+	console.log(tcons);
 	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
 
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
-	
-	});
+    
+  });
+
+
  
 </script>
 
