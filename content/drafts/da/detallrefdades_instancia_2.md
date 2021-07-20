@@ -10,7 +10,7 @@ weight= 5
   <div>
     <h2 id="entitatTitol"></h2>
     <p id="myDefinition"></p>
-	<h4 id="instanciaTitol"></h2>
+	<h4 id="instanciaTitol"></h4>
 	<p id="instanciaDefinicio"></p>
     <table id="myTable"></table>
   </div>
