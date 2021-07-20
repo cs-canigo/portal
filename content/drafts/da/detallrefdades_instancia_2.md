@@ -212,7 +212,7 @@ weight= 5
 		hilera.appendChild(celda);
 
 		celda = document.createElement("td");
-		celda.innerHTML = "Per tractar-se d'una instància obsoleta, els atributs i els valors no estàn disponibles dins d'aquesta pàgina. Si necessiteu aquesta informació, cal que envieu un correu a la Bústia de la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
+		celda.innerHTML = "Per tractar-se d'una instància obsoleta, els atributs i els valors no estan disponibles dins d'aquesta pàgina. Si necessiteu aquesta informació, cal que envieu un correu a la Bústia de la Gestió Tècnica de Dades del CTTI: <a href='mailto:gtd.ctti@gencat.cat'>gtd.ctti@gencat.cat</a> ";
 		celda.innerHTML = celda.innerHTML + "indicant el nom de l'entitat i de la instància que voleu consultar."
 
 		hilera.appendChild(celda);

@@ -96,20 +96,7 @@ tr.shown td.details-control {
 
 <script type="text/javascript">
 
-	function comptar_LAA ( d ) {
-		// calcular i mostrar missatge d'instàncies vigents
-		var dadesConso=d; 
-		console.log("dadesConso " + dadesConso);
-		var vigents=0;			 
-		for (i = 0; i < dadesConso.length; i++) {			 
-			vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-			}
-	    return vigents;
-	
-	}
-
-
-	function format_LAA ( d ) {
+	function construir_tab_instancies ( d ) {
 	    var vRowInstancia;
 		var vStyle;
         
@@ -190,7 +177,19 @@ tr.shown td.details-control {
             { "data": "Data_actualitzacio" }
            ],
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
-	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ]
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ],
+	  "initComplete": function( settings, json ) {
+	        //calcular nombre d'instàncies vigents
+	        var dadesConso=json.data; 
+			var vigents=0;			 
+			for (i = 0; i < dadesConso.length; i++) {			 
+				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+				}
+			//console.log("vigents: " + vigents);
+			
+			//Mostrar text amb el nombre d'instàncies vigents
+			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+		  }
     } ); 
 
 	
@@ -198,15 +197,15 @@ tr.shown td.details-control {
         //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
 	    var $tr = $(this).closest('tr');
 	    var posicio = $tr.index();
-        console.log("posicio: " + posicio);  //es mostra el resultat en el log - Debug
+        //console.log("posicio: " + posicio);  //es mostra el resultat en el log - Debug
 
 		
         //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
 	    var data = tcons.row( $(this).parents('tr') ).data();
         data= tcons.row( $(this).parents('tr').prev() ).data();
         //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("data: "); //es mostra el resultat en el log - Debug
-        console.log(data);         //es mostra el resultat en el log - Debug
+        //console.log("data: "); //es mostra el resultat en el log - Debug
+        //console.log(data);         //es mostra el resultat en el log - Debug
 		
 		// Passem totes les dades de l'entitat i les instancies
         localStorage.setItem('data', JSON.stringify(data));
@@ -228,7 +227,7 @@ tr.shown td.details-control {
         }
         else {
             // Open this row
-            row.child( format_LAA(row.data()) ).show();
+            row.child( construir_tab_instancies(row.data()) ).show();
             tr.addClass('shown');
         }
     } );
@@ -245,7 +244,6 @@ tr.shown td.details-control {
       "paging": false,
       "ordering": true,
       //"pageLength": 10,
-      //"order": [[ 0, 'asc' ]],
       //"info":     false,
 	  "language":{
                 "search" : "<strong>Cerca:</strong> ",
@@ -264,17 +262,7 @@ tr.shown td.details-control {
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
 	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ],
-	  "initComplete": function( settings, json ) {
-	        var dadesConso=json.data; 
-			var vigents=0;			 
-			for (i = 0; i < dadesConso.length; i++) {			 
-				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-				}
-			console.log("vigents: " + vigents);
-			//console.log(dadesConso);
-			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
-		  }
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
@@ -283,13 +271,13 @@ tr.shown td.details-control {
 			//var $tr = $(this).closest('tr');
 			//var posicio = $tr.index();
 		var posicio =0;
-        console.log("posicio pendents: " + posicio);  //es mostra el resultat en el log - Debug
+        //console.log("posicio pendents: " + posicio);  //es mostra el resultat en el log - Debug
 
         //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
         var data = tpend.row( $(this).parents('tr') ).data();
         //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("data pendents: "); //es mostra el resultat en el log - Debug
-        console.log(data);         //es mostra el resultat en el log - Debug
+        //console.log("data pendents: "); //es mostra el resultat en el log - Debug
+        //console.log(data);         //es mostra el resultat en el log - Debug
         
 
 		// Passem totes les dades de l'entitat i les instancies
@@ -310,17 +298,7 @@ tr.shown td.details-control {
 	
     $('article table').css('margin','0');
 	
-	
-	// calcular i mostrar missatge d'instàncies vigents 
-	//var dadesConso=$("#tabvalidades").DataTable().data().ajax.json().data; 
-    //var vigents=0;			 
-  //  for (i = 0; i < dadesConso.length; i++) {			 
-//		vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
-//		}
-//	console.log("vigents: " + vigents);
-//	console.log(dadesConso);
-//	$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents + ".");
-
+	// text instancies vigent dins de l'espai que ocupa la taula validada
 	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
     
   });
@@ -334,8 +312,9 @@ tr.shown td.details-control {
 
 <div style="width:100%; padding-left:30px;">
 <div id="divInstancies" style="float: left;">
-<p id="numInstancies" style="font-size:14px;" ></p>
+<p id="numInstancies" style="margin-top:8px; font-size:14px; font-style:italic;" ></p>
 </div>
+
 <table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
@@ -392,10 +371,8 @@ El procés de gestió de les dades de referència es realitza de manera coordina
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
-<div style="width:100%;">
 <CENTER>![DadRefProc](./../entitats/DadesRef_ProcesGeneral.png)</center>
 <br/>
-</div>
 
 Tota aplicació que necessiti utilitzar alguna dada de referència, s’ha de descarregar la informació del Catàleg Tècnic de Dades de Referència aquí publicat, i carregar-la manualment en la seva aplicació. 
 
