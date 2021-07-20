@@ -66,10 +66,9 @@ weight= 5
     var instanciaTitol = document.getElementById("instanciaTitol");
     instanciaTitol.style.width = "70%";
     instanciaTitol.style.marginRight = "15%";
-    instanciaTitol.style.marginLeft = "15%";
+    instanciaTitol.style.marginLeft = "20%";
     instanciaTitol.style.marginTop = "0.5em";
     instanciaTitol.style.marginBottom = "0.5em";
-	instanciaTitol.style.padding-left = "20px";
 
     var textEntitatTitol = document.createTextNode("Versió "+dades.instancies[numInstancia].inom);
     instanciaTitol.appendChild(textEntitatTitol);
@@ -79,10 +78,9 @@ weight= 5
     var instanciaDefinicio = document.getElementById("instanciaDefinicio");
     instanciaDefinicio.style.width = "70%";
     instanciaDefinicio.style.marginRight = "15%";
-    instanciaDefinicio.style.marginLeft = "15%";
+    instanciaDefinicio.style.marginLeft = "20%";
     instanciaDefinicio.style.marginTop = "0.5em";
     instanciaDefinicio.style.marginBottom = "1.5em";
-	instanciaDefinicio.style.padding-left = "20px";
 
     var textDefinicio = document.createTextNode(dades.instancies[numInstancia].idescripcio);
     instanciaDefinicio.appendChild(textDefinicio);
