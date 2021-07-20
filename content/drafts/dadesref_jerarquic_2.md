@@ -213,18 +213,6 @@ tr.shown td.details-control {
 		}
     } ); 
 
-	$('#tabvalidades').on( 'search.dt', function () {
-		var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
-		var vigents2=0;			 
-		for (i = 0; i < dadesFiltre.length; i++) {			 
-			vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
-			}
-		console.log("vigents filtrades: " + vigents2);
-		
-		//Mostrar text amb el nombre d'instàncies vigents
-		//$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
-	} );
-	
      $('#tabvalidades tbody').on('click', 'button', function () {
         //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
 	    var $tr = $(this).closest('tr');
