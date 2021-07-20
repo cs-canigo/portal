@@ -90,7 +90,7 @@ weight= 5
 
 
     // Construccio taules per identificar Metadades i la seva correspondencia a JSON
-    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Obsoleta"   ,"Descàrrega"];
+    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Data fi vigència"   ,"Descàrrega"];
     var tabkeys_ent = ["Id"           ,"Ambit"             ,"instancies" ,"instancies"      ,"instancies"  ,"instancies"           ,"instancies"   ,"instancies"        ,"instancies"     ,"instancies"    ,"instancies"];
     var tabkeys_ins = [""             ,""                  ,"iestat"     ,"ipromotor"       ,"itipus"      ,"itipusactualitzacio"  ,"itipusvisual" ,"idatapublicacio"   ,"idataobsoleta"  ,"idataobsoleta" ,"ifitxer_xls"];
 
