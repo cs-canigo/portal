@@ -1,5 +1,5 @@
 +++
-date        = "2021-03-31"
+date        = "2021-07-21"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -58,8 +58,8 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   cursor:pointer;
   color:#ffffff;
   font-family:Arial;
-  font-size:14px;
-  padding:0px 40px;
+  font-size:12px;
+  padding:0px 25px;
   text-decoration:none;
   text-shadow:0px 1px 0px #283966;
 }
@@ -78,9 +78,69 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
   top:1px;
 }
 
+td.details-control {
+    background: url('../../da/details_open.png') no-repeat center center;
+    cursor: pointer;
+	padding-left:15px;
+	padding-right:15px;
+}
+tr.shown td.details-control {
+    background: url('../../da/details_close.png') no-repeat center center;
+}
+
 </style>
 
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
 <script type="text/javascript">
+
+	function construir_tab_instancies ( d ) {
+	    var vRowInstancia;
+		var vStyle;
+        
+		vRowInstancia='';
+		for(var i=0,z=d.instancies.length;i<z;i++){
+			//vStyle='style="fontWeight:bold;color:darkgrey;"';
+			vStyle='';
+			if (d.instancies[i].iestat!="Vigent")
+			{
+				vStyle='style="color:darkgrey;"';
+			}
+			
+			vRowInstancia=vRowInstancia+'<tr>'+
+					'<td '+vStyle+'>'+d.instancies[i].inom+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idescripcio+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].ipromotor+'</td>'+
+                    '<td '+vStyle+'>'+d.instancies[i].iestat+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idatapublicacio+'</td>'+
+					'<td '+vStyle+'>'+d.instancies[i].idataobsoleta+'</td>'+
+                    '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
+				'</tr>';
+		}
+
+
+		return '<table cellpadding="7" cellspacing="0" border="0" style="margin-top:0px; padding-left:20px;font-size:12px;width:100%;">'+
+			'<thead>'+
+				'<tr>'+
+					'<th style="background-color: papayawhip;">Nom</th>'+
+					'<th style="background-color: papayawhip; width:30%;">Descripcio</th>'+
+					'<th style="background-color: papayawhip; width:30%;">Promotor</th>'+
+					'<th style="background-color: papayawhip;">Estat</th>'+
+					'<th style="background-color: papayawhip;">Publicada</th>'+
+					'<th style="background-color: papayawhip;">Obsoleta</th>'+
+					'<th style="background-color: papayawhip;"></th>'+					
+			    '</tr>'+
+			'</thead>'+
+			'<tbody>'+vRowInstancia+'</tbody>'+
+		'</table>';
+	}
+
+  //------------------------------------------------------------------------------------------------------------------
+  //------------------------------------------------------------------------------------------------------------------
+ 
+  
   $(document).ready(function() {  
 
     var tcons =  $('#tabvalidades').DataTable( {
@@ -91,47 +151,111 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
       "scrollY": "450px",
       "scrollCollapse": true,
       "paging": false,
-      "ordering": false,
+      "ordering": true,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
-      //"info":     false,
+      "info": true,
+      "stateSave": true,
 	  "language":{
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-//                "infoFiltered":   "_END_ entitats consolidades d'un total _MAX_ entitats publicades",
-//                "infoFiltered":   "",
                 "infoFiltered":   "_END_ entitats",
                 "info": ""
         },
 	  "columns": [
-          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
+			{
+                "className":      'details-control',
+                "orderable":      false,
+                "data":           null,
+                "defaultContent": ''
+            },
+            { "data": "Classificacio", "visible": false },
+			{ "data": "Ambit" },
+			{ "data": "Nom" },
+			{ "data": "Descripcio" },
+            { "data": "Data_publicacio" },
+            { "data": "Data_actualitzacio" }
            ],
-      "columnDefs": [ 
-	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
-            {"targets": [ 0 ], "visible": false },
-            {"targets": [ 4 ], "visible": false }
-             ],
-       "searchCols": [
-                { "search": "Consolidat" }, null,  null, null, null, null, null
-		  ]
-    } );
-	
-    $('#tabvalidades tbody').on('click', 'button', function () {
-        //var data = tcons.row( this ).data();
-        var data = tcons.row( $(this).parents('tr') ).data();
-        
-        //console.log(data);
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ],
+	  "initComplete": function( settings, json ) {
+	        //calcular nombre d'instàncies vigents
+	        var dadesConso=json.data; 
+			var vigents=0;			 
+			for (i = 0; i < dadesConso.length; i++) {			 
+				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+				}
+			//console.log("vigents: " + vigents);
+			
+			//Mostrar text amb el nombre d'instàncies vigents
+			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+		  },
+		  
+	  "infoCallback": function( settings, start, end, max, total, pre ) {
+	       
+		    // Calcula el número d'instàncies que es visualitzen aplicant el filtre
+			var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
+			var vigents2=0;			 
+			for (i = 0; i < dadesFiltre.length; i++) {			 
+				vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			}
+			
+			// Constuim el tex tenint en compte el singular/plural, per defecte plural.
+			var txtEntitats=" entitats i ";
+			if (total == 1){ txtEntitats=" entitat i ";}
+			
+			var txtInstancies=" instàncies vigents";
+			if (vigents2 == 1){ txtInstancies=" instància vigent";}	
+             			
+	        //retornem el text que es visualitzarà
+			return total + txtEntitats + vigents2 + txtInstancies;
+			
+		}
+    } ); 
+
+     $('#tabvalidades tbody').on('click', 'button', function () {
+        //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
+	    var $tr = $(this).closest('tr');
+	    var posicio = $tr.index();
+        //console.log("posicio: " + posicio);  //es mostra el resultat en el log - Debug
+
+		
+        //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
+	    var data = tcons.row( $(this).parents('tr') ).data();
+        data= tcons.row( $(this).parents('tr').prev() ).data();
         //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("save data");
-        console.log(data);
+        //console.log("data: "); //es mostra el resultat en el log - Debug
+        //console.log(data);         //es mostra el resultat en el log - Debug
+		
+		// Passem totes les dades de l'entitat i les instancies
         localStorage.setItem('data', JSON.stringify(data));
+		// Passem la posicio de la instancia seleccionada
+        localStorage.setItem('pos', posicio);
 
         window.location = "../../da/detalldadesref";
     } );
 
-  
-    var table =  $('#tabpendents').DataTable( {
+    // Add event listener for opening and closing details
+    $('#tabvalidades tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = tcons.row( tr );
+ 
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( construir_tab_instancies(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    } );
+	
+	
+	// carregar taula de pendents
+    var tpend =  $('#tabpendents').DataTable( {
       "ajax": '../json/entitats.json',
       "deferRender": true,
       "bFilter": true,
@@ -139,40 +263,48 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
       "scrollY": "450px",
       "scrollCollapse": true,
       "paging": false,
-      "ordering": false,
+      "ordering": true,
       //"pageLength": 10,
-      //"order": [[ 0, 'asc' ]],
       //"info":     false,
 	  "language":{
-                "search" : "<strong>Cerca:</strong>",
+                "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
                 "zeroRecords": "No s'han trobat entitats",
-//                "infoFiltered":   "_END_ entitats d'un total _MAX_ entitats publicades",
-//                "infoFiltered":   "",
                 "infoFiltered":   "_END_ entitats",
-               "info": ""
+                "info": ""
         },
 	  "columns": [
-          { data: 0 }, { data: 1 }, { data: 2 }, { data: 3 }, { data: 11 }, { data: 12 }, { data: "" }
+            { "data": "Classificacio", "visible": false },
+			{ "data": "Ambit" },
+			{ "data": "Nom" },
+			{ "data": "Descripcio" },
+            { "data": "Data_publicacio" },
+            { "data": "Data_actualitzacio" },
+			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
-      "columnDefs": [ 
-	        {"targets": -1, "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>" },
-            {"targets": [ 0 ], "visible": false },
-            {"targets": [ 4 ], "visible": false }
-              ],
-	  "searchCols": [
-                { "search": "Pendent" }, null,  null, null, null, null, null
-		  ]
+	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
     } );
-     $('#tabpendents tbody').on('click', 'button', function () {
-        //var data = table.row( this ).data();
-        var data = table.row( $(this).parents('tr') ).data();
-        
-        //console.log(data);
+	
+    $('#tabpendents tbody').on('click', 'button', function () {
+        //Obtenir l'index de la instancia a on s'ha fet el click per veure el detall;
+		//  En el cas de les pendents, la posició sempre és 0 perquè només hi ha una instancian de l'entitat
+			//var $tr = $(this).closest('tr');
+			//var posicio = $tr.index();
+		var posicio =0;
+        //console.log("posicio pendents: " + posicio);  //es mostra el resultat en el log - Debug
+
+        //Obtenir tot l'element data son de l'entitat a on s'ha fet el click per veure el detall;
+        var data = tpend.row( $(this).parents('tr') ).data();
         //alert( 'You clicked on '+data[0]+'\'s row' );
-        console.log("save data");
-        console.log(data);
+        //console.log("data pendents: "); //es mostra el resultat en el log - Debug
+        //console.log(data);         //es mostra el resultat en el log - Debug
+        
+
+		// Passem totes les dades de l'entitat i les instancies
         localStorage.setItem('data', JSON.stringify(data));
+		// Passem la posicio de la instancia seleccionada
+        localStorage.setItem('pos', posicio);
 
         window.location = "../../da/detalldadesref";
     } );
@@ -184,24 +316,34 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 	$('.dataTables_info').css('padding-top','20px'); 
 	
     $('article table').css('margin','0');
+	
+	// text instancies vigent dins de l'espai que ocupa la taula validada
+	$('#divInstancies').prependTo('#tabvalidades_wrapper'); 
     
-});
+  });
+
+
+ 
 </script>
 
 <br/><br/>
 ####  Dades de referència d'obligat compliment 
 
-<div style="width:100%; padding-left:30px">
-<table id="tabvalidades" class="hover" style="width:100%">
+<div style="width:100%; padding-left:30px;">
+<div id="divInstancies" style="float: left;">
+<p id="numInstancies" style="margin-top:8px; font-size:14px; font-style:italic;" ></p>
+</div>
+
+<table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
+                <th></th>
                 <th>Nivell Validació</th>
                 <th>Grup</th>
                 <th>Entitat</th>
                 <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
                 <th>Darrera actualització</th>
-                <th>Detall</th>
             </tr>
         </thead>
     </table>
@@ -221,8 +363,8 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <br/><br/>
 #### Dades de referència pendents d'aprovació
 
-<div style="width:100%; padding-left:30px">
-<table id="tabpendents" class="hover" style="width:100%">
+<div style="width:100%; padding-left:30px;">
+<table id="tabpendents" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
                 <th>Nivell Validació</th>
