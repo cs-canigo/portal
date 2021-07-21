@@ -110,25 +110,16 @@ Exemple:
 
 ```bash
 # S'utilitza una imatge base del SIC.
-FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-2.2-8
 
 # Es modifica el responsable de la imatge.
-LABEL maintainer="change.me@gencat.cat"
+LABEL maintainer="daniel.peribanez@dxcfds.com"
 
 USER root
-
-ARG MAVEN_VERSION=2.2.1
-ARG SHA=b7f8fef6e4efe747a7a9a90f3a9c62d50354d30941bd3d0f9d845cfe3d6f151268ba5093a88fd2c54b5f105fad2f807f4da5b467b025d75ce01b69de853ab934
-ARG BASE_URL=http://archive.apache.org/dist/maven/binaries
 
 ENV FLEX_HOME='/flex-sdk'
 
 RUN apk add --no-cache --virtual .build-deps curl tar unzip procps \
-  && rm -rf /usr/share/maven/ \
-  && mkdir -p /usr/share/maven /usr/share/maven/ref \
-  && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
-  && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c - \
-  && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
   && curl -fsSL -o /tmp/flex-sdk.zip http://download.macromedia.com/pub/flex/sdk/builds/flex3/flex_sdk_3.4.1.10084A.zip \
   && curl -fsSL -o /tmp/flex-sdk-libs.zip http://download.macromedia.com/pub/flex/sdk/datavisualization_sdk3.4.zip \
   && unzip /tmp/flex-sdk.zip -d "${FLEX_HOME}" \
