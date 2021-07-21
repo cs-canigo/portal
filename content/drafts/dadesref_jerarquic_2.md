@@ -154,7 +154,8 @@ tr.shown td.details-control {
       "ordering": true,
       //"pageLength": 10,
       //"order": [[ 0, 'asc' ]],
-      "info":     true,
+      "info": true,
+      "stateSave": true,
 	  "language":{
                 "search" : "<strong>Cerca:</strong> ",
                 "infoEmpty": "No hi ha entitats",
