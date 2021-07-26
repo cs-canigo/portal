@@ -466,7 +466,7 @@ public class EquipamentServiceImpl implements EquipamentService {
 ![Spring Retry Exemplo 4](/images/howtos/2021-01-02_spring_retry_example4.gif)
 
 
-## Conclusió
+## Conclusions
 
  * Implementar l'opció de reintents a través de Spring permet crear **processos robusts amb tolerància a fallades ocasionals**,
  principalment pel que fa a processos associats al consum de serveis externs.
