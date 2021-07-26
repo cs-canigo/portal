@@ -16,20 +16,19 @@ per a projectes generats amb el Framework Canigó.
 ## Justificació
 
 Existeixen escenaris de negoci que requereixen la possibilitat de reintentar una determinada operació quan s’ha produït una
-fallada. Això és especialment útil, per exemple, quan es tracta d'errors temporals o transitoris com l'accés a un recurs extern.
-
+fallada. Això és especialment útil quan es tracta d'errors temporals o transitoris com l'accés a un recurs extern.
 _Spring Retry_ pot aplicar-se mitjançant diferents modalitats:
 
- * Modalitat declarativa: utilitzant únicament anotacions d’Spring, que permet aplicar reintents de forma senzilla i ràpida.
+ * Modalitat declarativa: utilitzant únicament anotacions d’Spring permet aplicar reintents de forma senzilla i ràpida.
 
  * Modalitat imperativa: utilitzant `RetryTemplate` i les classes del package `org.springframework.retry.backoff` de la
- llibreria [Spring Retry](https://github.com/spring-projects/spring-retry).
+ llibreria [Spring Retry](https://github.com/spring-projects/spring-retry) per a aplicar patrons de reintent.
 
-Tot i que també es pot optar per combinar ambdues modalitats.
+Tot i que també es pot optar per combinar-les.
 
 ## Configuració
 
-Per a utilitzar l'opció de reintents en un projecte creat amb Canigó, serà necessari afegir algunes dependències i
+Per a utilitzar l'opció de reintents en un projecte generat amb el Framework Canigó, serà necessari afegir algunes dependències i
 configuracions que es detallen a continuació.
 
 ### Dependències a afegir al fitxer `pom.xml`
@@ -58,7 +57,7 @@ i [aspectjweaver](https://mvnrepository.com/artifact/org.aspectj/aspectjweaver):
 
 Els projectes generats amb el Framework Canigó ja disposen de les dependències de `AspectJ` necessàries
 perquè funcioni el sistema de reintents. No obstant això, si es vol minimitzar l'impacte d'aquestes llibreries a la càrrega
-de l'aplicació, la llibreria mínima necessària seria la llibreria `aspectjweaver` indicada més amunt.
+de l'aplicació, la llibreria `aspectjweaver` serà la mínima necessària.
 
 ### Canvis a l'inicialitzador del projecte `Application.java`
 
@@ -75,11 +74,12 @@ Caldrà afegir l'anotació `@EnableRetry`:
 
 ## Funcionament
 
-### Forma imperativa
+### Modalitat imperativa
 
-#### Desenvolupament
+<br/>
+#### Implementació
 
-Configuració de propietats `application.yml`:
+Configuració de propietats al fitxer `application.yml`:
 
 ```yaml
 retry:
@@ -90,14 +90,14 @@ retry:
 ```
 
 Serà necessari crear un `bean` amb la plantilla que conté el comportament dels reintents. Existeixen diferents
-estratègies d'espera (back off) ja implementades, com:
+estratègies d'espera (back off) ja implementades com:
 
  * **ExponentialBackOffPolicy**: augmenta el període d'espera per a cada reintent en un conjunt donat utilitzant la
  funció Math.exp(double).
 
  * **ExponentialRandomBackOffPolicy**: escull un múltiple aleatori de l'interval d'espera definit per a cada reintent.
 
-Exemple de configuració del `bean` utilitzant l'estratègia `ExponentialRandomBackOffPolicy`:
+Exemple de configuració del `bean` utilitzant l'estratègia **ExponentialRandomBackOffPolicy**:
 
 ```java
 @Configuration
@@ -154,8 +154,10 @@ public class EquipamentServiceImpl implements EquipamentService {
 }
 ```
 
+<br/>
 #### Proves
 
+<br/>
 ##### Proves unitàries
 
 Es plantegen dos escenaris:
@@ -241,7 +243,7 @@ public class EquipamentRetryTemplateTest {
 
 ![Spring Retry Exemple 1](/images/howtos/2021-01-02_spring_retry_example1.gif)
 
-
+<br/>
 ##### Proves utilitzant l'eina *Postman*
 
 Serà necessari modificar la capa de serveis per a crear un mètode que generi excepcions durant les primeres execucions
@@ -286,13 +288,14 @@ public class EquipamentServiceImpl implements EquipamentService {
 ![Spring Retry Exemple 2](/images/howtos/2021-01-02_spring_retry_example2.gif)
 
 
-### Forma declarativa
+### Modalitat declarativa
 
-#### Desenvolupament
+<br/>
+#### Implementació
 
 Crearem una nova capa on li agregarem l'anotació `@Retryable` amb la configuració dels reintents a cada mètode on es
 vulgui aplicar. Cal fer-ho així donat els reintents es gestionen amb aspectes (`AspectJ`) i el mètode que es
-configura amb les anotacions ha de ser diferent del mètode que genera l'excepció:
+configura amb les anotacions ha de ser diferent del mètode que genera l'excepció.
 
 ```java
 @Service
@@ -317,7 +320,7 @@ public class RetryService {
 ```
 
 Perquè la capa de serveis rest utilitzi els reintents, haurà d'invocar a la nova capa amb les anotacions
-(`RetryService` de l’exemple) i no directament a la capa de servei (`EquipamentService` de l’exemple):
+(`RetryService` a l’exemple) i no directament a la capa de servei (`EquipamentService` a l’exemple):
 
 ```java
 @RestController
@@ -343,8 +346,10 @@ public class EquipamentServiceController {
 }
 ```
 
+<br/>
 #### Proves
 
+<br/>
 ##### Proves unitàries
 
 Es plantegen dos escenaris:
@@ -422,7 +427,7 @@ public class EquipamentRetryTemplateTest {
 
 ![Spring Retry Exemplo 3](/images/howtos/2021-01-02_spring_retry_example3.gif)
 
-
+<br/>
 ##### Proves utilitzant l’eina *Postman*
 
 Cal modificar la capa de servei per a crear un mètode que generi excepcions durant les primeres execucions i després
@@ -463,13 +468,13 @@ public class EquipamentServiceImpl implements EquipamentService {
 
 ## Conclusió
 
- * Implementar l'opció de reintents a través de Spring permet crear processos robusts amb tolerància a fallades ocasionals,
- sobretot associats al consum de serveis externs.
+ * Implementar l'opció de reintents a través de Spring permet crear **processos robusts amb tolerància a fallades ocasionals**,
+ principalment pel que fa a processos associats al consum de serveis externs.
 
- * Utilitzar la implementació imperativa permet reutilitzar patrons de reintents sense haver de repetir
+ * Utilitzar la **implementació imperativa permet reutilitzar patrons de reintents** sense haver de repetir
  configuracions a diferents anotacions.
 
- * Utilitzar la implementació declarativa és més senzilla d'implementar donat només requereix anotacions,
+ * Utilitzar la **implementació declarativa és més senzilla d'implementar** donat només requereix anotacions,
  encara que té algunes consideracions tals com:
 
     - S'han de generar excepcions en el mètode que es vol reintentar, ja que si es llança l'excepció en el
