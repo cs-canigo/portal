@@ -9,7 +9,8 @@ key         = "AGOST2021"
 
 El juny del 2021 es va iniciar el procés de migració de totes les pipelines que despleguen al cloud cap a la
 nova Plataforma SIC 3.0 i ja **s’ha finalitzat la migració del 85% de les aplicacions**.
-El setembre està previst migrar les aplicacions restants, que han estat ajornades per necessitats de negoci i/o període de vacances.
+El setembre està previst migrar les aplicacions restants, que han estat ajornades per necessitats de negoci, període de vacances
+i/o aspectes fora de norma.
 
 
 ## Calendari previst
