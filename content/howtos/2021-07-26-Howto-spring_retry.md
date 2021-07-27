@@ -4,7 +4,7 @@ title       = "Canigó. Com utilitzar Spring Retry per a realitzar reintents d'a
 description = "Com utilitzar Spring Retry per a realitzar reintents d'accions que generen una excepció en executar-se"
 section     = "howtos"
 categories  = ["canigo"]
-#key         = "GENER2021"
+key         = "AGOST2021"
 +++
 
 
