@@ -90,7 +90,7 @@ tr.shown td.details-control {
 </style>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -408,7 +408,5 @@ Si esteu interessats en què registrem l’ús per comunicar-vos qualsevol canvi
 Així mateix, estem a la vostra disposició per rebre propostes d’incorporació de noves dades de referència o adaptar les actuals a les necessitats de les aplicacions.
 
 
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
 
 
