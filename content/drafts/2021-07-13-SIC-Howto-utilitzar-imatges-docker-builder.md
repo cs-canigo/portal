@@ -2,15 +2,15 @@
 date        = "2021-07-13"
 title       = "SIC 3.0 - Utilitzar imatges Docker Builder"
 description = "SIC 3.0 - Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
-section     = "howtos"
-categories  = ["SIC"]
-key        = "AGOST2021"
+#section     = "howtos"
+#categories  = ["SIC"]
+#key        = "SETEMBRE2021"
 +++
 
 ## Introducció
 
 El SIC actualment utilitza la [tecnologia Docker](https://www.docker.com/) per a disposar d’un **entorn aïllat i immutable
-de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors**. Aquest how-to va dirigit a tots aquells
+de construcció que, a més pugui ser utilitzat i testejat pels mateixos proveïdors**. Aquest how-to va dirigit a tots aquells
 perfils tècnics que tinguin la necessitat de simular i executar les imatges Docker en un entorn local tal i com ho realitza el SIC.
 
 ## Ús del registre privat
@@ -21,11 +21,12 @@ d'imatges, el codi font, la documentació associada i el procediment per a dispo
 ### Accés via consola web
 
 Es pot accedir al Harbor a través de la seva consola web mitjançant: <https://docker-registry.ctti.extranet.gencat.cat>.
-Un cop dins es pot navegar a través de les carpetes de les imatges del projecte [**gencat-sic-builders**](https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories).
+Un cop dins es pot navegar a través de les carpetes de les imatges del projecte
+[**gencat-sic-builders**](https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories).
 
 ### Login
 
-Per a poder descarregar les imatges en local primer ens hem de autenticar de la següent manera:
+Per a poder descarregar les imatges en local primer ens hem d'autenticar de la següent manera:
 
 ```bash
 docker login https://docker-registry.ctti.extranet.gencat.cat
@@ -35,7 +36,7 @@ Cal introduir l'usuari i paraula de pas proporcionats per l'Oficina Tècnica de 
 
 ### Descàrrega d'imatges
 
-Un cop realitzada l’autenticació per linea de comandes, podem baixar-nos la imatge escollida mitjançant:
+Un cop realitzada l’autenticació per línia de comandes, podem baixar-nos la imatge escollida mitjançant:
 
 ```bash
 docker pull docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
@@ -60,15 +61,21 @@ docker run -it --rm \
   mvn clean package
 ```
 
-En aquest cas estem indicant que volem:
+En aquest cas estem indicant què volem:
 
-- S'utilitzi l'usuari 1000 (necessari per totes les imatges builders al SIC 3.0) i el grup del usuario Host
-- S'utilitzi el controlador `Host` de docker per compartir la red del host
-- S'injectin com a volums els fitxers de configuració de maven i npm si són necesaris a la imatge
+- Que s'utilitzi l'usuari `1000` (necessari per a totes les imatges builders al SIC 3.0) i el grup de l'usuari *Host*.
+
+- Que s'utilitzi el controlador `Host` de docker per a compartir la xarxa del host.
+
+- Que el nom de la imatge executant-se tingui el nom `gencat-sic-builder`.
+
+- Que s'injectin com a volums els fitxers de configuració de maven i npm si són necessaris a la imatge.
+
+- Executar el goal de maven `mvn clean package`.
 
 ### Logout
 
-Si volem desconnectar-nos del Harbor serà necessari realitzar un logout mitjançant:
+Si volem desconnectar-nos del Harbor, serà necessari realitzar un logout mitjançant:
 
 ```bash
 docker logout https://docker-registry.ctti.extranet.gencat.cat
@@ -93,7 +100,7 @@ Per tal d’evitar errors en la construcció de la imatge estesa, cal tenir en c
 destinats exclusivament a la construcció d'artefactes. És a dir, si es necessita instal·lar o executar algun programa addicional serà
 necessari invocar la instrucció [USER](https://docs.docker.com/engine/reference/builder/#user) per a canviar l'usuari a *root*.
 
-- Si es vol mantenir el comportament predeterminat de les imatges del SIC serà necessari agregar al final
+- Si es vol mantenir el comportament predeterminat de les imatges del SIC, serà necessari agregar al final
 la instrucció [ENTRYPOINT](https://docs.docker.com/engine/reference/builder/#entrypoint) amb la mateixa instrucció que està
 configurada a la imatge base i assegurar-se que l'usuari d'execució del contenidor es correspon amb el que s'utilitza a la imatge base.
 
@@ -113,12 +120,11 @@ Exemple:
 FROM docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-2.2-8
 
 # Es modifica el responsable de la imatge.
-LABEL maintainer="daniel.peribanez@dxcfds.com"
+LABEL maintainer="change.me@gencat.cat"
 
+# Es modifica l'usuari a root per a crear una variable d'entorn, instal·lar un programa addicional, donar permisos i eliminar fitxers innecessaris.
 USER root
-
 ENV FLEX_HOME='/flex-sdk'
-
 RUN apk add --no-cache --virtual .build-deps curl tar unzip procps \
   && curl -fsSL -o /tmp/flex-sdk.zip http://download.macromedia.com/pub/flex/sdk/builds/flex3/flex_sdk_3.4.1.10084A.zip \
   && curl -fsSL -o /tmp/flex-sdk-libs.zip http://download.macromedia.com/pub/flex/sdk/datavisualization_sdk3.4.zip \
@@ -133,6 +139,5 @@ RUN apk add --no-cache --virtual .build-deps curl tar unzip procps \
 
 # S'assegura que l'usuari d'execució dels contenidors associats a la imatge es correspongui amb l'utilitzat a la imatge base
 USER 1000
-
 CMD ["mvn", "-version"]
 ```
