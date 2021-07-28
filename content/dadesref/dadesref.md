@@ -36,7 +36,6 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
 
-
 <style>
 .myButton {
   -moz-box-shadow: 0px 0px 0px -13px #9fb4f2;
@@ -91,7 +90,7 @@ tr.shown td.details-control {
 </style>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -183,9 +182,12 @@ tr.shown td.details-control {
 	        //calcular nombre d'instàncies vigents
 	        var dadesConso=json.data; 
 			var vigents=0;			 
-			for (i = 0; i < dadesConso.length; i++) {			 
-				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			for (var i = 0; i < dadesConso.length; i++) {			 
+				for (var j = 0; j < dadesConso[i].instancies.length; j++) {	
+					if (dadesConso[i].instancies[j].iestat == "Vigent")
+						vigents++;
 				}
+			}
 			//console.log("vigents: " + vigents);
 			
 			//Mostrar text amb el nombre d'instàncies vigents
@@ -197,8 +199,11 @@ tr.shown td.details-control {
 		    // Calcula el número d'instàncies que es visualitzen aplicant el filtre
 			var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
 			var vigents2=0;			 
-			for (i = 0; i < dadesFiltre.length; i++) {			 
-				vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			for (var i = 0; i < dadesFiltre.length; i++) {			 
+				for (var j = 0; j < dadesFiltre[i].instancies.length; j++) {	
+					if (dadesFiltre[i].instancies[j].iestat == "Vigent")
+						vigents2++;
+				} 
 			}
 			
 			// Constuim el tex tenint en compte el singular/plural, per defecte plural.
@@ -403,8 +408,5 @@ Si esteu interessats en què registrem l’ús per comunicar-vos qualsevol canvi
 Així mateix, estem a la vostra disposició per rebre propostes d’incorporació de noves dades de referència o adaptar les actuals a les necessitats de les aplicacions.
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" type="text/javascript"></script>
-  
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
-<script src="https://qualitat.solucions.gencat.cat/js/imageMapResizer.min.js" type="text/javascript"></script>
+
+
