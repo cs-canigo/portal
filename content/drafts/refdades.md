@@ -35,7 +35,7 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 - Dades de referència pendents d’aprovació
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
-
+aaaaaaaaaa
 
 <style>
 .myButton {
@@ -183,9 +183,12 @@ tr.shown td.details-control {
 	        //calcular nombre d'instàncies vigents
 	        var dadesConso=json.data; 
 			var vigents=0;			 
-			for (i = 0; i < dadesConso.length; i++) {			 
-				vigents+=dadesConso[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			for (var i = 0; i < dadesConso.length; i++) {			 
+				for (var j = 0; j < dadesConso[i].instancies.length; j++) {	
+					if (dadesConso[i].instancies[j].iestat == "Vigent")
+						vigents++;
 				}
+			}
 			//console.log("vigents: " + vigents);
 			
 			//Mostrar text amb el nombre d'instàncies vigents
@@ -197,8 +200,11 @@ tr.shown td.details-control {
 		    // Calcula el número d'instàncies que es visualitzen aplicant el filtre
 			var dadesFiltre=$('#tabvalidades').DataTable().rows( { filter : 'applied'} ).data() 
 			var vigents2=0;			 
-			for (i = 0; i < dadesFiltre.length; i++) {			 
-				vigents2+=dadesFiltre[i].instancies.filter(value => value.iestat === "Vigent").length;  
+			for (var i = 0; i < dadesFiltre.length; i++) {			 
+				for (var j = 0; j < dadesFiltre[i].instancies.length; j++) {	
+					if (dadesFiltre[i].instancies[j].iestat == "Vigent")
+						vigents2++;
+				} 
 			}
 			
 			// Constuim el tex tenint en compte el singular/plural, per defecte plural.
