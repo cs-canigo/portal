@@ -1,0 +1,63 @@
+version: 2.0.0
+info:
+  version: 1.0.0
+  description: "Despl. modalitat semi-automàtica"
+global-env:
+  - PLANS_PATH: 'sql_scripts'
+  - PLANS_NAME: 'plans.xml'
+  - PUBLISH_PARAMS: '-f pom.xml --batch-mode -Dmaven.test.skip=true'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/database-migration-executor:1.0
+            resources:
+              limits: { cpu: 2000m, memory: 2048Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 2000m, memory: 2048Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn package --batch-mode 
+      environments:
+        - name: integration
+          deployment-type: semiautomatic
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - ARTIFACT_PATH: 'tmpBBDD,target'
+                      - ARTIFACT_NAME: 'bbdd_INT.zip,app-dynamic.ear'
+                      - ARTIFACT_TYPE: 'bbdd,dynamic'                   
+        - name: preproduction
+          deployment-type: semiautomatic
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - ARTIFACT_PATH: 'tmpBBDD,target'
+                      - ARTIFACT_NAME: 'bbdd_PRE.zip,app-dynamic.ear'
+                      - ARTIFACT_TYPE: 'bbdd,dynamic'  
+        - name: production
+          deployment-type: semiautomatic
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - ARTIFACT_PATH: 'tmpBBDD,gdo-applicationEAR/target'
+                      - ARTIFACT_NAME: 'bbdd_PRO.zip,GDOEAR-dynamic.ear'
+                      - ARTIFACT_TYPE: 'bbdd,dynamic'  
+notifications:
+  email:
+    recipients:
+      - noreply@ticxcat.cat

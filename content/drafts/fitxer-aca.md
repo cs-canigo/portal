@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2021-07-30"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -505,10 +505,12 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 
 |Variable|Requerit|Descripció|Exemple|
 |--------|--------|----------|-------|
-| ARTIFACT_PATH |  si | artifacts paths extret al fitxer aca. Utilitzeu el separador "," | tmpBBDD,target |
-| ARTIFACT_NAME |  si | artifacts names extret al fitxer aca. Utilitzeu el separador "," | bbdd_PRO.zip,test-app.ear |
-| ARTIFACT_TYPE |  només al desplegament delegat | artifacts type extret al fitxer aca. Utilitzeu el separador "," | bbdd,dynamic |
-| INFRASTRUCTURE_ID | només al desplegament delegat | identificador d’infraestructura extret al fitxer aca. Utilitzeu el separador "," |  |
+| ARTIFACT_PATH |  si | rutes d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | tmpBBDD,target |
+| ARTIFACT_NAME |  si | noms d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | bbdd_PRO.zip,test-app.ear |
+| ARTIFACT_TYPE |  només al desplegament delegat | tipus d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | bbdd,dynamic |
+| INFRASTRUCTURE_ID | només al desplegament delegat extrets al fitxer aca | identificador d’infraestructura extret al fitxer aca. Utilitzeu el separador "," |  |
+| PLANS_PATH | només al desplegament de bbdd extret al fitxer aca | ruta del fitxer que conté els script de bbdd | sql_scripts |
+| PLANS_NAME | només al desplegament de bbdd extret al fitxer aca | nom del fitxer que conté els script de bbdd | plans.xml |
 
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
@@ -626,6 +628,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift Cpd4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
 
 - [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
+
+- [Construcció aplicació bbdd/Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_bbdd_maven_onpremise.yml)
 
 - [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 
