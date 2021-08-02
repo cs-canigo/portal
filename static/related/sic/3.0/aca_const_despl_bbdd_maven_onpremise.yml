@@ -1,7 +1,7 @@
 version: 2.0.0
 info:
   version: 1.0.0
-  description: "Despl. modalitat semi-automàtica"
+  description: "Despl. modalitat semi-automatica"
 global-env:
   - PLANS_PATH: 'sql_scripts'
   - PLANS_NAME: 'plans.xml'
