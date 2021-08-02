@@ -441,7 +441,7 @@ components:
 
 Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
-```
+``` 
 components:
   - deployment:
       environments:
@@ -499,6 +499,16 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |CF_NAME|Nom al CloudFoundry|
 |CF_COMMAND|Comanda a executar al CloudFoundry|
 |CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per '|'. Consultar a Suport Cloud|
+
+
+###### Per al **desplegament On Premise**
+
+|Variable|Requerit|Descripció|Exemple|
+|--------|--------|----------|-------|
+| ARTIFACT_PATH |  si | artifacts paths extret al fitxer aca. Utilitzeu el separador "," | tmpBBDD,target |
+| ARTIFACT_NAME |  si | artifacts names extret al fitxer aca. Utilitzeu el separador "," | bbdd_PRO.zip,test-app.ear |
+| ARTIFACT_TYPE |  només al desplegament delegat | artifacts type extret al fitxer aca. Utilitzeu el separador "," | bbdd,dynamic |
+| INFRASTRUCTURE_ID | només al desplegament delegat | identificador d’infraestructura extret al fitxer aca. Utilitzeu el separador "," |  |
 
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
