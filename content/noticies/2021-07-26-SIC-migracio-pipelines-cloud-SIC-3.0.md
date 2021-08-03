@@ -1,14 +1,14 @@
 +++
 date        = "2021-07-26"
 title       = "SIC. Migració pipelines cloud al SIC 3.0"
-description = "El mes de juliol s'ha avançat favorablement en la migració de pipelines que despleguen al cloud cap a la nova Plataforma SIC 3.0."
+description = "Durant el mes de juliol s'ha realitzat la migració del 85% de pipelines cloud a SIC 3.0 i es donarà per finalitzada el mes de setembre. Recordeu revisar la documentació publicada per a tenir present els canvis en la nova plataforma."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "AGOST2021"
 +++
 
 El juny del 2021 es va iniciar el procés de migració de totes les pipelines que despleguen al cloud cap a la
-nova Plataforma SIC 3.0 i ja **s’ha finalitzat la migració del 85% de les aplicacions**.
+nova Plataforma SIC 3.0 i durant el mes de juliol **s’ha finalitzat la migració del 85% de les aplicacions**.
 El setembre està previst migrar les aplicacions restants, que han estat ajornades per necessitats de negoci, període de vacances
 i/o aspectes fora de norma.
 
