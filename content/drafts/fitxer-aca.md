@@ -507,8 +507,8 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |--------|--------|----------|-------|
 |ARTIFACT_PATH|Sí|Rutes dels artefactes a desplegar separats per ","|tmpBBDD,target|
 |ARTIFACT_NAME|Sí|Noms dels artefactes a desplegar separats per ","|bbdd_PRO.zip,app-dynamic.ear|
-|ARTIFACT_TYPE|Únicament per al **desplegament delegat**|Tipus dels artefactes a desplegar separats per ",". Possibles valors: **bbdd**, **dynamic** o **static**|bbdd,dynamic|
-|INFRASTRUCTURE_ID|Únicament per al **desplegament delegat**|Identificadors d’infraestructura proporcionats per Cpd separats per ","|id_cpdx_bbdd,id_cpdx_dynamic|
+|ARTIFACT_TYPE|Únicament per al **desplegament delegat**|Tipus dels artefactes a desplegar separats per ",". Possibles valors: **ddbb**, **dynamic** o **static**|ddbb,dynamic|
+|INFRASTRUCTURE_ID|Únicament per al **desplegament delegat**|Identificadors d’infraestructura proporcionats per Cpd separats per ","|id_cpdx_ddbb,id_cpdx_dynamic|
 |PLANS_PATH|Únicament per al **desplegament d'scripts de Base de dades**|Ruta del fitxer de plans d'execució d'scripts de Base de Dades|sql_scripts|
 |PLANS_NAME|Únicament per al **desplegament d'scripts de Base de dades**|Nom del fitxer de plans d'execució d'scripts de Base de Dades|plans.xml|
 

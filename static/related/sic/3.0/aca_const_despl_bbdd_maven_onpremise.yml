@@ -35,8 +35,8 @@ components:
                     env:
                       - ARTIFACT_PATH: 'tmpBBDD,target'
                       - ARTIFACT_NAME: 'bbdd_INT.zip,app-dynamic.ear'
-                      - ARTIFACT_TYPE: 'bbdd,dynamic'
-                      - INFRASTRUCTURE_ID: 'id_cpdx_bbdd,id_cpdx_dynamic'
+                      - ARTIFACT_TYPE: 'ddbb,dynamic'
+                      - INFRASTRUCTURE_ID: 'id_cpdx_ddbb,id_cpdx_dynamic'
         - name: preproduction
           deployment-type: semiautomatic
           actions:
@@ -46,7 +46,7 @@ components:
                     env:
                       - ARTIFACT_PATH: 'tmpBBDD,target'
                       - ARTIFACT_NAME: 'bbdd_PRE.zip,app-dynamic.ear'
-                      - ARTIFACT_TYPE: 'bbdd,dynamic'  
+                      - ARTIFACT_TYPE: 'ddbb,dynamic'
         - name: production
           deployment-type: semiautomatic
           actions:
@@ -56,7 +56,7 @@ components:
                     env:
                       - ARTIFACT_PATH: 'tmpBBDD,gdo-applicationEAR/target'
                       - ARTIFACT_NAME: 'bbdd_PRO.zip,GDOEAR-dynamic.ear'
-                      - ARTIFACT_TYPE: 'bbdd,dynamic'  
+                      - ARTIFACT_TYPE: 'ddbb,dynamic'
 notifications:
   email:
     recipients:
