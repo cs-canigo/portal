@@ -5,7 +5,6 @@ info:
 global-env:
   - PLANS_PATH: 'sql_scripts'
   - PLANS_NAME: 'plans.xml'
-  - PUBLISH_PARAMS: '-f pom.xml --batch-mode -Dmaven.test.skip=true'
 components:
   - build:
       steps:
@@ -28,7 +27,7 @@ components:
               - mvn package --batch-mode 
       environments:
         - name: integration
-          deployment-type: semiautomatic
+          deployment-type: delegated
           actions:
             deploy:
               steps:
@@ -36,7 +35,8 @@ components:
                     env:
                       - ARTIFACT_PATH: 'tmpBBDD,target'
                       - ARTIFACT_NAME: 'bbdd_INT.zip,app-dynamic.ear'
-                      - ARTIFACT_TYPE: 'bbdd,dynamic'                   
+                      - ARTIFACT_TYPE: 'bbdd,dynamic'
+                      - INFRASTRUCTURE_ID: 'id_cpdx_bbdd,id_cpdx_dynamic'
         - name: preproduction
           deployment-type: semiautomatic
           actions:

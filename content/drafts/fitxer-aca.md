@@ -498,20 +498,19 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |-------|-------|
 |CF_NAME|Nom al CloudFoundry|
 |CF_COMMAND|Comanda a executar al CloudFoundry|
-|CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per '|'. Consultar a Suport Cloud|
+|CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per "|". Consultar a Suport Cloud|
 
 
 ###### Per al **desplegament On Premise**
 
 |Variable|Requerit|Descripció|Exemple|
 |--------|--------|----------|-------|
-| ARTIFACT_PATH |  si | rutes d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | tmpBBDD,target |
-| ARTIFACT_NAME |  si | noms d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | bbdd_PRO.zip,test-app.ear |
-| ARTIFACT_TYPE |  només al desplegament delegat | tipus d’artefactes extrets al fitxer aca. Utilitzeu el separador "," | bbdd,dynamic |
-| INFRASTRUCTURE_ID | només al desplegament delegat extrets al fitxer aca | identificador d’infraestructura extret al fitxer aca. Utilitzeu el separador "," |  |
-| PLANS_PATH | només al desplegament de bbdd extret al fitxer aca | ruta del fitxer que conté els script de bbdd | sql_scripts |
-| PLANS_NAME | només al desplegament de bbdd extret al fitxer aca | nom del fitxer que conté els script de bbdd | plans.xml |
-
+|ARTIFACT_PATH|Sí|Rutes dels artefactes a desplegar separats per ","|tmpBBDD,target|
+|ARTIFACT_NAME|Sí|Noms dels artefactes a desplegar separats per ","|bbdd_PRO.zip,app-dynamic.ear|
+|ARTIFACT_TYPE|Únicament per al **desplegament delegat**|Tipus dels artefactes a desplegar separats per ",". Possibles valors: **bbdd**, **dynamic** o **static**|bbdd,dynamic|
+|INFRASTRUCTURE_ID|Únicament per al **desplegament delegat**|Identificadors d’infraestructura proporcionats per Cpd separats per ","|id_cpdx_bbdd,id_cpdx_dynamic|
+|PLANS_PATH|Únicament per al **desplegament d'scripts de Base de dades**|Ruta del fitxer de plans d'execució d'scripts de Base de Dades|sql_scripts|
+|PLANS_NAME|Únicament per al **desplegament d'scripts de Base de dades**|Nom del fitxer de plans d'execució d'scripts de Base de Dades|plans.xml|
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
 
