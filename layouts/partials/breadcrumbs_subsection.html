@@ -430,3 +430,62 @@
     {{ end }}
 
 {{ end }}
+
+<!-- GICAR - integració home 2021 -->
+{{ if or (eq $title "gicar-novesintegracionss") (eq $section "gicar-novesintegracions") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-novesintegracions/">
+	{{ end }}
+
+	Modalitats d'integració possibles a nivell funcional i tècnic
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- GICAR - possibilitats tecniques autenticacio 2021 -->
+{{ if or (eq $title "gicar-novesintegracions-tecniques-autenticacios") (eq $section "gicar-novesintegracions-tecniques-autenticacio") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+		<a href="/gicar-novesintegracions/">Modalitats d'integració possibles</a>
+	</li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-novesintegracions-tecniques-autenticacio/">
+	{{ end }}
+
+	Possibilitats tècniques d'integració
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
+
+<!-- GICAR - guia integració funcionalitats autenticacio 2021 -->
+{{ if or (eq $title "gicar-novesintegracions-funcionalitats-autenticacios") (eq $section "gicar-novesintegracions-funcionalitats-autenticacio") }}
+	<a href="/gicar/">GICAR</a> </li>
+
+	<li>
+		<a href="/gicar-novesintegracions/">Modalitats d'integració possibles</a>
+	</li>
+
+	<li>
+	{{ if gt (len $section) 0 }}
+		<a href="/gicar-novesintegracions-funcionalitats-autenticacio/">
+	{{ end }}
+
+	Possibilitats funcionals d'integració amb GICAR
+
+	{{ if gt (len $section) 0 }}
+		</a>
+	{{ end }}
+
+{{ end }}
