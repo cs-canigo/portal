@@ -43,7 +43,7 @@ weight     = 4
 Podeu consultar el llistat complet de dependències externes de Spring Boot 2.1.x a:
 https://docs.spring.io/spring-boot/docs/2.1.x/reference/htmlsingle/#appendix-dependency-versions.
 
-S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors embeguts:
+S'ha certificat la compatibilitat de Canigó 3.4.6 amb els següents servidors embeguts:
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
@@ -53,7 +53,7 @@ S'ha certificat la compatibilitat de Canigó 3.4.0 amb els següents servidors e
 |  Netty (webflux)                         |         4.1.33.Final               |
 |  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE              |
 
-S'ha certificat la versió de Canigó 3.4.0 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
+S'ha certificat la versió de Canigó 3.4.6 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
