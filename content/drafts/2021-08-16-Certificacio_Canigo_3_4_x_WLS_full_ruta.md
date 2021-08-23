@@ -10,7 +10,7 @@ key         = "SEPTEMBRE2021"
 
 ## Introducció
 
-Com a part del procés de certificació de Canigó 3.4.x sobre els servidors del full de ruta del CTTI, s'ha certificat el correcte funcionament de Canigó 3.4.x sobre Weblogic Server 14.1.x
+Com a part del procés de certificació de Canigó 3.4.x sobre els servidors del full de ruta del CTTI, s'ha certificat el correcte funcionament de Canigó 3.4.6 sobre Weblogic Server 14.1.x
 
 Els servidors d'aplicacions suportats actualment en el [full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/)
  són:
