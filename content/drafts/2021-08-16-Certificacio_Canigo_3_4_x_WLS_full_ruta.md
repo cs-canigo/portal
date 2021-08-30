@@ -26,7 +26,7 @@ Els servidors d'aplicacions suportats actualment en el [full de ruta de programa
 Dins el procés de certificació de Canigó 3.4.x sobre els servidors del full de ruta de programari del CTTI,
 **s'ha certificat el correcte funcionament de Canigó 3.4.6 sobre Weblogic Server 14.1.x**.
 Per a la certificació s'ha utilitzat concretament la versió _14.1.1.0_ de Weblogic Server i no ha estat
-requerida cap modificació, a banda de modificar les propietats de la _jvm_ que inicien el servidor d'aplicacions
+requerida cap adaptació, a banda de modificar les propietats de la _jvm_ que inicien el servidor d'aplicacions
 com es mostra a continuació:
 
 ```sh
