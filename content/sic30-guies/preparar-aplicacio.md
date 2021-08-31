@@ -113,7 +113,7 @@ El projecte ha de contenir tot el codi de l'aplicació i el sistema de custòdia
 el criteri és que cada objecte de base de dades ha de tenir el seu propi fitxer associat, especialment si sempre s'executa la mateixa instrucció (create or replace, drop + create...).
 
 ## Funcionament de les pipelines de construcció i desplegament
-En realitzar una pujada de codi sobre la branca MASTER, si el projecte té una pipeline associada, automàticament s'executarà la corresponent pipeline de desplegament:
+En realitzar una pujada de codi font, caldrà executar la corresponent pipeline de desplegament associada:
 
 * Les pipelines realitzen multitud de tasques encadenades mitjançant **STAGES**. En cas de produir-se alguna incidència, l'execució
 es cancel·larà i notificarà del que ha passat.
