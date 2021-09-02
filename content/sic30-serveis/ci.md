@@ -131,7 +131,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Build Tag**: generació del tag de Build al repositori de codi segons es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
 
-* **Static Code Analysis**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
+* **Static Code Analysis**: etapa prevista per a l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
 * **Security Test**: etapa prevista per a l'execució de tests de seguretat.
 

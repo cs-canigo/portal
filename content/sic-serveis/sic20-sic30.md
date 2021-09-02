@@ -81,7 +81,7 @@ de fer una correcta configuració, incloent-hi l'assignació adequat de recursos
 l'arquitectura que hi ha al darrere és completament diferent, per la qual cosa no són comparables les tasques que es realitzen ni els
 temps que s'hi destinen.
 
-* Les pipelines no s'executen automàticament en fer un commit al repositori de codi font. Cal, per tant, que l'usuari executi la pipeline de
+* Les pipelines **no s'executen automàticament en fer un commit al repositori** de codi font. Cal, per tant, que l'usuari executi la pipeline de
 desplegament mitjançant l'opció *Build with Parameters*.
 
 * Les pipelines passen a **executar-se en contenidors** en lloc d'en una màquina virtual, per la qual cosa cal fer una correcta assignació
@@ -93,6 +93,9 @@ cosa que implica que el temps destinat per les diferents etapes es vegi incremen
 * El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
 obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
 l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homòloga `info.version`.
+
+* La pipeline de desplegament **no realitza l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat** ni comprova
+les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
 * La **pipeline DEPLOY-TAG** permetrà desplegar tags de la imatge de l'aplicació que hagin arribat a Producció amb èxit. Per tant, si no hi ha tags `v.x.y.z-PR` l'execució
 retornarà un error del tipus "No hi ha tags de producció disponibles".
