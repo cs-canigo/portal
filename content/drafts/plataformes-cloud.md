@@ -9,7 +9,7 @@ categories  = ["cloud","caas","xpaas","dbaas","iaas"]
 
 Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per CPD, són les seguents:
 
-![Plataformes cloud per CPD ](/related/cloud/catalegCloud_cpd.png)
+![Plataformes cloud per CPD ](/related/cloud/catalegCloud_cpd_new.png)
 
 <br/><br/>
 Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per tipologia, són les seguents:
