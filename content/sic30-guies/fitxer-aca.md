@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2021-09-09"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -441,7 +441,7 @@ components:
 
 Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
-```
+``` 
 components:
   - deployment:
       environments:
@@ -498,7 +498,7 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |-------|-------|
 |CF_NAME|Nom al CloudFoundry|
 |CF_COMMAND|Comanda a executar al CloudFoundry|
-|CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per '|'. Consultar a Suport Cloud|
+|CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per "|". Consultar a Suport Cloud|
 
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
@@ -605,7 +605,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 
-- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4](/related/sic/3.0/aca_const_despl_node_openshift_cpd4.yml)
+- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 o Cpd2](/drafts/aca_const_despl_node_openshift_cpd4_cpd2.yml)
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
 
