@@ -616,7 +616,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 
-- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 o Cpd2](/drafts/aca_const_despl_node_openshift_cpd4_cpd2.yml)
+- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 o Cpd2](/related/sic/3.0/aca_const_despl_node_openshift_cpd4_cpd2.yml)
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
 
