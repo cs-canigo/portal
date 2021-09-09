@@ -92,7 +92,11 @@ A partir del **24/01/2019 aquest control serà restrictiu**.
 <br/><br/>
 
 #### **He anat a recuperar binaris pujats i veig que ja no hi son. Què ha passat?** ####
-S'executa un procés diari d'esborrat de binaris respectant només les 5 últimes versions per codi d'aplicació i projecte. No s'ha de concebre com un servei de custòdia de binaris "in eternum" si no com un servei d'intercanvi de binaris amb CPD/LdT.
+S’executa un procés d'esborrat de binaris de manera que **únicament es respectaran les últimes 5 versions**
+repositades per codi d'aplicació i projecte; i, pel que fa a versions anteriors, es respectaran si aquestes han estat
+pujades durant els últims 6 mesos (180 dies).
+El Servei de Binaris no està concebut, per tant, com un servei de custòdia permanent sinó com un sistema d'intercanvi
+d'artefactes per al desplegament d'aplicacions.
 <br/><br/>
 
 <br/>
