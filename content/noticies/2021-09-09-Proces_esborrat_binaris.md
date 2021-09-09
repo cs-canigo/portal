@@ -1,7 +1,7 @@
 +++
 date        = "2021-04-08"
 title       = "SIC. Procés d'esborrat de binaris"
-description = "A partir del 12/09/2021 es restringeix el criteri d'antiguitat en la conservació d'artefactes repositats al servei de binaris"
+description = "A partir del 12/09/2021 es restringeix el criteri d'antiguitat en la conservació d'artefactes repositats al servei de binaris."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "SETEMBRE2021"
