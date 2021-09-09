@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-11"
+date        = "2021-09-09"
 title       = "Plataformes Cloud"
 description = "Plataformes cloud disponibles a la Generalitat de catalunya"
 sections    = "Cloud"
@@ -21,26 +21,14 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 
 ### CaaS
 
-##### AppAgile
-
-**Actualment aquesta plataforma està deprecada i està en procés de migració a Openshift 4. No es desplegarà cap aplicació nova.**
-
-- http://appagile.io/
-- Basat en Openshift: https://www.openshift.com/
-- Contenidors docker i orquestració amb Openshift
-- Versió:  **OpenShift Container Platform 3.9.65 i Kubernetes 1.14.1.** 
-  
-Disponible a CPD4 en entorns de consolidables.
-<br/><br/>
-
 ##### Openshift 4
 
 - Openshift: https://www.openshift.com/
 - Contenidors docker i orquestració amb Openshift
-- Versió:  **OpenShift Container Platform 4.3 i Kubernetes 1.16.** 
+- Versió:  **OpenShift Container Platform 4.6 i Kubernetes 1.19.** 
 - Disposa de Service Mesh. **Apte per desplegar aplicacions basades en microserveis.** 
 
-Disponible a CPD3 i CPD4 en entorns de consolidables.
+Disponible a CPD2, CPD3 i CPD4 en entorns de consolidables.
 
 Disponible a CPD4 en entorns de critics.
 <br/><br/>
@@ -58,23 +46,12 @@ Disponible a CPD1 en entorns de consolidables.
 
 - Basat en Kubernetes: https://kubernetes.io/
 - Contenidors docker i orquestració amb Kubernetes
-- Versió: **Kubernetes 1.14.8. Docker 18.9**
+- Versió: **Kubernetes 1.18.10. Docker 18.9**
 
 Disponible a CPD2 en entorns de consolidables.
 <br/><br/>
 
 ### DBaaS
-
-##### AppAgile
-
-**Actualment aquesta plataforma està deprecada i està en procés de migració a Openshift 4. No es desplegarà cap aplicació nova.**
-
-- http://appagile.io/
-- Basat en Openshift: https://www.openshift.com/
-- S'ofereixen les Bases de dades administrades PostgreSQL i MySQL.
-
-Disponible a CPD4 en entorns de consolidables.
-<br/><br/>
 
 ##### Openshift 4
 
@@ -84,6 +61,10 @@ Disponible a CPD4 en entorns de consolidables.
 Disponible a CPD4 en entorns de consolidables.
 
 Disponible a CPD4 en entorns de critics.
+
+- S'ofereixen les bases de dades administrades PostgreSQL, MongoDB i Redis.
+
+Disponible a CPD2 en entorns de consolidables.
 <br/><br/>
 
 ##### KaaS
@@ -114,7 +95,7 @@ Disponible a CPD2 en entorns de consolidables.
 Contenidors docker desplegats sobre la plataforma Kubernetes
 
 - https://www.ibm.com/cloud-computing/bluemix/es/containers
-- Versió: **Kubernetes 1.16.10 Containerd 1.3.4**
+- Versió: **Kubernetes 1.19.14 Containerd 1.3.3**
 <br/><br/>
 
 ### DBaaS
