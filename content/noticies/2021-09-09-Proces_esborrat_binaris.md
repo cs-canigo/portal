@@ -1,7 +1,7 @@
 +++
 date        = "2021-04-08"
 title       = "SIC. Procés d'esborrat de binaris"
-description = "A partir del 12/09/2021 es restringeix el criteri d'antiguitat en la conservació d'artefactes repositats al servei de binaris."
+description = "A partir del 19/09/2021 es restringeix el criteri d'antiguitat en la conservació d'artefactes repositats al servei de binaris."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "SETEMBRE2021"
@@ -9,7 +9,7 @@ key         = "SETEMBRE2021"
 
 El **Servei de Binaris del SIC** és un servei a disposició dels proveïdors de lots d'aplicacions i CPD per al lliurament i
 descàrrega d'artefactes de cara al desplegament d'aplicacions.
-Amb l'objectiu de controlar i limitar l'ús de l'espai, a partir del 12/09/2021 es restringeix el criteri
+Amb l'objectiu de controlar i limitar l'ús de l'espai, a partir del 19/09/2021 es restringeix el criteri
 d'antiguitat en la conservació d'artefactes repositats de manera que **únicament es respectaran les últimes 5 versions**
 repositades per codi d'aplicació i projecte; i, **pel que fa a versions anteriors, es respectaran si aquestes han estat pujades
 durant els últims 6 mesos (180 dies)**.
