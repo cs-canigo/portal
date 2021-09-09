@@ -2,9 +2,9 @@
 date        = "2021-08-16"
 title       = "Canigó. Certificació versió 3.4.x amb WLS 14.1.x"
 description = "Des de CS Canigó s'ha certificat el correcte funcionament d'una aplicació Canigó v.3.4.x amb el servidor Weblogic v.14.1.x indicada al full de ruta de programari actual del CTTI."
-#sections    = ["Notícies", "home"]
-#categories  = ["canigo"]
-#key         = "SETEMBRE2021"
+sections    = ["Notícies", "home"]
+categories  = ["canigo"]
+key         = "SETEMBRE2021"
 +++
 
 
