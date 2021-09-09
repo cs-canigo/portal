@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2021-07-13"
 title = "Catàleg d'imatges builder"
 description = "El catàleg d'imatges del SIC proporciona imatges Docker builder als proveïdors d'aplicacions."
 sections = "SIC"
@@ -16,7 +16,7 @@ Per defecte, Docker està configurat per a utilitzar el registre públic [Docker
 No obstant això, **les imatges que utilitzarà SIC per a la construcció es troben allotjades un registre docker privat**
 escollit per la Generalitat de Catalunya: [Harbor](https://goharbor.io/).
 
-![Pipeline del SIC](/related/sic/3.0/harbor_login.png)
+![Pipeline del SIC](/related/sic/3.0/harbor_login-20210713.png)
 </br>
 
 El registre Docker privat de la Generalitat de Catalunya, està disponible a: https://docker-registry.ctti.extranet.gencat.cat.
@@ -27,7 +27,7 @@ Es tracta d’un registre privat sense cap repositori d'accés públic.
 Podeu accedir al catàleg d'imatges per a la construcció d'aplicacions (`builder`) mitjançant el següent enllaç:
 https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories.
 
-![Pipeline del SIC](/related/sic/3.0/harbor_docker_images.png)
+![Pipeline del SIC](/related/sic/3.0/harbor_docker_images-20210713.png)
 </br>
 
 ## Permisos d'accés
@@ -41,12 +41,12 @@ amb permís de lectura al projecte **gencat-sic-builders** que conté les imatge
 Podeu accedir al codi font del catàleg d'imatges, i a la documentació associada, mitjançant el següent enllaç: </br>
 https://git.intranet.gencat.cat/0192-intern/sic-builders.
 
-![Pipeline del SIC](/related/sic/3.0/docker_images_project.png)
+![Pipeline del SIC](/related/sic/3.0/docker_images_project-20210713.png)
 </br>
 
 ## Ús del registre privat
 
-Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-05-06-SIC-Howto-utilitzar-imatges-docker-builder).
+Podeu consultar el següent article: [Utilitzar imatges Docker Builder](/howtos/2021-07-13-SIC-Howto-utilitzar-imatges-docker-builder).
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic30-guies/). <br/>

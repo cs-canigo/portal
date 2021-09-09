@@ -293,7 +293,14 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 ### Maven/JDK
 |Versió Maven|Versió JDK|
 |-------|-------|
-|3.6|8<br />11-openjdk|
+|2.2|7<br />8|
+|3.6|7<br />8<br />11-openjdk|
+
+### Ant/JDK
+|Versió Ant|Versió JDK|
+|-------|-------|
+|1.8|8|
+|1.10|8|
 
 ### Node/npm
 |Versió Node|Versió Npm|
@@ -310,13 +317,10 @@ tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend rec
 **bower**, **gulp** i **grunt**, s'han de definir com a dependències a l'aplicació (fitxer `package.json`) i instal·lar-los
 a la construcció de l'aplicació via **npm install**.
 
-<!---
 ### Hugo (Webs estàtiques)
 |Versió|
 |-------|
 |0.27|
-|0.73|
--->
 
 ## Matriu de desplegament en servidors (IAAS)
 
