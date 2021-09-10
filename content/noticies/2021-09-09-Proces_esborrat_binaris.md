@@ -1,5 +1,5 @@
 +++
-date        = "2021-04-08"
+date        = "2021-09-09"
 title       = "SIC. Procés d'esborrat de binaris"
 description = "A partir del 19/09/2021 es restringeix el criteri d'antiguitat en la conservació d'artefactes repositats al servei de binaris."
 sections    = ["Notícies", "home"]
