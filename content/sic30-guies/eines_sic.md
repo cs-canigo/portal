@@ -34,7 +34,7 @@ Les modalitats **Sense automatització** i **Sense integrar** són casos excepci
 * **Com accedir**: https://git.intranet.gencat.cat mitjançant usuari GICAR.
 * **Tipus de solució**: servei de control de versions.
 * **Com crear un compte**: introduir credencials d'accés GICAR, essent imperatiu disposar d'adreça de correu associada, i realitzar el procés d'alta del perfil.
-* **Qui pot accedir**: els Release Manager, responsables de lot, tècnics de CPD i els membres de l'equip de desenvolupament als que s'atorgui accés.
+* **Qui pot accedir**: els Release Manager, responsables de lot, responsables d'àmbit, tècnics de CPD i els membres de l'equip de desenvolupament als que s'atorgui accés.
 * **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s, ja sigui com a desenvolupador (Developer) o com a nou integrant del grup de Release Manager (Mantainer).
 * **Com organitzar els projectes**: els projectes s'ubiquen dins el grup del codi d'aplicació, creant tants projectes com conjunts de codi susceptibles de ser versionats de forma independent.
 * **Quan i com fer el lliurament d'una nova versió**: un cop validat als entorns de desenvolupament, es consolidarà, es realitzarà l'increment de versió i es pujarà al repositori. Si el projecte disposa d'una tasca de construcció i desplegament automàtic i l'actualització s'ha fet sobre la branca MASTER, es dispararà la tasca corresponent al Jenkins.
@@ -47,7 +47,7 @@ Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
 
 * **Com accedir**: https://icdc.sic.intranet.gencat.cat mitjançant usuari GICAR.
 * **Tipus de solució**: servei per a la integració contínua (construcció, anàlisi, desplegament, proves... etcètera).
-* **Qui pot accedir**: els Release Manager, responsables de lot i tècnics de CPD.
+* **Qui pot accedir**: els Release Manager, responsables de lot, responsables d'àmbit i tècnics de CPD.
 * **Com disposar d'accés**: sol·licitar al seu responsable que l'incorpori com a membre del/s projecte/s al servei de control de versions (Gitlab) com a nou integrant del grup de Release Manager (Mantainer). A l'endemà, l'usuari haurà passat a ser Release Manager disposant del corresponent accés al servei.
 * **Com fer el lliurament d'una nova versió**: l'actualització del codi de la branca MASTER dispararà la tasca de construcció i desplegament (job de tipus "pipeline").
 * **Quines passes componen el desplegament automàtic**: construcció, generació de tags i desplegament als diferents entorns. Es contempla l'execució de tests unitaris, tests d'integració i anàlisi de codi font que s'aniran afegint progressivament que no es podran desactivar pel desenvolupador a no ser que hi hagi una causa que ho justifiqui.
@@ -57,7 +57,7 @@ Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
 
 * **Com accedir**: https://hudson.intranet.gencat.cat/nexus/.
 * **Tipus de solució**: servei per a l'administració central de biblioteques.
-* **Qui pot accedir**: no requereix autenticació, tothom pot accedir en mode lectura.
+* **Qui pot accedir**: no requereix autenticació, tothom pot accedir en mode lectura als repositoris públics.
 * **Com publicar noves llibreries**: per a la publicació de noves llibreries no públiques (pròpies o de tercers) caldrà sol·licitar-ho a l'equip de SIC.
 
 <br/>
