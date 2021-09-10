@@ -224,7 +224,8 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 
 L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` és l'encarregat d'interpretar la informació de la resposta del servei de l'antivirus. Aquest objecte conté els mètodes:
 
-- `int getEstat()`: Número enter que representa l’ status de finalització del procés d’escaneig.
+- `int getEstat()`: Número enter que representa l’estat de finalització del procés d’escaneig.
+- 
 	o STATUS_OK = 0
 	
 	o STATUS_KO = -1
