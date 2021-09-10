@@ -8,23 +8,26 @@ categories    = ["cloud","docker","container","paas","kubernetes"]
 +++
 
 ## Introducció
+
 Kubernetes és un orquestrador desenvolupat inicialment per Google. Sembla que actualment és l'orquestrador que presenta més futur. Recentment ha rebut el suport oficial de Docker.
 
 En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes i es proporcionen diversos exemples.
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
 
-* IBM Bluemix al cloud públic. **Versió Kubernetes 1.19.8. Versió containerd 1.4.3**
+* IBMCloud al cloud públic. **Versió Kubernetes 1.19.8. Versió containerd 1.4.3**
 * IBM CaaS al cloud privat. **Versió Kubernetes 1.18.10. Versió docker 19.3.13**
 
-
 ## Imatges
+
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
 
 A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte.
 
 ## Arquitectura
+
 ### Conceptes bàsics
+
 L'arquitectura bàsica d'una aplicació a Openshift és bàsicament la mateixa que la de Kubernetes, però amb algunes petites particularitats.
 A grans trets es poden distingir els següents components:
 
@@ -52,6 +55,7 @@ A grans trets es poden distingir els següents components:
 * **Mapa de configuració:** Permet agrupar múltiples variables de configuració. Seria equivalent a un fitxer de propietats en una aplicació.
 
 ### Arquitectura Kubernetes
+
 A continuació es realitza la correlació entre els diferents components arquitectònics i els elements concrets a Kubernetes.
 
   Component genèric |  Component Kubernetes | Observacions  |
@@ -71,12 +75,16 @@ A continuació es realitza la correlació entre els diferents components arquite
 ![Components Kubernetes](/related/cloud/ArquitecturaKubernetes.png)
 
 ## Informació necessària al crear l'aplicació
+
 Quan és sol·licita la creació d'una aplicació a Kubernetes és necessària la següent informació:
 
 * **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als responsables de l'aplicació el nom d'aquests Volums.
 * **Memòria RAM** total necessària per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
+
 ## Exemples
+
 ### PersistentVolumeClaim
+
 En una aplicació el primer element que cal configurar és el PersistentVolumeClaim. Mapejarà PersistentVolume amb el volumes lògics que s'utilitzaran als pods.
 
 Configuració de l'exemple:
@@ -100,6 +108,7 @@ spec:
 ```
 
 ### Deployment
+
 El Deployment és el principal element de configuració de l'aplicació.
 
 Configuració de l'exemple:
@@ -113,9 +122,8 @@ Configuració de l'exemple:
 * Quotes: **100 milicores de CPU** i **1024Mb de RAM**
 * Nom de la imatge dels contenidors: **XXXX-app1-pre/XXXX-app1-server:1.0.0**
 * Variables d'entorn dels contenidors:
-
-    * **ENV1_NAME** amb valor **env1_value**
-    * **ENV2_NAME** amb valor **env2_value**
+  * **ENV1_NAME** amb valor **env1_value**
+  * **ENV2_NAME** amb valor **env2_value**
 * Port del contenidor: **8080**
 * **readinessProbe** per identificar quan es pot començar a enviar peticions al contenidor.
 * **livenessProbe** per identificar quan cal reiniciar el contenidor.
@@ -198,11 +206,13 @@ spec:
 ```
 
 ### Service
+
 A l'exemple es crea un servei per el DeploymentConfig creat anteriorment.
 
 Kubernetes suporta tant serveis amb protocol HTTP/HTTPS com  serveis amb altres tipus de protocols, com per exemple SSH, JDBC, ...
 
 #### Servei HTTP
+
 L'aplicació exposa un servei HTTP a través de la IP de l'Ingress.
 Configuració de l'exemple:
 
@@ -229,6 +239,7 @@ spec:
 ```
 
 #### Servei No HTTP
+
 L'aplicació exposa un servei no HTTP a través d'una IP pròpia.
 Configuració de l'exemple:
 
@@ -255,8 +266,8 @@ spec:
   loadBalancerIP: 169.45.10.144
 ```
 
-
 ### Ingress
+
 A l'exemple es crea una ruta pel servei creat anteriorment.
 
 Configuració de l'exemple:
@@ -279,7 +290,6 @@ spec:
           serviceName: XXXX-app1-server
           servicePort: 80
 ```
-
 
 ## Informació relacionada
 

@@ -122,7 +122,7 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 
 ##### Configuració
 
-- Loggar-se a Bluemix
+- Loggar-se a IBMCloud
 ```
         ibmcloud login -a https://cloud.ibm.com -r eu-gb
 ```
@@ -155,7 +155,6 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
         cluster_pre      390086041bd947d496e3be8f1ad25487   normal   4 years ago   4            London     1.19.14_1557
         cluster_pro      157e6387175449c1bdfff78eed37c4a6   normal   3 years ago   4            London     1.19.14_1557
         cluster_pro_eu   0f658877aaa94a54a1ed0b43759d0f1c   normal   3 years ago   1            ams03      1.19.14_1557
-   default
 ```
 
 - **Configurar cluster de PRE**

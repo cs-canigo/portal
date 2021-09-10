@@ -34,7 +34,7 @@ La versió a instal·lar de Kubernetes i  Docker en entorns de desenvolupament, 
 
 **Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
 ------------ | ------------ | ------------
-Bluemix - Kubernetes  |  1.19.8  | v1.18 o superior
+IBMCloud - Kubernetes  |  1.19.8  | v1.18 o superior
 
 ## IBM CaaS
 

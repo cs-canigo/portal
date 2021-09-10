@@ -94,7 +94,7 @@ Disponible a CPD2 en entorns de consolidables.
 Contenidors docker desplegats sobre la plataforma Kubernetes
 
 - https://www.ibm.com/cloud-computing/bluemix/es/containers
-- Versió: **Kubernetes 1.19.14 Containerd 1.3.3**
+- Versió: **Kubernetes 1.19.14 Containerd 1.4.3**
 <br/><br/>
 
 ### DBaaS

@@ -112,21 +112,20 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 
 - Instal·lar el plugin **kubernetes-service**
 ```
-        ibmcloud plugin install kubernetes-service -r Bluemix
+        ibmcloud plugin install kubernetes-service -r 'IBM Cloud'
 ```
-- Instal·lar el cli de kubernetes (kubectl) versió 1.16.10
+- Instal·lar el cli de kubernetes (kubectl), la darrera versió de la 1.19
 
     El podeu descarregar de:
 
-  - Windows: http://storage.googleapis.com/kubernetes-release/release/v1.16.10/bin/windows/amd64/kubectl.exe
-  - Linux: http://storage.googleapis.com/kubernetes-release/release/v1.16.10/bin/linux/amd64/kubectl
-
+  - Windows: https://storage.googleapis.com/kubernetes-release/release/v1.19.14/bin/windows/amd64/kubectl.exe
+  - Linux: https://storage.googleapis.com/kubernetes-release/release/v1.19.14/bin/linux/amd64/kubectl
 
 ##### Configuració
 
-- Loggar-se a Bluemix
+- Loggar-se a IBMCloud
 ```
-        ibmcloud login -a https://api.eu-gb.bluemix.net
+        ibmcloud login -a https://cloud.ibm.com -r eu-gb
 ```
 - Posar usuari i contrasenya
 - Escollir el compte
@@ -141,7 +140,7 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 
     respon
 
-        Using default API endpoint: https://uk-south.containers.bluemix.net
+        Using default API endpoint: https://containers.cloud.ibm.com
         OK
 ```
 
@@ -153,9 +152,11 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
     respon
 
         OK
-        Nombre        ID                                 Estado   Creado       Trabajadores   Ubicación   Versión         Nombre de grupo de recursos
-        cluster_pre   390086041bd947d496e3be8f1ad25487   normal   1 year ago   2              London      1.12.5_1537     default
-        cluster_pro   157e6387175449c1bdfff78eed37c4a6   normal   1 year ago   2              London      1.10.12_1543*   default
+        Nombre          ID                                 Estado   Creado       Trabajadores   Ubicación   Versión
+        cluster_pre      390086041bd947d496e3be8f1ad25487   normal   4 years ago   4            London     1.19.14_1557
+        cluster_pro      157e6387175449c1bdfff78eed37c4a6   normal   3 years ago   4            London     1.19.14_1557
+        cluster_pro_eu   0f658877aaa94a54a1ed0b43759d0f1c   normal   3 years ago   1            ams03      1.19.14_1557
+
 ```
 
 - **Configurar cluster de PRE**
@@ -224,12 +225,12 @@ En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud dispos
 
 ##### Instal·lació
 
-- Instal·lar el cli de kubernetes (kubectl) versió 1.14.8
+- Instal·lar el cli de kubernetes (kubectl) versió 1.18.19
 
     El podeu descarregar de:
 
-  - Windows: http://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/windows/amd64/kubectl.exe
-  - Linux: http://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/linux/amd64/kubectl
+  - Windows: http://storage.googleapis.com/kubernetes-release/release/v1.18.19/bin/windows/amd64/kubectl.exe
+  - Linux: http://storage.googleapis.com/kubernetes-release/release/v1.18.19/bin/linux/amd64/kubectl
 
 ##### Configuració del fitxer kubeconfig
 
