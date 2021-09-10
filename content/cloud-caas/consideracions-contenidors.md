@@ -4,7 +4,7 @@ title       = "Consideracions generals en contenidors"
 description = "Consideracions generals a tenir present en els contenidors"
 sections    = "Container Cloud"
 weight      = 8
-categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
 +++
 
 * Els contenidors són volatils. Es poden destruir i reconstruir en qualsevol moment.
@@ -12,7 +12,7 @@ categories  = ["cloud","docker","container","kubernetes","appagile","swarmme"]
 
   * tenir un volum persistent que no es destruirà amb el contenidor.
   * utilitzar el suport d'alguna base de dades.
-  
+
 * **No està permés l'accés via SSH a cap contenidor.**
 * Es requereix que el contenidor sigui autònom, no esta suportat cap tipus de manteniment manual.
 * S'intenta sempre afavorir l'escalat horitzontal respecte l'escal·lat vertical.

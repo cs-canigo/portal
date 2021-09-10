@@ -5,7 +5,7 @@ description = "En aquest article es descriu com utilitzar Tomcat amb sessió dis
 sections    = "Container Cloud"
 weight      = 14
 toc         = true
-categories  = ["cloud","container","kubernetes","appagile","tomcat"]
+categories  = ["cloud","container","kubernetes","openshift","tomcat"]
 +++
 
 Tomcat, a diferència d'altres servidors d'aplicacions com poden ser Weblogic o JBoss, no presenta de manera nativa una gestió eficient de sessions http entre diferents instàncies.
@@ -151,7 +151,7 @@ data:
     <?xml version="1.0" encoding="UTF-8"?>
     ...
     ...
- 
+
 ```
 
 Hazelcast Service
@@ -197,7 +197,7 @@ La versió de **Hazelcast 3.11.x és compatible amb java 6 i 7.**
 Per configurar Hazelcast a Kubernetes/Openshift cal definir al fitxer xml les següents propietats:
 
 - **group/name** : Defineix el nom del cluster de Hazelcast
-- **hazelcast/network/join** : En aquest apartat es defineixen els diferents protocols i serveis que defineixen els nodes del cluster. Pel cas de Kubernetes i Openshift, cal desactivar tots els protocols (**enabled="false"**) i deixar activat només el de **kubernetes (enabled="true")**. Addicionalment, a l'element kubernetes cal afegir el **\<service-dns\>** amb el nom de dsn del servei de kubernetes descrit anteriorment. 
+- **hazelcast/network/join** : En aquest apartat es defineixen els diferents protocols i serveis que defineixen els nodes del cluster. Pel cas de Kubernetes i Openshift, cal desactivar tots els protocols (**enabled="false"**) i deixar activat només el de **kubernetes (enabled="true")**. Addicionalment, a l'element kubernetes cal afegir el **\<service-dns\>** amb el nom de dsn del servei de kubernetes descrit anteriorment.
 
 El dns de servei de kubernetes es construeix seguint el patró **\<nom_servei\>.\<nom_namespace\>.svc.cluster.local**
 

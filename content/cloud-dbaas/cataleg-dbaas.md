@@ -41,11 +41,11 @@ A diferència de les bases de dades a contenidors, els DBaaS incorporen serveis 
 
 Actualment, els nostres xPaaS disponibles al cloud privat són:
 
-- AppAgile
+- Openshift
 
-### AppAgile
+### Openshift
 
-AppAgile ofereix Bases de Dades basades en contenidors administrades per CPD4.
+Openshift ofereix Bases de Dades basades en contenidors administrades per CPD4.
 
 Actualment s'ofereixen les següents Bases de dades:
 

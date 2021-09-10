@@ -1,18 +1,17 @@
 +++
-date          = "2020-06-12"
+date          = "2021-09-10"
 title         = "Contenidors Openshift"
 description   = "Consideracions i exemples respecte els contenidors a Openshift"
 sections      = "Container Cloud"
 weight        = 5
-categories    = ["cloud","docker","container","paas","openshift","appagile"]
+categories    = ["cloud","docker","container","paas","openshift"]
 +++
 
 ## Introducció
-Openshift és un orquestrador d'imatges docker basat en Kubernetes. 
+Openshift és un orquestrador d'imatges docker basat en Kubernetes.
 Actualment a la Generalitat de Catalunya existeixen diverses plataformes Opneshift:
 
-* **AppAgile** es basa concretament en la versió OpenShift Container Platform 3.9.65 i Kubernetes 1.9.1. Disponible a CPD4
-* **Openshift 4**. OpenShift Container Platform 4.3 i Kubernetes 1.16. Disponible a  CPD4. Disponible a CPD3 i CPD4
+* **Openshift 4**. OpenShift Container Platform 4.6 i Kubernetes 1.19. Disponible a CPD2, CPD3 i CPD4.
 
 Les plataformes **Openshift 4** permeten l'ús de **Service Mesh** sent aptes per desplegar aplicacions basades en Microserveis. Podeu trobar més informació a [Openshift Service Mesh](https://canigo.ctti.gencat.cat/cloud-caas/service_mesh/).
 
@@ -21,9 +20,10 @@ En aquest article es defineix l'arquitectura tipus d'una aplicació a Openshift 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte. 
+A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte.
 
 ## Arquitectura
+
 ### Conceptes bàsics
 L'arquitectura bàsica d'una aplicació a Openshift és bàsicament la mateixa que la de Kubernetes, però amb algunes petites particularitats.
 A grans trets es poden distingir els següents components:
@@ -75,7 +75,9 @@ Quan és sol·licita la creació d'una aplicació a Openshift és necessària la
 
 * **Unitats i mida de discos persistents** necessaris. Amb aquesta informació l'administrador de la plataforma crearà els PersistentVolume necessaris i farà arribar als responsables de l'aplicació el nom d'aquests Volums.
 * **Memòria RAM** total necessària per tots els contenidors de l'aplicació. Amb aquesta informació s'assignarà una CPU proporcional i es definiran les quotes globals de l'aplicació.
+
 ## Exemples
+
 ### PersistentVolumeClaim
 En una aplicació el primer element que cal configurar és el PersistentVolumeClaim. Mapejarà PersistentVolume amb el volumes lògics que s'utilitzaran als pods.
 
@@ -136,7 +138,7 @@ spec:
       intervalSeconds: 1
       timeoutSeconds: 600
       maxUnavailable: 25%
-      maxSurge: 25%    
+      maxSurge: 25%
     resources:
       limits:
           cpu: 0
@@ -157,7 +159,7 @@ spec:
         - name: ENV1_NAME
           value: env1_value
         - name: ENV2_NAME
-          value: env2_value            
+          value: env2_value
         ports:
         - containerPort: 8080
           protocol: TCP
@@ -178,15 +180,15 @@ spec:
           tcpSocket:
               port: 8080
           initialDelaySeconds: 15
-          timeoutSeconds: 1                                              
+          timeoutSeconds: 1
         volumeMounts:
             - name: XXXX-app1-server-volume
               mountPath: /data
-      terminationGracePeriodSeconds: 60                
+      terminationGracePeriodSeconds: 60
       volumes:
         - name: XXXX-app1-server-volume
           persistentVolumeClaim:
-            claimName: XXXX-app1-data01-claim           
+            claimName: XXXX-app1-data01-claim
   test: false
   triggers:
   - type: ConfigChange
@@ -254,10 +256,7 @@ spec:
     targetPort: 80-tcp
   wildcardPolicy: None
 ```
- 
 
 ## Informació relacionada
 
-* http://appagile.io/
-* https://docs.openshift.com/container-platform/3.9/welcome/index.html
-* https://docs.openshift.com/container-platform/4.3/welcome/index.html
+* https://docs.openshift.com/container-platform/4.6/welcome/index.html

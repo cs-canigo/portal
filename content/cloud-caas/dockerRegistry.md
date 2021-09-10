@@ -100,5 +100,6 @@ docker logout https://docker-registry.ctti.extranet.gencat.cat
 ```
 
 ## Integració amb SIC
+
 Totes les aplicacions basades en contenidors desplegades via SIC, estan integrades amb el Registre Docker privat.
-Cada imatge que es desplegui a les diferents plataformes docker (AppAgile, Kubernetes o SwarmMe), quedarà repositada al registre privat.
+Cada imatge que es desplegui a les diferents plataformes docker (Openshift, Kubernetes o SwarmMe), quedarà repositada al registre privat.

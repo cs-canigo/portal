@@ -1,20 +1,20 @@
 +++
-date        = "2020-06-12"
+date        = "2021-09-10"
 title       = "Monitoratge i traces als contenidors"
 description = "Informació per accedir  al monitoratge i traces a les diferents plataformes de contenidors."
 sections    = "Container Cloud"
 weight      = 13
 toc         = true
-categories  = ["cloud","docker","container","kubernetes","appagile","openshift","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
 +++
 
 Dins del marc de la metodologia DevOps, s'ofereixen a lot d'aplicacions un conjunt d'eines per a que monitorin i tinguin accés a les traces dels diferents contenidor.
 
 A continuació es descriuen les diferents eines a cadascuna de les plataformes disponibles.
 
-## Openshift/AppAgile
+## Openshift
 
-Al desplegar una aplicació a Openshift/AppAgile, es proporciona a lot d'aplicacions un usuari amb permisos de **lectura** del seu projecte a la plataforma Openshift/AppAgile.
+Al desplegar una aplicació a Openshift, es proporciona a lot d'aplicacions un usuari amb permisos de **lectura** del seu projecte a la plataforma Openshift.
 
 ### Monitoratge
 
@@ -27,24 +27,20 @@ Des de la consola web de les diferents plataformes es pot consultar de cada proj
 - Logs dels pods
 
 Podeu trobar més informació al respecte a:
- 
- - [OpenShift Container Platform 3.9 Documentation.](https://docs.openshift.com/container-platform/3.9/welcome/index.html)
- - [OpenShift Container Platform 4.3 Documentation.](https://docs.openshift.com/container-platform/4.3/welcome/index.html)
+
+ - [OpenShift Container Platform 4.6 Documentation.](https://docs.openshift.com/container-platform/4.3/welcome/index.html)
 
 Addicionalment a la consola, també podeu accedir a la informació i configuracions utilitzant el client **oc**.
 
 Podeu trobar més informació a:
 
- -  [Get Started with the CLI. OCP 3.9](https://docs.openshift.com/container-platform/3.9/cli_reference/get_started_cli.html)
- -  [Get Started with the CLI. OCP 4.3](https://docs.openshift.com/container-platform/4.3/cli_reference/openshift_cli/getting-started-cli.html)
-
+ -  [Get Started with the CLI. OCP 4.6](https://docs.openshift.com/container-platform/4.6/cli_reference/openshift_cli/getting-started-cli.html)
 
 Podeu descarregar el client oc a:
 
--  [oc client v3.9](https://github.com/openshift/origin/releases/tag/v3.9.0)
--  [oc client v4.3](https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.3/)
+-  [oc client v4.6](https://mirror.openshift.com/pub/openshift-v4/clients/oc/4.6/)
 
-En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació. 
+En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació.
 
 ### Logs
 
@@ -53,47 +49,42 @@ Des de la plataforma d'openshift es poden veure els logs dels pods en temps real
 
 ### Urls d'accés als diferent entorns
 
-Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud 
+Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud
 
-#### AppAgile CPD4
+#### Openshift Consolidables CPD2 PRE
 
-- **Consola web**: https://master.appagile.cpd4.intranet.gencat.cat:8443
-- **Kibana**: https://kibana.appagile.cpd4.intranet.gencat.cat/app/kibana
+- **Consola web**: https://console-openshift-console.apps.cer01-gct-007-k01.cpd2pre.intranet.gencat.cat/
+- **Kibana**: https://c-logging-kibana.apps.cer01-gct-007-k01.cpd2pre.intranet.gencat.cat/
 
-#### Openshift 4 Consolidables CPD4 PRE
+#### Openshift Consolidables CPD2 PRO
 
-- **Consola web**: https://console-openshift-console.apps.ocpconspre.cpd4pre.intranet.gencat.cat/
-- **Kibana**: https://kibana-openshift-logging.apps.ocpconspre.cpd4pre.intranet.gencat.cat/
+- **Consola web**: https://console-openshift-console.apps.cer01-gct-008-k01.cpd2.intranet.gencat.cat/
+- **Kibana**: https://c-logging-kibana.apps.cer01-gct-008-k01.cpd2.intranet.gencat.cat/
 
-#### Openshift 4 Consolidables CPD4 PRO
-
-- **Consola web**: https://console-openshift-console.apps.ocpcons.cpd4.intranet.gencat.cat/
-- **Kibana**: https://kibana-openshift-logging.apps.ocpcons.cpd4.intranet.gencat.cat/
-
-#### Openshift 4 Consolidables CPD3
+#### Openshift Consolidables CPD3
 
 - **Consola web**: https://console-openshift-console.apps.mdc-ops-ctti-cl.cpd3.intranet.gencat.cat/
 - **Kibana**: https://kibana-openshift-logging.apps.mdc-ops-ctti-cl.cpd3.intranet.gencat.cat/
 
-#### Openshift 4 Critics Salut CPD4 PRE
+#### Openshift Crítics/Consolidables CPD4 PRE
+
+- **Consola web**: https://console-openshift-console.apps.ocpconspre.cpd4pre.intranet.gencat.cat/
+- **Kibana**: https://kibana-openshift-logging.apps.ocpconspre.cpd4pre.intranet.gencat.cat/
+
+#### Openshift Crítics/Consolidables CPD4 PRO
+
+- **Consola web**: https://console-openshift-console.apps.ocpcons.cpd4.intranet.gencat.cat/
+- **Kibana**: https://kibana-openshift-logging.apps.ocpcons.cpd4.intranet.gencat.cat/
+
+#### Openshift Crítics Salut CPD4 PRE
 
 - **Consola web**: https://console-openshift-console.apps.ocpsalutpre.cpd4pre.intranet.gencat.cat/
 - **Kibana**: https://kibana-openshift-logging.apps.ocpsalutpre.cpd4pre.intranet.gencat.cat/
 
-#### Openshift 4 Critics Salut CPD4 PRO
+#### Openshift Crítics Salut CPD4 PRO
 
 - **Consola web**: https://console-openshift-console.apps.ocpsalut.cpd4.intranet.gencat.cat/
 - **Kibana**: https://kibana-openshift-logging.apps.ocpsalut.cpd4.intranet.gencat.cat/
-
-#### Openshift 4 Critics Transversal CPD4 PRE
-
-- **Consola web**: https://console-openshift-console.apps.ocpcritpre.cpd4pre.intranet.gencat.cat
-- **Kibana**: https://kibana-openshift-logging.apps.ocpcritpre.cpd4pre.intranet.gencat.cat
-
-#### Openshift 4 Critics Transversal CPD4 PRO
-
-- **Consola web**: https://console-openshift-console.apps.ocpcrit.cpd4.intranet.gencat.cat
-- **Kibana**: https://kibana-openshift-logging.apps.ocpcrit.cpd4.intranet.gencat.cat
 
 ## IBMCloud Kubernetes
 
@@ -109,7 +100,7 @@ Amb aquest usuari us podeu logar a la plataforma d'IBMCloud i accedir via cli i 
 - Mètriques dels pods
 - Logs dels pods
 
-En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació. 
+En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació.
 
 #### Instruccions
 
@@ -126,7 +117,7 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 - Instal·lar el cli de kubernetes (kubectl) versió 1.16.10
 
     El podeu descarregar de:
-  
+
   - Windows: http://storage.googleapis.com/kubernetes-release/release/v1.16.10/bin/windows/amd64/kubectl.exe
   - Linux: http://storage.googleapis.com/kubernetes-release/release/v1.16.10/bin/linux/amd64/kubectl
 
@@ -144,14 +135,14 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 ```
 
 - Inicialitzar el container service
-  
+
 ```
         ibmcloud ks init
-    
+
     respon
 
         Using default API endpoint: https://uk-south.containers.bluemix.net
-        OK        
+        OK
 ```
 
 - Mostrar el cluster
@@ -168,12 +159,12 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
 ```
 
 - **Configurar cluster de PRE**
-  
+
 ```
     ibmcloud ks cluster config --cluster cluster_pre
-```    
+```
 
-    respon alguna cosa similar a 
+    respon alguna cosa similar a
 
 ```
 OK
@@ -184,12 +175,12 @@ You can now execute 'kubectl' commands against your cluster. For example, run 'k
 ```
 
 - **Configurar cluster de PRO**
-  
+
 ```
     ibmcloud ks cluster config --cluster cluster_pro
 ```
 
-respon alguna cosa similar a 
+respon alguna cosa similar a
 
 ```
 OK
@@ -227,7 +218,7 @@ Amb aquest token podeu accedir via kubectl a la següent informació:
 - Mètriques dels pods
 - Logs dels pods
 
-En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació. 
+En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud disposa d'unes plantilles de **Prometheus i Grafana** que és poden solicitar desplegar junt amb l'aplicació. Previament cal haver-les inclós al DA junt amb la resta de components de l'aplicació.
 
 #### Instruccions
 
@@ -236,13 +227,13 @@ En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud dispos
 - Instal·lar el cli de kubernetes (kubectl) versió 1.14.8
 
     El podeu descarregar de:
-  
+
   - Windows: http://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/windows/amd64/kubectl.exe
   - Linux: http://storage.googleapis.com/kubernetes-release/release/v1.14.8/bin/linux/amd64/kubectl
 
 ##### Configuració del fitxer kubeconfig
 
-Al fitxer kubeconfig, cal configurar els següents elements:- 
+Al fitxer kubeconfig, cal configurar els següents elements:-
 
 - cluster
 - user
@@ -299,7 +290,7 @@ on:
 
 A cada sessió que necessiteu accedir al cluster de kubernetes amb kubectl , caldrà que configureu la variable d'entorn **KUBECONFIG** apuntant al fitxer de configuració que heu creat al pas anterior.
 
-a windows seria alguna cosa similar a 
+a windows seria alguna cosa similar a
 
     SET KUBECONFIG=<path_a_fitxer_configuracio>
 

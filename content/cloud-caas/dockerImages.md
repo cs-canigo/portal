@@ -12,7 +12,7 @@ categories    = ["cloud","docker","container","paas","openshift"]
 A l'hora de crear les imatges dels diferents contenidors docker per les aplicacions gencat cal establir un conjunt de criteris que garanteixin la seva estabilitat i seguretat.
 
 ## Imatges homologades pel CTTI
-L'equip de Suport Cloud del CTTI manté un conjunt d'imatges docker de les tecnologies més utilitzades a la Generalitat de Catalunya. Aquestes imatges són compatibles amb totes les plataformes basades en contenidors disponibles a la Generalitat (AppAgile,Openshift ,Kubernetes).
+L'equip de Suport Cloud del CTTI manté un conjunt d'imatges docker de les tecnologies més utilitzades a la Generalitat de Catalunya. Aquestes imatges són compatibles amb totes les plataformes basades en contenidors disponibles a la Generalitat (Openshift i Kubernetes).
 
 Aquestes imatges docker es poden trobar al **registre docker privat**, al projecte **gencatcloud**.
 
@@ -67,10 +67,10 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 	* Cal que les carpetes on el procés escriu dades, pertanyin al grup root. Es pot veure a l'script **docker-setup.sh** inclòs abaix.
 	* Algunes aplicacions necessiten que l'usuari estigui definit al fitxer **/etc/passwd**. En aquest cas existeixen dues opcions:
       * Utilitzar el paquet **[nss_wrapper](https://cwrap.org/nss_wrapper.html)** per emular els canvis en aquest fitxer.
-  Es necessari heretar de la imatge [alpine-nss](https://git.intranet.gencat.cat/3048-intern/imatges-docker/alpine-nss). Important llegir el README.md amb les instruccions de com utilitzar-la. 
-  
+  Es necessari heretar de la imatge [alpine-nss](https://git.intranet.gencat.cat/3048-intern/imatges-docker/alpine-nss). Important llegir el README.md amb les instruccions de com utilitzar-la.
+
         Es pot veure un exemple d'ús a la imatge docker [postgres](https://git.intranet.gencat.cat/3048-intern/imatges-docker/postgres). Fixeu-vos sobretot en l'ús del ENTRYPOINT.
-    
+
       * Utilitar la funcionalitat que ofereix [cri.o](https://cri-o.io/), motor de contenidors d'Openshift 4, que afegeix automàticament l'usuari amb que arrenca el contenidor al fitxer de **/etc/password**
 
         Veure la plana web [Openshift. Creating Images. Guidelines. OpenShift Origin-Specific Guidelines. Support Arbitrary User IDs](https://docs.openshift.com/container-platform/4.3/openshift_images/create-images.html) per més detalls.
@@ -83,7 +83,7 @@ Abans de desplegar un contenidor a producció, es realitzarà una validació de 
 ## Exemples
 Podeu trobar exemples de diferents imatges de docker seguint aquests criteris al [registre docker privat](https://docker-registry.ctti.extranet.gencat.cat) projecte **gencatcloud**. Podeu trobar els Dockerfiles de les imatges a [git imatges docker](https://git.intranet.gencat.cat/3048-intern/imatges-docker/).
 
-Quan trobeu que per una tecnologia existeix la versió normal i la versió amb 
+Quan trobeu que per una tecnologia existeix la versió normal i la versió amb
 amb sufix **-openshift**, les imatges amb versió normal son compatibles amb docker(local) i Swarme i les imatges amb amb sufix **-openshift** són compatibles amb Kubernetes i Openshift.
 
 ## Annexos

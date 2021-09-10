@@ -13,7 +13,7 @@ Aquests recursos són oferts pels orquestradors.
 Al mercar existeixen diferents eines per orquestrar els contenidors docker.
 La Generalitat de Catalunya dóna suport als següents orquestradors:
 
-* Openshift/AppAgile (basat en Openshift)
+* Openshift
 * Kubernetes
 * SwarmMe (basat en Swarm)
 
@@ -31,7 +31,7 @@ Per repositar les imatges privades fruit dels diferents desenvolupaments de proj
 
 ### Seguretat
 Els contenidors docker s'executen sobre el Docker Engine. Tot i que els contenidors són bastant segurs i cap a fora de la màquina on s'executen només exposen els ports que es defineixen al Dockerfile, si tenim diverses aplicacions, cadascuna amb diversos contenidors cal afegir una capa de seguretat entre elles.
-Addicionalment cal establir una capa de seguretat a la gestió de les diferents aplicacions de manera que cada aplicació pugui ser administrada per un tenant sense que altres tenants puguin accedir a ella. 
+Addicionalment cal establir una capa de seguretat a la gestió de les diferents aplicacions de manera que cada aplicació pugui ser administrada per un tenant sense que altres tenants puguin accedir a ella.
 
 ### Alta disponibilitat i escalat
 Els contenidors docker en si, no ofereixen alta disponibilitat. No està inclòs al concepte de contenidor. La idea per alta disponibilitat és realitzar escalat horitzontal de 2 o més contenidors idèntics.
@@ -41,7 +41,7 @@ Els contenidors docker en si, no ofereixen alta disponibilitat. No està inclòs
 Quan es disposen de més d'un contenidor d'un tipus, és necessari disposar d'un element que faci balanceig entre els diversos contenidors.
 
 ### Serveis
-Els contenidors de docker s'exposen com a serveis a través de paràmetres a la comanda d'execució dels contenidors, mapejant ports interns del container amb ports externs del host. És necessària una capa addicional que permeti gestionar d'una manera una mica més àgil i flexible aquesta exposició.  
+Els contenidors de docker s'exposen com a serveis a través de paràmetres a la comanda d'execució dels contenidors, mapejant ports interns del container amb ports externs del host. És necessària una capa addicional que permeti gestionar d'una manera una mica més àgil i flexible aquesta exposició.
 
 ### Enrutament
 Addicionalment al balanceig, és necessari disposar d'un element enrutador que permeti:
@@ -61,7 +61,7 @@ Els contenidors dockers, no tenen cap tipus de quota definida. Poden consumir to
 ### Desplegament
 Actualment els cicles de vida de desenvolupament d'aplicacions van cap a models CI/CD i DevOps.
 La Generalitat de Catalunya disposa de l'eina SIC per realitzar els desplegaments.
-Són necessàries eines que facilitin la integració d'un model de basat en contenidors amb eines de CI/CD com el SIC. 
+Són necessàries eines que facilitin la integració d'un model de basat en contenidors amb eines de CI/CD com el SIC.
 
 ## Comparativa entre orquestradors
 
@@ -71,7 +71,7 @@ Al següent diagrama es descriu:
 
 * Principals components de cada orquestrador
 * Correspondències entre els components de cada orquestrador
-* Components permesos a la Generalitat de Catalunya  
+* Components permesos a la Generalitat de Catalunya
 
 ![comparativa entre Orquestradors docker](/related/cloud/comparativaOrquestradors.png)
 
@@ -92,7 +92,7 @@ Per detalls i exemples podeu visitar la plana http://canigo.ctti.gencat.cat/clou
 
 Per més informació podeu consultar la web https://kubernetes.io/
 
-### Openshift/AppAgile
+### Openshift
 Desenvolupat per Red Hat, basat en Kubernetes.
 Afegeix funcionalitat addicional a Kubernetes (gestió d'usuaris, segmentació de xarxa, sistema centralitzat de logs).
 Acostuma a portar un endarreriment respecte a l'última versió de kubernetes d'uns tres o quatre mesos.
@@ -101,13 +101,9 @@ Per detalls i exemples podeu visitar la plana [Contenidors Openshift](http://can
 
 Per més informació podeu consultar les webs:
 
--  http://appagile.io/
--  https://docs.openshift.com/container-platform/3.9/welcome/index.html
--  https://docs.openshift.com/container-platform/4.3/welcome/index.html
+-  https://docs.openshift.com/container-platform/4.6/welcome/index.html
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que cada orquestrador, tot i que totes les plataformes es basen en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte. 
-
-
+A la plana [Criteris creació contenidors docker](http://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte.

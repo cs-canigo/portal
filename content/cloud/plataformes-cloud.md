@@ -16,7 +16,6 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 
 ![Plataformes cloud per Tipologia ](/related/cloud/catalegCloud_tipologia.png)
 
-
 ## Cloud Privat
 
 ### CaaS
@@ -25,8 +24,8 @@ Les plataformes cloud que ofereix la Generalitat de Catalunya clasificades per t
 
 - Openshift: https://www.openshift.com/
 - Contenidors docker i orquestració amb Openshift
-- Versió:  **OpenShift Container Platform 4.6 i Kubernetes 1.19.** 
-- Disposa de Service Mesh. **Apte per desplegar aplicacions basades en microserveis.** 
+- Versió:  **OpenShift Container Platform 4.6 i Kubernetes 1.19.**
+- Disposa de Service Mesh. **Apte per desplegar aplicacions basades en microserveis.**
 
 Disponible a CPD2, CPD3 i CPD4 en entorns de consolidables.
 

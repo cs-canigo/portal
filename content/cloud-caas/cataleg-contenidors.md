@@ -5,7 +5,7 @@ description = "Descripció de les imatges docker base proporcionades pel CTTI."
 sections    = "Cloud"
 weight      = 1
 toc = true
-categories  = ["cloud","docker","container", "kubernetes","openshift","swarm", "appagile", "swamme", "ibm", "caas"]
+categories  = ["cloud","docker","container", "kubernetes","openshift","swarm", "swamme", "ibm", "caas"]
 +++
 
 En aquesta secció es descriuen les diferents imatges docker homologades pel CTTI i utilitzables a les diferents plataformes de contenidors.
@@ -58,7 +58,7 @@ Tampoc ofereix un entorn en alta disponibilitat. És una modalitat no recomanada
 
 ## **Imatges de contenidors obsoletes**
 
-**Aquestes imatges són obsoletes/no suportades i no tenen manteniment. Poden contenir vulnerabilitats i no està recomanat el seu ús.** 
+**Aquestes imatges són obsoletes/no suportades i no tenen manteniment. Poden contenir vulnerabilitats i no està recomanat el seu ús.**
 
 **En cas d'utilitzar aquestes imatges es recomana l'actualització a les imatges suportades.**
 

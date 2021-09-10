@@ -14,18 +14,18 @@ En aquest article es defineix l'arquitectura tipus d'una aplicació a Kubernetes
 
 A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les següents plataformes:
 
-* IBM Bluemix al cloud públic. **Versió Kubernetes 1.16.10. Versió containerd 1.3.4**
-* IBM CaaS al cloud privat. **Versió Kubernetes 1.14.8. Versió docker 18.9.7**
+* IBM Bluemix al cloud públic. **Versió Kubernetes 1.19.8. Versió containerd 1.4.3**
+* IBM CaaS al cloud privat. **Versió Kubernetes 1.18.10. Versió docker 19.3.13**
 
 
 ## Imatges
 A l'hora de construir les imatges docker, cal tenir present els criteris definits per la Generalitat de Catalunya i que Openshift, tot i que està basat en docker, té les seves particularitats.
 
-A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte. 
+A la plana [Criteris creació contenidors docker](https://canigo.ctti.gencat.cat/cloud-caas/dockerImages/) podeu trobar més informació al respecte.
 
 ## Arquitectura
 ### Conceptes bàsics
-L'arquitectura bàsica d'una aplicació a AppAgile és bàsicament la mateixa que la de Kubernetes, però amb algunes petites particularitats.
+L'arquitectura bàsica d'una aplicació a Openshift és bàsicament la mateixa que la de Kubernetes, però amb algunes petites particularitats.
 A grans trets es poden distingir els següents components:
 
 * **Enrutador:** És el punt d'entrada i sortida del tràfic http/https de la plataforma i l'exterior. És responsable d'enrutar el tràfic a cada contenidor concret.
@@ -141,7 +141,7 @@ spec:
       maxSurge: 25%
       maxUnavailable: 25%
   minReadySeconds: 0
-  revisionHistoryLimit: 3       
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
@@ -160,9 +160,9 @@ spec:
         imagePullPolicy: Always
         env:
         - name: ENV1_NAME
-          value: env1_value                       
+          value: env1_value
         - name: ENV2_NAME
-          value: env2_value                       
+          value: env2_value
         ports:
         - containerPort: 8080
         readinessProbe:
@@ -178,15 +178,15 @@ spec:
             - name: X-Custom-Header
               value: Awesome
           initialDelaySeconds: 3
-          periodSeconds: 3      
+          periodSeconds: 3
         volumeMounts:
         - mountPath: /data
           name: XXXX-app1-server
         - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
           name: default-token-rwj8z
-          readOnly: true           
+          readOnly: true
       imagePullSecrets:
-        - name: uk-docker-registry-secret      
+        - name: uk-docker-registry-secret
       volumes:
       - name: *XXXX-app1-server
         persistentVolumeClaim:
@@ -277,11 +277,11 @@ spec:
       - path: /
         backend:
           serviceName: XXXX-app1-server
-          servicePort: 80   
+          servicePort: 80
 ```
 
 
 ## Informació relacionada
 
-* https://v1-14.docs.kubernetes.io/es/docs/home/
-* https://v1-16.docs.kubernetes.io/es/docs/home/
+* https://v1-18.docs.kubernetes.io/es/docs/home/
+* https://v1-19.docs.kubernetes.io/es/docs/home/

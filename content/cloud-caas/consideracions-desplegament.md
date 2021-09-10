@@ -4,7 +4,7 @@ title       = "Consideracions en desplegaments de contenidors"
 description = "Consideracions generals a tenir present en desplegaments de contenidors"
 sections    = "Container Cloud"
 weight      = 9
-categories  = ["cloud","docker","container","kubernetes","appagile","openshift","swarmme"]
+categories  = ["cloud","docker","container","kubernetes","openshift","swarmme"]
 +++
 
 Al desplegar una aplicació a les diferents plataformes de contenidors cal tenir present una sèrie de consideracions.
