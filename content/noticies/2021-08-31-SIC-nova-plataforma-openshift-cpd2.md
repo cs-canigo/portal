@@ -1,7 +1,7 @@
 +++
 date        = "2021-08-31"
 title       = "Nova plataforma CaaS Openshift de CPD2"
-description = "Preparació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions a la nova plataforma CaaS Openshift de Cpd2."
+description = "Incorporació de la nova plataforma cloud Caas Openshift de CPD2 i adaptació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "SETEMBRE2021"
