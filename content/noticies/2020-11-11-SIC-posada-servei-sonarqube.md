@@ -2,7 +2,7 @@
 date        = "2020-11-18"
 title       = "SIC. Integració SonarQube CE"
 description = "El dia 09/12/2020 s'ha posat en servei la integració del SIC amb el sistema d'anàlisi estàtic de codi de la Oficina de Qualitat (SonarQube CE)"
-#sections    = ["Notícies", "home"]
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "GENER2021"
 +++

@@ -2,7 +2,7 @@
 date        = "2020-11-24"
 title       = "SIC. Desplegament delegat a CPD"
 description = "El dia 10/12/2020 s'ha preparat el sistema de desplegament delegat com a nova modalitat en el desplegament d'aplicacions"
-#sections    = ["Notícies", "home"]
+sections    = ["Notícies", "home"]
 categories  = ["sic"]
 key         = "GENER2021"
 +++

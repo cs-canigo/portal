@@ -3,7 +3,7 @@ date        = "2021-04-07"
 title       = "SIC. Actualització de versió Nexus"
 description = "El dia 07/04/2021 s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
 categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
+sections    = ["Notícies", "home"]
 key         = "ABRIL2021"
 +++
 

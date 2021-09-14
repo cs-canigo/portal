@@ -3,7 +3,7 @@ date        = "2020-11-30"
 title       = "SIC. Actualització de versió Jenkins"
 description = "El dia 16/12/2020 està previst dur a terme l'actualització del Servei d'Integració Contínua (Jenkins)"
 categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
+sections    = ["Notícies", "home"]
 key         = "DESEMBRE2020"
 +++
 
