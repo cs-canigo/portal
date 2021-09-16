@@ -16,10 +16,10 @@ Les principals novetats d'aquesta actualització són les següents:
 * Millores **generals**:
     * **Notificació als usuaris d'intents de login** desconeguts des de diferent IP o dispositiu.
     * **Nou tema "Dark"** a l'entorn web de desenvolupament integrat per a millorar l'experiència d'usuari.
-	* Millores en la *gestió de fitxers grans (LFS)* permetent excloure'ls mitjançant un "Partial clone".
-	* Millores en la *col·laboració* (merge request, mencions, alertes, versionat d'snippets i altres).
-	* S'habilita per defecte l'*emmagatzematge en format hash* que optimitza els canvis de grups, projectes i usuaris, i reparteix millor l'espai a disc.
-    * Actualització de les versions de les *eines internes*: Ruby 2.7.2, Rails 6.0.3, PostgreSQL 11.10 i Git 2.29.0.
+	* Millores en la **gestió de fitxers grans (LFS)** permetent excloure'ls mitjançant un "Partial clone".
+	* Millores en la **col·laboració** (merge request, mencions, alertes, versionat d'snippets i altres).
+	* S'habilita per defecte l'**emmagatzematge en format hash** que optimitza els canvis de grups, projectes i usuaris, i reparteix millor l'espai a disc.
+    * Actualització de les versions de les **eines internes**: Ruby 2.7.2, Rails 6.0.3, PostgreSQL 11.10 i Git 2.29.0.
 * Millores de **rendiment i control d’errors**.
 * Correccions de **seguretat** importants.
 
