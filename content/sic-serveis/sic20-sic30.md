@@ -88,6 +88,9 @@ desplegament mitjançant l'opció *Build with Parameters*.
 de recursos de màquina (cpu i memòria) perquè el contenidor pugui dur a terme la tasca requerida. Cal tenir present que cada etapa de la pipeline aixeca un contenidor,
 cosa que implica que el temps destinat per les diferents etapes es vegi incrementat en aproximadament 1 minut.
 
+* Relacionat amb el punt anterior, perquè es pugui realitzar la compilació amb la memòria assignada, és possible que en determinats casos
+calgui **limitar el consum de memòria de la comanda de compilació de Node** mitjançant el flag --max-old-space-size adequat a la memòria màxima del contenidor.
+
 * Es defineix el **temps d'espera** (DEPLOYMENT_WAIT/JOB_WAIT) aplicable al desplegament, que caldrà ajustar a les necessitats de l'aplicació.
 
 * El **fitxer `sic/sic.yml`**, que fins ara proporcionava la versió de l’aplicació, ha quedat absorbit pel fitxer `sic/aca.yml`. No
