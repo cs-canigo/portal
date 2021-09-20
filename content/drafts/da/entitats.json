@@ -594,7 +594,7 @@
         "Id": "dtarq150",
         "Nom": "Relació Municipis i Partit Judicial de Catalunya",
         "Ambit": "Justícia",
-        "Descripcio": "Llistat de direccions generals en què s'organitzen els departaments de la Generalitat de Catalunya",
+        "Descripcio": "Llista de codis de municipi de Catalunya amb l'identificador del partit judicial que li correspon al municipi.",
         "instancies": [
             {
                 "inom": "V01",
