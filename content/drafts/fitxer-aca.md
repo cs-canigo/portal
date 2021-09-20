@@ -375,13 +375,15 @@ On `scm` indica el repositori on es troben ubicats els orquestradors per a dur a
 
 #### components[].deployment.enviroments[]
 
-Informació sobre els entorns (`name`) i de quina manera es desplegarà l’aplicació (`actions`) segons la següent estructura:
+Informació sobre els entorns (`name`), els tipus de desplegament on premise (` deployment-type`), els artefactes a desplegar on-premissa (`artifacts`) i de quina manera es desplegarà l'aplicació (` actions`) segons l'estructura següent:
 
 ```
 components:
   - deployment:
       environments:
         - name
+          deployment-type
+          artifacts
           actions
 ```
 
@@ -389,7 +391,53 @@ On:
 
 - `name`: nom de l'entorn on es desplegarà l'aplicació
 
+- `deployment-type`: Tipus de desplegament, només s'aplica per desplegaments on-premise. Les opcions són: delegated o semiautomatic
+
+- `artifacts`: Llista d'artefactes, només s'aplica per desplegaments on-premise.
+
 - `actions`: accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
+
+#### components[].deployment.enviroments[].artifacts[]
+
+Informació sobre els artefactes a desplegar: nom (`name`), ruta (`path`), tipus (`type`) i l'identificador de insfraestructura (` infrastructure-id`) segons l'estructura següent:
+
+```
+components:
+  - deployment:
+      environments:
+        - name:
+          deployment-type:
+          artifacts:
+            name:
+            path:
+            type:
+            infrastructure-id:
+```
+
+On:
+
+- `name`: nom de l'artefacte. Es requerit
+
+- `path`: ruta de l'artefacte a partir de l'arrel del projecte. És opcional, té com a valor per defecte "." y el separador esperat és /.
+
+- `type`: tipus d'artefacte. Les opcions són: dynamic, static o bbdd. És opcional i el valor per defecte és: dynamic
+
+- `infrastructure-id`: identificador d'infraestructura. Només requerit per al desplegament delegat
+
+Per exemple:
+
+```
+components:
+  - deploy:
+      environments:
+        - name: integration
+          deployment-type: delegated
+          artifacts:
+            - name: bbdd_INT.zip
+              path: tmpBBDD
+              type: bbdd
+              infrastructure-id: id_cpdx_bbdd
+```
 
 ##### components[].deployment.enviroments[].actions.before-deploy
 
@@ -505,10 +553,6 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 
 |Variable|Requerit|Descripció|Exemple|
 |--------|--------|----------|-------|
-|ARTIFACT_PATH|Sí|Rutes dels artefactes a desplegar separats per ","|tmpBBDD,target|
-|ARTIFACT_NAME|Sí|Noms dels artefactes a desplegar separats per ","|bbdd_PRO.zip,app-dynamic.ear|
-|ARTIFACT_TYPE|Únicament per al **desplegament delegat**|Tipus dels artefactes a desplegar separats per ",". Possibles valors: **ddbb**, **dynamic** o **static**|ddbb,dynamic|
-|INFRASTRUCTURE_ID|Únicament per al **desplegament delegat**|Identificadors d’infraestructura proporcionats per Cpd separats per ","|id_cpdx_ddbb,id_cpdx_dynamic|
 |PLANS_PATH|Únicament per al **desplegament d'scripts de Base de dades**|Ruta del fitxer de plans d'execució d'scripts de Base de Dades|sql_scripts|
 |PLANS_NAME|Únicament per al **desplegament d'scripts de Base de dades**|Nom del fitxer de plans d'execució d'scripts de Base de Dades|plans.xml|
 
