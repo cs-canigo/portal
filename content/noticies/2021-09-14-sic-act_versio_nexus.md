@@ -2,9 +2,9 @@
 date        = "2021-09-14"
 title       = "SIC. Actualització de versió Nexus"
 description = "El dia 02/10/2021 s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
-#categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
-#key         = "OCTUBRE2021"
+categories  = ["SIC"]
+sections    = ["Notícies", "home"]
+key         = "OCTUBRE2021"
 +++
 
 **El dia 02/10/2021 s'ha dut a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.30.1 de Nexus**.

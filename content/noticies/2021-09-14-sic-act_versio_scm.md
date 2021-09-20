@@ -2,9 +2,9 @@
 date        = "2021-09-14"
 title       = "SIC. Actualització de versió Gitlab"
 description = "El dia 02/10/2021 s'ha dut a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
-#categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
-#key         = "OCTUBRE2021"
+categories  = ["SIC"]
+sections    = ["Notícies", "home"]
+key         = "OCTUBRE2021"
 +++
 
 **El dia 02/10/2021 s'ha dut a terme l’actualització del Servei de Custòdia de Codi a la versió 13.7.9 de Gitlab**.
