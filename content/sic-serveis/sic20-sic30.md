@@ -98,7 +98,7 @@ obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per 
 l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homòloga `info.version`.
 
 * El comportament de les pipelines es configura en fitxers YML, per la qual cosa hi ha informació que se sol·licitava com a paràmetres d'entrada
-que passa a sol·licitar-se en temps d'execució mitjançant punts de parada a les pipelines (entorn, tag... segons pertoqui al tipus d'operació).
+que **passa a sol·licitar-se en temps d'execució** mitjançant punts de parada a les pipelines (entorn, tag... segons pertoqui al tipus d'operació).
 
 * La pipeline de desplegament **no realitza l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat** ni comprova
 les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
