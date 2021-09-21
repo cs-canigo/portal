@@ -64,9 +64,9 @@ En aquest sentit, la situació actual (que és viva i s’anirà actualitzant) i
 |**05-2021**|**Noves** pipelines **cloud**|
 |**07-2021**|**Totes** les pipelines **cloud**|
 |**09-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic (**excepte .NET Framework**)|
-|**10-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic|
-|**11-2021**|**Totes** les pipelines **on-premise** amb desplegament delegat i semiautomàtic|
-|**12-2021**|**Baixa SIC 2.0**|
+|Pendent planificar|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic|
+|Pendent planificar|**Totes** les pipelines **on-premise** amb desplegament delegat i semiautomàtic|
+|Pendent planificar|**Baixa SIC 2.0**|
 
 ## Principals canvis en l'operativa
 
@@ -97,6 +97,9 @@ calgui **limitar el consum de memòria de la comanda de compilació de Node** mi
 obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
 l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homòloga `info.version`.
 
+* El comportament de les pipelines es configura en fitxers YML, per la qual cosa hi ha informació que se sol·licitava com a paràmetres d'entrada
+que passa a sol·licitar-se en temps d'execució mitjançant punts de parada a les pipelines (entorn, tag... segons pertoqui al tipus d'operació).
+
 * La pipeline de desplegament **no realitza l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat** ni comprova
 les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
@@ -110,7 +113,7 @@ i/o descriptors.
 aplicacions i l’esborrat final de l’espai de treball (respectivament). Es tracta de pipelines que són invocades internament des
 de totes les pipelines per a dur a terme tasques comunes.
 
-* Els **punts d’aprovació expiren en 30 dies**.
+* Els **punts d’aprovació de desplegament expiren en 30 dies**.
 
 * **No es permeten execucions concurrents** d’una mateixa pipeline. S'haurà, per tant, de finalitzar l'execució anterior abans d'iniciar-ne la nova.
 
