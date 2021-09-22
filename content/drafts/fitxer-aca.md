@@ -92,9 +92,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Openshift|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Openshift. Possibles valors: **DeploymentConfig**, **Deployment** i **StatefulSet**|
-|VOLUME_NAME|En el cas de desplegament de microfrontends, nom del volum compartit entre els diferents WebComponents i que tindran finalment el contingut web de cada micro|
-|CONTENT_SOURCE|En el cas de desplegament de microfrontends, ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
-|CONTENT_DESTINATION|En el cas de desplegament de microfrontends, directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on hi haurà el contingut web de cada micro|
+|CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a Kubernetes IBMCloud i CaaS**:
@@ -104,9 +104,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Kubernetes|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Kubernetes. Possibles valors: **Deployment** i **StatefulSet**|
-|VOLUME_NAME|En el cas de desplegament de microfrontends, nom del volum compartit entre els diferents WebComponents i que tindran finalment el contingut web de cada micro|
-|CONTENT_SOURCE|En el cas de desplegament de microfrontends, ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
-|CONTENT_DESTINATION|En el cas de desplegament de microfrontends, directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on hi haurà el contingut web de cada micro|
+|CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a WebApp Azure**:
@@ -666,15 +666,17 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 
-- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 o Cpd2](/related/sic/3.0/aca_const_despl_node_openshift_cpd4_cpd2.yml)
+- [Construcció aplicació Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_node_openshift.yml)
 
-- [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
+- [Construcció microfrontend Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_micro_node_openshift.yml)
 
-- [Desplegament aplicació mitjançant contenidor creat a partir de DockerFile i desplegament a l’Openshift de Cpd2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
+- [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
-- [Desplegament aplicació mitjançant contenidor creat a partir de Dockerfile i desplegament al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
+- [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
-- [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift Cpd4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
+- [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
+
+- [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift.yml)
 
 - [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 
