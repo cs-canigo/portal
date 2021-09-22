@@ -92,7 +92,7 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Openshift|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Openshift. Possibles valors: **DeploymentConfig**, **Deployment** i **StatefulSet**|
-|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on hi haurà el contingut web de cada micro|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on estarà el contingut web|
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
@@ -104,7 +104,7 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Kubernetes|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Kubernetes. Possibles valors: **Deployment** i **StatefulSet**|
-|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on hi haurà el contingut web de cada micro|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on estarà el contingut web|
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
