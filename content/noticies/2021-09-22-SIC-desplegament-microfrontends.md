@@ -11,7 +11,7 @@ description = "Adaptació del SIC 3.0 per a donar cobertura al desplegament de m
 
 El terme [Micro Frontends](https://micro-frontends.org/) estén els conceptes de micro serveis al món dels frontals.
 La idea que hi ha al darrere és pensar en un lloc web o una aplicació web com una composició de funcions propietat
-d'equips independents, de forma que cada equip té una àrea de negoci sobre la que s'especialitza i que desenvolupa
+d'equips independents, de forma que cada equip s'especialitza sobre una àrea de negoci i la desenvolupa
 de forma transversal, des de la base de dades fins a la interfície d'usuari.
 
 
