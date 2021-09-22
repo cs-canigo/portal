@@ -668,7 +668,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_node_openshift.yml)
 
-- [Construcció microfrontend Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_micro_node_openshift.yml)
+- [Construcció micro frontend Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_microfrontend_openshift.yml)
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
