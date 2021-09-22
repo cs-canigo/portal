@@ -1,10 +1,10 @@
 version: 2.0.0
 info:
   version: 0.1.1
-  description: microservice-landing
+  description: Node - Openshift Cpd4 i Cpd2
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
-  - CONTAINER_IMAGE_NAME: microservice-landing
+  - CONTAINER_IMAGE_NAME: app-test
   - DEPLOYMENT_TYPE: DeploymentConfig
 components:
   - build:
@@ -12,7 +12,7 @@ components:
         - container:
             image:
               remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-8
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-14
             resources:
               limits:
                 cpu: 1000m
@@ -22,9 +22,9 @@ components:
                 memory: 128Mi
           execution:
             commands:
-              - cd micro && npm install && npm run build
+              - cd app-test && npm install && npm run build
     deployment:
-      scm: https://git.intranet.gencat.cat/sic-tests/9990/orchestrators.git
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
       environments:
         - name: preproduction
           actions:
@@ -32,8 +32,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: microservice-landing/pre
-                      - DEPLOYMENT_NAME: landing
+                      - DESCRIPTORS_PATH: app-test/pre
+                      - DEPLOYMENT_NAME: app-test
                       - DEPLOYMENT_WAIT: 900
         - name: production
           actions:
@@ -41,8 +41,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: microservice-landing/pro
-                      - DEPLOYMENT_NAME: landing
+                      - DESCRIPTORS_PATH: app-test/pro
+                      - DEPLOYMENT_NAME: app-test
                       - DEPLOYMENT_WAIT: 900
 notifications:
   email:

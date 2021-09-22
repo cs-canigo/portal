@@ -1,10 +1,10 @@
 version: 2.0.0
 info:
   version: 1.2.0
-  description: Petclinic (Kubernetes IBMCloud)
+  description: Custom builder - Maven - Kubernetes
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
-  - CONTAINER_IMAGE_NAME: petclinic-test
+  - CONTAINER_IMAGE_NAME: app-test
   - DEPLOYMENT_TYPE: Deployment
 components:
   - custom-builder:
@@ -29,7 +29,7 @@ components:
             env:
               - ENV: 'production'
     deployment:
-      scm: https://git.intranet.gencat.cat/0192/sic-tests/9997/orchestrators.git
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
       environments:
         - name: preproduction
           actions:
@@ -37,8 +37,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: 'preproduccio/petclinic'
-                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DESCRIPTORS_PATH: 'preproduccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
                       - DEPLOYMENT_WAIT: 120
         - name: production
           actions:
@@ -46,8 +46,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: 'produccio/petclinic'
-                      - DEPLOYMENT_NAME: 'petclinic-test'
+                      - DESCRIPTORS_PATH: 'produccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
                       - DEPLOYMENT_WAIT: 120
 notifications:
   email:

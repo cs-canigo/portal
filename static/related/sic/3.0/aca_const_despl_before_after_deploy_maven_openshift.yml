@@ -1,0 +1,78 @@
+version: 2.0.0
+info:
+  version: 1.2.0
+  description: Maven - Openshift - Before/after deploy
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: app-test
+  - DEPLOYMENT_TYPE: DeploymentConfig
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/mvn-builder:1.0-3.6-8
+            resources:
+              limits: { cpu: 1000m, memory: 1024Mi }
+              requests: { cpu: 100m, memory: 128Mi }
+          execution:
+            commands:
+              - mvn clean package -Dmaven.test.skip=true
+    deployment:
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=PREDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'preproduccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
+                      - DEPLOYMENT_WAIT: 120
+            after-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin
+        - name: production
+          actions:
+            before-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=PREDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: 'preproduccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
+                      - DEPLOYMENT_WAIT: 120
+            after-deploy:
+              steps:
+                - execution:
+                    env:
+                      - JOB_NAME_PREFIX: admin
+                      - JOB_IMAGE: test-runjob:1.0
+                      - JOB_WAIT: 60
+                      - JOB_ENVS: TYPE=POSTDEPLOY|KONG_ADMIN_URL=http://api-admin|ENDPOINTS=$(cat deploy.json)
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

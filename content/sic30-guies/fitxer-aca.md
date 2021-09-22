@@ -605,17 +605,17 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven i desplegament al CloudFoundry IBMCloud](/related/sic/3.0/aca_const_despl_maven_cloudfoundry_ibmcloud.yml)
 
-- [Construcció aplicació Node i desplegament a l’Openshift de Cpd4 o Cpd2](/related/sic/3.0/aca_const_despl_node_openshift_cpd4_cpd2.yml)
+- [Construcció aplicació Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_node_openshift.yml)
 
-- [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift de Cpd3](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift_cpd3.yml)
+- [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
-- [Desplegament aplicació mitjançant contenidor creat a partir de DockerFile i desplegament a l’Openshift de Cpd2](/related/sic/3.0/aca_const_dockerfile_despl_openshift_cpd2.yml)
+- [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
-- [Desplegament aplicació mitjançant contenidor creat a partir de Dockerfile i desplegament al WebApp Azure](/related/sic/3.0/aca_const_dockerfile_despl_webapp_azure.yml)
+- [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
 
-- [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift Cpd4](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift_cpd4.yml)
+- [Construcció aplicació PHP utilitzant docker custom Builder i desplegament a l’Openshift](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift.yml)
 
-- [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
+- [Construcció aplicació Maven utilitzant docker custom Builder i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 
 - [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 

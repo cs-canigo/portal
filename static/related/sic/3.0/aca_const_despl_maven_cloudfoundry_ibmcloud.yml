@@ -1,10 +1,10 @@
 version: 2.0.0
 info:
   version: 1.0.0
-  description: Petclinic (CloudFoundry IBMCloud)
+  description: Maven - CloudFoundry IBMCloud
 global-env:
   - CF_BUILDPACK: 'https://github.com/cloudfoundry/java-buildpack#v4.35'
-  - CF_PATH: 'target/spring-petclinic.jar'
+  - CF_PATH: 'target/app-test.jar'
 components:
   - build:
       steps:

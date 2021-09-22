@@ -1,14 +1,14 @@
 version: 2.0.0
 info:
   version: 1.0.0
-  description: "Despl. modalitat semi-automatica"
+  description: BBDD i Maven - On premise
 global-env:
   - PLANS_PATH: 'sql_scripts'
   - PLANS_NAME: 'plans.xml'
 components:
   - build:
       steps:
-        - container: # Necesario este contenedor vacio 
+        - container: # Necesario este contenedor vacio para el build de scripts BBDD
         - container:
             image:
               remote:

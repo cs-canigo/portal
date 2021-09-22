@@ -1,0 +1,67 @@
+version: 2.0.0
+info:
+  version: 1.0.0
+  description: Custom builder - API PHP - Openshift
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: php.docker
+  - CONTAINER_IMAGE_NAME: api-test
+  - DEPLOYMENT_TYPE: DeploymentConfig
+components:
+  - custom-builder:
+      steps:
+        - container:
+            image:
+              local:
+                name: api-test
+                path: Dockerfile
+    build:
+      steps:
+        - container:
+            image:
+              local:
+                name: api-test
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - composer install --working-dir=./source/api
+              - composer update --working-dir=./source/api
+              - php ./source/api vendor:publish
+              - mkdir -p ./builds/api
+              - mkdir -p ./builds/html
+              - cp -r ./source/api/bootstrap ./builds/api
+              - cp -r ./source/api/vendor ./builds/api
+              - cp -r ./source/api/app ./builds/api
+              - cp -r ./source/api/config ./builds/api
+              - cp -r ./source/api/storage ./builds/api
+              - cp -r ./source/api/www/ ./builds/api/html
+    deployment:
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRE
+                      - DEPLOYMENT_NAME: api-test
+                      - DEPLOYMENT_WAIT: 60
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: deploys/PRO
+                      - DEPLOYMENT_NAME: api-test
+                      - DEPLOYMENT_WAIT: 60
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

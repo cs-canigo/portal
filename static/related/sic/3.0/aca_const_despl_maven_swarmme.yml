@@ -1,10 +1,10 @@
 version: 2.0.0
 info:
   version: 1.2.0
-  description: Petclinic (SwarmMe)
+  description: Maven - SwarmMe
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
-  - CONTAINER_IMAGE_NAME: petclinic-test
+  - CONTAINER_IMAGE_NAME: app-test
 components:
   - build:
       steps:
@@ -28,8 +28,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - SWARMME_SERVICE_NAME: 'petclinic'
-                      - SWARMME_SERVICE_DOMAIN: 'preproduccio.petclinic.swarmme.cpd1.intranet.gencat.cat'
+                      - SWARMME_SERVICE_NAME: 'app-test'
+                      - SWARMME_SERVICE_DOMAIN: 'preproduccio.app-test.swarmme.cpd1.intranet.gencat.cat'
                       - SWARMME_SERVICE_PATH: '/'
                       - SWARMME_SERVICE_PORT: '8080'
                       - SWARMME_REPLICAS: '1'
@@ -39,8 +39,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - SWARMME_SERVICE_NAME: 'petclinic'
-                      - SWARMME_SERVICE_DOMAIN: 'petclinic.swarmme.cpd1.intranet.gencat.cat'
+                      - SWARMME_SERVICE_NAME: 'app-test'
+                      - SWARMME_SERVICE_DOMAIN: 'app-test.swarmme.cpd1.intranet.gencat.cat'
                       - SWARMME_SERVICE_PATH: '/'
                       - SWARMME_SERVICE_PORT: '8080'
                       - SWARMME_REPLICAS: '1'
