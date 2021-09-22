@@ -8,13 +8,7 @@ global-env:
 components:
   - build:
       steps:
-        - container:
-            image:
-              remote:
-                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/database-migration-executor:1.0
-            resources:
-              limits: { cpu: 2000m, memory: 2048Mi }
-              requests: { cpu: 100m, memory: 128Mi }
+        - container: # Necesario este contenedor vacio 
         - container:
             image:
               remote:
@@ -25,39 +19,38 @@ components:
           execution:
             commands:
               - mvn package --batch-mode 
+    deploy:
       environments:
         - name: integration
           deployment-type: delegated
-          actions:
-            deploy:
-              steps:
-                - execution:
-                    env:
-                      - ARTIFACT_PATH: 'tmpBBDD,target'
-                      - ARTIFACT_NAME: 'bbdd_INT.zip,app-dynamic.ear'
-                      - ARTIFACT_TYPE: 'ddbb,dynamic'
-                      - INFRASTRUCTURE_ID: 'id_cpdx_ddbb,id_cpdx_dynamic'
+          artifacts:
+            - name: bbdd_INT.zip
+              path: tmpBBDD
+              type: bbdd
+              infrastructure-id: id_cpdx_bbdd
+            - name: app-dynamic.ear
+              path: target
+              type: dynamic
+              infrastructure-id: id_cpdx_dynamic
         - name: preproduction
           deployment-type: semiautomatic
-          actions:
-            deploy:
-              steps:
-                - execution:
-                    env:
-                      - ARTIFACT_PATH: 'tmpBBDD,target'
-                      - ARTIFACT_NAME: 'bbdd_PRE.zip,app-dynamic.ear'
-                      - ARTIFACT_TYPE: 'ddbb,dynamic'
+          artifacts:
+            - name: bbdd_PRE.zip
+              path: tmpBBDD
+              type: bbdd
+            - name: app-dynamic.ear
+              path: target
+              type: dynamic
         - name: production
           deployment-type: semiautomatic
-          actions:
-            deploy:
-              steps:
-                - execution:
-                    env:
-                      - ARTIFACT_PATH: 'tmpBBDD,gdo-applicationEAR/target'
-                      - ARTIFACT_NAME: 'bbdd_PRO.zip,GDOEAR-dynamic.ear'
-                      - ARTIFACT_TYPE: 'ddbb,dynamic'
+          artifacts:
+            - name: bbdd_PRO.zip
+              path: tmpBBDD
+              type: bbdd
+            - name: app-dynamic.ear
+              path: target
+              type: dynamic
 notifications:
   email:
     recipients:
-      - noreply@ticxcat.cat
+      - no_reply@gencat.cat
