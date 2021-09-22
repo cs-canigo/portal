@@ -1,7 +1,7 @@
 version: 2.0.0
 info:
   version: 0.1.1
-  description: Microfrontend - Openshift Cpd4 i Cpd2
+  description: Microfrontend - Openshift
 global-env:
   - CONTAINER_DOCKERFILE_PATH: Dockerfile
   - CONTAINER_IMAGE_NAME: micro-test
