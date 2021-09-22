@@ -1,5 +1,5 @@
 +++
-date = "2021-09-09"
+date = "2021-09-22"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -92,6 +92,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Openshift|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Openshift. Possibles valors: **DeploymentConfig**, **Deployment** i **StatefulSet**|
+|VOLUME_NAME|En el cas de desplegament de microfrontends, nom del volum compartit entre els diferents WebComponents i que tindran finalment el contingut web de cada micro|
+|CONTENT_SOURCE|En el cas de desplegament de microfrontends, ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|En el cas de desplegament de microfrontends, directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a Kubernetes IBMCloud i CaaS**:
@@ -101,6 +104,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Kubernetes|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Kubernetes. Possibles valors: **Deployment** i **StatefulSet**|
+|VOLUME_NAME|En el cas de desplegament de microfrontends, nom del volum compartit entre els diferents WebComponents i que tindran finalment el contingut web de cada micro|
+|CONTENT_SOURCE|En el cas de desplegament de microfrontends, ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|En el cas de desplegament de microfrontends, directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a WebApp Azure**:
