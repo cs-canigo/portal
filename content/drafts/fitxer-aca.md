@@ -395,11 +395,11 @@ components:
 
 On:
 
-- `name`: nom de l'entorn on es desplegarà l'aplicació. Per exemple: "integration", "preproduction" i "production".
+- `name`: nom de l'entorn on es desplegarà l'aplicació. Per exemple: "integration", "preproduction" o "production".
 
-- `deployment-type`: únicament per a **desplegaments on-premise**, modalitat de desplegament. Possibles valors: `delegated` o `semiautomatic`
+- `deployment-type`: únicament per a **desplegaments on-premise**, modalitat de desplegament aplicable. Possibles valors: `delegated` o `semiautomatic`
 
-- `artifacts`: únicament per a **desplegaments on-premise**, llista d'artefactes a desplegar
+- `artifacts`: únicament per a **desplegaments on-premise**, llista d'artefactes que es desplegaran
 
 - `actions`: únicament per a **desplegaments al cloud**, accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
 
@@ -427,7 +427,7 @@ On:
 
 - `path`: (opcional) ruta de l'artefacte a partir de l'arrel del projecte utilitzant el caràcter separador "/". Per defecte, "."
 
-- `type`: (opcional) tipus d'artefacte a desplegar. Possibles valors: `dynamic`, `static` o `bbdd`. Per defecte, "dynamic"
+- `type`: tipus d'artefacte a desplegar. Possibles valors: `dynamic`, `static` o `bbdd`
 
 - `infrastructure-id`: únicament per al **desplegament en modalitat delegada**, identificador d'infraestructura proporcionat pel Cpd
 
