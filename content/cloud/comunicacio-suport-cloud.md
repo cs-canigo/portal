@@ -1,5 +1,5 @@
 +++
-date        = "2018-01-17"
+date        = "2021-09-28"
 title       = "Comunicació proveïdors d'aplicacions amb Suport Cloud"
 description = "Canals de comunicació disponibles pels proveïdors d'aplicacions amb Suport Cloud"
 sections    = "Cloud"
@@ -7,7 +7,7 @@ categories  = ["cloud"]
 weight      = 6
 +++
 
-S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
+S'oficialitzen el [**CSTD (Centre de Suport Tecnològic al Desenvolupament)**](https://cstd.ctti.gencat.cat/jiracstd/browse/ACOCLD) i [**Remedy**](https://pautic.gencat.cat/) com a canals de comunicació amb l'equip de Suport Cloud. A continuació es descriu quin és l'ús que s'ha de fer de cadascun d'ells:
 
 <br/>
 
@@ -17,7 +17,7 @@ Per les aplicacions que estiguin en servei:
 
 - **Remedy**
 
-_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "A6-N3-CLOUD" com a "Assigned Group".
+_Incidències_, _Consultes_ (*) i _Canvis_ que es vulguin fer arribar a l'equip de Suport Cloud s'han de crear a Remedy informant l'aplicació afectada com a "Service" i "AM10_19-N3-CLOUD" com a "Assigned Group".
 
 (*) per les consultes cal informar el camp “INCIDENT TYPE” el valor “USER SERVICE REQUEST”.
 
