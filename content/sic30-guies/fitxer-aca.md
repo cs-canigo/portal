@@ -1,5 +1,5 @@
 +++
-date = "2021-09-09"
+date = "2021-09-28"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -92,6 +92,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Openshift|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Openshift|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Openshift. Possibles valors: **DeploymentConfig**, **Deployment** i **StatefulSet**|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on estarà el contingut web|
+|CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a Kubernetes IBMCloud i CaaS**:
@@ -101,6 +104,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a Kubernetes|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a Kubernetes|
 |DEPLOYMENT_TYPE|Tipus de desplegament a Kubernetes. Possibles valors: **Deployment** i **StatefulSet**|
+|VOLUME_NAME|**Micro frontends**: nom del volum compartit entre els diferents WebComponents on estarà el contingut web|
+|CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
+|CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
 
 #### Per al **desplegament a WebApp Azure**:
@@ -362,7 +368,7 @@ components:
 ### components[].deployment
 
 Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l'aplicació a
-l'OpenShift i Kubernetes, així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
+l'OpenShift i Kubernetes (`scm`), així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
 
 ```
 components:
@@ -607,15 +613,17 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_node_openshift.yml)
 
+- [Construcció micro frontend Node i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_microfrontend_openshift.yml)
+
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
 - [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
 
-- [Construcció aplicació PHP utilitzant docker custom Builder i desplegament a l’Openshift](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift.yml)
+- [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift.yml)
 
-- [Construcció aplicació Maven utilitzant docker custom Builder i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
+- [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
 
 - [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 

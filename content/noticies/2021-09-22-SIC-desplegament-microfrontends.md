@@ -2,9 +2,9 @@
 date        = "2021-09-22"
 title       = "Nou model de pipeline per al desplegament de micro frontends"
 description = "Adaptació del SIC 3.0 per a donar cobertura al desplegament de micro frontends."
-#sections    = ["Notícies", "home"]
-#categories  = ["sic"]
-#key         = "OCTUBRE2021"
+sections    = ["Notícies", "home"]
+categories  = ["sic"]
+key         = "OCTUBRE2021"
 +++
 
 ## Introducció
