@@ -13,6 +13,7 @@ key         = "OCTUBRE2021"
 Les principals novetats d'aquesta actualització són les següents:
 <br>
 
+* Es deixa de donar suport oficial a Internet Explorer 11.
 * Millores **generals**:
     * **Notificació als usuaris d'intents de login** desconeguts des de diferent IP o dispositiu.
     * **Nou tema "Dark"** a l'entorn web de desenvolupament integrat per a millorar l'experiència d'usuari.
