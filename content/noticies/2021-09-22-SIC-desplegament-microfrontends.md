@@ -17,9 +17,9 @@ de forma transversal, des de la base de dades fins a la interfície d'usuari.
 
 ## Novetats
 
-El **SIC 3.0 permet el desplegament de micro frontends en plataformes Openshift i Kubernetes**, generant
-les pipelines necessàries. Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament,
-s’ha adaptat la documentació i s’han incorporat exemples:
+El **SIC 3.0 permet el desplegament de micro frontends independents dins un servidor compartit amb un volum persistent en
+plataformes Openshift i Kubernetes**, generant les pipelines necessàries. Amb l’objectiu que els usuaris sàpiguen
+com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han incorporat exemples:
 
 - [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
