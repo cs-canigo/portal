@@ -368,7 +368,7 @@ components:
 ### components[].deployment
 
 Informació sobre el repositori de codi font que conté els descriptors en format YML per al desplegament de l'aplicació a
-l'OpenShift i Kubernetes, així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
+l'OpenShift i Kubernetes (`scm`), així com la relació d’entorns on es desplegarà l’aplicació (`enviroments`) segons la següent estructura:
 
 ```
 components:
@@ -381,7 +381,7 @@ On `scm` indica el repositori on es troben ubicats els orquestradors per a dur a
 
 #### components[].deployment.enviroments[]
 
-Informació sobre els entorns (`name`), els tipus de desplegament on premise (` deployment-type`), els artefactes a desplegar on-premissa (`artifacts`) i de quina manera es desplegarà l'aplicació (` actions`) segons l'estructura següent:
+Informació sobre els entorns (`name`) i les especificitats del desplegament sobre aquests, segons l'estructura següent:
 
 ```
 components:
@@ -395,17 +395,18 @@ components:
 
 On:
 
-- `name`: nom de l'entorn on es desplegarà l'aplicació
+- `name`: nom de l'entorn on es desplegarà l'aplicació. Per exemple: "integration", "preproduction" i "production".
 
-- `deployment-type`: Tipus de desplegament, només s'aplica per desplegaments on-premise. Les opcions són: delegated o semiautomatic
+- `deployment-type`: únicament per a **desplegaments on-premise**, modalitat de desplegament. Possibles valors: `delegated` o `semiautomatic`
 
-- `artifacts`: Llista d'artefactes, només s'aplica per desplegaments on-premise.
+- `artifacts`: únicament per a **desplegaments on-premise**, llista d'artefactes a desplegar
 
-- `actions`: accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
+- `actions`: únicament per a **desplegaments al cloud**, accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
 
 #### components[].deployment.enviroments[].artifacts[]
 
-Informació sobre els artefactes a desplegar: nom (`name`), ruta (`path`), tipus (`type`) i l'identificador de insfraestructura (` infrastructure-id`) segons l'estructura següent:
+Únicament per a **desplegaments on-premise**, informació sobre els artefactes a desplegar indicant el seu: nom (`name`), ruta (`path`), tipus (`type`) i,
+en cas de desplegament en modalitat delegada, l'identificador de insfraestructura assignat (` infrastructure-id`), segons l'estructura següent:
 
 ```
 components:
@@ -422,13 +423,13 @@ components:
 
 On:
 
-- `name`: nom de l'artefacte. Es requerit
+- `name`: nom de l'artefacte a desplegar
 
-- `path`: ruta de l'artefacte a partir de l'arrel del projecte. És opcional, té com a valor per defecte "." y el separador esperat és /.
+- `path`: (opcional) ruta de l'artefacte a partir de l'arrel del projecte utilitzant el caràcter separador "/". Per defecte, "."
 
-- `type`: tipus d'artefacte. Les opcions són: dynamic, static o bbdd. És opcional i el valor per defecte és: dynamic
+- `type`: (opcional) tipus d'artefacte a desplegar. Possibles valors: `dynamic`, `static` o `bbdd`. Per defecte, "dynamic"
 
-- `infrastructure-id`: identificador d'infraestructura. Només requerit per al desplegament delegat
+- `infrastructure-id`: únicament per al **desplegament en modalitat delegada**, identificador d'infraestructura proporcionat pel Cpd
 
 Per exemple:
 
@@ -444,6 +445,14 @@ components:
               type: bbdd
               infrastructure-id: id_cpdx_bbdd
 ```
+
+Com es pot veure a l'exemple, en el cas de desplegaments de scripts de Base de Dades (`type`: bbdd) caldrà indicar el nom i ruta de
+l'artefacte preestablerts pel sistema:
+
+- `name`: bbdd_${entorn fitxer `plans.xml`}
+
+- `name`: tmpBBDD
+
 
 ##### components[].deployment.enviroments[].actions.before-deploy
 
