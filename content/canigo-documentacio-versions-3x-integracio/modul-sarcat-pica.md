@@ -1,6 +1,6 @@
 +++
 date        = "2015-03-19T17:03:30+01:00"
-title       = "SARCAT"
+title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 13
