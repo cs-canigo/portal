@@ -26,17 +26,20 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
     dataTable.addColumn({ type: 'date', id: 'End' });
     dataTable.addRows([
 	  [ '1','Canigo 3.4 LTS', new Date(2019, 2), new Date(2022, 2) ],
-	  [ '2','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
-	  [ '3','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
-	  [ '4','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
-	  [ '5','Canigo 3.4.4', new Date(2020, 2), new Date(2020, 6) ],
-	  [ '6','Canigo 3.4.5', new Date(2020, 6), new Date(2021, 3) ],
-	  [ '7','Canigo 3.4.6', new Date(2021, 3), new Date(2021, 6) ],
-	  [ '8','Canigo 3.4.7', new Date(2021, 6), new Date(2021, 9) ]]);
+	  [ '2','Canigo 3.4.0', new Date(2019, 2), new Date(2019, 5) ],  
+	  [ '3','Canigo 3.4.1', new Date(2019, 5), new Date(2019, 8) ],
+	  [ '4','Canigo 3.4.2', new Date(2019, 8), new Date(2019, 11) ],
+	  [ '5','Canigo 3.4.3', new Date(2019, 11), new Date(2020, 2) ],
+	  [ '6','Canigo 3.4.4', new Date(2020, 2), new Date(2020, 6) ],
+	  [ '7','Canigo 3.4.5', new Date(2020, 6), new Date(2021, 3) ],
+	  [ '8','Canigo 3.4.6', new Date(2021, 3), new Date(2022, 2) ],
+	  [ '9','Canigo 3.6 LTS', new Date(2021, 11), new Date(2024, 11) ],
+	  [ '10','Canigo 3.6.0', new Date(2021, 11), new Date(2022, 2) ]
+	]);
 
     var options = {
       timeline: { groupByRowLabel: false, showRowLabels: false },
-	  colors: ['blue', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'green','green','green','green','green']
+	  colors: ['blue', 'green', 'green', 'green', 'green', 'green', 'green', 'green', 'blue','green','green','green','green']
     };
 
     chart.draw(dataTable, options);
