@@ -1,11 +1,17 @@
 +++
-date        = "2015-03-19T16:19:20+01:00"
-title       = "Enotum_WS"
+date        = "2021-10-01"
+title       = "Enotum_WS (Deprecat)"
 description = "Notificacions electròniques Web Service."
 sections    = "Canigó. Documentació versió 3.x"
 weight      = 6
 
 +++
+
+<div class="message warning">
+
+A partir de la publicació de Canigó 3.4.6 el 11/05/2021 aquest mòdul quedarà deprecat, per el que no es preveu seguir evolucionant aquest mòdul.
+
+</div>
 
 ## Propòsit
 
