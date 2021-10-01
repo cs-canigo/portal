@@ -34,7 +34,7 @@ deploy:
     - script:
         name: git config
         code: |
-          git config http.postBuffer 524288000        
+          git config --global http.postBuffer 100000000
     # A wercker step to deploy to Github Pages.
     - lukevivier/gh-pages@0.2.1:
         token: $GIT_TOKEN
