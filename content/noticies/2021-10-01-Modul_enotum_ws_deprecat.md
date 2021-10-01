@@ -1,7 +1,7 @@
 +++
 date        = "2021-10-01"
 title       = "Canigó. Mòdul Enotum_WS deprecat"
-description = "S'ha deprecat el mòdul Enotum_WS que ja aplica a Canigó 3.4"
+description = "S'ha deprecat el mòdul Enotum_WS que ja no aplica a Canigó 3.4"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
 key         = "OCTUBRE2021"
