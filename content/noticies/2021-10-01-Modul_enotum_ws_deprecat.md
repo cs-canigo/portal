@@ -18,7 +18,7 @@ A partir de l'anàlisi realitzat, s'han fet les següents revisions:
 
 - El mòdul **canigo.integration.notificacions.electroniques.ws** passa a estar deprecat.
 
-La forma d'exposició dels serveis oferts pel mòdul **canigo.integration.notificacions.electroniques** és pot realitzar a través de serveis exposats amb Spring
+La forma d'exposició dels serveis oferts pel mòdul **canigo.integration.notificacions.electroniques** es pot realitzar a través de serveis exposats amb Spring
 
 ## Documentació de Canigó
 
