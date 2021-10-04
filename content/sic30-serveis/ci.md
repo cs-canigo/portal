@@ -149,31 +149,31 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a **entorns no productius** (Integració):
 
-    * **Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn no productiu un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn no productiu un cop verificades les etapes anteriors.
 
-    * **Prev-deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn no productiu.
+    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn no productiu.
 
     * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn no productiu.
 
-    * **Post-deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn no productiu.
+    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn no productiu.
 
     * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn no productiu per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
-    * **Release Candidate Tag**: generació del tag de Release Candidate al repositori de codi segons es tracta d'una versió desplegada a un entorn no productiu. Per exemple: 1.0.0-RC001.
+    * **Release Tag**: generació del tag de Release Candidate al repositori de codi segons es tracta d'una versió desplegada a un entorn no productiu. Per exemple: 1.0.0-RC001.
 
 * Per a l'**entorn de Staging** (Preproducció):
 
-    * **ITSM Staging Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
 
-    * **Staging Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
+    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
 
-    * **Staging Prev-deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Staging.
+    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Staging.
 
-    * **Staging Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Staging.
+    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Staging.
 
-    * **Staging Post-deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Staging.
+    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Staging.
 
-    * **Staging Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Staging per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
+    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Staging per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
     * **Stress Test**: etapa prevista per a les proves de resistència a l'entorn de Staging per tal de verificar l'estabilitat i fiabilitat de l'aplicació.
 
@@ -181,29 +181,29 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Exploratory Test**: etapa prevista per a les proves exploratòries a l'entorn de Staging per tal de verificar els resultats obtinguts pels diferents casos de prova que es defineixin.
 
-    * **Release Tag**: generació del tag de Release (versió definitiva) al repositori de codi segons es tracta d'una versió desplegada a un entorn de Staging. Per exemple: 1.0.0.
-
-    * **ITSM Staging Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
 
 * Per a l'**entorn de Production** (Producció):
 
-    * **ITSM Production Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
 
-    * **Production Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
+    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
-    * **Production Prev-deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Producció.
+    * **Production Release Tag**: generació del tag de Release (versió definitiva) al repositori de codi segons es tracta d'una versió desplegada a un entorn de Staging. Per exemple: 1.0.0.
 
-    * **Production Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Producció.
+    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Producció.
 
-    * **Production Post-deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Producció.
+    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Producció.
 
-    * **Production Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
+    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Producció.
+
+    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
     * **Probe Test**: etapa prevista per a la verificació de sondes a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament.
 
-    * **Production Tag**: generació del tag de Release al repositori de codi segons es tracta d'una versió desplegada a un entorn de Producció. Per exemple: 1.0.0-PR.
+    * **Release Tag**: generació del tag de Release al repositori de codi segons es tracta d'una versió desplegada a un entorn de Producció. Per exemple: 1.0.0-PR.
 
-    * **ITSM Production Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
+    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
 
 <div class="message information">
