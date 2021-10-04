@@ -17,7 +17,8 @@ Canigó. Aquest mòdul aplicava a aplicacions no basades en Spring exposant els 
 cosa aquesta estratègia ja no aplica per a Canigó 3.4.
 
 ## Novetats
-Com a conclusió de l'anàlisi, el mòdul **canigo.integration.notificacions.electroniques.ws** passa a considerar-se deprecat.
+Com a conclusió de l'anàlisi, el mòdul **canigo.integration.notificacions.electroniques.ws** passa a considerar-se
+deprecat.
 
 La forma d'exposició dels serveis oferts pel mòdul **canigo.integration.notificacions.electroniques** es pot realitzar
 a través de serveis exposats amb Spring.
