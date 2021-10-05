@@ -8,10 +8,8 @@ weight      = 6
 +++
 
 <div class="message warning">
-
 A partir de la publicació de Canigó 3.4.6 de l'11/05/2021 aquest mòdul quedarà deprecat,
 per la qual cosa no es preveu seguir evolucionant aquest mòdul.
-
 </div>
 
 ## Propòsit
@@ -22,8 +20,12 @@ El propòsit d'aquesta documentació és donar a conèixer el mòdul de WebServi
 
 El Servei de Enotum existeixen dues modalitats de consum especials:
 
-* NT_ENTREGAR_CANVI_ESTAT_NOTIFICACIO: Permet al sistema que va sol?licitar la creació de la notificació telemàtica ser informat de les transicions automàtiques d'estat. E-Notum gestiona el cicle de vida dels estats associats a les notificacions telemàtiques. És responsable de realitzar certs canvis d'estat sobre la base de timeouts. Quan es produeixen aquests canvis d'estat, és necessari notificar-los al sistema que va sol?licitar la creació de la notificació.
-* NT_ERROR_ENVIAMENT_NOTIFICACIO: Aquesta modalitat de consum permet el lliurament des de eNotum als BO dels errors que s'ha produït en el tractament de les trameses de notificacions enviades pels backoffice durant el processament de les notificacions.
+* NT_ENTREGAR_CANVI_ESTAT_NOTIFICACIO: Permet al sistema que va sol·licitar la creació de la notificació telemàtica ser
+informat de les transicions automàtiques d'estat. E-Notum gestiona el cicle de vida dels estats associats a les
+notificacions telemàtiques. És responsable de realitzar certs canvis d'estat sobre la base de timeouts. Quan es
+produeixen aquests canvis d'estat, és necessari notificar-los al sistema que va sol·licitar la creació de la notificació.
+* NT_ERROR_ENVIAMENT_NOTIFICACIO: Aquesta modalitat de consum permet el lliurament des de eNotum als BO dels errors que
+s'ha produït en el tractament de les trameses de notificacions enviades pels backoffice durant el processament de les notificacions.
 
 Així doncs, PICA reb les notificacions de l'emissor amb els diferents errors que s'han produït i els envia al BO corresponent.
 
