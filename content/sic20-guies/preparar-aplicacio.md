@@ -42,6 +42,7 @@ Pot tractar-se d’una llibreria, un microservei, un mòdul, un conjunt d'script
 
 * Cal proporcionar **procesos de construcció** d'artefactes independents de les màquines i plataformes on s'executen, de forma que siguin aplicables tant en els entorns de
 desenvolupament com en els entorns del SIC.
+
 <div class="message information">
 El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docker</a> per a disposar d'un entorn aïllat i immutable de construcció que, a més pugui ser utilitzat i testejat pels propis proveïdors.
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
@@ -55,6 +56,7 @@ on es desplegaran (ús profiles maven o similar).
 
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
 la versió funcional del projecte. Per exemple: `version: 1.1.0`
+
 <div class="message information">
 Si voleu automatitzar aquest descriptor podeu consultar: <a href="https://canigo.ctti.gencat.cat/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml/">Howto automatitzar el descriptor sic.yml</a>
 </div>
