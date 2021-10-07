@@ -43,7 +43,6 @@ El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docke
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
 Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">Catàleg d'imatges corporatiu</a>.
 </div>
-<br/>
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).

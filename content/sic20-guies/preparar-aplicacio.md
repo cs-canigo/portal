@@ -56,8 +56,7 @@ on es desplegaran (ús profiles maven o similar).
 * Tots els projectes hauran de disposar de la carpeta /sic/ al primer nivell de la carpeta de codi de projecte i, dins d’aquesta carpeta, caldrà crear l’arxiu `sic.yml` que contindrà
 la versió funcional del projecte. Per exemple: `version: 1.1.0`
 <div class="message information">
-Les aplicacions Canigò disposen d'un generador mitjançant un plugin de Maven que, a partir de la construcció de l'aplicació, generen automàticament el fitxer sic.yml amb la versió del POM.<br/>
-<a href="https://canigo.ctti.gencat.cat/noticies/2018-03-23-Canigo-Configuracio-multientorn-SPA/">Canigo-Configuracio-multientorn-SPA</a>
+Si voleu automatitzar aquest descriptor podeu consultar: <a href="https://canigo.ctti.gencat.cat/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml/">Howto automatitzar el descriptor sic.yml</a>
 </div>
 
 * Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració `aca.yml` que caldrà ubicar dins la mateixa carpeta /sic/.

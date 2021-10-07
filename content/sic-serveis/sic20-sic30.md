@@ -97,6 +97,9 @@ calgui **limitar el consum de memòria de la comanda de compilació de Node** mi
 obstant això, si aquest fitxer es trobava automatitzat per l'aplicació i, per tant, es generava en temps de construcció assignant-li la versió de
 l’aplicació de forma automàtica, es podrà mantenir en el projecte evitant, simplement, indicar la propietat homòloga `info.version`.
 
+* Les **llibreries es publiquen al repositori de llibreries segons la versió indicada al fitxer en format YML** (vegeu punt anterior),
+per la qual cosa és important assegurar que la versió indicada estigui alineada amb la versió del component.
+
 * El comportament de les pipelines es configura en fitxers YML, per la qual cosa hi ha informació que se sol·licitava com a paràmetres d'entrada
 que **passa a sol·licitar-se en temps d'execució** mitjançant punts de parada a les pipelines (entorn, tag... segons pertoqui al tipus d'operació).
 
