@@ -15,7 +15,7 @@ Aquesta versió cal indicar-la de forma agnòstica a la tecnologia, per la qual 
 definit aquesta versió en un fitxer en format YML ubicat dins de la carpeta `/sic` a l’arrel del projecte.
 
 En aquest sentit, cal destacar que al SIC 2.0 la versió calia indicar-la al fitxer descriptor `/sic/sic.yml` i,
-en canvi, **al SIC 3.0 aquest fitxer deixa de ser un requerit, permetent indicar la versió al mateix fitxer `/sic/aca.yml`**,
+en canvi, **al SIC 3.0 aquest fitxer deixa de ser un requisit, permetent indicar la versió al mateix fitxer `/sic/aca.yml`**,
 on es configura el funcionament complet de la pipeline. No obstant això, si es vol automatitzar aquest descriptor es pot
 seguir fent ús del mateix per tal d’assegurar l’alineament de versions d’una forma automatitzada.
 
