@@ -48,7 +48,7 @@ El SIC actualment utilitza la <a href="https://www.docker.com/">tecnologia Docke
 Addicionalment, es contempla l'ús d'entorns propis de construcció proporcionats pels proveïdors (DockerFile) que opcionalment podran estendre del catàleg d'imatges corporatiu.<br/>
 <a href="https://canigo.ctti.gencat.cat/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder/">Howto utilitzar imatges Docker Builder</a>
 </div>
-
+</br>
 
 * Els artefactes es construiran una sola vegada i seran els que es desplegaran als diferents entorns. No es contempla, per tant, condicionar la construcció d’artefactes a l’entorn
 on es desplegaran (ús profiles maven o similar).
@@ -61,7 +61,7 @@ la versió funcional del projecte. Per exemple: `version: 1.1.0`
 <div class="message information">
 Si es vol automatitzar aquest descriptor podeu consultar: <a href="https://canigo.ctti.gencat.cat/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml/">Howto automatitzar el descriptor sic.yml</a>
 </div>
-
+</br>
 
 * Per tal d’automatitzar la creació de pipelines, els projectes hauran de disposar de l’arxiu de configuració `aca.yml` que caldrà ubicar dins la mateixa carpeta /sic/.
 Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).

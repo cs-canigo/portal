@@ -71,10 +71,10 @@ info:
   version: 1.0.0
 ```
 
-**NOTA:** Si es vol automatitzar la versió es pot eliminar aquest element i seguir fent ús del descriptor `sic.yml`.
+**NOTA:** Si es vol automatitzar la versió es pot optar per eliminar aquest element i fer ús del descriptor `sic.yml`.
 </br>
 Per a més informació: [Howto automatitzar el descriptor sic.yml] (/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml).
-</br>
+</br></br>
 
 #### info.description
 
