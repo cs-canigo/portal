@@ -15,7 +15,7 @@ Aquesta versió cal indicar-la de forma agnòstica a la tecnologia, per la qual 
 definit aquesta versió en un fitxer en format YML ubicat dins de la carpeta `/sic` a l’arrel del projecte.
 
 En aquest sentit, cal destacar que al SIC 2.0 la versió calia indicar-la al fitxer descriptor `/sic/sic.yml` i,
-en canvi, **al SIC 3.0 aquest fitxer deixa de ser un requisit, permetent indicar la versió al mateix fitxer `/sic/aca.yml`**,
+en canvi, **al SIC 3.0 aquest fitxer deixa de ser un requisit permetent indicar la versió al mateix fitxer `/sic/aca.yml`**,
 on es configura el funcionament complet de la pipeline. No obstant això, si es vol automatitzar aquest descriptor es pot
 seguir fent ús del mateix per tal d’assegurar l’alineament de versions d’una forma automatitzada.
 
@@ -67,7 +67,7 @@ D'aquesta manera, quan es construeixi l'aplicació, automàticament s'establirà
 version: 1.0.0
 ```
 
-D'aquesta manera ja no serà necessari informar de l'atribut [`version`](/sic30-guies/fitxer-aca/#info-version) dins de l'element `info` en el aca.yml
+D'aquesta manera, al SIC 3.0 ja no serà necessari informar l'atribut [`info.version`](/sic30-guies/fitxer-aca/#info-version) en el fitxer `aca.yml`.
 
 </br>
 En el cas d’**aplicacions Canigó, a partir de la versió 3.2.3 aquest descriptor i la configuració Maven requerida, vindrà
