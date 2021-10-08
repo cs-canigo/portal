@@ -1,6 +1,6 @@
 +++
 date = "2021-10-07"
-title = "Automatitzar el descriptor sic.yml"
+title = "Automatitzar el descriptor sic.yml (Maven)"
 description = "Howto per a mostrar com automatitzar el descriptor sic.yml en aplicacions Maven"
 section = "howtos"
 categories = ["sic"]
@@ -16,12 +16,12 @@ definit dita versió en un fitxer en format YML ubicat dins de la carpeta `/sic`
 
 En aquest sentit, cal destacar que al SIC 2.0 la versió calia indicar-la al fitxer descriptor `/sic/sic.yml` i,
 en canvi, **al SIC 3.0 aquest fitxer deixa de ser requerit permetent indicar la versió al mateix fitxer `/sic/aca.yml`**
-on es configura el funcionament de la pipeline. No obstant això, si es vol automatitzar aquest descriptor es pot
+on es configura el funcionament complet de la pipeline. No obstant això, si es vol automatitzar aquest descriptor es pot
 seguir fent ús del mateix per tal d’assegurar l’alineament de versions d’una forma automatitzada.
 
 Aquest howto pretén explicar com automatitzar aquest fitxer `sic.yml` per a aplicacions Maven.
 
-## Com automatitzar el descritor
+## Configuració
 
 A `src/main/resources` cal crear el fitxer `sic.yml` amb el següent contingut:
 
@@ -67,6 +67,7 @@ D'aquesta manera, quan es construeixi l'aplicació, automàticament s'establirà
 version: 1.0.0
 ```
 
+</br>
 En el cas d’**aplicacions Canigó, a partir de la versió 3.2.3 aquest descriptor i la configuració Maven requerida vindrà
 preestablerta** per a nous projectes generats amb el [plugin de Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/)
 per a l’IDE de desenvolupament Eclipse.

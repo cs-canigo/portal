@@ -16,6 +16,7 @@ En aquest apartat s’aniran afegint un seguit d'articles per tal de facilitar l
 
 - [Copiar l'arxiu de configuració .npmrc](/howtos/2021-01-24-SIC-Howto-copiar_npmrc)
 - [Utilitzar imatges Docker Builder](/howtos/2020-06-26-SIC-Howto-utilitzar-imatges-docker-builder)
+- [Automatitzar el descriptor sic.yml](/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml)
 - [Definir exclusions al SonarQube](/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube)
 - [Utilitzar Git-lfs per a arxius de gran tamany](/howtos/2019-10-09-sic-Howto-Git-lfs)
 - [Configurar notificacions via email al Gitlab](/howtos/2019-10-09-sic-Howto-Gitlab-Mail)

@@ -71,8 +71,10 @@ info:
   version: 1.0.0
 ```
 
-Si es vol automatitzar la versió es pot eliminar aquest element i seguir fent ús del descriptor `sic.yml`.
-Per a més informació: <a href="https://canigo.ctti.gencat.cat/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml/">Howto automatitzar el descriptor sic.yml</a>
+**NOTA:** Si es vol automatitzar la versió es pot eliminar aquest element i seguir fent ús del descriptor `sic.yml`.
+</br>
+Per a més informació: [Howto automatitzar el descriptor sic.yml] (/howtos/2021-10-07-sic-howto-automatitzacio-sic-yml).
+</br>
 
 #### info.description
 
