@@ -20,4 +20,4 @@ Una vegada actualitzat el plugin només es podrà generar projectes per Canigó 
 
 Si és necessari crear projectes amb Canigó 3.4 podeu seguir la seguent guia:
 
-- [Creació de projecte amb Canigó 3.4 manualment]()
+- [Creació de projecte amb Canigó 3.4 manualment](/drafts/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment)
