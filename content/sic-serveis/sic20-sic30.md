@@ -63,7 +63,7 @@ En aquest sentit, la situació actual (que és viva i s’anirà actualitzant) i
 |-------|-------|
 |**05-2021**|**Noves** pipelines **cloud**|
 |**07-2021**|**Totes** les pipelines **cloud**|
-|**09-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic (**excepte .NET Framework**)|
+|**10-2021**|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic (**excepte .NET Framework**)|
 |Pendent planificar|**Noves** pipelines **on-premise** amb desplegament delegat i semiautomàtic|
 |Pendent planificar|**Totes** les pipelines **on-premise** amb desplegament delegat i semiautomàtic|
 |Pendent planificar|**Baixa SIC 2.0**|
