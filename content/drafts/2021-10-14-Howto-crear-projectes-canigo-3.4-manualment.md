@@ -1,7 +1,7 @@
 +++
 date        = "2021-10-14"
-title       = "Canigó. Com crear projectes amb Canigó 3.4 manualment"
-description = "Com crear projectes amb Canigó 3.4 manualment sense el plugin del eclipse de Canigó"
+title       = "Canigó. Com crear manualment projectes amb Canigó 3.4"
+description = "Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó"
 section     = "howtos"
 categories  = ["canigo"]
 #key         = "NOVEMBRE2021"
@@ -10,36 +10,49 @@ categories  = ["canigo"]
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar com generar projectes amb Canigó 3.4 manualment sense la utilització del [plugin del eclipse de Canigó](/canigo-download-related/plugin-canigo/).
+L'objectiu d'aquest article és mostrar com generar projectes amb Canigó 3.4 de forma manual sense fes ús del
+[plugin de Canigó](/canigo-download-related/plugin-canigo/).
 
 ## Justificació
 
-Properament Canigó 3.4 deixarà de tenir suport, podeu consultar el [Roadmap de Canigo](/canigo/roadmap/), i la versió amb suport serà la Canigó 3.6, però un projecte pot tenir la necessitat de crear un projecte amb Canigó 3.4 i no amb Canigó 3.6. Una vegada publicat el Canigó 3.6, el plugin del eclipse només generarà projecte per aquesta versió, per tant, si algun projecte té la necessitat de crear projecte amb Canigó 3.4 podrà utilitzar aquesta guia per a generar projectes amb Canigó 3.4 manualment sense el plugin de l'eclipse de Canigó.
+Pròximament Canigó 3.4 deixarà de tenir suport i la versió amb suport serà Canigó 3.6. Un cop publicada
+l’actualització del *plugin*, únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina.
+Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/).
+No obstant això, si es necessita crear projectes amb Canigó 3.4, podeu utilitzar aquesta guia per a generar
+projectes de forma manual.
 
-## Creació de projecte
+## Creació de projectes
 
-El plugin del eclipse utilitza l'archetype maven per generar els projectes amb canigó. Per a crear el projecte amb Canigó 3.4 sense utilitzar el plugin del eclipse de Canigó utilitzarem l'archetype maven del plugin directament.
+El *plugin* de Canigó de l’Eclipse utilitza l'*archetype* Maven per a generar els projectes amb el Framework
+Canigó. Per la qual cosa, per a crear projectes amb Canigó 3.4 caldrà utilitzar l'*archetype* Maven del
+plugin directament, concretament la versió de l'*archetype* `1.6.7`.
 
-La versió de l'archetype maven de Canigó per generar projectes amb Canigó 3.4 és `1.6.7`, així si utilitzem l'execució de maven:
+Exemple de creació d'un projecte amb Canigó 3.4:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.6.7 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
+mvn archetype:generate -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest
+-DarchetypeVersion=1.6.7 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
 ```
 
-On els paràmetres:
+On caldrà indicar:
 
-- -DartifactId: indica el nom del artifact del projecte que volem crear
+- -DartifactId: nom del projecte
 
-- -DgroupId: indica el nom del group del projecte que volem crear
+- -DgroupId: nom del grup del projecte
 
-- -Dversion: indica la versió del projecte que volem crear
+- -Dversion: versió del projecte
 
-- -B: indica que volem generar el projecte amb batch, és a dir, que no ens pregunti i crei el projecte directament
+- -B: permet especificar que es vol generar el projecte amb batch, és a dir, que s’encarregui de crear el projecte
+sense preguntar
 
-Crearà un projecte amb Canigó 3.4
+## Incorporació de mòduls
 
-Una vegada creat el projecte, podeu incorporar els mòduls de Canigó manualment tal i com es detalla a cada mòdul en la [documentació de Canigó](/canigo-documentacio-versions-3x/), tenint en compte el rang de versions dels mòduls per a Canigó 3.4, consultant la [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/)
+Un cop creat el projecte, podeu incorporar els mòduls de Canigó manualment tal com es detalla a
+cada mòdul a la [documentació de Canigó](/canigo-documentacio-versions-3x/) tenint present
+el rang de versions dels mòduls per a Canigó 3.4. Podeu consultar la
+[matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/).
 
-## Documentació
+## Referències
 
-- Per a més informació sobre el archetype de maven podeu consultar: https://maven.apache.org/guides/introduction/introduction-to-archetypes.html
+Per a més informació sobre el *archetype* de Maven podeu consultar:
+https://maven.apache.org/guides/introduction/introduction-to-archetypes.html.
