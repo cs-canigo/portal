@@ -7,27 +7,25 @@ categories  = ["canigo"]
 #key         = "NOVEMBRE2021"
 +++
 
-
 ## Introducció
 
-L'objectiu d'aquest article és mostrar com generar projectes amb Canigó 3.4 de forma manual sense fes ús del
+L'objectiu d'aquest article és mostrar **com generar projectes amb Canigó 3.4 de forma manual** sense fes ús del
 [plugin de Canigó](/canigo-download-related/plugin-canigo/).
 
 ## Justificació
 
-Pròximament Canigó 3.4 deixarà de tenir suport i la versió amb suport serà Canigó 3.6. Un cop publicada
-l’actualització del *plugin*, únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina.
-Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/).
+Pròximament Canigó 3.4 deixarà de tenir suport i la versió amb suport serà Canigó 3.6. **Un cop publicada
+l’actualització del *plugin*, únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina**.
 No obstant això, si es necessita crear projectes amb Canigó 3.4, podeu utilitzar aquesta guia per a generar
-projectes de forma manual.
+projectes de forma manual i incorporar-ne els mòduls necessaris.
+
+Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/).
 
 ## Creació de projectes
 
 El *plugin* de Canigó de l’Eclipse utilitza l'*archetype* Maven per a generar els projectes amb el Framework
 Canigó. Per la qual cosa, per a crear projectes amb Canigó 3.4 caldrà utilitzar l'*archetype* Maven del
-plugin directament, concretament la versió de l'*archetype* `1.6.7`.
-
-Exemple de creació d'un projecte amb Canigó 3.4:
+plugin directament, concretament la versió `1.6.7`, mitjançant una instrucció Maven com es mostra a continuació:
 
 ```
 mvn archetype:generate -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest
