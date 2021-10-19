@@ -1,6 +1,6 @@
 +++
 date        = "2021-10-19"
-title       = "SIC. Posada en servei Plataforma SIC 3.0 per a pipelines on-premise"
+title       = "SIC. Posada en servei Plataforma SIC 3.0 per a desplegaments on-premise"
 description = "El dia 20/10/2021 s'ha posat en servei la nova Plataforma del Sistema d'Integració Contínua 3.0 per a pipelines amb desplegament en infraestructures on-premise"
 #sections    = ["Notícies", "home"]
 #categories  = ["sic"]
@@ -57,7 +57,7 @@ Les etapes previstes de desplegament són les següents:
 
 ## Calendaris
 
-En endavant, tota nova integració de projectes al SIC s’integrarà fent ús de la nova Plataforma si les necessitats
+En endavant, **tota nova integració de projectes al SIC s’integrarà fent ús de la nova Plataforma si les necessitats
 es troben cobertes pel sistema i pròximament es planificarà la migració de les pipelines on-premise**.
 
 <br/>
