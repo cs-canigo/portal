@@ -37,7 +37,7 @@ __Canigó 3__:
 |**canigo.integration.psis**|1.1.2|
 |**canigo.integration.notificacions.electroniques**|1.3.1|
 
-* _Per a més informació consultar la documentació de [Canigó 3](/canigo-documentacio-versions-3x-integracio/)_
+* _Per a més informació consultar la documentació de [Canigó 3](/canigo-documentacio-versions-34-integracio/)_
 
 Els canvis a l'esquema estan operatius des del 21 de desembre a PRE i durant els pròxims mesos s'aniran incorporant a PRO. Recomanem que es realitzin proves contra preproducció i en cas de no tenir nif/nom emissor que es demani a la PICA com més aviat millor.
 

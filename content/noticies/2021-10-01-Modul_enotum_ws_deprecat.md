@@ -10,8 +10,8 @@ key         = "OCTUBRE2021"
 ## Introducció
 
 S'ha fet una anàlisi dels mòduls que apliquen a Canigó 3.4 per a preparar-los per a la següent versió de Canigó 3.6.
-En aquest sentit, el [mòdul d'Enotum_WS](/canigo-documentacio-versions-3x-integracio/modul-enotum-ws/) consistia en
-la publicació dels serveis que ofereix el [mòdul Enotum](/canigo-documentacio-versions-3x-integracio/modul-enotum/) de
+En aquest sentit, el [mòdul d'Enotum_WS](/canigo-documentacio-versions-34-integracio/modul-enotum-ws/) consistia en
+la publicació dels serveis que ofereix el [mòdul Enotum](/canigo-documentacio-versions-34-integracio/modul-enotum/) de
 Canigó. Aquest mòdul aplicava a aplicacions no basades en Spring exposant els *servlets* en el web.xml, per la qual
 cosa aquesta estratègia ja no aplica per a Canigó 3.4.
 

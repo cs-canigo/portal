@@ -48,4 +48,4 @@ proporcionen els components per a obtenir els rols a partir de Gicar utilitzant 
 
 ## Documentació del mòdul
 
-Per a obtenir més informació del Mòdul de Seguretat SAML podeu consultar la documentació del [Mòdul de Seguretat SAML](/canigo-documentacio-versions-3x-core/modul-saml/) al Portal de Frameworks i Solucions d’Arquitectura.
+Per a obtenir més informació del Mòdul de Seguretat SAML podeu consultar la documentació del [Mòdul de Seguretat SAML](/canigo-documentacio-versions-34-core/modul-saml/) al Portal de Frameworks i Solucions d’Arquitectura.

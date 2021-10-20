@@ -334,7 +334,7 @@ Aquest fitxer ha d'estar ubicat a `/src/main/resources/spring/` i ha d'incloure 
 
 Podeu trobar més informació als següents enllaços:
 
-- [Mòdul de Seguretat SAML de Canigó](/canigo-documentacio-versions-3x-core/modul-saml/)
+- [Mòdul de Seguretat SAML de Canigó](/canigo-documentacio-versions-34-core/modul-saml/)
 
 - [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
 

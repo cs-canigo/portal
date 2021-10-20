@@ -11,4 +11,4 @@ S'han publicat les versions 1.1.0 de canigo-connectors-pica-dni per a canigó 2 
 
 Amb els nous canvis per a realitzar una consulta de DNI s'ha d'informar el primer cognom o l'any de naixement de la persona que es cerca, juntament amb els actuals camps obligatoris de documentació i tipus de documentació.
 
-Per a més informació podeu consultar la [documentació del connector](/canigo-documentacio-versions-3x-integracio/modul-dni/)
+Per a més informació podeu consultar la [documentació del connector](/canigo-documentacio-versions-34-integracio/modul-dni/)

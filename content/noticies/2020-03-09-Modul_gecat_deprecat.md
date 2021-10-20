@@ -9,7 +9,7 @@ key         = "NOVEMBRE2020"
 
 ## Introducció
 
-Canigó proporciona el [mòdul de integració amb Gecat](/canigo-documentacio-versions-3x-integracio/modul-gecat/).
+Canigó proporciona el [mòdul de integració amb Gecat](/canigo-documentacio-versions-34-integracio/modul-gecat/).
 Aquest mòdul utilitza una versió antiga del connector amb SAP per XCOM i actualment aquesta forma de connectivitat ja no està suportada.
 
 ## Novetat

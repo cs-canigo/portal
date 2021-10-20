@@ -70,4 +70,4 @@ Els **mòduls que han estat revisats** són els següents:
 Teniu disponible la següent documentació:
 
 - [Matrius de compatibilitats](/canigo-download-related/matrius-compatibilitats/)
-- [Mòdul Sarcat](/canigo-documentacio-versions-3x-integracio/modul-sarcat/)
+- [Mòdul Sarcat](/canigo-documentacio-versions-34-integracio/modul-sarcat/)

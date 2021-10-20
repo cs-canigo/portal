@@ -55,4 +55,4 @@ A la **versió 2.2.0 del Mòdul de Seguretat de Canigó** es proporcionen els co
 
 ## Documentació del mòdul
 
-Per a obtenir més informació del Mòdul de Seguretat podeu consultar la documentació del [Mòdul de Seguretat](/canigo-documentacio-versions-3x-core/modul-seguretat/) al Portal de Frameworks i Solucions d’Arquitectura.
+Per a obtenir més informació del Mòdul de Seguretat podeu consultar la documentació del [Mòdul de Seguretat](/canigo-documentacio-versions-34-core/modul-seguretat/) al Portal de Frameworks i Solucions d’Arquitectura.

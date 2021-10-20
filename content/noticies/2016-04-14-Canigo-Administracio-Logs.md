@@ -35,4 +35,4 @@ Amb el Plugin de Canigó per Eclipse, en cas de crear una aplicació amb arquite
 
 Des del CS Canigó es proporciona una aplicació de demo d’aquest mòdul. Podeu trobar el codi font en el següent [enllaç](https://github.com/gencat/demoAdminLogs).
 
-Per a més informació sobre el mòdul podeu consultar la [documentació](/canigo-documentacio-versions-3x-core/modul-logging-admin/) publicada en el portal.
+Per a més informació sobre el mòdul podeu consultar la [documentació](/canigo-documentacio-versions-34-core/modul-logging-admin/) publicada en el portal.

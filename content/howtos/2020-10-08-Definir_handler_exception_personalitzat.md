@@ -9,14 +9,14 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Canigó proporciona una sèrie objectes i handlers per a la gestió d'excepcions al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/)
+Canigó proporciona una sèrie objectes i handlers per a la gestió d'excepcions al [Mòdul d'excepcions](/canigo-documentacio-versions-34-core/modul-excepcions/)
 incloent, per defecte, una gestió de les excepcions base més comunes. En aquest how-to explicarem:
 
 - 1. Com personalitzar la gestió de les excepcions base més comunes,
 - 2. Com definir un handler per una excepció base sense gestió per defecte,
 - 3. Com definir una excepció pròpia i definir-li un handler
 
-Tal i com es detalla al [Mòdul d'excepcions](/canigo-documentacio-versions-3x-core/modul-excepcions/), l'objecte
+Tal i com es detalla al [Mòdul d'excepcions](/canigo-documentacio-versions-34-core/modul-excepcions/), l'objecte
 *cat.gencat.ctti.canigo.arch.web.rs.controller.exception.handler.GlobalDefaultExceptionHandler* conté els diferents handlers
 per a la gestió per defecte de les excepcions base més comunes. Així si, per exemple tenim una excepció a l'aplicació de
 tipus *java.lang.Exception*, el servei Rest podria retornar quelcom similar a:

@@ -63,4 +63,4 @@ weight      = 1
    - Suport a programació reactiva.
    - Suport a programació funcional.
    - Suport configuració propietats amb yaml.
-- [Actualització del mòdul integració ARESTA/PSGD] (/canigo-documentacio-versions-3x-integracio/modul-psgd/)
+- [Actualització del mòdul integració ARESTA/PSGD] (/canigo-documentacio-versions-34-integracio/modul-psgd/)

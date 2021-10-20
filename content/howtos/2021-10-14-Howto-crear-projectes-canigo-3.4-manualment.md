@@ -46,7 +46,7 @@ sense preguntar
 ## Incorporació de mòduls
 
 Un cop creat el projecte, podeu incorporar els mòduls de Canigó manualment tal com es detalla a
-cada mòdul a la [documentació de Canigó](/canigo-documentacio-versions-3x/) tenint present
+cada mòdul a la [documentació de Canigó](/canigo-documentacio-versions-34/) tenint present
 el rang de versions dels mòduls per a Canigó 3.4. Podeu consultar la
 [matriu de compatibilitats](/canigo-download-related/matrius-compatibilitats/).
 

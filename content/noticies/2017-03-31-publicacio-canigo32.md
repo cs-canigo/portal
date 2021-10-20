@@ -26,7 +26,7 @@ Les principals característiques d'aquest mòdul són les següents:
 
 Tot el contingut es serveix en format JSON.
 
-Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-rs/) del portal.
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-rs/) del portal.
 
 #### Mòdul de Seguretat [_ACTUALITZAT!_]
 
@@ -35,7 +35,7 @@ Com a gran novetat al Mòdul de Seguretat s'incorpora el suport a [JWT (JSON Web
 L'ús de JWT és compatible amb GICAR i la resta de proveïdors de seguretat suportats per Canigó. 
 Un cop l'usuari ha estat autenticat, el backend Canigó genera un token que haurà de ser enviat pel client a la capçalera HTTP per a cada petició.
 
-Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-seguretat/) del portal.
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-seguretat/) del portal.
 
 #### Mòdul de Persistència (JPA) [_ACTUALITZAT!_]
 
@@ -45,7 +45,7 @@ Gràcies a Spring Data JPA i l'ús de repositoris es redueix el codi necessari p
 
 QueryDSL permet la generació de queries dinàmiques de forma segura mitjançant codi. És compatible amb JPA i, de la mateixa manera que Spring Data, dóna suport als motors de bases de dades més populars (Oracle, MySQL, PostgreSQL, SQLServer, MongoDB).
 
-Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-jpa/) del portal.
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-jpa/) del portal.
 
 #### Mòdul de Traces [_ACTUALITZAT!_]
 
@@ -58,7 +58,7 @@ L'actualització de Log4j a SLF4J+Log4j2 és la principal novetat que incorpora 
 * Fàcilment extensible
 * Configuració en més formats: XML, JSON, YAML
 
-Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-traces/) del portal.
+Podeu trobar tota la informació d'aquest mòdul a la següent [pàgina](http://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-traces/) del portal.
 
 #### Mòdul JSF [_DEPRECAT!_]
 

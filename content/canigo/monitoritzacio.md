@@ -16,13 +16,13 @@ Gràcies a aquest mòdul l'aplicació pot expossar mètriques de número de peti
 
 ![Instrumentació Canigó](/images/news/instrumentacio-canigo.png)
 
-_Documentació de referència_: https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-instrumentacio/
+_Documentació de referència_: https://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-instrumentacio/
 
 ### Administració de logs (canigo.operation.logging)
 
 El mòdul d'administració de logs permet visualitzar traces en temps real gràcies a la tecnologia WebSockets, canviar el nivell de logs en calent, realitzar cerques, i descàrrega dels fitxers de log generats per l'aplicació.
 
-_Documentació de referència_: https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-logging-admin/
+_Documentació de referència_: https://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-logging-admin/
 
 #### Configuració nivell de logs
 

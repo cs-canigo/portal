@@ -77,7 +77,7 @@ Per a aplicacions amb Canigó 3.4, es recomana passar les propietats definides e
 
 En properes versions de Canigó s'eliminarà l'actual funcionalitat de configuració de propietats pròpia de Canigó, per utilitzar les funcionalitats de configuració de propietats estàndard de Spring.
 
-Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-3x-core/modul-configuracio/).
+Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-34-core/modul-configuracio/).
 
 ### Programació amb estàndard de Streams Reactius
 
@@ -112,7 +112,7 @@ Un exemple pràctic on podrien actuar els Streams Reactius seria quan tenim un r
 
 Els endpoints web de Spring MVC i WebFlux suporten reactiu com a retorn, però WebFlux, a més, proporciona suport per entrada de dades reactiva. Per a que un repositori de dades suporti reactiu el seu driver ha de ser no bloquejant (non-blocking). Els drivers de bases de dades que actualment proporcionen non-blocking, són: MongoDB, Redis, Cassandra i Couchbase.
 
-Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la següent guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-3x-altres/modul-mongo-reactiu/).
+Per a mostrar com utilitzar reactiu amb un repositori de dades s'ha publicat la següent guia d'[Utilització de mongo reactiu](/canigo-documentacio-versions-34-altres/modul-mongo-reactiu/).
 
 Per a més informació sobre programació reactiva amb Spring 5 podeu consultar aquest [enllaç](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html).
 
@@ -128,7 +128,7 @@ A la següent imatge es pot observar la comparativa de funcionalitats entre Spri
 
 Spring WebFlux està suportat a Tomcat, Jetty, Netty, Undertow i contenidors Servlet 3.1+.
 
-Per a mostrar com utilitzar aquest nou paradigma de programació web s'ha publicat la guia [Utilització de web flux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
+Per a mostrar com utilitzar aquest nou paradigma de programació web s'ha publicat la guia [Utilització de web flux](/canigo-documentacio-versions-34-altres/modul-webFlux/).
 
 Per a més informació sobre programació funcional amb Spring 5 podeu consultar aquest [enllaç](https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn).
 
@@ -174,7 +174,7 @@ L'objectiu d'aquest connector és proporcionar un punt d’accés cap a la Plata
 
 A la versió 3.4.0 de Canigó, s'ha alineat el connector amb PSGD o ARESTA a la versió 6.0.
 
-Podeu consultar la documentació d'aquest connector a [Mòduls d'Integració - ARESTA (PSGD)](/canigo-documentacio-versions-3x-integracio/modul-psgd/).
+Podeu consultar la documentació d'aquest connector a [Mòduls d'Integració - ARESTA (PSGD)](/canigo-documentacio-versions-34-integracio/modul-psgd/).
 
 ## Com utilitzar Canigó 3.4.0
 

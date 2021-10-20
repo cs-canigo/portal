@@ -9,7 +9,7 @@ key         = "NOVEMBRE2020"
 
 ## Introducció
 
-Canigó proporciona el [mòdul d’integració amb Documentum](/canigo-documentacio-versions-3x-integracio/modul-documentum/).
+Canigó proporciona el [mòdul d’integració amb Documentum](/canigo-documentacio-versions-34-integracio/modul-documentum/).
 Les versions de Documentum que suporta són les versions 5.3, 6.1 i 7.1 i aquestes versions han estat deprecades en
 el [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/).
 

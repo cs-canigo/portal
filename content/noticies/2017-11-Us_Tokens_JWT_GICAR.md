@@ -21,4 +21,4 @@ El funcionament del sistema és el següent:
 - Si el servidor rep una petició REST sense tenir un token vàlid, aquest retorna un error de "no autenticat" (Error HTTP 401).
 - El client quan rep un error HTTP 401 ha de redirigir a l'usuari a la pantalla de login de GICAR.
 
-Al següent [enllaç](/canigo-documentacio-versions-3x-core/modul-seguretat/) es pot consultar més informació sobre el funcionament del servei de Seguretat de Canigó.
+Al següent [enllaç](/canigo-documentacio-versions-34-core/modul-seguretat/) es pot consultar més informació sobre el funcionament del servei de Seguretat de Canigó.

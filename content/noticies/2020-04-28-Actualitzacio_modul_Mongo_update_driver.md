@@ -46,4 +46,4 @@ Podeu consultar el detall de les novetats a: https://docs.mongodb.com/manual/rel
 ## Documentació del mòdul
 
 Per a obtenir més informació del Mòdul de MongoDB podeu consultar la documentació
-del [Mòdul de MongoDB](/canigo-documentacio-versions-3x-core/modul-mongodb/) al Portal de Frameworks i Solucions d’Arquitectura.
+del [Mòdul de MongoDB](/canigo-documentacio-versions-34-core/modul-mongodb/) al Portal de Frameworks i Solucions d’Arquitectura.

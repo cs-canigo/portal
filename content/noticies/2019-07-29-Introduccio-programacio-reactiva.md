@@ -34,4 +34,4 @@ En un sistema amb programació reactiva, si s'ha connectat algun component als n
 
 Canigó amb la publicació de Canigó 3.4 proporciona les funcionalitats de programació reactiva.
 
-Per a conèixer l’aplicació de programació reactiva a Canigó podeu consultar [Mongodb reactiu](/canigo-documentacio-versions-3x-altres/modul-mongodb-reactiu/).
+Per a conèixer l’aplicació de programació reactiva a Canigó podeu consultar [Mongodb reactiu](/canigo-documentacio-versions-34-altres/modul-mongodb-reactiu/).

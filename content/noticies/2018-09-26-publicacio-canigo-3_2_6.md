@@ -32,7 +32,7 @@ El nou mòdul "canigo.persistence.mongodb" utilitza Spring Data MongoDB i QueryD
 
 Com amb el mòdul JPA per a bases de dades relacionals, en aquest nou mòdul per a bases de dades MongoDB, es proporcionen les configuracions i funcionalitats per a la generació de consultes de forma fàcil i senzilla.
 
-En cas de tenir qualsevol dubte en l'ús del mòdul de Canigó 3 amb MongoDB podeu consultar la [documentació del mòdul](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-3x-core/modul-mongodb) publicada al portal, posar-vos posar en contacte amb el CS Caniǵo a través del [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/CAN) amb una petició de consulta o suport, o bé enviant-nos un correu a la nostra [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
+En cas de tenir qualsevol dubte en l'ús del mòdul de Canigó 3 amb MongoDB podeu consultar la [documentació del mòdul](https://canigo.ctti.gencat.cat/canigo-documentacio-versions-34-core/modul-mongodb) publicada al portal, posar-vos posar en contacte amb el CS Caniǵo a través del [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/CAN) amb una petició de consulta o suport, o bé enviant-nos un correu a la nostra [bústia](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
 
 ## Mòdul canigo.persistence.core
 

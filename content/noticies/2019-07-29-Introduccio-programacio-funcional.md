@@ -92,4 +92,4 @@ Com podem observar, amb una programació funcional es redueix les línies de cod
 Canigó amb la publicació de Canigó 3.4 proporciona les funcionalitats de programació funcional.
 
 Per a conèixer l'aplicació de programació funcional a Canigó podeu consultar
-[modul-webFlux](/canigo-documentacio-versions-3x-altres/modul-webFlux/).
+[modul-webFlux](/canigo-documentacio-versions-34-altres/modul-webFlux/).

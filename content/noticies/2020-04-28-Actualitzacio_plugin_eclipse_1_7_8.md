@@ -33,5 +33,5 @@ Per a instal·lar o actualitzar la versió del _plugin_ serà necessari seguir e
 Teniu disponible la següent documentació:
 
 * [Plugin Canigó per a Eclipse](/canigo-download-related/plugin-canigo/)
-* [Mòdul de Mongodb](/canigo-documentacio-versions-3x-core/modul-mongodb/)
+* [Mòdul de Mongodb](/canigo-documentacio-versions-34-core/modul-mongodb/)
 
