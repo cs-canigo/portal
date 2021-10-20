@@ -19,7 +19,7 @@ per a passar a generar projectes per aquesta versió del Framework.
 
 **Un cop publicada l’actualització del plugin, únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina**.
 No obstant això, si es necessita crear projectes amb Canigó 3.4, podeu seguir la següent guia:
-[Creació manual de projecte amb Canigó 3.4](/drafts/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment).
+[Creació manual de projecte amb Canigó 3.4](/noticies/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment).
 
 ## Documentació
 
