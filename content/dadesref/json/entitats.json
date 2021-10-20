@@ -27,6 +27,60 @@
         "Data_actualitzacio": "31/03/2021"
     },
     {
+        "Id": "dtarq161",
+        "Nom": "Agrupació temàtica nivell domini",
+        "Ambit": "Administració pública",
+        "Descripcio": "Llistat de dominis, primer nivell de la taxonomia definida per classificar serveis, conceptes, etc. segons la seva temàtica.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Digital",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacio_tematica_nivell_domini_ATR.docx",
+                "ifitxer_xls": "Agrupacio_tematica_nivell_domini.xlsx",
+                "idatacreacio": "18/10/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/10/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Agrupaci%C3%B3-tem%C3%A0tica-nivell-domini/gnue-xxk3",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIO_TEMATICA_NIVELL_DOMINI",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/10/2021",
+        "Data_actualitzacio": "20/10/2021"
+    },
+    {
+        "Id": "dtarq162",
+        "Nom": "Agrupació temàtica nivell subdomini",
+        "Ambit": "Administració pública",
+        "Descripcio": "Llistat de subdominis, segon nivell de la taxonomia definida per classificar serveis, conceptes, etc. segons la seva temàtica.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Digital",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacio_tematica_nivell_subdomini_ATR.docx",
+                "ifitxer_xls": "Agrupacio_tematica_nivell_subdomini.xlsx",
+                "idatacreacio": "18/10/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/10/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Agrupaci%C3%B3-tem%C3%A0tica-nivell-subdomini/6y26-js68",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIO_TEMATICA_NIVELL_SUBDOMINI",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/10/2021",
+        "Data_actualitzacio": "20/10/2021"
+    },
+    {
         "Id": "dtarq101",
         "Nom": "Departaments",
         "Ambit": "Administració pública",
