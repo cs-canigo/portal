@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó] (/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)
+
 - [Com utilitzar Spring Retry per a realitzar reintents d'accions] (/howtos/2021-07-26-Howto-spring_retry/)
 
 - [Com exposar i capturar mètriques amb Prometheus i Grafana] (/howtos/2021-01-02-Howto-spring-expose-metrics/)
