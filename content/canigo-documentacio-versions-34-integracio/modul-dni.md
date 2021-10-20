@@ -5,7 +5,7 @@ description = "Servei de verificació i consulta de DNI de la DGP."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-dni"
+"/canigo-documentacio-versions-3x-integracio/modul-dni"
 ]
 +++
 

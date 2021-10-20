@@ -5,7 +5,7 @@ description = "Mòdul de fusió de documents."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 aliases       = [
-"/canigo-documentacio-versions-34-suport/modul-fusio-documents"
+"/canigo-documentacio-versions-3x-suport/modul-fusio-documents"
 ]
 +++
 

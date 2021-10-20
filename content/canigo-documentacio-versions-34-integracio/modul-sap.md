@@ -5,7 +5,7 @@ description = "Interfície d'accés als Backends SAP de la Generalitat."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 12
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-sap"
+"/canigo-documentacio-versions-3x-integracio/modul-sap"
 ]
 +++
 

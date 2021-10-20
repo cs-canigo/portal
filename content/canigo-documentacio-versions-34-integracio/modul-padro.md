@@ -5,7 +5,7 @@ description = "Serveis d'empadronament publicats de la plataforma PICA."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 9
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-padro"
+"/canigo-documentacio-versions-3x-integracio/modul-padro"
 ]
 +++
 

@@ -5,7 +5,7 @@ description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 13
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-sarcat-pica"
+"/canigo-documentacio-versions-3x-integracio/modul-sarcat-pica"
 ]
 +++
 

@@ -5,7 +5,7 @@ description = "Enviament de correu electrònic."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
 aliases       = [
-"/canigo-documentacio-versions-34-suport/modul-correu"
+"/canigo-documentacio-versions-3x-suport/modul-correu"
 ]
 +++
 

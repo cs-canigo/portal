@@ -5,7 +5,7 @@ description = "Notificacions electròniques Web Service (Deprecat)."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 6
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-enotum-ws"
+"/canigo-documentacio-versions-3x-integracio/modul-enotum-ws"
 ]
 +++
 

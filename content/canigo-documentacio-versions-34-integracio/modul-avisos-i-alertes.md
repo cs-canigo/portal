@@ -5,7 +5,7 @@ description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei 
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-avisos-i-alertes"
+"/canigo-documentacio-versions-3x-integracio/modul-avisos-i-alertes"
 ]
 +++
 

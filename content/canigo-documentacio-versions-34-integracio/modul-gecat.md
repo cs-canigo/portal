@@ -5,7 +5,7 @@ description = "Utilització del connector al sistema SAP del Gecat"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 7
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-gecat"
+"/canigo-documentacio-versions-3x-integracio/modul-gecat"
 ]
 +++
 

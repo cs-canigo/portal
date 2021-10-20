@@ -5,7 +5,7 @@ description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.lab
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 10
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-pica"
+"/canigo-documentacio-versions-3x-integracio/modul-pica"
 ]
 +++
 

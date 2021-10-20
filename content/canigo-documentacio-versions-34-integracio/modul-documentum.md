@@ -5,7 +5,7 @@ description = "Accés al gestor documental corporatiu del CTTI."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-documentum"
+"/canigo-documentacio-versions-3x-integracio/modul-documentum"
 ]
 +++
 

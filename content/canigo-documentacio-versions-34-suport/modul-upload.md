@@ -5,7 +5,7 @@ description = "Pujada d'arxius al servidor."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
 aliases       = [
-"/canigo-documentacio-versions-34-suport/modul-upload"
+"/canigo-documentacio-versions-3x-suport/modul-upload"
 ]
 +++
 

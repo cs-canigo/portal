@@ -5,7 +5,7 @@ description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 17
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-psgd"
+"/canigo-documentacio-versions-3x-integracio/modul-psgd"
 ]
 +++
 

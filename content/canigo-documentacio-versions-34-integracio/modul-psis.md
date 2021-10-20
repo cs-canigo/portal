@@ -5,7 +5,7 @@ description = "Validació de Signatures electròniques mitjançant els serveis d
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 11
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-psis"
+"/canigo-documentacio-versions-3x-integracio/modul-psis"
 ]
 +++
 

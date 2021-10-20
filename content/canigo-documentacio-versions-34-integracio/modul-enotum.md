@@ -5,7 +5,7 @@ description = "Connector de la Pica que simplifica l'utilització del servei de 
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
 aliases       = [
-"/canigo-documentacio-versions-34-integracio/modul-enotum"
+"/canigo-documentacio-versions-3x-integracio/modul-enotum"
 ]
 +++
 
