@@ -4,6 +4,9 @@ title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 13
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-sarcat-pica"
+]
 +++
 
 ## Propòsit

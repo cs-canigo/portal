@@ -4,6 +4,9 @@ title       = "Enotum"
 description = "Connector de la Pica que simplifica l'utilització del servei de Notificacions Telemàtiques de la Generalitat."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-enotum"
+]
 +++
 
 ## Propòsit

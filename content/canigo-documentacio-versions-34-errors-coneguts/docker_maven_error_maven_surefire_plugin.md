@@ -4,6 +4,9 @@ title       = "Error al construir amb docker maven si s'utilitza plugin maven su
 description = "Error al realitzar la construcció d'una aplicació amb el docker maven si aquesta utilitza el plugin maven surfire"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
+aliases       = [
+"/canigo-documentacio-versions-3x-errors-coneguts/docker_maven_error_maven_surefire_plugin"
+]
 +++
 
 ## Introducció al problema

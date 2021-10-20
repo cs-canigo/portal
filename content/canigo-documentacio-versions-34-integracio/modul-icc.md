@@ -4,6 +4,9 @@ title       = "ICC"
 description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 8
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-icc"
+]
 +++
 
 ## Introducció

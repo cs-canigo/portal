@@ -4,6 +4,9 @@ title       = "Documentum (Deprecat)"
 description = "Accés al gestor documental corporatiu del CTTI."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-documentum"
+]
 +++
 
 <div class="message warning">

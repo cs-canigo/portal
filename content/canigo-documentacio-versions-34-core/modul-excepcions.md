@@ -4,6 +4,9 @@ title       = "Mòdul d'excepcions"
 description = "Mòdul per a la gestió d'excepcions de les aplicacions"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-excepcions"
+]
 +++
 
 ## Propòsit

@@ -4,6 +4,9 @@ title       = "Proves"
 description = "Proves unitàries"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-proves"
+]
 +++
 
 ## Propòsit

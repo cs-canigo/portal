@@ -4,6 +4,9 @@ title       = "Mòdul Seguretat SAML"
 description = "Autenticació d'usuaris utilitzant SAML2"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 10
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-saml"
+]
 +++
 
 ## Propòsit

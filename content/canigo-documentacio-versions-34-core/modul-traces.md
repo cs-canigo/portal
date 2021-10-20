@@ -4,6 +4,9 @@ title       = "Mòdul de traces"
 description = "Mòdul de detecció d'errades i registre de les operacions realitzades a l'aplicació."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 7
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-traces"
+]
 +++
 
 ## Introducció

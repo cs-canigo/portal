@@ -5,6 +5,9 @@ description = "Com configurar aplicació Canigó 3.4 per utilitzar mongo db reac
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 6
 key         = "ABRIL2019"
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-mongodb-reactiu"
+]
 +++
 
 ## Propòsit

@@ -4,6 +4,9 @@ title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-avisos-i-alertes"
+]
 +++
 
 ## Introducció

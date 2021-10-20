@@ -4,7 +4,9 @@ title       = "Enotum_WS (Deprecat)"
 description = "Notificacions electròniques Web Service (Deprecat)."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 6
-
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-enotum-ws"
+]
 +++
 
 <div class="message warning">

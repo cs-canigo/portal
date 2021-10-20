@@ -4,6 +4,9 @@ title       = "SFTP"
 description = "Transferència d'arxius de manera segura."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
+aliases       = [
+"/canigo-documentacio-versions-34-suport/modul-sftp"
+]
 +++
 
 ## Propòsit

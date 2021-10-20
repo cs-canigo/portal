@@ -4,6 +4,9 @@ title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-instrumentacio"
+]
 +++
 
 ## Propòsit

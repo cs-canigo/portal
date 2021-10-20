@@ -4,6 +4,9 @@ title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-antivirus"
+]
 +++
 
 ## Propòsit

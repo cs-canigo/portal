@@ -4,6 +4,9 @@ title       = "PICA"
 description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.laboració Administrativa)."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 10
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-pica"
+]
 +++
 
 ## Propòsit

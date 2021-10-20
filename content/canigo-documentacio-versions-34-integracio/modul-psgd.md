@@ -4,6 +4,9 @@ title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 17
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-psgd"
+]
 +++
 
 ## Introducció

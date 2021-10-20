@@ -4,6 +4,9 @@ title       = "Planificador de tasques"
 description = "Planificador de tasques"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-planificador"
+]
 +++
 
 ## Propòsit

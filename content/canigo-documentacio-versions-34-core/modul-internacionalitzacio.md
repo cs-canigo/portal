@@ -4,6 +4,9 @@ title       = "Mòdul d'internacionalització"
 description = "Mòdul d'internacionalització."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-internacionalitzacio"
+]
 +++
 
 ## Propòsit

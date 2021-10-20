@@ -4,6 +4,9 @@ title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 16
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-tributs"
+]
 +++
 
 ## Introducció

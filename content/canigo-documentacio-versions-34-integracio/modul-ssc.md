@@ -4,6 +4,9 @@ title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 15
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-ssc"
+]
 +++
 
 ## Introducció

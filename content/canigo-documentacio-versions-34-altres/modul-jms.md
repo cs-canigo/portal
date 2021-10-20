@@ -4,6 +4,9 @@ title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-jms"
+]
 +++
 
 ## Propòsit

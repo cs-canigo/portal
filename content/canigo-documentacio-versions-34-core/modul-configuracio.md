@@ -5,6 +5,9 @@ description = "Configuracio de les propietats dels components de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
 toc 		    = true
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-configuracio"
+]
 +++
 
 ## Propòsit

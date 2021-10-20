@@ -4,6 +4,9 @@ title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 11
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-psis"
+]
 +++
 
 ## Propòsit

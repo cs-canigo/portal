@@ -4,6 +4,9 @@ title       = "Monitorització"
 description = "Monitorització de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 8
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-monitoritzacio"
+]
 +++
 
 ## Introducció

@@ -4,6 +4,9 @@ title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-mongodb"
+]
 +++
 
 ## Propòsit

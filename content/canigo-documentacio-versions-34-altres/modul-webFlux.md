@@ -5,6 +5,9 @@ description = "Com configurar aplicació Canigó 3.4 per utilitzar WebFlux"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
 key         = "ABRIL2019"
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-webFlux"
+]
 +++
 
 ## Propòsit

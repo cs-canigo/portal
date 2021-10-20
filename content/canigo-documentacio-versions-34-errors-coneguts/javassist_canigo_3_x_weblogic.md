@@ -4,6 +4,9 @@ title       = "Error llibreria javassist amb Canigó 3.x i Weblogic"
 description = "Conflicte de versions de la llibreria javassist amb Canigó 3.x i Weblogic"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
+aliases       = [
+"/canigo-documentacio-versions-3x-errors-coneguts/javassist_canigo_3_x_weblogic"
+]
 +++
 
 ## Introducció al problema

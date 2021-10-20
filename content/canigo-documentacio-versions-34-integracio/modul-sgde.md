@@ -4,6 +4,9 @@ title       = "SGDE"
 description = "Servei de Gestió del Document Electrònic."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 14
+aliases       = [
+"/canigo-documentacio-versions-34-integracio/modul-sgde"
+]
 +++
 
 ## Introducció

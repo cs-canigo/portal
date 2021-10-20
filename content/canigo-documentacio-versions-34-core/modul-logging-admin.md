@@ -4,6 +4,9 @@ title       = "Administració de logs"
 description = "Mòdul per administrar els logs de l'aplicació"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 11
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-logging-admin"
+]
 +++
 
 ## Propòsit

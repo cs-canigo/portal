@@ -4,6 +4,9 @@ title       = "Mòdul RS"
 description = "Mòdul RESTful Services"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-rs"
+]
 +++
 
 ## Propòsit

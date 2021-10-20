@@ -4,6 +4,9 @@ title       = "Webservices"
 description = "Webservices"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
+aliases       = [
+"/canigo-documentacio-versions-3x-altres/modul-webservices"
+]
 +++
 
 ## Propòsit

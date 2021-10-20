@@ -4,6 +4,9 @@ title       = "LOPD"
 description = "Aplicació de protecció de dades."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
+aliases       = [
+"/canigo-documentacio-versions-34-suport/modul-lopd"
+]
 +++
 
 ## Propòsit

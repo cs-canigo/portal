@@ -4,6 +4,9 @@ title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 9
+aliases       = [
+"/canigo-documentacio-versions-3x-core/modul-seguretat"
+]
 +++
 
 ## Propòsit
