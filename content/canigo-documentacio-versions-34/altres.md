@@ -6,4 +6,7 @@ sections    = "Documentació Versió 3.4"
 enllac		= "/canigo-documentacio-versions-34-altres"
 no_index 	= true
 weight 		= 4
+aliases       = [
+"/canigo-documentacio-versions-3x/altres"
+]
 +++
