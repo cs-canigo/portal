@@ -2,25 +2,7 @@
 {{ $section := .Section | html | lower}}
 
 <!-- switch subseccions -->
-{{ if or (eq $title "canigo-documentacio") (eq $section "canigo-documentacio") }}
-	Documentació
-{{ else if or (eq $title "canigo-documentacio-versions-36") (eq $section "canigo-documentacio-versions-36") }}
-	Documentació versió 3.6	
-{{ else if or (eq $title "canigo-documentacio-versions-34-core") (eq $section "canigo-documentacio-versions-34-core") (eq $title "canigo-documentacio-versions-36-core") (eq $section "canigo-documentacio-versions-36-core") }}
-	Mòduls Generals
-{{ else if or (eq $title "canigo-documentacio-versions-34-integracio") (eq $section "canigo-documentacio-versions-34-integracio") (eq $title "canigo-documentacio-versions-36-integracio") (eq $section "canigo-documentacio-versions-36-integracio") }}
-	Mòduls d'Integració
-{{ else if or (eq $title "canigo-documentacio-versions-34-suport") (eq $section "canigo-documentacio-versions-34-suport") (eq $title "canigo-documentacio-versions-36-suport") (eq $section "canigo-documentacio-versions-36-suport") }}
-	Mòduls de Suport
-{{ else if or (eq $title "canigo-documentacio-versions-34-altres") (eq $section "canigo-documentacio-versions-34-altres") (eq $title "canigo-documentacio-versions-36-altres") (eq $section "canigo-documentacio-versions-36-altres") }}
-	Mòduls Altres
-{{ else if or (eq $title "canigo-documentacio-versions-34-errors-coneguts") (eq $section "canigo-documentacio-versions-34-errors-coneguts") (eq $title "canigo-documentacio-versions-36-errors-coneguts") (eq $section "canigo-documentacio-versions-36-errors-coneguts") }}
-	Errors Coneguts
-{{ else if or (eq $title "canigo-documentacio-versions") (eq $section "canigo-documentacio-versions") }}
-	Versions
-{{ else if or (eq $title "canigo-documentacio-versions-anteriors") (eq $section "canigo-documentacio-versions-anteriors") }}
-	Versions anteriors
-{{ else if (eq $title "sic-serveis") }}
+{{ if (eq $title "sic-serveis") }}
 	Serveis
 {{ else if (eq $title "sic20-serveis") }}
 	Serveis (SIC 2.0)
