@@ -6,5 +6,5 @@ sections    = "Documentació versions Canigó"
 enllac		= "/canigo-documentacio-versions-34"
 no_index 	= true
 taxonomies  = []
-weight 		= 1
+weight 		= 2
 +++

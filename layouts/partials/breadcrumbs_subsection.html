@@ -169,6 +169,29 @@
 
 {{ end }}
 
+{{ if or (eq $title "canigo-documentacio-versions-34-errors-coneguts") (eq $section "canigo-documentacio-versions-34-errors-coneguts") }}
+	<a href="/canigo/">Framework Canigó</a> </li>
+	<li>
+		<a href="/canigo-documentacio/">Documentació</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions/">Versions</a>
+	</li>
+
+	<li>
+		<a href="/canigo-documentacio-versions-34">Versió 3.4</a>
+	</li>
+
+	<li>
+		{{ if gt (len $section) 0 }}
+			<a href="/canigo-documentacio-versions-34-errors-coneguts">Errors Coneguts</a>
+		{{ else }}
+			Errors Coneguts
+		{{ end }}
+
+{{ end }}
+
 <!-- Canigó - download - related-->
 {{ if or (eq $title "canigo-download-related") (eq $section "canigo-download-related") }}
 	<a href="/canigo/">Framework Canigó</a> </li>

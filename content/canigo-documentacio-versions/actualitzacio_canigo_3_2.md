@@ -6,6 +6,6 @@ sections    = "Documentació versions Canigó"
 enllac		= "/howtos/2017-08-Howto-Actualitzacio_Canigo3_1_Canigo3_2/"
 no_index 	= true
 taxonomies  = []
-weight 		= 3
+weight 		= 4
 +++
 
