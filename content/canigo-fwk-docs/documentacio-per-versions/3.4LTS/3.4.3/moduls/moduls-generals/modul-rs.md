@@ -2,7 +2,7 @@
 date        = "2017-03-29T09:26:16+01:00"
 title       = "Mòdul RS"
 description = "Mòdul RESTful Services"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 +++
 

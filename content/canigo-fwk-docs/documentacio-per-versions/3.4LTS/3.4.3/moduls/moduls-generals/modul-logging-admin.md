@@ -2,7 +2,7 @@
 date        = "2015-03-27T10:44:27+01:00"
 title       = "Administració de logs"
 description = "Mòdul per administrar els logs de l'aplicació"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 11
 +++
 

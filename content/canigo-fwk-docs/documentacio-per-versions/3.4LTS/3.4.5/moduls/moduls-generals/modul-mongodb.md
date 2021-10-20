@@ -2,7 +2,7 @@
 date        = "2020-05-21"
 title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
 +++
 

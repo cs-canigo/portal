@@ -2,7 +2,7 @@
 date        = "2015-03-12T10:00:15+01:00"
 title       = "Mòdul d'internacionalització"
 description = "Mòdul d'internacionalització."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 5
 +++
 

@@ -2,7 +2,7 @@
 date        = "2020-06-11"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 9
 +++
 

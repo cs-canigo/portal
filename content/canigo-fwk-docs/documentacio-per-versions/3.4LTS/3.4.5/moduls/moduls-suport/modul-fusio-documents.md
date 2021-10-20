@@ -2,7 +2,7 @@
 date        = "2015-04-02T11:06:02+02:00"
 title       = "Fusió de documents"
 description = "Mòdul de fusió de documents."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 +++
 

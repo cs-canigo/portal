@@ -2,7 +2,7 @@
 date        = "2018-10-16T12:04:16+01:00"
 title       = "Suport a tipus de dades JSON al mòdul de persistència de Canigó"
 description = "Aquest howTo descriu com utilitzar el tipus de dada JSON existent a PostgreSQL i MySql amb JPA"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 8
 +++
 

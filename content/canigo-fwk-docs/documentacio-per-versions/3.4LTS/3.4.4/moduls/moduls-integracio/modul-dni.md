@@ -2,7 +2,7 @@
 date        = "2015-03-19T17:42:01+01:00"
 title       = "DNI"
 description = "Servei de verificació i consulta de DNI de la DGP."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
 +++
 

@@ -2,7 +2,7 @@
 date        = "2020-03-27"
 title       = "SAP (Deprecat)"
 description = "Interfície d'accés als Backends SAP de la Generalitat."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 12
 +++
 

@@ -2,7 +2,7 @@
 date        = "2020-04-01"
 title       = "GECAT (Deprecat)"
 description = "Utilització del connector al sistema SAP del Gecat"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 7
 +++
 

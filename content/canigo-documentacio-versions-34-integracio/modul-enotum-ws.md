@@ -2,7 +2,7 @@
 date        = "2021-10-01"
 title       = "Enotum_WS (Deprecat)"
 description = "Notificacions electròniques Web Service (Deprecat)."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 6
 
 +++

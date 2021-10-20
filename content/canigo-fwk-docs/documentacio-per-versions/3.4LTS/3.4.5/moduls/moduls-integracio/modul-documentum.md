@@ -2,7 +2,7 @@
 date        = "2020-03-27"
 title       = "Documentum"
 description = "Accés al gestor documental corporatiu del CTTI."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
 +++
 

@@ -2,7 +2,7 @@
 date        = "2015-04-02T13:14:36+02:00"
 title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 +++
 

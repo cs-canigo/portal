@@ -2,7 +2,7 @@
 date        = "2015-04-02T09:44:09+02:00"
 title       = "SFTP"
 description = "Transferència d'arxius de manera segura."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 4
 +++
 

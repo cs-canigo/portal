@@ -2,7 +2,7 @@
 date        = "2019-03-18T13:55:42+01:00"
 title       = "Mòdul de configuració"
 description = "Configuracio de les propietats dels components de l'aplicació."
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 3
 toc 		    = true
 +++

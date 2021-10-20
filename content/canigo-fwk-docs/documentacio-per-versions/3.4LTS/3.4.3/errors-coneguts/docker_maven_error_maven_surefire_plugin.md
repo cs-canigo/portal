@@ -2,7 +2,7 @@
 date        = "2020-02-10"
 title       = "Error al construir amb docker maven si s'utilitza plugin maven surfire"
 description = "Error al realitzar la construcció d'una aplicació amb el docker maven si aquesta utilitza el plugin maven surfire"
-sections    = "Canigó. Documentació versió 3.x"
+sections    = "Canigó. Documentació Versió 3.4"
 weight      = 2
 +++
 
