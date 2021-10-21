@@ -55,10 +55,6 @@ Per l'exemple utilitzarem una base de dades Mongodb en local al port 27017 amb u
 Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reactiu, reactor i Mongodb per test
 
 ```xml
-<canigo.persistence.mongodb.version>[3.0.0,3.1.0)</canigo.persistence.mongodb.version>
-```
-
-```xml
 		<dependency>
 			<groupId>cat.gencat.ctti</groupId>
 			<artifactId>canigo.persistence.mongodb</artifactId>
@@ -86,6 +82,8 @@ Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reac
 			<scope>test</scope>
 		</dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Afegirem la propietat per la connexió a Mongodb, utilitzarem el estàndard de connexió per String de connexió a Mongodb, recomanem utilitzar aquesta forma de connexió, per més informació podeu consultar: https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
 ```properties

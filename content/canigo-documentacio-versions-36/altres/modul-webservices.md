@@ -25,7 +25,7 @@ La integració de WebServices no es troba ubicat dins del framework de Canigó c
 
 Referència | URL
 ---------- | ---
-Spring Web Services | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#remoting-web-services
+Spring Web Services | https://docs.spring.io/spring-ws/docs/current/reference/html/
 
 
 ## Glossari

@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-11"
+date        = "2021-10-21"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -19,8 +19,6 @@ Per tal d'instal·lar el Mòdul de Seguretat es pot optar per incloure’l autom
 manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```
-<canigo.security.version>[2.0.0, 2.4.0)</canigo.security.version>
-
 <dependency>
    <groupId>cat.gencat.ctti</groupId>
    <artifactId>canigo.security</artifactId>
@@ -28,27 +26,11 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
 ## Configuració
 
 La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament
-
-### Configuració de filtres web
-
-_Spring Security_ utilitza un conjunt de filtres per a detectar aspectes de l'autorització i autenticació. Per a utilitzar-los,
-definirem en el fitxer `WEB-INF/web.xml` el següent:
-
-```
-<filter>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-</filter>
-<filter-mapping>
-    <filter-name>springSecurityFilterChain</filter-name>
-    <url-pattern>/*</url-pattern>
-</filter-mapping>
-```
-
-Per a més informació podeu consultar la pàgina [Spring Security Doc](http://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/#security-filter-chain).
 
 ### Configuració de JWT (JSON Web Token)
 
@@ -66,6 +48,8 @@ Propietat                     | Requerit | Descripció                          
 *.jwt.secret                  | No       | Password per generar el _token_ JWT          | canigo
 *.jwt.expiration              | No       | Temps de vida del _token_ JWT                 | 3600
 *.jwt.siteminderAuthentication| No       | Gicar authentication                      | false
+
+Es recomana utilitzar un secret de longitud superior a 100 caracters per evitar atacs de força bruta per substreure'l
 
 Per a verificar l'autenticació per _token_ s'ha d'invocar al servei `http://<app>/api/auth`, amb la capçalera GICAR en cas
 d'autenticació via GICAR, o en el cos de la petició en format JSON en la resta de casos:

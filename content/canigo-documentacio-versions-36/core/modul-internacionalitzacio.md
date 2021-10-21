@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-12T10:00:15+01:00"
+date        = "2021-10-21"
 title       = "Mòdul d'internacionalització"
 description = "Mòdul d'internacionalització."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -49,20 +49,20 @@ classes bàsiques d'ús de la internacionalització.
 ### Instal.lació
 
 El mòdul de configuració s'inclou per defecte dins del core de Canigó 3.
-Durant el procés de creació de l'aplicació (Struts o JSF), l'eina de
+Durant el procés de creació de l'aplicació, l'eina de
 suport al desenvolupament inclourà la referència dins del pom.xml. En
-cas d'una instal- lació manual afegir les següents línies al pom.xml de
+cas d'una instal·lació manual afegir les següents línies al pom.xml de
 l'aplicació:
 
 ~~~~ {.code-java}
-<canigo.core.version>[3.1.0,3.2.0)</canigo.core.version>
-
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
           <artifactId>canigo.core</artifactId>
           <version>${canigo.core.version}</version>
 </dependency>
 ~~~~
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -147,186 +147,6 @@ Més informació dels codis de pais e idioma:
 En cas de que per un llenguatge determinat existeixi un fitxer específic, l'obtenció del literal a partir d'una clau s'obtindrà des d'aquest fitxer. Si no es troba la clau en cap cas s'anirà al fitxer per defecte. Així doncs és important que es mantinguin actualitzats els fitxers de recursos per cada idioma de l'aplicació per evitar problemes. És important que es proporcioni un fitxer de recursos per defecte. Aquest serà el fitxer utilitzat  pel servei en cas de que el llenguatge escollit per l'usuari no correspongui a cap dels fitxers de recursos definits.
 </div>
 
-#### Definició de la integració amb el mòdul de presentació
-
-Fitxer de configuració: web.xml
-
-Ubicació proposada: <PROJECT_ROOT>/src/main/webapp/WEB-INF/web.xml
-
-Per integrar el mòdul d'internacionalització amb el mòdul de presentació
-s'han de definir els següents filtres a nivell d'aplicació:
-
-##### Localization Filter
-
-Aquest filtre s'encarrega d'exposar el mòdul d'internacionalització per
-tal de que sigui accessible a tota la capa web. Comú tant aplicacions
-JSF com a Struts.
-
-Atributs:
-
-**Atribut**  | **Requerit** | **Valor**
------------- | ------------ | ---------
-filter-name  | Sí           | Nom del filtre<br>Exemple: Localization Filter
-filter-class | Sí           | cat.gencat.ctti.canigo.arch.web.core.filters.LocalizationFilter
-
-~~~~ {.code-java}
-<filter>
-    <filter-name>Localization Filter</filter-name>
-    <filter-class>cat.gencat.ctti.canigo.arch.web.core.filters.LocalizationFilter</filter-class>
-</filter>
-~~~~
-
-##### Struts Locale Filter
-
-Aquest filtre s'encarrega de d'integrar el mòdul d'internacionalització
-exposat pel filtre comú de Localization Filter per tal que des de Struts
-es pugui fer ús de fitxers d'internacionalització.
-
-Atributs:
-
-**Atribut**  | **Requerit** | **Valor**
------------- | ------------ | ---------
-filter-name  | Sí           | Nom del filtre<br>Exemple: Struts Locale Filter
-filter-class | Sí           | cat.gencat.ctti.canigo.arch.web.struts.filter.StrutsLocaleFilter
-
-~~~~ {.code-java}
-<filter>
-   <filter-name>Struts Locale Filter</filter-name>
-   <filter-class>cat.gencat.ctti.canigo.arch.web.struts.filter.StrutsLocaleFilter</filter-class>
-</filter>
-~~~~
-
-#### Definició dels idiomes i literals suportats (només JSF)
-
-Ubicació proposada:
-<PROJECT_ROOT>/src/main/webapp/WEB-INF/faces-config.xml
-
-La configuració del locale permet definir amb quin nom s'exposaran les
-propietats a les pàgines JSF, i els idiomes permesos i per defecte del
-navegador en cas de que no sigui informat.
-
-Per defecte, l'eina de suport al desenvolupament de Canigó informa
-aquest valors segons les opcions seleccionades durant la creació de
-l'aplicació.
-
-~~~~ {.code-java}
-<?xml version="1.0" encoding="UTF-8"?>
-<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee"
- xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
-
-    <application>
-
-        .......
-        <locale-config>
-        <default-locale>ca_ES</default-locale>
-        <supported-locale>es</supported-locale>
-        <supported-locale>en</supported-locale>
-        <supported-locale>de</supported-locale>
-    </locale-config>
-    <resource-bundle>
-            <base-name>config.i18n.applicationResources</base-name>
-            <var>msg</var>
-        </resource-bundle>
-        .......
-        </application>
-        ........
-</faces-config>
-~~~~
-
-En l'exemple anterior l'idioma per defecte és Català, el locales
-suportats: espanyol, anglès i alemany.
- Els recursos de l'aplicació es podran accedir des de la JSF a partir
-del nom de variable **msg** i trobaran situats a:
-
-<PROJECT_ROOT>/src/main/resources/config/i18n/applicationResources.properties
-
-~~~~ {.code-java}
-<h:outputText value="#{msg.formulari_agregarCanvisArxiusIntegrats}"/>
-~~~~
-
-#### Definició dels literals suportats (només Struts)
-
-Ubicació proposada:
-<PROJECT_ROOT>/src/main/resources/struts/struts-config.xml
-
-Aquest arxiu engloba la configuració de Struts, dins d'aquest podem
-definir els recursos que seran accessibles des de les pàgines web. Per
-tal d'habilitar aquesta internacionalització s'ha d'informar el tag
-message-resources.
-
-**Atribut** | **Requerit** | **Valor**
------------ | ------------ | ---------
-parameter   | Sí           | Ruta per punts on estan localitzats els literals
-null        | No           | Informant aquesta propietat com a "false" mostrará els recursos no informats com a ?key? enlloc de mostrar null
-
-~~~~ {.code-java}
-<message-resources parameter="i18n.applicationResources" null="false" />
-~~~~
-
-Si es vol exposar més d'un arxiu de literals crear tants tags
-message-resources com siguin necessaris.
-
-~~~~ {.code-java}
-<message-resources parameter="i18n.applicationResources" null="false" />
-<message-resources parameter="i18n.anotherApplicationResources" null="false" />
-<message-resources parameter="i18n.thirdApplicationResources" null="false" />
-~~~~
-
-## Utilització del mòdul
-
-### JSF
-
-Suposant que els recursos estan exposats a la variable **msg** i com a
-literals tenim:
-
-**applicationResources.properties**
-
-~~~~ {.code-java}
-nomFormulari=Nom del formulari
-~~~~
-
-**prova.jsf**
-
-~~~~ {.code-java}
-<h:outputText value="#{msg.nomFormulari}"/>
-~~~~
-
-Si la key del literal a mostrar conté un punt s'ha de mostrar de la
-següent manera:
-
-~~~~ {.code-java}
-<h:outputText value="#{msg['nom.formulari']"/>
-~~~~
-
-I si el literal és del tipus cadena=Hola {0} {1} es poden passar
-paràmetres de la següent manera:
-
-~~~~ {.code-java}
-<h:outputFormat value="#{msg['cadena']}">
-   <f:param value="Ramon" />
-   <f:param value="Sala" />
-</h:outputFormat>
-~~~~
-
-### Struts
-
-Suposant els següents literals:
-
-**applicationResources.properties**
-
-~~~~ {.code-java}
-nomFormulari=Nom del formulari
-~~~~
-
-**prova.jsf**
-
-~~~~ {.code-java}
-<font face="verdana">
-  <bean:message key="formulari.errorActivacio" />
-</font>
-~~~~
-
 ## Preguntes freqüents
 
 ### Accés manual al servei d'internacionalització
@@ -397,39 +217,6 @@ public class Injection {
 L'anotació @Autowired injecta en aquest cas, un bean de tipus
 cat.gencat.ctti.canigo.arch.core.i18n.I18nResourceBundleMessageSource
 que Spring trobarà en el context de l'aplicació.
-
-### Claus amb punts en JSF
-
-A diferencia de Struts l'accés a propietats amb punts a la seva clau
-canvia:
-
-Exemple de claus amb punts:
-
-~~~~ {.code-java}
-usuaris.name=Nom
-usuaris.dni=DNI
-usuauri.surname=Cognoms
-~~~~
-
-Per accedir aquest tipus de clau des d'una pàgina JSF es necessari
-accedir de la següent manera:
-
-**pageExemple.jsf**
-
-~~~~ {.code-java}
-<?xml version="1.0" encoding="ISO-8859-1" standalone="yes" ?>
-<html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
- xmlns:f="http://java.sun.com/jsf/core"
- xmlns:h="http://java.sun.com/jsf/html"
- xmlns:c="http://java.sun.com/jstl/core"
- xmlns:t="http://myfaces.apache.org/tomahawk">
- 
-<ui:composition template="../layouts/template.jsf">
-   <h:outputText value="\#{msg['usuaris.name']}"/>
-</ui:composition>
-</html>
-~~~~
 
 ## Exemples
 

@@ -127,6 +127,8 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
 Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-36/altres/modul-mongodb-reactiu)

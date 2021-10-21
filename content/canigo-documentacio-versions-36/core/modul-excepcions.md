@@ -1,5 +1,5 @@
 +++
-date        = "2020-10-07"
+date        = "2021-10-21"
 title       = "Mòdul d'excepcions"
 description = "Mòdul per a la gestió d'excepcions de les aplicacions"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -21,17 +21,15 @@ cap referència a les classes de l'aplicació.
 
 ## Instal·lació
 
-El mòdul de configuració s'inclou per defecte dins del core de Canigó 3.
+El mòdul de configuració s'inclou per defecte dins del core de Canigó 3.6.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins el fitxer `pom.xml` i, en cas d'una instal·lació manual,
 caldrà afegir les següents entrades al fitxer:
 
 ```
-<canigo.core.version>[4.0.0,4.4.0)</canigo.core.version>
-<canigo.web.rs.version>[1.2.0,1.3.0)</canigo.web.rs.version>
 <dependency>
-          <groupId>cat.gencat.ctti</groupId>
-          <artifactId>canigo.core</artifactId>
-          <version>${canigo.core.version}</version>
+   <groupId>cat.gencat.ctti</groupId>
+   <artifactId>canigo.core</artifactId>
+   <version>${canigo.core.version}</version>
 </dependency>
 <dependency>
    <groupId>cat.gencat.ctti</groupId>
@@ -39,6 +37,8 @@ caldrà afegir les següents entrades al fitxer:
    <version>${canigo.web.rs.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ## Classes disponibles d'excepcions
 

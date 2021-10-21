@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-25"
+date        = "2021-10-21"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -12,26 +12,26 @@ Aquest mòdul proporciona accés amb transaccionalitat amb la base de dades, per
 
 Aquest mòdul utilitza Spring Data JPA i QueryDSL. Es pot trobar informació sobre aquests frameworks a la documentació de referència:
 
-* [Spring Data JPA] (https://docs.spring.io/spring-data/jpa/docs/current/reference/html/). 
+* [Spring Data JPA] (https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference). 
 * [QueryDSL] (http://www.querydsl.com/static/querydsl/latest/reference/html/)
 
 ## Instal·lació i Configuració
 
 ### Instal·lació
 
-El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+El mòdul de persistència i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
-En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
+En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```
-<canigo.persistence.jpa.version>[2.3.0,2.4.0)</canigo.persistence.jpa.version>
-
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.persistence.jpa</artifactId>
 	<version>${canigo.persistence.jpa.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
 el que executa el test unitari del mòdul de persistència:
@@ -313,7 +313,7 @@ Exemples:
 	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
 
 
-Més informació a la documentació oficial de [Spring Data JPA](http://docs.spring.io/spring-data/jpa/docs/current/reference/html/).
+Més informació a la documentació oficial de [Spring Data JPA](https://docs.spring.io/spring-data/jpa/docs/2.5.4/reference/html/#reference).
 
 #### Utilització de QueryDSL
 
@@ -362,7 +362,7 @@ El codi següent retorna una llista dels objectes Equipaments amb nom INDOORKART
 ```
 String search = "nom:INDOORKARTING";
 		
-Pageable pageable = new PageRequest(0, 5, Sort.Direction.DESC, "nom");
+Pageable pageable = PageRequest.of(0, 5, Sort.Direction.DESC, "nom");
 GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
 builder.populateSearchCriteria(search);
 		
@@ -464,15 +464,19 @@ import com.querydsl.core.types.Predicate;
 import cat.gencat.test.model.Equipament;
 import cat.gencat.ctti.canigo.arch.persistence.jpa.repository.GenericRepository;
 
-public interface EquipamentRepository extends GenericRepository<Equipament, Long> {
+public interface EquipamentRepository extends GenericRepository<Equipament, Long>, EquipamentRepositoryCustom {
 
-	Page<Equipament> findAll(Predicate predicate, Pageable pageable);
-	
-	Page<Equipament> findAll(FactoryExpression<Equipament> factoryExpression, Predicate predicate, Pageable pageable);
-	
-    List<Equipament> findDistinctByNomOrMunicipi(String nom, String municipi);
-	List<Equipament> findByNomIgnoreCase(String nom);
-	List<Equipament> findByMunicipiOrderByNomDesc(String municipi);
+}
+```
+
+**EquipamentRepository**
+
+Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/repository/EquipamentRepositoryCustom.java
+```
+package cat.gencat.test.repository;
+
+public interface EquipamentRepositoryCustom {
+
 }
 ```
 
@@ -484,6 +488,39 @@ package cat.gencat.test.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+
+import cat.gencat.test.model.Equipament;
+
+public interface EquipamentService {
+
+  List<Equipament> findAll();
+
+  Page<Equipament> findPaginated(final Integer page, final Integer rpp, final String sort, final String filter);
+
+  Page<Equipament> findPaginatedProjeccio(final Integer page, final Integer rpp, final String sort, final String filter,
+      final String fields);
+
+  Equipament getEquipament(final Long equipamentId);
+
+  Long saveEquipament(final Equipament equipament);
+
+  void updateEquipament(final Equipament equipament);
+
+  void deleteEquipament(final Long equipamentId);
+
+}
+```
+
+**EquipamentServiceImpl**
+
+Ubicació: <PROJECT_ROOT>/src/main/java/cat/gencat/test/service/impl/EquipamentServiceImpl.java
+```
+package cat.gencat.test.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.data.domain.Page;
@@ -491,110 +528,143 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.domain.Sort.Order;
 import org.springframework.stereotype.Service;
 
+import com.querydsl.core.types.Expression;
+import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.Projections;
 
-import cat.gencat.ctti.canigo.arch.persistence.jpa.querydsl.GenericPredicateBuilder;
 import cat.gencat.test.model.Equipament;
 import cat.gencat.test.model.QEquipament;
 import cat.gencat.test.repository.EquipamentRepository;
+import cat.gencat.test.service.EquipamentService;
+import cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder;
 
 @Service("equipamentService")
 @Lazy
-public class EquipamentService {
+public class EquipamentServiceImpl implements EquipamentService {
 
-	@Autowired
-	private EquipamentRepository repository;
-	
-	public List<Equipament> findAll() {
-		return repository.findAll();
-	}
+  @Autowired
+  private EquipamentRepository repository;
 
-	public Page<Equipament> findPaginated(Pageable pageable, String filter) {
-		
-		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
-		builder.populateSearchCriteria(filter);
-		
-		return repository.findAll(builder.build(), pageable);
-	}
-	
-	public Page<Equipament> findPaginatedProjeccio(Pageable pageable, String filter) {
-		
-		GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class, "equipament");
-		builder.populateSearchCriteria(filter);
-		
-	    QEquipament qequipament = QEquipament.equipament;
-	    
-	    return repository.findAll(Projections.bean(Equipament.class, qequipament.nom ), builder.build(), pageable);
-	}
+  @Override
+  public List<Equipament> findAll() {
+    return repository.findAll();
+  }
 
-	public Equipament getEquipament(Long equipamentId) {
-		return repository.findOne(equipamentId);
-	}
+  @Override
+  public Page<Equipament> findPaginated(final Integer page, final Integer rpp, final String sort, final String filter) {
 
-	public Long saveEquipament(Equipament equipament) {
-		repository.save(equipament);
+    final GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class,
+        "equipament");
+    builder.populateSearchCriteria(filter);
+    final Predicate predicate = builder.build();
 
-		return equipament.getId();
-	}
+    final Pageable pageable = PageRequest.of(page - 1, rpp, getOrdenacio(sort));
 
-	public void updateEquipament(Equipament equipament) {
-		repository.save(equipament);
-	}
+    return predicate != null ? repository.findAll(predicate, pageable) : repository.findAll(pageable);
+  }
 
-	public void deleteEquipament(Long equipamentId) {
-		Equipament equipament = new Equipament(equipamentId);
-		repository.delete(equipament);
-	}
+  @Override
+  public Page<Equipament> findPaginatedProjeccio(final Integer page, final Integer rpp, final String sort,
+      final String filter, final String fields) {
+
+    final GenericPredicateBuilder<Equipament> builder = new GenericPredicateBuilder<Equipament>(Equipament.class,
+        "equipament");
+    builder.populateSearchCriteria(filter);
+    final Predicate predicate = builder.build();
+
+    final Pageable pageable = PageRequest.of(page - 1, rpp, getOrdenacio(sort));
+
+    QEquipament qequipament = QEquipament.equipament;
+
+    List<Expression> listFields = new ArrayList<Expression>();
+
+    if (fields != null && fields != "") {
+      String[] selectedFields = fields.split(",");
+      for (int i = 0; i < selectedFields.length; i++) {
+        switch (selectedFields[i]) {
+        case Equipament.ID:
+          listFields.add(qequipament.id);
+          break;
+        case Equipament.NOM:
+          listFields.add(qequipament.nom);
+          break;
+
+        case Equipament.MUNICIPI:
+          listFields.add(qequipament.municipi);
+          break;
+
+        default:
+          break;
+        }
+      }
+    }
+
+    Expression[] arrayExpression = listFields.toArray(new Expression[0]);
+
+    return predicate != null
+        ? repository.findAll(Projections.bean(Equipament.class, arrayExpression), predicate, pageable)
+        : repository.findAll(Projections.bean(Equipament.class, arrayExpression), pageable);
+  }
+
+  // private //
+
+  private Sort getOrdenacio(String sort) {
+    Sort resultat = null;
+
+    List<Order> orders = new ArrayList<Order>();
+
+    if (sort != null && sort != "") {
+      String[] fields = sort.split(",");
+
+      for (int i = 0; i < fields.length; i++) {
+        char direction = fields[i].charAt(0);
+        if (Character.toString(direction).equals("-")) {
+          // Order descendente
+          String value = fields[i].substring(1);
+          orders.add(new Order(Direction.DESC, value));
+        } else {
+          // Orden ascendente
+          orders.add(new Order(Direction.ASC, fields[i]));
+        }
+      }
+    }
+
+    resultat = Sort.by(orders);
+
+    return resultat;
+  }
+
+  // end private //
+
+  @Override
+  public Equipament getEquipament(final Long equipamentId) {
+    return repository.findById(equipamentId).orElse(null);
+  }
+
+  @Override
+  public Long saveEquipament(final Equipament equipament) {
+    Equipament newEquipament = repository.save(equipament);
+
+    return newEquipament.getId();
+  }
+
+  @Override
+  public void updateEquipament(final Equipament equipament) {
+    repository.save(equipament);
+  }
+
+  @Override
+  public void deleteEquipament(final Long equipamentId) {
+    final Equipament equipament = new Equipament(equipamentId);
+    repository.delete(equipament);
+  }
 
 }
-```
-
-### Test
-
-Per executar els tests del mòdul jpa al executar els test de l'aplicació és necessari incorporar la dependencia test-jar del mòdul en el pom:
-```
-...
-		<dependency>
-		   <groupId>cat.gencat.ctti</groupId>
-		   <artifactId>canigo.persistence.jpa</artifactId>
-		   <type>test-jar</type>
-		   <version>${canigo.persistence.jpa.version}</version>
-		   <scope>test</scope>
-		   <classifier>tests</classifier>
-		</dependency>
-...
-```
-
-**persistence.xml**
-
-Ubicació: <PROJECT_ROOT>/src/test/resources/config/persistence/persistence.xml
-És necessari afegir les entitats del mòdul jpa i les entitats de l'aplicació al fitxer persistence.xml:
 
 ```
-<persistence xmlns="http://java.sun.com/xml/ns/persistence"	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
-	version="1.0">
-
-	<persistence-unit name="canigo" transaction-type="RESOURCE_LOCAL">
-		<class>cat.gencat.test.model.Equipament</class>  
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.repository.Person</class> 
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.dao.Account</class>
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJson</class>
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonb</class>
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.postgres.EventJsonbNode</class>
-		<class>cat.gencat.ctti.canigo.arch.persistence.jpa.model.json.mysql.EventJson</class>
-	</persistence-unit>
-
-</persistence>
-```
-
-On:
-- cat.gencat.test.model.Equipament és l'entitat de l'aplicació
-- cat.gencat.ctti.canigo.arch.persistence.jpa.* son les entitats del mòdul jpa
-
-Amb aquests canvis s'executaran els test del mòdul al executar els tests de l'aplicació
 
 ## Suport pel tipus de dada JSON
 

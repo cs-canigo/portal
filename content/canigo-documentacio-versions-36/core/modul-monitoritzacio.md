@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-27T11:59:40+01:00"
+date        = "2021-10-21"
 title       = "Monitorització"
 description = "Monitorització de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -8,7 +8,7 @@ weight      = 8
 
 ## Introducció
 
-Un dels aspectes més innovadors de la nova versió 3 del Framework Canigó és la possibilitat de disposar inicialment d'un component de monitorització de l'aplicació sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
+A la versió 3.6 del Framework Canigó disposa d'un component de monitorització de l'aplicació sense haver de fer cap desenvolupament addicional per part dels desenvolupadors de les aplicacions. Aquest component permet:
 
 * Fer un seguiment de les peticions que rep l'aplicació.
 * Comprovar l'estat del sistema.
