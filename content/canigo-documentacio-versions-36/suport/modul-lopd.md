@@ -1,5 +1,5 @@
 +++
-date        = "2015-04-02T11:29:07+02:00"
+date        = "2021-10-21"
 title       = "LOPD"
 description = "Aplicació de protecció de dades."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -46,17 +46,12 @@ NOTA: L'eina afegeix automàticament un arxiu anomenat lopd.properties situat en
 
 Modificar el pom.xml afegint:
 
-```
-<properties>
-	<canigo.support.lopd>[1.4.0,1.5.0)</canigo.support.lopd>
-</properties>
-
+```xml
 <dependency>
       <groupId>cat.gencat.ctti</groupId>
       <artifactId>canigo.support.lopd</artifactId>
       <version>${canigo.support.lopd}</version>
 </dependency>
-
 ...
 
 <build>
@@ -66,9 +61,9 @@ Modificar el pom.xml afegint:
 		<artifactId>aspectj-maven-plugin</artifactId>
 		<version>1.10</version>
 		<configuration>
-			<complianceLevel>1.7</complianceLevel>
-			<source>1.7</source>
-			<target>1.7</target>
+			<complianceLevel>11</complianceLevel>
+			<source>11</source>
+			<target>11</target>
 			 <weaveDependencies>
 			<weaveDependency>
 				  <groupId>cat.gencat.ctti</groupId>
@@ -82,9 +77,9 @@ Modificar el pom.xml afegint:
 					<goal>compile</goal>
 				</goals>
 				<configuration>
-					<complianceLevel>1.7</complianceLevel>
-					<source>1.7</source>
-					<target>1.7</target>
+					<complianceLevel>11</complianceLevel>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</execution>
 		</executions>
@@ -93,6 +88,8 @@ Modificar el pom.xml afegint:
 </build>
 
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Components del Servei
 
