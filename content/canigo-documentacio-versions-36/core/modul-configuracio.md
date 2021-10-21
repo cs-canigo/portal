@@ -22,7 +22,7 @@ de beans - propietats.
 
 ## Limitacions
 
-Per aplicacions Canigó 3.4 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
+Per aplicacions Canigó 3.6 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
 
 * no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
 
@@ -114,7 +114,7 @@ Aquesta configuració de l'entorn es utilitzada pel servei de configuració per 
 
 ## Configuració propietats en format yaml
 
-A la versió Canigó 3.4 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
+A la versió Canigó 3.6 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
 Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
 
@@ -677,7 +677,7 @@ Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @Pr
 
 Indicant el path on es troba aquest fitxer.
 
-Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-documentacio-versions-34-core/modul-seguretat/)
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-documentacio-versions-36/core/modul-seguretat/)
 
 
 Preguntes freqüents

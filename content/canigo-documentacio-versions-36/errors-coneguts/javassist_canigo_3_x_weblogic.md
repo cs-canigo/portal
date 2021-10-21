@@ -8,11 +8,11 @@ weight      = 1
 
 ## Introducció al problema
 
-El desembre del 2019 es va reportar un problema en l'execució de consultes a base de dades utilitzant la capa JPA de Spring en una aplicació Canigó 3.2 amb Weblogic 12.1.3.0.0. L'error que es produeix és de tipus java.lang.ClassCastException una vegada realitzada la consulta a la base de dades. Aquest mateix error es pot produir a una aplicació Canigó 3.4
+El desembre del 2019 es va reportar un problema en l'execució de consultes a base de dades utilitzant la capa JPA de Spring en una aplicació Canigó 3.2 amb Weblogic 12.1.3.0.0. L'error que es produeix és de tipus java.lang.ClassCastException una vegada realitzada la consulta a la base de dades. Aquest mateix error es pot produir a una aplicació Canigó 3.6
 
 ## Detall del problema
 
-Canigó 3.4 utilitza la versió 5.3.13.Final de Hibernate en el seu mòdul de persistència JPA, aquesta versió de hibernate utilitza la versió 3.23.2-GA de la llibreria javassist. Per altre banda, al Weblogic incorpora la llibreria javassist amb una altre versió. Per exemple, a la versió de weblogic 12.1.3.0.0 incorpora la llibreria javassist versió 3.12.0.GA, per tant, al no coincidir amb la versió de Hibernate, pot donar errors de casteig.
+Canigó 3.6 utilitza la versió 5.4.32.Final de Hibernate en el seu mòdul de persistència JPA, aquesta versió de hibernate utilitza la versió 3.27.0-GA de la llibreria javassist. Per altre banda, al Weblogic incorpora la llibreria javassist amb una altre versió. Per exemple, a la versió de weblogic 12.1.3.0.0 incorpora la llibreria javassist versió 3.12.0.GA, per tant, al no coincidir amb la versió de Hibernate, pot donar errors de casteig.
 
 Si iniciem una aplicació amb Canigó 3.x a un weblogic 12.1.3.0.0 i executem una consulta a la base de dades utilitzant la capa JPA de Spring, una vegada executada la consulta a la base de dades, podem obtenir un error del estil:
 

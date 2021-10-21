@@ -40,7 +40,7 @@ Els principals serveis que ofereix el connector són els següents:
     * CAdES-BES-PDF: Attached / Detached
     * XAdES-BES: Enveloping / Enveloped / Detached
 
-Actualment el connector de Canigó de la versió 3.4 utilitza el client de SSC versió 1.3.3 
+Actualment el connector de Canigó de la versió 3.6 utilitza el client de SSC versió 1.3.3 
 
 ### Alta Servei
 
@@ -64,9 +64,9 @@ Si disposa de permís d'accès al repositori del servidor Nexus del SIC, podrà 
 
 #### Requeriments
 
-El connector SSC, que utilitza el client 1.3.3 de SSC, està desenvolupat a Canigó 3.4. Canigó 3.4 només és compatible amb versions 1.8 o superior de Java, Spring 5 i Spring Boot 2. El connector SSC, que utilitza el client 1.3.3 de SSC, no és compatible amb versions anteriors de Canigó.
+El connector SSC, que utilitza el client 1.3.3 de SSC, està desenvolupat a Canigó 3.6. Canigó 3.6 només és compatible amb versions 1.8 o superior de Java, Spring 5 i Spring Boot 2. El connector SSC, que utilitza el client 1.3.3 de SSC, no és compatible amb versions anteriors de Canigó 3.4.
 
-Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
+Per a versions 1.8 o superior de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
 ```
 PropertyAllowTls10AsClient=true
 ```

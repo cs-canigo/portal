@@ -1,5 +1,5 @@
 +++
-date        = "2019-03-18"
+date        = "2021-10-21"
 title       = "Mongodb reactiu"
 description = "Com configurar aplicació Canigó 3.6 per utilitzar mongo db reactiu"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -12,22 +12,21 @@ El propòsit d’aquest apartat és introduïr a les funcionalitats de reactiu e
 
 ### Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó
+Els passos descrits en aquest document apliquen a la versió 3.6 del Framework Canigó
 
 ### Introducció
 
-El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
+A la versió 3.6 de Canigó incorpora la possibilitat d'utilitzar les funcionalitats de reactiu en una base de dades Mongodb
 
-Per a passar una aplicació 3.3 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.2 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4)
 
-L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.
+L'objectiu d'aquest Howto és mostrar els procediments necessaris poder utilitzar les funcionalitats de reactiu en una base de dades Mongodb. El punt de partida d'aquest Howto és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.6.0 de Canigó.
 
 
 ### Introducció programació reactiu
 
 En termes simples, la programació reactiva tracta d'aplicacions no bloquejadores que són asíncrones i orientades a esdeveniments i requereixen un nombre reduït de fils per escalar. Un aspecte clau d'aquesta definició és el concepte de contrapressió, que és un mecanisme per garantir que els productors no aclaparen els consumidors. Per exemple, en una pipeline de components reactius que s'estén des de la base de dades fins al socket HTTP, quan el client HTTP és lent, el repositori de dades es ralentitza o s’atura fins que la capacitat s’alliberi
 
-Canigó 3.4 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
+Canigó 3.6 té com a base Spring Framework 5 que aporta funcionalitats amb streams reactius utilitzant el projecte Reactor
 
 Per a més informació:
 
@@ -35,7 +34,7 @@ Per a més informació:
 
 [Reactor](https://projectreactor.io/)
 
-[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/web-reactive.html)
+[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html)
 
 [Notes on Reactive Programming](https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape)
 
@@ -56,7 +55,7 @@ Per l'exemple utilitzarem una base de dades Mongodb en local al port 27017 amb u
 Començarem per afegir les dependències a Canigó Mongodb, Spring Mongodb, reactiu, reactor i Mongodb per test
 
 ```xml
-<canigo.persistence.mongodb.version>[2.0.0,2.1.0)</canigo.persistence.mongodb.version>
+<canigo.persistence.mongodb.version>[3.0.0,3.1.0)</canigo.persistence.mongodb.version>
 ```
 
 ```xml
@@ -310,47 +309,175 @@ Per provar el respositori reactiu utilitzarem un Embeded Mongo
 Crearem una configuració utilitzant el Embeded Mongo
 
 ```java
-import org.springframework.boot.autoconfigure.AutoConfigureAfter;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
-import org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.core.env.Environment;
-import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration;
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
+import java.io.IOException;
+
+import com.mongodb.MongoException;
+import com.mongodb.reactivestreams.client.MongoClient;
+
+/**
+ * Class EmbeddedReactiveMongoConfig.
+ *
+ * @author cscanigo
+ */
+public class EmbeddedReactiveMongoConfig extends ReactiveMongoConfig {
+
+  /**
+   * Reactive mongo client.
+   *
+   * @return mongo client
+   */
+  @Override
+  public MongoClient reactiveMongoClient() {
+    EmbeddedReactiveMongoFactoryBean embeddedReactiveMongoFactoryBean = new EmbeddedReactiveMongoFactoryBean();
+    if (mongo == null) {
+      try {
+        mongo = embeddedReactiveMongoFactoryBean.getObject();
+      } catch (IOException e) {
+        throw MongoException.fromThrowable(e);
+      }
+    }
+    return mongo;
+  }
+}
+```
+
+```java
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.mongodb.reactivestreams.client.MongoClient;
 import com.mongodb.reactivestreams.client.MongoClients;
 
-@Configuration
-@EnableReactiveMongoRepositories(basePackages = "cat.gencat")
-@EnableAutoConfiguration(exclude = { MongoAutoConfiguration.class })
-@AutoConfigureAfter(EmbeddedMongoAutoConfiguration.class)
-public class EmbeddedReactiveMongoConfig extends AbstractReactiveMongoConfiguration {
+/**
+ * Class EmbeddedReactorMongoFactoryBean.
+ *
+ * @author cscanigo
+ */
+public class EmbeddedReactiveMongoFactoryBean extends EmbeddedBaseMongoFactoryBean<MongoClient> {
 
-	private final Environment environment;
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedReactiveMongoFactoryBean.class);
 
-	public EmbeddedReactiveMongoConfig(Environment environment) {
-		this.environment = environment;
-	}
+  /**
+   * Obté object.
+   *
+   * @return object
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  @Override
+  public synchronized MongoClient getObject() throws IOException {
+    if (mongodExecutable == null) {
+      LOG.info("Starting embedded MongoDB instance");
+      initMongoServer();
+    }
+    return MongoClients.create(EMBEDDED_TEST_URI);
+  }
 
-	@Override
-	@Bean
-	@DependsOn("embeddedMongoServer")
-	public MongoClient reactiveMongoClient() {
-		int port = environment.getProperty("local.mongo.port", Integer.class);
-		return MongoClients.create(String.format("mongodb://localhost:%d", port));
-	}
-
-	@Override
-	protected String getDatabaseName() {
-		return "embedded-reactive-mongo";
-	}
+  /**
+   * Obté object type.
+   *
+   * @return object type
+   */
+  @Override
+  public Class<?> getObjectType() {
+    return MongoClient.class;
+  }
 
 }
 ```
+
+```java
+import java.io.IOException;
+import java.net.InetAddress;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.FactoryBean;
+
+import de.flapdoodle.embed.mongo.MongodExecutable;
+import de.flapdoodle.embed.mongo.MongodProcess;
+import de.flapdoodle.embed.mongo.MongodStarter;
+import de.flapdoodle.embed.mongo.config.MongodConfig;
+import de.flapdoodle.embed.mongo.config.Net;
+import de.flapdoodle.embed.mongo.distribution.IFeatureAwareVersion;
+import de.flapdoodle.embed.mongo.distribution.Version;
+import de.flapdoodle.embed.process.runtime.Network;
+
+/**
+ * Class EmbeddedBaseMongoFactoryBean.
+ *
+ * @author cscanigo
+ * @param <E> the element type
+ */
+public abstract class EmbeddedBaseMongoFactoryBean<E> implements FactoryBean<E>, DisposableBean {
+
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedBaseMongoFactoryBean.class);
+
+  /** version. */
+  private static final IFeatureAwareVersion version = Version.Main.V4_0;
+
+  /** Constant EMBEDDED_HOST. */
+  protected static final String EMBEDDED_HOST = InetAddress.getLoopbackAddress().getHostAddress();
+
+  /** Constant EMBEDDED_PORT. */
+  protected static final int EMBEDDED_PORT = getPort();
+
+  /** Constant EMBEDDED_TEST_URI. */
+  protected static final String EMBEDDED_TEST_URI = "mongodb://" + EMBEDDED_HOST + ":" + EMBEDDED_PORT + "/canigo";
+
+  /** mongod executable. */
+  protected static MongodExecutable mongodExecutable;
+
+  /** mongo process. */
+  protected static MongodProcess mongoProcess;
+
+  /**
+   * Destroy.
+   *
+   * @throws Exception exception
+   */
+  @Override
+  public void destroy() throws Exception {
+    if (mongodExecutable != null) {
+      LOG.info("Stopping embedded MongoDB instance");
+      mongodExecutable.stop();
+      mongoProcess.stop();
+    }
+  }
+
+  /**
+   * Inicialitza mongo server.
+   *
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  protected synchronized void initMongoServer() throws IOException {
+    MongodConfig mongodConfig = MongodConfig.builder().version(version)
+        .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).build();
+
+    mongodExecutable = MongodStarter.getDefaultInstance().prepare(mongodConfig);
+    mongoProcess = mongodExecutable.start();
+  }
+
+  /**
+   * Obté port.
+   *
+   * @return port
+   */
+  protected static int getPort() {
+    try {
+      return Network.getFreeServerPort();
+    } catch (IOException ex) {
+      LOG.error("Needed free port");
+      return 27017;
+    }
+  }
+}
+```
+
 
 En un test de Junit podem utilitzar aquesta configuració enlloc que la de l'aplicació "ReactiveMongoConfig", per exemple:
 

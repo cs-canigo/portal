@@ -1,5 +1,5 @@
 +++
-date        = "2018-05-15"
+date        = "2021-10-21"
 title       = "Webservices"
 description = "Webservices"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -15,7 +15,7 @@ El propòsit d'aquest apartat es introduir al desenvolupador en la configuració
 
 Ja que Canigó 3 no disposa d'un servei addicional de Webservices, l'enfocament d'aquest apartat es el de simplificar tant la definició de Web Services a partir de serveis Java simples (que no tindran dependències amb la implementació particular de Web Services) així com la de facilitar la invocació a Web Services externs.
 
-Per aquesta aproximació s'ha fet servir Spring WS, JAXB i OXM.
+Per aquesta aproximació s'ha fet servir Spring WS i JAXB i OXM.
 
 ## Context i Escenaris d'Ús
 
@@ -25,8 +25,7 @@ La integració de WebServices no es troba ubicat dins del framework de Canigó c
 
 Referència | URL
 ---------- | ---
-Spring Web Services | https://docs.spring.io/spring-ws/docs/2.3.x/reference/html/
-OXM | https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html
+Spring Web Services | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#remoting-web-services
 
 
 ## Glossari
@@ -90,7 +89,7 @@ En aquest exemple utilitzem el WSDL públic: http://ws.cdyne.com/ip2geo/ip2geo.a
 	
 En un projecte tipus maven configurem el pom.xml.
 
-A data de creació d'aquest exemple la última versió de CXF disponible és la 3.2.4, recomanem utilitzar la última versió.
+A data de creació d'aquest exemple la última versió de CXF disponible és la 3.4.5, recomanem utilitzar la última versió.
 
 **pom.xml**
 
@@ -103,7 +102,7 @@ A data de creació d'aquest exemple la última versió de CXF disponible és la 
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
-				<version>3.2.4</version>
+				<version>3.4.5</version>
 				<executions>
 					<execution>
 						<id>generate-sources</id>
@@ -188,7 +187,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/spring
 
 	</beans>
 
-En aquesta configuració destacar el bean [marshaller] (https://docs.spring.io/spring/docs/4.3.x/spring-framework-reference/html/oxm.html#oxm-jaxb2) on a la propietat contextPath posem el package de les classes generades, en aquest exemple.
+En aquesta configuració destacar el bean `marshaller`, on a la propietat `contextPath` posem el package de les classes generades, en aquest exemple.
 
 #### Definir el client que realitzarà la crida
 
@@ -274,174 +273,3 @@ Definir un test per a certificar el seu funcionament
 		}
 		
 	}
-	
-
-### Configuració com a EndPoint
-
-La configuració del webservice implica els següents passos:
-
-* Configuració del web.xml.
-* Definir l'arxiu de configuració de Spring: marshallers, endpoints.
-* Definir el Endpoint
-
-En aquest punt considerem que l'usuari coneix o ha generat l'arxiu XSD (Schema) que defineix el contracte del webservice.
-
-### Configuració del web.xml.
-
-El primer punt a considerar és la càrrega i generació d'un nou context d'spring amb les dades del WS.
-	
-Aquesta context és independent del context de Spring de l'aplicació web. Si el desenvolupador vol integrar un servei propi de canigó, l'haurà de referenciar directament dins del contextConfigLocation del servlet de Spring WS.
-
-Aquest servlet MessageDispatcherServlet carregarà els arxius de configuració dins del seu context de Spring, i definirá el mapping de les peticions contra aquest servei.
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-         xmlns="http://java.sun.com/xml/ns/javaee" 
-         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-                             http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
-	     id="WebApp_ID" version="2.5">
-
-	........
-	
-    <servlet>
-        <servlet-name>ws-canigo</servlet-name>
-        <servlet-class>org.springframework.ws.transport.http.MessageDispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:/spring-ws-context.xml</param-value>
-		</init-param>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ws-canigo</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
-	
-	.........
-	
-</web-app>
-```
-
-#### Definir l'arxiu de configuració de Spring
-
-Dins de l'arxiu de configuració definim:
-
-* L' estrategia de resolució del Endpoint (en aquest cas per anotacions).
-* Configuració de OXM per tal d'aplicar marshalling i unmarshalling sobre les dades d'entrada i sortida del Endpoint.
-* Indicar al marshaller quins son els beans que contenen l'informació de binding.
-* Exportar el XSD com a WSDL de manera transparent.
-
-Ruta proposada:
-/src/main/resources/spring-ws/spring-ws-context.xml
-	
-<div class="message information">
-En el cas de que l'aplicació web de tipus Canigó no sigui exclusivament un webservice, evitar que el context de l'aplicació Web carregui els beans
-de Spring WS introduïnt-los en la carpeta /src/main/resources/spring/. Això carregaria de manera automàtica els beans de Spring WS, consumint memoria innecesariament
-ja que el context de l'aplicació web no és el mateix que el del webservice.
-</div>
-
-```
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:context="http://www.springframework.org/schema/context"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans 
-                           http://www.springframework.org/schema/beans/spring-beans.xsd
-                           http://www.springframework.org/schema/context
-                           http://www.springframework.org/schema/context/spring-context.xsd">
-
-    <context:component-scan base-package="cat.gencat.ws.example.service" />
-
-    <bean id="echo" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
-          p:portTypeName="Echo"
-          p:locationUri="/echoService/"
-		  p:targetNamespace="http://mycompany.com/hr/definitions">
-        <property name="schema">
-            <bean class="org.springframework.xml.xsd.SimpleXsdSchema"
-                  p:xsd="classpath:/config/xsd/echo.xsd" />
-            </bean>
-        </property>        
-    </bean>
-
-    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping"/>
-
-    <bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">
-        <constructor-arg ref="marshaller"/>
-    </bean>
-
-    <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
-          p:contextPath="cat.gencat.ws.example.schema.beans" />
-
-</beans>
-```
-
-#### Definir el Endpoint
-
-Interficie que defineix les operacions públiques del WS.
-
-**MarshallingEchoService.java**
-
-```
-public interface MarshallingEchoService {
-    
-    /**
-     * Return Echo response
-     */
-    public EchoResponse echoEcho(EchoRequest request);
-
-}
-```
-
-La anotació @Endpoint indica que es tracta d'un EndPoint, Spring gracies a component-scan i la clase PayloadRootAnnotationMethodEndpointMapping mapeja les peticions i respostes contra aquest bean.
-
-De manera transparent el marshaller s'encarregarà de la conversió de XML a object i de object a XML.
-
-**EchoEndpoint.java**
-
-```java
-@Endpoint
-public class EchoEndpoint implements MarshallingEchoService {
-    
-    /**
-     * Return Echo response
-     */
-    @PayloadRoot(localPart="echoEcho", namespace="http://mycompany.com/hr/definitions")
-    public EchoResponse echoEcho(EchoRequest request) {
-        return new EchoRequest().setMessage(request.getMessage());        
-    }
-
-}
-```
-
-Des d'un client d'aquest WS (revisar configuració com a client) realitzem la crida i recuperem el valor retornat:
-
-**EchoServiceClient.java**
-
-```java
-public class EchoServiceClient implements MarshallingEchoService {
-   
-    @Autowired
-    private WebServiceTemplate wsTemplate;
-
-    private static final Log LOGGER = LogFactory.getLog(EchoServiceClient.class);
-   
-    /**
-     * Gets person list.
-     */
-    public EchoResponse echoEcho(EchoRequest request) {
-        EchoResponse response = 
-            (EchoResponse) wsTemplate.marshalSendAndReceive(request);
-
-        if(LOGGER.isDebugEnabled(()){
-	    LOGGER.debug(response.getMessage());
-        }
-
-        return response;
-        
-    }
-   
-}
-```

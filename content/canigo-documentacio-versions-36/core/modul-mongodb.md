@@ -12,7 +12,7 @@ El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’exec
 Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
 i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
-A partir de la versió 3.4 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
+A la versió 3.6 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
@@ -452,11 +452,6 @@ Per a més informació, podeu consultar la documentació oficial de [Spring Data
 #### Utilització de QueryDSL
 
 Una de les funcionalitats proposades és la d'utilitzar _QueryDSL_ per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.
-
-<div class="message information">
-QueryDSL està enfocat a bases de dades relacionals. A partir de la versió 3.4 de Canigó s'han deprecat els mètodes de
-"cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository" i es recomana no utilitzar-los.
-</div>
 
 _MongoGenericRepository_ proporciona els següents mètodes:
 
