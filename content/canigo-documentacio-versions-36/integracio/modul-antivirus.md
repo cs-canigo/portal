@@ -1,5 +1,5 @@
 +++
-date        = "2021-06-28"
+date        = "2021-10-21"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -14,17 +14,17 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[2.4.0,2.5.0)</canigo.integration.antivirus.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.antivirus</artifactId>
     <version>${canigo.integration.antivirus.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <div class="message warning">
 

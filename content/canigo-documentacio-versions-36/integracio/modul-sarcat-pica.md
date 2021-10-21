@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-19T17:03:30+01:00"
+date        = "2021-10-21"
 title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -38,15 +38,15 @@ llistarTaulaMestra                | Recuperació de codis o valors possibles per
 
 Per tal d'instal-lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.sarcat.pica.version>[1.2.0,1.3.0)</canigo.integration.sarcat.pica.version>
-
+```xml
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.sarcat.pica</artifactId>
     <version>${canigo.integration.sarcat.pica.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -68,7 +68,7 @@ Propietat           | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-36/integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-36/integracio/modul-pica/) pel que també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

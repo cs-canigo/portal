@@ -1,5 +1,5 @@
 +++
-date        = "2019-03-21T17:25:18+01:00"
+date        = "2021-10-21"
 title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -75,10 +75,6 @@ Es pot trobar el codi font i binaris referent a aquest component a la següent u
 
 http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.integration.psgd/
 
-### Requeriments
-
-El connector PSGD és compatible amb les versions 1.6 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
-
 ## Configuració
 
 Per configurar el mòdul d'integració PSGD és necessari configurar els següents arxius:
@@ -87,10 +83,7 @@ Per configurar el mòdul d'integració PSGD és necessari configurar els següen
 
 En el pom.xml;
 
-```
-<canigo.integration.psgd.version>[2.0.1,2.1.0)</canigo.integration.psgd.version>
-...
-
+```xml
 <!-- Dependencia del mòdul PSGD -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -98,6 +91,8 @@ En el pom.xml;
     <version>${canigo.integration.psgd.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/psgd.properties amb el següent contingut:
 

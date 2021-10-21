@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T10:28:07+01:00"
+date        = "2021-10-21"
 title       = "Padró"
 description = "Serveis d'empadronament publicats de la plataforma PICA."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -57,9 +57,7 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 ### Requeriments
 
-El connector PADRO és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
-
-Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/) 1.2.0.
+Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/) .
 
 ## Configuració
 
@@ -69,18 +67,16 @@ Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els s
 
 En el pom.xml:
 
-```
-<canigo.integration.padro.pica.version>[1.2.0,1.3.0)</canigo.integration.padro.pica.version>
-...
-
+```xml
 <!-- Dependencia del mòdul PICA-PADRO -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.padro.pica</artifactId>
     <version>${canigo.integration.padro.pica.version}</version>
 </dependency>
-
 ```
+
+A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/padro.properties amb el següent contingut:
 
@@ -144,7 +140,7 @@ Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLK
 
 ```java
 @Autowired
-private PadroConnectorImpl padroService;
+private PadroConnector padroService;
 ```
 
 2.- Escollir una modalitat de servei síncrona i cridar-la amb els paràmetres que necessiti. En aquest cas es mostra un exemple amb la modalitat padroComprovacioConvivents:
@@ -193,7 +189,7 @@ Igual que en les peticions asíncrones s'inicialitza el bean del servei del conn
 
 ```java
 @Autowired
-private PadroConnectorImpl padroService;
+private PadroConnector padroService;
 ```
 
 Es crida al servei amb les dades pertinents:
