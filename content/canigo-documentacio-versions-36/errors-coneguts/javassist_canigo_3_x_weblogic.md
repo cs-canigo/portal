@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-16"
+date        = "2021-10-21"
 title       = "Error llibreria javassist amb Canigó 3.x i Weblogic"
 description = "Conflicte de versions de la llibreria javassist amb Canigó 3.x i Weblogic"
 sections    = "Canigó. Documentació Versió 3.6"
@@ -12,9 +12,9 @@ El desembre del 2019 es va reportar un problema en l'execució de consultes a ba
 
 ## Detall del problema
 
-Canigó 3.6 utilitza la versió 5.4.32.Final de Hibernate en el seu mòdul de persistència JPA, aquesta versió de hibernate utilitza la versió 3.27.0-GA de la llibreria javassist. Per altre banda, al Weblogic incorpora la llibreria javassist amb una altre versió. Per exemple, a la versió de weblogic 12.1.3.0.0 incorpora la llibreria javassist versió 3.12.0.GA, per tant, al no coincidir amb la versió de Hibernate, pot donar errors de casteig.
+Canigó 3.6 utilitza la versió 5.4.32.Final de Hibernate en el seu mòdul de persistència JPA, aquesta versió de hibernate utilitza la versió 3.27.0-GA de la llibreria javassist. Per altre banda, al Weblogic incorpora la llibreria javassist amb una altre versió. Per exemple, a la versió de weblogic 14.1.0 incorpora la llibreria javassist versió 3.25.0.GA, per tant, al no coincidir amb la versió de Hibernate, pot donar errors de casteig.
 
-Si iniciem una aplicació amb Canigó 3.x a un weblogic 12.1.3.0.0 i executem una consulta a la base de dades utilitzant la capa JPA de Spring, una vegada executada la consulta a la base de dades, podem obtenir un error del estil:
+Si iniciem una aplicació i executem una consulta a la base de dades utilitzant la capa JPA de Spring, una vegada executada la consulta a la base de dades, podem obtenir un error del estil:
 
 ```
 2019-12-10 11:04:39 ERROR o.h.p.p.j.JavassistProxyFactory - HHH000142: Javassist Enhancement failed: <ENTITY>
@@ -89,7 +89,5 @@ Si estem treballant amb una aplicació Canigó 3.2 o superior i l'aplicació s'h
 ## Referència
 
 - [Entrada del problema a Stackoverflow](https://stackoverflow.com/questions/22481540/hibernate-exception-javassist-0-cannot-be-cast-to-javassist-util-proxy-proxy)
-
-- [Llistat de llibreries de tercers del weblogic 12.1.3](https://docs.oracle.com/cd/E55108_01/doc.62016/e56762/GUID-0B3F8A49-094C-496F-831F-8E8D39F72787.htm)
 
 Si necessiteu més informació, podeu obrir tiquet via [JIRA CSTD](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) o, en cas de no disposar de permisos d’accés, enviar un correu a la bústia del CS Canigó (oficina-tecnica.canigo.ctti@gencat.cat).
