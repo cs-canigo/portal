@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "SARCAT PICA"
 description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 13
+weight      = 9
 +++
 
 ## Propòsit

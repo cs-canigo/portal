@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 17
+weight      = 8
 +++
 
 ## Introducció

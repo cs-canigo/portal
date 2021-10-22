@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "Enotum"
 description = "Connector de la Pica que simplifica l'utilització del servei de Notificacions Telemàtiques de la Generalitat."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 5
+weight      = 4
 +++
 
 ## Propòsit

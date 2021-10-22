@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 11
+weight      = 8
 +++
 
 ## Propòsit

@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 15
+weight      = 12
 +++
 
 ## Introducció

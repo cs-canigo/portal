@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "ICC"
 description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 8
+weight      = 5
 +++
 
 ## Introducció

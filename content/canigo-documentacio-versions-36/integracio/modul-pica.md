@@ -3,7 +3,7 @@ date        = "2021-10-21"
 title       = "PICA"
 description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.laboració Administrativa)."
 sections    = "Canigó. Documentació Versió 3.6"
-weight      = 10
+weight      = 7
 +++
 
 ## Propòsit
