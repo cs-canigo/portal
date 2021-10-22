@@ -3,7 +3,7 @@ date        = "2021-05-11"
 title       = "Matrius de Compatibilitats 3.0"
 description = "Matriu de compatibilitats dels mòduls de Canigó 3.0"
 sections    = "Canigó"
-weight      = 4
+weight      = 5
 +++
 
 ## Canigó 3.0
