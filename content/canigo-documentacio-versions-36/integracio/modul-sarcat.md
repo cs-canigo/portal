@@ -8,251 +8,110 @@ weight      = 10
 
 ## Propòsit
 
-Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI.
+Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de Sarcat directament als seus WebService i asincronament a través de SFTP
+
+## Funcionalitats del connector
+
+El connector proporciona accés a les següents operacions de Sarcat:
+
+Operació Sarcat                   | Descripció Funcional | Modalitat PICA | Operació PICA
+--------------------------------- | -------------------- | -------------- | -------------
+consultaAssentaments              | Permet obtenir una relació d'assentaments, amb les dades bàsiques, que compleixin uns criteris de filtratge específics. | SARCAT_AL_CONSULTA    | OP_CONSULTA_ASSENTAMENTS
+cercaAssentaments                 | Permet obtenir totes les dades d'un assentament concret.                                                               | SARCAT_AL_CONSULTA    |  OP_CERCA_ASSENTAMENTS
+recollirAssentamentsSafataEntrada | Permet recollir assentaments de la safata d'entrada per incorporar-los a d'altres sistemes.                            | SARCAT_AL_CONSULTA    |  OP_RECOLLIR_ENTRADA
+recollirAssentamentsSafataSortida | Permet recollir assentaments de la safata de sortida per incorporar-los a d'altres sistemes.                            | SARCAT_AL_CONSULTA    |  OP_RECOLLIR_SORTIDA
+esPresortida                      | Conèixer si un assentament concret és una pre-sortida o una sortida.                                                    | SARCAT_AL_CONSULTA    |  OP_ES_PRESORTIDA
+insertarAssentamentEntrada        | Es registra l'assentament d'entrada i retorna el número d'assentament assignat i la data de registre.                   | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_ENTRADA
+insertarAssentamentSortida        | Es registra l'assentament de sortida i retorna el número d'assentament assignat i la data de registre.                  | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_SORTIDA
+insertarAssentamentSafata         | Donada la informació d'assentaments d'entrada, els grava i retorna el número de registre de cadascun. Addicionalment comprova la validesa de la destinació externa respecte l'unitat de registre associada a l'assentament.                                                                                            | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_SAFATA
+insertarAssentamentPresortida     | Donada la informació X d'assentaments de presortida, els grava i retorna el número de registre de cadascun.             | SARCAT_AL_ALTA        |  OP_INSERTAR_ASSENTAMENTS_PRESORTIDA
+numExp 							  | Permet modificar el número d'expedient prèviament assignat a un assentament d'entrada o sortida realitzat.              | SARCAT_AL_MODIFICACIO |  OP_CANVI_NUM_EXPEDIENT
+getNumsRegistre                   | Permet obtenir un conjunt de números d'assentaments que són reservats per s@rcat de manera exclusiva pel Backoffice que fa la sol- licitud.                                                                                                                                                                             | SARCAT_AL_RESERVA     |  OP_GET_NUM_REGISTRE
+cercaAssentamentsHist             | Permet obtenir totes les dades d'un assentament que ha passat pel repositori d'històrics d'assentaments de S@rcat.      | SARCAT_AP_HISTORIC    |  OP_CERCA_ASSENTAMENT_HISTORIC
+baixaAssentament                  | Permet donar de baixa assentaments d'entrada, sortida o presortida prèviament realitzats.                               | SARCAT_AL_BAIXA       |  OP_BAIXA_ASSENTAMENTS
+llistarTaulesMestres              | A partir d'una data concreta, s'obtenen totes les actualitzacions realitzades en les taules mestres de S@rcat a partir d'aquesta data.                                                                                                                                                                                   | SARCAT_AL_LLISTA_REG  |  OP_LLISTA_REG
+llistarTaulaMestra                | Recuperació de codis o valors possibles per a un determinat concepte o taula mestra.                                    | SARCAT_AP_LLISTA      |  OP_LLISTA_TAULA_MESTRA
 
 ## Instal.lació i Configuració
 
 ### Instal.lació
 
-Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
+```xml
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.antivirus</artifactId>
-    <version>${canigo.integration.antivirus.version}</version>
+    <artifactId>canigo.integration.sarcat</artifactId>
+    <version>${canigo.integration.sarcat.version}</version>
 </dependency>
 ```
 
 A la [Matriu de Compatibilitats] (/canigo-download-related/matrius-compatibilitats/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
-<div class="message warning">
-
-L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
-
-<br>
-
-El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
-
-<br>
-
-Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
-
-<br>
-
-<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
-
-</div>
-
 ### Configuració
 
 La configuració es realitza automàticament a partir de la eina de suport al desenvolupament.
 
-Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/antivirus.properties
+Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/sarcat.properties
 
 Propietat                              | Requerit | Descripció
 -------------------------------------- | -------- | ----------
-*.antivirus.remote                     | Sí       | Paràmetre que indica si l'escaneig dels arxius es realitza de forma remota o no. Si fos de forma remota l'arxiu a escanejar s'ha de pujar abans al servidor d'antivirus centrals, procés que fa automàticament el mòdul. En cas de remote a fals s'enten que l'arxiu ja es troba pujat al servidor d'antivirus centrals. <br>Valor per defecte: true
-*.antivirus.serverIp                   | Sí       | IP del Host on es troba el Servidor d'antivirus Centrals.<br>  antivirus.intranet.gencat.cat per entorns productius <br> preproduccio.antivirus.intranet.gencat.cat per entorns preproductius i d'altres
-*.antivirus.serverPort                 | Sí       | Port del Host on es troba el Servidor d'antivirus Centrals.<br> Valor per defecte: 1344
-*.antivirus.numDayDBExpirationWarning  | Sí       | Número de dies que han de passar per que una definició de virus de la base de dades d'antivirus centrals es consideri caducada. <br>Valor per defecte: 15
-*.antivirus.failRetryTime              | No       | Mil·lisegons d'espera màxima per obrir la connexió al servidor d'antivirus. <br>Valor per defecte: 30000
-*.antivirus.readWriteTime              | No       | Mil·lisegons d'espera màxima per obtenir resposta d'una consulta al servidor d'antivirus. <br>Valor per defecte: 3600000
+*.sarcat.webservice                     | Sí       | Url del WebService de Sarcat
+*.sarcat.user                   		| No       | Usuari per a l'utilització del WebService de Sarcat
+*.sarcat.password                 		| No       | Password per a l'utilització del WebService de Sarcat
+*.sftp.url                              | No       | Url del SFTP de Sarcat. Obligatori si es vol utilitzar la consulta de Sarcat asincronament
+*.sftp.username                         | No       | Usuari per a l'utilització del SFTP de Sarcat
+*.sftp.password                         | No       | Password per a l'utilització del SFTP de Sarcat
 
 ## Utilització del Mòdul
 
-Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un correu a la bústia canigó <oficina-tecnica.canigo.ctti@gencat.cat> al no estar disponible a cap repositori públic Maven:
-
-* Versió mòdul antivirus < 1.3.2: llibreria "sym-7.5.jar" configurant el pom.xml amb:
-```xml
-<dependency>
-	<groupId>sym</groupId>
-	<artifactId>sym</artifactId>
-	<version>7.5</version>
-</dependency>
-```
-
-* Versió mòdul antivirus >= 1.3.2 i < 2.2.0: llibreria "scanengine-api-7.0.0.8.jar" configurant el pom.xml amb:
-```xml
-<dependency>
-	<groupId>com.symantec.scanengine.api</groupId>
-	<artifactId>scanengine-api</artifactId>
-	<version>7.0.0.8</version>
-</dependency>
-```
-* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-7.9.2.jar" configurant el pom.xml amb:
-```xml
-<dependency>
-	<groupId>com.symantec.scanengine.api</groupId>
-	<artifactId>scanengine-api</artifactId>
-	<version>7.9.2</version>
-</dependency>
-```
-
-Aquestes llibreries ja estan incorporades internament al SIC (Servei d’Integració Contínua) per a compilacions de releases d’aplicacions
-
 ### Exemple d'ús
 
-**AntivirusServiceController.java**
+Per a l'exemple cridarem directament als WebService de Sarcat des d'un controllador
 
-Endpoint de l'aplicació que publica el servei de l'antivirus
+**SARCATController.java**
 
-```java
-	import java.io.InputStream;
-
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.http.MediaType;
-	import org.springframework.web.bind.annotation.PostMapping;
-	import org.springframework.web.bind.annotation.RequestMapping;
-	import org.springframework.web.bind.annotation.RestController;
-
-	import com.sun.jersey.core.header.FormDataContentDisposition;
-	import com.sun.jersey.multipart.FormDataParam;
-
-	import cat.gencat.plantilla32.service.AntivirusService;
-
-	@RestController
-	@RequestMapping("/antivirus")
-	public class AntivirusServiceController {
-
-		@Autowired
-		AntivirusService antivirusService;
-
-		@PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, 
-				produces = { MediaType.APPLICATION_JSON_VALUE })
-		public String scan(@FormDataParam("file") InputStream inputStream, 
-							@FormDataParam("file") FormDataContentDisposition fileDetail) {
-			
-			return antivirusService.scan(inputStream);
-		}
-	}
-```
-
-**AntivirusService.java**
-
-Classe java on es realitza la lògica de la operació i es crida al mòdul de l'antivirus
+Endpoint de l'aplicació que publica el servei de Sarcat, en aquest cas, publicarem un servei que realitzará la crida al servei de login
 
 ```java
-	import java.io.ByteArrayOutputStream;
-	import java.io.IOException;
-	import java.io.InputStream;
+	import org.openuri.Login;
+import org.openuri.LoginResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-	import org.h2.util.IOUtils;
-	import org.slf4j.Logger;
-	import org.slf4j.LoggerFactory;
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.context.annotation.Lazy;
-	import org.springframework.stereotype.Service;
+import cat.gencat.ctti.canigo.arch.integration.sarcat.exceptions.SarcatException;
+import cat.gencat.ctti.canigo.arch.integration.sarcat.serveis.SarcatServices;
+import es.tsystems.sarcat.schema.login.LoginInfo;
 
-	import cat.gencat.ctti.canigo.arch.integration.antivirus.Antivirus;
-	import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
-	import cat.gencat.ctti.canigo.arch.integration.antivirus.beans.InfectionInfo;
-	import cat.gencat.ctti.canigo.arch.integration.antivirus.exceptions.AntivirusException;
+@RestController
+@RequestMapping("/sarcat")
+public class SARCATController {
 
-	@Service("antivirusService")
-	@Lazy
-	public class AntivirusService {
+  @Value("${sarcat.user}")
+  private String sarcatUser;
 
-		@Autowired
-		private Antivirus service;
-		
-		private static final Logger log = LoggerFactory.getLogger(AntivirusService.class);
+  @Value("${sarcat.password}")
+  private String sarcatPassword;
+
+  /** sarcat services. */
+  @Autowired
+  private SarcatServices sarcatServices;
+
+  @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+  public LoginResponse login() throws SarcatException {
+    Login login = new org.openuri.ObjectFactory().createLogin();
+    LoginInfo logginInfo = new es.tsystems.sarcat.schema.login.ObjectFactory().createLoginInfo();
+    logginInfo.setPassword(sarcatPassword);
+    logginInfo.setUser(sarcatUser);
+    login.setLoginInfo(logginInfo);
+
+    return sarcatServices.login(login);
+  }
 
 
-		 /**
-		 * Escaneig de l'arxiu pujat al servidor
-		 *
-		 */
-			public String scan(InputStream file){
-				String resultat = null;
-				String message = null;
-				log.info("AntivirusAction [scan] - Inici");
-				ResultatEscaneig res = null;
-				try {
-			
-					ByteArrayOutputStream out = new ByteArrayOutputStream();
-					
-					IOUtils.copy(file, out);
-					
-					res = service.scan(out.toByteArray());
-			
-					if (res != null) {
-						switch (res.getEstat()) {
-						case 0:
-							log.info("AntivirusAction [scan] - arxiu sense Virus");
-							resultat = "Arxiu sense Virus";
-							break;
-						case -1:
-							log.info("AntivirusAction [scan] - arxiu amb Virus!");
-							StringBuffer sb = new StringBuffer();
-							sb.append("Arxiu amb Virus!");
-							if(res.getArrayVirus()!=null){
-								for(InfectionInfo i : res.getArrayVirus()){
-									sb.append(i.getFileName() + " - " + i.getViolationName() + "; ");
-								}
-								resultat = sb.toString();
-							}
-							break;
-						case 1:
-							log.info("AntivirusAction [scan] - Warning");
-							resultat = res.getMissatge();
-							break;
-						default:
-							log.info("AntivirusAction [scan] - Error en el procés d'escaneig");
-							resultat = "S'ha produit un error";
-						}
-					}
-			
-					message = "Resultat del escaneig: " + resultat;
-			
-					log.info("AntivirusAction [scan] - Final");
-				} catch (AntivirusException ae) {
-					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
-							+ " " + ae.getStackTrace());
-					message = "Resultat del escaneig(Error): " + ae.getMessage();
-				} catch (IOException e) {
-					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
-							+ " " + e.getStackTrace());
-					message = "Resultat del escaneig(Error): " + e.getMessage();
-				} 
-				
-				return message;
-			}
-	}
+}
 ```
-## Respostes servei antivirus
-
-L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` és l'encarregat d'interpretar la informació de la resposta del servei de l'antivirus. Aquest objecte conté els mètodes:
-
-- `int getEstat()`: Número enter que representa l’estat de finalització del procés d’escaneig.
- 
-	o STATUS_OK = 0
-	
-	o STATUS_KO = -1
-	
-	o STATUS_WARN = 1
-
-- `String getMissatge()`: String que emmagatzemarà la informació de les amenaces trobades en el procés d’escaneig. Si no hi hagués cap el seu valor serà null
-
-- `List<InfectionInfo> getArrayVirus()`: Llistat d’objectes InfectionInfo. Aquests objectes representen cada amenaça detectada en l’escaneig. Cada objecte InfectionInfo disposa dels següents camps:
-
-	o String violationId
-	
-	o String violationName
-	
-	o String threadCategory
-	
-	o String fileName
-	
-	o String disposition
-
-El conjunt de dades que retornarà es pot resumir amb el següent quadre:
-
-Cas | Estat | Missatge | ArrayVirus
---- | ----- | -------- | ----------
-KO | -1 | [string amb la informació del virus] | [LLista d’objetes de tipus InfectionInfo amb informació de les amenaces detectades]
-OK | 0 | null | null
-WARN (No s’ha pogut accedir al fitxer) | 1 | FILE_ACCESS_FAILED | null
-WARN(Error intern al servidor) | 1 | INTERNAL_SERVER_ERROR | null
-WARN(no hi ha llicència disponible) | 1 | NO_AV_LICENSE | null
-WARN(base de dades antivirus caducada) | 1 | Base de dades de la definició de l'antivirus caducada | null

@@ -36,7 +36,7 @@ llistarTaulaMestra                | Recuperació de codis o valors possibles per
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal-lar el mòdul de Sarcat Pica es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
 <dependency>
