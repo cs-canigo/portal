@@ -138,7 +138,7 @@ La finalitat d'aquests mòduls és la de facilitar l'accés a diferents serveis 
 mòdul permet realitzar comunicacions síncrones i asíncrones.
 - **GECAT**: proporciona funcionalitat d'alta de factures, consultes i reserves online que ofereix el servei SAP de GECAT.
 - **PSIS**: permet la validació de signatures i certificats mitjançant el servei de PSIS ofert per Catcert.
-- **SARCAT**: permet consumir els diferents serveis que ofereix Sarcat, via Webservices o FTP/SFTP per a peticions planificades.
+- **SARCAT**: permet consumir els diferents serveis que ofereix Sarcat, a través de la Pica o via Webservices o SFTP per a peticions planificades.
 - **Documentum**: permet consumir funcionalitats de Documentum com l'emmagatzematge i recuperació de documents, a més de crear carpetes i associar propietats.
 - **Notificacions Telemàtiques**: és un connector funcional cap a la PICA que simplifica d’ús de Notificacions Telemàtiques de la Generalitat.
 - **Antivirus**: permet l'escaneig d'arxius mitjançant la Plataforma d'Antivirus Corporatiu de la Generalitat.
