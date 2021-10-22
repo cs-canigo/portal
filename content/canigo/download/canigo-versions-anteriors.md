@@ -3,8 +3,7 @@ date        = "2021-08-16"
 title       = "Canigó versions anteriors 2.x"
 description = "Descàrrega de versions anteriors a Canigó 2.x"
 sections    = "Canigó"
-toc        = true
-weight     = 2
+weight     = 5
 +++
 
 ## Versions anteriors 2.x

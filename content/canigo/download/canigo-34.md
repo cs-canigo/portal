@@ -3,7 +3,6 @@ date        = "2021-08-16"
 title       = "Canigó 3.4"
 description = "Descàrrega de versió Canigó 3.4 i entorn de treball"
 sections    = "Canigó"
-toc        = true
 weight     = 2
 +++
 
