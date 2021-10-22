@@ -136,13 +136,10 @@ La finalitat d'aquests mòduls és la de facilitar l'accés a diferents serveis 
 
 - **PICA**: proporciona una interfície Java per a accedir a la Plataforma d'Integració i Col·laboració Administrativa. Aquest
 mòdul permet realitzar comunicacions síncrones i asíncrones.
-- **GECAT**: proporciona funcionalitat d'alta de factures, consultes i reserves online que ofereix el servei SAP de GECAT.
 - **PSIS**: permet la validació de signatures i certificats mitjançant el servei de PSIS ofert per Catcert.
 - **SARCAT**: permet consumir els diferents serveis que ofereix Sarcat, a través de la Pica o via Webservices o SFTP per a peticions planificades.
-- **Documentum**: permet consumir funcionalitats de Documentum com l'emmagatzematge i recuperació de documents, a més de crear carpetes i associar propietats.
 - **Notificacions Telemàtiques**: és un connector funcional cap a la PICA que simplifica d’ús de Notificacions Telemàtiques de la Generalitat.
 - **Antivirus**: permet l'escaneig d'arxius mitjançant la Plataforma d'Antivirus Corporatiu de la Generalitat.
-- **SAP**: proporciona una interfície simplificada per a accedir a backends SAP de la Generalitat.
 - **Webservices**: Canigó 3 no disposa d'un mòdul de Webservices. S'ha preparat una guia on s'explica com realitzar l'exportació
 de serveis Java mitjançant Webservices, la importació de webservices externs i generació de les classes Java d'invocació. Proposa l'ús d'Spring WS, Jaxb i OXM.
 - **Cues**: Canigó 3 no disposa d'un mòdul de Gestió de Cues. S'ha preparat una guia on s'explica com produir i consumir
