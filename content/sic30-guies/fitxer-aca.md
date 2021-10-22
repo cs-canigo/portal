@@ -1,5 +1,5 @@
 +++
-date = "2021-09-28"
+date = "2021-10-22"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -386,21 +386,78 @@ On `scm` indica el repositori on es troben ubicats els orquestradors per a dur a
 
 #### components[].deployment.enviroments[]
 
-Informació sobre els entorns (`name`) i de quina manera es desplegarà l’aplicació (`actions`) segons la següent estructura:
+Informació sobre els entorns (`name`) i les especificitats del desplegament sobre aquests, segons l'estructura següent:
 
 ```
 components:
   - deployment:
       environments:
         - name
+          deployment-type
+          artifacts
           actions
 ```
 
 On:
 
-- `name`: nom de l'entorn on es desplegarà l'aplicació
+- `name`: nom de l'entorn on es desplegarà l'aplicació. Per exemple: "integration", "preproduction" o "production".
 
-- `actions`: accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
+- `deployment-type`: únicament per a **desplegaments on-premise**, modalitat de desplegament aplicable. Possibles valors: `delegated` o `semiautomatic`
+
+- `artifacts`: únicament per a **desplegaments on-premise**, llista d'artefactes que es desplegaran
+
+- `actions`: únicament per a **desplegaments al cloud**, accions a realitzar per al desplegament de l'aplicació diferenciant entre: `before-deploy`, `deploy` i `after-deploy`
+
+#### components[].deployment.enviroments[].artifacts[]
+
+Únicament per a **desplegaments on-premise**, informació sobre els artefactes a desplegar indicant el seu: nom (`name`), ruta (`path`), tipus (`type`) i,
+en cas de desplegament en modalitat delegada, l'identificador de insfraestructura assignat (` infrastructure-id`), segons l'estructura següent:
+
+```
+components:
+  - deployment:
+      environments:
+        - name:
+          deployment-type:
+          artifacts:
+            name:
+            path:
+            type:
+            infrastructure-id:
+```
+
+On:
+
+- `name`: nom de l'artefacte a desplegar
+
+- `path`: (opcional) ruta de l'artefacte a partir de l'arrel del projecte utilitzant el caràcter separador "/". Per defecte, "."
+
+- `type`: tipus d'artefacte a desplegar. Possibles valors: `dynamic`, `static` o `bbdd`
+
+- `infrastructure-id`: únicament per al **desplegament en modalitat delegada**, identificador d'infraestructura proporcionat pel Cpd
+
+Per exemple:
+
+```
+components:
+  - deploy:
+      environments:
+        - name: integration
+          deployment-type: delegated
+          artifacts:
+            - name: bbdd_INT.zip
+              path: tmpBBDD
+              type: bbdd
+              infrastructure-id: id_cpdx_bbdd
+```
+
+Com es pot veure a l'exemple, en el cas de desplegaments de scripts de Base de Dades (`type`: bbdd) caldrà indicar el nom i ruta de
+l'artefacte preestablerts pel sistema:
+
+- `name`: bbdd_${entorn fitxer `plans.xml`}
+
+- `name`: tmpBBDD
+
 
 ##### components[].deployment.enviroments[].actions.before-deploy
 
@@ -511,6 +568,13 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |CF_COMMAND|Comanda a executar al CloudFoundry|
 |CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per "|". Consultar a Suport Cloud|
 
+
+###### Per al **desplegament On Premise**
+
+|Variable|Requerit|Descripció|Exemple|
+|--------|--------|----------|-------|
+|PLANS_PATH|Únicament per al **desplegament d'scripts de Base de dades**|Ruta del fitxer de plans d'execució d'scripts de Base de Dades|sql_scripts|
+|PLANS_NAME|Únicament per al **desplegament d'scripts de Base de dades**|Nom del fitxer de plans d'execució d'scripts de Base de Dades|plans.xml|
 
 ###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
 
@@ -629,6 +693,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció aplicació PHP utilitzant imatge “custom Builder” i desplegament a l’Openshift](/related/sic/3.0/aca_const_custom_builder_despl_php_openshift.yml)
 
 - [Construcció aplicació Maven utilitzant imatge “custom Builder” i desplegament al Kubernetes IBMCloud](/related/sic/3.0/aca_const_custom_builder_despl_maven_kubernetes_ibmcloud.yml)
+
+- [Construcció aplicació bbdd/Maven i desplegament On Premise](/related/sic/3.0/aca_const_despl_bbdd_maven_onpremise.yml)
 
 - [Aplicació a desplegar a l’Api Manager](/related/sic/3.0/aca_despl_api_manager.yml)
 

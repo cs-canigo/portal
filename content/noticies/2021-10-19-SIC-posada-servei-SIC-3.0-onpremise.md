@@ -1,10 +1,10 @@
 +++
-date        = "2021-10-19"
+date        = "2021-10-22"
 title       = "SIC. Posada en servei Plataforma SIC 3.0 per a desplegaments on-premise"
 description = "El dia 20/10/2021 s'ha posat en servei la nova Plataforma del Sistema d'Integració Contínua 3.0 per a pipelines amb desplegament en infraestructures on-premise"
-#sections    = ["Notícies", "home"]
-#categories  = ["sic"]
-#key         = "NOVEMBRE2021"
+sections    = ["Notícies", "home"]
+categories  = ["sic"]
+key         = "NOVEMBRE2021"
 +++
 
 **A partir del 20 de octubre del 2021 s'ha posat en servei la nova Plataforma del
