@@ -1,20 +1,20 @@
 +++
 date        = "2021-08-16"
-title       = "Canigó 3.4"
-description = "Descàrrega de versió Canigó 3.4 i entorn de treball"
+title       = "Canigó 3.6"
+description = "Descàrrega de versió Canigó 3.6, entorn de treball i plugin d'eclipse"
 sections    = "Canigó"
 toc        = true
-weight     = 2
+weight     = 1
 +++
 
-## Canigó 3.4
+## Canigó 3.6
 
-- [Release notes Canigó 3.4](/canigo-download-related/release-notes-canigo-34)
+- [Release notes Canigó 3.6](/canigo-download-related/release-notes-canigo-36)
 - [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
-|              3.4 LTS                 |                3.4.6                 |
+|              3.6 LTS                 |                3.6.0                 |
 
 
 
@@ -62,9 +62,9 @@ S'ha certificat la versió de Canigó 3.4.6 amb els servidors suportats al [Full
 |  WebSphere	  		        	  	 	|         9.0                 			|
 |  JBoss EAP       									|         7.x        			          |
 
-La versió de Java mínima per utilitzar Canigó 3.4 és 1.8
+La versió de Java mínima per utilitzar Canigó 3.6 és 11
 
-Entregables associats a Canigó 3.4:
+Entregables associats a Canigó 3.6:
 
 |          Entregable  |     Versió      |
 |---------------------------------      |---------------------------------- |
@@ -76,6 +76,8 @@ Entregables associats a Canigó 3.4:
 ### Creació de l'entorn local de desenvolupament
 
 Veure: [Entorn desenvolupament Canigó](/canigo/entorn-desenvolupament/).
+
+Altra informació d’interès: [Plugin Canigó 3.6 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 
 ### Configuració de Maven (manual)
 
@@ -128,4 +130,3 @@ Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile p
    </profile>
 
 ```
-
