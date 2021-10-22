@@ -9,7 +9,7 @@ weight     = 1
 ## Canigó 3.6
 
 - [Release notes Canigó 3.6](/canigo-download-related/release-notes-canigo-36)
-- [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
+- [Matriu de Compatibilitat Canigo 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36)
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |

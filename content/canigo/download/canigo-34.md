@@ -9,7 +9,7 @@ weight     = 2
 ## Canigó 3.4
 
 - [Release notes Canigó 3.4](/canigo-download-related/release-notes-canigo-34)
-- [Matriu de Compatibilitat Canigo 3](/canigo-download-related/matrius-compatibilitats)
+- [Matriu de Compatibilitat Canigo 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34)
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |

@@ -9,7 +9,7 @@ weight     = 3
 ## Canigó 3.2
 
 - [Release notes Canigó 3.2](/canigo-download-related/release-notes-canigo-32)
-- [Matriu de Compatibilitats Canigo 3](/canigo-download-related/matrius-compatibilitats)
+- [Matriu de Compatibilitats Canigo 3.2](/canigo-download-related/matrius-compatibilitats/canigo-32)
 
 |          Versió LTS Actual            |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
