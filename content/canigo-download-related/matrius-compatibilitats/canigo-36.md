@@ -1,12 +1,12 @@
 +++
-date        = "2021-05-11"
-title       = "Matrius de Compatibilitats 3.4"
-description = "Matriu de compatibilitats dels mòduls de Canigó 3.4"
+date        = "2021-10-22"
+title       = "Matrius de Compatibilitats 3.6"
+description = "Matriu de compatibilitats dels mòduls de Canigó 3.6"
 sections    = "Canigó"
-weight      = 2
+weight      = 1
 +++
 
-## Canigó 3.4.x
+## Canigó 3.6.x
 
 |                                                   		| 25/03/2019 (3.4.0)	| 17/09/2019 (3.4.1)	| 22/10/2019 (3.4.2)	| 26/03/2020 (3.4.3)	| 16/06/2020 (3.4.4)	| 09/09/2020 (3.4.5)	| 11/05/2021 (3.4.6)	|
 |---------------------------------------------------		|------------------		|------------------		|------------------		|------------------		|------------------		|------------------		|------------------		|
