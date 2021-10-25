@@ -1,7 +1,7 @@
 +++
 date        = "2021-10-22"
-title       = "Actualització Canigó 3.6 a Canigó 3.6"
-description = "Com realitzar l'actualització d'una aplicació de Canigó 3.6 a Canigó 3.6"
+title       = "Actualització Canigó 3.4 a Canigó 3.6"
+description = "Com realitzar l'actualització d'una aplicació de Canigó 3.4 a Canigó 3.6"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "DECEMBRE2021"
