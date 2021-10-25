@@ -41,7 +41,7 @@ Després de canviar les versions dels mòduls decrits a la secció anterior, és
 
 **1.** Canviar la constant `MediaType.APPLICATION_JSON_UTF8_VALUE` per `MediaType.APPLICATION_JSON_VALUE`
 
-**2.** Els mòduls d'integració amb WS Soap els clients s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
+**2.** Els clients dels mòduls d'integració amb Web Service Soap s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
 
 
 **-** Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
