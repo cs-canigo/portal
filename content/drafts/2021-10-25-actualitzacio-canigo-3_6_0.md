@@ -14,9 +14,11 @@ Amb l’alliberament de la **versió 3.6.0 del framework Canigó** s’assoleix 
 
 ### JDK 11
 
-El Setembre de 2018, Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les seves release notes al següent [enllaç](https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html).
+El Setembre de 2018, Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les seves release notes al següent a:
 
-Des del CS Canigó, s'ha evolucionat el Framework Canigó per ser compatible amb JDK 11.
+https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html
+
+Des del CS Canigó, s'ha evolucionat el Framework Canigó per a que Canigó treballi amb JDK 11 nativament.
 
 ### Spring 5.3
 
@@ -55,7 +57,17 @@ En llistat de mòduls d'integració de Canigó que utilitzen Serveis Web Soap s�
 - SSC
 - Tributs
 
-S'han actualitzat els clients d'aquests mòduls d'integració amb Web Service Soap, generant el client amb `CXF` i realitzant la transformació de objectes java a xml i al revés amb `JAXB`
+S'han actualitzat els clients d'aquests mòduls d'integració amb Web Service Soap, generant el client amb `Apache CXF` i realitzant la transformació de objectes java a xml i al revés amb `JAXB`
+
+Apache CXF és un framework complet, de codi obert per a Web Service. Els punts principals de `CXF` són:
+
+- Simplicitat en la creació de clients dels Web Services
+
+- Alt rendiment amb un mínim de overhead computacional
+
+- Incrustable amb Spring
+
+Java Architecture for XML Binding (JAXB) permet assignar classes de Java a representacions XML. JAXB és una part de la plataforma Java SE i una de les APIs de la plataforma Java EE, i és part de la Java Web Services Development Pack (JWSDP)
 
 Podeu trobar més informació sobre els mòduls d'integració de Canigó 3.6 a:
 
@@ -65,7 +77,7 @@ https://canigo.ctti.gencat.cat/canigo-documentacio-versions-36/integracio/
 
 S'utilitza Swagger per a exposar i descriure les API RESTful expressades amb JSON. A Canigó es proporciona una preconfiguració per exposar aquests serveis amb Swagger.
 
-S'ha actualitzat la versió de Swagger a l'última versió compatible amb Canigó 3.6, la 2.9.2
+S'ha actualitzat la versió de Swagger a l'última versió compatible amb Canigó 3.6, la 2.9.2, eliminant la pàgina personalitzada de Canigó i utilitzant tots els seus components de forma nativa
 
 ### Actualització dependències i plugins
 
