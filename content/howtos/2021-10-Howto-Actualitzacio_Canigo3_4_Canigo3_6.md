@@ -43,31 +43,32 @@ Després de canviar les versions dels mòduls decrits a la secció anterior, és
 
 **2.** Els mòduls d'integració amb WS Soap els clients s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
 
-  **-** Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
-  
-  ```
-  net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
-  ```
-  
-  a:
-  
-  ```
-  net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
-  ```
-  
-  **-** Nom de pacakge seguint la convenció de noms de package correcte, així els noms dels package són tots en minúscules, per exemple, de
-  
-  ```
-  net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
-  ```
-  
-  a: 
-  
-  ```
-  net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
-  ```
 
-  - Modificació de la forma de crear els objectes java dels clients dels web service utilitzant sempre el `ObjectFactory` de cada pacakge, per exemple, de:
+**-** Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
+  
+```
+net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
+```
+  
+a:
+  
+```
+net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
+```
+  
+**-** Nom de pacakge seguint la convenció de noms de package correcte, així els noms dels package són tots en minúscules, per exemple, de
+  
+```
+net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
+```
+  
+a: 
+ 
+```
+net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
+```
+
+**-** Modificació de la forma de crear els objectes java dels clients dels web service utilitzant sempre el `ObjectFactory` de cada pacakge, per exemple, de:
 
 ```
 SMSRequest sms = SMSRequestDocument.Factory.newInstance().addNewSMSRequest();
@@ -79,7 +80,7 @@ a:
 SMSRequest sms = new net.gencat.scsp.esquemes.avisos.smsrequest.ObjectFactory().createSMSRequest();
 ```
 
-  - Modificació de la forma de parseig del xml a objectes java, utilitzant `unmarshall`, per exemple, de:
+**-** Modificació de la forma de parseig del xml a objectes java, utilitzant `unmarshall`, per exemple, de:
 
 ```
 SMSResponse docUuid = SMSResponseDocument.Factory.parse(nodeResposta).getSMSResponse();
