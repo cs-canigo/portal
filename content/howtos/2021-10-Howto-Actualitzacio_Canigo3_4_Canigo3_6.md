@@ -243,3 +243,5 @@ public class WebConfig implements WebMvcConfigurer
 ```
 
 **13.** El mètode `getNumRegistre` del mòdul `canigo.integration.sarcat` ha canviat a `getNumsRegistre` per seguir amb el nom de la funció de SARCAT
+
+**14.** S'ha eliminat la pàgina customitzada per l'exposició dels serveis amb Swagger `/canigo-api.html`. És necessari utilitzar la pàgina pròpia de Swagger a `/api/swagger-ui.html`
