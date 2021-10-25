@@ -44,16 +44,19 @@ Després de canviar les versions dels mòduls decrits a la secció anterior, és
 2. Els mòduls d'integració amb WS Soap els clients s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
 
   - Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
+  
   ```
   net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
   ```
+  
   a:
   
   ```
   net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
   ```
-
+  
   - Nom de pacakge seguint la convenció de noms de package correcte, així els noms dels package són tots en minúscules, per exemple, de
+  
   ```
   net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
   ```
@@ -238,4 +241,4 @@ a:
 public class WebConfig implements WebMvcConfigurer
 ```
 
-13. El mètode `getNumRegistre` del mòdul `canigo.integration.sarcat` ha canviat a `getNumsRegistre` per seguir amb el nom de la funció de SARCAT
+*13.* El mètode `getNumRegistre` del mòdul `canigo.integration.sarcat` ha canviat a `getNumsRegistre` per seguir amb el nom de la funció de SARCAT
