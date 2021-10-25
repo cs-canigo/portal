@@ -39,11 +39,11 @@ La versió parent de Spring boot és la 2.5.4, per tant, per una aplicació amb 
 
 Després de canviar les versions dels mòduls decrits a la secció anterior, és necessari realitzar els següents canvis:
 
-1. Canviar la constant `MediaType.APPLICATION_JSON_UTF8_VALUE` per `MediaType.APPLICATION_JSON_VALUE`
+**1.** Canviar la constant `MediaType.APPLICATION_JSON_UTF8_VALUE` per `MediaType.APPLICATION_JSON_VALUE`
 
-2. Els mòduls d'integració amb WS Soap els clients s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
+**2.** Els mòduls d'integració amb WS Soap els clients s'han generat amb `CXF` i la transformació de objectes java a xml i al revés es realitza amb `JAXB`, aquest canvi té les següents implicacions:
 
-  - Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
+  **-** Tots els objectes generats són objectes separats, continguts dins de package i no com a subclasses, per exemple, de 
   
   ```
   net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
@@ -55,7 +55,7 @@ Després de canviar les versions dels mòduls decrits a la secció anterior, és
   net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
   ```
   
-  - Nom de pacakge seguint la convenció de noms de package correcte, així els noms dels package són tots en minúscules, per exemple, de
+  **-** Nom de pacakge seguint la convenció de noms de package correcte, així els noms dels package són tots en minúscules, per exemple, de
   
   ```
   net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
@@ -91,11 +91,11 @@ a:
 SMSResponse docUuid = (SMSResponse) JAXBContext.newInstance(SMSResponse.class).createUnmarshaller().unmarshal(nodeResposta);
 ```
 
-3. Estàndarització dels noms dels package dels mòduls que no complien els estàndards, així de `cat.gencat.ctti.canigo.arch.support.resizeImg`, passa a ser: `cat.gencat.ctti.canigo.arch.support.resizeimg`
+**3.** Estàndarització dels noms dels package dels mòduls que no complien els estàndards, així de `cat.gencat.ctti.canigo.arch.support.resizeImg`, passa a ser: `cat.gencat.ctti.canigo.arch.support.resizeimg`
 
-4. En el mòdul `canigo.integration.sarcat.planificat` s'han organitzat els objectes que contenien ja que estaven sense organitzar, és necessari reimportar els objectes
+**4.** En el mòdul `canigo.integration.sarcat.planificat` s'han organitzat els objectes que contenien ja que estaven sense organitzar, és necessari reimportar els objectes
 
-5. Els mètodes `findAll` de `GenericRepository` que utilitzin predicate, aquest no pot ser null, si el predicate és null, s'ha d'utilitzar el mètode `findAll` sense el predicate, per exemple de:
+**5.** Els mètodes `findAll` de `GenericRepository` que utilitzin predicate, aquest no pot ser null, si el predicate és null, s'ha d'utilitzar el mètode `findAll` sense el predicate, per exemple de:
 
 ```
 return repository.findAll(predicate, pageable)
@@ -107,7 +107,7 @@ a:
 return predicate != null ? repository.findAll(predicate, pageable) : repository.findAll(pageable);
 ```
 
-6. Per configurar la connexió amb Mongodb s'utilitza `MongoClientSettings` enlloc de `MongoClientOptions`, per exemple per configurar la connexió per defecte, de:
+**6.** Per configurar la connexió amb Mongodb s'utilitza `MongoClientSettings` enlloc de `MongoClientOptions`, per exemple per configurar la connexió per defecte, de:
 
 ```
 @Configuration
@@ -174,11 +174,11 @@ public class EquipamentMongoConfig extends MongoCoreConfig {
 }
 ```
 
-7. Eliminació de funcions `findAll` deprecades a `MongoGenericRepository`
+**7.** Eliminació de funcions `findAll` deprecades a `MongoGenericRepository`
 
-8. Eliminació de `CanigoDBObjectMongodbSerializer`, és necessari utilitzar directament `SpringDataMongodbSerializer`
+**8.** Eliminació de `CanigoDBObjectMongodbSerializer`, és necessari utilitzar directament `SpringDataMongodbSerializer`
 
-9. Modificació de la forma de contruir els objectes de JPA, utilitzant els mètodes estàtics, per exemple de:
+**9.** Modificació de la forma de contruir els objectes de JPA, utilitzant els mètodes estàtics, per exemple de:
 
 ```
 new PageRequest(page - 1, rpp, getOrdenacio(sort))
@@ -202,7 +202,7 @@ a:
 Sort.by(orders)
 ```
 
-10. Per defecte no ve cap `HttpFirewall` configurat a Spring Security, per definir-ne un per defecte:
+**10.** Per defecte no ve cap `HttpFirewall` configurat a Spring Security, per definir-ne un per defecte:
 
 ```
   @Bean
@@ -217,7 +217,7 @@ Podeu obtenir més informació sobre `HttpFirewall` a:
 
 https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/firewall/HttpFirewall.html
 
-11. Es necessari utilitzar l'última versió del schema del xsd de Spring Security, per exemple de:
+**11.** Es necessari utilitzar l'última versió del schema del xsd de Spring Security, per exemple de:
 
 ```
 http://www.springframework.org/schema/security/spring-security-4.2.xsd
@@ -229,7 +229,7 @@ a:
 http://www.springframework.org/schema/security/spring-security-5.4.xsd
 ```
 
-12. Si s'utilitza `WebMvcConfigurer` ja no es necessari extendre de `WebMvcConfigurerAdapter`, ja es pot implementar directament, per tant de:
+**12.** Si s'utilitza `WebMvcConfigurer` ja no es necessari extendre de `WebMvcConfigurerAdapter`, ja es pot implementar directament, per tant de:
 
 ```
 public class WebConfig extends WebMvcConfigurerAdapter
@@ -241,4 +241,4 @@ a:
 public class WebConfig implements WebMvcConfigurer
 ```
 
-*13.* El mètode `getNumRegistre` del mòdul `canigo.integration.sarcat` ha canviat a `getNumsRegistre` per seguir amb el nom de la funció de SARCAT
+**13.** El mètode `getNumRegistre` del mòdul `canigo.integration.sarcat` ha canviat a `getNumsRegistre` per seguir amb el nom de la funció de SARCAT
