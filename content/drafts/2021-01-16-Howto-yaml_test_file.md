@@ -47,7 +47,7 @@ persistence:
 
 ## Ús 
 
-Per a poder fer ús de les propietats en YAML serà necessari utilitzar el `YamlPropertiesApplicationContextInitializer`, per això serà necessari definir una classe per la carga de la configuració de Spring pel `ContextConfiguration`, per exemple, `TestAppConfig.java`:
+Per a poder fer ús de les propietats en YAML a les proves unitàries, serà necessari utilitzar el `YamlPropertiesApplicationContextInitializer`, per això serà necessari definir una classe per la carga de la configuració de Spring pel `ContextConfiguration`, per exemple, `TestAppConfig.java`:
 
 ```java
 ...
@@ -101,4 +101,8 @@ Si executem el test `EquipamentServiceTest.testYamlProperties`, podrem obtenir u
 
 ## Conclusió
 
- * A Canigó és possibile sobreescriure les propietats de l'aplicació a través de fitxers YAML que només afectin a les proves unitaries.
+ * A Canigó és possibile sobreescriure les propietats de l'aplicació a través de fitxers YAML que només afectin a les proves unitàries.
+
+## Més informació
+
+Per a més informació podeu consultar la documentació del [Mòdul de configuració](/canigo-documentacio-versions-34-core/modul-configuracio/) de Canigó
