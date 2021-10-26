@@ -1,4 +1,4 @@
-+++ date = "2021-10-01" title = "Exemple de Kafka Streams" description = "El propòsit d'aquest exemple és demostrar l'escriptura i lectura d'un tòpic de Kafka" responsable = "Oficina Tècnics EventHub" sections = ["drafts"] blog_tags = ["kafka"] categories = ["Kafka","EventHub"] key = "OCTUBRE2021" +++
++++ date = "2021-10-01" title = "Exemple de Kafka Streams" description = "El propòsit d'aquest exemple és demostrar l'escriptura i lectura d'un tòpic de Kafka" responsable = "Oficina Tècnica EventHub" sections = ["drafts"] blog_tags = ["kafka"] categories = ["Kafka","EventHub"] key = "OCTUBRE2021" +++
 
 # Kafka Streams Example
 - [Kafka Streams Example](#kafka-streams-example)
