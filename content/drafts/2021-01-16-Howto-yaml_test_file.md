@@ -1,28 +1,24 @@
 +++
-date        = "2021-01-16"
-title       = "Canigó. Como configurar propiedades en archivos YAML para pruebas unitarias"
-description = "Como configurar propiedades en archivos YAML para pruebas unitarias"
-section     = "howtos"
-categories  = ["canigo"]
-#key         = "GENER2021"
+date        = "2021-10-26"
+title       = "Canigó. Com configurar propiedades en fitxers YAML per a proves unitaries a Canigó"
+description = "Com configurar propiedades en fitxers YAML per a proves unitaries per a projectes amb Canigó"
+#section     = "howtos"
+#categories  = ["canigo"]
+#key         = "DECEMBRE2021"
 +++
 
 
-## Introducción
+## Introducció
 
-El objetivo de este artículo es mostrar como configurar propiedades en archivos YAML para test dentro de un proyecto generado con el framework Canigó
+L'objectiu d'aquest article és mostrar com configurar propietats en fitxers YAML per a proves unitaries dins d'un projecte generat amb el framework Canigó
 
----
-## Justificación
+A partir de la versió 3.4.0 del Framework Canigó, la configuració es pot definir en format YAML, en lloc del tradicional format de propietats. En el cas de ser necesari sobrescriure propietats per a proves unitaries, és possible generar un fitxer YAML, ubicar-lo a la carpeta de recursos de prova i referenciar el seu contingut dins de qualsevol prova.
 
-A partir de la versión 3.4.0 del Framework Canigó, la configuración se genera por defecto en formato YAML, en vez del tradicional formato de propiedades. En el caso de ser necesario sobrescribir propiedades para pruebas unitarias, es posible generar un archivo YAML, ubicarlo en la carpeta de recursos de pruebas y referenciar su contenido dentro de cualquier prueba.
+## Configuració
 
----
-## Configuración
+Per agregar un fitxer de propietats en format YAML en un projecte amb Canigó, es requereixen els següents canvis:
 
-Para agregar un archivo de propiedades en formato Yaml en un proyecto creado con [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), se requieren los siguientes ajustes:
-
-> Se necesita crear un archivo `application.yml` en la carpeta `src/test/resources/config/props`
+- Es necessita crear un fitxer `application.yml` a la carpeta `src/test/resources/config/props`, per exemple:
 
 ```yaml
 application:
@@ -37,7 +33,7 @@ persistence:
   dialect: org.hibernate.dialect.HSQLDialect
 ```
 
-> Se necesita ajustar el archivo `app-custom-persistence-jpa.xml` en la carpeta `src/test/resources/config/spring`
+- Utilitzant les propietats, per exemple, al fitxer `app-custom-persistence-jpa.xml` de la carpeta `src/test/resources/config/spring`:
 
 ```xml
 <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
@@ -49,16 +45,11 @@ persistence:
 </bean>
 ```
 
----
-## Uso 
+## Ús 
 
-### Desarrollo 
-
-> Se requiere crear una configuración de Spring. Ejemplo de configuración `TestAppConfig.java`
+Per a poder fer ús de les propietats en YAML serà necessari utilitzar el `YamlPropertiesApplicationContextInitializer`, per això serà necessari definir una classe per la carga de la configuració de Spring pel `ContextConfiguration`, per exemple, `TestAppConfig.java`:
 
 ```java
-package cat.gencat.ymlfiletestcanigo.config;
-
 ...
 
 @Configuration
@@ -70,11 +61,9 @@ public class TestAppConfig {
 }
 ```
 
-> Cambios en las anotaciones para las pruebas unitarias `EquipamentServiceTest.java`
+En el nostre test utilitzarem `TestAppConfig` per carregar la configuració de Spring i el `YamlPropertiesApplicationContextInitializer` per carregar les propietats en els fitxers YAML, per exemple podriem tenir el test `EquipamentServiceTest.java`
 
 ```java
-package cat.gencat.ymlfiletestcanigo.service;
-
 ...
 
 @RunWith(SpringRunner.class)
@@ -103,14 +92,13 @@ public class EquipamentServiceTest {
 }
 ```
 
-### Pruebas 
+### Proves 
 
-> Test: `EquipamentServiceTest.testYamlProperties`
+Si executem el test `EquipamentServiceTest.testYamlProperties`, podrem obtenir un resultat com:
 
 ![Spring Yaml Test Ejemplo 1](/images/howtos/2021-01-16_spring_yaml_test_example1.gif)
 
 
----
-## Conclusión
+## Conclusió
 
- * Es posible sobrescribir las propiedades de la aplicación a través de archivos en formato YAML que solo afecten a las pruebas unitarias.
+ * A Canigó és possibile sobreescriure les propietats de l'aplicació a través de fitxers YAML que només afectin a les proves unitaries.
