@@ -10,9 +10,9 @@ description = "Com configurar propiedades en fitxers YAML per a proves unitaries
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar com configurar propietats en fitxers YAML per a proves unitaries dins d'un projecte generat amb el framework Canigó
-
 A partir de la versió 3.4.0 del Framework Canigó, la configuració es pot definir en format YAML, en lloc del tradicional format de propietats. En el cas de ser necesari sobrescriure propietats per a proves unitaries, és possible generar un fitxer YAML, ubicar-lo a la carpeta de recursos de prova i referenciar el seu contingut dins de qualsevol prova.
+
+L'objectiu d'aquest article és mostrar com configurar propietats en fitxers YAML per a proves unitaries dins d'un projecte generat amb el framework Canigó
 
 ## Configuració
 
