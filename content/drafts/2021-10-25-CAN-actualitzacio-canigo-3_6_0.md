@@ -90,7 +90,7 @@ el llistat de dependències i plugins actualitzats mitjançant el següent enlla
 Per a crear aplicacions amb Canigó 3.6, CS Canigó proporciona el [Plugin de Canigó per l’Eclipse]
 (/canigo-download-related/plugin-canigo/) que permet la creació d'aplicacions Canigó amb les bases necessàries.
 Podeu consultar la noticia de l'actualització del plugin mitjançant el següent enllaç:
-https://canigo.ctti.gencat.cat/noticies/2021-10-25-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0/.
+https://canigo.ctti.gencat.cat/drafts/2021-10-25-CAN-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0/.
 
 ## Com migrar a Canigó 3.6
 

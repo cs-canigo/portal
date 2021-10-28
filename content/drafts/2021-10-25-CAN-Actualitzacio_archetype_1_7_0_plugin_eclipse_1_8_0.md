@@ -42,4 +42,4 @@ Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seg
 Podeu consultar la documentació dels [Binaris de Canigó 3.6](/canigo/download/canigo-36/).
 
 En el següent enllaç, podeu consultar la notícia de la publicació de la [versió 3.6.0 de Canigó]
-(/drafts/2021-10-25-actualitzacio-canigo-3_6_0/).
+(/drafts/2021-10-25-CAN-actualitzacio-canigo-3_6_0/).
