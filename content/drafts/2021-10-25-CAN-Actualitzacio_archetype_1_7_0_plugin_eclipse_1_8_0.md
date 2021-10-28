@@ -11,7 +11,7 @@ description = "S'ha publicat una nova versió de l'archetype i del plugin de l'e
 
 Dins dels lliurables de Canigó hi consten l'arquetipus (_archetype_) i el _Plugin_ de l'Eclipse. Seguint l'objectiu
 de CS Canigó de proporcionar facilitadors per a la creació de projectes Canigó als desenvolupadors d'aplicacions, s'ha
-actualitzat ambdós lliurables per a generar projectes amb Canigó **versió 3.6.0**. Podeu consultar l'abast complet de la
+actualitzat ambdós lliurables per a **generar projectes amb Canigó 3.6.0**. Podeu consultar l'abast complet de la
 nova versió del marc de treball a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
 
 L'**arquetipus** és una eina Maven que facilita la creació de projectes seguint una plantilla. Utilitzant l'arquetipus i

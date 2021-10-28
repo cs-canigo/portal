@@ -18,7 +18,7 @@ versions suportades de Java i Spring, a més de permetre nous paradigmes de prog
 
 El setembre de 2018 Oracle va publicar la versió 11 de Java, la primera versió LTS amb la nova política de sis
 mesos de cicle de suport. Podeu consultar la documentació d'aquesta versió, així com les Release Notes, mitjançant el següent enllaç:
-https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html
+https://www.oracle.com/technetwork/java/javase/11-relnotes-5012447.html.
 
 Des de CS Canigó, **s'ha evolucionat el Framework Canigó perquè passi a treballar amb Jdk 11 nativament**.
 
@@ -26,7 +26,6 @@ Des de CS Canigó, **s'ha evolucionat el Framework Canigó perquè passi a treba
 
 Spring Framework ofereix un model complet de programació i configuració per a solucions empresarials basades en Java.
 El principal objectiu de Spring 5 és proporcionar els nous paradigmes de programació funcional (webflux) i programació reactiva.
-
 Podeu consultar el llistat de canvis relacionats amb la versió 5.3 de Spring mitjançant el següent enllaç:
 https://github.com/spring-projects/spring-framework/wiki/What's-New-in-Spring-Framework-5.x#whats-new-in-version-53.
 
@@ -69,28 +68,25 @@ Java Architecture for XML Binding (JAXB) permet assignar classes Java a represen
 de la plataforma Java SE, una de les APIs de la plataforma Java EE i és part de la Java Web Services
 Development Pack (JWSDP).
 
-Podeu trobar més informació sobre els mòduls d'integració de Canigó 3.6 mitjançant el següent enllaç:
-https://canigo.ctti.gencat.cat/canigo-documentacio-versions-36/integracio/.
+Podeu trobar més informació sobre els [mòduls d'integració de Canigó 3.6](/canigo-documentacio-versions-36/integracio/).
 
 ### Swagger
 
 Swagger és utilitzat per a exposar i documentar les API RESTful expressades en format JSON i el Framework
 Canigó proporciona una preconfiguració per a exposar aquests serveis fent ús d'aquesta eina.
-
-En aquest sentit, s'ha actualitzat la versió de Swagger a l'última versió compatible amb Canigó 3.6.0 (la versió 2.9.2)
+S'ha actualitzat la versió de Swagger a l'última versió compatible amb Canigó 3.6.0 (la versió 2.9.2)
 eliminant la pàgina personalitzada de Canigó i usant tots els seus components de forma nativa.
 
 ### Dependències i plugins
 
 S'han actualitzat les versions de les llibreries dependents de Canigó a l'última versió compatible. Podeu consultar
-el llistat de dependències i plugins actualitzats mitjançant el següent enllaç: https://canigo.ctti.gencat.cat/canigo/download/canigo-36/.
+el [llistat de dependències i plugins actualitzats](/canigo/download/canigo-36/).
 
 ## Com crear aplicacions amb Canigó 3.6
 
-Per a crear aplicacions amb Canigó 3.6, CS Canigó proporciona el [Plugin de Canigó per l’Eclipse]
-(/canigo-download-related/plugin-canigo/) que permet la creació d'aplicacions Canigó amb les bases necessàries.
-Podeu consultar la noticia de l'actualització del plugin mitjançant el següent enllaç:
-https://canigo.ctti.gencat.cat/drafts/2021-10-25-CAN-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0/.
+Per a crear aplicacions amb Canigó 3.6, CS Canigó proporciona el [Plugin de Canigó]
+(/canigo-download-related/plugin-canigo/) per l’Eclipse que permet la creació d'aplicacions Canigó amb les bases necessàries.
+Podeu consultar la [noticia de l'actualització del plugin](/drafts/2021-10-25-CAN-Actualitzacio_archetype_1_7_0_plugin_eclipse_1_8_0/).
 
 ## Com migrar a Canigó 3.6
 
