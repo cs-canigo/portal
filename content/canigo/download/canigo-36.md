@@ -42,6 +42,8 @@ Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5
 (https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#appendix-dependency-versions).
 
 <br/>
+La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
+
 S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els següents servidors embeguts**:
 
 |      Servidor incrustat             |                   Versió                    |
@@ -61,11 +63,10 @@ S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els servidors suportats
 |  Weblogic				          	  	 	|         14.1.x               			|
 |  JBoss EAP       									|         7.x        			          |
 
-La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
-
 No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals del full de ruta no suporten Java 11.
 
-Lliurables associats a Canigó 3.6:
+<br/>
+**Lliurables** associats a Canigó 3.6:
 
 |          Entregable  |     Versió      |
 |---------------------------------      |---------------------------------- |
@@ -91,6 +92,7 @@ proporcionat pel CS Canigó on la configuració ja ve prestablerta, cal configur
 https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 ```
 
+<br/>
 Per a utilitzar aquest grup de repositoris caldrà afegir el certificat del domini `sic.ctti.extranet.gencat.cat`
 al *Cacerts* de Java on s'executi el procés Maven que construeix l'aplicació Canigó.
 Les passes a seguir serien les següents:
