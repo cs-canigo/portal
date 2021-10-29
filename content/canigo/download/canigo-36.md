@@ -1,7 +1,7 @@
 +++
 date        = "2021-10-25"
 title       = "Canigó 3.6"
-description = "Descàrrega de versió Canigó 3.6, entorn de treball i plugin d'eclipse"
+description = "Descàrrega de versió Canigó 3.6 i entorn de treball"
 sections    = "Canigó"
 weight     = 1
 +++
@@ -9,7 +9,7 @@ weight     = 1
 ## Canigó 3.6
 
 - [Release notes Canigó 3.6](/canigo-download-related/release-notes-canigo-36)
-- [Matriu de Compatibilitat Canigo 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36)
+- [Matriu de Compatibilitats Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36)
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
@@ -38,10 +38,11 @@ weight     = 1
 | mongodb-driver-reactivestreams       |  4.2.3                |
 
 
-Podeu consultar el llistat complet de dependències externes de Spring Boot 2.5.4 a:
-https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#appendix-dependency-versions.
+Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.4]
+(https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#appendix-dependency-versions).
 
-S'ha certificat la compatibilitat de Canigó 3.6.0 amb els següents servidors embeguts:
+<br/>
+S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els següents servidors embeguts**:
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
@@ -51,7 +52,8 @@ S'ha certificat la compatibilitat de Canigó 3.6.0 amb els següents servidors e
 |  Netty (webflux)                         |         4.1.67.Final               |
 |  Reactor Netty (reactor webflux)  |         1.0.10              |
 
-S'ha certificat la versió de Canigó 3.6.0 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
+S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els servidors suportats al**
+[**Full de ruta del CTTI**](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
@@ -59,11 +61,11 @@ S'ha certificat la versió de Canigó 3.6.0 amb els servidors suportats al [Full
 |  Weblogic				          	  	 	|         14.1.x               			|
 |  JBoss EAP       									|         7.x        			          |
 
-La versió de Java mínima per utilitzar Canigó 3.6 és 11
+La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
 
-No s'ha certificat amb Webshpere ja que les versions actuals del full de ruta no suporten Java 11
+No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals del full de ruta no suporten Java 11.
 
-Entregables associats a Canigó 3.6:
+Lliurables associats a Canigó 3.6:
 
 |          Entregable  |     Versió      |
 |---------------------------------      |---------------------------------- |
@@ -72,60 +74,60 @@ Entregables associats a Canigó 3.6:
 |              Archetype         |                1.7.0              |
 |              AppBridge         |                1.2.0              |
 
-### Creació de l'entorn local de desenvolupament
+### Entorn de desenvolupament
 
-Veure: [Entorn desenvolupament Canigó](/canigo/entorn-desenvolupament/).
+Podeu consultar la següent documentació:
 
-Altra informació d’interès: [Plugin Canigó 3.6 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
+- [Entorn desenvolupament Canigó](/canigo/entorn-desenvolupament/)
 
-### Configuració de Maven (manual)
+- [Plugin Canigó 3.6 per a Eclipse i creació d'aplicació](/canigo-download-related/plugin-canigo)
 
-Per a la **resolució de dependències de Canigó i llibreries de tercers necessàries**, fora de l'entorn de desenvolupament proporcionats pel CS Canigó on ja està pre-configurat,
-cal configurar el següent repositori Maven:
+#### Configuració de Maven (manual)
+
+Per a la **resolució de dependències de Canigó i llibreries de tercers necessàries**, fora de l'entorn de desenvolupament
+proporcionat pel CS Canigó on la configuració ja ve prestablerta, cal configurar el següent repositori Maven:
 
 ```
-    https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
+https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/
 ```
 
-<br/>
-Per a utilitzar aquest grup de repositoris s'ha d'afegir el certificat del domini *sic.ctti.extranet.gencat.cat* al *Cacerts* de Java des d'on s'executi el procés Maven que construeix l'aplicació Canigó.
+Per a utilitzar aquest grup de repositoris caldrà afegir el certificat del domini `sic.ctti.extranet.gencat.cat`
+al *Cacerts* de Java on s'executi el procés Maven que construeix l'aplicació Canigó.
 Les passes a seguir serien les següents:
 
-* Descarregar el certificat de la web mitjançant un navegador. Per exemple amb Google Chrome es pot fer de la següent manera:
+* Descarregar el certificat de la web mitjançant un navegador. Per exemple, amb Google Chrome es pot fer de la següent manera:
 ```
     Chrome -> "Eines per a desenvolupadors" -> "Seguretat" -> "Veure certificat" -> "Detalls" -> "Exportar"
 ```
-* Importar el certificat al magatzem *Cacerts* de Java amb l'eina *Keytool* inclosa dins la JDK:
+* Importar el certificat al magatzem *Cacerts* de Java usant l'eina *Keytool* inclosa dins la JDK. Per exemple:
 ```
     $ keytool -keystore cacerts -importcert -alias canigo -file certificat.cer
 ```
 
-Un cop importat el certificat els processos Maven executats que utilitzin la JDK on s'ha importat el certificat seran capaços de descarregar dependències del grup de repositoris.
-Al fitxer `settings.xml` del Maven caldrà configurar el repositori al profile per defecte:
+Al fitxer `settings.xml` del Maven caldrà configurar el repositori al _profile_ per defecte:
 
 ```
-   <profile>
-      <id>defaultProfile</id>
-      <activation>
-         <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-         <repository>
-            <id>canigo</id>
-            <url>https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/</url>
-            <snapshots>
-               <enabled>true</enabled>
-               <updatePolicy>always</updatePolicy>
-            </snapshots>
-            <releases>
-               <enabled>true</enabled>
-            </releases>
-         </repository>
-      </repositories>
-      <properties>
-         <downloadSources>true</downloadSources>
-         <downloadJavadocs>false</downloadJavadocs>
-      </properties>
-   </profile>
-
+<profile>
+  <id>defaultProfile</id>
+  <activation>
+     <activeByDefault>true</activeByDefault>
+  </activation>
+  <repositories>
+     <repository>
+        <id>canigo</id>
+        <url>https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/</url>
+        <snapshots>
+           <enabled>true</enabled>
+           <updatePolicy>always</updatePolicy>
+        </snapshots>
+        <releases>
+           <enabled>true</enabled>
+        </releases>
+     </repository>
+  </repositories>
+  <properties>
+     <downloadSources>true</downloadSources>
+     <downloadJavadocs>false</downloadJavadocs>
+  </properties>
+</profile>
 ```
