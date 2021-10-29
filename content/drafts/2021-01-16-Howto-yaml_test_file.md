@@ -4,7 +4,7 @@ title       = "Canigó. Com configurar propiedades en fitxers YAML per a proves 
 description = "Com configurar propiedades en fitxers YAML per a proves unitaries per a projectes amb Canigó"
 #section     = "howtos"
 #categories  = ["canigo"]
-#key         = "DECEMBRE2021"
+#key         = "DESEMBRE2021"
 +++
 
 

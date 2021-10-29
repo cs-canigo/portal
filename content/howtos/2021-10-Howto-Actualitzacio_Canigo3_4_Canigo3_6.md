@@ -24,7 +24,7 @@ tenir un suport continuat, així com la màxima estabilitat que proporciona una 
 L'objectiu d'aquest Howto és mostrar els procediments necessaris per a actualitzar una aplicació realitzada
 amb Canigó 3.4 i el punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per l'Eclipse.
 
-### Configuració de dependències
+### Configuració prèvia
 
 A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) podeu consultar les versions
 dels mòduls i components de Canigó de les versions 3.4.x i 3.6.x. Per tant, caldrà **actualitzar els intervals de
@@ -43,69 +43,46 @@ com el que es mostra a continuació:
 
 ### Passes a realitzar
 
-Un cop actualitzades les versions dels mòduls segons indicat a la secció anterior, serà necessari realitzar
+Un cop actualitzades les versions dels mòduls, segons indicat a la secció anterior, serà necessari realitzar
 els següents passos:
 
+---
 **1.** Substituir la constant 'MediaType.APPLICATION_JSON_UTF8_VALUE' per 'MediaType.APPLICATION_JSON_VALUE'
 
+---
 **2.** Els clients dels mòduls d'integració amb Serveis Web Soap s'han generat amb 'CXF' i la transformació d'objectes
 Java a XML i XML a Java es realitza amb 'JAXB'. Aquest canvi té les següents implicacions:
 
-
 - 2.1. Tots els objectes generats són objectes independents continguts dins del package i no com a subclasses.
-Per exemple, de:
-```
-net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
-```
-a:
-```
-net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
-```
+Per exemple, de: `net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse`
+a: `net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse`
 
 - 2.2. Els noms del packages segueixen la convenció de noms i, per tant, seran tots en minúscules.
-Per exemple, de:
-```
-net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse
-```
-a:
-```
-net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse
-```
+Per exemple, de: `net.gencat.scsp.esquemes.avisos.smsResponse.SMSResponseDocument.SMSResponse`
+a: `net.gencat.scsp.esquemes.avisos.smsresponse.SMSResponse`
 
 - 2.3. Modificar la forma de crear els objectes Java dels clients dels serveis web utilitzant sempre
-l’`ObjectFactory` de cada package. Per exemple, de:
-```
-SMSRequest sms = SMSRequestDocument.Factory.newInstance().addNewSMSRequest();
-```
-a:
-```
-SMSRequest sms = new net.gencat.scsp.esquemes.avisos.smsrequest.ObjectFactory().createSMSRequest();
-```
+l’`ObjectFactory` de cada package. Per exemple, de: `SMSRequest sms = SMSRequestDocument.Factory.newInstance().addNewSMSRequest();`
+a: `SMSRequest sms = new net.gencat.scsp.esquemes.avisos.smsrequest.ObjectFactory().createSMSRequest();`
 
 **-** Modificar la forma de parseig d’XML a objectes Java usant `unmarshall`. Per exemple, de:
-```
-SMSResponse docUuid = SMSResponseDocument.Factory.parse(nodeResposta).getSMSResponse();
-```
-a:
-```
-SMSResponse docUuid = (SMSResponse) JAXBContext.newInstance(SMSResponse.class).createUnmarshaller().unmarshal(nodeResposta);
-```
+`SMSResponse docUuid = SMSResponseDocument.Factory.parse(nodeResposta).getSMSResponse();`
+a: `SMSResponse docUuid = (SMSResponse) JAXBContext.newInstance(SMSResponse.class).createUnmarshaller().unmarshal(nodeResposta);`
 
+---
 **3.** Estandaritzar els noms dels package dels mòduls que no acompleixen els estàndards.
 Per exemple, `cat.gencat.ctti.canigo.arch.support.resizeImg` passa a ser: `cat.gencat.ctti.canigo.arch.support.resizeimg`
 
-**4.** En el mòdul `canigo.integration.sarcat.planificat` s'han organitzat els objectes, per tant, serà necessari reimportar-los.
+---
+**4.** En el mòdul `canigo.integration.sarcat.planificat` s'han organitzat els objectes, per tant, serà necessari reimportar-los corresponentment
 
+---
 **5.** Els mètodes 'findAll' de 'GenericRepository' que facin ús de _predicate_, aquest no podrà ser nul.
 En cas que el _predicate_ sigui nul, cal utilitzar el mètode 'findAll' sense el _predicate_. Per exemple de:
-```
-return repository.findAll(predicate, pageable)
-```
-a:
-```
-return predicate != null ? repository.findAll(predicate, pageable) : repository.findAll(pageable);
-```
+`return repository.findAll(predicate, pageable)`
+a: `return predicate != null ? repository.findAll(predicate, pageable) : repository.findAll(pageable);`
 
+---
 **6.** Per a configurar la connexió amb Mongodb s'utilitza 'MongoClientSettings' en lloc de 'MongoClientOptions'.
 Per exemple, de:
 ```
@@ -171,30 +148,21 @@ public class EquipamentMongoConfig extends MongoCoreConfig {
 }
 ```
 
+---
 **7.** Eliminar funcions 'findAll' deprecades a 'MongoGenericRepository'
 
-**8.** Eliminar 'CanigoDBObjectMongodbSerializer' donat és necessari utilitzar directament 'SpringDataMongodbSerializer'
+---
+**8.** Eliminar 'CanigoDBObjectMongodbSerializer' essent necessari utilitzar directament 'SpringDataMongodbSerializer'
 
+---
 **9.** Modificar la forma de construir els objectes de JPA fent ús dels mètodes estàtics. Per exemple, de:
-```
-new PageRequest(page - 1, rpp, getOrdenacio(sort))
-```
-a:
-```
-PageRequest.of(page - 1, rpp, getOrdenacio(sort))
-```
-, o de:
-```
-new Sort(orders)
-```
-a:
-```
-Sort.by(orders)
-```
+`new PageRequest(page - 1, rpp, getOrdenacio(sort))` a: `PageRequest.of(page - 1, rpp, getOrdenacio(sort))`
+, o de: `new Sort(orders)` a: `Sort.by(orders)`
 
-**10.** Per defecte no ve donat cap [`HttpFirewall`]
+---
+**10.** Per defecte, no ve donat cap [*HttpFirewall*]
 ( https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/firewall/HttpFirewall.html)
-configurat a Spring Security. Per definir-ne un per defecte:
+configurat a Spring Security. Per definir-ne un per defecte, caldrà incorporar:
 
 ```
   @Bean
@@ -205,27 +173,19 @@ configurat a Spring Security. Per definir-ne un per defecte:
   }
 ```
 
+---
 **11.** És necessari utilitzar l'última versió de l’schema del XSD de Spring Security. Per exemple de:
-```
-http://www.springframework.org/schema/security/spring-security-4.2.xsd
-```
-a:
-```
-http://www.springframework.org/schema/security/spring-security-5.4.xsd
-```
+`http://www.springframework.org/schema/security/spring-security-4.2.xsd`
+a: `http://www.springframework.org/schema/security/spring-security-5.4.xsd`
 
-**12.** En cas d’utilitzar `WebMvcConfigurer`, ja no és necessari estendre de `WebMvcConfigurerAdapter` i es pot implementar
-directament. Per tant, de:
-```
-public class WebConfig extends WebMvcConfigurerAdapter
-```
-a:
-```
-public class WebConfig implements WebMvcConfigurer
-```
+---
+**12.** En cas d’utilitzar `WebMvcConfigurer` ja no és necessari estendre de `WebMvcConfigurerAdapter` i es pot implementar
+directament. Per tant, de: `public class WebConfig extends WebMvcConfigurerAdapter` a: `public class WebConfig implements WebMvcConfigurer`
 
-**13.** El mètode 'getNumRegistre' del mòdul 'canigo.integration.sarcat' ha canviat a 'getNumsRegistre' per alineament
+---
+**13.** El mètode 'getNumRegistre' del mòdul 'canigo.integration.sarcat' ha canviat a 'getNumsRegistre' per raó d'alineament
 amb el nom de la funció de SARCAT
 
+---
 **14.** S'ha eliminat la pàgina personalitzada per a l'exposició dels serveis amb Swagger '/canigo-api.html'.
-És necessari utilitzar la pàgina pròpia de Swagger a '/api/swagger-ui.html'
+Serà necessari utilitzar la pàgina pròpia de Swagger a '/api/swagger-ui.html'
