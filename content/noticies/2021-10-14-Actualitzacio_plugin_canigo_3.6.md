@@ -1,6 +1,6 @@
 +++
 date        = "2021-10-14"
-title       = "Canigó. Actualització plugin Canigó 3.6"
+title       = "Canigó. Pròxima actualització plugin Canigó 3.6"
 description = "Pròximament s'actualitzarà el plugin de Canigó per a generar projectes Canigó 3.6"
 sections    = ["Notícies", "home"]
 categories  = ["canigo"]
@@ -17,8 +17,10 @@ per a passar a generar projectes per aquesta versió del Framework.
 
 ## Novetats
 
-**Un cop publicada l’actualització del plugin, únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina**.
-No obstant això, si es necessita crear projectes amb Canigó 3.4, podeu seguir la següent guia:
+**Un cop publicada l'actualització del plugin i realitzada la seva instal·lació a l'entorn de desenvolupament,
+únicament es podrà generar projectes Canigó 3.6 mitjançant aquesta eina**.
+No obstant això, si es necessita crear projectes amb Canigó 3.4, es pot optar per mantenir la versió
+instal·lada del plugin o bé, si ja s'ha instal·lat l'actualització, podeu seguir la següent guia:
 [Creació manual de projecte amb Canigó 3.4](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/).
 
 ## Documentació
