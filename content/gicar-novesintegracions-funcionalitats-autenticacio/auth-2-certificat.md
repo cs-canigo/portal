@@ -63,12 +63,6 @@ Si l’usuari no té cap sessió activa li apareixerà un formulari de login, pe
 
 	Cal destacar que la capçalera HTTP_GICAR_PSIS és la única capçalera indicada per a obtenir la informació de les diferents entitats de certificació que permet autenticar GICAR, o de nom i cognoms d’usuari autenticat, donat que és la única que conté les dades de forma estructurada.
 
-	En el cas de voler obtenir si un usuari s’ha autenticat amb usuari o contrasenya, o amb certificat:
-
-	- Si la capçalera GICAR_PSIS ve informada, l’usuari s’haurà autenticat amb certificat.
-
-	- Si la capçalera GICAR_PSIS NO ve informada, l’usuari NO s’haurà autenticat amb certificat. La capçalera GICAR_PSIS només apareix quan un usuari s’ha autenticat amb certificat.
-
 	En cas de voler obtenir el nom i cognoms de la persona que s’ha autenticat amb certificat, o altres dades del Certificat (excepte el DNI de l’usuari autenticat el qual es pot recuperar fàcilment amb la capçalera HTTP_GICAR_ID), es recomana fer-ho sempre amb la capçalera HTTP_GICAR_PSIS.
 
 
