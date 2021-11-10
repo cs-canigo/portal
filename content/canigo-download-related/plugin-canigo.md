@@ -131,4 +131,3 @@ Encara que les imatges són d'una màquina amb Linux, també aplica per a màqui
 
 
 
-
