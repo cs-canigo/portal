@@ -171,7 +171,7 @@ tr.shown td.details-control {
             },
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
-			{ "data": "Subambit" },
+			{ "data": null,"defaultContent": '' },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
@@ -282,7 +282,6 @@ tr.shown td.details-control {
 	  "columns": [
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
-			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
@@ -336,12 +335,12 @@ tr.shown td.details-control {
 <br/><br/>
 ####  Dades de referència d'obligat compliment 
 
-<div style="width:100%; padding-left:20px;">
+<div style="width:100%; padding-left:30px;">
 <div id="divInstancies" style="float: left;">
 <p id="numInstancies" style="margin-top:8px; font-size:14px; font-style:italic;" ></p>
 </div>
 
-<table id="tabvalidades" class="hover" style="width:100%; font-size:12px;">
+<table id="tabvalidades" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
                 <th></th>
@@ -349,7 +348,7 @@ tr.shown td.details-control {
                 <th>Domini</th>
                 <th>Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:30%">Descripció</th>
+                <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
                 <th>Darrera actualització</th>
             </tr>
@@ -371,15 +370,14 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <br/><br/>
 #### Dades de referència pendents d'aprovació
 
-<div style="width:100%; padding-left:20px;">
-<table id="tabpendents" class="hover" style="width:100%; font-size:12px;">
+<div style="width:100%; padding-left:30px;">
+<table id="tabpendents" class="hover" style="width:100%; font-size:13px;">
         <thead>
             <tr>
                 <th>Nivell Validació</th>
-                <th>Domini</th>
-                <th>Subdomini</th>
+                <th>Grup</th>
                 <th>Entitat</th>
-                <th style="width:30%">Descripció</th>
+                <th style="width:40%">Descripció</th>
                 <th>Data publicació</th>
                 <th>Darrera actualització</th>
                 <th>Detall</th>
