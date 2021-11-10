@@ -171,7 +171,7 @@ tr.shown td.details-control {
             },
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
-			{ "data": null,"defaultContent": '' },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
