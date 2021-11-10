@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-26"
+date        = "2021-11-10"
 title       = "Plugin Canigó per a Eclipse"
 description = "Plugin d'eclipse per a generar una aplicació Canigó."
 sections    = "Canigó."
@@ -17,6 +17,8 @@ El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet 
 #### Eclipse 2019-03
 
 L'última versió del plugin està certificada amb la versió d'Eclipse 2019-03, que podeu trobar al següent enllaç: https://www.eclipse.org/downloads/packages/release/2019-03/r/eclipse-ide-enterprise-java-developers
+
+A partir de la versió 1.8.0 del plugin per generar projectes amb Canigó 3.6, és necessari iniciar l'Eclipse amb la màquina virtual de Java versió 11
 
 ### Prerequisit
 
