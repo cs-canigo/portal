@@ -37,6 +37,8 @@ La nova versió 1.8.0 del _plugin_ fa servir la versió 1.7.0 de l'arquetipus pe
 Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seguir els passos descrits a la secció
 "Instal·lació" de la [documentació del _plugin_ Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
 
+Cal destacar que per utilitzar el plugin a partir de la versió 1.8.0, és necessari iniciar l'eclipse amb la màquina virtual de Java versió 11
+
 ## Documentació addicional
 
 Podeu consultar la documentació dels [Binaris de Canigó 3.6](/canigo/download/canigo-36/).
