@@ -1,0 +1,2034 @@
+
+
+{"data": [
+    {
+        "Id": "dtarq46",
+        "Nom": "Relació amb Expedient",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Relacio_Expedient_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Relació_Expedient.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PERSONA_REL_EXPEDIENT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq141",
+        "Nom": "Agrupació temàtica de serveis al ciutadà",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de temes o assumptes en que es poden agrupar els serveis que s'ofereixen al ciutadà",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Atenció Ciutadana (DGAC)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacio_tematica_serveis_ciutada_ATR.docx",
+                "ifitxer_xls": "Agrupacio_tematica_serveis_ciutada.xlsx",
+                "idatacreacio": "31/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Agrupaci-tem-tica-de-serveis-al-ciutad-/wajj-p75b",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIO_TEMATICA_SERVEIS_CIUTADA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "31/03/2021",
+        "Data_actualitzacio": "31/03/2021"
+    },
+    {
+        "Id": "dtarq161",
+        "Nom": "Agrupació temàtica nivell domini",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de dominis, primer nivell de la taxonomia definida per classificar serveis, conceptes, etc. segons la seva temàtica.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "D.G. d'Administració Digital",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacio_tematica_nivell_domini_ATR.docx",
+                "ifitxer_xls": "Agrupacio_tematica_nivell_domini.xlsx",
+                "idatacreacio": "18/10/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/10/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Agrupaci%C3%B3-tem%C3%A0tica-nivell-domini/gnue-xxk3",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIO_TEMATICA_NIVELL_DOMINI",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/10/2021",
+        "Data_actualitzacio": "20/10/2021"
+    },
+    {
+        "Id": "dtarq162",
+        "Nom": "Agrupació temàtica nivell subdomini",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de subdominis, segon nivell de la taxonomia definida per classificar serveis, conceptes, etc. segons la seva temàtica.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "D.G. d'Administració Digital",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Agrupacio_tematica_nivell_subdomini_ATR.docx",
+                "ifitxer_xls": "Agrupacio_tematica_nivell_subdomini.xlsx",
+                "idatacreacio": "18/10/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/10/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Agrupaci%C3%B3-tem%C3%A0tica-nivell-subdomini/6y26-js68",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AGRUPACIO_TEMATICA_NIVELL_SUBDOMINI",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/10/2021",
+        "Data_actualitzacio": "20/10/2021"
+    },
+    {
+        "Id": "dtarq101",
+        "Nom": "Departaments",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de departaments en què s'organitza la Generalitat de Catalunya",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Departaments_ATR.docx",
+                "ifitxer_xls": "deprecated/Departaments_V01.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "09/06/2021",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització segons la nova estructura de Govern, XIII Legislatura.",
+                "ifitxer_doc": "Departaments_ATR.docx",
+                "ifitxer_xls": "deprecated/Departaments_V02.xlsx",
+                "idatacreacio": "09/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "30/06/2021",
+                "idatapublicacio": "09/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització per canvi d'un nom de departament i de dos acrònims.",
+                "ifitxer_doc": "Departaments_ATR.docx",
+                "ifitxer_xls": "Departaments.xlsx",
+                "idatacreacio": "29/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Departaments-de-la-Generalitat-de-Catalunya/xxek-a8rj",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DEPARTAMENTS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "30/06/2021"
+    },
+    {
+        "Id": "dtarq102",
+        "Nom": "Direccions generals",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de direccions generals en què s'organitzen els departaments de la Generalitat de Catalunya",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "22/09/2021",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització segons la nova estructura de Govern, XIII Legislatura.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "09/09/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DIRECCIONS_GENERALS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq103",
+        "Nom": "Secretaries",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llistat de secretaries incloses dins de l'organigrama de la Generalitat de Catalunya",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "deprecated/Secretaries_V01.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "10/03/2021",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "S’elimina el valor  Id 10187 i nom Presidència del Consell Català de Formació Professional.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "10/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "22/09/2021",
+                "idatapublicacio": "10/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització segons la nova estructura de Govern, XIII Legislatura.",
+                "ifitxer_doc": "Secretaries_ATR.docx",
+                "ifitxer_xls": "Secretaries.xlsx",
+                "idatacreacio": "09/09/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Secretaries/ss92-5k8g",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SECRETARIES",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq83",
+        "Nom": "Tipus Unitat Orgànica",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llista de tipologies d'unitats orgàniques de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Territori_Unitat_Orgànica_Tipus_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Unitat_Orgànica_Tipus.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_UNITAT_ORGANICA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq84",
+        "Nom": "Unitat Orgànica",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització de l'administració i sector públic",
+        "Descripcio": "Llista d'unitats orgàniques indicant la seva tipologia.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Territori_Unitat_Organica_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Unitat_Orgànica.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "UNITAT_ORGANICA",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq90",
+        "Nom": "Ajuntaments",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista dels ajuntaments de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Ajuntaments_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Ajuntaments.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AJUNTAMENTS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq82",
+        "Nom": "Comarques Catalunya i Aran",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista de les comarques de Catalunya i Aran.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Comarques_Catalunya_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Comarques_Catalunya.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Comarques-Catalunya-i-Aran/gsjn-sema",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "COMARQUES",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq91",
+        "Nom": "Consells Comarcals",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista dels consells comarcals de Catalunya i del Conselh Generau d'Aran.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Consells_Comarcals_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Consells_Comarcals.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Consells-Comarcals/hty3-uw7a",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CONSELLS_COMARCALS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq92",
+        "Nom": "Diputacions",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista de les diputacions provincials de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Diputacions_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Diputacions.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Diputacions/wa8j-c62f",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "DIPUTACIONS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq93",
+        "Nom": "Mancomunitats",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista de les mancomunitats de municipis de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Mancomunitats_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Mancomunitats.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Mancomunitats/96mh-m3ge",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "MANCOMUNITATS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq106",
+        "Nom": "Terçons",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llistat de demarcacions administratives de la Vall d'Aran.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Conselh Generau d’Aran",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Terçons_ATR.docx",
+                "ifitxer_xls": "Terçons.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Ter%C3%A7ons/izdz-wxxr",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TERÇONS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "30/06/2021",
+        "Data_actualitzacio": "30/06/2021"
+    },
+    {
+        "Id": "dtarq126",
+        "Nom": "Tipus ens locals",
+        "Ambit": "Administració pública, govern i relacions institucionals",
+        "Subambit": "Organització territorial i règim local",
+        "Descripcio": "Llista de tipus d'ens locals de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Tipus_Ens_Locals_ATR.docx",
+                "ifitxer_xls": "Tipus_Ens_Locals.xlsx",
+                "idatacreacio": "21/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Tipus-ens-locals/kmks-jb77",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_ENS_LOCAL",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "21/04/2021",
+        "Data_actualitzacio": "21/04/2021"
+    },
+    {
+        "Id": "dtarq117",
+        "Nom": "NC (Productes comerç exterior)",
+        "Ambit": "Comerç, consum i turisme",
+        "Subambit": "Comerç i fires",
+        "Descripcio": "Classificació de productes per al comerç amb l'estranger (Nomenclatura combinada). Es disposa de vàries versions segons l'any.",
+        "instancies": [
+            {
+                "inom": "NC 2019 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2019. Versió inicial.",
+                "ifitxer_doc": "NC_2019_prod_com_ext_ATR.docx",
+                "ifitxer_xls": "NC_2019_prod_com_ext.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/02/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/NC-2019-productes-comer-exterior-/dxc5-7sp7",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "NC 2020 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2020. Versió inicial.",
+                "ifitxer_doc": "NC_2020_prod_com_ext_ATR.docx",
+                "ifitxer_xls": "NC_2020_prod_com_ext.xlsx",
+                "idatacreacio": "21/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2020-productes-comer%C3%A7-exterior-/qixe-w7gm",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "NC_PRODUCTES_COMERÇ_EXTERIOR",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "10/03/2021",
+        "Data_actualitzacio": "21/04/2021"
+    },
+    {
+        "Id": "dtarq113",
+        "Nom": "CCPA",
+        "Ambit": "Comerç, consum i turisme",
+        "Subambit": "Consum",
+        "Descripcio": "Classificació catalana de productes per activitats. Es disposa de vàries versions segons l'any de revisió.",
+        "instancies": [
+            {
+                "inom": "CCPA-1996 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 1996. Versió inicial.",
+                "ifitxer_doc": "CCPA_1996_ATR.docx",
+                "ifitxer_xls": "CCPA_1996.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Comer%C3%A7/CCPA-1996/3np3-cbw4",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "CCPA-1996 Rev.1 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Revisió sobre les dades de CCPA-1996. Versió inicial.",
+                "ifitxer_doc": "CCPA_1996_REV1_ATR.docx",
+                "ifitxer_xls": "CCPA_1996_REV1.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/02/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/CCPA-1996-REV1/kvs5-4ncg",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "CCPA-2014 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2014. Versió inicial.",
+                "ifitxer_doc": "CCPA_2014_ATR.docx",
+                "ifitxer_xls": "CCPA_2014.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/02/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/CCPA-2014/cvur-ezmm",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CCPA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "20/01/2021"
+    },
+    {
+        "Id": "dtarq124",
+        "Nom": "ECOICOP 2016",
+        "Ambit": "Comerç, consum i turisme",
+        "Subambit": "Consum",
+        "Descripcio": "Classificació europea del consum individual per finalitats 2016 (ECOICOP 2016)",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "ECOICOP_2016_ATR.docx",
+                "ifitxer_xls": "ECOICOP_2016.xlsx",
+                "idatacreacio": "12/07/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ECOICOP_2016",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "14/07/2021",
+        "Data_actualitzacio": "14/07/2021"
+    },
+    {
+        "Id": "dtarq116",
+        "Nom": "PRODCOM EIP (productes industrials)",
+        "Ambit": "Comerç, consum i turisme",
+        "Subambit": "Consum",
+        "Descripcio": "Classificació de l'Enquesta Industrial de Productes. Es disposa de vàries versions segons l'any.",
+        "instancies": [
+            {
+                "inom": "2017 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2017 (PRODCOM-EIP 2017). Versió inicial.",
+                "ifitxer_doc": "PRODCOM_EIP_2017_prod_ind_ATR.docx",
+                "ifitxer_xls": "PRODCOM_EIP_2017_prod_ind.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/02/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind-stria/PRODCOM-EIP-2017-productes-industrials-/kcb3-zn5s",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2018 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2018 (PRODCOM-EIP 2018). Versió inicial.",
+                "ifitxer_doc": "PRODCOM_EIP_2018_prod_ind_ATR.docx",
+                "ifitxer_xls": "PRODCOM_EIP_2018_prod_ind.xlsx",
+                "idatacreacio": "21/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2018-productes-industrials-/3ggf-d6t2",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PRODCOM_EIP_PRODUCTES_INDUSTRIALS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "10/03/2021",
+        "Data_actualitzacio": "21/04/2021"
+    },
+    {
+        "Id": "dtarq109",
+        "Nom": "CCAE",
+        "Ambit": "Economia",
+        "Subambit": "Empresa i sector econòmic",
+        "Descripcio": "Classificació catalana d'activitats econòmiques. Es disposa de vàries versions segons l'any.",
+        "instancies": [
+            {
+                "inom": "1993 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 1993. Versió inicial.",
+                "ifitxer_doc": "ActEconomica_CCAE_1993_ATR.docx",
+                "ifitxer_xls": "ActEconomica_CCAE_1993.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-1993/sk42-hvbn",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "1993 REV1 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 1993, revisat. Versió inicial.",
+                "ifitxer_doc": "ActEconomica_CCAE_1993_REV1_ATR.docx",
+                "ifitxer_xls": "ActEconomica_CCAE_1993_REV1.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-1993-Rev-1-/hyd8-fmny",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2009 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2009. Versió inicial.",
+                "ifitxer_doc": "ActEconomica_CCAE_2009_ATR.docx",
+                "ifitxer_xls": "ActEconomica_CCAE_2009.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/CCAE-2009/get5-imi7",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ACTECONOMICA_CCAE",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "20/01/2021"
+    },
+    {
+        "Id": "dtarq118",
+        "Nom": "Educació CCED",
+        "Ambit": "Educació, formació i universitats",
+        "Subambit": "Centres i serveis educatius (no universitaris)",
+        "Descripcio": "Classificació catalana d'educació. Es disposa de vàries versions segons el concepte de classificació i l'any de revisió.",
+        "instancies": [
+            {
+                "inom": "2000 A - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2000 - Classificació del nivell de formació assolit. Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2000_A_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2000_A.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-A/dmdy-ht3g",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2000 F - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2000 - Classificació dels camps d'educació i capacitació. Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2000_F_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2000_F.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-F/txct-c7jr",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2000 P - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2000 - Classificació de programes per nivells educatius. Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2000_P_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2000_P.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2000-P/3j67-asqw",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2020 A  - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2020 - Classificació del nivell de formació assolit. Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2020_A_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2020_A.xlsx",
+                "idatacreacio": "03/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2020-A/c9j7-3wqr",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2020 F - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2020 - Classificació dels camps d'educació i capacitació. Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2020_F_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2020_F.xlsx",
+                "idatacreacio": "03/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2020-F/2rfh-5rma",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2020 P  - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2020 - Classificació de programes per nivells educatius). Versió inicial.",
+                "ifitxer_doc": "Educacio_CCED_2020_P_ATR.docx",
+                "ifitxer_xls": "Educacio_CCED_2020_P.xlsx",
+                "idatacreacio": "03/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Educaci%C3%B3/Classificaci%C3%B3-catalana-Educaci%C3%B3-CCED-2020-P/nq7d-4c8s",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "EDUCACIO_CCED",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/05/2021",
+        "Data_actualitzacio": "30/06/2021"
+    },
+    {
+        "Id": "dtarq133",
+        "Nom": "Idioma de comunicació",
+        "Ambit": "Informació i comunicació",
+        "Subambit": "Informació i difusió",
+        "Descripcio": "Llistat d'idiomes que admesos per realitzar algun tipus de comunicació oficial.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Idioma_Comunicacio_ATR.docx",
+                "ifitxer_xls": "Idioma_Comunicacio.xlsx",
+                "idatacreacio": "13/07/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "15/07/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Idioma-de-comunicaci%C3%B3/e4zz-vv8p",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "IDIOMA_COMUNICACIO",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/01/2021",
+        "Data_actualitzacio": "15/07/2020"
+    },
+    {
+        "Id": "dtarq145",
+        "Nom": "Prefixos telefònics internacionals",
+        "Ambit": "Informació i comunicació",
+        "Subambit": "Telecomunicacions i societat digital",
+        "Descripcio": "Llistat de prefixos de país per trucades de telèfon internacionals.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Prefixos_telefonics_internacionals_ATR.docx",
+                "ifitxer_xls": "Prefixos_telefonics_internacionals.xlsx",
+                "idatacreacio": "28/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Prefixos-telef%C3%B2nics-internacionals/i7dg-i8xw",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PREFIXOS_TELEFONICS_INTERNACIONALS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/05/2021",
+        "Data_actualitzacio": "26/05/2021"
+    },
+    {
+        "Id": "dtarq146",
+        "Nom": "Relació Prefixos telefònics internacionals i Països",
+        "Ambit": "Informació i comunicació",
+        "Subambit": "Telecomunicacions i societat digital",
+        "Descripcio": "Relació entre les entitats de prefixos telèfon internacionals i països.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Rel_PrefixTeleInter_Paisos_ATR.docx",
+                "ifitxer_xls": "Rel_PrefixTeleInter_Paisos.xlsx",
+                "idatacreacio": "25/05/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Relaci%C3%B3-Prefixos-telef%C3%B2nics-internacionals-i-Pa%C3%AFso/g8rh-xih2",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "REL_PREFIXTELEINTER_PAISOS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/05/2021",
+        "Data_actualitzacio": "26/05/2021"
+    },
+    {
+        "Id": "dtarq132",
+        "Nom": "Tipus telèfon",
+        "Ambit": "Informació i comunicació",
+        "Subambit": "Telecomunicacions i societat digital",
+        "Descripcio": "Llistat de tipologies de telèfons.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Tipus_Telefon_ATR.docx",
+                "ifitxer_xls": "Tipus_Telefon.xlsx",
+                "idatacreacio": "13/07/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "15/07/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ci%C3%A8ncia-i-Tecnologia/Tipus-tel%C3%A8fon/7z32-fwjb",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_TELEFON",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "15/07/2020",
+        "Data_actualitzacio": "15/07/2020"
+    },
+    {
+        "Id": "dtarq100",
+        "Nom": "Torres de radiocomunicació",
+        "Ambit": "Informació i comunicació",
+        "Subambit": "Telecomunicacions i societat digital",
+        "Descripcio": "Llistat de torres de radiocomunicació propietat de la Generalitat de Catalunya",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Entitats proposades Desembre 19",
+                "ifitxer_doc": "Codis_Infra_TorresRadioCom_ATR.docx",
+                "ifitxer_xls": "Codis_Infra_TorresRadioCom.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TORRES_RADIOCOMUNICACIO",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "18/12/2019",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq147",
+        "Nom": "Jurisdiccions",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Àmbits en què s'organitza la Justícia a Espanya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament JUS - Direcció General de Modernització de l'Administració de Justícia",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Jurisdiccions_ATR.docx",
+                "ifitxer_xls": "Jurisdiccions.xlsx",
+                "idatacreacio": "20/09/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Jurisdiccions/7ni5-twdg",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "JURISDICCIONS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/09/2021",
+        "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq148",
+        "Nom": "Partits judicials de Catalunya",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Llista de cadascuna de les divisions territorials que estableix l'Administració de justícia dins del territori català.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament JUS - Direcció General de Modernització de l'Administració de Justícia",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Partits_judicials_Catalunya_ATR.docx",
+                "ifitxer_xls": "Partits_judicials_Catalunya.xlsx",
+                "idatacreacio": "20/09/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Partits-judicials-de-Catalunya/95tc-3cti",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PARTITS_JUDICIALS_CATALUNYA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/09/2021",
+        "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq150",
+        "Nom": "Relació Municipis i Partit Judicial de Catalunya",
+        "Ambit": "Justícia i dret",
+        "Subambit": "Administració de justícia",
+        "Descripcio": "Llista de codis de municipi de Catalunya amb l'identificador del partit judicial que li correspon al municipi.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament JUS - Direcció General de Modernització de l'Administració de Justícia",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Rel_Municipis_PartitsJudicialsCat_ATR.docx",
+                "ifitxer_xls": "Rel_Municipis_PartitsJudicialsCat.xlsx",
+                "idatacreacio": "20/09/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Relaci%C3%B3-Municipis-i-Partit-Judicial-de-Catalunya/772x-hgsh",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "REL_MUNICIPIS_PARTITSJUDICIALSCAT",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "22/09/2021",
+        "Data_actualitzacio": "22/09/2021"
+    },
+    {
+        "Id": "dtarq50",
+        "Nom": "Canals comunicació avisos",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Mecanismes de comunicació per contactar amb una persona.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Comunicacio_Canal_Avis_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Comunicació_Canal_Avís.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CONTACTE_CANAL_AVIS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq56",
+        "Nom": "Caràcter Representació",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Permet indicar el caràcter de representació d'una persona envers una altra.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Representacio_Caracter_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Representació_Caràcter.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CARACTER_REPRE",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq47",
+        "Nom": "Estat Civil",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Descriu l'estat civil d'una persona.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Persona_Estat_Civil_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Estat_Civil.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Estat-Civil/ivy5-d99b",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "ESTAT_CIVIL",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq48",
+        "Nom": "Gènere",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Llistat dels grups en què es pot dividir el conjunt d’individus segons certes característiques psicològiques, socials i culturals.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Treball, Afers Socials i Famílies",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Genere_ATR.docx",
+                "ifitxer_xls": "Genere.xlsx",
+                "idatacreacio": "31/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/G-nere/rpg6-9mu9",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "GENERE",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "31/03/2021",
+        "Data_actualitzacio": "31/03/2021"
+    },
+    {
+        "Id": "dtarq54",
+        "Nom": "Grau parentiu",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Grau de parentiu existent entre persones.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Relació_Parentiu_Grau_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Relació_Parentiu_Grau.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "GRAU_PARENTIU",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq44",
+        "Nom": "Relació Parentiu",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Vincle parentiu entre dues persones.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Persona_Relacio_Parentiu_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Relació_Parentiu.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "RELACIO_PARENTIU",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq45",
+        "Nom": "Representació",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Tipus de relació entre la persona representant i la persona representada.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Representacio_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Representació.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PERSONA_REPRESENTACIO",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq49",
+        "Nom": "Tipus Identificador",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Tipus de documentació que es pot utilitzar per identificar a una persona.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Tipus_Identificador_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Tipus_Identificador.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_IDENTIFICADOR",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq55",
+        "Nom": "Tipus Notificació",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Permet indicar el tipus de notificació que accepta una persona.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Persona_Tipus_Notificacio_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Tipus_Notificació.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_NOTIFICACIO",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq52",
+        "Nom": "Tipus parentiu",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Relació de parentiu que uneix les persones.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Persona_Relació_Parentiu_Tipus_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Relació_Parentiu_Tipus.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_PARENTIU",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "19/07/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq142",
+        "Nom": "Sexe",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Polítiques de gènere i igualtat",
+        "Descripcio": "Llista de grups en què es divideixen els individus d’una espècie en mascles i femelles, segons un conjunt de peculiaritats biològiques, fisiològiques i orgàniques.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Sexe_ATR.docx",
+                "ifitxer_xls": "Sexe.xlsx",
+                "idatacreacio": "31/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Sexe/in7g-gc2u",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SEXE",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "31/03/2021",
+        "Data_actualitzacio": "31/03/2021"
+    },
+    {
+        "Id": "dtarq104",
+        "Nom": "Àmbit territorial de planificació",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat d'àmbits territorials de planificació en què es divideix el territori.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Entitats proposades Desembre 19",
+                "ifitxer_doc": "Codis_Territori_AmbitTerriPlani_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_AmbitTerriPlani.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AMBIT_TER_PLANIFICACIO",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "18/12/2019",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq134",
+        "Nom": "Codis postal per municipis de Catalunya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                "idatacreacio": "13/07/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/05/2021",
+        "Data_actualitzacio": "26/05/2021"
+    },
+    {
+        "Id": "dtarq80",
+        "Nom": "Comunitats Autònomes",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de comunitats/ciutats autònomes segons INE.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Comunitats_Autonomes_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Comunitats_Autònomes.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Comunitats-Aut%C3%B2nomes/kigx-2vd9",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "COMUNITATS_AUTO",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq129",
+        "Nom": "Continents",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de continents del món.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Continents_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Continents.xlsx",
+                "idatacreacio": "25/05/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/09/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Continents/2dnu-a4wg",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CONTINENTS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/09/2020",
+        "Data_actualitzacio": "23/09/2020"
+    },
+    {
+        "Id": "dtarq128",
+        "Nom": "Municipis Catalunya Geo",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de municipis de Catalunya indicant la comarca a on pertanyen i amb dades de Geolocalització de l'Institut Cartogràfic i Geològic de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Catalunya_Geo_V01.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "14/07/2021",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Es modifica el nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\".",
+                "ifitxer_doc": "Codis_Territori_Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Municipis_Catalunya_Geo.xlsx",
+                "idatacreacio": "12/07/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "MUNICIPIS_CAT_GEO",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "14/07/2021"
+    },
+    {
+        "Id": "dtarq87",
+        "Nom": "Municipis Espanya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de municipis d'Espanya indicant la província a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V01.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/03/2021",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Es modifica el nom de dos municipis, els de codi 031360 i 311568.",
+                "ifitxer_doc": "Codis_Territori_Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V02.xlsx",
+                "idatacreacio": "31/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "30/06/2021",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Es modifica el nom de 3 municipis, els de codi: 030670, 312074 i 461192.",
+                "ifitxer_doc": "Codis_Territori_Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V03.xlsx",
+                "idatacreacio": "29/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "14/07/2021",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Es modifica el nom de 2 municipis, els de codi: 100974, 080235.",
+                "ifitxer_doc": "Codis_Territori_Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Municipis_Espanya.xlsx",
+                "idatacreacio": "12/07/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "MUNICIPIS_ESPANYA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "14/07/2021"
+    },
+    {
+        "Id": "dtarq127",
+        "Nom": "Nivells poblacionals",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de nivells jeràrquics en què es classifiquen les unitats poblacionals, incloent-hi el municipi.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Nivells_Poblacionals_ATR.docx",
+                "ifitxer_xls": "Nivells_Poblacionals.xlsx",
+                "idatacreacio": "26/05/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "10/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nivells-poblacionals/67n6-5bpy",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "NIVELLS_POBLACIONALS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "10/03/2021",
+        "Data_actualitzacio": "10/03/2021"
+    },
+    {
+        "Id": "dtarq107",
+        "Nom": "Nom de carrers de Catalunya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de noms de via (carrers) associats a municipis de Catalunya.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_V01.xlsx",
+                "idatacreacio": "21/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "26/05/2021",
+                "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Eliminació de registres duplicats.",
+                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "idatacreacio": "26/05/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "21/04/2021",
+        "Data_actualitzacio": "26/05/2021"
+    },
+    {
+        "Id": "dtarq125",
+        "Nom": "NUTS",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Nomenclatura d'unitats territorials estadístiques (NUTS) (regions europees)",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Territori_NUTS_ATR.docx",
+                "ifitxer_xls": "Territori_NUTS.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/02/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nomenclatura-d-unitats-territorials-estad%C3%ADstiques/v467-kzwi",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "NUTS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "17/02/2021",
+        "Data_actualitzacio": "17/02/2020"
+    },
+    {
+        "Id": "dtarq131",
+        "Nom": "Països",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de països i territoris del món segons l'estàndard ISO 3166-1 alfa-2 i alfa-3, amb el continent i subcontinent a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Paisos_ISOA2_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Paisos_ISOA2.xlsx",
+                "idatacreacio": "25/05/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/09/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Pa%C3%AFsos/u6te-2guv",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PAISOS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "26/05/2021",
+        "Data_actualitzacio": "23/09/2020"
+    },
+    {
+        "Id": "dtarq85",
+        "Nom": "Províncies",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_Provincies_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Provincies.xlsx",
+                "idatacreacio": "01/04/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Prov%C3%ADncies-d-Espanya/wkyq-jzxq",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "PROVINCIES",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "20/04/2020",
+        "Data_actualitzacio": "20/04/2020"
+    },
+    {
+        "Id": "dtarq902",
+        "Nom": "Regions del món",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de regions del món relacionades amb el continent a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Codis_Territori_Regions_mon_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Regions_mon.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/06/2019",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "REGIONS_MON",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "21/06/2019",
+        "Data_actualitzacio": "21/06/2019"
+    },
+    {
+        "Id": "dtarq130",
+        "Nom": "Subcontinents",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista de subcontinents del món amb el continent a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_SubContinents_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_Subcontinents.xlsx",
+                "idatacreacio": "25/05/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/09/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Subcontinents/wwi7-hmfu",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SUBCONTINENTS",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/09/2020",
+        "Data_actualitzacio": "23/09/2020"
+    },
+    {
+        "Id": "dtarq105",
+        "Nom": "Tipus de via",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llistat de tipologies d'espais aptes a transitar-hi.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Codis_Territori_TipusVia_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_TipusVia_V01.xlsx",
+                "idatacreacio": "06/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "21/04/2021",
+                "idatapublicacio": "23/09/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "S'incorpora el valor \"Eix\".",
+                "ifitxer_doc": "Codis_Territori_TipusVia_ATR.docx",
+                "ifitxer_xls": "Codis_Territori_TipusVia.xlsx",
+                "idatacreacio": "21/04/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "21/04/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Tipus-de-via/gjnk-vmhw",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_VIA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/09/2020",
+        "Data_actualitzacio": "21/04/2021"
+    },
+    {
+        "Id": "dtarq139",
+        "Nom": "Unitats poblacionals Catalunya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "deprecated/Unitats_Poblacionals_Catalunya_ATR_V01.docx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V01.xlsx",
+                "idatacreacio": "10/07/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "31/03/2021",
+                "idatapublicacio": "04/12/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "S'elimina l'atribut nom_ine.",
+                "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_V02.xlsx",
+                "idatacreacio": "31/03/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "14/07/2021",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització general i modificació del nom del municipi de \"Bigues i Riells\" per \"Bigues i Riells del Fai\". ",
+                "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                "idatacreacio": "12/07/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "04/12/2020",
+        "Data_actualitzacio": "14/07/2021"
+    },
+    {
+        "Id": "dtarq140",
+        "Nom": "Unitats poblacionals Espanya",
+        "Ambit": "Territori, infraestructures i urbanisme",
+        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Descripcio": "Llista d'unitats poblacionals d'Espanya indicant la província i el municipi a on pertanyen.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V01.xlsx",
+                "idatacreacio": "10/07/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "30/06/2021",
+                "idatapublicacio": "31/03/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Obsoleta",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Revisió per canvi de nom de 3 municipis i actualització general segons darrera versió fitxer font.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V02.xlsx",
+                "idatacreacio": "29/06/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "14/07/2021",
+                "idatapublicacio": "30/06/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Es modifica el nom de 2 municipis, relacionats amb els municipis de codi ine 100974 i 080235.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "12/07/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "31/03/2021",
+        "Data_actualitzacio": "14/07/2021"
+    },
+    {
+        "Id": "dtarq111",
+        "Nom": "CCO",
+        "Ambit": "Treball",
+        "Subambit": "Ocupació i inserció laboral",
+        "Descripcio": "Classificació catalana d'ocupacions. Es disposa de vàries versions segons l'any.",
+        "instancies": [
+            {
+                "inom": "1994 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 1994. Versió inicial.",
+                "ifitxer_doc": "CCO_1994_ATR.docx",
+                "ifitxer_xls": "CCO_1994.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Ocupacions-CCO-1994/6k5y-hxp5",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2011 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2011. Versió inicial.",
+                "ifitxer_doc": "CCO_2011_ATR.docx",
+                "ifitxer_xls": "CCO_2011.xlsx",
+                "idatacreacio": "09/03/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "20/01/2021",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Ocupacions-CCO-2011/upzy-jfdd",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CCO",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "17/02/2021",
+        "Data_actualitzacio": "20/01/2021"
+}
+  ]
+}
