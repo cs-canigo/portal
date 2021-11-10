@@ -1,6 +1,6 @@
 +++
 date        = "2021-11-10"
-title       = "Dades de Referència - TaxoSubdom"
+title       = "Dades de Referència - Subdom"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
@@ -178,7 +178,7 @@ tr.shown td.details-control {
             { "data": "Data_actualitzacio" }
            ],
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
-	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
 	        //calcular nombre d'instàncies vigents
 	        var dadesConso=json.data; 
@@ -215,10 +215,7 @@ tr.shown td.details-control {
 			if (vigents2 == 1){ txtInstancies=" instància vigent";}	
              			
 	        //retornem el text que es visualitzarà
-			//return total + txtEntitats + vigents2 + txtInstancies;
-			var txtEntitats=" entitats";
-			if (total == 1){ txtEntitats=" entitat";}
-			return vigents2 + txtEntitats;
+			return total + txtEntitats + vigents2 + txtInstancies;
 			
 		}
     } ); 
@@ -293,7 +290,7 @@ tr.shown td.details-control {
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
 	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
