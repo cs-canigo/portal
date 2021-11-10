@@ -192,7 +192,8 @@ tr.shown td.details-control {
 			//console.log("vigents: " + vigents);
 			
 			//Mostrar text amb el nombre d'instàncies vigents
-			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			//$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			$('#numInstancies').text("Nombre total d'entitats vigents: " + vigents);
 		  },
 		  
 	  "infoCallback": function( settings, start, end, max, total, pre ) {
@@ -348,12 +349,12 @@ tr.shown td.details-control {
             <tr>
                 <th></th>
                 <th>Nivell Validació</th>
-                <th>Domini</th>
-                <th>Subdomini</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:30%">Descripció</th>
+                <th style="width:10%">Data publicació</th>
+                <th style="width:10%">Darrera actualització</th>
             </tr>
         </thead>
     </table>
