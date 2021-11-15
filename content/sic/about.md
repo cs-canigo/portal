@@ -49,7 +49,9 @@ Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
 ### Integració contínua
 
 El SIC té capacitat per a poder realitzar el **desplegament automàtic** d'un gran nombre d'aplicacions de diferents tecnologies a diferents entorns. 
-Aquests es realitzen mitjançant l'eina d'Integració Contínua de SIC: Jenkins. Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al servei de custòdia de codi font. <br/>
+Aquests es realitzen mitjançant l'eina d'Integració Contínua de SIC: Jenkins.
+
+Es configurarà una única tasca per projecte que s'executarà automàticament amb cada pujada de codi al servei de custòdia de codi font.
 La tasca inclourà accions de construcció d'artefactes, versionat de codi, execució de tests, anàlisi de codi i desplegaments a entorns no-productius i productius. En aquells entorns on no es pugui desplegar automàticament, el flux d'execució de la tasca s'aturarà esperant una resposta manual d'acceptació.
 
 Per a més informació:

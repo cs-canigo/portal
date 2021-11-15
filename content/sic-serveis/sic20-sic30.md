@@ -10,7 +10,7 @@ weight      = 1
 
 ## Introducció
 
-**Al Maig del 2021 es va posar en servei la Nova Plataforma del Sistema d'integració contínua v.3.0**.
+**Al maig del 2021 es va posar en servei la Nova Plataforma del Sistema d'integració contínua v.3.0**.
 L’objectiu perseguit ha estat millorar el lliurament de solucions de TIC a la Generalitat emprant noves tecnologies,
 eines i processos els quals permetin simplificar i lliurar solucions de més alt nivell amb una millor resiliència i
 robustesa d'una manera més àgil.
