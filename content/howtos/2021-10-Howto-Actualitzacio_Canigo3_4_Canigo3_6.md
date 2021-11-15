@@ -191,4 +191,4 @@ amb el nom de la funció de SARCAT
 Serà necessari utilitzar la pàgina pròpia de Swagger a '/api/swagger-ui.html'
 
 ---
-**15.** Eliminar la depenència i el plugin de `dependency-check` ja que no es compatible amb Java 11
+**15.** Eliminar la depenència i el plugin de `dependency-check` ja que no és compatible amb Java 11
