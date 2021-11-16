@@ -1146,16 +1146,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Justícia",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Persona_Estat_Civil_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Estat_Civil.xlsx",
+                "ifitxer_doc": "Codis_Persona_Estat_Civil_V01_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Estat_Civil_V01.xlsx",
                 "idatacreacio": "01/04/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "17/11/2021",
                 "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Estat-Civil/ivy5-d99b",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Justícia",
+                "idescripcio": "S'afegeix atribut codi alfanumeric únic.",
+                "ifitxer_doc": "Codis_Persona_Estat_Civil_ATR.docx",
+                "ifitxer_xls": "Codis_Persona_Estat_Civil.xlsx",
+                "idatacreacio": "15/11/2021",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "17/11/2021",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Estat-Civil/ivy5-d99b",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1163,7 +1178,7 @@
         "nom_dinsBD": "ESTAT_CIVIL",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "20/04/2020"
+        "Data_actualitzacio": "17/11/2021"
     },
     {
         "Id": "dtarq48",
