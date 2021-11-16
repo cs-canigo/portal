@@ -40,52 +40,52 @@ Paginate = 10
 	Name = "Arquitectura CTTI"
     Weight = 3
     Identifier = "arqctti"
-    URL = "/arqctti"
+    URL = "/arqctti/"
 
 [[menu.main]]
 	Name = "Blog"
     Weight = 5
     Identifier = "blog"
-    URL = "/blog"
+    URL = "/blog/"
 
 [[menu.main]]
 	Name = "Cloud"
     Weight = 7
     Identifier = "cloud"
-    URL = "/cloud"
+    URL = "/cloud/"
 
 [[menu.main]]
 	Name = "Canigó"
     Weight = 9
     Identifier = "framework"
-    URL = "/canigo"
+    URL = "/canigo/"
 
 [[menu.main]]
 	Name = "SIC"
     Weight = 11
     Identifier = "sic"
-    URL = "/sic"
+    URL = "/sic/"
 
 [[menu.main]]
 	Name = "SGDE"
     Weight = 13
     Identifier = "sgde"
-    URL = "/sgde"
+    URL = "/sgde/"
 
 [[menu.main]]
 	Name = "GICAR"
     Weight = 15
     Identifier = "gicar"
-    URL = "/gicar"
+    URL = "/gicar/"
 
 [[menu.main]]
 	Name = "Centres de Suport"
     Weight = 17
     Identifier = "suport"
-    URL = "/cs"
+    URL = "/cs/"
 
 [[menu.main]]
 	Name = "Gestió Tècnica de Dades"
     Weight = 18
     Identifier = "dadesrefsuport"
-    URL = "/dadesref"
+    URL = "/dadesref/"
