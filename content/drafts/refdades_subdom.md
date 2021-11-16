@@ -1,5 +1,5 @@
 +++
-date        = "2021-11-15"
+date        = "2021-11-16"
 title       = "Dades de Referència - Subdom 17/11"
 description = "Arquitectura de Dades de CTTI, 17/11"
 sections    = ["Data Architecture"]
@@ -286,14 +286,15 @@ tr.shown td.details-control {
 	  "columns": [
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" },
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
-	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
+	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
@@ -352,9 +353,9 @@ tr.shown td.details-control {
                 <th style="width:15%">Domini</th>
                 <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:30%">Descripció</th>
-                <th style="width:10%">Data publicació</th>
-                <th style="width:10%">Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
             </tr>
         </thead>
     </table>
@@ -379,11 +380,12 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
         <thead>
             <tr>
                 <th>Nivell Validació</th>
-                <th>Grup</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
