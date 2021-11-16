@@ -18,7 +18,7 @@ El document està dividit en dues parts:
 A continuació proporcionem enllaços als documents relacionats:
 
 | TIPUS D'ARQUITECTURA | PLANTILLA |
-| --- | :---: |
+| :--- | :---: |
 | On premise | [Plantilla DA On Premise](/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
 | Híbrida (cloud privat & on premise) | [Plantilla DA  Híbrid](/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
 | Cloud privat | [Plantilla DA Cloud Privat](/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
