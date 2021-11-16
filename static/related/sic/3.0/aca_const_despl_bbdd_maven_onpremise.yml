@@ -19,7 +19,7 @@ components:
           execution:
             commands:
               - mvn package --batch-mode 
-    deploy:
+    deployment:
       environments:
         - name: integration
           deployment-type: delegated
