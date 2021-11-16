@@ -456,7 +456,7 @@ l'artefacte preestablerts pel sistema:
 
 - `name`: bbdd_${entorn fitxer `plans.xml`}
 
-- `name`: tmpBBDD
+- `path`: tmpBBDD
 
 
 ##### components[].deployment.enviroments[].actions.before-deploy
