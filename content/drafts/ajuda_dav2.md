@@ -288,7 +288,7 @@ Per remetre la informació relativa a instàncies aprovisionades en cloud públi
 | **Element** | **Descripció** |
 | --- | --- |
 | **Tipus de Producte de Power Platform** | Marcar aquells productes de la PowerPlatform Suite involucrats a l'Arquitectura de la solució  |
-| **Nom dels entorns (SANDBOX, Production, ...) i Grups de Seguretat** | Enumerar els entorns i els grups de seguretat associat a cada entorn. Indicar a més, només en el cas que no sigui West Europe, la regió i la finalitat de cadascuan dels entorns |
+| **Nom dels entorns (SANDBOX, Production, etc.) i Grups de Seguretat** | Enumerar els entorns i els grups de seguretat associat a cada entorn. Indicar a més, només en el cas que no sigui West Europe, la regió i la finalitat de cadascuan dels entorns |
 | **Administradors dels entorns (indicar adreça de correu gencat)** | Nom i correu electrònic dels administradors de cadascun dels entorns |
 | **Requereix CDS** | Indicar si requereix o no base de dades |
 | **Si requereix CDS** | Enumerar les característiques de la Base de Dades en cas d'haver contestat SI en el punt anterior |
@@ -326,9 +326,10 @@ Cal que cadascuna de les tecnologíes estigui enumerada i justificada la seva ut
 
 ## **Vista Operacional:** {#VistaOperacional}
 
-### **Gestió de logs i monitorització {#GestióLogsiMonitorització}**
+### **Gestió de logs i monitorització** {#GestióLogsiMonitorització}
 
 Detallar informació respecte als següents punts:
+
 * Quina activitat ha de ser registrada per poder obtenir la informació crítica del servei.
 * Gestió d'alertes.
 * Monitoratge del rendiment.
