@@ -1,12 +1,12 @@
 +++
 date        = "2020-12-12"
 title       = "Compatibilitat servidors"
-description = "Compatibilitat servidors Canigó 3.4.5"
+description = "Compatibilitat servidors Canigó 3.4.6"
 sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 
-S'ha certificat la compatibilitat de Canigó 3.4.5 amb els següents servidors embeguts:
+S'ha certificat la compatibilitat de Canigó 3.4.6 amb els següents servidors embeguts:
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
@@ -16,7 +16,7 @@ S'ha certificat la compatibilitat de Canigó 3.4.5 amb els següents servidors e
 |  Netty (webflux)                         |         4.1.33.Final               |
 |  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE              |
 
-S'ha certificat la versió de Canigó 3.4.5 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
+S'ha certificat la versió de Canigó 3.4.6 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
@@ -25,4 +25,4 @@ S'ha certificat la versió de Canigó 3.4.5 amb els servidors suportats al [Full
 |  WebSphere	  		        	  	 	|         9.0                 			|
 |  JBoss EAP       									|         7.x        			          |
 
-La versió de Java mínima per utilitzar Canigó 3.4.5 és 1.8
+La versió de Java mínima per utilitzar Canigó 3.4.6 és 1.8

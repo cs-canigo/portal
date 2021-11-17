@@ -3,7 +3,7 @@
         "Id": "dtarq46",
         "Nom": "Relació amb Expedient",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
         "instancies": [
             {
@@ -1406,7 +1406,7 @@
         "Id": "dtarq104",
         "Nom": "Àmbit territorial de planificació",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat d'àmbits territorials de planificació en què es divideix el territori.",
         "instancies": [
             {
@@ -1434,7 +1434,7 @@
         "Id": "dtarq134",
         "Nom": "Codis postal per municipis de Catalunya",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
         "instancies": [
             {
@@ -1462,7 +1462,7 @@
         "Id": "dtarq80",
         "Nom": "Comunitats Autònomes",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de comunitats/ciutats autònomes segons INE.",
         "instancies": [
             {
@@ -1490,7 +1490,7 @@
         "Id": "dtarq129",
         "Nom": "Continents",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de continents del món.",
         "instancies": [
             {
@@ -1518,7 +1518,7 @@
         "Id": "dtarq128",
         "Nom": "Municipis Catalunya Geo",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de municipis de Catalunya indicant la comarca a on pertanyen i amb dades de Geolocalització de l'Institut Cartogràfic i Geològic de Catalunya.",
         "instancies": [
             {
@@ -1561,7 +1561,7 @@
         "Id": "dtarq87",
         "Nom": "Municipis Espanya",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de municipis d'Espanya indicant la província a on pertanyen.",
         "instancies": [
             {
@@ -1634,7 +1634,7 @@
         "Id": "dtarq127",
         "Nom": "Nivells poblacionals",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de nivells jeràrquics en què es classifiquen les unitats poblacionals, incloent-hi el municipi.",
         "instancies": [
             {
@@ -1662,7 +1662,7 @@
         "Id": "dtarq107",
         "Nom": "Nom de carrers de Catalunya",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de noms de via (carrers) associats a municipis de Catalunya.",
         "instancies": [
             {
@@ -1705,7 +1705,7 @@
         "Id": "dtarq125",
         "Nom": "NUTS",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Nomenclatura d'unitats territorials estadístiques (NUTS) (regions europees)",
         "instancies": [
             {
@@ -1733,7 +1733,7 @@
         "Id": "dtarq131",
         "Nom": "Països",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de països i territoris del món segons l'estàndard ISO 3166-1 alfa-2 i alfa-3, amb el continent i subcontinent a on pertanyen.",
         "instancies": [
             {
@@ -1761,7 +1761,7 @@
         "Id": "dtarq85",
         "Nom": "Províncies",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de províncies d'Espanya indicant el codi de la comunitat autònoma a on pertanyen.",
         "instancies": [
             {
@@ -1789,7 +1789,7 @@
         "Id": "dtarq902",
         "Nom": "Regions del món",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de regions del món relacionades amb el continent a on pertanyen.",
         "instancies": [
             {
@@ -1817,7 +1817,7 @@
         "Id": "dtarq130",
         "Nom": "Subcontinents",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista de subcontinents del món amb el continent a on pertanyen.",
         "instancies": [
             {
@@ -1845,7 +1845,7 @@
         "Id": "dtarq105",
         "Nom": "Tipus de via",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de tipologies d'espais aptes a transitar-hi.",
         "instancies": [
             {
@@ -1888,7 +1888,7 @@
         "Id": "dtarq139",
         "Nom": "Unitats poblacionals Catalunya",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista d'unitats poblacionals de Catalunya indicant el municipi a on pertanyen.",
         "instancies": [
             {
@@ -1946,7 +1946,7 @@
         "Id": "dtarq140",
         "Nom": "Unitats poblacionals Espanya",
         "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori , paisatge i urbanisme",
+        "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llista d'unitats poblacionals d'Espanya indicant la província i el municipi a on pertanyen.",
         "instancies": [
             {

@@ -1,6 +1,6 @@
 +++
-date        = "2019-05-28"
-title       = "Plantilla Descripció d'Arquitectura"
+date        = "2020-11-21"
+title       = "Plantilla Descripció d'Arquitectura v2.2"
 description = "Plantilla per la creació del document Descripció d'Arquitectura"
 sections    = "DA"
 weight = 3
@@ -17,7 +17,14 @@ El document està dividit en dues parts:
 
 A continuació proporcionem enllaços als documents relacionats:
 
-[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.1.docx)
+| TIPUS D'ARQUITECTURA | PLANTILLA |
+| :--- | :---: |
+| On premise | [Plantilla DA On Premise](/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
+| Híbrida (cloud privat & on premise) | [Plantilla DA  Híbrid](/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
+| Cloud privat | [Plantilla DA Cloud Privat](/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
+| Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
+| Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
+| Power Platform Suite | [Plantilla DA Power Platform Suite](/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
 
 [Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 

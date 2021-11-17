@@ -138,11 +138,11 @@ weight      = 1
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.operation.instrumentation                  		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.ssc**                         		| [2.4.0](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.ssc/2.4.0/) |
+| **canigo.integration.ssc**                         		| [2.4.1](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.ssc/2.4.1/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.operation.instrumentation                  		| [2.0.0,2.4.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.tributs.pica**                		| [2.3.0](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.tributs.pica/2.3.0/) |
+| **canigo.integration.tributs.pica**                		| [2.4.0](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.tributs.pica/2.4.0/) |
 | canigo.core                                       		| [4.0.0,4.4.0)  																																|
 | canigo.integration.pica                           		| [2.0.0,2.4.0) 																																|
 |                                                   		|       |
