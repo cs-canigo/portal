@@ -59,9 +59,9 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 
 **Exemple**
 
-![Exemple Diagrama Context 1](/images/PlantillaDA/Exemple_Context.JPG)
-
-![Exemple Diagrama Context 2](/images/PlantillaDA/Exemple_Context_2.JPG)
+<img src="/images/PlantillaDA/Exemple_Context.JPG" style="width:400px;"/>
+<br>
+<img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:400px;"/>
 
 **Directrius o requeriments a l'hora de realitzar el diagrama**
 * _Sistema._
@@ -83,7 +83,8 @@ Enumerar els diferents actors que apareixen al diagrama de context i detarllar-n
 
 **Exemple**
 
-![Exemple Diagrama Funcional 1](/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG)
+<img src="/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG" style="width:400px;"/>
+<br>
 
 **Directrius o requeriments a l'hora de realitzar el diagrama**
 * _Sistema amb les seves funcionalitats segregades, sempre que no sigui una aplicació monolítica (cosa que aniría en contra del principi d'Arquitectura 1.1._
@@ -95,8 +96,6 @@ Detallar quina es l'estrcutura interna de l'aplicació. Segons el principi d'arq
 **Directrius**
 * _Verificar que aquestes relacions no suposin acoblaments entre serveis. Ni que es tracti d'eines transversals del CTTI com GICAR o l'Antivirus corporatiu. Cal una breu descripció dels diferents mòduls e interfícies que el sistema fa servir._
 * _Verificar que l'aplicació te mòduls separats per funcionalitat. Que es defineixen mòduls amb una petita descripció de cada mòdul (2-3 línies)._
-
-[comment]: <### Justificacions de les decisions del model Funcional {#JustificacionsDecisionsModelFuncional}>
 
 ## **Vista d'Informació:** {#VistaInformacio}
 
@@ -184,8 +183,6 @@ Validar que la proposta per administrat les tasques o procesos batch permeti mon
 
 _Aquest es el punt per informar sobre aquests processos. No pot aparèixer a cap altre punt del DA. Si això passa, remetrem a que s'informi aquí._
 
-[comment]: <### Relacio/Comunicació entre processos {#RelacioComunicacióEntreProcessos}>
-
 ## **Vista Desenvolupament:** {#VistaDesenvolupament}
 
 ### **Tecnologies de desenvolupament** {#TecnologiesDesenvolupament}
@@ -198,8 +195,6 @@ Detallar quines tecnologies s'utilitzen per cada una de les capes.
   
 ### **Identificar software/llibreries de tercers utilitzat** {#IdentificarSoftwareLlibreriesTercersUtilitzades}
 Identificar aquelles llibreries que no estan en un repositori confiable.
-
-[comment]: <### Principis i estàndards seguits en el disseny i desenvolupament del codi {#PrincipisEstandardsSeguitsDissenyDesenvolupamentCodi}>
 
 ### **Repositori de codi** {#RepositoriCodi}
 Informació del repositori on es pujarà el codi font i detalls respecte als artefactes a desplegar al GitLab. Ha d'esser un (com a mínim) d'aquests. Es pot donar el cas que el codi estigui a un repositori general i que també estigui en un altre dels repositoris.
@@ -223,7 +218,8 @@ Cal que cadascuna de les tecnologíes estigui aquí enumerada i justificada la s
 
 **Exemple**
 
-![Exemple Diagrama Desenvolupament 1](/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG)
+<img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:400px;"/>
+<br>
 
 ## Vista Desplegament: {#VistaDesplegament}
 
@@ -244,7 +240,7 @@ S'ha de crear una taula com la de la plantilla per cada un dels entorns que form
 | **Identificador d'instància** | Identificador únic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà després per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies són noves, quines han tingut canvis o quines són compartides amb altres serveis / solucions del departament. |
 | **Tipus de Servei** | <br>PaaS <br>IaaS <br>Hosting |
 | **Programari i versió** | Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari. En cas de sistemes/serveis nous, caldrà que les versions siguin les actuals segons el [Full de Ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#annex-a-normatiu-programari-estandarditzat:29540b9fba4cb00170570a076b9df531). |
-| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. ![Taula de talles](/images/PlantillaDA/Talles.JPG) |
+| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:400px;"/> |
 | **Nivell de Servei** | Continu - AD 24x7 <br>Continu 24x7 <br>Laboral - AD 12x5 <br>Laboral 12x5 <br>No productiu 12x5 |
 
 ### **Taula d'emmagatzematge** {#TaulaDisc}
