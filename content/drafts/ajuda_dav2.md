@@ -11,33 +11,33 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 
 ---
 
-# **Taula de Continguts**
+# **Taula de Continguts** {#TaulaContiguts}
 
-1. [Introducció] (#Introducció)
-   1. [Propòsit] (#Propòsit)
+1. [Introducció] (#Introduccio)
+   1. [Propòsit] (#Proposit)
    2. [Abast] (#Abast)
       1. [Necessitats fonamentals] (#NecessitatsFonamentals)
-      2. [Restriccions i Requisits no funcional] (#RestriccionsRequisitsNoFuncionals)
+      2. [Restriccions i Requisits no Funcionals] (#RestriccionsRequisitsNoFuncionals)
    3. [Parts Interessades] (#PartsInteressades)
 2. [Vistes] (#Vistes)
-   1. [Vista de Context] ()
-   2. [Vista Funcional] ()
-   3. [Vista d’Informació] ()
-   4. [Vista de Concurrència] ()
-   5. [Vista de Desenvolupament] ()
-   6. [Vista de Desplegament] ()
-   7. [Vista Operacional] ()
+   1. [Vista de Context] (#VistaContext)
+   2. [Vista Funcional] (#VistaFuncional)
+   3. [Vista d’Informació] (#VistaInformacio)
+   4. [Vista de Concurrència] (#VistaConcurrencia)
+   5. [Vista de Desenvolupament] (#VistaDesenvolupament)
+   6. [Vista de Desplegament] (#VistaDesplegament)
+   7. [Vista Operacional] (#VistaOperacional)
 3. [Perspectives Transversals] (#PerspertivesTransversals)
-   1. [Seguretat] ()
-   2. [Rendiment i escalabilitat] ()
-   3. [Disponibilitat] ()
-   4. [Internacionalització] ()
+   1. [Seguretat] (#Seguretat)
+   2. [Rendiment i escalabilitat] (#RendimentEscalabilitat)
+   3. [Disponibilitat] (#Disponibilitat)
+   4. [Internacionalització] (#Internacionalitzacio)
 4. [Imformació Específica pel projecte d'aprovisionament] (#InformacioEspecificaProjecteAprovisionament)
-   1. [Informació relativa al context] ()
-   2. [Informació relativa al SIC] ()
-   3. [Informació relativa a xarxes i dominis DNS] ()
-   4. [Informació relativa a l’aprovisionament d’Infraestructura] ()
-   5. [Estratègia de migració] ()
+   1. [Informació relativa al context] (#InformacióRelativaContext)
+   2. [Informació relativa al SIC] (#InformacioRelativaSIC)
+   3. [Informació relativa a xarxes i dominis DNS] (#InformacioRelativaXarxesDominis)
+   4. [Informació relativa a l’aprovisionament d’Infraestructura] (#InformacioRelativaAprovisionamentInfraestructura)
+   5. [Estratègia de migració] (#EstrategiaMigracio)
 
 ---
 
@@ -53,8 +53,9 @@ Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'infor
 
 ---
 
-# **Introducció** 
+# **Introducció** {#Introduccio}
 
+##### [inici] (#TaulaContiguts)
 ## **Propòsit** {#Proposit}
 Explicar quin es el propòsit del Servei o Sistema d'Informació definit al DA i quines necessitats cobreix/cobrirà l'aplicació dintre del Departament u Organisme responsable.
 
@@ -62,6 +63,7 @@ Explicar quin es el propòsit del Servei o Sistema d'Informació definit al DA i
 
 _El propòsit, en el cas d'haver de redactar el DA de Microsoft Outlook, seria "Gestionar les bústies de correus dels usuaris"._
 
+##### [inici] (#TaulaContiguts)
 ## **Abast** {#Abast}
 Indicar, relacionat amb el punt anterior, com el Sistema d'informació donarà servei o cobrirà la necessitat indicada en el punt anterior. S'ha d'explicar, a grans trets, com serà aquest sistems d'informació e identificar els consumidors d'aquest Sistema.
 
@@ -69,6 +71,7 @@ Indicar, relacionat amb el punt anterior, com el Sistema d'informació donarà s
 
 _En aquest punt ha de quedar clar que es fa per aconseguir l'objectiu i quins son els consumidors de l'aplicació o servei (Interns Gencat, Col·laboradors Externs  o Públics)._
 
+##### [inici] (#TaulaContiguts)
 ## **Necessitats fonamentals** {#NecessitatsFonamentals}
 Llistats dels requeriments/necessitats fonamentals que ha de cobrir l'arquitectura de la solució/servei. Son els punts que condicionaran tota l'arquitectura.
 
@@ -79,9 +82,11 @@ Llistats dels requeriments/necessitats fonamentals que ha de cobrir l'arquitectu
 * _Es necessari l'ús d'una base de dades relacional._
 * _Es necessari l'ús del servei transversal de e-Formularis._
 
+##### [inici] (#TaulaContiguts)
 ## **Restriccions i requisits no funcionals** {#RestriccionsRequisitsNoFuncionals}
 Informar els requisits que tenen en compte aspectes de la solució fora de la seva funcionalitat i que son importants o rellevants per l'arquitectura.
 
+##### [inici] (#TaulaContiguts)
 ## **Parts interessades** {#PartsInteressades}
 Identificar i descriure les parts interessades per a l'arquitectura. S'han d'informar totes les parts que estan involucrades ja no en la confecció del document, si no amb el servei.
 
@@ -89,6 +94,7 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 
 # **Vistes** 
 
+##### [inici] (#TaulaContiguts)
 ## **Vista Context:** {#VistaContext}
 
 ### **Diagrama de Context** {#DiagramesContext}
@@ -114,6 +120,7 @@ Caldrà també que aquestes dependències no siguin realment acoblaments entre a
 ### **Actors** {#Actors}
 Enumerar els diferents actors que apareixen al diagrama de context i detarllar-ne la descripció d'aquests. A més, caldrà explicar com s'autentiquen al Sistema.
 
+##### [inici] (#TaulaContiguts)
 ## **Vista Funcional:** {#VistaFuncional}
 
 ### **Diagrama Funcional** {#DiagramaFuncional}
@@ -134,6 +141,7 @@ Detallar quina es l'estrcutura interna de l'aplicació. Segons el principi d'arq
 * _Verificar que aquestes relacions no suposin acoblaments entre serveis. Ni que es tracti d'eines transversals del CTTI com GICAR o l'Antivirus corporatiu. Cal una breu descripció dels diferents mòduls e interfícies que el sistema fa servir._
 * _Verificar que l'aplicació te mòduls separats per funcionalitat. Que es defineixen mòduls amb una petita descripció de cada mòdul (2-3 línies)._
 
+##### [inici] (#TaulaContiguts)
 ## **Vista d'Informació:** {#VistaInformacio}
 
 ### **Dades de caràcter personal** {#DadesCaracterPersonal}
@@ -208,6 +216,7 @@ En cas de fer servir entitats de referència, enumerar aquelles que en fa ús el
 ### **Diagrama de flux** {#DiagramaFlux}
 Diagrama de Flux de la informació.
 
+##### [inici] (#TaulaContiguts)
 ## **Vista de Concurrència:** {#VistaConcurrencia}
 
 ### **Usuaris Simultanis** {#UsuarisSimultanis}
@@ -220,6 +229,7 @@ Validar que la proposta per administrat les tasques o procesos batch permeti mon
 
 _Aquest es el punt per informar sobre aquests processos. No pot aparèixer a cap altre punt del DA. Si això passa, remetrem a que s'informi aquí._
 
+##### [inici] (#TaulaContiguts)
 ## **Vista Desenvolupament:** {#VistaDesenvolupament}
 
 ### **Tecnologies de desenvolupament** {#TecnologiesDesenvolupament}
@@ -260,6 +270,7 @@ Cal que cadascuna de les tecnologíes estigui aquí enumerada i justificada la s
 <img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:500px;"/>
 <br>
 
+##### [inici] (#TaulaContiguts)
 ## Vista Desplegament: {#VistaDesplegament}
 
 ### **Diagrames de plataforma d'execució i de Xarxa** {#DiagramesPlataformaExecucioXarxa}
@@ -354,9 +365,10 @@ Informar si es fan servir d'altres serveis tecnics com els protocols IMAP o POP3
 ### **Justificacions de les decisions de la Vista de Desplegament**
 Cal que cadascuna de les tecnologíes estigui enumerada i justificada la seva utilització. A més, cal indicar quins entorns hi ha (INT, PRE, PRO, FOR)
 
+##### [inici] (#TaulaContiguts)
 ## **Vista Operacional:** {#VistaOperacional}
 
-### **Gestió de logs i monitorització** {#GestióLogsiMonitorització}
+### **Gestió de logs i monitorització** {#GestioLogsiMonitorització}
 
 Detallar informació respecte als següents punts:
 
@@ -388,9 +400,10 @@ Definició, si es que hi ha sondes que verifiquen el correcte funcionament del s
 
 ---
 
-# **Perspectives Transversals** #
+# **Perspectives Transversals** # {#PerspertivesTransversals}
 
-## **Seguretat**
+##### [inici] (#TaulaContiguts)
+## **Seguretat** {#Seguretat}
 
 ### **Mesures de seguretat bàsiques de Cesicat** {#MesuresSeguretatBàsiquesCesicat}
 Indicar que s'han llegit i es tindran en compte les mesures de seguretat vigents a l'hora d'implementar l'arquitectura del servei/solució.
@@ -428,7 +441,8 @@ Definir quina modalitat d'integració amb GICAR s'està fent servir
 
 _Per més detall de cada una de les modalitats consultar el [Portal Canigó](https://canigo.ctti.gencat.cat/gicar/)_
 
-## **Rendiment i escalabilitat**
+##### [inici] (#TaulaContiguts)
+## **Rendiment i escalabilitat** {#RendimentEscalabilitat}
 
 ### **Requeriments de rendiment continuar i davant pics** {#RequerimentsRendimentContinuarDavantPics}
 Detallar en quin percentatge de consum de recursos es tenen que mantenir els servidors en un ús normal i quin es el máxim d'ús en una situació de pic.
@@ -436,7 +450,8 @@ Detallar en quin percentatge de consum de recursos es tenen que mantenir els ser
 ### **Mesures adoptades per tal d'assolir el rendiment necessari** {#MesuresAdoptadesAssolirRendimentNecessari}
 L’aplicació està preparada per l’escalabilitat horitzontal?
 
-## **Disponibilitat**
+##### [inici] (#TaulaContiguts)
+## **Disponibilitat** {#Disponibilitat}
 
 ### **RTO del Sistema** {#RTO}
 Temps que pot estar el negoci amb el servei aturat.
@@ -458,7 +473,8 @@ Presentar l'estudi de com afecta la indisponibilitat de les entitats externes al
 
 _No s'ha d'informar la indisponibilitat en el cas d'eines transversals (GICAR, Ironports, antivirus, etc.) si no les entitats externes indicades a la Vista de Context._
 
-## **Internacionalització**
+##### [inici] (#TaulaContiguts)
+## **Internacionalització** {#Internacionalitzacio}
 
 ### **Idiomes que suporta el sistema** {#IdiomesSuportaSistema}
 Enumerar l'idioma o idiomes que el servei ofereix.
@@ -468,25 +484,30 @@ En cas que el punt anterior sigui informat amb mes d'un idioma, explicar com es 
 
 ---
 
-# **Informació específica pel projecte d'aprovisionament** #
+# **Informació específica pel projecte d'aprovisionament** {# #InformacioEspecificaProjecteAprovisionament}
 <br>
 
 **Directrius**
 
 _Aquest punt del DA es l'únic que s'ha d'informar des del punt de vista del projecte i no des del punt de vista d'Arquitectura. Caldrà que sigui molt precís en els nous elements de la infraestructura del servei, en aquells que canvien de talla, o de versió de programari._
 
-## **Informació relativa al context**
+##### [inici] (#TaulaContiguts)
+## **Informació relativa al context** {#InformacioRelativaContext}
 ### **Informació relativa al context**
 En el cas de tractar-se de l'evolució d'un servei ja existent, en aquest apartat s'inclourà el detall de la integració amb serveis externs que en versions anteriors del DA no existien.
 
-## **Informació relativa al SIC**
+##### [inici] (#TaulaContiguts)
+## **Informació relativa al SIC** {#InformacioRelativaSIC}
 ### **Informació relativa al SIC**
 Dades específiques d'integració amb el SIC que no estiguessin fetes prèviament. Entorns a gestionar per el SIC, l'organització de les branques i el detall dels artefactes que el SIC desplegarà.
 
-## **Informació relativa a xarxes i dominis DNS**
+##### [inici] (#TaulaContiguts)
+## **Informació relativa a xarxes i dominis DNS** {#InformacioRelativaXarxesDominis}
 ### **Informació relativa a xarxes i dominis DNS**
 Definir aquelles regles de connectivitat que no estaven d'alta fins ara. Dominis DNS dels diferents entorns i aquelles pàgines que es volen protegir mitjançant GICAR.
 
-## **Informació relativa a l'aprovisionament d'Infraestructura**
+##### [inici] (#TaulaContiguts)
+## **Informació relativa a l'aprovisionament d'Infraestructura** {#InformacioRelativaAprovisionamentInfraestructura}
 ### **Informació relativa a l'aprovisionament d'Infraestructura**
 Ha d'estar alineat amb la vista de Desplegament, tot indicant, mitjançant l'identificador d'instancies, quines es mantenen iguals, quines canvien en les seves característiques i quines son nous aprovisionaments, doncs abans no hi formaven part de la infraestructura.
+##### [inici] (#TaulaContiguts)
