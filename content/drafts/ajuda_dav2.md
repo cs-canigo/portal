@@ -9,8 +9,10 @@ categories  = ["Document Arquitectura","DA","Plantilla"]
 
 Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, els següents apartats són accessibles des de la pròpia plantilla.
 
-# **Disposicions prèvies** 
+---
 
+# **Disposicions prèvies** 
+<br>
 Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'informar un DA:
 
 * **Estructura del DA:** No està permès modificar l'estructura del DA. En cas de no informar un punt OPCIONAL, indicar _NO APLICA_ en comptes d'esborrar aquest punt. Si està permès, per contra, afegir punts per sota del segon nivell (per exemple a la vista de Desplegament -punt 2.6- afegir un nivell per sota seria "2.6.1").
@@ -18,6 +20,8 @@ Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'infor
 * **Dades de l'aplicació (Codi de Diàleg i Nom):** S'han d'informar, com a mínim, aquestes dues dades. En el cas de sistemes d'informació nous, si encarà no se sap el codi de diàleg, es pot no informar, però cal indicar que aquesta dada no es coneix encara.
 * **Dades de les revisions del document, l'autoria i el responsable del CTTI:** Les versions han de quadrar amb el quadre resum i el quadre de detall de canvis. A més es valida que el nom de l'Arquitecte estigui a la llista d'Arquitectes autoritzats pels lots.
 * **Arquitecte que redacta i/o revisa el DA:** Al menys un d'ells (si no son el mateix) han d'estar a la llista d'Arquitectes autoritzats per els diferents lots.
+
+---
 
 # **Introducció** 
 
@@ -51,6 +55,8 @@ Informar els requisits que tenen en compte aspectes de la solució fora de la se
 ## **Parts interessades** {#PartsInteressades}
 Identificar i descriure les parts interessades per a l'arquitectura. S'han d'informar totes les parts que estan involucrades ja no en la confecció del document, si no amb el servei.
 
+---
+
 # **Vistes** 
 
 ## **Vista Context:** {#VistaContext}
@@ -63,7 +69,8 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 <br>
 <img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:400px;"/>
 
-**Directrius o requeriments a l'hora de realitzar el diagrama**
+**Directrius o requeriments a l'hora de realitzar el diagrama:**
+
 * _Sistema._
 * _Entitats externes al Sistema._
 * _Interfícies (activitats que realitzen en la interacció amb les entitats externes)._
@@ -189,6 +196,7 @@ _Aquest es el punt per informar sobre aquests processos. No pot aparèixer a cap
 Detallar quines tecnologies s'utilitzen per cada una de les capes.
 
 **Directrius**
+
 * _En cas d'aplicacio JEE s'ha de fer ús del Framework Canigó_
 * _En el cas de desenvolupament en .Net, i en cas de ser una app nova, s'ha de dur a terme amb .NetCore_
 * _S'ha de respectar el principi d'Arquitectura 2.2 ([Estabilitat de les versions de programari](https://canigo.ctti.gencat.cat/principis/arq-si/))_
@@ -198,6 +206,7 @@ Identificar aquelles llibreries que no estan en un repositori confiable.
 
 ### **Repositori de codi** {#RepositoriCodi}
 Informació del repositori on es pujarà el codi font i detalls respecte als artefactes a desplegar al GitLab. Ha d'esser un (com a mínim) d'aquests. Es pot donar el cas que el codi estigui a un repositori general i que també estigui en un altre dels repositoris.
+
 * Repositori Generals
 * Repositoris particulars Departamentals
 * Altres / Excepcions
@@ -306,7 +315,8 @@ _Principi d'Arquitectura 1.6.2 (Servidors SMTP transversals - https://canigo.ctt
 Informar si el servei necessita sortida a internet. Fent crides altres serveis per executar processos o obtenir informació.
 
 **Directrius**
-*Principi d'Arquitectura 1.6.3 (Accés a internet des de xCAT - https://canigo.ctti.gencat.cat/principis/arq-si/)*
+
+_Principi d'Arquitectura 1.6.3 (Accés a internet des de xCAT - https://canigo.ctti.gencat.cat/principis/arq-si/)_
 
 #### **Altres serveis tècnics utilitzats**
 Informar si es fan servir d'altres serveis tecnics com els protocols IMAP o POP3
@@ -344,6 +354,8 @@ _Cal respectar l'estandart CTTI de nomenclatura ([Estandard CTTI per a la nomenc
 ### **Detall de les sondes** {#DetallSondes}
 Definició, si es que hi ha sondes que verifiquen el correcte funcionament del servei, de que estan controlant i que resultat s'espera per validar que el servei està funcionant correctament.
 
+---
+
 # **Perspectives Transversals** #
 
 ## **Seguretat**
@@ -380,7 +392,8 @@ _En els nous serveis es obligatori la integració amb GICAR. En cas contrari cal
 Definir quina modalitat d'integració amb GICAR s'està fent servir
 
 **Directrius**
-*Per més detall de cada una de les modalitats consultar el [Portal Canigó](https://canigo.ctti.gencat.cat/gicar/)*
+
+_Per més detall de cada una de les modalitats consultar el [Portal Canigó](https://canigo.ctti.gencat.cat/gicar/)_
 
 ## **Rendiment i escalabilitat**
 
@@ -397,7 +410,7 @@ Temps que pot estar el negoci amb el servei aturat.
 
 **Directrius**
 
-*En cas d'escollir un RTO de 2 hores, totes les instàncies de l'arquitectura hauran d'estar en Alta Disponibilitat.*
+_En cas d'escollir un RTO de 2 hores, totes les instàncies de l'arquitectura hauran d'estar en Alta Disponibilitat._
 
 ### **RPO (Punt de recuperació objectiu)** {#RPO}
 En cas d’incidència quin es desitja que sigui el punt de recuperació.
