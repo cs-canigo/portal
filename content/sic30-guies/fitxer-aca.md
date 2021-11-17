@@ -440,7 +440,7 @@ Per exemple:
 
 ```
 components:
-  - deploy:
+  - deployment:
       environments:
         - name: integration
           deployment-type: delegated
