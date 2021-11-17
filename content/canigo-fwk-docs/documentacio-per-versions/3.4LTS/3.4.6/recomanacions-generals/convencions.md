@@ -1,12 +1,12 @@
 +++
 date        = "2020-06-16"
 title       = "Convencions"
-description = "Convencions Canigó 3.4.5"
+description = "Convencions Canigó 3.4.6"
 sections    = "canigo-fwk-docs"
 weight      = 1
 +++
 
-## Convencions Canigó 3.4.5
+## Convencions Canigó 3.4.6
 
 ### Resum i context
 

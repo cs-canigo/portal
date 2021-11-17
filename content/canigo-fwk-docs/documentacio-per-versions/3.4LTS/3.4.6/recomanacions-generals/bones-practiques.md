@@ -1,12 +1,12 @@
 +++
 date        = "2020-06-16"
 title       = "Bones pràctiques"
-description = "Bones pràctiques Canigó 3.4.5"
+description = "Bones pràctiques Canigó 3.4.6"
 sections    = "canigo-fwk-docs"
 weight      = 1
 +++
 
-## Bones pràctiques Canigó 3.4.5
+## Bones pràctiques Canigó 3.4.6
 
 ### Resum i context
 

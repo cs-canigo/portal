@@ -1,7 +1,7 @@
 +++
 date        = "2020-12-12"
 title       = "Guies d'ús d'arquitectura"
-description = "Guies d'ús (HowTOs) d'arquitectura 3.4.5"
+description = "Guies d'ús (HowTOs) d'arquitectura 3.4.6"
 sections    = "canigo-fwk-docs"
 weight        = 1
 +++
