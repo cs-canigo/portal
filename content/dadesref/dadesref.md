@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-20"
+date        = "2021-11-17"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -171,13 +171,14 @@ tr.shown td.details-control {
             },
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
-	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
-	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ],
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
 	        //calcular nombre d'instàncies vigents
 	        var dadesConso=json.data; 
@@ -191,7 +192,8 @@ tr.shown td.details-control {
 			//console.log("vigents: " + vigents);
 			
 			//Mostrar text amb el nombre d'instàncies vigents
-			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			//$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			$('#numInstancies').text("Nombre total d'entitats vigents: " + vigents);
 		  },
 		  
 	  "infoCallback": function( settings, start, end, max, total, pre ) {
@@ -214,7 +216,10 @@ tr.shown td.details-control {
 			if (vigents2 == 1){ txtInstancies=" instància vigent";}	
              			
 	        //retornem el text que es visualitzarà
-			return total + txtEntitats + vigents2 + txtInstancies;
+			//return total + txtEntitats + vigents2 + txtInstancies;
+			txtEntitats=" entitats";
+			if (total == 1){ txtEntitats=" entitat";}
+			return vigents2 + txtEntitats;
 			
 		}
     } ); 
@@ -281,14 +286,15 @@ tr.shown td.details-control {
 	  "columns": [
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" },
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
-	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
+	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
@@ -344,11 +350,12 @@ tr.shown td.details-control {
             <tr>
                 <th></th>
                 <th>Nivell Validació</th>
-                <th>Grup</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
             </tr>
         </thead>
     </table>
@@ -373,11 +380,12 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
         <thead>
             <tr>
                 <th>Nivell Validació</th>
-                <th>Grup</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>

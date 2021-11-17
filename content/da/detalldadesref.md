@@ -1,5 +1,5 @@
 +++
-date        = "2021-07-21"
+date        = "2021-11-17"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -90,9 +90,9 @@ weight= 5
 
 
     // Construccio taules per identificar Metadades i la seva correspondencia a JSON
-    var metadades   = ["Identificador","Agrupació temàtica","Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Data fi vigència"   ,"Descàrrega"];
-    var tabkeys_ent = ["Id"           ,"Ambit"             ,"instancies" ,"instancies"      ,"instancies"  ,"instancies"           ,"instancies"   ,"instancies"        ,"instancies"     ,"instancies"    ,"instancies"];
-    var tabkeys_ins = [""             ,""                  ,"iestat"     ,"ipromotor"       ,"itipus"      ,"itipusactualitzacio"  ,"itipusvisual" ,"idatapublicacio"   ,"idataobsoleta"  ,"idataobsoleta" ,"ifitxer_xls"];
+    var metadades   = ["Identificador","Domini"    ,"Subdomini" ,"Estat"      ,"Òrgan propietari","Tipus"       ,"Període actualització","Visibilitat"  ,"Data publicació"   ,"Obsolescència"  ,"Data fi vigència"   ,"Descàrrega"];
+    var tabkeys_ent = ["Id"           ,"Ambit"     ,"Subambit"  ,"instancies" ,"instancies"      ,"instancies"  ,"instancies"           ,"instancies"   ,"instancies"        ,"instancies"     ,"instancies"    ,"instancies"];
+    var tabkeys_ins = [""             ,""          ,""          ,"iestat"     ,"ipromotor"       ,"itipus"      ,"itipusactualitzacio"  ,"itipusvisual" ,"idatapublicacio"   ,"idataobsoleta"  ,"idataobsoleta" ,"ifitxer_xls"];
 
 
     var tabla   =  document.getElementById("myTable");
@@ -121,7 +121,7 @@ weight= 5
 
 
     // Crea las celdas
-    for (var i = 0; i < 10; i++) 
+    for (var i = 0; i < 11; i++) 
 	{
 	  
 	  //++ 08/07/2020 (LAA) S'elimina la metadada Classificacio funcional. Per no modificar JSON, de moment 
