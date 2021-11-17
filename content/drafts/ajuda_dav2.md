@@ -65,9 +65,9 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 
 **Exemple**
 
-<img src="/images/PlantillaDA/Exemple_Context.JPG" style="width:400px;"/>
+<img src="/images/PlantillaDA/Exemple_Context.JPG" style="width:500px;"/>
 <br>
-<img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:400px;"/>
+<img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:500px;"/>
 
 **Directrius o requeriments a l'hora de realitzar el diagrama:**
 
@@ -90,7 +90,7 @@ Enumerar els diferents actors que apareixen al diagrama de context i detarllar-n
 
 **Exemple**
 
-<img src="/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG" style="width:400px;"/>
+<img src="/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG" style="width:500px;"/>
 <br>
 
 **Directrius o requeriments a l'hora de realitzar el diagrama**
@@ -227,7 +227,7 @@ Cal que cadascuna de les tecnologíes estigui aquí enumerada i justificada la s
 
 **Exemple**
 
-<img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:400px;"/>
+<img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:500px;"/>
 <br>
 
 ## Vista Desplegament: {#VistaDesplegament}
@@ -249,7 +249,7 @@ S'ha de crear una taula com la de la plantilla per cada un dels entorns que form
 | **Identificador d'instància** | Identificador únic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà després per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies són noves, quines han tingut canvis o quines són compartides amb altres serveis / solucions del departament. |
 | **Tipus de Servei** | <br>PaaS <br>IaaS <br>Hosting |
 | **Programari i versió** | Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari. En cas de sistemes/serveis nous, caldrà que les versions siguin les actuals segons el [Full de Ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#annex-a-normatiu-programari-estandarditzat:29540b9fba4cb00170570a076b9df531). |
-| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:400px;"/> |
+| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:500px;"/> |
 | **Nivell de Servei** | Continu - AD 24x7 <br>Continu 24x7 <br>Laboral - AD 12x5 <br>Laboral 12x5 <br>No productiu 12x5 |
 
 ### **Taula d'emmagatzematge** {#TaulaDisc}
@@ -327,6 +327,7 @@ Cal que cadascuna de les tecnologíes estigui enumerada i justificada la seva ut
 ## **Vista Operacional:** {#VistaOperacional}
 
 ### **Gestió de logs i monitorització {#GestióLogsiMonitorització}**
+
 Detallar informació respecte als següents punts:
 * Quina activitat ha de ser registrada per poder obtenir la informació crítica del servei.
 * Gestió d'alertes.
@@ -364,6 +365,7 @@ Definició, si es que hi ha sondes que verifiquen el correcte funcionament del s
 Indicar que s'han llegit i es tindran en compte les mesures de seguretat vigents a l'hora d'implementar l'arquitectura del servei/solució.
 
 **Mesures de seguretat vigents a l'hora d'implementar l'arquitectura del servei/solució:**
+
 * Els entorns de Producció han d'estar separats de forma física i lògica dels entorns no productius.
 * La solució ha de tenir les diferents capes de la infraestructura (Publicació, Aplicació, BBDD) segregades tant a nivell físic com lògic.
 * La publicació de qualsevol aplicació oberta a internet s'ha de realitzar des d'una DMZ.
@@ -433,8 +435,11 @@ Enumerar l'idioma o idiomes que el servei ofereix.
 ### **Definir com es resol l'ús multilingüe** {#DefinirResolUsMultilingüe}
 En cas que el punt anterior sigui informat amb mes d'un idioma, explicar com es resol aquest ús.
 
+---
+
 # **Informació específica pel projecte d'aprovisionament** #
 
+<br>
 **Directrius**
 
 _Aquest punt del DA es l'únic que s'ha d'informar des del punt de vista del projecte i no des del punt de vista d'Arquitectura. Caldrà que sigui molt precís en els nous elements de la infraestructura del servei, en aquells que canvien de talla, o de versió de programari._
