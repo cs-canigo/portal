@@ -11,6 +11,36 @@ Plana web per ajudar a l'emplenat de la plantilla del document d'arquitectura, e
 
 ---
 
+# **Taula de Continguts**
+
+1. [Introducció] (#Introducció)
+   1. [Propòsit] (#Propòsit)
+   2. [Abast] (#Abast)
+      1. [Necessitats fonamentals] (#NecessitatsFonamentals)
+      2. [Restriccions i Requisits no funcional] (#RestriccionsRequisitsNoFuncionals)
+   3. [Parts Interessades] (#PartsInteressades)
+2. [Vistes] (#Vistes)
+   1. [Vista de Context] ()
+   2. [Vista Funcional] ()
+   3. [Vista d’Informació] ()
+   4. [Vista de Concurrència] ()
+   5. [Vista de Desenvolupament] ()
+   6. [Vista de Desplegament] ()
+   7. [Vista Operacional] ()
+3. [Perspectives Transversals] (#PerspertivesTransversals)
+   1. [Seguretat] ()
+   2. [Rendiment i escalabilitat] ()
+   3. [Disponibilitat] ()
+   4. [Internacionalització] ()
+4. [Imformació Específica pel projecte d'aprovisionament] (#InformacioEspecificaProjecteAprovisionament)
+   1. [Informació relativa al context] ()
+   2. [Informació relativa al SIC] ()
+   3. [Informació relativa a xarxes i dominis DNS] ()
+   4. [Informació relativa a l’aprovisionament d’Infraestructura] ()
+   5. [Estratègia de migració] ()
+
+---
+
 # **Disposicions prèvies** 
 <br>
 Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'informar un DA:
