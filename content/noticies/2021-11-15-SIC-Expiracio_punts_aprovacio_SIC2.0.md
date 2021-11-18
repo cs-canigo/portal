@@ -1,6 +1,6 @@
 +++
 date        = "2021-11-15"
-title       = "SIC. Expiració de punts d'aprovació de les pipelines del SIC 2.0"
+title       = "SIC. Expiració punts d'aprovació pipelines SIC 2.0"
 description = "A partir del 18/11/2021 els punts d'aprovació de les pipelines del SIC 2.0 expiren en un termini màxim de 30 dies."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
