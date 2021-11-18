@@ -507,3 +507,7 @@ Definir aquelles regles de connectivitat que no estaven d'alta fins ara. Dominis
 ## **Informació relativa a l'aprovisionament d'Infraestructura** {#InformacioRelativaAprovisionamentInfraestructura}
 ### **Informació relativa a l'aprovisionament d'Infraestructura**
 Ha d'estar alineat amb la vista de Desplegament, tot indicant, mitjançant l'identificador d'instancies, quines es mantenen iguals, quines canvien en les seves característiques i quines son nous aprovisionaments, doncs abans no hi formaven part de la infraestructura.
+
+###### [Inici] (#TaulaContiguts)
+## **Estrategia de Migració** {#EstrategiaMigracio}
+### **Estrategia de Migració**
