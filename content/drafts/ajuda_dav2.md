@@ -55,7 +55,6 @@ Enumerem a continuació diferents indicacions a tenir en compte a l'hora d'infor
 
 # **Introducció** {#Introduccio}
 
-###### [Inici] (#TaulaContiguts)
 ## **Propòsit** {#Proposit}
 Explicar quin es el propòsit del Servei o Sistema d'Informació definit al DA i quines necessitats cobreix/cobrirà l'aplicació dintre del Departament u Organisme responsable.
 
@@ -94,7 +93,6 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 
 # **Vistes** 
 
-###### [Inici] (#TaulaContiguts)
 ## **Vista Context:** {#VistaContext}
 
 ### **Diagrama de Context** {#DiagramesContext}
@@ -402,7 +400,6 @@ Definició, si es que hi ha sondes que verifiquen el correcte funcionament del s
 
 # **Perspectives Transversals** # {#PerspertivesTransversals}
 
-###### [Inici] (#TaulaContiguts)
 ## **Seguretat** {#Seguretat}
 
 ### **Mesures de seguretat bàsiques de Cesicat** {#MesuresSeguretatBàsiquesCesicat}
@@ -510,3 +507,7 @@ Definir aquelles regles de connectivitat que no estaven d'alta fins ara. Dominis
 ## **Informació relativa a l'aprovisionament d'Infraestructura** {#InformacioRelativaAprovisionamentInfraestructura}
 ### **Informació relativa a l'aprovisionament d'Infraestructura**
 Ha d'estar alineat amb la vista de Desplegament, tot indicant, mitjançant l'identificador d'instancies, quines es mantenen iguals, quines canvien en les seves característiques i quines son nous aprovisionaments, doncs abans no hi formaven part de la infraestructura.
+
+###### [Inici] (#TaulaContiguts)
+## **Estrategia de Migració** {#EstrategiaMigracio}
+### **Estrategia de Migració**
