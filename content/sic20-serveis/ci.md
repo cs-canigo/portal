@@ -135,15 +135,19 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 * **Unit test**: etapa prevista per a l'execució de tests unitaris, si escau.
 * **Anàlisi estàtic de codi**: enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
 * **Generació tag de build**: generació del tag de Build al repositori de codi conforme es tracta d'una versió construïble.
-* **Desplegament a INT**: desplegament automàtic a l'entorn d'integració, si escau, incloent possibles processos d'actualització de l'estat de la base de dades.
+* **Desplegament a INT**: desplegament a l'entorn d'integració, si escau, d'acord amb la [modalitat de desplegament](#modalitats-de-desplegament) aplicable.
 * **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn d'integració per tal d'assegurar que el projecte s'ha publicat correctament, si escau.
-* **Desplegament a PRE**: lliurament d'artefactes per al desplegament manual a l'entorn de preproducció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
-* **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn de preproducció per tal d'assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir a la verificació un cop finalitzat el procés de desplegament a preproducció.
+* **Desplegament a PRE**: desplegament a l'entorn de preproducció d'acord amb la [modalitat de desplegament](#modalitats-de-desplegament) aplicable. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament.
+* **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn de preproducció per tal d'assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de continuar amb les següents etapes.
 * **Acceptancy test**: etapa prevista per a l'execució de tests automàtics d'acceptació, si escau.
 * **Exploratory test**: etapa prevista per a l'execució de tests manuals d'acceptació, si escau.
 * **Generació tag definitiu**: generació del tag definitiu al repositori de codi conforme es tracta d'una versió desplegable a producció.
-* **Desplegament a PRO**: lliurament d'artefactes per al desplegament manual a l'entorn de producció i creació de ticket Remedy en mode "Draft". En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament un cop verificades les etapes anteriors.
-* **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn de producció per tal d'assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de procedir a la verificació un cop finalitzat el procés de desplegament a producció.
+* **Desplegament a PRO**: desplegament a l'entorn de producció d'acord amb la [modalitat de desplegament](#modalitats-de-desplegament) aplicable. En aquest punt el sistema demanarà conformitat manual per tal de procedir al desplegament.
+* **Smoke test**: etapa prevista per a la verificació bàsica a l'entorn de producció per tal d'assegurar que el projecte s'ha desplegat correctament, si escau. En aquest punt el sistema demanarà conformitat manual per tal de finalitzar l'execució.
+
+<div class="message information">
+Els punts d'aprovació manual de les pipelines expiraran en un termini màxim de 30 dies</b>.
+</div>
 
 ### Versionat
 
