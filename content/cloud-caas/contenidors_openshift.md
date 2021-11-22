@@ -192,15 +192,6 @@ spec:
   test: false
   triggers:
   - type: ConfigChange
-  - imageChangeParams:
-      automatic: true
-      containerNames:
-      - XXXX-app1-server
-      from:
-        kind: ImageStreamTag
-        name: XXXX-app1-server:1.0.0
-        namespace: XXXX-app1-pre
-    type: ImageChange
 ```
 
 ### Service
