@@ -44,7 +44,7 @@ $(function(){
 
 });
 
-var client = algoliasearch('SQZ0PDH35B', '142be7e9b4f045f95ff9b0761c5cddc0')
+var client = algoliasearch('SQZ0PDH35B', 'cb437539bc966647921f1d7b75823baf')
 var index = client.initIndex('prod_ARQUITECTURA');
 autocomplete('#cerca2', {hint: false}, [
 {
