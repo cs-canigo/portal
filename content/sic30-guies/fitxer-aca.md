@@ -1,5 +1,5 @@
 +++
-date = "2021-10-22"
+date = "2021-11-25"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -509,7 +509,7 @@ components:
 
 Informació sobre el desplegament de l’aplicació `deploy` segons la següent estructura:
 
-``` 
+```
 components:
   - deployment:
       environments:
@@ -525,7 +525,7 @@ On caldrà indicar el detall de les execucions (`execution`) de cada pas (`steps
 requerides en cada cas i que dependran de les necessitats de desplegament aplicant els següents criteris:
 
 
-###### Per al **desplegament a l’Openshift i Kubernetes IBMCloud i CaaS**
+###### Per al **desplegament a l’Openshift i Kubernetes IBMCloud i CaaS**:
 
 |Variable|Valor|
 |-------|-------|
@@ -534,14 +534,14 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |DEPLOYMENT_WAIT|Temps d'espera per al desplegament de l'aplicació a l’Openshift o Kubernetes|
 
 
-###### Per al **desplegament a WebApp Azure**
+###### Per al **desplegament a WebApp Azure**:
 
 |Variable|Valor|
 |-------|-------|
 |WEBAPP_NAME|Nom de l'aplicació al WebApp Azure|
 
 
-###### Per al **desplegament a SwarmMe**
+###### Per al **desplegament a SwarmMe**:
 
 |Variable|Valor|
 |-------|-------|
@@ -553,14 +553,14 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |EXTRA_PARAMS|Paràmetres addicionals associats al desplegament. Consultar a Suport Cloud|
 
 
-###### Per al **desplegament a l’Api Manager**
+###### Per al **desplegament a l’Api Manager**:
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PLAN_MAP|Descripció del pla a utilitzar per al desplegament a l’Api Manager. Consultar a Suport Cloud|
 
 
-###### Per al **desplegament al CloudFoundry IBMCloud**
+###### Per al **desplegament al CloudFoundry IBMCloud**:
 
 |Variable|Valor|
 |-------|-------|
@@ -569,14 +569,14 @@ requerides en cada cas i que dependran de les necessitats de desplegament aplica
 |CF_ENV|Variables necessàries per a la correcta execució de l'aplicació, separades per "|". Consultar a Suport Cloud|
 
 
-###### Per al **desplegament On Premise**
+###### Per al **desplegament On Premise**:
 
 |Variable|Requerit|Descripció|Exemple|
 |--------|--------|----------|-------|
 |PLANS_PATH|Únicament per al **desplegament d'scripts de Base de dades**|Ruta del fitxer de plans d'execució d'scripts de Base de Dades|sql_scripts|
 |PLANS_NAME|Únicament per al **desplegament d'scripts de Base de dades**|Nom del fitxer de plans d'execució d'scripts de Base de Dades|plans.xml|
 
-###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift:
+###### Per exemple, per al desplegament a l'entorn de Preproducció a l’Openshift i Kubernetes:
 
 ```
 components:
