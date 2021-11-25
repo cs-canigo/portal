@@ -100,9 +100,9 @@ Identificar i descriure les parts interessades per a l'arquitectura. S'han d'inf
 **Exemple**
 
 <div align="left">
-<img src="/images/PlantillaDA/Exemple_Context.JPG" style="width:500px;" border="3"/>
+<img src="/images/PlantillaDA/Exemple_Context.JPG" style="width:500px;" />
 <br>
-<img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:500px;" border="3"/>
+<img src="/images/PlantillaDA/Exemple_Context_2.JPG" style="width:500px;" />
 </div>
 
 **Directrius o requeriments a l'hora de realitzar el diagrama:**
@@ -128,7 +128,7 @@ Enumerar els diferents actors que apareixen al diagrama de context i detarllar-n
 **Exemple**
 
 <div align="left">
-<img src="/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG" style="width:500px;" border="3"/>
+<img src="/images/PlantillaDA/Exemple_Diagrama_Funcional.JPG" style="width:500px;" />
 </div>
 <br>
 
@@ -270,7 +270,7 @@ Cal que cadascuna de les tecnologíes estigui aquí enumerada i justificada la s
 **Exemple**
 
 <div align="left">
-<img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:400px;" border="3"/>
+<img src="/images/PlantillaDA/Exemple_Diagrama_Desenvolupament.JPG" style="width:400px;" />
 </div>
 <br>
 
@@ -294,7 +294,7 @@ S'ha de crear una taula com la de la plantilla per cada un dels entorns que form
 | **Identificador d'instància** | Identificador únic que se li dona a aquella instancia dintre del document d'arquitectura, aquest identificador s'utilitzarà després per referenciar la instancia a la taula d'emmagatzematge i a l'apartat 4.4 on s'ha d'identificar quins servidors / instancies són noves, quines han tingut canvis o quines són compartides amb altres serveis / solucions del departament. |
 | **Tipus de Servei** | <br>PaaS <br>IaaS <br>Hosting |
 | **Programari i versió** | Nom del programari i versió que s'instal·la. Ha d'estar alineat amb el full de ruta del programari. En cas de sistemes/serveis nous, caldrà que les versions siguin les actuals segons el [Full de Ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#annex-a-normatiu-programari-estandarditzat:29540b9fba4cb00170570a076b9df531). |
-| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:500px;" border="3"/> |
+| **Talla i recursos adicionals** | Indicar la talla de la instancia segons la següent taula i especificar si es necessari afegir algun recurs addicional com pot ser vCPUs o Gb de ram. <br><img src="/images/PlantillaDA/Talles.JPG" style="width:500px;" /> |
 | **Nivell de Servei** | Continu - AD 24x7 <br>Continu 24x7 <br>Laboral - AD 12x5 <br>Laboral 12x5 <br>No productiu 12x5 |
 
 ### **Taula d'emmagatzematge** {#TaulaDisc}
