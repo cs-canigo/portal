@@ -1,5 +1,5 @@
 +++
-date        = "2020-11-25"
+date        = "2021-11-25"
 title       = "Plantilla Descripció d'Arquitectura"
 description = "Plantilla per la creació del document Descripció d'Arquitectura"
 sections    = "DA"
