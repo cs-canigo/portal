@@ -1,5 +1,5 @@
 +++
-date        = "2019-05-28"
+date        = "2020-11-25"
 title       = "Plantilla Descripció d'Arquitectura"
 description = "Plantilla per la creació del document Descripció d'Arquitectura"
 sections    = "DA"
@@ -15,9 +15,18 @@ El document està dividit en dues parts:
 
 - **Informació del projecte d'aprovisionament:** A l'apartat 4 s'ha d'afegir tota la informació relativa al projecte d'aprovisionament que ha requerit la nova versió del document d'arquitectura. En cas d'un servei nou, en aquest apartat només és necessari afegir dades d'aprovisionament que no estan contemplats a la resta del document.
 
+A partir de la versió 2.2 de la plantilla del DA, posem a disposició dels arquitectes diverses versions de la plantilla per adaptar el document a les diferents tipologíes d'arquitectura. La plantilla clàssica que es feia servir fins ara es la primera (Plantilla genèrica).
+
 A continuació proporcionem enllaços als documents relacionats:
 
-[Plantilla Descripció d'Arquitectura (DA)](/related/da/Plantilla_Descripció_Arquitectura_DT_DAQ_V2.1.docx)
+| TIPUS D'ARQUITECTURA | PLANTILLA |
+| --- | --- |
+| Plantilla genèrica (arquitectures híbrides) | [Plantilla DA genèrica](/related/da/Plantilla_DA_Híbrid_DT_DAQ_V2.2.docx) |
+| On Premise | [Plantilla DA On Premise](/related/da/Plantilla_DA_OnPremise_DT_DAQ_V2.2.docx) |
+| Cloud privat | [Plantilla DA Cloud Privat](/related/da/Plantilla_DA_CloudPrivat_DT_DAQ_V2.2.docx) |
+| Cloud public Gestionat | [Plantilla DA Cloud Públic Gestionat](/related/da/Plantilla_DA_CloudPublicGestionat_DT_DAQ_V2.2.docx) |
+| Cloud public No Gestionat | [Plantilla DA Cloud Públic No Gestionat](/related/da/Plantilla_DA_CloudPublicNoGestionat_DT_DAQ_V2.2.docx) |
+| Power Platform Suite | [Plantilla DA Power Platform Suite](/related/da/Plantilla_DA_PowerPlatform_DT_DAQ_V2.2.docx) |
 
 [Guia de generació de Vistes i Perspectives](/related/da/Guia_vistes_DA.pdf)
 
