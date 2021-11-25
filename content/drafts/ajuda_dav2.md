@@ -492,7 +492,7 @@ En cas que el punt anterior sigui informat amb mes d'un idioma, explicar com es 
 
 **Directrius**
 
-_Aquest punt del DA es l'únic que s'ha d'informar des del punt de vista del projecte i no des del punt de vista d'Arquitectura. Caldrà que sigui molt precís en els nous elements de la infraestructura del servei, en aquells que canvien de talla, o de versió de programari._
+_Aquest apartat del DA es l'únic que s'ha d'informar des del punt de vista del projecte i no des del punt de vista d'Arquitectura. Caldrà que sigui molt precís en els nous elements de la infraestructura del servei, en aquells que canvien de talla, o de versió de programari._
 
 ###### [Inici] (#TaulaContiguts)
 ## **Informació relativa al context** {#InformacioRelativaContext}
