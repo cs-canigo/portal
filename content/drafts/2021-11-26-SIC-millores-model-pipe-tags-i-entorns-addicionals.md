@@ -20,7 +20,7 @@ Amb l'objectiu de donar cobertura al desplegament en entorns addicionals com, pe
 Manteniment, Formació i altres; **a partir del 15/12/2021 s'aplica un nou model de tags i gestió de versions de les pipelines**
 implicant els següents canvis:
 
-1. Les pipelines passen a generar el **tag de Release (Stage `Relase Tag`) immediatament després de l'execució de testos de seguretat i testos unitaris**.
+1. Les pipelines passen a generar el **tag de Release (Stage `Release Tag`) immediatament després de l'execució de testos de seguretat i testos unitaris**.
 És a dir, cada versió del codi que hagi pogut ser construïda i hagi passat els testos de forma satisfactòria serà etiquetada, per la qual cosa,
 la incorporació de canvis al codi implicarà necessàriament un increment de versió del component.
 
@@ -29,7 +29,7 @@ pertinent i s'han passat els testos de forma satisfactòria**. Aquest tag permet
 ha estat desplegada cada una de les versions del component.
 
 3. La **pipeline DEPLOY-TAG**, que permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció,
-**únicament permetrà seleccionar tags de tipus `x.y.z-PR` (per motius de retrocompatibilitat) o `x.y.z-production`**.
+**únicament permetrà seleccionar tags de tipus `x.y.z-PR`** (per retrocompatibilitat) **i `x.y.z-production`**.
 
 <br/>
 El model d'etapes de la pipeline de desplegament queda de la següent manera:
