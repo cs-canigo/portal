@@ -1,6 +1,6 @@
 +++
 date        = "2021-11-25"
-title       = "Nova plataforma CaaS KuberMe de CPD1"
+title       = "SIC. Nova plataforma CaaS KuberMe de CPD1"
 description = "Incorporació de la nova plataforma cloud Caas Kuberme de CPD1 i adaptació del SIC 3.0 per a donar cobertura al desplegament d’aplicacions."
 #sections    = ["Notícies", "home"]
 #categories  = ["sic"]
