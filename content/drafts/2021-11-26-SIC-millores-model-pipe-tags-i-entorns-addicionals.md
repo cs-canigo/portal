@@ -4,7 +4,7 @@ title       = "SIC. Revisió model de tags i versions pipelines SIC 3.0"
 description = "Revisió del model de tags i gestió de versions de les pipelines del SIC 3.0 per a donar cobertura a entorns addicionals."
 #sections    = ["Notícies", "home"]
 #categories  = ["sic"]
-#key         = "GENER2021"
+#key         = "GENER2022"
 +++
 
 ## Introducció
