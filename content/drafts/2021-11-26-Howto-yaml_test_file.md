@@ -1,6 +1,6 @@
 +++
 date        = "2021-11-26"
-title       = "Canigó. Com configurar propietats en fitxers YAML proves unitàries"
+title       = "Canigó. Com configurar propietats en fitxers YAML per a proves unitàries"
 description = "Com configurar les propietats en fitxers YAML per a proves unitàries per a projectes Canigó"
 #section     = "howtos"
 #categories  = ["canigo"]
@@ -10,19 +10,18 @@ description = "Com configurar les propietats en fitxers YAML per a proves unità
 
 ## Introducció
 
-A partir de la versió 3.4 del Framework Canigó, es permet definir la configuració en format YAML en lloc del
-tradicional format de propietats. En cas de ser necessari sobreescriure propietats per a proves unitàries, és
+**A partir de la versió 3.4 del Framework Canigó, es permet definir la configuració en format YAML en lloc del
+tradicional format de propietats**. En cas de ser necessari sobreescriure propietats per a proves unitàries, és
 possible generar un fitxer YAML, ubicar-lo a la carpeta de recursos de prova i referenciar el seu contingut
 dins de qualsevol prova.
 
-L'objectiu d'aquest article és mostrar com configurar propietats en fitxers YAML per a proves unitàries per a
+L'objectiu d'aquest article és mostrar **com configurar propietats en fitxers YAML per a proves unitàries** per a
 projectes generats amb el Framework Canigó.
 
 ## Configuració
 
-Per a incloure un fitxer de propietats en format YAML en un projecte Canigó, els requisits són els següents:
-
-- Es necessita crear un fitxer `application.yml` a la carpeta `src/test/resources/config/props`. Per exemple:
+Per a incloure un fitxer de propietats en format YAML en un projecte Canigó, es necessita crear un fitxer `application.yml`
+a la carpeta `src/test/resources/config/props`. Per exemple:
 
 ```yaml
 application:
@@ -37,7 +36,7 @@ persistence:
   dialect: org.hibernate.dialect.HSQLDialect
 ```
 
-- Fer ús de les propietats definides. Per exemple, al fitxer `app-custom-persistence-jpa.xml` de la carpeta `src/test/resources/config/spring`:
+I fer ús de les propietats definides. Per exemple, al fitxer `app-custom-persistence-jpa.xml` de la carpeta `src/test/resources/config/spring`:
 
 ```xml
 <bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
@@ -52,7 +51,7 @@ persistence:
 ## Funcionament
 
 Per a poder fer ús de les propietats en format YAML a les proves unitàries, serà necessari utilitzar el
-`YamlPropertiesApplicationContextInitializer`, per la qual cosa serà necessari definir una classe per la càrrega
+`YamlPropertiesApplicationContextInitializer`. Per la qual cosa, serà necessari definir una classe per a la càrrega
 de la configuració de Spring pel `ContextConfiguration`. Per exemple, `TestAppConfig.java`:
 
 ```java
@@ -67,7 +66,7 @@ public class TestAppConfig {
 }
 ```
 
-En aquest exemple de test utilitzarem `TestAppConfig` per a carregar la configuració de Spring i el `YamlPropertiesApplicationContextInitializer`
+En el següent exemple de test utilitzarem `TestAppConfig` per a carregar la configuració de Spring i el `YamlPropertiesApplicationContextInitializer`
 per a carregar les propietats en els fitxers YAML. Per exemple podríem tenir el test `EquipamentServiceTest.java`:
 
 ```java
