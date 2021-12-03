@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com configurar propietats en fitxers YAML per a proves unitàries] (/howtos/2021-11-26-Howto-yaml_test_file/)
+
 - [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó] (/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)
 
 - [Com utilitzar Spring Retry per a realitzar reintents d'accions] (/howtos/2021-07-26-Howto-spring_retry/)
