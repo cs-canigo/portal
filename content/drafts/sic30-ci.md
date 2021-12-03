@@ -110,7 +110,7 @@ electrònic als responsables assignats.<br/>
 
 ### Execució de tasques
 
-Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjançant l'opció "BuildWithParameters"**.
+Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjançant l'opció `BuildWithParameters`.
 
 ### Etapes de desplegament
 
@@ -216,12 +216,6 @@ La versió dels projectes ha de ser sempre **incremental**, és a dir, qualsevol
 d'anar acompanyat d'un increment de la versió. Per tant, no es permetrà que el projecte desplegui una versió igual o inferior
 a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de
 preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
-
-### Anàlisi del codi
-
-L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides,
-s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui
-escull l'eina a utilitzar per a aquesta revisió de codi.
 
 ### Artefactes generats i gestió de possibles marxes enrere
 
