@@ -45,8 +45,7 @@ de forma més periòdica, els responsables poden tenir major confiança del treb
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. Aquesta modalitat no
-aplica als desplegaments on-premise.
+* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. En el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament. Aquesta modalitat no aplica als desplegaments on-premise.
 
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
 delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides. En aquest cas,
@@ -57,6 +56,8 @@ si es produeix un error en el desplegament, de cara a tractar-lo i reportar-lo, 
 |-1xx|Equip SIC|
 |-2xx|Proveïdor d'infraestructures (Cpd)|
 |-3xx|Lot d'aplicacions|
+
+Al igual que amb el desplegament automàtic al cloud, en el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament.
 
 * **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
 un tiquet Remedy CRQ en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
@@ -69,9 +70,7 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst per entorn seria el següent:
 
-* Entorn **INT**: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. **IMPORTANT: En cas d'aplicar la modalitat
-semi-automàtica**, donat la majoria de proveïdors disposen d'accés als servidors per a fer els desplegaments, el sistema s'encarregarà
-de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
+* Entorn **INT**: modalitat delegada, semi-automàtica o, en el cas de desplegaments al cloud, modalitat automàtica. **IMPORTANT:** En cas d’aplicar la modalitat semi-automàtica, donat la majoria de proveïdors disposen d’accés als servidors per a fer els desplegaments, el sistema s’encarregarà de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
@@ -105,7 +104,7 @@ en el número de construccions que han anat bé o malament, així com en el perc
 De cadascuna de les tasques, es pot consultar la **configuració, historial, estadístiques, resultats i situació**
 mitjançant l'enllaç habilitat. A més, es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes.
 Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a l'opció "Console Output".
-Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED, que serà serà notificat per correu
+Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED, que serà notificat per correu
 electrònic als responsables assignats.<br/>
 
 ### Execució de tasques
@@ -129,7 +128,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 
-* **Build Tag**: generació del tag de Build al repositori de codi segons es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
+* **Build Tag**: generació del tag de Build al repositori de codi. Aquest tag marca que es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
 
 * **Static Code Analysis**: etapa prevista per a l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
@@ -137,7 +136,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Unit Test**: etapa prevista per a l'execució de tests unitaris.
 
-* **Release Tag**: generació del tag de Release Candidate al repositori de codi segons es tracta d'una versió desplegable. Per exemple: 1.0.0.
+* **Release Tag**: generació del tag de Release Candidate al repositori de codi. Aquest tag marca que es tracta d'una versió desplegable. Per exemple: 1.0.0.
 
 * **Artifact Archive**: etapa prevista per a l'arxivament dels artefactes generats.
 
@@ -159,11 +158,11 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn no productiu per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
-    * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-integration.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-integration.
 
 * Per a l'**entorn de Staging** (Preproducció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
 
     * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
 
@@ -187,7 +186,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a l'**entorn de Production** (Producció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
 
     * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
@@ -201,7 +200,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Probe Test**: etapa prevista per a la verificació de sondes a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament.
 
-    * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
 
     * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
@@ -220,7 +219,7 @@ preproducció i producció. Per exemple, no se sabria quina versió d'integraci�
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per
+Els artefactes no queden emmagatzemats a l'espai de treball pel que la marxa enrere passaria per
 **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
 Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
@@ -241,6 +240,16 @@ funcional de l’aplicació indicant la següent informació:
 - Raons per l'ús de la llibreria
 
 Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques).
+   
+### Integració amb ITSM
+   
+Actualment existeixen 2 tipus de integració amb ITSM per a generar tiquet Remedy CRQ: automàtics i en mode "Draft".
+   
+La integració amb ITSM per la generació de tiquets Remedy CRQ automàtics es realitzen en les modalitats de desplegament automàtics al cloud i delegat als entorns de PRE i PRO. Amb la informació proporcionada per l'usuari, aquesta integració genera i tanca els tiquets Remedy CRQ amb l'estat del desplegament. L'objectiu de la integració és enregistrar els desplegaments a l'eina ITSM pels entorns de PRE i PRO.
+   
+La integració amb ITSM per la generació de tiquets Remedy CRQ en mode "Draft" es realitza en la modalitat de desplegament semiautomàtic. El seu objectiu és generar una plantilla de petició Remedy que el proveïdor ha d'acabar de complimentar per a realitzar el desplegament.
+   
+Amb aquestes integracions, el ITSM té tota la informació per a realtizar l'auditoria de l'activitat dels desplegaments als entorns de PRE i PRO.
 
 ## Autoservei de pipelines
 
