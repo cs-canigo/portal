@@ -243,13 +243,13 @@ Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%
    
 ### Integració amb ITSM
    
-Actualment existeixen 2 tipus de integració amb ITSM per a generar tiquet Remedy CRQ, per la generació de tiquets Remedy CRQ automàtics i per la generació de tiquet Remedy CRQ en mode "Draft"
+Actualment existeixen 2 tipus de integració amb ITSM per a generar tiquet Remedy CRQ: automàtics i en mode "Draft".
    
 La integració amb ITSM per la generació de tiquets Remedy CRQ automàtics es realitzen en les modalitats de desplegament automàtics al cloud i delegat als entorns de PRE i PRO. Amb la informació proporcionada per l'usuari, aquesta integració genera i tanca els tiquets Remedy CRQ amb l'estat del desplegament. L'objectiu de la integració és enregistrar els desplegaments a l'eina ITSM pels entorns de PRE i PRO.
    
 La integració amb ITSM per la generació de tiquets Remedy CRQ en mode "Draft" es realitza en la modalitat de desplegament semiautomàtic. El seu objectiu és generar una plantilla de petició Remedy que el proveïdor ha d'acabar de complimentar per a realitzar el desplegament.
    
-Amb aquestes integracions, el ITSM té tota la informació per a realtizar l'auditoria de l'activitat dels desplegaments als entorns de PRE i PRO
+Amb aquestes integracions, el ITSM té tota la informació per a realtizar l'auditoria de l'activitat dels desplegaments als entorns de PRE i PRO.
 
 ## Autoservei de pipelines
 
