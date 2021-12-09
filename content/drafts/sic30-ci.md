@@ -1,5 +1,5 @@
 +++
-date = "2021-11-25"
+date = "2021-12-09"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -148,7 +148,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a **entorns no productius** (Integració):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn no productiu un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
     * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn no productiu.
 
@@ -162,31 +162,31 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a l'**entorn de Staging** (Preproducció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Preproducció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
-    * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
-    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Staging.
+    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Preproducció.
 
-    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Staging.
+    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Preproducció.
 
-    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Staging.
+    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Preproducció.
 
-    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Staging per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
+    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Preproducció per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
-    * **Stress Test**: etapa prevista per a les proves de resistència a l'entorn de Staging per tal de verificar l'estabilitat i fiabilitat de l'aplicació.
+    * **Stress Test**: etapa prevista per a les proves de resistència a l'entorn de Preproducció per tal de verificar l'estabilitat i fiabilitat de l'aplicació.
 
-    * **Acceptance Test**: etapa prevista per a les proves d'acceptació a l'entorn de Staging per tal de verificar que el sistema compleix les especificacions de negoci i és acceptable per al lliurament.
+    * **Acceptance Test**: etapa prevista per a les proves d'acceptació a l'entorn de Preproducció per tal de verificar que el sistema compleix les especificacions de negoci i és acceptable per al lliurament.
 
-    * **Exploratory Test**: etapa prevista per a les proves exploratòries a l'entorn de Staging per tal de verificar els resultats obtinguts pels diferents casos de prova que es defineixin.
+    * **Exploratory Test**: etapa prevista per a les proves exploratòries a l'entorn de Preproducció per tal de verificar els resultats obtinguts pels diferents casos de prova que es defineixin.
 
     * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-preproduction.
 
-    * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
 * Per a l'**entorn de Production** (Producció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Producció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
     * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
@@ -223,38 +223,25 @@ Els artefactes no queden emmagatzemats a l'espai de treball pel que la marxa enr
 **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
 Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
-### Publicació de llibreries
-
-Totes les dependències de l’aplicació han de ser accessibles en els repositoris públics configurats al Nexus del SIC.
-Es pot validar la seva existència accedint a la següent URL: https://hudson.intranet.gencat.cat/nexus. <br/>
-
-En cas de tractar-se d'una **llibreria pròpia amb codi repositat al SIC**, caldrà construir un job d'instal·lació de dependències.
-En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**.
-
-En cas de tractar-se d'una **llibreria de tercers no disponible públicament** caldrà obrir una petició de suport
-funcional de l’aplicació indicant la següent informació:
-
-- Nom i versió de la llibreria
-- URL on obtenir la llibreria (o adjuntar-la a la pròpia petició Remedy)
-- Característiques i funcionalitat de la llibreria
-- Raons per l'ús de la llibreria
-
-Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques).
-   
 ### Integració amb ITSM
    
-Actualment existeixen 2 tipus de integració amb ITSM per a generar tiquet Remedy CRQ: automàtics i en mode "Draft".
-   
-La integració amb ITSM per la generació de tiquets Remedy CRQ automàtics es realitzen en les modalitats de desplegament automàtics al cloud i delegat als entorns de PRE i PRO. Amb la informació proporcionada per l'usuari, aquesta integració genera i tanca els tiquets Remedy CRQ amb l'estat del desplegament. L'objectiu de la integració és enregistrar els desplegaments a l'eina ITSM pels entorns de PRE i PRO.
-   
-La integració amb ITSM per la generació de tiquets Remedy CRQ en mode "Draft" es realitza en la modalitat de desplegament semiautomàtic. El seu objectiu és generar una plantilla de petició Remedy que el proveïdor ha d'acabar de complimentar per a realitzar el desplegament.
-   
-Amb aquestes integracions, el ITSM té tota la informació per a realtizar l'auditoria de l'activitat dels desplegaments als entorns de PRE i PRO.
+Es contemplen **dues modalitats d'integració amb ITSM per a generar tiquet Remedy CRQ dels desplegaments als entorns de Preproducció i Producció**:
+
+- **Automàtica**: en el cas de modalitat de desplegament automàtic al cloud o delegat, i amb la informació proporcionada per l'usuari,
+el sistema s'encarrega de generar, actualitzar i tancar automàticament els tiquets Remedy CRQ associats a cada desplegament permetent
+la traçabilitat dels desplegaments sense que es requereixi cap intervenció manual per part de l'usuari.
+
+- **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema s'encarrega de generar una plantilla de petició de canvi
+que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
+
+Amb aquestes dues modalitats d'integració, s'assoleix l'objectiu de disposar de tota la informació necessària per a realitzar
+l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Producció de les aplicacions.
 
 ## Autoservei de pipelines
 
-L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
-intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
+L'Autoservei de pipelines permet als usuaris la **generació de pipelines per a l'automatització de la construcció i el desplegament
+de les aplicacions** a partir de la configuració d'una sèrie de fitxers en format YML. D'aquesta manera, els proveïdors d'aplicacions
+disposen d'autonomia per a configurar el seu comportament.
 Per a més informació: [Autoservei de pipelines] (/sic30-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció

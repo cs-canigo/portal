@@ -68,15 +68,17 @@ Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 * Si es contempla l'execució de scripts de desplegament/migració de  BBDD, cal preparar el fitxer de `plans` i scripts a una carpeta independent.
 
-
 ## Llibreries
+
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
 
-* **Llibreries de tercers que no siguin públiques**: caldrà publicar-les manualment al Nexus, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
-* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al Nexus mitjançant pipelines dedicades.
-* **Llibreries pròpies no associades a projecte**: hauria de tractar-se d'un cas residual i justificat. Haureu de fer-les arribar al SIC per tal de publicar-les manualment al Nexus.
+* **Llibreries de tercers públiques**: el repositori de llibreries té configurats una sèrie de repositoris remots oficials per a la baixada massiva de dependències.
+* **Llibreries de tercers no públiques**: caldrà publicar-les manualment al repositori, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
+* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al repositori mitjançant pipelines dedicades.
+* **Llibreries pròpies no associades a projecte**: haurà de tractar-se d'un cas residual i justificat, fent-les arribar al SIC per tal de publicar-les manualment mitjançant els [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques) establerts.
 
-Es pot validar la existència o no de la dependència accedint a la següent URL: [Nexus](https://hudson.intranet.gencat.cat/nexus).
+Es pot validar la existència o no de la llibreria pública accedint al [Repositori de llibreries](https://hudson.intranet.gencat.cat/nexus).
+En el cas de llibreries no públiques o pròpies publicades a repositoris privats, caldrà validar la resolució de les dependències del projecte dins l'entorn SIC.
 
 ## Aplicacions APEX i PL/SQL, i migracions de BBDD
 
