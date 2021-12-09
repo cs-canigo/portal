@@ -45,8 +45,7 @@ de forma més periòdica, els responsables poden tenir major confiança del treb
 
 Es contemplen diverses modalitats de desplegament:
 
-* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. Aquesta modalitat no
-aplica als desplegaments on-premise.
+* **Automàtica al cloud**: es construeixen els artefactes i es despleguen al cloud. En el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament. Aquesta modalitat no aplica als desplegaments on-premise.
 
 * **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
 delega als CPD el desplegament automàtic dels artefactes mitjançant un sistema de llibreries compartides. En aquest cas,
@@ -57,6 +56,8 @@ si es produeix un error en el desplegament, de cara a tractar-lo i reportar-lo, 
 |-1xx|Equip SIC|
 |-2xx|Proveïdor d'infraestructures (Cpd)|
 |-3xx|Lot d'aplicacions|
+
+Al igual que amb el desplegament automàtic al cloud, en el desplegament als entorns de PRE i PRO, es requerirà conformitat prèvia on es sol·licitarà informació per a generar automàticament un tiquet Remedy CRQ amb l'evolutció del desplegament.
 
 * **Semiautomàtica**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i es genera
 un tiquet Remedy CRQ en mode "Draft" (que cal acabar d'emplenar segons l'operativa establerta per gestio de canvis) per a
