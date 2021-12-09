@@ -162,7 +162,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a l'**entorn de Staging** (Preproducció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
 
     * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
 
@@ -186,7 +186,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * Per a l'**entorn de Production** (Producció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia o es requereix informació per la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
 
     * **ITSM Register**: generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
@@ -200,7 +200,7 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Probe Test**: etapa prevista per a la verificació de sondes a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament.
 
-    * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
 
     * **ITSM Close**: tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
