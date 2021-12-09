@@ -225,17 +225,17 @@ Pel que fa als entorns de preproducció i producció, la marxa enrere es delegar
 
 ### Integració amb ITSM
    
-Es contemplen **dues modalitats d'integració amb ITSM per a generar tiquet Remedy CRQ dels desplegaments als entorns de Preproducció i Producció**:
+Es contemplen dues modalitats d'integració amb ITSM per a generar tiquet Remedy CRQ dels desplegaments als entorns de Preproducció i Producció:
 
 - **Automàtica**: en el cas de modalitat de desplegament automàtic al cloud o delegat, i amb la informació proporcionada per l'usuari,
 el sistema s'encarrega de generar, actualitzar i tancar automàticament els tiquets Remedy CRQ associats a cada desplegament permetent
 la traçabilitat dels desplegaments sense que es requereixi cap intervenció manual per part de l'usuari.
 
-- **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema s'encarrega de generar una plantilla de petició de canvi
+- Mode **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema s'encarrega de generar una plantilla de petició de canvi
 que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
 
-Amb aquestes dues modalitats d'integració, s'assoleix l'objectiu de disposar de tota la informació necessària per a realitzar
-l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Producció de les aplicacions.
+Amb aquestes dues modalitats d'integració, s'assoleix l'**objectiu de disposar de tota la informació necessària per a realitzar
+l'auditoria de l'activitat dels desplegaments als entorns de Preproducció i Producció** de les aplicacions.
 
 ## Autoservei de pipelines
 

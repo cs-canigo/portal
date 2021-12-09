@@ -72,10 +72,13 @@ Veure [Com construir el fitxer ACA](/sic-welcome-pack/fitxer-aca/).
 
 Respecte a les llibreries requerides pels projectes, en funció del seu tipus, cal tenir en compte les següents premisses:
 
-* **Llibreries de tercers públiques**: el repositori de llibreries té configurats una sèrie de repositoris remots oficials per a la baixada massiva de dependències.
-* **Llibreries de tercers no públiques**: caldrà publicar-les manualment al repositori, per lo que haureu d'indicar al SIC d'on baixar-les per tal d'enregistrar les llibreries oficials.
-* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg. Aquestes es generaran i es publicaran al repositori mitjançant pipelines dedicades.
-* **Llibreries pròpies no associades a projecte**: haurà de tractar-se d'un cas residual i justificat, fent-les arribar al SIC per tal de publicar-les manualment mitjançant els [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques) establerts.
+* **Llibreries de tercers públiques**: el repositori de llibreries té configurats una sèrie de repositoris remots oficials per a
+la baixada massiva de dependències.
+* **Llibreries de tercers no públiques**: caldrà publicar-les manualment al repositori, per lo que haureu d'indicar al SIC d'on
+baixar-les per tal d'enregistrar les llibreries oficials mitjançant els [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques) establerts.
+* **Llibreries pròpies**: el seu codi font haurà d'estar en projectes diferenciats al grup corresponent al codi de diàleg.
+Aquestes es generaran i es publicaran al repositori mitjançant pipelines dedicades. En cas que no es disposi del codi font per una raó justificada,
+caldrà sol·licitar al SIC la seva publicació manual mitjançant els [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques) establerts.
 
 Es pot validar la existència o no de la llibreria pública accedint al [Repositori de llibreries](https://hudson.intranet.gencat.cat/nexus).
 En el cas de llibreries no públiques o pròpies publicades a repositoris privats, caldrà validar la resolució de les dependències del projecte dins l'entorn SIC.
