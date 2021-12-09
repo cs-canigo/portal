@@ -22,7 +22,7 @@ d'intercanvi d'artefactes per al desplegament d'aplicacions.
 <br/>
 Per a més informació:
 
-- [Servei de Binaris](https://canigo.ctti.gencat.cat/sic-serveis/binaris/)
+- [Servei de Binaris](/sic-serveis/binaris/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).

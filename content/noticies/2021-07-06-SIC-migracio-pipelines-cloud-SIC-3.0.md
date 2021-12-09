@@ -20,7 +20,7 @@ del 2021.
 
 ## Principals canvis
 
-Recomanem consultar l’article [SIC 3.0 i procés de transició](https://canigo.ctti.gencat.cat/sic-serveis/sic20-sic30/) per a
+Recomanem consultar l’article [SIC 3.0 i procés de transició](/sic-serveis/sic20-sic30/) per a
 conèixer la solució, el procés de transició i els principals canvis en l’operativa.
 
 

@@ -26,7 +26,7 @@ aquesta necessitat i, per tant, es va aplicar d'entrada aquest mateix criteri d'
 <br/>
 Per a més informació:
 
-- [Servei d'Integració Contínua](https://canigo.ctti.gencat.cat/sic20-serveis/ci/)
+- [Servei d'Integració Contínua](/sic20-serveis/ci/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
