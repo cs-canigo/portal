@@ -206,7 +206,8 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 
 <div class="message information">
-Les pipelines generades <b>no permetran execucions concurrents i els punts d'aprovació manual expiraran en 30 dies</b>.<br/>
+Les pipelines generades <b>no permetran execucions concurrents i els punts d'aprovació manual expiraran en 30 dies</b>.
+<br></br>
 </div>
 
 ### Versionat
