@@ -1,50 +1,59 @@
 +++
 date        = "2021-12-09"
-title       = "SIC. Integració ITSM SIC 3.0"
-description = "A partir del dd/MM/yyyy s'ha posat en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
+title       = "SIC. Integració ITSM al SIC 3.0"
+description = "A partir del dd/MM/yyyy es posa en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
-#key         = "FEBRER2022"
+#key         = "GENER2022"
 +++
 
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. 
+de les aplicacions**. Per altra banda, **Remedy és l'eina corporativa per a la gestió de serveis de tecnologies de la informació (ITSM en anglès) i,
+per tant, l'eina de gestió de desplegaments de les aplicacions**.
 
-El servei i eina per la gestió de serveis de tecnologies de la informació (ITSM en anglès) **Remedy és l'eina de gestió de desplegaments utilitzada pel CTTI**.
-
-Fins el moment, el SIC només tenia la integració amb ITSM per la gestió dels desplegaments en el SIC en la modalitat semiautomàtica. En la integració, el propi SIC genera un tiquet Remedy CRQ en mode "Draft" que el proveïdor ha d'acabar de complimentar per a la realització del desplegament.
+Fins al moment, el SIC disposava exclusivament d'una integració amb ITSM per a facilitar la petició de desplegaments a Cpd en modalitat semiautomàtica. És a dir,
+generant un tiquet Remedy CRQ en mode "Draft" que el proveïdor ha d'acabar de complimentar amb la informació i tasques necessàries per a la petició de desplegament per part de Cpd.
+Per la qual cosa, els desplegaments automàtics realitzats al SIC, no disposaven de cap mena de traçabilitat a l'eina.
 
 ## Novetats
 
-A partir del dia **dd/MM/yyyy (modificar la description també)** s'ha posat en servei la integració amb ITSM pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0 per la generació de tiquets Remedy CRQ automàtics.
+**Amb l'objectiu de disposar d'una traçabilitat completa dels desplegaments als entorns de Preproducció i Producció de les aplicacions,
+a partir del dd/MM/yyyy es posa en servei la integració amb l'eina ITSM pels desplegaments en modalitat automàtica** (automàtica al cloud o delegada on-premise)
+a aquests entorns.
 
-Amb aquesta integració actualment al SIC existeixen 2 tipus de integració amb ITSM per a generar tiquet Remedy CRQ: automàtics i en mode “Draft”.
+D'aquesta forma, el SIC passarà a proporcionar dues modalitats d'integració amb ITSM pels entorns de Preproducció i Producció:
 
-La integració amb ITSM per la generació de tiquets Remedy CRQ automàtics es realitzen en les modalitats de desplegament automàtics al cloud i delegat als entorns de PRE i PRO. L’objectiu de la integració és enregistrar els desplegaments a l’eina ITSM pels entorns de PRE i PRO.
+- **(NOU) Automàtica**: en el cas de modalitat de desplegament automàtic al cloud o delegat, i amb la informació proporcionada per l'usuari,
+el sistema s'encarrega de generar, actualitzar i tancar automàticament els tiquets Remedy CRQ associats a cada desplegament permetent
+la traçabilitat dels desplegaments sense que es requereixi cap intervenció manual per part de l'usuari.
 
-La integració amb ITSM per la generació de tiquets Remedy CRQ en mode “Draft” es realitza en la modalitat de desplegament semiautomàtic. Amb la nova integració aquesta integració no pateix canvis. El seu objectiu és generar una plantilla de petició Remedy que el proveïdor ha d’acabar de complimentar per a realitzar el desplegament.
+- Mode **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema no pateix canvis i seguirà encarregant-se de generar
+una plantilla de petició de canvi que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
 
-Amb aquestes integracions, el ITSM té tota la informació per a realtizar l’auditoria de l’activitat dels desplegaments als entorns de PRE i PRO.
+### Funcionament
 
+La nova modalitat d'integració aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: 'DEPLOY', 'DEPLOY-TAG',
+'DEPLOY-ALL', 'DEPLOY-DESCRIPTORS' i 'DEPLOY-APIM'. El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
+en l'etapa "Deploy confirmation", l'usuari haurà d'indicar la informació necessària per a la generació del tiquet Remedy de canvi (CRQ):
+servei associat, categorització i informació del desplegament mostrant un formulari similar al següent:
 
-### Integració amb ITSM per la generació de tiquets Remedy CRQ automàtics
+![Input request](/related/sic/3.0/pipeline-input-request-itsm.png)
 
-Aquesta integració aplica a les pipelines de desplegament del SIC 3.0: DEPLOY, DEPLOY-TAG, DEPLOY-ALL, DEPLOY-DESCRIPTORS i DEPLOY-APIM.
+Un cop indicada la informació requerida i confirmat el desplegament, a l'etapa "ITSM Register" el sistema generarà automàticament
+el tiquet Remedy CRQ amb tota la informació necessària, assumint, com a dates de planificació del canvi, la data i hora en què
+s'inicia el desplegament a l'entorn i una previsió estàndard de finalització de 30 minuts.
 
-En el moment en que s'inicia el desplegament de l'entorn, en el stage de "Deploy confirmation", l'usuari haurà d'indicar la informació requerida per a la generació del tiquet Remedy: servei associat, categorització i informació del desplegament.
+Tan bon punt finalitzi el desplegament a l'entorn pertinent, incloent-hi possibles tasques pre-post desplegament, a l'etapa "ITSM Close"
+el sistema transicionarà el tiquet a l'estat "Implementation in Progress" indicant la data i hora d'inici real del desplegament i,
+immediatament després, es tancarà el tiquet d'acord ambl resultat obtingut:
 
-Com a dates de planificació del canvi, s’assumirà la data i hora en què s’inicia el desplegament i una previsió estàndard de finalització de 30 minuts.
+- El desplegament finalitza correctament: Estat = Closed – Successful, indicant la data i hora de finalització del desplegament.
+En aquest cas la pipeline continua amb les següents etapes.
 
-Un cop indicada la informació requerida i confirmat el desplegament, en el stage "ITSM Register" es generarà el tiquet Remedy CRQ amb tota la informació necessària.
-
-Un cop realitzat el desplegament, incloent-hi possibles tasques pre-post desplegament, en el stage "ITSM Close" s'actualitzarà el tiquet a "Implementation in Progress" i rao (status reason) "In development" indicant la data i hora d'inici real del desplegament i es tancarà el tiquet segons les següents situacions:
-
-- El desplegament finalitza correctament: Estat = Closed – Successful, indicant la data i hora de finalització del desplegament. En aquest cas la pipeline continua amb les següents etapes.
-
-- El desplegament finalitza amb errors: Estat = Closed – Unsuccessful, indicant la data i hora de finalització del desplegament. En aquest cas la pipeline es cancel·la indicant que s'han produït errors en el desplegament.
-   
+- El desplegament finalitza amb errors: Estat = Closed – Unsuccessful, indicant la data i hora de finalització del desplegament.
+En aquest cas la pipeline es cancel·la indicant que s'han produït errors en el desplegament.
 
 <br/>
 Per a més informació:

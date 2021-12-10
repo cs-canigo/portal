@@ -59,14 +59,14 @@ El funcionament previst és el següent:
 * Els **proveïdors d'aplicacions aportaran el seu propi arxiu de configuració (ACA)**.
 * Els **proveïdors d'infraestructures aportaran el seu propi arxiu de configuració (ACI)** requerit únicament quan l'aplicació es desplega en modalitat automàtica.
 * L'**equip de SIC aportarà la seva configuració interna** per a l'organització de pipelines, sistema d'accessos i altres configuracions necessàries.
-* Un cop preparats els arxius de configuració requerits, **l'equip de SIC invocarà al sistema de generació de pipelines** que s'encarregarà de recuperar la informació necessària
+* Un cop preparats els arxius de configuració requerits, **l'equip de SIC utilitzarà al sistema de generació de pipelines** que s'encarregarà de recuperar la informació necessària
 i generar les pipelines requerides per al desplegament de l'aplicació.
 
 ![Pipeline del SIC](/related/sic/3.0/autorservei_pipelines-diagrama.png)
 </br>
 
 Un cop generades les pipelines, qualsevol canvi que es realitzi en aquests arxius de configuració aplicarà a les futures execucions sense necessitat de fer cap mena
-de regeneració de pipelines. Només serà necessari dita regeneració, si es tracta d'un canvi organitzatiu o de proveïdor d'infraestructures i/o plataforma cloud.
+de regeneració de pipelines. **Només serà necessari dita regeneració, si es tracta d'un canvi organitzatiu o de proveïdor d'infraestructures i/o plataforma cloud**.
 
 ### Configuració
 
