@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-20"
+date        = "2021-12-13"
 title       = "Release Notes Canigó 3.6"
 description = "Release Notes Canigó 3.6"
 sections    = "Canigó"
