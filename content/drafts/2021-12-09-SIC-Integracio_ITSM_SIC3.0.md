@@ -39,10 +39,10 @@ servei associat, categorització i informació del desplegament. Es mostrarà un
 
 ![Input request](/related/sic/3.0/pipeline-input-request-itsm.png)
 
+<br/>
 Un cop indicada la informació requerida i confirmat el desplegament, a l'**etapa "ITSM Register"** el sistema generarà automàticament
 el tiquet Remedy CRQ amb tota la informació necessària, assumint, com a dates de planificació del canvi, la data i hora en què
 s'inicia el desplegament a l'entorn i una previsió estàndard de finalització de 30 minuts.
-
 Tan bon punt finalitzi el desplegament a l'entorn pertinent, incloent-hi possibles tasques pre-post desplegament, a l'**etapa "ITSM Close"**
 el sistema transicionarà el tiquet a l'estat "Implementation in Progress" indicant la data i hora d'inici real del desplegament i,
 a continuació, es tancarà el tiquet d'acord ambl resultat obtingut:
