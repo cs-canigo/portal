@@ -45,7 +45,7 @@ el tiquet Remedy CRQ amb tota la informació necessària, assumint, com a dates 
 s'inicia el desplegament a l'entorn i una previsió estàndard de finalització de 30 minuts.
 Tan bon punt finalitzi el desplegament a l'entorn pertinent, incloent-hi possibles tasques pre-post desplegament, a l'**etapa "ITSM Close"**
 el sistema transicionarà el tiquet a l'estat "Implementation in Progress" indicant la data i hora d'inici real del desplegament i,
-a continuació, es tancarà el tiquet d'acord ambl resultat obtingut:
+a continuació, es tancarà el tiquet d'acord amb el resultat obtingut:
 
 - Si el **desplegament finalitza correctament**: el tiquet transiciona a Estat = Closed – Successful enregistrant la data i hora de finalització
 del desplegament. En aquest cas la pipeline no s'atura i continua amb les següents etapes.
