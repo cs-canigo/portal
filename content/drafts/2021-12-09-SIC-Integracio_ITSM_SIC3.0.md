@@ -13,9 +13,9 @@ El **Servei d'Integració Contínua és un servei a disposició dels proveïdors
 de les aplicacions**. Per altra banda, **Remedy és l'eina corporativa per a la gestió de serveis de tecnologies de la informació (ITSM en anglès) i,
 per tant, l'eina de gestió de desplegaments de les aplicacions**.
 
-Fins al moment, el SIC disposava exclusivament d'una integració amb ITSM per a facilitar la petició de desplegaments a Cpd en modalitat semiautomàtica. És a dir,
+Fins al moment, el SIC disposava exclusivament d'una integració amb ITSM per a facilitar la petició de desplegaments a Cpd en modalitat semiautomàtica, és a dir,
 generant un tiquet Remedy CRQ en mode "Draft" que el proveïdor ha d'acabar de complimentar amb la informació i tasques necessàries per a la petició de desplegament per part de Cpd.
-Per la qual cosa, els desplegaments automàtics realitzats al SIC, no disposaven de cap mena de traçabilitat a l'eina.
+Per la qual cosa, els desplegaments automàtics realitzats des del SIC, no disposaven de cap mena de traçabilitat a l'eina.
 
 ## Novetats
 
@@ -32,12 +32,12 @@ la traçabilitat dels desplegaments sense que es requereixi cap intervenció man
 - Mode **Draft**: en cas de modalitat de desplegament semiautomàtica, el sistema no pateix canvis i seguirà encarregant-se de generar
 una plantilla de petició de canvi que el proveïdor ha d'acabar de complimentar per a poder sol·licitar a Cpd el corresponent desplegament.
 
-### Funcionament
+## Funcionament
 
-La nova modalitat d'integració aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: 'DEPLOY', 'DEPLOY-TAG',
-'DEPLOY-ALL', 'DEPLOY-DESCRIPTORS' i 'DEPLOY-APIM'. El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
+**La nova modalitat d'integració aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: 'DEPLOY', 'DEPLOY-TAG',
+'DEPLOY-ALL', 'DEPLOY-DESCRIPTORS' i 'DEPLOY-APIM'**. El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
 en l'etapa "Deploy confirmation", l'usuari haurà d'indicar la informació necessària per a la generació del tiquet Remedy de canvi (CRQ):
-servei associat, categorització i informació del desplegament mostrant un formulari similar al següent:
+servei associat, categorització i informació del desplegament; mostrant un formulari similar al següent:
 
 ![Input request](/related/sic/3.0/pipeline-input-request-itsm.png)
 
@@ -47,13 +47,13 @@ s'inicia el desplegament a l'entorn i una previsió estàndard de finalització 
 
 Tan bon punt finalitzi el desplegament a l'entorn pertinent, incloent-hi possibles tasques pre-post desplegament, a l'etapa "ITSM Close"
 el sistema transicionarà el tiquet a l'estat "Implementation in Progress" indicant la data i hora d'inici real del desplegament i,
-immediatament després, es tancarà el tiquet d'acord ambl resultat obtingut:
+a continuació, es tancarà el tiquet d'acord ambl resultat obtingut:
 
-- El desplegament finalitza correctament: Estat = Closed – Successful, indicant la data i hora de finalització del desplegament.
-En aquest cas la pipeline continua amb les següents etapes.
+- El desplegament finalitza correctament: el tiquet transiciona a Estat = Closed – Successful enregistrant la data i hora de finalització
+del desplegament. En aquest cas la pipeline no s'atura i continua amb les següents etapes.
 
-- El desplegament finalitza amb errors: Estat = Closed – Unsuccessful, indicant la data i hora de finalització del desplegament.
-En aquest cas la pipeline es cancel·la indicant que s'han produït errors en el desplegament.
+- El desplegament finalitza amb errors: el tiquet transiciona a Estat = Closed – Unsuccessful enregistrant la data i hora de finalització
+del desplegament. En aquest cas la pipeline es cancel·la indicant que s'han produït errors en el desplegament.
 
 <br/>
 Per a més informació:
