@@ -47,6 +47,7 @@ Informació de referència:
 mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
+<br/>
 * **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
 
     - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació:
@@ -55,6 +56,7 @@ mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoL
 ```
 
     - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
+
 ```sh
 mvn clean package docker:build \
 && docker run -it --rm \
@@ -65,11 +67,11 @@ mvn clean package docker:build \
 canigo/app
 ```
 
+<br/>
 * **Opció 3**) Modificar el patró de traces configuradas al fitxer `log4j.xml` (vàlid per a: 2.0-beta1 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
 ```sh
 ## canviar:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
-
 ## per:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
 ```
