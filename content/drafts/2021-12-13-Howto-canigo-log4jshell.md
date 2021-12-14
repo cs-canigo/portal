@@ -214,3 +214,33 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   ```
 
 <br/>
+
+## Utilització de Canigó 3.4.7 i 3.6.1
+
+S'ha alliberat Canigó 3.4.7 i 3.6.1 corresponents a les versions de Canigó 3.4 i 3.6 per a resoldre aquesta vulnerabilitat als mòduls de Canigó. Podeu consultar la noticia [Publicació nova versió 3.4.7 i 3.6.1](/noticies/2021-12-13-CAN-actualitzacio-canigo-3_4_7_3_6_1)
+
+S'ha alliberat també la versió 1.6.8 de l'archetype de Canigó per generar projectes amb Canigó 3.4.7. Podeu consultar la noticia [Actualització archetype 1.6.8](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_6_8/)
+
+A més s'ha alliberat la versió 1.7.1 de l'archetype de Canigó i la versió 1.8.1 del plugin del eclipse per generar projectes amb Canigó 3.6.1. Podeu consultar la noticia [Actualització archetype 1.7.1 i plugin Eclipse 1.8.1](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_7_1_plugin_eclipse_1_8_1/)
+
+Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó, per a això és necessari revisar les dependències de l'aplicació per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1, per això podeu consultar les matrius de compatibiltiat de les versions:
+
+- [Matrius de Compatibilitats 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34/)
+
+- [Matrius de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
+
+Una vegada comprovats que s'utilitzen les versions dels mòduls correstes, seguir el punt 1-1, descrit anteriorment, modificant el `pom.xml` de l'aplicació per assegurar que s'utilitza la versió 2.15.0 del log4j
+
+ ```xml
+  <properties>
+    <log4j2.version>2.15.0</log4j2.version>
+  </properties>
+  ```
+Una vegada realitzades les modificacions comprovar que només s'utilitza la versió 2.15.0 del log4j a l'aplicació executant:
+
+ ```
+ mvn dependency:tree
+ ```
+
+<br>
+Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un correu electrònic a la bústia del CS Canigó.
