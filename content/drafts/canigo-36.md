@@ -72,7 +72,7 @@ No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals de
 |---------------------------------      |---------------------------------- |
 |              Entorn de desenvolupament   |                3.0.5              |
 |              Plugin eclipse        |                1.8.0              |
-|              Archetype         |                1.7.0              |
+|              Archetype         |                1.7.1              |
 |              AppBridge         |                1.2.0              |
 
 ### Entorn de desenvolupament
