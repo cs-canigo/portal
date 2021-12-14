@@ -21,8 +21,8 @@ permetent filtrar els missatges en funció de la seva rellevància en cas necess
 
 ## Vulnerabilitat log4j
 
-L'Apache Software Foundation va publicar el 10 de desembre de 2021 el descobriment d'una nova vulnerabilitat crítica zero-day
-explotada activament que afecta la biblioteca de registres basada en Java Log4J 2, descoberta per l'enginyer de seguretat p0rz9,
+**L'Apache Software Foundation va publicar el 10 de desembre de 2021 el descobriment d'una nova vulnerabilitat crítica zero-day
+explotada activament que afecta la biblioteca de registres basada en Java Log4J 2**, descoberta per l'enginyer de seguretat p0rz9,
 indicant les mesures de contenció que cal aplicar. La vulnerabilitat, anomenada Log4Shell o LogJam
 [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228), és considerada molt crítica permetent l'execució
 de codi remot no autenticat de forma senzilla en qualsevol aplicació que utilitzi des de la versió Log4j 2.0-beta9 fins a la versió 2.14.
