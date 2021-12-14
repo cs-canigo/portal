@@ -1,13 +1,13 @@
 +++
 date        = "2021-12-07"
 title       = "SIC. Actualització de versió Jenkins del SIC 3.0"
-description = "El dia 14/12/2021 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 3.0"
+description = "El dia 16/12/2021 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 3.0"
 #categories  = ["SIC"]
 #sections    = ["Notícies", "home"]
 #key         = "GENER2021"
 +++
 
-**El dia 14/12/2021 s'ha dut a terme l’actualització del Servei d’Integració Continua SIC 3.0 a la versió 2.303.3 de Jenkins**.
+**El dia 16/12/2021 s'ha dut a terme l’actualització del Servei d’Integració Continua SIC 3.0 a la versió 2.303.3 de Jenkins**.
 <br>
 <br>
 <br>
