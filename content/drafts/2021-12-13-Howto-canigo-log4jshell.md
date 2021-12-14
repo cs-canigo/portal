@@ -159,7 +159,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
  1- Sustituir la version de la dependencia de la librería `log4j` (tiempo de compilación). Por ejemplo:
 
-  1-1 modificando el: `pom.xml` (Opción recomendada) (requiere recompilar y desplegar)
+  1-1 modificando el: `pom.xml` (Opción recomendada) (requiere recompilar y redesplegar)
 
   ```xml
   <properties>
@@ -204,7 +204,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
 
   ## por:
-  <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
+  <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
   ```
 
  4- Eliminar la clase `maliciosa` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
@@ -212,3 +212,5 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   ```sh
   zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
   ```
+
+<br/>
