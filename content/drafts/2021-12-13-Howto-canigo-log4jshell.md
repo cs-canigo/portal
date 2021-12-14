@@ -141,11 +141,11 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
 
   > Con la vulnerabilidad
 
-  [LDAP exploit](/images/howtos/log4jshell/log4jshell_trace1.gif)
+  ![LDAP exploit](/images/howtos/log4jshell/log4jshell_trace1.gif)
 
   > Sin la vulnerabilidad
 
-  [LDAP no exploit](/images/howtos/log4jshell/log4jshell_trace2.gif)
+  ![LDAP no exploit](/images/howtos/log4jshell/log4jshell_trace2.gif)
 
   > Se puede apreciar en el log de `CanigoLog4jShellTest` la traza generada por el código inyectado. Se podria obtener por ejemplo, todas las variables de entorno, o los archivos de configuración y enviarlos por correo
 
