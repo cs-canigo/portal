@@ -22,6 +22,8 @@ La versió 1.6.8 de l'arquetipus de Canigó incorpora les següents novetats:
 
 - Creació de projectes amb Canigó 3.4.7 per a resoldre la vulnerabilitat de log4j
 
+Per a més informació de com crear projectes amb Canigó 3.4 amb l'archetype podeu consultar el howto [Com crear manualment projectes amb Canigó 3.4](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)
+
 
 ## Documentació addicional
 
