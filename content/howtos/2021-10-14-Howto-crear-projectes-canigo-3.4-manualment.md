@@ -25,14 +25,16 @@ Podeu consultar les versions amb suport al [Roadmap de Canigó](/canigo/roadmap/
 
 El *plugin* de Canigó de l’Eclipse utilitza l'*archetype* Maven per a generar els projectes amb el Framework
 Canigó. Per la qual cosa, per a crear projectes amb Canigó 3.4 caldrà utilitzar l'*archetype* Maven del
-plugin directament, concretament la versió `1.6.7`, mitjançant una instrucció Maven com es mostra a continuació:
+plugin directament, mitjançant una instrucció Maven com es mostra a continuació:
 
 ```
 mvn archetype:generate -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest
--DarchetypeVersion=1.6.7 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
+-DarchetypeVersion=1.6.8 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
 ```
 
 On caldrà indicar:
+
+- -DarchetypeVersion: versió de l'archetype per Canigó 3.4, consultar la versió als entregables de [Canigó 3.4](/canigo/download/canigo-34/)
 
 - -DartifactId: nom del projecte
 
