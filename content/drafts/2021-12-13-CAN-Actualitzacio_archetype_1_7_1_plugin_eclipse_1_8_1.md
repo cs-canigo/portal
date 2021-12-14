@@ -14,12 +14,12 @@ executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigu
 funcionalitats.
 
 El **_plugin_** és un connector desenvolupat específicament per a l'IDE Eclipse que permet afegir-hi menús contextuals
-per a la creació de projectes Canigó fent ús de l'arquetipus de Maven, a més a més d'afegir mòduls a un projecte creat i
-amb una preconfiguració ja donada. Així, usant l'Eclipse, podem crear un projecte i afegir-l'hi els mòduls necessaris
+per a la creació de projectes Canigó fent ús de l'arquetipus de Maven, a més d'afegir mòduls a un projecte creat i
+amb una preconfiguració donada. Així, usant l'Eclipse, podem crear un projecte i afegir-l'hi els mòduls necessaris
 obtenint un projecte preconfigurat per al marc de treball Canigó i estalviant temps als desenvolupadors.
 
-S'ha actualitzar l'arquetipus i el plugin de Canigó per a **generar projectes amb Canigó 3.6.1** per a resoldre la vulnerabilitat de log4j. Podeu consultar l'abast complet de la
-nova versió del marc de treball a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
+S'ha actualitzat l'arquetipus i el plugin de Canigó per a **generar projectes amb Canigó 3.6.1** per a resoldre la vulnerabilitat de log4j.
+Podeu consultar l'abast complet de la nova versió a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
 
 ## Novetats _archetype_
 
@@ -31,9 +31,9 @@ La versió 1.7.1 de l'arquetipus de Canigó incorpora les següents novetats:
 
 La nova versió 1.8.1 del _plugin_ fa servir la versió 1.7.1 de l'arquetipus per a generar projectes amb Canigó 3.6.1.
 Per a instal·lar o actualitzar aquesta versió del _plugin_ serà necessari seguir els passos descrits a la secció
-"Instal·lació" de la [documentació del _plugin_ Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
+"Instal·lació" de la documentació del [_plugin_ Canigó per a Eclipse](/canigo-download-related/plugin-canigo/).
 
-Cal destacar que per utilitzar el plugin a partir de la versió 1.8.0, és necessari iniciar l'eclipse amb la màquina virtual de Java versió 11
+Cal destacar que per a utilitzar el plugin a partir de la versió 1.8.0, és necessari iniciar l'eclipse amb la màquina virtual de Java versió 11.
 
 ## Documentació addicional
 

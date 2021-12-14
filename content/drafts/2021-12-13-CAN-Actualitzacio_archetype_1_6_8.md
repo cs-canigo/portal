@@ -13,8 +13,8 @@ L'**arquetipus** és una eina Maven que facilita la creació de projectes seguin
 executant un _goal_ de maven obtenim un projecte Canigó amb una base preconfigurada preparada per a incorporar-li noves
 funcionalitats.
 
-S'ha actualitzar l'arquetipus de Canigó per a **generar projectes amb Canigó 3.4.7** per a resoldre la vulnerabilitat de log4j. Podeu consultar l'abast complet de la
-nova versió del marc de treball a les [Release Notes 3.4](/canigo-download-related/release-notes-canigo-34).
+S'ha actualitzat l'arquetipus de Canigó per a **generar projectes amb Canigó 3.4.7** per a resoldre la vulnerabilitat de log4j.
+Podeu consultar l'abast complet de la nova versió a les [Release Notes 3.4](/canigo-download-related/release-notes-canigo-34).
 
 ## Novetats _archetype_
 
