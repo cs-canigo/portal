@@ -36,7 +36,6 @@ Informació de referència:
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, tornar a compilar i desplegar l'aplicació:
-
 ```xml
 <properties>
 <log4j2.version>2.15.0</log4j2.version>
@@ -44,22 +43,18 @@ Informació de referència:
 ```
 
     - 1.2) Injectar la variable durant la construcció de l'aplicació, tornar a compilar i desplegar l'aplicació:
-
 ```sh
 mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
-<br/>
 * **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
 
     - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació:
-
 ```sh
 mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
 ```
 
     - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
-
 ```sh
 mvn clean package docker:build \
 && docker run -it --rm \
@@ -70,7 +65,6 @@ mvn clean package docker:build \
 canigo/app
 ```
 
-<br/>
 * **Opció 3**) Modificar el patró de traces configuradas al fitxer `log4j.xml` (vàlid per a: 2.0-beta1 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
 
 ```sh
