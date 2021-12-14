@@ -36,6 +36,7 @@ Informació de referència:
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, tornar a compilar i desplegar l'aplicació:
+
 ```xml
 <properties>
 <log4j2.version>2.15.0</log4j2.version>
@@ -43,6 +44,7 @@ Informació de referència:
 ```
 
     - 1.2) Injectar la variable durant la construcció de l'aplicació, tornar a compilar i desplegar l'aplicació:
+
 ```sh
 mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
@@ -51,6 +53,7 @@ mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShell
 * **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
 
     - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació:
+
 ```sh
 mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
 ```
@@ -69,6 +72,7 @@ canigo/app
 
 <br/>
 * **Opció 3**) Modificar el patró de traces configuradas al fitxer `log4j.xml` (vàlid per a: 2.0-beta1 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
+
 ```sh
 ## canviar:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
@@ -98,6 +102,7 @@ per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les m
 
 Un cop es comprovi que s'utilitzen les últimes versions dels mòduls, caldrà modificar el fitxer `pom.xml` per a assegurar l'ús
 de la versió 2.15.0 de log4j:
+
 ```xml
 <properties>
 <log4j2.version>2.15.0</log4j2.version>
@@ -105,6 +110,7 @@ de la versió 2.15.0 de log4j:
 ```
 
 Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.15.0 del log4j a l'aplicació mitjançant:
+
 ```
 mvn dependency:tree
 ```
