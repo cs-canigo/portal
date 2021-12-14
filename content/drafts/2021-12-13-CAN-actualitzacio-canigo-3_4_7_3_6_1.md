@@ -9,8 +9,7 @@ description = "S'ha publicat una nova versió de Canigó 3.4.7 i 3.6.1 utilitzan
 
 S'ha alliberat la **versió 3.4.7 i 3.6.1 del Framework Canigó**, corresponents a les versions Canigó 3.4 i Canigó 3.6, per a utilitzar la llibreria log4j versió 2.15 per a corregir la vulnerabilitat trobada en aquesta llibreria.
 
-
-
+Podeu consultar l'abast complet de les noves versions a les [Release Notes 3.4](/canigo-download-related/release-notes-canigo-34) i [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
 
 ## Introducció log4j
 
