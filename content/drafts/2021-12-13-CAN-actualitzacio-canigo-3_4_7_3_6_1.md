@@ -43,7 +43,7 @@ Podeu consultar les matrius de compatibilitat de cada mòdul a:
 
 - [Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
-Des de CS Canigó es recomana de forma urgent actualitzar-se a aquestes versions de Canigó i seguir les indicacions del howto []() per a resoldre aquesta vulnerabilitat.
+Des de CS Canigó es recomana de forma urgent actualitzar-se a aquestes versions de Canigó i seguir les indicacions del howto [Vulnerabilidad: CVE-2021-44228 (log4jshell)](/drafts/2021-12-13-Howto-canigo-log4jshell/) per a resoldre aquesta vulnerabilitat.
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant-nos un correu electrònic a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
