@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-25"
+date        = "2021-12-13"
 title       = "Canigó 3.6"
 description = "Descàrrega de versió Canigó 3.6 i entorn de treball"
 sections    = "Canigó"
@@ -13,29 +13,29 @@ weight     = 1
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
 |---------------------------------      |---------------------------------- |
-|              3.6 LTS                 |                3.6.0                 |
+|              3.6 LTS                 |                3.6.1                 |
 
 
 
-|          Dependències externes       |      Canigó 3.6.0     |
-|---------------------------------     |---------------------- |
-| springframework                      |  5.3.9                |
-| spring.security                      |  5.5.2                |
-| spring.data                          |  2.5.4                |
-| springframework.boot                 |  2.5.4                |
-| log4j                                |  2.14.1               |
-| slf4j                                |  1.7.32               |
-| junit                                |  4.13.2               |
-| hamcrest                             |  2.2                  |
-| mockito-core                         |  3.9.0                |
-| jsonassert                           |  1.5.0                |
-| jackson                              |  2.12.4               |
-| springfox-swagger2                   |  2.9.2                |
-| querydsl                             |  4.4.0                |
-| hibernate                            |  5.4.32.Final         |
-| mongo-java-driver                    |  3.12.10              |
-| mongodb-driver-sync                  |  4.2.3                |
-| mongodb-driver-reactivestreams       |  4.2.3                |
+|          Dependències externes       |      Canigó 3.6.0     |      Canigó 3.6.1     |
+|---------------------------------     |---------------------- |---------------------- |
+| springframework                      |  5.3.9                |  5.3.9                |
+| spring.security                      |  5.5.2                |  5.5.2                |
+| spring.data                          |  2.5.4                |  2.5.4                |
+| springframework.boot                 |  2.5.4                |  2.5.4                |
+| log4j                                |  2.14.1               |  2.15.0               |
+| slf4j                                |  1.7.32               |  1.7.32               |
+| junit                                |  4.13.2               |  4.13.2               |
+| hamcrest                             |  2.2                  |  2.2                  |
+| mockito-core                         |  3.9.0                |  3.9.0                |
+| jsonassert                           |  1.5.0                |  1.5.0                |
+| jackson                              |  2.12.4               |  2.12.4               |
+| springfox-swagger2                   |  2.9.2                |  2.9.2                |
+| querydsl                             |  4.4.0                |  4.4.0                |
+| hibernate                            |  5.4.32.Final         |  5.4.32.Final         |
+| mongo-java-driver                    |  3.12.10              |  3.12.10              |
+| mongodb-driver-sync                  |  4.2.3                |  4.2.3                |
+| mongodb-driver-reactivestreams       |  4.2.3                |  4.2.3                |
 
 
 Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.4]
@@ -44,7 +44,7 @@ Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5
 <br/>
 La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
 
-S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els següents servidors embeguts**:
+S'ha certificat la **compatibilitat de Canigó 3.6.1 amb els següents servidors embeguts**:
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
@@ -54,7 +54,7 @@ S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els següents servidors
 |  Netty (webflux)                         |         4.1.67.Final               |
 |  Reactor Netty (reactor webflux)  |         1.0.10              |
 
-S'ha certificat la **compatibilitat de Canigó 3.6.0 amb els servidors suportats al**
+S'ha certificat la **compatibilitat de Canigó 3.6.1 amb els servidors suportats al**
 [**Full de ruta del CTTI**](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
@@ -72,7 +72,7 @@ No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals de
 |---------------------------------      |---------------------------------- |
 |              Entorn de desenvolupament   |                3.0.5              |
 |              Plugin eclipse        |                1.8.0              |
-|              Archetype         |                1.7.0              |
+|              Archetype         |                1.7.1              |
 |              AppBridge         |                1.2.0              |
 
 ### Entorn de desenvolupament
