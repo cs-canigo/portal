@@ -10,6 +10,8 @@ description = "S'ha publicat una nova versió de Canigó 3.4.7 i 3.6.1 utilitzan
 S'ha alliberat la **versió 3.4.7 i 3.6.1 del Framework Canigó**, corresponents a les versions Canigó 3.4 i Canigó 3.6, per a utilitzar la llibreria log4j versió 2.15 per a corregir la vulnerabilitat trobada en aquesta llibreria.
 
 
+
+
 ## Introducció log4j
 
 Log4j és una biblioteca de codi obert desenvolupada en Java per l'Apache Software Foundation que permet als desenvolupadors de programari escriure missatges de registre, amb l’objectiu de deixar
@@ -33,15 +35,15 @@ S'han publicat tots els mòduls de Canigó 3.4 i Canigó 3.6 per a que facin ús
 
 Podeu consultar la informació de les versions a:
 
-- [Canigó 3.4](/canigo/download/canigo-34/)
+- [Binaris Canigó 3.4](/canigo/download/canigo-34/)
 
-- [Canigó 3.6](/canigo/download/canigo-36/)
+- [Binaris Canigó 3.6](/canigo/download/canigo-36/)
 
 Podeu consultar les matrius de compatibilitat de cada mòdul a:
 
-- [Canigó 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34/)
+- [Matriu compatibilitat Canigó 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34/)
 
-- [Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
+- [Matriu compatibilitat Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
 Des de CS Canigó es recomana de forma urgent actualitzar-se a aquestes versions de Canigó i seguir les indicacions del howto [Vulnerabilidad: CVE-2021-44228 (log4jshell)](/drafts/2021-12-13-Howto-canigo-log4jshell/) per a resoldre aquesta vulnerabilitat.
 
