@@ -36,19 +36,19 @@ Informació de referència:
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
-    > Sí el JDK és major o igual a `1.8`
+    > * Sí el JDK és major o igual a `1.8`
 ```xml
 <properties>
 <log4j2.version>2.16.0</log4j2.version>
 </properties>
 ```
-    > Sí el JDK és igual a `1.7`
+    > * Sí el JDK és igual a `1.7`
 ```xml
 <properties>
 <log4j2.version>2.12.2</log4j2.version>
 </properties> 
 ```
-    > De lo contrario, la opción de eliminar la clase maliciosa es válida
+    > * En cas contrari, l'opció d'eliminar la classe maliciosa és vàlida
 ```sh
 zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
 ```
