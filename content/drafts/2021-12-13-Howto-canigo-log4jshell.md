@@ -10,7 +10,7 @@ description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shel
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
 servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
 
-Aquesta vulnerabilitat només afecta a les versions 2.x de Log4J i està corregida en la versió 2.16
+Aquesta vulnerabilitat només afecta a les versions `2.x` de Log4J i està corregida en la versió `2.16.0`
 
 Per a explotar la vulnerabilitat, es poden seguir els següents passos:
 
@@ -36,19 +36,19 @@ Informació de referència:
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
-    > * Sí el JDK és major o igual a `1.8`
+      Sí el JDK és major o igual a `1.8`
 ```xml
 <properties>
 <log4j2.version>2.16.0</log4j2.version>
 </properties>
 ```
-    > * Sí el JDK és igual a `1.7`
+      Sí el JDK és igual a `1.7`
 ```xml
 <properties>
 <log4j2.version>2.12.2</log4j2.version>
 </properties> 
 ```
-    > * En cas contrari, l'opció d'eliminar la classe maliciosa és vàlida
+      En cas contrari, l'opció d'eliminar la classe maliciosa és vàlida
 ```sh
 zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
 ```
@@ -83,7 +83,7 @@ canigo/app
 ## per:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
 ```
-> S'ha de canviar el patró del missatge (m, msg, message) per a no permetre lookup: %m{nolookups}, %msg{nolookups} or %message{nolookups}
+   S'ha de canviar el patró del missatge (m, msg, message) per a no permetre lookup: %m{nolookups}, %msg{nolookups} or %message{nolookups}
 
 
 ## Noves versions de Canigó 3.4 i 3.6
