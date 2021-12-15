@@ -46,7 +46,7 @@ Informació de referència:
 ```xml
 <properties>
 <log4j2.version>2.12.2</log4j2.version>
-</properties>
+</properties> 
 ```
     > De lo contrario, la opción de eliminar la clase maliciosa es válida
 ```sh
