@@ -65,7 +65,7 @@ mvn clean package docker:build \
 canigo/app
 ```
 
-* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.7 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
+* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.7 >= log4j <= 2.14.1) i tornar a compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093. 
 ```sh
 ## canviar:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
