@@ -35,7 +35,7 @@ Informació de referència:
 
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
-    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
+    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació: \
       Sí el JDK és major o igual a `1.8`
 ```xml
 <properties>
@@ -83,7 +83,7 @@ canigo/app
 ## per:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
 ```
-   S'ha de canviar el patró del missatge (m, msg, message) per a no permetre lookup: %m{nolookups}, %msg{nolookups} or %message{nolookups}
+   S'ha de canviar el patró del missatge (`m`, `msg`, `message`) per a no permetre lookup: `%m{nolookups}`, `%msg{nolookups}`, `%message{nolookups}`
 
 
 ## Noves versions de Canigó 3.4 i 3.6
