@@ -35,6 +35,7 @@ Informació de referència:
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
+
     > * Sí el JDK és major o igual a `1.8`:
 ```xml
 <properties>
@@ -48,6 +49,7 @@ Informació de referència:
 <log4j2.version>2.12.2</log4j2.version>
 </properties>
 ```
+
     - 1.2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
 ```sh
 mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
