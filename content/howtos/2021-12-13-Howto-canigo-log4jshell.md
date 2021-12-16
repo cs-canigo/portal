@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-13"
+date        = "2021-12-15"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
 description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shell)"
 #section     = "howtos"
@@ -9,6 +9,7 @@ description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shel
 
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
 servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
+Aquesta vulnerabilitat **només afecta les versions `2.x` de Log4J i es troba corregida en la versió `2.16.0`**.
 
 Per a explotar la vulnerabilitat, es poden seguir els següents passos:
 
@@ -25,26 +26,33 @@ que s'injecta en el context de l'aplicació vulnerable.
 <br/>
 Informació de referència:
 
-* <https://github.com/YfryTchsGD/Log4jAttackSurface> \
-* <https://github.com/christophetd/log4shell-vulnerable-app> \
-* <https://www.tarlogic.com/blog/log4shell-vulnerability-cve-2021-44228/> \
+* <https://logging.apache.org/log4j/2.x/security.html#CVE-2021-44228/> \
+* <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
-* <https://www.randori.com/blog/cve-2021-44228/>
 
 ## Com solucionar la vulnerabilitat a les aplicacions
 
 * **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
     - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
+
+    > * Sí el JDK és major o igual a `1.8`:
 ```xml
 <properties>
-<log4j2.version>2.15.0</log4j2.version>
+<log4j2.version>2.16.0</log4j2.version>
+</properties>
+```
+
+    > * Sí el JDK és `1.7`:
+```xml
+<properties>
+<log4j2.version>2.12.2</log4j2.version>
 </properties>
 ```
 
     - 1.2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
 ```sh
-mvn -Dlog4j2.version=2.15.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
+mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
 * **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
@@ -72,6 +80,12 @@ canigo/app
 ## per:
 <PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
 ```
+   Havent de canviar el patró del missatge (m, msg, message) per a no permetre lookup: %m{nolookups}, %msg{nolookups} or %message{nolookups}
+
+* **Opció 4**) Només en cas que cap de les accions anteriors s'hagi pogut dur a terme, optar per eliminar la classe maliciosa:
+```sh
+zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
+```
 
 ## Noves versions de Canigó 3.4 i 3.6
 
@@ -94,15 +108,15 @@ per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les m
 - [Matrius de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
 Un cop es comprovi que s'utilitzen les últimes versions dels mòduls, caldrà modificar el fitxer `pom.xml` per a assegurar l'ús
-de la versió 2.15.0 de log4j:
+de la versió 2.16.0 de log4j:
 
 ```xml
 <properties>
-<log4j2.version>2.15.0</log4j2.version>
+<log4j2.version>2.16.0</log4j2.version>
 </properties>
 ```
 
-Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.15.0 del log4j a l'aplicació mitjançant:
+Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.16.0 del log4j a l'aplicació mitjançant:
 
 ```
 mvn dependency:tree
