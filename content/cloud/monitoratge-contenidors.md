@@ -1,5 +1,5 @@
 +++
-date        = "2021-09-10"
+date        = "2021-12-16"
 title       = "Monitoratge i traces als contenidors"
 description = "Informació per accedir  al monitoratge i traces a les diferents plataformes de contenidors."
 sections    = "Container Cloud"
@@ -203,7 +203,7 @@ Periòdicament, el token d'accés caduca i caldrà repetir el procés de configu
 Amb la cli de kubernetes  es poden veure els logs dels pods en temps real.
 
 
-## IBM CaaS Kubernetes
+## IBM CaaS Kubernetes i KuberMe
 
 En desplegar una aplicació a Kubernetes, es proporciona a lot d'aplicacions un token amb permisos de **lectura** del seu projecte a la plataforma Kubernetes.
 
@@ -299,9 +299,25 @@ a linux seria alguna cosa similar a
 
 ### Logs
 
-Amb la cli de kubernetes  es poden veure els logs dels pods en temps real. Si necessiteu accedir a logs anteriors o de pods que ja no existeixi, està disponible un Kibana.
+Amb la cli de kubernetes  es poden veure els logs dels pods en temps real. Si necessiteu accedir a logs anteriors o de pods que ja no existeixi, està disponible un Kibana amb tots els logs de l'aplicació amb una retenció de 30 dies.
 
-L'equip de Suport Cloud us proporcionarà l'usuari i contrasenya per poder accedir als logs.
+### Urls d'accés als diferent entorns
+
+Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud
+
+#### IBM CaaS Kubernetes
+
+- **Kibana**: https://c-kibana.ams03-gct-001.cpd2pre.intranet.gencat.cat
+
+#### KuberMe PRE
+
+- **Consola web**: https://manager.kuberme.cpd1pre.intranet.gencat.cat
+- **Kibana**: https://logger.kuberme.cpd1pre.intranet.gencat.cat
+
+#### KuberMe PRO
+
+- **Consola web**: https://manager.kuberme.cpd1.intranet.gencat.cat
+- **Kibana**: https://logger.kuberme.cpd1.intranet.gencat.cat
 
 ## SwarmMe
 

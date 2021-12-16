@@ -1,5 +1,5 @@
 +++
-date          = "2020-06-12"
+date          = "2021-12-16"
 title         = "Contenidors Kubernetes"
 description   = "Consideracions i exemples respecte els contenidors a Kubernetes"
 sections      = "Container Cloud"
@@ -17,6 +17,7 @@ A la Generalitat de Catalunya, actualment, Kubernetes està disponible a les seg
 
 * IBMCloud al cloud públic. **Versió Kubernetes 1.19.8. Versió containerd 1.4.3**
 * IBM CaaS al cloud privat. **Versió Kubernetes 1.18.10. Versió docker 19.3.13**
+* CPD1 KuberMe al entorn consolidables. **Versió Kubernetes 1.18.4. Versió docker 19.3.13**
 
 ## Imatges
 

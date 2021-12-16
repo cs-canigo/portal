@@ -1,5 +1,5 @@
 +++
-date        = "2021-09-09"
+date        = "2021-12-16"
 title       = "Plataformes Cloud"
 description = "Plataformes cloud disponibles a la Generalitat de catalunya"
 sections    = "Cloud"
@@ -47,7 +47,7 @@ Disponible a CPD1 en entorns de consolidables.
 - Contenidors docker i orquestració amb Kubernetes
 - Versió: **Kubernetes 1.18.10. Docker 18.9**
 
-Disponible a CPD2 en entorns de consolidables.
+Disponible a CPD1, CPD2 en entorns de consolidables.
 <br/><br/>
 
 ### DBaaS
