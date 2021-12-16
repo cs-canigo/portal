@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-15"
+date        = "2021-12-16"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
 description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shell)"
 #section     = "howtos"
@@ -26,15 +26,25 @@ que s'injecta en el context de l'aplicació vulnerable.
 <br/>
 Informació de referència:
 
-* <https://logging.apache.org/log4j/2.x/security.html#CVE-2021-44228/> \
+* <https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046/> \
 * <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
 
 ## Com solucionar la vulnerabilitat a les aplicacions
 
-* **Opció 1**) Substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
+---
+**Actualització a 16/12/2021**:
+Apache ha publicat que les mesures mitigadores han quedat desacreditades donat s'ha descobert
+que aquestes no limiten l'exposició mentre deixen oberts alguns vectors d'atac. La raó per la qual aquestes mesures són insuficients
+és que, a més del vector d'atac Thread Context, encara hi ha rutes de codi a Log4j on es poden produir cerques de missatges.
+Es conclou que la mesura més segura és actualitzar Log4j a una versió segura.
 
-    - 1.1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
+Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046
+---
+
+Cal substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
+
+* Opció 1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 
     > * Sí el JDK és major o igual a `1.8`:
 ```xml
@@ -50,41 +60,9 @@ Informació de referència:
 </properties>
 ```
 
-    - 1.2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
+* Opció 2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
 ```sh
 mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
-```
-
-* **Opció 2**) Configurar la variable `log4j2.formatMsgNoLookups` en temps d'execució.
-
-    - 2.1) Injectar la variable (vàlid per a: 2.10 >= log4j <= 2.14.1) i desplegar l'aplicació:
-```sh
-mvn clean package && java -Dlog4j2.formatMsgNoLookups=true -jar ./target/CanigoLog4jShellTest.war
-```
-
-    - 2.2) Afegir una variable d'entorn (vàlid per a: 2.10 >= log4j <= 2.14.1) i desplegar l'aplicació. Veure: https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/.
-```sh
-mvn clean package docker:build \
-&& docker run -it --rm \
---net=host \
---name="log4jshell-local" \
---memory="1024m" --memory-reservation="1024m" --memory-swap="1024m" --cpu-shares=2000 \
---env LOG4J_FORMAT_MSG_NO_LOOKUPS=true \
-canigo/app
-```
-
-* **Opció 3**) Modificar el patró de traces configurades al fitxer `log4j.xml` (vàlid per a: 2.7 >= log4j <= 2.14.1), compilar i desplegar l'aplicació. Veure: https://kb.vmware.com/s/article/87093.
-```sh
-## canviar:
-<PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m%n" />
-## per:
-<PatternLayout pattern="canigo Message: %d{dd MM yyyy HH:mm:ss,SSS} %-5p [%t] %-5p [%t] %c - %m{nolookups}%n" />
-```
-   Havent de canviar el patró del missatge (m, msg, message) per a no permetre lookup: %m{nolookups}, %msg{nolookups} or %message{nolookups}
-
-* **Opció 4**) Només en cas que cap de les accions anteriors s'hagi pogut dur a terme, optar per eliminar la classe maliciosa:
-```sh
-zip -q -d log4j-core-*.jar org/apache/logging/log4j/core/lookup/JndiLookup.class
 ```
 
 ## Noves versions de Canigó 3.4 i 3.6
