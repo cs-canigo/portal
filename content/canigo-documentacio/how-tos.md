@@ -13,6 +13,8 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
+- [Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shell)] (/howtos/2021-12-13-Howto-canigo-log4jshell/)
+
 - [Com configurar propietats en fitxers YAML per a proves unitàries] (/howtos/2021-11-26-Howto-yaml_test_file/)
 
 - [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó] (/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)

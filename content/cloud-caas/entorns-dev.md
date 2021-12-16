@@ -1,5 +1,5 @@
 +++
-date        = "2020-09-10"
+date        = "2021-12-16"
 title       = "Entorns de desenvolupament"
 description = "Entorns de desenvolupament recomanats compatibles amb les Plataformes Cloud"
 sections    = "Container Cloud"
@@ -36,9 +36,9 @@ La versió a instal·lar de Kubernetes i  Docker en entorns de desenvolupament, 
 ------------ | ------------ | ------------
 IBMCloud - Kubernetes  |  1.19.8  | v1.18 o superior
 
-## IBM CaaS
+## IBM CaaS i KuberMe
 
-En el cas de IBM CaaS:
+En el cas de IBM CaaS i KuberMe:
 
 Per les [Plataformes Cloud](http://canigo.ctti.gencat.cat/cloud/plataformes-cloud/) basades en Kubernetes, es recomana utilitzar [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/)
 
@@ -47,6 +47,7 @@ La versió a instal·lar de Kubernetes i Docker en entorns de desenvolupament, h
 **Plataforma Cloud**  | **Versió Kubernetes**   |  **Versió Minikube**
 ------------ | ------------ | ------------
 CaaS - Kubernetes  |  1.18.10  | v1.18 o superior
+KuberMe - Kubernetes  |  1.18.4  | v1.18 o superior
 
 ## SwarmMe
 
