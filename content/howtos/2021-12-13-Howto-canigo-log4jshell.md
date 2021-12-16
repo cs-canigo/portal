@@ -35,10 +35,12 @@ Informació de referència:
 ---
 
 **Actualització a 16/12/2021**:
+
 Apache ha publicat que les mesures mitigadores han quedat desacreditades donat s'ha descobert
-que aquestes no limiten l'exposició mentre deixen oberts alguns vectors d'atac. La raó per la qual aquestes mesures són insuficients
+que aquestes només limiten l'exposició mentre deixen oberts alguns vectors d'atac.
+La raó per la qual aquestes mesures són insuficients
 és que, a més del vector d'atac Thread Context, encara hi ha rutes de codi a Log4j on es poden produir cerques de missatges.
-Es conclou que la mesura més segura és actualitzar Log4j a una versió segura.
+Es conclou, per tant, que la mesura més segura és actualitzar Log4j a una versió segura.
 
 Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046
 
@@ -72,6 +74,7 @@ mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShell
 ---
 
 **Actualització a 16/12/2021**:
+
 S'està treballant per a generar noves versions de Canigó per a passar a fer ús de la versió 2.16.0 de la llibreria.
 Data prevista de publicació: entre el 17/12/2021 i el 20/12/2021.
 
