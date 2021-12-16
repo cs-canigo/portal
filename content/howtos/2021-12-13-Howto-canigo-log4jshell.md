@@ -33,6 +33,7 @@ Informació de referència:
 ## Com solucionar la vulnerabilitat a les aplicacions
 
 ---
+
 **Actualització a 16/12/2021**:
 Apache ha publicat que les mesures mitigadores han quedat desacreditades donat s'ha descobert
 que aquestes no limiten l'exposició mentre deixen oberts alguns vectors d'atac. La raó per la qual aquestes mesures són insuficients
@@ -40,6 +41,7 @@ que aquestes no limiten l'exposició mentre deixen oberts alguns vectors d'atac.
 Es conclou que la mesura més segura és actualitzar Log4j a una versió segura.
 
 Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046
+
 ---
 
 Cal substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
