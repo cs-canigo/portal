@@ -78,8 +78,8 @@ mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShell
 
 **Actualització a 16/12/2021**:
 
-S'està treballant per a generar noves versions de Canigó per a passar a fer ús de la versió 2.16.0 de la llibreria.
-Data prevista de publicació: entre el 17/12/2021 i el 20/12/2021.
+S'està treballant per a generar noves versions de Canigó 3.4 i 3.6 per a passar a fer ús de la versió 2.16.0 de la llibreria.
+Data prevista de publicació: 17/12/2021.
 
 ---
 
