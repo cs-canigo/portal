@@ -118,4 +118,6 @@ mvn dependency:tree
 ```
 
 <br/><br/>
-Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó al servei CAN del JIRA CSTD o enviant-nos un correu electrònic a la bústia del CS Canigó.
+Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó
+al [servei CAN](https://cstd.ctti.gencat.cat/jiracstd/projects/CAN) del JIRA CSTD o enviant-nos un correu electrònic
+a la [bústia del CS Canigó](mailto:oficina-tecnica.canigo.ctti@gencat.cat).
