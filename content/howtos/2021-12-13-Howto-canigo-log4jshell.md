@@ -40,7 +40,10 @@ Apache ha publicat que les mesures mitigadores han quedat desacreditades donat s
 que aquestes només limiten l'exposició mentre deixen oberts alguns vectors d'atac.
 La raó per la qual aquestes mesures són insuficients
 és que, a més del vector d'atac Thread Context, encara hi ha rutes de codi a Log4j on es poden produir cerques de missatges.
-Es conclou, per tant, que la mesura més segura és actualitzar Log4j a una versió segura.
+Es conclou, per tant, que la mesura més segura és actualitzar Log4j a una versió segura quedant desacreditades
+les següents mesures prèvies comunicades: setting de la propietat log4j2.formatMsgNoLookups o la variable d'entorn
+LOG4J_FORMAT_MSG_NO_LOOKUPS a true per a versions >= 2.10, o modificant la configuració de registre per desactivar
+les cerques de missatges amb %m{nolookups}, %msg{nolookups} o %message{nolookups per a versions >= 2.7 i <= 2.14.1.
 
 Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046
 
