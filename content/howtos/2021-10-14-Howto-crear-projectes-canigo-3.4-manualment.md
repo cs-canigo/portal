@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-14"
+date        = "2021-12-17"
 title       = "Canigó. Com crear manualment projectes amb Canigó 3.4"
 description = "Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó"
 section     = "howtos"
@@ -29,7 +29,7 @@ plugin directament, mitjançant una instrucció Maven com es mostra a continuaci
 
 ```
 mvn archetype:generate -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest
--DarchetypeVersion=1.6.8 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
+-DarchetypeVersion=1.6.9 -DartifactId=NomProjecte -DgroupId=cat.gencat.ctti -Dversion=1.0.0 -B
 ```
 
 On caldrà indicar:
