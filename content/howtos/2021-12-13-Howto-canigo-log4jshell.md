@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-16"
+date        = "2021-12-17"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
 description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shell)"
 #section     = "howtos"
@@ -36,10 +36,10 @@ Informació de referència:
 
 **Actualització a 16/12/2021**:
 
-Apache ha publicat que les mesures mitigadores han quedat desacreditades donat s'ha descobert
+L'Apache Software Foundation ha publicat el 13/12/2021 que les mesures mitigadores han quedat desacreditades donat s'ha descobert
 que aquestes només limiten l'exposició mentre deixen oberts alguns vectors d'atac.
-La raó per la qual aquestes mesures són insuficients
-és que, a més del vector d'atac Thread Context, encara hi ha rutes de codi a Log4j on es poden produir cerques de missatges.
+La raó per la qual aquestes mesures són insuficients és que, a més del vector d'atac Thread Context, encara hi ha rutes de
+codi a Log4j on es poden produir cerques de missatges.
 Es conclou, per tant, que la mesura més segura és actualitzar Log4j a una versió segura quedant desacreditades
 les següents mesures prèvies comunicades: setting de la propietat log4j2.formatMsgNoLookups o la variable d'entorn
 LOG4J_FORMAT_MSG_NO_LOOKUPS a true per a versions >= 2.10, o modificant la configuració de registre per desactivar
@@ -74,29 +74,19 @@ mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShell
 
 ## Noves versions de Canigó 3.4 i 3.6
 
----
-
-**Actualització a 16/12/2021**:
-
-S'està treballant per a generar noves versions de Canigó 3.4 i 3.6 per a passar a fer ús de la versió 2.16.0 de la llibreria.
-
-Data prevista de publicació: 17/12/2021.
-
----
-
 S'han alliberat noves versions del Framework Canigó:
 
-* Versions de Canigó 3.4.7 i 3.6.1 per a resoldre aquesta vulnerabilitat als mòduls de Canigó.
-Podeu consultar: [Publicació nova versió 3.4.7 i 3.6.1](/noticies/2021-12-13-CAN-actualitzacio-canigo-3_4_7_3_6_1).
+* Versions de Canigó 3.4.8 i 3.6.2 per a resoldre aquesta vulnerabilitat als mòduls de Canigó.
+Podeu consultar: [Publicació nova versió 3.4.8 i 3.6.2](/noticies/2021-12-17-CAN-actualitzacio-canigo-3_4_8_3_6_2).
 
-* Versió 1.6.8 de l'archetype de Canigó per a generar projectes amb Canigó 3.4.7.
-Podeu consultar: [Actualització archetype 1.6.8](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_6_8/).
+* Versió 1.6.9 de l'archetype de Canigó per a generar projectes amb Canigó 3.4.8.
+Podeu consultar: [Actualització archetype 1.6.9](/noticies/2021-12-17-CAN-Actualitzacio_archetype_1_6_9/).
 
-* Versió 1.7.1 de l'archetype de Canigó i la versió 1.8.1 del plugin del eclipse per a generar projectes amb Canigó 3.6.1.
-Podeu consultar: [Actualització archetype 1.7.1 i plugin Eclipse 1.8.1](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_7_1_plugin_eclipse_1_8_1/).
+* Versió 1.7.2 de l'archetype de Canigó i la versió 1.8.2 del plugin del eclipse per a generar projectes amb Canigó 3.6.2.
+Podeu consultar: [Actualització archetype 1.7.2 i plugin Eclipse 1.8.2](/noticies/2021-12-17-CAN-Actualitzacio_archetype_1_7_2_plugin_eclipse_1_8_2/).
 
 Des de CS Canigó es recomana actualitzar a aquestes noves versions. Per a fer-ho, serà necessari revisar les dependències de l'aplicació
-per a utilitzar els mòduls de les versions 3.4.7 i 3.6.1. Podeu consultar les matrius de compatibilitat de les versions:
+per a utilitzar els mòduls de les versions 3.4.8 i 3.6.2. Podeu consultar les matrius de compatibilitat de les versions:
 
 - [Matrius de Compatibilitats 3.4](/canigo-download-related/matrius-compatibilitats/canigo-34/)
 
