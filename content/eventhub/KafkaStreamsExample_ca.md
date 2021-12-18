@@ -15,7 +15,6 @@ weight 		= 1
   - [Requisits](#requisits)
   - [Crear el projecte](#crear-el-projecte)
   - [Docker Confluent Platform](#docker-confluent-platform)
-  - [``yaml](#yaml)
   - [Configurar el projecte](#configurar-el-projecte)
   - [Esquema avro](#esquema-avro)
   - [Crear l'aplicació Kafka Streams](#crear-laplicació-kafka-streams)
@@ -52,16 +51,16 @@ L'aplicació encarregada del processament dels missatges filtrarà els que la se
 En primer lloc, crearem el directori arrel del projecte:
 ```shell
 mkdir kstreams-example && cd kstreams-example
-````
+```
 
 ## Docker Confluent Platform
 Farem ús de Docker per executar el projecte de manera local.
 
 Per això crearem el fitxer __docker-compose.yml__ amb el contingut següent:
 
-``yaml
+```yaml
 ---
-versió: '2'
+version: '2'
 
 services:
   zookeeper:
@@ -102,7 +101,7 @@ services:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
       SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:9092'
       SCHEMA_REGISTRY_LOG4J_ROOT_LOGLEVEL: WARN
-````
+```
 
 ## Configurar el projecte
 Crearem el fitxer de construcció de Gradle __build.gradle__:
@@ -168,19 +167,19 @@ shadowJar {
   archiveBaseName = "kstreams-example-standalone"
   archiveClassifier = ''
 }
-````
+```
 
 Obtenim el wrapper de Gradle:
 ```shell
 gradle wrapper
-````
+```
 
 El segënt pas serà crear el fitxer de properties amb els paràmetres de configuració del projecte.
 
 Creem el directori __configuration__:
 ```shell
 mkdir configuration
-````
+```
 
 Dins el directori que acabem de crear, afegirem el fitxer __dev.properties__:
 ```properties
@@ -190,13 +189,13 @@ acks=all
 schema.registry.url=http://127.0.0.1:8081
 
 input.topic.name=test.topic.kstreams.example
-````
+```
 
 ## Esquema avro
 Creem el directori per a l'esquema dels missatges al nostre stream d'esdeveniments:
 ```shell
 mkdir -p src/main/avro
-````
+```
 
 Dins aquest directori, creem l'esquema __message.avsc__:
 ```json
@@ -209,12 +208,12 @@ Dins aquest directori, creem l'esquema __message.avsc__:
     {"name": "message", "type": "string"}
   ]
 }
-````
+```
 
 Finalment, atès que l'esquema serà utilitzat des de codi Java, construirem el projecte:
 ```shell
 ./gradlew build
-````
+```
 
 ## Crear l'aplicació Kafka Streams
 Aquesta aplicació llegeix registres del tòpic configurat al fitxer de properties, aplica un filtre sobre ells i
@@ -229,7 +228,7 @@ Els criteris aplicats per filtar els registres són els següents:
 En primer lloc, des de l'arrel del projecte, crearem el directori que allotjarà el codi font de l'aplicació:
 ```shell
 mkdir -p src/java/org/example/kstreams
-````
+```
 
 A continuació, creem la classe __KStreamsExample.java__:
 ```java
@@ -333,7 +332,7 @@ public class KStreamsExample {
 
   }
 }
-````
+```
 
 ## Crear el Productor
 Ara crearem el productor que s'encarregarà d'enviar registres al tòpic.
@@ -390,48 +389,48 @@ producer.close();
 }
 }
 }
-````
+```
 
 ## Compilar i executar
 Generarem el jar de l'aplicació mitjançant l'ordre:
 
 ```shell
 ./gradlew shadowJar
-````
+```
 
 Executem l'entorn de Confluent Platform mitjançant docker:
 
 ```shell
 docker-compose up -d
-````
+```
 
 Creem el tòpic sobre el qual treballarem:
 ```shell
 docker exec -it broker kafka-topics --bootstrap-server broker:9092 \
   --topic test.topic.kstreams.example --create --partitions 1 --replication-factor 1
-````
+```
 
 Llancem l'aplicació de Kafka Streams:
 
 ```shell
 java -jar build/libs/kstreams-example-standalone-0.0.1.jar configuration/dev.properties
-````
+```
 
 ## Produir esdeveniments al tòpic d'entrada
 Per començar a produir esdeveniments al tòpic llançarem el productor:
 
 ```shell
 java -cp build/libs/kstreams-example-standalone-0.0.1.jar org.example.kstreams.ProducerExample configuration/dev.properties
-````
+```
 
 ## Comprovar l'execució de l'aplicació Kafka Streams
 Podrem observar per la sortida estàndard els missatges filtrats.
 
-````
+```
 [KSTREAM-FILTER-0000000001]: a1234.test.kstreams.example, {"number": 0, "message": "Test message 0"}
 [KSTREAM-FILTER-0000000001]: a1234.test.kstreams.example, {"number": 2, "message": "Test message 2"}
 [KSTREAM-FILTER-0000000001]: a1234.test.kstreams.example, {"number": 4, "message": "Test message 4"}
-````
+```
 
 ## Execució en entorn securitzat
 Haurem de crear un nou fitxer de configuració amb la informació que se'ns hagi assignat per accedir al clúster.
@@ -454,19 +453,19 @@ basic.auth.credentials.source=<>
 basic.auth.user.info=<>
 
 input.topic.name=<Nom del tòpic de prova>
-````
+```
 
 No caldrà crear el tòpic en aquest cas, ja que estarà creat per endavant a l'entorn.
 
 Llancem l'aplicació de Kafka Streams amb la nova configuració:
 ```shell
 java -jar build/libs/kstreams-example-standalone-0.0.1.jar configuration/int.properties
-````
+```
 
 Farem el mateix pel productor:
 ```shell
 java -cp build/libs/kstreams-example-standalone-0.0.1.jar org.example.kstreams.ProducerExample configuration/int.properties
-````
+```
 
 ## Recursos externs
 
