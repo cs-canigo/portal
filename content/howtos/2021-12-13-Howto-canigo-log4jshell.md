@@ -1,10 +1,10 @@
 +++
 date        = "2021-12-17"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
-description = "Com resoldre la vulnerabilitat detectada CVE-2021-44228 (Log4Shell)"
-#section     = "howtos"
-#categories  = ["canigo"]
-#key         = "GENER2022"
+description = "Com resoldre la vulnerabilitat crítica detectada CVE-2021-44228 (Log4Shell) a les aplicacions"
+section     = "howtos"
+categories  = ["canigo"]
+key         = "GENER2022"
 +++
 
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un

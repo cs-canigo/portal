@@ -2,9 +2,9 @@
 date        = "2021-12-09"
 title       = "SIC. Integració ITSM al SIC 3.0"
 description = "A partir del dd/MM/yyyy es posa en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "GENER2022"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "GENER2022"
 +++
 
 ## Introducció
