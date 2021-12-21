@@ -1,5 +1,5 @@
 +++
-date        = "2021-09-10"
+date        = "2021-12-16"
 title       = "Monitoratge i traces als contenidors"
 description = "Informació per accedir  al monitoratge i traces a les diferents plataformes de contenidors."
 sections    = "Container Cloud"
@@ -28,7 +28,7 @@ Des de la consola web de les diferents plataformes es pot consultar de cada proj
 
 Podeu trobar més informació al respecte a:
 
- - [OpenShift Container Platform 4.6 Documentation.](https://docs.openshift.com/container-platform/4.3/welcome/index.html)
+ - [OpenShift Container Platform 4.6 Documentation.](https://docs.openshift.com/container-platform/4.6/welcome/index.html)
 
 Addicionalment a la consola, també podeu accedir a la informació i configuracions utilitzant el client **oc**.
 
@@ -46,10 +46,9 @@ En cas de necessitar un monitoratge més avançat l'equip de Suport Cloud dispos
 
 Des de la plataforma d'openshift es poden veure els logs dels pods en temps real. Si necessiteu accedir a logs anteriors o de pods que ja no existeixi, està disponible un Kibana amb tots els logs de l'aplicació amb una retenció de 30 dies.
 
-
 ### Urls d'accés als diferent entorns
 
-Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud
+Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud.
 
 #### Openshift Consolidables CPD2 PRE
 
@@ -152,11 +151,10 @@ El podeu descarregar de https://github.com/IBM-Cloud/ibm-cloud-cli-release/relea
     respon
 
         OK
-        Nombre          ID                                 Estado   Creado       Trabajadores   Ubicación   Versión
+        Nombre           ID                                 Estado   Creado       Trabajadores   Ubicación   Versión
         cluster_pre      390086041bd947d496e3be8f1ad25487   normal   4 years ago   4            London     1.19.14_1557
         cluster_pro      157e6387175449c1bdfff78eed37c4a6   normal   3 years ago   4            London     1.19.14_1557
         cluster_pro_eu   0f658877aaa94a54a1ed0b43759d0f1c   normal   3 years ago   1            ams03      1.19.14_1557
-
 ```
 
 - **Configurar cluster de PRE**
@@ -205,7 +203,7 @@ Periòdicament, el token d'accés caduca i caldrà repetir el procés de configu
 Amb la cli de kubernetes  es poden veure els logs dels pods en temps real.
 
 
-## IBM CaaS Kubernetes
+## IBM CaaS Kubernetes i KuberMe
 
 En desplegar una aplicació a Kubernetes, es proporciona a lot d'aplicacions un token amb permisos de **lectura** del seu projecte a la plataforma Kubernetes.
 
@@ -301,9 +299,25 @@ a linux seria alguna cosa similar a
 
 ### Logs
 
-Amb la cli de kubernetes  es poden veure els logs dels pods en temps real. Si necessiteu accedir a logs anteriors o de pods que ja no existeixi, està disponible un Kibana.
+Amb la cli de kubernetes  es poden veure els logs dels pods en temps real. Si necessiteu accedir a logs anteriors o de pods que ja no existeixi, està disponible un Kibana amb tots els logs de l'aplicació amb una retenció de 30 dies.
 
-L'equip de Suport Cloud us proporcionarà l'usuari i contrasenya per poder accedir als logs.
+### Urls d'accés als diferent entorns
+
+Podeu accedir a les consoles web i Kibana de les diferents plataformes utilitzant les credencials proporcionades per l'equip de Suport Cloud
+
+#### IBM CaaS Kubernetes
+
+- **Kibana**: https://c-kibana.ams03-gct-001.cpd2pre.intranet.gencat.cat
+
+#### KuberMe PRE
+
+- **Consola web**: https://manager.kuberme.cpd1pre.intranet.gencat.cat
+- **Kibana**: https://logger.kuberme.cpd1pre.intranet.gencat.cat
+
+#### KuberMe PRO
+
+- **Consola web**: https://manager.kuberme.cpd1.intranet.gencat.cat
+- **Kibana**: https://logger.kuberme.cpd1.intranet.gencat.cat
 
 ## SwarmMe
 
