@@ -39,7 +39,7 @@ Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2
 
 Cal substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
-### Aplicacions Canigó amb Spring Boot
+### Aplicacions Canigó (Spring Boot)
 
 * Opció 1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 
