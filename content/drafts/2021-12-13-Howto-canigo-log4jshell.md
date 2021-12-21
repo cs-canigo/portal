@@ -62,7 +62,7 @@ Cal substituir la versió de la dependència de la libreria `log4j` en temps de 
 mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
-### Aplicacions que facin ús dels mòduls de Canigó (no Spring Boot)
+### Aplicacions que facin ús dels mòduls de Canigó (sense Spring Boot)
 
 Si no és possible actualitzar a la última versió dels mòduls - **opció recomanada** -, caldrà aplicar exclusions, incloure les noves
 dependències, compilar i desplegar l'aplicació. Per exemple:
