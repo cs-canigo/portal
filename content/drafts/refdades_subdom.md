@@ -36,15 +36,15 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
 
-<div style="padding-left:30px; font-size:9px;">
-Destaquem que, en la majoria de les entitats modelades, s'han afegit dos valors genèrics per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**:
-- **"No consta"**: Aquest valor es pot utilitzar en aquells casos que té sentit tenir un registre per representar la situació en què es desconeix el valor, no es té la informació.
-- **"Altres/Diversos"**: Amb aquest valor es representen dues situacions diferents:
-	- Altres: Es coneix el valor a informar, però no és cap dels de la llista que ofereix l'entitat.
-	- Diversos: En la llista de valors que ofereix l'entitat hi ha més d'un registre que representa el valor a informar.
 
-Funcionalment, aquests valors de completesa permeten detectar els casos en què cal fer ajustos en les entitats. Per exemple, un ús elevat del valor "No consta" significa que és una dada que sovint es desconeix, sigui perquè no es demana o perquè és molt específica i és difícil obtenir el seu valor. Un ús elevat del valor "Altres/Diversos" pot significa que cal ampliar el rang de valor de l'entitat.
-</div>
+	Destaquem que, en la majoria de les entitats modelades, s'han afegit dos valors genèrics per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**:
+	- **"No consta"**: Aquest valor es pot utilitzar en aquells casos que té sentit tenir un registre per representar la situació en què es desconeix el valor, no es té la informació.
+	- **"Altres/Diversos"**: Amb aquest valor es representen dues situacions diferents:
+		- Altres: Es coneix el valor a informar, però no és cap dels de la llista que ofereix l'entitat.
+		- Diversos: En la llista de valors que ofereix l'entitat hi ha més d'un registre que representa el valor a informar.
+
+	Funcionalment, aquests valors de completesa permeten detectar els casos en què cal fer ajustos en les entitats. Per exemple, un ús elevat del valor "No consta" significa que és una dada que sovint es desconeix, sigui perquè no es demana o perquè és molt específica i és difícil obtenir el seu valor. Un ús elevat del valor "Altres/Diversos" pot significa que cal ampliar el rang de valor de l'entitat.
+
 
 
 <style>
