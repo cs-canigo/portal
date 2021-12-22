@@ -44,7 +44,7 @@ Cal substituir la versió de la dependència de la libreria `log4j` en temps de 
 
 * Opció 1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 
-    > * Sí el JDK és superior o igual a `1.8`:
+    > * Sí el JDK és igual o superior a `1.8`:
 ```xml
 <properties>
 <log4j2.version>2.17.0</log4j2.version>
