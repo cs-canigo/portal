@@ -64,8 +64,10 @@ mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShell
 
 ### Aplicacions que facin ús dels mòduls de Canigó (sense Spring Boot)
 
-Si no és possible actualitzar a la última versió dels mòduls - **opció recomanada** -, caldrà aplicar exclusions, incloure les noves
-dependències, compilar i desplegar l'aplicació. Per exemple:
+Si no és possible actualitzar a l'última versió dels mòduls - **opció recomanada** -, caldrà excloure la dependència de Log4j
+dels mòduls de Canigó i afegir la dependència correcta a nivell global; recomanant fer ús de la comanda Maven `mvn dependency:tree`
+per a identificar a quin nivell està Log4j associada com a dependència. Un cop revisat, caldrà compilar i desplegar l'aplicació.
+Per exemple:
 
 ```xml
 <dependency>
