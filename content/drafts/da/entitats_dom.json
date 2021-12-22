@@ -3,7 +3,7 @@
         "Id": "dtarq163",
         "Nom": "Categoria NTI",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Llistat de categories de documents en què s'agrupen el diferents tipus NTI (Norma Tècnica d’Interoperabilitat de Document Electrònic).",
         "instancies": [
             {
@@ -31,7 +31,7 @@
         "Id": "dtarq167",
         "Nom": "Diaris oficials",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Llistat de publicacions oficial periòdiques en què es difonen les lleis, els reglaments i les decisions emeses pels poders legislatiu i executiu.",
         "instancies": [
             {
@@ -59,7 +59,7 @@
         "Id": "dtarq46",
         "Nom": "Relació amb Expedient",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
         "instancies": [
             {
@@ -87,7 +87,7 @@
         "Id": "dtarq165",
         "Nom": "Tipus Documentals",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Llistat de tipus de documents definits per adaptar la Norma Tècnica d’Interoperabilitat de Document Electrònic (NTI) a l'administració de la Generalitat de Catalumya.",
         "instancies": [
             {
@@ -115,7 +115,7 @@
         "Id": "dtarq164",
         "Nom": "Tipus NTI",
         "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració (règim jurídic, funció pública, procediment administratiu, contractació pública, expropiació, responsabilitat patrimonial, administració digital, etc.)",
+        "Subambit": "Funcionament de l'administració",
         "Descripcio": "Llistat de tipus NTI amb la seva corresponent categoria NTI (Norma Tècnica d’Interoperabilitat de Document Electrònic) que s'utilitizen per determinar els diferents tipus documentals.",
         "instancies": [
             {
@@ -1169,7 +1169,7 @@
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
                 "idatapublicacio": "22/12/2021",
-                "iurl_dades_obertes": null,
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/%C3%92rgans-judicials-d-Espanya/uue8-bz7s",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
@@ -1225,7 +1225,7 @@
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
                 "idatapublicacio": "22/12/2021",
-                "iurl_dades_obertes": null,
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Legislaci%C3%B3-just%C3%ADcia/Partits-judicials-d-Espanya/qiqs-a8qp",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
@@ -1281,7 +1281,7 @@
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
                 "idatapublicacio": "22/12/2021",
-                "iurl_dades_obertes": null,
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
