@@ -1,5 +1,5 @@
 +++
-date        = "2021-11-17"
+date        = "2021-12-22"
 title       = "Detall Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -315,7 +315,7 @@ weight= 5
 
 		celda = document.createElement("td");
 		
-		// Si es consolidat es mostra el conjunt de dades, si no no és es mostra un missatge
+		// Si es consolidat es mostra el conjunt de dades, sino es mostra un missatge
 		if (dades.Classificacio=="Consolidat")
 		{
 
