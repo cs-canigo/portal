@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-21"
+date        = "2021-12-22"
 title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
 description = "Com resoldre la vulnerabilitat crítica detectada CVE-2021-44228 (Log4Shell) a les aplicacions"
 section     = "howtos"
@@ -9,7 +9,7 @@ key         = "GENER2022"
 
 La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
 servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
-Aquesta vulnerabilitat **només afecta les versions `2.x` de Log4J i es troba corregida en la versió `2.16.0`**.
+Aquesta vulnerabilitat **només afecta les versions `2.x` de Log4J i es troba corregida en noves versions de la llibreria**.
 
 <br/>
 Informació de referència:
@@ -44,23 +44,30 @@ Cal substituir la versió de la dependència de la libreria `log4j` en temps de 
 
 * Opció 1) Modificar el fitxer `pom.xml` - **opció recomanada** -, compilar i desplegar l'aplicació:
 
-    > * Sí el JDK és major o igual a `1.8`:
+    > * Sí el JDK és superior o igual a `1.8`:
 ```xml
 <properties>
-<log4j2.version>2.16.0</log4j2.version>
+<log4j2.version>2.17.0</log4j2.version>
 </properties>
 ```
 
     > * Sí el JDK és `1.7`:
 ```xml
 <properties>
-<log4j2.version>2.12.2</log4j2.version>
+<log4j2.version>2.12.3</log4j2.version>
 </properties>
 ```
 
-* Opció 2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació:
+    > * Sí el JDK és `1.6`:
+```xml
+<properties>
+<log4j2.version>2.3.1</log4j2.version>
+</properties>
+```
+
+* Opció 2) Injectar la variable durant la construcció de l'aplicació, compilar i desplegar l'aplicació. Per exemple:
 ```sh
-mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
+mvn -Dlog4j2.version=2.17.0 clean package && java -jar ./target/CanigoLog4jShellTest.war
 ```
 
 ### Aplicacions que facin ús dels mòduls de Canigó (sense Spring Boot)
@@ -86,7 +93,7 @@ Per exemple:
 <dependency>
   <groupId>org.apache.logging.log4j</groupId>
   <artifactId>log4j-core</artifactId>
-  <version>2.16.0</version>
+  <version>2.17.0</version>
 </dependency>
 ...
 ```
@@ -112,15 +119,15 @@ per a utilitzar els mòduls de les versions 3.4.8 i 3.6.2. Podeu consultar les m
 - [Matrius de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
 Un cop es comprovi que s'utilitzen les últimes versions dels mòduls, caldrà modificar el fitxer `pom.xml` per a assegurar l'ús
-de la versió 2.16.0 de log4j:
+de la versió 2.17.0 de log4j:
 
 ```xml
 <properties>
-<log4j2.version>2.16.0</log4j2.version>
+<log4j2.version>2.17.0</log4j2.version>
 </properties>
 ```
 
-Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.16.0 del log4j a l'aplicació mitjançant:
+Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.17.0 del log4j a l'aplicació mitjançant:
 
 ```
 mvn dependency:tree | grep log4j
