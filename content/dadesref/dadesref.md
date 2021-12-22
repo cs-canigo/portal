@@ -1,5 +1,5 @@
 +++
-date        = "2021-11-17"
+date        = "2021-12-22"
 title       = "Dades de Referència"
 description = "Arquitectura de Dades de CTTI"
 sections    = ["Data Architecture"]
@@ -35,6 +35,20 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 - Dades de referència pendents d’aprovació
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
+
+
+> 
+> Destaquem que, en la majoria de les entitats modelades, per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**, s'han afegit dos valors genèrics:
+> 
+> + **"No consta"**: Aquest valor es pot utilitzar en aquells casos que té sentit tenir un registre per representar la situació en què es desconeix la dada.
+> + **"Altres/Diversos"**: Amb aquest valor es representen dues situacions diferents:
+>   - Altres: Es coneix el valor a informar, però no és cap dels de la llista que ofereix l'entitat.
+>   - Diversos: En la llista de valors de l'entitat hi ha més d'un registre que representa la dada a informar.
+> 
+> Funcionalment, aquests valors de completesa permeten detectar casos en què cal fer ajustos en les entitats. Per exemple, un ús elevat del valor "No consta" significa que és una dada que sovint es desconeix, sigui perquè no es requereix o perquè és difícil d'obtenir. Un ús elevat del valor "Altres/Diversos" pot significa que cal ampliar el rang de valors de l'entitat.
+> 
+
+
 
 <style>
 .myButton {
