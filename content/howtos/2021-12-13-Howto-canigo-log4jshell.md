@@ -18,6 +18,7 @@ Informació de referència:
 * <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
 * <https://snyk.io/wp-content/uploads/cheat-sheet-log4shell-remediation-v6.pdf> \
+* <https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j/> \
 
 ## Com solucionar la vulnerabilitat a les aplicacions
 
