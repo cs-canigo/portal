@@ -17,6 +17,7 @@ Informació de referència:
 * <https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046/> \
 * <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
+* <https://snyk.io/wp-content/uploads/cheat-sheet-log4shell-remediation-v6.pdf> \
 
 ## Com solucionar la vulnerabilitat a les aplicacions
 
@@ -65,7 +66,7 @@ mvn -Dlog4j2.version=2.16.0 clean package && java -jar ./target/CanigoLog4jShell
 ### Aplicacions que facin ús dels mòduls de Canigó (sense Spring Boot)
 
 Si no és possible actualitzar a l'última versió dels mòduls - **opció recomanada** -, caldrà excloure la dependència de Log4j
-dels mòduls de Canigó i afegir la dependència correcta a nivell global; recomanant fer ús de la comanda Maven `mvn dependency:tree`
+dels mòduls de Canigó i afegir la dependència correcta a nivell global; recomanant fer ús de la comanda Maven `mvn dependency:tree | grep log4j`
 per a identificar a quin nivell està Log4j associada com a dependència. Un cop revisat, caldrà compilar i desplegar l'aplicació.
 Per exemple:
 
@@ -122,7 +123,7 @@ de la versió 2.16.0 de log4j:
 Un cop realitzades les adaptacions descrites, comprovar que només s'utilitza la versió 2.16.0 del log4j a l'aplicació mitjançant:
 
 ```
-mvn dependency:tree
+mvn dependency:tree | grep log4j
 ```
 
 <br/><br/>
