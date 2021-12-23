@@ -23,7 +23,8 @@ var indexSetup = {
 	"excludeIfProps" : ["enllac","no_index"],
 	"excludes" : [
 		"/drafts",
-		"/comunicat"
+		"/comunicat",
+		"/dadesref/json"
 	]
 }
 
