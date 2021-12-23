@@ -7,14 +7,24 @@ categories  = ["canigo"]
 key         = "GENER2022"
 +++
 
-La vulnerabilitat [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228) permet executar codi en un
-servidor remot, injectant una petició JNDI `${jndi:(ldap|rmi|etc)}` dins de qualsevol variable que es registri al log del servidor.
-Aquesta vulnerabilitat **només afecta les versions `2.x` de Log4J i es troba corregida en noves versions de la llibreria**.
+**L'Apache Software Foundation ha detectat, des del 10 de desembre de 2021, diverses vulnerabilitats que afecten la
+biblioteca de registres basada en Java Log4J**. Les vulnerabilitats detectades són les següents:
+
+- Log4Shell o LogJam [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228), considerada molt crítica permetent l'execució
+de codi remot no autenticat de forma senzilla en qualsevol aplicació que utilitzi des de la versió Log4j 2.0-beta9 fins a la versió 2.14.0.
+
+- [CVE-2021-45046](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45046), considerada crítica, encara que la seva explotació és més limitada,
+permetent, com en la vulnerabilitat anterior, l'execució de codi remot no autenticat de forma senzilla en qualsevol aplicació que faci servir des de la
+versió Log4j 2.0-beta9 fins a la versió 2.15.0.
+
+- [CVE-2021-45105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105), considerada moderada, permet als atacants obtenir un "StackOverflowError"
+per tancar el procés i generar una denegació de servei en qualsevol aplicació que faci servir des de la versió Log4j 2.0-beta9 fins a la versió 2.16.0.
+
+Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
 
 <br/>
-Informació de referència:
+Altra informació de referència:
 
-* <https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046/> \
 * <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
 * <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
 * <https://snyk.io/wp-content/uploads/cheat-sheet-log4shell-remediation-v6.pdf> \
