@@ -22,7 +22,9 @@ permetent filtrar els missatges en funció de la seva rellevància en cas necess
 ## Vulnerabilitat log4j
 
 **L'Apache Software Foundation ha detectat, des del 10 de desembre de 2021, diverses vulnerabilitats que afecten la
-biblioteca de registres basada en Java Log4J**. Les vulnerabilitats detectades són les següents:
+biblioteca de registres basada en Java Log4J**.
+
+Les vulnerabilitats detectades són les següents:
 
 - Log4Shell o LogJam [CVE-2021-44228](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228), considerada molt crítica permetent l'execució
 de codi remot no autenticat de forma senzilla en qualsevol aplicació que utilitzi des de la versió Log4j 2.0-beta9 fins a la versió 2.14.0.
