@@ -109,8 +109,8 @@ No obstant això, s'han publicat també al Repositori de Llibreries del SIC algu
 ### Log4j v.1.2.17 sense la classe JMSAppender
 
 Malgrat que el risc detectat és menor i únicament serien vulnerables les aplicacions que disposin d'una configuració de logging
-amb configuracions JMSAppender, en la línia de les mesures mitigadores proposades s'ha acordat publicar al Repositori de
-llibreries del SIC la llibreria Log4j v.1.2.17 parchejada havent eliminat la classe en qüestió.
+amb configuracions JMSAppender, en la línia de les mesures mitigadores proposades **s'ha acordat publicar al Repositori de
+llibreries del SIC la llibreria Log4j v.1.2.17 parchejada havent eliminat la classe en qüestió**.
 
 Per a referenciar-la des de les aplicacions, cal definir la dependència com es mostra a continuació:
 
@@ -127,8 +127,8 @@ Per a referenciar-la des de les aplicacions, cal definir la dependència com es 
 
 Arran d'haver detectat problemes en el desplegament a servidors WebLogic v.12.x d'aplicacions que corren amb Jdk 1.7 pel fet
 que la llibreria Log4j v.2.12.3 incorpora una sèrie de classes específiques per a Jdk 1.9 en tractar-se d'una llibreria de
-tipus multi-release, s'ha acordat publicar al Repositori de llibreries del SIC la llibreria Log4j v.2.12.3 parchejada havent
-eliminat les classses en qüestió.
+tipus multi-release, **s'ha acordat publicar al Repositori de llibreries del SIC la llibreria Log4j v.2.12.3 parchejada havent
+eliminat les classses en qüestió**.
 
 Per a referenciar-les des de les aplicacions, cal definir les dependències com es mostra a continuació:
 
