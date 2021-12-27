@@ -56,7 +56,7 @@ Podeu consultar les matrius de compatibilitat de cada mòdul a:
 - [Matriu compatibilitat Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/)
 
 Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó i/o seguir les
-indicacions del [Howto vulnerabilitat CVE-2021-44228 (Log4Shell)](/howtos/2021-12-13-Howto-canigo-log4jshell/)
+indicacions del [Howto vulnerabilitat Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/)
 per a resoldre aquesta vulnerabilitat.
 
 <br/><br/>

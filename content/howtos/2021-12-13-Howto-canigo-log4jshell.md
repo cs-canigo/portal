@@ -1,7 +1,7 @@
 +++
 date        = "2021-12-27"
-title       = "Canigó. Vulnerabilitat CVE-2021-44228 (Log4Shell)"
-description = "Com resoldre les vulnerabilitats crítica detectada CVE-2021-44228 (Log4Shell) a les aplicacions"
+title       = "Canigó. Vulnerabilitat Log4j"
+description = "Com resoldre les vulnerabilitats que afecten la biblioteca de registres basada en Java Log4j"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "GENER2022"
