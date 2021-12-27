@@ -123,18 +123,18 @@ Per a referenciar-la des de les aplicacions, cal definir la dependència com es 
 </dependency>
 ```
 
-### Log4j v.2.12.3 sense les classes per a Jdk 1.9 (llibreria multi-release)
+### Log4j v.2.12.3 sense les classes destinades a Jdk 1.9 (llibreria multi-release)
 
 Arran d'haver detectat problemes en el desplegament a servidors WebLogic v.12.x d'aplicacions que corren amb Jdk 1.7 pel fet
 que la llibreria Log4j v.2.12.3 incorpora una sèrie de classes específiques per a Jdk 1.9 en tractar-se d'una llibreria de
 tipus multi-release, s'ha acordat publicar al Repositori de llibreries del SIC la llibreria Log4j v.2.12.3 parchejada havent
 eliminat les classses en qüestió.
 
-Per a referenciar-la des de les aplicacions, cal definir les dependències com es mostra a continuació:
+Per a referenciar-les des de les aplicacions, cal definir les dependències com es mostra a continuació:
 
 ```xml
 <dependency>
-  <groupId>org.apache.logging.log4j</groupId>
+  <groupId>org.apache.logging.log4j-patched</groupId>
   <artifactId>log4j-core</artifactId>
   <version>2.12.3</version>
   <classifier>patched</classifier>
@@ -143,7 +143,7 @@ Per a referenciar-la des de les aplicacions, cal definir les dependències com e
 
 ```xml
 <dependency>
-  <groupId>org.apache.logging.log4j</groupId>
+  <groupId>org.apache.logging.log4j-patched</groupId>
   <artifactId>log4j-api</artifactId>
   <version>2.12.3</version>
   <classifier>patched</classifier>
