@@ -102,7 +102,7 @@ Per exemple:
 
 ## Construcció i desplegament d'aplicacions via SIC
 
-Totes les versions de la llibreria Log4j que mitiguen la vulnerabilitat es troben actualment disponibles al Repositori de Llibreries del SIC.
+Totes **les versions de la llibreria Log4j que mitiguen la vulnerabilitat es troben actualment disponibles al Repositori de Llibreries del SIC**.
 
 No obstant això, s'han publicat també al Repositori de Llibreries del SIC algunes llibreries parchejades que es detallen a continuació:
 
