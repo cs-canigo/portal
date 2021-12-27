@@ -1,7 +1,7 @@
 +++
 date        = "2021-12-09"
 title       = "SIC. Integració ITSM al SIC 3.0"
-description = "A partir del dd/MM/yyyy es posa en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
+description = "A partir del 24/01/2022 es posa en servei la integració amb ITSM Remedy pels desplegaments en modalitat automàtica o delegada als entorns de PRE i PRO al SIC 3.0."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "GENER2022"
@@ -20,7 +20,7 @@ Per la qual cosa, els desplegaments automàtics realitzats des del SIC, no dispo
 ## Novetats
 
 **Amb l'objectiu de disposar d'una traçabilitat completa dels desplegaments als entorns de Preproducció i Producció de les aplicacions,
-a partir del dd/MM/yyyy es posa en servei la integració amb l'eina ITSM pels desplegaments en modalitat automàtica** (automàtica al cloud o delegada on-premise)
+a partir del 24/01/2022 es posa en servei la integració amb l'eina ITSM pels desplegaments en modalitat automàtica** (automàtica al cloud o delegada on-premise)
 a aquests entorns. D'aquesta forma, el SIC passarà a proporcionar dues modalitats d'integració amb ITSM pels entorns de Preproducció i Producció:
 
 - **(NOU) Automàtica**: en el cas de modalitat de desplegament automàtic al cloud o delegat, i amb la informació proporcionada per l'usuari,

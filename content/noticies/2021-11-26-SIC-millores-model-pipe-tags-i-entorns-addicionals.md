@@ -17,7 +17,7 @@ habitualment: Integració, Preproducció i Producció.
 ## Novetats
 
 Amb l'objectiu de donar cobertura al desplegament en entorns addicionals com, per exemple, entorns d'Evolutius, Proves,
-Manteniment, Formació i altres; **a partir del 15/12/2021 s'aplica un nou model de tags i gestió de versions de les pipelines**
+Manteniment, Formació i altres; **a partir del 24/01/2022 s'aplica un nou model de tags i gestió de versions de les pipelines**
 implicant els següents canvis:
 
 1. Les pipelines passen a generar el **tag de Release (Stage `Release Tag`) immediatament després de l'execució de testos de seguretat i testos unitaris**.
