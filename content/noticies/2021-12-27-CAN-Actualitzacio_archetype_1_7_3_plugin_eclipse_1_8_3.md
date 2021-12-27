@@ -1,10 +1,10 @@
 +++
-date = "2021-12-17"
+date = "2021-12-27"
 title = "Canigó. Actualització archetype 1.7.3 i plugin Eclipse 1.8.3"
 description = "S'ha publicat una nova versió de l'archetype i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.3"
-#sections = ["Notícies", "home"]
-#categories = ["canigo"]
-#key = "GENER2022"
+sections = ["Notícies", "home"]
+categories = ["canigo"]
+key = "GENER2022"
 +++
 
 ## Introducció
@@ -25,7 +25,7 @@ Podeu consultar l'abast complet de la nova versió a les [Release Notes 3.6](/ca
 
 La versió 1.7.3 de l'arquetipus de Canigó incorpora les següents novetats:
 
-- Creació de projectes amb Canigó 3.6.3 per a resoldre la vulnerabilitat de log4j utilitzant la versió 2.17.0 del log4j
+- Creació de projectes amb Canigó 3.6.3 per a resoldre la vulnerabilitat de log4j utilitzant la versió 2.17.0 de la llibreria log4j
 
 ## Novetats _plugin_ Eclipse
 

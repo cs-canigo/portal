@@ -2,9 +2,9 @@
 date        = "2021-12-17"
 title       = "Canigó. Publicació nova versió 3.4.8 i 3.6.2"
 description = "S'ha publicat una nova versió de Canigó 3.4.8 i 3.6.2 utilitzant log4j versió 2.16.0 per a corregir la vulnerabilitat detectada"
-sections    = ["Notícies", "home"]
-categories  = ["canigo"]
-key         = "GENER2022"
+#sections    = ["Notícies", "home"]
+#categories  = ["canigo"]
+#key         = "GENER2022"
 +++
 
 S'han alliberat les **versions 3.4.8 i 3.6.2 del Framework Canigó**, corresponents a les versions Canigó 3.4 i Canigó 3.6, per a utilitzar

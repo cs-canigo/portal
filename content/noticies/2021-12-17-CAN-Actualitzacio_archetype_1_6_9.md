@@ -2,9 +2,9 @@
 date = "2021-12-17"
 title = "Canigó. Actualització archetype 1.6.9"
 description = "S'ha publicat una nova versió de l'archetype de Canigó per a generar projectes amb Canigó 3.4.8"
-sections = ["Notícies", "home"]
-categories = ["canigo"]
-key = "GENER2022"
+#sections = ["Notícies", "home"]
+#categories = ["canigo"]
+#key = "GENER2022"
 +++
 
 ## Introducció

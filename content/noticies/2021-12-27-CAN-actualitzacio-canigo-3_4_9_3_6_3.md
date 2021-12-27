@@ -38,7 +38,7 @@ per tancar el procés i generar una denegació de servei en qualsevol aplicació
 
 Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
 
-Han publicat la versió 2.17.0 per mitigar aquestes vulnerabilitats
+Han publicat la **versió 2.17.0 de la llibreria Log4j per mitigar aquestes vulnerabilitats**.
 
 Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
 gran impacte, recomanant als usuaris i administradors de sistemes que actualitzin el log4j de forma urgent.
