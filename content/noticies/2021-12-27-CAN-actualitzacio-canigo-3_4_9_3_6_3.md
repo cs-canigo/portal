@@ -36,9 +36,9 @@ versió Log4j 2.0-beta9 fins a la versió 2.15.0.
 - [CVE-2021-45105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105), considerada moderada, permet als atacants obtenir un "StackOverflowError"
 per tancar el procés i generar una denegació de servei en qualsevol aplicació que faci servir des de la versió Log4j 2.0-beta9 fins a la versió 2.16.0.
 
-Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
+S'ha publicat la **versió 2.17.0 de la llibreria Log4j per a mitigar aquestes vulnerabilitats**.
 
-Han publicat la **versió 2.17.0 de la llibreria Log4j per a mitigar aquestes vulnerabilitats**.
+Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
 
 Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
 gran impacte, recomanant als usuaris i administradors de sistemes que actualitzin el log4j de forma urgent.

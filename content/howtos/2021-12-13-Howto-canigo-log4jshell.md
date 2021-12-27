@@ -22,9 +22,9 @@ versió Log4j 2.0-beta9 fins a la versió 2.15.0.
 - [CVE-2021-45105](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-45105), considerada moderada, permet als atacants obtenir un "StackOverflowError"
 per tancar el procés i generar una denegació de servei en qualsevol aplicació que faci servir des de la versió Log4j 2.0-beta9 fins a la versió 2.16.0.
 
-Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
+S'ha publicat la **versió 2.17.0 de la llibreria Log4j per a mitigar aquestes vulnerabilitats**.
 
-Han publicat la **versió 2.17.0 de la llibreria Log4j per a mitigar aquestes vulnerabilitats**.
+Per més informació podeu consultar [Apache Log4j Security Vulnerabilities](https://logging.apache.org/log4j/2.x/security.html).
 
 Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
 gran impacte, recomanant als usuaris i administradors de sistemes que actualitzin el log4j de forma urgent.
@@ -33,28 +33,12 @@ gran impacte, recomanant als usuaris i administradors de sistemes que actualitzi
 Altra informació de referència:
 
 * <https://nvd.nist.gov/vuln/detail/CVE-2021-44228/> \
-* <https://securelist.com/cve-2021-44228-vulnerability-in-apache-log4j-library/105210/> \
-* <https://snyk.io/wp-content/uploads/cheat-sheet-log4shell-remediation-v6.pdf> \
+* <https://nvd.nist.gov/vuln/detail/CVE-2021-45046/> \
+* <https://nvd.nist.gov/vuln/detail/CVE-2021-45105/> \
 * <https://repo1.maven.org/maven2/org/apache/logging/log4j/log4j/> \
+* <https://snyk.io/wp-content/uploads/cheat-sheet-log4shell-remediation-v6.pdf> \
 
 ## Com solucionar la vulnerabilitat a les aplicacions
-
----
-
-**Actualització a 16/12/2021**:
-
-L'Apache Software Foundation ha publicat el 13/12/2021 que les mesures mitigadores han quedat desacreditades donat s'ha descobert
-que aquestes només limiten l'exposició mentre deixen oberts alguns vectors d'atac.
-La raó per la qual aquestes mesures són insuficients és que, a més del vector d'atac Thread Context, encara hi ha rutes de
-codi a Log4j on es poden produir cerques de missatges.
-Es conclou, per tant, que la mesura més segura és actualitzar Log4j a una versió segura quedant desacreditades
-les següents mesures prèvies comunicades: setting de la propietat log4j2.formatMsgNoLookups o la variable d'entorn
-LOG4J_FORMAT_MSG_NO_LOOKUPS a true per a versions >= 2.10, o modificant la configuració de registre per desactivar
-les cerques de missatges amb %m{nolookups}, %msg{nolookups} o %message{nolookups per a versions >= 2.7 i <= 2.14.1.
-
-Per a més informació: https://logging.apache.org/log4j/2.x/security.html#CVE-2021-45046
-
----
 
 Cal substituir la versió de la dependència de la libreria `log4j` en temps de compilació.
 
@@ -114,6 +98,55 @@ Per exemple:
   <version>2.17.0</version>
 </dependency>
 ...
+```
+
+## Construcció i desplegament d'aplicacions via SIC
+
+Totes les versions de la llibreria Log4j que mitiguen la vulnerabilitat es troben actualment disponibles al Repositori de Llibreries del SIC.
+
+No obstant això, s'han publicat també al Repositori de Llibreries del SIC algunes llibreries parchejades que es detallen a continuació:
+
+### Log4j v.1.2.17 sense la classe JMSAppender
+
+Malgrat que el risc detectat és menor i únicament serien vulnerables les aplicacions que disposin d'una configuració de logging
+amb configuracions JMSAppender, en la línia de les mesures mitigadores proposades s'ha acordat publicar al Repositori de
+llibreries del SIC la llibreria Log4j v.1.2.17 parchejada havent eliminat la classe en qüestió.
+
+Per a referenciar-la des de les aplicacions, cal definir la dependència com es mostra a continuació:
+
+```xml
+<dependency>
+  <groupId>log4j-patched</groupId>
+  <artifactId>log4j</artifactId>
+  <version>1.2.17</version>
+  <classifier>patched</classifier>
+</dependency>
+```
+
+### Log4j v.2.12.3 sense les classes per a Jdk 1.9 (llibreria multi-release)
+
+Arran d'haver detectat problemes en el desplegament d'aplicacions a servidors WebLogic v.12 que corren amb Jdk 1.7 pel fet que la llibreria Log4j v.2.12.3
+incorpora una sèrie de classes específiques per a Jdk 1.9 en tractar-se d'una llibreria de tipus multi-release, s'ha acordat
+publicar al Repositori de llibreries del SIC la llibreria Log4j v.2.12.3 parchejada havent eliminat les classses en qüestió.
+
+Per a referenciar-la des de les aplicacions, cal definir les dependències com es mostra a continuació:
+
+```xml
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-core</artifactId>
+  <version>2.12.3</version>
+  <classifier>patched</classifier>
+</dependency>
+```
+
+```xml
+<dependency>
+  <groupId>org.apache.logging.log4j</groupId>
+  <artifactId>log4j-api</artifactId>
+  <version>2.12.3</version>
+  <classifier>patched</classifier>
+</dependency>
 ```
 
 ## Noves versions de Canigó 3.4 i 3.6
