@@ -59,3 +59,4 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 
 * *El període associat a cada release no correspon a temps de desenvolupament, si no al temps en què es considera vigent*
 * *Aquest Roadmap està subjecte a canvis*
+
