@@ -69,7 +69,7 @@ Entregables associats a Canigó 3.4:
 |---------------------------------      |---------------------------------- |
 |              Entorn de desenvolupament   |                3.0.5              |
 |              Archetype         |                1.6.10              |
-|              AppBridge         |                1.1.0              |
+|              AppBridge         |                1.1.3              |
 
 ### Creació de l'entorn local de desenvolupament
 
