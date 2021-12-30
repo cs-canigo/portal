@@ -33,11 +33,12 @@ una plantilla de petició de canvi que el proveïdor ha d'acabar de complimentar
 ## Funcionament
 
 La **nova modalitat d'integració aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: `DEPLOY`, `DEPLOY-TAG`,
-`DEPLOY-ALL`, `DEPLOY-DESCRIPTORS` i `DEPLOY-APIM`**. El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
-en l'etapa "Deploy confirmation", l'usuari haurà d'indicar la informació necessària per a la generació del tiquet Remedy de canvi (CRQ):
-servei associat, categorització i informació del desplegament.
+`DEPLOY-ALL`, `DEPLOY-DESCRIPTORS` i `DEPLOY-APIM`**.
 
-Per exemple, per al desplegament a l'entorn de Producció, es mostrarà un formulari com el següent:
+El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
+en l'**etapa "Deploy confirmation"**, l'usuari haurà d'indicar la informació necessària per a la generació del tiquet Remedy de canvi (CRQ):
+servei associat, categorització i informació del desplegament. Per exemple, per al desplegament a l'entorn de Producció, es mostrarà
+un formulari com el següent:
 
 ![Input request](/related/sic/3.0/pipeline-input-request-itsm.png)
 
@@ -45,6 +46,7 @@ Per exemple, per al desplegament a l'entorn de Producció, es mostrarà un formu
 Un cop indicada la informació requerida i confirmat el desplegament, a l'**etapa "ITSM Register"** el sistema generarà automàticament
 el tiquet Remedy CRQ amb tota la informació necessària, assumint, com a dates de planificació del canvi, la data i hora en què
 s'inicia el desplegament a l'entorn i una previsió estàndard de finalització de 30 minuts.
+
 Tan bon punt finalitzi el desplegament a l'entorn pertinent, incloent-hi possibles tasques pre-post desplegament, a l'**etapa "ITSM Close"**
 el sistema transicionarà el tiquet a l'estat "Implementation in Progress" indicant la data i hora d'inici real del desplegament i,
 a continuació, es tancarà el tiquet d'acord amb el resultat obtingut:
