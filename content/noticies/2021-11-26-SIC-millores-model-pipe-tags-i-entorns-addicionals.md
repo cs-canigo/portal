@@ -2,9 +2,9 @@
 date        = "2021-11-26"
 title       = "SIC. Revisió model de tags i versions pipelines SIC 3.0"
 description = "A partir del 24/01/2022 es posa en servei el nou model de tags i gestió de versions de les pipelines del SIC 3.0 per a donar cobertura al desplegament a entorns addicionals."
-sections    = ["Notícies", "home"]
-categories  = ["sic"]
-key         = "GENER2022"
+#sections    = ["Notícies", "home"]
+#categories  = ["sic"]
+#key         = "GENER2022"
 +++
 
 ## Introducció
