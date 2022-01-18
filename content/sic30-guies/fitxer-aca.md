@@ -686,7 +686,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
-- [Construcció aplicació dotnet i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
+- [Construcció aplicació .Net Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
 
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
@@ -703,6 +703,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció i publicació de llibreria Maven al Nexus](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
 
 - [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
+
+- [Construcció i publicació de llibreria .Net Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
 
 <br/><br/><br/>
