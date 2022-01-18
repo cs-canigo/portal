@@ -686,6 +686,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
+- [Construcció aplicació dotnet i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
+
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
 - [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
