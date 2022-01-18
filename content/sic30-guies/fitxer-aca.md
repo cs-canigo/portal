@@ -145,7 +145,7 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
 
 
-#### Per a la **publicació de llibreries** al repositori:
+#### Per a la **publicació de llibreries Maven o Npm** al repositori:
 
 |Variable|Valor|
 |-------|-------|
@@ -162,6 +162,14 @@ de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
 
 En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
 automàticament a la comanda.
+
+#### Per a la **publicació de llibreries .Net Core** al repositori:
+
+|Variable|Valor|
+|-------|-------|
+|ARTIFACT_PATH|Ruta de les llibreries `nupkg` a publicar al repositori|
+
+S'executarà la comanda ```dotnet nuget push ${ARTIFACT_PATH}/*.nupkg```
 
 #### Exemple
 
