@@ -1,0 +1,28 @@
+version: 2.0.0
+info:
+  version: 1.2.1
+  description: Dotnet lib - Nexus
+global-env:
+  - ARTIFACT_PATH: 'app'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/dotnet-builder:1.0-3.1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - dotnet restore
+              - dotnet build /p:PackageVersion=${SIC_VERSION} --no-restore -c Release
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]
+
