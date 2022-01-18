@@ -270,13 +270,11 @@ Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">C
 <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
 
-<!---
 ### Microsoft
-|Tecnologia|Versions|
+|Versió .Net Core|Versió MSBuild|
 |-------|-------|
-|MS_Build|4.0<br />14<br />15|
-|MS_Deploy|7.1|
--->
+|3.1|16.7|
+|5.0|16.11|
 
 <!---
 ### Maven/JDK
