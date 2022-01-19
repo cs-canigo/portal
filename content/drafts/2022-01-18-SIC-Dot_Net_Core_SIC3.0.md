@@ -26,15 +26,21 @@ Així les pipelines dels jobs del SIC 3.0 permeten:
 
 ## Utilització
 
-S'ha actualitzat la [Matriu de tecnologies de construcció](/drafts/ci/#matriu-de-tecnologies-de-construcci%C3%B3) del SIC 3.0, afegint la taula de tecnologíes Microsoft suportades pel SIC 3.0
+S'ha actualitzat la [Matriu de tecnologies de construcció](/drafts/ci/#matriu-de-tecnologies-de-construcci%C3%B3) del SIC 3.0, afegint la taula de tecnologíes Microsoft suportades pel SIC 3.0.
+
+<br/>
 
 Per a construir una aplicació o llibreria en .Net Core al SIC 3.0 és necessari utilitzar una imatge de dotnet builder disponibles a:
 
 https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories/gencat-sic-builders%2Fdotnet-builder
 
+<br/>
+
 El codi font dels builders de dotnet està disponible a:
 
 https://git.intranet.gencat.cat/0192-intern/sic-builders/dotnet-builder
+
+<br/>
 
 S'ha afegit exemples d'aca de construcció i desplegament d'aplicacions amb .Net Core i de contrucció i desplegament de llibreries amb .Net Core a la documentació [Com construir el fitxer ACA](/drafts/fitxer-aca/) del SIC 3.0:
 
@@ -48,4 +54,3 @@ Per a més informació:
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
-
