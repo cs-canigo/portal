@@ -234,6 +234,7 @@ ans al contrari, l'estén per a acabar de concretar els requeriments propis del 
 |8|6.4|
 |10|6.11|
 |12|6.12|
+|14|6.14|
 
 L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
