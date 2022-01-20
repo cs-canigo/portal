@@ -272,7 +272,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 
 <!---
 ### Microsoft
-|Versió .Net Core|Versió MSBuild|
+|Versió .NET Core|Versió MSBuild|
 |-------|-------|
 |3.1|16.7|
 |5.0|16.11|

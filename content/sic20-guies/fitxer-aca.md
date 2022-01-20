@@ -229,7 +229,7 @@ Es contemplen les següents tecnologies:
 
 * **Node**
 * **Java**
-* **.Net**
+* **.NET**
 * **Hugo**
 * **Compressió** (zip, unzip)
 * **BBDD**
@@ -328,7 +328,7 @@ No caldrà que s'indiqui la comanda `mvn` en els `parameters` d’execució donc
 Opcionalment, es podrà indicar la propietat `executionDir` per a indicar que la construcció cal executar-la en una ruta específica (per defecte, a l'arrel del projecte).
 
 </br>
-#### .Net
+#### .NET
 Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a continuació:
 
 |Eines predefinides|
@@ -697,8 +697,8 @@ A continuació s'adjunten exemples de casos d'ús:
 - [Maven - Nexus & Weblogic](/related/sic/2.0/autoservei_mvn_hibrid.yml) <br/>
 - [Npm - Nexus](/related/sic/2.0/autoservei_npm_nexus.yml) (llibreria)
 - [Npm - Apache](/related/sic/2.0/autoservei_npm_apache.yml)
-- [.Net - Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
-- [.Net](/related/sic/2.0/autoservei_net.yml)
+- [.NET - Nexus](/related/sic/2.0/autoservei_net_nexus.yml) (llibreria)
+- [.NET](/related/sic/2.0/autoservei_net.yml)
 - [PHP](/related/sic/2.0/autoservei_php.yml)
 - [Oracle Apex o migracions de BBDD](/related/sic/2.0/autoservei_apex.yml)
 - [Docker Image](/related/sic/2.0/autoservei_docker.yml)

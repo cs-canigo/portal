@@ -163,7 +163,7 @@ de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
 En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
 automàticament a la comanda.
 
-#### Per a la **publicació de llibreries .Net Core** al repositori:
+#### Per a la **publicació de llibreries .NET Core** al repositori:
 
 |Variable|Valor|
 |-------|-------|
@@ -695,7 +695,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
-- [Construcció aplicació .Net Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
+- [Construcció aplicació .NET Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
 
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
@@ -713,7 +713,7 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
 
-- [Construcció i publicació de llibreria .Net Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
+- [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
 
 <br/><br/><br/>
