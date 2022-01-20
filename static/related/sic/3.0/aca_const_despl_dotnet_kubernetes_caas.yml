@@ -3,8 +3,8 @@ info:
   version: 1.2.0
   description: .Net - Kubernetes CaaS
 global-env:
-  - CONTAINER_DOCKERFILE_PATH: 'Dockerfile'
-  - CONTAINER_IMAGE_NAME: dotnet-app
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: app-test
   - DEPLOYMENT_TYPE: Deployment
 components:
   - build:
@@ -21,7 +21,7 @@ components:
               - dotnet restore
               - dotnet publish -c release -o ./app --no-restore
     deployment:
-      scm: https://git.intranet.gencat.cat/9997/dotnet-test/orchestrators.git
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
       environments:
         - name: preproduction
           actions:
@@ -29,8 +29,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: 'preproduccio/dotnet'
-                      - DEPLOYMENT_NAME: 'dotnet-test'
+                      - DESCRIPTORS_PATH: 'preproduccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
                       - DEPLOYMENT_WAIT: 120
         - name: production
           actions:
@@ -38,8 +38,8 @@ components:
               steps:
                 - execution:
                     env:
-                      - DESCRIPTORS_PATH: 'produccio/dotnet'
-                      - DEPLOYMENT_NAME: 'dotnet-test'
+                      - DESCRIPTORS_PATH: 'produccio/app'
+                      - DEPLOYMENT_NAME: 'app-test'
                       - DEPLOYMENT_WAIT: 120
 notifications:
   email:
