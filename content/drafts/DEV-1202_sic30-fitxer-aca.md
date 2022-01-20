@@ -171,6 +171,7 @@ automàticament a la comanda.
 
 S'executarà la comanda ```dotnet nuget push ${ARTIFACT_PATH}/*.nupkg```
 
+</br>
 #### Exemple
 
 Exemple de definició de variables per al desplegament a Openshift:
