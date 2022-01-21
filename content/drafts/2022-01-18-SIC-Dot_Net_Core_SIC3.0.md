@@ -1,7 +1,7 @@
 +++
 date        = "2022-01-18"
-title       = "SIC. .Net Core al SIC 3.0"
-description = "A partir del 01/02/2022 es posa en servei la dotació de construcció i desplegament d’aplicacions .NET Core al SIC 3.0."
+title       = "SIC. .NET Core al SIC 3.0"
+description = "A partir del dd/mm/yyyy es passa a donar cobertura a la construcció i desplegament d’aplicacions .NET Core al SIC 3.0."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
 #key         = "FEBRER2022"
@@ -10,47 +10,47 @@ description = "A partir del 01/02/2022 es posa en servei la dotació de construc
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**.
-
-**.Net Core és un framework de Microsoft pel desenvolupament d'aplicacions i llibreries**. .Net Core és el successor multiplataforma de .Net Framework, que quedarà en desús, quedant només .Net Core com a únic estàndard.
+de les aplicacions**. Per la seva banda, **.NET Core és un Framework de Microsoft pel desenvolupament d'aplicacions considerant-se
+el successor multiplataforma de .NET Framework que acabarà quedant en desús passant a ser .NET Core l'únic estàndard.
 
 ## Novetats
 
-A partir del 01/02/2022 es posa en servei la dotació de construcció i desplegament d’aplicacions .NET Core al SIC 3.0. Amb aquest canvi s'assoleix l'objectiu de dotar a la plataforma SIC 3.0 de la possibilitat de construir i desplegar en plataformes de contenidors aplicacions .NET Core. Les versions de .Net Core suportades són 3.1 i 5.0.
+**A partir del dd/mm/yyyy es passa a donar cobertura a la construcció i desplegament d'aplicacions .NET Core al SIC 3.0**.
+Amb aquest evolutiu s'assoleix l'objectiu de dotar a la plataforma SIC 3.0 de la possibilitat de construir i desplegar en
+plataformes de contenidors aplicacions .NET Core. Les **versions de .NET Core suportades actualment són: 3.1 i 5.0**.
 
-Així les pipelines dels jobs del SIC 3.0 permeten:
+Per tant, les pipelines del SIC 3.0 passen a permetre:
 
-* La construcció d’aplicacions .NET Core amb la corresponent resolució de dependències, tant externes com internes, utilitzant el repositori d'artefactes.
+* La publicació de llibreries .NET Core al repositori d'artefactes del SIC.
+
+* La construcció d’aplicacions .NET Core amb la corresponent resolució de dependències, tant externes com internes,
+utilitzant el repositori d'artefactes del SIC.
+
 * El desplegament d’aplicacions .NET Core en plataformes de contenidors.
-* El desplegament de llibreries .NET Core utilitzant el repositori d'artefactes.
 
-## Utilització
+## Funcionament
 
-S'ha actualitzat la [Matriu de tecnologies de construcció](/drafts/ci/#matriu-de-tecnologies-de-construcci%C3%B3) del SIC 3.0, afegint la taula de tecnologíes Microsoft suportades pel SIC 3.0.
-
-<br/>
-
-Per a construir una aplicació o llibreria en .Net Core al SIC 3.0 és necessari utilitzar una imatge de dotnet builder disponibles a:
-
-https://docker-registry.ctti.extranet.gencat.cat/harbor/projects/129/repositories/gencat-sic-builders%2Fdotnet-builder
+S'ha actualitzat la [Matriu de tecnologies de construcció](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) del SIC 3.0,
+afegint la taula de tecnologies Microsoft suportades.
 
 <br/>
-
-El codi font dels builders de dotnet està disponible a:
-
-https://git.intranet.gencat.cat/0192-intern/sic-builders/dotnet-builder
+Per a construir una aplicació o llibreria .NET Core al SIC 3.0 serà necessari fer ús d'una imatge de construcció de dotnet disponible al
+[Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/), on podeu veure també com accedir al codi font d'aquestes.
 
 <br/>
+Es proporcionen nous exemples de fitxers `aca.yml` per a la construcció i desplegament d'aplicacions .NET Core, així com de contrucció i
+publicació de llibreries a la guía [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/) del SIC 3.0:
 
-S'ha afegit exemples d'aca de construcció i desplegament d'aplicacions amb .Net Core i de contrucció i desplegament de llibreries amb .Net Core a la documentació [Com construir el fitxer ACA](/drafts/fitxer-aca/) del SIC 3.0:
+* [Construcció aplicació .NET Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
 
-* [Construcció aplicació .Net Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
-* [Construcció i publicació de llibreria .Net Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
+* [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
 <br/>
 Per a més informació:
 
 - [Servei d'Integració Contínua](/sic30-serveis/ci/)
+- [Catàleg d'imatges builder](/sic30-serveis/cataleg-imatges/)
+- [Com utilitzar imatges Docker Builder](/howtos/2021-07-13-SIC-Howto-utilitzar-imatges-docker-builder/)
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
