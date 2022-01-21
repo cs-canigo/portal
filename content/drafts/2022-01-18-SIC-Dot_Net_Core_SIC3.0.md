@@ -10,15 +10,18 @@ description = "A partir del dd/mm/yyyy es passa a donar cobertura a la construcc
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. Per la seva banda, **.NET Core és un Framework de Microsoft pel desenvolupament d'aplicacions considerant-se
+de les aplicacions**. Per la seva banda, **.NET Core és un Framework de Microsoft pel desenvolupament d'aplicacions** considerant-se
 el successor multiplataforma de .NET Framework que acabarà quedant en desús passant a ser .NET Core l'únic estàndard.
 
 ## Novetats
 
 **A partir del dd/mm/yyyy es passa a donar cobertura a la construcció i desplegament d'aplicacions .NET Core al SIC 3.0**.
 Amb aquest evolutiu s'assoleix l'objectiu de dotar a la plataforma SIC 3.0 de la possibilitat de construir i desplegar en
-plataformes de contenidors aplicacions .NET Core. Les **versions de .NET Core suportades actualment són: 3.1 i 5.0**.
+plataformes de contenidors aplicacions .NET Core.
 
+Les **versions de .NET Core suportades actualment són: 3.1 i 5.0**.
+
+<br/>
 Per tant, les pipelines del SIC 3.0 passen a permetre:
 
 * La publicació de llibreries .NET Core al repositori d'artefactes del SIC.
@@ -28,17 +31,16 @@ utilitzant el repositori d'artefactes del SIC.
 
 * El desplegament d’aplicacions .NET Core en plataformes de contenidors.
 
-## Funcionament
-
+<br/>
 S'ha actualitzat la [Matriu de tecnologies de construcció](/sic30-serveis/ci/#matriu-de-tecnologies-de-construcció) del SIC 3.0,
-afegint la taula de tecnologies Microsoft suportades.
+afegint la taula de les noves tecnologies Microsoft suportades.
 
 <br/>
 Per a construir una aplicació o llibreria .NET Core al SIC 3.0 serà necessari fer ús d'una imatge de construcció de dotnet disponible al
-[Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/), on podeu veure també com accedir al codi font d'aquestes.
+[Catàleg d'imatges corporatiu](/sic30-serveis/cataleg-imatges/), on s'indica també com accedir al codi font d'aquestes.
 
 <br/>
-Es proporcionen nous exemples de fitxers `aca.yml` per a la construcció i desplegament d'aplicacions .NET Core, així com de contrucció i
+Addicionalment es proporcionen nous exemples de fitxers `aca.yml` per a la construcció i desplegament d'aplicacions .NET Core, així com de contrucció i
 publicació de llibreries a la guía [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/) del SIC 3.0:
 
 * [Construcció aplicació .NET Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
