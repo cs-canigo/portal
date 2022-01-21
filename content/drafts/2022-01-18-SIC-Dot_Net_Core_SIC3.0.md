@@ -20,7 +20,7 @@ Amb aquest evolutiu s'assoleix l'objectiu de dotar a la plataforma SIC 3.0 de la
 
 * Publicar llibreries .NET Core al repositori d'artefactes del SIC.
 
-* Construir aplicacions .NET Core amb la corresponent resolució de dependències, tant externes com internes, utilitzant el
+* Construir aplicacions .NET Core amb la corresponent resolució de dependències contra el
 repositori d'artefactes del SIC.
 
 * Desplegar aplicacions .NET Core en plataformes de contenidors.
@@ -45,6 +45,7 @@ així com perde contrucció i publicació de llibreries:
 
 * [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
+<br/><br/>
 Per a més informació, podeu consultar els següents articles:
 
 - [Servei d'Integració contínua](/sic30-serveis/ci/)
