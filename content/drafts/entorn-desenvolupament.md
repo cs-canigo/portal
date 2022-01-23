@@ -20,7 +20,7 @@ Els objectius perseguits per l'entorn de desenvolupament són:
 * Facilitar la posada en marxa de l'entorn de desenvolupament, aprovisionant una màquina virtual amb tot el necessari per a començar el desenvolupament d'una aplicació Canigó.
 * Simular els entorns de desplegament als CPD Generalitat, facilitant contenidors amb les mateixes versions i configuracions dels PaaS que ens trobarem als clouds.
 
-Addicionalment aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions estables del programari, sino que s'ha fet que estigui alineada amb l'última versió de Canigó 3.4 per proporcionar la millor experiència d'usuari *out-of-the-box* en el desenvolupament d'aplicacions Canigó.
+Addicionalment aquesta versió de l'entorn de desenvolupament no només s'ha actualitzat amb les últimes versions estables del programari, sino que s'ha fet que estigui alineada amb l'última versió de Canigó 3.6.x per proporcionar la millor experiència d'usuari *out-of-the-box* en el desenvolupament d'aplicacions Canigó.
 
 
 ### Prerequisits
@@ -29,7 +29,7 @@ Per poder treballar amb l'entorn de desenvolupament s'ha d'instal·lar prèviame
 
 * [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 * [Vagrant](http://www.vagrantup.com/downloads.html)
-* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/4.0.0) amb la configuració de l'entorn Canigó
+* [Vagranfile](https://github.com/gencat/dev-environment/releases/tag/3.1.0) amb la configuració de l'entorn Canigó
 
 Per a poder utilitzar l'entorn de desenvolupament és necessari:
 
@@ -39,7 +39,7 @@ Per a poder utilitzar l'entorn de desenvolupament és necessari:
 
 ### Instal·lació
 
-La versió 4.0.0 ha simplificat i automatitzat la configuració inicial fins al punt de no haver de fer cap acció especial per part de l'usuari (vegeu apartat _KNOWN ISSUES_ de la versió).
+La versió 3.1.0 ha simplificat i automatitzat la configuració inicial fins al punt de no haver de fer cap acció especial per part de l'usuari (vegeu apartat _KNOWN ISSUES_ de la versió).
 
 1. Descarregar la configuració del vagrant amb la següent comanda
 
@@ -120,7 +120,7 @@ A continuació s'adjunta un petit recull de captures de pantalla on es pot copsa
 
 ### Versions
 
-#### 4.0.0 (20/01/2022) -- <span style="color:green">OPERATIVA</span>
+#### 3.1.0 (20/01/2022) -- <span style="color:green">OPERATIVA</span>
 
 _RELEASE NOTES_
 
@@ -134,7 +134,7 @@ _RELEASE NOTES_
 
 _KNOWN ISSUES_
 
-* Compartir carpetes des del Host. Per a que funcioni s'han d'instal·lar les VirtualBox guest additions, seguint les instruccions del howto [Com instal·lar les VBOX guest additions](/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
+* Compartir carpetes des del Host. Per a que funcioni s'han d'instal·lar les VirtualBox guest additions, seguint les instruccions del howto [Com instal·lar les VBOX guest additions](/howtos/2022-01-20-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
 
 #### 3.0.6 (14/07/2020)
 
@@ -146,7 +146,7 @@ _KNOWN ISSUES_
 
 * El sistema d'àudio (hda, ac97) no funciona correctament degut a un error relacionat amb la versió de VirtualBox (p.e. 5.2.18). En versions més noves (>= 6.0.0) pot estar resolt (tot i que no s'ha verificat aquest punt). Podeu trobar més informació al següent enllaç: [https://forums.virtualbox.org/viewtopic.php?f=8&t=91190](https://forums.virtualbox.org/viewtopic.php?f=8&t=91190)
 
-* Compartir carpetes des del Host. Per a que funcioni s'han d'instal·lar les VirtualBox guest additions, seguint les instruccions del howto [Com instal·lar les VBOX guest additions](/howtos/2022-01-20-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
+* Compartir carpetes des del Host. Per a que funcioni s'han d'instal·lar les VirtualBox guest additions, seguint les instruccions del howto [Com instal·lar les VBOX guest additions](/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)
 
 #### 3.0.5 (07/05/2020)
 
