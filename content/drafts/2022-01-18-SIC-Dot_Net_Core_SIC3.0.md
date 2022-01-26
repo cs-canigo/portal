@@ -1,7 +1,7 @@
 +++
 date        = "2022-01-18"
 title       = "SIC. .NET Core al SIC 3.0"
-description = "A partir del dd/mm/yyyy es passa a donar cobertura a la construcció i desplegament d’aplicacions .NET Core al SIC 3.0."
+description = "A partir del 27/01/2022 es passa a donar cobertura a la construcció i desplegament d’aplicacions .NET Core al SIC 3.0."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
 #key         = "FEBRER2022"
@@ -15,7 +15,7 @@ el successor multiplataforma de .NET Framework que acabarà quedant en desús pa
 
 ## Novetats
 
-**A partir del dd/mm/yyyy es passa a donar cobertura a la construcció i desplegament d'aplicacions .NET Core al SIC 3.0**.
+**A partir del 27/01/2022 es passa a donar cobertura a la construcció i desplegament d'aplicacions .NET Core al SIC 3.0**.
 Amb aquest evolutiu s'assoleix l'objectiu de dotar a la plataforma SIC 3.0 de la possibilitat de:
 
 * Publicar llibreries .NET Core al repositori d'artefactes del SIC.
