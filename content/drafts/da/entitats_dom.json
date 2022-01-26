@@ -652,8 +652,8 @@
     {
         "Id": "dtarq160",
         "Nom": "Àrees bàsiques salut",
-        "Ambit": "Altres/Diversos",
-        "Subambit": "Altres/Diversos",
+        "Ambit": "Salut",
+        "Subambit": "Sistema i recursos sanitaris",
         "Descripcio": "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
         "instancies": [
             {
@@ -680,8 +680,8 @@
     {
         "Id": "dtarq159",
         "Nom": "Sectors sanitaris",
-        "Ambit": "Altres/Diversos",
-        "Subambit": "Altres/Diversos",
+        "Ambit": "Salut",
+        "Subambit": "Sistema i recursos sanitaris",
         "Descripcio": "Llistat de sectors sanitaris, segon nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
         "instancies": [
             {
