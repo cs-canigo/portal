@@ -78,7 +78,7 @@
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "PERSONA_REL_EXPEDIENT",
+        "nom_dinsBD": "RELACIO_AMB_EXPEDIENT",
         "Classificacio": "Pendent",
         "Data_publicacio": "21/06/2019",
         "Data_actualitzacio": "21/06/2019"
@@ -650,6 +650,62 @@
         "Data_actualitzacio": "22/12/2021"
     },
     {
+        "Id": "dtarq160",
+        "Nom": "Àrees bàsiques salut",
+        "Ambit": "Altres/Diversos",
+        "Subambit": "Altres/Diversos",
+        "Descripcio": "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "idatacreacio": "24/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AREES_BASIQUES_SALUT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
+        "Id": "dtarq159",
+        "Nom": "Sectors sanitaris",
+        "Ambit": "Altres/Diversos",
+        "Subambit": "Altres/Diversos",
+        "Descripcio": "Llistat de sectors sanitaris, segon nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
+                "ifitxer_xls": "Sectors_sanitaris.xlsx",
+                "idatacreacio": "24/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SECTORS_SANITARIS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
         "Id": "dtarq117",
         "Nom": "NC (Productes comerç exterior)",
         "Ambit": "Comerç, consum i turisme",
@@ -878,6 +934,62 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
         "Data_actualitzacio": "20/01/2021"
+    },
+    {
+        "Id": "dtarq168",
+        "Nom": "Classificació empresarial grups",
+        "Ambit": "Economia",
+        "Subambit": "Empresa i sector econòmic",
+        "Descripcio": "Llista general d'activitats que realitzen les empreses que opten a contractes administratius d'obres o de serveis. ",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Classificacio_empresarial_grups_ATR.docx",
+                "ifitxer_xls": "Classificacio_empresarial_grups.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CLASSIFICACIO_EMPRESARIAL_GRUPS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
+        "Id": "dtarq169",
+        "Nom": "Classificació empresarial subgrups",
+        "Ambit": "Economia",
+        "Subambit": "Empresa i sector econòmic",
+        "Descripcio": "Llista d'activitats especifiques que realitzen les empreses que opten a contractes administratius d'obres o de serveis. ",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Classificacio_empresarial_subgrups_ATR.docx",
+                "ifitxer_xls": "Classificacio_empresarial_subgrups.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CLASSIFICACIO_EMPRESARIAL_SUBGRUPS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
     },
     {
         "Id": "dtarq118",
@@ -1117,7 +1229,7 @@
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "TORRES_RADIOCOMUNICACIO",
+        "nom_dinsBD": "TORRES_DE_RADIOCOMUNICACIO",
         "Classificacio": "Pendent",
         "Data_publicacio": "18/12/2019",
         "Data_actualitzacio": "20/04/2020"
@@ -1271,16 +1383,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Regions_sanitaries_ATR.docx",
-                "ifitxer_xls": "Regions_sanitaries.xlsx",
+                "ifitxer_doc": "Regions_sanitaries_v01_ATR.docx",
+                "ifitxer_xls": "Regions_sanitaries_v01.xlsx",
                 "idatacreacio": "11/12/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "26/01/2022",
                 "idatapublicacio": "22/12/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "Actualització versió anterior per modificar valors atribut codi.",
+                "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                "ifitxer_xls": "Regions_sanitaries.xlsx",
+                "idatacreacio": "25/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1288,7 +1415,7 @@
         "nom_dinsBD": "REGIONS_SANITARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "22/12/2021"
+        "Data_actualitzacio": "26/01/2022"
     },
     {
         "Id": "dtarq50",
@@ -1341,7 +1468,7 @@
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "CARACTER_REPRE",
+        "nom_dinsBD": "CARACTER_REPRESENTACIO",
         "Classificacio": "Pendent",
         "Data_publicacio": "21/06/2019",
         "Data_actualitzacio": "21/06/2019"
@@ -1400,7 +1527,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Departament de Drets Socials",
+                "ipromotor": "Departament d'Igualtat i Feminismes",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Genere_ATR.docx",
                 "ifitxer_xls": "Genere.xlsx",
@@ -1496,7 +1623,7 @@
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "PERSONA_REPRESENTACIO",
+        "nom_dinsBD": "REPRESENTACIO",
         "Classificacio": "Pendent",
         "Data_publicacio": "21/06/2019",
         "Data_actualitzacio": "21/06/2019"
@@ -2359,10 +2486,10 @@
     },
     {
         "Id": "dtarq166",
-        "Nom": "Festius generals i locals de Catalunya",
+        "Nom": "Festius generals de Catalunya",
         "Ambit": "Treball",
         "Subambit": "Relacions laborals i negociació col·lectiva",
-        "Descripcio": "Llistat per anys dels dies festius d'àmbit general i local, municipal, de Catalunya.",
+        "Descripcio": "Llistat per anys dels dies festius d'àmbit general de Catalunya.",
         "instancies": [
             {
                 "inom": "V00.01",
@@ -2370,20 +2497,48 @@
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
                 "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Festius_generals_locals_Cat_ATR.docx",
-                "ifitxer_xls": "Festius_generals_locals_Cat.xlsx",
+                "ifitxer_doc": "Festius_generals_Catalunya_ATR.docx",
+                "ifitxer_xls": "Festius_generals_Catalunya.xlsx",
                 "idatacreacio": "25/10/2021",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "22/12/2021",
+                "idatapublicacio": "26/01/2022",
                 "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
-        "nom_dinsBD": "FESTIUS_GENERALS_LOCALS_CAT",
+        "nom_dinsBD": "FESTIUS_GENERALS_CAT",
         "Classificacio": "Pendent",
-        "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "22/12/2021"
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
+        "Id": "dtarq170",
+        "Nom": "Festius locals de Catalunya",
+        "Ambit": "Treball",
+        "Subambit": "Relacions laborals i negociació col·lectiva",
+        "Descripcio": "Llistat per anys dels dies festius d'àmbit local de Catalunya, associats a la unitat poblacional a on aplica el dia festiu.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Festius_locals_Catalunya_ATR.docx",
+                "ifitxer_xls": "Festius_locals_Catalunya.xlsx",
+                "idatacreacio": "24/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "FESTIUS_LOCALS_CAT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
     }
 ]
 }
