@@ -1,5 +1,5 @@
 +++
-date = "2021-11-25"
+date = "2022-01-18"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -163,6 +163,15 @@ de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
 En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
 automàticament a la comanda.
 
+#### Per a la **publicació de llibreries .NET Core** al repositori:
+
+|Variable|Valor|
+|-------|-------|
+|ARTIFACT_PATH|Ruta de les llibreries `nupkg` a publicar al repositori|
+
+S'executarà la comanda ```dotnet nuget push ${ARTIFACT_PATH}/*.nupkg```
+
+</br>
 #### Exemple
 
 Exemple de definició de variables per al desplegament a Openshift:
@@ -686,6 +695,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 
 - [Construcció aplicació Maven amb passes before/post-deploy i desplegament a l’Openshift](/related/sic/3.0/aca_const_despl_before_after_deploy_maven_openshift.yml)
 
+- [Construcció aplicació .NET Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
+
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
 
 - [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
@@ -701,6 +712,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció i publicació de llibreria Maven al Nexus](/related/sic/3.0/aca_const_publi_nexus_maven_lib.yml)
 
 - [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
+
+- [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
 
 
 <br/><br/><br/>

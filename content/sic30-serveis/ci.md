@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2022-01-18"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -270,13 +270,11 @@ Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">C
 <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
 
-<!---
 ### Microsoft
 |Versió .NET Core|Versió MSBuild|
 |-------|-------|
 |3.1|16.7|
 |5.0|16.11|
--->
 
 <!---
 ### Maven/JDK
