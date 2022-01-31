@@ -101,7 +101,6 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
-
 #### Per al **desplegament a Kubernetes IBMCloud i CaaS**:
 
 |Variable|Valor|
@@ -113,14 +112,12 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
-
 #### Per al **desplegament a WebApp Azure**:
 
 |Variable|Valor|
 |-------|-------|
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a WebApp Azure|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure|
-
 
 #### Per al **desplegament a SwarmMe**:
 
@@ -129,13 +126,11 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
 
-
 #### Per al **desplegament a l’Api Manager**:
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PRODUCT_FILE|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|
-
 
 #### Per al **desplegament al CloudFoundry IBMCloud**:
 
@@ -144,6 +139,16 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
 |CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
 
+#### Per al **desplegament d'imatges de productes en contenidors en general**:
+
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_EXTERNAL_REGISTRY|Domini i projecte de la imatge del repositori extern a descarregar|
+|CONTAINER_IMAGE_NAME|Nom de la imatge del repositori extern a descarregar|
+|CONTAINER_IMAGE_TAG|Versió de la imatge del repositori extern a descarregar|
+|DEPLOYMENT_TYPE|Tipus de desplegament, dependrà del tipus d'orquestrador escollit|
+
+En aquest tipus de desplegament no cal informar el ```step build```, ja que es recupera un producte ja empaquetat externament.
 
 #### Per a la **publicació de llibreries Maven o Npm** al repositori:
 
