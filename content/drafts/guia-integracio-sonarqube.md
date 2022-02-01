@@ -81,7 +81,7 @@ El canal de contacte dependrà de l'àmbit del dubte o problema:
 - Si es localitza en la configuració i accessos a l’eina SonarQube o la configuració de les
 Quality Gates, ho deriveu al responsable de qualitat del vostre lot. Si el dubte o problema no s’ha resolt,
 el responsable de qualitat del vostre lot es posarà en contacte amb l'Oficina de Qualitat mitjançant la
-bústia qualitat.solucions@gencat.cat.
+bústia [qualitat.solucions@gencat.cat](mailto:qualitat.solucions@gencat.cat).
 
 - Si es localitza en el comportament de les pipelines de desplegament, configuració de projectes i altres
 aspectes de la integració contínua, haureu de posar-vos en contracte a través dels
