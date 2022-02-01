@@ -541,16 +541,19 @@ analysis:
       target: bs001
       imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
       commands: mvn -f app1/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode  
+      executionDir: dir1
     - id: an002
       tool: maven
       target: bs002
       imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
-      commands: mvn -f app2/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode 
+      commands: mvn -f app2/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
+      executionDir: dir2
     - id: an003
       tool: maven
       target: bs003
       imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
-      commands: mvn -f app3/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode 
+      commands: mvn -f app3/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode
+      executionDir: dir3
 ```
 </br>
 
