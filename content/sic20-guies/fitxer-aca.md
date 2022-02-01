@@ -523,9 +523,9 @@ que hem definit més amunt i que s'afegirà com a sufix en l'enviament del proje
 Opcionalment es podran indicar les propietats:
 
 - `imageName`: només per a fer ús d'una imatge Docker diferent a la imatge de construcció de l'artefacte i que ha d'estar disponible
-al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images),
+al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-images)
 
-- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`,
+- `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`. Per a tools de `maven`, és necessari indicar els següents paràmetres necessaris per a que no realitzi de nou la construcció i l'execució del goal es centri només en la generació i enviament del informe al SonarQube: `-Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode`
 
 - `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
 
