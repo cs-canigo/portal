@@ -461,7 +461,7 @@ de construir i fer un anàlisi de vulnerabilitats de la imatge Docker d'usuari a
 
 Aquesta secció és opcional doncs, per defecte, tots els passos del procés i la seva ordenació vindrà determinada per la definició del
 procés de construcció. Així doncs, cada pas de construcció que impliqui l'enviament de codi font per al seu anàlisi esdevindrà
-automàticament en pas d'enviament de codi i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
+automàticament en un pas d'enviament de codi i comprovació de les [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/) corresponents.
 No obstant, es permet redefinir el seu comportament tal com es descriu a continuació.
 </br></br>
 
@@ -539,18 +539,18 @@ analysis:
     - id: an001
       tool: maven
       target: bs001
-      imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f app1/pom.xml sonar:sonar  
+      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      commands: mvn -f app1/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode  
     - id: an002
       tool: maven
       target: bs002
-      imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f app2/pom.xml sonar:sonar 
+      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      commands: mvn -f app2/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode 
     - id: an003
       tool: maven
       target: bs003
-      imageName: gencatsic/maven-builder:1.0-3.2-8
-      commands: mvn -f app3/pom.xml sonar:sonar 
+      imageName: gencatsic/maven-builder:1.0-3.6-11-openjdk
+      commands: mvn -f app3/pom.xml sonar:sonar -Dmaven.main.skip=true -Dmaven.install.skip=true -Dmaven.test.skip=true -Dmaven.antrun.skip=true --no-transfer-progress --batch-mode 
 ```
 </br>
 
