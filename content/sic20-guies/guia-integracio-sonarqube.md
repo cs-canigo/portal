@@ -14,7 +14,7 @@ weight = 4
 
 ## Eina d’anàlisi
 
-Al SIC s’ha dut a terme la integració de les aplicacions amb l’eina d’anàlisi estàtic de codi: [SonarQube CE](https://docs.sonarqube.org/latest/).
+Al SIC s’ha dut a terme la integració de les aplicacions amb l’eina d’anàlisi estàtic de codi: [SonarQube CE](https://docs.sonarqube.org/8.1/).
 Es tracta d’una eina que servirà per a **detectar issues crítiques i bloquejants així com duplicació de codi font** de les aplicacions.
 Podeu accedir mitjançant el següent enllaç: https://codi.qualitat.solucions.gencat.cat.
 
