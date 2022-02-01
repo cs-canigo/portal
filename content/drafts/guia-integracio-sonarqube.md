@@ -64,13 +64,13 @@ per a escollir una modalitat més adequada, per exemple, per a salvar limitacion
 Per a més informació:
 https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/
 
-En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/latest/analysis/languages/overview/)
+En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/9.2/analysis/languages/overview/)
 (veure Community Edition) per l’eina.
 
 ### Configuració a nivell de projecte
 
 Tal com indica a la documentació de referència, cada tipus de client permet configurar els paràmetres aplicables a cada cas:
-https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
+https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/.
 
 En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions]
 (/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
