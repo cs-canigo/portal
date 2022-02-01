@@ -64,13 +64,13 @@ per a escollir una modalitat més adequada, per exemple, per a salvar limitacion
 Per a més informació:
 https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-jenkins/
 
-En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/latest/analysis/languages/overview/)
+En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/8.1/analysis/languages/overview/)
 (veure Community Edition) per l’eina.
 
 ### Configuració a nivell de projecte
 
 Tal com indica a la documentació de referència, cada tipus de client permet configurar els paràmetres aplicables a cada cas:
-https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/.
+https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-jenkins/.
 
 En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalitzar exclusions]
 (/howtos/2020-10-26-SIC-Howto-definir_exclusions_SonarQube/).
@@ -81,7 +81,7 @@ El canal de contacte dependrà de l'àmbit del dubte o problema:
 - Si es localitza en la configuració i accessos a l’eina SonarQube o la configuració de les
 Quality Gates, ho deriveu al responsable de qualitat del vostre lot. Si el dubte o problema no s’ha resolt,
 el responsable de qualitat del vostre lot es posarà en contacte amb l'Oficina de Qualitat mitjançant la
-bústia qualitat.solucions@gencat.cat.
+bústia [qualitat.solucions@gencat.cat](mailto:qualitat.solucions@gencat.cat).
 
 - Si es localitza en el comportament de les pipelines de desplegament, configuració de projectes i altres
 aspectes de la integració contínua, haureu de posar-vos en contracte a través dels
