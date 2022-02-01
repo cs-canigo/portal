@@ -62,7 +62,7 @@ per a escollir una modalitat més adequada, per exemple, per a salvar limitacion
 - Els projectes .Net han de compilar-se amb una versió mínima de MSBuild i .NET Framework.
 
 Per a més informació:
-https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-jenkins/
+https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-jenkins/
 
 En qualsevol cas, el sistema ignorarà els arxius de [llenguatges no suportats](https://docs.sonarqube.org/latest/analysis/languages/overview/)
 (veure Community Edition) per l’eina.
