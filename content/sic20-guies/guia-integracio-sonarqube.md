@@ -33,8 +33,7 @@ fer l’anàlisi i comprovació de la quality gate de codi, i realitzar l’envi
 <br/>
 
 Per tant, **cada pujada de codi font al sistema de custòdia del SIC implicarà la revisió automàtica de la qualitat del codi del
-projecte** i, si no passa les Quality Gates, no permetrà continuar amb el desplegament de l’aplicació. A la pantalla principal de la
-pipeline es mostrarà el resultat de la comprovació, habilitant un enllaç on podreu accedir al detall:
+projecte** i, si no passa les Quality Gates, l’Oficina de Qualitat pot bloquejar l’execució del job, no permetent continuar amb el desplegament de l’aplicació. A la pantalla principal de la pipeline es mostrarà el resultat de la comprovació, habilitant un enllaç on podreu accedir al detall:
 
 ![Stage AEC](/related/sic/2.0/link_qualitygate.png)
 <br/>
