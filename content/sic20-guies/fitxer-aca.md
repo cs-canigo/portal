@@ -527,7 +527,7 @@ al [Catàleg d'imatges] (https://git.intranet.gencat.cat/0192-intern/docker-imag
 
 - `commands`: per a especificar la comanda que cal executar només si s'especifica una `imageName`,
 
-- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte), i
+- `executionDir`: per a indicar que l'enviament cal executar-lo sobre una ruta específica (per defecte, a l'arrel del projecte)
 
 Exemple:
 
