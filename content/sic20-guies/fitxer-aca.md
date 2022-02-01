@@ -1,5 +1,5 @@
 +++
-date = "2022-01-21"
+date = "2022-02-01"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
