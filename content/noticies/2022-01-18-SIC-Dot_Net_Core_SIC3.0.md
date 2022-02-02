@@ -13,6 +13,7 @@ El **Servei d'Integració Contínua és un servei a disposició dels proveïdors
 de les aplicacions**. Per la seva banda, **.NET Core és un Framework de Microsoft pel desenvolupament d'aplicacions** considerant-se
 el successor multiplataforma de .NET Framework que acabarà quedant en desús passant a ser .NET Core l'únic estàndard.
 
+
 ## Novetats
 
 **A partir del 27/01/2022 es passa a donar cobertura a la construcció i desplegament d'aplicacions .NET Core al SIC 3.0**.
