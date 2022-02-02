@@ -6,7 +6,7 @@ var search, results = {}, facet_data={};
 /* global instantsearch */
 app({
   appId: 'SQZ0PDH35B',
-  apiKey: 'cb437539bc966647921f1d7b75823baf',
+  apiKey: '7e8cf02a661b67e4938ddce64b62470d',
   indexName: 'prod_MODULS-CANIGO'
 });
 
