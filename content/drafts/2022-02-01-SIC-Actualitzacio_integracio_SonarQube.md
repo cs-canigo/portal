@@ -17,7 +17,7 @@ Aquesta eina està integrada al SIC 2.0 dins del *Stage* d'`Anàlisis estàtic d
 
 **A partir del XX/XX/2022 s'ha actualitzat la versió del SonarQube de Qualitat a la versió 9.2.4**. Aquest fet ha comportat l'adaptació tecnològica de la integració al SonarQube que es realitza al SIC.
 
-Aquesta adaptació s'ha realitzat transparentment als proveïdors d'aplicacions i només en petits casos ha estat necessari adaptar el fitxer aca per la nova itnegració. Pels casos que ha estat necessari adaptar el fitxer aca s'ha realitzat una merge request als responsables de les aplicacions i se'ls hi ha notificat perquè l'acceptin. L'acceptació de la merge request és necessaria per a que el *Stage* d'`Anàlisis estàtic de codi` a les pipelines de les aplicacions continuï funcionant correctament.
+Aquesta adaptació s'ha realitzat transparentment als proveïdors d'aplicacions i només en petits casos ha estat necessari adaptar el fitxer aca per la nova integració. Pels casos que ha estat necessari adaptar el fitxer aca s'ha realitzat una merge request als responsables de les aplicacions i se'ls hi ha notificat perquè l'acceptin. L'acceptació de la merge request és necessaria per a que el *Stage* d'`Anàlisis estàtic de codi` a les pipelines de les aplicacions continuï funcionant correctament.
 
 ## Documentació
 
