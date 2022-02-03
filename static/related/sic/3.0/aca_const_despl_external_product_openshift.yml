@@ -1,0 +1,35 @@
+version: 2.0.0
+info:
+  version: 0.0.1
+  description: Nginx product - Openshift
+global-env:
+  - CONTAINER_EXTERNAL_REGISTRY: registry.access.redhat.com/ubi8
+  - CONTAINER_IMAGE_NAME: nginx-118
+  - CONTAINER_IMAGE_TAG: 1-45
+  - DEPLOYMENT_TYPE: Deployment
+components:
+  - deployment:
+      scm: https://git.intranet.gencat.cat/9999/nginx/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: preproduccio/nginx
+                      - DEPLOYMENT_NAME: nginx
+                      - DEPLOYMENT_WAIT: 60
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: produccio/nginx
+                      - DEPLOYMENT_NAME: nginx
+                      - DEPLOYMENT_WAIT: 60
+notifications:
+  email:
+    recipients:
+      - noreply@gencat.cat

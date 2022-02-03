@@ -146,9 +146,11 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTAINER_EXTERNAL_REGISTRY|Domini i projecte de la imatge del repositori extern a descarregar|
 |CONTAINER_IMAGE_NAME|Nom de la imatge del repositori extern a descarregar|
 |CONTAINER_IMAGE_TAG|Versió de la imatge del repositori extern a descarregar|
-|DEPLOYMENT_TYPE|Tipus de desplegament, dependrà del tipus d'orquestrador escollit|
+|DEPLOYMENT_TYPE|Tipus de desplegament, que dependrà del tipus d'orquestrador escollit|
 
-En aquest tipus de desplegament no cal informar el ```step build```, ja que es recupera un producte ja empaquetat externament.
+Per a aquest tipus de desplegament no cal informar la secció de ```build``` perquè es recupera un producte ja empaquetat externament, i tampoc
+caldrà indicar l'atribut ```info.version``` perquè no es farà cap mena de gestió de tags al projecte.
+</br>
 
 #### Per a la **publicació de llibreries Maven o Npm** al repositori:
 
@@ -703,6 +705,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció aplicació .NET Core i desplegament al Kubernetes CaaS](/related/sic/3.0/aca_const_despl_dotnet_kubernetes_caas.yml)
 
 - [Desplegament Nginx a l’Openshift](/related/sic/3.0/aca_const_despl_openshift.yml)
+
+- [Desplegament producte Nginx extern a l’Openshift](/related/sic/3.0/aca_const_despl_external_product_openshift.yml)
 
 - [Desplegament aplicació al WebApp Azure](/related/sic/3.0/aca_const_despl_webapp_azure.yml)
 
