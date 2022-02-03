@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2021-12-27"
 title       = "Guies d'ús de desenvolupament"
 description = "Guies d'ús (HowTOs) de desenvolupament 3.6.0"
 sections    = "canigo-fwk-docs"
@@ -8,6 +8,9 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
+| [Com configurar propietats en fitxers YAML per a proves unitàries](/howtos/2021-11-26-Howto-yaml_test_file/)| Configuracio, Test, Test unitaris |
+| [Com utilitzar Spring Retry per a realitzar reintents d’accions](/howtos/2021-07-26-Howto-spring_retry/)| Spring, Patro |
+| [Com implementar el patró Circuit Breaker](/howtos/2021-01-02-Howto-circuit_breaker/)| Spring, Patro |
 | [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)| Entorn desenvolupament, Eclipse, IntelliJ |
 | [Com instal·lar les VBOX guest additions](https://canigo.ctti.gencat.cat/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)| Entorn desenvolupament |
 | [Com permetre l’intercanvi creuat de recursos (CORS)](https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-spring_cors/)| Cors, Spring |

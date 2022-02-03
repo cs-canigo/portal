@@ -1,7 +1,7 @@
 +++
 date        = "2021-12-27"
 title       = "Dependències externes"
-description = "CDependències externes Canigó 3.6.0"
+description = "Dependències externes Canigó 3.6.0"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
