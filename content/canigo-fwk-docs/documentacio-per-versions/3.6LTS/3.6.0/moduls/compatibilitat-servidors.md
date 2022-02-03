@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2021-12-27"
 title       = "Compatibilitat servidors"
 description = "Compatibilitat servidors Canigó 3.6.0"
 sections    = "canigo-fwk-docs"
@@ -10,19 +10,18 @@ S'ha certificat la compatibilitat de Canigó 3.6.0 amb els següents servidors e
 
 |      Servidor incrustat             |                   Versió                    |
 |---------------------------------     |---------------------------------     |
-|  Tomcat                               |         9.0.16                        |
-|  Undertow                              |         2.0.17.Final                   |
-|  Jetty                                |         9.4.14.v20181114           |
-|  Netty (webflux)                         |         4.1.33.Final               |
-|  Reactor Netty (reactor webflux)  |         0.8.5.RELEASE              |
+|  Tomcat                               |         9.0.52                        |
+|  Undertow                              |         2.2.10.Final                   |
+|  Jetty                                |         9.4.43.v20210629          |
+|  Netty (webflux)                         |        4.1.67.Final               |
+|  Reactor Netty (reactor webflux)  |        1.0.10             |
 
 S'ha certificat la versió de Canigó 3.6.0 amb els servidors suportats al [Full de ruta del CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
 |     	Servidor d'aplicacions				|      				Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
 |  Tomcat					          	  	 	|         9.0   	             			|
-|  Weblogic				          	  	 	|         12.2.x               			|
-|  WebSphere	  		        	  	 	|         9.0                 			|
+|  Weblogic				          	  	 	|         14.1.x               			|
 |  JBoss EAP       									|         7.x        			          |
 
 La versió de Java mínima per utilitzar Canigó 3.6.0 és 1.8
