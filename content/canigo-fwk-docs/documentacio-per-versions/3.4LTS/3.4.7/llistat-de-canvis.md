@@ -6,8 +6,8 @@ sections    = "canigo-fwk-docs"
 weight      = 1
 +++
 
-#### Canigó 3.4.7 (11/05/2021)
-- [Adaptació connector Sarcat PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
-   - S’ha revisat i resolt el problema detectat en el mòdul d’integració del connector SARCAT PICA.
-- Revisió interna execució de tests dels mòduls
-   - S’ha revisat la forma d’execució dels tests dels mòduls per a utilitzar imatges docker builder del catàleg del SIC 2.0.
+#### Canigó 3.4.7 (13/12/2021)
+- [Resolució de vulnerabilitat Log4Shell](/noticies/2021-12-13-CAN-actualitzacio-canigo-3_4_7_3_6_1/)
+   - Actualització de tots els mòduls de Canigó per a utilitzar la versió 2.15.0 de log4j
+- [Actualització de l’_archetype_ 1.6.8](/noticies/2021-12-13-CAN-Actualitzacio_archetype_1_6_8)
+   - Actualització de l’_archetype_ versió 1.6.8 per a generar projectes amb Canigó 3.4.7.
