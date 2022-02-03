@@ -4,5 +4,5 @@ title       = "Anteriors"
 description = "Anteriors"
 sections    = "canigo-fwk-docs"
 enllac		= "/canigo-fwk-docs/documentacio-per-versions/anteriors/"
-weight		= 2
+weight		= 3
 +++
