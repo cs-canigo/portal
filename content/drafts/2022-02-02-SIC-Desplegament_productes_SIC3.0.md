@@ -26,6 +26,7 @@ Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà
 incorporat exemples:
 
 - [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+- [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 - [Exemple fitxer ACA](/related/sic/3.0/aca_const_despl_external_product_openshift.yml)
 
 <br/><br/>
