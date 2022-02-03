@@ -1,10 +1,9 @@
 +++
-date        = "2019-03-20"
+date        = "2021-10-21"
 title       = "WebFlux"
-description = "Com configurar aplicació Canigó 3.4 per utilitzar WebFlux"
-sections    = "Canigó. Documentació Versió 3.4"
+description = "Com configurar aplicació Canigó 3.6 per utilitzar WebFlux"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 5
-key         = "ABRIL2019"
 +++
 
 ## Propòsit
@@ -13,15 +12,13 @@ El propòsit d’aquest apartat és introduïr al desenvolupador la programació
 
 ## Versió de Canigó
 
-Els passos descrits en aquest document apliquen a la versió 3.4 del Framework Canigó
+Els passos descrits en aquest document apliquen a la versió 3.6 del Framework Canigó
 
 ## Introducció
 
-El mes de Març del 2019 s'ha publicat la versió 3.4 del Framework Canigó. Aquesta versió incorpora la possibilitat d'utilitzar les funcionalitats de WebFlux
+A la versió 3.6 de Canigó conté la possibilitat d'utilitzar les funcionalitats de WebFlux
 
-Per a passar una aplicació 3.2 a 3.4 hi ha disponible la següent guia ["Actualització Canigó 3.2 a Canigó 3.4"](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4)
-
-L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.4.0 de Canigó.
+L'objectiu d'aquesta guia és mostrar els procediments necessaris poder utilitzar les funcionalitats WebFlux sobre un repositori reactiu amb Mongodb. El punt de partida d'aquesta guia és una aplicació creada amb el plugin de Canigó per Eclipse i actualitzada a la versió 3.6.0 de Canigó.
 
 ### Introducció WebFlux
 
@@ -48,7 +45,7 @@ El quadre següent mostra les funcionalitats que utilitza WebFlux dels servidors
 |  Contenidor amb suport Servlet 3.1+ 	|         Servlet 3.1 non-blocking I/O       																										|
 
 Per a més informació sobre programació funcional amb Spring 5 podeu consultar:
-https://docs.spring.io/spring-framework/docs/5.1.5.RELEASE/spring-framework-reference/web-reactive.html#webflux-fn
+https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html#spring-webflux
 
 ### Spring MVC o WebFlux
 
@@ -130,9 +127,11 @@ Afegirem les dependències de Mongodb
 			</exclusions>
 ```
 
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
-Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-34-altres/modul-mongodb-reactiu)
+Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-36/altres/modul-mongodb-reactiu)
 
 Afegirem la propietat per la connexió a Mongodb
 ```properties

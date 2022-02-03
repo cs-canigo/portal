@@ -1,8 +1,8 @@
 +++
-date = "2015-04-02T12:49:43+02:00"
+date = "2021-10-21"
 title       = "Planificador de tasques"
 description = "Planificador de tasques"
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 1
 +++
 
@@ -26,7 +26,7 @@ Documents i Fonts de Referència
 Referència                       | URL
 -------------------------------- | ----
 Quartz                           | http://www.quartz-scheduler.org/
-Spring 4 + Quartz                | http://static.springsource.org/spring/docs/4.1.0.RELEASE/spring-framework-reference/html/scheduling.html#scheduling-quartz
+Spring 5 + Quartz                | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#scheduling
 Guia migració Quartz 1.8.x a 2.0 | http://www.quartz-scheduler.org/documentation/quartz-2.x/migration-guide
 
 ## Glossari
@@ -52,7 +52,7 @@ Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'ap
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
 <commons.collections.version>4.0</commons.collections.version>
-<org.springframework.versionn>4.1.0.RELEASE</org.springframework.version>
+<org.springframework.versionn>5.3.9</org.springframework.version>
 
 <dependency>
     <groupId>org.quartz-scheduler</groupId>

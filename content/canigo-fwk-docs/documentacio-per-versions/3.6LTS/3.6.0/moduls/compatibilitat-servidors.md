@@ -24,4 +24,4 @@ S'ha certificat la versió de Canigó 3.6.0 amb els servidors suportats al [Full
 |  Weblogic				          	  	 	|         14.1.x               			|
 |  JBoss EAP       									|         7.x        			          |
 
-La versió de Java mínima per utilitzar Canigó 3.6.0 és 1.8
+La versió de Java mínima per utilitzar Canigó 3.6.0 és 11

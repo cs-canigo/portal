@@ -1,8 +1,8 @@
 +++
-date        = "2015-04-02T13:14:36+02:00"
+date        = "2021-10-21"
 title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 2
 +++
 
@@ -21,13 +21,13 @@ Canigó no incorpora cap llibreria addicional a les ja aportades per Spring per 
 
 Referència | URL
 ---------- | ---
-Spring JMS | http://static.springsource.org/spring/docs/4.1.0.RELEASE/spring-framework-reference/html/jms.html
+Spring JMS | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#jms
 
 ## Glossari
 
 **JMS**
 
-JMS o Java Message Service es un estàndard de missatgeria que permet als components de les aplicacions basades en la plataforma J2EE, crear, enviar, rebre i llegir missatges de manera sincrona i asincrona.
+JMS o Java Message Service és un estàndard de missatgeria que permet als components de les aplicacions basades en la plataforma J2EE, crear, enviar, rebre i llegir missatges de manera sincrona i asincrona.
 
 **ConnectionFactory**
 
@@ -80,7 +80,7 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
 <commons.collections.version>4.0</commons.collections.version>
-<org.springframework.version>4.1.0.RELEASE</org.springframework.version>
+<org.springframework.version>5.3.9</org.springframework.version>
 
 <dependency>
 	<groupId>org.springframework</groupId>

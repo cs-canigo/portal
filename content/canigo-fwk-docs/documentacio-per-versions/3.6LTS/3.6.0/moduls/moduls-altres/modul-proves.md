@@ -1,8 +1,8 @@
 +++
-date        = "2015-04-02T14:36:52+02:00"
+date        = "2021-10-21"
 title       = "Proves"
 description = "Proves unitàries"
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 4
 +++
 
@@ -16,7 +16,7 @@ A l'utilitzar injecció de dependència, això fa que el codi sigui menys depend
 
 Referència | URL
 ---------- | ---
-Spring Test | http://docs.spring.io/spring/docs/4.1.x/spring-framework-reference/html/testing.html
+Spring Test | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/testing.html#testing
 
 ## Glossari
 
@@ -29,20 +29,11 @@ Spring Test | http://docs.spring.io/spring/docs/4.1.x/spring-framework-reference
 
 ## Instal.lació
 
-Utilitzant Canigó3 on cal realitzar cap pas addicional per a tenir instal- lat el mòdul de testing d'Spring. Ja que el framework ja incorpora la dependència.
+Utilitzant Canigó3 on cal realitzar cap pas addicional per a tenir instal·lat el mòdul de testing d'Spring. Ja que el framework ja incorpora la dependència.
 
 **Dependència pom.xml**
 
-Per defecte canigó3 incorpora la dependència d'Spring Test en scope test, aquesta dependència la incorpora canigo-core de la següent manera:
-
-```
-<dependency>
-	<groupId>org.springframework</groupId>
-	<artifactId>spring-test</artifactId>
-	<version>${org.springframework.version}</version>
-	<scope>test</scope>
-</dependency>
-```
+A Canigó 3.6 incorpora la dependència d'Spring Test en scope test, aquesta dependència la incorpora canigo-test. A Canigó 3.6 la versió utilitzada de Junit és la 4, però si és necessari es pot utilitzar Junit 5 ja que amb spring-boot-starter-test 2.5.4 utilitza Junit 5
 
 ## Utilització
 
