@@ -18,11 +18,9 @@ sense permetre, per tant, el desplegament d'imatges públiques empaquetades exte
 El **SIC 3.0 passa a permetre el desplegament en contenidors que fan servir productes a partir d'imatges públiques** que no cal construir
 dins el SIC i que, mitjançant una determinada configuració (secrets, configMaps, variables d'entorn i altres), funcionen correctament tant en
 plataformes Kubernetes com Openshift.
-
-Per al desplegament d'imatges públiques de productes, el SIC permet configurar el registre extern, la imatge del producte i la versió
+Per al desplegament d'imatges públiques de productes, caldrà configurar el registre extern, la imatge del producte i la versió
 corresponent, de manera que la pipeline pugui dur a terme correctament la descàrrega de la imatge del registre públic, fer un tag i
-publicar la imatge dins el projecte propi de l'aplicació al registre intern del SIC (Harbor). El seu desplegament es tractarà com un desplegament
-estàndard dins el SIC.
+publicar la imatge dins el projecte propi de l'aplicació al registre intern del SIC (Harbor).
 
 Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
 incorporat exemples:
