@@ -8,6 +8,8 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
+| [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)| Migració versió |
+| [Actualització Canigó 3.4 a Canigó 3.6](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/)| Migració versió |
 | [Com utilitzar Google Error-Prone] (/howtos/2021-01-02-Howto-google_error_prone/)| Entorn desenvolupament, Eclipse, IntelliJ |
 | [Com instal·lar les VBOX guest additions](https://canigo.ctti.gencat.cat/howtos/2021-02-08-Howto-Instalar-guest-additions-entorn-desenvolupament-canigo/)| Entorn desenvolupament |
 | [Com permetre l’intercanvi creuat de recursos (CORS)](https://canigo.ctti.gencat.cat/howtos/2021-01-02-Howto-spring_cors/)| Cors, Spring |
