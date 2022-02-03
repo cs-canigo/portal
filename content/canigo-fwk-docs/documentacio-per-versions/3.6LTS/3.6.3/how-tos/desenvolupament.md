@@ -8,6 +8,7 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
+| [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Vulnerabilitat |
 | [Com configurar propietats en fitxers YAML per a proves unitàries](/howtos/2021-11-26-Howto-yaml_test_file/)| Configuracio, Test, Test unitaris |
 | [Com utilitzar Spring Retry per a realitzar reintents d’accions](/howtos/2021-07-26-Howto-spring_retry/)| Spring, Patró |
 | [Com implementar el patró Circuit Breaker](/howtos/2021-01-02-Howto-circuit_breaker/)| Spring, Patró |
