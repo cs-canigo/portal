@@ -1,14 +1,14 @@
 +++
-date        = "2015-03-20T09:09:23+01:00"
+date        = "2021-10-21"
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 16
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 13
 +++
 
 ## Introducció
 
-L'objectiu d'aquest connector ,es el de proporcionar accés als 3 grans serveis de consulta de dades fiscals que actualment ofereix la PICA. Aquests tres serveis són:
+L'objectiu d'aquest connector és el de proporcionar accés als 3 grans serveis de consulta de dades fiscals que actualment ofereix la PICA. Aquests tres serveis són:
 
 * AEAT: Agència Estatal de l'Administració Tributària
 * ATC: Agència Tributària de Catalunya
@@ -106,23 +106,18 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 ### Requeriments
 
-El connector TRIBUTS és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no és garantit el seu correcte funcionament.
-
-Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-34-integracio/modul-pica/) 1.2.0.
+Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/).
 
 ## Configuració
 
 
 Per configurar el mòdul d'integració PICA-DNI és necessari configurar els següents arxius:
 
-1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
+1.- Importar el mòdul PICA-DNI amb el plugin de Canigó 3.6 de l'eclipse o bé incorporar manualment les seves dependències en el pom.xml de l'aplicació.
 
 En el pom.xml:
 
-```
-<canigo.integration.tributs.pica.version>[1.2.0,1.3.0)</canigo.integration.tributs.pica.version>
-...
-
+```xml
 <!-- Dependencia del mòdul PICA-TRIBUTS -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -130,6 +125,8 @@ En el pom.xml:
 	<version>${canigo.integration.tributs.pica.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/tributs.properties amb el següent contingut:
 
@@ -194,7 +191,7 @@ Recuperar el bean del servei de AEAT des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private AeatConnectorImpl aeatConnector;
+private AeatConnector aeatConnector;
 ```
 
 Fer la crida a la modalitat del servei desitjat, p.e.:
@@ -219,7 +216,7 @@ Recuperar el bean del servei de ATC des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private AtcConnectorImpl atcConnector;
+private AtcConnector atcConnector;
 ```
 
 En aquest cas d'exemple es consumirà la modalitat de servei ATC_INF_DEUTES_TMP que retorna les dades d'un certificat de deutes amb la Generalitat de Catalunya.
@@ -260,7 +257,7 @@ Recuperar el bean del servei de TGSS des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private TgssConnectorImpl tgssConnector;
+private TgssConnector tgssConnector;
 ```
 
 En aquest cas d'exemple es consumirà la modalitat de servei TGSS_AL_CORRENT_PAGAMENT que especifica si una persona o una organització té algun deute amb la seguretat social en el moment de fer la consulta.
@@ -287,7 +284,7 @@ Recuperar el bean del servei de AEAT_ATC_TGSS des de la classe on es vol utilitz
 
 ```java
 @Autowired
-private TgssConnectorImpl tgssConnector;
+private TgssConnector tgssConnector;
 ```
 
 En aquest cas d'exemple es consumirà la modalitat de servei AEAT_ATC_TGSS_CONSULTA_DEUTES que retorna les dades conjuntes de les modalitats següents:

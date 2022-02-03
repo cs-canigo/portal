@@ -1,9 +1,9 @@
 +++
-date        = "2015-03-19T16:01:37+01:00"
+date        = "2021-10-21"
 title       = "Enotum"
 description = "Connector de la Pica que simplifica l'utilització del servei de Notificacions Telemàtiques de la Generalitat."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 5
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 4
 +++
 
 ## Propòsit
@@ -32,17 +32,17 @@ Funcionalitats per al ciutadà:
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul de notificacions electròniques es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul de notificacions electròniques es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.notificacions.electroniques.version>[1.4.0,1.5.0)</canigo.integration.notificacions.electroniques.version>
-
+```xml
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
           <artifactId>canigo.integration.notificacions.electroniques</artifactId>
           <version>${canigo.integration.notificacions.electroniques.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -82,7 +82,7 @@ Propietat                                         | Requerit | Descripció
 
 Els valors de urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-34-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-36/integracio/modul-pica/) per el que també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

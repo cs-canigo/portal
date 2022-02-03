@@ -1,9 +1,9 @@
 +++
-date        = "2015-03-20T12:29:56+01:00"
+date        = "2021-10-21"
 title       = "ICC"
 description = "Serveis de normalització d'adreces de l'Institut Cartogràfic de Catalunya."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 8
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 5
 +++
 
 ## Introducció
@@ -54,22 +54,21 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 #### Requeriments
 
-El connector ICC és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
-
 ### Instal.lació i Configuració
 
 #### Instal.lació
 
 Per tal d'instal-lar el connector ICC es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.icc.version>[1.2.0,1.3.0)</canigo.integration.icc.version>
+```xml
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.icc</artifactId>
     <version>${canigo.integration.icc.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Configuració
 

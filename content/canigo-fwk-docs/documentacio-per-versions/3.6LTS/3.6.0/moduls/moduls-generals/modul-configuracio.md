@@ -1,10 +1,10 @@
 +++
-date        = "2019-03-18T13:55:42+01:00"
+date        = "2021-10-21"
 title       = "Mòdul de configuració"
 description = "Configuracio de les propietats dels components de l'aplicació."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 3
-toc 		= true
+toc 		    = true
 +++
 
 ## Propòsit
@@ -15,14 +15,14 @@ poden ser tant referències a altres objectes com propietats internes
 (atributs) que necessiten per al seu correcte funcionament.
 
 Una de les principals avantatges del mòdul respecte la classe
-[PropertyPlaceholderConfigurer](http://docs.spring.io/spring/docs/4.3.3.RELEASE/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html "Documentacio de Spring")
+[PropertyPlaceholderConfigurer](https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html)
 aportada per Spring, és la possibilitat de disposar de propietats
 dependents d'entorn sense necessitat de cap configuració extra a nivell
 de beans - propietats.
 
 ## Limitacions
 
-Per aplicacions Canigó 3.4 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
+Per aplicacions Canigó 3.6 que utilitzin Spring Boot, el mòdul de configuració presenta les següents limitacions:
 
 * no és compatible amb la càrrega de propietats depenent dels profiles de Spring Boot (spring.profiles.active o SPRING_PROFILES_ACTIVE). Si es vol fer depenent els valors de les propietats segons l'entorn, s'han de seguir les instruccions especificades en aquesta plana.
 
@@ -34,14 +34,11 @@ A la propera versió de Canigó, es preveu deprecar aquest mòdul de configuraci
 
 ## Instal.lació
 
-El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+El mòdul de configuració i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
 En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
 
 ```xml
-<canigo.core.version>[4.0.0,4.1.0)</canigo.core.version>
-<canigo.test.version>[2.0.0,2.1.0)</canigo.test.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.core</artifactId>
@@ -54,16 +51,9 @@ En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'
     <version>${canigo.test.version}</version>
     <scope>test</scope>
 </dependency>
-
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.core</artifactId>
-    <type>test-jar</type>
-    <version>${canigo.core.version}</version>
-    <scope>test</scope>
-    <classifier>tests</classifier>
-</dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul de configuració:
 ```xml
@@ -71,29 +61,16 @@ Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul
     ...
     <plugins>
         ...
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>base-test</id>
-                    <phase>test</phase>
-                    <goals>
-                        <goal>test</goal>
-                    </goals>
-                    <configuration>
-                        <dependenciesToScan>
-                            <dependency>cat.gencat.ctti:canigo.core</dependency>
-                            ...
-                        </dependenciesToScan>
-			<excludes>
-				<exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
-			</excludes>
-                    </configuration>
-                </execution>
-                ...
-            </executions>
-        </plugin>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <dependencies>
+          <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-junit4</artifactId>
+            <version>${maven-surefire-plugin.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
         ...
     </plugins>
     ...
@@ -114,7 +91,7 @@ Aquesta configuració de l'entorn es utilitzada pel servei de configuració per 
 
 ## Configuració propietats en format yaml
 
-A la versió Canigó 3.4 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
+A la versió Canigó 3.6 es proporciona la funcionalitat de càrrega de propietats definides a fitxers yaml
 
 Yaml és un estàndard de format fàcilment llegible que signigica "YAML Ain't Markup Language", per a més informació es pot consultar: https://yaml.org/
 
@@ -677,7 +654,7 @@ Una altre forma de carregar un fitxer de propietas és d'afegir l'annotació @Pr
 
 Indicant el path on es troba aquest fitxer.
 
-Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-documentacio-versions-34-core/modul-seguretat/)
+Un exemple d'aquesta condicionalitat es pot trobar al [servei de seguretat](/canigo-documentacio-versions-36/core/modul-seguretat/)
 
 
 Preguntes freqüents

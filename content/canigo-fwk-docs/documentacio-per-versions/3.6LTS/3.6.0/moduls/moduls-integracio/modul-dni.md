@@ -1,8 +1,8 @@
 +++
-date        = "2015-03-19T17:42:01+01:00"
+date        = "2021-10-21"
 title       = "DNI"
 description = "Servei de verificació i consulta de DNI de la DGP."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 3
 +++
 
@@ -49,9 +49,7 @@ Codi Font : https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 ### Requeriments
 
-El connector DNI és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
-
-Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-34-integracio/modul-pica/) 1.2.0.
+Per tal de que el connector DNI funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/) .
 
 ## Configuració
 
@@ -61,10 +59,7 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 
 En el pom.xml;
 
-```
-<canigo.integration.dni.pica.version>[1.3.0,1.4.0)</canigo.integration.dni.pica.version>
-...
-
+```xml
 <!-- Dependencia del mòdul PICA-DNI -->
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -72,6 +67,8 @@ En el pom.xml;
     <version>${canigo.integration.dni.pica.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/dni.properties amb el següent contingut:
 
@@ -190,7 +187,7 @@ Recuperar el bean del servei de DNI des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
-private DniConnectorImpl dniConnector;
+private DniConnector dniConnector;
 ```
 
 Fer la crida a la modalitat del servei desitjat, p.e.:

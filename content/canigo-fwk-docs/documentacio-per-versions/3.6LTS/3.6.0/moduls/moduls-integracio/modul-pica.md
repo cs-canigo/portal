@@ -1,9 +1,9 @@
 +++
-date        = "2015-03-13T13:40:42+01:00"
+date        = "2021-10-21"
 title       = "PICA"
 description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.laboració Administrativa)."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 10
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 7
 +++
 
 ## Propòsit
@@ -18,15 +18,15 @@ El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a trav�
 
 Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.pica.version>[1.2.0,1.3.0)</canigo.integration.pica.version>
-
+```xml
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
           <artifactId>canigo.integration.pica</artifactId>
           <version>${canigo.integration.pica.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Dependències
 
@@ -315,7 +315,7 @@ Per a més informació respecte l'especificació tècnica i funcional podeu cont
 
 En aquest exemple, els mètodes privats crearFuncionari() i crearTitular() (creats simplement per aquest test) s'encarreguen de setejar les propietats del funcionari que fa la petició i titular sobre el que es fa la petició respectivament. El mètode també privat createDadesEspecifiques() conté una llista de les sol.licituds, en format XML, que s'enviaran dins la petició.
 
-Dins una petició (llista de dades específiques) es poden incloure diverses sol- licituds, els identificadors de les quals han de ser únics dins una mateixa petició. Si volguéssim afegir una altra sol- licitud en l'exemple, només caldria instanciar un nou objecte DadesEspecifiques, amb IdSolicitud="2", un nou StringBuffer amb les dades i afegir-lo a la llista dadesEspecifiquesXML dins del mètode createDadesEspecifiques() de l'exemple.
+Dins una petició (llista de dades específiques) es poden incloure diverses sol·licituds, els identificadors de les quals han de ser únics dins una mateixa petició. Si volguéssim afegir una altra sol- licitud en l'exemple, només caldria instanciar un nou objecte DadesEspecifiques, amb IdSolicitud="2", un nou StringBuffer amb les dades i afegir-lo a la llista dadesEspecifiquesXML dins del mètode createDadesEspecifiques() de l'exemple.
 
 **PicaServiceController.java**  
 

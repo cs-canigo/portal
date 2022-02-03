@@ -1,8 +1,8 @@
 +++
-date        = "2015-04-02T11:06:02+02:00"
+date        = "2021-10-21"
 title       = "Fusió de documents"
 description = "Mòdul de fusió de documents."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 2
 +++
 
@@ -22,15 +22,15 @@ Els marcadors consisteixen en una marca d'inici, un texte-clau i una marca de fi
 
 Per tal d'instal-lar el mòdul de fusió es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.support.merging.version>[1.2.0,1.3.0)</canigo.support.merging.version>
-
+```xml
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.support.merging</artifactId>
     <version>${canigo.support.merging.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

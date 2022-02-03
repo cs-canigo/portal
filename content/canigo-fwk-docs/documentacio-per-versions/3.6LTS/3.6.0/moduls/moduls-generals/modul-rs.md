@@ -1,8 +1,8 @@
 +++
-date        = "2017-03-29T09:26:16+01:00"
+date        = "2021-10-21"
 title       = "Mòdul RS"
 description = "Mòdul RESTful Services"
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 2
 +++
 
@@ -22,14 +22,11 @@ Tot el contingut es serveix en format JSON.
 
 ### Instal·lació
 
-El mòdul RS i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.
+El mòdul RS i el corresponent test unitari s'inclou per defecte dins del core de Canigó 3.6.
 Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
-En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'aplicació:
+En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
 
-```
-<canigo.web.rs.version>[1.1.0,1.2.0)</canigo.web.rs.version>
-<canigo.test.version>[1.2.0,1.3.0)</canigo.test.version>
-
+```xml
 <dependency>
  <groupId>cat.gencat.ctti</groupId>
  <artifactId>canigo.web.rs</artifactId>
@@ -42,51 +39,10 @@ En cas d'una instal- lació manual afegir les següents línies al pom.xml de l'
 	<version>${canigo.test.version}</version>
 	<scope>test</scope>
 </dependency>
-
-<dependency>
-   <groupId>cat.gencat.ctti</groupId>
-   <artifactId>canigo.web.rs</artifactId>
-   <type>test-jar</type>
-   <version>${canigo.web.rs.version}</version>
-   <scope>test</scope>
-   <classifier>tests</classifier>
-</dependency>
 ```
 
-Al pom.xml també s'ha d'afegir el plugin que executa el test unitari del mòdul RS:
-```
-<build>
-    ...
-    <plugins>
-        ...
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <executions>
-                <execution>
-                    <id>base-test</id>
-                    <phase>test</phase>
-                    <goals>
-                        <goal>test</goal>
-                    </goals>
-                    <configuration>
-                        <dependenciesToScan>
-                            <dependency>cat.gencat.ctti:canigo.web.rs</dependency>
-                            ...
-                        </dependenciesToScan>
-			<excludes>
-                            <exclude>%regex[${project.groupId}.*.*Test.*]</exclude>
-			</excludes>
-                    </configuration>
-                </execution>
-                ...
-            </executions>
-        </plugin>
-        ...
-    </plugins>
-    ...
-</build>    
-```
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
 ### Configuració
 
 No necessita cap configuració especial.

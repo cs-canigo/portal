@@ -1,14 +1,14 @@
 +++
-date        = "2015-03-19T17:03:30+01:00"
-title       = "SARCAT"
-description = "Serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 13
+date        = "2021-10-21"
+title       = "Sarcat"
+description = "Serveis que ofereix la plataforma de Sarcat directament."
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 10
 +++
 
 ## Propòsit
 
-Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de Sarcat mitjançant la PICA i el seu connector nadiu. El mòdul permet consumir els serveis oferts pels WebService amb peticions síncrones.
+Aquest mòdul permet consumir els diferents serveis que ofereix la plataforma de Sarcat directament als seus WebService i asincronament a través de SFTP
 
 ## Funcionalitats del connector
 
@@ -36,17 +36,17 @@ llistarTaulaMestra                | Recuperació de codis o valors possibles per
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul de Sarcat es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.integration.sarcat.pica.version>[1.2.0,1.3.0)</canigo.integration.sarcat.pica.version>
-
+```xml
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.sarcat.pica</artifactId>
-    <version>${canigo.integration.sarcat.pica.version}</version>
+    <artifactId>canigo.integration.sarcat</artifactId>
+    <version>${canigo.integration.sarcat.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -54,123 +54,64 @@ La configuració es realitza automàticament a partir de la eina de suport al de
 
 Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/sarcat.properties
 
-Propietat           | Requerit | Descripció
-------------------- | -------- | ----------
-*.sarcat.urlPica	 | Sí       | Url del WebService de Sarcat. Valor per defecte: http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
-*.sarcat.user       | Sí       | Usuari de Sarcat
-*.sarcat.password   | Sí       | Password de l'usuari de Sarcat
-*.sarcat.finalitat  | Sí       | Finalitat de l'ús del servei (TEST, PRODUCTIU...)
-*.sarcat.nifEmisor | Sí       | Nif de l'emissor
-*.sarcat.nomEmisor       | Sí       | Nom de l'emissor
-*.sarcat.nomFuncionari   | Sí       | Nom del funcionari
-*.sarcat.nifFuncionari  | Sí       | Nif del funcionari
-*.sarcat.emailFuncionari  | Sí       | Email del funcionari
-
-Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
-
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-34-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Propietat                              | Requerit | Descripció
+-------------------------------------- | -------- | ----------
+*.sarcat.webservice                     | Sí       | Url del WebService de Sarcat
+*.sarcat.user                   		| No       | Usuari per a l'utilització del WebService de Sarcat
+*.sarcat.password                 		| No       | Password per a l'utilització del WebService de Sarcat
+*.sftp.url                              | No       | Url del SFTP de Sarcat. Obligatori si es vol utilitzar la consulta de Sarcat asincronament
+*.sftp.username                         | No       | Usuari per a l'utilització del SFTP de Sarcat
+*.sftp.password                         | No       | Password per a l'utilització del SFTP de Sarcat
 
 ## Utilització del Mòdul
 
-### REST
+### Exemple d'ús
 
-Per a utilitzar aquest mòdul, cal crear un Controller i un Service:
+Per a l'exemple cridarem directament als WebService de Sarcat des d'un controllador
 
-**SarcatService.java**
+**SARCATController.java**
 
-Controller que publica les operacions disponibles per a qui hagi de consumir-les.
-
-```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Service;
-
-import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.SarcatConnector;
-import cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException;
-import net.gencat.scsp.esquemes.peticion.common.OrdreCerca;
-import net.gencat.scsp.esquemes.peticion.common.TipusAssentament;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca;
-import net.gencat.scsp.esquemes.peticion.consulta.AssentamentCerca.ParametresCerca;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaRequestDocument.SarcatAlConsultaRequest;
-import net.gencat.scsp.esquemes.peticion.consulta.SarcatAlConsultaResponseDocument.SarcatAlConsultaResponse;
-
-@Service("sarcatService")
-@Lazy
-public class SarcatService {
-
-	private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
-
-	@Autowired
-    private SarcatConnector sarcatConnector;
-    
-
-
-	public String testSarcat(){
-		
-		String message;
-
-		try {
-
-            SarcatAlConsultaRequestDocument document = SarcatAlConsultaRequestDocument.Factory.newInstance();
-            SarcatAlConsultaRequest request = document.addNewSarcatAlConsultaRequest();
-
-            AssentamentCerca cerca = request.addNewAssentamentCerca();
-            ParametresCerca params =  cerca.addNewParametresCerca();
-            params.setDataInici("09/03/2011");
-            params.setDataFinal("10/03/2011");
-            cerca.setParametresCerca(params);
-            cerca.setUrUsuari("0001");
-            cerca.setOrdreCerca(OrdreCerca.DATA_ALTA);
-            cerca.setTipus(TipusAssentament.ENTRADA);
-               cerca.setDescendent(true);
-
-            SarcatAlConsultaResponse resposta = sarcatConnector.cercaAssentaments(document).getSarcatAlConsultaResponse();
-
-	        if (resposta.getError().getCodi() != 0) {
-	        	message = "Test amb errors: " + resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio();
-	        	log.error(resposta.getError().getCodi()    + " " + resposta.getError().getDescripcio());
-	        } else {
-	            message = "Test correcte: " + resposta.getAssentamentArray().length;
-	        }
-	
-	    } catch (SarcatException e) {
-	    	message = "Test erròni: " + e.getMessage();
-	        log.error(e.getMessage(), e);
-	    }
-        
-        return message;
-    }
-	
-}
-```
-
-**SarcatServiceController.java**
-
-Controller que publica les operacions disponibles per a qui hagi de consumir-les.
+Endpoint de l'aplicació que publica el servei de Sarcat, en aquest cas, publicarem un servei que realitzará la crida al servei de login
 
 ```java
+	import org.openuri.Login;
+import org.openuri.LoginResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cat.gencat.plantilla32.service.SarcatService;
+import cat.gencat.ctti.canigo.arch.integration.sarcat.exceptions.SarcatException;
+import cat.gencat.ctti.canigo.arch.integration.sarcat.serveis.SarcatServices;
+import es.tsystems.sarcat.schema.login.LoginInfo;
 
 @RestController
 @RequestMapping("/sarcat")
-public class SarcatServiceController {
+public class SARCATController {
 
-	@Autowired
-	SarcatService sarcatService;
+  @Value("${sarcat.user}")
+  private String sarcatUser;
+
+  @Value("${sarcat.password}")
+  private String sarcatPassword;
+
+  /** sarcat services. */
+  @Autowired
+  private SarcatServices sarcatServices;
+
+  @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+  public LoginResponse login() throws SarcatException {
+    Login login = new org.openuri.ObjectFactory().createLogin();
+    LoginInfo logginInfo = new es.tsystems.sarcat.schema.login.ObjectFactory().createLoginInfo();
+    logginInfo.setPassword(sarcatPassword);
+    logginInfo.setUser(sarcatUser);
+    login.setLoginInfo(logginInfo);
+
+    return sarcatServices.login(login);
+  }
 
 
-	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-	public String testSarcat() throws Exception {
-		return sarcatService.testSarcat();
-	}
 }
 ```

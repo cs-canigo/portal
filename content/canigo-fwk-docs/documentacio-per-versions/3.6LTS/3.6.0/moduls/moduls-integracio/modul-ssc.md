@@ -1,9 +1,9 @@
 +++
-date        = "2019-11-29"
+date        = "2021-10-21"
 title       = "Servei de Signatura Centralitzada - SSC"
 description = "Serveis d'accés al Sistema de Signatura Centralitzada de Catcert."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 15
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 12
 +++
 
 ## Introducció
@@ -40,7 +40,7 @@ Els principals serveis que ofereix el connector són els següents:
     * CAdES-BES-PDF: Attached / Detached
     * XAdES-BES: Enveloping / Enveloped / Detached
 
-Actualment el connector de Canigó de la versió 3.4 utilitza el client de SSC versió 1.3.3 
+Actualment el connector de Canigó de la versió 3.6 utilitza el client de SSC versió 1.3.3 
 
 ### Alta Servei
 
@@ -60,13 +60,11 @@ De cara a utilitzar el servei en PRE, els certificats i documentació necessàri
 
 #### Interfícies i Components Genèrics
 
-Si disposa de permís d'accès al repositori del servidor Nexus del SIC, podrà trobar el codi font referent a aquests component a la següent URL: [Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc:18ddeccdfb491ecba6cc83563709cf13).
+Si disposa de permís d'accès al repositori del servidor Nexus del SIC, podrà trobar el codi font referent a aquests component a la següent URL: [Codi Font Connector SSC](https://hudson.intranet.gencat.cat/nexus/#browse/search/maven=attributes.maven2.artifactId%3Dcanigo.integration.ssc).
 
 #### Requeriments
 
-El connector SSC, que utilitza el client 1.3.3 de SSC, està desenvolupat a Canigó 3.4. Canigó 3.4 només és compatible amb versions 1.8 o superior de Java, Spring 5 i Spring Boot 2. El connector SSC, que utilitza el client 1.3.3 de SSC, no és compatible amb versions anteriors de Canigó.
-
-Per a versions 1.8 de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
+Per a versions 1.8 o superior de Java a l'entorn de Preproducció és necessari afegir la següent propietat per habilitar TLSv1.0: 
 ```
 PropertyAllowTls10AsClient=true
 ```
@@ -83,9 +81,11 @@ La instal·lació del connector requereix la utilització de la llibreria 'canig
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.ssc</artifactId>
-    <version>[2.2.0,2.3.0)</version>
+    <version>${canigo.integration.ssc.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 #### Configuració
 
@@ -102,7 +102,7 @@ La instal·lació del connector requereix la utilització de la llibreria 'canig
 	<bean id="sscService" class="cat.gencat.ctti.canigo.arch.integration.ssc.impl.SscConnectorImpl">
 
 		<description>
-			SSC Service for Canigó 3.4
+			SSC Service for Canigó 3.6
 		</description>
 
 		<property name="host" value="${ssc.host}" />

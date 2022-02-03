@@ -1,8 +1,8 @@
 +++
-date        = "2015-04-02T09:44:09+02:00"
+date        = "2021-10-21"
 title       = "SFTP"
 description = "Transferència d'arxius de manera segura."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 4
 +++
 
@@ -39,15 +39,15 @@ Port del servidor habilitat per realitzar la transferència de fitxers/streams m
 
 Per tal d'instal-lar el mòdul d'SFTP es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.support.sftp.version>[1.2.0,1.3.0)</canigo.support.sftp.version>
-
+```xml
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.support.sftp</artifactId>
 	<version>${canigo.support.sftp.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 

@@ -1,8 +1,8 @@
 +++
-date        = "2019-09-17"
+date        = "2021-10-21"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 1
 +++
 
@@ -14,17 +14,35 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[2.2.0,2.3.0)</canigo.integration.antivirus.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.integration.antivirus</artifactId>
     <version>${canigo.integration.antivirus.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
+<div class="message warning">
+
+L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
+
+<br>
+
+El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
+
+<br>
+
+Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
+
+<br>
+
+<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
+
+</div>
 
 ### Configuració
 
@@ -202,3 +220,39 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 			}
 	}
 ```
+## Respostes servei antivirus
+
+L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` és l'encarregat d'interpretar la informació de la resposta del servei de l'antivirus. Aquest objecte conté els mètodes:
+
+- `int getEstat()`: Número enter que representa l’estat de finalització del procés d’escaneig.
+ 
+	o STATUS_OK = 0
+	
+	o STATUS_KO = -1
+	
+	o STATUS_WARN = 1
+
+- `String getMissatge()`: String que emmagatzemarà la informació de les amenaces trobades en el procés d’escaneig. Si no hi hagués cap el seu valor serà null
+
+- `List<InfectionInfo> getArrayVirus()`: Llistat d’objectes InfectionInfo. Aquests objectes representen cada amenaça detectada en l’escaneig. Cada objecte InfectionInfo disposa dels següents camps:
+
+	o String violationId
+	
+	o String violationName
+	
+	o String threadCategory
+	
+	o String fileName
+	
+	o String disposition
+
+El conjunt de dades que retornarà es pot resumir amb el següent quadre:
+
+Cas | Estat | Missatge | ArrayVirus
+--- | ----- | -------- | ----------
+KO | -1 | [string amb la informació del virus] | [LLista d’objetes de tipus InfectionInfo amb informació de les amenaces detectades]
+OK | 0 | null | null
+WARN (No s’ha pogut accedir al fitxer) | 1 | FILE_ACCESS_FAILED | null
+WARN(Error intern al servidor) | 1 | INTERNAL_SERVER_ERROR | null
+WARN(no hi ha llicència disponible) | 1 | NO_AV_LICENSE | null
+WARN(base de dades antivirus caducada) | 1 | Base de dades de la definició de l'antivirus caducada | null

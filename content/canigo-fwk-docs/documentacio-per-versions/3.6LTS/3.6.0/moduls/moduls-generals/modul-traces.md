@@ -1,8 +1,8 @@
 +++
-date        = "2015-03-05T17:11:42+01:00"
+date        = "2021-10-21"
 title       = "Mòdul de traces"
 description = "Mòdul de detecció d'errades i registre de les operacions realitzades a l'aplicació."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 7
 +++
 
@@ -67,8 +67,6 @@ cas d'una instal·lació manual afegir les següents línies al pom.xml de
 l'aplicació:
 
 ```java
-<canigo.core.version>[3.2.0,3.3.0)</canigo.core.version>
-
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
           <artifactId>canigo.core</artifactId>
@@ -76,9 +74,11 @@ l'aplicació:
 </dependency>
 ```
 
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+
 #### Configuració
 
-L'eina de desenvolupament de Canigó 3 genera de manera automàtica els
+L'eina de desenvolupament de Canigó 3.6 genera de manera automàtica els
 diferents arxius de configuració de traces per entorn:
 
 -   log4j2.loc.xml Arxiu de configuració per a entorn locals.
@@ -197,7 +197,7 @@ Utilització del Servei
 
 ### Generar Missatges
 
-Per a generar les traces el framework utilitzat per les aplicacions Canigó 3.2 és SLF4J
+Per a generar les traces el framework utilitzat per les aplicacions Canigó 3.6 és SLF4J
 Per generar una traça en nivell debug tindríem el següent codi:
 
 ```

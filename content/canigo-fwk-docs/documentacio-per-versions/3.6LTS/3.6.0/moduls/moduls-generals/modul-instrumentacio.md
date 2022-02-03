@@ -1,8 +1,8 @@
 +++
-date        = "2016-11-28T10:44:27+01:00"
+date        = "2021-10-21"
 title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de l'aplicació."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 1
 +++
 
@@ -22,14 +22,14 @@ Dins d'aquest mòdul podem trobar les següents funcionalitats:
 Per tal d'instal-lar el mòdul d'instrumentació es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.operation.instrumentation.version>[1.2.0, 1.3.0)</canigo.operation.instrumentation.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.operation.instrumentation</artifactId>
     <version>${canigo.operation.instrumentation.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -56,7 +56,7 @@ Ubicació proposada: <PROJECT_ROOT>/src/main/resources/config/props/instrumentat
 
 ### Utilització del Mòdul
 
-Per a utilitzar aquest mòdul, cal instal- lar-lo amb l'eina de desenvolupament.
+Per a utilitzar aquest mòdul, cal instal·lar-lo amb l'eina de desenvolupament.
 
 A continuació es descriu el mode d'ús per cadascuna de les funcionalitats oferides pel mòdul:
 

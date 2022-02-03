@@ -1,8 +1,8 @@
 +++
-date        = "2015-03-27T10:44:27+01:00"
+date        = "2021-10-21"
 title       = "Administració de logs"
 description = "Mòdul per administrar els logs de l'aplicació"
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 11
 +++
 
@@ -18,28 +18,19 @@ Aquest mòdul permet administrar els logs de l'aplicació proporcionant les seg�
 
 ### Instal·lació
 
-La instal·lació del Mòdul d'Administració de Logs es pot incloure automàticament a través del [Plugin de Canigó per a Eclipse](/related/canigo/howto/Canigo - HowTo - Generacio aplicacio Canigo 3.1 amb plugin Eclipse.pdf), o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Durant el procés de creació de l'aplicació, l'eina de suport al desenvolupament inclourà la referència dins del pom.xml. 
+En cas d'una instal·lació manual afegir les següents línies al pom.xml de l'aplicació:
+
 
 ```
-<canigo.operation.logging.version>[1.1.0,1.2.0)</canigo.operation.logging.version>
-
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
     <artifactId>canigo.operation.logging</artifactId>
     <version>${canigo.operation.logging.version}</version>
 </dependency>
 ```
-Aquest mòdul requereix Java 7, per tant, cal tenir la següent configuració per la compilació amb Maven:
 
-```
-<plugin>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <configuration>
-        <source>1.7</source>
-        <target>1.7</target>
-    </configuration>
-</plugin>
-```
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -107,6 +98,3 @@ Amb el cercador es pot resaltar en groc el text que es desitgi trobar.
 
 Es recomana que aquest mòdul es securitzi per a que només els usuaris amb rol Administrador puguin accedir-hi, tant a la plana html, com als serveis REST del backend proporcionats al mòdul.
 
-### Demo
-
-Des del CS Canigó es proporciona una aplicació de demo d'aquest nou mòdul. Podeu trobar el codi font en el següent [repositori de Github](https://github.com/gencat/demoAdminLogs).

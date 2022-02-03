@@ -1,18 +1,18 @@
 +++
-date        = "2020-05-21"
+date        = "2021-10-21"
 title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 3
 +++
 
 ## Propòsit
 
 El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’execució d'operacions a una base de dades MongoDB.
-Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/)
+Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference)
 i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
-A partir de la versió 3.4 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
+A la versió 3.6 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
 
 ## Instal·lació
 
@@ -20,7 +20,6 @@ Per tal d'instal·lar el mòdul de MongoDB es pot optar per incloure’l automà
 manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 
 ```xml
-    <canigo.persistence.mongodb.version>[2.0.0,2.4.0)</canigo.persistence.mongodb.version>
     <dependency>
       <groupId>cat.gencat.ctti</groupId>
       <artifactId>canigo.persistence.mongodb</artifactId>
@@ -41,6 +40,8 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
       </exclusions>
     </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <br/>
 Caldrà també afegir el _plugin_ que genera les classes per als filtres de [QueryDSL](http://www.querydsl.com/) i
@@ -88,14 +89,6 @@ Si l'aplicació està configurada amb **Spring Boot**, caldrà afegir la següen
           <artifactId>org.springframework.boot</artifactId>
           <groupId>spring-boot-starter-logging</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>mongodb-driver</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>mongo-java-driver</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
       </exclusions>
     </dependency>
 ```
@@ -104,23 +97,17 @@ Si l'aplicació està configurada amb **Spring Boot**, caldrà afegir la següen
 Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir la següent dependència:
 
 ```xml
-    <mongodb.flapdoodle.embed.mongo.version>2.2.0</mongodb.flapdoodle.embed.mongo.version>
-    <mongodb.jirutka.spring.version>1.3.1</mongodb.jirutka.spring.version>
+    <embedmongo-spring.version>1.3.1</embedmongo-spring.version>
     <dependency>
       <groupId>de.flapdoodle.embed</groupId>
       <artifactId>de.flapdoodle.embed.mongo</artifactId>
-      <version>${mongodb.flapdoodle.embed.mongo.version}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>mongo-java-driver</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
-      </exclusions>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>cz.jirutka.spring</groupId>
       <artifactId>embedmongo-spring</artifactId>
-      <version>${mongodb.jirutka.spring.version}</version>
+      <version>${embedmongo-spring.version}</version>
+      <scope>test</scope>
       <exclusions>
         <exclusion>
           <artifactId>mongo-java-driver</artifactId>
@@ -135,23 +122,19 @@ Per a utilitzar les funcionalitats de Mongodb 4.2, serà necessari utilitzar la 
 (https://docs.mongodb.com/drivers/driver-compatibility-reference#java-driver-compatibility) i caldrà afegir la següent dependència:
 
 ```xml
-    <mongodb.driver.core.version>3.12.3</mongodb.driver.core.version>
-    <mongodb.bson.version>3.12.3</mongodb.bson.version>
-    <dependency>
-      <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-core</artifactId>
-      <version>${mongodb.driver.core.version}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>bson</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
+    <mongo-java-driver.version>3.12.10</mongo-java-driver.version>
     <dependency>
       <groupId>org.mongodb</groupId>
       <artifactId>bson</artifactId>
-      <version>${mongodb.bson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongodb-driver-sync</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>${mongo-java-driver.version}</version>
     </dependency>
 ```
 
@@ -159,33 +142,17 @@ Per a utilitzar les funcionalitats de Mongodb 4.2, serà necessari utilitzar la 
 Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
 
 ```xml
-    <mongodb.driver.async.version>3.12.3</mongodb.driver.async.version>
-    <mongodb.reactor.core.version>3.3.4.RELEASE</mongodb.reactor.core.version>
-    <mongodb.reactor.test.version>3.3.3.RELEASE</mongodb.reactor.test.version>
-    <dependency>
+     <dependency>
       <groupId>org.mongodb</groupId>
-      <artifactId>mongodb-driver-async</artifactId>
-      <version>${mongodb.driver.async.version}</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>bson</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>mongodb-driver-core</artifactId>
-          <groupId>org.mongodb</groupId>
-        </exclusion>
-      </exclusions>
+      <artifactId>mongodb-driver-reactivestreams</artifactId>
     </dependency>
     <dependency>
       <groupId>io.projectreactor</groupId>
       <artifactId>reactor-core</artifactId>
-      <version>${mongodb.reactor.core.version}</version>
     </dependency>
     <dependency>
       <groupId>io.projectreactor</groupId>
       <artifactId>reactor-test</artifactId>
-      <version>${mongodb.reactor.test.version}</version>
     </dependency>
 ```
 
@@ -215,7 +182,7 @@ Fitxer: **MongoConfig.java**
 <br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
 
-Cal estendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig** i
+Cal extendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig** i
 es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer,
 podeu afegir també els _listeners_ de les diferents entitats de MongoDB.
 
@@ -224,8 +191,11 @@ Un exemple de configuració seria el següent:
 ```java
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.mongodb.MongoClientOptions;
-import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoEquipamentListener;
+
+import com.mongodb.MongoClientSettings;
+
+import cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig;
 
 /**
  * Class EquipamentMongoConfig.
@@ -234,39 +204,30 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoEquipamen
  */
 @Configuration
 public class EquipamentMongoConfig extends MongoCoreConfig {
-   /** mongo client options. */
-   protected static MongoClientOptions mongoClientOptions;
-   /**
-    * Inicialitza equipament mongo config.
-    */
-   public EquipamentMongoConfig() {
-      super(mongoOptions());
-   }
-   /**
-    * Mongo equipament listener.
-    * @return mongo equipament listener
-    */
-   @Bean
-   public MongoEquipamentListener mongoEquipamentListener() {
-      return new MongoEquipamentListener();
-   }
-   /**
-    * Mongo options.
-    * @return mongo client options
-    */
-   @Bean
-   public static MongoClientOptions mongoOptions() {
-      if (mongoClientOptions == null) {
-         mongoClientOptions = MongoClientOptions.builder().socketTimeout(2000).build();
-      }
-      return mongoClientOptions;
-   }
+
+  /**
+   * Inicialitza equipament mongo config.
+   */
+  public EquipamentMongoConfig() {
+    super(MongoClientSettings.builder().build());
+  }
+
+  /**
+   * Mongo equipament listener.
+   *
+   * @return mongo equipament listener
+   */
+  @Bean
+  public MongoEquipamentListener mongoEquipamentListener() {
+    return new MongoEquipamentListener();
+  }
+
 }
 ```
 
 On s'està redefinint el socket timeout de la connexió a 2000 ms i s'està registrant el listener _cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener_.
 
-Per a més informació sobre les configuracions podeu consultar: http://api.mongodb.com/java/current/com/mongodb/MongoClientOptions.html.
+Per a més informació sobre les configuracions podeu consultar: https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientSettings.html.
 
 ### Reactiu
 
@@ -292,36 +253,28 @@ Un exemple de configuració seria el següent:
 ```java
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import com.mongodb.MongoClientOptions;
-import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoEquipamentListener;
+
+import cat.gencat.demo.mongodb.model.repository.MongoEquipamentListener;
+import cat.gencat.ctti.canigo.arch.persistence.mongodb.config.ReactiveMongoCoreConfig;
 
 /**
  * Class EquipamentReactiveMongoConfig.
+ *
  * @author cscanigo
  */
 @Configuration
 public class EquipamentReactiveMongoConfig extends ReactiveMongoCoreConfig {
-    /** mongo client options. */
-    protected static MongoClientOptions mongoClientOptions;
-    /**
-     * Mongo equipament listener.
-     * @return mongo equipament listener
-     */
-    @Bean
-    public MongoEquipamentListener mongoEquipamentListener() {
-        return new MongoEquipamentListener();
-    }
-    /**
-     * Mongo options.
-     * @return mongo client options
-     */
-    @Bean
-    public static MongoClientOptions mongoOptions() {
-        if (mongoClientOptions == null) {
-            mongoClientOptions = MongoClientOptions.builder().socketTimeout(2000).build();
-        }
-        return mongoClientOptions;
-    }
+
+  /**
+   * Mongo equipament listener.
+   *
+   * @return mongo equipament listener
+   */
+  @Bean
+  public MongoEquipamentListener mongoEquipamentListener() {
+    return new MongoEquipamentListener();
+  }
+
 }
 ```
 
@@ -333,7 +286,7 @@ Per tal de definir les entitats de MongoDB serà necessari utilitzar les _annota
 
 * Package javax.validation: https://docs.oracle.com/javaee/7/api/javax/validation/package-summary.html
 * Package org.springframework.data.annotation: https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
-* Spring Data MongoDB: https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/
+* Spring Data MongoDB: https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference
 
 Un exemple d'entitat seria la següent:
 
@@ -384,6 +337,8 @@ public class MongoEquipament {
 Si es considera necessari, es pot crear un _listener_ a una entitat de Mongo. Un exemple de _listener_ seria el següent:
 
 ```java
+package cat.gencat.demo.mongodb.model.repository;
+
 import java.util.Random;
 import org.springframework.data.mongodb.core.mapping.event.AbstractMongoEventListener;
 import org.springframework.data.mongodb.core.mapping.event.BeforeConvertEvent;
@@ -425,13 +380,16 @@ Un exemple de repositori seria el següent:
  * @author cscanigo
  */
 public interface EquipamentMongoRepository extends MongoGenericRepository<MongoEquipament, Long> {
-    /**
-     * Find by nom query.
-     * @param nom nom
-     * @return list
-     */
-    @Query("{ nom: ?0 }")
-    List<MongoEquipament> findByNomQuery(String nom);
+   
+   /**
+      * Find by nom query.
+      *
+      * @param nom nom
+      * @return list
+      */
+   @Query("{ nom: ?0 }")
+   List<MongoEquipament> queryFindByNom(String nom);
+
     /**
      * Find by nom like.
      * @param nom  nom
@@ -446,68 +404,9 @@ A un repositori es poden crear mètodes per a cada query que es vulgui definir. 
 _find...By, read...By, query...By, count...By_ i _get...By_ i els mètodes poden incorporar la paraula _Distinct_, concatenar propietats
 amb _And_ i _Or_ o descriptors com _OrderBy_ o _IgnoreCase_.
 
-Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/current/reference/html/).
+Per a més informació, podeu consultar la documentació oficial de [Spring Data MongoDB] (https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference).
 
 <br/>
-#### Utilització de QueryDSL
-
-Una de les funcionalitats proposades és la d'utilitzar _QueryDSL_ per a realitzar cerques segons filtres dinàmics, amb paginació i/o ordenació.
-
-<div class="message information">
-QueryDSL està enfocat a bases de dades relacionals. A partir de la versió 3.4 de Canigó s'han deprecat els mètodes de
-"cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository" i es recomana no utilitzar-los.
-</div>
-
-_MongoGenericRepository_ proporciona els següents mètodes:
-
-```java
-   Page<T> findAll(Predicate predicate, Pageable pageable, Path<?>... paths);
-   Page<T> findAll(Predicate predicate, Pageable pageable, List<Path<?>> paths);
-   Page<T> findAll(Predicate predicate, Pageable pageable, FactoryExpression<T> factoryExpression);
-```
-
-Aquests mètodes esperen un objecte _Predicate_ amb la _query_ que es vol realitzar, un objecte _org.springframework.data.domain.Pageable_ que conté
-el número de pàgina (la primera és la 0), el nombre d'elements per pàgina, la direcció d'ordenació i el camp d'ordenació;
-i un objecte _Path_ o _FactoryExpression_ on s'indica la informació de retorn.
-
-Un exemple d'ús seria el següent:
-
-```java
-List<MongoEquipament> mongoEquipamentList = repository.findAll(QMongoEquipament.mongoEquipament.nom.isNotNull().and(QMongoEquipament.mongoEquipament.nom.isNotEmpty())
-                  .and(QMongoEquipament.mongoEquipament.municipi.isNotNull())
-                  .and(QMongoEquipament.mongoEquipament.municipi.isNotEmpty())
-                  .and(QMongoEquipament.mongoEquipament.nom.equalsIgnoreCase("findPaginatedPath")),
-            new PageRequest(0, 10), paths).getContent();
-```
-
-Es poden utilitzar les utilitzats de **cat.gencat.ctti.canigo.arch.persistence.core.querydsl.GenericPredicateBuilder** per a generar el _Predicate_ com per exemple:
-
-```java
-    GenericPredicateBuilder<MongoEquipament> builder = new GenericPredicateBuilder<MongoEquipament>(
-            MongoEquipament.class, "equipament");
-   builder.populateSearchCriteria(filter);
-   Predicate = builder.build();
-```
-
-_String filter_ ha de seguir el patró: **field1Operador1Valor1,field2Operador2Valor2,fieldNOperadorNValorN** on:
-
-- _Field_ és el nom d'una propietat de l'entitat (per exemple “id”)
-- _Operador_ és un dels tipus d'operador suportats
-
-Operador | Descripció
---------- | --------
-> | major que
->: | major o igual que
-< | menor que
-<: | menor o igual que
-<> | diferent de
-: | igual que
-
-- _Valor_ és el valor amb el qual es vol comparar
-
-Per exemple, per a cercar l'entitat que tingui _id_ major que 15 i amb nom igual a “Prova”, el filtre hauria de ser **id>15,nom:Prova**.
-
-Per a més informació podeu consultar la documentació oficial de [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
 ### Reactiu
 
@@ -597,458 +496,266 @@ import cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.EquipamentMong
 
 /**
  * Test cases for the {@link EquipamentMongoRepository}.
+ *
  * @author cscanigo
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public abstract class EquipamentMongoRepositoryCoreTest {
-   protected static final String MUNICIPI_DESC_SORT = Direction.DESC + MongoEquipament.MUNICIPI;
 
-   /** repository. */
-   @Inject
-   private EquipamentMongoRepository repository;
+  /** Constant MUNICIPI_DESC_SORT. */
+  protected static final String MUNICIPI_DESC_SORT = Direction.DESC + MongoEquipament.MUNICIPI;
 
-   /**
-    * Estableix up.
-    */
-   @Before
-   public void setUp() {
-      assertNotNull(repository);
-      repository.deleteAll();
-   }
+  /** repository. */
+  @Inject
+  private EquipamentMongoRepository repository;
 
-   /**
-    * Test 01 CRUD operations.
-    */
-   @Test
-   public void test01CRUDOperations() {
+  /**
+   * Estableix up.
+   */
+  @Before
+  public void setUp() {
+    assertNotNull(repository);
+    repository.deleteAll();
+  }
 
-      // Test if table is empty
-      assertTrue(repository.findAll().isEmpty());
+  /**
+   * Test 01 CRUD operations.
+   */
+  @Test
+  public void test01CRUDOperations() {
 
-      // Test save
-      MongoEquipament mongoEquipament = new MongoEquipament();
-      mongoEquipament.setNom("CAP La Pau");
-      mongoEquipament.setMunicipi("Barcelona");
+    // Test if table is empty
+    assertTrue(repository.findAll().isEmpty());
+
+    // Test save
+    MongoEquipament mongoEquipament = new MongoEquipament();
+    mongoEquipament.setNom("CAP La Pau");
+    mongoEquipament.setMunicipi("Barcelona");
+    repository.save(mongoEquipament);
+
+    // Test insert and recover
+    MongoEquipament mongoEquipament2 = new MongoEquipament();
+    mongoEquipament2.setNom("CAP Santa Coloma");
+    repository.save(mongoEquipament2);
+
+    Optional<MongoEquipament> equipament3Optional = repository.findById(mongoEquipament2.getId());
+    assertTrue(equipament3Optional.isPresent());
+
+    MongoEquipament equipament3 = equipament3Optional.get();
+    assertEquals(mongoEquipament2.getId(), equipament3.getId());
+    assertEquals("CAP Santa Coloma", equipament3.getNom());
+
+    BooleanExpression predicate = QMongoEquipament.mongoEquipament.municipi.eq(mongoEquipament.getMunicipi());
+
+    Optional<MongoEquipament> equipament4Optional = repository.findOne(predicate);
+    assertTrue(equipament4Optional.isPresent());
+
+    Iterable<MongoEquipament> equipament5Iterable = repository.findAll(predicate);
+    assertTrue(equipament5Iterable.iterator().hasNext());
+
+    OrderSpecifier<String> orderSpecifier = new OrderSpecifier<>(com.querydsl.core.types.Order.ASC,
+        QMongoEquipament.mongoEquipament.nom);
+
+    Iterable<MongoEquipament> equipament6Iterable = repository.findAll(predicate, orderSpecifier);
+    assertTrue(equipament6Iterable.iterator().hasNext());
+
+    // Test delete all
+    repository.deleteAll();
+    assertTrue(repository.findAll().isEmpty());
+
+  }
+
+  /**
+   * Test 02 multiple CRUD.
+   */
+  @Test
+  public void test02MultipleCRUD() {
+    List<MongoEquipament> list = new ArrayList<>();
+
+    MongoEquipament mongoEquipament1 = new MongoEquipament();
+    MongoEquipament mongoEquipament2 = new MongoEquipament();
+    MongoEquipament mongoEquipament3 = new MongoEquipament();
+
+    list.add(mongoEquipament1);
+    list.add(mongoEquipament2);
+    list.add(mongoEquipament3);
+
+    // Test save
+    mongoEquipament1.setNom("equipament1");
+    mongoEquipament2.setNom("equipament2");
+    mongoEquipament3.setNom("equipament3");
+    repository.saveAll(list);
+    assertEquals(list.size(), repository.findAll().size());
+
+    // Test update
+    mongoEquipament1.setNom("equipament1 updated!");
+    mongoEquipament2.setNom("equipament2 updated!");
+    mongoEquipament3.setNom("equipament3 updated!");
+    repository.saveAll(list);
+    assertEquals(list.size(), repository.findAll().size());
+
+    List<MongoEquipament> elsMeusEquipaments = repository.findAll();
+    assertEquals(mongoEquipament1.getId(), elsMeusEquipaments.get(0).getId());
+    assertEquals(mongoEquipament1.getNom(), elsMeusEquipaments.get(0).getNom());
+    assertEquals(mongoEquipament2.getId(), elsMeusEquipaments.get(1).getId());
+    assertEquals(mongoEquipament2.getNom(), elsMeusEquipaments.get(1).getNom());
+    assertEquals(mongoEquipament3.getId(), elsMeusEquipaments.get(2).getId());
+    assertEquals(mongoEquipament3.getNom(), elsMeusEquipaments.get(2).getNom());
+
+    // Test no exception launched
+    repository.saveAll(new ArrayList<MongoEquipament>());
+  }
+
+  /**
+   * Test 03 nom not null.
+   */
+  @Test
+  public void test03NomNotNull() {
+    MongoEquipament mongoEquipament = new MongoEquipament();
+    mongoEquipament.setNom(null);
+    try {
       repository.save(mongoEquipament);
+    } catch (ConstraintViolationException e) {
+      Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+      assertEquals(1, violations.size());
+      @SuppressWarnings("rawtypes")
+      ConstraintViolation violation = violations.iterator().next();
+      assertEquals("MongoEquipament's nom must not be null", violation.getMessageTemplate());
+    }
+  }
 
-      // Test insert and recover
-      MongoEquipament mongoEquipament2 = new MongoEquipament();
-      mongoEquipament2.setNom("CAP Santa Coloma");
-      repository.save(mongoEquipament2);
+  /**
+   * Test 04 find by nom query.
+   */
+  @Test
+  public void test04FindByNomQuery() {
+    String text = "findByNomQuery";
+    MongoEquipament mongoEquipament = new MongoEquipament();
+    mongoEquipament.setNom(text);
+    mongoEquipament.setMunicipi(text);
+    repository.save(mongoEquipament);
 
-      Optional<MongoEquipament> equipament3Optional = repository.findById(mongoEquipament2.getId());
-      assertTrue(equipament3Optional.isPresent());
+    List<MongoEquipament> mongoEquipamentList = repository.queryFindByNom(text);
 
-      MongoEquipament equipament3 = equipament3Optional.get();
-      assertEquals(mongoEquipament2.getId(), equipament3.getId());
-      assertEquals("CAP Santa Coloma", equipament3.getNom());
+    assertNotNull(mongoEquipamentList);
+    assertTrue(mongoEquipamentList.size() == 1);
+  }
 
-      BooleanExpression predicate = QMongoEquipament.mongoEquipament.municipi.eq(mongoEquipament.getMunicipi());
+  /**
+   * Test 05 find by nom like.
+   */
+  @Test
+  public void test05FindByNomLike() {
+    String like = "Like";
+    String text = "findByNom" + like;
+    MongoEquipament mongoEquipament = new MongoEquipament();
+    mongoEquipament.setNom(text);
+    mongoEquipament.setMunicipi(text);
+    repository.save(mongoEquipament);
 
-      Optional<MongoEquipament> equipament4Optional = repository.findOne(predicate);
-      assertTrue(equipament4Optional.isPresent());
+    List<MongoEquipament> mongoEquipamentList = repository.findByNomLike(like, null);
 
-      Iterable<MongoEquipament> equipament5Iterable = repository.findAll(predicate);
-      assertTrue(equipament5Iterable.iterator().hasNext());
+    assertNotNull(mongoEquipamentList);
+    assertTrue(mongoEquipamentList.size() == 1);
+  }
 
-      OrderSpecifier<String> orderSpecifier = new OrderSpecifier<>(com.querydsl.core.types.Order.ASC,
-            QMongoEquipament.mongoEquipament.nom);
+  /**
+   * Test 08 find null paginated.
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void test06FindNullPaginated() {
+    PageRequest nullPage = null;
+    repository.findAll(nullPage);
+  }
 
-      Iterable<MongoEquipament> equipament6Iterable = repository.findAll(predicate, orderSpecifier);
-      assertTrue(equipament6Iterable.iterator().hasNext());
-
-      // Test delete all
-      repository.deleteAll();
-      assertTrue(repository.findAll().isEmpty());
-
-   }
-
-   /**
-    * Test 02 multiple CRUD.
-    */
-   @Test
-   public void test02MultipleCRUD() {
-      List<MongoEquipament> list = new ArrayList<>();
-
-      MongoEquipament mongoEquipament1 = new MongoEquipament();
-      MongoEquipament mongoEquipament2 = new MongoEquipament();
-      MongoEquipament mongoEquipament3 = new MongoEquipament();
-
-      list.add(mongoEquipament1);
-      list.add(mongoEquipament2);
-      list.add(mongoEquipament3);
-
-      // Test save
-      mongoEquipament1.setNom("equipament1");
-      mongoEquipament2.setNom("equipament2");
-      mongoEquipament3.setNom("equipament3");
-      repository.saveAll(list);
-      assertEquals(list.size(), repository.findAll().size());
-
-      // Test update
-      mongoEquipament1.setNom("equipament1 updated!");
-      mongoEquipament2.setNom("equipament2 updated!");
-      mongoEquipament3.setNom("equipament3 updated!");
-      repository.saveAll(list);
-      assertEquals(list.size(), repository.findAll().size());
-
-      List<MongoEquipament> elsMeusEquipaments = repository.findAll();
-      assertEquals(mongoEquipament1.getId(), elsMeusEquipaments.get(0).getId());
-      assertEquals(mongoEquipament1.getNom(), elsMeusEquipaments.get(0).getNom());
-      assertEquals(mongoEquipament2.getId(), elsMeusEquipaments.get(1).getId());
-      assertEquals(mongoEquipament2.getNom(), elsMeusEquipaments.get(1).getNom());
-      assertEquals(mongoEquipament3.getId(), elsMeusEquipaments.get(2).getId());
-      assertEquals(mongoEquipament3.getNom(), elsMeusEquipaments.get(2).getNom());
-
-      // Test no exception launched
-      repository.saveAll(new ArrayList<MongoEquipament>());
-   }
-
-   /**
-    * Test 03 nom not null.
-    */
-   @Test
-   public void test03NomNotNull() {
+  /**
+   * Test 09 find paginated factory expression.
+   */
+  @Test
+  public void test07FindPaginatedFactoryExpression() {
+    String text = "findPaginatedProjeccio";
+    for (int i = 0; i < 20; i++) {
       MongoEquipament mongoEquipament = new MongoEquipament();
-      mongoEquipament.setNom(null);
-      try {
-         repository.save(mongoEquipament);
-      } catch (ConstraintViolationException e) {
-         Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
-         assertEquals(1, violations.size());
-         @SuppressWarnings("rawtypes")
-         ConstraintViolation violation = violations.iterator().next();
-         assertEquals("MongoEquipament's nom must not be null", violation.getMessageTemplate());
-      }
-   }
-
-   /**
-    * Test 04 find by nom query.
-    */
-   @Test
-   public void test04FindByNomQuery() {
-      String text = "findByNomQuery";
-      MongoEquipament mongoEquipament = new MongoEquipament();
-      mongoEquipament.setNom(text);
-      mongoEquipament.setMunicipi(text);
+      mongoEquipament.setNom(text + i);
+      mongoEquipament.setMunicipi(text + i);
       repository.save(mongoEquipament);
+    }
 
-      List<MongoEquipament> mongoEquipamentList = repository.findByNomQuery(text);
+    Integer page = 1;
+    Integer rpp = 10;
+    String sort = MUNICIPI_DESC_SORT;
+    String filter = null;
 
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(1));
-   }
+    List<MongoEquipament> mongoEquipamentList = findPaginatedFactoryExpression(page, rpp, sort, filter).getContent();
 
-   /**
-    * Test 05 find by nom like.
-    */
-   @Test
-   public void test05FindByNomLike() {
-      String like = "Like";
-      String text = "findByNom" + like;
-      MongoEquipament mongoEquipament = new MongoEquipament();
-      mongoEquipament.setNom(text);
-      mongoEquipament.setMunicipi(text);
-      repository.save(mongoEquipament);
+    assertNotNull(mongoEquipamentList);
+    assertTrue(mongoEquipamentList.size() == rpp);
+  }
 
-      List<MongoEquipament> mongoEquipamentList = repository.findByNomLike(like, null);
+  /**
+   * Obté predicate.
+   *
+   * @param filter filter
+   * @return predicate
+   */
+  private Predicate getPredicate(String filter) {
+    GenericPredicateBuilder<MongoEquipament> builder = new GenericPredicateBuilder<>(MongoEquipament.class,
+        "equipament");
+    builder.populateSearchCriteria(filter);
+    return builder.build();
+  }
 
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(1));
-   }
+  /**
+   * Find paginated factory expression.
+   *
+   * @param page   page
+   * @param rpp    rpp
+   * @param sort   sort
+   * @param filter filter
+   * @return page
+   */
+  protected Page<MongoEquipament> findPaginatedFactoryExpression(final Integer page, final Integer rpp,
+      final String sort, final String filter) {
+    Predicate predicate = getPredicate(filter);
 
-   /**
-    * Test 06 find all paginated path.
-    */
-   @Test
-   public void test06FindAllPaginatedPath() {
-      String text = "findPaginatedPath";
-      MongoEquipament mongoEquipament = new MongoEquipament();
-      mongoEquipament.setNom(text);
-      mongoEquipament.setMunicipi(text);
-      repository.save(mongoEquipament);
+    Pageable pageable = PageRequest.of(page - 1, rpp, getOrdenacio(sort));
 
-      Path<?>[] paths = { QMongoEquipament.mongoEquipament.id, QMongoEquipament.mongoEquipament.nom,
-            QMongoEquipament.mongoEquipament.municipi };
+    if (predicate != null && pageable != null) {
+      return repository.findAll(predicate, pageable);
+    } else if (pageable != null) {
+      return repository.findAll(pageable);
+    } else {
+      return null;
+    }
 
-      @SuppressWarnings("deprecation")
-      List<MongoEquipament> mongoEquipamentList = repository.findAll(
-            QMongoEquipament.mongoEquipament.nom.isNotNull().and(QMongoEquipament.mongoEquipament.nom.isNotEmpty())
-                  .and(QMongoEquipament.mongoEquipament.municipi.isNotNull())
-                  .and(QMongoEquipament.mongoEquipament.municipi.isNotEmpty())
-                  .and(QMongoEquipament.mongoEquipament.nom.equalsIgnoreCase(text)),
-            new PageRequest(0, 10), paths).getContent();
+  }
 
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(1));
-   }
+  /**
+   * Obté ordenacio.
+   *
+   * @param sort sort
+   * @return ordenacio
+   */
+  private Sort getOrdenacio(String sort) {
+    List<Order> orders = new ArrayList<>();
 
-   /**
-    * Test 07 find paginated paths.
-    */
-   @Test
-   public void test07FindPaginatedPaths() {
-      String text = "findPaginatedPaths";
-      for (int i = 0; i < 20; i++) {
-         MongoEquipament mongoEquipament = new MongoEquipament();
-         mongoEquipament.setNom(text + i);
-         mongoEquipament.setMunicipi(text + i);
-         repository.save(mongoEquipament);
+    if (sort != null && !sort.equals("")) {
+      String[] fields = sort.split(",");
+
+      for (int i = 0; i < fields.length; i++) {
+        char direction = fields[i].charAt(0);
+        if (Character.toString(direction).equals("-")) {
+          // Order descendente
+          String value = fields[i].substring(1);
+          orders.add(new Order(Direction.DESC, value));
+        } else {
+          // Orden ascendente
+          orders.add(new Order(Direction.ASC, fields[i]));
+        }
       }
-
-      Integer page = 1;
-      Integer rpp = 10;
-      String sort = MUNICIPI_DESC_SORT;
-      String filter = null;
-      String fields = MongoEquipament.ID + "," + MongoEquipament.NOM + "," + MongoEquipament.MUNICIPI;
-
-      List<MongoEquipament> mongoEquipamentList = findPaginatedPaths(page, rpp, sort, filter, fields).getContent();
-
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(rpp));
-   }
-
-   /**
-    * Test 08 find paginated path id.
-    */
-   @Test
-   public void test08FindPaginatedPathId() {
-      String text = "findPaginatedPathId";
-      for (int i = 0; i < 20; i++) {
-         MongoEquipament mongoEquipament = new MongoEquipament();
-         mongoEquipament.setNom(text + i);
-         mongoEquipament.setMunicipi(text + i);
-         repository.save(mongoEquipament);
-      }
-
-      Integer page = 1;
-      Integer rpp = 10;
-      String sort = MUNICIPI_DESC_SORT;
-      String filter = "*";
-
-      List<MongoEquipament> mongoEquipamentList = findPaginatedPathId(page, rpp, sort, filter).getContent();
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(rpp));
-
-      @SuppressWarnings("deprecation")
-      Page<MongoEquipament> mongoEquipamentPage = repository
-            .findAll(new PageRequest(page - 1, rpp, getOrdenacio(sort)));
-      assertThat(mongoEquipamentPage, notNullValue());
-
-      List<MongoEquipament> mongoEquipamentSortList = repository.findAll(getOrdenacio(sort));
-      assertThat(mongoEquipamentSortList, notNullValue());
-
-      List<MongoEquipament> mongoEquipamentQSortList = repository.findAll(QSort
-            .by(new OrderSpecifier<>(com.querydsl.core.types.Order.ASC, QMongoEquipament.mongoEquipament.nom)));
-      assertThat(mongoEquipamentQSortList, notNullValue());
-
-      QSort nullSort = null;
-      List<MongoEquipament> mongoEquipamentNullSortList = repository.findAll(nullSort);
-      assertThat(mongoEquipamentNullSortList, notNullValue());
-
-   }
-
-   /**
-    * Test 08 find null paginated.
-    */
-   @Test(expected = IllegalArgumentException.class)
-   public void test08FindNullPaginated() {
-      PageRequest nullPage = null;
-      repository.findAll(nullPage);
-   }
-
-   /**
-    * Test 09 find paginated factory expression.
-    */
-   @Test
-   public void test09FindPaginatedFactoryExpression() {
-      String text = "findPaginatedProjeccio";
-      for (int i = 0; i < 20; i++) {
-         MongoEquipament mongoEquipament = new MongoEquipament();
-         mongoEquipament.setNom(text + i);
-         mongoEquipament.setMunicipi(text + i);
-         repository.save(mongoEquipament);
-      }
-
-      Integer page = 1;
-      Integer rpp = 10;
-      String sort = MUNICIPI_DESC_SORT;
-      String filter = null;
-      String fields = MongoEquipament.ID + "," + MongoEquipament.MUNICIPI;
-
-      List<MongoEquipament> mongoEquipamentList = findPaginatedFactoryExpression(page, rpp, sort, filter, fields)
-            .getContent();
-
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(rpp));
-   }
-
-   /**
-    * Test 10 find paginated paths filtered.
-    */
-   @Test
-   public void test10FindPaginatedPathsFiltered() {
-      String text = "findPaginatedPaths";
-      for (int i = 0; i < 20; i++) {
-         MongoEquipament mongoEquipament = new MongoEquipament();
-         mongoEquipament.setNom(text + i);
-         mongoEquipament.setMunicipi(text + i);
-         repository.save(mongoEquipament);
-      }
-      Integer page = 1;
-      Integer rpp = 10;
-      String sort = MUNICIPI_DESC_SORT;
-      String filter = MongoEquipament.MUNICIPI + ":" + text + "0";
-      String fields = MongoEquipament.ID + "," + MongoEquipament.MUNICIPI;
-
-      List<MongoEquipament> mongoEquipamentList = findPaginatedPaths(page, rpp, sort, filter, fields).getContent();
-
-      assertThat(mongoEquipamentList, notNullValue());
-      assertThat(mongoEquipamentList, hasSize(1));
-   }
-
-   /**
-    * Find paginated paths.
-    * @param page
-    *            page
-    * @param rpp
-    *            rpp
-    * @param sort
-    *            sort
-    * @param filter
-    *            filter
-    * @param fields
-    *            fields
-    * @return page
-    */
-   @SuppressWarnings("deprecation")
-   protected Page<MongoEquipament> findPaginatedPaths(final Integer page, final Integer rpp, final String sort,
-         final String filter, final String fields) {
-      Predicate predicate = getPredicate(filter);
-      Pageable pageable = new PageRequest(page - 1, rpp, getOrdenacio(sort));
-      List<Path<?>> listFields = getListFields(fields);
-      return repository.findAll(predicate, pageable, listFields);
-   }
-
-   /**
-    * Obté list fields.
-    * @param fields
-    *            fields
-    * @return list fields
-    */
-   private List<Path<?>> getListFields(String fields) {
-      QMongoEquipament qmongoequipament = QMongoEquipament.mongoEquipament;
-      List<Path<?>> listFields = new ArrayList<>();
-      if (fields != null && !fields.equals("")) {
-         String[] selectedFields = fields.split(",");
-         for (int i = 0; i < selectedFields.length; i++) {
-            switch (selectedFields[i]) {
-            case MongoEquipament.ID:
-               listFields.add(qmongoequipament.id);
-               break;
-            case MongoEquipament.NOM:
-               listFields.add(qmongoequipament.nom);
-               break;
-            case MongoEquipament.MUNICIPI:
-               listFields.add(qmongoequipament.municipi);
-               break;
-
-            default:
-               break;
-            }
-         }
-      }
-      return listFields;
-   }
-
-   /**
-    * Obté predicate.
-    * @param filter
-    *            filter
-    * @return predicate
-    */
-   private Predicate getPredicate(String filter) {
-      GenericPredicateBuilder<MongoEquipament> builder = new GenericPredicateBuilder<>(MongoEquipament.class,
-            "equipament");
-      builder.populateSearchCriteria(filter);
-      return builder.build();
-   }
-
-   /**
-    * Find paginated path id.
-    * @param page
-    *            page
-    * @param rpp
-    *            rpp
-    * @param sort
-    *            sort
-    * @param filter
-    *            filter
-    * @return page
-    */
-   @SuppressWarnings("deprecation")
-   protected Page<MongoEquipament> findPaginatedPathId(final Integer page, final Integer rpp, final String sort,
-         final String filter) {
-      Predicate predicate = getPredicate(filter);
-      Pageable pageable = new PageRequest(page - 1, rpp, getOrdenacio(sort));
-      return repository.findAll(predicate, pageable, QMongoEquipament.mongoEquipament.id);
-   }
-
-   /**
-    * Find paginated factory expression.
-    * @param page
-    *            page
-    * @param rpp
-    *            rpp
-    * @param sort
-    *            sort
-    * @param filter
-    *            filter
-    * @param fields
-    *            fields
-    * @return page
-    */
-   @SuppressWarnings("deprecation")
-   protected Page<MongoEquipament> findPaginatedFactoryExpression(final Integer page, final Integer rpp,
-         final String sort, final String filter, final String fields) {
-      Predicate predicate = getPredicate(filter);
-
-      Pageable pageable = new PageRequest(page - 1, rpp, getOrdenacio(sort));
-
-      List<Path<?>> listFields = getListFields(fields);
-
-      Expression<Object>[] arrayExpression = listFields.toArray(new Expression[0]);
-
-      return repository.findAll(predicate, pageable, Projections.bean(MongoEquipament.class, arrayExpression));
-   }
-
-   /**
-    * Obté ordenacio.
-    * @param sort
-    *            sort
-    * @return ordenacio
-    */
-   @SuppressWarnings("deprecation")
-   private Sort getOrdenacio(String sort) {
-      List<Order> orders = new ArrayList<>();
-
-      if (sort != null && !sort.equals("")) {
-         String[] fields = sort.split(",");
-
-         for (int i = 0; i < fields.length; i++) {
-            char direction = fields[i].charAt(0);
-            if (Character.toString(direction).equals("-")) {
-               // Order descendente
-               String value = fields[i].substring(1);
-               orders.add(new Order(Direction.DESC, value));
-            } else {
-               // Orden ascendente
-               orders.add(new Order(Direction.ASC, fields[i]));
-            }
-         }
-      }
-      return new Sort(orders);
-   }
+    }
+    return Sort.by(orders);
+  }
 }
 ```
 
@@ -1087,27 +794,174 @@ public MongoClient mongoClient()
 Un exemple de configuració per a _Embeded MongoDB_ seria el següent:
 
 ```java
+import java.io.IOException;
+
+import com.mongodb.MongoException;
+import com.mongodb.client.MongoClient;
+
 /**
  * Class EquipamentEmbeddedMongoConfig.
+ *
  * @author cscanigo
  */
 public class EquipamentEmbeddedMongoConfig extends EquipamentMongoConfig {
-   /**
-    * Mongo client.
-    * @return mongo client
-    */
-   @Override
-   public MongoClient mongoClient() {
-      if (mongo == null) {
-         EmbeddedMongoFactoryBean embeddedMongoFactoryBean = new EmbeddedMongoFactoryBean();
-         try {
-            mongo = embeddedMongoFactoryBean.getObject();
-         } catch (IOException e) {
-            throw MongoException.fromThrowable(e);
-         }
+
+  /**
+   * Mongo client.
+   *
+   * @return mongo client
+   */
+  @Override
+  public MongoClient mongoClient() {
+
+    EmbeddedMongoFactoryBean embeddedMongoFactoryBean = new EmbeddedMongoFactoryBean();
+    if (mongo == null) {
+      try {
+        mongo = embeddedMongoFactoryBean.getObject();
+      } catch (IOException e) {
+        throw MongoException.fromThrowable(e);
       }
-      return mongo;
-   }
+    }
+    return mongo;
+  }
+
+}
+```
+
+```java
+import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
+/**
+ * Class EmbeddedReactorMongoFactoryBean.
+ *
+ * @author cscanigo
+ */
+public class EmbeddedMongoFactoryBean extends EmbeddedBaseMongoFactoryBean<MongoClient> {
+
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedMongoFactoryBean.class);
+
+  /**
+   * Obté object.
+   *
+   * @return object
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  @Override
+  public synchronized MongoClient getObject() throws IOException {
+    if (mongodExecutable == null) {
+      LOG.info("Starting embedded MongoDB instance");
+      initMongoServer();
+    }
+    return MongoClients.create(EMBEDDED_TEST_URI);
+  }
+
+  /**
+   * Obté object type.
+   *
+   * @return object type
+   */
+  @Override
+  public Class<?> getObjectType() {
+    return MongoClient.class;
+  }
+
+}
+```
+
+```java
+import java.io.IOException;
+import java.net.InetAddress;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.FactoryBean;
+
+import de.flapdoodle.embed.mongo.MongodExecutable;
+import de.flapdoodle.embed.mongo.MongodProcess;
+import de.flapdoodle.embed.mongo.MongodStarter;
+import de.flapdoodle.embed.mongo.config.MongodConfig;
+import de.flapdoodle.embed.mongo.config.Net;
+import de.flapdoodle.embed.mongo.distribution.IFeatureAwareVersion;
+import de.flapdoodle.embed.mongo.distribution.Version;
+import de.flapdoodle.embed.process.runtime.Network;
+
+/**
+ * Class EmbeddedBaseMongoFactoryBean.
+ *
+ * @author cscanigo
+ * @param <E> the element type
+ */
+public abstract class EmbeddedBaseMongoFactoryBean<E> implements FactoryBean<E>, DisposableBean {
+
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedBaseMongoFactoryBean.class);
+
+  /** version. */
+  private static final IFeatureAwareVersion version = Version.Main.V4_0;
+
+  /** Constant EMBEDDED_HOST. */
+  protected static final String EMBEDDED_HOST = InetAddress.getLoopbackAddress().getHostAddress();
+
+  /** Constant EMBEDDED_PORT. */
+  protected static final int EMBEDDED_PORT = getPort();
+
+  /** Constant EMBEDDED_TEST_URI. */
+  protected static final String EMBEDDED_TEST_URI = "mongodb://" + EMBEDDED_HOST + ":" + EMBEDDED_PORT + "/canigo";
+
+  /** mongod executable. */
+  protected static MongodExecutable mongodExecutable;
+
+  /** mongo process. */
+  protected static MongodProcess mongoProcess;
+
+  /**
+   * Destroy.
+   *
+   * @throws Exception exception
+   */
+  @Override
+  public void destroy() throws Exception {
+    if (mongodExecutable != null) {
+      LOG.info("Stopping embedded MongoDB instance");
+      mongodExecutable.stop();
+      mongoProcess.stop();
+    }
+  }
+
+  /**
+   * Inicialitza mongo server.
+   *
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  protected synchronized void initMongoServer() throws IOException {
+    MongodConfig mongodConfig = MongodConfig.builder().version(version)
+        .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).build();
+
+    mongodExecutable = MongodStarter.getDefaultInstance().prepare(mongodConfig);
+    mongoProcess = mongodExecutable.start();
+  }
+
+  /**
+   * Obté port.
+   *
+   * @return port
+   */
+  protected static int getPort() {
+    try {
+      return Network.getFreeServerPort();
+    } catch (IOException ex) {
+      LOG.error("Needed free port");
+      return 27017;
+    }
+  }
 }
 ```
 
@@ -1177,78 +1031,88 @@ Per a més informació, podeu consultar la documentació oficial de [Embeded Mon
 Definirem els següents tests:
 
 ```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import org.junit.Before;
+import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
+
+import cat.gencat.demo.mongodb.model.MongoEquipament;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+import reactor.test.StepVerifier;
+
 /**
  * Class EquipamentReactiveMongoRepositoryCoreTest.
+ *
  * @author cscanigo
  */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public abstract class EquipamentReactiveMongoRepositoryCoreTest {
-    /** repository. */
-    @Inject
-    EquipamentReactiveMongoRepository repository;
-    /**
-     * Estableix up.
-     */
-    @Before
-    public void setUp() {
-        assertNotNull(repository);
-        repository.deleteAll();
-    }
-    /**
-     * Test 1 CRUD operations.
-     */
-    @Test
-    public void test1CRUDOperations() {
+  /** repository. */
+  @Inject
+  EquipamentReactiveMongoRepository repository;
+  
+  /**
+   * Estableix up.
+   */
+  @Before
+  public void setUp() {
+    assertNotNull(repository);
+    repository.deleteAll();
+  }
 
-        // Test if table is empty
-        Flux<MongoEquipament> mongoEquipamentInitialContent = repository.findAll();
-        List<MongoEquipament> mongoEquipamentList = new ArrayList<>();
-        mongoEquipamentInitialContent.subscribe(mongoEquipamentList::add);
-        assertTrue(mongoEquipamentList.isEmpty());
+  /**
+   * Test 1 CRUD operations.
+   */
+  @Test
+  public void test1CRUDOperations() {
+    
+    // Test if table is empty
+    Flux<MongoEquipament> mongoEquipamentInitialContent = repository.deleteAll().thenMany(repository.findAll());
+    List<MongoEquipament> mongoEquipamentList = new ArrayList<>();
+    mongoEquipamentInitialContent.subscribe(mongoEquipamentList::add);
+    assertTrue(mongoEquipamentList.isEmpty());
 
-        StepVerifier
-        .create(mongoEquipamentInitialContent)
-        .expectNextCount(0)
-        .expectComplete()
-        .verify();
+    StepVerifier.create(mongoEquipamentInitialContent).expectNextCount(0).expectComplete().verify();
 
-        // Test save
-        MongoEquipament mongoEquipament = new MongoEquipament();
-        mongoEquipament.setNom("CAP La Pau");
-        mongoEquipament.setMunicipi("Barcelona");
-        Mono<MongoEquipament> mongoEquipamentMono = repository.save(mongoEquipament);
-        mongoEquipament = mongoEquipamentMono.block(Duration.ofMinutes(1L));
-        assertNotNull(mongoEquipament.getId());
+    // Test save
+    MongoEquipament mongoEquipament = new MongoEquipament();
+    mongoEquipament.setNom("CAP La Pau");
+    mongoEquipament.setMunicipi("Barcelona");
+    Mono<MongoEquipament> mongoEquipamentMono = repository.save(mongoEquipament);
+    mongoEquipament = mongoEquipamentMono.block(Duration.ofMinutes(1L));
+    assertNotNull(mongoEquipament.getId());
 
-        // Test insert and recover
-        MongoEquipament mongoEquipament2 = new MongoEquipament();
-        mongoEquipament2.setNom("CAP Santa Coloma");
-        Mono<MongoEquipament> mongoEquipament2Mono = repository.save(mongoEquipament2);
-        mongoEquipament2 = mongoEquipament2Mono.block(Duration.ofMinutes(1L));
-        assertNotNull(mongoEquipament2.getId());
+    // Test insert and recover
+    MongoEquipament mongoEquipament2 = new MongoEquipament();
+    mongoEquipament2.setNom("CAP Santa Coloma");
+    Mono<MongoEquipament> mongoEquipament2Mono = repository.save(mongoEquipament2);
+    mongoEquipament2 = mongoEquipament2Mono.block(Duration.ofMinutes(1L));
+    assertNotNull(mongoEquipament2.getId());
 
-        Flux<MongoEquipament> mongoEquipamentFinalContent = repository.findAll();
+    Flux<MongoEquipament> mongoEquipamentFinalContent = repository.findAll();
 
-        StepVerifier
-        .create(mongoEquipamentFinalContent)
-        .expectNextCount(2)
-        .expectComplete()
-        .verify();
+    StepVerifier.create(mongoEquipamentFinalContent).expectNextCount(2).expectComplete().verify();
 
-        Mono<MongoEquipament> mongoEquipament3Mono = repository.findById(mongoEquipament2.getId());
-        assertThat(mongoEquipament3Mono.block().getMunicipi(),
-                equalTo(mongoEquipament2.getMunicipi()));
+    Mono<MongoEquipament> mongoEquipament3Mono = repository.findById(mongoEquipament2.getId());
+    assertEquals(mongoEquipament2.getMunicipi(), mongoEquipament3Mono.block().getMunicipi());
 
-        // Test delete all
-        repository.deleteAll();
+    // Test delete all
+    repository.deleteAll();
+    Mono<Boolean> existsById = repository.existsById(mongoEquipament2.getId());
+    StepVerifier.create(existsById).expectNext(true).expectComplete().verify();
 
-        Mono<Boolean> existsById = repository.existsById(mongoEquipament2.getId());
-        StepVerifier
-        .create(existsById)
-        .expectNext(true)
-        .expectComplete()
-        .verify();
-    }
+  }
 }
 ```
 
@@ -1317,112 +1181,138 @@ public class EquipamentEmbeddedReactiveMongoConfig extends EquipamentReactiveMon
 
 ```java
 import java.io.IOException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.mongodb.reactivestreams.client.MongoClient;
+import com.mongodb.reactivestreams.client.MongoClients;
+
+/**
+ * Class EmbeddedReactorMongoFactoryBean.
+ *
+ * @author cscanigo
+ */
+public class EmbeddedReactiveMongoFactoryBean extends EmbeddedBaseMongoFactoryBean<MongoClient> {
+
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedReactiveMongoFactoryBean.class);
+
+  /**
+   * Obté object.
+   *
+   * @return object
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  @Override
+  public synchronized MongoClient getObject() throws IOException {
+    if (mongodExecutable == null) {
+      LOG.info("Starting embedded MongoDB instance");
+      initMongoServer();
+    }
+    return MongoClients.create(EMBEDDED_TEST_URI);
+  }
+
+  /**
+   * Obté object type.
+   *
+   * @return object type
+   */
+  @Override
+  public Class<?> getObjectType() {
+    return MongoClient.class;
+  }
+
+}
+```
+
+```java
+import java.io.IOException;
 import java.net.InetAddress;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.FactoryBean;
-import com.mongodb.reactivestreams.client.MongoClient;
-import com.mongodb.reactivestreams.client.MongoClients;
-import de.flapdoodle.embed.mongo.Command;
+
 import de.flapdoodle.embed.mongo.MongodExecutable;
 import de.flapdoodle.embed.mongo.MongodProcess;
 import de.flapdoodle.embed.mongo.MongodStarter;
-import de.flapdoodle.embed.mongo.config.IMongodConfig;
-import de.flapdoodle.embed.mongo.config.MongodConfigBuilder;
+import de.flapdoodle.embed.mongo.config.MongodConfig;
 import de.flapdoodle.embed.mongo.config.Net;
-import de.flapdoodle.embed.mongo.config.RuntimeConfigBuilder;
+import de.flapdoodle.embed.mongo.distribution.IFeatureAwareVersion;
 import de.flapdoodle.embed.mongo.distribution.Version;
-import de.flapdoodle.embed.process.config.IRuntimeConfig;
 import de.flapdoodle.embed.process.runtime.Network;
 
 /**
- * Class EmbeddedReactiveMongoFactoryBean.
+ * Class EmbeddedBaseMongoFactoryBean.
  *
  * @author cscanigo
+ * @param <E> the element type
  */
-public class EmbeddedReactiveMongoFactoryBean implements FactoryBean<MongoClient>, DisposableBean {
+public abstract class EmbeddedBaseMongoFactoryBean<E> implements FactoryBean<E>, DisposableBean {
 
-    /** Constant LOG. */
-    private static final Logger LOG = LoggerFactory.getLogger(EmbeddedReactiveMongoFactoryBean.class);
+  /** Constant LOG. */
+  private static final Logger LOG = LoggerFactory.getLogger(EmbeddedBaseMongoFactoryBean.class);
 
-    /** Constant EMBEDDED_HOST. */
-    private static final String EMBEDDED_HOST = InetAddress.getLoopbackAddress().getHostAddress();
+  /** version. */
+  private static final IFeatureAwareVersion version = Version.Main.V4_0;
 
-    /** Constant EMBEDDED_PORT. */
-    private static final int EMBEDDED_PORT = getPort();
+  /** Constant EMBEDDED_HOST. */
+  protected static final String EMBEDDED_HOST = InetAddress.getLoopbackAddress().getHostAddress();
 
-    /** Constant EMBEDDED_TEST_URI. */
-    private static final String EMBEDDED_TEST_URI = "mongodb://" + EMBEDDED_HOST + ":" + EMBEDDED_PORT + "/canigo";
+  /** Constant EMBEDDED_PORT. */
+  protected static final int EMBEDDED_PORT = getPort();
 
-    /** mongod executable. */
-    private static MongodExecutable mongodExecutable;
+  /** Constant EMBEDDED_TEST_URI. */
+  protected static final String EMBEDDED_TEST_URI = "mongodb://" + EMBEDDED_HOST + ":" + EMBEDDED_PORT + "/canigo";
 
-    /** mongo process. */
-    private static MongodProcess mongoProcess;
+  /** mongod executable. */
+  protected static MongodExecutable mongodExecutable;
 
-    /**
-     * Obté object.
-     * @return object
-     * @throws IOException senyala que una excepció I/O s'ha produït.
-     */
-    @Override
-    public synchronized MongoClient getObject() throws IOException {
-        if (mongodExecutable == null) {
-            LOG.info("Starting embedded MongoDB instance");
-            initMongoServer();
-        }
-        return MongoClients.create(EMBEDDED_TEST_URI);
+  /** mongo process. */
+  protected static MongodProcess mongoProcess;
+
+  /**
+   * Destroy.
+   *
+   * @throws Exception exception
+   */
+  @Override
+  public void destroy() throws Exception {
+    if (mongodExecutable != null) {
+      LOG.info("Stopping embedded MongoDB instance");
+      mongodExecutable.stop();
+      mongoProcess.stop();
     }
+  }
 
-    /**
-     * Destroy.
-     *
-     * @throws Exception exception
-     */
-    @Override
-    public void destroy() throws Exception {
-        if (mongodExecutable != null) {
-            LOG.info("Stopping embedded MongoDB instance");
-            mongodExecutable.stop();
-            mongoProcess.stop();
-        }
-    }
+  /**
+   * Inicialitza mongo server.
+   *
+   * @throws IOException senyala que una excepció I/O s'ha produït.
+   */
+  protected synchronized void initMongoServer() throws IOException {
+    MongodConfig mongodConfig = MongodConfig.builder().version(version)
+        .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).build();
 
-    /**
-     * Obté object type.
-     * @return object type
-     */
-    @Override
-    public Class<?> getObjectType() {
-        return MongoClient.class;
-    }
+    mongodExecutable = MongodStarter.getDefaultInstance().prepare(mongodConfig);
+    mongoProcess = mongodExecutable.start();
+  }
 
-    /**
-     * Inicialitza mongo server.
-     * @throws IOException senyala que una excepció I/O s'ha produït.
-     */
-    private synchronized void initMongoServer() throws IOException {
-        final IMongodConfig mongodConfig = new MongodConfigBuilder().version(Version.Main.V4_0)
-                .net(new Net(EMBEDDED_HOST, EMBEDDED_PORT, Network.localhostIsIPv6())).configServer(false).build();
-        final IRuntimeConfig runtimeConfig = new RuntimeConfigBuilder().defaults(Command.MongoD).build();
-        final MongodStarter runtime = MongodStarter.getInstance(runtimeConfig);
-        mongodExecutable = runtime.prepare(mongodConfig);
-        mongoProcess = mongodExecutable.start();
+  /**
+   * Obté port.
+   *
+   * @return port
+   */
+  protected static int getPort() {
+    try {
+      return Network.getFreeServerPort();
+    } catch (IOException ex) {
+      LOG.error("Needed free port");
+      return 27017;
     }
-
-    /**
-     * Obté port.
-     * @return port
-     */
-    private static int getPort() {
-        try {
-            return Network.getFreeServerPort();
-        } catch (IOException ex) {
-            LOG.error("Needed free port");
-            return 27017;
-        }
-    }
+  }
 }
 ```
 

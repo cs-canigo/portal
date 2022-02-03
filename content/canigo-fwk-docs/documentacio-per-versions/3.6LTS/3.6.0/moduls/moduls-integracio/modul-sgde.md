@@ -1,9 +1,9 @@
 +++
-date        = "2015-03-20T13:27:55+01:00"
+date        = "2021-10-21"
 title       = "SGDE"
 description = "Servei de Gestió del Document Electrònic."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 14
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 11
 +++
 
 ## Introducció
@@ -68,12 +68,14 @@ Aquest connector ofereix els següents serveis:
 
 ### Alta Servei
 
-Per poder utilitzar l'SGDE s'ha d'estar donat d'alta en el servei. Per poder fer-ho s'han d'enviar un mail a oficina-tecnica.canigo.ctti@gencat.cat sol.licitant l'alta a qualsevol de les plataformes que integren el SGDE:
+Per poder utilitzar l'SGDE s'ha d'estar donat d'alta en el servei. Per contactar amb l'[Oficina tècnica de SGDE](/cs/sgde) per sol·licitar l'alta als seus serveis:
 
 * Plataforma Adobe: El mail a de contenir la sol·licitud d'alta a l'aplicació d'AutoServei disponible [aqui](/related/SGDE/formulari-alta-plataforma-adobe.xls "Formulari d'alta plataforma Adobe del SGDE").
 * STD: El mail ha de redactar-se tal qual es descriu en el manual d'usuari del servei. Aquest mail ha de contenir una plantilla degudament complimentada que es pot trobar aquí.
     1. El Centre de Frameworks i Solucions d'Arquitectura respondrà a aquest mail una vegada doni d'alta l'aplicació amb un mail tipus,
     2. L'alta a qualsevol de les dues plataformes s'han de realitzar primer sobre l'entorn de PRE i posteriorment a l'entorn de PRO.
+
+
 
 ### Arquitectura i Components
 
@@ -83,12 +85,6 @@ Es pot trobar el codi font referent a aquest components a la següent url:
 
 Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-group-maven2/cat/gencat/ctti/canigo.integration.sgde/
 
-#### Requeriments
-
-El connector SGDE és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
-
-El seu ús esta certificat per funcionar correctament en servidors d'aplicacions WL11g i Tomcat6.x.
-
 ### Instal.lació i Configuració
 
 #### Instal.lació
@@ -97,14 +93,14 @@ La instal.lació del connector requereix de la utilització de la llibreria 'can
 
 Per afegir aquesta dependència s'ha de modificar el pom.xml de l'aplicació per incloure les llibreries del Connector.
 
-```
+```xml
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.integration.sgde</artifactId>
-	<version>[1.3.0,1.4.0)</version>
 </dependency>
-
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 IMPORTANT
 

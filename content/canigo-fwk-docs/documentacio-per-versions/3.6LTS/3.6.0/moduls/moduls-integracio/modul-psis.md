@@ -1,9 +1,9 @@
 +++
-date        = "2015-03-05T17:11:42+01:00"
+date        = "2021-10-21"
 title       = "PSIS"
 description = "Validació de Signatures electròniques mitjançant els serveis de PSIS oferts per CatCert."
-sections    = "Canigó. Documentació Versió 3.4"
-weight      = 11
+sections    = "Canigó. Documentació Versió 3.6"
+weight      = 8
 +++
 
 ## Propòsit
@@ -17,14 +17,14 @@ Aquest mòdul permet la validació de Signatures electròniques mitjançant els 
 Per tal d'instal- lar el mòdul de PSIS es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```xml
-<canigo.integration.psis.version>[1.2.0,1.3.0)</canigo.integration.psis.version>
-
 <dependency>
           <groupId>cat.gencat.ctti</groupId>
           <artifactId>canigo.integration.psis</artifactId>
           <version>${canigo.integration.psis.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -44,7 +44,7 @@ Propietat          | Requerit | Descripció
 
 Els valors de finalitat, urlPica, nifEmisor i nomEmisor s'han de consultar a la OT PICA en requeridors.otpica.ctti@gencat.cat
 
-Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-34-integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
+Aquest mòdul és dependent del [mòdul de la PICA] (/canigo-documentacio-versions-36/integracio/modul-pica/) amb lo qual també s'ha de configurar aquest.
 
 ## Utilització del Mòdul
 

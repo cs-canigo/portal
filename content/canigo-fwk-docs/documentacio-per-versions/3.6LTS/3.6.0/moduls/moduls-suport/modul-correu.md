@@ -1,8 +1,8 @@
 +++
-date        = "2015-03-27T12:45:04+01:00"
+date        = "2021-10-21"
 title       = "Correu"
 description = "Enviament de correu electrònic."
-sections    = "Canigó. Documentació Versió 3.4"
+sections    = "Canigó. Documentació Versió 3.6"
 weight      = 1
 +++
 
@@ -24,15 +24,15 @@ Versions i Dependències
 
 Per tal d'instal-lar el mòdul d'enviament de correu es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
-```
-<canigo.support.mailing.version>[1.3.0,1.4.0)</canigo.support.mailing.version>
-
+```xml
 <dependency>
 	<groupId>cat.gencat.ctti</groupId>
 	<artifactId>canigo.support.mailing</artifactId>
 	<version>${canigo.support.mailing.version}</version>
 </dependency>
 ```
+
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -60,7 +60,7 @@ Propietat                | Requerit | Valor Defecte | Descripció
 
 ### Directe
 
-A la versió 1.3.0 del mòdul s'ha creat la interfície `cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService` seguint l'especificació *Fluent Builder*, proporcionant més flexibilitat i claredat en la definició dels paràmetres.
+A partir de la versió 1.3.0 del mòdul s'ha creat la interfície `cat.gencat.ctti.canigo.arch.support.mailing.FluentMailService` seguint l'especificació *Fluent Builder*, proporcionant més flexibilitat i claredat en la definició dels paràmetres.
 Un exemple d'ús directe és el següent:
 
 ```java
