@@ -1,12 +1,12 @@
 +++
-date        = "2020-06-16"
+date        = "2021-12-17"
 title       = "Documentació"
-description = "Documentació canigo.integration.avisosalertes.pica 2.3.0"
+description = "Documentació canigo.integration.avisosalertes.pica 2.3.4"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
-## Propòsit
+### Propòsit
 
 L’objectiu d’aquest connector és el de proporcionar accés als serveis d’enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA.
 

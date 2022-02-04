@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-09-09"
 title       = "Llistat de canvis"
 description = "Llistat de canvis canigo.integration.avisosalertes.pica 2.3.1"
 sections    = "canigo-fwk-docs"
