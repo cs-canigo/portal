@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-17"
 title       = "Sarcat"
 description = "Serveis que ofereix la plataforma de Sarcat directament."
 sections    = "Canigó. Documentació Versió 3.6"

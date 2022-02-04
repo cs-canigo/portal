@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-17"
 title       = "DNI"
 description = "Servei de verificació i consulta de DNI de la DGP."
 sections    = "Canigó. Documentació Versió 3.6"

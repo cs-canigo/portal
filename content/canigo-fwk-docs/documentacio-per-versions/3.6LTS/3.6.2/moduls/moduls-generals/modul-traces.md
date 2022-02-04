@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-17"
 title       = "Mòdul de traces"
 description = "Mòdul de detecció d'errades i registre de les operacions realitzades a l'aplicació."
 sections    = "Canigó. Documentació Versió 3.6"

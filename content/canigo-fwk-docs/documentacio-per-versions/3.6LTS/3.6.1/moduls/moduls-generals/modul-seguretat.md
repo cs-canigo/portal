@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-13"
 title       = "Mòdul Seguretat"
 description = "Autenticació i autorització d'usuaris"
 sections    = "Canigó. Documentació Versió 3.6"

@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-13"
 title       = "ARESTA (PSGD)"
 description = "Plataforma de Serveis de Gestió Documental"
 sections    = "Canigó. Documentació Versió 3.6"

@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-13"
 title       = "Mòdul MongoDB"
 description = "Mòdul de persistència de Base de Dades per MongoDB."
 sections    = "Canigó. Documentació Versió 3.6"

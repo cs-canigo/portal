@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-11-01"
 title       = "Mongodb reactiu"
 description = "Com configurar aplicació Canigó 3.6 per utilitzar mongo db reactiu"
 sections    = "Canigó. Documentació Versió 3.6"

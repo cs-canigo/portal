@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-27"
+date        = "2021-12-13"
 title       = "Compatibilitat servidors"
 description = "Compatibilitat servidors Canigó 3.6.1"
 sections    = "canigo-fwk-docs"

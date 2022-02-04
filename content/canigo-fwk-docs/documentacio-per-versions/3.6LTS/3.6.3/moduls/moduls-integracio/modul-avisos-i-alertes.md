@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-27"
 title       = "Avisos i  alertes"
 description = "Serveisd'enviament de SMS i CORREU del CTTI a través del servei AVISALERT de la PICA."
 sections    = "Canigó. Documentació Versió 3.6"

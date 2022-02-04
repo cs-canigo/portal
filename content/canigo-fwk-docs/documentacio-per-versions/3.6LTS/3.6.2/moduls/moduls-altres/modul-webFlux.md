@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-17"
 title       = "WebFlux"
 description = "Com configurar aplicació Canigó 3.6 per utilitzar WebFlux"
 sections    = "Canigó. Documentació Versió 3.6"

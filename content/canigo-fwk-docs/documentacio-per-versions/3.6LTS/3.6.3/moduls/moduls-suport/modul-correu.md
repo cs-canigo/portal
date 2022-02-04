@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-27"
 title       = "Correu"
 description = "Enviament de correu electrònic."
 sections    = "Canigó. Documentació Versió 3.6"

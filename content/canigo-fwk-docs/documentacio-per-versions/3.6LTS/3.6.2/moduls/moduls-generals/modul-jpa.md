@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2021-12-17"
 title       = "Mòdul JPA"
 description = "Mòdul de persistència de Base de Dades."
 sections    = "Canigó. Documentació Versió 3.6"

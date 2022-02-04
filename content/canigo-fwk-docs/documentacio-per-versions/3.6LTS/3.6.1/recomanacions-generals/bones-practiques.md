@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-16"
+date        = "2021-12-13"
 title       = "Bones pràctiques"
 description = "Bones pràctiques Canigó 3.6.1"
 sections    = "canigo-fwk-docs"
