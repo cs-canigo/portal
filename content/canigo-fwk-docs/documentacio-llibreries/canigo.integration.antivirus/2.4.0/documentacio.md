@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-25"
+date        = "2020-06-16"
 title       = "Documentació"
 description = "Documentació canigo.integration.antivirus 2.4.0"
 sections    = "canigo-fwk-docs"
