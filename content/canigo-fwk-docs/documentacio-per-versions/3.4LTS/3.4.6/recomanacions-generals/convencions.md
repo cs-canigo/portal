@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-16"
+date        = "2021-05-11"
 title       = "Convencions"
 description = "Convencions Canigó 3.4.6"
 sections    = "canigo-fwk-docs"

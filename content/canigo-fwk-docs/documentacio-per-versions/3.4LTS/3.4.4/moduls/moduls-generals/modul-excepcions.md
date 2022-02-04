@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-12T16:50:25+01:00"
+date        = "2020-06-16"
 title       = "Mòdul d'excepcions"
 description = "Mòdul per a la gestió d'Errors"
 sections    = "Canigó. Documentació Versió 3.4"

@@ -1,5 +1,5 @@
 +++
-date        = "2020-04-01"
+date        = "2021-12-17"
 title       = "GECAT"
 description = "Utilització del connector al sistema SAP del Gecat"
 sections    = "Canigó. Documentació Versió 3.4"

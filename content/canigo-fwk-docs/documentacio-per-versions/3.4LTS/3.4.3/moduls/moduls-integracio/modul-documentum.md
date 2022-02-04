@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-27"
+date        = "2020-03-26"
 title       = "Documentum"
 description = "Accés al gestor documental corporatiu del CTTI."
 sections    = "Canigó. Documentació Versió 3.4"

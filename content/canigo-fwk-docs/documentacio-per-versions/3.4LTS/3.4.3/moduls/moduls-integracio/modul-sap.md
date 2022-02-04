@@ -1,5 +1,5 @@
 +++
-date        = "2020-03-27"
+date        = "2020-03-26"
 title       = "SAP"
 description = "Interfície d'accés als Backends SAP de la Generalitat."
 sections    = "Canigó. Documentació Versió 3.4"

@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T10:28:07+01:00"
+date        = "2021-12-17"
 title       = "Padró"
 description = "Serveis d'empadronament publicats de la plataforma PICA."
 sections    = "Canigó. Documentació Versió 3.4"

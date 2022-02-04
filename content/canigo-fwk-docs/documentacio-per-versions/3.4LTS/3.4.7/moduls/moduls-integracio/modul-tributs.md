@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T09:09:23+01:00"
+date        = "2021-12-13"
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
 sections    = "Canigó. Documentació Versió 3.4"

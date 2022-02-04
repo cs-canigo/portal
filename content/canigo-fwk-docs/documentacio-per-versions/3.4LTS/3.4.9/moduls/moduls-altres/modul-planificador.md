@@ -1,5 +1,5 @@
 +++
-date = "2015-04-02T12:49:43+02:00"
+date = "2021-12-27"
 title       = "Planificador de tasques"
 description = "Planificador de tasques"
 sections    = "Canigó. Documentació Versió 3.4"

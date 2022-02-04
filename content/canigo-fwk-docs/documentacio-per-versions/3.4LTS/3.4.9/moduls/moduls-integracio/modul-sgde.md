@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-20T13:27:55+01:00"
+date        = "2021-12-27"
 title       = "SGDE"
 description = "Servei de Gestió del Document Electrònic."
 sections    = "Canigó. Documentació Versió 3.4"

@@ -1,5 +1,5 @@
 +++
-date        = "2017-03-29T09:26:16+01:00"
+date        = "2020-03-26"
 title       = "Mòdul RS"
 description = "Mòdul RESTful Services"
 sections    = "Canigó. Documentació Versió 3.4"

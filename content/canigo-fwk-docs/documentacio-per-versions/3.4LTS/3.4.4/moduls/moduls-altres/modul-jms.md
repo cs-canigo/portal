@@ -1,5 +1,5 @@
 +++
-date        = "2015-04-02T13:14:36+02:00"
+date        = "2020-06-16"
 title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
 sections    = "Canigó. Documentació Versió 3.4"

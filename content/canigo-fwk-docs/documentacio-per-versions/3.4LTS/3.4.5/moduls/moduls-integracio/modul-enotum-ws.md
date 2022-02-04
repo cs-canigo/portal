@@ -1,5 +1,5 @@
 +++
-date        = "2015-03-19T16:19:20+01:00"
+date        = "2020-09-16"
 title       = "Enotum_WS"
 description = "Notificacions electròniques Web Service."
 sections    = "Canigó. Documentació Versió 3.4"

@@ -1,5 +1,5 @@
 +++
-date        = "2019-03-18T13:55:42+01:00"
+date        = "2021-12-17"
 title       = "Mòdul de configuració"
 description = "Configuracio de les propietats dels components de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.4"

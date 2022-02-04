@@ -1,5 +1,5 @@
 +++
-date        = "2019-12-16"
+date        = "2020-03-26"
 title       = "Error llibreria javassist amb Canigó 3.x i Weblogic"
 description = "Conflicte de versions de la llibreria javassist amb Canigó 3.x i Weblogic"
 sections    = "Canigó. Documentació Versió 3.4"

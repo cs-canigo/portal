@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-09-16"
 title       = "Guies d'ús (HowTOs)"
 description = "Guies d'ús (HowTOs) 3.4.5"
 sections    = "canigo-fwk-docs"

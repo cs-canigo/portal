@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-27"
+date        = "2020-09-16"
 title       = "Dependències externes"
 description = "Dependències externes Canigó 3.4.5"
 sections    = "canigo-fwk-docs"

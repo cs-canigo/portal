@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-03-26"
 title       = "Migració versió anterior"
 description = "Migració de versió 3.4.2 a Canigó 3.4.3"
 sections    = "canigo-fwk-docs"

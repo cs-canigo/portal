@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-06-16"
 title       = "Màquina virtual 3.0.5"
 description = "Màquina virtual 3.0.5 Canigó 3.4.4"
 sections    = "canigo-fwk-docs"

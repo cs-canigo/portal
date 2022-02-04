@@ -1,5 +1,5 @@
 +++
-date        = "2015-04-02T14:36:52+02:00"
+date        = "2020-06-16"
 title       = "Proves"
 description = "Proves unitàries"
 sections    = "Canigó. Documentació Versió 3.4"
