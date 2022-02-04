@@ -8,5 +8,9 @@ weight		= 2
 
 ## Llistat de canvis versió 5.0.0
 
-- [Revisió de regles SonarQube als mòduls _core_](/noticies/2020-06-09-Revisio_regles_SonarQube_moduls_core/)
-   - S'han revisat i resolt els problemes detectats per les regles de SonarQube als mòduls _core_ de Canigó.
+- [Actualització de tecnologies base](/noticies/2021-10-25-CAN-actualitzacio-canigo-3_6_0/)
+   - Actualització a Java 11, Spring 5.3, Spring Boot 2.5
+   - Actualització dels clients dels mòduls d'integració amb Serveis Web Soap
+   - Actualització versió Swagger
+   - Actualització versió dependències
+   - Actualització versió plugins
