@@ -1,7 +1,7 @@
 +++
 date        = "2022-02-02"
 title       = "SIC. Desplegament de productes al SIC 3.0"
-description = "El SIC 3.0 permet dur a terme el desplegament en contenidors de productes empaquetats externament."
+description = "El SIC 3.0 permet dur a terme el desplegament en contenidors de productes a partir d’imatges existents en registres públics."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "FEBRER2022"
