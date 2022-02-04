@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-03-26"
 title       = "Llistat de canvis"
 description = "Llistat de canvis canigo.integration.icc.datatypes 2.2.0"
 sections    = "canigo-fwk-docs"
