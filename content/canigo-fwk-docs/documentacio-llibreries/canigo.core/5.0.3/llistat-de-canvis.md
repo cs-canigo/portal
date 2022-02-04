@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2022-12-27"
 title       = "Llistat de canvis"
 description = "Llistat de canvis canigo.core 5.0.3"
 sections    = "canigo-fwk-docs"
