@@ -1,6 +1,6 @@
 +++
 date        = "2022-01-18"
-title       = "SIC. .NET Core al SIC 3.0"
+title       = "SIC. NET Core al SIC 3.0"
 description = "A partir del 27/01/2022 es passa a donar cobertura a la construcció i desplegament d’aplicacions .NET Core al SIC 3.0."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
