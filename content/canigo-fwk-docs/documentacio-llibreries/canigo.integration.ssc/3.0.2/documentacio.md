@@ -1,7 +1,7 @@
 +++
-date        = "2021-05-11"
+date        = "2021-12-17"
 title       = "Documentació"
-description = "Documentació canigo.integration.ssc 2.4.2"
+description = "Documentació canigo.integration.ssc 3.0.2"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
