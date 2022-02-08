@@ -12,7 +12,6 @@ categories  = ["SIC"]
 [**SonarQube**](https://docs.sonarqube.org/9.2/) **és una eina que serveix per a detectar bugs, vulnerabilitats i defectes en el codi**,
 i ha estat l'eina escollida per l'Oficina de Qualitat de CTTI per a analitzar el codi de les aplicacions i definir quines són les
 condicions mínimes perquè una aplicació es consideri vàlida, és a dir, les Quality gates de codi.
-Per a més informació: [Portal de Qualitat](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
 Aquesta eina es troba **actualment integrada al SIC 2.0** dins de l'etapa d' `Anàlisi estàtic de codi` a totes les pipelines de construcció i
 desplegament d'aplicacions, de forma que, un cop finalitzada amb èxit la construcció del/s arteface/s, es fa l'anàlisi de codi,
