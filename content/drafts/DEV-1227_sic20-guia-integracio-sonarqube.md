@@ -26,7 +26,7 @@ Per a més informació: [Portal de Qualitat](https://qualitat.solucions.gencat.c
 
 El SIC incorpora un **nou *Stage* a totes les pipelines de construcció i desplegament d’aplicacions** de forma que
 aquest s’encarrega de, un cop finalitzada amb èxit la construcció del/s artefacte/s,
-fer l’anàlisi i comprovació de la quality gate de codi, i realitzar l’enviament de l’informe a SonarQube.
+fer l’anàlisi i comprovació de les quality gates de codi, i realitzar l’enviament de l’informe a SonarQube.
 
 ![Stage AEC](/related/sic/2.0/aec_stage.png)
 <br/>
@@ -52,10 +52,10 @@ El sistema s'encarrega de fer l’enviament amb el client SonarScanner més adeq
 - `MSBUILD`: per a projectes que utilitzen MSBuild
 - `GENERIC`: per a projectes que utilitzen NPM, projectes PHP, PL/SQL i d'altres
 
-Per defecte, l’enviament es fa utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte en base a la
+Per defecte, l’enviament es farà utilitzant el client de SonarScanner adient i s'aplicaran paràmetres per defecte d'acord amb la
 classificació del pas de construcció (*step*) configurat al [fitxer ACA](/sic-welcome-pack/fitxer-aca/) repositat al codi
 font dels projectes i que origina la generació de les pipelines al SIC.
-Podeu veure que, com a novetat, es permet incloure una secció *analysis* on es pot redefinir el sistema d’enviament
+Podeu veure que, com a novetat, es permet incloure una secció `analysis` on es pot redefinir el sistema d’enviament
 per a escollir una modalitat més adequada, per exemple, per a salvar limitacions conegudes com les següents:
 
 - Els projectes mavenitzats han d'empaquetar-se amb una versió mínima de Maven.
@@ -80,7 +80,7 @@ En el següent enllaç, podeu trobar alguns [exemples pràctics per a personalit
 El canal de contacte dependrà de l'àmbit del dubte o problema:
 
 - Si es localitza en la configuració i accessos a l’eina SonarQube o la configuració de les
-Quality Gates, haureiu de tractar-ho amb el responsable de qualitat del vostre lot d'aplicacions. Si el dubte o problema no s’ha resolt,
+Quality Gates, haureu de tractar-ho amb el responsable de qualitat del vostre lot d'aplicacions. Si el dubte o problema no s’ha resolt,
 caldrà que el responsable de qualitat del vostre lot es posi en contacte amb l'Oficina de Qualitat mitjançant la
 bústia [qualitat.solucions@gencat.cat](mailto:qualitat.solucions@gencat.cat).
 
