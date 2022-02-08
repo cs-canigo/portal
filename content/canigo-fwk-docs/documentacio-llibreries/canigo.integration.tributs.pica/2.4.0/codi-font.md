@@ -1,5 +1,5 @@
 +++
-date        = "2020-12-12"
+date        = "2020-09-09"
 title       = "Codi font"
 description = "Codi font canigo.integration.tributs.pica 2.4.0"
 sections    = "canigo-fwk-docs"

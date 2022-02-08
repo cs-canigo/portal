@@ -1,5 +1,5 @@
 +++
-date        = "2020-06-25"
+date        = "2021-11-05"
 title       = "Documentació"
 description = "Documentació canigo.integration.tributs.pica 2.4.1"
 sections    = "canigo-fwk-docs"
