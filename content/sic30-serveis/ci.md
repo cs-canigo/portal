@@ -274,7 +274,6 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |Versió .NET Core|Versió MSBuild|
 |-------|-------|
 |3.1|16.7|
-|5.0|16.11|
 
 <!---
 ### Maven/JDK

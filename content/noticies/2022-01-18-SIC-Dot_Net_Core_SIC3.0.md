@@ -27,7 +27,8 @@ repositori d'artefactes del SIC.
 * Desplegar aplicacions .NET Core en plataformes de contenidors.
 
 <br/>
-Les **versions de .NET Core suportades actualment són v.3.1 i v.5.0**.
+La **versió de .NET Core suportada actualment és la v.3.1** i s'anirà donant cobertura a noves versions d'acord amb el
+[Full de ruta de programari de CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions).
 
 <br/>
 Per a construir una aplicació o llibreria .NET Core al SIC 3.0 serà necessari fer ús d'una imatge de construcció disponible al
