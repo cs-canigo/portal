@@ -16,7 +16,7 @@ Per a més informació: [Portal de Qualitat](https://qualitat.solucions.gencat.c
 
 Aquesta eina es troba **actualment integrada al SIC 2.0** dins de l'etapa d' `Anàlisi estàtic de codi` a totes les pipelines de construcció i
 desplegament d'aplicacions, de forma que, un cop finalitzada amb èxit la construcció del/s arteface/s, es fa l'anàlisi de codi,
-l'enviament de l'informe i es comproven les Quality Gates de codi.
+l'enviament de l'informe i es comproven les corresponents Quality Gates de codi.
 
 ## Novetats
 
@@ -24,11 +24,11 @@ Darrerament **s'ha actualitzat la versió del SonarQube a la versió 9.2.4**, la
 de prerequisits que han comportat l'**adaptació tecnològica de la integració de les pipelines SIC 2.0 que es posa en servei
 a partir del XX/XX/2022**. Per a més informació: https://docs.sonarqube.org/9.2/requirements/requirements/.
 
-Aquesta adaptació s'ha realitzat de forma transparent als proveïdors d'aplicacions i únicament en certs casos ha estat necessari
-adaptar el fitxer `aca.yml` per a revisar la configuració de la integració. Per a aquests casos, les adaptacions a
+Aquesta adaptació s'ha realitzat de forma transparent als proveïdors d'aplicacions i **únicament en certs casos ha estat necessari
+adaptar el fitxer `aca.yml`** per a revisar la configuració de la integració. Per a aquests casos, les adaptacions a
 dur a terme per part dels responsables de les aplicacions es proposen des de SIC mitjançant una *merge request* al repositori de codi i
-se'ls ha notificat perquè aquests l'acceptin. És necessari acceptar els canvis sol·licitats perquè l'etapa d'`Anàlisi
-estàtic de codi` continuï funcionant correctament.
+se'ls ha notificat perquè aquests l'acceptin. **És necessari acceptar els canvis sol·licitats perquè l'etapa d'`Anàlisi
+estàtic de codi` continuï funcionant correctament**.
 
 ## Documentació
 
