@@ -1,7 +1,7 @@
 +++
-date        = "2020-06-16"
+date        = "2021-12-13"
 title       = "Documentació"
-description = "Documentació canigo.support.fileupload 2.3.0"
+description = "Documentació canigo.support.fileupload 2.3.1"
 sections    = "canigo-fwk-docs"
 weight      = 3
 +++
