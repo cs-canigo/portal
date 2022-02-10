@@ -2,8 +2,8 @@
 date        = "2022-02-01"
 title       = "SIC. Adaptació integració SonarQube"
 description = "A partir del XX/XX/2022 es posa en servei l'adaptació tecnològica de la integració de les pipelines SIC 2.0 amb el SonarQube de l'Oficina de Qualitat."
-sections    = ["Notícies", "home"]
-categories  = ["SIC"]
+#sections    = ["Notícies", "home"]
+#categories  = ["SIC"]
 #key         = "MARÇ2022"
 +++
 
