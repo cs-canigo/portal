@@ -24,7 +24,7 @@ Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a tr
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <div class="message warning">
 
@@ -40,7 +40,7 @@ Podeu consultar quina és l'última versió de Canigó i quina és l'última ver
 
 <br>
 
-<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
+<a href="/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/moduls/compatibilitat-per-modul/">Matrius de Compatibilitats</a>
 
 </div>
 
