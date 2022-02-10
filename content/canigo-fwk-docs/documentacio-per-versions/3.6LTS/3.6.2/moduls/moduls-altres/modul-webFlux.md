@@ -131,7 +131,7 @@ A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibi
 
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
-Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-36/altres/modul-mongodb-reactiu)
+Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/moduls/moduls-altres/modul-mongodb-reactiu/)
 
 Afegirem la propietat per la connexió a Mongodb
 ```properties

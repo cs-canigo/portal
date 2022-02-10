@@ -132,7 +132,7 @@ Afegirem les dependències de Mongodb
 
 En aquest cas, com que utilitzarem alguna funcionalitat de reactiu, necessitem incorporar la dependència de Mongo db reactive de Spring Boot
 
-Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-documentacio-versions-34-altres/modul-mongodb-reactiu)
+Per a més informació sobre utilització de mongo reactiu podeu consular la guia d'[Utilització de mongo db reactiu](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.6/moduls/moduls-altres/modul-mongodb-reactiu/)
 
 Afegirem la propietat per la connexió a Mongodb
 ```properties

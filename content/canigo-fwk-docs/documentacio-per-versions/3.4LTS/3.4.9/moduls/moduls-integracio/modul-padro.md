@@ -59,7 +59,7 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 El connector PADRO és compatible amb les versions 1.5 o superior de Java. Per versions inferiors no es garantit el seu correcte funcionament.
 
-Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-34-integracio/modul-pica/) 1.2.0.
+Per tal de que el connector PADRO funcioni correctament sobre l'aplicació que l'utilitzi, s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-integracio/modul-pica/) 1.2.0.
 
 ## Configuració
 
