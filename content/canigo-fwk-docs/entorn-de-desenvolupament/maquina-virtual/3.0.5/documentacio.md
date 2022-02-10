@@ -89,7 +89,7 @@ A banda del software base s'ha instal·lat i configurat un conjunt de programari
 * Visual Studio Code - Editor altament extensible (mitjançant plugins). Recomanable principalment per a treballar amb tecnologies frontend (AngularJS, Javascript, Typescript, etc.)
 * Maven 3.5.3
 * IDE - [Spring Tool Suite 4.2.0](https://spring.io/tools) (basat en Eclipse 2019/03), i els següents plugins:
-  - [Plugin CTTI Canigó](https://canigo.ctti.gencat.cat/canigo-download-related/plugin-canigo/) per creació aplicacions Canigó 3.4 basades en arquitectura REST+HTML5/JS.
+  - [Plugin CTTI Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/) per creació aplicacions Canigó 3.4 basades en arquitectura REST+HTML5/JS.
   - Spring Tool Suite per facilitar el desenvolupament d'aplicacions basades en [Spring](http://spring.io/projects).
   - SonarLint permet detectar i solucionar problemes de qualitat al codi (actualment Java, JavaScript, Python i PHP) [SonarLint](https://www.sonarlint.org/).
 * jEdit 5.5.0 - Editor de textos (més lleuger que VS Code) basat en Java. Recomanable per a l'edició de fitxers grans (logs).
