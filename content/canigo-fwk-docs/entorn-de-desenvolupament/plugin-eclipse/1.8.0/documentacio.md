@@ -20,7 +20,7 @@ L'última versió del plugin està certificada amb la versió d'Eclipse 2019-03,
 
 ### Prerequisit
 
-Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó] (/canigo/download)
+Abans de realitzar la instal·lació del plugin Canigó s'ha de configurar el settings.xml del Maven per a tenir referenciats el [repositori de Canigó] (/canigo-fwk-docs/documentacio-llibreries/)
 
 ### Instal·lació
 
@@ -71,7 +71,7 @@ Exemples:
 
 La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html
 
-Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-documentacio-versions-34-core/modul-logging-admin/)
+Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.0/moduls/moduls-generals/modul-logging-admin/)
 
 ## Afegir/Esborrar nous mòduls
 

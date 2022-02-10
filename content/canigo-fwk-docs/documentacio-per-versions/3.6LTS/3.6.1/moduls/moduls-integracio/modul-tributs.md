@@ -106,7 +106,7 @@ Codi Font:  https://sic.ctti.extranet.gencat.cat/nexus/content/groups/canigo-gro
 
 ### Requeriments
 
-Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-documentacio-versions-36/integracio/modul-pica/).
+Per tal de que el connector TRIBUTS funcioni correctament sobre l'aplicació que l'utilitzi s'ha de tenir configurat el servei [connector genèric de la PICA](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/moduls-integracio/modul-pica/).
 
 ## Configuració
 
@@ -126,7 +126,7 @@ En el pom.xml:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/tributs.properties amb el següent contingut:
 

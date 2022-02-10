@@ -26,7 +26,7 @@ manualment la següent dependència en el fitxer `pom.xml` de l’aplicació:
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.1/moduls/compatibilitat-per-modul/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ## Configuració
 
@@ -766,7 +766,7 @@ Propietat                                   | Requerit | Descripció
 ------------------------------------------- | -------- | -----------------------------------
 *.security.gicar.httpGicarHeaderUsernameKey | No       | Aquesta propietat indica quin és el camp de la capçalera HTTP_GICAR que conté el nom de l'usuari autenticat a GICAR. Per defecte: NIF
 
-Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera automàtica la capçalera `HTTP_GICAR_PSIS` per a l’autenticació amb certificats per usuaris que no estan en el DC (Autenticació Anònima), utilitzant-se com a font de dades alternativa per a tasques d'autenticació. A la pàgina del [Servei d'autenticació anònima amb GICAR](https://canigo.ctti.gencat.cat/gicar-integracio/auth-anonima/) es pot trobar informació detallada d'aquesta capçalera.
+Des de la versió 1.2.7 el servei de seguretat de Canigó suporta de manera automàtica la capçalera `HTTP_GICAR_PSIS` per a l’autenticació amb certificats per usuaris que no estan en el DC (Autenticació Anònima), utilitzant-se com a font de dades alternativa per a tasques d'autenticació. A la pàgina del [Servei d'autenticació anònima amb GICAR](/gicar-integracio/auth-anonima/) es pot trobar informació detallada d'aquesta capçalera.
 
 A continuació es mostra la classe `WebSecurityConfig` per a una configuració basada en GICAR com a sistema d'autenticació sense utilitzar JWT:
 

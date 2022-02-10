@@ -34,12 +34,12 @@ weight      = 1
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.security                                   		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.security.saml.rest**                      		| [3.0.0](/canigo-fwk-docs/documentacio-llibreries/canigo.security.rest/3.0.0/) |
+| **canigo.security.saml.rest**                      		| [3.0.0](/canigo-fwk-docs/documentacio-llibreries/canigo.security.saml.rest/3.0.0/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.security                                   		| [3.0.0,3.1.0) 																																|
 | canigo.security.saml                               		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.security.saml.bridge**                    		| [3.0.0](/canigo-fwk-docs/documentacio-llibreries/canigo.security.bridge/3.0.0/) |
+| **canigo.security.saml.bridge**                    		| [3.0.0](/canigo-fwk-docs/documentacio-llibreries/canigo.security.saml.bridge/3.0.0/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.security                                   		| [3.0.0,3.1.0) 																																|
 | canigo.security.saml                               		| [3.0.0,3.1.0) 																																|

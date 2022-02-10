@@ -169,8 +169,8 @@ des del navegador que permet interactuar i provar l'API directament des del nave
 
 ## Creació de projecte base
 
-Des de CS Canigó es proporciona un [Pugin per l'Eclipse](/canigo-download-related/plugin-canigo/) que utilitza un arquetipus _Maven_ per a
-generar projectes base amb Canigó. Aquest plugin està disponible a l'[Entorn de desenvolupament](/canigo/entorn-desenvolupament/).
+Des de CS Canigó es proporciona un [Pugin per l'Eclipse](/canigo-fwk-docs/entorn-de-desenvolupament/plugin-eclipse/) que utilitza un arquetipus _Maven_ per a
+generar projectes base amb Canigó. Aquest plugin està disponible a l'[Entorn de desenvolupament](/canigo-fwk-docs/entorn-de-desenvolupament/maquina-virtual/).
 El projecte base generat és un projecte _Maven_ amb un exemple de serveis rest disponibles a `/api/equipaments` on s'utilitzen les capes
 Security, Controller, Service i Repository de JPA utilitzant Hibernate i atacant a una base de dades H2 en memòria.
 Una vegada generat el projecte, es poden afegir i/o treure mòduls i modificar connectors com el de JPA per, per exemple, canviar el
@@ -191,7 +191,7 @@ projecte auto-executable.
 
 
 <br/><br/><br/>
-La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-documentacio">documentació del portal web</a>.
+La informació detallada sobre els diferents components del Framework Canigó, la seva arquitectura i components, es pot trobar a l'apartat de <a href="/canigo-fwk-docs/documentacio-per-versions/">documentació del portal web</a>.
 
 ## Centre de Suport Canigó pel Framework Canigó
 
