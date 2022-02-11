@@ -33,7 +33,7 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar **Plug-in 1.8.3 - Canigo 3.4.5**
+Seleccionar **Plug-in 1.8.3 - Canigo 3.6.3**
 
 ![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_10.png)
 
