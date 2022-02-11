@@ -12,7 +12,7 @@ weight		= 3
 
 El plugin de Canigó per a Eclipse permet crear de forma automàtica l'esquelet d'una aplicació Canigó. L'aplicació que es crea està orientada a servir com a punt de partida per a la creació d'una aplicació més complex, però des del moment de la seva creació ja és desplegable i funcional.
 
-*NOTA*: Tot i que les passes d'instal·lació i configuració del plugin són senzilles, [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/) conté un Eclipse amb aquest plugin configurat i llest per ser emprat.
+*NOTA*: Tot i que les passes d'instal·lació i configuració del plugin són senzilles, [l'entorn de desenvolupament de Canigó](/canigo-fwk-docs/entorn-de-desenvolupament/maquina-virtual/) conté un Eclipse amb aquest plugin configurat i llest per ser emprat.
 
 #### Eclipse 2019-03
 
