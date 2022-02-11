@@ -123,7 +123,7 @@ weight      = 1
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.sgde**                        		| [3.0.1](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sgde.pica/3.0.1/) |
+| **canigo.integration.sgde**                        		| [3.0.1](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sgde/3.0.1/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.operation.instrumentation                  		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
