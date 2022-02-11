@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
-## Canigó 3.4.5
+## Canigó 3.4.9
 
 |          Dependències externes       |      Canigó 3.4.9     |
 |---------------------------------     |---------------------- |
@@ -14,7 +14,7 @@ weight      = 3
 | spring.security                      |  5.1.6.RELEASE                |
 | spring.data                          |  2.1.10.RELEASE                |
 | springframework.boot                 |  2.1.8.RELEASE                |
-| log4j                                | 2.11.2               |
+| log4j                                | 2.17.0               |
 | slf4j                                |  1.7.28               |
 | junit                                |  4.12               |
 | hamcrest                             |  1.3                  |

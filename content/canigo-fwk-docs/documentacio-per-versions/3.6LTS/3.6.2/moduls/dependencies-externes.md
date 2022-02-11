@@ -14,7 +14,7 @@ weight      = 3
 | spring.security                      |  5.5.2                |
 | spring.data                          |  2.5.4                |
 | springframework.boot                 |  2.5.4                |
-| log4j                                |  2.14.1               |
+| log4j                                |  2.16.0               |
 | slf4j                                |  1.7.32               |
 | junit                                |  4.13.2               |
 | hamcrest                             |  2.2                  |

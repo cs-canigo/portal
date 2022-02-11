@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight      = 3
 +++
 
-## Canigó 3.4.5
+## Canigó 3.4.6
 
 |          Dependències externes       |      Canigó 3.4.6     |
 |---------------------------------     |---------------------- |
