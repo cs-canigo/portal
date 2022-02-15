@@ -1,5 +1,5 @@
 +++
-date        = "2020-10-27"
+date        = "2022-02-15"
 title       = "SIC. Com definir exclusions enviament SonarQube"
 description = "Howto per a mostrar com definir exclusions a un projecte de cara a l'enviament del codi font al SonarQube"
 section     = "howtos"
@@ -23,7 +23,7 @@ Per a cada tipus d'exclusions, es poden indicar fitxers i carpetes concrets y/o 
 En aquest how-to explicarem com indicar al SonarQube que no tingui en compte aquests fitxers mitjançant la definició d'exclusions del primer tipus
 i utilitzarem una expressió regular per a inhibir determinades carpetes.
 
-Per a més informació: https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-jenkins/.
+Per a més informació: https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-jenkins/.
 
 ### Exclusions projectes Maven
 
@@ -51,7 +51,7 @@ Un cop fet aquest canvi, l'informe resultant del projecte quedaria de la següen
 
 ![Informe projecte exclusions](/images/howtos/SonarPropertiesMaven_exclusions.png)
 
-Per a més informació: https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-maven/.
+Per a més informació: https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-maven/.
 
 ### Exclusions projectes Gradle i MSBuild
 
@@ -59,8 +59,8 @@ En cas de tractar-se d'un projecte de Gradle o MSBuild, aplicaria homòlogament 
 
 Per a més informació:
 
-- https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-gradle/
-- https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner-for-msbuild/
+- https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-gradle/
+- https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner-for-msbuild/
 
 ### Exclusions per la resta de projectes
 
@@ -87,4 +87,4 @@ Un cop fet aquest canvi, l'informe resultant del projecte quedaria de la següen
 
 ![Informe projecte exclusions](/images/howtos/SonarProperties_exclusions.png)
 
-Per a més informació: https://docs.sonarqube.org/8.1/analysis/scan/sonarscanner/
+Per a més informació: https://docs.sonarqube.org/9.2/analysis/scan/sonarscanner/
