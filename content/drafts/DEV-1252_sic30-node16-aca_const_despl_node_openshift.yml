@@ -1,0 +1,50 @@
+version: 2.0.0
+info:
+  version: 0.1.1
+  description: Node - Openshift
+global-env:
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
+  - CONTAINER_IMAGE_NAME: app-test
+  - DEPLOYMENT_TYPE: DeploymentConfig
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - cd app-test && npm install && npm run build
+    deployment:
+      scm: https://git.intranet.gencat.cat/9999/app-test/orchestrators.git
+      environments:
+        - name: preproduction
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: app-test/pre
+                      - DEPLOYMENT_NAME: app-test
+                      - DEPLOYMENT_WAIT: 900
+        - name: production
+          actions:
+            deploy:
+              steps:
+                - execution:
+                    env:
+                      - DESCRIPTORS_PATH: app-test/pro
+                      - DEPLOYMENT_NAME: app-test
+                      - DEPLOYMENT_WAIT: 900
+notifications:
+  email:
+    recipients:
+      - noreplay@gencat.cat

@@ -1,0 +1,26 @@
+version: 2.0.0
+info:
+  version: 1.2.0
+  description: Node lib - Nexus
+global-env:
+  - PUBLISH_PARAMS: 'dist/lib-test'
+components:
+  - build:
+      steps:
+        - container:
+            image:
+              remote:
+                name: docker-registry.ctti.extranet.gencat.cat/gencat-sic-builders/node-builder:1.0-16
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 1024Mi
+              requests:
+                cpu: 100m
+                memory: 128Mi
+          execution:
+            commands:
+              - cd lib-test && npm install && npm run-script build:lib-test
+notifications:
+  email:
+    recipients: [ noreply@gencat.cat ]
