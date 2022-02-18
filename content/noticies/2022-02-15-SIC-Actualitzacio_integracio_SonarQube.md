@@ -1,7 +1,7 @@
 +++
 date        = "2022-02-15"
 title       = "SIC. Adaptació integració SonarQube"
-description = "A partir del 17/02/2022 es posa en servei l'adaptació tecnològica de la integració de les pipelines SIC 2.0 amb el SonarQube de l'Oficina de Qualitat."
+description = "A partir del 21/02/2022 es posa en servei l'adaptació tecnològica de la integració de les pipelines SIC 2.0 amb el SonarQube de l'Oficina de Qualitat."
 sections    = ["Notícies", "home"]
 categories  = ["SIC"]
 key         = "MARÇ2022"
@@ -21,7 +21,7 @@ l'enviament de l'informe i es comproven les corresponents Quality Gates de codi.
 
 Darrerament **s'ha actualitzat la versió del SonarQube a la versió 9.2.4**, la qual estableix una sèrie
 de prerequisits que han comportat l'**adaptació tecnològica de la integració de les pipelines SIC 2.0 que es posa en servei
-a partir del 17/02/2022**. Per a més informació: https://docs.sonarqube.org/9.2/requirements/requirements/.
+a partir del 21/02/2022**. Per a més informació: https://docs.sonarqube.org/9.2/requirements/requirements/.
 
 Aquesta adaptació s'ha realitzat de forma transparent als proveïdors d'aplicacions i **únicament en certs casos ha estat necessari
 adaptar el fitxer `aca.yml`** per a revisar la configuració de la integració. Per a aquests casos, les adaptacions a
