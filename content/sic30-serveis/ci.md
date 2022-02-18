@@ -1,5 +1,5 @@
 +++
-date = "2022-01-18"
+date = "2022-02-17"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -308,6 +308,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |10|6.11|
 |12|6.12|
 |14|6.14|
+|16|8.3|
 
 L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),

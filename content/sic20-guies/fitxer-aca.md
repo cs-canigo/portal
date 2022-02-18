@@ -1,5 +1,5 @@
 +++
-date = "2022-02-01"
+date = "2022-02-17"
 title = "Com construir el fitxer ACA"
 description = "Guia amb la informació de construcció del fitxer ACA per a l'Autoservei de pipelines"
 sections = "SIC"
@@ -272,17 +272,18 @@ Caldrà seleccionar com a `tool` la versió a utilitzar de les disponibles a con
 |nodejs_10_LTS|
 |nodejs_12_LTS|
 |nodejs_14_LTS|
+|nodejs_16_LTS|
 
 ```
 build:
   steps:
     - id: bs001
       position: 1
-      tool: nodejs_14_LTS
+      tool: nodejs_16_LTS
       parameters: install --scripts-prepend-node-path true
     - id: bs002
       position: 2
-      tool: nodejs_14_LTS
+      tool: nodejs_16_LTS
       parameters: run-script build --scripts-prepend-node-path true
       generates:
         - artifact01
