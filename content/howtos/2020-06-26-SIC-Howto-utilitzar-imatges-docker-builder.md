@@ -1,7 +1,7 @@
 +++
-date        = "2020-12-29"
-title       = "Utilitzar imatges Docker Builder"
-description = "Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
+date        = "2022-02-21"
+title       = "SIC 2.0 - Utilitzar imatges Docker Builder"
+description = "SIC 2.0 -Howto per mostrar com utilitzar les imatges Docker del catàleg d'imatges de construcció del SIC"
 section     = "howtos"
 categories  = ["SIC"]
 #key        = "JUNY2019"
@@ -69,7 +69,7 @@ docker run -it --rm \
  -v $HOME/.m2/settings.xml:/settings/settings.xml \
  -v $PWD:/app -w "/app" \
  docker-registry.ctti.extranet.gencat.cat/gencatsic/maven-builder:1.0-3.6-8 \
- mvn --version
+ mvn clean install -Dmaven.test.skip=true
 ```
 
 En aquest cas estem indicant que volem:
@@ -82,7 +82,10 @@ En aquest cas estem indicant que volem:
 
 - Compartir el codi font de la nostre aplicació, ubicat a *$PWD*, amb el directori de treball de la imatge Docker.
 
-- Executar el goal de maven *mvn --version*.
+- Executar el goal de maven *mvn clean install -Dmaven.test.skip=true*.
+
+**IMPORTANT**: en cas de fer ús d'una imatge amb Jdk 1.7 o inferior, caldrà forçar el protocol TLS 1.2 mitjançant el següent paràmetre: `-Dhttps.protocols=TLSv1.2`.
+En cas contrari, es podria rebre errors del tipus "Received fatal alert: protocol_version" en cas de fer ús del repositori d'artefactes del SIC.
 
 ### Logout
 
