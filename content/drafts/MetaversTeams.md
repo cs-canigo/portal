@@ -29,11 +29,11 @@ El Metavers s'està estenent des del 2021 més ràpid que el big data, la intel�
 És important indicar que no existeix un únic metavers, i la seva interconnexió encara trigarà.<br><br>
 Alguns exemples de metavers: 
 <br>
-<table border="0" width="300px">
+<table border="0" width="100%">
 <tr>
   <td >
     <div align="left">
-        <img src="/images/bloc/2022/02/DifMetaversos.png" style="width:500px;" />
+        <img src="/images/bloc/2022/02/DifMetaversos.png"  />
     </div>
   </td>
   <td width="500px">
@@ -46,7 +46,7 @@ Alguns exemples de metavers:
 
 # **Metavers dins Microsoft Teams**
 
-El Metavers de Microsoft amb Mesh per Teams serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
+El Metavers de **Microsoft amb Mesh per Teams** serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
 <br>
 <div align="center">
   <img src="/images/bloc/2022/02/Hololens_detall.JPG" style="width:500px;" />
@@ -63,14 +63,14 @@ A continuació s’enumeren algunes d’elles:
 <br>
 
 <div align="center">
-  <img src="/images/bloc/2022/02/TraduirTempsReal.png" style="width:500px;" />
+  <img src="/images/bloc/2022/02/TraduirTempsReal.png" />
 </div>
 <br>
 <br>
 Microsoft Mesh permetrà diversos graus d’immersió al metavers:
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/02/Graus_Immersio.png" style="width:500px;" />
+  <img src="/images/bloc/2022/02/Graus_Immersio.png" />
 </div>
 <br>
 <br>
