@@ -85,7 +85,7 @@ En aquest cas estem indicant que volem:
 - Executar el goal de maven *mvn clean install -Dmaven.test.skip=true*.
 
 **IMPORTANT**: en cas de fer ús d'una imatge amb Jdk 1.7 o inferior, caldrà forçar el protocol TLS 1.2 mitjançant el següent paràmetre: `-Dhttps.protocols=TLSv1.2`.
-En cas contrari, es podria rebre errors del tipus "Received fatal alert: protocol_version" en cas de fer ús del repositori d'artefactes del SIC.
+En cas contrari, es podria rebre errors del tipus *Received fatal alert: protocol_version* si es fa ús del repositori d'artefactes del SIC.
 
 ### Logout
 
