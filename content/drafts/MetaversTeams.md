@@ -1,4 +1,14 @@
 
++++
+
+date        = "2022-02-21"
+title       = "Articles ET"
+description = "Metavers de Teams"
+sections    = "Blog"
+weight      = 3
+categories  = ["Articles","Metavers","Metavers Teams"]
+
++++
 
 Article basat en el Metavers de Teams
 
