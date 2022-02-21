@@ -29,15 +29,15 @@ El Metavers s'està estenent des del 2021 més ràpid que el big data, la intel�
 És important indicar que no existeix un únic metavers, i la seva interconnexió encara trigarà.
 Alguns exemples de metavers: 
 
-<table border=0 width=500>
+<table border="0" width="300px">
 <tr>
   <td >
     <div align="left">
         <img src="/images/bloc/2022/02/DifMetaversos.png" style="width:500px;" />
     </div>
   </td>
-  <td>
-    **Catvers** és l’espai virtual referent català. És un metavers desenvolupat a Catalunya on l'idioma vehicular és el català.<br><br>**Microsoft** treballa en la plataforma col·laborativa **Mesh for Teams** on avatars digitals podran poden reunir-se, compartir fitxers i programes d'Office en un món virtual.<br><br>**Epic Games** amb el videojoc **Fortnite**, permet experiències socials com festes de ball, concerts de música virtual en el seu metavers, etc. Els usuaris paguen per construir els seu propis entorns i adaptar el seus avatars.<br><br>**Nvidia** especialitzada en desenvolupament d'unitats de processament gràfic, disposa d’Omniverse, un metavers per la creació i simulació virtual utilitzada per crear simulacions de fàbriques i edificis en el món real.
+  <td width="500px">
+    **Catvers** és l’espai virtual referent català. És un metavers desenvolupat a Catalunya on l'idioma vehicular és el català.<br><br> **Microsoft** treballa en la plataforma col·laborativa **Mesh for Teams** on avatars digitals podran poden reunir-se, compartir fitxers i programes d'Office en un món virtual.<br><br> **Epic Games** amb el videojoc **Fortnite** , permet experiències socials com festes de ball, concerts de música virtual en el seu metavers, etc. Els usuaris paguen per construir els seu propis entorns i adaptar el seus avatars.<br><br> **Nvidia** especialitzada en desenvolupament d'unitats de processament gràfic, disposa d’Omniverse, un metavers per la creació i simulació virtual utilitzada per crear simulacions de fàbriques i edificis en el món real.
   </td>
 </tr>
 </table>
@@ -47,7 +47,7 @@ Alguns exemples de metavers:
 # **Metavers dins Microsoft Teams**
 
 El Metavers de Microsoft amb Mesh per Teams serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
-
+<br>
 <div align="center">
   <img src="/images/bloc/2022/02/Hololens_detall.JPG" style="width:500px;" />
 </div>
@@ -59,23 +59,25 @@ A continuació s’enumeren algunes d’elles:
 * Integració nativa amb Office 365.
 * Compatibilitat entre dispositius. Totes les aplicacions habilitades per Mesh seran accessibles mitjançant telèfons, tauletes i ordinadors i està previst que es pugui accedir a Mesh per Teams amb dispositius de realitat immersiva, com els auriculars de realitat virtual (VR) i Ulleres Hologràfiques (Microsoft HoloLens).
 * Traducció en temps real de diverses llengües permetent col·laborar i interactuar de forma més àgil. 
-
+<br>
 <div align="center">
   <img src="/images/bloc/2022/02/TraduirTempsReal.png" style="width:500px;" />
 </div>
+<br>
 
 Microsoft Mesh permetrà diversos graus d’immersió al metavers:
-
+<br>
 <div align="center">
   <img src="/images/bloc/2022/02/Graus_Immersio.png" style="width:500px;" />
 </div>
+<br>
 
 Addicionalment Microsoft Mesh facilita una plataforma de desenvolupament d’aplicacions de realitat mixta per a dissenyar aplicacions immersives i multiusuari. 
 <br>
 A continuació es mostren els components de la plataforma Microsoft Mesh per a desenvolupadors:
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/02/Mesh_Platform.JPG" style="width:500px;" />
+  <img src="/images/bloc/2022/02/Mesh_Platform.JPG" />
 </div>
 
 El nucli de la plataforma de desenvolupament és Cloud Azure amb serveis d'identitat com Azure Active Directory i Microsoft Accounts, que permeten usuaris degudament autenticats i autoritzats a una sessió segura i de confiança. 
@@ -83,6 +85,7 @@ El nucli de la plataforma de desenvolupament és Cloud Azure amb serveis d'ident
 Més enllà de la plataforma bàsica, hi ha capacitats clau impulsades per IA que permeten a Mesh abordar alguns dels reptes tècnics més complicats amb la possibilitat d'escenaris massius en línia multiusuari (MMO) per a la realitat mixta. Aquests inclouen presència immersiva, mapes espacials, renderització hologràfica i sincronització multiusuari.
 <br>
 Per aprofitar aquestes capacitats i les funcions bàsiques de la plataforma, **Mesh ofereix un SDK per a desenvolupadors multiplataforma perquè els desenvolupadors puguin crear aplicacions orientades a la seva elecció de plataforma i dispositius**, ja siguin AR, VR, ordinadors o telèfons. Actualment és compatible amb Unity juntament amb C++ i C# nadius, però en els propers mesos, Mesh també tindrà suport per a Unreal, Babylon i React Native. Més enllà d'accedir a les capacitats, l'SDK també proporciona construccions UX preconstruïdes perquè els desenvolupadors les utilitzin a les aplicacions. Aquests prefabricats estan dissenyats per fer que el procés de desenvolupament sigui més senzill i ràpid per participar en experiències de realitat mixta.
+<br>
 <br>
 
 * **Presència immersiva:** un aspecte fonamental dels escenaris multiusuari és poder representar els participants de diferents formes segons el dispositiu des del qual s'uneixen. Mesh ofereix la presència en 3D més accessible amb avatars representatius mitjançant sensors interiors dels dispositius. La plataforma Mesh inclou una plataforma d'avatars i un estudi de personalització perquè es puguin utilitzar els avatars de la caixa. La plataforma també és capaç d'alimentar les instal·lacions d'avatar existents amb els seus models de moviment impulsats per IA per capturar moviments i expressions precisos coherents amb l'acció de l'usuari.
