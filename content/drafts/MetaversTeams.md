@@ -10,12 +10,10 @@ categories  = ["Articles","Metavers","Metavers Teams"]
 
 +++
 
-Article basat en el Metavers de Teams
-
 ---
 
 # **Introducció al Metavers** 
-<br>
+<br><br>
 Probablement hem començat a escoltar recentment la paraula **Metavers** al nostre voltant i en aquesta publicació, intentarem aclarir de què es tracta realment i com podria afectar aquesta tecnologia a la forma de treballar. Microsoft actualment té una línia de treball que té previst que presenti al 2022, per ampliar l’eina col·laborativa Teams al Metavers.
 <br><br>
 El terme Metavers (acrònim de «meta-» més enllà i «univers») té el seu origen a la novel·la Snow Crash de 1992 on Neal Stephenson es va referir al Metavers com un món 3D amb avatars com alternatives a persones reals.
@@ -36,7 +34,7 @@ Alguns exemples de metavers:
         <img src="/images/bloc/2022/02/DifMetaversos.png"  />
     </div>
   </td>
-  <td width="500px">
+  <td width="750px">
     **Catvers** és l’espai virtual referent català. És un metavers desenvolupat a Catalunya on l'idioma vehicular és el català.<br><br> **Microsoft** treballa en la plataforma col·laborativa **Mesh for Teams** on avatars digitals podran poden reunir-se, compartir fitxers i programes d'Office en un món virtual.<br><br> **Epic Games** amb el videojoc **Fortnite** , permet experiències socials com festes de ball, concerts de música virtual en el seu metavers, etc. Els usuaris paguen per construir els seu propis entorns i adaptar el seus avatars.<br><br> **Nvidia** especialitzada en desenvolupament d'unitats de processament gràfic, disposa d’Omniverse, un metavers per la creació i simulació virtual utilitzada per crear simulacions de fàbriques i edificis en el món real.
   </td>
 </tr>
@@ -45,11 +43,11 @@ Alguns exemples de metavers:
 ---
 
 # **Metavers dins Microsoft Teams**
-<br>
+<br><br>
 El Metavers de **Microsoft amb Mesh per Teams** serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/02/Hololens_detall.JPG" style="width:500px;" />
+  <img src="/images/bloc/2022/02/Hololens_detall.JPG" style="width:350px;" />
 </div>
 <br>
 
