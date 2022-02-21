@@ -15,7 +15,7 @@ Article basat en el Metavers de Teams
 ---
 
 # **Introducció al Metavers** 
-
+<br>
 Probablement hem començat a escoltar recentment la paraula **Metavers** al nostre voltant i en aquesta publicació, intentarem aclarir de què es tracta realment i com podria afectar aquesta tecnologia a la forma de treballar. Microsoft actualment té una línia de treball que té previst que presenti al 2022, per ampliar l’eina col·laborativa Teams al Metavers.
 <br><br>
 El terme Metavers (acrònim de «meta-» més enllà i «univers») té el seu origen a la novel·la Snow Crash de 1992 on Neal Stephenson es va referir al Metavers com un món 3D amb avatars com alternatives a persones reals.
@@ -45,7 +45,7 @@ Alguns exemples de metavers:
 ---
 
 # **Metavers dins Microsoft Teams**
-
+<br>
 El Metavers de **Microsoft amb Mesh per Teams** serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
 <br>
 <div align="center">
