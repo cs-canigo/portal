@@ -17,18 +17,18 @@ Article basat en el Metavers de Teams
 # **Introducció al Metavers** 
 
 Probablement hem començat a escoltar recentment la paraula **Metavers** al nostre voltant i en aquesta publicació, intentarem aclarir de què es tracta realment i com podria afectar aquesta tecnologia a la forma de treballar. Microsoft actualment té una línia de treball que té previst que presenti al 2022, per ampliar l’eina col·laborativa Teams al Metavers.
-<br>
+<br><br>
 El terme Metavers (acrònim de «meta-» més enllà i «univers») té el seu origen a la novel·la Snow Crash de 1992 on Neal Stephenson es va referir al Metavers com un món 3D amb avatars com alternatives a persones reals.
-<br>
+<br><br>
 Encara que no hi ha una definició concreta del Metavers, podríem dir que es tracta d’una plataforma digital que proporciona un entorn immersiu a l’usuari, on convergeix la realitat física, la realitat augmentada i la realitat virtual, en un únic espai compartit, en línia i habitat per representacions digitals de persones, llocs i objectes. 
-<br>
+<br><br>
 La majoria d'experts consideren els videojocs com el punt d'inici del Metavers, és molt conegut el joc Second Life, un programa que permetia als seus usuaris la immersió en un món virtual, no obstant, és ara amb la tecnologia blockchain que el Metavers ens pot oferir el proper salt evolutiu.
-<br>
+<br><br>
 El Metavers s'està estenent des del 2021 més ràpid que el big data, la intel·ligència artificial, blockchain, NFT ('non-fungible token') o el IoT (Internet de les coses) i ho està fent de la mà de grans tecnològiques com Meta (Facebook) , Google, Nvidia i Microsoft, però encara existeixen molts reptes que s’hauran de superar, per fer els viatges al Metavers més emocionant, còmode i amb la màxima privacitat possible. 
-<br>
-És important indicar que no existeix un únic metavers, i la seva interconnexió encara trigarà.
+<br><br>
+És important indicar que no existeix un únic metavers, i la seva interconnexió encara trigarà.<br><br>
 Alguns exemples de metavers: 
-
+<br>
 <table border="0" width="300px">
 <tr>
   <td >
@@ -60,33 +60,35 @@ A continuació s’enumeren algunes d’elles:
 * Compatibilitat entre dispositius. Totes les aplicacions habilitades per Mesh seran accessibles mitjançant telèfons, tauletes i ordinadors i està previst que es pugui accedir a Mesh per Teams amb dispositius de realitat immersiva, com els auriculars de realitat virtual (VR) i Ulleres Hologràfiques (Microsoft HoloLens).
 * Traducció en temps real de diverses llengües permetent col·laborar i interactuar de forma més àgil. 
 <br>
+<br>
 <div align="center">
   <img src="/images/bloc/2022/02/TraduirTempsReal.png" style="width:500px;" />
 </div>
 <br>
-
+<br>
 Microsoft Mesh permetrà diversos graus d’immersió al metavers:
 <br>
 <div align="center">
   <img src="/images/bloc/2022/02/Graus_Immersio.png" style="width:500px;" />
 </div>
 <br>
-
+<br>
 Addicionalment Microsoft Mesh facilita una plataforma de desenvolupament d’aplicacions de realitat mixta per a dissenyar aplicacions immersives i multiusuari. 
 <br>
+<br>
 A continuació es mostren els components de la plataforma Microsoft Mesh per a desenvolupadors:
+<br>
 <br>
 <div align="center">
   <img src="/images/bloc/2022/02/Mesh_Platform.JPG" />
 </div>
 
 El nucli de la plataforma de desenvolupament és Cloud Azure amb serveis d'identitat com Azure Active Directory i Microsoft Accounts, que permeten usuaris degudament autenticats i autoritzats a una sessió segura i de confiança. 
-<br>
+<br><br>
 Més enllà de la plataforma bàsica, hi ha capacitats clau impulsades per IA que permeten a Mesh abordar alguns dels reptes tècnics més complicats amb la possibilitat d'escenaris massius en línia multiusuari (MMO) per a la realitat mixta. Aquests inclouen presència immersiva, mapes espacials, renderització hologràfica i sincronització multiusuari.
-<br>
+<br><br>
 Per aprofitar aquestes capacitats i les funcions bàsiques de la plataforma, **Mesh ofereix un SDK per a desenvolupadors multiplataforma perquè els desenvolupadors puguin crear aplicacions orientades a la seva elecció de plataforma i dispositius**, ja siguin AR, VR, ordinadors o telèfons. Actualment és compatible amb Unity juntament amb C++ i C# nadius, però en els propers mesos, Mesh també tindrà suport per a Unreal, Babylon i React Native. Més enllà d'accedir a les capacitats, l'SDK també proporciona construccions UX preconstruïdes perquè els desenvolupadors les utilitzin a les aplicacions. Aquests prefabricats estan dissenyats per fer que el procés de desenvolupament sigui més senzill i ràpid per participar en experiències de realitat mixta.
-<br>
-<br>
+<br><br>
 
 * **Presència immersiva:** un aspecte fonamental dels escenaris multiusuari és poder representar els participants de diferents formes segons el dispositiu des del qual s'uneixen. Mesh ofereix la presència en 3D més accessible amb avatars representatius mitjançant sensors interiors dels dispositius. La plataforma Mesh inclou una plataforma d'avatars i un estudi de personalització perquè es puguin utilitzar els avatars de la caixa. La plataforma també és capaç d'alimentar les instal·lacions d'avatar existents amb els seus models de moviment impulsats per IA per capturar moviments i expressions precisos coherents amb l'acció de l'usuari.
 A més dels avatars, Mesh també permet l'holoportació de 360 graus més fotorealista amb sensors exteriors. Aquests sensors exteriors poden ser una configuració de càmera personalitzada com el Mixed Reality Capture Studio, que ajuda a capturar en 3D amb total fidelitat o podria ser Azure Kinect que captura imatges detectades en profunditat per ajudar a produir les representacions hologràfiques. Un cop produïts els hologrames, aquests es poden utilitzar dins d'aplicacions habilitades per Mesh en auriculars de realitat mixta immersives o telèfons, ordinadors i tauletes quotidians, per holoportar els usuaris en les seves representacions més reals i oferir una sensació de presència real.
