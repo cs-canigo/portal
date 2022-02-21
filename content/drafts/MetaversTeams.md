@@ -51,6 +51,7 @@ El Metavers de Microsoft amb Mesh per Teams serà un lloc on el món digital i e
 <div align="center">
   <img src="/images/bloc/2022/02/Hololens_detall.JPG" style="width:500px;" />
 </div>
+<br>
 
 Microsoft té previst que es pugui començar a provar les característiques de Microsoft Mesh for Teams durant el 2022 en mode preview.
 <br>
@@ -60,7 +61,7 @@ A continuació s’enumeren algunes d’elles:
 * Compatibilitat entre dispositius. Totes les aplicacions habilitades per Mesh seran accessibles mitjançant telèfons, tauletes i ordinadors i està previst que es pugui accedir a Mesh per Teams amb dispositius de realitat immersiva, com els auriculars de realitat virtual (VR) i Ulleres Hologràfiques (Microsoft HoloLens).
 * Traducció en temps real de diverses llengües permetent col·laborar i interactuar de forma més àgil. 
 <br>
-<br>
+
 <div align="center">
   <img src="/images/bloc/2022/02/TraduirTempsReal.png" style="width:500px;" />
 </div>
@@ -78,11 +79,11 @@ Addicionalment Microsoft Mesh facilita una plataforma de desenvolupament d’apl
 <br>
 A continuació es mostren els components de la plataforma Microsoft Mesh per a desenvolupadors:
 <br>
-<br>
 <div align="center">
   <img src="/images/bloc/2022/02/Mesh_Platform.JPG" />
 </div>
 
+<br>
 El nucli de la plataforma de desenvolupament és Cloud Azure amb serveis d'identitat com Azure Active Directory i Microsoft Accounts, que permeten usuaris degudament autenticats i autoritzats a una sessió segura i de confiança. 
 <br><br>
 Més enllà de la plataforma bàsica, hi ha capacitats clau impulsades per IA que permeten a Mesh abordar alguns dels reptes tècnics més complicats amb la possibilitat d'escenaris massius en línia multiusuari (MMO) per a la realitat mixta. Aquests inclouen presència immersiva, mapes espacials, renderització hologràfica i sincronització multiusuari.
