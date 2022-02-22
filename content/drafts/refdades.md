@@ -1,7 +1,7 @@
 +++
-date        = "2021-10-19"
+date        = "2022-02-22"
 title       = "Dades de Referència"
-description = "Arquitectura de Dades de CTTI"
+description = "Arquitectura de Dades de CTTI, versió 23/02/2022"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
@@ -9,12 +9,12 @@ weight= 5
 
 Les dades de referència són un tipus especial de dades orientades amb propòsits de classificació (codificacions i estàndards) o de suport a la gestió; en essència són codis que bàsicament transformen dades en informació significativa pel negoci. Utilitzar dades de referència entre sistemes d’una organització permet comunicar-se de manera efectiva, evitant la creació de diferents fonts d’informació inconsistents.
 
-Coordinadament amb la Oficina d’Innovació i Administració Digital (OIAD), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la OIAD garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
+Coordinadament amb la Direcció General d'Administració Digital i d'Organització (DGADO), responsable d’impulsar, coordinar i desenvolupar el sistema de governança per gestionar les dades de l'Administració de la Generalitat, el CTTI posa a disposició de la Generalitat de Catalunya la primera versió del Catàleg Tècnic de Dades de Referència, avalat per la DGADO garantint que la informació publicada té un òrgan públic responsable del seu manteniment, unicitat, completesa qualitat i vigència.
 
 En aquest sentit, el Catàleg Tècnic de Dades de Referència es divideix en dos grups:
 
 <div style="width:100%; padding-left:30px">
-a) Dades de Referència consolidades i avalades per l’OIAD que són d’obligat ús pels nous sistemes d’informació, i
+a) Dades de Referència consolidades i avalades per la DGADO que són d’obligat ús pels nous sistemes d’informació, i
 <br/><br/>	
 b) Dades de Referència que es troben en revisió per l’òrgan responsable, però que tot i no estar avalades, es poden utilitzar com a millor aproximació a la font de dades en qüestió. Aquestes entitats poden patir canvis estructurals o inclús ser rebutjades.
 <br/><br/>
@@ -35,6 +35,20 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 - Dades de referència pendents d’aprovació
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
+
+
+> 
+> Destaquem que, en la majoria de les entitats modelades, per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**, s'han afegit dos valors genèrics:
+> 
+> + **"No consta"**: Aquest valor es pot utilitzar en aquells casos que té sentit tenir un registre per representar la situació en què es desconeix la dada.
+> + **"Altres/Diversos"**: Amb aquest valor es representen dues situacions diferents:
+>   - Altres: Es coneix el valor a informar, però no és cap dels de la llista que ofereix l'entitat.
+>   - Diversos: En la llista de valors de l'entitat hi ha més d'un registre que representa la dada a informar.
+> 
+> Funcionalment, aquests valors de completesa permeten detectar casos en què cal fer ajustos en les entitats. Per exemple, un ús elevat del valor "No consta" significa que és una dada que sovint es desconeix, sigui perquè no es requereix o perquè és difícil d'obtenir. Un ús elevat del valor "Altres/Diversos" pot significa que cal ampliar el rang de valors de l'entitat.
+> 
+
+
 
 <style>
 .myButton {
@@ -171,13 +185,14 @@ tr.shown td.details-control {
             },
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
-	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null ],
-	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ] ],
+	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
+	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
 	        //calcular nombre d'instàncies vigents
 	        var dadesConso=json.data; 
@@ -191,7 +206,8 @@ tr.shown td.details-control {
 			//console.log("vigents: " + vigents);
 			
 			//Mostrar text amb el nombre d'instàncies vigents
-			$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			//$('#numInstancies').text("Nombre total d'instàncies vigents: " + vigents);
+			$('#numInstancies').text("Nombre total d'entitats vigents: " + vigents);
 		  },
 		  
 	  "infoCallback": function( settings, start, end, max, total, pre ) {
@@ -214,7 +230,10 @@ tr.shown td.details-control {
 			if (vigents2 == 1){ txtInstancies=" instància vigent";}	
              			
 	        //retornem el text que es visualitzarà
-			return total + txtEntitats + vigents2 + txtInstancies;
+			//return total + txtEntitats + vigents2 + txtInstancies;
+			txtEntitats=" entitats";
+			if (total == 1){ txtEntitats=" entitat";}
+			return vigents2 + txtEntitats;
 			
 		}
     } ); 
@@ -281,14 +300,15 @@ tr.shown td.details-control {
 	  "columns": [
             { "data": "Classificacio", "visible": false },
 			{ "data": "Ambit" },
+			{ "data": "Subambit" },
 			{ "data": "Nom" },
 			{ "data": "Descripcio" },
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" },
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
-	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null ],
-	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ] ]
+	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
+	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
 	
     $('#tabpendents tbody').on('click', 'button', function () {
@@ -344,11 +364,12 @@ tr.shown td.details-control {
             <tr>
                 <th></th>
                 <th>Nivell Validació</th>
-                <th>Grup</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
             </tr>
         </thead>
     </table>
@@ -373,11 +394,12 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
         <thead>
             <tr>
                 <th>Nivell Validació</th>
-                <th>Grup</th>
+                <th style="width:15%">Domini</th>
+                <th style="width:15%">Subdomini</th>
                 <th>Entitat</th>
-                <th style="width:40%">Descripció</th>
-                <th>Data publicació</th>
-                <th>Darrera actualització</th>
+                <th style="width:35%">Descripció</th>
+                <th style="width:8%">Data publicació</th>
+                <th style="width:8%">Darrera actualització</th>
                 <th>Detall</th>
             </tr>
         </thead>
@@ -391,7 +413,7 @@ A continuació es presenta el diagrama amb les relacions entre les entitats de r
 <br/>
 Des de CTTI es treballa amb el descobriment continuat de dades de referència, amb l’objectiu de modelar, validar i finalment incorporar dins del Catàleg Tècnic de Dades de Referència aquí publicat.
 
-El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d’Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Oficina d’Innovació i Administració Digital, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
+El procés de gestió de les dades de referència es realitza de manera coordinada amb la Direcció General d’Administració Digital, cadascun en el seu àmbit i amb els interlocutors que li són propis: l’àmbit tecnològic i la interlocució amb les seves àrees TIC i els proveïdors informàtics en cas del CTTI, i en el cas de la Direcció General d'Administració Digital i d'Organització, l’àmbit funcional i la interlocució amb òrgans funcionals (àrees d’organització o equivalents, i a través d’aquestes, unitats departamentals com ara les de gestió documental o d’estandardització de dades entre d’altres).
 
 A la següent figura es mostra a grans trets el procés de govern que se segueix a fi de garantir la consistència, qualitat, veracitat, unicitat i vigència de cada dada de referència:
 
