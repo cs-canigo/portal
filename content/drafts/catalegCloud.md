@@ -78,7 +78,12 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                                         <tr>
                                                                             <th align="center" colspan="12">Talles Contenidors</th>                        
                                                                         </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                            </td>
+                                                                        </tr>
                                                                     </thead>
+                                                                    <tbody>
                                                                         <tr align="center">
                                                                             <td colspan="3">S</td>
                                                                             <td colspan="3">M</td>
@@ -113,6 +118,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                                             <td>-</td>
                                                                             <td>-</td>
                                                                         </tr>
+                                                                    </tbody>
                                                                 </table>
                                                             </td>
                                                         </tr>
