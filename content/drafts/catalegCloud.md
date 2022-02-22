@@ -56,7 +56,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <tbody>
                         <tr>
                             <td>
-                                <table class="display" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                <table class="display" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD1</th>                        
@@ -467,7 +467,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                <table class="display" style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Imatges Catàleg Cloud</th>                        
