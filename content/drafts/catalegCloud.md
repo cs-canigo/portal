@@ -33,6 +33,47 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
+<table style="width:100%">
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3">S</td>
+        <td colspan="3">M</td>
+        <td colspan="3">L</td>
+        <td colspan="3">XL</td>
+    </tr>
+    <tr align="center">
+        <td>RAM</td>
+        <td>CPU</td>
+        <td>DISC</td>
+        <td>RAM</td>
+        <td>CPU</td>
+        <td>DISC</td>
+        <td>RAM</td>
+        <td>CPU</td>
+        <td>DISC</td>
+        <td>RAM</td>
+        <td>CPU</td>
+        <td>DISC</td>
+    </tr>
+    <tr align="center">
+        <td>512</td>
+        <td>500</td>
+        <td>10</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>10</td>
+        <td>2048</td>
+        <td>1500</td>
+        <td>10</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+    </tbody>
+</table>
+
 <table id="CatalegCLOUD" style="width:100%">
     <thead>
         <tr>
