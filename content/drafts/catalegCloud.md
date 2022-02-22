@@ -39,7 +39,6 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <tr>
             <th>Cloud</th>
             <th>Plataforma</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
