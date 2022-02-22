@@ -21,21 +21,11 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-<font size="20">
-<table id="Titol" class="display" style="width:100%">
-        <thead>
-	        <tr>    
-                <th colspan="8" align="center" style="font-weight:bold">Programari estandarditzat per Servidors</th>
-            </tr>
-        </thead>
-</table>
-</font>
-
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
         <tr>
             <th>Darrera revisió realitzada</th>
-            <th>Revisió de full de ruta vigent fins</th>
+            <th>Catàleg Cloud vigent fins</th>
         </tr>
         <tr>
             <td>febrer de 2022</td>
@@ -49,12 +39,11 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <tr>
             <th>Cloud</th>
             <th>Plataforma</th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>
+            <td colspan="2">
                 <table>
                     <thead>
                         <tr>
@@ -131,7 +120,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
             </td>
         </tr>
         <tr>
-            <td>
+            <td colspan="2">
                 <table>
                     <thead>
                         <tr>
