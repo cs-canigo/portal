@@ -191,6 +191,9 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
+	  "columnDefs": [
+       { type: 'date-eu', targets: 7 }
+        ],
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
 	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
