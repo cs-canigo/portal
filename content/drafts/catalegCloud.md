@@ -74,7 +74,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
