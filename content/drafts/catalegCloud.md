@@ -34,7 +34,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
-<table id="CatalegCLOUD" class="display" style="width:100%">
+<table id="CatalegCLOUD" style="width:100%">
     <thead>
         <tr>
             <th width="5%"></th>
@@ -47,7 +47,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <tr>
             <td></td>
             <td colspan="3">
-                <table class="display" style="width:100%">
+                <table style="width:100%">
                     <thead>
                         <tr>
                             <th>Cloud Privat</th>                        
@@ -56,7 +56,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <tbody>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD1</th>                        
@@ -65,7 +65,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>SwarmMe</th>                        
@@ -74,10 +74,10 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
-                                                                        <tr align="center">
-                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        <tr>
+                                                                            <th align="center" colspan="12">Talles Contenidors</th>                        
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
@@ -125,7 +125,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Kubernetes</th>                        
@@ -134,7 +134,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -189,7 +189,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD2</th>                        
@@ -198,7 +198,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Kubernetes</th>                        
@@ -207,7 +207,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -258,7 +258,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -267,7 +267,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -322,7 +322,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD3</th>                        
@@ -331,7 +331,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -340,7 +340,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -395,7 +395,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD4</th>                        
@@ -404,7 +404,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -413,7 +413,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table class="display" style="width:100%">
+                                                                <table style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -467,7 +467,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Imatges Catàleg Cloud</th>                        
@@ -476,7 +476,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Grup de Tecnologies</th>
@@ -627,7 +627,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <tr>
             <td></td>
             <td colspan="3">
-                <table class="display" style="width:100%">
+                <table style="width:100%">
                     <thead>
                         <tr>
                             <th>Cloud Públic</th>                        
@@ -636,7 +636,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <tbody>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Azure</th>                        
