@@ -7,18 +7,18 @@ weight      = 3
 categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 +++
 
+## Part 1: Abast
+
+## Part 2: Referències 
+
+## Part 3: Termes i definicions
+
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
-
-## Part 1: Abast
-
-## Part 2: Referències 
-
-## Part 3: Termes i definicions
 
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
