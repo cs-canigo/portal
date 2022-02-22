@@ -56,7 +56,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <tbody>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table class="display" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                     <thead>
                                         <tr>
                                             <th>CPD1</th>                        
@@ -65,7 +65,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>SwarmMe</th>                        
@@ -74,6 +74,49 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>512</td>
+                                                                            <td>500</td>
+                                                                            <td>10</td>
+                                                                            <td>1024</td>
+                                                                            <td>1000</td>
+                                                                            <td>10</td>
+                                                                            <td>2048</td>
+                                                                            <td>1500</td>
+                                                                            <td>10</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                            <td>-</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -82,7 +125,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Kubernetes</th>                        
@@ -91,57 +134,54 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>256</td>
+                                                                            <td>250</td>
+                                                                            <td>4</td>
+                                                                            <td>512</td>
+                                                                            <td>500</td>
+                                                                            <td>4</td>
+                                                                            <td>1024</td>
+                                                                            <td>1000</td>
+                                                                            <td>4</td>
+                                                                            <td>2048</td>
+                                                                            <td>2000</td>
+                                                                            <td>4</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <table>
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="12">Talles Contenidors</th>                        
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td colspan="3">S</td>
-                                                            <td colspan="3">M</td>
-                                                            <td colspan="3">L</td>
-                                                            <td colspan="3">XL</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>256</td>
-                                                            <td>250</td>
-                                                            <td>**</td>
-                                                            <td>521</td>
-                                                            <td>500</td>
-                                                            <td>**</td>
-                                                            <td>1024</td>
-                                                            <td>1000</td>
-                                                            <td>**</td>
-                                                            <td>2048</td>
-                                                            <td>2000</td>
-                                                            <td>**</td>
-                                                        </tr>
-                                                </table>
-                                            </td>                          
                                         </tr>
                                     </tbody>
                                 </table>
@@ -158,7 +198,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Kubernetes</th>                        
@@ -167,6 +207,49 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>256</td>
+                                                                            <td>62</td>
+                                                                            <td>*</td>
+                                                                            <td>521</td>
+                                                                            <td>125</td>
+                                                                            <td>*</td>
+                                                                            <td>1024</td>
+                                                                            <td>250</td>
+                                                                            <td>*</td>
+                                                                            <td>2048</td>
+                                                                            <td>500</td>
+                                                                            <td>*</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
@@ -175,7 +258,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                         </tr>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -184,58 +267,55 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>256</td>
+                                                                            <td>250</td>
+                                                                            <td>1</td>
+                                                                            <td>512</td>
+                                                                            <td>500</td>
+                                                                            <td>2</td>
+                                                                            <td>1024</td>
+                                                                            <td>1000</td>
+                                                                            <td>4</td>
+                                                                            <td>2048</td>
+                                                                            <td>2000</td>
+                                                                            <td>8</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <table>
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="12">Talles Contenidors</th>                        
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td colspan="3">S</td>
-                                                            <td colspan="3">M</td>
-                                                            <td colspan="3">L</td>
-                                                            <td colspan="3">XL</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>256</td>
-                                                            <td>250</td>
-                                                            <td>**</td>
-                                                            <td>521</td>
-                                                            <td>500</td>
-                                                            <td>**</td>
-                                                            <td>1024</td>
-                                                            <td>1000</td>
-                                                            <td>**</td>
-                                                            <td>2048</td>
-                                                            <td>2000</td>
-                                                            <td>**</td>
-                                                        </tr>
-                                                </table>
-                                            </td>                          
-                                        </tr>
+                                        </tr>                                        
                                     </tbody>
                                 </table>
                             </td>                            
@@ -251,7 +331,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -260,57 +340,54 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>256</td>
+                                                                            <td>250</td>
+                                                                            <td>**</td>
+                                                                            <td>521</td>
+                                                                            <td>500</td>
+                                                                            <td>**</td>
+                                                                            <td>1024</td>
+                                                                            <td>1000</td>
+                                                                            <td>**</td>
+                                                                            <td>2048</td>
+                                                                            <td>2000</td>
+                                                                            <td>**</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <table>
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="12">Talles Contenidors</th>                        
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td colspan="3">S</td>
-                                                            <td colspan="3">M</td>
-                                                            <td colspan="3">L</td>
-                                                            <td colspan="3">XL</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>256</td>
-                                                            <td>250</td>
-                                                            <td>**</td>
-                                                            <td>521</td>
-                                                            <td>500</td>
-                                                            <td>**</td>
-                                                            <td>1024</td>
-                                                            <td>1000</td>
-                                                            <td>**</td>
-                                                            <td>2048</td>
-                                                            <td>2000</td>
-                                                            <td>**</td>
-                                                        </tr>
-                                                </table>
-                                            </td>                          
                                         </tr>
                                     </tbody>
                                 </table>
@@ -327,7 +404,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table>
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Openshift</th>                        
@@ -336,57 +413,53 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
+                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                    <thead>
+                                                                        <tr align="center">
+                                                                            <th colspan="12">Talles Contenidors</th>                        
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr align="center">
+                                                                            <td colspan="3">S</td>
+                                                                            <td colspan="3">M</td>
+                                                                            <td colspan="3">L</td>
+                                                                            <td colspan="3">XL</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                            <td>RAM</td>
+                                                                            <td>CPU</td>
+                                                                            <td>DISC</td>
+                                                                        </tr>
+                                                                        <tr align="center">
+                                                                            <td>256</td>
+                                                                            <td>250</td>
+                                                                            <td>**</td>
+                                                                            <td>521</td>
+                                                                            <td>500</td>
+                                                                            <td>**</td>
+                                                                            <td>1024</td>
+                                                                            <td>1000</td>
+                                                                            <td>**</td>
+                                                                            <td>2048</td>
+                                                                            <td>2000</td>
+                                                                            <td>**</td>
+                                                                        </tr>
+                                                                </table>
                                                             </td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <table>
-                                                    <thead>
-                                                        <tr align="center">
-                                                            <th colspan="12">Talles Contenidors</th>                        
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr align="center">
-                                                            <td colspan="3">S</td>
-                                                            <td colspan="3">M</td>
-                                                            <td colspan="3">L</td>
-                                                            <td colspan="3">XL</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                            <td>RAM</td>
-                                                            <td>CPU</td>
-                                                            <td>DISC</td>
-                                                        </tr>
-                                                        <tr align="center">
-                                                            <td>256</td>
-                                                            <td>250</td>
-                                                            <td>**</td>
-                                                            <td>521</td>
-                                                            <td>500</td>
-                                                            <td>**</td>
-                                                            <td>1024</td>
-                                                            <td>1000</td>
-                                                            <td>**</td>
-                                                            <td>2048</td>
-                                                            <td>2000</td>
-                                                            <td>**</td>
-                                                        </tr>
-                                                </table>
-                                            </td>                          
                                         </tr>
                                     </tbody>
                                 </table>
@@ -394,7 +467,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                         </tr>
                         <tr>
                             <td>
-                                <table class="display" style="width:100%">
+                                <table class="display" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                     <thead>
                                         <tr>
                                             <th>Imatges Catàleg Cloud</th>                        
@@ -403,7 +476,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table style="width:100%">
+                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Grup de Tecnologies</th>
