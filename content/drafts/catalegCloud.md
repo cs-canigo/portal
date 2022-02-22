@@ -74,7 +74,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -134,7 +134,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -207,7 +207,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -267,7 +267,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -340,7 +340,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
@@ -413,7 +413,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+                                                                <table class="display" style="width:100%">
                                                                     <thead>
                                                                         <tr align="center">
                                                                             <th colspan="12">Talles Contenidors</th>                        
