@@ -64,7 +64,38 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>CPD1</td>
+                                            <td>
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>SwarmMe</th>                        
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Kubernetes</th>                        
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -129,7 +160,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                     <tbody>
                                         <tr>
                                             <td>
-                                                <table class="display" style="width:100%">
+                                                <table style="width:100%">
                                                     <thead>
                                                         <tr>
                                                             <th>Grup de Tecnologies</th>
