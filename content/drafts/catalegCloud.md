@@ -47,8 +47,8 @@ tr.plat tr{
         </th>
     </tr>
     <tr class="plat">
-        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>                        
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png" width="16"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -59,12 +59,10 @@ tr.plat tr{
         <td colspan="2" width="17%"></td>
     </tr>
     <tr>
-        <th colspan="2" width="20%">xPaaS</td>
-        <td colspan="10"></td>
-    </tr>
-    <tr>
-        <th colspan="2" width="20%">DBaaS</td>
-        <td colspan="10"></td>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
     </tr>
     <tr height="2">
         <td colspan="12">
@@ -108,8 +106,8 @@ tr.plat tr{
         <td>-</td>
     </tr>
     <tr>
-        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="16"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -120,12 +118,10 @@ tr.plat tr{
         <td colspan="2" width="17%"></td>
     </tr>
     <tr>
-        <th colspan="2" width="20%">xPaaS</td>
-        <td colspan="10"></td>
-    </tr>
-    <tr>
-        <th colspan="2" width="20%">DBaaS</td>
-        <td colspan="10"></td>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
     </tr>
     <tr height="2">
         <td colspan="12">
@@ -173,8 +169,8 @@ tr.plat tr{
         </th>
     </tr>
     <tr>
-        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="16"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -185,12 +181,10 @@ tr.plat tr{
         <td colspan="2" width="17%"></td>
     </tr>
     <tr>
-        <th colspan="2" width="20%">xPaaS</td>
-        <td colspan="10"></td>
-    </tr>
-    <tr>
-        <th colspan="2" width="20%">DBaaS</td>
-        <td colspan="10"></td>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
     </tr>
     <tr height="2">
         <td colspan="12">
@@ -234,8 +228,8 @@ tr.plat tr{
         <td>*</td>
     </tr>
     <tr>
-        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left">Openshift <img src="../catalegCloud/openShift.png" width="20"></td>                        
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -246,12 +240,136 @@ tr.plat tr{
         <td colspan="2" width="17%"></td>
     </tr>
     <tr>
-        <th colspan="2" width="20%">xPaaS</td>
-        <td colspan="10"></td>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="2">
+        <td colspan="12">
+        </td>
     </tr>
     <tr>
-        <th colspan="2" width="20%">DBaaS</td>
-        <td colspan="10"></td>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD3
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="2">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD4
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/mysql.png" align="left"> <img src="../catalegCloud/postgresql.png" align="left"></td>
     </tr>
     <tr height="2">
         <td colspan="12">
