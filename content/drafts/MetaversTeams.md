@@ -12,7 +12,7 @@ categories  = ["Articles","Metavers","Metavers Teams"]
 
 ---
 
-# **Metavers al Teams**
+# **Metavers al Microsoft Teams**
 <br><br>
 
 ## **Introducció** 
@@ -45,7 +45,7 @@ Alguns exemples de metavers:
 
 ---
 
-## **Metavers dins Microsoft Teams**
+## **Metavers al Microsoft Teams**
 <br><br>
 El Metavers de **Microsoft amb Mesh per Teams** serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
 <br>
