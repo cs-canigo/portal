@@ -48,7 +48,7 @@ tr.plat tr{
     </tr>
     <tr class="plat">
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -107,7 +107,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -170,7 +170,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -229,7 +229,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -292,7 +292,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -304,7 +304,7 @@ tr.plat tr{
     </tr>
     <tr>
         <th colspan="3" width="25%">xPaaS</td>
-        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" width="16"></td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" width="20"></td>
         <th colspan="3" width="25%">DBaaS</td>
         <td colspan="3" width="25%"></td>
     </tr>
@@ -355,7 +355,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="16"></td>                        
+        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -367,9 +367,9 @@ tr.plat tr{
     </tr>
     <tr>
         <th colspan="3" width="25%">xPaaS</td>
-        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" width="16"></td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" width="20"></td>
         <th colspan="3" width="25%">DBaaS</td>
-        <td colspan="3" width="25%"><img src="../catalegCloud/mysql.png" align="left" width="16"> <img src="../catalegCloud/postgresql.png" align="left"></td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/mysql.png" align="left" width="20"> <img src="../catalegCloud/postgresql.png" align="left" width="20"></td>
     </tr>
     <tr height="2">
         <td colspan="12">
