@@ -30,13 +30,33 @@ tr.plat tr{
 
 <script>
     function amaga(vClass) {
-            document.getElementsByClassName(vClass)[0].
-            style.visibility = 'hidden';
+            var tr = document.getElementsByClassName(vClass);
+            var row = taulaFullRutaLLT.row( tr )
+            row.child.hide();
+            /*document.getElementsByClassName(vClass)[0].
+            style.visibility = 'hidden';*/
         }
     function mostra(vClass) {
-            document.getElementsByClassName(vClass)[0].
-            style.visibility = 'visible';
+            var tr = document.getElementsByClassName(vClass);
+            var row = taulaFullRutaLLT.row( tr )
+            row.child.hide();
+            /*document.getElementsByClassName(vClass)[0].
+            style.visibility = 'visible';*/
         }
+    function amag_most(){
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaLLT.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatLLT(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    }
 </script>
 
 <table id="Revisio" class="display" style="width:50%" align="center">
