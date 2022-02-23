@@ -140,34 +140,6 @@
         "Data_actualitzacio": "22/12/2021"
     },
     {
-        "Id": "dtarq141",
-        "Nom": "Agrupació temàtica de serveis al ciutadà",
-        "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Organització de l'administració i sector públic",
-        "Descripcio": "Llistat de temes o assumptes en que es poden agrupar els serveis que s'ofereixen al ciutadà",
-        "instancies": [
-            {
-                "inom": "V01",
-                "iestat": "Vigent",
-                "itipus": "Tabular",
-                "ipromotor": "Direcció General de Serveis Digitals i Experiència ciutadana (DGSDEC)",
-                "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Agrupacio_tematica_serveis_ciutada_ATR.docx",
-                "ifitxer_xls": "Agrupacio_tematica_serveis_ciutada.xlsx",
-                "idatacreacio": "31/03/2021",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "31/03/2021",
-                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P-blic/Agrupaci-tem-tica-de-serveis-al-ciutad-/wajj-p75b",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "AGRUPACIO_TEMATICA_SERVEIS_CIUTADA",
-        "Classificacio": "Consolidat",
-        "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "31/03/2021"
-    },
-    {
         "Id": "dtarq161",
         "Nom": "Agrupació temàtica nivell domini",
         "Ambit": "Administració pública, govern i relacions institucionals",
@@ -178,7 +150,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "D.G. d'Administració Digital",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Agrupacio_tematica_nivell_domini_ATR.docx",
                 "ifitxer_xls": "Agrupacio_tematica_nivell_domini.xlsx",
@@ -206,7 +178,7 @@
                 "inom": "V01",
                 "iestat": "Obsoleta",
                 "itipus": "Tabular",
-                "ipromotor": "D.G. d'Administració Digital",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Agrupacio_tematica_nivell_subdomini_ATR.docx",
                 "ifitxer_xls": "deprecated/Agrupacio_tematica_nivell_subdomini.v01.xlsx",
@@ -221,7 +193,7 @@
                 "inom": "V02",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "D.G. d'Administració Digital",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Modificació dels subdominis associats al domini de Salut.",
                 "ifitxer_doc": "Agrupacio_tematica_nivell_subdomini_ATR.docx",
                 "ifitxer_xls": "Agrupacio_tematica_nivell_subdomini.xlsx",
@@ -320,16 +292,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització segons la nova estructura de Govern, XIII Legislatura.",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_v02.xlsx",
                 "idatacreacio": "09/09/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "22/09/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització versió anterior per incorporar la Casa de la Generalitat a Perpinyà i modificar el nom de \"Direcció General d'Administració Digital\" per \"Direcció General d'Administració Digital i d'Organització\".",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "22/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -337,7 +324,7 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "22/09/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq103",
@@ -462,16 +449,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Direcció General d'Administració Local (DGAL)",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Territori_Ajuntaments_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Ajuntaments.xlsx",
+                "ifitxer_doc": "Ajuntaments_ATR.docx",
+                "ifitxer_xls": "deprecated/Ajuntaments_V01.xlsx",
                 "idatacreacio": "01/04/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "20/04/2020",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Direcció General d'Administració Local (DGAL)",
+                "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Ajuntaments_ATR.docx",
+                "ifitxer_xls": "Ajuntaments.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Ajuntaments-de-Catalunya/twhi-gz6x",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -479,7 +481,7 @@
         "nom_dinsBD": "AJUNTAMENTS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "20/04/2020"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq91",
@@ -648,62 +650,6 @@
         "Classificacio": "Pendent",
         "Data_publicacio": "22/12/2021",
         "Data_actualitzacio": "22/12/2021"
-    },
-    {
-        "Id": "dtarq160",
-        "Nom": "Àrees bàsiques salut",
-        "Ambit": "Salut",
-        "Subambit": "Sistema i recursos sanitaris",
-        "Descripcio": "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
-                "ifitxer_xls": "Arees_basiques_salut.xlsx",
-                "idatacreacio": "24/01/2022",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "AREES_BASIQUES_SALUT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
-    },
-    {
-        "Id": "dtarq159",
-        "Nom": "Sectors sanitaris",
-        "Ambit": "Salut",
-        "Subambit": "Sistema i recursos sanitaris",
-        "Descripcio": "Llistat de sectors sanitaris, segon nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
-                "ifitxer_xls": "Sectors_sanitaris.xlsx",
-                "idatacreacio": "24/01/2022",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "SECTORS_SANITARIS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
     },
     {
         "Id": "dtarq117",
@@ -943,8 +889,8 @@
         "Descripcio": "Llista general d'activitats que realitzen les empreses que opten a contractes administratius d'obres o de serveis. ",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
                 "idescripcio": "Versió inicial",
@@ -953,15 +899,15 @@
                 "idatacreacio": "11/12/2020",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/Classificaci%C3%B3-empresarial-grups/jx97-ftdi",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CLASSIFICACIO_EMPRESARIAL_GRUPS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq169",
@@ -971,8 +917,8 @@
         "Descripcio": "Llista d'activitats especifiques que realitzen les empreses que opten a contractes administratius d'obres o de serveis. ",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
                 "idescripcio": "Versió inicial",
@@ -981,15 +927,15 @@
                 "idatacreacio": "11/12/2020",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Economia/Classificaci%C3%B3-empresarial-subgrups/77uc-c84x",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CLASSIFICACIO_EMPRESARIAL_SUBGRUPS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq118",
@@ -1105,7 +1051,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Idioma_Comunicacio_ATR.docx",
                 "ifitxer_xls": "Idioma_Comunicacio.xlsx",
@@ -1133,7 +1079,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Prefixos_telefonics_internacionals_ATR.docx",
                 "ifitxer_xls": "Prefixos_telefonics_internacionals.xlsx",
@@ -1161,7 +1107,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Rel_PrefixTeleInter_Paisos_ATR.docx",
                 "ifitxer_xls": "Rel_PrefixTeleInter_Paisos.xlsx",
@@ -1189,7 +1135,7 @@
                 "inom": "V01",
                 "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Oficina d'Innovació i Administració Digital (OIAD)",
+                "ipromotor": "D.G. d'Administració Digital i d'Organització",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_Telefon_ATR.docx",
                 "ifitxer_xls": "Tipus_Telefon.xlsx",
@@ -1375,6 +1321,34 @@
         "Data_actualitzacio": "22/09/2021"
     },
     {
+        "Id": "dtarq160",
+        "Nom": "Àrees bàsiques salut",
+        "Ambit": "Salut",
+        "Subambit": "Sistema i recursos sanitaris",
+        "Descripcio": "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
+                "ifitxer_xls": "Arees_basiques_salut.xlsx",
+                "idatacreacio": "24/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AREES_BASIQUES_SALUT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
         "Id": "dtarq158",
         "Nom": "Regions sanitàries",
         "Ambit": "Salut",
@@ -1416,6 +1390,118 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/12/2021",
         "Data_actualitzacio": "26/01/2022"
+    },
+    {
+        "Id": "dtarq159",
+        "Nom": "Sectors sanitaris",
+        "Ambit": "Salut",
+        "Subambit": "Sistema i recursos sanitaris",
+        "Descripcio": "Llistat de sectors sanitaris, segon nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
+                "ifitxer_xls": "Sectors_sanitaris.xlsx",
+                "idatacreacio": "24/01/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "SECTORS_SANITARIS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "26/01/2022",
+        "Data_actualitzacio": "26/01/2022"
+    },
+    {
+        "Id": "dtarq172",
+        "Nom": "Classes de discapacitat",
+        "Ambit": "Serveis socials",
+        "Subambit": "Discapacitat i dependència",
+        "Descripcio": "Llistat de categories generals de discapacitats, segons la importància de la deficiència i el grau de discapacitat que origina.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Classes_discapacitat_ATR.docx",
+                "ifitxer_xls": "Classes_discapacitat.xlsx",
+                "idatacreacio": "08/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "CLASSES_DISCAPACITAT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
+    },
+    {
+        "Id": "dtarq171",
+        "Nom": "Graus de discapacitat",
+        "Ambit": "Serveis socials",
+        "Subambit": "Discapacitat i dependència",
+        "Descripcio": "Llistat de nivells de gravetat a què fan referència els criteris per a l'assignació del percentatge de discapacitat, està basat en la repercussió de la patologia sobre les activitats de la vida diària.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Graus_discapacitat_ATR.docx",
+                "ifitxer_xls": "Graus_discapacitat.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "GRAUS_DISCAPACITAT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
+    },
+    {
+        "Id": "dtarq173",
+        "Nom": "Tipus de discapacitat",
+        "Ambit": "Serveis socials",
+        "Subambit": "Discapacitat i dependència",
+        "Descripcio": "Llistat de tipologies en què es poden classificar les discapacitats de les persones, basades en la normativa que regula el procediment per al reconeixement de discapacitat, que relaciona deficiència i funcionalitat.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Tipus_discapacitat_ATR.docx",
+                "ifitxer_xls": "Tipus_discapacitat.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "TIPUS_DISCAPACITAT",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq50",
@@ -1552,25 +1638,25 @@
         "Descripcio": "Grau de parentiu existent entre persones.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Persona_Relació_Parentiu_Grau_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Relació_Parentiu_Grau.xlsx",
+                "ifitxer_doc": "Grau_Parentiu_ATR.docx",
+                "ifitxer_xls": "Grau_Parentiu.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Grau-parentiu/7i4q-inca",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "GRAU_PARENTIU",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq44",
@@ -1580,25 +1666,25 @@
         "Descripcio": "Vincle parentiu entre dues persones.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Persona_Relacio_Parentiu_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Relació_Parentiu.xlsx",
+                "ifitxer_doc": "Relacio_Parentiu_ATR.docx",
+                "ifitxer_xls": "Relacio_Parentiu.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Relaci%C3%B3-parentiu/drhd-wfr8",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "RELACIO_PARENTIU",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq45",
@@ -1692,25 +1778,25 @@
         "Descripcio": "Relació de parentiu que uneix les persones.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial.",
-                "ifitxer_doc": "Codis_Persona_Relació_Parentiu_Tipus_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Relació_Parentiu_Tipus.xlsx",
+                "ifitxer_doc": "Tipus_Parentiu_ATR.docx",
+                "ifitxer_xls": "Tipus_Parentiu.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Societat-benestar/Tipus-parentiu/wjxr-mcph",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_PARENTIU",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "19/07/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/02/2022",
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq142",
@@ -1777,16 +1863,31 @@
         "instancies": [
             {
                 "inom": "V01",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
-                "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                "ifitxer_xls": "deprecated/Codi_Postal_Municipis_Cat_V01.xlsx",
                 "idatacreacio": "13/07/2020",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V02",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Codi_Postal_Municipis_Cat_ATR.docx",
+                "ifitxer_xls": "Codi_Postal_Municipis_Cat.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Codis-postal-per-municipis-de-Catalunya/tp8v-a58g",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1794,7 +1895,7 @@
         "nom_dinsBD": "CODI_POSTAL_MUNICIPIS_CAT",
         "Classificacio": "Consolidat",
         "Data_publicacio": "26/05/2021",
-        "Data_actualitzacio": "26/05/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq82",
@@ -1919,16 +2020,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Es modifica el nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\".",
-                "ifitxer_doc": "Codis_Territori_Municipis_Catalunya_Geo_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Municipis_Catalunya_Geo.xlsx",
+                "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Catalunya_Geo_v02.xlsx",
                 "idatacreacio": "12/07/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat), Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Municipis_Catalunya_Geo_ATR.docx",
+                "ifitxer_xls": "Municipis_Catalunya_Geo.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Catalunya-Geo/9aju-tpwc",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1936,7 +2052,7 @@
         "nom_dinsBD": "MUNICIPIS_CAT_GEO",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "14/07/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq87",
@@ -2007,16 +2123,31 @@
             },
             {
                 "inom": "V05",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Es modifica el nom de 2 municipis, els de codi: 030073, 070321.",
-                "ifitxer_doc": "Codis_Territori_Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Municipis_Espanya.xlsx",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_v05.xlsx",
                 "idatacreacio": "20/12/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "22/12/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V06",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2024,7 +2155,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "22/12/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq127",
@@ -2078,16 +2209,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
                 "idescripcio": "Eliminació de registres duplicats.",
                 "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
-                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "ifitxer_xls": "deprecated/Nom_carrers_Catalunya_v02.xlsx",
                 "idatacreacio": "26/05/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "26/05/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut Cartogràfic i Geològic de Catalunya (ICGC)",
+                "idescripcio": "Actualització per canvi nom de \"Bigues i Riells\" per \"Bigues i Riells del Fai\" i \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Nom_carrers_Catalunya_ATR.docx",
+                "ifitxer_xls": "Nom_carrers_Catalunya.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Nom-de-carrers-de-Catalunya/2e2b-4ksy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2095,7 +2241,7 @@
         "nom_dinsBD": "NOM_CARRERS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "21/04/2021",
-        "Data_actualitzacio": "26/05/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq125",
@@ -2349,16 +2495,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització general i modificació del nom del municipi de \"Bigues i Riells\" per \"Bigues i Riells del Fai\". ",
                 "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Catalunya_v03.xlsx",
                 "idatacreacio": "12/07/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "14/07/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Unitats_Poblacionals_Catalunya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Catalunya.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-poblacionals-Catalunya/byd8-nf5f",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2366,7 +2527,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_CATALUNYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "04/12/2020",
-        "Data_actualitzacio": "14/07/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq140",
@@ -2422,16 +2583,31 @@
             },
             {
                 "inom": "V04",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Es modifica el nom de 2 municipis, relacionats amb els municipis de codi ine 030073 i 070321.",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_v04.xlsx",
                 "idatacreacio": "20/12/2021",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/02/2022",
                 "idatapublicacio": "22/12/2021",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V05",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "21/02/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/02/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2439,7 +2615,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "22/12/2021"
+        "Data_actualitzacio": "23/02/2022"
     },
     {
         "Id": "dtarq111",
