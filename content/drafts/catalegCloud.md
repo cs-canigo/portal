@@ -23,7 +23,7 @@ tr.plat tr{
 }
 th { font-size: 14px; }
 td { font-size: 14px; height: 40px; }
-img { height: 50px}
+img { height: 40px}
 </style>
 
 <script>
@@ -451,10 +451,10 @@ img { height: 50px}
         <th colspan="3">Imatge</th>                         
     </tr>
     <tr>
-        <td>Servidors Web</td>
-        <td>Java</td>
-        <td>8</td>
-        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Java</td>
+        <td colspan="3">8</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
     </tr>
     <tr>
         <td>Servidors Web</td>
