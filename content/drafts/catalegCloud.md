@@ -20,8 +20,11 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
 <style>
-table {
+table.cpd {
   border: 1px solid;
+}
+tr.plat tr{
+  border: 1px solid;  
 }
 </style>
 
@@ -43,7 +46,7 @@ table {
         <th colspan="13">CPD1
         </th>
     </tr>
-    <tr>
+    <tr class="plat">
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
         <td colspan="12" align="left">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>                        
     </tr>
@@ -71,24 +74,24 @@ table {
         <th align="center" colspan="12">Talles Contenidors</th>                        
     </tr>
     <tr align="center">
-        <td colspan="3">S</th>
-        <td colspan="3">M</th>
-        <td colspan="3">L</th>
-        <td colspan="3">XL</th>
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
     </tr>
     <tr align="center">
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
     </tr>
     <tr align="center">
         <td>512</td>
@@ -153,6 +156,71 @@ table {
     </tr>
     <tr align="center">
         <td>256</td>
+        <td>250</td>
+        <td>4</td>
+        <td>512</td>
+        <td>500</td>
+        <td>4</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD2
+        </th>
+    </tr>
+    <tr>
+        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">xPaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">DBaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr height="2">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
         <td>62</td>
         <td>*</td>
         <td>521</td>
@@ -164,6 +232,67 @@ table {
         <td>2048</td>
         <td>500</td>
         <td>*</td>
+    </tr>
+    <tr>
+        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="12" align="left">Openshift <img src="../catalegCloud/openshift.png" width="20"></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">xPaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">DBaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr height="2">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
     </tr>
 </table>
 
