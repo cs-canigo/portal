@@ -33,6 +33,84 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
+<table style="width:100%">
+    <tr>
+        <th>CPD1</th>                        
+    </tr>
+    <tr>
+        <td>
+            <table style="width:100%">
+                <tr colspan="12">
+                    <th>SwarmMe</th>                        
+                </tr>
+                <tr>
+                    <td colspan="2">Versió</td>
+                    <td colspan="2"></td>
+                    <td colspan="2">Mètriques</td>
+                    <td colspan="2"></td>
+                    <td colspan="2">Logs</td>
+                    <td colspan="2"></td>
+                </tr>
+                    <td colspan="2">xPaaS</td>
+                    <td colspan="10"></td>
+                <tr>
+                </tr>
+                </tr>
+                    <td colspan="2">DBaaS</td>
+                    <td colspan="10"></td>
+                <tr>
+                <tr>
+                    <td>
+                        <table style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th align="center" colspan="12">Talles Contenidors</th>                        
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="center">
+                                    <td colspan="3">S</td>
+                                    <td colspan="3">M</td>
+                                    <td colspan="3">L</td>
+                                    <td colspan="3">XL</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>RAM</td>
+                                    <td>CPU</td>
+                                    <td>DISC</td>
+                                    <td>RAM</td>
+                                    <td>CPU</td>
+                                    <td>DISC</td>
+                                    <td>RAM</td>
+                                    <td>CPU</td>
+                                    <td>DISC</td>
+                                    <td>RAM</td>
+                                    <td>CPU</td>
+                                    <td>DISC</td>
+                                </tr>
+                                <tr align="center">
+                                    <td>512</td>
+                                    <td>500</td>
+                                    <td>10</td>
+                                    <td>1024</td>
+                                    <td>1000</td>
+                                    <td>10</td>
+                                    <td>2048</td>
+                                    <td>1500</td>
+                                    <td>10</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>                                        
+</table>
+
 <table id="CatalegCLOUD" style="width:100%">
     <thead>
         <tr>
@@ -65,7 +143,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                         <tr>
                                             <td>
                                                 <table style="width:100%">
-                                                    <tr>
+                                                    <tr colspan="12">
                                                         <th>SwarmMe</th>                        
                                                     </tr>
                                                     <tr>
