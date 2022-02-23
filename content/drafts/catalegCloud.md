@@ -34,7 +34,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 
 <table id="CPD1SwarmMe" class="display" style="width:99%">
     <tr>
-        <tr rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></th>
+        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
         <th colspan="12">SwarmMe</th>                        
     </tr>
     <tr>
