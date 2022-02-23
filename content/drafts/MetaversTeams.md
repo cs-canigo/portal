@@ -12,7 +12,9 @@ categories  = ["Articles","Metavers","Metavers Teams"]
 
 ---
 
-# **Introducció al Metavers** 
+# **Metavers al Teams**
+
+### **Introducció** 
 <br><br>
 Probablement hem començat a escoltar recentment la paraula **Metavers** al nostre voltant i en aquesta publicació, intentarem aclarir de què es tracta realment i com podria afectar aquesta tecnologia a la forma de treballar. Microsoft actualment té una línia de treball que té previst que presenti al 2022, per ampliar l’eina col·laborativa Teams al Metavers.
 <br><br>
@@ -42,7 +44,7 @@ Alguns exemples de metavers:
 
 ---
 
-# **Metavers dins Microsoft Teams**
+### **Metavers dins Microsoft Teams**
 <br><br>
 El Metavers de **Microsoft amb Mesh per Teams** serà un lloc on el món digital i el món físic s’uniran en una nova plataforma digital de col·laboració, que donarà cabuda tant al món domèstic com l’empresarial amb l’ús d’avatars pels usuaris i amb l’ús opcional de les ulleres Microsoft de realitat augmentada “HoloLens” que potenciarà l’experiència immersiva al món virtual.
 <br>
