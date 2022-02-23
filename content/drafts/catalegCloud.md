@@ -111,7 +111,6 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                                         <td>-</td>
                                                                         <td>-</td>
                                                                     </tr>
-                                                                    </tbody>
                                                                 </table>
                                                             </td>
                                                         </tr>
