@@ -69,6 +69,22 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                         <th>SwarmMe</th>                        
                                                     </tr>
                                                     <tr>
+                                                        <td colspan="2">Versió</td>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">Mètriques</td>
+                                                        <td colspan="2"></td>
+                                                        <td colspan="2">Logs</td>
+                                                        <td colspan="2"></td>
+                                                    </tr>
+                                                        <td colspan="2">xPaaS</td>
+                                                        <td colspan="10"></td>
+                                                    <tr>
+                                                    </tr>
+                                                    </tr>
+                                                        <td colspan="2">DBaaS</td>
+                                                        <td colspan="10"></td>
+                                                    <tr>
+                                                    <tr>
                                                         <td>
                                                             <table style="width:100%">
                                                                 <thead>
