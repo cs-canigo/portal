@@ -1,7 +1,7 @@
 +++
 date        = "2022-02-22"
 title       = "Dades de Referència"
-description = "Arquitectura de Dades de CTTI, versió 23/02/2022"
+description = "Arquitectura de Dades de CTTI, versió 23/02/2022B"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
@@ -191,9 +191,12 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
-	  "columnDefs": [
-       { type: 'date-eu', targets: 7 }
-        ],
+	  "columnDefs": [ {
+			"targets": [6,7],
+				 "render": function ( data, type, row, meta ) {
+							 return '<span style="display:none">="'+data.split("/").reverse().join("/")+'"></span>'+data+'';
+					  }
+		  } ], 
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
 	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
