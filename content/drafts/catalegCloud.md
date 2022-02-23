@@ -40,8 +40,8 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     <tr>
         <td>
             <table style="width:100%">
-                <tr colspan="12">
-                    <th>SwarmMe</th>                        
+                <tr>
+                    <th colspan="12">SwarmMe</th>                        
                 </tr>
                 <tr>
                     <td colspan="2">Versió</td>
