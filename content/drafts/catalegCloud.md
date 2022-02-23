@@ -115,15 +115,9 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                                                         <tr>
                                                             <td>
                                                                 <table style="width:100%">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th align="center" colspan="12">Talles Contenidors</th>                        
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <td>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </thead>
+                                                                    <tr>
+                                                                        <th align="center" colspan="12">Talles Contenidors</th>                        
+                                                                    </tr>
                                                                     <tbody>
                                                                         <tr align="center">
                                                                             <td colspan="3">S</td>
