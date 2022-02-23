@@ -45,14 +45,14 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <td colspan="2">Logs</td>
         <td colspan="2"></td>
     </tr>
+    <tr>
         <td colspan="2">xPaaS</td>
         <td colspan="10"></td>
+    </tr>
     <tr>
-    </tr>
-    </tr>
         <td colspan="2">DBaaS</td>
         <td colspan="10"></td>
-    <tr>
+    </tr>
     <tr>
         <td colspan="12">
             <table style="width:100%">
