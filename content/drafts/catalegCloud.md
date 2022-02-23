@@ -28,6 +28,17 @@ tr.plat tr{
 }
 </style>
 
+<script>
+    function amaga(vClass) {
+            document.getElementsByClassName(vClass)[0].
+            style.visibility = 'hidden';
+        }
+    function mostra(vClass) {
+            document.getElementsByClassName(vClass)[0].
+            style.visibility = 'visible';
+        }
+</script>
+
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
         <tr>
@@ -47,10 +58,10 @@ tr.plat tr{
         </th>
     </tr>
     <tr class="plat">
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center" onclick="amaga('cpd1swarm')"><img src="../catalegCloud/details_close.png" align="center" onclick="mostra('cpd1swarm')"></td>
+        <td colspan="11" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png" width="20"></td>                        
     </tr>
-    <tr>
+    <tr class="cpd1swarm">
         <th colspan="2" width="16%">Versió</th>
         <td colspan="2" width="17%"></td>
         <th colspan="2" width="16%">Mètriques</th>
@@ -58,26 +69,26 @@ tr.plat tr{
         <th colspan="2" width="16%">Logs</th>
         <td colspan="2" width="17%"></td>
     </tr>
-    <tr>
+    <tr class="cpd1swarm">
         <th colspan="3" width="25%">xPaaS</td>
         <td colspan="3" width="25%"></td>
         <th colspan="3" width="25%">DBaaS</td>
         <td colspan="3" width="25%"></td>
     </tr>
-    <tr height="2">
+    <tr height="2" class="cpd1swarm">
         <td colspan="12">
         </td>
     </tr>
-    <tr>
+    <tr class="cpd1swarm">
         <th align="center" colspan="12">Talles Contenidors</th>                        
     </tr>
-    <tr align="center">
+    <tr align="center" class="cpd1swarm">
         <td colspan="3"><strong>S</strong></th>
         <td colspan="3"><strong>M</strong></th>
         <td colspan="3"><strong>L</strong></th>
         <td colspan="3"><strong>XL</strong></th>
     </tr>
-    <tr align="center">
+    <tr align="center" class="cpd1swarm">
         <td><strong>RAM</strong></th>
         <td><strong>CPU</strong></th>
         <td><strong>DISC</strong></th>
@@ -91,7 +102,7 @@ tr.plat tr{
         <td><strong>CPU</strong></th>
         <td><strong>DISC</strong></th>
     </tr>
-    <tr align="center">
+    <tr align="center" class="cpd1swarm">
         <td>512</td>
         <td>500</td>
         <td>10</td>
@@ -106,8 +117,8 @@ tr.plat tr{
         <td>-</td>
     </tr>
     <tr>
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="11" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -169,8 +180,8 @@ tr.plat tr{
         </th>
     </tr>
     <tr>
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="11" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -228,8 +239,8 @@ tr.plat tr{
         <td>*</td>
     </tr>
     <tr>
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -291,8 +302,8 @@ tr.plat tr{
         </th>
     </tr>
     <tr>
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -354,8 +365,8 @@ tr.plat tr{
         </th>
     </tr>
     <tr>
-        <td rowspan="8"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
+        <td><img src="../catalegCloud/details_open.png" align="center"></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
