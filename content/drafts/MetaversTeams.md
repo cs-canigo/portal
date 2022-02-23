@@ -13,8 +13,6 @@ categories  = ["Articles","Metavers","Metavers Teams"]
 ---
 
 # **Metavers al Teams**
-
----
 <br><br>
 
 ## **Introducció** 
