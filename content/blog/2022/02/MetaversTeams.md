@@ -10,7 +10,7 @@ imatge      = "/images/bloc/2022/02/CMesh_Avatars.JPG"
 key         = "FEBRER2022"
 +++
 
-![MetaversTeams](/images/bloc/2022/02/CMesh_Avatars.JPG)
+![MetaversTeams1](/images/bloc/2022/02/CMesh_Avatars.JPG)
 
 ---
 
