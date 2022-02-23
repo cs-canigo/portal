@@ -235,7 +235,7 @@ tr.plat tr{
     </tr>
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12" align="left">Openshift <img src="../catalegCloud/openshift.png" width="20"></td>                        
+        <td colspan="12" align="left">Openshift <img src="../catalegCloud/openShift.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
