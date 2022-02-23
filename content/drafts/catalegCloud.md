@@ -26,8 +26,8 @@ table.cpd {
 tr.plat tr{
   border: 1px solid;  
 }
-th { font-size: 12px; }
-td { font-size: 12px; }
+th { font-size: 14px; }
+td { font-size: 14px; }
 </style>
 
 <script>
