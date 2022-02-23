@@ -60,7 +60,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <td colspan="10"></td>
                 <tr>
                 <tr>
-                    <td>
+                    <td colspan="12">
                         <table style="width:100%">
                             <thead>
                                 <tr>
