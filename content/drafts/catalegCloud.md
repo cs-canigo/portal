@@ -32,24 +32,24 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
-<table id="CPD1SwarmMe" class="display" style="width:100%">
+<table id="CPD1SwarmMe" class="display" style="width:99%">
     <tr>
         <th colspan="12">SwarmMe</th>                        
     </tr>
     <tr>
-        <th colspan="2">Versió</th>
-        <td colspan="2"></td>
-        <th colspan="2">Mètriques</th>
-        <td colspan="2"></td>
-        <th colspan="2">Logs</th>
-        <td colspan="2"></td>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
     </tr>
     <tr>
-        <th colspan="2">xPaaS</td>
+        <th colspan="2" width="20%">xPaaS</td>
         <td colspan="10"></td>
     </tr>
     <tr>
-        <th colspan="2">DBaaS</td>
+        <th colspan="2" width="20%">DBaaS</td>
         <td colspan="10"></td>
     </tr>
     <tr>
@@ -59,24 +59,24 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
                     <th align="center" colspan="12">Talles Contenidors</th>                        
                 </tr>
                 <tr align="center">
-                    <th colspan="3">S</th>
-                    <th colspan="3">M</th>
-                    <th colspan="3">L</th>
-                    <th colspan="3">XL</th>
+                    <td colspan="3">S</th>
+                    <td colspan="3">M</th>
+                    <td colspan="3">L</th>
+                    <td colspan="3">XL</th>
                 </tr>
                 <tr align="center">
-                    <th>RAM</th>
-                    <th>CPU</th>
-                    <th>DISC</th>
-                    <th>RAM</th>
-                    <th>CPU</th>
-                    <th>DISC</th>
-                    <th>RAM</th>
-                    <th>CPU</th>
-                    <th>DISC</th>
-                    <th>RAM</th>
-                    <th>CPU</th>
-                    <th>DISC</th>
+                    <td>RAM</th>
+                    <td>CPU</th>
+                    <td>DISC</th>
+                    <td>RAM</th>
+                    <td>CPU</th>
+                    <td>DISC</th>
+                    <td>RAM</th>
+                    <td>CPU</th>
+                    <td>DISC</th>
+                    <td>RAM</th>
+                    <td>CPU</th>
+                    <td>DISC</th>
                 </tr>
                 <tr align="center">
                     <td>512</td>
@@ -97,13 +97,13 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </tr>
 </table>
 
-<table style="width:100%">
+<table id="imatgesCloud" class="display" style="width:100%">
     <tr>
         <th>Imatges Catàleg Cloud</th>                        
     </tr>
     <tr>
         <td>
-            <table style="width:100%">
+            <table id="llistatImatgesCloud" class="display" style="width:100%">
                 <tr>
                     <th>Grup de Tecnologies</th>
                     <th>Producte</th>
