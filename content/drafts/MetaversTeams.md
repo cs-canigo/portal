@@ -84,9 +84,9 @@ A continuació es mostren els components de la plataforma Microsoft Mesh per a d
 </div>
 
 <br>
-El nucli de la plataforma de desenvolupament és Cloud Azure amb serveis d'identitat com Azure Active Directory i Microsoft Accounts, que permeten usuaris degudament autenticats i autoritzats a una sessió segura i de confiança. 
+El nucli de la plataforma de desenvolupament és **Cloud Azure** amb serveis d'identitat com Azure Active Directory i Microsoft Accounts, que permeten usuaris degudament autenticats i autoritzats a una sessió segura i de confiança. 
 <br><br>
-Més enllà de la plataforma bàsica, hi ha capacitats clau impulsades per IA que permeten a Mesh abordar alguns dels reptes tècnics més complicats amb la possibilitat d'escenaris massius en línia multiusuari (MMO) per a la realitat mixta. Aquests inclouen presència immersiva, mapes espacials, renderització hologràfica i sincronització multiusuari.
+Més enllà de la plataforma bàsica, hi ha capacitats clau impulsades per IA que permeten a Mesh abordar alguns dels reptes tècnics més complicats, amb la possibilitat d'escenaris massius en línia multiusuari (MMO) per a la realitat mixta. Aquests inclouen presència immersiva, mapes espacials, renderització hologràfica i sincronització multiusuari.
 <br><br>
 Per aprofitar aquestes capacitats i les funcions bàsiques de la plataforma, **Mesh ofereix un SDK per a desenvolupadors multiplataforma perquè els desenvolupadors puguin crear aplicacions orientades a la seva elecció de plataforma i dispositius** , ja siguin AR, VR, ordinadors o telèfons. Actualment és compatible amb Unity juntament amb C++ i C# nadius, però en els propers mesos, Mesh també tindrà suport per a Unreal, Babylon i React Native. Més enllà d'accedir a les capacitats, l'SDK també proporciona construccions UX preconstruïdes perquè els desenvolupadors les utilitzin a les aplicacions. Aquests prefabricats estan dissenyats per fer que el procés de desenvolupament sigui més senzill i ràpid per participar en experiències de realitat mixta.
 <br><br>
