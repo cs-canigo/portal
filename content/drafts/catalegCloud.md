@@ -440,148 +440,139 @@ td { font-size: 14px; }
         <td>2000</td>
         <td>8</td>
     </tr>
-</table>
-
-<table id="imatgesCloud" class="display" style="width:100%">
     <tr>
         <th>Imatges Catàleg Cloud</th>                        
     </tr>
     <tr>
-        <td>
-            <table id="llistatImatgesCloud" class="display" style="width:100%">
-                <tr>
-                    <th>Grup de Tecnologies</th>
-                    <th>Producte</th>
-                    <th>Versió</th>
-                    <th>Imatge</th>                         
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Java</td>
-                    <td>8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Java</td>
-                    <td>11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>10</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>12</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>14</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.2</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.4</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat</td>
-                    <td>9.0-Java 8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat</td>
-                    <td>9.0-Java 11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat amb suport de Sessions distribuïdes</td>
-                    <td>9.0-Java 8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat amb suport de Sessions distribuïdes</td>
-                    <td>9.0-Java 11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache</td>
-                    <td>2.4</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache GICAR Shibboleth</td>
-                    <td>1.0.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache GICAR Shibboleth Kubernetes/Openshift</td>
-                    <td>1.0.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache Proxy ElasticSearch</td>
-                    <td>2.4-1.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.14</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.16</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.18</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>GICAR Nginx</td>
-                    <td>1.0.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>GICAR Nginx Kubernetes/Openshift</td>
-                    <td>1.0.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>                          
-                </tr>
-            </table>
-        </td>                          
+        <th>Grup de Tecnologies</th>
+        <th>Producte</th>
+        <th>Versió</th>
+        <th>Imatge</th>                         
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Java</td>
+        <td>8</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Java</td>
+        <td>11</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>NodeJS</td>
+        <td>10</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>NodeJS</td>
+        <td>12</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>NodeJS</td>
+        <td>14</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>PHP</td>
+        <td>7.2</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>PHP</td>
+        <td>7.3</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>PHP</td>
+        <td>7.4</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Tomcat</td>
+        <td>9.0-Java 8</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Tomcat</td>
+        <td>9.0-Java 11</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Tomcat amb suport de Sessions distribuïdes</td>
+        <td>9.0-Java 8</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>                          
+    </tr>
+    <tr>
+        <td>Servidors Web</td>
+        <td>Tomcat amb suport de Sessions distribuïdes</td>
+        <td>9.0-Java 11</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Apache</td>
+        <td>2.4</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Apache GICAR Shibboleth</td>
+        <td>1.0.3</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Apache GICAR Shibboleth Kubernetes/Openshift</td>
+        <td>1.0.3</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Apache Proxy ElasticSearch</td>
+        <td>2.4-1.0</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Nginx</td>
+        <td>1.14</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Nginx</td>
+        <td>1.16</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>Nginx</td>
+        <td>1.18</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>GICAR Nginx</td>
+        <td>1.0.0</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>                          
+    </tr>
+    <tr>
+        <td>Servidors d'Aplicacions</td>
+        <td>GICAR Nginx Kubernetes/Openshift</td>
+        <td>1.0.0</td>
+        <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>                          
     </tr>
 </table>
