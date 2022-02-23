@@ -39,7 +39,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </tr>
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12">SwarmMe <img src="../catalegCloud/swarm.png"></td>                        
+        <td colspan="12">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -100,7 +100,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </tr>
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <th colspan="12">Kubernetes <img src="../catalegCloud/kubernetes.png"></th>                        
+        <th colspan="12">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></th>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
