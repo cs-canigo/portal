@@ -34,6 +34,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 
 <table id="CPD1SwarmMe" class="display" style="width:99%">
     <tr>
+        <th rowspan="9"><img src="./catalegCloud/details_open.png" align="center"></th>
         <th colspan="12">SwarmMe</th>                        
     </tr>
     <tr>
@@ -52,48 +53,46 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <th colspan="2" width="20%">DBaaS</td>
         <td colspan="10"></td>
     </tr>
-    <tr>
+    <tr height="5" color="black">
         <td colspan="12">
-            <table id="CPD1SwarmMeTalles" class="display" style="width:100%">
-                <tr>
-                    <th align="center" colspan="12">Talles Contenidors</th>                        
-                </tr>
-                <tr align="center">
-                    <td colspan="3">S</th>
-                    <td colspan="3">M</th>
-                    <td colspan="3">L</th>
-                    <td colspan="3">XL</th>
-                </tr>
-                <tr align="center">
-                    <td>RAM</th>
-                    <td>CPU</th>
-                    <td>DISC</th>
-                    <td>RAM</th>
-                    <td>CPU</th>
-                    <td>DISC</th>
-                    <td>RAM</th>
-                    <td>CPU</th>
-                    <td>DISC</th>
-                    <td>RAM</th>
-                    <td>CPU</th>
-                    <td>DISC</th>
-                </tr>
-                <tr align="center">
-                    <td>512</td>
-                    <td>500</td>
-                    <td>10</td>
-                    <td>1024</td>
-                    <td>1000</td>
-                    <td>10</td>
-                    <td>2048</td>
-                    <td>1500</td>
-                    <td>10</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                </tr>
-            </table>
         </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3">S</th>
+        <td colspan="3">M</th>
+        <td colspan="3">L</th>
+        <td colspan="3">XL</th>
+    </tr>
+    <tr align="center">
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+    </tr>
+    <tr align="center">
+        <td>512</td>
+        <td>500</td>
+        <td>10</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>10</td>
+        <td>2048</td>
+        <td>1500</td>
+        <td>10</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
     </tr>
 </table>
 
