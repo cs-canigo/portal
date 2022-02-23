@@ -45,7 +45,7 @@ table {
     </tr>
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <td colspan="12">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>                        
+        <td colspan="12" align="left">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -106,7 +106,7 @@ table {
     </tr>
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <th colspan="12">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></th>                        
+        <th colspan="12" align="left">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></th>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -132,24 +132,24 @@ table {
         <th align="center" colspan="12">Talles Contenidors</th>                        
     </tr>
     <tr align="center">
-        <td colspan="3">S</th>
-        <td colspan="3">M</th>
-        <td colspan="3">L</th>
-        <td colspan="3">XL</th>
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
     </tr>
     <tr align="center">
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
     </tr>
     <tr align="center">
         <td>256</td>
