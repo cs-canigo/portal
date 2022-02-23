@@ -17,6 +17,42 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
+<style media="screen">
+
+table {
+    margin: auto;
+    border-spacing: 0;
+ }
+
+th, td {
+    padding: 0.4em 0;
+ }
+
+th { 
+    border-top: 0.2em solid;
+    border-bottom: 0.2em solid;
+ }
+
+th:first-of-type {
+    border-left: 0.2em solid;
+    border-radius: 1em 0 0 0;
+ }
+
+th:last-of-type {
+    border-right: 0.2em solid;
+    border-radius: 0 1em  0 0;
+ }
+
+td {
+    border-bottom: 0.2em solid;
+    border-right: 0.2em solid;
+ }
+
+td:first-of-type {
+    border-left: 0.2em solid;
+ }
+  </style>
+
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
         <tr>
