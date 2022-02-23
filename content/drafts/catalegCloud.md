@@ -15,6 +15,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
@@ -30,56 +31,6 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
             <td>juny de 2022</td>
         </tr>
     </thead>
-</table>
-
-<table>
-    <tr>
-        <td>
-            <table style="width:100%">
-                <thead>
-                    <tr>
-                        <th align="center" colspan="12">Talles Contenidors</th>                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr align="center">
-                        <td colspan="3">S</td>
-                        <td colspan="3">M</td>
-                        <td colspan="3">L</td>
-                        <td colspan="3">XL</td>
-                    </tr>
-                    <tr align="center">
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                    </tr>
-                    <tr align="center">
-                        <td>512</td>
-                        <td>500</td>
-                        <td>10</td>
-                        <td>1024</td>
-                        <td>1000</td>
-                        <td>10</td>
-                        <td>2048</td>
-                        <td>1500</td>
-                        <td>10</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
 </table>
 
 <table style="width:100%">
@@ -105,47 +56,43 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     <tr>
         <td colspan="12">
             <table style="width:100%">
-                <thead>
-                    <tr>
-                        <th align="center" colspan="12">Talles Contenidors</th>                        
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr align="center">
-                        <td colspan="3">S</td>
-                        <td colspan="3">M</td>
-                        <td colspan="3">L</td>
-                        <td colspan="3">XL</td>
-                    </tr>
-                    <tr align="center">
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                        <td>RAM</td>
-                        <td>CPU</td>
-                        <td>DISC</td>
-                    </tr>
-                    <tr align="center">
-                        <td>512</td>
-                        <td>500</td>
-                        <td>10</td>
-                        <td>1024</td>
-                        <td>1000</td>
-                        <td>10</td>
-                        <td>2048</td>
-                        <td>1500</td>
-                        <td>10</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <th align="center" colspan="12">Talles Contenidors</th>                        
+                </tr>
+                <tr align="center">
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr align="center">
+                    <td>RAM</td>
+                    <td>CPU</td>
+                    <td>DISC</td>
+                    <td>RAM</td>
+                    <td>CPU</td>
+                    <td>DISC</td>
+                    <td>RAM</td>
+                    <td>CPU</td>
+                    <td>DISC</td>
+                    <td>RAM</td>
+                    <td>CPU</td>
+                    <td>DISC</td>
+                </tr>
+                <tr align="center">
+                    <td>512</td>
+                    <td>500</td>
+                    <td>10</td>
+                    <td>1024</td>
+                    <td>1000</td>
+                    <td>10</td>
+                    <td>2048</td>
+                    <td>1500</td>
+                    <td>10</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
             </table>
         </td>
     </tr>
