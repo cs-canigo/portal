@@ -1,12 +1,13 @@
 
 +++
 
-date        = "2022-02-21"
-title       = "Articles ET"
-description = "Metavers de Teams"
+date        = "2022-02-23"
+title       = "Metavers al Microsoft Teams"
+description = "Microsoft actualment té una línia de treball  per ampliar l’eina col·laborativa Teams al Metavers."
+responsable = "Unitat d'arquitectura"
 sections    = "Blog"
 weight      = 3
-categories  = ["Articles","Metavers","Metavers Teams"]
+categories  = ["office365", "microsoft"]
 
 +++
 
