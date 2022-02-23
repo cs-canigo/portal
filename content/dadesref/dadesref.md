@@ -188,6 +188,12 @@ tr.shown td.details-control {
             { "data": "Data_publicacio" },
             { "data": "Data_actualitzacio" }
            ],
+	  "columnDefs": [ {
+			"targets": [6,7],
+				 "render": function ( data, type, row, meta ) {
+							 return '<span style="display:none">="'+data.split("/").reverse().join("/")+'"></span>'+data+'';
+					  }
+		  } ], 
 	  "searchCols": [null, { "search": "Consolidat" }, null, null, null, null, null, null ],
 	  "order": [ [ 2, 'asc' ], [ 3, 'asc' ], [ 4, 'asc' ] ],
 	  "initComplete": function( settings, json ) {
@@ -304,6 +310,12 @@ tr.shown td.details-control {
             { "data": "Data_actualitzacio" },
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
+	  "columnDefs": [ {
+			"targets": [5,6],
+				 "render": function ( data, type, row, meta ) {
+							 return '<span style="display:none">="'+data.split("/").reverse().join("/")+'"></span>'+data+'';
+					  }
+		  } ], 
 	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
 	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );

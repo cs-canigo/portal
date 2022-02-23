@@ -1,7 +1,7 @@
 +++
-date        = "2022-02-22"
+date        = "2022-02-23"
 title       = "Dades de Referència"
-description = "Arquitectura de Dades de CTTI, versió 23/02/2022B"
+description = "Arquitectura de Dades de CTTI, versió 23/02/2022"
 sections    = ["Data Architecture"]
 categories  = ["Data Architecture"]
 weight= 5
@@ -36,7 +36,6 @@ Posem a disposició de les aplicacions el catàleg tècnic d’entitats de refer
 
 En els llistats que es presenten a continuació, es visualitzen les metadades principals de les entitats de referència, sent possible accedir al detall d’aquestes.
 
-
 > 
 > Destaquem que, en la majoria de les entitats modelades, per garantir el compliment del nivell de **completesa** que s'exigeix en la valoració de la **qualitat de les dades**, s'han afegit dos valors genèrics:
 > 
@@ -47,7 +46,6 @@ En els llistats que es presenten a continuació, es visualitzen les metadades pr
 > 
 > Funcionalment, aquests valors de completesa permeten detectar casos en què cal fer ajustos en les entitats. Per exemple, un ús elevat del valor "No consta" significa que és una dada que sovint es desconeix, sigui perquè no es requereix o perquè és difícil d'obtenir. Un ús elevat del valor "Altres/Diversos" pot significa que cal ampliar el rang de valors de l'entitat.
 > 
-
 
 
 <style>
@@ -132,7 +130,6 @@ tr.shown td.details-control {
                     '<td style="text-align:center;"><button class="myButton">Detall</button></td>'+
 				'</tr>';
 		}
-
 
 		return '<table cellpadding="7" cellspacing="0" border="0" style="margin-top:0px; padding-left:20px;font-size:12px;width:100%;">'+
 			'<thead>'+
@@ -313,6 +310,12 @@ tr.shown td.details-control {
             { "data": "Data_actualitzacio" },
 			{ "data": null, "defaultContent": "<button class=\"myButton\">Detall</button>"  }
            ],
+	  "columnDefs": [ {
+			"targets": [5,6],
+				 "render": function ( data, type, row, meta ) {
+							 return '<span style="display:none">="'+data.split("/").reverse().join("/")+'"></span>'+data+'';
+					  }
+		  } ], 
 	  "searchCols": [ { "search": "Pendent" }, null, null, null, null, null, null, null ],
 	  "order": [ [ 1, 'asc' ], [ 2, 'asc' ], [ 3, 'asc' ] ]
     } );
@@ -434,7 +437,5 @@ En properes versions del Catàleg inclourem prestacions de subscripcions, notifi
 Si esteu interessats en què registrem l’ús per comunicar-vos qualsevol canvi que es produeixi sobre l’entitat, podeu posar-vos en contacte amb l’Oficina de Gestió Tècnica de Dades de CTTI a traves del correu electrònic: gtd.ctti@gencat.cat
 
 Així mateix, estem a la vostra disposició per rebre propostes d’incorporació de noves dades de referència o adaptar les actuals a les necessitats de les aplicacions.
-
-
 
 
