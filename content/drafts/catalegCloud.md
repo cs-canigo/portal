@@ -32,10 +32,10 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
-<table id="CPD1SwarmMe" class="display" style="width:99%">
+<table id="CPD1" class="display" style="width:99%">
     <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <th colspan="12">SwarmMe</th>                        
+        <th colspan="12">SwarmMe <img src="../catalegCloud/swarm.png"></th>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -93,6 +93,67 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <td>-</td>
         <td>-</td>
         <td>-</td>
+    </tr>
+    <tr>
+        <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
+        <th colspan="12">Kubernetes <img src="../catalegCloud/kubernetes.png"></th>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">xPaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr>
+        <th colspan="2" width="20%">DBaaS</td>
+        <td colspan="10"></td>
+    </tr>
+    <tr height="5" color="black">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3">S</th>
+        <td colspan="3">M</th>
+        <td colspan="3">L</th>
+        <td colspan="3">XL</th>
+    </tr>
+    <tr align="center">
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+        <td>RAM</th>
+        <td>CPU</th>
+        <td>DISC</th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>62</td>
+        <td>*</td>
+        <td>521</td>
+        <td>125</td>
+        <td>*</td>
+        <td>1024</td>
+        <td>250</td>
+        <td>*</td>
+        <td>2048</td>
+        <td>500</td>
+        <td>*</td>
     </tr>
 </table>
 
