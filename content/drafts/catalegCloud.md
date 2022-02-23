@@ -34,8 +34,12 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 
 <table id="CPD1" class="display" style="width:99%">
     <tr>
+        <th colspan="13">CPD1
+        </th>
+    </tr>
+    <tr>
         <td rowspan="9"><img src="../catalegCloud/details_open.png" align="center"></td>
-        <th colspan="12">SwarmMe <img src="../catalegCloud/swarm.png"></th>                        
+        <td colspan="12">SwarmMe <img src="../catalegCloud/swarm.png"></td>                        
     </tr>
     <tr>
         <th colspan="2" width="16%">Versió</th>
@@ -53,7 +57,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <th colspan="2" width="20%">DBaaS</td>
         <td colspan="10"></td>
     </tr>
-    <tr height="5" color="black">
+    <tr height="2">
         <td colspan="12">
         </td>
     </tr>
@@ -114,7 +118,7 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <th colspan="2" width="20%">DBaaS</td>
         <td colspan="10"></td>
     </tr>
-    <tr height="5" color="black">
+    <tr height="2">
         <td colspan="12">
         </td>
     </tr>
