@@ -18,5 +18,5 @@ div.container { width: 80%; }
 font-weight: bold;
 }
 
-th { font-size: 11px; }
-td { font-size: 11px; }
+th { font-size: 11px; vertical-align: middle;}
+td { font-size: 11px; vertical-align: middle;}
