@@ -96,48 +96,48 @@ function formatCPD(d) {
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong><div class="a">S</div></strong></th>'+
+                        '<th colspan="3"><strong><div class="a">M</div></strong></th>'+
+                        '<th colspan="3"><strong><div class="a">L</div></strong></th>'+
+                        '<th colspan="3"><strong><div class="a">XL</div></strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
-                        '<td><strong>RAM</strong></th>'+
-                        '<td><strong>CPU</strong></th>'+
-                        '<td><strong>DISC</strong></th>'+
-                        '<td><strong>RAM</strong></th>'+
-                        '<td><strong>CPU</strong></th>'+
-                        '<td><strong>DISC</strong></th>'+
-                        '<td><strong>RAM</strong></th>'+
-                        '<td><strong>CPU</strong></th>'+
-                        '<td><strong>DISC</strong></th>'+
-                        '<td><strong>RAM</strong></th>'+
-                        '<td><strong>CPU</strong></th>'+
-                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong><div class="a">RAM</div></strong></th>'+
+                        '<td><strong><div class="a">CPU</div></strong></th>'+
+                        '<td><strong><div class="a">DISC</div></strong></th>'+
+                        '<td><strong><div class="a">RAM</div></strong></th>'+
+                        '<td><strong><div class="a">CPU</div></strong></th>'+
+                        '<td><strong><div class="a">DISC</div></strong></th>'+
+                        '<td><strong><div class="a">RAM</div></strong></th>'+
+                        '<td><strong><div class="a">CPU</div></strong></th>'+
+                        '<td><strong><div class="a">DISC</div></strong></th>'+
+                        '<td><strong><div class="a">RAM</div></strong></th>'+
+                        '<td><strong><div class="a">CPU</div></strong></th>'+
+                        '<td><strong><div class="a">DISC</div></strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
-                        '<td>512</td>'+
-                        '<td>500</td>'+
-                        '<td>10</td>'+
-                        '<td>1024</td>'+
-                        '<td>1000</td>'+
-                        '<td>10</td>'+
-                        '<td>2048</td>'+
-                        '<td>1500</td>'+
-                        '<td>10</td>'+
-                        '<td>-</td>'+
-                        '<td>-</td>'+
-                        '<td>-</td>'+
+                        '<td><div class="a">512</div></td>'+
+                        '<td><div class="a">500</div></td>'+
+                        '<td><div class="a">10</div></td>'+
+                        '<td><div class="a">1024</div></td>'+
+                        '<td><div class="a">1000</div></td>'+
+                        '<td><div class="a">10</div></td>'+
+                        '<td><div class="a">2048</div></td>'+
+                        '<td><div class="a">1500</div></td>'+
+                        '<td><div class="a">10</div></td>'+
+                        '<td><div class="a">-</div></td>'+
+                        '<td><div class="a">-</div></td>'+
+                        '<td><div class="a">-</div></td>'+
                     '</tr>'+
                 '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong>S</strong></th>'+
+                        '<th colspan="3"><strong>M</strong></th>'+
+                        '<th colspan="3"><strong>L</strong></th>'+
+                        '<th colspan="3"><strong>XL</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
                         '<td><strong>RAM</strong></th>'+
@@ -172,10 +172,10 @@ function formatCPD(d) {
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong>S</strong></th>'+
+                        '<th colspan="3"><strong>M</strong></th>'+
+                        '<th colspan="3"><strong>L</strong></th>'+
+                        '<th colspan="3"><strong>XL</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
                         '<td><strong>RAM</strong></th>'+
@@ -210,10 +210,10 @@ function formatCPD(d) {
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong>S</strong></th>'+
+                        '<th colspan="3"><strong>M</strong></th>'+
+                        '<th colspan="3"><strong>L</strong></th>'+
+                        '<th colspan="3"><strong>XL</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
                         '<td><strong>RAM</strong></th>'+
@@ -248,10 +248,10 @@ function formatCPD(d) {
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong>S</strong></th>'+
+                        '<th colspan="3"><strong>M</strong></th>'+
+                        '<th colspan="3"><strong>L</strong></th>'+
+                        '<th colspan="3"><strong>XL</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
                         '<td><strong>RAM</strong></th>'+
@@ -286,10 +286,10 @@ function formatCPD(d) {
             '<td>'+
                 '<table class="talles">'+
                     '<tr align="center">'+
-                        '<td colspan="3"><strong>S</strong></th>'+
-                        '<td colspan="3"><strong>M</strong></th>'+
-                        '<td colspan="3"><strong>L</strong></th>'+
-                        '<td colspan="3"><strong>XL</strong></th>'+
+                        '<th colspan="3"><strong>S</strong></th>'+
+                        '<th colspan="3"><strong>M</strong></th>'+
+                        '<th colspan="3"><strong>L</strong></th>'+
+                        '<th colspan="3"><strong>XL</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
                         '<td><strong>RAM</strong></th>'+
