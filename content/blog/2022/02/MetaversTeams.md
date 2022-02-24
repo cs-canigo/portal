@@ -10,8 +10,6 @@ imatge      = "/images/bloc/2022/02/Mesh_Avatars.JPG"
 key         = "FEBRER2022"
 +++
 
-![MetaversTeams1](/images/bloc/2022/02/Mesh_Avatars.JPG)
-
 ---
 
 # **Metavers al Microsoft Teams**
