@@ -1,14 +1,13 @@
 +++
-date        = "2021-03-04"
-title       = "Estàndard pel full de ruta del programari"
-description = "Estàndard pel full de ruta del programari"
+date        = "2022-02-10"
+title       = "Catàleg Cloud v2"
+description = "Catàleg Cloud v2"
 weight		= 3
 type = "estandard"
 toc         = true
 versio      = "1.0"
 responsable = "Unitat d'arquitectura"
-estandards =  ["programari"]
-codi = "35.080.03"
+estandards =  ["cataleg cloud"]
 
 +++
 ## Part 1: Abast
@@ -89,8 +88,8 @@ Per cada tecnologia inclosa en el full de ruta se li associa el **Grup de tecnol
 <th> Revisió de full de ruta vigent fins</th>
 </tr>
 <tr>
-<td>juliol de 2020 </td>
-<td>octubre de 2020</td>
+<td>febrer de 2022 </td>
+<td>juny de 2022</td>
 </tr>
 </thead>
 </table>
