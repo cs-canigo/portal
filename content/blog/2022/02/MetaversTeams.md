@@ -6,11 +6,11 @@ responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
 blog_tags   = ["office365", "microsoft"]
 categories  = ["office365", "microsoft"]
-imatge      = "/images/bloc/2022/02/CMesh_Avatars.JPG"
+imatge      = "/images/bloc/2022/02/Mesh_Avatars.JPG"
 key         = "FEBRER2022"
 +++
 
-![MetaversTeams1](/images/bloc/2022/02/CMesh_Avatars.JPG)
+![MetaversTeams1](/images/bloc/2022/02/Mesh_Avatars.JPG)
 
 ---
 
