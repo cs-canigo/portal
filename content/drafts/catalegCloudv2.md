@@ -320,7 +320,8 @@ function formatCPD(d) {
                         '<td>8</td>'+
                     '</tr>'+
                 '</table>'+
-            '</td>'+      
+            '</td>'+
+        '</tr>'+      
 	    '<tr>'+
             '<th>Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
