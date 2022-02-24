@@ -26,17 +26,6 @@ estandards =  ["cataleg cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
-
-<font size="20">
-<table id="Titol_CPD" class="display" style="width:100%">
-        <thead>
-	    <tr>
-            <th  colspan="8" align="center" style="font-weight:bold">Programari estandarditzat per Servidors</th>
-        </tr>
- </thead>
-</table>
-</font>
-
 <table id="Revisio" class="display" style="width:50%" align="center">
 <thead>
 <tr>
