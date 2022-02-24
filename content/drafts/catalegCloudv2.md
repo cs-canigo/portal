@@ -75,12 +75,12 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Plataforma</th>'+
-            '<td align="center">SwarmMe <img src="../catalegCloud/swarm.png"></td>'+
+            '<td align="center">SwarmMe <img src="../catalegCloud/swarm.png" width="20"></td>'+
             '<td align="center">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></td>'+
             '<td align="center">Kubernetes <img src="../catalegCloud/kubernetes.png" width="20"></td>'+
-            '<td align="center">Openshift <img src="../catalegCloud/openshift.png" width="20"></td>'+
-            '<td align="center">Openshift <img src="../catalegCloud/openshift.png" width="20"><img src="../catalegCloud/istio.png" width="20"></td>'+
-            '<td align="center">Openshift <img src="../catalegCloud/openshift.png" width="20"><img src="../catalegCloud/istio.png" width="20"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openShift.png" width="20"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openShift.png" width="20"><img src="../catalegCloud/istio.png" width="20"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openShift.png" width="20"><img src="../catalegCloud/istio.png" width="20"></td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
