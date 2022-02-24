@@ -116,6 +116,154 @@ function formatCPD(d) {
                         '<td><strong>DISC</strong></th>'+
                     '</tr>'+
                     '<tr align="center">'+
+                        '<td>512</td>'+
+                        '<td>500</td>'+
+                        '<td>10</td>'+
+                        '<td>1024</td>'+
+                        '<td>1000</td>'+
+                        '<td>10</td>'+
+                        '<td>2048</td>'+
+                        '<td>1500</td>'+
+                        '<td>10</td>'+
+                        '<td>-</td>'+
+                        '<td>-</td>'+
+                        '<td>-</td>'+
+                    '</tr>'+
+            '</td>'+
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td>256</td>'+
+                        '<td>250</td>'+
+                        '<td>4</td>'+
+                        '<td>512</td>'+
+                        '<td>500</td>'+
+                        '<td>4</td>'+
+                        '<td>1024</td>'+
+                        '<td>1000</td>'+
+                        '<td>4</td>'+
+                        '<td>2048</td>'+
+                        '<td>2000</td>'+
+                        '<td>4</td>'+
+                    '</tr>'+
+            '</td>'+
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td>256</td>'+
+                        '<td>62</td>'+
+                        '<td>*</td>'+
+                        '<td>521</td>'+
+                        '<td>125</td>'+
+                        '<td>*</td>'+
+                        '<td>1024</td>'+
+                        '<td>250</td>'+
+                        '<td>*</td>'+
+                        '<td>2048</td>'+
+                        '<td>500</td>'+
+                        '<td>*</td>'+
+                    '</tr>'+
+            '</td>'+
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td>256</td>'+
+                        '<td>62</td>'+
+                        '<td>*</td>'+
+                        '<td>521</td>'+
+                        '<td>125</td>'+
+                        '<td>*</td>'+
+                        '<td>1024</td>'+
+                        '<td>250</td>'+
+                        '<td>*</td>'+
+                        '<td>2048</td>'+
+                        '<td>500</td>'+
+                        '<td>*</td>'+
+                    '</tr>'+
+            '</td>'+
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
                         '<td>256</td>'+
                         '<td>250</td>'+
                         '<td>1</td>'+
@@ -130,11 +278,43 @@ function formatCPD(d) {
                         '<td>8</td>'+
                     '</tr>'+
             '</td>'+
-            '<td></td>'+
-            '<td></td>'+
-            '<td></td>'+
-            '<td></td>'+
-            '<td></td>'+       
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td>256</td>'+
+                        '<td>250</td>'+
+                        '<td>1</td>'+
+                        '<td>512</td>'+
+                        '<td>500</td>'+
+                        '<td>2</td>'+
+                        '<td>1024</td>'+
+                        '<td>1000</td>'+
+                        '<td>4</td>'+
+                        '<td>2048</td>'+
+                        '<td>2000</td>'+
+                        '<td>8</td>'+
+                    '</tr>'+
+            '</td>'+      
 	    '<tr>'+
             '<th>Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
