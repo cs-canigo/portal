@@ -18,7 +18,7 @@ estandards =  ["cataleg cloud"]
 
 ## Part 4: Requisits del programari
 
-# ANNEX A (normatiu) Catàleg Cloud del CTTI
+# Catàleg Cloud del CTTI
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/catalegCloud/tableStyle.css">
@@ -52,7 +52,7 @@ estandards =  ["cataleg cloud"]
 
 <table id="catalegCloud" class="display" style="width:100%">
         <thead>
-            <tr>
+            <tr style="vertical-align: middle">
                 <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
@@ -193,10 +193,6 @@ $(document).ready(function() {
     });
 });
 </script>
-
-### Descripció de la informació proporcionada a la taula de programari estandarditzat de CPD
-
-A la taula de programari estandarditzat de CPD es proporciona informació respecte a les versions de programari o tecnologia i la seva <a href='{{<relref "#maduresa" >}}'>maduresa</a>, a més a la taula desplegable es pot trobar informació addicional respecte a la prestació dels serveis oferts per cada un dels CPDs per la tecnologia seleccionada, així com informació respecte a si és desplegable de forma automàtica des del SIC.
 
 #### Definició dels tipus de serveis a cloud
 
