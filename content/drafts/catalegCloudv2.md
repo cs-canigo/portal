@@ -129,6 +129,7 @@ function formatCPD(d) {
                         '<td>-</td>'+
                         '<td>-</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
@@ -166,6 +167,7 @@ function formatCPD(d) {
                         '<td>2000</td>'+
                         '<td>4</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
@@ -203,6 +205,7 @@ function formatCPD(d) {
                         '<td>500</td>'+
                         '<td>*</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
@@ -240,6 +243,7 @@ function formatCPD(d) {
                         '<td>500</td>'+
                         '<td>*</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
@@ -277,6 +281,7 @@ function formatCPD(d) {
                         '<td>2000</td>'+
                         '<td>8</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+
             '<td>'+
                 '<table class="talles">'+
@@ -314,6 +319,7 @@ function formatCPD(d) {
                         '<td>2000</td>'+
                         '<td>8</td>'+
                     '</tr>'+
+                '</table>'+
             '</td>'+      
 	    '<tr>'+
             '<th>Imatges del Catàleg Cloud</th>'+
