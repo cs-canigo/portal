@@ -18,7 +18,7 @@ En aquest context d'innovació i modernització dels processos i sistemes digita
 
 AEM Forms és un producte core al "Servei de Gestió del Document Electrònic" responsable de la creació de prop de 3 milions de documents per mes, ja sigui mitjançant la renderització de formularis HTML, ja sigui pel suport que dóna a l'API del Sistema de Transformació de documents (STD). 
 
-Amb l'objectiu de modernitzar la plataforma, donar suport a nous requisits funcionals i no funcionals, i estar preparats per a una possible migració futura a la nuve, es fa indispensable la migració de la versió actual d'AEM Forms 6.3.8 On Premise a la nova versió d'AEM Forms 6.5 On Premise, sent aquesta darrera versió un requisit indispensable per posteriorment poder fer la migració del servei al Cloud.
+Amb l'objectiu de modernitzar la plataforma, donar suport a nous requisits funcionals i no funcionals, i estar preparats per a una possible migració futura al núvol, es fa indispensable la migració de la versió actual d'AEM Forms 6.3.8 On Premise a la nova versió d'AEM Forms 6.5 On Premise, sent aquesta darrera versió un requisit indispensable per posteriorment poder fer la migració del servei al Cloud.
 
 
 ## Estratègia de migració
