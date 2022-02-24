@@ -90,7 +90,51 @@ function formatCPD(d) {
             '<td align="center">'+d.cpd2openshift+'</td>'+
             '<td align="center">'+d.cpd3openshift+'</td>'+
             '<td align="center">'+d.cpd4openshift+'</td>'+
-        '</tr>'+        
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Talles</th>'+
+            '<td>'+
+                '<table class="talles">'+
+                    '<tr align="center">'+
+                        '<td colspan="3"><strong>S</strong></th>'+
+                        '<td colspan="3"><strong>M</strong></th>'+
+                        '<td colspan="3"><strong>L</strong></th>'+
+                        '<td colspan="3"><strong>XL</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                        '<td><strong>RAM</strong></th>'+
+                        '<td><strong>CPU</strong></th>'+
+                        '<td><strong>DISC</strong></th>'+
+                    '</tr>'+
+                    '<tr align="center">'+
+                        '<td>256</td>'+
+                        '<td>250</td>'+
+                        '<td>1</td>'+
+                        '<td>512</td>'+
+                        '<td>500</td>'+
+                        '<td>2</td>'+
+                        '<td>1024</td>'+
+                        '<td>1000</td>'+
+                        '<td>4</td>'+
+                        '<td>2048</td>'+
+                        '<td>2000</td>'+
+                        '<td>8</td>'+
+                    '</tr>'+
+            '</td>'+
+            '<td></td>'+
+            '<td></td>'+
+            '<td></td>'+
+            '<td></td>'+
+            '<td></td>'+       
 	    '<tr>'+
             '<th>Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
