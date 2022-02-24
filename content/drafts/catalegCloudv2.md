@@ -68,10 +68,10 @@ function formatCPD(d) {
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th width="16%">CPD</th>'+
-            '<th colspan="2" width="20%" align="center">CPD1</th>'+
-            '<th colspan="2" width="20%" align="center">CPD2</th>'+
-            '<th width="20%" align="center">CPD3</th>'+
-            '<th width="20%" align="center">CPD4</th>'+
+            '<th colspan="2" width="21%" align="center">CPD1</th>'+
+            '<th colspan="2" width="21%" align="center">CPD2</th>'+
+            '<th width="21%" align="center">CPD3</th>'+
+            '<th width="21%" align="center">CPD4</th>'+
         '</tr>'+
         '<tr>'+
             '<th>Plataforma</th>'+
@@ -96,10 +96,10 @@ function formatCPD(d) {
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th>Plataforma</th>'+
-            '<th colspan="2">Compose</th>'+
-            '<th colspan="2">IBM Cloud</th>'+
-            '<th colspan="2">Azure</th>'+
+            '<th  width="16%">Plataforma</th>'+
+            '<th colspan="2" width="28%">Compose</th>'+
+            '<th colspan="2" width="28%">IBM Cloud</th>'+
+            '<th colspan="2" width="28%">Azure</th>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Public</th>'+
