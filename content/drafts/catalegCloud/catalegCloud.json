@@ -136,6 +136,25 @@
         },
         {
           "id": 8,
+          "producte": ".Net",
+          "categoria": "Servidors d'Aplicacions",
+          "versio": "--",
+          "cpd1swarm": "--",
+          "cpd1kubernetes": "--",
+          "cpd2kubernetes": "--",
+          "cpd2openshift": "--",
+          "cpd3openshift": "--",
+          "cpd4openshift": "--",
+          "compose": "--",
+          "ibmcloud": "--",
+          "azuregestionat": "xPaaS",
+          "azurenogestionat": "xPaaS",
+          "aws": "--",
+          "imatgescatalegcloud": "--",
+          "observacions": "Observacions Servidors d'Aplicacions .Net"
+        },
+        {
+          "id": 9,
           "producte": "Python",
           "categoria": "Servidors Web",
           "versio": "--",
@@ -154,7 +173,7 @@
           "observacions": "Observacions Servidors Web Python"
         },
         {
-          "id": 9,
+          "id": 10,
           "producte": "Ruby",
           "categoria": "Servidors Web",
           "versio": "--",
@@ -173,7 +192,7 @@
           "observacions": "Observacions Servidors Web Ruby"
         },
         {
-          "id": 10,
+          "id": 11,
           "producte": "Go",
           "categoria": "Servidors Web",
           "versio": "--",
@@ -190,25 +209,6 @@
           "aws": "--",
           "imatgescatalegcloud": "--",
           "observacions": "Observacions Servidors Web Go"
-        },
-        {
-          "id": 11,
-          "producte": ".Net",
-          "categoria": "Servidors d'Aplicacions",
-          "versio": "--",
-          "cpd1swarm": "--",
-          "cpd1kubernetes": "--",
-          "cpd2kubernetes": "--",
-          "cpd2openshift": "--",
-          "cpd3openshift": "--",
-          "cpd4openshift": "--",
-          "compose": "--",
-          "ibmcloud": "--",
-          "azuregestionat": "xPaaS",
-          "azurenogestionat": "xPaaS",
-          "aws": "--",
-          "imatgescatalegcloud": "--",
-          "observacions": "Observacions Servidors d'Aplicacions .Net"
         },
         {
           "id": 12,
@@ -399,25 +399,6 @@
           "aws": "--",
           "imatgescatalegcloud": "--",
           "observacions": "Observacions Servidor de Contigut Content Delivery Network (CDN)"
-        },
-        {
-          "id": 22,
-          "producte": "Istio",
-          "categoria": "Service Mesh",
-          "versio": "--",
-          "cpd1swarm": "--",
-          "cpd1kubernetes": "--",
-          "cpd2kubernetes": "--",
-          "cpd2openshift": "--",
-          "cpd3openshift": "xPaaS",
-          "cpd4openshift": "xPaaS",
-          "compose": "--",
-          "ibmcloud": "--",
-          "azuregestionat": "--",
-          "azurenogestionat": "--",
-          "aws": "--",
-          "imatgescatalegcloud": "--",
-          "observacions": "Observacions Service Mesh Istio"
         }
     ]
 }
