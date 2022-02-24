@@ -75,12 +75,12 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Plataforma</th>'+
-            '<td align="center">SwarmMe</td>'+
-            '<td align="center">Kubernetes</td>'+
-            '<td align="center">Kubernetes</td>'+
-            '<td align="center">Openshift</td>'+
-            '<td align="center">Openshift</td>'+
-            '<td align="center">Openshift</td>'+
+            '<td align="center">SwarmMe <img src="../catalegCloud/swarm.png"></td>'+
+            '<td align="center">Kubernetes <img src="../catalegCloud/kubernetes.png"></td>'+
+            '<td align="center">Kubernetes <img src="../catalegCloud/kubernetes.png"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openshift.png"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openshift.png"><img src="../catalegCloud/istio.png"></td>'+
+            '<td align="center">Openshift <img src="../catalegCloud/openshift.png"><img src="../catalegCloud/istio.png"></td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
