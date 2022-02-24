@@ -18,5 +18,9 @@ div.container { width: 80%; }
 font-weight: bold;
 }
 
+.talles {
+    font-size: 10px;
+}
+
 th { font-size: 11px; vertical-align: middle;}
 td { font-size: 11px; vertical-align: middle;}
