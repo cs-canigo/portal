@@ -75,12 +75,12 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Plataforma</th>'+
-            '<th align="center">SwarmMe</th>'+
-            '<th align="center">Kubernetes</th>'+
-            '<th align="center">Kubernetes</th>'+
-            '<th align="center">Openshift</th>'+
-            '<th align="center">Openshift</th>'+
-            '<th align="center">Openshift</th>'+
+            '<td align="center">SwarmMe</td>'+
+            '<td align="center">Kubernetes</td>'+
+            '<td align="center">Kubernetes</td>'+
+            '<td align="center">Openshift</td>'+
+            '<td align="center">Openshift</td>'+
+            '<td align="center">Openshift</td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
@@ -99,13 +99,15 @@ function formatCPD(d) {
             '<th  width="16%">Plataforma</th>'+
             '<th colspan="2" width="28%">Compose</th>'+
             '<th colspan="2" width="28%">IBM Cloud</th>'+
-            '<th colspan="2" width="28%">Azure</th>'+
+            '<th width="28%">Azure</th>'+
+            '<th width="28%">AWS</th>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Public</th>'+
             '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.compose+'</td>'+
             '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.ibmcloud+'</td>'+ 
-            '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.azuregestionat+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azuregestionat+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.aws+'</td>'+
         '</tr>'+
         '<tr>'+
 	        '<th>   </th>'+
