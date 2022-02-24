@@ -16,7 +16,7 @@
    "ibmcloud": "--",
    "azuregestionat": "xPaaS",
    "azurenogestionat": "xPaaS",
-   "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk",
+   "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8<br>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk",
    "observacions": "Observacions Servidors Web Java"
  },
  {
