@@ -18,8 +18,12 @@ div.container { width: 80%; }
 font-weight: bold;
 }
 
-.talles {
-    font-size: 9px;
+table.talles {
+    font-size: 8px;
+}
+
+div.a {
+    font-size: 8px;
 }
 
 th { font-size: 11px; vertical-align: middle;}
