@@ -112,7 +112,7 @@
           "azuregestionat": "--",
           "azurenogestionat": "--",
           "aws": "--",
-          "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0",
+          "imatgescatalegcloud": "docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0<br>\ndocker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0",
           "observacions": "Observacions Servidors d'Aplicacions Nginx"
         },
         {
