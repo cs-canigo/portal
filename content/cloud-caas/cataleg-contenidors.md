@@ -25,6 +25,7 @@ Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.
 Nginx  	 | 1.18   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.18)
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
 Java		 | 11-openjdk  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11)
+.Net Core    | 3.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/dotnet:1.0-3.1   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/3.1)
 NodeJS 		 | 14   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/14)
 NodeJS 		 | 16   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:16   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/16)
 PHP 		 | 8.0   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:8.0   | [apache-php](https://git.intranet.gencat.cat/3048-intern/imatges-docker/apache-php/tree/8.0)
