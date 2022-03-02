@@ -1,5 +1,5 @@
 +++
-date        = "2022-02-28"
+date        = "2022-03-02"
 title       = "Elements del catàleg de contenidors"
 description = "Descripció de les imatges docker base proporcionades pel CTTI."
 sections    = "Cloud"
@@ -23,6 +23,8 @@ Apache GICAR Shibboleth| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/genc
 Apache GICAR Shibboleth Kubernetes/Openshift| 1.0.3    |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3   | [gicar-shibboleth-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-shibboleth-openshift/tree/1.0.3)
 Apache Proxy ElasticSearch  	 | 2.4-1.0   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0   | [httpd-proxy-es](https://git.intranet.gencat.cat/3048-intern/imatges-docker/httpd-proxy-es/tree/2.4-1.0)
 Nginx  	 | 1.18   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.18)
+GICAR Nginx 	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0   | [gicar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/tree/1.0.0)
+GICAR Nginx Kubernetes/Openshift	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0   | [gicar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/tree/1.0.0)
 Java		 | 8  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/8)
 Java		 | 11-openjdk  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk   | [java](https://git.intranet.gencat.cat/3048-intern/imatges-docker/java/tree/11)
 .Net Core    | 3.1   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/dotnet:1.0-3.1   | [dotnet](https://git.intranet.gencat.cat/3048-intern/imatges-docker/dotnet/tree/3.1)
@@ -62,8 +64,6 @@ Apache GICAR Openshift| 1.0   | docker-registry.ctti.extranet.gencat.cat/gencatc
 Nginx  	 | 1.12   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.12   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.12)
 Nginx  	 | 1.14   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.14)
 Nginx  	 | 1.16   |docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16   | [nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/nginx/tree/1.16)
-GICAR Nginx 	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0   | [gicar-nginx](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx/tree/1.0.0)
-GICAR Nginx Kubernetes/Openshift	 | 1.0.0  |docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0   | [gicar-nginx-openshift](https://git.intranet.gencat.cat/3048-intern/imatges-docker/gicar-nginx-openshift/tree/1.0.0)
 NodeJS 		 | 4  | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:4   | [node ](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/4)
 NodeJS 		 | 6   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:6   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/6)
 NodeJS 		 | 8   | docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:8   | [node](https://git.intranet.gencat.cat/3048-intern/imatges-docker/node/tree/8)
