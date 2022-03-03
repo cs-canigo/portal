@@ -68,28 +68,28 @@ function formatCPD(d) {
             '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
             '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
             '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="24"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></td>'+
+            '<td align="center"><img src="../catalegCloud/openShift.png" width="24"></td>'+
         '</tr>'+
         '<tr>'+
             '<th>Operadors</th>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
             '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
         '</tr>'+
         '<tr>'+
