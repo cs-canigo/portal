@@ -105,6 +105,10 @@ function formatCPD(d) {
             '<th>Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
         '</tr>'+
+        '<tr>'+
+            '<th>Observacions:</th>'+
+            '<td colspan="7">'+d.observacions+'</td>'+
+        '</tr>'+
         '</table>'+
         '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
@@ -120,15 +124,7 @@ function formatCPD(d) {
             '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.ibmcloud+'</td>'+ 
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azuregestionat+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.aws+'</td>'+
-        '</tr>'+
-        '<tr>'+
-	        '<th>   </th>'+
-	        '<th colspan="7">   </th>'+
-	    '</tr>'+
-        '<tr>'+
-            '<th>Observacions:</th>'+
-            '<td colspan="7">'+d.observacions+'</td>'+
-        '</tr>'+
+        '</tr>'+        
     '</table>';
 }
 $(document).ready(function() {
