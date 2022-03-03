@@ -73,12 +73,24 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Operadors</th>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Openshift"></td>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
-            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+            '<td align="center">
+                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
+                '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Model de Servei</th>'+
