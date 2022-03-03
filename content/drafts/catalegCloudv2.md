@@ -64,15 +64,24 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Plataforma</th>'+
-            '<td align="center"><img src="../catalegCloud/swarm.png" width="20"></td>'+
-            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="20"></td>'+
-            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="20"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="20"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="20"><img src="../catalegCloud/istio.png" height="20"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="20"><img src="../catalegCloud/istio.png" height="20"></td>'+
+            '<td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>'+
+            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
+            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
+            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></td>'+
+            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+            '<td align="center"><img src="../catalegCloud/openShift.png" width="24"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Privat</th>'+
+            '<th>Operadors</th>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/grafana.png" width="24" alt="Openshift"></td>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+            '<td align="center"><img src="../catalegCloud/kibana.png" width="24" alt="Kibana"><img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
+        '</tr>'+
+        '<tr>'+
+            '<th style="border: 1px solid rgb(165, 165, 165);">Model de Servei</th>'+
             '<td align="center">'+d.cpd1swarm+'</td>'+
             '<td align="center">'+d.cpd1kubernetes+'</td>'+
             '<td align="center">'+d.cpd2kubernetes+'</td>'+
