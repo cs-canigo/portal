@@ -56,6 +56,9 @@ function formatCPD(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
+            '<th colspan="7">CLOUD PRIVAT</th>'+
+        '</tr>'+
+        '<tr>'+
             '<th width="16%">CPD</th>'+
             '<th colspan="2" width="21%"><div align="center">CPD1</div></th>'+
             '<th colspan="2" width="21%"><div align="center">CPD2</div></th>'+
@@ -112,16 +115,19 @@ function formatCPD(d) {
         '</table>'+
         '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
+            '<th colspan="5">CLOUD PÚBLIC</th>'+
+        '</tr>'+
+        '<tr>'+
             '<th width="16%">Plataforma</th>'+
-            '<th colspan="2" width="21%"><div align="center">Compose</div></th>'+
-            '<th colspan="2" width="21%"><div align="center">IBM Cloud</div></th>'+
+            '<th width="21%"><div align="center">Compose</div></th>'+
+            '<th width="21%"><div align="center">IBM Cloud</div></th>'+
             '<th width="21%"><div align="center">Azure</div></th>'+
             '<th width="21%"><div align="center">AWS</div></th>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165);">Cloud Public</th>'+
-            '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.compose+'</td>'+
-            '<td colspan="2" style="border: 1px solid rgb(165, 165, 165);">'+d.ibmcloud+'</td>'+ 
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.compose+'</td>'+
+            '<td style="border: 1px solid rgb(165, 165, 165);">'+d.ibmcloud+'</td>'+ 
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azuregestionat+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.aws+'</td>'+
         '</tr>'+        
