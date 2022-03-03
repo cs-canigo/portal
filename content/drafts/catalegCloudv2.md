@@ -1,5 +1,5 @@
 +++
-date        = "2022-02-10"
+date        = "2022-03-03"
 title       = "Catàleg Cloud v2"
 description = "Catàleg Cloud v2"
 weight		= 3
@@ -73,22 +73,22 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th>Operadors</th>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
-            '<td align="center">
+            '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana">'+
                 '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
         '</tr>'+
