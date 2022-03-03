@@ -75,27 +75,6 @@ function formatCPD(d) {
             '<td align="center"><img src="../catalegCloud/openShift.png" width="24"></td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="font-size: 14px;">Operadors</th>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"</td>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
-            '<td align="center">'+
-                '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
-                '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
-        '</tr>'+
-        '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14px;">Model de Servei</th>'+
             '<td align="center">'+d.cpd1swarm+'</td>'+
             '<td align="center">'+d.cpd1kubernetes+'</td>'+
