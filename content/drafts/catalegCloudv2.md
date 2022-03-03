@@ -41,7 +41,7 @@ estandards =  ["cataleg cloud"]
 
 <table id="catalegCloud" class="display" style="width:100%">
         <thead>
-            <tr style="vertical-align: middle; font-size: 16px">
+            <tr style="vertical-align: middle; font-size: 16">
                 <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
@@ -55,10 +55,10 @@ estandards =  ["cataleg cloud"]
 function formatCPD(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr style="font-size: 16px;">'+
+        '<tr style="font-size: 16;">'+
             '<th colspan="7"><strong>CLOUD PRIVAT</strong></th>'+
         '</tr>'+
-        '<tr style="font-size: 14px;">'+
+        '<tr style="font-size: 14;">'+
             '<th width="16%">CPD</th>'+
             '<th colspan="2" width="21%"><div align="center">CPD1</div></th>'+
             '<th colspan="2" width="21%"><div align="center">CPD2</div></th>'+
@@ -66,7 +66,7 @@ function formatCPD(d) {
             '<th width="21%"><div align="center">CPD4</div></th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="font-size: 14px;">Plataforma</th>'+
+            '<th style="font-size: 14;">Plataforma</th>'+
             '<td align="center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></td>'+
             '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
             '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
@@ -75,7 +75,7 @@ function formatCPD(d) {
             '<td align="center"><img src="../catalegCloud/openShift.png" width="24"></td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="font-size: 14px;">Operadors</th>'+
+            '<th style="font-size: 14;">Operadors</th>'+
             '<td align="center">'+
                 '<img src="../catalegCloud/kibana.png" width="24" alt="Kibana"> '+
                 '<img src="../catalegCloud/grafana.png" width="24" alt="Grafana"></td>'+
@@ -96,7 +96,7 @@ function formatCPD(d) {
                 '<img src="../catalegCloud/istio.png" height="24" alt="Istio"></td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14px;">Model de Servei</th>'+
+            '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14;">Model de Servei</th>'+
             '<td align="center">'+d.cpd1swarm+'</td>'+
             '<td align="center">'+d.cpd1kubernetes+'</td>'+
             '<td align="center">'+d.cpd2kubernetes+'</td>'+
@@ -105,19 +105,19 @@ function formatCPD(d) {
             '<td align="center">'+d.cpd4openshift+'</td>'+
         '</tr>'+      
 	    '<tr>'+
-            '<th style="font-size: 14px;">Imatges del Catàleg Cloud</th>'+
+            '<th style="font-size: 14;">Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
         '</tr>'+
         '<tr>'+
-            '<th style="font-size: 14px;">Observacions:</th>'+
+            '<th style="font-size: 14;">Observacions:</th>'+
             '<td colspan="7">'+d.observacions+'</td>'+
         '</tr>'+
         '</table>'+
         '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
-        '<tr style="font-size: 16px;">'+
+        '<tr style="font-size: 16;">'+
             '<th colspan="5"><strong>CLOUD PÚBLIC</strong></th>'+
         '</tr>'+
-        '<tr style="font-size: 14px;">'+
+        '<tr style="font-size: 14;">'+
             '<th width="16%">Plataforma</th>'+
             '<th width="21%"><div align="center">Compose</div></th>'+
             '<th width="21%"><div align="center">IBM Cloud</div></th>'+
@@ -125,7 +125,7 @@ function formatCPD(d) {
             '<th width="21%"><div align="center">AWS</div></th>'+
         '</tr>'+
         '<tr>'+
-            '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14px;">Model de Servei</th>'+
+            '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14;">Model de Servei</th>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.compose+'</td>'+
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.ibmcloud+'</td>'+ 
             '<td style="border: 1px solid rgb(165, 165, 165);">'+d.azuregestionat+'</td>'+
