@@ -56,7 +56,7 @@ function formatCPD(d) {
     // `d` is the original data object for the row
     return '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
-            '<th colspan="7">CLOUD PRIVAT</th>'+
+            '<th colspan="7" style="font-size: 16px"><strong>CLOUD PRIVAT</strong></th>'+
         '</tr>'+
         '<tr>'+
             '<th width="16%">CPD</th>'+
@@ -115,7 +115,7 @@ function formatCPD(d) {
         '</table>'+
         '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
-            '<th colspan="5">CLOUD PÚBLIC</th>'+
+            '<th colspan="5" style="font-size: 16px"><strong>CLOUD PÚBLIC</strong></th>'+
         '</tr>'+
         '<tr>'+
             '<th width="16%">Plataforma</th>'+
