@@ -105,6 +105,8 @@ function formatCPD(d) {
             '<th>Imatges del Catàleg Cloud</th>'+
             '<td colspan="7">'+d.imatgescatalegcloud+'</td>'+
         '</tr>'+
+        '</table>'+
+        '<table cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">'+
         '<tr>'+
             '<th width="16%">Plataforma</th>'+
             '<th colspan="2" width="21%"><div align="center">Compose</div></th>'+
