@@ -37,7 +37,7 @@ Alguns exemples de metavers:
     </div>
   </td>
   <td width="750px">
-    **Catvers** és l’espai virtual referent català. És un metavers desenvolupat a Catalunya on l'idioma vehicular és el català.<br><br> **Microsoft** treballa en la plataforma col·laborativa **Mesh for Teams** on avatars digitals podran poden reunir-se, compartir fitxers i programes d'Office en un món virtual.<br><br> **Epic Games** amb el videojoc **Fortnite** , permet experiències socials com festes de ball, concerts de música virtual en el seu metavers, etc. Els usuaris paguen per construir els seu propis entorns i adaptar el seus avatars.<br><br> **Nvidia** especialitzada en desenvolupament d'unitats de processament gràfic, disposa **d’Omniverse** , un metavers per la creació i simulació virtual utilitzada per crear simulacions de fàbriques i edificis en el món real.
+    **Catvers** és l’espai virtual referent català. És un metavers desenvolupat a Catalunya on l'idioma vehicular és el català.<br><br> **Microsoft** treballa en la plataforma col·laborativa **Mesh for Teams** on avatars digitals podran reunir-se, compartir fitxers i programes d'Office en un món virtual.<br><br> **Epic Games** amb el videojoc **Fortnite** , permet experiències socials com festes de ball, concerts de música virtual en el seu metavers, etc. Els usuaris paguen per construir els seu propis entorns i adaptar el seus avatars.<br><br> **Nvidia** especialitzada en desenvolupament d'unitats de processament gràfic, disposa **d’Omniverse** , un metavers per la creació i simulació virtual utilitzada per crear simulacions de fàbriques i edificis en el món real.
   </td>
 </tr>
 </table>
