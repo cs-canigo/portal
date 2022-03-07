@@ -76,22 +76,13 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Rele
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
 
-**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu** i que l'usuari es trobi bolcat a l'**LDAP del SIC** (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça de correu, com si no pot accedir al servei perquè es produeix un error d'autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
+**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu**. Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça de correu, com si no pot accedir al servei perquè es produeix un error d'autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
 
 ### Estructura de grups i projectes
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
 Per a més informació: [Custòdia de codi font] (/sic30-serveis/scm/)
-
-### Comptabilitat amb SIC 1.0
-
-Els usuaris que ja eren **"Release Manager Lot x Àmbit"** al sistema SIC v.1.0, mantindran el mateix rol a l'actual sistema SIC. Per tant, en accedir al portal del GitLab (mitjançant les credencials GICAR corresponents) disposaran d'accés als grups per codi de diàleg de les seves aplicacions.
-
-**AVÍS**: durant el primer accés al GitLab no es comptarà amb visibilitat sobre els grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de disposar d'accés als grups i projectes corresponents.
-
-<center>![RML a SIC 1.0 VS SIC actual](/images/news/autoserveiUsuaris_1.PNG)</center>
-<br/>
 
 ### Permisos d'accés
 
