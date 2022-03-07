@@ -30,9 +30,7 @@ a continuació.
 
 S'ha mantingut l'actual estructura de grups Gicar Ldap de responsables d'àmbit, definint i aplicant les corresponents
 equivalències d'acrònims de departaments i unitats d'acord amb el nou organigrama departamental i havent realitzat les altes
-necessàries per a nous departaments i unitats amb entitat pròpia.
-
-La **relació de grups** queda de la següent manera:
+necessàries per a nous departaments i unitats amb entitat pròpia. La **relació de grups** queda de la següent manera:
 
 |Grup LDAP|Descripció|
 |-------|-------|
@@ -81,7 +79,7 @@ mensual d'indicadors CS-Canigó per a fer seguiment de la situació del parc d'a
 
 ### Regularització d'accessos
 
-S'han **regulartizat els accessos als serveis del SIC** perquè els responsables d'àmbit, d'acord amb el nou organigrama
+S'han **regularitzat els accessos als serveis del SIC** perquè els responsables d'àmbit, d'acord amb el nou organigrama
 departamental, disposin d'accés:
 
 - Al codi font de les aplicacions de l'àmbit,
