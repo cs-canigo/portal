@@ -15,8 +15,9 @@ weight = 4
 
 ## Introducció
 
-El SIC proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis. <br/>
-Abans d'entrar en el funcionament de l'autoservei d'usuaris, explicarem breument l'estructura actual de permisos del SIC.
+El SIC proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis.
+Abans d'entrar en el [funcionament](/sic30-serveis/autoservei-usuaris/#funcionament) de l'autoservei d'usuaris,
+explicarem breument l'actual estructura de permisos del SIC.
 
 ## Estructura de permisos
 
