@@ -1,10 +1,11 @@
 +++
 date = "2020-06-17"
 title = "Autoservei d'usuaris"
-description = "Autoservei d'usuaris mitjançant GitLab"
+description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
 aliases = [
     "/sic/autoservei-usuaris/",
-    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/"
+    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
+    "/sic-serveis/autoservei-usuaris/"
 ]
 sections = "SIC"
 taxonomies = []
@@ -37,7 +38,8 @@ A continuació, descriurem cadascun d'aquests subtipus.
 
 #### Release Managers
 
-Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
+Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un
+codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
 * Operar amb servei de **custòdia de codi**.
 * **Concedir permisos** a altres companys per accedir com a Developers o Mantainers al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
@@ -47,24 +49,76 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 
 #### Responsables de lot
 
-Aquest tipus de grup recull als responsables de lot. <br/>
-Al SIC v.1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC, aquesta funcionalitat perd valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
-Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Aquest tipus de grup recull als **responsables del lot d'aplicacions: equip d'arquitectura, qualitat, responsables de contracte i altres**. <br/>
+Aquest grup és un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis
+de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels lots d'aplicacions segons la contractació vigent [AM01-AM20].
+
+### Grups d'àmbit
+
+Aquest tipus de grup recull als **responsables d'àmbit** d'acord amb l'organigrama departamental de la Generalitat. <br/>
+Aquest grup és un agregador de totes les aplicacions de l'àmbit disposant d'una **participació transversal a tots els codis
+de les aplicacions** i podent realitzar les mateixes accions que un Release Manager (a excepció de l'entrega de binaris per al seu desplegament). <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels departaments/unitats previstes d'acord amb l'organigrama departamental vigent.
+
+|Relació de grups d'àmbit|
+|-------|
+|DEPARTAMENT D'ACCIÓ CLIMÀTICA, ALIMENTACIÓ I AGENDA RURAL|
+|AGÈNCIA CATALANA DE CONSUM (ACC)|
+|AGÈNCIA PER A LA COMPETITIVITAT DE L'EMPRESA (ACCIO)|
+|AGÈNCIA CATALANA DE TURISME (ACT)|
+|AUTORITAT CATALANA DE PROTECCIÓ DE DADES (APDCAT)|
+|AGÈNCIA TRIBUTÀRIA DE CATALUNYA|
+|DEPARTAMENT DE DRETS SOCIALS|
+|CONSORCI ADMINISTRACIÓ OBERTA DE CATALUNYA|
+|D.G. D'ATENCIÓ CIUTADANA|
+|CONSELL CATALA DE L'ESPORT|
+|FUNDACIÓ CENTRE DE LA SEGURETAT DE LA INFORM. CAT.|
+|DEPARTAMENT DE CULTURA|
+|CENTRE DE TELECOMUNICACIONS I TECNOLOGIES DE LA INFORMACIO|
+|DIRECCIÓ GENERAL DE LA POLICIA|
+|ENT.AUTONOMA DIARI OFICIAL I PUBLICACIONS DE LA GENERALITAT|
+|ESCOLA D'ADMINISTRACIÓ PÚBLICA DE CATALUNYA (EAPC)|
+|DEPARTAMENT D'ECONOMIA I HISENDA|
+|DEPARTAMENT D'EMPRESA I TREBALL|
+|DEPARTAMENT D'EDUCACIÓ|
+|DEPARTAMENT D'ACCIÓ EXTERIOR I GOVERN OBERT|
+|INSTITUT CATALÀ D'ENERGIA (ICAEN)|
+|INSTITUT CATALÀ DE LA SALUT|
+|DEPARTAMENT D'IGUALTAT I FEMINISMES|
+|DEPARTAMENT D'INTERIOR|
+|DEPARTAMENT DE JUSTÍCIA|
+|OFICINA ANTIFRAU DE CATALUNYA|
+|DEPT. PDA -CONNECTIVITAT CENTRALITZADA|
+|DEPARTAMENT DE POLÍTIQUES DIGITALS I ADMINISTRACIÓ PÚBLICA|
+|DEPARTAMENT DE LA PRESIDÈNCIA|
+|SINDICATURA DE COMPTES DE CATALUNYA|
+|SERVEI CATALA DE TRANSIT|
+|SISTEMA D'EMERGÈNCIES MÈDIQUES, SA (SEMSA)|
+|SERVEI CATALÀ DE LA SALUT|
+|SERVEI D'OCUPACIÓ DE CATALUNYA|
+|DEPARTAMENT DE RECERCA I UNIVERSITATS|
+|DEPARTAMENT DE VICEPRESIDÈNCIA I DE POLÍTIQUES DIGITALS I TERRITORI|
 
 ### Grups de CPDs i LdTs
 
-Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Aquests tipus de grups recullen als tècnics dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT).
+Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a
+Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels proveïdors d'infraestructura i categoria de lloc de treball vigents.
 
 ### Altres grups
 
-Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Responsables d'àmbit, Oficina de Qualitat, Oficina de Seguretat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Es tracta de grups especials per a la gestió del servei: **Administració, Oficina de Qualitat i Oficina de Seguretat**.
+És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+Aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/).
 
 ## Funcionament
 
-A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
+A continuació, ens centrarem en la gestió de membres del grup de **Release Managers de les aplicacions mitjançant l'autoservei d'usuaris**.
 Aquest servei es realitza mitjançant l'eina de custòdia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
