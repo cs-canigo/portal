@@ -45,7 +45,6 @@ estandards =  ["cataleg cloud"]
                 <th></th>
                 <th>Grup de Tecnologies</th>
                 <th>Producte</th>
-                <th>Versió</th>
             </tr>
         </thead>
 </table>
