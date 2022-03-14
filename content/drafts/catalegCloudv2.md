@@ -136,14 +136,10 @@ $(document).ready(function() {
                 "defaultContent": '',
 	            "width": "10%" },
             {   "data": "categoria",
-	            "width": "30%" },
+	            "width": "45%" },
             {   "data": "producte", 
 	            "className":      'intern',
-	            "width": "30%" },
-            {   "data": "versio",
-                "className":      'intern',
-	        "width": "80%" },
-            
+	            "width": "45%" },          
         ],
         "order": [[1, 'asc']],
            "initComplete": function () {
