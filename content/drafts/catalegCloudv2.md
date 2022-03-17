@@ -3,7 +3,7 @@ date        = "2022-03-03"
 title       = "Catàleg Cloud v2"
 description = "Catàleg Cloud v2"
 weight		= 3
-type = "estandard"
+type        = "estandard"
 toc         = true
 versio      = "1.0"
 responsable = "Unitat d'arquitectura"
@@ -176,16 +176,14 @@ $(document).ready(function() {
 </script>
 
 <table id="tallesCPDs" class="display" style="width:100%">
-        <thead>
-            <tr style="vertical-align: middle; font-size: 16px; text-align: center">
-                <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
-            </tr>
-        </thead>
-        <tr>
-            <td>CPD</td>
-            <td colspan="12">CPD1</td>
+    <thead>
+        <tr style="vertical-align: middle; font-size: 16px; text-align: center">
+            <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
         </tr>
-        <tr>
+    </thead>
+    <tr>
+        <td style="font-size: 16px;">CPD1</td>
+        <td>
             <table>
                 <thead>
                     <tr>                    
@@ -235,20 +233,20 @@ $(document).ready(function() {
                     <td colspan="3">Service Mesh</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3">Docker 18.9</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"> - </td>
                 </tr>
                 <tr>
                     <td>Comentaris</td>
-                    <td colspan="12"></td>
+                    <td colspan="12">SwarmMe no pot fer servir els templates de Prometheus i Grafana</td>
                 </tr>
             </table>
             <table>
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src=src="../catalegCloud/kubernetes.png" width="24" alt="Swarm"> KuberMe</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -294,17 +292,269 @@ $(document).ready(function() {
                     <td colspan="3">Service Mesh</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3">Kubernetes 1.18.10</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"> - </td>
                 </tr>
                 <tr>
                     <td>Comentaris</td>
                     <td colspan="12"></td>
                 </tr>
-            </table>               
-        </tr>
+            </table>
+        </td>               
+    </tr>
+    <tr>
+        <td style="font-size: 16px;">CPD2</td>
+        <td>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>256</td>
+                    <td>62</td>
+                    <td>*</td>
+                    <td>512</td>
+                    <td>125</td>
+                    <td>*</td>
+                    <td>1024</td>
+                    <td>250</td>
+                    <td>*</td>
+                    <td>2048</td>
+                    <td>500</td>
+                    <td>*</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Kubernetes 1.18.10</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"> - </td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
+                </tr>
+            </table>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="KuberMe"> Openshift</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>256</td>
+                    <td>62</td>
+                    <td>*</td>
+                    <td>512</td>
+                    <td>125</td>
+                    <td>*</td>
+                    <td>1024</td>
+                    <td>250</td>
+                    <td>*</td>
+                    <td>2048</td>
+                    <td>500</td>
+                    <td>*</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Openshift 4.6</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"> - </td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
+                </tr>
+            </table>
+        </td>               
+    </tr>
+    <tr>
+        <td style="font-size: 16px;">CPD3</td>
+        <td>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"> Openshift</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>256</td>
+                    <td>250</td>
+                    <td>1</td>
+                    <td>512</td>
+                    <td>500</td>
+                    <td>2</td>
+                    <td>1024</td>
+                    <td>1000</td>
+                    <td>4</td>
+                    <td>2048</td>
+                    <td>2000</td>
+                    <td>8</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Openshift 4.6</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="istio"></td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12"></td>
+                </tr>
+            </table>
+        </td>               
+    </tr>
+    <tr>
+        <td style="font-size: 16px;">CPD4</td>
+        <td>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"> Openshift</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>256</td>
+                    <td>250</td>
+                    <td>*</td>
+                    <td>512</td>
+                    <td>500</td>
+                    <td>*</td>
+                    <td>1024</td>
+                    <td>1000</td>
+                    <td>*</td>
+                    <td>2048</td>
+                    <td>2000</td>
+                    <td>*</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Openshift 4.6</td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="istio"></td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12">Es defineixen 10 GB en d'espai total de disc per al namespace</td>
+                </tr>
+            </table>
+        </td>               
+    </tr>
 </table>
 
 #### Definició dels tipus de serveis a cloud
