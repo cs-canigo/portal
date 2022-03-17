@@ -178,7 +178,7 @@ $(document).ready(function() {
         </tr>
     </thead>
     <tr>
-        <td style="font-size: 16px;">CPD1</td>
+        <td style="font-size: 16px;"><strong>CPD1</strong></td>
         <td>
             <table>
                 <thead>
@@ -187,11 +187,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -222,7 +222,7 @@ $(document).ready(function() {
                     <td>-</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -235,7 +235,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12">SwarmMe no pot fer servir els templates de Prometheus i Grafana</td>
                 </tr>
             </table>
@@ -246,11 +246,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -281,7 +281,7 @@ $(document).ready(function() {
                     <td>-</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -294,14 +294,14 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12"></td>
                 </tr>
             </table>
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;">CPD2</td>
+        <td style="font-size: 16px;"><strong>CPD2</strong></td>
         <td>
             <table>
                 <thead>
@@ -310,11 +310,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -345,7 +345,7 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -358,7 +358,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
                 </tr>
             </table>
@@ -369,11 +369,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -404,7 +404,7 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -417,14 +417,14 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
                 </tr>
             </table>
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;">CPD3</td>
+        <td style="font-size: 16px;"><strong>CPD3</strong></td>
         <td>
             <table>
                 <thead>
@@ -433,11 +433,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -468,7 +468,7 @@ $(document).ready(function() {
                     <td>8</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -481,14 +481,14 @@ $(document).ready(function() {
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12"></td>
                 </tr>
             </table>
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;">CPD4</td>
+        <td style="font-size: 16px;"><strong>CPD4</strong></td>
         <td>
             <table>
                 <thead>
@@ -497,11 +497,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3">Talles</td>
-                    <td colspan="3">S</td>
-                    <td colspan="3">M</td>
-                    <td colspan="3">L</td>
-                    <td colspan="3">XL</td>
+                    <td rowspan="3"><strong>Talles</strong></td>
+                    <td colspan="3"><strong>S</strong></td>
+                    <td colspan="3"><strong>M</strong></td>
+                    <td colspan="3"><strong>L</strong></td>
+                    <td colspan="3"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -532,7 +532,7 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2">Serveis</td>
+                    <td rowspan="2"><strong>Serveis</strong></td>
                     <td colspan="3">Versió</td>
                     <td colspan="3">Logs</td>
                     <td colspan="3">Mètriques</td>
@@ -545,7 +545,7 @@ $(document).ready(function() {
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
-                    <td>Comentaris</td>
+                    <td><strong>Comentaris</strong></td>
                     <td colspan="12">Es defineixen 10 GB en d'espai total de disc per al namespace</td>
                 </tr>
             </table>
