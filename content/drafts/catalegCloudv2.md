@@ -482,7 +482,7 @@ $(document).ready(function() {
                     <td colspan="3">Openshift 4.6</td>
                     <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
                     <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="istio"></td>
+                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
                     <td>Comentaris</td>
@@ -546,7 +546,7 @@ $(document).ready(function() {
                     <td colspan="3">Openshift 4.6</td>
                     <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
                     <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="istio"></td>
+                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
                     <td>Comentaris</td>
