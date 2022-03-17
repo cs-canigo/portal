@@ -2,13 +2,9 @@
 date        = "2022-03-03"
 title       = "Catàleg Cloud v2"
 description = "Catàleg Cloud v2"
-weight		= 3
-type        = "estandard"
-toc         = true
-versio      = "1.0"
-responsable = "Unitat d'arquitectura"
+sections    = "Cataleg Cloud"
+weight	    = 3
 estandards =  ["cataleg cloud"]
-
 +++
 
 # Catàleg Cloud del CTTI
