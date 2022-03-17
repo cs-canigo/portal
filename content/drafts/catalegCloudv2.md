@@ -1,5 +1,5 @@
 +++
-date        = "2022-03-03"
+date        = "2022-03-17"
 title       = "Catàleg Cloud v2"
 description = "Catàleg Cloud v2"
 sections    = "Cataleg Cloud"
@@ -191,7 +191,7 @@ $(document).ready(function() {
         </tr>
     </thead>
     <tr>
-        <td style="font-size: 16px;"><strong>CPD1</strong></td>
+        <td style="font-size: 16px; widht: 20%"><strong>CPD1</strong></td>
         <td>
             <table id="CPD1Swarm" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
@@ -314,7 +314,7 @@ $(document).ready(function() {
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;"><strong>CPD2</strong></td>
+        <td style="font-size: 16px; widht: 20%"><strong>CPD2</strong></td>
         <td>
             <table id="CPD2KuberMe" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
@@ -378,7 +378,7 @@ $(document).ready(function() {
             <table id="CPD2Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="KuberMe"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -437,7 +437,7 @@ $(document).ready(function() {
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;"><strong>CPD3</strong></td>
+        <td style="font-size: 16px; widht: 20%"><strong>CPD3</strong></td>
         <td>
             <table id="CPD3Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
@@ -501,7 +501,7 @@ $(document).ready(function() {
         </td>               
     </tr>
     <tr>
-        <td style="font-size: 16px;"><strong>CPD4</strong></td>
+        <td style="font-size: 16px; widht: 20%"><strong>CPD4</strong></td>
         <td>
             <table id="CPD4Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
