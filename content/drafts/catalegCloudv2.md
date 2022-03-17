@@ -15,6 +15,15 @@ estandards =  ["cataleg cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
+---
+
+# **Taula de Continguts** {#TaulaContiguts}
+
+1. [Productes Middleware] (#ProductesMiddleware)
+2. [Informació CPDs] (#InformacióCPDs)
+
+---
+
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
         <tr>
@@ -27,6 +36,8 @@ estandards =  ["cataleg cloud"]
         </tr>
     </thead>
 </table>
+
+# **Productes Middleware** {#ProductesMiddleware}
 
 <table id="catalegCloud" class="display" style="width:100%">
     <thead>
@@ -171,7 +182,9 @@ $(document).ready(function() {
 });
 </script>
 
-<table id="tallesCPDs" class="display" style="width:100%">
+# **Informació CPDs** {#InformacióCPDs}
+
+<table id="tallesCPDs" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
     <thead>
         <tr style="vertical-align: middle; font-size: 16px; text-align: center">
             <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
@@ -180,7 +193,7 @@ $(document).ready(function() {
     <tr>
         <td style="font-size: 16px;"><strong>CPD1</strong></td>
         <td>
-            <table>
+            <table id="CPD1Swarm" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
                         <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> Swarm</td>
@@ -223,10 +236,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Docker 18.9</td>
@@ -239,7 +252,7 @@ $(document).ready(function() {
                     <td colspan="12">SwarmMe no pot fer servir els templates de Prometheus i Grafana</td>
                 </tr>
             </table>
-            <table>
+            <table id="CPD1KuberMe" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
                         <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
@@ -282,10 +295,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
@@ -303,7 +316,7 @@ $(document).ready(function() {
     <tr>
         <td style="font-size: 16px;"><strong>CPD2</strong></td>
         <td>
-            <table>
+            <table id="CPD2KuberMe" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
                         <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
@@ -346,10 +359,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
@@ -362,10 +375,10 @@ $(document).ready(function() {
                     <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
                 </tr>
             </table>
-            <table>
+            <table id="CPD2Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="KuberMe"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="KuberMe"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -405,10 +418,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
@@ -426,10 +439,10 @@ $(document).ready(function() {
     <tr>
         <td style="font-size: 16px;"><strong>CPD3</strong></td>
         <td>
-            <table>
+            <table id="CPD3Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -469,10 +482,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
@@ -490,10 +503,10 @@ $(document).ready(function() {
     <tr>
         <td style="font-size: 16px;"><strong>CPD4</strong></td>
         <td>
-            <table>
+            <table id="CPD4Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openshift.png" width="24" alt="Openshift"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -533,10 +546,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3">Versió</td>
-                    <td colspan="3">Logs</td>
-                    <td colspan="3">Mètriques</td>
-                    <td colspan="3">Service Mesh</td>
+                    <td colspan="3"><strong>Versió</strong></td>
+                    <td colspan="3"><strong>Logs</strong></td>
+                    <td colspan="3"><strong>Mètriques</strong></td>
+                    <td colspan="3"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
