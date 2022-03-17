@@ -1,6 +1,6 @@
 +++
 date        = "2022-03-17"
-title       = "Catàleg Cloud v2"
+title       = "Catàleg Cloud"
 description = "Catàleg Cloud v2"
 sections    = "Cataleg Cloud"
 weight	    = 3
@@ -37,7 +37,7 @@ estandards =  ["cataleg cloud"]
     </thead>
 </table>
 
-# **Productes Middleware** {#ProductesMiddleware}
+## **Productes Middleware** {#ProductesMiddleware}
 
 <table id="catalegCloud" class="display" style="width:100%">
     <thead>
@@ -182,9 +182,9 @@ $(document).ready(function() {
 });
 </script>
 
-# **Informació CPDs** {#InformacióCPDs}
+## **Informació CPDs** {#InformacióCPDs}
 
-<table id="tallesCPDs" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
+<table id="tallesCPDs" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%">
     <thead>
         <tr style="vertical-align: middle; font-size: 16px; text-align: center">
             <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
@@ -490,7 +490,7 @@ $(document).ready(function() {
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
                     <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"></td>
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
@@ -554,7 +554,7 @@ $(document).ready(function() {
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
                     <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"></td>
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
                 </tr>
                 <tr>
