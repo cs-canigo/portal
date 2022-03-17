@@ -10,13 +10,6 @@ responsable = "Unitat d'arquitectura"
 estandards =  ["cataleg cloud"]
 
 +++
-## Part 1: Abast
-
-## Part 2: Referències 
-
-## Part 3: Termes i definicions
-
-## Part 4: Requisits del programari
 
 # Catàleg Cloud del CTTI
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
@@ -27,26 +20,26 @@ estandards =  ["cataleg cloud"]
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
 
 <table id="Revisio" class="display" style="width:50%" align="center">
-<thead>
-<tr>
-<th>Darrera revisió realitzada</th>
-<th>Revisió de full de ruta vigent fins</th>
-</tr>
-<tr>
-<td>febrer de 2022 </td>
-<td>juny de 2022</td>
-</tr>
-</thead>
+    <thead>
+        <tr>
+            <th>Darrera revisió realitzada</th>
+            <th>Revisió de Catàleg Cloud vigent fins</th>
+        </tr>
+        <tr>
+            <td>febrer de 2022 </td>
+            <td>juny de 2022</td>
+        </tr>
+    </thead>
 </table>
 
 <table id="catalegCloud" class="display" style="width:100%">
-        <thead>
-            <tr style="vertical-align: middle; font-size: 16px">
-                <th></th>
-                <th>Grup de Tecnologies</th>
-                <th>Producte</th>
-            </tr>
-        </thead>
+    <thead>
+        <tr style="vertical-align: middle; font-size: 16px">
+            <th></th>
+            <th>Grup de Tecnologies</th>
+            <th>Producte</th>
+        </tr>
+    </thead>
 </table>
 
 <script>
@@ -181,6 +174,138 @@ $(document).ready(function() {
     });
 });
 </script>
+
+<table id="tallesCPDs" class="display" style="width:100%">
+        <thead>
+            <tr style="vertical-align: middle; font-size: 16px; text-align: center">
+                <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>CPD</td>
+            <td colspan="12">CPD1</td>
+        </tr>
+        <tr>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> Swarm</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>512</td>
+                    <td>500</td>
+                    <td>10</td>
+                    <td>1024</td>
+                    <td>1000</td>
+                    <td>10</td>
+                    <td>2048</td>
+                    <td>1500</td>
+                    <td>10</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12"></td>
+                </tr>
+            </table>
+            <table>
+                <thead>
+                    <tr>                    
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src=src="../catalegCloud/kubernetes.png" width="24" alt="Swarm"> KuberMe</td>
+                    <tr>
+                </thead>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="3">Talles</td>
+                    <td colspan="3">S</td>
+                    <td colspan="3">M</td>
+                    <td colspan="3">L</td>
+                    <td colspan="3">XL</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                    <td>RAM (MB)</td>
+                    <td>CPU (milicores)</td>
+                    <td>DISC (GB)</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td>512</td>
+                    <td>500</td>
+                    <td>10</td>
+                    <td>1024</td>
+                    <td>1000</td>
+                    <td>10</td>
+                    <td>2048</td>
+                    <td>1500</td>
+                    <td>10</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">
+                    <td rowspan="2">Serveis</td>
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr style="vertical-align: middle; text-align: center">                    
+                    <td colspan="3">Versió</td>
+                    <td colspan="3">Logs</td>
+                    <td colspan="3">Mètriques</td>
+                    <td colspan="3">Service Mesh</td>
+                </tr>
+                <tr>
+                    <td>Comentaris</td>
+                    <td colspan="12"></td>
+                </tr>
+            </table>               
+        </tr>
+</table>
 
 #### Definició dels tipus de serveis a cloud
 
