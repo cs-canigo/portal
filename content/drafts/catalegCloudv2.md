@@ -66,12 +66,12 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th style="font-size: 14px;">Plataforma</th>'+
-            '<td align="center">[<img src="../catalegCloud/swarm.png" width="24" alt="Swarm">] (#cpd1swarm)</td>'+
-            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
-            '<td align="center"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></td>'+
-            '<td align="center"><img src="../catalegCloud/openShift.png" width="24"></td>'+
+            '<td align="center"><a href="#CPD1Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
+            '<td align="center"><a href="#CPD1KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
+            '<td align="center"><a href="#CPD2KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
+            '<td align="center"><a href="#CPD2Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
+            '<td align="center"><a href="#CPD3Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
+            '<td align="center"><a href="#CPD4Openshift"><img src="../catalegCloud/openShift.png" width="24"></a></td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14px;">Model de Servei</th>'+
@@ -196,7 +196,7 @@ $(document).ready(function() {
             <table id="CPD1Swarm" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> Swarm {#cpd1swarm}</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> Swarm</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
