@@ -7,17 +7,55 @@ weight      = 3
 categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
 +++
 
-## Part 1: Abast
-
-## Part 2: Referències 
-
-## Part 3: Termes i definicions
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.2/css/responsive.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="https://canigo.ctti.gencat.cat/drafts/FullRuta20/tableStyle.css">
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
+
+<style>
+table.cpd {
+  border: 1px solid;
+}
+tr.plat tr{
+  border: 1px solid;  
+}
+th { font-size: 14px; }
+td { font-size: 14px; height: 40px; }
+img { height: 40px}
+</style>
+
+<script>
+    function amaga(vClass) {
+            var tr = document.getElementsByClassName(vClass);
+            var row = taulaFullRutaLLT.row( tr )
+            row.child.hide();
+            /*document.getElementsByClassName(vClass)[0].
+            style.visibility = 'hidden';*/
+        }
+    function mostra(vClass) {
+            var tr = document.getElementsByClassName(vClass);
+            var row = taulaFullRutaLLT.row( tr )
+            row.child.hide();
+            /*document.getElementsByClassName(vClass)[0].
+            style.visibility = 'visible';*/
+        }
+    function amag_most(){
+        var tr = $(this).closest('tr');
+        var row = taulaFullRutaLLT.row( tr );
+        if ( row.child.isShown() ) {
+            // This row is already open - close it
+            row.child.hide();
+            tr.removeClass('shown');
+        }
+        else {
+            // Open this row
+            row.child( formatLLT(row.data()) ).show();
+            tr.addClass('shown');
+        }
+    }
+</script>
 
 <table id="Revisio" class="display" style="width:50%" align="center">
     <thead>
@@ -32,55 +70,57 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
     </thead>
 </table>
 
-<table id="CPD1SwarmMe" class="display" style="width:99%">
+<table id="CPD1" class="display" style="width:99%">
     <tr>
-        <th rowspan="9"><img src="./catalegCloud/details_open.png" align="center"></th>
-        <th colspan="12">SwarmMe</th>                        
+        <th colspan="13">CPD1
+        </th>
     </tr>
-    <tr>
+    <tr class="plat">
+        <td><img src="../catalegCloud/details_open.png" align="center" onclick="mostra('cpd1swarm')"><img src="../catalegCloud/details_close.png" align="center" onclick="amaga('cpd1swarm')"></td>
+        <td colspan="11" align="left"><strong>SwarmMe</strong> <img src="../catalegCloud/swarm.png"></td>                        
+    </tr>
+    <tr class="cpd1swarm">
         <th colspan="2" width="16%">Versió</th>
-        <td colspan="2" width="17%"></td>
+        <td colspan="2" width="17%">Docker 18.9</td>
         <th colspan="2" width="16%">Mètriques</th>
-        <td colspan="2" width="17%"></td>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
         <th colspan="2" width="16%">Logs</th>
-        <td colspan="2" width="17%"></td>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
     </tr>
-    <tr>
-        <th colspan="2" width="20%">xPaaS</td>
-        <td colspan="10"></td>
+    <tr class="cpd1swarm">
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
     </tr>
-    <tr>
-        <th colspan="2" width="20%">DBaaS</td>
-        <td colspan="10"></td>
-    </tr>
-    <tr height="5" color="black">
+    <tr height="1" class="cpd1swarm">
         <td colspan="12">
         </td>
     </tr>
-    <tr>
+    <tr class="cpd1swarm">
         <th align="center" colspan="12">Talles Contenidors</th>                        
     </tr>
-    <tr align="center">
-        <td colspan="3">S</th>
-        <td colspan="3">M</th>
-        <td colspan="3">L</th>
-        <td colspan="3">XL</th>
+    <tr align="center" class="cpd1swarm">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
     </tr>
-    <tr align="center">
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
-        <td>RAM</th>
-        <td>CPU</th>
-        <td>DISC</th>
+    <tr align="center" class="cpd1swarm">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
     </tr>
-    <tr align="center">
+    <tr align="center" class="cpd1swarm">
         <td>512</td>
         <td>500</td>
         <td>10</td>
@@ -94,441 +134,446 @@ categories  = ["Cloud","Cataleg Cloud","Catàleg Cloud"]
         <td>-</td>
         <td>-</td>
     </tr>
-</table>
-
-<table id="imatgesCloud" class="display" style="width:100%">
     <tr>
-        <th>Imatges Catàleg Cloud</th>                        
+        <td><img src="../catalegCloud/details_open.png" align="center" ></td>
+        <td colspan="11" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" ></td>                        
     </tr>
     <tr>
-        <td>
-            <table id="llistatImatgesCloud" class="display" style="width:100%">
-                <tr>
-                    <th>Grup de Tecnologies</th>
-                    <th>Producte</th>
-                    <th>Versió</th>
-                    <th>Imatge</th>                         
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Java</td>
-                    <td>8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Java</td>
-                    <td>11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>10</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>12</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>NodeJS</td>
-                    <td>14</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.2</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>PHP</td>
-                    <td>7.4</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat</td>
-                    <td>9.0-Java 8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat</td>
-                    <td>9.0-Java 11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat amb suport de Sessions distribuïdes</td>
-                    <td>9.0-Java 8</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors Web</td>
-                    <td>Tomcat amb suport de Sessions distribuïdes</td>
-                    <td>9.0-Java 11</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache</td>
-                    <td>2.4</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache GICAR Shibboleth</td>
-                    <td>1.0.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache GICAR Shibboleth Kubernetes/Openshift</td>
-                    <td>1.0.3</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Apache Proxy ElasticSearch</td>
-                    <td>2.4-1.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.14</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.16</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>Nginx</td>
-                    <td>1.18</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>GICAR Nginx</td>
-                    <td>1.0.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>                          
-                </tr>
-                <tr>
-                    <td>Servidors d'Aplicacions</td>
-                    <td>GICAR Nginx Kubernetes/Openshift</td>
-                    <td>1.0.0</td>
-                    <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>                          
-                </tr>
-            </table>
-        </td>                          
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%">1.18.10</td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
     </tr>
-</table>
-
-<table id="CatalegCLOUD" style="width:100%">
-    <thead>
-        <tr>
-            <th width="5%"></th>
-            <th width="25%">Cloud</th>
-            <th width="25%">Plataforma</th>
-            <th width="45%"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td colspan="3">
-                <table style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Cloud Privat</th>                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>CPD1</th>                        
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <table style="width:100%">
-                                                    <tr>
-                                                        <th colspan="12">SwarmMe</th>                        
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2">Versió</td>
-                                                        <td colspan="2"></td>
-                                                        <td colspan="2">Mètriques</td>
-                                                        <td colspan="2"></td>
-                                                        <td colspan="2">Logs</td>
-                                                        <td colspan="2"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2">xPaaS</td>
-                                                        <td colspan="10"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2">DBaaS</td>
-                                                        <td colspan="10"></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="12">
-                                                            <table style="width:100%">
-                                                                <tr>
-                                                                    <th align="center" colspan="12">Talles Contenidors</th>                        
-                                                                </tr>
-                                                                <tr align="center">
-                                                                    <td colspan="3">S</td>
-                                                                    <td colspan="3">M</td>
-                                                                    <td colspan="3">L</td>
-                                                                    <td colspan="3">XL</td>
-                                                                </tr>
-                                                                <tr align="center">
-                                                                    <td>RAM</td>
-                                                                    <td>CPU</td>
-                                                                    <td>DISC</td>
-                                                                    <td>RAM</td>
-                                                                    <td>CPU</td>
-                                                                    <td>DISC</td>
-                                                                    <td>RAM</td>
-                                                                    <td>CPU</td>
-                                                                    <td>DISC</td>
-                                                                    <td>RAM</td>
-                                                                    <td>CPU</td>
-                                                                    <td>DISC</td>
-                                                                </tr>
-                                                                <tr align="center">
-                                                                    <td>512</td>
-                                                                    <td>500</td>
-                                                                    <td>10</td>
-                                                                    <td>1024</td>
-                                                                    <td>1000</td>
-                                                                    <td>10</td>
-                                                                    <td>2048</td>
-                                                                    <td>1500</td>
-                                                                    <td>10</td>
-                                                                    <td>-</td>
-                                                                    <td>-</td>
-                                                                    <td>-</td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>                                        
-                                    </tbody>
-                                </table>
-                            </td>                           
-                        </tr>
-                        <tr>
-                            <td>
-                                <table style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Imatges Catàleg Cloud</th>                        
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <table style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Grup de Tecnologies</th>
-                                                            <th>Producte</th>
-                                                            <th>Versió</th>
-                                                            <th>Imatge</th>                         
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Java</td>
-                                                            <td>8</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Java</td>
-                                                            <td>11</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>NodeJS</td>
-                                                            <td>10</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>NodeJS</td>
-                                                            <td>12</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>NodeJS</td>
-                                                            <td>14</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>PHP</td>
-                                                            <td>7.2</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>PHP</td>
-                                                            <td>7.3</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>PHP</td>
-                                                            <td>7.4</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Tomcat</td>
-                                                            <td>9.0-Java 8</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Tomcat</td>
-                                                            <td>9.0-Java 11</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Tomcat amb suport de Sessions distribuïdes</td>
-                                                            <td>9.0-Java 8</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors Web</td>
-                                                            <td>Tomcat amb suport de Sessions distribuïdes</td>
-                                                            <td>9.0-Java 11</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Apache</td>
-                                                            <td>2.4</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Apache GICAR Shibboleth</td>
-                                                            <td>1.0.3</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Apache GICAR Shibboleth Kubernetes/Openshift</td>
-                                                            <td>1.0.3</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Apache Proxy ElasticSearch</td>
-                                                            <td>2.4-1.0</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Nginx</td>
-                                                            <td>1.14</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Nginx</td>
-                                                            <td>1.16</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>Nginx</td>
-                                                            <td>1.18</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>GICAR Nginx</td>
-                                                            <td>1.0.0</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>                          
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Servidors d'Aplicacions</td>
-                                                            <td>GICAR Nginx Kubernetes/Openshift</td>
-                                                            <td>1.0.0</td>
-                                                            <td>docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>                          
-                                                        </tr>                                                    
-                                                    </tbody>
-                                                </table>
-                                            </td>                          
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>                           
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td colspan="3">
-                <table style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Cloud Públic</th>                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <table style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Azure</th>                        
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Azure</td>                          
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="1">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>4</td>
+        <td>512</td>
+        <td>500</td>
+        <td>4</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD2
+        </th>
+    </tr>
+    <tr>
+        <td><img src="../catalegCloud/details_open.png" align="center" ></td>
+        <td colspan="11" align="left"><strong>Kubernetes</strong> <img src="../catalegCloud/kubernetes.png" ></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%">1.18.10</td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="1">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>62</td>
+        <td>*</td>
+        <td>521</td>
+        <td>125</td>
+        <td>*</td>
+        <td>1024</td>
+        <td>250</td>
+        <td>*</td>
+        <td>2048</td>
+        <td>500</td>
+        <td>*</td>
+    </tr>
+    <tr>
+        <td><img src="../catalegCloud/details_open.png" align="center" ></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" ></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%">4.6</td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="1">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD3
+        </th>
+    </tr>
+    <tr>
+        <td><img src="../catalegCloud/details_open.png" align="center" ></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" ></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%">4.6</td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" ></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"></td>
+    </tr>
+    <tr height="1">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <th colspan="13">CPD4
+        </th>
+    </tr>
+    <tr>
+        <td><img src="../catalegCloud/details_open.png" align="center" ></td>
+        <td colspan="11" align="left"><strong>Openshift</strong> <img src="../catalegCloud/openShift.png" ></td>                        
+    </tr>
+    <tr>
+        <th colspan="2" width="16%">Versió</th>
+        <td colspan="2" width="17%">4.6</td>
+        <th colspan="2" width="16%">Mètriques</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/grafana.png" align="left" ></td>
+        <th colspan="2" width="16%">Logs</th>
+        <td colspan="2" width="17%"><img src="../catalegCloud/kibana.png" align="left" ></td>
+    </tr>
+    <tr>
+        <th colspan="3" width="25%">xPaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/istio.png" align="left" ></td>
+        <th colspan="3" width="25%">DBaaS</td>
+        <td colspan="3" width="25%"><img src="../catalegCloud/mysql.png" align="left" > <img src="../catalegCloud/postgresql.png" align="left" ></td>
+    </tr>
+    <tr height="1">
+        <td colspan="12">
+        </td>
+    </tr>
+    <tr>
+        <th align="center" colspan="12">Talles Contenidors</th>                        
+    </tr>
+    <tr align="center">
+        <td colspan="3"><strong>S</strong></th>
+        <td colspan="3"><strong>M</strong></th>
+        <td colspan="3"><strong>L</strong></th>
+        <td colspan="3"><strong>XL</strong></th>
+    </tr>
+    <tr align="center">
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+        <td><strong>RAM</strong></th>
+        <td><strong>CPU</strong></th>
+        <td><strong>DISC</strong></th>
+    </tr>
+    <tr align="center">
+        <td>256</td>
+        <td>250</td>
+        <td>1</td>
+        <td>512</td>
+        <td>500</td>
+        <td>2</td>
+        <td>1024</td>
+        <td>1000</td>
+        <td>4</td>
+        <td>2048</td>
+        <td>2000</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <th colspan="12">Imatges Catàleg Cloud</th>                        
+    </tr>
+    <tr>
+        <th colspan="3">Grup de Tecnologies</th>
+        <th colspan="3">Producte</th>
+        <th colspan="3">Versió</th>
+        <th colspan="3">Imatge</th>                         
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Java</td>
+        <td colspan="3">8</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:8</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Java</td>
+        <td colspan="3">11</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/java:11-openjdk</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">NodeJS</td>
+        <td colspan="3">10</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:10</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">NodeJS</td>
+        <td colspan="3">12</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:12</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">NodeJS</td>
+        <td colspan="3">14</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/node:14</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">PHP</td>
+        <td colspan="3">7.2</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.2</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">PHP</td>
+        <td colspan="3">7.3</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.3</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">PHP</td>
+        <td colspan="3">7.4</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/apache-php:7.4</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Tomcat</td>
+        <td colspan="3">9.0-Java 8</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java8</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Tomcat</td>
+        <td colspan="3">9.0-Java 11</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat:9.0-java11</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Tomcat amb suport de Sessions distribuïdes</td>
+        <td colspan="3">9.0-Java 8</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java8</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors Web</td>
+        <td colspan="3">Tomcat amb suport de Sessions distribuïdes</td>
+        <td colspan="3">9.0-Java 11</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/tomcat-hc:9.0-java11</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Apache</td>
+        <td colspan="3">2.4</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd:2.4</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Apache GICAR Shibboleth</td>
+        <td colspan="3">1.0.3</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth:1.0.3</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Apache GICAR Shibboleth Kubernetes/Openshift</td>
+        <td colspan="3">1.0.3</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-shibboleth-openshift:1.0.3</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Apache Proxy ElasticSearch</td>
+        <td colspan="3">2.4-1.0</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/httpd-proxy-es:2.4-1.0</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Nginx</td>
+        <td colspan="3">1.14</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.14</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Nginx</td>
+        <td colspan="3">1.16</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.16</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">Nginx</td>
+        <td colspan="3">1.18</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/nginx:1.18</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">GICAR Nginx</td>
+        <td colspan="3">1.0.0</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx:1.0.0</td>                          
+    </tr>
+    <tr>
+        <td colspan="3">Servidors d'Aplicacions</td>
+        <td colspan="3">GICAR Nginx Kubernetes/Openshift</td>
+        <td colspan="3">1.0.0</td>
+        <td colspan="3">docker-registry.ctti.extranet.gencat.cat/gencatcloud/gicar-nginx-openshift:1.0.0</td>                          
+    </tr>
 </table>

@@ -1,12 +1,7 @@
 +++
 date = "2020-06-17"
 title = "Autoservei d'usuaris"
-description = "Autoservei d'usuaris SIC 2.0 mitjançant GitLab"
-aliases = [
-    "/sic/autoservei-usuaris/",
-    "/noticies/2017-07-18-SIC-Autoservei-usuaris-SIC2.0/",
-    "/sic-serveis/autoservei-usuaris/"
-]
+description = "Autoservei d'usuaris mitjançant el Servei de Custòdia de Codi (Gitlab)"
 sections = "SIC"
 taxonomies = []
 toc = true
@@ -15,8 +10,9 @@ weight = 4
 
 ## Introducció
 
-El SIC 2.0 proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis. <br/>
-Abans d'entrar en el funcionament de l'autoservei d'usuaris, explicarem breument l'estructura actual de permisos del SIC.
+El SIC proporciona un servei de gestió d'usuaris per a que els lots d'aplicacions disposin d'autonomia a l'hora d'assignar permisos d'accés sobre els diferents serveis.
+Abans d'entrar en el [funcionament](/sic20-serveis/autoservei-usuaris/#funcionament) de l'autoservei d'usuaris,
+explicarem breument l'actual estructura de permisos del SIC.
 
 ## Estructura de permisos
 
@@ -38,7 +34,8 @@ A continuació, descriurem cadascun d'aquests subtipus.
 
 #### Release Managers
 
-Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
+Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris amb perfil Release Manager que pertanyen a un
+codi d'aplicació concret. Els membres d'un grup Release Managers són perfils que poden:
 
 * Operar amb servei de **custòdia de codi**.
 * **Concedir permisos** a altres companys per accedir com a Developers o Mantainers al codi d'aplicació corresponent, passant aquests últims a ser Release Managers a tots els efectes.
@@ -48,24 +45,76 @@ Aquest tipus de grup recull als Release Managers, és a dir, a tots els usuaris 
 
 #### Responsables de lot
 
-Aquest tipus de grup recull als responsables de lot. <br/>
-Al SIC 1.0, els membres d'aquest tipus de grup eren els encarregats de sol·licitar accés per a un Release Manager. Actualment, al SIC 2.0, aquesta funcionalitat perd valor gràcies a l'autoservei d'usuaris, mitjançant el qual els propis Release Managers poden concedir accés a la resta de companys. <br/>
-Aquest grup, per tant, ha passat a ser un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Aquest tipus de grup recull als **responsables del lot d'aplicacions: equip d'arquitectura, qualitat, responsables de contracte i altres**. <br/>
+Aquest grup és un agregador de totes les aplicacions del lot disposant d'una **participació transversal a tots els codis
+de les aplicacions** i podent realitzar les mateixes accions que un Release Manager. <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels lots d'aplicacions segons la contractació vigent [AM01-AM20].
+
+### Grups d'àmbit
+
+Aquest tipus de grup recull als **responsables d'àmbit** d'acord amb l'organigrama departamental de la Generalitat. <br/>
+Aquest grup és un agregador de totes les aplicacions de l'àmbit disposant d'una **participació transversal a tots els codis
+de les aplicacions** i podent realitzar les mateixes accions que un Release Manager (a excepció de l'entrega de binaris per al seu desplegament). <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels departaments/unitats previstes d'acord amb l'organigrama departamental vigent.
+
+|Relació de grups d'àmbit|
+|-------|
+|DEPARTAMENT D'ACCIÓ CLIMÀTICA, ALIMENTACIÓ I AGENDA RURAL|
+|AGÈNCIA CATALANA DE CONSUM (ACC)|
+|AGÈNCIA PER A LA COMPETITIVITAT DE L'EMPRESA (ACCIO)|
+|AGÈNCIA CATALANA DE TURISME (ACT)|
+|AUTORITAT CATALANA DE PROTECCIÓ DE DADES (APDCAT)|
+|AGÈNCIA TRIBUTÀRIA DE CATALUNYA|
+|DEPARTAMENT DE DRETS SOCIALS|
+|CONSORCI ADMINISTRACIÓ OBERTA DE CATALUNYA|
+|D.G. D'ATENCIÓ CIUTADANA|
+|CONSELL CATALA DE L'ESPORT|
+|FUNDACIÓ CENTRE DE LA SEGURETAT DE LA INFORM. CAT.|
+|DEPARTAMENT DE CULTURA|
+|CENTRE DE TELECOMUNICACIONS I TECNOLOGIES DE LA INFORMACIO|
+|DIRECCIÓ GENERAL DE LA POLICIA|
+|ENT.AUTONOMA DIARI OFICIAL I PUBLICACIONS DE LA GENERALITAT|
+|ESCOLA D'ADMINISTRACIÓ PÚBLICA DE CATALUNYA (EAPC)|
+|DEPARTAMENT D'ECONOMIA I HISENDA|
+|DEPARTAMENT D'EMPRESA I TREBALL|
+|DEPARTAMENT D'EDUCACIÓ|
+|DEPARTAMENT D'ACCIÓ EXTERIOR I GOVERN OBERT|
+|INSTITUT CATALÀ D'ENERGIA (ICAEN)|
+|INSTITUT CATALÀ DE LA SALUT|
+|DEPARTAMENT D'IGUALTAT I FEMINISMES|
+|DEPARTAMENT D'INTERIOR|
+|DEPARTAMENT DE JUSTÍCIA|
+|OFICINA ANTIFRAU DE CATALUNYA|
+|DEPT. PDA -CONNECTIVITAT CENTRALITZADA|
+|DEPARTAMENT DE POLÍTIQUES DIGITALS I ADMINISTRACIÓ PÚBLICA|
+|DEPARTAMENT DE LA PRESIDÈNCIA|
+|SINDICATURA DE COMPTES DE CATALUNYA|
+|SERVEI CATALA DE TRANSIT|
+|SISTEMA D'EMERGÈNCIES MÈDIQUES, SA (SEMSA)|
+|SERVEI CATALÀ DE LA SALUT|
+|SERVEI D'OCUPACIÓ DE CATALUNYA|
+|DEPARTAMENT DE RECERCA I UNIVERSITATS|
+|DEPARTAMENT DE VICEPRESIDÈNCIA I DE POLÍTIQUES DIGITALS I TERRITORI|
 
 ### Grups de CPDs i LdTs
 
-Aquests tipus de grups recullen als responsables dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT). Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Aquests tipus de grups recullen als tècnics dels diferents centres de processament de dades (CPD) i a llocs de treball (LdT).
+Els membres d'aquest tipus de grups tenen **accés en mode lectura als repositoris i al servei de gestió de binaris**, a més poden executar a
+Jenkins jobs de desplegament automàtic per CPD per als codis d'aplicació corresponents. <br/>
+Els membres d'aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/),
+disposant d'un grup per a cada un dels proveïdors d'infraestructura i categoria de lloc de treball vigents.
 
 ### Altres grups
 
-Es tracta de grups especials per a la gestió del servei i altres funcionalitats: **Administració, Responsables d'àmbit, Oficina de Qualitat, Oficina de Seguretat**,... etcètera. És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
-Aquests grups estaran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/) en mode autoservei per l’aplicació “SIC”.
+Es tracta de grups especials per a la gestió del servei: **Administració, Oficina de Qualitat i Oficina de Seguretat**.
+És a dir, són grups necessaris per al correcte funcionament dels serveis i per a la integració amb la resta d'agents del CTTI. <br/>
+Aquests grups seran gestionats per l’aplicació de [Control d’Accés de Recursos de GICAR](https://gicar.intranet.gencat.cat/gdi/controlaccesrecursos/).
 
 ## Funcionament
 
-A continuació, ens centrarem en la gestió de membres del grup de **Release Managers mitjançant l'autoservei d'usuaris**.
+A continuació, ens centrarem en la gestió de membres del grup de **Release Managers de les aplicacions mitjançant l'autoservei d'usuaris**.
 Aquest servei es realitza mitjançant l'eina de custòdia de codi font implantada: [GitLab](https://git.intranet.gencat.cat/).
 
 ### Accés al servei
@@ -77,22 +126,13 @@ Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR**. Els Rele
 
 Per a poder accedir al servei caldrà disposar d'un usuari GICAR operatiu i crear el compte corresponent. Per a fer-ho, haurà d'introduir l'identificador d'usuari i contrasenya i, en cas de tractar-se d'un nou compte, el sistema el redirigirà a la plana de perfil per a que pugui dur a terme el procés d'alta. <br/>
 
-**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu** i que l'usuari es trobi bolcat a l'**LDAP del SIC** (adreça de correu inclosa). Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça de correu, com si no pot accedir al servei perquè es produeix un error d'autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
+**IMPORTANT**: És imprescindible que la identitat GICAR de l'usuari tingui informada l'**adreça de correu**. Per tant, tant si el sistema el redirigeix contínuament a la pàgina de perfil per informar l'adreça de correu, com si no pot accedir al servei perquè es produeix un error d'autenticació amb unes credencials vàlides, caldrà fer una petició de suport al servei GICAR a través de SAU-Remedy.
 
 ### Estructura de grups i projectes
 
 Els **Grups** tindran com a identificador el codi de diàleg de les aplicacions. Els usuaris Release Manager hauran de crear **Projectes** dins aquests grups per tal de disposar dels repositoris Git on fer la pujada de codi font de les aplicacions.
 
 Per a més informació: [Custòdia de codi font] (/sic-serveis/scm/)
-
-### Comptabilitat amb SIC 1.0
-
-Els usuaris que ja eren **"Release Manager Lot x Àmbit"** al sistema SIC 1.0, mantindran el mateix rol al sistema SIC 2.0. Per tant, en accedir al portal del GitLab (mitjançant les credencials GICAR corresponents) disposaran d'accés als grups per codi de diàleg de les seves aplicacions.
-
-**AVÍS**: durant el primer accés al GitLab no es comptarà amb visibilitat sobre els grups d'aplicacions. Caldrà esperar a l'endemà del primer login per tal de disposar d'accés als grups i projectes corresponents.
-
-<center>![RML a SIC 1.0 VS SIC 2.0](/images/news/autoserveiUsuaris_1.PNG)</center>
-<br/>
 
 ### Permisos d'accés
 

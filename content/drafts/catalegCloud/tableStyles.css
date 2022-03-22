@@ -1,0 +1,30 @@
+#catalegCloud td:nth-child(1),
+#catalegCloud th:nth-child(1)
+{
+    text-align : center;
+    font-weight: bold;
+}
+td.details-control {
+    background: url('https://canigo.ctti.gencat.cat/drafts/catalegCloud/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('https://canigo.ctti.gencat.cat/drafts/catalegCloud/details_close.png') no-repeat center center;
+}
+
+div.container { width: 80%; }
+
+.intern {
+font-weight: bold;
+}
+
+table.talles {
+    font-size: 8px;
+}
+
+div.a {
+    font-size: 8px;
+}
+
+th { font-size: 11px; vertical-align: middle;}
+td { font-size: 11px; vertical-align: middle;}
