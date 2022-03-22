@@ -1,7 +1,7 @@
 +++
 date        = "2022-03-25"
 title       = "Windows 11"
-description = "---"
+description = "windows 11"
 sections    = "Blog"
 weight      = 3
 categories  = ["Windows", "Microsoft"]
@@ -15,17 +15,17 @@ categories  = ["Windows", "Microsoft"]
 
 1. [Introducció] (#Introduccio)
 2. [Característiques principals de Windows 11] (#CaracteristiquesPrincipals)
-  2.1. [Seguretat i escaneig] (#SeguretatEscaneig)
-  2.2. [Accés més fàcil als nous serveis] (#AccesFacilServeis)
-  2.3. [Personalització de l'Experiència d'Escriptori] (#PersonalitzacioExperienciaEscriptori)
-  2.4. [Utilització de les antigues i noves aplicacions de forma millorada] (#UtilitzacioMillorada)
-  2.5. [Desplegament i Servei] (#DesplegamentServei)
+  1. [Seguretat i escaneig] (#SeguretatEscaneig)
+  2. [Accés més fàcil als nous serveis] (#AccesFacilServeis)
+  3. [Personalització de l'Experiència d'Escriptori] (#PersonalitzacioExperienciaEscriptori)
+  4. [Utilització de les antigues i noves aplicacions de forma millorada] (#UtilitzacioMillorada)
+  5. [Desplegament i Servei] (#DesplegamentServei)
 3. [Implantació corporativa de Windows 11] (#ImplantacioCorporativa)
-  3.1. [Infraestructura i Eines] (#InfraestructuraEines)
-  3.2. [Administració basada en núvol] (#AdminNuvol)
-  3.3. [Revisar l'enfocament i les directives de manteniment] (#EnfocamentDirectives)
-  3.4. [Preparar una implementació pilot] (#PrepararPilot)
-  3.5. [Preparara a l'usuari] (#PrepararUser)
+  1. [Infraestructura i Eines] (#InfraestructuraEines)
+  2. [Administració basada en núvol] (#AdminNuvol)
+  3. [Revisar l'enfocament i les directives de manteniment] (#EnfocamentDirectives)
+  4. [Preparar una implementació pilot] (#PrepararPilot)
+  5. [Preparara a l'usuari] (#PrepararUser)
 4. [Referencies] (#Referencies)
 
 ---
