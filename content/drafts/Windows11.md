@@ -18,19 +18,19 @@ key         = "MARÇ2022"
 ## **Introducció** 
 <br>
 Microsoft va introduir la seva ultima versió de sistema operatiu per a equips finals el passat 5 d’Octubre de 2021 el qual està construït sobre els mateixos fonaments  que la seva anterior versió Windows 10, és a dir, que es tracta en el fons, d’una actualització. Les innovacions estan enfocades a millorar la productivitat  de l'usuari final i està dissenyat per suportar els entorn actuals de treball híbrid. 
-<br>
+<br><br>
 Windows 11 ha simplificat el seu disseny i l’experiència de l’usuari per potenciar la productivitat i inspirar la creativitat dels usuaris. Per a personal IT, es pot dir que  serà més ràpid, segur i familiar i a més a més, es podrà planificar. Es prepararà  i s’implementarà  Windows 11 de la mateixa manera que es feia amb Windows 10. 
-<br>
+<br><br>
 L’actualització al nou sistema operatiu serà com fer una actualització de Windows 10, tot i que s’haurà  de tenir en compte punts clau com el suport al mòdul de plataforma de confiança (TPM 2.0) i el model de processador. 
-<br>
+<br><br>
 Les experiències de gestió conegudes que hi ha  actualment, com ara Microsoft Endpoint Manager, la configuració del núvol, Windows Update for Business i Autopilot, donaran suport a l'entorn del demà a mesura que s’integri Windows 11 a l'organització.
-<br>
+<br><br>
 Destacar també que a l'igual que amb Windows 10, Microsoft està profundament compromès amb la compatibilitat d’aplicacions, que és un principi bàsic del disseny de Windows 11.  Així doncs, les aplicacions funcionaran a Windows 11 amb “App Assure”, un servei que ajudarà a clients amb més de 150 usuaris a resoldre problemes amb qualsevol aplicació sense cost addicional.
-<br>
+<br><br>
 Windows 11 també és segur per disseny, amb noves tecnologies de seguretat integrades que afegiran protecció des del origen fins al núvol, alhora que permeten productivitat i noves experiències. 
-<br>
+<br><br>
 Windows 11 proporciona un sistema operatiu preparat per a Zero Trust per protegir les dades i l'accés a tots els dispositius. Microsoft ha treballat estretament amb els socis OEM i de Silicon per augmentar les bases de seguretat i satisfer les necessitats del panorama d'amenaces i el nou món laboral híbrid.
-<br>
+<br><br>
 
 ---
 
@@ -235,12 +235,12 @@ S’actualitzarà  els manuals del servei d'ajuda amb captures de pantalla de la
 
 ## **Referencies**
 <br>
-https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows
-https://www.kensington.com/news/docking-connectivity-blog/key-benefits-of-windows-11-the-well-deserved-hype/
-https://docs.microsoft.com/en-us/lifecycle/policies/modern
-https://docs.microsoft.com/en-us/windows/whats-new/windows-11-requirements
-https://docs.microsoft.com/en-us/windows/whats-new/windows-11-overview
-https://blogs.windows.com/windowsexperience/2021/06/24/introducing-windows-11/
-https://www.digitaltrends.com/computing/windows-11-vs-windows-10/
-https://docs.microsoft.com/es-es/windows/whats-new/windows-11-prepare
-https://www.windowscentral.com/whats-new-out-box-experience-oobe-windows-11
+https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows <br>
+https://www.kensington.com/news/docking-connectivity-blog/key-benefits-of-windows-11-the-well-deserved-hype/ <br>
+https://docs.microsoft.com/en-us/lifecycle/policies/modern <br>
+https://docs.microsoft.com/en-us/windows/whats-new/windows-11-requirements <br>
+https://docs.microsoft.com/en-us/windows/whats-new/windows-11-overview <br>
+https://blogs.windows.com/windowsexperience/2021/06/24/introducing-windows-11/ <br>
+https://www.digitaltrends.com/computing/windows-11-vs-windows-10/ <br>
+https://docs.microsoft.com/es-es/windows/whats-new/windows-11-prepare <br>
+https://www.windowscentral.com/whats-new-out-box-experience-oobe-windows-11 <br>
