@@ -1,5 +1,5 @@
 +++
-date        = "2022-03-25"
+date        = "2022-03-22"
 title       = "Windows 11"
 description = "windows 11"
 sections    = "Blog"
