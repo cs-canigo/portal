@@ -264,6 +264,7 @@ A trets generals, les tasques implicades són:
 *	Determinar la preparació de la implementació general en funció dels resultats del pilot.
 
 ###### [Inici] (#TaulaContiguts)
+
 ### **Preparar a l’usuari** {#PrepararUser}
 Windows 11 té un disseny familiar, però els usuaris visualitzaran diverses millores d'interfície. També s'hauran d'adaptar als canvis en menús i pàgines de configuració. Per tant, es considerarà  les tasques següents per preparar els usuaris i el personal de suport tècnic informàtic per a Windows 11:
 
@@ -273,6 +274,7 @@ Windows 11 té un disseny familiar, però els usuaris visualitzaran diverses mil
 * S’actualitzarà  els manuals del servei d'ajuda amb captures de pantalla de la nova interfície d'usuari, la configuració ràpida per a dispositius nous i l'experiència d'actualització dels dispositius existents.
 
 ###### [Inici] (#TaulaContiguts)
+
 ## **Referencies** {#Referencies}
 https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows <br>
 https://www.kensington.com/news/docking-connectivity-blog/key-benefits-of-windows-11-the-well-deserved-hype/ <br>
