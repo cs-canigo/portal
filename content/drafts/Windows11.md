@@ -195,12 +195,14 @@ Un cop s’hagi avaluat el maquinari per veure si compleix els [requeriments de 
 Les eines que es fan servir per a càrregues de treball principals durant les implementacions de Windows 10 encara serveixen per a Windows 11. Sí que hi ha petites diferències que es descriuen a continuació.
 <br><br>
 
-**Solucions Locals**<br>
+**Solucions Locals**
+
 * Si s’utilitza Windows Server Update Services (WSUS), s’haurà  de sincronitzar la nova categoria de productes de Windows 11. Després de sincronitzar la categoria de productes, es veurà  que Windows 11 s'ofereix com una opció. 
 
 * Si s’utilitza Microsoft Endpoint Configuration Manager, es podrà  sincronitzar la nova categoria de productes del Windows 11 i començar a actualitzar els dispositius elegibles. 
 
-**Solucions basades en núvol**<br> 
+**Solucions basades en núvol**
+
 * Si s’utilitzen directives de Windows Update per a empreses, s’haurà  de fer servir la funcionalitat Versió de destinació en lloc dels ajornaments d'actualització de característiques només per actualitzar de Windows 10 a Windows 11. Els ajornaments d'actualitzacions de característiques són excel·lents per passar a versions més recents del producte actual (per exemple, Windows 10, versió 20H2 a 21H1), però no mouran automàticament els dispositius entre productes (Windows 10 a Windows 11).
 
 * Si s’utilitza Microsoft Intune i es disposa d’una llicència de Microsoft 365 E3, es pot utilitzar la pàgina d'implementacions d'actualitzacions de característiques per seleccionar Windows 11, versió 21H2 i actualitzar dispositius Windows 10 a Windows 11. 
@@ -221,11 +223,12 @@ Aquests són alguns casos d’ús comuns i les capacitats corresponents de Micro
 ###### [Inici] (#TaulaContiguts)
 
 ### **Revisar l’enfocament i les directives de manteniment** {#EnfocamentDirectives}
-Cada organització passarà a Windows 11 al seu ritme. Microsoft es compromet a donar suport durant la migració a Windows 11, tant si és adoptant ràpidament  o  com si es fa la transició en mesos o anys.
+Cada organització passarà a Windows 11 al seu ritme. Microsoft es compromet a donar suport durant la migració a Windows 11, tant si és adoptant ràpidament o com si es fa la transició en mesos o anys.
 <br>
 Pensar en les actualitzacions del sistema operatiu com un procés continu ajudarà a millorar la capacitat d’implementació. Aquest enfocament permet mantenir-se al dia amb menys esforç i menys impacte en la productivitat. 
 <br><br>
 A continuació, es crearà un pla d'implementació de Windows 11 que inclogui grups d'implementació, anells, usuaris o dispositius. Encara que no hi ha regles estrictes sobre el nombre exacte d'anells que cal tenir per a les implementacions, sí que  es pot mostrar una estructura comuna:
+
 * Versió preliminar (primer o canary): planejament i desenvolupament
 * Versió limitada (usuaris ràpids o pioners): pilot i validació
 *	Versió general (usuaris o crítics): implementació general
@@ -237,6 +240,7 @@ Es revisaran les directives relacionades amb la implementació, tenint en compte
 Per validar que les aplicacions, la infraestructura i els processos d'implementació estiguin preparats per a Windows 11, l’organització s’haurà  d’unir al Programa Windows Insider per a empreses i participar en el Canal de versió preliminar.
 <br>
 Si s’utilitza Windows Server Update Services, es podrà realitzar la implementació directament des de la categoria de versió preliminar del Windows Insider amb un dels processos següents:
+
 * Establir Administrar compilacions de versió preliminar a Versió preliminar al Windows Update per a empreses.
 * Aprofitar les imatges d'Azure Virtual Desktop i Azure Marketplace.
 * Descarregar i implementar les ISO des de la pàgina de baixada d'ISO del Programa Windows Insider de Microsoft.
@@ -250,6 +254,7 @@ Si s’utilitza Microsoft Endpoint Manager i s’han incorporat dispositius a l'
 Una implementació pilot és una prova de concepte que implementa una actualització a un nombre selecte de dispositius en producció, abans d'implementar-la àmpliament a tota l'organització.
 <br>
 A trets generals, les tasques implicades són:
+
 *	Assignar un grup d'usuaris o dispositius per rebre l'actualització.
 *	Implementar actualitzacions de línia base.
 *	Implementar actualitzacions operatives.
@@ -261,6 +266,7 @@ A trets generals, les tasques implicades són:
 ###### [Inici] (#TaulaContiguts)
 ### **Preparar a l’usuari** {#PrepararUser}
 Windows 11 té un disseny familiar, però els usuaris visualitzaran diverses millores d'interfície. També s'hauran d'adaptar als canvis en menús i pàgines de configuració. Per tant, es considerarà  les tasques següents per preparar els usuaris i el personal de suport tècnic informàtic per a Windows 11:
+
 * S’ha de crear una programació de comunicacions per assegurar-se de donar el missatge correcte en el moment adequat als grups d'usuaris adequats, en funció de quan veuran els canvis.
 * S’escriuran esborranys de correus electrònics concisos que informin els usuaris dels canvis que poden esperar. 
 * S’oferirà suggeriments sobre com utilitzar o personalitzar l’experiència. 
