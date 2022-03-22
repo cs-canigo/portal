@@ -16,7 +16,7 @@ key         = "MARÇ2022"
 # **Windows 11. Visió General**
 
 ## **1.- Introducció** 
-<br>
+
 Microsoft va introduir la seva ultima versió de sistema operatiu per a equips finals el passat 5 d’Octubre de 2021 el qual està construït sobre els mateixos fonaments  que la seva anterior versió Windows 10, és a dir, que es tracta en el fons, d’una actualització. Les innovacions estan enfocades a millorar la productivitat  de l'usuari final i està dissenyat per suportar els entorn actuals de treball híbrid. 
 <br><br>
 Windows 11 ha simplificat el seu disseny i l’experiència de l’usuari per potenciar la productivitat i inspirar la creativitat dels usuaris. Per a personal IT, es pot dir que  serà més ràpid, segur i familiar i a més a més, es podrà planificar. Es prepararà  i s’implementarà  Windows 11 de la mateixa manera que es feia amb Windows 10. 
@@ -35,22 +35,22 @@ Windows 11 proporciona un sistema operatiu preparat per a Zero Trust per protegi
 ---
 
 ## **2.- Característiques principals de Windows 11**
-<br>
+
 Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 11 i l’anterior, es destaquen  les següents:
 <br><br>
 
 ### **2.1. Seguretat i escaneig**
 Les funcions de seguretat i privadesa de Windows 11 són similars a Windows 10. La seguretat dels dispositius comença pel maquinari i inclou la seguretat del sistema operatiu, la seguretat de les aplicacions, la seguretat de l'usuari i l’identitat. Hi ha funcions disponibles al sistema operatiu Windows per ajudar en aquestes àrees, com les que s’anomenen a continuació: 
 
-**L'aplicació de seguretat de Windows** està integrada al sistema operatiu. Aquesta aplicació és una interfície fàcil d'utilitzar i combina funcions de seguretat d'ús habitual. Per exemple, es té accés a protecció contra virus i amenaces, protecció de tallafocs i xarxa, protecció de comptes i molt més.
-**Les línies de base de seguretat** inclouen paràmetres de seguretat que ja s'han configurat i que estan llestos per ser implementades als dispositius client. 
-**Microsoft Defender Antivirus** està integrat a Windows 11 i ajuda a protegir els dispositius amb la seguretat de nova generació. 
-**Les funcions de seguretat d'aplicacions** ajuden a evitar que s'executi codi no desitjat o maliciós, aïllar llocs web i fitxers d'Office no fiables i protegir contra llocs web de phising o programari maliciós.
-**Windows Hello for Business** ajuda a protegir els usuaris i les identitats. Substitueix les contrasenyes i utilitza un PIN o biomètric que es manté localment al dispositiu. Els fabricants de dispositius inclouen funcions de maquinari més segures, com ara càmeres IR i xips TPM. Aquestes funcions s'utilitzen amb Windows Hello for Business per ajudar 
+* **L'aplicació de seguretat de Windows** està integrada al sistema operatiu. Aquesta aplicació és una interfície fàcil d'utilitzar i combina funcions de seguretat d'ús habitual. Per exemple, es té accés a protecció contra virus i amenaces, protecció de tallafocs i xarxa, protecció de comptes i molt més.
+* **Les línies de base de seguretat** inclouen paràmetres de seguretat que ja s'han configurat i que estan llestos per ser implementades als dispositius client. 
+* **Microsoft Defender Antivirus** està integrat a Windows 11 i ajuda a protegir els dispositius amb la seguretat de nova generació. 
+* **Les funcions de seguretat d'aplicacions** ajuden a evitar que s'executi codi no desitjat o maliciós, aïllar llocs web i fitxers d'Office no fiables i protegir contra llocs web de phising o programari maliciós.
+* **Windows Hello for Business** ajuda a protegir els usuaris i les identitats. Substitueix les contrasenyes i utilitza un PIN o biomètric que es manté localment al dispositiu. Els fabricants de dispositius inclouen funcions de maquinari més segures, com ara càmeres IR i xips TPM. Aquestes funcions s'utilitzen amb Windows Hello for Business per ajudar 
 
 ### **2.2. Accés més fàcil als nous serveis** 
-**Windows 365** és un escriptori virtual que també és un servei al núvol. Des d'un altre dispositiu connectat a Internet, inclosos els dispositius Android i macOS, es pot executar Windows 365, igual que com si fos una màquina virtual.
-**Microsoft Teams (personal)** s'inclou amb el sistema operatiu i està disponible automàticament a la barra de tasques. Els usuaris poden seleccionar la icona de xat, inicien sessió amb el seu compte personal de Microsoft i comencen una trucada:
+* **Windows 365** és un escriptori virtual que també és un servei al núvol. Des d'un altre dispositiu connectat a Internet, inclosos els dispositius Android i macOS, es pot executar Windows 365, igual que com si fos una màquina virtual.
+* **Microsoft Teams (personal)** s'inclou amb el sistema operatiu i està disponible automàticament a la barra de tasques. Els usuaris poden seleccionar la icona de xat, inicien sessió amb el seu compte personal de Microsoft i comencen una trucada:
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto1.JPG" />
@@ -58,13 +58,12 @@ Les funcions de seguretat i privadesa de Windows 11 són similars a Windows 10. 
 <br>
 També hi ha la possibilitat de silenciar el microfon durant una trucada a través del nou botó que ens apareix a la barra de tasques.
 Aquesta versió de Microsoft Teams és per a comptes personals. Per als comptes d'organització, Microsoft Teams es pot desplegar amb les eines de gestió de dispositius (SCCM, Intune,CA,...).
-
-**Power Automate** per a escriptori s'inclou amb el sistema operatiu. Els usuaris poden crear fluxos amb aquesta aplicació per ajudar-los amb les tasques quotidianes. 
+* **Power Automate** per a escriptori s'inclou amb el sistema operatiu. Els usuaris poden crear fluxos amb aquesta aplicació per ajudar-los amb les tasques quotidianes. 
 
 ### **2.3. Personalització de l’experiència d’escriptori**
 En linies generals, es proporciona una nova aparença en la l’interficie d’usuari, la qual seria més similar a la d’un entorn basat en Linux o MacOSX on es destaquen els següents punts:
 
-**Snap Layouts, Snap Groups:** quan s’obre una aplicació, es passa el ratolí per sobre de l'opció de minimitzar/maximitzar. Quan es realitza, es pot seleccionar un disseny diferent per a l'aplicació:
+* **Snap Layouts, Snap Groups:** quan s’obre una aplicació, es passa el ratolí per sobre de l'opció de minimitzar/maximitzar. Quan es realitza, es pot seleccionar un disseny diferent per a l'aplicació:
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto2.gif" />
@@ -72,7 +71,7 @@ En linies generals, es proporciona una nova aparença en la l’interficie d’u
 <br>
 A Windows 11, s’utilitza el botó minimitzar o maximitzar d'una aplicació per veure els dissenys d'ajustament disponibles. Aquesta funció permet als usuaris personalitzar la mida de les aplicacions al seu escriptori. Quan s’afegeixen les aplicacions en un Snap Layout, aquest disseny es desa en un Snap Group. A la barra de tasques, quan es passa el cursor per sobre d'una aplicació en un disseny instantani existent, es mostra totes les aplicacions en aquest disseny. També es pot afegir Snap Layouts a les aplicacions que crea l'organització.
 
-**Menú Inici** redissenyat on s’inclou algunes aplicacions fixades de manera predeterminada. Es pot personalitzar el disseny del menú Inici fixant (i desfixant) les aplicacions que es necessiten. 
+* **Menú Inici** redissenyat on s’inclou algunes aplicacions fixades de manera predeterminada. Es pot personalitzar el disseny del menú Inici fixant (i desfixant) les aplicacions que es necessiten. 
 Utilitzant polítiques, es pot  implementar la disposició personalitzada del menú Inici als dispositius de l’organització. Addicionalment, els usuaris poden gestionar també algunes funcions del menú Inici mitjançant l'aplicació **Configuració > Personalització**. 
 <br>
 <div align="center">
@@ -80,7 +79,7 @@ Utilitzant polítiques, es pot  implementar la disposició personalitzada del me
 </div>
 <br>
 
-**Barra de tasques** redissenyada on es pot fixar i desenganxar aplicacions. Altres millores com l’habilitat d’arrossegar i deixar elements sobre la barra seràn implementades en breu. 
+* **Barra de tasques** redissenyada on es pot fixar i desenganxar aplicacions. Altres millores com l’habilitat d’arrossegar i deixar elements sobre la barra seràn implementades en breu. 
 Amb les polítiques, es pot implementar la barra de tasques personalitzada als dispositius de l'organització. Els usuaris poden gestionar algunes funcions de la barra de tasques mitjançant l'aplicació **Configuració > Personalització**. 
 <br>
 <div align="center">
@@ -88,14 +87,14 @@ Amb les polítiques, es pot implementar la barra de tasques personalitzada als d
 </div>
 <br>
 
-**Ginys:** els widgets estan disponibles a la barra de tasques. Es pot activar/desactivar aquesta funció utilitzant les polítiques  de grup. 
+* **Ginys:** els widgets estan disponibles a la barra de tasques. Es pot activar/desactivar aquesta funció utilitzant les polítiques  de grup. 
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto5.gif" />
 </div>
 <br>
 
-**Escriptoris virtuals:** a la barra de tasques, es pot seleccionar l’icona Escriptoris per crear-ne de nous i que permeten  gestionar l’area de treball d’una forma més eficaç i ordenada, tot millorant així l’experiencia de l’usuari.
+* **Escriptoris virtuals:** a la barra de tasques, es pot seleccionar l’icona Escriptoris per crear-ne de nous i que permeten  gestionar l’area de treball d’una forma més eficaç i ordenada, tot millorant així l’experiencia de l’usuari.
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto6.jpg" />
@@ -110,32 +109,32 @@ Finalment, però no menys important, s’ha redissenyat **l’administrador de t
 <br>
 
 ### **2.4. Utilització de les antigues i noves aplicacions de forma millorada**
-**A partir de Windows 11**, els usuaris poden baixar i instal·lar aplicacions d'Android™️ des de Microsoft Store. Aquesta funció s'anomena subsistema de Windows per a Android i permet als usuaris utilitzar aplicacions d'Android als seus dispositius Windows, de manera similar a altres aplicacions instal·lades de la botiga de Microsoft. Els usuaris obren la Microsoft Store, instal·len l'aplicació Amazon Appstore i inicien sessió amb el seu compte d'Amazon. Quan inicien la sessió, poden cercar, baixar i instal·lar aplicacions d'Android.
+* **A partir de Windows 11**, els usuaris poden baixar i instal·lar aplicacions d'Android™️ des de Microsoft Store. Aquesta funció s'anomena subsistema de Windows per a Android i permet als usuaris utilitzar aplicacions d'Android als seus dispositius Windows, de manera similar a altres aplicacions instal·lades de la botiga de Microsoft. Els usuaris obren la Microsoft Store, instal·len l'aplicació Amazon Appstore i inicien sessió amb el seu compte d'Amazon. Quan inicien la sessió, poden cercar, baixar i instal·lar aplicacions d'Android.
 
-**Les aplicacions de Windows 10** també funcionaran a Windows 11.  Es pot continuar utilitzant els paquets MSIX per als fitxers d'aplicació d'escriptori UWP, Win32, WPF i WinForm. Es continua a més a més, utilitzant el Gestor de paquets de Windows per instal·lar aplicacions de Windows i es pot crear escriptoris virtuals d'Azure que executin Windows 11. És important també destacar que  a partir de Windows 11, el portal de l'empresa és el repositori privat d'aplicacions per a les aplicacions de l’organització tot i que per aplicacions públiques i comercials, es continua utilitzant Microsoft Store.
+* **Les aplicacions de Windows 10** també funcionaran a Windows 11.  Es pot continuar utilitzant els paquets MSIX per als fitxers d'aplicació d'escriptori UWP, Win32, WPF i WinForm. Es continua a més a més, utilitzant el Gestor de paquets de Windows per instal·lar aplicacions de Windows i es pot crear escriptoris virtuals d'Azure que executin Windows 11. És important també destacar que  a partir de Windows 11, el portal de l'empresa és el repositori privat d'aplicacions per a les aplicacions de l’organització tot i que per aplicacions públiques i comercials, es continua utilitzant Microsoft Store.
 
-**Aplicació Windows Terminal:** aquesta aplicació s'inclou amb el sistema operatiu. A les versions anteriors de Windows, era una descàrrega independent a Microsoft Store. Aquesta aplicació combina Windows PowerShell, un indicador d'ordres i Azure Cloud Shell dins de la mateixa finestra de terminal.
+* **Aplicació Windows Terminal:** aquesta aplicació s'inclou amb el sistema operatiu. A les versions anteriors de Windows, era una descàrrega independent a Microsoft Store. Aquesta aplicació combina Windows PowerShell, un indicador d'ordres i Azure Cloud Shell dins de la mateixa finestra de terminal.
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto8.jpg" />
 </div>
 <br>
 
-**La botiga de Microsoft** té un nou aspecte i inclou més aplicacions públiques i comercials. 
+* **La botiga de Microsoft** té un nou aspecte i inclou més aplicacions públiques i comercials. 
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto9.jpg" />
 </div>
 <br>
 
-**El navegador Microsoft Edge Chromium** s'inclou amb el sistema operatiu i és el navegador predeterminat. Internet Explorer (IE) no està disponible a Windows 11. A Microsoft Edge Chromium, es pot utilitzar el mode IE si un lloc web necessita Internet Explorer. 
+* **El navegador Microsoft Edge Chromium** s'inclou amb el sistema operatiu i és el navegador predeterminat. Internet Explorer (IE) no està disponible a Windows 11. A Microsoft Edge Chromium, es pot utilitzar el mode IE si un lloc web necessita Internet Explorer. 
 
 ### **2.5. Desplegament i servei** 
 En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requeriments de maquinari, degut a que és un requisit el fet que els dispositius tinguin el Mòdul de plataforma de confiança en la seva versió 2.0 i que no tots els processadors son compatibles amb Windows 11. Per la resta de punts, es destaquen:
 
-**Instal·lació de  Windows 11:** els mateixos mètodes que es fan servir per instal·lar Windows 10 també es poden utilitzar per instal·lar Windows 11. Per exemple, es pot implementar Windows als dispositius mitjançant Windows Autopilot, Microsoft Deployment Toolkit (MDT), Configuration Manager, etc..
+* **Instal·lació de  Windows 11:** els mateixos mètodes que es fan servir per instal·lar Windows 10 també es poden utilitzar per instal·lar Windows 11. Per exemple, es pot implementar Windows als dispositius mitjançant Windows Autopilot, Microsoft Deployment Toolkit (MDT), Configuration Manager, etc..
 
-**Procés OOBE (fora de caixa)** millorat amb més informació i amb un nou disseny modern més fàcil d’utilitzar. L’OOBE és part de la instal·lació per la qual han de passat els usuaris per configurar un nou dispositiu o netejear l’instal·lació. La versió actualitzada de l’experiencia elimina l’esquema de color blau fosc a favor d’un disseny més acollidor amb imatges modernes que segueixen la nova tendencia del disseny de Windows 11. Això inclou cantonades arrodonides, iconografia i animacions noves i amigables de colors amb tons blaus clars i foscos.
+* **Procés OOBE (fora de caixa)** millorat amb més informació i amb un nou disseny modern més fàcil d’utilitzar. L’OOBE és part de la instal·lació per la qual han de passat els usuaris per configurar un nou dispositiu o netejear l’instal·lació. La versió actualitzada de l’experiencia elimina l’esquema de color blau fosc a favor d’un disseny més acollidor amb imatges modernes que segueixen la nova tendencia del disseny de Windows 11. Això inclou cantonades arrodonides, iconografia i animacions noves i amigables de colors amb tons blaus clars i foscos.
 <br>
 <div align="center">
   <img src="/images/bloc/2022/03/foto10.jpg" />
@@ -150,12 +149,12 @@ Si es compren dispositius nous, es podrà utilitzar Windows Autopilot per config
 </div>
 <br>
 
-**Microsoft Endpoint Manager** com a proveïdor de gestió d'aplicacions mòbils (MAM) i de gestió de dispositius mòbils (MDM) ajuda a gestionar els dispositius a l’organització. Es pot crear i implementar polítiques que instal·lin aplicacions, configurin les funcions del dispositiu, apliquin  els requisits de PIN, bloquegin els dispositius compromesos i molt més. 
+* **Microsoft Endpoint Manager** com a proveïdor de gestió d'aplicacions mòbils (MAM) i de gestió de dispositius mòbils (MDM) ajuda a gestionar els dispositius a l’organització. Es pot crear i implementar polítiques que instal·lin aplicacions, configurin les funcions del dispositiu, apliquin  els requisits de PIN, bloquegin els dispositius compromesos i molt més. 
 
-**L'optimització d'actualitzacions i lliurament de Windows** ajuda a gestionar les actualitzacions i a gestionar les funcions dels dispositius. A partir de Windows 11, les actualitzacions de les funcions del sistema operatiu s'instal·len anualment.
+* **L'optimització d'actualitzacions i lliurament de Windows** ajuda a gestionar les actualitzacions i a gestionar les funcions dels dispositius. A partir de Windows 11, les actualitzacions de les funcions del sistema operatiu s'instal·len anualment.
 
 ## **3.- Implantació corporativa de Windows 11**
-<br>
+
 Windows 10 i Windows 11 estan dissenyats per coexistir, de manera que es poden utilitzar les mateixes eines i processos que ja es coneixen per administrar ambdós sistemes operatius. 
 <br>
 Un cop s’hagi avaluat el maquinari per veure si compleix els requeriments de Windows 11, es pot revisar la infraestructura d'implementació, les eines i els processos generals d'administració de punts de connexió, i actualitzar i buscar oportunitats de simplificació i optimització.
@@ -235,7 +234,7 @@ S’oferirà suggeriments sobre com utilitzar o personalitzar l’experiència.
 S’actualitzarà  els manuals del servei d'ajuda amb captures de pantalla de la nova interfície d'usuari, la configuració ràpida per a dispositius nous i l'experiència d'actualització dels dispositius existents.
 
 ## **4.- Referencies**
-<br>
+
 https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows <br>
 https://www.kensington.com/news/docking-connectivity-blog/key-benefits-of-windows-11-the-well-deserved-hype/ <br>
 https://docs.microsoft.com/en-us/lifecycle/policies/modern <br>
