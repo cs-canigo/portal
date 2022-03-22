@@ -1,4 +1,3 @@
-
 +++
 date        = "2022-03-25"
 title       = "Windows 11"
@@ -7,6 +6,8 @@ sections    = "Blog"
 weight      = 3
 categories  = ["Windows", "Microsoft"]
 +++
+
+# **Windows 11. Visió General**
 
 ---
 
@@ -28,8 +29,6 @@ categories  = ["Windows", "Microsoft"]
 4. [Referencies] (#Referencies)
 
 ---
-
-# **Windows 11. Visió General**
 
 ## **Introducció** {#Introduccio}
 
