@@ -1,11 +1,11 @@
 
 +++
 date        = "2022-03-25"
-title       = "Windows 11. Visió General"
-description = "Windows 11. Visió General"
+title       = "Windows 11"
+description = "---"
 sections    = "Blog"
 weight      = 3
-categories  = ["Windows", "microsoft"]
+categories  = ["Windows", "Microsoft"]
 +++
 
 ---
