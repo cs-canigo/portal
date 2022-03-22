@@ -180,7 +180,7 @@ En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requ
 * **Microsoft Endpoint Manager** com a proveïdor de gestió d'aplicacions mòbils (MAM) i de gestió de dispositius mòbils (MDM) ajuda a gestionar els dispositius a l’organització. Es pot crear i implementar polítiques que instal·lin aplicacions, configurin les funcions del dispositiu, apliquin  els requisits de PIN, bloquegin els dispositius compromesos i molt més. 
 
 * **L'optimització d'actualitzacions i lliurament de Windows** ajuda a gestionar les actualitzacions i a gestionar les funcions dels dispositius. A partir de Windows 11, les actualitzacions de les funcions del sistema operatiu s'instal·len anualment.
-<br>
+
 ###### [Inici] (#TaulaContiguts)
 
 ## **Implantació corporativa de Windows 11** {#ImplantacioCorporativa}
