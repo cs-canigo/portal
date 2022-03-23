@@ -1,10 +1,10 @@
 +++
 date        = "2021-11-26"
 title       = "SIC. Revisió model de tags i versions pipelines SIC 3.0"
-description = "A partir del xx/xx/2022 es posa en servei el nou model de tags i gestió de versions de les pipelines del SIC 3.0 per a donar cobertura al desplegament a entorns addicionals."
-#sections    = ["Notícies", "home"]
-#categories  = ["sic"]
-#key         = "ABRIL2022"
+description = "A partir del 04/04/2022 es posa en servei el nou model de tags i gestió de versions de les pipelines del SIC 3.0 per a donar cobertura al desplegament a entorns addicionals."
+sections    = ["Notícies", "home"]
+categories  = ["sic"]
+key         = "ABRIL2022"
 +++
 
 ## Introducció
@@ -17,7 +17,7 @@ habitualment: Integració, Preproducció i Producció.
 ## Novetats
 
 Amb l'objectiu de donar cobertura al desplegament en entorns addicionals com, per exemple, entorns d'Evolutius, Proves,
-Manteniment, Formació i altres; **a partir del xx/xx/2022 s'aplica un nou model de tags i gestió de versions de les pipelines**
+Manteniment, Formació i altres; **a partir del 04/04/2022 s'aplica un nou model de tags i gestió de versions de les pipelines**
 implicant els següents canvis:
 
 1. Les pipelines passen a generar el **tag de Release (Stage `Release Tag`) immediatament després de l'execució de testos de seguretat i testos unitaris**.
