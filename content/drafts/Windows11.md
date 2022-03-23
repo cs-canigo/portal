@@ -20,13 +20,7 @@ categories  = ["Windows", "Microsoft"]
   3. [Personalització de l'Experiència d'Escriptori] (#PersonalitzacioExperienciaEscriptori)
   4. [Utilització de les antigues i noves aplicacions de forma millorada] (#UtilitzacioMillorada)
   5. [Desplegament i Servei] (#DesplegamentServei)
-3. [Implantació corporativa de Windows 11] (#ImplantacioCorporativa)
-  1. [Infraestructura i Eines] (#InfraestructuraEines)
-  2. [Administració basada en núvol] (#AdminNuvol)
-  3. [Revisar l'enfocament i les directives de manteniment] (#EnfocamentDirectives)
-  4. [Preparar una implementació pilot] (#PrepararPilot)
-  5. [Preparara a l'usuari] (#PrepararUser)
-4. [Referencies] (#Referencies)
+3. [Referencies] (#Referencies)
 
 ---
 
@@ -180,98 +174,6 @@ En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requ
 * **Microsoft Endpoint Manager** com a proveïdor de gestió d'aplicacions mòbils (MAM) i de gestió de dispositius mòbils (MDM) ajuda a gestionar els dispositius a l’organització. Es pot crear i implementar polítiques que instal·lin aplicacions, configurin les funcions del dispositiu, apliquin  els requisits de PIN, bloquegin els dispositius compromesos i molt més. 
 
 * **L'optimització d'actualitzacions i lliurament de Windows** ajuda a gestionar les actualitzacions i a gestionar les funcions dels dispositius. A partir de Windows 11, les actualitzacions de les funcions del sistema operatiu s'instal·len anualment.
-
-###### [Inici] (#TaulaContiguts)
-
-## **Implantació corporativa de Windows 11** {#ImplantacioCorporativa}
-
-Windows 10 i Windows 11 estan dissenyats per coexistir, de manera que es poden utilitzar les mateixes eines i processos que ja es coneixen per administrar ambdós sistemes operatius. 
-<br>
-Un cop s’hagi avaluat el maquinari per veure si compleix els [requeriments de Windows 11](https://docs.microsoft.com/es-es/windows/whats-new/windows-11-requirements), es pot revisar la infraestructura d'implementació, les eines i els processos generals d'administració de punts de connexió, i actualitzar i buscar oportunitats de simplificació i optimització.
-
-###### [Inici] (#TaulaContiguts)
-
-### **Infraestructura i eines** {#InfraestructuraEines}
-Les eines que es fan servir per a càrregues de treball principals durant les implementacions de Windows 10 encara serveixen per a Windows 11. Sí que hi ha petites diferències que es descriuen a continuació.
-<br><br>
-
-**Solucions Locals**
-
-* Si s’utilitza Windows Server Update Services (WSUS), s’haurà  de sincronitzar la nova categoria de productes de Windows 11. Després de sincronitzar la categoria de productes, es veurà  que Windows 11 s'ofereix com una opció. 
-
-* Si s’utilitza Microsoft Endpoint Configuration Manager, es podrà  sincronitzar la nova categoria de productes del Windows 11 i començar a actualitzar els dispositius elegibles. 
-
-**Solucions basades en núvol**
-
-* Si s’utilitzen directives de Windows Update per a empreses, s’haurà  de fer servir la funcionalitat Versió de destinació en lloc dels ajornaments d'actualització de característiques només per actualitzar de Windows 10 a Windows 11. Els ajornaments d'actualitzacions de característiques són excel·lents per passar a versions més recents del producte actual (per exemple, Windows 10, versió 20H2 a 21H1), però no mouran automàticament els dispositius entre productes (Windows 10 a Windows 11).
-
-* Si s’utilitza Microsoft Intune i es disposa d’una llicència de Microsoft 365 E3, es pot utilitzar la pàgina d'implementacions d'actualitzacions de característiques per seleccionar Windows 11, versió 21H2 i actualitzar dispositius Windows 10 a Windows 11. 
-
-* El camp de producte ha d'especificar Windows 11 perquè els dispositius s’actualitzin a Windows 11. 
-
-* Els ajornaments d'actualització de qualitat continuaran funcionant de la mateixa manera tant a Windows 10 com a Windows 11. Això és així independentment de l'eina d'administració que s’utilitza per configurar Windows Update per a empreses.
-###### [Inici] (#TaulaContiguts)
-
-### **Administració basada en núvol** {#AdminNuvol}
-A més de consolidar l'administració de dispositius i la seguretat dels punts de connexió en una única plataforma, Microsoft Endpoint Manager ofereix una millor compatibilitat amb l'ecosistema divers de bring-your-own-device (BYOD) que és cada vegada més habitual en escenaris de treball híbrids. 
-<br>
-Aquests són alguns casos d’ús comuns i les capacitats corresponents de Microsoft Endpoint Manager que admeten:
-
-* **Aprovisionar i preconfigurar nous dispositius Windows 11:** Windows Autopilot permet implementar nous dispositius Windows 11 en un estat "llest per a empreses" que inclou les aplicacions, la configuració i les directives que es necessiten.<br><br> 
-* **Configurar regles i opcions de control per a usuaris, aplicacions i dispositius:** per inscriure dispositius a Microsoft Intune, els administradors tenen control total de les aplicacions, la configuració, les característiques i la seguretat de Windows 11 i Windows 10. També es poden utilitzar directives de protecció d'aplicacions per requerir l'autenticació multifactor (MFA) a aplicacions específiques.<br><br>
-* **Optimitzar l'administració de dispositius per a treballadors a primera línia, remots i locals:** la configuració del núvol es va introduir a Windows 10 i és una configuració de dispositiu estàndard i fàcil d'administrar optimitzada al núvol per a usuaris amb necessitats de flux de treball específics. Es pot implementar en dispositius que executen les edicions Pro, Enterprise i Education de Windows 11 mitjançant Microsoft Endpoint Manager.
-###### [Inici] (#TaulaContiguts)
-
-### **Revisar l’enfocament i les directives de manteniment** {#EnfocamentDirectives}
-Cada organització passarà a Windows 11 al seu ritme. Microsoft es compromet a donar suport durant la migració a Windows 11, tant si és adoptant ràpidament o com si es fa la transició en mesos o anys.
-<br>
-Pensar en les actualitzacions del sistema operatiu com un procés continu ajudarà a millorar la capacitat d’implementació. Aquest enfocament permet mantenir-se al dia amb menys esforç i menys impacte en la productivitat. 
-<br><br>
-A continuació, es crearà un pla d'implementació de Windows 11 que inclogui grups d'implementació, anells, usuaris o dispositius. Encara que no hi ha regles estrictes sobre el nombre exacte d'anells que cal tenir per a les implementacions, sí que  es pot mostrar una estructura comuna:
-
-* Versió preliminar (primer o canary): planejament i desenvolupament
-* Versió limitada (usuaris ràpids o pioners): pilot i validació
-*	Versió general (usuaris o crítics): implementació general
-
-**Revisar directives:**<br>
-Es revisaran les directives relacionades amb la implementació, tenint en compte els objectius de seguretat de l’organització, les dates límit de compliment d'actualitzacions i l'activitat del dispositiu. S’aplicarà  canvis on es pugui obtenir una millora clara, especialment pel que fa a la velocitat del procés d'actualització o la seguretat.
-
-**Validar aplicacions i infraestructura:**<br>
-Per validar que les aplicacions, la infraestructura i els processos d'implementació estiguin preparats per a Windows 11, l’organització s’haurà  d’unir al Programa Windows Insider per a empreses i participar en el Canal de versió preliminar.
-<br>
-Si s’utilitza Windows Server Update Services, es podrà realitzar la implementació directament des de la categoria de versió preliminar del Windows Insider amb un dels processos següents:
-
-* Establir Administrar compilacions de versió preliminar a Versió preliminar al Windows Update per a empreses.
-* Aprofitar les imatges d'Azure Virtual Desktop i Azure Marketplace.
-* Descarregar i implementar les ISO des de la pàgina de baixada d'ISO del Programa Windows Insider de Microsoft.
-
-Independentment del mètode que es triï, es podrà beneficiar de la compatibilitat gratuïta de Microsoft en validar compilacions prèvies a la versió. 
-
-**Eines d’anàlisi i avaluació**<br>
-Si s’utilitza Microsoft Endpoint Manager i s’han incorporat dispositius a l'anàlisi de punts de connexió, es tindrà accés a una avaluació de preparació de maquinari a finals d'aquest any 2022. **Aquesta eina permet identificar ràpidament quins dispositius administrats són aptes per actualitzar a Windows 11**.
-
-### **Preparar una implementació pilot** {#PrepararPilot}
-Una implementació pilot és una prova de concepte que implementa una actualització a un nombre selecte de dispositius en producció, abans d'implementar-la àmpliament a tota l'organització.
-<br>
-A trets generals, les tasques implicades són:
-
-*	Assignar un grup d'usuaris o dispositius per rebre l'actualització.
-*	Implementar actualitzacions de línia base.
-*	Implementar actualitzacions operatives.
-*	Validar el procés d’implementació.
-* Implementar l’actualització en dispositius.
-*	Provar i admetre els dispositius pilot.
-*	Determinar la preparació de la implementació general en funció dels resultats del pilot.
-
-###### [Inici] (#TaulaContiguts)
-
-### **Preparar a l’usuari** {#PrepararUser}
-Windows 11 té un disseny familiar, però els usuaris visualitzaran diverses millores d'interfície. També s'hauran d'adaptar als canvis en menús i pàgines de configuració. Per tant, es considerarà  les tasques següents per preparar els usuaris i el personal de suport tècnic informàtic per a Windows 11:
-
-* S’ha de crear una programació de comunicacions per assegurar-se de donar el missatge correcte en el moment adequat als grups d'usuaris adequats, en funció de quan veuran els canvis.
-* S’escriuran esborranys de correus electrònics concisos que informin els usuaris dels canvis que poden esperar. 
-* S’oferirà suggeriments sobre com utilitzar o personalitzar l’experiència. 
-* S’actualitzarà  els manuals del servei d'ajuda amb captures de pantalla de la nova interfície d'usuari, la configuració ràpida per a dispositius nous i l'experiència d'actualització dels dispositius existents.
 
 ###### [Inici] (#TaulaContiguts)
 
