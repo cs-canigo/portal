@@ -42,7 +42,6 @@ Windows 11 proporciona un sistema operatiu preparat per a Zero Trust per protegi
 <br><br>
 
 ---
-###### [Inici] (#TaulaContiguts)
 
 ## **Característiques principals de Windows 11** {#CaracteristiquesPrincipals}
 
