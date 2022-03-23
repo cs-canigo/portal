@@ -4,8 +4,8 @@ title       = "Windows 11. Visió General"
 description = "Windows sempre ha existit per ser un escenari per l'innovació mundial.  Windows és més que un sistema operatiu, és on s'aprèn i es treballa per aconseguir resultats: una plataforma en la que hi confien més de mil milions de persones en l’actualitat."
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
-blog_tags   = ["Windows", "microsoft"]
-categories  = ["Windows", "microsoft"]
+blog_tags   = ["windows", "microsoft"]
+categories  = ["windows", "microsoft"]
 imatge      = "/images/bloc/2022/03/entrada.jpg"
 key         = "MARÇ2022"
 +++
