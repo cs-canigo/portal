@@ -1539,25 +1539,25 @@
         "Descripcio": "Permet indicar el caràcter de representació d'una persona envers una altra.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Persona_Representacio_Caracter_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Representació_Caràcter.xlsx",
+                "ifitxer_doc": "Caracter_representacio_ATR.docx",
+                "ifitxer_xls": "Caracter_representacio.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
+                "idatapublicacio": "23/03/2022",
                 "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "CARACTER_REPRESENTACIO",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/03/2022",
+        "Data_actualitzacio": "23/03/2022"
     },
     {
         "Id": "dtarq47",
@@ -1694,25 +1694,25 @@
         "Descripcio": "Tipus de relació entre la persona representant i la persona representada.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
                 "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Persona_Representacio_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Representació.xlsx",
+                "ifitxer_doc": "Representacio_ATR.docx",
+                "ifitxer_xls": "Representacio.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
+                "idatapublicacio": "23/03/2022",
                 "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "REPRESENTACIO",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "23/03/2022",
+        "Data_actualitzacio": "23/03/2022"
     },
     {
         "Id": "dtarq49",
@@ -2138,16 +2138,31 @@
             },
             {
                 "inom": "V06",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Municipis_Espanya_v06.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/03/2022",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V07",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi nom de 2 municipis (codis ine: 312093 i 311363)",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "11/03/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/03/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2155,7 +2170,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "23/03/2022"
     },
     {
         "Id": "dtarq127",
@@ -2598,16 +2613,31 @@
             },
             {
                 "inom": "V05",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització per canvi nom de \"Sant Carles de la Ràpita\" per \"La Ràpita\".",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_v05.xlsx",
                 "idatacreacio": "21/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "23/03/2022",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V06",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització versió anterior per canvi nom de 2 municipis (codis ine: 31209000000 i 31136000000)",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "11/03/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "23/03/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2615,7 +2645,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "23/03/2022"
     },
     {
         "Id": "dtarq111",
