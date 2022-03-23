@@ -1,6 +1,6 @@
 +++
 date        = "2022-03-07"
-title       = "SIC. Revisió de l'organigrama departamental CTTI"
+title       = "SIC. Canvi d'organigrama departamental"
 description = "Es posa en servei al SIC el nou organigrama departamental 2022 implicant la revisió del sistema d'accessos als serveis per part dels responsables d'àmbit."
 sections    = ["Notícies", "home"]
 categories  = ["sic"]
