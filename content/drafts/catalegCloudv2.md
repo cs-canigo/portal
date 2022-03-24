@@ -196,7 +196,7 @@ $(document).ready(function() {
             <table id="CPD1Swarm" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"> Swarm</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/swarm.png" width="24" height="24" alt="Swarm"> Swarm</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
@@ -207,18 +207,18 @@ $(document).ready(function() {
                     <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>512</td>
@@ -243,8 +243,8 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Docker 18.9</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" height="24" alt="grafana"></td>
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
@@ -255,29 +255,29 @@ $(document).ready(function() {
             <table id="CPD1KuberMe" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/kubernetes.png" width="24" height="24" alt="KuberMe"> KuberMe</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>512</td>
@@ -302,8 +302,8 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" height="24" alt="grafana"></td>
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
@@ -319,29 +319,29 @@ $(document).ready(function() {
             <table id="CPD2KuberMe" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/kubernetes.png" width="24" alt="KuberMe"> KuberMe</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/kubernetes.png" width="24" height="24" alt="KuberMe"> KuberMe</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>256</td>
@@ -359,15 +359,15 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <th colspan="3"><strong>Versió</strong></th>
+                    <th colspan="3"><strong>Logs</strong></th>
+                    <th colspan="3"><strong>Mètriques</strong></th>
+                    <th colspan="3"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" height="24" alt="grafana"></td>
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
@@ -378,29 +378,29 @@ $(document).ready(function() {
             <table id="CPD2Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/openShift.png" width="24" height="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>256</td>
@@ -425,8 +425,8 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
-                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" alt="grafana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/grafana.png" width="24" height="24" alt="grafana"></td>
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
@@ -442,29 +442,29 @@ $(document).ready(function() {
             <table id="CPD3Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/openShift.png" width="24" height="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>256</td>
@@ -489,9 +489,9 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
                     <td colspan="3"></td>
-                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
+                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" height="24" alt="istio"></td>
                 </tr>
                 <tr>
                     <td><strong>Comentaris</strong></td>
@@ -506,29 +506,29 @@ $(document).ready(function() {
             <table id="CPD4Openshift" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:100%">
                 <thead>
                     <tr>                    
-                        <th colspan="13" style="vertical-align: middle; text-align: center"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"> Openshift</td>
+                        <th colspan="13" style="vertical-align: middle; text-align: center; font-size: 16px"><img src="../catalegCloud/openShift.png" width="24" height="24" alt="Openshift"> Openshift</td>
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
-                    <td>RAM (MB)</td>
-                    <td>CPU (milicores)</td>
-                    <td>DISC (GB)</td>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
+                    <th>RAM (MB)</th>
+                    <th>CPU (milicores)</th>
+                    <th>DISC (GB)</th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>256</td>
@@ -553,9 +553,9 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
-                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" alt="kibana"></td>
+                    <td colspan="3"><img src="../catalegCloud/kibana.png" width="24" height="24" alt="kibana"></td>
                     <td colspan="3"></td>
-                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" alt="istio"></td>
+                    <td colspan="3"><img src="../catalegCloud/istio.png" width="24" height="24" alt="istio"></td>
                 </tr>
                 <tr>
                     <td><strong>Comentaris</strong></td>
