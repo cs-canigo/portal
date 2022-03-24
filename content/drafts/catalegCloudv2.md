@@ -68,7 +68,7 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th style="font-size: 14px;">Plataforma</th>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria("/catalegCloud/CPD1Swarm.html")"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
+            '<td align="center"><a href="javascript:ventanaSecundaria(''/catalegCloud/CPD1Swarm.html'')"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
             '<td align="center"><a href="#CPD1KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
             '<td align="center"><a href="#CPD2KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
             '<td align="center"><a href="#CPD2Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
