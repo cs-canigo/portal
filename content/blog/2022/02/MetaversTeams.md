@@ -103,8 +103,8 @@ Mesh ajuda a crear un mapa del nostre món que sigui ordres de magnitud més pre
 <br>
 
 * **Sincronització multiusuari:** crear una perspectiva comuna de l'holograma i de l'altre dins d'una sessió de col·laboració és un gran repte. Dins de Mesh, aquest context compartit s'habilita mitjançant la sincronització multiusuari. Això és el que il·lumina qualsevol actualització de poses, moviments i expressions dels participants o qualsevol transformació hologràfica que es produeixi a l'espai. Tot això passa dins dels 100 mil·lisegons de latència, independentment de si l'usuari es troba al mateix espai físic o a mig món. Tot això es veu augmentat amb àudio espacial a Mesh que crea la sensació d'estar al mateix espai físic en un escenari multiusuari.
-
-
-
-##### **Unitat Arquitectura d'Entorn Digital de Treball**
-##### **Direcció Arquitectura i Components Transversals**
+<br>
+<br>
+<br>
+###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
+###### **Direcció Arquitectura i Components Transversals**
