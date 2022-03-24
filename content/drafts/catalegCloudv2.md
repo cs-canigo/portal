@@ -184,9 +184,9 @@ $(document).ready(function() {
 
 ## **Informació CPDs** {#InformacióCPDs}
 
-<table id="tallesCPDs" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:80%">
+<table id="tallesCPDs" cellpadding="7" cellspacing="1" style="padding-left:50px;border-collapse:collapse;width:70%">
     <thead>
-        <tr style="vertical-align: middle; font-size: 16px; text-align: center">
+        <tr style="vertical-align: middle; font-size: 20px; text-align: center">
             <th colspan="13">Detalls CPDs i plataformes de contenidors</th>
         </tr>
     </thead>
@@ -200,11 +200,11 @@ $(document).ready(function() {
                     <tr>
                 </thead>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="3"><strong>Talles</strong></td>
-                    <td colspan="3"><strong>S</strong></td>
-                    <td colspan="3"><strong>M</strong></td>
-                    <td colspan="3"><strong>L</strong></td>
-                    <td colspan="3"><strong>XL</strong></td>
+                    <td rowspan="3" style="font-size: 14px; text-align: center"><strong>Talles</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>S</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>M</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>L</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>XL</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td>RAM (MB)</td>
@@ -235,11 +235,11 @@ $(document).ready(function() {
                     <td>-</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></td>
+                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Docker 18.9</td>
@@ -248,7 +248,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12">SwarmMe no pot fer servir els templates de Prometheus i Grafana</td>
                 </tr>
             </table>
