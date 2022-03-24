@@ -14,7 +14,6 @@ estandards =  ["cataleg cloud"]
 <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
-
 ---
 
 # **Taula de Continguts** {#TaulaContiguts}
@@ -50,6 +49,9 @@ estandards =  ["cataleg cloud"]
 </table>
 
 <script>
+function ventanaSecundaria(URL){ 
+    window.open(URL,"ventana1","width=500,height=300,scrollbars=NO") 
+}
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
     // `d` is the original data object for the row
@@ -66,7 +68,7 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th style="font-size: 14px;">Plataforma</th>'+
-            '<td align="center"><a href="#CPD1Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
+            '<td align="center"><a href="javascript:ventanaSecundaria(''../catalegCloud/CPD1Swarm.html'')"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
             '<td align="center"><a href="#CPD1KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
             '<td align="center"><a href="#CPD2KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
             '<td align="center"><a href="#CPD2Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
