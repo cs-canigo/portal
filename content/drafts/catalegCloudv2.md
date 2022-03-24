@@ -236,10 +236,10 @@ $(document).ready(function() {
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
                     <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
-                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></td>
-                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></td>
-                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></td>
-                    <td colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Docker 18.9</td>
@@ -294,11 +294,11 @@ $(document).ready(function() {
                     <td>-</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
@@ -307,7 +307,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12"></td>
                 </tr>
             </table>
@@ -358,11 +358,11 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <th colspan="3"><strong>Versió</strong></th>
-                    <th colspan="3"><strong>Logs</strong></th>
-                    <th colspan="3"><strong>Mètriques</strong></th>
-                    <th colspan="3"><strong>Service Mesh</strong></th>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Kubernetes 1.18.10</td>
@@ -371,7 +371,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
                 </tr>
             </table>
@@ -417,11 +417,11 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
@@ -430,7 +430,7 @@ $(document).ready(function() {
                     <td colspan="3"> - </td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12">A CPD2 no hi ha límit d'espai de disc temporal</td>
                 </tr>
             </table>
@@ -481,11 +481,11 @@ $(document).ready(function() {
                     <td>8</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
@@ -494,7 +494,7 @@ $(document).ready(function() {
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" height="24" alt="istio"></td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12"></td>
                 </tr>
             </table>
@@ -545,11 +545,11 @@ $(document).ready(function() {
                     <td>*</td>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">
-                    <td rowspan="2"><strong>Serveis</strong></td>
-                    <td colspan="3"><strong>Versió</strong></td>
-                    <td colspan="3"><strong>Logs</strong></td>
-                    <td colspan="3"><strong>Mètriques</strong></td>
-                    <td colspan="3"><strong>Service Mesh</strong></td>
+                    <td rowspan="2" style="font-size: 14px; text-align: center"><strong>Serveis</strong></td>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Versió</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Logs</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Mètriques</strong></th>
+                    <th colspan="3" style="font-size: 14px; text-align: center"><strong>Service Mesh</strong></th>
                 </tr>
                 <tr style="vertical-align: middle; text-align: center">                    
                     <td colspan="3">Openshift 4.6</td>
@@ -558,7 +558,7 @@ $(document).ready(function() {
                     <td colspan="3"><img src="../catalegCloud/istio.png" width="24" height="24" alt="istio"></td>
                 </tr>
                 <tr>
-                    <td><strong>Comentaris</strong></td>
+                    <td style="font-size: 14px; text-align: center"><strong>Comentaris</strong></td>
                     <td colspan="12">Es defineixen 10 GB en d'espai total de disc per al namespace</td>
                 </tr>
             </table>
