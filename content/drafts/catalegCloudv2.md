@@ -51,17 +51,17 @@ estandards =  ["cataleg cloud"]
 <script>
 function ventanaSecundaria(URL){
     if (URL == 1)
-        window.open("../catalegCloud/CPD1Swarm.html","ventana1","width=500,height=300,scrollbars=NO")
+        window.open("./catalegCloud/CPD1Swarm.html","ventana1","width=500,height=300,scrollbars=NO")
     else if (URL == 2)
-        window.open("../catalegCloud/CPD1KuberMe.html","ventana1","width=500,height=300,scrollbars=NO")
+        window.open("./catalegCloud/CPD1KuberMe.html","ventana1","width=500,height=300,scrollbars=NO")
     else if (URL == 3)
-        window.open("../catalegCloud/CPD2KuberMe.html","ventana1","width=500,height=300,scrollbars=NO")
+        window.open("./catalegCloud/CPD2KuberMe.html","ventana1","width=500,height=300,scrollbars=NO")
     else if (URL == 4)
-        window.open("../catalegCloud/CPD2Openshift.html","ventana1","width=500,height=300,scrollbars=NO")
+        window.open("./catalegCloud/CPD2Openshift.html","ventana1","width=500,height=300,scrollbars=NO")
     else if (URL == 5)
-        window.open("../catalegCloud/CPD3Openshift.html","ventana1","width=500,height=300,scrollbars=NO")
+        window.open("./catalegCloud/CPD3Openshift.html","ventana1","width=500,height=300,scrollbars=NO")
     else 
-        window.open("../catalegCloud/CPD4Openshift.html","ventana1","width=500,height=300,scrollbars=NO")    
+        window.open("./catalegCloud/CPD4Openshift.html","ventana1","width=500,height=300,scrollbars=NO")    
 }
 // Funció que dona format a la taula interna del Full de Ruta de CPD
 function formatCPD(d) {
@@ -79,12 +79,12 @@ function formatCPD(d) {
         '</tr>'+
         '<tr>'+
             '<th style="font-size: 14px;">Plataforma</th>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(1)"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(2)"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(3)"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(4)"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(5)"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
-            '<td align="center"><a href="javascript:ventanaSecundaria(6)"><img src="../catalegCloud/openShift.png" width="24"></a></td>'+
+            '<td align="center"><a href="#CPD1Swarm"><img src="../catalegCloud/swarm.png" width="24" alt="Swarm"></a></td>'+
+            '<td align="center"><a href="#CPD1KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
+            '<td align="center"><a href="#CPD2KuberMe"><img src="../catalegCloud/kubernetes.png" width="24" alt="Kubernetes"></a></td>'+
+            '<td align="center"><a href="#CPD2Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
+            '<td align="center"><a href="#CPD3Openshift"><img src="../catalegCloud/openShift.png" width="24" alt="Openshift"></a></td>'+
+            '<td align="center"><a href="#CPD4Openshift"><img src="../catalegCloud/openShift.png" width="24"></a></td>'+
         '</tr>'+
         '<tr>'+
             '<th style="border: 1px solid rgb(165, 165, 165); font-size: 14px;">Model de Servei</th>'+
