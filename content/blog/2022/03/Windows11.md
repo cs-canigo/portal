@@ -191,3 +191,8 @@ https://blogs.windows.com/windowsexperience/2021/06/24/introducing-windows-11/ <
 https://www.digitaltrends.com/computing/windows-11-vs-windows-10/ <br>
 https://docs.microsoft.com/es-es/windows/whats-new/windows-11-prepare <br>
 https://www.windowscentral.com/whats-new-out-box-experience-oobe-windows-11
+<br>
+<br>
+<br>
+###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
+###### **Direcció Arquitectura i Components Transversals**
