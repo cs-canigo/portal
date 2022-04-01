@@ -1,5 +1,5 @@
 +++
-date = "2021-05-20"
+date = "2022-04-01"
 title = "Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"
@@ -58,11 +58,15 @@ El funcionament previst és el següent:
 
 * Els **proveïdors d'aplicacions aportaran el seu propi arxiu de configuració (ACA)**.
 * Els **proveïdors d'infraestructures aportaran el seu propi arxiu de configuració (ACI)** requerit únicament quan l'aplicació es desplega en modalitat automàtica.
-* Únicament quan es creïn o modifiquin aquests arxius de configuració, s'invocarà al sistema de generació de pipelines que s'encarregarà de recuperar la informació necessària
-i generar (o regenerar) la pipeline de construcció i desplegament de l'aplicació.
+* L'**equip de SIC aportarà la seva configuració interna** per a l'organització de pipelines, sistema d'accessos i altres configuracions necessàries.
+* Un cop preparats els arxius de configuració requerits, **l'equip de SIC utilitzarà al sistema de generació de pipelines** que s'encarregarà de recuperar la informació necessària
+i generar les pipelines requerides per al desplegament de l'aplicació.
 
-![Pipeline del SIC](/images/news/AutoserveiJobs-Funcionament.png)
+![Pipeline del SIC](/related/sic/3.0/autorservei_pipelines-diagrama.png)
 </br>
+
+Un cop generades les pipelines, qualsevol canvi que es realitzi en aquests arxius de configuració aplicarà a les futures execucions sense necessitat de fer cap mena
+de regeneració de pipelines. **Només serà necessari dita regeneració, si es tracta d'un canvi organitzatiu o de proveïdor d'infraestructures i/o plataforma cloud**.
 
 ### Configuració
 
@@ -85,7 +89,7 @@ Per a més informació: [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
 
 ### Generació de pipelines
 
-Aquest servei s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
+L'equip de SIC, mitjançant aquest servei, s'encarregarà de generar automàticament totes les pipelines necessàries, tant per al **desplegament del component o aplicació com
 altres pipelines per a dur a terme les operacions necessàries sobre plataformes cloud**. Aquestes pipelines operatives es generaran dins d'un directori diferenciat
 `/Advanced` dins del directori de tasques Jenkins associat al projecte i seran les següents:
 
@@ -100,8 +104,8 @@ sense fer la construcció i desplegament de la imatge.
 
 - **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
 
-- **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció (v.x.y.z-PR)
-concebuda per a poder fer un *rollback* a una versió anterior.
+- **DEPLOY-TAG**: permet redesplegar un determinat tag de la imatge de l'aplicació que s'hagi desplegat amb èxit a producció
+(`x.y.z-PR`, `x.y.z-production`) concebuda per a poder fer un *rollback* a una versió anterior.
 
 Per altra banda, cal comentar que es generaran les pipelines internes dedicades a certes tasques comunes i que seran executades
 per la pipeline principal. Aquestes pipelines no seran visibles per l'usuari i són les següents:

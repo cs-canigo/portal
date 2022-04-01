@@ -1,5 +1,5 @@
 +++
-date        = "2021-06-07"
+date        = "2022-04-01"
 title       = "SIC 3.0 i procés de transició"
 description = "Nova Plataforma SIC 3.0 i procés de transició previst"
 sections    = "SIC"
@@ -106,8 +106,8 @@ que **passa a sol·licitar-se en temps d'execució** mitjançant punts de parada
 * La pipeline de desplegament **no realitza l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat** ni comprova
 les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
-* La **pipeline DEPLOY-TAG** permetrà desplegar tags de la imatge de l'aplicació que hagin arribat a Producció amb èxit. Per tant, si no hi ha tags `v.x.y.z-PR` l'execució
-retornarà un error del tipus "No hi ha tags de producció disponibles".
+* La **pipeline DEPLOY-TAG** permetrà desplegar tags de la imatge de l'aplicació que hagin arribat a Producció amb èxit.
+Per tant, si no hi ha tags `x.y.z-PR` o `x.y.z-production` l'execució retornarà un error del tipus "No hi ha tags de producció disponibles".
 
 * Es proporciona una nova **pipeline DEPLOY-ALL** que permet fer un desplegament complet davant canvis en l’aplicació, orquestradors
 i/o descriptors.

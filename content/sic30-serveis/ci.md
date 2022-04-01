@@ -1,5 +1,5 @@
 +++
-date = "2022-02-17"
+date = "2022-04-01"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -69,9 +69,7 @@ davant una possible marxa enrere aniran a càrrec de CPD/LdT. -->
 
 Actualment, el sistema previst per entorn seria el següent:
 
-* Entorn **INT**: modalitat semi-automàtica o automàtica, que anirà tendint cap a la modalitat delegada. **IMPORTANT: En cas d'aplicar la modalitat
-semi-automàtica**, donat la majoria de proveïdors disposen d'accés als servidors per a fer els desplegaments, el sistema s'encarregarà
-de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
+* Entorn **INT**: modalitat delegada, semi-automàtica o, en el cas de desplegaments al cloud, modalitat automàtica. **IMPORTANT:** En cas d’aplicar la modalitat semi-automàtica, donat la majoria de proveïdors disposen d’accés als servidors per a fer els desplegaments, el sistema s’encarregarà de lliurar els binaris però no generarà cap tiquet Remedy amb les instruccions de desplegament.
 * Entorn **PRE/PRO**: modalitat semiautomàtica o, en el cas de desplegaments al cloud, la modalitat automàtica.
 * **Altres** entorns: caldrà establir l'ordre d'execució d'etapes i la modalitat de desplegament aplicable.
 
@@ -105,19 +103,19 @@ en el número de construccions que han anat bé o malament, així com en el perc
 De cadascuna de les tasques, es pot consultar la **configuració, historial, estadístiques, resultats i situació**
 mitjançant l'enllaç habilitat. A més, es mostrarà una gràfica amb les darreres execucions i el resultat de cadascuna de les seves etapes.
 Per tal de disposar de la informació detallada de passes realitzades i logs generats haurà de dirigir-se a l'opció "Console Output".
-Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED, que serà serà notificat per correu
+Al final d'aquest log es mostrarà el resultat general de l'execució: SUCCES, FAILED o ABORTED, que serà notificat per correu
 electrònic als responsables assignats.<br/>
 
 ### Execució de tasques
 
-Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjançant l'opció "BuildWithParameters"**.
+Les tasques s'executaran a demanda quan l'usuari iniciï el desplegament mitjançant l'opció `BuildWithParameters`.
 
 ### Etapes de desplegament
 
 Els jobs multi-etapa realitzen multitud d'accions organitzades en STAGES. En cas de produir-se incidències a qualsevol de les
 seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 
-<CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages-sense hook.png)</center>
+<CENTER>![Nou projecte](/related/sic/3.0/pipeline-stages.png)</center>
 <br/>
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
 
@@ -129,13 +127,15 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Build**: compilació i construcció d'artefactes en funció de la tecnologia i les eines emprades.
 
-* **Build Tag**: generació del tag de Build al repositori de codi segons es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
+* **Build Tag**: generació del tag de Build al repositori de codi. Aquest tag marca que es tracta d'una versió construïble. Per exemple: 1.0.0-B001.
 
 * **Static Code Analysis**: etapa prevista per a l’enviament del codi font del projecte a l'eina d'anàlisi estàtic de codi de l'Oficina de Qualitat i comprovació de les corresponents [Quality Gates](https://qualitat.solucions.gencat.cat/eines/sonarqube/).
 
 * **Security Test**: etapa prevista per a l'execució de tests de seguretat.
 
 * **Unit Test**: etapa prevista per a l'execució de tests unitaris.
+
+* **Release Tag**: generació del tag de Release Candidate al repositori de codi. Aquest tag marca que es tracta d'una versió desplegable. Per exemple: 1.0.0.
 
 * **Artifact Archive**: etapa prevista per a l'arxivament dels artefactes generats.
 
@@ -145,11 +145,9 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
 * **Image Validations**: per als desplegaments al cloud, validació de vulnerabilitats de la imatge Docker de l'aplicació (DockerFile).
 
-* **Snapshot Tag**: generació del tag de Snapshot al repositori de codi segons es tracta d'una versió desplegable. Per exemple: 1.0.0-SNAPSHOT001.
-
 * Per a **entorns no productius** (Integració):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn no productiu un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn no productiu requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
     * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn no productiu.
 
@@ -159,37 +157,37 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn no productiu per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
-    * **Release Tag**: generació del tag de Release Candidate al repositori de codi segons es tracta d'una versió desplegada a un entorn no productiu. Per exemple: 1.0.0-RC001.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-integration.
 
 * Per a l'**entorn de Staging** (Preproducció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Staging un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Preproducció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
-    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
-    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Staging.
+    * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Preproducció.
 
-    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Staging.
+    * **Deploy**: desplegament de l'aplicació segons la modalitat de desplegament aplicable a l'entorn de Preproducció.
 
-    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Staging.
+    * **Post-Deploy**: execució de possibles tasques posteriors al desplegament de l'aplicació a l'entorn de Preproducció.
 
-    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Staging per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
+    * **Smoke Test**: etapa prevista per a la verificació ràpida a l'entorn de Preproducció per tal d'assegurar que l'aplicació funciona correctament i no té defectes evidents.
 
-    * **Stress Test**: etapa prevista per a les proves de resistència a l'entorn de Staging per tal de verificar l'estabilitat i fiabilitat de l'aplicació.
+    * **Stress Test**: etapa prevista per a les proves de resistència a l'entorn de Preproducció per tal de verificar l'estabilitat i fiabilitat de l'aplicació.
 
-    * **Acceptance Test**: etapa prevista per a les proves d'acceptació a l'entorn de Staging per tal de verificar que el sistema compleix les especificacions de negoci i és acceptable per al lliurament.
+    * **Acceptance Test**: etapa prevista per a les proves d'acceptació a l'entorn de Preproducció per tal de verificar que el sistema compleix les especificacions de negoci i és acceptable per al lliurament.
 
-    * **Exploratory Test**: etapa prevista per a les proves exploratòries a l'entorn de Staging per tal de verificar els resultats obtinguts pels diferents casos de prova que es defineixin.
+    * **Exploratory Test**: etapa prevista per a les proves exploratòries a l'entorn de Preproducció per tal de verificar els resultats obtinguts pels diferents casos de prova que es defineixin.
 
-    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Staging.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi segons es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-preproduction.
+
+    * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Preproducció.
 
 * Per a l'**entorn de Production** (Producció):
 
-    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn requereix conformitat prèvia, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn Producció un cop verificades les etapes anteriors.
+    * **<Environment>Deploy Confirmation**: si el desplegament a l'entorn de Producció requereix conformitat prèvia o bé és necessari introduir informació per a la generació del tiquet Remedy CRQ, l'usuari haurà d'aprovar manualment l'inici del desplegament a l'entorn un cop verificades les etapes anteriors.
 
     * **ITSM Register**: etapa prevista per a la generació automàtica d'un tiquet Remedy CRQ per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
-
-    * **Production Release Tag**: generació del tag de Release (versió definitiva) al repositori de codi segons es tracta d'una versió desplegada a un entorn de Staging. Per exemple: 1.0.0.
 
     * **Prev-Deploy**: execució de possibles tasques prèvies al desplegament de l'aplicació a l'entorn de Producció.
 
@@ -201,13 +199,14 @@ A continuació s'explica breument cadascuna de les etapes de desplegament previs
 
     * **Probe Test**: etapa prevista per a la verificació de sondes a l'entorn de Producció per tal d'assegurar que l'aplicació funciona correctament.
 
-    * **Release Tag**: generació del tag de Release al repositori de codi segons es tracta d'una versió desplegada a un entorn de Producció. Per exemple: 1.0.0-PR.
+    * **Environment Tag**: generació del tag d'entorn al repositori de codi. Tag que marca que es tracta d'una versió desplegada a l'entorn corresponent. Per exemple: 1.0.0-production.
 
     * **ITSM Close**: etapa prevista per al tancament automàtic del tiquet Remedy CRQ generat per a la traçabilitat dels desplegaments automàtics a l'entorn de Producció.
 
 
 <div class="message information">
-Les pipelines generades <b>no permetran execucions concurrents i els punts de conformitat prèvia expiraran en 30 dies</b>.
+Les pipelines generades <b>no permetran execucions concurrents i els punts d'aprovació manual expiraran en 30 dies</b>.
+<br></br>
 </div>
 
 ### Versionat
@@ -217,41 +216,18 @@ d'anar acompanyat d'un increment de la versió. Per tant, no es permetrà que el
 a una versió prèviament desplegada. En cas contrari, es podria induir a error o confusió en els futurs desplegaments de
 preproducció i producció. Per exemple, no se sabria quina versió d'integració està desplegada a l'entorn de preproducció.
 
-### Anàlisi del codi
-
-L'anàlisi de codi és un altre dels processos que es passen dins la tasca de construcció. A partir d'unes regles predefinides,
-s'analitza el codi per tal d'obtenir mètriques d'adherència a estàndards i bones pràctiques. L'Oficina de Qualitat és qui
-escull l'eina a utilitzar per a aquesta revisió de codi.
-
 ### Artefactes generats i gestió de possibles marxes enrere
 
 Com a resultat de la construcció es generarà un conjunt d'artefactes, bàsicament components estàtics i dinàmics.
-Els artefactes no queden emmagatzemats a l'espai de treball per lo que la marxa enrere passaria per
+Els artefactes no queden emmagatzemats a l'espai de treball pel que la marxa enrere passaria per
 **recuperar la versió anterior del codi** del projecte per a que es tornin a construir i desplegar els artefactes anteriors.
 Pel que fa als entorns de preproducció i producció, la marxa enrere es delegarà als procediments de desplegament realitzats per CPD.
 
-### Publicació de llibreries
-
-Totes les dependències de l’aplicació han de ser accessibles en els repositoris públics configurats al Nexus del SIC.
-Es pot validar la seva existència accedint a la següent URL: https://hudson.intranet.gencat.cat/nexus. <br/>
-
-En cas de tractar-se d'una **llibreria pròpia amb codi repositat al SIC**, caldrà construir un job d'instal·lació de dependències.
-En aquest cas, les etapes es simplificaran considerablement de forma que bàsicament **es construeixi l'artefacte i es publiqui al Nexus del SIC**.
-
-En cas de tractar-se d'una **llibreria de tercers no disponible públicament** caldrà obrir una petició de suport
-funcional de l’aplicació indicant la següent informació:
-
-- Nom i versió de la llibreria
-- URL on obtenir la llibreria (o adjuntar-la a la pròpia petició Remedy)
-- Característiques i funcionalitat de la llibreria
-- Raons per l'ús de la llibreria
-
-Per a més informació: [Canals de suport](/sic/suport/#altres-dubtes-o-problem%C3%A0tiques).
-
 ## Autoservei de pipelines
 
-L'Autoservei de pipelines permet als usuaris del SIC la **generació al vol de pipelines d'automatització de la construcció i del desplegament de l'aplicació** sense la
-intervenció de l'equip del SIC. D'aquesta manera, els equips de cada codi d'aplicació són independents per a preparar la construcció del job corresponent per a cada projecte de GitLab.
+L'Autoservei de pipelines permet als usuaris la **generació de pipelines per a l'automatització de la construcció i el desplegament
+de les aplicacions** a partir de la configuració d'una sèrie de fitxers en format YML. D'aquesta manera, els proveïdors d'aplicacions
+disposen d'autonomia per a configurar el seu comportament.
 Per a més informació: [Autoservei de pipelines] (/sic30-serveis/autoservei-pipelines/)
 
 ## Matriu de tecnologies de construcció

@@ -1,5 +1,5 @@
 +++
-date        = "2021-11-26"
+date        = "2022-04-01"
 title       = "SIC. Revisió model de tags i versions pipelines SIC 3.0"
 description = "A partir del 04/04/2022 es posa en servei el nou model de tags i gestió de versions de les pipelines del SIC 3.0 per a donar cobertura al desplegament a entorns addicionals."
 sections    = ["Notícies", "home"]
