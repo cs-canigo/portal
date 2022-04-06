@@ -8,6 +8,6 @@ weight		= 1
 
 ## Llistat de canvis versió 3.0.4
 
-* Resolució error url dbeaver
+- Resolució error url dbeaver
 
 
