@@ -1,5 +1,5 @@
 +++
-date = "2022-04-01"
+date = "2022-04-07"
 title = "Autoservei de pipelines"
 description = "L'Autoservei de pipelines permet als proveïdors d'aplicacions ser autònoms per a integrar al SIC les seves aplicacions."
 sections = "SIC"

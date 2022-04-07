@@ -1,5 +1,5 @@
 +++
-date = "2021-12-09"
+date = "2022-05-01"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -261,13 +261,10 @@ Veure: <a href="https://canigo.ctti.gencat.cat/sic30-serveis/cataleg-imatges/">C
 <br/>
 A continuació, s'exposen les tecnologies i les versions amb les que el SIC és compatible d'entrada.
 
-<!---
 ### Microsoft
-|Tecnologia|Versions|
+|Versió .NET Core|Versió MSBuild|
 |-------|-------|
-|MS_Build|4.0<br />14<br />15|
-|MS_Deploy|7.1|
--->
+|3.1|16.7|
 
 <!---
 ### Maven/JDK
@@ -302,6 +299,7 @@ A continuació, s'exposen les tecnologies i les versions amb les que el SIC és 
 |10|6.11|
 |12|6.12|
 |14|6.14|
+|16|8.3|
 
 L'única eina que va lligada en certa manera amb la versió de Node és **npm**. La resta d'eines de cicle de vida,
 tals com **ng** de **[Angular](https://angular.io/)** (framework de frontend recomanat per Arquitectura CTTI i el CS Canigó),
