@@ -33,7 +33,7 @@ una plantilla de petició de canvi que el proveïdor ha d'acabar de complimentar
 ## Funcionament
 
 La **nova modalitat d'integració automàtica aplica a la següent tipologia de pipelines de desplegament de versions del SIC 3.0: `DEPLOY`, `DEPLOY-TAG`,
-`DEPLOY-ALL`, `DEPLOY-DESCRIPTORS` i `DEPLOY-APIM`**.
+`DEPLOY-ALL`, `DEPLOY-DESCRIPTORS`, `DELETE-DESCRIPTORS` i `DEPLOY-APIM`**.
 
 El funcionament previst és que, en el moment en què s'inicia el desplegament de l'entorn
 en l'**etapa "Deploy confirmation"**, l'usuari haurà d'indicar la informació necessària per a la generació del tiquet Remedy de canvi (CRQ):
