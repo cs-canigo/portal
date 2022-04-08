@@ -8,6 +8,7 @@ taxonomies = []
 weight = 5
 +++
 
+
 ## Introducció
 
 L'Autoservei de pipelines permet la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense, en molts casos,
