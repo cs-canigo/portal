@@ -1,23 +1,14 @@
 +++
 date = "2022-04-11"
-title = "Canigó. Publicació nova versió 3.6.4"
-description = "S'ha publicat la nova versió de Canigó 3.6.4 per a corregir la vulnerabilitat Spring4Shell detectada (entre d'altres)"
-#sections = ["Notícies", "home"]
-#categories = ["canigo"]
+title = "Canigó. Vulnerabilitat Spring4Shell"
+description = "Com resoldre la vulnerabilitat que afecta al Framework Spring coneguda com SpringShell/Spring4Shell"
+#section = "howtos"
+#categories  = ["canigo"]
 #key = "MAIG2022"
 +++
 
-S'ha alliberat la **versió 3.6.4 del Framework Canigó** per a actualitzar `org.springframework` de 5.3.9 a 5.3.18 i
-`org.springframework.boot` de 2.5.4 a 2.5.12 amb l'objectiu de corregir la vulnerabilitat detectada.
-
-Podeu consultar l'abast complet de les noves versions a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
-
-## Introducció Spring
-
 **Spring Framework és un marc d'aplicació de codi obert per a la plataforma Java** les característiques de la qual poden
 ser utilitzades per qualsevol aplicació.
-
-## Vulnerabilitat Spring4Shell
 
 Sobre aquest tema, **el passat 29 de març es va publicar una nova vulnerabilitat d'execució remota de codi que afecta a
 Spring Core**, un framework que permet el desenvolupament d'aplicacions web amb Java i, l'explotació de les quals
@@ -55,20 +46,27 @@ Per més informació podeu consultar [Spring Framework RCE](https://spring.io/bl
 Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
 gran impacte, recomanant als usuaris i administradors de sistemes que prenguin mesures de forma urgent.
 
-## Canigó 3.6.4
+<br/>
+Altra informació de referència:
 
-S'han publicat tots els mòduls del Framework Canigó 3.6 perquè passin a fer ús de la **versió 5.3.18 de `org.springframework`
-i la versió 2.5.12 de `org.springframework.boot` per a mitigar aquestes vulnerabilitats** alliberant la corresponent nova
-versió 3.6.4.
+* <https://nvd.nist.gov/vuln/detail/CVE-2022-22965/> \
+* <https://nvd.nist.gov/vuln/detail/CVE-2022-22963/> \
+* <https://nvd.nist.gov/vuln/detail/CVE-2022-22950/> \
+* <https://www.cyberkendra.com/2022/03/springshell-rce-0-day-vulnerability.html/> \
+* <https://tanzu.vmware.com/security/cve-2022-22965/> \
 
-Podeu consultar la informació de les versions a: [Binaris Canigó 3.6](/canigo/download/canigo-36/).
+## Com solucionar la vulnerabilitat a les aplicacions Canigó 3.6.x
 
-Podeu consultar les matrius de compatibilitat de cada mòdul a: [Matriu compatibilitat Canigó 3.6]
-(/canigo-download-related/matrius-compatibilitats/canigo-36/).
+S'ha alliberat una nova versió del Framework Canigó:
 
-Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó i/o seguir les
-indicacions del [Howto vulnerabilitat Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/)
-per a resoldre aquestes vulnerabilitats.
+* Versió 3.6.4 de Canigó per a resoldre aquesta vulnerabilitat als mòduls de Canigó.
+Podeu consultar: [Publicació nova versió 3.6.4](/noticies/INTCAN-2592_2022-04-11-CAN-actualitzacio-canigo-3_6_4).
+
+* Versió 1.7.4 de l'archetype de Canigó i la versió 1.8.4 del plugin del eclipse per a generar projectes amb Canigó 3.6.4.
+Podeu consultar: [Actualització archetype 1.7.4 i plugin Eclipse 1.8.4](/noticies/INTCAN-2592_2022-04-11-CAN-Actualitzacio_archetype_1_7_4_plugin_eclipse_1_8_4/).
+
+Des de CS Canigó es recomana actualitzar a aquestes noves versions. Per a fer-ho, serà necessari revisar les dependències de l'aplicació
+per a utilitzar els mòduls de la versió 3.6.4. Podeu consultar la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/).
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó
