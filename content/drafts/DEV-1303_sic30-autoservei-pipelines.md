@@ -8,6 +8,7 @@ taxonomies = []
 weight = 5
 +++
 
+
 ## Introducció
 
 L'Autoservei de pipelines permet la **generació automàtica de pipelines d'automatització de la construcció i del desplegament de les aplicacions** sense, en molts casos,
@@ -102,7 +103,7 @@ altres pipelines per a dur a terme les operacions necessàries sobre plataformes
 sense fer la construcció i desplegament de la imatge.
 
 - **DELETE-DESCRIPTORS**: permet revertir el desplegament de descriptors (variables d'entorn, configuració i altres)
-permetent seleccionar l'entorn i el fitxer descriptor sobre el qual actuar (incloent-hi l'opció per a poder actuar sobre
+habilitant una selecció d'entorn i de fitxer descriptor sobre el qual actuar (incloent-hi l'opció per a poder actuar sobre
 tots ells).
 
 - **DEPLOY-ALL**: permet fer un desplegament complet davant canvis en l'aplicació, orquestradors i/o descriptors.
