@@ -27,18 +27,15 @@ a l'equip de Suport Cloud.
 ## Novetats
 
 Amb l'objectiu de dotar d'una major autonomia als lots d'aplicacions, el **SIC 3.0 passa a proporcionar una nova pipeline
-que s'encarregarà de l'esborrat de descriptors desplegats a Openshift i Kubernetes**.
-Aquesta pipeline permetrà seleccionar l'entorn i el fitxer descriptor sobre el qual actuar (incloent-hi l'opció per a poder
-actuar sobre tots ells), i s'encarregarà de revertir el desplegament d'aquest a la plataforma de contenidors.
+anomenada `DELETE-DESCRIPTORS` que s'encarregarà de l'esborrat de descriptors desplegats a Openshift i Kubernetes**.
+Aquesta pipeline s'ubica al directori "Advanced" i permetrà seleccionar l'entorn i el fitxer descriptor sobre el qual
+actuar (incloent-hi l'opció per a poder actuar sobre tots ells), i s'encarregarà de revertir el desplegament d'aquests
+a la plataforma de contenidors.
 Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
 Servei de Custòdia de Codi, per la qual cosa, si aquest descriptor no ha estat desplegat prèviament, la pipeline finalitzarà
 amb errors.
 
-Aquesta nova pipeline es posa a disposició dels responsables de les aplicacions, ubicant-se al directori "Advanced" dins el
-directori del projecte, anomenant-se "DELETE-DESCRIPTORS".
-
-Per a més informació:
-- [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
+Per a més informació: [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/).
 
 <br/><br/>
 Si teniu qualsevol dubte o problema podeu revisar les [**Preguntes Freqüents**] (/sic/faq) o utilitzar els canals de [**Suport**] (/sic/suport).
