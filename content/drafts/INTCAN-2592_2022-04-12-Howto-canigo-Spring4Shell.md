@@ -8,41 +8,31 @@ description = "Com resoldre la vulnerabilitat que afecta al Framework Spring con
 +++
 
 **Spring Framework és un marc d'aplicació de codi obert per a la plataforma Java** les característiques de la qual poden
-ser utilitzades per qualsevol aplicació.
+ser utilitzades per qualsevol aplicació. En aquest sentit, **el passat 29 de març es va publicar una nova vulnerabilitat
+d'execució remota de codi que afecta a Spring Core**, un framework que permet el desenvolupament d'aplicacions web amb
+Java i, l'explotació de les quals permetria a atacants executar remotament codi arbitrari en els sistemes de la víctima
+per mitjà d'una petició no autenticada d'HTTP.
 
-Sobre aquest tema, **el passat 29 de març es va publicar una nova vulnerabilitat d'execució remota de codi que afecta a
-Spring Core**, un framework que permet el desenvolupament d'aplicacions web amb Java i, l'explotació de les quals
-permetria a atacants executar remotament codi arbitrari en els sistemes de la víctima per mitjà d'una petició
-no autenticada d'HTTP.
-
-Aquesta vulnerabilitat és coneguda sota el nom de Spring4Shell o SpringShell i afecta a spring-*core que, segons els investigadors
+Aquesta vulnerabilitat és coneguda sota el nom de Spring4Shell o SpringShell i afecta a spring-core que, segons els investigadors
 de Praetorian, es tracta d'un bypass per a una CVE més antiga [CVE-2010-1622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1622)
-quea causa d'una característica de JDK9 pot haver estat restablerta.
-
-En aquest sentit, les aplicacions de Spring que s'executen amb Jdk 9 o superior només es veuen afectades si es compleixen
-una sèrie de requisits perquè l'aplicació sigui vulnerable, a saber:
-
-- Utilitzar Spring Beans.
-
-- Utilitzar Spring Parameter Binding.
-
-- Almenys, un Spring Parameter Binding ha d’estar configurat per utilitzar un tipus de paràmetre no bàsic.
+que, a causa d'una característica de JDK9, pot haver estat restablerta.
 
 Les vulnerabilitats detectades són les següents:
 
 - Spring4Shell [CVE-2022-22965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22965): es tracta d'una vulnerabilitat
-crítica que permet l'execució remota de codi arbitrari en els sistemes de la víctima per mitjà d'una petició no atenticada d'HTTP.
+crítica que permet l'execució remota de codi arbitrari en els sistemes de la víctima per mitjà d'una petició no autenticada d'HTTP.
 
-- [CVE-2022-22963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22963): es tracta d'una vulnerabilitat de gravetat mitja
+- [CVE-2022-22963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22963): es tracta d'una vulnerabilitat de gravetat mitjana
 a Spring Cloud Function que pot ser explotada per accedir als recursos locals.
 
 - [CVE-2022-22950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22950): es tracta d'una vulnerabiliatat de DoS de
-gravetat mitja que afecta a Spring Framework.
+gravetat mitjana que afecta a Spring Framework.
 
 S'ha publicat la **versió 5.3.18 de `org.springframework` i la versió 2.5.12 de `org.springframework.boot` per a mitigar aquestes vulnerabilitats**.
 
 Per més informació podeu consultar [Spring Framework RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement).
 
+<br/>
 Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
 gran impacte, recomanant als usuaris i administradors de sistemes que prenguin mesures de forma urgent.
 
@@ -55,9 +45,9 @@ Altra informació de referència:
 * <https://www.cyberkendra.com/2022/03/springshell-rce-0-day-vulnerability.html/> \
 * <https://tanzu.vmware.com/security/cve-2022-22965/> \
 
-## Com solucionar la vulnerabilitat a les aplicacions Canigó 3.6.x
+## Com solucionar la vulnerabilitat a les aplicacions Canigó 3.6
 
-S'ha alliberat una nova versió del Framework Canigó:
+El Framework Canigó 3.6 es troba afectat de forma transversal, per la qual cosa s'han alliberat noves versions:
 
 * Versió 3.6.4 de Canigó per a resoldre aquesta vulnerabilitat als mòduls de Canigó.
 Podeu consultar: [Publicació nova versió 3.6.4](/noticies/INTCAN-2592_2022-04-11-CAN-actualitzacio-canigo-3_6_4).
