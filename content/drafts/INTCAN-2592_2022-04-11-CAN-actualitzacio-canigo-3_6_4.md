@@ -58,9 +58,7 @@ Podeu consultar la informació de les versions a: [Binaris Canigó 3.6](/canigo/
 Podeu consultar les matrius de compatibilitat de cada mòdul a: [Matriu compatibilitat Canigó 3.6]
 (/canigo-download-related/matrius-compatibilitats/canigo-36/).
 
-Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó i/o seguir les
-indicacions del [Howto vulnerabilitat Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/)
-per a resoldre aquestes vulnerabilitats.
+Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó per a resoldre aquestes vulnerabilitats.
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó

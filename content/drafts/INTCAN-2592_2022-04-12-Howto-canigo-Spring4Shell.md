@@ -51,10 +51,10 @@ Altra informació de referència:
 El Framework Canigó 3.6 es troba afectat de forma transversal, per la qual cosa s'han alliberat noves versions:
 
 * Versió 3.6.4 de Canigó per a resoldre aquesta vulnerabilitat als mòduls de Canigó.
-Podeu consultar: [Publicació nova versió 3.6.4](/noticies/INTCAN-2592_2022-04-11-CAN-actualitzacio-canigo-3_6_4).
+Podeu consultar: [Publicació nova versió 3.6.4](/noticies/2022-04-11-CAN-actualitzacio-canigo-3_6_4).
 
 * Versió 1.7.4 de l'archetype de Canigó i la versió 1.8.4 del plugin del eclipse per a generar projectes amb Canigó 3.6.4.
-Podeu consultar: [Actualització archetype 1.7.4 i plugin Eclipse 1.8.4](/noticies/INTCAN-2592_2022-04-11-CAN-Actualitzacio_archetype_1_7_4_plugin_eclipse_1_8_4/).
+Podeu consultar: [Actualització archetype 1.7.4 i plugin Eclipse 1.8.4](/noticies/2022-04-11-CAN-Actualitzacio_archetype_1_7_4_plugin_eclipse_1_8_4/).
 
 Des de CS Canigó es recomana actualitzar a aquestes noves versions. Per a fer-ho, serà necessari revisar les dependències de l'aplicació
 per a utilitzar els mòduls de la versió 3.6.4. Podeu consultar la [Matriu de Compatibilitats 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36/).
