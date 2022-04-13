@@ -46,6 +46,11 @@ Altra informació de referència:
 * <https://nvd.nist.gov/vuln/detail/CVE-2022-22950/> \
 * <https://www.cyberkendra.com/2022/03/springshell-rce-0-day-vulnerability.html/> \
 * <https://tanzu.vmware.com/security/cve-2022-22965/> \
+* <https://www.tarlogic.com/es/blog/vulnerabilidad-spring4shell-cve-2022-22965-cve-2022-22963/> \
+* <https://github.com/NCSC-NL/spring4shell> \
+* <https://www.dynatrace.com/news/blog/what-is-spring4shell-vulnerabilities-in-the-java-spring-framework/?utm_source=google&utm_medium=cpc&utm_term=spring4shell&utm_campaign=es-appsec-application-security&utm_content=none&gclid=EAIaIQobChMIjafOoJL69gIVU4XVCh2iRgRXEAAYASAAEgJUe_D_BwE&gclsrc=aw.ds> \
+* <https://www.kaspersky.com/blog/spring4shell-critical-vulnerability-in-spring-java-framework/44034/> \
+* <https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement> \
 
 ## Com solucionar la vulnerabilitat a les aplicacions Canigó 3.6
 
