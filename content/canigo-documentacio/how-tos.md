@@ -1,5 +1,5 @@
 +++
-date        = "2020-07-15"
+date        = "2022-04-13"
 title       = "HOWTOs"
 description = "HOWTOs d'utilitat per els diferents serveis que ofereix el CS Canigó"
 sections    = "HOWTOs"
