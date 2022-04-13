@@ -1,5 +1,5 @@
 +++
-date = "2022-04-11"
+date = "2022-04-13"
 title = "Canigó. Publicació nova versió 3.6.4"
 description = "S'ha publicat la nova versió de Canigó 3.6.4 per a corregir la vulnerabilitat Spring4Shell detectada (entre d'altres)"
 sections = ["Notícies", "home"]

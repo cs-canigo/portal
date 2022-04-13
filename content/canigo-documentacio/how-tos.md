@@ -13,7 +13,7 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
-- [Com resoldre la vulnerabilitat detectada Spring4Shell] (/howtos/2022-04-11-Howto-canigo-Spring4Shell/)
+- [Com resoldre la vulnerabilitat detectada Spring4Shell] (/howtos/2022-04-13-Howto-canigo-Spring4Shell/)
 
 - [Com resoldre la vulnerabilitat detectada Log4Shell] (/howtos/2021-12-13-Howto-canigo-log4jshell/)
 

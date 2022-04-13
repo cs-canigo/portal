@@ -1,5 +1,5 @@
 +++
-date = "2022-04-11"
+date = "2022-04-13"
 title = "Canigó. Actualització archetype 1.7.4 i plugin Eclipse 1.8.4"
 description = "S'ha publicat una nova versió de l'archetype i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.4"
 sections = ["Notícies", "home"]
@@ -43,4 +43,4 @@ virtual de Java versió 11.
 Podeu consultar la documentació dels [Binaris de Canigó 3.6](/canigo/download/canigo-36/).
 
 En el següent enllaç, podeu consultar la notícia de la publicació de la [versió 3.6.4 de Canigó]
-(/noticies/2022-04-11-CAN-actualitzacio-canigo-3_6_4/).
+(/noticies/2022-04-13-CAN-actualitzacio-canigo-3_6_4/).
