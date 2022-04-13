@@ -2,9 +2,9 @@
 date = "2022-04-11"
 title = "Canigó. Vulnerabilitat Spring4Shell"
 description = "Com resoldre la vulnerabilitat que afecta al Framework Spring coneguda com SpringShell/Spring4Shell"
-#section = "howtos"
-#categories  = ["canigo"]
-#key = "MAIG2022"
+section = "howtos"
+categories  = ["canigo"]
+key = "MAIG2022"
 +++
 
 **Spring Framework és un marc d'aplicació de codi obert per a la plataforma Java** les característiques de la qual poden

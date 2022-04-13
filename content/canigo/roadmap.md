@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-27"
+date        = "2022-04-11"
 title       = "Roadmap Framework Canigó"
 description = "Roadmap previst per a la evolució del Framework Canigó"
 sections    = "Canigó"
@@ -40,7 +40,8 @@ Aquest és el Roadmap previst per a la evolució del Framework de Canigó 3
 	  [ '13','Canigo 3.6.0', new Date(2021, 10), new Date(2021, 12) ],
 	  [ '14','Canigo 3.6.1', new Date(2021, 12, 13), new Date(2021, 12, 17) ],
 	  [ '15','Canigo 3.6.2', new Date(2021, 12, 17), new Date(2021, 12, 27) ],	
-	  [ '16','Canigo 3.6.3', new Date(2021, 12, 27), new Date(2022, 3) ]
+	  [ '16','Canigo 3.6.3', new Date(2021, 12, 27), new Date(2022, 04, 11) ],
+	  [ '16','Canigo 3.6.4', new Date(2022, 04, 11), new Date(2022, 7) ]
 	]);
 
     var options = {

@@ -1,5 +1,5 @@
 +++
-date        = "2021-12-27"
+date        = "2022-04-11"
 title       = "Canigó 3.6"
 description = "Descàrrega de versió Canigó 3.6 i entorn de treball"
 sections    = "Canigó"
@@ -12,30 +12,30 @@ weight     = 1
 - [Matriu de Compatibilitats Canigó 3.6](/canigo-download-related/matrius-compatibilitats/canigo-36)
 
 |          Versió Canigó LTS Actual  |      Última versió disponible     |
-|---------------------------------      |---------------------------------- |
-|              3.6 LTS                 |                3.6.3                 |
+|---------------------------------   |---------------------------------- |
+|              3.6 LTS               |                3.6.4              |
 
 
 
-|          Dependències externes       |      Canigó 3.6.0     |      Canigó 3.6.1     |      Canigó 3.6.2     |      Canigó 3.6.3     |
-|---------------------------------     |---------------------- |---------------------- |---------------------- |---------------------- |
-| springframework                      |  5.3.9                |  5.3.9                |  5.3.9                |  5.3.9                |
-| spring.security                      |  5.5.2                |  5.5.2                |  5.5.2                |  5.5.2                |
-| spring.data                          |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.4                |
-| springframework.boot                 |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.4                |
-| log4j                                |  2.14.1               |  2.15.0               |  2.16.0               |  2.17.0               |
-| slf4j                                |  1.7.32               |  1.7.32               |  1.7.32               |  1.7.32               |
-| junit                                |  4.13.2               |  4.13.2               |  4.13.2               |  4.13.2               |
-| hamcrest                             |  2.2                  |  2.2                  |  2.2                  |  2.2                  |
-| mockito-core                         |  3.9.0                |  3.9.0                |  3.9.0                |  3.9.0                |
-| jsonassert                           |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |
-| jackson                              |  2.12.4               |  2.12.4               |  2.12.4               |  2.12.4               |
-| springfox-swagger2                   |  2.9.2                |  2.9.2                |  2.9.2                |  2.9.2                |
-| querydsl                             |  4.4.0                |  4.4.0                |  4.4.0                |  4.4.0                |
-| hibernate                            |  5.4.32.Final         |  5.4.32.Final         |  5.4.32.Final         |  5.4.32.Final         |
-| mongo-java-driver                    |  3.12.10              |  3.12.10              |  3.12.10              |  3.12.10              |
-| mongodb-driver-sync                  |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |
-| mongodb-driver-reactivestreams       |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |
+|          Dependències externes       |      Canigó 3.6.0     |      Canigó 3.6.1     |      Canigó 3.6.2     |      Canigó 3.6.3     |      Canigó 3.6.4     |
+|---------------------------------     |---------------------- |---------------------- |---------------------- |---------------------- |---------------------- |
+| springframework                      |  5.3.9                |  5.3.9                |  5.3.9                |  5.3.9                |  5.3.18               |
+| spring.security                      |  5.5.2                |  5.5.2                |  5.5.2                |  5.5.2                |  5.6.2                |
+| spring.data                          |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.4                |
+| springframework.boot                 |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.4                |  2.5.12               |
+| log4j                                |  2.14.1               |  2.15.0               |  2.16.0               |  2.17.0               |  2.17.2               |
+| slf4j                                |  1.7.32               |  1.7.32               |  1.7.32               |  1.7.32               |  1.7.36               |
+| junit                                |  4.13.2               |  4.13.2               |  4.13.2               |  4.13.2               |  4.13.2               |
+| hamcrest                             |  2.2                  |  2.2                  |  2.2                  |  2.2                  |  2.2                  |
+| mockito-core                         |  3.9.0                |  3.9.0                |  3.9.0                |  3.9.0                |  3.9.0                |
+| jsonassert                           |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |  1.5.0                |
+| jackson                              |  2.12.4               |  2.12.4               |  2.12.4               |  2.12.4               |  2.13.2               |
+| springfox-swagger2                   |  2.9.2                |  2.9.2                |  2.9.2                |  2.9.2                |  2.9.2                |
+| querydsl                             |  4.4.0                |  4.4.0                |  4.4.0                |  4.4.0                |  4.4.0                |
+| hibernate                            |  5.4.32.Final         |  5.4.32.Final         |  5.4.32.Final         |  5.4.32.Final         |  5.4.32.Final         |
+| mongo-java-driver                    |  3.12.10              |  3.12.10              |  3.12.10              |  3.12.10              |  3.12.10              |
+| mongodb-driver-sync                  |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |
+| mongodb-driver-reactivestreams       |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |
 
 
 Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.4]
@@ -44,36 +44,36 @@ Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5
 <br/>
 La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
 
-S'ha certificat la **compatibilitat de Canigó 3.6.3 amb els següents servidors embeguts**:
+S'ha certificat la **compatibilitat de Canigó 3.6.4 amb els següents servidors embeguts**:
 
-|      Servidor incrustat             |                   Versió                    |
-|---------------------------------     |---------------------------------     |
-|  Tomcat                               |         9.0.52                        |
-|  Undertow                              |         2.2.10.Final                   |
-|  Jetty                                |         9.4.43.v20210629           |
-|  Netty (webflux)                         |         4.1.67.Final               |
-|  Reactor Netty (reactor webflux)  |         1.0.10              |
+|      Servidor incrustat             |                   Versió           |
+|---------------------------------    |---------------------------------   |
+|  Tomcat                             |         9.0.52                     |
+|  Undertow                           |         2.2.10.Final               |
+|  Jetty                              |         9.4.43.v20210629           |
+|  Netty (webflux)                    |         4.1.67.Final               |
+|  Reactor Netty (reactor webflux)    |         1.0.10                     |
 
-S'ha certificat la **compatibilitat de Canigó 3.6.3 amb els servidors suportats al**
+S'ha certificat la **compatibilitat de Canigó 3.6.4 amb els servidors suportats al**
 [**Full de ruta del CTTI**](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/):
 
-|     	Servidor d'aplicacions				|      				Versió suportada     	|
+|     	Servidor d'aplicacions		|      		Versió suportada     	|
 |--------------------------------- 	|--------------------------------- 	|
-|  Tomcat					          	  	 	|         9.0   	             			|
-|  Weblogic				          	  	 	|         14.1.x               			|
-|  JBoss EAP       									|         7.x        			          |
+|  Tomcat					        |         9.0   	             	|
+|  Weblogic				          	|         14.1.x               		|
+|  JBoss EAP       					|         7.x        			    |
 
 No s'ha certificat la compatibilitat amb Webshpere donat les versions actuals del full de ruta no suporten Java 11.
 
 <br/>
 **Lliurables** associats a Canigó 3.6:
 
-|          Entregable  |     Versió      |
-|---------------------------------      |---------------------------------- |
-|              Entorn de desenvolupament   |                3.0.5              |
-|              Plugin eclipse        |                1.8.3              |
-|              Archetype         |                1.7.3              |
-|              AppBridge         |                1.2.3              |
+|          Entregable         |     Versió           |
+|-------------------          |-------------------   |
+| Entorn de desenvolupament   |                3.0.5 |
+| Plugin eclipse              |                1.8.4 |
+| Archetype                   |                1.7.4 |
+| AppBridge                   |                1.2.4 |
 
 ### Entorn de desenvolupament
 

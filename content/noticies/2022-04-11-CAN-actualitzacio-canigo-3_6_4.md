@@ -2,9 +2,9 @@
 date = "2022-04-11"
 title = "Canigó. Publicació nova versió 3.6.4"
 description = "S'ha publicat la nova versió de Canigó 3.6.4 per a corregir la vulnerabilitat Spring4Shell detectada (entre d'altres)"
-#sections = ["Notícies", "home"]
-#categories = ["canigo"]
-#key = "MAIG2022"
+sections = ["Notícies", "home"]
+categories = ["canigo"]
+key = "MAIG2022"
 +++
 
 S'ha alliberat la **versió 3.6.4 del Framework Canigó** per a actualitzar `org.springframework` de 5.3.9 a 5.3.18,

@@ -2,9 +2,9 @@
 date = "2022-04-11"
 title = "Canigó. Actualització archetype 1.7.4 i plugin Eclipse 1.8.4"
 description = "S'ha publicat una nova versió de l'archetype i del plugin de l'eclipse de Canigó per a generar projectes amb Canigó 3.6.4"
-#sections = ["Notícies", "home"]
-#categories = ["canigo"]
-#key = "MAIG2022"
+sections = ["Notícies", "home"]
+categories = ["canigo"]
+key = "MAIG2022"
 +++
 
 ## Introducció

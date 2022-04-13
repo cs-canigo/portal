@@ -13,7 +13,9 @@ En aquest apartat s'aniran afegint un seguit de HOWTO, per tal de facilitar la c
 
 HOWTOs disponibles actualment:
 
-- [Com resoldre la vulnerabilitat detectada Log4j] (/howtos/2021-12-13-Howto-canigo-log4jshell/)
+- [Com resoldre la vulnerabilitat detectada Spring4Shell] (/howtos/2022-04-11-Howto-canigo-Spring4Shell/)
+
+- [Com resoldre la vulnerabilitat detectada Log4Shell] (/howtos/2021-12-13-Howto-canigo-log4jshell/)
 
 - [Com configurar propietats en fitxers YAML per a proves unitàries] (/howtos/2021-11-26-Howto-yaml_test_file/)
 
