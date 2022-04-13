@@ -38,8 +38,8 @@ weight     = 1
 | mongodb-driver-reactivestreams       |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |  4.2.3                |
 
 
-Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.4]
-(https://docs.spring.io/spring-boot/docs/2.5.4/reference/htmlsingle/#appendix-dependency-versions).
+Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.12]
+(https://docs.spring.io/spring-boot/docs/2.5.12/reference/htmlsingle/#appendix-dependency-versions).
 
 <br/>
 La **versió de Java mínima per a utilitzar Canigó 3.6 és la versió 11**.
