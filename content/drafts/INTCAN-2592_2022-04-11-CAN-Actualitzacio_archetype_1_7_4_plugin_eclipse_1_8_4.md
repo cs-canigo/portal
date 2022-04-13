@@ -26,8 +26,8 @@ Podeu consultar l'abast complet de la nova versió a les [Release Notes 3.6](/ca
 
 La versió 1.7.4 de l'arquetipus de Canigó incorpora les següents novetats:
 
-- Creació de projectes amb Canigó 3.6.4 per a resoldre la vulnerabilitat de Spring4Shell actualitzant `org.springframework`
-de 5.3.9 a 5.3.18 i `org.springframework.boot` de 2.5.4 a 2.5.12
+- Creació de projectes amb Canigó 3.6.4 per a resoldre la vulnerabilitat de Spring4Shell actualitzant `org.springframework` de 5.3.9 a 5.3.18,
+`org.springframework.boot` de 2.5.4 a 2.5.12 i `spring.security` de 5.5.2 a 5.6.2
 
 ## Novetats _plugin_ Eclipse
 

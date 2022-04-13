@@ -29,7 +29,8 @@ a Spring Cloud Function que pot ser explotada per accedir als recursos locals.
 - [CVE-2022-22950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22950): es tracta d'una vulnerabilitat de DoS de
 gravetat mitjana que afecta a Spring Framework.
 
-S'ha publicat la **versió 5.3.18 d'`org.springframework` i la versió 2.5.12 d'`org.springframework.boot` per a mitigar aquestes vulnerabilitats**.
+S'ha publicat la **versió 5.3.18 d'`org.springframework`, la versió 2.5.12 d'`org.springframework.boot` i la versió 5.6.2 d'`spring.security`
+per a mitigar aquestes vulnerabilitats**.
 
 Per més informació podeu consultar [Spring Framework RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement).
 

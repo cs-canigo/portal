@@ -9,7 +9,8 @@ weight      = 1
 #### Canigó 3.6.4 (12/04/2022)
 
 - [Resolució de vulnerabilitat Spring4Shell](/noticies/2022-04-11-CAN-actualitzacio-canigo-3_6_4/)
-   - Actualització de tots els mòduls de Canigó per a actualitzar `org.springframework` de 5.3.9 a 5.3.18 i `org.springframework.boot` de 2.5.4 a 2.5.12
+   - Actualització de tots els mòduls de Canigó per a actualitzar `org.springframework` de 5.3.9 a 5.3.18,
+   `org.springframework.boot` de 2.5.4 a 2.5.12 i `spring.security` de 5.5.2 a 5.6.2
 - [Actualització de l’_archetype_ 1.7.4 i del _plugin_ Eclipse 1.8.4](/noticies/2022-04-11-CAN-Actualitzacio_archetype_1_7_4_plugin_eclipse_1_8_4/)
    - Actualització de l’_archetype_ versió 1.7.4 i del _plugin_ de l'Eclipse de Canigó versió 1.8.4 per a generar projectes amb Canigó 3.6.4.
 

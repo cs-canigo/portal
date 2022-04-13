@@ -7,8 +7,8 @@ description = "S'ha publicat la nova versió de Canigó 3.6.4 per a corregir la 
 #key = "MAIG2022"
 +++
 
-S'ha alliberat la **versió 3.6.4 del Framework Canigó** per a actualitzar `org.springframework` de 5.3.9 a 5.3.18 i
-`org.springframework.boot` de 2.5.4 a 2.5.12 amb l'objectiu de corregir la vulnerabilitat detectada.
+S'ha alliberat la **versió 3.6.4 del Framework Canigó** per a actualitzar `org.springframework` de 5.3.9 a 5.3.18,
+`org.springframework.boot` de 2.5.4 a 2.5.12 i `spring.security` de 5.5.2 a 5.6.2 amb l'objectiu de corregir la vulnerabilitat detectada.
 
 Podeu consultar l'abast complet de les noves versions a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
 
@@ -39,7 +39,8 @@ a Spring Cloud Function que pot ser explotada per accedir als recursos locals.
 - [CVE-2022-22950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22950): es tracta d'una vulnerabilitat de DoS de
 gravetat mitjana que afecta a Spring Framework.
 
-S'ha publicat la **versió 5.3.18 d'`org.springframework` i la versió 2.5.12 d'`org.springframework.boot` per a mitigar aquestes vulnerabilitats**.
+S'ha publicat la **versió 5.3.18 d'`org.springframework`, la versió 2.5.12 d'`org.springframework.boot` i la versió 5.6.2 d'`spring.security`
+per a mitigar aquestes vulnerabilitats**.
 
 Per més informació podeu consultar [Spring Framework RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement).
 
@@ -49,9 +50,9 @@ gran impacte, recomanant als usuaris i administradors de sistemes que prenguin m
 
 ## Canigó 3.6.4
 
-S'han publicat tots els mòduls del Framework Canigó 3.6 perquè passin a fer ús de la **versió 5.3.18 de `org.springframework`
-i la versió 2.5.12 de `org.springframework.boot` per a mitigar aquestes vulnerabilitats** alliberant la corresponent nova
-versió 3.6.4.
+S'han publicat tots els mòduls del Framework Canigó 3.6 perquè passin a fer ús de la **versió 5.3.18 de `org.springframework`,
+la versió 2.5.12 de `org.springframework.boot` i la versió 5.6.2 d'`spring.security` per a mitigar aquestes vulnerabilitats**
+alliberant la corresponent nova versió 3.6.4.
 
 Podeu consultar la informació de les versions a: [Binaris Canigó 3.6](/canigo/download/canigo-36/).
 
