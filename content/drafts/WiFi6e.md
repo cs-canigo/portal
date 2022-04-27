@@ -212,6 +212,7 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 
 * **Multi-Access Point Coordination** on els punts d'accés utilitzen els mateixos canals i es coordinen entre ells per a acordar la potència mínima imprescindible, de manera que puguin emetre alhora sense molestar-se.
 * **Hybrid Automatic Repeat Request (HARQ)**, es un sistema de control d'errors, més eficient que recupera els paquets corromputs, durant la transmissió.
+<br><br>
 
 ### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
 
@@ -222,7 +223,6 @@ Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del
   <img src="/images/bloc/2022/04/foto11.jpg" />
 </div>
 <br>
-
 
 ## **Conclusions** {#Conclusions}
 La característica principal de Wi-Fi 6E respecte a Wi-Fi 6 és que cobreix l'espectre de 6 GHz i permet tenir **canals addicionals** i especialment amplis en 160 MHz, la qual cosa, minimitza la congestió i permet connexions de molts **més dispositius**. A més, en tenir un major nombre de canals a les bandes on es poden transmetre grans quantitats de dades, Wi-Fi 6E donarà una **major velocitat** punta.
@@ -250,18 +250,17 @@ https://www.csoonline.com/article/3628205/what-cisos-need-to-know-about-wi-fi-6e
 https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 <br>
 
-##### **Glossari** {#Glossari}
-* **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
-* **OFDM** (de anglès Multiplexació per Divisió Ortogonal de Freqüencies)  consisteix a enviar un conjunt d'ones portadores de diferents freqüències, on cadascuna transporta informació, sent modulades en QAM o modulació per desplaçament de fase. 
-* **OFDMA** (de l'anglès Orthogonal Frequency Fivision Multiple Access) L'accés múltiple per divisió de freqüències ortogonals  és la versió multiusuari de la coneguda OFDM, multiplexació per divisió de freqüències ortogonals.
-* **MIMO** (de l’anglès  de Multiple-input Multiple-output). És una tecnologia sense fils que utilitza diversos transmissors i receptors per a poder enviar i rebre més dades al mateix temps. 
-* **MU-MIMO** significa que múltiples dispositius podran rebre de manera simultània diferents fluxos de dades.
-* **PSK**  (de l’anglès Pre-Shared Key). clau secreta compartida amb anterioritat. 
-* **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
-* **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
-* **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
+## **Glossari** {#Glossari}
+##### * **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
+##### * **OFDM** (de anglès Multiplexació per Divisió Ortogonal de Freqüencies)  consisteix a enviar un conjunt d'ones portadores de diferents freqüències, on cadascuna transporta informació, sent modulades en QAM o modulació per desplaçament de fase. 
+##### * **OFDMA** (de l'anglès Orthogonal Frequency Fivision Multiple Access) L'accés múltiple per divisió de freqüències ortogonals  és la versió multiusuari de la coneguda OFDM, multiplexació per divisió de freqüències ortogonals.
+##### * **MIMO** (de l’anglès  de Multiple-input Multiple-output). És una tecnologia sense fils que utilitza diversos transmissors i receptors per a poder enviar i rebre més dades al mateix temps. 
+##### * **MU-MIMO** significa que múltiples dispositius podran rebre de manera simultània diferents fluxos de dades.
+##### * **PSK**  (de l’anglès Pre-Shared Key). clau secreta compartida amb anterioritat. 
+##### * **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
+##### * **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
+##### * **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
 <br>
 <br>
-
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
 ###### **Direcció Arquitectura i Components Transversals**
