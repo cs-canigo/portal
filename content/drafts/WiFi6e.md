@@ -36,7 +36,7 @@ categories  = ["Articles","wifi"]
 Des que Wi-Fi es va llançar per primera vegada l’any 1997, els estàndards Wi-Fi han evolucionat contínuament, la qual cosa s’ha traduit en més velocitats de tranmissió i major cobertura. A mesura que s'agreguen noves capacitats a l'estàndard original IEEE 802.11, s'afegeix una lletra per la seva modificació (802.11b, 802.11g, 802.11n, 802.11ax, etc.).
 <br><br>
 L'any 2018, Wi-Fi Alliance va prendre mesures perquè els noms dels estàndards de Wi-Fi, fossin més fàcils d'identificar i comprendre (Wi-Fi 4, Wi-Fi 5, Wi-Fi 6, etc.).
-<br>zbr
+<br>
 A continuació, s’hi pot veure l’evolució técnica de l’estàndard IEEE 802.11:
 <br>
 <div align="center">
@@ -50,7 +50,7 @@ Fa a prop de dos anys que va aparèixer l'estàndard Wi-Fi  6 i ja es comença a
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/04/Foto3.jpg" />
+  <img src="/images/bloc/2022/04/foto3.jpg" />
 </div>
 <br>
 
@@ -82,7 +82,7 @@ La banda de 5 GHz al tenir major amplada de banda i més canals, provoca que est
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/04/Foto4.jpg" />
+  <img src="/images/bloc/2022/04/foto4.jpg" />
 </div>
 <br>
 Com més gran és l'ample del canal, més velocitat teòrica es pot aconseguir. 
@@ -122,7 +122,7 @@ Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera mé
 </td>
 <td align="center">
 <div align="center">
-  <img src="/images/bloc/2022/04/Foto7.jpg" text="Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora" />
+  <img src="/images/bloc/2022/04/foto7.jpg" text="Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora" />
 </div>
 </td>
 </tr>
@@ -219,7 +219,7 @@ Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del
 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/04/foto12.jpg" />
+  <img src="/images/bloc/2022/04/foto11.jpg" />
 </div>
 <br>
 
