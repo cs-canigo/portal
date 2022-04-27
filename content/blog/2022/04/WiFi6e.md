@@ -95,9 +95,9 @@ A Europa, a causa de la legislació actual, no es pot gaudir de tots els canals 
 L'estàndard Wi-Fi 6E utilitza demanera predeterminada 160 MHz d'ample de banda per canal. A Europa només  hi haurà disponibles 3 canals, això vol dir, que un total de 3 routers o punts d’accés, podran emetre a la xarxa wifi en aquesta banda de freqüències, sense que hi hagi interferències entre ells a causa de la proximitat. 
 <br><br>
 A diferència de les altres bandes wifi de 2,4 GHz i 5 GHz, els 6 GHz tenen algunes restriccions, com que els punts d'accés només poden utilitzar-se en interiors, incloent avions i trens però no en cotxes. Només es permetrà el seu ús en exteriors en dispositius portàtils utilitzant molt baixa potència, excloent en tot cas, l'ús per a drons.
-<br><br>
-
+<br>
 ###### [Inici] (#TaulaContiguts)
+<br><br>
 
 ##### **Modulació**
 **La modulació és la forma que tenen les xarxes sense fils de transmetre dades a través del medi (aire).**
@@ -147,6 +147,7 @@ Wi-Fi 6E és més segura que les versions anteriors, ja que
 Wi-Fi Alliance està exigint la certificació de seguretat WPA3, que reforça el xifratge i ho fa mitjançant un xifratge de 192 bits front els 128 dels seus predecessors. 
 <br><br>
 La seguretat WPA3 no és obligatoria a Wi-Fi 6.
+<br><br>
 
 ###### [Inici] (#TaulaContiguts)
 
@@ -210,9 +211,9 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 
 * **Multi-Access Point Coordination** on els punts d'accés utilitzen els mateixos canals i es coordinen entre ells per a acordar la potència mínima imprescindible, de manera que puguin emetre alhora sense molestar-se.
 * **Hybrid Automatic Repeat Request (HARQ)**, es un sistema de control d'errors, més eficient que recupera els paquets corromputs, durant la transmissió.
-<br><br>
-
+<br>
 ###### [Inici] (#TaulaContiguts)
+
 
 ##### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
 Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany. Document en el qual es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
