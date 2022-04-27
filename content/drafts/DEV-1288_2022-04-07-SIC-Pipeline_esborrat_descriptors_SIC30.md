@@ -10,8 +10,8 @@ description = "El SIC 3.0 proporciona una nova pipeline per a l'esborrat de desc
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. A més de proporcionar una pipeline principal per al desplegament de l'aplicació, es proporcionen
-pipelines avançades de desplegament:
+de les aplicacions**. A més de proporcionar una pipeline principal per al desplegament de l'aplicació i pipelines operatives
+(start, stop o restart), es proporcionen pipelines avançades de desplegament:
 
 - **DEPLOY-DESCRIPTORS**: permet desplegar canvis en els descriptors (noves variables d'entorn, canvis en la configuració i altres)
 sense fer la construcció i desplegament de la imatge.
@@ -29,7 +29,7 @@ a l'equip de Suport Cloud.
 Amb l'objectiu de dotar d'una major autonomia als lots d'aplicacions, el **SIC 3.0 passa a proporcionar una nova pipeline
 anomenada `DELETE-DESCRIPTORS` que s'encarregarà de l'esborrat de descriptors desplegats a Openshift i Kubernetes**.
 Aquesta pipeline s'ubica al directori "Advanced" i permetrà seleccionar l'entorn i el fitxer descriptor sobre el qual
-actuar (incloent-hi l'opció per a poder actuar sobre tots ells), i s'encarregarà de revertir el desplegament d'aquests
+actuar (permetent actuar sobre tots ells si així es requereix), i s'encarregarà de revertir el desplegament d'aquests
 a la plataforma de contenidors.
 Cal tenir present que el fitxer descriptor se seleccionarà d'entre els descriptors repositats al
 Servei de Custòdia de Codi, per la qual cosa, si aquest descriptor no ha estat desplegat prèviament, la pipeline finalitzarà
