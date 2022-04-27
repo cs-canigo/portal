@@ -63,7 +63,7 @@ Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 1
 
 ### **Descripció de l’estàndard Wi-Fi 6 i 6E** {#Descripcio}
 Les següents característiques tècniques de la Wi-Fi permeten que Wi-Fi 6 i 6E siguin més ràpides i eficients.
-<br><br>
+<br>
 
 #### **Bandes i canals** 
 Wi-Fi 6 fa ús de la xarxa de 2,4 GHz i 5 GHz alhora, amb això s’aconsegueix aprofitar els punts forts de les dues:
@@ -75,12 +75,14 @@ S’ha de tenir en compte, que la banda de 2,4 GHz, és la més utilitzada per a
 <br><br>
 La banda de 5 GHz al tenir major amplada de banda i més canals, provoca que estigui menys congestionada.
 <br><br> 
+
 **La novetat de l'estàndard Wi-Fi 6E, és que agrega la banda de freqüència de 6 GHz que  proporciona  un total de 1.200  MHz disponibles, amb el que es disposa d’una gran quantitat de nous canals.**
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto4.jpg" />
 </div>
 <br>
+
 Com més gran és l'ample del canal, més velocitat teòrica es pot aconseguir. 
 <br>
 La banda de 6 GHZ propociona millor velocitat en dispositius que estiguin a poca distància o que requereixin tenir menor abast.  A més, permet  tenir més amplada de banda disponible, per la qual cosa els routers wifi i els punts d'accés poden configurar-se en diferents canals sense que hi hagi interferències entre ells.
@@ -91,7 +93,6 @@ L'estàndard Wi-Fi 6E utilitza demanera predeterminada 160 MHz d'ample de banda 
 <br><br>
 A diferència de les altres bandes wifi de 2,4 GHz i 5 GHz, els 6 GHz tenen algunes restriccions, com que els punts d'accés només poden utilitzar-se en interiors, incloent avions i trens però no en cotxes. Només es permetrà el seu ús en exteriors en dispositius portàtils utilitzant molt baixa potència, excloent en tot cas, l'ús per a drons.
 <br><br>
-
 
 #### **Modulació**
 **La modulació és la forma que tenen les xarxes sense fils de transmetre dades a través del medi (aire).**
@@ -107,7 +108,6 @@ Depenent de la distància amb els clients, es modularà més agressivament propo
 
 A les primeres versions de wifi, s'utilitzava la tècnica de modulació OFDM, on cada usuari tenia un interval de temps o tot un canal d'amplada de banda.
 Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera més regular i uniforme, i els usuaris no han d'esperar tant de temps. 
-
 <br>
 <table border="0" align="center">
   <tr>
@@ -178,12 +178,10 @@ En cas de complir els requisits tècnics, es poden trobar diferents problemes a 
 <br><br>
 
 ## **Visió general de Wi-Fi 7 (Esborrany 802.11be)** {#CaracteristiquesPrincipals}
-
 Encara que Wi-Fi 6E  acaba de llançar-se al públic, ja es parla de Wi-Fi 7 i del que vindrà en els propers anys.
 Wi-Fi 7 és  capaç de transmetre un senyal de vídeo 8K sense comprimir amb 20 Gbps de cabal i una latència menor de 5 ms amb la finalitat que les xarxes sense fils siguin apropiades per a aplicacions futures de realitat virtual, augmentada i de gaming.
 
 ### **Característiques de Wi-Fi 7** {#CaracteristiquesWifi7}
-
 * **Ample de banda del canal fins a 320 MHz** : Amb Wi-Fi 5 i 6 es poden usar amples de canal de fins a 160 MHz unint 8 canals convencionals de 20 MHz. Wi-Fi 7 duplica aquesta xifra permetent unir fins a 16 canals. A més, no és necessari que aquests siguin contigus, la qual cosa és útil per a sumar canals amb poc ús repartits al llarg de la banda. De totes maneres aquesta enorme grandària de canal no pot utilitzar-se en tots els entorns. En la banda 5 GHz només hi cap un canal no contigu de 320 GHz. El mateix passa en la nova banda de 6 GHz, pel fet que a Europa tenim la meitat d'espectre habilitat que als EUA.
 
 * **Fins a 16 antenes MIMO** : Duplica la quantitat màxima d’antenes fins  a 16, la qual cosa directament duplica el cabal respecte a les 8 antenes de Wi-Fi 6. Encara que els clients utilitzin habitualment només dos fluxos, es podrà veure routers Wi-Fi 7 amb 16 antenes en cada banda.
@@ -227,7 +225,7 @@ No sempre es podrà aprofitar aquesta velocitat, ja que el senyal té una capaci
 Un factor important a tenir en compte, són els problemes de compatibilitat de Wi-Fi 6E amb dispositius antics. En el cas d'implementar Wi-Fi 6E, s'haurà de considerar el possible cost d'actualització dels dispositius que s’hi vulguin connectar.
 En resum, Wi-Fi 6E a 6Hz aporta:
 
-Disposar de més canals wifi.
+* Disposar de més canals wifi.
 * Més dispositius connectats.
 * Menys  interferències amb les xarxes wifi veïnes 
 * Major velocitats punta.
@@ -243,7 +241,6 @@ https://www.xataka.com/basics/que-wi-fi-6-que-ventajas-tiene-respecto-a-version-
 https://www.redeszone.net/tutoriales/redes-wifi/canales-wi-fi-6e-6ghz-disponibles-europa/ <br>
 https://www.csoonline.com/article/3628205/what-cisos-need-to-know-about-wi-fi-6e.html <br>
 https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
-<br>
 
 ## **Glossari** {#Glossari}
 * **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
