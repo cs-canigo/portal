@@ -25,7 +25,7 @@ key         = "MARÇ2022"
   3. [Personalització de l'Experiència d'Escriptori] (#PersonalitzacioExperienciaEscriptori)
   4. [Utilització de les antigues i noves aplicacions de forma millorada] (#UtilitzacioMillorada)
   5. [Desplegament i Servei] (#DesplegamentServei)
-3. [Referencies] (#Referencies)
+3. [Referències] (#Referencies)
 
 ---
 
@@ -181,7 +181,7 @@ En referencia a aquest punt, cal citar que s’haurà de ser curós amb els requ
 
 ###### [Inici] (#TaulaContiguts)
 
-## **Referencies** {#Referencies}
+## **Referències** {#Referencies}
 https://docs.microsoft.com/en-us/windows-hardware/get-started/what-s-new-in-windows <br>
 https://www.kensington.com/news/docking-connectivity-blog/key-benefits-of-windows-11-the-well-deserved-hype/ <br>
 https://docs.microsoft.com/en-us/lifecycle/policies/modern <br>
