@@ -14,7 +14,6 @@ categories  = ["Articles","wifi"]
 ---
 
 ## **Taula de Continguts** {#TaulaContiguts}
-
 1. [Introducció] (#Introduccio)
 2. [Característiques tècniques funcionals de Wi-Fi 6 i 6E] (#CaracteristiquesFuncionals)
   1. [Descripció de l’estàndard Wi-Fi 6 i 6E] (#Descripcio)
@@ -241,7 +240,6 @@ Disposar de més canals wifi.
 * Més seguretat a la xarxa.
 * Millor eficiència d'energia
 
-
 ## **Referències** {#Referencies}
 https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-6 <br>
 https://www.cisco.com/c/en/us/products/wireless/what-is-wi-fi-6e.html <br>
@@ -251,9 +249,8 @@ https://www.redeszone.net/tutoriales/redes-wifi/canales-wi-fi-6e-6ghz-disponible
 https://www.csoonline.com/article/3628205/what-cisos-need-to-know-about-wi-fi-6e.html <br>
 https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 <br>
-<br>
 
-## **Glossari** {#Glossari}
+##### **Glossari** {#Glossari}
 * **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
 * **OFDM** (de anglès Multiplexació per Divisió Ortogonal de Freqüencies)  consisteix a enviar un conjunt d'ones portadores de diferents freqüències, on cadascuna transporta informació, sent modulades en QAM o modulació per desplaçament de fase. 
 * **OFDMA** (de l'anglès Orthogonal Frequency Fivision Multiple Access) L'accés múltiple per divisió de freqüències ortogonals  és la versió multiusuari de la coneguda OFDM, multiplexació per divisió de freqüències ortogonals.
@@ -263,7 +260,6 @@ https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 * **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
 * **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
 * **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
-<br>
 <br>
 <br>
 
