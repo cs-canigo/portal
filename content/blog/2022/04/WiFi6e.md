@@ -185,7 +185,6 @@ Wi-Fi 7 és  capaç de transmetre un senyal de vídeo 8K sense comprimir amb 20 
 * **Ample de banda del canal fins a 320 MHz** : Amb Wi-Fi 5 i 6 es poden usar amples de canal de fins a 160 MHz unint 8 canals convencionals de 20 MHz. Wi-Fi 7 duplica aquesta xifra permetent unir fins a 16 canals. A més, no és necessari que aquests siguin contigus, la qual cosa és útil per a sumar canals amb poc ús repartits al llarg de la banda. De totes maneres aquesta enorme grandària de canal no pot utilitzar-se en tots els entorns. En la banda 5 GHz només hi cap un canal no contigu de 320 GHz. El mateix passa en la nova banda de 6 GHz, pel fet que a Europa tenim la meitat d'espectre habilitat que als EUA.
 
 * **Fins a 16 antenes MIMO** : Duplica la quantitat màxima d’antenes fins  a 16, la qual cosa directament duplica el cabal respecte a les 8 antenes de Wi-Fi 6. Encara que els clients utilitzin habitualment només dos fluxos, es podrà veure routers Wi-Fi 7 amb 16 antenes en cada banda.
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto9.jpg" />
