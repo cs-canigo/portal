@@ -1,12 +1,12 @@
 +++
 date        = "2022-04-26"
 title       = "Wi-Fi 6E: Visió General i evolució"
-description = "Ja fa 35 anys que va aparèixer la primera versió de l'estàndard Wi-Fi, conegut com a IEEE 802.11. La necessitat de més velocitat i més dispositius connectats a la xarxa wifi ha esdevingut  la darrera versió Wi-Fi 6E a 6 GHz i  ja  s’està treballant en la nova versió  Wi-Fi 7."
+description = "Ja fa 35 anys que va aparèixer la primera versió de l'estàndard Wi-Fi, conegut com a IEEE 802.11. La necessitat de més velocitat i més dispositius connectats a la xarxa wifi ha esdevingut  la darrera versió Wi-Fi 6E a 6 GHz i  ja  s'hi està treballant en la nova versió de Wi-Fi 7."
 responsable = "Unitat d'arquitectura"
 sections    = ["Blog", "home"]
 blog_tags   = ["wifi"]
 categories  = ["wifi"]
-imatge      = "/images/bloc/2022/04/foto1.jpg"
+imatge      = "/images/bloc/2022/04/foto1.png"
 key         = "ABRIL2022"
 +++
 
@@ -136,7 +136,7 @@ Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera mé
 Wi-Fi 6 i Wi-Fi 6E utilitza com a màxim 8 antenes que té el router wifi o el punt d'accés. I la tecnologia MU-MIMO permet augmentar la velocitat i el rendiment de la xarxa wifi. 
 <br>
 <div align="center">
-  <img src="/images/bloc/2022/04/foto8.jpg" />
+  <img src="/images/bloc/2022/04/foto8.png" />
 </div>
 <br>
 
@@ -213,7 +213,7 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany. Document en el qual es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
 <br>
 <div align="center" >
-  <img src="/images/bloc/2022/04/foto11.jpg" />
+  <img src="/images/bloc/2022/04/foto11.png" />
 </div>
 <br>
 
