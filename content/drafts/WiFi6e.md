@@ -26,7 +26,6 @@ categories  = ["Articles","wifi"]
 6. [Referencies] (#Referencies)
 7. [Glossari] (#Glossari)
 
-
 ---
 
 ## **Introducció** {#Introduccio}
@@ -169,7 +168,6 @@ Els requisits necessaris per a poder connectar-se són:
 * **Drivers a l'última versió**. Si es connecta des d'un ordinador, és totalment necessari comptar amb els darrers drivers de les targetes de xarxa compatibles instal·lats en l'equip, en cas contrari, es podrien trobar fallades inesperades: errors de connexió aleatoris, problemes amb la cobertura i fins i tot talls en la xarxa wifi.
 * **Sistema operatiu compatible**: Windows 10 Pro o anteriors, no són compatibles amb el Wi-Fi 6E. És totalment necessari Windows 10 Pro amb l'última versió de «Insider» de Microsoft, o bé instal·lar el nou sistema operatiu Windows 11. Altres sistemes operatius s’espera que siguin compatibles amb versions posteriors. 
 
-<br><br>
 En cas de complir els requisits tècnics, es poden trobar diferents problemes a l’hora de connectar-se com:
 
 * No detectar la xarxa Wi-Fi de 6 GHz.
