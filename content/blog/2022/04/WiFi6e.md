@@ -68,7 +68,7 @@ Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 1
 Les següents característiques tècniques de la Wi-Fi permeten que Wi-Fi 6 i 6E siguin més ràpides i eficients.
 <br>
 
-#### **Bandes i canals** 
+##### **Bandes i canals** 
 Wi-Fi 6 fa ús de la xarxa de 2,4 GHz i 5 GHz alhora, amb això s’aconsegueix aprofitar els punts forts de les dues:
 
 * **Major distancia**  de la xarxa de 2,4 GHz  
@@ -97,7 +97,9 @@ L'estàndard Wi-Fi 6E utilitza demanera predeterminada 160 MHz d'ample de banda 
 A diferència de les altres bandes wifi de 2,4 GHz i 5 GHz, els 6 GHz tenen algunes restriccions, com que els punts d'accés només poden utilitzar-se en interiors, incloent avions i trens però no en cotxes. Només es permetrà el seu ús en exteriors en dispositius portàtils utilitzant molt baixa potència, excloent en tot cas, l'ús per a drons.
 <br><br>
 
-#### **Modulació**
+###### [Inici] (#TaulaContiguts)
+
+##### **Modulació**
 **La modulació és la forma que tenen les xarxes sense fils de transmetre dades a través del medi (aire).**
 <br>
 Amb  Wi-Fi 6 i Wi-Fi 6E, la  modulació com a màxim por arribar a  1024-QAM, és a dir, s’aconsegueix transmetre més bits en el mateix interval de temps. 
@@ -132,15 +134,15 @@ Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera mé
 </table>
 <br>
 
-#### **MIMO**
-Wi-Fi 6 i Wi-Fi 6E utilitza com a màxim 8 antenes que té el router wifi o el punt d'accés. I la tecnologia MU-MIMO permet augmentar la velocitat i el rendiment de la xarxa wifi. 
+##### **MIMO**
+Wi-Fi 6 i Wi-Fi 6E utilitza com a màxim 8 antenes que té el router wifi o el punt d'accés. La tecnologia MU-MIMO permet augmentar la velocitat i el rendiment de la xarxa wifi. 
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto8.png" />
 </div>
 <br>
 
-#### **Seguretat** 
+##### **Seguretat** 
 Wi-Fi 6E és més segura que les versions anteriors, ja que
 Wi-Fi Alliance està exigint la certificació de seguretat WPA3, que reforça el xifratge i ho fa mitjançant un xifratge de 192 bits front els 128 dels seus predecessors. 
 <br><br>
@@ -177,11 +179,13 @@ En cas de complir els requisits tècnics, es poden trobar diferents problemes a 
 * Tenir talls a la xarxa wifi per no tenir bona cobertura.  
 * Igual que amb qualsevol tecnologia emergent, l'adopció de Wi-Fi 6E té el potencial per crear nous riscos de ciberseguretat, com vulnerabilitats.
 
+###### [Inici] (#TaulaContiguts)
+
 ## **Visió general de Wi-Fi 7 (Esborrany 802.11be)** {#CaracteristiquesPrincipals}
 Encara que Wi-Fi 6E  acaba de llançar-se al públic, ja es parla de Wi-Fi 7 i del que vindrà en els propers anys.
 Wi-Fi 7 és  capaç de transmetre un senyal de vídeo 8K sense comprimir amb 20 Gbps de cabal i una latència menor de 5 ms amb la finalitat que les xarxes sense fils siguin apropiades per a aplicacions futures de realitat virtual, augmentada i de gaming.
 
-### **Característiques de Wi-Fi 7** {#CaracteristiquesWifi7}
+##### **Característiques de Wi-Fi 7** {#CaracteristiquesWifi7}
 * **Ample de banda del canal fins a 320 MHz** : Amb Wi-Fi 5 i 6 es poden usar amples de canal de fins a 160 MHz unint 8 canals convencionals de 20 MHz. Wi-Fi 7 duplica aquesta xifra permetent unir fins a 16 canals. A més, no és necessari que aquests siguin contigus, la qual cosa és útil per a sumar canals amb poc ús repartits al llarg de la banda. De totes maneres aquesta enorme grandària de canal no pot utilitzar-se en tots els entorns. En la banda 5 GHz només hi cap un canal no contigu de 320 GHz. El mateix passa en la nova banda de 6 GHz, pel fet que a Europa tenim la meitat d'espectre habilitat que als EUA.
 
 * **Fins a 16 antenes MIMO** : Duplica la quantitat màxima d’antenes fins  a 16, la qual cosa directament duplica el cabal respecte a les 8 antenes de Wi-Fi 6. Encara que els clients utilitzin habitualment només dos fluxos, es podrà veure routers Wi-Fi 7 amb 16 antenes en cada banda.
@@ -208,7 +212,9 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 * **Hybrid Automatic Repeat Request (HARQ)**, es un sistema de control d'errors, més eficient que recupera els paquets corromputs, durant la transmissió.
 <br><br>
 
-### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
+###### [Inici] (#TaulaContiguts)
+
+##### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
 Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany. Document en el qual es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
 <br>
 <div align="center" >
@@ -232,6 +238,7 @@ En resum, Wi-Fi 6E a 6Hz aporta:
 * Més seguretat a la xarxa.
 * Millor eficiència d'energia
 
+
 ## **Referències** {#Referencies}
 https://www.wi-fi.org/discover-wi-fi/wi-fi-certified-6 <br>
 https://www.cisco.com/c/en/us/products/wireless/what-is-wi-fi-6e.html <br>
@@ -240,6 +247,7 @@ https://www.xataka.com/basics/que-wi-fi-6-que-ventajas-tiene-respecto-a-version-
 https://www.redeszone.net/tutoriales/redes-wifi/canales-wi-fi-6e-6ghz-disponibles-europa/ <br>
 https://www.csoonline.com/article/3628205/what-cisos-need-to-know-about-wi-fi-6e.html <br>
 https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
+
 
 ## **Glossari** {#Glossari}
 * **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
@@ -251,6 +259,8 @@ https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 * **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
 * **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
 * **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
+
+###### [Inici] (#TaulaContiguts)
 <br>
 <br>
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
