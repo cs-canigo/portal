@@ -131,7 +131,6 @@ Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera mé
 
 #### **MIMO**
 Wi-Fi 6 i Wi-Fi 6E utilitza com a màxim 8 antenes que té el router wifi o el punt d'accés. I la tecnologia MU-MIMO permet augmentar la velocitat i el rendiment de la xarxa wifi. 
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto8.jpg" />
@@ -175,8 +174,6 @@ En cas de complir els requisits tècnics, es poden trobar diferents problemes a 
 * Tenir talls a la xarxa wifi per no tenir bona cobertura.  
 * Igual que amb qualsevol tecnologia emergent, l'adopció de Wi-Fi 6E té el potencial per crear nous riscos de ciberseguretat, com vulnerabilitats.
 
-<br><br>
-
 ## **Visió general de Wi-Fi 7 (Esborrany 802.11be)** {#CaracteristiquesPrincipals}
 Encara que Wi-Fi 6E  acaba de llançar-se al públic, ja es parla de Wi-Fi 7 i del que vindrà en els propers anys.
 Wi-Fi 7 és  capaç de transmetre un senyal de vídeo 8K sense comprimir amb 20 Gbps de cabal i una latència menor de 5 ms amb la finalitat que les xarxes sense fils siguin apropiades per a aplicacions futures de realitat virtual, augmentada i de gaming.
@@ -198,7 +195,7 @@ Són aquestes tres primeres millores: 320 MHz, 16 antenes i 4096-QAM  les que pe
 * **Agregació de bandes amb MLO** : MLO és una de les grans novetats de Wi-Fi 7 que pren la característica que ha permès a les xarxes mòbils oferir connexions més resilients i amb major capacitat. 
 Consisteix a sumar la connexió simultània amb el router a través de diverses bandes per a crear un únic enllaç lògic. La velocitat total que s'obté és la suma del cabal que aporta cada banda i com que cada freqüència té propietats diferents, com la de 2,4 GHz amb el seu major abast, la connexió aconsegueix ser més fiable. També influeix positivament en una millor latència.
 <br>
-<div align="center" width="80%">
+<div align="center" width="70%">
   <img src="/images/bloc/2022/04/foto10.jpg" />
 </div>
 <br>
