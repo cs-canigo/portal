@@ -307,16 +307,31 @@
             },
             {
                 "inom": "V03",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
                 "idescripcio": "Actualització versió anterior per incorporar la Casa de la Generalitat a Perpinyà i modificar el nom de \"Direcció General d'Administració Digital\" per \"Direcció General d'Administració Digital i d'Organització\".",
                 "ifitxer_doc": "Direccions_Generals_ATR.docx",
-                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "ifitxer_xls": "deprecated/Direccions_Generals_v03.xlsx",
                 "idatacreacio": "22/02/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/04/2022",
                 "idatapublicacio": "23/02/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V04",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Oficina d’Organització de l'Administració i del Sector Públic",
+                "idescripcio": "Actualització versió anterior per canvi de nom de 3 direccions generals: \"Direcció General d'Alumnat\", \"Direcció General d'Innovació, Digitalització i Recerca Educativa\" i \"Direcció General de Currículum i Personalització\"  per \"Direcció General de l'Alumnat\",\"Direcció General d'Innovació, Digitalització i Currículum\" i \"Direcció General d'Educació Inclusiva i Llengües\" respectivament.",
+                "ifitxer_doc": "Direccions_Generals_ATR.docx",
+                "ifitxer_xls": "Direccions_Generals.xlsx",
+                "idatacreacio": "26/04/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Sector-P%C3%BAblic/Direccions-generals/qh8m-68gu",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -324,7 +339,7 @@
         "nom_dinsBD": "DIRECCIONS_GENERALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/01/2021",
-        "Data_actualitzacio": "23/02/2022"
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq103",
@@ -1041,6 +1056,34 @@
         "Data_actualitzacio": "30/06/2021"
     },
     {
+        "Id": "dtarq176",
+        "Nom": "Àrees professionals",
+        "Ambit": "Educació, formació i universitats",
+        "Subambit": "Ordenació curricular i títols acadèmics",
+        "Descripcio": "Llistat d'àrees professionals associades a cada una de les famílies professionals.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Arees_professionals_ATR.docx",
+                "ifitxer_xls": "Arees_professionals.xlsx",
+                "idatacreacio": "14/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "AREES_PROFESSIONALS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "27/04/2022",
+        "Data_actualitzacio": "27/04/2022"
+    },
+    {
         "Id": "dtarq133",
         "Nom": "Idioma de comunicació",
         "Ambit": "Informació i comunicació",
@@ -1328,25 +1371,25 @@
         "Descripcio": "Llistat d'àrees bàsiques de salut, àrees territorials primàries d'atenció al ciutadà, tercer nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
                 "ifitxer_xls": "Arees_basiques_salut.xlsx",
                 "idatacreacio": "24/01/2022",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/%C3%80rees-b%C3%A0siques-salut/tqzv-uu8e",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "AREES_BASIQUES_SALUT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/04/2022",
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq158",
@@ -1372,16 +1415,31 @@
             },
             {
                 "inom": "V02",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
                 "idescripcio": "Actualització versió anterior per modificar valors atribut codi.",
                 "ifitxer_doc": "Regions_sanitaries_ATR.docx",
-                "ifitxer_xls": "Regions_sanitaries.xlsx",
+                "ifitxer_xls": "deprecated/Regions_sanitaries_v02.xlsx",
                 "idatacreacio": "25/01/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/04/2022",
                 "idatapublicacio": "26/01/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V03",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Departament de Salut",
+                "idescripcio": "Actualització per posar els noms de les regions sanitàries en majúscules.",
+                "ifitxer_doc": "Regions_sanitaries_ATR.docx",
+                "ifitxer_xls": "Regions_sanitaries.xlsx",
+                "idatacreacio": "26/04/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Regions-sanit%C3%A0ries/q2jd-tqye",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -1389,7 +1447,7 @@
         "nom_dinsBD": "REGIONS_SANITARIES",
         "Classificacio": "Consolidat",
         "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "26/01/2022"
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq159",
@@ -1399,25 +1457,25 @@
         "Descripcio": "Llistat de sectors sanitaris, segon nivell jeràrquic en què es divideix el territori de Catalunya per gestionar els serveis sanitaris i l'atenció primària.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Departament de Salut",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
                 "ifitxer_xls": "Sectors_sanitaris.xlsx",
                 "idatacreacio": "24/01/2022",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Salut/Sectors-sanitaris/x6cr-7awp",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "SECTORS_SANITARIS",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/04/2022",
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq172",
@@ -2153,16 +2211,31 @@
             },
             {
                 "inom": "V07",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
                 "idescripcio": "Actualització versió anterior per canvi nom de 2 municipis (codis ine: 312093 i 311363)",
                 "ifitxer_doc": "Municipis_Espanya_ATR.docx",
-                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Codis_Territori_Municipis_Espanya_V07.xlsx",
                 "idatacreacio": "11/03/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/04/2022",
                 "idatapublicacio": "23/03/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V08",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Actualització versió anterior per canvi de nom de 21 municipis",
+                "ifitxer_doc": "Municipis_Espanya_ATR.docx",
+                "ifitxer_xls": "Municipis_Espanya.xlsx",
+                "idatacreacio": "25/04/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Municipis-Espanya/x5xm-w9x7",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2170,7 +2243,7 @@
         "nom_dinsBD": "MUNICIPIS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "20/04/2020",
-        "Data_actualitzacio": "23/03/2022"
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq127",
@@ -2628,16 +2701,31 @@
             },
             {
                 "inom": "V06",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització versió anterior per canvi nom de 2 municipis (codis ine: 31209000000 i 31136000000)",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V06.xlsx",
                 "idatacreacio": "11/03/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "27/04/2022",
                 "idatapublicacio": "23/03/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V07",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Actualització versió anterior per canvi de nom de 21 municipis, implica canvi de nom de 80 unitats poblacionals",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "25/04/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2645,7 +2733,35 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "23/03/2022"
+        "Data_actualitzacio": "27/04/2022"
+    },
+    {
+        "Id": "dtarq175",
+        "Nom": "Famílies professionals",
+        "Ambit": "Treball",
+        "Subambit": "Formació ocupacional",
+        "Descripcio": "Llistat de famílies professionals.",
+        "instancies": [
+            {
+                "inom": "V00.01",
+                "iestat": "Pendent",
+                "itipus": "Tabular",
+                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "idescripcio": "Versió inicial",
+                "ifitxer_doc": "Families_professionals_ATR.docx",
+                "ifitxer_xls": "Families_professionals.xlsx",
+                "idatacreacio": "11/12/2020",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "FAMILIES_PROFESSIONALS",
+        "Classificacio": "Pendent",
+        "Data_publicacio": "27/04/2022",
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq111",
@@ -2698,25 +2814,25 @@
         "Descripcio": "Llistat per anys dels dies festius d'àmbit general de Catalunya.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
+                "ipromotor": "Sub. Gral. de Relacions Laborals, Treball Autònom i Qualitat en el Treball – Departament d'Empresa i Treball",
                 "idescripcio": "Versió inicial",
                 "ifitxer_doc": "Festius_generals_Catalunya_ATR.docx",
                 "ifitxer_xls": "Festius_generals_Catalunya.xlsx",
                 "idatacreacio": "25/10/2021",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "26/01/2022",
-                "iurl_dades_obertes": "",
+                "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Treball/Festius-generals-de-Catalunya/8qnu-agns",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "FESTIUS_GENERALS_CAT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "26/01/2022",
-        "Data_actualitzacio": "26/01/2022"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "27/04/2022",
+        "Data_actualitzacio": "27/04/2022"
     },
     {
         "Id": "dtarq170",
@@ -2746,5 +2862,4 @@
         "Data_publicacio": "26/01/2022",
         "Data_actualitzacio": "26/01/2022"
     }
-]
-}
+]}
