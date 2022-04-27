@@ -4,7 +4,7 @@ title       = "SIC. Nova pipeline d'esborrat de descriptors al SIC 3.0"
 description = "El SIC 3.0 proporciona una nova pipeline per a l'esborrat de descriptors desplegats (DELETE-DESCRIPTORS)."
 #sections    = ["Notícies", "home"]
 #categories  = ["SIC"]
-#key         = "MAIG2022"
+#key         = "JUNY2022"
 +++
 
 ## Introducció
