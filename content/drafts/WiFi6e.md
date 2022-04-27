@@ -23,7 +23,7 @@ categories  = ["Articles","wifi"]
   1. [Característiques de Wi-Fi 7] (#CaracteristiquesWifi7)
   2. [Quan sortirà Wi-Fi 7] (#SortirWifi7)
 5. [Conclusions] (#Conclusions)
-6. [Referencies] (#Referencies)
+6. [Referències] (#Referencies)
 7. [Glossari] (#Glossari)
 
 ---
@@ -57,7 +57,6 @@ El Wi-Fi 6E neix de la necessitat de connectar a la xarxa wifi, una gran quantit
 <br><br>
 A diferència de Wi-Fi 6, Wi-Fi 6E no és un estàndard. És una extensió de l'estàndard Wi-Fi 6 que permet gaudir de la nova banda de freqüència de 6 GHz amb l’objectiu de disposar de més canals wifi.
 
----
 
 ## **Característiques tècniques funcionals de Wi-Fi 6 i 6E** {#CaracteristiquesFuncionals}
 
@@ -66,6 +65,8 @@ Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 1
 
 ### **Descripció de l’estàndard Wi-Fi 6 i 6E** {#Descripcio}
 Les següents característiques tècniques de la Wi-Fi permeten que Wi-Fi 6 i 6E siguin més ràpides i eficients.
+
+<br><br>
 
 #### **Bandes i canals** 
 Wi-Fi 6 fa ús de la xarxa de 2,4 GHz i 5 GHz alhora, amb això s’aconsegueix aprofitar els punts forts de les dues:
@@ -112,19 +113,23 @@ A les primeres versions de wifi, s'utilitzava la tècnica de modulació OFDM, on
 Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera més regular i uniforme, i els usuaris no han d'esperar tant de temps. 
 
 <br>
-<table>
-<tr>
-<td align="center">
-<div align="center">
-  <img src="/images/bloc/2022/04/foto6.jpg"  text="Portadores OFDM de Wi-Fi 5 transportant la informació d'un client darrere d'un altre "/>
-  </div>
-</td>
-<td align="center">
-<div align="center">
-  <img src="/images/bloc/2022/04/foto7.jpg" text="Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora" />
-</div>
-</td>
-</tr>
+<table align="center">
+  <tr>
+    <td align="center">
+      <div align="center">
+        <img src="/images/bloc/2022/04/foto6.jpg"  text="Portadores OFDM de Wi-Fi 5 transportant la informació d'un client darrere d'un altre "/>
+      </div>
+    </td>
+    <td align="center">
+      <div align="center">
+        <img src="/images/bloc/2022/04/foto7.jpg" text="Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora" />
+      </div>
+    </td> 
+  </tr>
+  <tr>
+    <td>Portadores OFDM de Wi-Fi 5 transportant la informació d'un client darrere d'un altre</td>
+    <td>Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora</td>
+  </tr>  
 </table>
 <br>
 
