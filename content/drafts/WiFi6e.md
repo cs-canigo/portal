@@ -31,9 +31,9 @@ categories  = ["Articles","wifi"]
 ## **Introducció** {#Introduccio}
 
 **Wi-Fi és la tecnologia que permet a molts dispositius electrònics connectar-se sense fils a Internet o una xarxa determinada mitjançant ones de ràdio.**
-<br><br>
+<br>
 Des que Wi-Fi es va llançar per primera vegada l’any 1997, els estàndards Wi-Fi han evolucionat contínuament, la qual cosa s’ha traduit en més velocitats de tranmissió i major cobertura. A mesura que s'agreguen noves capacitats a l'estàndard original IEEE 802.11, s'afegeix una lletra per la seva modificació (802.11b, 802.11g, 802.11n, 802.11ax, etc.).
-<br><br>
+<br>
 L'any 2018, Wi-Fi Alliance va prendre mesures perquè els noms dels estàndards de Wi-Fi, fossin més fàcils d'identificar i comprendre (Wi-Fi 4, Wi-Fi 5, Wi-Fi 6, etc.).
 <br>
 A continuació, s’hi pot veure l’evolució técnica de l’estàndard IEEE 802.11:
@@ -46,7 +46,6 @@ A continuació, s’hi pot veure l’evolució técnica de l’estàndard IEEE 8
 Cada versió de l'estàndard porta una sèrie de millores, algunes d'elles són indispensables, i altres, són opcionals. 
 <br><br>
 Fa a prop de dos anys que va aparèixer l'estàndard Wi-Fi  6 i ja es comença a desplegar sobre tot a entorns on la wifi és crítica, i fa relativament poc, que va arribar al mercat Wi-Fi 6E. 
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto3.jpg" />
@@ -59,13 +58,11 @@ A diferència de Wi-Fi 6, Wi-Fi 6E no és un estàndard. És una extensió de l'
 
 
 ## **Característiques tècniques funcionals de Wi-Fi 6 i 6E** {#CaracteristiquesFuncionals}
-
 Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 11 i l’anterior, es destaquen  les següents:
 <br>
 
 ### **Descripció de l’estàndard Wi-Fi 6 i 6E** {#Descripcio}
 Les següents característiques tècniques de la Wi-Fi permeten que Wi-Fi 6 i 6E siguin més ràpides i eficients.
-
 <br><br>
 
 #### **Bandes i canals** 
@@ -79,7 +76,6 @@ S’ha de tenir en compte, que la banda de 2,4 GHz, és la més utilitzada per a
 La banda de 5 GHz al tenir major amplada de banda i més canals, provoca que estigui menys congestionada.
 <br><br> 
 **La novetat de l'estàndard Wi-Fi 6E, és que agrega la banda de freqüència de 6 GHz que  proporciona  un total de 1.200  MHz disponibles, amb el que es disposa d’una gran quantitat de nous canals.**
-
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto4.jpg" />
@@ -113,16 +109,16 @@ A les primeres versions de wifi, s'utilitzava la tècnica de modulació OFDM, on
 Wi-Fi 6 i Wi-Fi 6E fa servir OFDMA, que permet lliurar els paquets de manera més regular i uniforme, i els usuaris no han d'esperar tant de temps. 
 
 <br>
-<table align="center">
+<table border="0" align="center">
   <tr>
     <td align="center">
       <div align="center">
-        <img src="/images/bloc/2022/04/foto6.jpg"  text="Portadores OFDM de Wi-Fi 5 transportant la informació d'un client darrere d'un altre "/>
+        <img src="/images/bloc/2022/04/foto6.jpg" />
       </div>
     </td>
     <td align="center">
       <div align="center">
-        <img src="/images/bloc/2022/04/foto7.jpg" text="Portadores OFDMA de Wi-Fi 6 en grups transportant la informació de diversos clients alhora" />
+        <img src="/images/bloc/2022/04/foto7.jpg" />
       </div>
     </td> 
   </tr>
@@ -151,7 +147,6 @@ La seguretat WPA3 no és obligatoria a Wi-Fi 6.
 ###### [Inici] (#TaulaContiguts)
 
 ### **Equipament Wi-Fi 6E Certificat** {#Equipament}
-
 Wi-Fi Alliance certifica que els equips fabricats per les marques compleixen amb l'estàndard i siguin interoperables entre si.
 A la web oficial de productes de Wi-Fi Alliance (https://www.wi-fi.org/product-finder-results) apareixen tots els dispositius certificats per l'organització i quins equips estan certificats amb l'últim estàndard Wi-Fi 6E. 
 <br><br>
@@ -163,7 +158,6 @@ En la secció de << **All Capabilities** >>  es selecciona i es desplegar l'opci
 
 
 ## **Requeriments tècnics i riscos** {#RequerimentsTecnicsRiscos}
-
 Les xarxes wifi en la banda de 6 GHz son una novetat de l'any 2021, i és molt possible que apareguin problemes. 
 
 Els requisits necessaris per a poder connectar-se són:
@@ -206,7 +200,7 @@ Són aquestes tres primeres millores: 320 MHz, 16 antenes i 4096-QAM  les que pe
 * **Agregació de bandes amb MLO** : MLO és una de les grans novetats de Wi-Fi 7 que pren la característica que ha permès a les xarxes mòbils oferir connexions més resilients i amb major capacitat. 
 Consisteix a sumar la connexió simultània amb el router a través de diverses bandes per a crear un únic enllaç lògic. La velocitat total que s'obté és la suma del cabal que aporta cada banda i com que cada freqüència té propietats diferents, com la de 2,4 GHz amb el seu major abast, la connexió aconsegueix ser més fiable. També influeix positivament en una millor latència.
 <br>
-<div align="center">
+<div align="center" width="80%">
   <img src="/images/bloc/2022/04/foto10.jpg" />
 </div>
 <br>
@@ -218,11 +212,9 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 <br><br>
 
 ### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
-
 Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany. Document en el qual es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
-
 <br>
-<div align="center">
+<div align="center" >
   <img src="/images/bloc/2022/04/foto11.jpg" />
 </div>
 <br>
@@ -254,15 +246,15 @@ https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117 <br>
 <br>
 
 ## **Glossari** {#Glossari}
-##### * **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
-##### * **OFDM** (de anglès Multiplexació per Divisió Ortogonal de Freqüencies)  consisteix a enviar un conjunt d'ones portadores de diferents freqüències, on cadascuna transporta informació, sent modulades en QAM o modulació per desplaçament de fase. 
-##### * **OFDMA** (de l'anglès Orthogonal Frequency Fivision Multiple Access) L'accés múltiple per divisió de freqüències ortogonals  és la versió multiusuari de la coneguda OFDM, multiplexació per divisió de freqüències ortogonals.
-##### * **MIMO** (de l’anglès  de Multiple-input Multiple-output). És una tecnologia sense fils que utilitza diversos transmissors i receptors per a poder enviar i rebre més dades al mateix temps. 
-##### * **MU-MIMO** significa que múltiples dispositius podran rebre de manera simultània diferents fluxos de dades.
-##### * **PSK**  (de l’anglès Pre-Shared Key). clau secreta compartida amb anterioritat. 
-##### * **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
-##### * **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
-##### * **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
+* **QAM** (de l’anglès, Quadrature Amplitude Modulation) Modulació d'amplitud en quadratura és una forma de modulació que s'utilitza àmpliament per a la modulació dels senyals de dades sobre un portador utilitzat per a les comunicacions de ràdio.
+* **OFDM** (de anglès Multiplexació per Divisió Ortogonal de Freqüencies)  consisteix a enviar un conjunt d'ones portadores de diferents freqüències, on cadascuna transporta informació, sent modulades en QAM o modulació per desplaçament de fase. 
+* **OFDMA** (de l'anglès Orthogonal Frequency Fivision Multiple Access) L'accés múltiple per divisió de freqüències ortogonals  és la versió multiusuari de la coneguda OFDM, multiplexació per divisió de freqüències ortogonals.
+* **MIMO** (de l’anglès  de Multiple-input Multiple-output). És una tecnologia sense fils que utilitza diversos transmissors i receptors per a poder enviar i rebre més dades al mateix temps. 
+* **MU-MIMO** significa que múltiples dispositius podran rebre de manera simultània diferents fluxos de dades.
+* **PSK**  (de l’anglès Pre-Shared Key). clau secreta compartida amb anterioritat. 
+* **WPA3** (de l’ anglès Wi-Fi Protected Access) Claus xifrades de 192 bits, molt més difícils de desxifrar. 
+* **OWE** (de l’anglès Enhanced Open) és un nou estàndard de seguretat WFA per a xarxes públiques basat en el xifratge sense fil oportunista (OWE). Proporciona encriptació i privacitat en xarxes obertes sense contrasenya. Enhanced Open no proporciona autenticació.
+* **MLO** (de  l’anglès Multi-link Operation) la tecnologia d'operació multi enllaç  que agrega de manera simultània múltiples canals en diferents bandes i permet que el trànsit de xarxa flueixi sense problemes encara que hi hagi interferències o congestió.
 <br>
 <br>
 ###### **Unitat Arquitectura d'Entorn Digital de Treball** <br>
