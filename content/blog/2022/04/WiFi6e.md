@@ -66,7 +66,7 @@ Com a grans pilars, diferencies i evolucions  entre la nova versió de Windows 1
 
 ### **Descripció de l’estàndard Wi-Fi 6 i 6E** {#Descripcio}
 Les següents característiques tècniques de la Wi-Fi permeten que Wi-Fi 6 i 6E siguin més ràpides i eficients.
-<br>
+<br><br>
 
 ##### **Bandes i canals** 
 Wi-Fi 6 fa ús de la xarxa de 2,4 GHz i 5 GHz alhora, amb això s’aconsegueix aprofitar els punts forts de les dues:
