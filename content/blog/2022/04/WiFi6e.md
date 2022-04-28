@@ -81,7 +81,7 @@ La banda de 5 GHz al tenir major amplada de banda i més canals, provoca que est
 
 **La novetat de l'estàndard Wi-Fi 6E, és que agrega la banda de freqüència de 6 GHz que  proporciona  un total de 1.200  MHz disponibles, amb el que es disposa d’una gran quantitat de nous canals.**
 <br>
-<div align="center">
+<div align="center" width="70%" >
   <img src="/images/bloc/2022/04/foto4.jpg" />
 </div>
 <br>
