@@ -217,7 +217,7 @@ Hi ha altres millores que s'estan definint i no tenen a veure amb la velocitat, 
 
 
 ##### **Quan sortirà Wi-Fi 7** {#SortirWifi7}
-Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany. Document en el qual es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
+Amb la primera versió de l'esborrany publicada, el grup de treball 802.11be del IEEE disposa de dos anys per publicar al maig de 2023, el quart esborrany del document en el qual, es basaran els fabricants que vulguin ser els primers a posar equips Wi-Fi 7 al mercat, aprofitant que Wi-Fi Alliance estrenarà el seu programa de certificació.
 <br>
 <div align="center" >
   <img src="/images/bloc/2022/04/foto11.png" />
