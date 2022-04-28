@@ -185,6 +185,7 @@ En cas de complir els requisits tècnics, es poden trobar diferents problemes a 
 ## **Visió general de Wi-Fi 7 (Esborrany 802.11be)** {#CaracteristiquesPrincipals}
 Encara que Wi-Fi 6E  acaba de llançar-se al públic, ja es parla de Wi-Fi 7 i del que vindrà en els propers anys.
 Wi-Fi 7 és  capaç de transmetre un senyal de vídeo 8K sense comprimir amb 20 Gbps de cabal i una latència menor de 5 ms amb la finalitat que les xarxes sense fils siguin apropiades per a aplicacions futures de realitat virtual, augmentada i de gaming.
+<br><br>
 
 ##### **Característiques de Wi-Fi 7** {#CaracteristiquesWifi7}
 * **Ample de banda del canal fins a 320 MHz** : Amb Wi-Fi 5 i 6 es poden usar amples de canal de fins a 160 MHz unint 8 canals convencionals de 20 MHz. Wi-Fi 7 duplica aquesta xifra permetent unir fins a 16 canals. A més, no és necessari que aquests siguin contigus, la qual cosa és útil per a sumar canals amb poc ús repartits al llarg de la banda. De totes maneres aquesta enorme grandària de canal no pot utilitzar-se en tots els entorns. En la banda 5 GHz només hi cap un canal no contigu de 320 GHz. El mateix passa en la nova banda de 6 GHz, pel fet que a Europa tenim la meitat d'espectre habilitat que als EUA.
