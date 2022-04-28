@@ -104,7 +104,7 @@ A diferència de les altres bandes wifi de 2,4 GHz i 5 GHz, els 6 GHz tenen algu
 <br>
 Amb  Wi-Fi 6 i Wi-Fi 6E, la  modulació com a màxim por arribar a  1024-QAM, és a dir, s’aconsegueix transmetre més bits en el mateix interval de temps. 
 <br><br>
-Depenent de la distància amb els clients, es modularà més agressivament proporcionant una major amplada de banda, no obstant això, si el client està lluny, modularà amb 256-QAM proporcionant una menor amplada de banda.
+Depenent de la distància amb els clients, es modularà més agressivament proporcionant una major amplada de banda, no obstant això, si el client està lluny, modularà amb 64-QAM proporcionant una menor amplada de banda.
 <br>
 <div align="center">
   <img src="/images/bloc/2022/04/foto5.jpg" />
