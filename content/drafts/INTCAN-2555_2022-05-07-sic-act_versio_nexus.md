@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-07"
+date        = "2022-05-02"
 title       = "SIC. Actualització de versió Nexus"
 description = "El dia 07/05/2022 s'ha dut a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
 #categories  = ["SIC"]

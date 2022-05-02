@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-07"
+date        = "2022-05-02"
 title       = "SIC. Actualització de versió Gitlab"
 description = "El dia 07/05/2022 està previst dur a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
 #categories  = ["SIC"]

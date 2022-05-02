@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-07"
+date        = "2022-05-02"
 title       = "SIC. Actualització de versió Jenkins del SIC 2.0"
 description = "El dia 07/05/2022 s'ha dut a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 2.0"
 #categories  = ["SIC"]
