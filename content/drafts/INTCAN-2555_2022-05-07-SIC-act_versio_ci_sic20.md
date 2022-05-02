@@ -5,6 +5,7 @@ description = "El dia 07/05/2022 s'ha dut a terme l'actualització del Servei d'
 #categories  = ["SIC"]
 #sections    = ["Notícies", "home"]
 #key         = "JUNY2022"
++++
 
 **El dia 07/05/2022 s'ha dut a terme l’actualització del Servei d’Integració Continua SIC 2.0 a la versió 2.303.3 de Jenkins**.
 <br>
