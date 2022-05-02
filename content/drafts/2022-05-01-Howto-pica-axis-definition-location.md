@@ -14,13 +14,11 @@ L'objectiu d'aquest article és mostrar com configurar la ruta de la definició 
 
 ## Justificació
 
-Els mòduls de Canigó associats a la PICA utilitzen les versions **1.9.2** del client de la PICA, el qual no permet configurar la ruta de la definició del client axis2, que per defecte té el següent valor: _/WEB-INF/*classes!/*axis2client/_. Aquesta configuració per defecte produeix un error en desplegar un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_, pel fet que no és possible trobar la ruta _/WEB-INF/*classes!/*axis2client/_ dins del jar que conté l'aplicació.
+Els mòduls de Canigó associats a la PICA utilitzen les versions **1.9.2** del client de la PICA, el qual no permet configurar la ruta de la definició del client axis2, que per defecte té el següent valor: _/WEB-INF/classes!/axis2client/_. Aquesta configuració per defecte produeix un error en desplegar un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_, pel fet que no és possible trobar la ruta _/WEB-INF/classes!/axis2client/_ dins del jar que conté l'aplicació.
 
 Per a corregir aquest error sense actualitzar la versió de Canigó, és necessari excloure manualment la versió **1.9.2** del client de la PICA, incloure la versió **1.10.0** del mateix client, reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i modificar algunes configuracions de beans i properties.
 
 ## Passos a seguir
-
-<br/>
 
 ### Modificar l'arxiu: `pom.xml`
 
@@ -199,7 +197,6 @@ public class PicaWithAxisDefinitionServiceWrapperImpl implements IPicaServiceWra
 ```
 
 ### Agregar un bean en: `app-integration-custom.xml` que invoqui al servei creat
-
 
 Modificar l'arxiu de configuració de beans de l'aplicació: `app-integration-custom.xml`, per a incorporar un bean que gestioni el servei: `PicaWithAxisDefinitionServiceWrapperImpl.java`
 
