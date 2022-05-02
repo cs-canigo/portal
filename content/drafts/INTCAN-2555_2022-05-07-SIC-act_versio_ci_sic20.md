@@ -29,7 +29,6 @@ Les principals novetats d'aquesta actualització són les següents:
 |[SECURITY-2475](https://www.jenkins.io/security/advisory/2021-10-06/)|Correcció de la verificació de certificats SSL/TLS a la llibreria "commons-httpclient" utilitzada àmpliament pels connectors de Jenkins.|
 |[SECURITY-2455](https://www.jenkins.io/security/advisory/2021-11-04/)|Resolució de vulnerabilitats en el control d'accés d'agent a controlador.|
 
-
 <br>
 <br>
 Per a més informació de les novetats de la versió podeu consultar [Jenkins LTS Changelog](https://www.jenkins.io/changelog-stable/).
