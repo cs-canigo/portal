@@ -1,13 +1,13 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-03"
 title       = "SIC. Actualització de versió Gitlab"
 description = "El dia 07/05/2022 està previst dur a terme l'actualització del Servei de Custòdia de Codi (Gitlab)"
-#categories  = ["SIC"]
-#sections    = ["Notícies", "home"]
-#key         = "JUNY2022"
+categories  = ["SIC"]
+sections    = ["Notícies", "home"]
+key         = "JUNY2022"
 +++
 
-**El proper dia 07/05/2022 està previst dur a terme l’actualització del Servei de Custòdia de Codi a la versió 12.10.14 de Gitlab**.
+**El dia 07/05/2022 està previst dur a terme l’actualització del Servei de Custòdia de Codi a la versió 14.7.7 de Gitlab**.
 <br>
 <br>
 Les principals novetats d'aquesta actualització són les següents:
@@ -20,7 +20,7 @@ Les principals novetats d'aquesta actualització són les següents:
 * Correccions de **seguretat** importants.
 
 <br>
-Per a més informació de les novetats de la versió podeu consultar [Gitlab v.14.7.7](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/CHANGELOG.md#fixed-147-changes).
+Per a més informació de les novetats de la versió podeu consultar [Gitlab v.14.7.7](https://gitlab.com/gitlab-org/gitlab-foss/-/blob/master/CHANGELOG.md#1477-2022-03-31).
 <br>
 <br>
 Amb aquesta actualització, s’assoleix un dels objectius que es persegueix des de CS Canigó, consistent en proporcionar als
