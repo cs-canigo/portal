@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-01"
+date        = "2022-05-04"
 title       = "Canigó. Actualització driver del mòdul Antivirus per a versions < 3.6.5"
 description = "Howto per a mostrar com actualitzar el driver del mòdul de l'Antivirus per a versions anteriors a Canigó 3.6.5"
 section     = "howtos"
