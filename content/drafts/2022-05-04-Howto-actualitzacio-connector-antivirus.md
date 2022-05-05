@@ -14,12 +14,13 @@ L'objectiu d'aquest article és mostrar com actualitzar el driver del mòdul de 
 
 ## Justificació
 
-S'ha actualitzat el Framework Canigó per tal de fer la nova versió del driver java del connector al servei d'antivirus.
+S'ha actualitzat el Framework Canigó per fer servir la nova versió del driver java del connector del servei d'antivirus.
+
 Els projectes creats amb el Plugin Canigó des de la versió 3.6.5 ja estaran configurats a tal efecte.
 
 Per a fer servir aquesta última versió del driver de l'Antivirus sense actualitzar la versió de Canigó, és necessari cambiar la configuració al fitxer pom.xml
 
-Aquest canvi és efectiu per versions Canigó anteriors a 3.6.5, és a dir, 3.6.x i 3.4.x
+Aquest canvi és aplicable a versions Canigó anteriors a 3.6.5, és a dir, 3.6.x i 3.4.x
 
 
 ## Passos a seguir
