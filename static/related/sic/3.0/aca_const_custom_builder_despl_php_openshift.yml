@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   description: Custom builder - API PHP - Openshift
 global-env:
-  - CONTAINER_DOCKERFILE_PATH: php.docker
+  - CONTAINER_DOCKERFILE_PATH: Dockerfile
   - CONTAINER_IMAGE_NAME: api-test
   - DEPLOYMENT_TYPE: DeploymentConfig
 components:
