@@ -26,11 +26,9 @@ publicació d'imatges pròpies al Registre d'Imatges corporatiu** (Harbor). Aque
 concebuda per a permetre disposar d'imatges pròpies de productes de tercers i que permetrà estendre, tant d’imatges
 del Repositori Corporatiu com d'altres repositoris públics.
 
-Per a la publicació d'imatges pròpies, a més de la versió d'aquesta, caldrà configurar exclusivament la ruta i
-nom del fitxer `Dockerfile` i el nom de la imatge a generar.
-
-Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i quin serà el funcionament, s’ha adaptat la documentació i s’han
-incorporat exemples:
+Per a la publicació d'imatges pròpies, a més de la versió, únicament serà necessari configurar la ruta i nom del
+`Dockerfile` i el nom de la imatge a generar. Amb l’objectiu que els usuaris sàpiguen com s’ha de configurar i
+quin serà el funcionament, s’ha adaptat la documentació i s’han incorporat exemples:
 
 - [Autoservei de pipelines](/sic30-serveis/autoservei-pipelines/)
 - [Com construir el fitxer ACA](/sic30-guies/fitxer-aca/)
