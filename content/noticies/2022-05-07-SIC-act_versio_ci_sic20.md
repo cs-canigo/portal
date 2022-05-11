@@ -1,13 +1,13 @@
 +++
-date        = "2022-05-03"
+date        = "2022-05-07"
 title       = "SIC. Actualització de versió Jenkins del SIC 2.0"
-description = "El dia 07/05/2022 està previst dur a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 2.0"
+description = "El dia 07/05/2022 es va dur a terme l'actualització del Servei d'Integració Contínua (Jenkins) del SIC 2.0"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "JUNY2022"
 +++
 
-**El dia 07/05/2022 està previst dur a terme l’actualització del Servei d’Integració Continua SIC 2.0 a la versió 2.303.3 de Jenkins**.
+**El dia 07/05/2022 es va dur a terme l’actualització del Servei d’Integració Continua SIC 2.0 a la versió 2.303.3 de Jenkins**.
 <br>
 <br>
 <br>

@@ -1,13 +1,13 @@
 +++
-date        = "2022-05-03"
+date        = "2022-05-07"
 title       = "SIC. Actualització de versió Nexus"
-description = "El dia 07/05/2022 està previst dur a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
+description = "El dia 07/05/2022 es va dur a terme l'actualització del Servei de Repositori d'Artefactes (Nexus)"
 categories  = ["SIC"]
 sections    = ["Notícies", "home"]
 key         = "JUNY2022"
 +++
 
-**El dia 07/05/2022 està previst dur a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.37.3 de Nexus**.
+**El dia 07/05/2022 es va dur a terme l’actualització del Servei de Repositori d’Artefactes a la versió 3.37.3 de Nexus**.
 <br/><br/>
 
 Les principals novetats d'aquesta actualització són les següents:
