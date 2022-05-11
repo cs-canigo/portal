@@ -4,7 +4,7 @@ title       = "Subscripcions al butlletí de Comunicacions Arquitectura"
 description = "Gestió de la subscripció al butlletí per part d'un usuari"
 draft           = false
 sections = ""
-weight          = 4
+weight          = 6
 +++
 
 El CS Canigó publica mensualment un Comunicat amb notícies, destacats i howtos sobre els següents serveis:
