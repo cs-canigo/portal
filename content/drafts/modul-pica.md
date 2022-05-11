@@ -152,7 +152,7 @@ Classe Java amb la lògica de les peticions que es realitzin, i la connectivitat
 
 En aquesta classe es pot visualiztar:
 
-* Injecció del servei de PICA via annotacions (@Autowired/@Qualifier) de Spring.
+* Injecció del servei de PICA via annotacions (@Inject/@Named) de Java.
 * Invocació del producte/modalitat "PADRO_MUNICIPI_RESIDENCIA" definit en el map de modalitats que es troba al fitxer de configuració xml de Spring.
 
 ```java
@@ -164,7 +164,6 @@ import cat.gencat.pica.api.peticio.core.IPICAServiceSincron;
 import com.generalitat.mp.ws.CridaSincronaResponseDocument;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
@@ -174,6 +173,7 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 import javax.inject.Inject;
+import javax.inject.Named;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
@@ -188,7 +188,7 @@ public class PicaAplicacioService {
   private static final int TIPO_DOC_TITULAR_NIF = 2;
 
   @Inject
-  @Qualifier("picaCanigoService")
+  @Named("picaCanigoService")
   private IPicaServiceWrapper serviceWrapper;
 
   public String ferPeticioAlServei() {
