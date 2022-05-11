@@ -7,6 +7,12 @@ enllac		= "/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.2/migracio-vers
 weight		= 3
 +++
 
+## Migració de versió 3.4 a Canigó 3.6
+
+Per a la migració de la versió 3.4 a Canigó 3.6 hi ha disponible el how to:
+
+[Actualització Canigó 3.4 a Canigó 3.6](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/).
+
 ## Migració de versió 3.6.1 a Canigó 3.6.2
 
 La versió 3.6.1 és compatible amb la versió 3.6.2 de Canigó.

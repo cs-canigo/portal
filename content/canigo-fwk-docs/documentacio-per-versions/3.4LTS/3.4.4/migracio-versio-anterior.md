@@ -7,6 +7,12 @@ enllac		= "/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.4/migracio-vers
 weight		= 3
 +++
 
+## Migració de versió 3.2 a Canigó 3.4
+
+Per a la migració de la versió 3.2 a Canigó 3.4 hi ha disponible el how to:
+
+[Actualització Canigó 3.2 a Canigó 3.4](/howtos/2019-03-Howto-Actualitzacio_Canigo3_2_Canigo3_4/).
+
 ## Migració de versió 3.4.3 a Canigó 3.4.4
 
 La versió 3.4.3 és compatible amb la versió 3.4.4 de Canigó.
