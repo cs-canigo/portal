@@ -51,15 +51,12 @@ El mòdul de Pujada d'arxius ja té la dependència transitiva del mòdul d'anti
 Però en cas de fer servir (com és el cas a aquest exemple d'ús) l'escaneig de fixers amb l'antivirus, caldrà configurar aquest mòdul, podeu consultar <a href="/canigo-documentacio-versions-36/integracio/modul-antivirus/">Mòdul Antivirus</a>
 
 ```java
-    package cat.gencat.canigo36fileupload.endpoints;
-
     import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
     import cat.gencat.ctti.canigo.arch.integration.antivirus.exceptions.AntivirusException;
     import cat.gencat.ctti.canigo.arch.support.fileupload.UploadedFiles;
     import cat.gencat.ctti.canigo.arch.support.fileupload.impl.FileUploadServiceAntivImpl;
-    import org.apache.logging.log4j.LogManager;
-    import org.apache.logging.log4j.Logger;
-    import org.springframework.beans.factory.annotation.Autowired;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
     import org.springframework.http.MediaType;
     import org.springframework.web.bind.annotation.PostMapping;
     import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,15 +64,15 @@ Però en cas de fer servir (com és el cas a aquest exemple d'ús) l'escaneig de
     import org.springframework.web.bind.annotation.RestController;
     import org.springframework.web.multipart.MultipartFile;
     import org.springframework.web.multipart.MultipartHttpServletRequest;
-
+    import javax.inject.Inject;
     import java.io.IOException;
 
     @RestController
     @RequestMapping("/fileupload")
     public class FileUploadController {
-      private static Logger log = LogManager.getLogger(FileUploadController.class.getName());
+      private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
 
-      @Autowired
+      @Inject
       private FileUploadServiceAntivImpl fileUploadService;
 
       @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
