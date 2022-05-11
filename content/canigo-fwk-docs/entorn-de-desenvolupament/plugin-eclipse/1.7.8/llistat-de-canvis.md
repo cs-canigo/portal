@@ -6,14 +6,14 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Llistat de canvis versió 1.7.8
+## Plugin eclipse 1.7.8
 
 En seleccionar l'opció mòdul de persistència anomenada **Mongodb module** s'actualitzarà automàticament el projecte
 per a que utilitzi la nova versió del mòdul de **Mongodb versió 2.3.0** per a utilitzar el **driver de Mongo 2.13.3** compatible amb **Mongodb 4.2**:
 
 ![](/images/news/Plugin_1.7.8_add_mongodb_module.png)
 
-## Llistat de canvis versió 1.7.7
+## Plugin eclipse 1.7.7
 
 La nova versió 1.7.7 del plugin utilitza la versió 1.6.5 de l’arquetipus de Canigó per a generar projectes amb Canigó 3.4.3 i s'han modificat les opcions en afegir el mòdul de seguretat.
 A continuació s'explica el seu funcionament.

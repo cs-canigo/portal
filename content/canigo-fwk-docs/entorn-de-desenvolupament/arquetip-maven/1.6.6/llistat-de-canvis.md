@@ -6,11 +6,11 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Llistat de canvis versió 1.6.6
+## Arquetip maven 1.6.6
 
 Canvis a l'arquetip maven per a generar projectes preparats per poder utilitzar la nova versió del mòdul de **Mongodb versió 2.3.0**
 
-## Llistat de canvis versió 1.6.5
+## Arquetip maven 1.6.5
 
 La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats respecte a la versió anterior:
 

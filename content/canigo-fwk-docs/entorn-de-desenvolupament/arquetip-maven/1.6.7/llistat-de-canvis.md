@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Llistat de canvis versió 1.6.7
+## Arquetip maven 1.6.7
 
 La versió 1.6.7 de l’arquetipus de Canigó permet generar projectes amb Canigó 3.4.4, per aquest motiu s’han modificat els rangs de versions dels següents mòduls:
 
@@ -16,11 +16,11 @@ La versió 1.6.7 de l’arquetipus de Canigó permet generar projectes amb Canig
 - canigo.web.core: [2.0.0,2.4.0)
 - canigo.web.rs: [2.0.0,2.4.0)
 
-## Llistat de canvis versió 1.6.6
+## Arquetip maven 1.6.6
 
 Canvis a l'arquetip maven per a generar projectes preparats per poder utilitzar la nova versió del mòdul de **Mongodb versió 2.3.0**
 
-## Llistat de canvis versió 1.6.5
+## Arquetip maven 1.6.5
 
 La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats respecte a la versió anterior:
 

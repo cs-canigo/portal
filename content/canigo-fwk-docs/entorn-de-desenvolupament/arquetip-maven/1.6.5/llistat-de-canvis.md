@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight		= 1
 +++
 
-## Llistat de canvis versió 1.6.5
+## Arquetip maven 1.6.5
 
 La versió 1.6.5 de l’arquetipus de Canigó incorpora les següents novetats respecte a la versió anterior:
 
