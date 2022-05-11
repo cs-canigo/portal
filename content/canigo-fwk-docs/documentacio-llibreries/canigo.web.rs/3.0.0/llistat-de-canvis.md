@@ -6,7 +6,7 @@ sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 
-## Llistat de canvis versió 3.0.0
+## canigo.web.rs 3.0.0
 
 - [Actualització de tecnologies base](/noticies/2021-10-25-CAN-actualitzacio-canigo-3_6_0/)
    - Actualització a Java 11, Spring 5.3, Spring Boot 2.5
@@ -14,4 +14,3 @@ weight		= 2
    - Actualització versió Swagger
    - Actualització versió dependències
    - Actualització versió plugins
-

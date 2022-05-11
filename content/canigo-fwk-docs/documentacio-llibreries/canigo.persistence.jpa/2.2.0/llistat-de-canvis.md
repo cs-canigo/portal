@@ -6,6 +6,6 @@ sections    = "canigo-fwk-docs"
 weight		= 2
 +++
 
-## Llistat de canvis versió 2.2.0
+## canigo.persistence.jpa 2.2.0
 
 - Revisió dels tests del mòdul per anàlisis SonarQube
