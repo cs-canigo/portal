@@ -95,3 +95,9 @@ Paginate = 10
     Weight = 21
     Identifier = "eventhub"
     URL = "/eventhub"
+
+[[menu.main]]
+	Name = "RPA"
+    Weight = 21
+    Identifier = "rpa"
+    URL = "/rpa"
