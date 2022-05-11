@@ -280,7 +280,6 @@ Dins una petició (llista de dades específiques) es poden incloure diverses sol
 Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
 ```java
-import cat.gencat.canigo36pica.service.PicaAplicacioService;
 import io.swagger.annotations.Api;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
