@@ -45,6 +45,10 @@
 	Gestió Tècnica de Dades
 {{ end }}
 
+{{ if (eq $section "rpa")}}
+	Plataforma Corporativa de RPA
+{{ end }}
+
 {{ if in .URL "blog_tags" }}
 	<a href="/blog">Blog d'Arquitectura</a> > {{ .Title }}
 {{end}}
