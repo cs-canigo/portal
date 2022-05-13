@@ -4,8 +4,8 @@ title       = "Framework Canigó"
 description = "Descripció del Framework de desenvolupament corporatiu JEE de la Generalitat de Catalunya"
 sections    = "canigo-fwk-docs"
 taxonomies  = []
-toc       = true
-weight        = 1
+toc         = true
+weight      = 1
 +++
 
 
