@@ -4,5 +4,5 @@ title       = "Documentació per llibreries"
 description = "Documentació del Framework per llibreries"
 sections    = "canigo-fwk-docs"
 enllac		= "/canigo-fwk-docs/documentacio-llibreries/"
-weight		= 4
+weight		= 3
 +++

@@ -4,5 +4,5 @@ title       = "Documentació per versions"
 description = "Documentació del Framework per versions"
 sections    = "canigo-fwk-docs"
 enllac		= "/canigo-fwk-docs/documentacio-per-versions/"
-weight		= 3
+weight		= 2
 +++

@@ -58,7 +58,7 @@ Paginate = 10
 	Name = "Canigó"
     Weight = 9
     Identifier = "framework"
-    URL = "/canigo"
+    URL = "/canigo-fwk-docs"
 
 [[menu.main]]
 	Name = "SIC"
