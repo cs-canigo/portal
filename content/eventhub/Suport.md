@@ -84,7 +84,7 @@ Haureu de crear el CSR i clau privada.
 El CSR s'ha d'enviar a l'Agència de Ciberseguretat perquè el signi amb la CA de Sectigo.
  
 Ús de [l'script](/related/eventhub/mkcert.sh) per a la generació dels CSR i clau privada per a l'entorn de PRE:
-```shell
+```
 ./mkcert.sh -n nouClient -o /path/to/pre-cert -e pre
 ```
 
@@ -93,19 +93,19 @@ Un cop torneu el certificat signat, haureu de generar el fitxer JKS que utilitza
 Podeu seguir els següents passos per generar el vostre jks:
 
 - Crear un keystore PKCS12 temporal:
-```shell
+```
 openssl pkcs12 -export -out nouClient.pkcs12 -in nouClient.client.eventhub.intranet.gencat.cat.cer -inkey nouClient.key -name nouClient -CAfile BundleCASectigo.cer -caname SectigoCARoot -chain
 ```
  
 - Crear el keystore JKS a partir del PKCS12:
-```shell
+```
 keytool -importkeystore -srckeystore nouClient.pkcs12 -srcstoretype PKCS12 -destkeystore nouClient.keystore.jks -deststoretype JKS
 ```
  
 Nota: eliminar el PKCS12 després de crear el JKS.
  
 - Incloure els certificats CA arrel y CA intermedi dins el JKS:
-```shell
+```
 keytool -import -trustcacerts -alias SectigoCARoot -file SectigoCARoot.cer -keystore nouClient.keystore.jks -storepass "xxxxx" –noprompt 
 keytool -import -trustcacerts -alias SectigoRSAOrganization -file SectigoRSAOrganization.cer -keystore nouClient.keystore.jks -storepass "xxxx" -noprompt
 ```
