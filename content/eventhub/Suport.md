@@ -105,8 +105,12 @@ keytool -importkeystore -srckeystore nouClient.pkcs12 -srcstoretype PKCS12 -dest
 Nota: eliminar el PKCS12 després de crear el JKS.
  
 - Incloure els certificats CA arrel y CA intermedi dins el JKS:
+
 ```
 keytool -import -trustcacerts -alias SectigoCARoot -file SectigoCARoot.cer -keystore nouClient.keystore.jks -storepass "xxxxx" –noprompt 
+```
+
+```
 keytool -import -trustcacerts -alias SectigoRSAOrganization -file SectigoRSAOrganization.cer -keystore nouClient.keystore.jks -storepass "xxxx" -noprompt
 ```
 
