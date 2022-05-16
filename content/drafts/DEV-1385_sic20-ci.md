@@ -280,7 +280,7 @@ funcionar.
 ### BBDD
 |Tecnologia|Versions|
 |-------|-------|
-|Oracle|12c, 18c, 19c|
+|Oracle|19c, i anteriors|
 |SQL Server|2014, edició standard i express|
 |PostgreSQL|9.4.8, i anteriors|
 |MongoDB|3.2.5, i anteriors|

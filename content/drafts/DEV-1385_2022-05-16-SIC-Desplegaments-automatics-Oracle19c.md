@@ -10,29 +10,29 @@ description = "El SIC 2.0 permet el desplegament de scripts a Oracle Database Se
 ## Introducció
 
 El **Servei d'Integració Contínua és un servei a disposició dels proveïdors d'aplicacions per a automatitzar el desplegament
-de les aplicacions**. Actualment, el SIC 2.0 permet el desplegament d'aplicacions on-premise als entorns d'Integració
-mitjançant les següents [Modalitats de desplegament] (https://canigo.ctti.gencat.cat/sic20-serveis/ci/#modalitats-de-desplegament):
+de les aplicacions**, contemplant actualment al SIC 2.0, el desplegament d'aplicacions on-premise als entorns d'Integració
+mitjançant les següents modalitats:
 
-* **Automàtica**: es construeixen els artefactes i es despleguen al servidors web, servidors d'aplicacions i servidors
+* **Automàtica**: es construeixen els artefactes i es despleguen als servidors web, servidors d'aplicacions i servidors
 de bases de dades.
 
-* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de gestió de binaris i posteriorment es
-delega als CPD el desplegament automàtic dels artefactes.
+* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de binaris i es delega als CPD el seu desplegament.
 
-* **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de gestió de binaris perquè
-Cpd o el proveïdor d'aplicacions, segons apliqui, pugui dur a terme el desplegament.
+* **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de binaris perquè
+Cpd o el proveïdor d'aplicacions, segons apliqui, dugui a terme el desplegament.
 
-L'objectiu és que la modalitat de desplegament delegat acabi substituint la modalitat automàtica, però aquest criteri varia
-en funció del grau d'avançament del projecte amb cada proveïdor d'infraestructures.
+L'objectiu és que **la modalitat de desplegament delegat acabi substituint la modalitat automàtica**, però aquesta
+possibilitat varia en funció del grau d'avançament del projecte amb cada proveïdor d'infraestructures.
+
+Per a més informació: [Modalitats de desplegament] (https://canigo.ctti.gencat.cat/sic20-serveis/ci/#modalitats-de-desplegament)
 
 ## Novetats
 
 Amb l'objectiu de **permetre el desplegament de scripts a Oracle Database Server 19c**, s'ha actualitzat el client encarregat
-dels desplegaments en modalitat automàtica per a donar cobertura a aquesta versió prevista al
+dels desplegaments en modalitat automàtica per a donar cobertura a la versió prevista al
 [Full de ruta de programari CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions).
-
-Aquesta actualització permetrà mantenir automatitzats els desplegaments a mesura que les aplicacions es vagin migrant,
-sense requerir cap canvi pel que fa a la configuració de les pipelines.
+Aquesta actualització permetrà mantenir automatitzats els desplegaments a mesura que les aplicacions vagin migrant,
+sense requerir cap canvi pel que fa a la configuració de les pipelines del SIC.
 
 Per a més informació: [Integració contínua](/sic20-serveis/ci/).
 
