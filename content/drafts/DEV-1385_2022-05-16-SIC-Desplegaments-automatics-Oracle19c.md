@@ -13,16 +13,15 @@ El **Servei d'Integració Contínua és un servei a disposició dels proveïdors
 de les aplicacions**, contemplant actualment al SIC 2.0, el desplegament d'aplicacions on-premise als entorns d'Integració
 mitjançant les següents modalitats:
 
-* **Automàtica**: es construeixen els artefactes i es despleguen als servidors web, servidors d'aplicacions i servidors
-de bases de dades.
+* **Automàtica**: els artefactes generats es despleguen als servidors web, servidors d'aplicacions i servidors de bases de dades.
 
-* **Delegada**: es construeixen els artefactes, es lliuren a través del servei de binaris i es delega als CPD el seu desplegament.
+* **Delegada**: els artefactes generats es lliuren a través del servei de binaris i es delega als CPD el seu desplegament.
 
-* **Semiautomàtica**: es construeixen els artefactes i es lliuren a través del servei de binaris perquè
-Cpd o el proveïdor d'aplicacions, segons apliqui, dugui a terme el desplegament.
+* **Semiautomàtica**: els artefactes generats es lliuren a través del servei de binaris perquè, Cpd o el proveïdor d'aplicacions
+segons pertoqui, dugui a terme el desplegament.
 
-L'objectiu és que **la modalitat de desplegament delegat acabi substituint la modalitat automàtica**, però aquesta
-possibilitat varia en funció del grau d'avançament del projecte amb cada proveïdor d'infraestructures.
+**La modalitat de desplegament delegat acabarà substituint la modalitat automàtica**, però aquesta possibilitat varia en
+funció del grau d'avançament del projecte amb cada proveïdor d'infraestructures.
 
 Per a més informació: [Modalitats de desplegament] (https://canigo.ctti.gencat.cat/sic20-serveis/ci/#modalitats-de-desplegament)
 
@@ -32,7 +31,7 @@ Amb l'objectiu de **permetre el desplegament de scripts a Oracle Database Server
 dels desplegaments en modalitat automàtica per a donar cobertura a la versió prevista al
 [Full de ruta de programari CTTI](https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari/#servidors-d-aplicacions).
 Aquesta actualització permetrà mantenir automatitzats els desplegaments a mesura que les aplicacions vagin migrant,
-sense requerir cap canvi pel que fa a la configuració de les pipelines del SIC.
+sense requerir canvis pel que fa a la configuració de les pipelines.
 
 Per a més informació: [Integració contínua](/sic20-serveis/ci/).
 
