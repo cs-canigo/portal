@@ -3,6 +3,9 @@ date        = "2021-12-27"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.4.9"
 sections    = "canigo-fwk-docs"
+aliases = [
+    "/canigo-download-related/release-notes-canigo-34/"
+]
 weight      = 1
 +++
 

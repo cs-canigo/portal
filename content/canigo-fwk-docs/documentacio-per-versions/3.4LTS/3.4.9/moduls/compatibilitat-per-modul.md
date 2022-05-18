@@ -3,6 +3,9 @@ date        = "2021-12-27"
 title       = "Compatibilitat per mòdul"
 description = "Compatibilitat per mòdul Canigó 3.4.9"
 sections    = "canigo-fwk-docs"
+aliases = [
+    "/canigo-download-related/matrius-compatibilitats/canigo-34/"
+]
 weight      = 1
 +++
 

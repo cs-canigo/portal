@@ -3,6 +3,9 @@ date        = "2021-12-27"
 title       = "Dependències externes"
 description = "Dependències externes Canigó 3.4.9"
 sections    = "canigo-fwk-docs"
+aliases = [
+    "/canigo/download/canigo-34/"
+]
 weight      = 3
 +++
 
