@@ -73,14 +73,14 @@ Addicionalment, cal dir que Windows Hello permet als usuaris autenticar-se a tra
 ## **Windows Hello versus Windows Hello For Business** {#WindowsHelloVSWindowsHelloFBusiness}
 
 Windows Hello està orientat tant per l’entorn personal com per l’empresarial  però és important destacar que tots els models d’implementació empresarials compleixen amb directrius estrictes de processament i tractament de dades biomètriques que garanteixen la seguretat de les mateixes i la privacitat de les dades.
-<br><br>
+
 **Punts clau de Windows Hello:**
 
 * La funcionalitat domèstica de Windows Hello (anomenat també PIN de Conveniència) està orientat a ús personal i no pas empresarial. No disposa de suport empresarial.
 * A Windows Hello domèstic, les persones poden crear un PIN o un gest biomètric als seus dispositius personals per iniciar la sessió còmodament. Aquest ús és exclusiu del dispositiu on està configurat, però utilitza un simple hash de contrasenya en funció del tipus de compte de la persona. Aquesta configuració s'anomena PIN de conveniència de Windows Hello i no està recolzada per una autenticació asimètrica (clau pública/privada) o basada en certificats.
 * No disposa de gestió avançada.
 * No requereix registre amb multi factor d’autenticació (MFA).
-<br><br>
+
 **Punts clau de Windows Hello for Business:**
 
 * Windows Hello for Business crea un parell de claus criptogràfiques vinculades al mòdul de plataforma de confiança (TPM). L'accés a aquestes claus i l'obtenció d'una signatura per validar la possessió de la clau privada de l'usuari, només s'habilita mitjançant el PIN o biomètrics. 
