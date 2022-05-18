@@ -157,8 +157,7 @@ https://www.computerworld.com/article/3244347/what-is-windows-hello-microsofts-b
 * **MSA (Microsoft Account):** És la compte de Microsoft que permet als usuaris iniciar sessió mitjançant un únic conjunt de credencials.
 * **Passwordless:** Fa referència a la capacitat que té Windows Hello a tendir a un entorn on la paraula de pas és utilitzada menys vegades i fins i tot, pot arribar a deixar d’utilitzar-se en determinats casos d’ús.
 
-
 <br>
 <br>
-###### **Unitat Arquitectura d’Entorn Digital de Treball**
+###### **Unitat Arquitectura d’Entorn Digital de Treball** <br>
 ###### **Direcció Arquitectura i Components Transversals**
