@@ -24,7 +24,7 @@ categories  = ["Windows", "Microsoft"]
 ## **Introducció** {#Introduccio}
 
 Quan Windows 10 va aparèixer per primera vegada, incorporava Microsoft Passport i Windows Hello, fet que va permetre  proporcionar una autenticació multifactorial. 
-Per simplificar el desplegament i millorar la compatibilitat, Microsoft ha combinat aquestes tecnologies en una única solució amb el nom de Windows Hello i _pot aplicar-se tant per àmbit personal com empresarial_. Amb aquesta funcionalitat s’ofereix als usuaris de Windows una manera alternativa d'iniciar sessió als seus dispositius i aplicacions mitjançant l'empremta digital, l'escaneig de l'iris o el reconeixement facial.
+Per simplificar el desplegament i millorar la compatibilitat, Microsoft ha combinat aquestes tecnologies en una única solució amb el nom de Windows Hello i _**pot aplicar-se tant per àmbit personal com empresarial**_. Amb aquesta funcionalitat s’ofereix als usuaris de Windows una manera alternativa d'iniciar sessió als seus dispositius i aplicacions mitjançant l'empremta digital, l'escaneig de l'iris o el reconeixement facial.
 
 Es tracta d’una solució d’autenticació biomètrica fiable i totalment integrada basada en el reconeixement facial o la concordança d'empremtes digitals que utilitza una combinació de càmeres especials d'infrarojos (IR) i programari per augmentar la precisió i protegir-se de la falsificació en el processos d’autenticació. 
 Els principals venedors de maquinari disposen de dispositius amb càmeres integrades  i lectors d’empremtes digitals compatibles amb aquesta solució, permetent que els dispositius que no en tenen, els puguin afegir. 
@@ -77,7 +77,7 @@ Windows Hello està orientat tant per l’entorn personal com per l’empresaria
 **Punts clau de Windows Hello:**
 
 * La funcionalitat domèstica de Windows Hello (anomenat també PIN de Conveniència) està orientat a ús personal i no pas empresarial. No disposa de suport empresarial.
-* A Windows Hello domèstic, les persones poden crear un PIN o un gest biomètric als seus dispositius personals per iniciar la sessió còmodament. Aquest ús és exclusiu del dispositiu on està configurat, però utilitza un simple hash de contrasenya en funció del tipus de compte de la persona. Aquesta configuració s'anomena PIN de conveniència de Windows Hello i no està recolzada per una autenticació asimètrica (clau pública/privada) o basada en certificats.
+* A Windows Hello domèstic, les persones poden crear un PIN o un gest biomètric als seus dispositius personals per iniciar la sessió còmodament. Aquest ús és exclusiu del dispositiu on està configurat, però utilitza un simple _**hash de contrasenya**_ en funció del tipus de compte de la persona. Aquesta configuració s'anomena PIN de conveniència de Windows Hello i _**no està recolzada per una autenticació asimètrica**_ (clau pública/privada) o basada en certificats.
 * No disposa de gestió avançada.
 * No requereix registre amb multi factor d’autenticació (MFA).
 
@@ -122,9 +122,9 @@ En definitiva, es pot utilitzar per a nous desplegaments de Windows Hello empres
 
 L'adopció de l'especificació FIDO significa que els socis de Microsoft poden proporcionar claus de seguretat per a una capa addicional de protecció quan inicien sessió mitjançant Windows Hello.
 
-Microsoft dona suport a la darrera versió del protocol de seguretat, FIDO2. Això permet als usuaris accedir a dispositius basats en estàndards, com ara claus de seguretat USB, que ofereixen una capa addicional de protecció quan inicien sessió als comptes de Microsoft.
+Microsoft dona suport a la darrera versió del protocol de seguretat, FIDO2. Això permet als usuaris accedir a dispositius basats en estàndards, com ara _**claus de seguretat USB**_, que ofereixen una capa addicional de protecció quan inicien sessió als comptes de Microsoft.
 
-Amb la versió 2004 de Microsoft Windows 10, Microsoft va estendre la capacitat sense contrasenya per Windows Hello i Windows Hello for Business als navegadors web, això també significa, que les aplicacions natives de Windows que estan protegides amb Azure AD i que obren una vista web amb Edge per  l'autenticació, també són compatibles. Es permet doncs, l’ús de la capacitat de Windows Hello FIDO2 al Sistema Operatiu, navegadors web, Microsoft WVD, Teams i aplicacions natives de Windows per iniciar sessió sense contrasenya amb l'empremta digital o reconeixement facial.
+Amb la versió 2004 de Microsoft Windows 10, Microsoft va estendre la capacitat sense contrasenya per Windows Hello i Windows Hello for Business als navegadors web, això també significa, que les aplicacions natives de Windows que estan protegides amb Azure AD i que obren una vista web amb Edge per  l'autenticació, _**també són compatibles**_. Es permet doncs, l’ús de la capacitat de Windows Hello FIDO2 al Sistema Operatiu, navegadors web, Microsoft WVD, Teams i aplicacions natives de Windows per iniciar sessió sense contrasenya amb l'empremta digital o reconeixement facial.
 
 Anteriorment, Windows Hello era un autenticador de plataforma que només es podia utilitzar dins del propi sistema operatiu de Windows. Amb aquesta nova capacitat, el lector d'empremtes digitals integrat de l’ordinador portàtil, la càmera web d'infrarojos integrada o la càmera web USB externa es poden utilitzar amb el navegador web, d’igual forma que els autenticadors externs. 
 
