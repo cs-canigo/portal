@@ -81,6 +81,7 @@ Windows Hello està orientat tant per l’entorn personal com per l’empresaria
 * No disposa de gestió avançada.
 * No requereix registre amb multi factor d’autenticació (MFA).
 
+
 **Punts clau de Windows Hello for Business:**
 
 * Windows Hello for Business crea un parell de claus criptogràfiques vinculades al mòdul de plataforma de confiança (TPM). L'accés a aquestes claus i l'obtenció d'una signatura per validar la possessió de la clau privada de l'usuari, només s'habilita mitjançant el PIN o biomètrics. 
@@ -97,11 +98,11 @@ Windows Hello està orientat tant per l’entorn personal com per l’empresaria
 ## **Novetats** {#Novetats}
 Microsoft ha anat incorporant al llarg de les seves actualitzacions de sistema operatiu, millores i evolucions que afecten a la funcionalitat de Windows Hello i de les quals es poden destacar les següents:
 
-* **Suport Multi-càmera per a Windows Hello**
+**Suport Multi-càmera per a Windows Hello**
 
 Permet als usuaris triar la prioritat de càmera externa quan hi ha càmeres internes i externes compatibles amb Windows Hello.
 
-* **Mètode d’implementació de Windows Hello for Business Cloud trust**
+**Mètode d’implementació de Windows Hello for Business Cloud trust**
 
 Aquest nou mètode utilitza Azure Active Directory (AD) Kerberos per abordar els problemes del model de desplegament empresarial de confiança clau.
 
@@ -117,7 +118,7 @@ En definitiva, es pot utilitzar per a nous desplegaments de Windows Hello empres
 </div>
 <br>
 
-* **Windows Hello amb Identitat ràpida online 2.0 (FIDO 2.0)**
+**Windows Hello amb Identitat ràpida online 2.0 (FIDO 2.0)**
 
 L'adopció de l'especificació FIDO significa que els socis de Microsoft poden proporcionar claus de seguretat per a una capa addicional de protecció quan inicien sessió mitjançant Windows Hello.
 
