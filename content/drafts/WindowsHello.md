@@ -98,9 +98,11 @@ Windows Hello està orientat tant per l’entorn personal com per l’empresaria
 ## **Novetats** {#Novetats}
 Microsoft ha anat incorporant al llarg de les seves actualitzacions de sistema operatiu, millores i evolucions que afecten a la funcionalitat de Windows Hello i de les quals es poden destacar les següents:
 
+
 **Suport Multi-càmera per a Windows Hello**
 
 Permet als usuaris triar la prioritat de càmera externa quan hi ha càmeres internes i externes compatibles amb Windows Hello.
+
 
 **Mètode d’implementació de Windows Hello for Business Cloud trust**
 
