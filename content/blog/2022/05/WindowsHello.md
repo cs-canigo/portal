@@ -108,6 +108,7 @@ Microsoft ha anat incorporant al llarg de les seves actualitzacions de sistema o
 
 Permet als usuaris triar la prioritat de càmera externa quan hi ha càmeres internes i externes compatibles amb Windows Hello.
 
+
 **Mètode d’implementació de Windows Hello for Business Cloud trust**
 
 Aquest nou mètode utilitza Azure Active Directory (AD) Kerberos per abordar els problemes del model de desplegament empresarial de confiança clau.
