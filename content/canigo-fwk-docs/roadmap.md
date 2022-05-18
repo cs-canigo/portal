@@ -5,6 +5,9 @@ description = "Roadmap previst per a la evolució del Framework Canigó"
 sections    = "Canigó"
 taxonomies  = []
 toc 		= true
+aliases = [
+    "/canigo/roadmap/"
+]
 weight 		= 5
 +++
 
