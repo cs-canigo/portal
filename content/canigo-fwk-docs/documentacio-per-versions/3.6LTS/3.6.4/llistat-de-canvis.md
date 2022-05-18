@@ -3,6 +3,9 @@ date        = "2022-04-13"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.6.4"
 sections    = "canigo-fwk-docs"
+aliases = [
+    "/canigo-download-related/release-notes-canigo-36/"
+]
 weight      = 1
 +++
 
