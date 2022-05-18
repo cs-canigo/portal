@@ -24,7 +24,7 @@ categories  = ["Windows", "Microsoft"]
 ## **Introducció** {#Introduccio}
 
 Quan Windows 10 va aparèixer per primera vegada, incorporava Microsoft Passport i Windows Hello, fet que va permetre  proporcionar una autenticació multifactorial. 
-Per simplificar el desplegament i millorar la compatibilitat, Microsoft ha combinat aquestes tecnologies en una única solució amb el nom de Windows Hello i pot aplicar-se tant per àmbit personal com empresarial. Amb aquesta funcionalitat s’ofereix als usuaris de Windows una manera alternativa d'iniciar sessió als seus dispositius i aplicacions mitjançant l'empremta digital, l'escaneig de l'iris o el reconeixement facial.
+Per simplificar el desplegament i millorar la compatibilitat, Microsoft ha combinat aquestes tecnologies en una única solució amb el nom de Windows Hello i _pot aplicar-se tant per àmbit personal com empresarial_. Amb aquesta funcionalitat s’ofereix als usuaris de Windows una manera alternativa d'iniciar sessió als seus dispositius i aplicacions mitjançant l'empremta digital, l'escaneig de l'iris o el reconeixement facial.
 
 Es tracta d’una solució d’autenticació biomètrica fiable i totalment integrada basada en el reconeixement facial o la concordança d'empremtes digitals que utilitza una combinació de càmeres especials d'infrarojos (IR) i programari per augmentar la precisió i protegir-se de la falsificació en el processos d’autenticació. 
 Els principals venedors de maquinari disposen de dispositius amb càmeres integrades  i lectors d’empremtes digitals compatibles amb aquesta solució, permetent que els dispositius que no en tenen, els puguin afegir. 
@@ -81,7 +81,7 @@ Windows Hello està orientat tant per l’entorn personal com per l’empresaria
 * **Punts clau de Windows Hello for Business:**
 * Windows Hello for Business crea un parell de claus criptogràfiques vinculades al mòdul de plataforma de confiança (TPM). L'accés a aquestes claus i l'obtenció d'una signatura per validar la possessió de la clau privada de l'usuari, només s'habilita mitjançant el PIN o biomètrics. 
 * La verificació en dos passos que té lloc durant la inscripció a la solució, crea una relació de confiança entre el proveïdor d'identitat i l'usuari quan la part pública del parell de claus pública/privada s'envia a un proveïdor d'identitat i s'associa amb un compte d'usuari. 
-Windows Hello for Business permet la configuració mitjançant una política de grup o una política de gestió de dispositius mòbils (MDM). 
+* Windows Hello for Business permet la configuració mitjançant una política de grup o una política de gestió de dispositius mòbils (MDM). 
 * Sempre utilitza l'autenticació basada en clau o certificat i això fa que sigui molt més segur que el PIN de conveniència de Windows Hello.
 * La clau privada mai surt d'un dispositiu quan s'utilitza TPM. El servidor d'autenticació té una clau pública que s'assigna al compte d'usuari durant el procés de registre.
 * Els comptes personals (compte de Microsoft) i corporatius (Active Directory o Azure AD) utilitzen un únic contenidor per a les claus. Totes les claus estan separades pels dominis dels proveïdors d'identitat per ajudar a garantir la privadesa dels usuaris.
