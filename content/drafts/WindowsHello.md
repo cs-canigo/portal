@@ -69,7 +69,6 @@ Addicionalment, cal dir que Windows Hello permet als usuaris autenticar-se a tra
   <img src="/images/bloc/2022/05/foto2.gif" />
 </div>
 <br>
----
 
 ## **Windows Hello versus Windows Hello For Business** {#WindowsHelloVSWindowsHelloFBusiness}
 
