@@ -26,7 +26,7 @@ Documents i Fonts de Referència
 Referència                       | URL
 -------------------------------- | ----
 Quartz                           | http://www.quartz-scheduler.org/
-Spring 5 + Quartz                | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#scheduling
+Spring 5 + Quartz                | https://docs.spring.io/spring-framework/docs/5.3.18/reference/html/integration.html#scheduling
 Guia migració Quartz 1.8.x a 2.0 | http://www.quartz-scheduler.org/documentation/quartz-2.x/migration-guide
 
 ## Glossari
@@ -52,7 +52,7 @@ Per tal d'instal-lar Quartz es necessari afegir manualment en el pom.xml de l'ap
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
 <commons.collections.version>4.0</commons.collections.version>
-<org.springframework.versionn>5.3.9</org.springframework.version>
+<org.springframework.versionn>5.3.18</org.springframework.version>
 
 <dependency>
     <groupId>org.quartz-scheduler</groupId>

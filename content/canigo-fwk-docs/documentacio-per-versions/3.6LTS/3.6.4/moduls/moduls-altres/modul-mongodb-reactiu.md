@@ -34,7 +34,7 @@ Per a més informació:
 
 [Reactor](https://projectreactor.io/)
 
-[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html)
+[Spring Framework reactive](https://docs.spring.io/spring-framework/docs/5.3.18/reference/html/web-reactive.html)
 
 [Notes on Reactive Programming](https://spring.io/blog/2016/06/07/notes-on-reactive-programming-part-i-the-reactive-landscape)
 

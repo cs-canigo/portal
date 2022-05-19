@@ -45,7 +45,7 @@ El quadre següent mostra les funcionalitats que utilitza WebFlux dels servidors
 |  Contenidor amb suport Servlet 3.1+ 	|         Servlet 3.1 non-blocking I/O       																										|
 
 Per a més informació sobre programació funcional amb Spring 5 podeu consultar:
-https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html#spring-webflux
+https://docs.spring.io/spring-framework/docs/5.3.18/reference/html/web-reactive.html#spring-webflux
 
 ### Spring MVC o WebFlux
 

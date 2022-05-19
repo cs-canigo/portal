@@ -21,7 +21,7 @@ Canigó no incorpora cap llibreria addicional a les ja aportades per Spring per 
 
 Referència | URL
 ---------- | ---
-Spring JMS | https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/integration.html#jms
+Spring JMS | https://docs.spring.io/spring-framework/docs/5.3.18/reference/html/integration.html#jms
 
 ## Glossari
 
@@ -80,7 +80,7 @@ Per tal d'instal- lar Quartz es necessari afegir manualment en el pom.xml de l'a
 ```
 <org.opensymphony.quartz.version>2.2.1</org.opensymphony.quartz.version>
 <commons.collections.version>4.0</commons.collections.version>
-<org.springframework.version>5.3.9</org.springframework.version>
+<org.springframework.version>5.3.18</org.springframework.version>
 
 <dependency>
 	<groupId>org.springframework</groupId>
