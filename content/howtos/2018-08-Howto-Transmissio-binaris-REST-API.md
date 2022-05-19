@@ -247,11 +247,17 @@ public class EquipamentEspecialServiceController {
 </body>
 </html>
 ```
+
 Més info:
+
 * https://webapplog.com/json-is-not-cool-anymore/
+
 * https://github.com/azat-co/proto-buffer-api/tree/master/public
+
 * https://www.baeldung.com/spring-rest-api-with-protocol-buffers
+
 * https://dzone.com/articles/using-googles-protocol-buffers-with-java
+
 
 #### Multipart
 
@@ -333,6 +339,7 @@ Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per
 Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha de triar la implementació (JAXB, CXF, Axis, Xmlbeans, etc.) per treballar. Per simplicitat en aquest exemple farem ús de l'estàndard JAXB per generar el codi java:
 
 1. Afegir el fitxer src/main/xsd/global.xjb
+
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <jaxb:bindings 
@@ -352,7 +359,9 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 
 </jaxb:bindings>
 ```
+
 2. Crear el següent fitxer d'exemple: src/main/xsd/EquipamentEspecial.xsd
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
@@ -417,7 +426,9 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 
 </schema>
 ```
-2. Modificar pom.xml per afegir el següent plugin:
+
+3. Modificar pom.xml per afegir el següent plugin:
+
 ```
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -507,7 +518,9 @@ public class DocumentacioEquipamentEspecial
 ```
 
 Més info:
-1. https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html
-2. http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/
-3. https://www.journaldev.com/1312/jaxb2-maven-plugin-xjc-example-generate-java-classes-xsd
 
+1. https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html
+
+2. http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/
+
+3. https://www.journaldev.com/1312/jaxb2-maven-plugin-xjc-example-generate-java-classes-xsd

@@ -77,7 +77,7 @@ Com que l'aplicació no és JSF, es pot excloure les llibreries JSF del mòdul..
 
 ### Servei de Logs
 
-En Canigó 3.2 s'utilitza Log4j2 en comptes de Log4j. [S'han d'eliminar els fitxers log4j.xml de l'aplicació i substituir-los per log4j2.xml](https://logging.apache.org/log4j/2.x/manual/migration.html)
+En Canigó 3.2 s'utilitza Log4j2 en comptes de Log4j. S'han d'eliminar els fitxers log4j.xml de l'aplicació i substituir-los per [log4j2.xml](https://logging.apache.org/log4j/2.x/manual/migration.html)
 
 Per exemple el següent fitxer log4j.xml
 
