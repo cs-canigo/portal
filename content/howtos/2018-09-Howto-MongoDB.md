@@ -17,7 +17,7 @@ Abans de fer cap modificació al projecte, cal generar, compilar i executar l'ap
 
 ### Entorn de Desenvolupament de Canigó
 
-El plugin d'Eclipse de Canigó que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)) és la manera recomanada i més ràpida d'afegir el suport per a MongoDB. Per fer-ho s'ha de seguir les següents passes:
+El plugin d'Eclipse de Canigó que ve integrat amb [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/)) és la manera recomanada i més ràpida d'afegir el suport per a MongoDB. Per fer-ho s'ha de seguir les següents passes:
 
 1. Un cop es té el projecte Canigó actiu a l'entorn de desenvolupament s'ha de fer clic al botó dret del ratolí al nom del projecte.
 2. Un cop s'ha desplegat el menú d'opcions (entre d'altres hi ha "New", "Go into", "Import") s'han de triar les següents opcions:

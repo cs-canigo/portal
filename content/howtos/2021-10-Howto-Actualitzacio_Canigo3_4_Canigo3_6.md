@@ -26,7 +26,7 @@ amb Canigó 3.4 i el punt de partida d'aquesta guia és una aplicació creada am
 
 ### Configuració prèvia
 
-A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats) podeu consultar les versions
+A la [matriu de compatibilitats] (/canigo-download-related/matrius-compatibilitats/canigo-36/) podeu consultar les versions
 dels mòduls i components de Canigó de les versions 3.4.x i 3.6.x. Per tant, caldrà **actualitzar els intervals de
 versions dels mòduls utilitzats per l'aplicació** per a migrar a Canigó 3.6.
 

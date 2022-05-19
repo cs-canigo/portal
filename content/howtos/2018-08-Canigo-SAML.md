@@ -21,7 +21,7 @@ Per a la integració amb GICAR existeixen diferentes possibilitats. En aquest ho
 
 ### Aplicació demo GICAR-SAML
 
-Primer de tot cal dispossar de l'entorn de desenvolupament en cas de no haver-lo instal·lat prèviament. Per a la creació de l'entorn de desenvolupament seguir les instruccions del següent [enllaç](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+Primer de tot cal dispossar de l'entorn de desenvolupament en cas de no haver-lo instal·lat prèviament. Per a la creació de l'entorn de desenvolupament seguir les instruccions del següent [enllaç](/canigo/entorn-desenvolupament/).
 
 Per aquesta demo cal que l'aplicació creada mitjançant el plugin d'Eclipse de Canigó incorpori el mòdul de seguretat de SAML.
 

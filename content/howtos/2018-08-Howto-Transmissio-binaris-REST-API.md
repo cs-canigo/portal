@@ -15,7 +15,7 @@ Aquest how-to va dirigit a tots aquells desenvolupadors/arquitectes que desenvol
 
 Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
-**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
+**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
 
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=protocolbuffers -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
 2. Compilar amb `mvn -B -f protocolbuffers/pom.xml clean package`
@@ -257,7 +257,7 @@ Més info:
 
 Abans de fer cap modificació cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
-**NOTA:** La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring
+**NOTA:** La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring
 
 1. Generar projecte amb archetype : `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=multipart -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
 2. Compilar amb `mvn -B -f multipart/pom.xml clean package`
@@ -323,7 +323,7 @@ Un cop acabat el suport específic per *Multipart*, Spring ho integra automàtic
 
 Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per verificar que tot funciona bé.
 
-**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
+**NOTA:** _La manera recomanada de generar l'aplicació és amb el plugin d'Eclipse de Caniǵo que ve integrat amb [l'entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/)), i la compilació i desplegament amb els plugins d'Eclipse de Maven i Spring_
 
 1. Generar projecte amb archetype: `mvn -B archetype:generate -DgroupId=cscanigo.howto.rest -DartifactId=xmlbase64binary -Dversion=1.0-SNAPSHOT -DarchetypeGroupId=cat.gencat.ctti -DarchetypeArtifactId=plugin-canigo-archetype-rest -DarchetypeVersion=1.5.5`
 2. Compilar amb `mvn -B -f xmlbase64binary/pom.xml clean package`

@@ -3,6 +3,9 @@ date        = "2020-06-16"
 title       = "Matriu de compatibilitats per mòdul"
 description = "Matriu de compatibilitats per mòdul Canigó 3.2"
 sections    = "canigo-fwk-docs"
+aliases = [
+    "/canigo-download-related/matrius-compatibilitats/canigo-32/"
+]
 weight      = 1
 toc         = true
 +++

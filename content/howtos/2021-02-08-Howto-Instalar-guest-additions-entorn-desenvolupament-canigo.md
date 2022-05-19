@@ -10,7 +10,7 @@ categories  = ["canigo"]
 
 ## Introducció
 
-Dins dels lliurables del framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+Dins dels lliurables del framework Canigó hi consta l'[Entorn de desenvolupament de Canigó](/canigo/entorn-desenvolupament/).
 **Es tracta d'una màquina virtual Linux, basada en Lubuntu Desktop** (Ubuntu Bionic Beaver 18.04.2 LTS)
 pel fet de ser una distribució d’escriptori Linux lleugera, derivada d’una de les distribucions més esteses del món (Ubuntu/Debian)
 i amb suport LTS, a la qual se li ha afegit una selecció de programari enfocat principalment a aplicacions Canigó.
@@ -41,7 +41,7 @@ On podrem comprovar que la versió, en aquest cas, és la 5.2.16.
 ## Instal·lar VBOX guest additions
 
 Un cop finalitzada la instal·lació de l'entorn de desenvolupament de Canigó seguint les instruccions indicades a l'
-[Entorn de desenvolupament](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/), caldrà entrar en un terminal
+[Entorn de desenvolupament](/canigo/entorn-desenvolupament/), caldrà entrar en un terminal
 i executar les següents comandes indicant la versió adient.
 
 Exemple per a la versió 5.2.16:

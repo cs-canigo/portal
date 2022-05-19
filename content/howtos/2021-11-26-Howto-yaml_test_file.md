@@ -109,4 +109,4 @@ Si executem el test `EquipamentServiceTest.testYamlProperties` podrem obtenir un
 A Canigó és possible sobreescriure les propietats de l'aplicació mitjançant fitxers YAML que només apliquin a les proves unitàries.
 
 <br/>
-Per a més informació: [Mòdul de configuració](/canigo-documentacio-versions-34-core/modul-configuracio/).
+Per a més informació: [Mòdul de configuració](/canigo-fwk-docs/documentacio-per-versions/3.4LTS/3.4.9/moduls/moduls-generals/modul-configuracio/).

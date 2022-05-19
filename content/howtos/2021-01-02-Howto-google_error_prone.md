@@ -32,7 +32,7 @@ Per a poder utilitzar el complement a Canigó, serà necessari modificar el fitx
 
 ### Configuració del _plugin
 
-Dins del _plugin_ `maven-compiler-plugin`, que ja es troba configurat en els projectes generats amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/),
+Dins del _plugin_ `maven-compiler-plugin`, que ja es troba configurat en els projectes generats amb [Canigó plugin](/canigo/entorn-desenvolupament/),
 s'han d'agregar les etiquetes `<compilerArgs>` i `<annotationProcessorPaths>` indicant que es vol utilitzar el complement.
 
 Exemple:

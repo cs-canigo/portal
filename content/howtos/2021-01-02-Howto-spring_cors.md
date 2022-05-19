@@ -12,7 +12,7 @@ categories  = ["canigo"]
 
 L'objectiu d'aquest article és mostrar com permetre l'intercanvi creuat de recursos ([CORS](https://www.w3.org/wiki/CORS_Enabled))
 des d'un servidor per a un origen diferent del qual pertany (diferent domini) en el cas de projectes creats
-amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/).
+amb [Canigó plugin](/canigo/entorn-desenvolupament/).
 
 ## Justificació
 
@@ -21,14 +21,14 @@ CORS és un mecanisme que restringeix l'accés web a recursos fora del domini al
 s'utilitza CORS per a la seva gestió. **Defineix com interactua un navegador web amb un servidor per determinar si l'intercanvi de recursos
 amb altres servidors és segur fent ús de les capçaleres HTTP**.
 
-Quan s'utilitza un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) que es
+Quan s'utilitza un projecte creat amb [Canigó plugin](/canigo/entorn-desenvolupament/) que es
 basa en Spring, **per defecte no s'envien a la capçalera HTTP cap dels paràmetres que permeten l'intercanvi creuat; per la qual cosa és necessari
 realitzar alguns ajustos per a la seva activació**.
 
 
 ## Configuració
 
-Per a activar CORS en un projecte creat amb [Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/),
+Per a activar CORS en un projecte creat amb [Canigó plugin](/canigo/entorn-desenvolupament/),
 **és necessari crear un filtre web de Spring, agregar-lo al contenidor i a la configuració de l'adaptador de seguretat de Spring**.
 
 ### Classe `WebSecurityConfig.java`
@@ -64,7 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 ## Exemple d'ús
 
 Per a mostrar un exemple d'ús de CORS és necessari crear un projecte Canigó amb
-[Canigó plugin](https://canigo.ctti.gencat.cat/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i
+[Canigó plugin](/canigo/entorn-desenvolupament/) afegint el mòdul de seguretat i
 crear una pàgina HTML que invoqui a través de Javascript algun recurs del servidor utilitzant les APIs `XMLHttpRequest` o `Fetch`.
 
 Un exemple de pàgina web que invoca el servei REST `/equipaments/id` podria ser la següent:
