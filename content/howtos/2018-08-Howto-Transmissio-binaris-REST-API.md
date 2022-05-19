@@ -248,7 +248,7 @@ public class EquipamentEspecialServiceController {
 </html>
 ```
 
-Més info:
+Per a més informació:
 
 * https://webapplog.com/json-is-not-cool-anymore/
 
@@ -338,7 +338,7 @@ Abans de fer cap modificació, cal generar, compilar i executar l'aplicació per
 
 Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.2 funcionant, s'ha de triar la implementació (JAXB, CXF, Axis, Xmlbeans, etc.) per treballar. Per simplicitat en aquest exemple farem ús de l'estàndard JAXB per generar el codi java:
 
-1. Afegir el fitxer src/main/xsd/global.xjb
+Afegir el fitxer src/main/xsd/global.xjb
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -360,7 +360,7 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 </jaxb:bindings>
 ```
 
-2. Crear el següent fitxer d'exemple: src/main/xsd/EquipamentEspecial.xsd
+Crear el següent fitxer d'exemple: src/main/xsd/EquipamentEspecial.xsd
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -427,7 +427,7 @@ Un cop s'han executat els passos previs per disposar d'una aplicació Canigó 3.
 </schema>
 ```
 
-3. Modificar pom.xml per afegir el següent plugin:
+Modificar pom.xml per afegir el següent plugin:
 
 ```
 			<plugin>
@@ -517,7 +517,7 @@ public class DocumentacioEquipamentEspecial
 
 ```
 
-Més info:
+Per a més informació:
 
 1. https://docs.oracle.com/javase/6/docs/technotes/tools/share/xjc.html
 

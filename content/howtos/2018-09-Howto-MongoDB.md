@@ -207,7 +207,7 @@ public interface EquipamentMongoRepository extends MongoGenericRepository<MongoE
 }
 ```
 
-Més info:
+Per a més informació:
 
 1. https://docs.spring.io/spring-data/mongodb/docs/current/reference/html
 2. https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/annotation/package-summary.html
