@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Guies d'ús d'arquitectura"
 description = "Guies d'ús (HowTOs) d'arquitectura 3.6.5"
 sections    = "canigo-fwk-docs"

@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Administració de logs"
 description = "Mòdul per administrar els logs de l'aplicació"
 sections    = "Canigó. Documentació Versió 3.6"

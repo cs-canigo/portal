@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Instrumentació"
 description = "Mòdul per generar dades d’instrumentació (nombre de peticions, nombre d’errors, …) de l'aplicació."
 sections    = "Canigó. Documentació Versió 3.6"

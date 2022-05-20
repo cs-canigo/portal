@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Plugin eclipse 1.8.4"
 description = "Plugin eclipse 1.8.4 Canigó 3.6.5"
 sections    = "canigo-fwk-docs"

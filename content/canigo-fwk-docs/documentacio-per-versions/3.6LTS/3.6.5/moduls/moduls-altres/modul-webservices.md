@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Webservices"
 description = "Webservices"
 sections    = "Canigó. Documentació Versió 3.6"

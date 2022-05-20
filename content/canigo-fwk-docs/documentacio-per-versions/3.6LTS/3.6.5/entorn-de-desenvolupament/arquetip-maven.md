@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Arquetip maven 1.7.4"
 description = "Arquetip maven 1.7.4 Canigó 3.6.5"
 sections    = "canigo-fwk-docs"

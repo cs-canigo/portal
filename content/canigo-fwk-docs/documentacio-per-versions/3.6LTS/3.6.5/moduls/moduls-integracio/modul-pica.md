@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "PICA"
 description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.laboració Administrativa)."
 sections    = "Canigó. Documentació Versió 3.6"

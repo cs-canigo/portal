@@ -8,7 +8,7 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
-| [Com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5](/howtos/2022-05-26-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
+| [Com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5](/howtos/2022-05-23-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
 | [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Vulnerabilitat |
 | [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)| Migració versió |
 | [Actualització Canigó 3.4 a Canigó 3.6](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/)| Migració versió |

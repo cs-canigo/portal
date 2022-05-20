@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Fusió de documents"
 description = "Mòdul de fusió de documents."
 sections    = "Canigó. Documentació Versió 3.6"

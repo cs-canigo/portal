@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Pujada d'arxius"
 description = "Pujada d'arxius al servidor."
 sections    = "Canigó. Documentació Versió 3.6"

@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "SFTP"
 description = "Transferència d'arxius de manera segura."
 sections    = "Canigó. Documentació Versió 3.6"

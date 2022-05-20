@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Cues JMS"
 description = "Missatgeria estándard JMS"
 sections    = "Canigó. Documentació Versió 3.6"

@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "LOPD"
 description = "Aplicació de protecció de dades."
 sections    = "Canigó. Documentació Versió 3.6"

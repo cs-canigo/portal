@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Enotum"
 description = "Connector de la Pica que simplifica l'utilització del servei de Notificacions Telemàtiques de la Generalitat."
 sections    = "Canigó. Documentació Versió 3.6"

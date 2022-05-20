@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Llistat de canvis"
 description = "Llistat de canvis Canigó 3.6.5"
 sections    = "canigo-fwk-docs"

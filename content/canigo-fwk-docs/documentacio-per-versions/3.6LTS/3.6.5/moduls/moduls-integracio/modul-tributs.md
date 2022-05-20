@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-26"
+date        = "2022-05-23"
 title       = "Tributs"
 description = "Servei de consulta de dades fiscals de la PICA."
 sections    = "Canigó. Documentació Versió 3.6"
