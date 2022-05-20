@@ -1,7 +1,7 @@
 +++
-date        = "2022-05-20"
+date        = "2022-05-26"
 title       = "Canigó. Actualització driver del mòdul d'antivirus"
-description = "Howto per a mostrar com actualitzar el driver del mòdul de l'antivirus per a projectes canigó < 3.6.5"
+description = "Howto per a mostrar com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5"
 #section     = "howtos"
 #categories  = ["canigo"]
 #key         = "JUNY2022"

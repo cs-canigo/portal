@@ -1,9 +1,12 @@
 +++
-date        = "2021-12-17"
+date        = "2022-05-26"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 1
+aliases       = [
+"/canigo-documentacio-versions-3x-integracio/modul-antivirus"
+]
 +++
 
 ## Propòsit
@@ -17,7 +20,7 @@ Aquest mòdul permet l'escaneig d'arxius mitjançant el servei d'antivirus Centr
 Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
 
 ```
-<canigo.integration.antivirus.version>[2.2.0,2.3.0)</canigo.integration.antivirus.version>
+<canigo.integration.antivirus.version>[2.4.0,2.5.0)</canigo.integration.antivirus.version>
 
 <dependency>
     <groupId>cat.gencat.ctti</groupId>
@@ -25,6 +28,24 @@ Per tal d'instal-lar el mòdul d'Antivirus es pot incloure automàticament a tra
     <version>${canigo.integration.antivirus.version}</version>
 </dependency>
 ```
+
+<div class="message warning">
+
+L'última versió del connector de l'antivirus de Canigó utilitza l'última versió del connector de l'antivirus.
+
+<br>
+
+El servei de l'antivirus només dona suport si s'utilitza l'última versió del connector de l'antivirus, per tant, assegureu-vos que la versió de Canigó que s'utilitza a l'aplicació sigui compatible amb l'última versió del connector de l'antivirus de Canigó i que esteu utilitzant l'última versió del connector de l'antivirus de Canigó.
+
+<br>
+
+Podeu consultar quina és l'última versió de Canigó i quina és l'última versió del connector de l'antivirus de Canigó a:
+
+<br>
+
+<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
+
+</div>
 
 ### Configuració
 
@@ -62,12 +83,12 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>7.0.0.8</version>
 </dependency>
 ```
-* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-7.9.2.jar" configurant el pom.xml amb:
+* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-8.2.0.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
 	<artifactId>scanengine-api</artifactId>
-	<version>7.9.2</version>
+	<version>8.2.0</version>
 </dependency>
 ```
 
@@ -100,11 +121,11 @@ Endpoint de l'aplicació que publica el servei de l'antivirus
 		@Autowired
 		AntivirusService antivirusService;
 
-		@PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE}, 
+		@PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE},
 				produces = { MediaType.APPLICATION_JSON_VALUE })
-		public String scan(@FormDataParam("file") InputStream inputStream, 
+		public String scan(@FormDataParam("file") InputStream inputStream,
 							@FormDataParam("file") FormDataContentDisposition fileDetail) {
-			
+
 			return antivirusService.scan(inputStream);
 		}
 	}
@@ -137,7 +158,7 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 
 		@Autowired
 		private Antivirus service;
-		
+
 		private static final Logger log = LoggerFactory.getLogger(AntivirusService.class);
 
 
@@ -151,13 +172,13 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 				log.info("AntivirusAction [scan] - Inici");
 				ResultatEscaneig res = null;
 				try {
-			
+
 					ByteArrayOutputStream out = new ByteArrayOutputStream();
-					
+
 					IOUtils.copy(file, out);
-					
+
 					res = service.scan(out.toByteArray());
-			
+
 					if (res != null) {
 						switch (res.getEstat()) {
 						case 0:
@@ -184,9 +205,9 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 							resultat = "S'ha produit un error";
 						}
 					}
-			
+
 					message = "Resultat del escaneig: " + resultat;
-			
+
 					log.info("AntivirusAction [scan] - Final");
 				} catch (AntivirusException ae) {
 					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
@@ -196,9 +217,45 @@ Classe java on es realitza la lògica de la operació i es crida al mòdul de l'
 					log.error("AntivirusException - Antivirus ("+ service.getClass()+"): " + service
 							+ " " + e.getStackTrace());
 					message = "Resultat del escaneig(Error): " + e.getMessage();
-				} 
-				
+				}
+
 				return message;
 			}
 	}
 ```
+## Respostes servei antivirus
+
+L'objecte `cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig` és l'encarregat d'interpretar la informació de la resposta del servei de l'antivirus. Aquest objecte conté els mètodes:
+
+- `int getEstat()`: Número enter que representa l’estat de finalització del procés d’escaneig.
+
+	o STATUS_OK = 0
+
+	o STATUS_KO = -1
+
+	o STATUS_WARN = 1
+
+- `String getMissatge()`: String que emmagatzemarà la informació de les amenaces trobades en el procés d’escaneig. Si no hi hagués cap el seu valor serà null
+
+- `List<InfectionInfo> getArrayVirus()`: Llistat d’objectes InfectionInfo. Aquests objectes representen cada amenaça detectada en l’escaneig. Cada objecte InfectionInfo disposa dels següents camps:
+
+	o String violationId
+
+	o String violationName
+
+	o String threadCategory
+
+	o String fileName
+
+	o String disposition
+
+El conjunt de dades que retornarà es pot resumir amb el següent quadre:
+
+Cas | Estat | Missatge | ArrayVirus
+--- | ----- | -------- | ----------
+KO | -1 | [string amb la informació del virus] | [LLista d’objetes de tipus InfectionInfo amb informació de les amenaces detectades]
+OK | 0 | null | null
+WARN (No s’ha pogut accedir al fitxer) | 1 | FILE_ACCESS_FAILED | null
+WARN(Error intern al servidor) | 1 | INTERNAL_SERVER_ERROR | null
+WARN(no hi ha llicència disponible) | 1 | NO_AV_LICENSE | null
+WARN(base de dades antivirus caducada) | 1 | Base de dades de la definició de l'antivirus caducada | null

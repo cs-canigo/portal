@@ -8,6 +8,7 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
+| [Com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5](/howtos/2022-05-26-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
 | [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Vulnerabilitat |
 | [Com crear projectes amb Canigó 3.4 de forma manual sense fer ús del Plugin de Canigó](/howtos/2021-10-14-Howto-crear-projectes-canigo-3.4-manualment/)| Migració versió |
 | [Actualització Canigó 3.4 a Canigó 3.6](/howtos/2021-10-Howto-Actualitzacio_Canigo3_4_Canigo3_6/)| Migració versió |
@@ -30,5 +31,3 @@ weight      = 2
 | [Propietats Multientorn al Front-End](/howtos/2018-04-howto-frontend-multientorn/) | Propietats, frontend|
 | [Proves Unitàries Mòduls de Canigó](/howtos/2018-01-howto-test_jars_canigo/) | Test, Test unitaris |
 | [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.x] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/) | JPA, Spring Data |
-
-

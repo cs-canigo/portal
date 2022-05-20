@@ -1,5 +1,5 @@
 +++
-date        = "2021-10-21"
+date        = "2022-05-26"
 title       = "Antivirus"
 description = "Accés a l'escaneig d'arxius mitjançant el servei d'antivirus Centrals del CTTI."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -24,7 +24,7 @@ Per tal d'instal·lar el mòdul d'Antivirus es pot incloure automàticament a tr
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 <div class="message warning">
 
@@ -40,7 +40,7 @@ Podeu consultar quina és l'última versió de Canigó i quina és l'última ver
 
 <br>
 
-<a href="/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.0/moduls/compatibilitat-per-modul/">Matrius de Compatibilitats</a>
+<a href="/canigo-download-related/matrius-compatibilitats/">Matrius de Compatibilitats</a>
 
 </div>
 
@@ -80,12 +80,12 @@ Per a utilizar aquest mòdul s'ha de demanar la següent llibreria enviant un co
 	<version>7.0.0.8</version>
 </dependency>
 ```
-* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-7.9.2.jar" configurant el pom.xml amb:
+* Versió mòdul antivirus >= 2.2.0: llibreria "scanengine-api-8.2.0.jar" configurant el pom.xml amb:
 ```xml
 <dependency>
 	<groupId>com.symantec.scanengine.api</groupId>
 	<artifactId>scanengine-api</artifactId>
-	<version>7.9.2</version>
+	<version>8.2.0</version>
 </dependency>
 ```
 

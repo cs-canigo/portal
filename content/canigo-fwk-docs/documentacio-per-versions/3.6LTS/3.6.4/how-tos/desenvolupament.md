@@ -8,8 +8,9 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
-| [Com resoldre la vulnerabilitat detectada Spring4Shell](/howtos/2022-04-13-Howto-canigo-Spring4Shell/) | Spring4Shell, Vulnerabilitat |
-| [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Vulnerabilitat |
+| [Com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5](/howtos/2022-05-26-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
+| [Com resoldre la vulnerabilitat detectada Spring4Shell](/howtos/2022-04-13-Howto-canigo-Spring4Shell/) | Spring4Shell, SpringShell, Vulnerabilitat |
+| [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Log4j2, Vulnerabilitat |
 | [Com configurar propietats en fitxers YAML per a proves unitàries](/howtos/2021-11-26-Howto-yaml_test_file/)| Configuracio, Test, Test unitaris |
 | [Com utilitzar Spring Retry per a realitzar reintents d’accions](/howtos/2021-07-26-Howto-spring_retry/)| Spring, Patró |
 | [Com implementar el patró Circuit Breaker](/howtos/2021-01-02-Howto-circuit_breaker/)| Spring, Patró |
@@ -32,5 +33,3 @@ weight      = 2
 | [Propietats Multientorn al Front-End](/howtos/2018-04-howto-frontend-multientorn/) | Propietats, frontend|
 | [Proves Unitàries Mòduls de Canigó](/howtos/2018-01-howto-test_jars_canigo/) | Test, Test unitaris |
 | [Ús de Spring Data i QueryDSL al servei de persistència de Canigó 3.x] (/howtos/2017-11-Howto-Us_Servei_Persistence_Canigo/) | JPA, Spring Data |
-
-

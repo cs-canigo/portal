@@ -24,7 +24,7 @@ Per tal d'instal-lar el mòdul d'upload de fitxers es pot incloure automàticame
 </dependency>
 ```
 
-A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
+A la [Matriu de Compatibilitats 3.6] (/canigo-download-related/matrius-compatibilitats/canigo-36/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 ### Configuració
 
@@ -39,3 +39,51 @@ Propietat | Requerit | Descripció
 *.fileUpload.maxInMemorySize | No | Màxim tamany permés en bytes abans de guardar en disc. Valor per defecte: 10240 (bytes).
 *.fileUpload.launchExceptionIfVirusDetected | No | Opció només disponible per a la integració del fileupload i antivirus. Indica si es llençarà una excepció al servei en el cas de que es trobi un virus en l'arxiu pujat. Valor per defecte: true.
 
+## Utilització del mòdul
+
+### Exemple d'ús
+
+El mòdul de pujada d'arxius ja incorpora la dependència transitiva del mòdul d'antivirus, per tant, no és necessari
+modificar el fitxer `pom.xml` a tal efecte. No obstant això, i només en cas de fer servir l'escaneig de fitxers amb el servei
+d'antivirus, com és el cas del següent exemple d'ús, caldrà incorporar i configurar el
+[Mòdul d'antivirus](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-antivirus/)
+al projecte.
+
+```java
+    import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
+    import cat.gencat.ctti.canigo.arch.integration.antivirus.exceptions.AntivirusException;
+    import cat.gencat.ctti.canigo.arch.support.fileupload.UploadedFiles;
+    import cat.gencat.ctti.canigo.arch.support.fileupload.impl.FileUploadServiceAntivImpl;
+    import org.slf4j.Logger;
+    import org.slf4j.LoggerFactory;
+    import org.springframework.http.MediaType;
+    import org.springframework.web.bind.annotation.PostMapping;
+    import org.springframework.web.bind.annotation.RequestMapping;
+    import org.springframework.web.bind.annotation.RequestParam;
+    import org.springframework.web.bind.annotation.RestController;
+    import org.springframework.web.multipart.MultipartFile;
+    import org.springframework.web.multipart.MultipartHttpServletRequest;
+    import javax.inject.Inject;
+    import java.io.IOException;
+
+    @RestController
+    @RequestMapping("/fileupload")
+    public class FileUploadController {
+      private static final Logger log = LoggerFactory.getLogger(SarcatService.class);
+
+      @Inject
+      private FileUploadServiceAntivImpl fileUploadService;
+
+      @PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+      public ResultatEscaneig fileUpload(MultipartHttpServletRequest request, @RequestParam MultipartFile file) throws IOException, AntivirusException {
+        log.info("file: ", file.getName());
+        UploadedFiles uploadedFiles = fileUploadService.getUploadedFiles(request, file.getName());
+        log.info("uploadedFiles.hasFiles: ", uploadedFiles.hasFiles());
+
+        return fileUploadService.getAntivirus().scan(file.getBytes());
+      }
+    }
+```
+
+On **FileUploadController.java** és l'Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant, en
+aquest cas, amb el servei d'antivirus els fitxers que es volen pujar.
