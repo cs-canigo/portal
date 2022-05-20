@@ -1,7 +1,7 @@
 +++
 date        = "2022-04-13"
 title       = "Migració versió anterior"
-description = "Migració de versió 3.6.2 a Canigó 3.6.4"
+description = "Migració de versió 3.6.3 a Canigó 3.6.4"
 sections    = "canigo-fwk-docs"
 enllac		= "/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.4/migracio-versio-anterior/"
 weight		= 3
