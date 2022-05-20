@@ -1,11 +1,11 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-20"
 title       = "Què és Eventhub"
 description = "Descripció de la plataforma Eventhub"
 sections    = "EventHub"
-toc 		= false
+toc         = false
 taxonomies  = []
-weight 		= 1
+weight      = 1
 +++
 
 ## EventHub
@@ -33,3 +33,7 @@ Per a donar resposta a aquestes formes de comunicació entre serveis i sistemes,
 - **Servei monitoritzat 24/7**. La plataforma està declarada com un sistema crític i per tant monitoritzada tot el dia tots els dies pel Centre del Control del CTTI.
 
 - **Suport**. Equip de suport especialitzat en la tecnologia per ajudar-vos des de la definició de l’arquitectura, millors pràctiques de definició de topics, integració amb la plataforma, resolució de incidències i posada en producció. Compta amb suport de fabricant, Confluent, amb temps de resposta inferior a 1h per a incidents de severitat crítica en producció.
+
+
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).

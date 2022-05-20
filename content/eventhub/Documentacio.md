@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-20"
 title       = "Documentació"
 description = "Documentació i enllaços d'interès"
 sections    = "EventHub"
@@ -38,3 +38,6 @@ weight      = 5
 - Connectors
   - [MongoDB Connector](https://www.mongodb.com/docs/kafka-connector/current/)
   - [Debezium Connector for Oracle](https://debezium.io/documentation/reference/stable/connectors/oracle.html)
+
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).

@@ -1,11 +1,11 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-20"
 title       = "Arquitectura"
 description = "Arquitectura d'Eventhub"
 sections    = "EventHub"
-toc 		= false
+toc         = false
 taxonomies  = []
-weight 		= 2
+weight      = 2
 +++
 
 
@@ -69,4 +69,5 @@ Amb la implementació de quotes evitarem:
 Posem a disposició de les aplicacions 3 entorns de treball: INT, PRE i PRO
 
 
-
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).

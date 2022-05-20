@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-20"
 title       = "Serveis"
 description = "Components d’Eventhub"
 sections    = "EventHub"
@@ -72,3 +72,7 @@ En el món de l'emmagatzematge i la recuperació d'informació, alguns sistemes 
 D'una banda, Kafka Connect és un ecosistema de connectors endollables, i de l'altra, una aplicació client. Com a aplicació client, Connect és un procés de servidor que s'executa amb maquinari independent dels mateixos brokers de Kafka. És escalable i tolerant a errors, el que significa que podeu executar no només un treballador de Connect, sinó un grup de treballadors de Connect que comparteixen la càrrega de traslladar dades dins i fora de Kafka des i cap a sistemes externs. Kafka Connect també elimina el negoci del codi lluny de l'usuari i, en canvi, només requereix la configuració JSON per executar-se.
 
 Un dels principals avantatges de Kafka Connect és el seu gran ecosistema de connectors. Escriure el codi que mou dades a un magatzem de blobs al núvol, o escriu a Elasticsearch o inseriu registres en una base de dades relacional és un codi que és poc probable que variï d'una empresa a una altra. De la mateixa manera, llegir des d'una base de dades relacional, Salesforce o un sistema de fitxers HDFS heretat és la mateixa operació, independentment del tipus d'aplicació que ho faci. Definitivament, podeu escriure aquest codi, però dedicar el vostre temps a això no afegeix cap tipus de valor únic als vostres clients ni fa que el vostre negoci sigui més competitiu.
+
+
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).
