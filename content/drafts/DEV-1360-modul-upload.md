@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-06"
+date        = "2022-05-26"
 title       = "Pujada d'arxius"
 description = "Pujada d'arxius al servidor."
 sections    = "Canigó. Documentació Versió 3.6"
@@ -39,16 +39,19 @@ Propietat | Requerit | Descripció
 *.fileUpload.maxInMemorySize | No | Màxim tamany permés en bytes abans de guardar en disc. Valor per defecte: 10240 (bytes).
 *.fileUpload.launchExceptionIfVirusDetected | No | Opció només disponible per a la integració del fileupload i antivirus. Indica si es llençarà una excepció al servei en el cas de que es trobi un virus en l'arxiu pujat. Valor per defecte: true.
 
-## Utilització del Mòdul
+## Utilització del mòdul
 
 ### Exemple d'ús
 
 **FileUploadController.java**
 
-Endpoint de l'aplicació que fa servir el mètode getUploadedFiles() escanejant amb el servei d'antivirus els fitxers que es volen pujar.
+Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant amb el servei d'antivirus els
+fitxers que es volen pujar.
 
-El mòdul de Pujada d'arxius ja té la dependència transitiva del mòdul d'antivirus per tant no caldrà afegir el mòdul ni modificar el pom.xml
-Però en cas de fer servir (com és el cas a aquest exemple d'ús) l'escaneig de fixers amb l'antivirus, caldrà configurar aquest mòdul, podeu consultar <a href="/canigo-documentacio-versions-36/integracio/modul-antivirus/">Mòdul Antivirus</a>
+El mòdul de Pujada d'arxius ja incorpora la dependència transitiva del mòdul d'antivirus, per tant, no caldrà
+modificar el fitxer `pom.xml`. No obstant això, en cas de fer servir l'escaneig de fitxers amb l'antivirus,
+com és el cas del següent exemple d'ús, caldrà configurar el
+[Mòdul d'antivirus](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.4/moduls/moduls-integracio/modul-antivirus/).
 
 ```java
     import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
