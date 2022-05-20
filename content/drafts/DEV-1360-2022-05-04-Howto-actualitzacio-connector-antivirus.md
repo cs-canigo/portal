@@ -19,7 +19,6 @@ per a projectes generats amb una versió del Framework Canigó inferior a la v.3
 El mòdul d’integració amb l’antivirus corporatiu és un dels més utilitzats i amb més demanda els últims mesos.
 L’alineament de versions del driver i el servei permet assegurar un funcionament òptim de la integració tenint en
 compte que **el servei d’antivirus només dona suport a l’última versió del connector**.
-
 D'acord amb aquesta estratègia, s'ha generat una nova versió del
 [Framework Canigó v.3.6.5](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/)
 per a, entre d'altres, passar a fer servir la nova versió del driver java del connector del servei d'antivirus.

@@ -85,5 +85,5 @@ al projecte.
     }
 ```
 
-On **FileUploadController.java** és l'Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant amb
-el servei d'antivirus els fitxers que es volen pujar.
+On **FileUploadController.java** és l'Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant, en
+aquest cas, amb el servei d'antivirus els fitxers que es volen pujar.
