@@ -1,7 +1,7 @@
 +++
 date        = "2022-05-20"
-title       = "Canigó. Actualització driver mòdul Antivirus versions < 3.6.5"
-description = "Howto per a mostrar com actualitzar el driver del mòdul de l'Antivirus per a versions inferiors a Canigó 3.6.5"
+title       = "Canigó. Actualització driver del mòdul d'antivirus"
+description = "Howto per a mostrar com actualitzar el driver del mòdul de l'antivirus per a projectes canigó < 3.6.5"
 #section     = "howtos"
 #categories  = ["canigo"]
 #key         = "JUNY2022"
@@ -29,7 +29,7 @@ amb una preconfiguració a tal efecte i, en cas de plantejar l'actualització de
 
 ## Passos a seguir
 
-Modificar l'arxiu de l'aplicació `pom.xml` per a actualitzar el driver `scanengine-api` a la versió **8.2.0**:
+Cal modificar l'arxiu de l'aplicació `pom.xml` per a actualitzar el driver `scanengine-api` a la versió **8.2.0**:
 
 ```xml
 ...
@@ -52,5 +52,5 @@ Modificar l'arxiu de l'aplicació `pom.xml` per a actualitzar el driver `scaneng
 
 ## Conclusió
 
-És possible actualitzar el driver del connector de l'antivirus a projectes existents amb Canigó 3.4 o 3.6 per a
-assegurar un funcionament òptim de la integració amb el servei.
+És possible actualitzar el driver del connector de l'antivirus a projectes existents amb Canigó 3.4.x o 3.6.x per a
+assegurar un funcionament òptim de la integració amb aquest servei.
