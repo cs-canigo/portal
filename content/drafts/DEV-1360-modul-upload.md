@@ -43,15 +43,13 @@ Propietat | Requerit | Descripció
 
 ### Exemple d'ús
 
-**FileUploadController.java**
-
-Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant amb el servei d'antivirus els
-fitxers que es volen pujar.
+**FileUploadController.java** és l'Endpoint de l'aplicació que fa servir el mètode `getUploadedFiles()` escanejant amb
+el servei d'antivirus els fitxers que es volen pujar.
 
 El mòdul de Pujada d'arxius ja incorpora la dependència transitiva del mòdul d'antivirus, per tant, no caldrà
-modificar el fitxer `pom.xml`. No obstant això, en cas de fer servir l'escaneig de fitxers amb l'antivirus,
-com és el cas del següent exemple d'ús, caldrà configurar el
-[Mòdul d'antivirus](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.4/moduls/moduls-integracio/modul-antivirus/).
+modificar el fitxer `pom.xml`. No obstant això, en cas de fer servir l'escaneig de fitxers amb el servei d'antivirus,
+com és el cas del següent exemple d'ús, caldrà incorporar i configurar el
+[Mòdul d'antivirus](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-integracio/modul-antivirus/).
 
 ```java
     import cat.gencat.ctti.canigo.arch.integration.antivirus.ResultatEscaneig;
