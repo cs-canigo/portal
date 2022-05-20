@@ -1,5 +1,5 @@
 +++
-date        = "2022-05-02"
+date        = "2022-05-20"
 title       = "Exemples"
 description = "Exemples de Kafka i Confluent Platform"
 sections    = "EventHub"
@@ -18,3 +18,6 @@ weight      = 6
 ## Kafka connect
 - [MongoDB Connector - Replicate Data with a Change Data Capture Handler](https://www.mongodb.com/docs/kafka-connector/current/tutorials/replicate-with-cdc/)
 - [MongoDB Connector - Migrate an Existing Collection to a Time Series Collection](https://www.mongodb.com/docs/kafka-connector/current/tutorials/migrate-time-series/)
+
+---
+Per a més informació podeu contactar amb l'Oficina Tècnica mitjançant [e-mail](mailto:eventhub.ctti@gencat.cat). També podeu consultar l'apartat de [Suport](/eventhub/Suport).
