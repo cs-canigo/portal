@@ -11,7 +11,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Categoria_NTI_ATR.docx",
                 "ifitxer_xls": "Categoria_NTI.xlsx",
                 "idatacreacio": "14/12/2020",
@@ -39,7 +39,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Diaris_oficials_ATR.docx",
                 "ifitxer_xls": "Diaris_oficials.xlsx",
                 "idatacreacio": "14/12/2020",
@@ -56,34 +56,6 @@
         "Data_actualitzacio": "22/12/2021"
     },
     {
-        "Id": "dtarq46",
-        "Nom": "Relació amb Expedient",
-        "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Funcionament de l'administració",
-        "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Persona_Relacio_Expedient_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Relació_Expedient.xlsx",
-                "idatacreacio": "07/06/2019",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "RELACIO_AMB_EXPEDIENT",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
-    },
-    {
         "Id": "dtarq165",
         "Nom": "Tipus Documentals",
         "Ambit": "Administració pública, govern i relacions institucionals",
@@ -95,7 +67,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_Documentals_ATR.docx",
                 "ifitxer_xls": "Tipus_Documentals.xlsx",
                 "idatacreacio": "14/12/2020",
@@ -123,7 +95,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_NTI_ATR.docx",
                 "ifitxer_xls": "Tipus_NTI.xlsx",
                 "idatacreacio": "14/12/2020",
@@ -400,62 +372,6 @@
         "Data_actualitzacio": "22/09/2021"
     },
     {
-        "Id": "dtarq83",
-        "Nom": "Tipus Unitat Orgànica",
-        "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Organització de l'administració i sector públic",
-        "Descripcio": "Llista de tipologies d'unitats orgàniques de Catalunya.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Territori_Unitat_Orgànica_Tipus_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Unitat_Orgànica_Tipus.xlsx",
-                "idatacreacio": "07/06/2019",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "TIPUS_UNITAT_ORGANICA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
-    },
-    {
-        "Id": "dtarq84",
-        "Nom": "Unitat Orgànica",
-        "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Organització de l'administració i sector públic",
-        "Descripcio": "Llista d'unitats orgàniques indicant la seva tipologia.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Territori_Unitat_Organica_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_Unitat_Orgànica.xlsx",
-                "idatacreacio": "07/06/2019",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "UNITAT_ORGANICA",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
-    },
-    {
         "Id": "dtarq90",
         "Nom": "Ajuntaments",
         "Ambit": "Administració pública, govern i relacions institucionals",
@@ -639,34 +555,6 @@
         "Data_actualitzacio": "21/04/2021"
     },
     {
-        "Id": "dtarq157",
-        "Nom": "Vegueries",
-        "Ambit": "Administració pública, govern i relacions institucionals",
-        "Subambit": "Organització territorial i règim local",
-        "Descripcio": "Llistat de vegueries, divisió territorial supracomarcal amb personalitat jurídica pròpia per a l'exercici del govern intermunicipal de cooperació local i per a l'organització territorial dels serveis de la Generalitat de Catalunya.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Vegueries_ATR.docx",
-                "ifitxer_xls": "Vegueries.xlsx",
-                "idatacreacio": "10/12/2020",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "22/12/2021",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "VEGUERIES",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "22/12/2021",
-        "Data_actualitzacio": "22/12/2021"
-    },
-    {
         "Id": "dtarq117",
         "Nom": "NC (Productes comerç exterior)",
         "Ambit": "Comerç, consum i turisme",
@@ -702,12 +590,27 @@
                 "idatapublicacio": "21/04/2021",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/NC-2020-productes-comer%C3%A7-exterior-/qixe-w7gm",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "NC 2021 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2021. Versió inicial.",
+                "ifitxer_doc": "NC_2021_prod_com_ext_ATR.docx",
+                "ifitxer_xls": "NC_2021_prod_com_ext.xlsx",
+                "idatacreacio": "17/05/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/05/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "NC_PRODUCTES_COMERÇ_EXTERIOR",
         "Classificacio": "Consolidat",
         "Data_publicacio": "10/03/2021",
-        "Data_actualitzacio": "21/04/2021"
+        "Data_actualitzacio": "25/05/2022"
     },
     {
         "Id": "dtarq113",
@@ -831,12 +734,27 @@
                 "idatapublicacio": "21/04/2021",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Ind%C3%BAstria/PRODCOM-EIP-2018-productes-industrials-/3ggf-d6t2",
                 "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "2019 - V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Institut d'Estadística de Catalunya (Idescat)",
+                "idescripcio": "Any 2019 (PRODCOM-EIP 2019). Versió inicial.",
+                "ifitxer_doc": "PRODCOM_EIP_2019_prod_ind_ATR.docx",
+                "ifitxer_xls": "PRODCOM_EIP_2019_prod_ind.xlsx",
+                "idatacreacio": "17/05/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/05/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "PRODCOM_EIP_PRODUCTES_INDUSTRIALS",
         "Classificacio": "Consolidat",
         "Data_publicacio": "10/03/2021",
-        "Data_actualitzacio": "21/04/2021"
+        "Data_actualitzacio": "25/05/2022"
     },
     {
         "Id": "dtarq109",
@@ -908,7 +826,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Junta Consultiva de Contractació Administrativa - Departament d'Economia i Hisenda",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Classificacio_empresarial_grups_ATR.docx",
                 "ifitxer_xls": "Classificacio_empresarial_grups.xlsx",
                 "idatacreacio": "11/12/2020",
@@ -936,7 +854,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Junta Consultiva de Contractació Administrativa - Departament d'Economia i Hisenda",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Classificacio_empresarial_subgrups_ATR.docx",
                 "ifitxer_xls": "Classificacio_empresarial_subgrups.xlsx",
                 "idatacreacio": "11/12/2020",
@@ -1067,7 +985,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Arees_professionals_ATR.docx",
                 "ifitxer_xls": "Arees_professionals.xlsx",
                 "idatacreacio": "14/12/2020",
@@ -1194,34 +1112,6 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "15/07/2020",
         "Data_actualitzacio": "15/07/2020"
-    },
-    {
-        "Id": "dtarq100",
-        "Nom": "Torres de radiocomunicació",
-        "Ambit": "Informació i comunicació",
-        "Subambit": "Telecomunicacions i societat digital",
-        "Descripcio": "Llistat de torres de radiocomunicació propietat de la Generalitat de Catalunya",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Entitats proposades Desembre 19",
-                "ifitxer_doc": "Codis_Infra_TorresRadioCom_ATR.docx",
-                "ifitxer_xls": "Codis_Infra_TorresRadioCom.xlsx",
-                "idatacreacio": "06/03/2020",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "20/04/2020",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "TORRES_DE_RADIOCOMUNICACIO",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "18/12/2019",
-        "Data_actualitzacio": "20/04/2020"
     },
     {
         "Id": "dtarq147",
@@ -1375,7 +1265,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Arees_basiques_salut_ATR.docx",
                 "ifitxer_xls": "Arees_basiques_salut.xlsx",
                 "idatacreacio": "24/01/2022",
@@ -1461,7 +1351,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Departament de Salut",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Sectors_sanitaris_ATR.docx",
                 "ifitxer_xls": "Sectors_sanitaris.xlsx",
                 "idatacreacio": "24/01/2022",
@@ -1489,7 +1379,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Classes_discapacitat_ATR.docx",
                 "ifitxer_xls": "Classes_discapacitat.xlsx",
                 "idatacreacio": "08/02/2022",
@@ -1517,7 +1407,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Graus_discapacitat_ATR.docx",
                 "ifitxer_xls": "Graus_discapacitat.xlsx",
                 "idatacreacio": "11/12/2020",
@@ -1545,7 +1435,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Tipus_discapacitat_ATR.docx",
                 "ifitxer_xls": "Tipus_discapacitat.xlsx",
                 "idatacreacio": "11/12/2020",
@@ -1573,7 +1463,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Codis_Persona_Comunicacio_Canal_Avis_ATR.docx",
                 "ifitxer_xls": "Codis_Persona_Comunicació_Canal_Avís.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -1601,7 +1491,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Gabinet Jurídic de la Generalitat",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Caracter_representacio_ATR.docx",
                 "ifitxer_xls": "Caracter_representacio.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -1700,7 +1590,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Gabinet Jurídic de la Generalitat",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Grau_Parentiu_ATR.docx",
                 "ifitxer_xls": "Grau_Parentiu.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -1715,6 +1605,34 @@
         "Classificacio": "Consolidat",
         "Data_publicacio": "23/02/2022",
         "Data_actualitzacio": "23/02/2022"
+    },
+    {
+        "Id": "dtarq46",
+        "Nom": "Relació amb Expedient",
+        "Ambit": "Societat i ciutadania",
+        "Subambit": "Atenció ciutadana i relacions amb l'administració",
+        "Descripcio": "Permet descriure la relació que te una persona amb un expedient.",
+        "instancies": [
+            {
+                "inom": "V01",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Relacio_amb_Expedient_ATR.docx",
+                "ifitxer_xls": "Relacio_amb_Expedient.xlsx",
+                "idatacreacio": "07/06/2019",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/05/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            }
+        ],
+        "nom_dinsBD": "RELACIO_AMB_EXPEDIENT",
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "25/05/2022",
+        "Data_actualitzacio": "25/05/2022"
     },
     {
         "Id": "dtarq44",
@@ -1756,7 +1674,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Gabinet Jurídic de la Generalitat",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Representacio_ATR.docx",
                 "ifitxer_xls": "Representacio.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -1784,7 +1702,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Codis_Persona_Tipus_Identificador_ATR.docx",
                 "ifitxer_xls": "Codis_Persona_Tipus_Identificador.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -1808,25 +1726,25 @@
         "Descripcio": "Permet indicar el tipus de notificació que accepta una persona.",
         "instancies": [
             {
-                "inom": "V00.01",
-                "iestat": "Pendent",
+                "inom": "V01",
+                "iestat": "Vigent",
                 "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
-                "ifitxer_doc": "Codis_Persona_Tipus_Notificacio_ATR.docx",
-                "ifitxer_xls": "Codis_Persona_Tipus_Notificació.xlsx",
+                "ipromotor": "Gabinet Jurídic de la Generalitat",
+                "idescripcio": "Versió inicial.",
+                "ifitxer_doc": "Tipus_notificacio_ATR.docx",
+                "ifitxer_xls": "Tipus_notificacio.xlsx",
                 "idatacreacio": "07/06/2019",
                 "itipusvisual": "Ús no restringit",
                 "idataobsoleta": "",
-                "idatapublicacio": "21/06/2019",
+                "idatapublicacio": "25/05/2022",
                 "iurl_dades_obertes": "",
                 "itipusactualitzacio": "Sota demanda"
             }
         ],
         "nom_dinsBD": "TIPUS_NOTIFICACIO",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "21/06/2019",
-        "Data_actualitzacio": "21/06/2019"
+        "Classificacio": "Consolidat",
+        "Data_publicacio": "25/05/2022",
+        "Data_actualitzacio": "25/05/2022"
     },
     {
         "Id": "dtarq52",
@@ -1885,36 +1803,8 @@
         "Data_actualitzacio": "31/03/2021"
     },
     {
-        "Id": "dtarq104",
-        "Nom": "Àmbit territorial de planificació",
-        "Ambit": "Territori, infraestructures i urbanisme",
-        "Subambit": "Ordenació del territori, paisatge i urbanisme",
-        "Descripcio": "Llistat d'àmbits territorials de planificació en què es divideix el territori.",
-        "instancies": [
-            {
-                "inom": "V00.01",
-                "iestat": "Pendent",
-                "itipus": "Tabular",
-                "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Entitats proposades Desembre 19",
-                "ifitxer_doc": "Codis_Territori_AmbitTerriPlani_ATR.docx",
-                "ifitxer_xls": "Codis_Territori_AmbitTerriPlani.xlsx",
-                "idatacreacio": "06/03/2020",
-                "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
-                "idatapublicacio": "20/04/2020",
-                "iurl_dades_obertes": "",
-                "itipusactualitzacio": "Sota demanda"
-            }
-        ],
-        "nom_dinsBD": "AMBIT_TER_PLANIFICACIO",
-        "Classificacio": "Pendent",
-        "Data_publicacio": "18/12/2019",
-        "Data_actualitzacio": "20/04/2020"
-    },
-    {
         "Id": "dtarq134",
-        "Nom": "Codis postal per municipis de Catalunya",
+        "Nom": "Codis postals per municipis de Catalunya",
         "Ambit": "Territori, infraestructures i urbanisme",
         "Subambit": "Ordenació del territori, paisatge i urbanisme",
         "Descripcio": "Llistat de codis assignats pels serveis postals per tal de facilitar la distribució del correu, associats a municipis de Catalunya.",
@@ -2457,7 +2347,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Codis_Territori_Regions_mon_ATR.docx",
                 "ifitxer_xls": "Codis_Territori_Regions_mon.xlsx",
                 "idatacreacio": "07/06/2019",
@@ -2716,16 +2606,31 @@
             },
             {
                 "inom": "V07",
-                "iestat": "Vigent",
+                "iestat": "Obsoleta",
                 "itipus": "Tabular",
                 "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
                 "idescripcio": "Actualització versió anterior per canvi de nom de 21 municipis, implica canvi de nom de 80 unitats poblacionals",
                 "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
-                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "ifitxer_xls": "deprecated/Unitats_Poblacionals_Espanya_V07.xlsx",
                 "idatacreacio": "25/04/2022",
                 "itipusvisual": "Ús no restringit",
-                "idataobsoleta": "",
+                "idataobsoleta": "25/05/2022",
                 "idatapublicacio": "27/04/2022",
+                "iurl_dades_obertes": "",
+                "itipusactualitzacio": "Sota demanda"
+            },
+            {
+                "inom": "V08",
+                "iestat": "Vigent",
+                "itipus": "Tabular",
+                "ipromotor": "Dirección General del Instituto Geográfico Nacional (IGN)",
+                "idescripcio": "Revisió general per nova versió del fitxer font, publicat l'abril del 2022.",
+                "ifitxer_doc": "Unitats_Poblacionals_Espanya_ATR.docx",
+                "ifitxer_xls": "Unitats_Poblacionals_Espanya.xlsx",
+                "idatacreacio": "20/05/2022",
+                "itipusvisual": "Ús no restringit",
+                "idataobsoleta": "",
+                "idatapublicacio": "25/05/2022",
                 "iurl_dades_obertes": "https://analisi.transparenciacatalunya.cat/Urbanisme-infraestructures/Unitats-Poblacionals-d-Espanya/nsam-kvvy",
                 "itipusactualitzacio": "Sota demanda"
             }
@@ -2733,7 +2638,7 @@
         "nom_dinsBD": "UNITATS_POBLACIONALS_ESPANYA",
         "Classificacio": "Consolidat",
         "Data_publicacio": "31/03/2021",
-        "Data_actualitzacio": "27/04/2022"
+        "Data_actualitzacio": "25/05/2022"
     },
     {
         "Id": "dtarq175",
@@ -2747,7 +2652,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Families_professionals_ATR.docx",
                 "ifitxer_xls": "Families_professionals.xlsx",
                 "idatacreacio": "11/12/2020",
@@ -2818,7 +2723,7 @@
                 "iestat": "Vigent",
                 "itipus": "Tabular",
                 "ipromotor": "Sub. Gral. de Relacions Laborals, Treball Autònom i Qualitat en el Treball – Departament d'Empresa i Treball",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Festius_generals_Catalunya_ATR.docx",
                 "ifitxer_xls": "Festius_generals_Catalunya.xlsx",
                 "idatacreacio": "25/10/2021",
@@ -2846,7 +2751,7 @@
                 "iestat": "Pendent",
                 "itipus": "Tabular",
                 "ipromotor": "Centre de Telecomunicacions i Tecnologies de la Informació (CTTI)",
-                "idescripcio": "Versió inicial",
+                "idescripcio": "Versió inicial.",
                 "ifitxer_doc": "Festius_locals_Catalunya_ATR.docx",
                 "ifitxer_xls": "Festius_locals_Catalunya.xlsx",
                 "idatacreacio": "24/01/2022",
