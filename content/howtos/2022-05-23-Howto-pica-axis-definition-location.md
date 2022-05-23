@@ -16,26 +16,27 @@ generats amb una versió del Framework Canigó inferior a la v.3.6.5**.
 ## Justificació
 
 Els mòduls de Canigó associats a la PICA utilitzen la **versió 1.9.2 del client de la PICA**, el qual
-**no permet configurar la ruta de la definició del client *axis2* **, que per defecte té el següent
+**no permet configurar la ruta de la definició del client _axis2_**, que per defecte té el següent
 valor: _/WEB-INF/classes!/axis2client/_. Aquesta configuració per defecte produeix un error en desplegar
 un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_ pel fet que no és
 possible trobar la ruta _/WEB-INF/classes!/axis2client/_ dins del jar que conté l'aplicació.
 
+<br/>
 Per a corregir aquest error sense actualitzar la versió de Canigó, serà necessari:
 
-- Excloure manualment la versió 1.9.2 del client de la PICA,
+- excloure manualment la versió 1.9.2 del client de la PICA,
 
-- Incloure la versió 1.10.0 del mateix client,
+- incloure la versió 1.10.0 del mateix client,
 
-- Reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i
+- reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i
 
-- Modificar algunes configuracionsm de beans i properties.
+- modificar algunes configuracionsm de beans i properties.
 
 ## Passos a seguir
 
 ### Modificar l'arxiu `pom.xml`
 
-Cal **excloure la versió 1.9.2 i incloure la versió 1.10.0** del client de la PICA.
+Cal excloure la versió 1.9.2 i incloure la versió 1.10.0 del client de la PICA.
 
 ```xml
 ...
@@ -69,7 +70,7 @@ Cal **excloure la versió 1.9.2 i incloure la versió 1.10.0** del client de la 
 
 ### Modificar l'arxiu `pica.properties`
 
-Cal **afegir la propietat que conté la ruta de l'especificació d'*axis2***.
+Cal afegir la propietat que conté la ruta de l'especificació d'_axis2_.
 
 ```properties
 ...
@@ -79,7 +80,7 @@ Cal **afegir la propietat que conté la ruta de l'especificació d'*axis2***.
 
 ### Reescriure el servei del connector de la PICA
 
-Cal **crear la classe: `PicaWithAxisDefinitionServiceWrapperImpl.java`** que sobreescriu la classe
+Cal crear la classe: `PicaWithAxisDefinitionServiceWrapperImpl.java` que sobreescriu la classe
 original de Canigó: `PicaServiceWrapperImpl.java`.
 
 ```java
@@ -212,7 +213,7 @@ public class PicaWithAxisDefinitionServiceWrapperImpl implements IPicaServiceWra
 
 ### Afegir un bean que invoqui al servei creat
 
-Cal **modificar l'arxiu de configuració de beans de l'aplicació**: `app-integration-custom.xml`, per a incorporar
+Cal modificar l'arxiu de configuració de beans de l'aplicació: `app-integration-custom.xml`, per a incorporar
 un bean que gestioni el servei: `PicaWithAxisDefinitionServiceWrapperImpl.java`.
 
 ```xml
