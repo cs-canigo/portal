@@ -1,7 +1,7 @@
 +++
 date        = "2022-05-23"
-title       = "Canigó. Configuració ruta definició client *axis2*"
-description = "Howto per a mostrar com configurar la ruta de la definició del client *axis2* per a projectes generats amb canigó < 3.6.5"
+title       = "Canigó. Configuració ruta definició client _axis2_"
+description = "Howto per a mostrar com configurar la ruta de la definició del client _axis2_ per a projectes generats amb canigó < 3.6.5"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "JUNY2022"
@@ -10,7 +10,7 @@ key         = "JUNY2022"
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar **com configurar la ruta de la definició del client *axis2* per a projectes
+L'objectiu d'aquest article és mostrar **com configurar la ruta de la definició del client _axis2_ per a projectes
 generats amb una versió del Framework Canigó inferior a la v.3.6.5**.
 
 ## Justificació
@@ -246,5 +246,5 @@ un bean que gestioni el servei: `PicaWithAxisDefinitionServiceWrapperImpl.java`.
 
 ## Conclusió
 
-És possible configurar la ruta de la definició del client *axis2* a projectes existents amb Canigó 3.4.x o 3.6.x sense
+És possible configurar la ruta de la definició del client _axis2_ a projectes existents amb Canigó 3.4.x o 3.6.x sense
 haver d'actualitzar el connector de la PICA de Canigó.
