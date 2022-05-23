@@ -18,13 +18,13 @@ Aquest mòdul permet administrar els logs de l’aplicació proporcionant les se
 
 ### Beans
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació de control de la resposta dels serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerControl*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació de control de la resposta dels serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerControl*
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació i contingut dels logs en els serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerReader*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació i contingut dels logs en els serveis rest de consulta dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.model.TailerReader*
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació del logger de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.LoggerDTO*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació del logger de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.LoggerDTO*
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la informació del appender de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.AppenderDTO*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la informació del appender de la configuració dels logs a *cat.gencat.ctti.canigo.arch.operation.logging.dto.AppenderDTO*
 
 ### Service
 

@@ -18,4 +18,4 @@ S'ofereix el controller *cat.gencat.ctti.canigo.arch.support.ole.controller.OleC
 
 ### Exception
 
-Per a identificar els errors produits al mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.ole.exception.OleModuleException* 
+Per a identificar els errors produïts al mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.ole.exception.OleModuleException*

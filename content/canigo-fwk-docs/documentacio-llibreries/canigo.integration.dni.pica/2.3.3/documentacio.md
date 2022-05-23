@@ -8,13 +8,13 @@ weight      = 3
 
 ## Propòsit
 
-El propòsit del connector és proporcionar una interfície java per accedir a la PICA (Plataforma d’Integració i Col.laboració Administrativa) per a la consulta de dades del DNI.
+El propòsit del connector és proporcionar una interfície java per accedir a la PICA (Plataforma d’Integració i Col·laboració Administrativa) per a la consulta de dades del DNI.
 
 ## Funcionalitats
 
 ### Beans
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà les dades de la consulta del DNI a *cat.gencat.ctti.canigo.arch.integration.dni.pica.beans.DadesConsultaDni*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà les dades de la consulta del DNI a *cat.gencat.ctti.canigo.arch.integration.dni.pica.beans.DadesConsultaDni*
 
 Al package *net.gencat.scsp.esquemes.dniPICA* s'ofereixen les entitats per a la comunicació amb els serveis de consulta de DNI de la PICA.
 
@@ -24,4 +24,4 @@ S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.dni.pica.DniConnect
 
 ### Exception
 
-S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.dni.pica.exceptions.DniException* per identiticar errors produits al mòdul.
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.dni.pica.exceptions.DniException* per identificar errors produïts al mòdul.

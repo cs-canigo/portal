@@ -14,4 +14,4 @@ L’objectiu d’aquest connector, és el de proporcionar un punt d’accés als
 
 ### Beans
 
-S'ofereix el package *cat.icc.ws.geocodificador* que conté les entitats que s’ofereixen per representar la informació on s’allotgarà les respostes dels serveis del ICC
+S'ofereix el package *cat.icc.ws.geocodificador* que conté les entitats que s’ofereixen per representar la informació on s’allotjarà les respostes dels serveis del ICC

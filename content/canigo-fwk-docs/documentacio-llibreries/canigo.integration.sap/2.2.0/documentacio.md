@@ -24,4 +24,4 @@ S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sap.SapConnector* 
 
 ### Exception
 
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sap.exceptions.SapConnectorException* per identificar els errors produits al mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sap.exceptions.SapConnectorException* per identificar els errors produïts al mòdul.

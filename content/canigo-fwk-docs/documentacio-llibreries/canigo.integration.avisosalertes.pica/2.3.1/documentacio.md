@@ -14,7 +14,7 @@ L’objectiu d’aquest connector és el de proporcionar accés als serveis d’
 
 ### Beans
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la resposta de l'alerta síncrona a *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.beans.DataResponse*
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la resposta de l'alerta síncrona a *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.beans.DataResponse*
 
 ### Service
 
@@ -22,4 +22,4 @@ S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.
 
 ### Exception
 
-S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.exceptions.AvisosAlertesException* per identificar els errors produits al mòdul.
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.exceptions.AvisosAlertesException* per identificar els errors produïts al mòdul.

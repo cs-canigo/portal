@@ -20,13 +20,13 @@ Utilització del connector al sistema SAP de Gecat des de qualsevol aplicació J
 
 ### Beans
 
-En el package *cat.gencat.ctti.canigo.arch.integration.gecat.batch* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *batch* de SAP de Gecat.
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.batch* conté les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta de la funcionalitat de *batch* de SAP de Gecat.
 
-En el package *cat.gencat.ctti.canigo.arch.integration.gecat.consultes* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *consultes* de SAP de Gecat.
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.consultes* conté les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta de la funcionalitat de *consultes* de SAP de Gecat.
 
-En el package *cat.gencat.ctti.canigo.arch.integration.gecat.factures* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *factures* de SAP de Gecat.
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.factures* conté les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta de la funcionalitat de *factures* de SAP de Gecat.
 
-En el package *cat.gencat.ctti.canigo.arch.integration.gecat.reserves* conté les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta de la funcionalitat de *reserves* de SAP de Gecat.
+En el package *cat.gencat.ctti.canigo.arch.integration.gecat.reserves* conté les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta de la funcionalitat de *reserves* de SAP de Gecat.
 
 ### Service
 
@@ -34,4 +34,4 @@ S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.gecat.connector.Gec
 
 ### Exception
 
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.gecat.exception.GecatConnectorException* per identiticar els errors produits al mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.gecat.exception.GecatConnectorException* per identificar els errors produïts al mòdul.

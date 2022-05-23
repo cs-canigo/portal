@@ -18,4 +18,4 @@ S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.Sarcat
 
 ### Exception
 
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException* per identiticar els errors produits al mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException* per identificar els errors produïts al mòdul.

@@ -18,4 +18,4 @@ S'ofereix l'annotation *cat.gencat.ctti.canigo.arch.support.lopd.annotation.LOPD
 
 ### Excepción
 
-S'oefereix l'exception *cat.gencat.ctti.canigo.arch.support.lopd.exceptions.LopdModuleException* per identificar els errors produits al mòdul.
+S'oefereix l'exception *cat.gencat.ctti.canigo.arch.support.lopd.exceptions.LopdModuleException* per identificar els errors produïts al mòdul.

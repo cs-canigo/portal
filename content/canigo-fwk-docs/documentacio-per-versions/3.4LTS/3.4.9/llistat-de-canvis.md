@@ -29,7 +29,7 @@ weight      = 1
 
 #### Canigó 3.4.6 (11/05/2021)
 - [Adaptació connector Sarcat PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
-   - S’ha revisat i resolt el problema detectat en el mòdul d’integració del connector SARCAT PICA.
+   - S’ha revisat i resolt el problema detectat al mòdul d’integració del connector SARCAT PICA.
 - Revisió interna execució de tests dels mòduls
    - S’ha revisat la forma d’execució dels tests dels mòduls per a utilitzar imatges docker builder del catàleg del SIC 2.0.
 
@@ -64,7 +64,7 @@ weight      = 1
 - [Autorització GICAR a Canigó] (/noticies/2019-10-22-Actualitzacio_modul_Seguretat)
    - Actualització del mòdul de seguretat per a incorporar l’opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització).
 - [Actualització del _plugin_ de Canigó per a incloure nova opció seguretat autorització GICAR a Canigó] (/noticies/2019-10-25-Actualitzacio_plugin_eclipse_1_7_6)
-   - Actualització del _plugin_ de l'Eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) en el mòdul de seguretat.
+   - Actualització del _plugin_ de l'Eclipse de Canigó per a incloure nova opció de l’obtenció dels rols de l’usuari a través de GICAR (autorització) al mòdul de seguretat.
 
 #### Canigó 3.4.1 (17/09/2019)
 

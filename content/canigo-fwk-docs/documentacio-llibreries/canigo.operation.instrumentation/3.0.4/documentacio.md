@@ -20,7 +20,7 @@ Dins d’aquest mòdul podem trobar les següents funcionalitats:
 
 ### Beans
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la resposta de la monitorització a *cat.gencat.ctti.canigo.arch.operation.instrumentation.model.Result*.
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la resposta de la monitorització a *cat.gencat.ctti.canigo.arch.operation.instrumentation.model.Result*.
 
 ### Filter
 
@@ -32,4 +32,4 @@ S’ofereix el controller *cat.gencat.ctti.canigo.arch.operation.instrumentation
 
 ### Exception
 
-S’ofereix la exception *cat.gencat.ctti.canigo.arch.operation.instrumentation.exception.InstrumentationException* per identificar els erros produits al mòdul.
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.operation.instrumentation.exception.InstrumentationException* per identificar els errors produïts al mòdul.

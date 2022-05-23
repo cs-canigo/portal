@@ -18,4 +18,4 @@ S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.psis.PSISConnector
 
 ### Exception
 
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psis.exceptions.PSISException* per identificar els errors produits al mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psis.exceptions.PSISException* per identificar els errors produïts al mòdul.

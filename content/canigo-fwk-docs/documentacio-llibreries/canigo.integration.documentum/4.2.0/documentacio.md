@@ -26,4 +26,4 @@ S'ofereix el service *cat.gencat.ctti.canigo.arch.integration.documentum.Documen
 
 ### Exception
 
-S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.documentum.exceptions.DocumentumException* per identificar errors produits al mòdul.
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.documentum.exceptions.DocumentumException* per identificar errors produïts al mòdul.

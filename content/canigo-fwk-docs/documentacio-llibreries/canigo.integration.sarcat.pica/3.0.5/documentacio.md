@@ -21,4 +21,4 @@ les operacions a Sarcat a través de la PICA.
 ### Exception
 
 S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.sarcat.pica.exceptions.SarcatException* per a
-identiticar els errors produits al mòdul.
+identificar els errors produïts al mòdul.

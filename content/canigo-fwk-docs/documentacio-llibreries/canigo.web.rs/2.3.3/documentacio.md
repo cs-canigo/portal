@@ -14,9 +14,9 @@ El propòsit del mòdul de Canigo Web RS és aportar funcionalitats genèriques 
 
 ### Beans
 
-Conté l'entitat que s'ofereix per representar la informació on s'allotgarà la resposta dels serveis rest amb paginació a *cat.gencat.ctti.canigo.arch.web.rs.model.Data*
+Conté l'entitat que s'ofereix per representar la informació on s'allotjarà la resposta dels serveis rest amb paginació a *cat.gencat.ctti.canigo.arch.web.rs.model.Data*
 
-Conté l'entitat que s'ofereix per representar la informació on s'allotgarà l'error en la resposta dels serveis rest a *cat.gencat.ctti.canigo.arch.web.rs.model.Error*
+Conté l'entitat que s'ofereix per representar la informació on s'allotjarà l'error en la resposta dels serveis rest a *cat.gencat.ctti.canigo.arch.web.rs.model.Error*
 
 ### Controller
 

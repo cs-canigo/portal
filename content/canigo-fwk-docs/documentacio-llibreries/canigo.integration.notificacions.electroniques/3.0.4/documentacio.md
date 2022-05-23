@@ -14,7 +14,7 @@ El propòsit d’aquesta documentació és donar a conèixer el mòdul de WebSer
 
 ### Beans
 
-Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta dels serveis de notiticacions per Enotum.
+Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta dels serveis de notiticacions per Enotum.
 
 ### Service
 
@@ -26,4 +26,4 @@ S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.notificacionselectr
 
 ### Exception
  
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.exepcions.NotificacionsElectroniquesModuleExcepcion* per identificar els errors produits al mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.notificacionselectroniques.exepcions.NotificacionsElectroniquesModuleExcepcion* per identificar els errors produïts al mòdul.

@@ -8,7 +8,7 @@ weight      = 3
 
 ## Propòsit
 
-L’objectiu d’aquest connector, és el de proporcionar un punt d’accés utilitzant la plataforma PICA cap serveis
+L’objectiu d’aquest connector, és el de proporcionar un punt d’accés utilitzant la plataforma PICA cap a serveis
 d’empadronament publicats en aquesta plataforma.
 
 ## Funcionalitats
@@ -16,7 +16,7 @@ d’empadronament publicats en aquesta plataforma.
 ### Beans
 
 Conté l'entitat *cat.gencat.ctti.canigo.arch.integration.padro.pica.beans.DataResponse* per representar la
-informació on s’allotgarà la resposta dels serveis de consulta de Padró a través de la PICA.
+informació on s’allotjarà la resposta dels serveis de consulta de Padró a través de la PICA.
 
 ### Service
 
@@ -26,4 +26,4 @@ les operacions pels serveis de consulta de Padró a través de la PICA.
 ### Exception
 
  S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.padro.pica.exceptions.PadroException*
- per a identificar els errors produits en el mòdul.
+ per a identificar els errors produïts al mòdul.

@@ -14,7 +14,7 @@ El propòsit d’aquesta documentació és donar a conèixer el mòdul de WebSer
 
 ### Beans
 
-Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotgarà la resposta dels serveis de notiticacions per Enotum.
+Conté el package *net.gencat.scsp.esquemes.productes.nt* on s'ofereixen les entitats que s’ofereixen per representar la informació on s’allotjarà la resposta dels serveis de notiticacions per Enotum.
 
 ### Service
 

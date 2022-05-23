@@ -18,6 +18,6 @@ Per a realitzar el redimensionament d'una imatge s'ofereix el servei *cat.gencat
 
 ### Excepción
 
-Per identificar els errors produits en el mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.resizeImg.exceptions.ResizeImgModuleException*
+Per identificar els errors produïts al mòdul s'ofereix l'exception *cat.gencat.ctti.canigo.arch.support.resizeImg.exceptions.ResizeImgModuleException*
 
 

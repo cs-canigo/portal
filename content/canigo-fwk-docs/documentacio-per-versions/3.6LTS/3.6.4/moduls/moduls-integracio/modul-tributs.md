@@ -82,7 +82,7 @@ Modalitats:
 
 #### Servei AEAT_ATC_TGSS
 
-L'objectiu del Servei de consulta de la situació de deute d'un contribuent respecte de AEAT, ATC i TGSS és l'agrupació dels productes AEAT (Agència Estatal de l'Administració Tributària), ATC(Agència Tributària de Catalunya) i TGSS (Tresoreria General de la Seguretat Social) en una sola consulta per a la obtenció de la situació de deute d'un contribuent a AEAT, ATC i TGSS. En concret, és l'agrupació de les modalitats següents:
+L'objectiu del Servei de consulta de la situació de deute d'un contribuent respecte d'AEAT, ATC i TGSS és l'agrupació dels productes AEAT (Agència Estatal de l'Administració Tributària), ATC(Agència Tributària de Catalunya) i TGSS (Tresoreria General de la Seguretat Social) en una sola consulta per a la obtenció de la situació de deute d'un contribuent a AEAT, ATC i TGSS. En concret, és l'agrupació de les modalitats següents:
 
 -AEAT: Certificat d'obligacions tributàries (AEAT_PICA_C1)<br>
 -ATC: Informe de situació de deutes amb la Generalitat de Catalunya (ATC_INF_DEUTES_TMP)<br>
@@ -185,9 +185,9 @@ Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLK
 
 ### Utilització del Connector
 
-#### Exemple d'utilització d'una modalitat de Servei de AEAT
+#### Exemple d'utilització d'una modalitat de Servei d'AEAT
 
-Recuperar el bean del servei de AEAT des de la classe on es vol utilitzar:
+Recuperar el bean del servei d'AEAT des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
@@ -212,7 +212,7 @@ Per més informació sobre les dades d'entrada i sortida d'aquesta modalitat es 
 
 #### Exemple d'utilització del servei ATC
 
-Recuperar el bean del servei de ATC des de la classe on es vol utilitzar:
+Recuperar el bean del servei d'ATC des de la classe on es vol utilitzar:
 
 ```java
 @Autowired
@@ -280,7 +280,7 @@ Per més informació sobre les dades d'entrada i sortida d'aquesta modalitat es 
 
 #### Exemple d'utilització del servei AEAT_ATC_TGSS
 
-Recuperar el bean del servei de AEAT_ATC_TGSS des de la classe on es vol utilitzar:
+Recuperar el bean del servei d'AEAT_ATC_TGSS des de la classe on es vol utilitzar:
 
 ```java
 @Autowired

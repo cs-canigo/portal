@@ -18,4 +18,4 @@ S’ofereix el servei *cat.gencat.ctti.canigo.arch.support.sftp.SftpService* per
 
 ### Exception
 
-S’ofereix la exception *cat.gencat.ctti.canigo.arch.support.sftp.exceptions.SftpModuleException* per a identificar els errors produits al mòdul.
+S’ofereix la exception *cat.gencat.ctti.canigo.arch.support.sftp.exceptions.SftpModuleException* per a identificar els errors produïts al mòdul.

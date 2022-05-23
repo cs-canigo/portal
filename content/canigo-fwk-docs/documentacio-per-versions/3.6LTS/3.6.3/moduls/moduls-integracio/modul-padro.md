@@ -8,7 +8,7 @@ weight      = 6
 
 ## Introducció
 
-L'objectiu d'aquest connector, és el de proporcionar un punt d'accés utilitzant la plataforma PICA cap serveis d'empadronament publicats en aquesta plataforma.
+L'objectiu d'aquest connector, és el de proporcionar un punt d'accés utilitzant la plataforma PICA cap a serveis d'empadronament publicats en aquesta plataforma.
 
 ### Propòsit
 

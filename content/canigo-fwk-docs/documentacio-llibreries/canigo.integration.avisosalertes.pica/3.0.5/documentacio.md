@@ -15,7 +15,7 @@ través del servei AVISALERT de la PICA.
 
 ### Beans
 
-Conté l’entitat que s’ofereix per representar la informació on s’allotgarà la resposta de l'alerta síncrona
+Conté l’entitat que s’ofereix per representar la informació on s’allotjarà la resposta de l'alerta síncrona
 a *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.beans.DataResponse*.
 
 ### Service
@@ -26,4 +26,4 @@ per a realitzar l'enviament d'avisos a través del servei AVISALERT de la PICA.
 ### Exception
 
 S’ofereix la exception *cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.exceptions.AvisosAlertesException*
-per identificar els errors produits al mòdul.
+per identificar els errors produïts al mòdul.

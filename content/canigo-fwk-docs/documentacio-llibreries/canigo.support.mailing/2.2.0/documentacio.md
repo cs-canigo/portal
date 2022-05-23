@@ -39,5 +39,5 @@ Per a l'enviament l'enviament de mails s'ofereix *cat.gencat.ctti.canigo.arch.su
 
 ### Excepción
 
-Per identificar els errors produits al mòdul s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.exception.MailModuleException*
+Per identificar els errors produïts al mòdul s'ofereix *cat.gencat.ctti.canigo.arch.support.mailing.exception.MailModuleException*
 

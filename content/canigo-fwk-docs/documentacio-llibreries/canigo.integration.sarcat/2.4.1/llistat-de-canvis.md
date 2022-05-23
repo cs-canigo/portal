@@ -14,7 +14,7 @@ weight		= 2
 ## canigo.integration.sarcat 2.4.0
 
 - [Adaptació connector Sarcat PICA](/noticies/2021-05-11-Resolucio_problema_connector_SARCAT_PICA/)
-   - S'ha revisat i resolt el problema detectat en el mòdul d'integració del connector SARCAT PICA.
+   - S'ha revisat i resolt el problema detectat al mòdul d'integració del connector SARCAT PICA.
 
 ## canigo.integration.sarcat 2.3.1
 

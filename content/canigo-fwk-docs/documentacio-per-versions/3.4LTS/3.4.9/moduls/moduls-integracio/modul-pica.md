@@ -1,14 +1,14 @@
 +++
 date        = "2021-12-27"
 title       = "PICA"
-description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col.laboració Administrativa)."
+description = "Interficie d'accés a la PICA (Plataforma d'Integració i Col·laboració Administrativa)."
 sections    = "Canigó. Documentació Versió 3.4"
 weight      = 10
 +++
 
 ## Propòsit
 
-El propòsit del connector és proporcionar una interfície java per accedir a la PICA (Plataforma d'Integració i Col.laboració Administrativa).
+El propòsit del connector és proporcionar una interfície java per accedir a la PICA (Plataforma d'Integració i Col·laboració Administrativa).
 
 El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a través de web service síncron, i l'altre, mitjançant web service asíncron.
 

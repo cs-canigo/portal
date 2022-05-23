@@ -12,13 +12,13 @@ El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’exec
 
 ## Funcionalitats
 
-### Config
+### Configuració
 
 Conté les configuracions de repositoris de MongoDB amb Spring
 
-### Repository
+### Repositori
 
-S’ofereix la interficie *cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository* i la implementació *cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.impl.MongoGenericRepositoryImpl* que exten les funcionalitats de *org.springframework.data.mongodb.repository.support.SimpleMongoRepository* per a l’accés a les dades d’un domini de l’aplicació. Així si un repository de l’aplicació exten de *MongoGenericRepository*, ja incorpora les accions comunes que es poden realitzar en un domini de l’aplicació: consulta, guardat, modificació i eliminació.
+S’ofereix la interficie *cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.MongoGenericRepository* i la implementació *cat.gencat.ctti.canigo.arch.persistence.mongodb.repository.impl.MongoGenericRepositoryImpl* que estén les funcionalitats de *org.springframework.data.mongodb.repository.support.SimpleMongoRepository* per a l’accés a les dades d’un domini de l’aplicació. Així si un repositori de l’aplicació estén de *MongoGenericRepository*, ja incorpora les accions comunes que es poden realitzar en un domini de l’aplicació: consulta, guardat, modificació i eliminació.
 
 ### Support
 

@@ -14,7 +14,7 @@ L’objectiu d’aquest connector és proporcionar un punt d’accés cap a la P
 
 ### Beans
 
-Conté el package *cat.gencat.ctti.canigo.arch.integration.psgd.beans* on s'ofereixen les entitats per representar la informació on s’allotgarà la resposta dels serveis de PSGD
+Conté el package *cat.gencat.ctti.canigo.arch.integration.psgd.beans* on s'ofereixen les entitats per representar la informació on s’allotjarà la resposta dels serveis de PSGD
 
 ### Service
 
@@ -24,4 +24,4 @@ S'ofereix el servei *cat.gencat.ctti.canigo.arch.integration.psgd.PsgdConnector*
 
 ### Exception
 
-S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psgd.exceptions.PsgdException* per identificar els erros produits en el mòdul.
+S'ofereix la exception *cat.gencat.ctti.canigo.arch.integration.psgd.exceptions.PsgdException* per identificar els errors produïts al mòdul.
