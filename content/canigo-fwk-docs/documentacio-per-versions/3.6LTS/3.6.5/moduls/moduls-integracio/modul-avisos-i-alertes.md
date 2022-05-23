@@ -59,19 +59,27 @@ Per configurar el mòdul d'integració PICA-AVISALERT és necessari configurar e
 En el pom.xml:
 
 ```xml
-<!-- Dependencia del mòdul PICA-AVISALERT -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.avisosalertes.pica</artifactId>
-	<version><version>${canigo.integration.avisosalertes.pica.version}</version></version>
-</dependency>
+  <properties>
+    ...
+    <canigo.integration.pica.avisosalertes.support.version>[3.0.0,3.1.0)</canigo.integration.pica.avisosalertes.support.version>
+  </properties>
+
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>cat.gencat.ctti</groupId>
+      <artifactId>canigo.integration.pica.avisosalertes.support</artifactId>
+      <version>${canigo.integration.pica.avisosalertes.support.version}</version>
+    </dependency>
+  </dependencies>
+</project>
 ```
 
 A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/avisalert.properties amb el següent contingut:
 
-```
+```txt
 *.avisosalertes.pica.finalitat=[finalitat]
 *.avisosalertes.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.avisosalertes.pica.nifEmisor=[nifEmisor]
@@ -87,7 +95,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -105,20 +113,31 @@ Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@g
 
 4.- Configurar l'arxiu /spring/app-integration-avisalert.xml amb el següent contingut:
 
-```
-<!-- BEAN DE LA PICA -->
-<bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
-    <property name="axisDefinition" value="${pica.axisdefinition.location}"/>
-    <property name="trustStoreSSLKeystore" value="${pica.trustStore.location}" />
-    <property name="trustStoreSSLKeystoreType" value="${pica.trustStore.type}" />
-    <property name="trustStoreSSLKeystorePassword" value="${pica.trustStore.password}" />
-    <property name="requeridor" ref="requeridor"/>
-    <property name="modalitats">
-        <map>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <bean id="alertesAvisosService"
+        class="cat.gencat.ctti.canigo.arch.integration.avisosalertes.pica.impl.AvisosAlertesConnectorImpl"
+        scope="prototype">
+    <description>AvisosAlertes service for Canigo 3.0</description>
+    <property name="picaService" ref="${avisosalertes.picaServiceBeanName:picaService}"/>
+    <property name="nifEmisor" value="${avisosalertes.pica.nifEmisor}"/>
+    <property name="nomEmisor" value="${avisosalertes.pica.nomEmisor}"/>
+    <property name="finalitat" value="${avisosalertes.pica.finalitat}"/>
+    <property name="passwordType" value="${pica.modes.passwordType}"/>
+    <property name="urlPica" value="${avisosalertes.pica.url}"/>
+    <property name="funcionari" ref="funcionari"/>
+  </bean>
+  <bean id="funcionari" class="cat.gencat.pica.api.peticio.beans.Funcionari" scope="prototype">
+    <property name="nifFuncionario" value="${avisosalertes.nifFuncionari}"/>
+    <property name="nombreFuncionario" value="${avisosalertes.nomFuncionari}"/>
+    <property name="emailFuncionario" value="${avisosalertes.emailFuncionari}"/>
+  </bean>
+</beans>
 
-        </map>
-    </property>
-</bean>
 ```
 
 Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d'accedir a la url de la PICA mitjançant HTTPS.
@@ -130,7 +149,7 @@ Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLK
 1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.
 
 ```java
-@Autowired
+@Inject
 private AvisosAlertesConnectorImpl avisalertService;
 ```
 
@@ -164,7 +183,7 @@ public String getDadesAvisAlertSMSASincron(IPICAServiceAsincron servei) throws A
 Igual que en les peticions síncrones, s'inicialitza el bean del servei del connector:
 
 ```java
-@Autowired
+@Inject
 private AvisosAlertesConnectorImpl avisosAlertesConnector;
 ```
 
@@ -174,7 +193,6 @@ Es crida al servei amb les dades pertinents;
 String mobile = MOV_NUMBER;
 String serviceNumber = "6666";
 String message = "Test";
-			
 DataResponse resposta = avisosAlertesConnector.avisAlertSMSsimpleASincron(serviceNumber, mobile, message);
 ```
 

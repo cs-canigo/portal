@@ -16,14 +16,21 @@ El connector amb la PICA disposa de dos tipus de comunicació, un d'ells a trav�
 
 ### Instal.lació
 
-Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el pom.xml de l'aplicació la següent dependència:
+Per tal d'instal-lar el mòdul de PICA es pot incloure automàticament a través de l'eina de suport al desenvolupament o bé afegir manualment en el `pom.xml` de l'aplicació la següent dependència:
 
 ```xml
-<dependency>
-          <groupId>cat.gencat.ctti</groupId>
-          <artifactId>canigo.integration.pica</artifactId>
-          <version>${canigo.integration.pica.version}</version>
-</dependency>
+  <properties>
+    ...
+    <canigo.integration.pica.version>[3.0.0,3.1.0)</canigo.integration.pica.version>
+  </properties>
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>cat.gencat.ctti</groupId>
+      <artifactId>canigo.integration.pica</artifactId>
+      <version>${canigo.integration.pica.version}</version>
+    </dependency>
+  </dependencies>
 ```
 
 A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
@@ -84,12 +91,9 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml
 
     Exemple:
     pica.properties:
-
         int.pica.axisdefinition.location=file:/export/AppJavaDades/int/.../axis2client/
         pre.pica.axisdefinition.location=file:/export/AppJavaDades/pre/.../axis2client/
         pro.pica.axisdefinition.location=file:/export/AppJavaDades/pro/.../axis2client/
-
-
 
 ## Utilització del Mòdul
 
@@ -99,30 +103,40 @@ Ubicació: <PROJECT_ROOT>/src/main/resources/spring/app-integration-custom.xml
 
 Aquest arxiu XML conté la configuració de Spring per al servei de PICA. En l'exemple configurem el servei de PICA per invocar el producte/modalitat "PADRO_MUNICIPI_RESIDENCIA".
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
-
-
-	<bean id="picaCanigoService" parent="abstractPicaService">
-		<property name="modalitats">
-			<map>
-				<entry key="PADRO_MUNICIPI_RESIDENCIA">
-					<bean parent="producteModalitatBase">
-						<property name="signat" value="false"/>
-						<property name="urlPICA" value="${pica.url}" />
-						<property name="codCertificado" value="${pica.codCertificado}"/>
-						<property name="codProducto" value="${pica.codProducto}"/>
-						<property name="finalidad" value="${pica.finalidad}"/>
-						<property name="nifEmisor" value="${pica.nifEmissor}"/>
-						<property name="nombreEmisor" value="${pica.nombreEmisor}"/>
-					</bean>
-				</entry>
-			</map>
-		</property>
-	</bean>
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <bean id="picaCanigoService" parent="abstractPicaService"
+        class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl"
+        scope="prototype">
+    <property name="requeridor" ref="requeridor"/>
+    <property name="modalitats">
+      <map>
+        <entry key="PADRO_MUNICIPI_RESIDENCIA">
+          <bean parent="producteModalitatBase">
+            <property name="signat" value="false"/>
+            <property name="urlPICA"
+                      value="http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/PADRO_MUNICIPI_RESIDENCIA"/>
+            <property name="codCertificado"
+                      value="PADRO_MUNICIPI_RESIDENCIA"/>
+            <property name="codProducto" value="PADRO"/>
+            <property name="finalidad" value="PROVES"/>
+            <property name="nifEmisor" value="Q0801175A"/>
+            <property name="nombreEmisor" value="CONSORCI AOC"/>
+          </bean>
+        </entry>
+      </map>
+    </property>
+  </bean>
+  <bean id="picaCanigoServiceError" parent="picaCanigoService">
+    <property name="requeridor" ref="requeridorErrorPassword"/>
+  </bean>
+  <bean id="requeridorErrorPassword" parent="requeridor">
+    <property name="password" value="PICAERROR"/>
+    <property name="user" value="USER_ERROR"/>
+  </bean>
 </beans>
 ```
 
@@ -138,174 +152,118 @@ Classe Java amb la lògica de les peticions que es realitzin, i la connectivitat
 
 En aquesta classe es pot visualiztar:
 
-* Injecció del servei de PICA via annotacions (@Autowired/@Qualifier) de Spring.
+* Injecció del servei de PICA via annotacions (@Inject/@Named) de Java.
 * Invocació del producte/modalitat "PADRO_MUNICIPI_RESIDENCIA" definit en el map de modalitats que es troba al fitxer de configuració xml de Spring.
 
 ```java
-import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.stereotype.Service;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-import com.generalitat.mp.ws.CridaSincronaResponseDocument;
-
 import cat.gencat.ctti.canigo.arch.integration.pica.IPicaServiceWrapper;
 import cat.gencat.pica.api.peticio.beans.DadesEspecifiques;
 import cat.gencat.pica.api.peticio.beans.Funcionari;
 import cat.gencat.pica.api.peticio.beans.Titular;
 import cat.gencat.pica.api.peticio.core.IPICAServiceSincron;
+import com.generalitat.mp.ws.CridaSincronaResponseDocument;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.stereotype.Service;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.io.StringReader;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service("picaAplicacioService")
 @Lazy
 public class PicaAplicacioService {
+  private static final Logger log = LoggerFactory.getLogger(PicaAplicacioService.class);
+  private static final int TIPO_DOC_TITULAR_NIF = 2;
 
-	private static final Logger log = LoggerFactory.getLogger(PicaAplicacioService.class);
+  @Inject
+  @Named("picaCanigoService")
+  private IPicaServiceWrapper serviceWrapper;
 
-	@Qualifier("picaService")
-	@Autowired
-    private IPicaServiceWrapper serviceWrapper;
-    
-	private static final int TIPO_DOC_TITULAR_NIF = 2;
+  public String ferPeticioAlServei() {
+    try {
+      IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance("PADRO_MUNICIPI_RESIDENCIA");
+      service.setFuncionari(getFuncionari());
+      service.setTitular(creaTitular());
+      service.setDadesEspecifiques(createDadesEspecifiques());
 
-	public String testPica(){
-		
-		String message;
+      //Identificador únic de petició
+      service.crearPeticio("PROVA_OTCANIGO_" + System.currentTimeMillis());
 
-		 try{
-	            IPICAServiceSincron service = serviceWrapper.getPicaWebServiceSincronInstance("PADRO_MUNICIPI_RESIDENCIA");
-
-	            Funcionari func = getFuncionari();
-	            Titular tit = creaTitular();
-
-	            List<DadesEspecifiques> datosEspecificosXML = createDadesEspecifiques();
-
-	            service.setFuncionari(func);
-	            service.setTitular(tit);
-	            service.setDadesEspecifiques(datosEspecificosXML);
-
-	                        //Identificador únic de petició
-	            service.crearPeticio("PROVA_OTCANIGO_" + System.currentTimeMillis());
-
-	            //fer peticio
-	            CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
-	            //extreure resultat
-	            List<DadesEspecifiques> resposta= serviceWrapper.extreuDadesEspecifiques(service,resp);
-
-	            Iterator<DadesEspecifiques> it = resposta.iterator();
-	            while (it.hasNext()) {
-	                DadesEspecifiques object = it.next();
-	                String dadesXML = object.getDadesXML();
-
-	                // Parsejar resposta
-	                parseXML(dadesXML);
-	            }
-
-	            message = "Test correcte";
-
-	        }catch(Exception e){
-	        	message = "Test amb errors: " + e.getMessage();
-	            log.error(e.getMessage(), e);
-	        }
-        
-        return message;
-
+      //fer peticio
+      CridaSincronaResponseDocument resp = serviceWrapper.ferPeticioAlServei(service);
+      //extreure resultat
+      serviceWrapper.extreuDadesEspecifiques(service, resp).forEach(dadesEspecifiques -> parseXML(dadesEspecifiques.getDadesXML()));
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+      return "Test amb errors: " + e.getMessage();
     }
-	
-    /**
-     * Crea un objecte funcionari
-     *
-     * return funcionari
-     **/
-    private Funcionari getFuncionari() {
-        Funcionari funcionari = new Funcionari();
-        funcionari.setNombreFuncionario("Nom Funcionari");
-        funcionari.setNifFuncionario("55555555A");
-        funcionari.setEmailFuncionario("prova@gencat.com");
-        return funcionari;
-    }
+    return "Test correcte";
+  }
 
-    /**
-     * Crea un objecte titular
-     *
-     * return titular
-     **/
-	private Titular creaTitular() {
-	    Titular tit = new Titular(  );
-	    tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
-	    tit.setTitularDocumentacion("NIF_TITULAR"); // Es posa el NIF real
-	    tit.setTitularNombreCompleto("NOM_COMPLET_TITULAR"); // Es posa el nom real
-	    return tit;
-	}
-	
-	
-	    /**
-	     * Crea un objecte dades específiques
-	     *
-	     * return DadesEspecifiques
-	     **/
-	private List<DadesEspecifiques> createDadesEspecifiques() {
-	    List<DadesEspecifiques> dadesEspecifiquesXML= new ArrayList<DadesEspecifiques>(  );
-	    StringBuffer sb = new StringBuffer( "<ns1:request xmlns:ns1=\"http://www.gencat.net/tfn\">" );
-	    sb.append( "<ns1:simpleparam name=\"NUMTIT\">83746573</ns1:simpleparam>" );
-	    sb.append( "<ns1:simpleparam name=\"NUMNIF\">111111111H</ns1:simpleparam>" );
-	    sb.append( "</ns1:request>" );
-	
-	    DadesEspecifiques dades = new DadesEspecifiques(  );
-	    dades.setIdSolicitud( "1" );
-	    dades.setDadesXML( sb.toString(  ) );
-	    dadesEspecifiquesXML.add( dades );
-	
-	    return dadesEspecifiquesXML;
-	}
-	
-	    /**
-	     * Parsejar la resposta deixant constància en format de traces si la crida ha finalitzat o no correctament
-	     *
-	     **/
-	private void parseXML(String dadesXML) throws ParserConfigurationException, SAXException, IOException {
-	    DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	    DocumentBuilder builder = factory.newDocumentBuilder();
-	    InputSource inStream = new InputSource();
-	    boolean error = false;
-	
-	    inStream.setCharacterStream(new StringReader(dadesXML));
-	    Document doc = builder.parse(inStream);
-	    NodeList nodes = doc.getElementsByTagName("error");
-	    if(nodes.getLength() == 0) {
-	        nodes = doc.getElementsByTagName("sol:SolicitudError");
-	        error = true;
-	    }
-	
-	    for(int i=0; i<nodes.getLength(); i++) {
-	        Node node = nodes.item(i);
-	        if(node.getNodeType() == Node.ELEMENT_NODE) {
-	            Element element = (Element)node;
-	            if(!error) {
-	                log.info(dadesXML);
-	            } else {
-	                log.info(element.getTextContent());
-	            }
-	        }
-	    }
-	}
+  private Funcionari getFuncionari() {
+    Funcionari funcionari = new Funcionari();
+    funcionari.setNombreFuncionario("Nom Funcionari");
+    funcionari.setNifFuncionario("55555555A");
+    funcionari.setEmailFuncionario("prova@gencat.com");
+    return funcionari;
+  }
+
+  private Titular creaTitular() {
+    Titular tit = new Titular();
+    tit.setTitularTipoDocumentacion(TIPO_DOC_TITULAR_NIF);
+    tit.setTitularDocumentacion("NIF_TITULAR"); // Es posa el NIF real
+    tit.setTitularNombreCompleto("NOM_COMPLET_TITULAR"); // Es posa el nom real
+    return tit;
+  }
+
+  private List<DadesEspecifiques> createDadesEspecifiques() {
+    List<DadesEspecifiques> dadesEspecifiquesXML = new ArrayList<>();
+    StringBuilder sb = new StringBuilder("<ns1:request xmlns:ns1=\"http://www.gencat.net/tfn\">");
+    sb.append("<ns1:simpleparam name=\"NUMTIT\">83746573</ns1:simpleparam>");
+    sb.append("<ns1:simpleparam name=\"NUMNIF\">111111111H</ns1:simpleparam>");
+    sb.append("</ns1:request>");
+
+    DadesEspecifiques dades = new DadesEspecifiques();
+    dades.setIdSolicitud("1");
+    dades.setDadesXML(sb.toString());
+    dadesEspecifiquesXML.add(dades);
+    return dadesEspecifiquesXML;
+  }
+
+  private void parseXML(String dadesXML) {
+    boolean error = false;
+    InputSource inStream = new InputSource();
+    inStream.setCharacterStream(new StringReader(dadesXML));
+    try {
+      Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inStream);
+      NodeList nodes = doc.getElementsByTagName("solicitud-error");
+      if (nodes.getLength() == 0) {
+        nodes = doc.getElementsByTagName("sol:SolicitudError");
+        error = true;
+      }
+
+      for (int i = 0; i < nodes.getLength(); i++) {
+        Node node = nodes.item(i);
+        if (node.getNodeType() == Node.ELEMENT_NODE) {
+          log.info(!error ? dadesXML : node.getTextContent());
+        }
+      }
+    } catch (SAXException | IOException | ParserConfigurationException e) {
+      log.error(e.getMessage(), e);
+    }
+  }
 }
 ```
 
@@ -322,26 +280,26 @@ Dins una petició (llista de dades específiques) es poden incloure diverses sol
 Controller que publica les operacions disponibles per a qui hagi de consumir-les
 
 ```java
-import org.springframework.beans.factory.annotation.Autowired;
+import io.swagger.annotations.Api;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import cat.gencat.plantilla32.service.PicaAplicacioService;
-
+@Api(tags = {"canigo-pica-test"})
 @RestController
 @RequestMapping("/pica")
-public class PicaServiceController {
+public class PicaAplicacioController {
+  private final PicaAplicacioService picaAplicacioService;
 
-	@Autowired
-	PicaAplicacioService picaAplicacioService;
+  public PicaAplicacioController(PicaAplicacioService picaAplicacioService) {
+    this.picaAplicacioService = picaAplicacioService;
+  }
 
-
-	@PostMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
-	public String testPica() throws Exception {
-		return picaAplicacioService.testPica();
-	}
+  @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
+  public String testPica() {
+    return picaAplicacioService.ferPeticioAlServei();
+  }
 }
 ```
 

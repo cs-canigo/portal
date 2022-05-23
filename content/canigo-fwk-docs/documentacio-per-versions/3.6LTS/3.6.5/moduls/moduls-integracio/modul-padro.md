@@ -68,19 +68,25 @@ Per configurar el mòdul d'integració PICA-PADRO és necessari configurar els s
 En el pom.xml:
 
 ```xml
-<!-- Dependencia del mòdul PICA-PADRO -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-    <artifactId>canigo.integration.padro.pica</artifactId>
-    <version>${canigo.integration.padro.pica.version}</version>
-</dependency>
+  <properties>
+    ...
+    <canigo.integration.padro.pica.version>[3.0.0,3.1.0)</canigo.integration.padro.pica.version>
+  </properties>
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>cat.gencat.ctti</groupId>
+      <artifactId>canigo.integration.padro.pica</artifactId>
+      <version>${canigo.integration.padro.pica.version}</version>
+    </dependency>
+  </dependencies>
 ```
 
 A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/padro.properties amb el següent contingut:
 
-```
+```txt
 *.padro.pica.finalitat=[finalitat]
 *.padro.pica.urlPica=http://preproduccio.pica.intranet.gencat.cat/pica_cataleg/AppJava/services/
 *.padro.pica.nifEmisor=[nifEmisor]
@@ -96,7 +102,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -114,20 +120,18 @@ Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@g
 
 4.- Configurar l'arxiu /spring/app-integration-padro.xml amb el següent contingut:
 
-```
-<!-- BEAN DE LA PICA -->
-<bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
+```xml
+  <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
+    <property name="trustStoreSSLKeystore" value="${pica.trustStore.location}"/>
+    <property name="trustStoreSSLKeystoreType" value="${pica.trustStore.type}"/>
+    <property name="trustStoreSSLKeystorePassword" value="${pica.trustStore.password}"/>
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>
-    <property name="trustStoreSSLKeystore" value="${pica.trustStore.location}" />
-    <property name="trustStoreSSLKeystoreType" value="${pica.trustStore.type}" />
-    <property name="trustStoreSSLKeystorePassword" value="${pica.trustStore.password}" />
     <property name="requeridor" ref="requeridor"/>
     <property name="modalitats">
-        <map>
-
-        </map>
+      <map>
+      </map>
     </property>
-</bean>
+  </bean>
 ```
 
 Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d'accedir a la url de la PICA mitjançant HTTPS.
@@ -139,7 +143,7 @@ Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLK
 1.- En el bean on es vulgui disposar dels serveis del connector declarar el servei.
 
 ```java
-@Autowired
+@Inject
 private PadroConnector padroService;
 ```
 
@@ -155,13 +159,13 @@ String codProv = "1";
 int idesCat = 0;
 
 RespuestaComprobacionConvivientes resposta = padroService.padroComprovacioConvivents(
-    numExpedient,
-    tipusDocumentacio,
-    documentacio,
-    codMun,
-    codProv,
-    numConv,
-    idesCat
+  numExpedient,
+  tipusDocumentacio,
+  documentacio,
+  codMun,
+  codProv,
+  numConv,
+  idesCat
 );
 ```
 
@@ -188,7 +192,7 @@ public RespostaCercaTitular getDadesPadroTitularCerca(IPICAServiceAsincron serve
 Igual que en les peticions asíncrones s'inicialitza el bean del servei del connector;
 
 ```java
-@Autowired
+@Inject
 private PadroConnector padroService;
 ```
 

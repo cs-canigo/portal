@@ -118,19 +118,25 @@ Per configurar el mòdul d'integració PICA-DNI és necessari configurar els seg
 En el pom.xml:
 
 ```xml
-<!-- Dependencia del mòdul PICA-TRIBUTS -->
-<dependency>
-    <groupId>cat.gencat.ctti</groupId>
-	<artifactId>canigo.integration.tributs.pica</artifactId>
-	<version>${canigo.integration.tributs.pica.version}</version>
-</dependency>
+  <properties>
+    ...
+    <canigo.integration.tributs.pica.version>[3.0.0,3.1.0)</canigo.integration.tributs.pica.version>
+  </properties>
+  <dependencies>
+    ...
+    <dependency>
+      <groupId>cat.gencat.ctti</groupId>
+      <artifactId>canigo.integration.tributs.pica</artifactId>
+      <version>${canigo.integration.tributs.pica.version}</version>
+    </dependency>
+  </dependencies>
 ```
 
 A la [Matriu de Compatibilitats 3.6] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/) es pot comprovar la versió del mòdul compatible amb la versió de Canigó utilitzada.
 
 2.- Crear l'arxiu /config/props/tributs.properties amb el següent contingut:
 
-```
+```txt
 *.tributs.pica.nifEmisor=[nifEmisor]
 *.tributs.pica.nomEmisor=[nomEmisor] #normalment:"CONSORCI AOC"
 *.tributs.pica.nomEmisorCAT365=[nomEmisor] #normalment:"CONSORCI AOC"
@@ -147,7 +153,7 @@ NOTA: El valor per defecte de urlPica es la de l'entorn de Pre-producció.
 
 3.- Configurar l'arxiu /config/props/pica.properties amb el següent contingut:
 
-```
+```txt
 *.pica.modes.passwordType=PasswordText
 *.pica.requirer.signatureFile=classpath:config/cert/signature.properties
 *.pica.requirer.petitionerId=[petitionerId]
@@ -165,20 +171,18 @@ Els valors entre [] s'han de consultar a la OT PICA en requeridors.otpica.ctti@g
 
 4.- Configurar l'arxiu /spring/app-integration-tributs.xml amb el següent contingut:
 
-```
-<!-- BEAN DE LA PICA -->
-<bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
+```xml
+  <bean id="picaService" class="cat.gencat.ctti.canigo.arch.integration.pica.PicaServiceWrapperImpl" scope="prototype">
+    <property name="trustStoreSSLKeystore" value="${pica.trustStore.location}"/>
+    <property name="trustStoreSSLKeystoreType" value="${pica.trustStore.type}"/>
+    <property name="trustStoreSSLKeystorePassword" value="${pica.trustStore.password}"/>
     <property name="axisDefinition" value="${pica.axisdefinition.location}"/>
-    <property name="trustStoreSSLKeystore" value="${pica.trustStore.location}" />
-    <property name="trustStoreSSLKeystoreType" value="${pica.trustStore.type}" />
-    <property name="trustStoreSSLKeystorePassword" value="${pica.trustStore.password}" />
     <property name="requeridor" ref="requeridor"/>
     <property name="modalitats">
-        <map>
-
-        </map>
+      <map>
+      </map>
     </property>
-</bean>
+  </bean>
 ```
 
 Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLKeystorePassword només són necessàries en cas d'accedir a la url de la PICA mitjançant HTTPS.
@@ -190,7 +194,7 @@ Les propietats trustStoreSSLKeystore, trustStoreSSLKesytoreType i trustStoreSSLK
 Recuperar el bean del servei de AEAT des de la classe on es vol utilitzar:
 
 ```java
-@Autowired
+@Inject
 private AeatConnector aeatConnector;
 ```
 
@@ -204,7 +208,6 @@ peticio.setCognom2("Molina");
 peticio.setNomComplet("Cristian Casals Molina");
 peticio.setTipusDocument("NIF");
 peticio.setDocument("39361642V");
-	
 C1PICAResponse resposta = aeatConnector.ObligacionsTributaries(peticio);
 ```
 
@@ -215,7 +218,7 @@ Per més informació sobre les dades d'entrada i sortida d'aquesta modalitat es 
 Recuperar el bean del servei de ATC des de la classe on es vol utilitzar:
 
 ```java
-@Autowired
+@Inject
 private AtcConnector atcConnector;
 ```
 
@@ -229,9 +232,8 @@ Donat que el servei ATC es consumeix de forma asíncrona la forma correcta per p
 
 NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l'exemple son inventades.
 
-```
+```java
 DadesPeticioATC peticio = new DadesPeticioATC();
-    	
 peticio.setIdioma("Català");
 peticio.setNom("Nom");
 peticio.setCognom1("Cognom1");
@@ -240,12 +242,10 @@ peticio.setNomComplet("Nom Cognom1 Cognom2");
 peticio.setDocument("12341234D");
 peticio.setTipusDocument("NIF");
 DataResponse resposta = atcConnector.informeSituacioDeute(peticio); //<-- Petició al servei
-    
+
 EstatAsincron estatResposta = atcConnector.getEstatInformeSituacioDeute(resposta.getResponse()); //<-- Comprovació estat petició
 int tempsEstimat = estatResposta.getTempsEstimatResposta();
-  
-...
-    	
+
 Informacio inf = atcConnector.getDadesInformeSituacioDeute(resposta.getServei()); //<-- Recuperació resposta a la petició
 ```
 
@@ -256,7 +256,7 @@ Per més informació sobre les dades d'entrada i sortida d'aquesta modalitat es 
 Recuperar el bean del servei de TGSS des de la classe on es vol utilitzar:
 
 ```java
-@Autowired
+@Inject
 private TgssConnector tgssConnector;
 ```
 
@@ -283,14 +283,14 @@ Per més informació sobre les dades d'entrada i sortida d'aquesta modalitat es 
 Recuperar el bean del servei de AEAT_ATC_TGSS des de la classe on es vol utilitzar:
 
 ```java
-@Autowired
+@Inject
 private TgssConnector tgssConnector;
 ```
 
 En aquest cas d'exemple es consumirà la modalitat de servei AEAT_ATC_TGSS_CONSULTA_DEUTES que retorna les dades conjuntes de les modalitats següents:
 
--AEAT: Certificat d'obligacions tributàries (AEAT_PICA_C1)<br>
--ATC: Informe de situació de deutes amb la Generalitat de Catalunya (ATC_INF_DEUTES_TMP)<br>
+-AEAT: Certificat d'obligacions tributàries (AEAT_PICA_C1) <br>
+-ATC: Informe de situació de deutes amb la Generalitat de Catalunya (ATC_INF_DEUTES_TMP) <br>
 -TGSS: Informe de situació de deutes de la TGSS (TGSS_AL_CORRENT_PAGAMENT)
 
 Donat que el servei AEAT_ATC_TGSS es consumeix de forma asíncrona la forma correcta per poder consumir-ho es realitza en 3 fases:
@@ -303,7 +303,6 @@ NOTA: Les dades de nom, cognom1 i 2, nom complet i el valor del document sobre l
 
 ```java
 DadesPeticioAEAT_ATC_TGSS peticio = new DadesPeticioAEAT_ATC_TGSS();
-			
 peticio.setIdioma("Català");
 peticio.setTipusDocumentacio(Constants.AAT_NIF);
 peticio.setDocument("12345678B");
@@ -311,13 +310,10 @@ peticio.setNom("Nom");
 peticio.setNomComplet("Nom Cognom1 Cognom2");
 peticio.setCognom1("Cognom1");
 peticio.setCognom2("Cognom2");
-			
 resposta = aeatAtcTgssConnector.consultaDeutes(peticio); //<-- Petició al servei
-		
+
 EstatAsincron estatResposta = aeatAtcTgssConnector.getEstatConsultaDeutes(resposta.getResponse()); //<-- Consulta de l'estat de la petició
 int tempsEstimat = estatResposta.getTempsEstimatResposta();
-	
-...
 
 RespostaConsultaDeutes dadesResposta = aeatAtcTgssConnector.getDadesConsultaDeutes(resposta.getServei()); //<-- recuperació de les dades de la petició
 ```
