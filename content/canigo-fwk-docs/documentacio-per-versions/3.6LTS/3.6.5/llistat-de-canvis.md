@@ -11,7 +11,7 @@ weight      = 1
 
 #### Canigó 3.6.5 (23/05/2022)
 
-- [Actualització driver Antivirus, mòduls PICA i MongoDB 4.4](/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/)
+- [Actualització driver antivirus, mòduls PICA i MongoDB 4.4](/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/)
    - Actualització del connector del mòdul d'antivirus de Canigó a la última versió disponible (v.8.2.0).
    - Actualització dels mòduls d'integració amb la PICA per a fer ús de l'última versió del client (v.1.10.0).
    - Actualització del mòdul de MongoDB per a donar suport a MongoDB versió 4.4.

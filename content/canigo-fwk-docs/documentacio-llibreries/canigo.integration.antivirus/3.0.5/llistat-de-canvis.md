@@ -8,7 +8,7 @@ weight		= 2
 
 ## canigo.integration.antivirus 3.0.5
 
-- [Actualització driver Antivirus](/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/)
+- [Actualització driver antivirus](/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/)
    - Actualització del connector del mòdul d'antivirus de Canigó a la última versió disponible (v.8.2.0).
 
 ## canigo.integration.antivirus 3.0.4

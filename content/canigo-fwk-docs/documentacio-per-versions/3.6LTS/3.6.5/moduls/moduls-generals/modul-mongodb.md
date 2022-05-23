@@ -9,7 +9,7 @@ weight      = 3
 ## Propòsit
 
 El mòdul de MongoDB té com a propòsit general gestionar l’accés i l’execució d'operacions a una base de dades MongoDB.
-Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/3.2.4/reference/html/#reference)
+Aquest mòdul utilitza [Spring Data MongoDB](https://docs.spring.io/spring-data/mongodb/docs/3.3.4/reference/html/#reference)
 i [QueryDSL](http://www.querydsl.com/static/querydsl/latest/reference/html/).
 
 A la versió 3.6 de Canigó, es proporcionen les funcionalitats de reactiu per MongoDB.
@@ -81,7 +81,7 @@ el que executa el test unitari del mòdul de persistència:
 ```
 
 <br/>
-Si l'aplicació està configurada amb **Spring Boot**, caldrà afegir la següent dependència:
+Si l'aplicació està configurada amb **Spring Boot**, caldrà afegir les següents dependències:
 
 ```xml
   <dependencies>
@@ -94,7 +94,7 @@ Si l'aplicació està configurada amb **Spring Boot**, caldrà afegir la següen
 ```
 
 <br/>
-Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir la següent dependència:
+Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir les següents dependències:
 
 ```xml
   <properties>
@@ -127,7 +127,7 @@ Si es vol utilitzar _Embeded Mongo_ per a executar els tests, caldrà afegir la 
 
 <br/>
 Per a utilitzar les funcionalitats de Mongodb 4.4.x i 5.0.x, serà necessari utilitzar la versió 4.6.0 o superior de *mongodb-driver*
-(https://www.mongodb.com/docs/drivers/java-drivers/) i caldrà afegir la següent dependència:
+(https://www.mongodb.com/docs/drivers/java-drivers/) i caldrà afegir les següents dependències:
 
 ```xml
   <properties>
@@ -163,7 +163,7 @@ Per a utilitzar les funcionalitats de Mongodb 4.4.x i 5.0.x, serà necessari uti
 ```
 
 <br/>
-Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la següent dependència:
+Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir les següents dependències:
 
 ```xml
   <properties>
@@ -189,7 +189,7 @@ Finalment, si es vol utilitzar les funcionalitats reactives, caldrà afegir la s
 ## Configuració
 
 La configuració es realitza automàticament a l'aplicació a partir de l'eina de suport al desenvolupament.
-Només en cas de no utilitzar-la, caldrà realitzar manualment configuració que es descriu a continuació.
+Només en cas de no utilitzar-la, caldrà realitzar manualment la configuració que es descriu a continuació.
 
 ### No reactiu
 
@@ -199,7 +199,7 @@ Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.pro
 
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
-*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientURI.html
+*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per a més informació: https://mongodb.github.io/mongo-java-driver/3.12/javadoc/com/mongodb/MongoClientURI.html
 *.mongodb.host | No | Requerit si no està definida la propietat mongodb.uri. Host de la connexió amb la BD MongoDB
 *.mongodb.port | No | Requerit si no està definida la propietat mongodb.uri. Port de la connexió amb la BD MongoDB
 *.mongodb.database | No | Requerit si no està definida la propietat mongodb.uri. Nom de la BD de la connexió amb la BD MongoDB
@@ -212,7 +212,7 @@ Fitxer: **MongoConfig.java**
 <br/>
 Ubicació recomanada: `<PROJECT_ROOT>/src/main/java/ *package de l’aplicació* /mongodb/config`.
 
-Cal extendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig** i
+Cal estendre de la configuració de **cat.gencat.ctti.canigo.arch.persistence.mongodb.config.MongoCoreConfig** i
 es pot sobreescriure la configuració de la connexió per defecte mitjançant el constructor. En aquest fitxer,
 podeu afegir també els _listeners_ de les diferents entitats de MongoDB.
 
@@ -250,7 +250,7 @@ Ubicació proposada: `<PROJECT_ROOT>/src/main/resources/config/props/mongodb.pro
 
 Propietat | Requerit | Descripció
 --------- | -------- | ----------
-*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per més informació https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
+*.mongodb.uri | Si | URL de connexió amb la BD MongoDB. Per a més informació: https://docs.mongodb.com/manual/reference/connection-string/#connection-string-options
 
 <br/>
 Fitxer: **ReactiveMongoConfig.java**
