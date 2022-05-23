@@ -9,10 +9,14 @@ aliases = [
 weight      = 1
 +++
 
-#### Canigó 3.6.5 (26/05/2022)
+#### Canigó 3.6.5 (23/05/2022)
 
-TODO NRS
-
+- [Actualització driver Antivirus, mòduls PICA i MongoDB 4.4](/noticies/2022-05-23-CAN-actualitzacio-canigo-3_6_5/)
+   - Actualització del connector del mòdul d'antivirus de Canigó a la última versió disponible (v.8.2.0).
+   - Actualització dels mòduls d'integració amb la PICA per a fer ús de l'última versió del client (v.1.10.0).
+   - Actualització del mòdul de MongoDB per a donar suport a MongoDB versió 4.4.
+- [Actualització de l’_archetype_ 1.7.5 i del _plugin_ Eclipse 1.8.5](/noticies/2022-05-23-CAN-Actualitzacio_archetype_1_7_5_plugin_eclipse_1_8_5/)
+   - Actualització de l’_archetype_ versió 1.7.5 i del _plugin_ de l'Eclipse de Canigó versió 1.8.5 per a generar projectes amb Canigó 3.6.5.
 
 #### Canigó 3.6.4 (13/04/2022)
 

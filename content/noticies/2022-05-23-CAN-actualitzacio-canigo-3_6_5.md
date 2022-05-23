@@ -7,59 +7,45 @@ categories = ["canigo"]
 key = "JUNY2022"
 +++
 
-S'ha alliberat la **versió 3.6.4 del Framework Canigó** per a actualitzar `org.springframework` de 5.3.9 a 5.3.18,
-`org.springframework.boot` de 2.5.4 a 2.5.12 i `spring.security` de 5.5.2 a 5.6.2 amb l'objectiu de corregir la vulnerabilitat detectada.
+Amb l’alliberament de la **versió 3.6.5 del Framework Canigó** s’assoleix un dels objectius que es persegueix
+des de CS Canigó consistent en proporcionar als desenvolupadors d'aplicacions un framework actualitzat per al
+funcionament òptim de les diferents integracions amb serveis externs i la compatibilitat amb MongoDB 4.4.
 
-Podeu consultar l'abast complet de les noves versions a les [Release Notes 3.6](/canigo-download-related/release-notes-canigo-36).
+Des de CS Canigó es recomana actualitzar-se a aquesta versió de Canigó.
 
-## Introducció Spring
+## Novetats
 
-**Spring Framework és un marc d'aplicació de codi obert per a la plataforma Java** les característiques de la qual poden
-ser utilitzades per qualsevol aplicació
+### Actualització del driver del mòdul d'antivirus
 
-## Vulnerabilitat Spring4Shell
+El mòdul d’integració amb l’antivirus corporatiu és un dels més utilitzats i amb més demanda els últims mesos.
+L’alineament de versions del driver i el servei permet assegurar un funcionament òptim de la integració
+tenint en compte que **el servei d’antivirus només dona suport a l’última versió del connector**.
 
-**El passat 29 de març es va publicar una nova vulnerabilitat d'execució remota de codi que afecta a Spring Core**,
-un framework que permet el desenvolupament d'aplicacions web amb Java i, l'explotació de les quals permetria a
-atacants executar remotament codi arbitrari en els sistemes de la víctima per mitjà d'una petició no autenticada d'HTTP.
+S'ha **actualitzat el driver del mòdul d'antivirus a la versió 8.2.0**.
 
-Aquesta vulnerabilitat és coneguda sota el nom de Spring4Shell o SpringShell i afecta a spring-core que, segons els investigadors
-de Praetorian, es tracta d'un bypass per a una CVE més antiga [CVE-2010-1622](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-1622)
-que, a causa d'una característica de JDK9, pot haver estat restablerta.
+### Actualització del client de la PICA
 
-<br/>
-Les vulnerabilitats detectades són les següents:
+Els mòduls d’integració amb la PICA són dels més usats pels proveïdors i l’actualització del client permet
+resoldre el problema detectat en el desplegament d’aplicacions en contenidors per la propietat “pica.axisdefinition.location”
+i mitigar les vulnerabilitats detectades amb un nivell alt de severitat.
 
-- Spring4Shell [CVE-2022-22965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22965): es tracta d'una vulnerabilitat
-crítica que permet l'execució remota de codi arbitrari en els sistemes de la víctima per mitjà d'una petició no autenticada d'HTTP.
+S'han **actualitzat els mòduls d'integració amb la [PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
+per a fer ús de la versió 1.10.0 del client**.
 
-- [CVE-2022-22963](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22963): es tracta d'una vulnerabilitat de gravetat mitjana
-a Spring Cloud Function que pot ser explotada per accedir als recursos locals.
+### MongoDB 4.4
 
-- [CVE-2022-22950](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22950): es tracta d'una vulnerabilitat de DoS de
-gravetat mitjana que afecta a Spring Framework.
+La compatibilitat amb MongoDB v.4.4 permet donar suport a la versió actual prevista al  full de ruta de programari
+CTTI i que ja està essent demandada pels proveïdors d’aplicacions.
 
-S'ha publicat la **versió 5.3.18 d'`org.springframework`, la versió 2.5.12 d'`org.springframework.boot` i la versió 5.6.2 d'`spring.security`
-per a mitigar aquestes vulnerabilitats**.
+Es **dóna suport a MongoDB v.4.4 (actualment en suport MongoDB 4.2) d’acord amb el [Full de ruta de programari CTTI]
+(https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari)**.
 
-Per més informació podeu consultar [Spring Framework RCE](https://spring.io/blog/2022/03/31/spring-framework-rce-early-announcement).
+## Documentació
 
-<br/>
-Des de l'Agència de Ciberseguretat de la Generalitat s'han considerat aquestes vulnerabilitats com a crítiques i d'un potencial
-gran impacte, recomanant als usuaris i administradors de sistemes que prenguin mesures de forma urgent.
+Podeu consultar l'abast complet de la nova versió al
+[Llistat de canvis](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/llistat-de-canvis/).
 
-## Canigó 3.6.4
-
-S'han publicat tots els mòduls del Framework Canigó 3.6 perquè passin a fer ús de la **versió 5.3.18 de `org.springframework`,
-la versió 2.5.12 de `org.springframework.boot` i la versió 5.6.2 d'`spring.security` per a mitigar aquestes vulnerabilitats**
-alliberant la corresponent nova versió 3.6.4.
-
-Podeu consultar la informació de les versions a: [Binaris Canigó 3.6](/canigo/download/canigo-36/).
-
-Podeu consultar les matrius de compatibilitat de cada mòdul a: [Matriu compatibilitat Canigó 3.6]
-(/canigo-download-related/matrius-compatibilitats/canigo-36/).
-
-Des de CS Canigó es recomana actualitzar-se de forma urgent a aquestes versions de Canigó per a resoldre aquestes vulnerabilitats.
+Podeu consultar la [Matriu de Compatibilitats] (/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/compatibilitat-per-modul/).
 
 <br/><br/>
 Per qualsevol dubte relatiu a aquesta nova versió del Framework Canigó us podeu posar en contacte amb el CS Canigó

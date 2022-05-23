@@ -27,11 +27,12 @@ TODO NRS
 | jsonassert                           |  1.5.0                |
 | jackson                              |  2.13.2               |
 | springfox-swagger2                   |  2.9.2                |
-| querydsl                             |  4.4.0                |
+| querydsl                             |  5.0.0                |
 | hibernate                            |  5.4.32.Final         |
-| mongo-java-driver                    |  3.12.10              |
-| mongodb-driver-sync                  |  4.2.3                |
-| mongodb-driver-reactivestreams       |  4.2.3                |
+| mongodb-driver-legacy                |  4.6.0                |
+| mongodb-driver-core                  |  4.6.0                |
+| mongodb-driver-sync                  |  4.6.0                |
+| mongodb-driver-reactivestreams       |  4.6.0                |
 
 Podeu consultar el [llistat complet de dependències externes de Spring Boot 2.5.12]
 (https://docs.spring.io/spring-boot/docs/2.5.12/reference/htmlsingle/#appendix-dependency-versions).
