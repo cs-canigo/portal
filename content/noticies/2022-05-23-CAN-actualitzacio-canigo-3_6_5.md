@@ -20,7 +20,6 @@ Des de CS Canigó es recomana actualitzar-se a aquesta versió de Canigó.
 El mòdul d’integració amb l’antivirus corporatiu és un dels més utilitzats i amb més demanda els últims mesos.
 L’alineament de versions del driver i el servei permet assegurar un funcionament òptim de la integració
 tenint en compte que **el servei d’antivirus només dona suport a l’última versió del connector**.
-
 S'ha **actualitzat el driver del mòdul d'antivirus a la versió 8.2.0**.
 
 ### Actualització del client de la PICA
@@ -28,7 +27,6 @@ S'ha **actualitzat el driver del mòdul d'antivirus a la versió 8.2.0**.
 Els mòduls d’integració amb la PICA són dels més usats pels proveïdors i l’actualització del client permet
 resoldre el problema detectat en el desplegament d’aplicacions en contenidors per la propietat “pica.axisdefinition.location”
 i mitigar les vulnerabilitats detectades amb un nivell alt de severitat.
-
 S'han **actualitzat els mòduls d'integració amb la [PICA](http://transversals.ctti.intranet.gencat.cat/sol-pica/integracio/)
 per a fer ús de la versió 1.10.0 del client**.
 
@@ -36,8 +34,7 @@ per a fer ús de la versió 1.10.0 del client**.
 
 La compatibilitat amb MongoDB v.4.4 permet donar suport a la versió actual prevista al  full de ruta de programari
 CTTI i que ja està essent demandada pels proveïdors d’aplicacions.
-
-Es **dóna suport a MongoDB v.4.4 (actualment en suport MongoDB 4.2) d’acord amb el [Full de ruta de programari CTTI]
+Es **dóna suport a MongoDB v.4.4 d’acord amb el [Full de ruta de programari CTTI]
 (https://qualitat.solucions.gencat.cat/estandards/estandard-full-ruta-programari)**.
 
 ## Documentació
