@@ -1,7 +1,7 @@
 +++
 date        = "2022-05-23"
-title       = "Canigó. Configuració ruta definició client _axis2_"
-description = "Howto per a mostrar com configurar la ruta de la definició del client _axis2_ per a projectes generats amb canigó < 3.6.5"
+title       = "Canigó. Configuració ruta definició client axis2"
+description = "Howto per a mostrar com configurar la ruta de la definició del client axis2 per a projectes generats amb canigó < 3.6.5"
 section     = "howtos"
 categories  = ["canigo"]
 key         = "JUNY2022"
@@ -16,9 +16,9 @@ generats amb una versió del Framework Canigó inferior a la v.3.6.5**.
 ## Justificació
 
 Els mòduls de Canigó associats a la PICA utilitzen la **versió 1.9.2 del client de la PICA**, el qual
-**no permet configurar la ruta de la definició del client _axis2_**, que per defecte té el següent
+**no permet configurar la ruta de la definició del client _axis2_** que, per defecte, té el següent
 valor: _/WEB-INF/classes!/axis2client/_. Aquesta configuració per defecte produeix un error en desplegar
-un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_ pel fet que no és
+un projecte amb  web embeguts (per exemple tomcat) utilitzant _Spring Boot_ pel fet que no és
 possible trobar la ruta _/WEB-INF/classes!/axis2client/_ dins del jar que conté l'aplicació.
 
 <br/>
@@ -30,7 +30,7 @@ Per a corregir aquest error sense actualitzar la versió de Canigó, serà neces
 
 - reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i
 
-- modificar algunes configuracionsm de beans i properties.
+- modificar algunes configuracions de beans i properties.
 
 ## Passos a seguir
 
