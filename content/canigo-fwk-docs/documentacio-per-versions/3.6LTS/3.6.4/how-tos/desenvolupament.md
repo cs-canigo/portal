@@ -8,7 +8,8 @@ weight      = 2
 
 | Guies d'ús (HowTos) de desenvolupament | Etiquetes  |
 | ---    | --- |
-| [Com actualitzar el driver del mòdul de l'antivirus per a projectes generats amb canigó < 3.6.5](/howtos/2022-05-23-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
+| [Com configurar la ruta de la definició del client *axis2* a projectes generats amb canigó < 3.6.5](/howtos/2022-05-23-Howto-pica-axis-definition-location/) | Axis2, PICA, pica.axisdefinition.location |
+| [Com actualitzar el driver del mòdul de l'antivirus a projectes generats amb canigó < 3.6.5](/howtos/2022-05-23-Howto-actualitzacio-connector-antivirus/) | Antivirus, Driver, Connector |
 | [Com resoldre la vulnerabilitat detectada Spring4Shell](/howtos/2022-04-13-Howto-canigo-Spring4Shell/) | Spring4Shell, SpringShell, Vulnerabilitat |
 | [Com resoldre la vulnerabilitat detectada Log4j](/howtos/2021-12-13-Howto-canigo-log4jshell/) | Log4j, Log4j2, Vulnerabilitat |
 | [Com configurar propietats en fitxers YAML per a proves unitàries](/howtos/2021-11-26-Howto-yaml_test_file/)| Configuracio, Test, Test unitaris |

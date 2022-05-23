@@ -1,28 +1,41 @@
 +++
-date        = "2022-05-01"
-title       = "Canigó. Com configurar la ruta de la definició del client axis2 per a versions < 3.6.5"
-description = "Howto per a mostrar com configurar la ruta de la definició del client axis2 per a versions de Canigó menors o iguals a 3.6.5"
+date        = "2022-05-23"
+title       = "Canigó. Configuració ruta definició client *axis2*"
+description = "Howto per a mostrar com configurar la ruta de la definició del client *axis2* per a projectes generats amb canigó < 3.6.5"
 section     = "howtos"
 categories  = ["canigo"]
-key         = "MAIG2022"
+key         = "JUNY2022"
 +++
 
 
 ## Introducció
 
-L'objectiu d'aquest article és mostrar com configurar la ruta de la definició del client axis2 dins de projectes que utilitzen Canigó < 3.6.5
+L'objectiu d'aquest article és mostrar **com configurar la ruta de la definició del client *axis2* per a projectes
+generats amb una versió del Framework Canigó inferior a la v.3.6.5**.
 
 ## Justificació
 
-Els mòduls de Canigó associats a la PICA utilitzen les versions **1.9.2** del client de la PICA, el qual no permet configurar la ruta de la definició del client axis2, que per defecte té el següent valor: _/WEB-INF/classes!/axis2client/_. Aquesta configuració per defecte produeix un error en desplegar un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_, pel fet que no és possible trobar la ruta _/WEB-INF/classes!/axis2client/_ dins del jar que conté l'aplicació.
+Els mòduls de Canigó associats a la PICA utilitzen la **versió 1.9.2 del client de la PICA**, el qual
+**no permet configurar la ruta de la definició del client *axis2* **, que per defecte té el següent
+valor: _/WEB-INF/classes!/axis2client/_. Aquesta configuració per defecte produeix un error en desplegar
+un projecte amb contendores web embeguts (per exemple tomcat) utilitzant _Spring Boot_ pel fet que no és
+possible trobar la ruta _/WEB-INF/classes!/axis2client/_ dins del jar que conté l'aplicació.
 
-Per a corregir aquest error sense actualitzar la versió de Canigó, és necessari excloure manualment la versió **1.9.2** del client de la PICA, incloure la versió **1.10.0** del mateix client, reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i modificar algunes configuracions de beans i properties.
+Per a corregir aquest error sense actualitzar la versió de Canigó, serà necessari:
+
+- Excloure manualment la versió 1.9.2 del client de la PICA,
+
+- Incloure la versió 1.10.0 del mateix client,
+
+- Reescriure el servei del connector de Canigó de la Pica: _PicaServiceWrapperImpl.java_, i
+
+- Modificar algunes configuracionsm de beans i properties.
 
 ## Passos a seguir
 
-### Modificar l'arxiu: `pom.xml`
+### Modificar l'arxiu `pom.xml`
 
-Es requereix excloure la versió **1.9.2** i incloure la versió **1.10.0** del client de la PICA.
+Cal **excloure la versió 1.9.2 i incloure la versió 1.10.0** del client de la PICA.
 
 ```xml
 ...
@@ -54,9 +67,9 @@ Es requereix excloure la versió **1.9.2** i incloure la versió **1.10.0** del 
 ...
 ```
 
-### Modificar l'arxiu: `pica.properties`
+### Modificar l'arxiu `pica.properties`
 
-Agregar la propietat que conté la ruta de l'especificació de axis2.
+Cal **afegir la propietat que conté la ruta de l'especificació d'*axis2***.
 
 ```properties
 ...
@@ -64,9 +77,10 @@ Agregar la propietat que conté la ruta de l'especificació de axis2.
 ...
 ```
 
-### Reescriure el servei del connector de la PICA de Canigó: `PicaServiceWrapperImpl.java`
+### Reescriure el servei del connector de la PICA
 
-Crear la classe: `PicaWithAxisDefinitionServiceWrapperImpl.java` que sobreescriu la classe original de Canigó: `PicaServiceWrapperImpl.java`
+Cal **crear la classe: `PicaWithAxisDefinitionServiceWrapperImpl.java`** que sobreescriu la classe
+original de Canigó: `PicaServiceWrapperImpl.java`.
 
 ```java
 package cat.gencat.ctti.canigo.arch.integration.pica;
@@ -196,9 +210,10 @@ public class PicaWithAxisDefinitionServiceWrapperImpl implements IPicaServiceWra
 
 ```
 
-### Agregar un bean en: `app-integration-custom.xml` que invoqui al servei creat
+### Afegir un bean que invoqui al servei creat
 
-Modificar l'arxiu de configuració de beans de l'aplicació: `app-integration-custom.xml`, per a incorporar un bean que gestioni el servei: `PicaWithAxisDefinitionServiceWrapperImpl.java`
+Cal **modificar l'arxiu de configuració de beans de l'aplicació**: `app-integration-custom.xml`, per a incorporar
+un bean que gestioni el servei: `PicaWithAxisDefinitionServiceWrapperImpl.java`.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -230,4 +245,5 @@ Modificar l'arxiu de configuració de beans de l'aplicació: `app-integration-cu
 
 ## Conclusió
 
-És possible configurar la ruta de la definició del client axis2 sense actualitzar el connector de la PICA de Canigó.
+És possible configurar la ruta de la definició del client *axis2* a projectes existents amb Canigó 3.4.x o 3.6.x sense
+haver d'actualitzar el connector de la PICA de Canigó.

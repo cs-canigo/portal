@@ -28,7 +28,7 @@ amb una preconfiguració a tal efecte i, en cas de plantejar l'actualització de
 
 ## Passos a seguir
 
-Cal modificar l'arxiu de l'aplicació `pom.xml` per a actualitzar el driver `scanengine-api` a la versió **8.2.0**:
+Cal modificar l'arxiu de l'aplicació `pom.xml` per a actualitzar el driver `scanengine-api` a la versió **8.2.0**.
 
 ```xml
 ...
