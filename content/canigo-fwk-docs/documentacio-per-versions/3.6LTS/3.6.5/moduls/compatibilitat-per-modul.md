@@ -11,8 +11,6 @@ weight      = 1
 
 ## Canigó 3.6.5
 
-TODO NRS
-
 |                                                   		| 13/04/2022 (3.6.5)																														|
 |---------------------------------------------------		|------------------																															|
 | **canigo.test**                                   		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.test/3.0.4/)  							|
@@ -27,7 +25,7 @@ TODO NRS
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.persistence.core                           		| [3.0.0,3.1.0)  																																|
 |                                                   		|               																																|
-| **canigo.persistence.mongodb**                     		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.persistence.mongodb/3.0.4/) |
+| **canigo.persistence.mongodb**                     		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.persistence.mongodb/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.persistence.core                           		| [3.0.0,3.1.0)  																																|
 |                                                   		|               																																|
@@ -56,7 +54,7 @@ TODO NRS
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.web.core                                   		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																	|
-| **canigo.support.fileupload**                      		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.support.fileupload/3.0.4/) |
+| **canigo.support.fileupload**                      		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.support.fileupload/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.antivirus                      		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
@@ -84,14 +82,14 @@ TODO NRS
 | **canigo.operation.logging**                       		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.operation.logging/3.0.4/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 |                                                   		|               																																|
-| **canigo.integration.antivirus**                   		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.antivirus/3.0.4/) |
+| **canigo.integration.antivirus**                   		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.antivirus/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 |                                                   		|               																																|
-| **canigo.integration.avisosalertes.pica**          		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.avisosalertes.pica/3.0.4/) |
+| **canigo.integration.avisosalertes.pica**          		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.avisosalertes.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.dni.pica**                    		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.dni.pica/3.0.4/) |
+| **canigo.integration.dni.pica**                    		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.dni.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
@@ -106,11 +104,11 @@ TODO NRS
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.padro.pica**                  		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.padro.pica/3.0.4/) |
+| **canigo.integration.padro.pica**                  		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.padro.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.pica**                        		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.pica/3.0.4/) |
+| **canigo.integration.pica**                        		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 |                                                   		|               																																|
 | **canigo.integration.psgd**                        		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.psgd/3.0.4/) |
@@ -124,7 +122,7 @@ TODO NRS
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.support.sftp                               		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.sarcat.pica**                 		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.4/) |
+| **canigo.integration.sarcat.pica**                 		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.sarcat.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
@@ -136,7 +134,7 @@ TODO NRS
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.operation.instrumentation                  		| [3.0.0,3.1.0) 																																|
 |                                                   		|               																																|
-| **canigo.integration.tributs.pica**                		| [3.0.4](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.tributs.pica/3.0.4/) |
+| **canigo.integration.tributs.pica**                		| [3.0.5](/canigo-fwk-docs/documentacio-llibreries/canigo.integration.tributs.pica/3.0.5/) |
 | canigo.core                                       		| [5.0.0,5.1.0)  																																|
 | canigo.integration.pica                           		| [3.0.0,3.1.0) 																																|
 |                                                   		|       |
