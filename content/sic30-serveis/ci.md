@@ -1,5 +1,5 @@
 +++
-date = "2022-04-01"
+date = "2022-05-24"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -119,7 +119,7 @@ seves etapes el job es cancel·larà i es notificarà per correu electrònic.
 <br/>
 A continuació s'explica breument cadascuna de les etapes de desplegament previstes:
 
-* **Init**: inicialitzacions internes.
+* **Init**: inicialitzacions internes i validació de format i contingut dels fitxers YML de configuració per a assegurar que acompleixen l'especificació.
 
 * **Checkout**: descàrrega del codi font del projecte a l'espai de treball.
 

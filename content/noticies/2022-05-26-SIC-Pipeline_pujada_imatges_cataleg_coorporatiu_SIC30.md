@@ -1,10 +1,10 @@
 +++
-date        = "2022-05-10"
+date        = "2022-05-24"
 title       = "SIC. Nova pipeline de pujada d'imatges pròpies al registre corporatiu al SIC 3.0"
 description = "El SIC 3.0 proporciona un nou model de pipeline per a la pujada d'imatges pròpies al Registre d'Imatges corporatiu (BAKE)."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "JUNY2022"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "JUNY2022"
 +++
 
 ## Introducció

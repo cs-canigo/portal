@@ -1,5 +1,5 @@
 +++
-date = "2022-01-18"
+date = "2022-05-24"
 title = "Com construir el fitxer ACA"
 description = "Guia per a la preparació del fitxer ACA del projecte per a l’ús de l'Autoservei de Pipelines"
 sections = "SIC"
@@ -90,7 +90,8 @@ info:
 Relació de variables globals necessàries per a l’execució de la pipeline. Les variables requerides en cada cas
 dependran de les necessitats de desplegament aplicant els següents criteris:
 
-#### Per al **desplegament a l'Openshift**:
+</br>
+#### Per al desplegament a l'Openshift:
 
 |Variable|Valor|
 |-------|-------|
@@ -101,7 +102,8 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
-#### Per al **desplegament a Kubernetes IBMCloud i CaaS**:
+</br>
+#### Per al desplegament a Kubernetes IBMCloud i CaaS:
 
 |Variable|Valor|
 |-------|-------|
@@ -112,34 +114,39 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 |CONTENT_SOURCE|**Micro frontends**: ruta del contingut generat durant la fase de construcció i que es copiarà a la carpeta destí|
 |CONTENT_DESTINATION|**Micro frontends**: directori destí del volum compartit en el que es copiarà el contingut generat durant la fase de construcció|
 
-#### Per al **desplegament a WebApp Azure**:
+</br>
+#### Per al desplegament a WebApp Azure:
 
 |Variable|Valor|
 |-------|-------|
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a WebApp Azure|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a WebApp Azure|
 
-#### Per al **desplegament a SwarmMe**:
+</br>
+#### Per al desplegament a SwarmMe:
 
 |Variable|Valor|
 |-------|-------|
 |CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a crear el contenidor de l'aplicació a desplegar a SwarmMe|
 |CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà al contenidor que es desplegarà a SwarmMe|
 
-#### Per al **desplegament a l’Api Manager**:
+</br>
+#### Per al desplegament a l’Api Manager:
 
 |Variable|Valor|
 |-------|-------|
 |APIC_PRODUCT_FILE|Ruta i nom del fitxer descriptor per al desplegament de l'aplicació a l’Api Manager|
 
-#### Per al **desplegament al CloudFoundry IBMCloud**:
+</br>
+#### Per al desplegament al CloudFoundry IBMCloud:
 
 |Variable|Valor|
 |-------|-------|
 |CF_BUILDPACK|BuildPack utilitzat per a preparar l'aplicació per a ser desplegada al CloudFoundry. Consultar a Suport Cloud els buildpacks disponibles a la llista d'elements del [Catàleg xPaaS](https://canigo.ctti.gencat.cat/cloud-xpaas/cataleg-xpaas/)|
 |CF_PATH|Path de l'artefacte a desplegar al CloudFoundry|
 
-#### Per al **desplegament d'imatges de productes en contenidors en general**:
+</br>
+#### Per al desplegament d'imatges de productes en contenidors en general:
 
 |Variable|Valor|
 |-------|-------|
@@ -150,9 +157,9 @@ dependran de les necessitats de desplegament aplicant els següents criteris:
 
 Per a aquest tipus de desplegament no cal informar la secció de ```build``` perquè es recupera un producte ja empaquetat externament, i tampoc
 caldrà indicar l'atribut ```info.version``` perquè no es farà cap mena de gestió de tags al projecte.
-</br>
 
-#### Per a la **publicació de llibreries Maven o Npm** al repositori:
+</br>
+#### Per a la publicació de llibreries Maven o Npm al repositori:
 
 |Variable|Valor|
 |-------|-------|
@@ -166,17 +173,27 @@ del fitxer `pom.xml`. Per exemple: ```PUBLISH_PARAMS: -f ./pom.xml```.
 - En el cas de **Npm** s’executarà la comanda ```npm publish ${PUBLISH_PARAMS}``` per la qual cosa haurem d’indicar la ruta
 de la llibreria. Per exemple: ```PUBLISH_PARAMS: dist/lib```.
 
-
 En qualsevol dels casos, es podran indicar paràmetres addicionals per a cada cas particular. La informació interna s’afegirà
 automàticament a la comanda.
 
-#### Per a la **publicació de llibreries .NET Core** al repositori:
+</br>
+#### Per a la publicació de llibreries .NET Core al repositori:
 
 |Variable|Valor|
 |-------|-------|
 |ARTIFACT_PATH|Ruta de les llibreries `nupkg` a publicar al repositori|
 
 S'executarà la comanda ```dotnet nuget push ${ARTIFACT_PATH}/*.nupkg```
+
+</br>
+#### Per a la publicació d'imatges pròpies al Registre corporatiu:
+
+|Variable|Valor|
+|-------|-------|
+|CONTAINER_DOCKERFILE_PATH|Ruta i nom del Dockerfile que s’utilitzarà per a la construcció de la imatge a publicar|
+|CONTAINER_IMAGE_NAME|Nom de la imatge que se li assignarà a la imatge a publicar|
+
+En aquest cas, no serà necessari configurar cap directiva de `build` ni `deployment`.
 
 </br>
 #### Exemple
@@ -723,6 +740,8 @@ A continuació s'adjunten exemples dels diferents casos d’ús:
 - [Construcció i publicació de llibreria Node al Nexus](/related/sic/3.0/aca_const_publi_nexus_node_lib.yml)
 
 - [Construcció i publicació de llibreria .NET Core al Nexus](/related/sic/3.0/aca_const_publi_nexus_dotnet_lib.yml)
+
+- [Construcció i publicació d'imatge pròpia al Registre corporatiu](/related/sic/3.0/aca_const_publi_harbor_image.yml)
 
 
 <br/><br/><br/>

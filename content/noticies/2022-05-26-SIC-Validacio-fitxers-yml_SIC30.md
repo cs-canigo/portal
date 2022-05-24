@@ -1,10 +1,10 @@
 +++
-date        = "2022-04-27"
+date        = "2022-05-24"
 title       = "SIC. Validació de fitxers YML de configuració al SIC 3.0"
 description = "El SIC 3.0 incorpora la validació de format i contingut dels fitxers YML de configuració per a assegurar que acompleixen l'especificació."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "JUNY2022"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "JUNY2022"
 +++
 
 ## Introducció
