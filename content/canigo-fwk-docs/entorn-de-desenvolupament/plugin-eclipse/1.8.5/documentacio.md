@@ -33,7 +33,7 @@ http://repos.canigo.ctti.gencat.cat/repository/maven2/cat/gencat/ctti/canigo.plu
 
 ![](/related/canigo/documentacio/plugin-canigo/img2.jpg)
 
-Seleccionar **Plug-in 1.8.5 - Canigo 3.6.4**
+Seleccionar **Plug-in 1.8.5 - Canigo 3.6.5**
 
 ![](/related/canigo/documentacio/plugin-canigo/Plugin_eclipse_1_7_10.png)
 
@@ -71,7 +71,7 @@ Exemples:
 
 La url per accedir al mòdul d'administració de logs és http://localhost:8080/loggingAdministration.html
 
-Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.4/moduls/moduls-generals/modul-logging-admin/)
+Per a més informació sobre aquest mòdul consultar la [documentació](/canigo-fwk-docs/documentacio-per-versions/3.6LTS/3.6.5/moduls/moduls-generals/modul-logging-admin/)
 
 ## Afegir/Esborrar nous mòduls
 
