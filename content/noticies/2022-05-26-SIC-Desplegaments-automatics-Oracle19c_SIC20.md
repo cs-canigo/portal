@@ -1,10 +1,10 @@
 +++
-date        = "2022-05-16"
+date        = "2022-05-24"
 title       = "SIC. Desplegament de scripts a Oracle Database Server 19c al SIC 2.0"
 description = "El SIC 2.0 permet el desplegament de scripts a Oracle Database Server 19c mitjançant la modalitat de desplegament automàtic."
-#sections    = ["Notícies", "home"]
-#categories  = ["SIC"]
-#key         = "JUNY2022"
+sections    = ["Notícies", "home"]
+categories  = ["SIC"]
+key         = "JUNY2022"
 +++
 
 ## Introducció

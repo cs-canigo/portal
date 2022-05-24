@@ -1,5 +1,5 @@
 +++
-date = "2022-02-17"
+date = "2022-05-24"
 title = "Integració contínua"
 description = "Jenkins és l'eina implantada al SIC per la integració contínua"
 sections = "SIC"
@@ -280,11 +280,11 @@ funcionar.
 ### BBDD
 |Tecnologia|Versions|
 |-------|-------|
-|Oracle|12c|
+|Oracle|19c, i anteriors|
 |SQL Server|2014, edició standard i express|
 |PostgreSQL|9.4.8, i anteriors|
-|MongoDB|3.2.5, i anteriors
-|MySQL|5.7.12, i anteriors
+|MongoDB|3.2.5, i anteriors|
+|MySQL|5.7.12, i anteriors|
 
 <br/><br/><br/>
 Si voleu més informació podeu consultar la secció de [**Guies**](/sic20-guies/). <br/>
