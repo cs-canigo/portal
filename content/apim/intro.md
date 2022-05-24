@@ -1,6 +1,6 @@
 +++
 date        = "2019-07-19"
-title       = "GencatAPI: API Manager Corporatiu"
+title       = "Que és el servei d'API Manager Corporatiu"
 description = "Descripció de GencatAPI, l'API Manager Corporatiu"
 sections    = "ApiManager Cloud"
 weight      = 12
