@@ -15,7 +15,7 @@ mitjançant les següents modalitats:
 
 * **Automàtica**: els artefactes generats es despleguen als servidors web, servidors d'aplicacions i servidors de bases de dades.
 
-* **Delegada**: els artefactes generats es lliuren a través del servei de binaris i es delega als CPD el seu desplegament.
+* **Delegada**: els artefactes generats es lliuren a través del servei de binaris i es delega als CPD el seu desplegament automàtic.
 
 * **Semiautomàtica**: els artefactes generats es lliuren a través del servei de binaris perquè, Cpd o el proveïdor d'aplicacions
 segons pertoqui, dugui a terme el desplegament.
