@@ -1,6 +1,6 @@
 +++
 date        = "2022-05-25"
-title       = "Publicació Catàleg Tècnic de Dades - Abril22"
+title       = "Publicació Catàleg Tècnic de Dades - Maig22"
 description = "S'ha actualitzat el Catàleg Tècnic de Dades per incorporar i modificar entitats."
 categories  = ["Data Architecture"]
 sections    = ["Notícies", "home"]
