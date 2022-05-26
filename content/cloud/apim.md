@@ -1,36 +1,34 @@
 +++
-date        = "2022-05-26"
-title       = "API Manager Corporatiu"
-description = "Descripció del servei de l'API Manager Corporatiu"
+date        = "2019-07-19"
+title       = "Que és el servei d'API Manager Corporatiu"
+description = "Descripció de GencatAPI, l'API Manager Corporatiu"
 sections    = "ApiManager Cloud"
 weight      = 12
 categories  = ["cloud","apim"]
 +++
 
-El servei d'API Manager Corporatiu de la Generalitat de Catalunya permet als departaments/proveïdors d'aplicacions **gestionar el cicle de vida de les APIS** de manera senzilla i segura. El servei ofereix la possibilitat de publicar **API's públiques** i **API's privades** , aquest últim tant en context Intranet com Extranet de la Generalitat. 
-
+Per publicar les **API's públiques** de la Generalitat de Catalunya està disponible un API Manager Corporatiu.
 
 ## Descripció
 
-El servei d'API Manager Corporatiu ofereix les següents funcionalitats:
+L'API Manager ofereix les següents funcionalitats:
 
-- Disposa d'un catàleg amb funcionalitats per a versionar i descobrir APIs (inventari de les APIs)
-- Disposa de funcionalitats d'autoservei en la subscripció a APIs, en base a uns plans definits
-- Entorn de treball pels desenvolupadors d’APIs. Aporta un portal on publicar documentació associada a la utilització de les APIs
-- Proporciona accés a generar reportings sobre l'ús de les APIs (analítiques d'ús i de control del consum)
-- Permet aplicar polítiques d'ús i de seguretat.
-- Integració amb autenticació GICAR (KeyCloak Corporatiu).
+Funcionalment:
 
-El servei s'ofereix en modalitat SaaS de pagament per ús.
+- Disposa d'un catàleg amb funcionalitats per a versionar i descobrir APIs
+- Disposa de funcionalitats d'autoservei en la subscripció a APIs
+- Aporta un portal on publicar documentació associada a la utilització de les APIs
+- Proporciona accés a generar reportings sobre l'ús de les APIs
+- Permet associar cost a la utilització de les APIs i gestionar el seu repartiment.
 
-Els API Gateways s'exposen amb les següents modalitats:
-- Infraestructura compartida onpremise.
-- Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)
-- En contenidors.
+Tècnicament:
 
-## Plataforma
-
-L'API Manager corporatiu és IBM API Connect.
+- Control d'accés i definició de plans: Disposar d'un registre de "clients/consumidors" de les nostres dades 
+- Oferir diferents nivells de servei i control del consum (throttling): Prioritzar peticions de determinats "clients" i regular quotes de consum. 
+- Realitzar analítica unificada de les dades que es publiquen (qui accedeix a que, temps de resposta, etc.) 
+- Seguretat, establir polítiques de caché, prevenció davant d'atacs, protecció dels sistemes de backoffice 
+- Aïllar els consumidors dels publicadors de serveis i dade- 
+Transformar i combinar API's
 
 ## Plataforma
 
@@ -43,5 +41,3 @@ Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services
 Es posa a disposició un manual d'usuari on es detallen les característiques i metodologia de treball del servei d'API Manager.
 
 El podeu descarregar a [**Manual d'Usuari**](/related/cloud/Manual-Usuari-APIM.pdf).
-
-
