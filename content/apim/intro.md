@@ -21,22 +21,28 @@ El servei d'API Manager Corporatiu ofereix les següents funcionalitats:
 - Permet aplicar polítiques d'ús i de seguretat.
 - Integració amb autenticació GICAR (KeyCloak Corporatiu).
 
-El servei s'ofereix en modalitat SaaS de pagament per ús.
+El servei s'ofereix en **modalitat SaaS de pagament per ús**.
 
-Els API Gateways s'exposen amb les següents modalitats:
-- Infraestructura compartida onpremise.
-- Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)
-- En contenidors.
+Els **API Gateways s'exposen amb les següents modalitats de servei**:
 
-|Modalitat API Gateway|Descripció|
+|Modalitat|Descripció|
 |-------|-------|
 |Gateways CTTI Compartits|Infraestructura compartida onpremise|
-|Gateways deddicats|Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)|
+|Gateways dedicats|Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)|
 |Contenidors|Desplegament de l'API Gateway en contenidor|
 
 ## Plataforma
 
-L'API Manager corporatiu és IBM API Connect.
+La plataforma del servei l'API Manager corporatiu es basa en la solució al núvol API Connect. Consta de tres elements bàsics:
+
+|Element|Descripció|
+|-------|-------|
+|Portal per a desenvolupadors|Portal web d’accés als possibles consumidors de les APIs on poden consultar les APIs disponibles, informació de com utilitzar-les, i demanar accés al seu ús amb un previ registre per a obtenir un token d’accés|
+|Portal de gestió d’APIs| Portal web d’accés als gestors de l’API on poden consultar les APIs disponibles, administrar els accessos, plans i analitzar les dades d’accés|
+|API Gateway|Element tecnològic (escalable segons necessitat) on passen les peticions en
+el moment d’execució. Rep les definicions de les APIs i dels permisos dels diferents portals
+d’administració. És on arriben les peticions dels clients registrats i que redirigeix la petició als
+backends|
 
 Podeu trobar més informació del producte a https://cloud.ibm.com/docs/services/apiconnect?topic=apiconnect-getting-started.
 
