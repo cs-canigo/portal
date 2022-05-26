@@ -1,7 +1,7 @@
 +++
 date        = "2022-05-26"
 title       = "API Manager Corporatiu"
-description = "Descripció del servei de l'API Manager Corporatiu"
+description = "Descripció del servei"
 sections    = "ApiManager Cloud"
 weight      = 12
 categories  = ["cloud","apim"]
@@ -27,6 +27,12 @@ Els API Gateways s'exposen amb les següents modalitats:
 - Infraestructura compartida onpremise.
 - Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)
 - En contenidors.
+
+|Modalitat API Gateway|Descripció|
+|-------|-------|
+|Gateways CTTI Compartits|Infraestructura compartida onpremise|
+|Gateways deddicats|Infraestructura dedicada onpremise (exclusiva del departament que la sol·licita)|
+|Contenidors|Desplegament de l'API Gateway en contenidor|
 
 ## Plataforma
 
