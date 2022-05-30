@@ -40,7 +40,7 @@ Cal tenir pressent:
 Podrà accedir mitjançant el següent enllaç: https://pautic.gencat.cat. <br/>
 Haurà d'autenticar-se amb de les seves credencials d'accés **GICAR** i dirigir-se al portal d'autoservei. <br/>
 **OBSERVACIÓ**: El perfil de l'usuari pot condicionar les opcions habilitades en cada cas.
-<CENTER>![Pàgina principal](/related/sic/Remedy1.png)</center>
+<CENTER>![Pàgina principal](/related/apim/Remedy1.png)</center>
 <br/>
 
 <br/>
@@ -59,7 +59,7 @@ Tipus de petició per reportar qualsevol tipus d'incidència relacionada amb els
 
 Caldrà seleccionar la categoria: `Avaria o mal funcionament → Incidència en aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy2.png)</center>
+<CENTER>![Pàgina principal](/related/apim/Remedy2.png)</center>
 <br/>
 
 Informació a emplenar:
@@ -90,7 +90,7 @@ Tipus de petició per a demanar qualsevol tipus d'informació relacionada amb el
 
 Caldrà seleccionar la categoria: `Necessito saber → Consulta sobre aplicacions` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy3.png)</center>
+<CENTER>![Pàgina principal](/related/apim/Remedy3.png)</center>
 <br/>
 
 Informació a emplenar:
@@ -112,7 +112,7 @@ Informació a emplenar:
 
 Caldrà seleccionar la categoria: `Necessito demanar → Suport funcional` i prémer el botó "Sol·licitar ara". <br/>
 El formulari d'entrada presenta el següent aspecte:
-<CENTER>![Pàgina principal](/related/sic/Remedy4.png)</center>
+<CENTER>![Pàgina principal](/related/apim/Remedy4.png)</center>
 <br/>
 
 Informació a emplenar:
